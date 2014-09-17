@@ -520,6 +520,67 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
+    },
+    {
+      description: 'collision with any edge',
+      xml: '<xml>' +
+        '  <block type="when_run" deletable="false">' +
+        '    <next>' +
+        '      <block type="studio_setSprite">' +
+        '        <title name="SPRITE">0</title>' +
+        '        <title name="VALUE">"witch"</title>' +
+        '        <next>' +
+        '          <block type="studio_moveDistance">' +
+        '            <title name="SPRITE">0</title>' +
+        '            <title name="DIR">8</title>' +
+        '            <title name="DISTANCE">400</title>' +
+        '            <next>' +
+        '              <block type="studio_moveDistance">' +
+        '                <title name="SPRITE">0</title>' +
+        '                <title name="DIR">2</title>' +
+        '                <title name="DISTANCE">400</title>' +
+        '              </block>' +
+        '            </next>' +
+        '          </block>' +
+        '        </next>' +
+        '      </block>' +
+        '    </next>' +
+        '  </block>' +
+        '  <block type="studio_whenSpriteCollided">' +
+        '    <title name="SPRITE1">0</title>' +
+        '    <title name="SPRITE2">right</title>' +
+        '    <next>' +
+        '      <block type="studio_saySprite">' +
+        '        <title name="SPRITE">0</title>' +
+        '        <title name="TEXT">hello right edge</title>' +
+        '      </block>' +
+        '    </next>' +
+        '  </block>' +
+        '  <block type="studio_whenSpriteCollided">' +
+        '    <title name="SPRITE1">0</title>' +
+        '    <title name="SPRITE2">any_edge</title>' +
+        '    <next>' +
+        '      <block type="studio_changeScore">' +
+        '        <title name="VALUE">1</title>' +
+        '      </block>' +
+        '    </next>' +
+        '  </block>' +
+        '</xml>',
+      runBeforeClick: function (assert) {
+        runOnTick (22, function () {
+          assert(Studio.playerScore === 1, 'score incremented');
+          assert(Studio.sayComplete === 0, 'nothing was said yet');
+        });
+        runOnTick (180, function () {
+          assert(Studio.playerScore === 2, 'score incremented again');
+          assert(Studio.sayComplete === 1, 'something was said');
+          Studio.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
     }
 
   ]
