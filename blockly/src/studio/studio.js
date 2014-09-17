@@ -352,7 +352,7 @@ var calcMoveDistanceFromQueues = function (index, yAxis, modifyQueues) {
   var totalDistance = 0;
 
   Studio.eventHandlers.forEach(function (handler) {
-    var cmd = handler.cmdQueue ? handler.cmdQueue[0] : null;
+    var cmd = handler.cmdQueue[0];
     if (cmd && cmd.name === 'moveDistance' && cmd.opts.spriteIndex === index) {
       var scaleFactor;
       var distThisMove = Math.min(cmd.opts.queuedDistance,
@@ -387,7 +387,7 @@ var calcMoveDistanceFromQueues = function (index, yAxis, modifyQueues) {
 
 var cancelQueuedMovements = function (index, yAxis) {
   Studio.eventHandlers.forEach(function (handler) {
-    var cmd = handler.cmdQueue ? handler.cmdQueue[0] : null;
+    var cmd = handler.cmdQueue[0];
     if (cmd && cmd.name === 'moveDistance' && cmd.opts.spriteIndex === index) {
       var dir = cmd.opts.dir;
       if (yAxis && (dir === Direction.NORTH || dir === Direction.SOUTH)) {
@@ -512,20 +512,17 @@ var setSvgText = function(opts) {
   return opts.fullHeight - linesLessThanMax * opts.lineHeight;
 };
 
-//
-// Execute the code for all of the event handlers that match an event name
-//
-
-var callHandler = function (name, allowQueueExtension) {
+/**
+ * Execute the code for all of the event handlers that match an event name
+ * @param {string} name Name of the handler we want to call
+ * @param {boolean} allowQueueExension ???
+ */
+function callHandler (name, allowQueueExtension) {
   Studio.eventHandlers.forEach(function (handler) {
     // Note: we skip executing the code if we have not completed executing
     // the cmdQueue on this handler (checking for non-zero length)
     if (handler.name === name &&
-        (allowQueueExtension ||
-         (!handler.cmdQueue || 0 === handler.cmdQueue.length))) {
-      if (!handler.cmdQueue) {
-        handler.cmdQueue = [];
-      }
+        (allowQueueExtension || (0 === handler.cmdQueue.length))) {
       Studio.currentCmdQueue = handler.cmdQueue;
       try { handler.func(BlocklyApps, api, Studio.Globals); } catch (e) { }
       Studio.currentCmdQueue = null;
@@ -707,7 +704,10 @@ function checkForCollisions() {
       } else {
         sprite.endCollision(j);
       }
+      // todo - single execution function?
       Studio.executeQueue('whenSpriteCollided-' + i + '-' + j);
+      Studio.executeQueue('whenSpriteCollided-' + i + '-' + 'any_actor');
+      Studio.executeQueue('whenSpriteCollided-' + j + '-' + 'any_actor');
     }
     for (j = 0; j < Studio.projectiles.length; j++) {
       var next = Studio.projectiles[j].getNextPosition();
@@ -725,9 +725,7 @@ function checkForCollisions() {
 
           // NOTE: not using collideSpriteWith() because collision state is
           // tracked on the projectile in this case
-          callHandler('whenSpriteCollided-' + i + '-' +
-                      Studio.projectiles[j].className,
-                      true);
+          handleCollision(i, Studio.projectiles[j].className, true);
           Studio.currentEventParams = null;
         }
       } else {
@@ -812,7 +810,7 @@ Studio.onSvgClicked = function(e) {
     // Check the first command in all of the cmdQueues to see if there is a
     // pending "wait for click" command
     Studio.eventHandlers.forEach(function (handler) {
-      var cmd = handler.cmdQueue ? handler.cmdQueue[0] : null;
+      var cmd = handler.cmdQueue[0];
 
       if (cmd && cmd.opts.waitForClick && !cmd.opts.complete) {
         if (cmd.opts.waitCallback) {
@@ -1081,7 +1079,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
     // Check the first command in all of the cmdQueues and clear the timeout
     // if there is a pending wait command
     Studio.eventHandlers.forEach(function (handler) {
-      var cmd = handler.cmdQueue ? handler.cmdQueue[0] : null;
+      var cmd = handler.cmdQueue[0];
 
       if (cmd && cmd.opts.waitTimeout && !cmd.opts.complete) {
         // Note: not calling waitCallback() or setting complete = true
@@ -1267,7 +1265,10 @@ Studio.onReportComplete = function(response) {
 };
 
 var registerEventHandler = function (handlers, name, func) {
-  handlers.push({'name': name, 'func': func});
+  handlers.push({
+    name: name,
+    func: func,
+    cmdQueue: []});
 };
 
 var registerHandlers =
@@ -1344,6 +1345,8 @@ var registerHandlersWithSpriteParams =
                        blockParam2,
                        String(j));
     }
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'any_actor');
     ProjectileClassNames.forEach(registerHandlersForClassName);
     EdgeClassNames.forEach(registerHandlersForClassName);
   }
@@ -1642,7 +1645,7 @@ Studio.queueCmd = function (id, name, opts) {
 
 Studio.executeQueue = function (name) {
   Studio.eventHandlers.forEach(function (handler) {
-    if (handler.name === name && handler.cmdQueue) {
+    if (handler.name === name && handler.cmdQueue.length) {
       for (var cmd = handler.cmdQueue[0]; cmd; cmd = handler.cmdQueue[0]) {
         if (Studio.callCmd(cmd)) {
           // Command executed immediately, remove from queue and continue
@@ -1992,7 +1995,7 @@ Studio.isCmdCurrentInQueue = function (cmdName, queueName) {
   var foundCmd = false;
   Studio.eventHandlers.forEach(function (handler) {
     if (handler.name === queueName) {
-      var cmd = handler.cmdQueue ? handler.cmdQueue[0] : null;
+      var cmd = handler.cmdQueue[0];
 
       if (cmd && cmd.name === cmdName) {
         foundCmd = true;
@@ -2239,6 +2242,14 @@ var yFromPosition = function (sprite, position) {
   }
 };
 
+function handleCollision(src, target, allowQueueExtension) {
+  callHandler('whenSpriteCollided-' + src + '-' + target, allowQueueExtension);
+  // If dest is just a number, we're colliding with another actor
+  if (/^\d*$/.test(target)) {
+    callHandler('whenSpriteCollided-' + src + '-any_actor', allowQueueExtension);
+  }
+}
+
 /**
  * Looks to see if sprite is already colliding with target.  If it isn't, it
  * starts the collision and calls the relevant code.
@@ -2250,7 +2261,7 @@ var yFromPosition = function (sprite, position) {
 Studio.collideSpriteWith = function (spriteIndex, target, allowQueueExtension) {
   var sprite = Studio.sprite[spriteIndex];
   if (sprite.startCollision(target)) {
-    callHandler('whenSpriteCollided-' + spriteIndex + '-' + target, allowQueueExtension);
+    handleCollision(spriteIndex, target, allowQueueExtension);
   }
 };
 
