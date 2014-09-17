@@ -1349,6 +1349,8 @@ var registerHandlersWithSpriteParams =
       blockParam2, 'any_actor');
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'any_edge');
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'any_projectile');
   }
 };
 
@@ -2254,16 +2256,24 @@ function isEdgeClass(className) {
   return EdgeClassNames.indexOf(className) !== -1;
 }
 
+function isProjectileClass(className) {
+  return ProjectileClassNames.indexOf(className) !== -1;
+}
+
 /**
  * Call the handler for src colliding with target
  */
 function handleCollision(src, target, allowQueueExtension) {
-  callHandler('whenSpriteCollided-' + src + '-' + target, allowQueueExtension);
+  var prefix = 'whenSpriteCollided-' + src + '-';
+
+  callHandler(prefix + target, allowQueueExtension);
   // If dest is just a number, we're colliding with another actor
   if (isActorClass(target)) {
-    callHandler('whenSpriteCollided-' + src + '-any_actor', allowQueueExtension);
+    callHandler(prefix + 'any_actor', allowQueueExtension);
   } else if (isEdgeClass(target)) {
-    callHandler('whenSpriteCollided-' + src + '-any_edge', allowQueueExtension);
+    callHandler(prefix + 'any_edge', allowQueueExtension);
+  } else if (isProjectileClass(target)) {
+    callHandler(prefix + 'any_projectile', allowQueueExtension);
   }
 }
 
@@ -2271,16 +2281,20 @@ function handleCollision(src, target, allowQueueExtension) {
  * Execute the code for src colliding with target
  */
 function executeCollision(src, target) {
-  Studio.executeQueue('whenSpriteCollided-' + src + '-' + target);
+  var srcPrefix = 'whenSpriteCollided-' + src + '-';
+  var targetPrefix = 'whenSpriteCollided-' + target + '-';
+
+  Studio.executeQueue(srcPrefix + target);
 
   // src is always an actor
-  Studio.executeQueue('whenSpriteCollided-' + src + '-any_actor');
-
+  Studio.executeQueue(srcPrefix + 'any_actor');
 
   if (isActorClass(target)) {
-    Studio.executeQueue('whenSpriteCollided-' + target + '-any_actor');
+    Studio.executeQueue(targetPrefix + 'any_actor');
   } else if (isEdgeClass(target)) {
-    Studio.executeQueue('whenSpriteCollided-' + src + '-any_edge');
+    Studio.executeQueue(srcPrefix + 'any_edge');
+  } else if (isProjectileClass(target)) {
+    Studio.executeQueue(srcPrefix + 'any_projectile');
   }
 }
 
