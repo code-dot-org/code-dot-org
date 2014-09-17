@@ -648,10 +648,6 @@ Studio.onTick = function() {
  * the actual movements take place)
  */
 function checkForCollisions() {
-  var executeCollisionQueueForClass = function (className) {
-    Studio.executeQueue('whenSpriteCollided-' + i + '-' + className);
-  };
-
   var spriteCollisionDistance = function (i1, i2, yAxis) {
     var dim1 = yAxis ? Studio.sprite[i1].height : Studio.sprite[i1].width;
     var dim2 = yAxis ? Studio.sprite[i2].height : Studio.sprite[i2].width;
@@ -704,10 +700,7 @@ function checkForCollisions() {
       } else {
         sprite.endCollision(j);
       }
-      // todo - single execution function?
-      Studio.executeQueue('whenSpriteCollided-' + i + '-' + j);
-      Studio.executeQueue('whenSpriteCollided-' + i + '-' + 'any_actor');
-      Studio.executeQueue('whenSpriteCollided-' + j + '-' + 'any_actor');
+      executeCollision(i, j);
     }
     for (j = 0; j < Studio.projectiles.length; j++) {
       var next = Studio.projectiles[j].getNextPosition();
@@ -765,9 +758,13 @@ function checkForCollisions() {
           sprite.endCollision(edgeClass);
         }
       }
-      EdgeClassNames.forEach(executeCollisionQueueForClass);
+      EdgeClassNames.forEach(function (className) {
+        executeCollision(i, className);
+      });
     }
-    ProjectileClassNames.forEach(executeCollisionQueueForClass);
+    ProjectileClassNames.forEach(function (className) {
+      executeCollision(i, className);
+    });
   }
 }
 
@@ -2242,12 +2239,37 @@ var yFromPosition = function (sprite, position) {
   }
 };
 
+/**
+ * Actors have a class name in the form "0". Returns true if this class is
+ * an actor
+ */
+function isActor(className) {
+  return /^\d*$/.test(className);
+}
+
+/**
+ * Call the handler for src colliding with target
+ */
 function handleCollision(src, target, allowQueueExtension) {
   callHandler('whenSpriteCollided-' + src + '-' + target, allowQueueExtension);
   // If dest is just a number, we're colliding with another actor
-  if (/^\d*$/.test(target)) {
+  if (isActor(target)) {
     callHandler('whenSpriteCollided-' + src + '-any_actor', allowQueueExtension);
   }
+}
+
+/**
+ * Execute the code for src colliding with target
+ */
+function executeCollision(src, target) {
+  Studio.executeQueue('whenSpriteCollided-' + src + '-' + target);
+  if (isActor(src)) {
+    Studio.executeQueue('whenSpriteCollided-' + src + '-any_actor');
+  }
+  if (isActor(target)) {
+    Studio.executeQueue('whenSpriteCollided-' + target + '-any_actor');
+  }
+
 }
 
 /**
