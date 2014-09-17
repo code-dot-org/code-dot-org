@@ -303,6 +303,7 @@ exports.install = function(blockly, blockInstallOptions) {
       } else {
         dropdown1 = spriteNumberTextDropdown(msg.whenSpriteCollidedN);
         var dropdownArray2 = spriteNumberTextArray(msg.whenSpriteCollidedWithN);
+        dropdownArray2.unshift(this.GROUPINGS[0]);
         if (projectileCollisions) {
           dropdownArray2 = dropdownArray2.concat(this.PROJECTILES);
         }
@@ -324,6 +325,9 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setTooltip(msg.whenSpriteCollidedTooltip());
     }
   };
+
+  blockly.Blocks.studio_whenSpriteCollided.GROUPINGS =
+      [[msg.whenSpriteCollidedWithAnyActor(), 'any_actor']];
 
   blockly.Blocks.studio_whenSpriteCollided.PROJECTILES =
       [[msg.whenSpriteCollidedWithBlueFireball(), 'blue_fireball'],
