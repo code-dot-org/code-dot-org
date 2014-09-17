@@ -61,8 +61,17 @@ def complete_tutorial(tutorial=nil)
     end
   end
 
+  # For now, Do the bare minimum to bring a user with a
+  # company-specific cookie to the right congrats page.
+  sequel_row = DB[:hoc_activity].where(session:request.cookies['hour_of_code']).first
+  company = sequel_row[:company] if sequel_row
+
   expires 0, :private, :must_revalidate
-  redirect((row ? "http://#{row.referer}/congrats?i=#{row.session}" : '/congrats'), 302)
+  if company
+    redirect((row ? "http://#{row.referer}/congrats?i=#{row.session}&ee=#{company}" : '/congrats'), 302)    
+  else
+    redirect((row ? "http://#{row.referer}/congrats?i=#{row.session}" : '/congrats'), 302)
+  end
 end
 
 def complete_tutorial_pixel(tutorial)
@@ -88,16 +97,28 @@ def complete_tutorial_pixel(tutorial)
   send_file sites_dir('all/images/1x1.png'), type:'image/png'
 end
 
-def launch_tutorial(tutorial)
+def launch_tutorial(tutorial,params={})
   unless settings.read_only
+    session = SecureRandom.hex
+
     row = HourOfActivity.create({
-      session:    SecureRandom.hex,
+      session:    session,
       referer:    request.referer_site_with_port,
       tutorial:   tutorial[:code],
       started:    true,
       create_ip:  request.ip,
     })
-    set_tutorial_session_cookie(row.session)
+
+    DB[:hoc_activity].insert(
+      session:session,
+      referer:request.referer_site_with_port,
+      tutorial:tutorial[:code],
+      company:params[:company],
+      started_at:DateTime.now,
+      started_ip:request.ip,
+    )
+
+    set_tutorial_session_cookie(session)
   end
 
   expires 0, :private, :must_revalidate
@@ -120,6 +141,22 @@ def launch_tutorial_pixel(tutorial)
         create_ip:      request.ip,
       })
       set_tutorial_session_cookie(row.session)
+    end
+
+    row = DB[:hoc_activity].where(session:request.cookies['hour_of_code'], pixel_started_at:nil, pixel_finished_at:nil, finished_at:nil).first
+    if row
+      DB[:hoc_activity].update(pixel_started_at:DateTime.now, pixel_started_ip:request.ip).where(id:row[:id])
+    else
+      session = SecureRandom.hex
+      DB[:hoc_activity].insert(
+        session:session,
+        referer:request.referer_site_with_port,
+        tutorial:tutorial[:code],
+        company:params[:company],
+        pixel_started_at:DateTime.now,
+        pixel_started_ip:request.ip,
+      )
+      set_tutorial_session_cookie(session)
     end
   end
 
