@@ -308,6 +308,7 @@ exports.install = function(blockly, blockInstallOptions) {
           dropdownArray2 = dropdownArray2.concat(this.PROJECTILES);
         }
         if (edgeCollisions) {
+          dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[1]]);
           dropdownArray2 = dropdownArray2.concat(this.EDGES);
         }
         dropdown2 = new blockly.FieldDropdown(dropdownArray2);
@@ -327,7 +328,8 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_whenSpriteCollided.GROUPINGS =
-      [[msg.whenSpriteCollidedWithAnyActor(), 'any_actor']];
+      [[msg.whenSpriteCollidedWithAnyActor(), 'any_actor'],
+       [msg.whenSpriteCollidedWithAnyEdge(), 'any_edge']];
 
   blockly.Blocks.studio_whenSpriteCollided.PROJECTILES =
       [[msg.whenSpriteCollidedWithBlueFireball(), 'blue_fireball'],

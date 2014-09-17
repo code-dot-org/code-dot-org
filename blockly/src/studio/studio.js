@@ -1342,10 +1342,13 @@ var registerHandlersWithSpriteParams =
                        blockParam2,
                        String(j));
     }
-    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
-      blockParam2, 'any_actor');
     ProjectileClassNames.forEach(registerHandlersForClassName);
     EdgeClassNames.forEach(registerHandlersForClassName);
+    // todo - disable for when click?
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'any_actor');
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'any_edge');
   }
 };
 
@@ -2243,8 +2246,12 @@ var yFromPosition = function (sprite, position) {
  * Actors have a class name in the form "0". Returns true if this class is
  * an actor
  */
-function isActor(className) {
+function isActorClass(className) {
   return /^\d*$/.test(className);
+}
+
+function isEdgeClass(className) {
+  return EdgeClassNames.indexOf(className) !== -1;
 }
 
 /**
@@ -2253,8 +2260,10 @@ function isActor(className) {
 function handleCollision(src, target, allowQueueExtension) {
   callHandler('whenSpriteCollided-' + src + '-' + target, allowQueueExtension);
   // If dest is just a number, we're colliding with another actor
-  if (isActor(target)) {
+  if (isActorClass(target)) {
     callHandler('whenSpriteCollided-' + src + '-any_actor', allowQueueExtension);
+  } else if (isEdgeClass(target)) {
+    callHandler('whenSpriteCollided-' + src + '-any_edge', allowQueueExtension);
   }
 }
 
@@ -2263,13 +2272,16 @@ function handleCollision(src, target, allowQueueExtension) {
  */
 function executeCollision(src, target) {
   Studio.executeQueue('whenSpriteCollided-' + src + '-' + target);
-  if (isActor(src)) {
-    Studio.executeQueue('whenSpriteCollided-' + src + '-any_actor');
-  }
-  if (isActor(target)) {
-    Studio.executeQueue('whenSpriteCollided-' + target + '-any_actor');
-  }
 
+  // src is always an actor
+  Studio.executeQueue('whenSpriteCollided-' + src + '-any_actor');
+
+
+  if (isActorClass(target)) {
+    Studio.executeQueue('whenSpriteCollided-' + target + '-any_actor');
+  } else if (isEdgeClass(target)) {
+    Studio.executeQueue('whenSpriteCollided-' + src + '-any_edge');
+  }
 }
 
 /**

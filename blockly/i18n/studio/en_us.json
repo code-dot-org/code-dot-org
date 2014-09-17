@@ -238,6 +238,7 @@
   "whenSpriteCollidedTooltip": "Execute the actions below when an actor touches another actor.",
   "whenSpriteCollidedWith": "touches",
   "whenSpriteCollidedWithAnyActor": "touches any actor",
+  "whenSpriteCollidedWithAnyEdge": "touches any edge",
   "whenSpriteCollidedWithN": "touches actor {spriteIndex}",
   "whenSpriteCollidedWithBlueFireball": "touches blue fireball",
   "whenSpriteCollidedWithPurpleFireball": "touches purple fireball",
