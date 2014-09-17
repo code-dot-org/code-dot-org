@@ -1,0 +1,3 @@
+-secret = request.splat_path_info[1..-1]
+-pass unless form = DB[:forms].where(kind:'CompanyProfile', secret:secret).first
+=view :company_profile_form, data:JSON.parse(form[:data]), secret:secret

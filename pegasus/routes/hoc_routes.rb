@@ -10,6 +10,13 @@ get '/v2/hoc/tutorial-metrics.json' do
   JSON.pretty_generate(fetch_hoc_metrics['tutorials'])
 end
 
+# Employee engagement
+get '/api/ee/begin/:company' do |company|
+  pass unless form = DB[:forms].where(kind:'CompanyProfile', name:company).first
+  pass unless tutorial = DB[:tutorials].where(code:'codeorg').first
+  launch_tutorial(tutorial, company:company)
+end
+
 get '/api/hour/begin/:code' do |code|
   only_for ['code.org', 'csedweek.org', 'uk.code.org']
   pass unless tutorial = DB[:tutorials].where(code:code).first
