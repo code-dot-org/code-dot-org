@@ -305,10 +305,11 @@ exports.install = function(blockly, blockInstallOptions) {
         var dropdownArray2 = spriteNumberTextArray(msg.whenSpriteCollidedWithN);
         dropdownArray2.unshift(this.GROUPINGS[0]);
         if (projectileCollisions) {
+          dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[1]]);
           dropdownArray2 = dropdownArray2.concat(this.PROJECTILES);
         }
         if (edgeCollisions) {
-          dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[1]]);
+          dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[2]]);
           dropdownArray2 = dropdownArray2.concat(this.EDGES);
         }
         dropdown2 = new blockly.FieldDropdown(dropdownArray2);
@@ -329,6 +330,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.studio_whenSpriteCollided.GROUPINGS =
       [[msg.whenSpriteCollidedWithAnyActor(), 'any_actor'],
+       [msg.whenSpriteCollidedWithAnyProjectile(), 'any_projectile'],
        [msg.whenSpriteCollidedWithAnyEdge(), 'any_edge']];
 
   blockly.Blocks.studio_whenSpriteCollided.PROJECTILES =
