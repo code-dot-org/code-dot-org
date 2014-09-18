@@ -240,6 +240,7 @@
   "whenSpriteCollidedWithAnyActor": "touches any actor",
   "whenSpriteCollidedWithAnyEdge": "touches any edge",
   "whenSpriteCollidedWithAnyProjectile": "touches any projectile",
+  "whenSpriteCollidedWithAnything": "touches anything",
   "whenSpriteCollidedWithN": "touches actor {spriteIndex}",
   "whenSpriteCollidedWithBlueFireball": "touches blue fireball",
   "whenSpriteCollidedWithPurpleFireball": "touches purple fireball",
