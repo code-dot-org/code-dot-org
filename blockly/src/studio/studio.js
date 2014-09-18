@@ -528,7 +528,7 @@ function callHandler (name, allowQueueExtension) {
       Studio.currentCmdQueue = null;
     }
   });
-};
+}
 
 Studio.onTick = function() {
   Studio.tickCount++;
@@ -703,68 +703,64 @@ function checkForCollisions() {
       executeCollision(i, j);
     }
     for (j = 0; j < Studio.projectiles.length; j++) {
-      var next = Studio.projectiles[j].getNextPosition();
+      var projectile = Studio.projectiles[j];
+      var next = projectile.getNextPosition();
       if (collisionTest(iXCenter,
                         next.x,
                         projectileCollisionDistance(i, j, false),
                         iYCenter,
                         next.y,
                         projectileCollisionDistance(i, j, true))) {
-        if (Studio.projectiles[j].startCollision(i)) {
-          Studio.currentEventParams = { projectile: Studio.projectiles[j] };
+        if (projectile.startCollision(i)) {
+          Studio.currentEventParams = { projectile: projectile };
           // Allow cmdQueue extension (pass true) since this handler
           // may be called for multiple projectiles before executing the queue
           // below
 
           // NOTE: not using collideSpriteWith() because collision state is
           // tracked on the projectile in this case
-          handleCollision(i, Studio.projectiles[j].className, true);
+          handleCollision(i, projectile.className, true);
           Studio.currentEventParams = null;
         }
       } else {
-        Studio.projectiles[j].endCollision(i);
+        projectile.endCollision(i);
       }
+      executeCollision(i, projectile.className);
     }
-    if (level.edgeCollisions) {
-      for (j = 0; j < EdgeClassNames.length; j++) {
-        var edgeXCenter, edgeYCenter;
-        var edgeClass = EdgeClassNames[j];
-        switch (edgeClass) {
-          case 'top':
-            edgeXCenter = Studio.MAZE_WIDTH / 2;
-            edgeYCenter = 0;
-            break;
-          case 'left':
-            edgeXCenter = 0;
-            edgeYCenter = Studio.MAZE_HEIGHT / 2;
-            break;
-          case 'bottom':
-            edgeXCenter = Studio.MAZE_WIDTH / 2;
-            edgeYCenter = Studio.MAZE_HEIGHT;
-            break;
-          case 'right':
-            edgeXCenter = Studio.MAZE_WIDTH;
-            edgeYCenter = Studio.MAZE_HEIGHT / 2;
-            break;
-        }
-        if (collisionTest(iXCenter,
-                          edgeXCenter,
-                          edgeCollisionDistance(i, edgeClass, false),
-                          iYCenter,
-                          edgeYCenter,
-                          edgeCollisionDistance(i, edgeClass, true))) {
-          Studio.collideSpriteWith(i, edgeClass);
-        } else {
-          sprite.endCollision(edgeClass);
-        }
+
+    for (j = 0; j < EdgeClassNames.length && level.edgeCollisions; j++) {
+      var edgeXCenter, edgeYCenter;
+      var edgeClass = EdgeClassNames[j];
+      switch (edgeClass) {
+        case 'top':
+          edgeXCenter = Studio.MAZE_WIDTH / 2;
+          edgeYCenter = 0;
+          break;
+        case 'left':
+          edgeXCenter = 0;
+          edgeYCenter = Studio.MAZE_HEIGHT / 2;
+          break;
+        case 'bottom':
+          edgeXCenter = Studio.MAZE_WIDTH / 2;
+          edgeYCenter = Studio.MAZE_HEIGHT;
+          break;
+        case 'right':
+          edgeXCenter = Studio.MAZE_WIDTH;
+          edgeYCenter = Studio.MAZE_HEIGHT / 2;
+          break;
       }
-      EdgeClassNames.forEach(function (className) {
-        executeCollision(i, className);
-      });
+      if (collisionTest(iXCenter,
+                        edgeXCenter,
+                        edgeCollisionDistance(i, edgeClass, false),
+                        iYCenter,
+                        edgeYCenter,
+                        edgeCollisionDistance(i, edgeClass, true))) {
+        Studio.collideSpriteWith(i, edgeClass);
+      } else {
+        sprite.endCollision(edgeClass);
+      }
+      executeCollision(i, edgeClass);
     }
-    ProjectileClassNames.forEach(function (className) {
-      executeCollision(i, className);
-    });
   }
 }
 
@@ -1351,6 +1347,8 @@ var registerHandlersWithSpriteParams =
       blockParam2, 'any_edge');
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'any_projectile');
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'anything');
   }
 };
 
@@ -2249,7 +2247,7 @@ var yFromPosition = function (sprite, position) {
  * an actor
  */
 function isActorClass(className) {
-  return /^\d*$/.test(className);
+  return (/^\d*$/).test(className);
 }
 
 function isEdgeClass(className) {
@@ -2267,6 +2265,7 @@ function handleCollision(src, target, allowQueueExtension) {
   var prefix = 'whenSpriteCollided-' + src + '-';
 
   callHandler(prefix + target, allowQueueExtension);
+  callHandler(prefix + 'anything', allowQueueExtension);
   // If dest is just a number, we're colliding with another actor
   if (isActorClass(target)) {
     callHandler(prefix + 'any_actor', allowQueueExtension);
@@ -2288,9 +2287,11 @@ function executeCollision(src, target) {
 
   // src is always an actor
   Studio.executeQueue(srcPrefix + 'any_actor');
+  Studio.executeQueue(srcPrefix + 'anything');
 
   if (isActorClass(target)) {
     Studio.executeQueue(targetPrefix + 'any_actor');
+    Studio.executeQueue(targetPrefix + 'anything');
   } else if (isEdgeClass(target)) {
     Studio.executeQueue(srcPrefix + 'any_edge');
   } else if (isProjectileClass(target)) {
