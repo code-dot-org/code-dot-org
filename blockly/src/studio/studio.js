@@ -515,7 +515,8 @@ var setSvgText = function(opts) {
 /**
  * Execute the code for all of the event handlers that match an event name
  * @param {string} name Name of the handler we want to call
- * @param {boolean} allowQueueExension ???
+ * @param {boolean} allowQueueExension When true, we allow additional cmds to
+ *  be appended to the queue
  */
 function callHandler (name, allowQueueExtension) {
   Studio.eventHandlers.forEach(function (handler) {
@@ -725,7 +726,6 @@ function checkForCollisions() {
       } else {
         projectile.endCollision(i);
       }
-      executeCollision(i, projectile.className);
     }
 
     for (j = 0; j < EdgeClassNames.length && level.edgeCollisions; j++) {
@@ -760,6 +760,13 @@ function checkForCollisions() {
         sprite.endCollision(edgeClass);
       }
       executeCollision(i, edgeClass);
+    }
+
+    // Don't execute projectile collision queue(s) until we've handled all edge
+    // collisions. Not sure this is strictly necessary, but it means the code is
+    // the same as it was before this change.
+    for (j = 0; j < ProjectileClassNames.length; j++) {
+      executeCollision(i, ProjectileClassNames[j]);
     }
   }
 }
