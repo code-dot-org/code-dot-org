@@ -1299,7 +1299,7 @@ var registerHandlers =
   }
 };
 
-var registerHandlersWithSpriteParam =
+var registerHandlersWithSingleSpriteParam =
       function (handlers, blockName, eventNameBase, blockParam) {
   for (var i = 0; i < Studio.spriteCount; i++) {
     registerHandlers(handlers, blockName, eventNameBase, blockParam, String(i));
@@ -1313,7 +1313,7 @@ var registerHandlersWithTitleParam =
   }
 };
 
-var registerHandlersWithSpriteParams =
+var registerHandlersWithMultipleSpriteParams =
       function (handlers, blockName, eventNameBase, blockParam1, blockParam2) {
   var i;
   var registerHandlersForClassName = function (className) {
@@ -1340,7 +1340,6 @@ var registerHandlersWithSpriteParams =
     }
     ProjectileClassNames.forEach(registerHandlersForClassName);
     EdgeClassNames.forEach(registerHandlersForClassName);
-    // todo - disable for when click?
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'any_actor');
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
@@ -1404,11 +1403,11 @@ Studio.execute = function() {
                                   'VALUE',
                                   ['left', 'right', 'up', 'down']);
   registerHandlers(handlers, 'studio_repeatForever', 'repeatForever');
-  registerHandlersWithSpriteParam(handlers,
+  registerHandlersWithSingleSpriteParam(handlers,
                                   'studio_whenSpriteClicked',
                                   'whenSpriteClicked',
                                   'SPRITE');
-  registerHandlersWithSpriteParams(handlers,
+  registerHandlersWithMultipleSpriteParams(handlers,
                                    'studio_whenSpriteCollided',
                                    'whenSpriteCollided',
                                    'SPRITE1',
