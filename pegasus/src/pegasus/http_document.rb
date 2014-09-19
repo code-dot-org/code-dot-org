@@ -1,5 +1,6 @@
 require 'json'
 require_relative '../env'
+require 'cdo/yaml'
 
 def http_content_type(type,params={})
   params = params.map { |k,v| "#{k}=#{v}" }.join('; ')
@@ -186,12 +187,6 @@ class HttpDocument
     'utf-8'
   end
 
-  def parse_yaml_header(content, locals={})
-    match = content.match(/^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
-    return [{}, content] unless match
-    [TextRender.yaml(match[:yaml], locals), match.post_match]
-  end
-
   def resolve_template(site,view)
     File.find_first_existing(
       String.multiply_concat([
@@ -204,7 +199,7 @@ class HttpDocument
   end
 
   def to_html_from_haml!(locals, options)
-    header, haml = parse_yaml_header(@body, locals)
+    header, haml = YAML.parse_yaml_header(@body, locals)
     header['social'] = social_metadata(locals[:request], header)
 
     @body = TextRender.haml(haml, locals)
@@ -218,7 +213,7 @@ class HttpDocument
   end
 
   def to_html_from_markdown!(locals, options)
-    header, markdown = parse_yaml_header(@body)
+    header, markdown = YAML.parse_yaml_header(@body)
     header['social'] = social_metadata(locals[:request], header)
 
     @body = TextRender.markdown(markdown, locals)

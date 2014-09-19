@@ -4,6 +4,7 @@ require 'rack/contrib'
 require 'sinatra/base'
 require 'sinatra/verbs'
 require 'cdo/geocoder'
+require 'cdo/yaml'
 require 'cdo/pegasus/graphics'
 require 'cdo/rack/deflater'
 require 'cdo/rack/request'
@@ -233,12 +234,9 @@ class Documents < Sinatra::Base
     end
 
     def document(path)
-      content = IO.read(path)
-      match = content.match(/^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
-      if match
-        @header = @locals[:header] = YAML.load(render_(match[:yaml], '.erb'))
-        content = match.post_match
-      end
+      header, content = YAML.parse_yaml_header(IO.read(path), {request: request}.merge(@locals))
+
+      @header = @locals[:header] = header
       @header['social'] = social_metadata
 
       if @header['require_https'] #&& rack_env == :production
