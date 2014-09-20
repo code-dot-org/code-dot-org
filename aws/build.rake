@@ -95,7 +95,7 @@ $websites = build_task('websites', [deploy_dir('rebuild'), BLOCKLY_COMMIT_TASK])
       CDO.app_instances.each do |host|
         #Process.fork do
           remote_command = [
-            'cd website-ci',
+            'cd production',
             'git pull',
             'rake build',
           ].join('; ')
@@ -110,8 +110,9 @@ $websites = build_task('websites', [deploy_dir('rebuild'), BLOCKLY_COMMIT_TASK])
             'cd website-ci/aws',
             'git pull',
             'bundle',
+            'rake',
             'cd ..',
-            'rake build',
+            'rake build:varnish',
           ].join('; ')
           RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{remote_command} 2>&1'"
         #end
