@@ -17,9 +17,27 @@ social:
 -twitter = {:url=>"http://#{request.host_with_port}/certificates/#{cert_id}", :related=>'codeorg', :hashtags=>'', :text=>I18n.t(:just_did_hoc)}
 -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc).include? '#HourOfCode'
 
+-company_param = params[:co]
+-form = DB[:forms].where(kind:'CompanyProfile', name:company_param).first if company_param
+-@company = company = JSON.parse(form[:data]) if form
+-if company
+  -dont_cache if dashboard_user
+  %link{rel: "stylesheet", type: "text/css", href: "/css/ee.css"}/
+
 #congrats.mobile-pad{:style=>'margin: 0 auto;'}
 
-  %h1=I18n.t :congratulations_on_completing_hoc
+  -if company
+    #company_header= view :employee_engagement_header, company_name:company['display_name_s'], logo_path:company['logo_path_s']
+
+    %h1.ee_congrats_header=I18n.t :congratulations_on_completing_hoc
+
+    #additional_actions.ee_markdown
+      -if company['additional_actions_copy_t']
+        =TextRender.safe_markdown company['additional_actions_copy_t']
+      -else
+        =view :company_profile_additional_actions
+  -else
+    %h1=I18n.t :congratulations_on_completing_hoc
 
   #toprow
     #hoc-certificate-small.col-50{:style=>"padding:20px; padding-top: 0; box-sizing: border-box"}
