@@ -205,8 +205,9 @@ namespace :install do
   end
 
   task :newrelic do
-    RakeUtils.sudo 'echo deb http://apt.newrelic.com/debian/ newrelic non-free >> /etc/apt/sources.list.d/newrelic.list'
-    RakeUtils.sudo 'wget -O- https://download.newrelic.com/548C16BF.gpg | apt-key add -'
+    RakeUtils.sudo 'echo deb http://apt.newrelic.com/debian/ newrelic non-free > newrelic.list'
+    RakeUtils.sudo 'mv', 'newrelic.list', '/etc/apt/sources.list.d/newrelic.list'
+    RakeUtils.sudo 'wget -O- https://download.newrelic.com/548C16BF.gpg | sudo apt-key add -'
     RakeUtils.sudo 'aptitude', 'update'
     RakeUtils.sudo 'aptitude', 'install', 'newrelic-sysmond'
     RakeUtils.sudo 'nrsysmond-config', '--set', "license_key=#{CDO.newrelic_secret}"
