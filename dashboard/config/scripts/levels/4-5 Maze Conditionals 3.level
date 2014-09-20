@@ -1,0 +1,64 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-07-14T23:01:59.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "pvz",
+    "instructions": "Use the \"if\" block to let me decide when to turn. Hint: you only need one more block, but learn how we set it up so you can do it on your own next time.",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "start_direction": "1",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,3,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,2,1,1,0,0],[0,0,0,0,0,4,0,0]]",
+    "ideal": "5",
+    "video_key": "C3_maze_conditionals",
+    "maze_data": null
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="maze_forever">
+          <statement name="DO">
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_if">
+                  <title name="DIR">isPathLeft</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_forever"/>
+        <block type="maze_if">
+          <title name="DIR">isPathForward</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="maze_forever"/>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_if">
+          <title name="DIR">isPathLeft</title>
+        </block>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Maze>

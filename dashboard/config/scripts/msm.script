@@ -1,0 +1,18 @@
+title 'Middle School Math'
+description "Private work in progress for Middle School Math."
+
+stage 'Unit 1'
+level 'Math to Code 1'
+level 'Math to Code 2'
+level 'Coordinate Matching' 
+level 'Match math to circles' 
+level 'Match circles to code'
+level 'Warmup questions'
+
+stage 'Unit 2'
+level 'Circle to code'
+level 'Match math to code'
+level 'valid contracts multi' 
+level 'parts of contract'
+level 'image code from circle'
+level 'Match example to contract' 

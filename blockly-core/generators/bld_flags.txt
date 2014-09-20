@@ -1,0 +1,1 @@
+--js generators/generator_stub.js generators/javascript.js generators/javascript/colour.js generators/javascript/lists.js generators/javascript/logic.js generators/javascript/loops.js generators/javascript/math.js generators/javascript/procedures.js generators/javascript/text.js generators/javascript/variables.js

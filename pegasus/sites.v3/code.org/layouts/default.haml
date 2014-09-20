@@ -1,0 +1,69 @@
+.wrapper
+  -if header['theme'] == 'responsive'
+    #desktop-header.desktop-feature
+      = view :header
+    #mobile-header.mobile-headers.mobile-feature
+      = view :mobile_header_responsive
+  -else
+    = view :header
+
+  -if header['theme'] == 'responsive'
+    -if request.path_info =~ /^\/learn/
+      = view :learn_tabs
+
+  -if header['theme'] == 'responsive'
+    -if header['responsivePadMobile']
+      -containerClass = "container_responsive mobile-pad-edge"
+    -else
+      -containerClass = "container_responsive"
+  -else
+    -containerClass = "container_nonresponsive"
+
+  %div{:class=>containerClass}
+
+    -if header['theme'] == 'responsive'
+      =body
+
+      #clearboth{:style=>"clear:both"}
+      .desktop-feature
+        %br/
+        %br/
+        %br/
+
+    -else
+      -contentWidth = 970
+      %div{:style=>"width: #{contentWidth}px;"}
+
+        -if header['nav']
+          %div{:style=>'width: 140px; margin-right: 40px; float: left;'}
+            -if header['nav'].nil? || header['nav'] == 'blank'
+              &nbsp;
+            -else
+              = view(header['nav'])
+            -contentWidth -= 180
+
+        -if header['rightbar']
+          -contentWidth -= 180
+
+        %div{:style=>"width: #{contentWidth}px; float: left; margin: 0; padding: 0;"}= body
+
+        -if header['rightbar']
+          %div{:style=>'width: 140px; margin-left: 40px; float: left;'}
+            -if header['rightbar'].nil? || header['rightbar'] == 'blank'
+              &nbsp;
+            -else
+              = view(header['rightbar']) unless header['rightbar'].nil?
+
+      #clearboth{:style=>"clear:both"}
+      %br/
+      %br/
+      %br/
+  .push
+
+-if header['theme'] == 'responsive'
+  .desktop-feature
+    = view :footer
+  .mobile-headers.mobile-feature
+    = view :mobile_footer_responsive
+-else
+  = view :footer

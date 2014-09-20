@@ -1,0 +1,37 @@
+%div{:style=>'width: 100%'}
+  %div{:style=>'width: 970px; margin: 0 auto; overflow: hidden'}
+    %div{:style=>'width: 530px; float: left; padding-top: 14px; padding-bottom: 10px'}
+      %br
+      %a{:href=>"/", :style=>"text-decoration:none"}
+        %img{:src=>'/images/logo_text.png', :style=>'max-width: 100%; vertical-align: bottom'}
+        %img{:src=>'/images/logo_date.png', :style=>'max-width: 100%; vertical-align: bottom'}
+
+    %div{:style=>'width: 420px; float: right; overflow: hidden; text-align:right; padding-top: 3px'}
+      %a{:href=>"http://facebook.com/CSEdWeek", :target=>"_blank", :style=>"text-decoration:none"}
+        %img{:src=>"/images/facebook_green.png"}
+      %a{:href=>"http://twitter.com/CSEdWeek", :target=>"_blank", :style=>"text-decoration:none"}
+        %img{:src=>"/images/twitter_green.png"}
+      %br
+      %br
+      %br
+      %a{:href=>"/learn", :class=>"redheaderlink"}LEARN
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      %a{:href=>"/educate/hoc", :class=>"redheaderlink"}TEACH
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      %a{:href=>"/promote", :class=>"redheaderlink"}PROMOTE
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      %a{:href=>"/help", :class=>"redheaderlink"}HELP US
+      %div{:style => 'height: 5px'}
+
+  %div{:style=> 'width: 970px; margin: 0 auto; background-repeat: repeat-x; background-image: url("/images/pattern_grey.png")'}
+    %br
+
+  #loc.desktop-feature
+    -if banner = @header['banner']
+      =view banner

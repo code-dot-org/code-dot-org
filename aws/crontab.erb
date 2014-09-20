@@ -1,0 +1,36 @@
+<%=
+  $crontab = [
+    'PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin',
+  ]
+
+  def server_name()
+    $server_name ||= CDO.name
+  end
+
+  def cronjob(params)
+    time = params[:at].to_s
+    action = params[:do].to_s
+
+    notify = params[:notify].to_s
+    action = "#{aws_dir('cronjob')} #{action.shellescape} #{notify}".strip
+
+    $crontab << "#{time} #{action}"
+  end
+
+  def crontab()
+    $crontab.join("\n")
+  end
+
+  if CDO.daemon
+    crontabs = Dir.glob(aws_dir('crontab.rb')).sort
+    crontabs.each do |path|
+      $site_dir = File.dirname(path)
+      def site_dir(*paths)
+        File.join($site_dir, *paths)
+      end
+      eval(IO.read(path))
+    end
+  end
+
+  crontab
+%>

@@ -1,0 +1,49 @@
+---
+layout: none
+theme: none
+---
+
+#nav{"ng-show"=>"section.id"}
+  #goback{style: "float:left"}
+    %a{href: '/teacher-dashboard#/'}= I18n.t('dashboard_navigation_home_page')
+    %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
+    %a{href: '/teacher-dashboard#/sections'}= I18n.t('dashboard_navigation_all_sections')
+    %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
+    %b{style: "color: #ff8b02;"}= I18n.t('dashboard_navigation_section', section_name: '{{section.name}}') 
+
+  .section-select{style: "float:right"}
+    = I18n.t('dashboard_sections_switch_section')
+    %select{ 'ng-model' => 'selectedSection',
+             'ng-options' => 'section as section.name for section in sections',
+             'ng-change' => 'sectionNavigate(selectedSection)'}
+
+  %br/
+  %br/
+
+  #learn-tabs{"ng-show"=>"section.id", "ng-hide"=>"! section || section.login_type === 'none' && section.students.length <= 0", style: "padding-top:20px; padding-left:20px; padding-right:20px; background-color:white; background-color: rgb(219, 219, 219); overflow: hidden; margin-bottom: 10px;"}
+    %ul.nav.nav-tabs{style: "float: left;"}
+      %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
+          'ng-class' => 'tab == "progress" ? "active tab" : "tab"'}
+        %a{'ng-href' => "#/sections/{{section.id}}/progress"}= I18n.t('dashboard_navigation_view_progress')
+      %li{'ng-show' => 'section && ! editingAll(section.students)',
+          'ng-class' => 'tab == "manage" ? "active tab" : "tab"'}
+        %a{'ng-href' => "#/sections/{{section.id}}/manage"}= I18n.t('dashboard_navigation_manage_students')
+      %div{'ng-show' => 'section && editingAll(section.students)', style: "height:40px"}
+        -# Just an invisible element for some padding to keep things looking good when we're not showing tabs.
+        &nbsp;
+
+    %managebuttons{"ng-if" => "tab == 'manage' && section.login_type !== 'none'", style: "float:right"}
+      %button.btn.btn-white{"ng-click" => "new_student()", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_student')
+      %button.btn.btn-white{"ng-click" => "bulk_import.editing = true", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_students')
+
+.clear
+
+:javascript
+  $(
+    $("#section_id").change(function() {
+      var section_id = $("#section_id").val();
+      var section_url = "/sections/" + section_id;
+      window.location.href = section_url;
+      //$("#learn-tabs").hide().fadeIn();
+    })
+  );

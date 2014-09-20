@@ -1,0 +1,51 @@
+- @page_title = t('teacher.sections.manage')
+
+= render partial: 'shared/teacher_nav', locals: { current: 'sections' }
+
+%h1= @page_title
+
+%br/
+= link_to t('teacher.sections.add'), new_section_path
+
+%br/
+%br/
+
+%table{ style: "width:775px; table-layout:fixed;"}
+  %colgroup
+    %col{ width: 350 }
+    %col{ width: 125 }
+    %col{ width: 300 }
+
+  %tr
+    %th.manage-th= t('teacher.sections.section')
+    %th.manage-th= t('teacher.sections.students')
+    %th.manage-th= t('teacher.sections.add_section_code')
+
+  - @sections.each do |section|
+    %tr.manage-tr
+      %td.manage-td
+        = section.try(:name)
+        = link_to(t('teacher.sections.rename'), edit_section_path(section.id))
+        = link_to(t('teacher.sections.delete'), section_path(section.id), data: {confirm: t('teacher.sections.confirm_delete')}, method: :delete) if section.followers.empty?
+      %td.manage-td
+        = section.students.count
+      %td.manage-td
+        %span
+          = section.code
+        = link_to t('teacher.sections.email'), build_invite_mailto(section, current_user), target: :_blank
+
+:javascript
+  $(document).ready(function() {
+    $('a[data-confirm]').click(function(ev) {
+      var href = $(this).attr('href');
+
+      if (!$('#dataConfirmModal').length) {
+        $('body').append('<div id="dataConfirmModal" tabindex="-1" class="modal" role="dialog" aria-labelledby="dataConfirmLabel" aria-hidden="true"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h3 id="dataConfirmLabel">#{t('redeem_prizes.confirm.title')}</h3></div><div class="modal-body"></div><div class="modal-footer"><button class="btn" data-dismiss="modal" aria-hidden="true">#{t('redeem_prizes.confirm.no')}</button><a class="btn btn-primary" id="dataConfirmOK" data-method="delete" rel="nofollow">#{t('redeem_prizes.confirm.yes')}</a></div></div>');
+      }
+      $('#dataConfirmModal').find('.modal-body').html($(this).attr('data-confirm'));
+      $('#dataConfirmOK').attr('href', href);
+      $('#dataConfirmModal').modal({show:true});
+      return false;
+    });
+  });
+

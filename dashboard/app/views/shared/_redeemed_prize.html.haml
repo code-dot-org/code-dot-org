@@ -1,0 +1,16 @@
+- provider = prize.prize_provider
+= image_tag provider.image_name, :class => 'prize-card-img'
+%p
+  %b= t('redeem_prizes.provider')
+  = link_to(t('redeem_prizes.providers.' + provider.description_token), provider.url)
+%p
+  %b= t('redeem_prizes.code')
+  %span{class: 'prize-code'} #{prize.code}
+%p
+  %span{class: 'prize-redemption'} #{Dashboard::Application::config.prize_providers[provider.description_token]['redemption']}
+- if prize.class == TeacherPrize || prize.class == TeacherBonusPrize
+  = link_to t('redeem_prizes.donorschoose_register'), 'http://www.donorschoose.org/teachers', target: "_blank"
+  %br/
+  = link_to t('redeem_prizes.donorschoose_project'), 'http://www.donorschoose.org/docs/Teacher%20Registration%20Packet%206.11.14%20(1).pdf', target: "_blank"
+  %br/
+  = link_to t('redeem_prizes.donorschoose_how_to'), 'http://www.donorschoose.org/docs/how-to-use-gift-code-2.pdf', target: "_blank"

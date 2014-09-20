@@ -1,0 +1,112 @@
+- Options: {id: 1, name: '20-hour', trophies: true, hidden: false}
+- TSV: |
+    Game	Name	Level	Skin	Concepts	Url
+    Unplug1	Level1	u_1_1		sequence
+    Maze	Level1	2_2	birds	sequence
+    Maze	Level2	2_1	birds	sequence
+    Maze	Level2	2_2_5	birds	sequence
+    Maze	Level3	2_3	birds	sequence
+    Maze	Level4	2_4	birds	sequence
+    Maze	Level5	2_5	birds	loop_times
+    Maze	Level6	2_6	birds	loop_times
+    Maze	Level7	2_7	birds	loop_times
+    Maze	Level8	2_8	birds	loop_times
+    Maze	Level9	2_9	birds	loop_until
+    Maze	Level10	2_10	birds	loop_until
+    Maze	Level11	2_11	pvz	loop_until
+    Maze	Leve12	2_12	pvz	loop_until
+    Maze	Level13	2_13	pvz	if, loop_until
+    Maze	Level14	2_14	pvz	if, loop_until
+    Maze	Level15	2_15	pvz	if, loop_until
+    Maze	Level16	2_16	pvz	if, loop_until
+    Maze	Level17	2_17	pvz	if_else, loop_until
+    Maze	Level18	2_18	pvz	if_else, loop_until
+    Maze	Level19	2_19	pvz	if_else, loop_until
+    Unplug2	Level1	u_2_1		sequence
+    Unplug3	Level1	u_3_1		sequence, function, parameters
+    Artist	Level1	1_1	artist	sequence
+    Artist	Level2	1_2	artist	sequence
+    Artist	Level3	1_3	artist	loop_times
+    Artist	Level4	1_4	artist	loop_times
+    Artist	Level5	1_5	artist	loop_times
+    Artist	Level6	1_6	artist	loop_times
+    Artist	Level7	1_7	artist	loop_times
+    Artist	Level8	1_8	artist	loop_times
+    Artist	Level9	1_9	artist	loop_times
+    Artist	Level10	1_10	artist	sequence
+    Unplug4	Level1	u_4_1		sequence
+    Artist2	Level1	4_1	artist	loop_times
+    Artist2	Level1	4_2	artist	sequence, loop_times
+    Artist2	Level1	4_3	artist	loop_times
+    Artist2	Level1	4_4	artist	loop_times
+    Artist2	Level1	4_5	artist	loop_times
+    Artist2	Level1	4_6	artist	loop_times
+    Artist2	Level1	4_7	artist	loop_times
+    Artist2	Level1	4_8	artist	loop_times
+    Artist2	Level1	4_9	artist	loop_times
+    Artist2	Level1	4_10	artist	loop_times
+    Artist2	Level1	4_11	artist	sequence, loop_times
+    Unplug5	Level1	u_5_1		function
+    Farmer	Level1	karel_1_1	farmer	sequence
+    Farmer	Level2	karel_1_2	farmer	sequence
+    Farmer	Level3	karel_1_3	farmer	loop_times
+    Farmer	Level4	karel_1_4	farmer	loop_times
+    Farmer	Level5	karel_1_5	farmer	loop_while, loop_times
+    Farmer	Level6	karel_1_6	farmer	loop_while, loop_times
+    Farmer	Level7	karel_1_7	farmer	loop_while
+    Farmer	Level8	karel_1_8	farmer	loop_while
+    Farmer	Level9	karel_1_9	farmer	loop_while
+    Farmer	Level10	karel_1_10	farmer_night	if, loop_while
+    Farmer	Level11	karel_1_11	farmer_night	if, loop_while
+    Unplug6	Level1	u_6_1		if
+    Artist3	Level1	2_1	artist_zombie	loop_times
+    Artist3	Level2	2_2	artist_zombie	loop_times
+    Artist3	Level3	2_3	artist_zombie	loop_times
+    Artist3	Level4	2_4	artist_zombie	loop_times
+    Artist3	Level5	2_5	artist_zombie	sequence
+    Artist3	Level6	2_6	artist_zombie	loop_for
+    Artist3	Level7	2_7	artist_zombie	loop_for
+    Artist3	Level8	2_7_5	artist_zombie	sequence
+    Artist3	Level9	2_8	artist_zombie	sequence
+    Artist3	Level10	2_9	artist_zombie	loop_for
+    Artist3	Level11	2_10	artist_zombie	sequence
+    Unplug7	Level1	u_7_1		function
+    Farmer2	Level1	karel_2_1	farmer_night	sequence
+    Farmer2	Level2	karel_2_2	farmer_night	function
+    Farmer2	Level3	karel_2_3	farmer_night	function, loop_times
+    Farmer2	Level4	karel_2_4	farmer_night	function, loop_times
+    Farmer2	Level5	karel_2_5	farmer_night	function, loop_times
+    Farmer2	Level6	karel_2_6	farmer_night	function, loop_times
+    Farmer2	Level7	karel_2_7	farmer_night	function
+    Farmer2	Level8	karel_2_8	farmer_night	function, loop_while
+    Farmer2	Level9	karel_2_9	farmer_night	if, function, loop_while
+    Farmer2	Level10	karel_2_10	farmer_night	if, function, loop_while
+    Unplug8	Level1	u_8_1		sequence
+    Artist4	Level1	3_1	artist_zombie	function
+    Artist4	Level2	3_2	artist_zombie	function
+    Artist4	Level3	3_3	artist_zombie	function, loop_times
+    Artist4	Level4	3_4	artist_zombie	function
+    Artist4	Level5	3_5	artist_zombie	function
+    Artist4	Level6	3_6	artist_zombie	parameters
+    Artist4	Level7	3_7	artist_zombie	parameters
+    Artist4	Level8	3_8	artist_zombie	parameters
+    Artist4	Level9	3_9	artist_zombie	parameters
+    Artist4	Level10	3_10	artist_zombie	sequence
+    Unplug9	Level1	u_9_1		sequence
+    Farmer3	Level1	karel_debug_seq_1	farmer	sequence
+    Farmer3	Level2	karel_debug_seq_2	farmer	sequence
+    Farmer3	Level3	karel_debug_repeat	farmer	loop_times
+    Farmer3	Level4	karel_debug_while	farmer	loop_while, loop_times
+    Farmer3	Level5	karel_debug_if	farmer	if, loop_times
+    Farmer3	Level6	karel_debug_if_else	farmer	if_else, loop_times
+    Farmer3	Level7	karel_debug_function_1	farmer	function
+    Farmer3	Level8	karel_debug_function_2	farmer	function
+    Farmer3	Level9	karel_debug_function_3	farmer	parameters
+    Unplug10	Level1	u_10_1		sequence
+    Artist5	Level1	5_1	artist_zombie	sequence
+    Artist5	Level1	5_2	artist_zombie	sequence
+    Artist5	Level1	5_3	artist_zombie	sequence
+    Artist5	Level1	5_4	artist_zombie	sequence
+    Artist5	Level1	5_5	artist_zombie	sequence
+    Artist5	Level1	5_6	artist_zombie	sequence
+    Unplug11	Level1	u_11_1		sequence

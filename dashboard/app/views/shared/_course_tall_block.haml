@@ -1,0 +1,39 @@
+- if id == "hoc"
+  - url = hoc_reset_url()
+  - title = t('upsell.hoc.title')
+  - body = t('upsell.hoc.body')
+
+- elsif id == "flappy"
+  - url = url_from_path("/flappy/1")
+  - title = t('upsell.flappy.title')
+  - body = t('upsell.flappy.body')
+
+- elsif id == "20hour"
+  - url = script_url(id)
+  - title = t('upsell.20hour.title')
+  - body = t('upsell.20hour.body')
+
+- elsif id == "course1" || id == "course2" || id == "course3" || id == "artist" || id == "playlab"
+  - url = script_url(id)
+  - title = data_t_suffix('script.name', id, "title")
+  - body = data_t_suffix('script.name', id, "description_short")
+
+- if id == "artist" || id == "playlab"
+  - url = script_stage_script_level_url(id, 1, 1)
+  - title = data_t_suffix('script.name', id, "title")
+  - body = data_t_suffix('script.name', id, "description_short")
+
+.span3.miniblock.miniblock-tall{style: "overflow:hidden"}
+  =link_to url, {style:"text-decoration:none"} do
+    .heading{style: "padding-left: 10px; padding-right: 10px; padding-top: 0px; padding-bottom: 5px; "}
+      %h3.whitetext{style: "text-overflow: ellipsis; white-space: nowrap; overflow: hidden"}
+        = title
+
+    .imgspan
+      = image_tag(image_url("logo_tall_#{id}.jpg"), height: "120", style: "width: 100%; height: 120px")
+    %br/
+    %br/
+
+    .clear
+
+    .smalltext.greytext{style: "padding-left: 10px; padding-right: 10px; padding-top: 10px; "}= body

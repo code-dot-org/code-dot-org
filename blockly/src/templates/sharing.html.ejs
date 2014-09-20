@@ -1,0 +1,55 @@
+<% var msg = require('../../locale/current/common'); %>
+<% if (options.feedbackImage) { %>
+  <div class="sharing-image">
+    <img class="feedback-image" src="<%= options.feedbackImage %>">
+  </div>
+<% } %>
+
+<div class="sharing">
+<% if (options.alreadySaved) { %>
+  <div class="saved-to-gallery">
+    <%= msg.savedToGallery() %>
+  </div>
+<% } else if (options.saveToGalleryUrl) { %>
+  <div class="social-buttons">
+  <button id="save-to-gallery-button" class="launch">
+    <%= msg.saveToGallery() %>
+  </button>
+  </div>
+<% } %>
+
+<% if (options.response && options.response.level_source) { %>
+  <% if (options.appStrings && options.appStrings.sharingText) { %>
+    <div><%= options.appStrings.sharingText %></div>
+  <% } %>
+
+  <div>
+    <input type="text" id="sharing-input" value=<%= options.response.level_source %> readonly>
+  </div>
+
+  <div class='social-buttons'>
+    <% if (options.facebookUrl) { -%>
+      <a href='<%= options.facebookUrl %>' target="_blank">
+        <img src='<%= BlocklyApps.assetUrl("media/facebook_purple.png") %>' />
+      </a>
+    <% } -%>
+
+    <% if (options.twitterUrl) { -%>
+      <a href='<%= options.twitterUrl %>' target="_blank">
+        <img src='<%= BlocklyApps.assetUrl("media/twitter_purple.png") %>' />
+      </a>
+    <% } -%>
+    <% if (options.sendToPhone) { -%>
+      <a id="sharing-phone" href="" onClick="return false;">
+        <img src='<%= BlocklyApps.assetUrl("media/phone_purple.png") %>' />
+      </a>
+    <% } -%>
+  </div>
+<% } %>
+</div>
+<div id="send-to-phone" class="sharing" style="display: none">
+  <label for="phone">Enter a US phone number:</label>
+  <input type="text" id="phone" name="phone" />
+  <button id="phone-submit" onClick="return false;">Send</button>
+  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>
+</div>

@@ -1,0 +1,33 @@
+name '2-3 maze match 1' 
+title 'Maze Match One'
+
+banner ''
+description 'Match the puzzles to the blocks'
+
+height '200'
+
+#question 'E - F, L, Repeat 4(F), R, F'
+#answer 'image match E-F, L, dir above'
+
+question '/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png'
+  answer '/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png'
+
+#question 'S - F, F, R, F, F'
+#answer 'image match S-F, F dir above'
+
+question '/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png'
+  answer '/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png'
+
+#question 'W - Repeat 3(F), L, F, R, F'
+#answer 'image match W-Repeat dir above'
+
+question '/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png'
+  answer '/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png'
+
+#question 'E - R, F, F, F'
+#answer 'image match E-R, F dir above'
+
+#question '/script_assets/2-3_images/maze/2-3_maze_match_1_q4.png'
+#answer '/script_assets/2-3_images/maze/2-3_maze_match_1_a4.png'
+
+# http://staging.learn.code.org/s/course2/stage/1/puzzle/25

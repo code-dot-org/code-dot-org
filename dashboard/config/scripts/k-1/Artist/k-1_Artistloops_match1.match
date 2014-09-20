@@ -1,0 +1,13 @@
+name 'K-1 Artist Loops Match 1'
+title 'Matching'
+content1 'Match the code to the stairs it draws.'
+height '150'
+
+question '/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png'
+answer '/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png'
+
+question '/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png'
+answer '/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png'
+
+question '/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png'
+answer '/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png'

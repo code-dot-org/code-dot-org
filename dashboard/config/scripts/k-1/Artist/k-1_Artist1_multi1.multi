@@ -1,0 +1,12 @@
+name 'K-1 Artist 1 Multi 1'
+title 'Multiple Choice'
+content1 '/script_assets/k_1_images/artist_images/rshort_dlong.png, 500'
+height '150'
+
+question 'Which blocks solve this puzzle?'
+wrong '/script_assets/k_1_images/artist_images/W|S|S.png'
+right '/script_assets/k_1_images/artist_images/E|S|S.png'
+wrong '/script_assets/k_1_images/artist_images/S|E|E.png'
+wrong '/script_assets/k_1_images/artist_images/E|S.png'
+
+# http://staging.learn.code.org/s/course1/stage/4/puzzle/9

@@ -1,0 +1,46 @@
+#!/usr/local/bin/ruby
+$VERBOSE = true
+
+def there_can_be_only_one_pid(name)
+  pidfile = "/tmp/#{name}.pid"
+  if File.exists?(pidfile)
+    oldpid = File.read(pidfile).to_i
+    # does that process exist?
+    exists = true
+    begin
+      Process.kill(0, oldpid)
+    rescue Errno::ESRCH
+      File.delete(pidfile)
+      exists = false
+    rescue ::Exception   # for example on EPERM (process exists but does not belong to us)
+      exists = true
+    end
+    raise "#{pidfile} => #{oldpid} is running" if exists
+  end
+  File.open(pidfile, "w") { |f| f.puts $$ }
+  at_exit { File.unlink(pidfile) }
+end
+
+there_can_be_only_one_pid("sync_dash")
+
+DIR = '/mnt/backups/'
+SSH="ssh -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /home/ubuntu/.ssh/production-code-org.pem"
+
+servers = ["1b", "1c", "1d"].map {|i| "production-#{i}" }
+servers.each do |m|
+  `mkdir -p #{DIR}#{m}/log`
+  `rsync -avz -e "#{SSH}" #{m}.code.org:/home/ubuntu/website-ci/dashboard/log/*.gz #{DIR}#{m}/log`
+  recent_log = Dir.glob("#{DIR}/#{m}/log/milestone*.gz").sort.last
+  current_log = "#{DIR}/#{m}/log/milestone.log"
+
+  append = ''
+  if not recent_log.nil? and File.exists?(current_log) and (File.mtime(recent_log) < File.mtime(current_log))
+    append = '--append'
+  end
+
+  `rsync -avz #{append} -e "#{SSH}" #{m}.code.org:/home/ubuntu/website-ci/dashboard/log/*.log #{DIR}#{m}/log`
+  puts "#{m}.code.org #{append}"
+end
+
+`/etc/cdo/count_lines > /tmp/line_data.json`
+`cp /tmp/line_data.json #{DIR}`

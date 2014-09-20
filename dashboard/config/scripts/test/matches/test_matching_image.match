@@ -1,0 +1,23 @@
+name 'test matching image' 
+
+title 'Matching Images Two'
+content1 'Match up all the flowers by colour!'
+content2 '/script_assets/matches/images/head.jpg,300'
+height '170'
+
+pre_title 'Instructions'
+pre_body 'Drag the images from right to center.'
+pre_image '/script_assets/matches/images/a1.jpg'
+pre_ani '/script_assets/matches/images/a1.jpg'
+
+question "/script_assets/matches/images/q1.jpg"
+answer '/script_assets/matches/images/a1.jpg'
+
+question "/script_assets/matches/images/q2.jpg"
+answer '/script_assets/matches/images/a2.jpg'
+
+question "/script_assets/matches/images/q3.jpg"
+answer '/script_assets/matches/images/a3.jpg'
+
+question "/script_assets/matches/images/q4.jpg"
+answer '/script_assets/matches/images/a4.jpg'

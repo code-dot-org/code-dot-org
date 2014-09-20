@@ -1,0 +1,184 @@
+-name_s ||= nil
+-email_s ||= nil
+-location_s ||= nil
+-time_commitment_s ||= nil
+-location_flexibility_ss ||= nil
+-languages_ss ||= nil
+-languages_other_ss ||= nil
+-experience_s ||= nil
+-description_s ||= nil
+-linkedin_s ||= nil
+-facebook_s ||= nil
+-skype_s ||= nil
+-helpouts_s ||= nil
+-allow_contact_b ||= nil
+-form ||= nil
+
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+
+/[if lt IE 9]
+  %script{src: "/js/es5-shim.min.js"}
+
+%h1 Software engineers: Help local teachers as a volunteer / mentor
+%form#volunteer-engineer-submit-form{role: "form", onsubmit: "return volunteerEngineerFormSubmit()"}
+  %p.form-intro-text Please enter the following information if you’re interested in hearing about local volunteer opportunities. Fields marked with a <span class="required-field-marker">*</span> are required.
+  #error-message{style: 'display: none'}
+
+  .form-group
+    %label.control-label{for: "volunteer-name"} Name
+    %span.form-required-field *
+    %div
+      %input#volunteer-name.form-control{name: "name_s", placeholder: "Name", type: "text", required: true, value: name_s}/
+
+  .form-group
+    %label.control-label{for: "volunteer-email"} Email address
+    %span.form-required-field *
+    %div
+      %input#volunteer-email.form-control{name: "email_s", placeholder: "Email address", type: "text", required: true, value: email_s}/
+    %p Your email address will never be shared.
+
+  .form-group
+    %label.control-label{for: "volunteer-location"} Location
+    %span.form-required-field *
+    %div
+      %input#volunteer-location.form-control{name: "location_s", placeholder: "ZIP code, city and state/country, or street address", type: "text", required: true, value: location_s}/
+
+  .form-group
+    %label.control-label{for: "volunteer-time-commitment"} Time commitment
+    %span.form-required-field *
+    %div
+      %select#volunteer-time-commitment.form-control{name: "time_commitment_s", type: "select", required: false}
+        %option{selected: time_commitment_s.nil_or_empty?, value: ""}
+        -VolunteerEngineerSubmission.commitments.each_pair do |key,label|
+          %option{value: key, selected: key == time_commitment_s}= label
+
+  .form-group
+    %label.control-label{for: "volunteer-location-flexibility"} Location flexibility (select all that apply)
+    %div
+      %select#volunteer-location-flexibility.form-control{name: "location_flexibility_ss[]", type: "select", required: false, multiple: true}
+        %option{selected: location_flexibility_ss.nil_or_empty?, value: ""}
+        -VolunteerEngineerSubmission.locations.each_pair do |key,label|
+          %option{value: key, selected: (location_flexibility_ss||[]).include?(key)}= label
+
+  .form-group
+    %label.control-label{for: "volunteer-languages"} Code languages I'm familiar with
+    %div
+      %select#volunteer-languages.form-control{name: "languages_ss[]", type: "select", required: false, multiple: true}
+        %option{selected: languages_ss.nil_or_empty?, value: ""}
+        -ClassSubmission.languages.each do |label|
+          %option{value: label, selected: (languages_ss||[]).select{|i| i.downcase == label.downcase}.first}= label
+        %option#volunteer-languages-other-option{value: 'Other', selected: (languages_ss||[]).select{|i| i.downcase == 'other'}.first} Other language(s)
+    %div{id: 'volunteer-languages-other-wrapper', style: 'display: none;'}
+      %label.control-label{for: "volunteer-languages-other"}<
+        %em{style: 'font-weight: normal;'} Other languages (comma-separated)
+      %div
+        %input#volunteer-languages-other.form-control{name: "languages_other_ss", placeholder: "Other languages (comma-separated)", type: "text", value: CSV.generate_line(languages_other_ss || [])}/
+
+  .form-group
+    %label.control-label{for: "volunteer-experience"} Experience level
+    %div
+      %select#volunteer-experience.form-control{name: "experience_s", type: "select", required: false}
+        %option{selected: experience_s.nil_or_empty?, value: ""}
+        -VolunteerEngineerSubmission.experiences.each_pair do |key,label|
+          %option{value: key, selected: key == experience_s}= label
+
+  .form-group
+    %label.control-label{for: "volunteer-description"} Description
+    %p Describe your computer science experience and how you would like to participate as a volunteer/mentor for local teachers.
+    %div
+      %textarea#volunteer-description.form-control{name: "description_s", placeholder: "Description of experience and/or participation", required: false, style: "height: 10em;"}
+        =description_s
+
+  %h3{style: 'color: #00adbc; font-size: 1.125em;'} Personal profile URLs (shared publicly if you check the box below)
+  .form-group
+    %label.control-label{for: "volunteer-linkedin"} LinkedIn profile URL
+    %div
+      %input#volunteer-linkedin.form-control{name: "linkedin_s", placeholder: "http://www.linkedin.com/in/your_name", type: "text", required: false, value: linkedin_s}/
+  .form-group
+    %label.control-label{for: "volunteer-facebook"} Facebook profile URL
+    %div
+      %input#volunteer-facebook.form-control{name: "facebook_s", placeholder: "https://www.facebook.com/your_name", type: "text", required: false, value: facebook_s}/
+  .form-group
+    %label.control-label{for: "volunteer-skype"} Skype ID
+    %div
+      %input#volunteer-skype.form-control{name: "skype_s", placeholder: "skype_user", type: "text", required: false, value: skype_s}/
+  .form-group
+    %label.control-label{for: "volunteer-helpouts"} Google Helpouts URL
+    %div
+      %input#volunteer-helpouts.form-control{name: "helpouts_s", placeholder: "http://helpouts.google.com/12345/ls/6789", type: "text", required: false, value: helpouts_s}/
+    %p
+      You can choose 'office hours' to provide online mentorship.
+      %a{href: 'http://helpouts.google.com/'} More info
+
+  .form-group
+    %h3{style: 'color: #00adbc; font-size: 1.125em;'} Allow local teachers to contact me (without sharing my email or address)
+    %p If you choose, you can be listed in a database for local teachers to contact you for mentorship or help teaching computer programming in the classroom. Even if you check this box, your email and exact address will NEVER be shared. But the other information above (including approximate location) will be publicly viewable by local teachers.
+    %div
+      %label{style: 'font-weight: normal;', for: 'volunteer-allow-contact'}
+        %input#volunteer-allow-contact{name: 'allow_contact_b', type: 'checkbox', value: 1, checked: allow_contact_b}
+          Allow local teachers to find and contact me (without sharing my email or address)
+
+  .form-group
+    %button#btn-submit.btn.btn-default{type: "submit"} Submit
+
+#thanks{:style=>"display: none;"}
+  %p Thank you for submitting your information.
+
+:javascript
+  $(document).ready(function() {
+    $('#volunteer-engineer-submit-form select').selectize();
+
+    $('#volunteer-languages').change(function() {
+      if ($.inArray('other', $(this).val()) > -1) {
+        $('#volunteer-languages-other-wrapper').show();
+      } else {
+        $('#volunteer-languages-other').val('');
+        $('#volunteer-languages-other-wrapper').hide();
+      }
+    }).triggerHandler('change');
+  });
+
+:javascript
+  function processResponse(data)
+  {
+    $('#volunteer-engineer-submit-form').hide();
+    $('#thanks').show();
+  }
+
+  function processError(data)
+  {
+    $('.has-error').removeClass('has-error');
+
+    errors = Object.keys(data.responseJSON);
+    errors_count = errors.length;
+
+    for (i = 0; i < errors_count; ++i) {
+      error_id = '#volunteer-' + errors[i].replace(/_/g, '-');
+      error_id = error_id.replace(/-[sb]s?$/, '');
+      $(error_id).parents('.form-group').addClass('has-error');
+    }
+
+    $('#error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
+
+    $('body').scrollTop(0);
+    $("#btn-submit").removeAttr('disabled');
+    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
+  }
+
+  function volunteerEngineerFormSubmit()
+  {
+    $("#btn-submit").attr('disabled','disabled');
+    $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
+
+    $.ajax({
+      url: "/forms/VolunteerEngineerSubmission#{'/' + form.secret if form}",
+      type: "post",
+      dataType: "json",
+      data: $('#volunteer-engineer-submit-form').serialize()
+    }).done(processResponse).fail(processError);
+
+    return false;
+  }

@@ -1,0 +1,9 @@
+#learn-tabs.desktop-feature
+  .content
+    %ul.nav.nav-tabs
+      %li{:class=>(request.path_info == '/learn') ? 'active tab' : 'tab'}<
+        %a{:href=>'/learn'}=@config[:learn]
+      %li{:class=>(request.path_info == '/learn/beyond') ? 'active tab' : 'tab'}<
+        %a{:href=>'/learn/beyond'}=@config[:beyond]
+      %li{:class=>(request.path_info == '/learn/educators') ? 'active tab' : 'tab'}<
+        %a{:href=>'/learn/educators'}=@config[:educators]

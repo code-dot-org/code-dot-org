@@ -1,0 +1,21 @@
+%h3 Recent drawings that students have saved to their gallery
+= paginate @gallery_activities
+- @gallery_activities.each do |gallery_activity|
+  %div.gallery_activity
+    - activity = gallery_activity.activity
+    - level_source = activity.level_source
+    = link_to image_tag(original_image_level_source_path(level_source)), level_source
+    %div.caption
+      by
+      = activity.user.name
+    %div.caption
+      = time_ago_in_words activity.created_at
+      ago
+    %div.caption
+      = link_to "delete", gallery_activity_path(gallery_activity), method: :delete, remote: true, class: 'delete-gallery-activity', data: {confirm: 'Are you sure?' }
+      
+:javascript
+  $('.delete-gallery-activity').on('ajax:complete', function(event, xhr, status) {
+    $(this).parent().parent().css('opacity', '0.5')
+    $(this).replaceWith('<b>Deleted!</b>')
+  });

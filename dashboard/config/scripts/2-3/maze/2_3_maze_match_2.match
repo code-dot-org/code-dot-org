@@ -1,0 +1,24 @@
+name '2-3 Maze Match 2' 
+title 'Maze Match'
+
+banner ''
+description 'Match the puzzles to the blocks'
+
+pre_title 'Instructions'
+pre_body 'Drag the blocks to match.'
+pre_image ' '
+pre_ani '/script_assets/images/matching_ani.gif'
+
+height '200'
+
+question '/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png'
+  answer '/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png'
+
+question '/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png'
+  answer '/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png'
+
+question '/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png'
+  answer '/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png'
+
+#question '/script_assets/2-3_images/maze/2-3_maze_match_2_q4.png'
+#  answer '/script_assets/2-3_images/maze/2-3_maze_match_2_a4.png'

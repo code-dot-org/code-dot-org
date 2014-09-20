@@ -1,0 +1,87 @@
+:scss
+  .new_progress {
+    .new_report_cell {
+      padding: 0px;
+      border: none;
+      span {
+        display: block;
+        height: 7px;
+        width: 7px;
+      }
+    }
+    .report_row {
+      border: none;
+    }
+  }
+
+- stage_map = @all_script_levels.group_by { |sl| sl.level.game }
+
+%table{ width: '100%' }
+  %tr
+    %td{ style: "vertical-align: middle; font-weight: 500; padding-right: 10px;" }= t('teacher.followers.levels_key')
+    %td
+      .report_key.level_aced &nbsp;
+    %td.report_key_cell
+      = t('teacher.followers.perfect')
+    %td
+      .report_key.level_done &nbsp;
+    %td.report_key_cell
+      = t('teacher.followers.completed')
+  %tr
+    %td
+    %td
+      .report_key.level_undone &nbsp;
+    %td.report_key_cell
+      = t('teacher.followers.tried')
+    %td
+      .report_key.level_untried &nbsp;
+    %td.report_key_cell
+      = t('teacher.followers.not_tried')
+
+%br/
+
+- stages = []
+
+%table{ style: "width:#{(@all_script_levels.length) * 7 + 250}px; table-layout:fixed;", class: 'new_progress' }
+  %col{ width: '250px'}
+  - @all_script_levels.each do
+    %col{ width: '7px'}
+  - @section_map.each_pair do |section, students|
+    %tr.report_row
+      %th{ style: "white-space: nowrap; overflow: hidden; text-overflow:ellipsis;padding-left: 7px;"}
+      - stage_map.each_pair do |game, levels|
+        - if levels.length > 1
+          %th{ colspan: levels.length, style: "overflow: hidden; font-size: 12px", title: game.name }= game.name
+          - stages << levels.length
+    - students.each do |student|
+      %tr.report_row
+        %td.fixed_width_cell= link_to student.name, student
+        - level_map = student.user_levels.index_by {|ul| ul.level_id }
+        - final_index = rand(@all_script_levels.length)
+        - stage_upto = 0
+        - stage_level_upto = 0
+        - stage_background = false
+        - @all_script_levels.each_with_index do |sl, index|
+          - ul = level_map[sl.level_id]
+          - final = index == final_index
+          - color = index < 20 ? "red" : "rgb(0, 189, 45);" 
+          - colspan = final ? "4" : "1"
+          - stage_level_upto += 1
+          - if stage_level_upto == stages[stage_upto]
+            - stage_background = ! stage_background
+            - stage_level_upto = 0
+            - stage_upto += 1
+          - background_color = stage_background ? "#ededed" : "#ddd"
+          - style = final ? "background-color: #{color}; border-radius: 20px; " : "background-color: #{background_color}"
+          - if index <= final_index
+            %td{ class: "new_report_cell", title: build_user_level_message(student, ul, sl), style: style, colspan: colspan }
+              - if index <= final_index
+                -style = final ? "line-height: 7px; font-weight: 600; color: white; padding-left: 7px; background-color: #{color}" : ""
+                - text = final ? index : "&nbsp;"
+                -if rand(2) == 0
+                  %span{ class: "level_done", style: style}!= text
+                -else
+                  %span{ class: "level_undone", style: style}!= text
+
+
+%br/

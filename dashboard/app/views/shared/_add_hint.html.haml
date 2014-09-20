@@ -1,0 +1,20 @@
+=# Local level_source_id and redirect_url must be defined.
+= form_for([LevelSourceHint.new]) do |f|
+  .field
+    = text_area_tag :hint_content, nil, class: 'input-xxlarge',
+      placeholder: t('add_hint_form.placeholder'), :required => true,
+      :maxlength => 250, :rows => 4
+    %br
+    %span#content_length_message 250 characters left.
+    = hidden_field_tag :level_source_id, level_source_id
+    = hidden_field_tag :redirect, redirect_url
+  .actions
+    = f.submit t('add_hint_form.submit')
+
+:javascript
+  $( "#hint_content" ).placeholder();
+
+  $( "#hint_content" ).on('input',function(e){
+    var remain_char_num = 250 - $( '#hint_content' ).val().length;
+    $( '#content_length_message' ).text(remain_char_num + " characters left.");
+  });

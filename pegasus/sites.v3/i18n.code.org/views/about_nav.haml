@@ -1,0 +1,9 @@
+#about_nav
+  %span.about_list
+    -current_url = request.path_info
+    -@config[:nav_links].each_pair do |title, link|
+      - if current_url == link
+        %span.about_list_item_selected= title
+      -else
+        %a.about_list_item{:href=>link}= title
+      %hr.narrow_hr

@@ -1,0 +1,144 @@
+!!! 5
+%html
+  %head
+    -if request.site == 'code.org' || request.site == 'uk.code.org'
+      %script{src: "//cdn.optimizely.com/js/400912536.js"}
+
+    -# Add social networking meta properties.
+    - header['social'].each_pair do |property, content|
+      %meta{property: property, content: content}
+
+    -if request.site == 'csedweek.org'
+      -title = (header['title'].nil?) ? 'The Hour of Code' : header['title']
+      -tagline = (header['tagline'].nil?) ? 'The Hour of Code' : header['tagline']
+      -copyright = '&copy; Computer Science Education Week, 2014'
+    -else
+      -title = (header['title'].nil?) ? 'Anybody can learn' : header['title']
+      -tagline = (header['tagline'].nil?) ? 'Code.org' : header['tagline']
+      -copyright = '&copy; Code.org, 2014'
+
+    -full_title = (tagline == '' || title == tagline) ? title : title + ' | ' + tagline
+
+    %title= full_title
+
+    %link{:rel=>'shortcut icon', :href=>'/images/favicon.ico'}
+    %link{:rel=>'apple-touch-icon', :href=>'/images/apple-touch-icon-precomposed.png'}
+
+    %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/bootstrap.min.css'}
+    %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/font-awesome.min.css'}
+    %link{:rel=>'stylesheet', :type=>'text/css', :href=>'//cloud.typography.com/7425452/678642/css/fonts.css', :media=>'all'}
+
+    /[if lt IE 9]
+      %script{:src=>'/js/html5shiv.js'}
+
+    :javascript
+      var is_ie8 = false;
+    /[if IE 8]
+      :javascript
+        is_ie8 = true;
+
+    - if header['responsive']
+      %meta{:name=>'viewport', :content=>'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'}
+
+      -if request.locale == 'en-US'
+        %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/brstrap.css'}
+        %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/common.css'}
+      -else
+        %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/brstrap-international.css'}
+        %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/common-international.css'}
+
+      /[if lt IE 9]
+        %script{:src=>'/js/respond.min.js'}
+
+      %meta{:'http-equiv'=>'X-UA-Compatible', :content=>'IE=8'}
+
+    -else
+      %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/common.css'}
+      %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/brstrap-nonresponsive.css'}
+
+    %script{:src=>'/js/jquery.min.js'}
+
+    -if request.site == 'csedweek.org'
+      %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/styling.css'}
+      %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/styling_headers.css'}
+    -else
+      %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/page.css'}
+      %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/theme.css'}
+ 
+  %body
+    -if header['print']
+      =body
+    -else
+      .wrapper
+        -if header['responsive']
+          #desktop-header.desktop-feature
+            = partial('page_header')
+          #mobile-header.mobile-headers.mobile-feature
+            = partial('mobile_header_responsive')
+        -else
+          = partial('page_header')  
+
+        -if header['responsive']
+          -if request.path_info =~ /^\/learn/
+            = partial('learn_tabs', :path=>request.path_info)
+
+        -if header['responsive']
+          -if header['responsivePadMobile']
+            -containerClass = "container_responsive mobile-pad-edge"
+          -else
+            -containerClass = "container_responsive"
+        -else
+          -containerClass = "container_nonresponsive"
+
+        %div{:class=>containerClass}
+
+          -if header['responsive']
+            =body
+
+            #clearboth{:style=>"clear:both"}
+            .desktop-feature
+              %br/
+              %br/
+              %br/
+
+          -else
+            -contentWidth = 970
+            %div{:style=>"width: #{contentWidth}px;"}
+
+              -if header['nav']
+                %div{:style=>'width: 140px; margin-right: 40px; float: left;'}
+                  -if header['nav'].nil? || header['nav'] == 'blank'
+                    &nbsp;
+                  -else
+                    = partial(header['nav'])
+                  -contentWidth -= 180
+
+              -if header['rightbar']
+                -contentWidth -= 180
+
+              %div{:style=>"width: #{contentWidth}px; float: left; margin: 0; padding: 0;"}= body
+
+              -if header['rightbar']
+                %div{:style=>'width: 140px; margin-left: 40px; float: left;'}
+                  -if header['rightbar'].nil? || header['rightbar'] == 'blank'
+                    &nbsp;
+                  -else
+                    = partial(header['rightbar']) unless header['rightbar'].nil?
+
+            #clearboth{:style=>"clear:both"}
+            %br/
+            %br/
+            %br/
+        .push
+
+      -if header['responsive']
+        .desktop-feature
+          = partial('page_footer')
+        .mobile-headers.mobile-feature
+          = partial('mobile_footer_responsive', :text=>copyright)    
+      -else
+        = partial('page_footer')
+
+    = partial('fastclick.js')
+
+    = partial('google_analytics') if File.exists?(sites_dir("#{request.site}/views/google_analytics.haml"))

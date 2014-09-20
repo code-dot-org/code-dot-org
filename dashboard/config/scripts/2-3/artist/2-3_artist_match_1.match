@@ -1,0 +1,33 @@
+name '2-3 artist match 1' 
+title 'Artist Matching'
+
+content1 'Match the shape with the blocks that complete it.'
+content2 ''
+
+height '100'
+
+question '/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png'
+  answer '/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png'
+
+#question 'Triangle'
+#answer 'image of triangle'
+
+question '/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png'
+  answer '/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png'
+
+#question 'Square'
+#answer 'image of square'
+
+question '/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png'
+  answer '/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png'
+
+#question 'Hexagon'
+#answer 'image of hexagon'
+
+question '/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png'
+  answer '/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png'
+
+#question 'Hexagon'
+#answer 'repeated loop of hexagon'
+
+# http://staging.learn.code.org/s/course2/stage/3/puzzle/16

@@ -1,0 +1,15 @@
+%h1 Listing activities
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+  %tbody
+    - @activities.each do |activity|
+      %tr
+        %td= link_to t('crud.show'), activity
+        %td= link_to t('crud.edit'), edit_activity_path(activity)
+        %td= link_to t('crud.destroy'), activity, method: :delete, data: { confirm: t('crud.confirm') }
+%br/
+= link_to t('crud.new_model', model: Activity.model_name.human), new_activity_path

@@ -1,0 +1,41 @@
+<%
+
+var commonMsg = require('../../../locale/current/common');
+var mazeMsg = require('../../../locale/current/maze');
+
+var addProcedures = function() { -%>
+  <% if (level > 3) { -%>
+    <category name="<%= commonMsg.catProcedures() %>" custom="PROCEDURE"></category>
+  <% } else if (level == 2 || level == 3) { -%>
+    <category name="<%= commonMsg.catProcedures() %>">
+      <block type="procedures_callnoreturn">
+        <mutation name="<%= mazeMsg.fillN({shovelfuls: 5}) %>"></mutation>
+      </block>
+    </category>
+  <% } -%>
+  <% if (level < 9) { -%>
+    <category name="<%= commonMsg.catLogic() %>">
+      <block type="karel_if"></block>
+    </category>
+  <% } else if (level > 8) { -%>
+    <category name="<%= commonMsg.catLogic() %>">
+      <block type="karel_if"></block>
+      <block type="karel_ifElse"></block>
+    </category>
+  <% } -%>
+<% }; -%>
+
+<xml id="toolbox" style="display: none;">
+  <category name="<%= commonMsg.catActions() %>">
+    <block type="maze_moveForward"></block>
+    <block type="maze_turn"><title name="DIR">turnLeft</title></block>
+    <block type="maze_turn"><title name="DIR">turnRight</title></block>
+    <block type="maze_dig"></block>
+    <block type="maze_fill"></block>
+  </category>
+  <% addProcedures() -%>
+  <category name="<%= commonMsg.catLoops() %>">
+    <block type="maze_untilBlocked"></block>
+    <block type="controls_repeat"></block>
+  </category>
+</xml>

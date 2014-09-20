@@ -1,0 +1,48 @@
+---
+layout: none
+theme: none
+---
+%div{"ng-controller" => "WorkshopsController"}
+  %h1 Your workshops
+
+  %a.btn.btn-default{style: 'color: #fff;', "ng-href" => "#/new"} Add workshop
+  %br/
+  %br/
+
+  %div.jumbotron{'ng-show' => 'hasWorkshops && workshops.length <= 0'}
+    No workshops have been added yet.
+
+  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'workshops.length > 0'}
+    %colgroup
+      %col{style: 'width: 200px;'}/
+      %col{style: 'width: 320px;'}/
+      %col{style: 'width: 100px;'}/
+      %col{style: 'width: 100px;'}/
+      %col{style: 'width: 250px;'}/
+    %tr
+      %th.manage-th
+        Date and time
+      %th.manage-th
+        Location
+      %th.manage-th
+        Type
+      %th.manage-th
+        Signups
+      %th.manage-th
+    %tr{"ng-repeat" => "workshop in workshops | orderBy:order", style: "vertical-align:top"}
+      %td
+        %div{"ng-repeat" => "date in workshop.dates"}
+          {{date.date_s}}, {{date.start_time_s}}-{{date.end_time_s}}
+      %td {{workshop.location_name_s}}
+      %td {{workshop.type_s}}
+      %td {{workshop.signups.length}} / {{workshop.capacity_s}}
+      %td{nowrap: true, style: 'white-space: nowrap;'}
+        %span{"ng-show" => "workshop.confirmDelete"}
+          %span Delete?
+          %a.btn.btn-danger.btn-xs{"ng-click"=>'del(workshop)'} Yes
+          %a.btn.btn-success.btn-xs{"ng-click"=>'workshop.confirmDelete = false'} No
+        %span{"ng-hide" => "workshop.confirmDelete"}
+          %a.btn.btn-white.btn-xs{"ng-href" => "#/{{workshop.secret}}/view"} View
+          %a.btn.btn-white.btn-xs{"ng-href" => "#/{{workshop.secret}}/edit"} Edit
+          %a.btn.btn-white.btn-xs{"ng-href" => "#/{{workshop.secret}}/clone"} Clone
+          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(workshop)"} Delete

@@ -1,0 +1,100 @@
+- @page_title = t('teacher.students.manage')
+- add_section_ui = !@sections.blank?
+
+= render partial: 'shared/teacher_nav', locals: { current: 'manage' }
+
+%h1= @page_title
+
+%br/
+= link_to t('teacher.students.add'), '#add_students'
+
+%br/
+%br/
+
+- content_for :section_assignment_dropdown do
+  .manage_section_area{style: "display:none;"}
+    Assign checked students to section:
+    - options_select = options_from_collection_for_select(@sections, :id, :name)
+    = select_tag('section_id', options_select, style: 'margin: 0 7px 0px 4px')
+    = submit_tag 'Go'
+
+= form_tag(add_to_section_path) do
+  - if add_section_ui
+    %div{style: "min-height: 40px;"}
+      .manage_section_area_instructions
+        = t('teacher.students.help_reassign') 
+      = yield :section_assignment_dropdown
+      
+  %fieldset
+    %table{ style: "width:940px; table-layout:fixed;"}
+      %colgroup
+        %col{ width: 50 }
+        %col{ width: 250 }
+        %col{ width: 140 }
+        %col{ width: 125 }
+        %col{ width: 375 }
+
+      %tr
+        %th.manage-th= add_section_ui ? check_box_tag(nil, nil, false, class: :checkall) : ''
+        %th.manage-th= t('teacher.students.name')
+        %th.manage-th= t('teacher.students.username')
+        %th.manage-th= t('teacher.students.password')
+        %th.manage-th= t('teacher.sections.section')
+
+      - @followers.each do |followed|
+        %tr.manage-tr
+          %td.manage-td= add_section_ui ? check_box_tag('follower_ids[]', followed.id, false, class: :checkstudent) : ''
+          %td.manage-td{ class: 'fixed_width_cell' }
+            = link_to followed.student_user.name || followed.student_user.username, user_stats_path(followed.student_user)
+            = link_to t('teacher.students.remove'), remove_follower_path(teacher_user_id: current_user.id, student_user_id: followed.student_user_id), data: {confirm: t('teacher.students.confirm_remove')}, method: :post
+          %td.manage-td{ class: 'fixed_width_cell' }
+            = followed.student_user.username
+          %td.manage-td= followed.student_user.email.blank? ? link_to("Edit", student_edit_password_path(followed.student_user)) : ''
+          %td.manage-td
+            = followed.section.try(:name)
+
+  %div{style: 'min-height: 40px; margin-top: 10px'}
+    = yield :section_assignment_dropdown
+
+%br/
+
+%h4{ id:'add_students' }= t('teacher.students.register')
+
+%p
+  = t('teacher.students.help_register')
+%p
+  = t('teacher.students.visit')
+  %b= link_to 'code.org/join', 'http://code.org/join'
+  = t('teacher.students.section_code')
+  %br/
+  - if @sections.empty?
+    != t('teacher.students.first_please', add_section: link_to(t('teacher.sections.add'), new_section_path))
+  - else
+    - @sections.each do |section|
+      = t('teacher.students.for')
+      %b= section.name
+      = t('teacher.students.enter')
+      %b= section.code
+      = link_to t('teacher.sections.email'), build_invite_mailto(section, current_user), target: :_blank
+      %br/
+    %br/
+    = link_to t('teacher.sections.add'), new_section_path
+
+
+:javascript
+  $(function () {
+      $('.checkall').on('click', function () {
+          $(this).closest('fieldset').find(':checkbox').prop('checked', this.checked);
+      });
+      $('input:checkbox').on('click', function () {
+          anyChecked = false;
+          $('.checkstudent').each(function () {
+            anyChecked = anyChecked || $(this).prop('checked');
+          });
+          $('.manage_section_area').toggle(anyChecked);
+          $('.manage_section_area_instructions').toggle(!anyChecked);
+      });
+      $('select[name="section_id"]').on('change', function() {
+        $('select[name="section_id"]').val($(this).val());
+      });
+  });

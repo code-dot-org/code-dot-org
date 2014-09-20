@@ -1,0 +1,37 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-05-15T19:30:40.000Z",
+  "level_num": "custom",
+  "solution_level_source_id": 571,
+  "user_id": 17,
+  "properties": {
+    "skin": "artist",
+    "instructions": "Artist Artist Artist Artist "
+  }
+}]]></config>
+  <blocks>
+    <required_blocks>
+      <xml>
+        <block type="simple_jump_right"/>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="draw_colour_simple">
+          <title name="COLOUR">#ff77ff</title>
+          <next>
+            <block type="simple_move_up_length">
+              <title name="length">LONG_MOVE_LENGTH</title>
+              <next>
+                <block type="draw_colour_simple">
+                  <title name="COLOUR">#ff77ff</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

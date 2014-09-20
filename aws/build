@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+require 'cdo/rake_utils'
+require 'cdo/hip_chat'
+require 'cdo/only_one'
+
+def main()
+  Dir.chdir(deploy_dir) do
+    return 0 unless RakeUtils.git_updates_available? || File.file?('build-started') || !CDO.daemon
+    FileUtils.touch 'build-started'
+
+    RakeUtils.git_fetch
+    count = RakeUtils.git_update_count
+    RakeUtils.git_pull if count > 0
+    count = [1, count].max
+
+    log = `git log -n #{count}`
+    IO.write(deploy_dir('rebuild'), log)
+
+    HipChat.log "/quote #{log}", message_format:'text', color:'purple'
+
+    status = 1
+    Dir.chdir(aws_dir) do
+      RakeUtils.bundle_install
+      status = RakeUtils.system_ 'rake', '--rakefile', 'build.rake', *ARGV
+    end
+
+    FileUtils.rm 'build-started' if File.file?('build-started')
+
+    exit status
+  end
+end
+
+main() if only_one_running?(__FILE__)

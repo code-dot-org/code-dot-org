@@ -1,0 +1,28 @@
+- if controller_name != 'sessions'
+  = t('auth.already_signedup')
+  = link_to t('nav.user.signin'), new_session_path(resource_name)
+  %br/
+  %br/
+- if devise_mapping.registerable? && controller_name != 'registrations'
+  = t('auth.notyet_signedup')
+  = link_to t('nav.user.signup'), root_path(resource_name)
+  %br/
+  %br/
+- if devise_mapping.recoverable? && controller_name != 'passwords'
+  = link_to t('auth.forgot_password'), new_password_path(resource_name)
+  %br/
+  %br/
+-#- if devise_mapping.confirmable? && controller_name != 'confirmations'
+-#  = link_to t('auth.need_confirmation'), new_confirmation_path(resource_name)
+-#  %br/
+-#  %br/
+- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks'
+  = link_to t('auth.need_unlock'), new_unlock_path(resource_name)
+  %br/
+  %br/
+- if devise_mapping.omniauthable?
+  - [:google_oauth2, :facebook, :windowslive].each do |provider|
+    = link_to image_tag("auth/#{provider}.png"), omniauth_authorize_path(resource_name, provider)
+    = link_to t('auth.sign_in_with', provider: t("auth.#{provider}")), omniauth_authorize_path(resource_name, provider, user_type: resource.try(:user_type) || User::TYPE_STUDENT)
+    %br/
+    %br/

@@ -1,0 +1,58 @@
+---
+title: La Hora de Program.AR
+tagline: ''
+theme: responsive
+responsivePadMobile: yes
+social:
+  'og:title' : 'La Hora de Program.AR está llegando'
+  'og:description' : "Enterate, en sólo una hora, lo divertido que es programar computadoras."
+  'og:image' : ""
+  'og:image:width' : ""
+  'og:image:height' : ""
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+
+#top{:style=>"margin-top: 40px;"}
+  #video.col-63.desktop-pad-right
+    = view :hocvideo, id:"r990CWYtx_o"
+
+  #start.col-36{:style=>'text-align:center; margin-top: 0'}
+    .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
+      %h1{:style=>"font-size: 56px; line-height: 56px; margin: 0;"}<
+        =format_integer_with_commas(fetch_hoc_metrics['countries']['United Kingdom'].to_i).to_s
+      %h3{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 5px; margin-bottom: 0;"}<
+        en todo el mundo han experimentado
+      %h2{:style=>"font-size: 36px; line-height: 36px; font-weight: 600; margin-top: 5px; margin-bottom: 0;"}<
+        la Hora de Program.AR
+      %h4.desktop-feature{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 15px;"}<
+        Todos pueden aprender!
+    %a{:href=>'/learn', :style=>"text-decoration: none;"}
+      %button{:style=>"font-size: 19px; font-weight: 500; height: 50px;margin-top: 10px;"}
+        Empezá ahora
+
+    %br
+
+    %ul
+      %li No hace falta experiencia.
+      %li Ni tener computadora.
+      %li Para edades entre 6 y 106
+
+%div{:style=>'clear:both'}
+
+%br Esta iniciativa ya tuvo más de 40 millones de participantes a nivel mundial en 2013, y ahora vamos por más!
+%ul
+  %li “De las cabezas de los chicos no salían lamparitas, salían fuegos artificiales!" - Docente
+  %li "El mejor recurso educativo con el que me encontré en mi vida." - Padre/empresario
+  %li "Nunca jamás había visto a mis alumnos tan entusiasmados por aprender." - Docente"
+  %li "Una de las mejores cosas que me pasaron en 2013." - Alumna de segundo grado
+  %li "Ahora estoy intentando decirles a las otras escuelas que enseñen a programar porque, sinceramente, fue una experiencia buenísima." - Alumna de quinto grado
+  %li "Los chicos estaban entusiasmados e incluso algunos obsesionados." - Docente
+  %li "Hoy incluso entraron al aula más temprano y preguntaron si podían empezar. Quedé impresionada por el entusiasmo y la curiosidad que despierta la programación." - Docente
+  %li "Mis 3 hijos volvieron de la escuela a los gritos sobre la hora de programar. Mi hija de seis años enseñándome como programar Angry Birds, el de 10 afirmando 'voy a ser Ingeniero en Sistemas, es el trabajo para el que estoy hecho!'" - Madre
+
+.desktop-feature
+  %h2 Educadores y líderes de todo el mundo están de acuerdo en que más estudiantes deberían aprender Ciencias de la Computación
+  //= view :top_quotes

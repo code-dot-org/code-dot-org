@@ -1,0 +1,16 @@
+.sass-cache
+/.bundle
+/config/application.yml
+/config/init.d
+/config/locales/*en-PLOC.yml
+/config/scripts/.dropbox
+/config/scripts/.hints_imported
+/config/scripts/.matches_seeded
+/config/scripts/.multis_seeded
+/config/scripts/.seeded
+/coverage
+/public/assets
+/test/ui/success.log
+/test/ui/error.log
+/test/ui/errorbrowsers.log
+

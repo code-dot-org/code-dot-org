@@ -1,0 +1,43 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-05-14T00:05:39.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,1,1,0,0],[0,0,1,1,1,1,1,0],[0,0,1,1,1,1,1,0],[0,0,1,1,2,1,1,0],[0,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,1,0,-2,0],[0,0,0,0,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "bee",
+    "instructions": "Get two nectar and then make two honey!",
+    "start_direction": "1",
+    "step_mode": "0",
+    "is_k1": "true",
+    "nectar_goal": "2",
+    "honey_goal": "2",
+    "flower_type": "redWithNectar",
+    "skip_instructions_popup": "true",
+    "ideal": "9"
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveNorth"/>
+        <block type="maze_moveSouth"/>
+        <block type="maze_moveEast"/>
+        <block type="maze_moveWest"/>
+        <block type="maze_nectar"/>
+        <block type="maze_honey"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="maze_moveNorth"/>
+        <block type="maze_nectar"/>
+        <block type="maze_moveEast"/>
+        <block type="maze_honey"/>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Karel>

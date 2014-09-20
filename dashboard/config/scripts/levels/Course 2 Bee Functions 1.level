@@ -1,0 +1,49 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-07-07T23:16:37.000Z",
+  "level_num": "custom",
+  "user_id": 9,
+  "properties": {
+    "skin": "bee",
+    "instructions": "Functions are blocks of code that perform a task. Use the \"get 2 nectars\" function to collect the nectar from each flower.",
+    "step_mode": "0",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "start_direction": "1",
+    "nectar_goal": "4",
+    "flower_type": "redWithNectar",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,2,2,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">get 2 nectar</title>
+          <statement name="STACK">
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_nectar">
+                  <next>
+                    <block type="maze_nectar"/>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="procedures_callnoreturn">
+          <mutation name="get 2 nectar"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Karel>

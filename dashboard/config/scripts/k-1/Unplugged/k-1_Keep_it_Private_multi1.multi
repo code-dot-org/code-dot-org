@@ -1,0 +1,10 @@
+name 'K-1 Keep it Private Multi 1'
+title 'Multiple Choice'
+banner ''
+description ''
+height '100'
+
+question 'Which information should you <strong>not</strong> share online?'
+right '/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png'
+wrong '/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png'
+wrong '/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png'

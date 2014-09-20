@@ -1,0 +1,271 @@
+"fa-AF":
+  hello: "سلام دنیا"
+  computer_science: "علوم رایانه"
+  computer_science_edweek: "هفته آموزشی علوم رایانه"
+  csedweek_dates: 9 تا 15 دسامبر 2013
+  n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE&trade;</h2>"
+  anybody_can_learn: "هر کسی می تواند یاد بگیرند."
+  learn_now: "همین حالا یاد بگیرید"
+  petition_message: "هر دانش آموز در هر مدرسه باید فرصت یادگیری علم کامپیوتر را داشته
+    باشد"
+  petition_sign_message: "اگر شما موافق هستید، نام خود را ثبت کنید.  # به دیگران به
+    پیوندید."
+  name: "نام"
+  email: "رایانامه"
+  zipcode: "کدپستی یا کشور"
+  submit: "ارسال"
+  twentyhours_heading: "دوره‌ی مقدماتی علوم کامپیوتر ما را شروع کنید"
+  twentyhours_text: "اولین ساعت کدنویسی را به پایان رساندید؟ علوم کامپیوتر و مفاهیم
+    برنامه نویسی را در درس بعدی، بیشتر یاد بگیرید."
+  twentyhours_trynow: "هم اکنون شروع کنید"
+  california_heading: "از مدرسه تان بخواهید که علم کامپیوتر را آموزش بدهند"
+  california_text: |
+    هر یک از معلمان می توانند دوره های آموزشی ابتدایی خود را به ما ارایه دهند.مدارس ابتدایی نیز علوم کامپیوتری را باید آموزش دهند.
+    از دبیرستان ها برای همکاری نیز دعوت می نماییم.
+  california_button: "بیشتر یاد بگیرید"
+  flappy_heading: "تولد فلاپی در code.org"
+  flappy_text: Code.org یک ساله شد. <br/><br/> بازی <b>Flappy</b> خودتان را بسازید
+    و همراه با ما جشن بگیرید. قوانین خودتان را کدنویسی کنید و با دوستان به اشتراک
+    بگذارید!
+  view_english_site: "مشاهده سایت به زبان انگلیسی"
+  non_english_tutorials: "آموزش ها به چندین زبان ترجمه شده است:"
+  write_your_first_program: "اولین برنامه کامپیوتر خودت را بنویس"
+  learn_cs_concepts: "مفاهیم پایه علم کامپیوتر را به وسیله روش برنامه نویسی  کشیدن
+    و انداختن (drag and drop) یاد بگیرید.این بازی است که در فیلم آموزشی بوسیله بیل
+    گیتس،مارک زاکربرگ،پرندگان خشمگین و گیاهان علیه زامبی ها توضیح داده می شود.روش
+    تکرار،حلقه و شرط و عبارت نویسی و الگوریتم های پایه را یاد بگیرید."
+  all_ages: "همه سنین"
+  beginner: "مبتدی"
+  n_participants: "# شرکت کنندگان"
+  go: "برو"
+  thank_you_: "متشکرم!"
+  congratulations: "تبریک!"
+  congratulations_on_completing_hoc: "تبریک برای تمام کردن کد در یک ساعت."
+  get_a_certificate_of_achievement: "دریافت گواهی موفقیت"
+  enter_valid_email: "لطفا یک آدرس ایمیل معتبر را وارد کنید"
+  get_a_certificate_message: We'll send you a certificate and information about how
+    to <a href='/learn/beyond'>Learn beyond One Hour</a>
+  get_a_certificate_message_after: Your certificate is on its way. Now, keep going
+    with our <a href='http://learn.code.org'>20-hour course</a>, or see more options
+    to <a href='/learn/beyond'>Learn beyond One Hour</a>.
+  thanks_for_submitting: "با تشکر برای ارسال!"
+  if_you_enjoyed: If you enjoyed learning, ask friends to try it too!  We want the
+    whole world to learn.
+  personalize_certificate: "گواهینامه خود را طراحی کنید"
+  share_achievement: "موفقیت خود را به اشتراک بگذارید"
+  beyond_hour_message: Keep going with our <a href='http://learn.code.org'>20-hour
+    course</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>.
+  leaderboards_for_hoc: "تابلو اعلانات برای ساعتی با کد."
+  country: "کشور"
+  city: "شهر"
+  gender: "جنسیت"
+  boys: "پسران"
+  girls: "دختران"
+  give_my_hour: "ساعتی که به کد نوشتن صرف کردم را اهدا کن به:"
+  girls_team: "تیم دختران"
+  boys_team: "تیم پسرها"
+  tell_the_world: "به دنیا بگویید!"
+  thanks_for_voting: "با تشکر برای رای دادن!"
+  share_on_facebook: "به اشتراک گذاشتن در فیس بوک"
+  share_on_twitter: "به اشتراک گذاشتن در توییتر"
+  beyond_an_hour: Beyond an HOUR OF CODE >
+  get_started: "شروع"
+  i_agree: "موافقم"
+  participant_select: "-انتخاب کردن-"
+  participant_student: "دانش آموز"
+  participant_parent: "والدین"
+  participant_educator: "مربی"
+  participant_engineer: "مهندس نرم افزار"
+  participant_other: "هیچ کدام از موارد فوق"
+  i_am_a: "من هستم یک"
+  never_spam: "ما هرگز شما را اسپم نمیکنیم"
+  enter_country: "اگر خارج از ایالات متحده آمریکا هستید کشورتان را وارد کنید"
+  petition_thankyou: "تشکر میکنم برای امضای دادخواست"
+  carousel_heading_international: "آموزش به زبان شما"
+  continue_learning_header: "ادامه یادگیری فراتر از یک ساعت"
+  continue_learning_body: There are lots of options.  You can learn online, or at
+    a local school, or summer camp.
+  learn_next_level: "به مرحله بعدی برو"
+  learn_online: "درس های آنلاین دیگری را امتحان کن"
+  learn_classes: "پیدا کردن کلاس های محلی"
+  hoc_is_here: HourOfCode# اینجاست -  codeorg@ امتحانش کنید!
+  just_did_hoc: "من HourOfCode# را تمام کردم - آن را codeorg@ امتحان کنید! "
+  learn_hoc: "یاد بگیرید ساعتی با کد"
+  beyond_hoc: "فراتر از یک ساعت"
+  what_gender: "جنسیت شما چیست؟"
+  girl: "دختر"
+  boy: "پسر"
+  help_recruit_coders: "به ما کمک کنید به گروه شما برنامه نویس بیشتر استخدام کنیم!"
+  help_recruit: "به ما کمک کنید برنامه نویس بیشتر استخدام کنیم!"
+  lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
+  lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
+  who_has_done_hoc: "چه کسی ساعت کد را انجام داده است؟ codeorg@"
+  hoc_leaderboards: "صفحه پیشگامان ساعت کد"
+  students_and_lines: "%{students} students have done the Hour of Code and written
+    %{lines} lines of code."
+  start_hoc: "حالا ساعت کد را شروع کنید"
+  contact_form_topic_press: Press/media (interview or speaking engagement)
+  studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_elementary_title: Elementary courses
+  studiobar_elementary_body: Our three new courses for K&#8209;5
+  studiobar_hoc_title: "ساعتی با کدنویسی"
+  studiobar_hoc_body: Learn to code with Angry Birds
+  studiobar_flappy_title: "کدنویسی Flappy"
+  studiobar_flappy_body: Make and share your own Flappy game
+  studiobar_teacher_title: Teacher dashboard
+  studiobar_teacher_body: 'For teachers: view your students'' progress'
+  contact_form_topic_student: "من دانش آموز هستم"
+  contact_form_topic_parent: "من پدر/مادر هستم"
+  contact_form_topic_teacher: "من معلم/استاد هستم"
+  contact_form_topic_outside_us: "من خارج از آمریکا هستم"
+  contact_form_topic_contribution: "کمک های خیریه"
+  contact_form_topic_partner: "من میخواهم شرکت کنم"
+  contact_form_topic_other: "دیگر"
+  contact_form_label_topic: "عنوان"
+  contact_form_label_email: "آدرس ایمیل شما"
+  contact_form_label_message: "پیام"
+  contact_form_label_submit: "ارسال پیام"
+  class_submission_in_school: "در مدرسه"
+  class_submission_in_school_daily_programming_course: "دوره برنامه‌نویسی روزانه"
+  class_submission_in_school_ap_computer_science: AP computer science
+  class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
+  class_submission_in_school_robotics_club: "باشگاه رباتیک"
+  class_submission_in_school_programming_integrated_in_other_classes: Programming
+    integrated in other classes
+  class_submission_in_school_summer_school_cs_program: Summer school CS program
+  class_submission_in_school_exploring_computer_science: Exploring Computer Science
+  class_submission_in_school_other: Other in school
+  class_submission_out_of_school: "خارج از مدرسه"
+  class_submission_out_of_school_summer_camp: "اردوی تابستانه"
+  class_submission_out_of_school_afterschool_program: Afterschool program
+  class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
+  class_submission_out_of_school_multi-week_workshop: Multi-week workshop
+  class_submission_out_of_school_other: Other out of school
+  class_submission_online: "آنلاین"
+  class_submission_online_programming_class: "کلاس برنامه نویسی آنلاین"
+  class_submission_online_teacher_resource: "منابع آنلاین معلم"
+  class_submission_online_other: Other online
+  class_submission_level_preschool: "پیش دبستانی"
+  class_submission_level_elementary: "ابتدایی"
+  class_submission_level_middle_school: "مدرسه راهنمایی"
+  class_submission_level_high_school: "دبیرستان"
+  class_submission_level_college: "دانشگاه"
+  class_submission_level_vocational: "فنی و حرفه ای"
+  class_submission_languages_other: "زبان (های) دیگر"
+  volunteer_engineer_submission_commitment_uncertain: Uncertain
+  volunteer_engineer_submission_commitment_now_and_then: Every now and then
+  volunteer_engineer_submission_commitment_one_hr_per_week: 1 ساعت در هفته
+  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ساعت در هفته
+  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 ساعت در هفته
+  volunteer_engineer_submission_commitment_more: "بیشتر"
+  volunteer_engineer_submission_location_flexibility_onsite: On-site at a school
+  volunteer_engineer_submission_location_flexibility_remote: Mentoring remotely (teachers
+    or students)
+  volunteer_engineer_submission_location_flexibility_curriculum: Willing to help contribute
+    to open-source curriculum projects
+  volunteer_engineer_submission_experience_unspecified: Unspecified
+  volunteer_engineer_submission_experience_university_student_or_researcher: Current
+    university student (or researcher)
+  volunteer_engineer_submission_experience_software_professional: Software professional
+  petition_age: Age
+  dashboard_landing_title: Teacher Home Page
+  dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
+  dashboard_landing_video: Watch this video
+  dashboard_landing_watch_video: for a tour of the new features!
+  dashboard_landing_view_as_student: View this site as a student
+  dashboard_landing_students_title: Your students
+  dashboard_landing_students_manage: View and manage your students
+  dashboard_landing_news_title: Latest news
+  dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
+  dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
+  dashboard_landing_useful_links: Other useful links
+  dashboard_landing_print_certificates: "گواهینامه‌هایی برای دانش‌آموزانی که این دوره
+    را تمام می‌کنند چاپ کنید"
+  dashboard_landing_educator_blog: "درباره اخبار و بروزرسانی مواد درسی، وبلاگ آموزگار
+    ما را مطالعه کنید"
+  dashboard_landing_smart_hints: "لطفا به ما کمک کنید تا نکات هوشمندانه‌ای به آموزش‌های
+    Code.org اضافه کنیم"
+  dashboard_landing_video_player: Test our new video player at your school
+  dashboard_landing_progress_title: Main class progress
+  dashboard_landing_progress_biggest: This is the progress for your biggest section.
+  dashboard_landing_view_progress: View Progress for %{biggest_section}
+  dashboard_landing_available_title: Available courses
+  dashboard_landing_available_courses: Here are the courses currently available for
+    you and your students.
+  dashboard_landing_loading: Loading...
+  dashboard_action_edit: "ویرایش"
+  dashboard_action_save: Save
+  dashboard_action_save_all: Save all
+  dashboard_action_cancel: "لغو"
+  dashboard_action_delete: Delete
+  dashboard_action_confirm: Delete?
+  dashboard_action_delete_yes: "بله"
+  dashboard_action_delete_no: "نه"
+  dashboard_action_done: Done
+  dashboard_action_required: required
+  dashboard_navigation_home_page: Teacher home page
+  dashboard_navigation_all_sections: All sections
+  dashboard_navigation_view_progress: View Progress
+  dashboard_navigation_add_students: Add Students
+  dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_section: 'Section: %{section_name}'
+  dashboard_navigation_student: 'Student: %{student_name}'
+  dashboard_sections_new_section: New section
+  dashboard_sections_jumbotron_instruction: Create new sections and add students to
+    them. Sections help you organize students into smaller groups so you can track
+    their progress and manage their accounts.
+  dashboard_sections_table_section: Section
+  dashboard_sections_table_secret: Secret type
+  dashboard_sections_table_grade: Grade
+  dashboard_sections_table_course: Course
+  dashboard_sections_table_students: Students
+  dashboard_sections_table_code: Section Code
+  dashboard_sections_choose_secret: If you would like to provide accounts to your
+    students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
+  dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
+    each student.
+  dashboard_sections_secret_picture: A <b>picture</b> allows you to set a secret picture
+    for each student, ideal for younger students who can't yet type.
+  dashboard_sections_secret_none: If you would like your students to manage their
+    own accounts, including choosing their own passwords, choose a secret type of
+    <b>none</b>.
+  dashboard_sections_print_secrets: You may then print a sheet of cards containing
+    account information to be distributed to your students individually.
+  dashboard_sections_switch_section: 'Switch section:'
+  dashboard_students_add_student: Add student
+  dashboard_students_add_students: Add multiple students
+  dashboard_students_add_multiple: 'Type or paste the names of your students, one
+    per line:'
+  dashboard_students_new_section: You've created a new section! Now add your students
+    using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
+  dashboard_students_name: "نام"
+  dashboard_students_age: Age
+  dashboard_students_gender: "جنسیت"
+  dashboard_students_secret: Secret
+  dashboard_students_password: "کلمه عبور"
+  dashboard_students_username: 'Username: %{student_username}'
+  dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_show_secret: Show secret
+  dashboard_students_auto_generated: Auto-generated
+  dashboard_students_reset_secret: Reset secret
+  dashboard_students_reset_password: Reset password
+  dashboard_students_share_section: 'Share this section''s sign in page with your
+    students:'
+  dashboard_students_print_info: Print out cards with your students' login information.
+  dashboard_students_secret_picture: Secret Picture
+  dashboard_students_reset_picture: You may reset a student's secret picture at any
+    time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
+    picture will be generated for that student to use when they sign in.
+  dashboard_students_secret_word: Secret Word
+  dashboard_students_reset_word: 'You may reset a student''s secret words at any time
+    by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
+    words will be generated for that student to use when they sign in. '
+  dashboard_students_join_link: Tell your students to create their own accounts and
+    join your section at
+  dashboard_students_no_email: If your students do not have email addresses, or you
+    would like to create accounts for them, change this section's secret type to <b>word</b>
+    or <b>picture</b>.
+  dashboard_students_print_page: Print this page
+  dashboard_students_url: URL
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
+    here</a> for our privacy document that can be shared or printed for your students.

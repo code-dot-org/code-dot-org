@@ -1,0 +1,24 @@
+- @page_title = t('user_stats.recent_activity')
+- script = Script.twenty_hour_script
+- if 'students' == params[:action]
+  = render partial: 'shared/teacher_nav', locals: { current: 'activity' }
+
+%h1= @page_title
+
+%br/
+
+.quiet_links
+  - @recent_activities.each do |a|
+    - sl = script.find_script_level(a.level_id)
+    - next unless sl # skip levels from "edit code" script
+    %div{ style: "padding: 4px;"}
+      = link_to a.user.name, user_stats_path(a.user)
+      - if a.best?
+        %span{ style: 'color:green'} finished (#{a.attempt}, #{a.test_result})
+      - elsif a.passing?
+        %span{ style: 'color:orange'} finished (#{a.attempt}, #{a.test_result})
+      - else
+        %span{ style: 'color:red'} tried (#{a.attempt}, #{a.test_result})
+      #{link_to "#{data_t_suffix('script.name', script.name, sl.level.game.name)}, #{t('puzzle')} #{sl.try(:game_chapter)}", build_script_level_path(sl)}, #{ago(a.created_at)}.
+      - if a.level_source
+        See #{link_to("#{a.user.name}'s code", edit_level_source_path(a.level_source_id))}

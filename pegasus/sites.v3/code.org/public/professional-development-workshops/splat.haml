@@ -1,0 +1,259 @@
+---
+title: Register for a workshop
+nav: blank
+rightbar: blank
+---
+- workshop_id = request.splat_path_info[1..-1]
+- pass unless form = Form.first(kind:'ProfessionalDevelopmentWorkshop', id:workshop_id)
+- data = form.data
+- signup_count = DB[:forms].where(kind:'ProfessionalDevelopmentWorkshopSignup').and(parent_id:workshop_id).count
+
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places,geometry&v=3.7"}
+%script{type: "text/javascript", src: "/js/maplace.min.js"}
+
+/[if lt IE 9]
+  %script{src: "/js/es5-shim.min.js"}
+
+%h1 Register for a Code Studio workshop (for teachers, grades K-5)
+
+%form#affiliate-workshop-signup-form{role: "form", onsubmit: "event.preventDefault(); affiliateWorkshopSignupFormSubmit();"}
+
+  -if (signup_count >= data['capacity_s'].to_i)
+    %div{class: "alert alert-danger", role: "alert"}
+      This workshop is full. Please choose another one or
+      %a{href: "https://docs.google.com/a/code.org/forms/d/1QoWzKV5n2Fxx-W90LmmMWxY7qndMo1IE0QWZcxY9OTI/viewform"} Sign up
+      to be notified when workshops near you are announced.
+
+  %p Taught by Code.org Affiliates who are experienced computer science educators, our free workshops will prepare you to teach the Code Studio courses for grades K-5.
+
+  %h2 Workshop details
+  .row
+    .col-sm-4{style: "text-align: right;"} Date:
+    .col-sm-8
+      -data['dates'].each do |date|
+        =date['date_s'] + ', ' + date['start_time_s'] + '-' + date['end_time_s']
+        %br/
+  .row
+    .col-sm-4{style: "text-align: right;"} Location:
+    .col-sm-8
+      = data['location_name_s']
+      %br/
+      = data['location_address_s']
+
+  -unless data['notes_s'].nil_or_empty?
+    %p= data['notes_s']
+
+  -if (signup_count < data['capacity_s'].to_i)
+
+    %p.form-intro-text{style: "margin-top: 2em;"} Fields marked with a <span class="required-field-marker">*</span> are required. Your email address will be shared with the workshop facilitator.
+    #error-message{style: 'display: none'}
+
+    .main-section
+      %h2 Your information
+      .form-group
+        %label.control-label{for: "workshop-signup-name"} Your Name
+        %span.form-required-field *
+        %div
+          %input#workshop-signup-name.form-control{name: "name_s", placeholder: "Your name", type: "text", required: true}/
+      .form-group
+        %label.control-label{for: "workshop-signup-email"} Email address
+        %span.form-required-field *
+        %div
+          %input#workshop-signup-email.form-control{name: "email_s", placeholder: "Email address", type: "text", required: true}/
+
+      .form-group
+        %label.control-label{for: "workshop-signup-teacher-role"} Role (select all that apply)
+        %span.form-required-field *
+        %div
+          %select#workshop-signup-teacher-role.form-control{name: "teacher_role_ss[]", type: "select", required: true, multiple: true}
+            %option{selected: true, value: ""}
+            -ProfessionalDevelopmentWorkshopSignup.teacher_roles.each do |label|
+              %option{value: label}= label
+            %option#workshop-signup-teacher-role-other-option{value: 'Other'} Other (enter below)
+        %div{id: 'workshop-signup-teacher-role-other-wrapper', style: 'display: none;'}
+          %label.control-label{for: "workshop-signup-teacher-role-other"}<
+            %em{style: 'font-weight: normal;'} Other role(s) (comma-separated)
+          %div
+            %input#workshop-signup-teacher-role-other.form-control{name: "teacher_role_other_ss", placeholder: "Other role(s)", type: "text"}/
+
+      .form-group
+        %label.control-label{for: "workshop-signup-teacher-tech-experience-level"} Level of computer/tech experience
+        %span.form-required-field *
+        %div
+          %select#workshop-signup-teacher-tech-experience-level.form-control{name: "teacher_tech_experience_level_s", type: "select", required: true}
+            %option{selected: true, value: ""}
+            -ProfessionalDevelopmentWorkshopSignup.teacher_tech_experience_levels.each do |level|
+              %option{value: level}= level
+
+    .main-section
+      %h2 School information
+      .form-group
+        %label.control-label{for: "workshop-signup-school-name"} School name
+        %span.form-required-field *
+        %div
+          %input#workshop-signup-school-name.form-control{name: "school_name_s", placeholder: "School name", type: "text", required: true}/
+      .form-group
+        %label.control-label{for: "workshop-signup-school-location"} School location
+        %span.form-required-field *
+        %div
+          %input#workshop-signup-school-location.form-control{name: "school_location_s", placeholder: "Location", type: "text", required: true}/
+      .form-group
+        %label.control-label{for: "workshop-signup-school-type"} School type (select all that apply)
+        %span.form-required-field *
+        %div
+          %select#workshop-signup-school-type.form-control{name: "school_type_ss[]", type: "select", required: true, multiple: true}
+            %option{selected: true, value: ""}
+            -ProfessionalDevelopmentWorkshopSignup.school_types.each do |label|
+              %option{value: label}= label
+            %option#workshop-signup-school-type-other-option{value: 'Other'} Other (enter below)
+        %div{id: 'workshop-signup-school-type-other-wrapper', style: 'display: none;'}
+          %label.control-label{for: "workshop-signup-school-type-other"}<
+            %em{style: 'font-weight: normal;'} Other school type(s) (comma-separated)
+          %div
+            %input#workshop-signup-school-type-other.form-control{name: "school_type_other_ss", placeholder: "Other school type(s)", type: "text"}/
+      .form-group
+        %label.control-label{for: "workshop-signup-school-district"} School district
+        %div
+          %input#workshop-signup-school-district.form-control{name: "school_district_s", placeholder: "School district", type: "text"}/
+      .form-group
+        %label.control-label{for: "workshop-signup-school-levels"} Grade levels taught (select all that apply)
+        %span.form-required-field *
+        %div
+          %select#workshop-signup-school-levels.form-control{name: "school_levels_ss[]", type: "select", required: true, multiple: true}
+            %option{selected: true, value: ""}
+            -ProfessionalDevelopmentWorkshopSignup.school_levels.each do |label|
+              %option{value: label}= label
+            %option#workshop-signup-school-levels-other-option{value: 'Other'} Other (enter below)
+        %div{id: 'workshop-signup-school-levels-other-wrapper', style: 'display: none;'}
+          %label.control-label{for: "workshop-signup-school-levels-other"}<
+            %em{style: 'font-weight: normal;'} Other school level(s) (comma-separated)
+          %div
+            %input#workshop-signup-school-levels-other.form-control{name: "school_levels_other_ss", placeholder: "Other school level(s)", type: "text"}/
+      .form-group
+        %label.control-label{for: "workshop-signup-number-students"} Number of students you teach
+        %span.form-required-field *
+        %div
+          %input#workshop-signup-teacher-title.form-control{name: "number_students_s", placeholder: "Number of students", type: "text", required: true}/
+
+    .form-group{style: 'margin-top: 45px;'}
+      %button#btn-submit.btn.btn-default{type: "submit"} Submit
+
+-if (signup_count < data['capacity_s'].to_i)
+  #thanks{:style=>"display: none;"}
+    :markdown
+      Thank you for signing up to attend a Code.org K-5 workshop. You workshop facilitator will be in touch soon with more information. In the meantime...
+
+      **To prepare for your workshop:**
+
+      Sign up for a [teacher account](http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher) at Code.org if you don’t already have one. Review the following [introductory course materials](http://code.org/educate/k5/introPD). These will give you a head start into the course materials to be covered and maximizing learning time during the in-person workshop.
+
+      **IMPORTANT: Bring your own laptop:**
+
+      This workshop requires you bring your own laptop. To teach the Code Studio courses in your school you will want to make sure your school’s tablets, laptop carts or computer lab support modern browsers. Review [this page](https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-) for more information regarding compatible operating systems and browsers.
+
+    %h2 Workshop details
+    .row
+      .col-sm-4{style: "text-align: right;"} Date:
+      .col-sm-8
+        -data['dates'].each do |date|
+          =date['date_s'] + ', ' + date['start_time_s'] + '-' + date['end_time_s']
+          %br/
+    .row
+      .col-sm-4{style: "text-align: right;"} Location:
+      .col-sm-8
+        = data['location_name_s']
+        %br/
+        = data['location_address_s']
+
+    .row
+      .col-sm-4{style: "text-align: right;"} Workshop facilitator:
+      .col-sm-8
+        = data['name_s']
+        %br/
+        = data['email_s']
+
+    -unless data['notes_s'].nil_or_empty?
+      %p= data['notes_s']
+
+-if (signup_count < data['capacity_s'].to_i)
+
+  :javascript
+
+    $(document).ready(function() {
+      $('#affiliate-workshop-signup-form select').selectize();
+
+      var location_input = document.getElementById('workshop-signup-school-location');
+      var location_autocomplete = new google.maps.places.SearchBox(location_input); // Google Maps autocomplete.
+
+      $('#workshop-signup-school-type').change(function() {
+        if ($.inArray('Other', $(this).val()) > -1) {
+          $('#workshop-signup-school-type-other-wrapper').show();
+        } else {
+          $('#workshop-signup-school-type-other').val('');
+          $('#workshop-signup-school-type-other-wrapper').hide();
+        }
+      }).triggerHandler('change');
+
+      $('#workshop-signup-school-levels').change(function() {
+        if ($.inArray('Other', $(this).val()) > -1) {
+          $('#workshop-signup-school-levels-other-wrapper').show();
+        } else {
+          $('#workshop-signup-school-levels-other').val('');
+          $('#workshop-signup-school-levels-other-wrapper').hide();
+        }
+      }).triggerHandler('change');
+
+      $('#workshop-signup-teacher-role').change(function() {
+        if ($.inArray('Other', $(this).val()) > -1) {
+          $('#workshop-signup-teacher-role-other-wrapper').show();
+        } else {
+          $('#workshop-signup-teacher-role-other').val('');
+          $('#workshop-signup-teacher-role-other-wrapper').hide();
+        }
+      }).triggerHandler('change');
+    });
+
+    function processResponse(data)
+    {
+      $('#affiliate-workshop-signup-form').hide();
+      $('#thanks').show();
+    }
+
+    function processError(data)
+    {
+      $('.has-error').removeClass('has-error');
+
+      errors = Object.keys(data.responseJSON);
+      errors_count = errors.length;
+
+      for (i = 0; i < errors_count; ++i) {
+        error_id = '#workshop-signup-' + errors[i].replace(/_/g, '-');
+        error_id = error_id.replace(/-[sb]s?$/, '');
+        $(error_id).parents('.form-group').addClass('has-error');
+      }
+
+      $('#error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
+
+      $('body').scrollTop(0);
+      $("#btn-submit").removeAttr('disabled');
+      $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
+    }
+
+    function affiliateWorkshopSignupFormSubmit()
+    {
+      $("#btn-submit").attr('disabled','disabled');
+      $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
+
+      $.ajax({
+        url: "/forms/ProfessionalDevelopmentWorkshop/#{workshop_id}/children/ProfessionalDevelopmentWorkshopSignup",
+        type: "post",
+        dataType: "json",
+        data: $('#affiliate-workshop-signup-form').serialize()
+      }).done(processResponse).fail(processError);
+
+      return false;
+    }

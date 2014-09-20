@@ -1,0 +1,24 @@
+- create_params = {cookieDomain: (Rails.env.development? ? 'none' : 'auto')}
+-# The following dimensions must match in order the custom dimension settings in our Google Analytics account.
+- selected_language_dim, age_dim, gender_dim, user_type_dim, env_dim = (1..5).map{|x|"dimension#{x}"}
+- dimensions = {}
+- dimensions[selected_language_dim] = language if (accepted_languages.present? && accepted_languages.first != language)
+- dimensions[env_dim] = Rails.env
+- if user_signed_in?
+  - dimensions[age_dim] = current_user.age
+  - dimensions[gender_dim] = current_user.gender
+  - dimensions[user_type_dim] = current_user.user_type
+  - create_params[:userId] = "#{current_user.id}#{'-dev' unless Rails.env.production?}"
+:javascript
+  // Google Analytics snippet (https://developers.google.com/analytics/devguides/collection/analyticsjs/)
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37745279-1', 'auto', #{create_params.to_json});
+  ga('set', #{dimensions.to_json});
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }

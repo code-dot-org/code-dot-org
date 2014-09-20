@@ -1,0 +1,11 @@
+name '4-5 farmer loops multi 1'
+title 'Famer Loops Multiple Choice'
+content1 '/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500'
+
+height '160'
+
+question 'Which blocks solve the puzzle?'
+wrong '/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png'
+wrong '/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png'
+wrong '/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png'
+right '/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png'

@@ -1,0 +1,14 @@
+name '4-5 bee conditionals multi 1' 
+title 'Bee Conditionals Multiple Choice'
+
+content1 '/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png'
+content2 "A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?"
+
+height '160'
+
+question 'Choose the best blocks.'
+
+wrong '/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png'
+wrong '/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png'
+right '/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png'
+wrong '/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png'

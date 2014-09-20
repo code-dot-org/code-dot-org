@@ -1,0 +1,6 @@
+%div.gallery
+  - current_user.gallery_activities.limit(5).each do |gallery_activity|
+    - level_source = gallery_activity.try(:activity).try(:level_source)
+    - if level_source
+      %div.gallery_activity
+        = link_to(image_tag(original_image_level_source_path(level_source)), level_source)

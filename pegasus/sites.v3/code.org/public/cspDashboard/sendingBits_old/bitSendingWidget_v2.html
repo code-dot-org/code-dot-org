@@ -1,0 +1,362 @@
+<html>
+<head>
+	 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	 <style>
+	 	canvas{ float:left; 
+	 		border: solid 1px #000000;
+	 	}
+	 </style>
+	<title></title>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://www.parsecdn.com/js/parse-1.2.15.min.js"></script>
+	<script src="js/code.org.js"></script>
+	<script src="js/canvasFuncs.js"></script>
+	<script>
+		var localVals;
+		var bitTimerId, animTimerId;
+		var bitDelayVal, animDelayVal;
+		var bitReadTime;
+		var readLock; //a lock to prevent reads getting out of sync
+
+		$(document).ready(function(){
+			console.log("READY");
+			loadVarsFromLocalStorage();
+			readLock = false;
+			init();
+			draw();
+			pause();
+			//setBitDelay(1000);
+
+
+		});
+
+		var myPacket;
+		var myNode, friendNode;
+
+		function setup(){
+
+			myNode = createNode(100,100,25,"ME","#990000");
+			friendNode = createNode(200,250,25,"friend","#339933");
+			myPacket = null; //createPacket(myNode.x, myNode.y, friendNode.x, friendNode.y, 0.01);
+
+
+		}
+
+		function createNode(x,y,size,text,color){
+			var N = new Object();
+			N.x =x;
+			N.y=y;
+			N.myName=text;
+			N.color=color;
+			N.size = size;
+
+			N.draw = function(){
+
+				fill(this.color);
+				circle(this.x, this.y, this.size);
+				
+				fill("#000000");
+				fillText(this.myName, this.x+1, this.y+1);
+				fill("#FFFFFF");
+				fillText(this.myName, this.x, this.y);
+
+			}
+			return N;
+
+		}
+
+		
+
+		function createPacket(srcX, srcY, destX, destY, stepPct, msg){
+
+			var P = new Object();
+			P.srcX=srcX;
+			P.srcX=srcY;
+			P.destX=destX;
+			P.destY=destY;
+			P.currX = srcX;
+			P.currY = srcY;
+			P.stepPct = stepPct;
+			P.stepAmtX= (destX-srcX)*stepPct;
+			P.stepAmtY= (destY-srcY)*stepPct;
+			P.msg=msg;
+
+			P.pctTravelled=0.0;
+
+			console.log("in createPacket(..) just made P "+JSON.stringify(P));
+
+			P.step = function(){ 
+				this.pctTravelled+=this.stepPct;
+				this.currY += this.stepAmtY;
+				this.currX += this.stepAmtX;
+
+				if(this.pctTravelled>=1){
+					this.stepAmtX=0;
+					this.stepAmtY=0;
+					this.stepPct=0;
+					bitArrivedAtDest();
+				}
+			} 
+
+			P.draw = function(){
+
+				fill("#0000FF");
+				circle(this.currX, this.currY, 5);
+			}
+			return P;
+		}
+
+		function draw(){
+			//console.log("draw");
+
+			fill("#FFFFFF");
+			rect(0,0,width,height);
+			line(myNode.x, myNode.y, friendNode.x, friendNode.y)
+
+			myNode.draw();
+			friendNode.draw();
+
+			if(myPacket!=null){
+				
+				myPacket.step();
+			
+				myPacket.draw();
+			}
+
+
+
+		}
+
+
+		function setBitDelay(ms){
+			//if changing delay want to clear old timer anyway
+			// or old one will continue to be called in separate
+			// thread
+			clearInterval(bitTimerId);
+
+
+			if(ms>=0){
+				bitTimerId = setInterval(pollInputQueue, ms);
+				bitDelayVal=ms;
+			}
+		}
+
+
+
+		function pollInputQueue(){
+			
+			if(localVals != null && localVals.roomId!="" && localVals.userId!=""){
+				
+				remoteStorage.getItem(localVals.roomId+":"+localVals.userId, grabAllInput);
+				
+			}
+		}
+
+
+		function grabAllInput(returnedInput){
+			 //g("received: "+returnedInput);
+			
+			if(returnedInput=="//empty//"){
+				$("#getBitsStatus").html("nothing on the wire");
+				readLock = false;
+				return;
+			}
+			
+			//This gets out of sync because reads happen too fast
+			// solution...slowing down timer.
+			setLocalUserInputQueueToEmpty();
+			
+			$("#getBitsStatus").html("RECV'D: "+returnedInput);
+			var currVal = $("#recvdBits").val();
+			$("#recvdBits").val(currVal+returnedInput);
+
+			
+
+		}
+
+
+		function loadVarsFromLocalStorage(){
+			localVals = localStorage["sendingBitsLocals"];
+			if(localVals == null){
+				localVals = new Object();
+				localVals.roomId = "";
+				localVals.userId = "";
+				localVals.friendId = "";
+				updateLocalStorage();
+				
+			}
+			else{
+				localVals = JSON.parse(localVals);
+			}
+
+			$("#roomname").val(localVals.roomId);
+			$("#localname").val(localVals.userId);
+			$("#btn_sendBits").html("put bit on wire to: "+localVals.friendId);
+
+			refreshFriendList();
+
+		}
+
+		function updateLocalStorage(){
+			localStorage["sendingBitsLocals"] = JSON.stringify(localVals);
+
+		}
+
+
+
+		//List of friends in room assumes we get back a list of all "room:user"->"value" pairs
+		//  So we need to split off the userId from the room name
+		//  NOTE: deriving the roomlist this way prevents us from having to store it elsewhere
+		function handleFriendList(friendListObj){
+			if(localVals.roomId==""){
+
+				$("#friendListArea").html("No Room Specified");
+				return;
+			}
+			var str = "";
+			console.log("friendListLength "+JSON.stringify(friendListObj));
+						
+			for(var key in friendListObj){
+				var row = key.split(":");
+
+				
+				str += "<input type=radio name='friendChoice' onChange='setFriend()' value='"+row[1]+"'";
+				if(localVals.friendId==row[1]) str+=" checked ";
+				else if(localVals.userId == row[1]) str+=" disabled ";
+
+				str+=">"+row[1]+"<br>";
+			}
+			$("#friendListArea").html(str);
+		}
+		
+		function setFriend(){
+			localVals.friendId = $("input:radio[name='friendChoice']:checked").val();
+			updateLocalStorage();
+			$("#btn_sendBits").html("put bit on wire to: "+localVals.friendId);
+
+			if(friendNode!=null){
+				friendNode.myName = localVals.friendId;
+			}
+		}
+
+		//generic callback function from my Parse.com functions
+		function parseTaskFinished(nameOfTask){
+
+			refreshFriendList();
+
+
+		}
+		
+
+		function joinRoom(){
+
+			//before joining new room with new name
+			// remove entry from before if one existed
+			remoteStorage.removeItem(localVals.roomId+":"+localVals.userId);
+
+
+
+			localVals.userId = $("#localname").val();
+			localVals.roomId = $("#roomname").val();
+
+			localStorage["sendingBitsLocals"]=JSON.stringify(localVals);
+
+			// create an  entry for the person to receive messages
+			// NOTE: it's ok for this to happen async since person's
+				// input queue is decoupled from room list
+				// this should be change
+			remoteStorage.updateOrCreate(localVals.roomId+":"+localVals.userId, "//empty//");
+
+
+
+
+		}
+		function setRoomAndRefresh(){
+			localVals.roomId = $("#roomname").val();
+			
+
+			refreshFriendList();
+			updateLocalStorage();
+		}
+		function refreshFriendList(){
+			//roomId = $("#roomname").val(); //get incase not set yet
+			remoteStorage.getAllStartsWith(localVals.roomId, handleFriendList);
+		}
+		var connectionStr;
+
+		
+
+		function sendBit(){
+			if(myPacket!=null){
+				console.log("can't send next bit.  Still in transit");
+				return;
+			}
+			setFriend();
+
+			var msg = $("#bitsToSend").val();
+			if(msg.length>0){
+				var msgToSend = msg[0];
+				$("#bitsToSend").val(msg.substr(1,msg.length));
+				log("attempting to send: "+msgToSend+" to "+localVals.friendId);
+				myPacket = createPacket(myNode.x, myNode.y, friendNode.x, friendNode.y, 0.05,msgToSend);
+				start();
+				
+			}
+		}
+
+		//called by animation timer when msg actually arrives at destination.
+		function bitArrivedAtDest(){
+			connectionStr = localVals.roomId+":"+localVals.friendId;
+			remoteStorage.updateItem(connectionStr, myPacket.msg);
+			pause();
+			myPacket = null;
+		}
+
+		function setLocalUserInputQueueToEmpty(){
+			var str = localVals.roomId+":"+localVals.userId;
+			remoteStorage.updateOrCreate(str, "//empty//");
+
+		}
+		function temp_populateWithFriends(){
+			var quickList = ["Dave","Owen","Brook","Dana"];
+			for(var i=0; i<quickList.length; i++){
+				var str = ""+localVals.roomId+":"+quickList[i];
+				remoteStorage.updateOrCreate(str, "//empty//");
+
+			}
+			refreshFriendList();
+
+		}
+
+
+		
+
+		function log(msg){
+			console.log(msg);
+		}
+	</script>
+	<style>
+
+	</style>
+</head>
+<body>
+
+<h2>Sending Bits</h2>
+
+Join a room:<br>
+Room name: <input type=text id="roomname"><button onClick="setRoomAndRefresh()">Check room</button><br>
+Your name: <input type=text id="localname">
+<button onClick="joinRoom()">Join</button><br/>
+<button onClick="refreshFriendList()">refresh friend list</button>
+<br>
+Friends in the Room<br>
+Select a friend: <div id='friendListArea'>No friends</div>
+<br>
+<canvas id="myCanvas" width=500 height=500></canvas>
+Bits to Send: <input type=text id="bitsToSend"><button id="btn_sendBits" onClick="sendBit()">put bit on wire to [selected]</button><br>
+<div id="getBitsStatus"></div>
+Recv'd bits Queue: <input type=text id="recvdBits"><button onClick="pollInputQueue()">read bit from wire</button><button onClick="setBitDelay(1000)">Auto-read 1 bit/sec</button><button onClick="setBitDelay(-1)">Stop Auto Read</button>
+
+
+</body>
+</html>

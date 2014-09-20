@@ -1,0 +1,63 @@
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/jquery.form.js"}
+%script{type: "text/javascript", src: "/js/hardware-prizes-form.js"}
+
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+
+.row
+  .col-xs-6
+    %form#hoc-prizes-form{role: "form", onsubmit: "event.preventDefault();", enctype:'multipart/form-data', method: 'post', action: '/forms/HocHardwarePrizes2014'}
+      #error_message
+
+      .form-group
+        %label.control-label{for: "hoc-prizes-name"}= hoc_s(:hardware_prizes_form_name_label)
+        %div
+          %input#hoc-prizes-name.form-control{name: "name_s", placeholder: hoc_s(:hardware_prizes_form_name_placeholder), required: true, type: "text"}/
+
+      .form-group
+        %label.control-label{for: "hoc-prizes-email"}= hoc_s(:hardware_prizes_form_email_label)
+        %div
+          %input#hoc-prizes-email.form-control{name: "email_s", placeholder: hoc_s(:hardware_prizes_form_email_placeholder), type: "text", required: true}/
+
+      .form-group
+        %label.control-label{for: "hoc-prizes-school-name"}= hoc_s(:hardware_prizes_form_school_name_label)
+        %div
+          %input#hoc-prizes-school-name.form-control{name: "school_name_s", placeholder: hoc_s(:hardware_prizes_form_school_name_placeholder), type: "text", required: true}/
+
+      .form-group
+        %label.control-label{for: "hoc-prizes-school-address"}= hoc_s(:hardware_prizes_form_school_address_label)
+        %div
+          %textarea#hoc-prizes-school-address.form-control{name: "school_address_s", placeholder: hoc_s(:hardware_prizes_form_school_address_placeholder), style: "height: 5em;"}
+
+      .form-group
+        %label.control-label{for: "hoc-prizes-school-type"}= hoc_s(:hardware_prizes_form_school_type_label)
+        %div
+          %select#hoc-prizes-school-type.form-control{name: "school_type_s", type: "select", required: true}
+            %option{value: nil, selected: true}
+            -['elementary', 'middle_school', 'high_school'].each do |school_type|
+              %option{value: school_type}= hoc_s('hardware_prizes_form_school_type_option_' + school_type)
+
+      .form-group
+        .checkbox
+          %label
+            %input#hoc-prizes-qualifying-school{name: "qualifying_school_b", type: "checkbox", value: "1"}/
+            =hoc_s(:hardware_prizes_form_qualifying_school_label)
+
+      .form-group
+        %label.control-label{for: "hoc-prizes-number-students"}= hoc_s(:hardware_prizes_form_number_students_label)
+        %div
+          %input#hoc-prizes-number-students.form-control{name: "number_students_i", placeholder: hoc_s(:hardware_prizes_form_number_students_placeholder), type: "text", required: true}/
+
+      .form-group
+        %label.control-label{for: "hoc-prizes-plan-file"}= hoc_s(:hardware_prizes_form_plan_file_label)
+        %div
+          %p= hoc_s(:hardware_prizes_form_plan_file_description).sub(/#([^#]+)# \| #([^#]+)#/, '<a href="/files/HOC_Logistics_plan.pdf">\1</a> | <a href="/files/HOC_Logistics_plan.doc">\2</a>')
+          %input#hoc-prizes-plan-file.form-control{name:'logistics_plan', type:'file'}
+
+      %input{name:'hoc_country_s', type:'hidden', value:@country}
+
+      .form-group.submit-btn
+        %div
+          %button#btn-submit.btn.btn-default{type: "submit"}= hoc_s(:hardware_prizes_form_submit_label)

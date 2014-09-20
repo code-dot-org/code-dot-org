@@ -1,0 +1,117 @@
+$root: '/blockly/media/bounce/'; //TODO: Parameterize for asset pipeline
+
+#svgBounce {
+  overflow: hidden;
+}
+
+/* 'Look' icon */
+#look>path {
+  display: none;
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-opacity: 0.7;
+}
+
+/* Sprited icons. */
+.icon21 {
+  height: 21px;
+  width: 21px;
+  background-image: url("#{$root}icons.png");
+}
+.code {
+  background-position: -21px 0px;
+}
+.link {
+  background-position: 0px 0px;
+}
+.run {
+  background-position: 0px -21px;
+  margin-right: 3px;
+}
+.stop {
+  background-position: -21px -21px;
+  margin-right: 3px;
+}
+.left-btn {
+  background-position: -21px -42px;
+  margin-right: 3px;
+}
+.right-btn {
+  background-position: -21px -63px;
+  margin-right: 3px;
+}
+.up-btn {
+  background-position: 0px -63px;
+  margin-right: 3px;
+}
+.down-btn {
+  background-position: 0px -42px;
+  margin-right: 3px;
+}
+
+button.arrow {
+  border: 1px solid #FFA000;
+  background-color: #FFA000;
+  color: #fff;
+  margin-left: 5px;
+  margin-right: 0px;
+  display: none;
+}
+button.arrow>img {
+  opacity: 1;
+  vertical-align: text-bottom;
+}
+button.arrow:focus {
+  outline-style: none;
+}
+#soft-buttons {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -5px;
+  &.soft-buttons-none {
+    display: none;
+  }
+}
+.soft-buttons-1 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 51px;
+}
+.soft-buttons-2 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 102px;
+}
+.soft-buttons-3 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 153px;
+}
+.soft-buttons-4 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 204px;
+}
+
+/* make the share button take up an entire line, so it doesn't move other 
+ * buttons when it appears. */
+#share-cell-wrapper {
+  display: inline-block;
+  width: 100%;
+}
+#share-cell {
+  display: block;
+  &.share-cell-none {
+    display: none;
+  }
+}
+
+.bounce-score {
+  text-anchor: middle;
+  font-size: xx-large;
+  font-weight: bold;
+  fill: white;
+  stroke: black;
+  stroke-width: 2;
+}

@@ -1,0 +1,69 @@
+---
+Title: Print Certificates
+<% if request.post? %>
+layout: page_print
+theme: none
+<% end %>
+---
+-unless request.post?
+  -personalized = (request.site == 'uk.code.org') ? 'personalised' : 'personalized'
+
+  -course = request.params['course'] || nil
+  -courseName = course == "20hours" ? "K-8 Intro to Computer Science Course" : "Hour of Code"
+  -smallCertificateImageUrl = course == "20hours" ? "/images/fit-240/20hours_certificate.jpg" : "/images/fit-240/hour_of_code_certificate.jpg"
+
+  %h1 Print a batch of certificates
+  %div.clear
+    %div{:style=>"float: left; margin: 0 40px 0 0;"}<
+      %img{:src=>smallCertificateImageUrl}
+    %p{:style=>"float: left; width: 360px; margin-top: 20px;"}<
+      Enter up to 30 names, <strong>one per line</strong>. A printable page with #{personalized} #{courseName} certificates will be generated.
+  %form{:method=>"post", :action=>'/custom-certificates'}
+    -if course
+      %input{:type=>"hidden", :name=>'course', :value=>course}
+    %textarea{:name=>'names', :rows=>"10", :cols=>"80"}
+      -if request.params['names']
+        - request.params['names'].each do |name|
+          =CGI::unescape(name)
+          ="&#x000A;"
+    %br
+    %p
+      %input{:name=>"sponsor", :type=>'text', :value=>'Code.org'}
+      made the generous gift to sponsor your learning.
+    %br
+    %p It is recommended that you choose <strong>Landscape</strong> when you print the certificates.
+    %br
+    %input{:type=>"submit", :value=>"Submit"}
+-else
+  -course = request.params['course'] || 'hoc'
+  -sponsor = request.params['sponsor']
+
+  %div.hide-print
+    -if course == "20hours"
+      %h1 K-8 Intro to Computer Science Course Certificates
+    -else
+      %h1 Hour of Code Certificates
+    %p Ready to print?
+    %p Look at your certificates first to make sure they're correct before you waste a lot of paper.
+
+    %p
+      %b IMPORTANT:
+      Make sure you print in Landscape orientation (sideways, not regular), so the certificates fill a full page.
+
+    %p
+      When you're ready...
+      %button{:onclick=>"window.print(); return false;"} Print
+
+    .page-break
+
+  -names = request.params['names']
+  -unless names.nil_or_empty?
+    -count = 0
+    -names.split("\n").shift(30).each do |name|
+      -unless count == 0
+        .page-break
+      -name.chomp!
+      -encoded = Base64.urlsafe_encode64(JSON.pretty_generate(name:name, sponsor:sponsor, course:course))
+      %img{:src=>"/v2/hoc/certificate/#{encoded}.jpg", :width=>"100%"}
+      -count += 1
+    -slog(tag: 'print_certificates', course: course, count: count)

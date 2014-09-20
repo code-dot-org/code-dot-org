@@ -1,0 +1,22 @@
+---
+title: Local School Database API
+---
+
+%h1 Local School Database API
+
+%p
+  We've enabled JSON access to the database that powers the Code.org
+  = succeed "." do
+    %a{:href => "/learn/local"} local school search
+  Our goal is to enable third-parties to take advantage of our database, in order to build local search engines or other applications beyond the simple local search we provide. All information that is publicly available via our search engine is exposed via JSON - public contact info is listed, but private contact info is not.
+%p
+  %strong
+    %a{:href => "/schools.json"} Get the Code.org local schools database (JSON)
+%p
+  To learn more about the JSON format and how to integrate it with your own custom apps, please visit
+  = succeed "." do
+    %a{:href => "http://www.json.org"} http://www.json.org
+%p
+  The data behind the Code.org school database is licensed via the
+  %a{:href => "http://creativecommons.org/licenses/by-nc-sa/4.0/"} Creative Commons attribution license
+  \- you can use the data as you wish, but please give Code.org attribution.

@@ -1,0 +1,384 @@
+---
+title: Teacher Dashboard
+theme: angular
+angular: teacherDashboard
+---
+- unless dashboard_user
+  - dont_cache
+  - redirect("http://#{canonical_hostname('studio.code.org')}/users/sign_in?return_to=#{request.url}", 302) unless dashboard_user
+- forbidden! unless dashboard_user[:user_type] == 'teacher'
+
+%link(rel="stylesheet" type="text/css" href="/css/learn_tabs.css")
+%link(rel="stylesheet" type="text/css" href="/style.css")
+%link(rel='stylesheet' type='text/css' href='/css/page.css')
+
+%div{'ng-view' => ''}
+
+:javascript
+  'use strict';
+
+  // Declare app level module which depends on filters, and services
+  angular.module('teacherDashboard', [
+    'ngRoute',
+    'ngResource',
+    'teacherDashboard.controllers',
+    'teacherDashboard.services',
+    'teacherDashboard.directives'
+  ]).
+
+  // ROUTES
+
+  config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/',                  {templateUrl: '/teacher-dashboard/landing'});
+    $routeProvider.when('/sections',          {templateUrl: '/teacher-dashboard/sections',
+                                               controller: 'SectionsController'});
+    $routeProvider.when('/sections/:id',      {templateUrl: '/teacher-dashboard/section',
+                                               controller: 'SectionDetailController'});
+    $routeProvider.when('/sections/:sectionid/student/:studentid', 
+                                              {templateUrl: '/teacher-dashboard/student', 
+                                               controller: 'StudentDetailController'});
+    $routeProvider.when('/sections/:id/print_signin_cards', {templateUrl: '/teacher-dashboard/signin_cards',
+                                               controller: 'SectionDetailController'});
+    $routeProvider.when('/sections/:id/:tab', {templateUrl: '/teacher-dashboard/section',
+                                               controller: 'SectionDetailController'});
+    $routeProvider.otherwise({redirectTo: '/sections'});
+  }]);
+
+  // DIRECTIVES
+  var directives = angular.module('teacherDashboard.directives', []).
+    value('version', '0.1');
+
+  directives.directive('teacherNav', ['$location', '$routeParams', function($location, $routeParams) {
+    return {
+      templateUrl: 'teacher-dashboard/nav',
+      controller: function($scope) {
+        var selectedSection = $scope.selectedSection = $scope.section || null;
+
+        $scope.sectionNavigate = function(section) {
+          if (section && section.id) {
+            $location.path('/sections/' + section.id)
+          } else {
+            $location.path('/sections')
+          }
+        };
+      }
+    };
+  }]);
+    
+
+  // SERVICES
+
+  var services = angular.module('teacherDashboard.services', []).
+    value('version', '0.1');
+
+  // Section service. see sites.v3/code.org/routes/v2_section_routes.rb
+  services.factory('sectionsService', ['$resource',
+    function($resource){
+      return $resource('/v2/sections/:id', {}, {
+      // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+      //  'get':    {method:'GET'},
+      //  'save':   {method:'POST'},
+      //  'query':  {method:'GET', isArray:true},
+      //  'remove': {method:'DELETE'},
+      //  'delete': {method:'DELETE'} 
+         update: {method:'PATCH'},
+         addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
+         removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
+      });
+    }]);
+
+  services.factory('studentsService', ['$resource',
+    function($resource){
+      return $resource('/v2/students/:id', {}, {
+      // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+      //  'get':    {method:'GET'},
+      //  'save':   {method:'POST'},
+      //  'query':  {method:'GET', isArray:true},
+      //  'remove': {method:'DELETE'},
+      //  'delete': {method:'DELETE'} 
+         update: {method:'PATCH'},
+      });
+    }]);
+
+  // CONTROLLERS
+
+  var app = angular.module('teacherDashboard.controllers', []);
+
+  app.controller('SectionsController', ['$scope', '$location', 'sectionsService',
+                                       function($scope, $location, sectionsService){
+    $scope.sectionsLoaded = false;
+
+    $scope.course_list = #{DashboardSection::VALID_COURSES.to_json};
+
+    $scope.sections = sectionsService.query();
+    
+    $scope.sections.$promise.then(function( sections ){
+      $scope.sectionsLoaded = true;
+    });
+
+    $scope.edit = function(section) {
+      section.editing = true;
+    };
+
+    $scope.save = function(section) {
+      section.editing = false;
+      if (section.id) { // existing
+        $scope.sections[$scope.sections.indexOf(section)] =
+          sectionsService.update({id: section.id}, section);
+      } else { // new
+        $scope.sections[$scope.sections.indexOf(section)] =
+          sectionsService.save(section);
+      }
+    };
+
+    $scope.confirm_delete = function(section)
+    {
+      section.confirmDelete = true;
+    }
+
+    $scope.del = function(section) {
+      $scope.sections.splice($scope.sections.indexOf(section), 1); // remove from array
+      sectionsService.remove(section); // service call
+      section.confirmDelete = false;
+    };
+
+    $scope.cancel = function(section) {
+      if (section.id) {
+        section.editing = false;
+      } else { 
+        $scope.sections.splice($scope.sections.indexOf(section), 1); // remove from array
+      }
+    };
+
+    $scope.new_section = function() {
+      $scope.sections.unshift({editing: true, login_type: 'word'});
+    };
+  }]);
+
+  app.controller('StudentDetailController', ['$scope', '$routeParams', 'studentsService', 'sectionsService',
+                                             function($scope, $routeParams, studentsService, sectionsService) {
+    $scope.section = sectionsService.get({id: $routeParams.sectionid});
+    $scope.student = studentsService.get({id: $routeParams.studentid});
+
+    $scope.studentProgressUrl = '/dashboardapi/student_progress/' +
+                                $routeParams.sectionid + '/' + $routeParams.studentid;
+  }]);
+
+  app.controller('LandingController', ['$scope', '$routeParams', 'studentsService', 'sectionsService',
+                                       function($scope, $routeParams, studentsService, sectionsService) {
+
+    $scope.init_progress = function() {
+      progressLoaded();
+    };
+
+    $scope.biggestSection = null;
+
+    sectionsService.query().$promise.then(
+      function( sections ) {
+        var section = null;
+        var highestNumStudents = -1;
+        for (var s = 0; s < sections.length; s++) {
+          var numStudents = sections[s].students.length;
+          if (numStudents > highestNumStudents) {
+            section = sections[s];
+            highestNumStudents = numStudents;
+          }
+        }
+
+        if (section !== null) {
+          $scope.biggestSection = section;
+          $scope.sectionProgressUrl = '/dashboardapi/section_progress/' + section.id + "?nocache=" + $.now();
+          console.log(section.id);
+        } else {
+          console.log("none");
+        }
+      }
+    );
+
+    studentsService.query().$promise.then(
+      function( allStudents ) {
+        for (var s = 0; s < allStudents.length; s++)
+        {
+          var student = allStudents[s];
+          if (student.prize_earned)
+          {
+            var name = student.name;
+            name = encodeURI(name);
+            name = name.replace(/'/g, "%27"); //encode '
+            name = name.replace(/"/g, "%22"); //encode "
+            $('#printcertificatesform').append("<input type='hidden' name='names[]', value='" + name + "'/>");
+          }
+        }
+      }
+    );
+  }]);
+
+  app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', 'sectionsService', 'studentsService',
+                                             function($scope, $routeParams, $window, sectionsService, studentsService) {
+    $scope.sections = sectionsService.query();
+    $scope.section = sectionsService.get({id: $routeParams.id});
+
+    $scope.section.$promise.then(
+      function( section ){
+        if (!$scope.tab) {
+          $scope.tab = ($scope.section.students.length > 0) ? 'progress': 'manage';
+        }
+      }
+    );
+
+    $scope.tab = $routeParams.tab;
+
+    $scope.sectionProgressUrl = '/dashboardapi/section_progress/' + $routeParams.id + "?nocache=" + $.now();
+
+    // the ng-select in the nav compares by reference not by value, so we can't just set
+    // selectedSection to section, we have to find it in sections.
+    $scope.sections.$promise.then(
+      function( sections ){
+        $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
+      }
+    );
+
+    $scope.age_list = #{(4..100).to_a.inspect};
+
+    $scope.gender_list = {f: 'Female', m: 'Male'};
+
+    $scope.bulk_import = {editing: false, students: ''};
+
+    $scope.edit = function(student) {
+      student.editing = true;
+    };
+
+    $scope.init_progress = function() {
+      progressLoaded();
+    };
+
+    $scope.resetSecrets = function(student) {
+      var newStudent = studentsService.update({id: student.id}, {secrets: 'reset'});
+      newStudent.$promise.then(
+        function(student) {
+          student.showing_password = true;
+        }
+      );
+
+      $scope.section.students[$scope.section.students.indexOf(student)] = newStudent;
+    };
+
+    $scope.save = function(students) {
+      if (!$.isArray(students)) {
+        return $scope.save([students]); // heh
+      }
+
+      var newStudents = [];
+      var modifiedStudents = [];
+
+      $.each(students, function(index, student) {
+        console.log(index); 
+        if (student.editing || student.editing_password) {
+          if (student.id) {
+            console.log('existing');
+            modifiedStudents.push(student);
+          } else {
+            console.log('new');
+            newStudents.push(student);
+          }
+        } else {
+          console.log('not modified');
+        }
+      });
+
+      // create new students
+      if (newStudents && newStudents.length > 0) {
+        // remove 'new' students from array
+        $.each(newStudents, function(index, student) {
+          $scope.section.students.splice($scope.section.students.indexOf(student), 1);
+        });
+
+        // add the results from the service to the array
+        sectionsService.addStudents({id: $scope.section.id}, newStudents, function(resultStudents) {
+          $.each(resultStudents, function(index, student) {
+            $scope.section.students.unshift(student);
+          });
+        });
+      }
+
+      // update existing students
+      $.each(modifiedStudents, function(index, student) {          
+        $scope.section.students[$scope.section.students.indexOf(student)] =
+          studentsService.update({id: student.id}, student);
+      });
+   };
+
+   $scope.confirm_delete = function(student) {
+     student.confirmDelete = true;
+   };
+
+    $scope.del = function(student) { // note -- IE doesn't like it when you name things 'delete'
+      $scope.section.students.splice($scope.section.students.indexOf(student), 1); // remove from array
+      sectionsService.removeStudent({id: $scope.section.id, studentId: student.id}); // service call
+      student.confirmDelete = false;
+    };
+
+    $scope.cancel = function(student) {
+      if (student.id) {
+        student.editing = false;
+      } else {
+        $scope.section.students.splice($scope.section.students.indexOf(student), 1); // remove from array
+      }
+    };
+
+    $scope.new_student = function() {
+      $scope.section.students.unshift({editing: true});
+    };
+
+    $scope.clear_bulk_import = function() {
+      $scope.bulk_import.editing = false;
+      $scope.bulk_import.students = '';
+    };
+
+    $scope.add_bulk_import = function() {
+      var student_names = $scope.bulk_import.students.split("\n");
+      for (var i = 0; i < student_names.length; i++) {
+        var student_name = student_names[i];
+        student_name = student_name.trim();
+        if (student_name.length > 0) {
+          $scope.section.students.unshift({editing: true, name: student_name});
+        }
+      }
+      $scope.clear_bulk_import();
+    };
+
+    $scope.editingAny = function(things) {
+      if (!things) {
+        return false;
+      }
+      for (var i = 0; i < things.length; i++) {
+        if (things[i].editing) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    $scope.editingAll = function(things) {
+      if (!things) {
+        return false;
+      }
+      for (var i = 0; i < things.length; i++) {
+        if (!things[i].editing) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    $scope.print = function() {
+      $window.print();
+    };
+
+    $scope.progressLoaded = false;
+
+    $scope.progress_loaded = function() {
+      $scope.progressLoaded = true;
+    }
+
+  }]);

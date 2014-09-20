@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Prize provider:
+  = @prize.prize_provider_id
+%p
+  %b Code:
+  = @prize.code
+%p
+  %b User:
+  = @prize.user_id
+
+= link_to 'Edit', edit_prize_path(@prize)
+\|
+= link_to 'Back', prizes_path

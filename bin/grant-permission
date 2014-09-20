@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+require 'sequel'
+
+DASHBOARD_DB = Sequel.connect(CDO.dashboard_db_writer.sub('mysql:', 'mysql2:'))
+USERS = DASHBOARD_DB[:users]
+PERMISSIONS = DASHBOARD_DB[:user_permissions]
+
+def main()
+  email = ARGV[0].to_s.strip.downcase
+  permission_name = ARGV[1].to_s.strip.downcase
+
+  if email.empty? || permission_name.empty?
+    puts "grant-permission email@address permission-name"
+    exit 1
+  end
+
+  unless user = USERS.where(email:email).first
+    puts "#{email} not a user."
+    exit 1
+  end
+
+  if permission_name == 'teacher'
+    unless user[:user_type] == 'teacher'
+      USERS.where(email:email).update(user_type:'teacher')
+      puts "#{email} is now a teacher."
+    else
+      puts "#{email} is already a teacher."
+    end
+    exit 0
+  end
+
+  if permission_name == 'affiliate' && user[:user_type] != 'teacher'
+    puts "#{email} not a teacher."
+    exit 1
+  end
+
+  if permission = PERMISSIONS.where(id:user[:id], permission:permission_name).first
+    puts "#{email} already has '#{permission_name}'"
+    exit 0
+  end
+
+  created_at = DateTime.now
+  PERMISSIONS.insert(user_id:user[:id], permission:permission_name, created_at:created_at, updated_at:created_at)
+  puts "#{email} granted '#{permission_name}'"
+end
+
+main

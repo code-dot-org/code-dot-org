@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+
+class PrizeTools
+  CHRIS_ID = 11
+
+  TEACHER_PRIZE_PROVIDER = 8
+  BONUS_PRIZE_PROVIDER = 9
+
+
+  def self.add_250(user)
+    TeacherBonusPrize.assign_to_user(user, BONUS_PRIZE_PROVIDER)
+  end
+
+  def self.add_750(user)
+    TeacherPrize.assign_to_user(user, TEACHER_PRIZE_PROVIDER)
+  end
+
+  def self.replace_250(user)
+    existing = user.teacher_bonus_prize
+    existing.user_id = CHRIS_ID
+    existing.save!
+
+    user = user.reload
+    user.update_attribute(:teacher_bonus_prize_id, nil)
+
+    add_250(user)
+  end
+
+  def self.replace_750(user)
+    existing = user.teacher_prize
+    existing.user_id = CHRIS_ID
+    existing.save!
+
+    user = user.reload
+    user.update_attribute(:teacher_prize_id, nil)
+
+    add_750(user)
+  end
+
+  def self.prizes(user)
+    puts <<-EOS
+    teacher_prize_earned: #{user.teacher_prize_earned.inspect}
+    teacher_prize: #{user.teacher_prize.inspect}
+    teacher_bonus_prize_earned: #{user.teacher_bonus_prize_earned.inspect}
+    teacher_bonus_prize: #{user.teacher_bonus_prize.inspect}
+EOS
+  end
+end

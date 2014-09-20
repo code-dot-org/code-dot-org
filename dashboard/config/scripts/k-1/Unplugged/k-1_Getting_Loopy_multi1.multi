@@ -1,0 +1,10 @@
+name 'K-1 Getting Loopy Multi 1'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png'
+height '150'
+
+question 'How would you simplify this sequence with loops?'
+right '/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png'
+wrong '/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png'
+wrong '/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png'

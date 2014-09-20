@@ -1,0 +1,3 @@
+%select{onchange:"window.location.href = '/#{@country}/' + this.value + '#{request.path_info != '/' ? request.path_info : ''}';"}
+  -HOC_I18N.keys.each do |language|
+    %option{value:language, selected:language==@language}= HOC_I18N[language]['language']

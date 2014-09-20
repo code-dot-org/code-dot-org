@@ -1,0 +1,16 @@
+---
+layout: none
+theme: none
+---
+
+%div{"ng-controller" => "SectionDetailController"}
+  %br/
+  %div{"teacher-nav" => ""}
+  %div{"ng-include"=>"", "ng-if" => "tab == 'manage'", src: "'teacher-dashboard/section_manage'"}
+  %div{"ng-include"=>"", "ng-if" => "tab == 'progress'", src: "'teacher-dashboard/section_progress'"}
+
+  -#.debug
+    %h2 DEBUG
+    %pre
+      {{section | json}}
+      

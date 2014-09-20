@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  element_id: "#resetButton"
+  localization_key: "run"
+
+two:
+  element_id: "#runButton"
+  localization_key: "run"

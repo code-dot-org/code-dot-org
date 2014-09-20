@@ -1,0 +1,14 @@
+-css_id = field.gsub("_", "-").downcase
+
+.form-group
+  %p.control-label<
+    %strong= radio_buttons['label']
+  %div{:id=>css_id}
+    -radio_buttons['values'].each_pair do |key, value|
+      .radio
+        %label
+          -attributes = {:id=>"#{css_id}-#{key}", :name=>field, :type =>"radio", :value=>key}
+          -attributes[:required] = "required" if required
+          -attributes[:checked] = "checked" if key == row.send(field).to_s
+          %input{attributes}/
+          =value

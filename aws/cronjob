@@ -1,0 +1,43 @@
+#!/usr/bin/env ruby
+require 'mail'
+require_relative '../deployment.rb'
+require 'cdo/hip_chat'
+
+def email_notify(command, status, content, recipient)
+  return if recipient.nil? || recipient.empty?
+  return if content.empty? && status == 0
+
+  Mail.new do |mail|
+    mail.to recipient
+    mail.from 'dev+build@code.org'
+    mail.subject "#{command} cronjob return #{status}"
+
+    mail.part(content_type: 'multipart/alternative') do |part|
+      part.text_part = Mail::Part.new do
+        content_type 'text/plain; charset=UTF-8'
+        body content
+      end
+    end
+
+    mail.delivery_method :sendmail
+    mail.deliver!
+  end
+end
+
+def hipchat_notify(command, status, content, recipient)
+  return if content.empty? && status == 0
+  return if recipient == 'dev+build@code.org' && status == 0
+
+  message = "/quote #{command} returned (#{status}):\n#{content}".strip
+  HipChat.log message, color:'yellow', message_format:'text'
+end
+
+def main()
+  command = ARGV[0]
+  result = `#{command} 2>&1`.strip
+  status = $?.exitstatus
+  hipchat_notify command, status, result, ARGV[1]
+  email_notify command, status, result, ARGV[1]
+end
+
+main()

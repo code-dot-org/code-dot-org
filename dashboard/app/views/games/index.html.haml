@@ -1,0 +1,20 @@
+%h1 Listing games
+%table
+  %thead
+    %tr
+      %th{ width:100 } Game
+      %th{ width:100 } Levels
+      %th{ width:100 }
+      %th{ width:100 }
+  %tbody
+    - @games.each do |game|
+      %tr
+        %td= link_to game.name, game
+        %td= game.levels.count
+        - if can? :update, game
+          %td= link_to t('crud.edit'), edit_game_path(game)
+        - if can? :destroy, game
+          %td= link_to t('crud.destroy'), game, method: :delete, data: { confirm: t('crud.confirm') }
+%br/
+- if can? :create, Game
+  = link_to t('crud.new_model', model: Game.model_name.human), new_game_path

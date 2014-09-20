@@ -1,0 +1,97 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'bundler/setup'
+require 'net/http'
+
+# Mac Chrome
+USER_AGENT_WEB = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+# iPhone 5 w/ Safari
+USER_AGENT_MOBILE = "Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A405 Safari/8536.25"
+
+MILESTONE_DATA = {
+    app: 'maze',
+    level: '2_2',
+    result: true,
+    testResult: 2,
+    program:'<xml><block type="maze_moveForward"></block></xml>',
+    time: 5,
+    attempt:1,
+    lines:1 }
+
+TESTS = [
+    { url: '/' },
+]
+
+20.times do |i|
+  TESTS << { url: "/hoc/#{i+1}" }
+  TESTS << { url: "/milestone/0/#{i+1}", method: :post, form_data: MILESTONE_DATA }
+end
+#
+# parse arguments
+#
+
+@host = ARGV.shift || "localhost:3000"
+@host = "http://#{@host}" if @host !~ /^http:\/\//
+@host = @host.gsub(/\/$/, "")
+
+thread_count = [ARGV.shift.to_i, 1].max
+repeat_count = [ARGV.shift.to_i, 1].max
+quiet = 'quiet' == ARGV.shift
+
+def run_tests(options = {})
+  TESTS.each do |test|
+    url = test[:url]
+    http_status_code = test[:http_status_code] || 200
+
+    if !options[:quiet]
+      $stdout.write "#{@host}#{url} ... "
+      $stdout.flush
+    end
+
+    tm = Time.now
+    begin
+      url = URI.join(@host, url)
+      req = if test[:method] == :post
+          r = Net::HTTP::Post.new(url.request_uri)
+          r.set_form_data(test[:form_data])
+          r
+        else
+          Net::HTTP::Get.new(url.request_uri)
+        end
+      req['User-Agent'] = test[:user_agent] || USER_AGENT_WEB
+
+      response = Net::HTTP.start(url.hostname, url.port) {|http| res = http.request(req) }
+      http_code = response.code.to_i
+
+      raise "HTTP Status code error. Expecting #{http_status_code}, got #{http_code}" if http_code != http_status_code
+      raise "too small!!!" if test[:min_size] && response.body.length < test[:min_size].to_i
+      raise "Should contain #{test[:contains]}, but doesn't -- #{response.body.inspect}" if test[:contains] && !response.body.include?(test[:contains])
+      if test[:redirect]
+        location_uri = URI.join(response["Location"])
+        raise "Redirect error. Expecting #{test[:redirect]}, got #{location_uri.path}- #{ " - #{test[:failure_message]}" if test[:failure_message] }" if location_uri.path != test[:redirect]
+      end
+    rescue Exception => e
+      exit 1 if e.inspect =~ /Interrupt/
+      if options[:quiet]
+        puts "#{url} ... #{e}"
+      else
+        puts e.to_s
+      end
+      puts "#{url} ... #{e}"
+      next
+    end
+
+    tm = Time.now - tm
+    printf(" %.3f\n", tm) if !options[:quiet]
+  end
+end
+
+smoke_start = Time.now
+
+options = { quiet: quiet }
+threads = []
+thread_count.times { threads << Thread.new { repeat_count.times { run_tests(options) } } }
+threads.each { |t| t.join }
+
+printf("Total Time: %.3f\n", (Time.now - smoke_start)) if !options[:quiet]

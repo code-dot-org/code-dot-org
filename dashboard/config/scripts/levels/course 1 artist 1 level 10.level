@@ -1,0 +1,62 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-07-11T21:28:40.000Z",
+  "level_num": "custom",
+  "user_id": 14,
+  "properties": {
+    "skin": "artist",
+    "instructions": "Draw the dashed line by using both the jump and draw blocks",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "start_direction": "270",
+    "x": "300",
+    "y": "300",
+    "ideal": "6",
+    "slider_speed": "0.2",
+    "free_play": "false"
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="simple_move_right"/>
+        <block type="simple_move_left"/>
+        <block type="simple_jump_right"/>
+        <block type="simple_jump_left"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="simple_move_left"/>
+        <block type="simple_jump_left"/>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="simple_move_left">
+          <next>
+            <block type="simple_jump_left">
+              <next>
+                <block type="simple_move_left">
+                  <next>
+                    <block type="simple_jump_left">
+                      <next>
+                        <block type="simple_move_left"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="when_run" movable="false"/>
+      </xml>
+    </predraw_blocks>
+  </blocks>
+</Artist>

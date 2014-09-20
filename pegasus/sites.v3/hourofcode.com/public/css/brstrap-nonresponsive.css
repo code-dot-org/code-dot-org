@@ -1,0 +1,13 @@
+/* responsive styling for pages that aren't responsive */
+
+.mobile-feature { display: none }
+.desktop-feature { }
+
+.col-20 { width: 20%; float:left; }  
+.col-23 { width: 23%; float:left; }
+.col-25 { width: 25%; float:left; }
+.col-33 { width: 33%; float:left; }
+.col-36 { width: 36% }  
+.col-50 { width: 50%; float:left; }
+.col-63 { width: 63%; float:left;}
+.col-66 { width: 66% }

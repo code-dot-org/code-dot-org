@@ -1,0 +1,13 @@
+-DB[:cdo_news_items].where(site_s: ['all', request.site]).and(tag_s:tag).each do |value|
+  %p
+    %strong
+      -hide_source ||= nil
+      -if !hide_source
+        = value[:publication_s]
+        =" - "
+      -show_dates ||= nil
+      -if show_dates
+        = value[:date_s]
+        =" - "
+      %a{:href=>value[:url_s]}
+        =value[:heading_s]

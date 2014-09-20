@@ -1,0 +1,11 @@
+name 'K-1 Happy Maps Multi 1'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/k_1_images/unplugged_images/happy_maps_1q.png'
+height '100'
+
+question 'Which arrow gets the Flurb to the treasure?'
+wrong '/script_assets/k_1_images/unplugged_images/up.png'
+right '/script_assets/k_1_images/unplugged_images/down.png'
+wrong '/script_assets/k_1_images/unplugged_images/left.png'
+wrong '/script_assets/k_1_images/unplugged_images/right.png'

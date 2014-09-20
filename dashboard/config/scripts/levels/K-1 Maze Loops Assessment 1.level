@@ -1,0 +1,38 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-06-20T23:02:04.000Z",
+  "level_num": "custom",
+  "user_id": 7,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,3,1,1,1,1,1,0],[0,0,0,0,0,0,2,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
+    "instructions": "Assessment -- Use loops to get me to the pig!",
+    "start_direction": "0",
+    "step_mode": "0",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "ideal": "4",
+    "maze_data": null
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveNorth"/>
+        <block type="maze_moveSouth"/>
+        <block type="maze_moveEast"/>
+        <block type="maze_moveWest"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-6">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="maze_moveNorth"/>
+        <block type="maze_moveWest"/>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Maze>

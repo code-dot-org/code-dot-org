@@ -1,0 +1,17 @@
+---
+layout: none
+theme: none
+---
+ 
+%div{"ng-controller" => "StudentDetailController"}
+  %br/
+  #goback{style: "float:left"}
+  %a{href: '/teacher-dashboard#/'}= I18n.t('dashboard_navigation_home_page')
+  %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
+  %a{href: '/teacher-dashboard#/sections'}= I18n.t('dashboard_navigation_all_sections')
+  %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
+  %a{href: '/teacher-dashboard#/sections/{{section.id}}'}= I18n.t('dashboard_navigation_section', section_name: '{{section.name}}') 
+  %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
+  %b{style: "color: #ff8b02;"}= I18n.t('dashboard_navigation_student', student_name: '{{student.name}}') 
+
+  %div{"ng-include"=>"", src: "studentProgressUrl"}

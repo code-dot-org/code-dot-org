@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# test the seed:all rake task (mostly that it is idempotent)
+
+SQL="select id, \`key\` from videos; \
+     select id, name, video_id from concepts; \
+     select id, name, app, intro_video_id from games; \
+     select id, name, trophies, hidden, wrapup_video_id from scripts; \
+     select id, name, game_id, level_num, skin, instructions from levels; \
+     select id, script_id, level_id, chapter, game_chapter from script_levels; \
+     select id, name, image_name from trophies; \
+     select id, name, url, description_token, image_name from prize_providers; \
+     select id, element_id, localization_key, qtip_config, script_level_id from callouts;"
+
+#echo "$SQL"
+mysql -uroot dashboard_$RAILS_ENV -e "$SQL" > 1.txt
+bundle exec rake seed:all
+mysql -uroot dashboard_$RAILS_ENV -e "$SQL" > 2.txt
+bundle exec rake seed:all
+mysql -uroot dashboard_$RAILS_ENV -e "$SQL" > 3.txt
+diff -du 1.txt 2.txt
+diff -du 2.txt 3.txt

@@ -1,0 +1,128 @@
+body{
+	margin: 0px 50px 0px 50px;
+  	font-size: 16px;
+ 	line-height: 1.35em;
+}
+
+.together{
+	page-break-inside: avoid;
+}
+
+.pagebreak{
+	page-break-after: always; 
+}
+
+.headercontent {
+	margin: 0px 40px 20px 20px;	
+}
+
+.headercontent h1 {
+  font-size: 60px;
+  line-height: 1em;
+  margin-top:.125em;
+  margin-bottom:.25em;  
+}
+
+
+.content {
+	padding: 0px;	
+  	margin: 0px 40px 0px 40px;
+}
+
+.content h1 {
+  color:rgb(120,101,161);
+  text-transform:uppercase;
+  font-size: 40px;
+  line-height: 1em;
+  margin-top:.5em;
+  margin-bottom:0em; 
+  page-break-before:always; 
+}
+
+.content h2 {
+  color:rgb(120,101,161);
+  text-transform:uppercase;
+  margin-top:1em;
+  margin-bottom:.5em;
+}
+
+.content h3 {
+  font-size: 18px;
+  line-height: 1em;
+  margin-top:1em;
+  margin-bottom:.5em;
+}
+
+.summary {
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.25);
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  background-color: white;
+  /*page-break-after:always;*/
+}
+
+.summary h2 {
+  color:rgb(120,101,161);
+  text-transform:uppercase;
+  font-size: 18px;
+  line-height: 1em;
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+.summary h2 {
+  font-size: 15px;
+  line-height: 1em;
+}
+
+
+.summary p {
+  font-size: 14px;
+  line-height: 1.25em;
+  margin-left:30px;
+}
+
+.tip {
+  margin: 40px 0	 40px 0;
+  padding: 10px 20px 10px 0px;
+  border-top: 2px solid orange;
+  border-bottom: 2px solid orange;
+  border-radius: 10px;
+  page-break-inside: avoid;
+}
+ 
+.tip p { 
+  color: #00ADBC ;
+  font-size: 15px;
+  line-height:1.3em;
+  font-style:none;
+}
+
+.tip h1 {
+  color:white;
+  font-style:italic;
+  font-size: 14px;
+  line-height:1em;
+  border-radius: 10px;
+  display: inline-block;
+  float: left;
+  background-color:orange;
+  padding:1em;
+  margin: 0em 2em 0em 0em;
+  border:0px solid orange;
+  -webkit-print-color-adjust: exact;
+}
+
+
+@page  
+{ 
+    size: auto;    
+    margin: .4in .25in .25in .25in;  
+}
+
+@media print {
+	body{ margin: .4in .25in .25in .25in; }
+	
+}

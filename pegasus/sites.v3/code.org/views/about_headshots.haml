@@ -1,0 +1,24 @@
+#headshots{:style=>'width: 760px; padding: 0; margin: 0;'}
+  - people.each_slice(columns) do |group|
+    .headshot_row{:style=>'width: 760px; padding: 0; margin: 0;'}
+      - group.each do |person|
+        - column_width = columns==3 ? '220' : '160'
+        .headshot_column{:style=>'width: ' + column_width + 'px; padding: 15px; margin: 0; float: left;'}
+          - avatar_url = avatar_image(person[:name_s])
+          - unless person[:url_s].nil_or_empty?
+            %a{:href=>person[:url_s], :target=>"_blank"}
+              .avatar_container{:style=>'height: 100px'}
+                - unless avatar_url.nil_or_empty?
+                  %img{:src=>avatar_url, :style=>'max-height: 100px'}
+              %h3{:style=>'height:20px'}
+                = person[:name_s]
+          - else
+            .avatar_container{:style=>'height: 100px'}
+              - unless avatar_url.nil_or_empty?
+                %img{:src=>avatar_url, :style=>'max-height: 100px'}
+            %h3{:style=>'height:20px'}
+              = person[:name_s]
+          -unless person[:title_s].nil_or_empty?
+            %p{:style=>'height:40px'}= person[:title_s]
+          %p{:style=>'font-size: 13px'}= person[:description_t]
+    %br{:style=>'clear: both;'}

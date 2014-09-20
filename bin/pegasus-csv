@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+require 'active_record'
+require 'csv'
+require_relative '../deployment'
+
+PegasusDbUri = URI.parse CDO.pegasus_db_reader
+
+class DB < ActiveRecord::Base
+
+  establish_connection(
+    adapter:  'mysql2',
+    host:     PegasusDbUri.host,
+    username: PegasusDbUri.user,
+    password: PegasusDbUri.password,
+    database: PegasusDbUri.path[1..-1],
+    strict:   true
+  )
+
+end
+
+def main()
+  q = ARGV.join(' ').strip
+  return if q.empty?
+
+  header_line = true
+  DB.connection.select_all(q).each do |i|
+    if header_line
+      puts CSV.generate_line(i.keys)
+      header_line = false
+    end
+    puts CSV.generate_line(i.values)
+  end
+end
+
+main

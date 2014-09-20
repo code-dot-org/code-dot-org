@@ -1,0 +1,9 @@
+%ul
+  - people.each do |i|
+    %li
+      -unless i[:url_s].nil_or_empty?
+        %a{:href=>i[:url_s]}= i[:name_s]
+      -else
+        = i[:name_s]
+      -unless i[:description_t].nil_or_empty?
+        = "- #{i[:description_t]}"

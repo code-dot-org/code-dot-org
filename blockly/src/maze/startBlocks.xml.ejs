@@ -1,0 +1,35 @@
+<% if (page == 2) { -%>
+  <% if (level < 4) { -%>
+    <block type="maze_moveForward" x="70" y="70"></block>
+  <% } else if (level == 8) { -%>
+    <block type="controls_repeat" x="70" y="70" editable="false"
+      deletable="false">
+      <title name="TIMES">3</title>
+    </block>
+  <% } else if (level == 13) { -%>
+    <block type="maze_forever" x="20" y="70" editable="false" deletable="false">
+      <statement name="DO">
+        <block type="maze_moveForward" editable="false" deletable="false">
+          <next>
+            <block type="maze_if" editable="false" deletable="false">
+              <title name="DIR">isPathLeft</title>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  <% } else if (level == 19) { -%>
+    <block type="maze_forever" x="20" y="70" editable="false" deletable="false">
+      <statement name="DO">
+        <block type="maze_ifElse" editable="false" deletable="false">
+          <title name="DIR">isPathForward</title>
+          <statement name="ELSE">
+            <block type="maze_ifElse" editable="false" deletable="false">
+              <title name="DIR">isPathRight</title>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+  <% } -%>
+<% } -%>

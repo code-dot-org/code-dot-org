@@ -1,0 +1,261 @@
+.multi
+
+  - data = @level.properties
+
+  %h2!= multi_t(data['title'])
+
+  - if ! data['content1'].blank? || ! data['content2'].blank? || ! data['content3'].blank?
+    .question
+
+      %p!= multi_t(data['content1']) if ! data['content1'].blank?
+      %p!= multi_t(data['content2']) if ! data['content2'].blank?
+      %p!= multi_t(data['content3']) if ! data['content3'].blank?
+
+  .answers
+
+    %span
+      %b.multi-question!= data['questions'][0]['text']
+
+    %br/
+    %br/
+
+    .buttons
+      %a.btn.btn-large.btn-primary.next-stage.submitButton
+        Submit
+
+    - height = data['height'] || '20'
+    - height += 'px'
+
+    .mainblock
+      %form#voteform{onsubmit: "return false;"}
+        - data['answers'].each_with_index do |answer, i|
+          - correct = answer["correct"]
+          %span.answerbutton.btn{style: "height: #{height}"}
+            .item-radio{id: "radio_#{i}"}
+              %input{id: "choice_#{i}", name: "vote", type: "radio", value: "#{i}", correct: "#{correct}"}
+            .item-cross{id: "cross_#{i}", style: "display: none"}
+              %b X
+            .item-label
+              %label{style: "height: #{height}"}!= multi_t(answer['text'])
+
+      .clear
+
+      .buttons
+        %a.btn.btn-large.btn-primary.next-stage.submitButton
+          Submit
+
+  .clear
+
+  %br/
+  %br/
+  %br/
+
+  .clear
+
+  %div{:style=>'display:none'}
+    #error-dialogcontent
+      .modal-content
+        %p.dialog-title
+          =t("multi.wrong_title")
+        %p
+          =t("multi.wrong_body")
+        .farSide
+          %button#ok-button.secondary
+            =t("dialog.ok")
+
+    #pre-dialogcontent
+      - if data['pre_image']
+        .modal-image{style: "margin-top: 0px"}
+          != multi_t(data['pre_image'])
+      .modal-content
+        - if data['pre_image'].blank?
+          - adjustLayoutClass = "unindentContent"
+        - else
+          - adjustLayoutClass = ""
+        %p.dialog-title{class: adjustLayoutClass}
+          != multi_t(data['pre_title']) if data['pre_title']
+        %p{class: adjustLayoutClass}
+          != multi_t(data['pre_body']) if data['pre_body']
+        - if data['pre_ani']
+          .aniGif.example-image{style: "overflow:hidden"}
+            != multi_t(data['pre_ani'])
+        .farSide
+          %button#ok-button.secondary
+            =t("dialog.ok")
+
+    #success-dialogcontent
+      .modal-content
+        %p.dialog-title
+          =t("multi.correct_title")
+        %p
+          =t("multi.correct_body")
+        .farSide
+          %button#ok-button.secondary
+            =t("dialog.ok")
+
+= render partial: 'levels/common_audio'
+
+:javascript
+
+  var selection = "none";   // "none", "wrong", "right"
+  var selectionIndex = -1;
+  var buttonEnabled = true;  // avoid multiple simultaneous submissions
+  var dialogType = null;
+  var adjustedScroll = false;
+
+  function choiceClicked(radioButton)
+  {
+    var index = radioButton.value;
+    var correctChoice = $(radioButton).attr('correct') === 'true';
+    CDOSounds.play('click');
+
+    enableButton(true);
+    selection = correctChoice ? "right" : "wrong";
+    selectionIndex = index;
+
+    return true;
+  }
+
+  $(function()
+  {
+    $('#voteform input:radio').click(function(e) {
+      choiceClicked(this);
+      e.stopPropagation();
+    });
+
+    $('span.answerbutton').click(function() {
+      // Handle non-radio button area click
+      var radioButton = $(this).find('input:radio')[0];
+      $(radioButton).prop('checked', true);
+      choiceClicked(radioButton);
+      return false;
+    });
+
+    $('#voteform img').on('dragstart', function(e) {
+      // Prevent button images from being dragged, check button instead
+      var radioButton = $(this).parent().parent().parent().find('input:radio')[0];
+      $(radioButton).prop('checked', true);
+      choiceClicked(radioButton);
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    enableButton(false);
+
+    if ("#{data['pre_title']}" != "")
+    {
+      setTimeout(function() {
+        showDialog("pre");
+        }, 1000);
+    }
+  });
+
+  function enableButton(enable)
+  {
+    buttonEnabled = enable;
+
+    if (enable)
+      $('.submitButton').removeClass("disabled");
+    else
+      $('.submitButton').addClass("disabled");
+  }
+
+  function dialogHidden()
+  {
+    if (dialogType == "success" && lastServerResponse.nextRedirect)
+    {
+      window.location.href = lastServerResponse.nextRedirect;
+    }
+
+    if (dialogType == "error")
+    {
+      adjustScroll();
+    }
+  }
+
+  function showDialog(type)
+  {
+    dialogType = type;
+
+    var dialog = new Dialog({ body: "", onHidden: dialogHidden });
+
+    // use our prefabricated dialog content
+    $(".modal-body").append($("#" + type + "-dialogcontent").clone(true));
+
+    // clicking the okay button in the dialog box dismisses it
+    $(".modal-body #ok-button").click(function() {
+      dialog.hide();
+    });
+
+    dialog.show();
+  }
+
+  function adjustScroll()
+  {
+    if (adjustedScroll)
+      return;
+
+    var win = $(window);
+    var el = $('.mainblock');
+    var winPos = win.scrollTop() + win.height();
+    var elPos = el.offset().top + el.height() - 10;
+
+    if (winPos < elPos)
+    {
+      $('html, body').animate({
+        scrollTop: $(".submitButton:first").offset().top - 10
+      }, 1000);
+    }
+
+    adjustedScroll = true;
+  }
+
+  $('.submitButton').click(function()
+  {
+    if (buttonEnabled)
+    {
+      enableButton(false);
+
+      if (selection == "wrong")
+      {
+        showDialog("error");
+        $("#radio_" + selectionIndex).hide();
+        $("#cross_" + selectionIndex).show();
+        CDOSounds.play('failure');
+      } else {
+        CDOSounds.play('success');
+      }
+
+      if (selection != "none")
+      {
+        sendReport({
+          fallbackResponse: '#{@fallback_response.to_json}',
+          callback: '#{@callback}',
+          app: 'multi',
+          level: '#{@level.level_num}',
+          result: selection == "right",
+          testResult: selection == "right" ? 100 : 0,
+          onComplete: function()
+          {
+            if (!lastServerResponse.nextRedirect)
+            {
+              enableButton(true);
+            }
+
+            if (lastServerResponse.videoInfo)
+            {
+              showVideoDialog(lastServerResponse.videoInfo);
+            }
+            else if (lastServerResponse.nextRedirect)
+            {
+              showDialog("success");
+            }
+          }
+        });
+      }
+      else
+      {
+        enableButton(true);
+      }
+    }
+  });

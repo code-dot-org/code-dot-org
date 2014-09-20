@@ -1,0 +1,235 @@
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+
+/[if lt IE 9]
+  %script{src: "/js/es5-shim.min.js"}
+
+-class_description_s ||= nil
+-class_format_s ||= nil
+-class_format_other_s ||= nil
+-class_languages_ss ||= nil
+-class_languages_other_ss ||= nil
+-school_name_s ||= nil
+-school_address_s ||= nil
+-school_website_s ||= nil
+-school_level_ss ||= nil
+-school_gender_s ||= nil
+-school_tuition_s ||= nil
+-contact_name_s ||= nil
+-contact_email_s ||= nil
+-contact_phone_s ||= nil
+-email_s ||= nil
+-form ||= nil
+-#When editing you'll have form and the members of form.data as globals.
+-#So email_s will be directly available and the same as form.data['email_s']
+
+%h1=(mode == 'review') ? 'Review Class Submission' : 'Submit Your Class'
+%form#submit-school-form{role: "form", onsubmit: "return submitSchoolFormSubmit()"}
+  %p.form-intro-text The info you submit will be shared publicly via the Code.org database, EXCEPT your private email (which will not be shared with anybody).
+  %p.form-intro-text If there are multiple completely different programs at the same location, please submit each separately with a unique name.
+  %p.form-intro-text If you're a university or college, submit your entire undergrad CS program as one entry, and any summer camp or other offerings as a separate submission.
+  #error-message{style: 'display: none'}
+
+  .main-section
+    %h2 Tell us about the class
+    .form-group
+      %label.control-label{for: "class-description"} Description of class or course
+      %span.form-required-field *
+      %p Provide as much detail as you can. For 'out of school' courses provide class schedule/times if possible. If you are a school with multiple classrooms or courses, you can list the multiple courses titles here, or you can submit each classroom or course separately.
+      %div
+        %textarea#class-description.form-control{name: "class_description_s", placeholder: "Description of class or course", required: true, style: "height: 10em;"}
+          =class_description_s
+    .form-group
+      %label.control-label{for: "class-format"} Format of class or course
+      %span.form-required-field *
+      %div
+        %select#class-format.form-control{name: "class_format_s", type: "select", required: true}
+          %option{selected: class_format_s.nil_or_empty?, value: ""}
+          -ClassSubmission.formats.each_pair do |key,group|
+            %optgroup{label: group['label']}
+              -group['children'].each_pair do |key,label|
+                %option{value: key, selected: key == class_format_s}= label
+      %div{id: 'class-format-other-wrapper', style: 'display: none;'}
+        %label.control-label{for: "class-format-other"}<
+          %em{style: 'font-weight: normal;'} Other format
+        %div
+          %input#class-format-other.form-control{name: "class_format_other_s", placeholder: "Other format", type: "text", value: class_format_other_s}/
+    .form-group
+      %label.control-label{for: "class-languages"} Code languages taught
+      %span.form-required-field *
+      %div
+        %select#class-languages.form-control{name: "class_languages_ss[]", type: "select", required: true, multiple: true}
+          %option{selected: class_languages_ss.nil_or_empty?, value: ""}
+          -ClassSubmission.languages.each do |label|
+            %option{value: label, selected: (class_languages_ss||[]).select{|i| i.downcase == label.downcase}.first}= label
+          %option#class-languages-other-option{value: 'Other', selected: (class_languages_ss||[]).select{|i| i.downcase == 'other'}.first} Other language(s)
+      %div{id: 'class-languages-other-wrapper', style: 'display: none;'}
+        %label.control-label{for: "class-languages-other"}<
+          %em{style: 'font-weight: normal;'} Other languages (comma-separated)
+        %div
+          %input#class-languages-other.form-control{name: "class_languages_other_ss", placeholder: "Other languages (comma-separated)", type: "text", value: CSV.generate_line(class_languages_other_ss || [])}/
+        %div{style: "color: #c00;"} If your course doesn't teach a programming language, please don't submit it. Code.org does not list courses in computer usage or basic tech literacy.
+
+  .main-section
+    %h2 Where is the class being offered?
+    .form-group
+      %label.control-label{for: "school-name"} Name
+      %span.form-required-field *
+      %div
+        %input#school-name.form-control{name: "school_name_s", placeholder: "School or program name", type: "text", required: "", value: school_name_s}/
+    .form-group
+      %label.control-label{for: "school-address"} Address (optional for online programs)
+      %span.form-required-field *
+      %div
+        %textarea#school-address.form-control{name: "school_address_s", placeholder: "School or program address", type: "text", required: true}
+          =school_address_s
+    .form-group
+      %label.control-label{for: "school-website"} Website
+      %span.form-required-field *
+      %div
+        %input#school-website.form-control{name: "school_website_s", placeholder: "School or program website", type: "text", required: "", value: school_website_s}/
+    .form-group
+      %label.control-label{for: "school-level"} Level(s) of instruction at this school or program
+      %span.form-required-field *
+      %div
+        %select#school-level.form-control{name: "school_level_ss[]", type: "select", required: true, multiple: true}
+          %option{selected: school_level_ss.nil_or_empty?, value: ""}
+          -ClassSubmission.levels.each_pair do |key,label|
+            %option{value: key, selected: (school_level_ss||[]).include?(key)}= label
+    .form-group
+      %div{id: "school-gender", class: "control-label"}<
+        %strong Is this a boys-only or girls-only school or program?
+        %span.form-required-field *
+      .radio-row
+        %label{class: "radio-inline"}
+          %input{type: "radio", id: "school-gender-both", name: "school_gender_s", required: true, value: "both", checked: school_gender_s == 'both'} Both
+        %label{class: "radio-inline"}
+          %input{type: "radio", id: "school-gender-girls", name: "school_gender_s", required: true, value: "girls", checked: school_gender_s == 'girls'} Girls only
+        %label{class: "radio-inline"}
+          %input{type: "radio", id: "school-gender-boys", name: "school_gender_s", required: true, value: "boys", checked: school_gender_s == 'boys'} Boys only
+    .form-group
+      %div{id: "school-tuition", class: "control-label"}<
+        %strong Does the school or program charge tuition?
+        %span.form-required-field *
+      .radio-row
+        %label{class: "radio-inline"}
+          %input{type: "radio", id: "school-tuition-no", name: "school_tuition_s", required: true, value: "no", checked: school_tuition_s == 'no'} No (Free or public school)
+        %label{class: "radio-inline"}
+          %input{type: "radio", id: "school-tuition-yes", name: "school_tuition_s", required: true, value: "yes", checked: school_tuition_s == 'yes'} Yes (Paid or private school)
+
+  .main-section
+    %h2 Who is the main contact for the class? (optional)
+    %p This info will be listed in search results and used by parents or students to contact for more information. We won't send any marketing or offers to you. However, provide only info that you're comfortable having listed publicly in our database.
+    .form-group
+      %label.control-label{for: "contact-name"} Public contact name
+      %div
+        %input#contact-name.form-control{name: "contact_name_s", placeholder: "Public contact name", type: "text", value: contact_name_s}/
+    .form-group
+      %label.control-label{for: "contact-email"} Public contact email
+      %div
+        %input#contact-email.form-control{name: "contact_email_s", placeholder: "Public contact email", type: "text", value: contact_email_s}/
+    .form-group
+      %label.control-label{for: "contact-phone"} Public contact phone
+      %div
+        %input#contact-phone.form-control{name: "contact_phone_s", placeholder: "Public contact phone", type: "text", value: contact_phone_s}/
+
+  .main-section
+    %h2 Who are you? (required)
+    .form-group
+      %label.control-label{for: "email"} Private contact email
+      %span.form-required-field *
+      %div
+        %input#email.form-control{name: "email_s", placeholder: "Private contact email", type: "text", required: "", value: email_s}/
+
+  -if mode == 'review'
+    .form-group
+      %input#form-mode{name: "form_mode", type: "hidden", value: 'review'}/
+
+  .form-group.submit-btn
+    %button#btn-submit.btn.btn-default{type: "submit"} Submit
+
+    -if mode == 'review'
+      %button#btn-cancel.btn.btn-danger{type: "button"} Cancel
+      %button#btn-edit.btn.btn-success{type: "button"} Edit
+
+#thanks{:style=>"display: none; margin-bottom: 360px;"}
+  %p Thank you for submitting information about your computer science program.
+
+:javascript
+  $(document).ready(function() {
+    $('#submit-school-form select').selectize();
+
+    $('#class-format').change(function() {
+      if ($(this).val().toString().match(/_other$/i)) {
+        $('#class-format-other-wrapper').show();
+      } else {
+        $('#class-format-other').val('');
+        $('#class-format-other-wrapper').hide();
+      }
+
+      // Don't make address required if course format is online.
+      if ($(this).val().toString().match(/^online_/i)) {
+        $('#school-address').closest('.form-group').find('.form-required-field').text('');
+        $('#school-address').removeAttr('required');
+      } else {
+        $('#school-address').closest('.form-group').find('.form-required-field').text('*');
+        $('#school-address').attr('required', 'required');
+      }
+    }).triggerHandler('change');
+
+    $('#class-languages').change(function() {
+      if ($.inArray('Other', $(this).val()) > -1) {
+        $('#class-languages-other-wrapper').show();
+      } else {
+        $('#class-languages-other').val('');
+        $('#class-languages-other-wrapper').hide();
+      }
+    }).triggerHandler('change');
+  });
+
+  function processResponse(data)
+  {
+    if ($('#form-mode').val() == 'review') {
+      location.reload();
+    } else {
+      $('#submit-school-form').hide();
+      $('#thanks').show();
+    }
+  }
+
+  function processError(data)
+  {
+    $('.has-error').removeClass('has-error');
+
+    errors = Object.keys(data.responseJSON);
+    errors_count = errors.length;
+
+    for (i = 0; i < errors_count; ++i) {
+      error_id = '#' + errors[i].replace(/_/g, '-');
+      error_id = error_id.replace(/-[sb]s?$/, '');
+      $(error_id).parents('.form-group').addClass('has-error');
+    }
+
+    $('#error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
+
+    $('body').scrollTop(0);
+    $("#btn-submit").removeAttr('disabled');
+    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
+  }
+
+  function submitSchoolFormSubmit()
+  {
+    $("#btn-submit").attr('disabled','disabled');
+    $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
+
+    $.ajax({
+      url: "/forms/ClassSubmission#{'/' + form.secret if form}",
+      type: "post",
+      dataType: "json",
+      data: $('#submit-school-form').serialize()
+    }).done(processResponse).fail(processError);
+
+    return false;
+  }

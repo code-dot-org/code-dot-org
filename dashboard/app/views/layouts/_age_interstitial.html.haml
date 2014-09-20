@@ -1,0 +1,36 @@
+.modal#age-modal{'data-backdrop' => 'static', 'data-keyboard' => 'false', display: 'none'}
+  .modal-dialog
+    .modal-content{style: 'margin-left: 0px; padding: 20px'}
+      %h1{style: 'margin: 10px 0;font-size: 32px'}= t('age_interstitial.header')
+      %p{style: 'font-size: 13px; line-height: 18px; color: #333'}!= t('age_interstitial.message').html_safe
+      = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
+        .form-group
+          = f.label :age, t('age_interstitial.age')
+          = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true
+        .form-group
+          = f.submit t('continue'), class: 'btn btn-primary', disabled: true
+      %p{style: 'font-size: 13px; line-height: 18px; color: #333'}!= t('age_interstitial.sign_out', url: destroy_user_session_url)
+:javascript
+  $().ready(function() {
+    $("#age-modal").modal('show');
+
+    $("#edit_user select").on('change', function(event) {
+      if (this.value === '') {
+        $("#edit_user .btn").prop('disabled', true);
+      } else {
+        $("#edit_user .btn").prop('disabled', false);
+      }
+    });
+    
+    $( "#edit_user" ).submit(function( event ) {
+      event.preventDefault();
+      $.ajax({
+        type: 'POST',
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        dataType: 'json',
+        success: function(data) {$("#age-modal").modal('hide');}
+      });
+    });
+  });
+

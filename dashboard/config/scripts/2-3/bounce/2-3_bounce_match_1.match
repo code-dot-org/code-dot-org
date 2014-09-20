@@ -1,0 +1,35 @@
+name '2-3 bounce match 1'
+title 'Bounce Matching'
+description 'Matching'
+
+banner 'Match the events with the actions'
+
+height '70'
+
+question '/script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png'
+  answer '/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png'
+
+question '/script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png'
+  answer '/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png'
+
+question '/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png'
+  answer '/script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png'
+
+question '/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png'
+  answer '/script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png'
+
+question '/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png'
+  answer '/script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png'
+
+
+#question 'Image for when click'
+#answer 'flap'
+
+#question 'Image for when hit ground'
+#answer 'end game'
+
+#question 'Image for when pass obstacle'
+#answer 'score point'
+
+
+# http://staging.learn.code.org/s/course2/stage/10/puzzle/11

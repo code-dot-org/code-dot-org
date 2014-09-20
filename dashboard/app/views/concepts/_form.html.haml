@@ -1,0 +1,15 @@
+= form_for(@concept) do |f|
+  - if @concept.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@concept.errors.count, "error")
+        prohibited this concept from being saved:
+      %ul
+        - @concept.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name
+  .actions
+    = f.submit

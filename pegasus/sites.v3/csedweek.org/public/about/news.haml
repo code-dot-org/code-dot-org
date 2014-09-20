@@ -1,0 +1,13 @@
+---
+title: News
+nav: about_nav
+---
+%h1 News
+%div
+-DB[:cdo_news_items].where(site_s:'all').or(site_s:request.site).each do |value|
+  %p
+    %strong
+      = value[:publication_s]
+      =" - "
+      %a{:href=>value[:url_s]}
+        = value[:heading_s]

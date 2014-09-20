@@ -1,0 +1,87 @@
+- @page_title = @section.name
+
+:javascript
+
+  var loginType = "#{@section.login_type}";
+  var loginTypePicture = "#{Section::LOGIN_TYPE_PICTURE}";
+  var loginTypeWord = "#{Section::LOGIN_TYPE_WORD}";
+
+  $(function() {
+    // Select name.
+    $('ul.students li').click(function() {
+      $('ul.students li').removeClass('selected');
+      $(this).addClass('selected');
+      $('input#user_id').val($(this).attr('id'));
+
+      if (loginType == loginTypeWord)
+      {
+        // Clear the password.
+        $('#secret_words').val("");
+      }
+      else if (loginType == loginTypePicture)
+      {
+        // Deselect picture.
+        $('ul.pictures li').removeClass('selected');
+      }
+
+      // Disable the login button.
+      $('#login_button').prop('disabled', true);
+
+      // Reveal the secret section...
+      $('#secret').hide().slideDown();
+
+      // ...and simultaneously fade in the login button.
+      $('#login_button').fadeIn();
+    });
+
+    // Select secret picture.
+    $('ul.pictures li').click(function() {
+      $('ul.pictures li').removeClass('selected');
+      $(this).addClass('selected');
+      $('input#secret_picture_id').val($(this).attr('id'));
+
+      // Enable the login button.
+      $('#login_button').prop('disabled', false);
+    });
+
+    // Type something in password box.
+    $('#secret_words').keyup(function() {
+      // Enable the login button.
+      $('#login_button').prop('disabled', false);
+    });
+  });
+
+#signinsection
+  %h2
+    =t('signinsection.welcome', section_name: @section.name)
+
+  %div#user
+    %h4.instructions= t('signinsection.name')
+    %ul.students
+      - @section.students.each do |student|
+        %li{id: student.id}
+          = student.name
+    .clear
+
+  - if @section.login_type == Section::LOGIN_TYPE_PICTURE
+    %div#secret{style: "display:none"}
+      %h4.instructions= t('signinsection.picture')
+      %ul.pictures
+        - @secret_pictures.each do |secret_picture|
+          %li{id: secret_picture.id}
+            = image_tag secret_picture.path, width: 90, alt: secret_picture.name
+      .clear
+
+  = form_tag log_in_section_path(id: @section.code) do
+    = hidden_field_tag :secret_picture_id
+    = hidden_field_tag :user_id
+    - if @section.login_type == Section::LOGIN_TYPE_WORD
+      %div#secret{style: "display:none"}
+        %h4.instructions= t('signinsection.words')
+        = text_field_tag :secret_words
+        .clear
+    = button_tag t('signinsection.login'), :id=>'login_button', :style=>'display:none', :class=>'btn btn-primary'
+
+%br/
+%br/
+%br/

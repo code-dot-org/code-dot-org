@@ -1,0 +1,10 @@
+{
+  "continue": "続行",
+  "nextLevel": "おめでとうございます ！このパズルを完了しました。",
+  "no": "いいえ",
+  "numBlocksNeeded": "このパズルは%1個のブロックで解けます。",
+  "reinfFeedbackMsg": "\"Try again\" ボタンを押すと、ゲームに戻ります。",
+  "share": "共有",
+  "shareGame": "あなたのゲームを共有：",
+  "yes": "はい"
+}

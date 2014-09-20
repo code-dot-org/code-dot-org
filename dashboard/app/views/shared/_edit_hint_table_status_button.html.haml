@@ -1,0 +1,6 @@
+-# This should be rendered from _edit_hint_table.html.haml (where update_status
+-# is defined) with local status_val and level_source_hint, and it assumes that
+-# the user is an administrator.  (Otherwise, the user shouldn't be given the
+-# option of changing the status.
+= radio_button_tag 'status', status_val, level_source_hint.status == status_val,
+  :onchange => "updateHint(\'#{level_source_hint_path(level_source_hint.id)}\', {'status' : \'#{status_val}\'});"

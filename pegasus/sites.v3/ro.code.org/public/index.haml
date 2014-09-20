@@ -1,0 +1,59 @@
+---
+title: Hour of Code România - eveniment anual Hour of Code
+tagline: ''
+theme: responsive
+responsivePadMobile: yes
+social:
+  'og:title' : “Hour of Code România se apropie"
+  'og:description' : "Pentru fiecare elev și clasă din România: Află cât de distractiv este sa înveți programare în doar o oră, 8-14 Decembrie."
+  'og:image' : ""
+  'og:image:width' : ""
+  'og:image:height' : ""
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+
+#top{:style=>"margin-top: 40px;"}
+  #video.col-63.desktop-pad-right
+    = view :hocvideo, id:"r990CWYtx_o"
+
+  #start.col-36{:style=>'text-align:center; margin-top: 0'}
+    .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
+      %h1{:style=>"font-size: 56px; line-height: 56px; margin: 0;"}<
+        =format_integer_with_commas(fetch_hoc_metrics['started']).to_s
+      %h3{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 5px; margin-bottom: 0;"}<
+        au încercat
+      %h2{:style=>"font-size: 36px; line-height: 36px; font-weight: 600; margin-top: 5px; margin-bottom: 0;"}<
+        Hour of Code
+      %h4.desktop-feature{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 15px;"}<
+        Oricine poate învăța
+    %a{:href=>'/learn', :style=>"text-decoration: none;"}
+      %button{:style=>"font-size: 19px; font-weight: 500; height: 50px;margin-top: 10px;"}
+        Începe
+
+    %br
+
+    %ul
+      %li Nu ai nevoie de cunostințe speciale
+      %li Nici măcar de un computer
+      %li Vârste recomandate: de la 4 la 104 ani
+
+%div{:style=>'clear:both'}
+
+%br Ora de Programare a avut aproape 40 de milioane de participanți în SUA, cu un feedback impresionant de la elevi, studenți, profesori și parinți.
+%ul
+  %li "Am văzut focuri de artificii deasupra capetelor elevilor, nu becuri." - Profesor
+  %li "Cel mai bun produs educațional pe care l-am întâlnit vreodată." - Parinte/Antreprenor
+  %li "Niciodată nu mi-am văzut elevii atat de entuziasmați să învețe." - Profesor
+  %li "Unul dintre cele mai bune două lucruri care s-a întâmplat în 2013." - elev clasa a 2-a
+  %li "În acel moment am ştiut că este ca o şansa o dată în viaţă, să învăţ asta." - clasa a 5-a
+  %li "Acum încerc să recomand și altor şcoli să predea programare pentru că într-adevăr a fost o experienţă uimitoare." - clasa a 5-a
+  %li "Copiii au fost încântaţi, iar unii chiar preocupați." - Profesor
+  %li "Astăzi, au venit la mine chiar înainte de oră şi au întrebat dacă ar putea începe. Am fost copleşit de entuziasmul şi curiozitatea lor pentru programare." - Profesor
+  %li "Cei 3 copii ai mei au venit acasă de la şcoală ieri, strigând despre Hour of Code. Cel de şase ani, mi-a povestit despre cum se programează Angry Birds, băiatul meu de 10 ani, proclamând 'am de gând să fiu un inginer de software. Sunt făcut pentru asta. Acesta este destinul meu!'" - Parinte
+
+.desktop-feature
+  %h2 Lideri si trendsetteri din întreaga lume sunt de acord ca mai mulți elevi ar trebui să învețe despre computere si programare
+  //= view :top_quotes

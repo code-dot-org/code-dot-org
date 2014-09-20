@@ -1,0 +1,49 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-05-12T21:46:18.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,2,0,0,0],[0,0,3,1,4,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
+    "instructions": "Run through these blocks and fix them! I think I might be going in the wrong direction.",
+    "start_direction": "3",
+    "step_mode": "0",
+    "is_k1": "true",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/08_V2.gif",
+    "skip_instructions_popup": "true",
+    "ideal": "4",
+    "maze_data": null
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="maze_moveWest">
+          <next>
+            <block type="maze_moveWest">
+              <next>
+                <block type="maze_moveSouth"/>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveNorth"/>
+        <block type="maze_moveSouth"/>
+        <block type="maze_moveEast"/>
+        <block type="maze_moveWest"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="maze_moveWest"/>
+        <block type="maze_moveSouth"/>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Maze>

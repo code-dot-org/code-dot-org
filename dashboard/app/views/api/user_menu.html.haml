@@ -1,0 +1,46 @@
+:css
+  .user_menu {
+    display: inline;
+  }
+
+  .transparent_backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: transparent;
+  }
+
+  .user_options {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 100001;
+    text-align: left;
+    white-space: nowrap;
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    left: auto;
+    bottom: auto;
+  }
+
+= render partial: 'shared/user_header'
+
+:javascript
+  handleUserMenuClick = function () {
+    $('.user_options').toggle();
+    if ($(".user_options").css('display') == 'none') {
+      $(".transparent_backdrop").off('click', handleUserMenuClick);
+      $(".transparent_backdrop").off('touchend', handleUserMenuClick);
+      $(".transparent_backdrop").toggle();
+    }
+    else {
+      $(".transparent_backdrop").on('click', handleUserMenuClick);
+      $(".transparent_backdrop").on('touchend', handleUserMenuClick);
+      $(".transparent_backdrop").toggle();
+    }
+    return false;
+  }

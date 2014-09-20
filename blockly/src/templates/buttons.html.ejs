@@ -1,0 +1,57 @@
+<% var msg = require('../../locale/current/common'); %>
+
+<% if (data.ok) { -%>
+  <div class="farSide" style="padding: 1ex 3ex 0">
+    <button id="ok-button" class="secondary">
+      <%= msg.dialogOK() %>
+    </button>
+  </div>
+<% } -%>
+
+<% if (data.previousLevel) { -%>
+  <button id="back-button" class="launch">
+    <%= msg.backToPreviousLevel() %>
+  </button>
+<% } -%>
+
+<% if (data.tryAgain) { -%>
+  <% if (data.isK1 && !data.freePlay) { -%>
+    <div id="again-button" class="launch arrow-container arrow-left">
+      <div class="arrow-head"><img src="<%= data.assetUrl('media/tryagain-arrow-head.png') %>" alt="Arrowhead" width="67" height="130"/></div>
+      <div class="arrow-text"><%= msg.tryAgain() %></div>
+    </div>
+  <% } else { -%>
+    <% if (data.hintRequestExperiment === "left") { -%>
+      <button id="hint-request-button" class="launch">
+        <%= msg.hintRequest() %>
+      </button>
+      <button id="again-button" class="launch">
+        <%= msg.tryAgain() %>
+      </button>
+    <% } else if (data.hintRequestExperiment == "right") { -%>
+      <button id="again-button" class="launch">
+        <%= msg.tryAgain() %>
+      </button>
+      <button id="hint-request-button" class="launch">
+        <%= msg.hintRequest() %>
+      </button>
+    <% } else { -%>
+      <button id="again-button" class="launch">
+        <%= msg.tryAgain() %>
+      </button>
+    <% } -%>
+  <% } -%>
+<% } -%>
+
+<% if (data.nextLevel) { -%>
+  <% if (data.isK1 && !data.freePlay) { -%>
+    <div id="continue-button" class="launch arrow-container arrow-right">
+      <div class="arrow-head"><img src="<%= data.assetUrl('media/next-arrow-head.png') %>" alt="Arrowhead" width="66" height="130"/></div>
+      <div class="arrow-text"><%= msg.continue() %></div>
+    </div>
+  <% } else { -%>
+    <button id="continue-button" class="launch">
+      <%= msg.continue() %>
+    </button>
+  <% } -%>
+<% } -%>

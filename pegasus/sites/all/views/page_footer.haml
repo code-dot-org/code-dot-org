@@ -1,0 +1,25 @@
+%footer#pagefooter
+  .content
+    %div{:style=>"float:left"}
+      
+      %a.whitefooterlink{:href=>"/about"} About
+      .dim &nbsp; &nbsp; | &nbsp; &nbsp;
+      %a.whitefooterlink{:href=>"/partners"} Partners
+      .dim &nbsp; &nbsp; | &nbsp; &nbsp;
+      %a.whitefooterlink{:href=>"http://codeorg.tumblr.com", :target=>"_blank"} Blog 
+      .dim &nbsp; &nbsp; | &nbsp; &nbsp;
+      %a.whitefooterlink{:href=>"/donate"} Donate
+      .dim &nbsp; &nbsp; | &nbsp; &nbsp;
+      %a.whitefooterlink{:href=>"http://www.zazzle.com/codeorg"} Store
+      .dim &nbsp; &nbsp; | &nbsp; &nbsp;
+      %a.whitefooterlink{:href=>"http://support.code.org/"} Support
+    %div{:style=>"float:right"}
+      =partial("language", :host=>request.host)
+    %div{:style=>"clear:both; float: left;"}
+      %small.dim
+        &copy; Code.org, 2014.  Code.org&reg;, the CODE logo and Hour of Code&trade; are trademarks of Code.org.
+    %div{:style=>"float:right"}
+      %small{:style=>"opacity:0.5"}
+        %a.whitefooterlink{:href=>"/tos", :style=>"font-size: 12px;"} Terms
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        %a.whitefooterlink{:href=>"/privacy", :style=>"font-size: 12px;"} Privacy Policy

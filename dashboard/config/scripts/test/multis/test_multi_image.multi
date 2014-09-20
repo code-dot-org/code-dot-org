@@ -1,0 +1,16 @@
+name 'test multi image' 
+title 'Maze Multiple Choice Two'
+content1 '/script_assets/matches/images/head.jpg,400'
+content2 'This puzzle is all about selecting the correct flowers.'
+height '170'
+
+pre_title 'Instructions'
+pre_body "Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?"
+pre_image ''
+pre_ani '/script_assets/images/matching_ani.gif'
+
+question 'Which flowers are yellow?'
+wrong '/script_assets/matches/images/a1.jpg'
+wrong '/script_assets/matches/images/a2.jpg'
+right '/script_assets/matches/images/a3.jpg'
+wrong '/script_assets/matches/images/a4.jpg'

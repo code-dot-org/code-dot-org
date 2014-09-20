@@ -1,0 +1,37 @@
+---
+title: Take action
+social:
+  "og:title": "Will your state support computer science this year?"
+  "og:description": "CA and IL have bills on deck to expand computer science right now. Take action in your state!"
+  "og:image": "http://code.org/images/fit-800/mapimage.png"
+  "og:image:width": 792
+  "og:image:height": 469
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+-actions = DB[:cdo_state_actions].where(page_s:File.basename(request.path_info))
+-raise Sinatra::NotFound if actions.empty?
+-facebook = {:u=>'http://code.org/action/make-cs-count'}
+-twitter = {:url=>'http://code.org/action/make-cs-count', :related=>'codeorg', :text=>'CA and IL have bills on deck to expand computer science. Help tell our reps to support it! @codeorg'}
+%h1 Take action in your state
+#promote-page
+  %h2{:style=>"float: left; width: 600px; margin-top: 20px; margin-bottom: 0px"} California and Illinois have proposed legislation to make computer science count towards high school math and science graduation requirements.
+  %div.clear{:style=>"margin: 20px 0; clear: both;"}
+    = view :share_buttons, facebook:facebook, twitter:twitter
+  -actions.each do|action|
+    .section.clear
+      = view :state_action, state:action[:state_code_s], action_text:action[:action_text_s], link_text:action[:link_text_s], link_url:action[:link_url_s]
+
+  %p{:style=>"font-size: 22px;"}<
+    Don't see your state?
+    %a{:href=>"http://www.congressweb.com/code/2/"} Take action here
+
+  = view "share_buttons", facebook:facebook, twitter:twitter
+  %br{:style=>"clear: both;"}
+  %br
+  %p<
+    %a{:href=>"/promote"} Promote computer science locally
+    %br
+    %a{:href=>"/action"} See states that do count computer science

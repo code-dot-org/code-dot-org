@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html dir="<%= options.localeDirection %>">
+<head>
+  <meta charset="utf-8">
+  <title>Blockly</title>
+  <script type="text/javascript" src="<%= assetUrl('js/' + options.locale + '/vendor.js') %>"></script>
+  <script type="text/javascript" src="<%= assetUrl('js/' + options.locale + '/' + app + '.js') %>"></script>
+  <script type="text/javascript">
+    <% // delay to onload to fix IE9. %>
+    window.onload = function() {
+      <%= app %>Main(<%-: options | json %>);
+    };
+  </script>
+</head>
+<body>
+  <div id="blockly"></div>
+  <style>
+    html, body {
+      background-color: transparent;
+      margin: 0;
+      padding:0;
+      overflow: hidden;
+      height: 100%;
+      font-family: 'Gotham A', 'Gotham B', sans-serif;
+    }
+    .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,
+        .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {
+      font-family: 'Gotham A', 'Gotham B', sans-serif;
+    }
+    #blockly>svg {
+      background-color: transparent;
+      border: none;
+    }
+    #blockly {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-06-27T19:07:56.000Z",
+  "level_num": "custom",
+  "user_id": 8,
+  "properties": {
+    "skin": "birds",
+    "instructions": "Test level",
+    "step_mode": "0",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/when-play.gif",
+    "is_k1": "true",
+    "skip_instructions_popup": "true",
+    "start_direction": "0",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]"
+  }
+}]]></config>
+  <blocks/>
+</Maze>

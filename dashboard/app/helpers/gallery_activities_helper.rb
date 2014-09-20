@@ -1,0 +1,2 @@
+module GalleryActivitiesHelper
+end

@@ -1,0 +1,21 @@
+%div{:style=>'width: 100%; height: 80px; padding: 20px; overflow: hidden; background-color: rgb(4, 126, 188)'}
+  %div{:class=>'whitefooter', :style=>'width: 970px; margin: 0 auto;'}
+    %div{:style=>'float:left'}
+      %a{:href=>"/about", :class=>"whitefooterlink"} About
+      &nbsp; &nbsp; | &nbsp; &nbsp;
+      %a{:href=>"/partners", :class=>"whitefooterlink"} Partners
+      &nbsp; &nbsp; | &nbsp; &nbsp;
+      %a{:href=>"http://codeorg.tumblr.com", :class=>"whitefooterlink", :target=>"_blank"} Blog
+      &nbsp; &nbsp; | &nbsp; &nbsp;
+      %a{:href=>"/resource-kit", :class=>"whitefooterlink"} Resource Kit
+      &nbsp; &nbsp; | &nbsp; &nbsp;
+      %a{:href=>"/resource_kit/frequently_asked_questions", :class=>"whitefooterlink"} FAQ
+      &nbsp; &nbsp; | &nbsp; &nbsp;
+      %a{:href=>"http://forums.code.org/", :class=>"whitefooterlink"} Forums
+      &nbsp; &nbsp; | &nbsp; &nbsp;
+      %a{:href=>"http://support.code.org/", :class=>"whitefooterlink"} Support
+      %br
+      %small.dim
+        &copy; Computer Science Education Week, 2014.  Hour of Code is a trademark of Code.org
+    %div{:style=>'float:right'}
+      =view :language

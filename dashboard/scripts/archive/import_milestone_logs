@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require 'dbi'
+require 'mysql'
+
+DB_HOST = ''
+DB_NAME = ''
+DB_USER = ''
+DB_PASSWORD = ''
+
+DIR = '/mnt/backups/'
+
+c = DBI.connect("DBI:Mysql:#{DB_NAME}:#{DB_HOST}", DB_USER, DB_PASSWORD)
+#c = DBI.connect('DBI:Mysql:dashboard_development:localhost', 'root', '')
+
+#raise c.execute("select now()").inspect
+
+Dir.glob(DIR + 'dash*/log/milestone.log-20131211.gz') do |i|
+  puts "gunzip -c #{i} > /tmp/milestone.log"
+  puts "mysql --local-infile -u #{DB_USER} -p#{DB_PASSWORD} -h #{DB_HOST} #{DB_NAME}"
+  puts "load data local infile '/tmp/milestone.log' into table temp_logs;"
+  puts "exit"
+end

@@ -1,0 +1,12 @@
+name 'K-1 Word Search Multi 2'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/k_1_images/search_images/jump.png, 450'
+height '170'
+
+question 'Which blocks spell "JUMP"?'
+right '/script_assets/k_1_images/move_blocks/NNEE.png'
+wrong '/script_assets/k_1_images/move_blocks/NENE.png'
+wrong '/script_assets/k_1_images/move_blocks/EENN.png'
+
+# http://staging.learn.code.org/s/course1/stage/6/puzzle/22

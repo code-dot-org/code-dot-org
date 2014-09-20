@@ -1,0 +1,167 @@
+---
+theme: responsive
+banner: <%= request.site == 'csedweek.org' ? :index_hoc : :index_loc %>
+<%
+  if request.site == 'csedweek.org'
+    twitter_meta = {
+      'title' => 'The Hour of Code is here',
+      'description' => 'Join millions of students to learn about the Hour of Code, the largest learning event in world history.',
+      'image_src' => 'http://csedweek.org/images/hoc-video-thumbnail.jpg',
+      'player' => 'https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0',
+    }
+  else
+    twitter_meta = {
+      'title' => "What most schools don't teach",
+      'description' => "Learn about a new \\\"superpower\\\" that isn't being taught in 90% of US schools.",
+      'image_src' => 'http://code.org/images/code-video-thumbnail.jpg',
+      'player' => 'https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0',
+    }
+  end
+%>
+social:
+  "twitter:card": player
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://code.org/"
+  "twitter:title": "<%= twitter_meta['title'] %>"
+  "twitter:description": "<%= twitter_meta['description'] %>"
+  "twitter:image:src": "<%= twitter_meta['image_src'] %>"
+  "twitter:player": "<%= twitter_meta['player'] %>"
+  "twitter:player:width": 1920
+  "twitter:player:height": 1080
+
+---
+-facebook = {:u=>"http://#{request.site}/"}
+
+-if request.site == 'csedweek.org'
+  -twitter = {:url=>"http://#{request.site}/", :related=>'codeorg', :hashtags=>'', :text=>I18n.t(:hoc_is_here)}
+  -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:hoc_is_here).include? '#HourOfCode'
+-else
+  -twitter = {:url=>"http://#{request.site}/", :related=>'codeorg', :hashtags=>'', :text=>"Why don't more schools teach computer science? We can fix this. @code.org"}
+
+%script{:src=>"/js/jquery.placeholder.js"}
+
+- if request.site == 'code.org'
+  #user_hero
+
+#index
+  #gap.feature-codeorg
+
+  #top
+    #video.col-63.desktop-pad-right
+      = view :index_video
+
+    #start.col-36
+      #blurb.col-mobile-56.mobile-pad-right
+        %br.desktop-feature
+
+        .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
+          -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+          -if request.locale == 'en-US'
+            %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
+              =count_string
+          -else
+            =count_string
+          %h4.desktop-feature=I18n.t(:anybody_can_learn)
+        %br
+
+      #getstarted.col-mobile-44
+        #largegap.mobile-show-medium{:style=>"height:50px"}
+        %a{:href=>'/learn'}
+          %button{:style=>"font-size: 19px; font-weight: 500; height: 50px;"}
+            =I18n.t(:get_started)
+
+        #beyond.desktop-feature
+          %br
+          %a.beyond{:href=>'/learn/beyond'}
+            =I18n.t :beyond_an_hour
+
+    -download_filename = (request.site == 'code.org') ? 'Code-5-minute.mov' : 'HoC-video-15mb.mp4'
+    #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
+      = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/#{download_filename}"
+
+  #studiobar.feature-codeorg.tablet-feature
+    %h1.mobile-center
+      =I18n.t :studiobar_title
+    #body.mobile-pad-left64
+      - studiobar_items = [ {id: "elementary", url: "http://#{canonical_hostname('studio.code.org')}"}, {id: "hoc", url: "/api/hour/begin/codeorg"}, {id: "flappy", url: "http://#{canonical_hostname('studio.code.org')}/flappy/1"}, {id: "teacher", url: "/educate/k5"}]
+      - studiobar_items.each_with_index do |item, index|
+        - if index < studiobar_items.length-1
+          - other_style = "margin-right: 26px"
+        - else
+          - other_style = ""
+        %a{href: item[:url]}
+          .col-25.outerblock{style: "float:left; #{other_style}"}
+            .innerblock
+              %img{:src=>"/images/logo_tall_#{item[:id]}.jpg", style: "width:100%; height:120px"}
+              .title=I18n.t "studiobar_#{item[:id]}_title"
+              .body=I18n.t "studiobar_#{item[:id]}_body"
+
+  %div{:style=>'clear:both;'}
+  = view :petition
+
+  #columns.desktop-feature{:style=>'clear:both; overflow:hidden'}
+    #column1{:style=>'float:left; width: 33.33%'}
+      %h2 Teachers & Educators
+      #column1content
+        -count = 0
+        -DB[:cdo_homepage_teachers].where(site_s:'all').or(site_s:request.site).each do |value|
+          -unless count == 0
+            %hr.narrow_hr
+          =value[:text_s]
+          %a{:href=>value[:url_s]}
+            =value[:linktext_s]
+          -count += 1
+        %br
+        %br
+        %a{:href=>"http://code.org/educate/hoc"}
+          %button{:style=>'width:200px'}
+            Teach an Hour of Code
+
+        = view 'find-on-fb', current_site:request.site
+
+    #column2{:style=>'float:left; width: 33.33%; padding-right: 25px; padding-left: 25px'}
+      %h2 Latest Highlights
+      #column2content
+        -count = 0
+        -DB[:cdo_news_items].where(site_s:'all').or(site_s:request.site).limit(7).each do |value|
+          -unless count == 0
+            %hr.narrow_hr
+          %a{:href=>value[:url_s], :target=>'_blank'}
+            =value[:heading_s]
+          %br
+          = value[:date_dt]
+          = '//'
+          = value[:publication_s]
+          -count += 1
+        %br
+        %br
+        %a{:href=>'/about/news', :style=>'float:right'} See all
+
+    #column3{:style=>'float:left; width: 33.33%;'}
+      %h2 From the Community
+      = view :index_twitter
+  #gap
+
+= view 'popup_window.js'
+
+:javascript
+  var petition;
+
+  $(document).ready()
+  {
+    petition = new Petition();
+  }
+
+- if request.site == 'code.org'
+  :javascript
+    $(document).ready(function() {
+      $.ajax({
+        type: "GET",
+        url: '/dashboardapi/user_hero',
+        //data: "id=" + id, // appears as $_GET['id'] @ ur backend side
+        success: function(data) {
+          // data is ur summary
+          $('#user_hero').html(data);
+        }
+      });
+    });

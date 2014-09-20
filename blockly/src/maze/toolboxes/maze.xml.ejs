@@ -1,0 +1,35 @@
+<xml id="toolbox" style="display: none;">
+  <block type="maze_moveForward"></block>
+  <block type="maze_turn"><title name="DIR">turnLeft</title></block>
+  <block type="maze_turn"><title name="DIR">turnRight</title></block>
+  <% if (page == 1) { -%>
+    <% if (level > 2) { -%>
+      <block type="maze_forever"></block>
+      <% if (level == 5) { -%>
+        <block type="maze_if"><title name="DIR">isPathLeft</title></block>
+      <% } else if (level > 5 && level < 9) { -%>
+        <block type="maze_if"></block>
+      <% } -%>
+      <% if (level > 8) { -%>
+       <block type="maze_ifElse"></block>
+      <% } -%>
+    <% } -%>
+  <% } else if (page == 2) { -%>
+    <% if (level > 4 && level < 9) { -%>
+      <block type="controls_repeat">
+        <title name="TIMES">5</title>
+      </block>
+    <% } -%>
+    <% if (level > 8) { -%>
+      <block type="maze_forever"></block>
+      <% if (level == 13 || level == 15) { -%>
+        <block type="maze_if"><title name="DIR">isPathLeft</title></block>
+      <% } else if (level == 14 || level == 16) { -%>
+        <block type="maze_if"><title name="DIR">isPathRight</title></block>
+      <% } -%>
+      <% if (level > 16) { -%>
+       <block type="maze_ifElse"></block>
+      <% } -%>
+    <% } -%>
+  <% } -%>
+</xml>

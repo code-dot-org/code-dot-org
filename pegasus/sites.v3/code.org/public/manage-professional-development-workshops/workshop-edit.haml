@@ -1,0 +1,68 @@
+---
+layout: none
+theme: none
+---
+
+%h1{"ng-show" => "action == 'edit'"} Edit workshop
+%h1{"ng-show" => "action == 'clone'"} Clone workshop
+%h1{"ng-show" => "action != 'edit' && action != 'clone'"} Add workshop
+
+%form#affiliate-workshop-form{role: "form"}
+  .row
+    .col-sm-4
+      %label.control-label Date
+    .col-sm-3
+      %label.control-label Start time
+    .col-sm-3
+      %label.control-label End time
+  #workshop-dates
+    .row{"ng-repeat" => "date in workshop.dates"}
+      .col-sm-4
+        .form-group
+          .workshop-date.input-group.date{"data-date-format" => "mm/dd/yy"}
+            %input.form-control{name: "date_s", type: "text", "ng-model" => "date.date_s"}/
+            %span.input-group-addon
+              %i.glyphicon.glyphicon-calendar
+      .col-sm-3
+        .form-group
+          .workshop-start-time.input-group.time
+            %input.form-control{name: "start_time_s", placeholder: "hh:mm", type: "text", "ng-model" => "date.start_time_s"}/
+            %span.input-group-addon
+              %i.glyphicon.glyphicon-time
+      .col-sm-3
+        .form-group
+          .workshop-start-time.input-group.time
+            %input.form-control{name: "end_time_s", placeholder: "hh:mm", type: "text", "ng-model" => "date.end_time_s"}/
+            %span.input-group-addon
+              %i.glyphicon.glyphicon-time
+      .col-sm-2
+        %a.btn.btn-white.btn-xs{"ng-click" => "newDate($event)", style: "padding: 1px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px; height: auto; color: #ccc; margin-top: 4px;"}
+          %i.glyphicon.glyphicon-plus
+        %a.btn.btn-white.btn-xs{"ng-click" => "workshop.dates.splice($index, 1)", "ng-hide" => "workshop.dates.length == 1", style: "padding: 1px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px; height: auto; color: #ccc; margin-top: 4px;"}
+          %i.glyphicon.glyphicon-remove
+  .row
+    .form-group.col-sm-4
+      %label.control-label{for: "workshop-location-name"} Location name
+      %div
+        %input#workshop-location-name.form-control{name: "location_name_s", type: "text", "ng-model" => "workshop.location_name_s"}/
+    .form-group.col-sm-6
+      %label.control-label{for: "workshop-location-address"} Location address (enter the full address)
+      %div
+        %input#workshop-location-address.form-control{name: "location_address", type: "text", "ng-model" => "workshop.location_address_s", placeholder: "Enter the location's address"}/
+  .row
+    .form-group.col-sm-2
+      %label.control-label{for: "workshop-capacity"} Capacity
+      %div
+        %input#workshop-capacity.form-control{name: "capacity_s", type: "text", "ng-model" => "workshop.capacity_s"}/
+    .form-group.col-sm-2
+      %label.control-label{for: "workshop-type"} Workshop type
+      %div
+        %select#workshop-type.form-control{name: "type_s", type: "select", "ng-model" => "workshop.type_s", "ng-options"=>"value for value in ['Public', 'Private']"}
+  .row
+    .form-group.col-sm-7
+      %label.control-label{for: "workshop-notes"} Notes (optional)
+      %div
+        %textarea#workshop-notes.form-control{name: "notes_s", placeholder: "Use this space to tell teachers about any building information or lunch breaks", style: "height: 10em;", "ng-model" => "workshop.notes_s"}
+  .form-group.action-buttons
+    %button#btn-save.btn.btn-default{type: "submit", "ng-click" => "save()"} Save
+    %button#btn-cancel.btn.btn-link{"ng-click" => "cancel_workshop()"} Cancel

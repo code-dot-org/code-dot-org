@@ -1,0 +1,52 @@
+#landingpage
+
+  .row#lesson
+    .span9#heading
+      %h3.whitetext
+        = data_t_suffix('script.name', @script.name, "title")
+        - if @script.beta?
+          %span.betatext
+            != "&nbsp; beta"
+
+      %p.smallwhitetext
+        = data_t_suffix('script.name', @script.name, "description")
+
+    .span3#trynow
+      = button_to t('home.trynow'), script_puzzle_path(@script, 'next'), :method => "get", :class=>"btn btn-primary biggerbutton"
+      %p.lightgreytext
+        - if @script.feedback_url
+          = link_to t('landing.feedback'), @script.feedback_url
+          %br/
+        = link_to t('landing.support'), "//support.code.org"
+        %br/
+
+    - if @script.has_banner_image?
+      .span12
+        %p
+          = link_to image_tag("banner_#{@script.name}_cropped.jpg"), script_puzzle_path(@script, 'next')
+
+    - if @script.beta?
+      .span10
+        %p.lightgreytext
+          != t('landing.prerelease')
+
+  .row#stats
+    .span12#rightside
+      = render partial: 'shared/user_stats', locals: { user: current_user, width: "100%"}
+
+  %div{style: "clear:both"}
+  %br/
+  %br/
+
+  - if @script.k5_course?
+    %a{href: "https://docs.google.com/a/code.org/document/d/1VBgpBodJgIouJejMoijXFV0BbAHVUqSeN_ZJAR-HEP8/pub"}
+      Overview of Courses 1, 2 and 3
+    %br/
+    %br/
+
+    %a{href: "http://code.org/curriculum/" + @script.name }
+      Lesson plans
+    %br/
+    %br/
+
+  %br/

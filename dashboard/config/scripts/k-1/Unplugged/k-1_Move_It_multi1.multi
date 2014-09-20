@@ -1,0 +1,11 @@
+name 'K-1 Move It Multi 1'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/k_1_images/unplugged_images/move_it_1_q.png'
+height '100'
+
+question 'Which algorithm gets the Flurb to the flowers?'
+wrong '/script_assets/k_1_images/unplugged_images/rightright.png'
+right '/script_assets/k_1_images/unplugged_images/leftleft.png'
+wrong '/script_assets/k_1_images/unplugged_images/upleft.png'
+wrong '/script_assets/k_1_images/unplugged_images/leftdown.png'

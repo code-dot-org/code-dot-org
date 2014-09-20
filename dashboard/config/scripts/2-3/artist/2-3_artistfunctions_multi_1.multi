@@ -1,0 +1,15 @@
+name '2-3 artist functions multi 1' 
+title 'Artist Functions Multiple Choice One'
+
+content1 '/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500'
+content2 ''
+
+height '160'
+
+question 'Pick the correct blocks to draw this image using the given functions'
+
+right '/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png'
+wrong '/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png'
+wrong '/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png'
+
+# http://staging.learn.code.org/s/course2/stage/7/puzzle/14

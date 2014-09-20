@@ -1,0 +1,173 @@
+---
+from: '"Hadi Partovi (Code.org)" <hadi_partovi@code.org>'
+subject: Thanks!
+view: none
+theme: none
+---
+%html
+  %head
+  %body
+    - unless rack_env?(:production)
+      /= JSON.pretty_generate(form)
+
+    -#%a{href:'http://code.org/'}
+      -#%img{src:'http://code.org/images/fit-48/logo.png', alt:'Code.org'}
+
+    %p
+      %b
+        Thank you for signing your name in support of computer science education!
+
+    %p
+      %a{href:'http://facebook.com/code.org'}
+        %button{style:'color:white; background-color:0094ca; padding: 10px; border-radius: 4px; border-color:0094ca; -webkit-user-select:none; border-width:0px'} Like us on Facebook
+      %a{href:'http://twitter.com/codeorg'}
+        %button{style:'color:white; background-color:0094ca; padding: 10px; border-radius: 4px; border-color:0094ca; -webkit-user-select:none; border-width:0px'} Like us on Twitter
+
+    %p
+      Here's what you can do now to help the world learn to code:
+
+    - bullet_count = 0
+
+    - if ['other','parent','student'].include? role_s
+      %p
+        %b
+          = "#{bullet_count += 1})"
+          Learn yourself
+          - if role_s != 'student'
+            (or for your child)
+      %p
+        = succeed "." do
+          %a{href:'http://code.org/learn'} Learn online
+        Or find
+        = succeed "." do
+          %a{href:'http://code.org/learn/local'} local schools, camps, or workshops that teach coding
+
+    - if role_s == 'educator'
+      %p
+        %b
+          = "#{bullet_count += 1})"
+          %a{href:'http://code.org/educate'} Teach
+          computer science
+      %p
+        You can teach this self-serve
+        %a{href:'http://code.org/educate/20hr'} intro course
+        (professional development included), partner with us to bring computer science
+        = succeed "," do
+          %a{href:'http://code.org/educate/districts'} to your entire district
+        and inspire students with
+        = succeed "." do
+          %a{href:'http://youtube.com/codeorg'} these videos
+
+    %p
+      %b
+        = "#{bullet_count += 1})"
+        %a{href:'http://code.org/promote'}
+          Help us promote
+        computer science education
+    %p
+      Find out what you can do locally to turn around these shocking statistics. (If you're in the
+      US, support
+      = succeed ".)" do
+        %a{href:'http://www.congressweb.com/Code/2'} the Computer Science Education Act
+    %a{href:'http://code.org/stats'}
+      %img{src:'http://postoffice.code.org/uploads/1386200419.png', alt:'small infographic'}
+
+    - if role_s == 'educator'
+      %p
+        %b
+          = "#{bullet_count += 1})"
+          Learn yourself (or for your child)
+      %p
+        Find
+        = succeed "." do
+          %a{href:'http://code.org/learn/local'} local schools, camps, or workshops that teach coding
+        Or
+        = succeed "." do
+          %a{href:'http://code.org/learn'} learn online
+    - else
+      %p
+        %b
+          = "#{bullet_count += 1})"
+          %a{href:'http://code.org/educate'} Ask your local school
+          to teach computer science
+      %p
+        Your local school can teach this self-serve
+        = succeed "," do
+          %a{href:'http://code.org/educate/20hr'} intro course
+        partner with us to bring computer science
+        = succeed "," do
+          %a{href:'http://code.org/educate/districts'} to your entire district
+        and inspire students with
+        = succeed "." do
+          %a{href:'http://youtube.com/codeorg'} these videos
+        Check
+        %a{href:'http://code.org/learn/local'} our map
+        to see if your school teaches computer science, and if not, ask them to.
+
+    - if role_s == 'engineer'
+      %p
+        %b
+          = "#{bullet_count += 1})"
+          Teach locally as a volunteer
+      %p
+        Host an
+        %a{href:'http://code.org/educate/hoc'} Hour of Code
+        or a longer self-serve
+        %a{href:'http://code.org/educate/20hr'} intro course
+        at a local school or club. Or
+        %a{href:'http://code.org/volunteer/engineer'} sign up as a volunteer
+        to hear about mentoring opportunities from local teachers.
+
+    %p
+      %b
+        = "#{bullet_count += 1})"
+        Buy a t-shirt or hat to spread the word
+    %p
+      We have some
+      = succeed "," do
+        %a{href:'http://www.zazzle.com/codeorg'} pretty awesome shirts
+      and 5% of proceeds go to charity.
+
+    - if ['engineer','other','parent'].include? role_s
+      %p
+        %b
+          = "#{bullet_count += 1})"
+          Donate money to Code.org
+      %p
+        We're a very lean and mean organization, and we
+        = succeed "." do
+          %a{href:'http://code.org/donate'} appreciate your help
+
+    - if country_s == 'united states'
+      %p
+        %b
+          = "#{bullet_count += 1})"
+          Tell Congress that you support the Computer Science Education Act
+      %p
+        Ask your representatives to
+        = succeed "." do
+          %a{href:'http://www.congressweb.com/Code/2'} support it, too
+
+
+    %br
+    %p
+      Thank you,
+
+    %p
+      Hadi Partovi,
+      %br
+      Founder, Code.org
+      %br
+      PO Box 34628 #80740
+      %br
+      Seattle, WA 98124
+
+    %p
+      You've received this message because you signed the petition at
+      = succeed "." do
+        %a{href:'http://code.org/'} Code.org
+    %p
+      = succeed "." do
+        %a{href:unsubscribe_link} Unsubscribe instantly
+
+    %img{src:tracking_pixel}

@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# Moves level.properties.level_num: 'custom' assignments from the properties JSON to the level.level_num column
+# Note: previously run only as rails console command, not as shell script
+
+require_relative '../../config/environment'
+
+Level.all.select{|l| l.properties.has_key?('level_num') && l.properties['level_num'] == 'custom' && l.level_num.nil?}.each{|l| l.update(level_num: 'custom'); l.properties.delete('level_num'); l.save }

@@ -1,0 +1,28 @@
+$(document).ready(function () {
+  var form_selector = '<%=form_selector%>';
+  console.log('form selector=' + form_selector);
+  $(form_selector).on('ajax:beforeSend', function (e, xhr) {
+    $('#validation-error').empty();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    xhr.setRequestHeader('X-CSRF-TOKEN', token);
+  });
+  $(form_selector).on('ajax:complete', function (e, data) {
+    if (data.status == "200") {
+      window.location.href = JSON.parse(data.responseText).redirect
+    }
+  });
+  $(form_selector).on("ajax:error", function (evt, xhr, status, error) {
+    var errors, errorText;
+    try {
+      errors = $.parseJSON(xhr.responseText);
+    } catch (err) {
+      errors = {message: "Error (" + error + "): " + xhr.responseText};
+    }
+    $('#validation-error')
+      .html("<p>Couldn't create level:</p>")
+      .append($("<ul/>")
+        .append(Object.keys(errors).map(function (v) {
+          return $("<li/>").text(v + ": " + errors[v]);
+        })));
+  });
+});

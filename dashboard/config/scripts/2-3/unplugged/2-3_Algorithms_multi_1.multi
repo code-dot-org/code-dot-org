@@ -1,0 +1,12 @@
+name '2-3 Algorithms Multi 1'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/2-3_images/unplugged/algorithms_1_q.png'
+height '100'
+
+question 'Choose an algorithm for the image provided'
+wrong 'Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square'
+right 'Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus'
+wrong 'Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus'
+wrong 'Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle'
+

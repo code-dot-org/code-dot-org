@@ -1,0 +1,3 @@
+Name	script_id	level_num	game_name	localization_key	element_id	qtip_config
+Run Button	333	level1_2_3	Maze	run	#runButton	
+Repeat Block	321	level1_2_3	Maze	run	#repeatBlock	{position: {my: "bottom left", at: "top right", adjust: {x: 297, y:70}}}

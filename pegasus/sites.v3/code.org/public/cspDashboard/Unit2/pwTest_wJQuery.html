@@ -1,0 +1,57 @@
+<html>
+<head>
+	 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<title></title>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="js/code.org.js"></script>
+	<script>
+		function checkCredentials_2(){
+
+			var name = $("#username").val();
+			var pw = $("#password").val();
+
+			if(name=="bfranke" && pw=="foofoo"){
+				$("#response").html("Access Granted");
+				$("#response").addClass("btn-success");
+			}
+			else{
+				$("#response").html("Access Denied");
+				$("#response").addClass("btn-danger");
+			}
+		}
+
+
+
+	</script>
+	<style>
+		.loginform{
+			width: 350px;
+			background-color: #EEEEEE;
+			border: solid 1px;
+			border-radius: 5px;
+			margin-top: 20px;
+			box-shadow: 2px 2px 20px #000000;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container loginform">
+	<h2>Please Login </h2>
+	<div class="form-group">
+   		<label for="username">Username</label>
+   	 	<input type="text" class="form-control" id="username" placeholder="Enter username">
+  	</div>
+  	
+ 	<div class="form-group">
+   		<label for="password">Password</label>
+    	<input type="password" class="form-control" id="password" placeholder="Password">
+  	</div>
+	<button class="btn btn-large btn-primary" onClick="checkCredentials_2()" type=submit>Login</button>
+	<br/><br/>
+	<h2 id="response"></h2>
+</div>
+
+
+</body>
+</html>

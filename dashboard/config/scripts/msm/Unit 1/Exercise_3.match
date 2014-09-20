@@ -1,0 +1,17 @@
+name 'Coordinate Matching' 
+
+title 'Coordinates of Ninjacat'
+content1 'Match each character with its correct coordinate!'
+content2 '/script_assets/msm/Unit 1/exercise_3_ninjacat.png'
+
+question "Cloud"
+answer '(250, 400)'
+
+question "Ruby"
+answer '(500, 240)'
+
+question "Dog"
+answer '(480, 100)'
+
+question "Ninjacat"
+answer '(320, 240)'

@@ -1,0 +1,59 @@
+---
+title: Il Italia Hour del codice - per l'Anno del codice
+tagline: ''
+theme: responsive
+responsivePadMobile: yes
+social:
+  'og:title' : "L'Italia ore del codice è in arrivo"
+  'og:description' : "Per ogni studente e classe: imparare come divertimento di codifica è in una sola ora"
+  'og:image' : ""
+  'og:image:width' : ""
+  'og:image:height' : ""
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+--- 
+
+#top{:style=>"margin-top: 40px;"}
+  #video.col-63.desktop-pad-right
+    = view :hocvideo, id:"r990CWYtx_o"
+
+  #start.col-36{:style=>'text-align:center; margin-top: 0'}
+    .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
+      %h1{:style=>"font-size: 56px; line-height: 56px; margin: 0;"}<
+        =format_integer_with_commas(fetch_hoc_metrics['countries']['United Kingdom'].to_i).to_s
+      %h3{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 5px; margin-bottom: 0;"}<
+        In Italia hanno partecipato
+      %h2{:style=>"font-size: 36px; line-height: 36px; font-weight: 600; margin-top: 5px; margin-bottom: 0;"}<
+        Ora del Codice
+      %h4.desktop-feature{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 15px;"}<
+        Chiunque può imparare
+    %a{:href=>'/learn', :style=>"text-decoration: none;"}
+      %button{:style=>"font-size: 19px; font-weight: 500; height: 50px;margin-top: 10px;"}
+        Inizia
+
+    %br
+
+    %ul
+      %li Nessuna esperienza è necessaria
+      %li Neanche un calcolatore
+      %li Da 6 a 106 anni
+
+%div{:style=>'clear:both'}
+
+%br L'Ora del Codice ha avuto quasi 40 milioni di partecipanti negli Stati Uniti, con commenti entusiasti  da parte di studenti, insegnanti e genitori.
+%ul
+  %li "Ho visto fuochi d'artificio accendersi sulle teste dei miei studenti, non lampadine." - Insegnante
+  %li "Il miglior prodotto educativo abbia mai visto." - Genitore e imprenditore
+  %li "Non ho MAI MAI visto i miei studenti così entusiasti di imparare." - Insegnante
+  %li "Una delle due cose migliori accadute nel 2013." - Studente di seconda
+  %li "E poi sapevo che questa sarebbe stata una possibilità di quelle che capitano una sola volta nella vita." - Studentessa di quinta
+  %li "Adesso sto cercando di convincere altre scuole ad insegnare l'Ora del Codice perché è davvero un'esperienza meravigliosa." - Studente di quinta
+  %li "Gli studenti erano entusiasti e completamente presi." - Insegnante
+  %li "ggi sono entrati di corsa nell'aula prima dell'inizio delle lezioni e mi hanno chiesto se potevano già iniziare. Sono rimasto sbigottito del loro entusiasmo e della loro curiosità per l'Ora del Codice." - Insegnante
+  %li "I miei tre figli son tornati a casa dalla scuola ieri gridando di entusiasmo per l'Ora del Codice. Quella di 6 anni mi ha spiegato come programmare Angry Birds, mentre quello di 10 proclamava 'Da grande farò l'ingegnere informatico. E' il lavoro che fa per me. E' il mio DESTINO!'" - Genitore
+
+.desktop-feature
+  %h2 I leader e gli opinionisti concordano nel dire che più studenti dovrebbero imparare l'informatica
+  //= view :top_quotes

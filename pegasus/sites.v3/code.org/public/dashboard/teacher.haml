@@ -1,0 +1,17 @@
+-redirect '/dashboard/sign-in' unless dashboard_user
+-forbidden! unless dashboard_user[:user_type] == 'teacher'
+%h1 Hello Teacher
+
+%textarea#sections
+
+:javascript
+  $(document).ready(function(){
+    fetchMySections();
+  })
+
+  function fetchMySections() {
+    $.getJSON("/v2/sections")
+      .done(function(data) {
+        $("textarea#sections").val(JSON.stringify(data.teacher))
+      })
+  }

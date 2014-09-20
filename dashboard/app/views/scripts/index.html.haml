@@ -1,0 +1,22 @@
+%h1 All Scripts
+= link_to 'Update all', scripts_path(rake: '1')
+%br
+= link_to 'Create New Script', new_script_path
+- if @errors && @errors.any?
+  #error_explanation
+    %h2 Error updating scripts:
+    %ul
+      - @errors.each do |msg|
+        %li= msg
+%table
+  %tbody
+    - if !@scripts.nil?
+      - @scripts.each do |script|
+        - script_level = ScriptLevel.where(chapter: 1, script: script).first
+        %tr
+          %td= link_to script.name, script
+          - if script_level
+            %td= link_to "Play", script_level_path(script, script_level)
+          %td= link_to(t('crud.edit'), edit_script_path(script)) unless script.default_script?
+          %td= link_to t('crud.destroy'), script, method: :delete, |
+            data: { confirm: t('crud.confirm') } unless script.default_script? |

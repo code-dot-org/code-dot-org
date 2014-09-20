@@ -1,0 +1,13 @@
+name 'K-1 Flappy Match 1'
+title 'Matching'
+banner 'Match the blocks'
+height '150'
+
+question '/script_assets/k_1_images/flappy_images/click.png'
+answer '/script_assets/k_1_images/flappy_images/flap.png'
+
+question '/script_assets/k_1_images/flappy_images/hit_ground.png'
+answer '/script_assets/k_1_images/flappy_images/end.png'
+
+question '/script_assets/k_1_images/flappy_images/pass_obstacle.png'
+answer '/script_assets/k_1_images/flappy_images/score.png'

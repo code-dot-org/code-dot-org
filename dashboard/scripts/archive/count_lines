@@ -1,0 +1,29 @@
+#!/usr/local/bin/ruby
+
+require 'json'
+
+DIR = '/mnt/backups/'
+FILE = DIR + 'milestone_cache'
+sum_cache = (File.open(FILE, 'r') { |f| Marshal.load(f.read) }) rescue {}
+today_sum = archive_sum = 0
+results = {}
+
+Dir.glob([DIR + 'production*/log/milestone.log-*', DIR + 'dash*/log/milestone.log-*']) do |i|
+  num = sum_cache[i] || `gunzip -c #{i} | cut -f10 | awk '{s+=$1} END {print s}'`.to_i
+  archive_sum += num
+  sum_cache[i] = num
+end
+
+results[:archive] = archive_sum
+
+Dir.glob([DIR + 'production*/log/milestone.log']) do |i|
+  num = `cat #{i} | cut -f10 | awk '{s+=$1} END {print s}'`.to_i
+  today_sum += num
+end
+
+results[:today] = today_sum
+results[:all] = today_sum + archive_sum # Append existing count.
+
+puts results.to_json
+
+File.open(FILE, "wb") { |f| f.write Marshal.dump(sum_cache) }

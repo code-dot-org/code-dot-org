@@ -1,0 +1,873 @@
+<html>
+<head>
+	 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	 <link type="text/css" rel="stylesheet" href="css/code.org.css" />
+
+	 <style>
+	 	canvas{ float:left; 
+	 		border: solid 1px #000000;
+	 	}
+	 	header{
+			background-color: rgb(0,164,180);
+			width: 100%;
+			padding: 20px;
+			top: 0px;
+			color: white;
+			font-weight: bold;
+			margin: 20px;
+			box-shadow: 0px 0px 10px black;
+			width: 90%;
+		}
+		big{
+			font-size: 30px;
+			font-weight: bold;
+		}
+		table, tr, td{
+			border-width: 0px;
+		}
+
+	 </style>
+	<title></title>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://www.parsecdn.com/js/parse-1.2.15.min.js"></script>
+	<script src="js/code.org.js"></script>
+	<script src="js/canvasFuncs.js"></script>
+	<script>
+		var connectionVals;
+		var bitTimerId, animTimerId;
+		var bitDelayVal, animDelayVal=200;
+		var bitReadTime;
+		var stopwatchTimerId, stopwatchValue, stopwatchIncrements=20.0;
+		var sendOrRecv = 'send'
+		function startStopwatchTimer(sendOrRecv_val){
+			stopwatchValue=0.0;
+			sendOrRecv = sendOrRecv_val;
+			stopStopwatchTimer(); //incase one had been started before.
+			stopwatchTimerId = setInterval(stepStopwatch, stopwatchIncrements);
+
+		}
+
+		function stepStopwatch(){
+			stopwatchValue+=stopwatchIncrements; //stopwatchIncrements;
+			var displayVal = parseFloat(stopwatchValue)/1000.0;
+
+			//var isTick = stopwatchValue%($("#metronomeSlider").val()*1000)==0;
+			var isTick = stopwatchValue%(animDelayVal)===0;
+
+			if(isTick){ //
+				$("#stopwatchDisplay").css("background-color","#00FF00");
+				
+				if(sendOrRecv=='send') sendBitAnim();
+				else if(sendOrRecv=='recv') recvBitAnim();
+				// implied else do nothing state will still run the timer }
+			}
+			else{
+				$("#stopwatchDisplay").css("background-color","#FFFFFF");
+
+			}
+			$("#stopwatchDisplay").val(displayVal);
+		}
+
+		function metronomeSliderChanged(){
+			animDelayVal=$("#metronomeSlider").val();
+			
+			if(getQueryString("version")==="AB"){
+				$("#metronomeValDisplay").html("tick every "+(animDelayVal/1000.0)+ " sec");
+
+			}
+			else $("#metronomeValDisplay").html("1 bit / "+(animDelayVal/1000.0)+ " sec");
+		}
+
+
+
+		function stopStopwatchTimer(){
+			clearInterval(stopwatchTimerId);
+		}
+
+		var readLock; //a lock to prevent reads getting out of sync -- defunct?
+		
+		$(document).ready(function(){
+			console.log("READY");
+			
+			//setup local global var containing connection params
+			connectionVals = new Object();
+			connectionVals.room = "";
+			connectionVals.user = "";
+			connectionVals.friend = "";
+			
+			loadVarsFromLocalStorage();
+			
+
+			var version = getQueryString("version");
+			if(version=="text"){
+				$("#bitsPerChunkSlider").attr("disabled",true);
+				$("#chunkText").html("char  (1 byte / char)")
+				$(".ABStateOnly").remove();
+
+			}
+			else if(version=="numbers"){
+				$(".textTableCell").remove();
+
+				$("#metronomeSlider").val(1000);
+
+
+				$("#bitsPerChunkSlider").attr("disabled",false);
+				$("#bitsPerChunkSlider").val(5);
+				$("#chunkText").html("number");
+				$(".ABStateOnly").remove();
+			}
+			else if(version=="AB"){
+				$(".textTableCell").remove();
+				$(".numsTableCell").remove();
+				$(".sendOnTimerButtons").remove();
+				$("#bitsPerChunkSliderCell").remove();
+				$("#metronomeSlider").attr("max",10000);
+				$("#metronomeSlider").attr("min",1000);
+				$("#metronomeSlider").attr("step",1000);
+
+				$("#metronomeSlider").val(3000);
+				stopwatchIncrements=100.0;
+				
+				$("#outboundBitsLabel").html("Enter States A or B");
+
+			}
+			else{ //version=="binary"defaults to bits mode
+				$(".ABStateOnly").remove();
+				$(".textTableCell").remove();
+				$(".numsTableCell").remove();
+
+				$("#bitsPerChunkSlider").attr("disabled",false);
+				$("#bitsPerChunkSlider").val(4);
+
+
+				$("#metronomeSlider").val(3000);
+
+			}
+
+			readLock = false;
+			init();
+			draw();
+			pause();
+			metronomeSliderChanged();
+			updateChunkSliderDisplay();
+
+		});
+
+		var myPacket;
+		var myNode, friendNode;
+		var friendName = 'friend';
+
+	
+
+		function setup(){
+
+			myNode = createNode(25,100,25,"ME","#990000");
+			//friendNode = createNode(175,100,25,connectionVals.friend,"#339933");
+			friendNode = createNode(175,100,25,"NONE","#339933");
+
+			myPacket = null; //createPacket(myNode.x, myNode.y, friendNode.x, friendNode.y, 0.01);
+
+
+		}
+
+		function createNode(x,y,size,text,color){
+			var N = new Object();
+			N.x =x;
+			N.y=y;
+			N.myName=text;
+			N.color=color;
+			N.size = size;
+
+			N.draw = function(){
+
+				fill(this.color);
+				circle(this.x, this.y, this.size);
+				
+				fill("#000000");
+				fillText(this.myName, this.x-this.size+5, this.y+1);
+				fill("#FFFFFF");
+				fillText(this.myName, this.x-this.size+5, this.y);
+
+			}
+			return N;
+
+		}
+
+		
+
+		function createPacket(srcX, srcY, destX, destY, stepPct, msg){
+
+			var P = new Object();
+			P.srcX=srcX;
+			P.srcX=srcY;
+			P.destX=destX;
+			P.destY=destY;
+			P.currX = srcX;
+			P.currY = srcY;
+			P.stepPct = stepPct;
+			P.stepAmtX= (destX-srcX)*stepPct;
+			P.stepAmtY= (destY-srcY)*stepPct;
+			P.msg=msg;
+
+			P.pctTravelled=0.0;
+
+			//console.log("in createPacket(...) just made P "+JSON.stringify(P));
+			
+
+
+			P.step = function(){ 
+				this.pctTravelled+=this.stepPct;
+				this.currY += this.stepAmtY;
+				this.currX += this.stepAmtX;
+
+				if(this.pctTravelled>=1){
+					this.stepAmtX=0;
+					this.stepAmtY=0;
+					this.stepPct=0;
+					valueOnLine = this.msg;
+					bitArrivedAtDest();
+				}
+				
+			} 
+
+			P.draw = function(){
+
+				fill("#0000FF");
+				circle(this.currX, this.currY, 5);
+			}
+			return P;
+		}
+
+		var valueOnLine="";
+		function draw(){
+			//console.log("draw");
+
+			fill("#FFFFFF");
+			rect(0,0,width,height);
+
+			stroke("#000000");
+			strokeWeight(1);
+			if(valueOnLine!=""){
+				stroke("#990000");
+				strokeWeight(5);
+				fill("#990000");
+				fontSize("30");
+				fillText(valueOnLine, 100, 90);
+
+			}
+			fontSize("10");
+			line(myNode.x, myNode.y, friendNode.x, friendNode.y);
+			strokeWeight(1);
+
+			stroke("#000000");
+
+			myNode.draw();
+			friendNode.draw();
+
+			if(myPacket!=null){
+				
+				myPacket.step();
+			
+				if(myPacket!=null) myPacket.draw();
+			}
+
+
+
+		}
+		
+		// simulates an untimed read of the wire.
+		// should get whatever is in remote storage and leave it there.
+		function getOneBit(resultVal){
+			
+			console.debug("trying to get one bit. Result val="+resultVal);
+			var toPut = resultVal[0];
+			console.debug("to put="+toPut);
+
+			$("#recvdBits").val($("#recvdBits").val()+toPut);
+			
+			
+		}
+		function pollInputQueueAndStartAnim(){
+			pollInputQueueAndStartAnim(true);
+		}
+		
+		function pollInputQueueAndStartAnim(multiBitWithAnim){
+			
+			if(connectionVals !== null && connectionVals.room!=="" && connectionVals.user!=="" && connectionVals.friend!==""){
+				var connStr = getConnectionString();
+				
+				if(multiBitWithAnim===false){
+					remoteStorage.getItem(connStr, getOneBit);
+				}
+				else{
+					//NOTE: polling the input queue grabs whatever is in remote storage and replaces it with an empty string
+					remoteStorage.getItem(connStr, saveResultAndStartRecvAnim);
+				}
+
+			}
+			else{
+				alert("Join a room and/or select a friend to recv from");
+				//console.debug("One or more of your connectionVals aren't set. connectionVals: "+connectionVals);
+			}
+		}
+
+		 function loadVarsFromLocalStorage(){
+		 	if(localStorage["sendingBits_lastUsed"]==null){
+		 		console.debug("no last time used set. returning")
+		 		return;
+		 	}
+		 	
+		 	var lastTimeUsed = parseInt(localStorage["sendingBits_lastUsed"]);
+		 	var now = (new Date()).getTime();
+		 	var oneHourInMS = 60*60*1000;
+		 	if( (now-lastTimeUsed) > oneHourInMS){
+		 		console.debug("more than one hour has past. emptying localStorage. returning.");
+		 		localStorage.removeItem("sendingBits_lastUsed");
+		 		localStorage.removeItem("sendingBits_connectionVals");
+		 		return;
+		 	}
+		 	
+		 	
+			
+			connectionVals = JSON.parse(localStorage["sendingBits_connectionVals"]);
+
+			$("#roomname").val(connectionVals.room);
+			$("#localname").val(connectionVals.user);
+			refreshFriendList();
+
+		}
+
+		//  function updateLocalStorage(){
+		//  	refreshConnectionVals();
+		//  	localStorage["sendingBitsLocals"] = JSON.stringify(connectionVals);
+
+		// }
+
+
+
+		//List of friends in room assumes we get back a list of all "room:user"->"value" pairs
+		//  So we need to split off the userId from the room name
+		//  NOTE: deriving the roomlist this way prevents us from having to store it elsewhere
+		function handleFriendList(friendListObj){
+			if(connectionVals.roomId==""){
+
+				$("#friendListArea").html("No Room Specified");
+				return;
+			}
+			var str = "";
+			//console.log("friendListLength "+JSON.stringify(friendListObj));
+
+			var friendCount = 0;
+			str="<select onChange='refreshConnectionVals()' id='friendChoice'>";
+			for(var key in friendListObj){
+				var row = key.split(":");
+
+				if(row.length<=2){ // only use room list people, not connections made
+					str+="<option value='"+row[1]+"'";
+					//str += "<input type=radio name='friendChoice' onChange='setFriend()' value='"+row[1]+"'";
+					if(connectionVals.friend==row[1]) str+=" selected>";
+					else if(connectionVals.userId == row[1]) str+=">[you] ";
+					else str+=">"
+
+					str+=row[1]+"</option>";
+				    friendCount++;
+				}
+			}
+			str += "</select> There are "+friendCount+" people in the room.";
+			$("#friendListArea").html(str);
+			refreshConnectionVals();
+		}
+		
+
+
+		//generic callback function from my Parse.com functions
+		function parseTaskFinished(nameOfTask){
+
+			refreshFriendList();
+
+
+		}
+		
+		
+		
+
+		function joinRoom(){
+
+			//before joining new room with new name
+			refreshConnectionVals();
+			
+			if(connectionVals.user=="" || connectionVals.room ==""){
+				alert("You must enter your name and a room name to join the room.");
+				return;
+			}
+
+			// create an  entry in remote storage to indicate user in room with  "room:user"->"//connected"
+			// callback refreshes the friend list.
+			remoteStorage.updateOrCreate(connectionVals.room+":"+connectionVals.user, "//connected//", refreshFriendList);
+
+
+		}
+		
+		function refreshFriendList(){
+			
+			// Grab all entries in the db that start with
+			remoteStorage.getAllStartsWith(connectionVals.room, handleFriendList);
+		}
+		//var connectionStr;
+		
+		function putNextBit(){
+			refreshConnectionVals();
+			connectionStr = getConnectionString();
+			if($("#bitsToSend").val()=="") return;
+			
+			var binaryPayLoad = $("#bitsToSend").val()[0];
+			remoteStorage.updateOrCreate(connectionStr, binaryPayLoad);
+			sendBitAnim();
+		}
+
+		function putAllBitsAndStartAnim(){  
+
+			//put the entire outbound queue of bits in remote storage.
+			refreshConnectionVals();
+			connectionStr = getConnectionString();
+			var binaryPayLoad = $("#bitsToSend").val();
+			remoteStorage.updateOrCreate(connectionStr, binaryPayLoad);
+			//console.debug("Attempted to upload whole bitstring")
+			
+
+			// temp disable outbound queue
+			$("#bitsToSend").attr("disabled",true);
+			$("#numsToSend").attr('disabled', true);
+			$("#charsToSend").attr('disabled', true);
+			// start animation of sending bits
+			startStopwatchTimer('send');
+				//animation should have callback function at end to stop anim timer
+
+		}
+
+		function saveResultAndStartRecvAnim(remoteVal){
+			var connStr = getConnectionString();
+			remoteStorage.updateOrCreate(connStr,""); //empty out remote storage, we have it now.
+
+			//save returned val to local storage
+
+			localStorage.setItem(connStr, remoteVal);
+			//start recvAnim
+			startStopwatchTimer('recv');
+
+
+
+
+		}
+
+
+
+		function recvBitAnim(){
+			var connStr = getConnectionString();
+			var msg = localStorage.getItem(connStr);
+			if(msg != null && msg.length>0){
+				var bitRecvd = msg[0];
+				 while(bitRecvd==" "){ 
+				 	msg = msg.substr(1,msg.length);
+				 	bitRecvd = msg[0];
+
+				}
+				$("#recvdBits").val($("#recvdBits").val()+bitRecvd);
+				msg = msg.substr(1,msg.length);
+				localStorage.setItem(connStr, msg);
+			}
+			else{ //nothing else on wire, assume we're reading 0s.
+				$("#recvdBits").val($("#recvdBits").val()+"0"); //if nothing left from down
+				localStorage.removeItem(connStr);
+			} 
+
+			var bitsPerChunk = parseInt($("#bitsPerChunkSlider").val());
+			var currentInput = $("#recvdBits").val();
+
+			var intList = bitsToInts(currentInput, bitsPerChunk);
+
+			var intListStr = intList.toString();
+			
+			$("#recvdNumbers").val(intList);
+
+			var charListStr = "";
+
+			for(var i=0; i<intList.length; i++){
+
+				charListStr += String.fromCharCode(intList[i]);
+			}
+			$("#recvdChars").val(charListStr);
+
+			insertChunkOffsetSpaces("#recvdBits");
+
+		}
+
+		function intListToCharList(listOfInts){
+			var charList = "";
+			for(var i=0; i<listOfInts.length; i++){
+
+				charList += String.fromCharCode(listOfInts[i]);
+			}
+			return charList;
+
+
+		}
+
+		///RETHINK THIS!!!
+		function updateNumsToSendQueue(){ //remove dec numbers from outbound queue once all bits in chunk have been sent
+
+			//bitsToSend is space separated.  So a split on spaces should tell how many numbers are left.
+			// var bitsChunkList = $("#bitsToSend").val().split(/[^0-9]+/g); //remove anything that's not a number.
+
+			// var numList = $("#numsToSend").val().split(/[^0-9]+/g); //remove anything that's not a number.
+
+			// if(bitsChunkList.length < numList.length){ 
+			// 	console.debug("deteted length diff.  ")
+			// 	var bitsPerChunk = parseInt($("#bitsPerChunkSlider").val());
+			// 	var currentBitString = $("#bitsToSend").val();
+
+			// 	$("#numsToSend").val(bitsToInts(currentBitString, bitsPerChunk).toString());
+			// }
+
+
+		}
+
+		function updateCharsToSendQueue(){ }//when time}
+		function sendBitAnim(){
+			if(myPacket!==null){
+				//console.log("can't send next bit.  Still in transit");
+				return;
+			}
+			//setFriend();
+
+			var msg = $("#bitsToSend").val();
+			if(msg.length>0){
+				var msgToSend = msg[0];
+				while(msgToSend==" "){
+					msg = msg.substr(1,msg.length); //ignore spaces
+					msgToSend = msg[0];
+				}
+				$("#bitsToSend").val(msg.substr(1,msg.length));
+
+				updateNumsToSendQueue();
+				updateCharsToSendQueue();
+
+				log("attempting to send: "+msgToSend+" to "+connectionVals.friendId);
+				myPacket = createPacket(myNode.x, myNode.y, friendNode.x, friendNode.y, 0.2,msgToSend);
+				valueOnLine="";
+				start(); //starts animation drawing
+				
+			}
+			else{
+				$("#numsToSend").val("0");
+				$("#charsToSend").val("");
+				$("#bitsToSend").val("0");
+
+				$("#bitsToSend").attr("disabled",false);
+				$("#numsToSend").attr("disabled",false);
+				$("#charsToSend").attr("disabled",false);
+				//done sending message, simulate 0s on the wire.
+				myPacket = createPacket(myNode.x, myNode.y, friendNode.x, friendNode.y, 0.2,"0");
+				valueOnLine="";
+				start(); //starts animation drawing
+			}
+		}
+
+		//called by animation timer when msg actually arrives at destination.
+		function bitArrivedAtDest(){
+			//connectionStr = connectionVals.roomId+":"+connectionVals.friendId;
+			valueOnLine = myPacket.msg;
+			/** NO LONGER SENDING BIT ON ANIMATION TIMER
+			//connectionStr = getConnectionString();
+			//remoteStorage.updateOrCreate(connectionStr, myPacket.msg, null);
+			**/
+			pause();
+			myPacket = null;
+			draw(); //draw once more to light up the line.
+		}
+		
+		// Sets values in local/global connectionVals from input fields on the page
+		// recommneded to call this anytime before using connectionVals in case user changed something
+		// NOTE: updating local storage, but localStorage should reflect current state, not drive it
+		function refreshConnectionVals(){
+			connectionVals.room = $("#roomname").val();
+			connectionVals.user = $("#localname").val();
+			connectionVals.friend = $("#friendChoice option:selected").text();
+			friendNode.myName = connectionVals.friend; //are connectionVals and friendNode redundant?
+			friendNode.draw();
+			
+		 	localStorage["sendingBits_connectionVals"] = JSON.stringify(connectionVals);
+		 	localStorage["sendingBits_lastUsed"] = (new Date()).getTime();
+
+
+		}
+		
+		// string used as key into db where value stored between user and friend.
+		// composes room:user:friend or room:friend:user in alpha order
+		function getConnectionString(){
+			refreshConnectionVals()
+			var str = connectionVals.room+":";
+			if(connectionVals.user < connectionVals.friend){
+				str += connectionVals.user+":"+connectionVals.friend;
+			}
+			else{
+				str += connectionVals.friend+":"+connectionVals.user;
+			}
+			return str;
+		}
+
+		function setLocalUserInputQueueToEmpty(){
+			var str = connectionVals.roomId+":"+connectionVals.userId;
+			remoteStorage.updateOrCreate(str, "//empty//", null);
+
+		}
+		function temp_populateWithFriends(){  //remove after testing
+			var quickList = ["Dave","Owen","Brook","Dana"];
+			for(var i=0; i<quickList.length; i++){
+				var str = ""+connectionVals.roomId+":"+quickList[i];
+				remoteStorage.updateOrCreate(str, "//empty//", null);
+
+			}
+			refreshFriendList();
+
+		}
+
+
+		
+
+		function log(msg){
+			console.log(msg);
+		}
+
+		function convertTextToSymbols(){ //converts whatever is typed into input box into one of the selected symbols.
+
+			var inputText = $("#bitsToSend").val();
+			var finalText = "";
+			var symbols = ["0","1"];
+
+			if( getQueryString("version")=="AB"){
+				symbols = ["B","A"];
+			} 
+
+			for(var i=0; i<inputText.length; i++){
+				var nextCode = inputText.charCodeAt(i);
+				var nextChar = inputText.charAt(i);
+				// if(nextCode < 9000){
+				// 	//nextChar = symbols[nextCode%symbols.length];
+				// 	nextChar = nextCode%2;
+				// 	if(nextChar == 0){
+				// 		 nextChar = $("#symbol1 option:selected").text();
+				// 	}
+				// 	else nextChar = $("#symbol2 option:selected").text();
+				// }
+				if(nextChar==" "){
+					// do nothing
+				}
+				else if(nextCode%2==1) nextChar=symbols[1];
+				else nextChar = symbols[0];
+
+				finalText+=nextChar;
+			}
+			$("#bitsToSend").val(finalText);
+
+		//	insertChunkOffsetSpaces("#bitsToSend");
+		}
+
+
+		function insertChunkOffsetSpaces(textareaID){
+
+			var bits = $(textareaID).val().replace(/[^01]/g,"");
+			var bitsPerChunk = parseInt($("#bitsPerChunkSlider").val());
+
+			if(bitsPerChunk==null) return; //possible if not using chunk slider
+
+			var bitString = "";
+			var i;
+			for(i = 0; i<bits.length; i+=bitsPerChunk){
+				bitString+=bits.substr(i,bitsPerChunk)+" ";
+			}
+			bitString = bitString.trim();
+			$(textareaID).val(bitString);
+
+		}
+
+		function updateChunkSliderDisplay(){
+			var bitsPerChunk = $("#bitsPerChunkSlider").val();
+
+			//$("#bitsToSend").val("");
+			$("#bitsPerChunkDisplay").html(bitsPerChunk);
+			insertChunkOffsetSpaces("#bitsToSend");
+		}
+
+
+		function convertCharsToNums(){
+			
+
+			var theChars = $("#charsToSend").val();
+			
+			if(theChars==null) return; //incase charsToSend not on page
+			$("#numsToSend").val("");
+
+			var numString = "";
+			for(var i=0; i<theChars.length; i++){
+
+				var code = theChars[i].charCodeAt(0);
+				numString+=code+" ";
+
+			}
+			$("#numsToSend").val(numString);
+			convertNumsToBits();
+
+		}
+
+		function convertNumsToBits(){
+			
+			
+			var bitsPerChunk = $("#bitsPerChunkSlider").val();
+//			insertChunkOffsetSpaces("#bitsToSend");
+
+			var numList = $("#numsToSend").val();
+			if(numList==null) return;
+			$("#bitsToSend").val("");
+
+			numList = numList.split(/[^0-9]+/g); //remove anything that's not a number.
+
+			var maxValue = Math.pow(2, bitsPerChunk)-1;
+
+			var binList = new Array();
+			var exceedCapacityFlag = "";
+			var bitsToSendString = "";
+			for(var i=0; i<numList.length; i++){
+				//console.debug("List[i]="+numList[i]+", maxValue = "+maxValue);
+				if(parseInt(numList[i]) > maxValue){
+					//alert("The value: "+numList[i]+" exceeds capacity of "+bitsPerChunk+ " bits. Automatically reducing to max value");
+					//var fooVal = dec2bin(maxValue,bitsPerChunk);
+										//console.debug("exceeded maxValue replacing with: "+maxValue);
+
+					numList[i] = maxValue;
+				}
+
+				if(numList[i]!="" && numList[i]!=" "){
+					binList[i] = dec2bin(numList[i],bitsPerChunk); //probably superfluous now
+					bitsToSendString+=" "+binList[i];
+				}
+			}
+			if(exceedCapacityFlag!="") alert(exceedCapacityFlag);
+			//console.debug("binary versions: "+binList);
+			$("#bitsToSend").val(bitsToSendString);
+
+
+		}
+
+		function clearInputQueue(){
+			$("#recvdBits").val("");
+			$("#recvdNumbers").val("");
+			$("#recvdChars").val("");
+		}
+	</script>
+	<style>
+
+	</style>
+</head>
+<body>
+
+<header>
+		<img src="logo.png" hspace=20> 
+		<big> Bit Sending Widget </big>
+	</header>
+
+Join a room:<br>
+Your name: <input type=text id="localname"><br>
+Room name: <input type=text id="roomname"><br>
+<button onClick="joinRoom()">Join</button><br/>
+
+<hr>
+
+<button onClick="refreshFriendList()">Refresh Room List</button>
+<br>
+
+Select a friend: <div id='friendListArea'>No friends</div>
+<hr>
+<div id="inoutqueues">
+	Type into the text box below.
+	<div id="timerBox">
+		Timer:<input type=text value="0.0" id="stopwatchDisplay" size=6>
+		<button onClick="startStopwatchTimer('justTheTimer')" class="ABStateOnly">Start Timer</button>
+		<button onClick="stopStopwatchTimer()" class="ABStateOnly">stop</button><br> 
+
+		<span id="metronomeSliderCell"> <input type="range" min=100 max=5000 step=100 value=100 id="metronomeSlider" onChange="metronomeSliderChanged()"><span id="metronomeValDisplay"> 1 bit/2 sec</span></span>
+		<br>
+		<span id="bitsPerChunkSliderCell"><input type="range" min=1 max=8 value=8 id="bitsPerChunkSlider" onChange="updateChunkSliderDisplay(); convertNumsToBits()"><span id="bitsPerChunkDisplay">5</span> bits / <span id="chunkText">group</span></span> <br>
+	</div>
+	<div id="outboundDiv">
+
+		<table><tr>
+			<td>
+				Outbound: 
+			</td><td class="textTableCell"> Text --> <br>
+				<textarea id="charsToSend" onkeyup="convertCharsToNums()" rows=4></textarea>
+			</td><td class="numsTableCell">
+					Numbers --><br>
+		<textarea id="numsToSend" onkeyup="convertNumsToBits()" rows=4></textarea>
+			</td><td><span id="outboundBitsLabel">Bits --></span><br>
+		<textarea id="bitsToSend" rows=4 onkeyup="convertTextToSymbols()"></textarea>
+			
+			</td>
+		</tr>
+		<tr>
+			<td colspan=4>
+				<button onClick="putNextBit()" class="ABStateOnly">Put Next </button>
+			<button onClick="putAllBitsAndStartAnim()" class="sendOnTimerButtons">start send'n</button>
+			<button onClick="stopStopwatchTimer()" class="sendOnTimerButtons">stop send'n</button>
+			</td>
+		</tr>
+	</table>
+
+	
+
+	</div>
+	
+	<div id="inboundDiv">
+		<div id="getBitsStatus"></div>
+
+		<table><tr>
+			<td>
+				Inbound: 
+			</td><td class="textTableCell">
+				Chars <--<br>
+				<textarea id="recvdChars" rows=4 disabled></textarea>
+			</td><td class="numsTableCell">
+				Numbers <--<br>
+				<textarea id="recvdNumbers" rows=4 disabled></textarea>
+			</td><td>
+				Recv'd from wire <--<br>
+				<textarea id="recvdBits" rows=4 disabled></textarea>
+			</td></tr>
+			<tr>
+				<td colspan=4>
+						<button onClick="pollInputQueueAndStartAnim(false)" class="ABStateOnly">Read wire</button>
+						<button onClick="pollInputQueueAndStartAnim()" class="sendOnTimerButtons">start recv'n</button>
+						<button onClick="stopStopwatchTimer()" class="sendOnTimerButtons">stop recv'n</button>
+						<button onClick="clearInputQueue()">clear</button>
+					
+				</td>
+			</tr>
+		</table>
+
+		
+		<!-- <button onClick="pollInputQueue()">read val</button> -->
+	
+
+
+
+	</div>
+</div>
+
+<canvas id="myCanvas" width=200 height=200></canvas>
+<hr>
+<!--
+<button onClick="setBitDelay(1000)">Auto-read 1 bit/sec</button><button onClick="setBitDelay(-1)">Stop Auto Read</button> -->
+
+
+</body>
+</html>

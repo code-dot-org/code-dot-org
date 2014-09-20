@@ -1,0 +1,113 @@
+.greybox
+  #form
+    #petition_message{:style=>"font-size: 21px; line-height:28px; font-weight:500"}=I18n.t:petition_message
+    #petition_sign_message.desktop-feature{:style=>"font-size: 18px; line-height:20px; font-weight:400; margin-top:10px"}=I18n.t(:petition_sign_message).gsub("#", format_integer_with_commas(fetch_metrics['petition_signatures']).to_s)
+
+    %form#petition_form{:onsubmit=>"return petition.signPetition()"}
+
+      #email_error{style: "color:red; font-weight:bold; display: none"}
+        =I18n.t :enter_valid_email
+      #email_okay{style: "color:red; font-weight:bold;"}
+        &nbsp;
+
+      #fields
+        .col-20
+          %input#name.grey_input{:name=>"name_s", :placeholder=>I18n.t(:name), :type=>'text', :style=>'width: 167px; height: 34px; margin-bottom:10px'}
+        .col-20
+          %input#email.grey_input{:name=>"email_s", :placeholder=>I18n.t(:email), :type=>'email', :style=>'width: 167px; height: 34px; margin-bottom:10px'}
+          %div.desktop-feature{:style=>'font-size: 12px; line-height: 18px; color: rgb(220,220,220); text-align: left; margin-left: 10px; margin-top:-5px'}=I18n.t :never_spam
+        .col-20
+          %input#zip_code_or_country.grey_input{:name=>"zip_code_or_country_s", :placeholder=>I18n.t(:zipcode), :type=>'text', :style=>'width: 167px; height: 34px; margin-bottom:10px'}
+          %div.desktop-feature{:style=>'font-size: 12px; line-height: 18px; color: rgb(220,220,220); text-align: left; margin-left: 10px; margin-top:-5px'}=I18n.t :enter_country
+        .col-20
+          %span
+            =I18n.t :petition_age
+            %select.dropdown{:name=>"age_i", :style=>'width:115px; height: 34px; background-color: rgb(226,228,227); color: rgb(89,89,89); margin-bottom: 10px'}
+              %option{value:0}= '-'
+              -(1..100).each do |age|
+                %option{value:age}= age
+        .col-20
+          %span
+            =I18n.t :i_am_a
+            %select.dropdown{:name=>"role_s", :style=>'width:115px; height: 34px; background-color: rgb(226,228,227); color: rgb(89,89,89); margin-bottom: 10px'}
+              %option{:value=>"other"}=I18n.t :participant_select
+              %option{:value=>"student"}=I18n.t :participant_student
+              %option{:value=>"parent"}=I18n.t :participant_parent
+              %option{:value=>"educator"}=I18n.t :participant_educator
+              %option{:value=>"engineer"}=I18n.t :participant_engineer
+              %option{:value=>"other"}=I18n.t :participant_other
+        .col-20
+          %button#gobutton.button_enabled{:style=>'width:140px; margin-bottom:10px; font-weight:500'}=I18n.t :i_agree
+
+  #thanks{:style=>"display:none"}
+    %br
+    %span{:style=>"font-size: 18px"}=I18n.t :petition_thankyou
+    %br
+    %br
+
+
+:javascript
+
+  function Petition()
+  {
+    // placeholder text for non-HTML5 browsers
+    $('input[type=text], textarea').placeholder();
+    $('input[type=email], textarea').placeholder();
+  }
+
+  Petition.prototype.showEmailError = function(error)
+  {
+    $("input#email").toggleClass("input_error", error);
+    $("#email_error").toggle(error);
+    $("#email_okay").toggle(!error);
+  }
+
+  Petition.prototype.processResponse = function(data)
+  {
+    var display = $("#mobile-header").css("display");
+    var mobileDisplay = display !== undefined && display != "none";
+
+    if (mobileDisplay)
+    {
+      var form = $("#form");
+      var thanks = $("#thanks");
+
+      form.hide();
+      thanks.show();
+    }
+    else if (data.state_code_s && data.state_code_s != "")
+    {
+      window.location.href = "/promote/" + data.state_code_s;
+    }
+    else
+    {
+      window.location.href = "/promote/thanks";
+    }
+  }
+
+  Petition.prototype.processError = function(data)
+  {
+    $("#gobutton").removeAttr('disabled');
+    $("#gobutton").addClass("button_enabled").removeClass("button_disabled");
+
+    var badEmail = (data.status == 400 && data.responseJSON.email_s !== undefined);
+
+    Petition.prototype.showEmailError(badEmail);
+  }
+
+  Petition.prototype.signPetition = function()
+  {
+    $("#gobutton").attr('disabled','disabled');
+    $("#gobutton").removeClass("button_enabled").addClass("button_disabled");
+
+    this.showEmailError(false);
+
+    $.ajax({
+      url: "/forms/Petition",
+      type: "post",
+      dataType: "json",
+      data: $('#petition_form').serialize()
+    }).done(this.processResponse).fail(this.processError);
+
+    return false;
+  }

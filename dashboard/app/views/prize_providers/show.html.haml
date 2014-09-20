@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @prize_provider.name
+%p
+  %b Url:
+  = @prize_provider.url
+%p
+  %b Description token:
+  = @prize_provider.description_token
+%p
+  %b Image name:
+  = @prize_provider.image_name
+
+= link_to 'Edit', edit_prize_provider_path(@prize_provider)
+\|
+= link_to 'Back', prize_providers_path

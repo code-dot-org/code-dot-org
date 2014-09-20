@@ -1,0 +1,84 @@
+.field
+  = f.label :start_direction
+  = f.select :start_direction, options_for_select(@level.class.start_directions, @level.start_direction)
+.field
+  = f.label :step_mode
+  = f.select :step_mode, options_for_select(@level.class.step_modes, @level.step_mode)
+- if @level.is_a? Maze
+  = hidden_field_tag :size, 8
+  = f.hidden_field :maze_data
+  .field
+    = f.label 'level'
+    :css
+      .border { background-color: dimgray !important}
+      .path { background-color: darkgreen !important}
+      .start { background-color: firebrick !important}
+      .end {background-color: lime !important}
+      .obstacle {background-color: gold !important}
+      .dirt {background-color: #d1d567 !important}
+      tr { height: 40px; }
+      td.start {
+        background-image: url('/blockly/media/skins/birds/small_static_avatar.png');
+        background-size: 100% 100%;
+      }
+      td.end {
+        background-image: url('/blockly/media/skins/birds/goal.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+      }
+      td.obstacle {
+        background-image: url('/blockly/media/skins/birds/obstacle.png');
+        background-size: 100% 100%;
+      }
+      td.dirt {
+        background-image: url('/blockly/media/skins/farmer/dirt.png');
+        background-size: 1100px 100%;
+        text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+      }
+      .htInvalid { background-color: orangered !important}
+      .htNumeric { text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF }
+    #mazeTable
+    .label
+      WHAT THE NUMBERS MEAN:
+      %ul(style="list-style-type:none;margin:0;")
+        %li(class='border') 0 = border/wall
+        %li(class='path') 1 = path
+        %li(class='start') 2 = start
+        %li(class='end') 3 = end (for Maze levels only)
+        %li(class='obstacle') 4 = obstacle
+        FARMER:
+        %ul(style="list-style-type:none;margin:0;")
+          %li -x hole
+          %li +x pile
+          %li -x &lt;= -11 = hole of unknown size
+        BEE:
+        %ul(style="list-style-type:none;margin:0;")
+          %li +x = nectar. +99 = unlimited
+          %li -x = honey. -99 = unlimited
+  :javascript
+    var data = eval(#{@level.maze_data.try(:to_json) || Array.new(8){Array.new(8){0}}.to_json})
+    function mazeRenderer(instance, td, row, col, prop, value, cellProperties) {
+      var dataValues = ['border','path','start','end','obstacle'];
+      if(value[0] == '+' || value[0] == '-') {
+          Handsontable.renderers.TextRenderer.apply(this, arguments);
+          td.className += ' dirt';
+          // index into the dirt png spritesheet
+          var dirtValue = parseInt(value);
+          var dirtIndex = 10 + dirtValue + (dirtValue < 0 ? 1 : 0);
+          $(td).css('background-position',(-dirtIndex * 50));
+      }
+      else if (parseInt(value) < 5 && parseInt(value) >= 0) {
+          Handsontable.renderers.NumericRenderer.apply(this, arguments);
+          td.className += ' ' + dataValues[parseInt(value)];
+      }
+    }
+    $("#mazeTable").handsontable({
+      data: data, startRows: 8, startCols: 8, maxRows: 8, maxCols: 8, stretchH: 'none',
+      validator: function(value, callback) {
+        if(value[0] == '+' || value[0] == '-' && parseInt(value.substring(1)) % 1 == 0) callback(true);
+        callback(parseInt(value) % 1 == 0);
+      }, afterChange: function(changes, source) {
+        $('#level_maze_data').attr('value', JSON.stringify(data))
+      }, cells: function(row, col, prop) {
+        return {renderer: mazeRenderer};
+    }});

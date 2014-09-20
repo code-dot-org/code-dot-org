@@ -1,0 +1,59 @@
+- @page_title = t('redeem_prizes.title', name: current_user.name)
+
+%h1= @page_title
+
+%br/
+- if current_user.students.length > 0
+  %h4 #{t('home.classroom')}:
+
+  %p
+    = link_to t('home.teacher_student_count', count: current_user.students.length), manage_followers_path
+    = t('home.teacher_averages', trophy_average: ("%.1f" % current_user.average_student_trophies), trophy_max: Trophy::TROPHY_MAX)
+    %br/
+    %br/
+
+  - if current_user.teacher_prize.nil? && current_user.teacher_bonus_prize.nil?
+    %h4
+      %b DonorsChoose.org rewards are no longer available as of June 15, 2014. Please refer to this
+      %b= link_to 'FAQ', 'https://support.code.org/hc/en-us/articles/202446516'
+      %b for more information.
+
+      %br/
+      %br/
+  - else
+    %h4
+      %b
+        While DonorsChoose.org rewards are no longer available as of June 15, 2014, you can still use the codes that you have previously claimed (listed below). Be sure to use your codes right away, as they will expire soon! Please refer to this
+      %b= link_to 'FAQ', 'https://support.code.org/hc/en-us/articles/202446516'
+      %b for more information.
+
+      %br/
+      %br/
+
+  - if current_user.teacher_prize
+    %h4= t('redeem_prizes.msg.teacher.earned', num_trophies: Trophy::TROPHY_MAX)
+    = render partial: 'shared/redeemed_prize', locals: { prize: current_user.teacher_prize }
+    %br/
+
+  - if current_user.teacher_bonus_prize
+    %h4= t('redeem_prizes.msg.teacher.bonus.earned', num_trophies: Trophy::TROPHY_MAX)
+    = render partial: 'shared/redeemed_prize', locals: { prize: current_user.teacher_bonus_prize }
+    %br/
+- else
+  %h4= t('redeem_prizes.no_prizes_available')
+
+%br/
+:javascript
+  $(document).ready(function() {
+    $('a[data-confirm]').click(function(ev) {
+      var href = $(this).attr('href');
+
+      if (!$('#dataConfirmModal').length) {
+        $('body').append('<div id="dataConfirmModal" tabindex="-1" class="modal" role="dialog" aria-labelledby="dataConfirmLabel" aria-hidden="true"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h3 id="dataConfirmLabel">#{t('redeem_prizes.confirm.title')}</h3></div><div class="modal-body"></div><div class="modal-footer"><button class="btn" data-dismiss="modal" aria-hidden="true">#{t('redeem_prizes.confirm.no')}</button><a class="btn btn-primary" id="dataConfirmOK">#{t('redeem_prizes.confirm.yes')}</a></div></div>');
+      }
+      $('#dataConfirmModal').find('.modal-body').html($(this).attr('data-confirm'));
+      $('#dataConfirmOK').attr('href', href);
+      $('#dataConfirmModal').modal({show:true});
+      return false;
+    });
+  });

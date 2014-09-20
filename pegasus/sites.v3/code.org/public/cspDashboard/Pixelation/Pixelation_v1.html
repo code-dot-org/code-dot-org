@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="pixelationStyles.css"/>
+<script type="text/javascript" src="pixelationScript.js"></script>
+</head>
+<body onLoad="drawGraph()">
+
+	<header>
+		<h1>Introduction to Computer Science</h1>
+		<h1>B&W Pixelation</h1>
+	</header>
+	<br/>
+	<p><b>Directions:</b></p>
+	<p>Copy/Paste or type a string of 0s and 1s into the text area.</p>
+	<p>Set the width and height by typing in the boxes or dragging the sliders.</p>
+	<div id="input">
+		width:  <input type=text id="width" value="11" onChange="drawGraph()" onkeyup="setSliders()" size=2/><input type=range class="slider" id="widthRange" min=0 max=63 value=11 onChange="changeVal('width','widthRange')"><br/>
+		height: <input type=text id="height" value="13" onChange="drawGraph()" onkeyup="setSliders()" size=2/><input type=range class="slider" id="heightRange" min=0 max=63 value=13 onChange="changeVal('height')"><br/>
+		Binary Code:<br/>
+		<input type=hidden id="bitsPerPixel" value="1">
+		<input type=hidden name="binHex" id="binHexRadio" checked=true>
+		<input type=hidden name="binHex" id="binHexRadio" checked=false>
+
+
+		<textArea id="binaryImage" onkeyup="drawGraph()"></textarea>
+		
+		<div id="err">length:</div>
+		<div id="example">EXAMPLE: (Flower)
+width: 18 
+height: 22
+		
+000000000000000000000000001100000000000000010010000000000000010010000000000001101101100000000010010010010000000010010010010000000001101101100000000000010010000000000000010010000000000000001100000000000000001000000000000000001000000000000000001000000000000000001000000000000000001000000000000000111111000000000000011110000000000000011110000000000000011110000000000000000000000000
+		</div>
+	</div>
+	<div id="canvasDiv">
+		<canvas id="canvas" width=500 height=500></canvas>
+	</div>
+
+	<footer id="footer">
+		Introduction to Computer Science &middot; University of Chicago Laboratory Schools &middot; &copy; Baker Franke 2012 
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+Standalone karel project

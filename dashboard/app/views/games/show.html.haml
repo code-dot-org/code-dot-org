@@ -1,0 +1,12 @@
+\#{link_to 'All games', games_path} >
+
+%p
+  %strong Name:
+  = @game.name
+  - if can? :update, @game
+    = link_to '(edit)', edit_game_path(@game)
+  %br/
+
+= render partial: 'levels/list'
+
+

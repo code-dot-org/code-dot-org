@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+require 'cdo/rake_utils'
+require 'cdo/hip_chat'
+require 'cdo/only_one'
+require 'mail'
+
+def main()
+  script = File.expand_path('../build', __FILE__)
+
+  log = `\"#{script}\" #{ARGV.join(' ')} 2>&1`.strip
+  status = $?.exitstatus
+  return status if status == 0 && log.empty?
+
+  commit_log = IO.read(deploy_dir('rebuild')).strip if File.file?(deploy_dir('rebuild'))
+
+  projects = ARGV.join(' ')
+  if status == 0
+    HipChat.log "<b>#{projects}</b> built.", color:'green'
+
+    HipChat.developers "<b>#{projects}</b> built.", color:'green'
+    HipChat.developers "/quote #{commit_log}", color:'gray', message_format:'text'
+  else
+    HipChat.log "<b>#{projects}</b>  failed to build!", color:'red'
+    HipChat.log "/quote #{log}", color:'gray', message_format:'text'
+
+    HipChat.developers "<b>#{projects}</b>  failed to build!", color:'red', notify:1
+    HipChat.developers "/quote #{commit_log}", color:'gray', message_format:'text'
+  end
+
+  puts log
+  status
+end
+
+main() if only_one_running?(__FILE__)

@@ -1,0 +1,1 @@
+There are federal policies that make it more difficult to teach computer science in your state. Congress is trying to change that and has introduced bipartisan legislation that would support more opportunities to learn computer science. Tell your Members of Congress that you support the Computer Science Education Act and ask them to become a cosponsor. 

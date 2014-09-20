@@ -1,0 +1,23 @@
+- if current_user
+  #welcome= t('welcome_back', name: current_user.name)
+
+  #student{ style: "width: 100%; float: left; padding-left:20px; box-sizing: border-box"}
+    - if current_user.primary_script
+      #student_progress #{t('home.student_progress')}:
+      - if current_user.primary_script.trophies?
+        = t('home.student_stats', trophy_count: current_user.trophy_count, trophy_max: Trophy::TROPHY_MAX)
+      = link_to t('home.see_details'), root_url
+      %br/
+      = render partial: 'shared/student_continue', locals: { include_finished: true, script: current_user.primary_script }
+    
+  - if current_user.teacher?
+    #clearboth{ style: 'clear:both;' }
+    #classroom #{t('home.classroom')}:
+    #teacher{ style: 'width: 100%; float: left; padding-left:20px'}
+      = t('home.teacher_student_count', count: current_user.students.length)
+      &nbsp;
+      %a{href: teacher_dashboard_url, style: "text-decoration:none"}
+        %button.btn.btn-primary.button-continue= t('teacher.students.dashboard')
+      %br/
+
+  #clearboth{ style: 'clear:both;' }

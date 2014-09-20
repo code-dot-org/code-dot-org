@@ -1,0 +1,9 @@
+name 'K-1 multi 4' 
+title 'Driver and Helper'
+description '/script_assets/multis/driver_helper.jpg'
+banner 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
+height '170'
+
+question 'Which boy is the <large>helper</large>?'
+right '/script_assets/multis/helper.jpg'
+wrong '/script_assets/multis/driver.jpg'

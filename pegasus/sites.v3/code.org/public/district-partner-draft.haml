@@ -1,0 +1,379 @@
+---
+title: Request District Partnership
+nav: blank
+rightbar: blank
+---
+%link{href: "css/bootstrap-datepicker.css", rel: "stylesheet"}/
+%link{href: "css/district-partner.css", rel: "stylesheet"}/
+
+%h1 Request District Partnership
+%form#district-partner-form{role: "form", onsubmit: "return districtPartnerFormSubmit()"}
+  %p.form-intro-text If you are a public school district in the United States and are interested in partnering with Code.org to bring computer science to your school please fill out and submit the following form. Fields marked with an * are required.
+  %p.form-intro-text
+    If you're not an employee of a school district, but you want to encourage your school district to support computer science, please ask your local principal or superintendent to
+    %a{href: "/files/DistrictPartnershipBrochure.pdf"} read our materials.
+    See where computer science counts towards high school graduation and fill out this form.
+
+  %p.form-intro-text
+    If you're outside the US, we're sorry, our district partnership model doesn't extend outside the US, but you can try using our
+    %a{href: "http://code.org/learn"} online tutorials.
+
+  %b Important: Only complete this form if you meet our criteria
+  
+  %p.form-intro-text
+    Our expansion for the 2015-2016 school year is focused on districts within 50 miles of regions where we have
+    %a{href: "http://code.org/educate/partner-districts"} existing partnerships
+    and new regions that can support at least 30 teachers in our high school program. We will evaluate joint applications across multiple districts that will agree to our terms. If you are applying jointly please note that below (and have each partner district fill out this form). 
+    %a{href: "http://batchgeo.com/map/7fb0d312c4dbb83afff851981935957a"} Here is a map
+    showing which districts have expressed interest in our program.
+  %p.form-intro-text
+    We’re thrilled that you’re interested in partnering your district with Code.org. We are currently in our pilot year for the 2014-2015 school year and evaluating expansion for the 2015-2016 school year. By filling out this form you will be added to our list of districts to contact for
+    %b
+      %i potential
+    partnerships in the 2015-2016 school year. Completion does not mean guaranteed acceptance into our program as we have limited capacity. 
+
+  #error-message{style: 'display: none'}
+  .main-section
+    %h2 School district information
+    .form-group
+      %label.control-label{for: "district-name"} District name
+      %div
+        %input#district-name.form-control{name: "district_name", placeholder: "District name", type: "text", required: ""}/
+    .form-group
+      %label.control-label{for: "district-partner-districts"} Partner districts joining application
+      %div
+        %input#district-partner-districts.form-control{name: "district_partner_districts", placeholder: "Other districts that would partner to fill PD workshops", type: "text"}/
+    .subsection
+      %h3 District Commitments
+      %p<
+        %strong To help Code.org bring computer science to our district, our district is willing to:
+        %em Please honestly check all that apply. We understand that not every district can meet all of the below.
+
+      .form-group
+        .checkbox
+          %label
+            %input#commitment-program-director{name: "commitment_program_director", type: "checkbox", value: "1"}/
+            Create a district level Computer Science Program Director or task someone in the district so that at least half of their duties are focused on Computer Science.
+      .form-group
+        .checkbox
+          %label
+            %input#help-identify-qualified-teacher{name: "help_identify_qualified_teacher", type: "checkbox", value: "1"}/
+            Identify at least one qualified teacher from each participating high school to participate in professional development workshops and teach a CS course
+
+      .form-group
+        .checkbox
+          %label
+            %input#commitment-district-hoc{name: "commitment_district_hoc", type: "checkbox", value: "1"}/
+            Organize a district-wide Hour of Code for CS Ed Week 2014
+
+      .form-group
+        .checkbox
+          %label
+            %input#commitment-technology{name: "commitment_technology", type: "checkbox", value: "1"}/
+            Provide one class-set of computers (laptop carts or computer lab) in each school that adopts a computer science class (for at least one section per day) and meet all <a href="https://docs.google.com/document/d/1qFN6Ii35Oupnl8wKwsUzsCm5icr7GObRL0Lk8pPtF_s/pub" target="_blank">tech requirements</a>
+      .form-group
+        .checkbox
+          %label
+            %input#commitment-term-sheet{name: "commitment_term_sheet", type: "checkbox", value: "1"}/
+            Understand the more detailed <a href="https://docs.google.com/document/d/19gQVqJD_QymJUnqmfUYgyq1s7xtf0piC6KIiMBhNmgI/pub" target="_blank">term-sheet outlining the partnership details </a>
+
+
+    .subsection
+      %h3 Number of schools in district
+      .form-group
+        %label.control-label{for: "district-total-schools"} Total number of schools
+        %div
+          %input#district-total-schools.form-control{name: "district_total_schools", placeholder: "Total number of schools", required: "", type: "text"}/
+      .form-group
+        %label.control-label{for: "district-high-schools"} Number of high schools
+        %div
+          %input#district-high-schools.form-control{name: "district_high_schools", placeholder: "Number of high schools", required: "", type: "text"}/
+      .form-group
+        %label.control-label{for: "district-middle-schools"} Number of middle schools
+        %div
+          %input#district-middle-schools.form-control{name: "district_middle_schools", placeholder: "Number of middle schools", required: "", type: "text"}/
+      .form-group
+        %label.control-label{for: "district-elementary-schools"} Number of elementary schools
+        %div
+          %input#district-elementary-schools.form-control{name: "district_elementary_schools", placeholder: "Number of elementary schools", required: "", type: "text"}/
+    .subsection
+      %h3 2015-16 school year
+      .form-group
+        %label.control-label{for: "district-school-year-start-date"} Start date
+        #datepicker-school-year-start-date.input-group.date{"data-date" => "09/01/2015", "data-date-format" => "mm/dd/yyyy"}
+          %input#district-school-year-start-date.form-control{name: "district_school_year_start_date", placeholder: "mm/dd/yyyy", required: "", type: "text"}/
+          %span.input-group-addon
+            %i.glyphicon.glyphicon-calendar
+      .form-group
+        %label.control-label{for: "district-school-year-end-date"} End date
+        #datepicker-school-year-end-date.input-group.date{"data-date" => "06/01/2016", "data-date-format" => "mm/dd/yyyy"}
+          %input#district-school-year-end-date.form-control{name: "district_school_year_end_date", placeholder: "mm/dd/yyyy", required: "", type: "text"}/
+          %span.input-group-addon
+            %i.glyphicon.glyphicon-calendar
+      .form-group
+        .checkbox
+          %label
+            %input#district-school-year-estimated{name: "district_school_year_estimated", type: "checkbox", value: "1"}/
+            The 2015-16 district calendar has not been announced and the dates above are estimates.
+    .subsection
+      %h3 Main district office
+      .form-group
+        %label.control-label{for: "office-street-address"} Street address
+        %div
+          %input#office-street-address.form-control{name: "office_street_address", placeholder: "Street address", required: "", type: "text"}/
+      .form-group
+        %label.control-label{for: "office-street-address_2"} Street address 2
+        %div
+          %input#office-street-address-2.form-control{name: "office_street_address_2", placeholder: "Street address 2", type: "text"}/
+      .form-group
+        %label.control-label{for: "office-city"} City
+        %div
+          %input#office-city.form-control{name: "office_city", placeholder: "City", required: "", type: "text"}/
+      .form-group
+        %label.control-label{for: "office-state"} State
+        %div
+          %select#office-state.form-control{name: "office_state", required: ""}
+            %option{selected: "selected", value: ""} -- Select --
+            -DB[:geography_us_states].order(:name_s).each do |i|
+              %option{value: i[:code_s]}= i[:name_s]
+      .form-group
+        %label.control-label{for: "office-postal-code"} ZIP code
+        %div
+          %input#office-postal-code.form-control{name: "office_postal_code", placeholder: "ZIP code", required: "", type: "text"}/
+      .form-group
+        %label.control-label{for: "office-phone"} Phone number
+        %div
+          %input#office-phone.form-control{name: "office_phone", placeholder: "Phone number", required: "", type: "tel"}/
+      .form-group
+        %label.control-label{for: "office-fax"} Fax number
+        %div
+          %input#office-fax.form-control{name: "office_fax", placeholder: "Fax number", required: "", type: "tel"}/
+      .form-group
+        %label.control-label{for: "office-website"} Website
+        %div
+          %input#office-website.form-control{name: "office_website", placeholder: "Website", required: "", type: "url"}/
+  .main-section
+    %h2 Contact information
+    -DistrictPartnerInfo.roles_and_config.each_pair do |role,heading|
+      .subsection{id: "contact-info-" + role}
+        %h3= heading
+
+        -if role == 'coordinator'
+          %p Upon registration, each district must select a point of contact who will serve as the liaison between the district and  Code.org program during partnership discussions. This person should be able to connect with the appropriate groups within the district (curriculum, professional development, legal teams) to guide the partnership process. This person could also be the Computer Science Program Director as required under any Code.org agreement.
+
+          .form-group
+            .checkbox
+              %label
+                %input#coordinator-same-as-user{name: "coordinator_same_as_user", type: "checkbox", value: "1"}/
+                Same contact information as section above
+        .form-group
+          %label.control-label{for: "#{role}-first-name"} First Name
+          %div
+            %input.form-control{id: "#{role}-first-name", name: "#{role}_first_name", placeholder: "First name", required: "", type: "text"}/
+        .form-group
+          %label.control-label{for: "#{role}-last-name"} Last Name
+          %div
+            %input.form-control{id: "#{role}-last-name", name: "#{role}_last_name", placeholder: "Last name", required: "", type: "text"}/
+        .form-group
+          %label.control-label{for: "#{role}-position"} Position
+          %div
+            %input.form-control{id: "#{role}-position", name: "#{role}_position", placeholder: "Position", required: "", type: "text"}/
+        .form-group
+          %label.control-label{for: "#{role}-street-address"} Street address
+          %div
+            %input.form-control{id: "#{role}-street-address", name: "#{role}_street_address", placeholder: "Street address", required: "", type: "text"}/
+        .form-group
+          %label.control-label{for: "#{role}-street-address-2"} Street address 2
+          %div
+            %input.form-control{id: "#{role}-street-address-2", name: "#{role}_street_address_2", placeholder: "Street address 2", type: "text"}/
+        .form-group
+          %label.control-label{for: "#{role}-city"} City
+          %div
+            %input.form-control{id: "#{role}-city", name: "#{role}_city", placeholder: "City", required: "", type: "text"}/
+        .form-group
+          %label.control-label{for: "#{role}-state"} State
+          %div
+            %select.form-control{id: "#{role}-state", name: "#{role}_state", required: ""}
+              %option{selected: "selected", value: ""} -- Select --
+              -DB[:geography_us_states].order(:name_s).each do |i|
+                %option{value: i[:code_s]}= i[:name_s]
+        .form-group
+          %label.control-label{for: "#{role}-postal-code"} ZIP code
+          %div
+            %input.form-control{id: "#{role}-postal-code", name: "#{role}_postal_code", placeholder: "ZIP code", required: "", type: "text"}/
+        .form-group
+          %label.control-label{for: "#{role}-phone"} Phone number
+          %div
+            %input.form-control{id: "#{role}-phone", name: "#{role}_phone", placeholder: "Phone number", required: "", type: "tel"}/
+        .form-group
+          %label.control-label{for: "#{role}-fax"} Fax number
+          %div
+            %input.form-control{id: "#{role}-fax", name: "#{role}_fax", placeholder: "Fax number", required: "", type: "tel"}/
+        .form-group
+          %label.control-label{for: "#{role}-email"} Email address
+          %div
+            %input.form-control{id: "#{role}-email", name: "#{role}_email", placeholder: "Email address", required: "", type: "email"}/
+  .main-section.programs-section
+    %h2 Code.org Programs
+    %p<
+      %strong We are interested in the following Code.org programs:
+    .form-group
+      .checkbox
+        %label
+          %input#program-elementary-school{name: "program_elementary_school", type: "checkbox", value: "1"}/
+          Elementary school
+    .form-group
+      .checkbox
+        %label
+          %input#program-middle-school{name: "program_middle_school", type: "checkbox", value: "1"}/
+          Middle school
+    .form-group
+      .checkbox
+        %label
+          %input#program-high-school{name: "program_high_school", type: "checkbox", value: "1", checked: ""}/
+          High school (High school participation is required for partnership)
+    .form-group
+      #help-identify-high-schools-checkbox.checkbox
+        %input#help-identify-high-schools{name: "help_identify_high_schools", type: "checkbox", value: "1"}/
+        %label
+          As a district we will identify at least
+          %input#help-identify-high-schools-number.form-control.input-sm.input-inline{name: "help_identify_high_schools_number", type: "text", value: 0}/
+          high schools for teaching computer science classes
+    .form-group
+      #help-identify-middle-schools-checkbox.checkbox{style: 'display: none;'}
+        %input#help-identify-middle-schools{name: "help_identify_middle_schools", type: "checkbox", value: "1"}/
+        %label
+          As a district we will identify at least
+          %input#help-identify-middle-schools-number.form-control.input-sm.input-inline{name: "help_identify_middle_schools_number", type: "text", value: 0}/
+          middle schools for teaching computer science classes
+    .form-group
+      #help-identify-elementary-schools-checkbox.checkbox{style: 'display: none;'}
+        %input#help-identify-elementary-schools{name: "help_identify_elementary_schools", type: "checkbox", value: "1"}/
+        %label
+          As a district we will identify at least
+          %input#help-identify-elementary-schools-number.form-control.input-sm.input-inline{name: "help_identify_elementary_schools_number", type: "text", value: 0}/
+          elementary schools for teaching computer science classes
+  .form-group
+    %button#btn-submit.btn.btn-default{type: "submit"} Submit
+
+#thanks{:style=>"display: none; margin-bottom: 360px;"}
+  %p Thank you for your interest in partnering with Code.org! We will be reaching out to qualified candidates about partnerships for the 2015-2016 school year during the spring and summer of 2014.
+
+%script{src: "js/bootstrap-datepicker.js"}
+:javascript
+  $(document).ready(function() {
+    $(".input-group.date").datepicker({
+      autoclose: true,
+      todayHighlight: true,
+      pickTime: false
+    });
+
+    $('#datepicker-school-year-start-date').datepicker('setStartDate', '01-01-2015');
+    $('#datepicker-school-year-start-date').datepicker('setEndDate', '12-31-2015');
+
+    $('#datepicker-school-year-end-date').datepicker('setStartDate', '01-01-2016');
+    $('#datepicker-school-year-end-date').datepicker('setEndDate', '12-31-2016');
+
+    $('#program-middle-school').click(function() {
+        if( $(this).is(':checked')) {
+            $("#help-identify-middle-schools-checkbox").show();
+        } else {
+            $("#help-identify-middle-schools-checkbox").hide();
+        }
+    });
+
+    $('#program-elementary-school').click(function() {
+        if( $(this).is(':checked')) {
+            $("#help-identify-elementary-schools-checkbox").show();
+        } else {
+            $("#help-identify-elementary-schools-checkbox").hide();
+        }
+    });
+
+    // Mark all required fields.
+    $('.form-control[required]').parents('.form-group').find('label').append('<span class="required-field-marker">*</span>');
+  });
+
+
+:javascript
+  $(document).ready(function() {
+    $('#coordinator-same-as-user').change(function() {
+      if ($(this).is(':checked')) {
+        updateCoordinator('copy');
+      }
+      else {
+        updateCoordinator('clear');
+      }
+    });
+
+    $('#contact-info-user').find(":input").change(function() {
+      if ($('#coordinator-same-as-user').is(':checked')) {
+        updateCoordinator('copy');
+      }
+    });
+  });
+
+  function updateCoordinator(action) {
+    fields = [
+      'first-name',
+      'last-name',
+      'position',
+      'street-address',
+      'street-address-2',
+      'city',
+      'state',
+      'postal-code',
+      'phone',
+      'fax',
+      'email'
+    ]
+    $.each(fields, function(key, field) {
+      if (action == 'copy') {
+        value = $('#user-' + field).val();
+      }
+      else {
+        value = '';
+      }
+      $('#coordinator-' + field).val(value);
+    });
+  }
+
+  function processResponse(data)
+  {
+    $('#district-partner-form').hide();
+    $('#thanks').show();
+  }
+
+  function processError(data)
+  {
+    $('.has-error').removeClass('has-error');
+
+    errors = Object.keys(data.responseJSON);
+    errors_count = errors.length;
+
+    for (i = 0; i < errors_count; ++i) {
+      error_id = '#' + errors[i].replace(/_/g, '-');
+      $(error_id).parents('.form-group').addClass('has-error');
+    }
+
+    $('#error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
+
+    $('body').scrollTop(0);
+    $("#btn-submit").removeAttr('disabled');
+    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
+  }
+
+  function districtPartnerFormSubmit()
+  {
+    $("#btn-submit").attr('disabled','disabled');
+    $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
+
+    $.ajax({
+      url: "/district_partner_infos",
+      type: "post",
+      dataType: "json",
+      data: $('#district-partner-form').serialize()
+    }).done(processResponse).fail(processError);
+
+    return false;
+  }

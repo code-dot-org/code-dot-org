@@ -1,0 +1,20 @@
+.field
+  = f.label :ani_gif_url, "Instructions ani-gif"
+  %p Add new images in the Dropbox #{instruction_gif_relative_path} folder. Have an engineer push them from staging to levelbuilder, then refresh to see new images.
+  = f.select :ani_gif_url, options_for_select(instruction_gif_choices, @level.ani_gif_url), {include_blank: true}, {class: 'ani-gif-dropdown'}
+  %img.ani-gif-preview{style: "display: block"}
+
+:javascript
+  $(document).ready(function() {
+    function updateAniGifPreview() {
+      var selectionValue = $('.ani-gif-dropdown')[0].value;
+      if (selectionValue) {
+        $('.ani-gif-preview').show();
+        $('.ani-gif-preview').attr('src', selectionValue);
+      } else {
+        $('.ani-gif-preview').hide();
+      }
+    }
+    $('.ani-gif-dropdown').change(updateAniGifPreview);
+    updateAniGifPreview();
+  });

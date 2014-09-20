@@ -1,0 +1,103 @@
+---
+title: Congratulations
+theme: responsive
+social:
+  "twitter:card": player
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://code.org/"
+  "twitter:title": "The Hour of Code is here"
+  "twitter:description": "Join millions of students to learn about the Hour of Code, the largest learning event in world history."
+  "twitter:image:src": "http://csedweek.org/images/hoc-video-thumbnail.jpg"
+  "twitter:player": "https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0"
+  "twitter:player:width": 1920
+  "twitter:player:height": 1080
+---
+-cert_id = params[:i]
+-facebook = {:u=>"http://#{request.host_with_port}/certificates/#{cert_id}"}
+-twitter = {:url=>"http://#{request.host_with_port}/certificates/#{cert_id}", :related=>'codeorg', :hashtags=>'', :text=>I18n.t(:just_did_hoc)}
+-twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc).include? '#HourOfCode'
+
+#congrats.mobile-pad{:style=>'margin: 0 auto;'}
+
+  %h1=I18n.t :congratulations_on_completing_hoc
+
+  #toprow
+    #hoc-certificate-small.col-50{:style=>"padding:20px; padding-top: 0; box-sizing: border-box"}
+      %a{:href=>"/printcertificate", :target=>'_blank'}
+        %img{:src=>"/images/fit-540/hour_of_code_certificate.jpg", :width=>"100%"}
+
+    #certificate.col-50
+      = view :congrats_certificate
+      = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
+
+  %div{:style=>'clear: both; height:30px'}
+
+  = view :congrats_continue
+
+  %div{:style=>'clear: both; height:30px'}
+
+  = view :congrats_leaderboards
+
+  %br
+  = view :petition
+
+= view 'popup_window.js'
+
+:javascript
+
+  var cookieValue;
+
+  function getURLParameter(name) {
+    return decodeURI(
+      (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+    );
+  }
+
+  function processResponse(data)
+  {
+    //console.log("Processing response: ", data);
+
+    if (!data.started)
+    {
+      //console.log("Response indicates not started.")
+      //window.location = "/learn";
+    }
+
+    certificate_processResponse(data);
+    voting_processResponse(data);
+  }
+
+  $(document).ready(function()
+  {
+    $('#share-fb a').bind('click', function() {
+      $("#share-fb").hide(); $("#like-fb").css('display', 'inline-block');
+    });
+    $('#share-twitter a').bind('click', function() {
+      $("#share-twitter").hide(); $("#follow-twitter").css('display', 'inline-block');
+    });
+
+    // placeholder text for non-HTML5 browsers
+    $('input[type=text], textarea').placeholder();
+    $('input[type=email], textarea').placeholder();
+
+    cookieValue = getURLParameter("i");
+
+    if (cookieValue != "null")
+    {
+      $.ajax({
+        url: "/api/hour/status/" + cookieValue,
+        dataType: "json"
+      }).done(processResponse);
+    }
+    else
+    {
+      certificate_disable();
+      voting_disable();
+    }
+  });
+
+  var petition;
+  $(document).ready(function()
+  {
+    petition = new Petition();
+  });

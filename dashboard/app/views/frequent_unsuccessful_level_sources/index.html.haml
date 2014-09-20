@@ -1,0 +1,40 @@
+%div
+
+  - if current_user && current_user.admin?
+    %h1 Administrator options
+    %h3 Add hint access by entering the user's email address below.
+    = form_for(current_user, :url => add_hint_access_path, :html => { :method => :get }) do |f|
+      .field
+        = text_field_tag :user_email, nil, class: 'input-xxlarge', placeholder: 'Email for user', :required => true
+        = hidden_field_tag :redirect, frequent_unsuccessful_level_sources_path
+      .actions
+        = f.submit 'Add Hint Access'
+    %h3= link_to 'Review hints by popularity >>', show_pop_hints_path(0)
+    %h3= link_to 'Review hints by user >>', level_source_hints_path
+
+    %h1 User options
+
+  %h3= link_to 'Start adding hints (where needed) >>', add_pop_hint_path(0)
+  %br
+  %h3 Or, choose a particular puzzle and add hints just for that puzzle:
+  - script = Script.twenty_hour_script
+  - script_levels = script.script_levels
+
+  %div{style:"display:inline-block;position:relative;overflow:hidden;float:left;"}
+    %h4 #{t('nav.popup.puzzle_map')}
+    - script_levels.group_by{ |sl| sl.level.game }.each_pair do |game, sl_group|
+      - title = data_t_suffix('script.name', script.name, game.name) + ' ' + data_t('game.name', game.name)
+      .game-group
+        - if sl_group.length > 1
+          %div=title
+          - sl_group.each do |sl|
+            - link = add_pop_hint_per_level_path(sl.level_id, 0)
+            %a{ href: link, class: "level_link"}#{sl.game_chapter}
+            - if current_user && current_user.admin?
+              - link = show_pop_hints_per_level_path(sl.level_id, 0)
+              %a{ href: link}#{'Show hint ' + sl.game_chapter.to_s}
+          .stage_separator
+
+:javascript
+  $( "#user_email" ).placeholder();
+

@@ -1,0 +1,15 @@
+name 'test matching text'
+title 'Matching'
+content1 'Some really easy stuff to match.  Drag it around until you get it.'
+
+question "What color is the sky?"
+answer 'blue'
+
+question "What's in the ocean?"
+answer 'salt'
+
+question "What's Brent's last name?"
+answer 'Van Minnen'
+
+question "Where is Brendan from?"
+answer 'Sydney'

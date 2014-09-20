@@ -1,0 +1,107 @@
+.alpha-grid-debug .grid-1:hover, .alpha-grid-debug .grid-2:hover, 
+.alpha-grid-debug .grid-3:hover, .alpha-grid-debug .grid-4:hover,
+.alpha-grid-debug .grid-5:hover, .alpha-grid-debug .grid-6:hover, 
+.alpha-grid-debug .grid-7:hover, .alpha-grid-debug .grid-8:hover,
+.alpha-grid-debug .grid-9:hover, .alpha-grid-debug .grid-10:hover, 
+.alpha-grid-debug .grid-11:hover, .alpha-grid-debug .grid-12:hover,
+.alpha-grid-debug .grid-13:hover, .alpha-grid-debug .grid-14:hover, 
+.alpha-grid-debug .grid-15:hover, .alpha-grid-debug .grid-16:hover,
+.alpha-grid-debug .grid-17:hover, .alpha-grid-debug .grid-18:hover, 
+.alpha-grid-debug .grid-19:hover, .alpha-grid-debug .grid-21:hover,
+.alpha-grid-debug .grid-21:hover, .alpha-grid-debug .grid-22:hover, 
+.alpha-grid-debug .grid-23:hover, .alpha-grid-debug .grid-24:hover {
+  background-color: rgba(0, 115, 186, .2);
+}
+
+.region {
+  min-height: 1px;
+}
+
+.alpha-debug-block {
+  display: none;
+}
+
+.alpha-region-debug .alpha-debug-block {
+  display: block;
+  margin: 0 0 10px 0;
+  padding: 9px 12px;
+  border: 1px solid #ccc;  
+  background-color: rgba(255, 255, 255, .25);
+}
+
+.alpha-region-debug .alpha-debug-block h2,
+.alpha-region-debug .alpha-debug-block p {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.alpha-region-debug .alpha-debug-block h2 {  
+  color: #888;
+}
+
+.alpha-region-debug .alpha-debug-block p {
+  color: #000;
+  display: none;
+}
+
+.alpha-region-debug .region:hover .alpha-debug-block {
+  border: 1px solid #888;
+  background-color: rgba(255, 255, 255, .75);
+}
+
+.alpha-region-debug .region:hover .alpha-debug-block p {
+  display: block !important;
+}
+
+.alpha-region-debug .region:hover .alpha-debug-block h2 {
+  display: none;
+}
+
+.alpha-resize-indicator {
+  background: url(../images/resize-handle.png) no-repeat 0 0;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  z-index: 998;
+  right: 0;
+  bottom: 0;
+}
+
+.alpha-grid-toggle,
+.alpha-block-toggle {
+  width: 24px;
+  height: 22px;
+  position: fixed;
+  z-index: 999;
+  right: 0;
+}
+
+.alpha-grid-toggle {
+  background: url(../images/grid-toggle.png) no-repeat 0 -22px;
+  top: 80px;
+}
+
+.alpha-block-toggle {
+  background: url(../images/block-toggle.png) no-repeat 0 -22px;
+  top: 110px;
+}
+
+.alpha-grid-debug .alpha-grid-toggle,
+.alpha-region-debug .alpha-block-toggle {
+  background-position: 0 0;
+}
+
+.alpha-grid-toggle:hover,
+.alpha-grid-toggle:focus,
+.alpha-grid-toggle:active {
+  width: 55px;
+}
+
+.alpha-block-toggle:hover,
+.alpha-block-toggle:focus,
+.alpha-block-toggle:active {
+  width: 72px;
+}

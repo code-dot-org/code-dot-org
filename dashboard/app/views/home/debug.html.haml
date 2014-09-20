@@ -1,0 +1,21 @@
+%h1 Debug page
+
+%table{ border: "1" }
+  %tr
+    %td Params
+    %td= params.inspect
+  %tr
+    %th Cookies
+  - cookies.each do |c|
+    %tr
+      %td= c[0]
+      %td= c[1]
+  %tr
+    %th Request Env
+  - request.env.each_pair do |k,v|
+    %tr
+      %td= k
+      %td= v
+  %tr
+    %td Request
+    %td= request.inspect

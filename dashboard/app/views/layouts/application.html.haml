@@ -1,0 +1,39 @@
+!!! 5
+- show_footer = ! (@share && phone?)
+%html{:dir => locale_dir}
+  %head
+    %title= @page_title ? "#{t(:appname)} - #{@page_title}" : t(:appname)
+    = ::NewRelic::Agent.browser_timing_header rescue ""
+    = tag :meta, name: "viewport", content: "minimal-ui"
+    /[if IE 9]
+      %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=Edge"}
+    = stylesheet_link_tag    "application", media: "all"
+    - if serve_fonts?
+      = stylesheet_link_tag    "//cloud.typography.com/7425452/678642/css/fonts.css", media: "all"
+    = javascript_include_tag "application"
+    = javascript_include_tag "//cdn.optimizely.com/js/400912536.js" if Rails.env.production?
+    = csrf_meta_tags
+    = yield :head
+    = render partial: 'layouts/analytics'
+  %body{ style: 'padding  :0px;' }
+    - if current_user && current_user.age.nil?
+      = render partial: 'layouts/age_interstitial'
+
+    .wrapper
+      - if !phone? || !@level
+        = render partial: 'layouts/header'
+      - page = yield
+      - if @full_width
+        .full_container{ style: @no_padding ? 'padding: 0px;' : '' }
+          = page
+      - else
+        .container.main{ style: 'padding: 10px;'}
+          = show_flashes.html_safe
+          = page
+      - if show_footer
+        .push
+
+    - if show_footer 
+      = render partial: 'layouts/footer'
+
+    = yield :body_scripts

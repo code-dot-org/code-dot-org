@@ -1,0 +1,93 @@
+%script{:src=>"/js/jquery.placeholder.js"}
+
+:javascript
+
+  function showEmailError(error)
+  {
+    $("input#email").toggleClass("input_error", error);
+    $("#email_error").toggle(error);
+    $("#email_okay").toggle(!error);
+  }
+
+  function certificate_processResponse(data)
+  {
+    var form = $("#certificate_form");
+    var thanks = $("#certificate_thanks");
+
+    form.toggle(!data.certificate_sent);
+    thanks.toggle(data.certificate_sent);
+
+    if (data.certificate_sent && data.session) {
+      personalizeCertificate(data.session);
+    }
+  }
+
+  function certificate_disable()
+  {
+    $("#certificate_form").hide();
+    $("#certificate_disable").show();
+  }
+
+  function processError(data)
+  {
+    $("#gobutton").removeAttr('disabled');
+    $("#gobutton").addClass("button_enabled").removeClass("button_disabled");
+
+    var badEmail = (data.status == 400 && data.responseJSON.email_s !== undefined);
+
+    showEmailError(badEmail);
+  }
+
+  function requestCertificate()
+  {
+    $("#gobutton").attr('disabled','disabled');
+    $("#gobutton").removeClass("button_enabled").addClass("button_disabled");
+
+    showEmailError(false);
+
+    $('#session').attr('value', cookieValue)
+
+    $.ajax({
+      url: "/api/hour/certificate",
+      type: "post",
+      dataType: "json",
+      data: $('#request-certificate-form').serialize()
+    }).done(certificate_processResponse).fail(processError);
+
+    return false;
+  }
+
+  function personalizeCertificate(session)
+  {
+    $('#hoc-certificate-small a').attr('href', '/printcertificate/' + session);
+    $('#hoc-certificate-small img').attr('src', '/api/hour/certificate/' + session + '-890.jpg');
+    $('#congrats-share-buttons').show();
+  }
+
+#certificate_body{:style=>"margin-top: 30px; margin-bottom: 30px;"}
+  #certificate_form{:style=>'display: none'}
+
+    %h2{:style=>'margin-top: 0px; margin-bottom: 0px'}=I18n.t :personalize_certificate
+
+    %form#request-certificate-form{:onsubmit=>"return requestCertificate()"}
+
+      #email_error{style: "color:red; font-weight:bold; display: none"}
+        =I18n.t :enter_valid_email
+      #email_okay{style: "color:red; font-weight:bold;"}
+        &nbsp;
+      %input#session{name: 'session_s', type: 'hidden', value: ''}
+      %input#name.grey_input{:name=>"name_s", :placeholder=>'Name', :style=>'width: 167px'}
+      &nbsp;
+      %button#gobutton.button_enabled{:style=>'width:90px'}=I18n.t :submit
+
+  #certificate_thanks{:style=>'display: none'}
+    %h2{:style=>'margin-top: 0px; margin-bottom: .5em;'}=I18n.t :thanks_for_submitting
+
+    %p
+      =I18n.t :get_a_certificate_message_after
+
+  #certificate_disable{:style=>'display: none'}
+    %h2{:style=>'margin-top: 0px; margin-bottom: .5em;'}=I18n.t :congratulations
+
+    %p
+      =I18n.t :beyond_hour_message

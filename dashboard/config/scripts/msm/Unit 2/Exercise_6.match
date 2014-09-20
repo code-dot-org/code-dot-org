@@ -1,0 +1,22 @@
+name 'Match example to contract' 
+
+title 'Contracts of Functions'
+content1 'Match each example with the correct contract!'
+
+question '(big-string? "gigantic" 5)'
+answer 'big-string: string number -> boolean'
+
+question '(find-price 4)'
+answer 'find-price: number -> number'
+
+question '(small-star "blue")'
+answer 'small-star: string -> image'
+
+question '(bigger-string "big" "little")'
+answer 'bigger-string: string string -> string'
+
+question '(small-star "solid")'
+answer 'small-star: string -> image'
+
+question '(find-price "cheese")'
+answer 'find-price: string -> number'

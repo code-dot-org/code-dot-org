@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <style>
+      h1{
+        width: 700px;
+        background-color: #000000;
+        color: #FFFFFF;
+        border-radius: 10px;
+        box-shadow: 4px 4px 5px #AAAAAA;
+        margin: 20px auto;
+        text-align: center;
+        font-family: sans-serif;
+        padding: 3px
+      }
+      p{
+        width: 500px;
+        margin: auto;
+      }
+      div,pre{
+        border-radius: 10px;
+        margin: 10px;
+        padding: 5px;
+        font-family: sans-serif;
+        font-size: 10pt;
+      }
+      #subjectCodes{
+        font-family: monospace;
+        background-color: #777777;
+        color: #DDFFDD;
+                box-shadow: 3px 3px 4px #AAAAAA;
+
+
+      }
+      #key{
+
+        color: #FFFFFF;
+        background-color: #777777;
+        box-shadow: 3px 3px 4px #AAAAAA;
+
+      }
+     
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      
+      // Tell Google to load the visualization package and call drawChart() once loaded
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      //drawChart() performs the query on the spreadsheet
+      function drawChart() {
+
+          //1. I want to query this spreadsheet
+          var query = new google.visualization.Query('https://docs.google.com/spreadsheet/pub?key=0AoTgBtFGnYikdFdFN01ITHAtcmJOMjBYZmZXOGVvOGc&output=html');
+
+          //2. Here is my query string
+          var queryStr = "SELECT *";
+          
+          //3. Set the google viz query to use my query string 
+          query.setQuery(queryStr);
+    
+          //4. Send the query to goolge and tell it to call handleQueryResponse when it's done
+          query.send(handleQueryResponse);
+      }
+      var data;
+      function handleQueryResponse(response) {
+
+         //1. Check the response for errors and spit out error messages if there are any.
+         if (response.isError()) {
+            alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+            return;
+        }
+
+        //2. get the data table from the response and do the visualization.
+         data = response.getDataTable();
+
+         console.debug("got data check it...")
+      }
+      
+
+      
+    </script>
+  </head>
+  <body>
+    <div id="container" style="width: 1000px">
+      <header>
+          <h1>Lab School Happiness Data</h1>
+          <p>This chart is derived from data collected by students in AT CS Principles about their happiness at various times and places during the school day</P>
+          <p> You can <a href="DataSourceDemo.html">play with the data here</a></p>
+
+        </header>
+      <div id="chart_div" style="width: 700px; height: 520px; float: left;">
+      </div>
+
+      <div id="rightCol" style="width: 200px; float: right;">
+        <div id='key'>
+          <h3>Key:</h3>
+          
+            <strong>Vertical Axis: Subject</strong><br/>
+            Numeric code for subject (see below)
+            <br/><br><strong>Horizontal Axis: Weekday.Period </strong><br/>
+             e.g. 2.7 means Tuesday, 7th period
+            
+            <br/><br><strong>Bubble Color: Happiness</strong><br/>
+            Scale: <span style="color: #3914AF"> unhappy</span> -> <span style="color: #FFD300">happy</span>
+            
+            <br/><br><strong>Bubble Size: Strength of Finding</strong><br/>
+            Number of responses for this subject/weekday.period
+         
+        </div>
+        <div id='subjectCodes'>
+<strong>Subject Codes</strong>
+<ol>
+<li>Advisory
+<li>Art
+<li>Comp. Sci.
+<li>English
+<li>Free
+<li>Gym
+<li>History
+<li>Home
+<li>Language
+<li>Lunch
+<li>Math
+<li>Music
+<li>Science
+<li>Sport
+</ol>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

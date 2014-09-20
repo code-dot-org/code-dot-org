@@ -1,0 +1,19 @@
+language: ruby
+rvm:
+- 2.0.0
+bundler_args: --without development --deployment --path .bundle
+before_install:
+- wget https://s3.amazonaws.com/bundle-cache-builds/bundle_cache
+- chmod +x ./bundle_cache
+- ./bundle_cache download
+before_script:
+- bin/rake db:create db:schema:load
+script:
+- bin/rake
+after_script:
+- ./bundle_cache upload
+env:
+  global:
+  - secure: HvZjaeEL6c0oYEYKSaGlXGsaoDY2eK4ua+wWjMKS+pJr1pGBBZ7DJBBJdxogMKTMO7MaBWyXfAOZ9/H7y1MI8H6gB9iNEc17fwZn3fMop7rqTEt25H2a4iZz8ZdDXpmgjONfXf3Yc8AEuWPuVsDzLuSeW9pyZlODBiqrovAlf1I=
+  - DB=mysql
+  - RAILS_ENV=test

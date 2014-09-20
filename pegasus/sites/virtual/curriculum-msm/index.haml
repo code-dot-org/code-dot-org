@@ -1,0 +1,19 @@
+---
+title: Curriculum for Middle School Math
+---
+
+%h1 CS in Math: Bootstrap
+
+= partial('_additional/_additional')
+
+-content = Course.new("msm")
+-content.get_lessons.each do |lesson|
+  %a{:href=>lesson.url}
+    -number = lesson.number
+    -if number == ""
+      #{lesson.title}
+    -else
+      Lesson #{lesson.number}: #{lesson.title}
+    %br
+
+= partial('_additional/_additional2')

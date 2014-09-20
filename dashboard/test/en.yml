@@ -1,0 +1,27 @@
+# Translations file for tests
+en:
+  data:
+    script:
+      name:
+        Report Script:
+          Report Stage 1: report-stage-1
+          Report Stage 2: report-stage-2
+        Milestone Script:
+          Milestone Stage 1: milestone-stage-1
+          Milestone Stage 2: milestone-stage-2
+        laurel:
+          title: custom-script-laurel
+          Laurel Stage 1: laurel-stage-1
+          Laurel Stage 2: laurel-stage-2
+    unplugged:
+      'OldUnplugged':
+        title: 'Test title'
+        desc: 'Test description'
+        pdfs: ['unplug1']
+      'NewUnplugged':
+        title: 'Test title'
+        desc: 'Test description'
+        lesson_plan:
+          pdf: 'http://example.com/not-real.pdf'
+          html: 'http://example.com/not-real/'
+

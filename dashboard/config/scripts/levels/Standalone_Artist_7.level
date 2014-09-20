@@ -1,0 +1,182 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-08-29T16:56:48.000Z",
+  "level_num": "custom",
+  "user_id": 20,
+  "properties": {
+    "skin": "artist",
+    "instructions": "A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart",
+    "x": "75",
+    "y": "50",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "slider_speed": "0.8",
+    "free_play": "false",
+    "start_direction": "130",
+    "ideal": "14"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="draw a flower"/>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">draw a flower</title>
+          <statement name="STACK">
+            <block type="controls_repeat" deletable="false" editable="false">
+              <title name="TIMES">6</title>
+              <statement name="DO">
+                <block type="draw_colour" inline="true" deletable="false" editable="false">
+                  <value name="COLOUR">
+                    <block type="colour_random" deletable="false" editable="false"/>
+                  </value>
+                  <next>
+                    <block type="controls_repeat" deletable="false" editable="false">
+                      <title name="TIMES">8</title>
+                      <statement name="DO">
+                        <block type="draw_move_by_constant" deletable="false" editable="false">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">20</title>
+                          <next>
+                            <block type="draw_turn_by_constant" deletable="false" editable="false">
+                              <title name="DIR">turnRight</title>
+                              <title name="VALUE">30</title>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="draw_turn_by_constant" deletable="false" editable="false">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">60</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="draw a flower"/>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="jump_by_constant">
+              <title name="DIR">jumpForward</title>
+              <title name="VALUE">150</title>
+              <next>
+                <block type="jump_by_constant">
+                  <title name="DIR">jumpForward</title>
+                  <title name="VALUE">300</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw a flower"/>
+                  <next>
+                    <block type="jump_by_constant">
+                      <title name="DIR">jumpForward</title>
+                      <title name="VALUE">150</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw a flower</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">6</title>
+              <statement name="DO">
+                <block type="draw_colour" inline="true">
+                  <value name="COLOUR">
+                    <block type="colour_random"/>
+                  </value>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">8</title>
+                      <statement name="DO">
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">20</title>
+                          <next>
+                            <block type="draw_turn_by_constant">
+                              <title name="DIR">turnRight</title>
+                              <title name="VALUE">30</title>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">60</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

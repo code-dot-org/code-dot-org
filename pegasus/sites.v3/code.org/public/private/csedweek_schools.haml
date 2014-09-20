@@ -1,0 +1,42 @@
+-require 'cdo/solr'
+-zip_codes = request.post? ? (CSV.parse_line(params[:zip_codes_s].to_s)||[]).map{|i| i.strip} : []
+-roles = request.post? ? (params[:roles_ss]||[]) : []
+
+%h1 CsEdWeek School Search
+
+%form{method: :post}
+  %h3 Zip Code(s):
+  %textarea{id:'zip_codes_s', name:'zip_codes_s', style: 'width: 480px'}= zip_codes.join(', ')
+  %h3 Roles:
+  %ul
+    -['teacher','other','principal','district_admin'].each do |i|
+      %li
+        %input{type:'checkbox', name:'roles_ss[]', id:"role_#{i}", value:i, checked:(roles.empty? || roles.include?(i))}= i
+  %br
+  %input{type: :submit}
+
+-if request.post?
+  -query_set = ['kind_s:CSEdWeekEvent2013', 'organization_type_s:school']
+  -query_set << zip_codes.map{|i| "zip_code_s:#{i}"}.join(' OR ') unless zip_codes.empty?
+  -query_set << roles.map{|i| "role_s:#{i}"}.join(' OR ') unless roles.empty?
+  -query = "(#{query_set.join(') AND (')})"
+  -matches = Solr::Server.new(host:CDO.solr_server).query(q:query, rows:10000)
+  %h1= "#{matches.count} results found:"
+  %table
+    %tr
+      %th Contact
+      %th Role
+      %th School name
+      %th Grade levels
+      %th Whole school?
+      %th ZIP code
+    -matches.each do |i|
+      %tr
+        %td
+          %p= i['name_s']
+          %p= i['email_s']
+        %td= i['role_s']
+        %td= i['organization_name_s']
+        %td= (i['grade_levels_ss']||[]).join("<br/>\n")
+        %td= i['whole_school_b'] ? 'Yes' : 'No'
+        %td= i['zip_code_s']

@@ -1,0 +1,16 @@
+name 'parts of contract' 
+
+title 'Parts of a Contract'
+content1 'Here is a contract for a new function. Match each item with the word that describes it.'
+
+question "yearbook-picture"
+answer 'function name'
+
+question "string numer"
+answer 'domain'
+
+question "image"
+answer 'range'
+
+question '(yearbook-picture "Sally" 1992)'
+answer 'example'

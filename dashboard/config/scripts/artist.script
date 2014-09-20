@@ -1,0 +1,16 @@
+title 'Artist'
+description_short "Draw cool pictures and designs with the Artist!"
+description "Draw cool pictures and designs with the Artist!"
+hidden 'false'
+
+stage 'Artist'
+level 'Standalone_Artist_1'
+level 'Standalone_Artist_2'
+level 'Standalone_Artist_3'
+level 'Standalone_Artist_4'
+level 'Standalone_Artist_5'
+level 'Standalone_Artist_5.5'
+level 'Standalone_Artist_6'
+level 'Standalone_Artist_7'
+level 'Standalone_Artist_8'
+level 'Standalone_Artist_9'

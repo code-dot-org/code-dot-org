@@ -1,0 +1,11 @@
+%div
+  %h1 Hints for this puzzle
+  = render :partial => 'shared/edit_hint_table',
+     :locals => {columns: [:hint, :status], user: @user, hints: @hints,
+                 add: true, redirect_url: show_hints_path(@level_source_id)}
+  %br
+    = link_to 'Add Hints for Other Puzzles', frequent_unsuccessful_level_sources_path
+
+= render partial: "levels/blockly", locals: { start_blocks: @start_blocks, app: @game.app, hide_source: @hide_source, share: @share }
+
+.fb-comments{:data=> {:href => request.original_url, :numposts => 10, :colorscheme => "light"} }

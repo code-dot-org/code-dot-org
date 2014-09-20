@@ -1,0 +1,40 @@
+$root: '/blockly/media/jigsaw/'; //TODO: Parameterize for asset pipeline
+
+#blockly {
+  width: 1024px;
+}
+
+#blocklyApp {
+  height: 600px;
+}
+
+/* Sprited icons. */
+.icon21 {
+  height: 21px;
+  width: 21px;
+  background-image: url("#{$root}icons.png");
+}
+.code {
+  background-position: -21px 0px;
+}
+.link {
+  background-position: 0px 0px;
+}
+.run {
+  background-position: 0px -21px;
+  margin-right: 3px;
+}
+.stop {
+  background-position: -21px -21px;
+  margin-right: 3px;
+}
+#feedbackButtons {
+  text-align: right;
+  padding: 1ex 3ex;
+}
+#continue-button {
+  margin: 5px;
+}
+.modal-image {
+  margin-top: 0px;
+}

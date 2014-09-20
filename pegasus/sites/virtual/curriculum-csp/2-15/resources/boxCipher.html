@@ -1,0 +1,257 @@
+
+<!-- saved from url=(0068)http://cs.ucls.uchicago.edu/~bfranke/codeDotOrg/Unit2/boxCipher.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title></title>
+	<style>
+		textarea{
+			font-family: monospace;
+			float: left;
+			font-size: 14px;
+			width: 250px;
+		}
+		body{
+			font-family: sans-serif;
+			font-size: 12px;
+		}
+
+		.highlight{
+			background-color: #FFFF00;
+		}
+		#controls{
+			width: 250px;
+			float: left;
+			background-color: #FFAAAA;
+			border: solid 1px black;
+			margin: 5px 25px;
+			box-shadow: 1px 1px 20px black;
+			padding: 5px 20px;
+		}
+		#numRowsLabel{
+			background-color: #FFFF00;
+		}
+		table{
+			width: 250px;
+			box-shadow: 10px 10px 20px black;
+
+		}
+		th{
+			text-align: center;
+			vertical-align: middle;
+			font-size: 8px;
+			color: #AAAAFF;
+		}
+		td{
+			text-align: center;
+			vertical-align: middle;
+			font-family: monospace;
+			font-size: 14px;
+			border: solid 1px #FFFFFF;
+			background-color: #EEEEEE;
+			padding: 2px;
+
+
+		}
+	</style>
+	<script type="text/javascript" src="./boxCipher_files/jquery.js"></script>
+	<script>
+	var box, boxRows, boxCols;
+	$(document).ready(function(){ box = makeBox(10,10); displayBox(-1,-1);});
+	function makeBox(rows, cols){
+		var A= new Array(rows);
+
+		for(var i=0; i<rows; i++){
+			A[i] = new Array(cols);
+			for(var j=0; j<cols; j++){
+				A[i][j]='_';
+			}
+		}
+		return A;
+	}
+
+	function displayBox(highlight_row, highlight_col){
+		var disp = $("#boxDisp");
+		disp.html("<table>");
+		//Make column headings
+		disp.append("<tr>");
+		disp.append("<th></th>");
+		for(var col=0; col<box[0].length; col++){
+			disp.append("<th>"+(col+1)+"</th>");
+		}
+		disp.append("</tr>");
+
+
+		for(var row=0; row<box.length; row++){
+			disp.append("<tr>");
+			disp.append("<th>"+(row+1)+"</th>");
+			for(var col=0; col<box[row].length; col++){
+
+
+				 if(row==highlight_row && col==highlight_col){
+					disp.append("<td class='highlight'>"+box[row][col]+"</td>");
+				 }
+				 else{
+					disp.append("<td>"+box[row][col]+"</td>");
+				}
+
+				
+			}
+			disp.append("</tr>");
+		}
+		disp.append("</table>");
+
+
+
+	}
+
+	function setBoxRowsCols(){
+		boxCols=$("#numCols").val();
+		boxRows=Math.ceil($("#textmsg_in").val().length/boxCols);
+		
+		
+		$("#numColsLabel").html($("#numCols").val());
+		$("#numRowsLabel").html(boxRows);
+	}
+
+	
+	function addUnderscores(){
+		var foo = $('#textmsg_in').val();
+
+		$('#textmsg_in').val(foo.replace(/ /g,"_"));
+	
+	}
+	function cleanupInput(){
+		var text = $("#textmsg_in").val();
+		text = text.replace(/\n/g, "");
+		$("#textmsg_in").val(text);
+	}
+
+	function fillInputFromBox(){
+		var newStr="";
+		for(var row=0; row<boxRows; row++){
+			for(var col=0; col<boxCols; col++){
+				newStr += box[row][col];
+			}
+		}
+		$("#textmsg_in").val(newStr);
+		cleanupInput();
+		addUnderscores();
+
+	}
+
+	///****** TIMER STUFF ******////
+
+	var timerId;
+	var charsToBox;
+	var nextRow, nextCol;
+	
+	function encrypt(){
+		setupToEncrypt();
+		while(charsToBox.length>0){
+			addCharToBox(false);
+		}
+		displayBox(-1,-1);
+
+	}
+
+	function addCharToBoxAnimate(){
+		addCharToBox(true);
+	}
+
+	function addCharToBox(animate){
+		//extract the char
+		if(charsToBox.length==0){
+			//console.debug("Setting delay")
+			setDelay(-1);
+			return 0;
+		}
+		var theChar = charsToBox.charAt(0);
+		charsToBox = charsToBox.substring(1,charsToBox.length);
+
+		box[nextRow][nextCol]=theChar;
+		//console.debug("box["+nextRow+"]["+nextCol+"]="+theChar);
+		
+		if(animate==true) displayBox(nextRow,nextCol);
+		nextRow++;
+		if(nextRow>=boxRows){
+			nextRow=0;
+			nextCol++;
+		}
+		
+
+	}
+	function setDelayFromSlider(){
+		var pct = $("#delaySlider").val()/100;
+		var speed = 350-(350*(pct*pct));
+		setDelay(speed);
+		console.debug(speed);
+	}
+	function setDelay(ms){
+		//if changing delay want to clear old timer anyway
+		// or old one will continue to be called in separate
+		// thread
+		clearInterval(timerId);
+
+
+		if(ms>=0){
+			timerId = setInterval(addCharToBoxAnimate, ms);
+			//delayVal=ms;
+		}
+	}
+
+	function pause(){ setDelay(-1);}
+	function start(ms){
+		if(ms<0){
+			encrypt();
+			clearInterval(timerId);
+			return;
+		}
+		setupToEncrypt();
+		setDelayFromSlider();
+	}
+	
+
+	function setupToEncrypt(){
+		addUnderscores();
+		charsToBox=$("#textmsg_in").val().replace(/\n/g,""); //later, use same as encrypt
+
+		//console.debug("message to box. >>"+charsToBox+"<<");
+		nextRow=0;
+		nextCol=0;
+
+		setBoxRowsCols(); 
+		box = makeBox(boxRows, boxCols);
+	}
+	</script>
+</head><body>
+	Enter your text message(140 chars)<br>
+	<textarea id="textmsg_in" rows="20" cols="20" onkeyup="addUnderscores()" onchange="cleanupInput()">Baker is a cool guy! Woot. And there is this other stuff that he does that is cool too. Is this long enough for a tweet?</textarea>
+	<div id="controls">
+		<h3>controls</h3>
+		<button onclick="start(1)">Start Encrypting</button>
+
+		<button onclick="start(-1)">Finish --&gt;</button><br>
+		speed: <input type="range" onchange="setDelayFromSlider(); start(1);" min="0" max="100" id="delaySlider" value="75">
+		<hr>
+		You select a width (num cols) for the box.  The height is calculated.<br>
+		
+		Width: <input type="range" id="numCols" min="2" max="35" value="10" onchange="start(1)"><br>
+		Box Width: <label for="numCols" id="numColsLabel">10</label><br>
+		Box Height: <label id="numRowsLabel">10</label><br>
+
+		<button onclick="fillInputFromBox()">&lt;-- copy box to text </button>
+		<hr>
+		<b>To Encrypt a message</b><br>
+		<li>Choose a box width to start encrypting
+		</li><li>Copy the box text back into the text area
+		</li><li>KEEP TRACK of the <em>height</em> of the box you used - this is your key for decrypting.<br><br>
+		<b>To Decrypt a message</b><br>
+		</li><li>Start with text that was encrypted with the box.
+		</li><li>set the width to the <em>height</em> of the box that was used to encrypt the original.
+
+
+	</li></div>
+	<div id="boxDisp"><table></table><tr></tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><tr></tr><th>1</th><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><tr></tr><th>2</th><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><tr></tr><th>3</th><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><tr></tr><th>4</th><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><tr></tr><th>5</th><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><tr></tr><th>6</th><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><tr></tr><th>7</th><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><tr></tr><th>8</th><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><tr></tr><th>9</th><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><tr></tr><th>10</th><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td><td>_</td></div>
+
+
+
+</body></html>

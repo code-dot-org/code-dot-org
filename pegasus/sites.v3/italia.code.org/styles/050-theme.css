@@ -1,0 +1,247 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -80px;     /* This is the same as the height of .push. */
+}
+
+.push {
+  height: 80px;             /* This is the same as the height of the footer once its padding is included. */
+}
+
+#pageheader {
+  width: 100%; 
+  background-color: rgb(0, 178, 192);
+}
+
+#pageheader .content {
+  width: 970px;
+  margin: 0 auto; 
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#pageheader #left {
+  width: 200px;
+  float: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 0;
+
+}
+
+#pageheader img#logo {
+  width: 87px;
+  height: 87px;
+  display: block;
+}
+
+#pageheader img#logo-it {
+  width: 500px;
+  height: 127px;
+  display: block;
+}
+
+#pageheader #right {
+  width: 640px; 
+  float: right; 
+  text-align: right;
+  padding-top: 10px
+}
+
+
+.headerlink:link{
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  margin-left: 40px;
+}
+
+.headerlink:visited {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  margin-left: 40px;
+}
+
+.headerlink:hover {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: solid 4px rgb(255, 138, 0);
+  margin-left: 40px;
+}
+
+#pagefooter {
+  width: 100%; 
+  height: 80px;
+  padding: 20px; 
+  overflow: hidden; 
+  background-color: #7665a0;
+  box-sizing: border-box;
+}
+
+#pagefooter .content {
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+  width: 970px;
+  margin: 0 auto;
+}
+
+#pagefooter .dim {
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.whitefooterlink:link {
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.whitefooterlink:hover {
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.whitefooterlink:visited {
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+
+/* styling for the embedded dashboard components... */
+
+a.user-menu-link {
+  color:white;
+  font-weight:400;
+  padding-left:10px;
+}
+
+.user_menu a:link,
+.user_menu a:visited,
+.user_menu a:hover,
+.user_menu a:active  {
+  text-decoration: none;
+}
+
+#user_hero #welcome {
+  margin-top:10px;
+  margin-bottom:5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#user_hero #continue_button {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 22px;
+  background-color: rgb(255, 164, 0) ;
+  border-color: rgb(255, 164, 0) ;
+}
+
+#user_hero #student_progress {
+  font-weight: 500;
+  width: 175px;
+  display: inline-block;
+}
+
+#user_hero #left_off {
+  font-weight: 500;
+  width: 175px;
+  display: inline-block;
+}
+
+#user_hero #classroom {
+  font-weight: 500;
+  font-size:16px;
+  margin-top:10px;
+}
+
+#sign_in_or_user .button-signin {
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -webkit-writing-mode: horizontal-tb;
+  align-items: flex-start;
+  background-color: rgb(255, 164, 0) ;
+  border-color: rgb(255, 164, 0) ;
+  background-image: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0px;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  height: 35px;
+  letter-spacing: normal;
+  line-height: 20px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  text-align: center;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-spacing: 0px;
+  writing-mode: lr-tb;
+}
+
+/* ...end styling */
+
+/* For mobile */
+.mobile-headers #pageheader .content,
+.mobile-headers #pagefooter .content {
+  width: 100%;
+}
+
+.mobile-headers #pageheader #left {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+}
+.mobile-headers #pageheader img#logo {
+  width: 37px;
+  height: 37px;
+}
+
+.mobile-headers #pageheader img#logo-it {
+  width: 500px;
+  height: 127px;
+}

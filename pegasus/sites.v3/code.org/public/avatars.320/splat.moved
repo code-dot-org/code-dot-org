@@ -1,0 +1,1 @@
+<%= "/images/fit-320/avatars#{request.splat_path_info}" %>

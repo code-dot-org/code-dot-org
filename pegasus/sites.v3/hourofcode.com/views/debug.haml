@@ -1,0 +1,25 @@
+-unless rack_env == :production
+  #debug
+    %table
+      %th.header{colspan:2} debug
+      %tr
+        %th path-info
+        %td= request.path_info
+      %tr
+        %th country
+        %td= @country
+      %tr
+        %th detected-country
+        %td= hoc_detect_country()
+      %tr
+        %th language
+        %td= @language
+      %tr
+        %th user-language
+        %td= @user_language
+      %tr
+        %th detected-language
+        %td= hoc_detect_language()
+      %tr
+        %th @config[:example]
+        %td= @config[:example]

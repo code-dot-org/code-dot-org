@@ -1,0 +1,14 @@
+name '2-3 bee conditionals multi 2'
+title 'Bee Conditionals Multiple Choice Two'
+content1 '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500'
+
+question 'Choose the best blocks.'
+
+height '180'
+
+wrong '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png'
+wrong '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png'
+right '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png'
+wrong '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png'
+
+# http://staging.learn.code.org/s/course2/stage/6/puzzle/18

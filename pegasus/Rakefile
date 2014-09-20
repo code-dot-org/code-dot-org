@@ -1,0 +1,39 @@
+require_relative 'src/env'
+
+def there_can_be_only_one(pidfile)
+  if File.exists?(pidfile)
+    oldpid = File.read(pidfile).to_i
+    # does that process exist?
+    exists = true
+    begin
+      Process.kill(0, oldpid)
+    rescue Errno::ESRCH
+      File.delete(pidfile)
+      exists = false
+    rescue ::Exception   # for example on EPERM (process exists but does not belong to us)
+      exists = true
+    end
+    raise StandardError.new("There can be only one #{pidfile} (#{oldpid}) on #{CDO.name} (#{rack_env})") if exists
+  end
+  File.open(pidfile, "w") { |f| f.puts $$ }
+  at_exit { File.unlink(pidfile) }
+end
+
+there_can_be_only_one("#{File.basename(__FILE__)}.pid") unless ENV['PEGASUS_RAKE_RECURSIVE'].to_s.downcase == 'true'
+
+if ENV['PEGASUS_RAKE_LOGGER'].to_s.downcase != 'true'
+  $log = Logger.new STDOUT
+  $log.level = Logger::INFO
+end
+
+require src_dir 'database'
+
+Dir.glob(pegasus_dir('rake/*.rake')) {|path| load path}
+
+task :help do
+  puts 'build:help'
+  puts 'db:help'
+  puts 'i18n:help'
+  puts 'seed:help'
+  puts 'test'
+end

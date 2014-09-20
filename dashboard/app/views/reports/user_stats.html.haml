@@ -1,0 +1,31 @@
+%h1 Progress report for #{@user.name}
+
+%h5= t('user_stats.recent_activity')
+- @recent_levels.each do |ul|
+  = ul.passing? ? t('user_level.completed') : t('user_level.tried')
+  #{link_to "#{data_t_suffix('script.name', Script.find(ul.script_id).name, ul.level.game.name)}, #{t('puzzle')} #{ul.game_chapter}", script_level_path(script_id: ul.script_id, id: ul.script_level_id)},
+  #{ago(ul.updated_at)}
+  %br
+=link_to "#{t('user_stats.show_more')}...", usage_path(@user)
+%br
+
+= render partial: 'shared/user_stats', locals: { user: @user }
+
+- if current_user && current_user.admin?
+  %div{ style: "border: 1px solid red;clear:both"}
+    Admin:
+    %br
+    name: #{@user.name}
+    %br
+    email: #{@user.email}
+    %br
+    username: #{@user.username}
+    - if @user.age
+      %br
+      approximmate age: #{@user.age}
+    - if @user.gender
+      %br
+      gender: #{@user.gender}
+    %br
+    teachers: #{raw @user.teachers.map { |t| link_to(t.name, user_stats_path(t)) }.join(', ')}
+

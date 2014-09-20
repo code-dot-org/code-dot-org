@@ -1,0 +1,11 @@
+name '2-3 bee conditionals multi 3'
+title 'Bee Conditionals Multiple Choice Two'
+content1 '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500'
+
+height '160'
+
+question 'Choose the best blocks'
+wrong '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png'
+right '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png'
+wrong '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png'
+wrong '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png'

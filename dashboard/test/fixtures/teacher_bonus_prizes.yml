@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  prize_provider_id: 1
+  code: MyString
+  user_id: 
+
+two:
+  prize_provider_id: 1
+  code: MyString
+  user_id: 

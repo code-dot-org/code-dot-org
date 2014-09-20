@@ -1,0 +1,25 @@
+%h1 Listing prize_providers
+
+%table
+  %tr
+    %th Name
+    %th Url
+    %th Description token
+    %th Image name
+    %th
+    %th
+    %th
+
+  - @prize_providers.each do |prize_provider|
+    %tr
+      %td= prize_provider.name
+      %td= prize_provider.url
+      %td= prize_provider.description_token
+      %td= prize_provider.image_name
+      %td= link_to 'Show', prize_provider
+      %td= link_to 'Edit', edit_prize_provider_path(prize_provider)
+      %td= link_to 'Destroy', prize_provider, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Prize provider', new_prize_provider_path

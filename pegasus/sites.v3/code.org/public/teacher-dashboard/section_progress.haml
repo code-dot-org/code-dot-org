@@ -1,0 +1,11 @@
+---
+layout: none
+theme: none
+---
+
+%br/
+
+.loading{"ng-hide"=>"progressLoaded"}
+  = I18n.t('dashboard_landing_loading')
+
+%div{"ng-include"=>"", src: "sectionProgressUrl", onload: "init_progress(); progress_loaded();"}

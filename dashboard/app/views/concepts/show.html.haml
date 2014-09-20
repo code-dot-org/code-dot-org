@@ -1,0 +1,9 @@
+%p
+  %strong Name:
+  = @concept.name
+%p
+  %strong Description:
+  = data_t('concept.description', @concept.name)
+= link_to 'Edit', edit_concept_path(@concept)
+|
+\#{link_to 'Back', concepts_path}

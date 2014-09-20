@@ -1,0 +1,111 @@
+%form#totm-form{role: "form", onsubmit: "return teacherNominationFormSubmit()"}
+  #error-message{style: 'display: none'}
+  .form-group
+    %label.control-label{for: "totm-name"}
+      Your name
+      %span.form-required-field *
+    %div
+      %input#totm-name.form-control{name: "name_s", required: "", type: "text"}/
+  .form-group
+    %label.control-label{for: "totm-relationship"}
+      Your relationship (like fellow teacher, principal)
+      %span.form-required-field *
+    %div
+      %input#totm-relationship.form-control{name: "relationship_s", required: "", type: "text"}/
+  .form-group
+    %label.control-label{for: "totm-email"}
+      Your email address
+      %span.form-required-field *
+    %div
+      %input#totm-email.form-control{name: "email_s", required: "", type: "email"}/
+  .form-group
+    %label.control-label{for: "totm-teacher-name"}
+      Teacher name
+      %span.form-required-field *
+    %div
+      %input#totm-teacher-name.form-control{name: "teacher_name_s", required: "", type: "text"}/
+  .form-group
+    %label.control-label{for: "totm-teacher-email"}
+      Teacher email address (just to contact them about winning)
+      %span.form-required-field *
+    %div
+      %input#totm-teacher-email.form-control{name: "teacher_email_s", required: "", type: "email"}/
+  .form-group
+    %label.control-label{for: "totm-teacher-subject"}
+      Teacher subject
+      %span.form-required-field *
+    %div
+      %input#totm-teacher-subject.form-control{name: "teacher_subject_s", type: "text"}/
+  .form-group
+    %label.control-label{for: "totm-school-name"}
+      School name
+      %span.form-required-field *
+    %div
+      %input#totm-school-name.form-control{name: "school_name_s", required: "", type: "text"}/
+  .form-group
+    %label.control-label{for: "totm-school-zip-code"}
+      School ZIP code
+      %span.form-required-field *
+    %div
+      %input#totm-school-zip-code.form-control{name: "school_zip_code_s", required: "", type: "text"}/
+  .form-group
+    %label.control-label{for: "totm-teacher-link"} Link to teacher photo or video (so we can feature them on our blog)
+    %div
+      %input#totm-teacher-link.form-control{name: "teacher_link_s", type: "url"}/
+  .form-group
+    %label.control-label{for: "totm-message"}
+      And, the most important part: tell us a brief story.
+      %br
+      How is this teacher changing the face of computer science?
+      %span.form-required-field *
+    %div
+      %textarea#totm-message.form-control{name: "message_s", required: "", rows: "12"}
+  .form-group.submit-btn
+    %button#btn-submit.btn.btn-default{type: "submit"} Submit
+
+:javascript
+  $(document).ready(function() {
+    $('#thanks').hide();
+  });
+
+  function processResponse(data)
+  {
+    $("#btn-submit").removeAttr('disabled');
+    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
+    $('#totm-intro').hide();
+    $('#totm-form').hide();
+
+    $('#thanks').show();
+  }
+
+  function processError(data)
+  {
+    errors = Object.keys(data.responseJSON);
+    errors_count = errors.length;
+
+    for (i = 0; i < errors_count; ++i) {
+      error_id = '#totm-' + errors[i].replace(/_/g, '-');
+      $(error_id).parents('.form-group').addClass('has-error');
+    }
+
+    $('#error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
+
+    $('body').scrollTop(0);
+    $("#btn-submit").removeAttr('disabled');
+    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
+  }
+
+  function teacherNominationFormSubmit()
+  {
+    $("#btn-submit").attr('disabled','disabled');
+    $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
+
+    $.ajax({
+      url: "/forms/TeacherNomination",
+      type: "post",
+      dataType: "json",
+      data: $('#totm-form').serialize()
+    }).done(processResponse).fail(processError);
+
+    return false;
+  }

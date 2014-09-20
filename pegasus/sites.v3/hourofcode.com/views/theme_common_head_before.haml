@@ -1,0 +1,22 @@
+- @header['social'].each_pair do |property, content|
+  %meta{property:property, content:content}
+
+%title= page_title_with_tagline
+
+%link{rel:'shortcut icon', href:'/images/favicon.ico'}
+%link{rel:'apple-touch-icon', href:'/images/apple-touch-icon-precomposed.png'}
+
+%script{src:'//cdn.optimizely.com/js/400912536.js'}
+
+/[if lt IE 9]
+  %script{:src=>'/js/html5shiv.js'}
+
+:javascript
+  var is_ie8 = false;
+/[if IE 8]
+  :javascript
+    is_ie8 = true;
+
+%link{rel:'stylesheet', type:'text/css', href:'//cloud.typography.com/7425452/678642/css/fonts.css', media:'all'}
+%link{rel:'stylesheet', type:'text/css', href:'/style.css'}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/

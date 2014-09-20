@@ -1,0 +1,50 @@
+<html>
+<head>
+	 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<title></title>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://www.parsecdn.com/js/parse-1.2.15.min.js"></script>
+	<script src="js/code.org.js"></script>
+	<script>
+
+		//Setup what happens when the button is clicked (call isUser)
+		$(document).ready(function(){
+			$("Button").click(goWeb);
+		});
+
+		function goWeb(){
+
+			//webRequest("https://www.googleapis.com/books/v1/volumes?q=Harry&maxResults=1&projection=lite");
+			webRequest("http://deanclatworthy.com/imdb/?q=Star+Trek&year=1996");
+
+			//webRequest("http://en.wikipedia.org/w/api.php?format=json&action=query&titles=Grace+Hopper&prop=revisions&rvprop=content");
+
+			//webRequest("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?");
+
+			//webRequest("http://www.usconstitution.net/const.txt?jsoncallback=gotWebResponse");
+
+
+		}
+		var webObj;
+		function gotWebResponse(response){
+			
+			webObj = response;
+			$("#output").html(response);
+		}
+	</script>
+	<style>
+
+	</style>
+</head>
+<body>
+
+<div class="container loginform">
+	<h2>Please Click the button </h2>
+	
+	<button id="login_btn" class="btn btn-large btn-primary" type=submit>Web Go!!!</button>
+	<div id="output"></div>
+	<br/><br/>
+</div>
+
+</body>
+</html>

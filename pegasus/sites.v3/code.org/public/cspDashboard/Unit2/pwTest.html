@@ -1,0 +1,55 @@
+<html>
+<head>
+	 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<title></title>
+	<script>
+
+		function checkCredentials(){
+
+			var name = document.getElementById("username").value;
+			var pw = document.getElementById("password").value;
+
+			if(name=="bfranke" && pw=="foofoo"){
+
+				//document.getElementById("response").innerHTML="Access Granted!";
+				location.href="http://facebook.com";
+			}
+			else{
+				alert("Access Denied");
+				location.href="./pwTest.html";
+			}
+
+		}
+
+	</script>
+	<style>
+		.loginform{
+			width: 350px;
+			background-color: #EEEEEE;
+			border: solid 1px;
+			border-radius: 5px;
+			margin-top: 20px;
+			box-shadow: 2px 2px 20px #000000;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container loginform">
+	<h2>Please Login </h2>
+	<div class="form-group">
+   		<label for="username">Username</label>
+   	 	<input type="text" class="form-control" id="username" placeholder="Enter username">
+  	</div>
+ 	<div class="form-group">
+   		<label for="password">Password</label>
+    	<input type="password" class="form-control" id="password" placeholder="Password">
+  	</div>
+	<button class="btn btn-large btn-primary" onClick="checkCredentials()" type=submit>Login</button>
+	<br/><br/>
+	<h2 id="response"></h2>
+</div>
+
+
+</body>
+</html>

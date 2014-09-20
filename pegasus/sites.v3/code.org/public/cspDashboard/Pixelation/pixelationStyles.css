@@ -1,0 +1,97 @@
+div{
+	width: auto;
+	padding: 4px;
+	margin: 4px;
+	background-color: #EEEEEE;
+	border: solid 1px #000000;
+	float: left;
+}
+footer{
+	font-family: Arial;
+	font-size: 11px;
+	width: 500px;
+	margin: auto;
+	border: none;
+	padding: 2px 50px;
+	background-color: #660000;
+	color: #EEEEEE;
+	clear: both;
+	
+}
+
+.canvasInputLabel{
+	font-family: sans-serif;
+	font-size: 10px;
+
+}
+
+
+
+
+#canvasDiv{
+	float: left;
+	width: 510px;
+	height: 510px;
+	text-align: center;
+
+}
+#input{
+	width: 300px;
+	height: 500px;
+	font-family: Arial;
+	font-size: 11px;
+}
+#binaryImage{
+	width: 280px;
+	height: 250px;
+}
+#err{
+	color: #CC0000;
+	font-family: monospace;
+	font-size: 11px;
+	width: auto;
+}
+.slider{
+	width: 200px;
+}
+#bitsPerPixelSlider{
+	width:100px;
+}
+p{
+	margin: 1px;
+	font-family: monospace;
+}
+header h1 h2{
+	margin: 0px;
+}
+h2{
+	margin: 0px;
+	font-family: arial;
+	font-size: 12px;
+}
+h1{
+	margin: 0px;
+	font-family: arial;
+	font-size: 16px;
+}	
+#bandwexample{
+	background-color: #FFFFFF;
+	width: 280px;
+	font-family: monospace;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	font-size: 10px;
+	clear: both;
+}
+#examplecontainer{
+	width: 300px;
+	font-family: arial;
+	font-size: 10px;
+}
+#example{
+	width: 280px;
+	font-family: monospace;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	font-size: 12px;
+}

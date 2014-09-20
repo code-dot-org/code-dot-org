@@ -1,0 +1,26 @@
+---
+title: Leaders and trend-setters all agree on one thing
+---
+-facebook = {:u=>'http://code.org/quotes'}
+-twitter = {:url=>'http://code.org/quotes', :related=>'codeorg', :hashtags=>'hourofcode', :text=>'Leaders and trendsetters agree more students should learn computer science @codeorg'}
+
+%h1 Leaders and trend-setters all agree on one thing
+-i = 1
+-DB[:cdo_quotes].each do |quote|
+  -if i % 2 != 0
+    .row{style: 'margin-bottom: 20px;'}
+  .col-xs-6
+    .headshot{:style=>'float:left; width: 25%'}
+      %img{:src=>quote[:image_url_s]}
+    .text{:style=>'float:left; width:75%'}
+      %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+        =quote[:name_s]
+      %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+        -unless quote[:title_s].nil_or_empty?
+          =quote[:title_s]
+      %p{:style=>'font-size: 13px;line-height: 18px;'}
+        =quote[:quote_t]
+  -i += 1
+
+#links{:style=>'clear:both;'}
+  = view :share_buttons, facebook:facebook, twitter:twitter

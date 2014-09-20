@@ -1,0 +1,10 @@
+name 'K-1 Plant a Seed Multi 1'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png'
+height '100'
+
+question 'Which step should go at the beginning of this algorithm?'
+wrong '/script_assets/k_1_images/unplugged_images/poke-hole.png'
+wrong '/script_assets/k_1_images/unplugged_images/foot-in-shoe.png'
+right '/script_assets/k_1_images/unplugged_images/dirty-teeth.png'

@@ -1,0 +1,11 @@
+name 'K-1 Bee 1 Multi 1'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/k_1_images/bee_images/1nectar+2nectar.png'
+height '100'
+
+question 'How many nectars is this?'
+wrong '/script_assets/k_1_images/bee_images/nectar.png'
+right '/script_assets/k_1_images/bee_images/2nectar.png'
+wrong '/script_assets/k_1_images/bee_images/3nectar.png'
+wrong '/script_assets/k_1_images/bee_images/4nectar.png'

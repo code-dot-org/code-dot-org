@@ -1,0 +1,23 @@
+name '4-5 maze match 1' 
+title 'Maze Match'
+
+content1 'Match the puzzles to the blocks'
+
+pre_title 'Instructions'
+pre_body 'Drag the blocks to match.'
+pre_image ' '
+pre_ani '/script_assets/images/matching_ani.gif'
+
+height '200'
+
+question '/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png'
+  answer '/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png'
+
+question '/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png'
+  answer '/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png'
+
+question '/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png'
+  answer '/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png'
+
+#question '/script_assets/4-5_images/maze/4-5_maze_match_1_q4.png'
+#  answer '/script_assets/4-5_images/maze/4-5_maze_match_1_a4.png'

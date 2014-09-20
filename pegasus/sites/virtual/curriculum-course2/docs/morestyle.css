@@ -1,0 +1,176 @@
+body{
+	margin: 0px 50px 0px 50px;
+  	font-size: 16px;
+ 	line-height: 1.35em;
+}
+
+.together{
+	page-break-inside: avoid;
+}
+
+.pagebreak{
+	page-break-after: always; 
+}
+
+.headercontent {
+	margin: 0px 40px 20px 20px;	
+}
+
+.headercontent h1 {
+  font-size: 60px;
+  line-height: 1em;
+  margin-top:.125em;
+  margin-bottom:.25em;  
+}
+
+.headercontent .disclaimer {
+    opacity: 1.0;
+    color: #E4E0EC;
+}
+
+.content {
+	padding: 0px;	
+  	margin: 0px 40px 0px 40px;
+}
+
+.content h1 {
+  color:rgb(120,101,161);
+  text-transform:uppercase;
+  font-size: 40px;
+  line-height: 1em;
+  margin-top:.5em;
+  margin-bottom:0em;  
+}
+
+.content h2 {
+  color:rgb(120,101,161);
+  text-transform:uppercase;
+  margin-top:1em;
+  margin-bottom:.5em;
+}
+
+.content h3 {
+  font-size: 18px;
+  line-height: 1em;
+  margin-top:1em;
+  margin-bottom:.5em;
+}
+
+.summary {
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.25);
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  background-color: white;
+  /*page-break-after:always;*/
+}
+
+.summary h2 {
+  color:rgb(120,101,161);
+  text-transform:uppercase;
+  font-size: 18px;
+  line-height: 1em;
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+.summary h2 {
+  font-size: 15px;
+  line-height: 1em;
+}
+
+
+.summary p {
+  font-size: 14px;
+  line-height: 1.25em;
+  margin-left:30px;
+}
+
+.tip {
+  margin: 40px 0	 40px 0;
+  padding: 10px 20px 10px 0px;
+  border-top: 2px solid orange;
+  border-bottom: 2px solid orange;
+  border-radius: 10px;
+  page-break-inside: avoid;
+}
+ 
+.tip p { 
+  color: #00ADBC ;
+  font-size: 15px;
+  line-height:1.3em;
+  font-style:none;
+}
+
+.tip h1 {
+  color:white;
+  font-style:italic;
+  font-size: 14px;
+  line-height:1em;
+  border-radius: 10px;
+  display: inline-block;
+  float: left;
+  background-color:orange;
+  padding:1em;
+  margin: 0em 2em 0em 0em;
+  border:0px solid orange;
+  -webkit-print-color-adjust: exact;
+}
+
+table { border-spacing: 0; }
+
+
+th {
+  background-color: rgb(0, 178, 192);
+  color: white;
+  padding: 15px;
+  border-color: rgb(0, 178, 192);
+  border-width: 1px;
+  border-style: solid;
+}
+
+td {
+  border-width: 1px;
+  border-color: rgb(141, 138, 138);
+  border-style: solid;
+  padding: 15px;
+}
+
+th a:link, th a:visited, th a:hover, th a:active {
+  color: white;
+}
+
+
+.lesson-table tr td:nth-child(2){
+    width:1%;
+    white-space:nowrap;
+}
+
+.rollout-table td, .rollout-table th {
+    width: 14%;
+}
+
+.rollout-table th {
+    text-align: center;
+}
+
+.framework-table tr td:first-child {
+    font-weight: bold;
+}
+
+@page  
+{ 
+    size: auto;    
+    margin: .25in .25in .25in .25in;  
+}
+
+@media print {
+	body{
+        margin: 0 0 0 0;
+        width: 100%;
+        zoom: 75%;
+    }
+	img{ max-width: 100%; }
+    .standards{ display: none !important; }
+}

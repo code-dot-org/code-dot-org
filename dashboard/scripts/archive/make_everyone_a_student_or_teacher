@@ -1,0 +1,58 @@
+#!/usr/bin/env ruby
+# Backfill existing users to allow enforcing the constraints that
+# - all users must have a type, which is either student or teacher
+# - only teachers can have students (ie. sections and followers)
+
+require_relative '../../config/environment'
+
+def self_follows
+  Follower.where('student_user_id = user_id')
+end
+
+def delete_self_follows
+  puts "deleting all #{self_follows.count} self-follows"
+
+  self_follows.delete_all
+
+  puts "now #{self_follows.count} self-follows"
+end
+
+def nonteachers_with_students
+  Follower.joins(:user).where('user_type != "teacher"')
+end
+
+def make_all_users_with_students_into_teachers
+  puts "fixing #{nonteachers_with_students.count} non-teachers with students"
+
+  nonteachers_with_students.find_each do |follower|
+    # find_each does this in batches of 1000
+    teacher = follower.user
+    if teacher.user_type != User::TYPE_TEACHER
+      teacher.update_attributes(user_type: User::TYPE_TEACHER)
+    end
+  end
+
+  puts "now #{nonteachers_with_students.count} non-teachers with students"
+end
+
+def users_without_type
+  User.where(user_type: nil)
+end
+
+def make_all_users_without_user_type_into_students
+  puts "fixing #{users_without_type.count} users without type"
+
+  users_without_type.find_each do |user|
+    # find_each does this in batches of 1000
+    user.update_attributes(user_type: User::TYPE_STUDENT)
+  end
+
+  puts "now #{users_without_type.count} users without type"
+end
+
+Follower.transaction do # throw this all in a transaction so we roll it back if something unexpected happens
+  delete_self_follows
+  make_all_users_with_students_into_teachers
+  make_all_users_without_user_type_into_students
+  raise "run '#{$0} confirm' if you actually want this to happen" unless ARGV[0] && ARGV[0] == 'confirm'
+end

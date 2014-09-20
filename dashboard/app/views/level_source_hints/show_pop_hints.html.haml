@@ -1,0 +1,35 @@
+%div
+  %h1 #{@num_of_attempts} students wrote the code below.
+
+  - if @restriction
+    Only showing level sources with hints whose status is:
+    = succeed '.' do
+      %b= LevelSourceHint::USER_VISIBLE_NAMES["#{@restriction}"]
+    Switch to:
+  - else
+    Restrict to hints whose status is:
+  - messages = []
+  - LevelSourceHint::USER_VISIBLE_NAMES.each do |internal, visible|
+    - if @restriction != "#{internal}"
+      - messages.append(link_to "#{visible}", @restricted_url_path_helper.call(internal))
+  - if @restriction
+    - messages.append(link_to 'all', @restricted_url_path_helper.call(nil))
+  = succeed '.' do
+    = messages.join(', ').html_safe
+
+  - script = @script || Script.twenty_hour_script
+  - if !@level.nil? && @level.ideal_level_source_id
+    .solution_link
+      #{link_to "See the puzzle", script_level_path(script, ScriptLevel.where(:script_id => script, :level_id => @level).first), :target => "_blank"}
+      #{link_to t('reference_area.teacher'), script_level_solution_path(script, @level), :target => "_blank"}
+  = render :partial => 'shared/edit_hint_table',
+           :locals => {columns: [:hint, :status], user: @user, hints: @hints,
+                       add: true, redirect_url: @next_path}
+
+  %table{:width => "30%"}
+    %tr
+      %td= link_to "<< Prev", @prev_path
+      %td= link_to "Next >>", @next_path
+
+%br
+= render partial: "levels/blockly", locals: { start_blocks: @start_blocks, app: @game.app, hide_source: @hide_source, share: @share }
