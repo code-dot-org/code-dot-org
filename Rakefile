@@ -204,6 +204,15 @@ namespace :install do
     RakeUtils.sudo 'aptitude', 'install', '-y', 'mysql-server'
   end
 
+  task :newrelic do
+    RakeUtils.sudo 'echo deb http://apt.newrelic.com/debian/ newrelic non-free >> /etc/apt/sources.list.d/newrelic.list'
+    RakeUtils.sudo 'wget -O- https://download.newrelic.com/548C16BF.gpg | apt-key add -'
+    RakeUtils.sudo 'aptitude', 'update'
+    RakeUtils.sudo 'aptitude', 'install', 'newrelic-sysmond'
+    RakeUtils.sudo 'nrsysmond-config', '--set', "license_key=#{CDO.newrelic_secret}"
+    RakeUtils.sudo '/etc/init.d/newrelic-sysmond', 'start'
+  end
+
   task :postfix do
     Dir.chdir(postfix_dir) do
       RakeUtils::sudo 'aptitude', 'install', '-y', 'postfix', 'libsasl2-2', 'libsasl2-modules', 'sasl2-bin'
