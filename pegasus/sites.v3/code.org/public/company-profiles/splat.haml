@@ -26,20 +26,13 @@ social:
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/ee.css"}/
 
+#company_header= view :employee_engagement_header, company_name:company['display_name_s'], logo_path:company['logo_path_s']
 
-#company_header
-  #alignment-spacer
-  -if company['logo_path_s']
-    %img#company_logo{src:"/forms/uploads/#{company['logo_path_s']}", width: "50px", height: "50px"}
-  %h1.ee_display_name= company['display_name_s']
-
--# TODO(dave): implement user_entered_markdown function.
-#intro_top
+#intro_top.ee_markdown
   -if company['intro_top_copy_t']
     =TextRender.safe_markdown company['intro_top_copy_t']
   -else
     =view :company_profile_intro_top
-
 %br
 
 #top
@@ -71,7 +64,7 @@ social:
     -unless company['video_key_s']
       = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"
 
-#intro_bottom
+#intro_bottom.ee_markdown
   -if company['intro_bottom_copy_t']
     =TextRender.safe_markdown company['intro_bottom_copy_t']
   -else
