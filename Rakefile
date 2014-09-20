@@ -245,7 +245,7 @@ namespace :install do
     end
   end
 
-  WebserverDependencies = [:postfix, rack_env?(:production) ? [:mysql_client] : [:mysql_server, :varnish]].flatten
+  WebserverDependencies = [:postfix, rack_env?(:production) ? :mysql_client : [:mysql_server, :solr], :varnish].flatten
   task :webserver => WebserverDependencies do
     RakeUtils.sudo 'aptitude', 'install', '-y', 'libxslt1-dev', 'libssl-dev', 'zlib1g-dev', 'imagemagick', 'libmagickcore-dev', 'libmagickwand-dev'
   end
