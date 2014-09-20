@@ -153,7 +153,10 @@ namespace :production do
           'cd website-ci/aws',
           'git pull',
           'bundle',
-          'rake build',
+          'touch Rakefile',
+          'rake',
+          'cd ..',
+          'rake build:varnish',
         ].join('; ')
         RakeUtils.system 'ssh', host, "'#{remote_command} 2>&1'"
       end
