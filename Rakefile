@@ -218,6 +218,23 @@ namespace :install do
     end
   end
 
+  task :solr do
+    solr_version = '4.8.0'
+    solr_name = "solr-#{solr_version}"
+    solr_tgz = "#{solr_name}.tgz"
+
+    Dir.chdir(aws_dir) do
+      unless File.directory?('solr')
+        unless File.file?(solr_tgz)
+          RakeUtils.system 'wget', "http://apache.mesi.com.ar/lucene/solr/#{solr_version}/#{solr_tgz}"
+        end
+        RakeUtils.system 'tar', '-zxf', solr_tgz
+        rm solr_tgz
+        mv solr_name, 'solr'
+      end
+    end
+  end
+
   task :varnish do
     Dir.chdir(aws_dir) do
       RakeUtils::sudo 'aptitude', 'install', '-y', 'varnish'
