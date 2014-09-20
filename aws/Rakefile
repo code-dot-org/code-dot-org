@@ -21,7 +21,7 @@ file aws_dir('bashrc') => [aws_dir('bashrc.erb')] + DEPENDENCIES do |t|
   RakeUtils.erb t.prerequisites[0], t.name, task:t
 end
 
-file home_dir('.bashrc') => [aws_dir('bashrc')] do |t|
+file home_dir('.bashrc') => [aws_dir('bashrc')] + DEPENDENCIES do |t|
   cp t.prerequisites[0], t.name
 end
 
@@ -66,11 +66,11 @@ else
   SECRETS = deploy_dir('deployment.rb')
 end
 
-file home_dir('.profile') => [aws_dir('profile')] do |t|
+file home_dir('.profile') => [aws_dir('profile')] + DEPENDENCIES do |t|
   cp t.prerequisites[0], t.name
 end
 
-file home_dir('.ssh/authorized_keys') => [secrets_dir('authorized_keys')] do |t|
+file home_dir('.ssh/authorized_keys') => [secrets_dir('authorized_keys')] + DEPENDENCIES do |t|
   cp t.prerequisites[0], t.name
 end
 
