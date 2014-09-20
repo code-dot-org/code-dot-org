@@ -1,0 +1,89 @@
+---
+layout: none
+theme: none
+---
+%div
+  %br/
+  %a{href: '/teacher-dashboard#/'}= I18n.t('dashboard_navigation_home_page')
+  %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
+  %b{style: "color: #ff8b02;"}= I18n.t('dashboard_navigation_all_sections')
+  %br/
+  %br/
+  %button.btn.btn-white{"ng-click" => "new_section()"}= I18n.t('dashboard_sections_new_section')
+  %br/
+  %br/
+
+  %div.jumbotron{'ng-show' => 'sectionsLoaded && sections.length <= 0'}
+    %p= I18n.t('dashboard_sections_jumbotron_instruction')
+    %p &nbsp;
+    %p= I18n.t('dashboard_privacy_document_link')
+
+  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'sections.length > 0'}
+    %colgroup
+      %col{width: "200"}/
+      %col{width: "100"}/
+      %col{width: "100"}/
+      %col{width: "150"}/
+      %col{width: "100"}/      
+      %col{width: "100"}/
+      %col{width: "200"}/
+    %tr
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_sections_table_section')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'login_type'"}= I18n.t('dashboard_sections_table_secret')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'grade'"}= I18n.t('dashboard_sections_table_grade')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'course.name'"}= I18n.t('dashboard_sections_table_course')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'students.length'"}= I18n.t('dashboard_sections_table_students')        
+      %th.manage-th= I18n.t('dashboard_sections_table_code')
+      %th.manage-th
+    %tr{"ng-repeat" => "section in sections | orderBy:order", style: "vertical-align:top"}
+      %td
+        %span{"ng-hide" => "section.editing", style: "font-size:18px; padding-top:12px"}
+          %a{"ng-href" => "#/sections/{{section.id}}"} {{section.name}}
+        %span{"ng-hide" => "section.editing", style: "font-size:12px; opacity: 0.8"}
+          %br/
+          %div{style: "opacity: 0.7", "ng-show" => "section.students.length > 0"}
+            %a{"ng-href" => "#/sections/{{section.id}}/progress"}= I18n.t('dashboard_navigation_view_progress')
+          %div{style: "opacity: 0.7"}
+            %a{"ng-href" => "#/sections/{{section.id}}/manage"}= '{{section.students.length}}' == 0 ? I18n.t('dashboard_navigation_add_students') : I18n.t('dashboard_navigation_manage_students')
+        %span{"ng-show" => "section.editing"}
+          %input{"ng-model" => "section.name", placeholder: "Section Name", style: "width: 100%", type: "text"}/
+      %td
+        %span{"ng-hide" => "section.editing"} {{section.login_type}}
+        %span{"ng-show" => "section.editing"}
+          %select{"ng-model" => "section.login_type", "ng-options"=>"value for value in #{DashboardSection::VALID_LOGIN_TYPES.inspect}"}
+      %td
+        %span{"ng-hide" => "section.editing"} {{section.grade}}
+        %span{"ng-show" => "section.editing"}
+          %select{"ng-model" => "section.grade", "ng-options"=>"value for value in #{DashboardSection::VALID_GRADES.inspect}"}
+      %td
+        %span{"ng-hide" => "section.editing"} {{course_list[section.course.id]}}
+        %span{"ng-show" => "section.editing"}
+          %select{"ng-model" => "section.course.id", "ng-options"=>"k*1 as v for (k, v) in course_list"}
+      %td {{section.students.length}}       
+      %td
+        {{section.code}}
+      %td 
+        %span{"ng-show" => "section.confirmDelete"}
+          = I18n.t('dashboard_action_confirm')
+          %button.btn.btn-danger{"ng-click"=>'del(section)'}= I18n.t('dashboard_action_delete_yes')
+          %button.btn.btn-white{"ng-click"=>'section.confirmDelete = false'}= I18n.t('dashboard_action_delete_no')
+        %span{"ng-hide" => "section.confirmDelete"}
+          %button.btn.btn-white{"ng-click" => "edit(section)", "ng-hide" => "section.editing"}= I18n.t('dashboard_action_edit')
+          %button.btn.btn-primary{"ng-click" => "save(section)", "ng-show" => "section.editing"}= I18n.t('dashboard_action_save')
+          %button.btn.btn-white{"ng-click" => "cancel(section)", "ng-show" => "section.editing"}= I18n.t('dashboard_action_cancel')
+          %button.btn.btn-danger{"ng-show" => "!section.editing && section.students.length < 1", "ng-click" => "confirm_delete(section)"}= I18n.t('dashboard_action_delete')
+  %br/
+  %br/
+  %div
+    %p= I18n.t('dashboard_sections_choose_secret')
+    %ul
+      %li= I18n.t('dashboard_sections_secret_word')
+      %li= I18n.t('dashboard_sections_secret_picture')
+      %li= I18n.t('dashboard_sections_print_secrets')
+    %p= I18n.t('dashboard_sections_secret_none')
+    %p= I18n.t('dashboard_privacy_document_link')

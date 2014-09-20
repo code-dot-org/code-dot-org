@@ -1,0 +1,13 @@
+%p#notice= notice
+
+%p
+  %b Element:
+  = @callout.element_id
+%p
+  %b Text:
+  = @callout.localization_key
+
+- if can? :update, @callout
+  = link_to 'Edit', edit_callout_path(@callout)
+\|
+= link_to 'Back', callouts_path

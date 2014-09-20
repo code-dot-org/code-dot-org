@@ -1,0 +1,75 @@
+"id":
+  devise:
+    confirmations:
+      confirmed: Alamat email Anda telah berhasil dikonfirmasi.
+      send_instructions: Anda akan menerima sebuah email dalam beberpa menit dengan
+        instruksi cara konfirmasi akun anda.
+      send_paranoid_instructions: JIka alamat email anda ada didalam database kami,
+        anda akan menerima email dengan instruksi tentang bagaimana mengkonfirmasi
+        akun dalam beberapa menit.
+    failure:
+      already_authenticated: Anda telah masuk.
+      inactive: Akun anda belum diaktifkan.
+      invalid: Email atau kata sandi tidak valid.
+      invalid_token: Token otentikasi tidak valid.
+      locked: Akun anda terkunci.
+      not_found_in_database: Email atau password tidak valid.
+      timeout: Sesi anda kedaluwarsa, silahkan masuk (login) lagi untuk melanjutkan.
+      unauthenticated: Anda harus login atau mendaftar sebelum melanjutkan.
+      unconfirmed: Anda harus mengkonfirmasi akun Anda sebelum melanjutkan.
+    mailer:
+      confirmation_instructions:
+        subject: Petunjuk konfirmasi Code.org
+      reset_password_instructions:
+        subject: Instruksi atur ulang sandi Code.org
+      unlock_instructions:
+        subject: Membuka instruksi
+    omniauth_callbacks:
+      failure: Tidak bisa mengotentikasi Anda dari %{kind} karena "%{reason}".
+      success: Berhasil dikonfirmasi dari rekening %{kind}.
+    passwords:
+      no_token: Anda tidak dapat mengakses halaman ini tanpa datang dari password
+        reset email. Jika Anda datang dari password reset email, pastikan Anda menggunakan
+        URL lengkap yang disediakan.
+      send_instructions: Anda akan menerima email berisi instruksi tentang cara mereset
+        sandi Anda dalam beberapa menit.
+      send_paranoid_instructions: Jika alamat email Anda ada dalam database kami,
+        Anda akan menerima link pemulihan sandi pada alamat email Anda dalam beberapa
+        menit.
+      updated: Kata sandi berhasil diubah. Anda sekarang masuk.
+      updated_not_active: Kata Sandi berhasil diubah.
+    registrations:
+      destroyed: Selamat tinggal! Akun Anda berhasil dibatalkan. Kami berharap untuk
+        bertemu lagi segera.
+      signed_up: Selamat datang! Anda telah berhasil mendaftar.
+      signed_up_but_inactive: Anda telah berhasil mendaftar. Namun, kita bisa tidak
+        memasukkan anda karena akun anda belum diaktifkan.
+      signed_up_but_locked: Anda telah mendaftar berhasil. Namun, kita bisa tidak
+        memasukkan anda karena akun anda terkunci.
+      signed_up_but_unconfirmed: Pesan dengan link konfirmasi telah dikirim ke alamat
+        email anda. Silahkan buka link untuk mengaktifkan akun Anda.
+      update_needs_confirmation: Anda telah berhasil memperbarui akun anda, tetapi
+        kita perlu memverifikasi alamat email baru Anda. Silakan periksa email Anda
+        dan klik pada link konfirmasi untuk menyelesaikan konfirmasi alamat email
+        baru anda.
+      updated: Anda telah berhasil memperbarui akun Anda.
+    sessions:
+      signed_in: Berhasil masuk.
+      signed_out: Berhasil Keluar.
+    unlocks:
+      send_instructions: Anda akan menerima sebuah email dalam beberapa menit dengan
+        instruksi cara konfirmasi akun anda.
+      send_paranoid_instructions: Jika akun anda ada, dalam beberapa menit anda akan
+        menerima email berisi instruksi cara membuka akun.
+      unlocked: Akun anda telah berhasil dibuka. Silakan masuk untuk melanjutkan.
+  errors:
+    messages:
+      already_confirmed: sudah dikonfirmasi, silahkan coba login
+      confirmation_period_expired: perlu dikonfirmasikan dalam %{period}, silakan
+        meminta yang baru
+      expired: telah kadarluarsa, silakan meminta yang baru
+      not_found: Tidak ditemukan
+      not_locked: tidak terkunci
+      not_saved:
+        one: '1 error mengagalkan informasi %{resource} ini untuk disimpan:'
+        other: "%{count} error menggagalkan informasi %{resource} ini untuk disimpan:"

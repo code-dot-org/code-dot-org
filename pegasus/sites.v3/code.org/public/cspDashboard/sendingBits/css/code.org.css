@@ -1,0 +1,43 @@
+body{
+	margin-left: 50px;
+}
+form{
+
+	border: solid 1px #000000;
+	border-radius: 5px;
+	padding: 10px;
+	width: 500px;
+}
+
+#outboundDiv{
+	width: 600px;
+	background-color: orange;
+	border-radius: 20px;
+	padding: 20px;
+}
+
+#timerBox{
+	width: 600px;
+	background-color: #00CC99;
+	border-radius: 20px;
+	padding: 20px;
+}
+
+#inboundDiv{
+	width: 600px;
+
+	background-color: rgb(204,100,255);
+		border-radius: 20px;
+		border-radius: 20px;
+	padding: 20px;
+
+}
+
+#inoutqueues{
+	width: 625px;
+	float: left;
+}
+
+optgroup{
+	font-size: 40px;
+}

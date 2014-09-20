@@ -1,0 +1,401 @@
+"de":
+  data:
+    script:
+      name:
+        20-hour:
+          desc: "Einführung in die Informatik bis 8. Schuljahr"
+          Unplug1: "Teil 1"
+          Maze: "Teil 2"
+          Unplug2: "Teil 3"
+          Unplug3: "Teil 4"
+          Artist: "Teil 5"
+          Unplug4: "Teil 6"
+          Artist2: "Teil 7"
+          Unplug5: "Teil 8"
+          Farmer: "Teil 9"
+          Unplug6: "Teil 10"
+          Artist3: "Teil 11"
+          Unplug7: "Teil 12"
+          Farmer2: "Teil 13"
+          Unplug8: "Teil 14"
+          Artist4: "Teil 15"
+          Unplug9: "Teil 16"
+          Farmer3: "Teil 17"
+          Unplug10: "Teil 18"
+          Artist5: "Teil 19"
+          Unplug11: "Teil 20"
+        Hour of Code:
+          desc: "Programmierstunde"
+          Maze: "Teil 1"
+        Edit Code:
+          desc: "Code bearbeiten (beta)"
+          MazeEC: "Teil 1"
+        2014 Levels:
+          desc: "Hüpfen (beta)"
+          Bounce: "Abschnitt 1"
+        Builder Levels:
+          desc: "von Benutzern erstellte Puzzles (beta)"
+          Custom: "Teil 1"
+        Flappy Levels:
+          desc: "Flappy Bird"
+          Flappy: "Teil 1"
+        Jigsaw Levels:
+          desc: "Puzzle (beta)"
+          Jigsaw: "Teil 1"
+        Step Levels:
+          desc: "Labyrinth (Beta)"
+          MazeStep: "Stage Step"
+        edit-code:
+          desc: "Bearbeiten von Code (Beta)"
+          MazeEC: "Teil 1"
+        events:
+          desc: "Hüpfen (beta)"
+          Bounce: "Teil 1"
+          Studio: "Teil 2"
+        builder:
+          desc: "von Benutzern erstellte Puzzles (beta)"
+          Custom: "Teil 1"
+        flappy:
+          desc: "Flappy Bird"
+          Flappy: "Teil 1"
+        jigsaw:
+          desc: "Puzzle (beta)"
+          Jigsaw: "Teil 1"
+        step:
+          desc: "Labyrinth (Beta)"
+          MazeStep: "Stage Step"
+        wordsearch:
+          desc: "Buchstabierwettbewerb (beta)"
+          WordSearch: "Teil 1"
+    game:
+      name:
+        Unplug1: "Einführung in die Informatik"
+        Maze: "Das Labyrinth"
+        Multi: "Multiple-Choice Sachen"
+        Unplug2: "Computerbezogenes Denken"
+        Unplug3: "Millimeterpapier Programmierung"
+        Artist: "Der Künstler"
+        Unplug4: "Algorithmen"
+        Artist2: "Der Künstler 2"
+        Unplug5: "Funktionen"
+        Farmer: "Der Bauer"
+        Unplug6: "Bedingungen"
+        Artist3: "Der Künstler 3"
+        Unplug7: "Lieder schreiben"
+        Farmer2: "Der Bauer 2"
+        Unplug8: "Abstraktion"
+        Artist4: "Der Künstler 4"
+        Unplug9: "Relais-Programmierung"
+        Farmer3: "Der Bauer 3"
+        Unplug10: "das Internet"
+        Artist5: "Der Künstler 5"
+        Unplug11: "Zusammenfassung"
+        MazeEC: "Das Labyrinth"
+        Bounce: "Bounce"
+        Flappy: "Flappy Bird"
+        Jigsaw: "Puzzle"
+        MazeStep: "Maze Step Mode"
+        Wordsearch: "Wörtersuche"
+    trophy:
+      name:
+        Bronze: "Bronze"
+        Silver: "Silber"
+        Gold: "Gold"
+    concept:
+      description:
+        sequence: "Sequenz"
+        if: "Wenn-Baustein"
+        if_else: "Wenn-Dann-Baustein"
+        loop_times: "Wiederholen-Baustein"
+        loop_until: "Wiederholen-bis-Baustein"
+        loop_while: "Solange-Baustein"
+        loop_for: "Zähler-Baustein"
+        function: "Funktionen"
+        parameters: "Funktionen mit Parametern"
+    level:
+      instructions:
+        maze_2_2: 'Kannst du mir helfen, das freche Schwein zu fangen? Stecke ein paar „vorwärts“-Bausteine zusammen und drücke „Ausführen“, um mir zu helfen. '
+        maze_2_1: "Dieses Schwein lässt meine Federn zu Berge stehen. Hilf mir es zu finden!"
+        maze_2_2_5: "Folge dem Weg und führe mich zum Schwein. Lass mich nicht ins TNT laufen, sonst fliegen die Federn!"
+        maze_2_3: "Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)"
+        maze_2_4: "Bleibe ruhig – und hilf mir, das böse Schwein zu finden. Sonst werde ich noch wütend!"
+        maze_2_5: "Es gibt einen Weg, mit dem ich mit nur zwei Bausteinen zum grünen Schweinchen komme. Findest du ihn?"
+        maze_2_6: "Versuche mich mit nur drei Blöcken zum grünen Eindringling zu bringen."
+        maze_2_7: "Hilf mir dieses böse Schweinchen mit möglichst wenigen Bausteinen zu erwischen. Verwende mehr als einen „Wiederhole _ mal“-Baustein."
+        maze_2_8: 'Wenn ein Baustein grau ist, kannst du ihn nicht löschen. Löse das Rätsel mit dem „wiederholen“-Baustein, der die Aktionen darin 3 mal wiederholt. Versuche die folgenden 3 Bausteine in den grauen „wiederholen“-Baustein zu stecken: bewegen, bewegen, drehen.'
+        maze_2_9: "OK, probiere den neuen „Wiederholen-bis“-Baustein aus – dieser wiederholt alle Aktionen darin, bis ich das grüne Schwein erreiche."
+        maze_2_10: 'Okay, eine letzte Übung - kannst du das mit nur 4 Bausteinen lösen?'
+        maze_2_11: "Sehr geehrte Person. Ich Zombie. Ich hungrig. ... Muss... zur... Sonnenblume... gelangen. Kannst du mich mit nur 5 Bausteinen hin bringen?"
+        maze_2_12: "OK, das ist ähnlich, aber etwas anders. Schaffst du es in nur 5 Bausteinen?"
+        maze_2_13: 'Nutze den neuen "Wenn" Baustein um zu entscheiden wann ich mich drehen soll. Hinweis: Du brauchst nur einen weiteren Baustein, aber schau dir an wie wir es gemacht haben um es beim nächsten Mal alleine machen zu können.'
+        maze_2_14: 'Ok, es ist wie das letzte Puzzle, aber vergiss nicht wie du den "Wenn" Baustein und den "Wiederholen" Baustein zusammen verwendet hast.'
+        maze_2_15: 'Sonnenblume haben will! Benutze einen "Wenn" Baustein um mich mit so wenig Bausteinen wie möglich dort hin zu bringen.'
+        maze_2_16: 'Ok, lass es uns nochmal versuchen - es ist nicht wirklich anders, aber pass vor den Fleischfressenden Pflanzen auf!'
+        maze_2_17: 'Der "Wenn-Ansonsten" Baustein überprüft eine Bedingung und macht dann eine Sache ODER eine andere. Versuche den neuen Baustein zu verwenden um mich zu der Sonnenblume zu bringen.'
+        maze_2_18: 'Noch eine Übung mit dem "Wenn-Ansonsten" Baustein, schaffst du es mit dem ersten Versuch?'
+        maze_2_19: "Können Sie nur 3 Bausteine hinzufügen um mir mit einem komplexen Labyrinth zu helfen? Wenn du es richtig machst, kann ich jeden kurvigen Weg gehen, unabhängig von der Länge."
+        turtle_1_1: "Hallo, ich bin ein Künstler. Du kannst Code schreiben, um mich fast alles malen zu lassen. Benutze ein paar Bausteine um mich die grauen Linien im Bild übermalen zu lassen."
+        turtle_1_2: 'Nun zeichnen Sie ein Quadrat. HINWEIS: Verwenden Sie Ihre Lieblingsfarbe von dem neuen "setze Farbe" Baustein.'
+        turtle_1_3: "Zeichne ein Viereck mit nur 3 Bausteinen."
+        turtle_1_4: 'Zeichne ein Dreieck, dessen Seiten alle unterschiedliche Farben haben. Verwende dazu die "zufällige Farbe"-Option, welche jedes Mal eine andere Farbe verwendet. Hinweis: Du musst herausfinden wie weit du drehen musst, indem du die Nummern im Dreh-Baustein anklickst.'
+        turtle_1_5: "Jetzt zur Übung, zeichne ein Dreieck und dann ein Quadrat um einen Umschlag zu zeichnen."
+        turtle_1_6: 'Kannst du herausfinden wie man dieses Dreieck und Quadrat zeichnet? Tipp: Zuerst das Dreieck zeichnen, dann rechne aus wie viele Umdrehungen benötigt sind, bevor du das Quadrat zeichnest.'
+        turtle_1_7: 'Ok, lass es uns ein wenig schwieriger machen - mal schauen, ob du diese grüne Brille zeichnen kannst. Die Quadrate haben eine Kantenlänge von jeweils 100 Pixel und sie sind 50 Pixel von einander entfernt. Vergiss nicht Grün zu verwenden!'
+        turtle_1_8: 'Ok, versuche herauszufinden was passiert, wenn du diesen Code ausführst (oder drücke "Programm Starten" um es zu versuchen). Danach wiederhole es so oft, um die Zeichnung fertigzustellen. Die Farben werden jedes Mal unterschiedlich sein.'
+        turtle_1_9: "Kannst du herausfinden mit welcher Nummer du das Fragezeichen ersetzen musst, um einen Kreis zu zeichnen?"
+        turtle_1_10: 'Du hast es geschafft! Jetzt, zeichne was du willst! Hier sind ein paar Ideen: ein Strichmännchen, eine Schneeflocke, oder eine Spirale. Probiere auch den neuen "Setze Breite"-Baustein aus. Viel Spaß!'
+        turtle_4_1: 'Kannst du ein Dreieck (mit den Kanten von 100 Pixeln) mit nur 3 Bausteinen zeichnen? Tipp: Verwenden Sie einen "Wiederholen"-Baustein.'
+        turtle_4_2: 'Füge einen "nach rechts drehen um 90 Grad" Baustein irgendwo in der Mitte des Programm, welches sich bereits auf dem Arbeitsplatz befindet, um diese Dreiecke zu zeichnen.'
+        turtle_4_3: 'Ok, hier ist das Programm das du geschrieben hast um ein einzelnes Dreieck zu zeichnen. Kannst du einen "Wiederholen"- und "Drehen"-Baustein hinzufügen um eine hübsche Blume zu zeichnen?'
+        turtle_4_4: 'Hier ist das gleiche Programm aus dem vorherigen Puzzle, aber diesmal nur 36 Grad drehend nach dem Zeichnen jedes Dreiecks. Wie oft muss das wiederholt werden? (Hinweis: nach 360 Grad wird die Zeichnung zu einem vollen Kreis)'
+        turtle_4_5: 'Hier ist das gleiche Programm aus dem vorherigen Puzzle, aber diesmal werden die Drehungen 36 Mal wiederholt. Wie viel Grad müssten die Drehungen sein? (Hinweis: nach 360 Grad wird die Zeichnung zu einem vollen Kreis)'
+        turtle_4_6: "Kannst du ein Viereck mit der Kantenlänge von 20 Pixeln mit nur 3 Bausteinen zeichnen?"
+        turtle_4_7: 'Das ist der Code vom letzten Puzzle, der Quadrate zeichnen kann. Kannst du ihn wiederholen, damit er 10 angrenzende Quadrate zeichnet, die zusammen aussehen wie eine Leiter? Hinweis: du brauchst nur zwei weitere Bausteine.'
+        turtle_4_8: "Hier ist die Lösung für das vorherige Puzzle. Können Sie nur zwei weitere Bausteine benutzen um die Zeichnung zu beenden?"
+        turtle_4_9: "Hier ist die Lösung für das vorherige Puzzle. Wie weit muss gedreht werden um die Zeichnung zu beenden? (Du musst wahrscheinlich ein paar Mal probieren)"
+        turtle_4_10: "Hier ist die Lösung für das vorherige Puzzle. Wie oft musst du wiederholen um die Zeichnung zu beenden?"
+        turtle_4_11: 'Ändere die Werte im "Drehen"- und "Wiederholen"-Baustein um verschiedene Muster zu zeichnen. Oder experimentiere und ändere das restliche Programm um zu Malen was du willst.'
+        maze_karel_1_1: 'Hallo, ich bin ein Bauer. Ich brauche deine Hilfe beim Glätten meines Feldes um es für das Säen vorzubereiten. Bewege mich zu dem Erdblock und nutze den "Entfernen" Baustein um diesen zu entfernen.'
+        maze_karel_1_2: 'Anschließend verschiebe mich in das Loch und fülle es mit zwei Schaufelladungen Erde mit dem "Füllen"-Block.'
+        maze_karel_1_3: "Verschiebe mich zum Erdhaufen und sag mir, wie viele Schaufeln entfernt werden sollen. Verwende dabei so wenig Bausteine wie möglich."
+        maze_karel_1_4: 'Kannst du mir helfen alle vier Haufen Erde zu entfernen? Hinweis: Nutze einen "Wiederholen" Block wenn du kannst.'
+        maze_karel_1_5: 'Helfen Sie diese Löcher mit 5 Schaufeln Erde aufzufüllen. Tipp: Sie können eine "Wiederholen" Baustein innerhalb des Bausteins "Wenn" setzen.'
+        maze_karel_1_6: 'Entfernen Sie alle Erdhaufen, mit so wenig Bausteine wie möglich. Die neuen Optionen im Dropdown-Menü auf dem "Wenn"-Baustein sagen mir, ob ich auf einem Haufen oder einem Loch stehe.'
+        maze_karel_1_7: "Wow, ich habe ein wirklich tiefes Loch gefunden! Ich weiß nicht wie viele Schaufeln von Erde es braucht. Können Sie ein Programm schreiben, das es ausfüllt, bis der Boden eben ist?"
+        maze_karel_1_8: "Hilf mir das Loch am Ende des Feldes zu füllen mit so wenigen Bausteinen wie möglich."
+        maze_karel_1_9: 'Hilf mir, all diese Haufen Erde zu entfernen. Versuche so wenig Bausteine wie möglich zu benutzen. Hinweis: Versuche den „Solange“-Baustein zu benutzen.'
+        maze_karel_1_10: 'Weil ich Überstunden mache und es deshalb draußen schon dunkel ist, kann ich nicht erkennen wie groß die Häufen sind. Jetzt habe ich nicht alle Optionen, die ich sonst beim "solange"-Baustein hatte. Bewege mich am Feld entlang und wenn dort ein Haufen ist, dann entferne ihn.'
+        maze_karel_1_11: 'Es ist immer noch dunkel draußen. Bewege mich am Feld entlang. Wenn dort ein Haufen ist, dann entferne ihn. Ist dort jedoch ein Loch, dann fülle es auf. Hinweis: verwende das Aufklappmenü des "wenn"-Bausteins.'
+        turtle_2_1: 'Hallo. Mich Zombie Künstler. Mich lieben zeichnen! Hilf mir ein Quadrat in einer besonderen Farbe zu zeichnen. Wichtiger Hinweis: du hast die gleichen Bausteine, aber sie wurden jetzt in Kategorien sortiert.'
+        turtle_2_2: 'Willkommen bei der Verwendung von Funktionen. Diese lassen dich neue Bausteine definieren. Probiere den neuen "Zeichne ein Viereck"-Baustein aus, um ein kleines, grünes 50x50 Quadrat zu zeichnen. Den Baustein findest du in der "Funktionen"-Kategorie.'
+        turtle_2_3: 'Verwende den "Wiederholen"-Baustein (in der "Schleifen"-Kategorie), um 3 Quadrate, jeweils 120 Grad entfernt, der Größe 100 zu zeichnen. Verwende dazu 3 verschiedene, zufällige Farben.'
+        turtle_2_4: 'Jetzt wird es interessant. Verändere den Code um 36 Quadrate zu zeichnen, 100 Pixel breit und jeweils 10 Grad von einander entfernt. Hinweis: du kannst den Schiebregler verwenden, um mich schneller werden zu lassen.'
+        turtle_2_5: 'Zeichne Quadrate mit Seitenlängen von 50, 60, 70, 80 und 90 Pixel. Du wirst die "Zeichne ein Quadrat"-Funktion fünf Mal benötigen.'
+        turtle_2_6: 'Ok, dieses Programm verwendet einen Zähler, um die gleichen Quadrate vom letzten Mal zu zeichnen. Du möchtest, dass die Quadrate alle die selbe Größe haben wie der Zähler, deshalb verwende den "Zähler"-Baustein. Hinweis: Er ist in der Variablen Kategorie.'
+        turtle_2_7: 'Das ist ein Programm, das Spiralen zeichnet. Jedoch sind die Bausteine deaktiviert, weshalb sie nicht ausgeführt werden. Erstelle ein neues Programm, welches einen "Zählen mit"-Baustein (in der Schleifen Kategorie) und einen "Zähler"-Baustein (in der Variablen Kategorie) verwendet, um die gleiche Spirale zu zeichnen.'
+        turtle_2_7_5: 'Es gibt eine neue "zeichne einen Schneemann"-Funktion (in der Funktionen Kategorie). Zeichne zwei Schneemänner, mit der Höhe 250 und 100.'
+        turtle_2_8: 'Das ist ein bisschen knifflig. Verwende die "zeichne einen Schneemann"-Funktion und den neuen "springe vorwärts"-Baustein (in der Aktionen Kategorie). Zeichne 3 Schneemänner in verschiedenen Farben, jeweils 100 Pixel von einander entfernt.'
+        turtle_2_9: 'Verwende eine "zähle mit"-Schleife, um eine Schneemann-Familie zu zeichnen. Verwende folgende Höhen: 110, 100, 90, 80. Die Schneemänner sollten alle 60 Pixel von einander entfernt sein.'
+        turtle_2_10: "Hier ist ein wenig Code, um mit verschiedenen Spiralen experimentieren zu können. Was passiert wenn du den Dreh-Betrag veränderst? Oder wenn du eine zufällige Farbe in der Schleife verwendest? Zeichne was du möchtest."
+        maze_karel_2_1: 'Verwende die Bausteine um mir zu helfen alle Haufen wegzuräumen und alle Löcher im Boden aufzufüllen. Versuche Schleifen anstatt zu viele Bausteine zu verwenden. Hinweis: Du kannst eine Schleife in eine andere Schleife hinein setzen.'
+        maze_karel_2_2: 'Wir haben unseren eigenen Baustein, der "fülle 5" heißt, definiert. Er ist jetzt in der Funktionen-Kategorie. Verwende diesen um mir dabei zu helfen die Löcher aufzufüllen.'
+        maze_karel_2_3: 'Verwende den neuen "fülle 5"-Baustein, damit ich alle Löcher auffülle. Du musst den "fülle 5"-Baustein aus der Funktionen-Kategorie herausziehen.'
+        maze_karel_2_4: "Definiere eine neue Funktion, die 7 Schaufeln voller Erde beseitigt. Diese verwende Sie um ein Programm zu schreiben, das mir hilft alle Häufen zu entfernen."
+        maze_karel_2_5: "Erstelle eine neue Funktion, die 6 Schaufeln voller Erde von einem Haufen entfernt und hilf mir mit der Funktion alle Haufen platt zu machen."
+        maze_karel_2_6: 'Verwende zwei neue Funktionen, "fülle 8" und "entferne 8", um mir zu helfen die Haufen platt zu machen und die Löcher aufzufüllen.'
+        maze_karel_2_7: "Da ist eine Kuh in meinem Feld. Schreibe eine Funktion, die mir hilft, der Kuh auszuweichen und den Haufen zu entfernen. Ziehe alle dafür dazu nötigen Bausteine in die neue Funktion."
+        maze_karel_2_8: 'Verwende diese neue Funktion "vermeide die Kuh und entferne 1", um mir zu helfen alle Haufen zu entfernen.'
+        maze_karel_2_9: "OK, ist hier eine Funktion, die 4 verschiedene Erdhaufen in einer vertikalen Spalte entfernt. Versuche diese Funktion in einer Schleife, so dass du alle Haufen mit nur ein paar neuen Bausteinen entfernst."
+        maze_karel_2_10: "Bewege mich über das Feld und verwende diese beiden Funktionen, um mir zu helfen, alle Haufen zu entfernen und alle Löcher zu füllen."
+        turtle_3_1: 'Dieses Puzzle zeigt, wie die Funktionen "Zeichne ein Quadrat" und "Zeichne einen Kreis" definiert sind.  Eine Funktion definieren, führt die Bausteine nicht aus.  Du musst den Bausteine "Zeichne ein Quadrat" ziehen, um ein Quadrat zu zeichnen.'
+        turtle_3_2: 'Benutze die "Zeichne Quadrat"-Funktion als Grundlage und erstelle eine "Zeichne Dreieck"-Funktion und verwende diese entsprechend.'
+        turtle_3_3: 'Zeichne mehrere dreieckige Zäune um die Katzen und einen quadratischen Zaun um die Kuh. Tipp: Am Besten du testest das Programm zwischen durch immer mal wieder.'
+        turtle_3_4: 'Probiere mal, ob du herausfinden kannst, wie du die Funktionen "Zeichne Quadrat" und "Zeichne Dreieck" (und weitere) dazu benutzen kannst, ein Haus um den Löwen herum zu zeichnen.'
+        turtle_3_5: 'Erstelle jetzt eine neue "zeichne ein Haus"-Funktion und verwende sie um zwei Katzen unterzubringen. Hinweis: erstelle eine neue Funktion mit Hilfe des "mach etwas"-Bausteins und gib einen Namen für den Baustein ein.'
+        turtle_3_6: 'Füge eine Eingabe, die "Länge" heißen soll, zu "zeichne ein Dreieck" hinzu, wie im Beispiel "zeichne ein Quadrat". Anschließend, zeichne verschieden große Dreiecke. (Hinweis: klicke auf den Stern, um bei einer Funktion eine Eingabe hinzu zufügen)'
+        turtle_3_7: 'Füge eine Eingabe, die "Höhe" heißen soll, zu "zeichne ein Haus" hinzu und baue ein Haus, das groß genug für den Elefanten ist (die Kanten sollen 150 Pixel lang sein)'
+        turtle_3_8: 'Das hier sind alle Bausteine von den vorherigen Puzzles. Ändere "zeichne ein Haus", so das ich in der unteren, rechten Ecke lande, nachdem ein neues Haus gezeichnet worden ist. Verwende diese modifizierte Funktion um drei Häuser zu zeichnen.'
+        turtle_3_9: 'Kannst du die "zeichne ein Haus"-Funktion ohne Hilfe wieder erstellen? Versuche es und zeichne anschließend eine ganze Reihe von Häusern.'
+        turtle_3_10: "Glückwunsch, du hast jetzt schon viel gelernt. Jetzt kannst alles zeichnen was dir einfällt. Versuch doch mal einen Stern, ein Spirale, oder eine hübsche Schneeflocke."
+        maze_karel_debug_seq_1: 'Willkommen zur "Fehlerbeseitigung"! Mein Code funktioniert nicht richtig. Kannst du das Problem finden und mein Programm reparieren, damit ich mein Feld flach bekomme und es bepflanzt werden kann?'
+        maze_karel_debug_seq_2: "Was ist an diesem Programm falsch? Wie kannst du es reparieren, damit ich diesen Erdhaufen entfernen kann?"
+        maze_karel_debug_repeat: "Suche und beseitige die Fehler in diesem Programm für mich, damit mein Feld wieder flach und schön wird."
+        maze_karel_debug_while: "Was musst du am Programm ändern, damit es mir hilft das Loch zu füllen?"
+        maze_karel_debug_if: "Hilfe! Repariere das Programm, damit mein Feld komplett flach wird."
+        maze_karel_debug_if_else: "Überprüfe dieses Programm auf Fehler und beseitige sie, damit ich alle Löcher auffüllen und alle Erdhaufen entfernen kann."
+        maze_karel_debug_function_1: "Was musst du am Programm ändern, damit es mir hilft alle Erdhaufen zu entfernen?"
+        maze_karel_debug_function_2: "Kannst du dieses Programm für mich auf Fehler überprüfen und sie beseitigen, damit ich mein Feld flach machen kann?"
+        maze_karel_debug_function_3: 'Bearbeite das Programm so, dass ich alle Erdhaufen von meinem Feld entferne. '
+        turtle_5_1: "Versuche, dieses Programm auszuführen und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)"
+        turtle_5_2: "Versuche, dieses Programm auszuführen und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)"
+        turtle_5_3: "Versuche, dieses Programm auszuführen und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)"
+        turtle_5_4: "Versuche, dieses Programm auszuführen und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)"
+        turtle_5_5: "Versuche, dieses Programm auszuführen und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)"
+        turtle_5_6: "Versuche, dieses Programm auszuführen und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)"
+        maze_3_1: "Ich muss zu diesem Schwein kommen! Schreibe ein paar Aufrufe von bewegen(); damit ich mir meine Eier zurückholen kann."
+        maze_3_2: "Schreibe mir ein Programm mit dem ich es bis zu dem Schwein schaffe."
+        maze_3_3: "Wie komme ich zum Schwein? Passe auf das ich nicht in den TNT-Sprengstoff laufe!"
+        maze_3_4: "Argh! Schreibe mir ein Programm das mich um den TNT-Sprengstoff zum Schwein bringt."
+        bounce_1: 'Hänge einen Baustein an den "Wenn linker Pfeil"-Baustein und drücke "Programm ausführen". Bewege jetzt das Paddel mit dem linken Pfeil um das Ziel zu erreichen.'
+        bounce_2: 'Hänge einen Baustein an den "Wenn rechter Pfeil"- und den "Wenn linker Pfeil"-Baustein. Bewege jetzt das Paddel um beide Ziele zu erreichen.'
+        bounce_3: 'Versuche jetzt etwas ähnliches mit dem "Wenn oben Pfeil"-Baustein. Bewege das Paddel zum oberen Ziel.'
+        bounce_4: "Jetzt musst du vier Bausteine anhängen. Bewege das Paddel zu allen vier Zielen, um dieses Puzzle zu lösen."
+        bounce_5: 'Wir werden jetzt einen Ball auf das Paddel runterfliegen lassen. Füge einen Baustein an den "Wenn Ball Paddel berührt"-Baustein um sicherzustellen, dass der Ball das Ziel erreicht.'
+        bounce_6: 'Jetzt ist das Ziel oben. Du musst Bausteine an beide "Wenn Ball auftrifft"-Bausteine anhängen um dieses Puzzle zu lösen.'
+        bounce_7: 'Füge jedem der "Wenn"-Bausteine weitere Bausteine hinzu. Lasse den Ball springen bis er das Ziel trifft.'
+        bounce_10: 'Jetzt gibt es oben ein Ziel. Hänge den "Erziele einen Punkt"- und den "Erziele Gegnerpunkt"-Baustein an den "Wenn Ball im Tor"- und "Wenn Ball Paddel verfehlt"-Baustein, um ein Spiel zu erstellen. Schau wie viele Punkte du erzielen kannst, bevor der Gegner zweimal gewinnt.'
+        bounce_11: 'Du kannst nun Bausteine zum "Wenn ausführen" Baustein hinzufügen. Du musst den "Starte neuen Ball" Baustein an mehreren Orten hinzufügen. Versuche die Szene oder die Geschwindigkeit des Schlägers und des Balls und sieh wie viele Punkte du erzielen kannst, bevor dein Gegner zwei Punkte macht.'
+        bounce_12: 'Baue dein eigenes Bounce-Spiel. Du kannst alle Grafiken und Regeln ändern. Wenn du fertig bist, klick "Abschliessen" um dein Spiel deinen Freunden zu zeigen.'
+        Custom_builder: 'Ziehe Bausteine aus deiner Werkzeugkiste auf den Arbeitsplatz um den Level zu zeichnen, welchen du erstellen möchtest. Drücke auf "Ausführen" wenn du bereit bist.'
+        flappy_1: 'Füge einen Baustein zum "Wenn klick" Baustein hinzu, dann drücke "Ausführen". Klicke oder berühre den Bildschirm um Flappy zum Ziel zu bewegen.'
+        flappy_2: 'Nun haben wir etwas Boden hinzugefügt. Füge dem "Wenn auf Boden gestürzt"-Baustein einen weiteren Baustein hinzu. Dein Programm benötigt einen "Spiel beendet"-Baustein, wenn Flappy zu Boden stürzt.'
+        flappy_3: 'Der "Wenn ausführen" Baustein erlaubt dir Code auszuführen, wenn dein Spiel startet. Versuche die Geschwindigkeit des Levels zu setzen und zum Ziel zu fliegen.'
+        flappy_4: 'Flappy fliegt durch Hindernisse hindurch, es sei denn, du programmierst ihn so, dass er abstürzt. Füge einen Baustein zum "Wenn Hindernis getroffen"-Baustein hinzu. Dein Programm muss "SPIEL BEENDEN", wenn Flappy gegen die ersten Rohre knallt.'
+        flappy_5: 'Füge einen Punktezähler hinzu, der Punkte zählt, wenn Flappy es an Hindernissen vorbeischafft. Füge ihn zum "Wenn Hindernis überwunden"-Baustein hinzu und erziele einen Punkt, indem du Flappy durch die erste Reihe von Rohren fliegst.'
+        flappy_6: "Versuche, ob du auch dann einen Punkt erzielen kannst, wenn Flappy schwächer oder stärker flattert."
+        flappy_7: 'Versuche als nächstes die Szene zu ändern indem du einen weitern Baustein zum "Wenn ausführen" Baustein hinzufügst.'
+        flappy_8: "Du kannst jederzeit Bilder festlegen, nicht nur zu Spielbeginn. Versuche, einen zufälligen Hintergrund zu setzen, wenn andere Ereignisse stattfinden, zum Beispiel wenn ein Hindernis überwunden wird."
+        flappy_9: 'Bring etwas Abwechslung hinein: statt bei einem Zusammenstoß oder einem Aufprall zu Boden das Spiel zu beenden, versuche stattdessen den Punktestand auf Null zurückzusetzen.'
+        flappy_11: 'Erstelle dein eigenes Flappy Spiel. Du kannst alle Grafiken, die Regeln und sogar die Schwerkraft verändern. Wenn du fertig bist, klicke auf "Teilen" um das Spiel deinen Freunden zu zeigen.'
+        flappy_k1_1: "Flappy spielen"
+        flappy_k1_2: 'Füge dem "Wenn geklickt"-Baustein einen weiteren Baustein hinzu und drücke dann "Programm ausführen". Klicke oder tippe auf den Bildschirm, um Flappy zum Ziel zu bewegen.'
+        flappy_k1_3: 'Nun haben wir etwas Boden hinzugefügt. Füge dem "Wenn auf Boden gestürzt"-Baustein einen weiteren Baustein hinzu. Dein Programm benötigt einen "Spiel beendet"-Baustein, wenn Flappy zu Boden stürzt.'
+        flappy_k1_4: 'Der "Wenn ausführen" Baustein erlaubt dir Code auszuführen, wenn dein Spiel startet. Versuche die Geschwindigkeit des Levels zu setzen und zum Ziel zu fliegen.'
+        flappy_k1_5: 'Flappy fliegt durch Hindernisse hindurch, es sei denn, du programmierst ihn so, dass er abstürzt. Füge einen Baustein zum "Wenn Hindernis getroffen"-Baustein hinzu. Dein Programm muss "SPIEL BEENDEN", wenn Flappy gegen die ersten Rohre knallt.'
+        flappy_k1_6: 'Füge einen Punktezähler hinzu, der Punkte zählt, wenn Flappy es an Hindernissen vorbeischafft. Füge ihn zum "Wenn Hindernis überwunden"-Baustein hinzu und erziele einen Punkt, indem du Flappy durch die erste Reihe von Rohren fliegst.'
+        flappy_k1_7: "Versuche mehrere Punkte zu erzielen, indem du die ersten Rohre umfliegst."
+        flappy_k1_8: 'Versuche als nächstes die Szene zu ändern indem du einen weitern Baustein zum "Wenn ausführen" Baustein hinzufügst.'
+        flappy_k1_9: 'Versuche den Charakter zu ändern, idem du einen "Setze Spieler" Baustein zum "Wenn ausführen" Baustein hinzufügst.'
+        jigsaw_1: "Klicke auf den Baustein"
+        jigsaw_2: "Ziehe den Baustein zum Ziel"
+        jigsaw_3: "Ordne die Teile an um das Bild zu erstellen"
+        jigsaw_4: "Ordne die Teile an um das Bild zu erstellen"
+        jigsaw_5: "Ordne die Teile an um das Bild zu erstellen"
+        jigsaw_6: "Ordne die Teile an um das Bild zu erstellen"
+        jigsaw_7: "Ordne die Teile an um das Bild zu erstellen"
+        jigsaw_8: "Ordne die Teile an um das Bild zu erstellen"
+        jigsaw_9: "Ordne die Teile an um das Bild zu erstellen"
+        jigsaw_10: "Ordne die Teile an um das Bild zu erstellen"
+        jigsaw_11: "Ordne die Teile an um das Bild zu erstellen"
+        jigsaw_12: "Ordne die Teile an um das Bild zu erstellen"
+        jigsaw_13: "Repariere das Puzzle!"
+        mazestep_1: "Maze step description here"
+        mazestep_2: "Maze step description here"
+        mazestep_3: "Maze step description here"
+        mazestep_4: "Maze step description here"
+        mazestep_5: "Maze step description here"
+        studio_c2_1: 'Kannst du diesen Hund "Hallo Welt" sagen lassen?'
+        studio_c2_2: "Kannst du erst den Hund und danach die Katze etwas sagen lassen?"
+        studio_c2_3: "Kannst du ein Program schreiben, bei welchem der Hund auf die Katze zugeht?"
+        studio_c2_4: 'Kannst du ein Programm schreiben, bei welchem der Hund zur Katze geht und die Katze "Hallo" sagt, sobal der Hund sie erreicht?'
+        studio_c2_5: 'Kannst du ein Programm schreiben, bei welchem der Tintenfisch "Hallo" sagt, wenn er geklickt wird?'
+        studio_c2_6: "Kannst du ein Programm schreiben um den Pinguin mit den Pfeilttasten zu steuern und alle Ziele zu treffen?"
+        studio_c2_7: 'Der "wiederholen für immer" Baustein erlaubt es dir Code ohne Unterbruch auszuführen. Kannst du mehr Bausteine hinzufügen um den Dinosaurier wiederholt auf und ab laufen zu lassen?'
+        studio_c2_8: 'Kannst du den Pinguin "Autsch!" sagen lassen und einen "Getroffen" Ton abspielen, wenn er in den Dinosaurier läuft, und ihn dazu mit den Pfeiltasten zu bewegen?'
+        studio_c2_9: "Kannst du einen Baustein hinzufügen um eine Punkt zu erzeilen, wenn der Pinguin in den Tintenfisch rennt, und ihn dann mit den Pfeiltasten bewegen bis du einen Punkt erzielst?"
+        studio_c2_10: "Kannst du Bausteine hinzufügen um den Hintergrund und die Geschwindigkeit des Pinguins zu ändern, und in dann mit den Pfeiltasten zu bewegen bis du punktest?"
+        studio_c2_11: 'Erzähl deine eigene Geschichte. Wenn du fertig bist, klick auf "Abschliessen" um deine Geschichte deinen Freunden zu zeigen.'
+        studio_c3_story_1: 'Kannst du diesen Hund "Hallo Welt" sagen lassen?'
+        studio_c3_story_2: "Kannst du erst den Hund und danach die Katze etwas sagen lassen?"
+        studio_c3_story_3: "Kannst du ein Program schreiben, bei welchem der Hund auf die Katze zugeht?"
+        studio_c3_story_4: 'Kannst du ein Programm schreiben, bei welchem der Hund zur Katze geht und die Katze "Hallo" sagt, sobal der Hund sie erreicht?'
+        studio_c3_story_5: "Kannst du einen Baustein hinzufügen um den Tintenfisch glücklich zu machen?"
+        studio_c3_story_6: 'Erzähl deine eigene Geschichte. Wenn du fertig bist, klick auf "Abschliessen" um deine Geschichte deinen Freunden zu zeigen.'
+        studio_c3_game_1: 'Kannst du ein Programm schreiben, bei welchem der Tintenfisch "Hallo" sagt, wenn er geklickt wird?'
+        studio_c3_game_2: "Kannst du ein Programm schreiben um den Pinguin mit den Pfeilttasten zu steuern und alle Ziele zu treffen?"
+        studio_c3_game_3: 'Der "wiederholen für immer" Baustein erlaubt es dir Code ohne Unterbruch auszuführen. Kannst du mehr Bausteine hinzufügen um den Dinosaurier wiederholt auf und ab laufen zu lassen?'
+        studio_c3_game_4: 'Kannst du den Pinguin "Autsch!" sagen lassen und einen "Getroffen" Ton abspielen, wenn er in den Dinosaurier läuft, und ihn dazu mit den Pfeiltasten zu bewegen?'
+        studio_c3_game_5: "Kannst du einen Baustein hinzufügen um eine Punkt zu erzeilen, wenn der Pinguin in den Tintenfisch rennt, und ihn dann mit den Pfeiltasten bewegen bis du einen Punkt erzielst?"
+        studio_c3_game_6: "Kannst du Bausteine hinzufügen um den Hintergrund und die Geschwindigkeit des Pinguins zu ändern, und ihn dann mit den Pfeiltasten bewegen bis du punktest?"
+        studio_c3_game_7: 'Erstelle deine eigenes Spiel. Wenn du fertig bist, klick auf "Abschliessen" um deine Geschichte deinen Freunden zu zeigen.'
+        studio_playlab_1: 'Kannst du diesen Hund "Hallo Welt" sagen lassen?'
+        studio_playlab_2: "Kannst du erst den Hund und danach die Katze etwas sagen lassen?"
+        studio_playlab_3: "Kannst du ein Program schreiben, bei welchem der Hund auf die Katze zugeht?"
+        studio_playlab_4: 'Kannst du ein Programm schreiben, bei welchem der Hund zur Katze geht und die Katze "Hallo" sagt, sobal der Hund sie erreicht?'
+        studio_playlab_5: 'Kannst du ein Programm schreiben, bei welchem der Tintenfisch "Hallo" sagt, wenn er geklickt wird?'
+        studio_playlab_6: "Kannst du ein Programm schreiben um den Pinguin mit den Pfeilttasten zu steuern und alle Ziele zu treffen?"
+        studio_playlab_7: 'Der "wiederholen für immer" Baustein erlaubt es dir Code ohne Unterbruch auszuführen. Kannst du mehr Bausteine hinzufügen um den Dinosaurier wiederholt auf und ab laufen zu lassen?'
+        studio_playlab_8: "Kannst du einen Baustein hinzufügen um eine Punkt zu erzeilen, wenn der Pinguin in den Tintenfisch rennt, und ihn dann mit den Pfeiltasten bewegen bis du einen Punkt erzielst?"
+        studio_playlab_9: "Kannst du Bausteine hinzufügen um den Hintergrund und die Geschwindigkeit des Pinguins zu ändern, und in dann mit den Pfeiltasten zu bewegen bis du punktest?"
+        studio_playlab_10: 'Erstelle deine eigenes Spiel. Wenn du fertig bist, klick auf "Abschliessen" um deine Geschichte deinen Freunden zu zeigen.'
+        studio_full_sandbox: 'Erstelle deine eigenes Spiel. Wenn du fertig bist, klick auf "Abschliessen" um deine Geschichte deinen Freunden zu zeigen.'
+        studio_k1_1: 'Kannst du diesen Hund "Hallo Welt" sagen lassen?'
+        studio_k1_2: "Kannst du erst den Hund und danach die Katze etwas sagen lassen?"
+        studio_k1_3: "Kannst du ein Program schreiben, bei welchem der Hund auf die Katze zugeht?"
+        studio_k1_4: 'Lass den Hund auf die Katze zugehen und die Katze "Hallo" sagen, wenn er dort ankommt.'
+        studio_k1_5: "Kannst du einen Baustein hinzufügen um den Tintenfisch glücklich zu machen?"
+        studio_k1_6: "Erzähl deine eigene Geschichte! Bewege die Katze und den Hund, und bring sie zum reden."
+        maze_wordsearch_k_1: "Move me to spell the word EAST"
+        maze_wordsearch_k_2: "Move me to spell the word SOUTH"
+        maze_wordsearch_k_3: "Move me to spell the word WEST"
+        maze_wordsearch_k_4: "Move me to spell the word NORTH"
+        maze_wordsearch_k_6: "Move me East and then South to spell the word JUMP"
+        maze_wordsearch_k_9: "Move me one way, then another to spell the word CODE"
+        maze_wordsearch_k_13: "Move me one way, then another to spell the word DEBUG"
+        maze_wordsearch_k_15: "Move me one way, then another to spell the word ABOVE"
+        maze_wordsearch_k_16: "Move me one way, then another to spell the word BELOW"
+        maze_wordsearch_k_20: "This is a test! Move me one way, then another to spell the word STORY"
+    video:
+      name:
+        maze_intro: "Labyrinth Einführung"
+        artist_intro: "Künstler Einführung"
+        farmer_intro: "Bauer Einführung"
+        flappy_intro: "Flappy Intro"
+        loop_times: "Wiederhole-Anzahl-Baustein"
+        loop_until: "Wiederhole-Bis-Baustein"
+        if: "Wenn-Baustein"
+        if_else: "Wenn/Ansonsten-Baustein"
+        function: "Funktionen"
+        loop_while: "Solange-Baustein"
+        loop_for: "Zähler-Baustein"
+        parameters: "Funktionen mit Parametern"
+        hoc_wrapup: "Programmierstunde Zusammenfassung"
+        20_wrapup: "20-Stunden Zusammenfassung"
+        Unplug1: "Was ist Informatik?"
+        Unplug2: "Computerbezogenes Denken"
+        Unplug3: "Millimeterpapier Programmierung"
+        Unplug4: "Algorithmen"
+        Unplug5: "Funktionen"
+        Unplug6: "Bedingungen"
+        Unplug7: "Songwriting"
+        Unplug8: "Abstraktion"
+        Unplug9: "Relay programming"
+        Unplug10: "Internet"
+        Unplug11: "Zusammenfassung"
+        C1_happy_maps_unplugged: "Happy Maps"
+        C1_moveitmoveit_unplugged: "Bewegung, Bewegung"
+        C1_bigevent_unplugged: "Der große Event"
+        C1_getting_loop: "Getting Loopy"
+        C1_pair_programming: "Pair Programming"
+        C1_maze_intro_sequencing: "Maze Sequencing Intro"
+        C1_maze_debugging: "Maze Debugging"
+        C1_bee_level_intro: 'Bee Level - Intro'
+        C1_artist_intro: "Künstler Einführung"
+        C1_spelling_bee_intro: "Spelling Bee Intro"
+        C1_zuck_repeat_loop: "Maze Loops"
+        C1_bee_loops: "Bee Loops"
+        C1_maze_loops: "Maze Loops"
+        C1_playlab_storytelling: 'Play Lab - Create a Story'
+        C1_planting_seed: "Planting a Seed"
+        C1_building_foundating: "Grundlagen aufbauen"
+        C2_maze_intro: "Labyrinth Einführung"
+        C2_artist_intro: "Künstler Einführung"
+        C2_zuck_repeat_loop: "Maze Loops"
+        C2_artist_loops: "Artist Loops"
+        C2_bee_conditionals: "Bee Conditionals"
+        C2_playlab_createstory: 'Play Lab - Create a Story'
+        C2_graph_paper: "Millimeterpapier Programmierung"
+        C2_conditionals_with_cards: "Bedingungen"
+        C2_binary_bracelets: "Binary Bracelets"
+        C2_replay_programming: "Relais-Programmierung"
+        C2_paper_airplanes: "Paper Airplanes"
+        C3_maze_intro: "Labyrinth Einführung"
+        C3_artist_intro: "Künstler Einführung"
+        C3_artist_functions: "Artist Functions"
+        C3_bee_functions: "Bee Functions"
+        C3_bee_conditionals: "Bee Conditionals"
+        C3_maze_conditionals: "Maze Conditionals"
+        C3_artist_nested_loops: "Nested Loops"
+        C3_farmer_while: "While Loops"
+        C3_bee_nested_loops: "Nested Loops"
+        C3_bee_debugging: "Bee Debugging"
+        C3_bounce: "Bounce"
+        C3_playlab_create_game: 'Play Lab - Create a Game'
+        C3_computational_thinking: "Computerbezogenes Denken"
+        C3_dice_race: "Dice Race"
+        C3_internet: "Internet"
+        C3_crowdsourcing: "Crowdsourcing"
+        C3_functional_suncatchers: "Functional Suncatchers"
+        C3_songwriting_with_parameters: "Songwriting With Parameters"
+    callout:
+      text:
+        drag_blocks: 'Drag a "move" block and snap it below the other block'
+        run: 'Hit "Run" to try your program'
+        watch_again: "Hier klicken, um das Video nochmal anzusehen"
+        gray_block_explanation: "Graue Blöcke können nicht gelöscht werden. Kannst du das Puzzle trotzdem lösen?"
+        show_code_explanation: "Klicke hier, um den Code deines Programms zu sehen"
+        instructions_repeat_explanation: "The instructions for each puzzle are repeated here"
+        category_explanation: "You have all the same blocks but they've now been arranged in categories"
+        set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
+        studio_say_text: "Type what you want your actor to say within these quotes"
+        jigsaw_click: "Click this block!"

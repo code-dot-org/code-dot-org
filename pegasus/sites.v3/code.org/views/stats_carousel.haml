@@ -1,0 +1,67 @@
+-statistics = DB[:cdo_cs_statistics].all.to_a
+-facebook = {:u=>'http://code.org/stats'}
+-twitter = {:url=>"http://#{request.site}/promote", :related=>'codeorg', :hashtags=>'CODE', :text=>'What’s wrong with this picture? To fix this, sign the petition.'}
+
+#stats-carousel-wrapper.carousel-wrapper
+  #stats-carousel.carousel
+    .slides
+      -statistics.each do |statistic|
+        .slide
+          .slide-img<
+            %img{:src=>"/images/cs-stats/#{statistic[:code_s]}.png"}
+    %a.slide-prev{:href=>'#'}<
+      %span<
+        %span.label Previous
+    %a.slide-next{:href=>'#'}<
+      %span<
+        %span.label Next
+  .pagination
+    %div{:id => "stats-carousel-pagination"}
+
+= view :share_buttons, facebook:facebook, twitter:twitter
+.full-infographic-link
+  %a{:href=>'http://code.org/stats'}<
+    View the full infographic
+.stats-sources-link
+  %a{:href=>'https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub'}<
+    Source data
+
+%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+:javascript
+  $(document).ready(function() {
+
+    var statistics = #{JSON.pretty_generate(statistics)};
+
+    var id = '#stats-carousel';
+    // Define the carousel using the ID.
+    $(id + ' .slides').carouFredSel({
+      items : 1,
+      auto  : false,
+      responsive : false,
+      prev  : id + ' .slide-prev',
+      next  : id + ' .slide-next',
+      pagination : '#stats-carousel-pagination',
+      swipe	: {
+        onTouch : true,
+        onMouse : false
+      },
+      scroll : {
+        onAfter : update_share_buttons
+      },
+      onCreate : update_share_buttons
+    });
+
+    function update_share_buttons() {
+      var pos = $(id + ' .slides').triggerHandler("currentPosition");
+      if(statistics[pos] != null) {
+        var facebook_anchor = $('#stats-section .share-button-facebook').parents('a.window-popup');
+        var new_facebook_href = facebook_anchor.attr('href');
+
+        if(statistics[pos].share_url_s != null) {
+          new_facebook_href = new_facebook_href.replace(/u=[^&]*/i, 'u=' + encodeURIComponent(statistics[pos].share_url_s));
+        }
+        facebook_anchor.attr('href', new_facebook_href);
+      }
+    }
+  });

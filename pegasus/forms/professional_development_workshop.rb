@@ -1,0 +1,54 @@
+class ProfessionalDevelopmentWorkshop
+
+  def self.normalize(data)
+    result = {}
+
+    result[:dates] = required data[:dates]
+    result[:location_name_s] = required stripped data[:location_name_s]
+    result[:location_address_s] = required stripped data[:location_address_s]
+    result[:grade_level_s] = 'K-5'
+    result[:type_s] = required enum(data[:type_s].to_s.strip, ['Public', 'Private'])
+    result[:capacity_s] = required stripped data[:capacity_s]
+    result[:notes_s] = stripped data[:notes_s]
+
+    # Email and name come from the dashboard user.
+    result[:email_s] = required email_address data[:email_s]
+    result[:name_s] = stripped data[:name_s]
+
+    result
+  end
+
+  def self.receipt()
+    'workshop_receipt'
+  end
+
+  def self.process(data)
+    {
+      'location_p' => data['location_p'] || geocode_address(data['location_address_s'])
+    }
+  end
+
+  def self.index(data)
+    data = data.dup
+    data['dates_ss'] = [].tap do |results|
+      data['dates'].each do |date|
+        results << date['date_s'] + ", " + date['start_time_s'] + " - " + date['end_time_s']
+      end
+    end
+    data.delete('dates')
+    data
+  end
+
+  def self.solr_query(params)
+    query = {
+      kind_s: self.name,
+      type_s: 'Public',
+    }.map{|key,value| "#{key.to_s}:#{value.to_s}"}.join(' AND ')
+
+    {
+      q:query,
+      rows:200,
+    }
+  end
+
+end

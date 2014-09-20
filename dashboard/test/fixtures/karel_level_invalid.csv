@@ -1,0 +1,22 @@
+100,100,100,100,100,100,100,100
+hi,100,100,5,101,-5,100,100
+100,100,100,5,100,-5,100,100
+100,100,100,5,100,-5,100,100
+100,100,102,101,100,-5,100,100
+100,100,100,100,100,100,100,100
+100,100,100,100,100,100,100,100
+100,100,100,100,100,100,100,100
+,,,,,,,
+,Create a new level for Maze,,,,,,
+,,,,,,,
+,WHAT THE NUMBERS MEAN:,,,,,,
+,100 = border/wall,,,,,,
+,101 = path,,,,,,
+,102 = start,,,,,,
+,,,,,,,
+,-99 .. +99 Pile or hole size,,,,,,
+,,,,,,,
+,To make your own level:,,,,,,
+,"1) Copy this spreadsheet (from the File menu, choose ""Make a copy"")",,,,,,
+,2) Edit the cells in the grid to what you want,,,,,,
+,"3) Make sure your grid is in the upper left and spans a 8 x 8 grid, as it does in this file.",,,,,,

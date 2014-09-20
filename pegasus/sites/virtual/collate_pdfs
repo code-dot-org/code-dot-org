@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require_relative '../../../deployment'
+require 'cdo/rack/rackup'
+require 'cdo/only_one'
+
+def main()
+  Rack.with_rackup(pegasus_dir, port:8079) do |params|
+    system 'rake', '--rakefile', pegasus_dir('sites/virtual/collate_pdfs.rake'), "base_url=http://localhost.code.org:#{params[:port]}/"
+    exit $?.exitstatus
+  end
+end
+
+main() if only_one_running?(__FILE__)

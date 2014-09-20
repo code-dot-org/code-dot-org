@@ -1,0 +1,13 @@
+<% var msg = require('../../locale/current/common') %>
+
+<% var root = location.protocol + '//' + location.host.replace('learn\.', ''); %>
+
+<div id="learn">
+
+  <h1><a href="<%= root %>"><%= msg.wantToLearn() %></a></h1>
+  <a href="<%= root %>"><img id="learn-to-code" src="<%= BlocklyApps.assetUrl('media/promo.png') %>"></a>
+  <a href="<%= root %>"><%= msg.watchVideo() %></a>
+  <a href="<%= root %>"><%= msg.tryHOC() %></a>
+  <a href="<%= location.protocol + '//' + location.host %>"><%= msg.signup() %></a>
+
+</div>

@@ -1,0 +1,10 @@
+name 'K-1 Maze Loops Multi 2'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/k_1_images/move_blocks/SESESEequals.png, 240'
+height '150'
+
+question 'Pick the correct repeat block.'
+wrong '/script_assets/k_1_images/move_blocks/r3_S.png'
+wrong '/script_assets/k_1_images/move_blocks/r3_ES.png'
+right '/script_assets/k_1_images/move_blocks/r3_SE.png'

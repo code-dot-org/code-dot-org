@@ -1,0 +1,74 @@
+"pt":
+  devise:
+    confirmations:
+      confirmed: Seu endereço de email foi confirmado com sucesso.
+      send_instructions: Você receberá um email, em poucos minutos, com instruções
+        sobre como confirmar sua conta.
+      send_paranoid_instructions: Se seu endereço de email constar em nosso banco
+        de dados, em poucos minutos você receberá um email com instruções sobre como
+        confirmar sua conta.
+    failure:
+      already_authenticated: Você já está conectado.
+      inactive: Sua conta ainda não foi ativada.
+      invalid: Email ou senha inválidos.
+      invalid_token: Chave de autenticação inválida.
+      locked: Sua conta está bloqueada.
+      not_found_in_database: Email ou senha inválidos.
+      timeout: Sua sessão expirou, entre novamente para continuar.
+      unauthenticated: Você precisa entrar ou cadastrar-se antes de continuar.
+      unconfirmed: Você precisa confirmar sua conta antes de continuar.
+    mailer:
+      confirmation_instructions:
+        subject: Instruções de confirmação da Code.org
+      reset_password_instructions:
+        subject: Instruções para redefinição de senha da Code.org
+      unlock_instructions:
+        subject: Instruções de Desbloqueio
+    omniauth_callbacks:
+      failure: Não foi possível autenticar %{kind} porque "%{reason}".
+      success: Conta %{kind} autenticada com sucesso.
+    passwords:
+      no_token: Você só pode acessar essa página através de um email de redefinição
+        de senha. Se você acessou através de um email de redefinição de senha, verifique
+        se você usou o endereço completo fornecido.
+      send_instructions: Você receberá um email em alguns minutos com instruções sobre
+        como redefinir sua senha.
+      send_paranoid_instructions: Se o seu endereço de email constar no nosso banco
+        de dados, você receberá um link de recuperação de senha em seu email em poucos
+        minutos.
+      updated: Sua senha foi alterada com sucesso. Você está conectado.
+      updated_not_active: Sua senha foi alterada com sucesso.
+    registrations:
+      destroyed: Sua conta foi cancelada com sucesso. Esperamos vê-lo novamente em
+        breve.
+      signed_up: Bem-vindo! Você se registrou com sucesso.
+      signed_up_but_inactive: Você se registrou com sucesso. No entanto, você precisa
+        ativar sua conta para poder entrar.
+      signed_up_but_locked: Você se registrou com sucesso. No entanto, sua conta está
+        bloqueada, e por isso você não pôde entrar.
+      signed_up_but_unconfirmed: Uma mensagem com um link de confirmação foi enviada
+        para seu endereço de email. Clique no link para ativar sua conta.
+      update_needs_confirmation: Você atualizou sua conta com sucesso, mas precisamos
+        verificar seu novo endereço de email. Verifique seu email e clique no link
+        para confirmar seu novo endereço.
+      updated: Você atualizou sua conta com sucesso.
+    sessions:
+      signed_in: Autenticado com sucesso.
+      signed_out: Desconectado com sucesso.
+    unlocks:
+      send_instructions: Você receberá um email, em poucos minutos, com instruções
+        sobre como desbloquear sua conta.
+      send_paranoid_instructions: Se sua conta existir, você receberá um email, em
+        poucos minutos, com instruções sobre como desbloqueá-la.
+      unlocked: Sua conta foi desbloqueada com sucesso. Faça a autenticação para continuar.
+  errors:
+    messages:
+      already_confirmed: já confirmado, tente se conectar
+      confirmation_period_expired: precisa ser confirmado dentro de %{period}, faça
+        uma nova solicitação
+      expired: expirou, faça uma nova solicitação
+      not_found: não encontrado
+      not_locked: não foi bloqueado
+      not_saved:
+        one: '1 erro impede esse %{resource} de ser salvo:'
+        other: "%{count} erros impedem esse %{resource} de ser salvo:"

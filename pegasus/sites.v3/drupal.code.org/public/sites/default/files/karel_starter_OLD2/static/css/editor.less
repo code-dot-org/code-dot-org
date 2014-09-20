@@ -1,0 +1,377 @@
+@import "main";
+
+body {
+    //background:#FFF !important;
+}
+
+
+
+#directions-modal{
+    position: fixed;
+    top: 50px;
+
+    background-color: rgba(0,0,0, 0.8);
+
+    z-index: 1000;
+
+    width: 1000px;
+
+    left: 50%;
+    margin-left: -530px;
+
+    padding: 30px;
+
+
+
+    .directions{
+        background-color: white;
+        padding: 20px;
+
+        .top{
+            h2{
+                float: left;
+            }
+            .lets-go-button{
+                float: right;
+                margin-bottom: 10px;
+
+                button{
+                    font-size: 24px;
+                    font-weight: bold;
+                    display: inline-block;
+
+                }
+            }
+            overflow: hidden;
+        }
+
+
+
+        .editor-exercise, .editor-exercise p{
+            font-size: 17px;
+            background-color: #ccc;
+        }
+
+        .result{
+            overflow: hidden;
+
+            .result-single{
+                float: left;
+
+                img{
+                    width: 350px;
+                }
+            }
+
+            .result-start{
+                margin-right: 20px;
+            }
+
+            .left-exercise{
+                float: left;
+                width: 540px;
+                margin-left: 40px;
+                margin-top: 29px;
+
+                .editor-exercise div{
+                    margin-bottom: 20px;
+                }
+            }
+
+            .demo-buttons{
+                margin-top: 10px;
+            }
+
+
+        }
+
+
+
+
+
+        overflow: hidden;
+    }
+}
+
+
+#tab-bar {
+    margin:10px;
+    margin-top:5px;
+}
+
+#status-message{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 24px;
+}
+
+.editor-exercise{
+	background-color: @actionGreen;
+	padding: 9px;
+	margin-bottom: 4px;
+    .rounded-corners(3px);
+	font-size: 15px;
+}
+
+.CodeMirror{
+    width: 100%;
+    background-color:#FFF;
+
+
+}
+.CodeMirror-scroll{
+    // height: 800px; 
+    //height: 100%;
+    border:1px solid #999;
+    .rounded-corners(3px);
+}
+#game{
+    margin: 0px 40px 10px 12px;
+}
+
+canvas{
+    border: 2px solid black;
+    
+    background:#FFF !important;
+}
+#error{
+    border: 1px solid black;
+    background-color: #eee;
+    padding: 10px;
+    width: 382px;
+    margin-left: 12px;
+    overflow: hidden;
+    height: 100px;
+}
+
+#karel-grader {
+    width:400px;
+}
+
+#left{
+    .left;
+    width: 50%;
+    min-width:500px;
+    padding:10px;
+
+    .action{
+        .name, .editor-title{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .help_button{
+            margin-left: 10px;
+        }
+
+    }
+
+    /* This styles images that show what the results of completing an 
+     * exercise should look like */
+    .result{
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        z-index: 1000;
+        cursor: pointer;
+        width: 250px;
+
+
+        .result-text{
+           font-size: 20px;
+           font-weight: bold;
+           padding: 10px;
+        }
+
+        padding: 5px;
+        background-color: white;
+        border: 1px dashed black;
+
+        img.ex-result{
+            width: 250px;
+        }
+
+    }
+}
+
+
+/* For minimizing icons */
+.icon-hide-show{
+    background-color: #eee;
+    float: right;
+
+    &:hover{
+        background-color: #ccc;
+    } 
+}
+
+
+#right{
+    width: 45%;
+    .left;
+    border-left: 2px solid black;
+    height:590px;
+    overflow:auto;
+    margin-left:10px;
+    background:#FFF !important;
+}
+
+.editor_button{
+	margin: 0 7px 8px 0;
+}
+
+
+#speed_slider{
+    width: 252px;
+    margin: 15px 28px;
+    .left;
+}
+.speed_label{
+    .left;
+    margin: 13px;
+
+}
+
+.buttons{
+    margin: 10px;
+    margin-top:0px;
+}
+
+#console{
+    width: 396px;
+    height: 300px;
+    margin: 0 0 10px 12px;
+    border: 2px solid gray;
+    padding:3px;
+    overflow-y:auto;
+    font-family: monospace;
+
+    &.graphics {
+        height:100px;
+    }
+}
+
+textarea#console:focus{
+    outline: none !important;
+}
+
+
+#documentation-tab{
+    pre{
+        width: 400px;
+    }
+
+    table.karel{
+        pre{
+            width: 200px;
+        }
+    }
+
+    table.conditions{
+        pre{
+            width: 200px;
+        }
+    }
+
+    #docs {
+        padding-left:150px;
+    }
+
+    #docs-nav {
+        position:fixed;
+        top:150px;
+        width:120px;
+        padding:5px;
+    }
+}
+
+
+#video-tab{
+    img{
+        width: 500px;
+    }
+}
+
+
+#history-tab {
+    .code-version{
+        .rounded-corners(5px);
+
+        background-color: #ccc;
+        margin: 4px 0;
+        width: 250px;
+
+        &:hover{
+            background-color: #ccc + #111;
+        }
+
+        .code-timestamp{
+            float: left;
+            width: 200px;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .code-full{
+            display: none;
+        }
+
+        overflow: hidden;
+    }
+
+}
+
+.history-message {
+    margin-left:3px;
+}
+
+.new-messages {
+    .bold;
+    color:#dd0000;
+}
+
+.image-wrapper {
+
+    img {
+        height: 400px;
+    }
+
+}
+
+#autograder-modal {
+    .world-status {
+        margin:10px;
+
+        .name {
+            margin-top:3px;
+        }
+
+        .status {
+            margin:5px;
+            width:15px;
+            height:0px;
+            .rounded-corners(20px);
+        }
+
+        .pass {
+            border-bottom:15px solid @completeColor;
+            background:#FFF;
+            &:hover {
+                background: #FFF;
+                border-bottom:15px solid darken(@completeColor, 15%);
+            }
+        }
+
+        .fail {
+            border-bottom:15px solid @rejectedColor;
+            background:#FFF;
+            &:hover {
+                background: #FFF;
+                border-bottom:15px solid darken(@rejectedColor, 15%);
+            }
+        }
+    }
+
+}

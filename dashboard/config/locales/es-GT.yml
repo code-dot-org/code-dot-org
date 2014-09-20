@@ -1,0 +1,565 @@
+"es-GT":
+  activerecord:
+    errors:
+      messages:
+        blank: es preciso
+    attributes:
+      user:
+        name: Nombre
+        email: Correo electrónico
+        username: Nombre de usuario
+        password: Contraseña
+        password_confirmation: Confirmación de la contraseña
+        current_password: Contraseña actual
+        locale: Idioma
+        age: Edad
+        gender: Sexo
+        edit_header: Editar información de la cuenta
+        error:
+          future: No puede ser en el futuro
+  hello: Hola mundo
+  welcome_back: Bienvenido, %{name}
+  add_teacher_form:
+    code_or_email:
+      label: 'Agregar a un maestro mediante código o dirección de correo electrónico:'
+      placeholder: Código (ABCDEF) o correo electrónico (maestro@escuela.edu)
+    code:
+      label: 'Agregar un maestro por medio del código de sección:'
+      placeholder: Código (ABCDEF)
+    submit: Añadir maestro
+  add_hint_form:
+    placeholder: Por favor introduce aquí tu pista
+    submit: Agregar pista
+  appname: Code.org
+  stage: Etapa
+  puzzle: Puzzle
+  trophies: Trofeos
+  courses: Cursos
+  of: de
+  more: MÁS
+  less: MENOS
+  try_hoc: 'Prueba la Hora del Código, haz clic aquí >> '
+  try_k8intro: Prueba nuestro curso de Introducción a la informática K-8 (15-25 horas)
+  k8intro: K-8 Introducción al Curso de Ciencias de la Computación (15-25 horas)
+  already_started: "¿Ya empezaste? Reanudar aquí >> "
+  demos: 'Administrador: Todas las Demostraciones'
+  continue: Continuar
+  prize: Premio
+  more_info: 'Más información '
+  auth:
+    sign_in_with: Iniciar sesión con %{provider}
+    signed_in: "¡Sesión iniciada!"
+    signed_out: Te has salido de <a href="%{url}">Code.org</a>.
+    sign_out_of: Has utilizado %{provider} para ingresar. <a href="%{url}">Toca aqui</a>para
+      salir de %{provider}.
+    already_signedup: "¿Ya estás registrado?"
+    notyet_signedup: "¿Aún no te has unido?"
+    google_oauth2: Cuenta de Google
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Cuenta de Microsoft
+    forgot_password: "¿Olvidaste tu contraseña?"
+    need_confirmation: "¿No recibiste las instrucciones de confirmación?"
+    need_unlock: "¿No recibiste las instrucciones de desbloqueo?"
+  signup_form:
+    overview_student: Regístrate en una cuenta para darle seguimiento a su progreso.
+    overview_teacher: Enseñe programación en su salón de clase.  Regístrese para obtener
+      una cuenta.<p/>Usted podrá registrar el progreso de sus alumnos y obtener recompensas.
+    no_signup_message: Usted puede <a target="_blank" href="http://learn.code.org">
+      navegar por las diferentes etapas y rompecabezas</a>, pero tendrá que inscribirse
+      para guardar su progreso.
+    prizes_message: Los estudiantes Estadounidenses que consigan todos los %{num_trophies}
+      trofeos de concepto, pueden seleccionar varios premios incluyendo espacio gratuito
+      en Dropbox, crédito en Skype y juegos descargables de Electronic Arts.
+    teacher_educator_guide: Consulte la guía del educador
+    teacher_prize_header: Gane $1,000 dólares americanos en recompensas de <a target="_blank"
+      href="http://DonorsChoose.org">DonorsChoose.org</a> (válido hasta el 15 de Junio
+      de 2014, o hasta que se agote)
+    teacher_prize_message: 'En conjunto con <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
+      Code.org ofrecerá hasta $1,000 dólares americanos en financiamiento para los
+      salones de clases, para los maestros de escuelas públicas de Estados Unidos
+      que guíen al menos a 15 estudiantes a través de la introducción K-8 del curso
+      de programación (válido hasta el 15 de Junio de 2014, o hasta que se agote).  <a
+      href="http://code.org/educate/20hr">Vea la guía del maestro</a>. (Limitado a:
+      $1,000 dólares americanos por maestro. <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">Vea
+      las preguntas frecuentes para mas limitantes.</a>.)'
+    teacher_pitch: Registro del maestro para Code.org
+    teacher_title: Profesor Regístrate
+    student_pitch: Registro de estudiante para Code.org
+    student_title: Unirse como Estudiante
+    school_name: Nombre de la escuela (opcional)
+    school_address: Dirección de la escuela (opcional)
+    address_placeholder: Dirección, ciudad, estado/provincia, código postal
+    gender: Sexo (opcional)
+    birthday: Cumpleaños (opcional)
+    age: Edad
+    submit: Registrarse
+    teacher: "¿Eres un maestro/a?"
+    valid_username: "¡ Disponible!"
+    invalid_username: El Nombre de usuario debe tener al menos 5 caracteres
+    taken_username: El Nombre de usuario ya fue asignado
+    valid_password: Contraseña válida!
+    invalid_password: La Contraseña debe tener al menos 6 caracteres
+    mismatch_password: Las dos contraseñas que introdujo no coinciden
+    student_terms: Acepto estar obligado a cumplir los <a href='http://code.org/tos'>términos
+      de uso del servido </a> de Code.org. Si tengo menos de 13 años, confirmo al
+      enviar este formulario que tengo permiso de mis padres o tutores legales para
+      usar los servicios de Code.org.
+    teacher_terms: Acepto estar obligado a cumplir los <a href='http://code.org/tos'>términos
+      de uso del servicio</a>.
+    additional_information: Necesitamos alguna información adicional para continuar
+      con su registro.
+  signin_form:
+    title: "¿Ya tienes una cuenta? Inicia sesión"
+    login: Correo electrónico o nombre de usuario
+    password: Contraseña
+    remember: Recordarme
+    submit: Iniciar Sesión
+  signin:
+    try_heading: "¿Deseas intentar codificar sin registrarte?"
+    try_hoc: Prueba primero Una Hora de Código
+    try_20hours: Prueba ahora Introducción a la informática en 20 horas
+  signinsection:
+    welcome: Bienvenido a %{section_name}
+    name: Elige tu nombre
+    picture: Ahora encuentra tu foto secreta
+    words: Introduce ahora tus palabras secretas
+    login: Firma
+  password:
+    reset_form:
+      title: "¿Olvidaste tu contraseña?"
+      email: Dirección de correo electrónico
+      submit: Enviarme las instrucciones para reestablecer la contraseña
+    change_form:
+      title: Cambiar tu contraseña
+      new_password: Nueva contraseña
+      confirm_password: Confirmar nueva contraseña
+      submit: Cambiar mi contraseña
+  welcome_email:
+    subject: Unirme a mi clase (en Code.org)
+    body: |
+      Haz click en el vínculo de más abajo para registrarte y usar tutoriales de ciencias de la computación en Code.org (conmigo como tu "maestro"):
+
+      %{link}
+
+      Los tutoriales son divertidos, visualmente atractivos, y enseñan los conceptos básicos de las ciencias de la computación usando una experiencia similar a un juego, simple y guiada. Aprende a programar con Bill Gates, Mark Zuckerberg, Angry Birds, y Plantas vs. Zombis! :-)
+
+      %{name}
+  follower:
+    invite_sent: Invitación enviada
+    added_teacher: "%{name} añadido como tu maestro"
+    registered: Se/te ha/has inscrito para % {section_name}.
+    error:
+      signed_in: Por favor cierra la sesión antes de proceder
+      username_not_found: Usuario %{username} no encontrado
+      username_in_use: "%{username} ya está ocupado, por favor elije otro"
+      no_teacher: No se pudo encontrar a nadie que haya iniciado sesión con '%{teacher_email_or_code}'.
+        Por favor pídeles que se registren aquí e intenta agregarlos otra vez
+      section_not_found: No pudimos encontrar una sección con el código '%{section_code}'.
+      blank_code: Por favor ingresa un código de sección
+      cant_join_own_section: Lo sentimos, no se puede unir a su propia sección.
+    mail:
+      invite_student:
+        subject: "Únete a una clase con %{teacher_name} en Code.org!"
+      student_disassociated:
+        subject: 'Notificación Code.org: %{student_name} ya no está asociado como
+          tu estudiante.'
+      teacher_disassociated:
+        subject: 'Notificación de Code.org: %{teacher_name} ya no está asociado como
+          tu profesor.'
+  reports:
+    error:
+      access_denied: No tienes acceso a las estadísticas de esta persona
+  redeem_prizes:
+    title: 'Canjear premios: %{name}'
+    provider: 'Proveedor:'
+    code: 'Código:'
+    redeem_header: 'Para canjear:'
+    donorschoose_register: Regístrate como profesor en DonorsChoose.org
+    donorschoose_project: Publica un proyecto
+    donorschoose_how_to: Cómo utilizar tu código
+    success: Su premio fue exitosamente compensado, vea el código más abajo.
+    error: El premio no puede ser canjeado, inténtelo nuevamente.
+    error_us_only: La oferta del premio es válida únicamente para los usuarios de
+      Estados Unidos.
+    error_not_earned: Aún no has ganado este premio.
+    error_already_redeemed: Tu premio ya ha sido canjeado.
+    no_prizes_available: Lo sentimos, pero actualmente no tenemos premios disponibles.
+    teacher_info_required: 'Los premios para el profesor requieren el nombre de la
+      escuela y su dirección:'
+    teacher_email_required: 'Los premios para el profesor requieren una dirección
+      de correo confirmada:'
+    confirm:
+      title: Confirme por favor
+      'no': 'No'
+      'yes': Sí
+      msg: "¿Seguro que desea reclamar el premio %{prize_name} ?"
+      msg_student: 'Nota: Sólo se puede elegir un tipo de premio.'
+      msg_publicschool: Por favor confirme que usted es un maestro de escuela pública
+        de Estados Unidos.
+      msg_visit_website: Visite el sitio web
+    providers:
+      apple_itunes: Tarjeta de regalo de $10 iTunes
+      donors_choose: DonorsChoose.org $750 credit
+      donors_choose_bonus: DonorsChoose.org $250 credit
+      dropbox: 10GB de espacio en Dropbox
+      valve: Portal 2 (PC or Mac game download)
+      ea_bejeweled: Bejeweled 3 (PC game download)
+      ea_fifa: FIFA Soccer 13 (PC game download)
+      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
+      ea_pvz: Plants vs. Zombies (PC game download)
+      skype: "$10 Skype credit"
+    msg:
+      choose: 'Escoje un premio:'
+      choose_teacher: 'Click on the logo below to claim your prize:'
+      earned: Te has ganado un premio! (Sólo estudiantes de Estados Unidos)
+      not_earned_title: Termina el tutorial, gana premios (solo para estudiantes de
+        Estados Unidos)
+      not_earned: 'Aprende todos los conceptos de ciencias de la computación, recoge
+        todos los %{num_trophies} trofeos y gana premios reales. Usted puede elegir
+        entre 10GB de espacio libre de Dropbox, 10 dólares en créditos de Skype, y
+        descargas gratis de juegos. Nota: oferta válida sólo para estudiantes de Estados
+        Unidos mientras duren las existencias.'
+      teacher:
+        earned: 15 o más estudiantes obtuvieron todos los %{num_trophies} trofeos.
+          ¡Has ganado un premio de maestro! (Sólo maestros de Estados Unidos)
+        not_earned_title: Da una clase y gana hasta $1.000 en <a target="_blank"href="http://DonorsChoose.org">DonorsChoose.org</a>
+          créditos (solo para profesores de Estados Unidos)
+        not_earned: Para recompensar a profesores que enseñen ciencias de la computación
+          por primera vez, usted puede ganar hasta $1.000 en créditos de <a href="http://DonorsChoose.org">
+          DonorsChoose.org</a> por guiar un grupo a través del curso de introducción
+          de K-8. Para calificar, necesita organizar y guiar con éxito una clase de
+          por lo menos 15 estudiantes a través de todo el curso de introducción de
+          K-8, con los 15 estudiantes (o más) completando todas las instrucciones
+          y ganando todos los %{num_trophies} trofeos. Si del conjunto de los alumnos
+          que ganen todos los trofeos consta de al menos 7 niñas, su recompensa será
+          de $1,000 en créditos <a target="_blank" href="http://DonorsChoose.org">
+          DonorsChoose.org</a>. De lo contrario será de será de $750.  Los créditos
+          <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> sólo
+          pueden utilizarse por profesores que trabajen para escuelas públicas en
+          Estados Unidos.
+        bonus:
+          not_earned_title: Todavía puedes ganar otros $250 en <a target="_blank"href="http://DonorsChoose.org">DonorsChoose.org</a>
+            créditos (solo para profesores de Estados Unidos)
+          earned: Al menos 7 de los estudiantes que recolectaron todos los %{num_trophies}
+            trofeos son niñas. ¡Has ganado un premio de bonificación! (Sólo para profesores
+            de Estados Unidos)
+          not_earned: Si por lo menos 7 de sus estudiantes que ganan los %{num_trophies}
+            trofeos son chicas, su recompensa será $250 adicionales en <a target="_blank"
+            href="http://DonorsChoose.org"> DonorsChoose.org</a> créditos. <a target="_blank"
+            href="http://DonorsChoose.org"> DonorsChoose.org</a> Los  créditos sólo
+            pueden ser utilizados por profesores en escuelas públicas de Estados Unidos.
+  crud:
+    new_model: Nuevo %{model}
+    show: Mostrar
+    edit: Editar
+    edit_model: Editar %{model}
+    update: Actualizar
+    destroy: Destruir
+    back: Atrás
+    confirm: "¿Estás seguro?"
+    created: "%{model} se ha creado correctamente."
+    updated: "%{model} se actualizó correctamente."
+    destroyed: "%{model} fue eliminado satisfactoriamente."
+    access_denied: No tienes acceso a este %{model}.
+  nav:
+    header:
+      finished_hoc: He terminado mi Hora de Código
+      sign_in_to_save: Inicia sesión para guardar tu progreso
+    user:
+      classroom: Mis alumnos
+      label: Hola %{username}
+      stats: Mi progreso
+      settings: Mi cuenta
+      prizes: Premios
+      logout: Cerrar sesión
+      signin: Iniciar Sesión
+      signup: Registrarse
+      already_registered: Already registered?
+    popup:
+      progress: Tu progreso
+      lines: 'Total de líneas de código: %{lines}'
+      close: CERRAR
+      mastery: Conceptos
+      puzzle_map: Etapas
+      prizes: Recoger todos los %{total_trophies} trofeos y ganar premios!
+      prize_earned: Todos los trofeos %{total_trophies} han sido recogidos. ¡Premio
+        ganado!
+      prize_us_only: "(Sólo estudiantes de Estados Unidos)"
+      prizes_link: más información
+  teacher:
+    title:
+      one: 'Tu profesor:'
+      other: 'Tus maestros:'
+    remove: "(eliminar profesor)"
+    confirm:
+      remove: "¿Estás seguro que quieres eliminar este profesor?"
+    tools: Herramientas del maestro/a
+    followers:
+      section: 'Sección:'
+      stages: 'Fase(s) para mostrar:'
+      show_past: 'Mostrar la actividad (%{bullet_html}) previa del alumno:'
+      levels_key: Llave para los niveles
+      perfect: Terminado, perfecto
+      completed: Terminado, pero utilizando demasiados bloques
+      tried: Intentado, pero no terminado
+      not_tried: No intentado aún
+      activity: Muestra la actividad del alumno en las últimas %{hours} %{plural}
+      no_section: Sección no asignada
+      trophies: Trofeos
+    students:
+      name: Nombre
+      username: Nombre de Usuario
+      password: Contraseña
+      manage: Administrar los alumnos
+      dashboard: Ir a el panel del maestro
+      add: Añadir alumnos/as
+      remove: eliminar estudiante
+      confirm_remove: "¿Esta seguro que desea remover este estudiante?"
+      help_reassign: Para dividir la clase en multiples secciones, seleccione algunos
+        alumnos para asignarlos a una nueva sección.
+      help_register: En lugar de hacerte perder mucho tiempo importando en solitario
+        datos de estudiantes puedes configurar tu clase rápidamente pidiéndoles que
+        se registren. Tus estudiantes necesitarán elegir nombres de usuario y claves,
+        pero NO estarán obligados a proporcionar una dirección de correo electrónico.
+        Si un estudiante olvida su clave, podrás restablecerla.
+      register: Pide a tus estudiantes que se registren ellos mismos
+      vist: Pide a tus estudiantes que visiten
+      section_code: 'e introduzcan su código de sección:'
+      first_please: Primero, por favor %{add_section}
+      for: Para
+      enter: 'introduzca:'
+    sections:
+      add: Agregar Sección
+      manage: Administrar secciones
+      section: Sección
+      students: Estudiantes
+      section_code: Código de sección
+      add_section_code: Añade los códigos de sección de los estudiantes
+      secret: Secret type
+      grade: Grado
+      course: Curso
+      rename: Renombra
+      edit: Edita
+      delete: Borra
+      confirm_delete: "¿Estás seguro de que quieres borrar esta sección?"
+      email: Manda un correo electrónico
+    rollup: Panel de progreso
+    activity: Actividad reciente de la clase
+    user_not_found: El profesor o el estudiante no se encontró
+    cant_remove_student_no_email: "%{student_name} no puede eliminarse como su estudiante
+      porque % {student_name} no ha registrado una dirección de correo electrónico"
+    cant_remove_teacher_no_email: "%{teacher_name} no puede eliminarse como tu maestro,
+      porque no has registrado una dirección de correo electrónico"
+    student_teacher_disassociated: "%{teacher_name} ha sido eliminado como profesor
+      de %{student_name}"
+  user:
+    email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
+    email_resend_confirm: Reenviar las instrucciones de confirmación
+    new_password_hint: "(déjalo en blanco si no quieres cambiarlo)"
+    current_password_hint: "(necesitamos tu contraseña actual para confirmar los cambios)"
+    cancel:
+      title: Cancelar mi cuenta
+      hint: "¿No estás contento?"
+      button: Cancelar mi cuenta
+  user_level:
+    completed: Completada
+    tried: Intentaste
+  user_stats:
+    recent_activity: Actividad reciente
+    show_more: Mostrar más
+    classroom_activity: Actividad fuera de línea
+  home:
+    title: Code Studio
+    signin_message: "¿Ya estás registrado? %{link}"
+    student_reg_link: Estudiante Regístrate
+    teacher_reg_link: Profesor Regístrate
+    signin_directions: Use una cuenta para registrar el progreso.<br/> Maestros, lleven
+      el registro de su clase completa.
+    teacher_dashboard: Ver panel de progreso
+    teacher_student_count_one: Tiene(s) %{count} estudiante(s).
+    teacher_student_count: Tienes %{count} estudiantes.
+    teacher_averages: Un promedio de tus estudiantes han ganado %{trophy_average}
+      de %{trophy_max} trofeos "Dominio del Concepto" .
+    teacher_print_certificates: Imprimir certificados para los alumnos que terminan
+      este curso
+    teacher_read_blog: Lee noticias y actualizaciones de nuestro material en nuestro
+      Blog del Educador
+    classroom: Tu aula
+    student_progress: Tu progreso de aprendizaje
+    student_stats: Has ganado %{trophy_count} de %{trophy_max} trofeos de  "Maestría
+      de Conceptos".
+    student_left_off: 'Donde dejaste:'
+    student_finished_prize: Has completado todos los tutoriales, reclama tu %{prize_link}
+      y elige otra clase de %{online_link} o %{local_school_link}
+    student_finished: Has completado todos los tutoriales, elige otra clase %{online_link}
+      o en %{local_school_link}
+    local_school: escuela local
+    online: en línea
+    see_details: Ver detalles
+    prize_info: 'Premio por participación (Solamente maestros de escuelas públicas
+      de Estados Unidos): hasta $1,000 dólares americanos en recompensas para el salón
+      de clases.'
+    tryfirst: 'O, puedes probarlo primero y registrarte más adelante:'
+    trynow: Probar ahora
+    add_hint_help: Por favor ayudenos a agregar consejos útiles a los tutoriales de
+      Code.org
+    20hour_overview: Este curso de 20 horas, presenta los conceptos de ciencias computacionales
+      y programación.  Este curso esta diseñado para usarse en el salón de clase para
+      grados de primaria y secundaria, pero es divertido aprender para todas las edades.
+    test_videos_help: Pruebe nuestro nuevo reproductor de video en su escuela
+    try_beta_courses: "¡Nuevo! Intenta nuestros cursos en beta para estudiantes de
+      K-5"
+    use_as_teacher: Usa este sitio como un profesor
+    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
+    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+  gender:
+    male: Hombre
+    female: Mujer
+    none: Prefiero no contestar
+  footer:
+    help_from_html: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado
+      a crear este tutorial.
+    art_from_html: Angry Brids&trade;&&copy; 2009-2013 Rovio Entertainment Ltd. Todos
+      los derechos reservados. <br/>Plantas contra Zombies&trade;&&copy; 2013 Electronic
+      Arts Inc. Todos los derechos reservados.
+    feedback: Enviar comentarios
+    translate: Ayúdanos a traducir a tu idioma
+    support: Soporte
+    tos: Términos
+    privacy: Política de Privacidad
+    secure: Versión Segura
+  prize_mail:
+    prize_earned:
+      subject: Canjea tu premio en Code.org!
+    teacher_prize_earned:
+      subject: "¡Felicitaciones de parte de Code.org!"
+    teacher_bonus_prize_earned:
+      subject: Canjea tu premio de bonificación en Code.org!
+  reference_area:
+    title: "¿Necesitas ayuda?"
+    subtitle: Ver estos videos y sugerencias
+    teacher: Ver la solución
+    auth_error: No estás autorizado para ver la solución.
+    submit: Actualizar la localidad del Artista
+    direction: Comienzo de Indicaciones
+  video:
+    tab: Video.
+    notes: "¿No hay video? Mostrar notas."
+    notes_coming_soon: Notas para este vídeo, próximamente.
+    autoplay_option: Reproducir videos automáticamente
+    download: Descargar video
+  compatability:
+    working: Estamos trabajando en dar soporte para tu navegador.
+    upgrade: Por favor actualiza su navegador.
+  slow_loading: Esto está tardando más tiempo de lo habitual...
+  try_reloading: Intente recargar la página
+  next_stage: "¡Acabado! Sigue a la siguiente etapa"
+  download_pdf: Abrir la planificación de la lección
+  view_lesson_plan: Mira el plan para la lección
+  pdf_download: Descarga el PDF
+  share_code:
+    title: Haga clic en "Ejecutar" para ver el programa en acción
+    bounce_og_title: Revisa mi juego Bounce
+    flappy_og_title: Echale un vistazo a mi juego Flappy Bird
+    studio_og_title: Revisa mi historia
+    og_description: Yo escribí el código con Code.org
+  builder:
+    created: Has creado un nuevo código.
+    destroyed: Has eliminado un código.
+    manage: Construir Niveles
+    view: Ver
+    back: Volver a códigos
+    success: Haz editado exitosamente los bloques.
+    level:
+      create: Crear nuevo nivel
+      current: Niveles actuales
+      unused: Niveles no utilizados
+  upsell:
+    hoc:
+      title: La Hora de Programación
+      body: Prueba lo básico de programación.  Millones lo han probado.
+    flappy:
+      title: Código de Flappy
+      body: "¿Quieres escribir tu propio juego en menos de 10 minutos?  ¡Prueba nuestro
+        tutorial con el código de Flappy!"
+    20hour:
+      title: Curso de Introducción
+      body: Prueba nuestro curso de introducción a las ciencias computacionales, tiene
+        una duración de 20 horas.
+  gallery:
+    students_drew_these_with_code: "¡Los estudiantes dibujaron esto con código!"
+    picture_count: En los pasados <b>%{days}</b> días, los estudiantes han dibujado
+      <b>%{count}</b> imágenes con programas escritos por ellos mismos.  Haz clic
+      en las imágenes para ver cada program en acción.
+    want_to_make_your_own: "¿Quieres hacer el tuyo?"
+    more: Más &rarr;
+  landing:
+    prerelease: Este curso está en fase <span class='betatext'>beta</span>. Esto significa
+      que no es la versión final del curso y está sujeta a revisión conforme recibimos
+      comentarios y hacemos mejoras.
+    feedback: Envía comentarios
+    report_bug: Informar sobre un error
+    support: Obtén ayuda
+  multi:
+    wrong_title: Respuesta incorrecta
+    wrong_body: La respuesta no es correcta. Por favor ¡intenta de nuevo!
+    correct_title: Correcto
+    correct_body: Esa respuesta es correcta.
+  match:
+    wrong_title: Solución Erronea
+    wrong_body: La solución ingresada no es la correcta.  ¡Intenta nuevamente!
+    correct_title: Correcto
+    correct_body: Esa respuesta es la correcta.
+  dialog:
+    ok: OK
+  time:
+    hour: 1 hora
+    day: día
+    week: semana
+  data:
+    script:
+      name:
+        20-hour:
+          title: Curso de Introducción a las Ciencias de la Computación K-8 (15-25
+            horas)
+          description: Este curso de 20 horas presenta los conceptos de ciencia computacional
+            y programación. El curso está diseñado para ser utilizado en clases para
+            alumnos del nivel K-8, pero es divertido para aprender a cualquier edad.
+        Hour of Code:
+          title: Una hora de código
+          description: ''
+        edit-code:
+          title: Edita el código
+          description: ''
+        events:
+          title: Eventos
+          description: ''
+        builder:
+          title: Constructor
+          description: ''
+        flappy:
+          title: Código Flappy
+          description: "¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba
+            nuestro tutorial de Código Flappy!"
+        jigsaw:
+          title: Rompecabezas
+          description: ''
+        step:
+          title: Paso
+          description: ''
+        sample_level_builder:
+          title: Muestra del Nivel Construcción
+          description: ''
+  age_interstitial:
+    age: Tu edad
+    header: Actualización de la información de tu cuenta
+    message: 'Estamos actualizando nuestro servicio para ofrecerte una mayor protección
+      de privacidad. Para hacerlo, necesitamos que los usuarios introduzcan aquí su
+      edad. <br/>Como siempre, code.org nunca alquilará, venderá o compartirá esta
+      información con terceros. '
+    sign_out: Si no quieres proporcionar tu edad puedes <a heref="%{url}">firmar</a>.
+  zendesk_too_young_message: Lo siento, los usuarios más jóvenes no pueden registrarse
+    en nuestro sitio de soporte. Puedes navegar <a href="http://support.code.org">support.code.org</a>
+    sin registrarte o pedir a tus padres o profesores que nos contacten en tu nombre.

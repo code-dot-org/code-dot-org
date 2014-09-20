@@ -1,0 +1,25 @@
+#warning-banner
+  .expanded{style: 'display: none;'}
+    %i.fa.fa-warning
+    = t("compatability.working.header")
+    %span#hide-warning.btn.btn-primary= t("compatability.working.hide_this_warning")
+    %p
+      != t("compatability.working.message", report_issue_url: "https://support.code.org/hc/en-us/requests/new", supported_browsers_url: "https://support.code.org/hc/en-us/articles/202591743")
+  .collapsed{style: 'display: none; cursor: pointer; text-align: left; font-size: 10px; line-height: 10px;'}
+    %i.fa.fa-warning
+    = t("compatability.working.header")
+  :javascript
+    if (document.cookie.indexOf('hide-unsupported-browser-warning') >= 0) {
+      $("#warning-banner .collapsed").show();
+    } else {
+      $("#warning-banner .expanded").show();
+    }
+    $("#warning-banner #hide-warning").click(function () {
+      document.cookie = "hide-unsupported-browser-warning=1; path=/";
+      $("#warning-banner .expanded").slideUp('fast');
+      $("#warning-banner .collapsed").slideDown('fast');
+    });
+    $("#warning-banner .collapsed").click(function () {
+      $("#warning-banner .expanded").slideDown('fast');
+      $("#warning-banner .collapsed").slideUp('fast');
+    });

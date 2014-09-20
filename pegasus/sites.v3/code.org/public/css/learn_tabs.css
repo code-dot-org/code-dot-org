@@ -1,0 +1,44 @@
+#learn-tabs {
+  margin-top: 0px;
+  width: 100%;
+  background-color: #cdd1d4;
+  text-align: center;
+}
+#learn-tabs .content {
+  margin: 0 auto;
+  width: 970px;
+  padding-top: 20px;
+  text-align: left;
+}
+#learn-tabs ul {
+  margin: 0;
+}
+#learn-tabs ul li {
+  padding-left: 0;
+  text-indent: 0;
+}
+#learn-tabs ul li:before {
+  content: none;
+}
+#learn-tabs .nav-tabs>li>a {
+  border: none;
+  background-color: #7765a1;
+  margin-right: 10px;
+}
+#learn-tabs .nav-tabs > li.active > a {
+  background-color: white;
+}
+#learn-tabs .nav-tabs>li>a:link,
+#learn-tabs .nav-tabs>li>a:visited {
+  color: #fff;
+}
+#learn-tabs .nav-tabs>li>a:hover,
+#learn-tabs .nav-tabs>li>a:active {
+  color: #d1d567
+}
+#learn-tabs .nav-tabs>li.active>a:link,
+#learn-tabs .nav-tabs>li.active>a:visited,
+#learn-tabs .nav-tabs>li.active>a:hover,
+#learn-tabs .nav-tabs>li.active>a:active {
+  color: #ff8b02;
+}

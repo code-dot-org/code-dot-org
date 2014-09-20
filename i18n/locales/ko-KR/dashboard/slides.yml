@@ -1,0 +1,253 @@
+"ko":
+  slides:
+    maze_intro:
+      1:
+        image: "notes/hoc1_1.jpg"
+        text: "Hour of code 에 오신 것을 환영합니다. 프로그래밍의 재미를 느껴 보세요."
+      2:
+        image: "notes/hoc1_2.jpg"
+        text: '코드를 작성하기 위해, 드래그 & 드롭 방식의 비주얼 프로그래밍 언어인 블러클리(Blockly)를 사용합니다.'
+      3:
+        image: "notes/hoc1_3.jpg"
+        text: "대부분의 프로그래밍언어들은 텍스트로 작성해야 하지만, 블러클리는 그래픽 방식의 블럭들을 이용해 프로그래밍 합니다. 각 각의 블럭들은 실제 프로그래밍언어(자바스크립트) 코드와 1:1로 대응합니다."
+      4:
+        image: "notes/hoc1_4.jpg"
+        text: "화성 탐사선 제어 프로그램과 같이 어디서나 사용될 수 있는, 프로그램들을 만들기 위해 필요한기초적인 개념들과, 컴퓨터과학(정보과학)의 프로그래밍과 알고리즘에 대해 간단히 경험할 수 있습니다."
+      5:
+        image: "notes/hoc1_5.jpg"
+        text: "프로그램은 컴퓨터가 실행해야하는 명령들의 집합이라고 할 수 있습니다."
+      6:
+        image: "notes/hoc1_6.jpg"
+        text: "처음 만드는 프로그램의 목표는, 앵그리버드를 움직여 초록 돼지를 잡는 것 입니다."
+      7:
+        image: "notes/hoc1_7.jpg"
+        text: "왼쪽은 프로그램이 실행되는 미로입니다. 각 퍼즐의 목표들은 미로의 아래쪽에 나타납니다."
+      8:
+        image: "notes/hoc1_8.jpg"
+        text: "가운데 도구상자는 앵그리버드를 움직이기 위한 명령들이 있습니다. 이 블럭들을 사용해 프로그램의 코드를 만들 수 있습니다."
+      9:
+        image: "notes/hoc1_9.jpg"
+        text: "오른쪽은, 프로그램을 만들기 위해 도구 상자에서 블럭들을 꺼내어 놓는 곳입니다. 블럭을 삭제하려면, 구석에 있는 휴지통에 버리면 됩니다."
+      10:
+        image: "notes/hoc1_10.jpg"
+        text: '하나의 블럭은 하나의 명령을 의미합니다. "앞으로 이동하기" 블럭을 오른쪽의 프로그래밍 영역에 가져다 놓은 후, "프로그램 실행"을 누르면, 앵그리버드가 한 칸 앞으로 이동합니다.'
+      11:
+        image: "notes/hoc1_11.jpg"
+        text: "동작을 여러 번 실행시키기 위해서는, 여러 개의 블럭을 가져다 놓고, 모양을 맞추어 붙이면 됩니다. 앵그리버드는 위에서 아래로 블럭을 따라가며, 순서대로 명령을 실행합니다."
+      12:
+        image: "notes/hoc1_12.jpg"
+        text: '프로그램을 실행시켜 본 후, 수정하거나 다시 실행 하고 싶으면, "처음 상태로" 버튼을 누르면 됩니다.'
+      13:
+        image: "notes/hoc1_13.jpg"
+        text: "자! 이제, 초록 돼지를 잡으러 갑시다!"
+    artist_intro:
+      1:
+        image: "notes/stage5_1.jpg"
+        text: "안녕하세요. 저는 JR 입니다! 카레이싱 경주에서 우승하기 위해서, 카레이서 팀은 반드시 컴퓨터과학(정보과학)이 필요합니다. 컴퓨터과학(정보과학)을 활용해서 자동차를 더 빠르게 달릴 수 있도록, 자동차에서 보내지는 데이터들을 분석해야하기 때문입니다."
+      2:
+        image: "notes/stage5_2.jpg"
+        text: "이번 퍼즐들에서는, 선을 그리며 돌아다니는 예술가가 되어 보세요."
+      3:
+        image: "notes/stage5_3.jpg"
+        text: '이것은 "앞으로 이동... 픽셀... " 블럭입니다. 픽셀은 여러 분이 보고 있는 화면을 구성하는 아주 아주 작은 점들입니다.'
+      4:
+        image: "notes/stage5_4.jpg"
+        text: '이 블럭은 "오른쪽으로 90도 만큼 돌아라!" 라는 명령을 의미합니다. 미로 퍼즐에서 "왼쪽/오른쪽으로 돌기" 블럭을 사용했던 것과 똑같이 돌려줍니다.'
+      5:
+        image: "notes/stage5_5.jpg"
+        text: "블럭들에 나타나있는 아래쪽 삼각형을 눌러보면, 거리나 각도를 원하는 만큼 지정할 수 있습니다. 새로운 블럭들을 연습하면서 익숙해져 보세요."
+    farmer_intro:
+      1:
+        image: "notes/stage9_1.jpg"
+        text: "안녕하세요. 저는 파올라입니다! 이번 퍼즐들에서는 농작물을 기르기 위해서 밭 전체를 고르게 만들어야 하는, 농부 아가씨가 되어 보세요."
+      2:
+        image: "notes/stage9_2.jpg"
+        text: "여러분들은 농부 아가씨가 흙더미와 구덩이를 모두 없앨 수 있게 도와야 합니다."
+      3:
+        image: "notes/stage9_3.jpg"
+        text: "새롭게 사용할 수 있는 블럭은, 흙더미를 1번 치우거나 구덩이를 1번 메웁니다."
+      4:
+        image: "notes/stage9_4.jpg"
+        text: "흙더미의 크기, 구덩이의 깊이가 다르기 때문에 어떤 크기인지 알려주어야 합니다."
+    flappy_intro:
+      1:
+        image: "notes/flappy01.jpg"
+        text: "안녕하세요 저는 케이티입니다. 컴퓨터 과학의 흥미로운 점의 하나를 들자면 컴퓨터 프로그램이 상호작용을 할 수 있다는 점을 말씀 드릴 수 있습니다."
+      2:
+        image: "notes/flappy02.jpg"
+        text: '언제든 누군가 컴퓨터나 휴대폰을 클릭하거나 탭 혹은 타이핑을 하면 그 것은 이벤트를 생성합니다. 그리고 그 이벤트가 발생되었을 때 무엇을 할지 결정을 하는 코드가 있습니다. '
+      3:
+        image: "notes/flappy03.jpg"
+        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse is clicked, play a sound" '
+      4:
+        image: "notes/flappy04.jpg"
+        text: "Have you ever heard of the game FlappyBird? By using Event handlers, we're going to learn to program our own custom version of FlappyBird!"
+      5:
+        image: "notes/flappy05.jpg"
+        text: "The code you'll write involves dragging and dropping blocks that represent commands for the computer. Under the hood, each of these blocks is represented by real code."
+      6:
+        image: "notes/flappy06.jpg"
+        text: 'If you take a look at the workspace, there are some green blocks that are filled in for you - these are "event handlers" '
+      7:
+        image: "notes/flappy07.jpg"
+        text: 'If you want the bird to FLAP when you CLICK the mouse, you can do that by attaching the "FLAP" block to the appropriate event handler, and now in your game whenever you click the mouse, the bird will flap.'
+      8:
+        image: "notes/flappy08.jpg"
+        text: "In each puzzle of this activity we'll introduce new types of events as green blocks on the workspace, and you can decide the appropriate blocks to add in response to those events."
+      9:
+        image: "notes/flappy09.jpg"
+        text: 'When you see a drop down arrow like this, that means you can change the settings - like what sound to play when flappy hits the ground.'
+      10:
+        image: "notes/flappy10.jpg"
+        text: "In the final puzzle you'll be able to create your own game and share it with your friends. Have fun!"
+    loop_times:
+      1:
+        image: "notes/hoc2_1.jpg"
+        text: "안녕하세요! 여러분? 저는 마크 입니다. 반복 실행(loop)에 대해 살펴 볼까요? 반복 실행 구조를 사용해, 원하는 작업을 수 천 번... 수 백 만 번, 반복하도록 할 수 있습니다."
+      2:
+        image: "notes/hoc2_2.jpg"
+        text: '이 퍼즐에서는 앵그리버드가 초록 돼지를 잡을 수 있도록, 5번 "앞으로 이동" 시켜야합니다.'
+      3:
+        image: "notes/hoc2_3.jpg"
+        text: '새로운 "반복(횟수)" 블럭을 이용해서 해결 할 수 있습니다.'
+      4:
+        image: "notes/hoc2_4.jpg"
+        text: '"앞으로 이동하기" 블럭 5개를 하나로 붙여 사용하는 대신...'
+      5:
+        image: "notes/hoc2_5.jpg"
+        text: '"앞으로 이동하기" 블럭 1개를  "반복(횟수)" 블럭 안에 집어 넣고, 반복할 횟수를 숫자로 입력하면 됩니다.'
+      6:
+        image: "notes/hoc2_6.jpg"
+        text: '그리고 이렇게 하는 것은 매우 중요합니다: 여러 개의 명령 블럭을 "반복(횟수)" 블럭 안에 넣어 실행시킬 수 있기 때문입니다.'
+      7:
+        image: "notes/hoc2_7.jpg"
+        text: '"반복(횟수)" 블럭을 잘 사용해 보세요!'
+    loop_until:
+      1:
+        image: "notes/hoc3_1.jpg"
+        text: '안녕하세요? 저는 크리스 입니다. 저는 마이애미 히트(Miami Heat)에서 일하기 전에, 조지아 공과대학(Georgia Tech)에서 컴퓨터과학(Computer Science) 분야를 공부했습니다. 새로운 블럭인 "반복(~할 때까지)" 블럭을 살펴보도록 하겠습니다.'
+      2:
+        image: "notes/hoc3_2.jpg"
+        text: "앵그리버드가 초록 돼지를 잡기 위해, 이동해야하는 거리를 모른다면 어떻게 해야 할까요?"
+      3:
+        image: "notes/hoc3_3.jpg"
+        text: '"반복(~할 때까지)" 블럭 안에 "앞으로 이동하기" 블럭을 넣으면, 초록 돼지를 붙잡을 때 까지... 앵그리버드가 앞으로 이동하게 됩니다.'
+      4:
+        image: "notes/hoc3_4.jpg"
+        text: '이렇게 하는 것은 매우 중요합니다: 이전과 마찬가지로, 여러 개의 블럭들을 "반복(~할 때까지)" 블럭 안에 넣어서, 원하는 작업들을 반복시킬 수 있기 때문입니다.'
+    if:
+      1:
+        image: "notes/hoc4_1.jpg"
+        text: '안녕하세요? 저는 빌 입니다! 이제 새로운 기초 개념들을 배워 봅시다: "만약" 명령문입니다. 이 명령문을 이용해서, 컴퓨터가 생각하는 것처럼 만들 수 있습니다.'
+      2:
+        image: "notes/hoc4_2.jpg"
+        text: '"만약"? 이라는 생각은 매우 일상적입니다. "만약"에 밖에 비가 내리면? 우산을 가지고 나가야 합니다.'
+      3:
+        image: "notes/hoc4_3.jpg"
+        text: '좀비에게, "앞에 길이 있는지", "왼쪽에 길이 있는지"를 먼저 확인하게 한 후, 그 방향으로 회전시킬 수 있습니다.'
+      4:
+        image: "notes/hoc4_4.jpg"
+        text: '그렇게 만들려면, "만약" 블럭 안에 "왼쪽으로 돌기" 블럭을 넣으면 됩니다.'
+      5:
+        image: "notes/hoc4_5.jpg"
+        text: '그 다음, "앞으로 이동" 블럭을 그 위에 붙이고, "반복(횟수)" 블럭 안에 넣으면.. 좀비가 움직일 때마다 길을 확인한 다음, 그 쪽으로 움직이게 할 수 있습니다. "반복(횟수)" 명령 안에서, 움직일 때마다 이동 방향을 결정하도록 하는 작업은 매우 중요합니다.'
+      6:
+        image: "notes/hoc4_6.jpg"
+        text: '컴퓨터과학(정보과학)에서 "만약" 명령은  매우 중요합니다. 제가 처음 만들었던 프로그램 중 하나가, 3*3 크기의 표 안에 O와 X를 번갈아 작성해 넣는 틱택토(tic-tac-toe) 게임이었는데, 그 프로그램에서, 어떤 사람이 이겼는지를 "만약" 명령이 결정해 주었습니다. "만약" 블럭은 이긴 사람을 결정하는 역할을 해 줄 수 있습니다.'
+      7:
+        image: "notes/hoc4_7.jpg"
+        text: '"만약" 블럭을 재미있게 사용해 보세요!'
+    if_else:
+      1:
+        image: "notes/hoc5_1.jpg"
+        text: '안녕하세요? 저는 살로니 에요. 저는 건강/의료 분야에서 컴퓨터과학(정보과학)에서 배운 것들을 활용했어요. "만약.. 아니면" 블럭을 어떻게 사용할 수 있는지 살펴보도록 하죠. "만약" 블럭과 비슷하지만, "아니면" 부분이 더 있어요.'
+      2:
+        image: "notes/hoc5_2.jpg"
+        text: '"실행" 부분에 "전진" 블럭을 넣고, "왼쪽으로 돌기" 블럭을 "아니면"이라고 쓰여진 부분에 넣으면, 좀비는 2가지 경우 중에서 하나 만 선택하게 되요. 만약 앞에 길이 있으면, "앞으로 이동"하고, 아니면(즉, 앞에 길이 없으면), "왼쪽으로 돌기"를 하게 되요.'
+      3:
+        image: "notes/hoc5_3.jpg"
+        text: '"만약" 블럭하고 비슷하게 생긴, "만약... 아니면" 블럭들을 "반복(횟수)" 블럭 안에 넣으면, "만약... 아니면" 블럭을 이용해서, 앞으로 이동 해야하는지? 왼쪽으로 돌기를 해야하는지? 를 판단해 계속 움직이게 되는 거에요.'
+      4:
+        image: "notes/hoc5_4.jpg"
+        text: "자, 이제 좀비들에게 가봅시다!"
+    function:
+      1:
+        image: "notes/stage13_1.jpg"
+        text: '안녕하세요. 저는 인스타그램(Instagram)에서 엔지니어로 일하고 있는 브리나입니다. 함수는 많이 사용하는 명령들을 원하는  이름으로 정의해 둔 것으로, 필요한 명령 블럭들을 모두 사용할 필요 없이, 미리 정의해 둔 블럭을 하나 만 사용해서 같은 작업들을 실행할 수 있게 해 줍니다.'
+      2:
+        image: "notes/stage13_2.jpg"
+        text: "이제, 어떤 함수를 만드는 방법을 살펴보겠습니다. 함수가 실행 해야하는 명령들은, 별 모양이 그려져 있는 블럭을 이용해 만들 수 있습니다. 그리고 그렇게 만든 함수의 이름도 지어 넣을 수 있습니다."
+      3:
+        image: "notes/stage13_3.jpg"
+        text: '별이 그려져 있는 함수 정의 블럭 안에 넣어진 블럭들은, 그 함수가 실행될 때 실행해야 할 명령들을 의미합니다. 따라서, "메우기 5번" 이라는 함수는 "반복(횟수)" 블럭과 "메우기" 블럭으로 채워져(정의되어) 있는 것입니다.'
+      4:
+        image: "notes/stage13_4.jpg"
+        text: '하지만, 이렇게 만들어(정의해)두기만 해서는 실행하지 않습니다. 함수 분류에서 "메우기 5번" 이라는 함수 블럭을 끌어와서 사용해야만 실행이 됩니다.  '
+      5:
+        image: "notes/stage13_5.jpg"
+        text: '자 이제, 재미("fun")있게 함수("FUNction")를 사용해 보세요! '
+    loop_while:
+      1:
+        image: "notes/stage9_5.jpg"
+        text: '안녕하세요? 마킨데입니다. 이번에는 "반복(~인 동안)" 블럭에 대해서 알아보겠습니다 '
+      2:
+        image: "notes/stage9_6.jpg"
+        text: '"반복(~인 동안)" 블럭은 어떤 상황에서 계속 반복 해야하는 명령들을 넣을 수 있게 해 줍니다. 반복 해야 하는 조건이 블럭 위에 적혀있고, 그 상황이 참(TRUE)이면 계속 반복시켜줍니다.'
+      3:
+        image: "notes/stage9_7.jpg"
+        text: '예를 들어, 농부 아가씨가 흙더미 위에 있다면, 계속해서 "치우기 1번"을 수행할 것입니다.'
+    loop_for:
+      1:
+        image: "notes/stage11_1.jpg"
+        text: "안녕하세요. 트리나입니다. 저는 픽사(Pixar)에서 일하고 있는데, 슈렉을 비롯한 여러 가지 애니메이션을 만드는 작업을 해 왔습니다."
+      2:
+        image: "notes/stage11_2.jpg"
+        text: '이건 "카운터" 라는 반복 블럭입니다. 이 카운터 블럭을 사용하면 원하는 작업을 반복할 수 있는데,  반복 할 때마다 어떤 값을 조금씩 바꿔가면서도 이용할 수 있습니다. '
+      3:
+        image: "notes/stage11_3.jpg"
+        text: '이 예제에서, "카운터" 반복 블럭에는 "카운트 : 50 부터 90까지, 증가 10"라고 쓰여 있여있고, 그 안에 "사각형 그리기" 블럭이 들어있습니다. 변수 분류에서 "카운터" 블럭을 가져와 "길이" 부분에 넣어보세요.'
+      4:
+        image: "notes/stage11_4.jpg"
+        text: "이렇게 하면, 예술가가 50 픽셀 길이인 사각형 부터 그리기 시작해서, 10 픽셀 크기만큼 늘려 60 픽셀 길이의 사각형을 그리고, 다시 10 픽셀 크기만큼 늘려 70 길이로 그리고.... 그렇게 반복하면서 90을 넘지 않을 때까지 증가시키면서 반복합니다. 그래서 50, 60, 70, 80, 90 길이의 사각형들을 그리게 되는 것이죠."
+    parameters:
+      1:
+        image: "notes/stage15_1.jpg"
+        text: "안녕하세요. 징가(Zynga)에서 엔지니어로 일하고 있는 자넷입니다."
+      2:
+        image: "notes/stage15_2.jpg"
+        text: "크기가 다른 삼각형들을 아주 많이 그려야 한다면 어떻게 해야할까요?"
+      3:
+        image: "notes/stage15_3.jpg"
+        text: "일일이 모두 각각 코드를 작성하는 방법도 있지만, 값을 전달받는 함수를 사용할 수도 있습니다."
+      4:
+        image: "notes/stage15_4.jpg"
+        text: '그러기 위해, "삼각형 그리기" 함수의 파랑별을 눌러 보세요. 그 다음에 "전달받을값"(input name)을 "전달값"(input) 블럭에 끼워 넣으세요.'
+      5:
+        image: "notes/stage15_5.jpg"
+        text: '그 다음에 "x"라고 쓰여진 부분을 "길이"(length)라고 수정하면 됩니다. 그렇게 하면 함수에게 전달되는 값을 사용할 수 있게 됩니다.'
+      6:
+        image: "notes/stage15_6.jpg"
+        text: '그 다음 다시 별을 누르고, 변수 분류에 들어가서 "길이"(length) 블럭을 가져와서 "앞으로 이동"(move forward) 블럭에 넣어주면 됩니다. 이전 블럭은 치워버리면 됩니다.'
+      7:
+        image: "notes/stage15_7.jpg"
+        text: '함수 분류를 열어 "삼각형 그리기 사용:" 블럭을 가져와 사용하면 됩니다.'
+      8:
+        image: "notes/stage15_8.jpg"
+        text: "또한, 삼각형의 크기를 원하는데로 바꾸기 위해서, 계산 블럭을 사용할 수 있습니다."
+    hoc_wrapup:
+      1:
+        image: "notes/hoc6_1.jpg"
+        text: "축하합니다! 여러분은 마지막 퍼즐을 해결함으로서, 복잡한 미로/동굴/터널 속에서도 스스로 길을 찾아 움직일 수 있는 로봇을 만들 수 있게 되었습니다. 좀비, 새, 화성탐사선, 스스로 움직이는 자동차 등에도 모두 적용시킬 수 있겠죠?"
+      2:
+        image: "notes/hoc6_2.jpg"
+        text: '지금까지 사용한 기초적인 개념들은, 매일 사용하는 앱(응용프로그램)들을 만들어 내는 가장 기본적인 방법들입니다. 지금까지 반복 실행을 위한, "반복(횟수)", "반복(~할 때까지)" 명령과 선택 실행을 위한 "만약", "만약....아니면" 명령들에 대해 배워 보았습니다.'
+      3:
+        image: "notes/hoc6_3.jpg"
+        text: '처음 해 본, Hour of Code 가 재미있으면, http://code.org 를 통해 컴퓨터과학(정보과학)의 기초개념들을 더 배워보세요!  그 과정을 끝내고 나면, 프로그래밍을 위한 기초적인 지식을 모두 배울 수 있게 됩니다. 여러분들은 스마트폰 앱 만들기, 로봇 조종, 게임 만들기 등, 원하는 것을 모두 할 수 있는 기본적인 지식들을 얻게 되는 거에요!'
+      4:
+        image: "notes/hoc6_4.jpg"
+        text: '컴퓨터과학(정보과학)에서 배우는 지식과 기술들은 모든 사람들의 생활 방식을 바꿔가고 있습니다 : 프로그래밍은 재미있고, 창의적인 과정이며, 누구나 배울 수 있습니다!'
+    20_wrapup:
+      1:
+        image: "notes/bird.png"
+        text: "프레젠테이션 준비 중!"

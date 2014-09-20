@@ -1,0 +1,48 @@
+#hoc-header-branding {
+  width: 105px;
+  margin: -1.625em 0 0 0;
+  padding: 0;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+#hoc-header-branding img {
+  width: 100%;
+  max-width: 100%;
+}
+.headerlink {
+  text-transform: uppercase;
+}
+.headerlink:link,
+.headerlink:visited,
+.headerlink:hover,
+.headerlink:active {
+  margin-left: 20px;
+}
+
+.front-header-banner {
+  text-transform: uppercase;
+  font-size: 24px;
+  text-align: center;
+  color: #000;
+}
+#flags-banner {
+  margin: 40px 0 0 0;
+}
+#flags-banner img {
+  width: 100%;
+  max-width: 100%;
+}
+#language-dropdown {
+  float: right;
+  margin: .875em 0 0 40px;
+  width: 150px;
+  text-align: left;
+}
+#language-dropdown .selectize-input,
+#language-dropdown .selectize-dropdown {
+  font-size: 12px;
+}
+#language-dropdown .selectize-input {
+  padding: 2px 8px;
+  min-height: 28px;
+}

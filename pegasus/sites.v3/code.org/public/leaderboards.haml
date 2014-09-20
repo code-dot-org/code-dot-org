@@ -1,0 +1,68 @@
+---
+title: Leaderboards for the Hour of Code
+theme: responsive
+
+social:
+  'og:image' : "http://csedweek.org/images/girls-58-boys-42.jpg"
+  'og:title' : 'Who has done the Hour of Code?'
+  'og:description' : "Join millions of students to learn about the Hour of Code, the largest learning event in world history."
+  "twitter:card" : 'photo'
+  "twitter:site" : "@codeorg"
+  "twitter:title" : "Who has done the Hour of Code?"
+  "twitter:image:src" : "http://csedweek.org/images/girls-58-boys-42.jpg"
+  "twitter:image:width" : 759
+  "twitter:image:height" : 208
+---
+-facebook = {:u=>"https://www.facebook.com/photo.php?fbid=521364791293162"}
+-twitter = {:url=>"http://#{request.site}/leaderboards", :related=>'codeorg', :hashtags=>'', :text=>I18n.t(:who_has_done_hoc)}
+-twitter[:hashtags] = 'HourOfCode' unless I18n.t(:who_has_done_hoc).include? '#HourOfCode'
+
+-hoc_metrics = fetch_hoc_metrics
+-started = format_integer_with_commas(hoc_metrics['started'])
+
+-loc = format_integer_with_commas(fetch_metrics['lines_of_code'])
+
+#congrats.mobile-pad{:style=>'margin: 0 auto;'}
+  %h1{:style=>'margin-bottom:10px'} The Hour of Code Leaderboards
+  %div{:style=>'font-size:18px'}
+    %b= "#{started} students have done the Hour of Code and written #{loc} lines of code."
+
+  .col-66
+
+    = view :votes, results:hoc_metrics
+    %br
+
+    %div{:style=>'float:left; margin-right:20px'}
+      = view :share_buttons, facebook:facebook, twitter:twitter
+
+    %div{:style=>'float:left'}
+      %a{:href=>'http://code.org'}
+        %button{:style=>'margin-top:10px; font-weight:500'}= "Start the Hour of Code now"
+
+    %div{:style=>'clear:both;'}
+
+    %br
+
+    .col-50
+      %h3.special_heading{:style=>'margin-top: 20px'}=I18n.t :country
+      -hoc_metrics['countries'].keys.first(40).each do |country|
+        =country
+        %hr.grey_hr_fine{:style=>'margin-right:40px'}
+
+    .col-50
+      %h3.special_heading{:style=>'margin-top: 20px'}=I18n.t :city
+      -hoc_metrics['cities'].keys.first(40).each do |city|
+        =city
+        %hr.grey_hr_fine{:style=>'margin-right:40px'}
+
+  .col-33.desktop-feature
+    %br
+    %br
+    = view :twitter_tall
+
+  %div{:style=>'clear:both; text-align:center'}
+    %br
+    %a{:href=>'http://code.org'}
+      %button{:style=>'font-weight:500'}= "Start the Hour of Code now"
+
+= view 'popup_window.js'

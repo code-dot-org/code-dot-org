@@ -1,0 +1,72 @@
+"cs":
+  devise:
+    confirmations:
+      confirmed: Vaše e-mailová adresa byla úspěšně potvrzena.
+      send_instructions: Do několika minut obdržíš email s pokyny, jak aktivovat svůj
+        účet.
+      send_paranoid_instructions: Pokud je tvůj email v naší databázi, do několika
+        minut obdržíš email s pokyny, jak aktivovat svůj účet.
+    failure:
+      already_authenticated: Již jsi přihlášený.
+      inactive: Tvůj účet zatím nebyl aktivován.
+      invalid: Neplatný email nebo heslo.
+      invalid_token: Neplatný ověřovací token.
+      locked: Tvůj účet je uzamčen.
+      not_found_in_database: Neplatný email nebo heslo.
+      timeout: Doba přihlášení vypršela. Přihlaš se, prosím, znovu.
+      unauthenticated: Pro pokračování se musíš přihlásit či registrovat.
+      unconfirmed: Dřív, než budeš pokračovat, musíš aktivovat svůj účet.
+    mailer:
+      confirmation_instructions:
+        subject: Code.org instrukce o potvrzení
+      reset_password_instructions:
+        subject: Code.org instrukce o obnovení hesla
+      unlock_instructions:
+        subject: Pokyny k odemknutí
+    omniauth_callbacks:
+      failure: Nemůžeme tě ověřit z %{kind} kvůli "%{reason}".
+      success: "Úspěšně ověřen z %{kind} účtu."
+    passwords:
+      no_token: Nemůžeš vstoupit na tuto stránku jinak, než skrze email pro obnovu
+        hesla. Pokud opravdu přecházíš z daného emailu, přesvědč se, prosím, že jsi
+        použil plnou URL adresu.
+      send_instructions: Do několika minut obdržíš email s pokyny, jak obnovit své
+        heslo.
+      send_paranoid_instructions: Pokud je tvůj email v naší databázi, do několika
+        minut obdržíš email s pokyny, jak obnovit své heslo.
+      updated: Heslo bylo úspěšně změněno. Nyní jsi přihlášen.
+      updated_not_active: Heslo bylo úspěšně změněno.
+    registrations:
+      destroyed: Na shledanou! Tvůj účet byl úspěšně smazán. Doufáme, že tě zase někdy
+        uvidíme.
+      signed_up: Vítej! Úspěšně jsi byl přihlášen.
+      signed_up_but_inactive: "Úspěšně jsi byl registrován, ale do doby, než bude
+        tvůj účet aktivován, se nemůžeš přihlásit."
+      signed_up_but_locked: "Úspěšně jsi byl registrován, ale nemůžeš se přihlásit,
+        protože tvůj účet je uzamčen."
+      signed_up_but_unconfirmed: Zpráva s potvrzovacím odkazem byla zaslána na tvou
+        emailovou adresu. Otevři, prosím, daný odkaz pro aktivování účtu.
+      update_needs_confirmation: "Účet byl úspěšně aktualizován, avšak musíme ověřit
+        tvou novou emailovou adresu. Prosím, zkontroluj svůj email a klikni na potvrzovací
+        link, aby jsi dokončil změnu své nové emailové adresy."
+      updated: "Účet byl úspěšně aktualizován."
+    sessions:
+      signed_in: "Úspěšně přihlášen."
+      signed_out: "Úspěšně odhlášen."
+    unlocks:
+      send_instructions: Do několika minut obdržíš email s pokyny, jak odemknout svůj
+        účet.
+      send_paranoid_instructions: Pokud tvůj účet existuje, do několika minut obdržíš
+        email s pokyny, jak odemknout svůj účet.
+      unlocked: Tvůj účet byl úspěšně odemknut. Prosím, přihlaš se, aby jsi mohl pokračovat.
+  errors:
+    messages:
+      already_confirmed: byl již aktivován, prosím, zkus se přihlásit
+      confirmation_period_expired: musí být potvrzen do %{period}, požádej, prosím,
+        o nový
+      expired: vypršel, prosím, požádej o nový
+      not_found: nenalezeno
+      not_locked: nebyl uzamčen
+      not_saved:
+        one: '1 chyba zabránila %{resource} v uložení:'
+        other: "%{count} chyb zabránilo %{resource} v uložení:"

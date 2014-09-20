@@ -1,0 +1,10 @@
+- match_string = "name 'unique level name here'\ntitle 'title'\ndescription 'description here'\nquestion 'Question'\nanswer 'Answer 1'\n"
+- multi_string = "name 'unique level name here'\ntitle 'title'\ndescription 'description here'\nquestion 'Question'\nwrong 'wrong answer'\nright 'right answer'\n"
+:css
+  textarea { width: 100% }
+- if @filename
+  = "Filename: #{@filename}"
+.script_text
+  - cols = @match_file ? @match_file.lines.max_by(&:length).length : 20
+  - rows = @match_file ? @match_file.lines.count + 1 : 10
+  = text_area_tag('level[match_text]', @match_file || (@level.class == Multi ? multi_string : match_string), rows: rows, cols: cols, style: 'width:500px')

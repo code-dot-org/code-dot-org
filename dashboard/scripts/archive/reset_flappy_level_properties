@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+# Reset flappy level properties. WARNING: originally run in Rails console. Running as script untested.
+
+require_relative '../../config/environment'
+
+Level.all.select {|l| l.is_a?(Blockly) && l.skin == 'flappy'}.each{|l| l.properties = {skin: 'flappy'}; l.save!}

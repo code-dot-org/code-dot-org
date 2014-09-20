@@ -1,0 +1,37 @@
+-if id == "hoc"
+  .span6.miniblock
+    =link_to hoc_reset_url() do
+      .span4.heading
+        %h3.whitetext= t('upsell.hoc.title')
+        .smalltext.whitetext= t('upsell.hoc.body')
+      .span2.imgspan{style: "margin-left: 0px"}
+        %img{style: "height: 100px", src: "//code.org/images/fit-520/codehoc3.jpg"}
+
+-elsif id == "flappy"
+  .span6.miniblock
+    =link_to url_from_path("/flappy/1") do
+      .span4.heading
+        %h3.whitetext= t('upsell.flappy.title')
+        .smalltext.whitetext= t('upsell.flappy.body')
+      .span1.imgspan{style: "margin-left: 0px"}
+        %img{style: "padding-left: 42px; padding-top: 20px;", src: "//studio.code.org/blockly/media/skins/flappy/small_static_avatar.png"}
+
+-elsif id == "20hour"
+  .span6.miniblock
+    =link_to script_url(1) do
+      .span4.heading
+        %h3.whitetext= t('upsell.20hour.title')
+        .smalltext.whitetext= t('upsell.20hour.body')
+      .span2.imgspan
+        %img{style: "height: 100px", src: "//code.org/images/fit-520/code20hr.jpg"}
+
+-elsif id == "course1" || id == "course2" || id == "course3"
+  .span9.miniblock.miniblock-short
+    =link_to script_url(id) do
+      .span7.heading
+        %h3.whitetext
+          = data_t_suffix('script.name', id, "title")
+        .smalltext.whitetext= data_t_suffix('script.name', id, "description")
+      .span2.imgspan
+        %br/
+        = image_tag(image_url("logo_#{id}.jpg"), height: 100)

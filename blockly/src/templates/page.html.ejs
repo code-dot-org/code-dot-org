@@ -1,0 +1,100 @@
+<%
+  var msg = require('../../locale/current/common');
+  var hideRunButton = locals.hideRunButton || false;
+%>
+
+<div id="rotateContainer" style="background-image: url(<%= assetUrl('media/mobile_tutorial_turnphone.png') %>)">
+  <div id="rotateText">
+    <p><%= msg.rotateText() %><br><%= msg.orientationLock() %></p>
+  </div>
+</div>
+
+<% var instructions = function() { -%>
+  <div id="bubble" class="clearfix">
+    <table id="prompt-table">
+      <tr>
+        <td id="prompt-icon-cell">
+          <img id="prompt-icon"/>
+        </td>
+        <td id="prompt-cell">
+          <p id="prompt">
+          </p>
+        </td>
+      </tr>
+    </table>
+    <div id="ani-gif-preview-wrapper">
+      <div id="ani-gif-preview">
+        <img id="play-button" src="<%= assetUrl('media/play-circle.png') %>"/>
+      </div>
+    </div>
+  </div>
+<% }; -%>
+
+<% // A spot for the server to inject some HTML for help content.
+var helpArea = function(html) { -%>
+  <% if (html) { -%>
+    <div id="helpArea">
+      <%- html %>
+    </div>
+  <% } -%>
+<% }; -%>
+
+<% var codeArea = function() { -%>
+  <div id="codeTextbox" contenteditable spellcheck=false>
+    // <%= msg.typeCode() %>
+    <br>
+    // <%= msg.typeHint() %>
+    <br>
+  </div>
+<% }; %>
+
+<div id="visualizationColumn">
+  <div id="visualization">
+    <%- data.visualization %>
+  </div>
+
+  <div id="belowVisualization">
+
+    <div id="gameButtons">
+      <button id="runButton" class="launch blocklyLaunch <%= hideRunButton ? 'invisible' : ''%>">
+        <div><%= msg.runProgram() %></div>
+        <img src="<%= assetUrl('media/1x1.gif') %>" class="run26"/>
+      </button>
+      <button id="resetButton" class="launch blocklyLaunch" style="display: none">
+        <div><%= msg.resetProgram() %></div>
+        <img src="<%= assetUrl('media/1x1.gif') %>" class="reset26"/>
+      </button>
+      <% if (data.controls) { %>
+      <%- data.controls %>
+      <% } %>
+      <% if (data.extraControlRows) { %>
+      <%- data.extraControlRows %>
+      <% } %>
+    </div>
+
+    <% instructions() %>
+    <% helpArea(data.helpHtml) %>
+
+  </div>
+</div>
+
+<div id="blockly">
+  <div id="headers" dir="<%= data.localeDirection %>">
+    <div id="toolbox-header" class="blockly-header"><span><%= msg.toolboxHeader() %></span></div>
+    <div id="workspace-header" class="blockly-header">
+      <span><%= msg.workspaceHeader()%> </span>
+      <div id="blockCounter">
+        <div id="blockUsed" class=<%= data.blockCounterClass %>>
+          <%= data.blockUsed %>
+        </div>
+        <span>&nbsp;/</span>
+        <span id="idealBlockNumber"><%= data.idealBlockNumber %></span>
+      </div>
+    </div>
+    <div id="show-code-header" class="blockly-header"><span><%= msg.showCodeHeader() %></span></div>
+  </div>
+</div>
+
+<div class="clear"></div>
+
+<% codeArea() %>

@@ -1,0 +1,13 @@
+.modal#unsupported-browser{'data-backdrop' => 'static', 'data-keyboard' => 'false', display: 'none'}
+  .modal-dialog
+    .modal-content{style: 'margin-left: 0px; padding: 20px'}
+      %h1{style: 'margin: 10px 0;font-size: 32px'}= t('compatability.upgrade.header')
+      %p{style: 'font-size: 13px; line-height: 18px; color: #333'}!= t('compatability.upgrade.message')
+      %a{href: 'https://support.code.org/hc/en-us/articles/202591743'}
+        %button#view-supported-browsers.btn.btn-primary= t('compatability.upgrade.button')
+:javascript
+  $("#unsupported-browser").modal('show').css('z-index', 1150);
+  $(".modal-backdrop").css('z-index', 1100);
+  $("#unsupported-browser p a").click(function () {
+    $("#unsupported-browser").modal('hide');
+  });

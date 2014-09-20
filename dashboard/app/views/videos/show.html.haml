@@ -1,0 +1,14 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = data_t('video.name', @video.key)
+%p
+  %strong Key:
+  = @video.key
+%p
+  %strong Youtube Code:
+  = @video.youtube_code
+- if can? :update, @video
+  = link_to t('crud.edit'), edit_video_path(@video)
+|
+\#{link_to t('crud.back'), videos_path}

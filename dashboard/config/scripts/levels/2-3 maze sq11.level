@@ -1,0 +1,16 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-06-16T20:21:07.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,2,4,0],[0,0,0,1,4,1,0,0],[0,0,4,1,1,1,0,0],[0,0,0,4,0,4,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
+    "instructions": "Get me to the pig! What blocks got repeated?",
+    "start_direction": "1",
+    "step_mode": 0
+  }
+}]]></config>
+  <blocks/>
+</Maze>

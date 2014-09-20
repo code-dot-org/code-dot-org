@@ -1,0 +1,170 @@
+#!/usr/bin/env ruby
+require 'csv'
+require 'user_agent_parser'
+require_relative '../deployment'
+require 'cdo/only_one'
+require 'cdo/hip_chat'
+
+FiveMinutes = 5 * 60 * 1000
+OneHour = 60 * 60 * 1000
+OneDay = 24 * OneHour
+
+ExcludedBrowsers = [
+  'bingbot',
+  'Epiphany',
+  'Googlebot',
+  'IE 6.0',
+  'IE 7.0',
+  'IE 8.0',
+  'IE Mobile',
+  'Other',
+  'Slurp',
+  'TwitterBot',
+  'YandexBot',
+  'Mo%20PTT/50 CFNetwork/672.1.15 Darwin/14.0.0'
+]
+
+ExcludedLevels = [1, 103, 337, 612, 830, 1254, 1255, 1264, 1265, 1370, 1376, 1383, 1393, 1415]
+
+HardLevelAttemptsPerHour = {
+  50 => 10,
+  54 => 20,
+  949 => 10,
+  1108 => 10, 
+  1430 => 10,
+  1434 => 10
+}
+
+MinimumAttemptsPerHour = 5
+
+HoursToTest = 2
+
+def slog(h)
+  puts ({ application: :dashboard }).merge(h).to_json
+end
+
+$user_agent_cache = {}
+def browser_name(user_agent)
+  name = $user_agent_cache[user_agent]
+  return name if name
+  agent = UserAgentParser.parse(user_agent)
+  name = agent.name
+  name = agent.to_s if name == 'IE'
+  name = user_agent if name == 'CFNetwork'
+  $user_agent_cache[user_agent] = name
+end
+
+class Collater
+
+  def initialize()
+    @results = {browsers:{}, locales:{}}
+  end
+
+  def each_by_browser()
+    browsers = @results[:browsers]
+    browsers.keys.sort.each do |browser|
+      browsers[browser].keys.sort.each do |level|
+        i = browsers[browser][level]
+        yield i.merge(browser:browser, level:level)
+      end
+    end
+  end
+
+  def insert(level, tag, browser, locale)
+    @results[:browsers][browser] = {} unless @results[:browsers].has_key?(browser)
+    @results[:browsers][browser][level] = {starts:0, finishes:0} unless @results[:browsers][browser].has_key?(level)
+    @results[:browsers][browser][level][:starts] += 1 if tag == :activity_start
+    @results[:browsers][browser][level][:finishes] += 1 if tag == :activity_finish
+
+    @results[:locales][locale] = {} unless @results[:locales].has_key?(locale)
+    @results[:locales][locale][level] = {starts:0, finishes:0} unless @results[:locales][locale].has_key?(level)
+    @results[:locales][locale][level][:starts] += 1 if tag == :activity_start
+    @results[:locales][locale][level][:finishes] += 1 if tag == :activity_finish
+  end
+
+end
+
+class Monitor
+
+  def initialize(params)
+    @start = params[:start]
+    @finish = params[:finish]
+    @hosts = ['production-1c', 'production-1d']
+    @filename = "/tmp/dataset-#{@start}-#{@finish}.json"
+  end
+
+  def self.collate(params)
+    collater = Collater.new
+    self.new(params).each_row do |level, tag, browser, locale|
+      collater.insert level, tag, browser, locale
+    end
+    collater
+  end
+
+  def each_row()
+    dataset.each do |i|
+      yield i['level_id'].to_i,
+            i['tag'].to_sym,
+            browser_name(i['user_agent']),
+            i['locale']
+    end
+  end
+
+  def dataset()
+    @dataset ||= reload(@filename) || cache(@filename, fetch)
+  end
+
+  def reload(filename)
+    return nil unless File.file?(filename)
+    puts "Loading..." if rack_env?(:development)
+    JSON.parse(IO.read(filename))
+  end
+
+  def cache(filename, dataset)
+    if rack_env?(:development)
+      puts "Caching..."
+      File.open(filename, 'wb') {|f| f << dataset.to_json}
+    end
+    dataset
+  end
+
+  def fetch()
+    puts "Fetching..." if rack_env?(:development)
+    reader = Slog::Reader.new(secret:CDO.logentries_secret, env:'production', hosts:@hosts)
+    reader.get(filter: 'tag=activity_start OR tag=activity_finish', start:@start, end:@finish)
+  end
+
+end
+
+def main()
+  now = DateTime.now
+
+  hours = HoursToTest
+  finish = DateTime.new(now.year, now.month, now.day, now.hour, now.minute).new_offset(0).strftime('%Q').to_i
+  start = finish - (hours * OneHour)
+
+    Monitor.collate(start:start, finish:finish).each_by_browser do |i|
+      next if ExcludedBrowsers.include?(i[:browser])
+      next if ExcludedLevels.include?(i[:level])
+
+      starts = i[:starts]
+      finishes = [starts, i[:finishes]].min
+
+      minAttemptsPerHour =  HardLevelAttemptsPerHour[i[:level]] || MinimumAttemptsPerHour
+
+      status = :pass if finishes > 0 || starts == 0
+      status ||= :fail if starts > (minAttemptsPerHour * hours)
+      status ||= :warn
+
+      rate = starts == 0 ? 1.0 : finishes.to_f / starts.to_f
+
+      if status == :fail
+        log_string =
+          "<b>#{i[:browser]}</b> hasn't passed <b><a href=\"http://learn.code.org/levels/#{i[:level]}\">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{hours} hour(s)."
+        HipChat.developers log_string, color:'red', notify:1
+        HipChat.log log_string, color:'red'
+      end
+    end
+end
+
+main if only_one_running?(__FILE__)

@@ -1,0 +1,15 @@
+{
+     "rows": 25,
+	 "cols": 25,
+	 "dir": "EAST",
+	 "start": {
+		 "row": 24,
+		 "col": 24
+	  },
+     "walls":
+     [
+     ],
+	 "beepers":
+	 [		
+	 ]
+ }

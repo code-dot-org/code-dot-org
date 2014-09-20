@@ -1,0 +1,10 @@
+name 'Warmup questions'
+title 'Coding in Racket'
+content1 'Select the best answer to the question.'
+
+question 'When converting a circle to code, the correct order is'
+right 'top, left, right'
+wrong 'left, right, top'
+wrong 'random'
+wrong 'left top right'
+

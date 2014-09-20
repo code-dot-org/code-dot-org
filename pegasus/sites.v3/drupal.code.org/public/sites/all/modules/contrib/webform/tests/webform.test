@@ -1,0 +1,808 @@
+<?php
+
+/**
+ * @file
+ * Webform module tests.
+ */
+
+class WebformTestCase extends DrupalWebTestCase {
+  private $_webform_node;
+  private $_webform_components;
+  public $webform_users;
+
+  /**
+   * Implements setUp().
+   */
+  function setUp() {
+    // Enable Webform.
+    parent::setUp('webform', 'profile');
+
+    // Create a profile field to test %profile tokens.
+    db_query("INSERT INTO {profile_field} (title, name, explanation, category, type, weight, required, register, visibility, autocomplete, options, page) VALUES ('Gender', 'profile_gender', '', 'Profile', 'textfield', 0, 0, 0, 2, 0, '', '')");
+
+    // Create a normal user that can view their own submissions.
+    $permissions['userAccess'] = array(
+      'access content',
+      'access own webform submissions',
+    );
+
+    // Create a normal user than can edit their own submissions.
+    $permissions['userEdit'] = array(
+      'access content',
+      'edit own webform submissions',
+    );
+
+    // Create a webform editor to test creating and editing own content.
+    $permissions['editor'] = array(
+      'access content',
+      'create webform content',
+      'edit own webform content',
+      'access all webform results',
+    );
+
+    // Create a webform admin that will do all node creation.
+    $permissions['admin'] = array(
+      'access content',
+      'administer nodes',
+      'create webform content',
+      'edit any webform content',
+      'access all webform results',
+      'edit all webform submissions',
+      'delete all webform submissions',
+    );
+
+    foreach ($permissions as $user_key => $role_permissions) {
+      $this->webform_users[$user_key] = $this->drupalCreateUser($role_permissions);
+      $profile = array('profile_gender' => 'Female');
+      $this->webform_users[$user_key]->profile_gender = 'Female';
+      profile_save_profile($profile, $this->webform_users[$user_key], 'Profile');
+    }
+  }
+
+  /**
+   * Implemenation of tearDown().
+   */
+  function tearDown() {
+    // Delete the webform admin and any created nodes.
+    foreach ($this->webform_users as $account) {
+      $uid = $account->uid;
+      $result = db_select('node')
+        ->fields('node')
+        ->condition('uid', $uid)
+        ->execute();
+      foreach ($result as $node) {
+        node_delete($node->nid);
+      }
+      user_cancel(array(), $uid, 'user_cancel_delete');
+    }
+
+    parent::tearDown();
+  }
+
+  /**
+   *
+   */
+  function webformReset() {
+    $this->_webform_node = NULL;
+    $this->_webform_components = NULL;
+  }
+
+  /**
+   * Provide a list of components to test throughout the suite.
+   *
+   * Each component provides:
+   *   - A default configuration for the component.
+   *   - Values to try setting via POST
+   *   - Values that should match the database storage when set via POST
+   *   - Values that should match the database storage when using the default values.
+   *
+   * @return array
+   *   An array of each component settings.
+   */
+  function testWebformComponents() {
+    if (isset($this->_webform_components)) {
+      return $this->_webform_components;
+    }
+
+    $this->_webform_components = array(
+      // Test date components.
+      'date' => array(
+        'component' => array(
+          'form_key' => 'date',
+          'name' => 'Date',
+          'type' => 'date',
+          'value' => '19 Nov 1978',
+          'extra' => array(
+            'timezone' => 'site',
+            'start_date' => '-100 years',
+            'end_date' => '+2 years',
+          ),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '-15',
+        ),
+        'sample values' => array('day' => '30', 'month' => '9', 'year' => '1982'),
+        'database values' => array('1982-09-30'),
+        'database default values' => array('1978-11-19'),
+      ),
+
+      // Test grid components.
+      'grid' => array(
+        'component' => array(
+          'form_key' => 'grid',
+          'name' => 'Grid',
+          'type' => 'grid',
+          'value' => '',
+          'extra' => array(
+            'questions' => "0|Ålphå\n1|ıé†å\n2|Îé¬†å", // Left side
+            'options' => "0|øne\n1|twö\n2|ǼBƇ\n3|€Euro", // Top
+          ),
+          'mandatory' => '0',
+          'pid' => '2',
+          'weight' => '-19',
+        ),
+        'sample values' => array('0' => '0', '1' => '1', '2' => '2'),
+        'database values' => array('0' => '0', '1' => '1', '2' => '2'),
+        'database default values' => array('', '', ''),
+      ),
+      'grid_keyed' => array(
+        'component' => array(
+          'form_key' => 'grid_keyed',
+          'name' => 'Grid Keyed',
+          'type' => 'grid',
+          'value' => '',
+          'extra' => array(
+            'questions' => "one|What's your option?\ntwo|Agåin?\nthree|One more time!", // Left side.
+            'options' => "one|Option one\ntwo|Option 2\nthree| Three is me", // Top
+          ),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '-15',
+        ),
+        'sample values' => array('one' => 'one', 'two' => 'two', 'three' => 'three'),
+        'database values' => array('one' => 'one', 'two' => 'two', 'three' => 'three'),
+        'database default values' => array('one' => '', 'two' => '', 'three' => ''),
+      ),
+
+      // Test select components.
+      'checkboxes' => array(
+        'component' => array(
+          'form_key' => 'checkboxes',
+          'name' => 'Checkboxes',
+          'type' => 'select',
+          'value' => 'two',
+          'extra' => array(
+            'items' => "one|one\ntwo|two\nthree|three",
+            'multiple' => 1,
+          ),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '-15',
+        ),
+        'sample values' => array('one' => TRUE, 'two' => FALSE, 'three' => TRUE),
+        'database values' => array('one', 'three'),
+        'database default values' => array('two'),
+      ),
+      'checkboxes_zero' => array(
+        'component' => array(
+          'form_key' => 'checkboxes_zero',
+          'name' => 'Checkboxes zero',
+          'type' => 'select',
+          'value' => '0',
+          'extra' => array(
+            'items' => "0|zero\n1|one\n2|two",
+            'multiple' => 1,
+          ),
+          'mandatory' => '1',
+          'pid' => '0',
+          'weight' => '-9',
+        ),
+        'sample values' => array('0' => TRUE),
+        'database values' => array('0'),
+        'database default values' => array('0'),
+      ),
+      'radios' => array(
+        'component' => array(
+          'form_key' => 'radios',
+          'name' => 'Radios',
+          'type' => 'select',
+          'value' => 'two',
+          'extra' => array(
+            'items' => "one|one\ntwo|two\nthree|three",
+          ),
+          'mandatory' => '1',
+          'pid' => '0',
+          'weight' => '-9',
+        ),
+        'sample values' => 'one',
+        'database values' => array('one'),
+        'database default values' => array('two'),
+      ),
+      'radios_zero' => array(
+        'component' => array(
+          'form_key' => 'radios_zero',
+          'name' => 'Radios zero',
+          'type' => 'select',
+          'value' => '0',
+          'extra' => array(
+            'items' => "0|zero\n1|one\n2|two",
+          ),
+          'mandatory' => '1',
+          'pid' => '0',
+          'weight' => '-9',
+        ),
+        'sample values' => '0',
+        'database values' => array('0'),
+        'database default values' => array('0'),
+      ),
+      'select' => array(
+        'component' => array(
+          'form_key' => 'select',
+          'name' => 'Select',
+          'type' => 'select',
+          'value' => 'one',
+          'extra' => array(
+            'description' => 'Description here',
+            'items' => "one|one\ntwo|two\nthree|three\nfour|four\nfive|five\nsix|six",
+            'aslist' => 1,
+          ),
+          'mandatory' => '1',
+          'pid' => '0',
+          'weight' => '-15',
+        ),
+        'sample values' => 'two',
+        'database values' => array('two'),
+        'database default values' => array('one'),
+      ),
+      'select_zero' => array(
+        'component' => array(
+          'form_key' => 'select_zero',
+          'name' => 'Select zero',
+          'type' => 'select',
+          'value' => '0',
+          'extra' => array(
+            'description' => 'Tests saving zero as a value.',
+            'items' => "0|zero\n1|one\n2|two",
+            'aslist' => 1,
+          ),
+          'mandatory' => '1',
+          'pid' => '0',
+          'weight' => '-15',
+        ),
+        'sample values' => '0',
+        'database values' => array('0'),
+        'database default values' => array('0'),
+      ),
+      'select_no_default' => array(
+        'component' => array(
+          'form_key' => 'select_no_default',
+          'name' => 'Select no default',
+          'type' => 'select',
+          'value' => '',
+          'extra' => array(
+            'description' => 'Description here',
+            'items' => "one|one\ntwo|two\nthree|three\nfour|four\nfive|five\nsix|six",
+            'aslist' => 1,
+          ),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '-15',
+        ),
+        'sample values' => 'two',
+        'database values' => array('two'),
+        'database default values' => array(''),
+      ),
+      'select_no_default_zero' => array(
+        'component' => array(
+          'form_key' => 'select_no_default_zero',
+          'name' => 'Select no default zero',
+          'type' => 'select',
+          'value' => '',
+          'extra' => array(
+            'description' => 'Tests saving zero as a value.',
+            'items' => "0|zero\n1|one\n2|two",
+            'aslist' => 1,
+          ),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '-15',
+        ),
+        'sample values' => '0',
+        'database values' => array('0'),
+        'database default values' => array(''),
+      ),
+      'select_optgroup' => array(
+        'component' => array(
+          'form_key' => 'select_optgroup',
+          'name' => 'Select Optgroup',
+          'type' => 'select',
+          'value' => 'option 1-2',
+          'extra' => array(
+            'description' => 'Tests saving zero as a value.',
+            'items' => "<Group 1>\noption 1-1|option 1-1\noption 1-2|option 1-2\noption 1-3|option 1-3\n<Group 2>\noption 2-1|option 2-1\noption 2-2|option 2-2\noption 2-3|option 2-3",
+            'aslist' => 1,
+          ),
+          'mandatory' => '1',
+          'pid' => '0',
+          'weight' => '-15',
+        ),
+        'sample values' => 'option 2-2',
+        'database values' => array('option 2-2'),
+        'database default values' => array('option 1-2'),
+      ),
+      'select_email' => array(
+        'component' => array(
+          'form_key' => 'select_email',
+          'name' => 'Select e-mails',
+          'type' => 'select',
+          'value' => 'nate@localhost.localhost',
+          'extra' => array(
+            'items' => "nate@localhost.localhost|one\nadmin@localhost.localhost|two",
+          ),
+          'mandatory' => '0',
+          'pid' => '2',
+          'weight' => '-17',
+        ),
+        'sample values' => 'admin@localhost.localhost',
+        'database values' => array('admin@localhost.localhost'),
+        'database default values' => array('nate@localhost.localhost'),
+      ),
+      'select_multiple' => array(
+        'component' => array(
+          'form_key' => 'select_multiple',
+          'name' => 'Select Multiple',
+          'type' => 'select',
+          'value' => 'one,two',
+          'extra' => array(
+            'items' => "one|one\ntwo|two\nthree|three",
+            'multiple' => 1,
+            'aslist' => 1,
+          ),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '-10',
+        ),
+        // TODO: I'd like to test a value, but SimpleTest can't set multiple values.
+        'sample values' => NULL,
+        'database values' => array('one', 'two'),
+        'database default values' => array('one', 'two'),
+      ),
+
+      // Test date components.
+      'date_textfield' => array(
+        'component' => array(
+          'form_key' => 'date_textfield',
+          'name' => 'Date Textfield',
+          'type' => 'date',
+          'value' => 'Nov 19 1978',
+          'extra' => array(
+            'timezone' => 'site',
+            'start_date' => '-100 years',
+            'end_date' => '+2 years',
+            'year_textfield' => 1,
+          ),
+          'mandatory' => '1',
+          'pid' => '0',
+          'weight' => '-7',
+        ),
+        'sample values' => array('day' => '30', 'month' => '9', 'year' => '1982'),
+        'database values' => array('1982-09-30'),
+        'database default values' => array('1978-11-19'),
+      ),
+
+      // Test email components.
+      'email' => array(
+        'component' => array(
+          'form_key' => 'email',
+          'name' => 'E-mail',
+          'type' => 'email',
+          'value' => '%useremail',
+          'mandatory' => '0',
+          'extra' => array(
+            // SimpleTest does not support type="email" input fields.
+            'attributes' => array('type' => 'text'),
+          ),
+          'pid' => '0',
+          'weight' => '-5',
+        ),
+        'sample values' => 'admin@localhost.localhost',
+        'database values' => array('admin@localhost.localhost'),
+        'database default values' => array($this->webform_users['admin']->mail),
+      ),
+
+      // Test hidden components.
+      'hidden' => array(
+        'component' => array(
+          'form_key' => 'hidden',
+          'name' => 'Hidden',
+          'type' => 'hidden',
+          'value' => 'default hidden value',
+          'mandatory' => '1',
+          'pid' => '0',
+          'weight' => '-4',
+        ),
+        'sample values' => NULL,
+        'database values' => array('default hidden value'),
+        'database default values' => array('default hidden value'),
+      ),
+
+      // Test textarea components.
+      'textarea' => array(
+        'component' => array(
+          'form_key' => 'textarea',
+          'name' => 'Textarea',
+          'type' => 'textarea',
+          'value' => 'sample textarea default value',
+          'extra' => array(),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '15',
+        ),
+        'sample values' => 'sample textarea value',
+        'database values' => array('sample textarea value'),
+        'database default values' => array('sample textarea default value'),
+      ),
+
+      // Test textfield components.
+      'textfield_disabled' => array(
+        'component' => array(
+          'form_key' => 'textfield_disabled',
+          'name' => 'Textfield Disabled',
+          'type' => 'textfield',
+          'value' => '%get[foo]',
+          'extra' => array(
+            'disabled' => 1,
+          ),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '-15',
+        ),
+        'sample values' => NULL,
+        'database values' => array('bar'),
+        'database default values' => array('bar'),
+      ),
+      'textfield_profile' => array(
+        'component' => array(
+          'form_key' => 'textfield_profile',
+          'name' => 'Textfield Profile',
+          'type' => 'textfield',
+          'value' => '%profile[profile_gender]',
+          'extra' => array(
+            'width' => '20',
+          ),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '-6',
+        ),
+        'sample values' => 'Female',
+        'database values' => array('Female'),
+        'database default values' => array($this->webform_users['admin']->profile_gender),
+      ),
+
+      // Test time components.
+      'time' => array(
+        'component' => array(
+          'form_key' => 'time',
+          'name' => 'Time',
+          'type' => 'time',
+          'value' => '10:30pm',
+          'extra' => array(
+            'timezone' => 'site',
+            'hourformat' => '12-hour',
+          ),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '16',
+        ),
+        'sample values' => array('hour' => '5', 'minute' => '0', 'ampm' => 'am'),
+        'database values' => array('05:00:00'),
+        'database default values' => array('22:30:00'),
+      ),
+      'time_24h' => array(
+        'component' => array(
+          'form_key' => 'time_24h',
+          'name' => 'Time 24H',
+          'type' => 'time',
+          'value' => '10:30pm',
+          'extra' => array(
+            'timezone' => 'site',
+            'hourformat' => '24-hour',
+          ),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '17',
+        ),
+        'sample values' => array('hour' => '5', 'minute' => '0'),
+        'database values' => array('05:00:00'),
+        'database default values' => array('22:30:00'),
+      ),
+
+      // Test number components.
+      'integer' => array(
+        'component' => array(
+          'form_key' => 'integer',
+          'name' => 'Integer',
+          'type' => 'number',
+          'value' => '1',
+          'extra' => array(
+            'type' => 'textfield',
+            'integer' => 1,
+            'max' => '100',
+            // SimpleTest does not support type="number" input fields.
+            'attributes' => array('type' => 'text'),
+          ),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '18',
+        ),
+        'sample values' => '2',
+        'database values' => array('2'),
+        'database default values' => array('1'),
+        'error values' => array(
+          '1.5' => t('%name field value of @value must be an integer.', array('%name' => 'Integer', '@value' => '1.5')),
+          '101' => t('%name field value must be less than @max.', array('%name' => 'Integer', '@max' => '100')),
+        ),
+      ),
+      'integer_range' => array(
+        'component' => array(
+          'form_key' => 'integer_range',
+          'name' => 'Integer Range',
+          'type' => 'number',
+          'value' => '50',
+          'extra' => array(
+            'type' => 'select',
+            'min' => '10',
+            'max' => '50',
+            'step' => 5,
+            'integer' => 1,
+          ),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '19',
+        ),
+        'sample values' => '10',
+        'database values' => array('10'),
+        'database default values' => array('50'),
+      ),
+      'decimal_positive' => array(
+        'component' => array(
+          'form_key' => 'decimal_positive',
+          'name' => 'Decimal positive',
+          'type' => 'number',
+          'value' => '1',
+          'extra' => array(
+            'type' => 'textfield',
+            'field_prefix' => '$',
+            'field_suffix' => 'lbs',
+            'min' => '0',
+            'decimals' => '2',
+            'point' => '.',
+            'separator' => ',',
+            // SimpleTest does not support type="number" input fields.
+            'attributes' => array('type' => 'text'),
+          ),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '20',
+        ),
+        'sample values' => '2.00',
+        'database values' => array('2.00'),
+        'database default values' => array('1'),
+        'error values' => array(
+          '-1' => t('%name field value must be greater than @min.', array('%name' => 'Decimal positive', '@min' => '0')),
+        ),
+      ),
+      'decimal_range' => array(
+        'component' => array(
+          'form_key' => 'decimal_range',
+          'name' => 'Decimal range',
+          'type' => 'number',
+          'value' => '1',
+          'extra' => array(
+            'type' => 'textfield',
+            'field_prefix' => '$',
+            'field_suffix' => 'lbs',
+            'min' => '1',
+            'max' => '12',
+            'step' => '1.5',
+            // SimpleTest does not support type="number" input fields.
+            'attributes' => array('type' => 'text'),
+          ),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '21',
+        ),
+        'sample values' => '11.5',
+        'database values' => array('11.5'),
+        'database default values' => array('1'),
+        'error values' => array(
+          '2' => t('%name field value must be @start plus a multiple of @step.', array('%name' => 'Decimal range', '@start' => '1', '@step' => '1.5')),
+          '13' => t('%name field value of @value should be in the range @min to @max.', array('%name' => 'Decimal range', '@value' => '13', '@min' => '1', '@max' => '12')),
+        ),
+      ),
+      'decimal_range_select' => array(
+        'component' => array(
+          'form_key' => 'decimal_range_select',
+          'name' => 'Decimal range select',
+          'type' => 'number',
+          'value' => '1',
+          'extra' => array(
+            'type' => 'select',
+            'field_prefix' => '$',
+            'field_suffix' => 'lbs',
+            'min' => '1',
+            'max' => '12',
+            'step' => '1.5',
+          ),
+          'mandatory' => '0',
+          'pid' => '0',
+          'weight' => '21',
+        ),
+        'sample values' => '11.5',
+        'database values' => array('11.5'),
+        'database default values' => array('1'),
+      ),
+    );
+
+    return $this->_webform_components;
+  }
+
+  function testWebformForm() {
+    if (isset($this->_webform_node)) {
+      return $this->_webform_node;
+    }
+
+    $settings = array(
+     'type' => 'webform',
+     'language'  => LANGUAGE_NONE,
+     'uid' => '1',
+     'status' => '1',
+     'promote' => '1',
+     'moderate' => '0',
+     'sticky' => '0',
+     'tnid' => '0',
+     'translate' => '0',
+     'title' => 'Test Webform',
+     'body' => array(LANGUAGE_NONE => array(array('value' => 'Donec placerat. Nullam nibh dolor, blandit sed, fermentum id, imperdiet sit amet, neque. Nam mollis ultrices justo. Sed tempor. Sed vitae tellus. Etiam sem arcu, eleifend sit amet, gravida eget, porta at, wisi. Nam non lacus vitae ipsum viverra pretium. Phasellus massa. Fusce magna sem, gravida in, feugiat ac, molestie eget, wisi. Fusce consectetuer luctus ipsum. Vestibulum nunc. Suspendisse dignissim adipiscing libero. Integer leo. Sed pharetra ligula a dui. Quisque ipsum nibh, ullamcorper eget, pulvinar sed, posuere vitae, nulla. Sed varius nibh ut lacus. Curabitur fringilla. Nunc est ipsum, pretium quis, dapibus sed, varius non, lectus. Proin a quam. Praesent lacinia, eros quis aliquam porttitor, urna lacus volutpat urna, ut fermentum neque mi egestas dolor.'))),
+     'teaser' => array(LANGUAGE_NONE => array(array('value' => 'Donec placerat. Nullam nibh dolor, blandit sed, fermentum id, imperdiet sit amet, neque. Nam mollis ultrices justo. Sed tempor. Sed vitae tellus. Etiam sem arcu, eleifend sit amet, gravida eget, porta at, wisi. Nam non lacus vitae ipsum viverra pretium. Phasellus massa. Fusce magna sem, gravida in, feugiat ac, molestie eget, wisi. Fusce consectetuer luctus ipsum. Vestibulum nunc. Suspendisse dignissim adipiscing libero. Integer leo. Sed pharetra ligula a dui. Quisque ipsum nibh, ullamcorper eget, pulvinar sed, posuere vitae, nulla. Sed varius nibh ut lacus. Curabitur fringilla.'))),
+     'log' => '',
+     'format' => '1',
+     'webform' => array(
+        'confirmation' => 'Thanks!',
+        'confirmation_format' => filter_default_format(),
+        'redirect_url' => '<confirmation>',
+        'teaser' => '0',
+        'allow_draft' => '1',
+        'submit_text' => '',
+        'submit_limit' => '-1',
+        'submit_interval' => '-1',
+        'submit_notice' => '1',
+        'roles' => array('1', '2'),
+        'components' => array(),
+        'emails' => array(),
+      ),
+    );
+
+    $cid = 0;
+    foreach ($this->testWebformComponents() as $key => $component_info) {
+      $cid++;
+      $settings['webform']['components'][$cid] = $component_info['component'];
+      $settings['webform']['components'][$cid]['cid'] = $cid;
+      $settings['webform']['components'][$cid]['pid'] = 0;
+    }
+
+    $this->_webform_node = $this->drupalCreateNode($settings);
+
+    return $this->_webform_node;
+  }
+
+  /**
+   * Generate a list of all values that would result in a valid submission.
+   */
+  function testWebformPost() {
+    $edit = array();
+    foreach ($this->testWebformComponents() as $key => $component_info) {
+      if (is_array($component_info['sample values'])) {
+        foreach ($component_info['sample values'] as $subkey => $value) {
+          $edit["submitted[$key][$subkey]"] = $value;
+        }
+      }
+      elseif ($component_info['sample values'] != NULL) {
+        $value = $component_info['sample values'];
+        // Multiple selects have a funky extra empty bracket in the name.
+        $extra = $key == 'select_multiple' ? '[]' : '';
+        $edit["submitted[$key]$extra"] = $value;
+      }
+    }
+    return $edit;
+  }
+
+  /**
+   * Utility function to print out the current page being tested.
+   */
+  function webformPrintPage() {
+    $this->verbose($this->drupalGetContent());
+  }
+}
+
+/**
+ * Test general functionality of Webform.
+ */
+class WebformGeneralTestCase extends WebformTestCase {
+  /**
+   * Implements getInfo().
+   */
+  public static function getInfo() {
+    return array(
+      'name' => t('Webform'),
+      'description' => t('Checks global Webform settings and content types.'),
+      'group' => t('Webform'),
+    );
+  }
+
+  /**
+   * Test creating a new Webform node.
+   */
+  function testWebformCreate() {
+    $settings = array(
+      'title' => 'Test webform, no components',
+      'type' => 'webform',
+    );
+    $node = $this->drupalCreateNode($settings);
+
+    // Because this is a "webform" type node, it should have an entry in the
+    // database even though it's using the default settings.
+    $this->assertTrue($this->webformRecordExists($node->nid), t('Webform record made in the database for the new webform node.'));
+
+    // Make a change to the node, ensure that the record stays intact.
+    $node->title .= '!';
+    node_save($node);
+    $this->assertTrue($this->webformRecordExists($node->nid), t('Webform record still in the database after modifying webform node.'));
+  }
+
+  /**
+   * Test webform-enabling a different node type and testing behavior.
+   */
+  function testWebformCreateNewType() {
+    // Enable webforms on the page content type.
+    variable_set('webform_node_types', array('webform', 'page'));
+
+    $settings = array(
+      'title' => 'Test webform-enabled page',
+      'type' => 'page',
+    );
+    $node = $this->drupalCreateNode($settings);
+
+    // Because this is a webform-enabled type node but does not yet have any
+    // components, it should not have an entry in the database because it is
+    // using the default settings.
+    $this->assertFalse($this->webformRecordExists($node->nid), t('Webform record not in the database for the new page node.'));
+
+    // Make a change to the node, ensure that the record stays empty.
+    $node->title .= '!';
+    node_save($node);
+    $this->assertFalse($this->webformRecordExists($node->nid), t('Webform record still not in the database after modifying page node.'));
+
+    // Add a new component to the node and check that a record is made in the
+    // webform table.
+    $components = $this->testWebformComponents();
+    $textarea = $components['textarea'];
+    $textarea['type'] = 'textarea';
+    $textarea['form_key'] = 'textarea';
+    $textarea['cid'] = 1;
+    $textarea['pid'] = 0;
+    $textarea = array_merge(webform_component_invoke('textarea', 'defaults'), $textarea);
+    $node->webform['components'][1] = $textarea;
+    node_save($node);
+    $this->assertTrue($this->webformRecordExists($node->nid), t('Webform record now exists after adding a new component.'));
+
+    // Remove the new component and ensure that the record is deleted.
+    $node->webform['components'] = array();
+    node_save($node);
+    $this->assertFalse($this->webformRecordExists($node->nid), t('Webform record deleted after deleting last component.'));
+  }
+
+  function webformRecordExists($nid) {
+    return (bool) db_query("SELECT nid FROM {webform} WHERE nid = :nid", array(':nid' => $nid))->fetchField();
+  }
+}

@@ -1,0 +1,9 @@
+%tr{ height:"55px"}
+  %td{width:"100px"}
+    #{data_t('concept.description', concept.name)}:
+  %td{width:"55px", style:"text-align:center;"}
+    = image_tag image_url(bronze_fraction_image_path(completion)), class: "trophy_image"
+  %td{width:"55px", style:"text-align:center;"}
+    = image_tag image_url(silver_fraction_image_path(completion)), class: "trophy_image"
+  %td{width:"55px", style:"text-align:center;"}
+    = image_tag image_url(gold_fraction_image_path(completion)), class: "trophy_image"

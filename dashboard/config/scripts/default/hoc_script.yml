@@ -1,0 +1,23 @@
+- Options: { id: 2, name: 'Hour of Code', wrapup_video: 'hoc_wrapup', trophies: false, hidden: false }
+- TSV: |
+    Game	Name	Level	Skin	Concepts	Url
+    Maze	Level1	2_2	birds	sequence
+    Maze	Level2	2_1	birds	sequence
+    Maze	Level2_5	2_2_5	birds	sequence
+    Maze	Level3	2_3	birds	sequence
+    Maze	Level4	2_4	birds	sequence
+    Maze	Level5	2_5	birds	loop_times
+    Maze	Level6	2_6	birds	loop_times
+    Maze	Level7	2_7	birds	loop_times
+    Maze	Level8	2_8	birds	loop_times
+    Maze	Level9	2_9	birds	loop_until
+    Maze	Level10	2_10	birds	loop_until
+    Maze	Level11	2_11	pvz	loop_until
+    Maze	Leve12	2_12	pvz	loop_until
+    Maze	Level13	2_13	pvz	if, loop_until
+    Maze	Level14	2_14	pvz	if, loop_until
+    Maze	Level15	2_15	pvz	if, loop_until
+    Maze	Level16	2_16	pvz	if, loop_until
+    Maze	Level17	2_17	pvz	if_else, loop_until
+    Maze	Level18	2_18	pvz	if_else, loop_until
+    Maze	Level19	2_19	pvz	if_else, loop_until

@@ -1,0 +1,1 @@
+("6.0" ("df7422f4fff401a2ede3a28be5a3c0739f0b124e" . "9151c868a37f7e6dee7b267df355f08530060247") (collects #"syntax" #"to-string.rkt") (collects #"scheme" #"runtime-config.rkt") (collects #"scheme" #"main.rkt") (collects #"htdp" #"testing.rkt") (collects #"syntax" #"stx.rkt") (collects #"syntax" #"kerncase.rkt"))

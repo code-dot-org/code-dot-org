@@ -1,0 +1,402 @@
+<html>
+<head>
+	<title></title>
+	<style>
+		textarea{
+			font-family: monospace;
+			float: left;
+			font-size: 14px;
+			width: 250px;
+		}
+		header{
+			background-color: rgb(0,164,180);
+			width: 100%;
+			padding: 20px;
+			top: 0px;
+			color: white;
+			font-weight: bold;
+			margin: 20px;
+			box-shadow: 0px 0px 10px black;
+			width: 90%;
+		}
+		.textarea{
+			font-family: monospace;
+			float: left;
+			font-size: 14px;
+			width: 250px;
+			word-wrap: break-word;         /* All browsers since IE 5.5+ */
+    overflow-wrap: break-word;     /* Renamed property in CSS3 draft spec */
+    background-color: #000000;
+    color: #55AA55;
+
+		}
+		body{
+			font-family: sans-serif;
+			font-size: 12px;
+		}
+
+		.highlight{
+			background-color: #FFFF00;
+		}
+		.highlight2{
+			background-color: #AAAAFF;
+		}
+		#controls{
+			width: 250px;
+			float: left;
+			background-color: #FFAAAA;
+			border: solid 1px black;
+			margin: 5px 25px;
+			box-shadow: 1px 1px 20px black;
+			padding: 5px 20px;
+		}
+		#inputs{
+			width: 250px;
+			float: left;
+			background-color: #DDDDFF;
+
+		}
+		#numRowsLabel{
+			background-color: #FFFF00;
+		}
+		big{
+			font-size: 30px;
+			font-weight: bold;
+		}
+		table{
+			width: 250px;
+			box-shadow: 10px 10px 20px black;
+
+		}
+		th{
+			text-align: center;
+			vertical-align: middle;
+			font-size: 8px;
+			color: #AAAAFF;
+		}
+		td{
+			text-align: center;
+			vertical-align: middle;
+			font-family: monospace;
+			font-size: 14px;
+			border: solid 1px #FFFFFF;
+			background-color: #EEEEEE;
+			padding: 2px;
+
+
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script>
+	var box, boxRows, boxCols;
+	var vSquare;
+
+	$(document).ready(function(){ 
+		box = makeVignereBox(); 
+		displayBox(-1,-1);
+		cleanInput("#textmsg_in");
+		cleanInput("#keyword");
+		setupToEncrypt();
+	});
+	
+	function makeVignereBox(){
+		var A= new Array(rows);
+		var rows=27;
+		var cols=27;
+		var charList = new Array(27);
+		for(var i=0; i<26; i++){
+			charList[i]=String.fromCharCode(i+65);
+		}
+		charList[26]="_";
+
+		for(var i=0; i<rows; i++){
+			A[i] = new Array(cols);
+			for(var j=0; j<cols; j++){
+
+				//var code = charList[ (i+j)%A.length];
+				A[i][j]=charList[ (i+j)%charList.length]; //String.fromCharCode(code);
+			}
+		}
+		return A;
+	}
+
+	function displayBox(highlight_row, highlight_col){
+		var disp = $("#boxDisp");
+		disp.html("<table>");
+		//Make column headings
+		disp.append("<tr>");
+		disp.append("<th></th>");
+		for(var col=0; col<box[0].length; col++){
+			disp.append("<th>"+String.fromCharCode(col+65)+"</th>");
+		}
+		disp.append("</tr>");
+
+
+		for(var row=0; row<box.length; row++){
+			disp.append("<tr>");
+			disp.append("<th>"+(row+1)+"</th>");
+			for(var col=0; col<box[row].length; col++){
+
+				 if( row==highlight_row && col==highlight_col){
+				 	disp.append("<td class='highlight'>"+box[row][col]+"</td>");
+
+				 }
+				 else if(row<highlight_row && col==highlight_col || col<highlight_col && row == highlight_row){
+					disp.append("<td class='highlight2'>"+box[row][col]+"</td>");
+				 }
+				 else{
+					disp.append("<td>"+box[row][col]+"</td>");
+				}
+
+				
+			}
+			disp.append("</tr>");
+		}
+		disp.append("</table>");
+
+
+
+	}
+
+	// function setBoxRowsCols(){
+	// 	boxCols=$("#numCols").val();
+	// 	boxRows=Math.ceil($("#textmsg_in").val().length/boxCols);
+		
+		
+	// 	$("#numColsLabel").html($("#numCols").val());
+	// 	$("#numRowsLabel").html(boxRows);
+	// }
+
+	var textToDecrypt;
+	var dKeyIndex=0;
+	var decryptedMsgChars;
+
+	function decrypt(){
+		setupToDecrypt();
+		while(decryptNextChar()){}
+		alert(decryptedMsgChars);
+	}
+
+	function decryptNextChar(){
+		if(textToDecrypt.length<=0){
+			return false;
+
+		}
+		
+
+		//find next key val
+		var keyChar = $("#keyword").val().charAt(dKeyIndex);
+		var keyCharVal = keyChar.charCodeAt(0)-65;		
+		dKeyIndex = (dKeyIndex+1) % $("#keyword").val().length;
+		
+		//find next char to decode
+		var cipherChar = textToDecrypt.charAt(0);
+		var cipherCharVal = cipherChar.charCodeAt(0);
+		textToDecrypt = textToDecrypt.substring(1,textToDecrypt.length);
+
+		//find the column in the box array that matches the char
+		// Note: should be able to do this arithmetically, but I got lost somehow
+		var keyRow = keyCharVal;
+		if(keyRow>25) keyRow=26; //handle _
+		var col=0;
+		while(box[keyRow][col]!=cipherChar && col < box[keyRow].length){ col++; }
+
+		var plainCharVal = "?"; //box[0][col]; //found col, orig in row 0
+		var plainChar = box[0][col]; //String.fromCharCode(plainCharVal);
+		// return val from row 0
+		decryptedMsgChars+=plainChar;
+
+		//console.debug("Key: "+keyChar+"("+keyCharVal+") Cipher:"+cipherChar+"("+cipherCharVal+") = "+plainChar);
+		return true;
+	}
+	function setupToDecrypt(){
+		textToDecrypt = encryptedMsgChars;
+		decryptedMsgChars="";
+		dKeyIndex=0;
+	}
+
+	
+	function addUnderscores(){
+		var foo = $('#textmsg_in').val();
+
+		$('#textmsg_in').val(foo.replace(/ /g,"_"));
+	
+	}
+	function cleanInput(id){
+		console.debug("cleaning "+id)
+		var text = $(id).val();
+		text = text.replace(/\n/g, "");
+		text = text.toUpperCase();
+		text = text.replace(/ /g,"_");
+		text = text.replace(/[^A-Z_]/g,"");
+		$(id).val(text);
+	}
+
+	
+
+	///****** TIMER STUFF ******////
+
+	var timerId;
+	var charsToEncrypt;
+	var keyIndex;
+	var encryptedMsgChars;
+	var key;
+	var paused=true;
+	var currentDelay=-1;
+	var animate;
+
+	function encryptNextChar(){
+
+		if(charsToEncrypt.length<=0){
+			setDelay(-1);
+			$("#ciphertextDisplay").html(encryptedMsgChars);
+			$("#plaintextDisplay").html($("#textmsg_in").val());
+			$("#keyDisplay").html($("#keyword").val());
+
+			return false;
+		}
+
+		var nextChar = charsToEncrypt.charAt(0);
+		charsToEncrypt = charsToEncrypt.substring(1,charsToEncrypt.length);
+
+		var keyChar = key.charAt(keyIndex);
+		highlightChar("#keyDisplay", key, keyIndex);
+		keyIndex = (keyIndex+1)%key.length;
+
+		//highlight what we're about to do.
+		if(animate==true) highlightChar("#plaintextDisplay", $("#textmsg_in").val(), encryptedMsgChars.length);
+
+		var vBoxCol = nextChar.charCodeAt(0)-65; //gives value 0-25
+		var vBoxRow = keyChar.charCodeAt(0)-65;
+		if(vBoxCol>25){ //means plaintext char is _
+			vBoxCol=26;
+		}
+		if(vBoxRow>25){ //means Keyword contains space
+			vBoxRow=26;
+		}
+		//var nextEncryptedChar = "_";
+		//if(nextChar!=="_"){  //don't encode underscores.
+			nextEncryptedChar = box[vBoxRow][vBoxCol];
+		//}
+		encryptedMsgChars += nextEncryptedChar;
+
+
+		
+		if(animate==true) displayBox(vBoxRow, vBoxCol);
+		
+
+		//console.debug("Added "+nextEncryptedChar+" to msg from box["+vBoxRow+"]["+nextChar+"]");
+
+		if(animate==true) highlightChar("#ciphertextDisplay",encryptedMsgChars, encryptedMsgChars.length-1);
+		return true;
+
+	}
+
+	function highlightChar(id, originalText, indexToHighlight){
+		var newStr = originalText.substring(0,indexToHighlight);
+		newStr+="<mark>"+originalText.charAt(indexToHighlight)+"</mark>";
+		newStr += originalText.substring(indexToHighlight+1, originalText.length);
+		$(id).html(newStr);
+
+	}
+
+	function encryptNoAnim(){
+		animate=false;
+		while(encryptNextChar(false)){}
+		animate=true;
+
+	}
+
+	function setDelayFromSlider(){
+		setDelay(1000-$("#speedSlider").val())
+	}
+	function setDelay(ms){
+		//if changing delay want to clear old timer anyway
+		// or old one will continue to be called in separate
+		// thread
+		clearInterval(timerId);
+
+
+		if(ms>=0){
+			timerId = setInterval(encryptNextChar, ms);
+			//delayVal=ms;
+		}
+	}
+	function togglePause(){
+		if(paused){
+			setDelayFromSlider();
+			paused=false;
+		}
+		else{
+			setDelay(-1);
+			paused=true;
+		}
+	}
+	function pause(){ setDelay(-1); paused=true;}
+	function start(ms){
+		
+		if($("#enc_dec_switch").val()=="encrypt"){
+			setupToEncrypt();
+
+			if(ms>=0){
+
+				setDelayFromSlider();
+			}
+		}
+		else{
+			decrypt();
+		}
+	}
+	
+
+	function setupToEncrypt(){
+
+		charsToEncrypt=$("#textmsg_in").val();
+		keyIndex=0;
+		encryptedMsgChars="";
+		cleanInput("#keyword");
+		animate=true;
+
+		key = $("#keyword").val();
+		$("#keyDisplay").html(key);
+		$("#plaintextDisplay").html(charsToEncrypt);
+		$("#ciphertextDisplay").html("");
+	}
+	</script>
+<body>
+	<header>
+		<img src="logo.png" hspace=20> 
+		<big> Interactive Vigenere Cipher </big>
+	</header>
+	
+	<div id="controls">
+		<h3>controls</h3>
+		Enter your text message(140 chars)<br>
+		<textarea id="textmsg_in" rows=5 cols=20 onkeyup="cleanInput('#textmsg_in'); setupToEncrypt();">Baker is a cool guy! </textarea><br><br>
+		key: <input type=text id="keyword" value="FOOBAR" onkeyup="setupToEncrypt();"><br>
+		
+		Encrypt:<input type=radio id="enc_dec_switch" name="switch" value="encrypt" checked>
+		| Decrypt: <input type=radio id="enc_dec_switch" name="switch" value="decrypt" disabled><br>
+		<button onClick="start(-1)">reset</button>
+
+		<button onClick="togglePause()">&#9654;||</button>
+		<button onClick="pause(); encryptNextChar()">Step</button>
+		<button onClick="encryptNoAnim()">&#9654;&#9654;|</button><br>
+		
+
+		slow <input type=range min=0 max=1000 value=500 id="speedSlider" onChange="setDelayFromSlider()"> fast<br>
+
+	</div>
+	<div id="inputs">
+		
+		Key: <br><div id="keyDisplay" class="textarea"></div><br><br>
+		Plaintext:<br> <div id="plaintextDisplay" class="textarea"></div><br><br>
+		Ciphertext: <br><div id="ciphertextDisplay" class="textarea"></div>
+	</div>
+	<div id="boxDisp"></div>
+	<h1>Challenge:</h1>
+	<li> Can you use this idea of creating a private key without meeting ahead of time to create a one-time pad to use with the <a href="http://cs.ucls.uchicago.edu/~bfranke/codeDotOrg/Unit2/ColorKeyExchange.html">Vignere Cipher</a> we used back in Unit 1?
+
+
+</body>
+</html>

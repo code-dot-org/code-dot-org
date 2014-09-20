@@ -1,0 +1,1530 @@
+body {
+  background-color: #7c7c7c;
+  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #5b6770;
+}
+.page {
+  background-color: #fff;
+}
+h1, h2, h3, h4 {
+  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-style: normal;
+}
+h1 {
+  font-size: 2.286em;
+  margin-bottom: 1em;
+  color: #5b6770;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.571em;
+  margin-bottom: .25em;
+  color: #00adbc;
+  font-weight: 500;
+}
+h2.block-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+h3 {
+  font-size: 1.286em;
+  color: #b9bf15;
+  font-weight: 500;
+}
+h4 {
+  font-size: 1em;
+  color: #5b6770;
+  font-weight: 500;
+}
+a {
+  font-weight: 500;
+}
+a:link, a:visited {
+  color: #7665a0;
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: #7665a0;
+  text-decoration: underline;
+}
+input {
+  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+label {
+  font-size: 1em;
+}
+input[type="radio"], input[type="checkbox"] {
+  margin-top: 0;
+  margin-right: .25em;
+}
+.form-required {
+  display: block;
+  color: #7c7c7c;
+  font-size: .625em;
+  line-height: 1em;
+}
+
+/* Bootstrap customizations */
+.btn-facebook:link,
+.btn-facebook:visited,
+.btn-twitter:link,
+.btn-twitter:visited {
+  color: #ffffff;
+}
+.btn-facebook,
+.btn-twitter {
+  font-size: 1em;
+  padding: 6px 16px 8px 16px;
+}
+.btn-facebook.active,
+.btn-twitter.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+.btn-facebook {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #3a599d;
+  background-image: -moz-linear-gradient(top, #4265b2, #2f477d);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4265b2), to(#2f477d));
+  background-image: -webkit-linear-gradient(top, #4265b2, #2f477d);
+  background-image: -o-linear-gradient(top, #4265b2, #2f477d);
+  background-image: linear-gradient(to bottom, #4265b2, #2f477d);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4265b2', endColorstr='#ff2f477d', GradientType=0);
+  border-color: #2f477d #2f477d #1a2745;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #2f477d;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.btn-facebook.disabled,
+.btn-facebook[disabled] {
+  color: #ffffff;
+  background-color: #2f477d;
+  *background-color: #283c6a;
+}
+.btn-facebook:active,
+.btn-facebook.active {
+  background-color: #213258 \9;
+}
+.btn-twitter {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #00b6e8;
+  background-image: -moz-linear-gradient(top, #00c9ff, #0099c6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00c9ff), to(#0099c6));
+  background-image: -webkit-linear-gradient(top, #00c9ff, #0099c6);
+  background-image: -o-linear-gradient(top, #00c9ff, #0099c6);
+  background-image: linear-gradient(to bottom, #00c9ff, #0099c6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00c9ff', endColorstr='#ff0099c6', GradientType=0);
+  border-color: #0099c6 #0099c6 #005e7a;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #0099c6;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter:active,
+.btn-twitter.active,
+.btn-twitter.disabled,
+.btn-twitter[disabled] {
+  color: #ffffff;
+  background-color: #0099c6;
+  *background-color: #0085ad;
+}
+.btn-twitter:active,
+.btn-twitter.active {
+  background-color: #007293 \9;
+}
+
+.btn-cdo-plain,
+.btn-cdo-basic {
+  font-size: 1em;
+  font-weight: 600;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #000000;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-cdo-plain:link,
+.btn-cdo-plain:visited {
+  color: #000000;
+}
+.btn-cdo-plain:hover,
+.btn-cdo-plain:focus,
+.btn-cdo-plain:active,
+.btn-cdo-plain.active,
+.btn-cdo-plain.disabled,
+.btn-cdo-plain[disabled] {
+  color: #000000;
+}
+
+.btn-cdo-basic {
+  background-color: #ffd62f;
+  font-weight: 500;
+  background-image: -moz-linear-gradient(top, #ffdc4d, #fecd02);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffdc4d), to(#fecd02));
+  background-image: -webkit-linear-gradient(top, #ffdc4d, #fecd02);
+  background-image: -o-linear-gradient(top, #ffdc4d, #fecd02);
+  background-image: linear-gradient(to bottom, #ffdc4d, #fecd02);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffdc4d', endColorstr='#fffecd02', GradientType=0);
+  border-color: #fecd02 #fecd02 #b39001;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #fecd02;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-cdo-basic:link,
+.btn-cdo-basic:visited {
+  color: #000000;
+}
+.btn-cdo-basic:hover,
+.btn-cdo-basic:focus,
+.btn-cdo-basic:active,
+.btn-cdo-basic.active,
+.btn-cdo-basic.disabled,
+.btn-cdo-basic[disabled] {
+  color: #000000;
+  background-color: #fecd02;
+  *background-color: #e6b901;
+}
+.btn-cdo-basic:active,
+.btn-cdo-basic.active {
+  background-color: #cca501 \9;
+}
+
+
+
+/* Font Awesome customizations */
+.icon-facebook,
+.icon-twitter {
+}
+.icon-facebook {
+  font-size: 1.1em;
+  padding-right: .375em;
+}
+.icon-twitter {
+  font-size: .9em;
+  padding-right: .25em;
+}
+
+.icon-play {
+  font-size: .875em;
+  padding-right: .375em;
+}
+
+/* Sections */
+#section-header {
+  padding-bottom: 30px;
+}
+
+body.front #section-header {
+  padding-bottom: 0;
+}
+
+
+/* Zones */
+#zone-branding-wrapper {
+  background-color: #00adbc;
+}
+#zone-engage-wrapper {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+#zone-header-wrapper {
+  background-color: #fff;
+  position: relative;
+  z-index: 30;
+}
+
+#zone-header {
+  margin-top: 0;
+  padding: 0 0 40px 0;
+  background-color: #00adbc;
+}
+
+#zone-heading-banner-wrapper {
+  background: #ffa400 url(/images/hour-of-code-banner-bg.png) top left repeat-x;
+}
+
+#zone-heading-banner-wrapper img {
+  width: 100%;
+}
+
+#zone-preface-wrapper {
+  background-color: #fff;
+}
+#zone-preface {
+}
+#zone-content-wrapper {
+  background-color: #fff;
+  position: relative;
+  z-index: 5;
+}
+#zone-content {
+  padding: 0 0 40px 0;
+}
+body.front #zone-content {
+  padding-top: 30px;
+  padding-bottom: 0;
+}
+
+#zone-postscript-wrapper {
+  background-color: #fff;
+}
+#zone-postscript {
+  padding: 40px 0 40px 0;
+}
+#zone-footer-menu-wrapper {
+  background: #efefef;
+}
+#zone-footer-menu {
+  padding: 30px 0 40px 0;
+}
+
+#zone-footer-extra-wrapper {
+  background-color: #4dbcc9;
+}
+
+#zone-footer-extra {
+  padding: 30px 0;
+}
+
+#zone-footer-wrapper {
+  background-color: #7c7c7c;
+}
+
+/* Regions */
+
+#region-branding {
+  z-index: 40;
+}
+
+.region-branding-inner {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.region-menu-inner {
+  padding-top: 75px;
+}
+
+#region-header-first {
+  text-align: center;
+}
+
+.region-header-first-inner {
+  background-color: #4dbcc9;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 10px;
+}
+
+#region-header-second {
+}
+
+.region-header-second-inner {
+}
+#region-preface-first {  
+}
+.region-preface-first-inner {
+  padding: 20px;
+  background: #e3f5f7;
+  border: 1px solid #4dbcc9;
+  margin-bottom: 40px;
+}
+#region-preface-second {  
+}
+.region-preface-second-inner {
+  padding-bottom: 20px;
+}
+#region-content {
+}
+#region-engage {
+}
+.region-engage-inner {
+  padding-top: 15px;
+}
+.region-footer-first-inner {
+  padding: 30px 0 40px 0;
+}
+.region-menu-second-inner {
+  padding: 0 40px 0 0;
+}
+
+.region-footer-second-inner {
+  padding: 20px 0;
+}
+
+/* Blocks */
+.social-buttons .content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.social-buttons .content li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 10px 0 0;
+  padding: 0;
+}
+.other-film-versions {
+  float: right;
+  font-size: .8125em;
+  margin: 14px 0 0 0;
+  color: #fff;
+  line-height: 1.5em;
+}
+.other-film-versions .other-versions-links {
+  text-align: left;
+}
+.other-film-versions .other-versions-links a:link,
+.other-film-versions .other-versions-links a:visited {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+}
+.other-film-versions .other-versions-links a:hover,
+.other-film-versions .other-versions-links a:active {
+  color: #fecd00;
+  text-decoration: none;
+  border-bottom: 1px solid #fecd00;
+}
+.no-youtube-link {
+  float: right;
+  font-size: .75em;
+  margin: 25px 0 0 0;
+}
+.no-youtube-link a:link,
+.no-youtube-link a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+.no-youtube-link a:hover,
+.no-youtube-link a:active {
+  color: #fecd00;
+  text-decoration: none;
+  border-bottom: 1px solid #fecd00;
+}
+.video-share-buttons-above {
+  margin-bottom: 15px;
+}
+.video-share-buttons-below {
+  margin-top: 15px;
+  width: 380px;
+}
+.stats-share-buttons {
+  list-style-type: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+  text-align: center;
+}
+.stats-share-buttons li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 10px 0 0;
+  padding: 0;
+}
+.every-student-petition h2.block-title {
+  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.625em;
+  line-height: 1.231em;
+  margin: 0 0 .5em 0;
+  text-align: left;
+  color: #333;
+}
+.every-student-petition .field-name-body p {
+  font-size: .9375em;
+  color: #333;
+}
+.every-student-petition form {
+  margin-bottom: 0;
+}
+.every-student-petition .webform-component {
+  clear: left;
+  margin: 0 0 10px 0;
+}
+.every-student-petition .webform-component label {
+  margin: 0;
+}
+.every-student-petition .webform-component input {
+  margin: 0;
+  width: 200px;
+}
+.every-student-petition #webform-component-email {
+  float: left;
+}
+.every-student-petition #webform-component-email input {
+  float: left;
+}
+.every-student-petition #webform-component-email .field-suffix {
+  float: left;
+  display: block;
+  width: 100px;
+  font-size: 11px;
+  color: #ffffff;
+  line-height: 1em;
+  margin: 6px 0 0 8px;
+}
+.every-student-petition #webform-component-zip-code {
+  float: left;
+}
+.every-student-petition #webform-component-zip-code input {
+  float: left;
+}
+.every-student-petition #webform-component-zip-code .field-suffix {
+  float: left;
+  display: block;
+  width: 100px;
+  font-size: 11px;
+  color: #ffffff;
+  line-height: 1em;
+  margin: 2px 0 0 8px;
+}
+.every-student-petition #webform-component-category {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+.every-student-petition #webform-component-category select {
+  width: 164px;
+}
+.every-student-petition #webform-component-category .field-prefix {
+  padding-right: .5em;
+  color: #333;
+}
+.every-student-petition .form-actions {
+  margin: 0;
+  padding: 0;
+}
+.every-student-petition .form-error {
+  text-align: left;
+  font-size: 1em;
+  height: 1em;
+  line-height: 1em;
+  color: #c00;
+}
+.every-student-petition .form-error {
+}
+.error.clientside-error {
+  background: none;
+  background-image: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.error.clientside-error ul {
+  list-style-type: none;
+  margin: 0;
+}
+.error.clientside-error li {
+  color: #f00;
+}
+.purpose-statement {
+  margin-top: 10px;
+}
+.purpose-statement p {
+  color: #ffffff;
+  font-size: 1em;
+  margin-bottom: 0;
+}
+.purpose-statement p a {
+  white-space: nowrap;
+}
+.purpose-statement p a:after {
+  content: " ›";
+}
+.purpose-statement p a:link,
+.purpose-statement p a:visited {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #ffffff;
+}
+.purpose-statement p a:hover,
+.purpose-statement p a:active {
+  color: #fecd00;
+  text-decoration: none;
+  border-bottom: 1px solid #fecd00;
+}
+.actions-block {
+}
+.actions-block .block-inner {
+  padding: 15px 5px 20px 5px;
+  background: #e3f5f7;
+  border: 1px solid #4dbcc9;
+}
+.actions-block h2 {
+  text-align: center;
+  margin: 0;
+  color: #333;
+  font-size: 1.5em;
+}
+.actions-block p,
+.actions-block li {
+  font-size: 1.125em;
+  line-height: 1.333em;
+}
+.actions-block p {
+  margin-bottom: 1em;
+}
+.actions-block li {
+  margin-bottom: .5em;
+}
+.actions-block a {
+}
+.actions-block a:after {
+  content: " ›";
+}
+.simple-quotes {
+  clear: left;
+}
+.simple-quotes .block-inner {
+  padding: 20px 0 0 0;
+}
+.simple-quotes .content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.simple-quotes .content li {
+  list-style-type: none;
+  font-size: 1.25em;
+  line-height: 1.222em;
+  color: #999;
+  margin: 0 0 1em 0;
+  padding: 0;
+  text-align: center;
+}
+.simple-quotes .content li .quote-source {
+  text-transform: uppercase;
+  font-size: .7em;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+#block-views-quotes-front-block h2.block-title {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.supporter-quotes {
+}
+.supporter-quotes .supporter-quote {
+  width: 49%;
+  margin: 0 0 35px 0;
+  padding: 0;
+  float: left;
+}
+.supporter-quotes .supporter-quote.views-row-odd {
+  margin-right: 2%;
+}
+.supporter-quotes .field-name-field-person-photo {
+  float: left;
+  width: 90px;
+  margin: 0 15px 0 0;
+}
+.supporter-quotes .group-quote-and-source {
+  float: left;
+  width: 375px;
+}
+.supporter-quotes .field-name-field-quote {
+  font-size: .9375em;
+  color: #666;
+  line-height: 1.143em;
+  margin: .25em 0 0 0;
+}
+.supporter-quotes .field-name-field-source-name,
+.supporter-quotes .field-name-field-source-title {
+  font-size: .9375em;
+  color: #000;
+  line-height: 1.143em;
+}
+.supporter-quotes .field-name-field-source-name {
+  font-weight: 600;
+}
+.show-film {
+}
+.show-film .block-inner {
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 40px;
+}
+.show-film h2 {
+  text-align: left;
+  margin: 0;
+  color: #5b6770;
+  font-size: 1.5em;
+}
+.show-film .show-film-intro {
+  margin-bottom: 1em;
+}
+.show-film .show-film-content {
+  float: left;
+  width: 310px;
+  margin: 0 25px 0 0;
+  text-align: center;
+}
+.show-film .show-film-content.last {
+  margin-right: 0;
+}
+.show-film .show-film-links a {
+  display: inline-block; 
+  margin: 0 3px;
+}
+
+.show-film i.icon-download-alt {
+  padding-right: .5em;
+}
+.show-film h3 {
+  font-size: 1.25em;
+  font-weight: 400;
+  text-align: center;
+  color: #7c7c7c;
+  margin: 0;
+}
+.show-film .film-dvd {
+  clear: left;
+  padding-top: 20px;
+  font-size: .929em;
+}
+
+.hour-code-coming {
+  margin-bottom: 30px;
+}
+.hour-code-coming .block-inner {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #efefef;
+  margin: 0;
+}
+.hour-code-coming h2 {
+  text-align: left;
+  margin: 0;
+  color: #5b6770;
+  font-size: 1.5em;
+}
+.hour-code-coming p {
+  padding-right: 33%;
+}
+
+#webform-client-form-124 .form-item-submitted-address-country {
+  display: none;
+}
+
+.start-learning-now {
+}
+.start-learning-now h2 {
+  text-align: left;
+  margin: 0;
+  color: #5b6770;
+  font-size: 1.714em;
+}
+.start-learning-now p {
+  font-size: 1.25em;
+  color: #7c7c7c;
+  margin: 0 0 30px 0;
+}
+.need-support-donation-link {
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 40px;
+}
+.need-support-donation-link h2 {
+  font-size: 1.5em;
+  text-align: left;
+  margin: 0 0 .5em 0;
+  color: #5b6770;
+}
+.need-support-donation-link p {
+  font-size: 1.25em;
+  margin: 0 0 1em 0;
+}
+.stay-informed {
+}
+.stay-informed .stay-informed-section {
+  clear: both;
+}
+.stay-informed .stay-informed-section-facebook {
+  margin: 5px 0 0 0;
+}
+.stay-informed .stay-informed-section-twitter {
+  margin: 15px 0 0 0;
+}
+#block-twitter-block-default ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 10px;
+}
+#block-twitter-block-default li {
+  list-style-type: none;
+  font-size: 1em;
+  margin: 0;
+  color: #7c7c7c;
+}
+#block-twitter-block-default li p.tweet {
+  margin: 1em 0;
+}
+.twitter-follow-button {
+  margin-left: 5px;
+}
+#webform-component-address .resizable-textarea {
+  width: 220px;
+}
+
+/* Sidebars */
+#region-sidebar-second h2 {
+  text-align: center;
+  background: #efefef;
+  padding: 5px;
+  font-size: 1.214em;
+}
+.zone-footer-extra .every-student-petition h2 {
+  text-align: center;
+  margin: 0 100px .75em 100px;
+}
+.zone-footer-extra .every-student-petition form {
+  margin-left: 40px;
+}
+.zone-footer-extra .every-student-petition .webform-component {
+  clear: none;
+  float: left;
+  margin: 0 15px 0 0;
+}
+.zone-footer-extra .every-student-petition .webform-component label {
+  margin: 0;
+}
+.zone-footer-extra .every-student-petition .webform-component input {
+  margin: 0;
+  width: 160px;
+}
+.zone-footer-extra .every-student-petition #webform-component-email--footer,
+.zone-footer-extra .every-student-petition #webform-component-zip-code--footer {
+  float: left;
+}
+.zone-footer-extra .every-student-petition #webform-component-email--footer input,
+.zone-footer-extra .every-student-petition #webform-component-zip-code--footer input {
+  float: left;
+}
+.zone-footer-extra .every-student-petition #webform-component-email--footer .field-suffix,
+.zone-footer-extra .every-student-petition #webform-component-zip-code--footer .field-suffix {
+  float: left;
+  clear: left;
+  display: block;
+  width: 160px;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 1em;
+  margin: 2px 0 0 5px;
+}
+.zone-footer-extra .every-student-petition #webform-component-category--footer {
+  float: left;
+  margin-right: 15px;
+}
+.zone-footer-extra .every-student-petition #webform-component-category--footer select {
+  width: 164px;
+}
+.zone-footer-extra .every-student-petition #webform-component-category--footer .field-prefix {
+  padding-right: .5em;
+  color: #333;
+}
+.zone-footer-extra .every-student-petition .form-error {
+  text-align: center;
+}
+
+/* Override Bootstrap form control for the footer petition on the petition page. */
+.zone-footer-extra .every-student-petition .controls {
+  display: inline;
+}
+
+.social-media-links {
+  float: right;
+}
+.social-media-links .fb-like,
+.social-media-links .twitter-follow {
+  float: left;
+  margin: 0 0 0 20px;
+}
+.footer-trademark-info {
+  color: #fff;
+}
+
+
+/* Navigation */
+
+#main-menu {
+  float: right;
+  margin-bottom: 10px;
+}
+
+#main-menu li {
+  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.143em;
+  text-transform: uppercase;
+  padding: 0 0 0 30px;
+}
+
+#main-menu a {
+  font-weight: 400;
+}
+
+#main-menu a:link, #main-menu a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+#main-menu a:hover, #main-menu a:active {
+  color: #fff;
+  border-bottom: 4px solid #ff8a00;
+}
+#zone-footer-menu .navigation {
+  float: right;
+}
+#zone-footer-menu h2 {
+  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #7c7c7c;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin: 0;
+  text-align: left;
+}
+#secondary-menu li {
+  display: block;
+  padding: 0;
+  margin: 0 0 .25em 0; 
+}
+#secondary-menu li.last {
+}
+#secondary-menu a:link,
+#secondary-menu a:visited {
+  color: #7c7c7c;
+}
+#secondary-menu a:hover,
+#secondary-menu a:active {
+  color: #7c7c7c;
+  text-decoration: underline;
+}
+.learn-subnavigation {
+}
+.learn-subnavigation ul.menu {
+	float: left;
+	width: 980px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #a1a1a1;
+}
+.learn-subnavigation ul.menu li {
+	display: block;
+	float: left;
+	width: 184px;
+	list-style-type: none;
+	margin: 0 15px 0 0;
+	padding: 0;
+	text-align:center;
+  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-weight: 400;
+  font-size: 1.214em;
+}
+.learn-subnavigation ul.menu a {
+	display: block;
+	background: #a1a1a1;
+	position: relative;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 12px 3px;
+}
+.learn-subnavigation ul.menu a:link,
+.learn-subnavigation ul.menu a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+.learn-subnavigation ul.menu a:hover,
+.learn-subnavigation ul.menu a:focus,
+.learn-subnavigation ul.menu a:active {
+	color: #fff;
+	text-decoration: none;
+	background: #919191;
+}
+
+/* Special treatment of Find a School menu item */
+.learn-subnavigation ul.menu li.menu-mlid-712 {
+  letter-spacing: -1px;
+}
+.learn-subnavigation ul.menu li.menu-mlid-712 a {
+  background: #ffdc4d;
+}
+.learn-subnavigation ul.menu li.menu-mlid-712 a:link,
+.learn-subnavigation ul.menu li.menu-mlid-712 a:visited {
+	color: #000;
+}
+.learn-subnavigation ul.menu li.menu-mlid-712 a:hover,
+.learn-subnavigation ul.menu li.menu-mlid-712 a:focus,
+.learn-subnavigation ul.menu li.menu-mlid-712 a:active {
+	color: #000;
+	background: #fecd02;
+}
+.learn-subnavigation ul.menu li.active a,
+.learn-subnavigation ul.menu li.active.menu-mlid-712 a {
+	background: #4dbcc9;
+}
+
+.learn-subnavigation ul.menu li.active a:after {
+	content: "";
+	position: absolute;
+	bottom: -15px;
+	left: 74px;
+	width: 0;
+	height: 0;
+	border-left: 18px solid transparent;
+	border-right: 18px solid transparent;
+	border-top: 18px solid #4dbcc9;
+}
+.learn-subnavigation ul.menu li.last {
+	margin-right: 0;
+}
+
+/* Logo */
+
+.logo-img {
+  float: none;
+  margin: 0;
+  width: 44px;
+}
+
+/* Engage Links */
+
+#engage-links {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#engage-links li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#engage-links .btn-facebook,
+#engage-links .btn-twitter {
+  font-size: .875em;
+  line-height: 1em;
+  margin: 2px 4px 0 4px;
+}
+#engage-links .btn-facebook {
+  padding: 4px 5px 4px 11px;
+}
+#engage-links .btn-twitter {
+  padding: 4px 1px 4px 8px;
+}
+
+#engage-links .facebook-badge,
+#engage-links .twitter-badge {
+  margin-left: 5px;
+  margin-top: 9px;
+}
+
+#engage-links .facebook-badge a,
+#engage-links .twitter-badge a {
+  display: block;
+  width: 16px;
+  height: 16px;
+  text-indent: -5000px;
+}
+
+#engage-links .facebook-badge a {
+  background: transparent url(../images/social-badges.png) 0 0 no-repeat;
+}
+
+#engage-links .twitter-badge a {
+  background: transparent url(../images/social-badges.png) 0 -16px no-repeat;
+}
+
+#engage-links .donate-now {
+  margin-left: 25px;
+  font-size: .929em;
+  /*font-family: "myriad-pro-condensed", sans-serif;*/
+  /*font-style: normal;*/
+  /*font-weight: 600;*/
+  /*font-size: 1em;*/
+  /*text-transform: uppercase;*/
+  /*letter-spacing: 1px;*/
+  /*text-align: center;*/
+}
+
+#engage-links .donate-now a {
+  padding: 2px 10px;
+  /*padding: 5px 20px;*/
+  /*display: block;*/
+}
+
+#engage-links .donate-now a:link,
+#engage-links .donate-now a:visited {
+  /*background-color: #fecd00;*/
+  /*color: #000;*/
+  /*text-decoration: none;*/
+}
+
+#engage-links .donate-now a:hover,
+#engage-links .donate-now a:active {
+  /*background-color: #f1c300;*/
+  /*color: #000;*/
+  /*text-decoration: none;*/
+}
+
+/* Cast Members page */
+.meet-film-cast {
+}
+.meet-film-cast .cast-member {
+  margin: 0 0 35px 0;
+}
+.meet-film-cast .cast-member h2 {
+  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  border-bottom: 1px solid #b7b7b7;
+  font-size: 1.5em;
+  margin: 0 0 .75em 0;
+  padding: 0;
+}
+.meet-film-cast .field-name-field-person-photo {
+  float: left;
+  width: 211px;
+  margin: 0 25px 0 0;
+}
+.meet-film-cast .field-name-body {
+  float: left;
+  width: 740px;
+  color: #7c7c7c;
+}
+
+/* Thanks for Support block group */
+.small-video {
+  float: left;
+  width: 226px;
+  margin: 0 20px 0 0;
+}
+.thanks-video-share {
+  float: left;
+  width: 400px;
+}
+.thanks-for-support {
+}
+.thanks-for-support h2.block-title {
+  text-align: left;
+  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.875em;
+  margin: 0;
+}
+.thanks-for-support p {
+  font-size: 1.25em;
+  color: #7c7c7c;
+  margin: 0 0 20px 0;
+}
+.make-difference {
+  float: left;
+  width: 290px;
+  border-left: 1px solid #b6e4e9;
+  min-height: 132px;
+}
+.make-difference .block-inner {
+  padding: 0 12px 0 32px;
+}
+.make-difference h2.block-title {
+  font-size: 1.375em;
+  margin: 3px 0 5px 0;
+  line-height: 1em;
+}
+.make-difference p {
+  text-align: center;
+  color: #7c7c7c;
+  font-size: .875em;
+  line-height: 1.2em;
+  margin: 0 0 8px 0;
+}
+.make-difference p.donate-now {
+  font-size: 1.125em;
+  line-height: 1em;
+  margin: 0;
+}
+.about-team {
+}
+.about-team .team-member {
+  clear: left;
+  margin: 0 0 30px 0;
+}
+.about-team .field-name-field-person-photo {
+  float: left;
+  width: 90px;
+  margin: 0 20px 0 0;
+}
+.about-team .group-team-member-text {
+  width: 680px;
+}
+.about-team h3 {
+  font-weight: 400;
+  margin: 0 0 5px 0;
+  line-height: 1em;
+  color: #5b6770;
+}
+.about-team p {
+  margin: 0;
+}
+.resources-block {
+  text-align: left;
+}
+.resources-block .block-inner {
+  padding-bottom: 30px;
+}
+.resources-block h2 {
+  text-align: center;
+  background: #efefef;
+  padding: 5px;
+  font-size: 1.214em;
+  margin-bottom: .5em;
+}
+.resources-block dl {
+  margin: 0;
+  padding: 0 10px;
+}
+.resources-block dt {
+  margin: 0;
+  padding: 0;
+  font-size: 1.125em;
+  line-height: normal;
+  font-weight: 400;
+  text-align: left;
+}
+.resources-block dt span.platform {
+  color: #7c7c7c;
+  font-size: .889em;
+}
+.resources-block dd {
+  margin: 0 0 .75em 0;
+  padding: 0;
+  font-style: normal;
+  font-size: 1em;
+  line-height: normal;
+  color: #7c7c7c;
+  text-align: left;
+}
+
+.resources-block h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25em;
+  color: #5b6770;
+  margin:1em 10px 0 10px;
+}
+.resources-block ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 10px;
+}
+.resources-block li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.125em;
+  line-height: normal;
+}
+
+#zone-postscript .resources-block {
+  float: left;
+  width: 310px;
+  margin: 0 25px 0 0;
+}
+#zone-postscript .resources-block-postscript-first {
+  clear: left;
+}
+#zone-postscript .resources-block-postscript-last {
+  margin-right: 0;
+}
+
+/* Forms */
+.control-label {
+  color: #7c7c7c;
+  font-size: 1.25em;
+}
+
+/* Help Us page */
+body.page-node-32,
+body.page-node.context-help {
+  font-size: 14px; /* This is needed to override .context-help CSS from the Context module. */
+}
+body.page-node-32 h1 {
+}
+
+/* Teach page */
+body.page-node-91 h1 {
+  font-size: 1.5em;
+  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  margin-top: 0;
+}
+body.page-node-91 .field-name-body {
+  font-size: 1.25em;
+  color: #7c7c7c;
+  margin: 0 0 20px 0;
+}
+
+/* Help page */
+body.page-node-92 h1 {
+  font-size: 1.5em;
+  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  margin-top: 0;
+}
+body.page-node-92 .field-name-body {
+  font-size: 1.25em;
+  color: #7c7c7c;
+  margin: 0 0 20px 0;
+}
+
+/* Other Help page */
+body.page-node-110 .block-system-main h3 {
+  margin-top: 1.25em;
+  margin-bottom: .125em;
+}
+body.page-node-110 .block-system-main h3.first {
+  margin-top: 0;
+}
+body.page-node-110 .block-system-main p {
+  font-size: 1.25em;
+  color: #7c7c7c;
+}
+
+/* Codecademy page */
+.codecademy-intro {
+  float: left;
+  width: 270px;
+  margin: 0 50px 0 0;
+}
+.codecademy-intro h2 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 38px;
+  line-height: 42px;
+  color: #454545;
+  margin: 0 0 20px 0;
+}
+.codecademy-intro p {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  line-height: 29px;
+  margin: 0;
+  color: #333;
+}
+
+/* Petition page */
+body.page-node-27 {
+}
+body.page-node-27 .field-suffix {
+  display: block;
+  color: #7e7e7e;
+  margin-top: 0;
+  margin-left: 180px;
+  font-size: .75em;
+}
+
+/* Scratch page */
+body.page-node-106 .try-scratch {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Teach and Help pages */
+body.page-node-91 .field-suffix,
+body.page-node-92 .field-suffix {
+  display: block;
+  color: #7e7e7e;
+  margin-top: 0;
+  margin-left: 180px;
+  font-size: .75em;
+}
+
+/* Mobile page */
+body.context-mobile {
+}
+body.context-mobile #section-header {
+  padding-bottom: 50px;
+}
+body.context-mobile.mobile-front #section-header {
+  padding-bottom: 0;
+}
+body.context-mobile #zone-header-wrapper {
+  background: #00adbc;
+}
+body.context-mobile #zone-header {
+  margin-top: 0;
+}
+body.context-mobile #zone-content {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+body.context-mobile .simple-quotes .block-inner {
+  padding-top: 0;
+}
+body.context-mobile #zone-postscript-wrapper {
+  background: #efefef;
+}
+body.context-mobile #region-footer-first {
+  text-align: center;
+}
+body.context-mobile .view-full-site {
+  margin-top: 20px;
+}
+body.context-mobile .btn-facebook,
+body.context-mobile .btn-twitter {
+  font-size: .75em;
+  padding: 4px 12px;
+}
+body.context-mobile .engage-links .donate-now {
+  display: none;
+}
+
+body.context-mobile .video-share-buttons {
+  text-align: center;
+}
+body.context-mobile .video-share-buttons-below {
+  width: auto;
+}
+body.context-mobile .social-buttons .content li {
+  float: none;
+  display: inline-block;
+}
+
+body.context-mobile .region-header-second-inner {
+  padding-top: 20px;
+}
+body.context-mobile .every-student-petition {
+  text-align: center;
+}
+body.context-mobile h2.block-title {
+  font-size: 1.25em;
+  text-align: center;
+}
+body.context-mobile .every-student-petition #webform-component-email,
+body.context-mobile .every-student-petition #webform-component-email input,
+body.context-mobile .every-student-petition #webform-component-email .field-suffix,
+body.context-mobile .every-student-petition #webform-component-zip-code,
+body.context-mobile .every-student-petition #webform-component-zip-code input,
+body.context-mobile .every-student-petition #webform-component-zip-code .field-suffix,
+body.context-mobile .every-student-petition #webform-component-category {
+  float: none;
+  margin-right: 0;
+}
+body.context-mobile .every-student-petition #webform-component-email .field-suffix,
+body.context-mobile .every-student-petition #webform-component-zip-code .field-suffix {
+  text-align: center;
+  width: auto;
+}
+body.context-mobile .purpose-statement {
+  margin-top: 20px;
+  text-align: center;
+}
+body.context-mobile .actions-block {
+  margin-bottom: 20px;
+}
+body.context-mobile .actions-block .block-inner {
+  padding: 6px 3px;
+}
+body.context-mobile .actions-block h2 {
+  font-size: 1.125em;
+}
+body.context-mobile .simple-quotes .content li {
+  font-size: 1em;
+  line-height: 1.222em;
+  color: #999;
+  margin: 0;
+}
+body.context-mobile .region-branding {
+  float: left;
+  width: 80px;
+}
+body.context-mobile .region-engage-inner {
+  padding: 12px 0 0 0;
+}
+
+/* Mobile Help Us page */
+body.context-mobile .region-preface-first-inner {
+  padding: 15px;
+  margin-bottom: 0;
+}
+body.context-mobile #zone-preface {
+  text-align: center;
+}
+body.context-mobile .small-video {
+  float: none;
+  width: auto;
+  margin: 0 0 20px 0;
+}
+body.context-mobile .thanks-for-support { 
+}
+body.context-mobile .thanks-for-support p {
+  font-size: 1em;
+  margin-bottom: 0;
+}
+body.context-mobile .video-share-buttons-below {
+}
+
+body.context-mobile .make-difference {
+  float: none;
+  border-left: none;
+  min-height: none;
+  width: auto;
+  border-top: 1px solid #b6e4e9;
+  margin: 20px 0 0 0;
+}
+
+body.context-mobile .make-difference .block-inner {
+  padding: 20px 15px 0 15px;
+}
+
+body.context-mobile h1 {
+  font-size: 1.625em;
+  margin: 0;
+}
+body.context-mobile.page-node-142 #zone-content {
+  padding-top: 20px;
+}
+body.context-mobile.page-node-142 .field-name-body h3 {
+  font-size: 1em;
+  line-height: normal;
+}
+body.context-mobile.page-node-142 .field-name-body p {
+  font-size: .875em;
+  line-height: normal;
+}

@@ -1,0 +1,14 @@
+name 'K-1 Big Event Match 1'
+title 'Matching'
+description 'Match the button combination to the dance moves.'
+content1 '/script_assets/k_1_images/unplugged_images/big_event_1_desc.png'
+height '100'
+
+question '/script_assets/k_1_images/unplugged_images/big_event_1_q1.png'
+answer '/script_assets/k_1_images/unplugged_images/big_event_1_a1.png'
+
+question '/script_assets/k_1_images/unplugged_images/big_event_1_q2.png'
+answer '/script_assets/k_1_images/unplugged_images/big_event_1_a2.png'
+
+question '/script_assets/k_1_images/unplugged_images/big_event_1_q3.png'
+answer '/script_assets/k_1_images/unplugged_images/big_event_1_a3.png'

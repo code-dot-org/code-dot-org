@@ -1,0 +1,333 @@
+@import "main";
+
+
+.submissions{
+    .submission {
+        padding:10px;
+        margin-bottom: 10px;
+    }
+
+    /* Functionality Done */
+    .status-2{
+        background-color: #D9EDF7;
+    }
+
+    /* Passed */
+    .status-3{
+        background-color: #DFF0D8;
+    }
+
+    .status-4{
+        background-color: #F2DEDE;
+    }
+
+}
+
+
+.all-classes {
+    margin-bottom:20px;
+
+    .class-name {
+        margin-right:10px;
+        margin-top: 10px;
+    }
+}
+
+.user-progress {
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    background: #FFF;
+    padding: 5px;
+    
+    .user-name {
+        .bold;
+        font-size:14px;
+        margin-bottom:5px;
+
+        .plan {
+            font-weight: normal;
+            color:#333;
+        }
+
+        .time {
+            font-weight: normal;
+            color:#999;
+        }
+    }
+}
+
+.progress-key {
+    border: 1px solid #eee;
+    background: #FFF;
+    padding: 10px;
+    margin:0px 0px 10px 0px;
+
+    .todo {
+        margin:2px 5px 5px 0px;
+    }
+}
+
+.section {
+    border-bottom:1px solid #eee;
+    .section-title {
+        width:150px;
+        .left;
+        margin-top:10px;
+    }
+
+    .section-icons{
+        .left;
+        width: 665px;
+    }
+
+}
+
+.todo {
+    margin:10px;
+    width:15px;
+    height:15px;
+    .left;
+}
+
+.video {
+    .rounded-corners(20px);
+}
+
+.exercise {
+    
+}
+
+.assignment {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    background:#FFF;
+}
+
+.assignment.not-started {
+    border-bottom:15px solid #ccc;
+    background:#FFF;
+    &:hover {
+        background: #FFF;
+        border-bottom:15px solid darken(#ddd, 10%);
+    }
+}
+
+.assignment.started {
+    border-bottom:15px solid @startedColor;
+    background:#FFF;
+    &:hover {
+        background: #FFF;
+        border-bottom:15px solid darken(@startedColor, 15%);
+    }
+}
+
+.assignment.complete {
+    border-bottom:15px solid @completeColor;
+    background:#FFF;
+    &:hover {
+        background: #FFF;
+        border-bottom:15px solid darken(@completeColor, 15%);
+    }
+}
+
+.assignment.func-done {
+    border-bottom:15px solid @funcDoneColor;
+    background:#FFF;
+    &:hover {
+        background: #FFF;
+        border-bottom:15px solid darken(@funcDoneColor, 15%);
+    }
+}
+
+.assignment.submitted {
+    border-bottom:15px solid @submittedColor;
+    background:#FFF;
+    &:hover {
+        background: #FFF;
+        border-bottom:15px solid darken(@submittedColor, 15%);
+    }
+}
+
+.assignment.rejected {
+    border-bottom:15px solid @rejectedColor;
+    background:#FFF;
+    &:hover {
+        background: #FFF;
+        border-bottom:15px solid darken(@rejectedColor, 15%);
+    }
+}
+
+.not-started {
+    background-color:#ddd;
+    .quick-gradient(top, 0.1);
+    &:hover {
+        background: darken(#ddd, 10%);
+    }
+}
+
+.func-done{
+    background-color:@funcDoneColor;
+    .quick-gradient(top, 0.1);
+    &:hover {
+        background: darken(@funcDoneColor, 10%);
+    }
+}
+
+.started {
+    background-color:@startedColor;
+    .quick-gradient(top, 0.1);
+    &:hover {
+        background: darken(@startedColor, 15%);
+    }
+}
+
+.rejected {
+    background-color:@rejectedColor;
+    .quick-gradient(top, 0.1);
+    &:hover {
+        background: darken(@rejectedColor, 15%);
+    }
+}
+
+.submitted {
+    background-color:@submittedColor;
+    .quick-gradient(top, 0.1);
+    &:hover {
+        background: darken(@submittedColor, 15%);
+    }
+}
+
+.fn-done {
+    background-color:#00c;
+}
+
+.video.submitted, .example.submitted, .complete {
+    background-color:@completeColor;
+    .quick-gradient(top, 0.2);
+    &:hover {
+        background: darken(@completeColor, 15%);
+    }
+}
+
+
+
+
+#progress-map {
+
+    i {
+        &.icon-facetime-video {
+            margin-top:4px;
+            margin-right:5px;
+        }
+        &.icon-fire {
+            margin-top:4px;
+            margin-right:5px;
+        }
+    }
+
+    .section-title {
+        .bold;
+        font-size:24px;
+        padding:10px 5px 10px 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #eee;
+        }
+
+        i {
+            margin-top:3px;
+        }
+    }
+
+    .p-section {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .p-video {
+        @background_color: #efefef;
+        .video-title {
+            font-size:18px;
+            color:#222;
+        }
+        margin-top:20px;
+        padding:10px;
+
+        background-color: @background_color;
+
+        &.current {
+            background-color:#D9EDF7;
+            border:2px solid #bce8f1;
+
+            &:hover {
+                background-color: darken(#D9EDF7, 10%);
+            }
+        }
+
+        &:hover {
+            background-color: darken(@background_color, 10%);
+        }
+    }
+
+    .p-example {
+        color:#111;
+    }
+
+    .p-exercise {
+        color:#111;
+    }
+
+    .box {
+        .left;
+        padding:10px;
+        width:90px;
+        height:60px;
+        .rounded-corners(5px);
+        border:1px solid #666;
+
+        margin-right:10px;
+        margin-top:10px;
+
+        a {
+            color:#333;
+        }
+
+        &.current {
+            border: 3px solid #111;
+            font-weight:bold;
+            margin-top:6px;
+        }
+    }
+
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

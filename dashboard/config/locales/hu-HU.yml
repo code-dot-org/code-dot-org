@@ -1,0 +1,548 @@
+"hu":
+  activerecord:
+    errors:
+      messages:
+        blank: is required
+    attributes:
+      user:
+        name: Név
+        email: Email
+        username: Felhasználónév
+        password: Jelszó
+        password_confirmation: Jelszó megerősítése
+        current_password: Jelenlegi jelszó
+        locale: Nyelv
+        age: Age
+        gender: Nem
+        edit_header: Felhasználói Adatok Szerkesztése
+        error:
+          future: nem lehet a jövőben
+  hello: Helló világ
+  welcome_back: "Üdv újra, %{name}"
+  add_teacher_form:
+    code_or_email:
+      label: 'Adj meg egy tanárt kóddal, vagy e-mail címmel:'
+      placeholder: Kód (ABCDEF) vagy email (tanar@iskola.hu)
+    code:
+      label: 'Add a teacher by section code:'
+      placeholder: Code (ABCDEF)
+    submit: Tanár hozzáadása
+  add_hint_form:
+    placeholder: Kérjük, írja ide a véleményét
+    submit: "Írja le a véleményét"
+  appname: Code.org
+  stage: Szakasz
+  puzzle: Rejtvény
+  trophies: Trófeák
+  courses: Tanfolyamok
+  of: a
+  more: TÖBB
+  less: KEVESEBB
+  try_hoc: 'Próbálja ki a Kódolás Óráját, kattintson ide >> '
+  try_k8intro: Próbálja ki a K-8 bevezetőnket a Számítógép Tudomány Tanfolyamhoz (15-25
+    óra)
+  k8intro: K-8 Bevezető tanfolyam a  számítógép tudományhoz  (15-25 óra)
+  already_started: Már elkezdted? Folytasd itt >>
+  demos: 'Admin: Minden demó'
+  continue: Tovább
+  prize: prize
+  more_info: További információk
+  auth:
+    sign_in_with: Bejelentkezés %{provider} -el
+    signed_in: Bejelentkezve!
+    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
+    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
+      to sign out of %{provider}.
+    already_signedup: Már regisztrált?
+    notyet_signedup: Még nem csatlakozott?
+    google_oauth2: Google Account
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Microsoft Account
+    forgot_password: Elfelejtette jelszavát?
+    need_confirmation: Nem kapta meg a megerősítéshez instrukciókat?
+    need_unlock: Nem kaptál a zárolás megszüntetéséhez útmutatót?
+  signup_form:
+    overview_student: Iratkozz fel, regisztrálj hogy követhesd a fejlődésedet
+    overview_teacher: Taníts számítógép-tudományt a saját tantermedben, úgy hogy regisztrálsz.
+      <p/> Így követni tudod a diákjaid haladását, és jutalmat is kaphatsz.
+    no_signup_message: <a target="_blank" href="http://learn.code.org">Böngészhetsz
+      a különböző szintek és feladatok között</a>, de regisztrálnod kell, hogy elmenthesd,
+      hogy hol tartassz.
+    prizes_message: Azok az U.S. diákok, akik megszereztek minden %{num_trophies}
+      trófeát választhatnak számos jutalom közül, mint pl.  Dropbox tárhely, Skype
+      használat és letölthető Electronic Arts and Valve játékok.
+    teacher_educator_guide: Lásd a tanító segítségét
+    teacher_prize_header: Nyerj 1000 $-os díjat a <a target="_blank" href="http://DonorsChoose.org">
+      DonorsChoose.org</a> (2014 június 15-től, amíg a készlet tart)
+    teacher_prize_message: 'Együttműködve a <a target="_blank" href="http://DonorsChoose.org">
+      DonorsChoose.org</a> Code.org kínál akár $1,000-t  csoportot szervező USA állami
+      iskolában  tanító tanárokak, akik legalább 15 diákok végigsegítenek a kurzuson.
+      <a href="http://code.org/educate/20hr"> lásd a pedagógus útmutató további info.</a> '
+    teacher_pitch: Tanároknak. Feliratkozás a code.org-ra
+    teacher_title: Tanár regisztrálás
+    student_pitch: Diákoknak. Feliratkozás a code.org.ra
+    student_title: Belépés (diák)
+    school_name: Iskola neve (nem kötelező)
+    school_address: Iskola címe (nem kötelező)
+    address_placeholder: cím, város, állam(megye), irányítószám
+    gender: Nem (nem kötelező)
+    birthday: Születésnap (nem kötelező)
+    age: Age (optional)
+    submit: Regisztrálás
+    teacher: "Ön tanár?"
+    valid_username: Elérhető!
+    invalid_username: Felhasználónév minimum 5 karakter hosszú
+    taken_username: Felhasználónév már foglalt
+    valid_password: "Érvényes jelszó!"
+    invalid_password: Jelszónak minimum 6 karakter hosszúnak kell lennie
+    mismatch_password: A megadott két jelszó nem egyezik
+    student_terms: Elfogadom a felhasználási feltételeket. Ha 13 évesnél fiatalabb
+      vagyok megerősítem, hogy van egy szülő vagy törvényes gondviseló engedélyem,
+      hogy használjam a Code.org szolgáltatásait.
+    teacher_terms: Elfogadom a felhasználási feltételeket.
+    additional_information: We need some additional information to continue signing
+      you up.
+  signin_form:
+    title: Van felhasználói azonosítója? Jelentkezzen be!
+    login: E-mail cím vagy felhasználónév
+    password: Jelszó
+    remember: Emlékezz rám
+    submit: Bejelentkezés
+  signin:
+    try_heading: Bejelentkezés nélkül akarod kipróbálni a kódírást?
+    try_hoc: Először próbáld meg a Kódolás Órája-t
+    try_20hours: Próbálja ki a 20 órás bevezetőt a számítógép-tudományhoz
+  signinsection:
+    welcome: Welcome to %{section_name}
+    name: Choose your name
+    picture: Now find your secret picture
+    words: Now enter your secret words
+    login: Bejelentkezés
+  password:
+    reset_form:
+      title: Elfelejtette a jelszavát?
+      email: E-mail cím
+      submit: Küldj új jelszó beállítási útmutatót
+    change_form:
+      title: Jelszó módosítása
+      new_password: "Új jelszó"
+      confirm_password: Erősítse meg új jelszavát
+      submit: Jelszavam módosítása
+  welcome_email:
+    subject: Csatlakozz az én órámhoz (a Code.org-on)
+    body: "Kattintson az alábbi linkre, hogy feliratkozzon a számítógép tudomány oktatására
+      a Code.org rendszeren (velem, mint a \"tanár\"): % {link} \naz oktatóanyagok
+      a élvezhetőek, vizuálisan vonzóak, és megtanítják az alapvető fogalmakat a számítógép-tudomány
+      fogalmait egy egyszerű, számítógépes játékszerű próbák segítségével . Megtanulhatsz
+      programozni olyan tanároktól, mint Bill Gates, Mark Zuckerberg, az Angry Birds
+      és  a zombik! :-) % {név}\n"
+  follower:
+    invite_sent: Meghívó elküldve
+    added_teacher: "%{name} hozzáadva mint a tanárod"
+    registered: Regisztráltál %{section_name}-ra.
+    error:
+      signed_in: Mielőtt folytatná kérem jelentkezzen ki
+      username_not_found: "%{username} felhasználónevet nem találjuk"
+      username_in_use: "%{username} már foglalt, kérjük válasszon egy újat"
+      no_teacher: Nem találam senkit '%{teacher_email_or_code}' -val bejelentkezve
+        . Kérje meg , jelentkezzen be és utána próbálja meg újra
+      section_not_found: Could not find a section with code '%{section_code}'.
+      blank_code: Kérlek, írj be egy kódot, vagy az oktatód e-mail címét!
+      cant_join_own_section: Sorry, you can't join your own section.
+    mail:
+      invite_student:
+        subject: Csatlakozz egy osztályhoz %{teacher_name} a Code.org-on belül!
+      student_disassociated:
+        subject: 'Code.org megjegyzés: %{student_name}  már nem az Ön a hallgatója.'
+      teacher_disassociated:
+        subject: 'Code.org megjegyzése: %{teacher_name} már nem szerepel, mint az
+          Ön tanára.'
+  reports:
+    error:
+      access_denied: Nincs jogosultságod megtekinteni ennek a személyesnek a statisztikáját
+  redeem_prizes:
+    title: 'Redeem Prizes: %{name}'
+    provider: 'Provider:'
+    code: 'Code:'
+    redeem_header: 'To redeem:'
+    donorschoose_register: Regisztrálj, mint tanár a DonorsChoose.org-on
+    donorschoose_project: Posztold a projektedet
+    donorschoose_how_to: Hogyan használhatja a kódját
+    success: Your prize was succesfully redeemed, see code below.
+    error: Your prize could not be redeemed, please try again.
+    error_us_only: A díjat csak amerikai felhasználók nyerhetik.
+    error_not_earned: Ezt a díjat még nem szerezted meg.
+    error_already_redeemed: A díjadat már megkaptad.
+    no_prizes_available: Sajnáljuk, jelenleg nincsenek elérhető díjak.
+    teacher_info_required: 'a tanári díjakhoz adja meg az iskola nevét és címét:'
+    teacher_email_required: 'Tanár díjazásához szükséges egy megerősített e-mail cím:'
+    confirm:
+      title: Please Confirm
+      'no': nem
+      'yes': igen
+      msg: Are you sure you want to claim the %{prize_name} prize?
+      msg_student: 'NOTE: You can only choose one type of prize.'
+      msg_publicschool: Kérjük, erősítse meg, hogy Ön egy U.S. állami iskolai tanár.
+      msg_visit_website: Visit website
+    providers:
+      apple_itunes: "$10 iTunes Gift Card"
+      donors_choose: DonorsChoose.org $750 credit
+      donors_choose_bonus: DonorsChoose.org $250 credit
+      dropbox: 10GB Dropbox tárhely
+      valve: Portal 2 (PC or Mac game download)
+      ea_bejeweled: Bejeweled 3 (PC game download)
+      ea_fifa: FIFA Soccer 13 (PC game download)
+      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
+      ea_pvz: Plants vs. Zombies (PC game download)
+      skype: "$10 Skype credit"
+    msg:
+      choose: 'Choose a prize:'
+      choose_teacher: 'Click on the logo below to claim your prize:'
+      earned: Elért egy díjat! (Csak U.S. tanulóknak!)
+      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      not_earned: 'Ismerd meg a számítógép tudomány fogalmait, gyűjtsd össze a trófeákat
+        % {num_trophies}, és nyerj értékes díjakat. Választhatsz 10GB szabad Dropbox
+        tárhely, 10 $ Skype kredit, és szabad játék letöltés között. Megjegyzés: az
+        ajánlat csak amerikai diákoknak szól , és csak a szolgáltató működéséig él.'
+      teacher:
+        earned: 15 vagy több tanuló is összegyűjtötte mind a(z) %{num_trophies} trófeát.
+          Nyertél egy tanár díjat! (csak amerikai tanárok)
+        not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
+          href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
+          only)
+        not_earned: Mint az első alkalommal jutalmazott tanára a számítógép tudományoknak,
+          Ön kaphat akár $1,000 -t is a <a href="http://DonorsChoose.org"> DonorsChoose.org</a>,
+          amiért vezeti az általános iskolás bevezető kurzust egy osztályban. Ahhoz,
+          hogy, ezt elérd, sikeresen végig kell vezetned egy legalább 15 fős osztályt
+          a teljes bevezető kurzuson, ahol mind a 15 (vagy több) diák végigkövette
+          a teljes kurzust és elnyert  minden %{num_trophies}-trófeát. Ha 7 vagy több
+          diák, aki elnyerte az összes trófeát lány, akkor jutalmad $1,000 <a target="_blank"
+          href="http://DonorsChoose.org"> DonorsChoose.org</a>. Ellenkező esetben
+          a jutalom $750 <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>
+          .  <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>
+          A díjakra csak állami iskolákban tanító,  U.S. tanárok Jogosultak.
+        bonus:
+          not_earned_title: You can still earn an additional $250 in <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
+            only)
+          earned: 7 vagy több lány diákja elnyert minden %{num_trophies}-trófeát .
+            Egy bónusz díjat nyert! (Csak USA tanároknak)
+          not_earned: Ha legalább 7 a diákja, akik elnyertek minden %{num_trophies}-trófeák
+            lány, a jutalom egy további $250 <a target="_blank" href="http://DonorsChoose.org">
+            DonorsChoose.org</a> díj. <a target="_blank" href="http://DonorsChoose.org">
+            DonorsChoose.org</a> díj az amerikai állami iskolákban tanító tanároknak
+            juttatható. .
+  crud:
+    new_model: "Új %{model}"
+    show: Mutat
+    edit: Szerkeszt
+    edit_model: "%{model} módosítása"
+    update: Frissítés
+    destroy: Elpusztítás
+    back: Vissza
+    confirm: Biztos benne?
+    created: "%{model} sikeresen létrehozva."
+    updated: "%{model} sikeresen frissítve."
+    destroyed: A %{model} sikeresen törölve.
+    access_denied: Nincs jogosultsága a %{model}-hez.
+  nav:
+    header:
+      finished_hoc: Befejeztem a Kód Óráját
+      sign_in_to_save: Jelentkezzen be a mentéshez
+    user:
+      classroom: Diákjaim
+      label: "Üdv %{username}"
+      stats: Fejlődésem
+      settings: Profilom
+      prizes: Díjak
+      logout: Kijelentkezés
+      signin: Bejelentkezés
+      signup: Regisztrálás
+      already_registered: Already registered?
+    popup:
+      progress: Fejlődése
+      lines: 'A kód teljes hossza: %{lines}'
+      close: BEZÁRÁS
+      mastery: Fogalmak
+      puzzle_map: Szakaszok
+      prizes: Gyűjtse össze az összes %{total_trophies} trófeát, és nyerjen díjakat!
+      prize_earned: Az összes  %{total_trophies}  trófeát  összegyűjtötte. Megnyerte
+        a díjat!
+      prize_us_only: "(Kizárólag U.S. Diákoknak)"
+      prizes_link: további információk
+  teacher:
+    title:
+      one: 'A tanára:'
+      other: 'A tanáraid:'
+    remove: "(tanár eltávolítása)"
+    confirm:
+      remove: Biztosan el szeretné bocsátani ezt a tanárt?
+    tools: Tanári eszközök
+    followers:
+      section: 'Section:'
+      stages: 'Stage(s) to display:'
+      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      levels_key: Levels key
+      perfect: Completed, perfect
+      completed: Completed, but using too many blocks
+      tried: Tried, but not completed
+      not_tried: Not tried yet
+      activity: Indicates student activity in the last %{hours} %{plural}
+      no_section: No assigned section
+      trophies: Trófeák
+    students:
+      name: Név
+      username: Felhasználónév
+      password: Jelszó
+      manage: Diákok kezelése
+      dashboard: Go to Teacher Dashboard
+      add: Diákok hozzáadása
+      remove: remove student
+      confirm_remove: Are you sure you want to remove this student?
+      help_reassign: To divide your class into multiple sections, select students
+        to assign to a new section.
+      help_register: Instead of making you spend a lot of time individually importing
+        student data, you can set up your class quickly by asking them to signup.
+        Your students will need to choose usernames and passwords, but they WILL NOT
+        be required to provide an email address. If a student forgets their password,
+        you will be able to reset it for them.
+      register: Ask your students to register themselves
+      vist: Ask your students to visit
+      section_code: 'and enter their section-code:'
+      first_please: First, please %{add_section}
+      for: For
+      enter: 'enter:'
+    sections:
+      add: Add section
+      manage: Vezetési szakasz
+      section: Section
+      students: Students
+      section_code: Section Code
+      add_section_code: Add Students Section-Code
+      secret: Secret type
+      grade: Grade
+      course: Course
+      rename: rename
+      edit: edit
+      delete: delete
+      confirm_delete: Are you sure you want to delete this section?
+      email: Send in email
+    rollup: Fejlődés tájékoztató
+    activity: Mostanában osztály aktivitás
+    user_not_found: A tanár, vagy a diák nem ismert
+    cant_remove_student_no_email: "%{student_name} nem törölhető a tanulói sorából,
+      mert, mert %{student_name}-nek nincs regisztrált e-mail címe"
+    cant_remove_teacher_no_email: "%{teacher_name} nem törolhető, mint az Ön tanára,
+      mert Ön még nem regisztrált  e-mail címet"
+    student_teacher_disassociated: "%{teacher_name}, mint a %{student_name} tanáraként
+      el lett bocsátva"
+  user:
+    email_confirm_needed: 'Az e-mail címét nem erősítette meg:'
+    email_resend_confirm: "Újra elküldtük a megerősítés módját"
+    new_password_hint: "(hagyja üresen, ha nem akarja megváltoztatni)"
+    current_password_hint: "(szükségünk van a jelszavára  módosításainak jóváhagyásához)"
+    cancel:
+      title: Fiókom megszűntetése
+      hint: Boldogtalan?
+      button: Fiókom megszűntetése
+  user_level:
+    completed: Befejezve
+    tried: Próbáltam
+  user_stats:
+    recent_activity: Mostani tevékenységek
+    show_more: Mutass többet
+    classroom_activity: Unplugged Activity
+  home:
+    title: Code Studio
+    signin_message: Már regisztrált? %{link}
+    student_reg_link: Diák Bejelentkezés
+    teacher_reg_link: Tanár Bejelentkezés
+    signin_directions: Fiók használatával nyomon követheted a haladásodat,. <br/>
+      Tanárok, nyomon követhetik az egész osztályt.
+    teacher_dashboard: Nézd meg a fejlődés bemutatót
+    teacher_student_count_one: "%{count} diákod van."
+    teacher_student_count: "%{count} diákod van."
+    teacher_averages: Diákjaid átlagosan   %{trophy_average} trófeát szereztek meg
+      a %{trophy_max}  "Concept Mastery" trófeákból.
+    teacher_print_certificates: Nyomtasa ki a bizonyítványokat a diákoknak, akik befejezték
+      a tanfolyamot
+    teacher_read_blog: Olvastam a híreket és frissítéseket az anyagokhoz  a Pedagógus
+      Blog-ban
+    classroom: A tantermed
+    student_progress: Fejlődésed
+    student_stats: Már megszereztél %{trophy_count} trófeát a %{trophy_max} "Concept
+      Mastery" trófeákból.
+    student_left_off: 'Ahol abbahagyta:'
+    student_finished_prize: Befejezted az összes oktatóanyagot, azt állítják, a {prize_link}
+      %, és válasszon egy másik osztály % {online_link} vagy a {local_school_link}
+      %
+    student_finished: Miután befejezte az összes oktatóanyag, válasszon egy másik
+      osztály % {online_link} vagy a {local_school_link} %
+    local_school: helyi iskola
+    online: online
+    see_details: Részletek
+    prize_info: 'Részvételért járó díjak (csak USA állami iskolai tanároknak): akár
+      $1,000.'
+    tryfirst: 'Akár ki is próbálhatja, és csak utána jelentkezik be:'
+    trynow: Póbálja ki
+    add_hint_help: Kérlek, segíts bennünket, okos tippekkel oktatóanyagainkhoz a code.org
+      felületére
+    20hour_overview: Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás
+      alapfogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára
+      jó időtöltés lehet.
+    test_videos_help: Test our new video player at your school
+    try_beta_courses: New! Try our beta courses for K-5 students
+    use_as_teacher: Use this site as a teacher
+    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
+    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+  gender:
+    male: Férfi
+    female: Nő
+    none: Inkább nem válaszolok
+  footer:
+    help_from_html: Mérnökök a <a href="http://www.google.com">Google</a>, <a href="http://www.microsoft.com">Microsoft</a>,
+      <a href="http://www.facebook.com">Facebook</a>, és a <a href="http://www.twitter.com">Twitter</a>
+      oldalaktól segítettek elkészíteni ezt a bemutatót.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
+      Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
+      &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
+      Reserved.
+    feedback: Visszajelzés küldése
+    translate: Segítsen lefordítani az oldalt az anyanyelvére
+    support: Support
+    tos: Szolgáltatási feltételek
+    privacy: Adatvédelmi Elvek
+    secure: Secure Version
+  prize_mail:
+    prize_earned:
+      subject: Redeem your prize at Code.org!
+    teacher_prize_earned:
+      subject: Redeem your prize at Code.org!
+    teacher_bonus_prize_earned:
+      subject: Redeem your bonus prize at Code.org!
+  reference_area:
+    title: Szüksége van segítségre?
+    subtitle: Nézd meg ezeket a videókat és tanácsokat
+    teacher: Megoldás megtekintése
+    auth_error: Nem vagy jogosult a megoldás megtekintésére.
+    submit: Frissítsd a szereplő helyét
+    direction: kezdőirány
+  video:
+    tab: Videó.
+    notes: Nem látszik a videó? Olvassa el a szöveges magyarázatot!
+    notes_coming_soon: Notes for this video coming soon.
+    autoplay_option: Videók automatikus lejátszása
+    download: Videó letöltése
+  compatability:
+    working: Azon dolgozunk, hogy a rendszerünk az Ön böngészőjével is tökéletesen
+      együtt tudjon működni.
+    upgrade: Kérjük frissítse a böngészőjét.
+  slow_loading: Ez tovább tart majd, mint szokásosan...
+  try_reloading: Próbálja meg újratölteni az oldalt
+  next_stage: Befejezve! Folytatás a következő pályára
+  download_pdf: Nyitott óravázlat
+  view_lesson_plan: View Lesson Plan
+  pdf_download: Download PDF
+  share_code:
+    title: Kattints a 'Program futtatása'  gombra, hogy lásd, hogyan működik
+    bounce_og_title: Nézd meg a Bounce Game-emet
+    flappy_og_title: Jelentkezzen ki az én Flappy játékomból
+    studio_og_title: Check out my story
+    og_description: A kódját magam írtam a Code.org segítségével
+  builder:
+    created: Létrehozott egy új parancsfájlt.
+    destroyed: Elpusztult a parancsfájlt.
+    manage: Szintek építése
+    view: Nézet
+    back: Vissza a parancsfájlokhoz
+    success: You successfully edited the blocks.
+    level:
+      create: Hozzon létre új szintet
+      current: Aktuális szintek
+      unused: Nem használt szintek
+  upsell:
+    hoc:
+      title: A kódolás órája
+      body: Próbáld ki a számítógép tudomány alapjait. Millióknak ad egy lehetőséget.
+    flappy:
+      title: Flappy kód
+      body: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc alatt? Próbáld
+        ki a Flappy kód oktatót.
+    20hour:
+      title: Bevezető kurzus
+      body: Próbáld ki a 20 órás, bevezetés a számítógép-tudományba óránkat.
+  gallery:
+    students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
+    picture_count: Az elmúlt  <b>% {napok}</b> napon, diákok <b>% {count}</b>képet
+      rajzoltak saját számítógépes programuk írásakor. Kattints a képekre, hogy minden
+      egyes programot láthass működés közben.
+    want_to_make_your_own: Szeretnéd elkészíteni a sajátodat?
+    more: Több &rarr;
+  landing:
+    prerelease: This page is still under development.
+    feedback: Give Feedback
+    report_bug: Report Bug
+    support: Get Help
+  multi:
+    wrong_title: Helytelen válasz
+    wrong_body: A megadott válasz nem megfelelő.  Próbáld újra!
+    correct_title: Correct
+    correct_body: That is the correct answer.
+  match:
+    wrong_title: Helytelen megoldás
+    wrong_body: A megadott megoldás nem megfelelő.  Próbáld újra.
+    correct_title: Correct
+    correct_body: That is the correct answer.
+  dialog:
+    ok: OK
+  time:
+    hour: 1 hour
+    day: day
+    week: week
+  data:
+    script:
+      name:
+        20-hour:
+          title: K-8 Bevezető tanfolyam a  számítógép tudományhoz  (15-25 óra)
+          description: Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás
+            alapfogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki
+            számára jó időtöltés lehet.
+        Hour of Code:
+          title: A kódolás órája
+          description: ''
+        edit-code:
+          title: Edit Code
+          description: ''
+        events:
+          title: Események
+          description: ''
+        builder:
+          title: Builder
+          description: ''
+        flappy:
+          title: Flappy kód
+          description: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc
+            alatt? Próbáld ki a Flappy kód oktatót.
+        jigsaw:
+          title: Kirakós játék
+          description: ''
+        step:
+          title: Step
+          description: ''
+        sample_level_builder:
+          title: Sample Level Builder
+          description: ''
+  age_interstitial:
+    age: Your age
+    header: Account Information Update
+    message: We're in the process of updating our experience to provide you with even
+      stronger privacy protections. To do this, we need existing users to enter their
+      age here.<br/>As always, code.org will never rent, sell or share this information
+      with any third parties.
+    sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
+      out</a>.
+  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
+    You may browse <a href="http://support.code.org">support.code.org</a> without
+    signing in or ask your parent or teacher to contact us for you.

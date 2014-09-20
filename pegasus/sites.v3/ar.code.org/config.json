@@ -1,0 +1,22 @@
+{
+  "base": "i18n.code.org",
+  "google_analytics_id": "UA-37745279-1",
+  "hoc_country_id": "Argentina",
+  "us_site": "Code.org (US Site)",
+  "nav_links": {
+    "Resources": "/about/resources",
+    "About Us": "/about",
+    "Partners": "/about/partners"
+  },
+  "header_links": {
+    "HOME": "/",
+    "TUTORIALS": "/learn",
+    "RESOURCES": "/about/resources"
+  },
+  "footer_links": {
+    "Tutorials": "/learn",
+    "About": "/about",
+    "Resources": "/about/resources",
+    "Partners": "/about/partners"
+  }
+}

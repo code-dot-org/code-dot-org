@@ -1,0 +1,258 @@
+"vi":
+  slides:
+    maze_intro:
+      1:
+        image: "notes/hoc1_1.jpg"
+        text: "Chào mừng bạn đến với giờ học code đầu tiên! Hãy cùng tìm hiểu phần đầu tiên của việc lập trình nào."
+      2:
+        image: "notes/hoc1_2.jpg"
+        text: "Chúng ta sẽ sử dụng Blockly, một ngôn ngữ lập trình trực quan nơi mà bạn kéo và thả những khối để viết dòng lệnh."
+      3:
+        image: "notes/hoc1_3.jpg"
+        text: 'Hầu hết các dòng lệnh được đánh máy, nhưng Blockly thì trực quan hơn. Mỗi khối tương ứng với 1 dòng lệnh "thực sự".'
+      4:
+        image: "notes/hoc1_4.jpg"
+        text: "Bạn sẽ học căn bản của khoa học máy tính, những khái niệm được sử dụng tại bất kì đâu từ tạo những ứng dụng cho đến điều khiển tàu thám hiểm sao Hỏa."
+      5:
+        image: "notes/hoc1_5.jpg"
+        text: "Một chương trình là một tập hợp các chỉ dẫn cho máy tính của bạn làm theo."
+      6:
+        image: "notes/hoc1_6.jpg"
+        text: "Mục tiêu của chương trình đầu tiên của bạn là lấy một Con Chim Đang Nổi Khùng ném qua một mê cung trúng vào một con Lợn Xanh Lá."
+      7:
+        image: "notes/hoc1_7.jpg"
+        text: "Phía bên trái là mê cung nơi mà chương trình của bạn chạy. Những chỉ dẫn cho mỗi câu đố ở dưới mê cung."
+      8:
+        image: "notes/hoc1_8.jpg"
+        text: "Hộp công cụ ở giữa có các dòng lệnh cho Con Chim Nổi Khùng. Bạn sẽ sử dụng chúng để xây dựng đoạn code của bạn."
+      9:
+        image: "notes/hoc1_9.jpg"
+        text: "Ở bên phải là chỗ làm việc nơi mà bạn sẽ kéo từng khối từ hộp công cụ để xây dựng chương trình của bạn. Để xóa một khối, kéo nó vào thùng rác ở trong góc."
+      10:
+        image: "notes/hoc1_10.jpg"
+        text: 'Mỗi khối là một chỉ dẫn. Nếu bạn kéo một khối "tiến lên" vào trong không gian làm việc và ấn "Chạy chương trình", con chim sẽ đi vào một khu vực trong mê cung.'
+      11:
+        image: "notes/hoc1_11.jpg"
+        text: "Để làm nhiều hơn một hành động, bạn có thể kéo nhiều khối vào không gian làm việc và gắn chúng với nhau. Con chim sẽ thực hiện những dòng lệnh từ trên đến dưới."
+      12:
+        image: "notes/hoc1_12.jpg"
+        text: 'Nếu bạn chạy một chương trình và muốn sửa nó và thử lại, ấn nút "Khởi động lại".'
+      13:
+        image: "notes/hoc1_13.jpg"
+        text: "Tiếp tục với những con lợn nào!"
+    artist_intro:
+      1:
+        image: "notes/stage5_1.jpg"
+        text: "Xin chào, tôi là JR! Mỗi đội xe đua cần các nhà khoa học về máy tính để giành chiến thắng. Họ phân tích dữ liệu từ xe để giúp nó đi nhanh hơn."
+      2:
+        image: "notes/stage5_2.jpg"
+        text: "Trong loạt câu đố này, bạn là một họa sĩ vẽ những đường thẳng bên dưới chân bạn ở bất cứ nơi nào bạn đi qua."
+      3:
+        image: "notes/stage5_3.jpg"
+        text: 'Khối lệnh này nói rằng "đi thẳng về phía trước 100 điểm ảnh." Điểm ảnh là những chấm nhỏ trên màn hình của bạn.'
+      4:
+        image: "notes/stage5_4.jpg"
+        text: 'Khối lệnh này nói rằng "rẽ phải 90 độ." Nó sẽ quay hướng họa sĩ của bạn giống như khối lệnh "quay" trong loạt câu đố mê cung.'
+      5:
+        image: "notes/stage5_5.jpg"
+        text: "Nhấp chuột vào mũi tên trong các khối để thay đổi số lượng các di chuyển của nghệ sĩ về phía trước hoặc quay. Chơi nhiều khối để làm quen với các khối mới."
+    farmer_intro:
+      1:
+        image: "notes/stage9_1.jpg"
+        text: "Xin chào, tôi là Paola! Trong loạt câu đố này, bạn là một người nông dân đã san phẳng đất trên cánh đồng để bắt đầu trồng cây."
+      2:
+        image: "notes/stage9_2.jpg"
+        text: "You have to help her remove all the piles of dirt and fill in all the holes."
+      3:
+        image: "notes/stage9_3.jpg"
+        text: "The new blocks remove 1 shovelful of dirt from a pile and fill in 1 shovelful of dirt to a hole."
+      4:
+        image: "notes/stage9_4.jpg"
+        text: "The piles and holes are different sizes, so you have to tell the farmer how many shovelfuls to use."
+    flappy_intro:
+      1:
+        image: "notes/flappy01.jpg"
+        text: "Hi, I'm Katie! One of the most exciting things about computer science is that a computer program can be interactive."
+      2:
+        image: "notes/flappy02.jpg"
+        text: "Any time somebody clicks or taps or types on a computer or phone, that generates an EVENT, and there's some code that decides what to do when an EVENT occurs."
+      3:
+        image: "notes/flappy03.jpg"
+        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse is clicked, play a sound" '
+      4:
+        image: "notes/flappy04.jpg"
+        text: "Have you ever heard of the game FlappyBird? By using Event handlers, we're going to learn to program our own custom version of FlappyBird!"
+      5:
+        image: "notes/flappy05.jpg"
+        text: "The code you'll write involves dragging and dropping blocks that represent commands for the computer. Under the hood, each of these blocks is represented by real code."
+      6:
+        image: "notes/flappy06.jpg"
+        text: 'If you take a look at the workspace, there are some green blocks that are filled in for you - these are "event handlers" '
+      7:
+        image: "notes/flappy07.jpg"
+        text: 'If you want the bird to FLAP when you CLICK the mouse, you can do that by attaching the "FLAP" block to the appropriate event handler, and now in your game whenever you click the mouse, the bird will flap.'
+      8:
+        image: "notes/flappy08.jpg"
+        text: "In each puzzle of this activity we'll introduce new types of events as green blocks on the workspace, and you can decide the appropriate blocks to add in response to those events."
+      9:
+        image: "notes/flappy09.jpg"
+        text: 'When you see a drop down arrow like this, that means you can change the settings - like what sound to play when flappy hits the ground.'
+      10:
+        image: "notes/flappy10.jpg"
+        text: "Trong câu đố cuối cùng, có thể bạn sẽ tạo ra trò chơi của riêng bạn và chia sẻ nó với bạn bè của bạn. Chúc vui vẻ!"
+    loop_times:
+      1:
+        image: "notes/hoc2_1.jpg"
+        text: "Xin chào, tôi là Mark! Cùng tìm hiểu về vòng lặp nào. Sử dụng vòng lặp, bạn có thể nói với một cái máy tính lặp đi lặp lại bất kì tập hợp hành động nào, hàng nghìn hoặc thậm chí hàng tỉ lần."
+      2:
+        image: "notes/hoc2_2.jpg"
+        text: "Trong câu đố này, chúng tôi muốn làm con chim tiến lên phía trước 5 đoạn để trúng vào con lợn."
+      3:
+        image: "notes/hoc2_3.jpg"
+        text: 'Chúng ta có thể sử dụng khối "lặp" mới để giúp đỡ.'
+      4:
+        image: "notes/hoc2_4.jpg"
+        text: 'Thay vì kéo ra 5 khối "tiến lên phía trước"...'
+      5:
+        image: "notes/hoc2_5.jpg"
+        text: 'Chúng tôi có thể đặt các khối "di chuyển về phía trước" bên trong khối "lặp lại" và viết một số vào trong khối để cho biết nó lặp lại bao nhiêu lần.'
+      6:
+        image: "notes/hoc2_6.jpg"
+        text: 'Điều quan trọng: bạn có thể đặt nhiều hơn một lệnh bên trong một khối "lặp lại".'
+      7:
+        image: "notes/hoc2_7.jpg"
+        text: 'Sử dụng khối "lặp lại" mới của bạn!'
+    loop_until:
+      1:
+        image: "notes/hoc3_1.jpg"
+        text: 'Xin chào, tôi là Chris. Trước khi gia nhập Miami Heat, tôi đã đi đến Georgia Tech để nghiên cứu khoa học máy tính. Hãy thử khối mới của chúng tôi: "lặp lại cho đến khi".'
+      2:
+        image: "notes/hoc3_2.jpg"
+        text: "Phải làm gì nếu chúng tôi không biết khoảng cách những con chim phải di chuyển bao xa để đến được những con lợn?"
+      3:
+        image: "notes/hoc3_3.jpg"
+        text: 'Nếu chúng ta đặt một khối "di chuyển về phía trước" bên trong khối "lặp lại cho đến khi", chim sẽ di chuyển về phía trước cho đến khi nó đi đến con lợn (hay đâm vào một bức tường).'
+      4:
+        image: "notes/hoc3_4.jpg"
+        text: 'Và điều này là quan trọng: giống như trước, chúng tôi đặt nhiều khối bên trong khối "lặp lại cho đến khi", và nó sẽ lặp đi lặp lại tất cả.'
+    if:
+      1:
+        image: "notes/hoc4_1.jpg"
+        text: 'Xin chào, tôi là Bill! Hãy tìm hiểu một khái niệm cơ bản mới: "nếu" báo cáo. Điều này là làm thế nào để máy tính đưa ra quyết định.'
+      2:
+        image: "notes/hoc4_2.jpg"
+        text: 'Bạn sử dụng báo cáo "nếu" cho mình mỗi ngày. Trước khi bạn đi ra ngoài mỗi buổi sáng, bạn nói nếu nó mưa bên ngoài, tôi phải mặc áo của tôi.'
+      3:
+        image: "notes/hoc4_3.jpg"
+        text: "Chúng tôi có thể cho các zombie biết để kiểm tra xem nếu có các con đường bên trái, và nếu anh ta tìm thấy một con đường bên trái, chúng tôi có thể có anh ta chuyển theo hướng đó."
+      4:
+        image: "notes/hoc4_4.jpg"
+        text: 'Để viết mã cho việc này, hãy kéo ra khối "nếu" và đặt một khối "rẽ trái" bên trong nó.'
+      5:
+        image: "notes/hoc4_5.jpg"
+        text: 'Bây giờ, nếu chúng ta đặt một khối "di chuyển về phía trước" ở trên nó và một khối "lặp lại" xung quanh tất cả mọi thứ, mỗi khi zombie di chuyển, anh ta sẽ kiểm tra nếu có một con đường bên trái và quay sang. "Lặp lại" lệnh là rất quan trọng để kiểm tra một lần lượt tại mỗi bước.'
+      6:
+        image: "notes/hoc4_6.jpg"
+        text: "Lệnh nếu rất quan trọng trong khoa học máy tính. Một trong những chương trình đầu tiên tôi đã viết là một trò chơi tic-tac-toe, Và trong trò chơi nếu có một người về đầu và dành chiến thắng, ngay lập tức chặn cái vị trí chiến thắng lại đối với những người còn lại."
+      7:
+        image: "notes/hoc4_7.jpg"
+        text: 'Vui chơi bằng cách sử dụng khối "if"!'
+    if_else:
+      1:
+        image: "notes/hoc5_1.jpg"
+        text: 'Chào, tên tôi là Saloni. Tôi sử dụng khoa học máy tính để giúp giải quyết các vấn đề sức khỏe và y học. Hãy tìm hiểu về các khối "if else". Cũng giống như khối "if", nhưng nó có một phần phụ vào cuối là "else".'
+      2:
+        image: "notes/hoc5_2.jpg"
+        text: 'Nếu tôi đặt một khối "di chuyển về phía trước" ở vị trí "làm" và một khối "rẽ trái" ở vị trí "khác" có nghĩa là các zombie sẽ lựa chọn giữa 2 lựa chọn. Nếu có một con đường phía trước, zombie sẽ di chuyển về phía trước, và nếu không (không có một con đường phía trước), zombie sẽ rẽ trái.'
+      3:
+        image: "notes/hoc5_3.jpg"
+        text: 'Giống như các khối "nếu", chúng tôi có thể đặt khối "nếu khác" bên trong khối "lặp lại", zombie sẽ giữ di chuyển và các "nếu khối khác" sẽ kiểm tra nếu có một nơi nào đó để chuyển, sẽ di chuyển theo hướng đó.'
+      4:
+        image: "notes/hoc5_4.jpg"
+        text: "Now, get those zombies where they belong!"
+    function:
+      1:
+        image: "notes/stage13_1.jpg"
+        text: "Xin chào, tôi là Brina, một kỹ sư tại Instagram. Có một chức năng mà một số dòng mã bạn muốn sử dụng nhiều, thay vì viết mã trong mọi lúc, bạn có thể chỉ cần sử dụng một khối."
+      2:
+        image: "notes/stage13_2.jpg"
+        text: "We're going to learn how to define functions. Function definitions have a star in the corner. The name of the function is written on the top line."
+      3:
+        image: "notes/stage13_3.jpg"
+        text: |-
+          The blocks that go inside the definition tell us what it does. So this function definition is called "fill 5" and it's made up of a "repeat" block and a "fill" block.
+      4:
+        image: "notes/stage13_4.jpg"
+        text: |-
+          The definition sits on the workspace, but our farmer won't run the function until we drag out our "fill 5" function block from functions category.
+      5:
+        image: "notes/stage13_5.jpg"
+        text: |-
+          Let's put the "fun" back in "FUNction!"
+    loop_while:
+      1:
+        image: "notes/stage9_5.jpg"
+        text: |-
+          Hi, I'm Makinde! Let's learn about the "while block."
+      2:
+        image: "notes/stage9_6.jpg"
+        text: 'The "while block" will do whatever you put inside it AS LONG AS the statement on the top is TRUE.'
+      3:
+        image: "notes/stage9_7.jpg"
+        text: "For example, if the farmer is standing on a pile, she will continue to remove 1 shovelful WHILE there is still a pile beneath her."
+    loop_for:
+      1:
+        image: "notes/stage11_1.jpg"
+        text: "Hi, I 'm Trina, và tôi làm việc cho Pixar. Tôi đã làm việc trên một loạt các phim, trong đó có Shrek."
+      2:
+        image: "notes/stage11_2.jpg"
+        text: 'This is our new "counter" loop. It will perform actions over and over again and you can make the actions change slightly each time.'
+      3:
+        image: "notes/stage11_3.jpg"
+        text: 'In this example, our "counter" loop says "count with counter from 50 to 90 by 10" and inside it, we have our "draw a square" block. Drag the "counter" block from the "Variables" section into the "length" spot.'
+      4:
+        image: "notes/stage11_4.jpg"
+        text: "This means our artist is going to draw a square that has 50 pixel length sides, then it will add 10 to that and draw a square with 60 pixel length sides. Then it will keep adding 10 and drawing squares until it reaches 90. So we'll have squares of 50, 60, 70, 80, and 90."
+    parameters:
+      1:
+        image: "notes/stage15_1.jpg"
+        text: "Hi, tôi là Janete, và tôi là một kỹ sư tại Zynga."
+      2:
+        image: "notes/stage15_2.jpg"
+        text: "What if we want to draw a bunch of triangles and have their lengths be different sizes?"
+      3:
+        image: "notes/stage15_3.jpg"
+        text: "We could write all that code out by hand or we can use a function with parameters."
+      4:
+        image: "notes/stage15_4.jpg"
+        text: 'To do this, click the blue star on the "draw a triangle" function definition. Then drag "input name" into the "input" block.'
+      5:
+        image: "notes/stage15_5.jpg"
+        text: |-
+          Then if you write "length" in the spot where it says "x" and press "Enter" you'll create a length input for your function.
+      6:
+        image: "notes/stage15_6.jpg"
+        text: 'Then click on the star. Now, you want to click on the variables category and drag the "length" block into the "move forward" block of your function definition. And drag away the old number block.'
+      7:
+        image: "notes/stage15_7.jpg"
+        text: 'To use your function with parameters, click on the functions category and drag out your "draw a triangle with length" function.'
+      8:
+        image: "notes/stage15_8.jpg"
+        text: "Now you can use the math block to input different numbers to draw triangles of different sizes."
+    hoc_wrapup:
+      1:
+        image: "notes/hoc6_1.jpg"
+        text: "Congratulations! With the last puzzle you solved, you just wrote code that can tell ANY robot how to find it's way through a non-branching maze or tunnel of any length, whether it's a zombie, a bird, a mars rover, or even a self-driving car."
+      2:
+        image: "notes/hoc6_2.jpg"
+        text: 'Các khái niệm cơ bản bạn sử dụng ở trung tâm của mọi chương trình hoặc ứng dụng bạn sẽ phải cố gắng.  Chúng tôi đã được học về vòng lặp lại, lặp lại trừ khi thực thi, nếu thực thi, và ngược lại.'
+      3:
+        image: "notes/hoc6_3.jpg"
+        text: "Nếu bạn thích giờ đầu tiên của việc lập trình, hãy truy cập code.org để tiếp tục việc học của bạn vào khoa học máy tính! Khi bạn hoàn tất khóa học 20 giờ của chúng tôi, bạn sẽ nắm bắt các khái niệm cơ bản của chương trình, và có thể bắt đầu học tập làm thế nào để viết ứng dụng điện thoại, hướng dẫn robot, trò chơi, đặt tên cho nó."
+      4:
+        image: "notes/hoc6_4.jpg"
+        text: 'Công nghệ đang thay đổi tất cả mọi thứ chúng ta làm và nó không quan trọng nếu bạn còn trẻ hay già: lập trình là thú vị, đó là sáng tạo, và bất cứ ai có thể tìm hiểu!'
+    20_wrapup:
+      1:
+        image: "notes/bird.png"
+        text: "Hiển thị ghi chú đến!"

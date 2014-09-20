@@ -1,0 +1,9 @@
+#about_nav
+  %span.about_list
+    -current_url = request.path_info
+    -{ 'Introduction'=>'/resource_kit', 'Tutorial Guide'=>'/resource_kit/tutorial', 'Blurbs and Useful Stats'=>'/resource_kit/blurbs', 'One Pagers'=>'/resource_kit/one_pagers', 'Logos'=>'/resource_kit/logos', 'Banners'=>'/resource_kit/banners','Posters'=>'/resource_kit/posters', 'Presentations'=>'/resource_kit/presentations', 'Press Kit'=>'/resource_kit/press_kit', 'Sample Emails'=>'/resource_kit/sample_emails', 'Videos'=>'/resource_kit/videos', 'Frequently Asked Questions (FAQ)'=>'/resource_kit/frequently_asked_questions' }.each_pair do |label,url|
+      - if current_url == url
+        %span.about_list_item_selected= label
+      -else
+        %a.about_list_item{:href=>url}= label
+      %hr.narrow_hr

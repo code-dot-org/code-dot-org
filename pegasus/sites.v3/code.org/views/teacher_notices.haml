@@ -1,0 +1,95 @@
+#classroom
+
+  .section.section-dark
+    %h2= I18n.t('dashboard_landing_students_title')
+    %p
+      %a{href: "/teacher-dashboard#/sections"}
+        %button.btn.btn-default= I18n.t('dashboard_landing_students_manage')
+
+  .section.section-light
+    %h2= I18n.t('dashboard_landing_news_title')
+    %p
+      %a{href: "http://studio.code.org"}
+        %b= I18n.t('dashboard_landing_new_k5courses')
+    %p
+      %a{href: "/curriculum/docs/k-5/overview"}
+        K-5 Curriculum Overview
+      |
+      %a{href: "/curriculum/docs/k-5/complete.pdf", target: "_blank"}
+        View all lesson plans
+    %p
+      Course 1:
+      %a{href: "/curriculum/course1/docs/overview"}
+        Sequence
+      |
+      %a{href: "/curriculum/docs/k-5/framework_course1.pdf", target: "_blank"}
+        Framework
+      |
+      %a{href: "/curriculum/docs/k-5/standards_course1.pdf", target: "_blank"}
+        Standards
+
+    %p
+      Course 2:
+      %a{href: "/curriculum/course2/docs/overview"}
+        Sequence
+      |
+      %a{href: "/curriculum/docs/k-5/framework_course2.pdf", target: "_blank"}
+        Framework
+      |
+      %a{href: "/curriculum/docs/k-5/standards_course2.pdf", target: "_blank"}
+        Standards
+
+    %p
+      Course 3:
+      %a{href: "/curriculum/course3/docs/overview"}
+        Sequence
+      |
+      %a{href: "/curriculum/docs/k-5/framework_course3.pdf", target: "_blank"}
+        Framework
+      |
+      %a{href: "/curriculum/docs/k-5/standards_course3.pdf", target: "_blank"}
+        Standards
+
+    %p
+      %a{href: "curriculum/docs/k-5/implementation"}
+        Implementation Guide
+      |
+      %a{href: "/curriculum/docs/k-5/glossary"}
+        Glossary
+      |
+      %a{href: "/curriculum/docs/k-5/ClassroomStrategies.pdf", target: "_blank"}
+        Classroom Strategies for teachers
+    %p
+      Debugging:
+      %a{href: "/curriculum/docs/k-5/DebuggingStudent.pdf", target: "_blank"}
+        student worksheet
+      |
+      %a{href: "/curriculum/docs/k-5/DebuggingTeacher.pdf", target: "_blank"}
+        teacher worksheet
+    %p
+      Puzzle-solving:
+      %a{href: "/curriculum/docs/k-5/PuzzleSolvingStudent.pdf", target: "_blank"}
+        student worksheet
+      |
+      %a{href: "/curriculum/docs/k-5/PuzzleSolvingTeacher.pdf", target: "_blank"}
+        teacher worksheet
+
+  .section.section-dark
+    %h2= I18n.t('dashboard_landing_useful_links')
+    %p
+      %a#printcertificates{:href=>"#"}
+        = I18n.t('dashboard_landing_print_certificates')
+    %p
+      %a{href: "http://code.org/hints"}
+        = I18n.t('dashboard_landing_smart_hints')
+    %p
+      %a{href: "http://learn.code.org/videos/test"}
+        = I18n.t('dashboard_landing_video_player')
+
+  %form#printcertificatesform{:action=>"http://code.org/certificates", :method=>"POST"}
+    %input{:type=>'hidden', :name=>'course', :value=>'20hours'}
+
+  :javascript
+    $("#printcertificates").click(function() {
+      $('#printcertificatesform').submit();
+    });

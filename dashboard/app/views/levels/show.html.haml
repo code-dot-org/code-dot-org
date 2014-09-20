@@ -1,0 +1,31 @@
+- @page_title = level_title
+- content_for :head do
+  - if @game.share_mobile_fullscreen?
+    = tag('meta', :property => 'og:image', :content => show_image(:app => @game.app))
+  - if @game.app == 'flappy'
+    = tag 'meta', :name => 'description', :content => "Code your own Flappy game"
+
+#notes-content{:style => 'display: none;'}
+  %ul
+    %li
+      %a{:href => '#video'}
+        = I18n.t('video.tab')
+        %span.video-name
+    %li
+      %a{:href => '#notes-outer'}= I18n.t('video.notes')
+
+- if @game.unplugged?
+  = render partial: "levels/unplug", locals: { app: @game.app }
+- elsif @game.multi?
+  = render partial: "levels/multi", locals: { app: @game.app }
+- elsif @game.match?
+  = render partial: "levels/match", locals: { app: @game.app }
+- else
+  -# Solution and start blocks may be nil if they don't exist for this level.
+  - @solution_blocks = '' if ! defined? @solution_blocks
+  = render partial: "levels/blockly", locals: { start_blocks: @start_blocks, app: @game.app, solution_blocks: @solution_blocks, maze: @level[:maze]}
+
+- if Rails.env.production? && request.path == hoc_chapter_path(chapter: 1)
+  -# special tracking image to make sure a cookie is set when hoc starts (/hoc/1)
+  = image_tag('http://code.org/api/hour/begin_codeorg.png')
+= link_to "edit", edit_level_path(@level) if @level.is_a?(Match) && current_user.try(:admin?)

@@ -1,0 +1,14 @@
+name '4-5 artist multi 2' 
+title 'Artist Multiple Choice'
+
+#content1 '/script_assets/4-5_images/artist/4-5_artist_multi_2_q.png, 500'
+content1 ''
+
+height '160'
+
+question 'Which drawing is symmetric?'
+
+wrong '/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png'
+wrong '/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png'
+right '/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png'
+wrong '/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png'

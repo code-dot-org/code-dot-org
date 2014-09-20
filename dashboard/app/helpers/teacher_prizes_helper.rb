@@ -1,0 +1,2 @@
+module TeacherPrizesHelper
+end

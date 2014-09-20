@@ -1,0 +1,32 @@
+%h1 Create Section
+
+%form#create-section-form{onsubmit:'return createSection()'}
+  .form-group
+    %label{for:'name'} Section name
+    %div
+      %input#create-section-name{name:'name', placeholder:'New Section', type:'text', required:true}/
+
+  .form-group
+    %button#btn-submit{type:'submit'} Create
+
+:javascript
+  function createSection() {
+    $("#btn-submit").attr('disabled','disabled');
+
+    $.ajax({
+      url: "/v2/sections",
+      type: "post",
+      dataType: "json",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify({
+        name:$('#create-section-name').val()
+      })
+    }).done(function(data, text) {
+      window.location.href = data.location;
+    }).fail(function(request, status, error) {
+      alert(error)
+      $("#btn-submit").removeAttr('disabled');
+    });
+
+    return false;
+  }

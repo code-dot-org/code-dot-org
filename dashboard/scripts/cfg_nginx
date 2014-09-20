@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+nginx_cfg=/etc/nginx/nginx.conf
+site_cfg=/etc/nginx/sites-enabled/dashboard
+rm -f /etc/nginx/sites-enabled/default $nginx_cfg $site_cfg
+cp $DASH_ROOT/config/nginx.conf $nginx_cfg
+$DASH_ROOT/config/nginx-site.sh > $site_cfg
+service nginx restart

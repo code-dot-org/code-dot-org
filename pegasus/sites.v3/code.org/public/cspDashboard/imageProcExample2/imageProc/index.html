@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Canvas Tests</title>
+	<style>
+		body{
+			background-color: rgb(156,0,252);
+		}
+		canvas{
+			border: solid 1px;
+		}
+		h1{
+			font-family: "Helvetica";
+			font-style: italic;
+			color: rgb(201,146,255);
+		}
+
+	</style>
+	<script type="text/javascript" src="http://cs.ucls.uchicago.edu/CS1_Resources/Libraries/imageFuncs.js"></script>
+
+	<script>
+		var img; 
+		var fileName;
+
+		function setup(){
+			fileName = "me.jpg"
+			img = loadImage("myCanvas", fileName )
+			//img = createNewImage("myCanvas", 100, 100);
+			//setRGB(img, getWidth(img)/2, getHeight(img)/2, 0, 0, 0);
+			repaint(img, "myCanvas");
+		}
+
+		function drawRedLine(){
+			
+			for(var x=0; x<getWidth(img);x++){
+			setRGB(img, x, getHeight(img)/2, 255, 0,0);
+			
+			//x+1;
+			};
+			repaint(img, "myCanvas");
+		}
+		function drawRedBox(){
+						
+			for(var y=0; y<getHeight(img);y++){
+				for(var x=0; x<getWidth(img);x++){
+					setRed(img,x,y,255);
+				
+				}
+				
+			}
+			repaint(img, "myCanvas");
+		
+		}
+
+		function removeRed(){
+			for(var y=0; y<getHeight(img);y++){
+				for(var x=0; x<getWidth(img);x++){
+					setRed(img,x,y,0);
+				
+				}
+				
+			}
+			repaint(img, "myCanvas");
+		
+		}
+
+		function removeGreen(){
+			for(var y=0; y<getHeight(img);y++){
+				for(var x=0; x<getWidth(img);x++){
+					setGreen(img,x,y,0);
+				
+				}
+				
+			}
+			repaint(img, "myCanvas");
+		
+		}
+		function removeBlue(){
+			for(var y=0; y<getHeight(img);y++){
+				for(var x=0; x<getWidth(img);x++){
+					setBlue(img,x,y,0);
+				
+				}
+				
+			}
+			repaint(img, "myCanvas");
+		
+		}
+		function intensify(){
+			var r;
+			var g;
+			var b;
+			for(var y=0; y<getHeight(img);y++){
+				for(var x=0; x<getWidth(img);x++){
+					r=getRed(img, x, y);
+					g=getGreen(img, x, y);
+					b=getBlue(img, x, y);
+					if(r>128){
+						setRed(img, x, y, 255);
+					}
+					else{
+						setRed(img,x,y,0);
+					}
+
+					if(g>128){
+						setGreen(img, x, y, 255);
+					}
+					else{
+						setGreen(img,x,y,0);
+					}
+				
+
+		
+					if(b>128){
+						setBlue(img, x, y, 255);
+					}
+					else{
+						setBlue(img,x,y,0);
+					}
+
+				}
+			}
+	
+		repaint(img, "myCanvas");
+	
+	}
+		
+	function grayscale(){
+		var r, g, b, avg;
+		for(var y=0; y<getHeight(img);y++){
+				for(var x=0; x<getWidth(img);x++){
+				r = getRed(img, x, y);
+				g = getGreen(img, x, y);
+				b = getBlue(img, x, y);
+				avg = (r+g+b)/3;
+				setRGB(img,x,y,avg,avg,avg);
+				}
+		}
+		repaint(img, "myCanvas");		
+	}
+	
+	function twoTone(){
+		var r, g, b, avg;
+		for(var y=0; y<getHeight(img);y++){
+				for(var x=0; x<getWidth(img);x++){
+				r = getRed(img, x, y);
+				g = getGreen(img, x, y);
+				b = getBlue(img, x, y);
+				avg = (r+g+b)/3;
+				if(avg>128){
+						setRGB(img, x, y, 0, 170, 205);
+					}
+					else{
+						setRGB(img,x,y,25,11,60);
+					}
+
+					
+				}
+		}
+		repaint(img, "myCanvas");		
+	}
+		function negative(){
+			var r, g, b, avg;
+		for(var y=0; y<getHeight(img);y++){
+				for(var x=0; x<getWidth(img);x++){
+				r = getRed(img, x, y);
+				g = getGreen(img, x, y);
+				b = getBlue(img, x, y);
+				avg = (r+g+b)/3;
+				if(avg>128){
+						setRGB(img, x, y, 0, 0, 0);
+					}
+					else{
+						setRGB(img,x,y,255,255,255);
+					}
+
+					
+				}
+		}
+		repaint(img, "myCanvas");		
+	}
+		function fourTone(){
+		var r, g, b, avg;
+		for(var y=0; y<getHeight(img);y++){
+				for(var x=0; x<getWidth(img);x++){
+				r = getRed(img, x, y);
+				g = getGreen(img, x, y);
+				b = getBlue(img, x, y);
+				avg = (r+g+b)/3;
+				if(avg>191){
+						setRGB(img, x, y, 80, 233, 255);
+					}else 
+				
+				if(avg>127){
+						setRGB(img,x,y,11,122,255);
+				}else
+				if(avg>63){
+						setRGB(img,x,y,7,92,255);
+				}
+				else
+				{
+						setRGB(img,x,y,0,19,209);
+				}
+					
+				
+		}
+	}
+		repaint(img, "myCanvas");		
+	}
+
+	function fadeInVert(){
+		var r, g, b, percentHeight;
+		for(var y=0; y<getHeight(img);y++){
+			for(var x=0; x<getWidth(img);x++){
+				percentHeight= y/getHeight(img);
+				r= getRed(img, x, y);
+				setRed(img,x,y,r*percentHeight);
+				g=getGreen(img,x,y);
+				setGreen(img,x,y,g*percentHeight);
+				b=getBlue(img,x,y);
+				setBlue(img,x,y,b*percentHeight);
+	
+				}
+			}
+			repaint(img,"myCanvas");
+	}	
+
+	function fadeInHoriz(){
+		var r, g, b, percentWidth;
+		for(var y=0; y<getHeight(img);y++){
+			for(var x=0; x<getWidth(img);x++){
+				percentWidth= x/getWidth(img);
+				r= getRed(img, x, y);
+				setRed(img,x,y,r*percentWidth);
+				g=getGreen(img,x,y);
+				setGreen(img,x,y,g*percentWidth);
+				b=getBlue(img,x,y);
+				setBlue(img,x,y,b*percentWidth);
+	
+				}
+			}
+			repaint(img,"myCanvas");
+	}	
+
+	//function drawBorder(){
+		//var border= document.getElementById("borderSlider").value;
+	// 	for(var x=0; x<getWidth(img);x++){
+	// 		for(var y=0; y<10;y++){
+	// 			setRGB(img,x,y,0,0,0);
+	// 		}
+	// 	}
+	// 	for(var x=0; x<(getWidth(img)-10);x++){
+	// 		for(var y=0; y<getHeight;y++){
+	// 			setRGB(img,x,y,0,0,0);
+	// 		}
+	// 	}
+	// 	for(var y=(getHeight(img)-10); y<getHeight(img);y++){
+	// 		for(var x=0; x<10;x++){
+	// 			setRGB(img,x,y,0,0,0);
+	// 		}
+	// 	}
+	// 	for(var y=0; y<getHeight(img);y++){
+	// 		for(var x=0; x<10;x++){
+	// 			setRGB(img,x,y,0,0,0);
+	// 		}
+	// 	}
+
+	// 	repaint(img,"myCanvas");
+	// }
+	function drawBorder(){
+		setup();
+		var width = document.getElementById("borderSlider").value;
+		var r= hexToR(document.getElementById("borderColor").value);
+		var g= hexToG(document.getElementById("borderColor").value);
+		var b= hexToB(document.getElementById("borderColor").value);
+
+			for(var y = 0; y < width; y++){
+				for(var x = 0; x < getWidth(img); x++){
+					setRGB(img, x, y, r, g, b);
+				}
+			}
+			for(var y = (getHeight(img) - width); y < getHeight(img); y++){
+				for(var x = 0; x < getWidth(img); x++){
+					setRGB(img, x, y, r, g, b);
+				}
+			}
+			for(var x = 0; x < width; x++){
+				for(var y = 0; y < getHeight(img); y++){
+					setRGB(img, x, y, r, g, b);
+				}
+			}
+			for(var x = (getWidth(img) - width); x < getWidth(img); x++){
+				for(var y = 0; y < getHeight(img); y++){
+					setRGB(img, x, y, r, g, b);
+				}
+			}
+
+			repaint(img, "myCanvas");
+		}
+
+		function mirrorHoriz(){
+			var r, g, b;
+			for(var y=0; y<getHeight(img);y++){
+				for(var x=0; x<getWidth(img)/2;x++){
+					var xSideOne = getWidth(img)-(x+1);
+					r=getRed(img, x, y);
+					g=getGreen(img, x, y);
+					b=getBlue(img, x, y);
+					setRGB(img, xSideOne, y, r, g, b);
+				
+			}
+		}
+		repaint(img, "myCanvas");
+	}
+
+		function mirrorVert(){
+			var r, g, b;
+			for(var x=0; x<getWidth(img);x++){
+				for(var y=0; y<getHeight(img)/2;y++){
+					var ySideOne = getHeight(img)-(y+1);
+					r=getRed(img, x, y);
+					g=getGreen(img, x, y);
+					b=getBlue(img, x, y);
+					setRGB(img, x, ySideOne, r, g, b);
+				
+			}
+		}
+		repaint(img, "myCanvas");
+	}
+	function lineDrawing(){
+			var r, g, b, avg, red, green, blue, avg2;
+			for(var y=0; y<getHeight(img); y++){
+				for(var x=0; x<getWidth(img); x++){
+					r=getRed(img, x, y);
+					g=getGreen(img, x, y);
+					b=getBlue(img, x, y);
+					avg= (r+g+b)/3;
+					red=getRed(img, x+1, y);
+					green=getGreen(img, x+1, y);
+					blue=getBlue(img, x+1, y);
+					avg2= (red+green+blue)/3;
+					if (Math.abs(avg-avg2)>2){
+						setRGB(img, x, y, 0, 0, 0);
+					}
+					else{
+						setRGB(img, x, y, 255, 255, 255);
+					}
+				}
+			}
+			repaint(img, "myCanvas");
+		}
+		
+		function half(){
+			var newImg; 
+			newImg = createNewImage("myCanvas", getWidth(img)/2, getHeight(img)/2);
+			var r, g, b;
+			for(var y=0; y<getHeight(img); y++){
+				for(var x=0; x<getWidth(img); x++){
+					r = getRed(img, x, y);
+					g = getGreen(img, x, y);
+					b = getBlue(img, x, y);
+					setRGB(newImg, x/2, y/2, r, g, b);
+				}
+			}
+			repaint(newImg, "myCanvas");
+		}
+		
+		function double(){
+			var newImg; 
+			newImg = createNewImage("myCanvas", getWidth(img)*2, getHeight(img)*2);
+			var r, g, b;
+			for(var y=0; y<getHeight(img); y++){
+				for(var x=0; x<getWidth(img); x++){
+					r = getRed(img, x, y);
+					g = getGreen(img, x, y);
+					b = getBlue(img, x, y);
+					setRGB(newImg, x*2, y*2, r, g, b);
+					setRGB(newImg, (x*2)+1, (y*2)+1, r, g, b);
+					setRGB(newImg, (x*2), (y*2)+1, r, g, b);
+					setRGB(newImg, (x*2)+1, (y*2), r, g, b);
+				}
+			}
+			repaint(newImg, "myCanvas");
+		}
+
+		//function blend(){
+			//var fileName1 = prompt("First file");
+			//var fileName2 = prompt("Second file");
+			//var img1 = loadImage("myCanvas", fileName1);
+			 //img2 = loadImage("myCanvas", fileName2);
+			 //newRed = getRed(img1,x,y)*0.5 +getRed(img2,x,y)*0.5;
+			 //newGreen = getGreen(img1,x,y)*0.5 + getGreen(img2,x,y)*0.5;
+			 //newBlue = getBlue(img1,x,y)*0.5 + getBlue(img2,x,y)*0.5;
+			//for(var y=0; y<getHeight(img); y++){
+				//for(var x=0; x<getWidth(img); x++){
+					//setRGB(img1, newRed, newGreen, newBlue);
+					//setRGB(img2, newRed, newGreen, newBlue);
+					
+
+		//}
+	//}
+	//repaint(img1, "myCanvas");
+	//repaint(img2,"myCanvas");
+//
+
+		function blend(){
+			var fileName1 = prompt("First file:");
+			var fileName2 = prompt("Second file:");
+			var img1 = loadImage("myCanvas",fileName1);
+			var img2 = loadImage("myCanvas",fileName2);
+			img = createNewImage("myCanvas",Math.min(getWidth(img1),getWidth(img2)),  Math.min(getHeight(img1),getHeight(img2)));
+			for (var y=0; y<getHeight(img); y++){
+				for (var x=0; x<getWidth(img); x++){	
+					var newRed = getRed(img1, x, y)*(0.5)+ getRed(img2, x, y)*(0.5);
+					var newGreen = getGreen(img1, x, y)*(0.5) + getGreen(img2, x, y)*(0.5);
+					var newBlue = getBlue(img1, x, y)*(0.5) + getBlue(img2, x, y)*(0.5);
+					setRGB(img, x, y, newRed, newGreen, newBlue);
+				}
+			}
+			repaint (img, "myCanvas");
+		}
+
+		//function greenScreen(){
+		// 	var fileNameGreenImg = document.getElementById("greenFileNme").value;
+		// 	var greenImg = loadImage("myCanvas", fileNameGreenImg);
+		// 	var fileNameBackground = document.getElementById("backFileName").value;
+		// 	img = loadImage("myCanvas", fileNameBackground);
+		// 	for (var y=0; y<getHeight(img); y++){
+		// 		for (var x=0; x<getWidth(img); x++){	
+		// 			if(distance([r,g,b], [0,255,0]))>100){
+		// 				setRGB(img,x,y,r,g,b);
+//}
+		//}
+	</script>
+	
+</head>
+<body onLoad="setup()">
+
+
+<h1>Canvas Tests</h1>
+
+
+<input type=button value="Reset" onClick="setup()">
+<input type=button value="Draw Border" onClick="drawBorder()">
+<input type=range  id="borderSlider" onChange="drawBorder()" value=100 min=5px max=150px>
+<input id="borderColor" type="color">
+<input type=button value="Red Line" onClick="drawRedLine()">
+<input type=button value="Red Box" onClick="drawRedBox()">
+<input type=button value="Remove Red" onClick="removeRed()">
+<input type=button value="Remove Green" onClick="removeGreen()">
+<input type=button value="Remove Blue" onClick="removeBlue()">
+<input type=button value="Intensify" onClick="intensify()">
+<input type=button value="Grayscale" onClick="grayscale()">
+<input type=button value="Aqua & Navy Blue" onClick="twoTone()">
+<input type=button value="Negative" onClick="negative()">
+<input type=button value="Four shade of Blue" onClick="fourTone()">
+<input type=button value="Fade In Vertically" onClick="fadeInVert()">
+<input type=button value="Fade In Horizontally" onClick="fadeInHoriz()">
+<input type=button value="Mirror Horizontally" onClick="mirrorHoriz()">
+<input type=button value="Mirror Vertically" onClick="mirrorVert()">
+<input type=button value="Make Line Drawing" onClick="lineDrawing()">
+<input type=button value="Resize Half" onClick="half()">
+<input type=button value="Resize Double" onClick="double()">
+<input type=button value="Blend" onClick="blend()"> 
+
+
+
+<br/>
+<br/>
+
+<canvas id="myCanvas">Your browser does not support the HTML5 canvas tag.</canvas>
+
+</body>
+</html>
+

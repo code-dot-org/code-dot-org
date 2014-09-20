@@ -1,0 +1,183 @@
+---
+title: Affiliate workshops
+theme: angular
+angular: professionalDevelopmentWorkshop
+---
+- unless dashboard_user
+  - dont_cache
+  - redirect("http://#{canonical_hostname('learn.code.org')}/users/sign_in?return_to=#{request.url}", 302) unless dashboard_user
+- forbidden! unless dashboard_user[:user_type] == 'teacher'
+- forbidden! unless have_permission?('create_professional_development_workshop') || dashboard_user[:admin]
+
+%link(rel="stylesheet" type="text/css" href="/style.css")
+%link(rel='stylesheet' type='text/css' href='/css/page.css')
+
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/bootstrap.min.js"}
+%script{type: "text/javascript", src: "/js/bootstrap-datepicker.js"}
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
+
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+%link{rel: "stylesheet", type: "text/css", href: "/css/datepicker3.css"}/
+
+/[if lt IE 9]
+  %script{src: "/js/es5-shim.min.js"}
+
+%div{'ng-view' => ''}
+
+:javascript
+  'use strict';
+
+  // Declare app level module which depends on filters, and services
+  angular.module('professionalDevelopmentWorkshop', [
+    'ngRoute',
+    'ngResource',
+    'professionalDevelopmentWorkshop.controllers',
+    'professionalDevelopmentWorkshop.services'
+  ]).
+
+  // ROUTES
+  config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/', {templateUrl: '/manage-professional-development-workshops/workshops'});
+    $routeProvider.when('/new',       {templateUrl: '/manage-professional-development-workshops/workshop-edit',
+                                       controller:  'WorkshopController'});
+    $routeProvider.when('/:secret/view', {templateUrl: '/manage-professional-development-workshops/workshop-view',
+                                       controller:  'WorkshopController'});
+    $routeProvider.when('/:secret/:action', {templateUrl: '/manage-professional-development-workshops/workshop-edit',
+                                       controller:  'WorkshopController'});
+  }]);
+
+  // SERVICES
+  var services = angular.module('professionalDevelopmentWorkshop.services', []).
+    value('version', '0.1');
+
+  services.factory('workshopsService', ['$resource',
+    function($resource){
+      return $resource('/v2/forms/ProfessionalDevelopmentWorkshop/:secret', {}, {
+         update: {method:'PATCH'},
+      });
+    }]);
+
+  services.factory('workshopSignupsService', ['$resource',
+    function($resource){
+      return $resource('/v2/forms/ProfessionalDevelopmentWorkshop/:parent_secret/children/ProfessionalDevelopmentWorkshopSignup/:secret', {}, {
+        get: {isArray: true},
+        remove: {method:'DELETE', url:'/v2/forms/ProfessionalDevelopmentWorkshopSignup/:secret'},
+
+      });
+    }]);
+
+  // CONTROLLERS
+  var app = angular.module('professionalDevelopmentWorkshop.controllers', []);
+
+  app.controller('WorkshopsController', ['$scope', '$location', 'workshopsService', 'workshopSignupsService',
+                                       function($scope, $location, workshopsService, workshopSignupsService){
+
+    $scope.hasWorkshops = false;
+    $scope.workshops = workshopsService.query();
+
+    $scope.workshops.$promise.then(function(workshops){
+      for (var i = 0; i < workshops.length; i++) {
+        var signups = workshopSignupsService.get({parent_secret: workshops[i].secret});
+        workshops[i].signups = signups;
+      }
+      $scope.hasWorkshops = true;
+    });
+
+    $scope.confirm_delete = function(workshop)
+    {
+      workshop.confirmDelete = true;
+    }
+
+    $scope.del = function(workshop) {
+      $scope.workshops.splice($scope.workshops.indexOf(workshop), 1); // remove from array
+      workshopsService.remove({secret: workshop.secret}); // service call
+      workshop.confirmDelete = false;
+    };
+  }]);
+
+  app.controller('WorkshopController', ['$scope', '$routeParams', 'workshopsService', 'workshopSignupsService',
+    function($scope, $routeParams, workshopsService, workshopSignupsService) {
+      $scope.addNewDate = function($event) {
+        $scope.newDate();
+        $event.preventDefault();
+      };
+
+      $scope.newDate = function() {
+        $scope.workshop.dates.push({
+          date_s: '',
+          start_time_s: '',
+          end_time_s: ''
+        });
+      };
+
+      if ($routeParams.secret) {
+        $scope.workshop = workshopsService.get({secret: $routeParams.secret});
+        var signups = workshopSignupsService.get({parent_secret: $routeParams.secret});
+        $scope.workshop.$promise.then(function(workshop){
+          $scope.workshop.signups = signups;
+        });
+      } else {
+        $scope.workshop = {};
+        $scope.workshop.dates = [];
+        $scope.newDate();
+      }
+
+      $scope.action = $routeParams.action;
+
+      $scope.cancel_workshop = function() {
+        window.location = "#";
+      };
+
+      $scope.load = function() {
+        $('#workshop-dates').on('focus click', '.date', function() {
+          $(this).datepicker({
+            autoclose: true,
+            todayHighlight: true,
+            pickTime: false
+          });
+        });
+
+        // Disabled for now.
+        //var location_input = document.getElementById('workshop-location-address');
+        //var autocomplete = new google.maps.places.Autocomplete(location_input);
+        //google.maps.event.addListener(autocomplete, 'place_changed', function() {
+        //  var place = autocomplete.getPlace();
+        //  location_input.value = place.formatted_address;
+        //  console.log(place.formatted_address);
+        //});
+
+      }
+
+      $scope.confirm_signup_delete = function(signup) {
+        signup.confirmSignupDelete = true;
+      }
+
+      $scope.delete_signup = function(signup) {
+        $scope.workshop.signups.splice($scope.workshop.signups.indexOf(signup), 1); // remove from array
+        workshopSignupsService.remove({secret: signup.secret}); // service call
+        signup.confirmSignupDelete = false;
+      };
+
+      $scope.save = function() {
+        if ($scope.action == 'clone') {
+          $scope.workshop.secret = null;
+        }
+
+        if ($scope.workshop.secret) { // existing
+          $scope.workshop =
+            workshopsService.update({secret: $scope.workshop.secret}, $scope.workshop);
+            window.location = "#";
+        } else { // new
+          $scope.workshop =
+            workshopsService.save($scope.workshop, function() {
+              window.location = "#";
+            });
+        }
+      };
+
+      $scope.load();
+    }
+  ]);

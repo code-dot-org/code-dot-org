@@ -1,0 +1,88 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-07-09T17:28:38.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "skin": "bee",
+    "instructions": "These blocks are really bugging me. Fix the error(s) to collect all of the nectar and make all of the honey.",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "true",
+    "start_direction": "1",
+    "nectar_goal": "7",
+    "honey_goal": "5",
+    "flower_type": "redWithNectar",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,1,1,2,1,1,1,0],[0,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,1,1,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,1,0],[0,-1,-1,-1,-1,-1,1,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "12"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">3</title>
+          <statement name="DO">
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_nectar"/>
+              </next>
+            </block>
+          </statement>
+          <next>
+            <block type="maze_turn">
+              <title name="DIR">turnRight</title>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_nectar"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                      <next>
+                        <block type="controls_repeat">
+                          <title name="TIMES">5</title>
+                          <statement name="DO">
+                            <block type="maze_moveForward"/>
+                          </statement>
+                          <next>
+                            <block type="maze_honey"/>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_nectar"/>
+        <block type="maze_honey"/>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Karel>

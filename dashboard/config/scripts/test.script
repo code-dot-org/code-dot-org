@@ -1,0 +1,10 @@
+title 'Test Course'
+description "Just an internal test course."
+
+stage 'Multi' 
+level 'test multi text'
+level 'test multi image'
+
+stage 'Match'
+level 'test matching text'
+level 'test matching image'

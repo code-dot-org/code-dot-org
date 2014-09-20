@@ -1,0 +1,6 @@
+title: For Loop Control
+description: "In this two-day lesson students are introduced to the for-loop. The two days ensure both enough time to introduce the algorithm and new syntax, and for students to develop skills. In the activities, students will be creating programs that manipulate images. 
+
+At this point it is appropriate to point out that there are generally two types of repetition in programming. In one, the user determines the number of repetitions and the programmer cannot predict how many times a process will occur. In the second, represented by the for-loop, the emphasis is on counting and the programmer can predict and control how many times the process will be repeated. Student projects include using for-loops for Chroma Key compositing to change the background color of images.
+
+In addition to learning new skills with for-loops, students will apply skills they learned earlier related to random numbers and modular division. Please provide <a href='https://docs.google.com/forms/d/1eL7g_o3lfgtdT1jiMZqUNh5_NCGBHqNGEj0t5K4d9hA/viewform?usp=send_form'> feedback on this lesson.</a>"

@@ -1,0 +1,12 @@
+- videos.each_with_index do |video, index|
+
+  %div{style: "float:left; padding:10px; width:440px"}
+    - unless video[:title].nil_or_empty?
+      %h3= video[:title]
+    %iframe{width: "350", height: "195", src: "https://www.youtubeeducation.com/embed/#{video[:yt]}?iv_load_policy=3&rel=0&autohide=1&showinfo=0", frameborder: "0", allowfullscreen: ""}
+    %p
+      %a{href: video[:dl]}
+        =video[:dltext]
+
+  - if index % 2 == 1
+    %div{style: "clear:both"}

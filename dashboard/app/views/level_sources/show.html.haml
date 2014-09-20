@@ -1,0 +1,42 @@
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=#{CDO.dashboard_facebook_key}";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+- if @game.share_mobile_fullscreen? && safari?
+  <script>
+  if (!window.navigator.standalone) { window.addEventListener("load", function() { addToHome.show(true); }, false); }
+  </script>
+- content_for :head do
+  - if @game.supports_sharing?
+    = tag('meta', :name => 'twitter:card', :content => "photo")
+    = tag('meta', :property => 'og:description', :content => t('share_code.og_description'))
+    = tag('meta', :property => 'og:image', :content => show_image(:id => @level_source_id))
+    = tag('meta', :name => 'twitter:image', :content => show_image(:id => @level_source_id))
+
+    - if @game.app == "flappy"
+      = tag('meta', :property => 'og:title', :content => t('share_code.flappy_og_title'))
+
+    - if @game.app == "bounce"
+      = tag('meta', :property => 'og:title', :content => t('share_code.bounce_og_title'))
+
+    - if @game.app == "studio"
+      = tag('meta', :property => 'og:title', :content => t('share_code.studio_og_title'))
+
+    - if @game.share_mobile_fullscreen?
+      = tag :meta, name: "apple-mobile-web-app-capable", content: "yes"
+      = tag :meta, name: "apple-mobile-web-app-status-bar-style", content: "black-translucent"
+      - if @game.flappy?
+        = tag :link, rel: 'apple-touch-icon', href: asset_url('flappy_icon.png')
+      - else
+        = tag :link, rel: 'apple-touch-icon', href: asset_url('logo.png')
+
+- if !@game.share_mobile_fullscreen?
+  - @page_title = t('share_code.title')
+  %h1= @page_title
+= render partial: "levels/blockly", locals: { start_blocks: @start_blocks, app: @game.app, hide_source: @hide_source, share: @share, slider_speed: "0.9", no_padding: @no_padding }

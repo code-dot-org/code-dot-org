@@ -1,0 +1,9 @@
+name 'Math to Code 2'
+title 'Racket Code for Math Expressions'
+content1 'Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!'
+
+question '4 + 6 + 20 ÷ 2 × 3 × 7 + 2'
+right '(+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2)'
+wrong '(+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6))'
+wrong '(+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2)'
+wrong '(+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))'

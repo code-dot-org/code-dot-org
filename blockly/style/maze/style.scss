@@ -1,0 +1,100 @@
+$root: '/blockly/media/maze/'; //TODO: Parameterize for asset pipeline
+$green: #00b050;
+
+#svgMaze {
+  border: solid 1px #DBDBDB;
+}
+
+/* 'Look' icon */
+#look>path {
+  display: none;
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-opacity: 0.7;
+}
+
+/* Sprited icons. */
+.icon21 {
+  height: 21px;
+  width: 21px;
+  background-image: url("#{$root}icons.png");
+}
+.code {
+  background-position: -21px 0px;
+}
+.link {
+  background-position: 0px 0px;
+}
+.run {
+  background-position: 0px -21px;
+  margin-right: 3px;
+}
+.stop {
+  background-position: -21px -21px;
+  margin-right: 3px;
+}
+
+#stepButton {
+  display: inline-block;
+  &.hide {
+    display: none;
+  }
+  vertical-align: top;
+}
+
+.float-right {
+  float: right;
+
+  html[dir="RTL"] & {
+    float: left;
+  }
+}
+
+#spelling-table-wrapper {
+  display: inline-block;
+  width: 100%;
+}
+
+.spellingTextCell {
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 16px;
+}
+
+.spellingButtonCell {
+  vertical-align: middle;
+  margin-right: 0;
+}
+
+.spellingButton {
+  color: #fff;
+  font-size: large;
+  min-width: 96px;
+  margin-left: 0;
+  margin-right: 0;
+
+  border: 1px solid $green;
+  cursor: default;
+  disabled: true;
+  text-align: center;
+}
+
+.spellingButton:hover {
+  box-shadow: none;
+}
+
+#searchWord {
+  border: 1px solid $green;
+  background-color: white;
+  color: black;
+}
+
+#currentWord {
+  background-color: $green;
+}
+
+.search-letter {
+  line-height: 120%;
+  cursor: default;
+}

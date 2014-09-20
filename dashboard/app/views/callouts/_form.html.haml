@@ -1,0 +1,16 @@
+= form_for @callout do |f|
+  - if @callout.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@callout.errors.count, "error")} prohibited this callout from being saved:"
+      %ul
+        - @callout.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :element_id
+    = f.text_field :element_id
+  .field
+    = f.label :localization_key
+    = f.text_field :localization_key
+  .actions
+    = f.submit 'Save'

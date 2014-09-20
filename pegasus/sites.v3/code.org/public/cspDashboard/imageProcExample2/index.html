@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<style>
+		body{
+			background-color: rgb(255,255,255);
+		}
+		canvas{
+			border: solid 1px;
+		}
+	</style>
+	<title>  Image Processing</title>
+	<script type="text/javascript" src="http://cs.ucls.uchicago.edu/CS1_Resources/Libraries/imageFuncs.js"></script>
+
+	<script>
+		var x=0;
+		var img; 
+		var xPos=getWidth()/2;
+		var yPos=getHeight()/2;
+		var numPix;
+		var y;
+		var prevX=getWidth()/2;
+		var prevY=getHeight()/2;
+		var r,g,b;
+		var sR,sG,sB;
+		var pic;
+		var oldimg=img;
+		function sketch(){
+			document.getElementById("xPos").setAttribute("max",getWidth(img));
+			document.getElementById("yPos").setAttribute("max",getHeight(img));			
+			xPos=parseInt(document.getElementById("xPos").value);
+			yPos=parseInt(document.getElementById("yPos").value);
+			if (prevX!=xPos) {
+				if(xPos>prevX){
+					for(prevX; prevX<xPos; prevX++){
+						setRGB(img,prevX,yPos,sR,sG,sB);
+					}
+				}
+				if(xPos<prevX){
+					for(prevX; prevX>xPos; prevX--){
+						setRGB(img,prevX,yPos,sR,sG,sB);
+					}
+				}
+			}
+			if (prevY!=yPos) {
+				if(yPos>prevY){
+					for(prevY; prevY<yPos; prevY++){
+						setRGB(img,xPos,prevY,sR,sG,sB);
+					}
+				}
+				if(yPos<prevY){
+					for(prevY; prevY>yPos; prevY--){
+						setRGB(img,xPos,prevY,sR,sG,sB);
+					}
+				}
+			}
+			r=255-getRed(img,numPix,y);
+			g=255-getGreen(img,numPix,y);
+			b=255-getBlue(img,numPix,y);
+			setRGB(img,numPix,y,r,g,b);
+			repaint(img,"myCanvas");
+			prevX=xPos;
+			prevY=yPos;}
+		function setup(){
+			img=loadImage("myCanvas","me.jpg");
+			setRGB(img,50,50,255,0,0);
+			repaint(img,"myCanvas");}
+		function removeColorRed(){
+			for (var y=0;y<getHeight(img);y++){
+				for (var numPix=0;numPix<getWidth(img);numPix++){
+					setRed(img,numPix,y,0);
+				}
+			}
+			repaint(img,"myCanvas");}
+		function removeColorGreen(){
+			for (var y=0;y<getHeight(img);y++){
+				for (var numPix=0;numPix<getWidth(img);numPix++){
+					setGreen(img,numPix,y,0);
+				}
+			}
+			repaint(img,"myCanvas");}
+		function removeColorBlue(){
+			for (var y=0;y<getHeight(img);y++){
+				for (var numPix=0;numPix<getWidth(img);numPix++){
+					setBlue(img,numPix,y,0);
+				}
+			}
+			repaint(img,"myCanvas");}
+		function negative(){
+			for (var y=0;y<getHeight(img);y++){
+				for (var numPix=0;numPix<getWidth(img);numPix++){
+					r=255-getRed(img,numPix,y);
+					g=255-getGreen(img,numPix,y);
+					b=255-getBlue(img,numPix,y);
+					setRGB(img,numPix,y,r,g,b);
+				}
+			}
+			repaint(img,"myCanvas");
+			x++}
+		function addColorRed(){
+			for (var y=0;y<getHeight(img);y++){
+				for (var numPix=0;numPix<getWidth(img);numPix++){
+					setRed(img,numPix,y,255);
+				}
+			}
+			repaint(img,"myCanvas");}
+		function addColorGreen(){
+			for (var y=0;y<getHeight(img);y++){
+				for (var numPix=0;numPix<getWidth(img);numPix++){
+					setGreen(img,numPix,y,255);
+				}
+			}
+			repaint(img,"myCanvas");}
+		function addColorBlue(){
+			for (var y=0;y<getHeight(img);y++){
+				for (var numPix=0;numPix<getWidth(img);numPix++){
+					setBlue(img,numPix,y,255);
+				}
+			}
+			repaint(img,"myCanvas");}
+		function sketchColor(){
+			sketchC=document.getElementById("sketchC").value;
+			sR=hexToR(sketchC);
+			sG=hexToG(sketchC);
+			sB=hexToB(sketchC);}
+		function intensify(){
+			intensifyR();
+			intensifyG();
+			intensifyB();}
+		function intensifyR(){
+			var p;
+			for (var y=0; y<getHeight(img);y++){
+				for(var numPix=0;numPix<getWidth(img);numPix++){
+					p=getRed(img,numPix,y);
+					if(p>128){
+						setRed(img,numPix,y,255);
+					}
+					else{
+						setRed(img,numPix,y,0);
+					}
+				}
+			}
+			repaint(img,"myCanvas");}
+		function intensifyG(){
+			var q;
+			for (var y=0; y<getHeight(img);y++){
+				for(var numPix=0;numPix<getWidth(img);numPix++){
+					q=getGreen(img,numPix,y);
+					if(q>128){
+						setGreen(img,numPix,y,255);
+					}
+					else{
+						setGreen(img,numPix,y,0);
+					}
+				}
+			}
+			repaint(img,"myCanvas");
+		}
+		function intensifyB(){
+			var a;
+			for (var y=0; y<getHeight(img);y++){
+				for(var numPix=0;numPix<getWidth(img);numPix++){
+					a=getBlue(img,numPix,y);
+					if(a>128){
+						setBlue(img,numPix,y,255);
+					}
+					else{
+						setBlue(img,numPix,y,0);
+					}
+				}
+			}
+			repaint(img,"myCanvas");}
+		function grayscale(){
+			var r, g, b, avg;
+			for(var y = 0; y < img.height; y++){
+				for(var x = 0; x < img.width; x++){
+					r = getRed(img, x, y);
+					g = getGreen(img, x, y);
+					b = getBlue(img, x, y);
+					avg = (r + g + b) / 3;
+					setRGB(img, x, y, avg, avg, avg);
+				}
+			}
+			repaint(img, "myCanvas");}
+		function twotone(){
+			var r, g, b, avg;
+			for(var y = 0; y < img.height; y++){
+				for(var x = 0; x < img.width; x++){
+					r = getRed(img, x, y);
+					g = getGreen(img, x, y);
+					b = getBlue(img, x, y);
+					avg = (r + g + b) / 3;
+					if (avg<128){
+						setRGB(img,x,y,0,0,0);
+					}else{
+						setRGB(img,x,y,255,255,255);
+					}
+				}
+			}
+			repaint(img,"myCanvas");}
+		function choosetone(){
+			setup();
+			var r, g, b, avg;
+			var tor,tog,tob,ttr,ttg,ttb;
+			tor=hexToR(document.getElementById("toneone").value);
+			tog=hexToG(document.getElementById("toneone").value);
+			tob=hexToB(document.getElementById("toneone").value);
+			ttr=hexToR(document.getElementById("tonetwo").value);
+			ttg=hexToG(document.getElementById("tonetwo").value);
+			ttb=hexToB(document.getElementById("tonetwo").value);
+			for(var y = 0; y < img.height; y++){
+				for(var x = 0; x < img.width; x++){
+					r = getRed(img, x, y);
+					g = getGreen(img, x, y);
+					b = getBlue(img, x, y);
+					avg = (r + g + b) / 3;
+					if (avg<128){
+						setRGB(img,x,y,tor,tog,tob);
+					}else{
+						setRGB(img,x,y,ttr,ttg,ttb);
+					}
+				}
+			}
+			repaint(img,"myCanvas");}
+		function fourtone(){
+			var r, g, b, avg;
+			for(var y = 0; y < img.height; y++){
+				for(var x = 0; x < img.width; x++){
+					r = getRed(img, x, y);
+					g = getGreen(img, x, y);
+					b = getBlue(img, x, y);
+					avg = (r + g + b) / 3;
+					if(avg<64){
+						setRGB(img,x,y,0,50,77);
+					}else if (avg<128){
+						setRGB(img,x,y,215,26,33);
+					}else if(avg<196){
+						setRGB(img,x,y,112,150,159);
+					}else{
+						setRGB(img,x,y,252,228,168);
+					}
+				}
+			}
+			repaint(img,"myCanvas");}
+		function topfade(){
+			for(var y = 0; y < img.height; y++){
+				for(var x = 0; x < img.width; x++){
+					percentHeight=y/getHeight(img);
+					r=getRed(img,x,y);
+					setRed(img,x,y,r*percentHeight);
+					g=getGreen(img,x,y);
+					setGreen(img,x,y,g*percentHeight);
+					b=getBlue(img,x,y);
+					setBlue(img,x,y,b*percentHeight);
+				}
+			}
+			repaint(img,"myCanvas");}
+		function botfade(){
+			for(var y = 0; y < img.height; y++){
+				for(var x = 0; x < img.width; x++){
+					percentHeight=1-y/getHeight(img);
+					r=getRed(img,x,y);
+					setRed(img,x,y,r*percentHeight);
+					g=getGreen(img,x,y);
+					setGreen(img,x,y,g*percentHeight);
+					b=getBlue(img,x,y);
+					setBlue(img,x,y,b*percentHeight);
+				}
+			}
+			repaint(img,"myCanvas");}
+		function rightfade(){
+			for(var y = 0; y < img.height; y++){
+				for(var x = 0; x < img.width; x++){
+					var percentWidth=x/getWidth(img);
+					r=getRed(img,x,y);
+					setRed(img,x,y,r*percentWidth);
+					g=getGreen(img,x,y);
+					setGreen(img,x,y,g*percentWidth);
+					b=getBlue(img,x,y);
+					setBlue(img,x,y,b*percentWidth);
+				}
+			}
+			repaint(img,"myCanvas");}
+		function leftfade(){
+			for(var y = 0; y < img.height; y++){
+				for(var x = 0; x < img.width; x++){
+					var percentWidth=1-x/getWidth(img);
+					r=getRed(img,x,y);
+					setRed(img,x,y,r*percentWidth);
+					g=getGreen(img,x,y);
+					setGreen(img,x,y,g*percentWidth);
+					b=getBlue(img,x,y);
+					setBlue(img,x,y,b*percentWidth);
+				}
+			}
+			repaint(img,"myCanvas");}
+		function drawBorder(){
+			setup();
+			r=hexToR(document.getElementById("bordercolor").value);
+			g=hexToG(document.getElementById("bordercolor").value);
+			b=hexToB(document.getElementById("bordercolor").value);
+			for(var y = 0; y < img.height; y++){
+				for(var x = 0; x < img.width; x++){
+					if ((y<(document.getElementById("borderwidth").value)||y>getHeight(img)-document.getElementById("borderwidth").value)||(x<document.getElementById("borderwidth").value||x>getWidth(img)-document.getElementById("borderwidth").value)){
+						setRGB(img,x,y,r,g,b);
+					}
+				}
+			}
+			repaint(img,"myCanvas");}
+		function lineDrawing(){
+			for(var y = 0; y < img.height; y++){
+				for(var x = 0; x < img.width; x++){
+					lr=hexToR(document.getElementById("linecolor").value);
+					lg=hexToG(document.getElementById("linecolor").value);
+					lb=hexToB(document.getElementById("linecolor").value);
+					llr=hexToR(document.getElementById("linecolor2").value);
+					llg=hexToG(document.getElementById("linecolor2").value);
+					llb=hexToB(document.getElementById("linecolor2").value);
+					r = getRed(img, x, y);
+					g = getGreen(img, x, y);
+					b = getBlue(img, x, y);
+					rr = getRed(img, x+1, y);
+					rg = getGreen(img, x+1, y);
+					rb = getBlue(img, x+1, y);
+					ravg=(rr+rg+rb)/3;
+					avg = (r + g + b) / 3;
+					if (Math.abs(avg-ravg)>2){
+						setRGB(img,x,y,lr,lg,lb);
+					}else{
+						setRGB(img,x,y,llr,llg,llb);
+					}
+				}
+			}
+			repaint(img,"myCanvas");}
+		function Matrixify(){
+			setup(img,"myCanvas");
+			for(var y = 0; y < img.height; y++){
+				for(var x = 0; x < img.width; x++){
+					r = getRed(img, x, y);
+					g = getGreen(img, x, y);
+					b = getBlue(img, x, y);
+					rr = getRed(img, x+1, y);
+					rg = getGreen(img, x+1, y);
+					rb = getBlue(img, x+1, y);
+					ravg=(rr+rg+rb)/3;
+					avg = (r + g + b) / 3;
+					if (Math.abs(avg-ravg)>2){
+						setRGB(img,x,y,0,255,0);
+					}else{
+						setRGB(img,x,y,0,0,0);
+					}
+				}
+			}
+			repaint(img,"myCanvas");
+		}
+		function half(){
+			var newImg, r, g, b;
+			newImg = createNewImage("myCanvas", img.width / 2, img.height / 2);
+			for(var y = 0; y < img.height; y+=2){
+				for(var x = 0; x < img.width; x+=2){
+					r = getRed(img, x, y);
+					g = getGreen(img, x, y);
+					b = getBlue(img, x, y);
+					setRGB(newImg, x / 2, y / 2, r, g, b);
+				}
+			}
+
+			img = newImg;
+			repaint(img, "myCanvas");
+		}
+		function double(){
+			var newImg, r, g, b;
+			newImg = createNewImage("myCanvas", img.width * 2, img.height * 2);
+			for(var y = 0; y < img.height; y++){
+				for(var x = 0; x < img.width; x++){
+					r = getRed(img, x, y);
+					g = getGreen(img, x, y);
+					b = getBlue(img, x, y);
+					setRGB(newImg, x * 2, y * 2, r, g, b);
+					setRGB(newImg, x * 2 + 1, y * 2, r, g, b);
+					setRGB(newImg, x * 2, y * 2 + 1, r, g, b);
+					setRGB(newImg, x * 2 + 1, y * 2 + 1, r, g, b);
+				}
+			}
+			img = newImg;
+			repaint(img, "myCanvas");
+		}
+		function blend(){
+			var name2 = document.getElementById("imageSelector").value;
+			img2 = loadImage("myCanvas", name);
+			var opacityLevel = document.getElementById("oslide").value / 100;
+			var nRed, nGreen, nBlue;
+			for(var y = 0; y < img.height; y++){
+				for(var x = 0; x < img.width; x++){
+					newRed = getRed(img, x, y) * (1-opacityLevel) + getRed(img2, x, y) * opacityLevel;
+					newGreen = getGreen(img, x, y) * (1-opacityLevel) + getGreen(img2, x, y) * opacityLevel;
+					newBlue = getBlue(img, x, y) * (1-opacityLevel) + getBlue(img2, x, y) * opacityLevel;
+					setRGB(img, x, y, newRed, newGreen, newBlue);
+				}
+			}
+			repaint(img, "myCanvas");
+		}
+	</script>
+	
+</head>
+<body onLoad="setup()">
+
+
+<h1>Canvas Tests:</h1>
+
+
+<input type=button value="Reset" onClick="setup()"><br>
+Etch-A-Sketch:<input type=range id="xPos" value=50 min=0 max=100; onChange="sketch()">
+<input type=range id="yPos" value=50 min=0 max=100; onChange="sketch()">
+<input type=color id="sketchC"onChange="sketchColor()"><br>
+<input type=button id="RR" value="Remove the Red from the image" onClick="removeColorRed()">
+<input type=button id="RG" value="Remove the Green from the image"onClick="removeColorGreen()">
+<input type=button id="RB" value="Remove the Blue from the image" onClick="removeColorBlue()">
+<input type=button id="negate"value="Make the image negative"onClick="negative()"><br>
+<input type=button id="AR" value="Add Red to the image" onClick="addColorRed()">
+<input type=button id="RB" value="Add Green to the image" onClick="addColorGreen()">
+<input type=button id="RB" value="Add Blue to the image" onClick="addColorBlue()"><br>
+<input type=button id="intense" value="Intensify the color"onClick="intensify()"><input type=button id="grayscale" value="Turn the photo gray"onClick="grayscale()"><input type=button id="TT" value="Black and white"onClick="twotone()"><input type=button id="fourtone" value="Hope Posterize"onClick="fourtone()"><br>Choose your own two tones! <input type=color id="toneone"><input type=color id="tonetwo"><input type=button id="changetone" value="Create your own two-tone image" onClick="choosetone()"><br><input type=button id="topfade" value="Fade in from the top"onClick="topfade()"><input type=button id="botfade" value="Fade in from the bottom"onClick="botfade()"><input type=button id="rightfade" value="Fade in from the right"onClick="rightfade()"><input type=button id="leftfade" value="Fade in from the left"onClick="leftfade()"><br>Draw a border around the image. <input type=range id="borderwidth"min=0 max=100 value=1><input type=button id="drawborder" value="Draw the border!" onClick="drawBorder()"><input type=color id="bordercolor"><br>Make a line drawing!<input type=button id="linedraw" value="line drawing!" onClick="lineDrawing()"><input type=color id="linecolor"><input type=color id="linecolor2"><input type=button id="matrix"onClick="Matrixify()"value="Matrixify the image!"><br><input type=button id="halfbutton"onClick="half()"value="Halve the size of the image"><input type=button id="double"onClick="double()"value="double the size of the image"><br><select id="imageSelector">
+		<option value="calleri.jpg">DC</option>
+		<option value="me.jpg">Henry</option>
+		<option value="franke.jpg">Dr Awesome</option>
+	</select><input type=range id="oslide" value=50 min=0 max=100 onChange="blend()"><input type=button onClick="blend()" value="Blend the current image with the selected image!"><br>
+
+<canvas id="myCanvas">Your browser does not support the HTML5 canvas tag.</canvas>
+
+</body>
+</html>

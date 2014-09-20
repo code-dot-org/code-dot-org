@@ -1,0 +1,11 @@
+%span{ style: 'color: #ffa400;'}
+  = link_to_if current != 'manage', t('teacher.students.manage'), manage_followers_path
+|
+%span{ style: 'color: #ffa400;'}
+  = link_to_if current != 'sections', t('teacher.sections.manage'), sections_followers_path
+|
+%span{ style: 'color: #ffa400;'}
+  = link_to_if current != 'report', t('teacher.rollup'), followers_path
+|
+%span{ style: 'color: #ffa400;'}
+  = link_to_if current != 'activity', t('teacher.activity'), student_usage_path

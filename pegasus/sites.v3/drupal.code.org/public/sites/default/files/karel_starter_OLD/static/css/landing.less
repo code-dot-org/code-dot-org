@@ -1,0 +1,413 @@
+@import "main";
+
+.iemsg{
+    text-align: center;
+    padding: 20px;
+}
+
+#landing {
+
+    .white {
+        background: #fff;
+        .rounded-corners(3px);
+        border:1px solid #ccc;
+    }
+
+    #status-message{
+        font-size: 20px;
+        .center;
+        .bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    img {
+        height:200px;
+    }
+
+    padding-top:20px;
+
+    .logo{
+        margin-top:10px;
+        width: 200px;
+    }
+
+    .offerings {
+        margin-top:15px;
+        div {
+            margin-bottom:8px;
+            font-size:16px;
+            color:#444;
+            font-weight:normal;
+        }
+    }
+    
+    #top-row {
+        margin-bottom:20px;
+
+        text-align:center;
+        background-color: #fff;
+        padding: 26px 0;
+
+        border: 1px solid #ccc;
+
+        .rounded-corners(3px);
+
+        .banner {
+            font-size:48px;
+            line-height:1.2em;
+            .bold;
+            margin-bottom:10px;
+            margin-top: 0px;
+        }
+
+        .small-banner {
+            .uppercase;
+            .bold;
+            font-size:20px;
+            color:#5bb75b;
+            margin-bottom:20px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 200;
+            line-height: 24px;
+            color: inherit;
+        }
+
+        .description {
+            .left-align;
+            margin-top:5px;
+            font-size:16px;
+            line-height:20px;
+        }
+
+        #start-learning {
+            margin-top:20px;
+        }
+
+
+        .btn {
+            .bold;
+            font-size:22px;
+            margin-top:10px;
+        }
+
+    }
+
+    .testimonials{
+        margin: auto;
+        width: 814px;
+        padding: 20px;
+        padding-bottom: 0;
+
+        .testimonial{
+            font-size: 20px;
+            line-height: 23px;
+            margin-bottom: 26px;
+
+            .name{
+                font-weight: bold;
+                float: right;
+            }
+        }
+    }
+
+    .news{
+        overflow: hidden;
+        margin: 10px 0;
+        padding: 20px;
+
+        .newslink{
+            float: left;
+            width: 130px;
+
+            img{
+                width: 80px;
+                height: 80px;
+                margin-left: 20px;
+            }
+
+        }
+
+        .partnerlink{
+            float: left;
+            width: 230px;
+
+            img{
+                height: 53px;
+                margin-left: 20px;
+            }
+
+        }
+
+        .newstitle{
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 23px;
+            float: right;
+            font-style: italic;
+        }
+    }
+
+    .row-fluid {
+        margin-bottom:10px;
+    }
+
+    #mid{
+        .welcome-video{
+            width: 50%;
+            float: left;
+        }
+
+        margin-bottom: 20px;
+        margin-top: 10px;
+
+        .msg{
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 10px;
+        }
+
+
+        .sample-video{
+            float: left;
+            width: 50%;
+        }
+
+        .video{
+            width: 420px;
+            margin: auto;
+        }
+
+    }
+
+    .related {
+        img {
+            height:60px;
+            width:auto;
+        }
+        padding:5px 0px 5px 0px;
+
+        div {
+            .center;
+        }
+
+        h4 {
+            margin-bottom: 5px
+        }
+    }
+
+    
+}
+
+#footer {
+    background:#fff;
+    padding:20px;
+    border: 1px solid #ccc;
+
+    div {
+        margin-left:20px;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+
+    a {
+        color:#999;
+        &:hover {
+            color:#666;
+        }
+    }
+}
+
+
+/*
+            <div class="news-item">
+                <div class="news-img"><img src="/static/img/news/sei_logo.png" /></div>
+                <div class="news-info">
+                    <div class="news-name">Software Engineer Insider</div>
+                    <div class="news-date">August 20, 2012</div>
+                    <div class="news-article">
+                        <a href="http://www.softwareengineerinsider.com/articles/codehs.html">
+                            Learning to Code with CodeHS is Accessible and Fun
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+*/
+
+#news{
+
+    .news-item{
+        margin-top: 15px;
+        overflow: hidden;
+
+        .news-img{
+            img{
+                float: left;
+                width: 150px;
+            }
+            float: left;
+        }
+
+        .news-info{
+            float: left; 
+            padding-left: 10px;
+
+            .news-name{
+                font-size: 20px;
+
+            }
+
+            .news-date{
+                font-size: 12px;
+                color: #888;
+                padding: 3px;
+                .bold;
+
+            }
+
+            .news-article{
+                font-size: 17px;
+            }
+
+        }
+    }
+}
+
+
+#faq {
+    // border: 1px solid #ccc;
+    
+    padding-top:10px;
+    margin-bottom:30px;
+    background:#fff;
+
+    .answer {
+        font-size: 15px;
+        line-height:18px;
+        p {
+            font-size: 15px;
+            line-height:18px;
+        }
+    }
+
+    ul {
+        padding:20px;
+    }
+
+    li {
+        margin-bottom:20px;
+    }
+
+    .span1 {
+        width:100px;
+        height:1px;
+    }
+
+    .span5 {
+        margin-left:0px;
+    }
+
+    .question {
+        .bold;
+        font-size:22px;
+        margin-bottom:15px;
+    }
+
+    ul.qa {
+        list-style:none;
+        margin-left:0px;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+#schools {
+
+    .section {
+        background: #fff;
+        border: 1px solid #ccc;
+        padding:20px 0px 20px 0px;
+        margin-bottom:20px;
+    }
+
+    .btn {
+        .bold;
+        font-size:22px;
+        margin-top:10px;
+        margin-right:20px;
+    }
+
+
+    padding-top: 10px;
+    .top-message {
+        margin-bottom:30px;
+    }
+
+    .image-wrapper {
+        margin-left:50px;        
+    }
+
+    .image {
+        width:100%;
+        height:auto;
+    }
+
+    .options {
+        margin-top:10px;
+    }
+
+    .title {
+        .bold;
+        font-size:24px;
+        line-height:28px;
+    }
+
+    .faq{
+        font-size:15px;
+        div{
+            padding: 10px;
+        }
+    }
+
+    .option {
+        margin-top:10px;
+        margin-bottom:20px;
+
+        .info {
+            font-size:16px;
+            margin-top:10px;
+            margin-left:0px;
+
+            li {
+                list-style: none;
+                margin-bottom:5px;
+
+            }
+        }
+    }
+}
+
+
+#myCarousel {
+    img {
+        width:200px;
+        margin-left:5px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+}
+

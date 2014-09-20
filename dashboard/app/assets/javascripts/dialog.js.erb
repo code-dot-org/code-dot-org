@@ -1,0 +1,83 @@
+/**
+ * Create a custom modal dialog box which takes a configurable options object.
+ * Currently supported options include:
+ * 'header' and 'body': DOM elements
+ * 'redirect': redirect page after the dialog is dismissed (default: no redirect)
+ * 'id': id of the dialog (default: none)
+ * 'close': whether to show a close link (default: true)
+ */
+function Dialog(options) {
+  var body = options.body;
+  var header = options.header;
+
+  var close = options.close === undefined ? true : options.close;
+
+  var closeLink = $('<div id="x-close"/>').append($('<img src="<%= asset_path 'x_button.png' %>"/>'))
+      .addClass('x-close')
+      .attr('data-dismiss', 'modal');
+  this.div = $('<div tabindex="-1"/>').addClass('modal');
+  this.div.addClass('dash_modal');
+  if (options.id) {
+    this.div.attr('id', options.id);
+  }
+  var modalBody = $('<div/>').addClass('modal-body');
+  modalBody.addClass('dash_modal_body');
+  if (header) {
+    var modalHeader = $('<div/>').addClass('modal-header')
+        .append(header);
+    if (close) {
+      modalHeader.append(closeLink)
+    }
+    this.div.append(modalHeader);
+  } else if (close) {
+    modalBody.append(closeLink);
+  }
+  modalBody.append(body);
+  this.div.append(modalBody).appendTo($(document.body));
+
+  // When the dialog is hidden, unhook the keydown event handler.
+  // If onHidden option is passed in, call that as well.
+  // If redirect option is passed in, redirect the page.
+  // After that, close the dialog.
+  $(this.div).on(
+      'hidden.bs.modal',
+      function() {
+        if (options.onKeydown) {
+          $(this.div).off('keydown', options.onKeydown);
+        }
+        if (options.onHidden) {
+          options.onHidden();
+        }
+        if (options.redirect) {
+          window.location.href = options.redirect;
+        }
+        $(this).remove();
+      });
+
+  if (options.onKeydown) {
+    $(this.div).on('keydown', options.onKeydown);
+  }
+}
+
+/**
+ * Options is configurable with a top and left properties, both are integers.
+ * Also includes staticBackdrop.  When true, modal dialog's backdrop will not
+ * close the dialog when clicked.
+ */
+Dialog.prototype.show = function(options) {
+  options = options || {};
+
+  $(this.div).modal({
+    show: true,
+    // The default value for backdrop is true, meaning clicking the backdrop
+    // will close the modal. A value of 'static' will not close the modal.
+    backdrop: options.backdrop || true
+  });
+
+  this.div.offset(options);
+};
+
+Dialog.prototype.hide = function() {
+  $(this.div).modal('hide');
+};
+

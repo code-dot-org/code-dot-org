@@ -1,0 +1,550 @@
+"is":
+  activerecord:
+    errors:
+      messages:
+        blank: is required
+    attributes:
+      user:
+        name: Nafn
+        email: Netfang
+        username: Notandanafn
+        password: Lykilorð
+        password_confirmation: Staðfesting lykilorðs
+        current_password: Núverandi lykilorð
+        locale: Tungumál
+        age: Age
+        gender: Kyn
+        edit_header: Breyta upplýsingum reiknings
+        error:
+          future: can't be in the future
+  hello: Halló heimur
+  welcome_back: Velkomin(n) aftur, %{name}
+  add_teacher_form:
+    code_or_email:
+      label: 'Bæta við kennara eftir kóða eða netfangi:'
+      placeholder: Kóði (ABCDEF) eða netfang (kennari@skoli.is)
+    code:
+      label: 'Add a teacher by section code:'
+      placeholder: Code (ABCDEF)
+    submit: Bæta við kennara
+  add_hint_form:
+    placeholder: Færðu vísbendingu þína inn hér
+    submit: Bæta við vísbendingu
+  appname: Code.org
+  stage: "Áfangi"
+  puzzle: "Þraut"
+  trophies: Viðurkenningar
+  courses: Námskeið
+  of: af
+  more: MEIRA
+  less: MINNA
+  try_hoc: 'Prófaðu Kóðun í klukkustund, smelltu hér >> '
+  try_k8intro: Prófaðu námskeiðið okkar K-8 Inngangur að tölvunarfræði (11-25 klst.)
+  k8intro: K-8 Kynningarnámskeið í tölvunarfræði (15-25 klst.)
+  already_started: 'Ekki að byrja núna? Taktu upp þráðinn hér >> '
+  demos: 'Umsjón: Öll sýnidæmi'
+  continue: Halda áfram
+  prize: verðlaun
+  more_info: Nánar
+  auth:
+    sign_in_with: Innskrá með %{provider}
+    signed_in: Skráð(ur) inn!
+    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
+    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
+      to sign out of %{provider}.
+    already_signedup: Búin(n) að skrá þig?
+    notyet_signedup: Ekki skráð þig enn?
+    google_oauth2: Google Account
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Microsoft Account
+    forgot_password: Gleymdir þú lykilorðinu þínu ?
+    need_confirmation: Fékkstu ekki sendar leiðbeiningar um staðfestingu?
+    need_unlock: Fékkstu ekki leiðbeiningar um opnun?
+  signup_form:
+    overview_student: Sign up for an account to track your progress.
+    overview_teacher: Teach computer science in your classroom by signing up for an
+      account.<p/> You'll be able to track your students' progress and get rewards.
+    no_signup_message: Þú getur <a target="_blank" href="http://learn.code.org">skoðað
+      hina ýmsu áfanga og þrautir</a>, en þú verður að skrá þig til að geta vistað
+      árangur þinn.
+    prizes_message: Bandarískir nemendur sem safna öllum %{num_trophies} hugtakabikurunum
+      geta valið ýmiss verðlaun þar á meðal ókeypis pláss á Dropbox, inneign hjá Skype
+      og leikjaniðurhal hjá Electronic Arts.
+    teacher_educator_guide: Sjá leiðarvísi kennara
+    teacher_prize_header: Verðlaun upp á $1000 í boði hjá <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+    teacher_prize_message: Í samstarfi við <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
+      mun Code.org veita allt að $1.000 fjárstuðning til bekkjarstarfs í opinberum
+      skólum í Bandaríkjunum hjá þeim kennurum sem leiða a.m.k. 15 nemendur í gegnum
+      þetta námskeið. <a href="http://code.org/educate/20hr">Sjá nánar í leiðarvísi
+      fyrir kennara.</a> 
+    teacher_pitch: Kenndu nemendum þínum K8 Inngang að tölvunarfræði
+    teacher_title: Nýskráning kennara
+    student_pitch: 'Að lokinni 1 klst: prófaðu K-8 Intro to Computer Science'
+    student_title: Innskráning nemenda
+    school_name: Nafn skóla (valfrjálst)
+    school_address: Heimilisfang skóla (valfrjálst)
+    address_placeholder: götuheiti, borg, fylki, póstfang
+    gender: Kyn (valfrjálst)
+    birthday: afmælisdagur (valfrjálst)
+    age: Age (optional)
+    submit: Skráning
+    teacher: Ertu kennari?
+    valid_username: Laust!
+    invalid_username: Notandanafn verður að vera að minnsta kosti 5 stafir
+    taken_username: Notandanafn er frátekið
+    valid_password: Gilt lykilorð!
+    invalid_password: Lykilorð verður að vera að minnsta kosti 6 stafir
+    mismatch_password: Lykilorðin tvö sem þú slóst inn eru ekki eins
+    student_terms: "Ég samþykki að undirgangast þjónustuskilmála Code.org. Ef ég er
+      undir 13 ára aldri, staðfesti ég með því að senda inn þetta form að ég hafi
+      leyfi foreldra eða löglegs forráðamanns til að nota þjónustu Code.org."
+    teacher_terms: "Ég samþykki að undirgangast þjónustuskilmála Code.org."
+    additional_information: We need some additional information to continue signing
+      you up.
+  signin_form:
+    title: "Þegar skráð(ur)? Skrá inn"
+    login: Netfang eða notandanafn
+    password: Lykilorð
+    remember: Muna eftir mér
+    submit: Innskráning
+  signin:
+    try_heading: Want to try coding without signing up?
+    try_hoc: Prófaðu Kóðun í klukkustund fyrst
+    try_20hours: Prófaðu 20 klst. Inngang að tölvunarfræði
+  signinsection:
+    welcome: Welcome to %{section_name}
+    name: Choose your name
+    picture: Now find your secret picture
+    words: Now enter your secret words
+    login: Skrá inn
+  password:
+    reset_form:
+      title: Gleymt lykilorð?
+      email: Netfang
+      submit: Fá leiðbeiningar um endurstillingu lykilorðs
+    change_form:
+      title: Breyta lykilorði
+      new_password: Nýtt lykilorð
+      confirm_password: Staðfesta nýtt lykilorð
+      submit: Breyta lykilorði
+  welcome_email:
+    subject: Komdu í bekkinn minn (á Code.org)
+    body: |
+      Smelltu á krækjuna hér fyrir neðan til að skrá þig í æfingar í tölvunarfræði hjá Code.org (með mig sem "kennara"):
+
+      %{link}
+
+      Æfingarnar eru skemmtilegar og myndrænar og kenna grunnhugtök í tölvunarfræði í gegnum leik með leiðsögn. Þú færð kennslu í forritun hjá Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies! :-)
+
+      %{name}
+  follower:
+    invite_sent: Boð send
+    added_teacher: "%{name} bætt við sem kennara"
+    registered: "Þú ert með skráningu í %{section_name}."
+    error:
+      signed_in: Skráðu þig út fyrst
+      username_not_found: Notandaheitið %{username} fannst ekki
+      username_in_use: "%{username} er í notkun, veldu annað"
+      no_teacher: Fann engan skráðan inn með '%{teacher_email_or_code}'. Biddu viðkomandi
+        að skrá sig hér og reyndu svo aftur að bæta þeim við
+      section_not_found: Could not find a section with code '%{section_code}'.
+      blank_code: Vinsamlegast færðu inn kóða eða netfang kennara þíns
+      cant_join_own_section: Sorry, you can't join your own section.
+    mail:
+      invite_student:
+        subject: Komdu í bekk sem %{teacher_name} kennir hjá Code.org!
+      student_disassociated:
+        subject: 'Orðsending frá Code.org: %{student_name} er ekki lengur skráð(ur)
+          sem nemandi þinn.'
+      teacher_disassociated:
+        subject: 'Orðsending frá Code.org: %{teacher_name} er ekki lengur skráð(ur)
+          sem kennari þinn.'
+  reports:
+    error:
+      access_denied: "Þú hefur ekki aðgang að upplýsingum um þennan aðila"
+  redeem_prizes:
+    title: 'Innleysa verðlaun: %{name}'
+    provider: 'Veitandi:'
+    code: 'Kóði:'
+    redeem_header: 'Til að innleysa:'
+    donorschoose_register: Register as a teacher on DonorsChoose.org
+    donorschoose_project: Post a project
+    donorschoose_how_to: Hvernig á að nota kóða þinn
+    success: Verðlaunin voru innleyst, sjá kóða fyrir neðan.
+    error: Ekki tókst að innleysa verðlaunin, vinsamlegast reyndu aftur.
+    error_us_only: Boðið um verðlaun gildir aðeins fyrir notendur í Bandaríkjunum.
+    error_not_earned: "Þú hefur enn ekki unnið til þessara verðlauna."
+    error_already_redeemed: Verðlaunin þín hafa þegar verið innleyst.
+    no_prizes_available: "Því miður, en þessa stundina eru engin verðlaun í boði."
+    teacher_info_required: 'Fyrir verðlaun kennara þarf nafn og heimilisfang skóla:'
+    teacher_email_required: 'Fyrir verðlaun kennara þarf staðfest netfang:'
+    confirm:
+      title: Vinsamlegast staðfestu
+      'no': Nei
+      'yes': Já
+      msg: Ertu viss um að þú viljir gera kröfu um verðlaunin %{prize_name}?
+      msg_student: 'ATHUGAÐU: Þú getur aðeins valið eina tegund verðlauna.'
+      msg_publicschool: Vinsamlegast staðfestu að þú sért kennari í opinberum skóla
+        í Bandaríkjunum.
+      msg_visit_website: Heimsækja heimasíðu
+    providers:
+      apple_itunes: "$10 iTunes gjafakort"
+      donors_choose: "$750 inneign hjá DonorsChoose.org"
+      donors_choose_bonus: "$250 inneign hjá DonorsChoose.org"
+      dropbox: 10GB Dropbox pláss
+      valve: Portal 2 (PC eða Mac leikjaniðurhal)
+      ea_bejeweled: Bejeweled 3 (PC leikjaniðurhal)
+      ea_fifa: FIFA Soccer 13 (PC leikjaniðurhal)
+      ea_simcity: SimCity 4 Deluxe Edition (PC leikjaniðurhal)
+      ea_pvz: Plants vs. Zombies (PC leikjaniðurhal)
+      skype: "$10 inneign hjá Skype"
+    msg:
+      choose: 'Veldu verðlaun:'
+      choose_teacher: 'Smelltu á merkið fyrir neðan til að kalla eftir verðlaunum
+        þínum:'
+      earned: "Þú hefur unnið til verðlauna! (Aðeins bandarískir nemendur)"
+      not_earned_title: Ljúktu við kennsluefnið og fáðu verðlaun (aðeins nemendur
+        í Bandaríkjunum)
+      not_earned: 'Lærðu öll hugtökin í tölvunarfræði, safnaðu öllum %{num_trophies}
+        bikurunum og þú getur unnið raunveruleg verðlaun. Þú getur valið um 10GB af
+        Dropbox geymsluplássi, $10 í inneign hjá Skype og ókeypis niðurhal leikja.
+        ATHUGAÐU: þetta boð gildir aðeins fyrir bandaríska nemendur og aðeins á meðan
+        birgðir endast.'
+      teacher:
+        earned: 15 eða fleiri nemendur söfnuðu öllum %{num_trophies}bikurunum. Þú
+          hefur unnið til kennaraverðlauna! (Aðeins bandarískir kennarar)
+        not_earned_title: Kenndu bekknum og fáðu allt að $1,000 inneign hjá <a target="_blank"
+          href="http://DonorsChoose.org">DonorsChoose.org</a> (aðeins kennarar í Bandaríkjunum)
+        not_earned: Til að verðlauna kennara sem eru að byrja að kenna tölvunarfræði,
+          er hægt að vinna allt að $1,000 í inneignum hjá <a href="http://DonorsChoose.org">DonorsChoose.org</a>
+          fyrir að leiða bekk í gegnum K-8 inngangsnámskeiðið. Til að vera gjaldgeng(ur)
+          þarft þú að leiða bekk a.m.k. 15 nemenda í gegnum allt K-8 námskeiðið og
+          allir 15 (eða fleiri) nemendurnir þurfa að klára allt kennsluefnið og vinna
+          alla %{num_trophies} bikarana. Ef 7 eða fleiri af þeim nemendum sem vinna
+          alla bikarana eru stúlkur, eru verðlaunin $1,000 inneign hjá <a target="_blank"
+          href="http://DonorsChoose.org">DonorsChoose.org</a>. Annars eru verðlaunin
+          $750 inneign hjá <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>.
+          Aðeins kennarar í opinberum skólum í Bandaríkjunum geta nýtt sér inneign
+          hjá <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>.
+        bonus:
+          not_earned_title: Þú getur unnið $250 inneign til viðbótar hjá <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a> (aðeins kennarar í
+            Bandaríkjunum)
+          earned: 7 eða fleiri af þeim nemendum sem söfnuðu öllum %{num_trophies}
+            bikurunum eru stúlkur. Þú hefur unnið til aukaverðlauna! (aðeins bandarískir
+            kennarar)
+          not_earned: Ef a.m.k. 7 af þeim nemendum þínum sem vinna alla %{num_trophies}
+            bikarana eru stúlkur þá færð þú aukalega $250 inneign hjá <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a>. Aðeins kennarar í
+            opinberum skólum í Bandaríkjunum geta nýtt sér inneign hjá <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a>.
+  crud:
+    new_model: Nýtt %{model}
+    show: Sýna
+    edit: Breyta
+    edit_model: Breyta %{model}
+    update: Uppfæra
+    destroy: Eyða
+    back: Til baka
+    confirm: Ertu viss?
+    created: Tókst að búa til %{model}.
+    updated: Tókst að uppfæra %{model}.
+    destroyed: "%{model} var eytt."
+    access_denied: "Þú hefur ekki aðgang að %{model}."
+  nav:
+    header:
+      finished_hoc: "Ég hef lokið við mína Kóðun í klukkustund"
+      sign_in_to_save: Skráðu þig inn til að vista framvinduna
+    user:
+      classroom: Mínir nemendur
+      label: Hæ %{username}
+      stats: Framvindan mín
+      settings: Reikningurinn minn
+      prizes: Verðlaun
+      logout: Skrá út
+      signin: Skrá inn
+      signup: Skráning
+      already_registered: Already registered?
+    popup:
+      progress: Framvinda þín
+      lines: 'Samtals línur af kóða: %{lines}'
+      close: LOKA
+      mastery: Hugtök
+      puzzle_map: "Áfangar"
+      prizes: Safnaðu öllum %{total_trophies} bikurunum og fáðu verðlaun!
+      prize_earned: "Öllum %{total_trophies} bikurunum safnað. Verðlaun unnin!"
+      prize_us_only: "(aðeins bandarískir nemendur)"
+      prizes_link: nánar
+  teacher:
+    title:
+      one: 'Kennari þinn:'
+      other: 'Kennarar þínir:'
+    remove: "(fjarlægja kennara)"
+    confirm:
+      remove: Ertu viss um að þú viljir fjarlægja þennan kennara?
+    tools: Tæki kennara
+    followers:
+      section: 'Section:'
+      stages: 'Stage(s) to display:'
+      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      levels_key: Levels key
+      perfect: Completed, perfect
+      completed: Completed, but using too many blocks
+      tried: Tried, but not completed
+      not_tried: Not tried yet
+      activity: Indicates student activity in the last %{hours} %{plural}
+      no_section: No assigned section
+      trophies: Viðurkenningar
+    students:
+      name: Nafn
+      username: Notandanafn
+      password: Lykilorð
+      manage: Umsjón nemenda
+      dashboard: Go to Teacher Dashboard
+      add: Bæta við nemendum
+      remove: remove student
+      confirm_remove: Are you sure you want to remove this student?
+      help_reassign: To divide your class into multiple sections, select students
+        to assign to a new section.
+      help_register: Instead of making you spend a lot of time individually importing
+        student data, you can set up your class quickly by asking them to signup.
+        Your students will need to choose usernames and passwords, but they WILL NOT
+        be required to provide an email address. If a student forgets their password,
+        you will be able to reset it for them.
+      register: Ask your students to register themselves
+      vist: Ask your students to visit
+      section_code: 'and enter their section-code:'
+      first_please: First, please %{add_section}
+      for: For
+      enter: 'enter:'
+    sections:
+      add: Add section
+      manage: Umsjón áfanga
+      section: Section
+      students: Students
+      section_code: Section Code
+      add_section_code: Add Students Section-Code
+      secret: Secret type
+      grade: Grade
+      course: Course
+      rename: rename
+      edit: edit
+      delete: delete
+      confirm_delete: Are you sure you want to delete this section?
+      email: Send in email
+    rollup: Mælaborð árangurs
+    activity: Nýleg virkni bekkjar
+    user_not_found: Kennarinn eða nemandinn fannst ekki
+    cant_remove_student_no_email: Ekki hægt að afskrá %{student_name} sem nemanda
+      þinn vegna þess að %{student_name} hefur ekki skráð tölvupóstfang
+    cant_remove_teacher_no_email: Ekki hægt að afskrá %{teacher_name} sem kennara
+      þinn vegna þess að þú hefur ekki skráð tölvupóstfang
+    student_teacher_disassociated: "%{teacher_name} hefur verið fjarlægð(ur) sem kennari
+      %{student_name}"
+  user:
+    email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
+    email_resend_confirm: Endursenda leiðbeiningar um staðfestingu
+    new_password_hint: "(hafðu autt ef þú vilt ekki breyta því)"
+    current_password_hint: "(við þurfum að fá núverandi lykilorð þitt til að staðfesta
+      breytingarnar)"
+    cancel:
+      title: Loka reikningi mínum
+      hint: "Óánægð(ur)?"
+      button: Loka reikningi mínum
+  user_level:
+    completed: Lokið
+    tried: Reynt
+  user_stats:
+    recent_activity: Nýleg virkni
+    show_more: Sýna meira
+    classroom_activity: Unplugged Activity
+  home:
+    title: Code Studio
+    signin_message: "Þegar skráð(ur)? %{link}"
+    student_reg_link: Skráning nemanda
+    teacher_reg_link: Skráning kennara
+    signin_directions: Use an account to track progress and get rewards.<br/> Teachers,
+      track your entire class.
+    teacher_dashboard: Sjá mælaborð árangurs
+    teacher_student_count_one: "Þú ert með %{count} nemendur."
+    teacher_student_count: "Þú ert með %{count} nemendur."
+    teacher_averages: Að meðaltali hafa nemendur þínir unnið til %{trophy_average}
+      af %{trophy_max} mögulegum "Concept Mastery" bikurum.
+    teacher_print_certificates: Prenta skírteini fyrir nemendur sem ljúka þessu námskeiði
+    teacher_read_blog: Lesa um fréttir og uppfærslur á efni okkar á kennarabloggi
+      okkar
+    classroom: Bekkjarstofan þín
+    student_progress: Námsframvinda þín
+    student_stats: Þú hefur unnið til %{trophy_count} af %{trophy_max} mögulegum "Concept
+      Mastery" bikurum.
+    student_left_off: "Þú varst hér síðast:"
+    student_finished_prize: "Þú hefur lokið öllu kennsluefninu. Innleystu verðlaunin
+      þín %{prize_link} og veldu annað nám á netinu: %{online_link} eða í skóla: %{local_school_link}"
+    student_finished: "Þú hefur lokið öllu kennsluefninu. Veldu annað nám á netinu:
+      %{online_link} eða í skóla: %{local_school_link}"
+    local_school: nálægur skóli
+    online: "á netinu"
+    see_details: Sjá nánar
+    prize_info: 'Prizes for participation (U.S. only): $10 gift cards for student
+      completion and up to $1,000 in classroom rewards for public school teachers'
+    tryfirst: 'Eða þú getur prófað fyrst og skráð þig seinna:'
+    trynow: Prófa núna
+    add_hint_help: Please help us to add smart hints to Code.org tutorials
+    20hour_overview: This 20-hour course introduces core computer science and programming
+      concepts. The course is designed for use in classrooms for grades K-8, but it
+      is fun to learn at all ages.
+    test_videos_help: Test our new video player at your school
+    try_beta_courses: New! Try our beta courses for K-5 students
+    use_as_teacher: Use this site as a teacher
+    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
+    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+  gender:
+    male: Karlkyns
+    female: Kvenkyns
+    none: Kýs að svara ekki
+  footer:
+    help_from_html: Verkfræðingar frá <a href="http://www.google.com">Google</a>,
+      <a href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
+      og <a href="http://www.twitter.com">Twitter</a> aðstoðuðu við gerð þessa kennsluefnis.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
+      Entertainment Ltd</a>. Öll réttindi áskilin.<br/> Plants vs. Zombies&trade;
+      & &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. Öll réttindi
+      áskilin.
+    feedback: Gefðu endurgjöf
+    translate: Hjálpaðu okkur að þýða yfir á þitt tungumál
+    support: Support
+    tos: "Þjónustuskilmálar"
+    privacy: Persónuvernd
+    secure: Secure Version
+  prize_mail:
+    prize_earned:
+      subject: Leystu út verðlaunin þín á Code.org!
+    teacher_prize_earned:
+      subject: Leystu út verðlaunin þín á Code.org!
+    teacher_bonus_prize_earned:
+      subject: Leystu út bónusinn þinn á Code.org!
+  reference_area:
+    title: Vantar þig aðstoð?
+    subtitle: Skoðaðu þessi myndbönd og vísbendingar
+    teacher: Sjá lausnina
+    auth_error: "Þú hefur ekki heimild til að sjá lausnina."
+    submit: Update Artist Location
+    direction: Start Direction
+  video:
+    tab: Myndbönd.
+    notes: Ekkert myndband? Sýna útskýringar.
+    notes_coming_soon: Notes for this video coming soon.
+    autoplay_option: Spila myndbönd sjálfvirkt
+    download: Hala niður myndband
+  compatability:
+    working: Við erum að vinna í stuðningi við vafrann sem þú notar.
+    upgrade: Vinsamlegast uppfærðu vafrann þinn.
+  slow_loading: "Þetta tekur lengur en venjulega..."
+  try_reloading: Reyndu að endurhlaða síðunni
+  next_stage: Búið! Halda áfram í næsta áfanga
+  download_pdf: Opin kennsluáætlun
+  view_lesson_plan: View Lesson Plan
+  pdf_download: Download PDF
+  share_code:
+    title: Smelltu á 'Keyra forrit' til að prófa forritið mitt
+    bounce_og_title: Check out my Bounce Game
+    flappy_og_title: Prófaðu leikinn minn Flappy
+    studio_og_title: Check out my story
+    og_description: "Ég skrifaði kóðann sjálf(ur) með Code.org"
+  builder:
+    created: "Þú bjóst til nýja skriftu."
+    destroyed: "Þú eyddir skriftu."
+    manage: Manage Scripts
+    view: Sýna
+    back: Aftur í skriftur
+    success: You successfully edited the blocks.
+    level:
+      create: Búa til nýjan áfanga
+      current: Núverandi áfangar
+      unused: "Ónotaðir áfangar"
+  upsell:
+    hoc:
+      title: Kóðun í klukkustund
+      body: Try the basics of computer science. Millions have given it a shot.
+    flappy:
+      title: Flappy Code
+      body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
+        tutorial!
+    20hour:
+      title: Intro Course
+      body: Try our 20-hour Intro to Computer Science course.
+  gallery:
+    students_drew_these_with_code: Students drew these with code!
+    picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
+      pictures by writing their own computer programs. Click on the pictures to see
+      each program in action.
+    want_to_make_your_own: Want to make your own?
+    more: More &rarr;
+  landing:
+    prerelease: This page is still under development.
+    feedback: Give Feedback
+    report_bug: Report Bug
+    support: Get Help
+  multi:
+    wrong_title: Incorrect answer
+    wrong_body: The answer you've entered is not correct.  Please try again!
+    correct_title: Correct
+    correct_body: That is the correct answer.
+  match:
+    wrong_title: Incorrect solution
+    wrong_body: The solution you've entered is not correct.  Please try again!
+    correct_title: Correct
+    correct_body: That is the correct answer.
+  dialog:
+    ok: "Í lagi"
+  time:
+    hour: 1 hour
+    day: day
+    week: week
+  data:
+    script:
+      name:
+        20-hour:
+          title: K-8 Kynningarnámskeið í tölvunarfræði (15-25 klst.)
+          description: This 20-hour course introduces core computer science and programming
+            concepts. The course is designed for use in classrooms for grades K-8,
+            but it is fun to learn at all ages.
+        Hour of Code:
+          title: Kóðun í klukkustund
+          description: ''
+        edit-code:
+          title: Edit Code
+          description: ''
+        events:
+          title: Events
+          description: ''
+        builder:
+          title: Builder
+          description: ''
+        flappy:
+          title: Flappy Code
+          description: Wanna write your own game in less than 10 minutes? Try our
+            Flappy Code tutorial!
+        jigsaw:
+          title: Jigsaw
+          description: ''
+        step:
+          title: Step
+          description: ''
+        sample_level_builder:
+          title: Sample Level Builder
+          description: ''
+  age_interstitial:
+    age: Your age
+    header: Account Information Update
+    message: We're in the process of updating our experience to provide you with even
+      stronger privacy protections. To do this, we need existing users to enter their
+      age here.<br/>As always, code.org will never rent, sell or share this information
+      with any third parties.
+    sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
+      out</a>.
+  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
+    You may browse <a href="http://support.code.org">support.code.org</a> without
+    signing in or ask your parent or teacher to contact us for you.

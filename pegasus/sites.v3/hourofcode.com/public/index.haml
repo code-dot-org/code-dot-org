@@ -1,0 +1,89 @@
+---
+title: "<%= hoc_s(:front_title) %>"
+banner: front_header_banner
+social:
+  "twitter:card": player
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://code.org/"
+  "twitter:title": "<%= hoc_s(:front_header_banner) %>"
+  "twitter:description": "<%= hoc_s(:front_intro_default) %>"
+  "twitter:image:src": 'http://csedweek.org/images/hoc-video-thumbnail.jpg'
+  "twitter:player": 'https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
+  "twitter:player:width": 1920
+  "twitter:player:height": 1080
+---
+
+-facebook = {:u=>"http://#{request.site}/"}
+
+-twitter = {:url=>"http://#{request.site}/", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:front_header_banner)}
+-twitter[:hashtags] = 'HourOfCode' unless hoc_s(:front_header_banner).include? '#HourOfCode'
+
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
+
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+
+/[if lt IE 9]
+  %script{src: "/js/es5-shim.min.js"}
+
+:css
+  html, body, #gmap {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+#index
+
+  #flags-banner
+    %img{src: '/images/flags-banner.png', alt: 'Flags'}
+
+  %h1.front-header-banner= hoc_s(:front_header_banner)
+
+  - if @country == 'uk'
+    %p{style: 'font-size: 1.5em; margin: 2em 0; text-align: center;'}= hoc_s(:front_intro_default_uk)
+  - elsif @country == 'ar'
+    %p{style: 'font-size: 1.5em; margin: 2em 0; text-align: center;'}= hoc_s(:front_intro_default_ar)  
+  - else
+    %p{style: 'font-size: 1.5em; margin: 2em 0; text-align: center;'}= hoc_s(:front_intro_default)
+
+  #top
+    #video.col-63.desktop-pad-right{style: 'padding-right: 30px;'}
+      -if @country == 'uk'
+        = view :front_video_uk
+      -if @country != 'uk'
+        = view :front_video
+
+    #start.col-36
+      #blurb.col-mobile-56.mobile-pad-right
+        %br.desktop-feature
+
+
+      #getstarted.col-mobile-44
+        .desktop-feature= view :front_join_us
+
+    #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
+      = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"
+
+  .row
+    .col-xs-12
+      =view :stats_hoc_2013
+
+  .row
+    .col-xs-12
+      =view :map
+
+  .row
+    .col-xs-7
+      =view :signup_form
+    .col-xs-4.col-sm-offset-1
+      =view :choose_country
+
+  %a{name:'faq'}
+  .row
+    .col-xs-12
+      =view :faq
+
+= view 'popup_window.js'

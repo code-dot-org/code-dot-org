@@ -1,0 +1,26 @@
+- if current_user && current_user.admin?
+  %h3= t(:demos)
+  = link_to "Games", games_path
+  |
+  = link_to "Concepts", concepts_path
+  |
+  = link_to "Videos", videos_path
+  |
+  = link_to "Recent Activity", all_usage_path
+  %br/
+  %br/
+  %ul
+    %li= link_to 'Feedback System', frequent_unsuccessful_level_sources_path
+    %li
+      = link_to('Scripts', scripts_path)
+      = link_to('(Update all)', scripts_path(rake: '1'))
+      %ul
+        - Script.all.each do |script|
+          %li
+            = link_to("(#{t 'crud.edit'})", edit_script_path(script)) unless script.default_script?
+            = link_to(data_t_suffix('script.name', script.name, 'title'), script_level_path(script, ScriptLevel::NEXT))
+  = link_to t("builder.manage"), levels_new_path
+  %h3= link_to 'Admin Stats', admin_stats_path
+  %h3= link_to 'Gallery', admin_gallery_path
+  %br/
+  %br/

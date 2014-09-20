@@ -1,0 +1,21 @@
+-facebook = {:u=>'http://code.org/quotes'}
+-twitter = {:url=>'http://code.org/quotes', :related=>'codeorg', :hashtags=>'hourofcode', :text=>'Lideri și trendsetteri din întreaga lume susțin că tot mai mulți elevi ar trebui să învețe programare. 
+ @codeorg'}
+-DB[:uk_quotes].where(tag_s:'promote').each do |value|
+  #block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
+    #headshot{:style=>'float:left; width: 25%'}
+      %img{:src=>value[:image_url_s].to_s.sub(/^\/images\//, '/images/fill-90x90/')}
+    #text{:style=>'float:left; width:75%'}
+      %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+        =value[:name_s]
+      %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+        -unless value[:title_s].nil_or_empty?
+          =value[:title_s]
+      %p{:style=>'font-size: 13px;line-height: 18px;'}
+        =value[:quote_t]
+
+-#links{:style=>'clear:both;'}
+  = view :share_buttons, facebook:facebook, twitter:twitter)
+  .all-quotes-link
+    %a{:href=>'http://code.org/quotes'}
+      See all quotes

@@ -1,0 +1,13 @@
+name 'K-1 Artist 2 Match 1'
+title 'Matching'
+content1 'Is the square next to, above, or below the ball?'
+height '150'
+
+question '/script_assets/k_1_images/artist_images/square_above_ball.png'
+answer '<br/><br/>above'
+
+question '/script_assets/k_1_images/artist_images/square_below_ball.png'
+answer '<br/><br/>below'
+
+question '/script_assets/k_1_images/artist_images/square_next_ball.png'
+answer '<br/><br/>next to'

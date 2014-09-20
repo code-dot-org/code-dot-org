@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Code.org school search</title>
+    <link href="/volunteers/assets/application-7bf2a593ba405dfbb4b47f3c5f341179.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/volunteers/assets/application-71fe85bc4cee028cecb934374f6b343d.js" type="text/javascript"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="UYYU5q4DGMaPE7jvbwXZ5UTDb2SbqGcXsPP2aL9L0wI=" name="csrf-token" />
+    
+    <script src='http://use.typekit.com/jtk0dzq.js' type='text/javascript'></script>
+    <script>
+      //><!--
+             try{Typekit.load();}catch(e){}
+           //--><!
+    </script>
+    <link href='/css/theme.css' rel='stylesheet' type='text/css'>
+    <link href='/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    
+    <link type="text/css" rel="stylesheet" href="//cloud.typography.com/7425452/678642/css/fonts.css" media="all" /> <!-- geoff -->
+
+  </head>
+  <body style="font-family: 'Gotham A', 'Gotham B', sans-serif; margin: 0; width=1000px"> <!-- geoff -->
+    <div id='pageheader'>
+      <div class='content' style='overflow:visible'> <!-- geoff -->
+        <div id='left'>
+          <a href='/'>
+            <img id='logo' src='/images/logo.png'>
+          </a>
+        </div>
+        <div id='right'>
+          <a href='http://facebook.com/Code.org' style='text-decoration:none' target='_blank' title='Facebook'>
+            <img src='/images/facebook_purple.png'>
+          </a>
+          <a href='http://twitter.com/codeorg' style='text-decoration:none' target='_blank' title='Twitter'>
+            <img src='/images/twitter_purple.png'>
+          </a>
+          <a href='http://codeorg.tumblr.com/' style='text-decoration:none' target='_blank' title='Tumblr'>
+            <img src='/images/tumblr_purple.png'>
+          </a>
+          <a href='http://zazzle.com/codeorg' style='text-decoration:none' target='_blank' title='Zazzle'>
+            <img src='/images/zazzle_purple.png'>
+          </a>
+          <a href='/donate' style='text-decoration:none' title='Donate'>
+            <img src='/images/donate_normal.png'>
+          </a>
+          <div id='sign_in_or_user' style='width:550px; display:inline'></div>
+          <br>
+          <br>
+          <br>
+          <a class='headerlink' href='/learn'>LEARN</a>
+          <a class='headerlink' href='/educate'>TEACH</a>
+          <a class='headerlink' href='/promote'>PROMOTE</a>
+          <a class='headerlink' href='/help'>HOW TO HELP</a>
+          <div id='padding' style='height: 10px'></div>
+        </div>
+      </div>
+      <div id='clear' style='clear:both'></div>
+      <div class='desktop-feature' id='loc'>
+      </div>
+    </div>
+    <script>
+      $ = jQuery;
+      $(document).ready(function() {
+        $.ajax({
+          type: "GET",
+          url: '/dashboardapi/user_menu',
+          //data: "id=" + id, // appears as $_GET['id'] @ ur backend side
+          success: function(data) {
+            // data is ur summary
+            $('#sign_in_or_user').html(data);
+          }
+        });
+      });
+    </script>
+    
+    <iframe id='helpframe' style='display: none'></iframe>
+    <div id='container' style=" margin: 0 auto; width: 970px"> <!-- geoff -->
+    
+    <div class='result_count'>
+    <span class='pagination'>
+    
+    </span>
+    </div>
+    <div id='content' style='position: relative'>
+    <script>
+      $(function() {
+        $('#query').focus();
+      });
+    </script>
+    <form method='get'>
+    <div class='search_box'>
+    <table>
+    <tr>
+    <td>
+    <input id='query' name='query' type='text' value='Seattle, WA'>
+    </td>
+    <td>
+    <a aria-label='School Search' class='btn btn-cdo-basic form-submit button-1' href="javascript:$('form').submit()">Search</a>
+    </td>
+    </tr>
+    </table>
+    </div>
+    </form>
+    
+    <div class='results' id='results'>
+    <div class='bbb'>
+    <div class='name'>
+    Joe Test
+    </div>
+    <div id='address'>
+    Bellevue, WA
+    </div>
+    <div id='phone'>
+    
+    </div>
+    <div id='availability'>
+    
+    </div>
+    <div>
+    Languages:
+    Arduino, C++, HTML, Javascript
+    </div>
+    <div id='contact_link_3'>
+    <b>
+    <a href="/volunteers/contact/3" data-remote="true">Contact</a>
+    </b>
+    </div>
+    
+    </div>
+    <div class='bbb'>
+    <div class='name'>
+    Phil L Bogle
+    </div>
+    <div id='address'>
+    Bellevue, WA
+    </div>
+    <div id='phone'>
+    
+    </div>
+    <div id='availability'>
+    
+    </div>
+    <div>
+    Languages:
+    Arduino, C++
+    </div>
+    <div id='contact_link_2'>
+    <b>
+    <a href="/volunteers/contact/2" data-remote="true">Contact</a>
+    </b>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    
+    
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer id='pagefooter'>
+      <div class='content'>
+        &copy; Code.org, 2013.
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <a class='whitefooterlink' href='/about'>About</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a class='whitefooterlink' href='/partners'>Partners</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a class='whitefooterlink' href='/contact'>Contact</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a class='whitefooterlink' href='/about/news'>News</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a class='whitefooterlink' href='http://www.zazzle.com/codeorg'>Store</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a class='whitefooterlink' href='/tos'>Terms</a>
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        <a class='whitefooterlink' href='/privacy'>Privacy Policy</a>
+      </div>
+    </footer>
+    <script src='/js/fastclick.js'></script>
+    <script>
+      $(document).ready(function() {
+        FastClick.attach(document.body);
+      });
+    </script>
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-37745279-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+"ro":
+  data:
+    script:
+      name:
+        test:
+          "Jigsaw: Learn to drag and drop": 'Puzzle: Află cum se realizeză glisarea și fixarea'
+          The Maze: "Labirintul"
+          Multi: "Multi"
+          Match: "Meci"
+          Math Image: "Imagine Matematica"
+          title: "Curs de Testare"
+          description: "Doar un curs de testare intern."
+        course1:
+          "Jigsaw: Learn to drag and drop": 'Puzzle: Învaţă să tragi şi să fixezi'
+          "Maze: Sequence": 'Labirint: Secvenţă'
+          "Maze: Debugging": 'Labirint: Depanare'
+          "Artist 1: Intro": 'Artistul 1: Introducere'
+          Artists 2: "Artiştii 2"
+          Spelling Bee: "Test de Ortografie"
+          Spelling Bee not blockly: "Test de Ortografie fără Blockly"
+          "Bee 1: Intro": 'Ortografie 1: Introducere'
+          "Maze 2: Loops": 'Labirint 2: Bucle'
+          "Bee 2: Loops": 'Ortografie 2: Bucle'
+          Multi & Match: 'Multiplică & Potriveşte'
+          K-1 Flappy: Flappy K-1
+          Flappy non blockly: "Flappy fără Blockly"
+          title: "Curs 1"
+          Artist 2: "Artistul 2"
+          Happy Maps: "Hărţi Fericite"
+          Move it, Move it: Mişcă-te, Mişcă-te
+          "Real-life Algorithms: Plant a Seed": 'Algoritmi din viaţa reală: Plantează o sămânţă'
+          Building a Foundation: "Construirea unei Fundaţii"
+          Getting Loopy: "Transformând în Buclă"
+          The Big Event: "Marele eveniment"
+          Going Places Safely: "Mergând în locuri în siguranţă"
+          description: "Cursul 1 este proiectat pentru cititorii începători din clasele mai mici. Creează programe pe computer folosind bucle şi evenimente. Până la sfârşitul cursului vei creea un joc, artă sau poveste proprie pe care le poţi arăta şi altora."
+          "Bee: Sequence": 'Ortografie: Secvenţă'
+          "Artist: Sequence": 'Artist: Secvenţă'
+          "Artist: Shapes": 'Artist: Forme'
+          "Maze: Loops": 'Labirint: Bucle'
+          "Bee: Loops": 'Ortografie: Bucle'
+          "Studio: Create a Story": 'Laboratorul de Joacă: Creează o Poveste'
+          description_short: "Cursul 1 este proiectat pentru cititorii începători din clase mai mici."
+        course2:
+          The Maze: "Labirintul"
+          Suzi: "Suzi"
+          The Artist: "Artistul"
+          Artist Debugging: "Depanare Artist"
+          Bounce: "Săritură"
+          "Studio: Create a Story": 'Joacă Laborator: Creează o Poveste'
+          Artist Loops: "Bucle de Artist"
+          Bee Conditionals: "Condiţii de Ortografie"
+          Flappy: "Flappy"
+          title: "Cursul 2"
+          Bee Loops: "Bucle de Ortografie"
+          Artist Functions: "Funcţii de Artist"
+          The Artist Debugging: "Depanarea Artistului"
+          Bee Debugging: "Depanarea Ortografiei"
+          Bee Functions: "Funcţii de Ortografie"
+          Maze Loops: "Bucle de Labirint"
+          Graph Paper Programming: "Programare pe Hârtie Milimetrică"
+          "Real-life Algorithms: Paper Planes": 'Algoritmi din viaţa reală: Avioane de Hârtie'
+          Getting Loopy: "Transformând în Buclă"
+          Relay programming: "Programare de releu"
+          Conditionals: "Condiţionale"
+          Binary Bracelets: "Brăţări Binare"
+          The Big Event: "Marele eveniment"
+          Your Digital Footprint: "Amprenta ta Digitală"
+          description: "Cursul 2 este conceput pentru elevii care pot citi în clasele elementare inferioare şi mijlocii. Creează programe folosind bucle, evenimente şi condiţionale. Până la sfârşitul cursului, vei creea un joc, artă sau poveste pe care le poţi arăta şi altora."
+          "Maze: Sequence": 'Labirint: Secvenţă'
+          "Artist: Sequence": 'Artist: Secvenţă'
+          "Maze: Loops": 'Labirint: Bucle'
+          "Artist: Loops": 'Artist: Bucle'
+          "Bee: Loops": 'Ortografie: Bucle'
+          "Bee: Debugging": 'Ortografie: Depanare'
+          "Artist: Debugging": 'Artist: Depanare'
+          "Bee: Conditionals": 'Ortografie: Condiţionale'
+          description_short: "Cursul 2 este conceput pentru elevii care pot citi în clasele elementare inferioare şi mijlocii."
+          "Artist: Sequence2": 'Artist: Secvenţă2'
+          "Maze: Sequence2": 'Labirint: Secvenţă2'
+        course3:
+          The Maze: "Labirintul"
+          "Studio: Create a Story": 'Laboratorul de Joacă: Creează o Poveste'
+          The Artist: "Artistul"
+          title: "Cursul 3"
+          Artist Functions: "Funcţii de Artist"
+          Artist For Loops: "Artist Pentru Bucle"
+          Artist Nested Loops: "Bucle Adunate de un Artist"
+          Bee Conditionals: "Condiţii de Ortografie"
+          Bee Nested Loops: "Bucle Adunate de Ortografie"
+          Bee Debuggin: "Depanarea Ortografiei"
+          Bee Debugging: "Depanarea Ortografiei"
+          Bee Functions: "Funcţii de Ortografie"
+          Artist Functions with Params: "Funcţii de Artist cu Parametri"
+          Bounce: "Săritură"
+          Maze Conditionals: "Condiţionale de Labirint"
+          Artist Functions with Parameters: "Funcţii de Artist cu Parametri"
+          Computational Thinking: "Gândire Computațională"
+          Functional Suncatchers: "Prinzători ai Soarelui Funcţionali"
+          Songwriting Parameters: "Compunând Cântece"
+          Dice Race: "Cursă de Zaruri"
+          Internet: "Internet"
+          Crowdsourcing: "Obţinând Informaţii/Critici"
+          Digital Citizenship: "Cetățenia Digitală"
+          Farmer - While Loops: 'Fermier - În Timp ce Şerpuieşte'
+          description: "Elevii care participă în Cursul 3 ar trebui să fi participat şi în Cursul 2. Elevii creează programe cu diferite feluri de bucle, evenimente, funcţii şi condiţii. Până la sfârşitul cursului vei creea un joc, artă sau poveste pe care le poţi arăta şi altora."
+          "Studio: Create a Game": 'Laboratorul de Joacă: Creează un Joc'
+          Maze: "Labirint"
+          Artist: "Artist"
+          "Artist: Functions": 'Artist: Funcţii'
+          "Bee: Functions": 'Ortografie: Funcţii'
+          "Bee: Conditionals": 'Ortografie: Condiţionale'
+          "Maze: Conditionals": 'Labirint: Condiţionale'
+          "Artist: Nested Loops": 'Artist: Bucle Adunate'
+          "Farmer: While Loops": 'Fermier: În Timp ce Şerpuieşte'
+          "Bee: Nested Loops": 'Ortografie: Bucle Adunate'
+          "Bee: Debugging": 'Ortografie: Depanare'
+          description_short: "Elevii care participă în Cursul 3 ar trebui să fi participat şi în Cursul 2."
+          Maze2: "Labirint2"
+          Artist2: "Artist2"
+          "Artist: Functions2": 'Artist: Funcţii2'
+          "Bee: Functions2": 'Ortografie: Funcţii2'
+          "Bee: Conditionals2": 'Ortografie: Condiţionale2'
+          "Maze: Conditionals2": 'Labirint: Condiţionale2'
+          "Artist: Nested Loops2": 'Artist: Bucle Adunate2'
+          "Farmer: While Loops2": 'Fermier: În Timp ce Şerpuieşte2'
+          "Bee: Nested Loops2": 'Ortografie: Bucle Adunate2'
+          "Bee: Debugging2": 'Ortografie: Depanare2'
+        msm:
+          title: "Matematică de Şcoală Mijlocie"
+          description: "Lucrare în progres pentru Matematică de Şcoală Mijlocie."
+          Graph Paper Programming: "Programare pe Hârtie Milimetrică"
+          Assessments: "Evaluări"
+          Unit 1: "Unitatea 1"
+          Unit 2: "Unitatea 2"
+        playlab:
+          title: "Laborator de Joacă"
+          description: "Creează o poveste sau fă un joc cu Laboratorul de Joacă!"
+          Play Lab: "Laborator de Joacă"
+          description_short: "Creează o poveste sau fă un joc cu Laboratorul de Joacă!"
+        artist:
+          title: "Artist"
+          description: "Desenează poze şi proiecte mişto cu Artistul!"
+          Artist: "Artist"
+          description_short: "Desenează poze şi proiecte mişto cu Artistul!"

@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+require_relative '../../../src/env'
+require src_dir 'database'
+
+BATCH_SIZE = 1000
+THREAD_COUNT = 2
+
+def main()
+  threads = [].tap do |threads|
+    THREAD_COUNT.times do |segment|
+      threads << Thread.new do
+        counter_key = "HourOfActivity.last_id-#{segment}"
+        at = PROPERTIES.get(counter_key).to_i
+        HourOfActivity.all(:id.gt=>at, :id.lt=>at+BATCH_SIZE, :order=>[:id.asc]).each do |row|
+          next if (row.id % THREAD_COUNT) != segment
+          HourOfActivity.row_created(row)
+          PROPERTIES.set counter_key, row.id
+        end
+      end
+    end
+  end
+
+  threads.each { |thread| thread.join }
+end
+
+main() if only_one_running?(__FILE__)

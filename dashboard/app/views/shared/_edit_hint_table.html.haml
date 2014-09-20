@@ -1,0 +1,120 @@
+-# Display an editable table of hints.
+-# The hint field is editable if the user is an admin or if the user created the hint.
+-# The status field is editable if the user is an admin.
+-#
+-# Required parameters:
+-# - columns: an array of columns to display, a subset of ordered_columns
+-# - user: a User object
+-# - hints: an enumeration of LevelSourceHint
+-# - add: boolean indicating whether a hint can be added on this page
+-# If add is true, redirect_url must be defined.
+-ordered_columns = [:user_id, :hint, :puzzle, :status]
+-sorted_columns = columns.sort { |x,y| ordered_columns.index(x) <=> ordered_columns.index(y) }
+%table{:id => 'hint-table'}
+  %thead
+    %tr
+      -sorted_columns.each do |name|
+        %th #{name.to_s.capitalize}
+  %tbody
+    -hints.each do |level_source_hint|
+      %tr
+        -if columns.include? :user_id
+          %td{:align => "center"}= level_source_hint.user_id
+        -if columns.include? :hint
+          %td{:class => 'hint-field'}
+            -if user && (user.admin? || user.id == level_source_hint.user_id)
+              -# TODO: Change displayed status value to "new" if user is not admin.
+              =hidden_field_tag "original_message#{level_source_hint.id}", level_source_hint.hint
+              =text_area_tag 'hint', level_source_hint.hint,
+                 {onkeydown: "return updateHintOnLeaveField(\"#{level_source_hint_path(level_source_hint.id)}\");",
+                  class: 'hint-text-area', id: "message#{level_source_hint.id.to_s}", style: 'width: 95%;', rows: level_source_hint.hint.length / 60 + 1}
+            -else
+              =level_source_hint.hint
+        -if columns.include? :puzzle
+          %td{:align => "center"}= link_to "Show", show_hints_path(level_source_hint.level_source_id)
+        -if columns.include? :status
+          %td{:class => "level_source_hint_radio_button", :style => "vertical-align:top"}
+            -if user && user.admin?
+              =form_for(level_source_hint, :remote => true) do |f|
+                =hidden_field_tag :redirect, level_source_hints_path
+                =render :partial => 'shared/edit_hint_table_status_button',
+                  :locals => {level_source_hint: level_source_hint, status_val: LevelSourceHint::STATUS_SELECTED}
+                =label_tag 'Approve'
+                =render :partial => 'shared/edit_hint_table_status_button',
+                  :locals => {level_source_hint: level_source_hint, status_val: LevelSourceHint::STATUS_EXPERIMENT}
+                =label_tag 'Experiment'
+                =render :partial => 'shared/edit_hint_table_status_button',
+                  :locals => {level_source_hint: level_source_hint, status_val: LevelSourceHint::STATUS_INACTIVE}
+                =label_tag 'Disapprove'
+            -else
+              =LevelSourceHint::USER_VISIBLE_NAMES[level_source_hint.status]
+        %td{:id => "result#{level_source_hint.id.to_s}", :style => 'display:none;color:red;font-weight:bold;font-size:12pt'}
+    -if add
+      %tr
+        %td
+          = render partial: "shared/add_hint", locals: {level_source_id: @level_source_id, redirect_url: redirect_url}
+
+:javascript
+  // Get the id of the status div associated with the given URL.
+  function getId(url) {
+    return url.split('/').slice(-1)[0];
+  }
+
+  // Show that hint is being updated.
+  function showUpdating(id) {
+    var result_id = '#result' + id;
+    $(result_id)[0].innerHTML = 'updating...';
+    $(result_id).fadeIn(500);
+  };
+
+  // Show response to update request.
+  function showUpdateResult(id, response) {
+    var result_id = '#result' + id;
+    $(result_id)[0].innerHTML = response;
+    $(result_id).fadeIn(500).fadeOut(2000);
+  }
+
+  // When an Ajax call is complete, show its status, and update hidden field.
+  $(document).ajaxComplete(function(event, xhr, options) {
+    var id = getId(options.url);
+    // http://stackoverflow.com/questions/8296811/what-http-status-codes-count-as-success-in-jquery-ajax
+    if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+      showUpdateResult(id, 'successfully updated');
+      // Update hidden hint message with new message, so we can detect any subsequent change.
+      $('#original_message' + id)[0].value = $('#message' + id)[0].value;
+    } else {
+      showUpdateResult(id, 'error updating');
+    }
+  });
+
+  // Check whether the latest message text differs from the original.
+  function messageChanged(id) {
+    return $('#original_message' + id)[0].value !== $('#message' + id)[0].value;
+  }
+
+  function updateHint(url, data) {
+    var id = getId(url);
+    if (messageChanged(id)) {
+      data.hint = $('#message' + id)[0].value;
+    }
+    if (data['status'] || data['hint']) {
+      showUpdating(getId(url));
+      jQuery.ajax({
+        url: url,
+        type: "PATCH",
+        data: data,
+        dataType: "json"
+      });
+    }
+  }
+
+  function updateHintOnLeaveField(url) {
+    var keyCode = event.keyCode;
+    if (keyCode === 13 || keyCode === 9) {
+      updateHint(url, {});
+      // Allow tab to be processed to change focus.
+      return keyCode === 9;
+    } else {
+      return true;
+    }
+  }

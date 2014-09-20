@@ -1,0 +1,13 @@
+name '2-3 artist loops multi 2'
+title 'Artist Loops Multiple Choice'
+
+content1 '/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500'
+
+height '160'
+
+question 'Which shape is made by this program?'
+
+wrong '/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png'
+wrong '/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png'
+wrong '/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png'
+right '/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png'

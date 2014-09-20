@@ -1,0 +1,473 @@
+"uk":
+  activerecord:
+    errors:
+      messages:
+        blank: "необхідне"
+    attributes:
+      user:
+        name: "Ім'я користувача"
+        email: "Електронна пошта"
+        username: "Ім'я користувача"
+        password: "Пароль"
+        password_confirmation: "Підтвердження пароля"
+        current_password: "Поточний пароль"
+        locale: "Мова"
+        age: "Вік"
+        gender: "Стать"
+        edit_header: "Редагувати дані облікового запису"
+        error:
+          future: "не може бути в майбутньому"
+  hello: "Привіт, світ!"
+  welcome_back: 'З поверненням, %{name}'
+  add_teacher_form:
+    code_or_email:
+      label: 'Додати вчителя, по коду чи адресі електронної пошти:'
+      placeholder: "Код (ABCDEF) або електронною поштою (teacher@school.edu)"
+    code:
+      label: 'Додати вчителя за кодом розділу:'
+      placeholder: "Код (ABCDEF)"
+    submit: "Додати викладача"
+  add_hint_form:
+    placeholder: "Будь ласка, введіть підказку сюди"
+    submit: "Додати підказку"
+  appname: "Code.org"
+  stage: "Етап"
+  puzzle: "Завдання"
+  trophies: "Трофеї"
+  courses: "Курси"
+  of: "з"
+  more: "БІЛЬШЕ"
+  less: "МЕНШЕ"
+  try_hoc: 'Спробуйте Годину коду, натисніть тут >> '
+  try_k8intro: "Спробуйте наш вступний курс інформатики для 5-8 класів (15-25 годин)"
+  k8intro: "Вступ в курс інформатики для 5-8 класів (15-25 годин)"
+  already_started: 'Готові почати? Продовжимо тут >> '
+  demos: 'Адмін: Всі демо'
+  continue: "Продовжити"
+  prize: "приз"
+  more_info: "Детальніше"
+  auth:
+    sign_in_with: 'Увійти через %{provider}'
+    signed_in: "Увійшли!"
+    signed_out: 'Ви вийшли з <a href="%{url}">Code.org</a>.'
+    sign_out_of: 'Ви скористались %{provider} для входу.  <a href="%{url}">Клацніть тут</a> щоб вийти %{provider}.'
+    already_signedup: "Вже зареєстровані?"
+    notyet_signedup: "Ще не приєдналися?"
+    google_oauth2: "Обліковий запис Google"
+    twitter: "Twitter"
+    facebook: "Facebook"
+    windowslive: "Обліковий запис Microsoft"
+    forgot_password: "Забули пароль?"
+    need_confirmation: "Не отримали вказівок підтвердження?"
+    need_unlock: "Не отримали вказівок розблокування?"
+  signup_form:
+    overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
+    overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
+    no_signup_message: 'Ви можете <a target="_blank" href="http://learn.code.org">переглянути різні рівні та завдання</a>, але для збереження результатів потрібно реєструватись.'
+    prizes_message: 'Учні зі США, котрі вибороли всі %{num_trophies} трофеїв, можуть вибрати низку призів, таких як: безкоштовний файловий простір Dropbox, кредити Skype та ігри від Electronic Arts.'
+    teacher_educator_guide: "Переглянути посібник для вчителя"
+    teacher_prize_header: 'Виграйте $1000 в <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> нагороди (до 15 червня 2014, до вичерпання запасів)'
+    teacher_prize_message: 'У партнерстві з  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>, Code.org  пропонує фінансування до $1000 на клас для США державних шкіл вчителів, які проведуть принаймні для 15 студентів вступний курс інформатики (до 15 червня 2014 року, до вичерпання запасів). <a href="http://code.org/educate/20hr"> Перегляньте посібник вчителя</a>.  (Обмеження: $1000 на вчителя.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org"> Переглянути FAQ щодо інших обмежень</a>.)'
+    teacher_pitch: "Реєстрація для вчителя на Code.org"
+    teacher_title: "Реєстрація вчителя"
+    student_pitch: "Реєстрація для учня на Code.org"
+    student_title: "Реєстрація учнів"
+    school_name: "Назва навчального закладу (необов'язково)"
+    school_address: "Адреса школи (необов'язково)"
+    address_placeholder: "адреса, місто, штат, індекс"
+    gender: "Стать (необов'язково)"
+    birthday: "День народження (необов'язково)"
+    age: "Вік"
+    submit: "Зареєструватися"
+    teacher: "Ви вчитель?"
+    valid_username: "Доступно!"
+    invalid_username: "Ім'я користувача повинно мати хоча б 5 символів"
+    taken_username: "Ім'я користувача вже використовується"
+    valid_password: "Вірний пароль!"
+    invalid_password: 'Пароль має складатися хоча б із %d символів'
+    mismatch_password: "Введені вами паролі не збігаються"
+    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
+    teacher_terms: "Я погоджуюсь з <a href='http://code.org/tos'>умовами надання послуг Code.org </a>."
+    additional_information: "Нам потрібна додаткова інформація, щоб продовжити реєстрацію."
+  signin_form:
+    title: "Вже маєте обліковий запис? Увійдіть"
+    login: "Електронної пошти або ім'я користувача"
+    password: "Пароль"
+    remember: "Запам'ятати мене"
+    submit: "Вхід"
+  signin:
+    try_heading: "Хочете спробувати програмування без реєстрації?"
+    try_hoc: "Спочатку спробуйте одну Годину Коду"
+    try_20hours: "Спробуйте наш 20-годинний курс вступу до інформатики"
+  signinsection:
+    welcome: 'Ласкаво просимо до %{section_name}'
+    name: "Оберіть своє ім'я"
+    picture: "Тепер знайдіть свою таємну картинку"
+    words: "Тепер введіть свої таємні слова"
+    login: "Вхід"
+  password:
+    reset_form:
+      title: "Забули свій пароль?"
+      email: "Адреса електронної пошти"
+      submit: "Надіслати мені вказівки для відновлення паролю"
+    change_form:
+      title: "Змінити пароль"
+      new_password: "Новий пароль"
+      confirm_password: ' Підтвердіть новий пароль'
+      submit: "Змінити мій пароль"
+  welcome_email:
+    subject: "Приєднатися до мого класу (на Code.org)"
+    body: |
+      Натисніть посилання нижче для реєстрації на уроки з комп'ютерних наук на сайті Code.org (зі мною як вашим „викладачем“):
+      
+      %{link}
+      
+      Уроки - цікаві, візуально привабливі і навчають основних понять комп'ютерних наук за допомогою простого керованого ігрового інтерфейсу. Вивчайте код від Білла Гейтса, Марка Цукерберга, Злих Пташок та Рослин проти Зомбі! :-)
+      
+      %{name}
+  follower:
+    invite_sent: "Запрошення надіслано"
+    added_teacher: '%{name} додано як Вашого учителя'
+    registered: 'Ви зареєструвались на %{section_name}.'
+    error:
+      signed_in: "Будь ласка, вийдіть перед продовженням"
+      username_not_found: 'Користувача %{username} не знайдено'
+      username_in_use: "Ім'я %{username} вже зайнято, виберіть інше"
+      no_teacher: "Не можливо знайти кого-небудь зареєстрованого з '%{teacher_email_or_code}'. Будь ласка, попросіть їх зареєструватися тут і потім спробуйте знову додати їх"
+      section_not_found: "Не вдалося знайти розділ з кодом '%{section_code}'."
+      blank_code: "Будь ласка, введіть код розділу"
+      cant_join_own_section: "На жаль, не можна приєднатись до свого власного розділу."
+    mail:
+      invite_student:
+        subject: 'Приєднуйтеся до класу з %{teacher_name} на Code.org!'
+      student_disassociated:
+        subject: 'Повідомлення Code.org: %{student_name} відтепер не є вашим учнем.'
+      teacher_disassociated:
+        subject: 'Повідомлення Code.org: %{teacher_name} відтепер не є вашим вчителем.'
+  reports:
+    error:
+      access_denied: "Ви не маєте доступу до статистики цієї людини"
+  redeem_prizes:
+    title: 'Отримати призи: %{name}'
+    provider: 'Постачальник:'
+    code: 'Код:'
+    redeem_header: 'Щоб отримати:'
+    donorschoose_register: "Зареєструватися як учитель на DonorsChoose.org"
+    donorschoose_project: "Опублікувати проект"
+    donorschoose_how_to: "Як використовується код"
+    success: "Ви успішно отримали приз, дивіться код нижче."
+    error: "Ваш виграш не може бути отримано, спробуйте ще раз."
+    error_us_only: "Винагорода дійсна лише для користувачів зі США."
+    error_not_earned: "Ви ще не отримали цей приз."
+    error_already_redeemed: "Ваш приз вже отриманий."
+    no_prizes_available: "Нам дуже шкода, але в даний час немає доступних призів."
+    teacher_info_required: 'Введіть назву школи та адресу для отримання вчительських призів:'
+    teacher_email_required: 'Вчительські призи вимагають підтвердження адреси електронної пошти:'
+    confirm:
+      title: "Будь ласка, підтвердіть"
+      "no": Ні
+      "yes": Так
+      msg: 'Ви впевнені, що ви хочете отримати приз %{prize_name}?'
+      msg_student: 'Примітка: Ви можете вибрати тільки один тип нагороди.'
+      msg_publicschool: "Будь ласка, підтвердьте, що ви є вчителем державної школи США."
+      msg_visit_website: "Відвідати сайт"
+    providers:
+      apple_itunes: "Подарункова картка iTunes на 10$"
+      donors_choose: "Кредит 750$ від DonorsChoose.org"
+      donors_choose_bonus: "Кредит 250$ від DonorsChoose.org"
+      dropbox: "10GB на Dropbox Space"
+      valve: "Portal 2 (PC or Mac game download)"
+      ea_bejeweled: "Bejeweled 3 (PC game download)"
+      ea_fifa: "FIFA Soccer 13 (PC game download)"
+      ea_simcity: "SimCity 4 Deluxe Edition (PC game download)"
+      ea_pvz: "Plants vs. Zombies (PC game download)"
+      skype: "Кредит у Skype на 10$"
+    msg:
+      choose: 'Виберіть приз:'
+      choose_teacher: 'Натисніть на логотип нижче, щоб замовити приз:'
+      earned: "Ви виграли приз! (лише учні зі США)"
+      not_earned_title: "Пройдіть всі уроки, отримайте нагороди (лише для учнів зі США)"
+      not_earned: 'Вивчіть усі поняття інформатики, зберіть усі %{num_trophies} трофеї, та отримайте справжні призи. Ви також можете вибрати між 10ГБ вільного простору Dropbox, $10 кредитів Stype, або безкоштовні ігри. ЗАУВАЖТЕ: пропозиція тільки дійсна для учнів зі США та тільки до закінчення призових запасів.'
+      teacher:
+        earned: '15 чи більше ваших учнів зібрали усі %{num_trophies} трофеї. Ви виграли вчительський приз! (лише для вчителів зі США)'
+        not_earned_title: 'Навчайте цілий клас, щоб виграти до 1000$ кредитів <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> (лише для вчителів зі США)'
+        not_earned: 'Для винагороди вчителів-початківців, ви можете виграти до 1000$ кредитів <a href="http://DonorsChoose.org">DonorsChoose.org</a> за навчання групи учнів. Для того, щоб претендувати на виграш, вам потрібно провести заняття для принаймні 10 учнів по всьому вступному курсу інформатики, і всі 10 (або більше) учнів мають виконати всі завдання та отримати всі %{num_trophies} трофеїв. Якщо група учнів, які отримають всі трофеї складатиметься принаймні з 40% дівчат, ваша винагорода становитиме 1000$ кредитів <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Інакше, вона становитиме 750$ кредитів <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Кредити   <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> можуть використовуватись лише вчителями державних шкіл США.'
+        bonus:
+          not_earned_title: 'Ви можете додатково виграти 250$ кредитів <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> (лише для вчителів зі США)'
+          earned: '7 чи більше ваших учнів, які зібрали усі %{num_trophies} трофеїв є дівчатами. Ви виграли бонусний приз 250$! (лише для вчителів зі США)'
+          not_earned: 'Якщо група ваших учнів, які здобули всі %{num_trophies}  трофеїв, складається не менш як з 7 дівчат, ви можете отримати додаткові 250$ кредитів <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> . Кредити  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> можуть використовуватись лише вчителями державних шкіл США.'
+  crud:
+    new_model: 'Нова %{model}'
+    show: "Показати"
+    edit: "Редагувати"
+    edit_model: 'Змінити %{model}'
+    update: "Оновити"
+    destroy: "Знищити"
+    back: "Назад"
+    confirm: "Справді?"
+    created: '%{model} успішно створено.'
+    updated: '%{model} успішно оновлено.'
+    destroyed: '%{model} успішно вилучено.'
+    access_denied: 'Ви не маєте доступу до %{model}.'
+  nav:
+    header:
+      finished_hoc: "Я вже завершив мою Годину коду"
+      sign_in_to_save: "Увійдіть для збереження досягнень"
+    user:
+      classroom: "Мої учні"
+      label: 'Привіт %{username}'
+      stats: "Мій прогрес"
+      settings: "Мій профіль"
+      prizes: "Призи"
+      logout: "Вийти"
+      signin: "Вхід"
+      signup: "Реєстрація"
+      already_registered: "Вже зареєстровані?"
+    popup:
+      progress: "Ваш прогрес"
+      lines: 'Усього рядків коду: %{lines}'
+      close: "ЗАКРИТИ"
+      mastery: "Поняття"
+      puzzle_map: "Етапи"
+      prizes: 'Зберіть усі %{total_trophies} трофеїв та вигравайте призи!'
+      prize_earned: 'Усі %{total_trophies} трофеїв зібрано. Приз здобуто!'
+      prize_us_only: "(лише для учнів зі США)"
+      prizes_link: "Детальніше"
+  teacher:
+    title:
+      one: 'Ваш вчитель:'
+      other: 'Ваші вчителі:'
+    remove: "(вилучити вчителя)"
+    confirm:
+      remove: "Ви впевнені, що хочете вилучити цього вчителя?"
+    tools: "Інструменти вчителя"
+    followers:
+      section: 'Група:'
+      stages: 'Показати етапи:'
+      show_past: 'Показати минулу діяльність учня (%{bullet_html}):'
+      levels_key: "Ключі рівнів"
+      perfect: "Виконано, ідеально"
+      completed: "Виконано, але використано забагато блоків"
+      tried: "Незавершена спроба"
+      not_tried: "Спроб не було"
+      activity: 'Показ діяльності учня за останні %{hours} %{plural}'
+      no_section: "Групу не призначено"
+      trophies: "Трофеї"
+    students:
+      name: "Ім’я"
+      username: "Ім'я користувача"
+      password: "Пароль"
+      manage: "Керування учнями"
+      dashboard: "Перейти до панелі керування вчителя"
+      add: "Додати учнів"
+      remove: "видалити учня"
+      confirm_remove: "Ви дійсно бажаєте видалити цього учня?"
+      help_reassign: "Щоб розділити клас на кілька груп, оберіть учнів та створіть нову групу."
+      help_register: "Замість витрачання часу на імпортування особистих даних учнів, можна запросити їх створити облікові записи власноруч. Учням потрібно буде вказати свої імена користувача та паролі, але не електронні адреси. Якщо учень забуде пароль, ви зможете його скинути."
+      register: "Запросіть своїх учнів до самостійної реєстрації"
+      vist: "Запросіть своїх учнів"
+      section_code: 'і введіть код їхньої групи:'
+      first_please: 'Спочатку просимо %{add_section}'
+      for: "Для"
+      enter: 'введіть:'
+    sections:
+      add: "Додати групу"
+      manage: "Керування розділами"
+      section: "Група"
+      students: "Учні"
+      section_code: "Код групи"
+      add_section_code: "Додати код групи учнів"
+      secret: "Таємний тип"
+      grade: "Бал"
+      course: "Курс"
+      rename: "перейменувати"
+      edit: "редагувати"
+      delete: "видалити"
+      confirm_delete: "Ви дійсно бажаєте видалити цю групу?"
+      email: "Відправити електронною поштою"
+    rollup: "Панель досягнень"
+    activity: "Остання діяльність класу"
+    user_not_found: "Не вдається знайти вчителя чи учня"
+    cant_remove_student_no_email: 'Неможливо видалити %{student_name} зі списку ваших учнів, оскільки %{student_name} не реєстрував адресу електронної пошти'
+    cant_remove_teacher_no_email: 'Неможливо видалити %{teacher_name} як вашого вчителя, бо ви не реєстрували адресу електронної пошти'
+    student_teacher_disassociated: '%{teacher_name} вилучений як вчитель для %{student_name}'
+  user:
+    email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
+    email_resend_confirm: "Надіслати повідомлення з підтвердженням повторно"
+    new_password_hint: "(залишіть порожнім, якщо ви не хочете змінювати)"
+    current_password_hint: "(нам потрібний ваш поточний пароль, щоб підтвердити зміни)"
+    cancel:
+      title: "Відмінити мій профіль"
+      hint: "Нещасні?"
+      button: "Відмінити мій профіль"
+  user_level:
+    completed: "Завершено"
+    tried: "Спробував"
+  user_stats:
+    recent_activity: "Останні дії"
+    show_more: "Показати більше"
+    classroom_activity: "Безмашинна вправа"
+  home:
+    title: "Студія коду"
+    signin_message: 'Вже зареєстровані? %{link}'
+    student_reg_link: "Реєстрація учня"
+    teacher_reg_link: "Реєстрація вчителя"
+    signin_directions: 'Обліковий запис дозволить відстежувати прогрес. <br/> Вчителі можуть слідкувати за усім класом.'
+    teacher_dashboard: "Побачити панель досягнень"
+    teacher_student_count_one: 'У вас %{count} учнів.'
+    teacher_student_count: 'У вас %{count} учнів.'
+    teacher_averages: 'У середньому ваші учні вже здобули %{trophy_average} із %{trophy_max} трофеїв "Опанування понять".'
+    teacher_print_certificates: "Надрукуйте сертифікати для учнів, які завершили цей курс"
+    teacher_read_blog: "Читати про новини та оновлення наших матеріалів на нашому педагогічному блозі"
+    classroom: "Ваш клас"
+    student_progress: "Ваші навчальні досягнення"
+    student_stats: 'Ви здобули %{trophy_count} із %{trophy_max} трофеїв "Опанування понять".'
+    student_left_off: 'Де ви зупинилися:'
+    student_finished_prize: 'Ви завершили всі уроки, вимагайте свій %{prize_link} та виберіть інший клас %{online_link} або %{local_school_link}'
+    student_finished: 'Ви завершили всі уроки, виберіть інший клас %{online_link} або %{local_school_link}'
+    local_school: "місцева школа"
+    online: "онлайн"
+    see_details: "Див. докладніше"
+    prize_info: 'Призи за участь (тільки для вчителів державних шкіл США): до $1000 нагород на клас.'
+    tryfirst: 'Або, ви можете спочатку спробувати і зареєструватися пізніше:'
+    trynow: "Спробувати"
+    add_hint_help: "Будь ласка, допоможіть нам додати смарт-теги у підручники на Code.org"
+    20hour_overview: "Цей 20-годинний курс охоплює базові поняття комп'ютерних наук та програмування. Цей курс розроблено для використання на заняттях в основній школі, але може бути цікавим для будь-якого віку."
+    test_videos_help: "Випробуйте наш новий відео-плеєр у своїй школі"
+    try_beta_courses: "Новинка! Спробуйте наші бета-курси для учнів 1-5 класів"
+    use_as_teacher: "Використовуйте цей сайт як вчитель"
+    heading_elementary: '<h2>20-годинні курси для</h2><h1>початкових класів</h1>'
+    heading_apps: '<h2>Цікавинки</h2><h1>для усіх</h1>'
+    heading_legacy: '<h2>Загальний курс</h2><h1>для будь-якого віку</h1>'
+  gender:
+    male: "Чоловік"
+    female: "Жінка"
+    none: "Не волію відповідати"
+  footer:
+    help_from_html: "Інженери Google, Microsoft, Facebook і Twitter допомогли створити цей підручник."
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Всі права захищені.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc.  Всі права захищені.'
+    feedback: "Надати відгук"
+    translate: "Допоможіть нам перекласти вашою мовою"
+    support: "Підтримка"
+    tos: "Умови"
+    privacy: "Політика конфіденційності"
+    secure: "Безпечна версія"
+  prize_mail:
+    prize_earned:
+      subject: "Здобудьте свій приз на Code.org!"
+    teacher_prize_earned:
+      subject: "Вітання від Code.org!"
+    teacher_bonus_prize_earned:
+      subject: "Здобудьте свій бонусний приз на Code.org!"
+  reference_area:
+    title: "Потрібна допомога?"
+    subtitle: "Переглянути ці відео та підказки"
+    teacher: "Вирішення"
+    auth_error: "У вас немає прав на перегляд вирішення."
+    submit: "Оновлення розташування Художника"
+    direction: "Початковий напрямок"
+  video:
+    tab: "Відео."
+    notes: "Немає відео? Показати примітки."
+    notes_coming_soon: "Незабаром будуть доступні субтитри до цього відео."
+    autoplay_option: "Автовідтворення відео"
+    download: "Завантажити відео"
+  compatability:
+    working: "Ми працюємо над підтримкою для вашого браузера."
+    upgrade: "Будь ласка обновіть браузер."
+  slow_loading: "Це займає більше часу, ніж звичайно..."
+  try_reloading: "Спробуйте перезавантажити сторінку"
+  next_stage: "Завершено! Перейти до наступного етапу"
+  download_pdf: "Відкрити план уроку"
+  view_lesson_plan: "Переглянути план уроку"
+  pdf_download: "Завантажити PDF"
+  share_code:
+    title: 'Натисніть кнопку "Виконати", щоб побачити мою програму в дії'
+    bounce_og_title: "Подивіться на мою гру Арканоід"
+    flappy_og_title: "Поглянь на мою гру в Пурха (Flappy Game)"
+    studio_og_title: "Погляньте на мою історію"
+    og_description: "Я самостійно написав код з Code.org"
+  builder:
+    created: "Ви створили новий сценарій."
+    destroyed: "Ви видалили сценарій."
+    manage: "Побудова рівнів"
+    view: "Перегляд"
+    back: "Назад до скриптів"
+    success: "Ви успішно відредагували блоки."
+    level:
+      create: "Створити новий рівень"
+      current: "Поточні рівні"
+      unused: "Невикористані рівні"
+  upsell:
+    hoc:
+      title: "Година Коду"
+      body: "Спробуйте основи інформатики. Мільйони вже скористались цим шансом."
+    flappy:
+      title: "Код Пурха"
+      body: "Хочете написати свою власну гру, менш ніж за 10 хвилин? Спробуйте запрограмувати Пурха!"
+    20hour:
+      title: "Вступний курс"
+      body: "Спробуйте наш 20-годинний вступний курс інформатики."
+  gallery:
+    students_drew_these_with_code: "Ці малюнки запрограмували учні!"
+    picture_count: "За попередні  <b>%{days}</b> днів, учні намалювали <b>%{count}</b> картинок, пишучи свої власні комп'ютерні програми. Клацніть зображення, щоб переглянути кожну програму в дії."
+    want_to_make_your_own: "Хочете створити власний?"
+    more: 'Більш &rarr;'
+  landing:
+    prerelease: "Це <span class='betatext'>бета</span>-курс. Це означає, що перед Вами не остаточна версія цього курсу і він підлягає змінам та покращенням відповідно до отриманих відгуків."
+    feedback: "Залишити відгук"
+    report_bug: "Повідомити про помилку"
+    support: "Отримати допомогу"
+  multi:
+    wrong_title: "Неправильна відповідь"
+    wrong_body: 'Подана відповідь не є правильною.  Будь ласка, спробуйте ще раз!'
+    correct_title: "Правильно"
+    correct_body: "Це правильна відповідь."
+  match:
+    wrong_title: "Неправильне рішення"
+    wrong_body: 'Подане рішення не є правильним.  Будь ласка, спробуйте ще раз!'
+    correct_title: "Правильно"
+    correct_body: "Це правильна відповідь."
+  dialog:
+    ok: "Гаразд"
+  time:
+    hour: "1 година"
+    day: "день"
+    week: "тиждень"
+  data:
+    script:
+      name:
+        20-hour:
+          title: "Вступ в курс інформатики для 5-8 класів (15-25 годин)"
+          description: "Цей 20-годинний курс охоплює базові поняття комп'ютерних наук та програмування. Цей курс розроблено для використання на заняттях в основній школі, але може бути цікавим для будь-якого віку."
+        Hour of Code:
+          title: "Година Коду"
+          description: ""
+        edit-code:
+          title: "Редагування коду"
+          description: ""
+        events:
+          title: "Події"
+          description: ""
+        builder:
+          title: "Будівельник"
+          description: ""
+        flappy:
+          title: "Код Пурха"
+          description: "Хочете написати свою власну гру, менш ніж за 10 хвилин? Спробуйте запрограмувати Пурха!"
+        jigsaw:
+          title: "Пазли"
+          description: ""
+        step:
+          title: "Крок"
+          description: ""
+        sample_level_builder:
+          title: "Зразок рівня Будівельника"
+          description: ""
+  age_interstitial:
+    age: "Ваш вік"
+    header: "Оновити відомості про обліковий запис"
+    message: 'Ми в процесі оновлення для надання ретельнішого захисту Вашої конфіденційності та безпеки. З цією метою існуючі користувачі повинні вказати свій вік.<br/> Як і раніше, code.org ніколи не надаватиме, не продаватиме і не ділитиметься цією інформацією з третіми особами.'
+    sign_out: 'Якщо Ви не бажаєте надавати інформацію про свій вік, Ви можете <a href="%{url}">вийти з системи</a>.'
+  zendesk_too_young_message: |-
+    На жаль, молодші користувачі не можуть входити на цей сайт підтримки. Ви можете користуватись <a href="http://support.code.org">support.code.org</a> не входячи в обліковий запис, або попросіть своїх батьків чи вчителя зв'язатися з нами.

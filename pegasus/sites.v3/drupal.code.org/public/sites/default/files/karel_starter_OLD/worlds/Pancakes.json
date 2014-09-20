@@ -1,0 +1,10 @@
+{
+     "rows": 7,
+	 "cols": 7,
+	 "dir": "EAST",
+	 "start": {
+		 "row": 0,
+		 "col": 0
+	  },
+     "walls":[ ]
+ }

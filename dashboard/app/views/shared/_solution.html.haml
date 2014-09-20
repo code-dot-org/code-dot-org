@@ -1,0 +1,5 @@
+%div{ style: 'position:relative;height:150px;width:500px;overflow:hidden;' }
+  = link_to 'Go', edit_level_source_path(level_source_id)
+
+  %div{ style: 'position:absolute;top:0;left:50px' }
+    %pre= format_xml(LevelSource.find_by_id(level_source_id).try(:data))

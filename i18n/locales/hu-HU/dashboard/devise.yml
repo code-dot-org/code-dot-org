@@ -1,0 +1,57 @@
+"hu":
+  devise:
+    confirmations:
+      confirmed: "Sikeresen megerősítették, az e-mail címét."
+      send_instructions: "Néhány percen belül kapsz egy e-mailt arról, hogy miként erősítsd meg a fiókod."
+      send_paranoid_instructions: "Ha az email címe létezik az a adatbázisunkban, akkor pár perc múlva kapni fog egy emailt a fiókja megerősítési instrukcióival."
+    failure:
+      already_authenticated: "Ön már bejelentkezett."
+      inactive: "Fiókja még nincs aktiválva."
+      invalid: "Érvénytelen e-mail cím vagy jelszó."
+      invalid_token: "Érvénytelen azonosító."
+      locked: "A fiókja zárolva van."
+      not_found_in_database: "Érvénytelen e-mail cím vagy jelszó."
+      timeout: "Hozzáférése a géphez lejárt, kérem jelentkezzen be újra a folytatáshoz."
+      unauthenticated: "Be kell lépnie, vagy regisztrálnia, mielőtt folytathatná."
+      unconfirmed: "A folytatás előtt vissza kell igazolnia a felhasználói adatait."
+    mailer:
+      confirmation_instructions:
+        subject: "Code.org megerősítés módja"
+      reset_password_instructions:
+        subject: 'Code.org: jelszó beállítás módja'
+      unlock_instructions:
+        subject: "Utasítások feloldása"
+    omniauth_callbacks:
+      failure: 'Nem sikerült hitelesíteni téged %{kind} mert "%{reason}".'
+      success: 'Sikeresen hitelesített fiók %{kind}.'
+    passwords:
+      no_token: "Ezt az oldalt csak egy jelszó megváltoztatása e-mailen keresztül érheted el. Ha egy jelszó megváltoztatásai e-mail-en keresztül jutottál ide, kérünk ellenőrizd le, hogy a kapott URL-címet teljes egészében megadtad-e."
+      send_instructions: "Néhány percen belül kapni fogsz egy e-mailt arról, hogy miként tudod beállítani jelszavad."
+      send_paranoid_instructions: "Ha az e-mail címed létezik adatbázisunkban, néhány percen belül kapni fogsz egy jelszó-beállítási hivatkozást a e-mail címedre."
+      updated: "A jelszót sikeresen megváltoztatta. Most bejelentkezett."
+      updated_not_active: "A jelszót sikeresen megváltoztatta."
+    registrations:
+      destroyed: "Szia! A felhasználói fiókot sikeresen törölte. Reméljük, hogy hamarosan újra találkozunk."
+      signed_up: "Üdvözlet! Sikeresen feliratkoztál."
+      signed_up_but_inactive: "Sikeresen feliratkoztál. Azonban nem sikerült a bejelentkezés mert a felhasználói fiókod még nincs aktiválva."
+      signed_up_but_locked: "Sikeresen feliratkoztál. Azonban nem sikerült a bejelentkezés mert a fiókod zárolva van."
+      signed_up_but_unconfirmed: "Egy megerősítő linket elküldtük az e-mail címedre . Kérjük, nyisd meg a linket , hogy aktiváld fiókod."
+      update_needs_confirmation: "A fiókot sikeresen frissítette, de szükségünk van új e-mail cím megerősítésre. Kérjük, ellenőrizd az e-mail-ed, és kattints a megerősítés linkre hogy igazold az új e-mail címed."
+      updated: "A fiók sikeresen frissítve."
+    sessions:
+      signed_in: "Sikeresen belépve."
+      signed_out: "Sikeresen kilépve."
+    unlocks:
+      send_instructions: "Néhány percen belül kapsz egy e-mailt arról, hogy miként erősítsd meg a fiókod."
+      send_paranoid_instructions: "Ha a fiókod létezik, néhány percen belül kapni fogsz egy e-mailt arról hogyan tudod kinyitni."
+      unlocked: 'A fiókod sikeresen  kinyitottad. Jelentkezz be a folytatáshoz.'
+  errors:
+    messages:
+      already_confirmed: "már megerősítették , próbálj bejelentkezni"
+      confirmation_period_expired: 'meg kell erősíteni a %{period}-on belül , kérj egy újat'
+      expired: "már lejárt, kérjük kérjen egy újat"
+      not_found: "nem található"
+      not_locked: "nem volt zárolva"
+      not_saved:
+        one: '1 hiba tilos a  %{resource}  mentése:'
+        other: '%{count} hiba tiltja a %{resource} mentését :'

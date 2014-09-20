@@ -1,0 +1,14 @@
+<% var msg = require('../../locale/current/common'); %>
+
+<p id="num-lines-of-code" class="lines-of-code-message">
+  <%= msg.numLinesOfCodeWritten({ numLines: numLinesWritten }) %>
+  <button id="show-code-button" href="#">
+    <%= msg.showGeneratedCode() %>
+  </button>
+</p>
+
+<% if (totalNumLinesWritten !== 0) { %>
+  <p id="total-num-lines-of-code" class="lines-of-code-message">
+    <%= msg.totalNumLinesOfCodeWritten({ numLines: totalNumLinesWritten }) %>
+  </p>
+<% } %>

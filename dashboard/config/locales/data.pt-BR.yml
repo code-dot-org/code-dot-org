@@ -1,0 +1,657 @@
+"pt":
+  data:
+    script:
+      name:
+        20-hour:
+          desc: Introdução ao Curso de Ciência da Computação para o Ensino Fundamental
+          Unplug1: Fase 1
+          Maze: Fase 2
+          Unplug2: Fase 3
+          Unplug3: Fase 4
+          Artist: Fase 5
+          Unplug4: Fase 6
+          Artist2: Fase 7
+          Unplug5: Fase 8
+          Farmer: Fase 9
+          Unplug6: Fase 10
+          Artist3: Fase 11
+          Unplug7: Fase 12
+          Farmer2: Fase 13
+          Unplug8: Fase 14
+          Artist4: Fase 15
+          Unplug9: Fase 16
+          Farmer3: Fase 17
+          Unplug10: Fase 18
+          Artist5: Fase 19
+          Unplug11: Fase 20
+        Hour of Code:
+          desc: Hora do Código
+          Maze: Fase 1
+        Edit Code:
+          desc: Editar Código (beta)
+          MazeEC: Fase 1
+        2014 Levels:
+          desc: Pingue-pongue (beta)
+          Bounce: Fase 1
+        Builder Levels:
+          desc: Jogos criados pelos usuários (beta)
+          Custom: Fase 1
+        Flappy Levels:
+          desc: Flappy Bird
+          Flappy: Fase 1
+        Jigsaw Levels:
+          desc: Quebra-cabeça (beta)
+          Jigsaw: Fase 1
+        Step Levels:
+          desc: Labirinto (beta)
+          MazeStep: Etapa da Fase
+        edit-code:
+          desc: Editar Código (beta)
+          MazeEC: Fase 1
+        events:
+          desc: Pingue-pongue (beta)
+          Bounce: Fase 1
+          Studio: Fase 2
+        builder:
+          desc: Jogos criados pelos usuários (beta)
+          Custom: Fase 1
+        flappy:
+          desc: Flappy Bird
+          Flappy: Fase 1
+        jigsaw:
+          desc: Quebra-cabeça (beta)
+          Jigsaw: Fase 1
+        step:
+          desc: Labirinto (beta)
+          MazeStep: Etapa da Fase
+        wordsearch:
+          desc: Soletrando (beta)
+          WordSearch: Fase 1
+    game:
+      name:
+        Unplug1: Introdução à Ciência da Computação
+        Maze: O Labirinto
+        Multi: Material de múltipla escolha
+        Unplug2: Pensamento Computacional
+        Unplug3: Programação em Papel Quadriculado
+        Artist: O Artista
+        Unplug4: Algoritmos
+        Artist2: O Artista 2
+        Unplug5: Funções
+        Farmer: A Fazendeira
+        Unplug6: Condições
+        Artist3: O Artista 3
+        Unplug7: Escrevendo uma Canção
+        Farmer2: A Fazendeira 2
+        Unplug8: Abstração
+        Artist4: O Artista 4
+        Unplug9: Programação por revezamento
+        Farmer3: A Fazendeira 3
+        Unplug10: A Internet
+        Artist5: O Artista 5
+        Unplug11: Resumo
+        MazeEC: O Labirinto
+        Bounce: Pingue-pongue
+        Flappy: Flappy Bird
+        Jigsaw: Quebra-cabeça
+        MazeStep: Modo Labirinto
+        Wordsearch: Caça Palavras
+    trophy:
+      name:
+        Bronze: Bronze
+        Silver: Prata
+        Gold: Ouro
+    concept:
+      description:
+        sequence: Sequência
+        if: Bloco se
+        if_else: Bloco se-senão
+        loop_times: Bloco repita
+        loop_until: Bloco repita até
+        loop_while: Bloco enquanto
+        loop_for: Bloco contador
+        function: Funções
+        parameters: Funções com parâmetros
+    level:
+      instructions:
+        maze_2_2: 'Você pode me ajudar a pegar o porco malvado? Junte alguns blocos
+          "avance" e clique em "Executar" para me ajudar a chegar lá. '
+        maze_2_1: Esse porco está me deixando nervoso. Me ajude a encontrá-lo!
+        maze_2_2_5: Desenhe o caminho e leve-me até aquele porco bobalhão. Não passe
+          pelas dinamites, senão penas vão voar!
+        maze_2_3: Leve-me até a maldade verde! (Cuidado com a dinamite)
+        maze_2_4: Fique calmo e ajude-me a encontrar o porco mau. Senão eu vou ficar
+          zangado!
+        maze_2_5: Há uma maneira de chegar ao porco bobalhão usando apenas 2 blocos.
+          Você consegue descobrir como?
+        maze_2_6: Tente me levar até o intruso verde usando apenas três blocos.
+        maze_2_7: Ajude-me a banir esse porquinho mau usando o menor número de blocos
+          possível. Tente usar mais de um bloco "repita".
+        maze_2_8: 'Quando um bloco estiver cinza, significa que você não pode excluí-lo.
+          Resolva esse desafio usando o bloco "repita" que faz 3 repetições. Tente
+          colocar esses 3 blocos dentro do bloco "repita" em cinza: avance, avance,
+          vire.'
+        maze_2_9: Ok, use o novo bloco "repita até" - ele vai se repetir até que eu
+          chegue naquele porco irritante.
+        maze_2_10: Ok, pratique mais uma vez - você pode resolver isso usando apenas
+          4 blocos?
+        maze_2_11: Pessoa querida. Mim zumbi. Mim com fome. Devo... chegar... no girassol...
+          Você pode me ajudar a chegar lá com apenas 5 blocos?
+        maze_2_12: Ok, é parecido, mas um pouco diferente. Você pode usar apenas 5
+          blocos?
+        maze_2_13: 'Use o novo bloco "se" para me deixar decidir quando virar. Dica:
+          você só precisa de mais um bloco, mas veja como o configuramos, então você
+          mesmo poderá fazê-lo na próxima vez.'
+        maze_2_14: Ok, esse desafio é como o último, mas você precisa se lembrar de
+          como você usou o bloco "se" e o bloco "repita" juntos.
+        maze_2_15: Mim querer girassol! Use um bloco "se" para que eu chegue lá com
+          o menor número de blocos possível.
+        maze_2_16: Ok, praticar mais uma vez - essa parte não é muito diferente, mas
+          fique de olho nos comilões!
+        maze_2_17: O bloco "se-senão" verifica uma condição e, em seguida, faz uma
+          coisa OU outra. Para me levar ao girassol, tente usar esse novo bloco.
+        maze_2_18: Vamos praticar o uso do bloco "se-senão" mais uma vez, você consegue
+          na primeira tentativa?
+        maze_2_19: Você consegue usar apenas 3 blocos para me ajudar a percorrer um
+          labirinto mais complexo? Se fizer isso direito, eu posso percorrer qualquer
+          caminho cheio de curvas, não importa o comprimento.
+        turtle_1_1: Olá, eu sou um artista! Você pode escrever códigos para me fazer
+          desenhar quase tudo. Use alguns blocos para me fazer desenhar sobre as linhas
+          cinza da figura.
+        turtle_1_2: 'Agora, desenhe um quadrado. NOTA: escolha sua cor preferida no
+          novo bloco "defina a cor".'
+        turtle_1_3: Faça um quadrado usando apenas 3 blocos.
+        turtle_1_4: 'Desenhe um triângulo cujos lados têm cores diferentes, usando
+          a opção "cor aleatória" que escolhe uma cor diferente a cada vez que é executado.
+          Dica: você terá que descobrir o quanto virar, selecionando um número no
+          bloco vire.'
+        turtle_1_5: Agora, para praticar, desenhe um envelope usando um triângulo
+          e um quadrado.
+        turtle_1_6: 'Você consegue descobrir como desenhar esse triângulo e esse quadrado?
+          Dica: faça o triângulo primeiro e, em seguida, descubra o quanto virar antes
+          de desenhar o quadrado.'
+        turtle_1_7: Ok, vamos dificultar um pouco - veja se você consegue desenhar
+          esses óculos verdes. Os quadrados têm 100 pixels de cada lado, e eles são
+          separados por 50 pixels. Não se esqueça de desenhar com a cor verde!
+        turtle_1_8: Ok, tente descobrir o que acontece se você executar esse código
+          (ou clique em "Executar" para ver). Em seguida, execute-o várias vezes para
+          completar o desenho. As cores serão diferentes toda vez que o código for
+          executado.
+        turtle_1_9: Você consegue descobrir qual número precisa usar para substituir
+          os pontos de interrogação e desenhar um círculo?
+        turtle_1_10: 'Você conseguiu! Agora, desenhe o que quiser. Algumas ideias
+          divertidas: um boneco, um floco de neve ou uma espiral. Use também o novo
+          bloco "defina largura". Divirta-se!'
+        turtle_4_1: 'Você pode desenhar um triângulo (com bordas de 100 pixels) com
+          apenas 3 blocos? Dica: use um bloco "repita".'
+        turtle_4_2: Acrescente um bloco "vire à direita 90 graus" em algum lugar no
+          meio do programa, na área de trabalho, para desenhar esses triângulos.
+        turtle_4_3: Muito bem, este é código que você escreveu para desenhar um único
+          triângulo. Você consegue adicionar um bloco "repita" e um "vire" para fazer
+          uma linda flor?
+        turtle_4_4: 'Este é o mesmo código do desafio anterior, mas virando apenas
+          36 graus depois de desenhar cada triângulo. Quantas vezes essa ação precisa
+          se repetir? (Dica: depois de 360 graus, o desenho será um círculo completo)'
+        turtle_4_5: 'Este é o mesmo código do desafio anterior, mas repetindo cada
+          virada 36 vezes. Qual deve ser a inclinação de cada virada em graus? (Dica:
+          após 360 graus, o desenho será um círculo completo)'
+        turtle_4_6: Usando apenas 3 blocos, você pode desenhar um quadrado com arestas
+          de 20 pixels?
+        turtle_4_7: 'Este é o código do quadrado desenhado no último desafio. Você
+          consegue repeti-lo para desenhar 10 quadrados adjacentes como uma escada?
+          Dica: você só precisa de mais 2 blocos.'
+        turtle_4_8: Esta é a solução do desafio anterior. Você consegue adicionar
+          apenas mais 2 blocos para completar o desenho?
+        turtle_4_9: Esta é a solução do desafio anterior. Quantos graus você deve
+          virar para completar o desenho? (Você provavelmente vai precisar chutar
+          o valor algumas vezes)
+        turtle_4_10: Esta é a solução do desafio anterior. Quantas vezes você deve
+          repetir para completar o desenho?
+        turtle_4_11: Altere os números nos blocos "vire" e "repita" para criar padrões
+          diferentes. Ou então, experimente mudar o resto do código para desenhar
+          o que quiser.
+        maze_karel_1_1: Olá, eu sou uma fazendeira! Preciso de sua ajuda para aplanar
+          o terreno da minha fazenda, para prepará-lo para o plantio. Leve-me até
+          o monte de terra e use o bloco "remova" para removê-lo.
+        maze_karel_1_2: Em seguida, leve-me para perto do buraco e preencha-o com
+          DUAS pás cheias de terra, usando o bloco "preencha".
+        maze_karel_1_3: Leve-me até o monte de terra e me diga quantas pás devo remover,
+          usando o menor número de blocos possível.
+        maze_karel_1_4: 'Você pode me ajudar a remover todos os quatro montes de terra?
+          Dica: se puder, use um bloco de repetição.'
+        maze_karel_1_5: 'Ajude-me a encher todos esses buracos com 5 pás de terra.
+          Dica: você pode usar um bloco "repita" dentro de um bloco "enquanto".'
+        maze_karel_1_6: Remova todas as pilhas de terra usando o menor número de blocos
+          possível. As novas opções de menu no bloco "enquanto" mostram se eu estou
+          em uma pilha de terra ou em um buraco.
+        maze_karel_1_7: Uau, eu encontrei um buraco muito fundo! Não sei quantas pás
+          de terra vamos precisar. Você pode escrever um programa para preenchê-lo
+          completamente?
+        maze_karel_1_8: Ajude-me a preencher o buraco no final do terreno, usando
+          o menor número de blocos possível.
+        maze_karel_1_9: 'Faça com que eu remova todos esses montes de terra. Tente
+          usar o menor número de blocos possível. Dica: tente usar um bloco "enquanto".'
+        maze_karel_1_10: Estou trabalhando até tarde, então está escuro, e eu não
+          sei o tamanho desses montes de terra. Agora, eu não tenho todas as opções
+          que eu costumava ter com o bloco "enquanto". Mova-me pelo terreno e, se
+          houver um monte de terra, remova-o.
+        maze_karel_1_11: 'Ainda está escuro lá fora. Mova-me ao longo do terreno.
+          Se houver um monte de terra, remova-o, e se houver um buraco, preencha-o.
+          Dica: use o menu de opções no bloco "se".'
+        turtle_2_1: 'Olá! Mim zumbi artista. Mim gostar de desenhar! Me ajude a desenhar
+          um quadrado com uma cor especial. Importante: você tem todos os blocos de
+          antes, mas agora eles estão divididos em categorias.'
+        turtle_2_2: Bem-vindo ao uso de funções, as quais permitem que você defina
+          novos blocos! Use o novo bloco "desenhe um quadrado", encontrado na categoria
+          "Funções", para desenhar um pequeno quadrado verde de 50x50.
+        turtle_2_3: Use o bloco "repita" (na categoria "Laços") para desenhar 3 quadrados
+          de tamanho 100, separados por 120 graus. Use 3 cores aleatórias.
+        turtle_2_4: 'Agora vamos ficar chiques. Altere o código para desenhar 36 quadrados,
+          com 100 pixels de largura e separados por 10 graus. Dica: você pode usar
+          a barra deslizante para me fazer ir mais rápido.'
+        turtle_2_5: Desenhe quadrados com lados de 50, 60, 70, 80 e 90 pixels. Você
+          vai precisar usar a função "desenhe um quadrado" cinco vezes.
+        turtle_2_6: 'Ok, esse programa vai usar um contador para desenhar os mesmos
+          quadrados da última vez. Você quer que o quadrado tenha o tamanho do contador,
+          então use o bloco "contador". Dica: ele está na categoria Variáveis.'
+        turtle_2_7: Aqui temos um programa para desenhar uma espiral, mas os blocos
+          estão desativados para que eles não sejam executados. Faça um novo programa
+          usando um bloco "conte com" (na categoria Laços) e um bloco "contador" (na
+          categoria Variáveis) para desenhar a mesma espiral.
+        turtle_2_7_5: Há uma nova função "desenhe um boneco de neve" (na categoria
+          Funções). Desenhe dois bonecos de neve, de 250 e 100 de altura.
+        turtle_2_8: Esse desafio é um pouco complicado. Use a função "desenhe um boneco
+          de neve" e o novo bloco "pule para a frente" (na categoria Ações). Desenhe
+          3 bonecos de neve com cores diferentes, separados por 100 pixels.
+        turtle_2_9: Use um laço "conte com" para desenhar uma família de bonecos de
+          neve, com alturas de 110, 100, 90, 80 e 70. Os bonecos de neve devem ser
+          separados por 60 pixels.
+        turtle_2_10: Aqui, temos alguns códigos para que você experimente em diferentes
+          espirais. O que acontece se você alterar a quantidade de voltas? Ou definir
+          uma cor aleatória no laço? Desenhe o que você quiser.
+        maze_karel_2_1: 'Use os blocos para me ajudar a remover todos os montes de
+          terra e preencher todos os buracos no chão. Tente usar laços ao invés de
+          usar muitos blocos. Dica: você pode colocar um laço dentro de outro laço.'
+        maze_karel_2_2: Definimos nosso próprio bloco chamado "preencha 5", que agora
+          está na categoria de Funções. Use-o para me ajudar a preencher esse buraco.
+        maze_karel_2_3: Use o novo bloco de função "preencha 5" para que eu preencha
+          todos os buracos. Você vai ter que arrastar o bloco "preencha 5" para fora
+          da categoria Funções.
+        maze_karel_2_4: Defina uma nova função que remova 7 pás. Em seguida, use-a
+          para escrever um programa que me ajude a remover todos os montes de terra.
+        maze_karel_2_5: Crie uma nova função que remove 6 pás de um monte de terra
+          e use-a para me ajudar a nivelar todos os montes.
+        maze_karel_2_6: Use duas novas funções, "preencha 8" e "remova 8", para me
+          ajudar a nivelar o monte de terra e preencher o buraco.
+        maze_karel_2_7: Há uma vaca no meu terreno! Escreva uma nova função que me
+          ajude a desviar da vaca e remover o monte de terra. Coloque todos os seus
+          blocos dentro da nova função.
+        maze_karel_2_8: Use a nova função, "desvie da vaca e remova 1", para me ajudar
+          a remover todos os montes de terra.
+        maze_karel_2_9: Ok, temos aqui uma função que remove 4 montes diferentes de
+          terra em uma coluna vertical. Coloque essa função dentro de um laço, para
+          que você remova todos os montes de terra usando apenas alguns blocos novos.
+        maze_karel_2_10: Mova-me pelo terreno e use essas duas funções para me ajudar
+          a remover todos os montes de terra e preencher todos os buracos.
+        turtle_3_1: Esse desafio mostra como as funções "desenhe um quadrado" e "desenhe
+          um círculo" são definidas. Definir uma função não resulta na execução de
+          seus blocos. Você tem que chamar o bloco "desenhe um quadrado" para, de
+          fato, desenhar um quadrado.
+        turtle_3_2: Usando a função "desenhe um quadrado" como exemplo, crie uma função
+          "desenhe um triângulo" e utilize-a.
+        turtle_3_3: 'Desenhe uma cerca triangular em torno dos gatos e uma cerca quadrada
+          em torno da vaca. Dica: teste o programa conforme você avança.'
+        turtle_3_4: Veja se você pode descobrir como usar "desenhe um quadrado" e
+          "desenhe um triângulo" (e alguns outros blocos) para desenhar uma casa em
+          torno do leão.
+        turtle_3_5: 'Agora, crie uma nova função "desenhe uma casa" e use-a para abrigar
+          dois gatos. Dica: crie uma nova função usando o bloco "faça alguma coisa"
+          e nomeie o bloco como quiser.'
+        turtle_3_6: 'Usando "desenhe um quadrado" como exemplo, adicione uma entrada
+          denominada "comprimento" para "desenhe um triângulo". Em seguida, desenhe
+          triângulos de tamanhos diferentes. (Dica: clique na estrela para adicionar
+          uma entrada a uma função)'
+        turtle_3_7: Adicione uma entrada denominada "altura" para "desenhe uma casa"
+          e construa uma casa grande para o elefante (com bordas de 150 pixels)
+        turtle_3_8: Estes são todos os blocos do desafio anterior. Modifique "desenhe
+          uma casa" de forma que eu acabe no canto inferior direito após desenhar
+          uma nova casa. Use essa função modificada para desenhar três casas.
+        turtle_3_9: Você pode recriar a função "desenhe uma casa" sem ajuda? Tente,
+          e em seguida desenhe uma fileira de casas.
+        turtle_3_10: Você aprendeu muito! Agora, use seu conhecimento para desenhar
+          o que quiser. Tente desenhar uma estrela, ou uma espiral, ou um floco de
+          neve.
+        maze_karel_debug_seq_1: Bem-vindo à depuração! Meu código não está funcionando
+          bem. Você pode achar o problema e corrigi-lo para que eu possa deixar meu
+          terreno pronto para o plantio?
+        maze_karel_debug_seq_2: O que há de errado com esse programa? Como corrigi-lo
+          para que eu possa remover aquele monte de terra?
+        maze_karel_debug_repeat: Faça a depuração desse programa para que meu terreno
+          fique belo e plano.
+        maze_karel_debug_while: Como alterar esse programa para me ajudar a preencher
+          o buraco?
+        maze_karel_debug_if: Socorro! Corrija o programa para que meu terreno fique
+          completamente plano.
+        maze_karel_debug_if_else: Depure esse programa para que eu possa preencher
+          os buracos e remover todos os montes de terra.
+        maze_karel_debug_function_1: O que você deve alterar nesse programa para me
+          ajudar a remover todos os montes de terra?
+        maze_karel_debug_function_2: Você pode depurar este programa para deixar meu
+          terreno plano?
+        maze_karel_debug_function_3: 'Edite esse programa para que eu remova todos
+          os montes de terra do meu terreno. '
+        turtle_5_1: Execute este programa e faça alterações para ver o que acontece.
+          Você pode descobrir como ele funciona? (Ou exclua-o e substitua-o por algo
+          totalmente diferente)
+        turtle_5_2: Execute este programa e faça alterações para ver o que acontece.
+          Você pode descobrir como ele funciona? (Ou exclua-o e substitua-o por algo
+          totalmente diferente)
+        turtle_5_3: Execute este programa e faça alterações para ver o que acontece.
+          Você pode descobrir como ele funciona? (Ou exclua-o e substitua-o por algo
+          totalmente diferente)
+        turtle_5_4: Execute este programa e faça alterações para ver o que acontece.
+          Você pode descobrir como ele funciona? (Ou exclua-o e substitua-o por algo
+          totalmente diferente)
+        turtle_5_5: Execute este programa e faça alterações para ver o que acontece.
+          Você pode descobrir como ele funciona? (Ou exclua-o e substitua-o por algo
+          totalmente diferente)
+        turtle_5_6: Execute este programa e faça alterações para ver o que acontece.
+          Você pode descobrir como ele funciona? (Ou exclua-o e substitua-o por algo
+          totalmente diferente)
+        maze_3_1: Eu preciso chegar àquele porco! Faça algumas chamadas de move();
+          para que eu possa recuperar meus ovos.
+        maze_3_2: Escreva um programa para que eu possa chegar ao porco.
+        maze_3_3: Como eu devo chegar até o porco? Lembre-se de que não posso passar
+          pelas dinamites!
+        maze_3_4: Argh! Escreva um programa que me faça chegar ao porco sem passar
+          pela dinamite.
+        bounce_1: Conecte um bloco ao bloco "quando clicar na seta para a esquerda"
+          e clique em "Executar". Mova a raquete usando a seta para a esquerda para
+          alcançar o objetivo final.
+        bounce_2: Conecte um bloco aos blocos "quando clicar na seta para a direita"
+          e "quando clicar na seta para a esquerda". Mova a raquete para alcançar
+          ambos os objetivos finais.
+        bounce_3: Agora, tente algo semelhante com o bloco "quando clicar na seta
+          para cima". Mova a raquete o objetivo final no topo.
+        bounce_4: Desta vez, você precisa adicionar quatro blocos. Mova a raquete
+          para todos os quatro alvos finais para completar este desafio.
+        bounce_5: Vamos lançar uma bola em direção à raquete. Conecte um bloco ao
+          bloco "quando a bola bater na raquete" para garantir que a bola atinja o
+          alvo.
+        bounce_6: Agora o alvo está no topo. Você precisa conectar blocos em ambos
+          os blocos "quando a bola bater" para resolver este desafio.
+        bounce_7: Conecte os blocos a cada um dos blocos "quando". Faça a bola quicar
+          até que ela atinja o alvo.
+        bounce_10: Agora há um alvo na parte de cima. Conecte os blocos "marque um
+          ponto" e "marque um ponto para o oponente" aos blocos "quando a bola atingir
+          o alvo" e "quando a bola não acertar a raquete" para fazer um jogo. Veja
+          quantos pontos você consegue marcar antes que seu oponente marque duas vezes.
+        bounce_11: Agora você pode conectar blocos ao bloco "quando o jogo começa".
+          Você tem que anexar o novo bloco "jogue uma nova bola" em mais de um lugar.
+          Além disso, tente mudar o cenário ou a velocidade da raquete e da bola e
+          veja quantos pontos você pode marcar antes de seu oponente marcar duas vezes.
+        bounce_12: Crie seu próprio jogo de Pingue-pongue. Você pode mudar o visual
+          e todas as regras. Quando terminar, clique em Concluir para que seus amigos
+          possam jogar seu jogo em seus celulares.
+        Custom_builder: Arraste os blocos da caixa de ferramentas para a área de trabalho
+          para desenhar o nível que você deseja criar. Quando estiver pronto, clique
+          em "Executar".
+        flappy_1: Conecte um bloco no bloco "quando clicar" e, em seguida, clique
+          em "Executar". Clique ou toque na tela para mover o passarinho em direção
+          ao alvo.
+        flappy_2: Agora que já temos uma base. Conecte um bloco ao bloco "quando bater
+          no chão". Seu código precisa 'TERMINAR O JOGO' quando o passarinho bater.
+        flappy_3: O bloco "quando o jogo começa" permite que você execute o código
+          quando o jogo começa. Defina a velocidade do nível e voe em direção ao alvo.
+        flappy_4: O passarinho vai atravessar os obstáculos, a menos que você programe
+          para fazê-lo bater. Conecte um bloco ao bloco "quando atingir um obstáculo".
+          Seu programa precisa 'TERMINAR O JOGO' quando o passarinho bater nos obstáculos.
+        flappy_5: Vamos adicionar um painel de pontuação e aumentar os pontos quando
+          o passarinho passar pelos obstáculos. Faça isso no bloco "quando passar
+          um obstáculo", e então marque um ponto quando o passarinho passar pelo primeiro
+          conjunto de obstáculos.
+        flappy_6: Veja se você ainda pode marcar um ponto depois de fazer o passarinho
+          bater as asas mais ou menos.
+        flappy_7: Em seguida, tente mudar a cena conectando outro bloco ao bloco "quando
+          o jogo começa".
+        flappy_8: Você pode definir o visual a qualquer momento, não apenas quando
+          o jogo começa. Tente criar um cenário ALEATÓRIO quando outros eventos acontecerem,
+          por exemplo, ao passar um obstáculo.
+        flappy_9: Para mudar um pouco, ao bater em um obstáculo ou no chão, faça com
+          que o placar volte a 0 ao invés de terminar o jogo.
+        flappy_11: Crie seu próprio jogo Flappy Bird. Você pode mudar o visual e todas
+          as regras, até mesmo a gravidade. Quando terminar, clique em Concluir para
+          que seus amigos joguem seu jogo em seus celulares.
+        flappy_k1_1: Jogar Flappy Bird
+        flappy_k1_2: Conecte um bloco ao bloco "quando clicar" e então clique em "Executar".
+          Clique ou toque na tela para mover o passarinho até o alvo.
+        flappy_k1_3: Agora que já temos uma base. Conecte um bloco ao bloco "quando
+          bater no chão". Seu código precisa 'TERMINAR O JOGO' quando o passarinho
+          bater.
+        flappy_k1_4: O bloco "quando o jogo começa" permite que você execute o código
+          quando o jogo começa. Defina a velocidade do nível e voe em direção ao alvo.
+        flappy_k1_5: O passarinho vai atravessar os obstáculos, a menos que você programe
+          para fazê-lo bater. Conecte um bloco ao bloco "quando atingir um obstáculo".
+          Seu programa precisa 'TERMINAR O JOGO' quando o passarinho bater nos obstáculos.
+        flappy_k1_6: Vamos adicionar um painel de pontuação e aumentar os pontos quando
+          o passarinho passar pelos obstáculos. Faça isso no bloco "quando passar
+          um obstáculo", e então marque um ponto quando o passarinho passar pelo primeiro
+          conjunto de obstáculos.
+        flappy_k1_7: Veja se você consegue marcar vários pontos ao fazê-lo superar
+          um obstáculo
+        flappy_k1_8: Em seguida, tente mudar a cena conectando outro bloco ao bloco
+          "quando o jogo começa".
+        flappy_k1_9: Tente alterar o jogador anexando um bloco "defina o jogador"
+          ao bloco "quando o jogo começa".
+        jigsaw_1: Clique no bloco
+        jigsaw_2: Arraste o bloco para o alvo
+        jigsaw_3: Organize os blocos para formar a imagem
+        jigsaw_4: Organize os blocos para formar a imagem
+        jigsaw_5: Organize os blocos para formar a imagem
+        jigsaw_6: Organize os blocos para formar a imagem
+        jigsaw_7: Organize os blocos para formar a imagem
+        jigsaw_8: Organize os blocos para formar a imagem
+        jigsaw_9: Organize os blocos para formar a imagem
+        jigsaw_10: Organize os blocos para formar a imagem
+        jigsaw_11: Organize os blocos para formar a imagem
+        jigsaw_12: Organize os blocos para formar a imagem
+        jigsaw_13: Resolva o desafio!
+        mazestep_1: Descrição do labirinto aqui
+        mazestep_2: Descrição do labirinto aqui
+        mazestep_3: Descrição do labirinto aqui
+        mazestep_4: Descrição do labirinto aqui
+        mazestep_5: Descrição do labirinto aqui
+        studio_c2_1: Você consegue fazer esse cachorro dizer "olá, mundo"?
+        studio_c2_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer
+          o gato dizer alguma coisa?
+        studio_c2_3: Você consegue desenvolver um programa para fazer este cachorro
+          se mover em direção ao gato?
+        studio_c2_4: Você consegue desenvolver um programa que faça com que o cachorro
+          se mova em direção ao gato e que faça com que o gato diga "olá" quando o
+          cachorro o alcançar?
+        studio_c2_5: Você pode escrever um programa para fazer o polvo dizer "olá"
+          quando clicarem nele?
+        studio_c2_6: Você pode desenvolver um programa que faça o pinguim se mover
+          usando as teclas para cima / para baixo / à esquerda / à direita, para atingir
+          todos os alvos?
+        studio_c2_7: O bloco "repita infinitamente" possibilita a execução contínua
+          do programa. Você pode anexar blocos para mover esse dinossauro para cima
+          e para baixo repetidamente?
+        studio_c2_8: Você pode fazer com que o pinguim diga "Ai!" e reproduza um som
+          de "batida" se ele encontrar o dinossauro, e então movê-lo com as setas
+          para fazer isso acontecer?
+        studio_c2_9: Você pode adicionar um bloco que soma um ponto quando o pinguim
+          se encontra com o polvo, e então movê-lo com as setas para conseguir o ponto?
+        studio_c2_10: Você pode adicionar blocos para mudar o plano de fundo e a velocidade
+          do pinguim, e então movê-lo com as setas até que você pontue?
+        studio_c2_11: Crie sua própria história. Quando tiver terminado, clique em
+          Concluir para que seus amigos possam vê-la em seus celulares.
+        studio_c3_story_1: Você consegue fazer esse cachorro dizer "olá, mundo"?
+        studio_c3_story_2: Você pode fazer o cachorro dizer alguma coisa e, depois,
+          fazer o gato dizer alguma coisa?
+        studio_c3_story_3: Você consegue desenvolver um programa para fazer este cachorro
+          se mover em direção ao gato?
+        studio_c3_story_4: Você consegue desenvolver um programa que faça com que
+          o cachorro se mova em direção ao gato, e que faça com que o gato diga "olá"
+          quando o cachorro o alcançar?
+        studio_c3_story_5: Você pode adicionar um bloco para deixar o polvo feliz?
+        studio_c3_story_6: Crie sua própria história. Quando tiver terminado, clique
+          em Concluir para que seus amigos possam vê-la em seus celulares.
+        studio_c3_game_1: Você pode escrever um programa para fazer o polvo dizer
+          "olá" quando clicarem nele?
+        studio_c3_game_2: Você pode desenvolver um programa que faça o pinguim se
+          mover usando as teclas com as setas para cima / para baixo / à esquerda
+          / à direita, para atingir todos os alvos?
+        studio_c3_game_3: O bloco "repita infinitamente" possibilita a execução contínua
+          do programa. Você pode anexar blocos para mover esse dinossauro para cima
+          e para baixo repetidamente?
+        studio_c3_game_4: Você pode fazer com que o pinguim diga "Ai!" e reproduza
+          um som de "batida" se ele encontrar o dinossauro, e então movê-lo com as
+          setas para fazer isso acontecer?
+        studio_c3_game_5: Você pode adicionar um bloco que some um ponto quando o
+          pinguim se encontra com o polvo, e então movê-lo até que você consiga o
+          ponto?
+        studio_c3_game_6: Você pode adicionar blocos para mudar o plano de fundo e
+          a velocidade do pinguim, e então movê-lo com as setas até que você pontue?
+        studio_c3_game_7: Crie seu próprio jogo. Quando tiver terminado, clique em
+          Concluir para que seus amigos possam jogá-lo em seus celulares.
+        studio_playlab_1: Você consegue fazer esse cachorro dizer "olá, mundo"?
+        studio_playlab_2: Você pode fazer o cachorro dizer alguma coisa e, depois,
+          fazer o gato dizer alguma coisa?
+        studio_playlab_3: Você consegue desenvolver um programa para fazer este cachorro
+          se mover em direção ao gato?
+        studio_playlab_4: Você consegue desenvolver um programa que faça com que o
+          cachorro se mova em direção ao gato e que faça com que o gato diga "olá"
+          quando o cachorro o alcançar?
+        studio_playlab_5: Você pode escrever um programa para fazer o polvo dizer
+          "olá" quando clicarem nele?
+        studio_playlab_6: Você pode desenvolver um programa que faça o pinguim se
+          mover usando as teclas com as setas para cima / para baixo / à esquerda
+          / à direita, para atingir todos os alvos?
+        studio_playlab_7: O bloco "repita infinitamente" possibilita a execução contínua
+          do programa. Você pode anexar blocos para mover esse dinossauro para cima
+          e para baixo repetidamente?
+        studio_playlab_8: Você pode adicionar um bloco que soma um ponto quando o
+          pinguim se encontra com o polvo, e então movê-lo com as setas para conseguir
+          o ponto?
+        studio_playlab_9: Você pode adicionar blocos para mudar o plano de fundo e
+          a velocidade do pinguim, e então movê-lo com as setas até que você pontue?
+        studio_playlab_10: Crie seu próprio jogo. Quando tiver terminado, clique em
+          Concluir para que seus amigos possam jogá-lo em seus celulares.
+        studio_full_sandbox: Crie seu próprio jogo. Quando tiver terminado, clique
+          em Concluir para que seus amigos possam jogá-lo em seus celulares.
+        studio_k1_1: Você pode fazer o cachorro dizer "Olá, mundo"?
+        studio_k1_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer
+          o gato dizer alguma coisa?
+        studio_k1_3: Você consegue desenvolver um programa para fazer este cachorro
+          se mover em direção ao gato?
+        studio_k1_4: Faça o cachorro se mover até o gato e dizer "olá" quando chegar.
+        studio_k1_5: Você pode adicionar um bloco para deixar o polvo feliz?
+        studio_k1_6: Crie sua própria história! Movimente o gato e o cachorro, e faça
+          com que eles conversem.
+        maze_wordsearch_k_1: Faça eu me mover para formar a palavra EAST
+        maze_wordsearch_k_2: Faça eu me mover para formar a palavra SOUTH
+        maze_wordsearch_k_3: Faça eu me mover para formar a palavra WEST
+        maze_wordsearch_k_4: Faça eu me mover para formar a palavra NORTH
+        maze_wordsearch_k_6: Movimente-me para o leste e então para o sul, para formar
+          a palavra JUMP
+        maze_wordsearch_k_9: Movimente-me para um lado, e então para o outro, para
+          formar a palavra CODE
+        maze_wordsearch_k_13: Movimente-me para um lado, e então para o outro, para
+          formar a palavra DEBUG
+        maze_wordsearch_k_15: Movimente-me para um lado, e então para o outro, para
+          formar a palavra ABOVE
+        maze_wordsearch_k_16: Movimente-me para um lado, e então para o outro, para
+          formar a palavra BELOW
+        maze_wordsearch_k_20: Isso é um teste! Movimente-me para um lado, e então
+          para o outro, para formar a palavra STORY
+    video:
+      name:
+        maze_intro: Introdução ao Labirinto
+        artist_intro: Introdução ao Artista
+        farmer_intro: Introdução à Fazendeira
+        flappy_intro: Introdução ao Flappy bird
+        loop_times: Bloco repita
+        loop_until: Bloco repita até
+        if: Bloco se
+        if_else: Bloco se/senão
+        function: Funções
+        loop_while: Bloco enquanto
+        loop_for: Bloco contador
+        parameters: Funções com Parâmetros
+        hoc_wrapup: Conclusão da Hora do Código
+        20_wrapup: Concluindo as 20-horas
+        Unplug1: O que é CC?
+        Unplug2: Pensamento Computacional
+        Unplug3: Programação em Papel Quadriculado
+        Unplug4: Algoritmos
+        Unplug5: Funções
+        Unplug6: Condicionais
+        Unplug7: Escrevendo uma canção
+        Unplug8: Abstração
+        Unplug9: Programação por revezamento
+        Unplug10: Internet
+        Unplug11: Resumo
+        C1_happy_maps_unplugged: Mapas divertidos
+        C1_moveitmoveit_unplugged: Criando caminhos
+        C1_bigevent_unplugged: O grande evento
+        C1_getting_loop: Repetindo
+        C1_pair_programming: Programação em duplas
+        C1_maze_intro_sequencing: Introdução à sequência dos labirintos
+        C1_maze_debugging: Depuração do labirinto
+        C1_bee_level_intro: Introdução ao nível da abelha
+        C1_artist_intro: Introdução ao Artista
+        C1_spelling_bee_intro: Introdução ao soletrando
+        C1_zuck_repeat_loop: Laços do labirinto
+        C1_bee_loops: Laços da abelha
+        C1_maze_loops: Laços do labirinto
+        C1_playlab_storytelling: Laboratório - Crie uma história
+        C1_planting_seed: Plantando uma semente
+        C1_building_foundating: Criando uma base
+        C2_maze_intro: Introdução ao Labirinto
+        C2_artist_intro: Introdução ao Artista
+        C2_zuck_repeat_loop: Laços do labirinto
+        C2_artist_loops: Laços do Artista
+        C2_bee_conditionals: Condicionais da abelha
+        C2_playlab_createstory: Laboratório - Crie uma história
+        C2_graph_paper: Programação em Papel Quadriculado
+        C2_conditionals_with_cards: Condicionais
+        C2_binary_bracelets: Pulseiras binárias
+        C2_replay_programming: Programação por revezamento
+        C2_paper_airplanes: Aviões de papel
+        C3_maze_intro: Introdução ao Labirinto
+        C3_artist_intro: Introdução ao Artista
+        C3_artist_functions: Funções do artista
+        C3_bee_functions: Funções da abelha
+        C3_bee_conditionals: Condicionais da abelha
+        C3_maze_conditionals: Condicionais do labirinto
+        C3_artist_nested_loops: Laços aninhados
+        C3_farmer_while: Laços enquanto
+        C3_bee_nested_loops: Laços aninhados
+        C3_bee_debugging: Depuração da abelha
+        C3_bounce: Pingue-pongue
+        C3_playlab_create_game: Laboratório - Crie um jogo
+        C3_computational_thinking: Pensamento computacional
+        C3_dice_race: Jogo de dados
+        C3_internet: Internet
+        C3_crowdsourcing: Crowdsourcing
+        C3_functional_suncatchers: Caça-sóis funcionais
+        C3_songwriting_with_parameters: Escrevendo uma canção com parâmetros
+    callout:
+      text:
+        drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco
+        run: Clique em "Executar" para iniciar seu programa
+        watch_again: Clique aqui para assistir o vídeo novamente
+        gray_block_explanation: Os blocos cinza não podem ser excluídos. Você consegue
+          resolver o desafio assim mesmo?
+        show_code_explanation: Clique aqui para ver o código do programa que você
+          está criando
+        instructions_repeat_explanation: As instruções de cada desafio são repetidas
+          aqui.
+        category_explanation: Você tem os mesmos blocos, mas agora eles estão organizados
+          em categorias
+        set_sprite_image: Anexe um bloco "defina personagem à imagem" ao bloco "quando
+          a história começa" para definir um personagem para essa história
+        studio_say_text: Digite, dentro das aspas, o que você quer que seu personagem
+          diga
+        jigsaw_click: Clique nesse bloco!

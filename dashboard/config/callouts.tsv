@@ -1,0 +1,15 @@
+Name	script_id	level_num	game_name	localization_key	element_id	qtip_config
+Drag Blocks 20	1	2_2	Maze	drag_blocks	[block-id='1']	{"position": {"my": "top left", "at": "bottom right", "adjust": {"x": 22, "y":60}}, "style": { "classes": "no-tip" }}
+Drag Blocks HoC	2	2_2	Maze	drag_blocks	[block-id='1']	{"position": {"my": "top left", "at": "bottom right", "adjust": {"x": 22, "y":60}}, "style": { "classes": "no-tip" }}
+Run 20	1	2_2	Maze	run	#runButton
+Run HoC	2	2_2	Maze	run	#runButton
+Watch Video Again 20	1	2_5	Maze	watch_again	[data-key='loop_times']	{"position": {"my": "bottom left", "at": "top right"}}
+Watch Video Again HoC	2	2_5	Maze	watch_again	[data-key='loop_times']	{"position": {"my": "bottom left", "at": "top right"}}
+Undraggable 20	1	2_8	Maze	gray_block_explanation	.blocklyUndeletable	{"position": {"my": "top middle", "at": "bottom middle"}}
+Undraggable HoC	2	2_8	Maze	gray_block_explanation	.blocklyUndeletable	{"position": {"my": "top middle", "at": "bottom middle"}}
+Show Code 20	1	2_13	Maze	show_code_explanation	#show-code-header	{"position": {"my": "center right", "at": "center left"}}
+Show Code HoC	2	2_13	Maze	show_code_explanation	#show-code-header	{"position": {"my": "center right", "at": "center left"}}
+Instructions 20	1	2_14	Maze	instructions_repeat_explanation	#prompt	{"position": {"my": "bottom left", "at": "top center"}}
+Instructions HoC	2	2_14	Maze	instructions_repeat_explanation	#prompt	{"position": {"my": "bottom left", "at": "top center"}}
+Category 20	1	2_1	Artist3	category_explanation	.blocklyTreeRoot	{"position": {"my": "center left", "at": "center right"}}
+Jigsaw Click	7	1	Jigsaw	jigsaw_click	[block-id='1']	{"position": {"my": "top left", "at": "center right"}}

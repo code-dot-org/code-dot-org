@@ -1,0 +1,60 @@
+%h1= t('signin_form.title')
+%p{style: "margin-bottom:0px"}
+  &nbsp;
+.row#signin
+  .span8
+
+    = show_flashes.html_safe
+
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      = f.hidden_field :hashed_email
+      .itemblock
+        .labelblock
+          = t('signin_form.login')
+        = f.text_field :login, autofocus: true
+      %br/
+      .itemblock
+        .labelblock
+          = t('signin_form.password')
+        = f.password_field :password
+      %br/
+      - if devise_mapping.rememberable?
+        %label
+          = f.check_box :remember_me, { style: 'margin: 0;'}
+          = t('signin_form.remember')
+      %p
+        &nbsp;    
+      = f.submit t('signin_form.submit'), class: "btn btn-primary btn-large"
+
+    %br/
+    
+    %h3= t('signin.try_heading')
+    .tryfirst
+      = render partial: 'shared/course_wide_block', locals: { id: "hoc" }
+    %div{style: "clear:both"}
+    %br/
+
+    .tryfirst
+      = render partial: 'shared/course_wide_block', locals: { id: "20hour" }
+
+  .span4
+    %div{ style: 'padding-left: 20px;  border-left: 1px solid black;' }= render "devise/shared/links"
+
+%br/
+%br/
+%br/
+%br/
+%br/
+%br/
+  
+:javascript
+  $( "#user_login" ).placeholder();
+
+
+  $( ".edit_user" ).on("submit", function(e){
+  });
+
+  $( "#new_user" ).on("submit", function(e){
+    hashEmail({ email_selector: '#user_login',
+                hashed_email_selector: '#user_hashed_email'});
+  });

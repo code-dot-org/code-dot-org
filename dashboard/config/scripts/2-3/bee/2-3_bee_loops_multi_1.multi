@@ -1,0 +1,20 @@
+name '2-3 bee loops multi 1'
+title 'Bee Loops Multiple Choice One'
+
+description '/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500'
+
+question 'Which blocks collect all of the nectar?'
+
+height '160'
+
+right '/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png'
+wrong '/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png'
+wrong '/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png'
+wrong '/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png'
+
+#wrong 'repeat 3 (F, F, F, get nectar)'
+#right 'repeat 3 (F, repeat 3 (get Nectar))'
+#wrong 'repeat 3 (F), repeat 3 (get nectar)'
+#wrong 'repeat 3 (F, F, F, repeat 3 (get nectar))'
+
+# http://staging.learn.code.org/s/course2/stage/9/puzzle/14

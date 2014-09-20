@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+# Assign all students that have a teacher but are not in a section to a 'default' section
+
+require_relative '../../config/environment'
+
+def followers_without_section
+ Follower.where(section_id: nil)
+end
+
+def users_with_followers_without_sections_count
+  followers_without_section.distinct.count(:user_id)
+end
+
+def users_with_followers_without_sections 
+  User.where('id in (select user_id from followers where followers.section_id is null)')
+end
+
+def create_default_sections
+  puts "fixing #{followers_without_section.count} followers without section belonging to #{users_with_followers_without_sections_count} unique users"
+
+  users_with_followers_without_sections.find_each do |teacher|
+    section = Section.create!(name: 'Default', user_id: teacher.id)
+    teacher.followers.where(section_id: nil).each do |follower|
+      follower.update_attributes!(section_id: section.id)
+    end
+  end
+
+  puts "now #{followers_without_section.count} followers without section belonging to #{users_with_followers_without_sections_count} unique users"
+end
+
+Follower.transaction do # throw this all in a transaction so we roll it back if something unexpected happens
+  create_default_sections
+  raise "run '#{$0} confirm' if you actually want this to happen" unless ARGV[0] && ARGV[0] == 'confirm'
+end

@@ -1,0 +1,12 @@
+name 'Circle to code'
+title 'Code from Circle'
+content1 '/script_assets/msm/Unit%202/exercise_1.png'
+
+question 'Pick the Racket code that comes from the circle of evaluation!'
+wrong '(+ 5 (* (- 6 8) 4))'
+wrong '(+ 5 (* 4 (- 8 6)))'
+wrong '(+ (* (- 8 6) 4) 5) '
+right '(+ 5 (* (- 8 6) 4))'
+
+
+

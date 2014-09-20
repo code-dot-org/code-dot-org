@@ -1,0 +1,26 @@
+%h2{:style=>'margin-top: 20px; margin-bottom: 0px'}=I18n.t :leaderboards_for_hoc
+
+- results=fetch_hoc_metrics
+
+#boards.col-50
+  %div{:style=>'width: 240px; float: left'}
+    %h3.special_heading{:style=>'margin-top: 20px'}=I18n.t :country
+    -results['countries'].keys.first(5).each do |country|
+      =country
+      %hr.grey_hr_fine{:style=>'margin-right:40px'}
+
+  %div{:style=>'width: 240px; float: left'}
+    %h3.special_heading{:style=>'margin-top: 20px'}=I18n.t :city
+    -results['cities'].keys.first(5).each do |city|
+      =city
+      %hr.grey_hr_fine{:style=>'margin-right:40px'}
+    %br
+    %div.desktop-feature{:style=>'text-align:right; margin-right:40px'}
+      %a{:href=>'/leaderboards'}
+        See all
+
+#voting.col-50
+  = view :votes, results:results
+
+%div{:style=>'clear: both; height:20px'}
+  &nbsp;

@@ -1,0 +1,13 @@
+name 'valid contracts multi'
+title 'Valid Contracts'
+content1 'Pick the best answer to the question.'
+
+question 'Which of these is a valid contract for the function circle?'
+wrong 'circle: size style color -> image'
+right 'circle: number string string -> image'
+wrong 'circle: number string string -> shape'
+wrong 'circle: 5 solid blue -> circle '
+
+
+
+

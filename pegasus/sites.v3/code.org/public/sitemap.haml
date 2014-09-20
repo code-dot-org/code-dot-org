@@ -1,0 +1,329 @@
+---
+title: Sitemap
+---
+
+- if rack_env != :production
+
+  #sitemap
+    %a{href:'http://code.org'}
+      %h1{style:'color:grey'} code.org
+
+    #box
+      %a{href:'http://studio.code.org'}
+        %h1 studio.code.org
+      %a{href:'http://studio.code.org/hoc/1'} Hour of Code
+      &bull;
+      %a{href:'http://studio.code.org/s/1/level/1'} K-8 Intro    
+      &bull;
+      %a{href:'http://studio.code.org/flappy/1'} Flappy
+      &bull;
+      %a{href:'http://staging.studio.code.org/s/course1'} course1
+      &bull;
+      %a{href:'http://staging.studio.code.org/s/course2'} course2
+      &bull;
+      %a{href:'http://staging.studio.code.org/s/course3'} course3
+
+
+      %br
+      %a{href:'http://studio.code.org/users/sign_up'} Student signup
+      &bull;
+      %a{href:'http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher'} Teacher signup
+      &bull;
+      %a{href:'http://studio.code.org/users/sign_in'} Sign in
+      &bull;
+      %a{href:'http://studio.code.org/join'} /join
+
+      %br
+      %a{href:'http://studio.code.org/users/auth/facebook'} Facebook signin
+      &bull;
+      %a{href:'http://studio.code.org/users/auth/twitter'} Twitter signin
+      &bull;
+      %a{href:'http://studio.code.org/users/auth/google_oauth2'} Google+ signin
+      &bull;
+      %a{href:'http://studio.code.org/users/auth/windowslive'} Windows live signin
+      &bull;
+      %a{href:'http://studio.code.org/users/password/new'} Forgot password
+
+      %br
+      %a{ href:'http://studio.code.org/users/edit'} My Account
+      &bull;
+      %a{href:'http://studio.code.org/followers/manage'} Manage Students
+      &bull;
+      %a{href:'http://studio.code.org/followers/sections'}  Manage Sections
+      &bull;
+      %a{href:'http://studio.code.org/followers'}  Progress Dashboard
+      &bull;
+      %a{href:'http://studio.code.org/stats/students'} Recent Activity
+      &bull;
+      %a{href:'http://studio.code.org/redeemprizes'} Redeem Prizes
+
+      %br
+      %h1 admin
+      %a{href:'http://staging.studio.code.org/games'} Games
+      &bull;
+      %a{href:'http://staging.studio.code.org/concepts'} Concepts
+      &bull;
+      %a{href:'http://staging.studio.code.org/videos'} Videos
+      &bull;
+      %a{href:'http://staging.studio.code.org/admin/usage'} Recent Activity
+      &bull;
+      %a{href:'http://staging.studio.code.org/frequent_unsuccessful_level_sources'} Feedback System
+      
+      %br
+      %a{href:'http://staging.studio.code.org/s'} Scripts
+      &bull;
+      %a{href:'http://staging.studio.code.org/s?rake=1'} Update All Scripts
+      &bull;
+      %a{href:'http://staging.studio.code.org/admin/stats'} Admin Stats
+      &bull;
+      %a{href:'http://staging.studio.code.org/admin/gallery'} Gallery
+      &bull;
+      %a{href:'http://staging.studio.code.org/games/25/levels' } Listing Levels
+      &bull;
+      %a{href:'http://staging.studio.code.org/games/23/levels' } Listing Levels (artist)
+
+      %br
+      %a{href:'http://staging.studio.code.org/levels/new'} Build New Level
+      &bull;  
+      %a{href:'http://staging.studio.code.org/levels/new?type=Maze'} Build a Maze Level
+      &bull; 
+      %a{href:'http://staging.studio.code.org/levels/new?type=Karel'} Build a Farmer/Bee Level
+      &bull;
+      %a{href:'http://staging.studio.code.org/levels/new?type=Artist'} Build an Artist Level
+
+      %h1 Course 1
+      %a{href:'http://staging.studio.code.org/s/course1/level/next'} Play Course 1
+      &bull;
+      %a{href:'http://staging.studio.code.org/s/course1/edit'} Edit Course 1 Script
+      &bull;            
+      %a{href:'http://staging.studio.code.org/s/course1'} View Course 1 Levels
+
+      %h1 Course 2
+      %a{href:'http://staging.studio.code.org/s/course2/level/next'} Play Course 2
+      &bull;
+      %a{href:'http://staging.studio.code.org/s/course2/edit'} Edit Course 2 Script
+      &bull;
+      %a{href:'http://staging.studio.code.org/s/course3'} View Course 2 Levels
+
+      %h1 Course 3
+      %a{href:'http://staging.studio.code.org/s/course3/level/next'} Play Course 3
+      &bull;
+      %a{href:'http://staging.studio.code.org/s/course3/edit'} Edit Course 3 Script
+      &bull;
+      %a{href:'http://staging.studio.code.org/s/course3'} View Course 3 Levels
+
+    #box
+      %a{href:'http://code.org/learn'} 
+        %h1 /learn (Learn an Hour of Code)
+      %a{href:'/learn/beyond'} Beyond One Hour
+      &bull;
+      %a{href:'/learn/local'} Find Local Schools + Camps
+
+    #box
+      %a{href:'/educate/'} 
+        %h1 /educate
+      %a{href:'/educate/20hr'} 20hr
+      &bull;
+      %a{href:'/educate/blurbs'} blurbs
+      &bull;
+      %a{href:'/educate/curriculum'} curriculum
+      &bull;
+      %a{href:'/educate/districts'} districts
+      &bull;
+      %a{href:'/educate/es'} es
+      &bull;
+      %a{href:'/educate/hs'} hs   
+      &bull;
+      %a{href:'/educate/marketingkit'} marketingkit
+      &bull;
+      %a{href:'/educate/ms'} ms  
+      &bull;
+      %a{href:'/educate/stipendform'} stipendform  
+      &bull;
+      %a{href:'/educate/3rdparty'} 3rdparty  
+      &bull;
+      %a{href:'/educate/hoc'} hoc 
+      &bull;
+      %a{href:'/educate/inspire'} inspire 
+      &bull;
+      %a{href:'/educate/videos'} videos 
+      &bull;
+      %a{href:'/educate/partner-districts'} partner-districts 
+
+      %a{href:'/educate/pd'} 
+        %h1 /educate/pd
+      %a{href:'/educate/pd/faq'} faqs
+      &bull;
+      %a{href:'/educate/pd/boston'} boston
+      &bull;
+      %a{href:'/educate/pd/chicago'} chicago
+      &bull;
+      %a{href:'/educate/pd/denver'} denver
+      &bull;
+      %a{href:'/educate/pd/fotlauderdale'} fort lauderdale
+      &bull;
+      %a{href:'/educate/pd/dc'} greater dc
+      &bull;
+      %a{href:'/educate/pd/nyc'} new york city
+      &bull;
+      %a{href:'/educate/pd/seattle'} seattle
+      &bull;
+      %a{href:'/educate/pd/spokane'} spokane
+
+    #box
+      %h1 /curriculum
+      %a{href:'/curriculum/csp'} CSP
+      &bull;
+      %a{href:'/curriculum/msm'} MSM
+      &bull;
+      %a{href:'/curriculum/mss'} MSS
+      &bull;      
+      %a{href:'/curriculum/k-1'} k-1
+      &bull;
+      %a{href:'/curriculum/2-3'} 2-3
+      &bull;
+      %a{href:'/curriculum/4-5'} 4-5
+
+    #box
+      %a{href:'/promote'}
+        %h1 /promote
+      %a{href:'/promote/az'} az
+      &bull;
+      %a{href:'/promote/ca'} ca
+      &bull;
+      %a{href:'/promote/wa'} wa
+      &bull;
+      etc.
+
+      %a{href:'/action'}
+        %h1 /action
+      %a{href:'/action/make-cs-count'} make-cs-count
+      &bull;
+      %a{href:'/action/brown-letter'} brown-letter
+
+    #box
+      %a{href:'/about'} 
+        %h1 /about
+      %a{href:'/about/advisors'} Advisors
+      &bull;
+      %a{href:'/about/donors'} Donors
+      &bull;
+      %a{href:'/about/jobs'} Jobs
+      &bull;
+      %a{href:'/about/news'} News
+      &bull;
+      %a{href:'/about/partners'} Partners
+      &bull;
+      %a{href:'/about/team'} Team
+
+      %br
+      %a{href:'/about/leadership'} Leadership
+      &bull;
+      %a Bobby Schnabel
+      &bull;
+      %a Brad Smith
+      &bull;
+      %a Hadi Partovi
+      &bull;
+      %a Jeff Wilke
+      &bull;
+      %a Maggie Johnson
+      &bull;
+      %a Robert Runcie
+
+    #box 
+      %h1 misc
+      %a{href:'/20hrvolunteer'} /20hrvolunteer
+      &bull;
+      %a{href:'/certificates'} /certificates
+      &bull;
+      %a{href:'/congrats'} /congrats
+      &bull;
+      %a{href:'/contact'} /contact
+      &bull;
+      %a{href:'/district-partner'} /district-partner
+      &bull;
+      %a{href:'/donate'} /donate
+      &bull;
+      %a{href:'/faq'} /faq
+      &bull;
+      %a{href:'/girls'} /girls
+      &bull;
+      %a{href:'/help'} /help
+      &bull;
+      %a{href:'/hints'} /hints   
+      &bull;
+      %a{href:'/idaho'} /idaho
+      &bull;
+      %a{href:'/loc'} /loc
+      &bull;
+      %a{href:'/leaderboards'} /leaderboards
+      &bull;
+      %a{href:'/newpolicy'} /newpolicy
+      &bull;
+      %a{href:'/privacy'} /privacy
+      &bull;
+      %a{href:'/quotes'} /quotes
+      &bull;
+      %a{href:'/schools/new'} /schools/new
+      &bull;
+      %a{href:'/sotw'} /sotw
+      &bull;
+      %a{href:'/tos'} /tos
+      &bull;
+      %a{href:'/translate'} /translate
+      &bull;
+      %a{href:'/totm'} /totm
+
+
+  %script{src:'/js/jquery.qtip-1.0.0-rc3.js'}
+  %script{:src=>'http://www.websnapr.com/js/websnapr.js'}
+
+  :javascript
+    // Create the tooltips only on document load
+    $(document).ready_not(function() 
+    {
+      /*
+       * You'll need your own API key, don't abuse mine please!
+       * Get yours here: http://www.websnapr.com/free_services/
+       */
+      var apiKey = '4GgeR45g4xN4';
+
+      // Notice the use of the each method to gain access to each element individually
+      $('#sitemap a').each(function()
+      {
+        // Grab the URL from our link
+        var url = encodeURIComponent( $(this).attr('href') ),
+
+        // Create image thumbnail using Websnapr thumbnail service
+        thumbnail = $('<img />').attr({
+          src:'http://images.websnapr.com/?url=' + url + '&key=' + apiKey + '&hash=' + encodeURIComponent(websnapr_hash),
+          alt:'Loading thumbnail...',
+          width: 202,
+          height: 152
+        });
+
+        // Setup the tooltip with the content
+        $(this).qtip(
+        {
+          content: thumbnail,
+          position: {
+            corner: {
+              tooltip:'bottomMiddle',
+              target:'topMiddle'
+            }
+          },
+          style: {
+            tip: true, // Give it a speech bubble tip with automatic corner detection
+            name:'cream'
+          }
+        });
+      });
+    });
+
+
+
+
+
+
+

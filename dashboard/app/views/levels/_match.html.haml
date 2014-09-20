@@ -1,0 +1,342 @@
+.unplugged.match
+
+  - data = @level.properties
+
+  %h2!= match_t(data['title'])
+  %p.content1!= match_t(data['content1']) if ! data['content1'].blank?
+  %p.content2!= match_t(data['content2']) if ! data['content2'].blank?
+  %p.content3!= match_t(data['content3']) if ! data['content3'].blank?
+
+  .buttons
+    %a.btn.btn-large.btn-primary.next-stage.submitButton
+      Submit
+
+  %br/
+
+  .clear
+
+  - data['answers'].each_with_index do |answer, i|
+    - answer['index'] = i
+
+  - # Shuffle answers until they are different to real answers.
+  - if data['answers'].length > 1   # avoid infinite loop
+    - begin shuffled_answers = data['answers'].shuffle end until (shuffled_answers && shuffled_answers != data['answers'])
+  - else
+    - shuffled_answers = data['answers']
+
+  - height = data['height'] || '20'
+  - giantmark_height = height.to_i > 72 ? 72 : 20
+  - gap_height = height.to_i/2 - giantmark_height/2
+
+  .mainblock
+    .column
+      %ul#questions
+        - data['questions'].each do |question|
+          %li{style: "height: #{height}px"}!= match_t(question['text'])
+    .column#answerdest
+      %ul#slots.draggablecolumn
+        - shuffled_answers.each do |answer|
+          %li.emptyslot{style: "height: #{height}px"}
+            .giantmark
+              .gap{style: "height: #{gap_height}px"}
+              .text{style: "font-size: #{giantmark_height}px; line-height: #{giantmark_height}px"}
+                ?
+
+    .column#correctmarkscolumn
+      %ul#correctmarks
+        - data['questions'].each_with_index do |question, index|
+          %li.correctmark{style: "height: #{height}px"}
+            .xmark{style: "display: none", id: "xmark_#{index}"}
+              %b X
+
+    .column
+      %ul#answers.draggablecolumn
+        - shuffled_answers.each do |answer|
+          %li.answer.answerlist{style: "height: #{height}px", originalIndex: answer['index']}!= match_t(answer['text'])
+
+    .clear
+
+  .buttons
+    %a.btn.btn-large.btn-primary.next-stage.submitButton
+      Submit
+
+  %div{:style=>'display:none'}
+    #error-dialogcontent
+      .modal-content
+        %p.dialog-title
+          =t("match.wrong_title")
+        %p
+          =t("match.wrong_body")
+        .farSide
+          %button#ok-button.secondary
+            =t("dialog.ok")
+
+    #pre-dialogcontent
+      - if data['pre_image']
+        .modal-image{style: "margin-top: 0px"}
+          != match_t(data['pre_image'])
+      .modal-content
+        - if data['pre_image'].blank?
+          - adjustLayoutClass = "unindentContent"
+        - else
+          - adjustLayoutClass = ""
+        %p.dialog-title{class: adjustLayoutClass}
+          != match_t(data['pre_title']) if data['pre_title']
+        %p{class: adjustLayoutClass}
+          != match_t(data['pre_body']) if data['pre_body']
+        - if data['pre_ani']
+          .aniGif.example-image{style: "overflow:hidden"}
+            != match_t(data['pre_ani'])
+        .farSide
+          %button#ok-button.secondary
+            =t("dialog.ok")
+
+
+    #success-dialogcontent
+      .modal-content
+        %p.dialog-title
+          =t("match.correct_title")
+        %p
+          =t("match.correct_body")
+        .farSide
+          %button#ok-button.secondary
+            =t("dialog.ok")
+
+= render partial: 'levels/common_audio'
+
+:javascript
+
+  jQuery.fn.swap = function(b){
+    // method from: http://blog.pengoworks.com/index.cfm/2008/9/24/A-quick-and-dirty-swap-method-for-jQuery
+    b = jQuery(b)[0];
+    var a = this[0];
+    var t = a.parentNode.insertBefore(document.createTextNode(''), a);
+    b.parentNode.insertBefore(a, b);
+    t.parentNode.insertBefore(b, t);
+    t.parentNode.removeChild(t);
+    return this;
+  };
+
+  function dialogHidden()
+  {
+    if (dialogType == "success" && lastServerResponse.nextRedirect)
+    {
+      window.location.href = lastServerResponse.nextRedirect;
+    }
+
+    if (dialogType == "error")
+    {
+      adjustScroll();
+    }
+  }
+
+  function showDialog(type)
+  {
+    dialogType = type;
+
+    var dialog = new Dialog({ body: "", onHidden: dialogHidden });
+
+    // use our prefabricated dialog content
+    $(".modal-body").append($("#" + type + "-dialogcontent").clone(true));
+
+    // clicking the okay button in the dialog box dismisses it
+    $(".modal-body #ok-button").click(function() {
+      dialog.hide();
+    });
+
+    dialog.show();
+  }
+
+  function adjustScroll()
+  {
+    if (adjustedScroll)
+      return;
+
+    var win = $(window);
+    var el = $('.mainblock');
+    var winPos = win.scrollTop() + win.height();
+    var elPos = el.offset().top + el.height() - 10;
+
+    console.log(winPos, elPos);
+
+    if (winPos < elPos)
+    {
+      console.log("scroll into view!");
+      $('html, body').animate({
+        scrollTop: $(".submitButton:first").offset().top - 10
+      }, 1000);
+    }
+
+    adjustedScroll = true;
+  }
+
+  var solution = "none";    // "none", "wrong", "right"
+  var buttonEnabled = true;  // avoid multiple simultaneous submissions
+  var dialogType = null;
+  var adjustedScroll = false;
+
+  function enableButton(enable)
+  {
+    buttonEnabled = enable;
+
+    if (enable)
+      $('.submitButton').removeClass("disabled");
+    else
+      $('.submitButton').addClass("disabled");
+  }
+
+  $(function()
+  {
+    if ("#{data['pre_title']}" != "")
+    {
+      setTimeout(function() {
+        showDialog("pre");
+        }, 1000);
+    }
+
+    $("#answers li").draggable({ revert: "invalid", stack: ".answer" });
+
+    // set up the central list of empty slots.
+    $("#slots li").droppable({
+      activeClass: "active",
+      hoverClass: "hover",
+      accept: ".answerlist,.answerslot",
+      drop: function(event, ui)
+      {
+        CDOSounds.play('click');
+        // once an answer is in the central list of slots, it will just swap with whatever it's dragged onto
+        if (ui.draggable.hasClass("answerslot"))
+        {
+          // swap this empty slot and the answer dragged onto it
+          ui.draggable.swap(event.target);
+
+          // remove offset coordinates from this item
+          ui.draggable.css({'top': 'auto','left': 'auto'});
+        }
+        // when an answer is in the rightmost list of answers, it can be dragged in to replace an empty slot
+        // in the central list of slots.
+        else
+        {
+          var movingItem = ui.draggable.detach();
+
+          // replace target with this new item
+          $(event.target).replaceWith(movingItem);
+
+          // the new item is now droppable
+          movingItem.droppable();
+
+          // remove offset coordinates from the dragged item
+          movingItem.css({'top': 'auto','left': 'auto'});
+
+          // this class is no longer in the answer list
+          movingItem.removeClass("answerlist");
+
+          // this class can now be both dragged and a drop target for fellow answers in slots
+          movingItem.addClass("answerslot");
+
+          // this new item can now be dropped onto by other answers in the central list
+          movingItem.droppable({
+            accept: ".answerslot",
+            activeClass: "active",
+            drop: function(event, ui)
+            {
+              CDOSounds.play('whoosh');
+
+              // remove offset coordinates from the dragged item
+              ui.draggable.css({'top': '0px','left': '0px'});
+
+              // determine y difference between old location and new location of item that will be swapped out
+              var origY = $(event.target).offset().top;
+              var destY = $(ui.draggable).offset().top;
+              var diffY = destY - origY;
+
+              // swap this answer with the answer dropped onto it
+              ui.draggable.swap(event.target);
+
+              // move the target object back to its old location for a moment
+              $(event.target).css({'top': -diffY + 'px'})
+
+              // and animate back to its new location
+              $(event.target).animate({'top': '0px'});
+            }
+          });
+        }
+      }
+    });
+  });
+
+  $('.submitButton').click(function()
+  {
+    if (buttonEnabled)
+    {
+      enableButton(false)
+
+      var wrongAnswer = false;
+
+      var elements = $("#slots li");
+
+      for (index = 0; index < elements.length; index++)
+      {
+        value = elements[index];
+
+        var originalIndex = value.getAttribute("originalIndex");
+        if (originalIndex == null)
+        {
+          // nothing dragged in this slot yet
+          wrongAnswer = true;
+
+          $("#xmark_" + index).hide();
+        }
+        else if (originalIndex != String(index))
+        {
+          // wrong answer
+          wrongAnswer = true;
+
+          $("#xmark_" + index).show();
+        }
+        else
+        {
+          // correct answer
+          $("#xmark_" + index).hide();
+        }
+      }
+
+      solution = wrongAnswer ? "wrong" : "right";
+
+      if (solution == "wrong")
+      {
+        showDialog("error");
+        CDOSounds.play('failure');
+      } else {
+        CDOSounds.play('success');
+      }
+
+      if (solution != "none")
+      {
+        sendReport({
+          fallbackResponse: '#{@fallback_response.to_json}',
+          callback: '#{@callback}',
+          app: 'multi',
+          level: '#{@level.level_num}',
+          result: solution == "right",
+          testResult: solution == "right" ? 100 : 0,
+          onComplete: function()
+          {
+            if (!lastServerResponse.nextRedirect)
+            {
+              enableButton(true);
+            }
+
+            if (lastServerResponse.videoInfo)
+            {
+              showVideoDialog(lastServerResponse.videoInfo);
+            }
+            else if (lastServerResponse.nextRedirect)
+            {
+              showDialog("success");
+            }
+          }
+       });
+      }
+    }
+  });

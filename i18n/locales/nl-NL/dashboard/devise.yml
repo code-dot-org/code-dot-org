@@ -1,0 +1,57 @@
+"nl":
+  devise:
+    confirmations:
+      confirmed: "Je emailadres is bevestigd."
+      send_instructions: "Je ontvangt binnen een paar minuten een email om je account te kunnen bevestigen."
+      send_paranoid_instructions: "Wanneer je emailadres al in onze administratie bestaat dan ontvang je binnen enkele minuteen een email om je account te bevestigen."
+    failure:
+      already_authenticated: "Je bent al ingelogd."
+      inactive: "Je account is nog niet geactiveerd."
+      invalid: "Verkeerd email-adres of wachtwoord."
+      invalid_token: "Verkeerd authenticatie-token."
+      locked: "Je account is geblokkeerd."
+      not_found_in_database: "Verkeer email-adres of wachtwoord."
+      timeout: "Je sessie is verlopen, log opnieuw in om verder te gaan."
+      unauthenticated: "Je moet inloggen of aanmelden voor je verder kunt gaan."
+      unconfirmed: "Je moet je account bevestigen voor je verder kunt gaan."
+    mailer:
+      confirmation_instructions:
+        subject: "Instructies voor de bevestiging van code.org"
+      reset_password_instructions:
+        subject: "Instructies voor het wijzigen van je code.org wachtwoord"
+      unlock_instructions:
+        subject: "Uitleg voor deblokkeren"
+    omniauth_callbacks:
+      failure: 'Kan je niet inloggen van %{kind} omdat %{reason}.'
+      success: 'Ingelogd op basis van je %{kind}-account.'
+    passwords:
+      no_token: "Je kunt deze pagina niet openen als je niet van een wachtwoord-reset-email komt. Wanneer je wel van een wachtwoord-reset-email komt, zorg dan dat je de volledige URL uit de mail gebruikt."
+      send_instructions: "Je krijgt binnen een paar minuten een email met uitleg hoe je je wachtwoord kunt resetten."
+      send_paranoid_instructions: "Als je emailadres al bestaat in onze administratie krijg je binnen een paar minuten een mailtje met een link om je wachtwoord te resetten."
+      updated: "Je wachtwoord is aangepast. Je bent nu ingelogd."
+      updated_not_active: "Je wachtwoord is aangepast."
+    registrations:
+      destroyed: "Tot ziens! Je account is opgezegd. Hopelijk tot snel."
+      signed_up: "Welkom! Je bent geregistreerd."
+      signed_up_but_inactive: "Je bent geregistreerd, maar je kunt nog niet inloggen omdat je account nog niet geactiveerd is."
+      signed_up_but_locked: "Je bent geregistreerd, maar je kunt niet inloggen omdat je account geblokkeerd is."
+      signed_up_but_unconfirmed: "We hebben een bericht met een bevestigingslink naar je email-adres gestuurd. Klik op de link om je account te activeren."
+      update_needs_confirmation: "Je account is bijgewerkt, maar je moet je nieuwe email-adres nog bevestigen. Check je email en klik op de bevestigingslink om je nieuwe adres te bevestigen."
+      updated: "Je account is bijgewerkt."
+    sessions:
+      signed_in: "Je bent ingelogd."
+      signed_out: "Je bent uitgelogd."
+    unlocks:
+      send_instructions: "Binnen een paar minuten krijg je een email met uitleg over het deblokkeren van je account."
+      send_paranoid_instructions: "Als je account bestaat krijg je binnen een paar minuten een mail waarin wordt uitgelegd hoe je het kunt deblokkeren."
+      unlocked: "Je account is gedeblokkeerd. Log in om verder te gaan."
+  errors:
+    messages:
+      already_confirmed: "al bevestigd, probeer in te loggen"
+      confirmation_period_expired: 'je moet binnen %{period} bevestigen, vraag een nieuwe aan'
+      expired: "is verlopen, vraag een nieuwe aan"
+      not_found: "niet gevonden"
+      not_locked: "niet geblokkeerd"
+      not_saved:
+        one: 'Door 1 fout kon %{resource} niet opgeslagen worden:'
+        other: 'Door %{count} fouten kon deze %{resource} niet worden opgeslagen:'

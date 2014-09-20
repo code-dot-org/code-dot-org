@@ -1,0 +1,94 @@
+code,string
+hello,Hello world
+computer_science,Computer Science
+computer_science_edweek,Computer Science Education Week
+csedweek_dates,"December 9-15, 2013"
+n_have_learned_an_hoc,<h1>#</h1><h3>have learned an</h3><h2>HOUR of CODE</h2>
+anybody_can_learn,Anybody can learn.
+learn_now,Learn Now
+petition_message,Sign your name if you think every student in every school should have the opportunity to learn computer science
+petition_sign_message,"If you agree, sign your name.  Join # others."
+name,Name
+email,Email
+zipcode,ZIP code or country
+submit,Submit
+twentyhours_heading,Try our Intro to Computer Science Course
+twentyhours_text,Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course.
+twentyhours_trynow,Try now
+view_english_site,View English site
+non_english_tutorials,Tutorials translated into multiple languages:
+write_your_first_program,Write your first computer program
+learn_cs_concepts,"Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then statements, and basic algorithms."
+all_ages,All ages
+beginner,Beginner
+n_participants,# participants
+go,Go
+thank_you_,Thank you!
+congratulations,Congratulations!
+congratulations_on_completing_hoc,Congratulations on completing One Hour of Code.
+get_a_certificate_of_achievement,Get a certificate of achievement
+enter_valid_email,Please enter a valid email address
+get_a_certificate_message,We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond One Hour</a>
+thanks_for_submitting,Thanks for submitting!
+if_you_enjoyed,"If you enjoyed learning, ask friends to try it too!  We want the whole world to learn."
+personalize_certificate,Personalize your certificate
+share_achievement,Share your achievement
+beyond_hour_message,Here is more information about how to <a href='/learn/beyond'>Learn beyond One Hour</a>
+leaderboards_for_hoc,Leaderboards for the Hour of Code.
+country,Country
+city,City
+gender,Gender
+boys,Boys
+girls,Girls
+give_my_hour,Give my Hour to:
+girls_team,Girls' Team
+boys_team,Boys’ Team
+tell_the_world,Tell the world!
+thanks_for_voting,Thanks for voting!
+share_on_facebook,Share on Facebook
+share_on_twitter,Share on Twitter
+beyond_an_hour,Beyond an HOUR OF CODE >
+get_started,Get Started
+i_agree,I agree
+participant_select,- Select -
+participant_student,Student
+participant_parent,Parent
+participant_educator,Educator
+participant_engineer,Software Engineer
+participant_other,None of the Above
+i_am_a,I am a
+never_spam,We'll never spam you
+enter_country,Enter country if outside the United States
+petition_thankyou,Thank you for signing the petition
+carousel_heading_international,Tutorials in your language
+continue_learning_header,Continue learning beyond One Hour
+continue_learning_body,"There are lots of options.  You can learn online, or at a local school, or summer camp."
+learn_online,Learn online
+learn_classes,Find local classes
+hoc_is_here,The #HourOfCode is here - check it out! @codeorg
+just_did_hoc,I just did the #HourOfCode - check it out! @codeorg
+learn_hoc,Learn an Hour of Code
+beyond_hoc,Beyond One Hour
+what_gender,What gender are you?
+girl,Girl
+boy,Boy
+help_recruit_coders,Help us recruit more coders to your team!
+help_recruit,Help us recruit more coders!
+lines_of_code,OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
+lines_of_code_alt,<b>#</b> LINES OF CODE WRITTEN BY STUDENTS
+who_has_done_hoc,Who has done the #HourOfCode? @codeorg
+hoc_leaderboards,The Hour of Code Leaderboards
+students_and_lines,%{students} students have done the Hour of Code and written %{lines} lines of code.
+start_hoc,Start the Hour of Code now
+contact_form_topic_press,Press/media (interview or speaking engagement)
+contact_form_topic_student,I’m a student
+contact_form_topic_parent,I’m a parent
+contact_form_topic_teacher,I’m a teacher/educator
+contact_form_topic_outside_us,I’m outside the U.S.
+contact_form_topic_contribution,Charitable contribution
+contact_form_topic_partner,I’d like to partner
+contact_form_topic_other,Other
+contact_form_label_topic,Topic
+contact_form_label_email,Your email address
+contact_form_label_message,Message
+contact_form_label_submit,Send Message

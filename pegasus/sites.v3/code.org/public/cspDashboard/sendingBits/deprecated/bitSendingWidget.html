@@ -1,0 +1,158 @@
+<html>
+<head>
+	 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<title></title>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://www.parsecdn.com/js/parse-1.2.15.min.js"></script>
+	<script src="js/code.org.js"></script>
+	<script>
+		var localId, roomId, friendId;
+
+		$(document).ready(function(){
+			console.log("READY");
+			loadVarsFromLocalStorage();
+
+		});
+
+		function loadVarsFromLocalStorage(){
+			localId = localStorage.getItem("localId");
+			roomId = localStorage.getItem("roomId");
+			friendId = localStorage.getItem("friendId");
+
+			// var roomIdForDisplay="";
+			// if(roomId!=null){
+			// 	roomIdForDisplay = roomId.substr(roomId.indexOf("_")+1, roomId.length)
+
+			// }
+
+			$("#roomname").val(roomId);
+			$("#localname").val(localId);
+			$("#connectedTo").val(friendId);
+
+			refreshFriendList();
+
+		}
+	
+
+		function handleFriendList(friendList){
+			log("online: "+friendList);
+			var str = "";
+			for(var key in friendList){
+				
+				str += "<input type=radio name='friendChoice' value='"+friendList[key]+"'>"+friendList[key]+"<br>";
+			}
+			$("#friendListArea").html(str);
+		}
+		
+		//add name to list of people in room
+		// add a db row for room:username to receive messages.
+		function addToRoomList(peopleList){
+			console.log('got people list: '+peopleList);
+
+			//if peopleList is null it means a get on roomId returned null
+			if(peopleList==null){
+				console.log("peopleList is null")
+				// should make a new list with localId in it
+				peopleList = new Array();
+				peopleList[0]=localId;
+			}
+			else{
+				// look for localId in list return if in already
+				console.log("looking for localId in peoplelist...")
+				for(var i=0; i<peopleList.length; i++){
+					if(peopleList[i]==localId){
+						console.log(localId+" already in the room. returning.");
+						refreshFriendList();
+						return;
+					}
+				}
+				// append localId to list of names 
+				peopleList[peopleList.length]=localId;
+
+			}
+			console.log("attempting to update or create "+roomId+"->"+peopleList);
+			//updateOrCreate will make a new list or replace the old list
+			remoteStorage.updateOrCreate(roomId, peopleList);
+
+			
+			refreshFriendList();
+			
+		}
+
+		function connectToRoom(){
+
+			localId = $("#localname").val();
+			roomId = $("#roomname").val();
+			localStorage["localId"]=localId;
+			localStorage["roomId"]=roomId;
+
+			// add this person to the list of people in room
+			// will create the room list if it doesn't exist
+			remoteStorage.getItem(roomId, addToRoomList)
+
+			// create an  entry for the person to receive messages
+			// NOTE: it's ok for this to happen async since person's
+				// input queue is decoupled from room list
+				// this should be change
+			remoteStorage.updateOrCreate(roomId+":"+localId, "//empty//");
+
+			
+			//only add if not there already
+			// get List from roomId
+				//process list looking for localId
+			
+
+
+		}
+
+		function refreshFriendList(){
+			roomId = $("#roomname").val(); //get incase not set yet
+			remoteStorage.getItem(roomId, handleFriendList);
+		}
+		var connectionStr;
+
+		
+
+		function sendBits(){
+			friendId = friendId = $("input:radio[name='friendChoice']:checked").val();
+			log("trying to connect to: "+friendId);
+
+			var msg = $("#bitsToSend").val();
+			log("attempting to send: "+msg+" to "+friendId);
+			connectionStr = roomId+":"+friendId;
+			remoteStorage.updateItem(connectionStr, msg);
+		}
+
+		function getBits(){
+
+		}
+
+
+		
+
+		function log(msg){
+			console.log(msg);
+		}
+	</script>
+	<style>
+
+	</style>
+</head>
+<body>
+
+<h2>Sending Bits</h2>
+
+Connect As:<br>
+Room name: <input type=text id="roomname">
+Your name: <input type=text id="localname">
+<button id="connect" onClick="connectToRoom()">Join</button><br/><br/>
+<button onClick="refreshFriendList()">refresh friend list</button>
+<br>
+Select a friend:<div id='friendListArea'>No friends</div>
+<br>
+Bits to Send: <input type=text id="bitsToSend"><button onClick="sendBits()">send bits to selected</button><br>
+Recv'd bits: <input type=text id="recvdBits"><button onClick="getBits()">get Bits</button>
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-06-13T21:36:31.000Z",
+  "level_num": "custom",
+  "user_id": 18,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
+    "instructions": "Help the bird catch the naughty pig by moving it forward",
+    "start_direction": "2",
+    "step_mode": 1
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
+</Maze>

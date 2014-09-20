@@ -1,0 +1,2 @@
+v3/cdo-donors
+exclude_columns: ['amount_s','notes_s', 'sum_i']

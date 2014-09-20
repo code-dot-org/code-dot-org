@@ -1,0 +1,43 @@
+/**
+ * Replaces element with ID oldID with the HTML at newHTML
+ * Copies over attributes of old element into new one
+ * @param oldID
+ * @param newHTML
+ */
+function replaceWithElement(oldID, newHTML) {
+  var $oldElement = $('#' + oldID);
+
+  if (!$oldElement.length) {
+    throw new Error("Can't find element #" + oldID + " to replace");
+  }
+
+  var oldAttributes = $oldElement.prop("attributes");
+
+  var $newElement = $(newHTML);
+  $oldElement.before($newElement);
+  $oldElement.remove();
+  $newElement.attr('id', oldID);
+
+  $.each(oldAttributes, function() {
+    $newElement.attr(this.name, this.value);
+  });
+}
+
+var addClickTouchEvent = function(element, handler) {
+  var wrapper = function(e) {
+    handler(e);
+    e.preventDefault();
+  };
+  element.on({
+    'touchstart': wrapper,
+    'click': wrapper
+  });
+};
+
+function onURLBlocked(base_url, callback) {
+  $("<img width=0 height=0>")
+      .on("error", callback)
+      .attr("src", base_url + "?" + Math.random())
+      .css("position", "absolute")
+      .appendTo("body");
+}

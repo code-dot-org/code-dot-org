@@ -1,0 +1,2 @@
+default: -r support/ -r step_definitions/
+

@@ -1,0 +1,59 @@
+---
+title: The XX Hour of Code - for the Year of Code
+tagline: ''
+theme: responsive
+responsivePadMobile: yes
+social:
+  'og:title' : 'The %{XX} Hour of Code is coming'
+  'og:description' : "For every student and classroom: learn how fun coding is in just one hour March 3 - 9."
+  'og:image' : ""
+  'og:image:width' : ""
+  'og:image:height' : ""
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+
+#top{:style=>"margin-top: 40px;"}
+  #video.col-63.desktop-pad-right
+    = view :hocvideo, id:"r990CWYtx_o"
+
+  #start.col-36{:style=>'text-align:center; margin-top: 0'}
+    .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
+      %h1{:style=>"font-size: 56px; line-height: 56px; margin: 0;"}<
+        =format_integer_with_commas(fetch_hoc_metrics['countries']['United Kingdom'].to_i).to_s
+      %h3{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 5px; margin-bottom: 0;"}<
+        =@config[:students]
+      %h2{:style=>"font-size: 36px; line-height: 36px; font-weight: 600; margin-top: 5px; margin-bottom: 0;"}<
+        =@config[:hoc]
+      %h4.desktop-feature{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 15px;"}<
+        =@config[:tag_line]
+    %a{:href=>'/learn', :style=>"text-decoration: none;"}
+      %button{:style=>"font-size: 19px; font-weight: 500; height: 50px;margin-top: 10px;"}
+        =@config[:start]
+
+    %br
+
+    %ul
+      %li= @config[:no_experience]
+      %li= @config[:no_computers]
+      %li= @config[:all_ages]
+
+%div{:style=>'clear:both'}
+
+%br= @config[:feedback_title]
+%ul
+  %li= @config[:feedback_1]
+  %li= @config[:feedback_2]
+  %li= @config[:feedback_3]
+  %li= @config[:feedback_4]
+  %li= @config[:feedback_5]
+  %li= @config[:feedback_6]
+  %li= @config[:feedback_7]
+  %li= @config[:feedback_8]
+  %li= @config[:feedback_9]
+
+.desktop-feature
+  %h2= @config[:leaders]
+  //= view :top_quotes

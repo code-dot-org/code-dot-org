@@ -1,0 +1,10 @@
+name 'K-1 Plant a Seed Multi 2'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png'
+height '100'
+
+question 'Which step should fill in the blank for this algorithm?'
+wrong '/script_assets/k_1_images/unplugged_images/brush-teeth.png'
+right '/script_assets/k_1_images/unplugged_images/cover-seed.png'
+wrong '/script_assets/k_1_images/unplugged_images/water-pot.png'

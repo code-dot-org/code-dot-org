@@ -1,0 +1,155 @@
+---
+layout: none
+theme: none
+---
+
+%div{style: "padding-left:20px"}
+ 
+  :css
+    td > span {
+      position: relative;
+    }
+    #bulk_import {
+      max-width: 600px;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    #bulk_import textarea {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 10px;
+    }
+
+    span.required {
+      display: none;
+    }
+
+    input.ng-invalid-required + span.required, 
+    select.ng-invalid-required + span.required {
+      display: inline;
+      position: absolute;
+      top: 20px;
+      left: 0px;
+      font-size: 0.6em;
+      font-weight: bold;
+      color: #900;
+    }
+
+  #bulk_import.panel.panel-default{"ng-show" => "bulk_import.editing"}
+    .panel-heading
+      = I18n.t('dashboard_students_add_multiple')
+    .panel-body
+      %textarea{"ng-model" => "bulk_import.students"}
+      %br/
+      %button.btn.btn-primary{"ng-click" => "add_bulk_import()"}= I18n.t('dashboard_action_done')
+      %button.btn.btn-white{"ng-click" => "clear_bulk_import()"}= I18n.t('dashboard_action_cancel')
+
+  %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type !== 'none'", style: "line-height: 36px;"}
+    = I18n.t('dashboard_students_new_section')
+
+  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'section.students.length > 0', "ng-form" => "allForm"}
+    %colgroup
+      %col{width: "300"}/
+      %col{width: "100"}/
+      %col{width: "100"}/
+      %col{width: "200"}/
+      %col{width: "250"}/
+    %tr
+      %th.manage-th{style: "padding-top:5px;padding-bottom:5px"}
+        %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
+      %th.manage-th{style: "padding-top:5px;padding-bottom:5px"}
+        %a{href: "", "ng-click" => "order = 'age'"}= I18n.t('dashboard_students_age')
+      %th.manage-th{style: "padding-top:5px;padding-bottom:5px"}
+        %a{href: "", "ng-click" => "order = 'gender'"}= I18n.t('dashboard_students_gender')
+      %th.manage-th{style: "padding-top:5px;padding-bottom:5px"}
+        %span{"ng-if" => "section.login_type !== 'none'"}= I18n.t('dashboard_students_secret')
+        %span{"ng-if" => "section.login_type === 'none'"}= I18n.t('dashboard_students_password')
+      %th.manage-th{style: "padding-top:5px;padding-bottom:5px; height:45px"}
+        %button.btn.btn-primary{"ng-click" => "save(section.students)", "ng-show" => "editingAny(section.students)", style: "float:left", "ng-disabled" => "allForm.$invalid"}= I18n.t('dashboard_action_save_all')
+    %tr{"ng-repeat" => "student in section.students | orderBy:order", "ng-form" => "form"}
+      %td
+        %span{"ng-hide" => "student.editing"}
+          %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}"} {{student.name}}
+          %div{"ng-show" => "student.username"}= I18n.t('dashboard_students_username', student_username: '{{student.username}}')
+          %div{"ng-show" => "student.email"}= I18n.t('dashboard_students_email', student_email: '{{student.email}}')
+        %span{"ng-show" => "student.editing"}
+          %input{"ng-model" => "student.name", placeholder: "Student Name", style: "width: 100%", type: "text", required: "true"}/
+          %span.required= I18n.t('dashboard_action_required')
+      %td
+        %span{"ng-hide" => "student.editing"} {{student.age}}
+        %span{"ng-show" => "student.editing"}
+          %select{"ng-model" => "student.age", "ng-options"=>"value for value in age_list", required: "true"}
+          %span.required= I18n.t('dashboard_action_required')
+      %td
+        %span{"ng-hide" => "student.editing"} {{gender_list[student.gender]}}
+        %span{"ng-show" => "student.editing"}
+          %select{"ng-model" => "student.gender", "ng-options"=>"k as v for (k,v) in gender_list"}
+      %td
+        %span{"ng-if" => "section.login_type !== 'none'"}
+          %button.btn.btn-white{"ng-click" => "student.showing_password = true",
+                                "ng-hide" => "student.editing || student.showing_password"}
+            &#x25BC;
+            = I18n.t('dashboard_students_show_secret')
+          %span{"ng-show" => "student.editing", style: "font-style:italic"}
+            = I18n.t('dashboard_students_auto_generated')
+          %span{"ng-show" => "!student.editing && student.showing_password"}
+            %img{"ng-if" => "section.login_type === 'picture'",
+                 "ng-src" => "/images/{{student.secret_picture_path}}",
+                 alt: "{{student.secret_picture_name}}",
+                 title: "{{student.secret_picture_name}}",
+                 height: 40}
+            %span{"ng-if" => "section.login_type === 'word'"} {{student.secret_word_1}} {{student.secret_word_2}}
+            %button.btn.btn-white{"ng-click" => "resetSecrets(student)"}= I18n.t('dashboard_students_reset_secret')
+        %span{"ng-if" => "section.login_type === 'none'"}
+          %button.btn.btn-white{"ng-click" => "student.editing_password = true",
+                                "ng-hide" => "student.editing || student.editing_password"}
+            = I18n.t('dashboard_students_reset_password')
+          %span{"ng-show" => "student.editing_password"}
+            %input{"ng-model" => "student.password", placeholder: "new password", style: "width: 100px", type: "text"}
+            %button.btn.btn-primary{"ng-click" => "save(student)" }= I18n.t('dashboard_action_save')
+      %td
+        %span{"ng-show" => "student.confirmDelete"}
+          = I18n.t('dashboard_action_confirm')
+          %button.btn.btn-danger{"ng-click"=>'del(student)'}= I18n.t('dashboard_action_delete_yes')
+          %button.btn.btn-white{"ng-click"=>'student.confirmDelete = false'}= I18n.t('dashboard_action_delete_no')
+        %span{"ng-hide" => "student.confirmDelete"}          
+          %button.btn.btn-white{"ng-click" => "edit(student)", "ng-hide" => "student.editing"}= I18n.t('dashboard_action_edit')
+          %button.btn.btn-primary{"ng-click" => "save(student)", "ng-show" => "student.editing", "ng-disabled" => "form.$invalid"}= I18n.t('dashboard_action_save')
+          %button.btn.btn-white{"ng-click" => "cancel(student)", "ng-show" => "student.editing"}= I18n.t('dashboard_action_cancel')
+          %button.btn.btn-danger{"ng-click" => "confirm_delete(student)", "ng-show" => "!student.editing && student.id"}= I18n.t('dashboard_action_delete')
+    %tr
+      %th{colspan: "4", style: "padding-top:5px;padding-bottom:5px"}
+      %th.manage-th{style: "padding-top:5px;padding-bottom:5px; height:45px"}
+        %button.btn.btn-primary{"ng-click" => "save(section.students)", "ng-show" => "editingAny(section.students)", style: "float:left", "ng-disabled" => "allForm.$invalid"}= I18n.t('dashboard_action_save_all')
+
+  %div{"ng-if" => "section.login_type !== 'none'"}
+    %h3{"ng-show" => 'section.students.length > 0'}
+      = I18n.t('dashboard_students_share_section')
+      %a{"ng-href" => "http://#{canonical_hostname('studio.code.org')}/sections/{{section.code}}", target: "_blank"}
+        http://#{canonical_hostname('studio.code.org')}/sections/{{section.code}}
+    %h3{"ng-show" => 'section.students.length > 0'}
+      %a{'ng-href' => "#/sections/{{section.id}}/print_signin_cards", target: "_blank"}
+        = I18n.t('dashboard_students_print_info')
+    %br/
+    %div{"ng-show" => "section.login_type === 'picture'"}
+      %p
+        = I18n.t('dashboard_students_secret_picture')
+      %p
+        = I18n.t('dashboard_students_reset_picture')
+    %div{"ng-show" => "section.login_type === 'word'"}
+      %p
+        = I18n.t('dashboard_students_secret_word')
+      %p
+        = I18n.t('dashboard_students_reset_word')
+
+  %br/
+  %br/
+  %div.jumbotron{'ng-show' => "section.id && section.login_type === 'none'", style: "line-height: 36px;"}
+    %p
+      = I18n.t('dashboard_students_join_link')
+      %a{"ng-href" => "http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}", target: "_blank"}
+        http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}
+    %p
+      = I18n.t('dashboard_students_no_email')
+

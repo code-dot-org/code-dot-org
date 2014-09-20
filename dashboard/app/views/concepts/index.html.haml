@@ -1,0 +1,20 @@
+%h1 Concepts
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th
+      %th
+  %tbody
+    - @concepts.each do |concept|
+      %tr
+        %td= link_to concept.name, concept
+        %td= data_t('concept.description', concept.name)
+        - if can? :update, concept
+          %td= link_to t('crud.edit'), edit_concept_path(concept)
+        - if can? :destroy, concept
+          %td= link_to t('crud.destroy'), concept, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+- if can? :create, Concept
+  = link_to t('crud.new_model', model: Concept.model_name.human), new_concept_path

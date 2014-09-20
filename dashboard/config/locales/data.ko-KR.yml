@@ -1,0 +1,528 @@
+"ko":
+  data:
+    script:
+      name:
+        20-hour:
+          desc: "유치원-중2(K-8) 학생들을 위한, 컴퓨터과학(Computer Science, 정보과학)"
+          Unplug1: 1 단계
+          Maze: 2 단계
+          Unplug2: 3 단계
+          Unplug3: 4 단계
+          Artist: 5 단계
+          Unplug4: 6 단계
+          Artist2: 7 단계
+          Unplug5: 8 단계
+          Farmer: 9 단계
+          Unplug6: 10 단계
+          Artist3: 11 단계
+          Unplug7: 12 단계
+          Farmer2: 13 단계
+          Unplug8: 14 단계
+          Artist4: 15 단계
+          Unplug9: 16 단계
+          Farmer3: 17 단계
+          Unplug10: 18 단계
+          Artist5: 19 단계
+          Unplug11: 20 단계
+        Hour of Code:
+          desc: Hour of Code
+          Maze: 1 단계
+        Edit Code:
+          desc: "코드 수정"
+          MazeEC: 1 단계
+        2014 Levels:
+          desc: 2014 Puzzles (beta)
+          Bounce: 1 단계
+        Builder Levels:
+          desc: User-Created Puzzles (beta)
+          Custom: 1 단계
+        Flappy Levels:
+          desc: "플래피 버드"
+          Flappy: 1 단계
+        Jigsaw Levels:
+          desc: Jigsaw (beta)
+          Jigsaw: 1 단계
+        Step Levels:
+          desc: Maze (beta)
+          MazeStep: Stage Step
+        edit-code:
+          desc: Edit Code (beta)
+          MazeEC: 1 단계
+        events:
+          desc: Bounce (beta)
+          Bounce: 1 단계
+          Studio: 2 단계
+        builder:
+          desc: User-Created Puzzles (beta)
+          Custom: 1 단계
+        flappy:
+          desc: "플래피 버드"
+          Flappy: 1 단계
+        jigsaw:
+          desc: Jigsaw (beta)
+          Jigsaw: 1 단계
+        step:
+          desc: Maze (beta)
+          MazeStep: Stage Step
+        wordsearch:
+          desc: Spelling Bee (beta)
+          WordSearch: 1 단계
+    game:
+      name:
+        Unplug1: "컴퓨터과학(정보과학) 소개"
+        Maze: "미로 퍼즐"
+        Multi: Multiple Choice Stuffs
+        Unplug2: "컴퓨터과학(정보과학)적 사고"
+        Unplug3: "모눈 종이 프로그래밍"
+        Artist: "예술가 퍼즐"
+        Unplug4: "알고리즘"
+        Artist2: "예술가 퍼즐 2"
+        Unplug5: "함수"
+        Farmer: "농부 퍼즐"
+        Unplug6: "조건/선택"
+        Artist3: "예술가 퍼즐 3"
+        Unplug7: "노래 만들기"
+        Farmer2: "농부 퍼즐 2"
+        Unplug8: "추상화"
+        Artist4: "예술가 퍼즐 4"
+        Unplug9: "릴레이 프로그래밍"
+        Farmer3: "농부 퍼즐 3"
+        Unplug10: "인터넷"
+        Artist5: "예술가 퍼즐 5"
+        Unplug11: "마무리"
+        MazeEC: "미로 퍼즐"
+        Bounce: "바운스"
+        Flappy: "플래피 버드"
+        Jigsaw: Jigsaw
+        MazeStep: Maze Step Mode
+        Wordsearch: Wordsearch
+    trophy:
+      name:
+        Bronze: "동"
+        Silver: "은"
+        Gold: "금"
+    concept:
+      description:
+        sequence: "순차"
+        if: "조건"
+        if_else: "선택"
+        loop_times: "반복(횟수)"
+        loop_until: "반복(~할 때까지)"
+        loop_while: "반복(~인 동안)"
+        loop_for: "카운터"
+        function: "함수"
+        parameters: "함수(값 전달)"
+    level:
+      instructions:
+        maze_2_2: '나쁜 돼지를 잡을 수 있게 도와줄 수 있겠어? "앞으로 이동" 블럭을 몇 개 모아서 붙인 다음, "프로그램 실행"을
+          누르면 돼. '
+        maze_2_1: "초록 돼지가 내 깃털들을 마구 헝클어 놓고 있어. 돼지를 찾을 수 있게 도와줘!"
+        maze_2_2_5: "길을 따라 움직여서, 바보 같은 돼지 녀석을 잡아줘. TNT 폭탄을 피하고, 깃털들이 헝클어지지 않도록 해야
+          돼!"
+        maze_2_3: "초록색 나쁜 놈에게 데려다 줘!(TNT 폭탄 조심)"
+        maze_2_4: "나쁜 돼지를 잡을 수 있게 도와줘, 침착하게 생각하면 되. 돼지를 못 잡으면, 화가 날 것 같아!"
+        maze_2_5: "블럭을 2개 만 더 사용해서, 돼지를 잡을 수 있는 방법이 있어. 어떻게 하는지 알아낼 수 있을까?"
+        maze_2_6: "블럭을 3개 만 사용해서, 자기 마음대로 돌아다니는 초록 돼지를 잡을 수 있게 해줘."
+        maze_2_7: 블럭을 최대한 적게 사용해서, 나쁜 돼지를 쫓아낼 수 있게 해줘. "반복(횟수)" 블럭을 한 개 이상 사용하면 될꺼야.
+        maze_2_8: '이 문제를 해결하려면 "반복" 블럭 안에 3개의 블럭을 넣어주면 되: 앞으로 이동, 앞으로 이동, 돌기.'
+        maze_2_9: '"반복(~할 때까지)" 블럭은, 짜증나는 돼지에게 도착~할 때까지, 계속 반복시켜 줄 꺼야.'
+        maze_2_10: "이번에는 마지막 연습이야 - 블럭을 4개 만 사용해서 해결 할 수 있겠어?"
+        maze_2_11: "여~어~러~부~운~~~. 나 좀비... 배고파... 해바라기 가지고 싶어... 블럭 5개 만 가지고 가능할까?"
+        maze_2_12: "이번 것도 비슷한데 약간 달라. 블럭을 5개만 가지고 가능하겠어?"
+        maze_2_13: '"만약" 블럭을 이용하면, 언제 돌아야 할지 판단할 수 있어. 힌트: 블럭을 1개 더 사용하면 되지만, 이번에
+          "만약" 블럭을 사용하는 방법을 배워야, 다음 퍼즐을 해결할 때 사용할 수 있어.'
+        maze_2_14: 음... 이번이 마지막 퍼즐이야!, "만약" 블럭하고 "반복" 블럭을 함께 사용해야 돼.
+        maze_2_15: 나... 해바라기... 가지고 싶어~! "만약" 블럭을 사용해서, 블럭을 최대한 적게 사용해서 해바라기로 보내 줘.
+        maze_2_16: "좋아... 한 번 더 해보자~ - 이번 것도 그렇게 어렵지는 않지만, 식충식물들을 조심해야 돼!"
+        maze_2_17: '"조건/선택" 블럭은, 검사를 한 다음에 그 결과에 따라 하나의 작업을 실행해 줘. 이 새로운 블럭을 이용해서,
+          나를 해바라기로 보내 줘.'
+        maze_2_18: '"조건/선택" 블럭을 다시 한 번 사용해 보자~, 한 번에 성공할 수 있을까?'
+        maze_2_19: "블럭을 3개 더 붙여서, 좀 더 복잡한 미로를 빠져나갈 수 있도록 할 수 있겠어? 네가 성공하면 난, 아무리 크고
+          복잡한 미로라고 하더라도 거뜬히 통과할 수 있을 거야."
+        turtle_1_1: "안녕! 나는 예술가야. 어떤 것이든지 그릴 수 있어. 회색 선을 따라 그림을 그리려면 블럭들을 몇 개만 더 사용하면
+          되."
+        turtle_1_2: '자! 이제, 사각형을 그려봐. 참고: "색 설정" 블럭을 사용하면 원하는 색을 사용할 수 있어.'
+        turtle_1_3: "블럭을 3개만 이용해서 사각형을 그려봐."
+        turtle_1_4: '사용할 때마다 색이 바뀌는 "랜덤 색" 블럭을 사용해서, 세 변의 색이 다른 삼각형을 그려봐. 힌트: 돌기 블럭을
+          사용할 때에는 회전할 각도를 입력해 주어야 해.'
+        turtle_1_5: "그럼 이번에는, 사각형 안에 삼각형이 들어있는 모양을 그려봐."
+        turtle_1_6: "이 삼각형과 사각형을 어떻게 그릴 수 있을까? 힌트: 삼각형을 먼저 그린 후, 사각형을 그리기 위해 얼마나 회전해야
+          할 지를 생각해야 해."
+        turtle_1_7: "자. 이제 좀더 어려운 것을 해보자. - 초록색 안경을 그릴 수 있을까? 사각형은 각 변의 크기가 100 픽셀이고
+          , 50 픽셀 만큼 떨어져 있고, 초록 선으로 그려야 해!"
+        turtle_1_8: "이 코드를 실행시켰을 때에는 어떤 일이 벌어질까? 나머지 그림을 완성시켜보자. 색은 실행시킬 때마다 달라진다."
+        turtle_1_9: "원을 그리려면, 물음표로 표시된 부분에 어떤 수를 넣어야 할까?"
+        turtle_1_10: '성공했구나! 이제, 그리고 싶은 그림을 그려봐. 몇 가지 재미있는 아이디어 : 막대기 모양, 해바라기 모양,
+          달팽이 나선 모양. 새로운 "선 굵기" 블럭을 사용해 재미있게 그려봐!'
+        turtle_4_1: '블럭을 3개만 가지고 각 변의 길이가 100 픽셀인 삼각형을 그릴 수 있을까요? 힌트: "반복" 블럭을 사용하면
+          됩니다.'
+        turtle_4_2: '이 퍼즐을 해결하려면 블럭을 1개만 더 추가하면 됩니다. 힌트 : 삼각형을 그리는 2개의 블럭이 주어져 있습니다.
+          "돌기" 블럭을 그 사이에 넣어 연결하고, 어느 정도 회전해야 하는지 알아내 보세요.'
+        turtle_4_3: 삼각형을 그리는 코드가 있습니다. "반복" 블럭과 "돌기" 블럭을 추가해서, 예쁜 꽃을 그릴 수 있을까요?
+        turtle_4_4: "이전 퍼즐과 같은 코드인데, 각각의 삼각형을 그린 다음에 36도 만 회전합니다. 몇 번 반복해야 할까요? (힌트:
+          360 도를 회전하면 처음 상태로 되돌아 옵니다.)"
+        turtle_4_5: "이전 퍼즐과 같은 코드인데, 36번 반복 회전합니다. 몇 도씩 회전 해야할까요? (힌트: 360 도를 회전하면
+          처음 상태로 되돌아 옵니다.)"
+        turtle_4_6: "블럭을 3개만 사용해서, 한 변의 길이가 20 픽셀인 사각형을 그릴 수 있을까요?"
+        turtle_4_7: "이전 퍼즐에서 사각형 그리는 코드를 그대로 가져왔습니다. 사각형을 10개 붙여 사다리 모양을 만들 수 있을까요?
+          힌트: 블럭을 2개 만 더 사용하면 가능합니다."
+        turtle_4_8: "이전 퍼즐의 답이 여기 있습니다. 2 개의 블럭을 더 붙여서 그림을 완성할 수 있을까요?"
+        turtle_4_9: "이전 퍼즐의 답이 여기 있습니다. 몇 도를 회전해야 그림을 완성할 수 있을까요? (몇 번 시도해 보면 쉽게 찾아낼
+          수 있습니다.)"
+        turtle_4_10: "이전 퍼즐의 답이 여기 있습니다. 몇 번 반복해야 그림을 완성할 수 있을까요?"
+        turtle_4_11: 다른 모양들을 만들기 위해, "돌기"/"반복" 블럭의 갯수나 코드를 바꿔보면서 여러 가지 그림을 그려 보세요.
+        maze_karel_1_1: 안녕하세요! 저는 농부입니다. 농장에 있는 밭을 고르게 만들어 식물들을 심고 싶어요. 흙더미로 이동해서
+          "치우기" 블럭을 사용하면 됩니다.
+        maze_karel_1_2: 자 이제! 구덩이로 이동한 후, "메우기" 블럭을 2번 사용해 구덩이를 메울 수 있게 도와주세요.
+        maze_karel_1_3: "블럭을 최대한 적게 사용해서, 흙더미를 치울 수 있는 방법을 알려주세요."
+        maze_karel_1_4: '4 개의 흙더미를 모두 치울 수 있도록 도와줄 수 있나요? 힌트: "반복" 블럭을 사용해 보세요.'
+        maze_karel_1_5: '5 번 메워야 하는 구덩이들을 모두 없앨 수 있도록 도와주세요. 힌트: "반복(~인 동안)" 블럭 안에
+          "반복(횟수)" 블럭을 넣으면 할 수 있습니다.'
+        maze_karel_1_6: 블럭을 최대한 적게 사용해서 모든 흙더미를 치울 수 있게 도와주세요. "반복(~인 동안)" 블럭에서 선택하면
+          흙더미 위에 있는지, 구덩이 위에 있는지를 판단해 반복 실행할 수 있습니다.
+        maze_karel_1_7: "와! 진짜 깊은 구덩이를 발견했어요! 이 구덩이를 없애려면 몇 번 메워야 할 지 모르겠네요. 구덩이를
+          없앨 때까지 메우는 프로그램을 만들 수 있을까요?"
+        maze_karel_1_8: "블럭을 최대한 적게 사용해서 밭 끝에 있는 구덩이를 메울 수 있게 도와주세요."
+        maze_karel_1_9: '흙더미를 모두 치울 수 있게 도와주세요. 블럭을 최대한 적게 사용하세요. 힌트: "반복(~인 동안)"
+          블럭을 사용해 보세요.'
+        maze_karel_1_10: 늦게까지 일을 하느라 어두워졌네요, 흙더미가 어디에 있는지 알수가 없어요. 이제 "반복(~인 동안)"
+          블럭을 사용할 수 없습니다. 밭을 가로질러 가면서 흙더미가 있으면 치울 수 있게 도와주세요.
+        maze_karel_1_11: '아직도 어둡습니다. 밭을 가로질러 가면서 흙더미가 있으면 치우고, 구덩이가 있으면 메울 수 있게 도와주세요.
+          힌트: "만약" 블럭의 메뉴를 사용해 보세요.'
+        turtle_2_1: "안녕하세요. 저는 예술가 좀비입니다. 그리기가 너무 좋아요! 특별한 색으로 사각형을 그릴 수 있게 도와주세요.
+          중요: 이전에 사용되었던 블럭들이 분류 되어있습니다."
+        turtle_2_2: 함수 사용 퍼즐에 온 것을 환영합니다. 함수 블럭을 사용하면, 새로운 블럭을 직접 만들어 사용할 수 있습니다!
+          "함수" 분류에서, 새로운 "사각형 그리기" 블럭을 찾아, 50x50 크기의 초록 사각형을 그려보세요.
+        turtle_2_3: '"반복" 분류에 있는 "반복(횟수)" 블럭을 사용해서, 100 픽셀 크기의 정사각형을 120도 만큼 씩 회전시켜
+          그려보세요. 랜덤 색도 사용하세요.'
+        turtle_2_4: "자 이제, 더 멋진 것을 만들어 봅시다. 100 픽셀 크기의 사각형 36개를 10 도씩 회전시켜서 그리는 코드로
+          수정하면 됩니다. 힌트: 더 빨리 움직이게 하려면 슬라이더를 이용하세요."
+        turtle_2_5: 50, 60, 70, 80, 90 픽셀 크기의 정사각형들을 그려보세요. "사각형 그리기" 함수 블럭을 5 번 사용면
+          됩니다.
+        turtle_2_6: '이번에는 사각형들을 그리기 위해서 카운터를 사용해 봅시다. 한 변의 길이가 카운터와 같은 사각형들을 그려야 합니다.
+          "카운터" 블럭을 사용하세요. 힌트: 변수 분류에 들어있습니다.'
+        turtle_2_7: '이제, 달팽이 나선을 그려봅시다. 하지만 블럭이 실행되지 않도록 되어있습니다. "카운터" 블럭을 사용해서 달팽이
+          나선을 그려 보세요. 반복 분류 안에는 "카운트 : " 블럭이 있고, 변수 분류에는 변수 "카운터" 가 있습니다.'
+        turtle_2_7_5: 이번에는 "눈사람 그리기" 함수가 있습니다.(함수 분류에 있음) 크기가 250, 100 인 눈사람 2개를 만들어
+          보세요.
+        turtle_2_8: 이번에는 잘 생각해야 합니다. "눈사람 그리기" 함수와, 동작 분류에 있는 "앞으로 점프" 블럭을 사용하세요.
+          3 개의 눈사람을 서로 다른 색으로 100 픽셀 만큼씩 띄워 그려보세요.
+        turtle_2_9: '"카운트 : " 블럭을 사용해, 110, 100, 90, 80, 70 크기의 눈사람 가족을 만드세요. 눈사람들은
+          60 픽셀 씩 떨어져 있어야 합니다.'
+        turtle_2_10: "이번에는 다양한 달팽이 나선을 그리는 연습을 해보세요. 회전하는 비율을 바꾸면 어떻게 될까요? 반복 실행 구조에서
+          랜덤 색으로 바꾸면 어떻게 될까요? 아무거나 그려보세요."
+        maze_karel_2_1: '밭에 있는 모든 흙더미와 구덩이를 없앨 수 있게 도와 주세요. "반복" 블럭을 활용하면 블럭을 여러 번
+          사용할 필요가 없습니다. 힌트: 반복 블럭 안에 다른 반복 블럭을 넣을 수 있습니다.'
+        maze_karel_2_2: '"메우기 5번"이라는 블럭을 새로 만들어 "함수" 분류에 넣어 두었습니다. 그걸 이용해서 구덩이를 메울
+          수 있게 도와주세요.'
+        maze_karel_2_3: '"메우기 5번" 함수 블럭을 이용해서, 모든 구덩이를 메울 수 있게 도와주세요. 함수 분류에서 "메우기
+          5번" 블럭을 가져와 사용하면 됩니다.'
+        maze_karel_2_4: '"치우기 7번" 함수의 내용을 만들어주세요. 그리고 그 함수로 흙더미를 모두 치울 수 있게 도와주세요.'
+        maze_karel_2_5: '"치우기 6번" 함수를 새로 만드세요. 그리고 그 함수로 흙더미를 모두 치울 수 있게 도와주세요.'
+        maze_karel_2_6: '"메우기 8번", "치우기 8번" 함수를 사용해서 구덩이를 메우고, 흙더미를 치울 수 있게 도와 주세요.'
+        maze_karel_2_7: "어머! 내 밭에 젖소가 있어요. 젖소를 피해서 흙더미를 치울 수 있는 새로운 함수를 만들어 주세요. 그
+          함수에 필요한 블럭들을 모두 넣으면 됩니다."
+        maze_karel_2_8: '"젖소 피해 치우기 1번" 함수를 이용해서, 모든 흙더미를 치울 수 있게 해 주세요.'
+        maze_karel_2_9: "위쪽으로 이동하면서 흙더미를 치울 수 있는 함수가 있습니다. 이 함수를 반복 블럭에 넣어서 모든 흙더미를
+          간단히 치울 수 있게 해주세요."
+        maze_karel_2_10: "밭을 가로질러 이동하는데, 2개의 함수를 이용해서 모든 흙더미와 구덩이들을 없앨 수 있도록 도와주세요."
+        turtle_3_1: 이번 퍼즐에는 "사각형 그리기" 함수와 "원 그리기" 함수가 정의되어 있습니다. 하지만, 함수가 정의되어 있다고
+          해서 실행되지는 않습니다. 사각형을 그리기 위해서는 "사각형 그리기" 블럭을 가져와 실행시켜야 합니다.
+        turtle_3_2: '"사각형 그리기" 함수를 살펴본 후, "삼각형 그리기" 함수를 만들어 보세요.'
+        turtle_3_3: "고양이 주변에는 삼각형 울타리를 그리고, 젖소 주변에는 사각형 울타리를 그려주세요. 팁: 몇 번만 시도해 보면
+          알게 됩니다."
+        turtle_3_4: '"사각형 그리기" 블럭, "삼각형 그리기" 블럭을 이용해서 사자 집을 어떻게 만들지 생각해 보세요.'
+        turtle_3_5: '이제, "집 그리기" 블럭을 새로 만들고, 그 블럭을 이용해서 고양이 2마리를 위한 집을 만들어 보세요. 힌트:
+          "함수 이름" 이 적혀있는 블럭을 이용해서 새로운 블럭을 만들고, 원하는 이름을 넣어서 사용하면 됩니다.'
+        turtle_3_6: '"사각형 그리기" 블럭을 살펴보고, "삼각형 그리기" 함수에 "길이" 값을 전달할 수 있도록 추가해 보세요.
+          그 다음에 다른 크기의 삼각형들을 그리면 됩니다. (힌트: 별 모양을 눌러 함수에게 어떤 값을 사용하도록 할 수 있습니다.)'
+        turtle_3_7: '"집 그리기" 함수에 "길이"를 전달할 수 있도록 추가해서 코끼리 집을 만들어 보세요. (각 선의 길이는 150
+          픽셀)'
+        turtle_3_8: 이전 퍼즐에서 사용된 블럭들이 모두 있습니다. "집 그리기" 함수를 수정해서 사용하고, 모든 집을 그린 후에는
+          마지막 집의 오른쪽 아래에 위치할 수 있도록 해보세요. 주어진 함수 블럭을 수정해서 3개의 집을 지으면 됩니다.
+        turtle_3_9: '"집 그리기" 함수를 아무 도움 없이 스스로 만들 수 있을까요? 도전해 보세요.'
+        turtle_3_10: "지금까지 많은 것을 배웠습니다! 이제, 아무거나 원하는 것을 그려보세요. 별, 달팽이 나선, 눈 결정 등 멋진
+          것들을 상상하고 그려보세요."
+        maze_karel_debug_seq_1: "잘못된 곳 찾기! 퍼즐에 오신 것을 환영합니다! 만들어져 있는 코드가 제대로 동작하지 않아요.
+          틀린 부분을 찾고, 수정해서밭을 평평하게 만들 수 있도록 도와줄 수 있겠어요?"
+        maze_karel_debug_seq_2: "어떤 것이 잘못된 것일까요? 어떻게 수정해야 흙더미를 모두 치울 수 있을까요?"
+        maze_karel_debug_repeat: "이 프로그램에서 잘못된 곳을 찾고 수정해서, 깨끗하고 평평한 밭을 만들 수 있게 도와주세요."
+        maze_karel_debug_while: "구덩이를 메우기 위해서 이 프로그램을 어떻게 수정해야 할까요?"
+        maze_karel_debug_if: "도와주세요! 밭을 모두 평평하게 만들 수 있게 프로그램을 수정해 주세요."
+        maze_karel_debug_if_else: "이 프로그램을 수정해서 구덩이와 흙더미를 모두 없앨 수 있게 도와주세요."
+        maze_karel_debug_function_1: "흙더미를 모두 치우기 위해서 프로그램을 어떻게 바꿔야 할까요?"
+        maze_karel_debug_function_2: "구덩이와 흙더미를 모두 없앨 수 있도록, 프로그램에서 잘못된 곳을 찾고 수정해
+          줄 수 있나요?"
+        maze_karel_debug_function_3: "프로그램의 오류를 찾고 수정하면 흙더미들을 깨끗이 치울 수 있을 거에요."
+        turtle_5_1: "프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
+          만들어 봐도 됩니다.)"
+        turtle_5_2: "프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
+          만들어 봐도 됩니다.)"
+        turtle_5_3: "프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
+          만들어 봐도 됩니다.)"
+        turtle_5_4: "프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
+          만들어 봐도 됩니다.)"
+        turtle_5_5: "프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
+          만들어 봐도 됩니다.)"
+        turtle_5_6: "프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
+          만들어 봐도 됩니다.)"
+        maze_3_1: "초록 돼지를 잡아야 돼! 몇 번 앞으로 이동해야 하는지 입력해 줘; 그래야 내 알들을 돌려받을 수 있을 것 같아."
+        maze_3_2: "초록 돼지를 잡을 수 있도록, 프로그램을 만들어줘."
+        maze_3_3: "어떻게 해야 초록 돼지를 잡을 수 있지? TNT 폭탄이 있는 곳으로는 갈 수 없어!"
+        maze_3_4: "아~~~! TNT 폭탄을 피해서 초록 돼지를 잡을 수 있게 해 줘."
+        bounce_1: Attach a block to the "when left arrow" block, then run and move
+          the paddle with the left arrow key to the finish target.
+        bounce_2: Attach a block to the "when right arrow" and "when left arrow" blocks,
+          then run and move the paddle with the both arrow key to both finish targets.
+        bounce_3: TBD
+        bounce_4: TBD
+        bounce_5: Attach a blocks to the "when right arrow", "when left arrow", "when
+          ball hits wall", and "when ball hits paddle" blocks.
+        bounce_6: Try again with more balls.
+        bounce_7: Now it is getting crazy!
+        bounce_10: There is a now a goal at the top. Attach "increment score" blocks
+          to the the "when ball in goal" and "when ball misses paddle" blocks to make
+          a game.
+        bounce_11: You can now attach blocks to the "when run" block. Try changing
+          the speed of the paddle and the ball and see how many points you can score
+          before your opponent scores twice.
+        bounce_12: Create your own Bounce game. You can change all the visuals and
+          the rules. When you're done, click Share to let friends try your game on
+          their phones.
+        Custom_builder: Drag blocks from the toolbox to the workspace to draw the
+          level you wish to create. Press "Run Program" when you are ready.
+        flappy_1: Attach a block to the "when click" block, then press "Run Program"
+          and click or tap to move Flappy to the target.
+        flappy_2: Now we've added some ground.  Attach a block to the "when hit the
+          ground" block, then press "Run Program". To pass this puzzle, your code
+          needs to 'END GAME' when Flappy crashes into the ground.
+        flappy_3: The "when Run is clicked" block allows you to run code when your
+          game first starts.  Try setting the level speed and flapping to the target.
+        flappy_4: Flappy will fly through obstacles unless you write code to make
+          him crash. Attach a block to the "when hit an obstacle" block. To pass the
+          puzzle, your code needs to 'END GAME' and make Flappy crash into the first
+          pipe so he can reach the target.
+        flappy_5: Let's add a scoreboard, and count points when Flappy makes it past
+          obstacles. Add to the "when pass an obstacle" block, and then score a point
+          by flying Flappy through the first set of pipes.
+        flappy_6: See if you can still score a point after making Flappy flap either
+          a smaller or larger amount.
+        flappy_7: Next, try changing the scene by attaching another block to the "when
+          Run is clicked".
+        flappy_8: You can set visuals anytime, not just when the game starts. Try
+          setting a RANDOM scene when other events happen, for example, when passing
+          an obstacle.
+        flappy_9: To mix things up, when hitting an obstacle or the ground, instead
+          of ending the game try setting the score back to 0.
+        flappy_11: Create your own Flappy game and share it. You can change the visuals,
+          or even the rules. Try changing visuals each time Flappy passes an obstacle.
+          Or make Flappy invincible so he never dies.
+        flappy_k1_1: Play Flappy
+        flappy_k1_2: Attach a block to the "when click" block, then press "Run". Click
+          or tap the screen to move Flappy to the target.
+        flappy_k1_3: Now we've added some ground.  Attach a block to the "when hit
+          the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
+        flappy_k1_4: The "when run" block allows you to run code when your game starts.  Try
+          setting the level speed and flapping to the target.
+        flappy_k1_5: Flappy will fly through obstacles unless you write code to make
+          him crash. Attach a block to the "when hit an obstacle" block. Your code
+          needs to 'END GAME' when Flappy crashes into the first set of pipes.
+        flappy_k1_6: Let's add a scoreboard, and count points when Flappy makes it
+          past obstacles. Add to the "when pass an obstacle" block, and then score
+          a point by flying Flappy through the first set of pipes.
+        flappy_k1_7: See if you can score multiple points for making it past an obstacle
+        flappy_k1_8: Next, try changing the scene by attaching another block to the
+          "when run" block.
+        flappy_k1_9: Try changing the player by attaching a "set player" block to
+          the "when run" block.
+        jigsaw_1: Click the block
+        jigsaw_2: Drag the block to the target
+        jigsaw_3: Arrange the blocks to form the image
+        jigsaw_4: Arrange the blocks to form the image
+        jigsaw_5: Arrange the blocks to form the image
+        jigsaw_6: Arrange the blocks to form the image
+        jigsaw_7: Arrange the blocks to form the image
+        jigsaw_8: Arrange the blocks to form the image
+        jigsaw_9: Arrange the blocks to form the image
+        jigsaw_10: Arrange the blocks to form the image
+        jigsaw_11: Arrange the blocks to form the image
+        jigsaw_12: Arrange the blocks to form the image
+        jigsaw_13: Fix the puzzle!
+        mazestep_1: Maze step description here
+        mazestep_2: Maze step description here
+        mazestep_3: Maze step description here
+        mazestep_4: Maze step description here
+        mazestep_5: Maze step description here
+        studio_c2_1: Can you make this dog say "hello world"?
+        studio_c2_2: Can you make the dog say something and then have the cat say
+          something afterwards?
+        studio_c2_3: Can you write a program to make this dog move to the cat?
+        studio_c2_4: Can you write a program that makes the dog move to the cat, and
+          have the cat say "hello" when the dog reaches him?
+        studio_c2_5: Can you write a program to make the octopus say "hello" when
+          it is clicked?
+        studio_c2_6: Can you write a program to make this penguin move around using
+          the up / down / left /right keys to hit all of the targets?
+        studio_c2_7: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to move this dinosaur up and down repeatedly?
+        studio_c2_8: Can you have the penguin say "Ouch!" and play a "hit" sound if
+          he runs into the dinosaur, and then move him with the arrows to make that
+          happen?
+        studio_c2_9: Can you add a block to score a point when the penguin runs into
+          the octopus, and then move him with the arrows until you score?
+        studio_c2_10: Can you add blocks to change the background and the speed of
+          the penguin, and then move him with the arrows until you score?
+        studio_c2_11: Create your own story. When you're done, click Finish to let
+          friends try your story on their phones.
+        studio_c3_story_1: Can you make this dog say "hello world"?
+        studio_c3_story_2: Can you make the dog say something and then have the cat
+          say something afterwards?
+        studio_c3_story_3: Can you write a program to make this dog move to the cat?
+        studio_c3_story_4: Can you write a program that makes the dog move to the
+          cat, and have the cat say "hello" when the dog reaches him?
+        studio_c3_story_5: Can you add a block to make the octopus happy?
+        studio_c3_story_6: Create your own story. When you're done, click Finish to
+          let friends try your story on their phones.
+        studio_c3_game_1: Can you write a program to make the octopus say "hello"
+          when it is clicked?
+        studio_c3_game_2: Can you write a program to make this penguin move around
+          using the up / down / left /right keys to hit all of the targets?
+        studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to move this dinosaur up and down repeatedly?
+        studio_c3_game_4: Can you have the penguin say "Ouch!" and play a "hit" sound
+          if he runs into the dinosaur, and then move him with the arrows to make
+          that happen?
+        studio_c3_game_5: Can you add a block to score a point when the penguin runs
+          into the octopus, and then move him with the arrows until you score?
+        studio_c3_game_6: Can you add blocks to change the background and the speed
+          of the penguin, and then move him with the arrows until you score?
+        studio_c3_game_7: Create your own game. When you're done, click Finish to
+          let friends try your story on their phones.
+        studio_playlab_1: Can you make this dog say "hello world"?
+        studio_playlab_2: Can you make the dog say something and then have the cat
+          say something afterwards?
+        studio_playlab_3: Can you write a program to make this dog move to the cat?
+        studio_playlab_4: Can you write a program that makes the dog move to the cat,
+          and have the cat say "hello" when the dog reaches him?
+        studio_playlab_5: Can you write a program to make the octopus say "hello"
+          when it is clicked?
+        studio_playlab_6: Can you write a program to make this penguin move around
+          using the up / down / left /right keys to hit all of the targets?
+        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to move this dinosaur up and down repeatedly?
+        studio_playlab_8: Can you add a block to score a point when the penguin runs
+          into the octopus, and then move him with the arrows until you score?
+        studio_playlab_9: Can you add blocks to change the background and the speed
+          of the penguin, and then move him with the arrows until you score?
+        studio_playlab_10: Create your own game. When you're done, click Finish to
+          let friends try your story on their phones.
+        studio_full_sandbox: Create your own game. When you're done, click Finish
+          to let friends try your story on their phones.
+        studio_k1_1: Can you make this dog say "hello world"?
+        studio_k1_2: Can you make the dog say something and then have the cat say
+          something afterwards?
+        studio_k1_3: Can you write a program to make this dog move to the target?
+        studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
+          gets there.
+        studio_k1_5: Can you add a block to make the octopus happy?
+        studio_k1_6: Can you write a program to make this penguin move around using
+          the up / down / left /right keys to hit all of the targets?
+        maze_wordsearch_k_1: Move me to spell the word EAST
+        maze_wordsearch_k_2: Move me to spell the word SOUTH
+        maze_wordsearch_k_3: Move me to spell the word WEST
+        maze_wordsearch_k_4: Move me to spell the word NORTH
+        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
+        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
+        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
+        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
+        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
+        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
+          the word STORY
+    video:
+      name:
+        maze_intro: "미로 퍼즐 소개"
+        artist_intro: "예술가 퍼즐 소개"
+        farmer_intro: "농부 퍼즐 소개"
+        flappy_intro: "플래피 시작하기"
+        loop_times: "반복(횟수)"
+        loop_until: "반복(~할 때까지)"
+        if: "조건 실행"
+        if_else: "조건/선택 실행"
+        function: "함수"
+        loop_while: "반복(~인 동안)"
+        loop_for: "카운터"
+        parameters: "함수(값 전달)"
+        hoc_wrapup: Hour of Code 마무리
+        20_wrapup: 20-Hour 마무리
+        Unplug1: What is CS?
+        Unplug2: "컴퓨터과학(정보과학)적 사고"
+        Unplug3: "모눈 종이 프로그래밍"
+        Unplug4: "알고리즘"
+        Unplug5: "함수"
+        Unplug6: "조건/선택"
+        Unplug7: Songwriting
+        Unplug8: "추상화"
+        Unplug9: Relay programming
+        Unplug10: Internet
+        Unplug11: "마무리"
+        C1_happy_maps_unplugged: Happy Maps
+        C1_moveitmoveit_unplugged: Move It, Move It
+        C1_bigevent_unplugged: The Big Event
+        C1_getting_loop: Getting Loopy
+        C1_pair_programming: Pair Programming
+        C1_maze_intro_sequencing: Maze Sequencing Intro
+        C1_maze_debugging: Maze Debugging
+        C1_bee_level_intro: Bee Level - Intro
+        C1_artist_intro: "예술가 퍼즐 소개"
+        C1_spelling_bee_intro: Spelling Bee Intro
+        C1_zuck_repeat_loop: Maze Loops
+        C1_bee_loops: Bee Loops
+        C1_maze_loops: Maze Loops
+        C1_playlab_storytelling: Play Lab - Create a Story
+        C1_planting_seed: Planting a Seed
+        C1_building_foundating: Building a Foundation
+        C2_maze_intro: "미로 퍼즐 소개"
+        C2_artist_intro: "예술가 퍼즐 소개"
+        C2_zuck_repeat_loop: Maze Loops
+        C2_artist_loops: Artist Loops
+        C2_bee_conditionals: Bee Conditionals
+        C2_playlab_createstory: Play Lab - Create a Story
+        C2_graph_paper: "모눈 종이 프로그래밍"
+        C2_conditionals_with_cards: "조건/선택"
+        C2_binary_bracelets: Binary Bracelets
+        C2_replay_programming: "릴레이 프로그래밍"
+        C2_paper_airplanes: Paper Airplanes
+        C3_maze_intro: "미로 퍼즐 소개"
+        C3_artist_intro: "예술가 퍼즐 소개"
+        C3_artist_functions: Artist Functions
+        C3_bee_functions: Bee Functions
+        C3_bee_conditionals: Bee Conditionals
+        C3_maze_conditionals: Maze Conditionals
+        C3_artist_nested_loops: Nested Loops
+        C3_farmer_while: While Loops
+        C3_bee_nested_loops: Nested Loops
+        C3_bee_debugging: Bee Debugging
+        C3_bounce: "바운스"
+        C3_playlab_create_game: Play Lab - Create a Game
+        C3_computational_thinking: "컴퓨터과학(정보과학)적 사고"
+        C3_dice_race: Dice Race
+        C3_internet: Internet
+        C3_crowdsourcing: Crowdsourcing
+        C3_functional_suncatchers: Functional Suncatchers
+        C3_songwriting_with_parameters: Songwriting With Parameters
+    callout:
+      text:
+        drag_blocks: Drag a "move" block and snap it below the other block
+        run: Hit "Run" to try your program
+        watch_again: Click here to watch the video again
+        gray_block_explanation: Blocks that are grey can't be moved or deleted. Can
+          you solve the puzzle anyway?
+        show_code_explanation: Click here to see the code for the program you're making
+        instructions_repeat_explanation: The instructions for each puzzle are repeated
+          here
+        category_explanation: You have all the same blocks but they've now been arranged
+          in categories
+        set_sprite_image: Attach a "set actor to image" block to the "when story starts"
+          block to enable an actor for this story
+        studio_say_text: Type what you want your actor to say within these quotes
+        jigsaw_click: Click this block!

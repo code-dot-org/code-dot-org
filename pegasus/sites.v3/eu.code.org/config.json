@@ -1,0 +1,31 @@
+{
+  "base":"i18n.code.org",
+  "google_analytics_id":"UA-37745279-1",
+  "us_site": "Code.org (US Site)",
+  "about_nav": {
+    "About Us": "/about",
+    "Partners": "/about/partners"
+  },
+  "educate_nav": {
+    "Educator Resources": "/educate",
+    "Hour of Code": "/educate/hoc",
+    "New K-5 Program": "/educate/k5",
+    "K-8 Intro Course": "/educate/20hr",
+    "Curriculum": "/educate/curriculum",
+    "Inspire Students": "/educate/inspire",
+    "Educational Videos": "/educate/videos",
+    "3rd Party": "/educate/3rdparty"
+  },
+  "header_links": {
+    "HOME": "/",
+    "KIDS": "/learn",
+    "TEACHERS": "/educate",
+    "GROWN-UPS": "/about"
+  },
+  "footer_links": {
+    "Tutorials": "/learn",
+    "Resources": "/educate",
+    "About": "/about",
+    "Partners": "/about/partners"
+  }
+}

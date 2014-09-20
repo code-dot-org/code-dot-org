@@ -1,0 +1,344 @@
+"cs":
+  slides:
+    maze_intro:
+      1:
+        image: notes/hoc1_1.jpg
+        text: Vítej na své první hodině kódu! Pojďme se ponořit přímo do první ochutnávky
+          programování.
+      2:
+        image: notes/hoc1_2.jpg
+        text: Budeme používat Blockly, vizuální programovací jazyk, kde klikáš a přetahuješ
+          bloky aby jsi napsal kód.
+      3:
+        image: notes/hoc1_3.jpg
+        text: Většina kódů je psaná, ale Blockly je vizuální. Každý blok odpovídá
+          jednomu řádku "skutečného" kódu.
+      4:
+        image: notes/hoc1_4.jpg
+        text: Naučíš se základy počítačových věd, pojmy, které se používají kdekoliv
+          od vytváření aplikací až po řízení vozítka na Marsu.
+      5:
+        image: notes/hoc1_5.jpg
+        text: Program je sada pokynů pro počítač, kterými se řídí.
+      6:
+        image: notes/hoc1_6.jpg
+        text: Cílem tvého prvního programu je dostat ptáčka Angry Bird skrz bludiště
+          k Zelenému Prasátku.
+      7:
+        image: notes/hoc1_7.jpg
+        text: Na levé straně je bludiště, kde bude program probíhat. Instrukce pro
+          každou hádanku budou pod bludištěm.
+      8:
+        image: notes/hoc1_8.jpg
+        text: Prostřední panel obsahuje příkazy pro ptáčka Angry Bird. Právě z nich
+          poskládáš tvůj kód.
+      9:
+        image: notes/hoc1_9.jpg
+        text: Napravo je tvá pracovní plocha, kde budeš skládat program pomocí bloků
+          z panelu. Pro smazání bloku, přetáhni daný blok do koše v rohu.
+      10:
+        image: notes/hoc1_10.jpg
+        text: Každý blok je jeden příkaz. Pokud dáš blok "posunout vpřed" na pracovní
+          plochu a stiskneš "Spustit program", ptáček v bludišti se posune o jedno
+          políčko směrem, kam je právě natočen.
+      11:
+        image: notes/hoc1_11.jpg
+        text: Pro provedení více než jedné akce můžeš dát na pracovní plochu několik
+          bloků a spojit je dohromady. Ptáček se jimi bude řídit od shora dolů.
+      12:
+        image: notes/hoc1_12.jpg
+        text: Pokud spustíš program a chceš ho opravit a zkusit znovu, klikni na tlačítko
+          "Obnovit".
+      13:
+        image: notes/hoc1_13.jpg
+        text: Pojďme dostat ty prasátka!
+    artist_intro:
+      1:
+        image: notes/stage5_1.jpg
+        text: Ahoj, jsem JR. Každý tým automobilových závodníků potřebuje programátory,
+          aby vyhrál. Analyzují data z auta, aby bylo příště rychlejší.
+      2:
+        image: notes/stage5_2.jpg
+        text: V těchto hádankách budeš malíř, který za sebou kreslí čáru kamkoliv
+          jde.
+      3:
+        image: notes/stage5_3.jpg
+        text: Tento blok říká "posunout vpřed" o 100 pixelů. Pixel je jedna malá tečka
+          na tvojí obrazovce.
+      4:
+        image: notes/stage5_4.jpg
+        text: Tento blok říká "otočit vpravo o 90 stupňů". To otočí vašeho malíře
+          stejně jako bloky "otočit" v hádankách s bludištěm.
+      5:
+        image: notes/stage5_5.jpg
+        text: Klikni na šipku v jednom z těchto bloků pro změnu počtu pohybu dopředu
+          či otočení malíře. Vyhraj si, aby ses s těmito novými bloky seznámil.
+    farmer_intro:
+      1:
+        image: notes/stage9_1.jpg
+        text: Ahoj, já jsem Paola! V těchto hádankách jsi farmářka, která chce zarovnat
+          své pole, aby na něm mohla začít pěstovat rostliny.
+      2:
+        image: notes/stage9_2.jpg
+        text: Musíš jí pomoci odstranit všechny hromádky hlíny a vyplnit všechny díry.
+      3:
+        image: notes/stage9_3.jpg
+        text: Nové bloky odstraní 1 lopatu hlíny z hromádky a vyplní díru 1 lopatou
+          hlíny.
+      4:
+        image: notes/stage9_4.jpg
+        text: Hromádky a díry mají různé velikosti, takže musíš farmářce říct, kolik
+          lopat má použít.
+    flappy_intro:
+      1:
+        image: notes/flappy01.jpg
+        text: Ahoj, jmenuju se Katie! Jedna z nejlepších věcí na počítačové vědě je,
+          že počítač může být interaktivní.
+      2:
+        image: notes/flappy02.jpg
+        text: Kdykoliv někdo klikne nebo ťukne nebo napíše něco na počítači či mobilu,
+          vytvoří to UDÁLOST. Když je dojde k UDÁLOSTI, je tam kód, který rozhodne,
+          co dělat.
+      3:
+        image: notes/flappy03.jpg
+        text: 'Například můžeš mít MANIPULÁTOR UDÁLOSTÍ, který říká "když je myš stisknutá,
+          přehraj zvuk" '
+      4:
+        image: notes/flappy04.jpg
+        text: Už jsi někdy slyšel o hře FlappyBird? S pomocí manipulátoru událostí
+          tě naučíme naprogramovat tvou vlastní verzi FlappyBird!
+      5:
+        image: notes/flappy05.jpg
+        text: Kód, který píšeš zahranuje přetahování a pouštění bloků, které předtavují
+          příkazy pro počítač. Pod povrchem každého takového bloku je skrytý skutečný
+          kód.
+      6:
+        image: notes/flappy06.jpg
+        text: 'Pokud se podíváš na pracovní plochu, uvidíš pár zelených bloků, které
+          tam jsou pro tebe - jsou to "manipulátory událsotí" '
+      7:
+        image: notes/flappy07.jpg
+        text: Pokud chceš, aby ptáček ZAMÁVAL, když klikneš myší, musíš spojit blok
+          "ZAMÁVAT" s příslušným mnipulátorem událostí a potom, kdykoliv ve své hře
+          klikneš myší, ptáček zamává.
+      8:
+        image: notes/flappy08.jpg
+        text: V každé části této aktivity si ukážeme nové typy událostí jako zelené
+          bloky na pracovní ploše, a že se můžeš rohodnout přidat příslušné bloky,
+          jako reakci na tyto události.
+      9:
+        image: notes/flappy09.jpg
+        text: Když vidíš šipku ukazující dlů, jako je tahle, namená to, že můžeš změnit
+          nastavení - například jaký zvuk přehrát, když se Flappy dotkne země.
+      10:
+        image: notes/flappy10.jpg
+        text: V poslední části si budeš moct vytvořit vlasntí hru asdílet ji se svými
+          přáteli. Užij si to!
+    loop_times:
+      1:
+        image: notes/hoc2_1.jpg
+        text: Ahoj, jsem Mark! Seznámím tě se smyčkami. Pomocí smyček můžeš říct počítači,
+          aby opakoval sadu akcí znovu a znovu, tisíckrát či klidně milionkrát.
+      2:
+        image: notes/hoc2_2.jpg
+        text: V této hádance chceme, aby se ptáček posunul vpřed o 5 políček a dostal
+          se k prasátku.
+      3:
+        image: notes/hoc2_3.jpg
+        text: Můžeme použít nový blok "opakovat", aby nám trošku vypomohl.
+      4:
+        image: notes/hoc2_4.jpg
+        text: Místo aby si vytáhl 5 bloků "posunout vpřed"...
+      5:
+        image: notes/hoc2_5.jpg
+        text: Můžeme vložit blok "posunout vpřed" do bloku "opakovat" a vepsat to
+          tohoto bloku číslo, kolikrát má opakování proběhnout.
+      6:
+        image: notes/hoc2_6.jpg
+        text: 'Tohle je taky důležité: můžeš do bloku "opakovat" dát i více než jeden
+          příkaz.'
+      7:
+        image: notes/hoc2_7.jpg
+        text: Užij si používání nového bloku "opakovat"!
+    loop_until:
+      1:
+        image: notes/hoc3_1.jpg
+        text: Čau, jsem Chris. Než jsem se přidal k Miami Heat, studoval jsem na Georgia
+          Tech informatiku. Pojďme spolu zkusit nový blok "opakovat dokud".
+      2:
+        image: notes/hoc3_2.jpg
+        text: Co kdybychom nevěděli, jak daleko se ptáček musí posunout, aby se dostal
+          k prasátku?
+      3:
+        image: notes/hoc3_3.jpg
+        text: Pokud vložíme blok "posunout vpřed" do bloku "opakovat dokud", ptáček
+          se bude posouvat vpřed až do chvíle, DOKUD nenarazí na prasátko (nebo do
+          zdi).
+      4:
+        image: notes/hoc3_4.jpg
+        text: 'Toto je důležité: stejně jako před tím, můžeme vložit několik bloků
+          dovnitř bloku "opakovat dokud" a všechny tyto bloky se budou opakovat.'
+    if:
+      1:
+        image: notes/hoc4_1.jpg
+        text: 'Ahoj, já jsem Bil. Pojďme se naučit nový základní pojem: příkazy "Pokud".
+          Díky těmto příkazům počítač dělá svá rozhodnutí.'
+      2:
+        image: notes/hoc4_2.jpg
+        text: 'Sám používáš příkaz "Pokud" každý den. Ještě než jdeš ráno ven, řekneš
+          si: "POKUD venku prší, budu potřebovat pláštěnku."'
+      3:
+        image: notes/hoc4_3.jpg
+        text: Můžeme říct zombie, aby zjistila, zda je vlevo cesta a POKUD nalezne
+          cestu doleva, můžeme ji přinutit se tímto směrem otočit.
+      4:
+        image: notes/hoc4_4.jpg
+        text: Abychom napsali takový kód, vytáhneme náš blok "pokud" a vložíme do
+          něj blok "otočit vlevo".
+      5:
+        image: notes/hoc4_5.jpg
+        text: Teď, když nad něj vložíme blok "posunout vpřed" a blok "opakovat" kolem
+          všeho, pokaždé, když se zombie posune, zkontroluje, jestli je vlevo cesta
+          a zabočí. Příkaz "opakovat" je důležitý pro to, abychom kontrolovali cestu
+          pro zabočení v každém kroku.
+      6:
+        image: notes/hoc4_6.jpg
+        text: 'Příkazy "pokud" jsou v programování opravdu důležité. Jeden z prvních
+          programů, který jsem napsal byly piškvorky a v něm byl příkaz "pokud", který
+          říkal: POKUD to vypadá, že protivník vyhraje, zablokuj mu čtvereček, který
+          by mu umožnil vyhrát.'
+      7:
+        image: notes/hoc4_7.jpg
+        text: Bav se při používání bloků "pokud"!
+    if_else:
+      1:
+        image: notes/hoc5_1.jpg
+        text: Ahoj, moje jméno je Saloni. Programování mi pomáhá řešit problémy v
+          lékařství. Naučím vás používat blok "pokud-jinak". Vypadá podobně jako blok
+          "pokud", ale má navíc ještě část na konci, která říká, co se stane "jinak".
+      2:
+        image: notes/hoc5_2.jpg
+        text: 'Když vložím blok "posunout vpřed" do místa , které říká "dělej"a blok
+          "otočit vlevo" do místa, které říká "jinak", znamená to, že si zombie bude
+          vybírat ze dvou možností: POKUD je cesta vpřed, zombie půjde dopředu, JINAK
+          (cesta vpřed není), zombie se otočí doleva.'
+      3:
+        image: notes/hoc5_3.jpg
+        text: Stejně jako blok "pokud", můžeme i bloky "pokud-jinak" vkládat do bloků
+          "opakovat", takže zombie se bude stále pohybovat a blok "pokud-jinak" ji
+          pomůže zkoušet, jestli není někde cesta, na kterou by mohla zabočit.
+      4:
+        image: notes/hoc5_4.jpg
+        text: Teď dostaňte tyhle zombie tam, kam patří!
+    function:
+      1:
+        image: notes/stage13_1.jpg
+        text: Ahoj, já jsem Brina, inženýrka Instagramu. Funkce jsou určité řádky
+          kódu, které chceš používat znovu a znovu, takže místo aby jsi tento kód
+          psal pokaždé, můžeš použít pouze jeden blok.
+      2:
+        image: notes/stage13_2.jpg
+        text: Naučíme se definovat funkce. Definice funkcí mají v rohu hvězdu. Název
+          funkce je napsán na horním řádku.
+      3:
+        image: notes/stage13_3.jpg
+        text: Bloky, které jdou dovnitř definice, nám říkají, co dělá. Takže tato
+          definice funkce se jmenuje "vyplnit 5" a skládá se z bloku "opakovat" a
+          bloku "vyplnit".
+      4:
+        image: notes/stage13_4.jpg
+        text: Definice už je na pracovní ploše, ale naše farmářka nespustí funkci,
+          dokud nepřetáhneme funkční blok "vyplnit 5" z kategorie funkcí.
+      5:
+        image: notes/stage13_5.jpg
+        text: Pojďme zažít trochu srandy s funkcemi!
+    loop_while:
+      1:
+        image: notes/stage9_5.jpg
+        text: Čau, já jsem Makinde! Pojďme si říct něco o bloku "dokud".
+      2:
+        image: notes/stage9_6.jpg
+        text: Blok "dokud" bude provádět cokoliv umístíš dovnitř, DOKUD bude prohlášení
+          ve vrchní části bloku PRAVDA.
+      3:
+        image: notes/stage9_7.jpg
+        text: Například, pokud farmářka stojí na hromádce, bude neustále odstraňovat
+          1 lopatu, DOKUD pod ní stále ještě nějaká hromádka je.
+    loop_for:
+      1:
+        image: notes/stage11_1.jpg
+        text: Ahoj, já jsem Trina a pracuji pro Pixar. Pracovala jsem na spoustě filmů
+          včetně Shreka.
+      2:
+        image: notes/stage11_2.jpg
+        text: Toto je naše nová smyčka "čítač". Bude provádět akce znovu a znovu a
+          pokaždé můžete akci trošku pozměnit.
+      3:
+        image: notes/stage11_3.jpg
+        text: V tomto případě, naše smyčka "čítač" říká, že budeme "počítat s čítačem
+          od 50 do 90 po 10" a uvnitř něj máme náš blok "nakreslit čtverec". Přetáhni
+          blok "čítač" ze sekce "Proměnné" na místo "délka".
+      4:
+        image: notes/stage11_4.jpg
+        text: To znamená, že náš malíř bude kreslit čtverec, který má stranu o délce
+          50 pixelů, poté k tomu přidá 10 a nakreslí čtverec se stranou o délce 60
+          pixelů. Pak bude pokaždé přidávat 10 pixelů a kreslit čtverce dokud nedosáhne
+          90 pixelů. Takže budeme mít čtverce o velikosti 50, 60, 70, 80 a 90 pixelů.
+    parameters:
+      1:
+        image: notes/stage15_1.jpg
+        text: Ahoj, já jsem Janete a jsem návrhářka v Zynga.
+      2:
+        image: notes/stage15_2.jpg
+        text: Co když chceme nakreslit spoustu trojúhelníků, každý s jinou délkou
+          strany?
+      3:
+        image: notes/stage15_3.jpg
+        text: Mohli bychom ten kód napsat ručně, nebo můžeme použít funkci s parametry.
+      4:
+        image: notes/stage15_4.jpg
+        text: Abychom to udělali, klikni na modrou hvězdu u definice funkce "nakreslit
+          trojúhelník". Pak přetáhni "název vstupu" do bloku "vstup".
+      5:
+        image: notes/stage15_5.jpg
+        text: Pak, pokud napíšeš "délka" v místě, kde je nyní "x" a stiskneš "Enter",
+          vytvoříš ve své funkci vstup pro délku.
+      6:
+        image: notes/stage15_6.jpg
+        text: Poté klikni na hvězdu. Nyní musíš kliknout na kategorii proměnné a přetáhnout
+          blok "délka" do bloku "posunout vpřed" své definice funkce. A stáhni pryč
+          starý číselný blok.
+      7:
+        image: notes/stage15_7.jpg
+        text: Chceš-li použít svou funkci s parametry, klikni na kategorii funkce
+          a vytáhni svoji funkci "nakreslit trojúhelník s délkou".
+      8:
+        image: notes/stage15_8.jpg
+        text: Teď můžeš použít matematický blok k zadání různých čísel, abys nakreslil
+          trojúhelníky různých velikostí.
+    hoc_wrapup:
+      1:
+        image: notes/hoc6_1.jpg
+        text: Blahopřejeme! S poslední hádankou, kterou jsi vyřešil, jsi právě napsal
+          program, který dokáže JAKÉMUKOLIV robotovi říct, jak najít cestu skrz nerozvětvené
+          bludiště nebo skrz tunel libovolné délky, ať už je to zombie, ptáček, vozítko
+          na Marsu nebo dokonce samořídící auto.
+      2:
+        image: notes/hoc6_2.jpg
+        text: Základní pojmy, které jsi použil jsou srdcem každého programu nebo aplikace,
+          kterou kdy spustíš. Naučili jsme se opakovací smyčky, příkazy opakovat dokud,
+          příkazy pokud a příkazy pokud-jinak.
+      3:
+        image: notes/hoc6_3.jpg
+        text: Jestli se ti tvá první hodina kódu líbila, navštiv stránku code.org
+          pro další výuku programování! Jakmile dokončíš náš kurz 20 hodin, budeš
+          ovládat základy programování a můžeš se začít učit psát aplikace pro mobily,
+          instrukce pro roboty, hry...na co si jen vzpomeneš.
+      4:
+        image: notes/hoc6_4.jpg
+        text: 'Technika mění vše, co děláme a nezáleží na tom, jestli jsi mladý nebo
+          starý: programování je zábava, je tvořivé a každý se jej může naučit!'
+    20_wrapup:
+      1:
+        image: notes/bird.png
+        text: Zobrazení poznámek již brzy!

@@ -1,0 +1,124 @@
+#!/usr/bin/env ruby
+require 'base64'
+require_relative '../../../src/env'
+require 'cdo/hip_chat'
+require_relative src_dir 'poste/api'
+require_relative src_dir 'poste/template'
+
+def format_email_address(email, display_name='')
+  address = Mail::Address.new(email)
+  address.display_name = display_name unless display_name.empty?
+  return address.to_s
+end
+
+module Poste
+
+  class Delivery
+
+    def render(cache={})
+      if(template = cache[message.id]).nil?
+        template = cache[message.id] = message.template
+      end
+
+      locals = params.merge({
+        recipient: contact,
+        unsubscribe_link: unsubscribe_link,
+        tracking_pixel: tracking_pixel,
+      })
+
+      template.render(locals)
+    end
+
+    def to_mail(cache={})
+      recipient = contact
+
+      header, html, text = render(cache)
+
+      Mail.new do |mail|
+        to = header['to'].to_s.strip
+        to = format_email_address(recipient.email, recipient.name) if to.empty?
+        mail.to(to)
+
+        from = header['from'].to_s.strip
+        from = format_email_address('help@code.org', 'Code.org') if from.empty?
+        mail.from(from)
+
+        reply_to = header['reply-to'].to_s.strip
+        mail.reply_to(reply_to) unless reply_to.empty?
+
+        sender = header['sender'].to_s.strip
+        mail.sender(sender) unless sender.empty?
+
+        subject = header['subject'].to_s.strip
+        mail.subject(subject) unless subject.empty?
+
+        mail.part(content_type: 'multipart/alternative') do |part|
+          unless html.nil?
+            part.html_part = Mail::Part.new do
+              content_type 'text/html; charset=UTF-8'
+              body html
+            end
+          end
+
+          unless text.nil?
+            part.text_part = Mail::Part.new do
+              content_type 'text/plain; charset=UTF-8'
+              body text
+            end
+          end
+        end
+
+        attachments = header['attachments']
+        unless attachments.nil?
+          attachments.each_pair do |filename, content|
+            mail.add_file({filename: filename, content: Base64.decode64(content)})
+          end
+        end
+      end
+    end
+  end
+
+  class Message
+
+    def template()
+      path = File.find_first_existing(String.multiply_concat([Message.template_dir(name)],Message.template_extnames))
+      raise ArgumentError.new, "[Poste] '#{name}' template wasn't found." if path.nil?
+      $log.debug "[Poste] Loading message template from '#{path}'"
+
+      engine = {
+        '.haml'=>TextRender::HamlEngine,
+        '.html'=>TextRender::ErbEngine,
+        '.md'=>TextRender::MarkdownEngine,
+        '.txt'=>TextRender::MarkdownEngine,
+        '.yml'=>TextRender::YamlEngine,
+      }[File.extname(path).downcase]
+
+      Poste::Template.new(IO.read(path), engine)
+    end
+
+  end
+
+end
+
+def main()
+  template_cache = {}
+
+  count = 0
+
+  Poste::Delivery.all(sent_at: nil).each do |delivery|
+    mail = delivery.to_mail(template_cache)
+    mail.delivery_method :sendmail
+    mail.deliver!
+
+    delivery.sent_at = DateTime.now
+    delivery.save
+
+    slog(tag: :email_sent, kind:delivery.message, to:delivery.contact.email, id:delivery.id)
+
+    count += 1
+  end
+
+  HipChat.log "#{count} transactional email(s) sent." unless count == 0
+end
+
+main if only_one_running?(__FILE__)

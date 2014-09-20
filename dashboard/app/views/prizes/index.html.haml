@@ -1,0 +1,23 @@
+%h1 Listing prizes
+
+%table
+  %tr
+    %th Prize provider
+    %th Code
+    %th User
+    %th
+    %th
+    %th
+
+  - @prizes.each do |prize|
+    %tr
+      %td= prize.prize_provider_id
+      %td= prize.code
+      %td= prize.user_id
+      %td= link_to 'Show', prize
+      %td= link_to 'Edit', edit_prize_path(prize)
+      %td= link_to 'Destroy', prize, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Prize', new_prize_path

@@ -1,0 +1,106 @@
+.feature-nonenglish { display: none }
+
+/* 0px-600px: stretches to edges */
+
+@media screen and (min-width: 0px) and (max-width: 600px) 
+{
+  .container_responsive { width: 100%; margin: 0 auto }
+
+  .container_responsive h1 { font-size: 18px; margin-top: 1em; margin-bottom: .5em; }
+  .container_responsive h2 { font-size: 15px; }
+  .container_responsive h3 { font-size: 12px; }
+  .container_responsive h4 { font-size: 12px; }
+}
+
+/* 601px-970px: capped to 600px */
+
+@media screen and (min-width: 601px) and (max-width: 970px)
+{
+  .container_responsive { width: 600px; margin: 0 auto }
+}
+
+/* 601px and up: tablet devices */
+
+@media screen and (min-width: 601px)
+{
+  .tablet-feature {}
+}
+
+/* 600px and down: not even a tablet */
+@media screen and (max-width: 600px)
+{
+  .tablet-feature { display: none; }
+}
+
+/* 971px and up: regular headers */
+
+@media screen and (min-width: 971px) 
+{
+  /* large screens */
+  .mobile-feature { display: none }
+  .desktop-feature { }
+
+  .col-18 { width: 18%; float:left; }
+  .col-20 { width: 20%; float:left; }
+  .col-23 { width: 23%; float:left; }
+  .col-25 { width: 25%; float:left; }
+  .col-33 { width: 33%; float:left; }
+  .col-36 { width: 36%; float:left; }  
+  .col-50 { width: 50%; float:left; }
+  .col-63 { width: 63%; float:left;}
+  .col-66 { width: 66%; float:left; }
+
+  .desktop-pad-right { padding-right: 30px; }
+
+  .container_responsive { width: 970px; margin: 0 auto; max-width: none !important; }
+
+  .mobile-show-medium { display: none }
+
+  .i-agree-button { width: 9%; }
+}
+
+
+/* 970px and down: minimal headers */
+
+@media screen and (min-width: 0px) and (max-width: 970px) 
+{
+  /* small screens */
+  .mobile-feature { }
+  .desktop-feature { display: none }
+
+  .col-18 { width: 100%; float:left; }
+  .col-20 { width: 100%; float:left; }
+  .col-23 { width: 100%; }
+  .col-25 { width: 100%; }
+  .col-33 { width: 100% }
+  .col-36 { width: 100% }
+  .col-50 { width: 100%; float:left; }
+  .col-63 { width: 100%;}
+  .col-66 { width: 100% }
+
+  .col-mobile-50 { width: 50%; float:left; }
+  .col-mobile-44 { width: 44%; float:left; }
+  .col-mobile-56 { width: 56%; float:left; }
+
+  .mobile-center { text-align: center }
+
+  .mobile-pad { padding: 10px; }
+  .mobile-pad-right { padding-right: 10px; }
+  .mobile-pad-left64 { padding-left: 64px; }
+  
+  .mobile-pad-edge { padding: 20px; }  
+}
+
+/* 512 and down: some mobile styling collapses even more */
+
+@media screen and (min-width: 0px) and (max-width: 512px) 
+{
+  .col-mobile-50 { width: 100%; float:left; }
+  .col-mobile-44 { width: 100%; float:left; }
+  .col-mobile-56 { width: 100%; float:left; }
+
+  .mobile-show-medium { display: none }
+
+  .mobile-small-hide { display: none }
+}
+

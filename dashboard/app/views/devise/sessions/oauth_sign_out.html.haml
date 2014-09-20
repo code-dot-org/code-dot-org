@@ -1,0 +1,7 @@
+.row
+  .span9
+    %h3!= t 'auth.signed_out', url: code_org_root_path 
+.row
+  .span9
+    - if params[:provider] && external_oauth_sign_out_url(params[:provider])
+      %h4!= t 'auth.sign_out_of', provider: t("auth.#{params[:provider]}"), url: external_oauth_sign_out_url(params[:provider])

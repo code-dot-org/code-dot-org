@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<base target="_blank" />
+	<title>Karel</title>
+	</head>
+	
+	<style type="text/css">
+	#wrapper{
+		margin: auto;
+		width: 940px;
+		margin-top: 15px;
+	}
+	canvas{
+		border: 2px solid black;
+		margin-left: 20px;
+	}
+	.clear{
+		clear: both;
+	}
+	
+	.CodeMirror{
+        font-size: 30px;
+        float: left;
+        width: 500px;
+
+    }
+    .CodeMirror-scroll{
+    	border:2px solid #999;
+	}
+
+	.commands{
+		float: left;
+	}
+
+	.commands span{
+		font-size: 31px;
+		font-family: Courier;
+		display: inline-block;
+		padding: 18px;
+		font-weight: bold;
+	}
+
+
+
+	h1{
+		padding: 10px 0;
+	}
+
+	#error-popup{
+		margin-top: 10px;
+		width: 365px;
+	}
+
+	.below{
+	}
+
+	.below .left{
+		float: left;
+		width: 500px;
+	}
+
+	.below .error{
+		width: 500px;
+		float: left;
+	}
+
+	.below .buttons{
+		margin-left: 20px;
+		float: right;
+		margin-top: 10px;
+		width: 420px;
+	}
+
+	.logo{
+		width: 500px;
+		float: left;
+	}
+
+	.spacer{
+		height: 400px;
+	}
+
+	img.chs-logo{
+		width: 100px;
+		height: 100px;
+		width: 60px;
+		height: 69px;
+		margin-top: 4px;
+	}
+
+	.powered{
+		font-size: 25px;
+		font-family: Helvetica Neue;
+		font-weight: bold;
+	}
+	
+	pre.nice{
+		font-size: 24px;
+		font-weight: bold;
+	}
+
+	a.next-btn{
+		margin-left: 10px;
+		float: right;
+	}
+
+	pre.karel-pre{
+		font-size: 28px;
+		font-weight: bold;
+		line-height: 35px;
+	}
+
+	#stop-tutorial{
+		float: right;
+	}
+	#stop-tutorial:hover{
+		box-shadow: 2px 2px 16px #888888
+	}
+
+	#cover{
+		position: fixed;
+		top: 0px;
+		width: 924px;
+		height: 420px;
+		left: 50%;
+		margin-left: -470px;
+		background-color: gray;
+		opacity: 0.6;
+		z-index: 1000;
+	}
+
+	a.social-link{
+		text-decoration: none !important;
+		margin-left: 3px;
+		margin-bottom: 3px;
+		opacity: 0.6;
+	}
+
+	a.social-link:hover{
+		opacity: 1;
+	}
+
+	</style>
+	
+	
+
+	<body>
+		<div id="cover"></div>
+
+		<div id="karels-commands" style="display:none;">
+<pre class="karel-pre">
+move();
+turnLeft();
+takeBall();
+putBall();
+</pre>
+		</div>
+
+		<div id="popover-title" style="display:none;">
+			Code With Karel the Dog <i id="stop-tutorial" class="icon-remove-sign"></i>
+		</div>
+
+		<div id="popover-1" style="display:none;">
+			<a href="#" class="btn next-btn"  id="popover-1-next">Next</a>
+
+			<div>
+				Giving commands to a computer is just like giving commands to a dog.
+			</div>
+			<div class="clear"></div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="popover-1-5" style="display:none;">
+			<a href="#" class="btn next-btn"  id="popover-1-5-next">Next</a>
+
+			<div>
+				Karel is a dog that can move around a grid and put down and take tennis balls.
+			</div>
+			<div class="clear"></div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="popover-2" style="display:none;">
+			<a href="#" class="btn next-btn" id="popover-2-next">Next</a>
+			<div>
+				Karel knows four commands.<br/>
+<pre class="nice">
+move();
+</pre>
+moves karel one spot in the direction karel is facing.
+			</div>
+			<div class="clear"></div>
+		</div>
+
+
+
+		<div id="popover-3" style="display:none;">
+			<a href="#" class="btn next-btn"  id="popover-3-next">Next</a>
+
+			<div>
+<pre class="nice">
+turnLeft();
+</pre>
+changes the direction karel is facing.
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="popover-4" style="display:none;">
+			<a href="#" class="btn next-btn"  id="popover-4-next">Next</a>
+
+			<div>
+<pre class="nice">
+putBall();
+</pre>
+puts down one tennis ball in Karel's current location.
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="popover-5" style="display:none;">
+			<a href="#" class="btn next-btn"  id="popover-5-next">Next</a>
+			<div>
+<pre class="nice">
+takeBall();
+</pre>
+takes one tennis ball from Karel's current location.
+			</div>
+			<div class="clear"></div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="popover-6" style="display:none;">
+			<a href="#" class="btn next-btn"  id="popover-6-next">Next</a>
+
+			<div>
+Careful with capitalization and keep the <code>();</code> at the
+end so Karel can understand.
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="popover-7" style="display:none;">
+			<a href="#" class="btn btn-info next-btn"  id="popover-7-next">Let's Go!</a>
+			<div>
+To get started, try clicking the big green "Run" button.
+			</div>
+			<div class="clear"></div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="popover-start"
+		data-toggle="popover" data-placement="bottom"
+		>
+		</div>
+
+		<div id="wrapper">
+			<!-- <h1>Programming with Karel the Dog!</h1> -->
+
+			<div class="clear"></div>
+<textarea id="editor">
+move(); 
+move();
+takeBall();
+move(); 
+turnLeft();
+</textarea>
+	
+			<canvas id="game" width="400" height="400">
+			<p>Your browser doesn't support canvas.</p>
+			</canvas>
+
+			<div class="clear"></div>
+
+			<div class="below">
+				<div class="left">
+					<div class="logo">
+						<a href="http://codehs.com" style="text-decoration: none;">
+							<img class="chs-logo" src="./static/img/logo.png" />
+						</a>
+
+						<span class="powered">
+							<a href="http://codehs.com" style="color:black;"
+
+							>Learn to code with CodeHS!</a>
+
+							<a target="_blank" class="social-link" href="http://facebook.com/codehs">
+								<img src="./static/img/icn-fb.png">
+							</a>
+							<a target="_blank" class="social-link"  href="http://twitter.com/codehs">
+								<img src="./static/img/icn-tw.png">
+							</a>
+
+						</span>
+					</div>
+					<div class="clear"></div>
+
+					<div class="error">
+						<div id="error-popup" class="well" style="display:none;">
+							<h4>Error<span class="line-number"></span></h4>
+							<div>
+								<div class="original-message"></div>
+								<div class="simple-message"></div>
+								<pre class="prettyprint stack"></pre>
+								<pre class="error-examples prettyprint"></pre>
+							</div>
+						</div>
+
+						<div id="output"></div>
+
+					</div>
+				</div>
+
+				<div class="buttons">
+					<button class="run_code btn btn-success btn-large">
+						<i class="icon-play icon-white"></i>
+						Run</button>
+					<button id="stop" class="btn btn-large">
+						<i class="icon-refresh"></i>
+						Reset</button>
+					<button id="see-commands" class="btn btn-large btn-info">
+						<i class="icon-info-sign icon-white"></i>
+						See Karel's Commands</button>
+
+				</div>
+			</div>
+
+
+
+
+
+			<div class="clear"></div>
+
+		</div>
+	</body>
+
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="static/js/codemirror.js"></script>
+	<link rel="stylesheet" href="static/css/codemirror.css" />
+	<link rel="stylesheet" href="static/css/bootstrap.css" />
+
+
+	<script src="static/js/prettify.js"></script>
+	<script src="static/js/plugins.js"></script>
+	<script src="static/js/stacktrace-min-0.3.js"></script>
+	<script src="static/js/codehs.js"></script>	
+	<script src="static/js/chs_utils.js"></script>	
+	<script src="static/js/chs_editor.js"></script>	
+	<script src="static/js/chs_errors.js"></script>	
+	<script src="static/js/chs_user.js"></script>	
+
+	<script src="static/js/bootstrap.js"></script>	
+
+
+	<script src="library.js"></script>	
+	<script src="karel/beeper.js"></script>
+	<script src="karel/wall.js"></script>
+	<script src="karel/karel.js"></script>
+	<script src="karel/karelgrader.js"></script>
+	<script src="karel/karelrobot.js"></script>
+	<script src="karel/karelworld.js"></script>	
+	<script src="karel/karelrunner.js"></script>	
+	<script src="karel/karelerrors.js"></script>	
+
+
+
+
+	<script>
+	$(document).ready(function(){
+
+			function removeCover(){
+				$("#cover").fadeOut();
+			}
+
+			$("#cover").click(removeCover);
+
+
+			CHS.Editor.KAREL_WORLD = '5x5';
+			CHS.Editor.setup();
+			//KarelRunner.reset();
+
+			$("#popover-start").popover({
+				html: true,
+				content: $("#popover-1").html(),
+				title: $("#popover-title").html()
+			});
+			$("#popover-start").popover('show');
+
+			$("#see-commands").popover({
+				content: $("#karels-commands").html(),
+				title: "Karel's Commands",
+				html: true,
+				placement: 'top',	
+				trigger: 'manual'
+			});
+
+			$("#see-commands").click(function(e){
+				$("#see-commands").popover('toggle');
+			});
+
+			$("#stop-tutorial").live('click', function(e){
+				e.preventDefault();
+				$("#popover-start").popover('hide');
+				removeCover();
+			});
+
+
+			$("#popover-1-next").live('click', function(e){
+				e.preventDefault();
+				$('#popover-start').data('popover').$tip.find(".popover-content").html($("#popover-1-5").html());
+			});
+
+			$("#popover-1-5-next").live('click', function(e){
+				e.preventDefault();
+				$('#popover-start').data('popover').$tip.find(".popover-content").html($("#popover-2").html());
+			});
+
+			$("#popover-2-next").live('click', function(e){
+				e.preventDefault();
+				$('#popover-start').data('popover').$tip.find(".popover-content").html($("#popover-3").html());
+			});
+
+			$("#popover-3-next").live('click', function(e){
+				e.preventDefault();
+				$('#popover-start').data('popover').$tip.find(".popover-content").html($("#popover-4").html());
+			});
+
+			$("#popover-4-next").live('click', function(e){
+				e.preventDefault();
+				$('#popover-start').data('popover').$tip.find(".popover-content").html($("#popover-5").html());
+			});
+
+			$("#popover-5-next").live('click', function(e){
+				e.preventDefault();
+				$('#popover-start').data('popover').$tip.find(".popover-content").html($("#popover-6").html());
+			});
+
+			$("#popover-6-next").live('click', function(e){
+				e.preventDefault();
+				$('#popover-start').data('popover').$tip.find(".popover-content").html($("#popover-7").html());
+			});
+
+			$("#popover-7-next").live('click', function(e){
+				e.preventDefault();
+				$('#popover-start').popover('hide');
+				removeCover();
+			});
+
+
+			KarelRunner.reset();
+	});
+	</script>
+
+</html>

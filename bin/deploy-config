@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+
+def main()
+  puts JSON.pretty_generate(CDO.to_h)
+end
+
+main

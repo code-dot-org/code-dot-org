@@ -1,0 +1,14 @@
+%h2= t('password.change_form.title')
+= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
+  = devise_error_messages!
+  = f.hidden_field :reset_password_token
+  %div
+    = f.label :password, t('password.change_form.new_password')
+    %br/
+    = f.password_field :password, :autofocus => true
+  %div
+    = f.label :password_confirmation, t('password.change_form.confirm_password')
+    %br/
+    = f.password_field :password_confirmation
+  %div= f.submit t('password.change_form.submit')
+= render "devise/shared/links"

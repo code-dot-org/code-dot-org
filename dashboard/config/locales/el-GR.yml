@@ -1,0 +1,558 @@
+"el":
+  activerecord:
+    errors:
+      messages:
+        blank: is required
+    attributes:
+      user:
+        name: "Όνομα"
+        email: Email
+        username: "Όνομα χρήστη"
+        password: "Κωδικός πρόσβασης"
+        password_confirmation: "Επιβεβαίωση κωδικού"
+        current_password: "Τρέχων κωδικός"
+        locale: "Γλώσσα"
+        age: Age
+        gender: "Φύλο"
+        edit_header: "Στοιχεία Λογαριασμού"
+        error:
+          future: can't be in the future
+  hello: "Γεια σου κόσμε"
+  welcome_back: "Καλώς ήρθες, %{name}"
+  add_teacher_form:
+    code_or_email:
+      label: "Πρόσθεσε έναν δάσκαλο με κωδικό ή με email:"
+      placeholder: "Κωδικός (ABCDEF) ή email (teacher@school.edu)"
+    code:
+      label: 'Add a teacher by section code:'
+      placeholder: Code (ABCDEF)
+    submit: "Προσθήκη δασκαλου"
+  add_hint_form:
+    placeholder: Please enter your hint here
+    submit: Add hint
+  appname: Code.org
+  stage: "Επίπεδο"
+  puzzle: "Παζλ"
+  trophies: "Τρόπαια"
+  courses: "Μαθήματα"
+  of: "του"
+  more: "ΠΕΡΙΣΣΟΤΕΡΑ"
+  less: "ΛΙΓΟΤΕΡΑ"
+  try_hoc: "Δοκίμασε την Ώρα του Κώδικα, κάνε κλικ εδώ >> "
+  try_k8intro: "Ή, δοκίμασε το εισαγωγικό μάθημα, κατηγορίας K-8, στην Επιστήμη Υπολογιστών
+    (15-25 ώρες)"
+  k8intro: K-8 Intro to Computer Science Course (15-25 hours)
+  already_started: "Έχεις ήδη ξεκινήσει; Συνέχισε εδώ >> "
+  demos: "Διαχειριστής: Όλα τα Demo"
+  continue: "Συνέχεια"
+  prize: "βραβείο"
+  more_info: "Περισσότερες πληροφορίες"
+  auth:
+    sign_in_with: "Εγγραφή μέσω  %{provider}"
+    signed_in: "Συνδέθηκες!"
+    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
+    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
+      to sign out of %{provider}.
+    already_signedup: "Είσαι ήδη γραμμένος;"
+    notyet_signedup: "Δεν έχει γραφτεί ακόμα;"
+    google_oauth2: Google Account
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Microsoft Account
+    forgot_password: "Ξέχασες τον κωδικό σου;"
+    need_confirmation: "Δεν έλαβες τις οδηγίες επιβεβαίωσης;"
+    need_unlock: "Δεν έλαβες τις οδηγίες ξεκλειδώματος;"
+  signup_form:
+    overview_student: Sign up for an account to track your progress.
+    overview_teacher: Teach computer science in your classroom by signing up for an
+      account.<p/> You'll be able to track your students' progress and get rewards.
+    no_signup_message: Μπορείτε να <a target="_blank" href="http://learn.code.org">
+      περιηγηθείτε στα διάφορα στάδια και παζλ</a>, αλλά θα πρέπει να εγγραφείτε για
+      να αποθηκεύσετε την πρόοδό σας.
+    prizes_message: U.S. students who earn all %{num_trophies} concept trophies can
+      select a variety of prizes including free Dropbox space, Skype credits, and
+      downloadable games from Electronic Arts.
+    teacher_educator_guide: "Δείτε τον οδηγό εκπαιδευτικού"
+    teacher_prize_header: Κερδίσετε $1.000 σε <a target="_blank" href="http://DonorsChoose.org">
+      DonorsChoose.org</a> αμοιβών
+    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
+      Code.org will offer up to $1,000 in classroom funding to U.S. public school
+      teachers who lead at least 15 students through this course. <a href="http://code.org/educate/20hr">See
+      educator guide for more info.</a> '
+    teacher_pitch: "Δίδαξε την Εισαγωγή στην Επιστήμη Υπολογιστών για το Δημοτικό
+      στην τάξη σου"
+    teacher_title: "Εγγραφή Δασκάλου"
+    student_pitch: "Πέρα από τη 1 ώρα: δοκιμάστε την Εισαγωγή στην Επιστήμη Υπολογιστών
+      για το Δημοτικό"
+    student_title: "Εγγραφή"
+    school_name: "Όνομα Σχολείου (προαιρετικά)"
+    school_address: "Διεύθυνση Σχολείου (προαιρετικά)"
+    address_placeholder: "διεύθυνση, πόλη, περιοχή, ΤΚ"
+    gender: "Φύλο (προαιρετικά)"
+    birthday: "Γενέθλια (προαιρετικά)"
+    age: Age (optional)
+    submit: "Εγγραφή"
+    teacher: "Είσαι δάσκαλος;"
+    valid_username: "Διαθέσιμο!"
+    invalid_username: "Το όνομα χρήστη πρέπει να αποτελείται τουλάχιστον από 5 χαρακτήρες"
+    taken_username: "Το όνομα χρήστη χρησιμοποιείται ήδη"
+    valid_password: "Έγκυρος κωδικός πρόσβασης!"
+    invalid_password: "Ο κωδικός πρόσβασης πρέπει να αποτελείται από τουλάχιστον 6
+      χαρακτήρες"
+    mismatch_password: "Οι δύο κωδικοί πρόσβασης που καταχωρήσατε δεν ταιριάζουν"
+    student_terms: "Συμφωνώ ότι δεσμεύομαι από τους όρους της υπηρεσίας Code.org.
+      Εάν είμαι κάτω των 13 ετών, επιβεβαιώνω με την υποβολή αυτής της φόρμας ότι
+      έχω την άδεια του γονέα ή νόμιμου κηδεμόνα να χρησιμοποιήσω τις υπηρεσίες του
+      Code.org."
+    teacher_terms: "Συμφωνώ ότι δεσμεύομαι από τους όρους της υπηρεσίας Code.org."
+    additional_information: We need some additional information to continue signing
+      you up.
+  signin_form:
+    title: "Σύνδεση"
+    login: Email ή όνομα χρήστη
+    password: "Κωδικός"
+    remember: "Να με θυμάσαι"
+    submit: "Σύνδεση"
+  signin:
+    try_heading: Want to try coding without signing up?
+    try_hoc: Try one Hour of Code first
+    try_20hours: Try our 20 hour Intro to Computer Science
+  signinsection:
+    welcome: Welcome to %{section_name}
+    name: Choose your name
+    picture: Now find your secret picture
+    words: Now enter your secret words
+    login: "Σύνδεση"
+  password:
+    reset_form:
+      title: "Ξέχασες τον κωδικό σου;"
+      email: "Διεύθυνση email"
+      submit: "Στείλε μου οδηγίες μηδενισμού του κωδικού"
+    change_form:
+      title: "Αλλαγή κωδικού"
+      new_password: "Νέος κωδικός"
+      confirm_password: "Επιβεβαίωση νέου κωδικού"
+      submit: "Άλλαξε τον κωδικό μου"
+  welcome_email:
+    subject: "Μπες στην τάξη μου (στο Code.org)"
+    body: |
+      Κάνε κλικ στον παρακάτω σύνδεσμο να εγγραφείς στα μαθήματα της επιστήμης των υπολογιστών του Code.org (με μένα ως "δάσκαλό" σου):
+
+      %{link}
+
+      Τα μαθήματα είναι διασκεδαστικά, με όμορφα σχέδια, και η διδασκαλία των βασικών έννοιών της επιστήμης των υπολογιστών γίνεται με απλό, καθοδηγούμενο τρόπο, που μοιάζει με παιχνίδι. Μάθε να προγραμματίζεις με τον Bill Gates, το Mark Zuckerberg, τα Angry Birds και τα Plants vs Zombies :-)
+
+       %{name}
+  follower:
+    invite_sent: "Η πρόσκληση στάλθηκε"
+    added_teacher: "Ο %{name} σε πρόσθεσε ως δάσκαλο"
+    registered: "Έχεις εγγραφεί για %{section_name}."
+    error:
+      signed_in: "Παρακαλώ αποσυνδεθείτε πριν συνεχίσετε"
+      username_not_found: "Δεν βρέθηκε όνομα χρήστη %{username}"
+      username_in_use: "Το %{username} δεν είναι διαθέσιμο, διάλεξε ένα άλλο"
+      no_teacher: "Δεν έχει εγγραφεί κάποιος με το '%{teacher_email_or_code}'. Παρακαλώ
+        ζητείστε τους να εγγραφούν εδώ και προσπάθησε να τους προσθέσεις ξανά"
+      section_not_found: Could not find a section with code '%{section_code}'.
+      blank_code: Please enter a code or your teacher's email address
+      cant_join_own_section: Sorry, you can't join your own section.
+    mail:
+      invite_student:
+        subject: "Μπες στην τάξη με τον %{teacher_name} στο Code.org!"
+      student_disassociated:
+        subject: 'Code.org notification: %{student_name} is no longer associated as
+          your student.'
+      teacher_disassociated:
+        subject: 'Code.org notification: %{teacher_name} is no longer associated as
+          your teacher.'
+  reports:
+    error:
+      access_denied: "Δεν έχεις πρόσβαση στα στατιστικά αυτού του ατόμου"
+  redeem_prizes:
+    title: "Εξαργυρώσετε τα βραβεία: %{name}"
+    provider: "Πάροχος:"
+    code: "Κωδικός:"
+    redeem_header: 'To redeem:'
+    donorschoose_register: Register as a teacher on DonorsChoose.org
+    donorschoose_project: Post a project
+    donorschoose_how_to: How to use your code
+    success: "Το βραβείο σας εξαργυρώθηκε με επιτυχία, δες τον παρακάτω κωδικό."
+    error: "Το βραβείο σας δεν ήταν δυνατόν να εξαργυρωθεί, παρακαλώ προσπαθήστε ξανά."
+    error_us_only: "Το βραβείο ισχύει μόνο για χρήστες από τις ΗΠΑ."
+    error_not_earned: You have not yet earned this prize.
+    error_already_redeemed: Your prize has already been redeemed.
+    no_prizes_available: We're sorry, but we currently have no prizes available.
+    teacher_info_required: 'Teacher prizes require school name and address information:'
+    teacher_email_required: 'Teacher prizes require a confirmed email address:'
+    confirm:
+      title: "Παρακαλώ Επιβεβαιώστε"
+      'no': "Όχι"
+      'yes': "Ναι"
+      msg: "Είστε βέβαιοι ότι θέλετε να διεκδικήσετε το βραβείο %{prize_name};"
+      msg_student: "Σημείωση: Μπορείτε να επιλέξετε μόνο έναν είδος βραβείου."
+      msg_publicschool: Please confirm that you are a U.S. public school teacher.
+      msg_visit_website: Visit website
+    providers:
+      apple_itunes: "$10 iTunes Gift Card"
+      donors_choose: DonorsChoose.org $750 credit
+      donors_choose_bonus: DonorsChoose.org $250 credit
+      dropbox: 10GB χώρου στο Dropbox
+      valve: Portal 2 (PC or Mac game download)
+      ea_bejeweled: Bejeweled 3 (PC game download)
+      ea_fifa: FIFA Soccer 13 (PC game download)
+      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
+      ea_pvz: Plants vs. Zombies (PC game download)
+      skype: "$10 Skype credit"
+    msg:
+      choose: "Επιλέξτε βραβείο:"
+      choose_teacher: 'Click on the logo below to claim your prize:'
+      earned: "Έχετε κερδίσει ένα βραβείο! (Μόνο για μαθητές των ΗΠΑ)"
+      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies}
+        trophies, and earn real-world prizes. You can choose between 10GB of free
+        Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer
+        only valid to U.S. students, and only as long as supplies last.'
+      teacher:
+        earned: 10 ή περισσότεροι μαθητές συγκέντρωσαν όλα τα %{num_trophies} τρόπαια.
+          Έχετε κερδίσει ένα βραβείο δασκάλου! (Αφορά μόνο τους εκπαιδευτικούς των
+          ΗΠΑ)
+        not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
+          href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
+          only)
+        not_earned: Για ανταμειβή των νεοφώτιστων εκπαιδευτικών Πληροφορικής, μπορείτε
+          να κερδίσετε έως και 1.000 $ <a href="http://DonorsChoose.org"> DonorsChoose.org</a>
+          πιστώσεων για την καθοδήγηση μιας από τις τελευταίες τάξεις του δημοτικού
+          σ' αυτό το εισαγωγικό μάθημα. Για να πληρούνται οι προϋποθέσεις, θα πρέπει
+          να οδηγήσετε με επιτυχία μια τάξη τουλάχιστον 15 μαθητών σε όλη την πορεία
+          του εισαγωγικού μαθήματος, με όλους τους 15 μαθητές (ή περισσότερους) να
+          φέρνουν σε πέρας όλα τα σεμινάρια και να κερδίζουν όλα τα τρόπαια %{num_trophies}.
+          Αν 7 ή περισσότεροι από τους μαθητές σας που κέρδισαν όλα τα τρόπαια είναι
+          κορίτσια, η ανταμοιβή σας είναι 1.000 $ σε <a target="_blank" href="http://DonorsChoose.org">
+          DonorsChoose.org</a> πιστώσεις. Διαφορετικά, η ανταμοιβή σας είναι 750 $
+          <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>
+          πιστώσεων.  <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>
+          πιστώσεις μπορεί να χρησιμοποιηθούν μόνο από καθηγητές σε δημόσια σχολεία
+          των ΗΠΑ.
+        bonus:
+          not_earned_title: You can still earn an additional $250 in <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
+            only)
+          earned: 7 ή περισσότεροι από τους μαθητές που συνέλεξαν όλα τα τρόπαια %{num_trophies}
+            είναι κορίτσια. Έχετε κερδίσει ένα βραβείο! (Αφορά μόνο τους εκπαιδευτικούς
+            στις ΗΠΑ)
+          not_earned: Αν τουλάχιστον 7 από τους μαθητές σας που κέρδισαν όλα τα τρόπαια
+            %{num_trophies} είναι κορίτσια, η ανταμοιβή σας  προσαυξάνεται κατά 250
+            $ σε <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>
+            πιστώσεις. <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>
+            πιστώσεις μπορεί να χρησιμοποιηθούν μόνο από καθηγητές σε δημόσια σχολεία
+            των ΗΠΑ.
+  crud:
+    new_model: "Νέο %{model}"
+    show: "Εμφάνιση"
+    edit: "Τροποποίηση"
+    edit_model: "Τροποποίηση %{model}"
+    update: "Ενημέρωση"
+    destroy: "Καταστροφή"
+    back: "Πίσω"
+    confirm: "Είσαι σίγουρος;"
+    created: "Το %{model} δημιουργήθηκε με επιτυχία."
+    updated: "Το %{model} ενημερώθηκε με επιτυχία."
+    destroyed: "%{model} was successfully deleted."
+    access_denied: You do not have access to this %{model}.
+  nav:
+    header:
+      finished_hoc: "Ολοκλήρωσα την Ώρα του Κώδικα"
+      sign_in_to_save: "Συνδέσου για να αποθηκεύσεις την πρόοδό σου"
+    user:
+      classroom: "Οι μαθητές μου"
+      label: "Γεια σου %{username}"
+      stats: "Η πρόοδός μου"
+      settings: "Ο λογαριασμός μου"
+      prizes: "Βραβεία"
+      logout: "Αποσύνδεση"
+      signin: "Σύνδεση"
+      signup: "Εγγραφή"
+      already_registered: Already registered?
+    popup:
+      progress: "Η πρόοδός σου"
+      lines: "Συνολικές γραμμές κώδικα: %{lines}"
+      close: "ΚΛΕΙΣΙΜΟ"
+      mastery: "Έννοιες"
+      puzzle_map: "Επίπεδα"
+      prizes: "Μάζεψε όλα τα %{total_trophies} βραβεία και κέρδισε δώρα!"
+      prize_earned: "Συλλέχθηκαν και τα %{total_trophies} τρόπαια. Κερδίσατε ένα βραβείο!"
+      prize_us_only: "(Μόνο για μαθητές των ΗΠΑ)"
+      prizes_link: "περισσότερα"
+  teacher:
+    title:
+      one: "Ο δάσκαλός σους είναι ο %{name}"
+      other: "Οι δασκάλοι σου:"
+    remove: "(remove teacher)"
+    confirm:
+      remove: Are you sure you want to remove this teacher?
+    tools: "Εργαλεία Δασκάλου"
+    followers:
+      section: 'Section:'
+      stages: 'Stage(s) to display:'
+      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      levels_key: Levels key
+      perfect: Completed, perfect
+      completed: Completed, but using too many blocks
+      tried: Tried, but not completed
+      not_tried: Not tried yet
+      activity: Indicates student activity in the last %{hours} %{plural}
+      no_section: No assigned section
+      trophies: "Τρόπαια"
+    students:
+      name: "Όνομα"
+      username: "Όνομα χρήστη"
+      password: "Κωδικός πρόσβασης"
+      manage: "Διαχείριση μαθητών"
+      dashboard: Go to Teacher Dashboard
+      add: "Προσθήκη μαθητών"
+      remove: remove student
+      confirm_remove: Are you sure you want to remove this student?
+      help_reassign: To divide your class into multiple sections, select students
+        to assign to a new section.
+      help_register: Instead of making you spend a lot of time individually importing
+        student data, you can set up your class quickly by asking them to signup.
+        Your students will need to choose usernames and passwords, but they WILL NOT
+        be required to provide an email address. If a student forgets their password,
+        you will be able to reset it for them.
+      register: Ask your students to register themselves
+      vist: Ask your students to visit
+      section_code: 'and enter their section-code:'
+      first_please: First, please %{add_section}
+      for: For
+      enter: 'enter:'
+    sections:
+      add: Add section
+      manage: Manage sections
+      section: Section
+      students: Students
+      section_code: Section Code
+      add_section_code: Add Students Section-Code
+      secret: Secret type
+      grade: Grade
+      course: Course
+      rename: rename
+      edit: edit
+      delete: delete
+      confirm_delete: Are you sure you want to delete this section?
+      email: Send in email
+    rollup: "Σύνοψη Προόδου"
+    activity: "Πρόσφατη δραστηριότητα τμήματος"
+    user_not_found: The teacher or student could not be found
+    cant_remove_student_no_email: "%{student_name} cannot be removed as your student
+      because %{student_name} has not registered an e-mail address"
+    cant_remove_teacher_no_email: "%{teacher_name} cannot be removed as your teacher
+      because you have not registered an e-mail address"
+    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
+      for %{student_name}"
+  user:
+    email_confirm_needed: 'Email address has not been confirmed:'
+    email_resend_confirm: Resend confirmation instructions
+    new_password_hint: "(άστο κενό εάν δεν θέλεις να τον αλλάξεις)"
+    current_password_hint: "(χρειαζόμαστε τον τωρινό κωδικό σου για να επιβαιβεωθούν
+      οι αλλαγές)"
+    cancel:
+      title: "Ακύρωση του λογαριαμού μου"
+      hint: "Δυσαρεστημένος;"
+      button: "Ακύρωσε τον λογαριασμό μου"
+  user_level:
+    completed: "Ολοκληρώθηκε"
+    tried: "Δοκιμάστηκε"
+  user_stats:
+    recent_activity: "Πρόσφατη δραστηριότητα"
+    show_more: "Περισσότερα"
+    classroom_activity: Unplugged Activity
+  home:
+    title: Code Studio
+    signin_message: "Ή αν είστε ήδη εγγεγραμμένος, %{link}"
+    student_reg_link: "Μαθητής"
+    teacher_reg_link: "Δάσκαλος"
+    signin_directions: Use an account to track progress and get rewards.<br/> Teachers,
+      track your entire class.
+    teacher_dashboard: "Προβολη σύνοψης προόδου"
+    teacher_student_count_one: "Εχεις %{count} μαθητές."
+    teacher_student_count: "Εχεις %{count} μαθητές."
+    teacher_averages: Οι μαθητές σου έχουν κερδίσει κατά μέσο όρο %{trophy_average}
+      από %{trophy_max} βραβεία "Μαεστρίας".
+    teacher_print_certificates: Print certificates for students who finish this course
+    teacher_read_blog: Read about news and updates to our materials at our Educator
+      Blog
+    classroom: "Η αίθουσά σου"
+    student_progress: "Η πρόοδός σας"
+    student_stats: Κέρδισες %{trophy_count} από %{trophy_max} τρόπαια "Μαεστρίας".
+    student_left_off: "Εκεί που έφυγες:"
+    student_finished_prize: You've completed all tutorials, claim your %{prize_link}
+      and pick another class %{online_link} or at a %{local_school_link}
+    student_finished: You've completed all tutorials, pick another class %{online_link}
+      or at a %{local_school_link}
+    local_school: "τοπικό σχολείο"
+    online: "σε σύνδεση"
+    see_details: "Δείτε λεπτομέρειες"
+    prize_info: 'Prizes for participation (U.S. only): $10 gift cards for student
+      completion and up to $1,000 in classroom rewards for public school teachers'
+    tryfirst: 'Or, you can try it first, and sign up later:'
+    trynow: "Δοκιμάστε τώρα"
+    add_hint_help: Please help us to add smart hints to Code.org tutorials
+    20hour_overview: This 20-hour course introduces core computer science and programming
+      concepts. The course is designed for use in classrooms for grades K-8, but it
+      is fun to learn at all ages.
+    test_videos_help: Test our new video player at your school
+    try_beta_courses: New! Try our beta courses for K-5 students
+    use_as_teacher: Use this site as a teacher
+    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
+    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+  gender:
+    male: "Αγόρι"
+    female: "Κορίτσι"
+    none: "Προτιμώ να μην απαντήσω"
+  footer:
+    help_from_html: Μηχανικοί από την <a href="http://www.google.com">Google</a>,
+      την <a href="http://www.microsoft.com">Microsoft</a>, το <a href="http://www.facebook.com">Facebook</a>,
+      και το <a href="http://www.twitter.com">Twitter</a> βοήθησαν σε αυτό το εισαγωγικό
+      μάθημα.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
+      Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
+      &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
+      Reserved.
+    feedback: "Πες τη γνώμη σου"
+    translate: "Βοηθήστε μας να μεταφράσουμε στη γλώσσα σας"
+    support: Support
+    tos: "Όροι παροχής υπηρεσιών"
+    privacy: "Πολιτική Aπορρήτου"
+    secure: Secure Version
+  prize_mail:
+    prize_earned:
+      subject: "Εξαργυρώστε το βραβείο σας στο Code.org!"
+    teacher_prize_earned:
+      subject: "Εξαργυρώστε το βραβείο σας στο Code.org!"
+    teacher_bonus_prize_earned:
+      subject: "Εξαργυρώστε το βραβείο-μπόνους σας στο Code.org!"
+  reference_area:
+    title: "Χρειάζεσε βοήθεια;"
+    subtitle: "Δες αυτά τα βίντεο και τις υποδείξεις"
+    teacher: "Δείτε τη λύση"
+    auth_error: "Δεν έχετε εξουσιοδήτηση να δείτε τη λύση."
+    submit: Update Artist Location
+    direction: Start Direction
+  video:
+    tab: "Βίντεο."
+    notes: "Δεν υπάρχει βίντεο; Δείξε σημειώσεις."
+    notes_coming_soon: Notes for this video coming soon.
+    autoplay_option: "Αυτόματη αναπαραγωγή βίντεο"
+    download: "Κατεβάστε το βίντεο"
+  compatability:
+    working: "Εργαζόμαστε για την υποστήριξη του προγράμματος περιήγησης που χρησιμοποιείτε."
+    upgrade: "Παρακαλούμε, αναβαθμίστε το πρόγραμμα περιήγησής σας."
+  slow_loading: "Αυτό διαρκεί περισσότερο από ότι συνήθως..."
+  try_reloading: "Δοκίμασε να φορτώσεις ξανά τη σελίδα"
+  next_stage: "Τελείωσε! Συνέχισε στο επόμενο στάδιο"
+  download_pdf: "Σχέδιο ανοικτού μαθήματος"
+  view_lesson_plan: View Lesson Plan
+  pdf_download: Download PDF
+  share_code:
+    title: "Κάντε κλικ στο κουμπί «Εκτέλεση προγράμματος» για να δείτε το πρόγραμμα
+      μου να εκτελείται"
+    bounce_og_title: Check out my Bounce Game
+    flappy_og_title: Check out my Flappy Game
+    studio_og_title: Check out my story
+    og_description: I wrote the code myself with Code.org
+  builder:
+    created: You created a new script.
+    destroyed: You destroyed a script.
+    manage: Manage Scripts
+    view: View
+    back: Back to scripts
+    success: You successfully edited the blocks.
+    level:
+      create: Create new level
+      current: Current Levels
+      unused: Unused Levels
+  upsell:
+    hoc:
+      title: "Ώρα του Κώδικα"
+      body: Try the basics of computer science. Millions have given it a shot.
+    flappy:
+      title: Flappy Code
+      body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
+        tutorial!
+    20hour:
+      title: Intro Course
+      body: Try our 20-hour Intro to Computer Science course.
+  gallery:
+    students_drew_these_with_code: Students drew these with code!
+    picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
+      pictures by writing their own computer programs. Click on the pictures to see
+      each program in action.
+    want_to_make_your_own: Want to make your own?
+    more: More &rarr;
+  landing:
+    prerelease: This page is still under development.
+    feedback: Give Feedback
+    report_bug: Report Bug
+    support: Get Help
+  multi:
+    wrong_title: Incorrect answer
+    wrong_body: The answer you've entered is not correct.  Please try again!
+    correct_title: Correct
+    correct_body: That is the correct answer.
+  match:
+    wrong_title: Incorrect solution
+    wrong_body: The solution you've entered is not correct.  Please try again!
+    correct_title: Correct
+    correct_body: That is the correct answer.
+  dialog:
+    ok: OΚ
+  time:
+    hour: 1 hour
+    day: day
+    week: week
+  data:
+    script:
+      name:
+        20-hour:
+          title: K-8 Intro to Computer Science Course (15-25 hours)
+          description: This 20-hour course introduces core computer science and programming
+            concepts. The course is designed for use in classrooms for grades K-8,
+            but it is fun to learn at all ages.
+        Hour of Code:
+          title: "Ώρα του Κώδικα"
+          description: ''
+        edit-code:
+          title: Edit Code
+          description: ''
+        events:
+          title: Events
+          description: ''
+        builder:
+          title: Builder
+          description: ''
+        flappy:
+          title: Flappy Code
+          description: Wanna write your own game in less than 10 minutes? Try our
+            Flappy Code tutorial!
+        jigsaw:
+          title: Jigsaw
+          description: ''
+        step:
+          title: Step
+          description: ''
+        sample_level_builder:
+          title: Sample Level Builder
+          description: ''
+  age_interstitial:
+    age: Your age
+    header: Account Information Update
+    message: We're in the process of updating our experience to provide you with even
+      stronger privacy protections. To do this, we need existing users to enter their
+      age here.<br/>As always, code.org will never rent, sell or share this information
+      with any third parties.
+    sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
+      out</a>.
+  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
+    You may browse <a href="http://support.code.org">support.code.org</a> without
+    signing in or ask your parent or teacher to contact us for you.

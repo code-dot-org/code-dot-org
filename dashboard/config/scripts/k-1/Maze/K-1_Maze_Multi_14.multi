@@ -1,0 +1,15 @@
+name 'K-1 Maze Multiple Choice 2' 
+
+title 'Maze'
+content1 '/script_assets/k_1_images/maze_images/maze_WS.png, 500'
+content2 ''
+
+height '100'
+
+question 'Which answer solves this level?'
+wrong '/script_assets/k_1_images/move_blocks/EN.png'
+wrong '/script_assets/k_1_images/move_blocks/ES.png'
+right '/script_assets/k_1_images/move_blocks/WS.png'
+wrong '/script_assets/k_1_images/move_blocks/WN.png'
+
+# http://staging.learn.code.org/s/course1/stage/2/puzzle/13

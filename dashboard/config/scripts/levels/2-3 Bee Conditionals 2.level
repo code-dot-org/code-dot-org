@@ -1,0 +1,53 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-06-20T00:22:29.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,2],[0,1,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "bee",
+    "instructions": "Hi, I'm a bee! Help me collect all of the nectar from the flowers. Use a loop.",
+    "start_direction": "3",
+    "step_mode": "1",
+    "is_k1": "false",
+    "nectar_goal": "4",
+    "flower_type": "redWithNectar",
+    "skip_instructions_popup": "false",
+    "ideal": "8",
+    "maze_data": null
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_nectar"/>
+        <block type="maze_honey"/>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="maze_nectar"/>
+        <block type="controls_repeat">
+          <title name="TIMES">3</title>
+        </block>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Karel>

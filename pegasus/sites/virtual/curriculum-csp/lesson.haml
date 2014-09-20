@@ -1,0 +1,26 @@
+---
+title: Unit
+---
+- directory = Dir[File.join(sites_dir('virtual/curriculum-csp/'), unit_lesson)].first
+- files = Dir.entries(directory)
+- lesson_info = YAML.load_file(File.join(directory, 'info.yml'))
+- unit, lesson = unit_lesson.split('-')
+
+%h1 Unit #{unit} - Lesson #{lesson}: #{lesson_info["title"]}
+
+%p= lesson_info["description"]
+
+- extensions = [ ".md", ".csv"]
+- extensions.each do |extension|
+  - filtered_files = files.select {|entry| File.extname(entry) == extension }
+  - filtered_files.each do |file|
+    -basename = File.basename(file, extension)
+    - if extension == ".md" || extension == ".haml"
+      %a{:href=>"/curriculum/csp/#{unit_lesson}/#{basename}"}= basename
+      (
+      %a{:href=>"/curriculum/csp/#{unit_lesson}/#{basename}.pdf"}> PDF
+      )
+    -else
+      %a{:href=>"/curriculum/csp/#{unit_lesson}/#{file}"}= file
+    %br
+  %br

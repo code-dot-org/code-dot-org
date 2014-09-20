@@ -1,0 +1,28 @@
+---
+title: Unit
+---
+- directory = Dir[File.join(sites_dir('virtual/curriculum-msm/'), unit_lesson)].first
+- files = Dir.entries(directory)
+- lesson_info = YAML.load_file(File.join(directory, 'info.yml'))
+
+%h1 Lesson #{unit_lesson}: #{lesson_info["title"]}
+
+%p= lesson_info["description"]
+
+- extensions = [ ".html", ".md", ".csv"]
+- extensions.each do |extension|
+  - filtered_files = files.select {|entry| File.extname(entry) == extension }
+  - filtered_files.each do |file|
+    -basename = File.basename(file, extension)
+    - if extension == ".md" || extension == ".haml" || extension == ".html"
+      - if extension == ".html"
+        - # Special case MSM hack to show a friendlier name
+        %a{:href=>"/curriculum/msm/#{unit_lesson}/#{file}"}= "Lesson"
+      - else
+        %a{:href=>"/curriculum/msm/#{unit_lesson}/#{basename}"}= basename
+        
+      (
+      %a{:href=>"/curriculum/msm/#{unit_lesson}/#{basename}.pdf"}> PDF
+      )
+    %br
+  %br

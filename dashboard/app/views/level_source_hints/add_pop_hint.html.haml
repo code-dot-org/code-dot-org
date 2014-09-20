@@ -1,0 +1,45 @@
+%div
+  %h1 #{@num_of_attempts} students wrote the code below. Enter a targeted hint to help them solve the puzzle.
+  %p Guidelines:
+  %ul
+    %li
+      Use the character's perspective when referring to the game board.
+      %br
+      &#x2716; "You need to move further."
+      %br
+      &#x2714; "I need to move further."
+    %li
+      Use the second person ("you") when referring to block usage.
+      %br
+      &#x2716; "I need to use the 'repeat' block."
+      %br
+      &#x2714; "How about using the 'repeat' block?"
+      %br
+      &#x2714; "Why don't you try the 'repeat' block?"
+    %li
+      Don't just give the answer.
+      %br
+      &#x2716; "I need to turn right instead of left."
+      %br
+      &#x2714; "Make sure you're turning me in the correct direction."
+    %li For now, we are only accepting English-language hints.
+  - script = @script || Script.twenty_hour_script
+  - if !@level.nil? && @level.ideal_level_source_id
+    .solution_link
+      #{link_to "See the puzzle", script_level_path(script, ScriptLevel.where(:script_id => script, :level_id => @level).first), :target => "_blank"}
+      #{link_to t('reference_area.teacher'), script_level_solution_path(script, @level), :target => "_blank"}
+  = render partial: "shared/add_hint", locals: {level_source_id: @level_source_id, redirect_url: @next_path}
+  %table{:width => "30%"}
+    %tr
+      %td{:style => 'text-align:left;'}
+        = link_to "<< Prev", @prev_path
+      -if @middle_link
+        %td{:style => 'text-align:center;'}
+          = @middle_link
+      %td{:style => 'text-align:right;'}
+        = link_to "Next >>", @next_path
+
+%br
+= render partial: "levels/blockly", locals: { start_blocks: @start_blocks, app: @game.app, hide_source: @hide_source, share: @share }
+
+.fb-comments{:data=> {:href => request.original_url, :numposts => 10, :colorscheme => "light"} }

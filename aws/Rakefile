@@ -1,0 +1,196 @@
+require_relative '../deployment.rb'
+require 'cdo/erb'
+require 'cdo/rake_utils'
+
+module RakeUtils
+  def self.erb(source, target, locals)
+    puts "erb #{target}"
+    erb_file_to_file source, target, locals
+  end
+end
+
+DEPENDENCIES = [
+  deploy_dir('deployment.rb'),
+  deploy_dir('aws','Rakefile'),
+  deploy_dir('locals.yml'),
+  aws_dir('secrets.tgz.aes'),
+  secrets_dir('config.yml'),
+].select{|i| File.file?(i)}
+
+file aws_dir('bashrc') => [aws_dir('bashrc.erb')] + DEPENDENCIES do |t|
+  RakeUtils.erb t.prerequisites[0], t.name, task:t
+end
+
+file home_dir('.bashrc') => [aws_dir('bashrc')] do |t|
+  cp t.prerequisites[0], t.name
+end
+
+file aws_dir('crontab') => [aws_dir('crontab.erb'), aws_dir('crontab.rb')] + DEPENDENCIES do |t|
+  RakeUtils.erb t.prerequisites[0], t.name, task:t
+end
+
+file aws_dir('crontab.installed') => [aws_dir('crontab')] do |t|
+  system "cat #{aws_dir('crontab')} | crontab -"
+  touch t.name
+end
+
+file aws_dir('profile') => [aws_dir('profile.erb')] + DEPENDENCIES do |t|
+  RakeUtils.erb t.prerequisites[0], t.name, task:t
+end
+
+if File.file? aws_dir('secrets.key')
+  tgz_file = aws_dir('secrets.tgz')
+
+  task :secrets => [aws_dir('secrets.key')] do
+    Dir.chdir(aws_dir) do
+      rm tgz_file if File.file?(tgz_file)
+      RakeUtils.system 'COPYFILE_DISABLE=1', 'tar', '-zcf', 'secrets.tgz', 'secrets'
+      RakeUtils.system 'openssl', 'aes-256-cbc', '-e', '-in', 'secrets.tgz', '-out', 'secrets.tgz.aes', '-k', 'secrets.key'
+      rm tgz_file
+    end
+  end
+
+  file secrets_dir('config.yml') => [aws_dir('secrets.tgz.aes'), aws_dir('secrets.key')] do |t|
+    Dir.chdir(aws_dir) do
+      rm tgz_file if File.file?(tgz_file)
+      RakeUtils.system 'openssl', 'aes-256-cbc', '-d', '-in', 'secrets.tgz.aes', '-out', 'secrets.tgz', '-k', 'secrets.key'
+      rm_rf secrets_dir if File.directory?(secrets_dir)
+      RakeUtils.system 'tar', '-zxf', tgz_file
+      rm tgz_file
+      touch secrets_dir('config.yml')
+    end
+  end
+
+  SECRETS = secrets_dir('config.yml')
+else
+  SECRETS = deploy_dir('deployment.rb')
+end
+
+file home_dir('.profile') => [aws_dir('profile')] do |t|
+  cp t.prerequisites[0], t.name
+end
+
+file home_dir('.ssh/authorized_keys') => [secrets_dir('authorized_keys')] do |t|
+  cp t.prerequisites[0], t.name
+end
+
+file dashboard_dir('config/init.d') => [dashboard_dir('config/init.d.erb')] + DEPENDENCIES do |t|
+  RakeUtils.erb t.prerequisites[0], t.name, task:t
+end
+
+ETC_INIT_D_DASHBOARD = "/etc/init.d/#{CDO.dashboard_unicorn_name}"
+task ETC_INIT_D_DASHBOARD => [dashboard_dir('config/init.d')] do |t|
+  RakeUtils.sudo_ln_s t.prerequisites[0], t.name
+end
+
+file pegasus_dir('config/init.d') => [pegasus_dir('config/init.d.erb')] + DEPENDENCIES do |t|
+  RakeUtils.erb t.prerequisites[0], t.name, task:t
+end
+
+ETC_INIT_D_PEGASUS = "/etc/init.d/#{CDO.pegasus_unicorn_name}"
+task ETC_INIT_D_PEGASUS => [pegasus_dir('config/init.d')] do |t|
+  RakeUtils.sudo_ln_s t.prerequisites[0], t.name
+end
+
+file pegasus_dir('config/newrelic.yml') => [pegasus_dir('config/newrelic.yml.erb')] + DEPENDENCIES do |t|
+  RakeUtils.erb t.prerequisites[0], t.name, task:t
+end
+
+file aws_dir('postfix/sasl_password') => [aws_dir('postfix/sasl_password.erb')] + DEPENDENCIES do |t|
+  RakeUtils.erb t.prerequisites[0], t.name, task:t
+end
+
+file aws_dir('postfix/sasl_password.db') => [secrets_dir('postfix_sasl_password.db'), aws_dir('postfix/sasl_password')] + DEPENDENCIES do |t|
+  RakeUtils.sudo 'cp', t.prerequisites[0], t.name
+end
+
+file aws_dir('postfix/main.cf') => [aws_dir('postfix/main.cf.erb'), aws_dir('postfix/sasl_password.db')] + DEPENDENCIES do |t|
+  RakeUtils.erb t.prerequisites[0], t.name, task:t
+end
+
+task '/etc/postfix' => [aws_dir('postfix/main.cf'), aws_dir('postfix/sasl_password'), aws_dir('postfix/sasl_password.db')] do |t|
+  if CDO.use_postfix
+    RakeUtils.sudo 'chown', '-R', 'postfix:ubuntu', aws_dir('postfix')
+
+    if !File.symlink?('/etc/postfix') && File.directory?('/etc/postfix')
+      RakeUtils.sudo 'mv', '/etc/postfix', '/etc/postfix.old'
+    end
+
+    RakeUtils.sudo_ln_s aws_dir('postfix'), '/etc/postfix'
+    RakeUtils.sudo_ln_s aws_dir('postfix/mailname'), '/etc/mailname'
+    RakeUtils.sudo_ln_s aws_dir('postfix/aliases'), '/etc/aliases'
+    RakeUtils.sudo_ln_s aws_dir('postfix/aliases.db'), '/etc/aliases.db'
+  end
+end
+
+file aws_dir('varnish.config') => [aws_dir('varnish.config.erb')] + DEPENDENCIES do |t|
+  RakeUtils.erb t.prerequisites[0], t.name, task:t
+end
+
+file aws_dir('varnish.secret') => DEPENDENCIES do |t|
+  puts t.name
+  IO.write t.name, "#{CDO.varnish_secret}\n"
+end
+
+file aws_dir('varnish.vcl') => [aws_dir('varnish.vcl.erb')] + DEPENDENCIES do |t|
+  RakeUtils.erb t.prerequisites[0], t.name, task:t
+end
+
+file '/etc/default/varnish' => [aws_dir('varnish.config')] do |t|
+  RakeUtils.sudo_ln_s t.prerequisites[0], t.name
+end
+
+file deploy_dir('i18n/code.org/crowdin.yaml') => [deploy_dir('i18n/code.org/crowdin.yaml.erb')] + DEPENDENCIES do |t|
+  RakeUtils.erb t.prerequisites[0], t.name, task:t
+end
+
+file deploy_dir('i18n/hourofcode.com/crowdin.yaml') => [deploy_dir('i18n/hourofcode.com/crowdin.yaml.erb')] + DEPENDENCIES do |t|
+  RakeUtils.erb t.prerequisites[0], t.name, task:t
+end
+
+file deploy_dir('i18n/curriculum/crowdin.yaml') => [deploy_dir('i18n/curriculum/crowdin.yaml.erb')] + DEPENDENCIES do |t|
+  RakeUtils.erb t.prerequisites[0], t.name, task:t
+end
+
+INSTALL = [:production, :staging, :test].include?(rack_env)
+
+task :default => [
+  SECRETS,
+
+  INSTALL ? aws_dir('crontab.installed')        : aws_dir('crontab'),
+  INSTALL ? home_dir('.ssh/authorized_keys')    : nil,
+  INSTALL ? home_dir('.bashrc')                 : aws_dir('bashrc'),
+  INSTALL ? home_dir('.profile')                : aws_dir('profile'),
+  INSTALL ? ETC_INIT_D_DASHBOARD                : dashboard_dir('config/init.d'),
+  INSTALL ? ETC_INIT_D_PEGASUS                  : pegasus_dir('config/init.d'),
+  INSTALL ? '/etc/postfix'                      : aws_dir('postfix/main.cf'),
+  INSTALL ? '/etc/default/varnish'              : aws_dir('varnish.config'),
+  aws_dir('varnish.secret'),
+  aws_dir('varnish.vcl'),
+
+  deploy_dir('i18n/code.org/crowdin.yaml'),
+  deploy_dir('i18n/hourofcode.com/crowdin.yaml'),
+  deploy_dir('i18n/curriculum/crowdin.yaml'),
+  pegasus_dir('config/newrelic.yml'),
+].select{|i|i}
+
+task :clean do
+  [
+    aws_dir('bashrc'),
+    aws_dir('crontab'),
+    aws_dir('crontab.installed'),
+    aws_dir('postfix/main.cf'),
+    aws_dir('postfix/sasl_password'),
+    aws_dir('postfix/sasl_password.db'),
+    aws_dir('profile'),
+    aws_dir('varnish.config'),
+    aws_dir('varnish.secret'),
+    aws_dir('varnish.vcl'),
+    dashboard_dir('config/init.d'),
+    pegasus_dir('config/init.d'),
+    deploy_dir('i18n/crowdin.yaml'),
+    pegasus_dir('config/newrelic.yml'),
+  ].each do |path|
+    rm path if File.file?(path)
+  end
+end

@@ -1,0 +1,439 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-06-19T17:40:48.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "skin": "artist",
+    "instructions": "Can you make a hexagon with sides that are 100 pixels long to finish the cell? Remember, that means that you will only need to turn 60 degrees!",
+    "x": "150",
+    "y": "100",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "12",
+    "slider_speed": "0.8",
+    "free_play": "false"
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">100</title>
+              <next>
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveBackward</title>
+                  <title name="VALUE">100</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_turn_by_constant_dropdown">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE" config="45,60,90,120,180">60</title>
+              <next>
+                <block type="draw_turn_by_constant_dropdown">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE" config="45,60,90,120,180">60</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+          <next>
+            <block type="draw_turn_by_constant">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE">60</title>
+              <next>
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">100</title>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">60</title>
+                      <next>
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">100</title>
+                          <next>
+                            <block type="draw_turn_by_constant">
+                              <title name="DIR">turnRight</title>
+                              <title name="VALUE">60</title>
+                              <next>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">100</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant">
+                                      <title name="DIR">turnRight</title>
+                                      <title name="VALUE">60</title>
+                                      <next>
+                                        <block type="draw_move_by_constant">
+                                          <title name="DIR">moveForward</title>
+                                          <title name="VALUE">100</title>
+                                          <next>
+                                            <block type="draw_turn_by_constant">
+                                              <title name="DIR">turnRight</title>
+                                              <title name="VALUE">60</title>
+                                              <next>
+                                                <block type="draw_move_by_constant">
+                                                  <title name="DIR">moveForward</title>
+                                                  <title name="VALUE">100</title>
+                                                  <next>
+                                                    <block type="draw_turn_by_constant">
+                                                      <title name="DIR">turnRight</title>
+                                                      <title name="VALUE">60</title>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="when_run" movable="false" deletable="false">
+          <next>
+            <block type="draw_colour" inline="true">
+              <value name="COLOUR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ffff00</title>
+                </block>
+              </value>
+              <next>
+                <block type="jump_by_constant">
+                  <title name="DIR">jumpForward</title>
+                  <title name="VALUE">15</title>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
+                      <next>
+                        <block type="jump_by_constant">
+                          <title name="DIR">jumpForward</title>
+                          <title name="VALUE">25</title>
+                          <next>
+                            <block type="draw_turn_by_constant_dropdown">
+                              <title name="DIR">turnLeft</title>
+                              <title name="VALUE" config="45,60,90,120,180">90</title>
+                              <next>
+                                <block type="procedures_callnoreturn">
+                                  <mutation name="draw 3 hexagons"/>
+                                  <next>
+                                    <block type="draw_turn_by_constant">
+                                      <title name="DIR">turnRight</title>
+                                      <title name="VALUE">90</title>
+                                      <next>
+                                        <block type="draw_move_by_constant">
+                                          <title name="DIR">moveForward</title>
+                                          <title name="VALUE">50</title>
+                                          <next>
+                                            <block type="draw_turn_by_constant">
+                                              <title name="DIR">turnRight</title>
+                                              <title name="VALUE">90</title>
+                                              <next>
+                                                <block type="procedures_callnoreturn">
+                                                  <mutation name="draw 4 hexagons"/>
+                                                  <next>
+                                                    <block type="draw_turn_by_constant_dropdown">
+                                                      <title name="DIR">turnLeft</title>
+                                                      <title name="VALUE" config="45,60,90,120,180">90</title>
+                                                      <next>
+                                                        <block type="draw_turn_by_constant">
+                                                          <title name="DIR">turnLeft</title>
+                                                          <title name="VALUE">90</title>
+                                                          <next>
+                                                            <block type="procedures_callnoreturn">
+                                                            <mutation name="draw 5 hexagons"/>
+                                                            <next>
+                                                            <block type="draw_turn_by_constant">
+                                                            <title name="DIR">turnRight</title>
+                                                            <title name="VALUE">90</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">50</title>
+                                                            <next>
+                                                            <block type="draw_turn_by_constant">
+                                                            <title name="DIR">turnRight</title>
+                                                            <title name="VALUE">90</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">30</title>
+                                                            <next>
+                                                            <block type="procedures_callnoreturn">
+                                                            <mutation name="draw 4 hexagons"/>
+                                                            <next>
+                                                            <block type="draw_turn_by_constant">
+                                                            <title name="DIR">turnLeft</title>
+                                                            <title name="VALUE">90</title>
+                                                            <next>
+                                                            <block type="draw_turn_by_constant">
+                                                            <title name="DIR">turnLeft</title>
+                                                            <title name="VALUE">90</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">30</title>
+                                                            <next>
+                                                            <block type="procedures_callnoreturn">
+                                                            <mutation name="draw 3 hexagons"/>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw 3 hexagons</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="draw_pen">
+                  <title name="PEN">penDown</title>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">15</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">60</title>
+                          <next>
+                            <block type="controls_repeat">
+                              <title name="TIMES">5</title>
+                              <statement name="DO">
+                                <block type="draw_pen">
+                                  <title name="PEN">penDown</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">15</title>
+                                      <next>
+                                        <block type="draw_turn_by_constant">
+                                          <title name="DIR">turnRight</title>
+                                          <title name="VALUE">60</title>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="draw_pen">
+                                  <title name="PEN">penUp</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">30</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw 4 hexagons</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">6</title>
+                  <statement name="DO">
+                    <block type="draw_pen">
+                      <title name="PEN">penDown</title>
+                      <next>
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">15</title>
+                          <next>
+                            <block type="draw_turn_by_constant">
+                              <title name="DIR">turnRight</title>
+                              <title name="VALUE">60</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_pen">
+                      <title name="PEN">penUp</title>
+                      <next>
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">30</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw 5 hexagons</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">5</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">6</title>
+                  <statement name="DO">
+                    <block type="draw_pen">
+                      <title name="PEN">penDown</title>
+                      <next>
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">15</title>
+                          <next>
+                            <block type="draw_turn_by_constant">
+                              <title name="DIR">turnRight</title>
+                              <title name="VALUE">60</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_pen">
+                      <title name="PEN">penUp</title>
+                      <next>
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">30</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </predraw_blocks>
+  </blocks>
+</Artist>

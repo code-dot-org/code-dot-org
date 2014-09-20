@@ -1,0 +1,26 @@
+-facebook = {:u=>'https://www.youtube.com/watch?v=nKIu9yen5ncphp'}
+-twitter = {:url=>'http://code.org', :related=>'codeorg', :hashtags=>'CODE', :text=>'Inspirational video by Zuckerberg, @BillGates, @iamwill, @ChrisBosh, @Jack Dorsey & other heroes'}
+
+.youtube-videos.clear
+  .main-video.clear
+    %div{style: "text-align:right"}
+      %div{style: "width:100%; height: 100%; margin: 0 auto;"}
+        %div{style: "position:relative"}
+          %img{src: "/images/16x9.png", style: "display:block; width:100%; height:auto"}/
+          %iframe{allowfullscreen: "", frameborder: "0", src: "https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0", style: "position:absolute; top: 0; left: 0; width: 100%; height: 100%"}
+
+    = view :share_buttons, facebook:facebook, twitter:twitter
+    .youtube-channel-link
+      %a{:href=>'http://www.youtube.com/user/CodeOrg'}<
+        Go to YouTube channel
+
+  .other-videos.clear
+    %h3 Other cool videos you can share
+    -i = 0
+    -DB[:cdo_youtube_videos].all.each do |video|
+      -i = i + 1
+      -zebra = (i % 2 == 0) ? 'even' : 'odd'
+      .other-video{:class=>"other-video-#{zebra}"}
+        %a{:href=>"http://www.youtube.com/watch?v=#{video[:code_s]}"}
+          %img{:src=>"http://img.youtube.com/vi/#{video[:code_s]}/mqdefault.jpg"}
+          .other-video-caption= video[:title_s]

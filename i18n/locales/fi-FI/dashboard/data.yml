@@ -1,0 +1,411 @@
+"fi":
+  data:
+    script:
+      name:
+        20-hour:
+          desc: "Ala-asteen johdanto tietojenkäsittelyyn"
+          Unplug1: "Vaihe 1"
+          Maze: "Vaihe 2"
+          Unplug2: "Vaihe 3"
+          Unplug3: "Vaihe 4"
+          Artist: "Vaihe 5"
+          Unplug4: "Vaihe 6"
+          Artist2: "Vaihe 7"
+          Unplug5: "Vaihe 8"
+          Farmer: "Vaihe 9"
+          Unplug6: "Vaihe 10"
+          Artist3: "Vaihe 11"
+          Unplug7: "Vaihe 12"
+          Farmer2: "Vaihe 13"
+          Unplug8: "Vaihe 14"
+          Artist4: "Vaihe 15"
+          Unplug9: "Vaihe 16"
+          Farmer3: "Vaihe 17"
+          Unplug10: "Vaihe 18"
+          Artist5: "Vaihe 19"
+          Unplug11: "Vaihe 20"
+        Hour of Code:
+          desc: "Kooditunti"
+          Maze: "Vaihe 1"
+        Edit Code:
+          desc: "Edit Code (beta)"
+          MazeEC: "Vaihe 1"
+        2014 Levels:
+          desc: "Bounce (beta)"
+          Bounce: "Vaihe 1"
+        Builder Levels:
+          desc: "User-Created Puzzles (beta)"
+          Custom: "Vaihe 1"
+        Flappy Levels:
+          desc: "Flappy Bird"
+          Flappy: "Vaihe 1"
+        Jigsaw Levels:
+          desc: "Jigsaw (beta)"
+          Jigsaw: "Vaihe 1"
+        Step Levels:
+          desc: "Maze (beta)"
+          MazeStep: "Stage Step"
+        edit-code:
+          desc: "Edit Code (beta)"
+          MazeEC: "Vaihe 1"
+        events:
+          desc: "Bounce (beta)"
+          Bounce: "Vaihe 1"
+          Studio: "Vaihe 2"
+        builder:
+          desc: "User-Created Puzzles (beta)"
+          Custom: "Vaihe 1"
+        flappy:
+          desc: "Flappy Bird"
+          Flappy: "Vaihe 1"
+        jigsaw:
+          desc: "Jigsaw (beta)"
+          Jigsaw: "Vaihe 1"
+        step:
+          desc: "Maze (beta)"
+          MazeStep: "Stage Step"
+        wordsearch:
+          desc: "Spelling Bee (beta)"
+          WordSearch: "Vaihe 1"
+    game:
+      name:
+        Unplug1: "Johdanto tietojenkäsittelyyn"
+        Maze: "Sokkelo"
+        Multi: "Multiple Choice Stuffs"
+        Unplug2: "Laskennallinen ajattelu"
+        Unplug3: "Ruutupaperiohjelmointi"
+        Artist: "Taiteilija"
+        Unplug4: "Algoritmit"
+        Artist2: "Taiteilija 2"
+        Unplug5: "Funktiot"
+        Farmer: "Maanviljelijä"
+        Unplug6: "Ehtolausekkeet"
+        Artist3: "Taiteilija 3"
+        Unplug7: "Sävellys"
+        Farmer2: "Maanviljelijä 2"
+        Unplug8: "Abstraktio"
+        Artist4: "Taiteilija 4"
+        Unplug9: "Releohjelmointi"
+        Farmer3: "Maanviljelijä 3"
+        Unplug10: "Internetti"
+        Artist5: "Taiteilija 5"
+        Unplug11: "Yhteenveto"
+        MazeEC: "Sokkelo"
+        Bounce: "Bounce"
+        Flappy: "Flappy Bird"
+        Jigsaw: "Jigsaw"
+        MazeStep: "Maze Step Mode"
+        Wordsearch: "Wordsearch"
+    trophy:
+      name:
+        Bronze: "Pronssi"
+        Silver: "Hopea"
+        Gold: "Kulta"
+    concept:
+      description:
+        sequence: "Käskysarjat"
+        if: "Jos-lohko"
+        if_else: "Jos-muuten -lohko"
+        loop_times: "Toistolohko"
+        loop_until: '"Toista kunnes" -lohko'
+        loop_while: '"Niin kauan kuin" -lohko'
+        loop_for: "Laskurilohko"
+        function: "Funktiot"
+        parameters: "Parametrilliset funktiot"
+    level:
+      instructions:
+        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
+        maze_2_1: "Tuo possu kiusaa minua. Auta minua löytämään hänet!"
+        maze_2_2_5: "Seuraa reittiä ja auta minut hölmön possun luo. Vältä TNT-laatikkoa tai kohta höyhenet pöllyää!"
+        maze_2_3: "Auta minut vihreän ilkiön luo! (Varo TNT:tä)"
+        maze_2_4: "Ihan rauhallisena nyt. Auta minut pahan possun luo, muuten suutun!"
+        maze_2_5: "Löytyy ainakin yksi tapa, jolla pääsen possun luo vain kahta lohkoa käyttäen. Keksitkö mikä se on?"
+        maze_2_6: "Yritä saada minut vihreän tunkeilijan luo käyttäen vain kolmea lohkoa."
+        maze_2_7: 'Auta minua hävittämään tämä paha possu käyttäen pienintä määrää lohkoja. Yritä käyttää enemmän, kuin yhtä "toista"-lohkoa.'
+        maze_2_8: |-
+          When a block is grey, that means you can't delete it. Solve this puzzle using the "repeat" block that repeats 3 times. Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
+        maze_2_9: 'Noniin, kokeile nyt uutta "toista kunnes" -lohkoa - se toistaa asioita niin kauan, kunnes saavutan tuon ärsyttävän possun.'
+        maze_2_10: 'Noniin, viimeinen harjoitus - pystytkö ratkaisemaan tämän tehtävän käyttäen vain neljää lohkoa?'
+        maze_2_11: "Hyvä henkilö. Mää zombi. Mää nälkä. Pakko... saada... auringonkukka... Saatko mut sinne käyttäen vain viittä lohkoa?"
+        maze_2_12: "OK, tämä on samankaltainen, mutta hieman erilainen. Pärjäätkö viidellä lohkolla?"
+        maze_2_13: 'Käytä uutta "jos"-lohkoa päättämään, milloin käännyn. Vihje: tarvitset vain yhtä lisälohkoa, mutta opettele nyt miten me teimme sen, jotta osaat itse seuraavalla kerralla.'
+        maze_2_14: 'Hyvä! Tämä on ihan kuin edellinen pulma, mutta nyt sinun pitää itse muistaa, miten "jos"-lohkoa ja "toista"-lohkoa käytettiin yhdessä.'
+        maze_2_15: 'Tahtoo auringonkukan! Käytä "jos"-lohkoa viedäksesi minut sinne käyttäen mahdollisimman pientä määrää lohkoja.'
+        maze_2_16: 'Harjoitellaanpa samaa uudestaan - tämä ei kyllä ole kovin vaikea, mutta varo ahmijoita!'
+        maze_2_17: '"Jos - muuten" -lohko tarkistaa ehtolausekkeen ja sitten tekee yhden TAI toisen asian. Viedäksesi minut auringonkukan luo, kokeile käyttää tätä uutta lohkoa.'
+        maze_2_18: 'Vielä yksi harjoitus "Jos - muuten" -lohkolla. Saatko sen oikein heti ensimmäisellä yrityksellä?'
+        maze_2_19: "Pystytkö lisäämään vain kolme uutta lohkoa ratkaistaksesi tämän monimutkaisemman sokkelon? Jos teet sen oikein, pystyn kulkemaan kiemurtelevan polun riippumatta sen pituudesta."
+        turtle_1_1: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
+        turtle_1_2: 'Nyt piirrä neliö. HUOM: käytä lempiväriäsi valitsemalla "aseta väri" -lohko.'
+        turtle_1_3: "Tee neliö käyttäen vain kolme lohkoa."
+        turtle_1_4: |
+          Piirrä kolmio, jonka sivut ovat kaikki eri värisiä. Käytä "satunnainen väri" -toimintoa valitsemaan kunkin sivun väri.
+          Vihje: "sinun täytyy keksiä, kuinka paljon kääntyä ja valita oikea luku \"käänny\"-lohkoon."
+        turtle_1_5: "Harjoituksen vuoksi voisit nyt piirtää kirjekuoren käyttäen kolmiota ja neliötä."
+        turtle_1_6: 'Keksitkö miten piirtää tämä kolmio ja neliö? Vihje: piirrä kolmio ensin ja sitten keksi miten paljon pitää kääntyä ennen kuin piirrät neliön.'
+        turtle_1_7: 'OK! Tehdäänpäs sitten jotain hankalampaa: pystytkö piirtämään nämä vihreät lasit? Neliöt ovat 100 kuvapistettä kanttiinsa ja niiden välissä on 50 kuvapistettä. Älä unohda piirtää vihreällä!'
+        turtle_1_8: 'Selvä. Yritähän seuraavaksi selvittää, mitä tapahtuu jos ajat tämän koodin (paina "Suorita ohjelma" -nappia nähdäksesi vastauksen). Sen jälkeen toista sitä niin monta kertaa, että saat kuvan valmiiksi. Väri vaihtuu joka kerta.'
+        turtle_1_9: "Keksitkö, millä numerolla sinun täytyy korvata kysymysmerkki, että saat piirretyksi ympyrän?"
+        turtle_1_10: 'Teit sen! Piirrä nyt mitä vain haluat. Tässä muutama hauska idea: tikku-ukko, lumihiutale tai spiraali. Kokeile myös uutta "aseta leveys" -lohkoa. Pidä hauskaa!'
+        turtle_4_1: 'Osaatko piirtää kolmion (jonka sivut ovat 100 kuvapistettä) käyttäen vain kolmea lohkoa? Vihje: käytä "toista" -lohkoa.'
+        turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
+        turtle_4_3: 'Selvä! Tässä koodi, jota käytit piirtääksesi kolmion. Voitko lisätä "toista" ja "käänny"-lohkot, joilla se muuttuu hienoksi kukkaseksi?'
+        turtle_4_4: 'Tässä on sama koodi, kuin edellisessä pulmassa, mutta se kääntyy vain 36 astetta kunkin kolmion välillä. Kuinka monta kertaa sitä täytyy toistaa? (Vihje: ympyrässä on 360 astetta)'
+        turtle_4_5: 'Tässä on sama koodi, kuin edellisessä pulmassa, mutta se toistuu tasan 36 kertaa. Kuinka monta astetta pitää kääntyä toistojen välillä? (Vihje: ympyrässä on 360 astetta)'
+        turtle_4_6: "Käyttäen vain kolmea lohkoa, osaatko piirtää neliön, jonka sivu on 20 kuvapistettä?"
+        turtle_4_7: 'Tässä on koodi edellisestä pulmasta. Voitko toistamalla sitä saada aikaan kymmenen vierekkäistä neliötä niin, että ne muodostavat tikapuut? Vihje: tarvitset vain kaksi lohkoa lisää.'
+        turtle_4_8: "Tässä on ratkaisu edelliseen pulmaan. Saatko kuvan valmiiksi lisäämällä vain kaksi uutta lohkoa?"
+        turtle_4_9: "Tässä on edellisen pulman vastaus. Kuinka monta astetta sen tulisi kääntyä, jotta kuva tulisi valmiiksi? (Joudut ehkä arvaamaan muutaman kerran)"
+        turtle_4_10: "Tässä on edellisen pulman vastaus. Kuinka monta toistoa siinä täytyy olla, jotta kuva valmistuu?"
+        turtle_4_11: 'Kokeile muutaa numeroita "käänny" ja "toista"-lohkoissa saadaksesi aikaan eri kuvioita. Voit toki tehdä kokeita muullakin osalla koodista ja piirtää mitä vain haluat.'
+        maze_karel_1_1: 'Hei! Minä olen maanviljeliä. Tarvitsen apua maan tasoittamisessa, jotta voin istuttaa siihen kasveja. Siirrä minut maakasan luo ja käytä "poista"-lohkoa poistaaksesi sen.'
+        maze_karel_1_2: 'Seuraavaksi siirrä minut kuopan luo ja täytä se KAHDELLA lapiollisella multaa, käyttäen "täytä"-lohkoa.'
+        maze_karel_1_3: "Siirrä minut maakasan luo ja kerro minulle, montako lapiollista poistaa. Käytä mahdollisimman pientä määrää lohkoja."
+        maze_karel_1_4: 'Pystytkö auttamaan minua poistamaan kaikki neljä kasaa? Vihje: käytä toistolohkoa jos voit.'
+        maze_karel_1_5: 'Auta minua täyttämään kaikki nämä kuopat viidellä lapiollisella maata. Vihje: voit pistää "toista"-lohkon "niin kauan kuin"-lohkon sisään.'
+        maze_karel_1_6: 'Poista kaikki maakasat käyttäen mahdollisimman pientä määrää lohkoja. Uudet valinnat "niin kauan kuin" -lohkon alasvetovalikossa kertovat minulle seisonko kasan vai kuopan päällä.'
+        maze_karel_1_7: "Mahtavaa, löysit todella syvän montun! En edes tiedä, kuinka monta lapiollista maata sinne menee. Osaatko kirjoittaa ohjelman, joka tasaa sen?"
+        maze_karel_1_8: "Auta minut täyttämään pellon perällä oleva kuoppa käyttäen mahdollisimman pientä määrää lohkoja."
+        maze_karel_1_9: 'Laita minut poistamaan kaikki maakasat. Yritä käyttää mahdollisimman vähän lohkoja. Vihje: käytä "niin kauan kuin" -lohkoa.'
+        maze_karel_1_10: 'Taisi mennä ylitöiksi ja tuli jo pimeä. En osaa enää arvioida, kuinka suuria kasat ovat. Osa valinnoista on poistunut "niin kauan kuin" -lohkosta. Liikuta minua pellolla ja jos löydämme kasan, poista se.'
+        maze_karel_1_11: 'On jo pimeä. Liikuta minua pellolla. Jos osun kasan luo, poista se. Jos tulen kuopalle, täytä se. Vihje: käytä "jos"-lohkon alasvetovalikosta löytyviä ehtoja.'
+        turtle_2_1: 'Moro! Mää zombie taitelija. Mää rakastaa piirtämistä! Auta minua piirtämään neliö erikoisella värillä. Tärkeää: sinulla on edelleen käytössä kaikki samat lohkot, mutta nyt ne on järjestetty luokkiin.'
+        turtle_2_2: 'Tervetuloa käyttämään funktioita, joiden avulla voit määrittää omia, uusia lohkoja! Kokeile uutta "piirrä neliö" lohkoa, jonka löydät "Funktiot" valikosta ja piirrä sillä 50x50 kuvapisteen vihreä neliö.'
+        turtle_2_3: 'Käytä "toista"-lohkoa (kts. "Silmukat") piirtääksesi 3 kpl 100 kuvapisteen neliötä 120 kuvapisteen välein. Tee se kolmella satunnaisella värillä.'
+        turtle_2_4: 'Hienostellaanpa vähän. Muuta ohjelma piirtämään 36 neliötä, jotka ovat leveydeltään 100 kuvapistettä ja 10 asteen etäisyydellä toisistaan. Vihje: voit käyttää liukusäädintä tehdäksesi minusta nopeamman.'
+        turtle_2_5: 'Piirrä neliöt kooltaan 50, 60, 70, 80 ja 90 kuvapistettä. Sinun pitää käyttää "piirrä neliö" -funktiota viisi kertaa.'
+        turtle_2_6: 'Hienoa! Tämä ohjelma tulee käyttämään laskuria piirtämään samat neliöt, kuin viimeksi. Sinun täytyy saada neliöstä laskurin osoittaman arvon kokoinen, joten käytä "laskuri"-lohkoa. Vihje: löydät sen "Muuttujat"-valikosta.'
+        turtle_2_7: 'Tässä on ohjelma, joka piirtää spiraalin. Lohkon eivät ole vielä käytössä, joten ohjelma ei vielä aja. Tee uusi vastaavan spiraalin piirtävä ohjelma käyttäen "laske"-lohkoa ("Silmukat"-valikossa) ja "laskuri"-lohkoa ("Muuttujat"-valikossa).'
+        turtle_2_7_5: '"Funktiot"-valikossa on lisätty uusi "piirrä lumiukko"-funktio. Piirrä kaksi lumiukkoa, korkeudet 250 ja 100.'
+        turtle_2_8: 'Tämä voi olla hieman haastava. Käytä "piirrä lumiukko" -funktiota ja uutta "hyppää taaksepäin" -lohkoa ("Toiminnot"-valikossa). Piirrä 3 lumiukkoa eri väreissä, 100 kuvapisteen etäisyydellä toisistaan.'
+        turtle_2_9: 'Käytä "laske" silmukkaa piirtämään lumiukko perhe, jossa lumiukkojen pituudet ovat 110, 100, 90, 80 ja 70 kuvapistettä. Lumiukkojen pitäisi kaikkien olla 60 kuvapisteen etäisyydellä toisistaan.'
+        turtle_2_10: "Tässä vähän valmista koodia, jonka avulla voit tehdä kokeita erilaisilla spiraaleilla. Mitä tapahtuu jos muutat käännöksen määrää? Tai entä, jos asetat satunnaisvärin silmukkaan? Piirrä mitä vain haluat."
+        maze_karel_2_1: 'Kokeile käyttää lohkoja auttaaksesi minua poistamaan kaikki massa olevat kasat ja täyttämään kaikki kuopat. Yritä käyttää silmukoita sen sijaan, että käyttäisit samaa lohkoa useammin. Vihje: voit käyttää sisäkkäisiä silmukoita.'
+        maze_karel_2_2: 'Olemme määrittäneet oman lohkon "täytä 5", joka löytyy "Funktiot"-valikosta. Auta minua täyttämään kuopat sen avulla.'
+        maze_karel_2_3: 'Käytä uutta "täytä 5" -funktiolohkoa ja laita minut täyttämään kuopat. Sinun täytyy raahata "täytä 5" lohko "Funktiot"-valikosta.'
+        maze_karel_2_4: "Määritä uusi funktio joka poistaa 7 lapiollista maata. Käytä sitä sitten luodaksesi ohjelman, joka auttaa minua poistamaan kasat."
+        maze_karel_2_5: "Luo uusi funktio, joka poistaa 6 lapiollista kasasta ja käytä sitä sitten auttaaksesi minua tasaamaan kaikki kasat."
+        maze_karel_2_6: 'Käytä kahta uutta funktiota "täytä 8" ja "poista 8" ja auta minua tasaamaan kuopat ja kasat.'
+        maze_karel_2_7: "Pellolle on ilmestynyt lehmä! Kirjoita funktio joka auttaa minua välttämään lehmää ja poistamaan kasat. Laita kaikki lohkosi uuden funktion sisään."
+        maze_karel_2_8: 'Käytä nyt tätä uutta funktiota "vältä lehmä ja poista 1" ja auta minua poistamaan kaikki kasat.'
+        maze_karel_2_9: "Noniin! Tässä on funktio, joka poistaa 4 eri maakasaa. Kokeile laittaa tämä funktio silmukan sisään siten, että saat kaikki kasat poistettua käyttäen vain muutamaa uutta lohkoa."
+        maze_karel_2_10: "Liikuta minua pitkin peltoa ja auta minua tasaamaan se. Käytä näitä kahta uutta funktiota."
+        turtle_3_1: 'Tämä pulma näyttää, miten "piirrä neliö" ja "piirrä ympyrä" -funtkiot on määritetty. Funktion määrittäminen ei vielä aja sitä, vaan sinun pitää raahata "piirrä neliö" lohko "Funktiot"-valikosta ajaaksesi se.'
+        turtle_3_2: 'Käyttäen "piirrä neliö" -funktiota esimerkkinä, luo "piirrä kolmio" -funktio ja käytä sitä.'
+        turtle_3_3: 'Piirrä kolmion muotoisia aitoja kissojen ympärille ja neliön muotoisia aitoja lehmien ympärille. Vihje: testaa ohjelmaasi sitä mukaa kun etenet.'
+        turtle_3_4: 'Kokeile keksitko, miten voisit käyttää "piirrä neliö" ja "piirrä kolmio" -funktiota (ja paria muuta lohkoa) talon piirtämiseen. Piirrä talo leijonan ympärille.'
+        turtle_3_5: 'Luo nyt uusi "piirrä talo" funktio. Piirrä sitten talo kahdelle kissalle. Vihje: luo uusi funktio raahaamalla "suorittaaksesi jotain" -lohko ja muuta "jotain"-tekstin tilalle funktion nimi ("piirrä talo").'
+        turtle_3_6: 'Käyttäen "piirrä neliö" -funktiota esimerkkinä, lisää syöte "pituus" "piirrä kolmio" -funtiolle. Tämän jälkeen piirrä eri kokoisia kolmioita. (Vihje: klikkaa tähteä funktion vasemmassa yläkulmassa)'
+        turtle_3_7: 'Lisää syöte "pituus" "piirrä talo" -funktiolle ja piirrä iso talo elefantille (sivun pituus 150 kuvapistettä ).'
+        turtle_3_8: 'Tässä on kaikki edellisen pulman lohkot. Muokkaa "piirrä talo":a niin, että päädyn talon oikeaan alakulmaan piirtämisen jälkeen. Käytä muutettua funktiota ja piirrä kolme taloa.'
+        turtle_3_9: 'Osaatko luoda "piirrä talo" -funktion ilman apua? Kokeile ja sitten piirrä rivi taloja.'
+        turtle_3_10: "Olet oppinut todella paljon! Käytä nyt taitojasi ja piirrä jotain mukavaa. Kokeile vaikka piirtää tähti, spiraali tai erikoinen lumihiutale."
+        maze_karel_debug_seq_1: "Tervetuloa mestästämään koodivirhettä, eli bugia! Koodini ei toimi oikein. Osaatko löytää virheen ja korjata sen? Minun pitäisi saada peltoni tasattua, jotta voin aloittaa istutuksen."
+        maze_karel_debug_seq_2: "Mitä vikaa tässä ohjelmassa on? Miten korjaisit sen, jotta saan kasat pois?"
+        maze_karel_debug_repeat: "Auta minua korjaamaan tämä ohjelma, jotta saan peltoni kauniiksi ja tasaiseksi."
+        maze_karel_debug_while: "Miten muuttaisit tätä ohjelmaa, jotta saan kuopat täytettyä?"
+        maze_karel_debug_if: "Apua! Auta minua korjaamaan ohjelmani, jotta saan pellon täysin tasaiseksi."
+        maze_karel_debug_if_else: "Auta minua paikallistamaan ja korjaamaan virheet tässä ohjelmassa, jotta saan kaikki kuopat ja kasat tasattua."
+        maze_karel_debug_function_1: "Mitä tässä ohjelmassa pitäisi muuttaa, jotta se auttaisi minua poistamaan kaikki kasat?"
+        maze_karel_debug_function_2: "Osaatko paikallistaa ja korjata tämän ohjelman virheet, jotta pellosta tulisi tasainen?"
+        maze_karel_debug_function_3: 'Muokkaa tätä ohjelmaa siten, että saan kaikki kasat pois pelloltani. '
+        turtle_5_1: "Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Osaatko päätellä, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)"
+        turtle_5_2: "Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Keksitkö, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)"
+        turtle_5_3: "Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Osaatko päätellä, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)"
+        turtle_5_4: "Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Pystytkö selvittämään, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)"
+        turtle_5_5: "Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Keksitkö, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)"
+        turtle_5_6: "Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Osaatko päätellä, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)"
+        maze_3_1: "Minun täytyy saada tuo sika kiinni! Kirjoita pari siirry(); riviä, jotta saan munani takaisin."
+        maze_3_2: "Kirjoita minulle ohjelma, jotta pääsen possun luo."
+        maze_3_3: "Miten pääsisin possun luo? Varmistathan, etten törmää TNT-laatikoihin!"
+        maze_3_4: "Argh! Kirjoita minulle ohjelma, jolla pääsen TNT-laatikoiden ohi possun luo."
+        bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
+        bounce_2: 'Attach a block to the "when right arrow" and "when left arrow" blocks. Move the paddle to reach both finish targets.'
+        bounce_3: 'Now try something similar with the "when up arrow" block. Move the paddle to the finish target at the top.'
+        bounce_4: "This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle."
+        bounce_5: |-
+          We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
+        bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
+        bounce_7: 'Attach blocks to each of the "when" blocks. Bounce the ball until it hits the finish target.'
+        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
+        bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
+        bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
+        Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
+        flappy_1: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
+        flappy_2: |-
+          Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
+        flappy_3: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
+        flappy_4: |-
+          Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
+        flappy_5: |-
+          Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
+        flappy_6: "See if you can still score a point after making Flappy flap either a smaller or larger amount."
+        flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
+        flappy_8: "You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle."
+        flappy_9: "To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0."
+        flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
+        flappy_k1_1: "Play Flappy"
+        flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
+        flappy_k1_3: |-
+          Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
+        flappy_k1_4: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
+        flappy_k1_5: |-
+          Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
+        flappy_k1_6: |-
+          Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
+        flappy_k1_7: "See if you can score multiple points for making it past an obstacle"
+        flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
+        flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
+        jigsaw_1: "Click the block"
+        jigsaw_2: "Drag the block to the target"
+        jigsaw_3: "Arrange the blocks to form the image"
+        jigsaw_4: "Arrange the blocks to form the image"
+        jigsaw_5: "Arrange the blocks to form the image"
+        jigsaw_6: "Arrange the blocks to form the image"
+        jigsaw_7: "Arrange the blocks to form the image"
+        jigsaw_8: "Arrange the blocks to form the image"
+        jigsaw_9: "Arrange the blocks to form the image"
+        jigsaw_10: "Arrange the blocks to form the image"
+        jigsaw_11: "Arrange the blocks to form the image"
+        jigsaw_12: "Arrange the blocks to form the image"
+        jigsaw_13: "Fix the puzzle!"
+        mazestep_1: "Maze step description here"
+        mazestep_2: "Maze step description here"
+        mazestep_3: "Maze step description here"
+        mazestep_4: "Maze step description here"
+        mazestep_5: "Maze step description here"
+        studio_c2_1: 'Can you make this dog say "hello world"?'
+        studio_c2_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_c2_3: "Can you write a program to make this dog move to the cat?"
+        studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
+        studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
+        studio_c2_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
+        studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
+        studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
+        studio_c2_9: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
+        studio_c2_10: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
+        studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
+        studio_c3_story_1: 'Can you make this dog say "hello world"?'
+        studio_c3_story_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_c3_story_3: "Can you write a program to make this dog move to the cat?"
+        studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
+        studio_c3_story_5: "Can you add a block to make the octopus happy?"
+        studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
+        studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
+        studio_c3_game_2: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
+        studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
+        studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
+        studio_c3_game_5: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
+        studio_c3_game_6: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
+        studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
+        studio_playlab_1: 'Can you make this dog say "hello world"?'
+        studio_playlab_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_playlab_3: "Can you write a program to make this dog move to the cat?"
+        studio_playlab_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
+        studio_playlab_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
+        studio_playlab_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
+        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
+        studio_playlab_8: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
+        studio_playlab_9: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
+        studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
+        studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
+        studio_k1_1: 'Can you make this dog say "hello world"?'
+        studio_k1_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_k1_3: "Can you write a program to make this dog move to the cat?"
+        studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
+        studio_k1_5: "Can you add a block to make the octopus happy?"
+        studio_k1_6: "Create your own story! Move around the cat and dog, and make them say things."
+        maze_wordsearch_k_1: "Move me to spell the word EAST"
+        maze_wordsearch_k_2: "Move me to spell the word SOUTH"
+        maze_wordsearch_k_3: "Move me to spell the word WEST"
+        maze_wordsearch_k_4: "Move me to spell the word NORTH"
+        maze_wordsearch_k_6: "Move me East and then South to spell the word JUMP"
+        maze_wordsearch_k_9: "Move me one way, then another to spell the word CODE"
+        maze_wordsearch_k_13: "Move me one way, then another to spell the word DEBUG"
+        maze_wordsearch_k_15: "Move me one way, then another to spell the word ABOVE"
+        maze_wordsearch_k_16: "Move me one way, then another to spell the word BELOW"
+        maze_wordsearch_k_20: "This is a test! Move me one way, then another to spell the word STORY"
+    video:
+      name:
+        maze_intro: "Sokkelon johdanto"
+        artist_intro: "Taiteilijan johdanto"
+        farmer_intro: "Maanviljelijän johdanto"
+        flappy_intro: "Flappy Intro"
+        loop_times: "Toista kertaa -lohko"
+        loop_until: "Toista kunnes -lohko"
+        if: "Jos-lohko"
+        if_else: "Jos/muuten -lohko"
+        function: "Funktiot"
+        loop_while: '"Niin kauan kuin" -lohko'
+        loop_for: "Laskurilohko"
+        parameters: "Parametrilliset funktiot"
+        hoc_wrapup: "Kooditunnin yhteenveto"
+        20_wrapup: "20 tunnin yhteenveto"
+        Unplug1: "What is CS?"
+        Unplug2: "Laskennallinen ajattelu"
+        Unplug3: "Ruutupaperiohjelmointi"
+        Unplug4: "Algoritmit"
+        Unplug5: "Funktiot"
+        Unplug6: "Ehtolausekkeet"
+        Unplug7: "Songwriting"
+        Unplug8: "Abstraktio"
+        Unplug9: "Relay programming"
+        Unplug10: "Internet"
+        Unplug11: "Yhteenveto"
+        C1_happy_maps_unplugged: "Happy Maps"
+        C1_moveitmoveit_unplugged: "Move It, Move It"
+        C1_bigevent_unplugged: "The Big Event"
+        C1_getting_loop: "Getting Loopy"
+        C1_pair_programming: "Pair Programming"
+        C1_maze_intro_sequencing: "Maze Sequencing Intro"
+        C1_maze_debugging: "Maze Debugging"
+        C1_bee_level_intro: 'Bee Level - Intro'
+        C1_artist_intro: "Taiteilijan johdanto"
+        C1_spelling_bee_intro: "Spelling Bee Intro"
+        C1_zuck_repeat_loop: "Maze Loops"
+        C1_bee_loops: "Bee Loops"
+        C1_maze_loops: "Maze Loops"
+        C1_playlab_storytelling: 'Play Lab - Create a Story'
+        C1_planting_seed: "Planting a Seed"
+        C1_building_foundating: "Building a Foundation"
+        C2_maze_intro: "Sokkelon johdanto"
+        C2_artist_intro: "Taiteilijan johdanto"
+        C2_zuck_repeat_loop: "Maze Loops"
+        C2_artist_loops: "Artist Loops"
+        C2_bee_conditionals: "Bee Conditionals"
+        C2_playlab_createstory: 'Play Lab - Create a Story'
+        C2_graph_paper: "Ruutupaperiohjelmointi"
+        C2_conditionals_with_cards: "Ehtolausekkeet"
+        C2_binary_bracelets: "Binary Bracelets"
+        C2_replay_programming: "Releohjelmointi"
+        C2_paper_airplanes: "Paper Airplanes"
+        C3_maze_intro: "Sokkelon johdanto"
+        C3_artist_intro: "Taiteilijan johdanto"
+        C3_artist_functions: "Artist Functions"
+        C3_bee_functions: "Bee Functions"
+        C3_bee_conditionals: "Bee Conditionals"
+        C3_maze_conditionals: "Maze Conditionals"
+        C3_artist_nested_loops: "Nested Loops"
+        C3_farmer_while: "While Loops"
+        C3_bee_nested_loops: "Nested Loops"
+        C3_bee_debugging: "Bee Debugging"
+        C3_bounce: "Bounce"
+        C3_playlab_create_game: 'Play Lab - Create a Game'
+        C3_computational_thinking: "Laskennallinen ajattelu"
+        C3_dice_race: "Dice Race"
+        C3_internet: "Internet"
+        C3_crowdsourcing: "Crowdsourcing"
+        C3_functional_suncatchers: "Functional Suncatchers"
+        C3_songwriting_with_parameters: "Songwriting With Parameters"
+    callout:
+      text:
+        drag_blocks: 'Drag a "move" block and snap it below the other block'
+        run: 'Hit "Run" to try your program'
+        watch_again: "Click here to watch the video again"
+        gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
+        show_code_explanation: "Click here to see the code for the program you're making"
+        instructions_repeat_explanation: "The instructions for each puzzle are repeated here"
+        category_explanation: "You have all the same blocks but they've now been arranged in categories"
+        set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
+        studio_say_text: "Type what you want your actor to say within these quotes"
+        jigsaw_click: "Click this block!"

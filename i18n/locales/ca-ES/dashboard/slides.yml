@@ -1,0 +1,272 @@
+"ca":
+  slides:
+    maze_intro:
+      1:
+        image: "notes/hoc1_1.jpg"
+        text: "Benvingut a la teva primera hora de codi! Anem a submergir-nos en la teva primera experiència de programació."
+      2:
+        image: "notes/hoc1_2.jpg"
+        text: "Farem servir Blockly, un llenguatge de programació visual on pots arrossegar i deixar anar blocs per escriure codi."
+      3:
+        image: "notes/hoc1_3.jpg"
+        text: |-
+          La majoria de codi s'escriu a mà, però Blocky és visual. Cada bloc correspon a una línia de codi "real".
+      4:
+        image: "notes/hoc1_4.jpg"
+        text: "Aprendràs els fundaments de la informàtica, conceptes que s'utilitzen en qualsevol lloc, des de fer aplicacions fins a controlar el Mars rover."
+      5:
+        image: "notes/hoc1_5.jpg"
+        text: "Un programa és un conjunt d'instruccions que el teu ordinador segueix."
+      6:
+        image: "notes/hoc1_6.jpg"
+        text: "L'objectiu del teu primer programa és guiar un Angry Bird a través d'un laberint per colpejar al porc verd."
+      7:
+        image: "notes/hoc1_7.jpg"
+        text: "El costat esquerra és el laberint on s'executa el teu programa. Les instruccions per a cada puzzle estan a sota el laberint."
+      8:
+        image: "notes/hoc1_8.jpg"
+        text: "La caixa d'eines d'enmig té les ordres per l'Angry Bird. Aquestes les utilitzaràs per construir el teu codi."
+      9:
+        image: "notes/hoc1_9.jpg"
+        text: "A la dreta hi ha la teva àrea de treball on podràs arrossegar els blocs de la caixa d'eines per construir el teu programa. Per eliminar un bloc, arrossega'l a la paperera del cantó."
+      10:
+        image: "notes/hoc1_10.jpg"
+        text: |-
+          Cada bloc és una instrucció. Si arrossegues el bloc "avançar" a la teva àrea de treball i prems "Executar Programa", l'ocell es mou un espai en el laberint.
+      11:
+        image: "notes/hoc1_11.jpg"
+        text: "Per fer més d'una acció, pots arrossegar molts blocs a la teva àrea de treball i unir-los. L'ocell executarà les ordres des de dalt a baix."
+      12:
+        image: "notes/hoc1_12.jpg"
+        text: 'Si executes un programa i el vols arreglar i provar de nou, prem el botó "Reset".'
+      13:
+        image: "notes/hoc1_13.jpg"
+        text: "Anem a per aquells porcs!"
+    artist_intro:
+      1:
+        image: "notes/stage5_1.jpg"
+        text: "Hola, sóc JR! Tots els equips d'automobilisme necessiten informàtics per guanyar. Ells analitzen les dades del cotxe per fer-lo més ràpid."
+      2:
+        image: "notes/stage5_2.jpg"
+        text: "En aquests puzzles, tu seràs un artista que dibuixarà una línia darrera seu per allà on passi."
+      3:
+        image: "notes/stage5_3.jpg"
+        text: 'Aquest bloc diu "avança 100 píxels". Els píxels són els puntets petits de la teva pantalla.'
+      4:
+        image: "notes/stage5_4.jpg"
+        text: 'Aquest bloc diu "gira a la dreta 90º". Això girarà el teu artista el valor total dels blocs de gir en el puzzle del laberint.'
+      5:
+        image: "notes/stage5_5.jpg"
+        text: "Clica sobre la fletxa d'aquests blocs per canviar la quantitat d'avançaments o girs que el teu artista farà. Practica amb aquests nous blocs per familiaritzar-t'hi."
+    farmer_intro:
+      1:
+        image: "notes/stage9_1.jpg"
+        text: "Hola, sóc la Paola! En aquest puzzle, tu ets una pagesa que ha d'aconseguir tenir el seu camp totalment pla per començar a plantar la collita."
+      2:
+        image: "notes/stage9_2.jpg"
+        text: "Has d'ajudar-la a recollir totes les piles de brutícia i omplir els forats."
+      3:
+        image: "notes/stage9_3.jpg"
+        text: "The new blocks remove 1 shovelful of dirt from a pile and fill in 1 shovelful of dirt to a hole."
+      4:
+        image: "notes/stage9_4.jpg"
+        text: "Les piles i els forats son de diferents mides, per la qual cosa li hauràs de dir a la pagesa quantes palades haurà d'utilitzar."
+    flappy_intro:
+      1:
+        image: "notes/flappy01.jpg"
+        text: "Hi, I'm Katie! One of the most exciting things about computer science is that a computer program can be interactive."
+      2:
+        image: "notes/flappy02.jpg"
+        text: "Any time somebody clicks or taps or types on a computer or phone, that generates an EVENT, and there's some code that decides what to do when an EVENT occurs."
+      3:
+        image: "notes/flappy03.jpg"
+        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse is clicked, play a sound" '
+      4:
+        image: "notes/flappy04.jpg"
+        text: "Have you ever heard of the game FlappyBird? By using Event handlers, we're going to learn to program our own custom version of FlappyBird!"
+      5:
+        image: "notes/flappy05.jpg"
+        text: "The code you'll write involves dragging and dropping blocks that represent commands for the computer. Under the hood, each of these blocks is represented by real code."
+      6:
+        image: "notes/flappy06.jpg"
+        text: 'If you take a look at the workspace, there are some green blocks that are filled in for you - these are "event handlers" '
+      7:
+        image: "notes/flappy07.jpg"
+        text: 'If you want the bird to FLAP when you CLICK the mouse, you can do that by attaching the "FLAP" block to the appropriate event handler, and now in your game whenever you click the mouse, the bird will flap.'
+      8:
+        image: "notes/flappy08.jpg"
+        text: "In each puzzle of this activity we'll introduce new types of events as green blocks on the workspace, and you can decide the appropriate blocks to add in response to those events."
+      9:
+        image: "notes/flappy09.jpg"
+        text: 'When you see a drop down arrow like this, that means you can change the settings - like what sound to play when flappy hits the ground.'
+      10:
+        image: "notes/flappy10.jpg"
+        text: "In the final puzzle you'll be able to create your own game and share it with your friends. Have fun!"
+    loop_times:
+      1:
+        image: "notes/hoc2_1.jpg"
+        text: "Hola, sóc Mark! Anem aprendre sobre els bucles. Utilitzant bucles pots dir-li a l'ordinador que repeteixi un conjunt d'accions una y una altra vegada, milers o fins i tot milers de millons de vegades."
+      2:
+        image: "notes/hoc2_2.jpg"
+        text: "En aquest puzzle, volem fer l'ocell avançar 5 espais per agafar el porc."
+      3:
+        image: "notes/hoc2_3.jpg"
+        text: 'Podem utilitzar el nou bloc "repetir" per ajudar-nos.'
+      4:
+        image: "notes/hoc2_4.jpg"
+        text: |-
+          En lloc d'arrossegar 5 blocs "avançar"...
+      5:
+        image: "notes/hoc2_5.jpg"
+        text: 'Podem posar el bloc "avançar" dins el bloc "repetir" i escriure un nombre en el bloc per dir-li quantes vegades ha de repetir.'
+      6:
+        image: "notes/hoc2_6.jpg"
+        text: |-
+          I això és important: pots posar més d'una ordre dins un bloc "repetir".
+      7:
+        image: "notes/hoc2_7.jpg"
+        text: 'Disfruta utilitztant el teu nou bloc "repetir"!'
+    loop_until:
+      1:
+        image: "notes/hoc3_1.jpg"
+        text: |-
+          Hola, sóc Chris. Abans d'unir-me als Miami Heat, vaig anar a Georgia Tech per estudiar Informàtica. Anem a provar el nostre nou bloc, el bloc "repetir fins".
+      2:
+        image: "notes/hoc3_2.jpg"
+        text: "Què passaria si no sabéssim quant tindria que moure's l'ocell per arribar al porc?"
+      3:
+        image: "notes/hoc3_3.jpg"
+        text: |-
+          Si posam un bloc "avança" dins un bloc "repetir fins", l'ocell avançarà FINS que alcanci el porc (o xoqui amb una paret).
+      4:
+        image: "notes/hoc3_4.jpg"
+        text: 'I això és important: com abans, podem posar varis blocs dins el bloc "repetir fins", i tots es repetiran.'
+    if:
+      1:
+        image: "notes/hoc4_1.jpg"
+        text: 'Hola, sóc Bill! Anem a aprendre un nou concepte fundamental: les declaracions "Si". Així és com els ordinadors prenen decisions.'
+      2:
+        image: "notes/hoc4_2.jpg"
+        text: |-
+          Tu mateix utilitzes les declaracions "Si" cada dia. Abans de que surtis cada matí, dius SI està plovent, necessit agafar l'impermeable.
+      3:
+        image: "notes/hoc4_3.jpg"
+        text: "Podem dir-li al zombie que comprovi SI hi ha un camí a l'esquerra, i si troba un camí a l'esquerra, podem fer-lo girar en aquella direcció."
+      4:
+        image: "notes/hoc4_4.jpg"
+        text: |-
+          Per escriure el codi per a això, anem a arrossegar el bloc "si" i posar un bloc "girar a l'esquerra" a dins.
+      5:
+        image: "notes/hoc4_5.jpg"
+        text: |-
+          Ara, si posam un bloc "avançar" damunt aquest i un bloc "repetir" al voltant de tot, cada vegada que el zombie es mogui, ell comprovarà si hi ha algun camí a l'esquerra i girarà. El comandament "repetir" és crític per comprovar si té que girar en cada pas.
+      6:
+        image: "notes/hoc4_6.jpg"
+        text: |-
+          Les delcaracions "Si" són molt importants en la informàtica. Un dels primers programes que vaig escriure era un joc de tic-tac-toe, i hi havia tres declaracions "Si" que deien: SI l'altre persona estaà a punt de guanyar, bloqueja el lloc que li permeti guanyar.
+      7:
+        image: "notes/hoc4_7.jpg"
+        text: 'Diverteix-te utilitzant el bloc "Si"!'
+    if_else:
+      1:
+        image: "notes/hoc5_1.jpg"
+        text: 'Hola, el meu nom és Saloni. Utilitzo la informàtica per ajudar a resoldre problemes de salut i medicina. Anem a aprendre sobre el bloc "si altre". Pareix el bloc "si", però té una part extra al final que diu "altre".'
+      2:
+        image: "notes/hoc5_2.jpg"
+        text: |-
+          Si poso el bloc "avançar" en el lloc on posa "fer" i el bloc "girar a l'esquerra" on diu "altre", significa que el zombie eligirà entre dos 2 opcions. SI hi ha un camí davant, el zombie avançarà, i SINÓ (no hi ha un camí davant), el zombie girarà a l'esquerra.
+      3:
+        image: "notes/hoc5_3.jpg"
+        text: 'Igual que el bloc "si", podem posar els blocs "si altre" a dins els blocs "repetir" de manera que el zombie es manté en moviment i el bloc "si altre" continuarà comprovant si hi ha algun lloc on girar.'
+      4:
+        image: "notes/hoc5_4.jpg"
+        text: "Ara, col·loca aquells zombies al lloc on pertanyen!"
+    function:
+      1:
+        image: "notes/stage13_1.jpg"
+        text: "Hola, sóc la Brina, enginyera a Instagram. Una funció es un conjunt de línies de codi que vols utilitzar una vegada i una altra, per la qual cosa enlloc de escriure aquest codi cada vegada, pots simplement utilitzar un bloc."
+      2:
+        image: "notes/stage13_2.jpg"
+        text: "Anem a aprendre com definir una funció. Les definicions de funcions tenen una estrella a la cantonada. El nom de la funció està escrit a la línia de dalt de tot."
+      3:
+        image: "notes/stage13_3.jpg"
+        text: 'Els blocs que van dins la definició ens diuen que fa la funció. Per tant aquesta definició de funció es diu "omple 5" i està construïda amb un bloc de "repetició" i un bloc de "omplir".'
+      4:
+        image: "notes/stage13_4.jpg"
+        text: |-
+          The definition sits on the workspace, but our farmer won't run the function until we drag out our "fill 5" function block from functions category.
+      5:
+        image: "notes/stage13_5.jpg"
+        text: |-
+          Let's put the "fun" back in "FUNction!"
+    loop_while:
+      1:
+        image: "notes/stage9_5.jpg"
+        text: |-
+          Hi, I'm Makinde! Let's learn about the "while block."
+      2:
+        image: "notes/stage9_6.jpg"
+        text: |-
+          El "bloc mentre" farà tot el que posem a l'interior durant l'estona que l'expressió que l'encapçala sigui certa.
+      3:
+        image: "notes/stage9_7.jpg"
+        text: "For example, if the farmer is standing on a pile, she will continue to remove 1 shovelful WHILE there is still a pile beneath her."
+    loop_for:
+      1:
+        image: "notes/stage11_1.jpg"
+        text: "Hola, sóc la Trina, i treballo a Pixar. He treballat en un grapat de pel·lícules, incloent-hi Shrek."
+      2:
+        image: "notes/stage11_2.jpg"
+        text: 'Aquest és el nostre bucle "contador". Aquest executarà accions una vegada i una altra i tu pots fer que les accions canviïn una mica cada vegada.'
+      3:
+        image: "notes/stage11_3.jpg"
+        text: |-
+          En aquest exemple, el nostre bucle "comptador" diu "compta amb el comptador des de 50 a 90 de  10 en 10" i dins d'aquest tenim un bloc de "dibuixa un quadrat", Arrossega el bloc "comptador" des de la secció de "variables" al lloc "longitud".
+      4:
+        image: "notes/stage11_4.jpg"
+        text: "Això significa que el nostre artista dibuixarà un quadrat de 50 píxels de costat, afegirà 10 al valor i dibuixarà un quadrat de 60 píxels de costat. Llavors seguirà afegint 10 i dibuixant quadrats fins que arribi a 90. Per tant tindrem quadrats de 50, 60, 70, 80 i 90."
+    parameters:
+      1:
+        image: "notes/stage15_1.jpg"
+        text: "Hola, sóc la Janete, i sóc enginyera a Zynga."
+      2:
+        image: "notes/stage15_2.jpg"
+        text: "Què passa si volem dibuixar un grapat de triangles i que tinguin mides diferents?"
+      3:
+        image: "notes/stage15_3.jpg"
+        text: "Podríem escriure tot el codi a ma o podem utilitzar una funció amb paràmetres."
+      4:
+        image: "notes/stage15_4.jpg"
+        text: |-
+          Per fer això, clica sobre l'estrella blava de la definició de la funció "dibuixa un triangle". Llavors arrossega "introdueix un nom" en el bloc "introduir".
+      5:
+        image: "notes/stage15_5.jpg"
+        text: |-
+          A continuació, si escrius "longitud" on diu "x" i prems "Intro" crearàs la longitud d'entrada de la teva funció.
+      6:
+        image: "notes/stage15_6.jpg"
+        text: |-
+          Llavors clica sobre l'estrella. Ara, clica a la categoria variables i arrossega el bloc "longitud" en el bloc "avança" de la definició de la teva funció. Retira el bloc numero anterior.
+      7:
+        image: "notes/stage15_7.jpg"
+        text: 'Per utilitzar la funció amb paràmetres, feu clic a la categoria de funcions i arrossega la teva funció  "dibuixa un triangle amb longitud".'
+      8:
+        image: "notes/stage15_8.jpg"
+        text: "Ara pots utilitzar un bloc matemàtic per introduir els diferents números per dibuixar triangles de diferents mides."
+    hoc_wrapup:
+      1:
+        image: "notes/hoc6_1.jpg"
+        text: "Felicitats! Amb l'últim puzzle que has resolt, acabes d'escriure codi que pot dir-li a QUALSEVOL robot com trobar el seu camí a través d'un laberint sense ramificació o túnel de qualsevol longitud. No importa si és un zombie, un ocell, un rover de Mart o fins i tot un cotxe sense conductor."
+      2:
+        image: "notes/hoc6_2.jpg"
+        text: 'Els conceptes bàsics que has utilitzat són el cor de qualsevol programa o aplicació que provis. Hem après sobre bucles, declaracions "repetir fins", "si" i "si altre".'
+      3:
+        image: "notes/hoc6_3.jpg"
+        text: "Si t'ha agradat la teva primera hora de codi, visita code.org per continuar la teva educació informàtica! Una vegada has complet el nostre curs de 20 hores, hauràs dominat els fundaments bàsics de programació, i podràs començar a aprendre a escriure aplicacions mòbils, instruccions de robots, jocs, el que tu vulguis."
+      4:
+        image: "notes/hoc6_4.jpg"
+        text: 'La tecnologia està canviant tot el que fem i no importa si ets jove o vell: programar és divertit, és creatiu, i qualsevol pot aprendre!'
+    20_wrapup:
+      1:
+        image: "notes/bird.png"
+        text: "Les notes animades estaran disponibles aviat!"

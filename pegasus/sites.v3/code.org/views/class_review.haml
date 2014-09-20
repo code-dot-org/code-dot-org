@@ -1,0 +1,71 @@
+.panel#review-school-buttons{style: 'margin-top: 3em; background: #eee;'}
+  .panel-heading
+    Current state:
+    %span{style: "font-weight: bold"}= review || 'Unreviewed'
+  .panel-body
+    %button#btn-review-approve.btn.btn-success{type: "submit"}= (review == 'approved') ? 'Un-approve' : 'Approve'
+    %button#btn-review-reject.btn.btn-danger{type: "submit"}= (review == 'rejected') ? 'Un-reject' : 'Reject'
+    %button#btn-review-cancel.btn.btn-link{type: "button"} Cancel
+
+:javascript
+  $(document).ready(function() {
+    var review = '';
+
+    $('#review-school-form select').selectize();
+
+    triggerReviewMode();
+
+    $('#btn-edit').click(function() {
+      triggerEditMode();
+    });
+
+    $('#btn-cancel').click(function() {
+      triggerReviewMode();
+    });
+
+    $('#btn-review-approve').click(function() {
+      if ($(this).text() == 'Approve') {
+        review = 'approved';
+      }
+      submitReview(review);
+    });
+
+    $('#btn-review-reject').click(function() {
+      if ($(this).text() == 'Reject') {
+        review = 'rejected';
+      }
+      submitReview(review);
+    });
+
+    $('#btn-review-cancel').click(function() {
+      window.location.href = "/private/review-class/";
+    });
+  });
+
+  function triggerReviewMode() {
+    $('#submit-school-form').find(':input').prop('disabled', true);
+    $('#btn-submit').hide();
+    $('#btn-cancel').hide();
+    $('#btn-edit').show().prop('disabled', false);
+    $('#review-school-buttons').show();
+  }
+
+  function triggerEditMode() {
+    $('#submit-school-form').find(':input').prop('disabled', false);
+    $('#btn-edit').hide();
+    $('#btn-submit').show();
+    $('#btn-cancel').show();
+    $('#review-school-buttons').hide();
+  }
+
+  function submitReview(review) {
+    $.ajax({
+      url: "/v2/forms/ClassSubmission/#{form.secret}",
+      type: "review",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify( { review: review } ),
+      success: function() {
+        window.location.href = "/private/review-class/"
+      }
+    });
+  }

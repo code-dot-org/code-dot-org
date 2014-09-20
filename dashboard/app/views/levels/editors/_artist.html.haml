@@ -1,0 +1,37 @@
+.field
+  = f.label :slider_speed, 'Slider speed (artist only)'
+  %p Number from 0.0 to 1.0 for how fast artist runs. If not set, default is 1.0
+  = f.number_field :slider_speed, :step => 0.1
+.field
+  = f.label :free_play, "Free Play"
+  = boolean_check_box f, :free_play
+.field
+  = f.label :start_direction, 'Start Direction (in degrees)'
+  = f.number_field :start_direction, :in => 0...360, :value => @level.start_direction
+.field
+  = f.label :x
+  = f.number_field :x, :value => @level.x
+.field
+  = f.label :y
+  = f.number_field :y, :value => @level.y
+.field
+  = f.label :permitted_errors, 'Permitted errors (default 150)'
+  = f.number_field :permitted_errors, :value => @level.permitted_errors
+:css
+  textarea { width: 100% }
+.field
+  = link_to "Edit Solution Blocks", level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
+  = f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
+  :javascript
+    codeMirror('solution');
+.field
+  = link_to "Edit Predraw Blocks", level_edit_blocks_path(@level, :predraw_blocks) unless @level.new_record?
+  = f.text_area :predraw_blocks, placeholder: 'Predraw Blocks', rows: 4, value: @level.pretty_block('predraw')
+  :javascript
+    codeMirror('predraw');
+.field
+  = f.label :images, 'Image field in JSON array format, e.g.:'
+  %div
+    %p{:style => '-webkit-user-select: text'} [{"filename":"cat.svg","position":[16,170]},{"filename":"lion.svg","position":[15,250]},{"filename":"elephant.svg","position":[127,220]},{"filename":"cow.svg","position":[255,250]}]
+    %p Ask an engineer to add the SVG assets to the Blockly/static/turtle folder and push to dashboard.
+  = f.text_area :images, placeholder: 'Images', rows: 4, value: @level.properties['images']

@@ -1,0 +1,52 @@
+- content_for(:head) do
+  = stylesheet_link_tag    'editor/blockly_editor', media: 'all'
+  = javascript_include_tag 'editor/blockly_editor'
+.field
+  = f.label :instructions
+  = f.text_area :instructions, placeholder: 'Instructions', rows: 4
+= render partial: 'levels/editors/ani_gif', locals: {f: f}
+.field
+  = f.label :skin
+  = f.select :skin, options_for_select(@level.class.skins, @level.skin)
+.field
+  = f.label :is_k1, "Is K1 level"
+  = boolean_check_box f, :is_k1
+.field
+  = f.label :skip_instructions_popup, "Skip instructions popup"
+  = boolean_check_box f, :skip_instructions_popup
+.field
+  = f.label :scrollbars, 'Scrollbars'
+  %div
+    Default:
+    = f.radio_button :scrollbars, 'nil', checked: @level.scrollbars.nil?
+    True:
+    = f.radio_button :scrollbars, true
+    False:
+    = f.radio_button :scrollbars, false
+:css
+  textarea { width: 100% }
+.field
+  = link_to "Edit Toolbox Blocks", level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
+  = f.text_area :toolbox_blocks, placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
+  :javascript
+    codeMirror('toolbox');
+.field
+  = link_to "Edit Start Blocks", level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
+  = f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.pretty_block('start')
+  :javascript
+    codeMirror('start');
+.field
+  = link_to "Edit Required Blocks", level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
+  = f.text_area :required_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('required')
+  :javascript
+    codeMirror('required');
+.field
+  = f.label :ideal, 'Ideal block number'
+  = f.number_field :ideal
+.field
+  = f.label :min_workspace_height, 'Min workspace height'
+  = f.number_field :min_workspace_height
+.field
+  = f.label :step_speed, 'Step speed'
+  %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
+  = f.number_field :step_speed

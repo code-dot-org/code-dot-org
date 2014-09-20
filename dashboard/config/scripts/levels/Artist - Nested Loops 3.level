@@ -1,0 +1,150 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-07-07T23:32:08.000Z",
+  "level_num": "custom",
+  "user_id": 8,
+  "properties": {
+    "skin": "artist",
+    "instructions": "Create a sun by nesting the starter code in another loop. This is called a nested loop.\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "x": "175",
+    "y": "100",
+    "free_play": "false",
+    "start_direction": "90",
+    "ideal": "7",
+    "slider_speed": "0.7"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="controls_repeat" editable="false" deletable="false">
+          <title name="TIMES">3</title>
+          <statement name="DO">
+            <block type="draw_move_by_constant" editable="false" deletable="false">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
+              <next>
+                <block type="draw_turn_by_constant" editable="false" deletable="false">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE">120</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="15,30,45,60,90">90</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="15,30,45,60,90">90</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">12</title>
+        </block>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_turn_by_constant_dropdown">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE" config="15,30,45,60,90">30</title>
+              <next>
+                <block type="draw_turn_by_constant_dropdown">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE" config="15,30,45,60,90">30</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
+              <next>
+                <block type="jump_by_constant">
+                  <title name="DIR">jumpForward</title>
+                  <title name="VALUE">50</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">12</title>
+          <statement name="DO">
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">50</title>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnLeft</title>
+                      <title name="VALUE">120</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">50</title>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">30</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
+    <predraw_blocks>
+      <xml/>
+    </predraw_blocks>
+  </blocks>
+</Artist>

@@ -1,0 +1,96 @@
+<html>
+<head>
+	 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<title></title>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="js/code.org.js"></script>
+	<script>
+
+	$(document).ready(function(){
+	  $("#foo").click(function(){
+	  	alert("button was clicked");
+	    $.ajax({
+	            url:"http://isemail.info/json/test@ucls.uchicago.edu",
+	dataType: "jsonp",
+	 success:function(result){
+	     alert(result);
+	      //$("#div1").html(result);
+	    }});
+	  });
+	});
+
+		// $(document).ready(function(){
+
+		// 	//Hide the response messages
+		// 	$("#granted_msg").hide();
+		// 	$("#denied_msg").hide();
+
+		// 	//Assign a function to the button click event
+		// 	$("#login_btn").click(checkUserAndShowMsg);
+		// });
+
+
+		function isUser(){
+
+			var name = $("#username").val();
+			var pw = $("#password").val();
+			pw = md5(pw);
+
+			var hashedPW = "fdba98970961edb29f88241b9d99d890";
+
+			if(name=="bfranke" && pw==hashedPW) return true;
+			else return false;
+		}
+
+		function checkUserAndShowMsg(){
+
+			if(isUser()){
+				$("#granted_msg").show();
+				$("#denied_msg").hide();
+			}
+			else{
+				$("#granted_msg").hide();
+				$("#denied_msg").show();
+			}
+
+		}
+
+
+
+	</script>
+	<style>
+		.loginform{
+			width: 350px;
+			background-color: #EEEEEE;
+			border: solid 1px;
+			border-radius: 5px;
+			margin-top: 20px;
+			box-shadow: 2px 2px 20px #000000;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container loginform">
+	<h2>Please Login </h2>
+	<div class="form-group">
+   		<label for="username">Username</label>
+   	 	<input type="text" class="form-control" id="username" placeholder="Enter username">
+  	</div>
+  	
+ 	<div class="form-group">
+   		<label for="password">Password</label>
+    	<input type="password" class="form-control" id="password" placeholder="Password">
+  	</div>
+	<button id="login_btn" class="btn btn-large btn-primary" type=submit>Login</button>
+	<br/><br/>
+	<h2 id="granted_msg" class="btn-success">Access Granted</h2>
+	<h2 id="denied_msg" class="btn-danger">Access Denied!</h2>
+
+</div>
+
+<button id="foo" value="foo">
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+---
+title: Promote Computer Science
+social:
+  "og:description": "What’s wrong with this picture? Share these stats."
+  "og:image": "http://code.org/images/cs-stats/more-jobs-than-students.png"
+  "og:image:width": 1771
+  "og:image:height": 1048
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+:javascript
+  var petitionIncluded = false;
+  var promoteIncluded = false;
+
+-state ||= nil
+
+%script{:src=>"/js/jquery.placeholder.js"}
+
+#promote-page
+  %h1 Promote Computer Science
+  = view :promote_state_jump, state:state
+  #petition-section.section.clear
+    = view :petition
+  :javascript
+    petitionIncluded = true;
+
+  #stats-section.section.clear
+    %h2 What’s wrong with this picture? Share these stats.
+    = view :stats_carousel
+
+  #youtube-section.section.clear
+    %h2 Tell the world! Share the Code.org video.
+    = view :youtube_videos
+
+  #tools-section.section.clear
+    %h2 Tools to help you advocate locally
+    = view :promote_tools, state:nil
+
+    #stateaction{:style=>'padding-left:30px'}
+      %a{:href=>"/action"} See where computer science counts towards high school graduation
+
+  #quotes-section.section.clear
+    %h2 Leaders and trendsetters agree more students should learn computer science
+    = view :top_quotes
+
+= view 'popup_window.js'
+
+:javascript
+  var petition;
+  var promote;
+
+  $(document).ready()
+  {
+    if (petitionIncluded)
+      petition = new Petition();
+
+    if (promoteIncluded)
+      promote = new Promote();
+  }

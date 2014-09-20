@@ -1,0 +1,56 @@
+description: 
+ 
+1:
+  title: Sending Bits
+  description: "The CS Principles course by Code.org begins with a consideration of what is involved in sending a single bit of 
+  information from one place to another. In the “sending bits lab” students work with a partner to devise 
+  and build their own bit-sending “machines.” Complexity increases as students adapt their machines to handle 
+  multi-bit messages, and increasingly complex information. As the unit progresses, students learn more about 
+  the binary representation of information, and are asked to think more abstractly about how to encode 
+  complex information in bits, and develop algorithms for encoding and decoding streams of bits."
+2:
+  title: Algorithms
+  description: "In Unit 2, students will explore algorithms and the need for a structured approach to problem solving, 
+  increasing the formality of both the language students use to describe algorithms and they way they analyze them. 
+  The unit begins with a study of the classic problem of sorting information. An unplugged card-sorting activity 
+  asks students to develop an algorithm and express it as formally as they can. Then students examine their and 
+  other students’ sorting algorithms using an online tool that helps them understand the considerations that go
+  into analysis in order to answer the question “what is the best way to sort?”"
+3:
+  title: Programming 
+  description: "The programming unit takes the formality of algorithm expression one step further as students
+  write programs in JavaScript. The levels of abstraction increase as students learn how a programming 
+  language can be used to control the computer. The topics of the programming unit, input/output, calculations 
+  with numbers, branching statements and Boolean logic, iteration, procedural abstraction and processing data
+  in simple linear structures are considered to be among the more “classic” computer programming topics. 
+  However, the context in which students are using these programming constructs will be in terms of the web 
+  and web application development."
+4:
+  title: Data
+  description: "The activities in Unit 4 extend the students’ understandings of structured and abstract data 
+  introduced in the programming unit. The data unit builds students' skills for the “Investigate—Bits to 
+  Information to Knowledge” Performance Task. Most of the unit focuses on gaining an understanding of the 
+  nature and structure of complex data sets, how to leverage that understanding to ask interesting, 
+  knowledge-seeking questions of the data, and acquiring the skills to answer those questions with one or more 
+  data manipulation tools. Students will use data sets that foreshadow innovative thinking about ways data can 
+  be used in preparation for the following unit on innovation."
+5:
+  title: Innovation
+  description: "In the Innovation unit, students will explore many of the innovations that have occurred due
+  to the emergence of big data. Activities in this unit allow students to be much more independent. A
+  t this point in the course, students should be well prepared to understand technological innovation, 
+  but may need some practice in communicating their knowledge in order to be prepared for the 
+  “Explore Performance Task - Implications of Computing Innovations.” The instructional activity
+  in this unit includes practicing for the Performance Task in which students select and research an innovation,
+  locate reliable information, develop an understanding of the technical/algorithmic components, and create an
+  artifact to demonstrate their understanding."
+6:
+  title: UNAVAILABLE-UNDER_CONSTRUCTION_Web Applications
+  description: "The course concludes with students developing and building web applications of their own design. 
+  Our definition of “Web Application” is a program that lives, and can be interacted with, on the web. 
+  The programs will vary from being entirely client-side scripted, to apps involving information/data 
+  retrieval and storage using remote sources.  Students will examine several different types of web applications,
+  including simple web utilities with dynamic content, game-like applications, and applications that require 
+  management of users’ data. They will develop skills required for the “Create Performance Task” which requires 
+  students to work at times both collaboratively and independently to develop a program."
+  

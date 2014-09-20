@@ -1,0 +1,21 @@
+%div{style:"display:inline-block;width:290px;position:relative;overflow:hidden;" + added_style}
+  %h4 #{t('nav.popup.mastery')}
+
+  %table{style:"max-width:290px;"}
+    - if concept_progress
+      - concept_progress.each_pair do |concept, counts|
+      - completion = counts[:current].to_f/counts[:max]
+        =render partial: 'shared/concept_trophy_row', locals: { concept: concept, completion: completion }
+        <!-- #{counts} -->
+    - else
+      - Concept.cached.each do |concept|
+        =render partial: 'shared/concept_trophy_row', locals: { concept: concept, completion: 0 }
+  - if current_user && user == current_user && current_user.show_prize_ui?
+    .stage_separator
+    .prize-msg
+      - if current_user.prize_earned
+        #{t('nav.popup.prize_earned', total_trophies: concept_progress.length * Trophy::TROPHIES_PER_CONCEPT)}
+      - elsif
+        #{t('nav.popup.prizes', total_trophies: concept_progress.length * Trophy::TROPHIES_PER_CONCEPT)}
+      <br>
+      #{t('nav.popup.prize_us_only')} #{link_to t('nav.popup.prizes_link'), my_prizes_path}

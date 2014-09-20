@@ -1,0 +1,10 @@
+name 'K-1 Digital Footprint Multi 1'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png'
+height '100'
+
+question 'Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?'
+wrong '/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png'
+wrong '/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png'
+right '/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png'

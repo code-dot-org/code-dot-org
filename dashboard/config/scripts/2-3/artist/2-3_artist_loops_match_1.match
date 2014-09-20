@@ -1,0 +1,33 @@
+name '2-3 artist loops match 1' 
+title 'Artist Loops Matching One'
+description 'Matching loops'
+
+banner 'Match the loop to the shape'
+
+height '160'
+
+question '/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png'
+  answer '/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png'
+
+question '/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png'
+  answer '/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png'
+
+question '/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png'
+  answer '/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png'
+
+question '/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png'
+  answer '/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png'
+
+#question 'Triangle'
+#answer 'image of loop code for triangle'
+
+#question 'Square'
+#answer 'image of loop code for square'
+
+#question 'Hexagon'
+#answer 'image of loop code for hexagon'
+
+#question 'Rhombus'
+#answer 'image of code for rhombus'
+
+# http://staging.learn.code.org/s/course2/stage/5/puzzle/12

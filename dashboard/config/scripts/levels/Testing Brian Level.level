@@ -1,0 +1,21 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-04-30T18:15:14.000Z",
+  "level_num": "custom",
+  "solution_level_source_id": 468,
+  "user_id": 17,
+  "properties": {
+    "skin": "artist",
+    "instructions": "Test Brian Level Nice",
+    "x": 300,
+    "y": 300,
+    "start_direction": 90
+  }
+}]]></config>
+  <blocks>
+    <solution_blocks>
+      <xml/>
+    </solution_blocks>
+  </blocks>
+</Artist>

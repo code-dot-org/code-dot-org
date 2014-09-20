@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Prize provider:
+  = @teacher_bonus_prize.prize_provider_id
+%p
+  %b Code:
+  = @teacher_bonus_prize.code
+%p
+  %b User:
+  = @teacher_bonus_prize.user_id
+
+= link_to 'Edit', edit_teacher_bonus_prize_path(@teacher_bonus_prize)
+\|
+= link_to 'Back', teacher_bonus_prizes_path

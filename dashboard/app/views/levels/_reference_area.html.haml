@@ -1,0 +1,55 @@
+- if @artist_builder
+  = form_tag('#') do |f|
+    = label_tag 'x'
+    = text_field_tag 'x', params[:x]
+    = label_tag 'y'
+    = text_field_tag 'y', params[:y]
+    = label_tag t('reference_area.direction')
+    = text_field_tag 'start_direction', params[:start_direction]
+    = submit_tag t('reference_area.submit'), id: 'builder-coordinate-submit'
+- else
+  .reference_area
+    - if current_user && (current_user.teacher? || current_user.admin?) && @level.ideal_level_source_id && !@script.nil? && !@level.nil?
+      .solution_link
+        = link_to t('reference_area.teacher'), script_level_solution_path(@script, @level)
+
+    - related_videos = @level.related_videos
+    - unless related_videos.empty?
+      %p.help_title= t('reference_area.title')
+      %p.help_subtitle= t('reference_area.subtitle')
+      = render partial: "levels/video", collection: related_videos
+    %div{ style: "clear: both;"}
+
+    - if current_user.try(:admin?)
+      %br/
+      #{@level.name}:
+      = link_to "play", @level
+      - if can? :edit, @level
+        \/
+        = link_to "edit", edit_level_path(@level)
+        (
+        - if @level.is_a? Artist
+          = link_to "solution", level_edit_blocks_path(@level, :solution_blocks)
+          \/
+        = link_to "toolbox", level_edit_blocks_path(@level, :toolbox_blocks)
+        \/
+        = link_to "start", level_edit_blocks_path(@level, :start_blocks)
+        \/
+        = link_to "required", level_edit_blocks_path(@level, :required_blocks)
+        \/
+        = link_to "pre-draw", level_edit_blocks_path(@level, :predraw_blocks)
+        )
+      - else
+        \/
+        (Cannot edit)
+      \/
+      = link_to "stats", level_stats_path(@level)
+
+      %br/
+      This level is in the following scripts:
+      %ul
+        - @level.script_levels.each do |script_level|
+          %li
+            = link_to script_level.script.name, script_level.script
+            as
+            = link_to build_script_level_path(script_level), build_script_level_path(script_level)

@@ -1,0 +1,20 @@
+Color = {
+	red: '#FF0000',
+	RED: '#FF0000',
+	green: '#00FF00',
+	GREEN: '#00FF00',
+	blue: '#0000FF',
+	BLUE: '#0000FF',
+	yellow: '#FFFF00',
+	YELLOW: '#FFFF00',
+	cyan: '#00FFFF',
+	CYAN: '#00FFFF',
+	orange: '#FFA500',
+	ORANGE: '#FFA500',
+	white: '#FFFFFF',
+	WHITE: '#FFFFFF',
+	black: '#000000',
+	BLACK: '#000000',
+	gray: '#cccccc',
+	GRAY: '#CCCCCC'
+};

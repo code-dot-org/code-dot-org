@@ -1,0 +1,115 @@
+Overview
+--------
+Webform supports theming similar to the CCK or Views modules. Any webform
+may be themed on the server side, though doing so may require a reasonable
+amount of knowledge about the Drupal Form API. More information about the Form
+API may be found at http://api.drupal.org/api/file/developer/topics/forms_api.html
+
+Theme submission e-mails
+-----------------------
+The default e-mails sent by webform are fairly basic. If you like, you may
+customize the display of e-mails sent by each individual webform.
+
+- Open the Webform module directory.
+
+- Copy (do not move!) the "webform-mail.tpl.php" file to your theme directory.
+
+- Open up the new file and edit it to your liking. The webform-mail.tpl.php file
+  contains further instructions on how to get started with theming the e-mail.
+
+- If you want to edit the e-mail sent by only one particular webform, rename the
+  file "webform-mail-[node id here].tpl.php", replacing [node id here] with the
+  node ID of the webform.
+
+- Clear the theme cache! Visit admin/settings/performance and click the
+  "Clear cached data" button at the bottom of the page. You may also find
+  using devel module will speed up this process a bit. This needs to be done
+  every time you create or rename a .tpl.php file, but isn't necessary once
+  these files already exist.
+
+- To get a better idea of what variables are available to you, you can include
+  the print_r function in your email. Simply include the line:
+
+  <?php print_r($submission) ?>
+
+  to get a listing of all the available fields you can use in your mail.
+
+- Advanced Webform e-mail Theming: Theming the e-mail headers may also be done
+  by overriding the theme_webform_mail_headers() function from webform.module.
+  Just copy the code out of webform.module and change as necessary in your
+  template.php file. This allows you to customize the e-mail headers.
+
+Theme the confirmation page
+---------------------------
+
+After a user submits a webform, they are directed to a page that contains the
+confirmation message set in the webform node settings (assuming the form doesn't
+direct to a complete URL). These instructions let you customize the format of
+the confirmation page of a single node or all webforms on your site.
+
+- Open the Webform module directory.
+
+- Copy (do not move!) the "webform-confirmation.tpl.php" file to your theme
+  directory.
+
+- Open the new file and change it's contents to the your liking. Here's an
+  example that inserts some additional HTML around the confirmation message and
+  gives links to edit the submission.
+
+  <?php /* Begin sample webform confirmation page */ ?>
+
+  <div class="confirmation-message">
+    <?php print $confirmation_message ?>
+  </div>
+
+  <ul>
+    <li><a href="<?php print url('node/'. $node->nid . '/submission/'. $sid)?>">View your submission</a></li>
+    <li><a href="<?php print url('node/'. $node->nid . '/submission/'. $sid .'/edit')?>">Edit your submission</a></li>
+  </ul>
+  
+  <?php /* End sample webform confirmation page */ ?>
+
+- You may edit the webform-confirmation.tpl.php file in your theme directory,
+  this will affect all the webform mails sent by your entire site. Or, if you
+  want to edit the e-mail sent by only one particular webform, rename the file
+  "webform-confirmation-[node id here].tpl.php", replacing [node id here] with
+  the node ID of the webform.
+
+- Visit admin/settings/performance and click the "Clear cached data" button.
+
+Theme display of an entire webform
+----------------------------------
+
+Theming a webform can be useful for rearranging elements or customizing the
+appearance of multiple components at once. This tutorial assumes usage
+of the phptemplate engine.
+
+- Copy the "webform-form.tpl.php" file from the webform directory to your
+  theme directory. You may rename this file
+  "webform-form-[node id here].tpl.php" if you want to theme one particular
+  webform on your site. Replace [node id here] with the node ID of the webform.
+
+- Open up your new file and customize the webform however you like.
+
+- Visit admin/settings/performance and click the "Clear cached data" button.
+
+- All Webform forms have 2 main fieldsets: "submitted", and "details". Although
+  you may move things around as you wish, keep all your components within the
+  "submitted" fieldset. Only the "submitted" fieldset is displayed and Webform
+  depends on the other two to operate properly, so don't mess with them unless
+  you have good reason to do so (like you're forwarding your webform to a custom
+  PHP or PERL script).
+
+Theme display of a webform submission display
+---------------------------------------------
+
+Theming the display of a webform submission works the same way as theming a
+webform form. Webform uses Drupal "renderable" style arrays for the display of
+submissions, just like most forms in Drupal.
+
+The template file for theming submissions is webform-submission.tpl.php. You can
+use webform-submission-[node id here].tpl.php for individual nodes if desired.
+Note that the contents of this template are used not only for display of
+submissions in the Webform interface but also in e-mails when printing out
+the %email_values token.
+

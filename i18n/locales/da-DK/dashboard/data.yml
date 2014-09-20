@@ -1,0 +1,405 @@
+"da":
+  data:
+    script:
+      name:
+        20-hour:
+          desc: "Folkeskolens Intro til Computer Videnskabs kurset"
+          Unplug1: "Trin 1"
+          Maze: "Trin 2"
+          Unplug2: "Trin 3"
+          Unplug3: "Trin 4"
+          Artist: "Trin 5"
+          Unplug4: "Trin 6"
+          Artist2: "Trin 7"
+          Unplug5: "Trin 8"
+          Farmer: "Trin 9"
+          Unplug6: "Trin 10"
+          Artist3: "Trin 11"
+          Unplug7: "Trin 12"
+          Farmer2: "Trin 13"
+          Unplug8: "Trin 14"
+          Artist4: "Trin 15"
+          Unplug9: "Trin 16"
+          Farmer3: "Trin 17"
+          Unplug10: "Trin 18"
+          Artist5: "Trin 19"
+          Unplug11: "Trin 20"
+        Hour of Code:
+          desc: "En Times Kodning"
+          Maze: "Trin 1"
+        Edit Code:
+          desc: "Rediger program (beta)"
+          MazeEC: "Trin 1"
+        2014 Levels:
+          desc: "Hoppe (beta)"
+          Bounce: "Trin 1"
+        Builder Levels:
+          desc: "Brugeroprettede gåder (beta)"
+          Custom: "Trin 1"
+        Flappy Levels:
+          desc: "Flappy fuglen"
+          Flappy: "Trin 1"
+        Jigsaw Levels:
+          desc: "Puslespil (beta)"
+          Jigsaw: "Trin 1"
+        Step Levels:
+          desc: "Labyrint (beta)"
+          MazeStep: "Fase trin"
+        edit-code:
+          desc: "Rediger program (beta)"
+          MazeEC: "Fase 1"
+        events:
+          desc: "Hoppe (beta)"
+          Bounce: "Fase 1"
+          Studio: "Fase 2"
+        builder:
+          desc: "Brugeroprettede puslespil (beta)"
+          Custom: "Fase 1"
+        flappy:
+          desc: "Flappy fuglen"
+          Flappy: "Fase 1"
+        jigsaw:
+          desc: "Puslespil (beta)"
+          Jigsaw: "Fase 1"
+        step:
+          desc: "Labyrint (beta)"
+          MazeStep: "Fase trin"
+        wordsearch:
+          desc: "Stave bien (beta)"
+          WordSearch: "Fase 1"
+    game:
+      name:
+        Unplug1: "Introduktion til Computer Videnskab"
+        Maze: "Labyrinten"
+        Multi: "Flere valgs ting"
+        Unplug2: "Data-Tænkning"
+        Unplug3: "Programmering på millimeterpapir"
+        Artist: "Kunstneren"
+        Unplug4: "Algoritmer"
+        Artist2: "Kunstneren 2"
+        Unplug5: "Funktioner"
+        Farmer: "Landmanden"
+        Unplug6: "Betingelser"
+        Artist3: "Kunstneren 3"
+        Unplug7: "Sang Skrivning"
+        Farmer2: "Landmanden 2"
+        Unplug8: "Abstraktion"
+        Artist4: "Kunstneren 4"
+        Unplug9: "Stafet-programmering"
+        Farmer3: "Landmanden 3"
+        Unplug10: "Internettet"
+        Artist5: "Kunstneren 5"
+        Unplug11: "Afslutning"
+        MazeEC: "Labyrinten"
+        Bounce: "Hoppe"
+        Flappy: "Flappy-fuglen"
+        Jigsaw: "Puslespil"
+        MazeStep: "Labyrint trin Mode"
+        Wordsearch: "Ordsøgning"
+    trophy:
+      name:
+        Bronze: "Bronze"
+        Silver: "Sølv"
+        Gold: "Guld"
+    concept:
+      description:
+        sequence: "Sekvens"
+        if: "Hvis blok"
+        if_else: "Hvis-Ellers blok"
+        loop_times: "Gentag gange blok"
+        loop_until: "Gentag indtil blok"
+        loop_while: "Imens blok"
+        loop_for: "Tælle-blok"
+        function: "Funktioner"
+        parameters: "Funktioner med parametre"
+    level:
+      instructions:
+        maze_2_2: 'Kan du hjælpe mig med at fange den slemme gris? Byg et par "Flyt Fremad" blokke sammen og tryk "Kør Program" og hjælp mig med at finde derhen. '
+        maze_2_1: "Denne gris bringer mine fjer i uorden. Hjælp mig med at finde ham!"
+        maze_2_2_5: "Følg sporet og før mig til den tåbelige gris. Undgå TNT ellers vil fjerene flyve væk!"
+        maze_2_3: "Før mig til det grønne ondskab! (Men pas på TNT)"
+        maze_2_4: "Bevar roen og hjælp mig med at finde den slemme gris. Ellers bliver jeg vred!"
+        maze_2_5: "Der er en måde at få ram på den fjollede gris, ved brug af kun to blokke. Kan du regne det ud?"
+        maze_2_6: "Forsøg at få mig til den grønne ubudne gæst ved hjælp af kun tre blokke."
+        maze_2_7: 'Hjælp mig med at fjerne denne slemme gris, ved hjælp af færrest mulige blokke. Prøv at bruge mere end én "Gentag" blok.'
+        maze_2_8: 'Når en blok er grå, det betyder du ikke kan slette den. Løse dette puslespil, ved hjælp af den "gentag" blok, der gentages 3 gange. Prøv at sætte disse 3 blokke indeni den grå "gentag" blok: flytte, flytte, drej.'
+        maze_2_9: 'OK, prøv den nye "Gentag indtil" blok - den vil blive gentaget indtil jeg når den grønne gris.'
+        maze_2_10: 'Ok, en sidste gang for øvelsens skyld - kan du løse denne opgave med kun 4 blokke?'
+        maze_2_11: 'Kære person.  Mig zombie. Mig sulten. Må... nå... til... solsikke... Kan du få mig der med kun 5 blokke?'
+        maze_2_12: "OK, dette ligner meget, men er lidt anderledes. Kan du gøre det med kun 5 blokke?"
+        maze_2_13: 'Brug den nye "Hvis"-blok til at lade mig beslutte, hvornår jeg skal dreje. Tip: du behøver kun én mere blok, men lær hvordan vi gør, så du kan gøre det selv næste gang.'
+        maze_2_14: 'OK, det her er ligesom det sidste puslespil, men du skal huske hvordan du brugte "Hvis" blokken og "Gentagt" blokken sammen.'
+        maze_2_15: 'Jeg vil have solsikke! Brug en "Hvis" blok til at få mig til solsikken med færrest mulige blokke.'
+        maze_2_16: 'OK, lad os gøre at igen for at øve - dette er ikke meget anderledes, men pas på de kødædende planter!'
+        maze_2_17: '"Hvis-Ellers" blokken kontrollerer en betingelse, og gør derefter enten den ene ting eller den anden. Prøv at bruge denne nye blok for at få mig til solsikken.'
+        maze_2_18: 'En mere øvelse med "Hvis-Ellers" blokken, kan du løse den i første forsøg?'
+        maze_2_19: "Kan du nøjes med at tilføje 3 blokke til at hjælpe mig med at løse en mere kompleks labyrint? Hvis du gør det rigtigt, kan jeg gå en vilkårlig kurvet vej, uanset længde."
+        turtle_1_1: "Hej, er jeg en kunstner. Du kan skrive kode der får mig til at tegne næsten hvad som helst. Brug et par blokke for at få mig til at tegne over de grå streger i billedet."
+        turtle_1_2: 'Tegn nu en firkant. Bemærk: Brug din foretrukne farve ved at vælge den i den nye "vælg farve" blok.'
+        turtle_1_3: "Lav en firkant ved brug af kun 3 blokke."
+        turtle_1_4: 'Tegn en trekant, hvis sider alle er i forskellige farver, ved hjælp af indstillingen "tilfældig farve", der henter en forskellig farve hver gang. Tip: du bliver nødt til at finde ud af hvor langt der skal drejes ved at klikke på tallet i "drej" blokken.'
+        turtle_1_5: "For at øve, prøv at tegne en konvolut ved først at tegne en trekant og derefter en firkant."
+        turtle_1_6: 'Kan du regne ud, hvordan man tegner denne trekant og firkant? Tip: Lav trekanten først, derefter regn ud hvor meget der skal drejes før firkanten tegnes.'
+        turtle_1_7: 'OK, lad os gøre det en smule sværere - se om du kan tegne disse grønne briller. Firkanterne er 100 pixels på hver side, og de er 50 pixels fra hinanden. Glem ikke at tegne i grøn!'
+        turtle_1_8: 'OK, prøv at finde ud af, hvad der sker hvis du køre denne kode (eller tryk på "Kør" for at prøve det). Gentag det derefter nok gange til at fuldføre tegningen. Farverne bliver anderledes hver gang.'
+        turtle_1_9: "Kan du finde ud af, hvilket nummer du skal erstatte spørgsmålstegnet med, for at tegne en cirkel?"
+        turtle_1_10: 'Du gjorde det! Tegn nu lige hvad du har lyst til. Nogle sjove ideer: en tændstikmand, snefnug en eller spiral. Prøv også den nye "sæt bredde" blok. Hav det sjovt!'
+        turtle_4_1: 'Kan du tegne en trekant (med 100 pixels kanter) med kun 3 blokke? Tip: Brug en "gentag" blok.'
+        turtle_4_2: 'Tilføje en "Drej til højre ved 90 grader" blok et sted midt i programmet allerede ud på arbejdsområdet for at trække disse trekanter.'
+        turtle_4_3: 'OK, her er den kode du skrev for at tegne en enkelt trekant. Kan du tilføje en "gentag" og "drej" blok, for at lave en smuk blomst?'
+        turtle_4_4: 'Her er den samme kode fra den tidligere gåde, men kun drejende 36 grader efter hver trekant. Hvor mange gange skal det gentages? (Tip: efter 360 grader vil tegningen komme fuld cirkel)'
+        turtle_4_5: 'Her er den samme kode fra den tidligere gåde, med drejene gentaget 36 gange. Hvor mange grader skal der drejes? (Tip: efter 360 grader kommer tegningen i fuld cirkel)'
+        turtle_4_6: "Ved kun at bruge 3 blokke, kan du så tegne en firkant med kanter af 20 pixels?"
+        turtle_4_7: 'Her er koden til at tegne firkanten fra sidste gåde. Kan du gentage det med 10 tilstødende kvadrater som en stige? Tip: du behøver kun 2 blokke mere.'
+        turtle_4_8: "Her er løsningen på den tidligere gåde. Kan du afslutte tegningen ved kun at tilføje 2 blokke?"
+        turtle_4_9: "Her er løsningen på den tidligere gåde. Hvor mange grader skal du dreje for at fuldføre tegningen? (Du bliver nok nød til at gætte et par gange)"
+        turtle_4_10: "Her er løsningen på den tidligere gåde. Hvor mange gange skal du gentage for at afslutte tegningen?"
+        turtle_4_11: 'Prøv at ændre tallene i "drej" og "gentag" blokkene for at lave forskellige mønstre. Eller eksperimenter med at ændre resten af koden til at tegne lige hvad du vil.'
+        maze_karel_1_1: 'Hej, jeg er en landmand. Jeg har brug for din hjælp til at tromle marken på min gård, så den er klar til at blive plantet. Flyt mig til bunken af snavs og brug "Fjern" blok til at fjerne den.'
+        maze_karel_1_2: 'Derefter, bevæg mig til hullet og fyld den med to skovfulde jord ved brug af "fyld" blokken.'
+        maze_karel_1_3: "Flytte mig til bunken af jord og fortælle mig hvor mange skovlfulde jeg skal fjerne med så få blokke som muligt."
+        maze_karel_1_4: 'Kunne du hjælpe mig med at fjerne alle fire bunker jord? Tip: Brug en Gentag blok, hvis du kan.'
+        maze_karel_1_5: 'Hjælpe mig med at fylde alle disse huller med 5 skovlfulde jord. Tip: du kan sætte en "gentag" blok i en "imens" blok.'
+        maze_karel_1_6: 'Fjern alle bunker jord, ved at bruge så få blokke som muligt. De nye muligheder i dropdown-menuen på "imens" blokken fortæller mig om jeg står på en bunke eller et hul.'
+        maze_karel_1_7: "Wow, fandt jeg en rigtigt dybt hul! Jeg ved ikke hvor mange skovlfulde jord det behøver. Kan du skrive et program, der fylder hullet indtil jorden er lige?"
+        maze_karel_1_8: "Hjælp mig med at udfylde hullet i slutningen af marken, ved hjælp af så få blokke som muligt."
+        maze_karel_1_9: 'Få mig til at fjerne alle disse bunker af snavs. Forsøg at bruge så få blokke som muligt. Tip: Prøv at bruge en "imens" blok.'
+        maze_karel_1_10: 'Jeg arbejder sent, så det er blevet mørkt, og jeg kan ikke se hvor store bunkerne er. Nu har jeg ikke alle de muligheder, jeg plejede at have på "imens"-blokken. Flyt mig hen ad marken, og hvis der er en bunke, så fjern den.'
+        maze_karel_1_11: 'Det er stadig mørkt udenfor. Flyt mig hen ad marken. Hvis der er en bunke så fjern den, og hvis der er et hul så fyld det op. Tip: Brug rullemenuen med indstillinger på "hvis"-blokken.'
+        turtle_2_1: 'Hej. Mig zombie kunstner. Mig elsker at tegne! Hjælp mig med at tegne en firkant i en særlig farve. Vigtig note: du har de samme blokke, men de er nu blevet sat i kategorier.'
+        turtle_2_2: 'Velkommen til brug af funktioner, der lader dig definere nye blokke! Brug den nye "tegn et kvadrat" blok (som du kan finde i "Funktioner" kategorien) til at tegne et lille kvadrat på 50x50 pixels.'
+        turtle_2_3: 'Brug "gentag" blokken (i kategorien "Sløjfer") til at tegne 3 kvadrater med størrelse 100 og 120 grader imellem. Og gør det i tre forskellige, tilfældige farver.'
+        turtle_2_4: 'Nu skal vi lave noget smart. Ændre koden til at tegne 36 firkanter, 100 pixel brede og hver 10 grader fra hinanden. Tip: Du kan bruge skyderen til at gøre mig hurtigere.'
+        turtle_2_5: 'Tegn firkanter med sider på 50, 60, 70, 80 og 90 pixel. Du skal bruge funktionen "tegn en firkant" fem gange.'
+        turtle_2_6: 'OK, vil dette program bruge en tæller, for at tegne de samme pladser som sidste gang. Du vil have firkanten til at være samme størrelse som tælleren, så brug "tæller" blok. Tip: Det er i kategorien variabler.'
+        turtle_2_7: 'Her er et program til at tegne en spiral, men blokkene er deaktiveret, så de ikke vil køre. Lav et nyt program ved hjælp af en "tælle med" block (i kategorien sløjfer) og "tælle" blok (i kategorien variable) for at tegne den samme spiral.'
+        turtle_2_7_5: 'Der er en ny "tegn en snemand" funktion (i kategorien funktioner). Tegn to snemænd med højde 250 og 100.'
+        turtle_2_8: 'Denne er lidt mere vanskelig. Brug "tegn en snemand"-funktionen og den nye "hop fremad"-blokken (i action-kategorien). Tegn 3 snemænd i forskellige farver, 100 pixels fra hinanden.'
+        turtle_2_9: 'Brug en "tælle med" løkke til at tegne en familie af snemænd med højder af 110, 100, 90, 80 og 70. Snemændene skal være 60 pixels fra hinanden.'
+        turtle_2_10: 'Her er noget kode til at prøve at eksperimentere med forskellige spiraler.  Hvad sker der, hvis du ændrer drejningen? Eller sætter en tilfældig farve ind i løkken?  Tegn noget du synes er sjovt.'
+        maze_karel_2_1: 'Prøv at bruge blokke til at hjælpe mig til at fjern alle bunker og udfylde alle hullerne på jorden. Prøv at bruge sløjfer i stedet for at bruge alt for mange blokke. Tip: du kan sætte et løkke ind i en anden løkke.'
+        maze_karel_2_2: 'Vi har defineret vores egen blok, kaldet "fyld 5", som er nu i kategorien funktioner. Brug den til at hjælpe mig med at udfylde dette hul.'
+        maze_karel_2_3: 'Brug den nye "fyld 5" funktion blok til at få mig til at fylde alle huller op. Du bliver nødt til at trække "fyld 5" blokken ud fra kategorien funktioner.'
+        maze_karel_2_4: "Definer en ny funktion, der fjerner 7 skovlfulde. Derefter brug denne til at skrive et program, der hjælper mig til at fjerne alle bunker."
+        maze_karel_2_5: "Opret en ny funktion, der fjerner 6 skovlfulde fra en bunke, og brug denne til at hjælpe mig udjævne alle bunker ud."
+        maze_karel_2_6: 'Brug to nye funktioner, "fyld 8" og "fjern 8", til at hjælpe mig med at fjerne bunken og fylde hullet op.'
+        maze_karel_2_7: "Der er en ko i min mark! Skriv en ny funktion, der hjælper mig med undgå koen og fjerne bunken. Sæt alle dine blokke ind i den nye funktion."
+        maze_karel_2_8: 'Brug denne nye funktion, "undgå koen og fjern 1", til at hjælpe mig med at fjerne alle bunker.'
+        maze_karel_2_9: "OK, her er en funktion, der fjerner 4 bunker i en lodret kolonne. Prøv at sætte denne funktion i en løkke, så du fjerner alle bunker ved hjælp af kun et par nye blokke."
+        maze_karel_2_10: "Flytte mig over marken, og brug disse to funktioner til at hjælpe mig med at fjerne alle bunker og fylde alle hullerne op."
+        turtle_3_1: 'Dette puslespil viser dig hvordan "tegne en firkant" og "tegne en cirkel" funktioner er defineret.  At definere en funktion kører ikke blokkene.  Du er nødt til at trække "tegne en firkant"-blokken ud til faktisk at tegne en firkant.'
+        turtle_3_2: 'Brug funktionen "tegne en firkant" som et eksempel, opret en "tegn en trekant"-funktion og brug den.'
+        turtle_3_3: 'Tegn trekantede hegn omkring kattene og et firkantet hegn omkring koen.  Tip: test programmet hen ad vejen.'
+        turtle_3_4: 'Se om du kan finde ud af at bruge "tegn en firkant" og "tegn en trekant" (og nogle andre blokke) til at tegne et hus i nærheden af løven.'
+        turtle_3_5: 'Nu skal du oprette en ny "tegne et hus" funktion og bruge den til at give to katte et hus. Tip: Opret en ny funktion ved hjælp af "gøre noget" blokken, og skrive din egen tekst til at navngive blokken.'
+        turtle_3_6: 'Ved hjælp af "tegne en firkant" som et eksempel, tilføje et input kaldet "længde" til "tegn en trekant". Derefter skal du tegne trekanter i forskellige størrelser. (Top: Klik på stjernen for at tilføje en indgang til en funktion)'
+        turtle_3_7: 'Tilføj et input kaldet "længde" til "tegne et hus" og byg et stort hus til elefanterne (med kanter, der er 150 pixels lange)'
+        turtle_3_8: 'Her er alle blokkene fra den tidligere puslespil.  Ændre funktionen "tegne et hus", så du ender på nederste højre hjørne efter at have tegnet et nyt hus. Brug denne modificerede funktion til at tegne tre huse.'
+        turtle_3_9: 'Kan du genoprette funktionen "tegne et hus" uden hjælp? Prøv det, og derefter tegn en række huse.'
+        turtle_3_10: "Du har lært en masse! Brug det nu til at tegne noget du synes er sjovt. Prøv at tegne en stjerne eller en spiral eller et smart snefnug."
+        maze_karel_debug_seq_1: "Velkommen til fejlfinding! Min kode virker ikke. Kan du få øje på problemet og løse det, så jeg kan få min jord flad og klar til beplantning?"
+        maze_karel_debug_seq_2: "Hvad er der galt med dette program? Hvordan kan du ordne det, så jeg kan fjerne den bunke?"
+        maze_karel_debug_repeat: "Fejlfind dette program for mig, så min jord bliver pæn og flad."
+        maze_karel_debug_while: "Hvordan skal du ændre dette program for at hjælpe mig med at udfylde hullet?"
+        maze_karel_debug_if: "Hjælp! Lav programmet, så mit felt vil være helt fladt."
+        maze_karel_debug_if_else: "Fejlfind dette program så jeg kan udfylde hullerne og fjerne alle bunker."
+        maze_karel_debug_function_1: "Hvad skal du ændre i dette program for at hjælpe mig til at fjerne alle bunkerne?"
+        maze_karel_debug_function_2: "Kan du fejlfinde dette program for mig så jeg kan gøre min jord flad?"
+        maze_karel_debug_function_3: 'Rediger dette program, så jeg vil fjerne alle bunker på min jord. '
+        turtle_5_1: "Prøv at køre dette program, og foretag ændringer for at se hvad der sker. Kan du finde ud af hvordan det virker? (Ellers slet det og erstat det med noget helt andet)"
+        turtle_5_2: "Prøv at køre dette program, og foretag ændringer for at se hvad der sker. Kan du finde ud af hvordan det virker? (Ellers slet det og erstat det med noget helt andet)"
+        turtle_5_3: "Prøv at køre dette program, og foretag ændringer for at se hvad der sker. Kan du finde ud af hvordan det virker? (Ellers slet det og erstat det med noget helt andet)"
+        turtle_5_4: "Prøv at køre dette program, og foretag ændringer for at se hvad der sker. Kan du finde ud af hvordan det virker? (Ellers slet det og erstat det med noget helt andet)"
+        turtle_5_5: "Prøv at køre dette program, og foretag ændringer for at se hvad der sker. Kan du finde ud af hvordan det virker? (Ellers slet det og erstat det med noget helt andet)"
+        turtle_5_6: "Prøv at køre dette program, og foretag ændringer for at se hvad der sker. Kan du finde ud af hvordan det virker? (Ellers slet det og erstat det med noget helt andet)"
+        maze_3_1: "Jeg har brug at komme hen til den gris! Skriv et par kald til move(); så jeg kan få mine æg tilbage."
+        maze_3_2: "Skriv mig et program, så jeg kan komme hele vejen hen til grisen."
+        maze_3_3: "Hvordan kan jeg komme hen til grisen? Sørg for, at jeg ikke løber ind i TNT boksen!"
+        maze_3_4: "Argh! Skriv mig et program, som får mig omkring TNT'en og hen til grisen."
+        bounce_1: 'Vedhæft en blok til "når venstre pil"-blokken og tryk på "Kør Program". Flyt battet ved hjælp af venstre pil for at nå slut-målet.'
+        bounce_2: 'Vedhæft en blok til "når højre pil" og "når venstre pil" blokkene. Flyt battet for at nå begge slut-mål.'
+        bounce_3: 'Nu prøve noget lignende med "når op pil" blokken. Flyt battet for at nå målet øverst.'
+        bounce_4: "Denne gang har du har brug for at tilføje fire blokke. Flyt battet til alle fire slut-mål for at fuldføre dette puslespil."
+        bounce_5: 'Vi vil sende en bold flyvende ned mod pagajen. Vedhæft en blok til "når bolden rammer pagajen"-blokken for at sikre at bolden når slut-målet.'
+        bounce_6: 'Nu er slut-målet på toppen. Du skal vedhæfte blokke til begge "når bold rammer"-blokkene for at løse dette puslespil.'
+        bounce_7: 'Tilføj blokke til hver af "når"-blokkene. Ram bolden indtil den rammer slut-målet.'
+        bounce_10: 'Der er nu et mål på toppen. Vedhæft "score point" og "score modstander-point"-blokke til "når bolden i mål" og "når bolden misser paddel"-blokkene for at gøre et spil klar. Se hvor mange point du kan score før din modstander scorer to gange.'
+        bounce_11: 'Du kan nu vedhæfte blokke til "Hvornår spillet starter" blokken. Du skal vedhæfte den nye "lancere nye bold" blok i mere end ét sted. Også prøve at ændre scenen eller hastigheden af pagajen og bolden og se, hvor mange point du kan score før din modstander scorer to gange.'
+        bounce_12: "Opret dit eget Hoppe spil. Du kan ændre alle visuelle og reglerne. Når du er færdig, klik på del for at lade venner prøve dit spil på deres telefoner."
+        Custom_builder: 'Træk blokke fra værktøjskassen til arbejdsområdet for at tegne det niveau, du ønsker at oprette. Tryk på "Kør Program", når du er klar.'
+        flappy_1: 'Sæt en blok sammen med "når klikkes" blokken, tryk derefter på "Kør Program". Klik eller tryk på skærmen for at flytte Flappy til målet.'
+        flappy_2: |-
+          Vi har nu tilføjet noget jord.  Vedhæft en blok til "når rammer jorden"-blok.  Din kode skal 'SLUTTE SPILLET' når Flappy falder.
+        flappy_3: '"Når spillet starter"-blokken tillader dig at køre kode, når dit spil startes.  Prøv indstilling af niveau hastighed og flapping mod målet.'
+        flappy_4: |-
+          Flappy vil flyve gennem forhindringer, medmindre du skriver kode for at få ham til at falde ned. Vedhæft en blok til "når ramte en hindring"-blok. Din kode skal 'SLUTTE SPILLET' når Flappy rammer det første sæt af rør.
+        flappy_5: 'Lad os tilføje en resultattavle, og tælle point når Flappy klarer sig forbi forhindringer. Føj til "når passerer en hindring"-blokken, og derefter scorer et point ved at flyve Flappy gennem det første sæt af rør.'
+        flappy_6: "Se om du stadig kan score et point efter at have fået Flappy til flappe mere eller mindre."
+        flappy_7: 'Næste, forsøge at ændre scenen ved at vedhæfte en anden blok til den "når kør program" blok.'
+        flappy_8: "Du kan indstille visuelle ting når som helst, ikke bare når spillet starter. Prøv at sætte en tilfældig scene, når andre begivenheder sker, for eksempel, når de passerer en hindring."
+        flappy_9: "For at blande tingene, når man rammer en hindring eller jorden, i stedet for at afslutte spillet, forsøg at sætte scoren tilbage til 0."
+        flappy_11: "Opret dit egen Flappy spil. Du kan ændre alle visuelle ting og alle regler, selv tyngdekraften. Når du er færdig, klik på del for at lade dine venner prøve dit spil på deres mobil-telefoner."
+        flappy_k1_1: "Spil Flappy"
+        flappy_k1_2: 'Vedhæft en blok til "når der klikkes" blokken, derefter tryk på "Kør Program". Klik på eller tryk på skærmen for at flytte Flappy til målet.'
+        flappy_k1_3: |-
+          Vi har nu tilføjet noget jord.  Vedhæft en blok til "når rammer jorden"-blok.  Din kode skal 'SLUTTE SPILLET' når Flappy falder.
+        flappy_k1_4: '"Når spillet starter"-blokken tillader dig at køre kode, når dit spil startes.  Prøv indstilling af niveau hastighed og flapping mod målet.'
+        flappy_k1_5: |-
+          Flappy vil flyve gennem forhindringer, medmindre du skriver kode for at få ham til at falde ned. Vedhæft en blok til "når ramte en hindring"-blok. Din kode skal 'SLUTTE SPILLET' når Flappy rammer det første sæt af rør.
+        flappy_k1_6: 'Lad os tilføje en resultattavle, og tælle point når Flappy klarer sig forbi forhindringer. Føj til "når passerer en hindring"-blokken, og derefter scorer et point ved at flyve Flappy gennem det første sæt af rør.'
+        flappy_k1_7: "Se om du kan score flere point for at klare forbi en hindring"
+        flappy_k1_8: 'Næste, forsøge at ændre scenen ved at vedhæfte en anden blok til den "når kør program" blok.'
+        flappy_k1_9: 'Prøv at ændre afspilleren ved at knytte et "sæt spiller" blok til "når kører" blokken.'
+        jigsaw_1: "Klik på blokken"
+        jigsaw_2: "Trække blokken til målet"
+        jigsaw_3: "Arrangere blokke til at danne billedet"
+        jigsaw_4: "Arrangere blokke til at danne billedet"
+        jigsaw_5: "Arrangere blokke til at danne billedet"
+        jigsaw_6: "Arrangere blokke til at danne billedet"
+        jigsaw_7: "Arrangere blokke til at danne billedet"
+        jigsaw_8: "Arrangere blokke til at danne billedet"
+        jigsaw_9: "Arrangere blokke til at danne billedet"
+        jigsaw_10: "Arrangere blokke til at danne billedet"
+        jigsaw_11: "Arrangere blokke til at danne billedet"
+        jigsaw_12: "Arranger blokkene for at danne billedet"
+        jigsaw_13: "Løs puslespillet!"
+        mazestep_1: "Labyrint trin beskrivelse her"
+        mazestep_2: "Labyrint trin beskrivelse her"
+        mazestep_3: "Labyrint trin beskrivelse her"
+        mazestep_4: "Labyrint trin beskrivelse her"
+        mazestep_5: "Labyrint trin beskrivelse her"
+        studio_c2_1: 'Kan du få denne hund sige "Hej verden!"?'
+        studio_c2_2: "Kan du få hunden til at sige noget, og derefter få katten sige noget bagefter?"
+        studio_c2_3: "Kan du skrive et program til at få hunden flyttet over til katten?"
+        studio_c2_4: 'Kan du skrive et program, der får hunden flyttet til katten, og få katten sige "Hej" Når hunden når ham?'
+        studio_c2_5: 'Kan du skrive et program til at få blæksprutten til at sige "Hej" når det klikkes på den?'
+        studio_c2_6: "Kan du skrive et program til at få denne pingvin til at flytte rundt med tasterne op / ned / venstre / højre og ramme alle mål?"
+        studio_c2_7: '"Gentag for evigt" blokken tillader dig at køre koden for altid. Kan du sætte blokke for at flytte denne dinosaur op og ned flere gange?'
+        studio_c2_8: 'Kan du få pingvinen til at sige "AV!" og spille et "Ramt" lyd, hvis han løber ind i dinosaur, og derefter flytte ham med pilene for at se det ske?'
+        studio_c2_9: "Kan du tilføje en blok for at score et point når pingvin løber ind i blæksprutten, og derefter flytte ham med pilene indtil du scorer?"
+        studio_c2_10: "Kan du tilføje blokke til at ændre baggrunden og hastigheden af pingvinen, og derefter flytte ham med pilene indtil du scorer?"
+        studio_c2_11: 'Opret din egen historie. Når du er færdig, skal du klikke på "Udfør" for at lade dine venner prøve din historie på deres telefoner.'
+        studio_c3_story_1: 'Kan du få denne hund sige "Hej verden!"?'
+        studio_c3_story_2: "Kan du få hunden til at sige noget, og derefter få katten sige noget bagefter?"
+        studio_c3_story_3: "Kan du skrive et program til at få hunden flyttet over til katten?"
+        studio_c3_story_4: 'Kan du skrive et program, der får hunden flyttet til katten, og få katten sige "Hej" Når hunden når ham?'
+        studio_c3_story_5: "Kan du tilføje en blok for at gøre blæksprutten glad?"
+        studio_c3_story_6: 'Opret din egen historie. Når du er færdig, skal du klikke på "Udfør" for at lade dine venner prøve din historie på deres telefoner.'
+        studio_c3_game_1: 'Kan du skrive et program til at få blæksprutten til at sige "Hej" når det klikkes på den?'
+        studio_c3_game_2: "Kan du skrive et program til at få denne pingvin til at flytte rundt med tasterne op / ned / venstre / højre og ramme alle mål?"
+        studio_c3_game_3: '"Gentag for evigt" blokken tillader dig at køre koden for altid. Kan du sætte blokke for at flytte denne dinosaur op og ned flere gange?'
+        studio_c3_game_4: 'Kan du få pingvinen til at sige "AV!" og spille et "Ramt" lyd, hvis han løber ind i dinosaur, og derefter flytte ham med pilene for at se det ske?'
+        studio_c3_game_5: "Kan du tilføje en blok for at score et point når pingvin løber ind i blæksprutten, og derefter flytte ham med pilene indtil du scorer?"
+        studio_c3_game_6: "Kan du tilføje blokke til at ændre baggrunden og hastigheden af pingvinen, og derefter flytte ham med pilene indtil du scorer?"
+        studio_c3_game_7: 'Opret din egen historie. Når du er færdig, skal du klikke på "Udfør" for at lade dine venner prøve din historie på deres telefoner.'
+        studio_playlab_1: 'Kan du få denne hund sige "Hej verden!"?'
+        studio_playlab_2: "Kan du få hunden til at sige noget, og derefter få katten sige noget bagefter?"
+        studio_playlab_3: "Kan du skrive et program til at få hunden flyttet over til katten?"
+        studio_playlab_4: 'Kan du skrive et program, der får hunden flyttet til katten, og få katten sige "Hej" Når hunden når ham?'
+        studio_playlab_5: 'Kan du skrive et program til at få blæksprutten til at sige "Hej" når det klikkes på den?'
+        studio_playlab_6: "Kan du skrive et program til at få denne pingvin til at flytte rundt med tasterne op / ned / venstre / højre og ramme alle mål?"
+        studio_playlab_7: '"Gentag for evigt" blokken tillader dig at køre koden for altid. Kan du sætte blokke for at flytte denne dinosaur op og ned flere gange?'
+        studio_playlab_8: "Kan du tilføje en blok for at score et point når pingvin løber ind i blæksprutten, og derefter flytte ham med pilene indtil du scorer?"
+        studio_playlab_9: "Kan du tilføje blokke til at ændre baggrunden og hastigheden af pingvinen, og derefter flytte ham med pilene indtil du scorer?"
+        studio_playlab_10: 'Opret din egen historie. Når du er færdig, skal du klikke på "Udfør" for at lade dine venner prøve din historie på deres telefoner.'
+        studio_full_sandbox: 'Opret din egen historie. Når du er færdig, skal du klikke på "Udfør" for at lade dine venner prøve din historie på deres telefoner.'
+        studio_k1_1: 'Kan du få denne hund sige "Hej verden!"?'
+        studio_k1_2: "Kan du få hunden til at sige noget, og derefter få katten sige noget bagefter?"
+        studio_k1_3: "Kan du skrive et program til at få hunden flyttet over til katten?"
+        studio_k1_4: 'Gør hunden flytte til katten og katten sige "Hej" når han kommer der.'
+        studio_k1_5: "Kan du tilføje en blok for at gøre blæksprutten glad?"
+        studio_k1_6: "Opret din egen historie! Flytte rundt en kat og hund, og få dem til at sige ting."
+        maze_wordsearch_k_1: "Flytte mig for at stave ordet EAST"
+        maze_wordsearch_k_2: "Flytte mig for at stave ordet SOUTH"
+        maze_wordsearch_k_3: "Flytte mig for at stave ordet WEST"
+        maze_wordsearch_k_4: "Flytte mig for at stave ordet NORTH"
+        maze_wordsearch_k_6: "Bevæge mig mod øst og derefter syd for at stave ordet JUMP"
+        maze_wordsearch_k_9: "Flytte mig en måde, så en anden til at stave ordet CODE"
+        maze_wordsearch_k_13: "Flytte mig en vej, så en anden til at stave ordet DEBUG"
+        maze_wordsearch_k_15: "Flytte mig en vej, så en anden til at stave ordet ABOVE"
+        maze_wordsearch_k_16: "Flytte mig en vej, så en anden til at stave ordet BELOW"
+        maze_wordsearch_k_20: "Dette er en test! Flytte mig en måde, så en anden til at stave ordet STORY"
+    video:
+      name:
+        maze_intro: "Labyrint Intro"
+        artist_intro: "Kunstner Intro"
+        farmer_intro: "Landmands Intro"
+        flappy_intro: "Flappy Intro"
+        loop_times: "Gentag Gange blok"
+        loop_until: "Gentag Indtil blok"
+        if: "Hvis blok"
+        if_else: "Hvis/ellers blok"
+        function: "Funktioner"
+        loop_while: "Imens blok"
+        loop_for: "Tæller blok"
+        parameters: "Funktioner med parametre"
+        hoc_wrapup: "En Times Kodning afslutning"
+        20_wrapup: "20 Timers afslutning"
+        Unplug1: "Hvad er CS?"
+        Unplug2: "Data-Tænkning"
+        Unplug3: "Programmering på millimeterpapir"
+        Unplug4: "Algoritmer"
+        Unplug5: "Funktioner"
+        Unplug6: "Betingelser"
+        Unplug7: "Sangskrivning"
+        Unplug8: "Abstraktion"
+        Unplug9: "Stafet-programmering"
+        Unplug10: "Internet"
+        Unplug11: "Afslutning"
+        C1_happy_maps_unplugged: "Glade Kort"
+        C1_moveitmoveit_unplugged: "Flyt det, flyt det"
+        C1_bigevent_unplugged: "Den store begivenhed"
+        C1_getting_loop: "Blive Svimmel"
+        C1_pair_programming: "Par programmering"
+        C1_maze_intro_sequencing: "Labyrint sekventering Intro"
+        C1_maze_debugging: "Labyrint fejlfinding"
+        C1_bee_level_intro: 'Bi niveau - Intro'
+        C1_artist_intro: "Kunstner Intro"
+        C1_spelling_bee_intro: "Stave Bi Intro"
+        C1_zuck_repeat_loop: "Labyrint sløjfer"
+        C1_bee_loops: "Bi sløjfer"
+        C1_maze_loops: "Labyrint sløjfer"
+        C1_playlab_storytelling: 'Spil Lab - Opret en historie'
+        C1_planting_seed: "Plante et frø"
+        C1_building_foundating: "Opbygge et fundament"
+        C2_maze_intro: "Labyrint Intro"
+        C2_artist_intro: "Kunstner Intro"
+        C2_zuck_repeat_loop: "Labyrint sløjfer"
+        C2_artist_loops: "Spiller Løkker"
+        C2_bee_conditionals: "Bi betingelser"
+        C2_playlab_createstory: 'Spil Lab - Opret en historie'
+        C2_graph_paper: "Programmering på millimeterpapir"
+        C2_conditionals_with_cards: "Betingelser"
+        C2_binary_bracelets: "Binære armbånd"
+        C2_replay_programming: "Stafet-programmering"
+        C2_paper_airplanes: "Papir fly"
+        C3_maze_intro: "Labyrint Intro"
+        C3_artist_intro: "Kunstner Intro"
+        C3_artist_functions: "Spiller Funktioner"
+        C3_bee_functions: "Bi Funktioner"
+        C3_bee_conditionals: "Bi betingelser"
+        C3_maze_conditionals: "Labyrint Betingelser"
+        C3_artist_nested_loops: "Indlejret Løkker"
+        C3_farmer_while: "Mens løkker"
+        C3_bee_nested_loops: "Indlejret Løkker"
+        C3_bee_debugging: "Bi fejlfinding"
+        C3_bounce: "Hoppe"
+        C3_playlab_create_game: 'Spille Lab - Oprette et spil'
+        C3_computational_thinking: "Data-Tænkning"
+        C3_dice_race: "Terning Race"
+        C3_internet: "Internet"
+        C3_crowdsourcing: "Crowdsourcing"
+        C3_functional_suncatchers: "Funktionelle solfangere"
+        C3_songwriting_with_parameters: "Sangskrivning med parametre"
+    callout:
+      text:
+        drag_blocks: 'Træk i en "flyt fremad" blok og fastgør den under den anden blok'
+        run: 'Tryk "Kør program" for at prøve dit program'
+        watch_again: "Klik her for at se videoen igen"
+        gray_block_explanation: "Blokke, der er grå kan ikke slettes. Kan du løse gåden alligevel?"
+        show_code_explanation: "Klik her for at se koden for programmet, du laver"
+        instructions_repeat_explanation: "Instruktionerne for hver puslespil gentages her"
+        category_explanation: "Du har alle de samme gader, men de har nu været arrangeret i kategorier"
+        set_sprite_image: 'Vedhæft en "Indstil spiller til billede"-blok til "når historien starter"-blokken for at aktivere en spiller for denne historie'
+        studio_say_text: "Skriv hvad du vil have din spiller til at sige i dette citat"
+        jigsaw_click: "Klik på denne blok!"

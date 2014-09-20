@@ -1,0 +1,14 @@
+%div
+  %h1 What hint would you like to give in order to improve this program?
+  = render partial: "shared/add_hint", locals: { level_source_id: @level_source_id, redirect_url: build_add_hint_path(params[:idx].to_i + 1, params[:pop_level_source_ids]) }
+  %table{:width => "30%"}
+    %tr
+      %td= link_to "<< Prev", build_add_hint_path(params[:idx].to_i - 1, params[:pop_level_source_ids])
+      %td= link_to "Next >>", build_add_hint_path(params[:idx].to_i + 1, params[:pop_level_source_ids])
+%br
+= render partial: "levels/blockly", locals: { start_blocks: @start_blocks, app: @game.app, hide_source: @hide_source, share: @share }
+
+.fb-comments{:data=> {:href => request.original_url, :numposts => 10, :colorscheme => "light"} }
+
+:javascript
+  $( "#hint_content" ).placeholder();

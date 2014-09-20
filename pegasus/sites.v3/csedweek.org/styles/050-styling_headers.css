@@ -1,0 +1,45 @@
+body {
+  background: #fff;
+}
+
+.redheaderlink {
+  color: rgb(211,0,0);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.redheaderlink:hover {
+  color: rgb(211,0,0);
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: solid 4px rgb(44, 175, 232);
+}
+
+.whitefooterlink:link {
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.whitefooterlink:hover {
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.whitefooterlink:visited {
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+}
+.whitefooter {
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.dim {
+  display: inline-block;
+  opacity: 0.5;
+}

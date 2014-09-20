@@ -1,0 +1,360 @@
+"pt-PT":
+  slides:
+    maze_intro:
+      1:
+        image: notes/hoc1_1.jpg
+        text: Bem-vindo à tua primeira hora de código! Vamos mergulhar logo no teu
+          primeiro contacto com a programação.
+      2:
+        image: notes/hoc1_2.jpg
+        text: Estaremos a usar o Blockly, uma linguagem de programação visual onde
+          podes arrastar e soltar blocos para escrever código.
+      3:
+        image: notes/hoc1_3.jpg
+        text: Grande parte do código é digitado, mas o Blockly é visual. Cada bloco
+          corresponde a uma linha de código "real".
+      4:
+        image: notes/hoc1_4.jpg
+        text: Vais aprender os fundamentos da ciência da computação, conceitos que
+          são usados para fazer aplicações para telemóveis ou até para controlar o
+          robô que está em Marte.
+      5:
+        image: notes/hoc1_5.jpg
+        text: Um programa é um conjunto de instruções para o teu computador seguir.
+      6:
+        image: notes/hoc1_6.jpg
+        text: O objetivo do teu primeiro programa é conseguir que o Angry Bird atravesse
+          um labirinto para chegar ao Porco Verde.
+      7:
+        image: notes/hoc1_7.jpg
+        text: O lado esquerdo é o labirinto onde o programa é executado. As instruções
+          para cada quebra-cabeça estão abaixo do labirinto.
+      8:
+        image: notes/hoc1_8.jpg
+        text: A caixa de ferramentas do meio possui os comandos para o Angry Bird.
+          Usarás estas para construir o teu código.
+      9:
+        image: notes/hoc1_9.jpg
+        text: "À direita é a tua área de trabalho onde irás arrastar blocos da caixa
+          de ferramentas para construir o teu programa. Para apagar um bloco, arrasta-o
+          para o lixo no canto."
+      10:
+        image: notes/hoc1_10.jpg
+        text: Cada bloco é uma instrução. Se arrastares o bloco "Avançar" para a tua
+          área de trabalho e pressionares "Executar programa", o pássaro move-se um
+          espaço no labirinto.
+      11:
+        image: notes/hoc1_11.jpg
+        text: Para fazer mais do que uma ação, podes arrastar muitos blocos para a
+          tua área de trabalho e juntá-los. O pássaro vai fazer os comandos de cima
+          para baixo.
+      12:
+        image: notes/hoc1_12.jpg
+        text: Se corres um programa e depois quiseres corrigi-lo e tentar novamente,
+          pressiona o botão "Redefinir".
+      13:
+        image: notes/hoc1_13.jpg
+        text: Vamos apanhar esses porcos!
+    artist_intro:
+      1:
+        image: notes/stage5_1.jpg
+        text: Olá! Eu sou o JR. Qualquer equipa de carros de corrida precisa de um
+          programador de computadores para vencer. Eles analisam os dados do veículo,
+          de forma a torná-lo mais rápido.
+      2:
+        image: notes/stage5_2.jpg
+        text: Nestes puzzles, serás um artista que desenha a linha por detrás deles
+          em qualquer lugar aonde eles forem.
+      3:
+        image: notes/stage5_3.jpg
+        text: Este bloco diz "avançar 100 pixeis." Os pixeis são apenas pequenos pontos
+          no teu ecrã.
+      4:
+        image: notes/stage5_4.jpg
+        text: Este bloco diz "virar à direita 90 graus." Isto fará com que o teu artista
+          se vire tanto quanto os blocos se virarem no labirinto.
+      5:
+        image: notes/stage5_5.jpg
+        text: Carrega na seta, sobre qualquer destes blocos, para mudares a quantidade
+          que o artista vira ou avança. Ambienta-te com estes passos, de forma a familiarizares-te
+          com estes novos blocos.
+    farmer_intro:
+      1:
+        image: notes/stage9_1.jpg
+        text: Olá! Eu sou a Paola! Nestes puzzles tu serás um agricultor que tem de
+          chegar à sua quinta, completamente plana, para começar a cultivar algo.
+      2:
+        image: notes/stage9_2.jpg
+        text: Tu terás que ajudá-la a remover todos os montes de terra e encher os
+          buracos.
+      3:
+        image: notes/stage9_3.jpg
+        text: Os novos blocos removem uma pá cheia de terra de um monte e enchem uma
+          pá cheia de terra para um buraco.
+      4:
+        image: notes/stage9_4.jpg
+        text: Os montes e buracos têm tamanhos diferentes, pelo que terás de dizer
+          ao agricultor quantas pás serão necessárias usar.
+    flappy_intro:
+      1:
+        image: notes/flappy01.jpg
+        text: Olá, sou a Katie! Uma das melhores coisas sobre ciência computacional
+          é que um programa de computador pode ser interativo.
+      2:
+        image: notes/flappy02.jpg
+        text: Sempre que alguém clica ou toca ou escreve num computador ou telemóvel,
+          é gerado um EVENTO, e existe código que decide o que fazer quando um EVENTO
+          ocorre.
+      3:
+        image: notes/flappy03.jpg
+        text: 'Por exemplo, poderias ter um MANIPULADOR DE EVENTOS que diz "quando
+          o rato é clicado, toca um som" '
+      4:
+        image: notes/flappy04.jpg
+        text: Alguma vez ouviste falar no jogo FlappyBird? Ao usar manipuladores de
+          evento, vamos aprender a programar a nossa própria versão do FlappyBird!
+      5:
+        image: notes/flappy05.jpg
+        text: O código que vais escrever involve arrastar e largar blocos que representam
+          comandos para o computador. Na verdade, cada um destes blocos representa
+          um verdadeiro código.
+      6:
+        image: notes/flappy06.jpg
+        text: 'Se deres uma olhadela à área de trabalho, existem alguns blocos verdes
+          que estão preenchidos por ti - estes são os "manipuladores de evento" '
+      7:
+        image: notes/flappy07.jpg
+        text: Se queres que o pássaro se AGITE quando CLICAS no rato, podes fazer
+          isso ao ligar o bloco "AGITAR" ao manipulador de evento apropriado, e agora
+          no teu jogo sempre que clicares no rato, o pássaro vai agitar-se.
+      8:
+        image: notes/flappy08.jpg
+        text: Em cada puzzle desta atividade vamos introduzir novos tipos de eventos
+          como os blocos verdes na área de trabalho, e podes decidir quais os blocos
+          apropriados para adicionar em resposta a esses eventos.
+      9:
+        image: notes/flappy09.jpg
+        text: Quando vires uma seta de largar para baixo como esta, significa que
+          podes alterar as definições - como, por exemplo , qual o som para tocar
+          quando o pássaro Flappy cai no chão.
+      10:
+        image: notes/flappy10.jpg
+        text: No último puzzle vais ser capaz de criar o teu próprio jogo e partilhá-lo
+          com os teus amigos. Diverte-te!
+    loop_times:
+      1:
+        image: notes/hoc2_1.jpg
+        text: Olá, sou o Mark! Vamos aprender sobre ciclos. Usando ciclos podes dizer
+          um computador para repetir qualquer conjunto de ações repetidamente, milhares
+          ou mesmo milhões de vezes.
+      2:
+        image: notes/hoc2_2.jpg
+        text: Neste puzzle, queremos que o pássaro se mova para a frente 5 espaços
+          para chegar ao porco.
+      3:
+        image: notes/hoc2_3.jpg
+        text: Podemos usar o novo bloco "repetir" para nos ajudar.
+      4:
+        image: notes/hoc2_4.jpg
+        text: Em vez de arrastares 5 blocos "avançar" ...
+      5:
+        image: notes/hoc2_5.jpg
+        text: Podemos colocar o bloco "avançar" dentro do bloco "repetir" e escrever
+          um número no bloco para definir quantas vezes repetir.
+      6:
+        image: notes/hoc2_6.jpg
+        text: 'E isto é importante: podes colocar mais do que um comando dentro de
+          um bloco "repetir".'
+      7:
+        image: notes/hoc2_7.jpg
+        text: Diverte-te a usar o teu novo bloco "repetir"!
+    loop_until:
+      1:
+        image: notes/hoc3_1.jpg
+        text: Olá, eu sou o Chris. Antes de entrar para os Miami Heat, estive na escola
+          Georgia Tech a estudar ciência da computação. Vamos tentar o nosso novo
+          bloco, o bloco "repeat até".
+      2:
+        image: notes/hoc3_2.jpg
+        text: E se nós não soubéssemos quão longe o pássaro teve que se mover para
+          chegar ao porco?
+      3:
+        image: notes/hoc3_3.jpg
+        text: Se pusermos um bloco "avançar" dentro do bloco "repetir até", o pássaro
+          irá mover-se em frente ATÉ que chegue ao porco (ou choque contra o muro).
+      4:
+        image: notes/hoc3_4.jpg
+        text: 'E isto é importante: tal como anteriormente, podemos por múltiplos
+          blocos dentro de um bloco "repetir até", e todos eles serão repetidos.'
+    if:
+      1:
+        image: notes/hoc4_1.jpg
+        text: 'Olá, eu sou o Bill! Vamos aprender um novo conceito fundamental: instrução
+          "se". É assim que os computadores tomam decisões.'
+      2:
+        image: notes/hoc4_2.jpg
+        text: Usas instruções "se" todos os dias. Antes de saíres de casa todas as
+          manhãs, tu dizes  SE estiver a chover lá fora, vou precisar de levar o meu
+          casaco.
+      3:
+        image: notes/hoc4_3.jpg
+        text: Podemos dizer ao zombie para verificar SE há algum caminho à esquerda,
+          e se ele encontrar o caminho à esquerda, podemos fazer com que ele vire
+          nessa direção.
+      4:
+        image: notes/hoc4_4.jpg
+        text: Para escrever código para este, vamos arrastar o nosso bloco "se" e
+          inserimos dentro dele um bloco "virar esquerda".
+      5:
+        image: notes/hoc4_5.jpg
+        text: Agora, se pusermos um bloco "avançar" acima dele e um bloco "repetir"
+          a envolver tudo, cada vez que o zombie se mova, irá verificar se existe
+          algum caminho à esquerda e vira. O comando "repetir" é fundamental para
+          verificar, a cada passo, se existe uma viragem.
+      6:
+        image: notes/hoc4_6.jpg
+        text: 'Instruções se são muito importantes nas ciências da computação. Um
+          dos primeiros programas que escrevi foi o jogo do galo, e há uma instrução
+          que diz: SE a outra pessoa estiver perto de ganhar, bloquear o espaço que
+          a permite ganhar.'
+      7:
+        image: notes/hoc4_7.jpg
+        text: Diverte-te usando o bloco "se"!
+    if_else:
+      1:
+        image: notes/hoc5_1.jpg
+        text: Olá, o meu nome é Saloni. Eu uso as ciências da computação para resolver
+          problemas em medicina e saúde. Vamos aprender o bloco "se-senão". É muito
+          parecido com o bloco "se" mas tem mais uma parte no final que diz "senão".
+      2:
+        image: notes/hoc5_2.jpg
+        text: Se eu puser um bloco "avançar" no sitio que diz "faz" e um bloco "virar
+          esquerda" onde diz "senão" isso quer dizer que o zombie irá escolher entre
+          duas opções. SE existe um caminho em frente, o zombie irá avançar e caso
+          não exista (não existe um caminho em frente) o zombie irá virar à esquerda.
+      3:
+        image: notes/hoc5_3.jpg
+        text: Tal como no bloco "se", podemos por blocos "se-senão" dentro de blocos
+          "repetir" para que o zombie continue a ir em frente e o bloco "se-senão"
+          irá verificar sempre se existe algum sítio para virar.
+      4:
+        image: notes/hoc5_4.jpg
+        text: Agora, leva os zombie até onde eles pertencem!
+    function:
+      1:
+        image: notes/stage13_1.jpg
+        text: Olá! Eu sou a Brinna, engenheira no Instagram. Uma função são algumas
+          linhas de código que tu irás precisar muitas vezes num programa. Portanto,
+          em vez de as escreveres constantemente, podes apresentá-las num só bloco.
+      2:
+        image: notes/stage13_2.jpg
+        text: Nós vamos aprender como definir funções. A definição de funções tem
+          uma estrela no canto. O nome de uma função é escrita logo na primeira linha.
+      3:
+        image: notes/stage13_3.jpg
+        text: Os blocos que vão dentro da definição de nos dizer o que ele faz. Por
+          essa definição de função é chamada de "encher 5" e ela é composta de um
+          bloco de "repetição" e um bloco de "preencher".
+      4:
+        image: notes/stage13_4.jpg
+        text: A definição fica na área de trabalho, mas a nossa agricultora não irá
+          executar a função até nós arrastarmos o nosso bloco de função "encher 5"
+          da categoria das funções.
+      5:
+        image: notes/stage13_5.jpg
+        text: Let's put the "fun" back in "FUNction!"
+    loop_while:
+      1:
+        image: notes/stage9_5.jpg
+        text: Hi, I'm Makinde! Let's learn about the "while block."
+      2:
+        image: notes/stage9_6.jpg
+        text: O bloco "enquanto" vai fazer tudo o que puseres dentro dele DESDE QUE
+          a afirmação no topo é VERDADEIRA.
+      3:
+        image: notes/stage9_7.jpg
+        text: Por exemplo, se a agricultora estiver sob um monte, ela irá continuar
+          a remover uma pá cheia ENQUANTO houver um monte por baixo dela.
+    loop_for:
+      1:
+        image: notes/stage11_1.jpg
+        text: Olá, eu sou a Trina, e trabalho na Pixar. Já trabalhei em vários filmes,
+          incluindo Shrek.
+      2:
+        image: notes/stage11_2.jpg
+        text: Este é o nosso novo "contador" de ciclos. Este irá executar as ações
+          repetidamente e podes fazer com que as ações se alterem ligeiramente de
+          cada vez.
+      3:
+        image: notes/stage11_3.jpg
+        text: Neste exemplo, o nosso "contador" de ciclos diz "conta com o contador
+          de 50 a 90 por 10" e dentro dele, vamos ter o nosso bloco de "desenhar um
+          quadrado". Arrasta o bloco "contador" da secção das "variáveis" até ao lugar
+          do "comprimento".
+      4:
+        image: notes/stage11_4.jpg
+        text: Isto significa que o nosso artista vai desenhar um quadrado que tem
+          50 pixels de comprimento nos lados, depois disso vai adicionar 10 a esse
+          comprimento e desenhar um quadrado com 60 pixels de comprimento nos lados.
+          A seguir vai continuar a adicionar 10 e a desenhar quadrados até chegar
+          a 90. Então teremos quadrados de 50, 60, 70, 80, e 90.
+    parameters:
+      1:
+        image: notes/stage15_1.jpg
+        text: Olá, sou a Janete, e sou uma engenheira na Zynga.
+      2:
+        image: notes/stage15_2.jpg
+        text: E se quisermos desenhar alguns triângulos e quisermos que estes tenham
+          comprimentos diferentes?
+      3:
+        image: notes/stage15_3.jpg
+        text: Podíamos escrever esse código todo à mão ou podemos usar uma função
+          com parâmetros.
+      4:
+        image: notes/stage15_4.jpg
+        text: Para fazer isto, clica na estrela azul na definição da função "desenha
+          um triângulo". Depois arrasta o "nome de entrada" para o bloco de "entrada".
+      5:
+        image: notes/stage15_5.jpg
+        text: Depois se escreveres "comprimento" no lugar onde diz "x" e pressionares
+          "enter" vais criar o comprimento de entrada para a tua função.
+      6:
+        image: notes/stage15_6.jpg
+        text: De seguida, clica na estrela. Agora, clica na categoria das variáveis
+          e arrasta o bloco de "comprimento" para o bloco de "mover para a frente"
+          da definição da tua função. E arrasta para fora o bloco do número antigo.
+      7:
+        image: notes/stage15_7.jpg
+        text: Para usar a tua função com parâmetros, clica na categoria das funções
+          e arrasta para fora a tua função de "desenha um triângulo com comprimento".
+      8:
+        image: notes/stage15_8.jpg
+        text: Agora podes usar o bloco de matemática para inserir diferentes números  para
+          desenhar triângulos de tamanhos diferentes.
+    hoc_wrapup:
+      1:
+        image: notes/hoc6_1.jpg
+        text: Parabéns! Com o último enigma que resolveste, acabaste de escrever código
+          que pode dizer a qualquer robô como encontrar o seu caminho através de um
+          labirinto de não-ramificação ou túnel de qualquer comprimento, sendo um
+          zombie, um pássaro, uma missão a Marte ou até mesmo um carro de auto-condução.
+      2:
+        image: notes/hoc6_2.jpg
+        text: Os conceitos básicos que usaste são o coração de todos os programas
+          ou apps que irás utilizar.  Aprendemos sobre ciclos de repetição, declarações
+          repita até, declarações se e se-então.
+      3:
+        image: notes/hoc6_3.jpg
+        text: Se gostaste da tua primeira hora de código, visita code.org e continua
+          a tua educação em ciências da computação! Assim que completares as 20 horas
+          de curso, irás dominar as bases da programação e poderás começar a escrever
+          aplicações para telemóveis, instruções para robôs, jogos, etc.
+      4:
+        image: notes/hoc6_4.jpg
+        text: 'A tecnologia está a mudar tudo o que fazemos e não importa se és novo
+          ou menos novo: a programação é divertida, é criativa e toda a gente pode
+          aprender!'
+    20_wrapup:
+      1:
+        image: notes/bird.png
+        text: Mostrar notas vem em breve!

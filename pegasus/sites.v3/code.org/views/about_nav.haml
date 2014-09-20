@@ -1,0 +1,9 @@
+#about_nav
+  %span.about_list
+    -current_url = request.path_info
+    -{ 'About Us'=>'/about','Leadership'=>'/about/leadership', 'Donors'=>'/about/donors', 'Partners'=>'/about/partners', 'Education Advisors'=>'/about/advisors','Full Team'=>'/about/team', 'Newsroom'=>'/about/news', 'Jobs'=>'/about/jobs', 'Contact Us'=>'/contact', 'FAQs'=>'/faq'}.each_pair do |label,url|
+      - if current_url == url
+        %span.about_list_item_selected= label
+      -else
+        %a.about_list_item{:href=>url}= label
+      %hr.narrow_hr

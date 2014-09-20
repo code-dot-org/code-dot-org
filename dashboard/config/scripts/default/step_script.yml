@@ -1,0 +1,9 @@
+- Options: {id: 8, name: 'step', trophies: false, hidden: true }
+- TSV: |
+    Game	Name	Level	Skin	Concepts	Url
+    MazeStep	Level1	2_1_step	birds
+    MazeStep	Level2	2_2_step	birds
+    MazeStep	Level3	2_17_step	pvz
+    MazeStep	Level4	karel_1_9_step	farmer
+    MazeStep	Level5	karel_2_9_step	farmer_night
+    MazeStep	Level6	karel_bee_1	bee

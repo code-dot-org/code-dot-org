@@ -1,0 +1,97 @@
+@import "main";
+
+body {
+	padding-top: 60px;
+}
+
+.slides{
+	margin-left: 15px;
+	float: right;
+}
+
+.success-message{
+    background-color: @actionGreen;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.starting{
+	#conceptmap{
+		tr td a.video-link[data-id="1"]{
+			font-weight: bold;
+			font-size: 18px;
+			background-color: @actionGreen;
+			padding: 2px;
+			color: black;
+			text-decoration: underline;
+		}
+	}
+}
+
+.sections {
+    text-align:left;
+}
+
+.number {
+    color:#999;
+}
+
+.section {
+    margin-bottom:20px;
+    padding-bottom:10px;
+    border-bottom:1px solid #ccc;
+    
+    .title {
+        font-weight:bold;
+        font-size:24px;
+        line-height:1.3em;
+        color:#333;
+        margin-bottom:5px;
+    }
+    .description {
+        margin-left:20px;
+        color:#444;
+        font-size:13px;
+        margin-bottom:10px;
+    }
+    
+    a:hover {
+        text-decoration:none;
+    }
+    
+    .alert {
+        margin-left:40px;
+        width:75%;
+        margin-bottom:15px;
+        font-weight:bold;
+        
+        &:hover {
+            background-color:#79C3D2;
+            color:#333;
+        }
+    }
+    
+    .video {
+        padding:10px;
+        margin-bottom:5px;
+        border-bottom:1px solid #ccc;
+        
+        .video-link {
+            margin-left:5px;
+            margin-bottom:5px;
+            font-size:18px;
+        }
+    }
+    
+}
+
+.noborder-bottom {
+    border-bottom:none;
+}
+
+.challenges {
+    h3 {
+        margin-bottom:10px;
+    }
+}

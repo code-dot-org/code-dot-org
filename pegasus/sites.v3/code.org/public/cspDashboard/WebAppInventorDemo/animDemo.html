@@ -1,0 +1,277 @@
+
+<html>
+<head>
+<title>Javascript animation: Demo 1</title>
+<style type="text/css">
+
+body {
+ font:76% normal verdana,arial,tahoma;
+ background-color: #AAAAAA;
+}
+canvas{
+	background-color: #FFFFFF;
+	float: left;
+}
+
+#guiarea{
+	width: 250px;
+	height: 300px;
+	border: solid 1px #000000;
+	background-color: #FFFFFF;
+	float: left;
+	margin: 10px;
+}
+
+h1, h2 {
+ font-size:1em;
+}
+
+#fooObject {
+ /* simple box */
+ position:absolute;
+ left:0px;
+ top:8em;
+ width:5em;
+ line-height:3em;
+ background:#99ccff;
+ border:1px solid #003366;
+ white-space:nowrap;
+ padding:0.5em;
+}
+
+</style>
+<script type="text/javascript">
+
+var canvas;
+var timerId;
+var delayVal = 25;
+var width, height;
+var alpha = 1;
+function background(c){
+	fill(c);
+	canvas.globalAlpha=alpha;
+	rect(0,0,width,height);
+	canvas.globalAlpha=1;
+}
+
+
+
+function setDelay(ms){
+	//if changing delay want to clear old timer anyway
+	// or old one will continue to be called in separate
+	// thread
+	clearInterval(timerId);
+
+
+	if(ms>=0){
+		timerId = setInterval(setDrawVars, ms);
+		delayVal=ms;
+	}
+}
+
+function pause(){ setDelay(-1);}
+function start(){ setDelay(delayVal); }
+
+
+function setDrawVars(){
+	canvas = document.getElementById("myCan").getContext("2d");
+	width = canvas.canvas.width;
+	height = canvas.canvas.height;
+	draw();
+}
+
+function setSize(w,h){
+	canvas.canvas.width=w;
+	canvas.canvas.height=h;
+
+
+}
+
+function init(){
+	setDrawVars(); //ensure canvas var exists
+	setDelay(25); //ensure a delay has been set
+	setup();
+	
+}
+
+function fill(c){
+	canvas.fillStyle = c;
+}
+
+function rect(x,y,w,h){
+	canvas.fillRect(x,y,w,h);
+}
+
+function toggleOnionSkin(){
+	if(alpha==1) alpha=0.1;
+	else alpha=1;
+
+}
+
+var selectedComponent = null;
+var selectedValueBefore = null;
+var selectedXBefore = null; 
+var selectedYBefore = null; 
+function setClickedComponent(c){
+
+	if(selectedComponent!=null && c.id==selectedComponent.id){
+		deselectAll();
+	
+		//alert("component clicked was: "+event);
+		
+	}
+	else if(c!=null){
+			c.style.boxShadow = "5px 5px 5px #000000"; 
+			selectedComponent=c;
+			if(c.value!=""){
+				selectedValueBefore = c.value;
+			}
+			selectedXBefore = selectedComponent.style.left;
+			selectedYBefore = selectedComponent.style.top;
+		}
+}
+
+function moveAnySelected(){
+	if(selectedComponent!=null){
+		selectedComponent.style.left = event.clientX-10;
+		selectedComponent.style.top = event.clientY-10;
+	}
+}
+
+function deselectAll(){
+	console.debug("deslecting...")
+	selectedComponent.style.boxShadow="";
+	if(selectedValueBefore!=null){
+		
+			selectedComponent.value=selectedValueBefore;
+			
+	}
+	selectedValueBefore=null;
+	selectedComponent=null;
+	selectedXBefore=null;
+	selectedYBefore=null;
+}
+
+function $(id){
+	return document.getElementById(id);
+}
+
+function addTextInput(id, x, y){
+
+	var gui = document.getElementById("guiarea");
+
+	gui.innerHTML += "<input type=text id='"+id+"' ondblclick='setClickedComponent(this)'>";
+
+	setComponentPosition(id, x, y);
+}
+
+function addLabel(id, text, x, y){
+	var gui = document.getElementById("guiarea");
+
+	gui.innerHTML += "<input type=text id='"+id+"' ondblclick='setClickedComponent(this)' value='"+text+"'>";
+
+	setComponentPosition(id, x, y);
+	$(id).style.borderStyle="none";
+
+}
+
+function addButton(text, functionToCall, x, y){
+
+	var gui = document.getElementById("guiarea");
+
+	gui.innerHTML += "<button id='"+text+"' onClick='"+functionToCall+"' ondblclick='setClickedComponent(this)'>"+text+"</button>";
+
+	setComponentPosition(text, x, y);
+}
+
+function setComponentPosition(id, x, y){
+	var comp = document.getElementById(id);
+	comp.style.position="absolute";
+	comp.style.left=x;
+	comp.style.top=y;
+}
+
+function addSlider(id, min, max, functionToCall, x, y){
+	var gui = document.getElementById("guiarea");
+
+	gui.innerHTML += "<input type='range' id='"+id+"' min='"+min+"' max='"+max+"' onChange='"+functionToCall+"' ondblclick='setClickedComponent(this)'>";
+	
+	setComponentPosition(id, x, y);
+
+}
+
+function setDelayFromRange(obj){
+	setDelay(obj.value);
+}
+
+//***************** helper funcs above ************
+
+//********* USER CODE BELOW **************
+var dx = 3;
+var dy = 5;
+var x = 10;
+var y = 50;
+var size = 25;
+function setup() {
+  
+  setSize(400,300);
+  setDelay(1000);
+
+  addButton("pause","pause()", 100,200);
+  addButton("start","start()", 100,220);
+  addButton("onionSkin","toggleOnionSkin()", 100,240);
+  addSlider("speed", 0, 1000, "setDelayFromRange(this)", 100, 260);
+}
+
+function draw() {
+ 
+  background("#FFFFFF");
+
+  fill("#FF0000");
+  
+  rect(x,y,size,size);
+  x+=dx;
+  y+=dy;
+
+  if(x>width-size){
+  	x = width-size;
+  	dx=-dx;
+  }
+  else if(x<0){
+  	x=0;
+  	dx=-dx;
+  }
+
+  if(y>height-size){
+  	y = height-size;
+  	dy=-dy;
+  }
+  else if(y<0){
+  	y=0;
+  	dy=-dy;
+  }
+  
+
+}
+
+
+
+
+
+
+window.onload = init;
+
+</script>
+</head>
+
+<body onMouseMove="moveAnySelected()">
+
+<h1>Javascript animation: Demo 1</h1>
+<div id="guiarea">
+
+</div>
+<canvas id="myCan" width=500 height=500></canvas>
+
+
+</body>
+</html>

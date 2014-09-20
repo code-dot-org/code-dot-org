@@ -1,0 +1,145 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-06-27T21:50:23.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "skin": "artist_zombie",
+    "instructions": "Here is a snowflake function. Experiment with it to create a winter scene! This is a free play level, so there is no puzzle to solve. Have fun!",
+    "x": "200",
+    "y": "300",
+    "start_direction": "0",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "free_play": "true",
+    "slider_speed": "0.8"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false"/>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">draw a snowflake</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">8</title>
+              <statement name="DO">
+                <block type="draw_colour" inline="true">
+                  <value name="COLOUR">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#7fffd4</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">30</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">15</title>
+                              <next>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnRight</title>
+                                  <title name="VALUE">90</title>
+                                  <next>
+                                    <block type="draw_colour" inline="true">
+                                      <value name="COLOUR">
+                                        <block type="colour_picker">
+                                          <title name="COLOUR">#0000cd</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_move_by_constant">
+                                          <title name="DIR">moveForward</title>
+                                          <title name="VALUE">15</title>
+                                          <next>
+                                            <block type="draw_turn_by_constant">
+                                              <title name="DIR">turnRight</title>
+                                              <title name="VALUE">90</title>
+                                              <next>
+                                                <block type="draw_move_by_constant">
+                                                  <title name="DIR">moveForward</title>
+                                                  <title name="VALUE">30</title>
+                                                  <next>
+                                                    <block type="draw_turn_by_constant">
+                                                      <title name="DIR">turnRight</title>
+                                                      <title name="VALUE">45</title>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="draw a snowflake"/>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
+    <solution_blocks>
+      <xml/>
+    </solution_blocks>
+  </blocks>
+</Artist>

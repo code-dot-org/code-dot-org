@@ -1,0 +1,78 @@
+<%
+
+var msg = require('../../../locale/current/common');
+
+/**
+ * Add the procedures category to the toolbox.
+ */
+var addProcedures = function() { -%>
+  <category name="<%= msg.catProcedures() %>" custom="PROCEDURE"></category>
+  <category name="<%= msg.catLogic() %>">
+    <block type="karel_if"></block>
+    <block type="karel_ifElse"></block>
+  </category>
+<% }; -%>
+
+<%
+/**
+ * Options:
+ * @param doStatement An optional statement for the do statement in the loop.
+ * @param upperLimit The upper limit of the for loop.
+ */
+var controlsFor = function(doStatement, upperLimit) { -%>
+  <block type="controls_for">
+    <value name="FROM">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+    <value name="TO">
+      <block type="math_number">
+        <title name="NUM">
+          <%= upperLimit || 10 -%>
+        </title>
+      </block>
+    </value>
+    <value name="BY">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+    <% if (doStatement) { -%>
+      <statement name="DO">
+        <% doStatement() %>
+      </statement>
+    <% } -%>
+  </block>
+<% }; -%>
+
+<xml id="toolbox" style="display: none;">
+  <category name="<%= msg.catActions() %>">
+    <block type="maze_moveForward"></block>
+    <block type="maze_turn"><title name="DIR">turnLeft</title></block>
+    <block type="maze_turn"><title name="DIR">turnRight</title></block>
+    <block type="maze_dig"></block>
+    <block type="maze_fill"></block>
+  </category>
+  <% addProcedures() -%>
+  <category name="<%= msg.catLoops() %>">
+    <block type="maze_untilBlockedOrNotClear"></block>
+    <% if (level < 9) { -%>
+      <block type="controls_repeat"></block>
+    <% } else { -%>
+      <block type="controls_repeat_ext">
+        <value name="TIMES">
+          <block type="math_number">
+            <title name="NUM">10</title>
+          </block>
+        </value>
+      </block>
+    <% } -%>
+    <% controlsFor() -%>
+  </category>
+  <category name="<%= msg.catMath() %>">
+    <block type="math_number"></block>
+  </category>
+  <category name="<%= msg.catVariables() %>" custom="VARIABLE">
+  </category>
+</xml>

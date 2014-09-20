@@ -1,0 +1,104 @@
+@import "main";
+
+#pricing {
+
+	#message {
+		margin:30px 0px 30px 0px;
+		.center;
+
+		.upper {
+			font-size:42px;
+			color:#333;
+			margin-bottom:20px;
+		}
+
+		.lower {
+			font-size: 20px;
+			color:#aaa;
+		}
+	}
+
+
+	#options {
+		border: 1px solid #ccc;
+		background:#fff;
+		padding: 20px 0px 20px 0px;
+
+		.option {
+			padding:10px;
+			height:380px;
+			.rounded-corners(3px);
+			border: 3px solid;
+
+			.name {
+				margin-top:15px;
+				.uppercase;
+				.bold;
+				font-size:32px;
+
+				.small {
+					font-size: 14px;
+				}
+			}
+
+			.description {
+				font-size:16px;
+				margin:30px 0px 0px 0px;
+				color: #666;
+				list-style-type: none;
+				padding:0px;
+				height:260px;
+
+				li {
+					margin-bottom:15px;
+				}
+			}
+
+			.buy {
+				.center;
+				.bold;
+				margin-top:5px;
+	            a {
+	            	font-size:20px;
+	            }
+			}
+
+			&.a {
+				color: #aaa;
+				border-color: #aaa;
+			}
+
+			&.b {
+				color: @funcDoneColor;
+				border-color: @funcDoneColor;
+			}
+
+			&.c {
+				color: @completeColor;
+				border-color: @completeColor;
+			}
+
+			&:hover {
+				background-color: #eee;
+			}
+
+		}
+
+		#free-trial {
+			margin-top:20px;
+			font-size:20px;
+			color:#666;
+			.bold;
+			.center;
+
+			.text {
+				vertical-align: middle;
+			}
+		}
+
+
+	}
+
+
+
+}

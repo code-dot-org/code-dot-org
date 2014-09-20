@@ -1,0 +1,97 @@
+#!/usr/bin/env ruby
+require_relative '../../../src/env'
+require 'cdo/hip_chat'
+require 'cdo/solr'
+require src_dir 'forms'
+
+SOLR = Solr::Server.new(host:CDO.solr_server) if CDO.solr_server
+
+def send_receipts(kind, form)
+  receipts = kind.respond_to?(:receipt) ? [kind.receipt].flatten.select{|i| i} : []
+  return 0 if receipts.empty?
+
+  email = form[:email]
+  return 0 if email == 'anonymous@code.org'
+
+  envelope = {email:email, name:form[:name], ip_address:form[:updated_ip]}
+  payload = {form_id:form[:id]}
+
+  count = 0
+  receipts.each do |template|
+    Poste.send_message(template, envelope, payload)
+    count += 1
+  end
+  count
+end
+
+def send_batch_of_receipts(batch_size)
+  count = 0
+
+  DB[:forms].where(notified_at:nil).exclude(processed_at:nil).limit(batch_size).each do |form|
+    kind = Object.const_get(form[:kind])
+
+    count += send_receipts(kind, form)
+    DB[:forms].where(id:form[:id]).update(notified_at:DateTime.now)
+  end
+
+  count
+end
+
+def process_batch_of_forms(batch_size)
+  count = 0
+
+  DB[:forms].where(processed_at:nil).limit(batch_size).each do |form|
+    kind = Object.const_get(form[:kind])
+
+    processed_data = kind.process(JSON.load(form[:data])) if kind.respond_to?(:process)
+    processed_data ||= {}
+
+    DB[:forms].where(id:form[:id]).update(processed_data:processed_data.to_json, processed_at:DateTime.now)
+
+    count += 1
+  end
+
+  count
+end
+
+def index_batch_of_forms(batch_size)
+  documents = []
+
+  DB.transaction do
+    DB[:forms].where(indexed_at:nil).exclude(processed_at:nil).limit(batch_size).each do |form|
+      kind = Object.const_get(form[:kind])
+     
+      index_data = JSON.load(form[:data]).merge(JSON.load(form[:processed_data]))
+      index_data = index_data.merge(id:form[:id], kind_s:form[:kind], review_s:form[:review], user_i:form[:user_id], parent_form_i:form[:parent_id])
+      index_data = kind.index(index_data) if kind.respond_to?(:index)
+      documents << index_data
+
+      DB[:forms].where(id:form[:id]).update(indexed_at:DateTime.now)
+    end
+
+    SOLR.update(documents) unless documents.empty?
+  end
+
+  documents.count
+end
+
+def main()
+  limit = 10000
+
+  messages = []
+
+  count = process_batch_of_forms(limit)
+  messages << "#{count} form(s) processed" if count > 0
+
+  receipt_count = send_batch_of_receipts(limit)
+  messages << "#{receipt_count} receipt(s) queued" if receipt_count > 0
+
+  count = index_batch_of_forms(limit)
+  messages << "#{count} form(s) indexed." if count > 0
+
+  HipChat.log messages.join('; ') unless messages.empty?
+
+  system "#{File.expand_path('../deliver_poste_messages', __FILE__).shellescape} 2>&1" unless receipt_count == 0
+end
+
+main if only_one_running?(__FILE__)

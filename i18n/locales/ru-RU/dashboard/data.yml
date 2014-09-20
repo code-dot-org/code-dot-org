@@ -1,0 +1,404 @@
+"ru":
+  data:
+    script:
+      name:
+        20-hour:
+          desc: 'Курс "Введение в информатику"'
+          Unplug1: "Этап 1"
+          Maze: "Этап 2"
+          Unplug2: "Этап 3"
+          Unplug3: "Этап 4"
+          Artist: "Этап 5"
+          Unplug4: "Этап 6"
+          Artist2: "Этап 7"
+          Unplug5: "Этап 8"
+          Farmer: "Этап 9"
+          Unplug6: "Этап 10"
+          Artist3: "Этап 11"
+          Unplug7: "Этап 12"
+          Farmer2: "Этап 13"
+          Unplug8: "Этап 14"
+          Artist4: "Этап 15"
+          Unplug9: "Этап 16"
+          Farmer3: "Этап 17"
+          Unplug10: "Этап 18"
+          Artist5: "Этап 19"
+          Unplug11: "Этап 20"
+        Hour of Code:
+          desc: "Час кода"
+          Maze: "Этап 1"
+        Edit Code:
+          desc: "Редактировать код (beta)"
+          MazeEC: "Этап 1"
+        2014 Levels:
+          desc: "Bounce (beta)"
+          Bounce: "Этап 1"
+        Builder Levels:
+          desc: "Созданные пользователем головоломки (beta)"
+          Custom: "Этап 1"
+        Flappy Levels:
+          desc: "Порхающая птичка"
+          Flappy: "Этап 1"
+        Jigsaw Levels:
+          desc: "Головоломки (beta)"
+          Jigsaw: "Этап 1"
+        Step Levels:
+          desc: "Maze (beta)"
+          MazeStep: "Stage Step"
+        edit-code:
+          desc: "Редактировать код (beta)"
+          MazeEC: "Этап 1"
+        events:
+          desc: "Bounce (beta)"
+          Bounce: "Этап 1"
+          Studio: "Этап 2"
+        builder:
+          desc: "Пользовательский редактор пазлов (beta)"
+          Custom: "Этап 1"
+        flappy:
+          desc: "Порхающая птичка"
+          Flappy: "Этап 1"
+        jigsaw:
+          desc: "Головоломки (beta)"
+          Jigsaw: "Этап 1"
+        step:
+          desc: "Maze (beta)"
+          MazeStep: "Stage Step"
+        wordsearch:
+          desc: "Spelling Bee (beta)"
+          WordSearch: "Этап 1"
+    game:
+      name:
+        Unplug1: "Введение в Информатику"
+        Maze: "Лабиринт"
+        Multi: "Multiple Choice Stuffs"
+        Unplug2: "Вычислительное мышление"
+        Unplug3: "Программирование на бумаге в клеточку"
+        Artist: "Художник"
+        Unplug4: "Алгоритмы"
+        Artist2: "Художник 2"
+        Unplug5: "Процедуры"
+        Farmer: "Фермер"
+        Unplug6: "Условные выражения"
+        Artist3: "Художник 3"
+        Unplug7: "Написание песни"
+        Farmer2: "Фермер 2"
+        Unplug8: "Абстракция"
+        Artist4: "Художник 4"
+        Unplug9: "Эстафетное программирование"
+        Farmer3: "Фермер 3"
+        Unplug10: "Интернет"
+        Artist5: "Художник 5"
+        Unplug11: "Итоги"
+        MazeEC: "Лабиринт"
+        Bounce: "Прыжок"
+        Flappy: "Порхающая птичка"
+        Jigsaw: "Головоломки"
+        MazeStep: "Maze Step Mode"
+        Wordsearch: "Wordsearch"
+    trophy:
+      name:
+        Bronze: "Бронзовый"
+        Silver: "Серебряный"
+        Gold: "Золотой"
+    concept:
+      description:
+        sequence: "Последовательность"
+        if: 'Блок "если"'
+        if_else: 'Блок "если/иначе"'
+        loop_times: 'Блок "повторить несколько раз"'
+        loop_until: 'Блок "повторять до"'
+        loop_while: 'Блок "пока"'
+        loop_for: 'Блок "цикл по счётчику"'
+        function: "Процедуры"
+        parameters: "Процедуры с параметрами"
+    level:
+      instructions:
+        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
+        maze_2_1: "Эта хрюшка меня сильно раздражает. Помоги мне добраться до неё!"
+        maze_2_2_5: "Наметь путь и проведи меня к глупой хрюшке. Избегай взрывчатку, а не то перья полетят!"
+        maze_2_3: "Проведи меня к зелёному чудищу! (Остерегайся взрывчатки)"
+        maze_2_4: "Тихо, помоги мне найти вредную хрюшку. Иначе я могу разозлиться!"
+        maze_2_5: "Есть способ добраться до глупой хрюшки, используя только 2 блока. Догадываешься как?"
+        maze_2_6: "Попробуй довести меня до зелёного пришельца, используя только три блока."
+        maze_2_7: 'Помоги мне прогнать вредного поросёнка, используя как можно меньше блоков. Попробуй использовать блок "повторить" больше одного раза.'
+        maze_2_8: |-
+          When a block is grey, that means you can't delete it. Solve this puzzle using the "repeat" block that repeats 3 times. Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
+        maze_2_9: 'Теперь попробуй новый блок "повторять до" - он будет повторять действия,  пока я  не доберусь до надоедливой свиньи.'
+        maze_2_10: 'Сейчас последняя попытка - ты можешь это сделать, используя только 4 блока?'
+        maze_2_11: "Уважаемый программист. Я зомби. Я голоден. Мне надо ... добраться ... до подсолнечника... Ты можешь отправить меня к нему, используя всего 5 блоков?"
+        maze_2_12: "Ладно, теперь похоже, но несколько по-другому. Можешь сделать, используя всего 5 блоков?"
+        maze_2_13: 'Используй новый блок "если", чтобы позволить мне решить, когда повернуть. Подсказка: тебе нужен eщё только один блок, но разберись, как мы его разместим, чтобы ты смог это сделать в следующий раз сам.'
+        maze_2_14: 'Хорошо, это похоже на прошлую задачу, но тебе надо помнить, как ты использовал блоки "если" и "повторить" вместе.'
+        maze_2_15: 'Мне хочется подсолнух! Используй блок "если", чтобы привести меня к нему с наименьшим  числом блоков.'
+        maze_2_16: "Ну, поупражняемся ещё? Это не слишком отличается, только берегись зубастиков!"
+        maze_2_17: 'Блоки "если/иначе" проверяют условие, потом выполняют одно действие ИЛИ другое. Чтобы довести меня до подсолнуха, попробуй использовать этот новый блок.'
+        maze_2_18: 'Ещё один случай для использования блока "если/иначе"; сможешь сделать правильно с  первой попытки?'
+        maze_2_19: "Ты можешь добавить только 3 блока, чтобы помочь мне пройти более сложный лабиринт? Если ты сделаешь это правильно, я смогу пройти по любому извилистому пути, несмотря на длину."
+        turtle_1_1: 'Привет, я художник. Ты можешь написать код, чтобы я нарисовал что-нибудь. Используй несколько блоков, чтобы я провёл карандашом по  серым линиям.'
+        turtle_1_2: 'Теперь нарисуй квадрат. ПРИМЕЧАНИЕ: используй свой любимый цвет, выбрав его в новом блоке "выбрать цвет".'
+        turtle_1_3: "Нарисуй квадрат, используя только 3 блока."
+        turtle_1_4: 'Нарисуй треугольник со сторонами разного цвета, используя вставку "случайный цвет", которая выбирает каждый раз новый цвет. Подсказка: тебе придётся разобраться с величиной поворота, нажав на число в блоке поворота.'
+        turtle_1_5: "А теперь, чтобы попрактиковаться, нарисуй треугольник, а затем квадрат, чтобы нарисовать конверт."
+        turtle_1_6: 'Ты можешь догадаться, как нарисовать эти треугольник и квадрат? Подсказка: Нарисуй сначала треугольник, затем определи, на какой угол нужно повернуть художника, чтобы нарисовать квадрат.'
+        turtle_1_7: 'А теперь давай усложним задачу: сможешь ли ты нарисовать эти зелёные очки? Квадраты размером 100 точек располагаются друг о друга на расстоянии 50 точек. Не забудь нарисовать зелёным!'
+        turtle_1_8: 'Так, попробуй понять, что случится, если выполнить этот код (или нажми "Запустить программу", чтобы попробовать). Затем повтори код необходимое число раз, чтобы завершить рисунок. Цвета будут разными каждый раз.'
+        turtle_1_9: 'Разберись, на какое число нужно заменить вопросительные знаки, чтобы  нарисовать окружность.'
+        turtle_1_10: 'Получилось! Теперь рисуй всё, что хочешь. Есть идеи: фигурка, снежинка или спираль. Попробуй также новый блок "установить ширину". Приятного рисования!'
+        turtle_4_1: 'Можешь нарисовать треугольник (со сторонами 100 точек) , используя только с 3 блока? Подсказка: Используй блок "повторить".'
+        turtle_4_2: "Добавьте блок «повернуть вправо на 90 градусов» куда-нибудь в середину программы на рабочей области, чтобы нарисовать эти треугольники."
+        turtle_4_3: 'Здесь у нас код, который ты написал, чтобы нарисовать 1 треугольник. Можешь добавить блоки "повторить" и "повернуть", чтобы нарисовать красивый цветок?'
+        turtle_4_4: 'Это код предыдущей головоломки, но выполняющий поворот только на 36 градусов после каждого треугольника. Сколько раз нужно сделать поворот? (Подсказка: 360 градусов составляют полный круг)'
+        turtle_4_5: 'Это код предыдущей головоломки, но выполняющий поворот 36 раз. На сколько градусов должен быть каждый поворот? (Подсказка: 360 градусов составляют полный круг)'
+        turtle_4_6: "Используя только 3 блока, можешь нарисовать квадрат со стороной 20 точек?"
+        turtle_4_7: 'Это код рисования квадрата из предыдущей головоломки.  Ты можешь повторить его 10 раз, чтобы нарисовать лестницу?  Подсказка: нужно добавить всего 2 блока.'
+        turtle_4_8: "Ты можешь добавить всего 2 блока к решению предыдущей головоломки, чтобы выполнить этот рисунок?"
+        turtle_4_9: 'Опять начнём с решения предыдущей головоломки. На сколько градусов нужно поворачивать в конце каждой "лестницы"? (Возможно, тебе потребуется несколько попыток)'
+        turtle_4_10: 'Здесь используется решение предыдущей головоломки. Сколько раз следует повторить эти  действия для завершения рисунка?'
+        turtle_4_11: 'Попробуй менять числа в блоках "повернуть" и "повторить", чтобы получить разные рисунки. Или поэкспериментируй с другими частями кода, чтобы нарисовать что-то, что тебе хочется.'
+        maze_karel_1_1: 'Привет, я фермер. Мне нужна твоя помощь, чтобы выровнять для посадки поле на моей ферме. Передвинь меня к куче земли и используй блок "раскидать", чтобы удалить кучу.'
+        maze_karel_1_2: 'Теперь передвинь меня к яме и заполни её ДВУМЯ лопатами земли, используя блок "засыпать".'
+        maze_karel_1_3: "Подведи меня к куче земли и скажи, сколько лопат раскидать, используя как можно меньше блоков."
+        maze_karel_1_4: 'Можешь помочь мне раскидать все четыре кучи земли? Подсказка: используй блок "повторить", если умеешь.'
+        maze_karel_1_5: 'Помоги мне засыпать во все ямы по 5 лопат земли. Подсказка: блок "повторить" можно поместить внутрь блока "пока".'
+        maze_karel_1_6: 'Раскидай все кучи земли, используя как можно меньше блоков. Блок "пока" теперь позволяет проверять, нахожусь ли я у кучи или рядом с ямой (смотри меню блока).'
+        maze_karel_1_7: "Ух, я нашла действительно глубокую яму! Я не знаю, сколько лопат земли нужно, чтобы засыпать её. Ты можешь написать программу для заполнения ямы до тех пор, пока поверхность не станет ровной?"
+        maze_karel_1_8: "Помоги мне засыпать яму на конце поля, используя как можно меньше блоков."
+        maze_karel_1_9: 'Объясни мне, как разбросать все эти кучи земли. Старайся использовать как можно меньше блоков. Подсказка: попробуй использовать блок "пока".'
+        maze_karel_1_10: 'Я работаю допоздна, уже стемнело, и не могу сказать, насколько велики кучи.  Сейчас у меня нет всех возможностей, которые давал блок "пока". Проведи меня по полю, и если встретится куча - разбросай её.'
+        maze_karel_1_11: 'По-прежнему темно. Проведи меня по полю. Если встретится куча, разбросай её, если яма - засыпь её. Подсказка: используй меню в блоке "если".'
+        turtle_2_1: 'Привет. Я - художник-зомби. Мне нравится рисовать! Помоги мне нарисовать квадрат особым цветом. Важное примечание: у тебя есть те же блоки, что и раньше, но они сейчас организованы в группы.'
+        turtle_2_2: "Добро пожаловать в использование процедур, которые позволят тебе создавать новые блоки! Попробуй новый блок «нарисовать квадрат» в группе «Процедуры», чтобы нарисовать небольшой зеленый квадрат размером 50 x 50."
+        turtle_2_3: 'Используй блоки "повторить" (в группе "Циклы"), чтобы нарисовать случайными цветами 3 квадрата со стороной 100 и поворотом друг от друга 120 градусов.'
+        turtle_2_4: |
+          А теперь давай развлечёмся! Измени код так, чтобы нарисовать 36 квадратов со стороной  100 точек каждый, со смещением 10 градусов один от другого. 
+          Подсказка: используй ползунок, чтобы я двигался быстрее.
+        turtle_2_5: 'Нарисуй квадраты со сторонами 50, 60, 70, 80 и 90 точек.  Используй процедуру «нарисуй квадрат» пять раз.'
+        turtle_2_6: 'Эта программа будет использовать счетчик, чтобы нарисовать такие же квадраты, как в прошлый раз. Размер квадрата должен задаваться счетчиком, поэтому используй  блок  «счетчик». Подсказка: ищи в группе «Переменные».'
+        turtle_2_7: 'Вот программа для рисования  спирали, но блоки отключены, так что они не будут работать. Сделай новую программу, с помощью блоков «цикл по» (в группе Циклы) и «счётчик» (в группе Переменные), чтобы нарисовать такую же спираль.'
+        turtle_2_7_5: "Используй процедуру «нарисовать снеговика» (в группе «Процедуры»). Нарисуй двух снеговиков, высотой 250 и 100 точек."
+        turtle_2_8: "А теперь задание посложнее. Используй процедуру «нарисовать снеговика» и новую «прыгнуть вперед» (в группе «Действия»). Должны получиться 3 снеговика разных цветов, на расстоянии 100 точек друг от друга."
+        turtle_2_9: 'Используйте «цикл по», чтобы нарисовать семью снеговиков  высотой 110, 100, 90, 80 и 70. Снеговики должны находиться на расстоянии 60 точек друг от друга.'
+        turtle_2_10: 'Вот код, чтобы поэкспериментировать с различными спиралями.  Что произойдет, если изменить величину поворота? Или задать случайный цвет в цикле?  Нарисуй всё, что тебе хочется.'
+        maze_karel_2_1: 'Помоги мне разбросать все кучи и засыпать все ямы. Попробуй использовать циклы вместо большого числа блоков. Подсказка: цикл можно поместить внутри другого цикла.'
+        maze_karel_2_2: "Мы создали наш собственный блок под названием «засыпать 5», который теперь есть в группе «Процедуры». Используй его, чтобы помочь мне засыпать эту яму."
+        maze_karel_2_3: 'Используй новый блок процедуры "засыпать 5", чтобы я засыпала все ямы. Блок нужно взять из группы Процедуры.'
+        maze_karel_2_4: "Создай новую процедуру, разбрасывающую 7 лопат земли. Потом используй её, чтобы написать программу, которая позволит мне разбросать все кучи."
+        maze_karel_2_5: "Создай новую процедуру, которая разбрасывает 6 лопат земли из кучи, и используй её, чтобы помочь мне удалить все кучи."
+        maze_karel_2_6: 'Используй две новых процедуры: "засыпать 8" и "разбросать 8", чтобы помочь мне сравнять с землёй кучу и засыпать яму.'
+        maze_karel_2_7: 'На моём поле - корова! Напиши новую процедуру, которая позволит мне избежать корову и разбросать кучу. Помести все нужные блоки внутрь процедуры.'
+        maze_karel_2_8: 'Используй эту новую процедуру: "Избежать корову и раскидать 1", чтобы помочь мне разобраться с кучами.'
+        maze_karel_2_9: "Так, это процедура, которая разбрасывает 4 кучи земли в вертикальном ряду. Попытайся использовать эту процедуру внутри цикла, чтобы разбросать все кучи, используя всего несколько блоков."
+        maze_karel_2_10: "Используй две этих процедуры, чтобы помочь мне раскидать все кучи и засыпать все ямы."
+        turtle_3_1: 'Эта головоломка показывает, как устроены процедуры "нарисовать квадрат" и "нарисовать окружность".  Чтобы нарисовать квадрат, тебе нужно достать блок "нарисовать квадрат".'
+        turtle_3_2: 'Используя процедуру "нарисовать квадрат" как пример, создай процедуру "нарисовать треугольник" и используй её.'
+        turtle_3_3: 'Нарисуй треугольные ограждения вокруг кошек и квадратные ограждения вокруг коровы.  Совет: проверяй программу по мере продвижения вперёд .'
+        turtle_3_4: 'Посмотрим, сможешь ли ты сообразить, как использовать «нарисовать квадрат» и «нарисовать  треугольник» (и некоторые другие блоки), чтобы нарисовать дом вокруг льва.'
+        turtle_3_5: 'Теперь создай новую процедуру «нарисовать дом» и используй её, чтобы обеспечить  двух кошек жильём. Подсказка: Создай новую процедуру с помощью блока «выполнить что-то» и введи свой  текст в  названии блока.'
+        turtle_3_6: 'Используя «нарисовать квадрат» в качестве примера, добавь параметр с именем «длина» в процедуру «нарисовать треугольник». Затем нарисуй треугольники разных размеров. (Подсказка: нажми на звездочку для добавления параметра к процедуре)'
+        turtle_3_7: "Добавь параметр с именем «длина» в процедуре «нарисовать дом» и построй большой дом для слона (со сторонами длиной 150)"
+        turtle_3_8: 'Здесь есть все блоки из предыдущей головоломки.  Измени «нарисовать дом» так, чтобы после рисования нового дома я оказывался в правом нижнем углу. Используй эту изменённую процедуру, чтобы нарисовать три дома.'
+        turtle_3_9: 'Сможешь ли ты самостоятельно переделать процедуру "нарисовать дом"? Попытайся, а потом нарисуй ряд домов.'
+        turtle_3_10: "Ты многое узнал! Теперь используй своё знание, чтобы нарисовать то, что хочешь. Попробуй, например, нарисовать звезду, спираль или необычную снежинку."
+        maze_karel_debug_seq_1: "Добро пожаловать на отладку! Мой код не работает, как положено. Можешь найти ошибку и исправить её, чтобы я смогла выровнять поле для посадки?"
+        maze_karel_debug_seq_2: "Что не так с этой программой? Как её нужно исправить, чтобы я смогла разбросать кучу?"
+        maze_karel_debug_repeat: "Отладь эту программу для меня, чтобы моё поле стало чистым и ровным."
+        maze_karel_debug_while: "Как изменить эту программу, чтобы помочь мне засыпать яму?"
+        maze_karel_debug_if: "Помоги! Исправь программу, чтобы моё поле стало совсем ровным."
+        maze_karel_debug_if_else: "Отладь эту программу, и я смогу засыпать все ямы и разбросать все кучи."
+        maze_karel_debug_function_1: "Что нужно изменить в этой программе, чтобы помочь мне разбросать все кучи?"
+        maze_karel_debug_function_2: "Можешь отладить программу, чтобы я смогла выровнять своё поле?"
+        maze_karel_debug_function_3: 'Подправь эту программу, и я разбросаю все кучи на моём поле. '
+        turtle_5_1: 'Попробуй запустить эту программу и внести изменения, чтобы увидеть, что происходит.  Можешь понять, как она работает? (Или удали её и замени чем-то совсем другим)'
+        turtle_5_2: 'Попробуй запустить эту программу и внести изменения, чтобы увидеть, что происходит.  Можешь понять, как она работает? (Или удали её и замени чем-то совсем другим)'
+        turtle_5_3: 'Попробуй запустить эту программу и внести изменения, чтобы увидеть, что происходит.  Можешь понять, как она работает? (Или удали её и замени чем-то совсем другим)'
+        turtle_5_4: 'Попробуй запустить эту программу и внести изменения, чтобы увидеть, что происходит.  Можешь понять, как она работает? (Или удали её и замени чем-то совсем другим)'
+        turtle_5_5: 'Попробуй запустить эту программу и внести изменения, чтобы увидеть, что происходит.  Можешь понять, как она работает? (Или удали её и замени чем-то совсем другим)'
+        turtle_5_6: 'Попробуй запустить эту программу и внести изменения, чтобы увидеть, что происходит.  Можешь понять, как она работает? (Или удали её и замени чем-то совсем другим)'
+        maze_3_1: "Мне нужно добраться до хрюшки! Введите пару вызовов двигаться(); и я смогу вернуть свои яйца."
+        maze_3_2: "Напиши мне программу, чтобы я мог добраться до свиньи."
+        maze_3_3: "Как мне добраться до хрюшки? Позаботься о том, чтобы я не влетел в ящик со взрывчаткой!"
+        maze_3_4: "А-а-а-а! Напиши мне программу, чтобы я обошёл взрывчатку и добрался до свиньи."
+        bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
+        bounce_2: 'Добавьте блок, "когда правая стрелка" и, "когда левая стрелка". Переместите весло, чтобы достигнуть конца обеих целей.'
+        bounce_3: 'Теперь попробуйте что-то типа "когда стрелка вверх". Переместите весло к финишу на самом верху.'
+        bounce_4: "В этот раз тебе нужно добавить четыре блока. Перемести весло ко всем четырем конечным целям , чтобы решить эту головоломку."
+        bounce_5: 'Мы собираемся отправить мячик в полет в низ до касания с веслом. Добавь блок "когда мячик врежется в весло",  чтобы обеспечить мячику путь до цели.'
+        bounce_6: 'Теперь достижение цели на самом верху. Вам нужно добавить блок к обоим блокам "когда мяч ударяется", чтобы решить головоломку.'
+        bounce_7: 'Добавь блок "когда" к каждому из блоков. Мячик будет скакать, пока не достигнет цели.'
+        bounce_10: 'Теперь цель наверху. Добавьте блок "зарабатывают очко", и "заработать очко сопернику" к блокам "когда шар у цели" и, "когда шар промазал", чтобы сделать игру. Посмотрите, сколько очков Вы можете заработать, прежде чем Ваш противник забьет в двое больше.'
+        bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
+        bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
+        Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
+        flappy_1: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
+        flappy_2: 'Мы также добавили немного земли. Добавь блок "когда коснется земли". Ваш код должен содержать "закончить игру", когда Птичка касается земли.'
+        flappy_3: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
+        flappy_4: 'Птичка будет лететь через препятствие до тех пор, как вы не вставите команду, чтобы она могла разбиться. Подключите блок "когда врежешься в препятствие". Вам надо закончить игру, когда Птичка врежется на определенном количестве препятствий.'
+        flappy_5: 'Давайте сделаем доску очков и подсчитаем очки, когда Птичка пересекает последнее препятствие. Добавьте команду "когда пройдешь препятствие", и тогда получи очко за пролет Птички через определенное количество труб. '
+        flappy_6: "Посмотри можешь ли ты заработать очко в более маленьком или более большом разрыве труб."
+        flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
+        flappy_8: "Визуальные эффекты можно задать в любое время, не только при запуске игры. Попробуй установить СЛУЧАЙНАЯ сцена, когда происходят другие события, например, когда проходятся препятствия."
+        flappy_9: 'Чтобы разнообразить игру, попробуйте когда птичка врежется об препятствие или ударится о землю вместо "конец игры" задать "присвоить значение очков 0".'
+        flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
+        flappy_k1_1: "Play Flappy"
+        flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
+        flappy_k1_3: 'Мы также добавили немного земли. Добавь блок "когда коснется земли". Ваш код должен содержать "закончить игру", когда Птичка касается земли.'
+        flappy_k1_4: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
+        flappy_k1_5: 'Птичка будет лететь через препятствие до тех пор, как вы не вставите команду, чтобы она могла разбиться. Подключите блок "когда врежешься в препятствие". Вам надо закончить игру, когда Птичка врежется на определенном количестве препятствий.'
+        flappy_k1_6: 'Давайте сделаем доску очков и подсчитаем очки, когда Птичка пересекает последнее препятствие. Добавьте команду "когда пройдешь препятствие", и тогда получи очко за пролет Птички через определенное количество труб. '
+        flappy_k1_7: "See if you can score multiple points for making it past an obstacle"
+        flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
+        flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
+        jigsaw_1: "Нажмите на блок"
+        jigsaw_2: "Перетащите блок к цели"
+        jigsaw_3: "Расставьте блоки, чтобы создать изображение"
+        jigsaw_4: "Расставьте блоки, чтобы создать изображение"
+        jigsaw_5: "Расставьте блоки, чтобы создать изображение"
+        jigsaw_6: "Расставьте блоки, чтобы создать изображение"
+        jigsaw_7: "Расставьте блоки, чтобы создать изображение"
+        jigsaw_8: "Расставьте блоки, чтобы создать изображение"
+        jigsaw_9: "Расставьте блоки, чтобы создать изображение"
+        jigsaw_10: "Расставьте блоки, чтобы создать изображение"
+        jigsaw_11: "Расставьте блоки, чтобы создать изображение"
+        jigsaw_12: "Расставьте блоки, чтобы создать изображение"
+        jigsaw_13: "Fix the puzzle!"
+        mazestep_1: "Maze step description here"
+        mazestep_2: "Maze step description here"
+        mazestep_3: "Maze step description here"
+        mazestep_4: "Maze step description here"
+        mazestep_5: "Maze step description here"
+        studio_c2_1: 'Can you make this dog say "hello world"?'
+        studio_c2_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_c2_3: "Can you write a program to make this dog move to the cat?"
+        studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
+        studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
+        studio_c2_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
+        studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
+        studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
+        studio_c2_9: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
+        studio_c2_10: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
+        studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
+        studio_c3_story_1: 'Can you make this dog say "hello world"?'
+        studio_c3_story_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_c3_story_3: "Can you write a program to make this dog move to the cat?"
+        studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
+        studio_c3_story_5: "Can you add a block to make the octopus happy?"
+        studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
+        studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
+        studio_c3_game_2: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
+        studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
+        studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
+        studio_c3_game_5: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
+        studio_c3_game_6: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
+        studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
+        studio_playlab_1: 'Can you make this dog say "hello world"?'
+        studio_playlab_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_playlab_3: "Can you write a program to make this dog move to the cat?"
+        studio_playlab_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
+        studio_playlab_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
+        studio_playlab_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
+        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
+        studio_playlab_8: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
+        studio_playlab_9: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
+        studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
+        studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
+        studio_k1_1: 'Can you make this dog say "hello world"?'
+        studio_k1_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_k1_3: "Can you write a program to make this dog move to the cat?"
+        studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
+        studio_k1_5: "Can you add a block to make the octopus happy?"
+        studio_k1_6: "Create your own story! Move around the cat and dog, and make them say things."
+        maze_wordsearch_k_1: "Move me to spell the word EAST"
+        maze_wordsearch_k_2: "Move me to spell the word SOUTH"
+        maze_wordsearch_k_3: "Move me to spell the word WEST"
+        maze_wordsearch_k_4: "Move me to spell the word NORTH"
+        maze_wordsearch_k_6: "Move me East and then South to spell the word JUMP"
+        maze_wordsearch_k_9: "Move me one way, then another to spell the word CODE"
+        maze_wordsearch_k_13: "Move me one way, then another to spell the word DEBUG"
+        maze_wordsearch_k_15: "Move me one way, then another to spell the word ABOVE"
+        maze_wordsearch_k_16: "Move me one way, then another to spell the word BELOW"
+        maze_wordsearch_k_20: "This is a test! Move me one way, then another to spell the word STORY"
+    video:
+      name:
+        maze_intro: 'Лабиринт - Введение'
+        artist_intro: 'Художник - Введение'
+        farmer_intro: 'Фермер - Введение'
+        flappy_intro: "Вступление для летящей птички"
+        loop_times: 'Блок "повторить несколько раз"'
+        loop_until: 'Блок "повторять до"'
+        if: 'Блок "если"'
+        if_else: 'Блок "если/иначе"'
+        function: "Процедуры"
+        loop_while: 'Блок "пока"'
+        loop_for: 'Блок "цикл по счётчику"'
+        parameters: "Процедуры с параметрами"
+        hoc_wrapup: "Итоги Часа кода"
+        20_wrapup: "Итоги 20-часового курса"
+        Unplug1: "What is CS?"
+        Unplug2: "Вычислительное мышление"
+        Unplug3: "Программирование на бумаге в клеточку"
+        Unplug4: "Алгоритмы"
+        Unplug5: "Процедуры"
+        Unplug6: "Условные выражения"
+        Unplug7: "Songwriting"
+        Unplug8: "Абстракция"
+        Unplug9: "Relay programming"
+        Unplug10: "Internet"
+        Unplug11: "Итоги"
+        C1_happy_maps_unplugged: "Happy Maps"
+        C1_moveitmoveit_unplugged: "Move It, Move It"
+        C1_bigevent_unplugged: "The Big Event"
+        C1_getting_loop: "Getting Loopy"
+        C1_pair_programming: "Pair Programming"
+        C1_maze_intro_sequencing: "Maze Sequencing Intro"
+        C1_maze_debugging: "Maze Debugging"
+        C1_bee_level_intro: 'Bee Level - Intro'
+        C1_artist_intro: 'Художник - Введение'
+        C1_spelling_bee_intro: "Spelling Bee Intro"
+        C1_zuck_repeat_loop: "Maze Loops"
+        C1_bee_loops: "Bee Loops"
+        C1_maze_loops: "Maze Loops"
+        C1_playlab_storytelling: 'Play Lab - Create a Story'
+        C1_planting_seed: "Planting a Seed"
+        C1_building_foundating: "Building a Foundation"
+        C2_maze_intro: 'Лабиринт - Введение'
+        C2_artist_intro: 'Художник - Введение'
+        C2_zuck_repeat_loop: "Maze Loops"
+        C2_artist_loops: "Artist Loops"
+        C2_bee_conditionals: "Bee Conditionals"
+        C2_playlab_createstory: 'Play Lab - Create a Story'
+        C2_graph_paper: "Программирование на бумаге в клеточку"
+        C2_conditionals_with_cards: "Условные выражения"
+        C2_binary_bracelets: "Binary Bracelets"
+        C2_replay_programming: "Эстафетное программирование"
+        C2_paper_airplanes: "Paper Airplanes"
+        C3_maze_intro: 'Лабиринт - Введение'
+        C3_artist_intro: 'Художник - Введение'
+        C3_artist_functions: "Artist Functions"
+        C3_bee_functions: "Bee Functions"
+        C3_bee_conditionals: "Bee Conditionals"
+        C3_maze_conditionals: "Maze Conditionals"
+        C3_artist_nested_loops: "Nested Loops"
+        C3_farmer_while: "While Loops"
+        C3_bee_nested_loops: "Nested Loops"
+        C3_bee_debugging: "Bee Debugging"
+        C3_bounce: "Прыжок"
+        C3_playlab_create_game: 'Play Lab - Create a Game'
+        C3_computational_thinking: "Вычислительное мышление"
+        C3_dice_race: "Dice Race"
+        C3_internet: "Internet"
+        C3_crowdsourcing: "Crowdsourcing"
+        C3_functional_suncatchers: "Functional Suncatchers"
+        C3_songwriting_with_parameters: "Songwriting With Parameters"
+    callout:
+      text:
+        drag_blocks: "Перетащите блок «переместить» и поставьте его ниже другого блока"
+        run: "Нажмите «Выполнить», чтобы протестировать вашу программу"
+        watch_again: "Нажмите здесь, чтобы посмотреть видео еще раз"
+        gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
+        show_code_explanation: "Нажмите здесь, чтобы увидеть код программы, которую вы делаете"
+        instructions_repeat_explanation: "Инструкции для каждой головоломки здесь повторяются"
+        category_explanation: "У вас есть все те же блоки, но сейчас они разложены по категориям"
+        set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
+        studio_say_text: "Type what you want your actor to say within these quotes"
+        jigsaw_click: "Click this block!"

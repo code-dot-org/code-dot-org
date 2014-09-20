@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)http://cs.ucls.uchicago.edu/~bfranke/codeDotOrg/TextCompression/TextCompressionTool.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style>
+	body{
+		font-family: Arial;
+		width: 650px;
+	}
+		
+	#input{
+		width: auto;
+		float: left;
+		height: 400px;
+		background-color: #EEEEEE;
+		border: solid 1px;
+		padding: 5px;
+		margin: 2px;
+	}
+	#output{
+		
+		float: left;
+		padding: 5px;
+		margin: 5px;
+		width: 350px;
+		background-color: #EEEEEE;
+		border: solid 1px;
+
+	}
+	#compressedPoem{
+		width: auto;
+		height: 200px;
+		padding: 10px;
+		border: solid 1px #DDDDDD;
+		font-size: 14pt;
+		white-space: pre-wrap;
+		word-wrap: break-word;
+		background-color: #FFFFFF;
+		
+	}
+	#data{
+		padding: 5px;
+		white-space: pre-wrap;
+		word-wrap: break-word;
+		font-family: monospace;
+		background-color: #000000;
+		color: #00CC00;
+	
+	}
+	#dictEntries{
+		float: left;
+		width: auto;
+		text-align: right;
+		padding: 4px;
+		font-size: 12pt;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		white-space: pre-wrap;
+		border: none;
+		height: 350px;
+		background-color: #FFFF99;
+		font-family: monospace;
+		font-weight: bold;
+		
+	}
+	#dictionary{
+		float: left;
+		width: 200px;
+		height: 350px;
+		border: none;
+		font-size: 14pt;
+	}
+p, ul, li{
+	margin: 1px;
+	width: 600px;
+}
+header h1 h2{
+	margin: 0px;
+}
+h2{
+	margin: 0px;
+	font-family: arial;
+	font-size: 12px;
+}
+h1{
+	margin: 0px;
+	font-family: arial;
+	font-size: 16px;
+}	
+	
+footer{
+	font-size: 11px;
+	width: 500px;
+	margin: auto;
+	border: none;
+	padding: 2px 50px;
+	background-color: #660000;
+	color: #EEEEEE;
+	clear: both;
+	
+}
+
+</style>
+<script type="text/javascript">
+	
+	//var dictEntries = new Array("&alpha;","&beta;","&gamma;","&delta;","&epsilon;","&zeta;","&eta;","&theta;","&iota;","&kappa;","&lambda;","&mu;","&nu;","&xi;","&omicron;","&pi;","&rho;","&sigmaf;","&sigma;","&tau;","&upsilon;","&phi;","&chi;","&psi;","&omega;","&thetasym;","&upsih;","&piv;");
+	//var dictEntries = new Array("&#x263C;","&#x2602;","&#x2603;","&#x2604;","&#x2605;","&#x2606;","&#x260E;","&#x262E;","&#x262F;","&#x263A;","&#x2611;","&#x2622;","&#x267B;","&#x2660;","&#x2663;","&#x2665;","&#x2666;","&#x2612;","&#x263D;","&#x261E;");
+	var dictEntries = new Array(String.fromCharCode(9788), String.fromCharCode(9730), String.fromCharCode(9731), String.fromCharCode(9732), String.fromCharCode(9733), String.fromCharCode(9734), String.fromCharCode(9742), String.fromCharCode(9774), String.fromCharCode(9775), String.fromCharCode(9786), String.fromCharCode(9745), String.fromCharCode(9762), String.fromCharCode(9851), String.fromCharCode(9824), String.fromCharCode(9827), String.fromCharCode(9829), String.fromCharCode(9830), String.fromCharCode(9746), String.fromCharCode(9789), String.fromCharCode(9758));
+	var poemsList = new Array();
+	var selectedPoem=0;
+	poemsList[0] = "A_tutor_who_tooted_the_flute_Tried_to_tutor_two_tooters_to_toot_Said_the_two_to_their_tutor,_\"Is_it_harder_to_toot_Or_to_tutor_two_tooters_to_toot?\"";
+	poemsList[1] = "She_sells_sea_shells_on_the_sea_shore_The_shells_that_she_sells_are_sea_shells_I\'m_sure_So_if_she_sells_sea_shells_on_the_sea_shore_I'm_sure_that_the_shells_are_sea_shore_shells_";
+	poemsList[2] = "I_know_an_old_lady_who_swallowed_a_bird_How_absurd!_She_swallowed_a_bird!_She_swallowed_the_bird_to_catch_the_spider_That_wriggled_and_jiggled_and_tickled_inside_her_She_swallowed_the_spider_to_catch_the_fly_I_don't_know_why_she_swallowed_a_fly_Perhaps_she'll_die";
+	poemsList[3] = "Pitter_patter_pitter_patter_listen_to_the_rain_pitter_patter_pitter_patter_on_the_window_pane";
+	poemsList[4] = "Pease_porridge_hot_Pease_porridge_cold_Pease_porridge_in_the_pot_Nine_days_old._Some_like_it_hot_Some_like_it_cold_Some_like_it_in_the_pot_Nine_days_old."
+	poemsList[5] = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+	
+	var poemCalc=poemsList[selectedPoem];
+	
+	
+function debug(str){
+	document.getElementById("output").innerHTML+=str+"\n";
+}
+function init(){
+	
+	if(document.getElementById("poemsList").length==0){
+		for(var i=0; i<poemsList.length; i++){
+			var option=document.createElement("option");
+			option.text=poemsList[i].substring(0,20).replace(/_/g," ")+"...";
+			document.getElementById("poemsList").add(option,null);
+		}
+	}
+	selectedPoem = document.getElementById("poemsList").selectedIndex;
+	document.getElementById("dictEntries").innerHTML="";
+	document.getElementById("compressedPoem").innerHTML=poemsList[selectedPoem];
+	poemCalc=poemsList[selectedPoem];
+	for(var i=0;i<16;i++){
+		document.getElementById("dictEntries").innerHTML+=dictEntries[i]+"\n";
+	}
+	calculateData();
+}
+
+function calculateData(){
+	var dictSize = document.getElementById("dictionary").value.length+1; 
+	
+	if(document.getElementById("dictionary").value.length==0) dictSize=0;	
+
+	var poemSize = poemCalc.length;
+	var total = dictSize+poemSize;
+	var compression = (1-(total/poemsList[selectedPoem].length))*10000;
+	compression = Math.round(compression);
+	compression /= 100;
+	document.getElementById("data").innerHTML= "      poem size: "+poemSize+" bytes\n";
+	document.getElementById("data").innerHTML+="dictionary size: "+dictSize+" bytes\n";
+	document.getElementById("data").innerHTML+="          total: "+total+" bytes\n";
+	document.getElementById("data").innerHTML+="    compression: "+compression+"%\n";
+}
+
+//recursively construct a self-referencing entry
+function fillOutSelfReference(str, dict, maxIndex){
+
+	//var str = dict[maxIndex];
+	var nonascii = str.replace(/[?A-z_'\"?.,!;:]/gi,"");
+	if(nonascii.length == 0) return str;
+	
+	//for every nonascii character
+	for(var i=0; i<nonascii.length; i++){
+		//look it up in the dictionary
+		var dictIndex = dictEntries.indexOf(nonascii.charAt(i));
+		if(dictIndex < maxIndex){
+			//replace the first occurrence of it in the string
+			str = str.replace(nonascii.charAt(i), dict[dictIndex]);
+		}
+		else return str;
+	}
+	str = fillOutSelfReference(str, dict, maxIndex);
+	return str;
+}
+
+function escapeRegExp(str) {
+  return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+}
+
+function compress(){
+	
+	var poemDisplay = poemsList[selectedPoem];
+	poemCalc = poemsList[selectedPoem];
+	var dict = document.getElementById("dictionary").value.split("\n");
+	var nonascii;
+	for(var i=dict.length-1; i>=0; i--){ //go backwards through dict because self-referencing entries should go first
+	
+		if(dict[i]!=""){
+			//first compute any self referencing -- this is the string we'll look for in the poem
+			var strToLookFor = fillOutSelfReference(dict[i], dict, i);
+			
+			//console.debug("filled out self ref for dict["+i+"]: "+strToLookFor);
+			poemDisplay = poemDisplay.replace(new RegExp(escapeRegExp(strToLookFor),"gi"), "<mark>"+dictEntries[i]+"</mark>");
+			poemCalc = poemCalc.replace(new RegExp(strToLookFor,"gi"), "#");
+		}
+	}
+	document.getElementById("compressedPoem").innerHTML=poemDisplay;
+	calculateData();
+	
+}
+
+
+</script>
+</head>
+<body onload="init()">
+
+	<header>
+		<h1>Introduction to Computer Science</h1>
+		<h1>Text Compression</h1>
+	</header>
+	<br>
+	<p><b>Directions:</b></p>
+	<p>
+		· Look at the poem for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right.<br>
+		· As you type entries into the dictionary, the symbol for the entry is inserted into the poem in place of the pattern.<br>
+		· The dictionary is not case sensitive. Use _ for spaces.<br>
+		· At the bottom you'll see how much the compression you've achieved.<br>
+		· (NOTE: the dictionary only supports backwards self-referencing).<br>
+	</p>
+		<br>Choose a poem:<select id="poemsList" onchange="init()"><option>A tutor who tooted t...</option><option>She sells sea shells...</option><option>I know an old lady w...</option><option>Pitter patter pitter...</option><option>Pease porridge hot P...</option><option>AAAAAAAAAAAAAAAAAAAA...</option></select>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   NAME: <input type="text" width="20"><br>
+
+		<div id="output">
+			Compressed:<br>
+			<div id="compressedPoem">A_tutor_who_tooted_the_flute_Tried_to_tutor_two_tooters_to_toot_Said_the_two_to_their_tutor,_"Is_it_harder_to_toot_Or_to_tutor_two_tooters_to_toot?"</div>
+			<div id="data">      poem size: 148 bytes
+dictionary size: 0 bytes
+          total: 148 bytes
+    compression: 0%
+</div>
+		</div>
+		<div id="input">
+			Dictionary:<br>
+			<div id="dictEntries">&#9788;
+&#9730;
+&#9731;
+&#9732;
+&#9733;
+&#9734;
+&#9742;
+&#9774;
+&#9775;
+&#9786;
+&#9745;
+&#9762;
+&#9851;
+&#9824;
+&#9827;
+&#9829;
+</div>
+			<textarea id="dictionary" onkeyup="compress()"></textarea>
+   		</div>
+		
+
+	<footer id="footer">
+		Introduction to Computer Science · University of Chicago Laboratory Schools · © Baker Franke 2012 
+	</footer>
+
+
+
+</body></html>

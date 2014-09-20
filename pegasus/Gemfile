@@ -1,0 +1,44 @@
+source 'http://rubygems.org'
+ruby '2.0.0'
+gem 'unicorn'
+gem 'rake', '~> 10.3'
+gem 'rack', '~> 1.5'
+gem 'rack-contrib', '~> 1.1'
+gem 'activesupport', '~> 4.0.3'
+gem 'haml', '~> 4.0'
+gem 'minitest', '~> 4.7'
+gem 'phantomjs', '~> 1.9'
+gem 'redcarpet', '~> 3.1'
+gem 'le', '~> 2.2'
+gem 'sinatra', require: 'sinatra/base'
+gem 'sequel'
+gem 'activerecord'
+gem 'data_mapper'
+gem 'mail'
+gem 'thin'
+gem 'stripe'
+gem 'google_drive'
+gem 'i18n'
+gem 'rmagick'
+gem 'geocoder'
+gem 'highline'
+gem 'newrelic_rpm'
+gem 'honeybadger'
+gem 'mysql2'
+gem 'dm-mysql-adapter'
+gem 'rubyzip'
+gem 'aws-s3'
+gem 'bcrypt'
+
+group :development do
+  gem 'rerun'
+end
+
+group :staging do
+end
+
+group :test do
+end
+
+group :production do
+end

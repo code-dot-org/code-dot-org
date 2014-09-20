@@ -1,0 +1,131 @@
+#!/usr/bin/env ruby
+require 'sequel'
+require_relative '../../../src/env'
+require src_dir 'database'
+
+DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
+
+def analyze_day_fast(date)
+  from_where = "FROM hour_of_activities WHERE updated_on=DATE('#{date.strftime('%Y-%m-%d')}') AND (started=1 OR pixel_started=1)"
+
+  $log.info 'Tutorials for leaderboards.'
+  tutorials = {}
+  DB_READONLY.fetch(
+    "SELECT tutorial, COUNT(id) as count #{from_where} AND tutorial IS NOT NULL AND tutorial <> '' GROUP BY tutorial ORDER BY count DESC"
+  ).each do |row|
+    tutorials[row[:tutorial]] = row[:count]
+  end
+
+  $log.info 'Countries for leaderboards.'
+  countries = {}
+  DB_READONLY.fetch(
+    "SELECT country, COUNT(id) as count #{from_where} AND country IS NOT NULL AND country <> '' AND country <> 'Reserved' GROUP BY country ORDER BY count DESC"
+  ).each do |row|
+    countries[row[:country]] = row[:count]
+  end
+
+  $log.info 'States for leaderboards.'
+  states = {}
+  DB_READONLY.fetch(
+    "SELECT state, COUNT(id) as count #{from_where} AND state IS NOT NULL AND state <> '' AND state <> 'Reserved' GROUP BY state ORDER BY count DESC"
+  ).each do |row|
+    states[row[:state]] = row[:count]
+  end
+
+  $log.info 'Cities for leaderboards.'
+  cities = {}
+  DB_READONLY.fetch(
+    "SELECT city, COUNT(id) AS count #{from_where} AND city IS NOT NULL AND city <> '' AND city <> 'Reserved' GROUP BY TRIM(CONCAT(city, ' ', state)) ORDER BY count DESC"
+  ).each do |row|
+    cities[row[:city]] = row[:count]
+  end
+
+  $log.info 'Total started.'
+  started = DB_READONLY.fetch("SELECT COUNT(id) as count #{from_where}").first[:count]
+
+  $log.info 'Total finished.'
+  finished = DB_READONLY.fetch("SELECT COUNT(id) as count FROM hour_of_activities WHERE updated_on=DATE('#{date.strftime('%Y-%m-%d')}') AND (finished=1 OR pixel_finished=1)").first[:count]
+
+  {
+    'started'=>started,
+    'finished'=>finished,
+    'cities'=>cities,
+    'states'=>states,
+    'countries'=>countries,
+    'tutorials'=>tutorials,
+    'votes'=>{ 'boys'=>'0', 'girls'=>'0' },
+  }
+end
+
+def add_hashes(h1, h2)
+  unsorted = {}
+  (h1.keys + h2.keys).uniq.each { |key| unsorted[key] = h1[key].to_i + h2[key].to_i }
+  unsorted
+
+  sorted = {}
+  unsorted.keys.sort { |a,b| unsorted[b] <=> unsorted[a] }.each { |i| sorted[i] = unsorted[i] }
+  sorted
+end
+
+def main()
+  return unless only_one_running?(__FILE__)
+
+  total_started = 0
+  total_finished = 0
+  total_tutorials = {}
+  total_cities = {}
+  total_states = {}
+  total_countries = {}
+
+  today = DateTime.now.to_date
+  day = Date.strptime('2013/12/01', '%Y/%m/%d')
+
+  while day <= today
+    cache_path = pegasus_dir("cache/HourOfActivity_Results_#{day.strftime('%Y-%m-%d')}.json")
+    if (day != today) && File.file?(cache_path)
+      $log.debug "Using cached HourOfActivity analysis for #{day} from #{cache_path}"
+      day_data = JSON.load(IO.read(cache_path))
+    else
+      $log.debug "Analyzing HourOfActivity records for #{day}"
+      day_data = analyze_day_fast(day)
+
+      $log.debug "Writing HourOfActivity analysis to #{cache_path}"
+      File.open(cache_path, 'wt') do |cache_file|
+        cache_file << JSON.pretty_generate(day_data)
+      end
+    end
+
+    total_started += day_data['started']
+    total_finished += day_data['finished']
+    total_tutorials = add_hashes(total_tutorials, day_data['tutorials'])
+    total_cities = add_hashes(total_cities, day_data['cities'])
+    total_states = add_hashes(total_states, day_data['states']||{})
+    total_countries = add_hashes(total_countries, day_data['countries'])
+
+    day += 1
+  end
+
+  PROPERTIES.set :hoc_metrics, {
+    started: total_started,
+    finished: total_finished,
+    tutorials: total_tutorials,
+    cities: total_cities,
+    states: total_states,
+    countries: total_countries,
+  }
+
+  time = DateTime.now
+  PROPERTIES.set :metrics, {
+    created_at:               time,
+    created_on:               time.to_date,
+    csedweek_organizers:      38236,
+    csedweek_teachers:        24025,
+    csedweek_entire_schools:  12754,
+    csedweek_students:        4875091,
+    csedweek_countries:       356,
+    petition_signatures:      DB[:forms].where(kind:'Petition').count,
+    lines_of_code:            JSON.parse(Net::HTTP.get(URI('http://archive.learn.code.org/line_data.json')))['all'],
+  }
+end
+
+main()

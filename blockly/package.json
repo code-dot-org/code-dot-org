@@ -1,0 +1,46 @@
+{
+  "name": "blockly-mooc",
+  "version": "0.0.161",
+  "repository": "https://github.com/code-dot-org/blockly.git",
+  "engines": {
+    "node": "~0.10.18"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-cli": "~0.1.9",
+    "grunt": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "connect-livereload": "~0.3.0",
+    "grunt-browserify": "~1.2.4",
+    "grunt-sass": "~0.6.1",
+    "messageformat": "~0.1.6",
+    "handlebars-runtime": "~1.0.12",
+    "grunt-express": "~1.2.0",
+    "express": "~3.4.0",
+    "ejs": "~0.8.4",
+    "through": "~2.3.4",
+    "grunt-mocha-test": "~0.7.0",
+    "chai": "~1.8.0",
+    "jsdom": "~0.8.6",
+    "xmldom": "~0.1.16",
+    "grunt-contrib-symlink": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.5",
+    "wrench": "~1.5.6",
+    "canvas": "~1.1.1",
+    "grunt-strip-code": "~0.1.2",
+    "grunt-lib-contrib": "~0.6.1",
+    "uglify-js": "~2.4.13",
+    "rfile": "~1.0.0",
+    "grunt-notify": "^0.2.20",
+    "node-sass": "~0.6.2",
+    "grunt-lodash": "~0.3.0",
+    "lodash": "~2.4.1",
+    "lodash-cli": "~2.4.2"
+  }
+}

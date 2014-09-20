@@ -1,0 +1,32 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-09-04T18:10:16.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "pvz",
+    "step_mode": "0",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "start_direction": "2",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,0,0,0,0],[0,0,4,1,1,4,0,0],[0,0,0,0,1,1,0,0],[0,0,0,0,0,3,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]"
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Maze>

@@ -1,0 +1,9 @@
+#choose_country
+  -if @country != 'uk'
+    %h2= hoc_s(:choose_country_header)
+    %ul
+      -HOC_COUNTRIES.keys.each do |country|
+        %li
+          -country_url = "/#{country}"
+          -country_url += "/#{@user_language}" if @user_language
+          %a{href:country_url}= hoc_s("country_#{country}")

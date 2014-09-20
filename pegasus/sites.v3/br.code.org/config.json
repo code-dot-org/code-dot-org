@@ -1,0 +1,22 @@
+{
+  "base": "i18n.code.org",
+  "google_analytics_id": "UA-37745279-1",
+  "hoc_country_id": "Brazil",
+  "us_site": "Code.org (site dos EUA)",
+  "nav_links": {
+    "Recursos": "/about/resources",
+    "Quem somos": "/about",
+    "Parceiros": "/about/partners"
+  },
+  "header_links": {
+    "PÁGINA PRINCIPAL": "/",
+    "TUTORIAIS": "/learn",
+    "RECURSOS": "/about/resources"
+  },
+  "footer_links": {
+    "Tutoriais": "/learn",
+    "Sobre": "/about",
+    "Recursos": "/about/resources",
+    "Parceiros": "/about/partners"
+  }
+}

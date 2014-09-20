@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require_relative '../../../src/env'
+
+def main()
+  Dir.chdir(pegasus_dir) do
+    system('rake PEGASUS_RAKE_LOGGER=true seed:sync i18n:sync')
+  end
+end
+
+main() if only_one_running?(__FILE__)

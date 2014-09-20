@@ -1,0 +1,54 @@
+<html>
+<head>
+	 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<title></title>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://www.parsecdn.com/js/parse-1.2.15.min.js"></script>
+	<script src="js/code.org.js"></script>
+	<script>
+
+		$(document).ready(function(){
+			$("Button").click(isUser);
+		});
+
+		function isUser(){
+
+			var name = $("#username").val();
+			remoteStorage.getItem(name, handleResult);			
+		}
+
+		function handleResult(response){
+			
+			var pw = $("#password").val();
+			
+			if(pw==response){
+				alert("Access Granted!")
+			}
+			else{
+				alert("Access Denied!")
+			}
+		}
+	</script>
+	<style>
+
+	</style>
+</head>
+<body>
+
+<div class="container loginform">
+	<h2>Please Login </h2>
+	<div class="form-group">
+   		<label for="username">Username</label>
+   	 	<input type="text" class="form-control" id="username">
+  	</div>
+  	
+ 	<div class="form-group">
+   		<label for="password">Password</label>
+    	<input type="password" class="form-control" id="password">
+  	</div>
+	<button id="login_btn" class="btn btn-large btn-primary" type=submit>Login</button>
+	<br/><br/>
+</div>
+
+</body>
+</html>

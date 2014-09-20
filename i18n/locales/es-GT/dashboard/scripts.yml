@@ -1,0 +1,145 @@
+"es-GT":
+  data:
+    script:
+      name:
+        test:
+          "Jigsaw: Learn to drag and drop": 'Puzle: Aprende a arrastrar y soltar'
+          The Maze: "El laberinto"
+          Multi: "Múltiple"
+          Match: "Relacionar"
+          Math Image: "Matemática Imagen"
+          title: "Curso de prueba"
+          description: "Solo un curso interno de prueba."
+        course1:
+          "Jigsaw: Learn to drag and drop": 'Rompecabezas: Aprende a arrastrar y soltar'
+          "Maze: Sequence": 'Laberinto: Secuencia'
+          "Maze: Debugging": 'Laberinto: Debugging'
+          "Artist 1: Intro": 'Artista 1: Introducción'
+          Artists 2: "Artistas 2"
+          Spelling Bee: "Ortografía"
+          Spelling Bee not blockly: "Ortografía no blocky"
+          "Bee 1: Intro": 'Abeja 1: Introducción'
+          "Maze 2: Loops": 'Laberinto 2: Ciclos'
+          "Bee 2: Loops": 'Abeja 2: Ciclos'
+          Multi & Match: 'Multi & Match'
+          K-1 Flappy: K-1 Flappy
+          Flappy non blockly: "Flappy no blockly"
+          title: "Curso 1"
+          Artist 2: "Artist 2"
+          Happy Maps: "Happy Maps"
+          Move it, Move it: Move it, Move it
+          "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
+          Building a Foundation: "Building a Foundation"
+          Getting Loopy: "Getting Loopy"
+          The Big Event: "The Big Event"
+          Going Places Safely: "Going Places Safely"
+          description: 'Course 1 is designed for early readers in the lower elementary grades.  Create computer programs with loops and events.  By the end of the course, create your very own custom game, art, or story than you can share.'
+          "Bee: Sequence": 'Bee: Sequence'
+          "Artist: Sequence": 'Artist: Sequence'
+          "Artist: Shapes": 'Artist: Shapes'
+          "Maze: Loops": 'Maze: Loops'
+          "Bee: Loops": 'Bee: Loops'
+          "Studio: Create a Story": 'Play Lab: Create a Story'
+          description_short: "Course 1 is designed for early readers in the lower elementary grades."
+        course2:
+          The Maze: "El Laberinto"
+          Suzi: "Suzi"
+          The Artist: "El Artista"
+          Artist Debugging: "Debugging del Artista"
+          Bounce: "Rebotar"
+          "Studio: Create a Story": 'Play Lab: Create a Story'
+          Artist Loops: "Ciclos del Artista"
+          Bee Conditionals: "Condiciones de la Abeja"
+          Flappy: "Flappy"
+          title: "Curso 2"
+          Bee Loops: "Bee Loops"
+          Artist Functions: "Artist Functions"
+          The Artist Debugging: "The Artist Debugging"
+          Bee Debugging: "Bee Debugging"
+          Bee Functions: "Bee Functions"
+          Maze Loops: "Maze Loops"
+          Graph Paper Programming: "Graph Paper Programming"
+          "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
+          Getting Loopy: "Getting Loopy"
+          Relay programming: "Relay programming"
+          Conditionals: "Conditionals"
+          Binary Bracelets: "Binary Bracelets"
+          The Big Event: "The Big Event"
+          Your Digital Footprint: "Your Digital Footprint"
+          description: 'Course 2 is designed for students who can read in the lower and middle elementary grades.  Create programs with loops, events, and conditionals.  By the end of the course, create your very own custom game, art, or story than you can share.'
+          "Maze: Sequence": 'Maze: Sequence'
+          "Artist: Sequence": 'Artist: Sequence'
+          "Maze: Loops": 'Maze: Loops'
+          "Artist: Loops": 'Artist: Loops'
+          "Bee: Loops": 'Bee: Loops'
+          "Bee: Debugging": 'Bee: Debugging'
+          "Artist: Debugging": 'Artist: Debugging'
+          "Bee: Conditionals": 'Bee: Conditionals'
+          description_short: "Course 2 is designed for students who can read in the lower and middle elementary grades."
+          "Artist: Sequence2": 'Artist: Sequence2'
+          "Maze: Sequence2": 'Maze: Sequence2'
+        course3:
+          The Maze: "El Laberinto"
+          "Studio: Create a Story": 'Play Lab: Create a Story'
+          The Artist: "The Artist"
+          title: "Curso 3"
+          Artist Functions: "Artist Functions"
+          Artist For Loops: "Artist For Loops"
+          Artist Nested Loops: "Artist Nested Loops"
+          Bee Conditionals: "Bee Conditionals"
+          Bee Nested Loops: "Bee Nested Loops"
+          Bee Debuggin: "Bee Debuggin"
+          Bee Debugging: "Bee Debugging"
+          Bee Functions: "Bee Functions"
+          Artist Functions with Params: "Artist Functions with Params"
+          Bounce: "Bounce"
+          Maze Conditionals: "Maze Conditionals"
+          Artist Functions with Parameters: "Artist Functions with Parameters"
+          Computational Thinking: "Computational Thinking"
+          Functional Suncatchers: "Functional Suncatchers"
+          Songwriting Parameters: "Songwriting"
+          Dice Race: "Dice Race"
+          Internet: "Internet"
+          Crowdsourcing: "Crowdsourcing"
+          Digital Citizenship: "Digital Citizenship"
+          Farmer - While Loops: 'Farmer - While Loops'
+          description: 'Students taking Course 3 should have already taken Course 2.  Students create programs with different kinds of loops, events, functions, and conditions.  By the end of the course, create your very own custom game, art, or story than you can share with anyone.'
+          "Studio: Create a Game": 'Play Lab: Create a Game'
+          Maze: "Maze"
+          Artist: "Artist"
+          "Artist: Functions": 'Artist: Functions'
+          "Bee: Functions": 'Bee: Functions'
+          "Bee: Conditionals": 'Bee: Conditionals'
+          "Maze: Conditionals": 'Maze: Conditionals'
+          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Farmer: While Loops": 'Farmer: While Loops'
+          "Bee: Nested Loops": 'Bee: Nested Loops'
+          "Bee: Debugging": 'Bee: Debugging'
+          description_short: "Students taking Course 3 should have already taken Course 2."
+          Maze2: "Maze2"
+          Artist2: "Artist2"
+          "Artist: Functions2": 'Artist: Functions2'
+          "Bee: Functions2": 'Bee: Functions2'
+          "Bee: Conditionals2": 'Bee: Conditionals2'
+          "Maze: Conditionals2": 'Maze: Conditionals2'
+          "Artist: Nested Loops2": 'Artist: Nested Loops2'
+          "Farmer: While Loops2": 'Farmer: While Loops2'
+          "Bee: Nested Loops2": 'Bee: Nested Loops2'
+          "Bee: Debugging2": 'Bee: Debugging2'
+        msm:
+          title: "Middle School Math"
+          description: "Private work in progress for Middle School Math."
+          Graph Paper Programming: "Graph Paper Programming"
+          Assessments: "Assessments"
+          Unit 1: "Unit 1"
+          Unit 2: "Unit 2"
+        playlab:
+          title: "Play Lab"
+          description: "Create a story or make a game with Play Lab!"
+          Play Lab: "Play Lab"
+          description_short: "Create a story or make a game with Play Lab!"
+        artist:
+          title: "Artist"
+          description: "Draw cool pictures and designs with the Artist!"
+          Artist: "Artist"
+          description_short: "Draw cool pictures and designs with the Artist!"

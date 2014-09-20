@@ -1,0 +1,28 @@
+<%
+  m = request.splat_path_info.to_s.match(/^\/(fit-|fill-)?(\d+)x?(\d*)(\/.*)$/)
+  pass unless m
+
+  mode = m[1].nil_or_empty? ? :resize : m[1][0..-2].to_sym
+  width = m[2].to_i
+  height = m[3].nil_or_empty? ? nil : m[3].to_i
+  uri = m[4]
+
+  extname = File.extname(uri).downcase
+  pass unless settings.image_extnames.include?(extname)
+
+  dirname = File.dirname(uri)
+
+  basename = File.basename(uri, extname)
+  if basename[-3..-1] == '_x2'
+    basename = basename[0..-4]
+    width *= 2
+    height *= 2 unless height.nil?
+  end
+
+  pass unless path = resolve_template('public/images', settings.image_extnames, File.join(dirname, basename))
+
+  img = load_manipulated_image(path, mode, width, height)
+  img.format = extname[1..-1]
+
+  content_type img.format.to_sym
+%><%= img.to_blob %>

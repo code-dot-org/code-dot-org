@@ -1,0 +1,10 @@
+#learn-tabs.desktop-feature
+  .content
+    %ul.nav.nav-tabs
+      %li{:class=>(request.path_info == '/learn') ? 'active tab' : 'tab'}<
+        %a{:href=>'/learn'} Aprenda com a Hora do Código
+      %li{:class=>(request.path_info == '/learn/educators') ? 'active tab' : 'tab'}<
+        %a{:href=>'/learn/educators'} Prepare a Hora do Código
+      %li{:class=>(request.path_info == '/learn/beyond') ? 'active tab' : 'tab'}<
+        %a{:href=>'/learn/beyond'} Além da Hora do Código
+      

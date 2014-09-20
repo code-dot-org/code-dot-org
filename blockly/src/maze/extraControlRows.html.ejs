@@ -1,0 +1,23 @@
+<% var msg = require('../../locale/current/maze') %>
+<div id="spelling-table-wrapper">
+  <table id="spelling-table" class="float-right">
+    <tr>
+      <td class="spellingTextCell"><%= msg.word() %>:</td>
+      <td class="spellingButtonCell">
+        <button id="searchWord" class="spellingButton" disabled>
+          <% // splitting these lines causes an extra space to show up in front of the word, breaking centering %>
+          <img src="<%= assetUrl('media/1x1.gif') %>"/><%= searchWord %>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td class="spellingTextCell"><%= msg.youSpelled() %>:</td>
+      <td class="spellingButtonCell">
+        <button id="currentWord" class="spellingButton" disabled>
+          <% // splitting these lines causes an extra space to show up in front of the word, breaking centering %>
+          <img src="<%= assetUrl('media/1x1.gif') %>"><span id="currentWordContents"></span>
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>

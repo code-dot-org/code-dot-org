@@ -1,0 +1,109 @@
+@import "main";
+
+
+
+#error-popup {
+    position:absolute;
+    z-index:100;
+    background:@lightBlue;
+    border:1px solid @funcDoneColor;
+    .rounded-corners(5px);
+    padding:5px;
+    font-size:13px;
+
+    .original-message {
+        color:#555;
+    }
+
+    .simple-message {
+        margin-top:5px;
+        color:#111;
+    }
+
+    .code {
+        font-family: monospace;
+        color:#333;
+        background:#eee;
+        vertical-align: bottom;
+        padding:0px 1px 0px 1px;
+        border:1px solid #ddd;
+        .rounded-corners(2px);
+
+    }
+
+}
+
+
+#error-page {
+	#errors {
+		width:50%;
+		border:2px solid #444;
+		height:300px;
+		overflow:auto;
+		margin-right:10px;
+		.error {
+			padding: 5px;
+			color:#333;
+			border-bottom:1px solid #ccc;
+			background:#FFF;
+			
+			&:hover {
+				background:#eee;
+				cursor:pointer;
+			}
+		}
+
+		.selected {
+			background:#ccc;
+		}
+	}
+
+	#console{
+	    width: 500px;
+	    height: 300px;
+	    margin: 0 0 10px 12px;
+	    border: 2px solid gray;
+	    padding:3px;
+	    overflow-y:auto;
+	    font-family: monospace;
+	}
+
+	textarea#console:focus{
+	    outline: none !important;
+	}
+
+	.CodeMirror{
+	    width: 100%;
+	    background-color:#FFF;
+
+
+	}
+	.CodeMirror-scroll{
+	    border:1px solid #999;
+	    .rounded-corners(3px);
+	    height:300px;
+	    width: 500px;
+	}
+}
+
+
+#error-modal {
+    position: relative;
+    width:90%;
+    margin-left: -50%;
+    margin-top: 30px;
+
+    .original-message {
+        font-size:13px;
+        color:#555;
+        padding-bottom:10px;
+        border-bottom:1px solid #eee;
+    }
+
+    .simple-message {
+        font-size:16px;
+        margin-top:20px;
+        color:#333;
+    }
+
+}

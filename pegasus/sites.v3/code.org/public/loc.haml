@@ -1,0 +1,25 @@
+---
+title: Lines of Code
+---
+
+-hoc_metrics = fetch_hoc_metrics
+-loc = format_integer_with_commas(fetch_metrics['lines_of_code'])
+-started = format_integer_with_commas(hoc_metrics['started'])
+-codeorg = format_integer_with_commas(hoc_metrics['tutorials']['codeorg'])
+
+%h1 How many lines of code?
+
+%p 
+  Students of the Code.org tutorials have written #{loc} lines of code. Is this a lot?  By comparison, the Microsoft Windows operating system has 
+  %a{:href=>"https://www.facebook.com/windows/posts/155741344475532", :target=>"_blank"} roughly 50 million lines of code. 
+
+%p Of course, every engineer knows that "lines of code" is a silly measure, and besides, the lines of code we are counting here are <i>much</i> less complex than the code written by professional software engineers. No software engineer measures the value or their work in lines of code. In fact, the best-designed programs often have the simplest designs and the fewest lines of code.
+
+%p However, we count this as an important measure of total usage of our tutorials. Not everybody finishes an Hour of Code tutorial. Some students spend one hour. Some spend 10 minutes. Some spend days. Instead of counting how many students "finish one hour" or how much time they spent, this is our simplest measure of progress.
+
+%p 
+  Note: this is not counting all participants in the Hour of Code. The Hour of Code movement consists of dozens of tutorial partners, and this metric is only counting usage of the 
+  %a{:href=>"http://studio.code.org/", :target=>"_blank"}< Code.org tutorials
+  , where each block/command dragged onto the screen counts as one line of code.  
+
+%p In total, #{started} students have participated in the Hour of Code. Of this group, #{codeorg} of them used the tutorials by Code.org, and within the Code.org tutorial, they've written #{loc} lines of code.

@@ -1,0 +1,11 @@
+name '4-5 maze conditionals multi 1'
+title 'Maze Conditionals Multiple Choice'
+content1 '/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500'
+
+height '160'
+
+question 'Which blocks solve the puzzle?'
+right '/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png'
+wrong '/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png'
+wrong '/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png'
+wrong '/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png'

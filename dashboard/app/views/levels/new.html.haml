@@ -1,0 +1,25 @@
+%h2 Choose a type of level to build.
+
+%ul
+  %li= link_to "Script and Level builder how to", "https://docs.google.com/a/code.org/document/d/1HcYloRHibxk0Axnuw3A3w_Ht3AEmBHO0IUCaYFfs838/edit?usp=sharing"
+  %li= link_to "Build a Maze Level", levels_new_path(type: "Maze")
+  %li= link_to "Build a Farmer/Bee Level", levels_new_path(type: "Karel")
+  %li= link_to "Build an Artist Level", levels_new_path(type: "Artist")
+  %li= link_to "Build a Multi Level", levels_new_path(type: "Multi")
+  %li= link_to "Build a Match Level", levels_new_path(type: "Match")
+
+%h3 Your Levels
+- @levels.each do |level|
+  %li
+    = level.name
+    = link_to t('crud.show'), level_path(level)
+    = link_to t('crud.edit'), edit_level_path(level)
+    = link_to t('crud.delete'), level_path(level, redirect: levels_new_path), method: :delete
+    = link_to 'Clone', level_clone_path(level), method: :post
+
+%h3 All levels
+%ul
+  %li
+    = link_to "All non-artist levels", Game.find_by_name('CustomMaze')
+  %li
+    = link_to "All artist levels", Game.find_by_name('Custom')

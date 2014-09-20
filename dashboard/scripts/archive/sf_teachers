@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+require_relative '../../config/environment'
+
+# Hadi Partovi 11:43 am (1 day ago)
+#
+# is it easy to query to find how many teachers we have with accounts
+# @sfusd.edu, and if any have a reasonably-sized classroom or student
+# progress?
+#
+# ideal would be a list of teacher names with @sfusd.edu accounts,
+# number of students in their classroom, and some number suggesting
+# their progress (eg sum of puzzles solved by their students, or
+# number of trophies achieved, etc, or the summary "On average your
+# students have earned 6.5 out of 27 Concept Mastery trophies.")
+
+sf_teachers = User.where("email like '%@sfusd.edu'")
+data = sf_teachers.collect do |u|
+  average_completed_levels = 0
+  unless u.followers.empty?
+    completed_levels = u.followers.collect(&:student_user).collect {|student| student.user_levels.where('best_result > 20').count}
+    average_completed_levels = completed_levels.inject(&:+).to_f / completed_levels.size
+    average_completed_levels = average_completed_levels.round(2)
+  end
+  
+  [u.email, u.name, u.followers.count, average_completed_levels].join(', ')
+end
+
+puts "Email, Name, Number of students, Average # of completed levels"
+puts data.join("\n")

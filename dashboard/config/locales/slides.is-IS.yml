@@ -1,0 +1,353 @@
+"is":
+  slides:
+    maze_intro:
+      1:
+        image: notes/hoc1_1.jpg
+        text: Velkomin(n) í þína fyrstu klukkustund af kóðun. Við skulum strax hefjast
+          handa svo þú fáir að kynnast forritun í fyrsta skipti.
+      2:
+        image: notes/hoc1_2.jpg
+        text: Við munum nota Blockly, sjónrænt forritunartungumál þar sem þú býrð
+          til forrit með því að raða saman kubbum.
+      3:
+        image: notes/hoc1_3.jpg
+        text: Forrit eru venjulega skrifuð, en Blockly er sjónrænt. Hver kubbur samsvarar
+          línu af "alvöru" kóða.
+      4:
+        image: notes/hoc1_4.jpg
+        text: "Þú munt læra grunnhugtök í tölvunarfræði, en þessi sömu hugtök eru
+          notuð víða, allt frá því að gera smáforrit upp í að stýra geimjeppanum á
+          Mars."
+      5:
+        image: notes/hoc1_5.jpg
+        text: Forrit er safn skipana sem tölvan les og fer eftir.
+      6:
+        image: notes/hoc1_6.jpg
+        text: "Í fyrsta forritinu þínu þarf að láta Angry Bird fuglinn ferðast um
+          völundarhús svo hann geti lúskrað á grænu svíni."
+      7:
+        image: notes/hoc1_7.jpg
+        text: Vinstri hliðin er völundarhúsið þar sem forritið þitt er keyrt. Leiðbeiningarnar
+          fyrir hverja þraut eru fyrir neðan völundarhúsið.
+      8:
+        image: notes/hoc1_8.jpg
+        text: Verkfærakistan í miðjunni inniheldur skipanirnar fyrir fuglinn. Þú munt
+          nota þær til að byggja forritið.
+      9:
+        image: notes/hoc1_9.jpg
+        text: Til hægri er vinnusvæðið, en þangað dregur þú kubba úr verkfærakistunni
+          til að byggja forritið þitt. Ef þú þarft að eyða kubbi skaltu draga hann
+          í fötuna í horninu.
+      10:
+        image: notes/hoc1_10.jpg
+        text: Hver kubbur er ein skipun. Ef þú dregur "fara áfram" kubbinn yfir á
+          vinnusvæðið og ýtir á "Keyra forrit", þá mun fuglinn færa sig um einn reit
+          í völundarhúsinu.
+      11:
+        image: notes/hoc1_11.jpg
+        text: Til að láta forritið gera fleiri en eina aðgerð, þá þarf að draga fleiri
+          kubba yfir á vinnusvæðið og láta þá smella saman. Fuglinn mun framkvæma
+          skipanirnar frá þeirri efstu til þeirrar neðstu.
+      12:
+        image: notes/hoc1_12.jpg
+        text: Ef þú keyrir forrit og vilt síðan laga það og prófa aftur, ýttu þá á
+          "Byrja aftur" hnappinn.
+      13:
+        image: notes/hoc1_13.jpg
+        text: Nú skulum við fara og ná þessum svínum!
+    artist_intro:
+      1:
+        image: notes/stage5_1.jpg
+        text: Hæ, ég heiti JR! Öll kappakstursbílalið þurf tölvunarfræðinga til að
+          sigra. Þeir greina gögnin sem koma frá bílnum til að láta hann fara hraðar.
+      2:
+        image: notes/stage5_2.jpg
+        text: "Í þessum þrautum ert þú listamaður sem teiknar línu hvert sem hann
+          fer."
+      3:
+        image: notes/stage5_3.jpg
+        text: Þessi kubbur segir "farðu áfram um 100 pixla“. Pixlar eru í raun litlir
+          punktar á skjánum þínum.
+      4:
+        image: notes/stage5_4.jpg
+        text: Þessi kubbur segir "snúa til hægri um 90 gráður". Þetta mun snúa listamanninum
+          jafnmikið og "snúa" kubbarnir gera í þrautunum með völundarhúsin.
+      5:
+        image: notes/stage5_5.jpg
+        text: Smelltu á örina í öðrum hvorum þessara kubba til að breyta því hve mikið
+          listamaðurinn fer áfram eða beygir. Prófaðu þig áfram til að venjast þessum
+          nýju kubbum.
+    farmer_intro:
+      1:
+        image: notes/stage9_1.jpg
+        text: Hæ, ég heiti Paola! Í þessum þrautum ert þú bóndakona sem þarf að ná
+          túninu sínu alveg sléttu til að geta byrjað að rækta.
+      2:
+        image: notes/stage9_2.jpg
+        text: "Þú verður að hjálpa henni að fjárlægja alla moldarhaugana og fylla
+          upp í allar holurnar."
+      3:
+        image: notes/stage9_3.jpg
+        text: Nýju kubbarnir fjarlægja 1 skóflufylli af mold úr haug og fylla í holu
+          með 1 skóflufylli af mold.
+      4:
+        image: notes/stage9_4.jpg
+        text: Haugarnir og holurnar eru í mismunandi stærðum svo þú verður að segja
+          bóndanum hversu mörg skóflufylli skal nota.
+    flappy_intro:
+      1:
+        image: notes/flappy01.jpg
+        text: Hæ, ég er Katie! Eitt af því mest spennandi við tölvunarfræði er það
+          að tölvuforrit getur verið gagnvirkt.
+      2:
+        image: notes/flappy02.jpg
+        text: "Í hvert skipti sem einhver smellir eða slær eða skrifar á tölvu eða
+          síma, þá verður til ATVIK og það er kóði sem fangar atvikið og ákveður hvað
+          eigi að gerast þegar ATVIK verður."
+      3:
+        image: notes/flappy03.jpg
+        text: 'Til dæmis gæti maður haft ATVIKAFANGARA sem segir "þegar mús er smellt
+          þá skal spila hljóð" '
+      4:
+        image: notes/flappy04.jpg
+        text: Hefur þú heyrt um leikinn FlappyBird? Með því að nota atvikahöndlara
+          ætlum við að læra að forrita okkar eigin sérhönnuðu útgáfu af FlappyBird!
+      5:
+        image: notes/flappy05.jpg
+        text: Kóðinn sem þú munt skrifa felur í sér að draga og setja niður kubba
+          sem tákna skipanir fyrir tölvuna. Bak við tjöldin, stendur hver þessara
+          kubba fyrir raunverulegan kóða.
+      6:
+        image: notes/flappy06.jpg
+        text: 'Ef þú skoðar vinnusvæðið þá eru þar grænir kubbar sem búið er að setja
+          fyrir þig - þetta eru "atvikafangarar" '
+      7:
+        image: notes/flappy07.jpg
+        text: Ef þú vilt láta fuglinn BLAKA VÆNGJUNUM þegar þú SMELLIR músinni getur
+          þú gert það með því að tengja "BLAKA" kubbinn við viðeigandi atvikafangara
+          og í leiknum mun það að smella músinni leiða til þess að fuglinn flýgur.
+      8:
+        image: notes/flappy08.jpg
+        text: "Í hverri þraut þessa verkefnis munum við kynna nýjar tegundir atvika
+          sem græna kubba á vinnusvæðinu og þú þarft að ákveða hvaða kubbum á að bæta
+          við til að bregðast rétt við þessum atvikum."
+      9:
+        image: notes/flappy09.jpg
+        text: "Þegar þú sérð svona ör fyrir fellilista þá táknar það að þú getir breytt
+          stillingum - eins og hvaða hljóð eigi að spila þegar Flappy rekst á jörðina."
+      10:
+        image: notes/flappy10.jpg
+        text: "Í síðustu þrautinni getur þú búið til eiginn leik og deilt honum með
+          vinum þínum. Skemmtu þér vel!"
+    loop_times:
+      1:
+        image: notes/hoc2_1.jpg
+        text: Hæ, ég er Mark! Nú skulum við læra um lykkjur. Með því að nota lykkjur
+          getur þú sagt tölvunni að endurtaka röð af aðgerðum aftur og aftur, fleiri
+          þúsund eða jafnvel miljarð sinnum.
+      2:
+        image: notes/hoc2_2.jpg
+        text: "Í þessari þraut viljum við láta fuglinn færa sig áfram um 5 svæði til
+          að ná svíninu."
+      3:
+        image: notes/hoc2_3.jpg
+        text: Við getum notað nýja "endurtaka" kubbinn til að hjálpa okkur.
+      4:
+        image: notes/hoc2_4.jpg
+        text: Í staðinn fyrir að draga út 5 "fara áfram" kubba notum við endurtekningu.
+      5:
+        image: notes/hoc2_5.jpg
+        text: Við getum sett "fara áfram" kubbinn í "endurtaka" kubbinn og skrifað
+          tölu í kubbinn sem segir honum hve oft hann á að endurtaka sig.
+      6:
+        image: notes/hoc2_6.jpg
+        text: 'Og þetta er mikilvægt: þú getur sett fleiri en eina skipun inn í "endurtaka"
+          kubbinn.'
+      7:
+        image: notes/hoc2_7.jpg
+        text: Njóttu þess að nota nýja "endurtaka" kubbinn!
+    loop_until:
+      1:
+        image: notes/hoc3_1.jpg
+        text: Hæ, ég heiti Chris. Áður en ég fór að spila með Miami Heat, þá fór ég
+          í Georgia Tech til að læra tölvunarfræði. Prófum nýja kubbinn okkar, "endurtaka
+          þar til" kubbinn.
+      2:
+        image: notes/hoc3_2.jpg
+        text: Hvað ef við vissum ekki hversu langt fuglinn ætti að færa sig til að
+          ná svíninu?
+      3:
+        image: notes/hoc3_3.jpg
+        text: Ef við setjum "fara áfram" kubbinn inn í "endurtaka þar til" kubbinn,
+          þá mun fuglinn færa sig áfram ÞAR TIL hann nær svíninu (eða rekst á vegg).
+      4:
+        image: notes/hoc3_4.jpg
+        text: 'Og þetta er mikilvægt: alveg eins og áður, þá getum við sett marga
+          kubba inn í "endurtaka þar til" kubbinn og þeir verða allir endurteknir.'
+    if:
+      1:
+        image: notes/hoc4_1.jpg
+        text: 'Hæ, ég heiti Bill! Nú skulum við læra nýtt undirstöðuhugtak: "Ef" setningar.
+          Það er svoleiðis sem tölvur taka ákvarðanir.'
+      2:
+        image: notes/hoc4_2.jpg
+        text: Þú notar "Ef" setningar á hverjum degi. Áður en þú ferð út á morgnana,
+          segir þú EF það rignir úti, þá þarf ég að fara í jakka.
+      3:
+        image: notes/hoc4_3.jpg
+        text: Við getum sagt uppvakningnum að kanna "Ef" það er leið til vinstri og
+          ef hann finnur leið til vinstri þá getum látið hann snúa sér í þá átt.
+      4:
+        image: notes/hoc4_4.jpg
+        text: Við skrifum kóða fyrir þetta með því að draga fram "Ef" kubbinn og setja
+          "snúa til vinstri" kubbinn inn í hann.
+      5:
+        image: notes/hoc4_5.jpg
+        text: Ef við setjum nú "fara áfram" kubb fyrir ofan og "endurtaka" kubb utan
+          um allt, þá mun uppvakningurinn endurtekið færa sig áfram, kanna hvort það
+          sé slóð til vinstri og snúa til vinstri ef svo er. "Endurtaka" skipunin
+          er nauðsynleg til að kanna í hverju skrefi hvort eigi að snúa.
+      6:
+        image: notes/hoc4_6.jpg
+        text: Ef setningar eru ótrúlega mikilvægar í tölvunarfræði. Eitt af fyrstu
+          forritunum sem ég skrifaði var leikurinn mylla og þar var Ef setning sem
+          sagði Ef andstæðingurinn er að fara að vinna, þá skal loka reitnum sem lætur
+          hann vinna.
+      7:
+        image: notes/hoc4_7.jpg
+        text: Skemmtu þér við að nota "ef" kubbinn!
+    if_else:
+      1:
+        image: notes/hoc5_1.jpg
+        text: Hæ, ég heiti Saloni. Ég nota tölvunarfræði til að leysa vandamál í heilsu-
+          og lyfjageiranum. Nú ætlum við að læra um "ef-annars" kubbinn. Hann lítur
+          út eins og "ef" kubburinn, en hefur viðbót sem segir "annars".
+      2:
+        image: notes/hoc5_2.jpg
+        text: Ef ég set "fara áfram" kubb á staðinn sem segir "gera" og "snúa til
+          vinstri" kubb þar sem segir "annars" þá þýðir það að uppvakningurinn mun
+          velja milli tveggja valmöguleika. Ef það er leið beint framundan, þá mun
+          uppvakningurinn fara áfram, ANNARS (það er ekki leið framundan) mun hann
+          snúa sér til vinstri.
+      3:
+        image: notes/hoc5_3.jpg
+        text: Alveg eins og með "ef" kubbinn, getum við sett "ef-annars" kubb inn
+          í "endurtaka" kubb þannig að uppvakningurinn haldi áfram að hreyfast og
+          "ef-annars" kubburinn að kanna "ef" það er beygja.
+      4:
+        image: notes/hoc5_4.jpg
+        text: Komdu nú þessum uppvakningum þangað sem þeir eiga heima!
+    function:
+      1:
+        image: notes/stage13_1.jpg
+        text: Hæ, ég heiti Brina og er verkfræðingur hjá Instagram. Föll eru ákveðnar
+          línur af kóða sem þú vilt nota aftur og aftur, þannig að í staðinn fyrir
+          að skrifa þann kóða í hvert skipti geturðu bara notað einn kubb.
+      2:
+        image: notes/stage13_2.jpg
+        text: Við ætlum að læra hvernig við skilgreinum föll. Skilgreiningar falla
+          eru með stjörnu í horninu. Nafn fallsins er skrifað á efstu línuna.
+      3:
+        image: notes/stage13_3.jpg
+        text: Kubbarnir sem fara í skilgreininguna segja okkur hvað hún gerir. Þessi
+          skilgreining á falli er því kölluð "fylla 5" og hún er sett saman úr "endurtaka"
+          kubbi og "fylla" kubbi".
+      4:
+        image: notes/stage13_4.jpg
+        text: Skilgreiningin liggur á vinnusvæðinu, en bóndinn keyrir ekki fallið
+          fyrr en við drögum út kubbinn fyrir "fylla 5" fallið sem er í flokknum Föll.
+      5:
+        image: notes/stage13_5.jpg
+        text: 'Skemmtum okkur ÖLL við að smíða FÖLL! '
+    loop_while:
+      1:
+        image: notes/stage9_5.jpg
+        text: 'Hæ, ég heiti Makinde! Nú ætlum við að læra um "meðan" kubbinn. '
+      2:
+        image: notes/stage9_6.jpg
+        text: '"Meðan" kubburinn gerir það sem er sett í hann Á MEÐAN setningin efst
+          á honum er SÖNN.'
+      3:
+        image: notes/stage9_7.jpg
+        text: Til dæmis, ef bóndinn stendur á haug, mun hann halda áfram að fjarlægja
+          1 skóflufylli Á MEÐAN það er enn haugur undir honum.
+    loop_for:
+      1:
+        image: notes/stage11_1.jpg
+        text: Hæ, ég heiti Trina og ég vinn fyrir Pixar. Ég hef unnið við margar kvikmyndir,
+          þar á meðal Shrek.
+      2:
+        image: notes/stage11_2.jpg
+        text: Þetta er nýja lykkjan okkar "teljari". Hún endurtekur aðgerðir aftur
+          og aftur og þú getur látið aðgerðirnar breytast svolítið í hvert skipti.
+      3:
+        image: notes/stage11_3.jpg
+        text: Í þessu dæmi segir teljaralykkjan "telja með teljara frá 50 til 90 og
+          hækka um 10" og inn í henni höfum við kubbinn "teikna ferning". Dragðu teljarakubbinn
+          út frá flokknum Föll og settu hann á staðinn "lengd".
+      4:
+        image: notes/stage11_4.jpg
+        text: "Það þýðir að listamaðurinn mun teikna ferning með hliðar sem eru 50
+          pixlar á lengd. Síðan hækkar hann um 10 og teiknar ferning með 60 pixla
+          langar hliðar. Síðan heldur hann áfram að hækka um 10 og teikna ferninga
+          þar til hann nær 90. Við fáum þá ferninga með hliðar 50, 60, 70, 80 og 90."
+    parameters:
+      1:
+        image: notes/stage15_1.jpg
+        text: Hæ, ég heiti Janete og ég er verkfræðingur hjá Zynga.
+      2:
+        image: notes/stage15_2.jpg
+        text: Hvað ef við viljum nú teikna marga þríhyrninga í mismunandi stærðum?
+      3:
+        image: notes/stage15_3.jpg
+        text: Við gætum skrifað allan þennan kóða skref fyrir skref eða notað fall
+          með stikum.
+      4:
+        image: notes/stage15_4.jpg
+        text: Þú gerir það með því að smella á bláu stjörnuna við skilgreininguna
+          "teikna þríhyrning". Dragðu svo "heiti inntaks" á kubbinn "inntök".
+      5:
+        image: notes/stage15_5.jpg
+        text: Síðan ef þú skrifar "lengd" á staðinn þar sem "x" er og ýtir á Enter
+          lykilinn býrð þú til inntak fyrir lengd í fallið þitt.
+      6:
+        image: notes/stage15_6.jpg
+        text: Smelltu svo á stjörnuna. Næst smellirðu á flokkinn Breytur og dregur
+          kubbinn "lengd" inn í "fara áfram" kubbinn í skilgreiningunni á fallinu
+          þínu. Og dragðu burt gamla talnakubbinn.
+      7:
+        image: notes/stage15_7.jpg
+        text: Til að nota fallið þitt með stikum þá smellirðu á flokkinn Föll og dregur
+          út fallið "teikna þríhyrning með lengd".
+      8:
+        image: notes/stage15_8.jpg
+        text: Nú getur þú notað reikningskubb til að setja inn ólíkar tölur til að
+          teikna þríhyrninga í mismunandi stærðum.
+    hoc_wrapup:
+      1:
+        image: notes/hoc6_1.jpg
+        text: Til hamingju! Með því að leysa síðustu þraut þá skrifaðir þú kóða sem
+          getur sagt HVAÐA vélmenni sem er hvernig það finnur leiðina í gegnum einfalt
+          völundarhús eða göng af hvaða lengd sem er, hvort heldur sem það er uppvakningur,
+          fugl, geimbíll, eða sjálfkeyrandi bíll.
+      2:
+        image: notes/hoc6_2.jpg
+        text: Grunnhugtökin sem þú notaðir eru grunnur allra forrita eða appa sem
+          þú munt prófa. Við höfum lært um endurteknar lykkjur (e. loops), framkvæma
+          þangað til (e. repeat until) setningar, ef (e. if) setningar og ef annars
+          (e. if else) setningar.
+      3:
+        image: notes/hoc6_3.jpg
+        text: Ef þér líkaði við þessa fyrstu klukkustund kóðunar, heimsæktu þá code.org
+          til að halda áfram að mennta þig í forritun! Ef þú klárar 20 klst. kennsluna
+          okkar, þá hefur þú fengið góðan grunn í forritun og getur byrjað að læra
+          að skrifa öpp, leiðbeiningar vélmenna, leiki og hvað sem er.
+      4:
+        image: notes/hoc6_4.jpg
+        text: 'Tölvutæknin er að breyta öllu sem við gerum og það skiptir ekki máli
+          hvað þú ert gamall/gömul: forritun er skemmtileg, hún er skapandi og allir
+          geta lært að forrita!'
+    20_wrapup:
+      1:
+        image: notes/bird.png
+        text: Textun kemur fljótlega!

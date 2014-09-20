@@ -1,0 +1,26 @@
+%table
+  %tr
+    %td(style='vertical-align: top')
+      = form_for(@script || :script, @script ? {} : {url: scripts_path}) do |f|
+        - if @script && @script.errors.any?
+          #error_explanation
+            %h2
+              = pluralize(@script.errors.count, "error")
+              prohibited this script from being saved:
+            %ul
+              - @script.errors.full_messages.each do |msg|
+                %li= msg
+        .field
+          = f.label :name
+          = f.text_field :name
+        .script_text
+          - cols = @script_file ? @script_file.lines.max_by(&:length).length : 20
+          - rows = @script_file ? @script_file.lines.count + 1 : 5
+          = text_area_tag('script_text', @script_file || "stage 'new stage'\n", rows: rows, cols: cols, style: 'width:auto')
+        .actions
+          = f.submit
+    %td
+      %h4 Level names:
+      %ul
+        - Naturally.sort_by(Level.where.not(user_id: nil), :name).each do |level|
+          %li(style="background-color: darkturquoise; display: inline-flex; border-radius: 10px;")=level.name

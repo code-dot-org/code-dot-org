@@ -1,0 +1,145 @@
+"uk":
+  data:
+    script:
+      name:
+        test:
+          "Jigsaw: Learn to drag and drop": 'Пазли: вчимося перетягувати'
+          The Maze: "Лабіринт"
+          Multi: "Множинний вибір"
+          Match: "Відповідність"
+          Math Image: "Математичні зображення"
+          title: "Тестовий курс"
+          description: "Просто внутрішній тестовий курс."
+        course1:
+          "Jigsaw: Learn to drag and drop": 'Пазли: вчимося перетягувати'
+          "Maze: Sequence": 'Лабіринт: послідовність'
+          "Maze: Debugging": 'Лабіринт: відлагодження'
+          "Artist 1: Intro": 'Художник 1: Вступ'
+          Artists 2: "Художники 2"
+          Spelling Bee: "Грамотна Бджілка"
+          Spelling Bee not blockly: "Грамотна Бджілка без блоків"
+          "Bee 1: Intro": 'Бджола 1: Вступ'
+          "Maze 2: Loops": 'Лабіринт 2: Цикли'
+          "Bee 2: Loops": 'Бджола 2: Цикли'
+          Multi & Match: Множинний вибір та відповідність
+          K-1 Flappy: 1 клас. Пурх
+          Flappy non blockly: "Пурх без блоків"
+          title: "Курс 1"
+          Artist 2: "Художник 2"
+          Happy Maps: "Щасливі карти"
+          Move it, Move it: Рухайся, рухайся
+          "Real-life Algorithms: Plant a Seed": 'Життєві алгоритми: посадити насіння'
+          Building a Foundation: "Закладання основ"
+          Getting Loopy: "Економія на повторах"
+          The Big Event: "Велика подія"
+          Going Places Safely: "Безпечне добирання"
+          description: "Курс 1 призначено для дітей, котрі не вміють читати. Для них передбачається створення комп'ютерних програм з циклами та подіями. До кінця курсу учні створять власну гру або історію, якою зможуть поділитись з іншими."
+          "Bee: Sequence": 'Бджола: послідовність'
+          "Artist: Sequence": 'Художник: послідовність'
+          "Artist: Shapes": 'Художник: фігури'
+          "Maze: Loops": 'Лабіринт: цикли'
+          "Bee: Loops": 'Бджола: цикли'
+          "Studio: Create a Story": 'Ігрова студія: Створення історії'
+          description_short: "Курс 1 розроблено для учнів молодших класів, початківців у читанні."
+        course2:
+          The Maze: "Лабіринт"
+          Suzi: "Сюзі"
+          The Artist: "Художник"
+          Artist Debugging: 'Художник - відлагодження'
+          Bounce: "Арканоід"
+          "Studio: Create a Story": 'Ігрова студія: Створення історії'
+          Artist Loops: 'Художник - цикли'
+          Bee Conditionals: 'Бджола - умови'
+          Flappy: "Пурх"
+          title: "Курс 2"
+          Bee Loops: 'Бджола - цикли'
+          Artist Functions: 'Художник - функції'
+          The Artist Debugging: 'Художник - відлагодження'
+          Bee Debugging: 'Бджола - відлагодження'
+          Bee Functions: 'Бджола - функції'
+          Maze Loops: 'Лабіринт - цикли'
+          Graph Paper Programming: "Програмування по клітинках"
+          "Real-life Algorithms: Paper Planes": 'Життєві алгоритми: Паперові літачки'
+          Getting Loopy: "Економія на повторах"
+          Relay programming: "Релейне програмування"
+          Conditionals: "Умови"
+          Binary Bracelets: "Двійкові браслети"
+          The Big Event: "Велика подія"
+          Your Digital Footprint: "Твій цифровий слід"
+          description: "Курс 2 призначено для учнів початкових та середніх класів, котрі вже вміють читати. Вони створюватимуть програми з циклами, подіями та умовами. По завершенню курсу учні створять власну інтерактивну гру чи історію, якою зможуть поділитися."
+          "Maze: Sequence": 'Лабіринт: послідовність'
+          "Artist: Sequence": 'Художник: послідовність'
+          "Maze: Loops": 'Лабіринт: цикли'
+          "Artist: Loops": 'Художник: цикли'
+          "Bee: Loops": 'Бджола: цикли'
+          "Bee: Debugging": 'Бджола: відлагодження'
+          "Artist: Debugging": 'Художник: відлагодження'
+          "Bee: Conditionals": 'Бджола: умови'
+          description_short: "Курс 2 створено для учнів початкової школи, котрі вміють читати ."
+          "Artist: Sequence2": 'Художник: послідовність 2'
+          "Maze: Sequence2": 'Лабіринт: послідовність 2'
+        course3:
+          The Maze: "Лабіринт"
+          "Studio: Create a Story": 'Ігрова студія: Створення історії'
+          The Artist: "Художник"
+          title: "Курс 3"
+          Artist Functions: 'Художник - функції'
+          Artist For Loops: 'Художник - цикли For'
+          Artist Nested Loops: 'Художник - вкладені цикли'
+          Bee Conditionals: 'Бджола - умови'
+          Bee Nested Loops: 'Бджола - вкладені цикли'
+          Bee Debuggin: 'Бджола - відлагодження'
+          Bee Debugging: 'Бджола - відлагодження'
+          Bee Functions: 'Бджола - функції'
+          Artist Functions with Params: 'Художник - функції з параметрами'
+          Bounce: "Арканоід"
+          Maze Conditionals: 'Лабіринт - умови'
+          Artist Functions with Parameters: 'Художник - функції з параметрами'
+          Computational Thinking: "Обчислювальне мислення"
+          Functional Suncatchers: "Функції для блискіток"
+          Songwriting Parameters: "Написання пісень"
+          Dice Race: "Гонка в кубики"
+          Internet: "Інтернет"
+          Crowdsourcing: "Краудсорсинг"
+          Digital Citizenship: "Цифрове громадянство"
+          Farmer - While Loops: 'Фермерка - цикли "поки"'
+          description: "Учні, котрі вивчатимуть курс 3, повинні спершу пройти курс 2. Вони створюватимуть програми з різними типами циклів, подій, функцій та умов. До кінця курсу учні створять власні інтерактивні ігри чи історії, якими зможуть поділитися з іншими."
+          "Studio: Create a Game": 'Ігрова студія: Створення історії'
+          Maze: "Лабіринт"
+          Artist: "Художник"
+          "Artist: Functions": 'Художник - функції'
+          "Bee: Functions": 'Бджола - функції'
+          "Bee: Conditionals": 'Бджола - умови'
+          "Maze: Conditionals": 'Лабіринт - умови'
+          "Artist: Nested Loops": 'Художник - вкладені цикли'
+          "Farmer: While Loops": 'Фермерка - цикли "поки"'
+          "Bee: Nested Loops": 'Бджола - вкладені цикли'
+          "Bee: Debugging": 'Бджола - відлагодження'
+          description_short: "Учні, які приступають до курсу 3, повинні спочатку пройти курс 2."
+          Maze2: "Лабіринт 2"
+          Artist2: "Художник 2"
+          "Artist: Functions2": 'Художник - функції'
+          "Bee: Functions2": 'Бджола - функції 2'
+          "Bee: Conditionals2": 'Бджола - умови 2'
+          "Maze: Conditionals2": 'Лабіринт - умови 2'
+          "Artist: Nested Loops2": 'Художник - вкладені цикли 2'
+          "Farmer: While Loops2": 'Фермерка - цикли "поки" 2'
+          "Bee: Nested Loops2": 'Бджола - вкладені цикли 2'
+          "Bee: Debugging2": 'Бджола - відлагодження 2'
+        msm:
+          title: "Математика середньої школи"
+          description: "Відбувається робота над розділами математики для середньої школи."
+          Graph Paper Programming: "Програмування по клітинках"
+          Assessments: "Завдання"
+          Unit 1: "Розділ 1"
+          Unit 2: "Розділ 2"
+        playlab:
+          title: "Ігрова студія"
+          description: "Створіть історію або гру в спеціальній студії!"
+          Play Lab: "Ігрова студія"
+          description_short: "Складіть історію або створіть гру в Ігровій студії!"
+        artist:
+          title: "Художник"
+          description: "Малюйте картини та узори разом з Художником!"
+          Artist: "Художник"
+          description_short: "Малюйте картини та узори разом з Художником!"

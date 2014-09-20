@@ -1,0 +1,15 @@
+//= require codemirror
+//= require codemirror/addons/edit/closetag
+//= require codemirror/addons/edit/matchtags
+//= require codemirror/addons/fold/xml-fold
+//= require codemirror/modes/xml
+//= require_tree .
+function codeMirror(name) {
+    var editor = CodeMirror.fromTextArea(document.getElementById('level_' + name + '_blocks'), {
+        mode: 'xml',
+        htmlMode: false,
+        viewportMargin: Infinity,
+        matchTags: {bothTags: true},
+        autoCloseTags: true
+    });
+}

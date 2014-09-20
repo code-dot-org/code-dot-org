@@ -1,0 +1,20 @@
+%form.promote-state-jump-form{role: "form"}
+  .form-group
+    %div
+      %select.state-jump.form-control{name: "state_jump"}
+        %option{selected: "selected", value: ""} -- Choose state --
+        -DB[:geography_us_states].order(:name_s).each do |i|
+          %option{value: i[:code_s].downcase}= i[:name_s]
+:javascript
+  $(document).ready(function() {
+    var states = #{DB[:geography_us_states].all.to_json};
+
+    $('.state-jump').change(function() {
+      var state = $('.state-jump option:selected').val().toLowerCase();
+      for (var i = 0, len = states.length; i < len; i ++) {
+        if (state.toUpperCase() == states[i].code_s) {
+          window.location = '/promote/' + state;
+        }
+      }
+    });
+  });

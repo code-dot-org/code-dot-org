@@ -1,0 +1,23 @@
+%h1 Listing callouts
+
+%table
+  %tr
+    %th Element
+    %th Text
+    %th
+    %th
+    %th
+
+  - @callouts.each do |callout|
+    %tr
+      %td= callout.element_id
+      %td= callout.localization_key
+      %td= link_to t('crud.show'), callout
+      - if can? :update, @callout
+        %td= link_to t('crud.edit'), edit_callout_path(callout)
+      - if can? :update, @callout
+        %td= link_to t('crud.destroy'), callout, :method => :delete, :data => { :confirm => t('crud.confirm') }
+
+%br
+
+= link_to t('crud.new_model', model: Callout.model_name.human), new_callout_path

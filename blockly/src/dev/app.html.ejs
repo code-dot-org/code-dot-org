@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html dir="<%= options.localeDirection %>">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Blockly App - <%= app %>: <%= options.levelId %></title>
+</head>
+<body>
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+  <link rel="stylesheet" type="text/css" href="../css/<%= app %>.css">
+  <script type="text/javascript" src="../js/<%= options.locale %>/vendor.js"></script>
+  <script type="text/javascript" src="../js/<%= options.locale %>/<%= app %>.js"></script>
+  <script type="text/javascript">
+    <%= app %>Main(<%-: options | json %>);
+  </script>
+  <div id="blocklyApp"></div>
+  <script type="text/javascript" src="chrome34Workaround.js"></script>
+</body>
+</html>

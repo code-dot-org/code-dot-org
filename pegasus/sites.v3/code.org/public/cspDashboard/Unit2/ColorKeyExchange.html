@@ -1,0 +1,277 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<style>
+
+		body{
+			font-family: sans-serif;
+			font-size: 10pt;
+			padding: 50px;
+		}
+		.heading{
+			background-color: rgb(0,164,180);
+			width: 100%;
+			padding: 20px;
+			top: 0px;
+			color: white;
+			font-weight: bold;
+		}
+		.table-bordered{
+			width: 800px;
+		}
+		table td{
+			border: solid 1px #000000;
+			text-align: center;
+			width: 33%;
+
+		}
+		input[type="text"]{
+			width:60px;
+
+		}
+		
+		.noBorder{
+			border: none;
+			width: 30px;
+			height: 30px;
+		}
+		.colorBox{
+			
+			padding: 5px;
+			font-family: monospace;
+			font-size: 10px;
+			color: #FFFFFF;
+			text-shadow: 1px 1px 0px #000000;
+		}
+		big{
+			font-size: 30px;
+			font-weight: bold;
+		}
+	</style>
+
+	<script>
+		function hexToInt(val){
+
+			return parseInt(val.replace("#","0x"),16);
+		}
+
+		function decToHex(val){
+			var str=val.toString(16);
+			while(str.length<6){
+				str = "0"+str;
+			}
+			return "#"+str;  
+
+		}
+
+		// Math functions:
+// Extract individual color values from a hex color
+// Useful in using the color input tag
+function hexToR(h) {return parseInt((cutHex(h)).substring(0,2),16)}
+function hexToG(h) {return parseInt((cutHex(h)).substring(2,4),16)}
+function hexToB(h) {return parseInt((cutHex(h)).substring(4,6),16)}
+function cutHex(h) {return (h.charAt(0)=="#") ? h.substring(1,7):h}
+
+		function makeColorDisplay(id, color){
+			//var str = "<input class='noBorder' type=color value='"+color+"' disabled> "+color;
+			$(id).css("background-color", color);
+			$(id).html(color);
+
+			var r = hexToR(color);
+			var g = hexToG(color);
+			var b = hexToB(color);
+
+			var avg = (r+g+b)/3;
+			var textColor = "#FFFFFF";
+			if(avg>100) textColor="#000000";
+
+			$(id).css("color", textColor);
+
+
+		}
+
+		function makeMixDisplay(id, colorA, colorB, colorC){
+			var str = "<input class='noBorder' type=color value='"+colorA+"' disabled alt="+colorA+"> x <input class='noBorder' type=color value='"+colorB+"' disabled alt="+colorB+"> = <input class='noBorder' type=color value='"+colorC+"' disabled alt="+colorC+"> "+colorC;
+
+			$(id).html(str);
+		}
+
+		function setValues(){
+			$("#publicTxt").html($("#public").val());
+			$("#aliceTxt").html($("#alice").val());
+			$("#bobPublicMixTxt").html($("#bobPublicMix").val());
+		}
+
+		function addCommas(num){
+			var numStr = ""+num;
+			var data = "";
+			while(numStr.length>3){
+				data = ","+numStr.substring(numStr.length-3, numStr.length) + data;
+				numStr = numStr.substring(0, numStr.length-3);
+			}
+			data = numStr+data;
+			return data;
+		}
+
+		function mixPaint(){
+			
+
+			var val1Int = parseInt(hexToInt($('#color1').val()))
+			var val2Int = parseInt(hexToInt($('#color2').val()))
+
+			var mixedInt = (val1Int*val2Int)%Math.pow(2,24);
+			$("#mixed").val(decToHex(mixedInt)); //ue="#FF0000";
+
+			makeColorDisplay("#color1Disp",$('#color1').val());
+			makeColorDisplay("#color2Disp",$('#color2').val());
+			makeColorDisplay("#mixedDisp",$('#mixed').val());
+
+			var str= "---hex---<br>1. "+$('#color1').val()+" * "+$('#color2').val()+" = ";
+			var bigNum = val1Int*val2Int;
+			str += "#"+bigNum.toString(16)+"<br>2. "+bigNum.toString(16)+" % #FFFFFF = "+$("#mixed").val();
+			str+="<br>---decimal---<br>";
+			str += "1. "+addCommas(val1Int)+" * "+addCommas(val2Int)+" = "+addCommas(bigNum)+"<br>2. "+addCommas(bigNum)+" % "+addCommas(Math.pow(2,24))+" = "+addCommas(mixedInt);
+			$("#showMath").html(str);
+
+		}
+
+		function doMix(){
+			setValues();
+			var publicHex = $("#public").val();
+			var publicVal = parseInt(hexToInt(publicHex));
+
+			var AlicePvtHex = $("#alice").val();
+			var privateAliceVal = parseInt(hexToInt(AlicePvtHex));
+
+			var BobPubHex = $("#bobPublicMix").val();
+			var bobPublicMixVal = parseInt(hexToInt(BobPubHex));
+			
+			
+
+			var publicAliceVal = (publicVal*privateAliceVal) % Math.pow(2,24);
+
+
+			var alicePvtSharedMix = (bobPublicMixVal*privateAliceVal)%Math.pow(2,24);
+			
+
+			makeMixDisplay("#alicePubMix", publicHex, AlicePvtHex, decToHex(publicAliceVal));
+			makeMixDisplay("#alicePvtMix", decToHex(bobPublicMixVal), AlicePvtHex, decToHex(alicePvtSharedMix));
+
+			makeColorDisplay("#yourPublicMix", decToHex(publicAliceVal) );
+			makeColorDisplay("#publicColor", publicHex);
+			makeColorDisplay("#yourPublicMix2", decToHex(publicAliceVal));
+		}
+
+		$(document).ready(function(){ doMix(); mixPaint();});
+
+	</script>	
+</head>
+<body>
+	<div class='heading'>
+		<img src="logo.png" hspace=20> 
+		<big> Digital Paint Mixer </big>
+	</div>
+	<hr>
+	<li>Try selecting different colors to see how they are mixed.
+	<li>Note: this is not like mixing paint in art class, or anywhere for that matter.
+	<li>We are using colors to represent large 24-bit numbers so we can "see" the numbers more clearly.
+<table>
+	<tr>
+		<td>Color1:</td><td>color 2:</td><td>Mixed</td>
+	<tr>
+		<td>
+			<input type=color id='color1' value="#123456" onChange="mixPaint()">
+		</td>
+		<td>
+		<input type=color id='color2' value="#FEDCBA" onChange="mixPaint()">
+		</td>
+		<td>
+		<input type=color id="mixed" value="#000000" disabled=true>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="color1Disp"></div>
+		</td>
+		<td>
+			<div id="color2Disp"></div>
+		</td>
+		<td>
+			<div id="mixedDisp"></div>
+		</td>
+	</tr>
+</table>
+<b>The Math</b>
+<div id="showMath">
+
+</div>
+<h1>Make a secret color with a friend...in public</h1>
+<h3>Try this with a friend.</h3>
+<li> You and a friend sit at different computers with this app open.
+<li> Have a third person act as the evesdropper.
+<li> Announce out loud any public information (the public color, and your and your friend's public mixes)
+<li> You and your friend should come up with the same private color.  Have the evesdropper try to guess it using only the publicly available info (they can use the digital paint mixer to experiment with different colors.)
+<li> Then you and a friend can use your private shared color as a key to encrypt a secret text message.
+<table class="table-bordered">
+<tr><td>You</td><td>Public: 
+	
+	<td>Your Friend "Bob"</td>
+</tr>
+
+<tr>
+<td>
+Your Private Color: <br>
+<input type="color" id="alice" onChange="doMix()" value="#ff017f"> <span id="aliceTxt"></span><br>
+<small>You pick your private color. Never share this with anyone.</small>
+</td>
+<td> <input type="color" id="public" onChange="doMix()" value="#004080"> 
+	<span id="publicTxt"></span><br>
+	<small>You and Bob, and the public at large, know this color. You and bob can choose it out in the open.</small>
+	</td> </td>
+<td>
+"Bob's" Private Color: <br>
+???????<br>
+<small>Bob picks a private color. He never shares this with anyone.</small>
+
+</td>
+</tr>
+<tr><td>
+	Your Public Mix
+<div id="alicePubMix"></div>
+<small>You mix your private color with the public color to make this. formula: (your color * public) % 2^24</small>
+</td>
+<td> You can share this mixed color publicly. <span id="yourPublicMix"></span>  Go ahead announce it to the world.  </td>
+<td>
+Bob's Public Mix: <br>
+<div id="bobPubMix"></div>
+Meanwhile, Bob has done the same thing with his private color.  He will tell you this color publicly.
+Enter Bob's public color here:<br>
+<input type="color" id="bobPublicMix" onChange="doMix()" value="#47ceea"> <span id="bobPublicMixTxt"></span>
+</td>
+</tr>
+
+<tr><td>
+Now you mix your private color with Bob's public color:<br> 
+<div id="alicePvtMix"></div>
+<br>
+This makes a new private mix, and guess what...it will be the same as Bob's after he mixes your public color with his private one.
+</td>
+<td>
+	<b>The Eavesdropper</b><br>
+	...Has to figure out what color to mix with this <span id="publicColor"></span><br> to make this <span id="yourPublicMix2"></span><br>
+	There are 16,777,216 possibilities.  Good luck.
+</td>
+<td>
+Bob mixes his private color with your public color...And bob's new color, which he calculated in private, will be the same as yours!.<br> 
+<div id="bobPvtMix"></div>
+ <br>
+
+</td>
+</tr>
+
+</table>
+
+</body>
+<script> doMix(); </script>
+</html>

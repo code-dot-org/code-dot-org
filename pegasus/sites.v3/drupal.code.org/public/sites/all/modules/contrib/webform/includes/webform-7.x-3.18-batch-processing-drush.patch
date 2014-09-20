@@ -1,0 +1,278 @@
+diff --git a/htdocs/sites/all/modules/contrib/webform/includes/webform.report.inc b/htdocs/sites/all/modules/contrib/webform/includes/webform.report.inc
+index 6ada86a..c2b1e12 100644
+--- a/htdocs/sites/all/modules/contrib/webform/includes/webform.report.inc
++++ b/htdocs/sites/all/modules/contrib/webform/includes/webform.report.inc
+@@ -676,33 +676,8 @@
+   global $user;
+   module_load_include('inc', 'webform', 'includes/webform.export');
+   module_load_include('inc', 'webform', 'includes/webform.components');
+-
+-  $submission_information = array(
+-    'serial' => t('Serial'),
+-    'sid' => t('SID'),
+-    'time' => t('Time'),
+-    'draft' => t('Draft'),
+-    'ip_address' => t('IP Address'),
+-    'uid' => t('UID'),
+-    'username' => t('Username'),
+-  );
+-
+-  if (empty($options)) {
+-    $options = array(
+-      'delimiter' => variable_get('webform_csv_delimiter', '\t'),
+-      'components' => array_merge(array_keys($submission_information), array_keys(webform_component_list($node, 'csv', TRUE))),
+-      'select_keys' => 0,
+-      'select_format' => 'separate',
+-      'range_type' => 'all',
+-    );
+-  }
+-  else {
+-    foreach ($submission_information as $key => $label) {
+-      if (!in_array($key, $options['components'])) {
+-        unset($submission_information[$key]);
+-      }
+-    }
+-  }
++ 
++  webform_results_download_options($node, $options, $submission_information);
+ 
+   // Open a new Webform exporter object.
+   $exporter = webform_export_create_handler($format, $options);
+@@ -711,6 +686,28 @@
+   $handle = @fopen($file_name, 'w'); // The @ suppresses errors.
+   $exporter->bof($handle);
+ 
++  webform_results_download_headers($node, $options, $submission_information, $exporter, $handle);
++
++  $export_info = webform_results_download_rows($node, $options, $submission_information, $exporter, $file_name, $handle);
++
++  return $export_info;
++}
++
++/**
++ * Print the header rows for the downloadable webform data.
++ *
++ * @param $node
++ *   The webform node on which to generate the analysis.
++ * @param array $options
++ *   A list of options that define the output format. These are generally passed through the GUI interface.
++ * @param array $submission_information
++ *   An array of data to be displayed as columns in the output.
++ * @param object $exporter
++ *   A reference to the exporter object, to which we add all our rows before outputting.
++ * @param $handle
++ *   A reference to the file handle where we're storing the data temporarily.
++ */
++function webform_results_download_headers($node, $options, $submission_information, &$exporter, $handle) {
+   // Fill in the header for the submission information (if any).
+   $header[2] = $header[1] = $header[0] = count($submission_information) ? array_fill(0, count($submission_information), '') : array();
+   if (count($submission_information)) {
+@@ -740,13 +737,38 @@
+   foreach ($header as $row) {
+     $exporter->add_row($handle, $row);
+   }
++}
+ 
++/**
++ * Print an individual row of downloadable webform data.
++ *
++ * @param $node
++ *   The webform node on which to generate the analysis.
++ * @param array $options
++ *   A list of options that define the output format. These are generally passed through the GUI interface.
++ * @param array $submission_information
++ *   An array of data to be displayed as columns in the output.
++ * @param object $exporter
++ *   A reference to the exporter object, to which we add all our rows before outputting.
++ * @param $file_name
++ *   The file name of the temporary file.
++ * @param $handle
++ *   A reference to the file handle where we're storing the data temporarily.
++ * @param $serial_start
++ *   An incrementor for the Serial column in the output.
++ * @param $pager_count
++ *   The current "page" of output, used to keep track of the batch processing for the rows.
++ *
++ * @return $row_count
++ *   Returns the number of rows processed in the function call.
++ */
++function webform_results_download_rows($node, $options, $submission_information, &$exporter, $file_name, $handle, $serial_start = 0, $pager_count = 0) {
+   // Get all the required submissions for the download.
+   $filters['nid'] = $node->nid;
+   if (!empty($options['sids'])){
+     $filters['sid'] = $options['sids'];
+   }
+-  $submissions = webform_get_submissions($filters);
++  $submissions = webform_get_submissions($filters, NULL, $pager_count);
+ 
+   // Generate a row for each submission.
+   $row_count = 0;
+@@ -755,7 +777,7 @@
+ 
+     $row = array();
+     if (isset($submission_information['serial'])) {
+-      $row[] = $row_count;
++      $row[] = $serial_start + $row_count;
+     }
+     if (isset($submission_information['sid'])) {
+       $row[] = $sid;
+@@ -808,8 +830,47 @@
+   $export_info['exporter'] = $exporter;
+   $export_info['row_count'] = $row_count;
+   $export_info['last_sid'] = $sid;
+-
++ 
+   return $export_info;
++}
++
++/**
++ * Get options for creating downloadable versions of the webform data.
++ *
++ * @param $node
++ *   The webform node on which to generate the analysis.
++ * @param array $options
++ *   A list of options that define the output format. These are generally passed through the GUI interface.
++ * @param array $submission_information
++ *   An array of data to be displayed as columns in the output.
++ */
++function webform_results_download_options($node, &$options, &$submission_information) {
++  $submission_information = array(
++    'serial' => t('Serial'),
++    'sid' => t('SID'),
++    'time' => t('Time'),
++    'draft' => t('Draft'),
++    'ip_address' => t('IP Address'),
++    'uid' => t('UID'),
++    'username' => t('Username'),
++  );
++
++  if (empty($options)) {
++    $options = array(
++      'delimiter' => variable_get('webform_csv_delimiter', '\t'),
++      'components' => array_merge(array_keys($submission_information), array_keys(webform_component_list($node, 'csv', TRUE))),
++      'select_keys' => 0,
++      'select_format' => 'separate',
++      'range_type' => 'all',
++    );
++  }
++  else {
++    foreach ($submission_information as $key => $label) {
++      if (!in_array($key, $options['components'])) {
++        unset($submission_information[$key]);
++      }
++    }
++  }
+ }
+ 
+ /**
+@@ -1002,3 +1063,4 @@
+ 
+   return $info;
+ }
++
+diff --git a/htdocs/sites/all/modules/contrib/webform/webform.drush.inc b/htdocs/sites/all/modules/contrib/webform/webform.drush.inc
+new file mode 100644
+index 0000000..66b3f13
+--- /dev/null
++++ b/htdocs/sites/all/modules/contrib/webform/webform.drush.inc
+@@ -0,0 +1,99 @@
++<?php
++
++/**
++ * Implementation of hook_drush_command().
++ */
++function webform_drush_command() {
++  $items = array();
++
++  $items['webform-export'] = array(
++    'description' => "Exports webform data in csv format.",
++    'arguments' => array(
++      'nid' => 'The node ID of the webform you want to export (required)',
++    ),
++    'options' => array(
++      'batch-size' => 'The size of batches in rows (default 10000)',
++      'start-batch' => 'The batch to start exporting from (default 0)',
++      'end-batch' => 'The batch to end exporting from (defaults to all batches)',
++      'file' => 'The file name to export to (defaults to print to stdout)',
++      'skip-header' => 'Skip output of header rows (defaults to printing header)',
++    ),
++    'aliases' => array('wfx'),
++  );
++  
++  return $items;
++}
++
++/**
++ * Exports a webform in a series of batches, useful for large data dumps
++ * that would otherwise time out due to memory consumption.
++ *
++ * @param int $nid
++ *   Node ID of the webform that we want to export.
++ * @param $file_name
++ *   The name of the file where we're temporarily storing the exported webform data.
++ *   Because this function calls itself repeatedly, you never need to specify a filename.
++ *   It will be automatically generated on the first run, and will continue to use that file
++ *   on all subsequent runs.
++ * @param $batch
++ *   Number of this particular batch run. Like $file_name, this shouldn't be called explicitly,
++ *   but is passed back to this function on subsequent runs.
++ */
++function drush_webform_export($nid = FALSE, $file_name = NULL, $batch = NULL) {
++  if (!$nid) {
++    return drush_set_error('The node ID of the webform you want to export is required');
++  }
++  module_load_include('inc', 'webform', 'includes/webform.submissions');
++  module_load_include('inc', 'webform', 'includes/webform.export');
++  module_load_include('inc', 'webform', 'includes/webform.components');
++  module_load_include('inc', 'webform', 'includes/webform.report');
++
++  $node = node_load($nid);
++  webform_results_download_options($node, $options, $submission_information);
++  $batch_size = drush_get_option('batch-size', 10000);
++
++  // Open a new Webform exporter object.
++  $exporter = webform_export_create_handler('delimited', $options);
++  if ($batch == NULL) {
++    // On the initial run, set up the file and initiate the batch run.
++    $file_name = drush_get_option('file', tempnam(variable_get('file_directory_temp', file_directory_temp()), 'webform'));
++    $handle = @fopen($file_name, 'w'); // The @ suppresses errors.
++    $exporter->bof($handle);
++    if (!drush_get_option('skip-header', FALSE)) {
++      webform_results_download_headers($node, $options, $submission_information, $exporter, $handle);
++    }
++    @fclose($handle);
++
++    $batch = drush_get_option('start-batch', 0);
++    // Determine the number of batches needed to get all results.
++    $max_batch = ceil(max(webform_get_submission_count($node->nid), $batch_size)/$batch_size);
++    // Allow the user to limit the number of batches, but not go beyond the maximum.
++    $end_batch = min(drush_get_option('end-batch', $max_batch), $max_batch);
++
++    // This is where we repeatedly call this function, by passing in the generated filename
++    // and the updated $batch count.
++    while ($batch < $end_batch) {
++      drush_log(dt('Running batch !batch', array('!batch' => $batch)));
++      drush_do_command_redispatch('webform-export', array($nid, $file_name, $batch));
++      $batch++;
++    }
++
++    // Add the closing bytes.
++    $handle = @fopen($file_name, 'a'); // The @ suppresses errors.
++    $exporter->eof($handle);
++    @fclose($handle);
++    if (drush_get_option('file', FALSE) === FALSE) {
++      // If no filename was specified, print the file and delete it.
++      drush_print(file_get_contents($file_name));  // The @ makes it silent.
++      @unlink($file_name);  // Clean up, the @ makes it silent.
++    }
++  }
++  else {
++    // Inside a specific batch run, we append results to the file.
++    $handle = @fopen($file_name, 'a'); // The @ suppresses errors.
++    $serial_start = $batch_size * $batch;
++    $_GET['page'] = $batch;
++    webform_results_download_rows($node, $options, $submission_information, $exporter, $file_name, $handle, $serial_start, $batch_size);
++    @fclose($handle);
++  }
++}
+\ No newline at end of file

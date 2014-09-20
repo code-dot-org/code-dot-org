@@ -1,0 +1,59 @@
+"ko":
+  devise:
+    confirmations:
+      confirmed: "계정이 확인 되었습니다. 로그인 하세요."
+      send_instructions: "계정 인증 메일이 전송되었습니다."
+      send_paranoid_instructions: "이메일 주소가 등록되어있다면, 계정 인증 메일이 발송됩니다."
+    failure:
+      already_authenticated: "이미 로그인 되어 있습니다."
+      inactive: "아직 계정이 활성화 되지 않았습니다."
+      invalid: "이메일 또는 비밀번호가 다릅니다."
+      invalid_token: "인증 코드가 틀립니다."
+      locked: "계정이 잠겼습니다."
+      not_found_in_database: "이메일 또는 비밀번호가 다릅니다."
+      timeout: "접속이 해제 되었습니다. 다시 로그인 하세요."
+      unauthenticated: "로그인 하거나, 가입하세요."
+      unconfirmed: "계정이 인증되어야 합니다."
+    mailer:
+      confirmation_instructions:
+        subject: "계정 인증"
+      reset_password_instructions:
+        subject: "비밀번호 재설정"
+      unlock_instructions:
+        subject: "계정 잠김 해제"
+    omniauth_callbacks:
+      failure: '"%{reason}"  때문에,  %{kind} 를 인증할 수 없습니다.'
+      success: "%{kind} 로 계정이 인증되었습니다."
+    passwords:
+      no_token: "비밀번호 재설정 메일에 포함되어있는 바로가기 링크로 접속하세요. 재설정 메일로 접속했다면, 전체 URL 주소를 사용했는지
+        확인해 주세요."
+      send_instructions: "비밀번호 재설정 메일이 발송되었습니다."
+      send_paranoid_instructions: "메일 주소가 데이터베이스에 기록되어 있으면, 재설정 메일이 전송됩니다."
+      updated: "비밀번호가 수정 되고, 로그인 되었습니다."
+      updated_not_active: "비밀번호가 수정 되었습니다."
+    registrations:
+      destroyed: "계정이 삭제되었습니다. 감사합니다."
+      signed_up: "환영합니다! 로그인 되었습니다."
+      signed_up_but_inactive: "정상적으로 로그인 하였지만, 계정 인증이 필요합니다."
+      signed_up_but_locked: "정상적으로 로그인 하였지만, 계정이 잠겨 있습니다."
+      signed_up_but_unconfirmed: "계정 인증 메일이 전송되었습니다. 전송된 메일로 인증 받으세요."
+      update_needs_confirmation: "계정 정보가 수정되었습니다. 계정 인증이 다시 필요합니다. 새로운 메일로 계정을 인증해
+        주세요."
+      updated: "계정 정보가 수정되었습니다."
+    sessions:
+      signed_in: "로그인 되었습니다."
+      signed_out: "로그아웃 되었습니다."
+    unlocks:
+      send_instructions: "계정 잠김 해제 메일이 전송되었습니다."
+      send_paranoid_instructions: "계정이 있는 경우, 계정 잠김 해제 메일이 전송됩니다."
+      unlocked: "계정 잠김이 해제 되었습니다. 다시 로그인 하세요."
+  errors:
+    messages:
+      already_confirmed: "이미 확인되었습니다. 다시 로그인 하세요."
+      confirmation_period_expired: " %{period} 이내에 확인 되어야 합니다. 다시 시도해 주세요."
+      expired: "만료 되었습니다. 다시 요청하세요"
+      not_found: "찾을 수 없음"
+      not_locked: "잠기지 않음"
+      not_saved:
+        one: "오류가 발생해 %{resource} 를 저장할 수 없습니다 : "
+        other: "%{count} 개의 오류가 발생해, %{resource} 을 저장할 수 없습니다."

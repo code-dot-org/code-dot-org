@@ -1,0 +1,14 @@
+%h1 Assume identity 
+
+- if flash[:errors]
+  #error_explanation
+    %h2= flash[:error]
+
+%h2 Be careful! Don't mess up any user data!
+
+= form_tag(assume_identity_url, method: 'POST') do
+  Who do you want to be?
+  %br/
+  = text_field_tag 'user_id', '', :placeholder => 'id, email, or username', :size => 80
+  %br/
+  = submit_tag 'Go!', :data => {:confirm => 'You really are going to be careful, right?'}

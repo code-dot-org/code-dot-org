@@ -1,0 +1,303 @@
+
+<html>
+<head>
+<title>Javascript animation: Demo 1</title>
+<style type="text/css">
+
+body {
+ font:76% normal verdana,arial,tahoma;
+ background-color: #AAAAAA;
+}
+canvas{
+	background-color: #FFFFFF;
+	float: left;
+}
+#properties{
+	width: 250px;
+	height: 300px;
+	border: solid 1px #000000;
+	background-color: #FFFFFF;
+	float: left;
+	margin: 10px;
+}
+
+#guiarea{
+	width: 250px;
+	height: 300px;
+	border: solid 1px #000000;
+	background-color: #FFFFFF;
+	float: left;
+	margin: 10px;
+}
+
+h1, h2 {
+ font-size:1em;
+}
+
+#fooObject {
+ /* simple box */
+ position:absolute;
+ left:0px;
+ top:8em;
+ width:5em;
+ line-height:3em;
+ background:#99ccff;
+ border:1px solid #003366;
+ white-space:nowrap;
+ padding:0.5em;
+}
+
+</style>
+<script type="text/javascript">
+
+var canvas;
+var timerId;
+var delayVal = 25;
+var width, height;
+var alpha = 1;
+function background(c){
+	fill(c);
+	canvas.globalAlpha=alpha;
+	rect(0,0,width,height);
+	canvas.globalAlpha=1;
+}
+
+
+
+function setDelay(ms){
+	//if changing delay want to clear old timer anyway
+	// or old one will continue to be called in separate
+	// thread
+	clearInterval(timerId);
+
+
+	if(ms>=0){
+		timerId = setInterval(setDrawVars, ms);
+		delayVal=ms;
+	}
+}
+
+function pause(){ setDelay(-1);}
+function start(){ setDelay(delayVal); }
+
+
+function setDrawVars(){
+	canvas = document.getElementById("myCan").getContext("2d");
+	width = canvas.canvas.width;
+	height = canvas.canvas.height;
+	draw();
+}
+
+function setSize(w,h){
+	canvas.canvas.width=w;
+	canvas.canvas.height=h;
+
+
+}
+
+function init(){
+	//setDrawVars(); //ensure canvas var exists
+	//setDelay(25); //ensure a delay has been set
+	setup();
+	
+}
+
+function fill(c){
+	canvas.fillStyle = c;
+}
+
+function rect(x,y,w,h){
+	canvas.fillRect(x,y,w,h);
+}
+
+function toggleOnionSkin(){
+	if(alpha==1) alpha=0.1;
+	else alpha=1;
+
+}
+
+var selectedComponent = null;
+var selectedValueBefore = null;
+var selectedXBefore = null; 
+var selectedYBefore = null; 
+function setClickedComponent(c){
+
+	if(selectedComponent!=null && c.id==selectedComponent.id){
+		deselectAll();
+	
+		//alert("component clicked was: "+event);
+		
+	}
+	else if(c!=null){
+			c.style.boxShadow = "5px 5px 5px #000000"; 
+			selectedComponent=c;
+			if(c.value!=""){
+				selectedValueBefore = c.value;
+			}
+			selectedXBefore = selectedComponent.style.left;
+			selectedYBefore = selectedComponent.style.top;
+			setPropertyFormValues(selectedComponent);
+
+		}
+}
+
+function setPropertyFormValues(obj){
+	$("prop_id").value = obj.id;
+	$("prop_width").value = obj.style.width.replace("px","");
+	$("prop_height").value = obj.style.height.replace("px","");
+
+	$("prop_fontSize").value = obj.style.fontSize.replace("px","");
+	$("prop_bgcolor").value = obj.style.backgroundColor;
+	console.debug("setting form bgcolor: "+obj.style.backgroundColor);
+	return obj;
+
+}
+
+function moveAnySelected(){
+	if(selectedComponent!=null && movingComponent==1){
+		selectedComponent.style.left = event.clientX-10;
+		selectedComponent.style.top = event.clientY-10;
+	}
+}
+
+function deselectAll(){
+	console.debug("deslecting...")
+	selectedComponent.style.boxShadow="";
+	if(selectedValueBefore!=null){
+		
+			selectedComponent.value=selectedValueBefore;
+			
+	}
+	selectedValueBefore=null;
+	selectedComponent=null;
+	selectedXBefore=null;
+	selectedYBefore=null;
+}
+
+function $(id){
+	return document.getElementById(id);
+}
+
+function addTextInput(id, x, y){
+
+	var gui = document.getElementById("guiarea");
+
+	gui.innerHTML += "<input type=text id='"+id+"' ondblclick='setClickedComponent(this)'>";
+
+	setComponentPosition(id, x, y);
+}
+
+function addLabel(id, text, x, y){
+	var gui = document.getElementById("guiarea");
+
+	gui.innerHTML += "<input type=text id='"+id+"' ondblclick='setClickedComponent(this)' value='"+text+"' onkeydown='toggleMoving(1)' onkeyup='toggleMoving(-1)'>";
+
+	setComponentPosition(id, x, y);
+	$(id).style.borderStyle="none";
+
+}
+
+function addButton(text, functionToCall, x, y){
+
+	var gui = document.getElementById("guiarea");
+
+	gui.innerHTML += "<button id='"+text+"' onClick='"+functionToCall+"' ondblclick='setClickedComponent(this)' onkeydown='toggleMoving(1)' onkeyup='toggleMoving(-1)'>"+text+"</button>";
+
+	setComponentPosition(text, x, y);
+}
+
+function setComponentPosition(id, x, y){
+	var comp = document.getElementById(id);
+	comp.style.position="absolute";
+	comp.style.left=x;
+	comp.style.top=y;
+	comp.style.width = comp.offsetWidth;
+	comp.style.height = comp.offsetHeight;
+	comp.style.fontSize = 12;
+	comp.style.backgroundColor = "#FFFFFF"; // = 1
+}
+
+function addSlider(id, min, max, functionToCall, x, y){
+	var gui = document.getElementById("guiarea");
+
+	gui.innerHTML += "<input type='range' id='"+id+"' min='"+min+"' max='"+max+"' onChange='"+functionToCall+"' ondblclick='setClickedComponent(this)' onkeydown='toggleMoving()'>";
+	
+	setComponentPosition(id, x, y);
+
+}
+
+function setDelayFromRange(obj){
+//	setDelay(obj.value);
+}
+
+function setPropertiesFromForm(){
+	if(selectedComponent!=null){
+		//var c = selectedComponent;
+		//alert("changing values");
+		selectedComponent.id = $("prop_id").value;
+		selectedComponent.style.width = $("prop_width").value;
+		selectedComponent.style.height = $("prop_height").value;
+
+		selectedComponent.style.fontSize = $("prop_fontSize").value;
+		selectedComponent.style.backgroundColor = $("prop_bgcolor").value;
+
+
+
+	}
+}
+
+var movingComponent = -1;
+function toggleMoving(val){
+	movingComponent=val;
+}
+
+//***************** helper funcs above ************
+
+//********* USER CODE BELOW **************
+var dx = 3;
+var dy = 5;
+var x = 10;
+var y = 50;
+var size = 25;
+function setup() {
+
+  addButton("sayHello","hello()", 300,200);
+  addLabel("instructions","Enter your name to say hello", 300,220);
+  addTextInput("name",300,240);
+    addLabel("output","", 300,260);
+
+}
+
+function hello(){
+	//alert("hello");
+	$("output").value = "Hello, "+$("name").value;
+}
+
+
+window.onload = init;
+
+</script>
+</head>
+
+<body onmousemove="moveAnySelected()">
+
+<h1>Javascript animation: Demo 1</h1>
+<div id="properties">
+	id: <input type=text id="prop_id"><br/>
+	onClick: <input type=text><br/>
+	width: <input id="prop_width" type=range  min=20 max=600 onChange="setPropertiesFromForm()"><br/>
+	height: <input id="prop_height" type=range  min=20 max=600 onChange="setPropertiesFromForm()"><br/>
+	x: <input type=text><br/>
+	y: <input type=text><br/>
+	bgcolor: <input type=color id="prop_bgcolor" value="#FFFFFF" onChange="setPropertiesFromForm()"><br/>
+	font-size: <input type=range id="prop_fontSize" min=6 max=40 onChange="setPropertiesFromForm()"><br/>
+	<button onClick="setPropertiesFromForm()">Update</button>
+</div>
+<div id="guiarea">
+
+</div>
+<canvas id="myCan" width=500 height=500></canvas>
+
+
+</body>
+</html>

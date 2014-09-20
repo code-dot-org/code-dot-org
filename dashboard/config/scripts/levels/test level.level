@@ -1,0 +1,42 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-08-05T23:51:38.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "birds",
+    "step_mode": "0",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "start_direction": "1",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,1,1,0,0],[0,0,0,0,4,1,0,0],[0,0,2,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="maze_ifElse">
+          <title name="DIR">isPathForward</title>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_moveForward"/>
+        <block type="maze_forever"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="maze_ifElse">
+          <title name="DIR">isPathForward</title>
+        </block>
+        <block type="maze_forever"/>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Maze>

@@ -1,0 +1,352 @@
+"es-AR":
+  hello: Hola mundo
+  computer_science: Ciencias de la computación
+  computer_science_edweek: Semana de Educación en Ciencias de la Computación
+  csedweek_dates: Diciembre 9-15, 2013
+  n_have_learned_an_hoc: "<h1>#</h1><h3>han aprendido una</h3><h2>HORA DE CÓDIGO&trade;</h2>"
+  anybody_can_learn: Cualquiera puede aprender.
+  learn_now: Aprende Ahora
+  petition_message: Cada estudiante de cada escuela debería tener la oportunidad de
+    aprender ciencia de la computación
+  petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # others.'
+  name: Nombre
+  email: Correo electrónico
+  zipcode: Código postal o país
+  submit: Enviar
+  twentyhours_heading: Prueba nuestro curso de Introducción a la Informática
+  twentyhours_text: "¿Terminaste tu primera Hora de Código? Conoce más sobre informática
+    y conceptos de programación en este curso de seguimiento."
+  twentyhours_trynow: Probar ahora
+  california_heading: Pídele a tu escuela que enseñe ciencia en computación
+  california_text: Cualquier profesor puede ofrecer nuestro <a href='http://learn.code.org/'>
+    curso gratis de introducción</a>.  Cualquier escuela primaria puede <a href='http://code.org/educate/k5'>
+    enseñar informática</a>.  Solicita a las escuelas secundarias < un href = 'http://code.org/educate/districts'
+    > que se asocien con nosotros.
+  california_button: Aprenda más
+  flappy_heading: Flappy Bird en el cumpleaños de Code.org
+  flappy_text: Code.org acaba de cumplir 1 año.<br/><br/>Celebra con nosotros, realizando
+    tu propio juego de  <b>Flappy</b>personalizado.  Crea tus propias reglas del juego
+    y luego compartelo con tus amigos!
+  view_english_site: Ver sitio en inglés
+  non_english_tutorials: 'Tutoriales traducidos a múltiples idiomas:'
+  write_your_first_program: Codifica tu primer programa de computación
+  learn_cs_concepts: Aprende los principios básicos de la informática con programación
+    de arrastrar y soltar. Este es un tutorial en forma de juego con vídeos de Bill
+    Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprende los bucles,
+    las sentencias si-sino y algoritmos básicos.
+  all_ages: Todas las edades
+  beginner: Principiante
+  n_participants: "# de participantes"
+  go: Ir
+  thank_you_: "¡Gracias!"
+  congratulations: Felicidades!
+  congratulations_on_completing_hoc: Felicidades, has completado 1 Hora de Código.
+  get_a_certificate_of_achievement: Recibe un certificado de tu logro
+  enter_valid_email: Por favor ingresa un correo electrónico válido
+  get_a_certificate_message: Te enviaremos un certificado e información acerca de
+    cómo <a href='/learn/beyond'>Aprender más allá de una hora</a>
+  get_a_certificate_message_after: El certificado está en camino. Ahora, seguir adelante
+    con nuestro <a href='http://learn.code.org'> curso de 20 horas</a>, o ver más
+    opciones para <a href='/learn/beyond'> aprender más allá de Una Hora</a>.
+  thanks_for_submitting: "¡Gracias por su envío!"
+  if_you_enjoyed: Si disfrutaste aprendiendo, ¡pídele a tus amigos que lo prueben
+    tambien! Queremos que todo el mundo aprenda.
+  personalize_certificate: Personaliza tu certificado
+  share_achievement: Comparte tu logro
+  beyond_hour_message: Seguir adelante con nuestro <a href='http://learn.code.org'>
+    curso de 20 horas</a>, o ver más opciones para <a href='/learn/beyond'> aprender
+    más allá de Una Hora</a>.
+  leaderboards_for_hoc: Líderes de Una Hora de Código.
+  country: País
+  city: Ciudad
+  gender: Género
+  boys: Niños
+  girls: Niñas
+  give_my_hour: 'Dar mi hora a:'
+  girls_team: Equipo de niñas
+  boys_team: Equipo de chicos
+  tell_the_world: "¡Dile al mundo!"
+  thanks_for_voting: "¡ Gracias por tu voto!"
+  share_on_facebook: Compartir en Facebook
+  share_on_twitter: Compartir en Twitter
+  beyond_an_hour: Más allá de la hora del código
+  get_started: Inicio
+  i_agree: De acuerdo
+  participant_select: "-Seleccionar-"
+  participant_student: Estudiante
+  participant_parent: Padre/madre
+  participant_educator: Educador
+  participant_engineer: Ingeniero de software
+  participant_other: Ninguna de las anteriores
+  i_am_a: Soy un
+  never_spam: Nunca te enviaremos spam
+  enter_country: Introduzca el país si reside fuera de los Estados Unidos
+  petition_thankyou: Gracias por firmar la petición
+  carousel_heading_international: Tutoriales en tu idioma
+  continue_learning_header: Sigue aprendiendo más allá de una hora
+  continue_learning_body: Hay muchas opciones. Puedes aprender online, en una escuela
+    local o en un campamento de verano.
+  learn_next_level: Continuar al siguiente nivel
+  learn_online: Pruebe otros cursos en línea
+  learn_classes: Encontrar clases cerca de ti
+  hoc_is_here: "#HourOfCode está aquí - compruébalo! @codeorg"
+  just_did_hoc: Yo he terminado the HourofCode - Dale un vistazo! @codeorg
+  learn_hoc: Aprende una hora del código
+  beyond_hoc: Más allá de una hora
+  what_gender: "¿Cual es tu sexo?"
+  girl: Femenino
+  boy: Masculino
+  help_recruit_coders: Ayudanos a recrutar más desarrolladores para tu equipo!
+  help_recruit: Ayudanos a recrutar más desarrolladores!
+  lines_of_code: MÁS DE <b># LÍNEAS DE CÓDIGO</b> ESCRITAS HASTA LA FECHA.
+  lines_of_code_alt: "<b>#</b> LÍNEAS DE CÓDIGO ESCRITAS POR ESTUDIANTES"
+  who_has_done_hoc: "¿Quién ha hecho #HourOfCode? @codeorg"
+  hoc_leaderboards: 'Tablero de clasificaciones de La hora del código '
+  students_and_lines: "%{students} estudiantes que han hecho la hora del código y
+    han escrito %{lines} líneas de código."
+  start_hoc: Comienza La hora de código ahora
+  contact_form_topic_press: Prensa/medios de comunicación (entrevista o compromiso
+    de hablar)
+  studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_elementary_title: Elementary courses
+  studiobar_elementary_body: Our three new courses for K&#8209;5
+  studiobar_hoc_title: The Hour of Code
+  studiobar_hoc_body: Learn to code with Angry Birds
+  studiobar_flappy_title: Flappy Code
+  studiobar_flappy_body: Make and share your own Flappy game
+  studiobar_teacher_title: Teacher dashboard
+  studiobar_teacher_body: 'For teachers: view your students'' progress'
+  contact_form_topic_student: Soy un estudiante
+  contact_form_topic_parent: Soy un padre
+  contact_form_topic_teacher: Soy un profesor/educador
+  contact_form_topic_outside_us: Estoy fuera de los Estados Unidos
+  contact_form_topic_contribution: Contribución benéfica
+  contact_form_topic_partner: Me gustaría ser socio
+  contact_form_topic_other: Otros
+  contact_form_label_topic: Tema
+  contact_form_label_email: Tu dirección de correo electrónico
+  contact_form_label_message: Mensaje
+  contact_form_label_submit: Enviar mensaje
+  class_submission_in_school: En la escuela
+  class_submission_in_school_daily_programming_course: Curso diario de programación
+  class_submission_in_school_ap_computer_science: Ciencias de la computación AP
+  class_submission_in_school_full_university_cs_curriculum: Plan de estudio nivel
+    universitario de ciencias de computación (completo)
+  class_submission_in_school_robotics_club: Club de robótica
+  class_submission_in_school_programming_integrated_in_other_classes: Programación
+    integrada en otras clases
+  class_submission_in_school_summer_school_cs_program: Programa de escuela de verano
+    CS
+  class_submission_in_school_exploring_computer_science: Emplorando las ciencias computacionales
+  class_submission_in_school_other: Otros en la escuela
+  class_submission_out_of_school: Fuera de la escuela
+  class_submission_out_of_school_summer_camp: Campamento de verano
+  class_submission_out_of_school_afterschool_program: Programa después de clases
+  class_submission_out_of_school_all-day_workshop: Taller durante todo el día (hasta
+    1 semana)
+  class_submission_out_of_school_multi-week_workshop: Taller de varias semanas
+  class_submission_out_of_school_other: Otro fuera de la escuela
+  class_submission_online: En línea
+  class_submission_online_programming_class: Clase de programación en línea
+  class_submission_online_teacher_resource: Recursos en línea para maestros
+  class_submission_online_other: Otros en línea
+  class_submission_level_preschool: Preescolar
+  class_submission_level_elementary: Escuela primaria
+  class_submission_level_middle_school: Escuela intermedia
+  class_submission_level_high_school: Secundaria
+  class_submission_level_college: Universidad
+  class_submission_level_vocational: Vocacional
+  class_submission_languages_other: Otro (s) idioma (s)
+  volunteer_engineer_submission_commitment_uncertain: Incierto
+  volunteer_engineer_submission_commitment_now_and_then: de vez en cuando
+  volunteer_engineer_submission_commitment_one_hr_per_week: 1 hora por semana
+  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 horas por semana
+  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 horas por semana
+  volunteer_engineer_submission_commitment_more: Más
+  volunteer_engineer_submission_location_flexibility_onsite: Presencial en la escuela
+  volunteer_engineer_submission_location_flexibility_remote: Tutoría remota (profesores
+    o estudiantes)
+  volunteer_engineer_submission_location_flexibility_curriculum: Dispuesto a ayudar
+    contribuyendo en proyectos curriculares de código abierto
+  volunteer_engineer_submission_experience_unspecified: No específico
+  volunteer_engineer_submission_experience_university_student_or_researcher: Vigente
+    estudiante de Universidad (o investigador)
+  volunteer_engineer_submission_experience_software_professional: Profesional en software
+  petition_age: Age
+  dashboard_landing_title: Teacher Home Page
+  dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
+  dashboard_landing_video: Watch this video
+  dashboard_landing_watch_video: for a tour of the new features!
+  dashboard_landing_view_as_student: View this site as a student
+  dashboard_landing_students_title: Your students
+  dashboard_landing_students_manage: View and manage your students
+  dashboard_landing_news_title: Latest news
+  dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
+  dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
+  dashboard_landing_useful_links: Other useful links
+  dashboard_landing_print_certificates: Print certificates for students who finish
+    this course
+  dashboard_landing_educator_blog: Read about news and updates to our materials at
+    our Educator Blog
+  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
+  dashboard_landing_video_player: Test our new video player at your school
+  dashboard_landing_progress_title: Main class progress
+  dashboard_landing_progress_biggest: This is the progress for your biggest section.
+  dashboard_landing_view_progress: View Progress for %{biggest_section}
+  dashboard_landing_available_title: Available courses
+  dashboard_landing_available_courses: Here are the courses currently available for
+    you and your students.
+  dashboard_landing_loading: Loading...
+  dashboard_action_edit: Edit
+  dashboard_action_save: Save
+  dashboard_action_save_all: Save all
+  dashboard_action_cancel: Cancel
+  dashboard_action_delete: Delete
+  dashboard_action_confirm: Delete?
+  dashboard_action_delete_yes: 'Yes'
+  dashboard_action_delete_no: 'No'
+  dashboard_action_done: Done
+  dashboard_action_required: required
+  dashboard_navigation_home_page: Teacher home page
+  dashboard_navigation_all_sections: All sections
+  dashboard_navigation_view_progress: View Progress
+  dashboard_navigation_add_students: Add Students
+  dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_section: 'Section: %{section_name}'
+  dashboard_navigation_student: 'Student: %{student_name}'
+  dashboard_sections_new_section: New section
+  dashboard_sections_jumbotron_instruction: Create new sections and add students to
+    them. Sections help you organize students into smaller groups so you can track
+    their progress and manage their accounts.
+  dashboard_sections_table_section: Section
+  dashboard_sections_table_secret: Secret type
+  dashboard_sections_table_grade: Grade
+  dashboard_sections_table_course: Course
+  dashboard_sections_table_students: Students
+  dashboard_sections_table_code: Section Code
+  dashboard_sections_choose_secret: If you would like to provide accounts to your
+    students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
+  dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
+    each student.
+  dashboard_sections_secret_picture: A <b>picture</b> allows you to set a secret picture
+    for each student, ideal for younger students who can't yet type.
+  dashboard_sections_secret_none: If you would like your students to manage their
+    own accounts, including choosing their own passwords, choose a secret type of
+    <b>none</b>.
+  dashboard_sections_print_secrets: You may then print a sheet of cards containing
+    account information to be distributed to your students individually.
+  dashboard_sections_switch_section: 'Switch section:'
+  dashboard_students_add_student: Add student
+  dashboard_students_add_students: Add multiple students
+  dashboard_students_add_multiple: 'Type or paste the names of your students, one
+    per line:'
+  dashboard_students_new_section: You've created a new section! Now add your students
+    using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
+  dashboard_students_name: Name
+  dashboard_students_age: Age
+  dashboard_students_gender: Gender
+  dashboard_students_secret: Secret
+  dashboard_students_password: Password
+  dashboard_students_username: 'Username: %{student_username}'
+  dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_show_secret: Show secret
+  dashboard_students_auto_generated: Auto-generated
+  dashboard_students_reset_secret: Reset secret
+  dashboard_students_reset_password: Reset password
+  dashboard_students_share_section: 'Share this section''s sign in page with your
+    students:'
+  dashboard_students_print_info: Print out cards with your students' login information.
+  dashboard_students_secret_picture: Secret Picture
+  dashboard_students_reset_picture: You may reset a student's secret picture at any
+    time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
+    picture will be generated for that student to use when they sign in.
+  dashboard_students_secret_word: Secret Word
+  dashboard_students_reset_word: 'You may reset a student''s secret words at any time
+    by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
+    words will be generated for that student to use when they sign in. '
+  dashboard_students_join_link: Tell your students to create their own accounts and
+    join your section at
+  dashboard_students_no_email: If your students do not have email addresses, or you
+    would like to create accounts for them, change this section's secret type to <b>word</b>
+    or <b>picture</b>.
+  dashboard_students_print_page: Print this page
+  dashboard_students_url: URL
+  hoc_faq_title: Preguntas más frecuentes
+  hoc_faq_what_is_hoc_q: Qué es la Hora de Programación?
+  hoc_faq_what_is_hoc_a: La Hora de Programación es una introducción de una hora a
+    la ciencia computacional, diseñada para desmitificar la programación y demostrar
+    que cualquiera puede aprender los conceptos básicos. <a href='http://code.org/learn'>Revisa
+    los tutoriales</a> y busca otros nuevos para la Hora de Programación del 2014.
+  hoc_faq_when_is_hoc_q: "¿Cuándo es la Hora de Programación?"
+  hoc_faq_when_is_hoc_a: La Hora de Programación se llevará a cabo del 8 al 14 de
+    diciembre del 2014. ¿Es una hora <i>específica</i>? No. Puedes hacer la Hora de
+    Programación en cualquier momento durante esta semana. La Hora de Programación
+    está programada para celebrarse anualmente <a href='http://csedweek.org'>la Semana
+    de Ciencias de Computación</a>.
+  hoc_faq_when_is_hoc_uk_q: When is the Hour of Code?
+  hoc_faq_when_is_hoc_uk_a: The Hour of Code will take place during December 8-14,
+    2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime
+    during this week. The Hour of Code in the UK will happen at the same time as in
+    the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer
+    Science Education Week.</a>
+  hoc_faq_why_cs_q: "¿Por qué Ciencias de Computacionales?"
+  hoc_faq_why_cs_a: "<i>Cada</i> estudiante debe tener la oportunidad de aprender
+    ciencias computacionales. Ayuda a fomentar las habilidades de resolución de problemas,
+    la lógica y la creatividad. Al introducirlos tempranamente a los estudiantes,
+    a las ciencias computacionales, tendrán una base para el éxito en cualquier carrera
+    del siglo XXI. Ver más estadísticas en <a href='http://code.org'>Code.org</a>."
+  hoc_faq_how_participate_q: "¿Cómo puedo participar en la Hora de Programación?"
+  hoc_faq_how_participate_a: Regístrese para organizar un evento de la hora de Programación
+    <a href='http://hourofcode.org'>aquí</a> e inicie la planificación. Tú puedes
+    organizar un evento de la Hora de Programación en tú escuela o en tú comunidad
+    &mdash; como en un club extracurricular, en una organización sin fines de lucro
+    o en el trabajo. O, simplemente probarlo cuando Diciembre 8 llegue.
+  hoc_faq_behind_hoc_q: "¿Quién está detrás de la Hora de Programación?"
+  hoc_faq_behind_hoc_a: La Hora de Programación es organizada por <a href='http://code.org'>Code.org</a>,
+    una organización pública sin fines de lucro (501c3) dedicada a ampliar la participación
+    en Ciencias Computacionales poniendose a disposición de más escuelas y aumentando
+    la participación de las mujeres y los estudiantes subrepresentados de color. Una
+    <a href='http://code.org/about/partners'>coalición sin precedentes de socios</a>
+    se ha reunido para apoyar la Hora de Programación, también — incluyendo Microsoft,
+    Apple, Amazon, Boys y Girls Clubs of America y el College Board.
+  hoc_faq_behind_hoc_uk_q: Who is behind the Hour of Code?
+  hoc_faq_behind_hoc_uk_a: The Hour of Code is organised by <a href='http://uk.code.org'>Code.org</a>,
+    a public 501c3 non-profit dedicated to expanding participation in computer science
+    by making it available in more schools, and increasing participation by women
+    and underrepresented students of color. An <a href='http://uk.code.org/about/partners'>unprecedented
+    coalition of partners</a> have come together to support the Hour of Code, too
+    &mdash; including Microsoft, Google, Cambridge University Press, Tech City and
+    The Department of Education.
+  hoc_faq_host_q: No sé nada acerca de programación. ¿Todavía puedo organizar un evento?
+  hoc_faq_host_a: Claro. Las actividades de La Hora de Programación son autodirigidas.
+    Todo lo que tienes que hacer es elegir el tutorial que quieras y escoge una hora
+    — nosotros nos encargamos del resto. También tenemos opciones para cada edad y
+    nivel de experiencia, desde el kindergarten y para arriba. <a href='http://code.org/learn'>Pruebe
+    nuestros tutoriales actuales</a>.
+  hoc_faq_host_uk_q: I don't know anything about coding. Can I still host an event?
+  hoc_faq_host_uk_a: Of course. Hour of Code activities are self-guided. All you have
+    to do is pick the tutorial you want and pick an hour &mdash; we take care of the
+    rest. We also have options for every age and experience-level, from kindergarten
+    and up. <a href='http://uk.code.org/learn'>Try our current tutorials</a>.
+  hoc_faq_need_computers_q: "¿Necesito computadoras para cada participante?"
+  hoc_faq_need_computers_a: No. Tenemos tutorales de la Hora de Programación que funcionan
+    en PCs, teléfonos inteligentes, tabletas y algunos que no requieren ¡ninguna computadora
+    en absoluto! Tú puedes unirte desde donde quiera que estés, con lo que tengas.
+    <br><i>Aquí están algunas opciones:</i> <br> <ul> <li><b>Trabaja en parejas.</b>
+    Las investigaciones muestran que los estudiantes aprenden mejor con <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares
+    de programación</a>, compartiendo una computadora y trabajando juntos. Anima a
+    tus estudiantes a trabajar en pares. <li><b>Una pantalla proyectada.</b> Si tú
+    tienes un proyector y una computadora conectada a Internet, el grupo entero puede
+    hacer una hora de programación juntos. Mira porciones de videos juntos y toma
+    turnos para resolver acertijos o responder preguntas. <li><b>Desconéctate.</b>
+    Ofrecemos tutoriales que no requieren ninguna computadora en absoluto.</ul>
+  hoc_faq_international_q: Estoy fuera de los Estados Unidos. ¿Cómo puedo participar
+    internacionalmente?
+  hoc_faq_international_a: Cualquiera puede organizar un evento de la Hora de Programación,
+    en todo el mundo. El año pasado, estudiantes en 170 países y en 36 idiomas se
+    unieron para la Hora de Programación.
+  hoc_faq_tutorial_q: "¿Cómo puedo hacer un tutorial de Hora de Programación?"
+  hoc_faq_tutorial_a: Si usted está interesado en convertirse en un socio para tutoriales,
+    <a href='/tutorial-guidelines'>vea nuestras directrices e instrucciones</a>. Nos
+    gustaría presentar varias opciones atractivas, pero la meta principal es optimizar
+    la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales.

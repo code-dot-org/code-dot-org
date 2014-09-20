@@ -1,0 +1,7 @@
+.row#lesson
+  .span9#heading
+    %h3.whitetext= data_t_suffix('script.name', current_user.primary_script.name, "title")
+
+.row#stats
+  .span12#rightside
+    = render partial: 'shared/user_stats', locals: { user: current_user, script: current_user.primary_script }

@@ -1,0 +1,68 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-06-26T23:47:25.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "skin": "bee",
+    "instructions": "Collect nectar from all four flowers.",
+    "step_mode": "1",
+    "is_k1": "false",
+    "start_direction": "2",
+    "nectar_goal": "3",
+    "flower_type": "redWithNectar",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,2,0,0,0,0,0,0],[0,1,\"P\",0,0,0,0,0],[0,0,1,\"P\",0,0,0,0],[0,0,0,1,\"P\",0,0,0],[0,0,0,0,1,\"P\",0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,0,98,0,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skip_instructions_popup": "true",
+    "ideal": "8",
+    "maze_data": null
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_nectar"/>
+        <block type="maze_honey"/>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="bee_ifNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">==</title>
+          <title name="ARG2">1</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_nectar"/>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="bee_ifNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">0</title>
+              <next>
+                <block type="bee_ifNectarAmount">
+                  <title name="ARG1">nectarRemaining</title>
+                  <title name="OP">==</title>
+                  <title name="ARG2">1</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Karel>

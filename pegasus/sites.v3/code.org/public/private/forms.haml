@@ -1,0 +1,45 @@
+-require 'cdo/solr'
+-zip_codes = request.post? ? (CSV.parse_line(params[:zip_codes_s].to_s)||[]).map{|i| i.strip} : []
+-kinds_available = ["Petition","HocCertificate2013","CSEdWeekEvent2013","HelpUs2013","BringToSchool2013","ClassSubmission","StudentNomination","TeacherNomination"]
+-kinds = params[:kinds_ss] if request.post?
+-kinds = kinds_available if kinds.nil_or_empty?
+-max_results = 100
+
+%h1 Forms Search
+
+%form{method: :post}
+  %h3 Zip Code(s):
+  %textarea{id:'zip_codes_s', name:'zip_codes_s', style: 'width: 480px'}= zip_codes.join(', ')
+
+  %h3 Form(s):
+  %ul
+    -kinds_available.each do |kind_s|
+      %li
+        %input{type:'checkbox', name:'kinds_ss[]', value:kind_s, checked:kinds.include?(kind_s)}= kind_s
+
+  %input{type:'submit', value:'Search'}
+
+-if request.post?
+  %hr
+  -query_set = []
+  -query_set << zip_codes.map{|i| "zip_code_s:#{i}"}.join(' OR ') unless zip_codes.empty?
+  -query_set << kinds.map{|i| "kind_s:#{i}"}.join(' OR ') unless kinds.empty?
+  -query = "(#{query_set.join(') AND (')})"
+  -matches = Solr::Server.new(host:CDO.solr_server).query(q:query, rows:max_results)
+  %h1= "#{matches.count} results found"
+  %p
+    %form{action:'/private/forms/mailing-list', method:'post'}
+      %input{type:'hidden', name:'query', value:query}
+      %input{type:'submit', value:'Download as Mailing List'}
+  %table
+    %tr
+      %th Name
+      %th Email
+      %th Form
+    -c = 0
+    -matches.each do |i|
+      -break if (c += 1) > max_results
+      %tr
+        %td= i['name_s']
+        %td= i['email_s']
+        %td= i['kind_s']

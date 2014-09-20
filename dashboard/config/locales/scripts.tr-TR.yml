@@ -1,0 +1,161 @@
+"tr":
+  data:
+    script:
+      name:
+        test:
+          'Jigsaw: Learn to drag and drop': 'Yapboz: Nasıl sürükleyip bırakacağınızı
+            öğrenin'
+          The Maze: Labirent
+          Multi: "Çoklu"
+          Match: Eşleştir
+          Math Image: Matematik Görseli
+          title: Deneme Kursu
+          description: Sadece dahili bir deneme kursu.
+        course1:
+          'Jigsaw: Learn to drag and drop': 'Yapboz: Nasıl sürükleyip bırakacağınızı
+            öğrenin'
+          'Maze: Sequence': 'Labirent: Sıra'
+          'Maze: Debugging': 'Labirent: Ayıklama'
+          'Artist 1: Intro': 'Aktör 1: Giriş'
+          Artists 2: Aktör 2
+          Spelling Bee: Bilge Arı
+          Spelling Bee not blockly: Bilge Arı bloklu değil
+          'Bee 1: Intro': 'Arı 1: Giriş'
+          'Maze 2: Loops': 'Labirent 2: Döngüler'
+          'Bee 2: Loops': 'Arı 2: Döngüler'
+          Multi & Match: "Çoklu & Eşleştirme"
+          K-1 Flappy: K-1 Salınım
+          Flappy non blockly: Bloksuz salınma
+          title: Ders 1
+          Artist 2: Aktör 2
+          Happy Maps: Mutlu Haritalar
+          Move it, Move it: Oynat, Oynat
+          'Real-life Algorithms: Plant a Seed': 'Gerçek-yaşam Algoritmaları: Bir Tohum
+            Ek'
+          Building a Foundation: Bir Temel Oluşturma
+          Getting Loopy: Döngüselleşme
+          The Big Event: Büyük Olay
+          Going Places Safely: Biryerlere Güvenle Gitmek
+          description: Kurs 1 ilkokul seviyesinde ve okumaya henüz başlamış olanlar
+            için tasarlanmıştır. Döngüler ve olaylar ile program oluştur. Kursun sonunda
+            tamamen sana ait özel bir oyun, çizim, veya paylaşabileceğin bir hikaye
+            oluştur.
+          'Bee: Sequence': 'Arı: Sıra'
+          'Artist: Sequence': 'Aktör: Sıra'
+          'Artist: Shapes': 'Aktör: Şekiller'
+          'Maze: Loops': 'Labirent: Döngüler'
+          'Bee: Loops': 'Arı: Döngüler'
+          'Studio: Create a Story': 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
+          description_short: Course 1 is designed for early readers in the lower elementary
+            grades.
+        course2:
+          The Maze: Labirent
+          Suzi: Suzi
+          The Artist: Aktör
+          Artist Debugging: Aktör Ayıklama
+          Bounce: Sıçrama
+          'Studio: Create a Story': 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
+          Artist Loops: Aktör Döngüleri
+          Bee Conditionals: Arı Koşullandırmaları
+          Flappy: Flappy
+          title: Ders 2
+          Bee Loops: Arı Döngüleri
+          Artist Functions: Aktör Fonksiyonları
+          The Artist Debugging: Aktör Ayıklama
+          Bee Debugging: Arı Ayıklama
+          Bee Functions: Arı Fonksiyonları
+          Maze Loops: Labirent Döngüleri
+          Graph Paper Programming: Grafik Kağıdı Programlama
+          'Real-life Algorithms: Paper Planes': 'Gerçek-yaşam Algoritmaları: Kağıt
+            Uçaklar'
+          Getting Loopy: Döngüselleşme
+          Relay programming: Röle Programlama
+          Conditionals: Koşullandırıcılar
+          Binary Bracelets: "İkilik Bileklikler"
+          The Big Event: Büyük Olay
+          Your Digital Footprint: Dijital İziniz
+          description: Kurs 2 alt ve orta sınıf ilköğretim öğrencileri için tasarlanmıştır.
+            Döngüler, olaylar ve koşullandırıcılar kullanarak programlar oluştur.
+            Kursun sonunda kendi özel oyununu, çizimini, ve paylaşabileceğin hikayeni
+            oluştur.
+          'Maze: Sequence': 'Labirent: Sıra'
+          'Artist: Sequence': 'Aktör: Sıra'
+          'Maze: Loops': 'Labirent: Döngüler'
+          'Artist: Loops': 'Aktör: Döngüler'
+          'Bee: Loops': 'Arı: Döngüler'
+          'Bee: Debugging': 'Arı: Ayıklama'
+          'Artist: Debugging': 'Aktör: Ayıklama'
+          'Bee: Conditionals': 'Arı: Koşullandırıcılar'
+          description_short: Course 2 is designed for students who can read in the
+            lower and middle elementary grades.
+          'Artist: Sequence2': 'Aktör: Sıra2'
+          'Maze: Sequence2': 'Labirent: Sıra2'
+        course3:
+          The Maze: Labirent
+          'Studio: Create a Story': 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
+          The Artist: Aktör
+          title: Kurs 3
+          Artist Functions: Aktör Fonksiyonları
+          Artist For Loops: Döngüler İçin Aktör
+          Artist Nested Loops: Aktörle Yerleştirilmiş Döngüler
+          Bee Conditionals: Arı Koşullandırıcıları
+          Bee Nested Loops: Arıya Yerleştirilmiş Döngüler
+          Bee Debuggin: Arı Ayıklama
+          Bee Debugging: Arı Ayıklama
+          Bee Functions: Arı Fonksiyonları
+          Artist Functions with Params: Parametreli Aktör Fonksiyonları
+          Bounce: Sıçrama
+          Maze Conditionals: Labirent Koşullandırıcıları
+          Artist Functions with Parameters: Parametreli Aktör Fonksiyonları
+          Computational Thinking: Sayısal Düşünme
+          Functional Suncatchers: Fonksiyonel Güneş Avcıları
+          Songwriting Parameters: "Şarkı yazma"
+          Dice Race: Zar Yarışı
+          Internet: "İnternet"
+          Crowdsourcing: Kalabalık Kaynaklandırma 'Crowdsourcing'
+          Digital Citizenship: Sayısal Vatandaşlık
+          Farmer - While Loops: "Çiftçi - While Döngüleri"
+          description: Kurs 3 öğrencilerinin Kurs 2'yi almış olmaları gerekmektedir.
+            Öğrenciler farklı tipteki döngüler, olaylar, fonksiyonlar, ve koşullandırıcılarla
+            programlar oluşturur. Kursun sonunda kendine özel bir oyun, çizim ve paylaşabileceğin
+            bir hikayen olur.
+          'Studio: Create a Game': 'Oyun Laboratuvarı: Bir Oyun Oluşturmak'
+          Maze: Labirent
+          Artist: Aktör
+          'Artist: Functions': 'Aktör: Fonksiyonlar'
+          'Bee: Functions': 'Arı: Fonksiyonlar'
+          'Bee: Conditionals': 'Arı: Koşullandırıcılar'
+          'Maze: Conditionals': 'Labirent: Koşullandırıcılar'
+          'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
+          'Farmer: While Loops': "Çiftçi: While Döngüleri"
+          'Bee: Nested Loops': 'Arı: Yerleştirilmiş Döngüler'
+          'Bee: Debugging': 'Arı: Ayıklama'
+          description_short: Students taking Course 3 should have already taken Course
+            2.
+          Maze2: Labirent2
+          Artist2: Aktör2
+          'Artist: Functions2': 'Aktör: Fonksiyonlar2'
+          'Bee: Functions2': 'Arı: Fonksiyonlar2'
+          'Bee: Conditionals2': 'Arı: Koşullandırıcılar2'
+          'Maze: Conditionals2': 'Labirent: Koşullandırıcılar2'
+          'Artist: Nested Loops2': 'Aktör: Yerleştirilmiş Döngüler2'
+          'Farmer: While Loops2': "Çiftçi: While Döngüleri2"
+          'Bee: Nested Loops2': 'Arı: Yerleştirilmiş Döngüler2'
+          'Bee: Debugging2': 'Arı: Ayıklama2'
+        msm:
+          title: Ortaokul Matematiği
+          description: Ortaokul Matematiği için özel çalışma sürüyor.
+          Graph Paper Programming: Grafik Kağıdıyla Programlama
+          Assessments: Değerlendirmeler
+          Unit 1: "Ünite 1"
+          Unit 2: "İkinci Ünite"
+        playlab:
+          title: Play Lab
+          description: Create a story or make a game with Play Lab!
+          Play Lab: Play Lab
+          description_short: Create a story or make a game with Play Lab!
+        artist:
+          title: Aktör
+          description: Draw cool pictures and designs with the Artist!
+          Artist: Aktör
+          description_short: Draw cool pictures and designs with the Artist!

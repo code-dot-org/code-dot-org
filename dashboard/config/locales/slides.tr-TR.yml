@@ -1,0 +1,348 @@
+"tr":
+  slides:
+    maze_intro:
+      1:
+        image: notes/hoc1_1.jpg
+        text: Kod saatinin ilk dakikalarına hoş geldin! Hadi, beraber programlamanın
+          ilk zevkli adımlarını atalım.
+      2:
+        image: notes/hoc1_2.jpg
+        text: Kod yazmak için blokları sürükleyip bırakacağınız bir görsel programlama
+          dili olan Blockly'i kullanacağız.
+      3:
+        image: notes/hoc1_3.jpg
+        text: Çoğu kod yazılır, fakat Blockly görseldir. Her blok "gerçek" bir kod
+          satırına karşılık gelir.
+      4:
+        image: notes/hoc1_4.jpg
+        text: Bilgisayar biliminin temellerini, Mars aracını kontrol etmekten uygulamalar
+          yapmaya kadar her yerde kullanılan kavramları öğreneceksiniz.
+      5:
+        image: notes/hoc1_5.jpg
+        text: Bir program, bilgisayarınızın takip etmesi için yaratılmış bir talimatlar
+          kümesidir.
+      6:
+        image: notes/hoc1_6.jpg
+        text: "İlk programınızın amacı, Yeşil Domuzu vurmak için labirent aracılığıyla
+          bir Angry Bird elde etmektir."
+      7:
+        image: notes/hoc1_7.jpg
+        text: Sol taraf programın çalıştığı labirenttir. Her bulmaca için talimatlar
+          labirent altındadır.
+      8:
+        image: notes/hoc1_8.jpg
+        text: Ortadaki araç kutusu Angry Bird için komutlara sahiptir. Kodunuzu oluşturmak
+          için bunları kullanacaksınız.
+      9:
+        image: notes/hoc1_9.jpg
+        text: Sağ taraf, programınızı inşa etmek için araç kutusundan blok sürükleyeceğiniz
+          çalışma alanıdır. Blok silmek için, bloğu köşedeki çöp kutusuna sürükleyin.
+      10:
+        image: notes/hoc1_10.jpg
+        text: Her blok bir talimattır. Eğer "ileri taşı" bloğunu çalışma alanına sürükleyip
+          "Programı Çalıştır"a basarsanız, kuş labirent üzerinde bir boşluk hareket
+          eder.
+      11:
+        image: notes/hoc1_11.jpg
+        text: Bir hareket daha yapmak için, çalışma alanınızda birçok blok sürükleyebilir
+          ve onları birlikte ekleyebilirsiniz. Kuş yukarıdan aşağıya doğru komutları
+          yapacaktır.
+      12:
+        image: notes/hoc1_12.jpg
+        text: Eğer bir programı çalıştırmak ve düzeltme yapıp tekrar denemek istiyorsanız
+          "Sıfırla" düğmesine basın.
+      13:
+        image: notes/hoc1_13.jpg
+        text: Haydi gidip oradaki domuzları alalım!
+    artist_intro:
+      1:
+        image: notes/stage5_1.jpg
+        text: Merhaba, ben JR! Her yarış araba takımı kazanmak için bilgisayar mühendislerine
+          ihtiyaç duyar. Arabanın daha hızlı gitmesi için verileri analiz eder.
+      2:
+        image: notes/stage5_2.jpg
+        text: Bu bulmacalarda, gidebildikleri yere kadar giden çizgileri çizen sanatçı
+          olacaksınız.
+      3:
+        image: notes/stage5_3.jpg
+        text: Bu blok "100 piksel ilerle" diyor. Pikseller, ekranındaki ufacık noktalardır.
+      4:
+        image: notes/stage5_4.jpg
+        text: Bu blok " 90 derece dönün." diyor. Bu senin sanatçı "dönüş" olarak aynı
+          miktarda labirent bulmacalar engeller dönecek.
+      5:
+        image: notes/stage5_5.jpg
+        text: Click on the arrow in either of these blocks to change the amount the
+          artist moves forward or turns. Play around to get familiar with these new
+          blocks.
+    farmer_intro:
+      1:
+        image: notes/stage9_1.jpg
+        text: Merhaba, ben Paola! Bu bulmacalarda sen, arazisini dümdüz yapıp ekinler
+          dikmek isteyen bir çiftçisin.
+      2:
+        image: notes/stage9_2.jpg
+        text: Ona çamur yığınlarını kaldırmak ve tüm delikleri doldurmak için yardım
+          etmelisin.
+      3:
+        image: notes/stage9_3.jpg
+        text: The new blocks remove 1 shovelful of dirt from a pile and fill in 1
+          shovelful of dirt to a hole.
+      4:
+        image: notes/stage9_4.jpg
+        text: Farklı boyutlarda yığın ve delikler olduğu için çiftçiye kaç kürek dolusu
+          toprak kullanacağını/alacağını söylemelisin.
+    flappy_intro:
+      1:
+        image: notes/flappy01.jpg
+        text: Hi, I'm Katie! One of the most exciting things about computer science
+          is that a computer program can be interactive.
+      2:
+        image: notes/flappy02.jpg
+        text: Any time somebody clicks or taps or types on a computer or phone, that
+          generates an EVENT, and there's some code that decides what to do when an
+          EVENT occurs.
+      3:
+        image: notes/flappy03.jpg
+        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse
+          is clicked, play a sound" '
+      4:
+        image: notes/flappy04.jpg
+        text: Have you ever heard of the game FlappyBird? By using Event handlers,
+          we're going to learn to program our own custom version of FlappyBird!
+      5:
+        image: notes/flappy05.jpg
+        text: The code you'll write involves dragging and dropping blocks that represent
+          commands for the computer. Under the hood, each of these blocks is represented
+          by real code.
+      6:
+        image: notes/flappy06.jpg
+        text: 'If you take a look at the workspace, there are some green blocks that
+          are filled in for you - these are "event handlers" '
+      7:
+        image: notes/flappy07.jpg
+        text: If you want the bird to FLAP when you CLICK the mouse, you can do that
+          by attaching the "FLAP" block to the appropriate event handler, and now
+          in your game whenever you click the mouse, the bird will flap.
+      8:
+        image: notes/flappy08.jpg
+        text: In each puzzle of this activity we'll introduce new types of events
+          as green blocks on the workspace, and you can decide the appropriate blocks
+          to add in response to those events.
+      9:
+        image: notes/flappy09.jpg
+        text: When you see a drop down arrow like this, that means you can change
+          the settings - like what sound to play when flappy hits the ground.
+      10:
+        image: notes/flappy10.jpg
+        text: In the final puzzle you'll be able to create your own game and share
+          it with your friends. Have fun!
+    loop_times:
+      1:
+        image: notes/hoc2_1.jpg
+        text: Merhaba, ben Mark! Haydi döngüleri öğrenelim. Döngüleri kullanarak,
+          bir bilgisayara herhangi bir komut dizisini defalarca tekrar etmesini söyleyebilirsiniz,
+          hatta binlerce ve milyarlarca kez.
+      2:
+        image: notes/hoc2_2.jpg
+        text: Bu bulmacada, domuzu almak için kuşu 5 boşluk ileri hareket ettirmek
+          istiyoruz.
+      3:
+        image: notes/hoc2_3.jpg
+        text: Biz bize yardımcı olması için yeni "tekrar" bloğunu kullanabiliriz.
+      4:
+        image: notes/hoc2_4.jpg
+        text: 5 "ilerle" blogunu dışarı sürüklemek yerine...
+      5:
+        image: notes/hoc2_5.jpg
+        text: '"İlerle" blogunu "tekrar" blogunun içine koyabilir ve blogun içine
+          kaç kez tekrarlaması gerektiğini gösteren bir sayı yazabiliriz.'
+      6:
+        image: notes/hoc2_6.jpg
+        text: 've bu önemli: "Tekrar" blogunun içine birden fazla komut yerleştirebiliriz.'
+      7:
+        image: notes/hoc2_7.jpg
+        text: Yeni "Tekrar" blogunu kullanmanın keyfini çıkar!
+    loop_until:
+      1:
+        image: notes/hoc3_1.jpg
+        text: Merhaba, ben Chris . Miami Heat'e katılmadan önce Bilgisayar Bilimleri
+          Eğitim için Georgia Tech 'e gittim. Hadi bizim yeni "tekrar et" bloğumuzu
+          deneyelim.
+      2:
+        image: notes/hoc3_2.jpg
+        text: Eğer kuşun domuzu alması için gitmesi gereken uzaklığı bilmeseydik?
+      3:
+        image: notes/hoc3_3.jpg
+        text: Eğer, "ilerle" blogunu "repeat until" blogunun içine koyarsak, kuş domuzu
+          alana kadar (veya bir duvara çarpana kadar) ilerler.
+      4:
+        image: notes/hoc3_4.jpg
+        text: 'bu önemli: önceki gibi, "repeat until" blogunun içine birden fazla
+          blok yerleştirebiliriz ve bunların tamamı tekrarlanır.'
+    if:
+      1:
+        image: notes/hoc4_1.jpg
+        text: 'Selam, ben Bill! Hadi, yeni bir temel kavram öğrenelim: "eğer" komutları.
+          Bilgisayarlar bu komut ile karar alırlar.'
+      2:
+        image: notes/hoc4_2.jpg
+        text: Sen de "eğer" ifadesini her gün kullanıyorsun. Her sabah dışarı çıkmadan
+          önce, EĞER dışarıda yağmur yağıyorsa ceketimi giyinmeliyim, dersin.
+      3:
+        image: notes/hoc4_3.jpg
+        text: Zombiye solda bir yol olup olmadığını kontrol etmesini, ve EĞER solda
+          bir yol bulursa o yöne dönmesi gerektiğini söyleyebiliriz.
+      4:
+        image: notes/hoc4_4.jpg
+        text: Bunun için kod yazmak için, "if" blogunu dışarı sürükle ve bir "sola
+          dön" blogunu onun içine yerleştir.
+      5:
+        image: notes/hoc4_5.jpg
+        text: Şimdi, eğer bunun üzerine bir  "ilerle" blogu ve hepsinin çevresine
+          bir "takrar" blogu koyarsak, zombi her hareket edişinde, solda bir patika
+          olup olmadığını kontrol edecek ve dönecek. "Tekrar" komutu her adımda dönüşü
+          kontrol etmek için çok önemli.
+      6:
+        image: notes/hoc4_6.jpg
+        text: 'Eğer deyimleri Bilgisayar Biliminde çok önemli. Yazdığım ilk programlardan
+          biri Tic Tac Toe oyunu, ve orada şöyle bir Eğer deyimi vardı:  EĞER bir
+          kişi kazanmak üzereyse, kazanmasını engellemek üzere o noktanın önünü kes.'
+      7:
+        image: notes/hoc4_7.jpg
+        text: '"if" blogunu kullanarak eğlenin!'
+    if_else:
+      1:
+        image: notes/hoc5_1.jpg
+        text: Selam, benim adım Saloni. Bilgisayar Bilimlerini sağlık ve ilaç sorunlarını
+          çözmeye yardımcı olmak için kullanıyorum. Hadi "eğer değilse" bloğu hakkında
+          bir şeyler öğrenelim. "eğer" bloğu gibi görünüyor ama sonunda "değilse"
+          diyen fazladan bir parçası var.
+      2:
+        image: notes/hoc5_2.jpg
+        text: Eğer "yap" diyen noktaya "ilerle" blogu ve "başka" diyen noktaya da
+          "sola dön" blogu yerleştirirsem bu demektir ki zombi iki seçenekten birini
+          seçecektir. EĞER önünde yol varsa, zombi ileri hareket edecek, aksi takdirde
+          (önünde yol yoksa), zombi sola dönecektir.
+      3:
+        image: notes/hoc5_3.jpg
+        text: '"eğer" bloğu gibi, "eğer değilse" bloğunu da "tekrar" bloğunun içine
+          yerleştirebiliriz, bu sayede zombi hareket etmeye devam edecek ve aynı zamanda
+          "eğer değilse" bloğu da dönülecek bir yer olup olmadığını kontrol edecek.'
+      4:
+        image: notes/hoc5_4.jpg
+        text: "Şimdi, bu zombileri ait oldukları yere sok!"
+    function:
+      1:
+        image: notes/stage13_1.jpg
+        text: Merhaba, Ben Brina, Instagram'ın bir mühendisiyim. Kullanmak istediğiniz
+          belirli kodları tekrar tekrar yazmak yerine, bunun için sadece bir blok
+          kullanabilirsiniz.
+      2:
+        image: notes/stage13_2.jpg
+        text: Fonksiyonları tanımlamayı öğreneceğiz. Fonksiyon tanımları köşesinde
+          bir yıldız vardır.  Fonksiyon isimleri üst çizgide yazılıdır.
+      3:
+        image: notes/stage13_3.jpg
+        text: İçeri giden blokların tanımlamaları bize ne yaptıklarını söyler. Yani
+          bu işlev tanımında "5 doldurun" denildi ve "tekrar" blok ve "doldurmak"
+          blok oluşdu.
+      4:
+        image: notes/stage13_4.jpg
+        text: The definition sits on the workspace, but our farmer won't run the function
+          until we drag out our "fill 5" function block from functions category.
+      5:
+        image: notes/stage13_5.jpg
+        text: Let's put the "fun" back in "FUNction!"
+    loop_while:
+      1:
+        image: notes/stage9_5.jpg
+        text: 'Selam, ben Makinde! Hadi, "süresince bloğu." hakkında bir şeyler öğrenelim. '
+      2:
+        image: notes/stage9_6.jpg
+        text: The "while block" will do whatever you put inside it AS LONG AS the
+          statement on the top is TRUE.
+      3:
+        image: notes/stage9_7.jpg
+        text: For example, if the farmer is standing on a pile, she will continue
+          to remove 1 shovelful WHILE there is still a pile beneath her.
+    loop_for:
+      1:
+        image: notes/stage11_1.jpg
+        text: Selam, ben Trina. Pixar'da çalışıyorum. Shrek dahil bir takım film projelerinde
+          görev aldım.
+      2:
+        image: notes/stage11_2.jpg
+        text: Bu bizim yeni "sayaç" döngümüz. Her eylemi tekrar ve tekrar gerçekleştirir,
+          sen de bu eylemin her seferinde hafifçe değişmesini sağlayabilirsin.
+      3:
+        image: notes/stage11_3.jpg
+        text: In this example, our "counter" loop says "count with counter from 50
+          to 90 by 10" and inside it, we have our "draw a square" block. Drag the
+          "counter" block from the "Variables" section into the "length" spot.
+      4:
+        image: notes/stage11_4.jpg
+        text: This means our artist is going to draw a square that has 50 pixel length
+          sides, then it will add 10 to that and draw a square with 60 pixel length
+          sides. Then it will keep adding 10 and drawing squares until it reaches
+          90. So we'll have squares of 50, 60, 70, 80, and 90.
+    parameters:
+      1:
+        image: notes/stage15_1.jpg
+        text: Selam, ben Janete. Zynga'da mühendisim.
+      2:
+        image: notes/stage15_2.jpg
+        text: What if we want to draw a bunch of triangles and have their lengths
+          be different sizes?
+      3:
+        image: notes/stage15_3.jpg
+        text: We could write all that code out by hand or we can use a function with
+          parameters.
+      4:
+        image: notes/stage15_4.jpg
+        text: Bunu yapmak için; fonksiyon tanımındaki "draw a triangle" butonuna tıklayın.
+          Daha sonra "isim giriniz" bloğunu "girdi" bloğuna sürükleyin.
+      5:
+        image: notes/stage15_5.jpg
+        text: Then if you write "length" in the spot where it says "x" and press "Enter"
+          you'll create a length input for your function.
+      6:
+        image: notes/stage15_6.jpg
+        text: Then click on the star. Now, you want to click on the variables category
+          and drag the "length" block into the "move forward" block of your function
+          definition. And drag away the old number block.
+      7:
+        image: notes/stage15_7.jpg
+        text: To use your function with parameters, click on the functions category
+          and drag out your "draw a triangle with length" function.
+      8:
+        image: notes/stage15_8.jpg
+        text: "Şimdi farklı boyutlarda üçgenler çizmek için matematik bloğunu kullanarak
+          farklı numaralar girebilirsin."
+    hoc_wrapup:
+      1:
+        image: notes/hoc6_1.jpg
+        text: Tebrikler! Çözdüğün son bulmacayla, HERHANGİ bir robota - bir zombi,
+          bir kuş, bir mars gezgini ve hatta otomatik bir arabaya- dallara ayrılmayan
+          bir labirentte veya herhangi bir uzunluktaki bir tünelde yolunu nasıl bulacağını
+          söyleyen kodu yazmış oldun.
+      2:
+        image: notes/hoc6_2.jpg
+        text: Kullanmış olduğun basit temeller deneyimlediğin ve deneyimleyeceğin
+          her türlü program ve uygulamanın kalbinde yer alır. Tekrar döngülerini,
+          'kadar tekrarla', 'eğer' ve 'eğer değilse' ifadelerini öğrendik.
+      3:
+        image: notes/hoc6_3.jpg
+        text: Eğer kod saatinin ilk dakikalarından hoşlandıysanız, bilgisayar bilimi
+          eğitiminize devam etmek için code.org 'u ziyaret edin! 20 saat kursu tamamladığınızda,
+          programlamanın temellerine hakim olacaksınız. Telefon uygulamalarını, robot
+          talimatlarını ve oyunları yazmayı öğreneceksiniz. Bunlarla da sınırlı değil,
+          hayal gücünüz ile sınırlı...
+      4:
+        image: notes/hoc6_4.jpg
+        text: 'Teknoloji yaptığımız her şeyi değiştiriyor ve genç ya da yaşlı olmanız
+          hiç fark etmez: programlama keyifli ve yaratıcıdır, herkes öğrenebilir!'
+    20_wrapup:
+      1:
+        image: notes/bird.png
+        text: Notları gösterme yakında geliyor!

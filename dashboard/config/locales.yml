@@ -1,0 +1,293 @@
+# Root keys are locale codes as strings.
+# Values can either be the string name of another locale or a map.
+#
+# String values are used to expand languages to include a default region.
+#
+# Map values can have the following keys
+#   english: Name of language in English.
+#   native: Name of language in the language itself.
+#   fallback: Specifies a Rails-level I18n fallback.
+#   debug: Causes a language to not show up in the production environment.
+
+"af": "af-ZA"
+"af-ZA":
+  english: "Afrikaans"
+  native: "Afrikaans"
+  debug: true
+
+"ar": "ar-SA"
+"ar-SA":
+  english: "Arabic"
+  native: "العربية"
+  dir: 'rtl'
+  webfonts: false
+
+"az": "az-AZ"
+"az-AZ":
+  english: "Azerbaijani"
+  native: "Azərbaycan dili"
+  webfonts: false
+
+"bg": "bg-BG"
+"bg-BG":
+  english: "Bulgarian"
+  native: "български"
+  webfonts: "false"
+
+"bn": "bn-BD"
+"bn-BD":
+  english: "Bengali"
+  native: "বাংলা"
+  debug: true
+  webfonts: false
+
+"ca": "ca-ES"
+"ca-ES":
+  english: "Catalan"
+  native: "català"
+
+"cs": "cs-CZ"
+"cs-CZ":
+  english: "Czech"
+  native: "čeština"
+
+"cy": "cy-GB"
+"cy-GB":
+  english: "Welsh"
+  native: "Cymraeg"
+  debug: true
+
+"da": "da-DK"
+"da-DK":
+  english: "Danish"
+  native: "dansk"
+
+"de": "de-DE"
+"de-DE":
+  english: "German"
+  native: "Deutsch"
+
+"el": "el-GR"
+"el-GR":
+  english: "Greek"
+  native: "ελληνικά"
+  webfonts: false
+
+"en": "en-US"
+"en-US":
+  english: "English"
+  native: "English"
+  fallback: "en" # Need this because source files use "en", not "en-US"
+"en-PLOC":
+  english: "Pseudoloc"
+  native: "Pseudoloc"
+  debug: true
+
+"es": "es-ES"
+"es-ES":
+  english: "Spanish"
+  native: "español"
+
+"eu": "eu-ES"
+"eu-ES":
+  english: "Basque"
+  native: "Euskara"
+  debug: true
+
+"fa": "fa-IR"
+"fa-IR":
+  english: "Persian"
+  native: "فارسی"
+  dir: 'rtl'
+  webfonts: false
+
+"fi": "fi-FI"
+"fi-FI":
+  english: "Finnish"
+  native: "suomi"
+
+"fil": "fil-PH"
+"fil-PH":
+  english: "Filipino"
+  native: "Pilipino"
+  debug: true
+
+"fr": "fr-FR"
+"fr-FR":
+  english: "French"
+  native: "français"
+
+"he": "he-IL"
+"he-IL":
+  english: "Hebrew"
+  native: "עברית"
+  dir: 'rtl'
+  webfonts: false
+
+"hi": "hi-IN"
+"hi-IN":
+  english: "Hindi"
+  native: "हिन्दी, हिंदी"
+  debug: true
+  webfonts: false
+
+"hr": "hr-HR"
+"hr-HR":
+  english: "Croatian"
+  native: "Hrvatska"
+  debug: true
+
+"hu": "hu-HU"
+"hu-HU":
+  english: "Hungarian"
+  native: "magyar"
+
+"id": "id-ID"
+"id-ID":
+  english: "Indonesian"
+  native: "Bahasa Indonesia"
+
+"is": "is-IS"
+"is-IS":
+  english: "Icelandic"
+  native: "Íslenska"
+
+"it-IT":
+  english: "Italian"
+  native: "Italiano"
+
+"ja": "ja-JP"
+"ja-JP":
+  english: "Japanese"
+  native: "日本語"
+  webfonts: false
+
+"ko": "ko-KR"
+"ko-KR":
+  english: "Korean"
+  native: "한국어"
+  webfonts: false
+
+"lt": "lt-LT"
+"lt-LT":
+  english: "Lithuanian"
+  native: "lietuvių kalba"
+  debug: true
+
+"ms": "ms-MY"
+"ms-MY":
+  english: "Malay"
+  native: "بهاس ملايو"
+  debug: true
+  webfonts: false
+
+"nl-NL":
+  english: "Dutch"
+  native: "Nederlands"
+
+"no": "no-NO"
+"no-NO":
+  english: "Norwegian"
+  native: "Norsk"
+
+"pl": "pl-PL"
+"pl-PL":
+  english: "Polish"
+  native: "język polski"
+
+"pt-BR":
+  english: "Portuguese (Brazil)"
+  native: "Português (Brasil)"
+
+"pt-PT":
+  english: "Portuguese (Portugal)"
+  native: "Português (Portugal)"
+
+"ro": "ro-RO"
+"ro-RO":
+  english: "Romanian"
+  native: "Română"
+
+"ru": "ru-RU"
+"ru-RU":
+  english: "Russian"
+  native: "русский язык"
+  webfonts: false
+
+"sk": "sk-SK"
+"sk-SK":
+  english: "Slovak"
+  native: "slovenský jazyk"
+  debug: true
+
+"sl": "sl-SI"
+"sl-SI":
+  english: "Slovenian"
+  native: "slovenski jezik"
+  debug: true
+
+"sq": "sq-AL"
+"sq-AL":
+  english: "Albanian"
+  native: "gjuha shqipe"
+  debug: true
+
+"sr": "sr-SP"
+"sr-SP":
+  english: "Serbian"
+  native: "српски језик"
+  webfonts: false
+
+"sv": 'sv-SE'
+"sv-SE":
+  english: "Swedish"
+  native: "Svenska"
+
+"ta": "ta-IN"
+"ta-IN":
+  english: "Tamil"
+  native: "தமிழ்"
+  debug: true
+  webfonts: false
+
+"th": "th-TH"
+"th-TH":
+  english: "Thai"
+  native: "ไทย"
+  debug: true
+  webfonts: false
+
+"tr": "tr-TR"
+"tr-TR":
+  english: "Turkish"
+  native: "Türkçe"
+
+"uk": "uk-UA"
+"uk-UA":
+  english: "Ukrainian"
+  native: "українська мова"
+  webfonts: false
+
+"ur": "ur-PK"
+"ur-PK":
+  english: "Urdu"
+  native: "اردو"
+  debug: true
+  dir: 'rtl'
+  webfonts: false
+
+"vi": "vi-VN"
+"vi-VN":
+  english: "Vietnamese"
+  native: "Tiếng Việt"
+  debug: true
+
+"zh-TW":
+  english: "Chinese (Traditional)"
+  native: "繁體字"
+  webfonts: false
+
+"zh-CN":
+  english: "Chinese (Simplified)"
+  native: "简体字"
+  webfonts: false

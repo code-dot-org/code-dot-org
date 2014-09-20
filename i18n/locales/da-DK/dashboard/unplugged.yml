@@ -1,0 +1,148 @@
+"da":
+  data:
+    unplugged:
+      Unplug1:
+        title: "Introduktion til datalogi"
+        desc: 'Denne lektion vil indføre begrebet datalogi og forklare hvad en datalog gør.  Det vil også give de studerende en mulighed for at påtage sig rollen som en datalog.  Ved udgangen af aktiviteten, vil hver elev har en tag-med-hjem oplevelse om, hvad han eller hun har lært.  Du kan være fristet til at springe undervisningen med forklaringen at computer ord unge børn over, men hvis du præsentere dem på en sjov og legende måde nu, vil det være langt mere produktivt, end at vente på mere avancerede muligheder.'
+        pdfs:
+          - unplug1
+        video: "Unplug1"
+      Unplug2:
+        title: "Data-Tænkning"
+        desc: |
+          Med intet andet end papir og markører, vil eleverne lære de fire trin i data-tænkning. Efter en kort introduktion, skal eleverne opdeles i grupper, hvor de skal oprette retninger for andre studerende at tegne en specifik monster (fra et katalog af forudvalgte monstre). 
+          Hele opgaven skal nedbrydes, så holdet kan analysere alle monstre i kataloget for mønstre, abstraktioner af forskellige detaljer fra monstre, derefter bruge disse oplysninger til at oprette en algoritme (retninger) til et andet team til at tegne en bestemt monster. Hold vil derefter skifte algoritmer med en anden gruppe og tegne monster baseret på hvad denne algoritme angiver. Er tegningen hvad den oprindelige team er beregnet?
+        pdfs:
+          - unplug2
+        video: "Unplug2"
+      Unplug3:
+        title: "Programmering på millimeterpapir"
+        desc: 'Ved at programmere hinanden til at tegne billeder, vil de studerende begynde at forstå, hvad programmering egentlig handler om. Klassen starter med at studerende instruerer hinanden i at farve firkanter på millimeterpapir i et forsøg på at reproducere et eksisterende billede.  Hvis der er tid, kan lektionen afsluttes med billeder som de studerende selv har lavet.'
+        pdfs:
+          - unplug3
+        video: "Unplug3"
+      Unplug4:
+        title: "Algoritmer"
+        desc: 'Denne lektion dækker algoritmer.  Ved hjælp af tangram figurer og millimeterpapir, vil den første øvelse vise, hvor vigtigt det er at gøre hver instruktion så klar og utvetydigt som muligt.  Bagefter, vil klassen undersøge, hvor mange måder man kan folde papir til et rektangel, og bemærke, hvordan nogle metoder kan tage flere eller færre foldninger end andre.'
+        pdfs:
+          - unplug4
+        video: "Unplug4"
+      Unplug5:
+        title: "Funktioner"
+        desc: 'I denne lektion vil studerende lave en solfanger af snor, perler og et specielt smykke. Studerende vil følge en række gentagne trin, derefter blive bedt om at identificere visse færdigheder", som gentages flere gange. Når disse egenskaber er defineret, vil de blive kaldt fra en hovedprogrammet og hele den smukke proces vil blive skabt på et enkelt ark af papir. Det endelige program vil være rettet mod den hele klassen, uanset deres type snor, perler og smykker. For effektivt at tillade dette, skal eleverne "ud abstraktere " detaljerne i deres specifikke materialer og oprette vendinger for en persons forsyninger.  Denne brug af generiske pladsholdere er en vidunderlig introduktion til variabler.'
+        pdfs:
+          - unplug5
+        video: "Unplug5"
+      Unplug6:
+        title: "Betingelser"
+        desc: 'Dette er et klasse spil.  Efter at have indført begreberne betingelser, hvis-sætninger og sløjfer, kan klassen samlet øve ved hjælp af et i forvejen skrevet program, et sæt kort, og held med at trække et kort.'
+        pdfs:
+          - unplug6
+        video: "Unplug6"
+      Unplug7:
+        title: "Sangskrivning"
+        desc: 'Læse tekster er en temmelig intuitivt for de fleste studerende.  Vi vil tage en aktivitet, der allerede er fælles viden og flytte det ind i en solid uddannelse på definition og kaldende funktioner. Når studerende er bekendt med at definere/opkald, vil vi tilføje de ekstra muligheder, der kommer sammen med tildele parametre inden for disse funktionskald.'
+        pdfs:
+          - unplug7
+        video: "Unplug7"
+      Unplug8:
+        title: "Abstraktion"
+        desc: "Denne aktivitet kombinerer din elevernes daglige rutine og en Mad-Lib stil tænknings spil, for at hjælpe din klasse lære om effektiviteten af abstraktion."
+        pdfs:
+          - unplug8
+        video: "Unplug8"
+      Unplug9:
+        title: "Stafet-programmering"
+        desc: 'Denne lektion vil tage en idé fra en tidligere aktivitet (4. Millimeterpapir programmering) og bruge disse færdigheder til at understrege betydningen af at gennemføre programmer, der opererer i sekvens og ofte kontrollere programmer for "fejl".'
+        pdfs:
+          - unplug9
+        video: "Unplug9"
+      Unplug10:
+        title: "Internettet"
+        desc: "I denne lektion, vil studerende foregive at flyde gennem internettet, alt imens de lærer om web-adresser, IPs og DNS."
+        pdfs:
+          - unplug10
+        video: "Unplug10"
+      Unplug11:
+        title: "Konklusion"
+        desc: "Den endelige færdiggørelse i de første 20 timers serien vil hjælpe klassen med at genopleve alle deres yndlings øjeblikke, i mens give dem næste skridt, de kan tage på deres egen hvis de er interesseret i at fortsætte rejsen computer videnskab."
+        pdfs:
+          - unplug11
+        video: "Unplug11"
+      UnplugHappyMaps:
+        title: "Glade Kort"
+        desc: "Studerende laver simple algoritmer (sæt af instruktioner) til at flytte en figur gennem en labyrint, ved brug af en enkelt kommando."
+        video: "C1_happy_maps_unplugged"
+      MoveIt:
+        title: "Flyt det, Flyt det"
+        desc: "Studerende laver simple algoritmer (sæt af instruktioner) til at flytte en figur gennem en labyrint, ved brug af en enkelt kommando."
+        video: "C1_moveitmoveit_unplugged"
+      PlantASeed:
+        title: 'Real-life algoritmer: Plant et frø'
+        desc: 'Denne lektion gør opmærksom på måder, vi bruge algoritmer i vores daglige liv, ved hjælp af handlingen "plant et frø" som eksempel. Der lægges også vægt på det større billede i datalogi og hvordan algoritmer spiller en væsentlig rolle.'
+        video: "C1_planting_seed"
+      BuildingAFoundation:
+        title: "Opbygge et fundament"
+        desc: "Studerende opbygger en struktur ved hjælp af tildelte forsyninger. Strukturer skal udføre en opgave (nå en visse højde eller bære en vis vægt), og eleverne diskutere idéen om at være vedholdende, når tingene bliver kompliceret."
+        video: "C1_building_foundation"
+      GettingLoopy:
+        title: "Blive Svimmel"
+        desc: "Denne lektion introducerer begrebet programmering af løkker (gentagne instrukser) gennem en danse aktivitet. Studerende vil lære enkel koreografi, derefter instrueres i at gentage den."
+        video: "C1_getting_loopy"
+      RelayProgramming:
+        title: "Stafet-programmering"
+        desc: 'Studerende kører et stafetløb, de løver over gården for at skrive en algoritme baseret på en "Millimeterpapir programmering" billede. De kan kun skrive en instruktion på et tidspunkt, og hvis der er en fejl et sted, de skal slette alt tilbage til dette punkt.'
+        video: "C2_relay_programming"
+      Conditionals:
+        title: "Betingelser"
+        desc: 'For at lære om betingelsessætninger, studerende spiller et kortspil og oprette regler kan lide "Hvis jeg trækker et rødt kort, får jer et point" og "Hvis jeg trækker et sort kort, du får et point."'
+        video: "C2_conditionals_with_cards"
+      BigEvent:
+        title: "Den store begivenhed"
+        desc: 'Eleverne introduceres til programmering begrebet "begivenheder", som er handlinger, som en computer konstant overvåger. Læreren vil tryk knapper på et papir fjernbetjening og de studerende vil reagere, alt efter hvilken knap er trykket.'
+        video: "C1_bigevent_unplugged"
+      GoingPlacesSafely:
+        title: "Gå til sikre steder"
+        desc: "Internettet er en kraftfuld, men sommetider farligt sted. Lærere introducere hvordan man kan holde sikker mens du navigerer internettet."
+      GraphPaperProgramming:
+        title: "Programmering på millimeterpapir"
+        desc: "Eleverne skriver en algoritme (et sæt af instruktioner) ved hjælp af et sæt foruddefinerede kommandoer, for at dirigere deres klassekammerater til at gengive en tegning."
+        video: "C2_graph_paper"
+      PaperPlanes:
+        title: 'Real-life algoritmer: Papir fly'
+        desc: "Denne lektion gør opmærksom på måder, vi bruge algoritmer i vores daglige liv, specielt at gøre papir fly. Denne lektion fokuserer også på det større billede i datalogi og hvordan algoritmer spiller en væsentlig rolle."
+        video: "C2_paper_airplanes"
+      BinaryBracelets:
+        title: "Binære armbånd"
+        desc: "Studerende opretter et armbånd som en binært repræsentationer det første bogstav i deres navn. Eleverne lære at data kan være repræsenteret og gemt i mere end én måde."
+        video: "C2_binary_bracelets"
+      DigitalFootprint:
+        title: "Dit digitale fodspor"
+        desc: 'Lærere introducerer til studerende idéen at sætte oplysninger om sig selv online opretter en digital fodaftryk eller "spor", der har konsekvenser.'
+      ComputationalThinking:
+        title: "Data-Tænkning"
+        desc: "Eleverne bruger trin af datatankegang (nedbrydes, mønster match, abstrakt, algoritme) til at finde ud af at spille et spil, der kommer med uden instruktioner."
+        video: "C3_computational_thinking"
+      FunctionalSuncatchers:
+        title: "Funktionelle solfangere"
+        desc: "Studerende skabe en algoritme med variabler og funktioner (stykker kode, som du vil bruge igen og igen) til at oprette solfangere ved hjælp af snor og perler."
+        video: "C3_functional_suncatchers"
+      SongwritingParameters:
+        title: "Sangskrivning med parametre"
+        desc: "Studerende bruger begrebet omkvædet i en sang for at lære om bestået parametre (som tilpasser en funktion uden at omskrive den hel funktion)."
+        video: "C3_songwriting_with_parameters"
+      DiceRace:
+        title: 'Virkelige liv algoritmer: Terning Race'
+        desc: "Denne lektion gør opmærksom på måder, vi bruge algoritmer i vores dagligdag. Som en del af denne, vil studerende identificere og nedskrive algoritme for et terning race spil."
+        video: "C3_dice_race"
+      Internet:
+        title: "Internet"
+        desc: "Studerende sende beskeder repræsenterer forskellige Internet transmission metoder ved hjælp af stykker papir."
+        video: "C3_internet"
+      Crowdsourcing:
+        title: "Crowdsourcing"
+        desc: "Studerende kan bruge crowdsourcing, en problemløsning teknik fælles i datalogi, at fuldføre en opgave sammen som et klasseværelse mere effektivt end hvis en studerende forsøgte det alene."
+        video: "C3_crowdsourcing"
+      DigitalCitizenship:
+        title: "Digital statsborgerskab"
+        desc: "Studerende undersøge forskellen mellem private oplysninger og personlige oplysninger, skelne, hvad der er sikker og usikkert at dele online."

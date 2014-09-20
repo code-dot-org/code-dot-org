@@ -1,0 +1,255 @@
+"da":
+  slides:
+    maze_intro:
+      1:
+        image: "notes/hoc1_1.jpg"
+        text: "Velkommen til din første times kodning! Lad os dykke direkte ind i din første smagsprøve af programmeringen."
+      2:
+        image: "notes/hoc1_2.jpg"
+        text: "Vi vil bruge Blockly, et visuel programmeringssprog hvor du trækker og slipper blokke for at skrive kode."
+      3:
+        image: "notes/hoc1_3.jpg"
+        text: 'Det meste kode er skrevet, men Blockly er visuel. Hver blok svarer til en "rigtig" kodelinje.'
+      4:
+        image: "notes/hoc1_4.jpg"
+        text: "Du vil lære grundprincipperne for computer videnskab, begreber der anvendes overalt fra at lave apps til at kontrollere Mars Rover."
+      5:
+        image: "notes/hoc1_5.jpg"
+        text: "Et program er et sæt af instruktioner som din computer skal følge."
+      6:
+        image: "notes/hoc1_6.jpg"
+        text: "Målet for dit første program er at få en Angry Bird gennem en labyrint og ramme en grøn gris."
+      7:
+        image: "notes/hoc1_7.jpg"
+        text: "Venstre side er labyrinten, hvor programmet køres. Instruktionerne for hver gåde er under labyrinten."
+      8:
+        image: "notes/hoc1_8.jpg"
+        text: "Den midterste værktøjskasse har kommandoerne for Angry Bird'en. Du skal bruge disse til at bygge din kode."
+      9:
+        image: "notes/hoc1_9.jpg"
+        text: "Til højre er dit arbejdsområde, hvor du kan trække blokke fra værktøjskasse til at bygge dit program. Hvis du vil slette en blok, skal du trække den til papirkurven i hjørnet."
+      10:
+        image: "notes/hoc1_10.jpg"
+        text: |-
+          Hver blok er en instruktion. Hvis du trækker en "gå videre" blok til dit arbejdsområde og trykker på "Kør Program", bevæger Angry Bird'en sig en plads frem i labyrinten.
+      11:
+        image: "notes/hoc1_11.jpg"
+        text: "For at gøre mere end én handling, kan du trække mange blokke til dit arbejdsområde og lægge dem sammen. Angry Bird'en vil udføre kommandoerne fra top til bund."
+      12:
+        image: "notes/hoc1_12.jpg"
+        text: 'Hvis du kører et program og ønsker at ændre det og prøve igen, skal du trykke på knappen "Nulstil".'
+      13:
+        image: "notes/hoc1_13.jpg"
+        text: "Lad os så ordne de grise!"
+    artist_intro:
+      1:
+        image: "notes/stage5_1.jpg"
+        text: "Hej, jeg hedder JR! Hvert racerbilsteam har brug for computereksperter for at vinde. De analyserer data fra bilen for at få den til at køre hurtigere."
+      2:
+        image: "notes/stage5_2.jpg"
+        text: "I disse gåder, vil du være en kunstner, der tegner en linje bag dem overalt de går."
+      3:
+        image: "notes/stage5_3.jpg"
+        text: 'Denne blok siger "Flyt fremad med 100 pixel." Pixels er bare virkelig små prikker på din skærm.'
+      4:
+        image: "notes/stage5_4.jpg"
+        text: 'Denne blok siger "Drej 90 grader til højre." Dette vil dreje din kunstner, på samme måde som "drej" blokken i labyrint gåderne.'
+      5:
+        image: "notes/stage5_5.jpg"
+        text: "Klik på pilen i en af disse blokke for at ændre hvor meget kunstneren bevæger sig fremad eller vender. Leg med det for at blive fortrolig med disse nye blokke."
+    farmer_intro:
+      1:
+        image: "notes/stage9_1.jpg"
+        text: "Hej, jeg er Paola! I disse gåder er du en landmand, der skal få hendes område helt fladt, så der kan plantes afgrøder."
+      2:
+        image: "notes/stage9_2.jpg"
+        text: "Du skal hjælpe hende med at fjerne alle bunker af snavs og udfylde alle hullerne."
+      3:
+        image: "notes/stage9_3.jpg"
+        text: "De nye blokke fjerner 1 skovlfuld snavs fra en bunke og fylder i 1 skovlfuld snavs i et hul."
+      4:
+        image: "notes/stage9_4.jpg"
+        text: "Bunkerne og hullerne er forskellige størrelser, så du skal fortælle landmanden hvor mange skovlfulde der skal bruges."
+    flappy_intro:
+      1:
+        image: "notes/flappy01.jpg"
+        text: "Hej, jeg er Katie! En af de mest spændende ting ved datalogi er, at computerprogrammer kan være interaktive."
+      2:
+        image: "notes/flappy02.jpg"
+        text: "Hver gang der klikkes, trykkes eller skriver på en computer eller telefon, indtræffer en hændelse. og der er noget kode som bestemmer hvad der skal ske når hændelsen indtræffer."
+      3:
+        image: "notes/flappy03.jpg"
+        text: 'For eksempel, du kunne have en HÆNDELSESHÅNDTERING, der siger "når der klikkes på musen, spil en lyd" '
+      4:
+        image: "notes/flappy04.jpg"
+        text: "Har du nogensinde hørt om spillet FlappyBird? Ved hjælp af hændelseshandlere, vil vi lære at programmere vores egen version af FlappyBird!"
+      5:
+        image: "notes/flappy05.jpg"
+        text: "Den kode, du kommer til at skrive indebærer at trække og slippe blokke, der repræsenterer kommandoer til computeren. Under kølerhjelmen, er hver af disse blokke repræsenteret af reel kode."
+      6:
+        image: "notes/flappy06.jpg"
+        text: 'Hvis du tager et kig på arbejdsområdet, der er nogle grønne blokke, der er udfyldt for dig - disse er "hændelseshåndteringer" '
+      7:
+        image: "notes/flappy07.jpg"
+        text: 'Hvis du vil få fuglen til at FLAPPE når du klikker med musen, kan du gøre det ved at knytte "flap"-blokken til den passende hændelseshåndtering. Så vil fuglen flappe hver gang du klikker med musen i dit spil.'
+      8:
+        image: "notes/flappy08.jpg"
+        text: "I hvert puslespil af denne aktivitet vil vi introducere nye typer af hændelser som grønne blokke på arbejdsområdet, og du kan beslutte passende blokke for at tilføje svar på disse begivenheder."
+      9:
+        image: "notes/flappy09.jpg"
+        text: 'Når du ser en fald-ned pil som denne betyder det, at du kan ændre indstillinger - f.eks. hvilken lyd der afspilles når flappy rammer jorden.'
+      10:
+        image: "notes/flappy10.jpg"
+        text: "I det sidste puslespil vil du være i stand til at skabe dit eget spil og dele det med dine venner. God fornøjelse!"
+    loop_times:
+      1:
+        image: "notes/hoc2_1.jpg"
+        text: "Hej, jeg er Mark! Lad os lære om løkker. Ved hjælp af løkker kan du fortælle en computer at den skal gentage et sæt af handlinger, igen og igen, tusinder eller endda milliarder af gange."
+      2:
+        image: "notes/hoc2_2.jpg"
+        text: "I denne gåde ønsker vi at få fuglen til at flytte fremad 5 skridt for at komme til grisen."
+      3:
+        image: "notes/hoc2_3.jpg"
+        text: 'Vi kan bruge den nye "gentag" blok til at hjælpe os.'
+      4:
+        image: "notes/hoc2_4.jpg"
+        text: 'I stedet for at trække 5 "Flyt fremad" blokke ud...'
+      5:
+        image: "notes/hoc2_5.jpg"
+        text: 'Kan vi sætte "Flyt fremad" blokken ind i "gentag" blokken og skrive et tal i blokken for at fortælle hvor mange gange det skal gentages.'
+      6:
+        image: "notes/hoc2_6.jpg"
+        text: 'Og dette er vigtigt: du kan sætte mere end én kommando ind i en "gentag" blok.'
+      7:
+        image: "notes/hoc2_7.jpg"
+        text: 'God fornøjelse med at bruge din nye "gentag" blok!'
+    loop_until:
+      1:
+        image: "notes/hoc3_1.jpg"
+        text: 'Hej, jeg er Chris. Før jeg kom til Miami Heat, gik jeg på Georgia Tech og studerede Computer Videnskab. Lad os prøve vores nye blok, "gentag indtil" blokken.'
+      2:
+        image: "notes/hoc3_2.jpg"
+        text: "Hvad hvis vi ikke  vidste hvor langt Angry Bird'en var nødt til at flytte for at komme til grisen?"
+      3:
+        image: "notes/hoc3_3.jpg"
+        text: |-
+          Hvis vi sætter en "Flyt fremad" blok inden i "Gentag indtil"-blokken, så vil Angry Bird'en bevæge sig fremad indtil den når til grisen (eller styrter ind i en væg).
+      4:
+        image: "notes/hoc3_4.jpg"
+        text: 'Og dette er vigtigt: ligesom før, vi kan sætte flere blokke inden i "gentag indtil" blokken, og de vil alle blive gentaget.'
+    if:
+      1:
+        image: "notes/hoc4_1.jpg"
+        text: 'Hej, jeg hedder Bill! Lad os lære et ny grundlæggende begreb: "hvis"-sætninger. Dette er, hvordan computere træffer beslutninger.'
+      2:
+        image: "notes/hoc4_2.jpg"
+        text: 'Du bruger "hvis"-sætninger selv hver dag. Før du går udenfor hver morgen, siger du, HVIS det regner udenfor, så har jeg brug for at tage min jakke på.'
+      3:
+        image: "notes/hoc4_3.jpg"
+        text: "Vi kan bede zombien kontrollere, om der er en sti til venstre, og hvis han finder en sti til venstre, kan vi få ham til at dreje i retningen."
+      4:
+        image: "notes/hoc4_4.jpg"
+        text: 'For at skrive koden til dette, lad os trække vores "hvis" blok ud og sætte en "venstresving" blok inde i den.'
+      5:
+        image: "notes/hoc4_5.jpg"
+        text: 'Nu, hvis vi sætter en "gå frem" blok over det og en "gentag" blok omkring alt, så hver gang zombien bevæger sig, vil han kontrollere, om der er en vej til venstre og dreje. Kommandoen "Gentag" er kritisk, for at kontrollere om der skal drejes for hvert skridt.'
+      6:
+        image: "notes/hoc4_6.jpg"
+        text: "Hvis-sætninger er rigtigt vigtige i computer videnskab. Et af de første programmer jeg skrev var et kryds og bolle spil, og der var en hvis-sætning, der sagde, at hvis den anden person er ved at vinde, bloker den plads, der lader dem vinde."
+      7:
+        image: "notes/hoc4_7.jpg"
+        text: 'God fornøjelse med at bruge "hvis" blokken!'
+    if_else:
+      1:
+        image: "notes/hoc5_1.jpg"
+        text: 'Hej, mit navn er Saloni. Jeg bruger computer videnskab til at løse problemer inden for sundhed og medicin. Lad os lære om "hvis ellers" blokken. Den ligner "hvis"-blokken, men den har en ekstra del i slutningen, der siger "ellers".'
+      2:
+        image: "notes/hoc5_2.jpg"
+        text: 'Hvis jeg sætte en "gå fremad" blok på stedet hvor der står "udfør" og en "Drej til venstre" blok hvor der står "ellers" betyder at zombie vil vælge mellem 2 muligheder. Hvis der er en vej fremad, vil zombien vil bevæge sig fremad, og ellers (hvis der ikke er en vej fremad), vil zombien dreje til venstre.'
+      3:
+        image: "notes/hoc5_3.jpg"
+        text: 'Ligesom "hvis"-blokken, kan vi sætte "hvis ellers" blokken ind i "gentag" blokke, således at zombien bliver ved med at bevæge sig fremad og "hvis ellers" blokken vil holde øje med om der er et sted at dreje.'
+      4:
+        image: "notes/hoc5_4.jpg"
+        text: "Nå, flyt så de zombier hen hvor de hører hjemme!"
+    function:
+      1:
+        image: "notes/stage13_1.jpg"
+        text: "Hej, jeg er Brina, en ingeniør på Instagram. En funktion er visse linjer kode, som du vil bruge igen og igen, så i stedet for at skrive koden ud hver gang, kan du bare bruge én blok."
+      2:
+        image: "notes/stage13_2.jpg"
+        text: "Vi skal lære at definere funktioner. Funktions definitioner har en stjerne i hjørnet. Funktionens navn er skrevet på den øverste linje."
+      3:
+        image: "notes/stage13_3.jpg"
+        text: 'De blokke, der er inde i definitionen fortæller os, hvad den gør. Så denne funktions definition hedder "fyld 5" og den består af en "gentag" blok og en "fyld" blok.'
+      4:
+        image: "notes/stage13_4.jpg"
+        text: 'Definitionen hæfter sig på arbejdsområdet, men vores landmand vil ikke køre funktionen indtil vi trækker vores "fyld 5" funktionsblok ud fra funktioneskategorien.'
+      5:
+        image: "notes/stage13_5.jpg"
+        text: 'Lad os putte "fun" tilbage ind i "FUNktion!" '
+    loop_while:
+      1:
+        image: "notes/stage9_5.jpg"
+        text: 'Hej, Jeg er Makinde! Lad os lære om "imens" blokken. '
+      2:
+        image: "notes/stage9_6.jpg"
+        text: '"While blokken" vil udføre hvad end du placerer indeni den, så længe udtrykket i toppen er sandt.'
+      3:
+        image: "notes/stage9_7.jpg"
+        text: "For eksempel, hvis landmanden står på en bunke, vil hun fortsætte med at fjerne 1 skovlfuld, så længe der er en bunke under hende."
+    loop_for:
+      1:
+        image: "notes/stage11_1.jpg"
+        text: "Hej, jeg er Trina, og jeg arbejder for Pixar. Jeg har arbejdet på en masse film, blandt andet Shrek."
+      2:
+        image: "notes/stage11_2.jpg"
+        text: 'Dette er vores nye "tæller" loop. Det vil udføre handlinger igen og igen og du kan ændre handlinger lidt hver gang.'
+      3:
+        image: "notes/stage11_3.jpg"
+        text: 'I dette eksempel siger vores "tæller" løkke "tæl fra 50 til 90 med 10" og inde i det, har vi vores "tegn en firkant" blok. Træk "tæller" blokket fra afsnittet "Variabler" til "længde" stedet.'
+      4:
+        image: "notes/stage11_4.jpg"
+        text: "Dette betyder, at vores kunstner vil tegne en firkant, der har 50 pixel længde sider, så vil tilføje 10 til det og tegne en firkant med 60 pixel længde sider. Så vil det blive ved med at tilføje 10 og tegne firkanter, indtil det når 90. Så vil vi have kvadrater af 50, 60, 70, 80 og 90."
+    parameters:
+      1:
+        image: "notes/stage15_1.jpg"
+        text: "Hej! Jeg hedder Janete, og jeg er ingeniør hos Zynga."
+      2:
+        image: "notes/stage15_2.jpg"
+        text: "Hvad hvis vi ønsker at tegne en masse trekanter og give dem forskellige størrelser?"
+      3:
+        image: "notes/stage15_3.jpg"
+        text: "Vi kunne skrive al den kode i hånden eller vi kan bruge en funktion med parametre."
+      4:
+        image: "notes/stage15_4.jpg"
+        text: 'For at gøre dette, skal du klikke på den blå stjerne på "tegn en trekant" funktions-definition. Træk derefter "indtast navn" til "input" blokken.'
+      5:
+        image: "notes/stage15_5.jpg"
+        text: 'Hvis du så skriver "længde" på det sted, hvor der står "x" og trykker "Enter" skal du oprette en længde input til din funktion.'
+      6:
+        image: "notes/stage15_6.jpg"
+        text: 'Klik på stjernen. Nu du ønsker at klikke på kategorien variabler og trække "længde" blokken til "Flyt fremad" blok af din funktions-definition. Og træk den gamle nummer blok væk.'
+      7:
+        image: "notes/stage15_7.jpg"
+        text: 'For at bruge din funktion med parametre, skal du klikke på kategorien funktioner og trække din "tegn en trekant med længde" funktion ud.'
+      8:
+        image: "notes/stage15_8.jpg"
+        text: "Nu kan du bruge matematik blokken til at indtaste forskellige tal for at tegne trekanter med forskellige størrelser."
+    hoc_wrapup:
+      1:
+        image: "notes/hoc6_1.jpg"
+        text: "Tillykke! Med den sidste opgave du har løst, skrev du kode, der kan fortælle enhver robot hvordan den kan finde vej gennem en labyrint eller tunnel af enhver længde, uanset om det er en zombie, en fugl, en Mars robot eller endda en selvkørende bil."
+      2:
+        image: "notes/hoc6_2.jpg"
+        text: "De grundlæggende begreber, du har brugt er kernen i ethvert program eller app du nogensinde kommer til at prøve. Vi lærte om gentag løkker, gentag indtil sætninger, hvis sætninger, og hvis-ellers sætninger."
+      3:
+        image: "notes/hoc6_3.jpg"
+        text: "Hvis du kunne lide din første times kodning, så besøg code.org for at fortsætte din uddannelse i datalogi! Når du har fuldført vores 20 timers kursus, har du lært grundlæggende programmering, og kan begynde at lære at skrive apps til din telefon, robot instruktioner, spil, eller noget helt andet."
+      4:
+        image: "notes/hoc6_4.jpg"
+        text: "Teknologien ændrer alt hvad vi gør og det er lige meget om du er ung eller gammel. Programmering er sjovt, kreativt, og alle kan lære det!"
+    20_wrapup:
+      1:
+        image: "notes/bird.png"
+        text: "Vis noter kommer snart!"

@@ -1,0 +1,16 @@
+name '2-3 artist loops multi 1'
+title 'Artist Loops Multiple Choice'
+
+content1 '/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500'
+content2 ''
+
+height '160'
+
+question 'Which shape is made by this loop?'
+
+wrong '/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png'
+wrong '/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png'
+right '/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png'
+wrong '/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png'
+
+# http://staging.learn.code.org/s/course2/stage/5/puzzle/13

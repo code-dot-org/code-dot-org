@@ -1,0 +1,5 @@
+name_s!,query_t
+csedweek-2013-domestic-teacher-organizers,"(kind_s:""CSEdWeekEvent2013"" AND role_s:""teacher"") AND country_s:""united states"""
+csedweek-2013-foreign-teacher-organizers,"(kind_s:""CSEdWeekEvent2013"" AND role_s:""teacher"") AND NOT country_s:""united states"""
+petition-domestic-teachers,"(kind_s:""Petition"" AND role_s:""educator"") AND country_s:""united states"""
+petition-foreign-teachers,"(kind_s:""Petition"" AND role_s:""educator"") AND NOT country_s:""united states"""

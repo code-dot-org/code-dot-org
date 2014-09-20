@@ -1,0 +1,549 @@
+"hy":
+  activerecord:
+    errors:
+      messages:
+        blank: is required
+    attributes:
+      user:
+        name: Name
+        email: Email
+        username: Username
+        password: Password
+        password_confirmation: Password confirmation
+        current_password: Current password
+        locale: Language
+        age: Age
+        gender: Gender
+        edit_header: Edit Account Details
+        error:
+          future: can't be in the future
+  hello: Hello world
+  welcome_back: Welcome back, %{name}
+  add_teacher_form:
+    code_or_email:
+      label: 'Add a teacher by code or email address:'
+      placeholder: Code (ABCDEF) or email (teacher@school.edu)
+    code:
+      label: 'Add a teacher by section code:'
+      placeholder: Code (ABCDEF)
+    submit: Add teacher
+  add_hint_form:
+    placeholder: Please enter your hint here
+    submit: Add hint
+  appname: Code.org
+  stage: Stage
+  puzzle: Puzzle
+  trophies: Trophies
+  courses: Courses
+  of: of
+  more: MORE
+  less: LESS
+  try_hoc: 'Try the Hour of Code, click here >> '
+  try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
+  k8intro: K-8 Intro to Computer Science Course (15-25 hours)
+  already_started: 'Already started? Resume here >> '
+  demos: 'Admin: All Demos'
+  continue: Continue
+  prize: prize
+  more_info: More info
+  auth:
+    sign_in_with: Sign in with %{provider}
+    signed_in: Signed in!
+    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
+    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
+      to sign out of %{provider}.
+    already_signedup: Already signed up?
+    notyet_signedup: Haven't joined yet?
+    google_oauth2: Google Account
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Microsoft Account
+    forgot_password: Forgot your password?
+    need_confirmation: Didn't receive confirmation instructions?
+    need_unlock: Didn't receive unlock instructions?
+  signup_form:
+    overview_student: Sign up for an account to track your progress.
+    overview_teacher: Teach computer science in your classroom by signing up for an
+      account.<p/> You'll be able to track your students' progress and get rewards.
+    no_signup_message: You can <a target="_blank" href="http://learn.code.org">browse
+      the various stages and puzzles</a>, but you will need to sign up to save your
+      progress.
+    prizes_message: U.S. students who earn all %{num_trophies} concept trophies can
+      select a variety of prizes including free Dropbox space, Skype credits, and
+      downloadable games from Electronic Arts.
+    teacher_educator_guide: See educator guide
+    teacher_prize_header: Win $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+      rewards (through June 15, 2014, until supplies last)
+    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
+      Code.org will offer up to $1,000 in classroom funding to U.S. public school
+      teachers who lead at least 15 students through the K-8 Intro to Computer Science
+      course (through June 15, 2014, while supplies last).  <a href="http://code.org/educate/20hr">See
+      educator guide</a>.  (Limit: $1,000 per teacher.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">See
+      FAQ for more limits</a>.)'
+    teacher_pitch: Teacher sign up for Code.org
+    teacher_title: Teacher sign up
+    student_pitch: Student sign up for Code.org
+    student_title: Student sign up
+    school_name: School Name (optional)
+    school_address: School Address (optional)
+    address_placeholder: address, city, state, zip
+    gender: Gender (optional)
+    birthday: Birthday (optional)
+    age: Age (optional)
+    submit: Sign up
+    teacher: Are you a teacher?
+    valid_username: Available!
+    invalid_username: Username must be at least 5 characters
+    taken_username: Username is already taken
+    valid_password: Valid password!
+    invalid_password: Password must be at least 6 characters
+    mismatch_password: The two passwords you entered do not match
+    student_terms: I agree to be bound by the Code.org terms of service. If I am under
+      13 years of age, I confirm by submitting this form that I have my parent or
+      legal guardian's permission to use the Code.org services.
+    teacher_terms: I agree to be bound by the Code.org terms of service.
+    additional_information: We need some additional information to continue signing
+      you up.
+  signin_form:
+    title: Have an account already? Sign in
+    login: Email or username
+    password: Password
+    remember: Remember me
+    submit: Sign in
+  signin:
+    try_heading: Want to try coding without signing up?
+    try_hoc: Try one Hour of Code first
+    try_20hours: Try our 20 hour Intro to Computer Science
+  signinsection:
+    welcome: Welcome to %{section_name}
+    name: Choose your name
+    picture: Now find your secret picture
+    words: Now enter your secret words
+    login: Sign in
+  password:
+    reset_form:
+      title: Forgot your password?
+      email: Email address
+      submit: Send me reset password instructions
+    change_form:
+      title: Change your password
+      new_password: New password
+      confirm_password: Confirm new password
+      submit: Change my password
+  welcome_email:
+    subject: Join my class (on Code.org)
+    body: |
+      Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
+
+      %{link}
+
+      The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
+
+      %{name}
+  follower:
+    invite_sent: Invite sent
+    added_teacher: "%{name} added as your teacher"
+    registered: You've registered for %{section_name}.
+    error:
+      signed_in: Please signout before proceeding
+      username_not_found: Username %{username} not found
+      username_in_use: "%{username} is already taken, please pick another"
+      no_teacher: Could not find anyone signed in with '%{teacher_email_or_code}'.
+        Please ask them to sign up here and then try adding them again
+      section_not_found: Could not find a section with code '%{section_code}'.
+      blank_code: Please enter a section code
+      cant_join_own_section: Sorry, you can't join your own section.
+    mail:
+      invite_student:
+        subject: Join a class with %{teacher_name} at Code.org!
+      student_disassociated:
+        subject: 'Code.org notification: %{student_name} is no longer associated as
+          your student.'
+      teacher_disassociated:
+        subject: 'Code.org notification: %{teacher_name} is no longer associated as
+          your teacher.'
+  reports:
+    error:
+      access_denied: You don't have access to this person's stats
+  redeem_prizes:
+    title: 'Redeem Prizes: %{name}'
+    provider: 'Provider:'
+    code: 'Code:'
+    redeem_header: 'To redeem:'
+    donorschoose_register: Register as a teacher on DonorsChoose.org
+    donorschoose_project: Post a project
+    donorschoose_how_to: How to use your code
+    success: Your prize was succesfully redeemed, see code below.
+    error: Your prize could not be redeemed, please try again.
+    error_us_only: The prize offer is only valid for U.S. users.
+    error_not_earned: You have not yet earned this prize.
+    error_already_redeemed: Your prize has already been redeemed.
+    no_prizes_available: We're sorry, but we currently have no prizes available.
+    teacher_info_required: 'Teacher prizes require school name and address information:'
+    teacher_email_required: 'Teacher prizes require a confirmed email address:'
+    confirm:
+      title: Please Confirm
+      'no': 'No'
+      'yes': 'Yes'
+      msg: Are you sure you want to claim the %{prize_name} prize?
+      msg_student: 'NOTE: You can only choose one type of prize.'
+      msg_publicschool: Please confirm that you are a U.S. public school teacher.
+      msg_visit_website: Visit website
+    providers:
+      apple_itunes: "$10 iTunes Gift Card"
+      donors_choose: DonorsChoose.org $750 credit
+      donors_choose_bonus: DonorsChoose.org $250 credit
+      dropbox: 10GB of Dropbox Space
+      valve: Portal 2 (PC or Mac game download)
+      ea_bejeweled: Bejeweled 3 (PC game download)
+      ea_fifa: FIFA Soccer 13 (PC game download)
+      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
+      ea_pvz: Plants vs. Zombies (PC game download)
+      skype: "$10 Skype credit"
+    msg:
+      choose: 'Choose a prize:'
+      choose_teacher: 'Click on the logo below to claim your prize:'
+      earned: You have earned a prize! (U.S. students only)
+      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies}
+        trophies, and earn real-world prizes. You can choose between 10GB of free
+        Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer
+        only valid to U.S. students, and only as long as supplies last.'
+      teacher:
+        earned: 15 or more students collected all %{num_trophies} trophies. You have
+          won a teacher prize! (U.S. teachers only)
+        not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
+          href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
+          only)
+        not_earned: To reward first-time computer science teachers, you can earn up
+          to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits
+          for guiding a classroom through the K-8 intro course. To qualify, you need
+          to successfully host a classroom of at least 15 students through the entire
+          K-8 intro course, with all 15 students (or more) completing all tutorials
+          and earning all %{num_trophies} trophies. If 7 or more of the students who
+          earn all of the trophies are girls, your reward is $1,000 in <a target="_blank"
+          href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise,
+          your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+          credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+          credits can only be used by teachers in U.S. public schools.
+        bonus:
+          not_earned_title: You can still earn an additional $250 in <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
+            only)
+          earned: 7 or more of the students who collected all %{num_trophies} trophies
+            are girls. You have won a bonus prize! (U.S. teachers only)
+          not_earned: If at least 7 of your students who earn all %{num_trophies}
+            trophies are girls, your reward is an additional $250 in <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be
+            used by teachers in U.S. public schools.
+  crud:
+    new_model: New %{model}
+    show: Show
+    edit: Edit
+    edit_model: Edit %{model}
+    update: Update
+    destroy: Destroy
+    back: Back
+    confirm: Are you sure?
+    created: "%{model} was successfully created."
+    updated: "%{model} was successfully updated."
+    destroyed: "%{model} was successfully deleted."
+    access_denied: You do not have access to this %{model}.
+  nav:
+    header:
+      finished_hoc: I've finished my Hour of Code
+      sign_in_to_save: Sign in to save progress
+    user:
+      classroom: My students
+      label: Hi %{username}
+      stats: My progress
+      settings: My account
+      prizes: Prizes
+      logout: Sign out
+      signin: Sign in
+      signup: Sign up
+      already_registered: Already registered?
+    popup:
+      progress: Your progress
+      lines: 'Total lines of code: %{lines}'
+      close: CLOSE
+      mastery: Concepts
+      puzzle_map: Stages
+      prizes: Collect all %{total_trophies} trophies and win prizes!
+      prize_earned: All %{total_trophies} trophies collected. Prize won!
+      prize_us_only: "(U.S. students only)"
+      prizes_link: more info
+  teacher:
+    title:
+      one: 'Your teacher:'
+      other: 'Your teachers:'
+    remove: "(remove teacher)"
+    confirm:
+      remove: Are you sure you want to remove this teacher?
+    tools: Teacher Tools
+    followers:
+      section: 'Section:'
+      stages: 'Stage(s) to display:'
+      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      levels_key: Levels key
+      perfect: Completed, perfect
+      completed: Completed, but using too many blocks
+      tried: Tried, but not completed
+      not_tried: Not tried yet
+      activity: Indicates student activity in the last %{hours} %{plural}
+      no_section: No assigned section
+      trophies: Trophies
+    students:
+      name: "Անուն"
+      username: Username
+      password: Password
+      manage: Manage students
+      dashboard: Go to Teacher Dashboard
+      add: Add students
+      remove: remove student
+      confirm_remove: Are you sure you want to remove this student?
+      help_reassign: To divide your class into multiple sections, select students
+        to assign to a new section.
+      help_register: Instead of making you spend a lot of time individually importing
+        student data, you can set up your class quickly by asking them to signup.
+        Your students will need to choose usernames and passwords, but they WILL NOT
+        be required to provide an email address. If a student forgets their password,
+        you will be able to reset it for them.
+      register: Ask your students to register themselves
+      vist: Ask your students to visit
+      section_code: 'and enter their section-code:'
+      first_please: First, please %{add_section}
+      for: For
+      enter: 'enter:'
+    sections:
+      add: Add section
+      manage: Manage sections
+      section: Section
+      students: Students
+      section_code: Section Code
+      add_section_code: Add Students Section-Code
+      secret: Secret type
+      grade: Grade
+      course: Course
+      rename: rename
+      edit: edit
+      delete: delete
+      confirm_delete: Are you sure you want to delete this section?
+      email: Send in email
+    rollup: Progress Dashboard
+    activity: Recent class activity
+    user_not_found: The teacher or student could not be found
+    cant_remove_student_no_email: "%{student_name} cannot be removed as your student
+      because %{student_name} has not registered an e-mail address"
+    cant_remove_teacher_no_email: "%{teacher_name} cannot be removed as your teacher
+      because you have not registered an e-mail address"
+    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
+      for %{student_name}"
+  user:
+    email_confirm_needed: 'Email address has not been confirmed:'
+    email_resend_confirm: Resend confirmation instructions
+    new_password_hint: "(leave blank if you don't want to change it)"
+    current_password_hint: "(we need your current password to confirm your changes)"
+    cancel:
+      title: Cancel my account
+      hint: Unhappy?
+      button: Cancel my account
+  user_level:
+    completed: Completed
+    tried: Tried
+  user_stats:
+    recent_activity: Recent activity
+    show_more: Show more
+    classroom_activity: Unplugged Activity
+  home:
+    title: Code Studio
+    signin_message: Already registered? %{link}
+    student_reg_link: Student Sign Up
+    teacher_reg_link: Teacher Sign Up
+    signin_directions: Use an account to track progress.<br/> Teachers, track your
+      entire class.
+    teacher_dashboard: See progress dashboard
+    teacher_student_count_one: You have %{count} student.
+    teacher_student_count: You have %{count} students.
+    teacher_averages: On average your students have earned %{trophy_average} out of
+      %{trophy_max} "Concept Mastery" trophies.
+    teacher_print_certificates: Print certificates for students who finish this course
+    teacher_read_blog: Read about news and updates to our materials at our Educator
+      Blog
+    classroom: Your classroom
+    student_progress: Your learning progress
+    student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
+      trophies.
+    student_left_off: 'Where you left off:'
+    student_finished_prize: You've completed all tutorials, claim your %{prize_link}
+      and pick another class %{online_link} or at a %{local_school_link}
+    student_finished: You've completed all tutorials, pick another class %{online_link}
+      or at a %{local_school_link}
+    local_school: local school
+    online: online
+    see_details: See details
+    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
+      $1,000 in classroom rewards.'
+    tryfirst: 'Or, you can try it first, and sign up later:'
+    trynow: "Փորձել հիմա"
+    add_hint_help: Please help us to add smart hints to Code.org tutorials
+    20hour_overview: This 20-hour course introduces core computer science and programming
+      concepts. The course is designed for use in classrooms for grades K-8, but it
+      is fun to learn at all ages.
+    test_videos_help: Test our new video player at your school
+    try_beta_courses: New! Try our beta courses for K-5 students
+    use_as_teacher: Use this site as a teacher
+    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
+    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+  gender:
+    male: Male
+    female: Female
+    none: Prefer not to answer
+  footer:
+    help_from_html: Engineers from <a href="http://www.google.com">Google</a>, <a
+      href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
+      and <a href="http://www.twitter.com">Twitter</a> helped create this tutorial.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
+      Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
+      &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
+      Reserved.
+    feedback: Provide feedback
+    translate: Help us translate to your language
+    support: Support
+    tos: Terms
+    privacy: Privacy Policy
+    secure: Secure Version
+  prize_mail:
+    prize_earned:
+      subject: Redeem your prize at Code.org!
+    teacher_prize_earned:
+      subject: Congratulations from Code.org!
+    teacher_bonus_prize_earned:
+      subject: Redeem your bonus prize at Code.org!
+  reference_area:
+    title: Need help?
+    subtitle: See these videos and hints
+    teacher: See the solution
+    auth_error: You are not authorized to see the solution.
+    submit: Update Artist Location
+    direction: Start Direction
+  video:
+    tab: Video.
+    notes: No video? Show notes.
+    notes_coming_soon: Notes for this video coming soon.
+    autoplay_option: Autoplay videos
+    download: Download Video
+  compatability:
+    working: We are working on support for your browser.
+    upgrade: Please upgrade your browser.
+  slow_loading: This is taking longer than usual...
+  try_reloading: Try reloading the page
+  next_stage: Finished! Continue to next stage
+  download_pdf: Open Lesson Plan
+  view_lesson_plan: View Lesson Plan
+  pdf_download: Download PDF
+  share_code:
+    title: Click 'Run' to see my program in action
+    bounce_og_title: Check out my Bounce Game
+    flappy_og_title: Check out my Flappy Game
+    studio_og_title: Check out my story
+    og_description: I wrote the code myself with Code.org
+  builder:
+    created: You created a new script.
+    destroyed: You destroyed a script.
+    manage: Build Levels
+    view: View
+    back: Back to scripts
+    success: You successfully edited the blocks.
+    level:
+      create: Create new level
+      current: Current Levels
+      unused: Unused Levels
+  upsell:
+    hoc:
+      title: The Hour of Code
+      body: Try the basics of computer science. Millions have given it a shot.
+    flappy:
+      title: Flappy Code
+      body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
+        tutorial!
+    20hour:
+      title: Intro Course
+      body: Try our 20-hour Intro to Computer Science course.
+  gallery:
+    students_drew_these_with_code: Students drew these with code!
+    picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
+      pictures by writing their own computer programs. Click on the pictures to see
+      each program in action.
+    want_to_make_your_own: Want to make your own?
+    more: More &rarr;
+  landing:
+    prerelease: This course is in <span class='betatext'>beta</span>.  This means
+      it is not the final version of the course, and is subject to revision as feedback
+      is received and improvements are made.
+    feedback: Give Feedback
+    report_bug: Report Bug
+    support: Get Help
+  multi:
+    wrong_title: Incorrect answer
+    wrong_body: The answer you've entered is not correct.  Please try again!
+    correct_title: Correct
+    correct_body: That is the correct answer.
+  match:
+    wrong_title: Incorrect solution
+    wrong_body: The solution you've entered is not correct.  Please try again!
+    correct_title: Correct
+    correct_body: That is the correct answer.
+  dialog:
+    ok: OK
+  time:
+    hour: 1 hour
+    day: day
+    week: week
+  data:
+    script:
+      name:
+        20-hour:
+          title: K-8 Intro to Computer Science Course (15-25 hours)
+          description: This 20-hour course introduces core computer science and programming
+            concepts. The course is designed for use in classrooms for grades K-8,
+            but it is fun to learn at all ages.
+        Hour of Code:
+          title: Hour of Code
+          description: ''
+        edit-code:
+          title: Edit Code
+          description: ''
+        events:
+          title: Events
+          description: ''
+        builder:
+          title: Builder
+          description: ''
+        flappy:
+          title: Flappy Code
+          description: Wanna write your own game in less than 10 minutes? Try our
+            Flappy Code tutorial!
+        jigsaw:
+          title: Jigsaw
+          description: ''
+        step:
+          title: Step
+          description: ''
+        sample_level_builder:
+          title: Sample Level Builder
+          description: ''
+  age_interstitial:
+    age: Your age
+    header: Account Information Update
+    message: We're in the process of updating our experience to provide you with even
+      stronger privacy protections. To do this, we need existing users to enter their
+      age here.<br/>As always, code.org will never rent, sell or share this information
+      with any third parties.
+    sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
+      out</a>.
+  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
+    You may browse <a href="http://support.code.org">support.code.org</a> without
+    signing in or ask your parent or teacher to contact us for you.

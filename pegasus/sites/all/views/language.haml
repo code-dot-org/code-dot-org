@@ -1,0 +1,15 @@
+%select{:onchange=>"setCookie('language_',this.value,5000); location.reload(true);" }
+  -DB[:cdo_languages].all.each do |i|
+    -selected = request.language == i[:code_s]
+    %option{value:i[:code_s], selected:selected}= i[:name_s]
+
+:javascript
+  function setCookie(c_name,value,exdays)
+  {
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "#{host}";
+    c_value += "; domain=." + escape(domainName);
+    document.cookie=c_name + "=" + c_value;
+  }

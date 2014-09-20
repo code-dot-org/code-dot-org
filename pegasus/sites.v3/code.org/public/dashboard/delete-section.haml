@@ -1,0 +1,28 @@
+%form#delete-section-form{onsubmit:'return deleteSectionSubmit()'}
+  .form-group
+    %label{for:'section_id'} Section Id
+    %div
+      %input#section-id{name:'section_id', placeholder:'1', type:'text', required:true}/
+
+  .form-group
+    %button#btn-submit{type:'submit'} Submit
+
+:javascript
+  function deleteSectionSubmit()
+  {
+    $("#btn-submit").attr('disabled','disabled');
+
+    $.ajax({
+      url: "/v2/sections/" + $('#section-id').val() + "/delete",
+      type: "post",
+      dataType: "json",
+    }).done(function(data, text) {
+      alert(text)
+      $("#btn-submit").removeAttr('disabled');
+    }).fail(function(request, status, error) {
+      alert(error)
+      $("#btn-submit").removeAttr('disabled');
+    });
+
+    return false;
+  }

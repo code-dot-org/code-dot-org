@@ -1,0 +1,19 @@
+---
+title: Curriculum for CS Principles
+---
+
+-content = Course.new("csp")
+
+%h1 Computer Science Principles &mdash; A Course from Code.org
+%p= content.get_course_info["description"]
+
+= partial('additional')
+
+-content.get_units.each do |unit|
+  %h2
+    Unit #{unit.number}: #{unit.title}
+  %p= unit.description
+  -content.get_lessons_for_unit(unit.number).each do |lesson|
+    %a{:href=>lesson.url}
+      Lesson #{lesson.number}: #{lesson.title}
+      %br

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="pixelationStyles.css"/>
+<script type="text/javascript" src="pixelationScript3.js"></script>
+</head>
+<body onLoad="drawGraph()">
+
+	<header>
+		<h1>Introduction to Computer Science</h1>
+		<h1>B&W Pixelation v.3 [started 10.19.13]</h1>
+	</header>
+	<br/>
+	<p><b>Directions:</b></p>
+	<b>B&W File Protocol:</b><br>
+	<img src="ColorFileFormatStructure.png"><br>
+
+	<div id="input">
+		width:  <input type=text id="width" value="0" size=2 disabled=true/> 
+		height: <input type=text id="height" value="0" size=2 disabled=true/>
+		<br>
+		(color) bits per pixel: <input type=text id="bitsPerPixel" value="1" onChange="drawGraph()" onkeyup="setSliders()" size=2/><input type=range class="slider" id="bitsPerPixelSlider" min=0 max=24 value=1 step=1 onChange="changeVal('bitsPerPixel')"><br/>
+		<br>
+		bin: <input type = "radio" name = "binHex" id = "binHexRadio" value = "bin "checked = "checked" onChange="hexToBin(); drawGraph()"/> hex:<input type = "radio" name = "binHex" id = "binHexRadio" value = "hex" onChange="binToHex(); drawGraph()"/>
+		<br/>Binary Code:<br/>
+		<textArea id="binaryImage" onkeyup="drawGraph()">0000 1111 0000 1111</textarea>
+			<div style="clear: both;">
+			<label class="canvasInputLabel">Zoom:</label> <input type=range id="sqSizeSlider" onChange="drawGraph()" value=32 min=1 max=100><label id="sqSizeLabel" class="canvasInputLabel">foo</label>
+			<label class="canvasInputLabel"><br>Show pixel border</label><input type=checkbox id="showPixelBorder" onChange="drawGraph()"checked=true> | <input type=button value="save PNG" onClick="showPNG('canvas')">
+
+		</div>
+		<div id="err">length:</div>
+		<div id="example">EXAMPLE: (set to 3 bits-per-pixel)
+			0000010000000010000001010011100101110111
+		</div>
+	</div>
+
+	<div id="canvasDiv">
+		<canvas id="canvas" width=500 height=500></canvas><br>
+		
+	</div>
+
+	<footer class="footerFade">
+		Introduction to Computer Science &middot; University of Chicago Laboratory Schools &middot; &copy; Baker Franke 2013 
+	</footer>
+
+</body>
+</html>

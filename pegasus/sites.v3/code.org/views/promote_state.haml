@@ -1,0 +1,168 @@
+-data = DB[:cdo_state_promote].where(state_code_s:state).first
+-pass if data.nil?
+-statename = us_state_name_from_code(state)
+-statename_with_dashes = statename.gsub(" ", "-").downcase
+-petition_url = data[:petition_url_t]
+
+.greybox{:style=>'color:white; text-align:left; padding-left:0px; padding-top:0px'}
+
+  %br/
+
+  #left{:style=>'width:35%; float:left; padding-right:50px;'}
+
+    %img{:src=>"/images/states/#{statename_with_dashes}.png"}
+
+    %br
+    %p{style: "color: rgb(185,191,21); text-shadow: 0px 0px 3px rgba(0, 0, 0, 1); font-size:16px; text-align:center"}
+      %b
+        =statename
+
+  #right{:style=>'width:65%; float:left'}
+
+    %p{style: "font-size:18px; line-height:38px"}
+      -unless data[:cs_jobs_i] == 0
+        %b= format_integer_with_commas(data[:cs_jobs_i])
+        open computing jobs
+        -unless data[:growth_vs_average_f] < 0.0
+          %span{style: "color: #ddd"}
+            (growing at <b>#{data[:growth_vs_average_f]}x</b> the state average)
+        %br
+
+      -unless data[:cs_graduates] == 0
+        %b= format_integer_with_commas(data[:cs_graduates_i])
+        computer science graduates
+        %br
+
+      -unless data[:count_schools_teach_cs] == 0
+        %b= format_integer_with_commas(data[:count_schools_teach_cs_i])
+        schools teach computer science
+        %br
+
+      -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
+        %span.download-fact-sheet<
+          Download
+          %a{:href=>"/files/states/#{state}.pdf", :target=>'_blank'}<
+            #{statename} fact-sheet
+            %img{:src=>"/images/download.png", :width=>"35px", :style=>'margin-top:-5px'}
+        %br
+
+      %p{style: "font-size:16px; margin-left:20px"}
+        - if data[:cs_counts_t] == "No"
+          %i.fa.fa-times-circle
+          &nbsp;
+          CS doesn't count towards math or science requirements
+          %br
+        - elsif data[:cs_counts_t] == "Yes"
+          %i.fa.fa-check-circle
+          &nbsp;
+          CS counts towards math or science requirements
+          %br
+
+        - if data[:cs_teacher_cert_s] == "No"
+          %i.fa.fa-times-circle
+          &nbsp;
+          No clear CS teacher certification pathways
+          %br
+        - elsif data[:cs_teacher_cert_s] == "Yes"
+          %i.fa.fa-check-circle
+          &nbsp;
+          Clear certification pathways for CS teachers
+          %br
+
+        - if data[:cs_standards_s] == "No"
+          %i.fa.fa-times-circle
+          &nbsp;
+          No CS curriculum standards
+          %br
+        - elsif data[:cs_standards_s] == "Yes"
+          %i.fa.fa-check-circle
+          &nbsp;
+          CS curriculum standards
+          %br
+
+    %br
+
+    -if data[:text_t]
+      =data[:text_t]
+
+    -if data[:action_text_s] && data[:action_url_s]
+      %br
+      %br
+      %a{:href=>data[:action_url_s], :target=>'_blank'}
+        %button{:class=>'state-petition-btn'}= data[:action_text_s]
+
+    %br
+    %br
+
+    #changeorg{:style=>'display: none;'}
+      %b#title
+      %br
+      %span#count
+      %br
+      %br
+      %a{:href=>petition_url, :target=>'_blank'}
+        %button{:class=>'state-petition-btn'} Sign Petition
+      %br
+      %br
+
+%p{:style=>"font-size: 12px; line-height: 16px; text-align: right; opacity: 0.8"}
+  Sources:
+  =succeed "," do
+    %a{:href=>"http://www.conference-board.org/", :style=>"color:rgb(88, 103, 113)", target: '_blank'} The Conference Board
+  =succeed "," do
+    %a{:href=>"http://www.nsf.gov/", :style=>"color:rgb(88, 103, 113)", target: '_blank'} National Science Foundation
+  =succeed "." do
+    %a{:href=>"http://code.org/learn/local", :style=>"color:rgb(88, 103, 113)", target: '_blank'} Code.org database
+  =succeed "." do
+    %a{:href=>"https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub", :style=>"color:rgb(88, 103, 113)", target: '_blank'} More info
+
+
+:javascript
+
+  function Promote()
+  {
+    if ("#{petition_url}" != "")
+    {
+      // Get the petition ID based on its URL
+      var url =
+        // "https://api.change.org/v1/petitions/
+        "/api/change.org/v1/petitions/get_id" +
+        "?api_key=236886223b03bf75382a72c1bde90d24eb7845d066d3fd8a09ee43ba471e312f" +
+        "&petition_url=#{petition_url}";
+
+      $.ajax({
+        url: url,
+        type: "get",
+        dataType: "json"
+      }).done(this.processId).fail(this.processError);
+    }
+  }
+
+  Promote.prototype.processId = function(data)
+  {
+    //console.log(data);
+
+    if (data.result == "success")
+    {
+      // Get the petition information based on its ID
+      var url =
+        // "https://api.change.org/v1/petitions/
+        "/api/change.org/v1/petitions/" +
+        data.petition_id +
+        "?api_key=236886223b03bf75382a72c1bde90d24eb7845d066d3fd8a09ee43ba471e312f";
+
+      $.ajax({
+        url: url,
+        type: "get",
+        dataType: "json"
+      }).done(promote.processInfo).fail(promote.processError);
+    }
+  }
+
+  Promote.prototype.processInfo = function(data)
+  {
+    $("#count").text(data.signature_count + ' signatures on Change.org');
+    $("#title").text(data.title);
+
+    $("#changeorg").show();
+  }

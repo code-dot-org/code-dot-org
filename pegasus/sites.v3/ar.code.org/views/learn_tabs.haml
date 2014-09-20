@@ -1,0 +1,9 @@
+#learn-tabs.desktop-feature
+  .content
+    %ul.nav.nav-tabs
+      %li{:class=>(request.path_info == '/learn') ? 'active tab' : 'tab'}<
+        %a{:href=>'/learn'} Participá de la Hora de Program.AR
+      %li{:class=>(request.path_info == '/learn/beyond') ? 'active tab' : 'tab'}<
+        %a{:href=>'/learn/beyond'} Más allá de una hora
+      %li{:class=>(request.path_info == '/learn/educators') ? 'active tab' : 'tab'}<
+        %a{:href=>'/learn/educators'} Educadores

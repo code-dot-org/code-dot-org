@@ -1,0 +1,143 @@
+@import "main";
+
+#modules {
+	.module {
+		background:#fff;
+		border: 1px solid #ccc;
+		.rounded-corners(3px);
+		margin:0px 10px 10px 0px;
+		padding:10px;
+		color:#333;
+
+		// &.not-purchased {
+		// 	background:#eee;
+		// 	opacity:0.8;
+
+		// 	&:hover {
+		// 		background:#fff;
+		// 		opacity:1;
+		// 	}
+		// }
+
+		.info {
+			border-right: 1px solid #eee;
+			padding-right:10px;
+			width:33%;
+			.module-title {
+				.center;
+			}
+
+			.module-image {
+				margin:10px 0px 10px -50px;
+				position: relative;
+				left: 50%;
+				width:100px;
+				height:100px;
+				overflow:hidden;
+
+				img {
+					width:100px;
+					height:auto;
+				}
+			}
+		}
+
+		.module-icons {
+			width:65%;
+		}
+	}
+}
+
+#library {
+
+	.breadcrumbs {
+		background:#fff;
+		border: 1px solid #ccc;
+		.rounded-corners(3px);
+		margin:10px 10px 0px 0px;
+		padding:5px;
+		color:#777;
+		font-size:14px;
+	}
+
+	#modules {
+		margin-top:10px;
+
+		.module {
+			.description {
+				width:50%;
+				padding:10px;
+				font-size:16px;
+				line-height: 23px;
+			}
+
+			.info {
+				width:30%;
+			}
+
+			.browse {
+				width:15%;
+				a {
+					position:relative;
+					left:50%;
+					margin:40px 0px 0px -25px;
+				}
+			}
+		}
+	}
+
+	#content {
+		a {
+			color:#333;
+		}
+		.item {
+			background:#fff;
+			border: 1px solid #ccc;
+			.rounded-corners(3px);
+			margin:0px 5px 5px 0px;
+			padding:10px;
+			color:#333;
+			font-size:18px;
+
+			.span8 {
+				margin:0px 0px 0px 5px;
+			}
+
+			&:hover {
+				background-color: #eee;
+			}
+
+			i {
+				margin: 4px 10px 0px 0px;
+			}
+
+			&.func-done {
+				background-color: @funcDoneColor;
+				&:hover {
+			        background: darken(@funcDoneColor, 15%);
+			    }
+			}
+
+			&.submitted {
+				background-color: @submittedColor;
+				&:hover {
+			        background: darken(@submittedColor, 15%);
+			    }
+			}
+
+			&.complete {
+				background-color: @completeColor;
+				&:hover {
+			        background: darken(@completeColor, 15%);
+			    }
+			}
+
+			&.rejected {
+				background-color: @rejectedColor;
+				&:hover {
+			        background: darken(@rejectedColor, 15%);
+			    }
+			}
+		}
+	}
+}

@@ -1,0 +1,2 @@
+class Unplugged < Level
+end

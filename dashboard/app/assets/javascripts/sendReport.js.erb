@@ -1,0 +1,68 @@
+var lastAjaxRequest;
+var lastServerResponse = {};
+var sendReport = function(report) {
+  // jQuery can do this implicitly, but when url-encoding it, jQuery calls a method that
+  // shows the result dialog immediately
+  var queryItems = [];
+  for (var key in report) {
+    if (report.hasOwnProperty(key)) {
+      queryItems.push(key + '=' + report[key]);
+    }
+  }
+  var queryString = queryItems.join('&');
+
+  var thisAjax = jQuery.ajax({
+    type: 'POST',
+    url: report.callback,
+    contentType: 'application/x-www-form-urlencoded',
+    data: queryString,
+    dataType: 'json',
+    beforeSend: function(xhr) {
+      xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))
+    },
+    success: function (response) {
+      if (thisAjax !== lastAjaxRequest) {
+        return;
+      }
+      reportComplete(report, response);
+    },
+    error: function (xhr, textStatus, thrownError) {
+      if (thisAjax !== lastAjaxRequest) {
+        return;
+      }
+      report['error'] = xhr.responseText;
+      reportComplete(report, getFallbackResponse(report));
+    }
+  });
+
+  lastAjaxRequest = thisAjax;
+};
+
+var cancelReport = function() {
+  if (lastAjaxRequest) {
+    lastAjaxRequest.abort();
+  }
+  lastAjaxRequest = null;
+};
+
+function getFallbackResponse(report) {
+  if (!report.fallbackResponse) {
+    return null;
+  }
+  return report.pass ?
+            report.fallbackResponse.success :
+            report.fallbackResponse.failure;
+}
+
+function reportComplete(report, response) {
+  lastAjaxRequest = null;
+  if (response) {
+    lastServerResponse.report_error = report['error'];
+    lastServerResponse.nextRedirect = response['redirect'];
+    lastServerResponse.previousLevelRedirect = response['previous_level'];
+    lastServerResponse.videoInfo = response['video_info'];
+  }
+  if (report.onComplete) {
+    report.onComplete(response);
+  }
+}

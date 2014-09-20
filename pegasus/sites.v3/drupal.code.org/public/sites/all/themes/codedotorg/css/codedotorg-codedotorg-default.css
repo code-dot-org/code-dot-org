@@ -1,0 +1,29 @@
+#region-branding {
+  margin-bottom: 0;
+}
+
+.region-branding-inner {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.logo-img {
+  width: 87px;
+}
+
+#zone-header {
+  margin-top: 30px;
+  padding: 30px 0;
+}
+.region-header-first-inner {
+  padding: 15px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+.social-buttons .content li {
+  display: block;
+  float: left;
+}
+.simple-quotes .block-inner {
+  padding: 30px 90px 0 90px;
+}

@@ -1,0 +1,28 @@
+Name,Xml,App
+draw_move,"    <block type=""draw_move_by_constant""></block>",turtle
+draw_turn,"    <block type=""draw_turn_by_constant""> <title name=""VALUE"">90</title> </block>",turtle
+draw_color,"      <block id=""draw-color"" type=""draw_colour""> <value name=""COLOUR""> <block type=""colour_picker""></block> </value> </block>",turtle
+draw_width_inline,"      <block id=""draw-width"" type=""draw_width_inline"" inline=""false"" x=""158"" y=""67""> <value name=""WIDTH""> <block type=""math_number""> <title name=""NUM"">1</title> </block> </value> </block>",turtle
+jump,"        <block type=""jump""> <value name=""VALUE""> <block type=""math_number""> <title name=""NUM"">50</title> </block> </value> </block>",turtle
+move_forward,"<block type=""maze_moveForward""></block>",maze|karel
+turn_right,"  <block type=""maze_turn""><title name=""DIR"">turnLeft</title></block>",maze|karel
+is_path_left,"<block type=""maze_if""><title name=""DIR"">isPathLeft</title></block>",maze|karel
+is_path_right,"<block type=""maze_if""><title name=""DIR"">isPathRight</title></block>",maze|karel
+forever,"      <block type=""maze_forever""></block>",maze
+dig,"    <block type=""maze_dig""></block>",karel
+fill,"    <block type=""maze_fill""></block>",karel
+until_blocked_or_not_clear,"    <block type=""maze_untilBlockedOrNotClear""></block>",karel
+until_blocked,"      <block type=""maze_untilBlocked""></block>",karel
+karel_if,"      <block type=""karel_if""></block>",karel
+karel_ifElse,"      <block type=""karel_ifElse""></block>",karel
+counter,"        <block type=""controls_for_counter""> <value name=""FROM""> <block type=""math_number""> <title name=""NUM"">1</title> </block> </value> <value name=""TO""> <block type=""math_number""> <title name=""NUM"">100</title> </block> </value> <value name=""BY""> <block type=""math_number""> <title name=""NUM"">10</title> </block> </value> </block>",
+repeat,"      <block type=""controls_repeat""> <title name=""TIMES"">4</title> </block>",
+function_def,"    <block type=""procedures_defnoreturn"" x=""20"" y=""175"">       <title name=""NAME""></title>    </block>",
+number,"            <block type=""math_number""> <title name=""NUM"">1</title> </block>",
+if,"  <block type=""controls_if""></block>",
+compare,"      <block type=""logic_compare""></block>",
+operation,"      <block type=""logic_operation""></block>",
+negate,"      <block type=""logic_negate""></block>",
+boolean,"      <block type=""logic_boolean""></block>",
+null,"      <block type=""logic_null""></block>",
+arithmetic,"        <block type=""math_arithmetic"" inline=""true""></block>",

@@ -1,0 +1,1 @@
+.addressfield-container-inline > div.form-item{float:left;margin-right:1em;}.addressfield-container-inline.country-GB > div.form-item{float:none;margin-right:auto;}.addressfield-container-inline:after{content:".";display:block;height:0;clear:both;visibility:hidden;}* html .addressfield-container-inline{height:1%;}*:first-child + html .addressfield-container-inline{min-height:1%;}

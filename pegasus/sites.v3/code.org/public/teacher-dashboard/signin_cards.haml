@@ -1,0 +1,47 @@
+---
+layout: none
+theme: none
+---
+:css
+  @media print {
+    .signin_card {page-break-inside: avoid;}
+    #pageheader, #pagefooter, .print-hide {display:none;}
+  }
+  .signin_card {
+    width: 400px;
+    border: 1px dashed #666;
+    padding: 10px;
+    margin: 10px;
+    float: left;
+  }
+  .signin_card dl dt {
+  }
+  .signin_card dl dd {
+  }
+
+%div{"ng-controller" => "SectionDetailController"}
+
+  %br
+  %button.btn.btn-white.print-hide{"ng-click" => "print()"}
+    %span.glyphicon.glyphicon-print
+    = I18n.t('dashboard_students_print_page')
+  %br
+
+  %div.signin_card{"ng-repeat" => "student in section.students | orderBy:name"}
+    %dl
+      %dt= I18n.t('dashboard_students_url')
+      %dd
+        http://#{canonical_hostname('studio.code.org')}/sections/{{section.code}}
+    %dl
+      %dt= I18n.t('dashboard_students_name')
+      %dd {{student.name}}
+    %dl{"ng-if" => "section.login_type === 'picture'"}
+      %dt= I18n.t('dashboard_students_secret_picture')
+      %dd  
+        %img{"ng-src" => "/images/{{student.secret_picture_path}}",
+             alt: "{{student.secret_picture_name}}",
+             title: "{{student.secret_picture_name}}",
+             height: 100}
+    %dl{"ng-if" => "section.login_type === 'word'"}
+      %dt= I18n.t('dashboard_students_secret_word')
+      %dd {{student.secret_word_1}} {{student.secret_word_2}}

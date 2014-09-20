@@ -1,0 +1,162 @@
+-# @all_script_levels = Script.twenty_hour_script.script_levels.includes({ level: :game })
+-# @all_script_levels = Script.get_from_cache("k-1").script_levels.includes({ level: :game })
+
+- stage_map = @all_script_levels.group_by { |sl| sl.stage ? sl.stage : sl.level.game }
+
+- stage_lengths = []
+
+- # Work out how many levels we show, then calculate number of pixels per level based on a 940px width scene.
+- numLevels = 0
+- stage_map.each_pair do |game, levels|
+  - width = levels.length
+  - if width > 0
+    - numLevels += levels.length
+- widthpx = (780 / numLevels).floor
+
+#progress
+  - @section_map.each_pair do |section, students|
+    .progressheader
+      .studentname{style: "width: 160px; float: left"}
+        &nbsp;
+      - stage_map.each_pair do |game, levels|
+        - width = levels.length
+        - if width > 0
+          - stage_lengths << width
+          - if width > 1
+            - background_color = cycle("#666", "#777", name: "big_header")
+          - else
+            - background_color = cycle("#888", "#999", name: "little_header")
+          .stage{style: "box-sizing: content-box; background-color: #{background_color}; color: white; float:left; width: #{width * widthpx}px; height:50px; padding-left:5px; padding-top:5px; padding-right:0px; padding-bottom:0px; box-sizing:border-box;", title: game.name}
+            - if width > 1
+              =game.name
+    - student_ids = []  
+    - all_levels = []        
+    - students.each do |student|
+      - student_ids << student.id
+      - level_map = student.user_levels.index_by {|ul| ul.level_id }
+      - student_levels = []
+      - @all_script_levels.each do |sl|
+        - student_levels << level_map[sl.level_id]
+      - all_levels << student_levels
+      .clear
+      .studentrow
+        .studentname{style: "width: 160px; float: left; height: 40px"}
+          .gap{style: "height:10px"}
+            &nbsp;
+          - if section && student
+            = link_to student.name, "teacher-dashboard#/sections/#{section.id}/student/#{student.id}"
+        .studentzone{style: "float: left; position: relative"}
+          - reset_cycle("big_body")
+          - reset_cycle("little_body")
+          - stage_map.each_pair do |game, levels|
+            - width = levels.length
+            - if width > 0
+              - if width > 1
+                - background_color = cycle("#dadada", "#eeeeee", name: "big_body")
+              - else
+                - background_color = cycle("#f2f2f2", "#ffffff", name: "little_body")
+              .stage{style: "box-sizing: content-box; background-color: #{background_color}; color: white; float:left; width: #{width * widthpx}px; padding-top: 5px; padding-bottom:5px; height:30px;"}
+                &nbsp;    
+          .studentbar{style: "position: absolute; display: none", id: "studentbar_#{student.id}"}
+          .studentdot{style: "position: absolute; left: -15px; padding-top:4px; padding-bottom:4px", id: "studentdot_#{student.id}"}
+            .dot{style: "box-sizing: content-box; border-radius: 20px; background-color: rgb(14, 190, 14); padding: 7px; color: white; width: 18px; height: 18px; font-weight: 600; cursor:default; text-align: center; opacity: 0.8"}
+              35
+   
+        .clear
+
+    :javascript
+      var studentIds = JSON.parse('#{student_ids.to_json}'); 
+      var allLevels = JSON.parse('#{all_levels.to_json}');
+      var stageLengths = JSON.parse('#{stage_lengths}');
+%br/
+
+-# Set this to true if you just want to see some random student values.  Handy for testing.
+- showRandomValues = false
+
+:javascript
+
+  function progressLoaded()
+  {
+    // Rendering with javascript here gives us the option of doing a version that updates in realtime with ajax calls.
+
+    for (var s = 0; s < studentIds.length; s++)
+    {
+      var highestLevel = 0;
+
+      // Determine the highest completed level before we draw bars.  We don't want to draw unfinished levels beyond
+      // the last finished one.
+      if ("#{showRandomValues}" == "true")
+      {
+        highestLevel = Math.round(Math.random() * allLevels[s].length);
+        console.log("highestLevel", s, highestLevel, allLevels[s].length);
+      }
+      else
+      {
+        for (var l = 0; l < allLevels[s].length; l++)
+        {
+          var levelInfo = allLevels[s][l];
+
+          var passed = levelInfo && levelInfo.best_result >= 100;
+          if (passed)
+          {
+            highestLevel = l;
+          }  
+        }   
+      }
+
+      // Draw the level history, though it'll be hidden until we fade it in.
+      for (var l = 0; l <= highestLevel; l++)
+      {
+        var levelInfo = allLevels[s][l];
+        var passed;
+
+        if ("#{showRandomValues}" == "true")
+          passed = Math.random() > 0.5;
+        else
+          passed = levelInfo && levelInfo.best_result >= #{Activity::MINIMUM_PASS_RESULT};
+
+        var backgroundColor = passed ? "rgb(14, 190, 14)" : "rgb(230, 90, 90)";
+        var id = "#studentbar_" + studentIds[s];
+        var title = "Level " + (getLevelNumberInStage(l) + 1) + (passed ? " completed" : " not completed"); // TODO loc
+        $(id).append('<div class="bar" title="' + title + '" style="float:left; width:#{widthpx}px; margin-top:15px; height:10px; opacity: 0.8; cursor: default; background-color: '+ backgroundColor + '" >&nbsp;</div>');
+      }
+
+      // Animate each student's dot to the correct level.
+      var level = highestLevel;
+      var id = "#studentdot_" + studentIds[s];
+      var widthPx = parseInt("#{widthpx}");
+      $(id).animate({left: level * widthPx -15 + "px"}, 4000 /*, "easeInOutCubic" */);
+      $(id + " .dot").text(getLevelNumberInStage(level) + 1);
+
+      // Set dot color.
+      if (level < 20)
+      {
+        $(id + " .dot").css("background-color", "rgb(230, 90, 90)");
+      }
+
+      // And set up the bars to fade in.
+      var fDelayed = function(studentId)
+      {
+        return function() 
+        {
+          $("#studentbar_" + studentId).fadeIn(3000);
+        }
+      }
+      setTimeout(fDelayed(studentIds[s]), 3000);
+    }
+
+    // Takes the overall level number as rendered horizontally, and returns its level number in the current stage.
+    function getLevelNumberInStage(overallLevel)
+    {
+      for (stage = 0; stage < stageLengths.length; stage++)
+      {
+        if (overallLevel < stageLengths[stage])
+          return overallLevel;
+        else
+          overallLevel -= stageLengths[stage];
+      }
+
+      return 0;
+    }
+
+  }

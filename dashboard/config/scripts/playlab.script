@@ -1,0 +1,18 @@
+title 'Play Lab'
+description_short "Create a story or make a game with Play Lab!"
+description "Create a story or make a game with Play Lab!"
+hidden 'false'
+
+stage 'Play Lab'
+skin 'studio'
+video_key_for_next_level 'C3_playlab_create_game'
+level 'blockly:Studio:playlab_1'
+level 'blockly:Studio:playlab_2'
+level 'blockly:Studio:playlab_3'
+level 'blockly:Studio:playlab_4'
+level 'blockly:Studio:playlab_5'
+level 'blockly:Studio:playlab_6'
+level 'blockly:Studio:playlab_7'
+level 'blockly:Studio:playlab_8'
+level 'blockly:Studio:playlab_9'
+level 'blockly:Studio:playlab_10'

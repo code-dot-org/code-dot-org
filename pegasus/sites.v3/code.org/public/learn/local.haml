@@ -1,0 +1,134 @@
+---
+title: Find a Local School
+theme: responsive
+---
+-search_location ||= nil
+-class_format_s ||= nil
+-class_format_category_s ||= nil
+-class_languages_all_ss ||= nil
+-school_level_ss ||= nil
+-school_tuition_s ||= nil
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
+%script{type: "text/javascript", src: "/js/maplace.min.js"}
+%script{type: "text/javascript", src: "/js/class-search.js"}
+%script{type: "text/javascript", src: "/js/jquery.colorbox-min.js"}
+%script{type: "text/javascript", src: "/js/jquery.sticky.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+%link{rel: "stylesheet", type: "text/css", href: "/css/colorbox.css"}/
+
+/[if lt IE 9]
+  %script{src: "/js/es5-shim.min.js"}
+
+%link{href: "/css/learn_tabs.css", rel: "stylesheet"}
+
+:css
+  html, body, #map-canvas {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+  #controls ul,
+  #controls li {
+    list-style-type: none;
+    padding-left: 0;
+    text-indent: 0;
+  }
+  #controls ul li:before {
+    content: '';
+  }
+  #controls #ullist_a_all,
+  #controls li.active {
+    font-weight: bold;
+  }
+  #controls .active a:link,
+  #controls .active a:visited {
+    color: #ff8b02;
+  }
+  #controls a,
+  #controls a:link,
+  #controls a:visited {
+    font-weight: normal;
+  }
+  #controls .active a,
+  #controls a:hover,
+  #controls a:active {
+    background: #eee;
+  }
+  #gmap h3 {
+    margin: 0;
+    padding: 0;
+  }
+  .more-info {
+    font-weight: bold;
+  }
+  #inline-content h2 {
+    font-size: 1.625em;
+  }
+  #inline-content div {
+    margin: 1em 0;
+    font-size: 1.25em;
+  }
+
+%h1 Find a Local Computer Science Class
+
+%p
+  Enter your address to find a local computer science class. Don't see your school/classroom listed?
+  %a{href: "/schools/new"} Submit it here
+
+%form#class-search-form{role: "form", onsubmit: "event.preventDefault();"}
+  .form-section.row
+    .form-group.col-xs-6
+      %div
+        %input#location.form-control.input-lg{name: "location", placeholder: "Search my location", type: "text", value: search_location}/
+    .form-group.submit-btn
+      %button#btn-submit.btn.btn-default.input-lg{type: "submit"} Search
+  #class-search-facets.form-section.row{style: 'display: none;'}
+    %h3.col-xs-12{style: 'margin-top: 0;'} Narrow your search
+    .form-group.col-xs-3
+      %label.control-label.small{for: "class-format-category", style: "font-weight: normal;"} Class format
+      %div
+        %select#class-format-category.form-control{name: "class_format_category_s", type: "select"}
+          %option{selected: class_format_s.nil_or_empty?, value: ""}
+          -ClassSubmission.formats.each_pair do |key,group|
+            -if key != 'online'
+              %option{value: key, selected: key == class_format_category_s}= group['label']
+    .form-group.col-xs-3
+      %label.control-label.small{for: "class-languages", style: "font-weight: normal;"} Language(s)
+      %div
+        %select#class-languages.form-control{name: "class_languages_all_ss[]", type: "select", multiple: true}
+          %option{selected: class_languages_all_ss.nil_or_empty?, value: ""}
+          -ClassSubmission.languages.each do |label|
+            %option{value: label, selected: (class_languages_all_ss||[]).include?(label.to_s)}= label
+    .form-group.col-xs-3
+      %label.control-label.small{for: "school-level", style: "font-weight: normal;"} Level(s)
+      %div
+        %select#school-level.form-control{name: "school_level_ss[]", type: "select", multiple: true}
+          %option{selected: school_level_ss.nil_or_empty?, value: ""}
+          -ClassSubmission.levels.each_pair do |key,label|
+            %option{value: key, selected: (school_level_ss||[]).include?(key.to_s)}= label
+    .form-group.col-xs-3
+      %label.control-label.small{for: "class-tuition", style: "font-weight: normal;"} Public/private
+      %div
+        %select#school-tuition.form-control{name: "school_tuition_s", type: "select"}
+          %option{selected: school_tuition_s.nil_or_empty?, value: ""}
+          %option{value: 'no', selected: (school_tuition_s) == 'no'} Public/free
+          %option{value: 'yes', selected: (school_tuition_s) == 'yes'} Private/tuition
+
+#class-search-results.row{style: 'margin-top: 1em; display: none;'}
+  #class-search-controls.col-xs-5
+    #controls
+  #class-search-map.col-xs-7
+    #gmap{style: "width: 553px; height: 640px; padding: 10px; padding: 3px; border: 3px solid #ddd;"}
+.row
+  #class-search-error.col-xs-12{style: 'margin-top: 2em; display: none;'}
+
+#location-details{style: 'display: none'}
+
+:javascript
+  $(document).ready(function() {
+    //$('#class-search-results').show();
+    //$('#class-search-facets').show();
+  });

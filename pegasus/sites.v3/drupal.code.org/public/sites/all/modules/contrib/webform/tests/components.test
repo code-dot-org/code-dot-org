@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Webform module component tests.
+ */
+
+include_once(dirname(__FILE__) . '/webform.test');
+
+class WebformComponentsTestCase extends WebformTestCase {
+  /**
+   * Implements getInfo().
+   */
+  public static function getInfo() {
+    return array(
+      'name' => t('Webform components'),
+      'description' => t('Add and remove components from a webform.'),
+      'group' => t('Webform'),
+    );
+  }
+
+  /**
+   * Implements setUp().
+   */
+  function setUp() {
+    parent::setUp();
+  }
+
+  /**
+   * Implements testWebformDummy(). if it is not present,
+   * then the test runs fine, but when combined with other tests
+   * the whole block fails, since there would be no output.
+   */
+  function testWebformDummy() {
+    $this->pass = t('WebformComponentsTest pass.');
+  }
+}

@@ -1,0 +1,6 @@
+= link_to("#", data: video_info(video), :class => 'video_link') do
+  = image_tag(video_thumbnail_url(video), :id => "thumbnail_" + video.youtube_code, :width => 39*4.7, :height => 50*4.7, :class => 'video_thumbnail')
+  .video_name
+    %span= data_t('video.name', video.key)
+- if video_counter.odd?
+  .clear

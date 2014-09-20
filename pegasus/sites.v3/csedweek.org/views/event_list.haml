@@ -1,0 +1,18 @@
+- events.keys.sort.each do |region|
+  -items = events[region][:items]
+  -unless items.nil?
+    -unless events[region][:name_abbreviation].nil?
+      %a{:name=>events[region][:name_abbreviation].downcase}
+    %h3= region
+    %ul
+      - sorted = items.sort_by { |i| i['organization_name'] }
+      - sorted.each do |event|
+        %li
+          - name = event['organization_name']
+          - count = event['participant_count']
+          - type = event['organization_type'] || 'Other'
+          - type_comma = type == 'Other' ? '' : "#{type}, "
+          = "#{name} (#{type_comma}#{count} student#{count == 1 ? '': 's'} participating)"
+          - description = event['description']
+          - unless description.nil?
+            %div{:style=>'margin: 4px 32px; text-indent: 0px;'}= description

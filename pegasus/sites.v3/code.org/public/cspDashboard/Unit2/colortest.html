@@ -1,0 +1,200 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<style>
+
+		body{
+			font-family: sans-serif;
+			font-size: 10pt;
+			padding: 50px;
+		}
+		table{
+			width: 500px;
+		}
+		table td{
+			border: solid 1px #000000;
+			text-align: center;
+
+		}
+		input[type="text"]{
+			width:60px;
+
+		}
+		
+		.noBorder{
+			border: none;
+			width: 30px;
+			height: 30px;
+		}
+		.colorBox{
+			
+			padding: 5px;
+			font-family: monospace;
+			font-size: 10px;
+			color: #FFFFFF;
+			text-shadow: 1px 1px 0px #000000;
+		}
+	</style>
+
+	<script>
+		function hexToInt(val){
+
+			return parseInt(val.replace("#","0x"),16);
+		}
+
+		function decToHex(val){
+			var str=val.toString(16);
+			while(str.length<6){
+				str = "0"+str;
+			}
+			return "#"+str;  
+
+		}
+
+		function makeColorDisplay(id, color){
+			//var str = "<input class='noBorder' type=color value='"+color+"' disabled> "+color;
+			$(id).css("background-color", color);
+			$(id).html(color);
+
+		}
+
+		function makeMixDisplay(id, colorA, colorB, colorC){
+			var str = "<input class='noBorder' type=color value='"+colorA+"' disabled alt="+colorA+"> x <input class='noBorder' type=color value='"+colorB+"' disabled alt="+colorB+"> = <input class='noBorder' type=color value='"+colorC+"' disabled alt="+colorC+"> "+colorC;
+
+			$(id).html(str);
+		}
+
+		function setValues(){
+			$("#publicTxt").html($("#public").val());
+			$("#aliceTxt").html($("#alice").val());
+			$("#bobTxt").html($("#bob").val());
+		}
+
+		function doMix(){
+			setValues();
+			var publicHex = $("#public").val();
+			var AlicePvtHex = $("#alice").val();
+			var BobPvtHex = $("#bob").val();
+
+			var publicVal = parseInt(hexToInt(publicHex));
+			var privateAliceVal = parseInt(hexToInt(AlicePvtHex));
+			var privateBobVal = parseInt(hexToInt(BobPvtHex));
+
+			var aliceMixed = (publicVal*privateAliceVal) % Math.pow(2,24);
+			var bobMixed = (publicVal*privateBobVal) % Math.pow(2,24);
+
+			makeMixDisplay("#alicePubMix", publicHex, AlicePvtHex, decToHex(aliceMixed));
+			makeMixDisplay("#bobPubMix", publicHex, BobPvtHex, decToHex(bobMixed));
+
+			var alicePvtMix = (bobMixed*privateAliceVal)%Math.pow(2,24);
+			var bobPvtMix = (aliceMixed*privateBobVal)%Math.pow(2,24);
+
+			makeMixDisplay("#alicePvtMix", decToHex(bobMixed), AlicePvtHex, decToHex(alicePvtMix));
+			makeMixDisplay("#bobPvtMix", decToHex(aliceMixed), BobPvtHex, decToHex(bobPvtMix));
+
+			makeColorDisplay("#evePublic", publicHex);
+			makeColorDisplay("#eveAlice", decToHex(aliceMixed));
+			makeColorDisplay("#eveBob", decToHex(bobMixed));
+
+
+		}
+
+		$(document).ready(function(){ doMix(); });
+
+	</script>	
+</head>
+<body>
+<table class="table-bordered">
+<tr><td colspan=2>Public: 
+	<input type="color" id="public" onChange="doMix()" value="#004080"> 
+	<span id="publicTxt"></span><br>
+	<small>Bob and Alice, and the public at large, know this color.</small>
+	</td>
+</tr>
+
+<tr>
+<td>
+Alice Private: <br>
+<input type="color" id="alice" onChange="doMix()" value="#ff017f"> <span id="aliceTxt"></span><br>
+<small>Alice picks a private color. She never shares this with anyone.</small>
+</td>
+<td>
+Bob Private: <br><input type="color" id="bob" onChange="doMix()" value="#47ceea"> <span id="bobTxt"></span><br>
+<small>Bob picks a private color. He never shares this with anyone.</small>
+
+</td>
+</tr>
+<tr><td>
+	Alice Public Mix
+<div id="alicePubMix"></div>
+<small>Alice mixes her private color with the public color to make this. formula: (alice private * public) % 2^24</small>
+</td>
+<td>
+Bob Public Mix: <br>
+<div id="bobPubMix"></div>
+<small>Bob mixes his private color with the public color to make this. formula: (bob private * public) % 2^24</small>
+</td>
+</tr>
+
+<tr><td>
+Alice mixes her private color with Bob's public mix:<br> 
+<div id="alicePvtMix"></div>
+<br>
+This makes a new private mix, but notice it is the same as Bob's.
+</td>
+<td>
+Bob mixes his private color with Alices's public mix:<br> 
+<div id="bobPvtMix"></div>
+ <br>
+This makes a new private mix, but notice it is the same as Alices's.
+
+</td>
+</tr>
+<tr>
+	<td colspan=2>
+	<p>
+		Bob and Alice have now created a color that only the two of them know about.  And they did it without having to meet ahead of time!  And they did by exchanging public information!
+	</p>
+	<p>
+		They can now use this color as a "key" to encrypt information that they send back and forth to each other using any encryption scheme they want.
+	</p>
+	<p>
+		The implications of this are enormous.  It means that any two entities can communicate privately without having to meet ahead of time, and only using public communication channels.
+	</p>
+<tr>
+	<td colspan=2>
+		Eve knows three colors:<br>
+		The original public: <span id="evePublic" class="colorBox"></span>
+		Alice's public mix: <span id="eveAlice" class="colorBox"></span>
+		Bob's public mix: <span id="eveBob" class="colorBox"></span>
+		In order to crack the code, Eve needs to find the color that when multiplied by the public color equals either Alice or Bob's public color mix...in other words, Eve needs to find Alice or Bob's private color.  There are 2^24 possibilities. <br>
+		Meanwhile, Alice and Bob can privately, and quickly, generate the same color by multiplying the other's public color with their private color.<br>
+		This works because their shared private color is the result of multplying the public color and each of their private colors together.
+	</td>
+</tr>
+<tr>
+	<td colspan=2 style="text-align: left">
+		<p>How colors are "mixed" (or how the math is done):</p>
+		<ol>
+			<li>Each color is really just a 24 bit number.</li>
+			<li>Those 24-bit numbers can be multiplied together to create a large number (that is potentially larger than 24-bits).</li>
+			<li>We find the remainder of this product after dividing by 2^24.  The result, then, is a value in the range of 0-2^24.</li>
+			<li>Another way to think of remainders is that we have a circular range of numbers between 0 and 2^24.  Once we exceed 2^24, it "loops around" back to 0.  So if we have a very large number, it just keps looping around and around our circle of numbers.</li>
+			<li>The operation of finding the remainder after division is called "modulo".  For example "5 modulo 3" is 2 because 5/3 is 1, remainder 2.</li>
+			<li>Finally, here is how we mix two colors: we multiply the 24-bit RGB values of two colors and then take that result modulo 2^24.  The multiplication, in other words, wraps around and around the range of possible RGB colors (which is 2^24).</li>
+			<li>EXAMPLE: darkblue * fuschia<br>
+				<table>
+					<tr><th width="25%"></th><th>hex</th><th>dec</th></tr>
+					<tr><td>Multiply the numbers representing two colors</td><td>#004080 * #ff017f</td>		<td>16,512 * 16,712,063</td></tr>
+					<tr><td></td><td>= #403fe07f80</td>			<td>= 275,949,584,256</td></tr>
+					<tr><td>Mod the result by the "largest" color number</td><td>#403fe07f80 % #ffffff</td>	<td>275,949,584,256 % 16,777,216</td></tr>
+					<tr><td>treat result as another color</td><td>= #f2af80</td>				<td>= 15,904,640</td></tr>
+				</table>
+			</li>
+	</td>
+</table>
+
+</body>
+<script> doMix(); </script>
+</html>

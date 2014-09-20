@@ -1,0 +1,57 @@
+-data = DB[:cdo_state_petition_data].where(state_code_s:state).first
+-pass if data.nil?
+-statename = us_state_name_from_code(state)
+-statename_with_dashes = statename.gsub(" ", "-").downcase
+
+.greybox{:style=>"color:white; text-align:left; margin: 0 0 40px 0; padding: 20px 0;"}
+  %div{:style=>"float: left; width: 300px; margin: 0;"}
+    %h3{:style=>'font-size:18px; font-weight:400; color: white; margin: 20px 0 0 20px; text-align: center;'}
+      =statename
+      State Facts
+      %sup *
+    %img{:src=>"/images/states/#{statename_with_dashes}.png", :style=>"width: 270px"}
+  %div{:style=>"float: left; width: 280px; margin: 0 40px 0 0"}
+    %ul{:style=>"margin: 20px 0;"}
+      -unless data[:cs_jobs_i] == 0
+        %li
+          %b= format_integer_with_commas(data[:cs_jobs_i])
+          open computing jobs
+          %br
+          -unless data[:growth_vs_average_f] < 0.0
+            (growing at <b>#{data[:growth_vs_average_f]}x</b> the state average)
+            %br
+
+      -unless data[:cs_graduates_i] == 0
+        %li
+          %b= format_integer_with_commas(data[:cs_graduates_i])
+          computer science graduates
+          %br
+
+      -unless data[:count_schools_teach_cs_i] == 0
+        %li
+          %b= format_integer_with_commas(data[:count_schools_teach_cs_i])
+          schools teach computer science
+          %br
+
+      -if ! state.nil_or_empty? && File.exists?(sites_dir("all/files/states/#{state}.pdf"))
+        %li.download-fact-sheet<
+          Download
+          %a{:href=>"/files/states/#{state}.pdf", :target=>'_blank'}<
+            #{state} fact-sheet
+
+    %br
+    %p{:style=>"font-size: 12px; line-height: 16px;"}
+      * Sources:
+      =succeed "," do
+        %a{:href=>"http://www.conference-board.org/", :style=>"color:rgb(200,200,200)"} The Conference Board
+      =succeed "," do
+        %a{:href=>"http://www.nsf.gov/", :style=>"color:rgb(200,200,200)"} National Science Foundation
+      =succeed "." do
+        %a{:href=>"http://code.org/learn/local", :style=>"color:rgb(200,200,200)"} Code.org
+      =succeed "." do
+        %a{:href=>"https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub", :style=>"color:rgb(200,200,200)"} More info
+
+  %div{:style=>"float: left; width: 310px; margin: 0; border: 1px solid #fff; padding: 20px; text-align: center; margin: 20px 0 0 0;"}
+    %p{:style=>"font-size: 18px; line-height: 1.5em; margin: 0 0 20px 0;"}= action_text
+    %a{:href=>link_url, :target=>'_blank'}
+      %button{:class=>'state-petition-btn'}= link_text

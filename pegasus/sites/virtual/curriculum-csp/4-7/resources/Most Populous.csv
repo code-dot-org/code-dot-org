@@ -1,0 +1,38 @@
+States
+State,"Population, 2013","Pop. per sq. mi., 2013"
+California,"38,332,521",246.1
+Texas,"26,448,193",101.2
+"New York","19,651,127",417
+Florida,"19,552,860",364.6
+Illinois,"12,882,135",232
+Pennsylvania,"12,773,801",285.5
+Ohio,"11,570,808",283.2
+Georgia,"9,992,167",173.7
+Michigan,"9,895,622",175
+"North Carolina","9,848,060",202.6
+
+Counties
+County,"Population, 2013","Pop. per sq. mi., 2013"
+"Los Angeles County, CA","10,017,068","2,468.4"
+"Cook County, IL","5,240,700","5,544.2"
+"Harris County, TX","4,336,853","2,544.9"
+"Maricopa County, AZ","4,009,412",435.8
+"San Diego County, CA","3,211,252",763.4
+"Orange County, CA","3,114,363","3,939"
+"Miami-Dade County, FL","2,617,176","1,379.1"
+"Kings County, NY","2,592,149","36,606.8"
+"Dallas County, TX","2,480,331","2,842.1"
+"Queens County, NY","2,296,175","21,150.6"
+
+Cities
+"City, ST","Population, 2013","Pop. per sq. mi., 2013"
+"New York city, NY","8,405,837","27,781.2"
+"Los Angeles city, CA","3,884,307","8,288"
+"Chicago city, IL","2,718,782","11,942.2"
+"Houston city, TX","2,195,914","3,661.5"
+"Philadelphia city, PA","1,553,165","11,581.4"
+"Phoenix city, AZ","1,513,367","2,924.4"
+"San Antonio city, TX","1,409,019","3,056.5"
+"San Diego city, CA","1,355,896","4,169.5"
+"Dallas city, TX","1,257,676","3,684.2"
+"San Jose city, CA","998,537","5,655.2"

@@ -1,0 +1,254 @@
+"sr":
+  slides:
+    maze_intro:
+      1:
+        image: "notes/hoc1_1.jpg"
+        text: "Добродошли на Ваш први час програмирања! Хајдемо видети Ваш укус за програмирање."
+      2:
+        image: "notes/hoc1_2.jpg"
+        text: 'Користићемо  Blockly, програмски језик за визуелно програмирање где ћете превлачењем блокова креирати код.'
+      3:
+        image: "notes/hoc1_3.jpg"
+        text: 'Већина кода је углавном откуцана, али Blockly је визуелан. Сваки блок одговара линији  "правог" кода.'
+      4:
+        image: "notes/hoc1_4.jpg"
+        text: "Научити ћете основе науке о рачунарима, која се користи за правлејнје апликација као и за управлјане возилом на Марсу."
+      5:
+        image: "notes/hoc1_5.jpg"
+        text: "Програм је сет инструкција које компјутор треба да следи."
+      6:
+        image: "notes/hoc1_6.jpg"
+        text: "Цилј вашег првог програма јесте да Angry Bird прође кроз лабиринт како би погодила Green Pig."
+      7:
+        image: "notes/hoc1_7.jpg"
+        text: "Лева страна је лабиринт где се важ програм извршава. Инструкције за сваку пузлу су испод лабиринта."
+      8:
+        image: "notes/hoc1_8.jpg"
+        text: "Среднји toolbox има команде за Angry Bird. Користит ћете га како би написали ваш код."
+      9:
+        image: "notes/hoc1_9.jpg"
+        text: "Н десној страни је ваш радни простор где ћете повлачити блокове из toolbox како би написали свој програм. Како би избрисали блок, повуците га у смеће у чошку."
+      10:
+        image: "notes/hoc1_10.jpg"
+        text: 'Сваки блок је једна наредба. Ако повучете помери се напредпомери се напред "move forward" блок у ваш простор и притиснете "Run Program", птица ће се померити за један корак у лабиринту.'
+      11:
+        image: "notes/hoc1_11.jpg"
+        text: "Како би извршили више од једне акције, можете повући више блокова на ваш радни простори и спојити их. Птица ће извршити наредбе од врха ка дну."
+      12:
+        image: "notes/hoc1_12.jpg"
+        text: 'Ако покренете програм и желите га поправити и покушати поново, притисните "Reset" дугме.'
+      13:
+        image: "notes/hoc1_13.jpg"
+        text: "Средимо те свинје!"
+    artist_intro:
+      1:
+        image: "notes/stage5_1.jpg"
+        text: "Здраво ја сам ЈР! Сваком тркачком тиму је потребан компјутерски научник да бих победили. Они анализирају податке аутомобила како бих ауто ишао брже."
+      2:
+        image: "notes/stage5_2.jpg"
+        text: "У овој загонетци, ти ћеш бити уметник који црта линију иза њих свуда где иду."
+      3:
+        image: "notes/stage5_3.jpg"
+        text: 'Овај блок говори "крећи се напред за 100 пиксела." пиксели су мале коцкасте тачкице на твом екрану.'
+      4:
+        image: "notes/stage5_4.jpg"
+        text: 'Овај блок налаже  "скрени десно за 90 степени." Ово ће окренити вашег уметника за исту количину као и "turn" блокови у лавиринтским загонеткама.'
+      5:
+        image: "notes/stage5_5.jpg"
+        text: "Кликни на стрелицу на било који од ових блокова како бих променио количину уметниковог кретања и скретања. Мало се играј како бих се упознао са овим новим блоковима."
+    farmer_intro:
+      1:
+        image: "notes/stage9_1.jpg"
+        text: "Ћао, ја сам Паола! У овим слагалицама, ви сте фармерица која мора да поравна своје поље како бих могла да почне да сеје."
+      2:
+        image: "notes/stage9_2.jpg"
+        text: "Морате јој помоћи да уклони све гомиле прљавштине и попуните све рупе."
+      3:
+        image: "notes/stage9_3.jpg"
+        text: "The new blocks remove 1 shovelful of dirt from a pile and fill in 1 shovelful of dirt to a hole."
+      4:
+        image: "notes/stage9_4.jpg"
+        text: "Гомиле и рупе су различитих величина, тако да морате да наредите фармеру колико пуних лопата где и како да искористи."
+    flappy_intro:
+      1:
+        image: "notes/flappy01.jpg"
+        text: "Hi, I'm Katie! One of the most exciting things about computer science is that a computer program can be interactive."
+      2:
+        image: "notes/flappy02.jpg"
+        text: "Any time somebody clicks or taps or types on a computer or phone, that generates an EVENT, and there's some code that decides what to do when an EVENT occurs."
+      3:
+        image: "notes/flappy03.jpg"
+        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse is clicked, play a sound" '
+      4:
+        image: "notes/flappy04.jpg"
+        text: "Have you ever heard of the game FlappyBird? By using Event handlers, we're going to learn to program our own custom version of FlappyBird!"
+      5:
+        image: "notes/flappy05.jpg"
+        text: "The code you'll write involves dragging and dropping blocks that represent commands for the computer. Under the hood, each of these blocks is represented by real code."
+      6:
+        image: "notes/flappy06.jpg"
+        text: 'If you take a look at the workspace, there are some green blocks that are filled in for you - these are "event handlers" '
+      7:
+        image: "notes/flappy07.jpg"
+        text: 'If you want the bird to FLAP when you CLICK the mouse, you can do that by attaching the "FLAP" block to the appropriate event handler, and now in your game whenever you click the mouse, the bird will flap.'
+      8:
+        image: "notes/flappy08.jpg"
+        text: "In each puzzle of this activity we'll introduce new types of events as green blocks on the workspace, and you can decide the appropriate blocks to add in response to those events."
+      9:
+        image: "notes/flappy09.jpg"
+        text: 'When you see a drop down arrow like this, that means you can change the settings - like what sound to play when flappy hits the ground.'
+      10:
+        image: "notes/flappy10.jpg"
+        text: "In the final puzzle you'll be able to create your own game and share it with your friends. Have fun!"
+    loop_times:
+      1:
+        image: "notes/hoc2_1.jpg"
+        text: "Здраво, ја сам Марк! Хајдемо учити о петлјама. Када користимо петлје говоримо компјутеру да понови било који сет наредби изнова и изнова, хилјадама или милионима пута."
+      2:
+        image: "notes/hoc2_2.jpg"
+        text: "У овој пузли, ми желимо да се птица помакне 5 корака напред како би дошла до свинје."
+      3:
+        image: "notes/hoc2_3.jpg"
+        text: 'Можемо користити нови "repeat" блок како би нам помогао.'
+      4:
+        image: "notes/hoc2_4.jpg"
+        text: "Уместо извршаванја 5 ''помери се напред'' блокова..."
+      5:
+        image: "notes/hoc2_5.jpg"
+        text: 'Можемо ставити "move forward" блок унутар "repeat" блока и написати број у блоку како бих смо му рекли колико пута да се понавља.'
+      6:
+        image: "notes/hoc2_6.jpg"
+        text: 'А ово је важно: можеш ставити више од једне команде унутар "repeat" блока.'
+      7:
+        image: "notes/hoc2_7.jpg"
+        text: 'Ућивајте користећи ваш нови "repeat" блок!'
+    loop_until:
+      1:
+        image: "notes/hoc3_1.jpg"
+        text: 'Здраво моје име је крис.  Пре придруживању Miami Heat, Предавао сам компјутерске науке на Georgia Tech-у. Хајде да испробамо наш нови блок, "repeat until"блок.'
+      2:
+        image: "notes/hoc3_2.jpg"
+        text: "Шта бих се десило ако не бих смо знали колико далеко је птици потребно да се креће да бих стигла до прасета?"
+      3:
+        image: "notes/hoc3_3.jpg"
+        text: 'Ако ставимо "move forward" блок унутар "repeat until" блока, птица ће се кретати напред све док не стигне до прасета (или не удари у зид).'
+      4:
+        image: "notes/hoc3_4.jpg"
+        text: 'И ово је важно: истао као и пре, можемо да ставимо више блокова унутар "repeat until" блока, и сви они ће бити поновљени.'
+    if:
+      1:
+        image: "notes/hoc4_1.jpg"
+        text: 'Здраво, моје име је Бил! Хајде да научимо нови основни концепт: "If" наредбе. На овај начин компјутери доносе одлуке.'
+      2:
+        image: "notes/hoc4_2.jpg"
+        text: 'И ти користиш "If" наредбе сваки дан. Сваког јутра пре него што изађеш напоље, кажеш АКО напољу пада киша, морам обући јакну.'
+      3:
+        image: "notes/hoc4_3.jpg"
+        text: "Можемо рећи зомбију да провери АКО постоји стаза за лево, и ако пронађе стазу за лево, можемо га окренути у том правцу."
+      4:
+        image: "notes/hoc4_4.jpg"
+        text: 'Да бих написали код за ово, хајде да извучемо "Ако" блок и ставимо "Скрени лево" блок унутар њега.'
+      5:
+        image: "notes/hoc4_5.jpg"
+        text: 'А сада, ако ставимо "Крени напред" блок изнад и "понови" блок око свега, сваки пут када се зомби покрене, провериће да ли постоји стаза за лево и скренуће. "понови" команда је критична, да провери за скретање на сваком кораку.'
+      6:
+        image: "notes/hoc4_6.jpg"
+        text: "Ако наредбе су веома важне у компјутерским наукама. Један од првих програма које сам написао била је икс-окс игра, и у њему је била ако наредба која је гласила да АКО је друга особа близу победе, блокирај место које им омогућава победу."
+      7:
+        image: "notes/hoc4_7.jpg"
+        text: 'Уживајте користећи "if" блок!'
+    if_else:
+      1:
+        image: "notes/hoc5_1.jpg"
+        text: 'Здраво, моје име је Салони. Користим компјутерске науке како бих помогла при решавању проблема у здравству и медицини. Хајде да учимо о "Ако-у супротном" блоку. Сличан је "ако" блоку, али има и додатни део на крају који гласи "у супротном".'
+      2:
+        image: "notes/hoc5_2.jpg"
+        text: 'Ако поставим "крени напред" блок на место где пише "уради" а "скрени лево" блок где пише "у супротном" то значи да ће зомби бирати између ове две опције. Ако постоји стаза напред, зомби ће се кретати право, а у супротном (ако не постоји стаза напред), зомби ће скренути лево.'
+      3:
+        image: "notes/hoc5_3.jpg"
+        text: 'Као и код "АКО" блока, можемо ставити "АКО - У СУПРОТНОМ" блок унутар "понови" блокова тако да зомби наставља да се креће, а "АКО - У СУПРОТНОМ" блок ће наставити да проверава да ли постоји скретање.'
+      4:
+        image: "notes/hoc5_4.jpg"
+        text: "А сада, пошаљи те зомбије тамо где им је место!"
+    function:
+      1:
+        image: "notes/stage13_1.jpg"
+        text: "Ћао, ја сам Бриана, инжињер у Интаграму. Функције су одређене линије кода које желите да користите више пута, тако да уместо да пишете исти код изнова и изнова, креирањем функције можете користити само један блок."
+      2:
+        image: "notes/stage13_2.jpg"
+        text: "Сада ћемо научити како да дефинишемо функцију. Дефиниције функција имају звезду у углу. Име функције је исписано на горњој линији."
+      3:
+        image: "notes/stage13_3.jpg"
+        text: 'Блокови који иду унутар дефиниције нам говоре шта функција ради. Тако да је дефиниција ове функције названа "fill 5" и сачињавају је "repeat(понови)" блок и "fill(попуни)" блок.'
+      4:
+        image: "notes/stage13_4.jpg"
+        text: |-
+          The definition sits on the workspace, but our farmer won't run the function until we drag out our "fill 5" function block from functions category.
+      5:
+        image: "notes/stage13_5.jpg"
+        text: 'Хајде да вратимо "fun(забава)" натраг у "FUNction! (функција)" '
+    loop_while:
+      1:
+        image: "notes/stage9_5.jpg"
+        text: 'Ћао, зовем се Макинде! Хајде да учимо о "while block.(док блок)"'
+      2:
+        image: "notes/stage9_6.jpg"
+        text: '"while block (све док је блок)" ће одрадити шта год да ставите унутар њега све док је услов на врху тачан.'
+      3:
+        image: "notes/stage9_7.jpg"
+        text: "For example, if the farmer is standing on a pile, she will continue to remove 1 shovelful WHILE there is still a pile beneath her."
+    loop_for:
+      1:
+        image: "notes/stage11_1.jpg"
+        text: "Ћао, моје име је Трина, и радим за Пихар. Радила сам на многим филмовима, укњучујући Шрека."
+      2:
+        image: "notes/stage11_2.jpg"
+        text: 'Имамо нову петљу "counter(бројач)". Одрађиваће акције од почетка до краја и тако у круг, можете одрадити да акције сваки пут буду другачије.'
+      3:
+        image: "notes/stage11_3.jpg"
+        text: 'У овом примеру, наша  "counter(бројач)" петља гласи "Број са бројачем од 50 до 90 за 10" а унутар имамо наш "draw a square(нацртај квадрат)" блок. Превуци "counter" блок из секције промењивих унутар места "length".'
+      4:
+        image: "notes/stage11_4.jpg"
+        text: "Ово значи да ће наш уметник да нацрта квадрат који садржи странице дужине 50 пиксела, затим ће додати 10, и нацртати квадрат са дужином од 60 пуксела по страници. Затим ће наставити додавати 10 и цртаће квадрате док не дође до 90. Тако да ће мо имати квадрате величина 50, 60, 70, 80, и 90 пиксела."
+    parameters:
+      1:
+        image: "notes/stage15_1.jpg"
+        text: "Ћао, моје име је Жанет. и ја сам инжињер у Зунги."
+      2:
+        image: "notes/stage15_2.jpg"
+        text: "Шта ако бих смо желели да нацртамо више троуглова, и да њихове дужине буду различитих величина?"
+      3:
+        image: "notes/stage15_3.jpg"
+        text: "Могли бих смо написати цео тај код ручно или бих могли искористити функцију са параметрима."
+      4:
+        image: "notes/stage15_4.jpg"
+        text: 'Како бих сте ово урадили, кликните плаву звезду на "draw a triangle (нацртај троугао)" функцију. Затим извуците "input name (име за упис)" унутар блока за "input (унос)".'
+      5:
+        image: "notes/stage15_5.jpg"
+        text: 'Затим ако напишете "length(дужина)" на место где пише "x" и притиснете "Enter" креираћете унос дужине за вашу функцију.'
+      6:
+        image: "notes/stage15_6.jpg"
+        text: 'Затим кликните на звезду. Сада кликните на категорију промењивих и превуците "length (дужина)" блок унутар "move forward (крећи се напред)" блока ваше дефиниције функције. И превуците подаље ваш блок број.'
+      7:
+        image: "notes/stage15_7.jpg"
+        text: 'Како бих користили вашу функцију са параметрима, кликните на категорију функција и извуците вашу  "draw a triangle with length" функију.'
+      8:
+        image: "notes/stage15_8.jpg"
+        text: "Сада можете користити математички блок, за унос различитих бројева, како бих нацртали троуглове различитих величина."
+    hoc_wrapup:
+      1:
+        image: "notes/hoc6_1.jpg"
+        text: "Честитамо! На последњој загонетци коју сте решили, управо сте написали код који може рећи било којем роботу како да пронађе пут кроз не гранајући лавиринт или тунел било које дужине, било да је то зомби, птица, или марс ровер, или само-возећи аутомобил."
+      2:
+        image: "notes/hoc6_2.jpg"
+        text: 'Ови основни концепти које си користио су у срцу сваког програма или апликације које ћеш икада испробати. Учили смо о петљама понављања, понављај док наредбама, ако наредбама, и ако - у супротном наредбама.'
+      3:
+        image: "notes/hoc6_3.jpg"
+        text: "Ако вам се свидео ваш први час кодирања, посетите code.org како бих сте наставили са вашом едукацијом у компјутерским наукама! Када завршите наш 20-часовни едукативни програм, савладаћете основе програмирања, и можете започети са учењем како да кодирате мобилне апликације, роботске инструкције, игрице, шта год пожелите."
+      4:
+        image: "notes/hoc6_4.jpg"
+        text: 'Технологија мења све што радимо, и није битно да ли сте млади или стари: програмирање је забавно, креативно, и свако га може научити!'
+    20_wrapup:
+      1:
+        image: "notes/bird.png"
+        text: "Ускоро долазе белешке представе!"

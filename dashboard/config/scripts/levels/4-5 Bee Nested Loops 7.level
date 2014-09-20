@@ -1,0 +1,72 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-07-10T17:09:37.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "skin": "bee",
+    "instructions": "Put this loop inside another loop to create a nested loop and collect all of the nectar from the flowers.",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "true",
+    "start_direction": "1",
+    "nectar_goal": "7",
+    "flower_type": "redWithNectar",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,2,1,\"P\",1,\"P\",1,\"P\"],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,1,0,3],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "6"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="maze_moveForward" deletable="false" editable="false">
+          <next>
+            <block type="maze_moveForward" deletable="false" editable="false">
+              <next>
+                <block type="bee_whileNectarAmount" inline="true" deletable="false" editable="false">
+                  <title name="ARG1">nectarRemaining</title>
+                  <title name="OP">&gt;</title>
+                  <title name="ARG2">0</title>
+                  <statement name="DO">
+                    <block type="maze_nectar" deletable="false" editable="false"/>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_nectar"/>
+        <block type="maze_honey"/>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="bee_whileNectarAmount" inline="true">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">3</title>
+        </block>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Karel>

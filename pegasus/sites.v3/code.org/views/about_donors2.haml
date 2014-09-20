@@ -1,0 +1,47 @@
+- supporters.each_slice(3).with_index do |group, groupindex|
+  - group.each_with_index do |supporter, index|
+    - avatar_url = avatar_image(supporter[:name_s])
+    - if supporter[:level_s] == 'platinum'
+      - if index % 2 != 0
+        - style = ' border-left: none;'
+      .platinum_donor_column{:style=>style}
+        %a{:href=>supporter[:url_s]}
+          %img{:src=>avatar_url, :style=>'max-width: 100%;'}
+    - else
+      - if  groupindex == 0
+        - if index % 2 != 0
+          - style = 'border-right:none; border-left:none;'
+      - elsif index % 2 != 0
+        - style =' border-right: none; border-left: none; border-top: none;'
+      - else 
+        - style = ' border-top: none; '
+      .donor_column{:style=>style}
+        - unless supporter[:url_s].nil_or_empty?
+          %a{:href=>supporter[:url_s], :target=>"_blank"}
+            - if avatar_url
+              - if supporter[:level_s] == 'silver' 
+                %img{:src=>avatar_url, :style=>'max-height: 80px'}
+              - else supporter[:level_s] == 'gold'
+                %img{:src=>avatar_url, :style=>'max-height: 150px'}
+                %div
+                %p{:style=>'height:20px; padding: 5px;'}
+                  = supporter[:name_s]
+            - else avatar_url.nil_or_empty?
+              - if supporter[:level_s] == 'gold'
+                .avatar_container{:style=>'height: 150px;'}
+                %p{:style=>'height:20px;'}
+                  = supporter[:name_s]
+              - else supporter[:level_s] == 'gold'
+                %div{:style=>'display: table; height: 80px; overflow: hidden;'}
+                  %div{:style=>'display: table-cell; vertical-align: middle;'}
+                    %p{:style=>'height: 20px; font-size: 18px; line-height: 24px;'}
+                      = supporter[:name_s]
+        - else supporter[:url_s].nil_or_empty?
+          - if avatar_url
+            %img{:src=>avatar_url, :style=>'max-height: 100px'}
+          - else avatar_url.nil_or_empty
+            %div{:style=>'display: table; overflow: hidden; height: 20px;'}
+              %div{:style=>'display: table-cell; vertical-align: middle; height: 20px'}
+                %p= supporter[:name_s]
+%br{:style=>'clear: both;'}                        
+

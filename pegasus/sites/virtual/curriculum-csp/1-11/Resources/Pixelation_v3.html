@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)http://cs.ucls.uchicago.edu/~bfranke/codeDotOrg/Pixelation/Pixelation_v3.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link type="text/css" rel="stylesheet" href="./Pixelation_v3_files/pixelationStyles.css">
+<script type="text/javascript" src="./Pixelation_v3_files/pixelationScript3.js"></script>
+</head>
+<body onload="drawGraph()">
+
+	<header>
+		<h1>Introduction to Computer Science</h1>
+		<h1>B&amp;W Pixelation v.3 [started 10.19.13]</h1>
+	</header>
+	<br>
+	<p><b>Directions:</b></p>
+	<b>B&amp;W File Protocol:</b><br>
+	<img src="./Pixelation_v3_files/ColorFileFormatStructure.png"><br>
+
+	<div id="input">
+		width:  <input type="text" id="width" value="0" size="2" disabled="true/"> 
+		height: <input type="text" id="height" value="0" size="2" disabled="true/">
+		<br>
+		(color) bits per pixel: <input type="text" id="bitsPerPixel" value="1" onchange="drawGraph()" onkeyup="setSliders()" size="2/"><input type="range" class="slider" id="bitsPerPixelSlider" min="0" max="24" value="1" step="1" onchange="changeVal(&#39;bitsPerPixel&#39;)"><br>
+		<br>
+		bin: <input type="radio" name="binHex" id="binHexRadio" value="bin " checked="checked" onchange="hexToBin(); drawGraph()"> hex:<input type="radio" name="binHex" id="binHexRadio" value="hex" onchange="binToHex(); drawGraph()">
+		<br>Binary Code:<br>
+		<textarea id="binaryImage" onkeyup="drawGraph()">0000 1111 0000 1111</textarea>
+			<div style="clear: both;">
+			<label class="canvasInputLabel">Zoom:</label> <input type="range" id="sqSizeSlider" onchange="drawGraph()" value="32" min="1" max="32.333333333333336"><label id="sqSizeLabel" class="canvasInputLabel">32 px</label>
+			<label class="canvasInputLabel"><br>Show pixel border</label><input type="checkbox" id="showPixelBorder" onchange="drawGraph()" checked="true"> | <input type="button" value="save PNG" onclick="showPNG(&#39;canvas&#39;)">
+
+		</div>
+		<div id="err">Length ERROR. binary:0, WxH:225</div>
+		<div id="example">EXAMPLE: (set to 3 bits-per-pixel)
+			0000010000000010000001010011100101110111
+		</div>
+	</div>
+
+	<div id="canvasDiv">
+		<canvas id="canvas" width="495" height="495"></canvas><br>
+		
+	</div>
+
+	<footer class="footerFade">
+		Introduction to Computer Science · University of Chicago Laboratory Schools · © Baker Franke 2013 
+	</footer>
+
+
+</body></html>

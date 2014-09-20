@@ -1,0 +1,48 @@
+#pageheader
+  .content{:style=>"overflow:visible"}
+    #left
+      %a{:href=>"/"}
+        %img#logo{:src=>'/images/logo.png'}
+
+    #right
+
+      %a{:href=>"http://facebook.com/Code.org", :title=>'Facebook', :target=>"_blank", :style=>"text-decoration:none"}
+        %img{:src=>"/images/facebook_purple.png"}
+      %a{:href=>"http://twitter.com/codeorg", :title=>'Twitter', :target=>"_blank", :style=>"text-decoration:none"}
+        %img{:src=>"/images/twitter_purple.png"}
+      %a{:href=>"http://codeorg.tumblr.com/", :title=>'Tumblr', :target=>"_blank", :style=>"text-decoration:none"}
+        %img{:src=>"/images/tumblr_purple.png"}
+      %a{:href=>"http://zazzle.com/codeorg", :title=>'Zazzle', :target=>"_blank", :style=>"text-decoration:none"}
+        %img{:src=>"/images/zazzle_purple.png"}
+      %a{:href=>"/donate", :title=>'Donate', :style=>"text-decoration:none"}
+        %img{:src=>"/images/donate_normal.png"}
+      #sign_in_or_user{:style=>'width:550px; display:inline'}
+      %br
+      %br
+      %br
+      %a.headerlink{:href=>"/learn"}LEARN
+      %a.headerlink{:href=>"/educate"}TEACH
+      %a.headerlink{:href=>"/promote"}PROMOTE
+      %a.headerlink{:href=>"/help"}HOW TO HELP
+      
+      #padding{:style => 'height: 10px'}
+  
+  #clear{:style=>'clear:both'}
+
+  #loc.desktop-feature
+    -if request.path_info == "/"
+      =partial('index_loc')
+
+:javascript
+  $ = jQuery;
+  $(document).ready(function() {
+    $.ajax({
+      type: "GET",
+      url: '/dashboardapi/user_menu',
+      //data: "id=" + id, // appears as $_GET['id'] @ ur backend side
+      success: function(data) {
+        // data is ur summary
+        $('#sign_in_or_user').html(data);
+      }
+    });
+  });

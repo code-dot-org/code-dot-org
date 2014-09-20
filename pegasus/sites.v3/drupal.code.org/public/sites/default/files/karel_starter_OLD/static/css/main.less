@@ -1,0 +1,167 @@
+/*
+ * MIXINS!
+ *
+ * Write this at the top of any *.less files to include these mixins:
+ * @import "main";  //don't forget the semicolon
+ *
+ */
+.left {
+    float:left;
+}
+.right {
+    float:right;
+}
+.clear {
+    clear:both;
+}
+.gone {
+    display:none;
+}
+
+.center {
+    text-align:center;
+}
+
+.left-align {
+    text-align:left;
+}
+
+
+
+/* General Things */
+
+.page-title{
+  font-size: 33px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+
+@actionGreen: #67E667;
+@completeColor: #75BB75;
+@startedColor: #D1BF87;
+@funcDoneColor: #5B83B6;
+@submittedColor: #DBDB75;
+@rejectedColor: lighten(#B94A48, 20%);
+
+@lightGreen: #dff0d8;
+@lightBlue: #d9edf7;
+
+.rounded-corners (@radius: 5px) {
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+}
+
+.uppercase {
+    text-transform:uppercase;
+}
+
+.bold {
+    font-weight:bold;
+}
+
+.quick-gradient (@origin: left, @alpha: 0.2) {
+    background-image: -webkit-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: -moz-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: -o-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: -ms-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+}
+
+.no-border-bottom {
+    border-bottom: none !important;
+}
+
+/* END MIXINS */
+/**************/
+
+body {
+    background-image: url('../img/dust.png');
+    background-repeat:repeat;
+}
+
+#wrapper{
+    margin-top: 50px;
+    min-width:900px;
+}
+select{
+    margin: 2px;
+}
+
+.alert-action {
+    background-color:@actionGreen;
+    border-color:@actionGreen - #111;
+    color:#333;
+    
+    &:hover {
+        background-color:@actionGreen - #111 !important;
+        color:#333;
+    }
+}
+
+.alert-success:hover {
+  background-color: #dff0d8 - #111 !important;
+  border-color: #d6e9c6;
+  color: #468847;
+}
+
+
+#notification-menu {
+    cursor:pointer;
+    li {
+        border-bottom:1px solid #ccc;
+        cursor:pointer;
+    }
+    
+    .exercise-title {
+        font-weight:bold;
+    }
+    
+    .notification {
+        max-width:300px;
+        min-width:250px;
+        font-size:12px;
+    }
+}
+
+#start_learning{
+    background-color: @actionGreen;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+/* Pretty printing for code */
+.com { color: #93a1a1; }
+.lit { color: #195f91; }
+.pun, .opn, .clo { color: #93a1a1; }
+.fun { color: #dc322f; }
+.str, .atv { color: #D14; }
+.kwd, .linenums .tag { color: #1e347b; }
+.typ, .atn, .dec, .var { color: teal; }
+.pln { color: #48484c; }
+
+.prettyprint {
+  padding: 8px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+.prettyprint.linenums {
+  -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+     -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+          box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin: 0 0 0 33px; /* IE indents via margin-left */
+} 
+ol.linenums li {
+  padding-left: 12px;
+  color: #bebec5;
+  line-height: 18px;
+  text-shadow: 0 1px 0 #fff;
+}

@@ -1,0 +1,140 @@
+---
+title: Volunteer to be a Translator
+nav: blank
+rightbar: blank
+---
+-language_ss ||= nil
+-language_other_ss ||= nil
+
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+
+/[if lt IE 9]
+  %script{src: "/js/es5-shim.min.js"}
+
+%h1 Volunteer to be a Translator
+%form#volunteer-translator-form{role: "form", onsubmit: "event.preventDefault(); volunteerTranslatorFormSubmit();"}
+  %p.form-intro-text Sign up to be a translator for Code.org and help us translate our tutorials and videos to non-English languages. If you would like to translate the closed caption transcripts of our videos on YouTube, please include a google-based email address (must end with @gmail.com or your domain is hosted with Google Apps).
+
+  Please do not volunteer unless you are fluent in both English and the language(s) you are volunteering for. For any questions, please email <b>translations@code.org</b> with subject line <b>Volunteer Translator</b>.
+  #error-message{style: 'display: none'}
+
+  <br /><br />
+
+  .main-section
+    .form-group
+      %label.control-label{for: "volunteer-translator-first-name"}
+        First Name
+      %span.form-required-field *
+      %div
+        %input#volunteer-translator-first-name.form-control{name: "first_name_s", required: "", type: "text"}/
+    .form-group
+      %label.control-label{for: "volunteer-translator-last-name"}
+        Last Name
+      %span.form-required-field *
+      %div
+        %input#volunteer-translator-last-name.form-control{name: "last_name_s", required: "", type: "text"}/
+    .form-group
+      %label.control-label{for: "volunteer-translator-email"}
+        Email Address
+      %span.form-required-field *
+      %div
+        %input#volunteer-translator-email.form-control{name: "email_s", required: "", type: "email"}/
+    .form-group
+      %label.control-label{for: "volunteer-translator-language"}
+        Languages (select all that apply)
+      %span.form-required-field *
+      %div
+        %select#volunteer-translator-language.form-control{name: "language_ss[]", type: "select", required: true, multiple: true}
+          %option{selected: language_ss.nil_or_empty?, value: ""}
+          -VolunteerTranslator.languages.each do |label|
+            %option{value: label, selected: (language_ss||[]).include?(label)}= label
+          %option#volunteer-translator-language-other-option{value: 'Other', selected: (language_ss||[]).include?('Other')} Other (enter below)
+      %div{id: 'volunteer-translator-language-other-wrapper', style: 'display: none;'}
+        %label.control-label{for: "volunteer-translator-language-other"}<
+          %em{style: 'font-weight: normal;'} Other language(s) (comma-separated)
+        %div
+          %input#volunteer-translator-language-other.form-control{name: "language_other_ss", placeholder: "Other language(s)", type: "text", value: CSV.generate_line(language_other_ss || [])}/
+    .form-group
+      %label.control-label{for: "volunteer-translator-translation-type"}
+        What content would you like to help translate?
+        %span.form-required-field *
+      %div
+        %select#volunteer-translator-translation-type.form-control{name: "translation_type_s", required: ""}
+          %option{selected: "selected", value: ""} -- Select --
+          %option{value: "Curriculum", id: "volunteer-translator-translation-type-1"} Curriculum Content
+          %option{value: "YouTube", id: "volunteer-translator-translation-type-2"} YouTube Video Captions
+          %option{value: "Both", id: "volunteer-translator-translation-type-3"} Both
+    .form-group
+      %label.control-label{for: "volunteer-translator-contact"}
+        How often can we contact you?
+        %span.form-required-field *
+      %div
+        %select#volunteer-translator-contact.form-control{name: "contact_s", required: ""}
+          %option{selected: "selected", value: ""} -- Select --
+          %option{value: "Daily", id: "volunteer-translator-contact-1"} Daily
+          %option{value: "Weekly", id: "volunteer-translator-contact-2"} Weekly
+          %option{value: "Monthly", id: "volunteer-translator-contact-3"} Monthly
+    .form-group{style: 'margin-top: 45px;'}
+      %button#btn-submit.btn.btn-default{type: "submit"} Submit
+
+#thanks{:style=>"display: none;"}
+  %p Thank you for volunteering! We'll be in touch with you shortly.
+
+:javascript
+
+  $(document).ready(function() {
+    $('#volunteer-translator-form select').selectize();
+
+    $('#volunteer-translator-language').change(function() {
+      if ($.inArray('Other', $(this).val()) > -1) {
+        $('#volunteer-translator-language-other-wrapper').show();
+      } else {
+        $('#volunteer-translator-language-other').val('');
+        $('#volunteer-translator-language-other-wrapper').hide();
+      }
+    }).triggerHandler('change');
+
+  });
+
+  function processResponse(data)
+  {
+    $('#volunteer-translator-form').hide();
+    $('#thanks').show();
+  }
+
+  function processError(data)
+  {
+    $('.has-error').removeClass('has-error');
+
+    errors = Object.keys(data.responseJSON);
+    errors_count = errors.length;
+
+    for (i = 0; i < errors_count; ++i) {
+      error_id = '#volunteer-translator-' + errors[i].replace(/_/g, '-');
+      $(error_id).parents('.form-group').addClass('has-error');
+    }
+
+    $('#error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
+
+    $('body').scrollTop(0);
+    $("#btn-submit").removeAttr('disabled');
+    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
+  }
+
+  function volunteerTranslatorFormSubmit()
+  {
+    $("#btn-submit").attr('disabled','disabled');
+    $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
+
+    $.ajax({
+      url: "/forms/VolunteerTranslator",
+      type: "post",
+      dataType: "json",
+      data: $('#volunteer-translator-form').serialize()
+    }).done(processResponse).fail(processError);
+
+    return false;
+  }

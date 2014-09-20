@@ -1,0 +1,524 @@
+"ko":
+  activerecord:
+    errors:
+      messages:
+        blank: is required
+    attributes:
+      user:
+        name: "이름"
+        email: "이메일"
+        username: "아이디"
+        password: "비밀번호"
+        password_confirmation: "비밀번호 재확인"
+        current_password: "현재 비밀번호"
+        locale: "언어"
+        age: Age
+        gender: "성별"
+        edit_header: "계정 정보 수정"
+        error:
+          future: can't be in the future
+  hello: Hello world
+  welcome_back: "%{name} 님, 어서오세요. "
+  add_teacher_form:
+    code_or_email:
+      label: "코드번호나 이메일 주소를 사용해 선생님을 등록하세요:"
+      placeholder: "코드번호(ABCDEF) 또는 이메일(teacher@school.edu)"
+    code:
+      label: 'Add a teacher by section code:'
+      placeholder: Code (ABCDEF)
+    submit: "선생님 추가하기"
+  add_hint_form:
+    placeholder: "도움내용을 입력하세요."
+    submit: "도움말 추가하기"
+  appname: Code.org
+  stage: "단계"
+  puzzle: "퍼즐"
+  trophies: "트로피"
+  courses: "학습 코스"
+  of: "중"
+  more: "전체단계"
+  less: "현재단계"
+  try_hoc: 'Hour of Code 해보기! >> '
+  try_k8intro: "유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스(15-25시간) 를 해보세요."
+  k8intro: "유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스"
+  already_started: "학습 계속하기 >>"
+  demos: "관리자: 모든 퍼즐"
+  continue: "계속하기"
+  prize: "상품"
+  more_info: "자세히"
+  auth:
+    sign_in_with: "%{provider} 계정으로 로그인"
+    signed_in: "로그인 되었습니다!"
+    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
+    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
+      to sign out of %{provider}.
+    already_signedup: "이미 가입했나요?"
+    notyet_signedup: "가입하시겠습니까?"
+    google_oauth2: Google Account
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Microsoft Account
+    forgot_password: "비밀번호를 잊으셨나요?"
+    need_confirmation: "확인 메일을 받지 못 했나요?"
+    need_unlock: "잠김 해제 메일을 받지 못 했나요?"
+  signup_form:
+    overview_student: Sign up for an account to track your progress.
+    overview_teacher: Teach computer science in your classroom by signing up for an
+      account.<p/> You'll be able to track your students' progress and get rewards.
+    no_signup_message: 여러 개의 단계로 이루어진 퍼즐들을 살펴보세요. <a target="_blank" href="http://learn.code.org">browse
+      the various stages and puzzles</a> 해결한 퍼즐을 저장하려면 가입해야 합니다.
+    prizes_message: "모든 기초개념학습 트로피(총 %{num_trophies} 개)를 모은 미국 학생들은 드롭박스 저장공간, 스카이프
+      크레딧, EA 와 Valve의 게임 등의 다양한 상품을 얻을 수 있습니다."
+    teacher_educator_guide: "교육자 가이드"
+    teacher_prize_header: $1,000 크레딧 상품 받기 <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+    teacher_prize_message: <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+      와의 제휴를 통해 Code.org 는, 15명 이상의 학생들에게 이 과정을 수행시키는 미국 공립 학교 선생님들에게 최대 $1,000 크레딧을
+      제공합니다. 자세한 내용은 <a href="http://code.org/educate/20hr">See educator guide for
+      more info.</a>를 살펴보세요.
+    teacher_pitch: "컴퓨터과학(Computer Science, 정보과학)의 내용을, 유치원~중2(K-8) 학생들과 함께 하세요"
+    teacher_title: "선생님으로 등록하기"
+    student_pitch: 'Beyond 1 hour:  컴퓨터과학(Computer Science, 정보과학) 기초개념학습 코스 더 해보기'
+    student_title: "학생 가입"
+    school_name: "학교 이름 (옵션)"
+    school_address: "학교 주소 (옵션)"
+    address_placeholder: "주소, 군구, 시도, 우편번호"
+    gender: "성별 (옵션)"
+    birthday: "생일 (옵션)"
+    age: Age (optional)
+    submit: "가입 신청하기"
+    teacher: "선생님이신가요?"
+    valid_username: "사용 가능!"
+    invalid_username: "아이디는 최소 5문자 이상이어야 합니다."
+    taken_username: "이미 사용하고 있는 아이디입니다."
+    valid_password: "사용 가능한 비밀번호!"
+    invalid_password: "비밀번호는 최소 6 문자 이상이어야 합니다"
+    mismatch_password: "입력한 비밀번호가 일치하지 않습니다."
+    student_terms: Code.org 의 서비스 약관을 준수할 것에 동의합니다. 13세 미만의 경우, 부모님 또는 보호자의 허락을 얻어
+      Code.org 사이트의 서비스를 사용하는 것임을 확인합니다.
+    teacher_terms: Code.org 의 서비스 약관을 준수할 것에 동의합니다.
+    additional_information: We need some additional information to continue signing
+      you up.
+  signin_form:
+    title: "계정이 있으면? 로그인"
+    login: "이메일 또는 아이디"
+    password: "비밀번호"
+    remember: "아이디 기억하기"
+    submit: "로그인하기"
+  signin:
+    try_heading: Want to try coding without signing up?
+    try_hoc: Hour of Code 한시간 해보기
+    try_20hours: 20시간 코스의 컴퓨터과학(CS, 정보과학) 해보기
+  signinsection:
+    welcome: Welcome to %{section_name}
+    name: Choose your name
+    picture: Now find your secret picture
+    words: Now enter your secret words
+    login: "로그인"
+  password:
+    reset_form:
+      title: "비밀번호를 잊으셨나요?"
+      email: "이메일"
+      submit: "비밀번호 변경하기"
+    change_form:
+      title: "비밀번호 변경"
+      new_password: "새 비밀번호"
+      confirm_password: "새 비밀번호 확인"
+      submit: "비밀번호 변경하기"
+  welcome_email:
+    subject: "내 학급 가기(on Code.org)"
+    body: |
+      Code.org 의 컴퓨터과학(Computer Science, 정보과학) 기초개념학습 코스에 가입하려면, 아래 링크를 누르세요.(선생님을 등록하세요)
+
+      %{link}
+
+      이 과정에서는 재미있는 퍼즐들을 통해, 컴퓨터과학(Computer Science, 정보과학)의 몇가지 기초 개념들을 배울 수 있습니다. Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies 등과 함께 경험해 보세요! :)
+
+      %{name}
+  follower:
+    invite_sent: "초대 메일을 발송하였습니다"
+    added_teacher: "%{name} 가 선생님으로 추가되었습니다"
+    registered: "%{section_name}에 등록되었습니다."
+    error:
+      signed_in: "먼저, 로그아웃 하세요."
+      username_not_found: "%{username} 는 존재하지 않습니다"
+      username_in_use: "%{username} 는 이미 사용하고 있습니다, 다른 아이디를 선택하세요"
+      no_teacher: "'%{teacher_email_or_code}' 선생님을 찾을 수 없습니다. 선생님의 가입 여부를 확인한 후, 다시
+        시도하세요"
+      section_not_found: Could not find a section with code '%{section_code}'.
+      blank_code: "선생님의 코드 번호나 이메일을 입력해 주세요"
+      cant_join_own_section: Sorry, you can't join your own section.
+    mail:
+      invite_student:
+        subject: "%{teacher_name} 선생님의 학급에 참여하세요. Code.org!"
+      student_disassociated:
+        subject: 'Code.org 알림: %{student_name} 학생은 더이상 등록되어있지 않습니다.'
+      teacher_disassociated:
+        subject: 'Code.org 알림: %{teacher_name} 선생님은 더이상 등록되어있지 않습니다.'
+  reports:
+    error:
+      access_denied: "이 학생의 학습 상황에 접근할 수 없습니다"
+  redeem_prizes:
+    title: 'Redeem 상품: %{name}'
+    provider: "제공:"
+    code: 'Redeem 코드:'
+    redeem_header: 'To redeem:'
+    donorschoose_register: Register as a teacher on DonorsChoose.org
+    donorschoose_project: Post a project
+    donorschoose_how_to: "리딤(redeem)코드 사용"
+    success: "상품을 Redeem 코드로 교환하였습니다. 코드를 확인하세요."
+    error: "상품을 Redeem 코드로 교환할 수 없습니다. 다시 시도해 보세요."
+    error_us_only: "미국 사용자에게만 상품이 주어집니다."
+    error_not_earned: "아직 상품을 얻지 못했습니다."
+    error_already_redeemed: "이미 상품으로 교환 되었습니다."
+    no_prizes_available: "죄송합니다. 현재 가능한 상품이 없습니다."
+    teacher_info_required: "선생님들을 위한 상품은 학교명과 주소 정보가 필요합니다 :"
+    teacher_email_required: "선생님 상품은 이메일 주소가 필요합니다:"
+    confirm:
+      title: Redeem 코드 확인
+      'no': "아니요"
+      'yes': "예"
+      msg: "%{prize_name} 상품을 받으시겠습니까?"
+      msg_student: "주의 : 한 가지 유형의 상품만 선택할 수 있습니다."
+      msg_publicschool: "미국 공립학교 선생님인 것을 확인해 주세요."
+      msg_visit_website: Visit website
+    providers:
+      apple_itunes: "$10 iTunes Gift Card"
+      donors_choose: DonorsChoose.org $750 credit
+      donors_choose_bonus: DonorsChoose.org $250 credit
+      dropbox: 10GB Dropbox 저장공간
+      valve: Portal 2 (PC or Mac game download)
+      ea_bejeweled: Bejeweled 3 (PC game download)
+      ea_fifa: FIFA Soccer 13 (PC game download)
+      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
+      ea_pvz: Plants vs. Zombies (PC game download)
+      skype: "$10 Skype credit"
+    msg:
+      choose: "상품을 선택하세요:"
+      choose_teacher: "아래에서 상품 로고를 선택하세요:"
+      earned: "상품을 얻었습니다!(미국 학생만 해당)"
+      not_earned_title: "기초개념학습 과정을 모두 완료하고, 상품을 받으세요.(미국 학생만 해당)"
+      not_earned: "컴퓨터과학(정보과학)의 프로그래밍 관련 기초개념을 배우고, 그와 관련한 트로피를 모두(총  %{num_trophies}개)
+        모아서 실제로 사용할 수 있는 상품을 받아보세요. $10 정도의 iTunes 기프트카드, 10GB 만큼의 Dropbox 저장용량, $10
+        만큼의 Skype 요금, 무료 게임 등이 제공됩니다. 주의: 미국 학생들에게만 한정 수량으로 제공됩니다."
+      teacher:
+        earned: "트로피를 모두(총 %{num_trophies}개) 모은 학생들이 15명 이상이 되었습니다. 선생님 상품이 주어집니다!(미국
+          선생님만 해당)"
+        not_earned_title: 학생들과 함께 하고 $1,000(<a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>)
+          크레딧을 받으세요.(미국 선생님만 해당)
+        not_earned: 컴퓨터과학(정보과학) 교사들은 학급학생들을 지도해서, 처음에 $1,000 크레딧(<a href="http://DonorsChoose.org">DonorsChoose.org</a>)
+          까지 얻을 수 있습니다. 그렇게 하려면, 트로피를 모두(총 %{num_trophies}개) 모은 학생들이 15명 이상이 되도록 해야합니다.
+          그 중 7명 이상이 여학생이어야 합니다. 그런 경우가 아니면 $750 크레딧을 상품으로 받게됩니다. 단, 미국 공립학교 선생님들만
+          사용할 수 있습니다.
+        bonus:
+          not_earned_title: 보너스 $250 크레딧(<a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>)을
+            받을 수 있습니다.(미국 선생님만 해당)
+          earned: "트로피를 모두(총 %{num_trophies}) 모은 학생들 중 7명 이상이 여학생입니다. 보너스 상품을 받으세요.(미국
+            선생님만 해당)"
+          not_earned: 최소 7명의 여학생이 트로피를 모두(총 %{num_trophies}개) 모으면, 추가적으로 $250 크레딧(<a
+            target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>)이
+            상품으로 주어집니다. 크레딧은 미국 공립학교 선생님들만 사용할 수 있습니다.
+  crud:
+    new_model: "%{model} 만들기"
+    show: "보기"
+    edit: "편집"
+    edit_model: "%{model} 수정"
+    update: "갱신"
+    destroy: "삭제"
+    back: "뒤로"
+    confirm: "확실한가요?"
+    created: "%{model} 가 만들어졌습니다."
+    updated: "%{model} 가 수정 되었습니다."
+    destroyed: "%{model} 가 삭제되었습니다."
+    access_denied: "%{model} 에 접근할 권한이 없습니다."
+  nav:
+    header:
+      finished_hoc: Hour of Code 완료
+      sign_in_to_save: "로그인(저장하기)"
+    user:
+      classroom: "내 학생"
+      label: "안녕하세요? %{username} 님"
+      stats: "나의 진도"
+      settings: "내 계정"
+      prizes: "상품"
+      logout: "로그아웃"
+      signin: "로그인"
+      signup: "가입 신청"
+      already_registered: Already registered?
+    popup:
+      progress: "내 진도"
+      lines: "총 %{lines} 라인"
+      close: "닫기"
+      mastery: "개념"
+      puzzle_map: "단계"
+      prizes: "트로피를 모두(%{total_trophies} 개) 모아 상품을 받으세요!"
+      prize_earned: "트로피를 모두(총 %{total_trophies} 개) 모았습니다. 상품을 받으세요!"
+      prize_us_only: "(U.S. students only)"
+      prizes_link: "상품 살펴보기"
+  teacher:
+    title:
+      one: "선생님 : "
+      other: "나의 선생님들:"
+    remove: "(선생님 삭제하기)"
+    confirm:
+      remove: "선생님을 삭제하시겠습니까?"
+    tools: "선생님 메뉴"
+    followers:
+      section: 'Section:'
+      stages: 'Stage(s) to display:'
+      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      levels_key: Levels key
+      perfect: Completed, perfect
+      completed: Completed, but using too many blocks
+      tried: Tried, but not completed
+      not_tried: Not tried yet
+      activity: Indicates student activity in the last %{hours} %{plural}
+      no_section: No assigned section
+      trophies: "트로피"
+    students:
+      name: "이름"
+      username: "아이디"
+      password: "비밀번호"
+      manage: "학생 관리"
+      dashboard: Go to Teacher Dashboard
+      add: "학생 추가"
+      remove: remove student
+      confirm_remove: Are you sure you want to remove this student?
+      help_reassign: To divide your class into multiple sections, select students
+        to assign to a new section.
+      help_register: Instead of making you spend a lot of time individually importing
+        student data, you can set up your class quickly by asking them to signup.
+        Your students will need to choose usernames and passwords, but they WILL NOT
+        be required to provide an email address. If a student forgets their password,
+        you will be able to reset it for them.
+      register: Ask your students to register themselves
+      vist: Ask your students to visit
+      section_code: 'and enter their section-code:'
+      first_please: First, please %{add_section}
+      for: For
+      enter: 'enter:'
+    sections:
+      add: Add section
+      manage: "섹션 관리하기"
+      section: Section
+      students: Students
+      section_code: Section Code
+      add_section_code: Add Students Section-Code
+      secret: Secret type
+      grade: Grade
+      course: Course
+      rename: rename
+      edit: edit
+      delete: delete
+      confirm_delete: Are you sure you want to delete this section?
+      email: Send in email
+    rollup: "학습 현황"
+    activity: "최근 학습 활동"
+    user_not_found: "선생님이나 학생을 찾을 수 없습니다."
+    cant_remove_student_no_email: "%{student_name} 학생은 등록된 이메일 주소가 아니기 때문에 삭제할 수 없습니다."
+    cant_remove_teacher_no_email: "%{teacher_name} 선생님은 등록된 이메일 주소가 아니기 때문에 삭제할 수
+      없습니다."
+    student_teacher_disassociated: "%{teacher_name} 선생님은 %{student_name} 학생의 선생님에서
+      삭제되었습니다."
+  user:
+    email_confirm_needed: "이메일 주소가 확인되지 않았습니다:"
+    email_resend_confirm: "이메일 확인 재발송"
+    new_password_hint: "(바꾸고 싶지 않으면, 비워 두세요)"
+    current_password_hint: "(수정하기 위해 비밀번호를 한 번 더 입력해 주세요.)"
+    cancel:
+      title: "계정 삭제"
+      hint: "불편한 점이 있나요?"
+      button: "계정 삭제하기"
+  user_level:
+    completed: "완료"
+    tried: "시도"
+  user_stats:
+    recent_activity: "최근 활동"
+    show_more: "자세히"
+    classroom_activity: Unplugged Activity
+  home:
+    title: Code Studio
+    signin_message: "이미 등록되어있나요? %{link}"
+    student_reg_link: "학생 가입하기"
+    teacher_reg_link: "선생님 가입하기"
+    signin_directions: Use an account to track progress and get rewards.<br/> Teachers,
+      track your entire class.
+    teacher_dashboard: "학습 현황"
+    teacher_student_count_one: "나의 학생들은 %{count} 명 입니다."
+    teacher_student_count: "나의 학생들은 %{count} 명 입니다."
+    teacher_averages: 나의 학생들은, 평균 %{trophy_average} 개의 "기초개념학습 트로피"를 획득했습니다. 총 %{trophy_max}
+      개.
+    teacher_print_certificates: "이 코스를 완료한 학생들을 위해 인증서 출력하기"
+    teacher_read_blog: "교육 블로그를 통해 관련 뉴스와 최신정보 확인하기"
+    classroom: "내 학급"
+    student_progress: "나의 학습 진도"
+    student_stats: '%{trophy_count} 개의 "기초개념학습 트로피"를 획득했습니다. 총 %{trophy_max} 개.'
+    student_left_off: "마지막 학습:"
+    student_finished_prize: "모든 기초개념학습 과정을 완료하였습니다. 상품(%{prize_link})을 신청하고, 다른 학급
+      %{online_link} 이나 학교 수업 %{local_school_link} 에 참여해 보세요"
+    student_finished: "모든 과정을 완료했습니다. 다른 수업(%{online_link})이나 학교과정(%{local_school_link})을
+      선택하세요"
+    local_school: "학교"
+    online: "온라인"
+    see_details: "자세히 살펴보기"
+    prize_info: 'Prizes for participation (U.S. only): $10 gift cards for student
+      completion and up to $1,000 in classroom rewards for public school teachers'
+    tryfirst: "먼저 해보고, 나중에 가입하기:"
+    trynow: "해보기"
+    add_hint_help: Please help us to add smart hints to Code.org tutorials
+    20hour_overview: This 20-hour course introduces core computer science and programming
+      concepts. The course is designed for use in classrooms for grades K-8, but it
+      is fun to learn at all ages.
+    test_videos_help: Test our new video player at your school
+    try_beta_courses: New! Try our beta courses for K-5 students
+    use_as_teacher: Use this site as a teacher
+    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
+    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+  gender:
+    male: "남"
+    female: "여"
+    none: "응답 안 함"
+  footer:
+    help_from_html: <a href="http://www.google.com">Google</a>, <a href="http://www.microsoft.com">Microsoft</a>,
+      <a href="http://www.facebook.com">Facebook</a>, and <a href="http://www.twitter.com">Twitter</a>의
+      소프트웨어 엔지니어들이 기초개념학습 과정을 만드는데 도움을 주었습니다.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
+      Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
+      &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
+      Reserved.
+    feedback: "피드백 남기기"
+    translate: "다른 언어로 번역"
+    support: Support
+    tos: "서비스 약관"
+    privacy: "개인정보보호 정책"
+    secure: Secure Version
+  prize_mail:
+    prize_earned:
+      subject: Code.org 에서 Redeem 코드 상품을 받으세요!
+    teacher_prize_earned:
+      subject: Code.org 에서 Redeem 코드 상품을 받으세요!
+    teacher_bonus_prize_earned:
+      subject: Code.org 에서 보너스 Redeem 코드를 받으세요!
+  reference_area:
+    title: "도움이 필요하신가요?"
+    subtitle: "동영상 및 힌트"
+    teacher: "해법 보기"
+    auth_error: "해법 보기 권한이 없습니다."
+    submit: Update Artist Location
+    direction: Start Direction
+  video:
+    tab: "소개 동영상."
+    notes: "소개 프레젠테이션."
+    notes_coming_soon: Notes for this video coming soon.
+    autoplay_option: "비디오 자동 실행"
+    download: "동영상 다운로드"
+  compatability:
+    working: "이 웹브라우져를 지원합니다."
+    upgrade: "웹 브라우져를 업그레이드 하세요."
+  slow_loading: "연결이 느립니다."
+  try_reloading: "페이지를 새로고침 해보세요"
+  next_stage: "모두 완료했습니다! 다음 단계를 계속하세요"
+  download_pdf: Open Lesson Plan
+  view_lesson_plan: View Lesson Plan
+  pdf_download: Download PDF
+  share_code:
+    title: "'프로그램 실행'을 눌러 실행 결과를 살펴보세요"
+    bounce_og_title: Check out my Bounce Game
+    flappy_og_title: "내 플래피(Flappy) 게임 확인"
+    studio_og_title: Check out my story
+    og_description: Code.org 에서 직접 코드를 작성하였습니다.
+  builder:
+    created: "새로운 스크립트를 만들었습니다."
+    destroyed: "스크립트를 삭제하였습니다."
+    manage: Manage Scripts
+    view: "보기"
+    back: "스크립트로 돌아가기"
+    success: You successfully edited the blocks.
+    level:
+      create: "새로운 레벨 생성"
+      current: "현재 레벨"
+      unused: "비사용 레벨"
+  upsell:
+    hoc:
+      title: The Hour of Code
+      body: Try the basics of computer science. Millions have given it a shot.
+    flappy:
+      title: Flappy Code
+      body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
+        tutorial!
+    20hour:
+      title: Intro Course
+      body: Try our 20-hour Intro to Computer Science course.
+  gallery:
+    students_drew_these_with_code: Students drew these with code!
+    picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
+      pictures by writing their own computer programs. Click on the pictures to see
+      each program in action.
+    want_to_make_your_own: Want to make your own?
+    more: More &rarr;
+  landing:
+    prerelease: This page is still under development.
+    feedback: Give Feedback
+    report_bug: Report Bug
+    support: Get Help
+  multi:
+    wrong_title: Incorrect answer
+    wrong_body: The answer you've entered is not correct.  Please try again!
+    correct_title: Correct
+    correct_body: That is the correct answer.
+  match:
+    wrong_title: Incorrect solution
+    wrong_body: The solution you've entered is not correct.  Please try again!
+    correct_title: Correct
+    correct_body: That is the correct answer.
+  dialog:
+    ok: "확인"
+  time:
+    hour: 1 hour
+    day: day
+    week: week
+  data:
+    script:
+      name:
+        20-hour:
+          title: "유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스"
+          description: This 20-hour course introduces core computer science and programming
+            concepts. The course is designed for use in classrooms for grades K-8,
+            but it is fun to learn at all ages.
+        Hour of Code:
+          title: Hour of Code
+          description: ''
+        edit-code:
+          title: Edit Code
+          description: ''
+        events:
+          title: Events
+          description: ''
+        builder:
+          title: Builder
+          description: ''
+        flappy:
+          title: Flappy Code
+          description: Wanna write your own game in less than 10 minutes? Try our
+            Flappy Code tutorial!
+        jigsaw:
+          title: Jigsaw
+          description: ''
+        step:
+          title: "단계"
+          description: ''
+        sample_level_builder:
+          title: Sample Level Builder
+          description: ''
+  age_interstitial:
+    age: Your age
+    header: Account Information Update
+    message: We're in the process of updating our experience to provide you with even
+      stronger privacy protections. To do this, we need existing users to enter their
+      age here.<br/>As always, code.org will never rent, sell or share this information
+      with any third parties.
+    sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
+      out</a>.
+  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
+    You may browse <a href="http://support.code.org">support.code.org</a> without
+    signing in or ask your parent or teacher to contact us for you.

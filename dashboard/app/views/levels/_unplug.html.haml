@@ -1,0 +1,79 @@
+- unplugged = @level.type == 'Unplugged' ? @level.name : @game.name
+- video_key = try_t("data.unplugged.#{unplugged}.video")
+- pdfs = try_t("data.unplugged.#{unplugged}.pdfs")
+- has_pegasus_lesson_plan = @script_level && @script_level.script.k5_course?
+- video =  video_key ? Video.find_by_key(video_key) : nil
+- page_width = 800
+- is_student = current_user && current_user.student?
+- show_lesson_plans = !is_student
+- no_lesson_plans = !pdfs && !has_pegasus_lesson_plan
+
+.unplugged
+  %h2 #{try_t("data.unplugged.#{unplugged}.title")}
+
+  %p #{try_t("data.unplugged.#{unplugged}.desc")}
+
+  .video-section
+    %a.btn.btn-primary.next-stage
+      = t('next_stage')
+
+    - if video && video.download
+      %a.video-download.btn.pull-right{href: video.download}
+        = t('video.download')
+
+    - if show_lesson_plans
+      - if pdfs
+        - pdfs.each_with_index do |pdf, i|
+          %a.btn.pull-right.pdf-button{href: asset_url('/unplugged/' + pdf + '.pdf'),
+                                   target: '_blank'}
+            = t('download_pdf', :pdf => i + 1)
+      - elsif no_lesson_plans
+        %a.btn.pull-right.pdf-button{disabled: 'disabled'}
+          Downloadable activity coming soon.
+
+    - if video
+      .clear
+      .video-container
+    - else
+      %p.coming-soon Video Coming Soon!
+
+  .clear
+
+  - if show_lesson_plans && has_pegasus_lesson_plan
+    .lesson-plan
+      %h2
+        Lesson Plan
+      %a.btn.pdf-button{href: lesson_plan_html_url(@script_level.stage), target: '_blank'}
+        = t('view_lesson_plan')
+      %a.btn.pdf-button{href: lesson_plan_pdf_url(@script_level.stage), target: '_blank'}
+        = t('pdf_download')
+
+:javascript
+  var clickedNext = false;
+  $('a.next-stage').click(function() {
+    if (!clickedNext) {
+      clickedNext = true;
+      sendReport({
+        fallbackResponse: '#{@fallback_response.to_json}',
+        callback: '#{@callback}',
+        app: 'unplug',
+        level: '#{@level.level_num}',
+        result: true,
+        testResult: 100,
+        onComplete: function() {
+          if (lastServerResponse.videoInfo) {
+            showVideoDialog(lastServerResponse.videoInfo);
+          } else if (lastServerResponse.nextRedirect) {
+            window.location.href = lastServerResponse.nextRedirect;
+          }
+        }
+      });
+    }
+  });
+
+- if video
+  :javascript
+    var videoOptions = #{video_info(video, false).to_json};
+    var videoHeight = #{page_width} / (16 / 9);
+    var video = createVideoWithFallback(videoOptions, #{page_width}, videoHeight);
+    $('.video-container').append(video);

@@ -1,0 +1,11 @@
+name 'K-1 Word Search Multi 3'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/k_1_images/search_images/square.png, 700'
+
+question 'Which word is spelled?'
+wrong 'SET'
+right 'SQUARE'
+wrong 'SOUTH'
+
+# http://staging.learn.code.org/s/course1/stage/6/puzzle/23

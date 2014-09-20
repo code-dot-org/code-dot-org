@@ -1,0 +1,13 @@
+- Options: { id: 6, name: 'flappy', trophies: false, hidden: false }
+- TSV: |
+    Game	Name	Level	Skin	Concepts	Url
+    Flappy	Level1	1	flappy
+    Flappy	Level2	2	flappy
+    Flappy	Level3	3	flappy
+    Flappy	Level4	4	flappy
+    Flappy	Level5	5	flappy
+    Flappy	Level6	6	flappy
+    Flappy	Level7	7	flappy
+    Flappy	Level8	8	flappy
+    Flappy	Level9	9	flappy
+    Flappy	Level11	11	flappy

@@ -1,0 +1,12 @@
+name 'K-1 Artist 2 Multi 1'
+title 'Multiple Choice'
+description '/script_assets/k_1_images/artist_images/sq+sq.png, 500'
+height '150'
+
+question 'Which shape do these squares combine to make?'
+wrong '/script_assets/k_1_images/artist_images/medium_circle.png'
+right '/script_assets/k_1_images/artist_images/small_rectangle.png'
+wrong '/script_assets/k_1_images/artist_images/medium_square.png'
+wrong '/script_assets/k_1_images/artist_images/medium_triangle.png'
+
+# http://staging.learn.code.org/s/course1/stage/5/puzzle/4

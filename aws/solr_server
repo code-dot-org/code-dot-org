@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+require 'cdo/only_one'
+
+def main()
+  Dir.chdir(aws_dir('solr', 'example')) do
+    system 'java', '-jar', 'start.jar'
+  end
+end
+
+main() if only_one_running?(__FILE__)
+

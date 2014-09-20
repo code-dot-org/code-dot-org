@@ -1,0 +1,109 @@
+%form#sotw-form{role: "form", onsubmit: "return studentNominationFormSubmit()"}
+  #error-message{style: 'display: none'}
+  .form-group
+    %label.control-label{for: "sotw-name"}
+      Your name
+      %span.form-required-field *
+    %div
+      %input#sotw-name.form-control{name: "name_s", required: "", type: "text"}/
+  .form-group
+    %label.control-label{for: "sotw-relationship"}
+      Your relationship (like teacher, mentor)
+      %span.form-required-field *
+    %div
+      %input#sotw-relationship.form-control{name: "relationship_s", required: "", type: "text"}/
+  .form-group
+    %label.control-label{for: "sotw-email"}
+      Your email address (to contact you about winning)
+      %span.form-required-field *
+    %div
+      %input#sotw-email.form-control{name: "email_s", required: "", type: "email"}/
+  .form-group
+    %label.control-label{for: "sotw-student-name"}
+      Student name
+      %span.form-required-field *
+    %div
+      %input#sotw-student-name.form-control{name: "student_name_s", required: "", type: "text"}/
+  .form-group
+    %label.control-label{for: "sotw-student-grade"}
+      Student grade
+      %span.form-required-field *
+    %div
+      %select#sotw-student-grade.form-control{name: "student_grade_i", required: ""}
+        %option{selected: "selected", value: ""} -- Select --
+        %option{value: "0", id: "sotw-student-grade-0"} K
+        -Array.new(12) {|i| i}.each do |grade|
+          %option{value: "#{grade + 1}", id: "sotw-student-grade-#{grade + 1}"}= grade + 1
+  .form-group
+    %label.control-label{for: "sotw-school-name"}
+      School name
+      %span.form-required-field *
+    %div
+      %input#sotw-school-name.form-control{name: "school_name_s", required: "", type: "text"}/
+  .form-group
+    %label.control-label{for: "sotw-school-zip-code"}
+      School ZIP code
+      %span.form-required-field *
+    %div
+      %input#sotw-school-zip-code.form-control{name: "school_zip_code_s", required: "", type: "text"}/
+  .form-group
+    %label.control-label{for: "sotw-student-link"} Link to student photo or video (so we can feature them on our blog)
+    %div
+      %input#sotw-student-link.form-control{name: "student_link_s", type: "url"}/
+  .form-group
+    %label.control-label{for: "sotw-message"}
+      And, the most important part: tell us a brief story.
+      %br
+      How is this student changing the face of computer science?
+      %span.form-required-field *
+    %div
+      %textarea#sotw-message.form-control{name: "message_s", required: "", rows: "12"}
+  .form-group.submit-btn
+    %button#btn-submit.btn.btn-default{type: "submit"} Submit
+
+:javascript
+  $(document).ready(function() {
+    $('#thanks').hide();
+  });
+
+  function processResponse(data)
+  {
+    $("#btn-submit").removeAttr('disabled');
+    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
+    $('#sotw-intro').hide();
+    $('#sotw-form').hide();
+
+    $('#thanks').show();
+  }
+
+  function processError(data)
+  {
+    errors = Object.keys(data.responseJSON);
+    errors_count = errors.length;
+
+    for (i = 0; i < errors_count; ++i) {
+      error_id = '#sotw-' + errors[i].replace(/_/g, '-');
+      $(error_id).parents('.form-group').addClass('has-error');
+    }
+
+    $('#error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
+
+    $('body').scrollTop(0);
+    $("#btn-submit").removeAttr('disabled');
+    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
+  }
+
+  function studentNominationFormSubmit()
+  {
+    $("#btn-submit").attr('disabled','disabled');
+    $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
+
+    $.ajax({
+      url: "/forms/StudentNomination",
+      type: "post",
+      dataType: "json",
+      data: $('#sotw-form').serialize()
+    }).done(processResponse).fail(processError);
+
+    return false;
+  }

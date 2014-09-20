@@ -1,0 +1,87 @@
+#map
+  -if @country == 'ar'
+    %h2= hoc_s(:map_header_ar)
+  -else
+    %h2= hoc_s(:map_header)
+  #gmap{style: 'height: 500px; padding: 3px; border: 3px solid #ddd;'}
+
+:javascript
+  var gmap;
+  var clusterer;
+  var markers = [];
+  var latlngs = [];
+  var infowindow = new google.maps.InfoWindow();
+
+  $(document).ready(function() {
+    gmap = initializeMap();
+    getSignups();
+  });
+
+  function initializeMap() {
+    var mapOptions = {
+      center: new google.maps.LatLng(28.25,7.39),
+      zoom: 2,
+      minZoom: 2,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    gmap = new google.maps.Map(document.getElementById("gmap"), mapOptions);
+
+    return gmap;
+  }
+
+  function getSignups() {
+    var params = [];
+
+    $.post('/forms/HocSignup2014/query', $.param(params), function(response) {
+      var results = JSON.parse(response);
+
+      $.each(results.response.docs, function(index, value) {
+        if (typeof value.location_p != 'undefined') {
+          label = value.organization_name_s;
+          hoc_location = value.location_p.split(',');
+          lat = hoc_location[0];
+          lng = hoc_location[1];
+          addMarker(lat, lng, label);
+        }
+      });
+
+      //markerClusterer = new MarkerClusterer(gmap, markers, {
+      //  maxZoom: 6,
+      //  gridSize: 50,
+      //  minimumClusterSize: 1,
+      //  averageCenter: true,
+      //  zoomOnClick: true
+      //});
+
+    }).fail(displayQueryError);
+  }
+
+  function addMarker(lat, lng, label) {
+    var latlng = new google.maps.LatLng(lat, lng);
+
+    var marker = new google.maps.Marker({
+      position: latlng,
+      map: gmap,
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        strokeWeight: 3,
+        strokeOpacity: 1,
+        strokeColor: '#cc0000',
+        scale: 3
+      },
+      title: label,
+      setClickable: false,
+      draggable: false
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.close()
+      infowindow.setContent(marker.title);
+      infowindow.open(gmap, marker);
+    });
+
+    markers.push(marker);
+  }
+
+  function displayQueryError() {
+  }

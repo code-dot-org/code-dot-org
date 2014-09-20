@@ -1,0 +1,36 @@
+%form#update-section-form{onsubmit:'return updateSectionSubmit()'}
+  .form-group
+    %label{for:'section_id'} Section Id
+    %div
+      %input#section-id{name:'section_id', placeholder:'1', type:'text', required:true}/
+
+  .form-group
+    %label{for:'name'} Section name
+    %div
+      %input#update-section-name{name:'name', placeholder:'New Name', type:'text', required:true}/
+
+  .form-group
+    %button#btn-submit{type:'submit'} Submit
+
+:javascript
+  function updateSectionSubmit()
+  {
+    $("#btn-submit").attr('disabled','disabled');
+
+    $.ajax({
+      url: "/v2/sections/" + $('#section-id').val() + "/update",
+      type: "post",
+      dataType: "json",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify({
+        name:$('#update-section-name').val()
+      })
+    }).done(function(data, text) {
+      window.location.href = data.location;
+    }).fail(function(request, status, error) {
+      alert(error)
+      $("#btn-submit").removeAttr('disabled');
+    });
+
+    return false;
+  }

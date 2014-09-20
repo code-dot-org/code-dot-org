@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+MOOC_LOCALIZE=1 grunt rebuild

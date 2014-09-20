@@ -1,0 +1,52 @@
+var TestResults = require('../../../src/constants.js').TestResults;
+var ResultType = require('../../../src/constants.js').ResultType;
+
+module.exports = {
+  app: "turtle",
+  levelFile: "levels",
+  levelId: "5_5",
+  tests: [
+    {
+      description: "Free play level with infinite loop",
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+      xml:
+        '<xml>' +
+        '    <block type="when_run" deletable="false" movable="false">' +
+        '      <next>' +
+        '        <block type="controls_for_counter" inline="true">' +
+        '          <mutation counter="counter"></mutation>' +
+        '          <value name="FROM">' +
+        '            <block type="math_number">' +
+        '              <title name="NUM">4</title>' +
+        '              </block>' +
+        '              </value>' +
+        '              <value name="TO">' +
+        '              <block type="math_number">' +
+        '              <title name="NUM">8</title>' +
+        '          </block>' +
+        '        </value>' +
+        '        <value name="BY">' +
+        '          <block type="math_number">' +
+        '            <title name="NUM">0</title>' +
+        '          </block>' +
+        '        </value>' +
+        '        <statement name="DO">' +
+        '          <block type="draw_move" inline="true">' +
+        '            <title name="DIR">moveForward</title>' +
+        '            <value name="VALUE">' +
+        '              <block type="math_number">' +
+        '                <title name="NUM">100</title>' +
+        '              </block>' +
+        '            </value>' +
+        '          </block>' +
+        '        </statement>' +
+        '      </block>' +
+        '    </next>' +
+        '  </block>' +
+        '</xml>'
+    }
+  ]
+};

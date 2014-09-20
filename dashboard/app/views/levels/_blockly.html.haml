@@ -1,0 +1,171 @@
+#blocklyApp
+  .loading
+  .slow_load
+    = t(:slow_loading)
+    %br
+    %a{href: 'javascript: location.reload();'}= t(:try_reloading)
+
+- content_for :body_scripts do
+  -# Common scripts and styles
+  - blockly_path = "#{ActionController::Base.asset_host}/blockly/"
+  -# If no param, take default
+  - pretty = params.fetch(:pretty, Rails.configuration.pretty_blockly)
+  %link{href: "#{blockly_path}css/common.css", rel: 'stylesheet', type: 'text/css'}
+  %link{href: "#{blockly_path}css/#{app}.css", rel: 'stylesheet', type: 'text/css'}
+
+  %script{src: "#{blockly_path}js/#{js_locale}/vendor.js"}
+  %script{src: "#{blockly_path}js/#{js_locale}/#{app}#{pretty ? '' : '.min'}.js"}
+
+  -# Create level options object to pass to Blockly
+  - level, app_options = blockly_options(local_assigns)
+
+  - if @autoplay_video_info
+    :javascript
+      showVideoDialog(#{@autoplay_video_info.to_json})
+
+  -# use local[:symbol] to access locals passed into this render partial (defaults to false if not present)
+  - local = Hash.new(false).merge!(local_assigns.delete_if{|_,v|v.nil?})
+
+  :javascript
+    var level = #{level.to_json};
+    // See assets/javascripts/sendReport for definition of lastServerResponse
+    var appOptions = {
+      levelId: '#{@level.level_num}',
+      #{ "disableSocialShare: true," if @current_user && (@current_user.age.nil? || @current_user.age < 13) }
+      #{ "scriptId: '#{@script.id}'," if @script }
+      #{ "levelGameName: '#{@level.game.name}'," if @level.game }
+      level: level,
+      #{ "skinId: '#{@level.skin}'," if @level.is_a?(Blockly) }
+      callouts: #{@callouts.to_json} || [],
+      createCallouts: function() {
+        $.fn.qtip.zindex = 500;
+        this.callouts.every(function(callout) {
+          var selector = callout.element_id; // jquery selector.
+          if ($(selector).length <= 0) { console.log("Couldn't find callout target."); return true;}
+
+          var defaultConfig = {
+            content: {
+              text: callout.localized_text,
+              title: {
+                button: $('<div class="tooltip-x-close"/>').append($('<img src="#{asset_path 'x_button.png'}"/>'))
+              }
+            },
+            style: {
+              classes: "",
+              tip: {
+                width: 20,
+                height: 20
+              }
+            },
+            position: {
+              my: "bottom left",
+              at: "top right"
+            },
+            hide: {
+              event: 'click mousedown touchstart'
+            },
+            show: false // don't show on mouseover
+          };
+
+          var customConfig = $.parseJSON(callout.qtip_config);
+          var config = $.extend(true, {}, defaultConfig, customConfig);
+          config.style.classes = config.style.classes.concat(" cdo-qtips");
+
+          var calloutDomElement = $(selector).qtip(config);
+          calloutDomElement.qtip('show');
+
+          return true;
+        });
+      },
+      onInitialize: function() {
+        this.createCallouts();
+        onInitializeListeners.forEach(function(listener) {
+          listener();
+        });
+        #{render(partial: 'levels/chrome34Fix', formats: :js) if chrome_version == 34}
+      },
+      locale: '#{js_locale}',
+      containerId: 'blocklyApp',
+      baseUrl: '#{blockly_path}',
+      cacheBust: '#{blockly_cache_bust}',
+      onAttempt: function(report) {
+        report.fallbackResponse = #{@fallback_response.to_json};
+        report.callback = '#{@callback}';
+        if (#{@artist_builder.to_json}) {
+          $('#builder-error').text('');
+          ['program', 'name', 'instructions', 'type'].forEach(function(key) {
+            report['level[' + key + ']'] = report[key];
+          });
+          delete report.level;
+          report.onComplete = function(response) {
+            if(lastServerResponse.nextRedirect) {
+              window.location.href = lastServerResponse.nextRedirect;
+            } else {
+              $('#builder-error').text(lastServerResponse.report_error);
+            }
+          };
+        }
+        // Track puzzle attempt event
+        script_path = "#{@script_level && build_script_level_path(@script_level)}";
+        trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
+        if (report.pass) {
+          trackEvent('Puzzle', 'Success', script_path, report.attempt);
+        }
+        trackEvent('Activity', 'Lines of Code', script_path, report.lines);
+        sendReport(report);
+      },
+      onResetPressed: function() {
+        cancelReport();
+      },
+      onContinue: function() {
+        if (lastServerResponse.videoInfo) {
+          showVideoDialog(lastServerResponse.videoInfo);
+        } else if (lastServerResponse.nextRedirect) {
+          window.location.href = lastServerResponse.nextRedirect;
+        }
+      },
+      backToPreviousLevel: function() {
+        if (lastServerResponse.previousLevelRedirect) {
+          window.location.href = lastServerResponse.previousLevelRedirect;
+        }
+      },
+      Dialog: Dialog,
+      referenceArea: function() {
+        var referenceDiv = $('#{escape_javascript(render partial: "levels/reference_area")}');
+        referenceDiv.find('.video_link').each(function() {
+          addClickTouchEvent($(this), $.proxy(function() {
+            showVideoDialog({
+              src: $(this).attr('data-src'),
+              name: $(this).attr('data-name'),
+              key: $(this).attr('data-key'),
+              download: $(this).attr('data-download'),
+              thumbnail: $(this).attr('data-thumbnail'),
+              enable_fallback: true,
+              autoplay: true
+            });
+          }, this));
+        });
+        return referenceDiv[0];
+      },
+      showInstructionsWrapper: function(showInstructions) {
+        var hasInstructions = level.instructions || level.aniGifURL;
+        if (!hasInstructions || this.share || level.skipInstructionsPopup) {
+          return;
+        }
+
+        if ('#{@autoplay_video_info}') {
+          $('.video-modal').on('hidden.bs.modal', function () {
+            showInstructions();
+          });
+        } else {
+          showInstructions();
+        }
+      },
+      hide_source: #{local[:hide_source]},
+      share: #{local[:share]},
+      no_padding: #{local[:no_padding]},
+      position: { blockYCoordinateInterval: 25 }
+    };
+    $.extend(appOptions, #{app_options.to_json});
+    #{'console.log(appOptions)' unless Rails.env.production?};
+    #{app}Main(appOptions);

@@ -1,0 +1,57 @@
+"fi":
+  devise:
+    confirmations:
+      confirmed: "Sähköpostiosoitettasi ei voitu vahvistaa."
+      send_instructions: "Saat kohta sähköpostiviestin, jossa on ohjeet tilisi vahvistamiseksi."
+      send_paranoid_instructions: "Jos sähköpostiosoitteesi löytyy tietokannastamme, saat kohta sähköpostiviestin, jossa on ohjeet tilisi vahvistamiseksi."
+    failure:
+      already_authenticated: "Jos olet jo kirjautunut sisään."
+      inactive: "Tiliäsi ei ole vielä aktivoitu."
+      invalid: "Virheellinen sähköpostiosoite tai salasana."
+      invalid_token: "Väärä tunnistusavain."
+      locked: "Tilisi on lukittu."
+      not_found_in_database: "Virheellinen sähköpostiosoite tai salasana."
+      timeout: "Istunto on vanhentunut, kirjaudu uudelleen jatkaaksesi."
+      unauthenticated: "Sinun täytyy kirjautua sisään tai rekisteröityä ennen jatkamista."
+      unconfirmed: "Sinun tulee vahvistaa tilisi, ennen kuin voit jatkaa."
+    mailer:
+      confirmation_instructions:
+        subject: "Code.org vahvistusohjeet"
+      reset_password_instructions:
+        subject: "Code.org salasanan palautusohjeet"
+      unlock_instructions:
+        subject: "Avausohjeet"
+    omniauth_callbacks:
+      failure: '%{kind} tunnistus epäonnistui, koska "%{reason}".'
+      success: '%{kind} tunnistus onnistui.'
+    passwords:
+      no_token: "Tähän sivuun on pääsy vain salasanan palautus -sähköpostin kautta. Jos kuitenkin tulit tälle sivulle salasanan palautus -sähköpostin kautta, varmista että käytit koko osoitetta."
+      send_instructions: "Saat muutaman minuutin kuluttua sähköpostitse ohjeet salasanan palauttamiseen."
+      send_paranoid_instructions: "Jos sähköpostiosoitteesi on tietokannassamme, saat salasanan palautusta koskevan sähköpostin muutaman minuutin kuluttua."
+      updated: "Salasanasi vaihto onnistui. Olet nyt kirjautunut sisään."
+      updated_not_active: "Salasanasi vaihto onnistui."
+    registrations:
+      destroyed: "Moikkamoi! Tilisi on nyt peruutettu. Toivottavasti tulet kuitenkin pian takaisin."
+      signed_up: "Tervetuloa! Olet kirjautunut sisään onnistuneesti."
+      signed_up_but_inactive: "Tilisi on luotu onnistuneesti. Tilisi ei kuitenkaan ole vielä aktivoitu ja tästä johtuen et ole vielä kirjautunut sisään."
+      signed_up_but_locked: "Tilisi on luotu onnistuneesti. Tilisi on kuitenkin lukittu ja tästä johtuen et ole kirjautunut sisään."
+      signed_up_but_unconfirmed: "Vahvistussähköposti on lähetetty sähköpostiosoitteeseesi. Ole hyvä ja avaa sähköpostissa oleva linkki aktivoidaksesi tilisi."
+      update_needs_confirmation: "Päivitit tilisi onnistuneesti, mutta haluamme vielä varmistaa uuden sähköpostiosoitteesi. Tarkistathan sähköpostilaatikkosi ja klikkaat vahvistusviestissä olevaa linkkiä vahvistaaksesi osoitteen toimivuuden."
+      updated: "Tilisi on päivitetty onnistuneesti."
+    sessions:
+      signed_in: "Olet kirjautunut sisään."
+      signed_out: "Olet kirjautunut ulos."
+    unlocks:
+      send_instructions: "Saat muutaman minuutin päästä sähköpostitse ohjeet tilisi lukituksen avaamiseen."
+      send_paranoid_instructions: "Jos tilisi on olemassa, saat muutaman minuutin kuluttua sähköpostitse ohjeet tilin lukituksen avaamiseen."
+      unlocked: "Tilisi lukitus on poistettu onnistuneesti. Kirjaudu sisään jatkaaksesi."
+  errors:
+    messages:
+      already_confirmed: "on jo vahvistettu; kokeile kirjautua sisään uudelleen"
+      confirmation_period_expired: 'täytyy vahvistaa %{period} ajan sisällä; ole hyvä ja pyydä uusi vahvistusviesti'
+      expired: "on vanhentunut; ole hyvä ja pyydä uusi"
+      not_found: "ei löytynyt"
+      not_locked: "ei lukittu"
+      not_saved:
+        one: 'Virhe esti tämän %{resource} tallentamisen:'
+        other: '%{count} virhettä esti tämän %{resource} tallentamisen:'

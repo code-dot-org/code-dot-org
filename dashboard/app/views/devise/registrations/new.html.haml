@@ -1,0 +1,128 @@
+- resource.user_type ||= params[:user].try(:fetch, :user_type) || User::TYPE_STUDENT
+
+#signup
+  .row
+    .span9
+      %h1= resource.student? ? t('signup_form.student_pitch') : t('signup_form.teacher_pitch')
+      - if resource.student?
+        %p
+          = t('signup_form.overview_student').html_safe
+        %p
+          = sanitize(t('signup_form.no_signup_message').html_safe, tags: %w(a), attributes: %w(href target))
+
+      - else
+        %p
+          = t('signup_form.overview_teacher').html_safe
+
+  .row
+    .span8.signupblock
+      = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => 'signupform' }) do |f|
+        = signup_error_messages!
+
+        = f.hidden_field :user_type
+        = f.hidden_field :locale, value: locale
+        = f.hidden_field :hashed_email
+
+        .itemblock
+          .labelblock
+            = t('activerecord.attributes.user.name')
+          = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true
+        %br/
+        .itemblock
+          .labelblock
+            = t('activerecord.attributes.user.email')
+          = f.email_field :email, class: 'input-xlarge fieldblock'
+        %br/
+        - if f.object.password_required?
+          .itemblock
+            .labelblock
+              = t('activerecord.attributes.user.password')
+            = f.password_field :password, class: 'input-xlarge fieldblock'
+            %span#password_message
+          %br/
+          .itemblock
+            .labelblock
+              = t('activerecord.attributes.user.password_confirmation')
+            = f.password_field :password_confirmation, class: 'input-xlarge fieldblock'
+          %span#password_message_confirmation
+        %br/
+        .itemblock
+          .labelblock
+            = t('signup_form.age')
+          = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
+        %br/
+
+        - if resource.teacher?
+          -# %h4 Optional information
+          .itemblock
+            .labelblock
+              = t('signup_form.school_name')
+            = f.text_field :school, class: 'input-xlarge', class: 'fieldblock'
+          %br/
+          = t('signup_form.school_address')
+          %br/
+          = f.text_area :full_address, class: 'input-xxlarge', placeholder: t('signup_form.address_placeholder'), rows: 4
+
+        - if resource.student?
+          -# %h5 
+            Optional information
+          .itemblock
+            .labelblock
+              = t('signup_form.gender')
+            = f.select :gender, gender_options
+          %br/
+
+        = f.submit t('signup_form.submit'), class: "btn btn-primary btn-large"
+        %br/
+        %br/
+        %br/
+        != resource.student? ? t('signup_form.student_terms') : t('signup_form.teacher_terms')
+    
+    .span4
+      %div{ style: 'padding-left: 20px;  border-left: 1px solid black;' }
+        - if !resource.teacher?
+          = link_to t('signup_form.teacher'), new_user_registration_path('user[user_type]' =>  User::TYPE_TEACHER)
+          %br/
+          %br/
+        = render "devise/shared/links"
+
+    %div{style: "clear:both"}
+    %br/
+    %br/
+    %br/
+
+:javascript
+  $( "#user_password" ).on('input',function(e){
+    var password = $(this).val();
+    var password_message = $('#password_message');
+    var password_message_confirmation = $('#password_message_confirmation');
+    if (!password || password.length < 6) {
+      password_message.text("#{t('signup_form.invalid_password')}");
+    } else {
+      password_message.text("#{t('signup_form.valid_password')}");
+    }
+    password_message_confirmation.text("");
+  });
+
+  $( "#user_password_confirmation" ).on('input',function(e){
+    var conf_password = $(this).val();
+    var origin_password = $('#user_password').val();
+    var password_message = $('#password_message');
+    var password_message_confirmation = $('#password_message_confirmation');
+    if (conf_password !== origin_password) {
+      password_message_confirmation.text("#{t('signup_form.mismatch_password')}");
+    } else {
+      password_message_confirmation.text("");
+    }
+    password_message.text("");
+  });
+
+  $( "#user_name" ).placeholder();
+  $( "#user_email" ).placeholder();
+  $( "#user_school" ).placeholder();
+
+  $( ".signupform" ).on("submit", function(e){
+    hashEmail({ email_selector: '#user_email',
+                hashed_email_selector: '#user_hashed_email',
+                age_selector: '#user_age'});
+  });

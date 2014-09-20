@@ -1,0 +1,95 @@
+- if !@section
+  Please enter the code shared with you by your teacher. It's a 6-character code made up of letters and numbers
+  %br/
+  = form_tag(student_user_new_path, method: 'GET') do
+    = text_field_tag(:section_code, params[:section_code], placeholder: "6-character code (ABCDEF)")
+    %br/
+    = submit_tag 'Go', class: 'btn btn-primary'
+- elsif current_user
+  You are currently signed in. #{link_to "Return home", root_path} or #{link_to("log out", destroy_user_session_path)} to proceed.
+- else
+  %h2 Register to join the class #{@section.name} taught by #{@section.user.name}
+  - if @user.errors.any?
+    #error_explanation
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+
+  #signup
+    .row
+      .span8.signupblock
+        = form_for(@user, url: { action: :student_register }) do |f|
+
+          = f.hidden_field :user_type
+          = f.hidden_field :locale, value: locale
+          = f.hidden_field :hashed_email
+
+          .itemblock
+            .labelblock
+              = t('activerecord.attributes.user.name')
+            = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true
+          %br/
+          .itemblock
+            .labelblock
+              = t('activerecord.attributes.user.email')
+            = f.email_field :email, class: 'input-xlarge fieldblock'
+          %br/
+          - if f.object.password_required?
+            .itemblock
+              .labelblock
+                = t('activerecord.attributes.user.password')
+              = f.password_field :password, class: 'input-xlarge fieldblock'
+              %span#password_message
+            %br/
+            .itemblock
+              .labelblock
+                = t('activerecord.attributes.user.password_confirmation')
+              = f.password_field :password_confirmation, class: 'input-xlarge fieldblock'
+            %span#password_message_confirmation
+            %br/
+            .itemblock
+              .labelblock
+                = t('signup_form.age')
+              = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
+            .itemblock
+              .labelblock
+                = t('signup_form.gender')
+              = f.select :gender, gender_options
+            %br/
+            = submit_tag 'Register', class: 'btn btn-primary'
+
+:javascript
+  $( "#section_code" ).placeholder();
+  $( "#user_name" ).placeholder();
+  $( "#user_age" ).placeholder();
+
+  $( "#user_password" ).on('input',function(e){
+    var password = $(this).val();
+    var password_message = $('#password_message');
+    var password_message_confirmation = $('#password_message_confirmation');
+    if (!password || password.length < 6) {
+      password_message.text("#{t('signup_form.invalid_password')}");
+    } else {
+      password_message.text("#{t('signup_form.valid_password')}");
+    }
+    password_message_confirmation.text("");
+  });
+
+  $( "#user_password_confirmation" ).on('input',function(e){
+    var conf_password = $(this).val();
+    var origin_password = $('#user_password').val();
+    var password_message = $('#password_message');
+    var password_message_confirmation = $('#password_message_confirmation');
+    if (conf_password !== origin_password) {
+      password_message_confirmation.text("#{t('signup_form.mismatch_password')}");
+    } else {
+      password_message_confirmation.text("");
+    }
+    password_message.text("");
+  });
+
+  $( "form#new_user" ).on("submit", function(e){
+    hashEmail({ email_selector: '#user_email',
+                hashed_email_selector: '#user_hashed_email',
+                age_selector: '#user_age'});
+  });

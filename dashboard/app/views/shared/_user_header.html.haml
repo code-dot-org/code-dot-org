@@ -1,0 +1,20 @@
+- if current_user
+  .transparent_backdrop{style: 'display:none;'}
+  .user_menu
+    = link_to raw("#{t('nav.user.label', username: h(current_user.short_name))} &#x25BC;"), '#', onclick: "return handleUserMenuClick();", class: 'user-menu-link'
+    %div{ style: 'position:relative;top:3px;'}
+      .user_options{style: 'display: none;'}
+        - if current_user.teacher?
+          = link_to t('nav.user.classroom'), teacher_dashboard_url
+          %hr
+        = link_to t('nav.user.stats'), root_url
+        %br/
+        = link_to t('nav.user.settings'), edit_user_registration_url
+        %br/
+        - if current_user.teacher?
+          = link_to t('nav.user.prizes'), my_prizes_url
+          %br/
+        = link_to t('nav.user.logout'), destroy_user_session_url
+- elsif params[:controller] !~ /^devise/ and not Rails.configuration.minimal_mode
+
+  = link_to(t('nav.user.signin'), new_user_session_url, class: 'button-signin', id: 'signin_button')

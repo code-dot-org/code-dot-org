@@ -1,0 +1,306 @@
+@import "main";
+
+@errorText: #B94A48;
+@errorBackground: #F2DEDE;
+
+
+
+#login-page {
+	padding-top:60px;
+	#status-message{
+	    font-size: 20px;
+	    text-align: center;
+	    font-weight: bold;
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	}
+
+	i {
+		margin-left:3px;
+		margin-top:2px;
+	}
+}
+
+
+.start_helper{
+	background-color: @actionGreen;
+	padding: 10px;
+	margin-bottom: 8px;
+	float: left;
+	width:100%;
+}
+
+.main-title {
+	margin-bottom:20px;
+	.center;
+}
+
+.wrap {
+	background:#fff;
+	border:1px solid #ccc;
+	padding:10px;
+	.rounded-corners(5px);
+	margin-bottom:10px;
+}
+
+input, textarea {
+	background:#efefef;
+}
+
+.error {
+	input {
+		border-color: @errorText;
+		background:@errorBackground;
+	}
+}
+
+ul{
+	font-size: 14px;
+	color: @errorText;
+
+	li{
+		list-style-type: none;
+
+		input[type=radio]{
+			float: left;
+			width: 40px;
+			height: 50px;
+		}
+	}
+	overflow: hidden;
+}
+
+#create-form {
+	label {
+		font-size:20px;
+		color:#555;
+		margin-bottom:7px;
+	}
+
+	input {
+		font-size:24px;
+		height:35px;
+		line-height:35px;
+		width:100%;
+	}
+
+	.group {
+		width:100%;
+		.first {
+			margin-right:50px;
+		}
+		margin-top:10px;
+	}
+
+	#id_bio {
+		width:280px;
+	}
+
+	#id_photo {
+		width:80%
+	}
+
+}
+
+#login-form {
+	label {
+		font-size:20px;
+		color:#555;
+		margin-bottom:7px;
+	}
+
+	input {
+		font-size:24px;
+		width: 95%;
+		height:35px;
+	}
+
+	.btn {
+		padding:10px;
+		position:relative;
+		width:50%;
+		left:25%;
+		height:auto;
+	}
+
+}
+
+
+#payment-form {
+
+	font-size:24px;
+	@widthPerChar: 14px;
+	color:#333;
+
+	@paymentBackground: #D9EDF7;
+	@paymentColor: #3A87AD;
+	@paymentBorder: #BCE8F1;
+
+	.wrap {
+		background:darken(@paymentBackground, 5%);
+		border-color:@paymentBorder;
+	}
+	
+	label {
+		color:@paymentColor;
+		margin-bottom:7px;
+		font-size:20px;
+	}
+
+	input {
+		font-size:20px;
+		color:#555;
+		height:24px;
+		line-height:24px;
+	}
+
+	.first {
+		margin-right:18px;			
+	}
+
+	.card-expiry-month {
+		width:150px;
+		margin-top:-5px;
+	}
+
+	.card-expiry-year {
+		width:@widthPerChar * 5;
+		line-height:30px;
+	}
+
+	.card-cvc {
+		width:@widthPerChar * 4;
+	}
+
+	.card-number {
+		width:@widthPerChar * 20;
+	}
+
+	.info {
+		margin-top:3px;
+		color:#777;
+		font-size:14px;
+	}
+
+	#payment-errors {
+		margin-bottom:5px;
+		font-size:14px;
+		color:@errorText;
+		.bold;
+	}
+}
+
+
+#plan {
+
+	input {
+		width:30%;
+	}
+
+	#id_weeks {
+		width:50%;
+	}
+
+	.plan-content {
+		background:#fff;
+		padding:10px;
+		border-bottom:1px solid #ccc;
+		width:92%;
+
+		.name {
+			.uppercase;
+			.center;
+			.bold;
+			font-size:24px;
+			line-height:25px;
+		}
+
+		.price {
+			.center;
+			.uppercase;
+			.bold;
+			font-size:30px;
+			line-height:40px;
+
+			.time {
+				font-size:16px;
+			}
+		}
+
+		.a {
+			color: #aaa;
+		}
+
+		.b {
+			color: @funcDoneColor;
+		}
+
+		.c {
+			color: @completeColor;
+		}
+	}
+
+	.features {
+		margin-top:10px;
+
+		.ft {
+			color:#333;
+			margin-bottom:5px;
+			font-size:15px;
+
+			i {
+				margin:1px 5px 0px 0px;
+			}
+		}
+	}
+}
+
+#week-picker {
+	margin-top:10px;
+
+	.weeks {
+		margin-right:50px;
+	}
+
+	.price {
+		margin-top:30px;
+	}
+}
+
+#register-button {
+	margin-top:20px;
+	font-size:20px;
+	padding:10px;
+	width:200px;
+	left:50%;
+	margin-left:-100px;
+	position:relative;
+}
+
+
+#upgrade-form {
+	#register-button {
+		margin-top:20px;
+		font-size:20px;
+		padding:10px;
+		width:200px;
+		left:50%;
+		margin-left:-100px;
+		position:relative;
+	}
+}
+
+#coupon-code-form {
+	input {
+		font-size:24px;
+		height:35px;
+		line-height:35px;
+		width:100%;
+	}
+	
+	#coupon-status {
+		margin-left:5px;
+		margin-top:5px;
+		font-size:14px;
+	}
+}

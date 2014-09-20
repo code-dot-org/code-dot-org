@@ -1,0 +1,25 @@
+.field
+  = f.label :video_key, 'Level Video'
+  %p Ask an engineer to add new videos to the videos.csv and data.en.yml files.
+  = f.select :video_key, options_for_select(video_key_choices, @level.video_key), {include_blank: true}, {class: 'video-dropdown'}
+  .video-preview{style: 'display: block'}
+
+- video_infos = {}
+- Video.all.each { |video| video_infos[video.key] = video_info(video, false) }
+:javascript
+  $(document).ready(function() {
+    var videoInfos = #{video_infos.to_json};
+
+    function updateVideoPreview() {
+      var selectionValue = $('.video-dropdown')[0].value;
+      if (selectionValue) {
+        var videoInfo = videoInfos[selectionValue];
+        $('.video-preview').html(createVideoWithFallback(videoInfo, 400, 400));
+        $('.video-preview').show();
+      } else {
+        $('.video-preview').hide();
+      }
+    }
+    $('.video-dropdown').change(updateVideoPreview);
+    updateVideoPreview();
+  });

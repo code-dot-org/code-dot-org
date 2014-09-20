@@ -1,0 +1,69 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-08-28T18:09:42.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist",
+    "instructions": "Build a three level pyramid, there are no other directions, so just play with the pieces until you get it!",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "x": "75",
+    "y": "300",
+    "free_play": "false"
+  }
+}]]></config>
+  <blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="simple_move_up">
+              <next>
+                <block type="simple_move_right">
+                  <next>
+                    <block type="simple_move_up">
+                      <next>
+                        <block type="simple_move_right">
+                          <next>
+                            <block type="simple_move_up">
+                              <next>
+                                <block type="simple_move_right">
+                                  <next>
+                                    <block type="simple_move_down">
+                                      <next>
+                                        <block type="simple_move_right">
+                                          <next>
+                                            <block type="simple_move_down">
+                                              <next>
+                                                <block type="simple_move_right">
+                                                  <next>
+                                                    <block type="simple_move_down"/>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="simple_jump_up"/>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

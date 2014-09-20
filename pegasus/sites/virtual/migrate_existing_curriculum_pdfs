@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+require_relative '../../../deployment'
+require 'cdo/pegasus'
+require 'cdo/rake_utils'
+require 'minitest/autorun'
+require 'rubygems'
+require_relative '../../src/env'
+
+generated_pdf_templates =
+    Dir.glob(Pathname(pegasus_dir('sites/virtual/**/*.md'))) +
+    Dir.glob(Pathname(pegasus_dir('sites/virtual/**/*.collate')))
+
+puts "Found #{generated_pdf_templates.length} templates"
+
+generated_pdf_templates.each do |template_path|
+  pdf_path = template_path.sub('.md', '.pdf').sub('.collate', '.pdf')
+
+  next unless File.exists?(pdf_path)
+
+  new_outfile = pdf_path.sub(pegasus_dir('sites/virtual/curriculum-'), sites_v3_dir('code.org/public/curriculum/'))
+  RakeUtils.replace_file_with_s3_backed_fetch_file(pdf_path, "#{new_outfile}.fetch", bucket: 'cdo-fetch')
+  puts "Removing tempfile #{pdf_path}"
+end

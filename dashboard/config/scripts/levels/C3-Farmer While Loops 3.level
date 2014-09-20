@@ -1,0 +1,47 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-07-22T16:51:05.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "skin": "farmer",
+    "instructions": "Move me to the pile and remove all of it, then move to the hole and fill it completely.  Hint:  Use as few blocks as possible.",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "start_direction": "2",
+    "flower_type": "redWithNectar",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,1,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,4,0,0,-3,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "9",
+    "maze_data": null,
+    "video_key": "C3_farmer_while"
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_dig"/>
+        <block type="maze_fill"/>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="maze_untilBlockedOrNotClear">
+          <title name="DIR">pilePresent</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
+  </blocks>
+</Karel>

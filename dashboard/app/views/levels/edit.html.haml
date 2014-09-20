@@ -1,0 +1,7 @@
+%h1 Editing #{@level.class.to_s} level
+= render 'form'
+= link_to t('crud.show'), @level
+|
+= link_to t('crud.back'), levels_path
+|
+= link_to t('crud.destroy'), @level, method: :delete, data: { confirm: t('crud.confirm') } unless @level.new_record?

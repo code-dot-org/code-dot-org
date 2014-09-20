@@ -1,0 +1,262 @@
+name_s,url_s,kind_s,codeorg_b,csedweek_b
+Anita Borg Institute,http://anitaborg.org/,founder,FALSE,TRUE
+Association for Computing Machinery,http://www.acm.org/,founder,FALSE,TRUE
+Computer Science Teachers Association,http://csta.acm.org/,founder,FALSE,TRUE
+Computing Research Association,http://www.cra.org/,founder,FALSE,TRUE
+College Board,http://www.collegeboard.org/,founder,FALSE,TRUE
+Google,http://www.google.com,founder,FALSE,TRUE
+IEEE Computer Society,http://www.computer.org/,founder,FALSE,TRUE
+Microsoft,http://www.microsoft.com,founder,FALSE,TRUE
+National Center for Women in Information and Technology,http://www.ncwit.org,founder,FALSE,TRUE
+National Council of Teachers of Mathematics,http://www.nctm.org,founder,FALSE,TRUE
+National Math + Science Initiative,http://www.nms.org/,founder,FALSE,TRUE
+National Science Teachers Association,http://www.nsta.org/,founder,FALSE,TRUE
+SAS,http://www.sas.com/,founder,FALSE,TRUE
+9slides,http://www.9Slides.com,other,FALSE,TRUE
+Akamai,http://www.akamai.com,other,FALSE,TRUE
+AngelHack,http://www.angelhack.com/,other,FALSE,TRUE
+AthleTECH,http://www.AthleTECH.org,other,FALSE,TRUE
+BetterLesson,http://betterlesson.com,other,FALSE,TRUE
+Black Girl Nerds,http://blackgirlnerds.com,other,FALSE,TRUE
+Black Girls Code,http://blackgirlscode.org/,other,FALSE,TRUE
+Blacks in Gaming,http://blacksingaming.org,other,FALSE,TRUE
+Blerdology,http://blerdology.co/,other,FALSE,TRUE
+BrainPop,http://www.brainpop.com/,other,FALSE,TRUE
+CareerBuilder,http://www.careerbuilder.com/,other,FALSE,TRUE
+Code for America,http://codeforamerica.org,other,FALSE,TRUE
+CodeMontage,http://codemontage.com/,other,FALSE,TRUE
+CodeNow,http://codenow.org,other,FALSE,TRUE
+Code School,https://www.codeschool.com/?utm_medium=logo&utm_campaign=CSEdWeek&utm_source=community_outreach&utm_content=codeorg,other,FALSE,TRUE
+CoderDojo,http://coderdojo.com/,other,FALSE,TRUE
+Congressional App Challenge,http://congressionalappchallenge.us,other,FALSE,TRUE
+Coursera,http://www.coursera.com/,other,FALSE,TRUE
+Dice.com,http://www.dice.com/,other,FALSE,TRUE
+digitalundivided,http://www.digitalundivided.com/,other,FALSE,TRUE
+Discovery Education,http://www.discoveryeducation.com/,other,FALSE,TRUE
+DIY,https://diy.org/,other,FALSE,TRUE
+Edmodo,http://www.edmodo.com,other,FALSE,TRUE
+Globaloria,http://www.globaloria.org/,other,FALSE,TRUE
+Hispanic Foundation of Silicon Valley,http://hfsv.org/,other,FALSE,TRUE
+Hive Learning Networks,http://hivelearningnetwork.org/,other,FALSE,TRUE
+Innovate NYC Schools,http://www.izonenyc.org,other,FALSE,TRUE
+Institute for Mathematics and Computer Science,http://www.eimacs.com/,other,FALSE,TRUE
+Junior Achievement,https://www.juniorachievement.org/,other,FALSE,TRUE
+Kapor Center for Social Impact,http://kaporcenter.org/,other,FALSE,TRUE
+Laer Kidsa Koding,http://www.kidsakoder.no/,other,FALSE,TRUE
+Mass Technology Leadership Council,http://www.masstlc.org/,other,FALSE,TRUE
+Massachusetts Computing Attainment Network,http://masscan.edc.org/,other,FALSE,TRUE
+mobile.pro,http://mobile.pro/,other,FALSE,TRUE
+Mozilla Webmaker,https://webmaker.org/en-US,other,FALSE,TRUE
+Museum of Science,http://www.mos.org/,other,FALSE,TRUE
+Mytonomy,http://www.mytonomy.com,other,FALSE,TRUE
+National Girls Collaborative Project,http://www.ngcproject.org/,other,FALSE,TRUE
+National Center for Technological Literacy,http://legacy.mos.org/nctl/,other,FALSE,TRUE
+National Writing Project,http://www.nwp.org/,other,FALSE,TRUE
+New Schools Venture Fund,http://www.newschools.org/,other,FALSE,TRUE
+nPower,http://www.npowernw.org/,other,FALSE,TRUE
+One Laptop Per Child,http://one.laptop.org/,other,FALSE,TRUE
+Project Lead the Way,http://pltw.org,other,FALSE,TRUE
+Quib.ly,http://quib.ly/welcome?v=2&utm_expid=63811575-3.2pOe5DuzReCS3ShLz1oTRA.1,other,FALSE,TRUE
+Rocketship Education,http://www.rsed.org/,other,FALSE,TRUE
+Science Channel,http://science.discovery.com/,other,FALSE,TRUE
+ScriptEd,http://www.scripted.org/,other,FALSE,TRUE
+Splunk,http://www.splunk.com/,other,FALSE,TRUE
+StudentRND,http://studentrnd.org/,other,FALSE,TRUE
+Teaching Kids Programming,http://teachingkidsprogramming.org/,other,FALSE,TRUE
+Teaching Matters,http://www.teachingmatters.org/,other,FALSE,TRUE
+Technovation Challenge,http://www.TechnovationChallenge.org,other,FALSE,TRUE
+Udacity,https://www.udacity.com/,other,FALSE,TRUE
+USENIX,https://www.usenix.org/,other,FALSE,TRUE
+Washington Interactive Network,http://www.washingtoninteractivenetwork.org/,other,FALSE,TRUE
+WHOmentors.com,http://www.vcita.com/v/rauhmel.fox,other,FALSE,TRUE
+Amazon,http://www.amazon.com,promotional,FALSE,TRUE
+Apple,http://www.apple.com,promotional,FALSE,TRUE
+Bing,http://www.bing.com,promotional,FALSE,TRUE
+Boys & Girls Clubs of America,http://GreatFutures.org,promotional,FALSE,TRUE
+City Year,http://www.cityyear.org/home-WhatWeDo.aspx,promotional,FALSE,TRUE
+Donors Choose,http://www.donorschoose.org/,promotional,FALSE,TRUE
+Dropbox,https://www.dropbox.com/,promotional,FALSE,TRUE
+Electronic Arts,http://www.ea.com,promotional,FALSE,TRUE
+JP Morgan Chase & Co,http://www.jpmorganchase.com/,promotional,FALSE,TRUE
+Juniper Networks,http://www.juniper.net/us/en/,promotional,FALSE,TRUE
+Khan Academy,https://www.khanacademy.org/,promotional,FALSE,TRUE
+LinkedIn,http://www.linkedin.com/,promotional,FALSE,TRUE
+MinecraftEdu,http://minecraftedu.com/page/,promotional,FALSE,TRUE
+MSN,http://www.msn.com,promotional,FALSE,TRUE
+Pearson,http://www.pearson.com,promotional,FALSE,TRUE
+PopCap,http://www.popcap.com,promotional,FALSE,TRUE
+Rovio,http://www.rovio.com,promotional,FALSE,TRUE
+Salesforce,http://salesforce.com,promotional,FALSE,TRUE
+Scratch,http://scratch.mit.edu/,promotional,FALSE,TRUE
+Skype,http://www.skype.com,promotional,FALSE,TRUE
+Teach For America,http://www.teachforamerica.org,promotional,FALSE,TRUE
+Valve,http://www.valvesoftware.com/,promotional,FALSE,TRUE
+xBox,http://www.xbox.com,promotional,FALSE,TRUE
+Yahoo,http://www.yahoo.com,promotional,FALSE,TRUE
+YouTube,http://www.youtube.com,promotional,FALSE,TRUE
+Zappos.com,http://www.Zappos.com,promotional,FALSE,TRUE
+Zulily,http://www.zulily.com/,promotional,FALSE,TRUE
+Zynga,http://zynga.com/,promotional,FALSE,TRUE
+Amazon,http://www.amazon.com/,major,TRUE,FALSE
+Apple,http://apple.com,major,TRUE,FALSE
+Association for Computing Machinery,http://www.acm.org/,major,TRUE,FALSE
+Best Buy,http://www.bestbuy.com/,major,TRUE,FALSE
+Boys & Girls Clubs of America,http://GreatFutures.org,major,TRUE,FALSE
+College Board,http://www.collegeboard.org/,major,TRUE,FALSE
+Computer Science Teachers Association,http://csta.acm.org/,major,TRUE,FALSE
+Donors Choose,http://www.donorschoose.org/,major,TRUE,FALSE
+Dropbox,https://www.dropbox.com/,major,TRUE,FALSE
+Electronic Arts,http://www.ea.com/,major,TRUE,FALSE
+Facebook,http://www.facebook.com,major,TRUE,FALSE
+Google,http://www.google.com,major,TRUE,FALSE
+JP Morgan Chase & Co,http://www.jpmorganchase.com/,major,TRUE,FALSE
+Juniper Networks Foundation Fund,http://www.juniper.net/us/en/,major,TRUE,FALSE
+Khan Academy,https://www.khanacademy.org/,major,TRUE,FALSE
+LinkedIn,http://www.linkedin.com/,major,TRUE,FALSE
+Microsoft,http://www.microsoft.com,major,TRUE,FALSE
+NCWIT,http://www.ncwit.org,major,TRUE,FALSE
+PopCap,http://www.popcap.com/,major,TRUE,FALSE
+Rovio,http://www.rovio.com,major,TRUE,FALSE
+Salesforce,http://salesforce.com,major,TRUE,FALSE
+Teach For America,http://www.teachforamerica.org,major,TRUE,FALSE
+Yahoo,http://www.yahoo.com,major,TRUE,FALSE
+Zappos.com,http://www.Zappos.com,major,TRUE,FALSE
+AgentSheets,http://www.agentsheets.com/,tutorial,TRUE,TRUE
+Alice,http://www.alice.org/,tutorial,TRUE,TRUE
+BirdBrain Technologies,http://www.birdbraintechnologies.com/,tutorial,TRUE,TRUE
+Bootstrap,http://www.bootstrapworld.org/,tutorial,TRUE,TRUE
+Codeacademy,http://www.codecademy.com/,tutorial,TRUE,TRUE
+CodeAvengers,http://www.codeavengers.com/,tutorial,TRUE,TRUE
+CodeHS,http://codehs.com/,tutorial,TRUE,TRUE
+Exploring Computer Science,http://www.exploringcs.org/,tutorial,TRUE,TRUE
+Girls Who Code,http://www.girlswhocode.com/,tutorial,TRUE,TRUE
+Hopscotch,http://www.gethopscotch.com/,tutorial,TRUE,TRUE
+Khan Academy,https://www.khanacademy.org/,tutorial,TRUE,TRUE
+Kodable,http://www.surfscore.com/,tutorial,TRUE,TRUE
+Kodu,http://fuse.microsoft.com/projects/kodu,tutorial,TRUE,TRUE
+LearnStreet,http://www.learnstreet.com/,tutorial,TRUE,TRUE
+LightBot,http://light-bot.com/,tutorial,TRUE,TRUE
+LiveCode,http://livecode.com/hour-of-code/,tutorial,TRUE,TRUE
+Lynda.com,http://www.lynda.com/Developer-training-tutorials/50-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=524&utm_campaign=CD14814&bid=524&aid=CD14814&opt=,tutorial,TRUE,TRUE
+MinecraftEdu,http://minecraftedu.com/page/,tutorial,TRUE,TRUE
+MIT App Inventor,http://appinventor.mit.edu/,tutorial,TRUE,TRUE
+Processing,http://processing.org,tutorial,TRUE,TRUE
+Programmr.com,http://www.programmr.com,tutorial,TRUE,TRUE
+Project Guts,http://www.projectguts.org/,tutorial,TRUE,TRUE
+RoboMind Academy,http://www.robomindacademy.com/go/robomind/home,tutorial,TRUE,TRUE
+Scratch,http://scratch.mit.edu/,tutorial,TRUE,TRUE
+Snap!,http://snap.berkeley.edu,tutorial,TRUE,TRUE
+Thinkersmith,http://www.thinkersmith.org/,tutorial,TRUE,TRUE
+TouchDevelop,https://www.touchdevelop.com/,tutorial,TRUE,TRUE
+Tynker,http://www.tynker.com,tutorial,TRUE,TRUE
+Bing,http://www.bing.com,promotional,TRUE,FALSE
+City Year,http://www.cityyear.org/home-WhatWeDo.aspx,promotional,TRUE,FALSE
+Computing Research Association,http://www.cra.org/,promotional,TRUE,FALSE
+GreatSchools,http://www.greatschools.org/,promotional,TRUE,TRUE
+IEEE Computer Society,http://www.computer.org/,promotional,TRUE,FALSE
+MinecraftEdu,http://minecraftedu.com/page/,promotional,TRUE,FALSE
+MSN,http://www.msn.com,promotional,TRUE,FALSE
+National Council of Teachers of Mathematics,http://www.nctm.org,promotional,TRUE,FALSE
+National Math + Science Initiative,http://www.nms.org/,promotional,TRUE,FALSE
+National Science Teachers Association,http://www.nsta.org/,promotional,TRUE,FALSE
+Pearson,http://www.pearson.com,promotional,TRUE,FALSE
+SAS,http://www.sas.com/,promotional,TRUE,FALSE
+Scratch,http://scratch.mit.edu/,promotional,TRUE,FALSE
+Skype,http://www.skype.com,promotional,TRUE,FALSE
+xBox,http://www.xbox.com,promotional,TRUE,FALSE
+Valve,http://www.valvesoftware.com/,promotional,TRUE,FALSE
+YouTube,http://www.youtube.com,promotional,TRUE,FALSE
+Zulily,http://www.zulily.com/,promotional,TRUE,FALSE
+Zynga,http://zynga.com/,promotional,TRUE,FALSE
+9Slides,http://www.9Slides.com,additional,TRUE,FALSE
+Access Computing,http://doit-prod.s.uw.edu/accesscomputing/,additional,TRUE,FALSE
+Akamai,http://www.akamai.com,additional,TRUE,FALSE
+AngelHack,http://www.angelhack.com/,additional,TRUE,FALSE
+AthleTECH,http://www.AthleTECH.org,additional,TRUE,FALSE
+Better Lesson,http://betterlesson.com,additional,TRUE,FALSE
+Black Girl Nerds,http://blackgirlnerds.com,additional,TRUE,FALSE
+Black Girls Code,http://blackgirlscode.org/,additional,TRUE,FALSE
+Blacks in Gaming,http://blacksingaming.org,additional,TRUE,FALSE
+Blerdology,http://blerdology.co/,additional,TRUE,FALSE
+BrainPop,http://www.brainpop.com/,additional,TRUE,FALSE
+CareerBuilder,http://www.careerbuilder.com/,additional,TRUE,FALSE
+Code for America,http://codeforamerica.org,additional,TRUE,FALSE
+Code for Fun,http://www.codeforfun.com/,additional,TRUE,FALSE
+Code Montage,http://codemontage.com/,additional,TRUE,FALSE
+CodeNow,http://codenow.org,additional,TRUE,FALSE
+Code School,https://www.codeschool.com/?utm_medium=logo&utm_campaign=CSEdWeek&utm_source=community_outreach&utm_content=codeorg,additional,TRUE,FALSE
+CoderDojo,http://coderdojo.com/,additional,TRUE,FALSE
+Congressional App Challenge,http://congressionalappchallenge.us,additional,TRUE,FALSE
+Coursera,https://www.coursera.org/,additional,TRUE,FALSE
+Dice.com,http://dice.com,additional,TRUE,FALSE
+DigitalUndivided,http://www.digitalundivided.com/,additional,TRUE,FALSE
+Discovery Education,http://www.discoveryeducation.com/,additional,TRUE,FALSE
+DIY,https://diy.org/,additional,TRUE,FALSE
+Edmodo,http://www.edmodo.com,additional,TRUE,FALSE
+Exploring Computer Science,http://www.exploringcs.org/,additional,TRUE,FALSE
+Globaloria,http://www.globaloria.org/,additional,TRUE,FALSE
+Hispanic Foundation of Silicon Valley,http://www.hfsv.org/,additional,TRUE,FALSE
+Hive Learning Networks,http://hivelearningnetwork.org/,additional,TRUE,FALSE
+Innovate NYC Schools,http://www.izonenyc.org,additional,TRUE,FALSE
+Institute for Mathematics and Computer Science,http://www.eimacs.com/,additional,TRUE,FALSE
+Junior Achievement,https://www.juniorachievement.org/,additional,TRUE,FALSE
+Kapor Center for Social Impact,http://kaporcenter.org/,additional,TRUE,FALSE
+Laer Kidsa Koding,http://www.kidsakoder.no/,additional,TRUE,FALSE
+Mass Technology Leadership Council,http://www.masstlc.org/,additional,TRUE,FALSE
+Massachusetts Computing Attainment Network,http://masscan.edc.org/,additional,TRUE,FALSE
+mobile.pro,http://www.mobile.pro,additional,TRUE,FALSE
+Mommy Poppins,http://mommypoppins.com,additional,TRUE,FALSE
+Mozilla Webmaker,https://webmaker.org/en-US,additional,TRUE,FALSE
+Museum of Science,http://www.mos.org/,additional,TRUE,FALSE
+Mytonomy,http://www.mytonomy.com,additional,TRUE,FALSE
+National Girls Collaborative Project,http://www.ngcproject.org/,additional,TRUE,FALSE
+National Center for Technological Literacy,http://legacy.mos.org/nctl/,additional,TRUE,FALSE
+National Writing Project,http://www.nwp.org/,additional,TRUE,FALSE
+New Schools Venture Fund,http://www.newschools.org/,additional,TRUE,FALSE
+nPower,http://www.npowernw.org/,additional,TRUE,FALSE
+One Laptop Per Child,http://one.laptop.org/,additional,TRUE,FALSE
+Project Lead the Way,http://www.pltw.org,additional,TRUE,FALSE
+Quib.ly,http://quib.ly/welcome?v=2&utm_expid=63811575-3.2pOe5DuzReCS3ShLz1oTRA.1,additional,TRUE,FALSE
+Quorum,http://quorumlanguage.com/,additional,TRUE,FALSE
+Rekode,http://rekode.com/,additional,TRUE,FALSE
+Rocketship Education,http://www.rsed.org/,additional,TRUE,FALSE
+Science Channel,http://science.discovery.com/,additional,TRUE,FALSE
+ScriptEd,http://www.scripted.org/,additional,TRUE,FALSE
+Splunk,http://www.splunk.com/,additional,TRUE,FALSE
+StudentRND,http://studentrnd.org/,additional,TRUE,FALSE
+Teaching Kids Programming,http://teachingkidsprogramming.org/,additional,TRUE,FALSE
+Teaching Matters,http://www.teachingmatters.org/,additional,TRUE,FALSE
+Technovation Challenge,http://www.TechnovationChallenge.org,additional,TRUE,FALSE
+Udacity,https://www.udacity.com/,additional,TRUE,FALSE
+USENIX,https://www.usenix.org/,additional,TRUE,FALSE
+Washington Interactive Network,http://www.washingtoninteractivenetwork.org/,additional,TRUE,FALSE
+WHOmentors.com,http://www.vcita.com/v/rauhmel.fox,additional,TRUE,FALSE
+Computer Science Teachers Association,http://csta.acm.org/,majoruk,TRUE,FALSE
+Dropbox,https://www.dropbox.com/,majoruk,TRUE,FALSE
+Google,http://www.google.com,majoruk,TRUE,FALSE
+Khan Academy,https://www.khanacademy.org/,majoruk,TRUE,FALSE
+LinkedIn,http://www.linkedin.com/,majoruk,TRUE,FALSE
+Microsoft,http://www.microsoft.com,majoruk,TRUE,FALSE
+PopCap,http://www.popcap.com/,majoruk,TRUE,FALSE
+Rovio,http://www.rovio.com,majoruk,TRUE,FALSE
+Salesforce,http://salesforce.com,majoruk,TRUE,FALSE
+Antidote,http://antidotecommunications.com,uk,TRUE,FALSE
+BESA,http://www.besa.org.uk,uk,TRUE,FALSE
+Boticca,http://boticca.com,uk,TRUE,FALSE
+Cambridge Assessment,http://www.cambridgeassessment.org.uk,uk,TRUE,FALSE
+Cambridge University Press,http://www.cambridge.org,uk,TRUE,FALSE
+Collins,http://www.collins.co.uk/index.html,uk,TRUE,FALSE
+Computing At School,http://www.computingatschool.org.uk,uk,TRUE,FALSE
+Decoded,http://decoded.co/uk/codeED-in-a-day/,uk,TRUE,FALSE
+The UK Department for Education,http://www.education.gov.uk,uk,TRUE,FALSE
+E-Skills UK,http://www.e-skills.com,uk,TRUE,FALSE
+Espresso,http://www.espressocoding.co.uk/,uk,TRUE,FALSE
+Founders4Schools,https://www.founders4schools.org.uk,uk,TRUE,FALSE
+Google,http://www.google.co.uk,uk,TRUE,FALSE
+Microsoft,http://www.microsoft.com/en-gb/default.aspx,uk,TRUE,FALSE
+Naace,http://www.naace.co.uk,uk,TRUE,FALSE
+Opinion,http://www.opinionmatters.com,uk,TRUE,FALSE
+Tablets,http://www.tabletsforschools.org.uk/,uk,TRUE,FALSE
+Tech City UK,http://www.techcityuk.com,uk,TRUE,FALSE
+Rewired,http://youngrewiredstate.org ,uk,TRUE,FALSE
+Wonder,http://wonderpl.com,uk,TRUE,FALSE

@@ -1,0 +1,489 @@
+.learnpage {
+  width: 970px;
+}
+
+.course-carousel {
+  opacity: 0.4;
+}
+
+.clear:before, .clear:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clear:after {
+  clear: both;
+}
+
+.carousel .slide-prev > span,
+.carousel .slide-next > span {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  position: absolute;
+  top: 43%;
+}
+.carousel .slide-prev > span {
+  border-right: 20px solid #808080;
+  left: 8px;
+}
+.carousel .slide-next > span {
+  border-left: 20px solid #808080;
+  right: 8px;
+}
+.carousel .slide-prev span.label,
+.carousel .slide-next span.label {
+  display: none;
+}
+.carousel-wrapper{
+}
+.carousel-wrapper .pagination {
+  display: block;
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+.carousel-wrapper .pagination div {
+}
+.carousel-wrapper .pagination a {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  margin: 0 7px;
+  outline: none;
+}
+.carousel-wrapper .pagination a.selected {
+}
+.carousel-wrapper .pagination a span {
+  display: none;
+}
+.course-carousel-title {
+  text-align: center;
+}
+.course-carousel {
+  width: 100%;
+  margin: 0;
+  background: #5a676f;
+}
+.course-carousel .slides {
+  width: 100%;
+  height: 480px;
+  background: #5a676f;
+  overflow: hidden;
+}
+.course-carousel .slide {
+  display: block;
+  position: relative;
+  float: left;
+  background: #5a676f;
+  margin: 0;
+  padding: 0 40px;
+}
+.course-carousel .slide-img {
+  float: left;
+  width: 100%;
+}
+.course-carousel .slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.course-carousel .slide .slide-text {
+  float: left;
+  width: 100%;
+  padding: 10px;
+}
+.carousel-international .slide .slide-text {
+  padding: 20px 10px;
+}
+.course-carousel .slide h2,
+.course-carousel .slide h3,
+.course-carousel .slide p,
+.course-carousel .slide div {
+  line-height: 1.2em;
+  color: #fff;
+}
+.course-carousel .slide h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 .333em 0;
+}
+.course-carousel .slide h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 .857em 0;
+}
+.course-carousel .slide p {
+  font-size: 12px;
+  line-height: 1.3em;
+  margin: 0 0 .833em 0;
+}
+.course-carousel .slide a {
+  font-weight: inherit;
+}
+.course-carousel .slide a:link,
+.course-carousel .slide a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+.course-carousel .slide .slide-longdescription {
+  display: none;
+}
+.course-carousel .slide .slide-shortdescription {
+  padding-right: 75px;
+  display: block;
+}
+.course-carousel .slide .slide-tags {
+  margin: 0 0 .833em 0;
+  font-size: 12px;
+  padding-right: 75px;
+}
+.course-carousel .slide div.slide-participants-count {
+  display: none;
+}
+.course-carousel .slide .slide-teachers-notes-link {
+  display: none;
+}
+.course-carousel .slide .slide-shorturl-link {
+  display: none;
+}
+.btn-carousel-slide {
+  position: absolute;
+  bottom: 10px;
+  right: 50px;
+  display: block;
+  width: auto;
+  padding: 10px 20px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.course-carousel .slide-prev,
+.course-carousel .slide-next {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+}
+.course-carousel .slide-prev {
+  left: 0;
+}
+.course-carousel .slide-prev > span {
+  border-right-color: #fff;
+}
+.course-carousel .slide-next {
+  right: 0;
+}
+.course-carousel .slide-next > span {
+  border-left-color: #fff;
+}
+
+@media screen and (max-width: 319px)
+{
+  .learnpage {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  .learnpage {
+    width: 320px;
+    margin: 0 auto;
+  }
+  .course-carousel .slides {
+    width: 320px;
+    height: 383px;
+  }
+  .course-carousel .slide {
+    padding: 0;
+  }
+  .course-carousel .slide .slide-img {
+    width: 320px;
+    height: 180px;
+    padding: 0 40px;
+  }
+  .course-carousel .slide .slide-shortdescription {
+  }
+  .course-carousel .slide .slide-tags {
+    margin-bottom: 0;
+  }
+  .course-carousel .slide-prev,
+  .course-carousel .slide-next {
+    height: 180px;
+  }
+  .btn-carousel-slide {
+    right: 10px;
+  }
+}
+
+@media screen and (min-width: 600px) /* and (max-width: 969px) */ {
+
+  .learnpage {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .course-carousel .slides {
+    width: 600px;
+    height: 514px;
+  }
+
+  .course-carousel .slide .slide-img {
+    width: 520px;
+    height: 390px;
+  }
+
+}
+
+/*
+@media screen and (min-width: 970px) {
+
+  .course-carousel .slides {
+  }
+  .course-carousel .slide {
+    padding: 0 40px;
+  }
+  .course-carousel .slide .slide-img {
+    width: 446px;
+    height: 335px;
+  }
+  .course-carousel .slide img {
+  }
+  .course-carousel .slide .slide-text {
+    width: 444px;
+    padding: 20px 20px 0 20px;
+  }
+  .course-carousel .slide h2 {
+    font-size: 28px;
+    line-height: 1em;
+  }
+  .course-carousel .slide h3 {
+    font-size: 18px;
+  }
+  .course-carousel .slide p {
+    font-size: 13px;
+  }
+  .course-carousel .slide .slide-longdescription {
+    display: block;
+  }
+  .course-carousel .slide .slide-shortdescription {
+    display: none;
+  }
+  .course-carousel .slide .slide-tags {
+    font-size: 14px;
+    padding-right: 120px;
+  }
+  .course-carousel .slide div.slide-participants-count {
+    margin: 0 0 .5em;
+    display: block;
+    font-size: 14px;
+    padding-right: 120px;
+  }
+  .course-carousel .slide .slide-teachers-notes-link {
+    display: block;
+    margin: 0.2em 0 0 0;
+    padding-right: 120px;
+    font-size: 11px;
+  }
+  .course-carousel .slide .slide-teachers-notes-link :hover {
+    text-decoration: underline;
+  }
+  .course-carousel .slide .slide-shorturl-link {
+    display: block;
+    margin: 1em 0 0 0;
+    padding-right: 120px;
+    font-size: 11px;
+  }
+  .course-carousel .slide .slide-shorturl-link :hover {
+    text-decoration: underline;
+  }
+  .course-carousel .btn-carousel-slide {
+  }
+}
+*/
+
+ /* Datepicker customizations */
+.datepicker td, .datepicker th {
+  background-color: transparent;
+  color: #333;
+}
+
+/* Share buttons */
+.share-buttons {
+  margin: 0;
+}
+.share-buttons button {
+  width: auto;
+  height: auto;
+  font-weight: 500;
+  margin: 10px 10px 0 0;
+}
+.share-buttons button i {
+  padding-right: .5em;
+}
+
+/* Promote page */
+#promote-page .section {
+  clear: both;
+  margin: 0 0 20px 0;
+}
+#promote-page h2 {
+  margin-bottom: 10px;
+}
+#promote-page .download-fact-sheet {
+}
+#promote-page .download-fact-sheet a:link,
+#promote-page .download-fact-sheet a:visited {
+  color: #c8c8c8;
+}
+#promote-page .download-fact-sheet a:hover,
+#promote-page .download-fact-sheet a:active {
+  color: #c8c8c8;
+  text-decoration: underline;
+}
+#promote-page .main-video {
+  float: left;
+  width: 586px;
+  margin: 0 0 20px 0;
+}
+#promote-page .share-buttons {
+  float: left;
+}
+#promote-page .youtube-channel-link {
+  float: right;
+  margin: 15px 0 0 0;
+}
+#promote-page .other-videos {
+  float: right;
+  width: 380px;
+}
+#promote-page .other-videos h3 {
+  margin: 0 0 20px 20px;
+}
+#promote-page .other-video {
+  width: 170px;
+  float: left;
+  margin: 0 0 20px 20px;
+}
+#promote-page .other-video-odd {
+  clear: left;
+}
+#promote-page .other-video img {
+  width: 100%;
+  max-width: 100%;
+}
+#promote-page .other-video-caption {
+  font-size: 12px;
+  line-height: 1.2em;
+  margin: 5px 0 0 0;
+}
+
+#promote-page .all-quotes-link,
+#promote-page .full-infographic-link {
+  float: left;
+  margin: 15px 0 0 20px;
+}
+
+/* Stats carousel */
+#stats-carousel {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  background: #fff;
+}
+#stats-carousel .slides {
+}
+#stats-carousel .slide {
+  display: block;
+  position: relative;
+  float: left;
+  background: #ebecec;
+  margin: 0;
+  padding: 0 60px;
+}
+#stats-carousel .slide-img {
+  width: 100%;
+}
+#stats-carousel .slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#stats-carousel .slide-prev,
+#stats-carousel .slide-next {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+#stats-carousel .slide-prev {
+  left: 0;
+}
+#stats-carousel .slide-next {
+  right: 0;
+}
+.stats-sources-link {
+  float: right;
+  font-size: 12px;
+  margin: 20px 0 0 0;
+}
+.stats-sources-link a {
+  font-weight: normal;
+}
+
+@media screen and (min-width: 970px) {
+  #stats-carousel .slide .slide-img {
+    width: 850px;
+    height: 503px;
+  }
+}
+
+#congress-right {
+  margin: 0 0 2em 0;
+}
+
+/* Share Certificate page */
+#hoc-certificate {
+  width: 100%;
+}
+#hoc-certificate img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Survey form */
+#hoc-survey-form .radio-inline+.radio-inline {
+  margin-left: 20px;
+}
+#hoc-survey-form .radio-inline label {
+  font-weight: 400;
+}
+#hoc-survey-form #hoc-participants {
+  width: 200px;
+}
+#hoc-survey-form select {
+  max-width: 100%;
+}
+#hoc-survey-form #hoc-good,
+#hoc-survey-form #hoc-improve {
+  width: 500px;
+  max-width: 100%;
+}
+#error-message {
+  color: #b94a48;
+  font-weight: bold;
+  margin: 1em 0;
+}
+.form-required-field {
+  color: #f00;
+}

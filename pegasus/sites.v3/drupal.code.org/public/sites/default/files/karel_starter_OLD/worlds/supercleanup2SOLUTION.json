@@ -1,0 +1,16 @@
+{
+     "rows": 5,
+	 "cols": 6,
+	 "dir": null,
+	 "start": {
+		 "row": null,
+		 "col": null
+	  },
+     "walls":
+     [
+     ],
+	 "beepers":
+	 [
+		
+	 ]
+ }

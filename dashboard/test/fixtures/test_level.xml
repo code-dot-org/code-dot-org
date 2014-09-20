@@ -1,0 +1,40 @@
+<Artist>
+  <config><![CDATA[
+    {
+      "game_id": 23,
+      "user_id": 19,
+      "properties": {
+        "skin": "artist",
+        "instructions": "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture. (Each line is 100 pixels long)",
+        "x": "200",
+        "y": "200",
+        "start_direction": "90",
+        "is_k1": "false",
+        "skip_instructions_popup": "false",
+        "images": "[{\"filename\": \"cat.svg\",\"position\": [16, 170]},{\"filename\": \"lion.svg\",\"position\": [15, 250]},{\"filename\": \"elephant.svg\",\"position\": [127, 220]},{\"filename\": \"cow.svg\",\"position\": [255, 250]}]"
+      }
+    }
+    ]]></config>
+  <blocks>
+    <solution_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+          <next>
+            <block type="draw_turn_by_constant">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE">90</title>
+              <next>
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">100</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

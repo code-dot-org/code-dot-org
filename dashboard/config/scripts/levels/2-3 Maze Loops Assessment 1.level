@@ -1,0 +1,40 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-06-24T21:42:25.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "skin": "pvz",
+    "instructions": "Assessment:  Get me to the sunflower using only 5 blocks! ",
+    "step_mode": "0",
+    "is_k1": "false",
+    "start_direction": "1",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,0,1,0,0,0],[0,0,2,1,1,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skip_instructions_popup": "false",
+    "ideal": "5",
+    "step_speed": "2",
+    "maze_data": null
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+</xml>
+    </required_blocks>
+  </blocks>
+</Maze>

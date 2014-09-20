@@ -1,0 +1,13 @@
+name = Views Test
+description = Test module for Views.
+package = Views
+core = 7.x
+dependencies[] = views
+hidden = TRUE
+
+; Information added by drupal.org packaging script on 2012-08-24
+version = "7.x-3.5"
+core = "7.x"
+project = "views"
+datestamp = "1345829394"
+

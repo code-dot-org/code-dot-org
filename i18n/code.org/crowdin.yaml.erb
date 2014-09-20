@@ -1,0 +1,12 @@
+---
+project_identifier: codeorg
+api_key: <%= CDO.crowdin_codeorg_api_key %>
+base_path: locales
+
+files:
+  -
+    source: '/en-US/**/*.yml'
+    translation: '../%locale%/**/%original_file_name%'
+  -
+    source: '/en-US/**/*.json'
+    translation: '../%locale%/**/%original_file_name%'

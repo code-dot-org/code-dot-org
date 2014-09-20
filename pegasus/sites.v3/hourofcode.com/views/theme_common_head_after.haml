@@ -1,0 +1,9 @@
+%script{src:'/js/jquery.min.js'}
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+:javascript
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  });

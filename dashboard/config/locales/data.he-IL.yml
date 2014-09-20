@@ -1,0 +1,589 @@
+"he":
+  data:
+    script:
+      name:
+        20-hour:
+          desc: K-8 הקדמה לקורס מדעי המחשב
+          Unplug1: "שלב 1"
+          Maze: "שלב 2"
+          Unplug2: "שלב 3"
+          Unplug3: "שלב 4"
+          Artist: "שלב 5"
+          Unplug4: "שלב 6"
+          Artist2: "שלב 7"
+          Unplug5: "שלב 8"
+          Farmer: "שלב 9"
+          Unplug6: "שלב 10"
+          Artist3: "שלב 11"
+          Unplug7: "שלב 12"
+          Farmer2: "שלב 13"
+          Unplug8: "שלב 14"
+          Artist4: "שלב 15"
+          Unplug9: "שלב 16"
+          Farmer3: "שלב 17"
+          Unplug10: "שלב 18"
+          Artist5: "שלב 19"
+          Unplug11: "שלב 20"
+        Hour of Code:
+          desc: "שעה של קוד"
+          Maze: "שלב 1"
+        Edit Code:
+          desc: "ערוך קוד (בטא)"
+          MazeEC: "שלב 1"
+        2014 Levels:
+          desc: "קפיצה (בטא)"
+          Bounce: "שלב 1"
+        Builder Levels:
+          desc: "תוצר-המשתמש פאזל (בטא)"
+          Custom: "שלב 1"
+        Flappy Levels:
+          desc: "ציפור מתנופפת"
+          Flappy: "שלב 1"
+        Jigsaw Levels:
+          desc: "פאזל (בטא)"
+          Jigsaw: "שלב 1"
+        Step Levels:
+          desc: "מבוך (בטא)"
+          MazeStep: "שלב רמה"
+        edit-code:
+          desc: "ערוך קוד (בטא)"
+          MazeEC: "שלב 1"
+        events:
+          desc: "קפיצה (בטא)"
+          Bounce: "שלב 1"
+          Studio: "שלב 2"
+        builder:
+          desc: "תוצר-המשתמש פאזל (בטא)"
+          Custom: "שלב 1"
+        flappy:
+          desc: "ציפור מתנופפת"
+          Flappy: "שלב 1"
+        jigsaw:
+          desc: "פאזל (בטא)"
+          Jigsaw: "שלב 1"
+        step:
+          desc: "מבוך (בטא)"
+          MazeStep: "שלב רמה"
+        wordsearch:
+          desc: "תחרות איות (בטא)"
+          WordSearch: "שלב 1"
+    game:
+      name:
+        Unplug1: "מבוא למדעי המחשב"
+        Maze: "המבוך"
+        Multi: "דברי בחירות מרובות"
+        Unplug2: "חשיבה חישובית"
+        Unplug3: "תכנות לנייר משבצות"
+        Artist: "האמן"
+        Unplug4: "אלגוריתמים"
+        Artist2: "האומן 2"
+        Unplug5: "פונקציות"
+        Farmer: "האיכר"
+        Unplug6: "תנאים"
+        Artist3: "האומן 3"
+        Unplug7: "כתיבת שיר"
+        Farmer2: "האיכר 2"
+        Unplug8: "הפשטה"
+        Artist4: "האמן 4"
+        Unplug9: "הרץ פעולה בשנית"
+        Farmer3: "האיכר 3"
+        Unplug10: "האינטרנט"
+        Artist5: "האומן 5"
+        Unplug11: "סיום"
+        MazeEC: "המבוך"
+        Bounce: "להקפיץ"
+        Flappy: "ציפור מתנופפת"
+        Jigsaw: "פאזל"
+        MazeStep: "מצב שלב מבוך"
+        Wordsearch: "תפזורת"
+    trophy:
+      name:
+        Bronze: "ארד"
+        Silver: "כסף"
+        Gold: "זהב"
+    concept:
+      description:
+        sequence: "רצף"
+        if: "בלוק ״אם״"
+        if_else: "בלוק ״אם-אחרת״"
+        loop_times: "בלוק ״חזור פעמים״"
+        loop_until: "בלוק ״חזור עד״"
+        loop_while: "בלוק ״כל עוד״"
+        loop_for: "בלוק ״מונה״"
+        function: "פונקציות"
+        parameters: "פונקציות עם פרמטרים"
+    level:
+      instructions:
+        maze_2_2: 'תוכל לעזור לי לתפוס את החזיר השובב? חבר כמה בלוקים של "לך קדימה"
+          יחד ותלחץ על "הפעל תוכנית" כדי לעזור לי להגיע אליו. '
+        maze_2_1: "החזיר הזה מבלגן לי את הנוצות. תעזור לי למצוא אותו!"
+        maze_2_2_5: "תשרטטו את השביל ותובילו אותי אל החזיר המטופש הזה. תזהרו מדנמיט
+          או הנוצות שלי יעופו!"
+        maze_2_3: "תוביל אותי לרוע הירוק!(תיזהר מדינמיט)"
+        maze_2_4: "תהיו רגועים ותעזרו לי למצוא את החזיר הרע. אחרת אני עלול להתעצבן!"
+        maze_2_5: "יש דרך בה אני אוכל להגיע לחזיר הטפשי כשאני אשתמש רק ב2 בלוקים.
+          אתם יכולים למצוא אותה?"
+        maze_2_6: "נסה להביא אותי לפולש הירוק תוך שימוש רק בשלושה בלוקים."
+        maze_2_7: עזור לי לגרש את החזרזיר הרע באמצעות כמה שפחות בלוקים. נסה להשתמש
+          בבלוק "חזור על הפקודה" יותר מפעם אחת.
+        maze_2_8: 'על מנת לפתור את המקרה הזה, השתמש בבלוק "חזור שוב" עם שלושה בלוקים
+          בתוכו: קדימה, קדימה, הסתובב.'
+        maze_2_9: 'נסה להשתמש בבלוק החדש: "חזור עד ש" -  הוא יחזור על עצמו עד שאגיע
+          לחזרזיר המעצבן.'
+        maze_2_10: "טוב, בפעם האחרונה לאימון - האם אתה יכול לפתור זאת באמצעות רק 4
+          בלוקים?"
+        maze_2_11: "איש יקר. אני זומבי. אני רעב. חייב... להגיע.... אל החמנית... אתה
+          יכול להוביל אותי לשם באמצעות 5 בלוקים בלבד?"
+        maze_2_12: ". בסדר, זה דומה, אבל שונה במקצת. האם אתה יכול לעשות זאת רק בעזרת
+          5 בלוקים?"
+        maze_2_13: 'השתמש בבלוק החדש "אם" על מנת לעזור לי לחהליט מתי לפנות. רמז: אתה
+          צריך רק עוד בלוק אחד נוסף, אבל תלמד איך ליישם זאת על מנת שתוכל בפעם הבאה
+          לעשות בעצמך.'
+        maze_2_14: טוב, זה בדיוק כמו החידה האחרונה, אבל עליך לזכור איך להשתמש בבלוק
+          "אם" ובבלוק "חזור שוב" יחד.
+        maze_2_15: אני רוצה חמניות! השתמש בבלוק "אם" על מנת להביא אותי לשם תוך שימוש
+          בכמה שפחות בלוקים.
+        maze_2_16: "טוב, בו נעשה זאת שוב על מנת להתאמן - זה לא מאוד קשה, אבל תיזהר
+          מהצ'ומפרים!"
+        maze_2_17: הבלוק "אם - אז" בודק את המצב, ועושה פעולה אחת או אחרת. על מנת להביא
+          אותי לחמניות השתדל להשתמש בבלוק החדש.
+        maze_2_18: עוד תרגול אחד של הבלוק "אם - אז", האם אתה יכול להצליח בנסיון הראשון?
+        maze_2_19: "האם אתה יכול להוסיף רק 3 בלוקים על מנת לעזור לי לפתור מבוך מסובך
+          יותר? אם תעשה זאת נכון, אני אוכל ללכת  בכל דרך מפותלת לא משנה מה אורכה."
+        turtle_1_1: "שלום, אני אמן. באפשרותך לכתוב קוד על מנת לעזור לי לצייר כמעט
+          כל דבר. השתמש בכמה בלוקים על מנת לגרום לי לצייר על הקוים האפורים בתמונה."
+        turtle_1_2: 'עכשיו צייר ריבוע. הערה: השתמש בצבע האהוב עלייך ע"י בחירתו בבלוק
+          החדש "הגדר צבע".'
+        turtle_1_3: "צור ריבוע באמצעות 3 בלוקים בלבד."
+        turtle_1_4: 'צייר משולש שכל אחת מהפאות שלו בצבע שונה ע"י שימוש באפשרות "צבע
+          אקראי" שבוחר צבע שונה בכל פעם. רמז: עליך להפעיל ע"י לחיצה על המספר בבלוק
+          הסיבוב.'
+        turtle_1_5: "עכשיו לאימון, צייר משולש ואז מרובע על מנת לצייר מעטפה."
+        turtle_1_6: "האם אתה יכול לצייר את המשולש והריבוע הזה? רמז: צייר את המשולש
+          קודם, ואז מצא כמה צריך להסתובב בטרם תצייר את הריבוע."
+        turtle_1_7: "בסדר, בוא ננסה רמה קצת יותר קשה -בוא נראה אם אתה יכול לצייר משקפיים
+          ירוקים. והריבועים צריכים 100 פיקסלים בכל צד, ובנפרד - 50 פיקסלים. אל תשכח
+          לצייר בצבע ירוק!"
+        turtle_1_8: בסדר, נסה להבין מה קורה אם תפעיל קוד זה (או לחץ "הפעל" על מנת
+          לנסות). עכשיו חזור על כך מספיק פעמים על מנת להשלים את הציור. הצבעים יהיו
+          שונים בכל פעם.
+        turtle_1_9: "האם אתה יכול להבין מהו המספר שצריך להחליף את סימני השאלה כדי
+          לצייר עיגול?"
+        turtle_1_10: 'עשית זאת! עכשיו צייר מה שאתה רוצה. כמה רעיונות כיפיים: מר קו,
+          פתית שלג או ספירלה. כמו כן נסה את הבלוק החדש "קבע עובי". תהנה!'
+        turtle_4_1: 'האם אתה יכול לצייר משולש (עם קצוות של 100 פיקסלים) בעזרת 3 בלוקים
+          בלבד? רמז: השתמש בבלוק "חזור".'
+        turtle_4_2: 'נסה להוסיף בלוק אחד נוסף על מנת להשלים את החידה. רמז: אנחנו מספקים
+          בלוקים על מנת לצייר 2 משולשים זהים, עליך "לסובב" ביניהם, ולהחליט בכמה לסובב.'
+        turtle_4_3: בסדר, הנה הקוד שכתבת על מנת לצייר משולש. האם אתה יכול להוסיף בלוקים
+          של "חזור שוב" ו"סובב" על מנת לצייר פרח יפה?
+        turtle_4_4: "הנה אותו קוד מהחידה הקודמת, אך מסובבת  ב36 מעלות אחרי ציור של
+          כל משולש. כמה פעמים יהיה צורך לחזור? (רמז: אחרי 360 מעלות של סיבוב הציור
+          יצור מעגל שלם)"
+        turtle_4_5: "הנה אותו קוד מהחידה הקודמת. אבל חוזרת 36 פעמים. בכמה מעלות הסיבוב
+          אמור להיות? (רמז: אחרי 360 מעלות של סיבוב  הציור יהפוך לעיגול שלם)"
+        turtle_4_6: "על ידי שימוש ב-3 בלוקים, האם אתה יכול לצייר ריבוע עם קצוות של
+          20 פיקסלים?"
+        turtle_4_7: "הנה הקוד עבור ציור הריבוע מהפאזל האחרון. האם תוכל לחזור עליו
+          ולצייר 10 משבצות סמוכות כמו סולם? רמז: אתה צריך רק עוד שני בלוקים ."
+        turtle_4_8: "הנה הפתרון לחידה הקודמת. האם תוכל להוסיף עוד 2 אבני בנייה כדי
+          להשלים את הציור?"
+        turtle_4_9: "הנה הפתרון לחידה הקודמת. כמה מעלות עליך להסתובב כדי להשלים את
+          הציור?(אתה ודאי תצטרך לנחש מס' פעמים)"
+        turtle_4_10: "הנה הפתרון לחידה הקודמת. כמה פעמים עלייך לחזור על הפעולה בכדי
+          להשלים את הציור?"
+        turtle_4_11: נסה לשנות את המספרים של אבני הבנייה המורות על "סיבוב" ו "חזור"
+          ליצירת דפוסים שונים. נסה לשנות את כל יתר הקוד כדי לצייר כל דבר אחר שאתה
+          רוצה.
+        maze_karel_1_1: . היי, אני חקלאי. אני זקוק לעזרתך כדי לשטח את השדה בחווה שלי
+          על מנת להכין אותו לנטיעה. תקדם אותי אל ערימת העפר ותשתמש בבלוק "הסר" כדי
+          להסיר אותו.
+        maze_karel_1_2: עכשיו, תביא אותי לבור ותמלא אותו עם שני דליים של עפר, תוך
+          שימוש בבלוק "למלא".
+        maze_karel_1_3: "העבר אותי אל ערימת העפר, ותגיד לי כמה shovelfuls יש להסיר
+          על-ידי שימוש במספר הקטן ביותר של אבני בנייה."
+        maze_karel_1_4: "תוכל לעזור לי להסיר את כל ארבע ערימות עפר? רמז: השתמש באבן
+          בנייה לפעולה שחוזרת על עצמה אם אתה יכול."
+        maze_karel_1_5: 'עזור לי למלא את כל הבורות האלו עם shovelfuls 5 של עפר. רמז:
+          את יכולה להשתמש באבן בנייה "פעולה חוזרת" בתוך אבן הבנייה "תוך כדי".'
+        maze_karel_1_6: הסר את כל ערימות העפר, באמצעות אבני בנייה מעטות ככל האפשר.
+          האפשרויות החדשות בתפריט הנפתח על אבן הבנייה "תוך כדי" תאמר לי אם אני עומדת
+          על ערימה או חור.
+        maze_karel_1_7: "וואו, מצאתי בור ממש עמוק! איני יודע כמה דליים של עפר אני
+          צריך. האם אתה יכול לכתוב תוכנית תמלא את הבור עד שהאדמה תהיה מאוזנת?"
+        maze_karel_1_8: "עזור לי למלא את החור בקצה של השדה, באמצעות אבני בנייה מעטות
+          ככל האפשר."
+        maze_karel_1_9: 'גרום לי להסיר את כל ערימות העפר האלו. נסה להשתמש באבני בנייה
+          מעטות ככל האפשר. רמז: נסה להשתמש באבן הבנייה "תוך כדי".'
+        maze_karel_1_10: 'אני עובד עד מאוחר, כך שבחוץ חשוך ואני לא יכול לומר עד כמה
+          גדולות ערימות העפר האלו. כעת, אין לי את כל האפשרויות שהיו לי במסגרת אבן
+          הבנייה "תוך כדי". הזז אותי לאורך המגרש ואם ישנה ערמת עפר הזז אותה מהדרך. '
+        maze_karel_1_11: 'עדיין חשוך בחוץ. הזז אותי לאורך המגרש. אם ישנה ערמת עפר
+          הסר אותה, ואם ישנו חור, מלא אותו בעפר. רמז: השתמש בתפריט האפשרויות הנפתח
+          באבן הבנייה "אם".'
+        turtle_2_1: "שלום. אני אומן זומבי. אני אוהב לצייר! עזור לי לצייר ריבוע בצבע
+          מיוחד. הערה חשובה: יש לך את אותם אבני בנייה אבל כעת הן מסודרות בקטגוריות."
+        turtle_2_2: ברוכים הבאים לשימוש בפונקציות., אשר ייתנו לך את האפשרות להגדיר
+          אבני בנייה חדשות! נסו את אבן הבנייה "צייר ריבוע", היא נמצאת בקטגורית הפונקציות,
+          כדי לצייר ריבוע קטן ירוק 50X50.
+        turtle_2_3: תשתמש בבלוק "חזור שוב" (בקטגוריית חזרות) על מנת לצייר 3 מרובעים
+          בגודל 100, כל אחד במרחק 120 מעלות מהשני. עשה זאת בשלושה צבעים אקראיים.
+        turtle_2_4: "עכשיו אנחנו הולכים להשביח את הקוד. נשנה את הקוד כדי לייצור 36
+          ריבועים, ברוחב 100 פיקסלים , ובמרחק של 10 מעלות האחד מהשני. רמז: ייתכן שתרצה
+          להשתמש במחוון כדי לגרום לי להתקדם מהר יותר."
+        turtle_2_5: 'צייר מס'' ריבועים עם צלעות ברוחב של 50, 60, 70, 80, ו-90 פיקסלים
+          בכל פעם. תצטרך להשתמש בפונקציות "צייר ריבוע" חמש פעמים. '
+        turtle_2_6: 'בסדר, תכנית זו תשתמש במונה, כדי לצייר את אותם הריבועים כמו בפעם
+          הקודמת. אתה רוצה שהריבוע יהיה באותו הגודל כמו המונה, לכן השתמש באבן בנייה
+          "מונה". רמז: הוא נמצא בקטגוריות המשתנים. '
+        turtle_2_7: 'הנה תכנית ליצירת ספירלה, אבל אבני הבנייה מנוטרלות ולכן לא יריצו
+          אותה. צור תכנית חדשה על ידי השימוש באבן בנייה "ספור עם"(בקטגורית לופים)
+          ובאבן בנייה "מונה" (בקטגורית משתנים) על-מנת לצייר את אותה הספירלה. '
+        turtle_2_7_5: 'ישנה פונקציה חדשה בשם "צייר איש שלג"(בקטגורית הפונקציות). צייר
+          שני אנשי שלג, האחד בגובה 250 והשני בגובה 100. '
+        turtle_2_8: זה אחד קצת מטעה. השתמש בפונקציה "צייר איש שלג" ובבלוק החדשה "קפוץ
+          קדימה" (בקטגוריית הפעולות). צייר 3 אנשי-שלג בצבעים שונים, במרחק 100 פיקסלים
+          אחד מהשני.
+        turtle_2_9: השתמש בלולאה חוזרת "ספור עם" כדי לצייר משפחת אנשי-שלג עם גבהים
+          של 110, 100, 90, 80, ו70. בין כל שני אנשי שלג צריך להיות מרחק של 60 פיקסלים.
+        turtle_2_10: "הנה קצת קוד כדי להתנסות בכל מיני ספירלות. מה קורה אם נשנה את
+          כמות הסיבוב? או נגדיר צבה רנדומלי בלולאה? צייר מה שתרצה."
+        maze_karel_2_1: "תנסה להשתמש בבלוקים כדי לעזור לי להסיר את כל הערימות ולמלא
+          את כל הבורות באדמה. נסה להשתמש בלולאות במקום להשתמש ביותר מדי בלוקים. רמז:
+          אתה יכול לשים לולאה בתוך לולאה."
+        maze_karel_2_2: אנחנו הגדרנו את הבלוק שלנו שנקרא "מלא 5", שעכשיו בקטגוריית
+          הפונקציות. השתמש בזה כדי לעזור לי למלא את החור הזה.
+        maze_karel_2_3: השתמש בפונקציה החדשה "מלא 5" כדי לגרום לי למלא את כל הבורות.
+          תצטרך לגרור את הבלוק "מלא 5" מתוך קטגוריית הפונקציות.
+        maze_karel_2_4: "הגדר פונקציה חדשה שמסירה 7 דליים. אז השתמש בזה כדי לכתוב
+          תוכנה שעוזרת לי להסיר את כל הערימות."
+        maze_karel_2_5: "צור פונקציה חדשה שמסירה 6 דליים מערמה, והשתמש בזה כדי לעזור
+          לי ליישר את כל הערימות."
+        maze_karel_2_6: השתמש בשתי הפונקציות החדשות, "מלא 8" ו"הסר 8" כדי לעזור לי
+          לישר את הערימה ולמלא את הבור.
+        maze_karel_2_7: "יש פרה בשדה שלי! כתוב פונקציה חדשה שעוזרת לי להימנע מהפרה
+          ולהסיר את הערימה. שים את כל הבלוקים שלך בתוך הפונקציה החדשה."
+        maze_karel_2_8: השתמש בפונקציה החדשה "הימנע מהפרה והסר 1" כדי לעזור לי להסיר
+          את כל הערימות.
+        maze_karel_2_9: "אוקיי, הנה פונקציה שמסירה 4 ערימות של עפר בטור אנכי. נסה
+          לשים את הפונקציה הזאת בתוך לולאה, כך שתסיר את כל ערימות העפר, ותשתמש רק
+          במעט פונקציות חדשות."
+        maze_karel_2_10: "הזז אותי לצד השני של השדה, והשתמש בשתי הפונקציות האלו כדי
+          לעזור לי להסיר את כל הערימות ולמלא את כל הבורות."
+        turtle_3_1: חידה זו מראה לך איך פונקציות "צייר ריבוע" ו- "צייר עיגול" מוגדרות.
+          הגדרת פונקציה אינה מפעילה את הבלוקים שלה. עליך למשוך את הבלוק "צייר ריבוע"
+          כדי באמת לצייר ריבוע.
+        turtle_3_2: תוך שימוש בפונקציה "צייר ריבוע" כדוגמה, צור פונקציה של "צייר משולש"
+          והשתמש בה.
+        turtle_3_3: "צייר גדרות משולשות סביב החתולים וגדר מרובעת סביב הפרה. עצה: בדוק
+          את התוכנית במהלך הכתיבה."
+        turtle_3_4: בוא נראה אם אתה יכול להשתמש ב- "צייר ריבוע" ו- "צייר משולש" (וגם
+          מספר בלוקים אחרים) כדי לצייר בית מסביב לאריה.
+        turtle_3_5: 'עכשיו צור פונקצית "צייר בית" חדשה והשתמש בה ליצור בית לשתי חתולים.
+          רמז: כדי ליצור פונקציה חדשה, השתמש בבלוק "עשה משהו", ושנה את שם הלוק על-ידי
+          כתיבת הטקסט שלך שם.'
+        turtle_3_6: 'בשימוש ב"צייר ריבוע" כדוגמה, הוסף קלט בשם "אורך" ל"צייר משולש".
+          אחר-כך, צייר משולשים בגדלים שונים. (רמז: לחץ על הכוכב כדי להוסיף קלט לפונקציה)'
+        turtle_3_7: הוסף קלט בשם "אורך" ל"צייר בית" ובנה בית גדול לפיל (עם צדדים באורך
+          150 פיקסלים)
+        turtle_3_8: להלן כל הבלוקים של החידה הקודמת.  שנה את "צייר בית" כך שאני אסיים
+          בפינה הימנית התחתונה לאחר ציור בית חדש. השתמש בפונקציה ששונתה כדי לצייר
+          שלושה בתים.
+        turtle_3_9: האם תוכל ליצור מחדש את פונקציית "צייר בית" ללא עזרה? נסה את זה
+          ולאחר מכן צייר שורת בתים.
+        turtle_3_10: "למדת הרבה! עתה השתמש בזה כדי לצייר את מה שאתה רוצה. נסה לצייר
+          כוכב, או ספירלה, או פתית שלג מהודר."
+        maze_karel_debug_seq_1: "ברוך הבא לניפוי! הקוד שלי לא עובד כמו שצריך. האם
+          אתה יכול למצוא את התקלה ולתקן אותה כדי שאני אוכל ליישר את השדה שלי ולהכין
+          אותו לשתילה?"
+        maze_karel_debug_seq_2: "מה שגוי בתוכנית הזאת? כיצד הוכל לתקן ובכך אני הוכל
+          להסיר את העירמה?"
+        maze_karel_debug_repeat: "נפה את התוכנה הזאת בשבילי כדי שהשדה שלי יהיה ישר
+          וחלק."
+        maze_karel_debug_while: "כיצד תוכל לשנות את התוכנית בשביל שתוכל לעזור לי למלא
+          את החור?"
+        maze_karel_debug_if: "עזרה! תקן את התוכנית בשביל שהחלקה שלי תהיה ישרה לחלוטין."
+        maze_karel_debug_if_else: "נפה את התוכנה הזאת בשבילי כדי שאוכל למלא את הבורות
+          ולהסיר את כל הערימות."
+        maze_karel_debug_function_1: "מה אתה צריך לשנות בתוכנית הזאת בשביל לעזור לי
+          להסיר את כל הערימות?"
+        maze_karel_debug_function_2: "האם תוכל לנפות בשבילי את התוכנה הזאת כדי שאוכל
+          ליישר את השדה שלי?"
+        maze_karel_debug_function_3: "ערוך את התוכנה הזאת כדי שאני אסיר את כל הערימות
+          שבשדה שלי."
+        turtle_5_1: "נסה להפעיל תוכנית זו ולבצע שינויים כדי לראות מה מתרחש. האם אתה
+          יכול להבין איך התוכנית עובדת? (או למחוק אותה ולהחליף אותה במשהו שונה לגמרי)"
+        turtle_5_2: "נסה להפעיל תוכנית זו ולבצע שינויים כדי לראות מה מתרחש. האם אתה
+          יכול להבין איך התוכנית עובדת? (או למחוק אותה ולהחליף אותה במשהו שונה לגמרי)"
+        turtle_5_3: "נסה להפעיל תוכנית זו ולבצע שינויים כדי לראות מה מתרחש. האם אתה
+          יכול להבין איך התוכנית עובדת? (או למחוק אותה ולהחליף אותה במשהו שונה לגמרי)"
+        turtle_5_4: "נסה להפעיל תוכנית זו ולבצע שינויים כדי לראות מה מתרחש. האם אתה
+          יכול להבין איך התוכנית עובדת? (או למחוק אותה ולהחליף אותה במשהו שונה לגמרי)"
+        turtle_5_5: "נסה להפעיל תוכנית זו ולבצע שינויים כדי לראות מה מתרחש. האם אתה
+          יכול להבין איך התוכנית עובדת? (או למחוק אותה ולהחליף אותה במשהו שונה לגמרי)"
+        turtle_5_6: "נסה להפעיל תוכנית זו ולבצע שינויים כדי לראות מה מתרחש. האם אתה
+          יכול להבין איך התוכנית עובדת? (או למחוק אותה ולהחליף אותה במשהו שונה לגמרי)"
+        maze_3_1: "אני צריך להגיע לחזיר הזה! הכנס כמה פעמים move(); כדי שאוכל להחזיר
+          את הביצים שלי."
+        maze_3_2: "כתוב לי תוכנה כדי שאוכל להגיע עד לחזיר."
+        maze_3_3: "איך אני אגיע לחזיר? תזהר שאני לא יתקל בTNT!"
+        maze_3_4: "אוף! כתוב לי תוכנה שעוזרת לי לעבור מסביב לTNT ולהגיע לחזיר."
+        bounce_1: חבר בלוק לבלוק "כאשר חץ שמאלי", ואז לחץ "הרץ תוכנית" והזז את המשוט
+          עם המקש חץ שמאלה כדי להגיע למטרת הסיום.
+        bounce_2: הוסף בלוק לבלוקים "כאשר חץ ימין" ו"כאשר חץ שמאל", ואז הרץ והזז את
+          המשוט אם שני מקשי החצים כדי להגיע לשתי מטרות הסיום.
+        bounce_3: עכשיו נסה משהו דומה עם הבלוק "כאשר חץ למעלה". הזז את המשוט כדי להגיע
+          למטרת הסיום בלמעלה.
+        bounce_4: "הפעם תצטרך להוסיף ארבע בלוקים. הזז את המשוט לכל ארבע מטרות הסיום
+          כדי לסיים את החידה הזה."
+        bounce_5: אנחנו הולכים לשלוח כדור לכיוון המשוט. הוסף בלוק לבלוק "כאשר כדור
+          פוגע במשוט" כדי לוודע שהכדור מגיע למטרת הסיום.
+        bounce_6: עכשיו מטרת הסיום היא למעלה. אתה צריך להוסיף בלוקים לשני הבלוקים
+          "כאשר כדור פוגע" כדי לפתור את החידה הזאת.
+        bounce_7: 'הוסף בלוקים לבלוקים: "כאשר חץ ימין", "כאשר חץ שמאל", "כאשר כדור
+          פוגע בקיר, ו"כאשר כדור פוגע במשוט".'
+        bounce_10: יש עכשיו מטרה בלמעלה. הוסף את הבלוקים "הגדל ניקוד" לבלוקים "כאשר
+          כדור בתוך השער" ו"כאשר כדור מפספס משוט" כדי להכין משחק.
+        bounce_11: You can now attach blocks to the "when run" block. Try changing
+          the speed of the paddle and the ball and see how many points you can score
+          before your opponent scores twice.
+        bounce_12: Create your own Bounce game. You can change all the visuals and
+          the rules. When you're done, click Share to let friends try your game on
+          their phones.
+        Custom_builder: גרור בלוקים מתיבת הכלים לאזור העבודה כדי לצייר את השלב שאתה
+          רוצה ליצור. כשאתה גומר, לחץ "הרץ תוכנית".
+        flappy_1: Attach a block to the "when click" block, then press "Run Program"
+          and click or tap to move Flappy to the target.
+        flappy_2: Now we've added some ground.  Attach a block to the "when hit the
+          ground" block, then press "Run Program". To pass this puzzle, your code
+          needs to 'END GAME' when Flappy crashes into the ground.
+        flappy_3: The "when Run is clicked" block allows you to run code when your
+          game first starts.  Try setting the level speed and flapping to the target.
+        flappy_4: Flappy will fly through obstacles unless you write code to make
+          him crash. Attach a block to the "when hit an obstacle" block. To pass the
+          puzzle, your code needs to 'END GAME' and make Flappy crash into the first
+          pipe so he can reach the target.
+        flappy_5: Let's add a scoreboard, and count points when Flappy makes it past
+          obstacles. Add to the "when pass an obstacle" block, and then score a point
+          by flying Flappy through the first set of pipes.
+        flappy_6: See if you can still score a point after making Flappy flap either
+          a smaller or larger amount.
+        flappy_7: Next, try changing the scene by attaching another block to the "when
+          Run is clicked".
+        flappy_8: You can set visuals anytime, not just when the game starts. Try
+          setting a RANDOM scene when other events happen, for example, when passing
+          an obstacle.
+        flappy_9: To mix things up, when hitting an obstacle or the ground, instead
+          of ending the game try setting the score back to 0.
+        flappy_11: Create your own Flappy game and share it. You can change the visuals,
+          or even the rules. Try changing visuals each time Flappy passes an obstacle.
+          Or make Flappy invincible so he never dies.
+        flappy_k1_1: Play Flappy
+        flappy_k1_2: Attach a block to the "when click" block, then press "Run". Click
+          or tap the screen to move Flappy to the target.
+        flappy_k1_3: Now we've added some ground.  Attach a block to the "when hit
+          the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
+        flappy_k1_4: The "when run" block allows you to run code when your game starts.  Try
+          setting the level speed and flapping to the target.
+        flappy_k1_5: Flappy will fly through obstacles unless you write code to make
+          him crash. Attach a block to the "when hit an obstacle" block. Your code
+          needs to 'END GAME' when Flappy crashes into the first set of pipes.
+        flappy_k1_6: Let's add a scoreboard, and count points when Flappy makes it
+          past obstacles. Add to the "when pass an obstacle" block, and then score
+          a point by flying Flappy through the first set of pipes.
+        flappy_k1_7: See if you can score multiple points for making it past an obstacle
+        flappy_k1_8: Next, try changing the scene by attaching another block to the
+          "when run" block.
+        flappy_k1_9: Try changing the player by attaching a "set player" block to
+          the "when run" block.
+        jigsaw_1: Click the block
+        jigsaw_2: Drag the block to the target
+        jigsaw_3: Arrange the blocks to form the image
+        jigsaw_4: Arrange the blocks to form the image
+        jigsaw_5: Arrange the blocks to form the image
+        jigsaw_6: Arrange the blocks to form the image
+        jigsaw_7: Arrange the blocks to form the image
+        jigsaw_8: Arrange the blocks to form the image
+        jigsaw_9: Arrange the blocks to form the image
+        jigsaw_10: Arrange the blocks to form the image
+        jigsaw_11: Arrange the blocks to form the image
+        jigsaw_12: Arrange the blocks to form the image
+        jigsaw_13: Fix the puzzle!
+        mazestep_1: Maze step description here
+        mazestep_2: Maze step description here
+        mazestep_3: Maze step description here
+        mazestep_4: Maze step description here
+        mazestep_5: Maze step description here
+        studio_c2_1: Can you make this dog say "hello world"?
+        studio_c2_2: Can you make the dog say something and then have the cat say
+          something afterwards?
+        studio_c2_3: Can you write a program to make this dog move to the cat?
+        studio_c2_4: Can you write a program that makes the dog move to the cat, and
+          have the cat say "hello" when the dog reaches him?
+        studio_c2_5: Can you write a program to make the octopus say "hello" when
+          it is clicked?
+        studio_c2_6: Can you write a program to make this penguin move around using
+          the up / down / left /right keys to hit all of the targets?
+        studio_c2_7: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to move this dinosaur up and down repeatedly?
+        studio_c2_8: Can you have the penguin say "Ouch!" and play a "hit" sound if
+          he runs into the dinosaur, and then move him with the arrows to make that
+          happen?
+        studio_c2_9: Can you add a block to score a point when the penguin runs into
+          the octopus, and then move him with the arrows until you score?
+        studio_c2_10: Can you add blocks to change the background and the speed of
+          the penguin, and then move him with the arrows until you score?
+        studio_c2_11: Create your own story. When you're done, click Finish to let
+          friends try your story on their phones.
+        studio_c3_story_1: Can you make this dog say "hello world"?
+        studio_c3_story_2: Can you make the dog say something and then have the cat
+          say something afterwards?
+        studio_c3_story_3: Can you write a program to make this dog move to the cat?
+        studio_c3_story_4: Can you write a program that makes the dog move to the
+          cat, and have the cat say "hello" when the dog reaches him?
+        studio_c3_story_5: Can you add a block to make the octopus happy?
+        studio_c3_story_6: Create your own story. When you're done, click Finish to
+          let friends try your story on their phones.
+        studio_c3_game_1: Can you write a program to make the octopus say "hello"
+          when it is clicked?
+        studio_c3_game_2: Can you write a program to make this penguin move around
+          using the up / down / left /right keys to hit all of the targets?
+        studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to move this dinosaur up and down repeatedly?
+        studio_c3_game_4: Can you have the penguin say "Ouch!" and play a "hit" sound
+          if he runs into the dinosaur, and then move him with the arrows to make
+          that happen?
+        studio_c3_game_5: Can you add a block to score a point when the penguin runs
+          into the octopus, and then move him with the arrows until you score?
+        studio_c3_game_6: Can you add blocks to change the background and the speed
+          of the penguin, and then move him with the arrows until you score?
+        studio_c3_game_7: Create your own game. When you're done, click Finish to
+          let friends try your story on their phones.
+        studio_playlab_1: Can you make this dog say "hello world"?
+        studio_playlab_2: Can you make the dog say something and then have the cat
+          say something afterwards?
+        studio_playlab_3: Can you write a program to make this dog move to the cat?
+        studio_playlab_4: Can you write a program that makes the dog move to the cat,
+          and have the cat say "hello" when the dog reaches him?
+        studio_playlab_5: Can you write a program to make the octopus say "hello"
+          when it is clicked?
+        studio_playlab_6: Can you write a program to make this penguin move around
+          using the up / down / left /right keys to hit all of the targets?
+        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to move this dinosaur up and down repeatedly?
+        studio_playlab_8: Can you add a block to score a point when the penguin runs
+          into the octopus, and then move him with the arrows until you score?
+        studio_playlab_9: Can you add blocks to change the background and the speed
+          of the penguin, and then move him with the arrows until you score?
+        studio_playlab_10: Create your own game. When you're done, click Finish to
+          let friends try your story on their phones.
+        studio_full_sandbox: Create your own game. When you're done, click Finish
+          to let friends try your story on their phones.
+        studio_k1_1: Can you make this dog say "hello world"?
+        studio_k1_2: Can you make the dog say something and then have the cat say
+          something afterwards?
+        studio_k1_3: Can you write a program to make this dog move to the target?
+        studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
+          gets there.
+        studio_k1_5: Can you add a block to make the octopus happy?
+        studio_k1_6: Can you write a program to make this penguin move around using
+          the up / down / left /right keys to hit all of the targets?
+        maze_wordsearch_k_1: Move me to spell the word EAST
+        maze_wordsearch_k_2: Move me to spell the word SOUTH
+        maze_wordsearch_k_3: Move me to spell the word WEST
+        maze_wordsearch_k_4: Move me to spell the word NORTH
+        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
+        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
+        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
+        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
+        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
+        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
+          the word STORY
+    video:
+      name:
+        maze_intro: "מבוא למבוך"
+        artist_intro: "מבוא לאמן"
+        farmer_intro: "מבוא חקלאים"
+        flappy_intro: Flappy Intro
+        loop_times: "בלוק חזור שוב מספר פעמים"
+        loop_until: "בלוק חזור שוב עד"
+        if: בלוק "אם"
+        if_else: "בלוק אם/אחרת"
+        function: "פונקציות"
+        loop_while: "בלוק בעת"
+        loop_for: "בלוק ספירה"
+        parameters: "פונקציות ופרמטרים"
+        hoc_wrapup: "סיום שעה של קוד"
+        20_wrapup: "סיום של 20 שעות"
+        Unplug1: What is CS?
+        Unplug2: "חשיבה חישובית"
+        Unplug3: "תכנות לנייר משבצות"
+        Unplug4: "אלגוריתמים"
+        Unplug5: "פונקציות"
+        Unplug6: "תנאים"
+        Unplug7: Songwriting
+        Unplug8: "הפשטה"
+        Unplug9: Relay programming
+        Unplug10: Internet
+        Unplug11: "סיום"
+        C1_happy_maps_unplugged: Happy Maps
+        C1_moveitmoveit_unplugged: Move It, Move It
+        C1_bigevent_unplugged: The Big Event
+        C1_getting_loop: Getting Loopy
+        C1_pair_programming: Pair Programming
+        C1_maze_intro_sequencing: Maze Sequencing Intro
+        C1_maze_debugging: Maze Debugging
+        C1_bee_level_intro: Bee Level - Intro
+        C1_artist_intro: "מבוא לאמן"
+        C1_spelling_bee_intro: Spelling Bee Intro
+        C1_zuck_repeat_loop: Maze Loops
+        C1_bee_loops: Bee Loops
+        C1_maze_loops: Maze Loops
+        C1_playlab_storytelling: Play Lab - Create a Story
+        C1_planting_seed: Planting a Seed
+        C1_building_foundating: Building a Foundation
+        C2_maze_intro: "מבוא למבוך"
+        C2_artist_intro: "מבוא לאמן"
+        C2_zuck_repeat_loop: Maze Loops
+        C2_artist_loops: Artist Loops
+        C2_bee_conditionals: Bee Conditionals
+        C2_playlab_createstory: Play Lab - Create a Story
+        C2_graph_paper: "תכנות לנייר משבצות"
+        C2_conditionals_with_cards: "תנאים"
+        C2_binary_bracelets: Binary Bracelets
+        C2_replay_programming: "הרץ פעולה בשנית"
+        C2_paper_airplanes: Paper Airplanes
+        C3_maze_intro: "מבוא למבוך"
+        C3_artist_intro: "מבוא לאמן"
+        C3_artist_functions: Artist Functions
+        C3_bee_functions: Bee Functions
+        C3_bee_conditionals: Bee Conditionals
+        C3_maze_conditionals: Maze Conditionals
+        C3_artist_nested_loops: Nested Loops
+        C3_farmer_while: While Loops
+        C3_bee_nested_loops: Nested Loops
+        C3_bee_debugging: Bee Debugging
+        C3_bounce: "להקפיץ"
+        C3_playlab_create_game: Play Lab - Create a Game
+        C3_computational_thinking: "חשיבה חישובית"
+        C3_dice_race: Dice Race
+        C3_internet: Internet
+        C3_crowdsourcing: Crowdsourcing
+        C3_functional_suncatchers: Functional Suncatchers
+        C3_songwriting_with_parameters: Songwriting With Parameters
+    callout:
+      text:
+        drag_blocks: Drag a "move" block and snap it below the other block
+        run: Hit "Run" to try your program
+        watch_again: Click here to watch the video again
+        gray_block_explanation: Blocks that are grey can't be moved or deleted. Can
+          you solve the puzzle anyway?
+        show_code_explanation: Click here to see the code for the program you're making
+        instructions_repeat_explanation: The instructions for each puzzle are repeated
+          here
+        category_explanation: You have all the same blocks but they've now been arranged
+          in categories
+        set_sprite_image: Attach a "set actor to image" block to the "when story starts"
+          block to enable an actor for this story
+        studio_say_text: Type what you want your actor to say within these quotes
+        jigsaw_click: Click this block!

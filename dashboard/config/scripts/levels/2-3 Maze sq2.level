@@ -1,0 +1,16 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-06-13T22:49:33.000Z",
+  "level_num": "custom",
+  "user_id": 28,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,4,0,0],[0,0,0,0,3,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
+    "instructions": "Trace the path and lead me to the silly pig.  Avoid the TNT or the feathers will fly!",
+    "start_direction": "1",
+    "step_mode": 1
+  }
+}]]></config>
+  <blocks/>
+</Maze>

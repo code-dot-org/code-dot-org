@@ -1,0 +1,405 @@
+"lt":
+  data:
+    script:
+      name:
+        20-hour:
+          desc: "Įvadas į informatikos kursą nuo 5 klasės"
+          Unplug1: "1 Etapas"
+          Maze: "2 Etapas"
+          Unplug2: "3 Etapas"
+          Unplug3: "4 Etapas"
+          Artist: "5 Etapas"
+          Unplug4: "6 Etapas"
+          Artist2: "7 Etapas"
+          Unplug5: "8 Etapas"
+          Farmer: "9 Etapas"
+          Unplug6: "10 Etapas"
+          Artist3: "11 Etapas"
+          Unplug7: "12 Etapas"
+          Farmer2: "13 Etapas"
+          Unplug8: "14 Etapas"
+          Artist4: "15 Etapas"
+          Unplug9: "16 Etapas"
+          Farmer3: "17 Etapas"
+          Unplug10: "18 Etapas"
+          Artist5: "19 Etapas"
+          Unplug11: "20 Etapas"
+        Hour of Code:
+          desc: "Vienos Valandos Kodas"
+          Maze: "1 Etapas"
+        Edit Code:
+          desc: "Redaguoti kodą (beta)"
+          MazeEC: "1 Etapas"
+        2014 Levels:
+          desc: "Bounce (beta versija)"
+          Bounce: "1 Etapas"
+        Builder Levels:
+          desc: "Naudotojų sukurti galvosūkiai (beta)"
+          Custom: "1 Etapas"
+        Flappy Levels:
+          desc: "Flappy Bird"
+          Flappy: "1 Etapas"
+        Jigsaw Levels:
+          desc: "Dėlionės (beta)"
+          Jigsaw: "1 Etapas"
+        Step Levels:
+          desc: "Labirintas (beta)"
+          MazeStep: "Etapas Žingsnis"
+        edit-code:
+          desc: "Redaguoti kodą (beta)"
+          MazeEC: "1 Etapas"
+        events:
+          desc: "Bounce (beta versija)"
+          Bounce: "1 Etapas"
+          Studio: "2 Etapas"
+        builder:
+          desc: "Naudotojų sukurti galvosūkiai (beta)"
+          Custom: "1 Etapas"
+        flappy:
+          desc: "Flappy Bird"
+          Flappy: "1 Etapas"
+        jigsaw:
+          desc: "Dėlionės (beta)"
+          Jigsaw: "1 Etapas"
+        step:
+          desc: "Labirintas (beta)"
+          MazeStep: "Etapas Žingsnis"
+        wordsearch:
+          desc: "Rašanti bitė (beta)"
+          WordSearch: "1 Etapas"
+    game:
+      name:
+        Unplug1: "Informatikos įvadas"
+        Maze: "Labirintas"
+        Multi: "Pasirinkti iš kelių variantų"
+        Unplug2: "Skaičiuojamasis mąstymas"
+        Unplug3: "Programavimas ant languoto popieriaus"
+        Artist: "Menininkas"
+        Unplug4: "Algoritmai"
+        Artist2: "Menininkas 2"
+        Unplug5: "Sudėtinės komandos"
+        Farmer: "Ūkininkas"
+        Unplug6: "Sąlyginiai sakiniai"
+        Artist3: "Menininkas 3"
+        Unplug7: "Dainos ir funkcijos"
+        Farmer2: "Ūkininkas 2"
+        Unplug8: "Komandos su parametrais"
+        Artist4: "Menininkas 4"
+        Unplug9: "Programavimas komandoje"
+        Farmer3: "Ūkininkas 3"
+        Unplug10: "Internetas"
+        Artist5: "Menininkas 5"
+        Unplug11: "Apibendrinimas"
+        MazeEC: "Labirintas"
+        Bounce: "Šokinėjimas"
+        Flappy: "Flappy Bird"
+        Jigsaw: "Dėlionės"
+        MazeStep: "Labirintas Žingsnio režimu"
+        Wordsearch: "Žodžių paieška"
+    trophy:
+      name:
+        Bronze: "Bronza"
+        Silver: "Sidabras"
+        Gold: "Auksas"
+    concept:
+      description:
+        sequence: "Seka"
+        if: "Blokas „jei“"
+        if_else: "„Jei-priešingu atveju“ blokas"
+        loop_times: "Blokas keleto kartų kartojimui"
+        loop_until: "„Kartok kol įvyks“ blokas"
+        loop_while: "„Kol“ blokas"
+        loop_for: "Blokelis-skaitiklis"
+        function: "Sudėtinės komandos"
+        parameters: "Komandų parametrai (gaunama informacija)"
+    level:
+      instructions:
+        maze_2_2: 'Ar gali man padėti sugauti neklaužadą kiaulę? Sujunk keletą „judėk į priekį“ blokų ir nuspausk „Paleisti programą“, kad aš ją sugaučiau. '
+        maze_2_1: "Ši kiaulė sutaršė mano plunksnas. Padėk man ją pasiekti!"
+        maze_2_2_5: "Surask kelią ir nuvesk mane pas kvailą kiaulę. Tik neleisk man prisiliesti prie TNT dėžučių, nes susprogsiu!"
+        maze_2_3: "Nuvesk mane pas tą žalią daiktą! (Saugokis TNT)"
+        maze_2_4: "Laikykis ramiai ir padėk man patekti pas tą blogą kiaulę. Antraip aš supyksiu!"
+        maze_2_5: "Yra būdas nusigauti iki kiaulės panaudojant tik 2 blokelius. Ar tau pavyks sugalvoti, koks jis?"
+        maze_2_6: "Padėk man nusigauti iki žalios kiaulės panaudodamas tik 3 blokelius."
+        maze_2_7: "Padėk man pasiekti šią kiaulę, panaudodamas kuo mažiau blokelių. Pamėgink panaudoti daugiau nei vieną „Kartojimo“ blokelį."
+        maze_2_8: 'Kai blokelis yra pilkas, tai reiškia, kad negalima jo pašalinti. Išspręsk šią užduotį panaudodamas kartojimo blokelį, kuris kartoja 3 kartus. Pamėgink į jį įdėti šiuos blokelius: judėk į priekį, judėk į priekį, pasisuk.'
+        maze_2_9: "Išmėgink naują „Kartok, kol“ blokelį – jis kartos veiksmus tol, kol aš pasieksiu kiaulę."
+        maze_2_10: "Ar išspręsi šią užduotį, panaudodamas tik 4 blokelius?"
+        maze_2_11: "Mielas žmogau. Aš zombis. Aš alkanas. Turiu... pasiekti... saulėgrąžą. Ar padėsi man ten patekti panaudodamas tik 5 blokelius?"
+        maze_2_12: "Ši situacija panaši, bet šiek tiek kitokia. Ar sugebėsi panaudoti tik 5 blokelius?"
+        maze_2_13: 'Panaudok naują „jei“ blokelį ir leisk man nuspręsti, kada man pasisukti. Sufleris: tau tereikės tik vieno naujo blokelio, bet pasistenk suprasti, kaip jie veikia, kad kitą kartą mokėtum viską padaryti pats.'
+        maze_2_14: "Čia yra viskas kaip ir praeitoje užduotyje, tau tereikia prisiminti, kaip reikia kartu panaudoti blokelius „jei“ ir „kartok“."
+        maze_2_15: "Aš noriu saulėgrąžų! Panaudok blokelį „jei“, kad galėčiau pas ją nusigauti. Panaudok kuo mažiau blokelių."
+        maze_2_16: "Atlikime panašią užduotį, tačiau saugokis piktų gėlyčių!"
+        maze_2_17: "Blokelis „Jei-priešingu atveju“ patikrina sąlygą, o tada atlieka vieną ARBA kitą veiksmą. Išmėgink šį naują blokelį, kad pasiekčiau saulėgrąžą."
+        maze_2_18: "Dar viena užduotis su „Jei-priešingu atveju“ blokeliu. Ar sugebėsi ją atlikti iš pirmo karto?"
+        maze_2_19: "Jeigu sugebėsi sudėti tik 3 blokelius tinkamai, aš galėsiu eiti vingiuotu taku, visiškai nesvarbu, koks yra jo ilgis."
+        turtle_1_1: "Labas, aš esu menininkas. Tu gali sudėlioti kodą, kad nupieščiau beveik bet ką. Panaudok porą blokelių, kad aš nupieščiau tai, kas yra pavaizduota pilkomis linijomis."
+        turtle_1_2: 'O dabar nubrėžk kvadratą. PASTABA: gali pasirinkti pieštuko spalvą naujame blokelyje „pasirink spalvą“.'
+        turtle_1_3: "Šį kartą nubraižyk kvadratą panaudodamas tik 3 blokelius."
+        turtle_1_4: 'Nubrėžk trikampį, kurio visos kraštinės yra skirtingų spalvų, panaudodamas blokelį „atsitiktinė spalva“. Jis kiekvieną kartą parenka vis kitą spalvą. Sufleris: turėsi nuspręsti, kiek laipsnių reikia pasisukti – spustelk ant skaičiaus ir jį pakeisk.'
+        turtle_1_5: "Nubrėžk trikampį, o po to kvadratą, kad gautum voką."
+        turtle_1_6: 'Ar sugebėsi sugalvoti, kaip nupiešti šias dvi figūras? Sufleris: Visų pirma nubrėžk trikampį, o po to nuspręsk, kiek reikia pasisukti, prieš brėždamas kvadratą.'
+        turtle_1_7: "Nubrėžkime šiuos žalius akinius. Vieno kvadrato kraštinė yra 100 pikselių, o jie abu vienas nuo kito nutolę yra per 50 pikselių. Nepamiršk pasirinkti žalios spalvos!"
+        turtle_1_8: "Šį kartą prieš ką nors bandydamas, mėgink suprasti, ką daro jau duotas kodas. Tau beliks tik pakartoti jį kažkiek kartų, kad gautum visą piešinį."
+        turtle_1_9: "Ar sugalvosi, kiek kartų reikia pakartoti šiuos veiksmus, kad nubrėžtum apskritimą?"
+        turtle_1_10: 'Tau pavyko! O dabar nupiešk tai, ką nori. Štai keletas idėjų: žmogeliukas, snaigė, spiralė. Taip pat išmėgink naują blokelį „pakeisk storį“. Sėkmės!'
+        turtle_4_1: 'Ar sugebėsi nubrėžti trikampį, kurio kiekviena kraštinė yra po 100 pikselių, tik su 3 blokeliais? Sufleris: naudok kartojimo blokelį.'
+        turtle_4_2: "Pridėk blokelį „Pasisuk į dešinę per 90 laipsnių“ kažkur į programos kodo vidurį, kad nubrėžtum šiuos trikampius."
+        turtle_4_3: "Štai yra pateiktas kodas, kaip reikia nupiešti vieną trikampį. Ar sugebėsi pasinaudodamas kartojimo ir pasukimo blokeliais nupiešti gražią gėlę?"
+        turtle_4_4: 'Štai tas pats kodas iš praeitos užduoties, tačiau čia yra pasisukama tik 36 laipsnius po kiekvieno nubrėžiamo trikampio. Kiek kartų reikia visa tai kartoti? (Sufleris: kai bus pasisukta iš viso 360 laipsnių, bus apeitas ištisas ratas)'
+        turtle_4_5: 'Štai tas pats kodas iš praeitos užduoties, tačiau yra kartojama 36 kartus. Kiek laipsnių reikės pasisukti?  (Sufleris: kai bus pasisukta iš viso 360 laipsnių, bus apeitas ištisas ratas)'
+        turtle_4_6: "Panaudodamas tik 3 blokelius, ar sugebėsi nubrėžti kvadratą, kurio kraštinės yra po 20 pikselių?"
+        turtle_4_7: 'Štai kodas kvadratui nubrėžti iš praeitos užduoties. Ar sugebėsi nubrėžti dar 10 kvadratų, kad gautum kopėčias? Sufleris: tau tereikia tik 2 naujų blokelių.'
+        turtle_4_8: "Štai praeitos užduoties sprendimas. Ar gali pridėti tik 2 blokelius, kad užbaigtum piešinį?"
+        turtle_4_9: "Štai praeitos užduoties sprendimas. Kiek laipsnių reikia pasisukti, kad užbaigti piešinį? (Spėlioti teks turbūt keletą kartų)"
+        turtle_4_10: "Štai praeitos užduoties sprendimas. Kiek kartų reikia pakartoti veiksmus, kad užbaigti piešinį?"
+        turtle_4_11: "Pamėgink pakeisti skaičius sukimosi bei kartojimo blokeliuose, kad gautum skirtingus piešinius. Taip pat gali eksperimentuoti su likusiais blokeliais ir žiūrėti, kas gaunasi."
+        maze_karel_1_1: "Labas, aš esu ūkininkė. Man reikia išlyginti žemę, kad ji būtų paruošta sodinimui. Pajudink mane iki tos purvo krūvos ir panaudok blokelį „pašalink 1“, kad jį pašalinti."
+        maze_karel_1_2: "Man reikia nueiti prie duobės ir užpildyti ją su dviem kastuvais, pilnais žemių. Tam naudok blokelį „užpildyk 1“."
+        maze_karel_1_3: "Nunešk mane iki purvo krūvos ir pasakyk man, kiek kartų man pasinaudoti kastuvu. Panaudok kuo mažiau blokelių."
+        maze_karel_1_4: 'Ar gali man padėti atsikratyti visais purvais? Sufleris: panaudok kartojimo blokelį, jeigu gali.'
+        maze_karel_1_5: 'Padėk man užpildyti visas šias duobes su 5 kastuvais žemių. Sufleris: galima įdėti kartojimo blokelį į „Kol“ blokelio vidų.'
+        maze_karel_1_6: "Atsikratyk visomis purvo krūvomis, panaudodamas kuo mažiau blokų. Nauji pasirinkimai „Kol“ blokelyje pasako man, ar aš stoviu ant purvo krūvos, ar ant duobės."
+        maze_karel_1_7: "Oho, suradau labai gilią duobę! Nežinau, kiek kastuvų žemės jai reikės. Ar sugebėsi sudėlioti tokį kodą, kuris užpildo duobę ir sustoja, kai žemė tampa lygi?"
+        maze_karel_1_8: "Padėk man užpildyti duobę lauko gale, panaudodamas kuo mažiau blokelių."
+        maze_karel_1_9: 'Padėk man pašalinti visas purvo krūvas. Panaudok kaip galima mažiau blokelių. Sufleris: pamėgink panaudoti „Kol“ blokelį.'
+        maze_karel_1_10: "Aš dirbu vėlai vakare, yra labai tamsu, todėl aš nematau, kokio dydžio yra purvo krūvos. Dabar nebeturiu tokių galimybių, kaip anksčiau, su „Kol“ blokeliu. Pavedžiok mane per lauką, ir jeigu ten yra purvo krūva, pašalink ją."
+        maze_karel_1_11: 'Vis dar tamsu lauke. Judink mane lauku. Jeigu rasi purvo krūvą, pašalink ją, o jei rasi duobę, užpildyk ją. Sufleris: ant blokelio „Jei“ yra tam tikrų pasirinkimų, nuspaudus ant mažos rodyklėlės.'
+        turtle_2_1: 'Labas. Aš zombis menininkas. Aš mėgstu piešti! Padėk man nupiešti kvadratą. Svarbi naujiena: visi blokeliai yra tokie, kokius jau matei, bet jie dabar surūšiuoti pagal kategorijas.'
+        turtle_2_2: "Dabar susipažinsi su sudėtinėmis komandomis (arba funkcijomis) – jos tau leis sukurti pačiam naujus blokelius! Išmėgink naują blokelį „nubrėžk kvadratą“, kurį rasi „Sudėtinių komandų“ kategorijoje. Nubrėžk žalią kvadratą, kurio kraštinė yra 50."
+        turtle_2_3: "Panaudok blokelį „Kartok“ (jis yra kategorijoje „Kartojimas“), kad nupieštum 3 kvadratus, kurių kraštinės ilgis 100 pikselių, ir jie pasisukę po 120 laipsnių vienas nuo kito. Jie turi būti 3 skirtingų atsitiktinai parinktų spalvų."
+        turtle_2_4: 'O dabar gerai pasilinksminsime. Pakeisk kodą, kad nubrėžtum 36 kvadratus, kurių kiekviena kraštinė yra 100 pikselių, ir kiekvienas pasuktas 10 laipsnių kampu. Sufleris: šalia mygtuko „Paleisk programą“ yra slankiklis, kuris mane priverčia piešti greičiau arba lėčiau.'
+        turtle_2_5: "Nubrėžk kvadratus, kurių kraštinės yra atitinkamai 50, 60, 70, 80 ir 90 pikselių ilgio. Tau reikės panaudoti sudėtinę komandą „Nubrėžk kvadratą“ 5 kartus."
+        turtle_2_6: 'Šioje programoje turėsi panaudoti skaitiklį, su kuriuo nubrėši tokius pat kvadratus, kaip ir praeitą kartą. Kvadrato dydis turės būti toks pat, kaip ir skaitiklio dydis, todėl panaudok blokelį „skaitiklis“. Sufleris: Jis yra kategorijoje „Kintamieji“.'
+        turtle_2_7: "Yra pateikta programa, kuri nubrėš spiralę, tačiau jos blokeliai yra pilki ir jų neįmanoma aktyvuoti. Sukurk naują programą, panaudodamas „skaičiuok su“ blokelį (kategorijoje „Kartojimas“) ir „skaitiklio“ blokelį (kategorijoje „Kintamieji“), kuri nubrėš tokią pat spiralę."
+        turtle_2_7_5: "Yra duota nauja komanda, pavadinta „Nupiešk sniego senį“ (kategorijoje „Sudėtinės komandos“). Nupiešk du sniego senius. Vieno dydis turi būti 250, o kito – 100."
+        turtle_2_8: 'Ši užduotis šiek tiek sudėtingesnė. Panaudok sudėtinę komandą  „Nupiešk sniego senį“ ir naują blokelį „Peršok į priekį“ (jis yra kategorijoje „Komandos“). Nupiešk 3 sniego senius skirtingomis spalvomis, tarp jų turi būti po 100 pikselių atstumai.'
+        turtle_2_9: 'Panaudok blokelį „Skaičiuok su“, kad nupieštum sniego senių šeimą, kuri susideda iš tokio dydžio senių: 110, 100, 90, 80 ir 70. Tarpai tarp kiekvieno senio turi būti po 60 pikselių.'
+        turtle_2_10: "Yra duotas kodas, kuris brėžia spiralę. Kas nutiks, jeigu pakeisi posūkio kampą? O jeigu nustatysi atsitiktinę spalvą cikle? Nupiešk tai, kas tau patinka."
+        maze_karel_2_1: 'Padėk man pašalinti visas purvo krūvas ir užpildyti visas duobes. Naudok kartojimo blokelius, kad būtų galima panaudoti kuo mažiau blokelių. Sufleris: į vieną kartojimo blokelį galima įdėti net ir kitą kartojimo blokelį.'
+        maze_karel_2_2: "Kategorijoje „Sudėtinės komandos“ atsirado naujas blokelis, pavadintas „užpildyk 5“. Panaudok jį ir užpildyk šią duobę."
+        maze_karel_2_3: 'Panaudok blokelį „užpildyk 5“, kad užpildytum visas duobes. '
+        maze_karel_2_4: "Sukurk naują komandą, kuri pašalina 7 kastuvus žemių. Tada panaudok ją, kad galėčiau pašalinti visas krūvas."
+        maze_karel_2_5: "Sukurk naują komandą, kuri pašalina 6 kastuvus žemių nuo krūvos, ir panaudok ją, kad pašalintum visas krūvas."
+        maze_karel_2_6: "Panaudok dvi sudėtines komandas „užpildyk 8“, ir „pašalink 8“, kad galėčiau išlyginti žemių krūvą ir užpildyti duobę."
+        maze_karel_2_7: "Mano darže yra karvė! Sukurk naują komandą, kuri man leis išvengti karvės ir pašalinti žemių krūvą. Visus duotuosius blokelius sudėk į naują komandą."
+        maze_karel_2_8: "Panaudok naują komandą „išvenk karvės ir pašalink 1“, kad galėčiau pašalinti visas žemių krūvas."
+        maze_karel_2_9: "Duota komanda, kuri pašalina 4 žemių krūvas vertikaliame stulpelyje. Pamėgink šią komandą įdėti į kartojimą, kad galėtum pašalinti visas žemių krūvas, panaudodamas tik kelis blokelius."
+        maze_karel_2_10: "Pervesk mane per lauką ir panaudok šias dvi komandas, kad užpildyčiau visas duobes ir išlyginčiau visas krūvas."
+        turtle_3_1: |
+          Šioje užduotyje yra duotos komandos „nubrėžk kvadratą“ ir „nubrėžk apskritimą“. 
+          Sukūrus naują komandą, ji nėra vykdoma, kol nepanaudotas blokelis „nubrėžk kvadratą“.
+        turtle_3_2: "Pagal „nubrėžk kvadratą“ pavyzdį sukurk komandą „nubrėžk trikampį“ ir ją panaudok."
+        turtle_3_3: 'Nubrėžk po trikampį aplinkui kates ir kvadratą aplink karvę. Patarimas: ką nors pakeitęs, patestuok savo programą, net jeigu jos neužbaigei.'
+        turtle_3_4: "Sugalvok, kaip panaudoti funkcijas „nubrėžk trikampį“ ir „nubrėžk kvadratą“ (bei keletą kitų blokelių), kad nupieštum namą aplink liūtą."
+        turtle_3_5: |
+          Sukurk komandą „nupiešk namą“ ir panaudok ją, kad nupieštum namą aplink dvi kates. 
+          Sufleris: "tiks blokelis „Komanda: daryk kažką“, tik įrašyk norimą komandos pavadinimą."
+        turtle_3_6: 'Naudodamas pavyzdį, komandai „nubrėžk trikampį“  leisk gauti informaciją „dydis“. Tada nupiešk du skirtingo dydžio trikampius. (Sufleris: kad komandai pridėtum informacijos laukus (parametrus), nuspausk ant žvaigždės)'
+        turtle_3_7: "Komandai „nupiešk namą“ pridėk parametrą „ilgis“ ir nupiešk didelį namą drambliui (jo kraštinės turi būti 150 pikselių)"
+        turtle_3_8: "Yra duoti visi blokai iš praeitos užduoties. Sukurk komandą „nupiešk namą“. Pradėk piešti nuo kairiojo apatinio kampo ir nupiešk tris namus panaudodamas šią komandą."
+        turtle_3_9: "Ar sugebėsi sukurti komandą „nupiešk namą“ dar kartą? Pamėgink, o po to nupiešk iš eilės tris didėjančius namus."
+        turtle_3_10: "Jau daug visko išmokai! Dabar gali panaudoti šiuos blokelius, kad nupieštum tai, ką nori. Pamėgink nupiešti žvaigždę, spiralę ar gražią snaigę."
+        maze_karel_debug_seq_1: "Sveikas atvykęs į klaidų ieškojimą! Mano kodas neveikia teisingai. Ar surasi problemą ir ištaisysi ją, kad galėčiau paruošti lauką sodinimui?"
+        maze_karel_debug_seq_2: "Kas yra negerai su šia programa? Pataisyk ją, kad galėčiau nukasti šią krūvą."
+        maze_karel_debug_repeat: "Ištaisyk klaidas ir išlygink visą lauką."
+        maze_karel_debug_while: "Pataisyk šią programą, kad galėčiau užpildyti šią duobę."
+        maze_karel_debug_if: "Man reikia pagalbos! Pataisyk mano programą, kad laukas būtų lygus."
+        maze_karel_debug_if_else: "Ištaisyk šią programą, kad galėčiau užpildyti visas duobes ir išlyginti visas purvo krūvas."
+        maze_karel_debug_function_1: "Ką reikia pakeisti šioje programoje, kad pašalinčiau visas žemių krūvas?"
+        maze_karel_debug_function_2: "Ar galėtum ištaisyti šią programą, kad laukas taptų lygus?"
+        maze_karel_debug_function_3: 'Paredaguok šią programą, kad panaikinčiau visas žemių krūvas savo lauke. '
+        turtle_5_1: "Pamėgink paleisti šią programą, po to šiek tiek ją pakeisk ir stebėk, kas darosi. Ar sugebėsi išsiaiškinti, kaip ji veikia? (Taip pat galima ją visai pašalinti ir pakeisti kuo nors kitu)"
+        turtle_5_2: "Pamėgink paleisti šią programą, po to šiek tiek ją pakeisk ir stebėk, kas darosi. Ar sugebėsi išsiaiškinti, kaip ji veikia? (Taip pat galima ją visai pašalinti ir pakeisti kuo nors kitu)"
+        turtle_5_3: "Pamėgink paleisti šią programą, po to šiek tiek ją pakeisk ir stebėk, kas darosi. Ar sugebėsi išsiaiškinti, kaip ji veikia? (Taip pat galima ją visai pašalinti ir pakeisti kuo nors kitu)"
+        turtle_5_4: "Pamėgink paleisti šią programą, po to šiek tiek ją pakeisk ir stebėk, kas darosi. Ar sugebėsi išsiaiškinti, kaip ji veikia? (Taip pat galima ją visai pašalinti ir pakeisti kuo nors kitu)"
+        turtle_5_5: "Pamėgink paleisti šią programą, po to šiek tiek ją pakeisk ir stebėk, kas darosi. Ar sugebėsi išsiaiškinti, kaip ji veikia? (Taip pat galima ją visai pašalinti ir pakeisti kuo nors kitu)"
+        turtle_5_6: "Pamėgink paleisti šią programą, po to šiek tiek ją pakeisk ir stebėk, kas darosi. Ar sugebėsi išsiaiškinti, kaip ji veikia? (Taip pat galima ją visai pašalinti ir pakeisti kuo nors kitu)"
+        maze_3_1: "Man reikia pasiekti kiaulę! Įvesk keletą judėjimo komandų move(); kad galėčiau susigrąžinti savo kiaušinius."
+        maze_3_2: "Parašyk programą, kad pasiekčiau kiaulę."
+        maze_3_3: "Kaip man pasiekti kiaulę? Saugokis, kad nepaliesčiau TNT dėžės!"
+        maze_3_4: "Oi! Parašyk programą, kuri mane privers apibėgti aplinkui TNT dėžę ir pasiekti kiaulę."
+        bounce_1: "Pridėk blokelį prie blokelio „kai rodyklė kairėn“ ir nuspausk „Paleisti programą“. Judink irklą spausdamas kairę rodyklę klaviatūroje, kad pasiektum tikslą."
+        bounce_2: "Pridėk blokelį prie blokelio „kai rodyklė dešinėn“ ir nuspausk „Paleisti programą“. Judink irklą, kad pasiektum abu taikinius."
+        bounce_3: "Dabar pabandyk atlikti kažką panašaus su blokeliu „kai rodyklė aukštyn“. Judink irklą iki taikinio viršuje."
+        bounce_4: "Šį kartą reikia pridėti keturis blokelius. Pajudink irklą į keturis taškus, kad išspręstum šią užduotį."
+        bounce_5: "Link irklo pradės skristi kamuolys. Pridėk bloką prie bloko „kai kamuolys paliečia irklą“, kad kamuolys pasiektų finišą."
+        bounce_6: "Dabar finišas yra viršuje. Tau reikia prijungti blokelius prie dviejų „kai kamuolys atsitrenkia“ blokelių, kad išspręstum šią užduotį."
+        bounce_7: "Prikabink blokelius prie kiekvieno „kai“ blokelio. Kamuolis tol turi judėti, kol palies finišą."
+        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
+        bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
+        bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
+        Custom_builder: "Nutempk blokelius ir įrankinės į darbo lauką, kad galėtum nupiešti lygį, kurį nori sukurti. Nuspausk „Paleisti programą“ kai užbaigsi."
+        flappy_1: "Pridėk reikiamą blokelį prie blokelio „kai nuspausta“, o tada nuspausk „Paleisti“. Spustelk pelės klavišą arba ekraną, kad Flappy skristų į tikslą."
+        flappy_2: "Dabar pridėjome žemę žaidime. Prijunk reikalingą blokelį prie blokelio „kai atsitrenksi į žemę“. Kai paukštis pasieks žemę, turi baigtis žaidimas."
+        flappy_3: "Blokelis „kai žaidimas prasideda“ paleis kodą, kai nuspausi žaidimo pradžios mygtuką. Pamėgink pakeisti žaidimo greitį."
+        flappy_4: "Flappy paukštis skris kiaurai per kliūtis, nebent parašysi kodą, kad kažkas įvyktų, kai jis į jas atsitrenks. Prie blokelio „kai atsitrenksi į kliūtį“ pridėk reikalingą blokelį. Kai Flappy atsitrenks į pirmuosius vamzdžius, žaidimas turi pasibaigti."
+        flappy_5: "Pridėkime taškų lentą, kurioje bus skaičiuojami taškai, kai Flappy pereis per kliūtis. Pridėk blokelį „kai įveiksi kliūtį“ ir prie jo pridėk reikalingą blokelį, kad paukštis gautų vieną tašką, perskridęs pro pirmuosius vamzdžius."
+        flappy_6: "Patikrink, ar sugebėsi gauti tašką, pakeitęs paukščio suplasnojimo stiprumą."
+        flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
+        flappy_8: 'Išvaizdą galima nustatyti bet kuriuo momentu - nebūtinai, kai žaidimas prasideda. Pamėgink nustatyti atsitiktinį scenos foną, kai įvyksta tam tikri įvykiai, pavyzdžiui, kai yra pereinama per kliūtį.'
+        flappy_9: "Tam, kad paįvairinti žaidimą, kai paukštis įsitrenks į kliūtį arba pasieks žemę, vietoje to, kad baigtųsi žaidimas, padaryk taip, kad surinkti taškai išnyktų ir grįžtų atgal prie 0."
+        flappy_11: "Sukurk savo Flappy žaidimą. Gali pakeisti išvaizdą ir taisykles, netgi gravitaciją. Kai baigsi, nuspausk „Pasidalinti“, kad tavo draugai galėtų pažaisti tavo žaidimą savo telefonuose."
+        flappy_k1_1: "Žaisk Flappy"
+        flappy_k1_2: "Pridėk reikiamą blokelį prie blokelio „kai nuspausta“, o tada nuspausk „Paleisti“. Spustelk pelės klavišą arba ekraną, kad Flappy skristų į tikslą."
+        flappy_k1_3: "Dabar pridėjome žemę žaidime. Prijunk reikalingą blokelį prie blokelio „kai atsitrenksi į žemę“. Kai paukštis pasieks žemę, turi baigtis žaidimas."
+        flappy_k1_4: "Blokelis „kai žaidimas prasideda“ paleis kodą, kai nuspausi žaidimo pradžios mygtuką. Pamėgink pakeisti žaidimo greitį."
+        flappy_k1_5: "Flappy paukštis skris kiaurai per kliūtis, nebent parašysi kodą, kad kažkas įvyktų, kai jis į jas atsitrenks. Prie blokelio „kai atsitrenksi į kliūtį“ pridėk reikalingą blokelį. Kai Flappy atsitrenks į pirmuosius vamzdžius, žaidimas turi pasibaigti."
+        flappy_k1_6: "Pridėkime taškų lentą, kurioje bus skaičiuojami taškai, kai Flappy pereis per kliūtis. Pridėk blokelį „kai įveiksi kliūtį“ ir prie jo pridėk reikalingą blokelį, kad paukštis gautų vieną tašką, perskridęs pro pirmuosius vamzdžius."
+        flappy_k1_7: "See if you can score multiple points for making it past an obstacle"
+        flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
+        flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
+        jigsaw_1: "Nuspausk ant blokelio"
+        jigsaw_2: "Nutempk blokelį į tikslą"
+        jigsaw_3: "Sudėliok blokelius, kad gautum vaizdą"
+        jigsaw_4: "Sudėliok blokelius, kad gautum vaizdą"
+        jigsaw_5: "Sudėliok blokelius, kad gautum vaizdą"
+        jigsaw_6: "Sudėliok blokelius, kad gautum vaizdą"
+        jigsaw_7: "Sudėliok blokelius, kad gautum vaizdą"
+        jigsaw_8: "Sudėliok blokelius, kad gautum vaizdą"
+        jigsaw_9: "Sudėliok blokelius, kad gautum vaizdą"
+        jigsaw_10: "Sudėliok blokelius, kad gautum vaizdą"
+        jigsaw_11: "Sudėliok blokelius, kad gautum vaizdą"
+        jigsaw_12: "Sudėliok blokelius, kad gautum vaizdą"
+        jigsaw_13: "Pataisyk šią dėlionę!"
+        mazestep_1: "Labirinto Žingsnis aprašymas čia"
+        mazestep_2: "Labirinto Žingsnis aprašymas čia"
+        mazestep_3: "Labirinto Žingsnis aprašymas čia"
+        mazestep_4: "Labirinto Žingsnis aprašymas čia"
+        mazestep_5: "Labirinto Žingsnis aprašymas čia"
+        studio_c2_1: "Ar galėtum padaryti, kad šis šuo pasakytų „Sveikas, pasauli“?"
+        studio_c2_2: "Ar gali padaryti taip, kad šuo ką nors pasakytų, o po to ką nors pasakytų katinas?"
+        studio_c2_3: "Ar gali parašyti programą, kad šis šuo nueitų iki katės?"
+        studio_c2_4: "Ar gali parašyti programą, kuri priverčia šunį pajudėti iki katino, o katiną priverčia pasakyti „Labas“, kai šuo prie jo prieina?"
+        studio_c2_5: "Ar gali sukurti programą, kad aštuonkojis pasakytų „Labas“, kai ant jo nuspaudi su pele?"
+        studio_c2_6: "Ar gali parašyti programą, kad šis pingvinas judėtų spaudinėjant klaviatūros rodykles ir kad paliestų visas vėliavas?"
+        studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
+        studio_c2_8: "Padaryk, kad pingvinas sakytų „Oi!“ ir sugrotų garsas „atsimušimas“, jeigu jis atsitrenkia į dinozaurą. Pingvinas turi būti valdomas klaviatūros rodyklėmis."
+        studio_c2_9: "Pridėk bloką, kad būtų gaunamas taškas, kai pingvinas pasiekia aštuonkojį. Pingvinas turi būti judinamas tol, kol bus gaunamas taškas."
+        studio_c2_10: "Pridėk blokelius, kurie, paleidus žaidimą, pakeistų foną ir pingvino greitį. Po to pajudink pingviną, kol gausi tašką."
+        studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
+        studio_c3_story_1: "Ar galėtum padaryti, kad šis šuo pasakytų „Sveikas, pasauli“?"
+        studio_c3_story_2: "Ar gali padaryti taip, kad šuo ką nors pasakytų, o po to ką nors pasakytų katinas?"
+        studio_c3_story_3: "Ar gali parašyti programą, kad šis šuo nueitų iki katės?"
+        studio_c3_story_4: "Ar gali parašyti programą, kuri priverčia šunį pajudėti iki katino, o katiną priverčia pasakyti „Labas“, kai šuo prie jo prieina?"
+        studio_c3_story_5: "Ar gali pridėti bloką, kad aštuonkojis taptų laimingas?"
+        studio_c3_story_6: "Sukurk savo istoriją. Kai ją užbaigsi, pasidalink ja su draugais, kad jie galėtų ją peržiūrėti savo telefonuose."
+        studio_c3_game_1: "Ar gali sukurti programą, kad aštuonkojis pasakytų „Labas“, kai ant jo nuspaudi su pele?"
+        studio_c3_game_2: "Ar gali parašyti programą, kad šis pingvinas judėtų spaudinėjant klaviatūros rodykles ir kad paliestų visas vėliavas?"
+        studio_c3_game_3: "Blokelis „kartok amžinai“ leidžia kodui veikti nesustojant. Ar sugebėsi sudėti blokus taip, kad šis dinozauras judėtų aukštyn ir žemyn nesustodamas?"
+        studio_c3_game_4: "Padaryk, kad pingvinas sakytų „Oi!“ ir sugrotų garsas „atsimušimas“, jeigu jis atsitrenkia į dinozaurą. Pingvinas turi būti valdomas klaviatūros rodyklėmis."
+        studio_c3_game_5: "Pridėk bloką, kad būtų gaunamas taškas, kai pingvinas pasiekia aštuonkojį. Pingvinas turi būti judinamas tol, kol bus gaunamas taškas."
+        studio_c3_game_6: "Pridėk blokelius, kurie, paleidus žaidimą, pakeistų foną ir pingvino greitį. Po to pajudink pingviną, kol gausi tašką."
+        studio_c3_game_7: "Sukurk savo žaidimą. Kai jį užbaigsi, pasidalink su draugais, kad jie galėtų jį peržiūrėti savo telefonuose."
+        studio_playlab_1: "Ar galėtum padaryti, kad šis šuo pasakytų „Sveikas, pasauli“?"
+        studio_playlab_2: "Ar gali padaryti taip, kad šuo ką nors pasakytų, o po to ką nors pasakytų katinas?"
+        studio_playlab_3: "Ar gali parašyti programą, kad šis šuo nueitų iki katės?"
+        studio_playlab_4: "Ar gali parašyti programą, kuri priverčia šunį pajudėti iki katino, o katiną priverčia pasakyti „Labas“, kai šuo prie jo prieina?"
+        studio_playlab_5: "Ar gali sukurti programą, kad aštuonkojis pasakytų „Labas“, kai ant jo nuspaudi su pele?"
+        studio_playlab_6: "Ar gali parašyti programą, kad šis pingvinas judėtų spaudinėjant klaviatūros rodykles ir kad paliestų visas vėliavas?"
+        studio_playlab_7: "Blokelis „kartok amžinai“ leidžia kodui veikti nesustojant. Ar sugebėsi sudėti blokus taip, kad šis dinozauras judėtų aukštyn ir žemyn nesustodamas?"
+        studio_playlab_8: "Pridėk bloką, kad būtų gaunamas taškas, kai pingvinas pasiekia aštuonkojį. Pingvinas turi būti judinamas tol, kol bus gaunamas taškas."
+        studio_playlab_9: "Pridėk blokelius, kurie, paleidus žaidimą, pakeistų foną ir pingvino greitį. Po to pajudink pingviną, kol gausi tašką."
+        studio_playlab_10: "Sukurk savo žaidimą. Kai jį užbaigsi, pasidalink su draugais, kad jie galėtų jį peržiūrėti savo telefonuose."
+        studio_full_sandbox: "Sukurk savo žaidimą. Kai jį užbaigsi, pasidalink su draugais, kad jie galėtų jį peržiūrėti savo telefonuose."
+        studio_k1_1: "Ar galėtum padaryti, kad šis šuo pasakytų „Sveikas, pasauli“?"
+        studio_k1_2: "Ar gali padaryti taip, kad šuo ką nors pasakytų, o po to ką nors pasakytų katinas?"
+        studio_k1_3: "Ar gali parašyti programą, kad šis šuo nueitų iki katės?"
+        studio_k1_4: "Padaryk taip, kad šuo pajudėtų iki katino, o katinas pasakytų „Labas“, kai šuo prie jo prieis."
+        studio_k1_5: "Ar gali pridėti bloką, kad aštuonkojis taptų laimingas?"
+        studio_k1_6: "Sukurk savo istoriją! Judink katiną ir šunį kaip tik nori, ir prakalbink juos."
+        maze_wordsearch_k_1: "Pajudink mane, kad parašyčiau žodį EAST"
+        maze_wordsearch_k_2: "Pajudink mane, kad parašyčiau žodį SOUTH"
+        maze_wordsearch_k_3: "Pajudink mane, kad parašyčiau žodį WEST"
+        maze_wordsearch_k_4: "Pajudink mane, kad parašyčiau žodį NORTH"
+        maze_wordsearch_k_6: "Judink mane į rytus ir į pietus, kad gaučiau žodį JUMP"
+        maze_wordsearch_k_9: "Move me one way, then another to spell the word CODE"
+        maze_wordsearch_k_13: "Move me one way, then another to spell the word DEBUG"
+        maze_wordsearch_k_15: "Move me one way, then another to spell the word ABOVE"
+        maze_wordsearch_k_16: "Move me one way, then another to spell the word BELOW"
+        maze_wordsearch_k_20: "This is a test! Move me one way, then another to spell the word STORY"
+    video:
+      name:
+        maze_intro: "Įvadas į Labirintą"
+        artist_intro: "Įvadas į Menininką"
+        farmer_intro: "Įvadas į Ūkininką"
+        flappy_intro: "Įvadas į Flappy"
+        loop_times: "„Kartojimo“ blokelis"
+        loop_until: "„Kartoti, kol“ blokelis"
+        if: "„Jei“ blokelis"
+        if_else: "„Jei-priešingu atveju“ blokelis"
+        function: "Sudėtinės komandos"
+        loop_while: "„Kol“ blokelis"
+        loop_for: "Blokelis-skaitiklis"
+        parameters: "Komandų parametrai (gaunama informacija)"
+        hoc_wrapup: "Vienos Valandos Kodo apibendrinimas"
+        20_wrapup: "20-ties valandų įvado apibendrinimas"
+        Unplug1: "Kas yra CS?"
+        Unplug2: "Skaičiuojamasis mąstymas"
+        Unplug3: "Programavimas ant languoto popieriaus"
+        Unplug4: "Algoritmai"
+        Unplug5: "Sudėtinės komandos"
+        Unplug6: "Sąlyginiai sakiniai"
+        Unplug7: "Dainų rašymas"
+        Unplug8: "Komandos su parametrais"
+        Unplug9: "Programavimas komandoje"
+        Unplug10: "Internetas"
+        Unplug11: "Apibendrinimas"
+        C1_happy_maps_unplugged: "Laimingieji žemėlapiai"
+        C1_moveitmoveit_unplugged: "Judėk, judėk"
+        C1_bigevent_unplugged: "Didelis įvykis"
+        C1_getting_loop: "Kartojimo supratimas"
+        C1_pair_programming: "Programavimas poroje"
+        C1_maze_intro_sequencing: 'Labirintas: įvadas į sekas'
+        C1_maze_debugging: 'Labirintas: klaidų ieškojimas'
+        C1_bee_level_intro: 'Bitė: pirmasis lygis'
+        C1_artist_intro: "Įvadas į Menininką"
+        C1_spelling_bee_intro: 'Rašanti bitė: įvadas'
+        C1_zuck_repeat_loop: 'Labirintas: kartojimas'
+        C1_bee_loops: 'Bitė: kartojimas'
+        C1_maze_loops: 'Labirintas: kartojimas'
+        C1_playlab_storytelling: 'Laboratorija: sukurk istoriją'
+        C1_planting_seed: "Sėklos sodinimas"
+        C1_building_foundating: "Building a Foundation"
+        C2_maze_intro: "Įvadas į Labirintą"
+        C2_artist_intro: "Įvadas į Menininką"
+        C2_zuck_repeat_loop: 'Labirintas: kartojimas'
+        C2_artist_loops: 'Menininkas: kartojimas'
+        C2_bee_conditionals: 'Bitė: sąlyginiai sakiniai'
+        C2_playlab_createstory: 'Laboratorija: sukurk istoriją'
+        C2_graph_paper: "Programavimas ant languoto popieriaus"
+        C2_conditionals_with_cards: "Sąlyginiai sakiniai"
+        C2_binary_bracelets: "Dvejetainės apyrankės"
+        C2_replay_programming: "Programavimas komandoje"
+        C2_paper_airplanes: "Paper Airplanes"
+        C3_maze_intro: "Įvadas į Labirintą"
+        C3_artist_intro: "Įvadas į Menininką"
+        C3_artist_functions: 'Menininkas: funkcijos'
+        C3_bee_functions: 'Bitė: sudėtinės komandos'
+        C3_bee_conditionals: 'Bitė: sąlyginiai sakiniai'
+        C3_maze_conditionals: "Maze Conditionals"
+        C3_artist_nested_loops: "Nested Loops"
+        C3_farmer_while: "While Loops"
+        C3_bee_nested_loops: "Nested Loops"
+        C3_bee_debugging: 'Bitė: klaidų ieškojimas'
+        C3_bounce: "Šokinėjimas"
+        C3_playlab_create_game: 'Play Lab - Create a Game'
+        C3_computational_thinking: "Skaičiuojamasis mąstymas"
+        C3_dice_race: "Dice Race"
+        C3_internet: "Internet"
+        C3_crowdsourcing: "Crowdsourcing"
+        C3_functional_suncatchers: "Functional Suncatchers"
+        C3_songwriting_with_parameters: "Songwriting With Parameters"
+    callout:
+      text:
+        drag_blocks: "Nutempk blokelį „judėk į priekį“ ir sujunk jį su kitu tokiu pat blokeliu"
+        run: "Nuspausk „Paleisti programą“, kad išmėgintum savo programą"
+        watch_again: "Nuspausk čia, kad iš naujo galėtum peržiūrėti vaizdo įrašą"
+        gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
+        show_code_explanation: "Nuspausk čia, kad peržiūrėtum savo programos kodą"
+        instructions_repeat_explanation: "Kiekvienos užduoties instrukcija yra parašyta čia"
+        category_explanation: "Yra pateikti tie patys blokeliai, tačiau jie dabar yra surūšiuoti pagal kategorijas"
+        set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
+        studio_say_text: "Įvesk tai, ką nori, kad pasakytų tavo aktorius"
+        jigsaw_click: "Nuspausk ant šio blokelio!"

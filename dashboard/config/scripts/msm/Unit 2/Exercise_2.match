@@ -1,0 +1,16 @@
+name 'Match math to code' 
+
+title 'Converting Math to Code'
+content1 'Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!'
+
+question "(15 + 3) x (72 - 19)"
+answer '(* (+ 15 3) (- 72 19))'
+
+question "3 x 15 + (- 72 19)"
+answer '(+ (3 x 15) (- 72 19))'
+
+question "72 + 3 - 19 x 15"
+answer '(- (+ 72 3) (* 19 15))'
+
+question "3 x 15 - 72 + 19"
+answer '(+ (- (* 3 15) 72) 19)'

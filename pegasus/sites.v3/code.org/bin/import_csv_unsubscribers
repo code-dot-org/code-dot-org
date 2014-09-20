@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+require_relative '../../../src/env'
+require src_dir 'database'
+require 'cdo/hip_chat'
+require 'csv'
+
+def main()
+  total = unsubscribed = 0
+
+  CSV.foreach(pegasus_dir('cache','sendy_unsubscribed.csv')) do |i|
+    unless Contact.unsubscribed?(i[0])
+      Contact.unsubscribe(i[0], ip_address:'127.0.0.1')
+      unsubscribed += 1
+    end
+    total += 1
+    puts "#{unsubscribed}/#{total}"
+  end
+end
+
+main if only_one_running?(__FILE__)

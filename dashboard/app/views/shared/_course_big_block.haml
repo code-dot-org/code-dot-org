@@ -1,0 +1,24 @@
+- if id == "20hour"
+  - url = script_url(Script::TWENTY_HOUR_ID)
+  - title = t('k8intro')
+  - body = t('home.20hour_overview')
+  - image_url = image_tag('signup_header_cropped.jpg')
+
+- elsif id == "hoc"
+  - url = hoc_reset_url()  # script_url(Script::HOC_ID)
+  - title = t('upsell.hoc.title')
+  - body = t('upsell.hoc.body')
+  - image_url = image_tag("http://code.org/images/fit-520/codehoc3.jpg")
+
+.span12#lesson
+  .row
+    .span5
+      %p
+        =link_to image_url, url 
+    .span7
+      #heading
+        %h3.whitetext{style: "font-size:32px; font-weight:500"}= title  
+      %p.smallwhitetext{style: "font-size: 24px; line-height: 28px;"}
+        = body
+      #trynow
+        = button_to t('home.trynow'), url, :method => "get", :class=>"btn btn-primary biggerbutton"

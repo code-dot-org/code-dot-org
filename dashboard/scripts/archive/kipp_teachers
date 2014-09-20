@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+require_relative '../../config/environment'
+
+# output a csv with name, email, and some data about student
+# participation for all teachers with email like %kipp%
+
+sf_teachers = User.where("email like '%kipp%'")
+data = sf_teachers.collect do |u|
+  average_completed_levels = 0
+  unless u.followers.empty?
+    completed_levels = u.followers.collect(&:student_user).collect {|student| student.user_levels.where('best_result > 20').count}
+    average_completed_levels = completed_levels.inject(&:+).to_f / completed_levels.size
+    average_completed_levels = average_completed_levels.round(2)
+  end
+  
+  [u.email, u.name, u.followers.count, average_completed_levels].join(', ')
+end
+
+puts "Email, Name, Number of students, Average # of completed levels"
+puts data.join("\n")

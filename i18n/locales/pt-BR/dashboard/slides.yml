@@ -1,0 +1,253 @@
+"pt":
+  slides:
+    maze_intro:
+      1:
+        image: "notes/hoc1_1.jpg"
+        text: "Bem-vindo à sua primeira hora de programação! Vamos mergulhar logo em sua primeira experiência com programação."
+      2:
+        image: "notes/hoc1_2.jpg"
+        text: "Vamos usar o Blockly, uma linguagem de programação visual onde você arrasta e solta blocos para escrever código."
+      3:
+        image: "notes/hoc1_3.jpg"
+        text: 'A programação é geralmente em linhas de código escrito, porém o "Blockly" é visual. Cada bloco corresponde a uma linha de código "real".'
+      4:
+        image: "notes/hoc1_4.jpg"
+        text: "Você vai aprender o básico da ciência da computação, que consiste em conceitos usados no desenvolvimento de aplicativos e até mesmo para controlar uma sonda em Marte."
+      5:
+        image: "notes/hoc1_5.jpg"
+        text: "Um programa é um conjunto de instruções a serem seguidas pelo seu computador."
+      6:
+        image: "notes/hoc1_6.jpg"
+        text: "O objetivo do seu primeiro programa é levar o Angry Bird até um Porco Verde através do labirinto."
+      7:
+        image: "notes/hoc1_7.jpg"
+        text: "O lado esquerdo é o labirinto onde o programa é executado. As instruções para cada desafio estão abaixo do labirinto."
+      8:
+        image: "notes/hoc1_8.jpg"
+        text: "A caixa de ferramentas do meio contém os comandos do Angry Bird. Você vai usá-los para criar o seu programa."
+      9:
+        image: "notes/hoc1_9.jpg"
+        text: "À direita você tem sua área de trabalho, onde você vai arrastar os blocos da caixa de ferramentas para criar o seu programa. Para excluir um bloco, arraste-o para a lixeira no canto."
+      10:
+        image: "notes/hoc1_10.jpg"
+        text: 'Cada bloco é uma instrução. Se você arrastar um bloco "avance" para a sua área de trabalho e clicar em "Executar Programa", o pássaro se move um espaço à frente no labirinto.'
+      11:
+        image: "notes/hoc1_11.jpg"
+        text: "Para realizar mais de uma ação, você pode arrastar vários blocos para a área de trabalho e anexá-los uns aos outros. O pássaro vai seguir os comandos de cima para baixo."
+      12:
+        image: "notes/hoc1_12.jpg"
+        text: 'Se você executar um programa e quiser corrigi-lo, clique em "Recomeçar".'
+      13:
+        image: "notes/hoc1_13.jpg"
+        text: "Vamos pegar esses porcos!"
+    artist_intro:
+      1:
+        image: "notes/stage5_1.jpg"
+        text: "Oi, sou o JR! Toda equipe de corrida precisa de cientistas da computação para ganhar. Eles analisam os dados do carro para torná-lo mais rápido."
+      2:
+        image: "notes/stage5_2.jpg"
+        text: "Nesses desafios, você vai ser um artista que desenha por todo lugar que passa."
+      3:
+        image: "notes/stage5_3.jpg"
+        text: 'Esse bloco diz "avance por 100 pixels". Pixels são pontos minúsculos na sua tela.'
+      4:
+        image: "notes/stage5_4.jpg"
+        text: 'Este bloco diz "vire à direita 90 graus". Esse bloco funciona da mesma forma que o bloco "vire" no desafio do labirinto.'
+      5:
+        image: "notes/stage5_5.jpg"
+        text: "Clique na seta em qualquer um desses blocos para alterar o número de movimentos do artista, tanto para avançar quanto para virar. Brinque com os novos blocos para ver como eles funcionam."
+    farmer_intro:
+      1:
+        image: "notes/stage9_1.jpg"
+        text: "Oi, eu sou a Paola! Nesses desafios, você é uma fazendeira que precisa deixar seu terreno completamente plano para começar o plantio."
+      2:
+        image: "notes/stage9_2.jpg"
+        text: "Você precisa ajudá-la a remover todas os montes de terra e preencher todos os buracos."
+      3:
+        image: "notes/stage9_3.jpg"
+        text: "Os novos blocos removem 1 pá de terra de um monte, e preenchem o buraco com 1 pá de terra."
+      4:
+        image: "notes/stage9_4.jpg"
+        text: "Os montes de terra e os buracos são de tamanhos diferentes, então você tem que dizer à fazendeira quantas pás usar."
+    flappy_intro:
+      1:
+        image: "notes/flappy01.jpg"
+        text: "Oi, eu sou Katie! Uma das coisas mais emocionantes sobre ciência da computação é que um programa de computador pode ser interativo."
+      2:
+        image: "notes/flappy02.jpg"
+        text: "Sempre que alguém clica, digita, ou toca na tela de um celular, é gerado um EVENTO, e existe alguns códigos que decidem o que fazer quando um EVENTO ocorre."
+      3:
+        image: "notes/flappy03.jpg"
+        text: 'Por exemplo, você poderia ter um MANIPULAR DE EVENTOS que diz "quando o mouse for clicado, toque um som" '
+      4:
+        image: "notes/flappy04.jpg"
+        text: "Você já ouviu falar do jogo Flappy Bird? Usando manipuladores de eventos, vamos aprender a programar nossa própria versão do Flappy Bird!"
+      5:
+        image: "notes/flappy05.jpg"
+        text: "O código que você vai escrever consiste em arrastar e soltar blocos que representam os comandos para o computador. Na verdade, cada um desses blocos é representado pelo código real."
+      6:
+        image: "notes/flappy06.jpg"
+        text: 'Se você der uma olhada na área de trabalho, existem alguns blocos verdes que são preenchidos para você - esses são os "manipuladores de evento" '
+      7:
+        image: "notes/flappy07.jpg"
+        text: 'Se você quer que o passarinho VOE quando você CLICAR, você pode anexar o bloco "FLAP" ao manipulador de evento apropriado. Assim, sempre que você clicar, o passarinho vai voar.'
+      8:
+        image: "notes/flappy08.jpg"
+        text: "Em cada desafio dessa atividade, vamos introduzir novos tipos de eventos, como os blocos verdes na área de trabalho, e você pode decidir que blocos são apropriados para adicionar em resposta a esses eventos."
+      9:
+        image: "notes/flappy09.jpg"
+        text: "Quando você observar uma seta suspensa como essa, significa que você pode alterar as configurações, como o som a ser reproduzido quando o pássaro bater no chão."
+      10:
+        image: "notes/flappy10.jpg"
+        text: "No desafio final, você vai poder criar seu próprio jogo e compartilhar com seus amigos. Divirta-se!"
+    loop_times:
+      1:
+        image: "notes/hoc2_1.jpg"
+        text: "Olá, eu sou o Mark! Vamos aprender sobre laços. Usando laços, você pode dizer para um computador repetir qualquer conjunto de ações continuamente, milhares ou mesmo milhões de vezes."
+      2:
+        image: "notes/hoc2_2.jpg"
+        text: "Nesse desafio, queremos fazer o pássaro avançar 5 espaços para chegar ao porco."
+      3:
+        image: "notes/hoc2_3.jpg"
+        text: 'Podemos usar o novo bloco "repita" para nos ajudar.'
+      4:
+        image: "notes/hoc2_4.jpg"
+        text: 'Ao invés de arrastar 5 blocos "avance"...'
+      5:
+        image: "notes/hoc2_5.jpg"
+        text: 'Podemos colocar o bloco "avance" dentro do bloco "repita" e escrever um número no bloco para definir o número de repetições.'
+      6:
+        image: "notes/hoc2_6.jpg"
+        text: 'E isso é importante: você pode colocar mais de um comando dentro de um bloco "repita".'
+      7:
+        image: "notes/hoc2_7.jpg"
+        text: 'Aproveite seu novo bloco "repita"!'
+    loop_until:
+      1:
+        image: "notes/hoc3_1.jpg"
+        text: 'Oi, eu sou o Chris. Antes de entrar para o Miami Heat, fui para a Georgia Tech para estudar Ciência da Computação. Vamos dar uma olhada no nosso novo bloco, o bloco "repita até".'
+      2:
+        image: "notes/hoc3_2.jpg"
+        text: "E se nós não soubermos quanto o pássaro teve que se mover para chegar ao porco?"
+      3:
+        image: "notes/hoc3_3.jpg"
+        text: 'Se colocarmos um bloco "avance" dentro do bloco "repita até", o pássaro vai seguir em frente ATÉ chegar ao porco (ou se chocar contra uma parede).'
+      4:
+        image: "notes/hoc3_4.jpg"
+        text: 'E isso é importante: assim como antes, podemos colocar vários blocos dentro do bloco "repita até", e todos eles serão repetidos.'
+    if:
+      1:
+        image: "notes/hoc4_1.jpg"
+        text: 'Oi, eu sou o Bill! Vamos aprender um novo conceito fundamental: declarações "se". É assim que computadores tomam decisões.'
+      2:
+        image: "notes/hoc4_2.jpg"
+        text: 'Você usa a declaração "se" todos os dias. Toda manhã, antes de sair, você diz: SE estiver chovendo lá fora, vou precisar da minha jaqueta.'
+      3:
+        image: "notes/hoc4_3.jpg"
+        text: "Podemos dizer ao zumbi para verificar SE há caminho para a esquerda e, se ele encontrar um caminho para a esquerda, precisamos virá-lo naquela direção."
+      4:
+        image: "notes/hoc4_4.jpg"
+        text: 'Para programar isso, vamos arrastar o nosso bloco "se" e colocar um bloco "vire à esquerda" dentro dele.'
+      5:
+        image: "notes/hoc4_5.jpg"
+        text: 'Agora, se colocarmos um bloco "avance" acima dele e colocarmos tudo dentro de um bloco "repita", a cada vez que o zumbi se mover, ele vai verificar se há um caminho para a esquerda e virar. O comando "repita" é fundamental para verificar a necessidade de virar a cada passo.'
+      6:
+        image: "notes/hoc4_6.jpg"
+        text: 'Declarações "se" são muito importantes para a ciência da computação. Um dos primeiros programas que escrevi foi um jogo da velha, e havia uma instrução "se" que dizia: SE a outra pessoa está prestes a ganhar, bloqueie a casa que lhe permitiria ganhar.'
+      7:
+        image: "notes/hoc4_7.jpg"
+        text: 'Divirta-se usando o bloco "se"!'
+    if_else:
+      1:
+        image: "notes/hoc5_1.jpg"
+        text: 'Oi, meu nome é Saloni. Eu uso a ciência da computação para ajudar a resolver problemas na área da saúde e na medicina. Vamos aprender sobre o bloco "se senão". Ele é semelhante ao bloco "se", mas tem uma parte extra no final que diz "senão".'
+      2:
+        image: "notes/hoc5_2.jpg"
+        text: 'Se eu colocar um bloco "avance" no local da instrução "faça", e um bloco "vire à esquerda" na instrução "senão", significa que o zumbi vai escolher entre 2 opções. SE existir um caminho à frente, o zumbi vai avançar, e CASO CONTRÁRIO (não há um caminho em frente), o zumbi vai virar à esquerda.'
+      3:
+        image: "notes/hoc5_3.jpg"
+        text: 'Assim como o bloco "se", podemos colocar blocos "se senão" dentro de um bloco "repita", assim o zumbi vai continuar se movendo, e o bloco "se senão" vai verificar continuamente se há algum lugar para virar.'
+      4:
+        image: "notes/hoc5_4.jpg"
+        text: "Agora, coloque os zumbis em seus devidos lugares!"
+    function:
+      1:
+        image: "notes/stage13_1.jpg"
+        text: "Oi, eu sou a Brina, uma engenheira do Instagram. Uma função é um conjunto de linhas de código que você deseja usar várias vezes. Então, ao invés de escrever esse código toda vez, você pode usar apenas um bloco."
+      2:
+        image: "notes/stage13_2.jpg"
+        text: "Vamos aprender a definir funções. Definições de função têm uma estrela no canto. O nome da função está escrito na linha superior."
+      3:
+        image: "notes/stage13_3.jpg"
+        text: 'Os blocos que vão dentro da definição nos dizem o que ela faz. Então, essa definição de função se chama "preencha 5", e é composta por um bloco "repita" e um bloco "preencha".'
+      4:
+        image: "notes/stage13_4.jpg"
+        text: 'A definição está na área de trabalho, mas a fazendeira não vai executar a função até que arrastemos o bloco "preencha 5" para fora da categoria funções.'
+      5:
+        image: "notes/stage13_5.jpg"
+        text: 'Vamos agir em "função" da diversão! '
+    loop_while:
+      1:
+        image: "notes/stage9_5.jpg"
+        text: 'Oi, eu sou o Makinde! Vamos aprender sobre o bloco "enquanto". '
+      2:
+        image: "notes/stage9_6.jpg"
+        text: 'O bloco "enquanto" vai fazer tudo o que você colocar no seu interior, DESDE QUE a declaração na parte superior seja VERDADEIRA.'
+      3:
+        image: "notes/stage9_7.jpg"
+        text: "Por exemplo, se a fazendeira está em um monte de terra, ela continuará a remover 1 pá ENQUANTO houver terra debaixo dela."
+    loop_for:
+      1:
+        image: "notes/stage11_1.jpg"
+        text: "Oi, eu sou a Trina, e trabalho para a Pixar. Já trabalhei em um monte de filmes, incluindo o Shrek."
+      2:
+        image: "notes/stage11_2.jpg"
+        text: 'Este é nosso novo laço "contador". Ele executará ações repetidamente, e você pode fazer com que as ações mudem aos poucos.'
+      3:
+        image: "notes/stage11_3.jpg"
+        text: 'Neste exemplo, nosso laço "contador" diz "conte de 50 até 90, indo de 10 em 10" e, dentro dele, temos o nosso bloco "desenhe um quadrado". Arraste o bloco "contador" da seção "Variáveis" para local que indica "comprimento".'
+      4:
+        image: "notes/stage11_4.jpg"
+        text: "Isso significa que nosso artista vai desenhar um quadrado com lados de 50 pixels de comprimento, e então vai acrescentar 10 e desenhar um quadrado com lados de 60 pixels de comprimento. Ele vai continuar adicionando 10 e desenhando quadrados até que ele atinja 90 pixels. Assim, vamos ter quadrados de 50, 60, 70, 80 e 90 pixels."
+    parameters:
+      1:
+        image: "notes/stage15_1.jpg"
+        text: "Oi, eu sou a Janete, e eu sou uma engenheira da Zynga."
+      2:
+        image: "notes/stage15_2.jpg"
+        text: "E se quisermos desenhar um monte de triângulos de tamanhos diferentes?"
+      3:
+        image: "notes/stage15_3.jpg"
+        text: "Podemos escrever todo o código à mão, ou podemos usar uma função com parâmetros."
+      4:
+        image: "notes/stage15_4.jpg"
+        text: 'Para fazer isso, clique na estrela azul sobre a definição da função "desenhe um triângulo". Arraste o "nome de entrada" para o bloco "entrada".'
+      5:
+        image: "notes/stage15_5.jpg"
+        text: 'Então, se você escrever "comprimento" no local onde há um "x" e apertar "Enter", você vai criar um comprimento de entrada para sua função.'
+      6:
+        image: "notes/stage15_6.jpg"
+        text: 'Então, clique na estrela. Agora, você vai clicar na categoria de variáveis e arrastar o bloco "comprimento" para dentro do bloco "avance" da sua definição da função. E arraste para fora o antigo bloco de número.'
+      7:
+        image: "notes/stage15_7.jpg"
+        text: 'Para usar sua função com parâmetros, clique na categoria funções e arraste para fora a função "desenhe um triângulo com comprimento".'
+      8:
+        image: "notes/stage15_8.jpg"
+        text: "Agora você pode usar o bloco de matemática para entrar com números diferentes e desenhar triângulos de tamanhos diferentes."
+    hoc_wrapup:
+      1:
+        image: "notes/hoc6_1.jpg"
+        text: "Parabéns! Com o último desafio resolvido, você acabou de escrever o código que pode dizer a QUALQUER robô como encontrar o seu caminho através de um labirinto sem ramificação ou de um túnel de qualquer comprimento, seja ele um zumbi, um pássaro, uma sonda em Marte ou até mesmo um carro sem motorista."
+      2:
+        image: "notes/hoc6_2.jpg"
+        text: "Os conceitos básicos que você usou são o coração de qualquer programa ou aplicativo. Aprendemos sobre laços de repetição, declarações de repetições condicionais, declarações se, e declarações se senão."
+      3:
+        image: "notes/hoc6_3.jpg"
+        text: "Se você gostou de sua primeira hora de programação, visite a code.org para continuar a aprender a ciência da computação! Ao completar o nosso curso de 20 horas, você terá dominado o básico de programação, e vai estar apto a aprender como programar aplicativos para celular, instruções robóticas, jogos, e muito mais."
+      4:
+        image: "notes/hoc6_4.jpg"
+        text: 'A tecnologia está mudando tudo o que fazemos, e não importa se você é jovem ou velho: programar é divertido, é criativo, e qualquer um pode aprender!'
+    20_wrapup:
+      1:
+        image: "notes/bird.png"
+        text: "Notas em breve!"

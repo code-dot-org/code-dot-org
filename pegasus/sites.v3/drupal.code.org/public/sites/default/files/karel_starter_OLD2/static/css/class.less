@@ -1,0 +1,81 @@
+@import "main";
+
+#class-page, #teacher-page {
+	padding-top:20px;
+
+	.code {
+		font-family: monospace;
+		.bold;
+	}
+
+	.user-list {
+		.user {
+			.left;
+			margin-right:10px;
+			margin-bottom:10px;
+			padding:3px;
+			background:#fff;
+			border:1px solid #ccc;
+
+			&:hover {
+				background:#eee;
+			}
+
+			width:140px;
+
+			.img-container {
+				@size: 50px;
+				position:relative;
+				left:50%;
+				margin-left:-1 * @size / 2;
+				width:@size;
+				height:@size;
+				overflow: hidden;
+				img {
+					width:@size;
+					height:auto;
+				}
+				margin-bottom: 5px
+			}
+
+			.name {
+				.center;
+				font-size:12px;
+				line-height: 18px;
+			}
+		}
+	}
+
+	.note {
+		background:#fff;
+		padding:10px;
+		font-size:16px;
+		margin-bottom:20px;
+
+		ol {
+			margin-top:10px;
+			li {
+				margin-bottom:5px;
+			}
+		}
+	}
+
+	.list {
+		background:#fff;
+		width:100%;
+		margin-bottom:20px;
+
+		h3 {
+			padding-left:5px;
+		}
+
+		.list-item {
+			border-bottom:1px solid #ccc;
+			padding:5px;
+
+			&:hover {
+				background:#eee;
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+.header.printbackground{:style=>'width:100%; background-color:rgb(120,101,161); color:white; -webkit-print-color-adjust: exact;'}
+  .headercontent
+    #top
+      #divforpdf
+        #number{:style=>'background-color:rgb(0,173,187); width: 200px; float:left; text-align:center; font-size:72px; line-height:72px; height:90px'}= unplugged ? 'U' : lesson
+        - if request.path.include? "csp"
+          #draft{:style=>'width: 50%; float:left; text-align: center; height:90px; padding-top:10px; opacity: 0.8'}
+            #bigtext{:style=>'font-size:72px; line-height:72px;'}
+              DRAFT
+            #fineprint{:style=>'font-size:18px; line-height:18px'}
+              This curriculum is not yet final
+        #right{:style=>'float:right; padding:5px'}
+          %img{:src=>'/images/logo.png'}
+
+    #bottom.printbackground{:style=>'clear:both'}
+      - if unplugged
+        UNPLUGGED
+      - else
+        - if unitnumber
+          Unit #{unitnumber}:
+        - if unittitle
+          #{unittitle}
+          |
+        Lesson #{lesson}
+      %h1{:style=>'color:white'}=title
+      %hr
+
+      Lesson time: #{time} Minutes 
+      - if days
+        - daytext = days == 1 ? "#{days} Day" : "#{days} Days"
+        (#{daytext})
+      - if disclaimer
+        %span.disclaimer
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          =disclaimer

@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+# Export two separate lists of email addresses -- all teachers with
+# prizes and all teachers without prizes
+
+require_relative '../../config/environment'
+
+# users who either said they were teachers or have students
+ALL_TEACHERS = 'user_type = "teacher" or (select id from followers where user_id = users.id limit 1)'
+
+# all users with teacher prizes (above is implied)
+WITH_PRIZES = "teacher_prize_id IS NOT NULL OR teacher_bonus_prize_id IS NOT NULL"
+
+teachers_with_prizes = User.where(WITH_PRIZES)
+
+teachers_without_prizes = User.where(ALL_TEACHERS) - teachers_with_prizes
+
+File.open('teachers_with_prizes.txt', 'w') do |f|
+  f.puts teachers_with_prizes.collect(&:email).join("\n")
+end
+
+File.open('teachers_without_prizes.txt', 'w') do |f|
+  f.puts teachers_without_prizes.collect(&:email).join("\n")
+end

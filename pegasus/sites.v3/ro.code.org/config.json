@@ -1,0 +1,25 @@
+{
+  "base":"i18n.code.org",
+  "google_analytics_id":"UA-37745279-1",
+  "hoc_country_id":"Romania",
+  "us_site": "Code.org (SUA)",
+  "nav_links": {
+    "Resurse": "/about/resources",
+    "Despre noi": "/about",
+    "Contact": "/about/contact",
+    "Noutăți": "/about/news",
+    "Organizatori": "/about/organisers",
+    "Parteneri": "/about/partners"
+  },
+  "header_links": {
+    "HOME": "/",
+    "TUTORIALE": "/learn",
+    "RESURSE": "/about/resources"
+  },
+  "footer_links": {
+    "Tutoriale": "/learn",
+    "Despre": "/about",
+    "Resurse": "/about/resources",
+    "Parteneri": "/about/partners"
+  }
+}

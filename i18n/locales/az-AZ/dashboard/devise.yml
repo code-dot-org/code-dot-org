@@ -1,0 +1,57 @@
+"az":
+  devise:
+    confirmations:
+      confirmed: "E-poçt ünvanınız müvəffəqiyyətlə təsdiq olundu."
+      send_instructions: "Bir neçə dəqiqəyə hesabınızı necə təsdiq edəcəyiniz barədə bir e-məktub alacaqsınız."
+      send_paranoid_instructions: "E-poçt ünvanınız məlumat bazamızda varsa, bir neçə dəqiqəyə içərisində hesabınızı necə təsdiq edəcəyiniz barədə təlimatlar olam e-məktub alacaqsınız."
+    failure:
+      already_authenticated: "Artıq daxil olmusunuz."
+      inactive: "Hesabınız hələ aktivləşdirilməyib."
+      invalid: "E-poçt və ya parol səhvdir."
+      invalid_token: "Yanlış avtorizasiya markeri."
+      locked: "Hesabınız kilidlənib."
+      not_found_in_database: "E-poçt və ya parol səhvdir."
+      timeout: "Sessiyanızın vaxtı doldu, zəhmət olmasa, davam etmək üçün yenə daxil olun."
+      unauthenticated: "Davam etmək üçün ya daxil olmalı, ya da qeydiyyatdan keçməlisiniz."
+      unconfirmed: "Davam etməzdən əvvəl öz hesabınızı təsdiq etməlisiniz."
+    mailer:
+      confirmation_instructions:
+        subject: 'Code.org - təsdiq barədə təlimatlar'
+      reset_password_instructions:
+        subject: 'Code.org - parolu yeniləmə barədə təlimatlar'
+      unlock_instructions:
+        subject: "Kilidi açmaq üçün təlimatlar"
+    omniauth_callbacks:
+      failure: 'Sizi %{kind} -dən "%{reason}" -ə görə təsdiqləyə bilmədik.'
+      success: '%{kind} hesabından müvəffəqiyyətlə təsdiq edildi.'
+    passwords:
+      no_token: "Bu səhifəyə yalnız parol yeniləmə e-məktubundan gələ bilərsiniz. Əgər siz parol yeniləmə e-məktubundan gəlirsinizsə, lütfən əmin olun ki, verilmiş tam URL-ünvandan istifadə etmisiniz."
+      send_instructions: "Siz bir neçə dəqiqəyə parolunuzu necə yeniləməniz barədə təlimatları özündə saxlayan bir e-məktub alacaqsınız."
+      send_paranoid_instructions: "Əgər sizin e-məktub ünvanınız bizim məlumatlar bazamızda varsa, bir neçə dəqiqə ərzində parol yeniləmə keçidi e-məktub ünvanınıza göndəriləcəkdir."
+      updated: "Parolunuz müvəffəqiyyətlə dəyişdirildi. İndi hesabınıza daxil olubsunuz."
+      updated_not_active: "Parolunuz müvəffəqiyyətlə dəyişdirildi."
+    registrations:
+      destroyed: "Xudahafiz! Hesabınız müvəffəqiyyətlə ləğv olundu. Sizi tezliklə görəcəyimizə ümid edirik."
+      signed_up: "Xoş gördük! Siz müvəffəqiyyətlə qeydiyyatdan keçdiniz."
+      signed_up_but_inactive: "Siz müvəffəqiyyətlə qeydiyyatdan keçdiniz. Lakin hesabınıza daxil ola bilməzsiniz, çünki, o hələ aktivləşdirilməyib."
+      signed_up_but_locked: "Siz müvəffəqiyyətlə qeydiyyatdan keçdiniz. Lakin hesabınıza daxil ola bilməzsiniz, çünki, o kilidlənib."
+      signed_up_but_unconfirmed: "Təsdiq keçidini özündə saxlayan məktub sizin e-məktub ünvanınıza göndərilmişdir. Xahiş edirik öz hesabınızı aktivləşdirmək üçün göndərilmiş keçidi açasınız."
+      update_needs_confirmation: "Siz öz hesabınızı müvəffəqiyyət ilə yeniləmisiniz, lakin biz sizin yeni e-məktub ünvanınızı təsdiqləməliyik. Xahiş edirik öz e-məktub ünvanınızı yoxlayasınız və yeni e-məktub ünvanınızı təsdiqləmək üçün göndərilmiş təsdiq keçidinə klikləyəsiniz."
+      updated: "Hesabınızı müvəffəqiyyətlə yenilədiniz."
+    sessions:
+      signed_in: "Hesabınıza müvəffəqiyyətlə daxil oldunuz."
+      signed_out: "Hesabınızdan müvəffəqiyyətlə çıxdınız."
+    unlocks:
+      send_instructions: "Bir neçə dəqiqəyə hesabınızın kilidini necə açacağınız barədə bir e-məktub alacaqsınız."
+      send_paranoid_instructions: "Əgər, hesabınız varsa, bir neçə dəqiqəyə onun kilidini necə açacağınız barədə bir e-məktub alacaqsınız."
+      unlocked: "Sizin hesabınızın kilidi müvəffəqiyyət ilə açılmışdır. Davam etmək üçün hesabınıza daxil olun."
+  errors:
+    messages:
+      already_confirmed: "artıq təsdiqlənmişdir, xahiş edirik hesabınıza daxil olmağa çalışın"
+      confirmation_period_expired: '%{period} ərzində təsdiqlənməlidir, xahiş edirik yeni sorğu göndərəsiniz'
+      expired: "istifadə müddəti bitmişdir, xahiş edirik yeni sorğu göndərəsiniz"
+      not_found: "tapılmadı"
+      not_locked: "Kilidlənməmişdi"
+      not_saved:
+        one: '1 səhv bu %{resource} -in yadda saxlanılmasına qadağa qoymuşdur:'
+        other: '%{count} səhv bu %{resource} -in yadda saxlanılmasına qadağan qoymuşdur:'

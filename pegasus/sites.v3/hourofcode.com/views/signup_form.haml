@@ -1,0 +1,125 @@
+%a{name: 'signup'}
+-if @country == 'ar'
+  %h2= hoc_s(:signup_header_ar)
+-else
+  %h2= hoc_s(:signup_header)
+%form#hoc-signup-form{role: "form", onsubmit: "event.preventDefault();"}
+  #error_message
+
+  .form-group
+    %label.control-label{for: "hoc-name"}= hoc_s(:signup_name_label)
+    %div
+      %input#hoc-name.form-control{name: "name_s", placeholder: hoc_s(:signup_name_placeholder), required: true, type: "text"}/
+
+  .form-group
+    %label.control-label{for: "hoc-email"}= hoc_s(:signup_email_label)
+    %div
+      %input#hoc-email.form-control{name: "email_s", placeholder: hoc_s(:signup_email_placeholder), type: "text", required: true}/
+
+  .form-group
+    %label.control-label{for: "hoc-organization-name"}= hoc_s(:signup_organization_name_label)
+    %div
+      %input#hoc-organization-name.form-control{name: "organization_name_s", placeholder: hoc_s(:signup_organization_name_placeholder), type: "text", required: true}/
+
+  .form-group
+    %label.control-label{for: "hoc-event-type"}= hoc_s(:signup_event_type_label)
+    %div
+      %select#hoc-event-type.form-control{name: "event_type_s", type: "select", required: true}
+        %option{value: nil, selected: true}
+        -['in_school', 'out_of_school'].each do |event_type|
+          %option{value: event_type}= hoc_s('signup_event_type_' + event_type)
+
+  .form-group
+    %label.control-label{for: "hoc-event-location"}= hoc_s(:signup_event_location_label)
+    %div
+      %textarea#hoc-event-location.form-control{name: "event_location_s", placeholder: hoc_s(:signup_event_location_placeholder), style: "height: 5em;"}
+
+  .form-group{style: "display: none;"}
+    .checkbox
+      %label
+        %input#hoc-entire-school-flag{name: "entire_school_flag_b", type: "checkbox", value: "1"}/
+        =hoc_s(:signup_event_entire_school_label)
+
+  .form-group
+    .checkbox
+      %label
+        %input#hoc-send-posters-flag{name: "send_posters_flag_b", type: "checkbox", value: "1"}/
+        =hoc_s(:signup_send_posters_flag_label)
+
+  .form-group{style: "display: none;"}
+    %label.control-label{for: "hoc-send-posters-address"}= hoc_s(:signup_send_posters_address_label)
+    %div
+      %textarea#hoc-send-posters-address.form-control{name: "send_posters_address_s", placeholder: hoc_s(:signup_send_posters_address_placeholder), style: "height: 5em;"}
+
+  .form-group
+    .checkbox
+      %label
+        %input#hoc-special-event-flag{name: "special_event_flag_b", type: "checkbox", value: "1"}/
+        =hoc_s(:signup_special_event_flag_label)
+
+  .form-group{style: "display: none;"}
+    %label.control-label{for: "hoc-special-event-details"}= hoc_s(:signup_special_event_details_label)
+    %div
+      %textarea#hoc-special-event-details.form-control{name: "special_event_details_s", placeholder: hoc_s(:signup_special_event_details_placeholder), style: "height: 5em;"}
+
+  %input{name:'hoc_country_s', type:'hidden', value:@country}
+
+  .form-group.submit-btn
+    %div
+      %button#btn-submit.btn.btn-default{type: "submit"}= hoc_s(:signup_submit_label)
+
+:javascript
+  $(document).ready(function() {
+    $('#hoc-signup-form select').selectize();
+
+    $( "#hoc-signup-form" ).submit(function( event ) {
+      signupFormSubmit();
+    });
+
+    $('#hoc-special-event-flag').change(function() {
+      if($(this).is(':checked')) {
+        $('#hoc-special-event-details').closest('.form-group').slideDown();
+      } else {
+        $('#hoc-special-event-details').closest('.form-group').slideUp();
+      }
+    });
+    $('#hoc-send-posters-flag').change(function() {
+      if($(this).is(':checked')) {
+        $('#hoc-send-posters-address').closest('.form-group').slideDown();
+      } else {
+        $('#hoc-send-posters-address').closest('.form-group').slideUp();
+      }
+    });
+    $('#hoc-event-type').change(function() {
+      if($(this).val() == 'in_school') {
+        $('#hoc-entire-school-flag').closest('.form-group').show();
+      } else {
+        $('#hoc-entire-school-flag').closest('.form-group').hide();
+      }
+    });
+  });
+
+  function signupFormComplete(data)
+  {
+    window.location = 'thanks';
+  }
+
+  function signupFormError(data)
+  {
+    $('#error_message').html('<p>#{hoc_s(:signup_submit_error_message)}</p>').show();
+    $("#signup_submit").removeAttr('disabled');
+  }
+
+  function signupFormSubmit()
+  {
+    $("#signup_submit").attr('disabled','disabled');
+
+    $.ajax({
+      url: "/forms/HocSignup2014",
+      type: "post",
+      dataType: "json",
+      data: $('#hoc-signup-form').serialize()
+    }).done(signupFormComplete).fail(signupFormError);
+
+    return false;
+  }

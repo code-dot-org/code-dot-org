@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+require 'cdo/only_one'
+require 'cdo/google_drive'
+require 'sequel'
+
+DASHBOARD_DB = Sequel.connect(CDO.dashboard_db_writer.sub('mysql:', 'mysql2:'))
+USERS = DASHBOARD_DB[:users]
+PERMISSIONS = DASHBOARD_DB[:user_permissions]
+$log = Logger.new STDOUT
+$log.level = Logger::WARN
+
+def change_user_type(user, type)
+  USERS.where(id:user[:id]).update(user_type:type) unless user[:user_type] == type
+  true
+end
+
+def grant_permission(email, permission_name)
+  email = email.to_s.strip.downcase
+  raise ArgumentError, 'No email' if email.empty?
+  permission_name = permission_name.to_s.strip.downcase
+  raise ArgumentError, 'No permission_name' if permission_name.empty?
+  user = USERS.where(email:email).first
+  raise ArgumentError, 'No user with that email' unless user
+
+  # Special cases, dependencies
+  case permission_name
+  when 'teacher'
+    return change_user_type user, 'teacher'
+  when 'create_professional_development_workshop'
+    raise ArgumentError, "'create_professional_development_workshop' requires 'teacher'" if user[:user_type] != 'teacher'
+  end
+
+  return false if PERMISSIONS.where(user_id:user[:id], permission:permission_name).first
+
+  created_at = DateTime.now
+  PERMISSIONS.insert(user_id:user[:id], permission:permission_name, created_at:created_at, updated_at:created_at)
+  true
+end
+
+def main()
+  file = Google::Drive.new.file('v3/user-permissions')
+  unless file
+    puts "Couldn't fetch user-permissions gsheet."
+    exit 1
+  end
+
+  DASHBOARD_DB.transaction do
+    PERMISSIONS.delete
+
+    CSV.parse(file.spreadsheet.export_as_string('csv', 0), headers:true) do |i|
+      begin
+        puts "'#{i['email_s']}' already granted '#{i['permission_s']}' permission; Duplicate entries in the gsheet?" unless grant_permission i['email_s'], i['permission_s']
+      rescue => e
+        puts "'#{i['email_s']}' couldn't be granted '#{i['permission_s']}' permission; #{e.message}."
+      end
+    end
+  end
+end
+
+main if only_one_running?(__FILE__)

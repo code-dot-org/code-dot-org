@@ -1,0 +1,66 @@
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// compiled file.
+//
+// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
+// about supported directives.
+//
+//= require jquery
+//= require jquery_ujs
+//= require jquery.ui.all
+//= require video
+//= require_directory .
+// Loads all Bootstrap javascripts
+//= require bootstrap
+//= require_self
+//= require md5
+//= require hash_email
+
+<% environment.context_class.instance_eval { include ApplicationHelper } %>
+
+// Prevent callstack exceptions when opening multiple dialogs
+// http://stackoverflow.com/a/15856139/2506748
+$.fn.modal.Constructor.prototype.enforceFocus = function () {};
+
+// In IE console is only defined when developer tools is open. Define it as a
+// noop when undefined (otherwise exceptions get thrown)
+if (!window.console) {
+  window.console = {};
+}
+if (!window.console.log) {
+  window.console.log = function () { };
+}
+
+var KEY_ESCAPE = 27;
+
+// Wrap existing window onerror caller with a script error check.  If we have a
+// script error and a url, throw that so that we have the info in new relic.
+var windowOnError = window.onerror;
+window.onerror = function (msg, url, ln) {
+  if (/^Script error/.test(msg) && url) {
+    arguments[0] = 'Script Error: ' + url;
+  }
+  if (windowOnError) {
+    return windowOnError.apply(this, arguments);
+  }
+};
+
+// Prevent escape from canceling page loads.
+$(document).keydown(function(e) {
+  if (e.keyCode === KEY_ESCAPE) {
+    e.stopPropagation();
+    e.preventDefault();
+  }
+});
+
+setTimeout(function() {
+  $('#blocklyApp .slow_load').show();
+}, 10000);
+
+function cache_bust_only() {
+    return 'bust cache';
+}
+
+var CDOSounds = new Sounds();

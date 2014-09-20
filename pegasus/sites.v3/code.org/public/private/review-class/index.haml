@@ -1,0 +1,27 @@
+---
+title: Review Class Submissions
+---
+-dont_cache
+
+%h1 Review class submissions
+
+-submissions = []
+-DB[:forms].where(kind:'ClassSubmission', review:nil).limit(40).each do |i|
+  -submissions << JSON.parse(i[:data]).merge(secret: i[:secret])
+
+-if submissions.nil_or_empty?
+  %p There are no class submissions available for review
+
+-else
+  %table
+    %tr
+      %th Name
+      %th Address
+      %th &nbsp;
+
+    -submissions.each do |submission|
+      %tr
+        %td= submission['school_name_s']
+        %td= submission['school_address_s']
+        %td
+          %a.btn.btn-default{href: "/private/review-class/#{submission[:secret]}", style: 'color: #fff;'} Review

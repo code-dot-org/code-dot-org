@@ -1,0 +1,124 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-06-16T18:36:08.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist",
+    "instructions": "This house has a half-finished wall. Each side is 100, but the half-finished wall is only 50. Complete the wall. ",
+    "x": 250,
+    "y": 250,
+    "start_direction": 90
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="draw_width_inline">
+          <title name="WIDTH">1</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+          <next>
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">90</title>
+          <next>
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
+              <next>
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE">90</title>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">100</title>
+                              <next>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnRight</title>
+                                  <title name="VALUE">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">100</title>
+                                      <next>
+                                        <block type="draw_turn_by_constant">
+                                          <title name="DIR">turnLeft</title>
+                                          <title name="VALUE">120</title>
+                                          <next>
+                                            <block type="draw_move_by_constant">
+                                              <title name="DIR">moveForward</title>
+                                              <title name="VALUE">100</title>
+                                              <next>
+                                                <block type="draw_turn_by_constant">
+                                                  <title name="DIR">turnLeft</title>
+                                                  <title name="VALUE">120</title>
+                                                  <next>
+                                                    <block type="draw_move_by_constant">
+                                                      <title name="DIR">moveForward</title>
+                                                      <title name="VALUE">100</title>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </predraw_blocks>
+  </blocks>
+</Artist>

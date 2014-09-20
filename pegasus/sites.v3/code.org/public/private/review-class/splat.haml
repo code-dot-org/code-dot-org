@@ -1,0 +1,11 @@
+---
+title: Review Class Submission
+nav: blank
+rightbar: blank
+---
+- dont_cache
+- secret = File.basename(request.path_info)
+- pass unless form = Form.first(kind:'ClassSubmission', secret:secret)
+- locals = {form:form, mode:'review', review: form.review}.merge(form.data)
+= view :class_submission, locals
+= view :class_review, locals

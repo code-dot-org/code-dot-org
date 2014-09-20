@@ -1,0 +1,73 @@
+"hr":
+  devise:
+    confirmations:
+      confirmed: Tvoja e-mail adresa je potvrđena.
+      send_instructions: Za par minuta ćeš primiti e-mail s uputama kako da potvrdiš
+        svoj korisnički račun.
+      send_paranoid_instructions: Ako tvoja e-mail adresa postoji u našoj bazi, za
+        par minuta ćeš primiti e-mail s uputama kako da potvrdiš svoj korisnički račun.
+    failure:
+      already_authenticated: Već si prijavljen.
+      inactive: Tvoj korisnički račun još nije aktiviran.
+      invalid: Neispavan e-mail ili lozinka.
+      invalid_token: Neispravan token.
+      locked: Tvoj korisnički račun je zaključan.
+      not_found_in_database: Neispavan e-mail ili lozinka.
+      timeout: Vrijeme prijave je isteklo. Za nastavak je potrebno da se ponovno prijaviš.
+      unauthenticated: Za nastavak je potrebno da se registriraš ili prijaviš.
+      unconfirmed: Za nastavak je potrebno da potvrdiš svoj korisnički račun.
+    mailer:
+      confirmation_instructions:
+        subject: Code.org upute za potvrđivanje
+      reset_password_instructions:
+        subject: Code.org upute za ponovno postavljanje lozinke
+      unlock_instructions:
+        subject: Upute za otključavanje
+    omniauth_callbacks:
+      failure: Ne možemo te raspoznati od %{kind} zbog "%{reason}".
+      success: Uspješno raspoznato od %{kind} korisničkog računa.
+    passwords:
+      no_token: You can't access this page without coming from a password reset email.
+        If you do come from a password reset email, please make sure you used the
+        full URL provided.
+      send_instructions: You will receive an email with instructions about how to
+        reset your password in a few minutes.
+      send_paranoid_instructions: Ako vaša adresa elektroničke pošte postoji u našoj
+        bazi podataka, primit ćete  poveznicu za poništavanje lozinke u email poruci
+        za nekoliko minuta.
+      updated: Vaša lozinka je uspješno promijenjena. Sada ste prijavljeni.
+      updated_not_active: Uspješno ste promijenili svoju lozinku.
+    registrations:
+      destroyed: Bye! Your account was successfully cancelled. We hope to see you
+        again soon.
+      signed_up: Welcome! You have signed up successfully.
+      signed_up_but_inactive: You have signed up successfully. However, we could not
+        sign you in because your account is not yet activated.
+      signed_up_but_locked: Uspješno ste se prijavili, međutim nismo vas mogli prijaviti
+        jer je vaš račun zaključan.
+      signed_up_but_unconfirmed: A message with a confirmation link has been sent
+        to your email address. Please open the link to activate your account.
+      update_needs_confirmation: You updated your account successfully, but we need
+        to verify your new email address. Please check your email and click on the
+        confirm link to finalize confirming your new email address.
+      updated: Uspješno ste ažurirali svoj račun.
+    sessions:
+      signed_in: Uspješno ste se prijavili.
+      signed_out: Uspješno ste odjavljeni.
+    unlocks:
+      send_instructions: Za nekoliko minuta zaprimit ćete email poruku sa uputama
+        kako da otključate svoj korisnički račun.
+      send_paranoid_instructions: If your account exists, you will receive an email
+        with instructions about how to unlock it in a few minutes.
+      unlocked: Vaš račun je uspješno otključan. Molimo prijavite se ponovo.
+  errors:
+    messages:
+      already_confirmed: was already confirmed, please try signing in
+      confirmation_period_expired: needs to be confirmed within %{period}, please
+        request a new one
+      expired: istekao je, molimo zatražite novi
+      not_found: nije pronađeno
+      not_locked: nije zaključan
+      not_saved:
+        one: '1 error prohibited this %{resource} from being saved:'
+        other: "%{count} errors prohibited this %{resource} from being saved:"

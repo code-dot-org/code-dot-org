@@ -1,0 +1,12 @@
+name 'Math to Code 1'
+title 'Racket Code for Math Expressions'
+content1 'Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!'
+
+question '(5 + 6) * 8 / 2'
+wrong '(/ (* 8 2) (+ 5 6))'
+wrong '(* (+ 5 6) (/ 8 2))'
+right '(/ (* (+ 5 6) 8) 2)'
+wrong '(/ (+ 5 6) (* 8 2))'
+
+
+

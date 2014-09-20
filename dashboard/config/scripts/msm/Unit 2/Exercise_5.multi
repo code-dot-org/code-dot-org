@@ -1,0 +1,12 @@
+name 'image code from circle'
+title 'Code from Circle'
+content1 '/script_assets/msm/Unit%202/exercise_5.png'
+
+question 'Pick the Racket code that comes from the circle of evaluation!'
+wrong '(rectangle (10) (2) "solid" "red")'
+wrong '(rectangle 10 2 "solid" "red")'
+right '(rectangle (+ 8 2) (- 7 5) "solid" "red")'
+wrong '(rectangle (+ 8 2) (- 7 5) solid red)'
+
+
+

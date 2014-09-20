@@ -1,0 +1,34 @@
+{
+  "au": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
+  },
+  "ar": {
+    "full_date": "October 11-17, 2014",
+    "default_language": "en"
+  },
+  "br": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
+  },
+  "eu": {
+    "full_date": "October 11-17, 2014",
+    "default_language": "en"
+  },
+  "nz": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
+  },
+  "ro": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
+  },
+  "uk": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
+  },
+  "us": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
+  }
+}

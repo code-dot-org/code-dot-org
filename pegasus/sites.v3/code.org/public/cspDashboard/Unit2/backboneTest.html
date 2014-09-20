@@ -1,0 +1,78 @@
+<!DOCTYPE>
+<html>
+<head>
+  <script src="js/jquery.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="js/backbone.js"></script>
+
+  <script>
+   var appleData = [
+      {
+        name: "fuji",
+        url: "imgs/fuji.jpg"
+      },
+      {
+        name: "gala",
+        url: "imgs/gala.jpg"
+      }      
+    ];
+    var app;
+    var router = Backbone.Router.extend({
+      routes: {
+        '': 'home',
+        'apples/:appleName': 'loadApple',
+        'foo': 'fooFunc'
+      },
+      initialize: function(){
+        var apples = new Apples();
+        apples.reset(appleData);
+        this.homeView = new homeView({collection: apples});
+        this.appleView = new appleView({collection: apples});
+      },
+      home: function(){        
+        this.homeView.render();
+      },
+      loadApple: function(appleName){
+        this.appleView.render(appleName);
+      },
+      foo: function(){
+        this.homeView.render();
+      }
+    });
+
+    var homeView = Backbone.View.extend({
+      el: 'body',
+      template: _.template('Apple data: <%= data %>'),
+      render: function(){
+        this.$el.html(this.template({data: JSON.stringify(this.collection.models)}));
+      }
+      //TODO subviews
+    });
+
+    var Apples = Backbone.Collection.extend({
+
+    });
+    var appleView = Backbone.View.extend({
+      template: _.template('<figure>\
+                              <img src="<%= attributes.url%>"/>\
+                              <figcaption><%= attributes.name %></figcaption>\
+                            </figure>'),
+      //re-write with load apple and event binding
+      render: function(appleName){
+        var appleModel = this.collection.where({name:appleName})[0];
+        var appleHtml = this.template(appleModel);
+        $('body').html(appleHtml);
+      }
+    });
+    $(document).ready(function(){
+      app = new router;
+      Backbone.history.start();      
+    })
+
+
+  </script>
+</head>
+<body>
+  <div></div>
+</body>
+</html>

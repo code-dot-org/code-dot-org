@@ -1,0 +1,57 @@
+"vi":
+  devise:
+    confirmations:
+      confirmed: "Your email address was successfully confirmed."
+      send_instructions: "Bạn sẽ nhận được một email hướng dẫn xác nhận tài khoản của bạn trong vài phút nữa."
+      send_paranoid_instructions: "Nếu địa chỉ email của bạn có trong cơ sở dữ liệu của chúng tôi, bạn sẽ nhận được một email hướng dẫn cách xác nhận tài khoản của bạn trong vài phút."
+    failure:
+      already_authenticated: "Bạn đã đăng nhập."
+      inactive: "Tài khoản của bạn chưa được kích hoạt."
+      invalid: "Email hoặc mật khẩu không hợp lệ."
+      invalid_token: "Mã xác thực không hợp lệ."
+      locked: "Tài khoản của bạn đã bị khóa."
+      not_found_in_database: "Email hoặc mật khẩu không hợp lệ ."
+      timeout: "Phiên của bạn đã hết hạn, xin vui lòng đăng nhập lại để tiếp tục."
+      unauthenticated: "Bạn cần phải đăng nhập hoặc đăng ký trước khi tiếp tục."
+      unconfirmed: "Bạn phải xác nhận tài khoản của bạn trước khi tiếp tục."
+    mailer:
+      confirmation_instructions:
+        subject: "Code.org confirmation instructions"
+      reset_password_instructions:
+        subject: "Code.org reset password instructions"
+      unlock_instructions:
+        subject: "Hướng dẫn mở khóa"
+    omniauth_callbacks:
+      failure: 'Could not authenticate you from %{kind} because "%{reason}".'
+      success: 'Xác thực thành công từ tài khoản %{kind}.'
+    passwords:
+      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
+      send_instructions: "Bạn sẽ nhận được một email hướng dẫn đặt lại mật khẩu của bạn trong vài phút."
+      send_paranoid_instructions: "Nếu địa chỉ email của bạn có trong cơ sở dữ liệu của chúng tôi, bạn sẽ nhận được một liên kết phục hồi mật khẩu qua email của bạn trong vài phút."
+      updated: "Mật khẩu được thay đổi thành công. Đã đăng nhập."
+      updated_not_active: "Mật khẩu được thay đổi thành công."
+    registrations:
+      destroyed: "Tạm biệt! Tài khoản của bạn đã được hủy bỏ thành công. Hẹn gặp lại bạn lần sau."
+      signed_up: "Chào mừng! Bạn đã đăng ký thành công."
+      signed_up_but_inactive: "Bạn đã đăng ký thành công. Tuy nhiên, chúng tôi không thể cho bạn đăng nhập bởi vì tài khoản của bạn chưa được kích hoạt."
+      signed_up_but_locked: "Bạn đã đăng ký thành công. Tuy nhiên, chúng tôi không thể cho bạn đăng nhập bởi vì tài khoản của bạn đã bị khóa."
+      signed_up_but_unconfirmed: "Một tin nhắn với liên kết xác nhận đã được gửi đến địa chỉ email của bạn. Xin vui lòng mở liên kết để kích hoạt tài khoản của bạn."
+      update_needs_confirmation: "Bạn cập nhật tài khoản của mình thành công, nhưng chúng ta cần phải xác minh địa chỉ email mới của bạn. Hãy kiểm tra email của bạn và bấm vào liên kết xác nhận để xác nhận địa chỉ email mới của bạn."
+      updated: "Bạn đã cập nhật tài khoản thành công."
+    sessions:
+      signed_in: "Đăng nhập thành công."
+      signed_out: "Đăng xuất thành công."
+    unlocks:
+      send_instructions: "Bạn sẽ nhận được một email hướng dẫn mở khóa tài khoản của bạn trong vài phút nữa."
+      send_paranoid_instructions: "Nếu tài khoản của bạn tồn tại, bạn sẽ nhận được một email hướng dẫn mở khóa nó trong vài phút nữa."
+      unlocked: "Tài khoản của bạn đã được mở khóa thành công. Xin vui lòng đăng nhập để tiếp tục."
+  errors:
+    messages:
+      already_confirmed: "đã được xác nhận, hãy thử đăng nhập"
+      confirmation_period_expired: 'cần được xác nhận nhận trong khoảng %{period}, xin vui lòng yêu cầu cái mới'
+      expired: "đã hết hạn, xin vui lòng yêu cầu cái mới"
+      not_found: "không tìm thấy"
+      not_locked: "was not locked"
+      not_saved:
+        one: '1 error prohibited this %{resource} from being saved:'
+        other: '%{count} errors prohibited this %{resource} from being saved:'

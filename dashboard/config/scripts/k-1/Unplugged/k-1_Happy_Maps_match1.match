@@ -1,0 +1,13 @@
+name 'K-1 Happy Maps Match 1'
+title 'Matching'
+content1 'Match the Map to the arrow that gets the Flurb to the treasure'
+height '150'
+
+question '/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png'
+answer '/script_assets/k_1_images/unplugged_images/up.png'
+
+question '/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png'
+answer '/script_assets/k_1_images/unplugged_images/right.png'
+
+question '/script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png'
+answer '/script_assets/k_1_images/unplugged_images/left.png'

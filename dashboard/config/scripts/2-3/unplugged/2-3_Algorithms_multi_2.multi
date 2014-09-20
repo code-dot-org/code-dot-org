@@ -1,0 +1,11 @@
+name '2-3 Algorithms Multi 2'
+title 'Multiple Choice'
+banner ''
+description 'Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square'
+height '100'
+
+question 'Which image does <em>not</em> follow this algorithm?'
+wrong '/script_assets/2-3_images/unplugged/algorithms_2_a1.png'
+right '/script_assets/2-3_images/unplugged/algorithms_2_a2.png'
+wrong '/script_assets/2-3_images/unplugged/algorithms_2_a3.png'
+wrong '/script_assets/2-3_images/unplugged/algorithms_2_a4.png'

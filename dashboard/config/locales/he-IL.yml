@@ -1,0 +1,537 @@
+"he":
+  activerecord:
+    errors:
+      messages:
+        blank: is required
+    attributes:
+      user:
+        name: "שם"
+        email: "אימייל"
+        username: |
+          שם משתמש
+        password: "סיסמא"
+        password_confirmation: "וידוא סיסמא"
+        current_password: "הסיסמה הנוכחית"
+        locale: "שפה"
+        age: Age
+        gender: "מין"
+        edit_header: "שינוי פרטי החשבון"
+        error:
+          future: "לא יכול להיות בעתיד"
+  hello: "הי עולם"
+  welcome_back: "ברוך שובך, %{name}"
+  add_teacher_form:
+    code_or_email:
+      label: "הוספת מורה על-ידי קוד או כתובת אימייל:"
+      placeholder: "קוד (ABCDEF) או אימייל (teacher@school.edu)"
+    code:
+      label: 'Add a teacher by section code:'
+      placeholder: Code (ABCDEF)
+    submit: "הוסף מורה"
+  add_hint_form:
+    placeholder: "הכניסו בבקשה את הרמז שלכם כאן"
+    submit: "הוסף רמז"
+  appname: Code.org
+  stage: "שלב"
+  puzzle: "חידה"
+  trophies: "גביעים"
+  courses: "קורסים"
+  of: "של"
+  more: "יותר"
+  less: "פחות"
+  try_hoc: "נסה את שעת הקוד, לחץ כאן >> "
+  try_k8intro: "נסה את הקורס מבוא למדעי המחשב לכיתות גן-ח'(15-25 שעות)"
+  k8intro: "ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)"
+  already_started: "כבר התחלת? המשך כאן >> "
+  demos: "מנהל: כל הדוגמאות"
+  continue: "המשך"
+  prize: "פרס"
+  more_info: "מידע נוסף"
+  auth:
+    sign_in_with: "היכנס באמצעות %{provider}"
+    signed_in: "נכנסת!"
+    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
+    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
+      to sign out of %{provider}.
+    already_signedup: "כבר נרשמת?"
+    notyet_signedup: "לא הצטרפת עדיין?"
+    google_oauth2: Google Account
+    twitter: "טוויטר"
+    facebook: "פייסבוק"
+    windowslive: Microsoft Account
+    forgot_password: "שכחת את הסיסמא שלך?"
+    need_confirmation: "לא קיבלת את  ההוראות האישור?"
+    need_unlock: "לא קיבלת את ההוראות הפתיחה?"
+  signup_form:
+    overview_student: "הירשמ/י לחשבון כדי לעקוב אחרי התקדמותך."
+    overview_teacher: "הירשם לחשבו על מנת ללמד בכיתתך את מדעי המחשב.<p/> תוכל לעקוב
+      אחרי התקדמות התלמידים שלך ולזכות בפרסים."
+    no_signup_message: אתה יכול <a target="_blank" href="http://learn.code.org">לדפדף
+      בחידות והשלבים השונים</a>, אבל אתה צריך להירשם על-מנת לשמור את התקדמותך.
+    prizes_message: תלמידים מארה"ב שזוכים בכל %{num_trophies} גביעי המושגים יכולים
+      לבחור מסוגי פרסים רבים כגון מקום דרופבוקס בחינם, אשראי Skype, ומשחקים להורדה
+      מבית Electronic Arts.
+    teacher_educator_guide: "ראה מדריך למחנך"
+    teacher_prize_header: זכה ב 1000$ ב <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+      פרסים(מ 15 ביוני 2014 עד סוף האספקה)
+    teacher_prize_message: 'בשיתוף עם <a target="_blank" href="http://DonorsChoose.org">
+      DonorsChoose.org</a>, Code.org יציע עד 1,000 דולר במימון בכיתה כדי מורות בבית
+      ספר ציבורי אמריקאי להוביל תלמידים לפחות 15 דרך ההקדמה K-8 קורס מדעי המחשב (דרך
+      יוני 15, 2014, גמר המלאי).  <a href="http://code.org/educate/20hr"> עיין במדריך
+      למחנך</a>.  (מגבלה: 1,000 דולר לכל מורה.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">
+      ראה שאלות נפוצות לגבי גבולות יותר</a>.)'
+    teacher_pitch: "הירשמות מורה ל code.org"
+    teacher_title: "הרשמת מורה"
+    student_pitch: "הירשמות תלמיד ל code.org"
+    student_title: "הירשמות לתלמיד"
+    school_name: "שם בית הספר (אופציונלי)"
+    school_address: "כתובת בית הספר (אופציונלי)"
+    address_placeholder: "כתובת, עיר, מדינה, מיקוד"
+    gender: "מין (אופציונלי)"
+    birthday: "יום הולדת (אופציונלי)"
+    age: "גיל (לא חובה)"
+    submit: "הירשם"
+    teacher: "האם אתה מורה?"
+    valid_username: "זמין!"
+    invalid_username: "שם המשתמש חייב להיות לפחות 5 תווים"
+    taken_username: "שם המשתמש כבר תפוס"
+    valid_password: "סיסמה תקינה!"
+    invalid_password: "הסיסמא חייבת להכיל לפחות 6 תווים"
+    mismatch_password: "שתי הסיסמאות שהזנת אינן תואמות"
+    student_terms: "אני מסכים להיות מחוייב לתנאי השירות של Code.org. אם אני מתחת לגיל
+      13, אני מאשר, ע״י שליחה של טופס זה, שהורה או אפטרופוס חוקי אישר לי להשתמש בשירותים
+      שמציע האתר Code.org."
+    teacher_terms: "אני מסכים להיות מחויב לתנאי השימוש של Code.org."
+    additional_information: We need some additional information to continue signing
+      you up.
+  signin_form:
+    title: "כבר יצרת משתמש? היכנס למערכת"
+    login: "דוא ל או שם משתמש"
+    password: "סיסמא"
+    remember: "זכור אותי"
+    submit: "התחבר"
+  signin:
+    try_heading: "רוצה לנסות לכתוב קוד ללא הרשמה?"
+    try_hoc: "נסה קודם את שעת הקוד"
+    try_20hours: "נסה את קורס ה-20 שעות שלנו - מבוא למדעי המחשב"
+  signinsection:
+    welcome: Welcome to %{section_name}
+    name: Choose your name
+    picture: Now find your secret picture
+    words: Now enter your secret words
+    login: "התחבר"
+  password:
+    reset_form:
+      title: "שכחת את הסיסמא שלך?"
+      email: "כתובת דואר אלקטרוני"
+      submit: "שלח לי הוראות לאיפוס סיסמא"
+    change_form:
+      title: "שנה את הסיסמא שלך"
+      new_password: "סיסמא חדשה"
+      confirm_password: "אשר סיסמא חדשה"
+      submit: "שנה את הסיסמא שלי"
+  welcome_email:
+    subject: "הצטרפו לשיעור (Code.org)"
+    body: |
+      לחץ על הקישור להלן כדי להירשם לקבלת הדרכות מדעי המחשב ב- Code.org (איתי בתור ה"מורה" שלך):
+
+      %{link}
+
+      הלימוד כיפים, מועברים באופן חזותי, ומלמדים את המושגים הבסיסיים של מדעי המחשב באמצעות חוויה פשוטה, מדריכים, משחקי דמוי.
+      ללמוד קוד מביל גייטס, מארק צוקרברג, כועס ציפורים, וצמחים נגד זומבים! :-)
+
+      %{name}
+  follower:
+    invite_sent: "הזמנה נשלחה"
+    added_teacher: "%{name} נוסף כמורה שלך"
+    registered: "נרשמת ל: %{section_name}."
+    error:
+      signed_in: "בבקשה תצא לפני שתמשיך"
+      username_not_found: "שם משתמש %{username} לא נמצא"
+      username_in_use: "%{username} כבר תפוס. בבקשה תבחר אחר"
+      no_teacher: |
+        לא נמצא משתמש רשום ע״י ״%{teacher_email_or_code}״.
+        אנא בקש מהם להירשם כאן ונסה להוסיף אותם שנית
+      section_not_found: Could not find a section with code '%{section_code}'.
+      blank_code: "בבקשה הכנס קוד או אימייל המורה שלך"
+      cant_join_own_section: Sorry, you can't join your own section.
+    mail:
+      invite_student:
+        subject: "הצטרף לכיתה עם %{teacher_name} ב-Code.org!"
+      student_disassociated:
+        subject: "הודעה מCode.org: %{student_name} כבר לא רשום כתלמיד שלך."
+      teacher_disassociated:
+        subject: "הודעת מערכת: {teacher_name}%לא משויך עוד כמורה שלך. "
+  reports:
+    error:
+      access_denied: "אין לך גישה לסטטיסטיקות של האדם הזה"
+  redeem_prizes:
+    title: "פדה פרסים: %{name}"
+    provider: "ספק:"
+    code: "קוד:"
+    redeem_header: 'To redeem:'
+    donorschoose_register: "הירשם כמורה ב donorschoose.org"
+    donorschoose_project: "פרסם פרוייקט"
+    donorschoose_how_to: "איך להשתמש בקוד שלך"
+    success: Your prize was succesfully redeemed, see code below.
+    error: Your prize could not be redeemed, please try again.
+    error_us_only: "הפרס הזה תקף אך ורק לתושבי ארצות הברית."
+    error_not_earned: "עדיין לא השגת את הפרס הזה."
+    error_already_redeemed: "הפרס שלך כבר נפדה."
+    no_prizes_available: "אנו מצטערים, אך כרגע אין לנו אף פרס זמין."
+    teacher_info_required: 'פרסים של מורים מחייבים שם בי"ס וכתובת:'
+    teacher_email_required: 'פרסי מורים דורשים כתובת דוא"ל מאושרת:'
+    confirm:
+      title: Please Confirm
+      'no': "לא"
+      'yes': "כן"
+      msg: "אתה בטוח שאתה רוצה לבחור בפרס %{prize_name}?"
+      msg_student: "הערה: ניתן לבחור רק סוג אחד של פרס."
+      msg_publicschool: נא אשר כי הנך מורה בבית-ספר ציבורי בארה"ב.
+      msg_visit_website: Visit website
+    providers:
+      apple_itunes: "$10 iTunes Gift Card"
+      donors_choose: DonorsChoose.org $750 credit
+      donors_choose_bonus: DonorsChoose.org $250 credit
+      dropbox: נפח של 10 ג'יגה בייט ב"Dropbox"
+      valve: Portal 2 (PC or Mac game download)
+      ea_bejeweled: Bejeweled 3 (PC game download)
+      ea_fifa: FIFA Soccer 13 (PC game download)
+      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
+      ea_pvz: Plants vs. Zombies (PC game download)
+      skype: "$10 Skype credit"
+    msg:
+      choose: "בחרו בפרס:"
+      choose_teacher: 'Click on the logo below to claim your prize:'
+      earned: "זכית בפרס! (לתושבי ארצות הברית בלבד)"
+      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      not_earned: 'למד את כל המושגים של מדעי המחשב, אסוף את כל ה%{num_trophies} גביעים,
+        וזכה בפרסים אמיתיים. אתה יכול לבחור בין 10GB של מקום בדרופבוקס חינם, $10 בקרדיטים
+        של Skype, והורדות של משחקים בחינם. הערה: הצעה זו תקפה רק לתושבי ארה"ב, ורק
+        כל עוד נשאר במלאי.'
+      teacher:
+        earned: 15 או יותר תלמידים אספו % {num_trophies} גביעים, שהם כל הגביעים. זכית
+          בפרס המורה! (מורים בארה"ב בלבד)
+        not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
+          href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
+          only)
+        not_earned: 'רק למורים בבי"ס ציבוריים בארה"ב: כדי לתגמל מורים המלמדים בפעם
+          הראשונה מדעי-המחשב, את/ה יכול/ה להרוויח עד $1000 ב<a href="http://DonorsChoose.org">
+          קרדיטים על הנחיית כיתה בכל קורס המבוא (K-8). כדי להיות רשאיים לקבל את הפרס,
+          עליכם להנחות בהצלחה כיתה של לפחות 15 תלמידים בכל קורס המבוא, שכל 15 התלמידים
+          גומרים את שיעורי ההדרכה, ומקבלים את כל ה%{num_trophies} גביעים. אם יותר
+          מ7 מהתלמידים המקבלים את כל הגביעים הם בנות, הפרס שלך הוא $1000 ב<a target="_blank"
+          href="http://DonorsChoose.org"> קרדיטים. אחרת, הפרס שלך הוא $750 ב<a target="_blank"
+          href="http://DonorsChoose.org"> קרדיטים.  בקרדיטים של <a target="_blank"
+          href="http://DonorsChoose.org"> רק מורים בבי"ס ציבוריים בארה"ב יכולים להשתמש.'
+        bonus:
+          not_earned_title: You can still earn an additional $250 in <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
+            only)
+          earned: 7 או יותר מהתלמידים שקיבלו את כל ה%{num_trophies} גביעים הם בנות.
+            קיבלת פרס בונוס! (רק למורים מארה"ב.)
+          not_earned: אם לפחות 7 מהתלמידים שלך שקיבלו את כל ה%{num_trophies} גביעים
+            הם בנות, הפרס שלך הוא $250 בונוס ב<a target="_blank" href="http://DonorsChoose.org">
+            קרדיטים. רק מורים בבי"ס ציבוריים בארה"ב יכולים להשתמש בקרדיטים של <a target="_blank"
+            href="http://DonorsChoose.org">.
+  crud:
+    new_model: "חדש %{model}"
+    show: "הצג"
+    edit: "ערוך"
+    edit_model: "ערוך %{model}"
+    update: "עדכון"
+    destroy: "להשמיד"
+    back: "חזור"
+    confirm: "אתה בטוח?"
+    created: "%{model} נוצר בהצלחה."
+    updated: "%{model} עודכן בהצלחה."
+    destroyed: "%{model} נמחק בהצלחה."
+    access_denied: "אין לך גישה ל%{model}."
+  nav:
+    header:
+      finished_hoc: "סיימתי את שעת הקוד שלי"
+      sign_in_to_save: "התחבר כדי לשמור את התקדמות"
+    user:
+      classroom: "התלמידים שלי"
+      label: "היי %{username}"
+      stats: "ההתקדמות שלי"
+      settings: "החשבון שלי"
+      prizes: "פרסים"
+      logout: "התנתק"
+      signin: "התחבר"
+      signup: "הירשם"
+      already_registered: Already registered?
+    popup:
+      progress: "ההתקדמות שלך"
+      lines: "סה כ שורות קוד: %{lines}"
+      close: "סגור"
+      mastery: "עקרונות"
+      puzzle_map: "שלבים"
+      prizes: "אסוף את כל ה-%{total_trophies} פרסים כדי לזכות בפרס אמיתי!"
+      prize_earned: "כל %{total_trophies} הפרסים נאספו! זכית בפרס!"
+      prize_us_only: "(תלמידי ארצות-הברית בלבד!)"
+      prizes_link: "מידע נוסף"
+  teacher:
+    title:
+      one: "המורה שלך :"
+      other: "המורים שלך:"
+    remove: "(מחק מורה)"
+    confirm:
+      remove: "האם אתה בטוח שברצונך להסיר את המורה הזה?"
+    tools: "כלים למורה"
+    followers:
+      section: 'Section:'
+      stages: 'Stage(s) to display:'
+      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      levels_key: Levels key
+      perfect: Completed, perfect
+      completed: Completed, but using too many blocks
+      tried: Tried, but not completed
+      not_tried: Not tried yet
+      activity: Indicates student activity in the last %{hours} %{plural}
+      no_section: No assigned section
+      trophies: "גביעים"
+    students:
+      name: "שם"
+      username: |
+        שם משתמש
+      password: "סיסמא"
+      manage: "נהל תלמידים"
+      dashboard: Go to Teacher Dashboard
+      add: "הוסף תלמיד"
+      remove: remove student
+      confirm_remove: Are you sure you want to remove this student?
+      help_reassign: To divide your class into multiple sections, select students
+        to assign to a new section.
+      help_register: Instead of making you spend a lot of time individually importing
+        student data, you can set up your class quickly by asking them to signup.
+        Your students will need to choose usernames and passwords, but they WILL NOT
+        be required to provide an email address. If a student forgets their password,
+        you will be able to reset it for them.
+      register: Ask your students to register themselves
+      vist: Ask your students to visit
+      section_code: 'and enter their section-code:'
+      first_please: First, please %{add_section}
+      for: For
+      enter: 'enter:'
+    sections:
+      add: Add section
+      manage: "נהל אגפים"
+      section: Section
+      students: Students
+      section_code: Section Code
+      add_section_code: Add Students Section-Code
+      secret: Secret type
+      grade: Grade
+      course: Course
+      rename: rename
+      edit: edit
+      delete: delete
+      confirm_delete: Are you sure you want to delete this section?
+      email: Send in email
+    rollup: "לוח התקדמות"
+    activity: "פעילות אחרונה בכיתה"
+    user_not_found: "לא ניתן היה למצוא את המורה או התלמיד"
+    cant_remove_student_no_email: "%{student_name} לא יכול להיות מוסר מרשימת התלמידים
+      שלך בגלל ש %{student_name} לא נרשם עם כתובת מייל"
+    cant_remove_teacher_no_email: "%{teacher_name} לא יכול להימחק מרשימת המורים שלך
+      מכיוון שלא נרשמת עם כתובת מייל"
+    student_teacher_disassociated: "% {teacher_name} הוסר כמורה של % {student_name}"
+  user:
+    email_confirm_needed: 'כתובת הדוא"ל עוד לא אושרה:'
+    email_resend_confirm: שלח מחדש הוראות אישור דוא"ל
+    new_password_hint: "(השאר ריק אם אין ברצונך לשנות)"
+    current_password_hint: "(אנחנו צריכים את הסיסמה הנוכחית שלך כדי לאשר את השינויים
+      שלך)"
+    cancel:
+      title: "בטל את החשבון שלי"
+      hint: "לא שמח?"
+      button: "בטל את החשבון שלי"
+  user_level:
+    completed: "הושלם"
+    tried: "נוסה"
+  user_stats:
+    recent_activity: "פעילות אחרונה"
+    show_more: "הצג יותר"
+    classroom_activity: "פעילות לא מחוברת"
+  home:
+    title: Code Studio
+    signin_message: "כבר רשום?  %{link}"
+    student_reg_link: "הירשמות תלמיד"
+    teacher_reg_link: "הירשמות מורה"
+    signin_directions: "השתמש בחשבון כדי לעקוב אחרי התקדמות.<br/> מורים, עקבו אחרי
+      כל הכיתה."
+    teacher_dashboard: "לראות התקדמות לוח המחוונים"
+    teacher_student_count_one: "יש לך %{count} תלמיד."
+    teacher_student_count: "יש לך %{count} תלמידים."
+    teacher_averages: "בממוצע, התלמידים שלך הרוויחו %{trophy_average} פרסים, מתוך
+      %{trophy_max} אפשריים."
+    teacher_print_certificates: "הדפס תעודות לתלמידים שגמרו את הקורס הזה"
+    teacher_read_blog: קרא על חדשות ועדכונים לחומרים שלנו ב"בלוג מחנכים"
+    classroom: "הכיתה שלך"
+    student_progress: "התקדמות הלמידה שלך"
+    student_stats: "הרווחת %{trophy_count} פרסים מתוך %{trophy_max} אפשריים."
+    student_left_off: "היכן שהפסקתם:"
+    student_finished_prize: "השלמת את כל המדריכים הרווחת את %{prize_link} ותוכל לקחת
+      שיעור אחר %{online_link} או %{local_school_link}"
+    student_finished: "את/ה גמרת את כל שיעורי ההדרכה. בחר כיתה אחרת %{online_link}
+      או ב%{local_school_link}"
+    local_school: בה"ס מקומי
+    online: "באינטרנט"
+    see_details: "ראה פרטים"
+    prize_info: "פרסים על השתתפות(מורים מארצות הברית בלבד): עד ל 1000$ בפרסי כיתה."
+    tryfirst: "או, שתוכל לנסות זאת קודם כל, ולהירשם לאחר מכן:"
+    trynow: "נסה עכשיו"
+    add_hint_help: "אנא עזור לנו להוסים רמזים חכמים למדריכים code.org"
+    20hour_overview: "בקורס בן ה20 שעות הזה נפגוש את ליבת מדעי המחשב ורעיונות התכנות.
+      הקורס תוכנן לשימוש בכיתוב k-8, אבל זה כף ללמידה בכל הגילאים."
+    test_videos_help: "נסה את נגן הוידאו החדש שלנו בבית ספרך"
+    try_beta_courses: New! Try our beta courses for K-5 students
+    use_as_teacher: Use this site as a teacher
+    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
+    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+  gender:
+    male: "גבר"
+    female: "אישה"
+    none: "מעדיף לא לענות"
+  footer:
+    help_from_html: המהנדסים של <a href="http://www.google.com"> גוגל</a>, <a href="http://www.microsoft.com">
+      מיקרוסופט</a>, <a href="http://www.facebook.com"> פייסבוק</a>, <a href="http://www.twitter.com">
+      טוויטר</a> עזרו ליצור ערכת לימוד זו.
+    art_from_html: Angry Birds&trade; ו&copy; 2009-2013 <a href="http://www.rovio.com">Rovio
+      Entertainment Ltd</a>כל הזכויות שמורות.<br/>Plants vs. Zombies&trade; ו&copy;
+      2013<a href="http://www.ea.com">Electronic Arts Inc.</a>. כל הזכויות שמורות.
+    feedback: "משוב"
+    translate: "עזרו לנו לתרגם לשפתך"
+    support: "תמיכה"
+    tos: "תנאים"
+    privacy: "הצהרת פרטיות"
+    secure: "גרסה מאובטחת"
+  prize_mail:
+    prize_earned:
+      subject: Redeem your prize at Code.org!
+    teacher_prize_earned:
+      subject: Redeem your prize at Code.org!
+    teacher_bonus_prize_earned:
+      subject: Redeem your bonus prize at Code.org!
+  reference_area:
+    title: "צריך עזרה?"
+    subtitle: "לראות את קטעי וידאו ורמזים"
+    teacher: "תראה את הפתרון"
+    auth_error: "אינך מורשה לראות את הפתרון."
+    submit: "עדכן מיקום אומן"
+    direction: "התחל כיוון"
+  video:
+    tab: "וידאו."
+    notes: "אין וידאו? הצג הערות."
+    notes_coming_soon: Notes for this video coming soon.
+    autoplay_option: "הפעלה אוטומטית של סרטונים"
+    download: "הורד סרטון"
+  compatability:
+    working: "אנחנו עובדים על תמיכה עבור הדפדפן שלך."
+    upgrade: "אנא שדרג את הדפדפן."
+  slow_loading: "זה לוקח זמן רב מהרגיל..."
+  try_reloading: "נסה טעינה מחדש של הדף"
+  next_stage: "סיימת! המשך לשלב הבא"
+  download_pdf: "שיעור פתוח"
+  view_lesson_plan: View Lesson Plan
+  pdf_download: Download PDF
+  share_code:
+    title: "לחץ'ריצה' כדי לראות את התקדמותי בזמן פעולה"
+    bounce_og_title: "תראה את המשחק קפיצה שלי"
+    flappy_og_title: "תראה את משחק ההתנופפות שלי"
+    studio_og_title: "תראה את הסיפור שלי"
+    og_description: "כתבתי קוד בעצמי באמצעות code.org"
+  builder:
+    created: "יצרתי תסריט חדש."
+    destroyed: "הרסתי תסריט."
+    manage: "בנה שלבים"
+    view: "צפייה"
+    back: "בחזרה לתסריטים"
+    success: "ערכת בהצלחה לבנים"
+    level:
+      create: "צור שלב חדש"
+      current: "שלבים נוכחיים"
+      unused: "שלבים שלא נוצלו"
+  upsell:
+    hoc:
+      title: "שעה של קוד"
+      body: "נסה את הבסיס של מדעי המחשב.מיליונים כבר ניסו."
+    flappy:
+      title: "קוד מתנופף"
+      body: "רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות שלנו!"
+    20hour:
+      title: "קורס מבוא"
+      body: "נסה את קורס מדעי המחשב בן 20 השעות שלנו."
+  gallery:
+    students_drew_these_with_code: "תלמידים ציירו את אלה בעזרת קוד!"
+    picture_count: "בימים<b>%{days}</b> האחרונים, תלמידים ציירו  <b>%{count}</b> תמונות
+      בעזרת כתיבת תוכנות במחשב שלהם. לחץ על כל תמונה כדי לראות את ההתקדמות של כל אחד."
+    want_to_make_your_own: "רוצה להכין אחד משלך?"
+    more: "עוד &rarr;"
+  landing:
+    prerelease: This page is still under development.
+    feedback: Give Feedback
+    report_bug: Report Bug
+    support: Get Help
+  multi:
+    wrong_title: "תשובה לא נכונה"
+    wrong_body: "התשובה שענית אינה נכונה.נא נסה שנית!"
+    correct_title: "נכון"
+    correct_body: "זאת התשובה הנכונה."
+  match:
+    wrong_title: "פתרון לא נכון"
+    wrong_body: "הפתרון שענית אינו נכון.נא נסה שנית!"
+    correct_title: "נכון"
+    correct_body: "זאת התשובה הנכונה."
+  dialog:
+    ok: "או-קיי"
+  time:
+    hour: 1 hour
+    day: day
+    week: week
+  data:
+    script:
+      name:
+        20-hour:
+          title: "ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)"
+          description: "בקורס בן ה20 שעות הזה נפגוש את ליבת מדעי המחשב ורעיונות התכנות.
+            הקורס תוכנן לשימוש בכיתוב k-8, אבל זה כף ללמידה בכל הגילאים."
+        Hour of Code:
+          title: "שעה של קוד"
+          description: ''
+        edit-code:
+          title: Edit Code
+          description: ''
+        events:
+          title: Events
+          description: ''
+        builder:
+          title: Builder
+          description: ''
+        flappy:
+          title: "קוד מתנופף"
+          description: "רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות
+            שלנו!"
+        jigsaw:
+          title: "פאזל"
+          description: ''
+        step:
+          title: "צעד"
+          description: ''
+        sample_level_builder:
+          title: Sample Level Builder
+          description: ''
+  age_interstitial:
+    age: Your age
+    header: Account Information Update
+    message: We're in the process of updating our experience to provide you with even
+      stronger privacy protections. To do this, we need existing users to enter their
+      age here.<br/>As always, code.org will never rent, sell or share this information
+      with any third parties.
+    sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
+      out</a>.
+  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
+    You may browse <a href="http://support.code.org">support.code.org</a> without
+    signing in or ask your parent or teacher to contact us for you.

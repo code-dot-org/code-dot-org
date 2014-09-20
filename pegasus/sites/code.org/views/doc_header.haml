@@ -1,0 +1,26 @@
+.header.printbackground{:style=>'width:100%; background-color:rgb(120,101,161); color:white; -webkit-print-color-adjust: exact;'}
+  .headercontent
+    #top
+      #divforpdf
+        #right{:style=>'float:right; padding:5px'}
+          %img{:src=>'/images/logo.png'}
+
+    #bottom.printbackground{:style=>'clear:both'}
+      - if unplugged
+        UNPLUGGED
+      - else
+        - if unitnumber
+          Unit #{unitnumber}:
+        - if unittitle
+          #{unittitle}
+          |
+      %h1{:style=>'color:white'}=title
+      %hr
+
+      - if disclaimer
+        %span.disclaimer
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          =disclaimer

@@ -1,0 +1,78 @@
+"it":
+  devise:
+    confirmations:
+      confirmed: Il tuo indirizzo di posta elettronica è stato confermato correttamente.
+      send_instructions: Riceverai entro pochi minuti un messaggio di posta elettronica
+        con le istruzioni per confermare il tuo account.
+      send_paranoid_instructions: Se il tuo indirizzo di posta elettronica è presente
+        nel nostro database, riceverai  entro pochi minuti un messaggio con le istruzioni
+        per confermare il tuo account.
+    failure:
+      already_authenticated: Hai già effettuato l'accesso.
+      inactive: Il tuo account non è stato ancora attivato.
+      invalid: Indirizzo di posta elettronica o password non validi.
+      invalid_token: Dati di autenticazione non validi.
+      locked: Il tuo account è bloccato.
+      not_found_in_database: Indirizzo di posta elettronica o password non validi.
+      timeout: La tua sessione è scaduta, per favore accedi nuovamente per continuare.
+      unauthenticated: Devi accedere o iscriverti per poter continuare.
+      unconfirmed: Devi confermare il tuo account per poter continuare.
+    mailer:
+      confirmation_instructions:
+        subject: Istruzioni di conferma di Code.org
+      reset_password_instructions:
+        subject: Istruzioni per il ripristino della password di Code.org
+      unlock_instructions:
+        subject: Istruzioni di sblocco
+    omniauth_callbacks:
+      failure: Non è stato possibile autenticarti da %{kind} perché "%{reason}".
+      success: Autenticazione riuscita dall'account %{kind}
+    passwords:
+      no_token: Non puoi accedere a questa pagina senza provenire da un messaggio
+        di posta elettronica per il ripristino della password. Se provieni da un messaggio
+        di posta elettronica per il ripristino della password, assicurati di avere
+        usato esattamente la URL fornita.
+      send_instructions: Riceverai entro pochi minuti un messaggio di posta elettronica
+        con le istruzioni su come ripristinare la password.
+      send_paranoid_instructions: Se il tuo indirizzo di posta elettronica è presente
+        nel nostro database, riceverai entro pochi minuti un messaggio con un link
+        per recuperare la password.
+      updated: La tua password è stata cambiata correttamente. Ora hai fatto accesso.
+      updated_not_active: La tua password è stata cambiata correttamente.
+    registrations:
+      destroyed: Ciao! Il tuo account è stato cancellato correttamente. Speriamo di
+        rivederti presto.
+      signed_up: Benvenuto! Ti sei iscritto correttamente.
+      signed_up_but_inactive: Ti sei iscritto correttamente, ma non puoi accedere
+        perchè il tuo account non è ancora stato attivato.
+      signed_up_but_locked: Ti sei iscritto correttamente, ma non puoi accedere perchè
+        il tuo account è bloccato.
+      signed_up_but_unconfirmed: Un messaggio con un link di conferma è stato inviato
+        al tuo indirizzo di posta elettronica. Ti preghiamo di cliccare sul link per
+        attivare il tuo account.
+      update_needs_confirmation: Hai aggiornato il tuo account correttamente, ma abbiamo
+        bisogno di verificare il tuo nuovo indirizzo di posta elettronica. Per favore
+        controlla la tua casella di posta elettronica e clicca sul link di conferma
+        per completare la modifica del tuo indirizzo di posta elettronica.
+      updated: Hai aggiornato il tuo account correttamente.
+    sessions:
+      signed_in: Accesso riuscito.
+      signed_out: Sei uscito correttamente.
+    unlocks:
+      send_instructions: Riceverai entro pochi minuti un messaggio di posta elettronica
+        con le istruzioni per sbloccare il tuo account.
+      send_paranoid_instructions: Se il tuo account esiste, riceverai entro pochi
+        minuti un messaggio di posta elettronica con le istruzioni per sbloccarlo.
+      unlocked: Il tuo account è stato sbloccato con successo. Per favore effettua
+        l'accesso per continuare.
+  errors:
+    messages:
+      already_confirmed: "è stato già confermato, per favore prova ad accedere"
+      confirmation_period_expired: deve essere confermata entro %{period}, si prega
+        di richiederla di nuovo
+      expired: "è scaduta, si prega di richiederne una nuova"
+      not_found: non trovato
+      not_locked: non è stato bloccato
+      not_saved:
+        one: '1 errore impedisce di salvare questo % {resource}:'
+        other: "%{count} errori impediscono di salvare questo % {resource}:"

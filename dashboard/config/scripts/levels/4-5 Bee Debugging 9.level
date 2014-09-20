@@ -1,0 +1,103 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-07-10T19:41:10.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "bee",
+    "instructions": "Why isn't the bee making enough honey?",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "true",
+    "start_direction": "1",
+    "honey_goal": "13",
+    "flower_type": "redWithNectar",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,-2,0,-6,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,-5,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "13"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false" deletable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="procedures_callnoreturn">
+                  <mutation name="make all honey"/>
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="procedures_callnoreturn">
+                              <mutation name="make all honey"/>
+                              <next>
+                                <block type="maze_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <next>
+                                    <block type="maze_moveForward">
+                                      <next>
+                                        <block type="maze_moveForward">
+                                          <next>
+                                            <block type="procedures_callnoreturn">
+                                              <mutation name="make all honey"/>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">make all honey</title>
+          <statement name="STACK">
+            <block type="bee_whileNectarAmount">
+              <title name="ARG1">honeyAvailable</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">1</title>
+              <statement name="DO">
+                <block type="maze_honey"/>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_nectar"/>
+        <block type="maze_honey"/>
+        <block type="procedures_callnoreturn" inline="false">
+          <mutation name="make all honey"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
+  </blocks>
+</Karel>

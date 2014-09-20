@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)http://cs.ucls.uchicago.edu/~bfranke/codeDotOrg/Pixelation/Pixelation_v2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link type="text/css" rel="stylesheet" href="./Pixelation_v2_files/pixelationStyles.css">
+<script type="text/javascript" src="./Pixelation_v2_files/pixelationScript3.js"></script>
+</head>
+<body onload="drawGraph()">
+
+	<header>
+		<h1>Introduction to Computer Science</h1>
+		<h1>B&amp;W Pixelation v.2 </h1>
+	</header>
+	<br>
+	<p><b>Directions:</b></p>
+	<b>B&amp;W File Protocol:</b><br>
+	<img src="./Pixelation_v2_files/BandWFileFormatStruture.png"><br>
+
+	<div id="input">
+		width:  <input type="text" id="width" value="0" size="2" disabled="true/"> 
+		height: <input type="text" id="height" value="0" size="2" disabled="true/">
+		<br>
+		bits per pixel: 1 <input type="hidden" id="bitsPerPixel" value="1"><br>
+		<br>
+		bin: <input type="radio" name="binHex" id="binHexRadio" value="bin " checked="checked" onchange="hexToBin(); drawGraph()"> hex:<input type="radio" name="binHex" id="binHexRadio" value="hex" onchange="binToHex(); drawGraph()">
+		<br>Binary Code:<br>
+		<textarea id="binaryImage" onkeyup="drawGraph()">0001 0111 0000 1011</textarea>
+			<div style="clear: both;">
+			<label class="canvasInputLabel">Zoom:</label> <input type="range" id="sqSizeSlider" onchange="drawGraph()" value="32" min="1" max="20.73913043478261"><label id="sqSizeLabel" class="canvasInputLabel">20 px</label>
+			<label class="canvasInputLabel"><br>Show pixel border</label><input type="checkbox" id="showPixelBorder" onchange="drawGraph()" checked="true"> | <input type="button" value="save PNG" onclick="showPNG(&#39;canvas&#39;)">
+
+		</div>
+		<div id="err">Length ERROR. binary:0, WxH:253</div>
+		<div id="example">EXAMPLE: Flower
+			0001001000010110000000000000000000000000001100000000000000010010000000000000010010000000000001101101100000000010010010010000000010010010010000000001101101100000000000010010000000000000010010000000000000001100000000000000001000000000000000001000000000000000001000000000000000001000000000000000001000000000000000111111000000000000011110000000000000011110000000000000011110000000000000000000000000
+		</div>
+	</div>
+
+	<div id="canvasDiv">
+		<canvas id="canvas" width="483" height="231"></canvas><br>
+		
+	</div>
+
+	<footer class="footerFade">
+		Introduction to Computer Science · University of Chicago Laboratory Schools · © Baker Franke 2013 
+	</footer>
+
+
+</body></html>

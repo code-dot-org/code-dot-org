@@ -1,0 +1,12 @@
+name 'K-1 Word Search Multi 1'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/k_1_images/search_images/move.png, 450'
+height '170'
+
+question 'Which blocks spell "MOVE"?'
+wrong '/script_assets/k_1_images/move_blocks/EEES.png'
+right '/script_assets/k_1_images/move_blocks/EESS.png'
+wrong '/script_assets/k_1_images/move_blocks/ESSS.png'
+
+# http://staging.learn.code.org/s/course1/stage/6/puzzle/21

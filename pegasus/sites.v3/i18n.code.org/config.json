@@ -1,0 +1,61 @@
+{
+  "base": "code.org",
+  "google_analytics_id": "UA-37745279-1",
+
+  //Home
+  "hoc_country_id": "<Country>",
+  "header": "Millions of students have tried the Hour of Code",
+  "students": "in <Country> have tried an",
+  "hoc": "Hour of Code",
+  "tag_line": "Anybody can learn",
+  "start": "Start",
+  "no_experience": "No experience needed",
+  "no_computers": "No computers either",
+  "all_ages": "Ages 6-106",
+
+  //Testimonials
+  "feedback_title": "The Hour of Code had almost 40 million participants in the United States, with overwhelming feedback from students, teachers, and parents.",
+  "feedback_1": "\u0022I saw fireworks go off over students' heads, not lightbulbs.\u0022 - Teacher",
+  "feedback_2": "\u0022Best educational product I’ve ever come across.\u0022 - Parent/entrepreneur",
+  "feedback_3": "\u0022I have NEVER, EVER seen my students so excited about learning.\u0022 - Teacher",
+  "feedback_4": "\u0022One of the two best things that happened in 2013.\u0022 - 2nd grader",
+  "feedback_5": "\u0022And then I knew that this was like a once in a lifetime chance to learn this.\u0022 - 5th grader",
+  "feedback_6": "\u0022Now I’m trying to tell other schools to teach code because it really was an amazing experience.\u0022 - 5th grader",
+  "feedback_7": "\u0022The kids were excited and a few obsessed.\u0022 - Teacher",
+  "feedback_8": "\u0022Today, they ran into my room before class even began and asked if they could start. I was overwhelmed with their excitement and curiosity in coding.\u0022 - Teacher",
+  "feedback_9": "\u0022My 3 kids came home from school yesterday yelling about the Hour of Code. My six-year-old instructing me on how to program Angry Birds, my 10-year-old boy proclaiming 'I am going to be a software engineer. It is the job I was made for. It is my DESTINY!'\u0022 - Parent",
+  "leaders": "Leaders and trendsetters agree more students should learn computer science",
+  "all_quotes": "See all quotes",
+  
+  //Learn
+  "learn": "Learn an Hour of Code",
+  "beyond": "Beyond One Hour",
+  "educators": "Educators",
+
+  //404
+  "title_404": "The requested page was not found",
+  "instruct_404": "Check the web address and resubmit or choose a link from the list below.",
+  "link_learn": "Tutorials for students",
+  "link_resources": "Educator resources",
+  "link_about": "About the <Country> Hour of Code and Code.org",
+  "link_partners": "<Country> Hour of Code partners",
+
+  //Navigation
+  "nav_links": {
+    "About Us": "/about",
+    "Resources": "/about/resources",
+    "Partners": "/about/partners"
+  },
+  "header_links": {
+    "HOME": "/",
+    "TUTORIALS": "/learn",
+    "RESOURCES": "/about/resources"
+  },
+  "footer_links": {
+    "Tutorials": "/learn",
+    "About": "/about",
+    "Resources": "/about/resources",
+    "Partners": "/about/partners"
+  },
+  "us_site": "Code.org (US Site)"
+}

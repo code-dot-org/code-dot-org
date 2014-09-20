@@ -1,0 +1,14 @@
+%footer#pagefooter
+  .content
+    %div{:style=>"clear:both; float: left;"}
+      %small.dim
+        = hoc_s(:footer_copyright_message)
+        %br
+        = hoc_s(:footer_trademark_message)
+    %div{:style=>"float:right"}
+      %small{:style=>"opacity:0.5"}
+        %a.whitefooterlink{:href=>"http://support.code.org", :style=>"font-size: 12px;"}= hoc_s(:footer_menu_support)
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        %a.whitefooterlink{:href=>"http://code.org/tos", :style=>"font-size: 12px;"}= hoc_s(:footer_menu_terms)
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        %a.whitefooterlink{:href=>"http://code.org/privacy", :style=>"font-size: 12px;"}= hoc_s(:footer_menu_privacy)

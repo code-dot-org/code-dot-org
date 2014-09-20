@@ -1,0 +1,77 @@
+- @page_title = t('activerecord.attributes.user.edit_header')
+
+%h2= @page_title
+
+- if devise_mapping.confirmable? && resource.confirmation_required? && !resource.confirmed?
+  #alert
+    = t('user.email_confirm_needed')
+    %br/
+    %br/
+    = form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |form_c|
+      %div
+        = form_c.hidden_field :email
+      %div= form_c.submit t('user.email_resend_confirm')
+
+= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+  = devise_error_messages!
+  = f.hidden_field :hashed_email
+  %div
+  .field
+    = f.label :name
+    = f.text_field :name, :autofocus => true
+  .field
+    = f.label :email
+    = f.email_field :email, placeholder: '***encrypted***', autocomplete: 'off'
+  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+    %div
+      Currently waiting confirmation for: #{resource.unconfirmed_email}
+      %br/
+      %br/
+  - if resource.username.present?
+    .field
+      = f.label :username
+      = f.object.username
+  %div
+    = f.label :password
+    %i= t('user.new_password_hint')
+    %br/
+    = f.password_field :password, :autocomplete => "off"
+  %div
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation, autocomplete: 'off'
+  - if f.object.encrypted_password.present?
+    %div
+      = f.label :current_password
+      %i= t('user.current_password_hint')
+      %br/
+      = f.password_field :current_password
+  .field
+    = f.label :locale
+    = f.select :locale, options_for_locale_select, selected: locale
+  - if !resource.teacher?
+    .field
+      = f.label t('signup_form.gender')
+      = f.select :gender, gender_options
+  .field
+    = f.label t('signup_form.age')
+    = f.select :age, User::AGE_DROPDOWN_OPTIONS
+  - if resource.teacher? || resource.students.length > 0
+    .field
+      = f.label :school
+      = f.text_field :school, class: 'input-xlarge'
+    .field
+      = f.label :full_address
+      = f.text_area :full_address, class: 'input-xxlarge', rows: 4
+  %div= f.submit t('crud.update')
+-#%h3= t('user.cancel.title')
+-#%p
+-#  = t('user.cancel.hint')
+-#  = button_to t('user.cancel.button'), registration_path(resource_name), :data => { :confirm => t('crud.confirm') }, :method => :delete
+= link_to t('crud.back'), :back
+
+:javascript
+  $( ".edit_user" ).on("submit", function(e){
+    hashEmail({ email_selector: '#user_email',
+                hashed_email_selector: '#user_hashed_email',
+                age_selector: '#user_age'});
+  });

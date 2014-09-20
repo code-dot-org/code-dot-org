@@ -1,0 +1,40 @@
+/* $Id*/
+CHANGELOG for field_group for Drupal 7
+
+Field_group 7.x-1.x-dev
+    o Issue #1095316: Field Groups disappear when Content Type is renamed.
+    o Issue #1095316 by swentel: Support for Entity API.
+    o Issue #1095002 by animelion: Upgrading removes all existing field groups.
+    o Issue #1095130 by willvincent: Features export not working with rc2.
+    
+Field_group 7.x-1.0-rc2
+    o Ran through coder, minor.
+    o Issue #1033036 by Stalski, swentel: Create a field_group.api.php.
+    o Made the summary descriptions more human readable.
+    o Issue #1086450: Cannot see red star on some field groups even required fields are set to 1.
+    o #1072292 by shadow_jh, stalski: Using on user settings page but need to hid on registration page.
+    o #1092360 by dww: Move field_group_update_7000 functionality to hook_install().
+    o #1061228 Rewrite the field_group_field_group_is_empty function.
+    o Added ID's to fieldgroups.
+    o Removed unused field_group.admin.inc + menu item. Required asterix moving to field_group setting.
+    o #1045526 by stalski: Make formatter options more user-friendly and logical.
+    o #1041880 by robertgarrigos: duplicated entries in field_group table.
+    o #1043834 by amsri: Field Group module just does not work with profiles 2.
+    
+Field_group 7.x-1.0-rc1
+    o #1006464 Change #groups to #fieldgroups because of name collapsing with form_process_fieldset
+    o #1024184 fix collapsible when mode is set to open
+    o #1020278 by mori: Update fails.
+    o #1020116 by mikegfx: Confusing verbage across group types.
+    o #1018012 by mikegfx: Adding required asterisk to group tabs that have required fields.
+    o #960916 fixed reference warnings.
+    o No label anymore with div>open.
+    o #969258 Added check for fields and extra_fields.
+    o #960916 Fixed notice on for reference on group in field_group_settings.
+    o #961106 Fixed notice on entity type and bundle check.
+    o #962072 by mori: Improve CSS for horizontal tabs & accordion.
+    o Changed Fieldgroup API: defaults and instance_settings are now merged.
+    o Changed save action so everything is gathered during form_state to 
+      postpone saving until the save button is hit.
+    o Changed some important variable name, so it makes more sense and easier to read.
+    o Add basic crud functions.

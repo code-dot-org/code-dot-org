@@ -1,0 +1,16 @@
+{
+     "rows": 15,
+	 "cols": 15,
+	 "dir": "EAST",
+	 "start": {
+		 "row": 0,
+		 "col": 7
+	  },
+     "walls":
+     [
+     ],
+     "beepers":
+     [
+     	[0,7,1]
+     ]
+ }
