@@ -11,7 +11,7 @@ get '/v2/hoc/tutorial-metrics.json' do
 end
 
 # Employee engagement
-get '/api/ee/begin/:company' do |company|
+get '/api/hour/begin_company/:company' do |company|
   pass unless form = DB[:forms].where(kind:'CompanyProfile', name:company).first
   pass unless tutorial = DB[:tutorials].where(code:'codeorg').first
   launch_tutorial(tutorial, company:company)

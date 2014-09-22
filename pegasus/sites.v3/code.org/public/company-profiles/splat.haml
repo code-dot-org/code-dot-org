@@ -1,6 +1,5 @@
 ---
 title: "Join the largest learning event in history, Dec 8-14, 2014"
--# banner: "Join the largest learning event in history, Dec 8-14, 2014"
 social:
   "twitter:card": player
   "twitter:site": "@codeorg"
@@ -32,6 +31,7 @@ social:
     %img#company_logo{src:"/forms/uploads/#{company['logo_path_s']}", width: "50px", height: "50px"}
   %h1.ee_display_name= company['display_name_s']
 
+-# TODO(dave): implement user_entered_markdown function.
 #intro_top
   -if company['intro_top_copy_t']
     =markdown company['intro_top_copy_t'].to_s
@@ -68,7 +68,7 @@ social:
 
         #getstarted.col-mobile-44
           #largegap.mobile-show-medium
-          %a{:href=>"/api/ee/begin/#{company['name_s']}"}
+          %a{:href=>"/api/hour/begin_company/#{company['name_s']}"}
             %button.btn.btn-default
               Start now
               
