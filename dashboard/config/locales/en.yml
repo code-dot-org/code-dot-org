@@ -415,7 +415,7 @@ en:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: "Check out my Bounce Game"
     flappy_og_title: "Check out my Flappy Game"
-    studio_og_title: "Check out my story"
+    studio_og_title: "Check out my Play Lab App"
     og_description: "I wrote the code myself with Code.org"
   builder:
     created: "You created a new script."
