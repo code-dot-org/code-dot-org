@@ -2,6 +2,16 @@
 
 %form#company_profile
   %table
+    -if secret
+      %tr
+        %th{colspan:2}
+          Instructions:
+      %tr
+        %th{colspan:2}
+          1. Bookmark this page! (Cmd-D or Ctrl-D)
+      %tr
+        %th{colspan:2}
+          2. update company info:
     %tr
       %th
         Name
@@ -40,9 +50,11 @@
           %input{name:'logo_file', type:'file'}
     %tr
       %th{colspan:2}
+        3. 
         %button Submit
     %tr
       %th{colspan:2}
+        4. 
         %a{href: "/company-profiles/#{data['name_s']}"}
           View #{data['display_name_s']}'s landing page
 
