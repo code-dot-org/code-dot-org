@@ -50,12 +50,14 @@
           %input{name:'logo_file', type:'file'}
     %tr
       %th{colspan:2}
-        3. 
+        -if secret
+          3. 
         %button Submit
-    %tr
-      %th{colspan:2}
-        4. 
-        %a{href: "/company-profiles/#{data['name_s']}"}
+    -if secret
+      %tr
+        %th{colspan:2}
+          4. 
+          %a{href: "/company-profiles/#{data['name_s']}"}
           View #{data['display_name_s']}'s landing page
 
 
