@@ -91,14 +91,13 @@ function compileHtml(workshop, first) {
 
 function addGeocomplete() {
   var geocomplete_options = {
-    map: '#gmap',
-    country: 'us',
-    markerOptions: {
-      visible: false
-    }
+    country: 'us'
   };
 
-  $("#geocomplete").geocomplete(geocomplete_options);
+  $("#geocomplete").geocomplete(geocomplete_options)
+    .bind("geocode:result", function(event, result){
+      gmap.fitBounds(result.geometry.viewport);
+    });
 
   $("#btn-submit").click(function(){
     $("#geocomplete").trigger("geocode");
