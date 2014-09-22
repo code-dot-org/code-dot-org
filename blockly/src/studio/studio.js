@@ -1793,12 +1793,15 @@ Studio.setSpriteSpeed = function (opts) {
 
 Studio.setSpriteSize = function (opts) {
   Studio.sprite[opts.spriteIndex].size = opts.value;
+  var curSpriteValue = Studio.sprite[opts.spriteIndex].value;
 
-  // call setSprite with existing index/value now that we changed the size
-  Studio.setSprite({
-    spriteIndex: opts.spriteIndex,
-    value: Studio.sprite[opts.spriteIndex].value
-  });
+  if (curSpriteValue !== 'hidden') {
+    // call setSprite with existing index/value now that we changed the size
+    Studio.setSprite({
+      spriteIndex: opts.spriteIndex,
+      value: curSpriteValue
+    });
+  }
 };
 
 Studio.changeScore = function (opts) {
@@ -1852,6 +1855,7 @@ Studio.setSprite = function (opts) {
     (skin[spriteValue].spriteHeight || Studio.DEFAULT_SPRITE_HEIGHT);
   sprite.width = sprite.size *
     (skin[spriteValue].spriteWidth || Studio.DEFAULT_SPRITE_WIDTH);
+  sprite.value = opts.forceHidden ? 'hidden' : opts.value;
 
   var spriteClipRect = document.getElementById('spriteClipRect' + spriteIndex);
   spriteClipRect.setAttribute('width', sprite.width);
