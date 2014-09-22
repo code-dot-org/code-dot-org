@@ -2,7 +2,6 @@ require 'image_lib'
 
 class LevelSourcesController < ApplicationController
   include LevelsHelper
-  helper_method :show_image
 
   def show
     common(true)

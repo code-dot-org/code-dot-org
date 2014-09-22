@@ -14359,7 +14359,7 @@ exports.makeProjectileRedHearts = function(d){return "!!-make red hearts-!!"};
 
 exports.makeProjectileTooltip = function(d){return "!!-Make the projectile that just collided disappear or bounce.-!!"};
 
-exports.makeYourOwn = function(d){return "!!-Make Your Own Story-!!"};
+exports.makeYourOwn = function(d){return "!!-Make Your Own Play Lab App-!!"};
 
 exports.moveDirectionDown = function(d){return "!!-down-!!"};
 
