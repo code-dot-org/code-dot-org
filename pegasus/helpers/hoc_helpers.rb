@@ -61,6 +61,10 @@ def complete_tutorial(tutorial=nil)
     end
   end
 
+  # TODO(dave): split into complete_tutorial_new and
+  # complete_tutorial_old. Also split other methods
+  # [launch|complete}_tutorial[_pixel].
+
   # For now, Do the bare minimum to bring a user with a
   # company-specific cookie to the right congrats page.
   sequel_row = DB[:hoc_activity].where(session:request.cookies['hour_of_code']).first
@@ -68,7 +72,7 @@ def complete_tutorial(tutorial=nil)
 
   expires 0, :private, :must_revalidate
   if company
-    redirect((row ? "http://#{row.referer}/congrats?i=#{row.session}&ee=#{company}" : '/congrats'), 302)    
+    redirect((row ? "http://#{row.referer}/congrats?i=#{row.session}&co=#{company}" : '/congrats'), 302)    
   else
     redirect((row ? "http://#{row.referer}/congrats?i=#{row.session}" : '/congrats'), 302)
   end
