@@ -1,0 +1,89 @@
+%link{rel: "stylesheet", type: "text/css", href: "/css/ee_form.css"}/
+
+%form#company_profile
+  %table
+    -if secret
+      %tr
+        %th{colspan:2}
+          Instructions:
+      %tr
+        %th{colspan:2}
+          1. Bookmark this page! (Cmd-D or Ctrl-D)
+      %tr
+        %th{colspan:2}
+          2. update company info:
+    %tr
+      %th
+        Name
+      %td
+        %input{name:'name_s', value:data['name_s']}
+    %tr
+      %th
+        Display Name
+      %td
+        %input{name:'display_name_s', value:data['display_name_s']}
+    -if secret
+      %tr
+        %th
+          Video Key
+        %td
+          %input{name:'video_key_s', value:data['video_key_s']}
+      %tr
+        %th
+          Intro (Top)
+        %td
+          %textarea{name:'intro_top_copy_t', cols:'80', rows:'4'}= data['intro_top_copy_t']
+      %tr
+        %th
+          Intro (Bottom)
+        %td
+          %textarea{name:'intro_bottom_copy_t', cols:'80', rows:'4'}= data['intro_bottom_copy_t']
+      %tr
+        %th
+          Additional Actions
+        %td
+          %textarea{name:'additional_actions_copy_t', cols:'80', rows:'4'}= data['additional_actions_copy_t']
+      %tr
+        %th
+          Logo
+        %td
+          %input{name:'logo_file', type:'file'}
+    %tr
+      %th{colspan:2}
+        3. 
+        %button Submit
+    %tr
+      %th{colspan:2}
+        4. 
+        %a{href: "/company-profiles/#{data['name_s']}"}
+          View #{data['display_name_s']}'s landing page
+
+
+
+:javascript
+  function processResponse(data)
+  {
+    if (data.secret) {
+      window.location = '/edit-company-profile/' + data.secret;
+    } else {
+      window.alert('Saved');
+    }
+  }
+
+  function processError(data)
+  {
+    window.alert(data.status + "\n" + data.responseJSON)
+  }
+
+  $('#company_profile').submit(
+    function( e ) {
+      $.ajax({
+        url: "/forms/CompanyProfile#{secret ? '/'+secret : ''}",
+        type: "post",
+        data: new FormData( this ),
+        processData: false,
+        contentType: false
+      }).done(processResponse).fail(processError);
+      return false;
+    }
+  );
