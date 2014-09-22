@@ -5,7 +5,7 @@ class Form
   property :secret, String, unique_index: true, required: true
   property :user_id, Integer, index: true
   property :email, String, required: true, length: 255, index: true
-  property :name, String, length: 255
+  property :name, String, length: 255, index: true
   property :kind, String, required: true, index: true
   property :data, Json, required: true
 
