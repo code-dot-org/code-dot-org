@@ -126,7 +126,7 @@ module RakeUtils
   def self.upload_file_to_s3_bucket_and_create_fetch_file(local_file, destination_local_path, params={})
     raise 'Need to specify bucket' unless params[:bucket]
 
-    s3_filename = AWS::S3.upload_to_bucket(params[:bucket], File.basename(destination_local_path), open(local_file), access: :public_read)
+    s3_filename = AWS::S3.upload_to_bucket(params[:bucket], File.basename(local_file), open(local_file), access: :public_read)
     new_fetchable_url = AWS::S3::S3Object.url_for(s3_filename, params[:bucket], authenticated: false)
 
     destination_local_pathname = Pathname(destination_local_path)
