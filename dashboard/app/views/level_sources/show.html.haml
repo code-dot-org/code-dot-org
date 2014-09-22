@@ -34,7 +34,7 @@ fjs.parentNode.insertBefore(js, fjs);
       - if @game.flappy?
         = tag :link, rel: 'apple-touch-icon', href: asset_url('flappy_icon.png')
       - else
-        = tag :link, rel: 'apple-touch-icon', href: asset_url('logo.png')
+        = tag :link, rel: 'apple-touch-icon', href: asset_url('logo_noalpha.png')
 
 - if !@game.share_mobile_fullscreen?
   - @page_title = t('share_code.title')
