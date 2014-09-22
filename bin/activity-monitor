@@ -20,6 +20,7 @@ ExcludedBrowsers = [
   'Other',
   'Slurp',
   'TwitterBot',
+  'Yandex Browser',
   'YandexBot',
   'Mo%20PTT/50 CFNetwork/672.1.15 Darwin/14.0.0'
 ]
