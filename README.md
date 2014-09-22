@@ -44,9 +44,9 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
     * `\curl -sSL https://get.rvm.io | bash -s stable`
     * `source ~/.rvm/scripts/rvm`
     * `rvm install 2.0.0-p451`
-1. `git clone https://github.com/code-dot-org/website-ci.git`
+1. `git clone https://github.com/code-dot-org/code-dot-org.git`
 1. `gem install bundler`
-1. `cd website-ci/aws`
+1. `cd code-dot-org/aws`
 1. `bundle install`
 1. `cd ../dashboard`
 1. `bundle install`
@@ -57,23 +57,37 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 1. `rake db:migrate`
 1. `rake seed:migrate`
 
-# Running Dashboard (aka [learn.code.org](http://learn.code.org))
+## Organizational Structure
+Our code is segmented into four parts:
 
-1. `cd website-ci/dashboard`
-1. `bundle exec rails server`
- * Note: after major code updates (or if something seems broken), run `bundle exec rake db:migrate seed:all`
+* Blockly Core is the visual programming language platform used for the interactive tutorials.
+* Blockly includes apps—blockly puzzles built based on Blockly Core.
+  * [Hour of Code](http://studio.code.org/hoc/1)
+* Dashboard, is the tutorial platform which organizes blockly levels into tutorials.
+  * [Code Studio](http://studio.code.org)
+* Pegasus is the main site which also includes the teacher dashboard (support for teachers to track student progress).
+  * [code.org](http://code.org)
+  * [csedweek.org](http://csedweek.org)
+  * [Teacher Dashboard](http://code.org/teacher-dashboard)
 
-# Running Pegasus (aka [code.org](http://code.org), [csedweek.org](http://csedweek.org), etc...)
+## Running Dashboard 
+1. `cd code-dot-org/dashboard`
+2. `bundle exec rails server`
+3.  Note: after major code updates (or if something seems broken), run `bundle exec rake db:migrate seed:all`
+4.  Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
 
-1. `cd website-ci/pegasus`
-1. `./up`
-  * Note: after major code updates (or if something seems broken), run `rake db:migrate seed:migrate`
+## Running Pegasus
 
-# (optional) Building blockly and blockly-core (i.e., [puzzles](http://learn.code.org/hoc/1))
+1. `cd code-dot-org/pegasus`
+2. `./up`
+3. Note: after major code updates (or if something seems broken), run `rake db:migrate seed:migrate`
+4. Visit [http://localhost.code.org:9393/](http://localhost.code.org:9393/)
+
+## Building Blockly and Blockly-core (optional) 
 
 The learn.code.org default dashboard install includes a static build of blockly, but if you want to make modifications to blockly or blockly-core:
 
-1. `cd website-ci/dashboard`
+1. `cd code-dot-org/dashboard`
 1. `bundle exec rake 'blockly:dev[../blockly]'`
   * This symlinks to dashboard reference the dev version of blockly
 1. Follow the blockly build instructions at `blockly/README` or blockly-core build instructions at `blockly-core/README`
@@ -130,7 +144,13 @@ Contributors should follow the GitHub [fork-and-pull model](https://help.github.
     - `git add YYY`
     - `git commit -m "ZZZ"`
     - `git push origin branch_name`
-3. Go to the website-ci GitHub page
-    - [https://github.com/code-dot-org/website-ci](https://github.com/code-dot-org/website-ci)
-4. Click on the "Pull Request" link, look over your diff, and submit it to others to review.
+3. Go to the code-dot-org GitHub page
+    - [https://github.com/code-dot-org/code-dot-org](https://github.com/code-dot-org/code-dot-org)
+4. For your submissinon to be reviewed
+    - Click on the "Pull Request" link, look over and confirm your diff
+    - Submit a pull request for your branch to be merged into staging
     - For bonus points, include screenshots in the description. Command + Ctrl + Shift + 4 in OS X lets you copy a screen selection to your clipboard, which GitHub will let you paste right into the description
+5. After your pull request is merged into staging, you can review your changes on the following sites:
+  * [http://staging.code.org/](http://staging.code.org/)
+  * [http://staging.studio.code.org/](http://staging.studio.code.org/)
+  * [http://staging.csedweek.org/](http://staging.csedweek.org/)
