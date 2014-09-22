@@ -1,0 +1,14 @@
+-default_video_key = 'FC5FbmsH4fw'
+-default_download_url = "http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"
+
+%div{style: "text-align:right"}
+  %div{style: "width:100%; height: 100%; margin: 0 auto;"}
+    %div{style: "position:relative"}
+      %img{style: "display:block; width:100%; height:auto", src: "/images/16x9.png"}/
+      -if custom_video_key      
+        %iframe{style: "position:absolute; top: 0; left: 0; width: 100%; height: 100%", src: "https://www.youtube.com/embed/#{custom_video_key}?iv_load_policy=3&rel=0&autohide=1&showinfo=0", frameborder: "0", allowfullscreen: true}
+      -else
+        %iframe{style: "position:absolute; top: 0; left: 0; width: 100%; height: 100%", src: "https://www.youtubeeducation.com/embed/#{default_video_key}?iv_load_policy=3&rel=0&autohide=1&showinfo=0", frameborder: "0", allowfullscreen: true}
+  -unless custom_video_key
+    %a.mobile-feature{href: default_download_url}
+      %img{style: "width: 34px; padding-top: 2px;", src: "/images/download.png"}/

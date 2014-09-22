@@ -1,0 +1,92 @@
+---
+title: "Join the largest learning event in history, Dec 8-14, 2014"
+social:
+  "twitter:card": player
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://code.org/"
+  "twitter:title": "Join the largest learning event in history, Dec 8-14, 2014"
+  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. <strong>No experience needed. Ages 4 to 104.</strong>"
+  "twitter:image:src": 'http://csedweek.org/images/hoc-video-thumbnail.jpg'
+  "twitter:player": 'https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
+  "twitter:player:width": 1920
+  "twitter:player:height": 1080
+---
+
+-facebook = {:u=>"http://#{request.site}/"}
+
+-twitter = {:url=>"http://#{request.site}/", :related=>'codeorg', :hashtags=>'', :text=>'Join the largest learning event in history, Dec 8-14, 2014'}
+-twitter[:hashtags] = 'HourOfCode'
+
+
+
+-pass unless form = DB[:forms].where(kind:'CompanyProfile', name:request.splat_path_info[1..-1]).first
+-company = JSON.parse(form[:data])
+
+%link{rel: "stylesheet", type: "text/css", href: "/css/ee.css"}/
+
+
+#company_header
+  #alignment-spacer
+  -if company['logo_path_s']
+    %img#company_logo{src:"/forms/uploads/#{company['logo_path_s']}", width: "50px", height: "50px"}
+  %h1.ee_display_name= company['display_name_s']
+
+-# TODO(dave): implement user_entered_markdown function.
+#intro_top
+  -if company['intro_top_copy_t']
+    =markdown company['intro_top_copy_t'].to_s
+  -else
+    :markdown
+      ## #{company['display_name_s']} asks all its employees to try an Hour of Code in support of computer science education
+
+      Computer science is the defining field of the 21st century, yet most of us never learn it, and most schools don't even offer it. In support of our children's education and our future, we are asking every #{company['display_name_s']} employee to try an Hour of Code. Even if you already know computer science, you can try the modern tutorials, and help others learn.
+
+      Give it a shot. This is a tutorial that even 8-year-olds can do, and it's fun. Let's see how close we can get to 100% participation!
+
+%br
+
+#top
+  #video.col-63.desktop-pad-right{style: 'padding-right: 30px;'}
+    = view :employee_engagement_video, custom_video_key:company['video_key_s']
+
+  #start.col-36
+    #blurb.col-mobile-56.mobile-pad-right
+      %br.desktop-feature
+
+    #companystats.col-mobile-44
+      .desktop-feature
+        #blurb.col-mobile-56.mobile-pad-right
+          %br.desktop-feature
+
+          .count{:style=>'font-size: 32px; line-height: 32px; font-weight:500' }
+            5,455 #{company['display_name_s']} employees have tried the Hour of Code.
+            %h4.desktop-feature{style: 'font-size: 22px;'}
+              40% Completed
+              %br
+              60% Not started
+          %br
+
+        #getstarted.col-mobile-44
+          #largegap.mobile-show-medium
+          %a{:href=>"/api/hour/begin_company/#{company['name_s']}"}
+            %button.btn.btn-default
+              Start now
+              
+
+  #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
+    -unless company['video_key_s']
+      = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"
+
+#intro_bottom
+  -if company['intro_bottom_copy_t']
+    =markdown company['intro_bottom_copy_t']
+  -else
+    :markdown
+      ## Other links:
+        - Engineers, sign up to be a guest speaker in a classroom via Skype
+        - Donate to Code.org's crowdfunding campaign to support computer science education in schools
+        - Ask your local school to organize an Hour of Code
+
+.row
+  .col-xs-12
+    =view :stats_hoc_2013
