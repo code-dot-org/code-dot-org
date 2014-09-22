@@ -1,4 +1,5 @@
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
+%script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 %script{type: "text/javascript", src: "/js/workshop-search.js"}
 
 :css
@@ -14,16 +15,16 @@
     border-top: 0;
   }
 
--#.row
--#  %form#workshop-search-form{role: "form", onsubmit: "event.preventDefault();"}
--#    .form-section
--#      .col-xs-4
--#        .form-group
--#          %div
--#            %input#location.form-control{name: "location", placeholder: "Search for workshops", type: "text"}/
--#      .col-xs-8
--#        .form-group.submit-btn
--#          %button#btn-submit.btn.btn-default{type: "submit"} Search
+.row
+  %form#workshop-search-form{role: "form", onsubmit: "event.preventDefault();"}
+    .form-section
+      .col-xs-4
+        .form-group
+          %div
+            %input#geocomplete.form-control{name: "geocomplete", placeholder: "Search for workshops", type: "text"}/
+      .col-xs-8
+        .form-group.submit-btn
+          %button#btn-submit.btn.btn-default{type: "submit"} Search
 .row
   .col-xs-12
     #gmap{style: 'height: 500px; padding: 3px; border: 3px solid #ddd;'}
