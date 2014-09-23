@@ -88,7 +88,7 @@ class Documents < Sinatra::Base
 
     Poste::Message.import_templates
 
-    vary_uris = ['/', '/learn', '/congrats', '/language_test']
+    vary_uris = ['/', '/learn', '/congrats', '/language_test', '/teacher-dashboard']
     set :vary, { 'X-Varnish-Accept-Language'=>vary_uris, 'Cookie'=>vary_uris }
   end
 
