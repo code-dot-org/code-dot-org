@@ -99,6 +99,39 @@ social:
   #contained{style: "width: 970px; margin: 0 auto; clear:both"}
     .row
       .col-xs-12
+        %div{style: 'text-align: center; margin: 3em 0;'}
+          %h2= I18n.t(:stats_hoc_2013_heading)
+
+    %div{style: "margin: 0 auto; width: 900px; font-weight: 500; font-size: 16px; color: rgb(26, 172, 186)"}
+      .row
+        .col-xs-4
+          It was the fastest to reach 15 million users
+
+        .col-xs-4
+          15 million students in 170 countries learned an Hour of Code
+          
+        .col-xs-4
+          More girl tried computer science than in the last 70 years
+        
+    %div{style: "margin: 0 auto; width: 800px; font-weight: 400; font-size: 16px; color: #ea7717;"}
+      .row
+        .col-xs-4
+          %img{src: "/images/stats-kid1.jpg", style: "width: 70%"}
+          %br/
+          "Every single day yielded the same results - <b>100% engagement.</b>" - Nina Nichols Peery, Teacher
+
+        .col-xs-4
+          %img{src: "/images/stats-kid2.jpg", style: "width: 70%"}
+          %br/
+          I knew this was a <b> once-in-a-lifetime</b> chance" - Mariana Alzate, 5th grader
+
+        .col-xs-4
+          %img{src: "/images/stats-kid3.jpg", style: "width: 70%"}
+          %br/
+          I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher
+
+    .row
+      .col-xs-12
         =view :stats_hoc_2013
 
     .row
@@ -133,8 +166,8 @@ social:
   {
     setInterval(function() {
       var nextImage = (currentImage + 1) % 4;
-      $("#fullwidth" + currentImage).fadeTo(1000, 0);
-      $("#fullwidth" + nextImage ).fadeTo(1000, 1);
+      $("#fullwidth" + currentImage).fadeTo(2000, 0);
+      $("#fullwidth" + nextImage ).fadeTo(2000, 1);
       currentImage = nextImage;
-    }, 3000);
+    }, 6000);
   }
