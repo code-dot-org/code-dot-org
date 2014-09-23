@@ -232,6 +232,8 @@ namespace :install do
   end
 
   task :solr do
+    RakeUtils.sudo 'aptitude', 'install', '-y', 'openjdk-7-jre-headless'
+
     solr_version = '4.8.0'
     solr_name = "solr-#{solr_version}"
     solr_tgz = "#{solr_name}.tgz"
