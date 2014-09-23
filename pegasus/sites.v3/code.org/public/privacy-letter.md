@@ -47,6 +47,7 @@ Founder and CEO, Code.org
 
 **UPDATE:** We published [privacy policy revisions](https://support.code.org/hc/en-us/articles/203357427) as laid out in the letter above and received many valuable comments from privacy advocates. We are going through a process of revisions and will publish an updated Code.org privacy policy shortly. We have also published [template language for our school district agreements](/educate/template-district-agreement), governing the transfer of anonymous student achievement data to our independent 3rd party evaluator for the purpose of evaluating our work.
 
+**UPDATE:** We have published our [privacy policy](http://code.org/privacy) based on all the comments and feedback we have received.
 
 
 <br />

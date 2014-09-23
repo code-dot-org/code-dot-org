@@ -1,7 +1,7 @@
 #about_nav
   %span.about_list
     -current_url = request.path_info
-    -{ 'PD General Information'=>'/educate/pd', 'FAQs'=>'/educate/pd/faq', 'Absence Policy'=>'/educate/pd/absencepolicy', 'Course Technical Requirements'=>'/educate/pd/tech', 'Boston'=>'/educate/pd/boston', 'Charles County'=>'/educate/pd/charles', 'Chicago'=>'/educate/pd/chicago','Denver'=>'/educate/pd/denver','Fort Lauderdale'=>'/educate/pd/fortlauderdale', 'Montgomery County'=>'/educate/pd/moco', 'New York City'=>'/educate/pd/nyc', 'Seattle'=>'/educate/pd/seattle', 'Spokane'=>'/educate/pd/spokane'}.each_pair do |label,url|
+    -{ 'PD General Information'=>'/educate/pd', 'Policies and Procedures'=>'/educate/pd/policies', 'Program Supports'=>'/educate/pd/supports', 'FAQs'=>'/educate/pd/faq',  'Boston'=>'/educate/pd/boston', 'Charles County'=>'/educate/pd/charles', 'Chicago'=>'/educate/pd/chicago','Denver'=>'/educate/pd/denver','Fort Lauderdale'=>'/educate/pd/fortlauderdale', 'Montgomery County'=>'/educate/pd/moco', 'New York City'=>'/educate/pd/nyc', 'Seattle'=>'/educate/pd/seattle', 'Spokane'=>'/educate/pd/spokane'}.each_pair do |label,url|
       - if current_url == url
         %span.about_list_item_selected= label
       -else
