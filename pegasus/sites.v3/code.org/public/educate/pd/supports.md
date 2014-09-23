@@ -36,15 +36,6 @@ Office hours will be available bi-weekly from 5:00pm-6:00pm in both Eastern and 
 
 The virtual meetings will be hosted via Blue Jeans Video Conference. If this is your first time using Blue Jeans, we recommend clicking on the meeting link 5 minutes prior to the start time as you will be prompted to download a plugin, which is required to access the virtual meeting. No login or account is required to join the virtual meeting.
 
-
-### September Office Hours
-
-Tuesday, September 23rd 
-<br/>
-Eastern Time Zone: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/4141748238) to join meeting. 
-<br/>
-Pacific Time Zone: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/4141748238) to join meeting. 
-
 ### October Office Hours
 
 Thursday, October 9th
@@ -108,9 +99,6 @@ Minimum requirements for computers:
 
 Internet connection with bandwidth capable of supporting downloads of 5 megabits per student using the software during a period. 
 
-### Office Hours
-
-Coming Soon 
 
 [**Back to the top**](#top)
 
@@ -119,7 +107,7 @@ Coming Soon
 
 ## Bootstrap Supports
 
-Find the Bootstrap curriculum and addition resources at [code.org/curriculum/msm](http://code.org/curriculum/msm). To discuss questions and offer support go to the Bootstrap discussion forum [here](https://groups.google.com/forum/#!forum/bootstrap-discuss).
+Find the Bootstrap curriculum and addition resources at [code.org/curriculum/msm](http://code.org/curriculum/msm). To post your questions and offer support go to the Bootstrap discussion forum [here](https://groups.google.com/forum/#!forum/bootstrap-discuss).
 
 ### What are the technical requirements to teach Bootstrap? 
 
@@ -134,10 +122,10 @@ Code.org domain white-listed for access.
 
 ## K5 Intro to Computer Science Supports
 
-Find the K5 Intro to Computer Science curriculum and resources at [studio.code.org](http://studio.code.org/). For Code.org's technical requirements to teach K5 Intro to Computer Science, please go [here](https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-).
+Find the K5 Intro to Computer Science curriculum and resources at [studio.code.org](http://studio.code.org/). 
 
-### Office Hours
+Code.org's technical requirements to teach K5 Intro to Computer Science can be found [here](https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-).
 
-Coming Soon
+For additional support, such as online office hours (*coming soon*), K-5 forum, and FAQ, go to [code.org/educate/k5](http://code.org/educate/k5).
 
 [**Back to the top**](#top)
