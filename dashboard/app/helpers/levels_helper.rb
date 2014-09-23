@@ -152,7 +152,7 @@ module LevelsHelper
   # Code for generating the blockly options hash
   def blockly_options(local_assigns={})
     # Use values from properties json when available (use String keys instead of Symbols for consistency)
-    level = @level.properties.dup || {}  
+    level = @level.properties.dup || {}
 
     # Set some specific values
     level['puzzle_number'] = @script_level ? @script_level.stage_or_game_position : 1
@@ -259,7 +259,8 @@ module LevelsHelper
     if (script = @script_level.try(:script)) && !(script.default_script?)
       "#{data_t_suffix('script.name', script.name, 'title')}: #{@script_level.name} ##{@script_level.stage_or_game_position}"
     else
-      "#{data_t('game.name', @game.name)} ##{@script_level.try(:game_chapter) || @level.level_num} "
+      level_num = "##{@script_level.try(:game_chapter) || @level.level_num} " unless @game.name == "Flappy" and @level.level_num == "1"
+      "#{data_t('game.name', @game.name)} #{level_num}"
     end
   end
 
