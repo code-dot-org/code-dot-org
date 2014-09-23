@@ -71,8 +71,10 @@ theme: none
       %td
         %span{"ng-hide" => "student.editing"}
           %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}"} {{student.name}}
-          %div{"ng-show" => "student.username"}= I18n.t('dashboard_students_username', student_username: '{{student.username}}')
-          %div{"ng-show" => "student.email"}= I18n.t('dashboard_students_email', student_email: '{{student.email}}')
+          %div{"ng-show" => "section.login_type == 'none' && student.username"}
+            = I18n.t('dashboard_students_username', student_username: '{{student.username}}')
+          %div{"ng-show" => "section.login_type == 'none' && (student.email || student.hashed_email)"}
+            = I18n.t('dashboard_students_email', student_email: '{{student.email || "hidden"}}')
         %span{"ng-show" => "student.editing"}
           %input{"ng-model" => "student.name", placeholder: "Student Name", style: "width: 100%", type: "text", required: "true"}/
           %span.required= I18n.t('dashboard_action_required')
