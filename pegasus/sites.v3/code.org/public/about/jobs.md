@@ -48,25 +48,20 @@ Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.o
 
 No benefit package.
 
-## Administrative Assistant (Seattle area)
+## State Policy Intern (Seattle area)
 
 **Job Summary:** 
 
-Code.org is recruiting for a Seattle-based Administrative Assistant to support Code.org’s Seattle headquarters. Responsibilities of the position include managing a variety of administrative and logistical tasks and projects,
-increasing office productivity by overseeing smooth and efficient office administration, and supporting Director-level staff.  Full-time, salaried, contract-to-hire for first 60 days.
+Code.org is recruiting a State Policy Intern to support our state-by-state advocacy efforts to expand K-12 access to computer science education. Responsibilities include researching state education policy and synthesizing information for the government affairs team, as well as helping execute our state policy agenda. The State Policy Intern will gain a deep understanding of state policy in our target states and will broaden her/his networks in education policy. Flexible 10-15 hrs per week, Oct 2014-May/June 2015. Hourly wage DOE, no benefits.
 
 **Qualifications:**
 
-- ***Most important qualification:** Must be able to efficiently prioritize and execute multiple tasks simultaneously in a fast-paced, rapidly evolving environment; start-up organization experience or familiarity preferred.*
-- 2-3 years experience as an administrative assistant or comparable position; must have direct experience calendaring and booking travel
-- Excellent organizational and time management skills; extremely detail oriented
-- Proven ability to rapidly learn and adapt to new situations and material; highly flexible
-- Comfort in embracing new tasks and technology with little to no direction
-- Advanced user of Microsoft Office (i.e. Outlook, Word, Excel, PowerPoint), Google Docs and other technical applications.
 
-[Click here for full job description.](https://www.dropbox.com/s/gnt67rpyiax0gu6/AdminAssistantJobDescription.pdf?dl=0 "Administrative Assistant Job Description")
+- Pursuing a degree in public policy, public administration, political science, or education (graduate students preferred) 
+- Must be a self-starter, multi-tasker, excel under pressure, and work independently with a geographically dispersed team
+- Prior experience in education or public policy preferred 
 
-Interested candidates should email a resume and cover letter, describing what particular skills you bring to a rapidly growing start-up organization that differentiate you from other candidates, to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## Development/Marketing Assistant (Seattle area)
 
