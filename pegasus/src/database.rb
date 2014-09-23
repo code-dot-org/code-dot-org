@@ -4,7 +4,7 @@ Sequel.extension :migration
 DB = Sequel.connect(CDO.pegasus_db_writer.sub('mysql:', 'mysql2:'))
 #DB.loggers << $log if rack_env?(:development)
 DASHBOARD_DB = Sequel.connect(CDO.dashboard_db_writer.sub('mysql:', 'mysql2:'))
-DASHBOARD_DB.loggers << $log if rack_env?(:development)
+#DASHBOARD_DB.loggers << $log if rack_env?(:development)
 
 class Properties
 
