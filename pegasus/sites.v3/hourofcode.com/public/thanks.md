@@ -8,7 +8,7 @@ title: Thanks for signing up to host an Hour of Code!
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](/whole-school) for a chance for big prizes for your entire school.
+Get your [whole school to participate](/us/prizes) for a chance for big prizes for your entire school.
 
 <% end %>
 
