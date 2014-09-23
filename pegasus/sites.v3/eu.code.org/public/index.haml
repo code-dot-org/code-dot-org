@@ -17,78 +17,17 @@ social:
 
 #top{:style=>"margin-top: 40px;"}
   #video.col-63.desktop-pad-right
-    = view :hocvideo, id:"r990CWYtx_o"
 
   #start.col-36{:style=>'text-align:center; margin-top: 0'}
     .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
-      %h1{:style=>"font-size: 56px; line-height: 56px; margin: 0;"}<
-        =format_integer_with_commas(fetch_hoc_metrics['started']).to_s
-      %h3{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 5px; margin-bottom: 0;"}<
-        have participated in the
-      %h2{:style=>"font-size: 36px; line-height: 36px; font-weight: 600; margin-top: 5px; margin-bottom: 0;"}<
-        Hour of Code
-      %h4.desktop-feature{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 15px;"}<
-        Anybody can learn.
-    %a{:href=>'/learn', :style=>"text-decoration: none;"}
-      %button{:style=>"font-size: 19px; font-weight: 500; height: 50px;margin-top: 10px;"}
-        Start
-
-    %br
-
-    %ul
-      %li No experience needed
-      %li No computers either
-      %li Ages 6-106
 
 %div{:style=>'clear:both'}
 
-%br The Hour of Code has had over 40 million participants, with overwhelming feedback from students, teachers, and parents.
-%ul
-  %li "I saw fireworks go off over students' heads, not lightbulbs." - Teacher
-  %li "Best educational product I’ve ever come across" - Parent/entrepreneur
-  %li "I have NEVER, EVER seen my students so excited about learning" - Teacher
-  %li "One of the two best things that happened in 2013" - 2nd grader
-  %li "I knew that this was like a once in a lifetime chance to learn this" - 5th grader
-  %li "Now I’m trying to tell other schools to teach code because it really was an amazing experience"- 5th grader
+%h1{:style=>'text-align:center;'}
+  Join us during EU Code Week
 
-#columns.desktop-feature{:style=>'clear:both; overflow:hidden'}
-  #column1{:style=>'float:left; width: 33.33%'}
-    %h2 Teachers & Educators
-    #column1content
-      -count = 0
-      -DB[:cdo_homepage_teachers].where(site_s:'all').or(site_s:request.site).each do |value|
-        -unless count == 0
-          %hr.narrow_hr
-        =value[:text_s]
-        %a{:href=>value[:url_s]}
-          =value[:linktext_s]
-        -count += 1
-      %br
-      %br
-      %a{:href=>"http://code.org/educate/hoc"}
-        %button{:style=>'width:200px'}
-          Teach an Hour of Code
+%h3{:style=>'text-align:center;'}
+  Video will go here
 
-      = view 'find-on-fb', current_site: 'code.org'
-
-  #column2{:style=>'float:left; width: 33.33%; padding-right: 25px; padding-left: 25px'}
-    %h2 Latest Highlights
-    #column2content
-      -count = 0
-      -DB[:cdo_news_items].where(site_s:'all').or(site_s:request.site).limit(7).each do |value|
-        -unless count == 0
-          %hr.narrow_hr
-        %a{:href=>value[:url_s], :target=>'_blank'}
-          =value[:heading_s]
-        %br
-        = value[:date_dt]
-        = '//'
-        = value[:publication_s]
-        -count += 1
-      %br
-      %br
-      %a{:href=>'/about/news', :style=>'float:right'} See all
-
-  #column3{:style=>'float:left; width: 33.33%;'}
-    %h2 From the Community
-    = view :index_twitter
+%h2 From the Community
+= view :index_twitter
