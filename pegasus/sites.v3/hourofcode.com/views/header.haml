@@ -1,14 +1,18 @@
-#pageheader
+#pageheader{style: "background-color: rgba(0,0,0,0.5)"}
   .content{style:'overflow:visible'}
     #left
-      #hoc-header-branding
+      #hoc-header-branding{style: "border-left: 0px; border-right: 0px"}
         %a{href:hoc_uri('/')}
           %img{src: '/images/hour-of-code-logo.png', alt: 'Hour of Code'}
+      
     #language-dropdown{style: "visibility: hidden;"}
       = view :language_dropdown
     #right
       %a.headerlink{href:hoc_uri('/resources')}= hoc_s(:header_menu_resources)
-      %a.headerlink{href:hoc_uri('/#faq')}= hoc_s(:header_menu_faq)
+      - if request.path == "/"
+        %a.headerlink{href:"#", onclick:"return adjustScroll('faqs')"}= hoc_s(:header_menu_faq)
+      - else
+        %a.headerlink{href:hoc_uri('/#faq')}= hoc_s(:header_menu_faq)
       %a.headerlink{href:hoc_uri('/prizes')}= hoc_s(:header_menu_prizes)
       -if @country=='uk'
         %a.headerlink{href:'http://uk.code.org'}= hoc_s(:header_menu_uk_code_org)
