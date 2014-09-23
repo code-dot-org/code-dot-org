@@ -199,13 +199,16 @@ APPS.forEach(function(app) {
 config.concat = {};
 LOCALES.forEach(function(locale) {
   var ext = DEV ? 'uncompressed' : 'compressed';
+  var ace_suffix = DEV ? '' : '_min';
   config.concat['vendor_' + locale] = {
     nonull: true,
     src: [
       'lib/blockly/blockly_' + ext + '.js',
       'lib/blockly/blocks_compressed.js',
       'lib/blockly/javascript_compressed.js',
-      'lib/blockly/' + locale + '.js'
+      'lib/blockly/' + locale + '.js',
+      'lib/ace/ace' + ace_suffix + '.js',
+      'lib/ace/mode-javascript' + ace_suffix + '.js'
     ],
     dest: 'build/package/js/' + locale + '/vendor.js'
   };
