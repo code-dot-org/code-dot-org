@@ -1,4 +1,5 @@
 ---
+layout: wide
 title: "<%= hoc_s(:front_title) %>"
 banner: front_header_banner
 social:
@@ -37,19 +38,45 @@ social:
 
 #index
 
-  #flags-banner
-    %img{src: '/images/flags-banner.png', alt: 'Flags'}
+  #top{style: "position:relative; height: 500px"}
+    #fullwidth0{style: "position:absolute; left: 0; top: 0; background-image: url('/images/the-world.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:500px; opacity: 1"}
 
-  %h1.front-header-banner= hoc_s(:front_header_banner)
+    #fullwidth1{style: "position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:500px; opacity: 0"}
 
-  - if @country == 'uk'
-    %p{style: 'font-size: 1.5em; margin: 2em 0; text-align: center;'}= hoc_s(:front_intro_default_uk)
-  - elsif @country == 'ar'
-    %p{style: 'font-size: 1.5em; margin: 2em 0; text-align: center;'}= hoc_s(:front_intro_default_ar)  
-  - else
-    %p{style: 'font-size: 1.5em; margin: 2em 0; text-align: center;'}= hoc_s(:front_intro_default)
+    #fullwidth2{style: "position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:500px; opacity: 0"}
 
-  #top
+    #fullwidth3{style: "position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:500px; opacity: 0"}
+
+    #fullwidth{style: "position:absolute; left:0; top: 0; width: 100%; height:500px"}
+
+      .thegap{style: "height: 1px"}
+        &nbsp;
+
+      %headerwrapper
+        = view :header
+
+      -#flags-banner
+        %img{src: '/images/flags-banner.png', alt: 'Flags'}
+
+      #contained{style: "width: 970px; margin: 0 auto"}
+        %h1.front-header-banner{style: "color:white; text-align: right"}= hoc_s(:front_header_banner)
+
+        #joinus{style: "text-align:right"}
+          %a{onclick: "return adjustScroll('hocsignupform')"}
+            %button.btn.btn-default{style: "font-size: 24px; font-weight: 500; width: 200px; height: 50px;"}
+              =hoc_s(:front_join_us_button)
+            
+
+      -#more{style: "color:grey"}
+        - if @country == 'uk'
+          %p{style: 'font-size: 1.5em; margin: 2em 0; text-align: center;'}= hoc_s(:front_intro_default_uk)
+        - elsif @country == 'ar'
+          %p{style: 'font-size: 1.5em; margin: 2em 0; text-align: center;'}= hoc_s(:front_intro_default_ar)  
+        - else
+          %p{style: 'font-size: 1.5em; margin: 2em 0; text-align: center;'}= hoc_s(:front_intro_default)
+
+
+  -#top
     #video.col-63.desktop-pad-right{style: 'padding-right: 30px;'}
       -if @country == 'uk'
         = view :front_video_uk
@@ -67,23 +94,47 @@ social:
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
       = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"
 
-  .row
-    .col-xs-12
-      =view :stats_hoc_2013
+  %div{style:"clear:both"}
 
-  .row
-    .col-xs-12
-      =view :map
+  #contained{style: "width: 970px; margin: 0 auto; clear:both"}
+    .row
+      .col-xs-12
+        =view :stats_hoc_2013
 
-  .row
-    .col-xs-7
-      =view :signup_form
-    .col-xs-4.col-sm-offset-1
-      =view :choose_country
+    .row
+      .col-xs-12
+        =view :map
 
-  %a{name:'faq'}
-  .row
-    .col-xs-12
-      =view :faq
+    .row
+      .col-xs-7
+        =view :signup_form
+      .col-xs-4.col-sm-offset-1
+        =view :choose_country
+
+    %a#faqs{name:'faq'}
+    .row
+      .col-xs-12
+        =view :faq
 
 = view 'popup_window.js'
+
+:javascript
+
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+
+  var currentImage = 0;
+
+  $.ready()
+  {
+    setInterval(function() {
+      var nextImage = (currentImage + 1) % 4;
+      $("#fullwidth" + currentImage).fadeTo(1000, 0);
+      $("#fullwidth" + nextImage ).fadeTo(1000, 1);
+      currentImage = nextImage;
+    }, 3000);
+  }
