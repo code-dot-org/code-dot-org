@@ -30,35 +30,7 @@ These instructions use RVM to install Ruby instead of RBENV; follow these instru
 
 - `ssh` to the instance
 
-- Create `~/.ssh/id_rsa`<pre>-----BEGIN RSA PRIVATE KEY-----
-MIIEowIBAAKCAQEAyw6GpuCmXbTRSEh4EZ1gDEy45D6ZLi5EPm+rrI+zUG3qAWAQ
-w78FwjPmKZDRmLmxmVF1GrRipdOP8QDoHcKxICOOur7cKo7ga3e3iFTQ0nYlt3Qx
-OMWQUgwpoDn2RLaOFeotwTHU48x1isB8M06EQWRXT0q9EQcsiWeF7Ry43lj/YUf9
-1CKsVAQ74JCSLrqQVPKWwLLxgtTQlqICmAJtJLLXwojKvz8bafZpjBX5bKGi9T5D
-SwvICvozvqVuhTs++ohd0JYUFxieEUNe9EjvAAvpmtUz7KPzz3uA77HsF1D8ZDmc
-HES3RpZmCrRLSyAAj9MqA63AR85Hdxniz5z4mwIDAQABAoIBACalUBlInkEtXbtt
-F3T6x8HvhCzkgRDZ+2EKrdi8zLrdAHFckDRBEd6BNCfrCQkRJmzwpOH9PN0ko7uR
-mZu4Zy+ftNVz58EtyiaJ9WM8CTZVCB6fPZL5ftsut2loPqebOvWOyUCAtGzah/Bt
-a/Xz1pX/e+J6bftkqyRHkKStF74xSPms4ujrWMM25Y/+Uzm3WHsTN147mHx6FDKo
-qZ8iwe9XezFRXOaXbgq7VzD96fcxMYGoh3o5qSRlNAWD84Q9fBs42UYvhqLFn+77
-BqO/b7I/bI2n8DwZyObOP/O+wZVOtU63drohC5JryQuhAfX2jL7Mk+9cUYWW2qNL
-XiveG9kCgYEA9cTVK7theaR1tCFeEzTiwSKOsTIEji1EdtGLhQs2aEb45OAGFt8V
-m6ORWULNRG/4OaGnK0OXK0lKcC59mAcHazvXpvgisUcLXsXydg7Ve9+tZn9haZyB
-sCeloQSMOZxUxVglueNupMXfScI+N/WRM/GRsC7UiOTy02VL9VE93e8CgYEA04KC
-M7Gimk02De/soG4E//l7gti71lSg8OVa3yr4XuJA8mV3BRIhz11yLiRwz/lqaG0u
-7hpbCA6Ah2Q77jcV6oMrr5RF4x/tVoPsSWgGdNYhVUuXoMVeUYSXkVn8ES2qAKDi
-Pyof/I1+njGOE68IjjzR879K8a/63xnUTRyWfBUCgYBAxXdI50FxRZ6fsouQlEeO
-jwT8PiplLhj1F5Slo6bbJJlD+KaiMHkJY7pSxABFIR1SUwAzrsSQa+hqWFZRUsjp
-wgO7xXmfLxIYECMuagppczHH6ZpKsyyauFg2b3RlWoYc3HZU31OxqVSHo+Gx7c4u
-2mODA1SQH4a/n9q89IRRkQKBgGfz0q45deNEY3bCHphSul5cbZnHj7otadQ7xUe9
-xMhNhwIbYD27xaY3FTEcc92jherBDrmzdl4lUoI4f0P7Cuhxg30N8LNKM8m7mNwT
-Jmkx/LwBJQq9Njf2ZM/pW/vNZ6pbaBcHSyVDHaH+VQfTlO7jcYTM1baneTNBbJhh
-noxpAoGBAKuevpjgXdoBS5sUGSGqsD6wBnK8KyoF5jBc2Yj/QGKW99i3ZK06haI0
-0IFt6uI5AqpB0V4U9yV3uBtVjBL2QQSoheLuM7tS38+9JhLVy1ySIFaAG6a9HTtd
-IhQNTvPrfLxx++0/ey3R6WJ/NMkFYDtXQQjWnvz8fyomQL3paabb
------END RSA PRIVATE KEY-----</pre>
-
-- Create `~/.ssh/id_rsa.pub`<pre>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLDoam4KZdtNFISHgRnWAMTLjkPpkuLkQ+b6usj7NQbeoBYBDDvwXCM+YpkNGYubGZUXUatGKl04/xAOgdwrEgI466vtwqjuBrd7eIVNDSdiW3dDE4xZBSDCmgOfZEto4V6i3BMdTjzHWKwHwzToRBZFdPSr0RByyJZ4XtHLjeWP9hR/3UIqxUBDvgkJIuupBU8pbAsvGC1NCWogKYAm0kstfCiMq/Pxtp9mmMFflsoaL1PkNLC8gK+jO+pW6FOz76iF3QlhQXGJ4RQ170SO8AC+ma1TPso/PPe4DvsewXUPxkOZwcRLdGlmYKtEtLIACP0yoDrcBHzkd3GeLPnPib ubuntu@code.org</pre>
+- Create `~/.ssh/id_rsa` and `~/.ssh/id_rsa.pub` with the dev@code.org keys from <https://github.com/settings/ssh>
 
 - `chmod 600 ~/.ssh/id_rsa*`
 - `sudo aptitude install -y git`

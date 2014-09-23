@@ -34,7 +34,7 @@ Code.org&reg; is dedicated to the vision that every student in every school shou
   end
 %>
 <hr>
-<a href="code.org/about/donors-other">
+<a href="/about/donors-other">
   <p>
     View all other supporters
   </p>
