@@ -90,6 +90,7 @@ class DashboardStudent
       :users__name___name,
       :users__username___username,
       :users__email___email,
+      :users__hashed_email___hashed_email,
       :users__gender___gender,
       :users__birthday___birthday,
       :users__prize_earned___prize_earned
