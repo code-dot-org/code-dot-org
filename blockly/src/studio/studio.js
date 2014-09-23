@@ -759,12 +759,14 @@ function checkForCollisions() {
       } else {
         sprite.endCollision(edgeClass);
       }
-      executeCollision(i, edgeClass);
     }
 
     // Don't execute projectile collision queue(s) until we've handled all edge
     // collisions. Not sure this is strictly necessary, but it means the code is
     // the same as it was before this change.
+    for (j = 0; j < EdgeClassNames.length; j++) {
+      executeCollision(i, EdgeClassNames[j]);
+    }
     for (j = 0; j < ProjectileClassNames.length; j++) {
       executeCollision(i, ProjectileClassNames[j]);
     }
@@ -2287,7 +2289,6 @@ function handleCollision(src, target, allowQueueExtension) {
  */
 function executeCollision(src, target) {
   var srcPrefix = 'whenSpriteCollided-' + src + '-';
-  var targetPrefix = 'whenSpriteCollided-' + target + '-';
 
   Studio.executeQueue(srcPrefix + target);
 
@@ -2295,10 +2296,7 @@ function executeCollision(src, target) {
   Studio.executeQueue(srcPrefix + 'any_actor');
   Studio.executeQueue(srcPrefix + 'anything');
 
-  if (isActorClass(target)) {
-    Studio.executeQueue(targetPrefix + 'any_actor');
-    Studio.executeQueue(targetPrefix + 'anything');
-  } else if (isEdgeClass(target)) {
+  if (isEdgeClass(target)) {
     Studio.executeQueue(srcPrefix + 'any_edge');
   } else if (isProjectileClass(target)) {
     Studio.executeQueue(srcPrefix + 'any_projectile');
