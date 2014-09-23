@@ -38,9 +38,20 @@ MOOC_DEV=1 grunt build
 
 ### Seeing your development version of Blockly in Dashboard
 
-1. From the [Dashboard](https://github.com/code-dot-org/dashboard) project, follow [these instructions](https://github.com/code-dot-org/dashboard/blob/finished/README.md#symlink) to set up a symlink to your development copy of blockly.
-  * Check your symlink if you find your changes are not showing up within dashboard. You may accidentally replace your symlink with the pre-built vendor version (e.g., if you're switching branches or stashing changes).
-1. When you run later builds, your results should show up in Dashboard.
+1. To make your changes show up in dashboard, run the following after the first time you build blockly:
+  ```
+  cd ../dashboard
+  bundle exec rake 'blockly:dev[../blockly]'
+  cd ../blockly
+  ```
+
+1. If you find your changes are not showing up within dashboard, you may have accidentally reverted your symlink to point to the pre-built version of blockly (e.g. when switching branches or stashing changes). To check your symlink, run:
+  ```
+  git status
+  ```
+and look for something like `public/blockly -> blockly-package` in the output. [NEEDS VALIDATION].
+
+1. If the symlink is in place, then when you run later builds of blockly, your results should show up in Dashboard.
 
 ### Building during development
 

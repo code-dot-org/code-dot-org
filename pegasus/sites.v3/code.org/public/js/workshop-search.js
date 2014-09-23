@@ -5,6 +5,7 @@ var gmap,
 $(document).ready(function() {
   initializeMap();
   loadWorkshops();
+  addGeocomplete();
 });
 
 function initializeMap() {
@@ -86,6 +87,21 @@ function compileHtml(workshop, first) {
   html += '</div>';
 
   return html;
+}
+
+function addGeocomplete() {
+  var geocomplete_options = {
+    country: 'us'
+  };
+
+  $("#geocomplete").geocomplete(geocomplete_options)
+    .bind("geocode:result", function(event, result){
+      gmap.fitBounds(result.geometry.viewport);
+    });
+
+  $("#btn-submit").click(function(){
+    $("#geocomplete").trigger("geocode");
+  });
 }
 
 function displayQueryError() {
