@@ -21,7 +21,7 @@ social:
 #promote-page
   %h1 Promote Computer Science
 
-  %div{:id=>'us_content'}
+  %div{:id=>'us_content', :style=>'visibility: hidden'}
     #petition-section.section.clear
       = view :petition
     :javascript
@@ -58,6 +58,7 @@ social:
   var promote;
   $(document).ready(function() {
     $('#us_content').hide();
+    $('#us_content').css("visibility", "visible");
     $.ajax({
       url: window.location.origin + "/v2/client-location",
       type: "get",
