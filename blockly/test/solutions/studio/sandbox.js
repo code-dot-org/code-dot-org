@@ -522,6 +522,69 @@ module.exports = {
       }
     },
     {
+      description: 'collision with any actor - bidirectional',
+      // two actors, both scoring points when the collide with any actor. as
+      // a result, we should have two points after collision
+      xml: '<xml>' +
+        '  <block type="when_run" deletable="false">' +
+        '    <next>' +
+        '      <block type="studio_setSprite">' +
+        '        <title name="SPRITE">0</title>' +
+        '        <title name="VALUE">"witch"</title>' +
+        '        <next>' +
+        '          <block type="studio_setSprite">' +
+        '            <title name="SPRITE">1</title>' +
+        '            <title name="VALUE">"witch"</title>' +
+        '            <next>' +
+        '              <block type="studio_moveDistance">' +
+        '                <title name="SPRITE">0</title>' +
+        '                <title name="DIR">2</title>' +
+        '                <title name="DISTANCE">200</title>' +
+        '                <next>' +
+        '                  <block type="studio_moveDistance">' +
+        '                    <title name="SPRITE">0</title>' +
+        '                    <title name="DIR">8</title>' +
+        '                    <title name="DISTANCE">200</title>' +
+        '                  </block>' +
+        '                </next>' +
+        '              </block>' +
+        '            </next>' +
+        '          </block>' +
+        '        </next>' +
+        '      </block>' +
+        '    </next>' +
+        '  </block>' +
+        '  <block type="studio_whenSpriteCollided">' +
+        '    <title name="SPRITE1">0</title>' +
+        '    <title name="SPRITE2">any_actor</title>' +
+        '    <next>' +
+        '      <block type="studio_changeScore">' +
+        '        <title name="VALUE">1</title>' +
+        '      </block>' +
+        '    </next>' +
+        '  </block>' +
+        '  <block type="studio_whenSpriteCollided">' +
+        '    <title name="SPRITE1">1</title>' +
+        '    <title name="SPRITE2">any_actor</title>' +
+        '    <next>' +
+        '      <block type="studio_changeScore">' +
+        '        <title name="VALUE">1</title>' +
+        '      </block>' +
+        '    </next>' +
+        '  </block>' +
+        '</xml>',
+      runBeforeClick: function (assert) {
+        runOnTick (22, function () {
+          assert(Studio.playerScore === 2, 'score incremented');
+          Studio.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+    {
       description: 'collision with any edge',
       xml: '<xml>' +
         '  <block type="when_run" deletable="false">' +
