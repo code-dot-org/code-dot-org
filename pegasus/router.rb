@@ -241,6 +241,14 @@ class Documents < Sinatra::Base
       end
       @header['social'] = social_metadata
 
+      if @header['vary_cookie']
+        headers['Vary'] = http_vary_add_type(headers['Vary'], 'Cookie')
+      end
+      
+      if @header['vary_language']
+        headers['Vary'] = http_vary_add_type(headers['Vary'], 'X-Varnish-Accept-Language')
+      end
+
       if @header['require_https'] #&& rack_env == :production
         headers['Vary'] = http_vary_add_type(headers['Vary'], 'X-Forwarded-Proto')
         redirect request.url.sub('http://', 'https://') unless request.env['HTTP_X_FORWARDED_PROTO'] == 'https'
