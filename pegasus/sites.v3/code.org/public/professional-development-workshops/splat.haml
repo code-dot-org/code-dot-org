@@ -3,6 +3,7 @@ title: Register for a workshop
 nav: blank
 rightbar: blank
 ---
+- dont_cache
 - workshop_id = request.splat_path_info[1..-1]
 - pass unless form = Form.first(kind:'ProfessionalDevelopmentWorkshop', id:workshop_id)
 - data = form.data
