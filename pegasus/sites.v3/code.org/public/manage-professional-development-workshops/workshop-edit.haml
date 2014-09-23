@@ -2,8 +2,24 @@
 layout: none
 theme: none
 ---
+:css
+  #nav {
+    margin: 10px 0;
+  }
+  h1 {
+    margin: 20px 0 30px 0;
+  }
 
-%h1{"ng-show" => "action == 'edit'"} Edit workshop
+#nav
+  #goback
+    %a{href: '#/'} Workshop Dashboard
+    %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
+    %b{style: "color: #ff8b02;"}
+      %span{"ng-show" => "action == 'edit'"} Edit {{workshop.name()}}
+      %span{"ng-show" => "action == 'clone'"} Clone workshop
+      %span{"ng-show" => "action != 'edit' && action != 'clone'"} Add workshop
+
+%h1{"ng-show" => "action == 'edit'"} Edit {{workshop.name()}}
 %h1{"ng-show" => "action == 'clone'"} Clone workshop
 %h1{"ng-show" => "action != 'edit' && action != 'clone'"} Add workshop
 
