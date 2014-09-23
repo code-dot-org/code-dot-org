@@ -26,9 +26,9 @@ On staging, a cron task joins the PDFs in these `.collate` files together and pl
 
 # Numbering PDFs with `numbers` option
 
-Both .md and .collate generated PDFs can have page numbers applied.
+Page numbers can be applied to `.collate`-generated PDFs.
 
-At the top of the PDF, add YAML front matter with the following variable set:
+At the top of the `.collate` file, add YAML front matter with the following variable set:
 
 ```
 ---
@@ -53,7 +53,7 @@ For Dropbox folder access, ask Brendan or anyone with Dropbox `Pegasus Staging` 
 
 The staging build server setup script automatically installs the dependencies required.
 
-For OS X, to test out curriculum PDF generation, a couple of extra packages need to be installed:
+For OS X, to test curriculum PDF generation, an extra package is needed:
 
 * Install pdftk
   `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb`
