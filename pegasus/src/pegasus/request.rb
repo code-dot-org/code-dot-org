@@ -8,7 +8,7 @@ module Rack; class Request
       '/learn',
       '/congrats',
       '/language_test',
-      '/teacher-dashboard#',
+      '/teacher-dashboard'
     ]
   end
 
