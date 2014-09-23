@@ -246,6 +246,7 @@ class Documents < Sinatra::Base
       end
       
       if @header['vary_language']
+        headers['Vary'] = http_vary_add_type(headers['Vary'], 'Cookie')
         headers['Vary'] = http_vary_add_type(headers['Vary'], 'X-Varnish-Accept-Language')
       end
 
