@@ -32,6 +32,9 @@
   function getSignups() {
     var params = [];
 
+    // Just uncomment for sample dot on the east coast.
+    // addMarker("41.0697172", "-73.84479879999999", "School");
+
     $.post('/forms/HocSignup2014/query', $.param(params), function(response) {
       var results = JSON.parse(response);
 
@@ -64,9 +67,12 @@
       map: gmap,
       icon: {
         path: google.maps.SymbolPath.CIRCLE,
-        strokeWeight: 3,
+        strokeWeight: 2,
         strokeOpacity: 1,
-        strokeColor: '#cc0000',
+        fillColor: '#ee0000',
+        fillOpacity: 1,
+        strokeColor: '#ee0000',
+        strokeOpacity: 0.5,
         scale: 3
       },
       title: label,
