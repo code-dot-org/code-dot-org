@@ -1,5 +1,7 @@
 Sequel.migration do
   up do
+    drop_table?(:hoc_activity)
+
     create_table(:hoc_activity, charset:'utf8') do
       primary_key :id
       String :session, unique:true, null:false, index:true, size:50
@@ -11,7 +13,7 @@ Sequel.migration do
       String :started_ip, size:50
       DateTime :pixel_started_at
       String :pixel_started_ip, size:50
-      DateTime :pixel_finsihed_at
+      DateTime :pixel_finished_at
       String :pixel_finished_ip, size:50
       DateTime :finished_at
       String :finished_ip, size:50
