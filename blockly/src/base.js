@@ -262,10 +262,13 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
-    // Disable workers (can't load worker-javascript.js)
-    ace.EditSession.prototype.$startWorker = function(){};
     BlocklyApps.editor = ace.edit('codeTextbox');
     BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
+    BlocklyApps.editor.setOptions({
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true
+    });
+
     var codeTextbox = document.getElementById('codeTextbox');
 
     var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
