@@ -15,7 +15,7 @@
     states still don't allow students to count computer science courses toward high school graduation.
 
 :javascript
-  var webServiceLocation = window.location.origin + "/promote/state/";
+  var webServiceLocation = "/promote/state/";
 
   $(document).ready(function() {
     // Check if the URL specifies a specific state. If so, load the state
@@ -33,7 +33,10 @@
     $('#map').usmap({
       click: function(event, data) {
         // Add data and URL to browser history when the user clicks a state
-        history.replaceState({state: data.name}, data.name, "../promote/" + data.name.toLowerCase());
+
+        if (window.history.replaceState) {
+          history.replaceState({state: data.name}, data.name, "../promote/" + data.name.toLowerCase());
+        }
 
         // Load the clicked state's information into the infobox
         $.ajax({
