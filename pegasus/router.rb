@@ -88,7 +88,15 @@ class Documents < Sinatra::Base
 
     Poste::Message.import_templates
 
-    vary_uris = ['/', '/learn', '/congrats', '/language_test', '/teacher-dashboard']
+    vary_uris = ['/', '/learn', '/congrats', '/language_test', 
+                 '/teacher-dashboard', 
+                 '/teacher-dashboard/landing',
+                 '/teacher-dashboard/nav',
+                 '/teacher-dashboard/section_manage',
+                 '/teacher-dashboard/section_progress',
+                 '/teacher-dashboard/sections',
+                 '/teacher-dashboard/signin_cards',
+                 '/teacher-dashboard/student']
     set :vary, { 'X-Varnish-Accept-Language'=>vary_uris, 'Cookie'=>vary_uris }
   end
 
@@ -240,16 +248,7 @@ class Documents < Sinatra::Base
         content = match.post_match
       end
       @header['social'] = social_metadata
-
-      if @header['vary_cookie']
-        headers['Vary'] = http_vary_add_type(headers['Vary'], 'Cookie')
-      end
       
-      if @header['vary_language']
-        headers['Vary'] = http_vary_add_type(headers['Vary'], 'Cookie')
-        headers['Vary'] = http_vary_add_type(headers['Vary'], 'X-Varnish-Accept-Language')
-      end
-
       if @header['require_https'] #&& rack_env == :production
         headers['Vary'] = http_vary_add_type(headers['Vary'], 'X-Forwarded-Proto')
         redirect request.url.sub('http://', 'https://') unless request.env['HTTP_X_FORWARDED_PROTO'] == 'https'
