@@ -166,6 +166,20 @@ var codeKeyDown = function(e) {
   }
 };
 
+BlocklyApps.toggleRunReset = function(button) {
+  var showRun = (button === 'run');
+  if (button !== 'run' && button !== 'reset') {
+    throw "Unexpected input";
+  }
+
+  var run = document.getElementById('runButton');
+  var reset = document.getElementById('resetButton');
+  run.style.display = showRun ? 'inline-block' : 'none';
+  run.disabled = !showRun;
+  reset.style.display = !showRun ? 'inline-block' : 'none';
+  reset.disabled = showRun;
+};
+
 /**
  * Common startup tasks for all apps.
  */
@@ -917,8 +931,7 @@ BlocklyApps.report = function(options) {
  */
 BlocklyApps.resetButtonClick = function() {
   onResetPressed();
-  document.getElementById('runButton').style.display = 'inline-block';
-  document.getElementById('resetButton').style.display = 'none';
+  BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
   Blockly.mainWorkspace.setEnableToolbox(true);
   Blockly.mainWorkspace.traceOn(false);
@@ -10145,13 +10158,11 @@ BlocklyApps.runButtonClick = function() {
 function beginAttempt () {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
-  var stepButton = document.getElementById('stepButton');
   // Ensure that Reset button is at least as wide as Run button.
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
