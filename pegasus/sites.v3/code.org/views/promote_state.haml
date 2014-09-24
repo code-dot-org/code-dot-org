@@ -4,102 +4,104 @@
 -no_credit_count = no_credit_count()
 -petition_url = data[:petition_url_t]
 
-%p{:style=>'color: rgb(185,191,21); text-shadow: 0px 0px 3px rgba(0, 0, 0, 1); font-size:36px; line-height: 36px; font-weight: bold; text-align:center'} #{statename}
+%p{:style=>'color: rgb(185,191,21); text-shadow: 1px 1px rgba(0, 0, 0, .5); font-size:36px; line-height: 36px; font-weight: bold; text-align:center'} #{statename}
 %p{style: "font-size:15px; margin-bottom: 0px"}
   -unless data[:cs_jobs_i] == 0
-    %b{style: "font-size:20px;"}= format_integer_with_commas(data[:cs_jobs_i])
+    %strong{style: "font-size:20px;"}= format_integer_with_commas(data[:cs_jobs_i])
     open computing jobs
 -unless data[:growth_vs_average_f] < 0.0
   %p{style: "color: #ddd; font-size:15px;"}
     (growing at <b>#{data[:growth_vs_average_f]}x</b> the state average)
 %p{style: "font-size:15px;"}
   -unless data[:cs_graduates] == 0
-    %b{style: "font-size:20px;"}= format_integer_with_commas(data[:cs_graduates_i])
+    %strong{style: "font-size:20px;"}= format_integer_with_commas(data[:cs_graduates_i])
     computer science graduates
-%p{style: "font-size:15px;"}
+%p{style: "font-size:15px; margin-bottom: 0px; line-height: 15px"}
   -unless data[:count_schools_teach_cs] == 0
-    %b{style: "font-size:20px;"}= format_integer_with_commas(data[:count_schools_teach_cs_i])
+    %strong{style: "font-size:20px;"}= format_integer_with_commas(data[:count_schools_teach_cs_i])
     schools teach computer science
     %br
     %br
 
-  -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
-    %span.download-fact-sheet<
-      Download
-      %a{:href=>"/files/states/#{state}.pdf", :target=>'_blank'}<
-        #{statename} fact-sheet
-        %img{:src=>"/images/download.png", :width=>"35px", :style=>'margin-top:-5px'}
+-if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
+  %span.download-fact-sheet<
+    Download
+    %a{:href=>"/files/states/#{state}.pdf", :target=>'_blank'}<
+      #{statename} fact-sheet
+      %img{:src=>"/images/download.png", :width=>"35px", :style=>'margin-top:-5px'}
+  %br
+
+%div{style: "font-size:15px; margin-left:20px; position: relative"}
+  - if data[:cs_counts_t] == "No"
+    %i.fa.fa-times-circle
+    &nbsp;
+    CS doesn't count as math or science credit
+    %br
+  - elsif data[:cs_counts_t] == "Yes"
+    %i.fa.fa-check-circle
+    &nbsp;
+    CS counts as math or science credit
     %br
 
-  %p{style: "font-size:15px; margin-left:20px"}
-    - if data[:cs_counts_t] == "No"
-      %i.fa.fa-times-circle
-      &nbsp;
-      CS doesn't count as math or science credit
-      %br
-    - elsif data[:cs_counts_t] == "Yes"
-      %i.fa.fa-check-circle
-      &nbsp;
-      CS counts as math or science credit
-      %br
+  - if data[:cs_teacher_cert_s] == "No"
+    %i.fa.fa-times-circle
+    &nbsp;
+    No clear CS teacher certification pathways
+    %br
+  - elsif data[:cs_teacher_cert_s] == "Yes"
+    %i.fa.fa-check-circle
+    &nbsp;
+    Clear certification pathways for CS teachers
+    %br
 
-    - if data[:cs_teacher_cert_s] == "No"
-      %i.fa.fa-times-circle
-      &nbsp;
-      No clear CS teacher certification pathways
-      %br
-    - elsif data[:cs_teacher_cert_s] == "Yes"
-      %i.fa.fa-check-circle
-      &nbsp;
-      Clear certification pathways for CS teachers
-      %br
+  - if data[:cs_standards_s] == "No"
+    %i.fa.fa-times-circle
+    &nbsp;
+    No CS curriculum standards
+    %br
+  - elsif data[:cs_standards_s] == "Yes"
+    %i.fa.fa-check-circle
+    &nbsp;
+    CS curriculum standards
+    %br
 
-    - if data[:cs_standards_s] == "No"
-      %i.fa.fa-times-circle
-      &nbsp;
-      No CS curriculum standards
-      %br
-    - elsif data[:cs_standards_s] == "Yes"
-      %i.fa.fa-check-circle
-      &nbsp;
-      CS curriculum standards
-      %br
-
-  - if statename == "Washington DC"
+- if statename == "Washington DC"
+  %p
+    In #{statename} students
+    %strong
+      can
+    count computer science for credit towards high school graduation!
+- else
+  - if data[:cs_counts_t] == "Yes"
     %p
-      In #{statename} students
+      #{statename} is one of #{50 - no_credit_count} states where students
       %strong
         can
       count computer science for credit towards high school graduation!
   - else
-    - if data[:cs_counts_t] == "Yes"
-      %p
-        #{statename} is one of #{50 - no_credit_count} states where students
-        %strong
-          can
-        count computer science for credit towards high school graduation!
-    - else
-      %p
-        #{statename} is one of #{no_credit_count} states where students
-        %strong
-          can't
-        count computer science for high school graduation credit.
+    %p
+      #{statename} is one of #{no_credit_count} states where students
+      %strong
+        can't
+      count computer science for high school graduation credit.
 
-  -if data[:action_text_s] && data[:action_url_s]
-    %a{:href=>data[:action_url_s], :target=>'_blank'}
-      %button{:class=>'state-petition-btn'}= data[:action_text_s]
-  - else
-    %a{:href=>data[:action_url_s], :target=>'_blank'}
-      %button{:class=>'state-petition-btn', :style=>'visibility: hidden'}= data[:action_text_s]
+-if data[:action_text_s] && data[:action_url_s]
+  %a{:href=>data[:action_url_s], :target=>'_blank'}
+    %button{:class=>'state-petition-btn'}= data[:action_text_s]
+- else
+  %a{:href=>data[:action_url_s], :target=>'_blank'}
+    %button{:class=>'state-petition-btn', :style=>'visibility: hidden'}= data[:action_text_s]
 
-  #changeorg{:style=>'display: none;'}
-    %b#title
-    %br
-    %span#count
-    %br
-    %br
-    %a{:href=>petition_url, :target=>'_blank'}
-      %button{:class=>'state-petition-btn'} Sign Petition
+#changeorg{:style=>'display: none;'}
+  %b#title
+  %br
+  %span#count
+  %br
+  %br
+  %a{:href=>petition_url, :target=>'_blank'}
+    %button{:class=>'state-petition-btn'} Sign Petition
+%br
+%br
 
 %p{:style=>"font-size: 12px; line-height: 12px; text-align: center; opacity: 0.8;"}
   %span{:style=> 'color: #BCC2C6'} Sources:
