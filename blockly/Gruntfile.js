@@ -82,6 +82,7 @@ config.clean = {
   all: ['build']
 };
 
+var ace_suffix = DEV ? '' : '-min';
 config.copy = {
   src: {
     files: [
@@ -117,6 +118,16 @@ config.copy = {
         src: ['**'],
         //TODO: Would be preferrable to separate Blockly media.
         dest: 'build/package/media'
+      }
+    ]
+  },
+  lib: {
+    files: [
+      {
+        expand: true,
+        cwd: 'lib/ace/src' + ace_suffix + '-noconflict/',
+        src: ['**/*.js'],
+        dest: 'build/package/js/ace/'
       }
     ]
   }
@@ -199,16 +210,13 @@ APPS.forEach(function(app) {
 config.concat = {};
 LOCALES.forEach(function(locale) {
   var ext = DEV ? 'uncompressed' : 'compressed';
-  var ace_suffix = DEV ? '' : '_min';
   config.concat['vendor_' + locale] = {
     nonull: true,
     src: [
       'lib/blockly/blockly_' + ext + '.js',
       'lib/blockly/blocks_compressed.js',
       'lib/blockly/javascript_compressed.js',
-      'lib/blockly/' + locale + '.js',
-      'lib/ace/ace' + ace_suffix + '.js',
-      'lib/ace/mode-javascript' + ace_suffix + '.js'
+      'lib/blockly/' + locale + '.js'
     ],
     dest: 'build/package/js/' + locale + '/vendor.js'
   };
@@ -255,7 +263,7 @@ config.watch = {
   },
   vendor_js: {
     files: ['lib/**/*.js'],
-    tasks: ['concat']
+    tasks: ['concat', 'copy:lib']
   },
   ejs: {
     files: ['src/**/*.ejs'],
@@ -349,6 +357,7 @@ module.exports = function(grunt) {
     'uglify:browserified',
     'copy:browserified',
     'copy:static',
+    'copy:lib',
     'concat',
     'sass'
   ]);
