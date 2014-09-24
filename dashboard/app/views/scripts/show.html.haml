@@ -17,7 +17,7 @@
         - if @script.feedback_url
           = link_to t('landing.feedback'), @script.feedback_url
           %br/
-        = link_to t('landing.support'), "//support.code.org"
+        = link_to t('landing.support'), t('landing.support_url')
         %br/
 
     - if @script.has_banner_image?
