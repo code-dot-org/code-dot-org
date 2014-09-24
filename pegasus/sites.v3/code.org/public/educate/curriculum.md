@@ -8,19 +8,24 @@ nav: educate_nav
 
 ## Elementary School
 
-*Launching Sept 2014* - There are three levels of computer science at the elementary school level:
+Code.org has developed a free elementary school curriculum that allows even the youngest students to explore the limitless world of computing. There are three levels of computer science at the elementary school level:
 
-- Course 1: for early-readers, ages 4-6
-- Course 2: for beginners, ages 6+
-- Course 3: for ages 6+
+- [Course 1](http://studio.code.org/s/course1): for early-readers, ages 4-6
+- [Course 2](http://studio.code.org/s/course2): for beginners, ages 6+
+- [Course 3](http://studio.code.org/s/course3): for ages 6+
 
-These experiences blend online, self-guided and self-paced tutorials with "unplugged" activities - lessons that teach computing concepts without a computer.  Each level consists of about 20 lessons that may be implemented as one contiguous unit or one lesson a week for a semester. Each lesson may be implemented within a standard 45-50 minute class period. The courses have been designed for students of all ages and they align to and integrate national standards in Technology, Computer Science, Math, Science, and English.
+The courses blend online, self-guided and self-paced tutorials with “unplugged” activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Each lesson may be implemented within a standard 45-50 minute class period. The courses have been designed for students of all ages and align to [CSTA Computer Science](https://csta.acm.org/Curriculum/sub/K12Standards.html) and [ISTE](http://www.iste.org/standards/standards-for-students) standards, and reinforce concepts and skills taught in other subject areas by integrating national [Math](http://www.corestandards.org/Math/), [English Language Arts](http://www.corestandards.org/ELA-Literacy/), and
+[Science](http://www.nextgenscience.org/next-generation-science-standards) standards.
+ 
 
-Teachers, try our [other courses](http://studio.code.org).  See an [overview of Code.org's K-5 curriculum](https://docs.google.com/document/d/1VBgpBodJgIouJejMoijXFV0BbAHVUqSeN_ZJAR-HEP8/pub) *coming summer 2014.*
+[Learn more](http://code.org/k5) about our K-5 courses.
 
-**Professional development opportunity:** In the fall, we will offer free workshops nationwide for educators interested in teaching our K-5 curriculum. Request a workshop and we'll let you know when one is available near you.
+**Free professional development workshops (US only):**  Code.org is offering free workshops for K-5 educators and content-area teachers (librarians, tech-ed specialists, etc.) interested in teaching the Code.org elementary school computer science curriculum. The
+workshop will cover content for all three courses and teachers will receive the supplies they need to teach the course- at no cost.
 
-[<button>Request a Workshop</button>](/educate/k5)
+These workshops will be led by experienced Code.org K-5 Facilitators in over 60 cities across the United States.
+
+[<button>Find a Workshop (for teachers only)</button>](/professional-development-workshops)
 
 ## Middle School
 

@@ -5,7 +5,7 @@
       - if index % 2 != 0
         - style = ' border-left: none;'
       .platinum_donor_column{:style=>style}
-        %a{:href=>supporter[:url_s]}
+        %a{:href=>supporter[:url_s], :target=>"_blank"}
           %img{:src=>avatar_url, :style=>'max-width: 100%;'}
     - else
       - if  groupindex == 0
