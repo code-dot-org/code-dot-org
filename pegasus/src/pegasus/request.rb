@@ -8,13 +8,13 @@ module Rack; class Request
       '/learn',
       '/congrats',
       '/language_test',
-      '/teacher-dashboard'
-      '/teacher-dashboard/landing'
-      '/teacher-dashboard/nav'
-      '/teacher-dashboard/section_manage'
-      '/teacher-dashboard/section_progress'
-      '/teacher-dashboard/sections'
-      '/teacher-dashboard/signin_cards'
+      '/teacher-dashboard',
+      '/teacher-dashboard/landing',
+      '/teacher-dashboard/nav',
+      '/teacher-dashboard/section_manage',
+      '/teacher-dashboard/section_progress',
+      '/teacher-dashboard/sections',
+      '/teacher-dashboard/signin_cards',
       '/teacher-dashboard/student'
     ]
   end
