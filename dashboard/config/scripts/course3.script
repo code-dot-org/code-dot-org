@@ -5,6 +5,8 @@ hidden 'false'
 
 stage 'Computational Thinking'
 level 'ComputationalThinking'
+assessment '4-5 Computational Thinking Multi 1'
+assessment '4-5 Computational Thinking Match 1'
 
 stage 'Maze'
 level '4-5 Maze 1'
