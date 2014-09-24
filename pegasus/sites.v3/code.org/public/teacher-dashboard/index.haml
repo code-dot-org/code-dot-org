@@ -240,7 +240,7 @@ angular: teacherDashboard
 
     $scope.age_list = #{(4..100).to_a.inspect};
 
-    $scope.gender_list = {f: 'Female', m: 'Male'};
+    $scope.gender_list = {f: '#{I18n.t('dashboard_students_female')}', m: '#{I18n.t('dashboard_students_male')}'};
 
     $scope.bulk_import = {editing: false, students: ''};
 
