@@ -1,0 +1,16 @@
+name '4-5 Computational Thinking Match 1'
+title 'Matching'
+description 'Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.'
+height '100'
+
+question '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
+answer '/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png'
+
+question '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
+answer '/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png'
+
+question '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
+answer '/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png'
+
+question '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
+answer '/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png'
