@@ -21,9 +21,9 @@ require_https: true
 
 ## Results so far:
 
-- 39 million students did the Hour of Code since December 2013.
-- 31,000 teachers began teaching our online course to over 1 million students.
-- 30 districts (including 3 of the top 6) partnered with us to bring computer science to 100+ high schools
+- 42 million students have done the Hour of Code since December 2013.
+- 40,000 teachers began teaching our online course to 1.5 million students
+- 31 districts (including 3 of the top 6) partnered with us to bring computer science to 100+ high schools
 - 14 states changed policies to make computer science  count toward high school graduation requirements.
 
 **Our current donors and partners:**

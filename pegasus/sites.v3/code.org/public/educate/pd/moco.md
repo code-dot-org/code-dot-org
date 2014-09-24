@@ -72,10 +72,10 @@ The Administrator / Counselor Phase 1 Professional Development online course [ed
 #### Date and Time ####
 Monday, September 29th
 <br />
-8:00am - 12:00 pm
-
-Light breakfast and coffee will be served. 
+Breakfast and check-in: 8:00am - 8:30am 
 <br />
+Workshop: 8:30am - 12:30pm
+
 Please review your reflection questions prior to PD and bring your laptop.
 
 #### Location

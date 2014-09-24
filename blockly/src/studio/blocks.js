@@ -302,11 +302,16 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(dropdown2, 'SPRITE2');
       } else {
         dropdown1 = spriteNumberTextDropdown(msg.whenSpriteCollidedN);
-        var dropdownArray2 = spriteNumberTextArray(msg.whenSpriteCollidedWithN);
+        var dropdownArray2 = [this.GROUPINGS[0]];
+        dropdownArray2 = dropdownArray2.concat(
+          spriteNumberTextArray(msg.whenSpriteCollidedWithN));
+        dropdownArray2.unshift(this.GROUPINGS[1]);
         if (projectileCollisions) {
+          dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[2]]);
           dropdownArray2 = dropdownArray2.concat(this.PROJECTILES);
         }
         if (edgeCollisions) {
+          dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[3]]);
           dropdownArray2 = dropdownArray2.concat(this.EDGES);
         }
         dropdown2 = new blockly.FieldDropdown(dropdownArray2);
@@ -314,8 +319,8 @@ exports.install = function(blockly, blockInstallOptions) {
         this.appendDummyInput().appendTitle(dropdown2, 'SPRITE2');
       }
       if (spriteCount > 1) {
-        // default second dropdown to second item
-        dropdown2.setValue(dropdown2.getOptions()[1][1]);
+        // default second dropdown to actor 2
+        dropdown2.setValue('1');
       }
 
       this.setPreviousStatement(false);
@@ -324,6 +329,12 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setTooltip(msg.whenSpriteCollidedTooltip());
     }
   };
+
+  blockly.Blocks.studio_whenSpriteCollided.GROUPINGS =
+      [[msg.whenSpriteCollidedWithAnything(), 'anything'],
+       [msg.whenSpriteCollidedWithAnyActor(), 'any_actor'],
+       [msg.whenSpriteCollidedWithAnyProjectile(), 'any_projectile'],
+       [msg.whenSpriteCollidedWithAnyEdge(), 'any_edge']];
 
   blockly.Blocks.studio_whenSpriteCollided.PROJECTILES =
       [[msg.whenSpriteCollidedWithBlueFireball(), 'blue_fireball'],

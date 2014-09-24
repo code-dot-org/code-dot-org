@@ -352,7 +352,7 @@ var calcMoveDistanceFromQueues = function (index, yAxis, modifyQueues) {
   var totalDistance = 0;
 
   Studio.eventHandlers.forEach(function (handler) {
-    var cmd = handler.cmdQueue ? handler.cmdQueue[0] : null;
+    var cmd = handler.cmdQueue[0];
     if (cmd && cmd.name === 'moveDistance' && cmd.opts.spriteIndex === index) {
       var scaleFactor;
       var distThisMove = Math.min(cmd.opts.queuedDistance,
@@ -387,7 +387,7 @@ var calcMoveDistanceFromQueues = function (index, yAxis, modifyQueues) {
 
 var cancelQueuedMovements = function (index, yAxis) {
   Studio.eventHandlers.forEach(function (handler) {
-    var cmd = handler.cmdQueue ? handler.cmdQueue[0] : null;
+    var cmd = handler.cmdQueue[0];
     if (cmd && cmd.name === 'moveDistance' && cmd.opts.spriteIndex === index) {
       var dir = cmd.opts.dir;
       if (yAxis && (dir === Direction.NORTH || dir === Direction.SOUTH)) {
@@ -512,26 +512,24 @@ var setSvgText = function(opts) {
   return opts.fullHeight - linesLessThanMax * opts.lineHeight;
 };
 
-//
-// Execute the code for all of the event handlers that match an event name
-//
-
-var callHandler = function (name, allowQueueExtension) {
+/**
+ * Execute the code for all of the event handlers that match an event name
+ * @param {string} name Name of the handler we want to call
+ * @param {boolean} allowQueueExension When true, we allow additional cmds to
+ *  be appended to the queue
+ */
+function callHandler (name, allowQueueExtension) {
   Studio.eventHandlers.forEach(function (handler) {
     // Note: we skip executing the code if we have not completed executing
     // the cmdQueue on this handler (checking for non-zero length)
     if (handler.name === name &&
-        (allowQueueExtension ||
-         (!handler.cmdQueue || 0 === handler.cmdQueue.length))) {
-      if (!handler.cmdQueue) {
-        handler.cmdQueue = [];
-      }
+        (allowQueueExtension || (0 === handler.cmdQueue.length))) {
       Studio.currentCmdQueue = handler.cmdQueue;
       try { handler.func(BlocklyApps, api, Studio.Globals); } catch (e) { }
       Studio.currentCmdQueue = null;
     }
   });
-};
+}
 
 Studio.onTick = function() {
   Studio.tickCount++;
@@ -651,10 +649,6 @@ Studio.onTick = function() {
  * the actual movements take place)
  */
 function checkForCollisions() {
-  var executeCollisionQueueForClass = function (className) {
-    Studio.executeQueue('whenSpriteCollided-' + i + '-' + className);
-  };
-
   var spriteCollisionDistance = function (i1, i2, yAxis) {
     var dim1 = yAxis ? Studio.sprite[i1].height : Studio.sprite[i1].width;
     var dim2 = yAxis ? Studio.sprite[i2].height : Studio.sprite[i2].width;
@@ -707,69 +701,75 @@ function checkForCollisions() {
       } else {
         sprite.endCollision(j);
       }
-      Studio.executeQueue('whenSpriteCollided-' + i + '-' + j);
+      executeCollision(i, j);
     }
     for (j = 0; j < Studio.projectiles.length; j++) {
-      var next = Studio.projectiles[j].getNextPosition();
+      var projectile = Studio.projectiles[j];
+      var next = projectile.getNextPosition();
       if (collisionTest(iXCenter,
                         next.x,
                         projectileCollisionDistance(i, j, false),
                         iYCenter,
                         next.y,
                         projectileCollisionDistance(i, j, true))) {
-        if (Studio.projectiles[j].startCollision(i)) {
-          Studio.currentEventParams = { projectile: Studio.projectiles[j] };
+        if (projectile.startCollision(i)) {
+          Studio.currentEventParams = { projectile: projectile };
           // Allow cmdQueue extension (pass true) since this handler
           // may be called for multiple projectiles before executing the queue
           // below
 
           // NOTE: not using collideSpriteWith() because collision state is
           // tracked on the projectile in this case
-          callHandler('whenSpriteCollided-' + i + '-' +
-                      Studio.projectiles[j].className,
-                      true);
+          handleCollision(i, projectile.className, true);
           Studio.currentEventParams = null;
         }
       } else {
-        Studio.projectiles[j].endCollision(i);
+        projectile.endCollision(i);
       }
     }
-    if (level.edgeCollisions) {
-      for (j = 0; j < EdgeClassNames.length; j++) {
-        var edgeXCenter, edgeYCenter;
-        var edgeClass = EdgeClassNames[j];
-        switch (edgeClass) {
-          case 'top':
-            edgeXCenter = Studio.MAZE_WIDTH / 2;
-            edgeYCenter = 0;
-            break;
-          case 'left':
-            edgeXCenter = 0;
-            edgeYCenter = Studio.MAZE_HEIGHT / 2;
-            break;
-          case 'bottom':
-            edgeXCenter = Studio.MAZE_WIDTH / 2;
-            edgeYCenter = Studio.MAZE_HEIGHT;
-            break;
-          case 'right':
-            edgeXCenter = Studio.MAZE_WIDTH;
-            edgeYCenter = Studio.MAZE_HEIGHT / 2;
-            break;
-        }
-        if (collisionTest(iXCenter,
-                          edgeXCenter,
-                          edgeCollisionDistance(i, edgeClass, false),
-                          iYCenter,
-                          edgeYCenter,
-                          edgeCollisionDistance(i, edgeClass, true))) {
-          Studio.collideSpriteWith(i, edgeClass);
-        } else {
-          sprite.endCollision(edgeClass);
-        }
+
+    for (j = 0; j < EdgeClassNames.length && level.edgeCollisions; j++) {
+      var edgeXCenter, edgeYCenter;
+      var edgeClass = EdgeClassNames[j];
+      switch (edgeClass) {
+        case 'top':
+          edgeXCenter = Studio.MAZE_WIDTH / 2;
+          edgeYCenter = 0;
+          break;
+        case 'left':
+          edgeXCenter = 0;
+          edgeYCenter = Studio.MAZE_HEIGHT / 2;
+          break;
+        case 'bottom':
+          edgeXCenter = Studio.MAZE_WIDTH / 2;
+          edgeYCenter = Studio.MAZE_HEIGHT;
+          break;
+        case 'right':
+          edgeXCenter = Studio.MAZE_WIDTH;
+          edgeYCenter = Studio.MAZE_HEIGHT / 2;
+          break;
       }
-      EdgeClassNames.forEach(executeCollisionQueueForClass);
+      if (collisionTest(iXCenter,
+                        edgeXCenter,
+                        edgeCollisionDistance(i, edgeClass, false),
+                        iYCenter,
+                        edgeYCenter,
+                        edgeCollisionDistance(i, edgeClass, true))) {
+        Studio.collideSpriteWith(i, edgeClass);
+      } else {
+        sprite.endCollision(edgeClass);
+      }
     }
-    ProjectileClassNames.forEach(executeCollisionQueueForClass);
+
+    // Don't execute projectile collision queue(s) until we've handled all edge
+    // collisions. Not sure this is strictly necessary, but it means the code is
+    // the same as it was before this change.
+    for (j = 0; j < EdgeClassNames.length; j++) {
+      executeCollision(i, EdgeClassNames[j]);
+    }
+    for (j = 0; j < ProjectileClassNames.length; j++) {
+      executeCollision(i, ProjectileClassNames[j]);
+    }
   }
 }
 
@@ -812,7 +812,7 @@ Studio.onSvgClicked = function(e) {
     // Check the first command in all of the cmdQueues to see if there is a
     // pending "wait for click" command
     Studio.eventHandlers.forEach(function (handler) {
-      var cmd = handler.cmdQueue ? handler.cmdQueue[0] : null;
+      var cmd = handler.cmdQueue[0];
 
       if (cmd && cmd.opts.waitForClick && !cmd.opts.complete) {
         if (cmd.opts.waitCallback) {
@@ -1081,7 +1081,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
     // Check the first command in all of the cmdQueues and clear the timeout
     // if there is a pending wait command
     Studio.eventHandlers.forEach(function (handler) {
-      var cmd = handler.cmdQueue ? handler.cmdQueue[0] : null;
+      var cmd = handler.cmdQueue[0];
 
       if (cmd && cmd.opts.waitTimeout && !cmd.opts.complete) {
         // Note: not calling waitCallback() or setting complete = true
@@ -1267,7 +1267,10 @@ Studio.onReportComplete = function(response) {
 };
 
 var registerEventHandler = function (handlers, name, func) {
-  handlers.push({'name': name, 'func': func});
+  handlers.push({
+    name: name,
+    func: func,
+    cmdQueue: []});
 };
 
 var registerHandlers =
@@ -1305,7 +1308,7 @@ var registerHandlers =
   }
 };
 
-var registerHandlersWithSpriteParam =
+var registerHandlersWithSingleSpriteParam =
       function (handlers, blockName, eventNameBase, blockParam) {
   for (var i = 0; i < Studio.spriteCount; i++) {
     registerHandlers(handlers, blockName, eventNameBase, blockParam, String(i));
@@ -1319,7 +1322,7 @@ var registerHandlersWithTitleParam =
   }
 };
 
-var registerHandlersWithSpriteParams =
+var registerHandlersWithMultipleSpriteParams =
       function (handlers, blockName, eventNameBase, blockParam1, blockParam2) {
   var i;
   var registerHandlersForClassName = function (className) {
@@ -1346,6 +1349,14 @@ var registerHandlersWithSpriteParams =
     }
     ProjectileClassNames.forEach(registerHandlersForClassName);
     EdgeClassNames.forEach(registerHandlersForClassName);
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'any_actor');
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'any_edge');
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'any_projectile');
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'anything');
   }
 };
 
@@ -1401,11 +1412,11 @@ Studio.execute = function() {
                                   'VALUE',
                                   ['left', 'right', 'up', 'down']);
   registerHandlers(handlers, 'studio_repeatForever', 'repeatForever');
-  registerHandlersWithSpriteParam(handlers,
+  registerHandlersWithSingleSpriteParam(handlers,
                                   'studio_whenSpriteClicked',
                                   'whenSpriteClicked',
                                   'SPRITE');
-  registerHandlersWithSpriteParams(handlers,
+  registerHandlersWithMultipleSpriteParams(handlers,
                                    'studio_whenSpriteCollided',
                                    'whenSpriteCollided',
                                    'SPRITE1',
@@ -1642,7 +1653,7 @@ Studio.queueCmd = function (id, name, opts) {
 
 Studio.executeQueue = function (name) {
   Studio.eventHandlers.forEach(function (handler) {
-    if (handler.name === name && handler.cmdQueue) {
+    if (handler.name === name && handler.cmdQueue.length) {
       for (var cmd = handler.cmdQueue[0]; cmd; cmd = handler.cmdQueue[0]) {
         if (Studio.callCmd(cmd)) {
           // Command executed immediately, remove from queue and continue
@@ -1992,7 +2003,7 @@ Studio.isCmdCurrentInQueue = function (cmdName, queueName) {
   var foundCmd = false;
   Studio.eventHandlers.forEach(function (handler) {
     if (handler.name === queueName) {
-      var cmd = handler.cmdQueue ? handler.cmdQueue[0] : null;
+      var cmd = handler.cmdQueue[0];
 
       if (cmd && cmd.name === cmdName) {
         foundCmd = true;
@@ -2240,6 +2251,59 @@ var yFromPosition = function (sprite, position) {
 };
 
 /**
+ * Actors have a class name in the form "0". Returns true if this class is
+ * an actor
+ */
+function isActorClass(className) {
+  return (/^\d*$/).test(className);
+}
+
+function isEdgeClass(className) {
+  return EdgeClassNames.indexOf(className) !== -1;
+}
+
+function isProjectileClass(className) {
+  return ProjectileClassNames.indexOf(className) !== -1;
+}
+
+/**
+ * Call the handler for src colliding with target
+ */
+function handleCollision(src, target, allowQueueExtension) {
+  var prefix = 'whenSpriteCollided-' + src + '-';
+
+  callHandler(prefix + target, allowQueueExtension);
+  callHandler(prefix + 'anything', allowQueueExtension);
+  // If dest is just a number, we're colliding with another actor
+  if (isActorClass(target)) {
+    callHandler(prefix + 'any_actor', allowQueueExtension);
+  } else if (isEdgeClass(target)) {
+    callHandler(prefix + 'any_edge', allowQueueExtension);
+  } else if (isProjectileClass(target)) {
+    callHandler(prefix + 'any_projectile', allowQueueExtension);
+  }
+}
+
+/**
+ * Execute the code for src colliding with target
+ */
+function executeCollision(src, target) {
+  var srcPrefix = 'whenSpriteCollided-' + src + '-';
+
+  Studio.executeQueue(srcPrefix + target);
+
+  // src is always an actor
+  Studio.executeQueue(srcPrefix + 'any_actor');
+  Studio.executeQueue(srcPrefix + 'anything');
+
+  if (isEdgeClass(target)) {
+    Studio.executeQueue(srcPrefix + 'any_edge');
+  } else if (isProjectileClass(target)) {
+    Studio.executeQueue(srcPrefix + 'any_projectile');
+  }
+}
+
+/**
  * Looks to see if sprite is already colliding with target.  If it isn't, it
  * starts the collision and calls the relevant code.
  * @param {number} spriteIndex Index of the sprite colliding
@@ -2250,7 +2314,7 @@ var yFromPosition = function (sprite, position) {
 Studio.collideSpriteWith = function (spriteIndex, target, allowQueueExtension) {
   var sprite = Studio.sprite[spriteIndex];
   if (sprite.startCollision(target)) {
-    callHandler('whenSpriteCollided-' + spriteIndex + '-' + target, allowQueueExtension);
+    handleCollision(spriteIndex, target, allowQueueExtension);
   }
 };
 
