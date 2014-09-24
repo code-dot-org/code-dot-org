@@ -1,10 +1,10 @@
 ---
-title: Code.org Professional Development Policies
+title: Code.org Professional Development Policies and Procedures
 nav: pd_nav
 ---
 <a id="top"></a>
 
-# Code.org Professional Development Policies
+# Code.org Professional Development Policies and Procedures
 
 ## Teacher Attendance Policy ##
 
