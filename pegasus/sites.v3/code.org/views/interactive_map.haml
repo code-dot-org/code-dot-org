@@ -26,7 +26,11 @@
         type: "get",
       }).done(function(data) {
         $("#infobox").html(data);
-      }).fail(function () { history.replaceState({}, "", "../promote"); });
+      }).fail(function () {
+        if (window.history.replaceState) {
+          history.replaceState({}, "", "../promote");
+        }
+      });
     }
 
     // Load the SVG into the #map div
@@ -35,7 +39,9 @@
         // Add data and URL to browser history when the user clicks a state
 
         if (window.history.replaceState) {
-          history.replaceState({state: data.name}, data.name, "../promote/" + data.name.toLowerCase());
+          if (window.history.replaceState) {
+            history.replaceState({state: data.name}, data.name, "../promote/" + data.name.toLowerCase());
+          }
         }
 
         // Load the clicked state's information into the infobox
@@ -71,6 +77,8 @@
       $("#infobox").html(data);
       $("#" + event.state["state"]).click();
     }).fail(function () {
-      history.replaceState({}, "", "../promote");
+      if (window.history.replaceState) {
+        history.replaceState({}, "", "../promote");
+      }
     });
   };

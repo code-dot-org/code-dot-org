@@ -60,7 +60,7 @@ social:
     $('#us_content').hide();
     $('#us_content').css("visibility", "visible");
     $.ajax({
-      url: window.location.origin + "/v2/client-location",
+      url: "/v2/client-location",
       type: "get",
     }).done(function(data) {
       if (data.country_code === "US") {
