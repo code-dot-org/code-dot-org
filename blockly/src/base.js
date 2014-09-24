@@ -262,7 +262,7 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
-    BlocklyApps.editor = ace.edit('codeTextbox');
+    BlocklyApps.editor = window.ace.edit('codeTextbox');
     BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
     BlocklyApps.editor.setOptions({
       enableBasicAutocompletion: true,
