@@ -85,9 +85,7 @@ def country_name_from_code(code)
   return code unless country
   country[:name_s]
 end
-def no_credit_count
-    DB[:cdo_state_promote].where(cs_counts_t:'No').exclude(state_code_s:'DC').count
-end
+
 def us_state_from_code(code)
   DB[:geography_us_states].where(code_s:code.to_s.strip.upcase).first
 end
@@ -128,6 +126,7 @@ def fetch_hoc_metrics()
     'finished'=>0,
     'tutorials'=>{'codeorg'=>0},
     'cities'=>{'Seattle'=>0},
+    'states'=>{'Washington'=>0},
     'countries'=>{'United States'=>0},
   }
   metrics['started'] += 409216
