@@ -10,11 +10,16 @@ class ProfessionalDevelopmentWorkshop
     result[:type_s] = required enum(data[:type_s].to_s.strip, ['Public', 'Private'])
     result[:capacity_s] = required stripped data[:capacity_s]
     result[:notes_s] = stripped data[:notes_s]
+    result[:section_id_s] = stripped data[:section_id_s]
 
     # Email and name come from the dashboard user.
     result[:email_s] = required email_address data[:email_s]
     result[:name_s] = stripped data[:name_s]
 
+    if data[:stopped]
+      result[:stopped_dt] =  Time.now.gmtime.strftime("%F %R")
+    end
+    
     result
   end
 

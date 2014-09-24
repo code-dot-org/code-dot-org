@@ -25,9 +25,6 @@ A committee of computer science educators will rank submissions based on qualita
 - self-directed, don’t require any instruction
 - designed for beginners
 - designed as a ~ 1 hour activity
-- require no sign up 
-- require no payment
-- require no installation
 - work across many OS/device platforms, including mobile and tablets
 - work across multiple languages
 - promote learning by all demographic groups (esp under-represented groups)
