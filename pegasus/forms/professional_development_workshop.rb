@@ -41,6 +41,10 @@ class ProfessionalDevelopmentWorkshop
       end
     end
     data.delete('dates')
+
+    # Remove this until we can get dates properly formatted for Solr.
+    data.delete('stopped_dt')
+
     data
   end
 
