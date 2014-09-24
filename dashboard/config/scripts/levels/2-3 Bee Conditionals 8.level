@@ -49,13 +49,13 @@
           <statement name="PICK">
             <block type="bee_ifNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
-              <title name="ARG2">0</title>
+              <title name="OP">==</title>
+              <title name="ARG2">1</title>
               <next>
                 <block type="bee_ifNectarAmount">
                   <title name="ARG1">nectarRemaining</title>
-                  <title name="OP">==</title>
-                  <title name="ARG2">1</title>
+                  <title name="OP">&gt;</title>
+                  <title name="ARG2">0</title>
                 </block>
               </next>
             </block>
