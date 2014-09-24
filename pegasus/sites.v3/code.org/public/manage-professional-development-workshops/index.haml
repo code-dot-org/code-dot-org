@@ -9,6 +9,7 @@ angular: professionalDevelopmentWorkshop
 - forbidden! unless dashboard_user[:user_type] == 'teacher'
 - forbidden! unless have_permission?('create_professional_development_workshop') || dashboard_user[:admin]
 
+%link(rel="stylesheet" type="text/css" href="/css/learn_tabs.css")
 %link(rel="stylesheet" type="text/css" href="/style.css")
 %link(rel='stylesheet' type='text/css' href='/css/page.css')
 
@@ -35,7 +36,8 @@ angular: professionalDevelopmentWorkshop
     'ngRoute',
     'ngResource',
     'professionalDevelopmentWorkshop.controllers',
-    'professionalDevelopmentWorkshop.services'
+    'professionalDevelopmentWorkshop.services',
+    'professionalDevelopmentWorkshop.directives',
   ]).
 
   // ROUTES
@@ -55,9 +57,36 @@ angular: professionalDevelopmentWorkshop
 
   services.factory('workshopsService', ['$resource',
     function($resource){
-      return $resource('/v2/forms/ProfessionalDevelopmentWorkshop/:secret', {}, {
+      var Workshop = $resource('/v2/forms/ProfessionalDevelopmentWorkshop/:secret', {}, {
          update: {method:'PATCH'},
       });
+
+      Workshop.prototype.name = function() {
+        if (this.dates && this.dates[0] && this.dates[0].date_s && this.location_name_s) {
+          return 'Workshop on ' + this.dates[0].date_s +  ' at ' + this.location_name_s;
+        } else {
+          return 'Workshop'; 
+        }
+      };
+
+      Workshop.prototype.state = function() {
+        if (this.$resolved === false || !this.secret) {
+          // not yet loaded or is a brand new workshop
+          return "";
+        }
+
+        if (this.section_id_s) {
+          if (this.stopped_dt) {
+            return 'stopped';
+          } else {
+            return 'started';
+          }
+        } else {
+          return 'not_started';
+        }
+      };
+
+      return Workshop;
     }]);
 
   services.factory('workshopSignupsService', ['$resource',
@@ -69,11 +98,59 @@ angular: professionalDevelopmentWorkshop
       });
     }]);
 
+    // TODO: duplicate of same thing in teacher-dashboard/index.haml
+  services.factory('sectionsService', ['$resource',
+    function($resource){
+      return $resource('/v2/sections/:id', {}, {
+      // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+      //  'get':    {method:'GET'},
+      //  'save':   {method:'POST'},
+      //  'query':  {method:'GET', isArray:true},
+      //  'remove': {method:'DELETE'},
+      //  'delete': {method:'DELETE'} 
+         update: {method:'PATCH'},
+         addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
+         removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
+      });
+    }]);
+
+  services.factory('workshopStartStop', ['$q', 'sectionsService', 'workshopsService',
+    function($q, sectionsService, workshopsService) {
+      return {
+        start:
+          function(workshop) {
+            // create a workshop section
+            var section = {
+              name: workshop.name(),
+              login_type: 'none'
+            };
+            var result_section = sectionsService.save(section);
+ 
+            var result_workshop = result_section.$promise.then(
+              function(result_section) {
+                // update the workshop with the section id
+                workshop.section_id_s = result_section.id;
+                workshop.section = result_section;
+                return workshopsService.update({secret: workshop.secret}, workshop);
+              }
+            );
+
+            return $q.all({section: result_section.$promise, workshop: result_workshop});
+          },
+        stop:
+          function(workshop) {
+            workshop.stopped = true;
+
+            return workshopsService.update({secret: workshop.secret}, workshop);
+          }
+       };
+    }]);
+
   // CONTROLLERS
   var app = angular.module('professionalDevelopmentWorkshop.controllers', []);
 
-  app.controller('WorkshopsController', ['$scope', '$location', 'workshopsService', 'workshopSignupsService',
-                                       function($scope, $location, workshopsService, workshopSignupsService){
+  app.controller('WorkshopsController', ['$scope', '$location', 'workshopsService', 'workshopSignupsService', 'workshopStartStop',
+                                       function($scope, $location, workshopsService, workshopSignupsService, workshopStartStop){
 
     $scope.hasWorkshops = false;
     $scope.workshops = workshopsService.query();
@@ -96,10 +173,27 @@ angular: professionalDevelopmentWorkshop
       workshopsService.remove({secret: workshop.secret}); // service call
       workshop.confirmDelete = false;
     };
+
+      $scope.start_workshop = function(workshop) {
+        workshopStartStop.start(workshop).then(
+          function(results) {
+            $scope.workshops[$scope.workshops.indexOf(workshop)] = results.workshop;
+          }
+        );
+      };
+
+      $scope.stop_workshop = function(workshop) {
+        workshopStartStop.stop(workshop).$promise.then(
+          function(result_workshop) {
+            $scope.workshops[$scope.workshops.indexOf(workshop)] = result_workshop;
+          }
+        );
+      };
+
   }]);
 
-  app.controller('WorkshopController', ['$scope', '$routeParams', 'workshopsService', 'workshopSignupsService',
-    function($scope, $routeParams, workshopsService, workshopSignupsService) {
+  app.controller('WorkshopController', ['$scope', '$routeParams', 'workshopsService', 'workshopSignupsService', 'sectionsService', 'workshopStartStop',
+    function($scope, $routeParams, workshopsService, workshopSignupsService, sectionsService, workshopStartStop) {
       $scope.addNewDate = function($event) {
         $scope.newDate();
         $event.preventDefault();
@@ -115,9 +209,11 @@ angular: professionalDevelopmentWorkshop
 
       if ($routeParams.secret) {
         $scope.workshop = workshopsService.get({secret: $routeParams.secret});
-        var signups = workshopSignupsService.get({parent_secret: $routeParams.secret});
+        $scope.workshop_signups = workshopSignupsService.get({parent_secret: $routeParams.secret});
         $scope.workshop.$promise.then(function(workshop){
-          $scope.workshop.signups = signups;
+          if (workshop.section_id_s) {
+            $scope.section = sectionsService.get({id: workshop.section_id_s});
+          }
         });
       } else {
         $scope.workshop = {};
@@ -156,7 +252,7 @@ angular: professionalDevelopmentWorkshop
       }
 
       $scope.delete_signup = function(signup) {
-        $scope.workshop.signups.splice($scope.workshop.signups.indexOf(signup), 1); // remove from array
+        $scope.workshop_signups.splice($scope.workshop_signups.indexOf(signup), 1); // remove from array
         workshopSignupsService.remove({secret: signup.secret}); // service call
         signup.confirmSignupDelete = false;
       };
@@ -164,6 +260,9 @@ angular: professionalDevelopmentWorkshop
       $scope.save = function() {
         if ($scope.action == 'clone') {
           $scope.workshop.secret = null;
+          // don't clone the start/stop state
+          $scope.workshop.section_id_s = null;
+          $scope.workshop.stopped_dt = null;
         }
 
         if ($scope.workshop.secret) { // existing
@@ -178,6 +277,45 @@ angular: professionalDevelopmentWorkshop
         }
       };
 
+      $scope.start_workshop = function() {
+        workshopStartStop.start($scope.workshop).then(
+          function(results) {
+            $scope.section =  results.section;
+            $scope.workshop = results.workshop;
+          }
+        );
+      };
+
+      $scope.stop_workshop = function() {
+        workshopStartStop.stop($scope.workshop).$promise.then(
+          function(result_workshop) {
+            $scope.workshop = result_workshop;
+          }
+        );
+      };
+
       $scope.load();
+    }
+  ]);
+
+  // DIRECTIVES
+  var directives = angular.module('professionalDevelopmentWorkshop.directives', []).
+    value('version', '0.1');
+
+  directives.directive('ngConfirmClick', [
+    function(){
+      return {
+        priority: -1,
+        restrict: 'A',
+        link: function(scope, element, attrs){
+          element.bind('click', function(e){
+            var message = attrs.ngConfirmClick;
+            if(message && !confirm(message)){
+               e.stopImmediatePropagation();
+              e.preventDefault();
+            }
+          });
+        }
+      }
     }
   ]);
