@@ -1,3 +1,7 @@
+---
+layout: wide
+---
+
 # Prizes - terms and conditions
 
 ## Dropbox space or Skype credit:
