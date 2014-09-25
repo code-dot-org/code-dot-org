@@ -36,11 +36,18 @@ class ProfessionalDevelopmentWorkshop
 
   def self.index(data)
     data = data.dup
+
     data['dates_ss'] = [].tap do |results|
       data['dates'].each do |date|
         results << date['date_s'] + ", " + date['start_time_s'] + " - " + date['end_time_s']
       end
     end
+
+    if first_date = data['dates'].first
+      datetime = first_date['date_s'] + ' ' + first_date['start_time_s']
+      data['first_date_dt'] = Chronic.parse(datetime).strftime('%FT%TZ')
+    end
+
     data.delete('dates')
 
     # Remove this until we can get dates properly formatted for Solr.
