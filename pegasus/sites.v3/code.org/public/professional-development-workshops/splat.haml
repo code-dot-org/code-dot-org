@@ -19,8 +19,15 @@ rightbar: blank
 /[if lt IE 9]
   %script{src: "/js/es5-shim.min.js"}
 
-- error_message = ''
--if signup_count >= data['capacity_s'].to_i
+-error_message = ''
+
+-if first_date = data['dates'].first
+  -datetime = first_date['date_s'] + ' ' + first_date['start_time_s']
+  -first_date = Chronic.parse(datetime).strftime('%FT%TZ')
+
+-if Chronic.parse(first_date) < Time.now
+  -error_message = 'This workshop is no longer accepting signups. Please choose another one or <a href="https://docs.google.com/a/code.org/forms/d/1QoWzKV5n2Fxx-W90LmmMWxY7qndMo1IE0QWZcxY9OTI/viewform">Sign up</a> be notified when workshops near you are announced.'
+-elsif signup_count >= data['capacity_s'].to_i
   -error_message = 'This workshop is full. Please choose another one or <a href="https://docs.google.com/a/code.org/forms/d/1QoWzKV5n2Fxx-W90LmmMWxY7qndMo1IE0QWZcxY9OTI/viewform">Sign up</a> to be notified when workshops near you are announced.'
 
 %h1 Register for a Code Studio workshop (for teachers, grades K-5)
