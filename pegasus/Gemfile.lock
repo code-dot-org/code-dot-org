@@ -197,7 +197,7 @@ DEPENDENCIES
   rack (~> 1.5)
   rack-contrib (~> 1.1)
   rake (~> 10.3)
-  redcarpet (~> 3.1)
+  redcarpet (~> 3.1.1)
   rerun
   rmagick
   rubyzip

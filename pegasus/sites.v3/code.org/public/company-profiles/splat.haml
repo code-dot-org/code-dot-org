@@ -34,7 +34,7 @@ social:
 -# TODO(dave): implement user_entered_markdown function.
 #intro_top
   -if company['intro_top_copy_t']
-    =markdown company['intro_top_copy_t'].to_s
+    =TextRender.safe_markdown company['intro_top_copy_t']
   -else
     =view :company_profile_intro_top
 
@@ -71,7 +71,7 @@ social:
 
 #intro_bottom
   -if company['intro_bottom_copy_t']
-    =markdown company['intro_bottom_copy_t']
+    =TextRender.safe_markdown company['intro_bottom_copy_t']
   -else
     =view :company_profile_intro_bottom
 
