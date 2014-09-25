@@ -371,7 +371,8 @@ en:
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
     feedback: 'Provide feedback'
     translate: 'Help us translate to your language'
-    support: Support
+    support: 'Support'
+    support_url: 'http://support.code.org/'
     tos: 'Terms'
     privacy: 'Privacy Policy'
     secure: 'Secure Version'
@@ -441,6 +442,7 @@ en:
     feedback: "Give Feedback"
     report_bug: "Report Bug"
     support: "Get Help"
+    support_url: "//support.code.org"
   multi:
     wrong_title: "Incorrect answer"
     wrong_body: "The answer you've entered is not correct.  Please try again!"

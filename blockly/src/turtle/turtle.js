@@ -338,8 +338,7 @@ Turtle.display = function() {
  * Click the run button.  Start the program.
  */
 BlocklyApps.runButtonClick = function() {
-  document.getElementById('runButton').style.display = 'none';
-  document.getElementById('resetButton').style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.attempts++;

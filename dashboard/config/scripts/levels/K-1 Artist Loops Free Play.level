@@ -36,6 +36,9 @@
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-6">???</title>
         </block>
+        <block type="draw_colour_simple">
+          <title name="COLOUR">#ff0000</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

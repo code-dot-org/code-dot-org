@@ -61,7 +61,7 @@ social:
           .count{:style=>'font-size: 32px; line-height: 32px; font-weight:500' }
             5,455 #{company['display_name_s']} employees have tried the Hour of Code.
             %h4.desktop-feature{style: 'font-size: 22px;'}
-              40% Completed
+              40% Started
               %br
               60% Not started
           %br
@@ -82,7 +82,7 @@ social:
     =markdown company['intro_bottom_copy_t']
   -else
     :markdown
-      ## Other links:
+      ## Additional ways #{company['display_name_s']} employees can help:
         - Engineers, sign up to be a guest speaker in a classroom via Skype
         - Donate to Code.org's crowdfunding campaign to support computer science education in schools
         - Ask your local school to organize an Hour of Code

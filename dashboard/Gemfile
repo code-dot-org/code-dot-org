@@ -60,7 +60,7 @@ gem 'cancan'
 
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
-gem 'omniauth-windowslive'
+gem 'omniauth-windowslive', '~> 0.0.9'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'haml'
@@ -104,3 +104,4 @@ gem 'twilio-ruby' # SMS API for send-to-phone feature
 gem 'aws-s3'
 
 gem 'font-awesome-rails'
+gem 'sequel', '~> 4.10.0'
