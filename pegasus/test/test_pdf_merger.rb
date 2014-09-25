@@ -72,8 +72,7 @@ class PDFMergerTest < Minitest::Unit::TestCase
     assert(File.exists?(@numbered_collate_output_file))
     pages = PDF::Reader.new(@numbered_collate_output_file).pages
     assert_equal(31, pages.size)
-    assert(pages[0].text.include? '1')
-    assert(pages[30].text.include? '31')
+    pages.each_with_index { |p, i| assert(p.text.include?("#{i + 1}")) }
   end
 
   def teardown
