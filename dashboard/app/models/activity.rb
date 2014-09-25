@@ -1,10 +1,7 @@
+require 'cdo/activity_constants'
+
 class Activity < ActiveRecord::Base
-  # These values correspond to constants from /blockly/src/constants.js
-  MINIMUM_FINISHED_RESULT = 10
-  MINIMUM_PASS_RESULT = 20
-  MAXIMUM_NONOPTIMAL_RESULT = 29
-  FREE_PLAY_RESULT = 30
-  BEST_PASS_RESULT = 100
+  include ActivityConstants
 
   belongs_to :level
   belongs_to :user
