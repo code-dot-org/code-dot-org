@@ -49,11 +49,11 @@ For Dropbox folder access, ask Brendan or anyone with Dropbox `Pegasus Staging` 
 
 `/pegasus/src/course.rb` and `/pegasus/sites/virtual/generate_curriculum_pdfs.rake` are good starting points for some of the PDF generation logic.
 
-# Running on OS X
+# Local testing dependencies
 
-The staging build server setup script automatically installs the dependencies required.
-
-For OS X, to test curriculum PDF generation, an extra package is needed:
-
-* Install pdftk
-  `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb`
+* Ubuntu: `sudo aptitude install pdftk enscript`
+* OS X:
+  ```
+  brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb
+  brew install enscript
+  ```
