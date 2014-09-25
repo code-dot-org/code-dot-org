@@ -31,6 +31,7 @@ GEM
     builder (3.1.4)
     celluloid (0.15.2)
       timers (~> 1.1.0)
+    chronic (0.10.2)
     daemons (1.1.9)
     data_mapper (1.2.0)
       dm-aggregates (~> 1.2.0)
@@ -190,6 +191,7 @@ DEPENDENCIES
   activesupport (~> 4.0.3)
   aws-s3
   bcrypt
+  chronic
   data_mapper
   dm-mysql-adapter
   geocoder
