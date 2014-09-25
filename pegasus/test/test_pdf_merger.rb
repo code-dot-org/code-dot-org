@@ -13,7 +13,8 @@ class PDFMergerTest < Minitest::Unit::TestCase
     @remote_collate_output_file =  File.expand_path('../fixtures/remote_files.pdf', __FILE__)
     @local_collate_output_file =  File.expand_path('../fixtures/local_files.pdf', __FILE__)
     @numbered_collate_output_file =  File.expand_path('../fixtures/numbered_files.pdf', __FILE__)
-    @output_files = [@output, @remote_collate_output_file, @local_collate_output_file, @numbered_collate_output_file]
+    @temp_generated_unnumbered_pdf = "#{@numbered_collate_output_file}.not_numbered.pdf"
+    @output_files = [@output, @remote_collate_output_file, @local_collate_output_file, @numbered_collate_output_file, @temp_generated_unnumbered_pdf]
 
     delete_outfiles
     @local_pdf1 = File.expand_path('../fixtures/pdfs/1.pdf', __FILE__)
@@ -66,9 +67,8 @@ class PDFMergerTest < Minitest::Unit::TestCase
 
   def test_merge_with_numbers
     assert(!File.exists?(@numbered_collate_output_file))
-    temp_generated_pdf = "#{@numbered_collate_output_file}.not_numbered"
-    merge_file_pdfs(@numbered_collate_file, temp_generated_pdf)
-    PDF.number_pdf(temp_generated_pdf, @numbered_collate_output_file)
+    merge_file_pdfs(@numbered_collate_file, @temp_generated_unnumbered_pdf)
+    PDF.number_pdf(@temp_generated_unnumbered_pdf, @numbered_collate_output_file)
     assert(File.exists?(@numbered_collate_output_file))
     pages = PDF::Reader.new(@numbered_collate_output_file).pages
     assert_equal(31, pages.size)
