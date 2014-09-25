@@ -3,7 +3,7 @@
 %script{:src=>"/js/raphael.js"}
 %script{:src=>"/js/extended_us_map.js"}
 
-%div{:id=>'map', :style=>'width: 57%; min-height: 350px; float: left'}
+%div{:id=>'map', :style=>'width: 57%; min-height: 350px; float: left; margin-top: 25px'}
 %div{:id=>'infobox', :class=>'greybox', :style=>'width: 43%; min-hieght: 350px; text-align:left; float:left'}
   %p{:style=>'color: rgb(185,191,21); text-shadow: 1px 1px rgba(0, 0, 0, .5); font-size:36px; line-height: 24px; font-weight: bold; text-align:center'} United States
   %p{:id=>'info', :style=>"font-size:18px;"}
@@ -57,6 +57,8 @@
 
       // Map styling
       stateHoverAnimation: 0,
+      stateStyles: {fill: '#474747', stroke: '#7A7A7A'},
+      labelBackingStyles: {fill: '#474747', stroke: '#7A7A7A'},
       labelBackingHoverStyles: {fill: '#DCDF8A'},
       stateHoverStyles: {fill: '#DCDF8A'},
       stateClickStyles: {fill: '#B9BF15', persistent: false}
