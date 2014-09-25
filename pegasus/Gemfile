@@ -28,6 +28,7 @@ gem 'mysql2'
 gem 'dm-mysql-adapter'
 gem 'aws-s3'
 gem 'bcrypt'
+gem 'chronic'
 
 group :development do
   gem 'rerun'
