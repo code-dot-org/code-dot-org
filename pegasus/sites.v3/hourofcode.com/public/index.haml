@@ -1,7 +1,6 @@
 ---
 layout: wide
 title: "<%= hoc_s(:front_title) %>"
-banner: front_header_banner
 social:
   "twitter:card": player
   "twitter:site": "@codeorg"
@@ -36,125 +35,87 @@ social:
     padding: 0px;
   }
 
-#index
+- imageheight = 500
 
-  #top{style: "position:relative; height: 500px"}
-    #fullwidth0{style: "position:absolute; left: 0; top: 0; background-image: url('/images/the-world.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:500px; opacity: 1"}
+#top{style: "position:relative; height: #{imageheight}px; width:100%"}
+  #fullwidth0{style: "position:absolute; left: 0; top: 0; background-image: url('/images/the-world.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:#{imageheight}px; opacity: 1"}
 
-    #fullwidth1{style: "position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:500px; opacity: 0"}
+  #fullwidth1{style: "position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:#{imageheight}px; opacity: 0"}
 
-    #fullwidth2{style: "position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:500px; opacity: 0"}
+  #fullwidth2{style: "position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:#{imageheight}px; opacity: 0"}
 
-    #fullwidth3{style: "position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:500px; opacity: 0"}
+  #fullwidth3{style: "position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:#{imageheight}px; opacity: 0"}
 
-    #fullwidth{style: "position:absolute; left:0; top: 0; width: 100%; height:500px"}
+  #fullwidth{style: "position:absolute; left:0; top: 0; width: 100%; height:#{imageheight}px"}
 
-      .thegap{style: "height: 1px"}
+    .thegap{style: "height: 1px"}
+      &nbsp;
+
+    = view :header
+
+    .row
+      .col-xs-6
         &nbsp;
-
-      %headerwrapper
-        = view :header
-
-      -#flags-banner
-        %img{src: '/images/flags-banner.png', alt: 'Flags'}
-
-      #contained{style: "width: 970px; margin: 0 auto"}
-        %h1.front-header-banner{style: "color:white; text-align: right"}= hoc_s(:front_header_banner)
-
-        #joinus{style: "text-align:right"}
+      .col-xs-5
+        %h1.front-header-banner{style: "color:white; text-align: center"}= hoc_s(:front_header_banner)
+        #joinus{style: "text-align:center"}
           %a{onclick: "return adjustScroll('hocsignupform')"}
             %button.btn.btn-default{style: "font-size: 24px; font-weight: 500; width: 200px; height: 50px;"}
               =hoc_s(:front_join_us_button)
-            
-
-      -#more{style: "color:grey"}
-        - if @country == 'uk'
-          %p{style: 'font-size: 1.5em; margin: 2em 0; text-align: center;'}= hoc_s(:front_intro_default_uk)
-        - elsif @country == 'ar'
-          %p{style: 'font-size: 1.5em; margin: 2em 0; text-align: center;'}= hoc_s(:front_intro_default_ar)  
-        - else
-          %p{style: 'font-size: 1.5em; margin: 2em 0; text-align: center;'}= hoc_s(:front_intro_default)
-
-
-  -#top
-    #video.col-63.desktop-pad-right{style: 'padding-right: 30px;'}
-      -if @country == 'uk'
-        = view :front_video_uk
-      -if @country != 'uk'
-        = view :front_video
-
-    #start.col-36
-      #blurb.col-mobile-56.mobile-pad-right
-        %br.desktop-feature
-
-
-      #getstarted.col-mobile-44
-        .desktop-feature= view :front_join_us
-
-    #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
-      = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"
-
-  %div{style:"clear:both"}
-
-  #contained{style: "width: 970px; margin: 0 auto; clear:both"}
-    .row
-      .col-xs-12
-        %div{style: 'text-align: center; margin: 3em 0;'}
-          %h2= I18n.t(:stats_hoc_2013_heading)
-
-    %div{style: "margin: 0 auto; width: 900px; font-weight: 500; font-size: 16px; color: rgb(26, 172, 186)"}
-      .row
-        .col-xs-4{style: "text-align:center"}
-          %p It was the fastest to reach 15 million users
-          %img{src: "/images/stats-info1.jpg", style: "width: 100%"}
-
-        .col-xs-4{style: "text-align:center"}
-          %p 15 million students in 170 countries learned an Hour of Code
-          %img{src: "/images/stats-info2.jpg", style: "width: 100%"}
           
-        .col-xs-4{style: "text-align:center"}
-          %p More girl tried computer science than in the last 70 years
-          %img{src: "/images/stats-info3.jpg", style: "width: 100%"}
+.container
+  .row
+    .col-xs-12
+      %div{style: 'text-align: center; margin: 3em 0;'}
+        %h2= I18n.t(:stats_hoc_2013_heading)
 
-          %p{style:"color: #ea7717;"} Over 10 million girls in 2013.
-    .row
+  .row#infotop{style: "/*margin: 0 auto; width: 900px; */ font-weight: 500; font-size: 16px; color: rgb(26, 172, 186)"}
+    .col-xs-6.col-sm-4{style: "text-align:center; height:"}
+      %p It was the fastest to reach 15 million users
+      %img{src: "/images/stats-info1.jpg", style: "width: 100%"}
+
+    .col-xs-6.col-sm-4{style: "text-align:center"}
+      %p 15 million students in 170 countries learned an Hour of Code
+      %img{src: "/images/stats-info2.jpg", style: "width: 100%"}
+      
+    .hidden-xs.col-sm-4{style: "text-align:center"}
+      %p More girls tried computer science than in the last 70 years
+      %img{src: "/images/stats-info3.jpg", style: "width: 100%"}
+
+        %p{style:"color: #ea7717;"} Over 10 million girls in 2013.
+    -#infogap
       &nbsp;
 
-    %div{style: "margin: 0 auto; width: 800px; font-weight: 400; font-size: 16px; color: #ea7717;"}
-      .row
-        .col-xs-4{style: "text-align:center"}
-          %img{src: "/images/stats-kid1.jpg", style: "width: 70%"}
-          %br/
-          "Every single day yielded the same results - <b>100% engagement.</b>" - Nina Nichols Peery, Teacher
+  .row#infobottom{style: "/*margin: 0 auto; width: 800px; */ font-weight: 400; font-size: 16px; color: #ea7717;"}
+    .col-xs-6.col-sm-4{style: "text-align:center"}
+      %img{src: "/images/stats-kid1.jpg", style: "width: 70%"}
+      %br/
+      "Every single day yielded the same results - <b>100% engagement.</b>" - Nina Nichols Peery, Teacher
 
-        .col-xs-4{style: "text-align:center"}
-          %img{src: "/images/stats-kid2.jpg", style: "width: 70%"}
-          %br/
-          I knew this was a <b> once-in-a-lifetime</b> chance" - Mariana Alzate, 5th grader
+    .col-xs-6.col-sm-4{style: "text-align:center"}
+      %img{src: "/images/stats-kid2.jpg", style: "width: 70%"}
+      %br/
+      I knew this was a <b> once-in-a-lifetime</b> chance" - Mariana Alzate, 5th grader
 
-        .col-xs-4{style: "text-align:center"}
-          %img{src: "/images/stats-kid3.jpg", style: "width: 70%"}
-          %br/
-          I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher
+    .hidden-xs.col-sm-4{style: "text-align:center"}
+      %img{src: "/images/stats-kid3.jpg", style: "width: 70%"}
+      %br/
+      I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher
 
-    -#.row
-      .col-xs-12
-        =view :stats_hoc_2013
+  #map.row
+    .col-xs-12
+      =view :map
 
-    .row
-      .col-xs-12
-        =view :map
+  #signupform.row
+    .col-xs-12.col-sm-9.col-md-8
+      =view :signup_form
+    .col-xs-12.col-sm-3.col-md-4
+      =view :choose_country
 
-    .row
-      .col-xs-7
-        =view :signup_form
-      .col-xs-4.col-sm-offset-1
-        =view :choose_country
-
-    %a#faqs{name:'faq'}
-    .row
-      .col-xs-12
-        =view :faq
+  %a#faqs{name:'faq'}
+  .row
+    .col-xs-12
+      =view :faq
 
 = view 'popup_window.js'
 

@@ -32,6 +32,17 @@
   function getSignups() {
     var params = [];
 
+    function getRandomArbitrary(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    for (var i = 0; i < 100; i++)
+    {
+      var long = getRandomArbitrary(32,50);
+      var lat = getRandomArbitrary(-120,-70);
+      addMarker(long.toString(), lat.toString(), "School");
+    }
+
     // Just uncomment for sample dot on the east coast.
     // addMarker("41.0697172", "-73.84479879999999", "School");
 
@@ -67,13 +78,13 @@
       map: gmap,
       icon: {
         path: google.maps.SymbolPath.CIRCLE,
-        strokeWeight: 2,
-        strokeOpacity: 1,
-        fillColor: '#ee0000',
+        strokeWeight: 1,
+        //strokeOpacity: 1,
+        fillColor: '#ea7717', //'#ee0000',
         fillOpacity: 1,
-        strokeColor: '#ee0000',
+        strokeColor: '#ea7717', //'#ee0000',
         strokeOpacity: 0.5,
-        scale: 3
+        scale: 4
       },
       title: label,
       setClickable: false,
