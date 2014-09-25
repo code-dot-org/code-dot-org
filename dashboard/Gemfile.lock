@@ -208,6 +208,7 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
+    sequel (4.10.0)
     simplecov (0.8.2)
       docile (~> 1.1.0)
       multi_json
@@ -302,6 +303,7 @@ DEPENDENCIES
   sdoc
   seamless_database_pool
   selenium-webdriver
+  sequel (~> 4.10.0)
   simplecov
   stringex (~> 2.5.2)
   therubyracer
