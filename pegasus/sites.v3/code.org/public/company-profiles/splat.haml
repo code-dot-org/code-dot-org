@@ -20,7 +20,7 @@ social:
 
 
 -pass unless form = DB[:forms].where(kind:'CompanyProfile', name:request.splat_path_info[1..-1]).first
--company = JSON.parse(form[:data])
+-@company = company = JSON.parse(form[:data])
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/ee.css"}/
 
@@ -36,12 +36,7 @@ social:
   -if company['intro_top_copy_t']
     =markdown company['intro_top_copy_t'].to_s
   -else
-    :markdown
-      ## #{company['display_name_s']} asks all its employees to try an Hour of Code in support of computer science education
-
-      Computer science is the defining field of the 21st century, yet most of us never learn it, and most schools don't even offer it. In support of our children's education and our future, we are asking every #{company['display_name_s']} employee to try an Hour of Code. Even if you already know computer science, you can try the modern tutorials, and help others learn.
-
-      Give it a shot. This is a tutorial that even 8-year-olds can do, and it's fun. Let's see how close we can get to 100% participation!
+    =view :company_profile_intro_top
 
 %br
 
@@ -62,8 +57,6 @@ social:
             5,455 #{company['display_name_s']} employees have tried the Hour of Code.
             %h4.desktop-feature{style: 'font-size: 22px;'}
               40% Started
-              %br
-              60% Not started
           %br
 
         #getstarted.col-mobile-44
@@ -71,7 +64,6 @@ social:
           %a{:href=>"/api/hour/begin_company/#{company['name_s']}"}
             %button.btn.btn-default
               Start now
-              
 
   #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
     -unless company['video_key_s']
@@ -81,11 +73,7 @@ social:
   -if company['intro_bottom_copy_t']
     =markdown company['intro_bottom_copy_t']
   -else
-    :markdown
-      ## Additional ways #{company['display_name_s']} employees can help:
-        - Engineers, sign up to be a guest speaker in a classroom via Skype
-        - Donate to Code.org's crowdfunding campaign to support computer science education in schools
-        - Ask your local school to organize an Hour of Code
+    =view :company_profile_intro_bottom
 
 .row
   .col-xs-12
