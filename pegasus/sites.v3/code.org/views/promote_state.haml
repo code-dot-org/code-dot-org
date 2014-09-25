@@ -16,12 +16,10 @@
   -unless data[:cs_graduates] == 0
     %strong{style: "font-size:20px;"}= format_integer_with_commas(data[:cs_graduates_i])
     computer science graduates
-%p{style: "font-size:15px; margin-bottom: 0px; line-height: 15px"}
+%p{style: "font-size:15px; margin-bottom: 18px; line-height: 15px"}
   -unless data[:count_schools_teach_cs] == 0
     %strong{style: "font-size:20px;"}= format_integer_with_commas(data[:count_schools_teach_cs_i])
     schools teach computer science
-    %br
-    %br
 
 -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
   %span.download-fact-sheet<
@@ -29,9 +27,8 @@
     %a{:href=>"/files/states/#{state}.pdf", :target=>'_blank'}<
       #{statename} fact-sheet
       %img{:src=>"/images/download.png", :width=>"35px", :style=>'margin-top:-5px'}
-  %br
 
-%div{style: "font-size:15px; margin-left:20px; position: relative"}
+%div{style: "font-size:15px; margin-left:20px; margin-bottom: 15px;"}
   - if data[:cs_counts_t] == "No"
     %i.fa.fa-times-circle
     &nbsp;
@@ -58,12 +55,10 @@
     %i.fa.fa-times-circle
     &nbsp;
     No CS curriculum standards
-    %br
   - elsif data[:cs_standards_s] == "Yes"
     %i.fa.fa-check-circle
     &nbsp;
     CS curriculum standards
-    %br
 
 - if statename == "Washington DC"
   %p
@@ -83,7 +78,7 @@
       #{statename} is one of #{no_credit_count} states where students
       %strong
         can't
-      count computer science for high school graduation credit.
+      count computer science for credit towards high school graduation.
 
 -if data[:action_text_s] && data[:action_url_s]
   %a{:href=>data[:action_url_s], :target=>'_blank'}
