@@ -4,10 +4,10 @@ theme: angular
 angular: professionalDevelopmentWorkshop
 ---
 - unless dashboard_user
-  - dont_cache
   - redirect("http://#{canonical_hostname('learn.code.org')}/users/sign_in?return_to=#{request.url}", 302) unless dashboard_user
 - forbidden! unless dashboard_user[:user_type] == 'teacher'
 - forbidden! unless have_permission?('create_professional_development_workshop') || dashboard_user[:admin]
+- dont_cache
 
 %link(rel="stylesheet" type="text/css" href="/css/learn_tabs.css")
 %link(rel="stylesheet" type="text/css" href="/style.css")
