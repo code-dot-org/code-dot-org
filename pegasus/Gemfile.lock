@@ -191,7 +191,7 @@ DEPENDENCIES
   activesupport (~> 4.0.3)
   aws-s3
   bcrypt
-  chronic
+  chronic (~> 0.10.2)
   data_mapper
   dm-mysql-adapter
   geocoder
