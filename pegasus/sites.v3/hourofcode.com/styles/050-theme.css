@@ -47,7 +47,7 @@ body {
 }
 
 #pageheader #right {
-  width: 640px; 
+  /*width: 640px; */
   float: right;
   padding-top: 1.125em;
   text-align: right;
@@ -81,6 +81,7 @@ body {
   width: 100%; 
   height: 80px;
   padding: 20px; 
+  padding-top: 12px;
   overflow: hidden; 
   background-color: #5c3f7f;
   box-sizing: border-box;
@@ -90,7 +91,7 @@ body {
   color: white;
   font-size: 14px;
   font-weight: normal;
-  width: 970px;
+  /*width: 970px; */
   margin: 0 auto;
 }
 

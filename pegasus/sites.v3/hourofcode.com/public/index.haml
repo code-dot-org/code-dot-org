@@ -1,5 +1,5 @@
 ---
-layout: wide
+layout: wide_index
 title: "<%= hoc_s(:front_title) %>"
 social:
   "twitter:card": player
@@ -35,34 +35,50 @@ social:
     padding: 0px;
   }
 
-- imageheight = 500
+- imageheight = 590
 
-#top{style: "position:relative; height: #{imageheight}px; width:100%"}
-  #fullwidth0{style: "position:absolute; left: 0; top: 0; background-image: url('/images/the-world.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:#{imageheight}px; opacity: 1"}
+#top{style: "position:relative; /*height: #{imageheight}px; */ width:100%; overflow:hidden"}
+  #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/the-world.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1"}
 
-  #fullwidth1{style: "position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:#{imageheight}px; opacity: 0"}
+  #fullwidth1{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0"}
 
-  #fullwidth2{style: "position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:#{imageheight}px; opacity: 0"}
+  #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%;  pacity: 0"}
 
-  #fullwidth3{style: "position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:#{imageheight}px; opacity: 0"}
+  #fullwidth3{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0"}
 
-  #fullwidth{style: "position:absolute; left:0; top: 0; width: 100%; height:#{imageheight}px"}
+  #fullwidth{style: "/*position:absolute; left:0; top: 0; */width: 100%; /*height:#{imageheight}px*/"}
 
     .thegap{style: "height: 1px"}
       &nbsp;
 
     = view :header
 
-    .row
-      .col-xs-6
-        &nbsp;
-      .col-xs-5
-        %h1.front-header-banner{style: "color:white; text-align: center"}= hoc_s(:front_header_banner)
-        #joinus{style: "text-align:center"}
-          %a{onclick: "return adjustScroll('hocsignupform')"}
-            %button.btn.btn-default{style: "font-size: 24px; font-weight: 500; width: 200px; height: 50px;"}
-              =hoc_s(:front_join_us_button)
-          
+    .container
+      .row
+        .col-sm-8.col-xs-12
+          #leftbox{style: "position:relative;"}
+
+            #leftvideo{style: "/*position:absolute; left:0; top:0; */ width: 100%; margin-top:50px"}
+              = view :index_video
+              %br/
+              %br/
+              %div{style:"clear:both"}
+            #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; margin-top:100px; width:100%"}
+              -#%h1.front-header-banner{style: "color:white; margin-bottom:10px"} &nbsp;
+              %img{src: "images/youtube-play-button.png", width: "150", onclick: "return startVideo();"}
+        .col-sm-4.col-xs-12
+          #textbacking{style: "color:white; text-align: center; background-color:rgba(0,0,0,0.5); margin-top:50px; padding: 20px"}
+            %h1.front-header-banner{style: "color:white; margin-top:0px"}= hoc_s(:front_header_banner)
+            #joinus{style: "text-align:center"}
+              %a{onclick: "return adjustScroll('hocsignupform')"}
+                %button.btn.btn-default{style: "font-size: 24px; font-weight: 500; width: 200px; height: 50px;"}
+                  =hoc_s(:front_join_us_button)
+          %br/
+          %br/
+
+      %div{style:"clear:both"}
+    
+
 .container
   .row
     .col-xs-12
@@ -83,8 +99,6 @@ social:
       %img{src: "/images/stats-info3.jpg", style: "width: 100%"}
 
         %p{style:"color: #ea7717;"} Over 10 million girls in 2013.
-    -#infogap
-      &nbsp;
 
   .row#infobottom{style: "/*margin: 0 auto; width: 800px; */ font-weight: 400; font-size: 16px; color: #ea7717;"}
     .col-xs-6.col-sm-4{style: "text-align:center"}
@@ -129,13 +143,32 @@ social:
   }
 
   var currentImage = 0;
+  var timerId;
+  var videoStarted = false;
+
+  function cycleImage()
+  {
+    var nextImage = (currentImage + 1) % 4;
+    $("#fullwidth" + currentImage).fadeTo(2000, 0);
+    $("#fullwidth" + nextImage ).fadeTo(2000, videoStarted ? 0.3 : 1);
+    currentImage = nextImage;
+  }
 
   $.ready()
   {
-    setInterval(function() {
-      var nextImage = (currentImage + 1) % 4;
-      $("#fullwidth" + currentImage).fadeTo(2000, 0);
-      $("#fullwidth" + nextImage ).fadeTo(2000, 1);
-      currentImage = nextImage;
-    }, 6000);
+    timerId = setInterval(cycleImage, 6000);
+
+    //startVideo();
+  }
+
+  function startVideo()
+  {
+    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+
+    $("#videodiv").fadeTo(500, 1);
+    $("#leftbutton").fadeTo(500, 0);
+
+    videoStarted = true;
+    cycleImage();
+    clearInterval(timerId);
   }
