@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    Ascii85 (1.0.2)
     activemodel (4.0.3)
       activesupport (= 4.0.3)
       builder (~> 3.1.0)
@@ -17,6 +18,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     addressable (2.3.5)
+    afm (0.2.2)
     arel (4.0.2)
     atomic (1.1.15)
     aws-s3 (0.6.3)
@@ -90,6 +92,7 @@ GEM
       oauth2 (>= 0.5.0)
     haml (4.0.5)
       tilt
+    hashery (2.1.1)
     highline (1.6.21)
     honeybadger (1.11.1)
       json
@@ -124,6 +127,12 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (~> 1.2)
+    pdf-reader (1.3.3)
+      Ascii85 (~> 1.0.0)
+      afm (~> 0.2.0)
+      hashery (~> 2.0)
+      ruby-rc4
+      ttfunk
     phantomjs (1.9.7.1)
     polyglot (0.3.4)
     rack (1.5.2)
@@ -142,6 +151,7 @@ GEM
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rmagick (2.13.2)
+    ruby-rc4 (0.1.5)
     rubyzip (1.1.2)
     sequel (4.10.0)
     sinatra (1.4.4)
@@ -164,6 +174,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    ttfunk (1.4.0)
     tzinfo (0.3.39)
     unicorn (4.8.2)
       kgio (~> 2.6)
@@ -193,6 +204,7 @@ DEPENDENCIES
   minitest (~> 4.7)
   mysql2
   newrelic_rpm
+  pdf-reader
   phantomjs (~> 1.9.7.1)
   rack (~> 1.5)
   rack-contrib (~> 1.1)

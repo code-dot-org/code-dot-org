@@ -38,6 +38,7 @@ group :staging do
 end
 
 group :test do
+  gem 'pdf-reader'
 end
 
 group :production do
