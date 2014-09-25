@@ -2,21 +2,18 @@ require 'phantomjs'
 require 'open-uri'
 require 'cdo/tempfile'
 require 'cdo/hip_chat'
+require 'cdo/yaml'
+require 'shellwords'
+
+def bash(command)
+  system 'bash', '-c', command
+end
 
 module PDF
 
-  def self.merge_all_file_pdfs(glob)
-    Dir.glob(glob).each do |file|
-      self.merge_file_pdfs(file, file.sub('.collate', '.pdf'))
-    end
-  end
-
-  def self.merge_file_pdfs(collate_file, output_path)
-    self.merge_pdfs(output_path, *parse_collate_file(collate_file))
-  end
-
   def self.get_local_pdf_paths(collate_file)
-    existing_files remove_urls parse_collate_file(collate_file)
+    _, paths = parse_collate_file(collate_file)
+    existing_files remove_urls paths
   end
 
   def self.remove_urls(array)
@@ -33,13 +30,14 @@ module PDF
 
   # Reads collate file, outputs array of fully qualified PDF paths and URLs
   def self.parse_collate_file(collate_file)
-    File.open(collate_file)
-      .map(&:strip)
+    options, body = YAML.parse_yaml_header(IO.read(collate_file))
+    all_paths = body.each_line.map(&:strip)
       .reject { |s| s.nil? || s == '' }
       .map do |filename|
         next filename if URI.parse(filename).scheme == 'http'
         File.expand_path(filename, File.dirname(collate_file))
       end
+    return [options, all_paths]
   end
 
   def self.merge_pdfs(output_file, *filenames)
@@ -69,5 +67,17 @@ module PDF
     end
 
     temp_file_handles.each(&:unlink)
+  end
+
+  # Numbers PDFs using
+  #   1. pdftk to get a page count
+  #   2. enscript and ps2pdf to generate and place a page count header
+  # Based off of response from http://stackoverflow.com/a/9033109/136134
+  # "Center bottom" of page margin differs slightly between OS X and Ubuntu.
+  #    OS X:   --margin=0:298:800:0
+  #    Ubuntu: --margin=0:298:750:0
+  def self.number_pdf(input, output)
+    page_count = `pdftk "#{input}" dump_data | grep "NumberOfPages" | cut -d":" -f2`.strip
+    bash "enscript --quiet -L1 --margin=0:298:750:0 --header-font \"Helvetica@15\" --header='|| $%' --output - < <(for i in $(seq \"#{page_count}\"); do echo; done) | ps2pdf - | pdftk \"#{input}\" multistamp - output #{output}"
   end
 end
