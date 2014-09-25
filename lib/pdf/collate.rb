@@ -6,8 +6,7 @@ require 'cdo/yaml'
 require 'shellwords'
 
 def bash(command)
-  escaped_command = Shellwords.escape(command)
-  system "bash -c #{escaped_command}"
+  system 'bash', '-c', command
 end
 
 module PDF
