@@ -1,61 +1,61 @@
 ---
 title: Promote Computer Science
+social:
+  "og:description": "What’s wrong with this picture? Share these stats."
+  "og:image": "http://code.org/images/cs-stats/more-jobs-than-students.png"
+  "og:image:width": 1771
+  "og:image:height": 1048
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
 ---
--state = File.basename(request.path_info)
--raise Sinatra::NotFound unless state.downcase == state
--unless state == 'thanks'
-  -state.upcase!
-  -raise Sinatra::NotFound unless us_state_code?(state)
-
 :javascript
   var petitionIncluded = false;
   var promoteIncluded = false;
 
+-state ||= nil
+
 %script{:src=>"/js/jquery.placeholder.js"}
 
 #promote-page
-  -if state.nil_or_empty?
-    %h1 Promote Computer Science
-    = view :promote_state_jump, state:state
+  %h1 Promote Computer Science
+
+  %div{:id=>'us_content'}
+    #interactive-map.section.clear
+      %h2{:style=>"margin-top: 0px"} Choose a State
+      = view :interactive_map
+
     #petition-section.section.clear
       = view :petition
     :javascript
       petitionIncluded = true;
-  -elsif state == "thanks"
-    %h1 Promote Computer Science
-    = view :promote_state_jump, state:state
-    #thanks-section.section.clear
-      %p Thank you for your support. Please help us spread the word.
-  -else
-    %h1 Promote Computer Science in #{us_state_name_from_code(state)}
-    = view :promote_state_jump, state:state
-    #state-section.section.clear
-      = view :promote_state, state:state
-    :javascript
-      promoteIncluded = true;
 
-  #tools-section.section.clear
-    %h2 Tools to help you advocate locally
-    = view :promote_tools, state:nil
+    #tools-section.section.clear
+      %h2 Tools to help you advocate locally
+      = view :promote_tools, state:nil
 
-  #stats-section.section.clear
-    %h2 What’s wrong with this picture? Share these stats.
-    = view :stats_carousel
+    #stats-section.section.clear
+      %h2 What’s wrong with this picture? Share these stats.
+      = view :stats_carousel
 
-  #youtube-section.section.clear
-    %h2 Tell the world! Share the Code.org video.
-    = view :youtube_videos
+  %div{:id=>'universal_content'}
+    #youtube-section.section.clear
+      %h2 Tell the world! Share the Code.org video.
+      = view :youtube_videos
 
-  #quotes-section.section.clear
-    %h2 Leaders and trendsetters agree more students should learn computer science
-    = view :top_quotes
+      #stateaction{:style=>'padding-left:30px'}
+        %a{:href=>"/action"} See where computer science counts towards high school graduation
+
+    #quotes-section.section.clear
+      %h2 Leaders and trendsetters agree more students should learn computer science
+      = view :top_quotes
 
 = view 'popup_window.js'
 
 :javascript
   var petition;
   var promote;
-
   $(document).ready()
   {
     if (petitionIncluded)

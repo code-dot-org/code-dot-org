@@ -150,7 +150,7 @@ namespace :production do
     task :upgrade do
       CDO.varnish_instances.each do |host|
         remote_command = [
-          'cd website-ci/aws',
+          'cd production/aws',
           'git pull',
           'bundle',
           'touch Rakefile',

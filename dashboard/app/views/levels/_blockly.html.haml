@@ -14,6 +14,9 @@
   %link{href: "#{blockly_path}css/#{app}.css", rel: 'stylesheet', type: 'text/css'}
 
   %script{src: "#{blockly_path}js/#{js_locale}/vendor.js"}
+  - if @game.name == "MazeEC"
+    %script{src: "#{blockly_path}js/ace/ace.js"}
+    %script{src: "#{blockly_path}js/ace/ext-language_tools.js"}
   %script{src: "#{blockly_path}js/#{js_locale}/#{app}#{pretty ? '' : '.min'}.js"}
 
   -# Create level options object to pass to Blockly
