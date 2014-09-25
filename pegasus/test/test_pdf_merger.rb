@@ -10,9 +10,9 @@ class PDFMergerTest < Minitest::Unit::TestCase
 
   def setup
     @output = File.expand_path('../fixtures/output/out.pdf', __FILE__)
-    @remote_collate_output_file =  File.expand_path('../fixtures/remote_files.pdf', __FILE__)
-    @local_collate_output_file =  File.expand_path('../fixtures/local_files.pdf', __FILE__)
-    @numbered_collate_output_file =  File.expand_path('../fixtures/numbered_files.pdf', __FILE__)
+    @remote_collate_output_file =  File.expand_path('../fixtures/output/remote_files.pdf', __FILE__)
+    @local_collate_output_file =  File.expand_path('../fixtures/output/local_files.pdf', __FILE__)
+    @numbered_collate_output_file =  File.expand_path('../fixtures/output/numbered_files.pdf', __FILE__)
     @temp_generated_unnumbered_pdf = "#{@numbered_collate_output_file}.not_numbered.pdf"
     @output_files = [@output, @remote_collate_output_file, @local_collate_output_file, @numbered_collate_output_file, @temp_generated_unnumbered_pdf]
 
