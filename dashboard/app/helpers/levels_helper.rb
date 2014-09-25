@@ -195,6 +195,7 @@ module LevelsHelper
       min_workspace_height
       slider_speed
       permitted_errors
+      disable_param_editing:disableParamEditing
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
