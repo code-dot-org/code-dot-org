@@ -3,6 +3,7 @@ title: Register for a workshop
 nav: blank
 rightbar: blank
 ---
+- dont_cache
 - workshop_id = request.splat_path_info[1..-1]
 - pass unless form = Form.first(kind:'ProfessionalDevelopmentWorkshop', id:workshop_id)
 - data = form.data
@@ -145,7 +146,7 @@ rightbar: blank
 -if (signup_count < data['capacity_s'].to_i)
   #thanks{:style=>"display: none;"}
     :markdown
-      Thank you for signing up to attend a Code.org K-5 workshop. You workshop facilitator will be in touch soon with more information. In the meantime...
+      Thank you for signing up to attend a Code.org K-5 workshop. Your workshop facilitator will be in touch soon with more information. In the meantime...
 
       **To prepare for your workshop:**
 

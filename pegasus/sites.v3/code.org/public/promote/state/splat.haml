@@ -1,0 +1,22 @@
+---
+title: Promote Computer Science
+layout: none
+template: none
+theme: none
+---
+-state = File.basename(request.path_info)
+-raise Sinatra::NotFound unless state.downcase == state
+-unless state == 'thanks'
+  -state.upcase!
+  -raise Sinatra::NotFound unless us_state_code?(state)
+
+#promote-page
+  -if state.nil_or_empty?
+    #petition-section.section.clear
+      = view :petition
+  -elsif state == "thanks"
+    #thanks-section.section.clear
+      %p Thank you for your support. Please help us spread the word.
+  -else
+    #state-section.clear
+      = view :promote_state, state:state

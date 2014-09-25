@@ -107,7 +107,7 @@ en:
       2-3 Conditionals Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        According to the rules of this game, which set of cards was scored correctly?: According to the rules of this game, which set of cards was scored correctly?
+        According to the rules of this game, which set of cards was scored correctly for your team?: According to the rules of this game, which set of cards was scored correctly for your team?
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
@@ -228,6 +228,15 @@ en:
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png
+      4-5 Computational Thinking Multi 1:
+        Multiple Choice: Multiple Choice
+        ? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?
+        : Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?
+        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>
+        <h4>Seattle _____ a _____ _____.</h4>: <h4>Seattle _____ a _____ _____.</h4>
+        <h4>_____ is a _____ city.</h4>: <h4>_____ is a _____ city.</h4>
+        <h4>_____ is _____ a _____.</h4>: <h4>_____ is _____ a _____.</h4>
+        <h4>Eugene is a _____ city.</h4>: <h4>Eugene is a _____ city.</h4>
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500

@@ -1,0 +1,86 @@
+-no_credit_count = no_credit_count = no_credit_count()
+
+%script{:src=>"/js/raphael.js"}
+%script{:src=>"/js/extended_us_map.js"}
+
+%div{:id=>'map', :style=>'width: 57%; min-height: 350px; float: left; margin-top: 25px'}
+%div{:id=>'infobox', :class=>'greybox', :style=>'width: 43%; min-hieght: 350px; text-align:left; float:left'}
+  %p{:style=>'color: rgb(185,191,21); text-shadow: 1px 1px rgba(0, 0, 0, .5); font-size:36px; line-height: 24px; font-weight: bold; text-align:center'} United States
+  %p{:id=>'info', :style=>"font-size:18px;"}
+    Computer science drives innovation in our economy and society. Despite growing demand for jobs in the field, it remains marginalized throughout our K-12 education system.
+  %p{:style=>"font-size:18px;"}
+    Currently,
+    %strong
+      =no_credit_count
+    states still don't allow students to count computer science courses toward high school graduation.
+
+:javascript
+  var webServiceLocation = "/promote/state/";
+
+  $(document).ready(function() {
+    // Check if the URL specifies a specific state. If so, load the state
+    if (window.location.pathname.replace("/promote", "") !== "") {
+      var state = window.location.pathname.replace("/promote/", "");
+      $.ajax({
+        url: webServiceLocation + state.toLowerCase(),
+        type: "get",
+      }).done(function(data) {
+        $("#infobox").html(data);
+      }).fail(function () {
+        if (window.history.replaceState) {
+          history.replaceState({}, "", "../promote");
+        }
+      });
+    }
+
+    // Load the SVG into the #map div
+    $('#map').usmap({
+      click: function(event, data) {
+        // Add data and URL to browser history when the user clicks a state
+
+        if (window.history.replaceState) {
+          if (window.history.replaceState) {
+            history.replaceState({state: data.name}, data.name, "../promote/" + data.name.toLowerCase());
+          }
+        }
+
+        // Load the clicked state's information into the infobox
+        $.ajax({
+          url: webServiceLocation + data.name.toLowerCase(),
+          type: "get",
+        }).done(function(data) {
+          $("#infobox").html(data);
+        }).fail(function () {
+          window.location = "/promote"
+        });
+      },
+
+      // Map styling
+      stateHoverAnimation: 0,
+      stateStyles: {fill: '#474747', stroke: '#7A7A7A'},
+      labelBackingStyles: {fill: '#474747', stroke: '#7A7A7A'},
+      labelBackingHoverStyles: {fill: '#DCDF8A'},
+      stateHoverStyles: {fill: '#DCDF8A'},
+      stateClickStyles: {fill: '#B9BF15', persistent: false}
+    });
+
+    // "Click" the current state if page is loaded with state in URL.
+    if (window.location.pathname.replace("/promote", "") !== "") {
+      $("#" + state.toUpperCase()).click();
+    }
+  });
+
+  // When the user uses the "back" button, load previous data into infobox and URL bar
+  window.onpopstate = function(event) {
+    $.ajax({
+      url: webServiceLocation + event.state["state"].toLowerCase(),
+      type: "get",
+    }).done(function(data) {
+      $("#infobox").html(data);
+      $("#" + event.state["state"]).click();
+    }).fail(function () {
+      if (window.history.replaceState) {
+        history.replaceState({}, "", "../promote");
+      }
+    });
+  };
