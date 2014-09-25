@@ -57,6 +57,16 @@ var JOINT_RADIUS = 4;
 var JOINT_SEGMENT_LENGTH = 50;
 
 /**
+ * Pages where blockly function param editing should always be enabled (keyed on
+ * config.level.edit_blocks)
+ */
+var FORCE_ENABLE_PARAM_EDITING = {
+  'solution_blocks': 1,
+  'predraw_blocks': 1,
+  'start_blocks': 1
+};
+
+/**
  * PID of animation task currently executing.
  */
 Turtle.pid = 0;
@@ -82,6 +92,10 @@ Turtle.init = function(config) {
 
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
+
+  if (FORCE_ENABLE_PARAM_EDITING[config.level.edit_blocks]) {
+    config.disableParamEditing = false;
+  }
 
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
