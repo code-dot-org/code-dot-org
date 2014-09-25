@@ -142,7 +142,6 @@ GEM
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rmagick (2.13.2)
-    rubyzip (1.1.2)
     sequel (4.10.0)
     sinatra (1.4.4)
       rack (~> 1.4)
@@ -200,7 +199,6 @@ DEPENDENCIES
   redcarpet (~> 3.1)
   rerun
   rmagick
-  rubyzip
   sequel
   sinatra
   stripe

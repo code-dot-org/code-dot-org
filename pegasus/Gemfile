@@ -26,7 +26,6 @@ gem 'newrelic_rpm'
 gem 'honeybadger'
 gem 'mysql2'
 gem 'dm-mysql-adapter'
-gem 'rubyzip'
 gem 'aws-s3'
 gem 'bcrypt'
 
