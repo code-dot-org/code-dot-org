@@ -6720,7 +6720,7 @@ exports.install = function(blockly, blockInstallOptions) {
   // Block definitions.
   blockly.Blocks.draw_move_by_constant = {
     // Block for moving forward or backward the internal number of pixels.
-    helpUrl: 'http://www.example.com/',
+    helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
@@ -6739,7 +6739,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.draw_move_by_constant_dropdown = {
     // Block for moving forward or backward the internal number of pixels.
-    helpUrl: 'http://www.example.com/',
+    helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
@@ -7324,6 +7324,25 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
+  blockly.Blocks.jump_by_constant_dropdown = {
+    // Block for moving forward or backward the internal number of pixels
+    // without drawing.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(
+              blockly.Blocks.jump.DIRECTIONS), 'DIR');
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(), 'VALUE')
+          .appendTitle(msg.dots());
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.jumpTooltip());
+    }
+  };
+
   generator.jump_by_constant = function() {
     // Generate JavaScript for moving forward or backward the internal number
     // of pixels without drawing.
@@ -7331,6 +7350,7 @@ exports.install = function(blockly, blockInstallOptions) {
     return 'Turtle.' + this.getTitleValue('DIR') +
         '(' + value + ', \'block_id_' + this.id + '\');\n';
   };
+  generator.jump_by_constant_dropdown = generator.jump_by_constant;
 
   blockly.Blocks.draw_turn = {
     // Block for turning left or right.
@@ -9733,8 +9753,7 @@ Turtle.display = function() {
  * Click the run button.  Start the program.
  */
 BlocklyApps.runButtonClick = function() {
-  document.getElementById('runButton').style.display = 'none';
-  document.getElementById('resetButton').style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.attempts++;
