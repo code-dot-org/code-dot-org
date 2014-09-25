@@ -75,6 +75,6 @@ module PDF
   # Based off of response from http://stackoverflow.com/a/9033109/136134
   def self.number_pdf(input, output)
     page_count = `pdftk "#{input}" dump_data | grep "NumberOfPages" | cut -d":" -f2`.strip
-    bash "enscript -L1 --margin=0:298:800:0 --header-font \"Helvetica@15\" --header='|| $%' --output - < <(for i in $(seq \"#{page_count}\"); do echo; done) | ps2pdf - | pdftk \"#{input}\" multistamp - output #{output}"
+    bash "enscript --quiet -L1 --margin=0:298:800:0 --header-font \"Helvetica@15\" --header='|| $%' --output - < <(for i in $(seq \"#{page_count}\"); do echo; done) | ps2pdf - | pdftk \"#{input}\" multistamp - output #{output}"
   end
 end
