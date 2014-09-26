@@ -8,6 +8,7 @@ theme: none
   %div{"teacher-nav" => ""}
   %div{"ng-include"=>"", "ng-if" => "tab == 'manage'", src: "'teacher-dashboard/section_manage'"}
   %div{"ng-include"=>"", "ng-if" => "tab == 'progress'", src: "'teacher-dashboard/section_progress'"}
+  %div{"ng-include"=>"", "ng-if" => "tab == 'stats'", src: "'teacher-dashboard/section_stats'"}
 
   -#.debug
     %h2 DEBUG
