@@ -6,19 +6,22 @@ h2 {
     margin: 0 0 5px 0;
 }
 
-.donor-slider {
-}
-
 .badge {
     padding: 5px;
     display: inline-block;
     border: 1px solid #D2D2D2;
-    height: 90px;
     overflow: hidden;
     white-space:nowrap;
     border-radius: 0;
     background-color: white;
-    width: 320px;
+}
+
+.gold {
+    width: 32.7%;
+}
+
+.platinum {
+    width: 49.5%;
 }
 
 .badge:hover {
