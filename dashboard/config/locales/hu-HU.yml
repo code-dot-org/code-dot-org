@@ -2,17 +2,17 @@
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: szükséges
     attributes:
       user:
-        name: Név
+        name: Megjelenítendő név
         email: Email
         username: Felhasználónév
         password: Jelszó
         password_confirmation: Jelszó megerősítése
         current_password: Jelenlegi jelszó
         locale: Nyelv
-        age: Age
+        age: Kor
         gender: Nem
         edit_header: Felhasználói Adatok Szerkesztése
         error:
@@ -24,14 +24,15 @@
       label: 'Adj meg egy tanárt kóddal, vagy e-mail címmel:'
       placeholder: Kód (ABCDEF) vagy email (tanar@iskola.hu)
     code:
-      label: 'Add a teacher by section code:'
-      placeholder: Code (ABCDEF)
+      label: 'Tanár felvétele saját kóddal:'
+      placeholder: Kód (ABCDEF)
     submit: Tanár hozzáadása
   add_hint_form:
     placeholder: Kérjük, írja ide a véleményét
     submit: "Írja le a véleményét"
   appname: Code.org
   stage: Szakasz
+  stage_number: Szint %{number}
   puzzle: Rejtvény
   trophies: Trófeák
   courses: Tanfolyamok
@@ -45,20 +46,20 @@
   already_started: Már elkezdted? Folytasd itt >>
   demos: 'Admin: Minden demó'
   continue: Tovább
-  prize: prize
+  prize: díj
   more_info: További információk
   auth:
     sign_in_with: Bejelentkezés %{provider} -el
     signed_in: Bejelentkezve!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
+    signed_out: Kijelentkezett a <a href="%{url}"> Code.org</a> - ról.
     sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
       to sign out of %{provider}.
     already_signedup: Már regisztrált?
     notyet_signedup: Még nem csatlakozott?
-    google_oauth2: Google Account
+    google_oauth2: Google fiók
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
+    windowslive: Microsoft fiók
     forgot_password: Elfelejtette jelszavát?
     need_confirmation: Nem kapta meg a megerősítéshez instrukciókat?
     need_unlock: Nem kaptál a zárolás megszüntetéséhez útmutatót?
@@ -82,13 +83,13 @@
     teacher_pitch: Tanároknak. Feliratkozás a code.org-ra
     teacher_title: Tanár regisztrálás
     student_pitch: Diákoknak. Feliratkozás a code.org.ra
-    student_title: Belépés (diák)
+    student_title: Diák regisztráció
     school_name: Iskola neve (nem kötelező)
     school_address: Iskola címe (nem kötelező)
     address_placeholder: cím, város, állam(megye), irányítószám
     gender: Nem (nem kötelező)
     birthday: Születésnap (nem kötelező)
-    age: Age (optional)
+    age: Kor
     submit: Regisztrálás
     teacher: "Ön tanár?"
     valid_username: Elérhető!
@@ -114,10 +115,10 @@
     try_hoc: Először próbáld meg a Kódolás Órája-t
     try_20hours: Próbálja ki a 20 órás bevezetőt a számítógép-tudományhoz
   signinsection:
-    welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    welcome: "Üdvözöljük %{section_name}"
+    name: Válaszd ki a neved
+    picture: Keress egy titkos képet
+    words: "Írj be titkos szavakat"
     login: Bejelentkezés
   password:
     reset_form:
@@ -164,7 +165,7 @@
   redeem_prizes:
     title: 'Redeem Prizes: %{name}'
     provider: 'Provider:'
-    code: 'Code:'
+    code: 'Kód:'
     redeem_header: 'To redeem:'
     donorschoose_register: Regisztrálj, mint tanár a DonorsChoose.org-on
     donorschoose_project: Posztold a projektedet
@@ -178,7 +179,7 @@
     teacher_info_required: 'a tanári díjakhoz adja meg az iskola nevét és címét:'
     teacher_email_required: 'Tanár díjazásához szükséges egy megerősített e-mail cím:'
     confirm:
-      title: Please Confirm
+      title: Kérjük erősítse meg
       'no': nem
       'yes': igen
       msg: Are you sure you want to claim the %{prize_name} prize?
@@ -284,9 +285,9 @@
       stages: 'Stage(s) to display:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
+      perfect: Tökéletesen megcsináltad
+      completed: Sikeresen megcsináltad de túl sok blokkot használtál
+      tried: Megpróbáltad, de nem sikerült
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
@@ -298,8 +299,8 @@
       manage: Diákok kezelése
       dashboard: Go to Teacher Dashboard
       add: Diákok hozzáadása
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
+      remove: diák eltávolítása
+      confirm_remove: Biztos el akarod távolítani ezt a tanulót?
       help_reassign: To divide your class into multiple sections, select students
         to assign to a new section.
       help_register: Instead of making you spend a lot of time individually importing
@@ -317,7 +318,7 @@
       add: Add section
       manage: Vezetési szakasz
       section: Section
-      students: Students
+      students: Tanuló
       section_code: Section Code
       add_section_code: Add Students Section-Code
       secret: Secret type
@@ -355,6 +356,8 @@
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: Már regisztrált? %{link}
     student_reg_link: Diák Bejelentkezés
     teacher_reg_link: Tanár Bejelentkezés
@@ -412,6 +415,7 @@
     feedback: Visszajelzés küldése
     translate: Segítsen lefordítani az oldalt az anyanyelvére
     support: Support
+    support_url: http://support.code.org
     tos: Szolgáltatási feltételek
     privacy: Adatvédelmi Elvek
     secure: Secure Version
@@ -436,9 +440,23 @@
     autoplay_option: Videók automatikus lejátszása
     download: Videó letöltése
   compatability:
-    working: Azon dolgozunk, hogy a rendszerünk az Ön böngészőjével is tökéletesen
-      együtt tudjon működni.
-    upgrade: Kérjük frissítse a böngészőjét.
+    working:
+      header: Azon dolgozunk, hogy a rendszerünk az Ön böngészőjével is tökéletesen
+        együtt tudjon működni.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Your browser doesn't support all the features required, and you may experience
+        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
+        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
+        your browser to a supported version</a>.
+      hide_this_warning: Hide this warning
+    upgrade:
+      header: Kérjük frissítse a böngészőjét.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Unfortunately your browser doesn't support all the features required
+        to run this part of the site.<br/><br/>Install a browser on our supported
+        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
+        expect functionality to be broken.
+      button: Take me to the list of supported browsers
   slow_loading: Ez tovább tart majd, mint szokásosan...
   try_reloading: Próbálja meg újratölteni az oldalt
   next_stage: Befejezve! Folytatás a következő pályára
@@ -485,6 +503,7 @@
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
+    support_url: "//support.code.org"
   multi:
     wrong_title: Helytelen válasz
     wrong_body: A megadott válasz nem megfelelő.  Próbáld újra!
@@ -529,7 +548,7 @@
           title: Kirakós játék
           description: ''
         step:
-          title: Step
+          title: Lépés
           description: ''
         sample_level_builder:
           title: Sample Level Builder

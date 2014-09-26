@@ -2932,8 +2932,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -11493,7 +11492,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Os blocos \"Repita\" ou \"Se\"
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "O bloco de função precisa ter outros blocos dentro dele para funcionar."};
 
-exports.extraTopBlocks = function(d){return "blocoSuperiorExtra"};
+exports.extraTopBlocks = function(d){return "Alguns de seus blocos estão soltos. Você gostaria de conectá-los ao bloco \"quando executar\"?"};
 
 exports.finalStage = function(d){return "Parabéns! Você concluiu a fase final."};
 

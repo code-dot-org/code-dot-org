@@ -12901,7 +12901,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Los bloques \"repetir\" o \"si
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "El bloque de función necesita tener otros bloques en su interior para funcionar."};
 
-exports.extraTopBlocks = function(d){return "Tienes bloques adicionales que no están conectados a un bloque de evento."};
+exports.extraTopBlocks = function(d){return "Tiene bloques separados. ¿Quieres decir que quieres fijarlos al bloque \"cuando se ejecuta\"?"};
 
 exports.finalStage = function(d){return "¡Felicidades! Has completado la etapa final."};
 
@@ -12931,9 +12931,9 @@ exports.nextLevel = function(d){return "¡Felicidades! Completaste el Puzzle "+v
 
 exports.nextLevelTrophies = function(d){return "¡Felicidades! Completaste el puzzle "+v(d,"puzzleNumber")+" y ganaste "+p(d,"numTrophies",0,"es",{"one":"un trofeo","other":n(d,"numTrophies")+" trofeos"})+"."};
 
-exports.nextStage = function(d){return "¡Felicitaciones! Ha completado la fase "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "¡ Felicidades! Completaste "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "¡Felicitaciones ha completado la fase "+v(d,"stageName")+" y ha ganado "+p(d,"numTrophies",0,"es",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "¡Felicidades! Completaste la etapa "+v(d,"stageName")+" y ganaste "+p(d,"numTrophies",0,"es",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "¡Felicidades! Completaste el puzzle "+v(d,"puzzleNumber")+". (Sin embargo, podrías haber usado sólo "+p(d,"numBlocks",0,"es",{"one":"1 bloque","other":n(d,"numBlocks")+" bloques"})+".)"};
 
@@ -12979,9 +12979,9 @@ exports.hintRequest = function(d){return "Ver pista"};
 
 exports.backToPreviousLevel = function(d){return "Volver al nivel anterior"};
 
-exports.saveToGallery = function(d){return "Guardar en su galería"};
+exports.saveToGallery = function(d){return "Guardar en tu galería"};
 
-exports.savedToGallery = function(d){return "¡Guardado en su galería!"};
+exports.savedToGallery = function(d){return "¡Guardado en tu galería!"};
 
 exports.typeCode = function(d){return "Escribe tu código JavaScript debajo de estas instrucciones."};
 
@@ -13066,7 +13066,7 @@ exports.honeyAvailable = function(d){return "miel"};
 
 exports.honeyTooltip = function(d){return "Prepara la miel usando el néctar"};
 
-exports.honeycombFullError = function(d){return "Este panel no tiene espacio para guardar más miel."};
+exports.honeycombFullError = function(d){return "Este panal no tiene espacio para guardar más miel."};
 
 exports.ifCode = function(d){return "si"};
 
@@ -13082,9 +13082,9 @@ exports.ifFlowerTooltip = function(d){return "si hay alguna flor/panal en la dir
 
 exports.ifelseFlowerTooltip = function(d){return "si hay una flor/panal en la dirección especificada, entonces haz el primer bloque de acciones. Si no, haz el segundo bloque de acciones."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Estás usando todos los bloques correctos, pero necesitas hacer la cantidad correcta de miel."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Estás usando todos los bloques correctos, pero necesitar recolectar la cantidad correcta de néctar."};
 
 exports.make = function(d){return "hacer"};
 
@@ -13122,7 +13122,7 @@ exports.noPathRight = function(d){return "no hay camino a la derecha"};
 
 exports.notAtFlowerError = function(d){return "Solo puedes obtener néctar de una flor."};
 
-exports.notAtHoneycombError = function(d){return "Solo puedes hacer miel en el panal."};
+exports.notAtHoneycombError = function(d){return "Solo puedes hacer miel en un panal."};
 
 exports.numBlocksNeeded = function(d){return "Este puzzle puede resolverse con %1 bloques."};
 
@@ -13146,7 +13146,7 @@ exports.removeStack = function(d){return "quitar pila de "+v(d,"shovelfuls")+" m
 
 exports.removeSquare = function(d){return "elimina cuadrado"};
 
-exports.repeatCarefullyError = function(d){return "Para resolver esto, piensa cuidadosamente acerca del patrón de dos movimientos y una vuelta para ponerlo dentro del bloque \"repetir\".  Es correcto hacer una vuelta extra, al final."};
+exports.repeatCarefullyError = function(d){return "Para resolver esto, piensa cuidadosamente acerca del patrón de dos movimientos y un giro para ponerlo dentro del bloque \"repetir\". Es correcto hacer un giro extra, al final."};
 
 exports.repeatUntil = function(d){return "repetir hasta que"};
 

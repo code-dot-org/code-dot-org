@@ -2932,8 +2932,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -11214,73 +11213,73 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ko=function(n){return "other"}
-exports.bounceBall = function(d){return "바운스 볼"};
+exports.bounceBall = function(d){return "공 넘기기"};
 
-exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
+exports.bounceBallTooltip = function(d){return "공이 물체에 튕기도록 합니다."};
 
-exports.continue = function(d){return "진행"};
+exports.continue = function(d){return "계속하기"};
 
-exports.dirE = function(d){return "동"};
+exports.dirE = function(d){return "오른쪽"};
 
-exports.dirN = function(d){return "북"};
+exports.dirN = function(d){return "위쪽"};
 
-exports.dirS = function(d){return "남"};
+exports.dirS = function(d){return "아래쪽"};
 
-exports.dirW = function(d){return "서"};
+exports.dirW = function(d){return "왼쪽"};
 
-exports.doCode = function(d){return "실행"};
+exports.doCode = function(d){return "~할 때까지 실행"};
 
 exports.elseCode = function(d){return "그렇지 않으면"};
 
-exports.finalLevel = function(d){return "축하합니다! 당신은 마지막 퍼즐을 해결하셨습니다."};
+exports.finalLevel = function(d){return "축하합니다! 마지막 퍼즐을 해결했습니다."};
 
 exports.heightParameter = function(d){return "높이"};
 
-exports.ifCode = function(d){return "if"};
+exports.ifCode = function(d){return "만약 ~라면"};
 
-exports.ifPathAhead = function(d){return "if 앞에 길이 있다면"};
+exports.ifPathAhead = function(d){return "만약 앞에 길이 있으면"};
 
-exports.ifTooltip = function(d){return "if 지정된 방향에 길이 있다면, do 동작"};
+exports.ifTooltip = function(d){return "만약, 지정한 방향에 길이있으면 동작을 실행한다."};
 
-exports.ifelseTooltip = function(d){return "if 지정된 방향에 길이 있다면, do first 블록의 액션, 아니면 do 두번째 블록의 액션"};
+exports.ifelseTooltip = function(d){return "만약, 지정한 방향에 길이있으면 실행 블럭의 첫번째 구역의 동작을 실행하고, 그렇지 않으면 두번째 구역의 동작을 실행한다."};
 
-exports.incrementOpponentScore = function(d){return "상대 지점 점수"};
+exports.incrementOpponentScore = function(d){return "상대방 점수 올리기"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
+exports.incrementOpponentScoreTooltip = function(d){return "현재 점수에 1점을 더합니다."};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "점수 올리기"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
+exports.incrementPlayerScoreTooltip = function(d){return "현재 플레이어의 점수를 1점 올립니다."};
 
-exports.isWall = function(d){return "is this a wall"};
+exports.isWall = function(d){return "벽이면"};
 
-exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
+exports.isWallTooltip = function(d){return "벽이 있으면 \"참\"이 됩니다."};
 
-exports.launchBall = function(d){return "새 공을 발사"};
+exports.launchBall = function(d){return "새 공 준비"};
 
-exports.launchBallTooltip = function(d){return "놀이로 공을 실행합니다."};
+exports.launchBallTooltip = function(d){return "새로운 공을 셋팅합니다."};
 
-exports.makeYourOwn = function(d){return "자신의 바운스 게임 만들기"};
+exports.makeYourOwn = function(d){return "나만의 공 넘기기 게임 만들기"};
 
-exports.moveDown = function(d){return "move down"};
+exports.moveDown = function(d){return "아래로 이동하기"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "라켓을 아래로 내립니다."};
 
 exports.moveForward = function(d){return "앞으로 움직이기"};
 
 exports.moveForwardTooltip = function(d){return "한 칸 앞으로 이동합니다."};
 
-exports.moveLeft = function(d){return "move left"};
+exports.moveLeft = function(d){return "왼쪽으로 이동하기"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "라켓을 왼쪽으로 이동합니다."};
 
-exports.moveRight = function(d){return "move right"};
+exports.moveRight = function(d){return "오른쪽으로 이동하기"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "라켓을 오른쪽으로 이동합니다."};
 
-exports.moveUp = function(d){return "move up"};
+exports.moveUp = function(d){return "위로 올라가기"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "라켓을 위로 이동시킵니다."};
 
 exports.nextLevel = function(d){return "축하합니다! 퍼즐을 해결했습니다."};
 
@@ -11302,35 +11301,35 @@ exports.pathRight = function(d){return "만약, 오른쪽에 길이 있으면"};
 
 exports.pilePresent = function(d){return "흙더미가 있으면"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "부서짐 소리 출력"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "골1 소리 출력"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "골2 소리 출력"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "때리기 소리 출력"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "실점 소리 출력"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "실점 소리2 출력"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "옛날 소리 출력"};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "고무 소리 출력"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "찰싹 소리 출력"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "선택 소리 출력"};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "득점 소리 출력"};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "득점 소리2 출력"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "나무 소리 출력"};
 
 exports.putdownTower = function(d){return "탑 놓기"};
 
-exports.reinfFeedbackMsg = function(d){return "당신은 당신의 게임으로 돌아갑니다 \"다시 시도\"버튼을 누를 수 있습니다."};
+exports.reinfFeedbackMsg = function(d){return "다시 실행하기 버튼을 누르면 게임을 재실행합니다."};
 
 exports.removeSquare = function(d){return "사각형 치우기"};
 
@@ -11340,63 +11339,63 @@ exports.repeatUntilBlocked = function(d){return "반복(~인 동안): 앞쪽에 
 
 exports.repeatUntilFinish = function(d){return "반복(끝 날 때까지)"};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "점수 : "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
-exports.setBackgroundRandom = function(d){return "임의의 장면을 설정"};
+exports.setBackgroundRandom = function(d){return "랜덤 배경 설정"};
 
-exports.setBackgroundHardcourt = function(d){return "하드 코트 장면을 설정"};
+exports.setBackgroundHardcourt = function(d){return "하드 코트 설정"};
 
-exports.setBackgroundRetro = function(d){return "복고 장면을 설정"};
+exports.setBackgroundRetro = function(d){return "옛날 배경 설정"};
 
-exports.setBackgroundTooltip = function(d){return "배경 이미지를 설정합니다"};
+exports.setBackgroundTooltip = function(d){return "배경 이미지 설정"};
 
-exports.setBallRandom = function(d){return "set random ball"};
+exports.setBallRandom = function(d){return "랜덤 공 설정"};
 
-exports.setBallHardcourt = function(d){return "set hardcourt ball"};
+exports.setBallHardcourt = function(d){return "하드 코트 공 설정"};
 
-exports.setBallRetro = function(d){return "set retro ball"};
+exports.setBallRetro = function(d){return "옛날 공 설정"};
 
-exports.setBallTooltip = function(d){return "Sets the ball image"};
+exports.setBallTooltip = function(d){return "공의 이미지를 설정합니다."};
 
-exports.setBallSpeedRandom = function(d){return "set random ball speed"};
+exports.setBallSpeedRandom = function(d){return "랜덤 스피드 공 설정"};
 
-exports.setBallSpeedVerySlow = function(d){return "set very slow ball speed"};
+exports.setBallSpeedVerySlow = function(d){return "매우 느린 공 설정"};
 
-exports.setBallSpeedSlow = function(d){return "set slow ball speed"};
+exports.setBallSpeedSlow = function(d){return "느린 공 설정"};
 
-exports.setBallSpeedNormal = function(d){return "set normal ball speed"};
+exports.setBallSpeedNormal = function(d){return "보통 빠르기 공 설정"};
 
-exports.setBallSpeedFast = function(d){return "set fast ball speed"};
+exports.setBallSpeedFast = function(d){return "빠른 공 설정"};
 
-exports.setBallSpeedVeryFast = function(d){return "set very fast ball speed"};
+exports.setBallSpeedVeryFast = function(d){return "매우 빠른 공 설정"};
 
-exports.setBallSpeedTooltip = function(d){return "Sets the speed of the ball"};
+exports.setBallSpeedTooltip = function(d){return "공의 속도를 설정합니다."};
 
-exports.setPaddleRandom = function(d){return "set random paddle"};
+exports.setPaddleRandom = function(d){return "랜덤 라켓 설정"};
 
-exports.setPaddleHardcourt = function(d){return "set hardcourt paddle"};
+exports.setPaddleHardcourt = function(d){return "하드 코트 라켓 설정"};
 
-exports.setPaddleRetro = function(d){return "set retro paddle"};
+exports.setPaddleRetro = function(d){return "옛날 라켓 설정"};
 
-exports.setPaddleTooltip = function(d){return "Sets the ball paddle"};
+exports.setPaddleTooltip = function(d){return "라켓의 이미지를 설정합니다."};
 
-exports.setPaddleSpeedRandom = function(d){return "set random paddle speed"};
+exports.setPaddleSpeedRandom = function(d){return "랜덤 속도 라켓 설정"};
 
-exports.setPaddleSpeedVerySlow = function(d){return "set very slow paddle speed"};
+exports.setPaddleSpeedVerySlow = function(d){return "매우 느린 라켓 설정"};
 
-exports.setPaddleSpeedSlow = function(d){return "set slow paddle speed"};
+exports.setPaddleSpeedSlow = function(d){return "느린 라켓 설정"};
 
-exports.setPaddleSpeedNormal = function(d){return "set normal paddle speed"};
+exports.setPaddleSpeedNormal = function(d){return "보통 라켓 설정"};
 
-exports.setPaddleSpeedFast = function(d){return "set fast paddle speed"};
+exports.setPaddleSpeedFast = function(d){return "빠른 라켓 설정"};
 
-exports.setPaddleSpeedVeryFast = function(d){return "set very fast paddle speed"};
+exports.setPaddleSpeedVeryFast = function(d){return "매우 빠른 라켓 설정"};
 
-exports.setPaddleSpeedTooltip = function(d){return "Sets the speed of the paddle"};
+exports.setPaddleSpeedTooltip = function(d){return "라켓의 속도를 설정합니다."};
 
-exports.shareBounceTwitter = function(d){return "Check out the Bounce game I made. I wrote it myself with @codeorg"};
+exports.shareBounceTwitter = function(d){return "@codeorg 에서 만든 나의 게임을 살펴보세요."};
 
-exports.shareGame = function(d){return "Share your game:"};
+exports.shareGame = function(d){return "게임 공유하기:"};
 
 exports.turnLeft = function(d){return "왼쪽으로 돌기"};
 
@@ -11404,43 +11403,43 @@ exports.turnRight = function(d){return "오른쪽으로 돌기"};
 
 exports.turnTooltip = function(d){return "왼쪽이나 오른쪽으로 90 도 돕니다."};
 
-exports.whenBallInGoal = function(d){return "when ball in goal"};
+exports.whenBallInGoal = function(d){return "공이 들어가면"};
 
-exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
+exports.whenBallInGoalTooltip = function(d){return "공이 들어가면 아래의 동작을 실행합니다."};
 
-exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
+exports.whenBallMissesPaddle = function(d){return "라켓이 공을 놓치면"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
+exports.whenBallMissesPaddleTooltip = function(d){return "라켓이 공을 놓치면 아래의 동작을 실행합니다."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "아래 방향키를 누르면"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "아래 방향키를 누르면 아래의 동작을 실행합니다."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "게임이 시작되면"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "게임이 시작되면 아래 동작을 실행합니다."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "왼쪽 방향키를 누르면"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "왼쪽 방향키를 누르면 아래의 동작을 실행합니다."};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "라켓에 공이 부딪치면"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "라켓에 공이 부딪치면 아래의 동작을 실행합니다."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "오른쪽 방향키를 누르면"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "오른쪽 방향키를 누르면 아래의 동작을 실행합니다."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "위쪽 방향키를 누르면"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "위쪽 방향키를 누르면 아래의 동작을 실행합니다."};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "공이 벽에 부딪치면"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "공이 벽에 부딪치면 아래의 동작을 실행합니다."};
 
-exports.whileMsg = function(d){return "반복(~인 동안):"};
+exports.whileMsg = function(d){return "~인 동안"};
 
 exports.whileTooltip = function(d){return "어떤 조건이 될 때까지(~할 때까지), 반복적으로 실행합니다."};
 
@@ -11487,21 +11486,21 @@ exports.directionEastLetter = function(d){return "동"};
 
 exports.directionWestLetter = function(d){return "서"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "끝"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"반복\" 블럭이나 \"조건\" 블럭이 실행되려면, 그 안에 다른 블럭들이 있어야 합니다. 블럭 안쪽에 필요한 블럭들을 끼워 맞춰 연결하세요."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "함수 블럭 안에는 다른 블럭을 넣어주어야 합니다."};
 
-exports.extraTopBlocks = function(d){return "이벤트 블럭에 연결하지 않은 남는 블럭이 있습니다."};
+exports.extraTopBlocks = function(d){return "블럭들이 떨어져있습니다. 블럭들을 붙이겠습니까?"};
 
 exports.finalStage = function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했습니다."};
 
 exports.finalStageTrophies = function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했고, "+p(d,"numTrophies",0,"ko",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" 을 얻었습니다."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "마침"};
 
-exports.generatedCodeInfo = function(d){return "프로그래밍한 블럭들은 그대로 자바스크립트(JavaScript) 언어로 변환될 수 있습니다:"};
+exports.generatedCodeInfo = function(d){return " "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"와 같은 유명한 대학에서도 블럭기반 프로그래밍을 가르칩니다. 하지만, 블럭들은 모두 JavaScript로 바뀌어 실행됩니다 : "};
 
 exports.hashError = function(d){return "죄송합니다. 저장된 '%1' 프로그램은 없습니다."};
 
@@ -11509,7 +11508,7 @@ exports.help = function(d){return "도움말"};
 
 exports.hintTitle = function(d){return "힌트:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "점프"};
 
 exports.levelIncompleteError = function(d){return "필요한 블럭들을 모두 사용했지만, 정확한 방법은 아닙니다."};
 
@@ -11525,13 +11524,13 @@ exports.nextLevelTrophies = function(d){return "축하합니다! "+v(d,"puzzleNu
 
 exports.nextStage = function(d){return "축하드립니다! "+v(d,"stageName")+"을(를) 완료하셨습니다."};
 
-exports.nextStageTrophies = function(d){return "축하합니다! "+v(d,"stageNumber")+" 단계를 성공적으로 해결했고, "+p(d,"numTrophies",0,"ko",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" 을 얻었습니다."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"ko",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "축하합니다! "+v(d,"puzzleNumber")+" 번 퍼즐을 해결했습니다. (하지만, "+p(d,"numBlocks",0,"ko",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" 만 사용해야 합니다.)"};
 
 exports.numLinesOfCodeWritten = function(d){return "오! 코드 "+p(d,"numLines",0,"ko",{"one":"1 line","other":n(d,"numLines")+" 줄"})+"로 해결했네요!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "실행"};
 
 exports.puzzleTitle = function(d){return "퍼즐 "+v(d,"puzzle_number")+"/"+v(d,"stage_total")};
 
@@ -11543,7 +11542,7 @@ exports.runProgram = function(d){return "실행"};
 
 exports.runTooltip = function(d){return "블럭들로 작성되어있는 프로그램을 실행합니다."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "점수"};
 
 exports.showCodeHeader = function(d){return "코드 보기"};
 
@@ -11567,13 +11566,13 @@ exports.totalNumLinesOfCodeWritten = function(d){return "지금까지: 코드 "+
 
 exports.tryAgain = function(d){return "다시 시도"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "도움 보기"};
 
 exports.backToPreviousLevel = function(d){return "이전 퍼즐"};
 
-exports.saveToGallery = function(d){return "갤러리에 저장"};
+exports.saveToGallery = function(d){return "나의 갤러리에 저장"};
 
-exports.savedToGallery = function(d){return "갤러리에 저장되었습니다!"};
+exports.savedToGallery = function(d){return "나의 갤러리에 저장되었습니다!"};
 
 exports.typeCode = function(d){return "자바스크립트(JavaScript) 코드를 직접 작성하세요."};
 
@@ -11593,17 +11592,17 @@ exports.wantToLearn = function(d){return "코드(code)를 배워볼까요?"};
 
 exports.watchVideo = function(d){return "비디오 보기"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "~할 때"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "~할 때 실행"};
 
 exports.tryHOC = function(d){return "Hour of Code 해보기"};
 
 exports.signup = function(d){return "샘플 코스를 위해 가입하기"};
 
-exports.hintHeader = function(d){return "팁:"};
+exports.hintHeader = function(d){return "도움말:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요."};
 
 
 },{"messageformat":51}],40:[function(require,module,exports){

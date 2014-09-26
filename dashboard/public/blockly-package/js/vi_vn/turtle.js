@@ -10009,7 +10009,7 @@ Turtle.drawJointAtTurtle_ = function () {
  * @return {boolean} True if the level is solved, false otherwise.
  */
 var isCorrect = function(pixelErrors, permittedErrors) {
-  return pixelErrors < permittedErrors;
+  return pixelErrors <= permittedErrors;
 };
 
 /**
@@ -10338,7 +10338,7 @@ exports.catLoops = function(d){return "Vòng lặp"};
 
 exports.catMath = function(d){return "Thuật toán"};
 
-exports.catProcedures = function(d){return "Chức năng"};
+exports.catProcedures = function(d){return "Các hàm"};
 
 exports.catText = function(d){return "văn bản"};
 
@@ -10364,17 +10364,17 @@ exports.end = function(d){return "kết thúc"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Miếng ghép được \"Lặp lại\" hay \"Nếu\" cần có những miếng ghép bên trong để hoạt động. Đảm bảo là miếng gạch đó khớp hoàn toàn phần ở trong của miếng gạch kia."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Chức năng của block cần phải có block khác bên trong để khiến nó hoạt động."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Khối \"hàm\"  cần có các khối lệnh bên trong để khiến nó hoạt động."};
 
-exports.extraTopBlocks = function(d){return "Bạn có khối phụ không gắn liền với một sự kiện khối."};
+exports.extraTopBlocks = function(d){return "Bạn có các khối tự do. Ý của bạn là để đính kèm chúng vào khối \"khi chạy\"?"};
 
 exports.finalStage = function(d){return "Chúc mừng. Bạn vừa hoàn thành xong bước cuối cùng."};
 
-exports.finalStageTrophies = function(d){return "Chúc mừng! Bạn vừa hoàn thành bước cuối cùng và dành danh hiệu. "+v(d,"numTrophies")+" nhiều."};
+exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"vi",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.finish = function(d){return "Hoàn Thành"};
 
-exports.generatedCodeInfo = function(d){return "Ngay cả các trường đại học giảng dạy dựa trên block- mã hóa (ví dụ: "+v(d,"berkeleyLink")+" "+v(d,"harvardLink")+"). Tuy nhiên, dưới mui xe, các khối bạn đã lắp ráp có thể cũng được hiển thị trong JavaScript, phần lớn của thế giới rộng rãi sử dụng mã hóa ngôn ngữ:"};
+exports.generatedCodeInfo = function(d){return "Các trường đại học hàng đầu cũng dạy lập trình dựa trên \"khối lệnh\" (block) (như: "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Tuy nhiên, để hổ trợ, các \"khối lệnh\" cũng được hiển thị trong ngôn ngữ JavaScript, ngôn ngữ lập trình thông dụng nhất:"};
 
 exports.hashError = function(d){return "Xin lỗi, '%1' không tương ứng với bất kì chương trình đã lưu."};
 
@@ -10382,25 +10382,25 @@ exports.help = function(d){return "Trợ Giúp"};
 
 exports.hintTitle = function(d){return "Gợi ý:"};
 
-exports.jump = function(d){return "nhảy/cú nhảy"};
+exports.jump = function(d){return "nhảy"};
 
 exports.levelIncompleteError = function(d){return "Bạn đã dùng tất cả các khối cần thiết, nhưng không đúng cách."};
 
 exports.listVariable = function(d){return "danh sách"};
 
-exports.makeYourOwnFlappy = function(d){return "Tạo lấy một bản Flappy Bird của riêng bạn"};
+exports.makeYourOwnFlappy = function(d){return "Tự tạo game Flappy Bird của riêng bạn"};
 
-exports.missingBlocksErrorMsg = function(d){return "Thử dùng một hoặc nhiều khối bên dưới để giải quyết trò này."};
+exports.missingBlocksErrorMsg = function(d){return "Thử dùng một hoặc nhiều khối được cho để giải quyết câu này."};
 
-exports.nextLevel = function(d){return "Chúc mừng! Bạn đã hoàn thành trò số "+v(d,"puzzleNumber")+"."};
+exports.nextLevel = function(d){return "Chúc mừng! Bạn đã hoàn thành câu số "+v(d,"puzzleNumber")+"."};
 
 exports.nextLevelTrophies = function(d){return "Chúc mừng! Bạn đã hoàn thành Câu đố "+v(d,"puzzleNumber")+" và chiến thắng "+v(d,"numTrophies")+"."};
 
 exports.nextStage = function(d){return "Chúc mừng! Bạn đã hoàn thành xong "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Chúc mừng! Bạn đã vượt qua vòng "+v(d,"stageNumber")+" và giành được "+p(d,"numTrophies",0,"vi",{"one":"một danh hiệu","other":n(d,"numTrophies")+" danh hiệu"})+"."};
+exports.nextStageTrophies = function(d){return "Chúc mừng! Bạn đã vượt qua vòng "+v(d,"stageName")+" và giành được "+p(d,"numTrophies",0,"vi",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.numBlocksNeeded = function(d){return "Chúc mừng! Bạn đã hoàn thành câu đố "+v(d,"puzzleNumber")+". Nhưng bạn thật sự chỉ cần "+v(d,"numBlocks")+" khối thôi ."};
+exports.numBlocksNeeded = function(d){return "Chúc mừng! Bạn đã hoàn thành câu đố "+v(d,"puzzleNumber")+". Nhưng bạn thật sự chỉ cần "+p(d,"numBlocks",0,"vi",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" khối thôi ."};
 
 exports.numLinesOfCodeWritten = function(d){return "Bạn vừa mới viết "+p(d,"numLines",0,"vi",{"one":"1 dòng","other":n(d,"numLines")+" dòng"})+" mã!"};
 
@@ -10483,7 +10483,7 @@ exports.genericFeedback = function(d){return "Nhìn xem bằng cách nào bạn 
 var MessageFormat = require("messageformat");MessageFormat.locale.vi=function(n){return "other"}
 exports.blocksUsed = function(d){return "Số lượng khối đã dùng: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "Chi nhánh/ các nhánh"};
 
 exports.catColour = function(d){return "Màu sắc"};
 
@@ -10503,7 +10503,7 @@ exports.colourTooltip = function(d){return "Thay đổi màu của cây bút ch�
 
 exports.degrees = function(d){return "độ"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "độ sâu/ chiều sâu"};
 
 exports.dots = function(d){return "các điểm ảnh"};
 
@@ -10513,37 +10513,37 @@ exports.drawATriangle = function(d){return "vẽ một hình tam giác"};
 
 exports.drawACircle = function(d){return "vẽ một hình tròn"};
 
-exports.drawAFlower = function(d){return "draw a flower"};
+exports.drawAFlower = function(d){return "vẽ một bông hoa"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "vẽ một hình lục giác"};
 
 exports.drawAHouse = function(d){return "vẽ một căn nhà"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "hãy vẽ một hành tinh"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "vẽ một hình thoi"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "vẽ một con robot"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "vẽ một quả tên lửa"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "vẽ một bông tuyết"};
 
 exports.drawASnowman = function(d){return "vẽ một người tuyết"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "vẽ một ngôi sao"};
 
 exports.drawATree = function(d){return "vẽ một cái cây"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "vẽ làn sóng nhấp nhô cao"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "vẽ làn sóng nhấp nhô thấp"};
 
 exports.heightParameter = function(d){return "chiều cao"};
 
 exports.hideTurtle = function(d){return "ẩn họa sĩ"};
 
-exports.jump = function(d){return "nhảy/cú nhảy"};
+exports.jump = function(d){return "nhảy"};
 
 exports.jumpBackward = function(d){return "di chuyển bút lui về mà không ghi"};
 
@@ -10551,15 +10551,15 @@ exports.jumpForward = function(d){return "di chuyển tới trước (mà không
 
 exports.jumpTooltip = function(d){return "di chuyển nghệ sĩ mà không để lại bất kì dấu gì."};
 
-exports.jumpEastTooltip = function(d){return "Moves the artist east without leaving any marks."};
+exports.jumpEastTooltip = function(d){return "Di chuyển về phía đông nghệ sĩ mà không để lại bất cứ dấu hiệu nào."};
 
-exports.jumpNorthTooltip = function(d){return "Moves the artist north without leaving any marks."};
+exports.jumpNorthTooltip = function(d){return "Di chuyển về phía bắc nghệ sĩ mà không để lại bất cứ dấu hiệu nào."};
 
-exports.jumpSouthTooltip = function(d){return "Moves the artist south without leaving any marks."};
+exports.jumpSouthTooltip = function(d){return "Di chuyển về phía nam nghệ sĩ mà không để lại bất cứ dấu hiệu nào."};
 
-exports.jumpWestTooltip = function(d){return "Moves the artist west without leaving any marks."};
+exports.jumpWestTooltip = function(d){return "Di chuyển về phía tây nghệ sĩ mà không để lại bất cứ dấu hiệu nào."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "Bạn đã làm đúng ngoại trừ độ dài dịch chuyển"};
 
 exports.lengthParameter = function(d){return "chiều dài"};
 
@@ -10567,17 +10567,17 @@ exports.loopVariable = function(d){return "biến đếm"};
 
 exports.moveBackward = function(d){return "di chuyển lui về"};
 
-exports.moveEastTooltip = function(d){return "Moves the artist east."};
+exports.moveEastTooltip = function(d){return "Di chuyển nghệ sĩ đông."};
 
 exports.moveForward = function(d){return "di chuyển tới trước"};
 
 exports.moveForwardTooltip = function(d){return "di chuyển nghệ sĩ tới trước."};
 
-exports.moveNorthTooltip = function(d){return "Moves the artist north."};
+exports.moveNorthTooltip = function(d){return "Di chuyển nghệ sĩ bắc."};
 
-exports.moveSouthTooltip = function(d){return "Moves the artist south."};
+exports.moveSouthTooltip = function(d){return "Di chuyển nghệ sĩ nam."};
 
-exports.moveWestTooltip = function(d){return "Moves the artist west."};
+exports.moveWestTooltip = function(d){return "Di chuyển nghệ sĩ tây."};
 
 exports.moveTooltip = function(d){return "Di chuyển nghệ sĩ tới trước hay lùi về một khoản nhất định."};
 
@@ -10603,7 +10603,7 @@ exports.showMe = function(d){return "cho tôi thấy"};
 
 exports.showTurtle = function(d){return "hiển thị nghệ sĩ"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "bước/ từng bước"};
 
 exports.tooFewColours = function(d){return "Bạn phải sử dụng ít nhất %1 màu khác nhau ở câu đố này.  Bạn mới chỉ sử dụng %2 màu."};
 

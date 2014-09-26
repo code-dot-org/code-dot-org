@@ -7397,21 +7397,21 @@ exports.directionEastLetter = function(d){return "A"};
 
 exports.directionWestLetter = function(d){return "V"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "endir"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Kubbarnir \"endurtaka\" og \"ef\" verða að innihalda aðra kubba til að virka. Gættu þess að innri kubburinn smellpassi í ytri kubbinn."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Fallkubburinn þarf að innhalda aðra kubba til að virka."};
 
-exports.extraTopBlocks = function(d){return "Þú hefur auka kubba sem ekki tengjast atvikakubbi."};
+exports.extraTopBlocks = function(d){return "Þú ert með ótengda kubba. Ætlaðir þú að festa þá á \"þegar keyrt\" kubbinn?"};
 
 exports.finalStage = function(d){return "Til hamingju! Þú hefur klárað síðasta áfangann."};
 
-exports.finalStageTrophies = function(d){return "Til hamingju! Þú hefur klárað síðasta áfangann og unnið "+p(d,"numBikara",0,"is",{"one":"bikar","other":n(d,"numBikara")+" bikara"})+"."};
+exports.finalStageTrophies = function(d){return "Til hamingju! Þú hefur klárað síðasta áfangann og unnið "+p(d,"numTrophies",0,"is",{"one":"bikar","other":n(d,"numTrophies")+" bikara"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Ljúka"};
 
-exports.generatedCodeInfo = function(d){return "Kubbana í forritinu þínu er líka hægt að umbreyta í JavaScript, sem er útbreiddasta forritunarmál í heiminum:"};
+exports.generatedCodeInfo = function(d){return "Jafnvel bestu háskólar kenna forritun með kubbum (t.d. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). En bak við tjöldin er hægt að sýna kubbana sem þú hefur sett saman sem JavaScript, sem er mest notaða forritunarmál í heimi:"};
 
 exports.hashError = function(d){return "Því miður finnst ekkert vistað forrit '%1'."};
 
@@ -7419,7 +7419,7 @@ exports.help = function(d){return "Hjálp"};
 
 exports.hintTitle = function(d){return "Vísbending:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "stökkva"};
 
 exports.levelIncompleteError = function(d){return "Þú ert að nota allar nauðsynlegu tegundirnar af kubbum en ekki á réttan hátt."};
 
@@ -7433,15 +7433,15 @@ exports.nextLevel = function(d){return "Til hamingju! Þú hefur leyst þraut "+
 
 exports.nextLevelTrophies = function(d){return "Til hamingju! Þú hefur leyst þraut "+v(d,"puzzleNumber")+" og unnið "+p(d,"numTrophies",0,"is",{"one":"bikar","other":n(d,"numTrophies")+" bikara"})+"."};
 
-exports.nextStage = function(d){return "Til hamingju! Þú hefur lokið áfanga "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Til hamingju! Þú kláraðir "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Til hamingju! Þú kláraðir áfanga "+v(d,"stageNumber")+" og vannst "+p(d,"numTrophies",0,"is",{"one":"bikar","other":n(d,"numTrophies")+" bikara"})+"."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"is",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Til hamingju! Þú kláraðir þraut "+v(d,"puzzleNumber")+". (En þú hefðir getað notað bara  "+p(d,"numBlocks",0,"is",{"one":"1 kubb","other":n(d,"numBlocks")+" kubba"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Þú náðir að skrifa "+p(d,"numLines",0,"is",{"one":"1 línu","other":n(d,"numLines")+" línur"})+" af kóða!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "spila"};
 
 exports.puzzleTitle = function(d){return "Þraut "+v(d,"puzzle_number")+" af "+v(d,"stage_total")};
 
@@ -7449,11 +7449,11 @@ exports.repeat = function(d){return "endurtaka"};
 
 exports.resetProgram = function(d){return "Endurstilla"};
 
-exports.runProgram = function(d){return "Keyra forrit"};
+exports.runProgram = function(d){return "Keyra"};
 
 exports.runTooltip = function(d){return "Keyra forritið sem samanstendur af kubbunum á vinnusvæðinu."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "stig"};
 
 exports.showCodeHeader = function(d){return "Sýna kóða"};
 
@@ -7477,13 +7477,13 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Samtals: "+p(d,"numLine
 
 exports.tryAgain = function(d){return "Reyna aftur"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Sjá vísbendingu"};
 
-exports.backToPreviousLevel = function(d){return "Til baka á fyrra stig"};
+exports.backToPreviousLevel = function(d){return "Til baka í fyrri áfanga"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Vista í safn þitt"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Vistað í safn þitt!"};
 
 exports.typeCode = function(d){return "Skrifaðu JavaScript kóða þinn fyrir neðan þessar leiðbeiningar."};
 
@@ -7503,17 +7503,17 @@ exports.wantToLearn = function(d){return "Viltu læra að kóða?"};
 
 exports.watchVideo = function(d){return "Horfa á videóið"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "þegar"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "þegar keyrt"};
 
 exports.tryHOC = function(d){return "Prófa Kóðun í klukkustund"};
 
 exports.signup = function(d){return "Skráning á inngangsnámskeiðið"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Vísbending:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Athugaðu hvernig þetta fór og reyndu að laga forritið."};
 
 
 },{"messageformat":46}],34:[function(require,module,exports){
@@ -7528,7 +7528,7 @@ exports.numBlocksNeeded = function(d){return "Þessa þraut er hægt að leysa m
 
 exports.reinfFeedbackMsg = function(d){return "Þú getur smellt á \"Reyna aftur\" hnappinn til þess að spila leikinn aftur."};
 
-exports.share = function(d){return "Share"};
+exports.share = function(d){return "Deila"};
 
 exports.shareGame = function(d){return "Deildu leiknum þínum:"};
 

@@ -12413,8 +12413,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -14284,7 +14283,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Blok \"Ulangi\" atau blok \"Ji
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok fungsi membutuhkan blok lain di dalamnya agar dapat bekerja."};
 
-exports.extraTopBlocks = function(d){return "Anda memiliki blok ekstra yang tidak melekat pada sebuah blok acara (event)."};
+exports.extraTopBlocks = function(d){return "Anda memiliki blok tidak terpasang. Apakah maksud anda untuk menempelkannya ke blok \"when run\"?"};
 
 exports.finalStage = function(d){return "Horee! Anda berhasil menyelesaikan tahap akhir."};
 
@@ -14721,19 +14720,19 @@ exports.setSpriteK1Tooltip = function(d){return "tampilkan atau sembunyikan akto
 
 exports.setSpriteTooltip = function(d){return "atur gambar aktor"};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "untuk ukuran acak"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "untuk ukuran sangat kecil"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "untuk ukuran kecil"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "untuk ukuran normal"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "untuk ukuran besar"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "untuk ukuran sangat besar"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "Sekumpulan ukuran aktor"};
 
 exports.setSpriteSpeedRandom = function(d){return "untuk kecepatan acak"};
 

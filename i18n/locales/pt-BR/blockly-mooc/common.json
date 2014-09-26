@@ -21,7 +21,7 @@
   "end":"fim",
   "emptyBlocksErrorMsg":"Os blocos \"Repita\" ou \"Se\" precisam de outros blocos para funcionar. Verifique se o bloco de dentro se ajusta corretamente ao bloco principal.",
   "emptyFunctionBlocksErrorMsg":"O bloco de função precisa ter outros blocos dentro dele para funcionar.",
-  "extraTopBlocks":"blocoSuperiorExtra",
+  "extraTopBlocks":"Alguns de seus blocos estão soltos. Você gostaria de conectá-los ao bloco \"quando executar\"?",
   "finalStage":"Parabéns! Você concluiu a fase final.",
   "finalStageTrophies":"Parabéns! Você concluiu a última fase e ganhou {numTrophies, plural, one {um troféu} other {# troféus}}.",
   "finish":"Concluir",

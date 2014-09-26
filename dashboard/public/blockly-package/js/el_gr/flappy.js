@@ -3914,8 +3914,7 @@ BlocklyApps.runButtonClick = function() {
   document.getElementById('instructions').setAttribute('visibility', 'visible');
   document.getElementById('getready').setAttribute('visibility', 'visible');
 
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   // BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -9098,7 +9097,7 @@ exports.playSoundSplash = function(d){return "play splash sound"};
 
 exports.playSoundLaser = function(d){return "play laser sound"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Παίξε τον επιλεγμένο ήχο."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your game."};
 

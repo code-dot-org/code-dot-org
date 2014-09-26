@@ -10009,7 +10009,7 @@ Turtle.drawJointAtTurtle_ = function () {
  * @return {boolean} True if the level is solved, false otherwise.
  */
 var isCorrect = function(pixelErrors, permittedErrors) {
-  return pixelErrors < permittedErrors;
+  return pixelErrors <= permittedErrors;
 };
 
 /**
@@ -10366,7 +10366,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Il blocco \"ripeti\" o \"se\" 
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Una funzione ha bisogno di altri blocchi al suo interno."};
 
-exports.extraTopBlocks = function(d){return "Ci sono blocchi che non sono attaccati ad un blocco evento."};
+exports.extraTopBlocks = function(d){return "Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'quando si clicca su \"Esegui\" '?"};
 
 exports.finalStage = function(d){return "Complimenti! Hai completato l'ultima lezione."};
 

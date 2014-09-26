@@ -10009,7 +10009,7 @@ Turtle.drawJointAtTurtle_ = function () {
  * @return {boolean} True if the level is solved, false otherwise.
  */
 var isCorrect = function(pixelErrors, permittedErrors) {
-  return pixelErrors < permittedErrors;
+  return pixelErrors <= permittedErrors;
 };
 
 /**
@@ -10366,7 +10366,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Die \"Wiederholen\"- und die \
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Der Funktionsblock muss andere Blöcke beinhalten um zu funktionieren."};
 
-exports.extraTopBlocks = function(d){return "Es gibt zusätzliche Bausteine, die keinem Ereignis-Baustein zugeordnet sind."};
+exports.extraTopBlocks = function(d){return "Du hast die Bausteine entfernt. Wolltest du sie an den \"Wenn ausführen\" Baustein anhängen?"};
 
 exports.finalStage = function(d){return "Glückwunsch! Du hast das letzte Level erfolgreich abgeschlossen."};
 

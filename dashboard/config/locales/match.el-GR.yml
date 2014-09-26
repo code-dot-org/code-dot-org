@@ -28,7 +28,7 @@
       2-3 bounce match 1:
         Bounce Matching: Bounce Matching
         Matching: Matching
-        Match the events with the actions: Match the events with the actions
+        Match the events with the actions: "Ταιριάξτε τα γεγονότα με τις ενέργειες"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png"
@@ -42,7 +42,7 @@
       2-3 flappy match 1:
         Flappy Matching One: Flappy Matching One
         Matching: Matching
-        Match the events with the actions: Match the events with the actions
+        Match the events with the actions: "Ταιριάξτε τα γεγονότα με τις ενέργειες"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png"
@@ -85,8 +85,8 @@
         Matching: Matching
         "/script_assets/2-3_images/unplugged/binary_1_q.png, 250": "/script_assets/2-3_images/unplugged/binary_1_q.png,
           250"
-        Use the key to mach each code to its letter: Use the key to mach each code
-          to its letter
+        Use the key to mach each code to its letter: "Χρησιμοποιήστε το πλήκτρο για
+          να ταιριάξετε κάθε κωδικό με το αντίστοιχο γράμμα"
         "<strong>N</strong>": "<strong>N</strong>"
         "<strong>O</strong>": "<strong>O</strong>"
         "<strong>P</strong>": "<strong>P</strong>"
@@ -125,6 +125,23 @@
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
+      4-5 Computational Thinking Match 1:
+        Matching: Matching
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each
+          of these vehicles has been decomposed into smaller pieces. Match each vehicle
+          with its decomposed list.
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Wheels/side: 2<br/>Windows/side:
+          0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Wheels/side: 2<br/>Windows/side:
+          1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Wheels/side: 2<br/>Windows/side:
+          6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Wheels/side: 3<br/>Windows/side:
+          2</h3>"
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
       K-1 Artist 2 Match 1:
         Matching: Matching
         Is the square next to, above, or below the ball?: Is the square next to, above,
@@ -189,8 +206,8 @@
       K-1 Maze Match 1:
         Matching: Matching
         Match the puzzles and blocks: Match the puzzles and blocks
-        Instructions: Instructions
-        Drag the blocks to match.: Drag the blocks to match.
+        Instructions: "Οδηγίες"
+        Drag the blocks to match.: "Σύρετε τα μπλοκ για να ταιριάζουν."
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
         "/script_assets/k_1_images/maze_images/maze_ENE.png": "/script_assets/k_1_images/maze_images/maze_ENE.png"

@@ -65,6 +65,8 @@
   i_am_a: "Аз съм"
   never_spam: "Ние никога няма да ви изпратим спам"
   enter_country: "Въведете страна, ако се намирате извън САЩ"
+  used_infrequent_updates: "Използва само за чести актуализации"
+  privacy_practices_children: "Вижте нашите правила за поверителност за деца"
   petition_thankyou: "Благодарим ви, че подписахте петицията"
   carousel_heading_international: "Уроци на вашия език"
   continue_learning_header: 'Продължете обучението и след  Един час кодиране'
@@ -95,8 +97,8 @@
   studiobar_hoc_body: "Научете се да кодирате с ядосаните птици"
   studiobar_flappy_title: "Flappy код"
   studiobar_flappy_body: "Направете и споделете своя собствена Flappy игра"
-  studiobar_teacher_title: "Учителско табло"
-  studiobar_teacher_body: 'За учители: Прегледайте прогресът на вашите ученици'
+  studiobar_teacher_title: "За учители"
+  studiobar_teacher_body: "Представете Code Studio в класната си стая"
   contact_form_topic_student: "Аз съм ученик"
   contact_form_topic_parent: "Аз съм родител"
   contact_form_topic_teacher: "Аз съм учител/обучител"
@@ -193,6 +195,7 @@
   dashboard_sections_table_course: "Курс"
   dashboard_sections_table_students: "Ученици"
   dashboard_sections_table_code: "Код за раздел"
+  dashboard_sections_name: "Име на раздел"
   dashboard_sections_choose_secret: 'Ако искате да предоставите акаунти на учениците си, изберете таен тип на <b>дума</b> или <b>картина</b> за този раздел.'
   dashboard_sections_secret_word: '<b>word</b> ви позволява да зададете тайна дума за всеки ученик.'
   dashboard_sections_secret_picture: '<b>Картина</b> ви позволява да зададете тайно изображение за всеки ученик, идеален вариант за по-малките ученици, които все още не могат да пишат на компютър.'
@@ -203,9 +206,12 @@
   dashboard_students_add_students: "Добавяне на няколко ученици"
   dashboard_students_add_multiple: 'Въведете или поставете имената на вашите ученици по едно име на ред:'
   dashboard_students_new_section: 'Създали сте нов раздел! Сега добавете вашите ученици, използвайки <b>Добавяне на ученик</b> и <b>добавяне на няколко ученици</b> от бутоните по-горе.'
+  dashboard_students_placeholder_name: "Име на ученика"
   dashboard_students_name: "Име"
   dashboard_students_age: "Възраст"
   dashboard_students_gender: "Пол"
+  dashboard_students_male: "Мъж"
+  dashboard_students_female: "Жена"
   dashboard_students_secret: "Тайна"
   dashboard_students_password: "Парола"
   dashboard_students_username: 'Потребителско име: %{student_username}'
@@ -224,4 +230,27 @@
   dashboard_students_no_email: 'Ако учениците ви нямат свой имейл адрес, но искате да създадете акаунти за тях, променете тайния тип на този раздел <b>дума</b> или <b>картина</b>.'
   dashboard_students_print_page: "Печат на тази страница"
   dashboard_students_url: "URL АДРЕС"
-  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Click here</a> for our privacy document that can be shared or printed for your students.'
+  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank"> Щракнете тук</a> за нашата декларация поверителност, която може да се сподели или да се отпечата за вашите ученици.'
+  dashboard_curriculum_overview: "K-5 преглед на учебния план"
+  dashboard_view_all_lesson_plans: "Разгледай всички урочни планове"
+  dashboard_course1: 'Курс 1:'
+  dashboard_course2: 'Курс 2:'
+  dashboard_course3: 'Курс 3:'
+  dashboard_sequence: "Последователност"
+  dashboard_framework: "Рамка"
+  dashboard_standards: "Стандарти"
+  dashboard_implementation_guide: "Ръководство за използване"
+  dashboard_glossary: "Речник"
+  dashboard_classroom_strategies: "Стратегии за учителите в класната стая"
+  dashboard_debugging: 'Отстраняване на грешки:'
+  dashboard_puzzle_solving: 'Решаване на пъзел:'
+  dashboard_student_worksheet: "Ученически лист"
+  dashboard_teacher_worksheet: "Учителски лист"
+  dashboard_grade_k: "K"
+  dashboard_grade_other: "Друго"
+  dashboard_login_word: "дума"
+  dashboard_login_picture: "картинка"
+  dashboard_login_none: "няма"
+  dashboard_new_password: "нова парола"
+  stats_hoc_2013_heading: 'Невероятната статистика от миналата година за Часът на кодирането. Само за една седмица:'
+  stats_hoc_2013_image_alt: "Статистика Часът на кодирането от 2013"

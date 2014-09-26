@@ -1,7 +1,7 @@
 {
   "bounceBall": "bounce ball",
   "bounceBallTooltip": "Bounce a ball off of an object.",
-  "continue": "Continue",
+  "continue": "Jätka",
   "dirE": "E",
   "dirN": "N",
   "dirS": "S",
@@ -10,7 +10,7 @@
   "elseCode": "else",
   "finalLevel": "Congratulations! You have solved the final puzzle.",
   "heightParameter": "height",
-  "ifCode": "if",
+  "ifCode": "kui",
   "ifPathAhead": "if path ahead",
   "ifTooltip": "If there is a path in the specified direction, then do some actions.",
   "ifelseTooltip": "If there is a path in the specified direction, then do the first block of actions. Otherwise, do the second block of actions.",

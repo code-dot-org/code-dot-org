@@ -32,6 +32,7 @@
     submit: Adicionar dica
   appname: Code.org
   stage: Fase
+  stage_number: Fase %{number}
   puzzle: Desafio
   trophies: Troféus
   courses: Cursos
@@ -66,8 +67,8 @@
   signup_form:
     overview_student: Crie uma conta para acompanhar seu progresso. Seu e-mail é usado
       principalmente para permitir que você faça logon e para a recuperação de senha.
-      Para obter mais informações, consulte nossa <a href="http://code.org/privacy">
-      Política de privacidade</a>.
+      Para obter mais informações, consulte nossa <a href="http://code.org/privacy">Política
+      de privacidade</a>.
     overview_teacher: Cadastre-se e ensine ciência da computação em sua sala de aula.<p/>
       Você poderá adicionar alunos e acompanhar o progresso deles.
     no_signup_message: Você pode <a target="_blank" href="http://learn.code.org">
@@ -106,10 +107,10 @@
     invalid_password: A senha deve ter pelo menos 6 caracteres
     mismatch_password: As duas senhas que você digitou são diferentes
     student_terms: Concordo com os <a href='http://code.org/tos'>termos de serviço</a>
-      da Code.org. Se tenho menos de 13 anos de idade, confirmo que tenho autorização
-      de meus pais ou tutor legal para usar os serviços da Code.org, ao enviar este
-      formulário.<br/> No caso dos alunos com menos de 13 anos, os endereços de e-mail
-      não são armazenados em um formulário que nos permita entrar em contato com eles.
+      da Code.org. Se tenho menos de 13 anos de idade, ao enviar este formulário confirmo
+      que tenho autorização de meus pais ou tutor legal para usar os serviços da Code.org.<br/>
+      No caso dos alunos com menos de 13 anos, os endereços de e-mail não são armazenados
+      em um formulário que nos permita entrar em contato com eles.
     teacher_terms: Concordo com os <a href='http://code.org/tos'>termos de serviço</a>
       da Code.org.
     additional_information: Precisamos de mais informações para continuar com o processo
@@ -374,6 +375,8 @@
     classroom_activity: Atividade off-line
   home:
     title: Code Studio
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: Já se registrou? %{link}
     student_reg_link: Cadastro de Aluno
     teacher_reg_link: Cadastro de Professor
@@ -428,6 +431,7 @@
     feedback: Fornecer feedback
     translate: Ajude-nos a traduzir para o seu idioma
     support: Suporte
+    support_url: http://support.code.org
     tos: Termos
     privacy: Política de Privacidade
     secure: Versão Segura
@@ -452,8 +456,24 @@
     autoplay_option: Vídeos com reprodução automática
     download: Baixar Vídeo
   compatability:
-    working: Estamos trabalhando no suporte para seu navegador.
-    upgrade: Atualize seu navegador.
+    working:
+      header: Estamos trabalhando no suporte para seu navegador.
+      message: A Code.org usa tecnologia web moderna, o que torna o site mais rápido
+        para usar. Seu navegador não suporta todos os recursos necessários, e podem
+        ocorrer problemas ao usar esta parte do site. Para nos ajudar, informe os
+        <a href='%{report_issue_url}'>problemas encontrados</a>. Você também pode
+        <a href='%{supported_browsers_url}'>atualizar seu navegador para uma versão
+        compatível</a>.
+      hide_this_warning: Ocultar este aviso
+    upgrade:
+      header: Atualize seu navegador.
+      message: A Code.org usa tecnologia web moderna, o que torna o site mais rápido
+        para usar. Infelizmente, seu navegador não suporta todos os recursos necessários
+        para executar esta parte do site. <br/><br/>Instale um navegador de nossa
+        lista de navegadores compatíveis para continuar. Você pode <a href='#'>tentar
+        visualizar a página</a>, mas algumas funcionalidades podem não ser exibidas
+        corretamente.
+      button: Leve-me à lista de navegadores compatíveis
   slow_loading: Isso está demorando mais do que o normal...
   try_reloading: Tente recarregar a página
   next_stage: Concluído! Continuar para a próxima fase
@@ -464,7 +484,7 @@
     title: Clique em 'Executar' para ver meu programa em ação
     bounce_og_title: Veja meu jogo de Pingue-pongue
     flappy_og_title: Dê uma olhada no meu jogo Flappy
-    studio_og_title: Confira minha história
+    studio_og_title: 'Confira meu Jogo no Laboratório '
     og_description: Eu mesmo escrevi o código com a Code.org
   builder:
     created: Você criou um novo script.
@@ -503,6 +523,7 @@
     feedback: Dar feedback
     report_bug: Reportar erro
     support: Obter ajuda
+    support_url: "//support.code.org"
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A resposta que você digitou não está correta. Tente novamente!

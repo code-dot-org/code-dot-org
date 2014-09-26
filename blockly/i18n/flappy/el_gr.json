@@ -32,7 +32,7 @@
   "playSoundJingle": "play jingle sound",
   "playSoundSplash": "play splash sound",
   "playSoundLaser": "play laser sound",
-  "playSoundTooltip": "Play a sound.",
+  "playSoundTooltip": "Παίξε τον επιλεγμένο ήχο.",
   "reinfFeedbackMsg": "You can press the \"Try again\" button to go back to playing your game.",
   "scoreText": "Score: {playerScore} : {opponentScore}",
   "setBackground": "set scene",

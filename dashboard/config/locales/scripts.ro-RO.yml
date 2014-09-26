@@ -47,6 +47,7 @@
           'Studio: Create a Story': 'Laboratorul de Joacă: Creează o Poveste'
           description_short: Cursul 1 este proiectat pentru cititorii începători din
             clase mai mici.
+          'Artist: Loops': 'Artist: Bucle'
         course2:
           The Maze: Labirintul
           Suzi: Suzi
@@ -89,6 +90,7 @@
             clasele elementare inferioare şi mijlocii.
           'Artist: Sequence2': 'Artist: Secvenţă2'
           'Maze: Sequence2': 'Labirint: Secvenţă2'
+          'Artist: Nested Loops': 'Artist: Bucle Adunate'
         course3:
           The Maze: Labirintul
           'Studio: Create a Story': 'Laboratorul de Joacă: Creează o Poveste'
@@ -141,6 +143,7 @@
           'Farmer: While Loops2': 'Fermier: În Timp ce Şerpuieşte2'
           'Bee: Nested Loops2': 'Ortografie: Bucle Adunate2'
           'Bee: Debugging2': 'Ortografie: Depanare2'
+          'Artist: Patterns': 'Artist: Patterns'
         msm:
           title: Matematică de Şcoală Mijlocie
           description: Lucrare în progres pentru Matematică de Şcoală Mijlocie.

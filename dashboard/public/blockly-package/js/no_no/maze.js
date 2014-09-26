@@ -12893,7 +12893,7 @@ exports.directionSouthLetter = function(d){return "S"};
 
 exports.directionEastLetter = function(d){return "E"};
 
-exports.directionWestLetter = function(d){return "W"};
+exports.directionWestLetter = function(d){return "V"};
 
 exports.end = function(d){return "slutt"};
 
@@ -12901,13 +12901,13 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Gjenta\"- eller \"Hvis\"-blo
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funksjonsblokken må ha andre blokker inni seg for å virke."};
 
-exports.extraTopBlocks = function(d){return "Du har ekstra blokker som ikke er knyttet til en hendelse blokk."};
+exports.extraTopBlocks = function(d){return "Du har ledige blokker. Mente du knytte disse til \"når kjøre\" blokken?"};
 
 exports.finalStage = function(d){return "Gratulerer! Du har fullført siste nivå."};
 
 exports.finalStageTrophies = function(d){return "Gratulerer! Du har fullført siste nivå og vunnet "+p(d,"numTrophies",0,"no",{"one":"en pokal","other":n(d,"numTrophies")+" pokaler"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Fullfør"};
 
 exports.generatedCodeInfo = function(d){return "Selv topp universiteter lærer blokk-basert koding (f.eks "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Men under panseret, kan blokkene du har samlet også vises i JavaScript, verdens mest brukte kode språk:"};
 
@@ -13082,9 +13082,9 @@ exports.ifFlowerTooltip = function(d){return "Hvis det befinner seg en blomst/bi
 
 exports.ifelseFlowerTooltip = function(d){return "Hvis det er en blomst/bikube i angitt retning, utfør handlingen  i den første blokken. Ellers, utfør handlingen i blokk nummer to."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Du bruker alle riktige blokker, men du må ha riktig mengde honning."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Du bruker alle riktige blokker, men du må samle inn riktig mengde nektar."};
 
 exports.make = function(d){return "Lag"};
 

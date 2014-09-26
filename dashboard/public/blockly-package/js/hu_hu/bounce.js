@@ -2932,8 +2932,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -11214,7 +11213,7 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.hu=function(n){return "other"}
-exports.bounceBall = function(d){return "bounce ball"};
+exports.bounceBall = function(d){return "ugráló labda"};
 
 exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
 
@@ -11244,15 +11243,15 @@ exports.ifTooltip = function(d){return "Ha a megadott irányban létezik egy út
 
 exports.ifelseTooltip = function(d){return "Ha van egy út a megadott irányban, akkor csináld az első blokk műveletek. Másképp csinál a második blokk műveletek."};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "ellenfél pontszám"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
+exports.incrementOpponentScoreTooltip = function(d){return "Adjon egyet az ellenfél pontszámához."};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "pontszám"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
+exports.incrementPlayerScoreTooltip = function(d){return "Adjon egyet a játékos pontszámához."};
 
-exports.isWall = function(d){return "is this a wall"};
+exports.isWall = function(d){return "Ez egy fal"};
 
 exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
 
@@ -11262,25 +11261,25 @@ exports.launchBallTooltip = function(d){return "Hozd játékba a labdát."};
 
 exports.makeYourOwn = function(d){return "Készítsd el a saját Bounce játékodat"};
 
-exports.moveDown = function(d){return "move down"};
+exports.moveDown = function(d){return "menj lejjebb"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Mozgasd lejjebb a lapátot."};
 
 exports.moveForward = function(d){return "előrelépni"};
 
 exports.moveForwardTooltip = function(d){return "Vigyél előre egy helyet."};
 
-exports.moveLeft = function(d){return "move left"};
+exports.moveLeft = function(d){return "balra"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Mozgasd balra a lapátot."};
 
-exports.moveRight = function(d){return "move right"};
+exports.moveRight = function(d){return "menj jobbra"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Mozgasd jobbra a lapátot."};
 
-exports.moveUp = function(d){return "move up"};
+exports.moveUp = function(d){return "menj feljebb"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Mozgasd feljebb a lapátot."};
 
 exports.nextLevel = function(d){return "Gratulálok! Elvégezte a puzzle-t."};
 
@@ -11302,31 +11301,31 @@ exports.pathRight = function(d){return "Ha van jobbra út"};
 
 exports.pilePresent = function(d){return "van egy halom"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "recsegő hang lejátszása"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "1. cél hang lejátszása"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "2. cél hang lejátszása"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "ütődés hang lejátszása"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "pont elvesztés hang lejátszása"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "pont elvesztés 2 hang lejátszása"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "retro hang lejátszása"};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "gumi hang lejátszása"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "pofon hang lejátszása"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Kiválasztott hang lejátszása."};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "pontnyerés hang lejátszása"};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "pontnyerés 2 hang lejátszása"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "fa hang lejátszása"};
 
 exports.putdownTower = function(d){return "Tegyen le tornyot"};
 
@@ -11340,7 +11339,7 @@ exports.repeatUntilBlocked = function(d){return "amíg van út előre"};
 
 exports.repeatUntilFinish = function(d){return "befejezésig ismételd"};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Pontszám: "+v(d,"playerScore")+": "+v(d,"opponentScore")};
 
 exports.setBackgroundRandom = function(d){return "Véletlenszerű háttér beállítása"};
 
@@ -11382,15 +11381,15 @@ exports.setPaddleTooltip = function(d){return "Sets the ball paddle"};
 
 exports.setPaddleSpeedRandom = function(d){return "set random paddle speed"};
 
-exports.setPaddleSpeedVerySlow = function(d){return "set very slow paddle speed"};
+exports.setPaddleSpeedVerySlow = function(d){return "Nagyon lassan mozogjon a lapát"};
 
-exports.setPaddleSpeedSlow = function(d){return "set slow paddle speed"};
+exports.setPaddleSpeedSlow = function(d){return "Lassan mozogjon a lapát"};
 
-exports.setPaddleSpeedNormal = function(d){return "set normal paddle speed"};
+exports.setPaddleSpeedNormal = function(d){return "Normálisan mozogjon a lapát"};
 
-exports.setPaddleSpeedFast = function(d){return "set fast paddle speed"};
+exports.setPaddleSpeedFast = function(d){return "Gyorsan mozogjon a lapát"};
 
-exports.setPaddleSpeedVeryFast = function(d){return "set very fast paddle speed"};
+exports.setPaddleSpeedVeryFast = function(d){return "Nagyon gyorsan mozogjon a lapát"};
 
 exports.setPaddleSpeedTooltip = function(d){return "Sets the speed of the paddle"};
 
@@ -11404,7 +11403,7 @@ exports.turnRight = function(d){return "fordulj jobbra"};
 
 exports.turnTooltip = function(d){return "Balra vagy jobbra fordít 90 fokkal."};
 
-exports.whenBallInGoal = function(d){return "when ball in goal"};
+exports.whenBallInGoal = function(d){return "Ha a labda célba ér"};
 
 exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
 
@@ -11412,7 +11411,7 @@ exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "Ha van lefelé nyíl"};
 
 exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
 
@@ -11420,23 +11419,23 @@ exports.whenGameStarts = function(d){return "amikor a játék elindul"};
 
 exports.whenGameStartsTooltip = function(d){return "Végrehajtja a lenti utasításokat, ha a játék elindul."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "Ha van balra nyíl"};
 
 exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "Ha a labda nekimegy az ásónak"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "Ha van jobbra nyíl"};
 
 exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "Ha van felfelé nyíl"};
 
 exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "Amikor a labda nekimegy a falnak"};
 
 exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
 
@@ -11487,19 +11486,19 @@ exports.directionEastLetter = function(d){return "Kelet"};
 
 exports.directionWestLetter = function(d){return "Nyugat"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "vége"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Akkor van értelme az \"Ismétel\" vagy a \"Ha\" blokknak, ha van  bennük egy vagy több blokk. Bizonyosodj meg róla, hogy a belső blokk megfelelően illeszkedik a külső blokkhoz."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokknak szüksége van további elemekre a belsejében."};
 
-exports.extraTopBlocks = function(d){return "Van egy blokk, ami nincs csatolva egyetlen eseményblokkhoz se."};
+exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\"/\"when run\" blokkhoz vagy töröld."};
 
 exports.finalStage = function(d){return "Gratulálok! Teljesítetted az utolsó szakaszt."};
 
 exports.finalStageTrophies = function(d){return "Gratulálok! Teljesítetted az utolsó szakaszt és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Kész"};
 
 exports.generatedCodeInfo = function(d){return "Még a legjobb egyetemei is tanítják a blokk alapú kódolást (például "+v(d,"berkeleyLink")+" "+v(d,"harvardLink")+"). De a motorháztető alatt, a blokkok amiket összeraksz, JavaScript kódok, a világ legszélesebb körben használt kódolási nyelvén:"};
 
@@ -11531,7 +11530,7 @@ exports.numBlocksNeeded = function(d){return "Gratulálok! Megoldottad a "+v(d,"
 
 exports.numLinesOfCodeWritten = function(d){return "Éppen most írtál újabb "+p(d,"numLines",0,"hu",{"one":"1 sor","other":n(d,"numLines")+" sor"})+" kódot!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "lejátszás"};
 
 exports.puzzleTitle = function(d){return v(d,"puzzle_number")+". feladvány a "+v(d,"stage_total")+" -ból"};
 
@@ -11539,11 +11538,11 @@ exports.repeat = function(d){return "ismételd"};
 
 exports.resetProgram = function(d){return "Visszaállítás"};
 
-exports.runProgram = function(d){return "Program Futtatása"};
+exports.runProgram = function(d){return "Fut"};
 
 exports.runTooltip = function(d){return "A munkalapon összeépített program futtatása."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "pontszám"};
 
 exports.showCodeHeader = function(d){return "Kód Megjelenítése"};
 
@@ -11567,7 +11566,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Összesített eredmény
 
 exports.tryAgain = function(d){return "Próbáld újra"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Segítség"};
 
 exports.backToPreviousLevel = function(d){return "Vissza az előző szintre"};
 
@@ -11593,9 +11592,9 @@ exports.wantToLearn = function(d){return "Szeretnél megtanulni programozni?"};
 
 exports.watchVideo = function(d){return "Nézd meg a videót"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "amikor"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "futtatáskor"};
 
 exports.tryHOC = function(d){return "Próbáld ki a kódolás óráját"};
 
@@ -11603,7 +11602,7 @@ exports.signup = function(d){return "Regisztrálj a bevezető képzésre"};
 
 exports.hintHeader = function(d){return "Egy tipp:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Nem sikerült célba érnem. Kérlek javítsd a hibát."};
 
 
 },{"messageformat":51}],40:[function(require,module,exports){

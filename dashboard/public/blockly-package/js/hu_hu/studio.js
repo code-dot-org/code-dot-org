@@ -12413,8 +12413,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -14278,19 +14277,19 @@ exports.directionEastLetter = function(d){return "Kelet"};
 
 exports.directionWestLetter = function(d){return "Nyugat"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "vége"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Akkor van értelme az \"Ismétel\" vagy a \"Ha\" blokknak, ha van  bennük egy vagy több blokk. Bizonyosodj meg róla, hogy a belső blokk megfelelően illeszkedik a külső blokkhoz."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokknak szüksége van további elemekre a belsejében."};
 
-exports.extraTopBlocks = function(d){return "Van egy blokk, ami nincs csatolva egyetlen eseményblokkhoz se."};
+exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\"/\"when run\" blokkhoz vagy töröld."};
 
 exports.finalStage = function(d){return "Gratulálok! Teljesítetted az utolsó szakaszt."};
 
 exports.finalStageTrophies = function(d){return "Gratulálok! Teljesítetted az utolsó szakaszt és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Kész"};
 
 exports.generatedCodeInfo = function(d){return "Még a legjobb egyetemei is tanítják a blokk alapú kódolást (például "+v(d,"berkeleyLink")+" "+v(d,"harvardLink")+"). De a motorháztető alatt, a blokkok amiket összeraksz, JavaScript kódok, a világ legszélesebb körben használt kódolási nyelvén:"};
 
@@ -14322,7 +14321,7 @@ exports.numBlocksNeeded = function(d){return "Gratulálok! Megoldottad a "+v(d,"
 
 exports.numLinesOfCodeWritten = function(d){return "Éppen most írtál újabb "+p(d,"numLines",0,"hu",{"one":"1 sor","other":n(d,"numLines")+" sor"})+" kódot!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "lejátszás"};
 
 exports.puzzleTitle = function(d){return v(d,"puzzle_number")+". feladvány a "+v(d,"stage_total")+" -ból"};
 
@@ -14330,11 +14329,11 @@ exports.repeat = function(d){return "ismételd"};
 
 exports.resetProgram = function(d){return "Visszaállítás"};
 
-exports.runProgram = function(d){return "Program Futtatása"};
+exports.runProgram = function(d){return "Fut"};
 
 exports.runTooltip = function(d){return "A munkalapon összeépített program futtatása."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "pontszám"};
 
 exports.showCodeHeader = function(d){return "Kód Megjelenítése"};
 
@@ -14358,7 +14357,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Összesített eredmény
 
 exports.tryAgain = function(d){return "Próbáld újra"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Segítség"};
 
 exports.backToPreviousLevel = function(d){return "Vissza az előző szintre"};
 
@@ -14384,9 +14383,9 @@ exports.wantToLearn = function(d){return "Szeretnél megtanulni programozni?"};
 
 exports.watchVideo = function(d){return "Nézd meg a videót"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "amikor"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "futtatáskor"};
 
 exports.tryHOC = function(d){return "Próbáld ki a kódolás óráját"};
 
@@ -14394,12 +14393,12 @@ exports.signup = function(d){return "Regisztrálj a bevezető képzésre"};
 
 exports.hintHeader = function(d){return "Egy tipp:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Nem sikerült célba érnem. Kérlek javítsd a hibát."};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.hu=function(n){return "other"}
-exports.actor = function(d){return "actor"};
+exports.actor = function(d){return "színész"};
 
 exports.catActions = function(d){return "Műveletek"};
 
@@ -14417,41 +14416,41 @@ exports.catText = function(d){return "Szöveg"};
 
 exports.catVariables = function(d){return "Változók"};
 
-exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
+exports.changeScoreTooltip = function(d){return "Adjon hozzá vagy vegyen el egy pontot a pontszámból."};
 
-exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
+exports.changeScoreTooltipK1 = function(d){return "Adjon egy pontot a pontszámhoz."};
 
 exports.continue = function(d){return "Tovább"};
 
-exports.decrementPlayerScore = function(d){return "remove point"};
+exports.decrementPlayerScore = function(d){return "távolítsd el a pontot"};
 
 exports.defaultSayText = function(d){return "Ide írj"};
 
-exports.emotion = function(d){return "mood"};
+exports.emotion = function(d){return "hangulat"};
 
 exports.finalLevel = function(d){return "Gratulálok! A megoldottad az utolsó feladványt."};
 
-exports.hello = function(d){return "hello"};
+exports.hello = function(d){return "helló"};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "Helló világ!"};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "pontszám"};
 
-exports.makeProjectileDisappear = function(d){return "disappear"};
+exports.makeProjectileDisappear = function(d){return "eltűnik"};
 
-exports.makeProjectileBounce = function(d){return "bounce"};
+exports.makeProjectileBounce = function(d){return "ugrál"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "legyen kék a tűzgolyó"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "legyen lila a tűzgolyó"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "legyen piros a tűzgolyó"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "csinálj sárga szíveket"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "csinálj lila szíveket"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "csinálj piros szíveket"};
 
 exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
 
@@ -14485,7 +14484,7 @@ exports.moveDistanceTooltip = function(d){return "Move a character a specific di
 
 exports.moveSprite = function(d){return "mozogj"};
 
-exports.moveSpriteN = function(d){return "move actor "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "mozgasd a színészt "+v(d,"spriteIndex")};
 
 exports.moveDown = function(d){return "lejjebb"};
 
@@ -14511,15 +14510,15 @@ exports.no = function(d){return "nem"};
 
 exports.numBlocksNeeded = function(d){return "Ezt a puzzle-t a(z) % 1 blokkal megoldható."};
 
-exports.ouchExclamation = function(d){return "Ouch!"};
+exports.ouchExclamation = function(d){return "Jaj!"};
 
 exports.playSoundCrunch = function(d){return "recsegő hang lejátszása"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "1. cél hang lejátszása"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "2. cél hang lejátszása"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "ütődés hang lejátszása"};
 
 exports.playSoundLosePoint = function(d){return "pont elvesztése hang lejátszása"};
 
@@ -14575,17 +14574,17 @@ exports.positionOutBottomRight = function(d){return "to the below bottom right p
 
 exports.positionRandom = function(d){return "véletlenszerű helyzetbe"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "kék tűzgolyó"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "lila tűzgolyó"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "piros tűzgolyó"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "sárga szívek"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "lila szívek"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "piros szívek"};
 
 exports.projectileRandom = function(d){return "véletlenszerű"};
 
@@ -14621,11 +14620,11 @@ exports.setBackgroundNight = function(d){return "éjszakai háttér beállítás
 
 exports.setBackgroundUnderwater = function(d){return "víz alatti háttér beállítása"};
 
-exports.setBackgroundCity = function(d){return "set city background"};
+exports.setBackgroundCity = function(d){return "város legyen a háttér"};
 
-exports.setBackgroundDesert = function(d){return "set desert background"};
+exports.setBackgroundDesert = function(d){return "sivatag legyen a háttér"};
 
-exports.setBackgroundRainbow = function(d){return "set rainbow background"};
+exports.setBackgroundRainbow = function(d){return "szivárvány legyen a háttér"};
 
 exports.setBackgroundSoccer = function(d){return "set soccer background"};
 
@@ -14905,7 +14904,7 @@ exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge
 
 exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "Ha van felfelé nyíl"};
 
 exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
 

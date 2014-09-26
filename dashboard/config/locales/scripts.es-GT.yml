@@ -33,7 +33,10 @@
           Getting Loopy: Getting Loopy
           The Big Event: The Big Event
           Going Places Safely: Going Places Safely
-          description: Un curso para estudiantes de pre-escolar que aún no saben leer.
+          description: Course 1 is designed for early readers in the lower elementary
+            grades.  Create computer programs with loops and events.  By the end of
+            the course, create your very own custom game, art, or story than you can
+            share.
           'Bee: Sequence': 'Bee: Sequence'
           'Artist: Sequence': 'Artist: Sequence'
           'Artist: Shapes': 'Artist: Shapes'
@@ -67,7 +70,10 @@
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
-          description: Anteriormente conocido como un curso de 2-3.
+          description: Course 2 is designed for students who can read in the lower
+            and middle elementary grades.  Create programs with loops, events, and
+            conditionals.  By the end of the course, create your very own custom game,
+            art, or story than you can share.
           'Maze: Sequence': 'Maze: Sequence'
           'Artist: Sequence': 'Artist: Sequence'
           'Maze: Loops': 'Maze: Loops'
@@ -99,13 +105,16 @@
           Artist Functions with Parameters: Artist Functions with Parameters
           Computational Thinking: Computational Thinking
           Functional Suncatchers: Functional Suncatchers
-          Songwriting Parameters: Songwriting Parameters
+          Songwriting Parameters: Songwriting
           Dice Race: Dice Race
           Internet: Internet
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digital Citizenship
           Farmer - While Loops: Farmer - While Loops
-          description: Anteriormente conocido como un curso de 4-5.
+          description: Students taking Course 3 should have already taken Course 2.  Students
+            create programs with different kinds of loops, events, functions, and
+            conditions.  By the end of the course, create your very own custom game,
+            art, or story than you can share with anyone.
           'Studio: Create a Game': 'Studio: Create a Game'
           Maze: Maze
           Artist: Artist

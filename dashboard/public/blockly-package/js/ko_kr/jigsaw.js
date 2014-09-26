@@ -7397,21 +7397,21 @@ exports.directionEastLetter = function(d){return "동"};
 
 exports.directionWestLetter = function(d){return "서"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "끝"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"반복\" 블럭이나 \"조건\" 블럭이 실행되려면, 그 안에 다른 블럭들이 있어야 합니다. 블럭 안쪽에 필요한 블럭들을 끼워 맞춰 연결하세요."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "함수 블럭 안에는 다른 블럭을 넣어주어야 합니다."};
 
-exports.extraTopBlocks = function(d){return "이벤트 블럭에 연결하지 않은 남는 블럭이 있습니다."};
+exports.extraTopBlocks = function(d){return "블럭들이 떨어져있습니다. 블럭들을 붙이겠습니까?"};
 
 exports.finalStage = function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했습니다."};
 
 exports.finalStageTrophies = function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했고, "+p(d,"numTrophies",0,"ko",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" 을 얻었습니다."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "마침"};
 
-exports.generatedCodeInfo = function(d){return "프로그래밍한 블럭들은 그대로 자바스크립트(JavaScript) 언어로 변환될 수 있습니다:"};
+exports.generatedCodeInfo = function(d){return " "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"와 같은 유명한 대학에서도 블럭기반 프로그래밍을 가르칩니다. 하지만, 블럭들은 모두 JavaScript로 바뀌어 실행됩니다 : "};
 
 exports.hashError = function(d){return "죄송합니다. 저장된 '%1' 프로그램은 없습니다."};
 
@@ -7419,7 +7419,7 @@ exports.help = function(d){return "도움말"};
 
 exports.hintTitle = function(d){return "힌트:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "점프"};
 
 exports.levelIncompleteError = function(d){return "필요한 블럭들을 모두 사용했지만, 정확한 방법은 아닙니다."};
 
@@ -7435,13 +7435,13 @@ exports.nextLevelTrophies = function(d){return "축하합니다! "+v(d,"puzzleNu
 
 exports.nextStage = function(d){return "축하드립니다! "+v(d,"stageName")+"을(를) 완료하셨습니다."};
 
-exports.nextStageTrophies = function(d){return "축하합니다! "+v(d,"stageNumber")+" 단계를 성공적으로 해결했고, "+p(d,"numTrophies",0,"ko",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" 을 얻었습니다."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"ko",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "축하합니다! "+v(d,"puzzleNumber")+" 번 퍼즐을 해결했습니다. (하지만, "+p(d,"numBlocks",0,"ko",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" 만 사용해야 합니다.)"};
 
 exports.numLinesOfCodeWritten = function(d){return "오! 코드 "+p(d,"numLines",0,"ko",{"one":"1 line","other":n(d,"numLines")+" 줄"})+"로 해결했네요!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "실행"};
 
 exports.puzzleTitle = function(d){return "퍼즐 "+v(d,"puzzle_number")+"/"+v(d,"stage_total")};
 
@@ -7453,7 +7453,7 @@ exports.runProgram = function(d){return "실행"};
 
 exports.runTooltip = function(d){return "블럭들로 작성되어있는 프로그램을 실행합니다."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "점수"};
 
 exports.showCodeHeader = function(d){return "코드 보기"};
 
@@ -7477,13 +7477,13 @@ exports.totalNumLinesOfCodeWritten = function(d){return "지금까지: 코드 "+
 
 exports.tryAgain = function(d){return "다시 시도"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "도움 보기"};
 
 exports.backToPreviousLevel = function(d){return "이전 퍼즐"};
 
-exports.saveToGallery = function(d){return "갤러리에 저장"};
+exports.saveToGallery = function(d){return "나의 갤러리에 저장"};
 
-exports.savedToGallery = function(d){return "갤러리에 저장되었습니다!"};
+exports.savedToGallery = function(d){return "나의 갤러리에 저장되었습니다!"};
 
 exports.typeCode = function(d){return "자바스크립트(JavaScript) 코드를 직접 작성하세요."};
 
@@ -7503,17 +7503,17 @@ exports.wantToLearn = function(d){return "코드(code)를 배워볼까요?"};
 
 exports.watchVideo = function(d){return "비디오 보기"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "~할 때"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "~할 때 실행"};
 
 exports.tryHOC = function(d){return "Hour of Code 해보기"};
 
 exports.signup = function(d){return "샘플 코스를 위해 가입하기"};
 
-exports.hintHeader = function(d){return "팁:"};
+exports.hintHeader = function(d){return "도움말:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요."};
 
 
 },{"messageformat":46}],34:[function(require,module,exports){
@@ -7526,11 +7526,11 @@ exports.no = function(d){return "아니요"};
 
 exports.numBlocksNeeded = function(d){return "%1 개의 블럭으로 퍼즐을 해결할 수 있습니다."};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your game."};
+exports.reinfFeedbackMsg = function(d){return "다시 시작하기 버튼을 눌러 게임을 다시 시작할 수 있습니다."};
 
-exports.share = function(d){return "Share"};
+exports.share = function(d){return "공유하기"};
 
-exports.shareGame = function(d){return "Share your game:"};
+exports.shareGame = function(d){return "게임 공유하기:"};
 
 exports.yes = function(d){return "예"};
 

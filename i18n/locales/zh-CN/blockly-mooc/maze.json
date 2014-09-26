@@ -32,6 +32,8 @@
   "ifelseTooltip":"如果在指定的方向有路，执行第一部分的操作。否则，执行第二部分的操作。",
   "ifFlowerTooltip":"如果在指定的方向有花或蜂巢，执行一些操作",
   "ifelseFlowerTooltip":"如果在指定的方向有花或蜂巢，执行第一部分的操作。否则，执行第二部分的操作。",
+  "insufficientHoney":"You're using all the right blocks, but you need to make the right amount of honey.",
+  "insufficientNectar":"You're using all the right blocks, but you need to collect the right amount of nectar.",
   "make":"使",
   "moveBackward":"向后移动",
   "moveEastTooltip":"把我向东移一步。",

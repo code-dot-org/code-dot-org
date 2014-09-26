@@ -32,6 +32,8 @@
   "ifelseTooltip": "Jei kelias yra nurodytoje kryptyje, atlik pirmą veiksmų bloką. Priešingu atveju, atlik antrą veiksmų bloką.",
   "ifFlowerTooltip": "Jei nurodytoje krypty yra gėlė/korys, atliekami veiksmai.",
   "ifelseFlowerTooltip": "Jei nurodytoje krypty yra gėlė/korys, atliekami pirmesni veiksmai, kitu atveju - kiti.",
+  "insufficientHoney": "Tu naudoji visus reikalingus blokus, bet medaug kiekis neatitinka.",
+  "insufficientNectar": "Tu naudoji visus reikalingus blokus, bet nektaro kiekis neatitinka.",
   "make": "pagamink",
   "moveBackward": "atgal",
   "moveEastTooltip": "Pajudink mane į rytus per vieną laukelį.",

@@ -122,6 +122,17 @@
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
+      4-5 Computational Thinking Match 1:
+        Matching: "Assortir"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
       K-1 Artist 2 Match 1:
         Matching: "Assortir"
         Is the square next to, above, or below the ball?: Le carré est-il place à côté, au-dessus, ou en-dessous de la balle ?
@@ -248,8 +259,8 @@
       Match circles to code:
         Converting Circles to Code: "Converting Circles to Code"
         Match each circle of evaluation with the correct code!: Match each circle of evaluation with the correct code!
-        (+ (- (/ 4 7) 9) 3): '(+ (- (/ 4 7) 9) 3)'
-        (+ (- 9 3) (* 4 7)): '(+ (- 9 3) (* 4 7))'
+        (+ (- (/ 4 7) 9) 3): (+ (-(/ 4 7) 9) 3)
+        (+ (- 9 3) (* 4 7)): '(+ (-9 3) (* 4 7))'
         (/ (+ 4 7) 3): (/ (+ 4 7) 3)
         (+ 3 (/ 4 7)): (+ 3 (/ 4 7))
         /script_assets/msm/Unit 1/Exercise_5_question_1.png: /script_assets/msm/Unit 1/Exercise_5_question_1.png
@@ -259,14 +270,14 @@
       Match math to code:
         Converting Math to Code: "Converting Math to Code"
         Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!
-        (15 + 3) x (72 - 19): '(15 + 3) x (72 - 19)'
+        (15 + 3) x (72 - 19): (15 + 3) x (72-19)
         3 x 15 + (- 72 19): '3 x 15 + (- 72 19)'
-        72 + 3 - 19 x 15: '72 + 3 - 19 x 15'
-        3 x 15 - 72 + 19: '3 x 15 - 72 + 19'
+        72 + 3 - 19 x 15: 72 + 3-19 x 15
+        3 x 15 - 72 + 19: 3 x 15-72 + 19
         (* (+ 15 3) (- 72 19)): '(* (+ 15 3) (- 72 19))'
         (+ (3 x 15) (- 72 19)): '(+ (3 x 15) (- 72 19))'
-        (- (+ 72 3) (* 19 15)): '(- (+ 72 3) (* 19 15))'
-        (+ (- (* 3 15) 72) 19): '(+ (- (* 3 15) 72) 19)'
+        (- (+ 72 3) (* 19 15)): '(-(+ 72 3) (* 19 15))'
+        (+ (- (* 3 15) 72) 19): '(+ (-(* 3 15) 72) 19)'
       parts of contract:
         Parts of a Contract: "Parts of a Contract"
         Here is a contract for a new function. Match each item with the word that describes it.: Here is a contract for a new function. Match each item with the word that describes it.

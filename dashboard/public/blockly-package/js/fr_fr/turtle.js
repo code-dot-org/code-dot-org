@@ -10009,7 +10009,7 @@ Turtle.drawJointAtTurtle_ = function () {
  * @return {boolean} True if the level is solved, false otherwise.
  */
 var isCorrect = function(pixelErrors, permittedErrors) {
-  return pixelErrors < permittedErrors;
+  return pixelErrors <= permittedErrors;
 };
 
 /**
@@ -10366,7 +10366,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Le bloc « Répéter » ou �
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Le bloc fonctionnel doit avoir d'autres blocs à l'intérieur pour fonctionner."};
 
-exports.extraTopBlocks = function(d){return "Vous avez disposé des blocs qui ne sont rattachés à aucun bloc d'évènement."};
+exports.extraTopBlocks = function(d){return "Vous avez des blocs non attachés. Est-ce que vous vouliez les attacher au bloc \"lors du lancement\" ?"};
 
 exports.finalStage = function(d){return "Félicitations ! Vous avez terminé l'étape finale."};
 
@@ -10440,7 +10440,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Production totale : "+
 
 exports.tryAgain = function(d){return "Réessayer"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Voir astuce"};
 
 exports.backToPreviousLevel = function(d){return "Retour au niveau précédent"};
 
@@ -10466,7 +10466,7 @@ exports.wantToLearn = function(d){return "Vous souhaitez apprendre à coder ?"}
 
 exports.watchVideo = function(d){return "Voir la vidéo"};
 
-exports.when = function(d){return "lors"};
+exports.when = function(d){return "lorsque"};
 
 exports.whenRun = function(d){return "lors du lancement"};
 
@@ -10503,7 +10503,7 @@ exports.colourTooltip = function(d){return "Modifie la couleur du crayon."};
 
 exports.degrees = function(d){return "degrés"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "profondeur"};
 
 exports.dots = function(d){return "pixels"};
 
@@ -10603,7 +10603,7 @@ exports.showMe = function(d){return "Montrez-moi"};
 
 exports.showTurtle = function(d){return "afficher l'artiste"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "étape"};
 
 exports.tooFewColours = function(d){return "Vous devez utiliser au moins %1 couleurs différentes pour ce puzzle. Vous n'en avez utilisé que %2."};
 

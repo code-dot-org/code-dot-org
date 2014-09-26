@@ -2,10 +2,10 @@
   activerecord:
     errors:
       messages:
-        blank: "è obbligatorio"
+        blank: "è un dato obbligatorio"
     attributes:
       user:
-        name: Nome Visualizzato
+        name: Nome da visualizzare
         email: Indirizzo di posta elettronica
         username: Nome utente
         password: password
@@ -34,6 +34,7 @@
     submit: Aggiungi un suggerimento
   appname: Code.org
   stage: Lezione
+  stage_number: Lezione %{number}
   puzzle: Esercizio
   trophies: Trofei
   courses: Corsi
@@ -66,11 +67,19 @@
     need_confirmation: Non hai ricevuto le istruzioni di conferma?
     need_unlock: Non hai ricevuto le istruzioni di sblocco?
   signup_form:
-    overview_student: Iscriviti con un account per tener traccia dei tuoi progressi.
-    overview_teacher: 'Insegna l''informatica nella tua classe. Iscriviti con un account:
-      <p/> Potrai tener traccia dei progressi dei tuoi studenti ed ottenere dei premi.'
-    no_signup_message: Puoi <a target="_blank" href="http://learn.code.org">sfogliare
+    overview_student: Iscriviti per avere un account che ti permetta di tener traccia
+      dei tuoi progressi. Il tuo indirizzo di posta elettronica verrà usato soprattutto
+      per accedere e recuperare la tua password. Per maggiori informazioni, consulta
+      la nostra <a href="http://code.org/privacy">Informativa sulla Privacy</a> (in
+      inglese).
+    overview_teacher: 'Insegna l''informatica nella tua classe iscrivendoti al nostro
+      sito.<p/> Potrai aggiungere i tuoi studenti e tener traccia dei loro progressi.<1/>ATTENZIONE:
+      Se sei italiano iscriviti attraverso <a href="http://programmailfuturo.it">il
+      sito italiano di supporto</a>.'
+    no_signup_message: 'Puoi <a target="_blank" href="http://learn.code.org">sfogliare
       le varie lezioni e gli esercizi</a>, ma devi iscriverti per salvare i tuoi progressi.
+      <1/>ATTENZIONE: Se sei italiano iscriviti attraverso <a href="http://programmailfuturo.it">il
+      sito italiano di supporto</a>.'
     prizes_message: 'Gli studenti degli Stati Uniti che guadagnano tutti i %{num_trophies}
       trofei possono selezionare una varietà di premi tra cui: spazio gratuito su
       Dropbox, crediti Skype e giochi scaricabili da Electronic Arts.'
@@ -104,11 +113,13 @@
     invalid_password: La password deve essere lunga almeno 6 caratteri
     mismatch_password: Le due password che hai inserito non corrispondono
     student_terms: Accetto di essere vincolato dai <a href='http://code.org/tos'>termini
-      di servizio</a> di Code.org. Se sono di età inferiore a 14 anni, inviando questo
-      modulo confermo che ho il permesso dei miei genitori o del mio tutore legale
-      ad utilizzare i servizi di Code.org.
+      di servizio</a> di Code.org. Se sono di età inferiore a 14 anni, confermo inviando
+      questo modulo che ho il permesso dei miei genitori o del tutore legale di utilizzare
+      i servizi di Code.org. <br/>Per gli utenti di età inferiore a 14 anni, gli indirizzi
+      di posta elettronica non vengono memorizzati in una forma che ci permette di
+      contattarli.
     teacher_terms: Accetto di essere vincolato dai <a href='http://code.org/tos'>termini
-      di servizio<0> di Code.org.
+      di servizio</a> di Code.org.
     additional_information: Abbiamo bisogno di alcune informazioni aggiuntive per
       continuare la tua iscrizione.
   signin_form:
@@ -340,7 +351,7 @@
       section_code: codice-classe
       add_section_code: Aggiungere il codice-classe degli studenti
       secret: Tipo segreto
-      grade: Valutazione
+      grade: Livello
       course: Corso
       rename: rinomina
       edit: modifica
@@ -374,7 +385,9 @@
     show_more: Mostra di più
     classroom_activity: Attività "Senza Rete"
   home:
-    title: Il Laboratorio dell'Informatica
+    title: Officina del Codice
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: Già iscritto? %{link}
     student_reg_link: Iscrizione studenti
     teacher_reg_link: Iscrizione insegnanti
@@ -388,7 +401,7 @@
     teacher_print_certificates: Stampa il certificato per gli studenti che completano
       questo corso
     teacher_read_blog: Leggi notizie e aggiornamenti relativi al nostro materiale
-      didattico su programmailfuturo.it
+      didattico su <a href="http://programmailfuturo.it">programmailfuturo.it</a>
     classroom: La tua classe
     student_progress: I tuoi progressi di apprendimento
     student_stats: Hai guadagnato %{trophy_count} trofei su %{trophy_max} in "Padronanza
@@ -414,10 +427,10 @@
     test_videos_help: Prova il nostro nuovo videoregistratore nella tua scuola
     try_beta_courses: Novità! Prova i nostri corsi specifici per studenti delle scuole
       elementari (in versione provvisoria)
-    use_as_teacher: Usa questo sito da insegnante
+    use_as_teacher: Guarda questo sito come insegnante
     heading_elementary: "<h2>Corsi in 20 lezioni per</h2><h1>studenti delle elementari</h1>"
     heading_apps: "<h2>Divertimento per</h2><h1>tutti</h1>"
-    heading_legacy: "<h2>Il nostro Corso Introduttivo</h2><h1>per utenti di tutte
+    heading_legacy: "<h2>Il nostro Corso Introduttivo per </h2><h1>utenti di tutte
       le età</h1>"
   gender:
     male: Maschile
@@ -432,6 +445,7 @@
     feedback: Facci sapere che ne pensi
     translate: Aiutaci a tradurre nella tua lingua
     support: Supporto
+    support_url: http://programmailfuturo.it
     tos: Termini di servizio
     privacy: Informativa sulla privacy
     secure: Versione sicura
@@ -456,8 +470,24 @@
     autoplay_option: Avvia automaticamente i video
     download: Scarica il video
   compatability:
-    working: Stiamo lavorando per supportare il tuo browser.
-    upgrade: Per favore aggiorna il tuo browser.
+    working:
+      header: Stiamo lavorando per supportare il tuo browser.
+      message: Code.org utilizza una moderna tecnologia web. Questo rende il sito
+        più veloce da utilizzare. Il tuo browser non supporta tutte le funzionalità
+        necessarie, e si potrebbero riscontrare problemi durante l'utilizzo di questa
+        parte del sito. Per favore aiutateci segnalando <a href='%{report_issue_url}'>
+        eventuali problemi che riscontrate</a>. È inoltre possibile <a href='%{supported_browsers_url}'>
+        aggiornare il browser a una versione supportata</a>.
+      hide_this_warning: Nascondi questo avviso
+    upgrade:
+      header: Per favore aggiorna il tuo browser.
+      message: Code.org utilizza una moderna tecnologia web. Questo rende il sito
+        più veloce da utilizzare. Purtroppo il tuo browser non supporta tutte le funzionalità
+        necessarie per l'esecuzione di questa parte del sito. <br/> <br/>Per continuare,
+        installa un browser dal nostro elenco di browser supportati. Si può <a href='#'>
+        provare a caricare la pagina</a>, ma alcune funzionalità potrebbero non essere
+        visualizzate nel modo corretto.
+      button: Portami all'elenco dei browser supportati
   slow_loading: Questa operazione sta prendendo più tempo del solito...
   try_reloading: Prova a ricaricare la pagina
   next_stage: Finito! Prosegui con la lezione successiva
@@ -468,7 +498,7 @@
     title: Clicca su "Esegui" per vedere il mio programma in azione
     bounce_og_title: Prova la mia versione del gioco Rimbalzo
     flappy_og_title: Prova la mia versione del gioco Flappy
-    studio_og_title: Guarda la mia storia
+    studio_og_title: Prova la mia versione del Gioco da Laboratorio
     og_description: Ho scritto il codice per conto mio con Code.org
   builder:
     created: Hai creato un nuovo script.
@@ -507,6 +537,7 @@
     feedback: Dicci che ne pensi
     report_bug: Segnala un errore
     support: Ottieni aiuto
+    support_url: "//programmailfuturo.it"
   multi:
     wrong_title: Risposta non corretta
     wrong_body: La risposta che hai inserito non è corretta.  Per favore riprova!
@@ -567,5 +598,6 @@
       non affitterà, venderà o condividerà mai queste informazioni con terze parti.
     sign_out: Se non desideri fornire la tua età puoi <a href="%{url}">uscire</a>.
   zendesk_too_young_message: Siamo spiacenti, gli utenti più giovani non possono accedere
-    al nostro sito di supporto. Contattaci su <a href="http://programmailfuturo.it">programmailfuturo.it</a>
-    oppure chiedi ai tuoi genitori o insegnanti di contattarci al posto tuo.
+    al nostro sito di supporto.<a href="http://support.code.org"></a> Contattaci su
+    <a href="http://programmailfuturo.it">programmailfuturo.it</a> oppure chiedi ai
+    tuoi genitori o insegnanti di contattarci al posto tuo.

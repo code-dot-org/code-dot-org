@@ -81,6 +81,8 @@
   i_am_a: Eu sou um
   never_spam: Nunca vamos enviar spam para você
   enter_country: Informe o país se você mora fora dos Estados Unidos
+  used_infrequent_updates: Usado apenas para atualizações pouco frequentes
+  privacy_practices_children: Consulte nossa política de privacidade para crianças
   petition_thankyou: Agradecemos por assinar a petição
   carousel_heading_international: Tutoriais no seu idioma
   continue_learning_header: Continue aprendendo além da Hora do Código
@@ -113,8 +115,8 @@
   studiobar_hoc_body: Aprenda a programar com o Angry Birds
   studiobar_flappy_title: Código do Flappy bird
   studiobar_flappy_body: Faça e compartilhe seu próprio jogo Flappy bird
-  studiobar_teacher_title: Painel do professor
-  studiobar_teacher_body: 'Para professores: veja o progresso de seus alunos'
+  studiobar_teacher_title: Feito para professores
+  studiobar_teacher_body: Introduzir código Studio em sua sala de aula
   contact_form_topic_student: Sou um aluno
   contact_form_topic_parent: Sou um pai
   contact_form_topic_teacher: Sou um professor/educador
@@ -227,6 +229,7 @@
   dashboard_sections_table_course: Curso
   dashboard_sections_table_students: Alunos
   dashboard_sections_table_code: Código da turma
+  dashboard_sections_name: Nome da seção
   dashboard_sections_choose_secret: Se você quer fornecer contas aos seus alunos,
     escolha um tipo secreto de <b>palavra</b> ou <b>imagem</b> para a turma.
   dashboard_sections_secret_word: Uma <b>palavra</b> permite que você defina uma palavra
@@ -246,9 +249,12 @@
   dashboard_students_new_section: Você criou uma nova turma! Agora, adicione seus
     alunos usando os botões <b>Adicionar aluno</b> e <b>Adicionar vários alunos</b>
     acima.
+  dashboard_students_placeholder_name: Nome do estudante
   dashboard_students_name: Nome
   dashboard_students_age: Idade
   dashboard_students_gender: Gênero
+  dashboard_students_male: Masculino
+  dashboard_students_female: Feminino
   dashboard_students_secret: Segredo
   dashboard_students_password: Senha
   dashboard_students_username: 'Nome de usuário: %{student_username}'
@@ -277,4 +283,29 @@
   dashboard_students_print_page: Imprimir esta página
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Clique
-    aqui</a>
+    aqui</a> para ver nosso documento de privacidade. Ele pode ser compartilhado ou
+    impresso para entregar a seus alunos.
+  dashboard_curriculum_overview: Visão geral do currículo de K-5
+  dashboard_view_all_lesson_plans: Visualizar todos os planos de aula
+  dashboard_course1: 'Curso 1:'
+  dashboard_course2: 'Curso 2:'
+  dashboard_course3: 'Curso 3:'
+  dashboard_sequence: Sequência
+  dashboard_framework: Quadro
+  dashboard_standards: Padrões
+  dashboard_implementation_guide: Guia de implementação
+  dashboard_glossary: Glossário
+  dashboard_classroom_strategies: Estratégias de sala de aula para professores
+  dashboard_debugging: 'Depuração:'
+  dashboard_puzzle_solving: 'Quebra-cabeças:'
+  dashboard_student_worksheet: planilha de estudante
+  dashboard_teacher_worksheet: planilha professor
+  dashboard_grade_k: K
+  dashboard_grade_other: Outros
+  dashboard_login_word: palavra
+  dashboard_login_picture: imagem
+  dashboard_login_none: nenhum
+  dashboard_new_password: nova senha
+  stats_hoc_2013_heading: 'Estatísticas incríveis da Hora do Código do ano passado.
+    Em apenas uma semana:'
+  stats_hoc_2013_image_alt: Estatísticas da Hora do Código de 2013

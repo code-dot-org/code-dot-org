@@ -10009,7 +10009,7 @@ Turtle.drawJointAtTurtle_ = function () {
  * @return {boolean} True if the level is solved, false otherwise.
  */
 var isCorrect = function(pixelErrors, permittedErrors) {
-  return pixelErrors < permittedErrors;
+  return pixelErrors <= permittedErrors;
 };
 
 /**

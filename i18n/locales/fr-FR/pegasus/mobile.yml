@@ -66,6 +66,8 @@
   i_am_a: "Je suis un"
   never_spam: "Nous ne vous enverrons jamais de courrier électronique intempestif"
   enter_country: "Entrer le pays si hors des Etats-Unis"
+  used_infrequent_updates: "Only used for infrequent updates"
+  privacy_practices_children: "See our privacy practices for children"
   petition_thankyou: "Merci d'avoir signé la pétition"
   carousel_heading_international: "Tutoriel dans votre langue"
   continue_learning_header: "Continuez à apprendre après Une Heure"
@@ -96,8 +98,8 @@
   studiobar_hoc_body: "Learn to code with Angry Birds"
   studiobar_flappy_title: "Le code de Flappy"
   studiobar_flappy_body: "Make and share your own Flappy game"
-  studiobar_teacher_title: "Teacher dashboard"
-  studiobar_teacher_body: "For teachers: view your students' progress"
+  studiobar_teacher_title: "Made for teachers"
+  studiobar_teacher_body: "Introduce Code Studio in your classroom"
   contact_form_topic_student: "Je suis un étudiant"
   contact_form_topic_parent: "Je suis un parent"
   contact_form_topic_teacher: "Je suis un enseignant/éducateur"
@@ -159,7 +161,7 @@
   dashboard_landing_new_beta: "New! Try our beta courses for K-5 students."
   dashboard_landing_new_k5courses: "New! Try our courses for K-5 students."
   dashboard_landing_useful_links: "Other useful links"
-  dashboard_landing_print_certificates: "Imprimer les certificats pour les étudiants ayant terminé ce cours"
+  dashboard_landing_print_certificates: "Imprimer les certificats pour les élèves ayant terminé ce cours"
   dashboard_landing_educator_blog: "Lisez l'actualité et les mises à jour de notre matériel sur notre Blog Enseignant"
   dashboard_landing_smart_hints: "Aidez-nous à ajouter des astuces pertinentes aux tutoriels de Code.org"
   dashboard_landing_video_player: "Essayez notre nouveau lecteur vidéo dans votre école"
@@ -190,10 +192,11 @@
   dashboard_sections_jumbotron_instruction: "Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts."
   dashboard_sections_table_section: "Section"
   dashboard_sections_table_secret: "Secret type"
-  dashboard_sections_table_grade: "Grade"
+  dashboard_sections_table_grade: "Note"
   dashboard_sections_table_course: "Cours"
-  dashboard_sections_table_students: "Students"
+  dashboard_sections_table_students: "Élèves"
   dashboard_sections_table_code: "Section Code"
+  dashboard_sections_name: "Section Name"
   dashboard_sections_choose_secret: 'If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section.'
   dashboard_sections_secret_word: 'A <b>word</b> allows you to set a secret word for each student.'
   dashboard_sections_secret_picture: "A <b>picture</b> allows you to set a secret picture for each student, ideal for younger students who can't yet type."
@@ -204,9 +207,12 @@
   dashboard_students_add_students: "Add multiple students"
   dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
+  dashboard_students_placeholder_name: "Student Name"
   dashboard_students_name: "Nom"
   dashboard_students_age: "Age"
   dashboard_students_gender: "Sexe"
+  dashboard_students_male: "Masculin"
+  dashboard_students_female: "Féminin"
   dashboard_students_secret: "Secret"
   dashboard_students_password: "Mot de passe"
   dashboard_students_username: 'Username: %{student_username}'
@@ -226,3 +232,26 @@
   dashboard_students_print_page: "Print this page"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Click here</a> for our privacy document that can be shared or printed for your students.'
+  dashboard_curriculum_overview: "K-5 Curriculum Overview"
+  dashboard_view_all_lesson_plans: "View all lesson plans"
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: "Séquence"
+  dashboard_framework: "Framework"
+  dashboard_standards: "Standards"
+  dashboard_implementation_guide: "Implementation Guide"
+  dashboard_glossary: "Glossary"
+  dashboard_classroom_strategies: "Classroom strategies for teachers"
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: "student worksheet"
+  dashboard_teacher_worksheet: "teacher worksheet"
+  dashboard_grade_k: "K"
+  dashboard_grade_other: "Autre"
+  dashboard_login_word: "word"
+  dashboard_login_picture: "picture"
+  dashboard_login_none: "none"
+  dashboard_new_password: "new password"
+  stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
+  stats_hoc_2013_image_alt: "Stats from 2013 Hour of Code"

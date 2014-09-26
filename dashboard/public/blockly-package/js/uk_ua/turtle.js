@@ -10009,7 +10009,7 @@ Turtle.drawJointAtTurtle_ = function () {
  * @return {boolean} True if the level is solved, false otherwise.
  */
 var isCorrect = function(pixelErrors, permittedErrors) {
-  return pixelErrors < permittedErrors;
+  return pixelErrors <= permittedErrors;
 };
 
 /**
@@ -10379,7 +10379,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Блоки \"Повторит�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Для функціонування цей блок повинен містити інші блоки."};
 
-exports.extraTopBlocks = function(d){return "У вас є додаткові блоки, які не прив'язані до жодного блоку подій."};
+exports.extraTopBlocks = function(d){return "У вас залишились зайві блоки. Ви збирались їх прикріпити до блоку \"під час виконання\"?"};
 
 exports.finalStage = function(d){return "Вітання! Завершено останній етап."};
 
