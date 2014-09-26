@@ -10375,7 +10375,7 @@ exports.emptyBlocksErrorMsg = function(d){return "„Kartojimo“ arba „Jei“
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Komandos apraše turi būti išvardintos komandos (įdėtas bent vienas blokas)."};
 
-exports.extraTopBlocks = function(d){return "Tu panaudojai keletą blokų, kurie nėra sujungti su būtinuoju blokeliu."};
+exports.extraTopBlocks = function(d){return "Tu turi nesujungtų blokų. Gal norėjai juos sujungti prie bloko „paleisti programą“?"};
 
 exports.finalStage = function(d){return "Sveikinu! Tu baigei paskutinį etapą."};
 

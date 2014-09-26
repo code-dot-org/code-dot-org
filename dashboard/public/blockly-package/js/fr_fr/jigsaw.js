@@ -7403,7 +7403,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Le bloc « Répéter » ou �
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Le bloc fonctionnel doit avoir d'autres blocs à l'intérieur pour fonctionner."};
 
-exports.extraTopBlocks = function(d){return "Vous avez disposé des blocs qui ne sont rattachés à aucun bloc d'évènement."};
+exports.extraTopBlocks = function(d){return "Vous avez des blocs non attachés. Est-ce que vous vouliez les attacher au bloc \"lors du lancement\" ?"};
 
 exports.finalStage = function(d){return "Félicitations ! Vous avez terminé l'étape finale."};
 
@@ -7477,7 +7477,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Production totale : "+
 
 exports.tryAgain = function(d){return "Réessayer"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Voir astuce"};
 
 exports.backToPreviousLevel = function(d){return "Retour au niveau précédent"};
 
@@ -7503,7 +7503,7 @@ exports.wantToLearn = function(d){return "Vous souhaitez apprendre à coder ?"}
 
 exports.watchVideo = function(d){return "Voir la vidéo"};
 
-exports.when = function(d){return "lors"};
+exports.when = function(d){return "lorsque"};
 
 exports.whenRun = function(d){return "lors du lancement"};
 

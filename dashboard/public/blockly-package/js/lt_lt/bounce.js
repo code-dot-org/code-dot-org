@@ -11273,7 +11273,7 @@ exports.makeYourOwn = function(d){return "Sukurk savo Bounce Game žaidimą"};
 
 exports.moveDown = function(d){return "judėk žemyn"};
 
-exports.moveDownTooltip = function(d){return "Pajudink irklą žemyn."};
+exports.moveDownTooltip = function(d){return "Pajudink raketę žemyn."};
 
 exports.moveForward = function(d){return "judėk į priekį"};
 
@@ -11281,15 +11281,15 @@ exports.moveForwardTooltip = function(d){return "Perkelk mane į priekį per vie
 
 exports.moveLeft = function(d){return "judėk kairėn"};
 
-exports.moveLeftTooltip = function(d){return "Pajudink irklą į kairę."};
+exports.moveLeftTooltip = function(d){return "Pajudink raketę į kairę."};
 
 exports.moveRight = function(d){return "judėk dešinėn"};
 
-exports.moveRightTooltip = function(d){return "Pajudink irklą į dešinę."};
+exports.moveRightTooltip = function(d){return "Pajudink raketę į dešinę."};
 
 exports.moveUp = function(d){return "judėk aukštyn"};
 
-exports.moveUpTooltip = function(d){return "Pajudink irklą aukštyn."};
+exports.moveUpTooltip = function(d){return "Pajudink raketę aukštyn."};
 
 exports.nextLevel = function(d){return "Sveikinu! Išsprendei šią užduotį."};
 
@@ -11305,9 +11305,9 @@ exports.numBlocksNeeded = function(d){return "Ši užduotis gali būti išspręs
 
 exports.pathAhead = function(d){return "kelias priešaky"};
 
-exports.pathLeft = function(d){return "jei kelias yra į kairę"};
+exports.pathLeft = function(d){return "jei yra kelias į kairę"};
 
-exports.pathRight = function(d){return "jei kelias yra į dešinę"};
+exports.pathRight = function(d){return "jei yra kelias į dešinę"};
 
 exports.pilePresent = function(d){return "čia yra žemių krūva"};
 
@@ -11369,15 +11369,15 @@ exports.setBallTooltip = function(d){return "Nustato kamuolio vaizdą"};
 
 exports.setBallSpeedRandom = function(d){return "kamuolio greitis = bet koks"};
 
-exports.setBallSpeedVerySlow = function(d){return "kamuolio greitis = labai lėtai"};
+exports.setBallSpeedVerySlow = function(d){return "kamuolio greitis = labai mažas"};
 
-exports.setBallSpeedSlow = function(d){return "kamuolio greitis = lėtai"};
+exports.setBallSpeedSlow = function(d){return "kamuolio greitis = mažas"};
 
 exports.setBallSpeedNormal = function(d){return "kamuolio greitis = normalus"};
 
-exports.setBallSpeedFast = function(d){return "kamuolio greitis = greitai"};
+exports.setBallSpeedFast = function(d){return "kamuolio greitis = didelis"};
 
-exports.setBallSpeedVeryFast = function(d){return "kamuolio greitis = labai greitai"};
+exports.setBallSpeedVeryFast = function(d){return "kamuolio greitis = labai didelis"};
 
 exports.setBallSpeedTooltip = function(d){return "Nustato kamuolio greitį"};
 
@@ -11387,21 +11387,21 @@ exports.setPaddleHardcourt = function(d){return "raketė = teniso"};
 
 exports.setPaddleRetro = function(d){return "raketė = retro"};
 
-exports.setPaddleTooltip = function(d){return "Nustato irklo vaizdą"};
+exports.setPaddleTooltip = function(d){return "Nustato raketės vaizdą"};
 
 exports.setPaddleSpeedRandom = function(d){return "raketės greitis = bet koks"};
 
-exports.setPaddleSpeedVerySlow = function(d){return "raketės greitis = labai lėtai"};
+exports.setPaddleSpeedVerySlow = function(d){return "raketės greitis = labai mažas"};
 
-exports.setPaddleSpeedSlow = function(d){return "raketės greitis = lėtai"};
+exports.setPaddleSpeedSlow = function(d){return "raketės greitis = mažas"};
 
 exports.setPaddleSpeedNormal = function(d){return "raketės greitis = normalus"};
 
-exports.setPaddleSpeedFast = function(d){return "raketės greitis = greitai"};
+exports.setPaddleSpeedFast = function(d){return "raketės greitis = didelis"};
 
-exports.setPaddleSpeedVeryFast = function(d){return "raketės greitis = labai greitai"};
+exports.setPaddleSpeedVeryFast = function(d){return "raketės greitis = labai didelis"};
 
-exports.setPaddleSpeedTooltip = function(d){return "Nustato irklo greitį"};
+exports.setPaddleSpeedTooltip = function(d){return "Nustato raketės greitį"};
 
 exports.shareBounceTwitter = function(d){return "Pažiūrėk, kokį Bounce game žaidimą sukūriau. Parašiau jį pats puslapyje code.org"};
 
@@ -11417,9 +11417,9 @@ exports.whenBallInGoal = function(d){return "kai kamuolys pataiko į tikslą"};
 
 exports.whenBallInGoalTooltip = function(d){return "Vykdyti žemiau nurodytus veiksmus, kai kamuolys pataiko į tikslą."};
 
-exports.whenBallMissesPaddle = function(d){return "kai kamuolys nepataiko į irklą"};
+exports.whenBallMissesPaddle = function(d){return "kai kamuolys nepataiko į raketę"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Vykdyti žemiau nurodytus veiksmus, kai kamuolys nepataiko į irklą."};
+exports.whenBallMissesPaddleTooltip = function(d){return "Vykdyti žemiau nurodytus veiksmus, kai kamuolys nepataiko į raketę."};
 
 exports.whenDown = function(d){return "kai rodyklė žemyn"};
 
@@ -11433,9 +11433,9 @@ exports.whenLeft = function(d){return "kai rodyklė į kairę"};
 
 exports.whenLeftTooltip = function(d){return "Įvykdyk žemiau nurodytus veiksmus, kai bus nuspaustas klaviatūros klavišas rodyklė į kairę."};
 
-exports.whenPaddleCollided = function(d){return "kai kamuolys pataiko į irklą"};
+exports.whenPaddleCollided = function(d){return "kai kamuolys atsimuša į raketę"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Įvykdyk žemiau nurodytus veiksmus, kai kamuolys atsitrenkia į irklą."};
+exports.whenPaddleCollidedTooltip = function(d){return "Įvykdyk žemiau nurodytus veiksmus, kai kamuolys atsitrenkia į raketę."};
 
 exports.whenRight = function(d){return "kai rodyklė į dešinę"};
 
@@ -11511,7 +11511,7 @@ exports.emptyBlocksErrorMsg = function(d){return "„Kartojimo“ arba „Jei“
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Komandos apraše turi būti išvardintos komandos (įdėtas bent vienas blokas)."};
 
-exports.extraTopBlocks = function(d){return "Tu panaudojai keletą blokų, kurie nėra sujungti su būtinuoju blokeliu."};
+exports.extraTopBlocks = function(d){return "Tu turi nesujungtų blokų. Gal norėjai juos sujungti prie bloko „paleisti programą“?"};
 
 exports.finalStage = function(d){return "Sveikinu! Tu baigei paskutinį etapą."};
 

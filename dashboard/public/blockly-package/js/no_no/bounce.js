@@ -11216,7 +11216,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.no=function(n){return n===1?"one":"other"}
 exports.bounceBall = function(d){return "sprett ball"};
 
-exports.bounceBallTooltip = function(d){return "Spett en ball av et objekt."};
+exports.bounceBallTooltip = function(d){return "Sprett en ball av et objekt."};
 
 exports.continue = function(d){return "Fortsett"};
 
@@ -11232,7 +11232,7 @@ exports.doCode = function(d){return "gjør"};
 
 exports.elseCode = function(d){return "ellers"};
 
-exports.finalLevel = function(d){return "Gratulerer! Du har løst den sidste oppgaven."};
+exports.finalLevel = function(d){return "Gratulerer! Du har løst den siste oppgaven."};
 
 exports.heightParameter = function(d){return "høyde"};
 
@@ -11252,9 +11252,9 @@ exports.incrementPlayerScore = function(d){return "increment player score"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
 
-exports.isWall = function(d){return "is this a wall"};
+exports.isWall = function(d){return "er dette en vegg"};
 
-exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
+exports.isWallTooltip = function(d){return "Returnerer sann hvis det er en vegg her"};
 
 exports.launchBall = function(d){return "Skyt ut ny ball"};
 
@@ -11262,7 +11262,7 @@ exports.launchBallTooltip = function(d){return "Sender en ny ball inn i spillet.
 
 exports.makeYourOwn = function(d){return "Lag ditt eget \"Sprette-Spill\""};
 
-exports.moveDown = function(d){return "move down"};
+exports.moveDown = function(d){return "flytt ned"};
 
 exports.moveDownTooltip = function(d){return "Move the paddle down."};
 
@@ -11270,15 +11270,15 @@ exports.moveForward = function(d){return "gå fremover"};
 
 exports.moveForwardTooltip = function(d){return "Flytt meg en plass fremover."};
 
-exports.moveLeft = function(d){return "move left"};
+exports.moveLeft = function(d){return "flytt til venstre"};
 
 exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
 
-exports.moveRight = function(d){return "move right"};
+exports.moveRight = function(d){return "flytt til høyre"};
 
 exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
 
-exports.moveUp = function(d){return "move up"};
+exports.moveUp = function(d){return "flytt opp"};
 
 exports.moveUpTooltip = function(d){return "Move the paddle up."};
 
@@ -11304,15 +11304,15 @@ exports.pilePresent = function(d){return "det er en haug"};
 
 exports.playSoundCrunch = function(d){return "play crunch sound"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "spill mål-lyd 1"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "spill mål-lyd 2"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "spill treff-lyd"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "spille miste poeng lyd"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "spille miste poeng 2 lyd"};
 
 exports.playSoundRetro = function(d){return "play retro sound"};
 
@@ -11320,13 +11320,13 @@ exports.playSoundRubber = function(d){return "play rubber sound"};
 
 exports.playSoundSlap = function(d){return "play slap sound"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Spill den valgte lyden."};
 
 exports.playSoundWinPoint = function(d){return "play win point sound"};
 
 exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "Spill tre lyd"};
 
 exports.putdownTower = function(d){return "sett ned tårn"};
 
@@ -11340,7 +11340,7 @@ exports.repeatUntilBlocked = function(d){return "så lenge det er en sti foran"}
 
 exports.repeatUntilFinish = function(d){return "gjenta til ferdig"};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Resultat: "+v(d,"playerScore")+": "+v(d,"opponentScore")};
 
 exports.setBackgroundRandom = function(d){return "Angi en tilfeldig scene"};
 
@@ -11360,7 +11360,7 @@ exports.setBallTooltip = function(d){return "angi ball bilde"};
 
 exports.setBallSpeedRandom = function(d){return "angi tilfeldig ball hastighet"};
 
-exports.setBallSpeedVerySlow = function(d){return "angi treig ball hastiget"};
+exports.setBallSpeedVerySlow = function(d){return "angi veldig treg ball hastiget"};
 
 exports.setBallSpeedSlow = function(d){return "Angi langsom ball hastighet"};
 
@@ -11404,41 +11404,41 @@ exports.turnRight = function(d){return "snu mot høyre"};
 
 exports.turnTooltip = function(d){return "Snur meg mot venstre eller høyre med 90 grader."};
 
-exports.whenBallInGoal = function(d){return "when ball in goal"};
+exports.whenBallInGoal = function(d){return "Når ballen er i mål"};
 
-exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
+exports.whenBallInGoalTooltip = function(d){return "Utfør handlingene nedenfor når en ball treffer målet."};
 
 exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "Når pil ned"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Utfør handlingene nedenfor når pil ned-tasten trykkes."};
 
 exports.whenGameStarts = function(d){return "når spillet starter"};
 
 exports.whenGameStartsTooltip = function(d){return "Utfør handlingene nedenfor når spillet starter."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "Når venstre pil"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Utfør handlingene nedenfor når venstre pil-tasten trykkes."};
 
 exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "Når høyre pil"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Utfør handlingene nedenfor når høyre pil-tasten trykkes."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "Når pil opp"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Utfør handlingene nedenfor når pil opp-tasten trykkes."};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "Når ballen treffer veggen"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "Utfør handlingene nedenfor når en ball kolliderer med en vegg."};
 
 exports.whileMsg = function(d){return "mens"};
 
@@ -11485,7 +11485,7 @@ exports.directionSouthLetter = function(d){return "S"};
 
 exports.directionEastLetter = function(d){return "E"};
 
-exports.directionWestLetter = function(d){return "W"};
+exports.directionWestLetter = function(d){return "V"};
 
 exports.end = function(d){return "slutt"};
 
@@ -11493,13 +11493,13 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Gjenta\"- eller \"Hvis\"-blo
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funksjonsblokken må ha andre blokker inni seg for å virke."};
 
-exports.extraTopBlocks = function(d){return "Du har ekstra blokker som ikke er knyttet til en hendelse blokk."};
+exports.extraTopBlocks = function(d){return "Du har ledige blokker. Mente du knytte disse til \"når kjøre\" blokken?"};
 
 exports.finalStage = function(d){return "Gratulerer! Du har fullført siste nivå."};
 
 exports.finalStageTrophies = function(d){return "Gratulerer! Du har fullført siste nivå og vunnet "+p(d,"numTrophies",0,"no",{"one":"en pokal","other":n(d,"numTrophies")+" pokaler"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Fullfør"};
 
 exports.generatedCodeInfo = function(d){return "Selv topp universiteter lærer blokk-basert koding (f.eks "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Men under panseret, kan blokkene du har samlet også vises i JavaScript, verdens mest brukte kode språk:"};
 

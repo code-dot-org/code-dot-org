@@ -14435,7 +14435,7 @@ exports.hello = function(d){return "hello"};
 
 exports.helloWorld = function(d){return "Hello World!"};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "σκόραρε πόντο"};
 
 exports.makeProjectileDisappear = function(d){return "disappear"};
 
@@ -14491,11 +14491,11 @@ exports.moveDown = function(d){return "Προχώρησε προς τα κάτω
 
 exports.moveDownTooltip = function(d){return "Move the paddle down."};
 
-exports.moveLeft = function(d){return "Προχώρησε αριστερά"};
+exports.moveLeft = function(d){return "προχώρησε αριστερά"};
 
 exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
 
-exports.moveRight = function(d){return "Προχώρησε δεξιά"};
+exports.moveRight = function(d){return "προχώρησε δεξιά"};
 
 exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
 
@@ -14513,31 +14513,31 @@ exports.numBlocksNeeded = function(d){return "Αυτό το παζλ μπορε�
 
 exports.ouchExclamation = function(d){return "Ouch!"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "παίξε ήχο τριξίματος"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "παίξε ήχο γκολ 1"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "παίξε ήχο γκολ 2"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "παίξε ήχο κτυπήματος"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "παίξε ήχο απώλειας πόντου"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "παίξε ήχου απώλειας πόντου 2"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "παίξε ήχο ρετρό"};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "παίξε ήχου καουτσούκ"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "παίξε ήχου χαστουκιού"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Παίξε τον επιλεγμένο ήχο."};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "παίξε ήχο πόντου νίκης"};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "παίξε ήχο πόντου νίκης 2"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "παίξε ήχο ξύλου"};
 
 exports.positionOutTopLeft = function(d){return "to the above top left position"};
 
@@ -14847,21 +14847,21 @@ exports.whenArrowUp = function(d){return "up arrow"};
 
 exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "όταν κάτω βέλος"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν πατηθεί το πλήκτρο κάτω βέλος."};
 
 exports.whenGameStarts = function(d){return "when game starts"};
 
 exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "όταν αριστερό βέλος"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν πατηθεί το πλήκτρο αριστερό βέλος."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "όταν δεξί βέλος"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν πατηθεί το πλήκτρο δεξί βέλος."};
 
 exports.whenSpriteClicked = function(d){return "when actor clicked"};
 
@@ -14905,9 +14905,9 @@ exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge
 
 exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "όταν πάνω βέλος"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν πατηθεί το πλήκτρο πάνω βέλος."};
 
 exports.yes = function(d){return "Ναι"};
 

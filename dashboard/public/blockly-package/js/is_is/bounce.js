@@ -11244,7 +11244,7 @@ exports.ifTooltip = function(d){return "Ef það er slóð í þessa stefnu þá
 
 exports.ifelseTooltip = function(d){return "Ef það er slóð í þessa stefnu þá á að gera fyrstu kubbastæðuna. Annars á að gera stæðu númer tvö."};
 
-exports.incrementOpponentScore = function(d){return "skora stig andstæðings"};
+exports.incrementOpponentScore = function(d){return "gefa andstæðingi stig"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Bæta 1 við núverandi skor andstæðings."};
 
@@ -11256,11 +11256,11 @@ exports.isWall = function(d){return "er þetta veggur"};
 
 exports.isWallTooltip = function(d){return "Skilar gildinu satt ef það er veggur hér"};
 
-exports.launchBall = function(d){return "launch new ball"};
+exports.launchBall = function(d){return "nýr bolti"};
 
-exports.launchBallTooltip = function(d){return "Launch a ball into play."};
+exports.launchBallTooltip = function(d){return "Setja nýjan bolta i leik."};
 
-exports.makeYourOwn = function(d){return "Make Your Own Bounce Game"};
+exports.makeYourOwn = function(d){return "Búa til eigin boltaleik"};
 
 exports.moveDown = function(d){return "færa niður"};
 
@@ -11358,43 +11358,43 @@ exports.setBallRetro = function(d){return "eldri bolti"};
 
 exports.setBallTooltip = function(d){return "Stillir gerð bolta"};
 
-exports.setBallSpeedRandom = function(d){return "hraði handahófsbolta"};
+exports.setBallSpeedRandom = function(d){return "stilla á handahófshraða bolta"};
 
-exports.setBallSpeedVerySlow = function(d){return "hraði á mjög hægum bolta"};
+exports.setBallSpeedVerySlow = function(d){return "stilla á mjög hægfara bolta"};
 
-exports.setBallSpeedSlow = function(d){return "hraði á hægum bolta"};
+exports.setBallSpeedSlow = function(d){return "stilla á hægan bolta"};
 
-exports.setBallSpeedNormal = function(d){return "hraði á venjulegum bolta"};
+exports.setBallSpeedNormal = function(d){return "stilla á venjulegan hraða bolta"};
 
-exports.setBallSpeedFast = function(d){return "hraði á hröðum bolta"};
+exports.setBallSpeedFast = function(d){return "stilla á hraðan bolta"};
 
-exports.setBallSpeedVeryFast = function(d){return "hraði á mjög hröðum bolta"};
+exports.setBallSpeedVeryFast = function(d){return "stilla á mjög hraðan bolta"};
 
 exports.setBallSpeedTooltip = function(d){return "Stillir hraða boltans"};
 
-exports.setPaddleRandom = function(d){return "handahófsspaði"};
+exports.setPaddleRandom = function(d){return "stilla á handahófsspaða"};
 
-exports.setPaddleHardcourt = function(d){return "vallarspaði"};
+exports.setPaddleHardcourt = function(d){return "stilla á vallarspaða"};
 
-exports.setPaddleRetro = function(d){return "eldri spaði"};
+exports.setPaddleRetro = function(d){return "stilla á retro spaða"};
 
-exports.setPaddleTooltip = function(d){return "Sets the ball paddle"};
+exports.setPaddleTooltip = function(d){return "Stillir gerð spaða"};
 
-exports.setPaddleSpeedRandom = function(d){return "hraði á handahófsspaða"};
+exports.setPaddleSpeedRandom = function(d){return "stilla á handahófshraða spaða"};
 
-exports.setPaddleSpeedVerySlow = function(d){return "hraði á mjög hægum spaða"};
+exports.setPaddleSpeedVerySlow = function(d){return "stilla á mjög hægan spaða"};
 
-exports.setPaddleSpeedSlow = function(d){return "hraði á hægum spaða"};
+exports.setPaddleSpeedSlow = function(d){return "stilla á hægan spaða"};
 
-exports.setPaddleSpeedNormal = function(d){return "hraði á venjulegum spaða"};
+exports.setPaddleSpeedNormal = function(d){return "stilla á venjulega hraðan spaða"};
 
-exports.setPaddleSpeedFast = function(d){return "hraði á hröðum spaða"};
+exports.setPaddleSpeedFast = function(d){return "stilla á hraðan spaða"};
 
-exports.setPaddleSpeedVeryFast = function(d){return "hraði á mjög hröðum spaða"};
+exports.setPaddleSpeedVeryFast = function(d){return "stilla á mjög hraðan spaða"};
 
 exports.setPaddleSpeedTooltip = function(d){return "Stillir hraða spaðans"};
 
-exports.shareBounceTwitter = function(d){return "Check out the Bounce game I made. I wrote it myself with @codeorg"};
+exports.shareBounceTwitter = function(d){return "Kíktu á boltaleikinn sem ég bjó til. Ég skrifaði hann með @codeorg"};
 
 exports.shareGame = function(d){return "Deildu leiknum þínum:"};
 
@@ -11440,7 +11440,7 @@ exports.whenWallCollided = function(d){return "þegar bolti hittir vegg"};
 
 exports.whenWallCollidedTooltip = function(d){return "Gera aðgerðirnar fyrir neðan þegar bolti rekst á vegg."};
 
-exports.whileMsg = function(d){return "meðan"};
+exports.whileMsg = function(d){return "á meðan"};
 
 exports.whileTooltip = function(d){return "Endurtaka aðgerðirnar í kubbnum þar til endamarki er náð."};
 
@@ -11487,21 +11487,21 @@ exports.directionEastLetter = function(d){return "A"};
 
 exports.directionWestLetter = function(d){return "V"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "endir"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Kubbarnir \"endurtaka\" og \"ef\" verða að innihalda aðra kubba til að virka. Gættu þess að innri kubburinn smellpassi í ytri kubbinn."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Fallkubburinn þarf að innhalda aðra kubba til að virka."};
 
-exports.extraTopBlocks = function(d){return "Þú hefur auka kubba sem ekki tengjast atvikakubbi."};
+exports.extraTopBlocks = function(d){return "Þú ert með ótengda kubba. Ætlaðir þú að festa þá á \"þegar keyrt\" kubbinn?"};
 
 exports.finalStage = function(d){return "Til hamingju! Þú hefur klárað síðasta áfangann."};
 
-exports.finalStageTrophies = function(d){return "Til hamingju! Þú hefur klárað síðasta áfangann og unnið "+p(d,"numBikara",0,"is",{"one":"bikar","other":n(d,"numBikara")+" bikara"})+"."};
+exports.finalStageTrophies = function(d){return "Til hamingju! Þú hefur klárað síðasta áfangann og unnið "+p(d,"numTrophies",0,"is",{"one":"bikar","other":n(d,"numTrophies")+" bikara"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Ljúka"};
 
-exports.generatedCodeInfo = function(d){return "Kubbana í forritinu þínu er líka hægt að umbreyta í JavaScript, sem er útbreiddasta forritunarmál í heiminum:"};
+exports.generatedCodeInfo = function(d){return "Jafnvel bestu háskólar kenna forritun með kubbum (t.d. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). En bak við tjöldin er hægt að sýna kubbana sem þú hefur sett saman sem JavaScript, sem er mest notaða forritunarmál í heimi:"};
 
 exports.hashError = function(d){return "Því miður finnst ekkert vistað forrit '%1'."};
 
@@ -11509,7 +11509,7 @@ exports.help = function(d){return "Hjálp"};
 
 exports.hintTitle = function(d){return "Vísbending:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "stökkva"};
 
 exports.levelIncompleteError = function(d){return "Þú ert að nota allar nauðsynlegu tegundirnar af kubbum en ekki á réttan hátt."};
 
@@ -11523,15 +11523,15 @@ exports.nextLevel = function(d){return "Til hamingju! Þú hefur leyst þraut "+
 
 exports.nextLevelTrophies = function(d){return "Til hamingju! Þú hefur leyst þraut "+v(d,"puzzleNumber")+" og unnið "+p(d,"numTrophies",0,"is",{"one":"bikar","other":n(d,"numTrophies")+" bikara"})+"."};
 
-exports.nextStage = function(d){return "Til hamingju! Þú hefur lokið áfanga "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Til hamingju! Þú kláraðir "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Til hamingju! Þú kláraðir áfanga "+v(d,"stageNumber")+" og vannst "+p(d,"numTrophies",0,"is",{"one":"bikar","other":n(d,"numTrophies")+" bikara"})+"."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"is",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Til hamingju! Þú kláraðir þraut "+v(d,"puzzleNumber")+". (En þú hefðir getað notað bara  "+p(d,"numBlocks",0,"is",{"one":"1 kubb","other":n(d,"numBlocks")+" kubba"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Þú náðir að skrifa "+p(d,"numLines",0,"is",{"one":"1 línu","other":n(d,"numLines")+" línur"})+" af kóða!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "spila"};
 
 exports.puzzleTitle = function(d){return "Þraut "+v(d,"puzzle_number")+" af "+v(d,"stage_total")};
 
@@ -11539,11 +11539,11 @@ exports.repeat = function(d){return "endurtaka"};
 
 exports.resetProgram = function(d){return "Endurstilla"};
 
-exports.runProgram = function(d){return "Keyra forrit"};
+exports.runProgram = function(d){return "Keyra"};
 
 exports.runTooltip = function(d){return "Keyra forritið sem samanstendur af kubbunum á vinnusvæðinu."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "stig"};
 
 exports.showCodeHeader = function(d){return "Sýna kóða"};
 
@@ -11567,13 +11567,13 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Samtals: "+p(d,"numLine
 
 exports.tryAgain = function(d){return "Reyna aftur"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Sjá vísbendingu"};
 
-exports.backToPreviousLevel = function(d){return "Til baka á fyrra stig"};
+exports.backToPreviousLevel = function(d){return "Til baka í fyrri áfanga"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Vista í safn þitt"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Vistað í safn þitt!"};
 
 exports.typeCode = function(d){return "Skrifaðu JavaScript kóða þinn fyrir neðan þessar leiðbeiningar."};
 
@@ -11593,17 +11593,17 @@ exports.wantToLearn = function(d){return "Viltu læra að kóða?"};
 
 exports.watchVideo = function(d){return "Horfa á videóið"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "þegar"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "þegar keyrt"};
 
 exports.tryHOC = function(d){return "Prófa Kóðun í klukkustund"};
 
 exports.signup = function(d){return "Skráning á inngangsnámskeiðið"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Vísbending:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Athugaðu hvernig þetta fór og reyndu að laga forritið."};
 
 
 },{"messageformat":51}],40:[function(require,module,exports){

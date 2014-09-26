@@ -14399,13 +14399,13 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":53}],41:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.pt=function(n){return n===1?"one":"other"}
-exports.actor = function(d){return "actor"};
+exports.actor = function(d){return "Ator"};
 
 exports.catActions = function(d){return "Ações"};
 
 exports.catControl = function(d){return "Ciclos"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Eventos"};
 
 exports.catLogic = function(d){return "Lógica"};
 
@@ -14417,53 +14417,53 @@ exports.catText = function(d){return "Texto"};
 
 exports.catVariables = function(d){return "Variáveis"};
 
-exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
+exports.changeScoreTooltip = function(d){return "Adicionar ou remover um ponto à pontuação."};
 
-exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
+exports.changeScoreTooltipK1 = function(d){return "Adicionar um ponto à pontuação."};
 
 exports.continue = function(d){return "Continua"};
 
-exports.decrementPlayerScore = function(d){return "remove point"};
+exports.decrementPlayerScore = function(d){return "remover um ponto"};
 
-exports.defaultSayText = function(d){return "type here"};
+exports.defaultSayText = function(d){return "escrever aqui"};
 
-exports.emotion = function(d){return "mood"};
+exports.emotion = function(d){return "humor"};
 
 exports.finalLevel = function(d){return "Parabéns! Resolveste o puzzle final."};
 
-exports.hello = function(d){return "hello"};
+exports.hello = function(d){return "olá"};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "Olá Mundo!"};
 
 exports.incrementPlayerScore = function(d){return "aumenta um ponto"};
 
-exports.makeProjectileDisappear = function(d){return "disappear"};
+exports.makeProjectileDisappear = function(d){return "desaparecer"};
 
-exports.makeProjectileBounce = function(d){return "bounce"};
+exports.makeProjectileBounce = function(d){return "saltar"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "criar bola de fogo azul"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "criar bola de fogo roxa"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "criar bola de fogo vermelha"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "criar corações amarelos"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "criar corações roxos"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "criar corações vermelhos"};
 
 exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
 
 exports.makeYourOwn = function(d){return "Faz a tua própria história"};
 
-exports.moveDirectionDown = function(d){return "down"};
+exports.moveDirectionDown = function(d){return "baixo"};
 
-exports.moveDirectionLeft = function(d){return "left"};
+exports.moveDirectionLeft = function(d){return "esquerda"};
 
-exports.moveDirectionRight = function(d){return "right"};
+exports.moveDirectionRight = function(d){return "direita"};
 
-exports.moveDirectionUp = function(d){return "up"};
+exports.moveDirectionUp = function(d){return "cima"};
 
 exports.moveDirectionRandom = function(d){return "aleatório"};
 
@@ -14483,7 +14483,7 @@ exports.moveDistanceRandom = function(d){return "random pixels"};
 
 exports.moveDistanceTooltip = function(d){return "Move a character a specific distance in the specified direction."};
 
-exports.moveSprite = function(d){return "move"};
+exports.moveSprite = function(d){return "mover"};
 
 exports.moveSpriteN = function(d){return "move actor "+v(d,"spriteIndex")};
 
@@ -14635,9 +14635,9 @@ exports.setBackgroundTennis = function(d){return "set tennis background"};
 
 exports.setBackgroundWinter = function(d){return "set winter background"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "definir a imagem de fundo"};
 
-exports.setScoreText = function(d){return "set score"};
+exports.setScoreText = function(d){return "definir pontuação"};
 
 exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
 
@@ -14771,7 +14771,7 @@ exports.setSprite = function(d){return "definir"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "triturar"};
 
 exports.soundGoal1 = function(d){return "goal 1"};
 

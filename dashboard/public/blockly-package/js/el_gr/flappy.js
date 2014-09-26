@@ -9098,7 +9098,7 @@ exports.playSoundSplash = function(d){return "play splash sound"};
 
 exports.playSoundLaser = function(d){return "play laser sound"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Παίξε τον επιλεγμένο ήχο."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your game."};
 

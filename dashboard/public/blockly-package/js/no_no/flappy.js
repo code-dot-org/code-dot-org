@@ -8909,7 +8909,7 @@ exports.directionSouthLetter = function(d){return "S"};
 
 exports.directionEastLetter = function(d){return "E"};
 
-exports.directionWestLetter = function(d){return "W"};
+exports.directionWestLetter = function(d){return "V"};
 
 exports.end = function(d){return "slutt"};
 
@@ -8917,13 +8917,13 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Gjenta\"- eller \"Hvis\"-blo
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funksjonsblokken må ha andre blokker inni seg for å virke."};
 
-exports.extraTopBlocks = function(d){return "Du har ekstra blokker som ikke er knyttet til en hendelse blokk."};
+exports.extraTopBlocks = function(d){return "Du har ledige blokker. Mente du knytte disse til \"når kjøre\" blokken?"};
 
 exports.finalStage = function(d){return "Gratulerer! Du har fullført siste nivå."};
 
 exports.finalStageTrophies = function(d){return "Gratulerer! Du har fullført siste nivå og vunnet "+p(d,"numTrophies",0,"no",{"one":"en pokal","other":n(d,"numTrophies")+" pokaler"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Fullfør"};
 
 exports.generatedCodeInfo = function(d){return "Selv topp universiteter lærer blokk-basert koding (f.eks "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Men under panseret, kan blokkene du har samlet også vises i JavaScript, verdens mest brukte kode språk:"};
 
@@ -9036,7 +9036,7 @@ exports.continue = function(d){return "Fortsett"};
 
 exports.doCode = function(d){return "Gjør"};
 
-exports.elseCode = function(d){return "Ellers"};
+exports.elseCode = function(d){return "ellers"};
 
 exports.endGame = function(d){return "Avslutt spill"};
 
@@ -9104,7 +9104,7 @@ exports.reinfFeedbackMsg = function(d){return "Du kan trykke på \"Try Again\" k
 
 exports.scoreText = function(d){return "Sluttresultat: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "sett scenen"};
+exports.setBackground = function(d){return "angi scene"};
 
 exports.setBackgroundRandom = function(d){return "Angi scene Tilfeldig"};
 

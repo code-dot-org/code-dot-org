@@ -14276,7 +14276,7 @@ exports.directionSouthLetter = function(d){return "S"};
 
 exports.directionEastLetter = function(d){return "E"};
 
-exports.directionWestLetter = function(d){return "W"};
+exports.directionWestLetter = function(d){return "V"};
 
 exports.end = function(d){return "slutt"};
 
@@ -14284,13 +14284,13 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Gjenta\"- eller \"Hvis\"-blo
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funksjonsblokken må ha andre blokker inni seg for å virke."};
 
-exports.extraTopBlocks = function(d){return "Du har ekstra blokker som ikke er knyttet til en hendelse blokk."};
+exports.extraTopBlocks = function(d){return "Du har ledige blokker. Mente du knytte disse til \"når kjøre\" blokken?"};
 
 exports.finalStage = function(d){return "Gratulerer! Du har fullført siste nivå."};
 
 exports.finalStageTrophies = function(d){return "Gratulerer! Du har fullført siste nivå og vunnet "+p(d,"numTrophies",0,"no",{"one":"en pokal","other":n(d,"numTrophies")+" pokaler"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Fullfør"};
 
 exports.generatedCodeInfo = function(d){return "Selv topp universiteter lærer blokk-basert koding (f.eks "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Men under panseret, kan blokkene du har samlet også vises i JavaScript, verdens mest brukte kode språk:"};
 
@@ -14537,7 +14537,7 @@ exports.playSoundWinPoint = function(d){return "play win point sound"};
 
 exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "Spill tre lyd"};
 
 exports.positionOutTopLeft = function(d){return "over øverst venstre posisjon"};
 
@@ -14905,9 +14905,9 @@ exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge
 
 exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "Når pil opp"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Utfør handlingene nedenfor når pil opp-tasten trykkes."};
 
 exports.yes = function(d){return "Ja"};
 

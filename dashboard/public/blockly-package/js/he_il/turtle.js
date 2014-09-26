@@ -10366,7 +10366,7 @@ exports.emptyBlocksErrorMsg = function(d){return "בלוקי ה\"חזור שוב
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "פונקציית הבלוק דורשת בלוקים אחרים בתוך לעבודה."};
 
-exports.extraTopBlocks = function(d){return "יש לך קוביות מיותרות שלא מחוברת לקוביית הארוע."};
+exports.extraTopBlocks = function(d){return "יש לך אבני כעיגולים בצבע. התכוונת לצרף אלה כדי לחסום את \"בעת הפעלת\"?"};
 
 exports.finalStage = function(d){return "כל הכבוד! השלמת את השלב הסופי."};
 

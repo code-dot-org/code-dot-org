@@ -14284,7 +14284,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Il blocco \"ripeti\" o \"se\" 
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Una funzione ha bisogno di altri blocchi al suo interno."};
 
-exports.extraTopBlocks = function(d){return "Ci sono blocchi che non sono attaccati ad un blocco evento."};
+exports.extraTopBlocks = function(d){return "Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'quando si clicca su \"Esegui\" '?"};
 
 exports.finalStage = function(d){return "Complimenti! Hai completato l'ultima lezione."};
 
@@ -14455,7 +14455,7 @@ exports.makeProjectileRedHearts = function(d){return "fai dei cuori rossi"};
 
 exports.makeProjectileTooltip = function(d){return "Fai scomparire o rimbalzare il proiettile appena urta."};
 
-exports.makeYourOwn = function(d){return "Crea La Tua Storia"};
+exports.makeYourOwn = function(d){return "Costruisci il tuo Gioco da Laboratorio"};
 
 exports.moveDirectionDown = function(d){return "basso"};
 
@@ -14875,13 +14875,13 @@ exports.whenSpriteCollidedTooltip = function(d){return "Esegui le azioni qua sot
 
 exports.whenSpriteCollidedWith = function(d){return "tocca"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "tocca un qualunque personaggio"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "tocca un qualunque bordo"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "tocca un qualunque proiettile"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "tocca una cosa qualunque"};
 
 exports.whenSpriteCollidedWithN = function(d){return "tocca il personaggio "+v(d,"spriteIndex")};
 

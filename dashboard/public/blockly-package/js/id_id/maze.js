@@ -12901,7 +12901,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Blok \"Ulangi\" atau blok \"Ji
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok fungsi membutuhkan blok lain di dalamnya agar dapat bekerja."};
 
-exports.extraTopBlocks = function(d){return "Anda memiliki blok ekstra yang tidak melekat pada sebuah blok acara (event)."};
+exports.extraTopBlocks = function(d){return "Anda memiliki blok tidak terpasang. Apakah maksud anda untuk menempelkannya ke blok \"when run\"?"};
 
 exports.finalStage = function(d){return "Horee! Anda berhasil menyelesaikan tahap akhir."};
 
@@ -13082,9 +13082,9 @@ exports.ifFlowerTooltip = function(d){return "Jika ada bunga/sarang lebah ke ara
 
 exports.ifelseFlowerTooltip = function(d){return "Jika ada bunga/sarang lebah di arahan yang telah ditetapkan, maka lakukan blok pertama dari aksi. Jika tidak, melakukan blok kedua aksi."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Anda menggunakan semua blok kanan, tetapi anda perlu membuat jumlah madu yang tepat."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Anda menggunakan semua blok kanan, tetapi anda perlu membuat jumlah nektar yang tepat."};
 
 exports.make = function(d){return "membuat"};
 

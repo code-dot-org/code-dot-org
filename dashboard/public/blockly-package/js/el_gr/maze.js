@@ -13170,7 +13170,7 @@ exports.uncheckedCloudError = function(d){return "Make sure to check all clouds 
 
 exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
 
-exports.whileMsg = function(d){return "όσο"};
+exports.whileMsg = function(d){return "ενώ"};
 
 exports.whileTooltip = function(d){return "Επανάλαβε τις εσωτερικές ενέργειες μέχρι το τελικό σημείο."};
 

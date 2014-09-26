@@ -12901,7 +12901,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Блоковете за пов
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Блокът за функция трябва да има други блокове вътре в себе си, за да работи."};
 
-exports.extraTopBlocks = function(d){return "Имате допълнителни блокчета, които не са били използвани в събитийния блок."};
+exports.extraTopBlocks = function(d){return "Имате не закачени блокове. Искате ли да кажеш да ги закачите към блокът \"при стартиране\" ?"};
 
 exports.finalStage = function(d){return "Поздравления! Вие завършихте последния етап."};
 
@@ -13082,9 +13082,9 @@ exports.ifFlowerTooltip = function(d){return "Ако има цвете/пчел�
 
 exports.ifelseFlowerTooltip = function(d){return "Ако има цвете/пчелна пита в тази посока,  извърши действията от първия блок. Ако няма, извърши действията от втория блок."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Използвате всички правилни блокове, но трябва да направите точното количество мед."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Използвате всички правилни блокове, но трябва да съберете нужното количество нектар."};
 
 exports.make = function(d){return "прави"};
 

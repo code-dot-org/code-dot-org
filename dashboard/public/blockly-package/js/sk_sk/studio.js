@@ -14286,21 +14286,21 @@ exports.directionEastLetter = function(d){return "V"};
 
 exports.directionWestLetter = function(d){return "Z"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "koniec"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"Repeat\", alebo \"If\" bloky musia obsahovať ďalšie bloky vo vnútri aby pracovali. Uistite sa, že vnútorný blok sedí správne vo vnútri týchto blokov."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkčný blok musí obsahovať ďalšie bloky vovnútri aby pracoval správne."};
 
-exports.extraTopBlocks = function(d){return "Máte ďalšie extra bloky, ktoré nie sú pripojené k blokom udalostí."};
+exports.extraTopBlocks = function(d){return "Máte nepriradené bloky. Chceli ste ich pripojiť k bloku \"pri spustení\"?"};
 
 exports.finalStage = function(d){return "Gratulujem! Dokončili ste poslednú úroveň."};
 
 exports.finalStageTrophies = function(d){return "Gratulujem! Dokončili ste poslednú úroveň a vyhrali "+p(d,"numTrophies",0,"sk",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Dokončiť"};
 
-exports.generatedCodeInfo = function(d){return "Bloky pre Váš program môžu byť tiež vyjadrené v JavaScript-e, svetovo najviac rozšírenom programovacom jazyku:"};
+exports.generatedCodeInfo = function(d){return "Dokonca aj popredné univerzity učia programovanie založené na blokoch  (napríklad "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale v skutočnosti  bloky ktoré ste vytvorili môžu byť tiež zobrazené v jazyku JavaScript, svetovo najpoužívanejšom programovacom jazyku:"};
 
 exports.hashError = function(d){return "Prepáčte, '%1' nezodpovedá žiadnemu uloženému programu."};
 
@@ -14322,9 +14322,9 @@ exports.nextLevel = function(d){return "Gratulujem! Dokončili ste úlohu "+v(d,
 
 exports.nextLevelTrophies = function(d){return "Gratulujem! Dokončili ste úlohu "+v(d,"puzzleNumber")+" a vyhrali "+p(d,"numTrophies",0,"sk",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
 
-exports.nextStage = function(d){return "Gratulujem! Dokončili ste úroveň "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Blahoželám! Dokončili ste "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Gratulujem! Dokončili ste úroveň "+v(d,"stageNumber")+" a vyhrali "+p(d,"numTrophies",0,"sk",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
+exports.nextStageTrophies = function(d){return "Blahoželám! Dokončili ste "+v(d,"stageName")+" a vyhrali "+p(d,"numTrophies",0,"sk",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Gratulujem! Dokončili ste úlohu "+v(d,"puzzleNumber")+". (Avšak, mohli ste použiť iba "+p(d,"numBlocks",0,"sk",{"one":"1 blok","other":n(d,"numBlocks")+" blokov"})+".)"};
 
@@ -14338,7 +14338,7 @@ exports.repeat = function(d){return "opakovať"};
 
 exports.resetProgram = function(d){return "Obnoviť"};
 
-exports.runProgram = function(d){return "Spustiť program"};
+exports.runProgram = function(d){return "Spustiť"};
 
 exports.runTooltip = function(d){return "Spustiť program definovaný blokmi v pracovnom priestore."};
 
@@ -14352,7 +14352,7 @@ exports.subtitle = function(d){return "vizuálne programovacie prostredie"};
 
 exports.textVariable = function(d){return "text"};
 
-exports.tooFewBlocksMsg = function(d){return "Používate všetky potrebné typy blokov, ale pokúste sa použiť viac týchto typov na dokončenie tejto úlohy."};
+exports.tooFewBlocksMsg = function(d){return "Používate všetky potrebné typy blokov, ale pokúste sa použiť viac typov týchto blokov na dokončenie tejto úlohy."};
 
 exports.tooManyBlocksMsg = function(d){return "Táto úloha môže byť vyriešená s <x id='START_SPAN'/><x id='END_SPAN'/> blokmi."};
 
@@ -14364,15 +14364,15 @@ exports.openWorkspace = function(d){return "Ako to funguje"};
 
 exports.totalNumLinesOfCodeWritten = function(d){return "Celkovo: "+p(d,"numLines",0,"sk",{"one":"1 riadok","other":n(d,"numLines")+" riadkov"})+" kódu."};
 
-exports.tryAgain = function(d){return "skús znova"};
+exports.tryAgain = function(d){return "Skúsiť znova"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Pozri nápovedu"};
 
-exports.backToPreviousLevel = function(d){return "Späť na predchádzajúcu úlohu"};
+exports.backToPreviousLevel = function(d){return "Späť na predchádzajúcu úroveň"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Uložiť do svojej galérie"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Uložené do tvojej galérie!"};
 
 exports.typeCode = function(d){return "Napíšte Váš JavaScript kód pod tieto pokyny."};
 
@@ -14390,19 +14390,19 @@ exports.orientationLock = function(d){return "Vypnite zámok orientácie v nasta
 
 exports.wantToLearn = function(d){return "Chcete sa naučiť programovať?"};
 
-exports.watchVideo = function(d){return "Pozrieť video"};
+exports.watchVideo = function(d){return "Pozrite si video"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "keď"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "pri spustení"};
 
 exports.tryHOC = function(d){return "Vyskúšajte hodinu kódovania"};
 
 exports.signup = function(d){return "Prihlásiť sa na úvodný kurz"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Tu je rada:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Pozrite ako to dopadlo a pokúste sa opraviť váš program."};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){
@@ -14451,7 +14451,7 @@ exports.hello = function(d){return "hello"};
 
 exports.helloWorld = function(d){return "Hello World!"};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "Pridať bod"};
 
 exports.makeProjectileDisappear = function(d){return "disappear"};
 
@@ -14481,7 +14481,7 @@ exports.moveDirectionRight = function(d){return "right"};
 
 exports.moveDirectionUp = function(d){return "up"};
 
-exports.moveDirectionRandom = function(d){return "náhodne"};
+exports.moveDirectionRandom = function(d){return "náhodný"};
 
 exports.moveDistance25 = function(d){return "25 pixels"};
 
@@ -14529,31 +14529,31 @@ exports.numBlocksNeeded = function(d){return "Toto puzzle môže byť vyriešen�
 
 exports.ouchExclamation = function(d){return "Ouch!"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "prehraj chrumkavý zvuk"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "prehraj zvuk gól 1"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "prehraj zvuk gól 2"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "prehraj zvuk úderu"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "prehraj zvuk straty bodu"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "prehraj zvuk straty bodu 2"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "prehraj retro zvuk"};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "prehraj gumený zvuk"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "prehraj zvuk plesknutia"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Prehrá vybraný zvuk."};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "prehraj so zvukom bodu"};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "prehraj so zvukom bodu 2"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "prehraj drevený zvuk"};
 
 exports.positionOutTopLeft = function(d){return "to the above top left position"};
 
@@ -14603,7 +14603,7 @@ exports.projectilePurpleHearts = function(d){return "purple hearts"};
 
 exports.projectileRedHearts = function(d){return "red hearts"};
 
-exports.projectileRandom = function(d){return "náhodne"};
+exports.projectileRandom = function(d){return "náhodný"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
 
@@ -14619,7 +14619,7 @@ exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
 
 exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Počet bodov: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "set background"};
 
@@ -14651,7 +14651,7 @@ exports.setBackgroundTennis = function(d){return "set tennis background"};
 
 exports.setBackgroundWinter = function(d){return "set winter background"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "Nastaví obrázok pozadia"};
 
 exports.setScoreText = function(d){return "nastaviť skóre"};
 
@@ -14787,7 +14787,7 @@ exports.setSprite = function(d){return "nastaviť"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "chrúmať"};
 
 exports.soundGoal1 = function(d){return "goal 1"};
 
@@ -14863,21 +14863,21 @@ exports.whenArrowUp = function(d){return "up arrow"};
 
 exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "keď šípka nadol"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Vykonať akcie nižšie pri stlačení šípky dole."};
 
 exports.whenGameStarts = function(d){return "keď začne hra"};
 
 exports.whenGameStartsTooltip = function(d){return "Vykonať akcie, keď začne hra."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "keď šípka vľavo"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Vykonať akcie nižšie pri stlačení šípky vľavo."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "keď šípka vpravo"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Vykonať akcie nižšie pri stlačení šípky vpravo."};
 
 exports.whenSpriteClicked = function(d){return "when actor clicked"};
 
@@ -14921,9 +14921,9 @@ exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge
 
 exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "keď šípka nahor"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Vykonať akcie nižšie pri stlačení šípky hore."};
 
 exports.yes = function(d){return "Áno"};
 

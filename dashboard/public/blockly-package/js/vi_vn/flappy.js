@@ -8889,7 +8889,7 @@ exports.catLoops = function(d){return "Vòng lặp"};
 
 exports.catMath = function(d){return "Thuật toán"};
 
-exports.catProcedures = function(d){return "Chức năng"};
+exports.catProcedures = function(d){return "Các hàm"};
 
 exports.catText = function(d){return "văn bản"};
 
@@ -8915,17 +8915,17 @@ exports.end = function(d){return "kết thúc"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Miếng ghép được \"Lặp lại\" hay \"Nếu\" cần có những miếng ghép bên trong để hoạt động. Đảm bảo là miếng gạch đó khớp hoàn toàn phần ở trong của miếng gạch kia."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Chức năng của block cần phải có block khác bên trong để khiến nó hoạt động."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Khối \"hàm\"  cần có các khối lệnh bên trong để khiến nó hoạt động."};
 
-exports.extraTopBlocks = function(d){return "Bạn có khối phụ không gắn liền với một sự kiện khối."};
+exports.extraTopBlocks = function(d){return "Bạn có các khối tự do. Ý của bạn là để đính kèm chúng vào khối \"khi chạy\"?"};
 
 exports.finalStage = function(d){return "Chúc mừng. Bạn vừa hoàn thành xong bước cuối cùng."};
 
-exports.finalStageTrophies = function(d){return "Chúc mừng! Bạn vừa hoàn thành bước cuối cùng và dành danh hiệu. "+v(d,"numTrophies")+" nhiều."};
+exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"vi",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.finish = function(d){return "Hoàn Thành"};
 
-exports.generatedCodeInfo = function(d){return "Ngay cả các trường đại học giảng dạy dựa trên block- mã hóa (ví dụ: "+v(d,"berkeleyLink")+" "+v(d,"harvardLink")+"). Tuy nhiên, dưới mui xe, các khối bạn đã lắp ráp có thể cũng được hiển thị trong JavaScript, phần lớn của thế giới rộng rãi sử dụng mã hóa ngôn ngữ:"};
+exports.generatedCodeInfo = function(d){return "Các trường đại học hàng đầu cũng dạy lập trình dựa trên \"khối lệnh\" (block) (như: "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Tuy nhiên, để hổ trợ, các \"khối lệnh\" cũng được hiển thị trong ngôn ngữ JavaScript, ngôn ngữ lập trình thông dụng nhất:"};
 
 exports.hashError = function(d){return "Xin lỗi, '%1' không tương ứng với bất kì chương trình đã lưu."};
 
@@ -8933,25 +8933,25 @@ exports.help = function(d){return "Trợ Giúp"};
 
 exports.hintTitle = function(d){return "Gợi ý:"};
 
-exports.jump = function(d){return "nhảy/cú nhảy"};
+exports.jump = function(d){return "nhảy"};
 
 exports.levelIncompleteError = function(d){return "Bạn đã dùng tất cả các khối cần thiết, nhưng không đúng cách."};
 
 exports.listVariable = function(d){return "danh sách"};
 
-exports.makeYourOwnFlappy = function(d){return "Tạo lấy một bản Flappy Bird của riêng bạn"};
+exports.makeYourOwnFlappy = function(d){return "Tự tạo game Flappy Bird của riêng bạn"};
 
-exports.missingBlocksErrorMsg = function(d){return "Thử dùng một hoặc nhiều khối bên dưới để giải quyết trò này."};
+exports.missingBlocksErrorMsg = function(d){return "Thử dùng một hoặc nhiều khối được cho để giải quyết câu này."};
 
-exports.nextLevel = function(d){return "Chúc mừng! Bạn đã hoàn thành trò số "+v(d,"puzzleNumber")+"."};
+exports.nextLevel = function(d){return "Chúc mừng! Bạn đã hoàn thành câu số "+v(d,"puzzleNumber")+"."};
 
 exports.nextLevelTrophies = function(d){return "Chúc mừng! Bạn đã hoàn thành Câu đố "+v(d,"puzzleNumber")+" và chiến thắng "+v(d,"numTrophies")+"."};
 
 exports.nextStage = function(d){return "Chúc mừng! Bạn đã hoàn thành xong "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Chúc mừng! Bạn đã vượt qua vòng "+v(d,"stageNumber")+" và giành được "+p(d,"numTrophies",0,"vi",{"one":"một danh hiệu","other":n(d,"numTrophies")+" danh hiệu"})+"."};
+exports.nextStageTrophies = function(d){return "Chúc mừng! Bạn đã vượt qua vòng "+v(d,"stageName")+" và giành được "+p(d,"numTrophies",0,"vi",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.numBlocksNeeded = function(d){return "Chúc mừng! Bạn đã hoàn thành câu đố "+v(d,"puzzleNumber")+". Nhưng bạn thật sự chỉ cần "+v(d,"numBlocks")+" khối thôi ."};
+exports.numBlocksNeeded = function(d){return "Chúc mừng! Bạn đã hoàn thành câu đố "+v(d,"puzzleNumber")+". Nhưng bạn thật sự chỉ cần "+p(d,"numBlocks",0,"vi",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" khối thôi ."};
 
 exports.numLinesOfCodeWritten = function(d){return "Bạn vừa mới viết "+p(d,"numLines",0,"vi",{"one":"1 dòng","other":n(d,"numLines")+" dòng"})+" mã!"};
 
@@ -9232,7 +9232,7 @@ exports.shareFlappyTwitter = function(d){return "Xem game Flappy do tôi tự m�
 
 exports.shareGame = function(d){return "Chia sẻ trò chơi của bạn:"};
 
-exports.soundRandom = function(d){return "bất kỳ"};
+exports.soundRandom = function(d){return "ngẫu nhiên"};
 
 exports.soundBounce = function(d){return "Dòng banh/ tung"};
 

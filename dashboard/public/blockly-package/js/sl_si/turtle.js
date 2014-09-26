@@ -10375,15 +10375,15 @@ exports.end = function(d){return "konec"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Znotraj 'Ponovi' ali 'če' bloka morajo biti drugi bloki, da bo delovalo. Prepričaj se, da se notranji bloki ustrezno prilegajo zunanjemu bloku."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Da bi blok funkcije delal potrebuje znotraj sebe druge bloke."};
 
-exports.extraTopBlocks = function(d){return "Imate dodatne bloke, ki niso povezani z blokom dogodka."};
+exports.extraTopBlocks = function(d){return "Imaš nedodeljene bloke. Si jih želel dodeliti bloku \"ob zagonu\"?"};
 
 exports.finalStage = function(d){return "Čestitke! Zaključil si zadnjo stopnjo."};
 
 exports.finalStageTrophies = function(d){return "Čestitke! Zaključil/a si stopnjo "+v(d,"stageNumber")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"trofejo","other":n(d,"numTrophies")+" trofej"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Končaj"};
 
 exports.generatedCodeInfo = function(d){return "Celo najboljše univerze učijo kodiranje z bloki (npr. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ampak bloke, ki si jih sestavil, lahko prikažemo v JavaScriptu, najbolj rabljenem programskem jeziku:"};
 
@@ -10415,7 +10415,7 @@ exports.numBlocksNeeded = function(d){return "Čestitke! Zaključil/a si uganko 
 
 exports.numLinesOfCodeWritten = function(d){return "Ravnokar si napisal "+p(d,"numLines",0,"sl",{"one":"1 vrstica","other":n(d,"numLines")+" vrstic"})+" kode!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "igraj"};
 
 exports.puzzleTitle = function(d){return "Uganka "+v(d,"puzzle_number")+" od "+v(d,"stage_total")};
 
@@ -10427,7 +10427,7 @@ exports.runProgram = function(d){return "Teči"};
 
 exports.runTooltip = function(d){return "Zaženi program, definiran z bloki na delovni površini."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "rezultat"};
 
 exports.showCodeHeader = function(d){return "Pokaži kodo"};
 
@@ -10451,7 +10451,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Seštevek vseh skupaj: 
 
 exports.tryAgain = function(d){return "Poskusi ponovno"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Poglej namig"};
 
 exports.backToPreviousLevel = function(d){return "Nazaj na prejšnjo raven"};
 
@@ -10479,7 +10479,7 @@ exports.watchVideo = function(d){return "Glej video"};
 
 exports.when = function(d){return "ko"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "ob zagonu"};
 
 exports.tryHOC = function(d){return "Poizkusi Uro za programiranje (Hour to Code)"};
 
@@ -10487,7 +10487,7 @@ exports.signup = function(d){return "Vpiši se za uvodni tečaj"};
 
 exports.hintHeader = function(d){return "Tukaj je namig:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Poglej kako si končal in poizkusi popraviti svoj program."};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){

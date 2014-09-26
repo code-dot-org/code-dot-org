@@ -11424,9 +11424,9 @@ exports.whenLeft = function(d){return "左矢印"};
 
 exports.whenLeftTooltip = function(d){return "下向きの矢印キーが押されたとき以下のアクションを実行します。"};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "パドルにボールが当たったら"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "ボールがパドルにぶつかったら、次のアクションを実行します。"};
 
 exports.whenRight = function(d){return "when Right arrow"};
 

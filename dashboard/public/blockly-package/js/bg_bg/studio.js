@@ -14284,7 +14284,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Блоковете за пов
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Блокът за функция трябва да има други блокове вътре в себе си, за да работи."};
 
-exports.extraTopBlocks = function(d){return "Имате допълнителни блокчета, които не са били използвани в събитийния блок."};
+exports.extraTopBlocks = function(d){return "Имате не закачени блокове. Искате ли да кажеш да ги закачите към блокът \"при стартиране\" ?"};
 
 exports.finalStage = function(d){return "Поздравления! Вие завършихте последния етап."};
 
@@ -14455,13 +14455,13 @@ exports.makeProjectileRedHearts = function(d){return "направи черве�
 
 exports.makeProjectileTooltip = function(d){return "Прави снаряд, който се блъска, изчезва или скача."};
 
-exports.makeYourOwn = function(d){return "Създайте своя собствена история"};
+exports.makeYourOwn = function(d){return "Направете свое собствено \"Театрална лаборатория\" приложение"};
 
 exports.moveDirectionDown = function(d){return "надолу"};
 
-exports.moveDirectionLeft = function(d){return "ляво"};
+exports.moveDirectionLeft = function(d){return "наляво"};
 
-exports.moveDirectionRight = function(d){return "дясно"};
+exports.moveDirectionRight = function(d){return "надясно"};
 
 exports.moveDirectionUp = function(d){return "нагоре"};
 
@@ -14483,25 +14483,25 @@ exports.moveDistanceRandom = function(d){return "случаен брой пик�
 
 exports.moveDistanceTooltip = function(d){return "Премества актьорът на определена дистанция в определената посока."};
 
-exports.moveSprite = function(d){return "Премести"};
+exports.moveSprite = function(d){return "премести"};
 
-exports.moveSpriteN = function(d){return "Премести актьор "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "премести актьор "+v(d,"spriteIndex")};
 
-exports.moveDown = function(d){return "Премести надолу"};
+exports.moveDown = function(d){return "премести надолу"};
 
-exports.moveDownTooltip = function(d){return "Премести актьор надолу."};
+exports.moveDownTooltip = function(d){return "Премести актьора надолу."};
 
-exports.moveLeft = function(d){return "движение наляво"};
+exports.moveLeft = function(d){return "премести наляво"};
 
-exports.moveLeftTooltip = function(d){return "Преместване на актьора вляво."};
+exports.moveLeftTooltip = function(d){return "Преместване на актьора наляво."};
 
-exports.moveRight = function(d){return "Преместване надясно"};
+exports.moveRight = function(d){return "премести надясно"};
 
-exports.moveRightTooltip = function(d){return "Преместване на актьора вдясно."};
+exports.moveRightTooltip = function(d){return "Преместване на актьора надясно."};
 
-exports.moveUp = function(d){return "Премести нагоре"};
+exports.moveUp = function(d){return "премести нагоре"};
 
-exports.moveUpTooltip = function(d){return "Премества актьорът нагоре."};
+exports.moveUpTooltip = function(d){return "Премества актьор нагоре."};
 
 exports.moveTooltip = function(d){return "Преместване на актьор."};
 
@@ -14515,11 +14515,11 @@ exports.ouchExclamation = function(d){return "Ох!"};
 
 exports.playSoundCrunch = function(d){return "възпроизвежда звук на болка"};
 
-exports.playSoundGoal1 = function(d){return "възпроизвежда звук  1 гол"};
+exports.playSoundGoal1 = function(d){return "възпроизвежда звук 1 за гол"};
 
-exports.playSoundGoal2 = function(d){return "възпроизвежда звук  2 гол"};
+exports.playSoundGoal2 = function(d){return "възпроизвежда звук 2 за гол"};
 
-exports.playSoundHit = function(d){return "възпроизвежда звук за игра"};
+exports.playSoundHit = function(d){return "възпроизвежда звук на удар"};
 
 exports.playSoundLosePoint = function(d){return "възпроизвежда звук за загуба на точка"};
 
@@ -14533,15 +14533,15 @@ exports.playSoundSlap = function(d){return "възпроизвежда звук 
 
 exports.playSoundTooltip = function(d){return "Възпроизвежда избраният звук."};
 
-exports.playSoundWinPoint = function(d){return "възпроизвежда звук на победа точка"};
+exports.playSoundWinPoint = function(d){return "възпроизвежда звук на победна точка"};
 
-exports.playSoundWinPoint2 = function(d){return "възпроизвежда звук 2 на победа точка"};
+exports.playSoundWinPoint2 = function(d){return "възпроизвежда звук 2 на победна точка"};
 
 exports.playSoundWood = function(d){return "възпроизвежда звук от дърво"};
 
-exports.positionOutTopLeft = function(d){return "на позиция горе вляво"};
+exports.positionOutTopLeft = function(d){return "в позиция горе вляво"};
 
-exports.positionOutTopRight = function(d){return "към позиция горе вдясно"};
+exports.positionOutTopRight = function(d){return "в позиция горе вдясно"};
 
 exports.positionTopOutLeft = function(d){return "горе извън лявата позиция"};
 
@@ -14553,7 +14553,7 @@ exports.positionTopRight = function(d){return "към позиция горе в
 
 exports.positionTopOutRight = function(d){return "горе извън дясната позиция"};
 
-exports.positionMiddleLeft = function(d){return "към положение ляв център"};
+exports.positionMiddleLeft = function(d){return "в позиция ляв център"};
 
 exports.positionMiddleCenter = function(d){return "в позиция център"};
 
@@ -14561,7 +14561,7 @@ exports.positionMiddleRight = function(d){return "в позиция десен �
 
 exports.positionBottomOutLeft = function(d){return "надолу извън лявата позиция"};
 
-exports.positionBottomLeft = function(d){return "в позиция долен ляв"};
+exports.positionBottomLeft = function(d){return "в позиция долен ляв ъгъл"};
 
 exports.positionBottomCenter = function(d){return "в позиция долен център"};
 
@@ -14621,19 +14621,19 @@ exports.setBackgroundNight = function(d){return "задава фон нощ"};
 
 exports.setBackgroundUnderwater = function(d){return "задава подводен фон"};
 
-exports.setBackgroundCity = function(d){return "Задаване на фон град"};
+exports.setBackgroundCity = function(d){return "задаване на фон град"};
 
-exports.setBackgroundDesert = function(d){return "Задаване на фон пустиня"};
+exports.setBackgroundDesert = function(d){return "задаване на фон пустиня"};
 
-exports.setBackgroundRainbow = function(d){return "Задаване на фон дъга"};
+exports.setBackgroundRainbow = function(d){return "задаване на фон дъга"};
 
-exports.setBackgroundSoccer = function(d){return "Задаване на фон стадион"};
+exports.setBackgroundSoccer = function(d){return "задава на фон стадион"};
 
-exports.setBackgroundSpace = function(d){return "Задаване на фон космос"};
+exports.setBackgroundSpace = function(d){return "задаване на фон космос"};
 
-exports.setBackgroundTennis = function(d){return "задаване на фон тенискорт"};
+exports.setBackgroundTennis = function(d){return "задава фон тенискорт"};
 
-exports.setBackgroundWinter = function(d){return "задаване на фон зима"};
+exports.setBackgroundWinter = function(d){return "задава фон зима"};
 
 exports.setBackgroundTooltip = function(d){return "Задаване на фоновото изображение"};
 
@@ -14641,15 +14641,15 @@ exports.setScoreText = function(d){return "поставя резултат"};
 
 exports.setScoreTextTooltip = function(d){return "Задава текстът да се показва в областта на резултата."};
 
-exports.setSpriteEmotionAngry = function(d){return "ядосано настроение"};
+exports.setSpriteEmotionAngry = function(d){return "с ядосано настроение"};
 
 exports.setSpriteEmotionHappy = function(d){return "с весело настроение"};
 
-exports.setSpriteEmotionNormal = function(d){return "за нормалното настроение"};
+exports.setSpriteEmotionNormal = function(d){return "с нормално настроение"};
 
-exports.setSpriteEmotionRandom = function(d){return "за случайно настроение"};
+exports.setSpriteEmotionRandom = function(d){return "със случайно настроение"};
 
-exports.setSpriteEmotionSad = function(d){return "за тъжно настроение"};
+exports.setSpriteEmotionSad = function(d){return "с тъжно настроение"};
 
 exports.setSpriteEmotionTooltip = function(d){return "Задава настроението на Актьора"};
 
@@ -14661,9 +14661,9 @@ exports.setSpriteBird = function(d){return "изображение  на пти�
 
 exports.setSpriteCat = function(d){return "изображение  на котка"};
 
-exports.setSpriteCaveBoy = function(d){return "към изображението на пещерно момче"};
+exports.setSpriteCaveBoy = function(d){return "изображение на пещерно момче"};
 
-exports.setSpriteCaveGirl = function(d){return "към изображението на пещерно момиче"};
+exports.setSpriteCaveGirl = function(d){return "изображение на пещерно момиче"};
 
 exports.setSpriteDinosaur = function(d){return "изображение на динозавър"};
 
@@ -14677,7 +14677,7 @@ exports.setSpriteHidden = function(d){return "към скрито изображ
 
 exports.setSpriteHideK1 = function(d){return "скрива"};
 
-exports.setSpriteKnight = function(d){return "изоражение на кон"};
+exports.setSpriteKnight = function(d){return "изображение на рицар"};
 
 exports.setSpriteMonster = function(d){return "изображение на чудовище"};
 
@@ -14699,15 +14699,15 @@ exports.setSpriteShowK1 = function(d){return "показва"};
 
 exports.setSpriteSpacebot = function(d){return "изображение на космически робот"};
 
-exports.setSpriteSoccerGirl = function(d){return "към изображението на момиче футболист"};
+exports.setSpriteSoccerGirl = function(d){return "изображение на момиче футболист"};
 
-exports.setSpriteSoccerBoy = function(d){return "към изображението на момче футболист"};
+exports.setSpriteSoccerBoy = function(d){return "изображение на момче футболист"};
 
 exports.setSpriteSquirrel = function(d){return "изображение  на катерица"};
 
-exports.setSpriteTennisGirl = function(d){return "към изображението на момиче тенесист"};
+exports.setSpriteTennisGirl = function(d){return "изображение на момиче тенесист"};
 
-exports.setSpriteTennisBoy = function(d){return "към изображението на момче тенесист"};
+exports.setSpriteTennisBoy = function(d){return "изображение на момче тенесист"};
 
 exports.setSpriteUnicorn = function(d){return "изображение  на еднорог"};
 
@@ -14715,7 +14715,7 @@ exports.setSpriteWitch = function(d){return "изображение на вещ�
 
 exports.setSpriteWizard = function(d){return "изображение  на магьосник"};
 
-exports.setSpritePositionTooltip = function(d){return "Веднага предвижва актьор към указаното местоположение."};
+exports.setSpritePositionTooltip = function(d){return "Веднага придвижва актьор към указаното местоположение."};
 
 exports.setSpriteK1Tooltip = function(d){return "Показва или скрива определен актьор."};
 
@@ -14741,7 +14741,7 @@ exports.setSpriteSpeedVerySlow = function(d){return "на много бавна 
 
 exports.setSpriteSpeedSlow = function(d){return "на бавна скорост"};
 
-exports.setSpriteSpeedNormal = function(d){return "за нормална скорост"};
+exports.setSpriteSpeedNormal = function(d){return "на нормална скорост"};
 
 exports.setSpriteSpeedFast = function(d){return "на бърза скорост"};
 
@@ -14763,7 +14763,7 @@ exports.showTitleScreenText = function(d){return "текст"};
 
 exports.showTSDefTitle = function(d){return "въведи заглавието тук"};
 
-exports.showTSDefText = function(d){return "Въведи текст тук"};
+exports.showTSDefText = function(d){return "въведи текст тук"};
 
 exports.showTitleScreenTooltip = function(d){return "Показва заглавието на екрана."};
 
@@ -14807,11 +14807,11 @@ exports.throwSprite = function(d){return "хвърля"};
 
 exports.throwSpriteN = function(d){return "актьор "+v(d,"spriteIndex")+" хвърля"};
 
-exports.throwTooltip = function(d){return "Хвърляне на ракета от определен актьор."};
+exports.throwTooltip = function(d){return "Хвърляне на снаряд от определен актьор."};
 
 exports.vanish = function(d){return "изчезване"};
 
-exports.vanishActorN = function(d){return "изчезва актьорът "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "изчезва актьор "+v(d,"spriteIndex")};
 
 exports.vanishTooltip = function(d){return "Изчезване на актьор."};
 
@@ -14821,7 +14821,7 @@ exports.waitSeconds = function(d){return "секунди"};
 
 exports.waitForClick = function(d){return "изчаква за кликване"};
 
-exports.waitForRandom = function(d){return "изчаква за случайно"};
+exports.waitForRandom = function(d){return "изчаква за случайно време"};
 
 exports.waitForHalfSecond = function(d){return "изчаква за половин секунда"};
 
@@ -14847,11 +14847,11 @@ exports.whenArrowUp = function(d){return "стрелка нагоре"};
 
 exports.whenArrowTooltip = function(d){return "Следва действията по-долу когато е натисната определена стрелка."};
 
-exports.whenDown = function(d){return "Когато стрелката надолу"};
+exports.whenDown = function(d){return "когато стрелка надолу"};
 
 exports.whenDownTooltip = function(d){return "Следвайте действията по-долу когато е натисната стрелка надолу."};
 
-exports.whenGameStarts = function(d){return "Когато историята започне"};
+exports.whenGameStarts = function(d){return "когато историята започне"};
 
 exports.whenGameStartsTooltip = function(d){return "Следвайте действията по-долу, когато историята започва."};
 
@@ -14863,25 +14863,25 @@ exports.whenRight = function(d){return "когато стрелка надясн
 
 exports.whenRightTooltip = function(d){return "Изпълнява действията по-долу когато е натиснат клавиша стрелка надясно."};
 
-exports.whenSpriteClicked = function(d){return "когато актьор натиска"};
+exports.whenSpriteClicked = function(d){return "Когато е кликнато върху актьор"};
 
-exports.whenSpriteClickedN = function(d){return "когато актьор натиска на "+v(d,"spriteIndex")};
+exports.whenSpriteClickedN = function(d){return "Когато е кликнато върху актьор "+v(d,"spriteIndex")};
 
 exports.whenSpriteClickedTooltip = function(d){return "Изпълнява действията по-долу когато се кликне върху актьор."};
 
-exports.whenSpriteCollidedN = function(d){return "Когато актьор "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "когато актьор "+v(d,"spriteIndex")};
 
 exports.whenSpriteCollidedTooltip = function(d){return "Изпълнява действията по-долу когато актьор докосва друг актьор."};
 
 exports.whenSpriteCollidedWith = function(d){return "докосване"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "докосва някой актьор"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "допира някой от краищата"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "докосва снаряд"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "докосва нещо"};
 
 exports.whenSpriteCollidedWithN = function(d){return "докосва актьор "+v(d,"spriteIndex")};
 
@@ -14905,7 +14905,7 @@ exports.whenSpriteCollidedWithRightEdge = function(d){return "докосва д�
 
 exports.whenSpriteCollidedWithTopEdge = function(d){return "докосва горния ръб"};
 
-exports.whenUp = function(d){return "Когато клавишът стрелка нагоре"};
+exports.whenUp = function(d){return "когато стрелка нагоре"};
 
 exports.whenUpTooltip = function(d){return "Изпълнява действията по-долу когато е натисната стрелка нагоре."};
 
