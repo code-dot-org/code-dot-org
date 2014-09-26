@@ -111,7 +111,7 @@ theme: none
     %tr{"ng-repeat" => "signup in workshop_signups | orderBy:order", style: "vertical-align:top"}
       %td {{signup.name_s}}
       %td {{signup.email_s}}
-      %td {{signup.teacher_role_ss.join(', ')}}
+      %td {{signup.teacher_role_ss.concat(signup.teacher_role_other_ss).join(', ')}}
       %td {{signup.school_name_s}}
       %td{nowrap: true, style: 'white-space: nowrap;'}
         %span{"ng-show" => "signup.confirmSignupDelete"}
