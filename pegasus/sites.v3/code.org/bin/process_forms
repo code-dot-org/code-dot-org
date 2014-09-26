@@ -6,6 +6,9 @@ require src_dir 'forms'
 
 SOLR = Solr::Server.new(host:CDO.solr_server) if CDO.solr_server
 
+# load helpers
+load pegasus_dir('helpers.rb')
+
 def send_receipts(kind, form)
   receipts = kind.respond_to?(:receipt) ? [kind.receipt].flatten.select{|i| i} : []
   return 0 if receipts.empty?
