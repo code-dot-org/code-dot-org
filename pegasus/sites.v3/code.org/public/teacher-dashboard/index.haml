@@ -104,8 +104,8 @@ angular: teacherDashboard
 
   var app = angular.module('teacherDashboard.controllers', []);
 
-  app.controller('SectionsController', ['$scope', '$location', 'sectionsService',
-                                       function($scope, $location, sectionsService){
+  app.controller('SectionsController', ['$scope', '$location', '$window', 'sectionsService',
+                                       function($scope, $location, $window, sectionsService){
     $scope.sectionsLoaded = false;
 
     $scope.course_list = #{DashboardSection::VALID_COURSES.to_json};
@@ -120,26 +120,39 @@ angular: teacherDashboard
       section.editing = true;
     };
 
+    $scope.genericError = function() {
+      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
+    };
+
     $scope.save = function(section) {
-      section.editing = false;
-      if (section.id) { // existing
-        $scope.sections[$scope.sections.indexOf(section)] =
-          sectionsService.update({id: section.id}, section);
-      } else { // new
-        $scope.sections[$scope.sections.indexOf(section)] =
-          sectionsService.save(section);
+      if (section.id) { // update existing
+        sectionsService.update({id: section.id}, section).$promise.then(
+          function(result_section) {
+            $scope.sections[$scope.sections.indexOf(section)] = result_section;
+          }
+        ).catch($scope.genericError);
+      } else { // save new
+        sectionsService.save(section).$promise.then(
+          function(result_section) {
+            $scope.sections[$scope.sections.indexOf(section)] = result_section;
+          }
+        ).catch($scope.genericError);
       }
     };
 
-    $scope.confirm_delete = function(section)
-    {
+    $scope.confirm_delete = function(section) {
       section.confirmDelete = true;
-    }
+    };
 
     $scope.del = function(section) {
-      $scope.sections.splice($scope.sections.indexOf(section), 1); // remove from array
-      sectionsService.remove(section); // service call
-      section.confirmDelete = false;
+      sectionsService.remove(section).$promise.then(
+        function() {
+          $scope.sections.splice($scope.sections.indexOf(section), 1); // remove from array
+          section.confirmDelete = false;
+        }
+      ).catch(
+        function() { $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.") }
+      );
     };
 
     $scope.cancel = function(section) {
@@ -215,8 +228,12 @@ angular: teacherDashboard
 
   app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', 'sectionsService', 'studentsService',
                                              function($scope, $routeParams, $window, sectionsService, studentsService) {
-    $scope.sections = sectionsService.query();
     $scope.section = sectionsService.get({id: $routeParams.id});
+    $scope.sections = sectionsService.query();
+
+    $scope.genericError = function() {
+      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
+    };
 
     $scope.section.$promise.then(
       function( section ){
@@ -237,6 +254,9 @@ angular: teacherDashboard
         $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
       }
     );
+
+    $scope.section.$promise.catch($scope.genericError);
+    $scope.sections.$promise.catch($scope.genericError);
 
     $scope.age_list = #{(4..100).to_a.inspect};
 
@@ -260,6 +280,7 @@ angular: teacherDashboard
         }
       );
 
+      newStudent.$promise.catch($scope.genericError);
       $scope.section.students[$scope.section.students.indexOf(student)] = newStudent;
     };
 
@@ -275,14 +296,10 @@ angular: teacherDashboard
         console.log(index); 
         if (student.editing || student.editing_password) {
           if (student.id) {
-            console.log('existing');
             modifiedStudents.push(student);
           } else {
-            console.log('new');
             newStudents.push(student);
           }
-        } else {
-          console.log('not modified');
         }
       });
 
@@ -298,13 +315,17 @@ angular: teacherDashboard
           $.each(resultStudents, function(index, student) {
             $scope.section.students.unshift(student);
           });
-        });
+        }).$promise.catch($scope.genericError);
       }
 
       // update existing students
-      $.each(modifiedStudents, function(index, student) {          
-        $scope.section.students[$scope.section.students.indexOf(student)] =
-          studentsService.update({id: student.id}, student);
+      $.each(modifiedStudents, function(index, student) {
+        studentsService.update({id: student.id}, student).$promise.then(
+          function(result_student) {
+            result_student.editing = false;
+            $scope.section.students[$scope.section.students.indexOf(student)] = result_student;
+          }
+        ).catch($scope.genericError);
       });
    };
 
@@ -313,9 +334,11 @@ angular: teacherDashboard
    };
 
     $scope.del = function(student) { // note -- IE doesn't like it when you name things 'delete'
-      $scope.section.students.splice($scope.section.students.indexOf(student), 1); // remove from array
-      sectionsService.removeStudent({id: $scope.section.id, studentId: student.id}); // service call
-      student.confirmDelete = false;
+      sectionsService.removeStudent({id: $scope.section.id, studentId: student.id}).$promise.then(
+        function() {
+          $scope.section.students.splice($scope.section.students.indexOf(student), 1); // remove from array
+        }
+      ).catch($scope.genericError);
     };
 
     $scope.cancel = function(student) {
