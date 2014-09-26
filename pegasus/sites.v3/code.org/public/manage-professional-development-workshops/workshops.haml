@@ -18,7 +18,8 @@ theme: none
       %col{style: 'width: 320px;'}/
       %col{style: 'width: 100px;'}/
       %col{style: 'width: 100px;'}/
-      %col{style: 'width: 250px;'}/
+      %col{style: 'width: 125px;'}/
+      %col{style: 'width: 225px;'}/
     %tr
       %th.manage-th
         Date and time
@@ -29,6 +30,8 @@ theme: none
       %th.manage-th
         Signups
       %th.manage-th
+        Current State
+      %th.manage-th
     %tr{"ng-repeat" => "workshop in workshops | orderBy:order", style: "vertical-align:top"}
       %td
         %div{"ng-repeat" => "date in workshop.dates"}
@@ -36,6 +39,15 @@ theme: none
       %td {{workshop.location_name_s}}
       %td {{workshop.type_s}}
       %td {{workshop.signups.length}} / {{workshop.capacity_s}}
+      %td
+        %span{'ng-show' => 'workshop.state() == "not_started"'}
+          Not Started
+          %a.btn.btn-default{"ng-click" => "start_workshop(workshop)"} Start Event
+        %span{'ng-show' => 'workshop.state() == "started"'}
+          In Progress
+          %a.btn.btn-default{"ng-click" => "stop_workshop(workshop)", 'ng-confirm-click' => 'Are you sure you want to close this workshop?'} End Event
+        %span{'ng-show' => 'workshop.state() == "stopped"'}
+          Ended
       %td{nowrap: true, style: 'white-space: nowrap;'}
         %span{"ng-show" => "workshop.confirmDelete"}
           %span Delete?

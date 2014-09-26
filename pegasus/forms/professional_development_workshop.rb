@@ -1,4 +1,8 @@
+require 'cdo/date'
+require 'cdo/activity_constants'
+
 class ProfessionalDevelopmentWorkshop
+  MINIMUM_ATTENDEE_LEVELS_COUNT = 15
 
   def self.normalize(data)
     result = {}
@@ -10,11 +14,16 @@ class ProfessionalDevelopmentWorkshop
     result[:type_s] = required enum(data[:type_s].to_s.strip, ['Public', 'Private'])
     result[:capacity_s] = required stripped data[:capacity_s]
     result[:notes_s] = stripped data[:notes_s]
+    result[:section_id_s] = stripped data[:section_id_s]
 
     # Email and name come from the dashboard user.
     result[:email_s] = required email_address data[:email_s]
     result[:name_s] = stripped data[:name_s]
 
+    if data[:stopped]
+      result[:stopped_dt] = DateTime.now.to_solr
+    end
+    
     result
   end
 
@@ -22,20 +31,58 @@ class ProfessionalDevelopmentWorkshop
     'workshop_receipt'
   end
 
-  def self.process(data)
-    {
-      'location_p' => data['location_p'] || geocode_address(data['location_address_s'])
-    }
+  def self.progress_snapshot(section_id)
+    DASHBOARD_DB[:followers].
+      join(:users, id: :student_user_id).
+      select(Sequel.as(:student_user_id, :id),
+             :users__id___id,
+             :users__name___name,
+             :users__email___email,
+            ).
+      where(section_id: section_id).
+      all.map do |result|
+      levels = DASHBOARD_DB[:user_levels].
+        where(user_id: result[:id]).
+        and("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}").
+        all
+      result[:levels] = levels
+      result[:levels_count] = levels.count
+      result
+    end
+  end
+
+  def self.process(data, last_processed_data)
+    {}.tap do |results|
+      location = search_for_address(data['location_address_s'])
+      results.merge! location.to_solr if location
+
+      if data['stopped_dt'] && (last_processed_data.blank? || last_processed_data['progress_snapshot_t'].blank?)
+        snapshot = self.progress_snapshot(data['section_id_s'])
+        results['total_attendee_count_i'] = snapshot.count
+        results['qualifying_attendee_count_i'] = snapshot.count {|u| u[:levels_count] >= MINIMUM_ATTENDEE_LEVELS_COUNT}
+        results['progress_snapshot_t'] = snapshot.to_json
+      end
+    end
   end
 
   def self.index(data)
     data = data.dup
+
     data['dates_ss'] = [].tap do |results|
       data['dates'].each do |date|
         results << date['date_s'] + ", " + date['start_time_s'] + " - " + date['end_time_s']
       end
     end
+
+    if first_date = data['dates'].first
+      datetime = first_date['date_s'] + ' ' + first_date['start_time_s']
+      data['first_date_dt'] = Chronic.parse(datetime).strftime('%FT%TZ')
+    end
+
     data.delete('dates')
+
+    data.delete('progress_snapshot_t')
+
     data
   end
 

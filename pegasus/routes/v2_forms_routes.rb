@@ -49,7 +49,7 @@ patch '/v2/forms/:kind/:secret' do |kind, secret|
   begin
     content_type :json
     forbidden! unless form = update_form(kind, secret, payload)
-    form.data.to_json
+    form.data.merge(secret: secret).to_json
   rescue FormError=>e
     form_error! e
   end

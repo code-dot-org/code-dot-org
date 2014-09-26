@@ -1,6 +1,6 @@
 var gmap,
-    markers = [],
-    info_window;
+  markers = [],
+  info_window;
 
 $(document).ready(function() {
   initializeMap();
@@ -48,6 +48,8 @@ function loadWorkshops() {
             function (e) {
               info_window.setContent(this.get('infowindow_content'));
               info_window.open(gmap, this);
+              gmap.setZoom(9);
+              gmap.setCenter(markers[hash].getPosition());
             });
         }
         else {
@@ -94,14 +96,39 @@ function addGeocomplete() {
     country: 'us'
   };
 
+  if (html5_storage_supported() && typeof localStorage['geocomplete'] != 'undefined') {
+    geocomplete_options.location = localStorage['geocomplete'];
+  }
+
   $("#geocomplete").geocomplete(geocomplete_options)
     .bind("geocode:result", function(event, result){
       gmap.fitBounds(result.geometry.viewport);
+      if (html5_storage_supported()) {
+        localStorage['geocomplete'] = result.formatted_address;
+      }
     });
 
   $("#btn-submit").click(function(){
     $("#geocomplete").trigger("geocode");
   });
+
+  $("#btn-reset").click(function(){
+    $('#geocomplete').val('');
+    gmap.setCenter(new google.maps.LatLng(37.6, -95.665));
+    gmap.setZoom(4);
+    info_window.close();
+    if (html5_storage_supported()) {
+      localStorage.removeItem('geocomplete');
+    }
+  });
+}
+
+function html5_storage_supported() {
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null;
+  } catch (e) {
+    return false;
+  }
 }
 
 function displayQueryError() {
