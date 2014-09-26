@@ -7,7 +7,6 @@ h2 {
 }
 
 .donor-slider {
-    white-space: nowrap;
 }
 
 .badge {
@@ -19,6 +18,7 @@ h2 {
     white-space:nowrap;
     border-radius: 0;
     background-color: white;
+    width: 320px;
 }
 
 .badge:hover {
