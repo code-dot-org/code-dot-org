@@ -7,6 +7,11 @@ def avatar_image(name)
   "/images/fit-320/avatars/#{File.basename(path)}"
 end
 
+def avatar_image_thumbnail(name)
+  basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
+  "images/avatars/thumbnails/#{basename}_thumbnail.jpg"
+end
+
 def dont_cache()
   cache_control(:private, :must_revalidate, max_age:0)
 end
