@@ -2,6 +2,7 @@
 require_relative '../../../src/env'
 require 'cdo/hip_chat'
 require 'cdo/solr'
+require 'cdo/poste'
 require src_dir 'forms'
 
 SOLR = Solr::Server.new(host:CDO.solr_server) if CDO.solr_server
@@ -12,19 +13,13 @@ load pegasus_dir('helpers.rb')
 def send_receipts(kind, form)
   receipts = kind.respond_to?(:receipt) ? [kind.receipt].flatten.select{|i| i} : []
   return 0 if receipts.empty?
+  return 0 if form[:email] == 'anonymous@code.org'
 
-  email = form[:email]
-  return 0 if email == 'anonymous@code.org'
-
-  envelope = {email:email, name:form[:name], ip_address:form[:updated_ip]}
-  payload = {form_id:form[:id]}
-
-  count = 0
+  recipient = Poste2.create_recipient(form[:email], name:form[:name], ip_address:form[:updated_ip])
   receipts.each do |template|
-    Poste.send_message(template, envelope, payload)
-    count += 1
+    Poste2.send_message(template, recipient, form_id:form[:id])
   end
-  count
+  receipts.count
 end
 
 def send_batch_of_receipts(batch_size)
@@ -63,7 +58,7 @@ def index_batch_of_forms(batch_size)
   DB.transaction do
     DB[:forms].where(indexed_at:nil).exclude(processed_at:nil).limit(batch_size).each do |form|
       kind = Object.const_get(form[:kind])
-     
+
       index_data = JSON.load(form[:data]).merge(JSON.load(form[:processed_data]))
       index_data = index_data.merge(id:form[:id], kind_s:form[:kind], review_s:form[:review], user_i:form[:user_id], parent_form_i:form[:parent_id])
       index_data = kind.index(index_data) if kind.respond_to?(:index)
