@@ -143,6 +143,66 @@ module TextRender
     f(MarkdownEngine, path, locals)
   end
 
+  # A renderer object you can use to deal with users' input. It
+  # enables +escape_html+ and +safe_links_only+ by default.
+  #
+  # The +block_code+ callback is also overriden not to include
+  # the lang's class as the user can basically specify anything
+  # with the vanilla one.
+  class ReplaceWithRedcarpetRenderSafeWhenAvailable < Redcarpet::Render::HTML
+    def initialize(extensions = {})
+      super({
+        escape_html: true,
+        safe_links_only: true
+      }.merge(extensions))
+    end
+
+    def block_code(code, lang)
+      "<pre>" \
+        "<code>#{html_escape(code)}</code>" \
+      "</pre>"
+    end
+
+    private
+
+    # TODO: This is far from ideal to have such method as we
+    # are duplicating existing code from Houdini. This method
+    # should be defined at the C level.
+    def html_escape(string)
+      string.gsub(/['&\"<>\/]/, {
+        '&' => '&amp;',
+        '<' => '&lt;',
+        '>' => '&gt;',
+        '"' => '&quot;',
+        "'" => '&#x27;',
+        "/" => '&#x2F',
+      })
+    end
+  end
+
+  #
+  # SafeMarkdown
+  #
+  class SafeMarkdownEngine
+
+    def initialize(template)
+      @template = ErbEngine.new(template)
+      @engine = Redcarpet::Markdown.new(
+        ReplaceWithRedcarpetRenderSafeWhenAvailable,
+        autolink: true,
+        tables: true,
+        space_after_headers: true,
+      )
+    end
+    def result(binding=nil)
+      @engine.render(@template.result(binding))
+    end
+  end
+
+  def self.safe_markdown(s, locals={})
+    r(SafeMarkdownEngine, s, locals)
+  end
+
   #
   # Yaml
   #

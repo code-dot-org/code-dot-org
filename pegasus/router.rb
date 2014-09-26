@@ -88,7 +88,15 @@ class Documents < Sinatra::Base
 
     Poste::Message.import_templates
 
-    vary_uris = ['/', '/learn', '/congrats', '/language_test', '/teacher-dashboard#']
+    vary_uris = ['/', '/learn', '/congrats', '/language_test', 
+                 '/teacher-dashboard', 
+                 '/teacher-dashboard/landing',
+                 '/teacher-dashboard/nav',
+                 '/teacher-dashboard/section_manage',
+                 '/teacher-dashboard/section_progress',
+                 '/teacher-dashboard/sections',
+                 '/teacher-dashboard/signin_cards',
+                 '/teacher-dashboard/student']
     set :vary, { 'X-Varnish-Accept-Language'=>vary_uris, 'Cookie'=>vary_uris }
   end
 
@@ -234,13 +242,15 @@ class Documents < Sinatra::Base
 
     def document(path)
       content = IO.read(path)
+      original_line_count = content.lines.count
       match = content.match(/^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
       if match
         @header = @locals[:header] = YAML.load(render_(match[:yaml], '.erb'))
         content = match.post_match
       end
+      line_number_offset = content.lines.count - original_line_count
       @header['social'] = social_metadata
-
+      
       if @header['require_https'] #&& rack_env == :production
         headers['Vary'] = http_vary_add_type(headers['Vary'], 'X-Forwarded-Proto')
         redirect request.url.sub('http://', 'https://') unless request.env['HTTP_X_FORWARDED_PROTO'] == 'https'
@@ -248,7 +258,15 @@ class Documents < Sinatra::Base
 
       cache_control :public, :must_revalidate, max_age:settings.document_max_age
       response.headers['X-Pegasus-Version'] = '3'
-      render_(content, File.extname(path))
+      begin
+        render_(content, File.extname(path))
+      rescue Haml::Error => e
+        if e.backtrace.first =~ /router\.rb:/
+          actual_line_number = e.line - line_number_offset + 1
+          e.set_backtrace e.backtrace.unshift("#{path}:#{actual_line_number}")
+        end
+        raise e
+      end
     end
 
     def post_process_html_from_markdown(full_document)
@@ -324,6 +342,11 @@ class Documents < Sinatra::Base
 
     def render_template(path, locals={})
       render_(IO.read(path), File.extname(path), locals)
+    rescue Haml::Error => e
+      if e.backtrace.first =~ /router\.rb:/
+        e.set_backtrace e.backtrace.unshift("#{path}:#{e.line}")
+      end
+      raise e
     end
 
     def render_(body, extname, locals={})

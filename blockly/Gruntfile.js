@@ -82,6 +82,7 @@ config.clean = {
   all: ['build']
 };
 
+var ace_suffix = DEV ? '' : '-min';
 config.copy = {
   src: {
     files: [
@@ -117,6 +118,16 @@ config.copy = {
         src: ['**'],
         //TODO: Would be preferrable to separate Blockly media.
         dest: 'build/package/media'
+      }
+    ]
+  },
+  lib: {
+    files: [
+      {
+        expand: true,
+        cwd: 'lib/ace/src' + ace_suffix + '-noconflict/',
+        src: ['**/*.js'],
+        dest: 'build/package/js/ace/'
       }
     ]
   }
@@ -252,7 +263,7 @@ config.watch = {
   },
   vendor_js: {
     files: ['lib/**/*.js'],
-    tasks: ['concat']
+    tasks: ['concat', 'copy:lib']
   },
   ejs: {
     files: ['src/**/*.ejs'],
@@ -346,6 +357,7 @@ module.exports = function(grunt) {
     'uglify:browserified',
     'copy:browserified',
     'copy:static',
+    'copy:lib',
     'concat',
     'sass'
   ]);

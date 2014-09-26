@@ -19,15 +19,23 @@ rightbar: blank
 /[if lt IE 9]
   %script{src: "/js/es5-shim.min.js"}
 
+-error_message = ''
+
+-if first_date = data['dates'].first
+  -datetime = first_date['date_s'] + ' ' + first_date['start_time_s']
+  -first_date = Chronic.parse(datetime).strftime('%FT%TZ')
+
+-if Chronic.parse(first_date) < Time.now
+  -error_message = 'This workshop is no longer accepting signups. Please choose another one or <a href="https://docs.google.com/a/code.org/forms/d/1QoWzKV5n2Fxx-W90LmmMWxY7qndMo1IE0QWZcxY9OTI/viewform">Sign up</a> be notified when workshops near you are announced.'
+-elsif signup_count >= data['capacity_s'].to_i
+  -error_message = 'This workshop is full. Please choose another one or <a href="https://docs.google.com/a/code.org/forms/d/1QoWzKV5n2Fxx-W90LmmMWxY7qndMo1IE0QWZcxY9OTI/viewform">Sign up</a> to be notified when workshops near you are announced.'
+
 %h1 Register for a Code Studio workshop (for teachers, grades K-5)
 
 %form#affiliate-workshop-signup-form{role: "form", onsubmit: "event.preventDefault(); affiliateWorkshopSignupFormSubmit();"}
-
-  -if (signup_count >= data['capacity_s'].to_i)
+  -unless error_message.nil_or_empty?
     %div{class: "alert alert-danger", role: "alert"}
-      This workshop is full. Please choose another one or
-      %a{href: "https://docs.google.com/a/code.org/forms/d/1QoWzKV5n2Fxx-W90LmmMWxY7qndMo1IE0QWZcxY9OTI/viewform"} Sign up
-      to be notified when workshops near you are announced.
+      = error_message
 
   %p Taught by Code.org Affiliates who are experienced computer science educators, our free workshops will prepare you to teach the Code Studio courses for grades K-5.
 
@@ -48,8 +56,7 @@ rightbar: blank
   -unless data['notes_s'].nil_or_empty?
     %p= data['notes_s']
 
-  -if (signup_count < data['capacity_s'].to_i)
-
+  -if error_message.nil_or_empty?
     %p.form-intro-text{style: "margin-top: 2em;"} Fields marked with a <span class="required-field-marker">*</span> are required. Your email address will be shared with the workshop facilitator.
     #error-message{style: 'display: none'}
 
@@ -143,10 +150,10 @@ rightbar: blank
     .form-group{style: 'margin-top: 45px;'}
       %button#btn-submit.btn.btn-default{type: "submit"} Submit
 
--if (signup_count < data['capacity_s'].to_i)
+-unless error_message.nil_or_empty?
   #thanks{:style=>"display: none;"}
     :markdown
-      Thank you for signing up to attend a Code.org K-5 workshop. You workshop facilitator will be in touch soon with more information. In the meantime...
+      Thank you for signing up to attend a Code.org K-5 workshop. Your workshop facilitator will be in touch soon with more information. In the meantime...
 
       **To prepare for your workshop:**
 
@@ -180,8 +187,7 @@ rightbar: blank
     -unless data['notes_s'].nil_or_empty?
       %p= data['notes_s']
 
--if (signup_count < data['capacity_s'].to_i)
-
+-unless error_message.nil_or_empty?
   :javascript
 
     $(document).ready(function() {

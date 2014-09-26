@@ -20,42 +20,61 @@ social:
 
 #promote-page
   %h1 Promote Computer Science
-  = view :promote_state_jump, state:state
-  #petition-section.section.clear
-    = view :petition
-  :javascript
-    petitionIncluded = true;
 
-  #stats-section.section.clear
-    %h2 What’s wrong with this picture? Share these stats.
-    = view :stats_carousel
+  %div{:id=>'us_content', :style=>'visibility: hidden'}
+    #petition-section.section.clear
+      = view :petition
+    :javascript
+      petitionIncluded = true;
 
-  #youtube-section.section.clear
-    %h2 Tell the world! Share the Code.org video.
-    = view :youtube_videos
+    #interactive-map.section.clear
+      %h2{:style=>"margin-top: 0px"} Choose a State
+      = view :interactive_map
 
-  #tools-section.section.clear
-    %h2 Tools to help you advocate locally
-    = view :promote_tools, state:nil
+    #tools-section.section.clear
+      %h2 Tools to help you advocate locally
+      = view :promote_tools, state:nil
 
-    #stateaction{:style=>'padding-left:30px'}
-      %a{:href=>"/action"} See where computer science counts towards high school graduation
+    #stats-section.section.clear
+      %h2 What’s wrong with this picture? Share these stats.
+      = view :stats_carousel
 
-  #quotes-section.section.clear
-    %h2 Leaders and trendsetters agree more students should learn computer science
-    = view :top_quotes
+  %div{:id=>'universal_content'}
+    #youtube-section.section.clear
+      %h2{:style=>'margin-top: 0px'} Tell the world! Share the Code.org video.
+      = view :youtube_videos
+
+      #stateaction{:style=>'padding-left:30px'}
+        %a{:href=>"/action"} See where computer science counts towards high school graduation
+
+    #quotes-section.section.clear
+      %h2 Leaders and trendsetters agree more students should learn computer science
+      = view :top_quotes
 
 = view 'popup_window.js'
 
 :javascript
   var petition;
   var promote;
+  $(document).ready(function() {
+    $('#us_content').hide();
+    $('#us_content').css("visibility", "visible");
+    $.ajax({
+      url: "/v2/client-location",
+      type: "get",
+    }).done(function(data) {
+      if (data.country_code === "US") {
+        $('#us_content').insertBefore($('#us_content-map').prev('#universal_content'));
+        $('#us_content').show();
+      } else {
+        $('#universal_content').insertBefore($('#universal_content').prev('#us_content'));
+        $('#us_content').show();
+      }
+    }).fail(function () { console.log("failed to load state data") });
 
-  $(document).ready()
-  {
     if (petitionIncluded)
       petition = new Petition();
 
     if (promoteIncluded)
       promote = new Promote();
-  }
+  });
