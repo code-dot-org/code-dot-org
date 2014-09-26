@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw this line using five blocks",
+    "instructions": "Draw this line by moving East 4 times.",
     "x": "100",
     "y": "200",
     "start_direction": "90",
