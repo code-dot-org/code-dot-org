@@ -42,7 +42,7 @@ social:
 
   #fullwidth1{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0"}
 
-  #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%;  pacity: 0"}
+  #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0"}
 
   #fullwidth3{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0"}
 
@@ -71,7 +71,7 @@ social:
             %h1.front-header-banner{style: "color:white; margin-top:0px"}= hoc_s(:front_header_banner)
             #joinus{style: "text-align:center"}
               %a{onclick: "return adjustScroll('hocsignupform')"}
-                %button.btn.btn-default{style: "font-size: 24px; font-weight: 500; width: 200px; height: 50px;"}
+                %button.btn.btn-default{style: "font-size: 24px; font-weight: 500; width: 180px; height: 50px;"}
                   =hoc_s(:front_join_us_button)
           %br/
           %br/
@@ -152,6 +152,11 @@ social:
     $("#fullwidth" + currentImage).fadeTo(2000, 0);
     $("#fullwidth" + nextImage ).fadeTo(2000, videoStarted ? 0.3 : 1);
     currentImage = nextImage;
+
+    if (videoStarted)
+      console.log("fading light to ", nextImage);
+    else
+      console.log("fading normal to ", nextImage);
   }
 
   $.ready()
@@ -168,7 +173,9 @@ social:
     $("#videodiv").fadeTo(500, 1);
     $("#leftbutton").fadeTo(500, 0);
 
-    videoStarted = true;
-    cycleImage();
+    $("#fullwidth" + currentImage).fadeTo(1000, 0.3);
+
+    //videoStarted = true;
+    //cycleImage();
     clearInterval(timerId);
   }
