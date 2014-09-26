@@ -93,8 +93,15 @@ class DashboardStudent
       :users__hashed_email___hashed_email,
       :users__gender___gender,
       :users__birthday___birthday,
-      :users__prize_earned___prize_earned
+      :users__prize_earned___prize_earned,
+      :users__total_lines___total_lines
     ]
+  end
+
+  def self.completed_levels(user_id)
+    DASHBOARD_DB[:user_levels].
+      where(user_id: user_id).
+      and("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}")
   end
 
   private
@@ -326,7 +333,8 @@ class DashboardSection
       where(section_id:@row[:id]).
       map{|row| row.merge({
         location:"/v2/users/#{row[:id]}",
-        age: DashboardStudent::birthday_to_age(row[:birthday])
+        age: DashboardStudent::birthday_to_age(row[:birthday]),
+        completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
       })}
   end
 
