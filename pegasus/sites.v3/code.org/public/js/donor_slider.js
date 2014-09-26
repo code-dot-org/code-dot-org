@@ -1,11 +1,10 @@
 $(document).ready(function() {
     var platinum = $(".platinum");
     var gold = $(".gold");
-    var badges = $(".badge");
 
-    var masterIndex = 0;
+    var masterIndex = 2;
     var combinedLength = platinum.length + gold.length;
-    var interval = 1000;
+    var interval = 8000;
     var timer = setInterval(setManager, interval);
 
     function setManager () {
@@ -25,32 +24,31 @@ $(document).ready(function() {
 
     function scrollBadges (items, index) {
         if (items.eq(index).attr("class") === "badge platinum") {
-            items.eq(index - 1).hide();
-            items.eq(index - 2).hide();
+            items.eq(index - 1).fadeOut("slow");
+            items.eq(index - 2).fadeOut("slow", function () {
+                items.eq(index).fadeIn("slow");
+                items.eq(index + 1).fadeIn("slow");
 
-            items.eq(index).show();
-            items.eq(index + 1).show();
-
-            if (masterIndex + 2 > platinum.length) {
-                masterIndex++;
-            } else {
-                masterIndex += 2;
-            }
+                if (masterIndex + 2 > platinum.length) {
+                    masterIndex++;
+                } else {
+                    masterIndex += 2;
+                }
+            });
         } else {
-            items.eq(index - 1).hide();
-            items.eq(index - 2).hide();
-            items.eq(index - 3).hide();
-
-            items.eq(index).show();
-            items.eq(index + 1).show();
-            items.eq(index + 2).show();
-            masterIndex += 3;
+            items.eq(index - 1).fadeOut("slow");
+            items.eq(index - 2).fadeOut("slow");
+            items.eq(index - 3).fadeOut("slow", function () {
+                items.eq(index).fadeIn("slow");
+                items.eq(index + 1).fadeIn("slow");
+                items.eq(index + 2).fadeIn("slow");
+                masterIndex += 3;
+            });
         }
     }
 
-    badges.hide();
     platinum.first().css("display", "inline-block");
-    platinum.eq(1).show();
+    platinum.eq(1).css("display", "inline-block");
 
     $('.badge').hover(function () { clearInterval(timer); }, function () { timer = setInterval(setManager, interval); });
 });
