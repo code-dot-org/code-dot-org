@@ -20,7 +20,7 @@ class HocHardwarePrizes2014
   def self.receipt()
   end
 
-  def self.process(data)
+  def self.process(data, last_processed_data)
     result = {}
     result['location_p'] = geocode_address(data['school_address_s']) unless data['school_address_s'].nil_or_empty?
     result

@@ -28,6 +28,9 @@ Free curriculum to teach high-school algebra and geometry concepts using compute
 ### [CS Unplugged](http://csunplugged.org/)
 Fun classroom exercises to teach computer science principles, no computers needed!
 
+### [Teach AP CS](http://teachapcs.com/)
+Downloads, guides, videos, and tools to help teach AP Computer Science.
+
 ## Bring Classes to Your School
 ### [Globaloria](http://www.globaloria.org/)
 Teach computer programming through game design - as a full-time class, an in-class module, or afterschool program.
@@ -37,6 +40,10 @@ Get mentored and placed into high school classes as a part-time teacher in a tea
 
 ### [AP Computer Science - with Amplify](https://users-mooc.amplify.com/)
 This online course (MOOC) is designed for high school students to learn AP Computer Science in an online classroom. The course is free, but additional support to the school offering it costs money.
+
+### [Teaching Kids Programming ](http://teachingkidsprogramming.org)
+Build the next generation of creators using free, open-source Java courseware.
+
 
 ## Platforms for Teaching Kids
 ### [Alice](http://www.alice.org/)
