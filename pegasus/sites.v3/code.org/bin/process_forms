@@ -2,7 +2,6 @@
 require_relative '../../../src/env'
 require 'cdo/hip_chat'
 require 'cdo/solr'
-require 'cdo/poste'
 require src_dir 'forms'
 
 SOLR = Solr::Server.new(host:CDO.solr_server) if CDO.solr_server
