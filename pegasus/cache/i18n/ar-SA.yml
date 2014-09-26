@@ -78,6 +78,8 @@
   i_am_a: "انا"
   never_spam: "نحن لن نزعجك"
   enter_country: "أدخل اسم البلد اذا كنت خارج الولايات المتحدة"
+  used_infrequent_updates: Only used for infrequent updates
+  privacy_practices_children: See our privacy practices for children
   petition_thankyou: "شكرا لك على توقيع العريضة"
   carousel_heading_international: "دروس تعليمية بلغتك"
   continue_learning_header: "مواصلة التعلم بعد ساعة واحدة من البرمجة"
@@ -219,6 +221,7 @@
   dashboard_sections_table_course: "الدورة"
   dashboard_sections_table_students: "الطلاب"
   dashboard_sections_table_code: "قسم البرمجة"
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: "إذا كنت ترغب في تقديم حسابات لطلابك بك، اختر
     <b>كلمة</b> أو <b>صورة</b> سرية لهذا القسم."
   dashboard_sections_secret_word: "يسمح لك تعيين كلمة سر لكل طالب <b>كلمة سرية</b>."
@@ -234,9 +237,12 @@
   dashboard_students_add_multiple: "اكتب أو إلصق أسماء الطلاب. واحداً في كل سطر:"
   dashboard_students_new_section: "قمت بإنشاء قسم جديد! الآن أضف طلابك باستخدام أزرار
     <b>إضافة الطالب</b> و <b>إضافة العديد من الطلاب</b> أعلاه."
+  dashboard_students_placeholder_name: Student Name
   dashboard_students_name: "الاسم"
   dashboard_students_age: "العمر"
   dashboard_students_gender: "الجنس"
+  dashboard_students_male: "ذكر"
+  dashboard_students_female: "أنثى"
   dashboard_students_secret: "سر"
   dashboard_students_password: "كلمة المرور"
   dashboard_students_username: "اسم المستخدم: %{student_username}"
@@ -262,5 +268,29 @@
     أو <b>صورة</b>."
   dashboard_students_print_page: "إطبع هذة الصفحة"
   dashboard_students_url: "عنوان URL"
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
-    here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
+    انقر هنا</a> للحصول على مستند الخصوصية الذي يمكن مشاركته أو طباعته لطلابك .
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: "المتسلسلة"
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: "الأخرى"
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
+  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
+    week alone:'
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
