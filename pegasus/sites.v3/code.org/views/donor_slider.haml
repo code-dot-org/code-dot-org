@@ -9,8 +9,8 @@
   - supporters.each do |supporter, name_s|
     - avatar_url = avatar_image_thumbnail(supporter[:name_s])
     %a{:href=>supporter[:url_s]}
-      %div{:class=>"badge "  + supporter[:level_s], :style=>"display: none"}
-        %div{:class=>"avatar"}
+      %div{:class=>"badge "  + supporter[:level_s], :style=>"display: none; width: 33.33%;"}
+        %div{:class=>"avatar", :style=>"float: left"}
           %img{:src=> avatar_url}
             %p{:class=>"label"}
               - if supporter[:level_s] != "platinum"
