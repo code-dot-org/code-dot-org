@@ -1,45 +1,56 @@
 $(document).ready(function() {
-    var items = $(".badge");
-    var index = 2;
-    var lastIndex = items.length - 1;
-    var interval = 8000;
-    var timer = setInterval(scrollBadges, interval);
+    var platinum = $(".platinum");
+    var gold = $(".gold");
+    var badges = $(".badge");
 
-    function scrollBadges () {
-        if (index === 0) {
-            items.eq(lastIndex).fadeOut("slow", function() {
-                $("#level_indicator").text("Platinum Supporters ($3,000,000+ contribution)");
-                items.eq(index).fadeIn("slow");
-                items.eq(index + 1).fadeIn("slow");
-                index += 2;
-            });
-        } else if (index === 2) {
-            items.eq(index - 1).fadeOut("fast");
-            items.eq(index - 2).fadeOut("fast", function() {
-                $("#level_indicator").text("Gold Supporters ($1,000,000+ contribution)");
-                items.eq(index).fadeIn("slow");
-                items.eq(index + 1).fadeIn("slow");
-                items.eq(index + 2).fadeIn("slow");
-                index += 3;
-            });
+    var masterIndex = 0;
+    var combinedLength = platinum.length + gold.length;
+    var interval = 1000;
+    var timer = setInterval(setManager, interval);
+
+    function setManager () {
+        if (masterIndex > combinedLength) {
+            masterIndex = 0;
+        }
+        if (masterIndex < platinum.length) {
+            gold.hide();
+            $("#level_indicator").text("Platinum Supporters ($3,000,000+ contribution)");
+            scrollBadges(platinum, masterIndex);
         } else {
-            items.eq(index - 1).fadeOut("fast");
-            items.eq(index - 2).fadeOut("fast");
-            items.eq(index - 3).fadeOut("fast", function() {
-                items.eq(index).fadeIn("slow");
-                items.eq(index + 1).fadeIn("slow");
-                items.eq(index + 2).fadeIn("slow");
-                if (index >= lastIndex) {
-                    index = 0;
-                } else {
-                    index += 3;
-                }
-            });
+            platinum.hide();
+            $("#level_indicator").text("Gold Supporters ($1,000,000+ contribution)");
+            scrollBadges(gold, masterIndex - platinum.length);
         }
     }
 
-    items.hide();
-    items.first().css("display", "inline-block");
-    items.eq(1).show();
-    items.hover(function () { clearInterval(timer); }, function () { timer = setInterval(scrollBadges, interval); });
+    function scrollBadges (items, index) {
+        if (items.eq(index).attr("class") === "badge platinum") {
+            items.eq(index - 1).hide();
+            items.eq(index - 2).hide();
+
+            items.eq(index).show();
+            items.eq(index + 1).show();
+
+            if (masterIndex + 2 > platinum.length) {
+                masterIndex++;
+            } else {
+                masterIndex += 2;
+            }
+        } else {
+            items.eq(index - 1).hide();
+            items.eq(index - 2).hide();
+            items.eq(index - 3).hide();
+
+            items.eq(index).show();
+            items.eq(index + 1).show();
+            items.eq(index + 2).show();
+            masterIndex += 3;
+        }
+    }
+
+    badges.hide();
+    platinum.first().css("display", "inline-block");
+    platinum.eq(1).show();
+
+    $('.badge').hover(function () { clearInterval(timer); }, function () { timer = setInterval(setManager, interval); });
 });
