@@ -1,62 +1,17 @@
+-supporters = DB[:cdo_donors].where(level_s:'platinum').or(level_s:'gold').order(:url_s)
+
 %link{href: "/css/donor_slider.css", rel: "stylesheet"}
 %script{:src=>"/js/donor_slider.js"}
 
 %div{:class=>'donor-slider'}
-  %h2{:id=>'level_indicator'} Platinum Donors
-  %a{:href=>'www.microsoft.com'}
-    %div{:class=>"badge"}
-      %div{:class=>"avatar"}
-        %img{:src=>"/images/people/thumbnails/microsoft-thumbnail.jpg"}
-  %a{:href=>'http://www.omidyar.com/'}
-    %div{:class=>"badge"}
-      %div{:class=>"avatar"}
-        %img{:src=>"/images/people/thumbnails/omidyar-network-thumbnail.jpg"}
-          %div{:class=>"label"}
-  %a{:href=>'http://www.partovi.org/'}
-    %div{:class=>"badge"}
-      %div{:class=>"avatar"}
-        %img{:src=>"/images/people/thumbnails/partovi-twins-thumbnail.jpg"}
-          %div{:class=>"label"}
-            %p
-              Ali Partovi and Hadi Partovi
-  %a{:href=>'http://en.wikipedia.org/wiki/Steve_Ballmer'}
-    %div{:class=>"badge"}
-      %div{:class=>"avatar"}
-        %img{:src=>"/images/people/thumbnails/steve-ballmer-thumbnail.jpg"}
-          %div{:class=>"label"}
-            %p
-              Ballmer Family Giving
-  %a{:href=>'http://en.wikipedia.org/wiki/Bill_Gates'}
-    %div{:class=>"badge"}
-      %div{:class=>"avatar"}
-        %img{:src=>"/images/people/thumbnails/bill-gates-thumbnail.jpg"}
-          %div{:class=>"label"}
-            %p Bill Gates
-  %a{:href=>'http://research.google.com/pubs/author3770.html'}
-    %div{:class=>"badge"}
-      %div{:class=>"avatar"}
-        %img{:src=>"/images/people/thumbnails/diane-tang-thumbnail.jpg"}
-          %div{:class=>"label"}
-            %p
-              Diane Tang & Ben Smith
-  %a{:href=>'http://en.wikipedia.org/wiki/Drew_Houston'}
-    %div{:class=>"badge"}
-      %div{:class=>"avatar"}
-        %img{:src=>"/images/people/thumbnails/drew-houston-thumbnail.jpg"}
-          %div{:class=>"label"}
-            %p
-              Drew Houston
-  %a{:href=>'http://www.linkedin.com/in/reidhoffman'}
-    %div{:class=>"badge"}
-      %div{:class=>"avatar"}
-        %img{:src=>"/images/people/thumbnails/reid-hoffman-thumbnail.jpg"}
-          %div{:class=>"label"}
-            %p
-              Reid Hoffman
-  %a{:href=>'http://www.salesforce.com/'}
-    %div{:class=>"badge"}
-      %div{:class=>"avatar"}
-        %img{:src=>"/images/people/thumbnails/salesforce-thumbnail.jpg"}
-          %div{:class=>"label"}
-            %p
-              Salesforce.com
+  %h2{:id=>'level_indicator'} Platinum Supporters ($3,000,000+ contribution)
+
+  - supporters.each do |supporter, name_s|
+    - avatar_url = avatar_image_thumbnail(supporter[:name_s])
+    %a{:href=>supporter[:url_s]}
+      %div{:class=>"badge "  + supporter[:level_s]}
+        %div{:class=>"avatar"}
+          %img{:src=> avatar_url}
+            %p{:class=>"label"}
+              - if supporter[:level_s] != "platinum"
+                =supporter[:name_s]
