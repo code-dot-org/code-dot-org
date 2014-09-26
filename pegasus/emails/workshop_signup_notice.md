@@ -5,7 +5,7 @@
 %>
 to: <%= format_email_address(workshop['email_s'], workshop['name_s']) %>
 from: '"Code.org" <info@code.org>'
-subject: "[Code.org] Workshop registration"
+subject: "[Code.org] Workshop registration - <%= workshop['dates'].map{|i| i['date_s']}.join(', ') %>"
 ---
 
 <%
