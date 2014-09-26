@@ -17,7 +17,8 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 ### OS X Mavericks
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
-1. `brew install mysql imagemagick`
+1. `brew bundle`
+  1. If it complains about an old version of `mysql`, run `brew unlink mysql` and run `brew bundle` again
 1. Set up MySQL
   1. Have launchd start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
   1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
