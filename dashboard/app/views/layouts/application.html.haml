@@ -1,5 +1,5 @@
 !!! 5
-- show_footer = ! (@share && phone?)
+- show_footer = !(@share && browser.mobile?)
 %html{:dir => locale_dir}
   %head
     %title= @page_title ? "#{t(:appname)} - #{@page_title}" : t(:appname)
@@ -20,7 +20,7 @@
       = render partial: 'layouts/age_interstitial'
 
     .wrapper
-      - if !phone? || !@level
+      - if !browser.mobile? || !@level
         = render partial: 'layouts/header'
       - page = yield
       - if @full_width
