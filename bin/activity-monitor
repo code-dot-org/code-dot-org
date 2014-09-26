@@ -89,7 +89,7 @@ class Monitor
       next if excluded_browser?(browser)
       yield i['level_id'].to_i,
             i['tag'].to_sym,
-            browser.ie? ? '#{browser.name} #{browser.version}' : browser.name,
+            browser.ie? ? "#{browser.name} #{browser.version}" : browser.name,
             i['locale']
     end
   end
@@ -128,7 +128,6 @@ def main()
   start = finish - (hours * OneHour)
 
     Monitor.collate(start:start, finish:finish).each_by_browser do |i|
-      next if ExcludedBrowsers.include?(i[:browser])
       next if ExcludedLevels.include?(i[:level])
 
       starts = i[:starts]
