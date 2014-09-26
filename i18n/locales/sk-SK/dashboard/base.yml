@@ -2,21 +2,21 @@
   activerecord:
     errors:
       messages:
-        blank: "is required"
+        blank: "sa vyžaduje"
     attributes:
       user:
-        name: "Display Name"
+        name: "Meno na obrazovke"
         email: "E-mail"
         username: "Používateľské meno"
         password: "Heslo"
         password_confirmation: "Potvrdenie hesla"
         current_password: "Aktuálne heslo"
         locale: "Jazyk"
-        age: "Age"
+        age: "Vek"
         gender: "Pohlavie"
         edit_header: "Upraviť podrobnosti účtu"
         error:
-          future: "can't be in the future"
+          future: "nemôže byť v buducnosti"
   hello: "Ahoj svet"
   welcome_back: 'Vitajte späť, %{name}'
   add_teacher_form:
@@ -24,44 +24,45 @@
       label: 'Pridať učiteľa zadaním kódu alebo e-mailovej adresy:'
       placeholder: "Kód (ABCDEF) alebo email (teacher@school.edu)"
     code:
-      label: 'Add a teacher by section code:'
-      placeholder: "Code (ABCDEF)"
+      label: 'Pridať učiteľa pomocou kódu sekcie:'
+      placeholder: "Kód (ABCDEF)"
     submit: "Pridať učiteľa"
   add_hint_form:
     placeholder: "Prosím zadajte Váš tip sem"
     submit: "Pridať tip"
   appname: "Code.org"
   stage: "Etapa"
+  stage_number: 'Stage %{number}'
   puzzle: "Úloha"
   trophies: "Trofeje"
   courses: "Kurzy"
   of: "z"
   more: "VIAC"
   less: "MENEJ"
-  try_hoc: 'Try the Hour of Code, click here >> '
-  try_k8intro: "Try our K-8 Intro to Computer Science Course (15-25 hours)"
-  k8intro: "K-8 Intro to Computer Science Course (15-25 hours)"
-  already_started: 'Already started? Resume here >> '
+  try_hoc: 'Vyskúšaj si Hodinu Kódovania tu >> '
+  try_k8intro: "Vyskúšaj si náš K-8 Úvod do Kurzu Počítačovej Vedy (15-25 hodín)"
+  k8intro: "K-8 Úvod do Kurzu Počítačovej Vedy (15-25 hours)"
+  already_started: 'Už si začal(a)? Pokračuj tu >> '
   demos: 'Admin: Všetky ukážky'
   continue: "Pokračovať"
-  prize: "prize"
+  prize: "trofej"
   more_info: "Viac info"
   auth:
     sign_in_with: 'Prihlásiť sa cez %{provider}'
     signed_in: "Prihlásený!"
-    signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
+    signed_out: 'Úspešné dhlásenie z <a href="%{url}">Code.org</a>.'
+    sign_out_of: 'Prihlásenie prebehlo cez %{provider}. <a href="%{url}">Kliknutím sem</a> sa odhlásiš z %{provider}.'
     already_signedup: "Už ste zaregistrovaní?"
     notyet_signedup: "Ešte ste sa nepridali?"
-    google_oauth2: "Google Account"
+    google_oauth2: "Google účet"
     twitter: "Twitter"
     facebook: "Facebook"
-    windowslive: "Microsoft Account"
+    windowslive: "Microsoft účet"
     forgot_password: "Zabudli ste heslo?"
-    need_confirmation: "Didn't receive confirmation instructions?"
-    need_unlock: "Didn't receive unlock instructions?"
+    need_confirmation: "Neprišli ti pokyny na potvrdenie?"
+    need_unlock: "Neprišli ti pokyny na odomknutie?"
   signup_form:
-    overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
+    overview_student: 'Vytvor si účet a sleduj ako postupuješ. Tvoj email sa používa hlavne na prihlásenie a na získanie zabudnutého hesla. Viac informácií nájdeš na našej stránke zásad <a href="http://code.org/privacy">Ochrany súkromia</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'You can <a target="_blank" href="http://learn.code.org">browse the various stages and puzzles</a>, but you will need to sign up to save your progress.'
     prizes_message: 'U.S. students who earn all %{num_trophies} concept trophies can select a variety of prizes including free Dropbox space, Skype credits, and downloadable games from Electronic Arts.'
@@ -77,7 +78,7 @@
     address_placeholder: "address, city, state, zip"
     gender: "Gender (optional)"
     birthday: "Birthday (optional)"
-    age: "Age"
+    age: "Vek"
     submit: "Sign up"
     teacher: "Are you a teacher?"
     valid_username: "Available!"
@@ -309,6 +310,8 @@
     classroom_activity: "Unplugged Activity"
   home:
     title: "Code Studio"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: 'Already registered? %{link}'
     student_reg_link: "Student Sign Up"
     teacher_reg_link: "Teacher Sign Up"
@@ -350,6 +353,7 @@
     feedback: "Provide feedback"
     translate: "Help us translate to your language"
     support: "Support"
+    support_url: "http://support.code.org"
     tos: "Terms"
     privacy: "Privacy Policy"
     secure: "Secure Version"
@@ -374,8 +378,14 @@
     autoplay_option: "Autoplay videos"
     download: "Download Video"
   compatability:
-    working: "We are working on support for your browser."
-    upgrade: "Please upgrade your browser."
+    working:
+      header: "We are working on support for your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
+      hide_this_warning: "Hide this warning"
+    upgrade:
+      header: "Please upgrade your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
+      button: "Take me to the list of supported browsers"
   slow_loading: "This is taking longer than usual..."
   try_reloading: "Try reloading the page"
   next_stage: "Finished! Continue to next stage"
@@ -386,7 +396,7 @@
     title: "Click 'Run' to see my program in action"
     bounce_og_title: "Check out my Bounce Game"
     flappy_og_title: "Check out my Flappy Game"
-    studio_og_title: "Check out my story"
+    studio_og_title: "Check out my Play Lab App"
     og_description: "I wrote the code myself with Code.org"
   builder:
     created: "You created a new script."
@@ -419,6 +429,7 @@
     feedback: "Give Feedback"
     report_bug: "Report Bug"
     support: "Get Help"
+    support_url: "//support.code.org"
   multi:
     wrong_title: "Incorrect answer"
     wrong_body: "The answer you've entered is not correct.  Please try again!"
@@ -439,7 +450,7 @@
     script:
       name:
         20-hour:
-          title: "K-8 Intro to Computer Science Course (15-25 hours)"
+          title: "K-8 Úvod do Kurzu Počítačovej Vedy (15-25 hours)"
           description: "This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages."
         Hour of Code:
           title: "Hodina kódovania"
@@ -460,7 +471,7 @@
           title: "Jigsaw"
           description: ""
         step:
-          title: "Step"
+          title: "Krok"
           description: ""
         sample_level_builder:
           title: "Sample Level Builder"

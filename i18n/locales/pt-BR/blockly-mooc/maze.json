@@ -32,6 +32,8 @@
   "ifelseTooltip":"Se houver um caminho na direção especificada, faça o primeiro bloco de ações. Caso contrário, faça o segundo bloco de ações.",
   "ifFlowerTooltip":"Se houver uma flor\/colmeia na direção especificada, faça algumas ações.",
   "ifelseFlowerTooltip":"Se houver uma flor\/colmeia na direção especificada, faça o primeiro bloco de ações. Caso contrário, faça o segundo bloco de ações.",
+  "insufficientHoney":"Você está usando os blocos certos, mas precisa fazer a quantidade certa de mel.",
+  "insufficientNectar":"Você está usando os blocos certos, mas precisa coletar a quantidade certa de néctar.",
   "make":"faça",
   "moveBackward":"mova para trás",
   "moveEastTooltip":"Mova-me um espaço para leste.",

@@ -32,6 +32,7 @@
     submit: "Hint toevoegen"
   appname: "Code.org"
   stage: "niveau"
+  stage_number: 'Stage %{number}'
   puzzle: "puzzel"
   trophies: "Medailles"
   courses: "cursussen"
@@ -309,6 +310,8 @@
     classroom_activity: "Losgekoppelde activiteit"
   home:
     title: "Code Studio"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: 'Al geregistreerd? %{link}'
     student_reg_link: "Registreer als leerling"
     teacher_reg_link: "Registreer als leraar"
@@ -349,6 +352,7 @@
     feedback: "Geef feedback"
     translate: "Help ons om te vertalen naar uw taal"
     support: "Ondersteuning"
+    support_url: "http://support.code.org"
     tos: "Voorwaarden"
     privacy: "Privacy Policy"
     secure: "Beveiligde versie"
@@ -373,8 +377,14 @@
     autoplay_option: "Video's automatisch afspelen"
     download: "Video downloaden"
   compatability:
-    working: "We zijn bezig om ondersteuning voor je browser toe te voegen."
-    upgrade: "Upgrade je browser."
+    working:
+      header: "We are working on support for your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
+      hide_this_warning: "Hide this warning"
+    upgrade:
+      header: "Please upgrade your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
+      button: "Take me to the list of supported browsers"
   slow_loading: "Dit duurt langer dan normaal..."
   try_reloading: "Probeer de pagina opnieuw te laden"
   next_stage: "Klaar! Verder naar het volgende niveau"
@@ -385,7 +395,7 @@
     title: "Klik op 'Uitvoeren' om mijn programma te draaien"
     bounce_og_title: "Bekijk mijn Stuiterspel"
     flappy_og_title: "Check mijn Flappy Game"
-    studio_og_title: "Lees mijn verhaal"
+    studio_og_title: "Check out my Play Lab App"
     og_description: "Ik heb met Code.org het programma zelf geschreven"
   builder:
     created: "Je hebt een nieuw script gemaakt."
@@ -418,6 +428,7 @@
     feedback: "Give Feedback"
     report_bug: "Report Bug"
     support: "Get Help"
+    support_url: "//support.code.org"
   multi:
     wrong_title: "Onjuist antwoord"
     wrong_body: 'Het antwoord dat je hebt ingevoerd is niet correct.  Probeer het opnieuw!'

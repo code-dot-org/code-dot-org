@@ -32,6 +32,7 @@
     submit: "Pridėk suflerį"
   appname: "Code.org"
   stage: "Etapas"
+  stage_number: 'Stage %{number}'
   puzzle: "Galvosūkis"
   trophies: "Laimėjimai"
   courses: "Kursai"
@@ -61,8 +62,8 @@
     need_confirmation: "Negavai patvirtinimo instrukcijų?"
     need_unlock: "Negavai atrakinimo instrukcijų?"
   signup_form:
-    overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
-    overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
+    overview_student: 'Užsiregistruok, kad galėtum sekti savo progresą. Tavo el. paštas bus naudojamas, kad galėtum prisijungti bei pasikeisti savo slaptažodį. Daugiau informacijos skaityk <a href="http://code.org/privacy">privatimo politikoje</a>.'
+    overview_teacher: 'Mokykite informatikos savo klasėje ir prisiregistruokite. <p/>Galėsite pridėti savo mokinius ir stebėti jų pažangą.'
     no_signup_message: 'Jūs galite <a target="_blank" href="http://learn.code.org"> peržiūrėti įvairius etapus bei galvosūkius </a>, bet Jums reikės prisiregistruoti, kad Jūsų veiksmai išsisaugotų.'
     prizes_message: 'JAV moksleiviai, kurie gauna visus %{num_trophies} laimėjimus, gali išsirinkti įvairius prizus, pavyzdžiui, papildomą vietą Dropbox svetainėje ir t. t.'
     teacher_educator_guide: "Peržiūrėti pedagogo vadovą"
@@ -86,7 +87,7 @@
     valid_password: "Galiojantis slaptažodis!"
     invalid_password: "Slaptažodį turi sudaryti mažiausiai 6 simboliai"
     mismatch_password: "Slaptažodžiai nesutampa"
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
+    student_terms: "Aš sutinku su Code.org<a href='http://code.org/tos'>sąlygomis</a>. Jeigu man yra mažiau nei 13 metų, aš patvirtinu, kad turiu savo tėvų ar globejų leidimą naudotis Code.org paslaugomis.<br/>Naudotojams, jaunesniems nei 13 metų, el. pašto adresai nėra išsaugomi taip, kad galėtume su jais susisiekti."
     teacher_terms: "Sutinku su Code.org<a href='http://code.org/tos'>taisyklėmis</a>."
     additional_information: "Mums reikia papildomos informacijos, kad galėtum prisiregistruoti."
   signin_form:
@@ -247,7 +248,7 @@
       section: 'Sekcija:'
       stages: 'Rodyti etapą(-us):'
       show_past: 'Rodyti ankstesnį mokinių aktyvumą (%{bullet_html}):'
-      levels_key: "Levels key"
+      levels_key: "Lygio raktas"
       perfect: "Puikiai išspręsta"
       completed: "Išspręsta, tačiau naudojant per daug blokų"
       tried: "Bandyta, bet neišspręsta"
@@ -279,7 +280,7 @@
       students: "Mokiniai"
       section_code: "Sekcijos kodas"
       add_section_code: "Pridėti mokinių sekcijos kodą"
-      secret: "Secret type"
+      secret: "Paslapties tipas"
       grade: "Klasė"
       course: "Kursas"
       rename: "pervadinti"
@@ -311,6 +312,8 @@
     classroom_activity: "Vaizdo įrašas mokytojams"
   home:
     title: "Studio Kodas"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: 'Jau užsiregistravote? %{link}'
     student_reg_link: "Mokinių registracija"
     teacher_reg_link: "Mokytojų registracija"
@@ -351,6 +354,7 @@
     feedback: "Pateikti atsiliepimus"
     translate: "Padėkite mums išversti į savo kalbą"
     support: "Parama"
+    support_url: "http://support.code.org"
     tos: "Terminai"
     privacy: "Privatumo politika"
     secure: "Saugi versija"
@@ -375,8 +379,14 @@
     autoplay_option: "Automatiškas vaizdo įrašų paleidimas"
     download: "Atsisiųsti vaizdo įrašą"
   compatability:
-    working: "Mes dirbame, kad būtų palaikoma Jūsų naršyklė."
-    upgrade: "Prašome atnaujinti savo naršyklę."
+    working:
+      header: "We are working on support for your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
+      hide_this_warning: "Hide this warning"
+    upgrade:
+      header: "Please upgrade your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
+      button: "Take me to the list of supported browsers"
   slow_loading: "Tai trunka ilgiau nei įprasta..."
   try_reloading: "Pabandykite perkrauti puslapį"
   next_stage: "Baigta! Pereikite į kitą etapą"
@@ -387,7 +397,7 @@
     title: "Nuspausk „Paleisti“, kad programa būtų įvykdyta"
     bounce_og_title: "Peržiūrėk mano Bounce žaidimą"
     flappy_og_title: "Išmėginkite žaidimą my Flappy Game"
-    studio_og_title: "Peržiūrėk mano istoriją"
+    studio_og_title: "Check out my Play Lab App"
     og_description: "Aš pats parašiau kodą Code.org svetainėje"
   builder:
     created: "Jūs sukūrėte naują scenarijų."
@@ -420,6 +430,7 @@
     feedback: "Pateikti atsiliepimus"
     report_bug: "Pranešti apie problemą"
     support: "Pagalba"
+    support_url: "//support.code.org"
   multi:
     wrong_title: "Neteisingas atsakymas"
     wrong_body: "Atsakymas, kurį įvedei, nėra teisingas. Pabandyk dar kartą!"
@@ -452,10 +463,10 @@
           title: "Įvykiai"
           description: ""
         builder:
-          title: "Builder"
+          title: "Kūrimas"
           description: ""
         flappy:
-          title: "Flappy Kodas"
+          title: "Flappy kodas"
           description: "Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy Code pamokėles!"
         jigsaw:
           title: "Dėlionės"
@@ -464,11 +475,11 @@
           title: "Žingsnis"
           description: ""
         sample_level_builder:
-          title: "Sample Level Builder"
+          title: "Pavyzdinis lygio kūrimas"
           description: ""
   age_interstitial:
     age: "Tavo amžius"
     header: "Paskyros informacijos atnaujinimas"
-    message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
+    message: 'Šiuo metu mes atnaujiname privatumo apsaugą, kad Jūsų duomenys būtų dar saugesni. Norėdami tai padaryti, mums reikia, kad visi naudotojai įvestų savo amžių.<br/>Kaip ir visuomet, code.org niekada neparduos ir neišduos Jūsų asmeninių duomenų tretiesiems asmenims.'
     sign_out: 'Jeigu nenori skelbti savo amžiaus, gali <a href="%{url}">atsijungti</a>.'
   zendesk_too_young_message: 'Atsiprašome, jaunesnio amžiaus naudotojai negali prisijungti prie mūsų palaikymo svetainės. Galite peržiūrėti <a href="http://support.code.org"> support.code.org</a> nesiregistruojant arba paklausti savo tėvų ar mokytojų, kad susisiektų su mumis už jus.'

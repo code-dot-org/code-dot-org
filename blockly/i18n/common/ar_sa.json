@@ -20,8 +20,8 @@
   "directionWestLetter": "W",
   "end": "نهاية",
   "emptyBlocksErrorMsg": "قطعة \" أكرر\" أو \" اذا \" تحتاج ان تحتوي على قطع اخرى داخلها من اجل العمل . تأكد من القطع الداخلية بحيث يجب ان تكون تناسب القطع المحتوية في الداخل .",
-  "emptyFunctionBlocksErrorMsg": "كتلة الدالة يحتاج إلى الكتل الأخرى داخله لكي يعمل.",
-  "extraTopBlocks": "لديك قطع إضافية لم ترفق على قطع الحدث.",
+  "emptyFunctionBlocksErrorMsg": "قطعة الدالة تحتاج إلى القطع الأخرى بداخله لكي يعمل.",
+  "extraTopBlocks": "أنت لم تقم بإرفاق القطع . هل قصدت إرفاق هذه القطع إلى قطعة \"عند التشغيل\"؟",
   "finalStage": "تهانينا! لقد اتممت المرحلة النهائية.",
   "finalStageTrophies": "تهانينا! لقد أكملت المرحلة النهائية وفزت بـ {numTrophies, plural, one {جائزة} other {# جوائز}}.",
   "finish": "إنهاء",
@@ -58,7 +58,7 @@
   "openWorkspace": "كيف يعمل ذلك",
   "totalNumLinesOfCodeWritten": "مجموع كل الاوقات: {numLines, plural, one {1 خط} other {# خطوط}}  من الكود البرمجي.",
   "tryAgain": "حاول مرة أخرى",
-  "hintRequest": "شاهد التلميح",
+  "hintRequest": "شاهد تلميحاً",
   "backToPreviousLevel": "الرجوع إلى المستوى السابق",
   "saveToGallery": "حفظ في معرض الصور الخاص بك",
   "savedToGallery": "حفظ في معرض الصور الخاص بك!",
@@ -72,9 +72,9 @@
   "wantToLearn": "هل تريد أن تتعلم البرمجة؟",
   "watchVideo": "شاهد الفيديو",
   "when": "عندما",
-  "whenRun": "عند التنفيذ",
+  "whenRun": "عند التشغيل",
   "tryHOC": "جرب \"Hour of Code\"",
   "signup": "سجل لمشاهدة مقدمة الدورة",
   "hintHeader": "إليك نصيحة:",
-  "genericFeedback": "راقب كيف انتهى، ثم حاول إصلاح البرنامج."
+  "genericFeedback": "انظر كيف انتهى الأمر، و حاول إصلاح برنامجك."
 }

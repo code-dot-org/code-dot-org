@@ -45,6 +45,7 @@
           'Studio: Create a Story': 'Studio: Create a Story'
           description_short: Course 1 is designed for early readers in the lower elementary
             grades.
+          'Artist: Loops': 'Künstler: Schleifen'
         course2:
           The Maze: Das Labyrinth
           Suzi: Suzi
@@ -56,46 +57,47 @@
           Bee Conditionals: Bee Conditionals
           Flappy: Flappy
           title: Kurs 2
-          Bee Loops: Bee Loops
-          Artist Functions: Artist Functions
-          The Artist Debugging: The Artist Debugging
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
+          Bee Loops: Biene Schleifen
+          Artist Functions: Künstler Funktionen
+          The Artist Debugging: Der Künstler Debuggen
+          Bee Debugging: Biene Debuggen
+          Bee Functions: Biene Funktionen
+          Maze Loops: Labyrinth Schleifen
           Graph Paper Programming: Millimeterpapier Programmierung
-          'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: Getting Loopy
-          Relay programming: Relay programming
+          'Real-life Algorithms: Paper Planes': 'Alltagsalgorithmen: Papierflieger'
+          Getting Loopy: Schöne Schleifen
+          Relay programming: Relais-Programmierung
           Conditionals: Bedingungen
-          Binary Bracelets: Binary Bracelets
+          Binary Bracelets: Binäre Armbänder
           The Big Event: Der große Event
-          Your Digital Footprint: Your Digital Footprint
+          Your Digital Footprint: Dein digitaler Fußabdruck
           description: Formerly known as a 2-3 course.
           'Maze: Sequence': 'Labyrinth: Abfolge'
           'Artist: Sequence': 'Künstler: Sequenz'
           'Maze: Loops': 'Labyrinth: Schleifen'
-          'Artist: Loops': 'Artist: Loops'
+          'Artist: Loops': 'Künstler: Schleifen'
           'Bee: Loops': 'Biene: Schleifen'
-          'Bee: Debugging': 'Bee: Debugging'
-          'Artist: Debugging': 'Artist: Debugging'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          description_short: Course 2 is designed for students who can read in the
-            lower and middle elementary grades.
-          'Artist: Sequence2': 'Artist: Sequence2'
-          'Maze: Sequence2': 'Maze: Sequence2'
+          'Bee: Debugging': 'Biene: Debuggen'
+          'Artist: Debugging': 'Künstler: Debuggen'
+          'Bee: Conditionals': 'Biene: Bedingungen'
+          description_short: Kurs 2 richtet sich an Schüler/-innen, die in der unteren
+            und mittleren Grundschule lesen können.
+          'Artist: Sequence2': 'Künstler: Sequenz2'
+          'Maze: Sequence2': 'Labyrinth: Sequenz'
+          'Artist: Nested Loops': 'Artist: Nested Loops'
         course3:
           The Maze: Das Labyrinth
-          'Studio: Create a Story': 'Studio: Create a Story'
+          'Studio: Create a Story': 'Play Lab: Erstelle eine Story'
           The Artist: Der Künstler
           title: Kurs 3
-          Artist Functions: Artist Functions
-          Artist For Loops: Artist For Loops
-          Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
-          Bee Nested Loops: Bee Nested Loops
-          Bee Debuggin: Bee Debuggin
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
+          Artist Functions: Künstler Funktionen
+          Artist For Loops: Künstler Für-Schleifen
+          Artist Nested Loops: Künstler verschachtelte Schleifen
+          Bee Conditionals: Biene Bedingungen
+          Bee Nested Loops: Biene verschachtelte Schleifen
+          Bee Debuggin: Biene Debuggen
+          Bee Debugging: Biene Debuggen
+          Bee Functions: Biene Funktionen
           Artist Functions with Params: Artist Functions with Params
           Bounce: Bounce
           Maze Conditionals: Maze Conditionals
@@ -114,38 +116,39 @@
           Artist: Artist
           'Artist: Functions': 'Artist: Functions'
           'Bee: Functions': 'Bee: Functions'
-          'Bee: Conditionals': 'Bee: Conditionals'
+          'Bee: Conditionals': 'Biene: Bedingungen'
           'Maze: Conditionals': 'Maze: Conditionals'
           'Artist: Nested Loops': 'Artist: Nested Loops'
           'Farmer: While Loops': 'Farmer: While Loops'
           'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Bee: Debugging': 'Bee: Debugging'
+          'Bee: Debugging': 'Biene: Debuggen'
           description_short: Students taking Course 3 should have already taken Course
             2.
           Maze2: Maze2
           Artist2: Artist2
           'Artist: Functions2': 'Artist: Functions2'
-          'Bee: Functions2': 'Bee: Functions2'
-          'Bee: Conditionals2': 'Bee: Conditionals2'
-          'Maze: Conditionals2': 'Maze: Conditionals2'
-          'Artist: Nested Loops2': 'Artist: Nested Loops2'
-          'Farmer: While Loops2': 'Farmer: While Loops2'
-          'Bee: Nested Loops2': 'Bee: Nested Loops2'
-          'Bee: Debugging2': 'Bee: Debugging2'
+          'Bee: Functions2': 'Biene: Funktionen2'
+          'Bee: Conditionals2': 'Biene: Bedingungen2'
+          'Maze: Conditionals2': 'Labyrinth: Bedingungen2'
+          'Artist: Nested Loops2': 'Künstler: verschachtelte Schleifen2'
+          'Farmer: While Loops2': 'Bauer: Während Schleifen2'
+          'Bee: Nested Loops2': 'Biene: verschachtelte Schleifen2'
+          'Bee: Debugging2': 'Biene: Debuggen2'
+          'Artist: Patterns': 'Artist: Patterns'
         msm:
-          title: Middle School Math
-          description: Private work in progress for Middle School Math.
+          title: Mittelschule Mathematik
+          description: Selbständige Arbeit für mittelschule Mathematik.
           Graph Paper Programming: Millimeterpapier Programmierung
-          Assessments: Assessments
-          Unit 1: Unit 1
-          Unit 2: Unit 2
+          Assessments: Prüfungen
+          Unit 1: Einheit 1
+          Unit 2: Einheit 2
         playlab:
           title: Play Lab
-          description: Create a story or make a game with Play Lab!
+          description: Erstelle eine Geschichte oder ein Spiel mit Play Lab!
           Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          description_short: Erstelle eine Geschichte oder ein Spiel mit Play Lab!
         artist:
-          title: Artist
-          description: Draw cool pictures and designs with the Artist!
-          Artist: Artist
-          description_short: Draw cool pictures and designs with the Artist!
+          title: Künstler
+          description: Zeichne coole Bilder und Designs mit dem Künstler!
+          Artist: Künstler
+          description_short: Zeichne coole Bilder und Designs mit dem Künstler!

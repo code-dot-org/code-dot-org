@@ -32,6 +32,7 @@
     submit: Agregar pista
   appname: Code.org
   stage: Etapa
+  stage_number: Stage %{number}
   puzzle: Puzzle
   trophies: Trofeos
   courses: Cursos
@@ -371,6 +372,8 @@
     classroom_activity: Actividad fuera de línea
   home:
     title: Code Studio
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: "¿Ya estás registrado? %{link}"
     student_reg_link: Estudiante Regístrate
     teacher_reg_link: Profesor Regístrate
@@ -427,6 +430,7 @@
     feedback: Enviar comentarios
     translate: Ayúdanos a traducir a tu idioma
     support: Soporte
+    support_url: http://support.code.org
     tos: Términos
     privacy: Política de Privacidad
     secure: Versión Segura
@@ -451,8 +455,22 @@
     autoplay_option: Reproducir videos automáticamente
     download: Descargar video
   compatability:
-    working: Estamos trabajando en dar soporte para tu navegador.
-    upgrade: Por favor actualiza su navegador.
+    working:
+      header: Estamos trabajando en dar soporte para tu navegador.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Your browser doesn't support all the features required, and you may experience
+        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
+        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
+        your browser to a supported version</a>.
+      hide_this_warning: Hide this warning
+    upgrade:
+      header: Por favor actualiza su navegador.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Unfortunately your browser doesn't support all the features required
+        to run this part of the site.<br/><br/>Install a browser on our supported
+        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
+        expect functionality to be broken.
+      button: Take me to the list of supported browsers
   slow_loading: Esto está tardando más tiempo de lo habitual...
   try_reloading: Intente recargar la página
   next_stage: "¡Acabado! Sigue a la siguiente etapa"
@@ -502,6 +520,7 @@
     feedback: Envía comentarios
     report_bug: Informar sobre un error
     support: Obtén ayuda
+    support_url: "//support.code.org"
   multi:
     wrong_title: Respuesta incorrecta
     wrong_body: La respuesta no es correcta. Por favor ¡intenta de nuevo!

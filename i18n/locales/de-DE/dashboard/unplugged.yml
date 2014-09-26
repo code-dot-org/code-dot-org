@@ -68,7 +68,7 @@
           - unplug11
         video: "Unplug11"
       UnplugHappyMaps:
-        title: "Happy Maps"
+        title: "Glücklich Karten"
         desc: "Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um einen Charakter mit einem einzigen Befehl durch ein Labyrinth zu steuern."
         video: "C1_happy_maps_unplugged"
       MoveIt:
@@ -81,31 +81,30 @@
         video: "C1_planting_seed"
       BuildingAFoundation:
         title: "Grundlagen aufbauen"
-        desc: "Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated."
+        desc: "Nur mit den gegebenen Materialien bauen die Schüler/-innen eine Struktur. Die Struktur muss eine gewisse Eigenheit besitzen(eine bestimmte Höhe erreichen oder ein Gewicht tragen). Dabei diskutieren sie was es heisst persistent zu sein wenn es kompliziert wird."
         video: "C1_building_foundation"
       GettingLoopy:
-        title: "Getting Loopy"
-        desc: "This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it."
+        title: "Schöne Schleifen"
+        desc: "Diese Lektion führt Schleifen (wiederholte Anweisungen) mithilfe einer Tanzaktivität ein. Die Schüler/-innen lernen eine simple Choreographie und werden dann angewiesen sie zu wiederholen."
         video: "C1_getting_loopy"
       RelayProgramming:
-        title: "Relay programming"
-        desc: |-
-          Students run a relay race, where they dash across the yard to write an algorithm based on a "Graph Paper Programming" image. They can only write one instruction at a time and if there's an error somewhere, they have to erase everything back to that point.
+        title: "Relais-Programmierung"
+        desc: 'Bei einem Staffellauf schreiben die Schüler/-innen einen Algorithmus, basierend auf einem "Millimeterpapier Programmierung" Bild. Sie können nur jeweils eine Anweisung pro Lauf schreiben. Machen sie einen Fehler, so müssen sie alles was seit dem Fehler geschrieben wurde wieder löschen.'
         video: "C2_relay_programming"
       Conditionals:
         title: "Bedingungen"
-        desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
+        desc: 'Als Einführung in die bedingten Anweisungen spielen die Schüler/-innen ein Kartenspiel, für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt" erstellen.'
         video: "C2_conditionals_with_cards"
       BigEvent:
         title: "Der große Event"
-        desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
+        desc: 'Die Schüler/-innen werden an das Konzept der "Ereignisse" herangeführt, auf welche der Computer die ganze Zeit wartet. Die Lehrperson drückt einen Knopf auf einer Papierferbedienung, worauf die Schüler/-innen entsprechend reagieren.'
         video: "C1_bigevent_unplugged"
       GoingPlacesSafely:
-        title: "Going Places Safely"
-        desc: "The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet."
+        title: "Sicher unterwegs"
+        desc: "Das Internet ist ein machtvolles Werkzeug, bietet aber einige gefährliche Orte. Die Lehrperson zeigt, wie man sicher ist während dem Surfen."
       GraphPaperProgramming:
         title: "Millimeterpapier Programmierung"
-        desc: "Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing."
+        desc: "Die Schüler/-innen notieren einen Algorithmus(ein Satz von Anweisungen), mittels eines vordefinierten Satz von Anweisungen, mit dem sie ihre Klassenkameraden anweisen ein Bild zu reproduzieren."
         video: "C2_graph_paper"
       PaperPlanes:
         title: 'Algorithmen aus dem wirklichen Leben: Papierflieger'
@@ -123,25 +122,25 @@
         desc: "Die Schüler benutzen die Schritte computerorentierten Denkens (Zerlegung, Musterabgleich, Zusammenfassung, Algorithmus) um herauszufinden, wie man ein Spiel spielt, das ihnen ohne Anleitung vorgelegt wurde."
         video: "C3_computational_thinking"
       FunctionalSuncatchers:
-        title: "Functional Suncatchers"
-        desc: "Students create an algorithm with variables and functions (pieces of code that you want to use over and over again) to create suncatchers using string and beads."
+        title: "Funktionale Sonnenfänger"
+        desc: "Die Schüler/-innen erstellen einen Algorithmus mit Variablen und Funktionen(wiederverwendbarer Code) um einen Sonnenfänger mit Faden und Perlen zu machen."
         video: "C3_functional_suncatchers"
       SongwritingParameters:
-        title: "Songwriting with Parameters"
-        desc: "Students use the concept of the chorus in a song to learn about passing parameters (which customize a function without having to rewrite the entire function)."
+        title: "Komponieren mit Parametern"
+        desc: "Der Chor soll den Schüler/-innen das Konzept der Übergabe von Parameter näherbringen (welche das Resultat einer Funktion beeinflussen)."
         video: "C3_songwriting_with_parameters"
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
-        desc: "This lesson calls out ways we use algorithms in our daily lives. As part of that, students will identify and write down the algorithm for a dice race game."
+        title: 'Algorithmen im Alltag: Würfel-Rennen'
+        desc: "Wir benutzten täglich Algorithmen, was diese Lektion zeigen soll. Dazu werden die Schüler/-innen werden dazu einen Algorithmus für ein Würfel-Rennen ermitteln und niederschreiben."
         video: "C3_dice_race"
       Internet:
         title: "Internet"
-        desc: "Students send messages representing various Internet transmission methods using pieces of paper."
+        desc: "Die Schüler/-innen verschicken Nachrichten, welche Internetübertragungen repräsentieren, mittels Papierschnipsel."
         video: "C3_internet"
       Crowdsourcing:
         title: "Crowdsourcing"
-        desc: "Student use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone."
+        desc: "Wir lernen Crowdsourcing kennen, eine Problemlösungstechnik oft gebraucht in der Informatik, um eine Aufgabe als Klasse effizienter zu lösen als alleine."
         video: "C3_crowdsourcing"
       DigitalCitizenship:
-        title: "Digital Citizenship"
-        desc: "Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online."
+        title: "Digitalen Staatsbürgerschaft"
+        desc: "Schüler entdecken den Unterschied zwischen privaten und persönlichen Informationen und lernen zu verstehen was sicher und was unsicher ist online zu teilen."

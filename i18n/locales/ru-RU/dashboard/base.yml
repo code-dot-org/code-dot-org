@@ -32,6 +32,7 @@
     submit: "Добавить подсказку"
   appname: "Code.org"
   stage: "Этап"
+  stage_number: 'Stage %{number}'
   puzzle: "Головоломка"
   trophies: "Кубки"
   courses: "Курсы"
@@ -304,6 +305,8 @@
     classroom_activity: "Отключить активность"
   home:
     title: "Code Studio"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: 'Уже зарегистрированы? %{link}'
     student_reg_link: "Регистрация для ученика"
     teacher_reg_link: "Регистрация для учителя"
@@ -344,6 +347,7 @@
     feedback: "Оставить отзыв"
     translate: "Помогите нам выполнить перевод на Ваш язык"
     support: "Поддержка"
+    support_url: "http://support.code.org"
     tos: "Условия"
     privacy: "Правила конфиденциальности"
     secure: "Защищенная версия"
@@ -368,8 +372,14 @@
     autoplay_option: "Автозапуск видео"
     download: "Скачать видео"
   compatability:
-    working: "Мы работаем над поддержкой для Вашего браузера."
-    upgrade: "Пожалуйста, обновите Ваш браузер."
+    working:
+      header: "We are working on support for your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
+      hide_this_warning: "Hide this warning"
+    upgrade:
+      header: "Please upgrade your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
+      button: "Take me to the list of supported browsers"
   slow_loading: "Это занимает больше времени, чем обычно..."
   try_reloading: "Попробуйте перезагрузить страницу"
   next_stage: "Закончил! Перейти к следующему этапу"
@@ -380,7 +390,7 @@
     title: "Нажмите кнопку «Run», чтобы увидеть мою программу в действии"
     bounce_og_title: "Check out my Bounce Game"
     flappy_og_title: "Проверь мои Flappy игру"
-    studio_og_title: "Посмотреть свою историю"
+    studio_og_title: "Check out my Play Lab App"
     og_description: 'Я сам написал код  на Code.org'
   builder:
     created: "Вы создали новый скрипт."
@@ -413,6 +423,7 @@
     feedback: "Give Feedback"
     report_bug: "Report Bug"
     support: "Get Help"
+    support_url: "//support.code.org"
   multi:
     wrong_title: "Неправильный ответ"
     wrong_body: 'Ответ, который вы ввели неправильный.  Пожалуйста, попробуйте еще раз!'

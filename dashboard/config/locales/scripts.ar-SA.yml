@@ -45,6 +45,7 @@
           'Studio: Create a Story': "مختبر اللعب: إنشاء قصة"
           description_short: "الدورة 1 مصممة للقراء الصغار في الصفوف الدنيا من المرحلة
             الابتدائية ."
+          'Artist: Loops': "الرسام : الحلقات"
         course2:
           The Maze: "المتاهة"
           Suzi: "سوزي"
@@ -87,6 +88,7 @@
             الابتدائية , الدنيا والمتوسطة."
           'Artist: Sequence2': "الرسام : التسلسل 2"
           'Maze: Sequence2': "المتاهة : التسلسل 2"
+          'Artist: Nested Loops': "الرسام : الحلقات المتداخلة"
         course3:
           The Maze: "المتاهة"
           'Studio: Create a Story': "مختبر اللعب : أنشئ قصة"
@@ -139,6 +141,7 @@
           'Farmer: While Loops2': "المزارع : حلقات بينما 2"
           'Bee: Nested Loops2': "النحلة : الحلقات المتداخلة 2"
           'Bee: Debugging2': "النحلة: تصحيح الأخطاء 2"
+          'Artist: Patterns': 'Artist: Patterns'
         msm:
           title: "مدرسة الرياضيات المتوسطة"
           description: "العمل الخاص في التقدم لمدرسة الرياضيات المتوسطة ."
