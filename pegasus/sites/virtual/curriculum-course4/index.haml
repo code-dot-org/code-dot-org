@@ -1,0 +1,11 @@
+---
+title: Curriculum for Course 4
+---
+
+%h1 Curriculum for Course 4
+
+-content = Course.new("course4")
+-content.get_lessons.each do |lesson|
+  %a{:href=>lesson.url}
+    Lesson #{lesson.number}: #{lesson.title}
+    %br
