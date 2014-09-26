@@ -17,7 +17,7 @@ The following teacher has signed up for one of your workshops:
 
 - Name: <%= name_s %>
 - Email address: [<%= email_s %>](<%= email_s %>)
-- Role: <%= (teacher_role_ss || []).join(', ') %>
+- Role: <%= ((teacher_role_ss || []) - ['Other']).concat(teacher_role_other_ss || []).sort.uniq.join(', ') %>
 - Tech experience: <%= teacher_tech_experience_level_s %>
 - School name: <%= school_name_s %>
 - School location: <%= school_location_s %>
