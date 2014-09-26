@@ -82,6 +82,13 @@ class Artist < Blockly
       <block type="draw_width_inline">
         <title name="WIDTH">1</title>
       </block>
+      <block type="draw_width">
+        <value name="WIDTH">
+          <block type="math_number">
+            <title name="NUM">1</title>
+          </block>
+        </value>
+      </block>
       <block type="draw_pen"></block>
     </category>
     <category name="Color">
@@ -142,6 +149,19 @@ class Artist < Blockly
       </block>
       <block type="controls_repeat_dropdown">
         <title name="TIMES" config="3-10">3</title>
+      </block>
+      <block type="controls_repeat_ext">
+        <value name="TIMES"></value>
+        <statement name="DO"></statement>
+      </block>
+    </category>
+    <category name="Logic">
+      <block type="controls_if" inline="false">
+        <value name="IF0">
+          <block type="logic_compare" inline="true">
+            <title name="OP">EQ</title>
+          </block>
+        </value>
       </block>
     </category>
     <category name="Math">
