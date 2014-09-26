@@ -81,7 +81,7 @@
           <title name="VALUE">90</title>
         </block>
         <block type="controls_repeat">
-          <title name="TIMES">6</title>
+          <title name="TIMES">???</title>
         </block>
       </xml>
     </toolbox_blocks>
