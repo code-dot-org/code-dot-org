@@ -9,7 +9,7 @@
   - supporters.each do |supporter, name_s|
     - avatar_url = avatar_image_thumbnail(supporter[:name_s])
     %a{:href=>supporter[:url_s]}
-      %div{:class=>"badge "  + supporter[:level_s]}
+      %div{:class=>"badge "  + supporter[:level_s], :style=>"display: none"}
         %div{:class=>"avatar"}
           %img{:src=> avatar_url}
             %p{:class=>"label"}
