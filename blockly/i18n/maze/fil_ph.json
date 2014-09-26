@@ -32,6 +32,8 @@
   "ifelseTooltip": "Kung meron daan sa nasabing direksyon, kung gayon ay gawin ang unang bloke ng mga aksyon. Kung hindi, gawin ang pangalawang bloke ng mga aksyon.",
   "ifFlowerTooltip": "If there is a flower/honeycomb in the specified direction, then do some actions.",
   "ifelseFlowerTooltip": "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions.",
+  "insufficientHoney": "You're using all the right blocks, but you need to make the right amount of honey.",
+  "insufficientNectar": "You're using all the right blocks, but you need to collect the right amount of nectar.",
   "make": "make",
   "moveBackward": "move backward",
   "moveEastTooltip": "Igalaw ako pasilangan ng isang puwang.",
