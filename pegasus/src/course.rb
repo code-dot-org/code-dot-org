@@ -3,9 +3,9 @@ Unit = Struct.new(:number, :title, :description)
 Lesson = Struct.new(:number, :url, :title, :description, :path)
 
 class Course
-  PRODUCTION_COURSES = %w(course1 course2 course3 msm mss)
-  COURSES_WITHOUT_UNIT_NUMBERS = %w(course1 course2 course3 msm)
-  COURSES_WITH_PDF_GENERATION = %w(course1 course2 course3 msm csp)
+  PRODUCTION_COURSES = %w(course1 course2 course3 course4 msm mss)
+  COURSES_WITHOUT_UNIT_NUMBERS = %w(course1 course2 course3 course4 msm)
+  COURSES_WITH_PDF_GENERATION = %w(course1 course2 course3 course4 msm csp)
 
   def initialize(kind)
     @kind = kind

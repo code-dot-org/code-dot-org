@@ -31,6 +31,7 @@ GEM
     builder (3.1.4)
     celluloid (0.15.2)
       timers (~> 1.1.0)
+    chronic (0.10.2)
     daemons (1.1.9)
     data_mapper (1.2.0)
       dm-aggregates (~> 1.2.0)
@@ -190,6 +191,7 @@ DEPENDENCIES
   activesupport (~> 4.0.3)
   aws-s3
   bcrypt
+  chronic (~> 0.10.2)
   data_mapper
   dm-mysql-adapter
   geocoder
@@ -208,7 +210,7 @@ DEPENDENCIES
   rack (~> 1.5)
   rack-contrib (~> 1.1)
   rake (~> 10.3)
-  redcarpet (~> 3.1)
+  redcarpet (~> 3.1.1)
   rerun
   rmagick
   sequel (~> 4.10.0)
