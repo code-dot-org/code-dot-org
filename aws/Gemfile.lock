@@ -5,6 +5,7 @@ GEM
       builder
       mime-types
       xml-simple
+    browser (0.7.0)
     builder (3.1.4)
     le (2.2.8)
     mail (2.5.4)
@@ -19,7 +20,6 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    user_agent_parser (2.1.5)
     xml-simple (1.1.4)
 
 PLATFORMS
@@ -27,10 +27,10 @@ PLATFORMS
 
 DEPENDENCIES
   aws-s3
+  browser
   le (~> 2.2)
   mail
   os
   rack
   rake
   redcarpet
-  user_agent_parser

@@ -105,3 +105,4 @@ gem 'aws-s3'
 
 gem 'font-awesome-rails'
 gem 'sequel', '~> 4.10.0'
+gem 'browser'

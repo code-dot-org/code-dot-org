@@ -2,10 +2,10 @@
 -# if !support_primary_locale?
   #warning-banner
     = link_to "Non-English translations coming soon. Help us translate!", 'http://eepurl.com/Im_In'
-- if ie_version === 8 || firefox_version.between?(3, 9) || safari_version.between?(1, 5)
-  = render partial: 'layouts/partially_supported_browser'
-- elsif ie_version > 0 && ie_version < 8
+- if browser.unsupported?
   = render partial: 'layouts/unsupported_browser'
+- elsif !browser.modern?
+  = render partial: 'layouts/partially_supported_browser'
 
 - script = @script || Script.twenty_hour_script
 
