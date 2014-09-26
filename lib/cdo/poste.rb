@@ -55,7 +55,7 @@ module Poste2
     message = DB[:poste_messages].where(name:message_name.to_s.strip).first
     raise ArgumentError, "No #{message_name} message found." unless message
 
-    delivery_id = DB[:poste_deliveries].insert({
+    DB[:poste_deliveries].insert({
       created_at:DateTime.now,
       created_ip:recipient[:ip_address],
       contact_id:recipient[:id],
@@ -63,8 +63,6 @@ module Poste2
       message_id:message[:id],
       params:(params||{}).to_json,
     })
-
-    {id:delivery_id, message:message, recipient:recipient, params:params}
   end
 
 end
