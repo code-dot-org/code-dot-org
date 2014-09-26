@@ -8,7 +8,7 @@
         
       #language-dropdown.hidden-xs{style: "visibility: hidden;"}
         = view :language_dropdown
-      #right.visible-lg.visible-sm
+      #right.hidden-xs
         %a.headerlink{href:hoc_uri('/resources')}= hoc_s(:header_menu_resources)
         - if request.path == "/"
           %a.headerlink{href:"#", onclick:"return adjustScroll('faqs')"}= hoc_s(:header_menu_faq)

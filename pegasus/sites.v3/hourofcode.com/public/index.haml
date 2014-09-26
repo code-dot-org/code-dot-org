@@ -56,16 +56,16 @@ social:
     .container
       .row
         .col-sm-8.col-xs-12
-          #leftbox{style: "position:relative;"}
+          #leftbox{style: "position:relative; margin-top:50px; padding-bottom:20px; /*background-color:rgba(0,0,0,0.5);*/"}
 
-            #leftvideo{style: "/*position:absolute; left:0; top:0; */ width: 100%; margin-top:50px"}
+            #leftvideo{style: "/*position:absolute; left:0; top:0; */ width: 100%; /* margin-top:50px*/"}
               = view :index_video
-              %br/
-              %br/
+              -#%br/
+              -#%br/
               %div{style:"clear:both"}
-            #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; margin-top:100px; width:100%"}
-              -#%h1.front-header-banner{style: "color:white; margin-bottom:10px"} &nbsp;
-              %img{src: "images/youtube-play-button.png", width: "150", onclick: "return startVideo();"}
+            #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; /*margin-top:100px; */ width:100%"}
+              %h1.front-header-banner{style: "color:white; margin-top: 0px; margin-bottom:10px; padding:20px"} Watch the new video
+              %img{src: "images/play-button.png", width: "150", onclick: "return startVideo();"}
         .col-sm-4.col-xs-12
           #textbacking{style: "color:white; text-align: center; background-color:rgba(0,0,0,0.5); margin-top:50px; padding: 20px"}
             %h1.front-header-banner{style: "color:white; margin-top:0px"}= hoc_s(:front_header_banner)
@@ -79,14 +79,25 @@ social:
       %div{style:"clear:both"}
     
 
+%br/
+%br/
+
 .container
+
+  #description.row
+    .col-xs-1
+      &nbsp;
+    .col-xs-10{style: "text-align: center; font-size: 24px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
+      The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. No experience needed. 
+      %b Ages 4 to 104.
+
   .row
     .col-xs-12
       %div{style: 'text-align: center; margin: 3em 0;'}
         %h2= I18n.t(:stats_hoc_2013_heading)
 
   .row#infotop{style: "/*margin: 0 auto; width: 900px; */ font-weight: 500; font-size: 16px; color: rgb(26, 172, 186)"}
-    .col-xs-6.col-sm-4{style: "text-align:center; height:"}
+    .col-xs-6.col-sm-4{style: "text-align:center;"}
       %p It was the fastest to reach 15 million users
       %img{src: "/images/stats-info1.jpg", style: "width: 100%"}
 
@@ -119,6 +130,25 @@ social:
   #map.row
     .col-xs-12
       =view :map
+
+  %br/
+  %br/
+  %br/
+  #calltoaction.row
+    .col-xs-10{style: "text-align: left; font-size: 18px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
+      %p
+        The Hour of Code is a global event happening on December 8 in which every kid in the world gets to try programming for the first time.
+  #calltoaction.row
+    .col-xs-10{style: "text-align: left; font-size: 18px; line-height:30px; font-weight: 500;/* color: rgb(26,172,186); */ padding-left:100px"}
+      %p
+        %b Teacher?  
+        Sign up using this form.
+      %p
+        %b Parent? 
+        Tell your school to fill out this form.
+      %p
+        %b Student?  
+        Tell yo mama to fill out this form.
 
   #signupform.row
     .col-xs-12.col-sm-9.col-md-8
@@ -168,14 +198,17 @@ social:
 
   function startVideo()
   {
-    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+    if (videoStarted)
+      return;
 
-    $("#videodiv").fadeTo(500, 1);
-    $("#leftbutton").fadeTo(500, 0);
+    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/PSF8caHgQc4?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+
+    $("#videodiv").fadeTo(1000, 1);
+    $("#leftbutton").fadeTo(500, 0).remove();
 
     $("#fullwidth" + currentImage).fadeTo(1000, 0.3);
 
-    //videoStarted = true;
+    videoStarted = true;
     //cycleImage();
     clearInterval(timerId);
   }
