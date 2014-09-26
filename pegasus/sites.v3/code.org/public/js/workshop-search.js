@@ -48,8 +48,6 @@ function loadWorkshops() {
             function (e) {
               info_window.setContent(this.get('infowindow_content'));
               info_window.open(gmap, this);
-              gmap.setZoom(9);
-              gmap.setCenter(markers[hash].getPosition());
             });
         }
         else {
