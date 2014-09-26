@@ -29,16 +29,20 @@ gem 'dm-mysql-adapter'
 gem 'aws-s3'
 gem 'bcrypt'
 gem 'chronic', '~> 0.10.2'
+gem 'os'
 
 group :development do
   gem 'rerun'
+end
+
+group :development, :test do
+  gem 'pdf-reader'
 end
 
 group :staging do
 end
 
 group :test do
-  gem 'pdf-reader'
 end
 
 group :production do
