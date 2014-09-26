@@ -1,7 +1,4 @@
 module BrowsersHelper
-  def safari?(agent = request.user_agent)
-    return true if agent =~ /Safari/
-  end
 
   def mobile?(agent = request.user_agent)
     return true if agent =~ /\b(iPad|urbanpad)\b/
@@ -27,17 +24,28 @@ module BrowsersHelper
     false
   end
 
-  # Returns ie version or 0 if not ie
+  # Returns ie version or 0 if not ie (note: IE11 removes MSIE from the UA string and will have ie_version=0)
   def ie_version
-    browser = request.user_agent
-    match = /MSIE (\d.\d*)/.match(browser)
+    match = /MSIE (\d.\d*)/.match(request.user_agent)
     match ? match[1].to_i : 0
   end
 
-  # Returns Chrome version or 0 if not Chrome
+  # Returns Chrome major version or 0 if not Chrome
   def chrome_version
-    browser = request.user_agent
-    match = /Chrome\/(\d+)\./.match(browser)
+    match = /Chrome\/(\d+)\./.match(request.user_agent)
+    match ? match[1].to_i : 0
+  end
+
+  # Return Firefox major version or 0 if not Firefox
+  def firefox_version
+    match = /Firefox\/(\d+)\./.match(request.user_agent)
+    match ? match[1].to_i : 0
+  end
+
+  # Returns Safari major version or 0 if not Safari
+  def safari_version(agent = request.user_agent)
+    return 0 unless chrome_version == 0 && agent =~ /Safari/
+    match = /Version\/(\d+)\./.match(agent)
     match ? match[1].to_i : 0
   end
 end
