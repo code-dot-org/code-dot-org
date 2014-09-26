@@ -140,13 +140,13 @@ class DashboardSection
     @row = row
   end
 
-  VALID_LOGIN_TYPES = [I18n.t('dashboard_login_word'), I18n.t('dashboard_login_picture'), I18n.t('dashboard_login_none')]
+  VALID_LOGIN_TYPES = %w(word picture none)
 
   def self.valid_login_type?(login_type)
     VALID_LOGIN_TYPES.include? login_type
   end
 
-  VALID_GRADES = [I18n.t('dashboard_grade_k')] + (1..12).collect(&:to_s) + [I18n.t('dashboard_grade_other')]
+  VALID_GRADES = ['K'] + (1..12).collect(&:to_s) + ['Other']
 
   def self.valid_grade?(grade)
     VALID_GRADES.include? grade
