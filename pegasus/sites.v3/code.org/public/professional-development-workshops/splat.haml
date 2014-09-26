@@ -9,6 +9,9 @@ rightbar: blank
 - data = form.data
 - signup_count = DB[:forms].where(kind:'ProfessionalDevelopmentWorkshopSignup').and(parent_id:workshop_id).count
 
+-if first_date = data['dates'].first
+  -first_date = Chronic.parse(first_date['date_s'] + ' ' + first_date['start_time_s'])
+
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
@@ -23,9 +26,9 @@ rightbar: blank
 
 %form#affiliate-workshop-signup-form{role: "form", onsubmit: "event.preventDefault(); affiliateWorkshopSignupFormSubmit();"}
 
-  -if (signup_count >= data['capacity_s'].to_i)
+  -if (signup_count >= data['capacity_s'].to_i) || (first_date < Time.now)
     %div{class: "alert alert-danger", role: "alert"}
-      This workshop is full. Please choose another one or
+      This workshop is no longer accepting signups. Please choose another one or
       %a{href: "https://docs.google.com/a/code.org/forms/d/1QoWzKV5n2Fxx-W90LmmMWxY7qndMo1IE0QWZcxY9OTI/viewform"} Sign up
       to be notified when workshops near you are announced.
 
@@ -48,7 +51,7 @@ rightbar: blank
   -unless data['notes_s'].nil_or_empty?
     %p= data['notes_s']
 
-  -if (signup_count < data['capacity_s'].to_i)
+  -if (signup_count < data['capacity_s'].to_i) && (first_date >= Time.now)
 
     %p.form-intro-text{style: "margin-top: 2em;"} Fields marked with a <span class="required-field-marker">*</span> are required. Your email address will be shared with the workshop facilitator.
     #error-message{style: 'display: none'}
@@ -146,7 +149,7 @@ rightbar: blank
     .form-group{style: 'margin-top: 45px;'}
       %button#btn-submit.btn.btn-default{type: "submit"} Submit
 
--if (signup_count < data['capacity_s'].to_i)
+-if (signup_count < data['capacity_s'].to_i) && (first_date >= Time.now)
   #thanks{:style=>"display: none;"}
     :markdown
       Thank you for signing up to attend a Code.org K-5 workshop. Your workshop facilitator will be in touch soon with more information. In the meantime...
@@ -183,7 +186,7 @@ rightbar: blank
     -unless data['notes_s'].nil_or_empty?
       %p= data['notes_s']
 
--if (signup_count < data['capacity_s'].to_i)
+-if (signup_count < data['capacity_s'].to_i) && (first_date >= Time.now)
 
   :javascript
 
