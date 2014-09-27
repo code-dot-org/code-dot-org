@@ -6,6 +6,7 @@
 %link{rel: "stylesheet", type: "text/css", href: "/css/ee_form.css"}/
 
 %form#company_profile
+  %input{name:"logo_path_s", type:"hidden", value:data['logo_path_s']}
   %table
     -if secret
       %tr
