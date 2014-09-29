@@ -129,4 +129,8 @@ XML
     end
     xml.serialize(save_with: XML_OPTIONS).gsub("\n", '').strip
   end
+
+  def self.is_k1?
+    return is_k1 === 'true'
+  end
 end
