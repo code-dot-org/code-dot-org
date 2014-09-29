@@ -23,31 +23,6 @@ Ability and willingness to travel up to 25% of the time is required.
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Computer Science Principles (CSP) Curriculum Writer (Chicago preferred)
-
-**Job Summary:** 
-
-Code.org is looking for enthusiastic computer science curriculum writers to help develop Code.org’s Computer Science (CS) Principles Curriculum for pilot delivery in the Spring/Summer of 2015. The ideal candidate is a former or current high school computer science teacher or has experience teaching computer science at the high school level. The core work of the position requires collaborating closely with a small team to conceive and produce all facets of a CS Principles curriculum. Full-time or part-time 1-year contract with assignments scaled appropriately.
-
-**Experience/skills:**
-
-- Must be able to produce written work (curriculum/lesson plans) on a deadline.
-- Curriculum writing / activity design experience
-- Proficient writing / communication skills in English
-- Recent Computer Science Teaching experience (or H.S. Teaching Experience in a STEM field)
-- B.A. or M.A./M.S. in Computer Science Degree B.A. or  M.A.
-- Experience/familiarity with the CS Principles Framework
-- Experience/familiarity with Exploring Computer Science curriculum/PD
-- Web Programming / Development skills or experience
-
-[Click here for full job description.](https://www.dropbox.com/s/vkx2li2wxk7edij/CSP%20Curriculum%20Writer%20Job%20Description.pdf?dl=0 "CSP Curriculum Writer Job Description")
-
-Must be able to travel roughly once every 4-6 weeks to Chicago (mostly, but other U.S. destinations are possible) for 1-2 day meeting, with reasonable travel expenses to be paid by Code.org and must be able to attend (in person or video conference) weekly 2-hour meetings on a regular schedule.
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-No benefit package.
-
 ## State Policy Intern (Seattle area)
 
 **Job Summary:** 
@@ -63,7 +38,7 @@ Code.org is recruiting a State Policy Intern to support our state-by-state advoc
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Development/Marketing Assistant (Seattle area)
+## Fundraising/Marketing Assistant (Seattle area)
 
 **Job Summary:** 
 
