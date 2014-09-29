@@ -1,6 +1,15 @@
 .row#lesson
   .span9#heading
     %h3.whitetext= data_t_suffix('script.name', current_user.primary_script.name, "title")
+  .span3#heading{style: 'text-align: right;'}
+    %p
+      .btn.btn-primary
+        %i.fa.fa-rocket
+        Make an App
+    %p
+      .btn.btn-primary
+        %i.fa.fa-pencil
+        Draw Something
 
 .row#stats
   .span12#rightside

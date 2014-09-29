@@ -24,6 +24,9 @@
                 - count = game_script_levels.count
                 - game_levels = current_user ? current_user.levels_from_script(script, @game.id, @stage) : game_script_levels
                 - multiple_puzzles = game_levels.count > 1
+                - is_k1 = (@level && @level.is_k1) || (script.name == "course1")
+                - playlab_freeplay_url = script_stage_script_level_url(*is_k1 ? ['course1', 16, 6] : ['playlab', 1, 10])
+                - artist_freeplay_url = script_stage_script_level_url(*is_k1 ? ['course1', 18, 10] : ['artist', 1, 10])
 
                 .header_text
                   = "#{@script_level.stage_position_str}#{multiple_puzzles || @stage ? ':' : ''}" if script.multiple_games?
@@ -70,9 +73,9 @@
                       = t('nav.header.sign_in_to_save')
                 - if script.twenty_hour? || script.stages.count > 1
                   .header_separator
-                  %a.level_highlight.level_undone.level_free_play{title: t('nav.header.free_play.playlab'), href: script_stage_script_level_url('playlab', 1, 10)}
+                  %a.header_status_bar.level_free_play{title: t('nav.header.free_play.playlab'), href: playlab_freeplay_url}
                     %i.fa.fa-rocket
-                  %a.level_highlight.level_undone.level_free_play{title: t('nav.header.free_play.artist'), href: script_stage_script_level_url('artist', 1, 10)}
+                  %a.header_status_bar.level_free_play{title: t('nav.header.free_play.artist'), href: artist_freeplay_url}
                     %i.fa.fa-pencil
                   %a.header_popup_link{href: "#", onclick: "return handlePopupClick(false);"}
                     .header_popup_link_glyph
