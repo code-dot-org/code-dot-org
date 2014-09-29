@@ -13,9 +13,6 @@
 
     .row
       .span12
-        - is_k1 = current_user.primary_script && current_user.primary_script.is_k1?
-        - playlab_freeplay_url = script_stage_script_level_url(*is_k1 ? ['course1', 16, 6] : ['playlab', 1, 10])
-        - artist_freeplay_url = script_stage_script_level_url(*is_k1 ? ['course1', 18, 10] : ['artist', 1, 10])
         - if current_user.primary_script
           %h4 #{t('home.student_progress')}:
           - if current_user.primary_script.trophies?
@@ -26,16 +23,6 @@
             = render partial: 'shared/student_continue', locals: { include_finished: true, script: current_user.primary_script }
             - if !current_user.teacher? && current_user.teachers.length == 0
               = link_to t('add_teacher_form.submit'), "#section_code"
-        %h4 Free play:
-        %div.padtopbottom
-          = link_to playlab_freeplay_url do
-            .btn.btn-primary{style: 'font-weight: normal;'}
-              %i.fa.fa-rocket
-              Make an App
-          = link_to artist_freeplay_url do
-            .btn.btn-primary{style: 'font-weight: normal;'}
-              %i.fa.fa-pencil
-              Draw Something
         - unless current_user.gallery_activities.empty?
           %h4 #{t('home.gallery')}:
           = render partial: 'home/gallery'
