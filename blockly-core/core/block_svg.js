@@ -45,41 +45,11 @@ Blockly.BlockSvg = function(block) {
   };
   // Create core elements for the block.
   this.svgGroup_ = Blockly.createSvgElement('g', options, null);
-  var framed = this.block_.isFramed();
-  if (framed) {
-    // create two frame rects.  the first is light gray and unclipped. the second
-    // is a darker gray, and clipped to be only the top FRAME_HEADER_HEIGHT pixels
-    var clip = Blockly.createSvgElement('clipPath', {
-      id: 'frameClip' + block.id
-    }, this.svgGroup_);
-    this.frameClipRect_ = Blockly.createSvgElement('rect', {
-      x: -FRAME_MARGIN_SIDE,
-      y: -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT),
-      height: FRAME_HEADER_HEIGHT,
-      width: '100%'
-    }, clip);
-    this.frameBase_ = Blockly.createSvgElement('rect', {
-      x: -FRAME_MARGIN_SIDE,
-      y: -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT),
-      fill: '#dddddd',
-      stroke: '#aaaaaa',
-      rx: 15,
-      ry:15
-    }, this.svgGroup_);
-    this.frameHeader_ = Blockly.createSvgElement('rect', {
-      x: -FRAME_MARGIN_SIDE,
-      y: -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT),
-      fill: '#aaaaaa',
-      rx: 15,
-      ry:15,
-      'clip-path': 'url(#frameClip' + block.id + ')'
-    }, this.svgGroup_);
-    this.frameText_ = Blockly.createSvgElement('text', {
-      'class': 'blocklyText',
-      style: 'font-size: 12pt'
-    }, this.svgGroup_);
-    this.frameText_.appendChild(document.createTextNode(Blockly.Msg.FUNCTION_HEADER));
-  }
+
+  this.initChildren();
+};
+
+Blockly.BlockSvg.prototype.initChildren = function () {
   this.svgPathDark_ = Blockly.createSvgElement('path',
       {'class': 'blocklyPathDark', 'transform': 'translate(1, 1)'},
       this.svgGroup_);
@@ -372,10 +342,6 @@ Blockly.BlockSvg.prototype.dispose = function() {
   this.svgPath_ = null;
   this.svgPathLight_ = null;
   this.svgPathDark_ = null;
-  this.frameClipRect_ = null;
-  this.frameBase_ = null;
-  this.frameHeader_ = null;
-  this.frameText_ = null;
   // Break circular references.
   this.block_ = null;
 };
@@ -873,32 +839,6 @@ Blockly.BlockSvg.prototype.renderDraw_ = function(iconWidth, inputRows) {
     this.svgPath_.setAttribute('transform', 'scale(-1 1)');
     this.svgPathLight_.setAttribute('transform', 'scale(-1 1)');
     this.svgPathDark_.setAttribute('transform', 'translate(1,1) scale(-1 1)');
-  }
-
-  if (this.frameBase_) {
-    var groupRect = this.svgPath_.getBoundingClientRect();
-    var width = groupRect.width + 2 * FRAME_MARGIN_SIDE;
-    var height = groupRect.height + FRAME_MARGIN_TOP + FRAME_MARGIN_BOTTOM + FRAME_HEADER_HEIGHT;
-    this.frameBase_.setAttribute('width', width);
-    this.frameBase_.setAttribute('height', height);
-    this.frameHeader_.setAttribute('width', width);
-    this.frameHeader_.setAttribute('height', height);
-    if (Blockly.RTL) {
-      this.frameClipRect_.setAttribute('x', -width + FRAME_MARGIN_SIDE);
-      this.frameHeader_.setAttribute('x', -width + FRAME_MARGIN_SIDE);
-      this.frameBase_.setAttribute('x', -width + FRAME_MARGIN_SIDE);
-      this.frameText_.setAttribute('x', -width + 2 * FRAME_MARGIN_SIDE);
-    }
-
-    if (!this.frameText_.getAttribute('y')) {
-      // The first time we render, we want to move our Function text inside of
-      // the header. The value Chrome was giving me for getBoundingRect().height
-      // seemed large, so instead I determine it by diffing the locations of the
-      // text's top, and the path's top.
-      var textHeight = Math.abs(this.frameText_.getBoundingClientRect().top -
-        this.svgPathDark_.getBoundingClientRect().top);
-      this.frameText_.setAttribute('y', -(FRAME_MARGIN_TOP + (FRAME_HEADER_HEIGHT - textHeight) / 2));
-    }
   }
 };
 
