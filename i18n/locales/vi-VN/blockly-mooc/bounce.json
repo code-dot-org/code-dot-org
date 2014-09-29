@@ -13,7 +13,7 @@
   "ifCode":"Nếu",
   "ifPathAhead":"Nếu có đường đi ở phía trước",
   "ifTooltip":"Nếu có một con đường đi theo hướng được định trước, hãy làm một số hành động.",
-  "ifelseTooltip":"Nếu có đường đi theo hướng được định sẵn, thực hiện hành động trong khối lệnh đầu tiên. Nếu không, thực hiện hành động trong khối lệnh thứ hai.",
+  "ifelseTooltip":"Nếu có đường ở hướng được xét, thực hiện khối lệnh đầu tiên. Nếu không, thực hiện khối lệnh thứ hai.",
   "incrementOpponentScore":"điểm đối thủ",
   "incrementOpponentScoreTooltip":"thêm một vào điểm số của đối thủ.",
   "incrementPlayerScore":"điểm",

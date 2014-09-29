@@ -32,6 +32,7 @@
     submit: "添加提示"
   appname: "Code.org"
   stage: "階段"
+  stage_number: 'Stage %{number}'
   puzzle: "關卡"
   trophies: "獎盃"
   courses: "課程"
@@ -312,6 +313,8 @@
     classroom_activity: "不用電腦的活動"
   home:
     title: "Code Studio"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: '已經註冊了? %{link}'
     student_reg_link: "學生登入"
     teacher_reg_link: "教師登入"
@@ -352,6 +355,7 @@
     feedback: "提供回饋"
     translate: "幫我們翻譯成您國家的語言"
     support: "Support"
+    support_url: "http://support.code.org"
     tos: "Terms"
     privacy: "隱私權政策"
     secure: "Secure Version"
@@ -376,8 +380,14 @@
     autoplay_option: "自動播放影片"
     download: "下載影片"
   compatability:
-    working: "我們正在設法支援您的瀏覽器。"
-    upgrade: "請升級您的瀏覽器。"
+    working:
+      header: "We are working on support for your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
+      hide_this_warning: "Hide this warning"
+    upgrade:
+      header: "Please upgrade your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
+      button: "Take me to the list of supported browsers"
   slow_loading: "請在等等，這次讀取的時間比較久一點......."
   try_reloading: "請嘗試重新載入網頁"
   next_stage: "完成 ！繼續邁向下一個階段"
@@ -388,7 +398,7 @@
     title: "Click 'Run' to see my program in action"
     bounce_og_title: "Check out my Bounce Game"
     flappy_og_title: "快來嘗試我設計的Flappy Game"
-    studio_og_title: "Check out my story"
+    studio_og_title: "Check out my Play Lab App"
     og_description: "我用 Code.org寫了自己的程式碼"
   builder:
     created: "您創建了一個新的腳本。"
@@ -421,6 +431,7 @@
     feedback: "Give Feedback"
     report_bug: "Report Bug"
     support: "Get Help"
+    support_url: "//support.code.org"
   multi:
     wrong_title: "Incorrect answer"
     wrong_body: "The answer you've entered is not correct.  Please try again!"

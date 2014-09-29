@@ -24,7 +24,7 @@
           Multi & Match: Risposte Multiple e Corrispondenze
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: "Flappy senza blocchi"
-          title: "Corso 1"
+          title: 'Corso 1- Per chi sta iniziando a leggere'
           Artist 2: "Artista 2"
           Happy Maps: "Mappe Felici"
           Move it, Move it: Muovilo, Muovilo
@@ -33,14 +33,15 @@
           Getting Loopy: "Diventare Ripetitivi"
           The Big Event: "Il Grande Evento"
           Going Places Safely: "Visitare Luoghi in Modo Sicuro"
-          description: "Il Corso 1 è progettato per studenti di prima elementare che stanno iniziando a leggere. Insegna a creare programmi con cicli ed eventi. Alla fine del corso, gli studenti sono in grado di creare e condividere programmi e storie che hanno creato da soli."
+          description: "Il Corso 1 è progettato per permettere a studenti di prima elementare che stanno iniziando a leggere di creare programmi che li aiutano a collaborare con altri, a sviluppare capacità di risolvere problemi, e a perseverare su problemi difficili. Alla fine del corso gli studenti creano i loro giochi o le loro storie, che possono condividere. Il corso è raccomandato per la prima elementare."
           "Bee: Sequence": 'Ape: Sequenza'
           "Artist: Sequence": 'Artista: Sequenza'
           "Artist: Shapes": 'Artista: Forme'
           "Maze: Loops": 'Labirinto: Cicli'
           "Bee: Loops": 'Ape: Cicli'
           "Studio: Create a Story": 'Laboratorio: Crea una Storia'
-          description_short: 'Il corso 1 è progettato per i  piccoli lettori nei gradi elementari inferiori.'
+          description_short: "Il Corso 1 è progettato per studenti di prima elementare che stanno iniziando a leggere."
+          "Artist: Loops": 'Artista: Cicli'
         course2:
           The Maze: "Il Labirinto"
           Suzi: "Suzi"
@@ -66,7 +67,7 @@
           Binary Bracelets: "Braccialetti Binari"
           The Big Event: "Il Grande Evento"
           Your Digital Footprint: "La tua Impronta Digitale"
-          description: "Il Corso 2 è progettato per studenti delle scuole elementari che hanno già imparato a leggere. Gli studenti creano programmi usando cicli, eventi e istruzioni condizionali. Alla fine del corso sono in grado di creare e condividere un gioco interattivo o una storia che hanno creato da soli."
+          description: "Il Corso 2 è progettato per studenti delle scuole elementari che hanno già imparato a leggere e non hanno precedenti esperienze di programmazione. Nel corso gli studenti creano programmi per risolvere problemi e sviluppare giochi interattivi o storie da condividere. Il corso è raccomandato dalla seconda alla quinta elementare."
           "Maze: Sequence": 'Labirinto: Sequenza'
           "Artist: Sequence": 'Artista: Sequenza'
           "Maze: Loops": 'Labirinto: Cicli'
@@ -75,9 +76,10 @@
           "Bee: Debugging": 'Ape: Correzione di Errori'
           "Artist: Debugging": 'Artista: Correzione di Errori'
           "Bee: Conditionals": 'Ape: Istruzioni Condizionali'
-          description_short: "Il corso 2 è progettato per gli studenti che frequentano i gradi elementari inferiore e medio."
+          description_short: "Il Corso 2 è progettato per studenti delle scuole elementari che hanno già imparato a leggere."
           "Artist: Sequence2": 'Artista: Sequenza 2'
           "Maze: Sequence2": 'Labirinto: Sequenza 2'
+          "Artist: Nested Loops": 'Artista: Cicli Annidati'
         course3:
           The Maze: "Il Labirinto"
           "Studio: Create a Story": 'Laboratorio: Crea una Storia'
@@ -97,13 +99,13 @@
           Artist Functions with Parameters: 'Artista: Funzioni con Parametri'
           Computational Thinking: "Pensiero computazionale"
           Functional Suncatchers: "Acchiappa-sole Funzionale"
-          Songwriting Parameters: "Composizione di canzoni"
+          Songwriting Parameters: "Parametri per la Composizione di Canzoni"
           Dice Race: "Gara con i Dadi"
           Internet: "Internet"
           Crowdsourcing: "Intelligenza Collettiva"
           Digital Citizenship: "Cittadinanza Digitale"
-          Farmer - While Loops: 'Agricoltore: Cicli Mentre'
-          description: "Gli studenti che seguono il Corso 3 dovrebbero aver già svolto il Corso 2. Gli studenti creano programmi con differenti tipi di cicli, eventi, funzioni e istruzioni condizionali. Alla fine del corso sono in grado di creare e condividere giochi interattivi o storie che hanno creato da soli."
+          Farmer - While Loops: 'Agricoltore: Cicli "Mentre"'
+          description: "Il Corso 3 è progettato per studenti che hanno già svolto il Corso 2. Gli studenti approfondiscono i concetti della programmazione introdotti nei corsi precedenti e imparano a definire soluzioni flessibili per problemi più complessi. Alla fine del corso gli studenti creano giochi interattivi e storie da condividere con tutti. Il corso è raccomandato per la quarta e quinta elementare."
           "Studio: Create a Game": 'Laboratorio: Crea un Gioco'
           Maze: "Labirinto"
           Artist: "Artista"
@@ -112,10 +114,10 @@
           "Bee: Conditionals": 'Ape: Istruzioni Condizionali'
           "Maze: Conditionals": 'Labirinto: Istruzioni Condizionali'
           "Artist: Nested Loops": 'Artista: Cicli Annidati'
-          "Farmer: While Loops": 'Agricoltore: Cicli Mentre'
+          "Farmer: While Loops": 'Agricoltore: Cicli "Mentre"'
           "Bee: Nested Loops": 'Ape: Cicli Annidati'
           "Bee: Debugging": 'Ape: Correzione di Errori'
-          description_short: "Gli studenti che frequentano il corso 3 dovrebbero aver frequentato prima il corso 2."
+          description_short: "Gli studenti che seguono il Corso 3 dovrebbero aver già svolto il Corso 2."
           Maze2: "Labirinto 2"
           Artist2: "Artista 2"
           "Artist: Functions2": 'Artista: Funzioni 2'
@@ -126,6 +128,7 @@
           "Farmer: While Loops2": 'Agricoltore: Cicli "Mentre" 2'
           "Bee: Nested Loops2": 'Ape: Cicli Annidati 2'
           "Bee: Debugging2": 'Ape: Correzione di Errori 2'
+          "Artist: Patterns": 'Artista: Schemi'
         msm:
           title: "Matematica per la Scuola Media"
           description: "Lavoro privato in corso per la Matematica per la Scuola Media."
@@ -134,10 +137,10 @@
           Unit 1: "Unità 1"
           Unit 2: "Unità 2"
         playlab:
-          title: "Laboratorio dei Giochi"
-          description: "Creare una storia o inventa un gioco col Laboratorio dei Giochi!"
-          Play Lab: "Laboratorio dei Giochi"
-          description_short: "Crea una storia o inventa un gioco col Laboratorio dei Giochi!"
+          title: "Laboratorio"
+          description: "Crea una storia o inventa un gioco col Laboratorio!"
+          Play Lab: "Laboratorio"
+          description_short: "Crea una storia o inventa un gioco col Laboratorio!"
         artist:
           title: "Artista"
           description: "Disegna fantastiche immagini e decorazioni con l'artista!"

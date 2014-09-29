@@ -9498,6 +9498,11 @@ Turtle.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
 
+  // Enable blockly param editing in levelbuilder, regardless of level setting
+  if (config.level.edit_blocks) {
+    config.disableParamEditing = false;
+  }
+
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
 
@@ -10004,7 +10009,7 @@ Turtle.drawJointAtTurtle_ = function () {
  * @return {boolean} True if the level is solved, false otherwise.
  */
 var isCorrect = function(pixelErrors, permittedErrors) {
-  return pixelErrors < permittedErrors;
+  return pixelErrors <= permittedErrors;
 };
 
 /**
@@ -10078,7 +10083,10 @@ Turtle.checkAnswer = function() {
 
   // Allow some number of pixels to be off, but be stricter
   // for certain levels.
-  var permittedErrors = level.permittedErrors || 150;
+  var permittedErrors = level.permittedErrors;
+  if (permittedErrors === undefined) {
+    permittedErrors = 150;
+  }
 
   // Test whether the current level is a free play level, or the level has
   // been completed
@@ -10373,9 +10381,9 @@ exports.end = function(d){return "نهاية"};
 
 exports.emptyBlocksErrorMsg = function(d){return "قطعة \" أكرر\" أو \" اذا \" تحتاج ان تحتوي على قطع اخرى داخلها من اجل العمل . تأكد من القطع الداخلية بحيث يجب ان تكون تناسب القطع المحتوية في الداخل ."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "كتلة الدالة يحتاج إلى الكتل الأخرى داخله لكي يعمل."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "قطعة الدالة تحتاج إلى القطع الأخرى بداخله لكي يعمل."};
 
-exports.extraTopBlocks = function(d){return "لديك قطع إضافية لم ترفق على قطع الحدث."};
+exports.extraTopBlocks = function(d){return "أنت لم تقم بإرفاق القطع . هل قصدت إرفاق هذه القطع إلى قطعة \"عند التشغيل\"؟"};
 
 exports.finalStage = function(d){return "تهانينا! لقد اتممت المرحلة النهائية."};
 
@@ -10449,7 +10457,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "مجموع كل الا�
 
 exports.tryAgain = function(d){return "حاول مرة أخرى"};
 
-exports.hintRequest = function(d){return "شاهد التلميح"};
+exports.hintRequest = function(d){return "شاهد تلميحاً"};
 
 exports.backToPreviousLevel = function(d){return "الرجوع إلى المستوى السابق"};
 
@@ -10477,7 +10485,7 @@ exports.watchVideo = function(d){return "شاهد الفيديو"};
 
 exports.when = function(d){return "عندما"};
 
-exports.whenRun = function(d){return "عند التنفيذ"};
+exports.whenRun = function(d){return "عند التشغيل"};
 
 exports.tryHOC = function(d){return "جرب \"Hour of Code\""};
 
@@ -10485,7 +10493,7 @@ exports.signup = function(d){return "سجل لمشاهدة مقدمة الدور
 
 exports.hintHeader = function(d){return "إليك نصيحة:"};
 
-exports.genericFeedback = function(d){return "راقب كيف انتهى، ثم حاول إصلاح البرنامج."};
+exports.genericFeedback = function(d){return "انظر كيف انتهى الأمر، و حاول إصلاح برنامجك."};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){

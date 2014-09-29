@@ -2,21 +2,21 @@
   activerecord:
     errors:
       messages:
-        blank: "is required"
+        blank: "er påkrevd"
     attributes:
       user:
-        name: "Display Name"
+        name: "Vis Navn"
         email: "E-post"
         username: "Brukernavn"
         password: "Passord"
         password_confirmation: "Bekreftelse på passord"
         current_password: "Nåværende passord"
         locale: "Språk"
-        age: "Age"
+        age: "Alder"
         gender: "Kjønn"
         edit_header: "Rediger kontodetaljer"
         error:
-          future: "can't be in the future"
+          future: "ikke mulig å være i framtiden"
   hello: "Hei, verden"
   welcome_back: 'Velkommen tilbake, %{name}'
   add_teacher_form:
@@ -32,6 +32,7 @@
     submit: "Legg til hint"
   appname: "Code.org"
   stage: "Scene"
+  stage_number: 'Stage %{number}'
   puzzle: "Oppgave"
   trophies: "Pokaler"
   courses: "Kurs"
@@ -53,7 +54,7 @@
     sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
     already_signedup: "Allerede registrert?"
     notyet_signedup: "Har du ikke blitt medlem ennå?"
-    google_oauth2: "Google Account"
+    google_oauth2: "Google Konto"
     twitter: "Twitter"
     facebook: "Facebook"
     windowslive: "Microsoft Account"
@@ -77,7 +78,7 @@
     address_placeholder: "adresse, by, fylke, postkode"
     gender: "Kjønn (valgfritt)"
     birthday: "Bursdag (valgfritt)"
-    age: "Age"
+    age: "Alder"
     submit: "Registrer deg"
     teacher: "Er du en lærer?"
     valid_username: "Tilgjengelig!"
@@ -170,7 +171,7 @@
       msg: 'Er du sikker på at du vil be om %{prize_name} premien?'
       msg_student: 'Merk: Du kan bare velge én type premie.'
       msg_publicschool: "Bekreft at du er amerikanske offentlige skolelærer."
-      msg_visit_website: "Visit website"
+      msg_visit_website: "Besøk webside"
     providers:
       apple_itunes: "$10 iTunes Gift Card"
       donors_choose: "DonorsChoose.org $750 credit"
@@ -309,15 +310,17 @@
     classroom_activity: "Unplugged Activity"
   home:
     title: "Code Studio"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: 'Already registered? %{link}'
-    student_reg_link: "Student Sign Up"
-    teacher_reg_link: "Teacher Sign Up"
-    signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
+    student_reg_link: "Påmelding Student"
+    teacher_reg_link: "Påmelding Lærer"
+    signin_directions: 'Bruke en konto for å lagre fremgangen.<br/>Lærere, følg fremgangen til hele klassen.'
     teacher_dashboard: "Se fremdriftsoversikt"
     teacher_student_count_one: 'Du har %{count} elever.'
     teacher_student_count: 'Du har %{count} elever.'
     teacher_averages: 'I gjennomsnitt har dine elever fått %{trophy_average} av totalt %{trophy_max}  pokaler for "Konseptmestring".'
-    teacher_print_certificates: "Print certificates for students who finish this course"
+    teacher_print_certificates: "Skriv ut diplomer for elever som fullfører dette kurset"
     teacher_read_blog: "Read about news and updates to our materials at our Educator Blog"
     classroom: "Ditt klasserom"
     student_progress: "Din læringskurve"
@@ -349,6 +352,7 @@
     feedback: "Gi tilbakemelding"
     translate: "Hjelpe oss med å oversette til ditt språk"
     support: "Support"
+    support_url: "http://support.code.org"
     tos: "Terms"
     privacy: "Personvern"
     secure: "Secure Version"
@@ -373,8 +377,14 @@
     autoplay_option: "Autovisning av videoer"
     download: "Last ned video"
   compatability:
-    working: "Vi arbeider med å lage støtte for din nettleser."
-    upgrade: "Vennligst oppgrader din nettleser."
+    working:
+      header: "We are working on support for your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
+      hide_this_warning: "Hide this warning"
+    upgrade:
+      header: "Please upgrade your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
+      button: "Take me to the list of supported browsers"
   slow_loading: "Dette tar lengre tid enn vanlig..."
   try_reloading: "Last siden på nytt"
   next_stage: "Ferdig! Fortsett til neste nivå"
@@ -385,7 +395,7 @@
     title: "Click 'Run' to see my program in action"
     bounce_og_title: "Check out my Bounce Game"
     flappy_og_title: "Check out my Flappy Game"
-    studio_og_title: "Se min historie"
+    studio_og_title: "Check out my Play Lab App"
     og_description: "Jeg skrev koden selv med Code.org"
   builder:
     created: "You created a new script."
@@ -418,6 +428,7 @@
     feedback: "Give Feedback"
     report_bug: "Report Bug"
     support: "Få hjelp"
+    support_url: "//support.code.org"
   multi:
     wrong_title: "Incorrect answer"
     wrong_body: "The answer you've entered is not correct.  Please try again!"

@@ -75,77 +75,77 @@
       UnplugHappyMaps:
         title: "Mappe Felici"
         desc: "Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando."
-        video: "C1_happy_maps_unplugged"
+        video: 'Mappe Felici - "Senza Rete"'
       MoveIt:
         title: "Muovilo, Muovilo"
         desc: "Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando."
-        video: "C1_moveitmoveit_unplugged"
+        video: 'Muovilo, Muovilo - "Senza Rete"'
       PlantASeed:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
         desc: "Questa lezione tratta degli algoritmi nella vita quotidiana, usando come esempio l'atto del piantare un seme. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale."
-        video: "C1_planting_seed"
+        video: "Piantare un seme"
       BuildingAFoundation:
         title: "Costruire le Fondamenta"
         desc: "Gli studenti costruiscono una struttura usando solo il materiale disponibile. Le strutture devono soddisfare alcuni requisiti (raggiungere una specifica altezza o sopportare un determinato peso) e gli studenti riflettono sull'importanza di insistere quando i problemi sono complicati."
-        video: "C1_building_foundation"
+        video: "Costruire le Fondamenta"
       GettingLoopy:
         title: "Diventare Ripetitivi"
         desc: 'Questa lezione introduce il costrutto di programmazione detto "ciclo" (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice coreografia e sono istruiti a ripeterla.'
-        video: "C1_getting_loopy"
+        video: "Diventare Ripetitivi"
       RelayProgramming:
         title: "Programmazione a Staffetta"
         desc: 'Gli studenti fanno una corsa a staffetta, nella quale uno alla volta corrono a scrivere un algoritmo basato su un disegno dalla lezione "Programmazione su carta a quadretti". Possono scrivere una sola istruzione alla volta, e se trovano un errore in qualche punto, devono cancellare tutto fino a quel punto.'
-        video: "C2_relay_programming"
+        video: 'Programmazione a staffetta - "Senza Rete"'
       Conditionals:
         title: "Istruzioni condizionali"
         desc: 'Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".'
-        video: "C2_conditionals_with_cards"
+        video: 'Istruzioni condizionali - "Senza Rete"'
       BigEvent:
         title: "Il Grande Evento"
         desc: 'Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.'
-        video: "C1_bigevent_unplugged"
+        video: 'Il Grande Evento - "Senza Rete"'
       GoingPlacesSafely:
         title: "Visitare Luoghi in Modo Sicuro"
         desc: "Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro."
       GraphPaperProgramming:
         title: "Programmazione su carta a quadretti"
         desc: "Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando un insieme di comandi predefiniti per guidare i loro compagni di classe nel riprodurre il disegno."
-        video: "C2_graph_paper"
+        video: "Programmazione su carta a quadretti"
       PaperPlanes:
         title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
         desc: "Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso specifico costruire un aeroplano di carta. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale."
-        video: "C2_paper_airplanes"
+        video: 'Aeroplani di Carta - "Senza Rete"'
       BinaryBracelets:
         title: "Braccialetti Binari"
         desc: "Gli studenti creano dei braccialetti che rappresentano con l'alfabeto binario la prima lettera del loro nome. Imparano quindi che i dati possono essere rappresentati e memorizzati in più di un modo."
-        video: "C2_binary_bracelets"
+        video: 'Braccialetti Binari - "Senza Rete"'
       DigitalFootprint:
         title: "La tua Impronta Digitale"
         desc: "L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili."
       ComputationalThinking:
         title: "Pensiero computazionale"
         desc: "Gli studenti usano i passi fondamentali del pensiero computazione (decomposizione, identificazione di schemi, astrazione, algoritmica) per capire come si svolge un gioco che non ha istruzioni."
-        video: "C3_computational_thinking"
+        video: 'Pensiero Computazionale - "Senza Rete"'
       FunctionalSuncatchers:
-        title: "Un Acchiappa-Sole Funzionale"
+        title: "Acchiappa-Sole Funzionale"
         desc: "Gli studenti creano un algoritmo con variabili e funzioni (porzioni di codice che si possono usare ripetutamente) per creare degli acchiappa-sole usando fili e perline."
-        video: "C3_functional_suncatchers"
+        video: "Acchiappa-Sole Funzionale"
       SongwritingParameters:
-        title: "Composizione di Canzoni"
+        title: 'Composizione di Canzoni - Parametri'
         desc: "Gli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente."
-        video: "C3_songwriting_with_parameters"
+        video: 'Composizione di Canzoni - Parametri'
       DiceRace:
         title: 'Algoritmi della Vita Reale: Gara con i Dadi'
         desc: "Questa lezione tratta degli algoritmi nella vita quotidiana. In questo contesto, gli studenti devono identificare e scrivere l'algoritmo per un gioco con i dadi."
-        video: "C3_dice_race"
+        video: "Gara con i Dadi"
       Internet:
         title: "Internet"
         desc: "Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta."
-        video: "C3_internet"
+        video: 'Internet - "Senza Rete"'
       Crowdsourcing:
         title: "Intelligenza Collettiva"
         desc: "Gli studenti usano l'intelligenza collettiva, una tecnica di risoluzione di problemi comune nell'informatica, per completare un compito come classe più efficientemente che uno studente per conto proprio."
-        video: "C3_crowdsourcing"
+        video: "Intelligenza Collettiva"
       DigitalCitizenship:
         title: "Cittadinanza Digitale"
         desc: "Gli studenti esplorano la differenza tra informazioni private e informazioni personali, per distinguere cosa si può condividere su Internet in modo sicuro e cosa no."

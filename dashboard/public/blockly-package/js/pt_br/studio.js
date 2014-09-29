@@ -12413,8 +12413,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -14284,7 +14283,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Os blocos \"Repita\" ou \"Se\"
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "O bloco de função precisa ter outros blocos dentro dele para funcionar."};
 
-exports.extraTopBlocks = function(d){return "blocoSuperiorExtra"};
+exports.extraTopBlocks = function(d){return "Alguns de seus blocos estão soltos. Você gostaria de conectá-los ao bloco \"quando executar\"?"};
 
 exports.finalStage = function(d){return "Parabéns! Você concluiu a fase final."};
 
@@ -14455,7 +14454,7 @@ exports.makeProjectileRedHearts = function(d){return "crie corações vermelhos"
 
 exports.makeProjectileTooltip = function(d){return "Faça o projétil que colidiu desaparecer ou quicar."};
 
-exports.makeYourOwn = function(d){return "Crie sua Própria História"};
+exports.makeYourOwn = function(d){return "Faça seu próprio aplicativo de laboratório de reprodução"};
 
 exports.moveDirectionDown = function(d){return "baixo"};
 
@@ -14875,13 +14874,13 @@ exports.whenSpriteCollidedTooltip = function(d){return "Execute as ações abaix
 
 exports.whenSpriteCollidedWith = function(d){return "toca"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "toque em qualquer personagem"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "toque em qualquer borda"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "toque em qualquer projeto"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "tocar em alguma coisa"};
 
 exports.whenSpriteCollidedWithN = function(d){return "toca o personagem "+v(d,"spriteIndex")};
 

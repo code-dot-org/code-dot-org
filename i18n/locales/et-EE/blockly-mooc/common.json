@@ -1,5 +1,5 @@
 {
-  "and":"and",
+  "and":"ja",
   "blocklyMessage":"Blockly",
   "catActions":"Actions",
   "catColour":"Colour",
@@ -42,7 +42,7 @@
   "numLinesOfCodeWritten":"You just wrote {numLines, plural, one {1 line} other {# lines}} of code!",
   "play":"play",
   "puzzleTitle":"Puzzle {puzzle_number} of {stage_total}",
-  "repeat":"repeat",
+  "repeat":"korda",
   "resetProgram":"Reset",
   "runProgram":"Run",
   "runTooltip":"Run the program defined by the blocks in the workspace.",

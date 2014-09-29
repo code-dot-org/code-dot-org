@@ -6,7 +6,7 @@
           Multiple 1'
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700"
-        Why won't this circle go all the way around?: Perché questo cerchio non andrà
+        Why won't this circle go all the way around?: Perché questo cerchio non girerà
           tutto intorno?
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
@@ -100,75 +100,76 @@
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
       2-3 Algorithms Multi 1:
-        Multiple Choice: Scelta multipla
+        Multiple Choice: 'Algoritmi: Risposte Multiple 1'
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
-        Choose an algorithm for the image provided: Scegli un algoritmo per l'immagine
-          fornita
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Start
-          with a square<br/>Put a triangle above the square<br/>Put a triangle below
-          the square
-        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: Start
-          with a square<br/>Put a triangle right of square<br/>Put a rhombus below
-          square<br/>Put triangle right of rhombus
-        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: Start
-          with a square<br/>Put a rhombus above the square<br/>Put a triangle right
-          of the rhombus
-        Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: Start
-          with a square<br/>Put a triangle below the square<br/>Put a rhombus right
-          of the triangle
+        Choose an algorithm for the image provided: Scegli un algoritmo per il disegno
+          fornito
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Inizia
+          con un quadrato<br/>Metti un triangolo sopra il quadrato<br/>Metti un triangolo
+          sotto il quadrato
+        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: Inizia
+          con un quadrato<br/>Metti un triangolo a destra del quadrato<br/>Metti un
+          rombo sotto il quadrato<br/>Metti un triangolo a destra del rombo
+        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: Inizia
+          con un quadrato<br/>Metti un rombo sopra il quadrato<br/>Metti un triangolo
+          a destra del rombo
+        Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: Inizia
+          con un quadrato<br/>Metti un triangolo sotto il quadrato<br/>Metti un rombo
+          a destra del triangolo
       2-3 Algorithms Multi 2:
-        Multiple Choice: Scelta multipla
+        Multiple Choice: 'Algoritmi: Risposte Multiple 2'
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Inizia
           con un triangolo<br/>Metti un quadrato sotto il triangolo<br/>Metti un altro
           triangolo sotto il quadrato
-        Which image does <em>not</em> follow this algorithm?: Quale immagine fa <em>non</em>
-          seguire questo algoritmo?
+        Which image does <em>not</em> follow this algorithm?: Quale disegno <em>non</em>
+          segue questo algoritmo?
         "/script_assets/2-3_images/unplugged/algorithms_2_a1.png": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a3.png": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a4.png": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
       2-3 Binary Multi 1:
-        Multiple Choice: Scelta multipla
+        Multiple Choice: 'Binario: Risposte Multiple 1'
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Which program makes this image?: Quale programma fa questa immagine?
+        Which program makes this image?: Quale programma costruisce questo disegno?
         "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
       2-3 Conditionals Multi 1:
-        Multiple Choice: Scelta multipla
+        Multiple Choice: 'Istruzioni condizionali: Risposte Multiple 1'
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        According to the rules of this game, which set of cards was scored correctly?: Secondo
-          le regole di questo gioco, quale gruppo di carte è stato segnato correttamente?
+        According to the rules of this game, which set of cards was scored correctly for your team?: Secondo
+          le regole di questo gioco, per quale insieme di carte sono stati assegnati
+          correttamente i punti alla tua squadra?
         "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a4.png": "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
       2-3 Getting Loopy Multi 1:
-        Multiple Choice: Scelta multipla
+        Multiple Choice: 'Diventare Ripetitivi: Risposte Multiple 1'
         "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
-        How would you simplify this sequence with loops?: Come semplifichesti questa
-          sequenza con i loop?
+        How would you simplify this sequence with loops?: Come semplificheresti questa
+          sequenza con i cicli?
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
       2-3 Graph Paper Multi 1:
-        Multiple Choice: Scelta multipla
+        Multiple Choice: 'Programmazione su carta a quadretti: Risposte Multiple 1'
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Which program makes this image?: Quale programma fa questa immagine?
+        Which program makes this image?: Quale programma costruisce questo disegno?
         "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
       2-3 Relay Programming Multi 1:
-        Multiple Choice: Scelta multipla
+        Multiple Choice: 'Programmazione a staffetta: Risposte Multiple 1'
         "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
-        Which program does not create this image?: Quale programma non crea questa
-          immagine?
+        Which program does not create this image?: Quale programma non costruisce
+          questo disegno?
         "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
       2-3 Relay Programming Multi 2:
-        Multiple Choice: Scelta multipla
+        Multiple Choice: 'Programmazione a staffetta: Risposte Multiple 2'
         Which image-program combo does not contain mistakes?: Quale combinazione immagine-programma
           non contiene errori?
         "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
@@ -279,11 +280,24 @@
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
+      4-5 Computational Thinking Multi 1:
+        Multiple Choice: 'Artista: Risposte Multiple 1'
+        0: "? Qui ci sono tre frasi. Quale degli schemi qua sotto è un'astrazione
+          in grado di rappresentarle tutte e tre in modo corretto?"
+        1: ": Qui ci sono tre frasi. Quale degli schemi qua sotto è un'astrazione
+          in grado di rappresentarle tutte e tre in modo corretto?"
+        "<h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>": "<h4>Roma
+          è una città grande. <br/>Firenze è una città media.<br/>Matera è una città
+          piccola.</h4>"
+        "<h4>Seattle _____ a _____ _____.</h4>": "<h4>Roma _____ una _____ _____.</h4>"
+        "<h4>_____ is a _____ city.</h4>": "<h4>_____ è una città _____.</h4>"
+        "<h4>_____ is _____ a _____.</h4>": "<h4>_____ è _____ una _____.</h4>"
+        "<h4>Eugene is a _____ city.</h4>": "<h4>Firenze è una città _____.</h4>"
       K-1 Artist 1 Multi 1:
         Multiple Choice: 'Artista: Risposte Multiple 1'
         "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
           500"
-        Which blocks solve this puzzle?: Which blocks solve this puzzle?
+        Which blocks solve this puzzle?: Quali blocchi risolvono l'esercizio?
         "/script_assets/k_1_images/artist_images/W|S|S.png": "/script_assets/k_1_images/artist_images/W|S|S.png"
         "/script_assets/k_1_images/artist_images/E|S|S.png": "/script_assets/k_1_images/artist_images/E|S|S.png"
         "/script_assets/k_1_images/artist_images/S|E|E.png": "/script_assets/k_1_images/artist_images/S|E|E.png"
@@ -292,7 +306,7 @@
         Multiple Choice: 'Artista: Risposte Multiple 2'
         "/script_assets/k_1_images/artist_images/square.png, 500": "/script_assets/k_1_images/artist_images/square.png,
           500"
-        Which blocks draw the square?: Which blocks draw the square?
+        Which blocks draw the square?: Quali blocchi disegnano il quadrato?
         "/script_assets/k_1_images/artist_images/N|E|S|W.png": "/script_assets/k_1_images/artist_images/N|E|S|W.png"
         "/script_assets/k_1_images/artist_images/E|S|W|N.png": "/script_assets/k_1_images/artist_images/E|S|W|N.png"
         "/script_assets/k_1_images/artist_images/N|W|S|E.png": "/script_assets/k_1_images/artist_images/N|W|S|E.png"
@@ -307,10 +321,10 @@
         "/script_assets/k_1_images/artist_images/medium_square.png": "/script_assets/k_1_images/artist_images/medium_square.png"
         "/script_assets/k_1_images/artist_images/medium_triangle.png": "/script_assets/k_1_images/artist_images/medium_triangle.png"
       K-1 Artist Loops Multi 1:
-        Multiple Choice: Scelta multipla
+        Multiple Choice: 'Artista - Cicli: Risposte Multiple 1'
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
           300"
-        Which blocks create this picture?: Quali blocchi creano questa immagine?
+        Which blocks create this picture?: Quali blocchi creano questo disegno?
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png"
@@ -367,23 +381,23 @@
         "/script_assets/k_1_images/move_blocks/r3_ES.png": "/script_assets/k_1_images/move_blocks/r3_ES.png"
         "/script_assets/k_1_images/move_blocks/r3_SE.png": "/script_assets/k_1_images/move_blocks/r3_SE.png"
       K-1 Digital Footprint Multi 1:
-        Multiple Choice: Scelta multipla
+        Multiple Choice: 'Impronta Digitale: Risposte Multiple 1'
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Quale
-          animale ha l'impronta digitale che lo rende <strong>più pericoloso</strong>?
+          animale ha l'impronta digitale che lo rende <strong>il più insicuro</strong>?
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
       K-1 Getting Loopy Multi 1:
-        Multiple Choice: Scelta multipla
+        Multiple Choice: 'Diventare Ripetitivi: Risposte Multiple 1'
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         How would you simplify this sequence with loops?: Come semplificheresti questa
-          sequenza con i loop?
+          sequenza usando i cicli?
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
       K-1 Happy Maps Multi 1:
-        Multiple Choice: Risposte Multiple
+        Multiple Choice: 'Le Mappe Felici: Risposte Multiple'
         "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         Which arrow gets the Flurb to the treasure?: Quale freccia fa arrivare il
           Flurb fino al tesoro?
@@ -392,14 +406,14 @@
         "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
         "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
       K-1 Keep it Private Multi 1:
-        Multiple Choice: Scelta multipla
-        Which information should you <strong>not</strong> share online?: Quali nformazioni
-          dovresti<strong>non</strong> condividere online?
+        Multiple Choice: 'Mantieni il Segreto: Risposte Multiple 1'
+        Which information should you <strong>not</strong> share online?: Quali informazioni
+          dovresti <strong>non</strong> condividere online?
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
       K-1 Move It Multi 1:
-        Multiple Choice: Scelta multipla
+        Multiple Choice: 'Muovilo: Risposte Multiple 1'
         "/script_assets/k_1_images/unplugged_images/move_it_1_q.png": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         Which algorithm gets the Flurb to the flowers?: Quale algoritmo conduce il
           Flurb ai fiori?
@@ -408,7 +422,7 @@
         "/script_assets/k_1_images/unplugged_images/upleft.png": "/script_assets/k_1_images/unplugged_images/upleft.png"
         "/script_assets/k_1_images/unplugged_images/leftdown.png": "/script_assets/k_1_images/unplugged_images/leftdown.png"
       K-1 Plant a Seed Multi 1:
-        Multiple Choice: Scelta multipla
+        Multiple Choice: 'Pianta un Seme: Risposte Multiple 1'
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         Which step should go at the beginning of this algorithm?: Quale passo dovrebbe
           andare all'inizio di questo algoritmo?
@@ -416,9 +430,9 @@
         "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
         "/script_assets/k_1_images/unplugged_images/dirty-teeth.png": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
       K-1 Plant a Seed Multi 2:
-        Multiple Choice: Scelta multipla
+        Multiple Choice: 'Pianta un Seme: Risposte Multiple 2'
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
-        Which step should fill in the blank for this algorithm?: Quale passaggio dovrebbe
+        Which step should fill in the blank for this algorithm?: Quale passo dovrebbe
           riempire lo spazio in questo algoritmo?
         "/script_assets/k_1_images/unplugged_images/brush-teeth.png": "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
         "/script_assets/k_1_images/unplugged_images/cover-seed.png": "/script_assets/k_1_images/unplugged_images/cover-seed.png"
@@ -519,12 +533,13 @@
         Pick the best answer to the question.: Scegli la migliore risposta alla domanda.
         Which of these is a valid contract for the function circle?: Quale di questi
           è un contratto valido per il circolo di funzione?
-        'circle: size style color -> image': 'circolo: dimensioni stile colore-> immagine'
+        'circle: size style color -> image': 'circolo: dimensioni stile colore ->
+          immagine'
         'circle: number string string -> image': 'circolo: numero stringa stringa
           -> immagine'
         'circle: number string string -> shape': 'circolo: numero stringa stringa
           -> immagine'
-        'circle: 5 solid blue -> circle ': 'cerchia: 5 blu -> cerchio '
+        'circle: 5 solid blue -> circle ': 'circolo: 5 solido blu -> circolo '
       image code from circle:
         Code from Circle: Codice da Circoli
         "/script_assets/msm/Unit%202/exercise_5.png": "/script_assets/msm/Unit%202/exercise_5.png"

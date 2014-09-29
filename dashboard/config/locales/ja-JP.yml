@@ -32,6 +32,7 @@
     submit: "ヒントを追加します。"
   appname: Code.org
   stage: "ステージ"
+  stage_number: Stage %{number}
   puzzle: "パズル"
   trophies: "トロフィー"
   courses: "コース"
@@ -335,6 +336,8 @@
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: "既に登録されていますか？% {リンク}"
     student_reg_link: "学生は、サインアップ（登録）"
     teacher_reg_link: "教師は、サインアップ（登録）"
@@ -385,6 +388,7 @@
     feedback: "フィードバックを提供します。"
     translate: "あなたの言語に翻訳をお手伝い"
     support: Support
+    support_url: http://support.code.org
     tos: "サービス利用規約"
     privacy: "プライバシー ポリシー"
     secure: Secure Version
@@ -409,8 +413,22 @@
     autoplay_option: "動画の自動再生"
     download: "ビデオのダウンロード"
   compatability:
-    working: "お使いのブラウザーのサポートに取り組みちゅうです。"
-    upgrade: "お使いのブラウザーをアップグレードしてください。"
+    working:
+      header: "お使いのブラウザーのサポートに取り組みちゅうです。"
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Your browser doesn't support all the features required, and you may experience
+        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
+        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
+        your browser to a supported version</a>.
+      hide_this_warning: Hide this warning
+    upgrade:
+      header: "お使いのブラウザーをアップグレードしてください。"
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Unfortunately your browser doesn't support all the features required
+        to run this part of the site.<br/><br/>Install a browser on our supported
+        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
+        expect functionality to be broken.
+      button: Take me to the list of supported browsers
   slow_loading: "通常よりも長くかかっている..."
   try_reloading: "ページを再読み込みしてみてください。"
   next_stage: "完成 ！次のステージに続きます。"
@@ -457,6 +475,7 @@
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
+    support_url: "//support.code.org"
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!

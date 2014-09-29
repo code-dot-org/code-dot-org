@@ -21,7 +21,7 @@
   "end":"fine",
   "emptyBlocksErrorMsg":"Il blocco \"ripeti\" o \"se\" deve avere all'interno altri blocchi per poter funzionare. Assicurati che i blocchi interni siano inseriti correttamente all'interno del blocco principale.",
   "emptyFunctionBlocksErrorMsg":"Una funzione ha bisogno di altri blocchi al suo interno.",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"when run\" block?",
+  "extraTopBlocks":"Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'quando si clicca su \"Esegui\" '?",
   "finalStage":"Complimenti! Hai completato l'ultima lezione.",
   "finalStageTrophies":"Complimenti! Hai completato l'ultima lezione e vinto {numTrophies, plural, one {un trofeo} other {# trofei}}.",
   "finish":"Condividi",

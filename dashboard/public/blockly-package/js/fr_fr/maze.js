@@ -12901,7 +12901,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Le bloc « Répéter » ou �
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Le bloc fonctionnel doit avoir d'autres blocs à l'intérieur pour fonctionner."};
 
-exports.extraTopBlocks = function(d){return "Vous avez disposé des blocs qui ne sont rattachés à aucun bloc d'évènement."};
+exports.extraTopBlocks = function(d){return "Vous avez des blocs non attachés. Est-ce que vous vouliez les attacher au bloc \"lors du lancement\" ?"};
 
 exports.finalStage = function(d){return "Félicitations ! Vous avez terminé l'étape finale."};
 
@@ -12975,7 +12975,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Production totale : "+
 
 exports.tryAgain = function(d){return "Réessayer"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Voir astuce"};
 
 exports.backToPreviousLevel = function(d){return "Retour au niveau précédent"};
 
@@ -13001,7 +13001,7 @@ exports.wantToLearn = function(d){return "Vous souhaitez apprendre à coder ?"}
 
 exports.watchVideo = function(d){return "Voir la vidéo"};
 
-exports.when = function(d){return "lors"};
+exports.when = function(d){return "lorsque"};
 
 exports.whenRun = function(d){return "lors du lancement"};
 
@@ -13082,13 +13082,13 @@ exports.ifFlowerTooltip = function(d){return "S'il y a une fleur/un nid d'abeill
 
 exports.ifelseFlowerTooltip = function(d){return "S'il y a une fleur ou une ruche dans la direction indiquée, alors le premier bloc d'actions est exécuté. Sinon, on exécute le deuxième bloc d'actions."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Vous utilisez correctement tous les blocs, mais vous devez produire la bonne quantité de miel."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Vous utilisez correctement tous les blocs, mais vous devez collecter la bonne quantité de nectar."};
 
 exports.make = function(d){return "faire"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "reculer"};
 
 exports.moveEastTooltip = function(d){return "Déplace-moi d'un espace vers l'Est."};
 
@@ -13130,7 +13130,7 @@ exports.pathAhead = function(d){return "chemin devant"};
 
 exports.pathLeft = function(d){return "si chemin à gauche"};
 
-exports.pathRight = function(d){return "Si il y a un chemin vers la droite"};
+exports.pathRight = function(d){return "si chemin à droite"};
 
 exports.pilePresent = function(d){return "motte présente"};
 

@@ -114,7 +114,7 @@
         parameters: "פונקציות עם פרמטרים"
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
+        maze_2_2: 'תוכל לעזור לי לתפוס את החזיר השובב? חבר כמה בלוקים של "לך קדימה" יחד ותלחץ על "הפעל תוכנית" כדי לעזור לי להגיע אליו. '
         maze_2_1: "החזיר הזה מבלגן לי את הנוצות. תעזור לי למצוא אותו!"
         maze_2_2_5: "תשרטטו את השביל ותובילו אותי אל החזיר המטופש הזה. תזהרו מדנמיט או הנוצות שלי יעופו!"
         maze_2_3: "תוביל אותי לרוע הירוק!(תיזהר מדינמיט)"

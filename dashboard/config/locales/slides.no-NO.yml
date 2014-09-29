@@ -83,8 +83,8 @@
         text: Du må hjelpe henne med å fjerne alle jordhaugene, og fyle alle hullene.
       3:
         image: notes/stage9_3.jpg
-        text: De nye blokkene fjerner 1 spade med jord fra en haug og fyller 1 spade
-          med jord i et hull.
+        text: De nye blokkene fjerner 1 spadetak med jord fra en haug, og fyller 1
+          spadetak med jord i et hull.
       4:
         image: notes/stage9_4.jpg
         text: Hauger og hull har forskjellige størrelse eller dybde, så du må fortelle
@@ -92,30 +92,30 @@
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: Hi, I'm Katie! One of the most exciting things about computer science
-          is that a computer program can be interactive.
+        text: Hei, mitt navn er Katie! Noe av det mest spennende innen informatikk
+          er at et dataprogram kan være interaktivt.
       2:
         image: notes/flappy02.jpg
-        text: Any time somebody clicks or taps or types on a computer or phone, that
-          generates an EVENT, and there's some code that decides what to do when an
-          EVENT occurs.
+        text: Hver gang noen klikker, trykker eller skriver på en datamaskin eller
+          telefon, som genererer en hendelse, og det er noe kode som bestemmer hva
+          som skal utføres når hendelsen inntreffer.
       3:
         image: notes/flappy03.jpg
-        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse
-          is clicked, play a sound" '
+        text: 'Du kan for eksempel ha en HENDELSESHÅNDTERER som sier "når musen klikkes,
+          spilles en lyd" '
       4:
         image: notes/flappy04.jpg
-        text: Have you ever heard of the game FlappyBird? By using Event handlers,
-          we're going to learn to program our own custom version of FlappyBird!
+        text: Har du hørt om spillet FlappyBird? Ved å bruke hendelsesbehandling,
+          skal vi lære å programmere vår egen tilpasset versjon av FlappyBird!
       5:
         image: notes/flappy05.jpg
-        text: The code you'll write involves dragging and dropping blocks that represent
-          commands for the computer. Under the hood, each of these blocks is represented
-          by real code.
+        text: Koden du vil skrive innebærer å dra og slippe blokker som representerer
+          kommandoer på datamaskinen. Under panseret, er hver av disse blokkene representert
+          av ekte kode.
       6:
         image: notes/flappy06.jpg
-        text: 'If you take a look at the workspace, there are some green blocks that
-          are filled in for you - these are "event handlers" '
+        text: 'Hvis du tar en titt på arbeidsområdet, er det noen grønne blokker som
+          er fylt ut for deg - dette er "hendelsesbehandlinger" '
       7:
         image: notes/flappy07.jpg
         text: If you want the bird to FLAP when you CLICK the mouse, you can do that
@@ -132,8 +132,8 @@
           the settings - like what sound to play when flappy hits the ground.
       10:
         image: notes/flappy10.jpg
-        text: In the final puzzle you'll be able to create your own game and share
-          it with your friends. Have fun!
+        text: I siste puslespillet vil du kunne lage et spill og dele den med dine
+          venner. ha det gøy!
     loop_times:
       1:
         image: notes/hoc2_1.jpg

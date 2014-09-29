@@ -114,7 +114,7 @@
         parameters: "Funkcije sa parametrima"
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
+        maze_2_2: 'Možeš li mi pomoći da uhvatim zločestu svinju? Spoji nekoliko "pomakni naprijed" blokova zajedno i pritisni tipku "Pokreni program" da me dovedeš do tamo. '
         maze_2_1: "Ova svinja mi je nakostriješila perje. Pomozi mi ga pronaći!"
         maze_2_2_5: "Prati stazu i odvedi me do šašave svinje. Zaobiđi TNT ili će perje letjeti na sve strane!"
         maze_2_3: "Vodi me do zelene zloće! (Pazi se TNT-a)"

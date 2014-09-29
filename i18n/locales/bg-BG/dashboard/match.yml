@@ -122,6 +122,17 @@
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
+      4-5 Computational Thinking Match 1:
+        Matching: "Съчетаване"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Всяко от тези превозни средства е разглобено на малки части. Свържете всяко превозно средство с неговите части.
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>колела/страна: 2<br/>прозорци/страна: 0</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>колела/страна: 2<br/>прозорци/страна: 1</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>колела/страна: 2<br/>прозорци/страна: 6</h3>'
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>колела/страна: 3<br/>/страна: 2</h3>'
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
       K-1 Artist 2 Match 1:
         Matching: "Съчетаване"
         Is the square next to, above, or below the ball?: Квадратът до, над или под топката е?
@@ -226,7 +237,7 @@
       Coordinate Matching:
         Coordinates of Ninjacat: "Координати на котката нинджа"
         Match each character with its correct coordinate!: Свържи всеки герой с правилните му координати!
-        /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/MSM/Unit 1/exercise_3_ninjacat.pn
+        /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/MSM/Unit 1/exercise_3_ninjacat.png
         Cloud: "Облак"
         Ruby: "Руби"
         Dog: "Куче"

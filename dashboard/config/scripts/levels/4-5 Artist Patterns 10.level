@@ -12,7 +12,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "This code draws two rows of hexagons - loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need to add a block to your outermost loop to make sure the artist doesn't draw off the screen.",
+    "instructions": "This code draws two rows of hexagons - loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need to jump back 120 pixels in your outermost loop to make sure the artist doesn't draw off the screen.",
     "ideal": "15"
   }
 }]]></config>

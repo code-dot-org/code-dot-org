@@ -32,6 +32,7 @@
     submit: "إضافة تلميح"
   appname: "Code.org"
   stage: "المرحلة"
+  stage_number: 'المرحلة %{number}'
   puzzle: "لغز"
   trophies: "الجوائز"
   courses: "دروس"
@@ -61,8 +62,8 @@
     need_confirmation: "لم استلم تعليمات تأكيد الحساب؟"
     need_unlock: "لم أستلم تعليمات فتح الحساب؟"
   signup_form:
-    overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
-    overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
+    overview_student: 'قم بالتسجيل للحصول على حساب لتتابع تقدمك. يستخدم البريد الالكتروني الخاص بك بشكل أساسي للسماح لك بتسجيل الدخول وإستعادة كلمة المرور. للمزيد من المعلومات, شاهد <a href="http://code.org/privacy">سياسة الخصوصية</a>.'
+    overview_teacher: 'قم بتدريس علوم الكمبيوتر في صفك بالتسجيل للحصول على حساب.<p/> سوف يصبح بإمكانك إضافة طلابك و متابعة تقدمهم .'
     no_signup_message: 'يمكنك<a target="_blank" href="http://learn.code.org"> تصفح مختلف المراحل والالغاز</a>, ولكن سوف تحتاج إلى التسجيل لحفظ تقدمك.'
     prizes_message: 'طلاب الولايات المتحدة الذين يكسبون كل مفهوم الجوائز %{num_trophies} يمكنك تحديد مجموعة متنوعة من الجوائز والتي تتضمن مساحة حرة من دروب بوكس , رصيد سكايب ، والألعاب القابلة للتحميل من الفنون الإلكترونية.'
     teacher_educator_guide: "راجع دليل المعلم"
@@ -86,7 +87,7 @@
     valid_password: "كلمة المرور متاحة!"
     invalid_password: "كلمة المرور يجب ان تكون على الاقل 6 احرف"
     mismatch_password: "كلمة المرور التي ادخلتها غير متطابقة"
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
+    student_terms: "أنا أوافق على الإلتزام بـ Code.org  <a href='http://code.org/tos'>شروط خدمة</a>. إذا كنت تحت 13 سنة , أنا أؤكد بتقديمي هذا النموذج بأنه لدي الوالدين أو الوصي القانوني لإستخدام خدمات Code.org<br/>للمستخدمين تحت سن الـ13 لا يتم تخزين البريد الإلكتروني في شكل يسمح لنا بالإتصال بهم ."
     teacher_terms: "أوافق على الالتزام <a href='http://code.org/tos'> بشروط الخدمة</a> Code.org."
     additional_information: "نحتاج مزيد من المعلومات لمواصلة تسجيلك في الموقع."
   signin_form:
@@ -310,6 +311,8 @@
     classroom_activity: "نشاط موصول"
   home:
     title: "ستوديو كود"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: 'مسجل مسبقاً؟ %{link}'
     student_reg_link: "تسجيل كطالب"
     teacher_reg_link: "تسجيل كمعلم"
@@ -350,6 +353,7 @@
     feedback: "توفير التغذية الرجعية"
     translate: "ساعدنا على ترجمة لغتك"
     support: "الدعم"
+    support_url: "http://support.code.org"
     tos: "الشروط"
     privacy: "سياسة الخصوصية"
     secure: "نسخة آمنة"
@@ -374,8 +378,14 @@
     autoplay_option: "تشغيل تلقائي لاشرطة الفيديو"
     download: "تحميل الفيديو"
   compatability:
-    working: "نحن نعمل على دعم متصفح الأنترنت الخاص بك."
-    upgrade: "من فضلك قم بتحديث متصفح الأنترنت الخاص بك."
+    working:
+      header: "نحن نعمل على دعم متصفح الأنترنت الخاص بك."
+      message: "Code.org تستخدم تكنولوجيا الإنترنت الحديثة. هذا يجعل الموقع أسرع للاستخدام. لا يدعم متصفحك كافة الميزات المطلوبة، و قد تواجه مشكلات أثناء استخدام هذا الجزء من الموقع. يرجى مساعدتنا <a href='%{report_issue_url}'>بالإبلاغ عن أي مشاكل تجدها</a>. تستطيع أيضاً <a href='%{supported_browsers_url}'>تحديث متصفحك إلى نسخة مدعومة</a>."
+      hide_this_warning: "إخفاء هذا التحذير"
+    upgrade:
+      header: "رجاءاً قم بتحديث متصفحك."
+      message: "Code.org تستخدم تكنولوجيا الإنترنت الحديثة . هذا يجعل الموقع أسرع للإستخدام . للأسف متصفحك لا يدعم جميع الميزات المطلوبة لتشغيل هذا الجزء من الموقع .<br/><br/>قم بتثبيت متصفح من قائمة المتصفحات المدعومة للإستمرار . تستطيع <a href='#'>محاولة عرض الصفحة </a>, و لكن نتوقع وظائف قد تتعطل ."
+      button: "خذني إلى قائمة المتصفحات المدعومة"
   slow_loading: "هذا يأخذ وقتاً اطول من المعتاد..."
   try_reloading: "حاول اعادة تحميل الصفحة"
   next_stage: "انتهى! استمر في المرحلة القادمة"
@@ -386,7 +396,7 @@
     title: "انقر فوق 'تشغيل' لرؤية البرنامج الخاص بي في العمل"
     bounce_og_title: "تحقق من لعبة الارتداد الخاصة بي"
     flappy_og_title: "تحقق من لعبة Flappy"
-    studio_og_title: "تحقق من قصتي"
+    studio_og_title: "تحقق من مختبر اللعب خاصتي"
     og_description: "كتبت المدونة نفسي بCode.org"
   builder:
     created: "لقد أنشأت برنامج نصي جديد."
@@ -419,6 +429,7 @@
     feedback: "إدلاء برأيك"
     report_bug: "الإبلاغ عن خلل"
     support: "للحصول على المساعدة"
+    support_url: "//support.code.org"
   multi:
     wrong_title: "الإجابة غير صحيحة"
     wrong_body: 'أن الإجابة التي قمت بإدخالها غير صحيحة.  الرجاء المحاولة مرة أخرى!'

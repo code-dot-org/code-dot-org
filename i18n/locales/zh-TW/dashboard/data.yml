@@ -114,7 +114,7 @@
         parameters: "具有參數的函數"
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
+        maze_2_2: '你可以幫我抓住這隻淘氣的豬嗎？試著使用幾個"向前移動"的程式積木堆疊在一起，然後按下"執行程式"來幫我達到目的地。 '
         maze_2_1: "這隻豬實在是太讓人生氣了。幫我把牠找出來吧！"
         maze_2_2_5: "順著這條路把我帶領到傻豬那。記得不要碰到 TNT黃色炸藥，不然你會見到我的羽毛滿天飛 XD"
         maze_2_3: "將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)"

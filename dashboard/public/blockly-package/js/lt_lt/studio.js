@@ -12413,8 +12413,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -14293,7 +14292,7 @@ exports.emptyBlocksErrorMsg = function(d){return "„Kartojimo“ arba „Jei“
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Komandos apraše turi būti išvardintos komandos (įdėtas bent vienas blokas)."};
 
-exports.extraTopBlocks = function(d){return "Tu panaudojai keletą blokų, kurie nėra sujungti su būtinuoju blokeliu."};
+exports.extraTopBlocks = function(d){return "Tu turi nesujungtų blokų. Gal norėjai juos sujungti prie bloko „paleisti programą“?"};
 
 exports.finalStage = function(d){return "Sveikinu! Tu baigei paskutinį etapą."};
 
@@ -14557,11 +14556,11 @@ exports.playSoundWinPoint2 = function(d){return "garsas = pelnyti taškai 2"};
 
 exports.playSoundWood = function(d){return "garsas = mediena"};
 
-exports.positionOutTopLeft = function(d){return "į viršutinę kairiąją poziciją"};
+exports.positionOutTopLeft = function(d){return "pozicija = virš viršutinio kairio kampo"};
 
-exports.positionOutTopRight = function(d){return "į viršutinę dešiniąją poziciją"};
+exports.positionOutTopRight = function(d){return "pozicija = virš viršutinio dešinio kampo"};
 
-exports.positionTopOutLeft = function(d){return "į viršutinę išorinę kairiąją poziciją"};
+exports.positionTopOutLeft = function(d){return "pozicija = kairiau viršutinio kairio kampo"};
 
 exports.positionTopLeft = function(d){return "pozicija = viršuje kairėje"};
 
@@ -14569,7 +14568,7 @@ exports.positionTopCenter = function(d){return "pozicija = viršuje centre"};
 
 exports.positionTopRight = function(d){return "pozicija = viršuje dešinėn"};
 
-exports.positionTopOutRight = function(d){return "į viršutinę išorinę dešiniąją poziciją"};
+exports.positionTopOutRight = function(d){return "pozicija = dešiniau viršutinio dešinio kampo"};
 
 exports.positionMiddleLeft = function(d){return "pozicija = viduryje kairėje"};
 
@@ -14577,7 +14576,7 @@ exports.positionMiddleCenter = function(d){return "pozicija = viduryje"};
 
 exports.positionMiddleRight = function(d){return "pozicija = viduryje dešinėje"};
 
-exports.positionBottomOutLeft = function(d){return "į apatinę išorinę kairiąją poziciją"};
+exports.positionBottomOutLeft = function(d){return "pozicija = kairiau apatinio kairio kampo"};
 
 exports.positionBottomLeft = function(d){return "pozicija = apačioje kairėje"};
 
@@ -14585,11 +14584,11 @@ exports.positionBottomCenter = function(d){return "pozicija = apačioje centre"}
 
 exports.positionBottomRight = function(d){return "pozicija = apačioje dešinėje"};
 
-exports.positionBottomOutRight = function(d){return "į apatinę išorinę dešiniąją poziciją"};
+exports.positionBottomOutRight = function(d){return "pozicija = dešiniau viršutinio dešinio kampo"};
 
-exports.positionOutBottomLeft = function(d){return "į apatinę kairiąją poziciją"};
+exports.positionOutBottomLeft = function(d){return "pozicija = žemiau apatinio kairio kampo"};
 
-exports.positionOutBottomRight = function(d){return "į apatinę dešiniąją poziciją"};
+exports.positionOutBottomRight = function(d){return "pozicija = žemiau apatinio dešinio kampo"};
 
 exports.positionRandom = function(d){return "pozicija = atsitiktinė"};
 
@@ -14609,7 +14608,7 @@ exports.projectileRandom = function(d){return "atsitiktinis"};
 
 exports.reinfFeedbackMsg = function(d){return "Gali nuspausti mygtuką „Mėginti dar kartą“, kad grįžtum prie savo istorijos."};
 
-exports.repeatForever = function(d){return "kartok amžinai"};
+exports.repeatForever = function(d){return "kartok visada"};
 
 exports.repeatDo = function(d){return "daryk"};
 
@@ -14893,13 +14892,13 @@ exports.whenSpriteCollidedTooltip = function(d){return "Vykdyti veiksmus, nurody
 
 exports.whenSpriteCollidedWith = function(d){return "paliečia"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "paliečia bet kurį aktorių"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "paliečia bet kurį kraštą"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "paliečia bet kurį sviedinį"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "paliečia bet ką"};
 
 exports.whenSpriteCollidedWithN = function(d){return "paliečia veikėją "+v(d,"spriteIndex")};
 
