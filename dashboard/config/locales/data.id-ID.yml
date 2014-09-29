@@ -550,10 +550,10 @@
         studio_k1_5: Can you add a block to make the octopus happy?
         studio_k1_6: Can you write a program to make this penguin move around using
           the up / down / left /right keys to hit all of the targets?
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
+        maze_wordsearch_k_1: Pindahkan saya untuk mengeja kata Timur
+        maze_wordsearch_k_2: Pindahkan saya untuk mengeja kata Selatan
+        maze_wordsearch_k_3: Pindahkan saya untuk mengeja kata Barat
+        maze_wordsearch_k_4: Pindahkan saya untuk mengeja kata Utara
         maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
         maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
         maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
@@ -583,27 +583,27 @@
         Unplug4: Algoritma
         Unplug5: Fungsi
         Unplug6: Kondisi
-        Unplug7: Songwriting
+        Unplug7: Penulis lagu
         Unplug8: Abstraksi
         Unplug9: Relay programming
         Unplug10: Internet
         Unplug11: Penutupan
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Gerakkan itu, Gerakkan itu
-        C1_bigevent_unplugged: The Big Event
+        C1_bigevent_unplugged: Acara besar
         C1_getting_loop: Getting Loopy
-        C1_pair_programming: Pair Programming
+        C1_pair_programming: Pemrograman berpasangan
         C1_maze_intro_sequencing: Introduksi Sekuensi Labirin
         C1_maze_debugging: Labirin Debugging
         C1_bee_level_intro: Tingkat Lebah - Introduksi
         C1_artist_intro: Introduksi Artis
-        C1_spelling_bee_intro: Spelling Bee Intro
+        C1_spelling_bee_intro: Intro Spelling Bee
         C1_zuck_repeat_loop: Pengulangan labirin
         C1_bee_loops: Pengulangan lebah
         C1_maze_loops: Pengulangan labirin
         C1_playlab_storytelling: Mainkan Lab - Buat sebuah Cerita
-        C1_planting_seed: Planting a Seed
-        C1_building_foundating: Building a Foundation
+        C1_planting_seed: Penanaman benih
+        C1_building_foundating: Membangun dasar
         C2_maze_intro: Introduksi labirin
         C2_artist_intro: Introduksi Artis
         C2_zuck_repeat_loop: Pengulangan labirin
@@ -612,9 +612,9 @@
         C2_playlab_createstory: Mainkan Lab - Buat sebuah Cerita
         C2_graph_paper: Pemrograman grafis diatas kertas
         C2_conditionals_with_cards: Kondisi
-        C2_binary_bracelets: Binary Bracelets
+        C2_binary_bracelets: Gelang biner
         C2_replay_programming: Pemrograman relay
-        C2_paper_airplanes: Paper Airplanes
+        C2_paper_airplanes: Pesawat kertas
         C3_maze_intro: Apa itu Labirin?
         C3_artist_intro: Apa itu Artis?
         C3_artist_functions: Artist Functions

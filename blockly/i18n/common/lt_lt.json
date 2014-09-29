@@ -21,7 +21,7 @@
   "end": "pabaiga",
   "emptyBlocksErrorMsg": "„Kartojimo“ arba „Jei“ blokelių viduje reikia įdėti kitus blokelius, kad jie veiktų. Įsitikink, kad jie yra gerai sukibę vienas su kitu.",
   "emptyFunctionBlocksErrorMsg": "Komandos apraše turi būti išvardintos komandos (įdėtas bent vienas blokas).",
-  "extraTopBlocks": "Tu panaudojai keletą blokų, kurie nėra sujungti su būtinuoju blokeliu.",
+  "extraTopBlocks": "Tu turi nesujungtų blokų. Gal norėjai juos sujungti prie bloko „paleisti programą“?",
   "finalStage": "Sveikinu! Tu baigei paskutinį etapą.",
   "finalStageTrophies": "Sveikinu! Tu užbaigei paskutinį lygį ir laimėjai {numTrophies, plural, one {a trofėjų} other {# trofėjus}}.",
   "finish": "Finišas",

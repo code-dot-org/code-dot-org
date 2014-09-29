@@ -1,7 +1,7 @@
 'no':
   devise:
     confirmations:
-      confirmed: Kontoen din ble bekreftet. Du er nå logget inn.
+      confirmed: E-postadressen din ble vellykket bekreftet.
       send_instructions: Om noen få minutter vil du motta en e-post med instruksjoner
         om hvordan du bekrefter kontoen.
       send_paranoid_instructions: Hvis din e-postadresse finnes i vår database, vil
@@ -19,9 +19,9 @@
       unconfirmed: Du må bekrefte kontoen før du fortsetter.
     mailer:
       confirmation_instructions:
-        subject: Instruksjoner for å bekrefte
+        subject: Code.org bekreftelse instruksjoner
       reset_password_instructions:
-        subject: Hvordan du tilbakestiller passordet
+        subject: Code.org tilbakestille passord instruksjoner
       unlock_instructions:
         subject: Instruksjoner for å låse opp
     omniauth_callbacks:

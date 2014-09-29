@@ -12916,9 +12916,9 @@ exports.end = function(d){return "نهاية"};
 
 exports.emptyBlocksErrorMsg = function(d){return "قطعة \" أكرر\" أو \" اذا \" تحتاج ان تحتوي على قطع اخرى داخلها من اجل العمل . تأكد من القطع الداخلية بحيث يجب ان تكون تناسب القطع المحتوية في الداخل ."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "كتلة الدالة يحتاج إلى الكتل الأخرى داخله لكي يعمل."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "قطعة الدالة تحتاج إلى القطع الأخرى بداخله لكي يعمل."};
 
-exports.extraTopBlocks = function(d){return "لديك قطع إضافية لم ترفق على قطع الحدث."};
+exports.extraTopBlocks = function(d){return "أنت لم تقم بإرفاق القطع . هل قصدت إرفاق هذه القطع إلى قطعة \"عند التشغيل\"؟"};
 
 exports.finalStage = function(d){return "تهانينا! لقد اتممت المرحلة النهائية."};
 
@@ -12992,7 +12992,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "مجموع كل الا�
 
 exports.tryAgain = function(d){return "حاول مرة أخرى"};
 
-exports.hintRequest = function(d){return "شاهد التلميح"};
+exports.hintRequest = function(d){return "شاهد تلميحاً"};
 
 exports.backToPreviousLevel = function(d){return "الرجوع إلى المستوى السابق"};
 
@@ -13020,7 +13020,7 @@ exports.watchVideo = function(d){return "شاهد الفيديو"};
 
 exports.when = function(d){return "عندما"};
 
-exports.whenRun = function(d){return "عند التنفيذ"};
+exports.whenRun = function(d){return "عند التشغيل"};
 
 exports.tryHOC = function(d){return "جرب \"Hour of Code\""};
 
@@ -13028,7 +13028,7 @@ exports.signup = function(d){return "سجل لمشاهدة مقدمة الدور
 
 exports.hintHeader = function(d){return "إليك نصيحة:"};
 
-exports.genericFeedback = function(d){return "راقب كيف انتهى، ثم حاول إصلاح البرنامج."};
+exports.genericFeedback = function(d){return "انظر كيف انتهى الأمر، و حاول إصلاح برنامجك."};
 
 
 },{"messageformat":68}],56:[function(require,module,exports){
@@ -13050,7 +13050,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ar = function(
   }
   return 'other';
 };
-exports.atHoneycomb = function(d){return "في العسل"};
+exports.atHoneycomb = function(d){return "في قرص العسل"};
 
 exports.atFlower = function(d){return "في زهرة"};
 
@@ -13116,9 +13116,9 @@ exports.ifFlowerTooltip = function(d){return "اذا لم يكن هناك زهر
 
 exports.ifelseFlowerTooltip = function(d){return "إذا كان هناك زهرة / العسل في الاتجاه المحدد فاكتب الكتلة الأول من الإجراءات. خلاف ذلك،قم بكتابة كتلة الثاني من الإجراءات."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "أنت تستخدم جميع القطع الصحيحة , لكنك بحاجة إلى وضع الكمية الصحيحة من العسل ."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "أنت تستخدم جميع القطع الصحيحة , لكنك بحاجة إلى جمع الكمية الصحيحة من الرحيق ."};
 
 exports.make = function(d){return "إجعل"};
 

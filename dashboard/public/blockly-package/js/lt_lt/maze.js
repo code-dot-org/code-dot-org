@@ -12910,7 +12910,7 @@ exports.emptyBlocksErrorMsg = function(d){return "„Kartojimo“ arba „Jei“
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Komandos apraše turi būti išvardintos komandos (įdėtas bent vienas blokas)."};
 
-exports.extraTopBlocks = function(d){return "Tu panaudojai keletą blokų, kurie nėra sujungti su būtinuoju blokeliu."};
+exports.extraTopBlocks = function(d){return "Tu turi nesujungtų blokų. Gal norėjai juos sujungti prie bloko „paleisti programą“?"};
 
 exports.finalStage = function(d){return "Sveikinu! Tu baigei paskutinį etapą."};
 
@@ -13100,9 +13100,9 @@ exports.ifFlowerTooltip = function(d){return "Jei nurodytoje krypty yra gėlė/k
 
 exports.ifelseFlowerTooltip = function(d){return "Jei nurodytoje krypty yra gėlė/korys, atliekami pirmesni veiksmai, kitu atveju - kiti."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Tu naudoji visus reikalingus blokus, bet medaug kiekis neatitinka."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Tu naudoji visus reikalingus blokus, bet nektaro kiekis neatitinka."};
 
 exports.make = function(d){return "pagamink"};
 

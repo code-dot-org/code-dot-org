@@ -32,6 +32,7 @@
     submit: "Dodaj wskazówkę"
   appname: "Code.org"
   stage: "Etap"
+  stage_number: 'Stage %{number}'
   puzzle: "Łamigłówka"
   trophies: "Trofea"
   courses: "Kursy"
@@ -309,6 +310,8 @@
     classroom_activity: "Brak aktywności"
   home:
     title: "Code Studio"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: 'Jesteś już zarejestrowany? %{link}'
     student_reg_link: "Uczeń zalogował się"
     teacher_reg_link: "Nauczyciel zalogował się"
@@ -349,6 +352,7 @@
     feedback: "Wyraź swoją opinię"
     translate: "Pomóż nam tłumaczyć na Twój język"
     support: "Wsparcie"
+    support_url: "http://support.code.org"
     tos: "Terms"
     privacy: "Polityka prywatności"
     secure: "Secure Version"
@@ -373,8 +377,14 @@
     autoplay_option: "Odtwarzaj filmy automatycznie"
     download: "Pobierz wideo"
   compatability:
-    working: "Pracujemy nad wsparciem dla Twojej przeglądarki."
-    upgrade: "Uaktualnij swoją przeglądarkę."
+    working:
+      header: "We are working on support for your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
+      hide_this_warning: "Hide this warning"
+    upgrade:
+      header: "Please upgrade your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
+      button: "Take me to the list of supported browsers"
   slow_loading: "To trwa dłużej niż zwykle..."
   try_reloading: "Spróbuj odświeżyć stronę"
   next_stage: "Skończyłeś! Przejdź do następnego etapu"
@@ -385,7 +395,7 @@
     title: 'Kliknij "Uruchom", aby zobaczyć swój program w akcji'
     bounce_og_title: "Sprawdź moją grę Bounce"
     flappy_og_title: "Sprawdź teraz moją grę Flappy"
-    studio_og_title: "Check out my story"
+    studio_og_title: "Check out my Play Lab App"
     og_description: "Sam napisałem w całości kod za pomocą Code.org"
   builder:
     created: "Stworzyłeś nowy skrypt."
@@ -418,6 +428,7 @@
     feedback: "Give Feedback"
     report_bug: "Report Bug"
     support: "Get Help"
+    support_url: "//support.code.org"
   multi:
     wrong_title: "Błędna odpowiedź"
     wrong_body: "Wprowadzona przez Ciebie odpowiedź nie jest poprawna. Spróbuj ponownie!"

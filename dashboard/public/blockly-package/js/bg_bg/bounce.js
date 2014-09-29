@@ -2932,8 +2932,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -11493,7 +11492,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Блоковете за пов
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Блокът за функция трябва да има други блокове вътре в себе си, за да работи."};
 
-exports.extraTopBlocks = function(d){return "Имате допълнителни блокчета, които не са били използвани в събитийния блок."};
+exports.extraTopBlocks = function(d){return "Имате не закачени блокове. Искате ли да кажеш да ги закачите към блокът \"при стартиране\" ?"};
 
 exports.finalStage = function(d){return "Поздравления! Вие завършихте последния етап."};
 

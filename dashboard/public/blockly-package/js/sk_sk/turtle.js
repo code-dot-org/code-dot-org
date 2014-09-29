@@ -9498,6 +9498,11 @@ Turtle.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
 
+  // Enable blockly param editing in levelbuilder, regardless of level setting
+  if (config.level.edit_blocks) {
+    config.disableParamEditing = false;
+  }
+
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
 
@@ -10004,7 +10009,7 @@ Turtle.drawJointAtTurtle_ = function () {
  * @return {boolean} True if the level is solved, false otherwise.
  */
 var isCorrect = function(pixelErrors, permittedErrors) {
-  return pixelErrors < permittedErrors;
+  return pixelErrors <= permittedErrors;
 };
 
 /**
@@ -10078,7 +10083,10 @@ Turtle.checkAnswer = function() {
 
   // Allow some number of pixels to be off, but be stricter
   // for certain levels.
-  var permittedErrors = level.permittedErrors || 150;
+  var permittedErrors = level.permittedErrors;
+  if (permittedErrors === undefined) {
+    permittedErrors = 150;
+  }
 
   // Test whether the current level is a free play level, or the level has
   // been completed
@@ -10360,21 +10368,21 @@ exports.directionEastLetter = function(d){return "V"};
 
 exports.directionWestLetter = function(d){return "Z"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "koniec"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"Repeat\", alebo \"If\" bloky musia obsahovať ďalšie bloky vo vnútri aby pracovali. Uistite sa, že vnútorný blok sedí správne vo vnútri týchto blokov."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkčný blok musí obsahovať ďalšie bloky vovnútri aby pracoval správne."};
 
-exports.extraTopBlocks = function(d){return "Máte ďalšie extra bloky, ktoré nie sú pripojené k blokom udalostí."};
+exports.extraTopBlocks = function(d){return "Máte nepriradené bloky. Chceli ste ich pripojiť k bloku \"pri spustení\"?"};
 
 exports.finalStage = function(d){return "Gratulujem! Dokončili ste poslednú úroveň."};
 
 exports.finalStageTrophies = function(d){return "Gratulujem! Dokončili ste poslednú úroveň a vyhrali "+p(d,"numTrophies",0,"sk",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Dokončiť"};
 
-exports.generatedCodeInfo = function(d){return "Bloky pre Váš program môžu byť tiež vyjadrené v JavaScript-e, svetovo najviac rozšírenom programovacom jazyku:"};
+exports.generatedCodeInfo = function(d){return "Dokonca aj popredné univerzity učia programovanie založené na blokoch  (napríklad "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale v skutočnosti  bloky ktoré ste vytvorili môžu byť tiež zobrazené v jazyku JavaScript, svetovo najpoužívanejšom programovacom jazyku:"};
 
 exports.hashError = function(d){return "Prepáčte, '%1' nezodpovedá žiadnemu uloženému programu."};
 
@@ -10396,9 +10404,9 @@ exports.nextLevel = function(d){return "Gratulujem! Dokončili ste úlohu "+v(d,
 
 exports.nextLevelTrophies = function(d){return "Gratulujem! Dokončili ste úlohu "+v(d,"puzzleNumber")+" a vyhrali "+p(d,"numTrophies",0,"sk",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
 
-exports.nextStage = function(d){return "Gratulujem! Dokončili ste úroveň "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Blahoželám! Dokončili ste "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Gratulujem! Dokončili ste úroveň "+v(d,"stageNumber")+" a vyhrali "+p(d,"numTrophies",0,"sk",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
+exports.nextStageTrophies = function(d){return "Blahoželám! Dokončili ste "+v(d,"stageName")+" a vyhrali "+p(d,"numTrophies",0,"sk",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Gratulujem! Dokončili ste úlohu "+v(d,"puzzleNumber")+". (Avšak, mohli ste použiť iba "+p(d,"numBlocks",0,"sk",{"one":"1 blok","other":n(d,"numBlocks")+" blokov"})+".)"};
 
@@ -10412,7 +10420,7 @@ exports.repeat = function(d){return "opakovať"};
 
 exports.resetProgram = function(d){return "Obnoviť"};
 
-exports.runProgram = function(d){return "Spustiť program"};
+exports.runProgram = function(d){return "Spustiť"};
 
 exports.runTooltip = function(d){return "Spustiť program definovaný blokmi v pracovnom priestore."};
 
@@ -10426,7 +10434,7 @@ exports.subtitle = function(d){return "vizuálne programovacie prostredie"};
 
 exports.textVariable = function(d){return "text"};
 
-exports.tooFewBlocksMsg = function(d){return "Používate všetky potrebné typy blokov, ale pokúste sa použiť viac týchto typov na dokončenie tejto úlohy."};
+exports.tooFewBlocksMsg = function(d){return "Používate všetky potrebné typy blokov, ale pokúste sa použiť viac typov týchto blokov na dokončenie tejto úlohy."};
 
 exports.tooManyBlocksMsg = function(d){return "Táto úloha môže byť vyriešená s <x id='START_SPAN'/><x id='END_SPAN'/> blokmi."};
 
@@ -10438,15 +10446,15 @@ exports.openWorkspace = function(d){return "Ako to funguje"};
 
 exports.totalNumLinesOfCodeWritten = function(d){return "Celkovo: "+p(d,"numLines",0,"sk",{"one":"1 riadok","other":n(d,"numLines")+" riadkov"})+" kódu."};
 
-exports.tryAgain = function(d){return "skús znova"};
+exports.tryAgain = function(d){return "Skúsiť znova"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Pozri nápovedu"};
 
-exports.backToPreviousLevel = function(d){return "Späť na predchádzajúcu úlohu"};
+exports.backToPreviousLevel = function(d){return "Späť na predchádzajúcu úroveň"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Uložiť do svojej galérie"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Uložené do tvojej galérie!"};
 
 exports.typeCode = function(d){return "Napíšte Váš JavaScript kód pod tieto pokyny."};
 
@@ -10464,19 +10472,19 @@ exports.orientationLock = function(d){return "Vypnite zámok orientácie v nasta
 
 exports.wantToLearn = function(d){return "Chcete sa naučiť programovať?"};
 
-exports.watchVideo = function(d){return "Pozrieť video"};
+exports.watchVideo = function(d){return "Pozrite si video"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "keď"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "pri spustení"};
 
 exports.tryHOC = function(d){return "Vyskúšajte hodinu kódovania"};
 
 exports.signup = function(d){return "Prihlásiť sa na úvodný kurz"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Tu je rada:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Pozrite ako to dopadlo a pokúste sa opraviť váš program."};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){
@@ -10491,7 +10499,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sk = function 
 };
 exports.blocksUsed = function(d){return "Použité bloky: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "konáre"};
 
 exports.catColour = function(d){return "Farba"};
 
@@ -10511,7 +10519,7 @@ exports.colourTooltip = function(d){return "Zmení farbu pera."};
 
 exports.degrees = function(d){return "stupňov"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "hĺbka"};
 
 exports.dots = function(d){return "pixelov"};
 
@@ -10521,37 +10529,37 @@ exports.drawATriangle = function(d){return "nakresli trojuholník"};
 
 exports.drawACircle = function(d){return "nakresli kruh"};
 
-exports.drawAFlower = function(d){return "draw a flower"};
+exports.drawAFlower = function(d){return "Nakresliť kvetinu"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "Nakresliť šesťuholník"};
 
 exports.drawAHouse = function(d){return "nakresli dom"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "Nakresliť planétu"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "Nakresliť kosoštvorec"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "Nakresliť robota"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "Nakresliť raketu"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "Nakresliť snehovú vločku"};
 
 exports.drawASnowman = function(d){return "nakresli snehuliaka"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "Nakresliť hviezdu"};
 
 exports.drawATree = function(d){return "nakresli strom"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "Nakresliť hornú vlnu"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "Nakresliť dolnú vlnu"};
 
 exports.heightParameter = function(d){return "výška"};
 
 exports.hideTurtle = function(d){return "skry umelca"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "skoč"};
 
 exports.jumpBackward = function(d){return "skoč naspať"};
 
@@ -10559,15 +10567,15 @@ exports.jumpForward = function(d){return "skoč vpred"};
 
 exports.jumpTooltip = function(d){return "Umelec sa pohybuje bez toho, aby maľoval."};
 
-exports.jumpEastTooltip = function(d){return "Moves the artist east without leaving any marks."};
+exports.jumpEastTooltip = function(d){return "Posunie maliara na východ bez zanechania stôp."};
 
-exports.jumpNorthTooltip = function(d){return "Moves the artist north without leaving any marks."};
+exports.jumpNorthTooltip = function(d){return "Posunie maliara na sever bez zanechania stôp."};
 
-exports.jumpSouthTooltip = function(d){return "Moves the artist south without leaving any marks."};
+exports.jumpSouthTooltip = function(d){return "Posunie maliara na juh bez zanechania stôp."};
 
-exports.jumpWestTooltip = function(d){return "Moves the artist west without leaving any marks."};
+exports.jumpWestTooltip = function(d){return "Posunie maliara na západ bez zanechania stôp."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "Je to správne okrem dĺžky pohybu."};
 
 exports.lengthParameter = function(d){return "dĺžka"};
 
@@ -10575,19 +10583,19 @@ exports.loopVariable = function(d){return "počítadlo"};
 
 exports.moveBackward = function(d){return "pohnúť sa späť"};
 
-exports.moveEastTooltip = function(d){return "Moves the artist east."};
+exports.moveEastTooltip = function(d){return "Posunie maliara na východ."};
 
 exports.moveForward = function(d){return "pohnúť sa vpred"};
 
 exports.moveForwardTooltip = function(d){return "Presunie umelca vpred."};
 
-exports.moveNorthTooltip = function(d){return "Moves the artist north."};
+exports.moveNorthTooltip = function(d){return "Posunie maliara na sever."};
 
-exports.moveSouthTooltip = function(d){return "Moves the artist south."};
+exports.moveSouthTooltip = function(d){return "Posunie maliara na juh."};
 
-exports.moveWestTooltip = function(d){return "Moves the artist west."};
+exports.moveWestTooltip = function(d){return "Posunie maliara na západ."};
 
-exports.moveTooltip = function(d){return "Presunie umelca dopredu, alebo dozadu o určitú vzdialenosť."};
+exports.moveTooltip = function(d){return "Presunie maliara dopredu, alebo dozadu o určitú vzdialenosť."};
 
 exports.notBlackColour = function(d){return "Budete musieť nastaviť inú farbu ako čiernu pre túto úlohu."};
 
@@ -10609,9 +10617,9 @@ exports.shareDrawing = function(d){return "Zdielať Vašu kresbu:"};
 
 exports.showMe = function(d){return "Ukáž mi"};
 
-exports.showTurtle = function(d){return "Zobraziť umelca"};
+exports.showTurtle = function(d){return "Zobraziť maliara"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "krok"};
 
 exports.tooFewColours = function(d){return "Musíte použiť najmenej %1 odlišných farieb pre túto úlohu. Požili ste len %2."};
 
@@ -10619,11 +10627,11 @@ exports.turnLeft = function(d){return "otočiť vľavo"};
 
 exports.turnRight = function(d){return "otočiť vpravo"};
 
-exports.turnRightTooltip = function(d){return "Otočiť umelca vpravo o konkrétny uhoľ."};
+exports.turnRightTooltip = function(d){return "Otočiť maliara vpravo o konkrétny uhoľ."};
 
-exports.turnTooltip = function(d){return "Otočí umelca vľavo alebo vpravo podľa zadaného počtu stupňov."};
+exports.turnTooltip = function(d){return "Otočí maliara vľavo alebo vpravo podľa zadaného počtu stupňov."};
 
-exports.turtleVisibilityTooltip = function(d){return "Zviditeľniť, alebo zneviditeľniť umelca."};
+exports.turtleVisibilityTooltip = function(d){return "Zviditeľniť, alebo zneviditeľniť maliara."};
 
 exports.widthTooltip = function(d){return "Zmení šírku ceruzky."};
 

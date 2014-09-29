@@ -311,8 +311,8 @@
           denominada "comprimento" para "desenhe um triângulo". Em seguida, desenhe
           triângulos de tamanhos diferentes. (Dica: clique na estrela para adicionar
           uma entrada a uma função)'
-        turtle_3_7: Adicione uma entrada denominada "altura" para "desenhe uma casa"
-          e construa uma casa grande para o elefante (com bordas de 150 pixels)
+        turtle_3_7: Coloque uma entrada "comprimento" em "desenhe uma casa" e construa
+          uma casa grande para o elefante (com bordas de 150 pixels de comprimento)
         turtle_3_8: Estes são todos os blocos do desafio anterior. Modifique "desenhe
           uma casa" de forma que eu acabe no canto inferior direito após desenhar
           uma nova casa. Use essa função modificada para desenhar três casas.

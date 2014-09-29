@@ -9498,6 +9498,11 @@ Turtle.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
 
+  // Enable blockly param editing in levelbuilder, regardless of level setting
+  if (config.level.edit_blocks) {
+    config.disableParamEditing = false;
+  }
+
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
 
@@ -10004,7 +10009,7 @@ Turtle.drawJointAtTurtle_ = function () {
  * @return {boolean} True if the level is solved, false otherwise.
  */
 var isCorrect = function(pixelErrors, permittedErrors) {
-  return pixelErrors < permittedErrors;
+  return pixelErrors <= permittedErrors;
 };
 
 /**
@@ -10078,7 +10083,10 @@ Turtle.checkAnswer = function() {
 
   // Allow some number of pixels to be off, but be stricter
   // for certain levels.
-  var permittedErrors = level.permittedErrors || 150;
+  var permittedErrors = level.permittedErrors;
+  if (permittedErrors === undefined) {
+    permittedErrors = 150;
+  }
 
   // Test whether the current level is a free play level, or the level has
   // been completed
@@ -10350,7 +10358,7 @@ exports.directionSouthLetter = function(d){return "S"};
 
 exports.directionEastLetter = function(d){return "E"};
 
-exports.directionWestLetter = function(d){return "W"};
+exports.directionWestLetter = function(d){return "V"};
 
 exports.end = function(d){return "slutt"};
 
@@ -10358,13 +10366,13 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Gjenta\"- eller \"Hvis\"-blo
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funksjonsblokken må ha andre blokker inni seg for å virke."};
 
-exports.extraTopBlocks = function(d){return "Du har ekstra blokker som ikke er knyttet til en hendelse blokk."};
+exports.extraTopBlocks = function(d){return "Du har ledige blokker. Mente du knytte disse til \"når kjøre\" blokken?"};
 
 exports.finalStage = function(d){return "Gratulerer! Du har fullført siste nivå."};
 
 exports.finalStageTrophies = function(d){return "Gratulerer! Du har fullført siste nivå og vunnet "+p(d,"numTrophies",0,"no",{"one":"en pokal","other":n(d,"numTrophies")+" pokaler"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Fullfør"};
 
 exports.generatedCodeInfo = function(d){return "Selv topp universiteter lærer blokk-basert koding (f.eks "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Men under panseret, kan blokkene du har samlet også vises i JavaScript, verdens mest brukte kode språk:"};
 
@@ -10551,7 +10559,7 @@ exports.jumpSouthTooltip = function(d){return "Flytter artisten sør uten noen s
 
 exports.jumpWestTooltip = function(d){return "Flytter artisten vest uten noen spor."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "Du fikk den rett bortsett fra lengden å flytte."};
 
 exports.lengthParameter = function(d){return "lengde"};
 

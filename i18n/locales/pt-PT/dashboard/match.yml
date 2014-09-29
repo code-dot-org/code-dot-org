@@ -26,7 +26,7 @@
         /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
       2-3 bounce match 1:
         Bounce Matching: "Bounce Matching"
-        Matching: "Matching"
+        Matching: "Correspondência"
         Match the events with the actions: "Match the events with the actions"
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png
@@ -40,7 +40,7 @@
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
       2-3 flappy match 1:
         Flappy Matching One: "Flappy Matching One"
-        Matching: "Matching"
+        Matching: "Correspondência"
         Match the events with the actions: "Match the events with the actions"
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
@@ -70,7 +70,7 @@
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png
       2-3 Big Event Match 1:
-        Matching: "Matching"
+        Matching: "Correspondência"
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
@@ -81,7 +81,7 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a4.png: /script_assets/k_1_images/unplugged_images/big_event_1_a4.png
       2-3 Binary Match 1:
-        Matching: "Matching"
+        Matching: "Correspondência"
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
         Use the key to mach each code to its letter: "Use the key to mach each code to its letter"
         <strong>N</strong>: '<strong>N</strong>'
@@ -93,7 +93,7 @@
         /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
-        Matching: "Matching"
+        Matching: "Correspondência"
         Match the grid to the program: "Match the grid to the program"
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
@@ -102,7 +102,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       2-3 Relay Programming Match 1:
-        Matching: "Matching"
+        Matching: "Correspondência"
         Match the grid to the program: "Match the grid to the program"
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
@@ -122,8 +122,19 @@
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
+      4-5 Computational Thinking Match 1:
+        Matching: "Correspondência"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
       K-1 Artist 2 Match 1:
-        Matching: "Matching"
+        Matching: "Correspondência"
         Is the square next to, above, or below the ball?: Is the square next to, above, or below the ball?
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -132,7 +143,7 @@
         <br/><br/>below: '<br/><br/>below'
         <br/><br/>next to: '<br/><br/>next to'
       K-1 Artist 2 Match 2:
-        Matching: "Matching"
+        Matching: "Correspondência"
         Match the shapes based on type.: Match the shapes based on type.
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
@@ -143,7 +154,7 @@
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
         /script_assets/k_1_images/artist_images/large_triangle.png: /script_assets/k_1_images/artist_images/large_triangle.png
       K-1 Artist 2 Match 3:
-        Matching: "Matching"
+        Matching: "Correspondência"
         Match the shapes based on type.: Match the shapes based on type.
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
@@ -154,7 +165,7 @@
         /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
         /script_assets/k_1_images/artist_images/large_triangle2.png: /script_assets/k_1_images/artist_images/large_triangle2.png
       K-1 Artist Loops Match 1:
-        Matching: "Matching"
+        Matching: "Correspondência"
         Match the code to the stairs it draws.: Match the code to the stairs it draws.
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
@@ -163,8 +174,8 @@
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png
       K-1 Bee Loops Match 1:
-        Matching: "Matching"
-        Match the blocks: "Match the blocks"
+        Matching: "Correspondência"
+        Match the blocks: "Correspondência de blocos"
         /script_assets/k_1_images/bee_images/r4_gnectar.png: /script_assets/k_1_images/bee_images/r4_gnectar.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/bee_images/r5_ghoney.png: /script_assets/k_1_images/bee_images/r5_ghoney.png
@@ -174,8 +185,8 @@
         /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
         /script_assets/k_1_images/move_blocks/EEEEE.png: /script_assets/k_1_images/move_blocks/EEEEE.png
       K-1 Flappy Match 1:
-        Matching: "Matching"
-        Match the blocks: "Match the blocks"
+        Matching: "Correspondência"
+        Match the blocks: "Correspondência de blocos"
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
@@ -183,10 +194,10 @@
         /script_assets/k_1_images/flappy_images/end.png: /script_assets/k_1_images/flappy_images/end.png
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
       K-1 Maze Match 1:
-        Matching: "Matching"
-        Match the puzzles and blocks: "Match the puzzles and blocks"
-        Instructions: "Instructions"
-        Drag the blocks to match.: Drag the blocks to match.
+        Matching: "Correspondência"
+        Match the puzzles and blocks: "Correspondência de puzzles e blocos"
+        Instructions: "Instruções"
+        Drag the blocks to match.: Arrastar os blocos para correspondência.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
         /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png
@@ -197,7 +208,7 @@
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
       K-1 Big Event Match 1:
-        Matching: "Matching"
+        Matching: "Correspondência"
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
@@ -206,7 +217,7 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
       K-1 Happy Maps Match 1:
-        Matching: "Matching"
+        Matching: "Correspondência"
         Match the Map to the arrow that gets the Flurb to the treasure: "Match the Map to the arrow that gets the Flurb to the treasure"
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
@@ -215,7 +226,7 @@
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
       K-1 Move It Match 1:
-        Matching: "Matching"
+        Matching: "Correspondência"
         Match the Map to the algorithm that gets the Flurb to the flowers.: Match the Map to the algorithm that gets the Flurb to the flowers.
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q2.png: /script_assets/k_1_images/unplugged_images/move_it_2_q2.png
@@ -227,9 +238,9 @@
         Coordinates of Ninjacat: "Coordinates of Ninjacat"
         Match each character with its correct coordinate!: Match each character with its correct coordinate!
         /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
-        Cloud: "Cloud"
+        Cloud: "Nuvem"
         Ruby: "Ruby"
-        Dog: "Dog"
+        Dog: "Cão"
         Ninjacat: "Ninjacat"
         (250, 400): (250, 400)
         (500, 240): (500, 240)
@@ -307,7 +318,7 @@
         /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test matching text:
-        Matching: "Matching"
+        Matching: "Correspondência"
         Some really easy stuff to match.  Drag it around until you get it.: 'Some really easy stuff to match.  Drag it around until you get it.'
         What color is the sky?: What color is the sky?
         What's in the ocean?: "What's in the ocean?"

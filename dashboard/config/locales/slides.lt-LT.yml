@@ -3,8 +3,8 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: Sveiki atvykę į savo pirmąjį Vienos Valandos Kodą! Pamėginkime pažiūrėti,
-          kaip atrodo programavimas.
+        text: Sveiki atvykę į savo pirmąją "Programavimo valandą" (Hour of Code)!
+          Pamėginkime pažiūrėti, kaip atrodo programavimas.
       2:
         image: notes/hoc1_2.jpg
         text: Naudosime Blockly, vizualią programavimo kalbą, kurioje reikia vilkti

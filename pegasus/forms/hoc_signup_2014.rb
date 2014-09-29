@@ -21,9 +21,10 @@ class HocSignup2014
   end
 
   def self.process(data, last_processed_data)
-    result = {}
-    result['location_p'] = geocode_address(data['event_location_s']) unless data['event_location_s'].nil_or_empty?
-    result
+    {}.tap do |results|
+      location = search_for_address(data['event_location_s'])
+      results.merge! location.to_solr if location
+    end
   end
 
   def self.solr_query(params)

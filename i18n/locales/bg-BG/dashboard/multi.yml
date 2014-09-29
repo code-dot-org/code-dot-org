@@ -34,7 +34,7 @@
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
       2-3 bee conditionals multi 1:
         Bee Conditionals Multiple Choice One: 'Пчела условности: тест с избор от множество отговори'
-        Which comparison below is true?: Кои сравнение по-долу е вярно?
+        Which comparison below is true?: Кое сравнение по-долу е вярно?
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png
@@ -58,7 +58,7 @@
       2-3 bee loops multi 1:
         Bee Loops Multiple Choice One: 'Пчела повторение: първи тест с избор от множество отговори'
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500
-        Which blocks collect all of the nectar?: Кои блокове се съберат всичкият нектар?
+        Which blocks collect all of the nectar?: Кои блокове ще съберат всичкия нектар?
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png
@@ -83,11 +83,11 @@
       2-3 Algorithms Multi 1:
         Multiple Choice: "Избор от множество отговори"
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: "Изберете алгоритъм за изобразеното условие"
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square'
-        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: 'Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus'
-        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: 'Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus'
-        Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: 'Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle'
+        Choose an algorithm for the image provided: "Изберете алгоритъм за изображението"
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Започва сe с квадрат <br/> Сложете триъгълник над квадрата <br/> Сложете триъгълник под квадрата'
+        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: 'Започнете с квадрат <br/> Сложете триъгълник в дясно от квадрата<br/> Поставете ромб под квадрата <br/> Сложете триъгълник в дясно на ромба'
+        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: 'Започнете с квадрат<br/>Сложете ромб над квадрата<br/>Поставете триъгълник в дясно на ромба'
+        Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: 'Започнете с квадрат <br/> Сложете триъгълник под квадрата <br/> Поставете ромб отдясно на триъгълника'
       2-3 Algorithms Multi 2:
         Multiple Choice: "Избор от множество отговори"
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Започнете с триъгълник <br/> Поставете квадрат под триъгълника <br/> Сложете друг триъгълник под квадрата'
@@ -106,7 +106,7 @@
       2-3 Conditionals Multi 1:
         Multiple Choice: "Избор от множество отговори"
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        According to the rules of this game, which set of cards was scored correctly?: Според правилата на тази игра кой набор от карти е отчетен правилно?
+        According to the rules of this game, which set of cards was scored correctly for your team?: Според правилата на играта, кой набор от карти е бил въведен правилно за вашия отбор?
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
@@ -199,7 +199,7 @@
         Bee Loops Multiple Choice: 'Пчела - повторения: тест с избор от множество отговори'
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
         Which blocks will solve the puzzle?: Кои блокове ще решат пъзела?
-        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/2-3_images/bee/4-5_beeloops_multi_1_a1.png
+        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png
@@ -227,10 +227,19 @@
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png
+      4-5 Computational Thinking Multi 1:
+        Multiple Choice: "Избор от множество отговори"
+        0: '? Тук има три изречения. Кой от шаблоните по-долу подхожда на примерите и на трите?'
+        1: ': Тук има три изречения. Кой от шаблоните по-долу подхожда на примерите и на трите?'
+        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: '<h4>Сиатъл е един голям град. <br/>Eugene е среден град <br/> Хилвию е малък град.</h4>'
+        <h4>Seattle _____ a _____ _____.</h4>: '<h4>Сиатъл _____ a _____ _____.</h4>'
+        <h4>_____ is a _____ city.</h4>: '<h4>_____ е  _____ град.</h4>'
+        <h4>_____ is _____ a _____.</h4>: '<h4>_____ е _____  _____.</h4>'
+        <h4>Eugene is a _____ city.</h4>: '<h4>Eugene е _____ град.</h4>'
       K-1 Artist 1 Multi 1:
         Multiple Choice: "Избор от множество отговори"
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
-        Which blocks solve this puzzle?: Which blocks solve this puzzle?
+        Which blocks solve this puzzle?: Кои блокове решават пъзела?
         /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
         /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
         /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
@@ -238,7 +247,7 @@
       K-1 Artist 1 Multi 2:
         Multiple Choice: "Избор от множество отговори"
         /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png, 500
-        Which blocks draw the square?: Which blocks draw the square?
+        Which blocks draw the square?: Кои блокове изчертават квадрат?
         /script_assets/k_1_images/artist_images/N|E|S|W.png: /script_assets/k_1_images/artist_images/N|E|S|W.png
         /script_assets/k_1_images/artist_images/E|S|W|N.png: /script_assets/k_1_images/artist_images/E|S|W|N.png
         /script_assets/k_1_images/artist_images/N|W|S|E.png: /script_assets/k_1_images/artist_images/N|W|S|E.png
@@ -358,7 +367,7 @@
         Multiple Choice: "Избор от множество отговори"
         /script_assets/k_1_images/search_images/move.png, 450: /script_assets/k_1_images/search_images/move.png, 450
         Which blocks spell "MOVE"?: 'Кои блокове образуват "MOVE"?'
-        /script_assets/k_1_images/move_blocks/EEES.png: /script_assets/k_1_images/move_blocks/EEEES.png
+        /script_assets/k_1_images/move_blocks/EEES.png: /script_assets/k_1_images/move_blocks/EEES.png
         /script_assets/k_1_images/move_blocks/EESS.png: /script_assets/k_1_images/move_blocks/EESS.png
         /script_assets/k_1_images/move_blocks/ESSS.png: /script_assets/k_1_images/move_blocks/ESSS.png
       K-1 Word Search Multi 2:

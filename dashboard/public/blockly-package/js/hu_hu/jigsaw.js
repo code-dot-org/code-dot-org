@@ -7397,19 +7397,19 @@ exports.directionEastLetter = function(d){return "Kelet"};
 
 exports.directionWestLetter = function(d){return "Nyugat"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "vége"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Akkor van értelme az \"Ismétel\" vagy a \"Ha\" blokknak, ha van  bennük egy vagy több blokk. Bizonyosodj meg róla, hogy a belső blokk megfelelően illeszkedik a külső blokkhoz."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokknak szüksége van további elemekre a belsejében."};
 
-exports.extraTopBlocks = function(d){return "Van egy blokk, ami nincs csatolva egyetlen eseményblokkhoz se."};
+exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\"/\"when run\" blokkhoz vagy töröld."};
 
 exports.finalStage = function(d){return "Gratulálok! Teljesítetted az utolsó szakaszt."};
 
 exports.finalStageTrophies = function(d){return "Gratulálok! Teljesítetted az utolsó szakaszt és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Kész"};
 
 exports.generatedCodeInfo = function(d){return "Még a legjobb egyetemei is tanítják a blokk alapú kódolást (például "+v(d,"berkeleyLink")+" "+v(d,"harvardLink")+"). De a motorháztető alatt, a blokkok amiket összeraksz, JavaScript kódok, a világ legszélesebb körben használt kódolási nyelvén:"};
 
@@ -7441,7 +7441,7 @@ exports.numBlocksNeeded = function(d){return "Gratulálok! Megoldottad a "+v(d,"
 
 exports.numLinesOfCodeWritten = function(d){return "Éppen most írtál újabb "+p(d,"numLines",0,"hu",{"one":"1 sor","other":n(d,"numLines")+" sor"})+" kódot!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "lejátszás"};
 
 exports.puzzleTitle = function(d){return v(d,"puzzle_number")+". feladvány a "+v(d,"stage_total")+" -ból"};
 
@@ -7449,11 +7449,11 @@ exports.repeat = function(d){return "ismételd"};
 
 exports.resetProgram = function(d){return "Visszaállítás"};
 
-exports.runProgram = function(d){return "Program Futtatása"};
+exports.runProgram = function(d){return "Fut"};
 
 exports.runTooltip = function(d){return "A munkalapon összeépített program futtatása."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "pontszám"};
 
 exports.showCodeHeader = function(d){return "Kód Megjelenítése"};
 
@@ -7477,7 +7477,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Összesített eredmény
 
 exports.tryAgain = function(d){return "Próbáld újra"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Segítség"};
 
 exports.backToPreviousLevel = function(d){return "Vissza az előző szintre"};
 
@@ -7503,9 +7503,9 @@ exports.wantToLearn = function(d){return "Szeretnél megtanulni programozni?"};
 
 exports.watchVideo = function(d){return "Nézd meg a videót"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "amikor"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "futtatáskor"};
 
 exports.tryHOC = function(d){return "Próbáld ki a kódolás óráját"};
 
@@ -7513,7 +7513,7 @@ exports.signup = function(d){return "Regisztrálj a bevezető képzésre"};
 
 exports.hintHeader = function(d){return "Egy tipp:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Nem sikerült célba érnem. Kérlek javítsd a hibát."};
 
 
 },{"messageformat":46}],34:[function(require,module,exports){

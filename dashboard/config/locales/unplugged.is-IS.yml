@@ -120,35 +120,35 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: Krúttleg kort
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
+        title: Hreyfðu mig
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life Algorithms: Plant a Seed'
+        title: 'Algrím úr raunheimi: Sá fræi'
         desc: This lesson calls out ways we use algorithms in our daily lives, using
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
+        title: Að byggja grunn
         desc: Students build a structure using only provided supplies. Structures
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
-        title: Getting Loopy
+        title: Hringl
         desc: This lesson introduces the programming concept of loops (repeated instructions)
           through a dance activity. Students will learn simple choreography, then
           be instructed to repeat it.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relay programming
+        title: Boðhlaupsforritun
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
@@ -161,14 +161,14 @@
           black card, you get a point."
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
+        title: Stórviðburður
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
           is pressed.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Going Places Safely
+        title: Ferðast í öryggi
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers
           introduce how to stay safe while navigating the Internet.
       GraphPaperProgramming:
@@ -177,19 +177,19 @@
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Real-life Algorithms: Paper Planes'
+        title: 'Algrím úr raunheimi: Pappírsskutlur'
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically
           making paper airplanes. This lesson also focuses on the bigger picture of
           computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
+        title: Stafræn armbönd
         desc: Students create bracelets as a binary representations of the first letter
           of their name. Students learn that data can be represented and stored in
           more than one way.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Your Digital Footprint
+        title: Stafræna fótsporið þitt
         desc: Teachers introduce to students the idea that putting information about
           themselves online creates a digital footprint or "trail" that has consequences.
       ComputationalThinking:
@@ -199,7 +199,7 @@
           with no instructions.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Functional Suncatchers
+        title: Sólarskraut með föllum
         desc: Students create an algorithm with variables and functions (pieces of
           code that you want to use over and over again) to create suncatchers using
           string and beads.
@@ -222,12 +222,12 @@
           using pieces of paper.
         video: C3_internet
       Crowdsourcing:
-        title: Crowdsourcing
+        title: "Útvistun til hóps"
         desc: Student use crowdsourcing, a problem-solving technique common in computer
           science, to complete a task together as a classroom more efficiently than
           if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
+        title: Stafrænn borgari
         desc: Students explore the difference between private information and personal
           information, distinguishing what is safe and unsafe to share online.

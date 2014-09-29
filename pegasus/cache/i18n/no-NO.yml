@@ -79,6 +79,8 @@
   i_am_a: Jeg er en
   never_spam: Vi vil aldri sende deg spam
   enter_country: Angi landet hvis det er utenfor USA
+  used_infrequent_updates: Only used for infrequent updates
+  privacy_practices_children: See our privacy practices for children
   petition_thankyou: Takk for at du signerte oppropet
   carousel_heading_international: Gjennomganger på norsk
   continue_learning_header: Fortsett å lære etter denne ene timen
@@ -166,7 +168,7 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: Gjeldende
     universitet student (eller forsker)
   volunteer_engineer_submission_experience_software_professional: Profesjonell programvare
-  petition_age: Age
+  petition_age: Alder
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -178,8 +180,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
-  dashboard_landing_print_certificates: Print certificates for students who finish
-    this course
+  dashboard_landing_print_certificates: Skriv ut diplomer for elever som fullfører
+    dette kurset
   dashboard_landing_educator_blog: Read about news and updates to our materials at
     our Educator Blog
   dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
@@ -218,6 +220,7 @@
   dashboard_sections_table_course: Course
   dashboard_sections_table_students: Elever
   dashboard_sections_table_code: Delkode
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
     students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
   dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
@@ -236,9 +239,12 @@
     per line:'
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
+  dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Navn
-  dashboard_students_age: Age
+  dashboard_students_age: Alder
   dashboard_students_gender: Kjønn
+  dashboard_students_male: Mann
+  dashboard_students_female: Kvinne
   dashboard_students_secret: Secret
   dashboard_students_password: Passord
   dashboard_students_username: 'Username: %{student_username}'
@@ -267,3 +273,27 @@
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: Sekvens
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: Andre
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
+  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
+    week alone:'
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

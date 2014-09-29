@@ -32,6 +32,8 @@
   "ifelseTooltip":"Belirtilen yönde bir yolu varsa o zaman ilk bloktaki eylemleri yap . Aksi takdirde, \nikinci bloktaki eylemleri yap.",
   "ifFlowerTooltip":"Eğer çiçek\/petek belirtilen yönde varsa birşeyler yap.",
   "ifelseFlowerTooltip":"Çiçek\/petek belirtilen yönde ise, o zaman eylemlerin ilk bloğunu yap. Aksi takdirde, eylemlerin ikinci bloğunu yap.",
+  "insufficientHoney":"You're using all the right blocks, but you need to make the right amount of honey.",
+  "insufficientNectar":"You're using all the right blocks, but you need to collect the right amount of nectar.",
   "make":"yap",
   "moveBackward":"geriye doğru git",
   "moveEastTooltip":"Beni doğuya bir boşluk ilerlet.",

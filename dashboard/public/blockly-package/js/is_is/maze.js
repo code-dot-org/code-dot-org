@@ -12895,21 +12895,21 @@ exports.directionEastLetter = function(d){return "A"};
 
 exports.directionWestLetter = function(d){return "V"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "endir"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Kubbarnir \"endurtaka\" og \"ef\" verða að innihalda aðra kubba til að virka. Gættu þess að innri kubburinn smellpassi í ytri kubbinn."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Fallkubburinn þarf að innhalda aðra kubba til að virka."};
 
-exports.extraTopBlocks = function(d){return "Þú hefur auka kubba sem ekki tengjast atvikakubbi."};
+exports.extraTopBlocks = function(d){return "Þú ert með ótengda kubba. Ætlaðir þú að festa þá á \"þegar keyrt\" kubbinn?"};
 
 exports.finalStage = function(d){return "Til hamingju! Þú hefur klárað síðasta áfangann."};
 
-exports.finalStageTrophies = function(d){return "Til hamingju! Þú hefur klárað síðasta áfangann og unnið "+p(d,"numBikara",0,"is",{"one":"bikar","other":n(d,"numBikara")+" bikara"})+"."};
+exports.finalStageTrophies = function(d){return "Til hamingju! Þú hefur klárað síðasta áfangann og unnið "+p(d,"numTrophies",0,"is",{"one":"bikar","other":n(d,"numTrophies")+" bikara"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Ljúka"};
 
-exports.generatedCodeInfo = function(d){return "Kubbana í forritinu þínu er líka hægt að umbreyta í JavaScript, sem er útbreiddasta forritunarmál í heiminum:"};
+exports.generatedCodeInfo = function(d){return "Jafnvel bestu háskólar kenna forritun með kubbum (t.d. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). En bak við tjöldin er hægt að sýna kubbana sem þú hefur sett saman sem JavaScript, sem er mest notaða forritunarmál í heimi:"};
 
 exports.hashError = function(d){return "Því miður finnst ekkert vistað forrit '%1'."};
 
@@ -12917,7 +12917,7 @@ exports.help = function(d){return "Hjálp"};
 
 exports.hintTitle = function(d){return "Vísbending:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "stökkva"};
 
 exports.levelIncompleteError = function(d){return "Þú ert að nota allar nauðsynlegu tegundirnar af kubbum en ekki á réttan hátt."};
 
@@ -12931,15 +12931,15 @@ exports.nextLevel = function(d){return "Til hamingju! Þú hefur leyst þraut "+
 
 exports.nextLevelTrophies = function(d){return "Til hamingju! Þú hefur leyst þraut "+v(d,"puzzleNumber")+" og unnið "+p(d,"numTrophies",0,"is",{"one":"bikar","other":n(d,"numTrophies")+" bikara"})+"."};
 
-exports.nextStage = function(d){return "Til hamingju! Þú hefur lokið áfanga "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Til hamingju! Þú kláraðir "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Til hamingju! Þú kláraðir áfanga "+v(d,"stageNumber")+" og vannst "+p(d,"numTrophies",0,"is",{"one":"bikar","other":n(d,"numTrophies")+" bikara"})+"."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"is",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Til hamingju! Þú kláraðir þraut "+v(d,"puzzleNumber")+". (En þú hefðir getað notað bara  "+p(d,"numBlocks",0,"is",{"one":"1 kubb","other":n(d,"numBlocks")+" kubba"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Þú náðir að skrifa "+p(d,"numLines",0,"is",{"one":"1 línu","other":n(d,"numLines")+" línur"})+" af kóða!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "spila"};
 
 exports.puzzleTitle = function(d){return "Þraut "+v(d,"puzzle_number")+" af "+v(d,"stage_total")};
 
@@ -12947,11 +12947,11 @@ exports.repeat = function(d){return "endurtaka"};
 
 exports.resetProgram = function(d){return "Endurstilla"};
 
-exports.runProgram = function(d){return "Keyra forrit"};
+exports.runProgram = function(d){return "Keyra"};
 
 exports.runTooltip = function(d){return "Keyra forritið sem samanstendur af kubbunum á vinnusvæðinu."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "stig"};
 
 exports.showCodeHeader = function(d){return "Sýna kóða"};
 
@@ -12975,13 +12975,13 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Samtals: "+p(d,"numLine
 
 exports.tryAgain = function(d){return "Reyna aftur"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Sjá vísbendingu"};
 
-exports.backToPreviousLevel = function(d){return "Til baka á fyrra stig"};
+exports.backToPreviousLevel = function(d){return "Til baka í fyrri áfanga"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Vista í safn þitt"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Vistað í safn þitt!"};
 
 exports.typeCode = function(d){return "Skrifaðu JavaScript kóða þinn fyrir neðan þessar leiðbeiningar."};
 
@@ -13001,24 +13001,24 @@ exports.wantToLearn = function(d){return "Viltu læra að kóða?"};
 
 exports.watchVideo = function(d){return "Horfa á videóið"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "þegar"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "þegar keyrt"};
 
 exports.tryHOC = function(d){return "Prófa Kóðun í klukkustund"};
 
 exports.signup = function(d){return "Skráning á inngangsnámskeiðið"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Vísbending:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Athugaðu hvernig þetta fór og reyndu að laga forritið."};
 
 
 },{"messageformat":68}],56:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.is=function(n){return n===1?"one":"other"}
-exports.atHoneycomb = function(d){return "at honeycomb"};
+exports.atHoneycomb = function(d){return "við býkúpu"};
 
-exports.atFlower = function(d){return "at flower"};
+exports.atFlower = function(d){return "við blóm"};
 
 exports.avoidCowAndRemove = function(d){return "forðast kúna og fjarlægja 1"};
 
@@ -13052,7 +13052,7 @@ exports.fillTooltip = function(d){return "setja 1 einingu moldar"};
 
 exports.finalLevel = function(d){return "Til hamingju! Þú hefur leyst síðustu þrautina."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "Blómið sem þú ert á hefur ekki meiri blómasafa."};
 
 exports.get = function(d){return "sækja"};
 
@@ -13060,17 +13060,17 @@ exports.heightParameter = function(d){return "hæð"};
 
 exports.holePresent = function(d){return "það er hola"};
 
-exports.honey = function(d){return "make honey"};
+exports.honey = function(d){return "búa til hunang"};
 
-exports.honeyAvailable = function(d){return "honey"};
+exports.honeyAvailable = function(d){return "hunang"};
 
-exports.honeyTooltip = function(d){return "Make honey from nectar"};
+exports.honeyTooltip = function(d){return "Búa til hunang úr blómasafa"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "Þessi býkúpa hefur ekki pláss fyrir meira hunang."};
 
 exports.ifCode = function(d){return "ef"};
 
-exports.ifInRepeatError = function(d){return "Þú þarft að nota \"ef\" kubb innan í \"endurtaka\" kubb. Ef þú lendir í vandræðum er ágætt að skoða síðustu þraut til sjá hvernig þetta var leyst."};
+exports.ifInRepeatError = function(d){return "Þú þarft \"ef\" kubb innan í \"endurtaka\" kubbi. Ef þú átt í erfiðleikum: prófaðu þá síðustu þraut aftur til að sjá hvernig það virkaði."};
 
 exports.ifPathAhead = function(d){return "ef slóð framundan"};
 
@@ -13078,37 +13078,37 @@ exports.ifTooltip = function(d){return "Ef það er slóð í tiltekna stefnu þ
 
 exports.ifelseTooltip = function(d){return "Ef það er slóð í tiltekna stefnu, þá að gera fyrri kubbastæðuna. Annars á að gera seinni kubbastæðuna."};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "Ef það er blóm/býkúpa í hina tilteknu átt, þá skal gera einhverjar aðgerðir."};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "Ef það er blóm/býkúpa í hina tilteknu átt, þá skal gera fyrstu aðgerðastæðuna. Annars skal gera hina aðgerðastæðuna."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Þú ert að nota alla réttu kubbana, en þú þarft að búa til rétt magn hunangs."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Þú ert að nota alla réttu kubbana, en þú þarft að safna réttu magni af blómasafa."};
 
-exports.make = function(d){return "make"};
+exports.make = function(d){return "búa til"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "fara aftur á bak"};
 
-exports.moveEastTooltip = function(d){return "Move me east one space."};
+exports.moveEastTooltip = function(d){return "Færa mig austur um eitt bil."};
 
 exports.moveForward = function(d){return "færa áfram"};
 
 exports.moveForwardTooltip = function(d){return "Færa mig áfram um einn reit."};
 
-exports.moveNorthTooltip = function(d){return "Move me north one space."};
+exports.moveNorthTooltip = function(d){return "Færa mig norður um eitt bil."};
 
-exports.moveSouthTooltip = function(d){return "Move me south one space."};
+exports.moveSouthTooltip = function(d){return "Færa mig suður um eitt bil."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "Færa mig fram/aftur um eitt bil"};
 
-exports.moveWestTooltip = function(d){return "Move me west one space."};
+exports.moveWestTooltip = function(d){return "Færa mig vestur um eitt bil."};
 
-exports.nectar = function(d){return "get nectar"};
+exports.nectar = function(d){return "sækja blómasafa"};
 
-exports.nectarRemaining = function(d){return "nectar"};
+exports.nectarRemaining = function(d){return "blómasafi"};
 
-exports.nectarTooltip = function(d){return "Get nectar from a flower"};
+exports.nectarTooltip = function(d){return "Ná í blómasafa úr blómi"};
 
 exports.nextLevel = function(d){return "Til hamingju! Þú hefur klárað þessa þraut."};
 
@@ -13120,9 +13120,9 @@ exports.noPathLeft = function(d){return "engin slóð til vinstri"};
 
 exports.noPathRight = function(d){return "engin slóð til hægri"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "Þú getur aðeins fengið blómasafa úr blómi."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "Þú getur aðeins búið til hunang við býkúpu."};
 
 exports.numBlocksNeeded = function(d){return "Þessa þraut er hægt að leysa með %1 kubbum."};
 
@@ -13146,7 +13146,7 @@ exports.removeStack = function(d){return "fjarlægja stæðu af "+v(d,"shovelful
 
 exports.removeSquare = function(d){return "fjarlægja ferning"};
 
-exports.repeatCarefullyError = function(d){return "Til að leysa þarf að nota endurtekið hreyfingamynstur. Notaðu \"endurtaka\" kubb sem inniheldur þessa þrjá: færa, færa, snúa til hægri."};
+exports.repeatCarefullyError = function(d){return "Til að leysa þetta skaltu athuga vel mynstrið tvær hreyfingar - einn snúningur sem fer í \"endurtaka\" kubbinn. Það er í lagi að hafa aukasnúning í lokin."};
 
 exports.repeatUntil = function(d){return "endurtaka þar til"};
 
@@ -13154,11 +13154,11 @@ exports.repeatUntilBlocked = function(d){return "meðan slóð framundan"};
 
 exports.repeatUntilFinish = function(d){return "endurtaka þar til búið"};
 
-exports.step = function(d){return "Step"};
+exports.step = function(d){return "Þrep"};
 
-exports.totalHoney = function(d){return "total honey"};
+exports.totalHoney = function(d){return "samtals hunang"};
 
-exports.totalNectar = function(d){return "total nectar"};
+exports.totalNectar = function(d){return "samtals blómasafi"};
 
 exports.turnLeft = function(d){return "snúa til vinstri"};
 
@@ -13166,19 +13166,19 @@ exports.turnRight = function(d){return "snúa til hægri"};
 
 exports.turnTooltip = function(d){return "Snýr mér til vinstri eða hægri um 90 gráður."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "Gættu þess að athuga öll ský til að sjá hvort þau eru blóm eða býkúpur."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "Gættu þess að athuga öll fjólublá blóm til að kanna hvort þau hafi blómasafa"};
 
-exports.whileMsg = function(d){return "meðan"};
+exports.whileMsg = function(d){return "á meðan"};
 
 exports.whileTooltip = function(d){return "Endurtaka innifaldar aðgerðir þar til endapunkti er náð."};
 
-exports.word = function(d){return "Find the word"};
+exports.word = function(d){return "Finna orðið"};
 
 exports.yes = function(d){return "Já"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "Þú stafaðir"};
 
 
 },{"messageformat":68}],57:[function(require,module,exports){

@@ -12,7 +12,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "Let's loop this code to draw two rows of hexagons. This one's a bit more tricky - The second row should be shifted down and to the right so the two rows fit together.",
+    "instructions": "Let's loop this code to draw two rows of hexagons. Notice how our second row is shifted to the right.",
     "ideal": "11"
   }
 }]]></config>
@@ -46,6 +46,30 @@
                   </next>
                 </block>
               </statement>
+              <next>
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE">60</title>
+                  <next>
+                    <block type="jump_by_constant">
+                      <title name="DIR">jumpForward</title>
+                      <title name="VALUE">40</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnLeft</title>
+                          <title name="VALUE">60</title>
+                          <next>
+                            <block type="jump_by_constant">
+                              <title name="DIR">jumpBackward</title>
+                              <title name="VALUE">320</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
             </block>
           </next>
         </block>

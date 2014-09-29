@@ -32,6 +32,7 @@
     submit: Add hint
   appname: Code.org
   stage: "ដំណាក់​កាល"
+  stage_number: Stage %{number}
   puzzle: "ល្បែង​ប្រាជ្ញា"
   trophies: "ពាន​រង្វាន់"
   courses: "វគ្គ​សិក្សា"
@@ -358,6 +359,8 @@
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: "បាន​ចុះឈ្មោះ​ហើយ​មែនទេ? %{link}"
     student_reg_link: "ការ​ចុះឈ្មោះ​ជា​សិស្ស"
     teacher_reg_link: "ការ​ចុះឈ្មោះ​ជា​គ្រូ​បង្រៀន"
@@ -412,6 +415,7 @@
     feedback: "ផ្ដល់​មតិ​កែ​លម្អ"
     translate: "ជួយ​ពួក​យើង​ក្នុង​ការ​បកប្រែ​ទៅ​ភាសា​របស់​អ្នក"
     support: "ការ​គាំទ្រ"
+    support_url: http://support.code.org
     tos: "លក្ខខណ្ឌ"
     privacy: Privacy Policy
     secure: "កំណែ​សុវត្ថិភាព"
@@ -436,8 +440,22 @@
     autoplay_option: "ចាក់​វីដេអូ​ដោយ​ស្វ័យប្រវត្តិ"
     download: "ទាញយក​វីដេអូ"
   compatability:
-    working: "ពួក​យើង​កំពុង​ធ្វើការ​ឲ្យ​អាច​ដើរ​បាន​លើ​កម្មវិធី​អ៊ីនធឺណិត​របស់​អ្នក។"
-    upgrade: Please upgrade your browser.
+    working:
+      header: "ពួក​យើង​កំពុង​ធ្វើការ​ឲ្យ​អាច​ដើរ​បាន​លើ​កម្មវិធី​អ៊ីនធឺណិត​របស់​អ្នក។"
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Your browser doesn't support all the features required, and you may experience
+        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
+        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
+        your browser to a supported version</a>.
+      hide_this_warning: Hide this warning
+    upgrade:
+      header: Please upgrade your browser.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Unfortunately your browser doesn't support all the features required
+        to run this part of the site.<br/><br/>Install a browser on our supported
+        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
+        expect functionality to be broken.
+      button: Take me to the list of supported browsers
   slow_loading: This is taking longer than usual...
   try_reloading: "សូម​សាកល្បង​ផ្ទុក​ទំព័រ​ឡើង​វិញ"
   next_stage: "បាន​បញ្ចប់! បន្ត​ទៅ​ដំណាក់កាល​បន្ទាប់"
@@ -486,6 +504,7 @@
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
+    support_url: "//support.code.org"
   multi:
     wrong_title: "សំណួរ​មិន​ត្រឹមត្រូវ"
     wrong_body: "សំណួរ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!"

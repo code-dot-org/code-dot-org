@@ -1,0 +1,32 @@
+---
+layout: none
+theme: none
+---
+ 
+:css
+  th.manage-th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 45px;
+  }
+
+%div{style: "padding-left:20px"}
+  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'section.students.length > 0', "ng-form" => "allForm"}
+    %colgroup
+      %col{width: "200"}/
+      %col{width: "100"}/
+      %col{width: "100"}/
+    %tr
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'completed_levels_count'"}= I18n.t('dashboard_students_completed_levels')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'total_lines'"}= I18n.t('dashboard_students_total_lines')
+    %tr{"ng-repeat" => "student in section.students | orderBy:order", "ng-form" => "form"}
+      %td
+        %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}"} {{student.name}}
+      %td
+        {{student.completed_levels_count}}
+      %td
+        {{student.total_lines}}
