@@ -21,7 +21,7 @@
   "end": "akhir",
   "emptyBlocksErrorMsg": "Blok \"Ulangi\" atau blok \"Jika\" membutuhkan blok lain di dalamnya supaya bisa bekerja. Pastikan blok yang berada didalam diletakkan secara pas.",
   "emptyFunctionBlocksErrorMsg": "Blok fungsi membutuhkan blok lain di dalamnya agar dapat bekerja.",
-  "extraTopBlocks": "Anda memiliki blok ekstra yang tidak melekat pada sebuah blok acara (event).",
+  "extraTopBlocks": "Anda memiliki blok tidak terpasang. Apakah maksud anda untuk menempelkannya ke blok \"when run\"?",
   "finalStage": "Horee! Anda berhasil menyelesaikan tahap akhir.",
   "finalStageTrophies": "Horee! Anda berhasil menyelesaikan tahap akhir dan memenangkan {numTrophies, plural, one {piala} other {piala #}}.",
   "finish": "Selesai",

@@ -1,0 +1,20 @@
+-supporters = DB[:cdo_donors].where(level_s:'platinum').or(level_s:'gold').order(:url_s)
+
+%link{href: "/css/donor_slider.css", rel: "stylesheet"}
+%script{:src=>"/js/donor_slider.js"}
+
+%div{:class=>'donor-slider'}
+  %h2{:id=>'level_indicator'} Platinum Supporters ($3,000,000+ contribution)
+
+  - supporters.each do |supporter, name_s|
+    - avatar_url = avatar_image_thumbnail(supporter[:name_s])
+    %a{:href=>supporter[:url_s]}
+      %div{:class=>"badge "  + supporter[:level_s], :style=>"display: none;"}
+        %div{:class=>"avatar", :style=>"float: left"}
+          - if supporter[:level_s] == "platinum"
+            %img{:src=> avatar_url, :style=>'width: 100%'}
+          - else
+            %img{:src=> avatar_url, :style=>'height: 100%'}
+            %p{:class=>"label"}
+              - if supporter[:level_s] != "platinum"
+                =supporter[:name_s]

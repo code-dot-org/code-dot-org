@@ -42,11 +42,8 @@ class ProfessionalDevelopmentWorkshop
             ).
       where(section_id: section_id).
       all.map do |result|
-      levels = DASHBOARD_DB[:user_levels].
-        where(user_id: result[:id]).
-        and("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}").
-        all
-      result[:levels] = levels
+      levels = DashboardStudent.completed_levels(result[:id])
+      result[:levels] = levels.all
       result[:levels_count] = levels.count
       result
     end
