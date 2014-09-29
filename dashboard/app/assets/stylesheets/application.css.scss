@@ -99,11 +99,6 @@ th {
   background-color: orange;
 }
 
-.level_highlight.level_free_play {
-  border-radius: 5px;
-  font-size: 18px;
-}
-
 .level_highlight_outer_assessment {
   display: inline-block;
   background-color: yellow;
@@ -347,6 +342,10 @@ th {
   padding: 3px;
   font-size: 16px;
   display: inline-block;
+}
+
+a.header_status_bar:hover {
+  background-color: orange;
 }
 
 .header_text {
