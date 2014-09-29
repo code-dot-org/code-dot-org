@@ -17,8 +17,8 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 ### OS X Mavericks
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
-1. `brew bundle`
-  1. If it complains about an old version of `mysql`, run `brew unlink mysql` and run `brew bundle` again
+1. `brew install install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick`
+  1. If it complains about an old version of `X`, run `brew unlink X` and run `brew install X` again
 1. Set up MySQL
   1. Have launchd start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
   1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
@@ -71,7 +71,7 @@ Our code is segmented into four parts:
   * [csedweek.org](http://csedweek.org)
   * [Teacher Dashboard](http://code.org/teacher-dashboard)
 
-## Running Dashboard 
+## Running Dashboard
 1. `cd code-dot-org/dashboard`
 2. `bundle exec rails server`
 3.  Note: after major code updates (or if something seems broken), run `bundle exec rake db:migrate seed:all`
@@ -84,7 +84,7 @@ Our code is segmented into four parts:
 3. Note: after major code updates (or if something seems broken), run `rake db:migrate seed:migrate`
 4. Visit [http://localhost.code.org:9393/](http://localhost.code.org:9393/)
 
-## Building Blockly and Blockly-core (optional) 
+## Building Blockly and Blockly-core (optional)
 
 The learn.code.org default dashboard install includes a static build of blockly, but if you want to make modifications to blockly or blockly-core:
 
