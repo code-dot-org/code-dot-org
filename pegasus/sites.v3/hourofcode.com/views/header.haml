@@ -3,8 +3,10 @@
     .row
       #left{style: "padding: 15px"}
         #hoc-header-branding{style: "border-left: 0px; border-right: 0px"}
-          %a{href:hoc_uri('/')}
-            %img{src: '/images/hour-of-code-logo.png', alt: 'Hour of Code'}
+          #logoholder{style: "position:relative"}
+            #imageheld{style: "position:absolute; top:-18px; left:0"}
+              %a{href:hoc_uri('/')}
+                %img{src: '/images/hour-of-code-logo.png', alt: 'Hour of Code'}
         
       #language-dropdown.hidden-xs{style: "visibility: hidden;"}
         = view :language_dropdown
