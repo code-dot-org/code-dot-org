@@ -47,7 +47,7 @@ Blockly.Input = function(type, name, block, connection) {
   this.connection = connection;
   this.titleRow = [];
   this.align = Blockly.ALIGN_LEFT;
-
+  this.inline_ = false;
   this.visible_ = true;
 };
 
@@ -181,4 +181,29 @@ Blockly.Input.prototype.dispose = function() {
     this.connection.dispose();
   }
   this.sourceBlock_ = null;
+};
+
+/**
+ * Mark this input as being inlined (on the same row as the previous input)
+ */
+Blockly.Input.prototype.setInline = function (inline) {
+  if (inline === undefined) {
+    inline = true;
+  }
+  this.inline_ = inline;
+  if (this.type === Blockly.NEXT_STATEMENT && inline) {
+    throw "Can't inline next statement";
+  }
+  return this;
+};
+
+/**
+ * Is this input inlined? Can be marked on the input itself, or on the source
+ * block
+ */
+Blockly.Input.prototype.isInline = function () {
+  if (this.type === Blockly.NEXT_STATEMENT) {
+    return false;
+  }
+  return this.inline_ || this.sourceBlock_.inputsInline;
 };
