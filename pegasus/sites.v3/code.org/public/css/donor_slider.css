@@ -1,0 +1,57 @@
+h2 {
+  margin-bottom: 5px;
+}
+
+#level_indicator {
+  margin: 0 0 5px 0;
+}
+
+.badge {
+  padding: 5px;
+  display: inline-block;
+  border: 1px solid #D2D2D2;
+  overflow: hidden;
+  white-space:nowrap;
+  border-radius: 0;
+  background-color: white;
+}
+img {
+  height: 100%
+}
+.gold {
+  width: 32.7%;
+}
+
+.platinum {
+  width: 49.5%;
+}
+
+.badge:hover {
+  border: 1px solid #7665a0;
+}
+
+a {
+  text-decoration: none;
+  color: #7665a0;
+}
+a:hover, a:active {
+  text-decoration: none;
+}
+
+.label {
+  display: inline-block;
+  font-family: sans-serif;
+  color: #7665a0;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.avatar {
+  display: inline-block;
+  overflow: hidden;
+  height: 90px;
+}
+
+.badge > * {
+  vertical-align: middle;
+}

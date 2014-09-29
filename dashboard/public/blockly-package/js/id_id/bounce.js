@@ -2932,8 +2932,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -11493,7 +11492,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Blok \"Ulangi\" atau blok \"Ji
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok fungsi membutuhkan blok lain di dalamnya agar dapat bekerja."};
 
-exports.extraTopBlocks = function(d){return "Anda memiliki blok ekstra yang tidak melekat pada sebuah blok acara (event)."};
+exports.extraTopBlocks = function(d){return "Anda memiliki blok tidak terpasang. Apakah maksud anda untuk menempelkannya ke blok \"when run\"?"};
 
 exports.finalStage = function(d){return "Horee! Anda berhasil menyelesaikan tahap akhir."};
 

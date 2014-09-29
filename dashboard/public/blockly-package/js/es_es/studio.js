@@ -12413,8 +12413,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -14284,7 +14283,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Los bloques \"repetir\" o \"si
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "El bloque de función necesita tener otros bloques en su interior para funcionar."};
 
-exports.extraTopBlocks = function(d){return "Tienes bloques adicionales que no están conectados a un bloque de evento."};
+exports.extraTopBlocks = function(d){return "Tiene bloques separados. ¿Quieres decir que quieres fijarlos al bloque \"cuando se ejecuta\"?"};
 
 exports.finalStage = function(d){return "¡Felicidades! Has completado la etapa final."};
 
@@ -14314,9 +14313,9 @@ exports.nextLevel = function(d){return "¡Felicidades! Completaste el Puzzle "+v
 
 exports.nextLevelTrophies = function(d){return "¡Felicidades! Completaste el puzzle "+v(d,"puzzleNumber")+" y ganaste "+p(d,"numTrophies",0,"es",{"one":"un trofeo","other":n(d,"numTrophies")+" trofeos"})+"."};
 
-exports.nextStage = function(d){return "¡Felicitaciones! Ha completado la fase "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "¡ Felicidades! Completaste "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "¡Felicitaciones ha completado la fase "+v(d,"stageName")+" y ha ganado "+p(d,"numTrophies",0,"es",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "¡Felicidades! Completaste la etapa "+v(d,"stageName")+" y ganaste "+p(d,"numTrophies",0,"es",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "¡Felicidades! Completaste el puzzle "+v(d,"puzzleNumber")+". (Sin embargo, podrías haber usado sólo "+p(d,"numBlocks",0,"es",{"one":"1 bloque","other":n(d,"numBlocks")+" bloques"})+".)"};
 
@@ -14362,9 +14361,9 @@ exports.hintRequest = function(d){return "Ver pista"};
 
 exports.backToPreviousLevel = function(d){return "Volver al nivel anterior"};
 
-exports.saveToGallery = function(d){return "Guardar en su galería"};
+exports.saveToGallery = function(d){return "Guardar en tu galería"};
 
-exports.savedToGallery = function(d){return "¡Guardado en su galería!"};
+exports.savedToGallery = function(d){return "¡Guardado en tu galería!"};
 
 exports.typeCode = function(d){return "Escribe tu código JavaScript debajo de estas instrucciones."};
 

@@ -32,6 +32,8 @@
   "ifelseTooltip":"Se c'è strada nella direzione specificata, allora effettua il primo blocco di azioni. Altrimenti, effettua il secondo.",
   "ifFlowerTooltip":"Se c'è un fiore o un favo nella direzione specificata, allora fai alcune azioni.",
   "ifelseFlowerTooltip":"Se c'è un fiore o un favo nella direzione specificata, allora fai il primo blocco di azioni. Altrimenti, fai il secondo.",
+  "insufficientHoney":"Stai utilizzando i tutti i blocchi necessari, ma la quantità di miele è insufficiente.",
+  "insufficientNectar":"Stai utilizzando i tutti i blocchi necessari, ma devi raccogliere la giusta quantità di nettare.\n",
   "make":"fai",
   "moveBackward":"vai indietro",
   "moveEastTooltip":"Vai una casella verso est.",

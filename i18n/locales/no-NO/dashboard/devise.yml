@@ -1,7 +1,7 @@
 "no":
   devise:
     confirmations:
-      confirmed: "Your email address was successfully confirmed."
+      confirmed: "E-postadressen din ble vellykket bekreftet."
       send_instructions: "Om noen få minutter vil du motta en e-post med instruksjoner om hvordan du bekrefter kontoen."
       send_paranoid_instructions: "Hvis din e-postadresse finnes i vår database, vil du om noen få minutter motta en e-post med instruksjoner om hvordan du bekrefter kontoen."
     failure:
@@ -16,9 +16,9 @@
       unconfirmed: "Du må bekrefte kontoen før du fortsetter."
     mailer:
       confirmation_instructions:
-        subject: "Code.org confirmation instructions"
+        subject: "Code.org bekreftelse instruksjoner"
       reset_password_instructions:
-        subject: "Code.org reset password instructions"
+        subject: "Code.org tilbakestille passord instruksjoner"
       unlock_instructions:
         subject: "Instruksjoner for å låse opp"
     omniauth_callbacks:

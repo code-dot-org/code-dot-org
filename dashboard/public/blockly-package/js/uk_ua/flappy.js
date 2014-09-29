@@ -3914,8 +3914,7 @@ BlocklyApps.runButtonClick = function() {
   document.getElementById('instructions').setAttribute('visibility', 'visible');
   document.getElementById('getready').setAttribute('visibility', 'visible');
 
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   // BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -8930,7 +8929,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Блоки \"Повторит�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Для функціонування цей блок повинен містити інші блоки."};
 
-exports.extraTopBlocks = function(d){return "У вас є додаткові блоки, які не прив'язані до жодного блоку подій."};
+exports.extraTopBlocks = function(d){return "У вас залишились зайві блоки. Ви збирались їх прикріпити до блоку \"під час виконання\"?"};
 
 exports.finalStage = function(d){return "Вітання! Завершено останній етап."};
 

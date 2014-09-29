@@ -32,6 +32,7 @@
     submit: tambah petunjuk
   appname: Code.org
   stage: Tahap
+  stage_number: tahapan%{number}
   puzzle: Teka-teki
   trophies: Piala-piala
   courses: Kursus
@@ -63,10 +64,12 @@
     need_confirmation: Tidak menerima instruksi konfirmasi?
     need_unlock: Tidak menerima instruksi untuk membuka?
   signup_form:
-    overview_student: Sign up untuk dapat melacak kemajuan Anda.
-    overview_teacher: Mengajar ilmu komputer di kelas Anda dengan mendaftar untuk
-      sebuah akun. <p/> Anda akan dapat melacak kemajuan siswa Anda dan mendapatkan
-      imbalan.
+    overview_student: Daftarkan untuk akun untuk melacak kemajuan Anda. Email utama
+      anda akan digunakan untuk menginjinkan anda untuk masuk dan pemulihan password.
+      Untuk selengkapnya <a href="<a href="http://code.org/privacy">Kebijakan privasi</a>
+      kami.
+    overview_teacher: Ajarkan ilmu kompter pada kelas anda dengan mendaftar untuk
+      akun.<p/> Anda akan dapat menambahkan pelajar anda dan mendata kemajuan mereka.
     no_signup_message: Anda dapat <a target="_blank" href="http://learn.code.org">
       mencoba berbagai tahap dan berbagai teka-teki</a>, tetapi Anda akan perlu untuk
       masuk supaya kemajuan belajar Anda dapat dicatat.
@@ -100,10 +103,12 @@
     valid_password: Kata sandi valid!
     invalid_password: Kata sandi harus minimal 6 karakter
     mismatch_password: kedua password yang anda masukkan tidak sama
-    student_terms: Saya setuju terikat dengan the Code.org <a href='http://code.org/tos'>syarat
-      layanan </a>. Jika saya di bawah umur 13 tahun, Saya konfirmasi untuk mengirim
-      form ini dengan persetujuan orang tua atau penegak hukum untuk menggunakan layanan
-      Code.org
+    student_terms: Saya setuju untuk terikat oleh <a href='http://code.org/tos'> persyaratan
+      layanan</a> Code.org . Jika saya di bawah usia 13 tahun, saya mengkonfirmasi
+      dengan mengirimkan formulir ini bahwa saya telah diizinkan legal orang tua atau
+      wali saya untuk menggunakan layanan Code.org. <br/>Untuk pengguna di bawah 13,
+      alamat email tidak disimpan dalam bentuk yang memungkinkan kami untuk menghubungi
+      mereka.
     teacher_terms: Saya setuju untuk terikat dengan Code.org <a href='http://code.org/tos'>persyaratan
       layanan</a>.
     additional_information: Kami membutuhkan informasi tambahan untuk melanjutkan
@@ -369,6 +374,8 @@
     classroom_activity: Kegiatan tanpa komputer
   home:
     title: Kode Studio
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: Sudah terdaftar? %{link}
     student_reg_link: Daftar sebagai siswa
     teacher_reg_link: Daftar sebagai guru
@@ -424,6 +431,7 @@
     feedback: Berikan pendapat
     translate: Bantu menterjemahkan ke bahasa anda
     support: Dukungan
+    support_url: http://support.code.org
     tos: Syarat
     privacy: Kebijakan privasi
     secure: Versi yang aman
@@ -448,8 +456,24 @@
     autoplay_option: Autoplay video
     download: Ungah Video
   compatability:
-    working: Kami dalam tahap bekerja untuk menyediakan layanan didalam browser Anda.
-    upgrade: Silakan upgrade browser Anda.
+    working:
+      header: Kami dalam tahap pengerjaan untuk menyediakan layanan didalam browser
+        Anda.
+      message: Code.org menggunakan teknologi modern web. Hal ini membuat situs lebih
+        cepat untuk digunakan. Browser Anda tidak mendukung semua fitur yang diperlukan,
+        dan Anda mungkin mengalami masalah ketika menggunakan ini bagian dari situs.
+        Harap membantu kami dengan <a href='%{report_issue_url}'> melaporkan masalah
+        yang Anda temukan</a>. Anda juga dapat <a href='%{supported_browsers_url}'>
+        meng-upgrade browser Anda ke versi yang didukung </a>.
+      hide_this_warning: Sembunyikan peringatan
+    upgrade:
+      header: Silahkan upgrade browser Anda.
+      message: Code.org menggunakan teknologi web modern. Hal ini membuat situs lebih
+        cepat untuk menggunakan. Sayangnya browser Anda tidak mendukung semua fitur
+        yang diperlukan untuk menjalankan bagian ini situs. <br/> <br/>Instal browser
+        yang kami daftar yang didukung untuk melanjutkan. Anda dapat <a href='#'>
+        mencoba melihat halaman</a>, tetapi mungkin ada kerusakan fungsi.
+      button: Bawa saya ke daftar browser yang didukung
   slow_loading: Harap sabar, Ternyata diperlukan waktu yang lebih lama dari biasanya...
   try_reloading: Coba tampilkan halaman lagi
   next_stage: Selesai! Lanjutkan untuk tahap berikutnya
@@ -498,6 +522,7 @@
     feedback: Berikan usulan
     report_bug: Laporkan kesalahan
     support: Dapatkan bantuan
+    support_url: "//support.code.org"
   multi:
     wrong_title: Jawaban Salah
     wrong_body: Jawaban yang anda masukkan salah. Silakan coba lagi!

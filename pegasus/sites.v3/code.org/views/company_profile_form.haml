@@ -1,3 +1,4 @@
+-dont_cache
 -landing_page = "/company-profiles/#{data['name_s']}"
 -congrats_page = "/congrats?co=#{data['name_s']}"
 -markdown_basics = "http://daringfireball.net/projects/markdown/basics"
@@ -5,6 +6,7 @@
 %link{rel: "stylesheet", type: "text/css", href: "/css/ee_form.css"}/
 
 %form#company_profile
+  %input{name:"logo_path_s", type:"hidden", value:data['logo_path_s']}
   %table
     -if secret
       %tr
@@ -18,10 +20,14 @@
             View #{data['display_name_s']}'s current landing page
       %tr
         %th{colspan:2}
-          2. See 
+          2. See the cheat sheets for customizing the
           %a{href:"/images/company-profile-annotated.png",target:"_blank"}
-            how to customize different parts of the landing page
+            landing page
             %img{src:"/images/company-profile-annotated.png",width:"50px",height:"50px"}
+          and
+          %a{href:"/images/company-congrats-annotated.png",target:"_blank"}
+            certificate page
+            %img{src:"/images/company-congrats-annotated.png",width:"50px",height:"50px"}
 
       %tr
         %th{colspan:2}

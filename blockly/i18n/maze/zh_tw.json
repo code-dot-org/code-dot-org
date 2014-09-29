@@ -32,6 +32,8 @@
   "ifelseTooltip": "如果在指定的方向有路的話，就執行第一個程式積木的動作，否則就執行第二個程式積木的動作。",
   "ifFlowerTooltip": "If there is a flower/honeycomb in the specified direction, then do some actions.",
   "ifelseFlowerTooltip": "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions.",
+  "insufficientHoney": "You're using all the right blocks, but you need to make the right amount of honey.",
+  "insufficientNectar": "You're using all the right blocks, but you need to collect the right amount of nectar.",
   "make": "製作",
   "moveBackward": "move backward",
   "moveEastTooltip": "將我向東邊移動一步。",

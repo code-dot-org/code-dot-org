@@ -7526,7 +7526,7 @@ exports.no = function(d){return "Não"};
 
 exports.numBlocksNeeded = function(d){return "Este puzzle pode ser resolvido com blocos de %1."};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your game."};
+exports.reinfFeedbackMsg = function(d){return "Podes selecionar o botão \"Tenta Novamente\" para voltar e jogares o teu jogo."};
 
 exports.share = function(d){return "Partilha"};
 

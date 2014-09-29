@@ -256,7 +256,12 @@ class Documents < Sinatra::Base
         redirect request.url.sub('http://', 'https://') unless request.env['HTTP_X_FORWARDED_PROTO'] == 'https'
       end
 
-      cache_control :public, :must_revalidate, max_age:settings.document_max_age
+      if @header['max_age']
+        cache_control :public, :must_revalidate, max_age:@header['max_age']
+      else
+        cache_control :public, :must_revalidate, max_age:settings.document_max_age
+      end
+
       response.headers['X-Pegasus-Version'] = '3'
       begin
         render_(content, File.extname(path))

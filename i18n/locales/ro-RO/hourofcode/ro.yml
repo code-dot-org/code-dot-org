@@ -1,119 +1,119 @@
-ro:
-  site_name: HOUR of CODE
-  language: Română
-  front_title: Alăturaţi-vă celui mai mare eveniment educativ din istorie, 8-14 decembrie, 2014
-  coming_soon: În curând
-  front_header_banner: Alăturaţi-vă celui mai mare eveniment educativ din istorie, 8-14 decembrie, 2014
+"ro":
+  site_name: "HOUR of CODE"
+  language: "Română"
+  front_title: "Alăturaţi-vă celui mai mare eveniment educativ din istorie, 8-14 decembrie, 2014"
+  coming_soon: "În curând"
+  front_header_banner: "Alăturaţi-vă celui mai mare eveniment educativ din istorie, 8-14 decembrie, 2014"
   front_intro_default: 'Hour of Code (Ora de Programare) este o mişcare globală ce a atins zeci de milioane de elevi si studenţi din peste 170 de ţări. Oricine, oriunde poate organiza un eveniment Hour of Code. Tutoriale de o ora sunt disponibile traduse în peste 30 de limbi. <strong>Nu ai nevoie de cunostinte speciale. Vârste de la 4 la 104 ani.</strong>'
   front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 170 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>No se necesita experiencia. Para edades entre 4 y 104 años.</strong>'
-  header_menu_resources: Resurse
-  header_menu_faq: Întrebări frecvente
-  header_menu_prizes: Premii
-  header_menu_uk_code_org: uk.code.org
-  choose_country_header: Participă la nivel mondial!
-  country_ar: Argentina
-  country_au: Australia
-  country_br: Brazilia
-  country_eu: Uniunea Europeană
-  country_it: Italia
-  country_nz: New Zealand
-  country_ro: România
-  country_uk: Marea Britanie
-  country_us: Statele Unite ale Americii
+  header_menu_resources: "Resurse"
+  header_menu_faq: "Întrebări frecvente"
+  header_menu_prizes: "Premii"
+  header_menu_uk_code_org: "uk.code.org"
+  choose_country_header: "Participă la nivel mondial!"
+  country_ar: "Argentina"
+  country_au: "Australia"
+  country_br: "Brazilia"
+  country_eu: "Uniunea Europeană"
+  country_it: "Italia"
+  country_nz: "New Zealand"
+  country_ro: "România"
+  country_uk: "Marea Britanie"
+  country_us: "Statele Unite ale Americii"
   n_have_learned_an_hoc: '<h1>#</h1><h3>a încercat o</h3><h2>Ora de Programare</h2>'
-  anybody_can_learn: Oricine poate învăța.
-  register_now: Înregistrează-te acum
-  front_join_us_heading: O oră de programare pentru fiecare student.
-  front_join_us_description: Studiul programarii este o bază pentru fiecare. Ajută-ne sa îl promovam la 100 de milioane de elevi sau studenți.
-  front_join_us_button: Alătură-te
+  anybody_can_learn: "Oricine poate învăța."
+  register_now: "Înregistrează-te acum"
+  front_join_us_heading: "O oră de programare pentru fiecare student."
+  front_join_us_description: "Studiul programarii este o bază pentru fiecare. Ajută-ne sa îl promovam la 100 de milioane de elevi sau studenți."
+  front_join_us_button: "Alătură-te"
   stats_hoc_2013_heading: 'Statistici incredibile la evenimentul Hour of Code de anul trecut. Într-o singură săptămână:'
-  stats_hoc_2013_image_alt: Statistici Hour of Code (Ora de Programare) din 2013
-  signup_header: Anunță-ne dacă găzduiești un eveniment Hour of Code
-  signup_header_ar: Déjanos saber si estas organizando una Hora de Programación
-  signup_name_label: Numele tău
-  signup_email_label: Adresa de email
-  signup_organization_name_label: Numele școlii sau organizaţia
-  signup_event_type_label: Tipul evenimentului
-  signup_event_entire_school_label: Întreaga mea şcoală participă
-  signup_event_location_label: Locatie eveniment (opţional)
-  signup_special_event_flag_label: Evidenţiați evenimentul meu special
-  signup_special_event_details_label: Detalii eveniment
+  stats_hoc_2013_image_alt: "Statistici Hour of Code (Ora de Programare) din 2013"
+  signup_header: "Anunță-ne dacă găzduiești un eveniment Hour of Code"
+  signup_header_ar: "Déjanos saber si estas organizando una Hora de Programación"
+  signup_name_label: "Numele tău"
+  signup_email_label: "Adresa de email"
+  signup_organization_name_label: "Numele școlii sau organizaţia"
+  signup_event_type_label: "Tipul evenimentului"
+  signup_event_entire_school_label: "Întreaga mea şcoală participă"
+  signup_event_location_label: "Locatie eveniment (opţional)"
+  signup_special_event_flag_label: "Evidenţiați evenimentul meu special"
+  signup_special_event_details_label: "Detalii eveniment"
   signup_send_posters_flag_label: 'Doresc <a href= "/resources#posters">postere</a> pentru școala sau organizația mea'
-  signup_send_posters_address_label: Adresă şcoală sau organizaţie
-  signup_whole_school_flag_label: Acest eveniment este pentru întreaga şcoală
-  signup_name_placeholder: Numele tău
-  signup_email_placeholder: you@example.com
+  signup_send_posters_address_label: "Adresă şcoală sau organizaţie"
+  signup_whole_school_flag_label: "Acest eveniment este pentru întreaga şcoală"
+  signup_name_placeholder: "Numele tău"
+  signup_email_placeholder: "you@example.com"
   signup_organization_name_placeholder: 'De exemplu, Colegiul Național "Sfântul Sava"'
   signup_event_location_placeholder: "Cod poştal şi ţara SAU adresa completă. \r (vom folosi datele pentru a plasa un pin pe harta noastră)"
-  signup_special_event_details_placeholder: Descrie de ce este un eveniment special
-  signup_send_posters_address_placeholder: Această adresă nu va fi ilustrată pe harta noastră
-  signup_event_type_in_school: Într-o şcoală
-  signup_event_type_out_of_school: În afara şcolii
-  signup_submit_label: Înscriere
-  signup_submit_error_message: Eroare. Vă rugăm să verificaţi dacă toate câmpurile necesare au fost completate în mod corespunzător.
-  signup_thank_you_header: Vă mulţumim ca v-ați înscris pentru a găzdui un eveniment Hour of Code (Ora de Programare).
-  signup_thank_you_message: Am trimis un e-mail de confirmare cu informaţii pentru a vă ajuta să începeţi.
-  map_header: Evenimentele Hour of Code din întreaga lume
-  map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
-  hardware_prizes_form_name_label: Numele tău
-  hardware_prizes_form_name_placeholder: Numele tău
-  hardware_prizes_form_email_label: Adresa de email
-  hardware_prizes_form_email_placeholder: Adresa de email
-  hardware_prizes_form_school_name_label: Numele școlii
-  hardware_prizes_form_school_name_placeholder: Numele școlii
-  hardware_prizes_form_school_address_label: Adresa şcolii
-  hardware_prizes_form_school_address_placeholder: Adresa şcolii
-  hardware_prizes_form_school_type_label: Tipul Școlii
-  hardware_prizes_form_school_type_option_elementary: Primară
-  hardware_prizes_form_school_type_option_middle_school: Gimnaziu
-  hardware_prizes_form_school_type_option_high_school: Liceu
-  hardware_prizes_form_qualifying_school_label: Acesta este o școală publică
-  hardware_prizes_form_number_students_label: Numărul elevilor care participă
-  hardware_prizes_form_number_students_placeholder: Numărul de elevi
-  hardware_prizes_form_plan_file_label: Încarcă planul de acțiune pentru Ora de Programare
+  signup_special_event_details_placeholder: "Descrie de ce este un eveniment special"
+  signup_send_posters_address_placeholder: "Această adresă nu va fi ilustrată pe harta noastră"
+  signup_event_type_in_school: "Într-o şcoală"
+  signup_event_type_out_of_school: "În afara şcolii"
+  signup_submit_label: "Înscriere"
+  signup_submit_error_message: "Eroare. Vă rugăm să verificaţi dacă toate câmpurile necesare au fost completate în mod corespunzător."
+  signup_thank_you_header: "Vă mulţumim ca v-ați înscris pentru a găzdui un eveniment Hour of Code (Ora de Programare)."
+  signup_thank_you_message: "Am trimis un e-mail de confirmare cu informaţii pentru a vă ajuta să începeţi."
+  map_header: "Evenimentele Hour of Code din întreaga lume"
+  map_header_ar: "Eventos de Hora de Program.AR alrededor del mundo"
+  hardware_prizes_form_name_label: "Numele tău"
+  hardware_prizes_form_name_placeholder: "Numele tău"
+  hardware_prizes_form_email_label: "Adresa de email"
+  hardware_prizes_form_email_placeholder: "Adresa de email"
+  hardware_prizes_form_school_name_label: "Numele școlii"
+  hardware_prizes_form_school_name_placeholder: "Numele școlii"
+  hardware_prizes_form_school_address_label: "Adresa şcolii"
+  hardware_prizes_form_school_address_placeholder: "Adresa şcolii"
+  hardware_prizes_form_school_type_label: "Tipul Școlii"
+  hardware_prizes_form_school_type_option_elementary: "Primară"
+  hardware_prizes_form_school_type_option_middle_school: "Gimnaziu"
+  hardware_prizes_form_school_type_option_high_school: "Liceu"
+  hardware_prizes_form_qualifying_school_label: "Acesta este o școală publică"
+  hardware_prizes_form_number_students_label: "Numărul elevilor care participă"
+  hardware_prizes_form_number_students_placeholder: "Numărul de elevi"
+  hardware_prizes_form_plan_file_label: "Încarcă planul de acțiune pentru Ora de Programare"
   hardware_prizes_form_plan_file_description: 'Prezentați un plan simplu despre cum intenţionaţi să organizaţi fiecare student pentru a beneficia de o oră de programare la şcoala dumneavoastră. Un plan exemplu: #PDF # | #Word #'
-  hardware_prizes_form_submit_label: Trimite
-  hoc_faq_title: Întrebări frecvente
-  hoc_faq_what_is_hoc_q: Ce reprezintă Hour of Code?
+  hardware_prizes_form_submit_label: "Trimite"
+  hoc_faq_title: "Întrebări frecvente"
+  hoc_faq_what_is_hoc_q: "Ce reprezintă Hour of Code?"
   hoc_faq_what_is_hoc_a: "Hour of Code reprezintă o introducere de o oră în tehnologia computerelor și programare, ce arată că programarea este simplă, socială şi oricine poate învăţa măcar elementele de bază. <a href='http://code.org/learn'> Încearcă Tutorialele noastre</a>, şi fii pe fază pentru cele noi, care vin odată cu Hour of Code 2014."
-  hoc_faq_when_is_hoc_q: Când se desfășoară Hour of Code?
+  hoc_faq_when_is_hoc_q: "Când se desfășoară Hour of Code?"
   hoc_faq_when_is_hoc_a: "Hour of Code va avea loc în 8-14 decembrie, 2014. Se desfașoară la o anumită <i>oră</i>? Nu. Puteţi organiza sau participa la un eveniment Hour of Code oricând în timpul acestei săptămâni. Evenimentul este sincronizat cu <a href='http://csedweek.org'> Computer Science Education Week</a>."
-  hoc_faq_why_cs_q: De ce tehnologia computerelor?
+  hoc_faq_why_cs_q: "De ce tehnologia computerelor?"
   hoc_faq_why_cs_a: "<i>Fiecare</i> elev ar trebui să aibă posibilitatea de a învata tehnologia computerelor. Ajută la dezvoltarea abilităților de rezolvare a problemelor, la dezvoltarea logicii şi creativității. Începând devreme, elevii vor avea o fundaţie pentru succesul în orice carieră din secolul XXI. Descoperă mai multe statistici pe <a href='http://code.org'> Code.org</a>."
-  hoc_faq_how_participate_q: Cum particip la Hour of Code?
+  hoc_faq_how_participate_q: "Cum particip la Hour of Code?"
   hoc_faq_how_participate_a: "Înscrieţi-vă pentru a găzdui un eveniment Hour of Code <a href='http://hourofcode.org'> aici</a> şi începeți planificarea. Aveţi posibilitatea să organizaţi un eveniment Hour of Code la şcoală sau în comunitatea dumneavoastră &mdash; ca activitate extracurriculară, non-profit sau la locul de muncă. Sau, încearcă chiar tu, începând cu 8 decembrie."
-  hoc_faq_behind_hoc_q: Cine este în spatele Hour of Code?
+  hoc_faq_behind_hoc_q: "Cine este în spatele Hour of Code?"
   hoc_faq_behind_hoc_a: "Evenimentul Hour of Code este organizat de <a href='http://code.org'> Code.org</a>, o organizație non-profit dedicată extinderii educației cu privire la tehnologia computerelor și programare, prin promovarea acesteia în școli și prin creșterea participării femeilor dar și a elevilor minorități.  O <a href='http://code.org/about/partners'> coaliţie de parteneri fără precedent</a> susțin împreună Hour of Code &mdash; inclusiv Microsoft, Apple, Amazon, Boys and Girls Clubs of America şi College Board."
-  hoc_faq_host_q: Nu ştiu nimic despre programare. Pot să organizez un eveniment?
+  hoc_faq_host_q: "Nu ştiu nimic despre programare. Pot să organizez un eveniment?"
   hoc_faq_host_a: "Desigur. Activităţile Hour of Code sunt simple și intuitive. Tot ce trebuie să faceţi este să alegeţi tutorialul preferat şi o oră pentru desfășurare &mdash; noi vom avea grijă de restul. Avem, de asemenea, opţiuni pentru fiecare vârstă și nivel de experiență, de la grădiniţă în sus. <a href='http://code.org/learn'> Încercaţi tutorialele curente</a>."
-  hoc_faq_need_computers_q: Am nevoie de calculator pentru fiecare participant?
+  hoc_faq_need_computers_q: "Am nevoie de calculator pentru fiecare participant?"
   hoc_faq_need_computers_a: "Nu. Avem Tutoriale Hour of Code care funcționează pe PC-uri, smartphone-uri, tablete şi chiar unele care nu necesită nici un calculator! Puteţi organiza oriunde vă aflați, cu orice resurse aveți. <p><i>Iată câteva opţiuni:</i> <br><ul><li><b>Lucru în perechi.</b> Cercetările arată elevii învaţă cel mai bine în <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> perechi de lucru</a>, împarțind un computer şi lucrând împreună. Încurajați elevii să formeze perechi de lucru. <li><b>Folosiți un proiector.</b> Dacă aveţi un proiector şi un calculator conectat la internet, întregul grup pot participa la Hour of Code împreună. Urmăriți porțiuni din clipurile video împreună şi rezolvați pe rând puzzle-uri sau răspundeți la întrebări. <li><b>Fără computer.</b> Noi oferim și Tutoriale care nu necesită nici un computer. </ul>"
-  hoc_faq_international_q: Eu sunt din afara Statelor Unite. Cum organizez sau particip la un eveniment?
-  hoc_faq_international_a: Oricine poate organiza un eveniment Hour of Code, oriunde în lume. Anul trecut, elevi din 170 de ţări s-au reunit pentru Hour of Code.
-  hoc_faq_tutorial_q: Cum pot face un tutorial Hour of Code?
+  hoc_faq_international_q: "Eu sunt din afara Statelor Unite. Cum organizez sau particip la un eveniment?"
+  hoc_faq_international_a: "Oricine poate organiza un eveniment Hour of Code, oriunde în lume. Anul trecut, elevi din 170 de ţări s-au reunit pentru Hour of Code."
+  hoc_faq_tutorial_q: "Cum pot face un tutorial Hour of Code?"
   hoc_faq_tutorial_a: "Dacă sunteţi interesat să deveniți partener pentru tutoriale, <a href='/tutorial-guidelines'> consultaţi referințele și instrucţiunile noastre</a>. Ne dorim să oferim o varietate de opţiuni interactive, dar obiectivul principal este de a optimiza experienţa pentru elevi şi profesori care sunt incepatori."
-  hoc_faq_when_is_hoc_uk_q: Când se desfășoară Hour of Code?
+  hoc_faq_when_is_hoc_uk_q: "Când se desfășoară Hour of Code?"
   hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
-  hoc_faq_behind_hoc_uk_q: Cine este în spatele Hour of Code?
+  hoc_faq_behind_hoc_uk_q: "Cine este în spatele Hour of Code?"
   hoc_faq_behind_hoc_uk_a: "The Hour of Code is organised by <a href='http://uk.code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://uk.code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Google, Cambridge University Press, Tech City and The Department of Education."
-  hoc_faq_host_uk_q: Nu ştiu nimic despre programare. Pot să organizez un eveniment?
+  hoc_faq_host_uk_q: "Nu ştiu nimic despre programare. Pot să organizez un eveniment?"
   hoc_faq_host_uk_a: "Of course. Hour of Code activities are self-guided. All you have to do is pick the tutorial you want and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. <a href='http://uk.code.org/learn'>Try our current tutorials</a>."
-  hoc_faq_what_is_hoc_ar_q: Qué es la Hora de Program.AR?
+  hoc_faq_what_is_hoc_ar_q: "Qué es la Hora de Program.AR?"
   hoc_faq_what_is_hoc_ar_a: "La Hora de Program.AR es una introducción de una hora a la ciencia computacional, diseñada para desmitificar la programación y demostrar que cualquiera puede aprender los conceptos básicos. <a href='http://code.org/learn'>Revisa los tutoriales</a> y busca otros nuevos para la Hora de Program.AR del 2014."
-  hoc_faq_when_is_hoc_ar_q: ¿Cuándo es la Hora de Program.AR?
+  hoc_faq_when_is_hoc_ar_q: "¿Cuándo es la Hora de Program.AR?"
   hoc_faq_when_is_hoc_ar_a: "La Hora de Program.AR se llevará a cabo del 8 al 14 de diciembre del 2014. ¿Es una hora <i>específica</i>? No. Puedes hacer la Hora de Program.AR en cualquier momento durante esta semana. La Hora de Program.AR está programada para celebrarse anualmente - <a href='http://csedweek.org'>la Semana de Ciencias de Computación</a>."
-  hoc_faq_how_participate_ar_q: ¿Cómo puedo participar en la Hora de Program.AR?
+  hoc_faq_how_participate_ar_q: "¿Cómo puedo participar en la Hora de Program.AR?"
   hoc_faq_how_participate_ar_a: "Regístrese para organizar un evento de la hora de Program.AR <a href='http://hourofcode.org'>aquí</a> e inicie la planificación. Tú puedes organizar un evento de la Hora de ProProgram.ARgramación en tú escuela o en tú comunidad &mdash; como en un club extracurricular, en una organización sin fines de lucro o en el trabajo. O, simplemente probarlo cuando Diciembre 8 llegue."
-  hoc_faq_behind_hoc_ar_q: ¿Quién está detrás de la Hora de Program.AR?
+  hoc_faq_behind_hoc_ar_q: "¿Quién está detrás de la Hora de Program.AR?"
   hoc_faq_behind_hoc_ar_a: "La Hora de Program.AR es organizada por <a href='http://code.org'>Code.org</a>, una organización pública sin fines de lucro (501c3) dedicada a ampliar la participación en Ciencias Computacionales poniendose a disposición de más escuelas y aumentando la participación de las mujeres y los estudiantes subrepresentados de color. Una <a href='http://code.org/about/partners'>coalición sin precedentes de socios</a> se ha reunido para apoyar la Hora de Program.AR, también &mdash; incluyendo Microsoft, Apple, Amazon, Boys y Girls Clubs of America y el College Board."
-  hoc_faq_host_ar_q: No sé nada acerca de Program.AR. ¿Aún así puedo organizar un evento?
+  hoc_faq_host_ar_q: "No sé nada acerca de Program.AR. ¿Aún así puedo organizar un evento?"
   hoc_faq_host_ar_a: "Claro. Las actividades de La Hora de Program.AR son autodirigidas. Todo lo que tienes que hacer es elegir el tutorial que quieras y escoge una hora &mdash; nosotros nos encargamos del resto. También tenemos opciones para cada edad y nivel de experiencia, desde el kindergarten y para arriba. <a href='http://code.org/learn'>Pruebe nuestros tutoriales actuales</a>."
-  hoc_faq_need_computers_ar_q: ¿Necesito computadoras para cada participante?
+  hoc_faq_need_computers_ar_q: "¿Necesito computadoras para cada participante?"
   hoc_faq_need_computers_ar_a: "No. Tenemos tutorales de la Hora de Program.AR que funcionan en PCs, teléfonos inteligentes, tabletas y algunos que no requieren ¡ninguna computadora en absoluto! Tú puedes unirte desde donde quiera que estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i> <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes aprenden mejor con <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares de programación</a>, compartiendo una computadora y trabajando juntos. Anima a tus estudiantes a trabajar en pares. <li><b>Una pantalla proyectada.</b> Si tú tienes un proyector y una computadora conectada a Internet, el grupo entero puede hacer una hora de Program.AR juntos. Mira porciones de videos juntos y toma turnos para resolver acertijos o responder preguntas. <li><b>Desconéctate.</b> Ofrecemos tutoriales que no requieren ninguna computadora en absoluto. </ul>"
-  hoc_faq_tutorial_ar_q: ¿Cómo puedo hacer un tutoría de la Hora de Program.AR?
+  hoc_faq_tutorial_ar_q: "¿Cómo puedo hacer un tutoría de la Hora de Program.AR?"
   hoc_faq_tutorial_ar_a: "Si usted está interesado en convertirse en un socio para tutoriales, <a href='/tutorial-guidelines'>vea nuestras directrices e instrucciones</a>. Nos gustaría presentar varias opciones atractivas, pero la meta principal es optimizar la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales."
-  footer_copyright_message: Copyright 2014 Code.org. Toate drepturile rezervate.
-  footer_trademark_message: Hour of Code™ este o marcă înregistrată Code.org.
-  footer_menu_terms: Termeni
-  footer_menu_privacy: Politică de Confidenţialitate
+  footer_copyright_message: "Copyright 2014 Code.org. Toate drepturile rezervate."
+  footer_trademark_message: "Hour of Code™ este o marcă înregistrată Code.org."
+  footer_menu_terms: "Termeni"
+  footer_menu_privacy: "Politică de Confidenţialitate"

@@ -51,7 +51,7 @@ theme: none
           %div{style: "opacity: 0.7"}
             %a{"ng-href" => "#/sections/{{section.id}}/manage"}= '{{section.students.length}}' == 0 ? I18n.t('dashboard_navigation_add_students') : I18n.t('dashboard_navigation_manage_students')
         %span{"ng-show" => "section.editing"}
-          %input{"ng-model" => "section.name", placeholder: "Section Name", style: "width: 100%", type: "text"}/
+          %input{"ng-model" => "section.name", placeholder: I18n.t('dashboard_sections_name'), style: "width: 100%", type: "text"}/
       %td
         %span{"ng-hide" => "section.editing"} {{section.login_type}}
         %span{"ng-show" => "section.editing"}

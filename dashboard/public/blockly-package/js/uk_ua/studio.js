@@ -12413,8 +12413,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -14297,7 +14296,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Блоки \"Повторит�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Для функціонування цей блок повинен містити інші блоки."};
 
-exports.extraTopBlocks = function(d){return "У вас є додаткові блоки, які не прив'язані до жодного блоку подій."};
+exports.extraTopBlocks = function(d){return "У вас залишились зайві блоки. Ви збирались їх прикріпити до блоку \"під час виконання\"?"};
 
 exports.finalStage = function(d){return "Вітання! Завершено останній етап."};
 
@@ -14481,7 +14480,7 @@ exports.makeProjectileRedHearts = function(d){return "зробити черво�
 
 exports.makeProjectileTooltip = function(d){return "Змусити снаряд зникнути або відбитись при зіткненні."};
 
-exports.makeYourOwn = function(d){return "Створити власну історію"};
+exports.makeYourOwn = function(d){return "Створіть власну програму Ігрової студії"};
 
 exports.moveDirectionDown = function(d){return "вниз"};
 
@@ -14901,13 +14900,13 @@ exports.whenSpriteCollidedTooltip = function(d){return "Виконати дії,
 
 exports.whenSpriteCollidedWith = function(d){return "торкається"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "торкається будь-якого персонажу"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "торкається будь-якого краю"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "торкається будь-якого снаряду"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "торкається будь-чого"};
 
 exports.whenSpriteCollidedWithN = function(d){return "торкається персонажа "+v(d,"spriteIndex")};
 

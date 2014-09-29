@@ -32,6 +32,7 @@
     submit: "Thêm gợi ý"
   appname: "Code.org"
   stage: "Màn"
+  stage_number: 'Stage %{number}'
   puzzle: "Câu đố"
   trophies: "danh hiệu"
   courses: "Các khóa học"
@@ -305,6 +306,8 @@
     classroom_activity: "Unplugged Activity"
   home:
     title: "Code Studio"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: 'Already registered? %{link}'
     student_reg_link: "Sinh viên đăng ký"
     teacher_reg_link: "Giáo viên đăng ký"
@@ -346,6 +349,7 @@
     feedback: "Cung cấp thông tin phản hồi"
     translate: "Giúp chúng tôi dịch sang ngôn ngữ của bạn"
     support: "Support"
+    support_url: "http://support.code.org"
     tos: "Terms"
     privacy: "Chính sách riêng tư"
     secure: "Secure Version"
@@ -370,8 +374,14 @@
     autoplay_option: "Tự phát video"
     download: "Tải video xuống"
   compatability:
-    working: "Chúng tôi đang làm việc để hỗ trợ cho trình duyệt của bạn."
-    upgrade: "Hãy nâng cấp trình duyệt của bạn."
+    working:
+      header: "We are working on support for your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
+      hide_this_warning: "Hide this warning"
+    upgrade:
+      header: "Please upgrade your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
+      button: "Take me to the list of supported browsers"
   slow_loading: "Điều này mất nhiều thời gian hơn bình thường..."
   try_reloading: "Hãy thử tải lại trang"
   next_stage: "Hoàn thành! Tiếp tục màn tiếp theo"
@@ -382,7 +392,7 @@
     title: "Click 'Run' to see my program in action"
     bounce_og_title: "Check out my Bounce Game"
     flappy_og_title: "Hãy kiểm tra Game Flappy của tôi"
-    studio_og_title: "Check out my story"
+    studio_og_title: "Check out my Play Lab App"
     og_description: "Tôi đã viết mã của mình với Code.org"
   builder:
     created: "Tạo một kịch bản mới."
@@ -415,6 +425,7 @@
     feedback: "Give Feedback"
     report_bug: "Report Bug"
     support: "Get Help"
+    support_url: "//support.code.org"
   multi:
     wrong_title: "Incorrect answer"
     wrong_body: "The answer you've entered is not correct.  Please try again!"
@@ -444,7 +455,7 @@
           title: "Edit Code"
           description: ""
         events:
-          title: "Events"
+          title: "Các sự kiện"
           description: ""
         builder:
           title: "Builder"
@@ -456,7 +467,7 @@
           title: "Ghép hình"
           description: ""
         step:
-          title: "Step"
+          title: "Bước/ từng bước thực hiện"
           description: ""
         sample_level_builder:
           title: "Sample Level Builder"

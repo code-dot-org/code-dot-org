@@ -77,7 +77,8 @@ module PDF
   #    OS X:   --margin=0:298:800:0
   #    Ubuntu: --margin=0:298:750:0
   def self.number_pdf(input, output)
+    margin = RUBY_PLATFORM.include?('linux') ? '0:298:750:0' : '0:298:800:0'
     page_count = `pdftk "#{input}" dump_data | grep "NumberOfPages" | cut -d":" -f2`.strip
-    bash "enscript --quiet -L1 --margin=0:298:750:0 --header-font \"Helvetica@15\" --header='|| $%' --output - < <(for i in $(seq \"#{page_count}\"); do echo; done) | ps2pdf - | pdftk \"#{input}\" multistamp - output #{output}"
+    bash "enscript --quiet -L1 --margin=#{margin} --header-font \"Helvetica@15\" --header='|| $%' --output - < <(for i in $(seq \"#{page_count}\"); do echo; done) | ps2pdf - | pdftk \"#{input}\" multistamp - output #{output}"
   end
 end

@@ -3914,8 +3914,7 @@ BlocklyApps.runButtonClick = function() {
   document.getElementById('instructions').setAttribute('visibility', 'visible');
   document.getElementById('getready').setAttribute('visibility', 'visible');
 
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   // BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -8911,21 +8910,21 @@ exports.directionEastLetter = function(d){return "A"};
 
 exports.directionWestLetter = function(d){return "V"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "endir"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Kubbarnir \"endurtaka\" og \"ef\" verða að innihalda aðra kubba til að virka. Gættu þess að innri kubburinn smellpassi í ytri kubbinn."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Fallkubburinn þarf að innhalda aðra kubba til að virka."};
 
-exports.extraTopBlocks = function(d){return "Þú hefur auka kubba sem ekki tengjast atvikakubbi."};
+exports.extraTopBlocks = function(d){return "Þú ert með ótengda kubba. Ætlaðir þú að festa þá á \"þegar keyrt\" kubbinn?"};
 
 exports.finalStage = function(d){return "Til hamingju! Þú hefur klárað síðasta áfangann."};
 
-exports.finalStageTrophies = function(d){return "Til hamingju! Þú hefur klárað síðasta áfangann og unnið "+p(d,"numBikara",0,"is",{"one":"bikar","other":n(d,"numBikara")+" bikara"})+"."};
+exports.finalStageTrophies = function(d){return "Til hamingju! Þú hefur klárað síðasta áfangann og unnið "+p(d,"numTrophies",0,"is",{"one":"bikar","other":n(d,"numTrophies")+" bikara"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Ljúka"};
 
-exports.generatedCodeInfo = function(d){return "Kubbana í forritinu þínu er líka hægt að umbreyta í JavaScript, sem er útbreiddasta forritunarmál í heiminum:"};
+exports.generatedCodeInfo = function(d){return "Jafnvel bestu háskólar kenna forritun með kubbum (t.d. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). En bak við tjöldin er hægt að sýna kubbana sem þú hefur sett saman sem JavaScript, sem er mest notaða forritunarmál í heimi:"};
 
 exports.hashError = function(d){return "Því miður finnst ekkert vistað forrit '%1'."};
 
@@ -8933,7 +8932,7 @@ exports.help = function(d){return "Hjálp"};
 
 exports.hintTitle = function(d){return "Vísbending:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "stökkva"};
 
 exports.levelIncompleteError = function(d){return "Þú ert að nota allar nauðsynlegu tegundirnar af kubbum en ekki á réttan hátt."};
 
@@ -8947,15 +8946,15 @@ exports.nextLevel = function(d){return "Til hamingju! Þú hefur leyst þraut "+
 
 exports.nextLevelTrophies = function(d){return "Til hamingju! Þú hefur leyst þraut "+v(d,"puzzleNumber")+" og unnið "+p(d,"numTrophies",0,"is",{"one":"bikar","other":n(d,"numTrophies")+" bikara"})+"."};
 
-exports.nextStage = function(d){return "Til hamingju! Þú hefur lokið áfanga "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Til hamingju! Þú kláraðir "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Til hamingju! Þú kláraðir áfanga "+v(d,"stageNumber")+" og vannst "+p(d,"numTrophies",0,"is",{"one":"bikar","other":n(d,"numTrophies")+" bikara"})+"."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"is",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Til hamingju! Þú kláraðir þraut "+v(d,"puzzleNumber")+". (En þú hefðir getað notað bara  "+p(d,"numBlocks",0,"is",{"one":"1 kubb","other":n(d,"numBlocks")+" kubba"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Þú náðir að skrifa "+p(d,"numLines",0,"is",{"one":"1 línu","other":n(d,"numLines")+" línur"})+" af kóða!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "spila"};
 
 exports.puzzleTitle = function(d){return "Þraut "+v(d,"puzzle_number")+" af "+v(d,"stage_total")};
 
@@ -8963,11 +8962,11 @@ exports.repeat = function(d){return "endurtaka"};
 
 exports.resetProgram = function(d){return "Endurstilla"};
 
-exports.runProgram = function(d){return "Keyra forrit"};
+exports.runProgram = function(d){return "Keyra"};
 
 exports.runTooltip = function(d){return "Keyra forritið sem samanstendur af kubbunum á vinnusvæðinu."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "stig"};
 
 exports.showCodeHeader = function(d){return "Sýna kóða"};
 
@@ -8991,13 +8990,13 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Samtals: "+p(d,"numLine
 
 exports.tryAgain = function(d){return "Reyna aftur"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Sjá vísbendingu"};
 
-exports.backToPreviousLevel = function(d){return "Til baka á fyrra stig"};
+exports.backToPreviousLevel = function(d){return "Til baka í fyrri áfanga"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Vista í safn þitt"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Vistað í safn þitt!"};
 
 exports.typeCode = function(d){return "Skrifaðu JavaScript kóða þinn fyrir neðan þessar leiðbeiningar."};
 
@@ -9017,17 +9016,17 @@ exports.wantToLearn = function(d){return "Viltu læra að kóða?"};
 
 exports.watchVideo = function(d){return "Horfa á videóið"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "þegar"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "þegar keyrt"};
 
 exports.tryHOC = function(d){return "Prófa Kóðun í klukkustund"};
 
 exports.signup = function(d){return "Skráning á inngangsnámskeiðið"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Vísbending:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Athugaðu hvernig þetta fór og reyndu að laga forritið."};
 
 
 },{"messageformat":49}],37:[function(require,module,exports){
@@ -9060,11 +9059,11 @@ exports.flapVeryLarge = function(d){return "blaka vængjum mjög mikið"};
 
 exports.flapTooltip = function(d){return "Fljúga Flappy upp á við."};
 
-exports.flappySpecificFail = function(d){return "Your code looks good - it will flap with each click. But you need to click many times to flap to the target."};
+exports.flappySpecificFail = function(d){return "Kóðinn þinn virðist í lagi - hann lætur blaka við hvern smell. En þú þarft að smella oft til að fljúga að markinu."};
 
 exports.incrementPlayerScore = function(d){return "skora stig"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Bæta við einu stigi við núverandi stöðu."};
+exports.incrementPlayerScoreTooltip = function(d){return "Bæta einu stigi við núverandi stöðu."};
 
 exports.nextLevel = function(d){return "Til hamingju! Þú hefur klárað þessa þraut."};
 
@@ -9074,7 +9073,7 @@ exports.numBlocksNeeded = function(d){return "Þessa þraut er hægt að leysa m
 
 exports.playSoundRandom = function(d){return "spila hljóð af handahófi"};
 
-exports.playSoundBounce = function(d){return "spila gormahljóð"};
+exports.playSoundBounce = function(d){return "spila skopphljóð"};
 
 exports.playSoundCrunch = function(d){return "spila kremjuhljóð"};
 
@@ -9090,9 +9089,9 @@ exports.playSoundWing = function(d){return "spila vængjahljóð"};
 
 exports.playSoundJet = function(d){return "spila þotuhljóð"};
 
-exports.playSoundCrash = function(d){return "spila brothljóð"};
+exports.playSoundCrash = function(d){return "spila áreksturshljóð"};
 
-exports.playSoundJingle = function(d){return "spila jólabjölluhljóð"};
+exports.playSoundJingle = function(d){return "spila tónahljóð"};
 
 exports.playSoundSplash = function(d){return "spila vatnshljóð"};
 
@@ -9104,19 +9103,19 @@ exports.reinfFeedbackMsg = function(d){return "Þú getur smellt á \"Reyna aftu
 
 exports.scoreText = function(d){return "Stig alls: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set scene"};
+exports.setBackground = function(d){return "stilla sviðið"};
 
-exports.setBackgroundRandom = function(d){return "umhverfi af handahófi"};
+exports.setBackgroundRandom = function(d){return "umhverfi - af handahófi"};
 
-exports.setBackgroundFlappy = function(d){return "umhverfi - Borg (að degi)"};
+exports.setBackgroundFlappy = function(d){return "umhverfi - borg (að degi)"};
 
-exports.setBackgroundNight = function(d){return "umhverfi - Borg (að nóttu)"};
+exports.setBackgroundNight = function(d){return "umhverfi - borg (að nóttu)"};
 
-exports.setBackgroundSciFi = function(d){return "umhverfi Geimur"};
+exports.setBackgroundSciFi = function(d){return "umhverfi - geimur"};
 
-exports.setBackgroundUnderwater = function(d){return "umhverfi - Neðansjávar"};
+exports.setBackgroundUnderwater = function(d){return "umhverfi - neðansjávar"};
 
-exports.setBackgroundCave = function(d){return "umhverfi Hellir"};
+exports.setBackgroundCave = function(d){return "umhverfi - hellir"};
 
 exports.setBackgroundSanta = function(d){return "umhverfi - Jólasveinn"};
 
@@ -9150,73 +9149,73 @@ exports.setGravityVeryHigh = function(d){return "mjög mikið þyngdarafl"};
 
 exports.setGravityTooltip = function(d){return "Stillir styrkleika þyngdarafls"};
 
-exports.setGround = function(d){return "set ground"};
+exports.setGround = function(d){return "stilla jörðina"};
 
-exports.setGroundRandom = function(d){return "jörð af handahófi"};
+exports.setGroundRandom = function(d){return "jörð - af handahófi"};
 
-exports.setGroundFlappy = function(d){return "jörð - Venjuleg"};
+exports.setGroundFlappy = function(d){return "jörð - venjuleg"};
 
-exports.setGroundSciFi = function(d){return "jörð - Geimur"};
+exports.setGroundSciFi = function(d){return "jörð - geimur"};
 
-exports.setGroundUnderwater = function(d){return "jörð - Neðansjávar"};
+exports.setGroundUnderwater = function(d){return "jörð - neðansjávar"};
 
-exports.setGroundCave = function(d){return "jörð - Hellir"};
+exports.setGroundCave = function(d){return "jörð - hellir"};
 
-exports.setGroundSanta = function(d){return "Jörð - Jólasveinn"};
+exports.setGroundSanta = function(d){return "jörð - jól"};
 
-exports.setGroundLava = function(d){return "jörð - Hraun"};
+exports.setGroundLava = function(d){return "jörð - hraun"};
 
 exports.setGroundTooltip = function(d){return "Stillir jörðina í leiknum"};
 
-exports.setObstacle = function(d){return "set obstacle"};
+exports.setObstacle = function(d){return "stilla hindrun"};
 
-exports.setObstacleRandom = function(d){return "hindrun af handahófi"};
+exports.setObstacleRandom = function(d){return "hindrun - af handahófi"};
 
-exports.setObstacleFlappy = function(d){return "hindrun - Rör"};
+exports.setObstacleFlappy = function(d){return "hindrun - rör"};
 
-exports.setObstacleSciFi = function(d){return "hindrun - Geimur"};
+exports.setObstacleSciFi = function(d){return "hindrun - geimur"};
 
-exports.setObstacleUnderwater = function(d){return "hindrun - Planta"};
+exports.setObstacleUnderwater = function(d){return "hindrun - planta"};
 
-exports.setObstacleCave = function(d){return "hindrun - Hellir"};
+exports.setObstacleCave = function(d){return "hindrun - hellir"};
 
-exports.setObstacleSanta = function(d){return "hindrun - Strompur"};
+exports.setObstacleSanta = function(d){return "hindrun - strompur"};
 
-exports.setObstacleLaser = function(d){return "hindrun - Laser"};
+exports.setObstacleLaser = function(d){return "hindrun - leysir"};
 
 exports.setObstacleTooltip = function(d){return "Stillir útlit hindrana"};
 
-exports.setPlayer = function(d){return "set player"};
+exports.setPlayer = function(d){return "stilla leikmann"};
 
-exports.setPlayerRandom = function(d){return "leikmaður af handahófi"};
+exports.setPlayerRandom = function(d){return "leikmaður - af handahófi"};
 
-exports.setPlayerFlappy = function(d){return "leikmaður - Gulur fugl"};
+exports.setPlayerFlappy = function(d){return "leikmaður - gulur fugl"};
 
-exports.setPlayerRedBird = function(d){return "leikmaður - Rauður fugl"};
+exports.setPlayerRedBird = function(d){return "leikmaður - rauður fugl"};
 
-exports.setPlayerSciFi = function(d){return "leikmaður - Geimskip"};
+exports.setPlayerSciFi = function(d){return "leikmaður - geimskip"};
 
-exports.setPlayerUnderwater = function(d){return "leikmaður - Fiskur"};
+exports.setPlayerUnderwater = function(d){return "leikmaður - fiskur"};
 
-exports.setPlayerCave = function(d){return "leikmaður - Leðurblaka"};
+exports.setPlayerCave = function(d){return "leikmaður - leðurblaka"};
 
-exports.setPlayerSanta = function(d){return "leikmaður - Jólasveinn"};
+exports.setPlayerSanta = function(d){return "leikmaður - jólasveinn"};
 
-exports.setPlayerShark = function(d){return "leikmaður - Hákarl"};
+exports.setPlayerShark = function(d){return "leikmaður - hákarl"};
 
-exports.setPlayerEaster = function(d){return "leikmaður - Páskakanína"};
+exports.setPlayerEaster = function(d){return "leikmaður - páskakanína"};
 
-exports.setPlayerBatman = function(d){return "leikmaður - Leðurblökumaður"};
+exports.setPlayerBatman = function(d){return "leikmaður - leðurblökumaður"};
 
-exports.setPlayerSubmarine = function(d){return "leikmaður - Kafbátur"};
+exports.setPlayerSubmarine = function(d){return "leikmaður - kafbátur"};
 
-exports.setPlayerUnicorn = function(d){return "leikmaður - Einhyrningur"};
+exports.setPlayerUnicorn = function(d){return "leikmaður - einhyrningur"};
 
-exports.setPlayerFairy = function(d){return "leikmaður - Álfadís"};
+exports.setPlayerFairy = function(d){return "leikmaður - álfadís"};
 
 exports.setPlayerSuperman = function(d){return "leikmaður - Flappykall"};
 
-exports.setPlayerTurkey = function(d){return "leikmaður - Kalkúnn"};
+exports.setPlayerTurkey = function(d){return "leikmaður - kalkúnn"};
 
 exports.setPlayerTooltip = function(d){return "Stillir útlit leikmanns"};
 
@@ -9226,37 +9225,37 @@ exports.setScoreTooltip = function(d){return "Stillir stig leikmanns"};
 
 exports.setSpeed = function(d){return "stilla hraða"};
 
-exports.setSpeedTooltip = function(d){return "Stillir hraða leikmanns"};
+exports.setSpeedTooltip = function(d){return "Stillir hraða áfangans"};
 
 exports.shareFlappyTwitter = function(d){return "Kíktu á Flappy leikinn sem ég bjó til. Ég forritaði hann á vefnum @codeorg"};
 
 exports.shareGame = function(d){return "Deildu leiknum þínum:"};
 
-exports.soundRandom = function(d){return "eitthvert"};
+exports.soundRandom = function(d){return "af handahófi"};
 
-exports.soundBounce = function(d){return "bounce"};
+exports.soundBounce = function(d){return "skoppa"};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "kremja"};
 
-exports.soundDie = function(d){return "sad"};
+exports.soundDie = function(d){return "sorg"};
 
-exports.soundHit = function(d){return "smash"};
+exports.soundHit = function(d){return "brot"};
 
-exports.soundPoint = function(d){return "point"};
+exports.soundPoint = function(d){return "stig"};
 
-exports.soundSwoosh = function(d){return "swoosh"};
+exports.soundSwoosh = function(d){return "sveifla"};
 
-exports.soundWing = function(d){return "wing"};
+exports.soundWing = function(d){return "vængur"};
 
-exports.soundJet = function(d){return "jet"};
+exports.soundJet = function(d){return "þota"};
 
-exports.soundCrash = function(d){return "crash"};
+exports.soundCrash = function(d){return "árekstur"};
 
-exports.soundJingle = function(d){return "jingle"};
+exports.soundJingle = function(d){return "tónar"};
 
-exports.soundSplash = function(d){return "splash"};
+exports.soundSplash = function(d){return "vatn"};
 
-exports.soundLaser = function(d){return "laser"};
+exports.soundLaser = function(d){return "leysir"};
 
 exports.speedRandom = function(d){return "hraði af handahófi"};
 

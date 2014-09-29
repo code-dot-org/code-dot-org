@@ -12895,19 +12895,19 @@ exports.directionEastLetter = function(d){return "Kelet"};
 
 exports.directionWestLetter = function(d){return "Nyugat"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "vége"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Akkor van értelme az \"Ismétel\" vagy a \"Ha\" blokknak, ha van  bennük egy vagy több blokk. Bizonyosodj meg róla, hogy a belső blokk megfelelően illeszkedik a külső blokkhoz."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokknak szüksége van további elemekre a belsejében."};
 
-exports.extraTopBlocks = function(d){return "Van egy blokk, ami nincs csatolva egyetlen eseményblokkhoz se."};
+exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\"/\"when run\" blokkhoz vagy töröld."};
 
 exports.finalStage = function(d){return "Gratulálok! Teljesítetted az utolsó szakaszt."};
 
 exports.finalStageTrophies = function(d){return "Gratulálok! Teljesítetted az utolsó szakaszt és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Kész"};
 
 exports.generatedCodeInfo = function(d){return "Még a legjobb egyetemei is tanítják a blokk alapú kódolást (például "+v(d,"berkeleyLink")+" "+v(d,"harvardLink")+"). De a motorháztető alatt, a blokkok amiket összeraksz, JavaScript kódok, a világ legszélesebb körben használt kódolási nyelvén:"};
 
@@ -12939,7 +12939,7 @@ exports.numBlocksNeeded = function(d){return "Gratulálok! Megoldottad a "+v(d,"
 
 exports.numLinesOfCodeWritten = function(d){return "Éppen most írtál újabb "+p(d,"numLines",0,"hu",{"one":"1 sor","other":n(d,"numLines")+" sor"})+" kódot!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "lejátszás"};
 
 exports.puzzleTitle = function(d){return v(d,"puzzle_number")+". feladvány a "+v(d,"stage_total")+" -ból"};
 
@@ -12947,11 +12947,11 @@ exports.repeat = function(d){return "ismételd"};
 
 exports.resetProgram = function(d){return "Visszaállítás"};
 
-exports.runProgram = function(d){return "Program Futtatása"};
+exports.runProgram = function(d){return "Fut"};
 
 exports.runTooltip = function(d){return "A munkalapon összeépített program futtatása."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "pontszám"};
 
 exports.showCodeHeader = function(d){return "Kód Megjelenítése"};
 
@@ -12975,7 +12975,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Összesített eredmény
 
 exports.tryAgain = function(d){return "Próbáld újra"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Segítség"};
 
 exports.backToPreviousLevel = function(d){return "Vissza az előző szintre"};
 
@@ -13001,9 +13001,9 @@ exports.wantToLearn = function(d){return "Szeretnél megtanulni programozni?"};
 
 exports.watchVideo = function(d){return "Nézd meg a videót"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "amikor"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "futtatáskor"};
 
 exports.tryHOC = function(d){return "Próbáld ki a kódolás óráját"};
 
@@ -13011,14 +13011,14 @@ exports.signup = function(d){return "Regisztrálj a bevezető képzésre"};
 
 exports.hintHeader = function(d){return "Egy tipp:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Nem sikerült célba érnem. Kérlek javítsd a hibát."};
 
 
 },{"messageformat":68}],56:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.hu=function(n){return "other"}
-exports.atHoneycomb = function(d){return "at honeycomb"};
+exports.atHoneycomb = function(d){return "a méhsejtben"};
 
-exports.atFlower = function(d){return "at flower"};
+exports.atFlower = function(d){return "a virágban"};
 
 exports.avoidCowAndRemove = function(d){return "Kerülje el a tehén-t, és távolítson el 1-et"};
 
@@ -13052,25 +13052,25 @@ exports.fillTooltip = function(d){return "helyezzen 1 szennyeződés egységet "
 
 exports.finalLevel = function(d){return "Gratulálok! A végső rejtvény megoldotta."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "Ebben a virágban nincs több nektár."};
 
-exports.get = function(d){return "listából értéke"};
+exports.get = function(d){return "Legyen"};
 
 exports.heightParameter = function(d){return "magasság"};
 
 exports.holePresent = function(d){return "van egy lyuk"};
 
-exports.honey = function(d){return "make honey"};
+exports.honey = function(d){return "csinálj mézet"};
 
-exports.honeyAvailable = function(d){return "honey"};
+exports.honeyAvailable = function(d){return "méz"};
 
-exports.honeyTooltip = function(d){return "Make honey from nectar"};
+exports.honeyTooltip = function(d){return "Csinálj mézet a nektárból"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "Ebben a méhsejtben nincs több hely."};
 
 exports.ifCode = function(d){return "Ha"};
 
-exports.ifInRepeatError = function(d){return "Szüksége van egy \"ha\"/\"if\" blokkra a \"repeat\"/\"ismételd\" blokkon belül. Ha gondjaid vannak, próbáld újra az előző szintet, hogy lásd, hogyan működött."};
+exports.ifInRepeatError = function(d){return "Szükséged van egy \"ha\"/\"If\" blokkra az \"ismételd\"/\"repeat\" blokkon belül. Ha gondjaid vannak, próbáld újra az előző szintet, és nézd meg hogyan működött."};
 
 exports.ifPathAhead = function(d){return "Ha útvonal van előttünk"};
 
@@ -13078,37 +13078,37 @@ exports.ifTooltip = function(d){return "Ha a megadott irányban létezik egy út
 
 exports.ifelseTooltip = function(d){return "Ha van egy út a megadott irányban, akkor csináld az első blokk műveletek. Másképp csinál a második blokk műveletek."};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "Ha van virág/méhsejt az utadon, használd a kellő blokkokat rajtuk."};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "Ha van virág/méhsejt a megadott irányban, Használd a \"ha\"/\"if\" - \"különben\"/\"else\" blokkot."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Minden blokkot felhasználtál, de nem jól adtad meg a méz mennyiségét."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Az összes blokkot felhasználtad amit kellet, de nem szedted össze az összes nektárt."};
 
-exports.make = function(d){return "make"};
+exports.make = function(d){return "csinálj"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "menj hátrafelé"};
 
-exports.moveEastTooltip = function(d){return "Move me east one space."};
+exports.moveEastTooltip = function(d){return "Mozgass kelet felé egy egységnyit."};
 
 exports.moveForward = function(d){return "előrelépni"};
 
 exports.moveForwardTooltip = function(d){return "Vigyél előre egy helyet."};
 
-exports.moveNorthTooltip = function(d){return "Move me north one space."};
+exports.moveNorthTooltip = function(d){return "Mozgass észak felé egy egységnyit."};
 
-exports.moveSouthTooltip = function(d){return "Move me south one space."};
+exports.moveSouthTooltip = function(d){return "Mozgass dél felé egy egységnyit."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "Mozgass előre vagy hátra egy egységnyit"};
 
-exports.moveWestTooltip = function(d){return "Move me west one space."};
+exports.moveWestTooltip = function(d){return "Mozgass nyugat felé egy egységnyit."};
 
-exports.nectar = function(d){return "get nectar"};
+exports.nectar = function(d){return "szedd fel a nektárt"};
 
-exports.nectarRemaining = function(d){return "nectar"};
+exports.nectarRemaining = function(d){return "nektár"};
 
-exports.nectarTooltip = function(d){return "Get nectar from a flower"};
+exports.nectarTooltip = function(d){return "Szedd ki a nektárt a virágból"};
 
 exports.nextLevel = function(d){return "Gratulálok! Elvégezte a puzzle-t."};
 
@@ -13120,9 +13120,9 @@ exports.noPathLeft = function(d){return "nincs út balra"};
 
 exports.noPathRight = function(d){return "nincs út jobbra "};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "Csak a virágból tudsz nektárt szerezni."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "Csak a méhsejtből tudsz mézet gyártani."};
 
 exports.numBlocksNeeded = function(d){return "Ezt a puzzle-t a(z) % 1 blokkal megoldható."};
 
@@ -13154,11 +13154,11 @@ exports.repeatUntilBlocked = function(d){return "amíg van út előre"};
 
 exports.repeatUntilFinish = function(d){return "befejezésig ismételd"};
 
-exports.step = function(d){return "Step"};
+exports.step = function(d){return "Lépés"};
 
-exports.totalHoney = function(d){return "total honey"};
+exports.totalHoney = function(d){return "összes méz"};
 
-exports.totalNectar = function(d){return "total nectar"};
+exports.totalNectar = function(d){return "összes nektár"};
 
 exports.turnLeft = function(d){return "fordulj balra"};
 
@@ -13168,17 +13168,17 @@ exports.turnTooltip = function(d){return "Balra vagy jobbra fordít 90 fokkal."}
 
 exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "Győződj meg róla, hogy a lila virág(ok) összes nektárját kiszedted-e."};
 
 exports.whileMsg = function(d){return "amíg"};
 
 exports.whileTooltip = function(d){return "Ismételjük a közbülső műveleteket amíg végponthoz nem ér."};
 
-exports.word = function(d){return "Find the word"};
+exports.word = function(d){return "Ezt a szót keresd"};
 
 exports.yes = function(d){return "igen"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "Amit találtál"};
 
 
 },{"messageformat":68}],57:[function(require,module,exports){

@@ -9498,6 +9498,11 @@ Turtle.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
 
+  // Enable blockly param editing in levelbuilder, regardless of level setting
+  if (config.level.edit_blocks) {
+    config.disableParamEditing = false;
+  }
+
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
 
@@ -10004,7 +10009,7 @@ Turtle.drawJointAtTurtle_ = function () {
  * @return {boolean} True if the level is solved, false otherwise.
  */
 var isCorrect = function(pixelErrors, permittedErrors) {
-  return pixelErrors < permittedErrors;
+  return pixelErrors <= permittedErrors;
 };
 
 /**
@@ -10078,7 +10083,10 @@ Turtle.checkAnswer = function() {
 
   // Allow some number of pixels to be off, but be stricter
   // for certain levels.
-  var permittedErrors = level.permittedErrors || 150;
+  var permittedErrors = level.permittedErrors;
+  if (permittedErrors === undefined) {
+    permittedErrors = 150;
+  }
 
   // Test whether the current level is a free play level, or the level has
   // been completed
@@ -10358,7 +10366,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Os blocos \"Repita\" ou \"Se\"
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "O bloco de função precisa ter outros blocos dentro dele para funcionar."};
 
-exports.extraTopBlocks = function(d){return "blocoSuperiorExtra"};
+exports.extraTopBlocks = function(d){return "Alguns de seus blocos estão soltos. Você gostaria de conectá-los ao bloco \"quando executar\"?"};
 
 exports.finalStage = function(d){return "Parabéns! Você concluiu a fase final."};
 

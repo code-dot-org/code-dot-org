@@ -12901,7 +12901,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Os blocos \"Repita\" ou \"Se\"
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "O bloco de função precisa ter outros blocos dentro dele para funcionar."};
 
-exports.extraTopBlocks = function(d){return "blocoSuperiorExtra"};
+exports.extraTopBlocks = function(d){return "Alguns de seus blocos estão soltos. Você gostaria de conectá-los ao bloco \"quando executar\"?"};
 
 exports.finalStage = function(d){return "Parabéns! Você concluiu a fase final."};
 
@@ -13082,9 +13082,9 @@ exports.ifFlowerTooltip = function(d){return "Se houver uma flor/colmeia na dire
 
 exports.ifelseFlowerTooltip = function(d){return "Se houver uma flor/colmeia na direção especificada, faça o primeiro bloco de ações. Caso contrário, faça o segundo bloco de ações."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Você está usando os blocos certos, mas precisa fazer a quantidade certa de mel."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Você está usando os blocos certos, mas precisa coletar a quantidade certa de néctar."};
 
 exports.make = function(d){return "faça"};
 

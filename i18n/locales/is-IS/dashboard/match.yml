@@ -112,9 +112,9 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
         Maze Match: "Maze Match"
-        Match the puzzles to the blocks: "Match the puzzles to the blocks"
-        Instructions: "Instructions"
-        Drag the blocks to match.: Drag the blocks to match.
+        Match the puzzles to the blocks: "Samsvörun þraut og kubba"
+        Instructions: "Leiðbeiningar"
+        Drag the blocks to match.: Dragðu kubbana á samsvarandi þraut.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
@@ -122,17 +122,28 @@
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
-      K-1 Artist 2 Match 1:
+      4-5 Computational Thinking Match 1:
         Matching: "Matching"
-        Is the square next to, above, or below the ball?: Is the square next to, above, or below the ball?
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
+      K-1 Artist 2 Match 1:
+        Matching: "Samsvörun"
+        Is the square next to, above, or below the ball?: Er ferningurinn til hliðar, ofan eða neðan við boltann?
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/><br/>above'
-        <br/><br/>below: '<br/><br/>below'
-        <br/><br/>next to: '<br/><br/>next to'
+        <br/><br/>above: '<br/><br/>ofan við'
+        <br/><br/>below: '<br/><br/>neðan við'
+        <br/><br/>next to: '<br/><br/>til hliðar við'
       K-1 Artist 2 Match 2:
-        Matching: "Matching"
+        Matching: "Samsvörun"
         Match the shapes based on type.: Match the shapes based on type.
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png

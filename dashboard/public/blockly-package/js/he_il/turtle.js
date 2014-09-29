@@ -9498,6 +9498,11 @@ Turtle.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
 
+  // Enable blockly param editing in levelbuilder, regardless of level setting
+  if (config.level.edit_blocks) {
+    config.disableParamEditing = false;
+  }
+
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
 
@@ -10004,7 +10009,7 @@ Turtle.drawJointAtTurtle_ = function () {
  * @return {boolean} True if the level is solved, false otherwise.
  */
 var isCorrect = function(pixelErrors, permittedErrors) {
-  return pixelErrors < permittedErrors;
+  return pixelErrors <= permittedErrors;
 };
 
 /**
@@ -10078,7 +10083,10 @@ Turtle.checkAnswer = function() {
 
   // Allow some number of pixels to be off, but be stricter
   // for certain levels.
-  var permittedErrors = level.permittedErrors || 150;
+  var permittedErrors = level.permittedErrors;
+  if (permittedErrors === undefined) {
+    permittedErrors = 150;
+  }
 
   // Test whether the current level is a free play level, or the level has
   // been completed
@@ -10358,7 +10366,7 @@ exports.emptyBlocksErrorMsg = function(d){return "בלוקי ה\"חזור שוב
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "פונקציית הבלוק דורשת בלוקים אחרים בתוך לעבודה."};
 
-exports.extraTopBlocks = function(d){return "יש לך קוביות מיותרות שלא מחוברת לקוביית הארוע."};
+exports.extraTopBlocks = function(d){return "יש לך אבני כעיגולים בצבע. התכוונת לצרף אלה כדי לחסום את \"בעת הפעלת\"?"};
 
 exports.finalStage = function(d){return "כל הכבוד! השלמת את השלב הסופי."};
 

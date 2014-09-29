@@ -65,6 +65,8 @@
   i_am_a: "ma aik ho"
   never_spam: "We'll never spam you"
   enter_country: "Agr united states se bahir hain to apne mulk ka intyhab kijiye"
+  used_infrequent_updates: "Only used for infrequent updates"
+  privacy_practices_children: "See our privacy practices for children"
   petition_thankyou: "Thank you for signing the petition"
   carousel_heading_international: "Tutorials in your language"
   continue_learning_header: "Continue learning beyond One Hour"
@@ -95,8 +97,8 @@
   studiobar_hoc_body: "Learn to code with Angry Birds"
   studiobar_flappy_title: "Flappy Code"
   studiobar_flappy_body: "Make and share your own Flappy game"
-  studiobar_teacher_title: "Teacher dashboard"
-  studiobar_teacher_body: "For teachers: view your students' progress"
+  studiobar_teacher_title: "Made for teachers"
+  studiobar_teacher_body: "Introduce Code Studio in your classroom"
   contact_form_topic_student: "I'm a student"
   contact_form_topic_parent: "I'm a parent"
   contact_form_topic_teacher: "I'm a teacher/educator"
@@ -193,6 +195,7 @@
   dashboard_sections_table_course: "Course"
   dashboard_sections_table_students: "Students"
   dashboard_sections_table_code: "Section Code"
+  dashboard_sections_name: "Section Name"
   dashboard_sections_choose_secret: 'If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section.'
   dashboard_sections_secret_word: 'A <b>word</b> allows you to set a secret word for each student.'
   dashboard_sections_secret_picture: "A <b>picture</b> allows you to set a secret picture for each student, ideal for younger students who can't yet type."
@@ -203,9 +206,12 @@
   dashboard_students_add_students: "Add multiple students"
   dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
+  dashboard_students_placeholder_name: "Student Name"
   dashboard_students_name: "Naam"
   dashboard_students_age: "عمر"
   dashboard_students_gender: "Gender"
+  dashboard_students_male: "Male"
+  dashboard_students_female: "Female"
   dashboard_students_secret: "Secret"
   dashboard_students_password: "پاس ورڈ"
   dashboard_students_username: 'Username: %{student_username}'
@@ -225,3 +231,26 @@
   dashboard_students_print_page: "Print this page"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Click here</a> for our privacy document that can be shared or printed for your students.'
+  dashboard_curriculum_overview: "K-5 Curriculum Overview"
+  dashboard_view_all_lesson_plans: "View all lesson plans"
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: "Sequence"
+  dashboard_framework: "Framework"
+  dashboard_standards: "Standards"
+  dashboard_implementation_guide: "Implementation Guide"
+  dashboard_glossary: "Glossary"
+  dashboard_classroom_strategies: "Classroom strategies for teachers"
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: "student worksheet"
+  dashboard_teacher_worksheet: "teacher worksheet"
+  dashboard_grade_k: "K"
+  dashboard_grade_other: "Other"
+  dashboard_login_word: "word"
+  dashboard_login_picture: "picture"
+  dashboard_login_none: "none"
+  dashboard_new_password: "new password"
+  stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
+  stats_hoc_2013_image_alt: "Stats from 2013 Hour of Code"

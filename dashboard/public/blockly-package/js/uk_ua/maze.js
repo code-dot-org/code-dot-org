@@ -12914,7 +12914,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Блоки \"Повторит�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Для функціонування цей блок повинен містити інші блоки."};
 
-exports.extraTopBlocks = function(d){return "У вас є додаткові блоки, які не прив'язані до жодного блоку подій."};
+exports.extraTopBlocks = function(d){return "У вас залишились зайві блоки. Ви збирались їх прикріпити до блоку \"під час виконання\"?"};
 
 exports.finalStage = function(d){return "Вітання! Завершено останній етап."};
 
@@ -13108,9 +13108,9 @@ exports.ifFlowerTooltip = function(d){return "Якщо у вказаному н�
 
 exports.ifelseFlowerTooltip = function(d){return "Якщо у вказаному напрямку є квітка або вулик, то виконувати перший блок дій. У протилежному випадку, виконувати другий блок дій."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Ви склали блоки правильно, але потрібно виготовити вказану кількість меду."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Ви склали блоки правильно, але потрібно виготовити вказану кількість нектару."};
 
 exports.make = function(d){return "зробити"};
 

@@ -97,18 +97,18 @@
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         Choose an algorithm for the image provided: "Виберіть алгоритм для поданого
           зображення"
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Start
-          with a square<br/>Put a triangle above the square<br/>Put a triangle below
-          the square
-        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: Start
-          with a square<br/>Put a triangle right of square<br/>Put a rhombus below
-          square<br/>Put triangle right of rhombus
-        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: Start
-          with a square<br/>Put a rhombus above the square<br/>Put a triangle right
-          of the rhombus
-        Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: Start
-          with a square<br/>Put a triangle below the square<br/>Put a rhombus right
-          of the triangle
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: "Почніть
+          з квадрата<br/>Поставте на нього трикутник<br/>Розмістіть трикутник під
+          квадратом"
+        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: "Почніть
+          з квадрата<br/>Розмістіть трикутник праворуч від квадрата<br/>Помістіть
+          ромб під квадратом<br/>Поставте трикутник праворуч від ромба"
+        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: "Почніть
+          з квадрата<br/>Розмістіть ромб над квадратом<br/>Розташуйте трикутник праворуч
+          від ромба"
+        Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: "Почніть
+          з квадрата<br/>Розмістіть трикутник під квадратом<br/>Поставте ромб праворуч
+          від трикутника"
       2-3 Algorithms Multi 2:
         Multiple Choice: "Множинний вибір"
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: "Почніть
@@ -130,8 +130,8 @@
       2-3 Conditionals Multi 1:
         Multiple Choice: "Множинний вибір"
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        According to the rules of this game, which set of cards was scored correctly?: "Відповідно
-          до правил цієї гри, який набір карт пораховано правильно?"
+        According to the rules of this game, which set of cards was scored correctly for your team?: "Відповідно
+          до правил цієї гри, який набір карт для вашої команди оцінено правильно?"
         "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
@@ -267,11 +267,23 @@
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
+      4-5 Computational Thinking Multi 1:
+        Multiple Choice: "Множинний вибір"
+        0: "? Нижче наведено три речення. Який з шаблонів нижче підходить до всіх
+          трьох речень?"
+        1: ": Нижче наведено три речення. Який з шаблонів нижче підходить до всіх
+          трьох речень?"
+        "<h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>": "<h4>Київ
+          - велике місто.<br/>Львів - середнє місто.<br/>Стрий - мале місто.</h4>"
+        "<h4>Seattle _____ a _____ _____.</h4>": "<h4>Київ _____ - _____ _____.</h4>"
+        "<h4>_____ is a _____ city.</h4>": "<h4>_____  -  _____ місто.</h4>"
+        "<h4>_____ is _____ a _____.</h4>": "<h4>_____ -_____  _____.</h4>"
+        "<h4>Eugene is a _____ city.</h4>": "<h4>Львів - _____ місто.</h4>"
       K-1 Artist 1 Multi 1:
         Multiple Choice: "Множинний вибір"
         "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
           500"
-        Which blocks solve this puzzle?: Which blocks solve this puzzle?
+        Which blocks solve this puzzle?: "Які блоки розв'яжуть задачу?"
         "/script_assets/k_1_images/artist_images/W|S|S.png": "/script_assets/k_1_images/artist_images/W|S|S.png"
         "/script_assets/k_1_images/artist_images/E|S|S.png": "/script_assets/k_1_images/artist_images/E|S|S.png"
         "/script_assets/k_1_images/artist_images/S|E|E.png": "/script_assets/k_1_images/artist_images/S|E|E.png"
@@ -280,7 +292,7 @@
         Multiple Choice: "Множинний вибір"
         "/script_assets/k_1_images/artist_images/square.png, 500": "/script_assets/k_1_images/artist_images/square.png,
           500"
-        Which blocks draw the square?: Which blocks draw the square?
+        Which blocks draw the square?: "Які блоки намалюють квадрат?"
         "/script_assets/k_1_images/artist_images/N|E|S|W.png": "/script_assets/k_1_images/artist_images/N|E|S|W.png"
         "/script_assets/k_1_images/artist_images/E|S|W|N.png": "/script_assets/k_1_images/artist_images/E|S|W|N.png"
         "/script_assets/k_1_images/artist_images/N|W|S|E.png": "/script_assets/k_1_images/artist_images/N|W|S|E.png"

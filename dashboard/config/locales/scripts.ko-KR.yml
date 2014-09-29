@@ -3,154 +3,152 @@
     script:
       name:
         test:
-          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+          'Jigsaw: Learn to drag and drop': "퍼즐 맞추기: 드래그와 드롭"
           The Maze: "미로 퍼즐"
-          Multi: Multi
-          Match: Match
-          Math Image: Math Image
-          title: Test Course
-          description: Just an internal test course.
+          Multi: "객관식"
+          Match: "짝 맞추기"
+          Math Image: "수학 이미지"
+          title: "테스트 코스"
+          description: "내부 테스트 코스"
         course1:
-          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          'Maze: Sequence': 'Maze: Sequence'
-          'Maze: Debugging': 'Maze: Debugging'
-          'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artists 2
-          Spelling Bee: Spelling Bee
-          Spelling Bee not blockly: Spelling Bee not blockly
-          'Bee 1: Intro': 'Bee 1: Intro'
-          'Maze 2: Loops': 'Maze 2: Loops'
-          'Bee 2: Loops': 'Bee 2: Loops'
-          Multi & Match: Multi & Match
-          K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
-          title: Course 1
-          Artist 2: Artist 2
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
-          description: Course 1 is designed for early readers in the lower elementary
-            grades.  Create computer programs with loops and events.  By the end of
-            the course, create your very own custom game or story that you can share.
-          'Bee: Sequence': 'Bee: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Shapes': 'Artist: Shapes'
-          'Maze: Loops': 'Maze: Loops'
-          'Bee: Loops': 'Bee: Loops'
-          'Studio: Create a Story': 'Studio: Create a Story'
-          description_short: Course 1 is designed for early readers in the lower elementary
-            grades.
+          'Jigsaw: Learn to drag and drop': "퍼즐 맞추기: 드래그와 드롭"
+          'Maze: Sequence': "미로 퍼즐: 순차"
+          'Maze: Debugging': "미로 퍼즐: 디버깅"
+          'Artist 1: Intro': "예술가1 : 소개"
+          Artists 2: "예술가 2"
+          Spelling Bee: "말하는 꿀벌"
+          Spelling Bee not blockly: "말하는 꿀벌로"
+          'Bee 1: Intro': "꿀벌1 : 소개"
+          'Maze 2: Loops': "미로 퍼즐2 : 반복"
+          'Bee 2: Loops': "꿀벌2 : 반복"
+          Multi & Match: "개관식과 맞추기"
+          K-1 Flappy: K-1(초등 1학년) 플래피 버드.
+          Flappy non blockly: "플래피 버드로"
+          title: "코스1 - 읽기 초급"
+          Artist 2: "예술가2"
+          Happy Maps: "즐거운 맵"
+          Move it, Move it: "빨리 빨리 움직이기"
+          'Real-life Algorithms: Plant a Seed': "실시간 알고리즘: 씨앗 심기"
+          Building a Foundation: "건물 기초 만들기"
+          Getting Loopy: "반복시키기"
+          The Big Event: "큰 이벤트"
+          Going Places Safely: "안전하게 자리잡기"
+          description: "코스1은 컴퓨터 프로그래밍을 처음 이해하기 시작하는 사람들을 위한 코스로, 다른 사람들과 협력하고, 문제
+            해결 능력을 계발하고 어려운 문제들에 도전할 수 있도록 하는 코스 입니다. 이 코스를 통해 학생 스스로 자신만의 게임과 스토리들을
+            만들어 공유할 수 있습니다. K-1(초등 1학년) 학생들에게 권장합니다."
+          'Bee: Sequence': "꿀벌 : 순차"
+          'Artist: Sequence': "예술가: 순차"
+          'Artist: Shapes': "예술가: 모양"
+          'Maze: Loops': "미로 퍼즐: 반복"
+          'Bee: Loops': "꿀벌: 반복"
+          'Studio: Create a Story': 'Play Lab: 스토리 만들기'
+          description_short: "코스1은 초등학교 저학년을 위한 코스입니다."
+          'Artist: Loops': "예술가: 반복"
         course2:
           The Maze: "미로 퍼즐"
-          Suzi: Suzi
+          Suzi: "수지"
           The Artist: "예술가 퍼즐"
-          Artist Debugging: Artist Debugging
+          Artist Debugging: "예술가 디버깅"
           Bounce: "바운스"
-          'Studio: Create a Story': 'Studio: Create a Story'
-          Artist Loops: Artist Loops
-          Bee Conditionals: Bee Conditionals
-          Flappy: Flappy
-          title: Course 2
-          Bee Loops: Bee Loops
-          Artist Functions: Artist Functions
-          The Artist Debugging: The Artist Debugging
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
+          'Studio: Create a Story': 'Play Lab: 스토리 만들기'
+          Artist Loops: "아티스트 반복"
+          Bee Conditionals: "꿀벌 조건선택"
+          Flappy: "플래피 버드"
+          title: "코스2"
+          Bee Loops: "꿀벌 반복"
+          Artist Functions: "예술가 함수"
+          The Artist Debugging: "예술가 디버깅"
+          Bee Debugging: "꿀벌 디버깅"
+          Bee Functions: "꿀벌 함수"
+          Maze Loops: "미로 반복"
           Graph Paper Programming: "모눈 종이 프로그래밍"
-          'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: Getting Loopy
-          Relay programming: Relay programming
+          'Real-life Algorithms: Paper Planes': "실시간 알고리즘: 종이 비행기"
+          Getting Loopy: "반복시키기"
+          Relay programming: "릴레이 프로그래밍"
           Conditionals: "조건/선택"
-          Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
-          Your Digital Footprint: Your Digital Footprint
-          description: Course 2 is designed for students who can read in the lower
-            and middle elementary grades.  Create programs with loops, events, and
-            conditionals.  By the end of the course, create your very own interactive
-            game or story that you can share.
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Maze: Loops': 'Maze: Loops'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Loops': 'Bee: Loops'
-          'Bee: Debugging': 'Bee: Debugging'
-          'Artist: Debugging': 'Artist: Debugging'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          description_short: Course 2 is designed for students who can read in the
-            lower and middle elementary grades.
-          'Artist: Sequence2': 'Artist: Sequence2'
-          'Maze: Sequence2': 'Maze: Sequence2'
+          Binary Bracelets: 2진 팔찌
+          The Big Event: "큰 이벤트"
+          Your Digital Footprint: "디지털 개인정보 흔적"
+          description: "코스2는 프로그래밍 경험이 전혀 없으면서 글을 읽을 수 있는 학생들을 대상으로 합니다. 이 코스를 완료하면
+            문제를 해결할 수 있는 프로그램을 만들고, 인터랙티브 게임이나 스토리를 만들어 공유할 수 있습니다. 2-5학년(초등 2-5학년)
+            학생들에게 추천합니다."
+          'Maze: Sequence': "미로 퍼즐: 순차"
+          'Artist: Sequence': "예술가: 순차"
+          'Maze: Loops': "미로 퍼즐: 반복"
+          'Artist: Loops': "예술가: 반복"
+          'Bee: Loops': "꿀벌: 반복"
+          'Bee: Debugging': "꿀벌: 디버깅"
+          'Artist: Debugging': "예술가: 디버깅"
+          'Bee: Conditionals': "꿀벌: 조건선택"
+          description_short: "코스2는 초등학교 3-4학년 보다 낮은 학생들 중에서 읽기가 가능한 학생들에게 추천합니다."
+          'Artist: Sequence2': "예술가: 순차2"
+          'Maze: Sequence2': "미로: 순차2"
+          'Artist: Nested Loops': "예술가: 중첩반복"
         course3:
           The Maze: "미로 퍼즐"
-          'Studio: Create a Story': 'Studio: Create a Story'
+          'Studio: Create a Story': 'Play Lab: 스토리 만들기'
           The Artist: "예술가 퍼즐"
-          title: Course 3
-          Artist Functions: Artist Functions
-          Artist For Loops: Artist For Loops
-          Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
-          Bee Nested Loops: Bee Nested Loops
-          Bee Debuggin: Bee Debuggin
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Artist Functions with Params: Artist Functions with Params
+          title: "코스3"
+          Artist Functions: "예술가 함수"
+          Artist For Loops: "예술가 반복"
+          Artist Nested Loops: "예술가 중첩반복"
+          Bee Conditionals: "꿀벌 조건선택"
+          Bee Nested Loops: "꿀벌 반복"
+          Bee Debuggin: "꿀벌 디버깅"
+          Bee Debugging: "꿀벌 디버깅"
+          Bee Functions: "꿀벌 함수"
+          Artist Functions with Params: "예술가 매개변수 함수"
           Bounce: "바운스"
-          Maze Conditionals: Maze Conditionals
-          Artist Functions with Parameters: Artist Functions with Parameters
+          Maze Conditionals: "미로 퍼즐 조건선택"
+          Artist Functions with Parameters: "예술가 매개변수 함수"
           Computational Thinking: "컴퓨터과학(정보과학)적 사고"
-          Functional Suncatchers: Functional Suncatchers
-          Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
-          Internet: Internet
-          Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital Citizenship
-          Farmer - While Loops: Farmer - While Loops
-          description: Students taking Course 3 should have already taken Course 2.  Students
-            create programs with different kinds of loops, events, functions, and
-            conditions.  By the end of the course, create your very own interactive
-            game or story that you can share with anyone.
-          'Studio: Create a Game': 'Studio: Create a Game'
-          Maze: Maze
-          Artist: Artist
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Functions': 'Bee: Functions'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Maze: Conditionals': 'Maze: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Bee: Debugging': 'Bee: Debugging'
-          description_short: Students taking Course 3 should have already taken Course
-            2.
-          Maze2: Maze2
-          Artist2: Artist2
-          'Artist: Functions2': 'Artist: Functions2'
-          'Bee: Functions2': 'Bee: Functions2'
-          'Bee: Conditionals2': 'Bee: Conditionals2'
-          'Maze: Conditionals2': 'Maze: Conditionals2'
-          'Artist: Nested Loops2': 'Artist: Nested Loops2'
-          'Farmer: While Loops2': 'Farmer: While Loops2'
-          'Bee: Nested Loops2': 'Bee: Nested Loops2'
-          'Bee: Debugging2': 'Bee: Debugging2'
+          Functional Suncatchers: "기능성 색유리"
+          Songwriting Parameters: "노래 작곡 매개변수"
+          Dice Race: "주사위 레이스"
+          Internet: "인터넷"
+          Crowdsourcing: "클라우드소싱"
+          Digital Citizenship: "디지털 시민의식"
+          Farmer - While Loops: "농부 - ~인동안 반복"
+          description: "코스3은 코스2를 완료한 학생들을 위해 설계되었습니다. 학생들은 이전 단계에서 배운 프로그래밍 기초 개념들을
+            보다 복잡한 문제들에 대해서 다양한 방법들로 사용하게 됩니다. 학생들이 이 코스를 완료하고나면 인터랙티브 스토리와 게임을 만들고
+            공유할 수 있게 됩니다. K4-5(초등4-5학년) 학생들에게 권장합니다."
+          'Studio: Create a Game': 'Play Lab: 게임 만들기'
+          Maze: "미로 퍼즐"
+          Artist: "에술가"
+          'Artist: Functions': "에술가: 함수"
+          'Bee: Functions': "꿀벌: 함수"
+          'Bee: Conditionals': "꿀벌: 조건선택"
+          'Maze: Conditionals': "미로 퍼즐: 조건선택"
+          'Artist: Nested Loops': "예술가: 중첩반복"
+          'Farmer: While Loops': "농부: ~인동안 반복"
+          'Bee: Nested Loops': "꿀벌: 중첩반복"
+          'Bee: Debugging': "꿀벌: 디버깅"
+          description_short: "코스3은 먼저 코스2를 완료했어야 합니다."
+          Maze2: "미로 퍼즐2"
+          Artist2: "예술가2"
+          'Artist: Functions2': "예술가: 함수2"
+          'Bee: Functions2': "꿀벌: 함수2"
+          'Bee: Conditionals2': "꿀벌: 조건선택2"
+          'Maze: Conditionals2': "미로 퍼즐: 조건선택2"
+          'Artist: Nested Loops2': "예술가: 중첩반복2"
+          'Farmer: While Loops2': "농부: ~인동안 반복2"
+          'Bee: Nested Loops2': "꿀벌: 중첩반복2"
+          'Bee: Debugging2': "꿀벌: 디버깅2"
+          'Artist: Patterns': "예술가: 패턴"
         msm:
-          title: Middle School Math
-          description: Private work in progress for Middle School Math.
+          title: "중학교 수학"
+          description: "중학교 수학 과정 개인 진도"
           Graph Paper Programming: "모눈 종이 프로그래밍"
-          Assessments: Assessments
-          Unit 1: Unit 1
-          Unit 2: Unit 2
+          Assessments: "평가 점수"
+          Unit 1: "유닛1"
+          Unit 2: "유닛2"
         playlab:
           title: Play Lab
-          description: Create a story or make a game with Play Lab!
+          description: Play Lab을 이용해 스토리나 게임을 만드세요!
           Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          description_short: Play Lab을 이용해 스토리나 게임을 만드세요!
         artist:
-          title: Artist
-          description: Draw cool pictures and designs with the Artist!
-          Artist: Artist
-          description_short: Draw cool pictures and designs with the Artist!
+          title: "에술가"
+          description: "예술가를 이용해 멋진 그림과 디자인을 만들어보세요!"
+          Artist: "에술가"
+          description_short: "예술가를 이용해 멋진 그림과 디자인을 만들어보세요!"

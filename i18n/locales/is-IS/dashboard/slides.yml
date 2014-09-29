@@ -62,7 +62,7 @@
         text: "Hæ, ég heiti Paola! Í þessum þrautum ert þú bóndakona sem þarf að ná túninu sínu alveg sléttu til að geta byrjað að rækta."
       2:
         image: "notes/stage9_2.jpg"
-        text: "Þú verður að hjálpa henni að fjárlægja alla moldarhaugana og fylla upp í allar holurnar."
+        text: "Þú verður að hjálpa henni að fjarlægja alla moldarhaugana og fylla upp í allar holurnar."
       3:
         image: "notes/stage9_3.jpg"
         text: "Nýju kubbarnir fjarlægja 1 skóflufylli af mold úr haug og fylla í holu með 1 skóflufylli af mold."
@@ -84,7 +84,7 @@
         text: "Hefur þú heyrt um leikinn FlappyBird? Með því að nota atvikahöndlara ætlum við að læra að forrita okkar eigin sérhönnuðu útgáfu af FlappyBird!"
       5:
         image: "notes/flappy05.jpg"
-        text: "Kóðinn sem þú munt skrifa felur í sér að draga og setja niður kubba sem tákna skipanir fyrir tölvuna. Bak við tjöldin, stendur hver þessara kubba fyrir raunverulegan kóða."
+        text: "Kóðinn sem þú munt skrifa felur í sér að draga og setja niður kubba sem tákna skipanir fyrir tölvuna. Bak við tjöldin stendur hver þessara kubba fyrir raunverulegan kóða."
       6:
         image: "notes/flappy06.jpg"
         text: 'Ef þú skoðar vinnusvæðið þá eru þar grænir kubbar sem búið er að setja fyrir þig - þetta eru "atvikafangarar" '

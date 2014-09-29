@@ -32,6 +32,7 @@
     submit: "Добавяне на препоръка"
   appname: "Code.org"
   stage: "Етап"
+  stage_number: 'Етап %{number}'
   puzzle: "Пъзел"
   trophies: "Трофеи"
   courses: "Курсове"
@@ -61,8 +62,8 @@
     need_confirmation: "Не сте получили инструкции за потвърждение ?"
     need_unlock: "Не сте получили инструкции за отключване?"
   signup_form:
-    overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
-    overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
+    overview_student: 'Регистрирайте се, за да следите напредъка си. Вашият имейл се използва само при влизане в сайта и за възстановяване на парола. За повече информация вижте нашата <a href="http://code.org/privacy"> Политика за поверителност</a>.'
+    overview_teacher: 'Преподавайте компютърни науки в класната ви стая като се регистрирате. <p/> Вие ще можете да добавите вашите ученици и да проследявате тяхното развитие.'
     no_signup_message: 'Можете да <a target="_blank" href="http://learn.code.org"> преминете в различните етапи и пъзели</a>, но ще трябва да се регистрирате, за да запишете вашия прогрес.'
     prizes_message: 'Учениците от САЩ, които спечелят всички  %{num_trophies} трофеи, може да си изберат различни награди, включително свободно хостинг пространство, предоставено от Dropbox, Skype кредити и да си свалят игри от Electronic Arts.'
     teacher_educator_guide: "Виж ръководството за обучители"
@@ -86,7 +87,7 @@
     valid_password: "Валидна парола!"
     invalid_password: "Паролата трябва да бъде поне 6 символа"
     mismatch_password: "Двете пароли, които въведохте не съвпадат"
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
+    student_terms: "Съгласен съм да се обвържа с Code.org <a href='http://code.org/tos'> условията за ползване</a>. Ако аз съм на възраст под 13 години, аз потвърждавам с подаването на този формуляр, че имам разрешението на моя родител или законен настойник за ползване на услугите на Code.org. <br/>За потребители под 13 имейл адресите не се съхраняват във форма, която да ни позволява да се свържем с тях."
     teacher_terms: "Съгласен съм да се обвържа с Code.org <a href='http://code.org/tos'> условията за ползване</a>."
     additional_information: 'Ние изискваме  допълнителна информация за да продължим  вписването ви.'
   signin_form:
@@ -307,6 +308,8 @@
     classroom_activity: "Ънплъгт дейност"
   home:
     title: "Студио по кодиране"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: 'Вече сте регистриран? %{link}'
     student_reg_link: "Вход за ученик"
     teacher_reg_link: "Вход за учител"
@@ -347,6 +350,7 @@
     feedback: "Обратна връзка"
     translate: "Помогнете ни да преведем на вашия език"
     support: "Поддръжка"
+    support_url: "http://support.code.org"
     tos: "Понятия"
     privacy: "Защита на личните данни"
     secure: "Защитената версия"
@@ -371,8 +375,14 @@
     autoplay_option: "Автоматично изпълнение на видеата"
     download: "Изтегляне на видео"
   compatability:
-    working: "Ние работим по поддръжката на вашия браузър."
-    upgrade: "Моля, надстройте браузъра си."
+    working:
+      header: "Ние работим по поддръжката на вашия браузър."
+      message: "Code.org използва модерни уеб технологии. Това прави сайта по-бърз при зареждане. Вашият браузър не поддържа всички предвидени функции и е възможно да възникнат проблеми при използването на тази част на сайта. Помогнете ни <a href='%{report_issue_url}'> като ни уведомите за всички проблеми, които сте открили</a>. Можете също да <a href='%{supported_browsers_url}'> надстроите браузъра си до поддържаната версия</a>."
+      hide_this_warning: "Скрий предупреждението"
+    upgrade:
+      header: "Моля, надстройте браузъра си."
+      message: "Code.org използва модерни уеб технологии. Това прави сайта по-бърз за използване. За съжаление, вашия браузър не поддържа всички функции, необходими за работата на тази част от сайта. <br/> <br/>Инсталирате браузър от нашия списък на поддържаните браузъри, за да продължите. Можете да <a href='#'> разгледате страницата</a>, но се очаква да възникнат функционални проблеми."
+      button: "Премини към списъка на поддържаните браузъри"
   slow_loading: "Това отнема повече време от обичайното..."
   try_reloading: "Опитайте да презаредите страницата"
   next_stage: "Завършено! Продължете към следващия етап"
@@ -383,7 +393,7 @@
     title: 'Щракнете върху бутона "Пусни" за да видите моята програма в действие'
     bounce_og_title: "Вижте моята Bounce игра"
     flappy_og_title: "Вижте моята Flappy игра"
-    studio_og_title: "Проверете моята история"
+    studio_og_title: 'Вижте моето приложение "Театрална лаборатория"'
     og_description: "Аз написах кодът с Code.org"
   builder:
     created: "Вие създадохте нов скрипт."
@@ -416,6 +426,7 @@
     feedback: "Дайте обратна връзка"
     report_bug: "Доклад за бъгове"
     support: "Получаване на помощ"
+    support_url: "//support.code.org"
   multi:
     wrong_title: "Неправилен отговор"
     wrong_body: 'Отговорът, който сте въвели не е правилен.  Моля опитайте отново!'

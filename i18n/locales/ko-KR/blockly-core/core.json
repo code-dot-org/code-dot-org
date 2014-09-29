@@ -65,7 +65,7 @@
   "EXPAND_ALL":"블럭들 펼치기",
   "EXPAND_BLOCK":"블럭 펼치기",
   "EXTERNAL_INPUTS":"내부에서 값 입력",
-  "FUNCTION_HEADER":"Function",
+  "FUNCTION_HEADER":"함수",
   "HELP":"도움말",
   "INLINE_INPUTS":"외부에서 값 입력",
   "LISTS_CREATE_EMPTY_HELPURL":"http:\/\/en.wikipedia.org\/wiki\/Linked_list#Empty_lists",

@@ -2,7 +2,7 @@
   data:
     match:
       2-3 artist loops match 1:
-        Artist Loops Matching One: "Artist Loops Matching One"
+        Artist Loops Matching One: "حلقات الفنان تطابق واحداً"
         Matching loops: "حلقات التطابق"
         Match the loop to the shape: "قم بمطابقة حلقة التكرار بالشكل"
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png
@@ -15,7 +15,7 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png
       2-3 artist match 1:
         Artist Matching: "توصيل الفنان"
-        Match the shape with the blocks that complete it.: Match the shape with the blocks that complete it.
+        Match the shape with the blocks that complete it.: 'قم بتوصيل الشكل مع القطع لإكماله . '
         /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
@@ -25,7 +25,7 @@
         /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
       2-3 bounce match 1:
-        Bounce Matching: "Bounce Matching"
+        Bounce Matching: "الكرة المرتدة تطابق"
         Matching: "تطابق"
         Match the events with the actions: "قم بمطابقة الأحداث بالإجراءات"
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
@@ -39,7 +39,7 @@
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
       2-3 flappy match 1:
-        Flappy Matching One: "Flappy Matching One"
+        Flappy Matching One: "فلابي تطابق واحداً"
         Matching: "المطابقة"
         Match the events with the actions: "قم بمطابقة الأحداث بالإجراءات"
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
@@ -122,18 +122,29 @@
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
+      4-5 Computational Thinking Match 1:
+        Matching: "مطابقة"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
       K-1 Artist 2 Match 1:
         Matching: "مطابقة"
-        Is the square next to, above, or below the ball?: Is the square next to, above, or below the ball?
+        Is the square next to, above, or below the ball?: هل المربع بجانب أو فوق أو أسفل الكرة ؟
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/><br/>above'
-        <br/><br/>below: '<br/><br/>below'
-        <br/><br/>next to: '<br/><br/>next to'
+        <br/><br/>above: '<br/><br/>فوق'
+        <br/><br/>below: '<br/><br/>أسفل'
+        <br/><br/>next to: '<br/><br/>بجانب'
       K-1 Artist 2 Match 2:
         Matching: "مطابقة"
-        Match the shapes based on type.: Match the shapes based on type.
+        Match the shapes based on type.: طابق الأشكال حسب النوع.
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
         /script_assets/k_1_images/artist_images/medium_rectangle.png: /script_assets/k_1_images/artist_images/medium_rectangle.png
@@ -155,7 +166,7 @@
         /script_assets/k_1_images/artist_images/large_triangle2.png: /script_assets/k_1_images/artist_images/large_triangle2.png
       K-1 Artist Loops Match 1:
         Matching: "مطابقة"
-        Match the code to the stairs it draws.: Match the code to the stairs it draws.
+        Match the code to the stairs it draws.: طابق التعليمات البرمجية إلى الدرج الذي يرسمه.
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
@@ -184,7 +195,7 @@
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
       K-1 Maze Match 1:
         Matching: "مطابقة"
-        Match the puzzles and blocks: "Match the puzzles and blocks"
+        Match the puzzles and blocks: "طابق الألغاز و القطع"
         Instructions: "التعليمات"
         Drag the blocks to match.: اسحب القطع حتى تتطابق.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
@@ -207,7 +218,7 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
       K-1 Happy Maps Match 1:
         Matching: "مطابقة"
-        Match the Map to the arrow that gets the Flurb to the treasure: "Match the Map to the arrow that gets the Flurb to the treasure"
+        Match the Map to the arrow that gets the Flurb to the treasure: "وصل الخريطة السهم التي تجعل Flurb يصل للكنز"
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png
@@ -216,7 +227,7 @@
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
       K-1 Move It Match 1:
         Matching: "مطابقة"
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Match the Map to the algorithm that gets the Flurb to the flowers.
+        Match the Map to the algorithm that gets the Flurb to the flowers.: وصل الخريطة إلى الخوارزمية التي تجعل Flurb يصل للورود .
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q2.png: /script_assets/k_1_images/unplugged_images/move_it_2_q2.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
@@ -236,8 +247,8 @@
         (480, 100): (480, 100)
         (320, 240): (320, 240)
       Match math to circles:
-        Converting Math to Circles of Evaluation: "Converting Math to Circles of Evaluation"
-        Match each mathematical expression with the correct circle of evaluation!: Match each mathematical expression with the correct circle of evaluation!
+        Converting Math to Circles of Evaluation: "تحويل الرياضيات إلى دوائر التقييم"
+        Match each mathematical expression with the correct circle of evaluation!: طابق كل تعبير رياضي مع الدائرة الصحيحة للتقييم !
         (2 + 3) * 5 / 2: '(2 + 3) * 5 / 2'
         2 + 3 * (5 / 2): '2 + 3 * (5 / 2)'
         (2 + 3 * 5) / 2: '(2 + 3 * 5) / 2'
@@ -257,7 +268,7 @@
         /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
         /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
       Match math to code:
-        Converting Math to Code: "Converting Math to Code"
+        Converting Math to Code: "تحويل الرياضيات إلى تعليمات برمجية"
         Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: طابق كل عبارة رياضية مع الرمز الصحيح. استعمل دائرة التقييم لتساعدك على الاجابة!
         (15 + 3) x (72 - 19): '(15 + 3) × (72 - 19)'
         3 x 15 + (- 72 19): '3 × 15 + (72 - 19)'

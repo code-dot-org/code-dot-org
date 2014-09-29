@@ -24,7 +24,7 @@
           Multi & Match: التعدد والتوصيل
           K-1 Flappy: لعبة الطائر الوثاب لصف K-1
           Flappy non blockly: "لعبة الطائر الوثاب الغير تركيبية"
-          title: "الدورة 1"
+          title: 'Course 1 - For early readers'
           Artist 2: "الفنان 2"
           Happy Maps: "الخرائط السعيدة"
           Move it, Move it: حركها ! حركها
@@ -33,7 +33,7 @@
           Getting Loopy: "القبض على المعتوهون"
           The Big Event: "الحدث الكبير"
           Going Places Safely: "الذهاب للأماكن بأمان"
-          description: "الدرس الأول صمم للقارئين الناشئيين في الصفوف الإبتدائية الأولية. إصنع برامج حاسوبية بستخدام الحلقات والأحداث. في نهاية الدورة قم بصناعة لعبتك أو فنك أو قصتك المصممة بطريقتك الخاصة ثم يمكنك مشاركتهم مع الآخرين."
+          description: "Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1."
           "Bee: Sequence": 'التهجئة: التسلسل'
           "Artist: Sequence": 'الفنان: التسلسل'
           "Artist: Shapes": 'الفنان: الأشكال'
@@ -41,6 +41,7 @@
           "Bee: Loops": 'التهجئة: الحلقات'
           "Studio: Create a Story": 'مختبر اللعب: إنشاء قصة'
           description_short: "الدورة 1 مصممة للقراء الصغار في الصفوف الدنيا من المرحلة الابتدائية ."
+          "Artist: Loops": 'الرسام : الحلقات'
         course2:
           The Maze: "المتاهة"
           Suzi: "سوزي"
@@ -66,7 +67,7 @@
           Binary Bracelets: "Binary Bracelets"
           The Big Event: "الحدث الكبير"
           Your Digital Footprint: "البصمة الرقمية الخاصة بك"
-          description: "الدورة 2 مصممة للطلاب الذين يستطيعون القراءة في الصفوف الدنيا و المتوسطة من المرحلة الإبتدائية . أنشئ البرامج باستخدام الحلقات و الأحداث و الجمل الشرطية . في نهاية الدورة أنشئ بطريقتك لعبتك الخاصة , بفنك , أو قصة تشاركها مع أي أحد ."
+          description: "Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
           "Maze: Sequence": 'المتاهة : التسلسل'
           "Artist: Sequence": 'الرسام : التسلسل'
           "Maze: Loops": 'المتاهة : الحلقات'
@@ -78,6 +79,7 @@
           description_short: "الدورة 2 مصممة للطلاب الذين يستطيعون القراءة في الصفوف الابتدائية , الدنيا والمتوسطة."
           "Artist: Sequence2": 'الرسام : التسلسل 2'
           "Maze: Sequence2": 'المتاهة : التسلسل 2'
+          "Artist: Nested Loops": 'الرسام : الحلقات المتداخلة'
         course3:
           The Maze: "المتاهة"
           "Studio: Create a Story": 'مختبر اللعب : أنشئ قصة'
@@ -97,13 +99,13 @@
           Artist Functions with Parameters: "مهام الرسام مع المعلمات"
           Computational Thinking: "التفكير الحسابي"
           Functional Suncatchers: "Functional Suncatchers"
-          Songwriting Parameters: "تأليف الأغاني"
+          Songwriting Parameters: "Songwriting Parameters"
           Dice Race: "Dice Race"
           Internet: "الإنترنت"
           Crowdsourcing: "Crowdsourcing"
           Digital Citizenship: "Digital Citizenship"
           Farmer - While Loops: 'المزارع : حلقات بينما'
-          description: "الطلاب الذين يأخذون الدورة 3 يجب أن يكونوا قد أخذوا الدورة 2 . الطلاب يقومون بإنشاء البرامج مع أنواع مختلفة من الحلقات و الأحداث و الوظائف و الشروط . في نهاية الدورة , أنشئ بطريقتك لعبتك الخاصة , بفنك , أو قصة تشاركها مع أي أحد ."
+          description: "Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5."
           "Studio: Create a Game": 'مختبر اللعب : أنشئ لعبة'
           Maze: "المتاهة"
           Artist: "الرسام"
@@ -126,6 +128,7 @@
           "Farmer: While Loops2": 'المزارع : حلقات بينما 2'
           "Bee: Nested Loops2": 'النحلة : الحلقات المتداخلة 2'
           "Bee: Debugging2": 'النحلة: تصحيح الأخطاء 2'
+          "Artist: Patterns": 'Artist: Patterns'
         msm:
           title: "مدرسة الرياضيات المتوسطة"
           description: "العمل الخاص في التقدم لمدرسة الرياضيات المتوسطة ."

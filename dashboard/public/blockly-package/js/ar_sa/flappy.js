@@ -3914,8 +3914,7 @@ BlocklyApps.runButtonClick = function() {
   document.getElementById('instructions').setAttribute('visibility', 'visible');
   document.getElementById('getready').setAttribute('visibility', 'visible');
 
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   // BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -8932,9 +8931,9 @@ exports.end = function(d){return "نهاية"};
 
 exports.emptyBlocksErrorMsg = function(d){return "قطعة \" أكرر\" أو \" اذا \" تحتاج ان تحتوي على قطع اخرى داخلها من اجل العمل . تأكد من القطع الداخلية بحيث يجب ان تكون تناسب القطع المحتوية في الداخل ."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "كتلة الدالة يحتاج إلى الكتل الأخرى داخله لكي يعمل."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "قطعة الدالة تحتاج إلى القطع الأخرى بداخله لكي يعمل."};
 
-exports.extraTopBlocks = function(d){return "لديك قطع إضافية لم ترفق على قطع الحدث."};
+exports.extraTopBlocks = function(d){return "أنت لم تقم بإرفاق القطع . هل قصدت إرفاق هذه القطع إلى قطعة \"عند التشغيل\"؟"};
 
 exports.finalStage = function(d){return "تهانينا! لقد اتممت المرحلة النهائية."};
 
@@ -9008,7 +9007,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "مجموع كل الا�
 
 exports.tryAgain = function(d){return "حاول مرة أخرى"};
 
-exports.hintRequest = function(d){return "شاهد التلميح"};
+exports.hintRequest = function(d){return "شاهد تلميحاً"};
 
 exports.backToPreviousLevel = function(d){return "الرجوع إلى المستوى السابق"};
 
@@ -9036,7 +9035,7 @@ exports.watchVideo = function(d){return "شاهد الفيديو"};
 
 exports.when = function(d){return "عندما"};
 
-exports.whenRun = function(d){return "عند التنفيذ"};
+exports.whenRun = function(d){return "عند التشغيل"};
 
 exports.tryHOC = function(d){return "جرب \"Hour of Code\""};
 
@@ -9044,7 +9043,7 @@ exports.signup = function(d){return "سجل لمشاهدة مقدمة الدور
 
 exports.hintHeader = function(d){return "إليك نصيحة:"};
 
-exports.genericFeedback = function(d){return "راقب كيف انتهى، ثم حاول إصلاح البرنامج."};
+exports.genericFeedback = function(d){return "انظر كيف انتهى الأمر، و حاول إصلاح برنامجك."};
 
 
 },{"messageformat":49}],37:[function(require,module,exports){

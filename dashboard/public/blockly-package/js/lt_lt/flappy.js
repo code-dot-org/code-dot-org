@@ -3914,8 +3914,7 @@ BlocklyApps.runButtonClick = function() {
   document.getElementById('instructions').setAttribute('visibility', 'visible');
   document.getElementById('getready').setAttribute('visibility', 'visible');
 
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   // BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -8926,7 +8925,7 @@ exports.emptyBlocksErrorMsg = function(d){return "„Kartojimo“ arba „Jei“
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Komandos apraše turi būti išvardintos komandos (įdėtas bent vienas blokas)."};
 
-exports.extraTopBlocks = function(d){return "Tu panaudojai keletą blokų, kurie nėra sujungti su būtinuoju blokeliu."};
+exports.extraTopBlocks = function(d){return "Tu turi nesujungtų blokų. Gal norėjai juos sujungti prie bloko „paleisti programą“?"};
 
 exports.finalStage = function(d){return "Sveikinu! Tu baigei paskutinį etapą."};
 
@@ -9140,67 +9139,67 @@ exports.setBackgroundSanta = function(d){return "nustatyk sceną Santa"};
 
 exports.setBackgroundTooltip = function(d){return "Nustato fono paveikslėlį"};
 
-exports.setGapRandom = function(d){return "nustatyk atsitiktinę duobę"};
+exports.setGapRandom = function(d){return "tarpas = bet koks"};
 
-exports.setGapVerySmall = function(d){return "nustatyk labai mažą duobę"};
+exports.setGapVerySmall = function(d){return "tarpas = labai mažas"};
 
-exports.setGapSmall = function(d){return "nustatyk mažą duobę"};
+exports.setGapSmall = function(d){return "tarpas = mažas"};
 
-exports.setGapNormal = function(d){return "nustatyk normalaus dydžio duobę"};
+exports.setGapNormal = function(d){return "tarpas = normalus"};
 
-exports.setGapLarge = function(d){return "nustatyk didelę duobę"};
+exports.setGapLarge = function(d){return "tarpas = didelis"};
 
-exports.setGapVeryLarge = function(d){return "nustatyk labai didelę duobę"};
+exports.setGapVeryLarge = function(d){return "tarpas = labai didelis"};
 
-exports.setGapHeightTooltip = function(d){return "Nustato vertikalią duobę kliūtyje"};
+exports.setGapHeightTooltip = function(d){return "Nustato vertikalų tarpą kliūtyje"};
 
-exports.setGravityRandom = function(d){return "nustatyk atsitiktinę gravitaciją"};
+exports.setGravityRandom = function(d){return "gravitacija = bet kokia"};
 
-exports.setGravityVeryLow = function(d){return "nustatyk labai mažą gravitaciją"};
+exports.setGravityVeryLow = function(d){return "gravitacija =labai maža"};
 
-exports.setGravityLow = function(d){return "nustatyk mažą gravitaciją"};
+exports.setGravityLow = function(d){return "gravitacija = maža"};
 
-exports.setGravityNormal = function(d){return "nustatyk normalią gravitaciją"};
+exports.setGravityNormal = function(d){return "gravitacija = normali"};
 
-exports.setGravityHigh = function(d){return "nustatyk didelę gravitaciją"};
+exports.setGravityHigh = function(d){return "gravitacija = didelė"};
 
-exports.setGravityVeryHigh = function(d){return "nustatyk labai didelę gravitaciją"};
+exports.setGravityVeryHigh = function(d){return "gravitacija = labai didelė"};
 
-exports.setGravityTooltip = function(d){return "Nustato šio lygio gravitaciją"};
+exports.setGravityTooltip = function(d){return "Nustato šio lygio/etapo gravitaciją"};
 
 exports.setGround = function(d){return "žemės paviršius ="};
 
-exports.setGroundRandom = function(d){return "nustatyk žemę Atsitiktinis"};
+exports.setGroundRandom = function(d){return "žemės paviršius = bet koks"};
 
-exports.setGroundFlappy = function(d){return "nustatyk žemę Žemė"};
+exports.setGroundFlappy = function(d){return "žemės paviršius = Normalus"};
 
-exports.setGroundSciFi = function(d){return "nustatyk žemę Fantastika"};
+exports.setGroundSciFi = function(d){return "žemės paviršius = Fantastika"};
 
-exports.setGroundUnderwater = function(d){return "nustatyk žemę Povandeninis"};
+exports.setGroundUnderwater = function(d){return "žemės paviršius = Povandeninis"};
 
-exports.setGroundCave = function(d){return "nustatyk žemę Urvas"};
+exports.setGroundCave = function(d){return "žemės paviršius = Urvas"};
 
-exports.setGroundSanta = function(d){return "nustatyk žemę Santa"};
+exports.setGroundSanta = function(d){return "žemės paviršius = Senelis Šalitis"};
 
-exports.setGroundLava = function(d){return "nustatyk žemę Lava"};
+exports.setGroundLava = function(d){return "žemės paviršius = Lava"};
 
-exports.setGroundTooltip = function(d){return "Nustato žemės paveikslėlį"};
+exports.setGroundTooltip = function(d){return "Nustato žemės paviršiaus paveikslėlį"};
 
 exports.setObstacle = function(d){return "kliūtis ="};
 
-exports.setObstacleRandom = function(d){return "nustatyk kliūtį Atsitiktinis"};
+exports.setObstacleRandom = function(d){return "kliūtis = bet kokia"};
 
-exports.setObstacleFlappy = function(d){return "nustatyk kliūtį Vamzdis"};
+exports.setObstacleFlappy = function(d){return "kliūtis = Vamzdis"};
 
-exports.setObstacleSciFi = function(d){return "nustatyk kliūtį Fantastika"};
+exports.setObstacleSciFi = function(d){return "kliūtis = Fantastika"};
 
-exports.setObstacleUnderwater = function(d){return "nustatyk kliūtį Augalas"};
+exports.setObstacleUnderwater = function(d){return "kliūtis = Augalas"};
 
-exports.setObstacleCave = function(d){return "nustatyk kliūtį Urvas"};
+exports.setObstacleCave = function(d){return "kliūtis = Urvas"};
 
-exports.setObstacleSanta = function(d){return "nustatyk kliūtį Kaminas"};
+exports.setObstacleSanta = function(d){return "kliūtis = Kaminas"};
 
-exports.setObstacleLaser = function(d){return "nustatyk kliūtį Lazeris"};
+exports.setObstacleLaser = function(d){return "kliūtis = Lazeris"};
 
 exports.setObstacleTooltip = function(d){return "Nustato kliūties paveikslėlį"};
 
@@ -9252,13 +9251,13 @@ exports.shareGame = function(d){return "Pasidalink savo žaidimu:"};
 
 exports.soundRandom = function(d){return "atsitiktinis"};
 
-exports.soundBounce = function(d){return "atsitrenk"};
+exports.soundBounce = function(d){return "atsitrenkimas"};
 
 exports.soundCrunch = function(d){return "trakšt"};
 
 exports.soundDie = function(d){return "liūdnas"};
 
-exports.soundHit = function(d){return "pataikė"};
+exports.soundHit = function(d){return "babach"};
 
 exports.soundPoint = function(d){return "„point“ garsas"};
 

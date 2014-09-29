@@ -12901,7 +12901,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Il blocco \"ripeti\" o \"se\" 
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Una funzione ha bisogno di altri blocchi al suo interno."};
 
-exports.extraTopBlocks = function(d){return "Ci sono blocchi che non sono attaccati ad un blocco evento."};
+exports.extraTopBlocks = function(d){return "Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'quando si clicca su \"Esegui\" '?"};
 
 exports.finalStage = function(d){return "Complimenti! Hai completato l'ultima lezione."};
 
@@ -13082,9 +13082,9 @@ exports.ifFlowerTooltip = function(d){return "Se c'è un fiore o un favo nella d
 
 exports.ifelseFlowerTooltip = function(d){return "Se c'è un fiore o un favo nella direzione specificata, allora fai il primo blocco di azioni. Altrimenti, fai il secondo."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Stai utilizzando i tutti i blocchi necessari, ma la quantità di miele è insufficiente."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Stai utilizzando i tutti i blocchi necessari, ma devi raccogliere la giusta quantità di nettare.\n"};
 
 exports.make = function(d){return "fai"};
 
