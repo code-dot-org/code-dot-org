@@ -687,7 +687,6 @@ Blockly.BlockSvg.prototype.renderCompute_ = function(iconWidth) {
     input.titleWidth = titleSize.width;
     currentRow.height = Math.max(currentRow.height, titleSize.height);
 
-    // todo - take a closer look at this stuff
     if (currentRow.type != Blockly.BlockSvg.INLINE) {
       if (currentRow.type == Blockly.NEXT_STATEMENT) {
         hasStatement = true;
@@ -726,7 +725,9 @@ Blockly.BlockSvg.prototype.renderCompute_ = function(iconWidth) {
   inputRows.hasStatement = hasStatement;
   inputRows.hasDummy = hasDummy;
 
-  inputRows.rightEdgeOrig = inputRows.rightEdge;
+  // rightEdgeWithoutInline is used to know how deep to draw our next statement
+  // inputs
+  inputRows.rightEdgeWithoutInline = inputRows.rightEdge;
 
   // see if our inline rows push out our right edge
   for (i = 0; currentRow = inputRows[i]; i++) {
@@ -1141,7 +1142,7 @@ Blockly.BlockSvg.prototype.renderDrawRight_ = function(steps, highlightSteps,
       steps.push(Blockly.BlockSvg.INNER_TOP_LEFT_CORNER);
       steps.push('v', row.height - 2 * Blockly.BlockSvg.CORNER_RADIUS);
       steps.push(Blockly.BlockSvg.INNER_BOTTOM_LEFT_CORNER);
-      steps.push('H', inputRows.rightEdgeOrig);
+      steps.push('H', inputRows.rightEdgeWithoutInline);
       if (Blockly.RTL) {
         highlightSteps.push('M',
             (cursorX - Blockly.BlockSvg.NOTCH_WIDTH +
@@ -1153,7 +1154,7 @@ Blockly.BlockSvg.prototype.renderDrawRight_ = function(steps, highlightSteps,
             row.height - 2 * Blockly.BlockSvg.CORNER_RADIUS);
         highlightSteps.push(
             Blockly.BlockSvg.INNER_BOTTOM_LEFT_CORNER_HIGHLIGHT_RTL);
-        highlightSteps.push('H', inputRows.rightEdgeOrig - 1);
+        highlightSteps.push('H', inputRows.rightEdgeWithoutInline - 1);
       } else {
         highlightSteps.push('M',
             (cursorX - Blockly.BlockSvg.NOTCH_WIDTH +
@@ -1161,7 +1162,7 @@ Blockly.BlockSvg.prototype.renderDrawRight_ = function(steps, highlightSteps,
             (cursorY + row.height - Blockly.BlockSvg.DISTANCE_45_OUTSIDE));
         highlightSteps.push(
             Blockly.BlockSvg.INNER_BOTTOM_LEFT_CORNER_HIGHLIGHT_LTR);
-        highlightSteps.push('H', inputRows.rightEdgeOrig);
+        highlightSteps.push('H', inputRows.rightEdgeWithoutInline);
       }
       // Create statement connection.
       connectionX = connectionsXY.x + (Blockly.RTL ? -cursorX : cursorX);
