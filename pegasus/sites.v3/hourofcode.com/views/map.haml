@@ -32,6 +32,23 @@
   function getSignups() {
     var params = [];
 
+    function getRandomArbitrary(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    // Just uncomment for sample dots on the US.
+    /*
+    for (var i = 0; i < 100; i++)
+    {
+      var long = getRandomArbitrary(32,50);
+      var lat = getRandomArbitrary(-120,-70);
+      addMarker(long.toString(), lat.toString(), "School");
+    }
+    */
+
+    // Just uncomment for sample dot on the east coast.
+    // addMarker("41.0697172", "-73.84479879999999", "School");
+
     $.post('/forms/HocSignup2014/query', $.param(params), function(response) {
       var results = JSON.parse(response);
 
@@ -64,10 +81,13 @@
       map: gmap,
       icon: {
         path: google.maps.SymbolPath.CIRCLE,
-        strokeWeight: 3,
-        strokeOpacity: 1,
-        strokeColor: '#cc0000',
-        scale: 3
+        strokeWeight: 1,
+        //strokeOpacity: 1,
+        fillColor: '#ea7717', //'#ee0000',
+        fillOpacity: 1,
+        strokeColor: '#ea7717', //'#ee0000',
+        strokeOpacity: 0.5,
+        scale: 4
       },
       title: label,
       setClickable: false,
