@@ -1,5 +1,6 @@
 ---
 title: Resources
+nav: resources_nav
 ---
 # Resources
 
