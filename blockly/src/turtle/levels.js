@@ -806,8 +806,9 @@ module.exports = {
     answer: answer(5, 6),
     freePlay: true,
     initialY: 300,
-    toolbox: toolbox(5, 6),
-    startBlocks: startBlocks(5, 6),
+    toolbox: blockUtils.createToolbox(blockUtils.blockOfType('math_number')), //toolbox(5, 6),
+    startBlocks: blockUtils.blockOfType('brent_test_not_inline') +
+      blockUtils.blockOfType('brent_test_plus'),
     startDirection: 0,
     sliderSpeed: 1.0
   },
