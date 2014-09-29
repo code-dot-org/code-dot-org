@@ -184,7 +184,11 @@ Blockly.Input.prototype.dispose = function() {
 };
 
 /**
- * Mark this input as being inlined (on the same row as the previous input)
+ * Mark this input as being inlined (on the same row as the previous input).
+ * When rendering blocks, each input will get a new line unless
+ * (1) inputsInLine is true on the parent block
+ * (2) inline_ is set on the input
+ * Note, we don't allow inlining NEXT_STATEMENT inputs
  */
 Blockly.Input.prototype.setInline = function (inline) {
   if (inline === undefined) {
