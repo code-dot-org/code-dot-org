@@ -11,10 +11,9 @@
     %a{:href=>supporter[:url_s]}
       %div{:class=>"badge "  + supporter[:level_s], :style=>"display: none;"}
         %div{:class=>"avatar", :style=>"float: left"}
-          - if supporter[:level_s] == "platinum"
-            %img{:src=> avatar_url, :style=>'width: 100%'}
-          - else
-            %img{:src=> avatar_url, :style=>'height: 100%'}
-            %p{:class=>"label"}
-              - if supporter[:level_s] != "platinum"
-                =supporter[:name_s]
+          %img{:src=> avatar_url}
+          %p{:class=>"label"}
+            - if supporter[:level_s] != "platinum"
+              =supporter[:name_s]
+  %br
+  %a{:href=>'../about/donors'} See all donors
