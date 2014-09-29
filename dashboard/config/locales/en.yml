@@ -333,6 +333,8 @@ en:
     classroom_activity: 'Unplugged Activity'
   home:
     title: "Code Studio"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: "Already registered? %{link}"
     student_reg_link: 'Student Sign Up'
     teacher_reg_link: 'Teacher Sign Up'

@@ -79,6 +79,8 @@
   i_am_a: Jeg er en
   never_spam: Vi vil aldrig spamme dig
   enter_country: Indtast land, hvis udenfor USA
+  used_infrequent_updates: Only used for infrequent updates
+  privacy_practices_children: See our privacy practices for children
   petition_thankyou: Tak for at du underskrev indsamlingen
   carousel_heading_international: Vejledninger på dit sprog
   continue_learning_header: Fortsat læring efter En Time
@@ -218,6 +220,7 @@
   dashboard_sections_table_course: Kursus
   dashboard_sections_table_students: Studerende
   dashboard_sections_table_code: Afsnitskode
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: Hvis du vil give dine elever konti, Vælg en hemmelige
     <b>ord</b> eller <b>billede</b> for det pågældende afsnit.
   dashboard_sections_secret_word: Et <b>ord</b> tillader du kan indstille et hemmeligt
@@ -237,9 +240,12 @@
   dashboard_students_new_section: Du har oprettet et nyt afsnit! Tilføje nu dine elever
     ved hjælp af knapperne <b>Tilføj studerende</b> og <b>Tilføje flere studerende</b>
     ovenfor.
+  dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Navn
   dashboard_students_age: Alder
   dashboard_students_gender: Køn
+  dashboard_students_male: Mand
+  dashboard_students_female: Kvinde
   dashboard_students_secret: Hemmeligt
   dashboard_students_password: Adgangskode
   dashboard_students_username: 'Brugernavn: %{student_username}'
@@ -269,3 +275,27 @@
   dashboard_students_url: Web-adresse
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: Sekvens
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: Andre
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
+  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
+    week alone:'
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

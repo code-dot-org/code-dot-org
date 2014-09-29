@@ -6,6 +6,11 @@ theme: none
 %div{style: "padding-left:20px"}
  
   :css
+    th.manage-th {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      height: 45px;
+    }
     td > span {
       position: relative;
     }
@@ -56,16 +61,16 @@ theme: none
       %col{width: "200"}/
       %col{width: "250"}/
     %tr
-      %th.manage-th{style: "padding-top:5px;padding-bottom:5px"}
+      %th.manage-th
         %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
-      %th.manage-th{style: "padding-top:5px;padding-bottom:5px"}
+      %th.manage-th
         %a{href: "", "ng-click" => "order = 'age'"}= I18n.t('dashboard_students_age')
-      %th.manage-th{style: "padding-top:5px;padding-bottom:5px"}
+      %th.manage-th
         %a{href: "", "ng-click" => "order = 'gender'"}= I18n.t('dashboard_students_gender')
-      %th.manage-th{style: "padding-top:5px;padding-bottom:5px"}
+      %th.manage-th
         %span{"ng-if" => "section.login_type !== 'none'"}= I18n.t('dashboard_students_secret')
         %span{"ng-if" => "section.login_type === 'none'"}= I18n.t('dashboard_students_password')
-      %th.manage-th{style: "padding-top:5px;padding-bottom:5px; height:45px"}
+      %th.manage-th
         %button.btn.btn-primary{"ng-click" => "save(section.students)", "ng-show" => "editingAny(section.students)", style: "float:left", "ng-disabled" => "allForm.$invalid"}= I18n.t('dashboard_action_save_all')
     %tr{"ng-repeat" => "student in section.students | orderBy:order", "ng-form" => "form"}
       %td
@@ -76,7 +81,7 @@ theme: none
           %div{"ng-show" => "section.login_type == 'none' && (student.email || student.hashed_email)"}
             = I18n.t('dashboard_students_email', student_email: '{{student.email || "hidden"}}')
         %span{"ng-show" => "student.editing"}
-          %input{"ng-model" => "student.name", placeholder: "Student Name", style: "width: 100%", type: "text", required: "true"}/
+          %input{"ng-model" => "student.name", placeholder: I18n.t('dashboard_students_placeholder_name'), style: "width: 100%", type: "text", required: "true"}/
           %span.required= I18n.t('dashboard_action_required')
       %td
         %span{"ng-hide" => "student.editing"} {{student.age}}
@@ -108,7 +113,7 @@ theme: none
                                 "ng-hide" => "student.editing || student.editing_password"}
             = I18n.t('dashboard_students_reset_password')
           %span{"ng-show" => "student.editing_password"}
-            %input{"ng-model" => "student.password", placeholder: "new password", style: "width: 100px", type: "text"}
+            %input{"ng-model" => "student.password", placeholder: I18n.t('dashboard_new_password'), style: "width: 100px", type: "text"}
             %button.btn.btn-primary{"ng-click" => "save(student)" }= I18n.t('dashboard_action_save')
       %td
         %span{"ng-show" => "student.confirmDelete"}

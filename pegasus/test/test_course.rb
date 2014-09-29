@@ -1,7 +1,6 @@
 require 'minitest/autorun'
 require_relative '../src/env'
 require src_dir 'course'
-require src_dir 'pegasus/base'
 
 class CourseTest < Minitest::Unit::TestCase
   describe Course do
