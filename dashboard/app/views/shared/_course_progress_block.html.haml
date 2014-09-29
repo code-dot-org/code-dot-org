@@ -2,14 +2,17 @@
   .span9#heading
     %h3.whitetext= data_t_suffix('script.name', current_user.primary_script.name, "title")
   .span3#heading{style: 'text-align: right;'}
-    %p
-      .btn.btn-primary
+    - is_k1 = current_user.primary_script && current_user.primary_script.is_k1?
+    - playlab_freeplay_url = script_stage_script_level_url(*is_k1 ? ['course1', 16, 6] : ['playlab', 1, 10])
+    - artist_freeplay_url = script_stage_script_level_url(*is_k1 ? ['course1', 18, 10] : ['artist', 1, 10])
+    %a{href: playlab_freeplay_url}
+      %button.btn.btn-primary
         %i.fa.fa-rocket
-        Make an App
-    %p
-      .btn.btn-primary
+        = t('nav.header.free_play.playlab')
+    %a{href: artist_freeplay_url}
+      %button.btn.btn-primary
         %i.fa.fa-pencil
-        Draw Something
+        = t('nav.header.free_play.artist')
 
 .row#stats
   .span12#rightside
