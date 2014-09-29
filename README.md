@@ -17,12 +17,17 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 ### OS X Mavericks
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
-1. `brew install install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick`
+1. `brew install install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick rbenv ruby-build`
   1. If it complains about an old version of `X`, run `brew unlink X` and run `brew install X` again
 1. Set up MySQL
   1. Have launchd start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
   1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
-1. Using rbenv is recommended for Mavericks ([install](https://github.com/sstephenson/rbenv#homebrew-on-mac-os-x))
+1. Set up [RBENV](https://github.com/sstephenson/rbenv#homebrew-on-mac-os-x) and Ruby 2.0
+  1. Add `if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi` to `~/.profile`
+  1. source `~/.profile`
+  1. rbenv install 2.0.0-p451
+  1. rbenv global 2.0.0-p451
+  1. rbenv rehash
 
 ### Ubuntu 14.04
 
@@ -38,13 +43,6 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 ## Common setup
 
-1. Confirm your ruby version is 2.0.x with `ruby -v`
- * If not, install Ruby 2.0 (we use `2.0.0-p451`)
-
-   E.g., using `rvm`:
-    * `\curl -sSL https://get.rvm.io | bash -s stable`
-    * `source ~/.rvm/scripts/rvm`
-    * `rvm install 2.0.0-p451`
 1. `git clone https://github.com/code-dot-org/code-dot-org.git`
 1. `gem install bundler`
 1. `cd code-dot-org/aws`
