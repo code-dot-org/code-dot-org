@@ -1,5 +1,6 @@
-front.pdf
-blank.pdf
+---
+number: true
+---
 overview.pdf
 skills-strategies.pdf
 PuzzleSolvingStudent.pdf
@@ -11,5 +12,3 @@ ClassroomStrategies.pdf
 ../../curriculum-course2/docs/lessons.pdf
 ../../curriculum-course3/docs/lessons.pdf
 appendix.pdf
-blank.pdf
-back.pdf
