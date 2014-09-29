@@ -11,6 +11,7 @@ social:
   "twitter:player": "https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0"
   "twitter:player:width": 1920
   "twitter:player:height": 1080
+max_age: 60
 ---
 -cert_id = params[:i]
 -facebook = {:u=>"http://#{request.host_with_port}/certificates/#{cert_id}"}
@@ -21,7 +22,6 @@ social:
 -form = DB[:forms].where(kind:'CompanyProfile', name:company_param).first if company_param
 -@company = company = JSON.parse(form[:data]) if form
 -if company
-  -dont_cache if dashboard_user
   %link{rel: "stylesheet", type: "text/css", href: "/css/ee.css"}/
 
 #congrats.mobile-pad{:style=>'margin: 0 auto;'}
