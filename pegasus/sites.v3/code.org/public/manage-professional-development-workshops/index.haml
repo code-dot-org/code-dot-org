@@ -178,6 +178,7 @@ angular: professionalDevelopmentWorkshop
         workshopStartStop.start(workshop).then(
           function(results) {
             $scope.workshops[$scope.workshops.indexOf(workshop)] = results.workshop;
+            $location.path("/" + results.workshop.secret + "/view");
           }
         );
       };
