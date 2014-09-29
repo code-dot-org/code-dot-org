@@ -65,7 +65,7 @@ social:
               -#%br/
               %div{style:"clear:both"}
             #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; /*margin-top:100px; */ width:100%"}
-              %h1.front-header-banner{style: "color:white; margin-top: 0px; margin-bottom:10px; padding:20px"} Watch the new video
+              %h1.front-header-banner{style: "color:white; text-shadow: 0px 0px 4px rgba(31, 31, 31, 1); margin-top: 0px; margin-bottom:10px; padding:20px"} Watch the new video
               %img{src: "images/play-button.png", width: "120", onclick: "return startVideo();"}
         .col-sm-4.col-xs-12
           #textbacking{style: "color:white; text-align: center; background-color:rgba(0,0,0,0.5); margin-top:50px; padding: 20px"}
@@ -138,19 +138,25 @@ social:
   %h1#joinusarea Join us
   #calltoaction.row
     .col-xs-10{style: "text-align: left; font-size: 18px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
-      %p
-        The Hour of Code is a global event happening on December 8 in which every kid in the world gets to try programming for the first time.
+      %p 
+        Any time during December 8-14, Computer Science Education Week, host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!
+
+
   #calltoaction.row
-    .col-xs-10{style: "text-align: left; font-size: 18px; line-height:30px; font-weight: 500;/* color: rgb(26,172,186); */ padding-left:100px"}
+    .col-xs-10{style: "text-align: left; font-size: 16px; line-height:30px; font-weight: 400; padding-left:3em"}
       %p
-        %b Teacher?  
-        Sign up using this form.
+        %b Are you a teacher?
+        Inspire your students with an Hour of Code in your classroom.
       %p
-        %b Parent? 
-        Tell your school to fill out this form.
+        %b Are you a parent?
+        Ask your local school to host an Hour of Code.
       %p
-        %b Student?  
-        Tell your parent to fill out this form.
+        %b Just love computer science? 
+        Spread the word in your community. Or organize an Hour of Code event yourself. 
+
+      %p
+        %a{href: "/resources"} 
+          Here's how to get started.
 
   #signupform.row
     .col-xs-12.col-sm-9.col-md-8
@@ -185,10 +191,10 @@ social:
     $("#fullwidth" + nextImage ).fadeTo(2000, videoStarted ? 0.3 : 1);
     currentImage = nextImage;
 
-    if (videoStarted)
+    /*if (videoStarted)
       console.log("fading light to ", nextImage);
     else
-      console.log("fading normal to ", nextImage);
+      console.log("fading normal to ", nextImage);*/
   }
 
   $.ready()
