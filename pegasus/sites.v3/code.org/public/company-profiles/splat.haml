@@ -30,7 +30,7 @@ social:
 #company_header
   #alignment-spacer
   -if company['logo_path_s']
-    %img#company_logo{src:"/forms/uploads/#{company['logo_path_s']}", width: "50px", height: "50px"}
+    %img#company_logo{src:"/forms/uploads/#{company['logo_path_s']}", height: "50px"}
   %h1.ee_display_name= company['display_name_s']
 
 -# TODO(dave): implement user_entered_markdown function.
