@@ -60,3 +60,6 @@ This year, let's make it even bigger. I’m asking you to join in for the Hour o
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
 
 Help us reach 100 million students total by the end of the year! Get started at http://hourofcode.com
+
+## Send this email to 
+

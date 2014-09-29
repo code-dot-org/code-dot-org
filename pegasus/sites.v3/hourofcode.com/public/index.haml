@@ -1,6 +1,7 @@
 ---
+layout: wide_index
+theme: responsive
 title: "<%= hoc_s(:front_title) %>"
-banner: front_header_banner
 social:
   "twitter:card": player
   "twitter:site": "@codeorg"
@@ -35,55 +36,187 @@ social:
     padding: 0px;
   }
 
-#index
+- imageheight = 590
 
-  #flags-banner
-    %img{src: '/images/flags-banner.png', alt: 'Flags'}
+#top{style: "position:relative; /*height: #{imageheight}px; */ width:100%; overflow:hidden"}
+  #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/the-world2.png'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1"}
 
-  %h1.front-header-banner= hoc_s(:front_header_banner)
+  #fullwidth1{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0"}
 
-  - if @country == 'uk'
-    %p{style: 'font-size: 1.5em; margin: 2em 0; text-align: center;'}= hoc_s(:front_intro_default_uk)
-  - elsif @country == 'ar'
-    %p{style: 'font-size: 1.5em; margin: 2em 0; text-align: center;'}= hoc_s(:front_intro_default_ar)  
-  - else
-    %p{style: 'font-size: 1.5em; margin: 2em 0; text-align: center;'}= hoc_s(:front_intro_default)
+  #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0"}
 
-  #top
-    #video.col-63.desktop-pad-right{style: 'padding-right: 30px;'}
-      -if @country == 'uk'
-        = view :front_video_uk
-      -if @country != 'uk'
-        = view :front_video
+  #fullwidth3{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0"}
 
-    #start.col-36
-      #blurb.col-mobile-56.mobile-pad-right
-        %br.desktop-feature
+  #fullwidth{style: "/*position:absolute; left:0; top: 0; */width: 100%; /*height:#{imageheight}px*/"}
 
+    .thegap{style: "height: 1px"}
+      &nbsp;
 
-      #getstarted.col-mobile-44
-        .desktop-feature= view :front_join_us
+    = view :header
 
-    #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
-      = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"
+    .container
+      .row
+        .col-sm-8.col-xs-12
+          #leftbox{style: "position:relative; margin-top:50px; padding-bottom:20px; /*background-color:rgba(0,0,0,0.5);*/"}
+
+            #leftvideo{style: "/*position:absolute; left:0; top:0; */ width: 100%; /* margin-top:50px*/"}
+              = view :index_video
+              -#%br/
+              -#%br/
+              %div{style:"clear:both"}
+            #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; /*margin-top:100px; */ width:100%"}
+              %h1.front-header-banner{style: "color:white; text-shadow: 0px 0px 4px rgba(31, 31, 31, 1); margin-top: 0px; margin-bottom:10px; padding:20px"} Watch the new video
+              %img{src: "images/play-button.png", width: "120", onclick: "return startVideo();"}
+        .col-sm-4.col-xs-12
+          #textbacking{style: "color:white; text-align: center; background-color:rgba(0,0,0,0.5); margin-top:50px; padding: 20px"}
+            %h1.front-header-banner{style: "color:white; margin-top:0px"}= hoc_s(:front_header_banner)
+            #joinus{style: "text-align:center"}
+              %a{onclick: "return adjustScroll('joinusarea')"}
+                %button.btn.btn-default{style: "font-size: 24px; font-weight: 500; width: 180px; height: 50px;"}
+                  =hoc_s(:front_join_us_button)
+          %br/
+          %br/
+
+      %div{style:"clear:both"}
+    
+
+%br/
+%br/
+
+.container
+
+  #description.row
+    .col-xs-1
+      &nbsp;
+    .col-xs-10{style: "text-align: center; font-size: 24px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
+      The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. No experience needed. 
+      %b Ages 4 to 104.
+
+  %br/
+  %br/
 
   .row
     .col-xs-12
-      =view :stats_hoc_2013
+      %div{style: 'text-align: center; margin: 3em 0;'}
+        %h2= I18n.t(:stats_hoc_2013_heading)
 
-  .row
+  .row#infotop{style: "/*margin: 0 auto; width: 900px; */ font-weight: 500; font-size: 16px; color: rgb(26, 172, 186)"}
+    .col-xs-6.col-sm-4{style: "text-align:center;"}
+      %p It was the fastest to reach 15 million users
+      %img{src: "/images/stats-info1.jpg", style: "width: 100%"}
+
+    .col-xs-6.col-sm-4{style: "text-align:center"}
+      %p 15 million students in 170 countries learned an Hour of Code
+      %img{src: "/images/stats-info2.jpg", style: "width: 100%"}
+      
+    .hidden-xs.col-sm-4{style: "text-align:center"}
+      %p More girls tried computer science than in the last 70 years
+      %img{src: "/images/stats-info3.jpg", style: "width: 100%"}
+
+        %p{style:"color: #ea7717;"} Over 10 million girls in 2013.
+
+  .row#infobottom{style: "/*margin: 0 auto; width: 800px; */ font-weight: 400; font-size: 16px; color: #ea7717;"}
+    .col-xs-6.col-sm-4{style: "text-align:center"}
+      %img{src: "/images/stats-kid1.jpg", style: "width: 70%"}
+      %br/
+      "Every single day yielded the same results - <b>100% engagement.</b>" - Nina Nichols Peery, Teacher
+
+    .col-xs-6.col-sm-4{style: "text-align:center"}
+      %img{src: "/images/stats-kid2.jpg", style: "width: 70%"}
+      %br/
+      I knew this was a <b> once-in-a-lifetime</b> chance" - Mariana Alzate, 5th grader
+
+    .hidden-xs.col-sm-4{style: "text-align:center"}
+      %img{src: "/images/stats-kid3.jpg", style: "width: 70%"}
+      %br/
+      I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher
+
+  #map.row
     .col-xs-12
       =view :map
 
-  .row
-    .col-xs-7
+  %h1#joinusarea Join us
+  #calltoaction.row
+    .col-xs-10{style: "text-align: left; font-size: 18px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
+      %p 
+        Any time during December 8-14, Computer Science Education Week, host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!
+
+
+  #calltoaction.row
+    .col-xs-10{style: "text-align: left; font-size: 16px; line-height:30px; font-weight: 400; padding-left:3em"}
+      %p
+        %b Are you a teacher?
+        Inspire your students with an Hour of Code in your classroom.
+      %p
+        %b Are you a parent?
+        Ask your local school to host an Hour of Code.
+      %p
+        %b Just love computer science? 
+        Spread the word in your community. Or organize an Hour of Code event yourself. 
+
+      %p
+        %a{href: "/resources"} 
+          Here's how to get started.
+
+  #signupform.row
+    .col-xs-12.col-sm-9.col-md-8
       =view :signup_form
-    .col-xs-4.col-sm-offset-1
+    .col-xs-12.col-sm-3.col-md-4
       =view :choose_country
 
-  %a{name:'faq'}
+  %a#faqs{name:'faq'}
   .row
     .col-xs-12
       =view :faq
 
 = view 'popup_window.js'
+
+:javascript
+
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+
+  var currentImage = 0;
+  var timerId;
+  var videoStarted = false;
+
+  function cycleImage()
+  {
+    var nextImage = (currentImage + 1) % 4;
+    $("#fullwidth" + currentImage).fadeTo(2000, 0);
+    $("#fullwidth" + nextImage ).fadeTo(2000, videoStarted ? 0.3 : 1);
+    currentImage = nextImage;
+
+    /*if (videoStarted)
+      console.log("fading light to ", nextImage);
+    else
+      console.log("fading normal to ", nextImage);*/
+  }
+
+  $.ready()
+  {
+    timerId = setInterval(cycleImage, 6000);
+
+    //startVideo();
+  }
+
+  function startVideo()
+  {
+    if (videoStarted)
+      return;
+
+    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+
+    $("#videodiv").fadeTo(1000, 1);
+    $("#leftbutton").fadeTo(500, 0).remove();
+
+    $("#fullwidth" + currentImage).fadeTo(1000, 0.3);
+
+    videoStarted = true;
+    //cycleImage();
+    clearInterval(timerId);
+  }
