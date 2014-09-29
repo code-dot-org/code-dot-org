@@ -1,5 +1,6 @@
 require 'cdo/date'
 require 'cdo/activity_constants'
+require 'cdo/aws/s3'
 
 class ProfessionalDevelopmentWorkshop
   MINIMUM_ATTENDEE_LEVELS_COUNT = 15
@@ -51,6 +52,13 @@ class ProfessionalDevelopmentWorkshop
     end
   end
 
+
+  # TODO move this to a helper
+  def self.uploaded_data(name, value)
+    return value if value.class == FieldError
+    AWS::S3.upload_to_bucket('cdo-form-uploads', name, value)
+  end
+
   def self.process(data, last_processed_data)
     {}.tap do |results|
       location = search_for_address(data['location_address_s'])
@@ -60,7 +68,8 @@ class ProfessionalDevelopmentWorkshop
         snapshot = self.progress_snapshot(data['section_id_s'])
         results['total_attendee_count_i'] = snapshot.count
         results['qualifying_attendee_count_i'] = snapshot.count {|u| u[:levels_count] >= MINIMUM_ATTENDEE_LEVELS_COUNT}
-        results['progress_snapshot_t'] = snapshot.to_json
+
+        results['progress_snapshot_t'] = uploaded_data "workshop-progress-snapshot-#{data['section_id_s']}", snapshot.to_json
       end
     end
   end
