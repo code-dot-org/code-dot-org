@@ -16,6 +16,7 @@ class Blockly < Level
     min_workspace_height
     step_speed
     slider_speed
+    disable_param_editing
   )
 
   before_validation {

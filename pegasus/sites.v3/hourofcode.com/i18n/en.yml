@@ -130,6 +130,20 @@
   hoc_faq_tutorial_ar_q: ¿Cómo puedo hacer un tutoría de la Hora de Program.AR?
   hoc_faq_tutorial_ar_a: "Si usted está interesado en convertirse en un socio para tutoriales, <a href='/tutorial-guidelines'>vea nuestras directrices e instrucciones</a>. Nos gustaría presentar varias opciones atractivas, pero la meta principal es optimizar la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales."
 
+  stats_growth: "It was the fastest to reach 15 million users."
+  stats_tumblr: "Tumblr: 3.5 years"
+  stats_facebook: "Facebook: 3 years"
+  stats_twitter: "Twitter: 2.5 years"
+  stats_pinterest: "Pinterest: 2 years"
+  stats_instagram: "Instagram: 14 months"
+  stats_hoc: "The Hour of Code: 5 days"
+  stats_global: "15 million students in 170 countries learned an Hour of Code."
+  stats_girls_more: "More girls tried computer science than in the last 70 years."
+  stats_girls_million: "Over 10 million girls in 2013"
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a once-in-a-lifetime chance." - Mariana Alzate, 5th grader'
+  stats_michael: 'I have never, ever seen my students so excited about learning." - Michael Clark, Teacher'
+
   footer_copyright_message: 'Copyright 2014 Code.org. All rights reserved.'
   footer_trademark_message: 'Hour of Code™ is a trademark of Code.org.'
 

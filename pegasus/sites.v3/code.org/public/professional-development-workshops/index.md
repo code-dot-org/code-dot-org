@@ -3,7 +3,7 @@ title: Find a workshop
 ---
 # Find a workshop (for teachers only, grades K-5)
 
-We welcome elementary school teachers to sign up for a free, high-quality professional development workshop. Taught by Code.org Affiliates who are experienced computer science educators, these workshops will prepare you to teach the Code Studio courses for grades K-5. Workshops last 6-7 hours, with a light meal. Attendees will also receive free classroom supplies for teaching the courses.
+We welcome elementary school teachers to sign up for a free, high-quality professional development workshop led by Code.org K-5 Facilitators, who are experienced computer science educators. Workshops last 6-7 hours and will prepare you to teach the Code Studio courses for grades K-5. Attendees will also receive free classroom supplies to teach the course.
 
 <%= view :workshop_search %>
 

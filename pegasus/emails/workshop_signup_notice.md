@@ -5,7 +5,7 @@
 %>
 to: <%= format_email_address(workshop['email_s'], workshop['name_s']) %>
 from: '"Code.org" <info@code.org>'
-subject: "[Code.org] Workshop registration"
+subject: "[Code.org] Workshop registration - <%= workshop['dates'].map{|i| i['date_s']}.join(', ') %>"
 ---
 
 <%
@@ -17,7 +17,8 @@ The following teacher has signed up for one of your workshops:
 
 - Name: <%= name_s %>
 - Email address: [<%= email_s %>](<%= email_s %>)
-- Role: <%= (teacher_role_ss || []).join(', ') %>
+- Role: <%= ((teacher_role_ss || []) - ['Other']).concat(teacher_role_other_ss || []).sort.uniq.join(', ') %>
+- Tech experience: <%= teacher_tech_experience_level_s %>
 - School name: <%= school_name_s %>
 - School location: <%= school_location_s %>
 - School type: <%= (school_type_ss || []).join(', ') %>

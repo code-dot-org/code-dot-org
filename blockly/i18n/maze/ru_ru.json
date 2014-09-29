@@ -32,6 +32,8 @@
   "ifelseTooltip": "Если в данном направлении продвижение возможно, тогда выполняется первый блок команд. Иначе, выполняется второй блок.",
   "ifFlowerTooltip": "Если в указанном направлении есть цветок/соты, выполнить некоторые действия.",
   "ifelseFlowerTooltip": "Если в указанном направлении есть цветок/соты, выполнить первый блок действий. В противном случае выполнить второй блок действий.",
+  "insufficientHoney": "You're using all the right blocks, but you need to make the right amount of honey.",
+  "insufficientNectar": "You're using all the right blocks, but you need to collect the right amount of nectar.",
   "make": "сделать",
   "moveBackward": "двигаться назад",
   "moveEastTooltip": "Переместите меня на один шаг на восток.",
