@@ -28,6 +28,7 @@ var msg = require('../../locale/current/turtle');
 var commonMsg = require('../../locale/current/common');
 
 var customLevelBlocks = require('./customLevelBlocks');
+var functionalBlocks = require('./functionalBlocks');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -719,58 +720,6 @@ exports.install = function(blockly, blockInstallOptions) {
         '(' + value + ', \'block_id_' + this.id + '\');\n';
   };
 
-  blockly.Blocks.brent_test_plus = {
-    // Block for turning left or right.
-    helpUrl: '',
-    init: function() {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle('+')
-          .setAlign(Blockly.ALIGN_CENTRE);
-      this.appendValueInput('VALUE')
-          .setCheck('Number')
-          // .setNewRow(true);
-      this.appendValueInput('VALUE')
-          .setCheck('Number')
-          .setInline(true);
-
-      // this.appendDummyInput()
-      //   .appendTitle('asdf');
-      // var input2 = this.appendDummyInput()
-      //   .appendTitle('asdfasdfasdfasdfa');
-      //
-      // if (input2.setNewRow) {
-      //   input2.setNewRow(true);
-      // }
-
-
-          // .appendTitle(new blockly.FieldDropdown(
-          //     blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
-      // this.appendDummyInput()
-      //     .appendTitle(msg.degrees());
-      // this.setInputsInline(true);
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-      this.setTooltip(msg.turnTooltip());
-    }
-  };
-
-  blockly.Blocks.brent_test_not_inline = {
-    // Block for turning left or right.
-    helpUrl: '',
-    init: function() {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle('one')
-          .setAlign(Blockly.ALIGN_CENTRE);
-      this.appendDummyInput()
-          .appendTitle('two')
-          .setAlign(Blockly.ALIGN_CENTRE)
-          .setInline(true);
-      this.setPreviousStatement(true);
-    }
-  };
-
   // this is the old version of this block, that should only still be used in
   // old shared levels
   blockly.Blocks.draw_width = {
@@ -931,5 +880,6 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   customLevelBlocks.install(blockly, generator, gensym);
+  functionalBlocks.install(blockly, generator, gensym);
 
 };
