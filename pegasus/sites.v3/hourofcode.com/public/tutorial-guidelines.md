@@ -1,3 +1,7 @@
+---
+layout: wide
+---
+
 # Tutorial guidelines for the Hour of Code and Computer Science Education Week
 
 Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek  website(s). The current list is at [code.org/learn](http://code.org/learn).

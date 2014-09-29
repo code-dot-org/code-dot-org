@@ -1,5 +1,6 @@
 ---
 title: Thanks for signing up to host an Hour of Code!
+layout: wide
 ---
 
 # Thanks for signing up to host an Hour of Code!
