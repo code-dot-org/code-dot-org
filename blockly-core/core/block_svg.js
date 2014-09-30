@@ -327,6 +327,15 @@ BS.INNER_BOTTOM_LEFT_CORNER_HIGHLIGHT_LTR =
     (BS.DISTANCE_45_OUTSIDE + 1);
 
 /**
+ * HACK:
+ * WebKit bug 67298 causes control points to be included in the reported
+ * bounding box.  Add 5px control point to the top of the path.
+*/
+function brokenControlPoints() {
+  return Blockly.BROKEN_CONTROL_POINTS ? 'c 0,5 0,-5 0,0' : '';
+}
+
+/**
  * Given a value, returns that value, or the opposite if RTL is true.
  */
 function oppositeIfRTL(val) {
@@ -862,8 +871,8 @@ Blockly.BlockSvg.prototype.renderDraw_ = function(iconWidth, inputRows) {
   this.renderDrawTop_(steps, connectionsXY, inputRows.rightEdge);
 
   var cursorY = this.renderDrawRight_(steps, connectionsXY, inputRows, iconWidth);
-  this.renderDrawBottom_(steps, connectionsXY, cursorY);
-  this.renderDrawLeft_(steps, connectionsXY, cursorY);
+  this.renderDrawBottom_(steps, cursorY);
+  this.renderDrawLeft_(steps);
 
   var pathString = steps.core.join(' ') + '\n' + steps.inline.join(' ');
   this.svgPath_.setAttribute('d', pathString);
@@ -879,7 +888,39 @@ Blockly.BlockSvg.prototype.renderDraw_ = function(iconWidth, inputRows) {
     this.svgPathLight_.setAttribute('transform', 'scale(-1 1)');
     this.svgPathDark_.setAttribute('transform', 'translate(1,1) scale(-1 1)');
   }
+
+  this.updateConnections_(connectionsXY, cursorY);
 };
+
+/**
+ * Fix up the connections as part of rendering
+ */
+Blockly.BlockSvg.prototype.updateConnections_ = function (connectionsXY, cursorY) {
+  var connectionX = connectionsXY.x + oppositeIfRTL(BS.NOTCH_WIDTH);
+  var connectionY;
+
+  if (this.block_.previousConnection) {
+    // Create previous block connection.
+    connectionY = connectionsXY.y;
+    this.block_.previousConnection.moveTo(connectionX, connectionY);
+    // This connection will be tightened when the parent renders.
+  }
+
+  if (this.block_.nextConnection) {
+    // Create next block connection.
+    connectionY = connectionsXY.y + cursorY + 1;
+    this.block_.nextConnection.moveTo(connectionX, connectionY);
+    if (this.block_.nextConnection.targetConnection) {
+      this.block_.nextConnection.tighten_();
+    }
+  }
+
+  if (this.block_.outputConnection) {
+    // Create output connection.
+    this.block_.outputConnection.moveTo(connectionsXY.x, connectionsXY.y);
+    // This connection will be tightened when the parent renders.
+  }
+}
 
 /**
  * Render the top edge of the block.
@@ -903,13 +944,8 @@ Blockly.BlockSvg.prototype.renderDrawTop_ =
     steps.core.push(BS.TOP_LEFT_CORNER);
     steps.highlight.push(BS.TOP_LEFT_CORNER_HIGHLIGHT);
   }
-  if (Blockly.BROKEN_CONTROL_POINTS) {
-    /* HACK:
-     WebKit bug 67298 causes control points to be included in the reported
-     bounding box.  Add 5px control point to the top of the path.
-    */
-    steps.core.push('c 0,5 0,-5 0,0');
-  }
+
+  steps.core.push(brokenControlPoints());
 
   // Top edge.
   if (this.block_.previousConnection) {
@@ -917,11 +953,6 @@ Blockly.BlockSvg.prototype.renderDrawTop_ =
     steps.highlight.push('H', BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH);
     steps.core.push(BS.NOTCH_PATH_LEFT);
     steps.highlight.push(BS.NOTCH_PATH_LEFT_HIGHLIGHT);
-    // Create previous block connection.
-    var connectionX = connectionsXY.x + oppositeIfRTL(BS.NOTCH_WIDTH);
-    var connectionY = connectionsXY.y;
-    this.block_.previousConnection.moveTo(connectionX, connectionY);
-    // This connection will be tightened when the parent renders.
   }
   steps.core.push('H', rightEdge);
   steps.highlight.push('H', rightEdge + (Blockly.RTL ? -1 : 0));
@@ -1177,30 +1208,14 @@ Blockly.BlockSvg.prototype.renderDrawRight_ = function(steps, connectionsXY,
 /**
  * Render the bottom edge of the block.
  * @param {!Object} steps Current state of our paths
- * @param {!Object} connectionsXY Location of block.
  * @param {number} cursorY Height of block.
  * @private
  */
-Blockly.BlockSvg.prototype.renderDrawBottom_ = function(steps, connectionsXY,
-    cursorY) {
-  if (Blockly.BROKEN_CONTROL_POINTS) {
-    /* HACK:
-     WebKit bug 67298 causes control points to be included in the reported
-     bounding box.  Add 5px control point to the bottom of the path.
-    */
-    steps.core.push('c 0,5 0,-5 0,0');
-  }
+Blockly.BlockSvg.prototype.renderDrawBottom_ = function(steps, cursorY) {
+  steps.core.push(brokenControlPoints());
 
   if (this.block_.nextConnection) {
-    steps.core.push('H', BS.NOTCH_WIDTH + ' ' +
-        BS.NOTCH_PATH_RIGHT);
-    // Create next block connection.
-    var connectionX = connectionsXY.x + oppositeIfRTL(BS.NOTCH_WIDTH);
-    var connectionY = connectionsXY.y + cursorY + 1;
-    this.block_.nextConnection.moveTo(connectionX, connectionY);
-    if (this.block_.nextConnection.targetConnection) {
-      this.block_.nextConnection.tighten_();
-    }
+    steps.core.push('H', BS.NOTCH_WIDTH + ' ' + BS.NOTCH_PATH_RIGHT);
   }
 
   // Should the bottom-left corner be rounded or square?
@@ -1228,16 +1243,10 @@ Blockly.BlockSvg.prototype.renderDrawBottom_ = function(steps, connectionsXY,
 /**
  * Render the left edge of the block.
  * @param {!Object} steps Current state of our paths
- * @param {!Object} connectionsXY Location of block.
- * @param {number} cursorY Height of block.
  * @private
  */
-Blockly.BlockSvg.prototype.renderDrawLeft_ = function(steps, connectionsXY,
-    cursorY) {
+Blockly.BlockSvg.prototype.renderDrawLeft_ = function(steps) {
   if (this.block_.outputConnection) {
-    // Create output connection.
-    this.block_.outputConnection.moveTo(connectionsXY.x, connectionsXY.y);
-    // This connection will be tightened when the parent renders.
     steps.core.push('V', BS.TAB_HEIGHT);
     steps.core.push('c 0,-10 -' + BS.TAB_WIDTH + ',8 -' +
         BS.TAB_WIDTH + ',-7.5 s ' + BS.TAB_WIDTH +
@@ -1254,11 +1263,7 @@ Blockly.BlockSvg.prototype.renderDrawLeft_ = function(steps, connectionsXY,
                           ',1 V 1 H 2');
     }
   } else if (!Blockly.RTL) {
-    if (this.squareTopLeftCorner_) {
-      steps.highlight.push('V', 1);
-    } else {
-      steps.highlight.push('V', BS.CORNER_RADIUS);
-    }
+    steps.highlight.push('V', this.squareTopLeftCorner_ ? 1 : BS.CORNER_RADIUS);
   }
   steps.core.push('z');
 };
