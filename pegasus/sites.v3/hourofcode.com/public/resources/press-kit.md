@@ -1,6 +1,6 @@
 ---
 title: Resources
-nav: resources_nav
+layout: wide
 ---
 ## How to attract media to your Hour of Code event ##
 

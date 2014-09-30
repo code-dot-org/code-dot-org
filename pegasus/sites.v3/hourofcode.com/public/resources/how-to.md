@@ -1,6 +1,6 @@
 ---
 title: Resources
-nav: resources_nav
+layout:wide
 ---
 # How to teach one Hour of Code
 

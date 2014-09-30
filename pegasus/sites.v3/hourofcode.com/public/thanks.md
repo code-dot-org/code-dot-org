@@ -45,12 +45,12 @@ Tell your friends about the #HourOfCode.
 <% if @country == 'us' %>
 
 ## 2. Ask your whole school to offer an Hour of Code
-[Send this email](/resources#email) or [give this handout to your principal](/resources/hoc-one-pager.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](/prizes) and challenge other schools in your area to get on board.  
+[Send this email](/resources#email) or [give this handout to your principal](/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](/prizes) and challenge other schools in your area to get on board.  
 
 <% else %>
 
 ## 2. Ask your whole school to offer an Hour of Code
-[Send this email](/resources#email) or give [this handout](/resources/hoc-one-pager.pdf) to your principal. 
+[Send this email](/resources#email) or give [this handout](/files/schools-handout.pdf) to your principal. 
 
 <% end %>
 
