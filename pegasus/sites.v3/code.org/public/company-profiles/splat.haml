@@ -13,24 +13,23 @@ social:
 max_age: 60
 ---
 
--facebook = {:u=>"http://#{request.site}/"}
+-share_link = "http://hourofcode.com/"
 
--twitter = {:url=>"http://#{request.site}/", :related=>'codeorg', :hashtags=>'', :text=>'Join the largest learning event in history, Dec 8-14, 2014'}
+-facebook = {:u=>"#{share_link}"}
+
+-twitter = {:url=>"#{share_link}", :related=>'codeorg', :hashtags=>'', :text=>'Join the largest learning event in history, Dec 8-14, 2014'}
 -twitter[:hashtags] = 'HourOfCode'
 
 -pass unless form = DB[:forms].where(kind:'CompanyProfile', name:request.splat_path_info[1..-1]).first
 -@company = company = JSON.parse(form[:data])
 -if company['gplus_b']
-  -gplus = {:url=>"http://hourofcode.com/"}
+  -gplus = {:url=>"#{share_link}"}
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/ee.css"}/
 
-
-#company_header
-  #alignment-spacer
-  -if company['logo_path_s']
-    %img#company_logo{src:"/forms/uploads/#{company['logo_path_s']}", height: "50px"}
-  %h1.ee_display_name= company['display_name_s']
+-name_in_header_b = company['name_in_header_b'] || nil
+-header_name = name_in_header_b ? company['display_name_s'] : nil
+#company_header= view :employee_engagement_header, company_name:header_name, logo_path:company['logo_path_s']
 
 -# TODO(dave): implement user_entered_markdown function.
 #intro_top
