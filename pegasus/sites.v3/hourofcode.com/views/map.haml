@@ -1,9 +1,14 @@
-#map
-  -if @country == 'ar'
-    %h2= hoc_s(:map_header_ar)
-  -else
-    %h2= hoc_s(:map_header)
-  #gmap{style: 'height: 500px; padding: 3px; border: 3px solid #ddd;'}
+.row
+  .col-xs-12
+    -if @country == 'ar'
+      %h2= hoc_s(:map_header_ar)
+    -else
+      %h2= hoc_s(:map_header)
+  
+.row
+  .col-xs-1.hidden-sm
+  .col-xs-10.col-sm-12
+    #gmap{style: 'height: 500px; padding: 3px; border: 3px solid #ddd;'}
 
 :javascript
   var gmap;

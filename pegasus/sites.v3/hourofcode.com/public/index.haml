@@ -47,13 +47,13 @@ social:
 - imageheight = 590
 
 #top{style: "position:relative; /*height: #{imageheight}px; */ width:100%; overflow:hidden"}
-  #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/the-world.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1"}
+  #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/the-world.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 0% 0%"}
 
-  #fullwidth1{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0"}
+  #fullwidth1{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
 
-  #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0"}
+  #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 30% 40%"}
 
-  #fullwidth3{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0"}
+  #fullwidth3{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 40% 50%"}
 
   #fullwidth{style: "/*position:absolute; left:0; top: 0; */width: 100%; /*height:#{imageheight}px*/"}
 
@@ -82,6 +82,8 @@ social:
               %a{onclick: "return adjustScroll('joinusarea')"}
                 %button.btn.btn-default{style: "font-size: 24px; font-weight: 500; width: 180px; height: 50px;"}
                   =hoc_s(:front_join_us_button)
+            #trylastyear{style: "margin-top:20px"}
+              %a{onclick: "return adjustScroll('whatishoc')", target: "_blank", style: "color:white; font-weight:500; cursor: pointer"}=hoc_s(:front_what_is_hoc)
           %br/
           %br/
 
@@ -138,34 +140,45 @@ social:
       %br/
       =hoc_s(:stats_michael)
 
-  #map.row
-    .col-xs-12
-      =view :map
+  #maparea
+    =view :map
 
   #joinusarea
 
-    #joindescrption.hidden-xs
-      %h1.hidden-xs=hoc_s(:front_join_us_button)
-      #calltoaction.hidden-xs.row
-        .col-xs-10{style: "text-align: left; font-size: 18px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
+    %h1=hoc_s(:front_join_us_button)
+
+    #joindescriptionshort.hidden-sm
+      %p=hoc_s(:front_join_us_header_short)
+
+    #joindescrption
+      #calltoaction.row.hidden-xs
+        .col-xs-12{style: "text-align: left; font-size: 18px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
           %p 
             =hoc_s(:front_join_us_header)
 
-      #calltoaction.row
-        .col-xs-10{style: "text-align: left; font-size: 16px; line-height:30px; font-weight: 400; padding-left:3em"}
+      #calltoaction.row.hidden-xs
+        .col-xs-12{style: "text-align: left; font-size: 16px; line-height:30px; font-weight: 400; padding-left:3em"}
           %p
             %b=hoc_s(:front_join_us_teacher)
             =hoc_s(:front_join_us_inspire)
-          %p
+            %br/
+
             %b=hoc_s(:front_join_us_parent)
             =hoc_s(:front_join_us_ask)
-          %p
+            %br/
+
             %b=hoc_s(:front_join_us_computer_science)
             =hoc_s(:front_join_us_spread)
+            %br/
 
-          %p
-            %a{href: "/resources"} 
-              =hoc_s(:front_join_us_get_started)
+      #hoclinks.row
+        .col-xs-12{style: "text-align: left; font-size: 16px; line-height:30px; font-weight: 400; padding-left:3em"}
+          %a{href: "/resources/how-to"} 
+            =hoc_s(:front_join_us_how_to_run)
+          %br/
+
+          %a{href: "/resources"} 
+            =hoc_s(:front_join_us_help_promote)
 
     #signupform.row
       .col-xs-12.col-sm-9.col-md-8

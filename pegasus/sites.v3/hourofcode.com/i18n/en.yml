@@ -39,14 +39,16 @@
   front_join_us_heading: 'An Hour of Code for every student.'
   front_join_us_description: 'Computer science is a foundation for every student. Help us introduce it to 100 million.'
   front_join_us_button: 'Join us'
+  front_what_is_hoc: 'What is the Hour of Code?'
   front_join_us_header: 'Any time during December 8-14, Computer Science Education Week, host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!'
   front_join_us_teacher: 'Are you a teacher?'
-  front_join_us_inspire: 'Inspire your students with an Hour of Code in your classroom.'
+  front_join_us_inspire: 'Inspire your students with <a href="/resources/how-to">an Hour of Code in your classroom</a>.'
   front_join_us_parent: 'Are you a parent?'
-  front_join_us_ask: 'Ask your local school to host an Hour of Code.'
+  front_join_us_ask: '<a href="/resources">Ask your local school</a> to host an Hour of Code.'
   front_join_us_computer_science: 'Just love computer science?'
-  front_join_us_spread: 'Spread the word in your community. Or organize an Hour of Code event yourself.'
-  front_join_us_get_started: "Here's how to get started."
+  front_join_us_spread: '<a href="/resources">Spread the word in your community</a>. Or organize an Hour of Code event yourself.'
+  front_join_us_how_to_run: "Here's how to run an Hour of Code"
+  front_join_us_help_promote: "Help promote the Hour of Code"
 
   signup_header: 'Let us know if you’re hosting an Hour of Code'
   signup_header_ar: Déjanos saber si estas organizando una Hora de Programación
