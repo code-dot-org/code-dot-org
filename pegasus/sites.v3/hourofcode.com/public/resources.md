@@ -81,6 +81,7 @@ Get the word out. Host an event. Ask a local school to sign up. Or try the Hour 
 
 Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
 
+<a id="media-pitch"></a>
 ## Invite media to attend your event:
 
 **Subject line:** Local school joins mission to introduce 100m students to computer science
