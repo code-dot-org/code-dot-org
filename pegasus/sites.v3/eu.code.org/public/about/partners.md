@@ -12,12 +12,6 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
-# Major US Partners and Corporate Donors
+# Partners
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'major') %>
-
----
-
-# Tutorial partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'tutorial') %>
+<%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'eu') %>
