@@ -13,6 +13,10 @@ class ApplicationHelperTest < ActionView::TestCase
     CDO.rack_env = env
   end
 
+  # Stub current_user
+  def current_user
+  end
+
   test "canonical_hostname in test" do
     assert_equal 'test.learn.code.org', canonical_hostname('learn.code.org')
     assert_equal 'test.code.org', canonical_hostname('code.org')
@@ -53,5 +57,26 @@ class ApplicationHelperTest < ActionView::TestCase
   test "code_org_root_path in development" do
     set_env :development
     assert_equal 'http://localhost.code.org', code_org_root_path
+  end
+
+  test "is_k1? when current script returns true for is_k1?" do
+    @script = Script.find_by_name('course1')
+    assert is_k1?
+  end
+
+  test "!is_k1? by default" do
+    @level = Maze.create(@maze_data)
+    assert !is_k1?
+  end
+
+  test "playlab_freeplay_path for k1 levels" do
+    def current_user
+      OpenStruct.new(primary_script: OpenStruct.new('is_k1?'=>true))
+    end
+    assert_equal(script_stage_script_level_path('course1', 16, 6), playlab_freeplay_path)
+  end
+
+  test "artist_freeplay_path for non-k1 levels" do
+    assert_equal(script_stage_script_level_path('artist', 1, 10), artist_freeplay_path)
   end
 end
