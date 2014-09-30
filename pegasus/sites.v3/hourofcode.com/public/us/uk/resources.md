@@ -11,7 +11,6 @@ layout: wide
 *   [Videos][4] <br/>
 *   [Sample emails][5] <br/>
 *   [Useful computer science stats][6]   
-    
 *   [Press Kit][7]
 
  [1]: #handouts
