@@ -1,7 +1,9 @@
 * * *
 
-## Titlu: Vă mulţumesc
+title: Thank you
+
+## layout: wide
 
 # Vă mulţumesc
 
-Şcoala dumneavoastră este acum înscrisă pentru a câştiga un set de laptop-uri (sau 10000 dolari pentru alte tehnologii).
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).

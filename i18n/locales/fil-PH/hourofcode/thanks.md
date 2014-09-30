@@ -1,50 +1,66 @@
 * * *
 
-## title: Maraming Salamat sa pagsama bilang host ng Hour of Code!
+title: Thanks for signing up to host an Hour of Code! layout: wide
+
+social: "og:title": "<%= hoc\_s(:meta\_tag\_og\_title) %>" "og:description": "<%= hoc\_s(:meta\_tag\_og\_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
+
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc\_s(:meta\_tag\_twitter\_title) %>" "twitter:description": "<%= hoc\_s(:meta\_tag\_twitter\_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv\_load\_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920
+
+## "twitter:player:height": 1080
+
+<% facebook = {:u=>"http://#{request.host}/us"}
+
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc\_s(:twitter\_default\_text)} twitter[:hashtags] = 'HourOfCode' unless hoc\_s(:twitter\_default\_text).include? '#HourOfCode' %>
 
 # Maraming salamat sa pagsama bilang host ng Hour of Code!
 
-**BAWAT** Hour of Code organizer ay makakatanggap ng 10 GB ng Dropbox space o $10 na Skype credit bilang pasasalamat. [Detalye][1]
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details][1]
 
  [1]: /prizes
 
 <% if @country == 'us' %>
 
-Anyayahan ang [buong paaralan na sumali][2] para sa pagkakataong manalo ng malalaking papremyo para sa inyong buong paaralan.
+Get your [whole school to participate][2] for a chance for big prizes for your entire school.
 
- [2]: /whole-school
+ [2]: /us/prizes
 
 <% end %>
 
 ## 1. Ipagkalat ang balita
 
-Sabihin sa iyong mga kaibigan ang tungkol sa #HourOfCode.
+Tell your friends about the #HourOfCode.
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 <% if @country == 'us' %>
 
 ## 2. Sabihin sa inyong buong paaralan na makisali sa Hour of Code
 
-[Magpadala ng email][3] o kaya ay [ibigay sa pinuno ng paaralan ang babasahing ito][4]. Pag ang inyong paaralan ay nakilahok, [may pagkakataong manalo ng $10,000 halaga ng papremyo para sa inyong paaralan][1] at himukin din ang ibang paaralan sa inyong lugar na sumali.
+[Send this email][3] or [give this handout to your principal][4]. Once your school is on board, [enter to win $10,000 worth of technology for your school][1] and challenge other schools in your area to get on board.
 
  [3]: /resources#email
- [4]: /resources/hoc-one-pager.pdf
+ [4]: /files/schools-handout.pdf
 
 <% else %>
 
 ## 2. Sabihin sa inyong buong paaralan na makisali sa Hour of Code
 
-[Magpadala ng email][3] o kaya ay ibigay sa pinuno ng paaralan ang [babasahing][4] ito.
+[Send this email][3] or give [this handout][4] to your principal.
 
 <% end %>
 
 ## 3. Himukin ang inyong mga boss na sumali
 
-[Magpadala ng email][3] sa inyong boss, o kaya ay sa may-ari ng kumpanya. O [kaya ay ibigay sa kanila ang babasahing ito][4].
+[Send this email][3] to your manager, or the CEO. Or [give them this handout][5].
+
+ [5]: /resources/hoc-one-pager.pdf
 
 ## 4. Ipamalita ang Hour of Code sa inyong lugar
 
-Mag-anyaya ng mga grupo - mga boy scouts, simbayan, unibersidad, mga grupo ng senior citizens o kaya ay magsimula ng pagtitipon tungkol sa Hour of Code sa inyong lugar.
+Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
 ## 5. Hingin ang tulong ng isang lokal na opisyal para sumuporta sa Hour of Code
 
-[Magpadala ng email][3] sa inyong mayor, city council, o sa bumubuo ng paaralan. o [kaya ay ibigay ang babasahing ito][4] at yayain sila na bumisita sa inyong paaralan.
+[Send this email][3] to your mayor, city council, or school board. Or [give them this handout][5] and invite them to visit your school.
+
+<%= view 'popup_window.js' %>

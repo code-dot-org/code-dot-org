@@ -1,3 +1,7 @@
+* * *
+
+## layout: wide
+
 # Hour of Code र Computer Science Education Week लागि ट्यूटोरियल दिशानिर्देश
 
 Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn][1].
@@ -8,7 +12,7 @@ Code.org will host a variety of Hour of Code activities on the Code.org, Hour of
 
 <a id="top"></a>
 
-## सूचकांक:
+## Index:
 
 *   [ट्यूटोरियल समावेशीकरणका लागि मूल्यांकन कसरी गरिनेछ][2]
 *   [Hour of Code को लागि क्रियाकलाब बनाउनको सामान्य दिशानिर्देश][3]
@@ -40,9 +44,6 @@ A committee of computer science educators will rank submissions based on qualita
 *   आत्म-निर्देशन, कुनै पनि निर्देशन आवश्यकता नचाहिने
 *   शुरुआती को लागि डिजाइन गरिएको
 *   डिजाइन ~ 1 घण्टा गतिविधि भएको
-*   कुनै sign up को आवस्यकता नभएको 
-*   कुनै भुक्तानीको आवस्यकता नभएको
-*   Installation को आवस्यकता नभएको
 *   work across many OS/device platforms, including mobile and tablets
 *   work across multiple languages
 *   promote learning by all demographic groups (esp under-represented groups)

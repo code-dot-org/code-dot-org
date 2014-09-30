@@ -1,50 +1,64 @@
 ---
-title: Děkujeme za přihlášení k hostování k akci Hodina kódu!
+title: Thanks for signing up to host an Hour of Code! 
+layout: wide
 ---
+
+<%
+  facebook = {:u=>"http://#{request.host}/us"}
+
+  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+%>
 
 # Děkujeme za přihlášení k hostování akce Hodina kódu!
 
-**KAŽDÝ** organizátor akce Hodiny kódu dostane jako poděkování 10 GB místa na Dropboxu nebo 10 dolarů Skype.kreditu [Podrobnosti][1]
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details][1]
 
  [1]: /prizes
 
 <% if @country == 'us' %>
 
-Získejte [celou vaší školu k účasti][2] pro šanci získat velkou cenu pro celou školu.
+Get your [whole school to participate][2] for a chance for big prizes for your entire school.
 
- [2]: /whole-school
+ [2]: /us/prizes
 
 <% end %>
 
 ## 1. Povídejte o tom
 
-Povězte svým přátelům o #HourOfCode.
+Tell your friends about the #HourOfCode.
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 <% if @country == 'us' %>
 
 ## 2. Požádejte celou vaší školu, aby nabídla akci Hodina kódu
 
-[Pošlete email][3] nebo [ předejte tento leták vašemu řediteli školy][4]. Jakmile se vaše škola zapojila, [Přihlašte se se do soutěže o 10 000 dolarů v hodnotě technologie pro vaši školu][1] a vyzvěte jiné školy z vaší oblasti, aby se přidaly.
+[Send this email][3] or [give this handout to your principal][4]. Once your school is on board, [enter to win $10,000 worth of technology for your school][1] and challenge other schools in your area to get on board.
 
  [3]: /resources#email
- [4]: /resources/hoc-one-pager.pdf
+ [4]: /files/schools-handout.pdf
 
 <% else %>
 
 ## 2. Požádejte celou vaší školu, aby nabídla akci Hodina kódu
 
-[Pošlete tento email][3] nebo dejte [tento leták][4] řediteli.
+[Send this email][3] or give [this handout][4] to your principal.
 
 <% end %>
 
 ## 3. Požádejte vašeho zaměstnavatele, aby se zapojil
 
-[Pošlete tento e-mail][3] nadřízenému, nebo řediteli. nebo [dejte jim tento leták][4].
+[Send this email][3] to your manager, or the CEO. Or [give them this handout][5].
+
+ [5]: /resources/hoc-one-pager.pdf
 
 ## 4. Podporujte akci Hodina kódu v rámci své komunity
 
-Získejte místní skupinu – skautský klub, kostel, univerzitu, skupiny veteránů nebo odboráře. Nebo uspořádejte akci vaše okolí.
+Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
 ## 5. Požádejte místní politiky pro podporu akce Hodina kódu
 
-[Pošlete tento e-mail][3] starostovi, městské radě nebo školní radě. Nebo [jim dejte tento leták][4] a vyzvěte je k návštěvě školy.
+[Send this email][3] to your mayor, city council, or school board. Or [give them this handout][5] and invite them to visit your school.
+
+<%= view 'popup_window.js' %>

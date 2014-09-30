@@ -1,3 +1,7 @@
+* * *
+
+## layout: wide
+
 # 编程一小时和计算机科教周活动指南
 
 Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn][1].
@@ -40,9 +44,6 @@ A committee of computer science educators will rank submissions based on qualita
 *   self-directed, don’t require any instruction
 *   designed for beginners
 *   designed as a ~ 1 hour activity
-*   require no sign up 
-*   require no payment
-*   require no installation
 *   work across many OS/device platforms, including mobile and tablets
 *   work across multiple languages
 *   promote learning by all demographic groups (esp under-represented groups)

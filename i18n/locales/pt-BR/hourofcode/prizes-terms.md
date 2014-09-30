@@ -1,6 +1,10 @@
+* * *
+
+## layout: wide
+
 # Prêmios - termos e condições
 
-## Espaço no Dropbox ou crédito para o Skype
+## Dropbox space or Skype credit:
 
 Os 10 GB de espaço no Dropbox ou os US$10 de crédito no Skype limitam-se a professores do ensino fundamental e médio, educadores de clubes de programação e instituições de ensino. Os 10 GB de espaço livre devem ser adicionados a uma conta do Dropbox já existente. Limite de um resgate por organizador.
 
@@ -10,13 +14,13 @@ A Code.org entrará em contato com os organizadores após a Hora de Código (8-1
 
 <% if @country == 'us' %>
 
-## Chat com vídeo com um orador convidado
+## Video chat with a guest speaker:
 
-Prize limited to K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 14, 2014. Code.org will randomly select winning schools, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details.
+Prêmio limitado apenas às escolas de ensino fundamental e médio dos EUA. Para se qualificar, sua escola inteira deve se cadastrar na Hora do Código até 14 de novembro de 2014. A Code.org selecionará aleatoriamente as escolas vencedoras, determinará um horário para o bate-papo via Web e trabalhará com o professor apropriado para definir os detalhes da tecnologia.
 
-## Kits de laptops (ou US$10.000 para outra tecnologia)
+## Class-set of laptops (or $10,000 for other technology):
 
-Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here][1]. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+Prêmio limitado apenas às escolas públicas de ensino fundamental e médio dos EUA. Por que apenas as escolas públicas? [Veja a resposta aqui][1]. Para se qualificar, sua escola inteira deve se cadastrar na Hora do Código até 14 de novembro de 2014. Uma escola de cada estado dos EUA receberá um kit de computadores. A Code.org vai selecionar e notificar os vencedores por e-mail em 1 de dezembro de 2014.
 
  [1]: http://www.hourofcode.com/us#faq
 
