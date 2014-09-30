@@ -1,5 +1,6 @@
 ---
 title: Obrigado
+layout: wide
 ---
 
 # Obrigado
