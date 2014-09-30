@@ -51,6 +51,12 @@
     -if secret
       %tr
         %th
+          Show Display Name in header?
+        %td
+          -name_in_header_b = data['name_in_header_b'] || nil
+          %input{name:'name_in_header_b', type:'checkbox', value:'1', checked: name_in_header_b}
+      %tr
+        %th
           Logo
           %br
           (appears in header, 100x100px or higher recommended)
