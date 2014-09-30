@@ -25,7 +25,7 @@ ExcludedBrowsers = [
   'Mo%20PTT/50 CFNetwork/672.1.15 Darwin/14.0.0'
 ]
 
-ExcludedLevels = [1, 103, 337, 612, 830, 1254, 1255, 1264, 1265, 1370, 1376, 1383, 1393, 1415]
+ExcludedLevels = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415]
 
 HardLevelAttemptsPerHour = {
   50 => 10,

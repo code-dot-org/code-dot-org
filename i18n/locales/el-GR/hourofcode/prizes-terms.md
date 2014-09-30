@@ -1,6 +1,10 @@
+* * *
+
+## layout: wide
+
 # Δώρα - όροι και προϋποθέσεις
 
-## Χώρος στο Dropbox ή μονάδες Skype:
+## Dropbox space or Skype credit:
 
 Τα 10GB χώρου στο Dropbox ή τα 10$ μονάδων στο Skype προσφέρονται σε σχολεία πρωτοβάθμιας εκπαίδευσης (K-12), τμήματα που λειτούργησαν εκτός του σχολικού ωραρίου, και εκπαιδευτικούς οργανισμούς. Τα 10 GB χώρου πρέπει απαρείτητα να προστεθούν σε σε έναν ήδη υπάρχων λογαριαμό Dropbox. Υπάρχει περιορισμός ενός δώρου ανα διοργανωτή.
 
@@ -10,11 +14,11 @@
 
 <% if @country == 'us' %>
 
-## Βίνετο συνομιλία με διακεκριμένο ομιλητή:
+## Video chat with a guest speaker:
 
 Prize limited to K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 14, 2014. Code.org will randomly select winning schools, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details.
 
-## Φορητοί υπολογιστές (ή 10.000$ για άλλο τεχνολογικό εξοπλισμό):
+## Class-set of laptops (or $10,000 for other technology):
 
 Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here][1]. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
 

@@ -1,3 +1,7 @@
+* * *
+
+## layout: wide
+
 # المبادئ التوجيهية للدروس التعليمية لحدث "ساعة البرمجة والأسبوع التعليمي لعلوم الحاسب"
 
 Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn][1].
@@ -8,7 +12,7 @@ Code.org will host a variety of Hour of Code activities on the Code.org, Hour of
 
 <a id="top"></a>
 
-## الفهرس:
+## Index:
 
 *   [كيف سيتم تقييم الانشطة للإدراج][2]
 *   [مبادئ توجيهية عامة لإنشاء نشاط لساعة البرمجة][3]
@@ -40,13 +44,10 @@ Code.org will host a variety of Hour of Code activities on the Code.org, Hour of
 *   ذات توجيه ذاتي، لا تتطلب أي تعليمات
 *   مصممة للمبتدئين
 *   صممت كنشاط تدوم مدته ~ 1 ساعة
-*   لا يستحق اي تسجيل 
-*   لا تتطلب دفع أي مبلغ
-*   لا تتطلب أي تثبيت
-*   العمل عبر العديد من انظمة التشغيل للحواسيب و الاجهزة المحمولة، بما في ذلك الهواتف الجوالة و اللوحات الرقمية
-*   العمل عبر لغات متعددة
-*   تعزيز التعلم بجميع المجموعات السكانية ( مثل الاقليات )
-*   ليست مركزة على تصميم مواقع الانترنت فقط باستعمال HTML و CSS (أن هدفنا هو علوم الحاسوب ، ليس فقط ربمجة إتش تي أم ال HTML)
+*   work across many OS/device platforms, including mobile and tablets
+*   work across multiple languages
+*   promote learning by all demographic groups (esp under-represented groups)
+*   not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
 
 **ترتيب الانشطة سيكون اقل اذا:**
 
@@ -255,7 +256,7 @@ IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
 <a id="disabilities"></a>
 
-## ملاحظة خاصة للطلاب ذوي الاحتياجات الخاصة
+## A special note for students with disabilities
 
 إذا أنشأت درسً تعليمياً موجهاً للمكفوفين، فإننا نحب أن نسلط الضوء عليه للمشاهدين الذين يملكون قارئات الشاشة. نحن لم نستلم درساً تعليمياً كهذا من قبل، وسنكون متشوقين لجعله خياراً متاحاً لهؤلاء الطلاب.
 

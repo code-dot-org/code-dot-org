@@ -1,6 +1,10 @@
+* * *
+
+## layout: wide
+
 # Ödüller - Şartlar ve Koşullar
 
-## Dropbox alanı veya Skype kredisi:
+## Dropbox space or Skype credit:
 
 The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account. Limit one redemption per organizer.
 

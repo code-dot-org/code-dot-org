@@ -1,6 +1,10 @@
+---
+layout: wide
+---
+
 # Призи - умови отримання
 
-## Простір Dropbox або кредити Skype:
+## Dropbox space or Skype credit:
 
 10 Гб простору Dropbox або кредит $10 у Skype призначені для вчителів, вихователів для позашкільних клубів та освітніх організацій. 10 Гб вільного місця слід додати до існуючого облікового запису Dropbox. Організатор може отримати лише один такий приз.
 
@@ -10,13 +14,13 @@ Code.org зв'яжеться з організаторами після Годи
 
 <% if @country == 'us' %>
 
-## Відео-чат із запрошеним оратором:
+## Video chat with a guest speaker:
 
-Prize limited to K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 14, 2014. Code.org will randomly select winning schools, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details.
+Приз призначений лише для шкіл зі США. Для того, щоб претендувати на цю винагороду, всю школу потрібно зареєструвати на Годину коду до 14 листопада 2014 року. Code.org випадковим чином обере школи-переможці, надасть часові інтервали для веб-чату та узгодить технологічні деталі з відповідним вчителем.
 
-## Клас ноутбуків (або іншої техніки вартістю $10,000):
+## Class-set of laptops (or $10,000 for other technology):
 
-Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here][1]. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+Приз призначений лише для державних 12-річних шкіл США. Чому тільки державні школи? [Переглянути відповідь тут][1]. Для того, щоб претендувати на цю винагороду, всю школу потрібно зареєструвати на Годину коду до 14 листопада 2014 року. Одна школа у кожному зі штатів США виграє комп'ютерний клас. Code.org проведе відбір і повідомить переможців електронною поштою до 1 грудня 2014 року.
 
  [1]: http://www.hourofcode.com/us#faq
 

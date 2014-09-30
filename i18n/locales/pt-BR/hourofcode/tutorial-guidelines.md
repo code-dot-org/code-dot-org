@@ -1,8 +1,10 @@
+* * *
+
+## layout: wide
+
 # Diretrizes para os tutoriais da Hora do Código e Semana da Educação em Ciência da Computação
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn][1].
-
- [1]: http://code.org/learn
+A Code.org disponibilizará uma variedade de atividades da Hora do Código nos sites da Code.org, Hora do Código e Semana da Educação em Ciência da Computação. A lista atual pode ser encontrada em <http://code.org/learn>.
 
 Gostaríamos de disponibilizar uma variedade de opções atrativas, mas nosso objetivo principal é melhorar a experiência de alunos e professores que são novos no campo da ciência da computação. Use este documento para orientá-lo na criação de sua atividade, direcionada para o usuário que não tem nenhuma experiência em codificação, programação de computadores e ciência da computação.
 
@@ -10,23 +12,23 @@ Gostaríamos de disponibilizar uma variedade de opções atrativas, mas nosso ob
 
 ## Índice:
 
-*   [Como os tutoriais serão avaliados para inclusão][2]
-*   [Diretrizes gerais para criação de uma atividade da Hora do Código][3]
-*   [Como enviar (até 01/10/2014)][4]
-*   [Sugestões para criação de sua atividade][5]
-*   [Orientações sobre marcas registradas][6]
-*   [Pixel de rastreamento][7]
-*   [Promova seus tutoriais, a Semana da Educação em Ciência da Computação e a Hora do Código][8]
-*   [Nota para alunos com deficiências][9]
+*   [Como os tutoriais serão avaliados para inclusão][1]
+*   [Diretrizes gerais para criação de uma atividade da Hora do Código][2]
+*   [Como enviar (até 01/10/2014)][3]
+*   [Sugestões para criação de sua atividade][4]
+*   [Orientações sobre marcas registradas][5]
+*   [Pixel de rastreamento][6]
+*   [Promova seus tutoriais, a Semana da Educação em Ciência da Computação e a Hora do Código][7]
+*   [Nota para alunos com deficiências][8]
 
- [2]: #inclusion
- [3]: #guidelines
- [4]: #submit
- [5]: #design
- [6]: #tm
- [7]: #pixel
- [8]: #promote
- [9]: #disabilities
+ [1]: #inclusion
+ [2]: #guidelines
+ [3]: #submit
+ [4]: #design
+ [5]: #tm
+ [6]: #pixel
+ [7]: #promote
+ [8]: #disabilities
 
 <a id="inclusion"></a>
 
@@ -40,9 +42,6 @@ Uma comissão de professores de ciência da computação classificará os tutori
 *   Autoexplicativos, ou seja, não necessitam de instrução
 *   Projetados para iniciantes
 *   Projetados como uma atividade de aproximadamente 1 hora
-*   Não necessitam de inscrição 
-*   Não exigem nenhum tipo de pagamento
-*   Não necessitam de instalação
 *   Operam em diversas plataformas de SO/dispositivos, inclusive telefones celulares e tablets
 *   Operam em diferentes idiomas
 *   Promovem o aprendizado em todos os grupos demográficos (especialmente grupos sub-representados)
@@ -73,13 +72,13 @@ Observe também que, de acordo com as respostas de professores e alunos, a Seman
 
 Em razão disso, as listas existentes certamente são "muito boas", e o que nos faz aumentar o número de tutoriais na lista da Hora do Código não é ampliar as opções, mas aumentar a qualidade (ou as novidades) para alunos, ou expandir as opções para não falantes da língua inglesa (devido à natureza global da campanha de 2014).
 
-[**Voltar ao topo**][10]
+[**Voltar ao topo**][9]
 
- [10]: #top
+ [9]: #top
 
 <a id="guidelines"></a>
 
-## Orientações gerais para criação de uma atividade da Hora do Código
+## Diretrizes gerais para criação de uma atividade da Hora do Código
 
 *   **Assunto:** Introdução à ciência da computação ou programação (não HTML).
 *   **Objetivo:** Proporcionar aos iniciantes na área um primeiro contato com a programação.
@@ -92,15 +91,15 @@ Em razão disso, as listas existentes certamente são "muito boas", e o que nos 
     *   **Aceitável, mas não preferencial:** instalação de aplicativo, aplicativo para desktop ou experiências com consoles de videogame.
 *   **Formato:** lições ou tutoriais autoexplicativos, opcionalmente facilitadas por um professor. Deve fornecer orientações aos alunos, em oposição a um desafio aberto de uma hora. As instruções e os tutoriais devem ser, de preferência, diretamente integrados à plataforma de programação, para evitar a necessidade de transição entre abas e janelas do tutorial e da plataforma de programação.
 
-[**Voltar ao topo**][10]
+[**Voltar ao topo**][9]
 
 <a id="submit"></a>
 
 ## Como enviar (até 01/10/2014)
 
-Acesse a [página de envio de atividade da Hora do Código][11] e siga as etapas para enviar seu tutorial.
+Acesse a [página de envio de atividade da Hora do Código][10] e siga as etapas para enviar seu tutorial.
 
- [11]: https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform
+ [10]: https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform
 
 **O que você precisará:**
 
@@ -126,8 +125,8 @@ Acesse a [página de envio de atividade da Hora do Código][11] e siga as etapas
     *   Os tutoriais devem especificar quais idiomas estão disponíveis usando códigos de 2 caracteres, por exemplo: EN - inglês; JA - japonês
     *   Caso seja necessário especificar a variante, use traços, por exemplo: FR-BE - francês (Bélgica) ou FR-CA - francês (Canadá)
     *   ***Nota: a detecção do idioma é responsabilidade do provedor do tutorial, nós vamos redirecionar todos os usuários para a única URL fornecida.*** 
-*   Se você enviar um tutorial on-line, precisamos saber se ele é [compatível com a regra COPPA][12] ou não.
-*   Nível(is) recomendado(s) para os usuários-alvo. Você pode consultar os [Padrões para Ensino Fundamental e Médio da Associação de Professores de Ciência da Computação][13] para saber quais conceitos de ciência da computação são apropriados para cada ano. Este é um exemplo de níveis (padrão EUA): 
+*   Se você enviar um tutorial on-line, precisamos saber se ele é [compatível com a regra COPPA][11] ou não.
+*   Nível(is) recomendado(s) para os usuários-alvo. Você pode consultar os [Padrões para Ensino Fundamental e Médio da Associação de Professores de Ciência da Computação][12] para saber quais conceitos de ciência da computação são apropriados para cada ano. Este é um exemplo de níveis (padrão EUA): 
     *   Ensino fundamental I: pré até 2º ano, ou 3º a 5º ano
     *   Ensino fundamental II: 6º a 8º ano
     *   Ensino médio: 9º a 12º ano
@@ -150,19 +149,19 @@ Acesse a [página de envio de atividade da Hora do Código][11] e siga as etapas
     *   Para atividades offline 
         *   Número de downloads da versão em papel da atividade (se aplicável)
 
- [12]: http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act
- [13]: http://csta.acm.org/Curriculum/sub/K12Standards.html
+ [11]: http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act
+ [12]: http://csta.acm.org/Curriculum/sub/K12Standards.html
 
-[**Voltar ao topo**][10]
+[**Voltar ao topo**][9]
 
 <a id="design"></a>
 
 ## Sugestões para criação de sua atividade
 
-**Use o logo da Semana de Educação em Ciência da Computação em seu tutorial.** Você pode usar o logo da Semana de Educação em Ciência da Computação ([pequeno][14] ou [grande][15]) em seu tutorial, mas não é obrigatório. Você também pode entrar em contato conosco para solicitar uma permissão específica de uso do logo “Em parceria com Code.org”. ***Este logo somente poderá ser usado se uma permissão específica for concedida por escrito pela Code.org.*** Eventualmente, podemos acabar criando um logo da Hora do Código, mas neste momento ainda não temos. Em nenhuma circunstância o logo e o nome da Code.org pode ser usado. Ambas são marcas registradas e não podem ser associadas a marcas de terceiros.
+**Use o logo da Semana de Educação em Ciência da Computação em seu tutorial.** Você pode usar o logo da Semana de Educação em Ciência da Computação ([pequeno][13] ou [grande][14]) em seu tutorial, mas não é obrigatório. Você também pode entrar em contato conosco para solicitar uma permissão específica de uso do logo “Em parceria com Code.org”. ***Este logo somente poderá ser usado se uma permissão específica for concedida por escrito pela Code.org.*** Eventualmente, podemos acabar criando um logo da Hora do Código, mas neste momento ainda não temos. Em nenhuma circunstância o logo e o nome da Code.org pode ser usado. Ambas são marcas registradas e não podem ser associadas a marcas de terceiros.
 
- [14]: https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg
- [15]: https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png
+ [13]: https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg
+ [14]: https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png
 
 **Certifique-se de que um estudante mediano será capaz de terminar a atividade confortavelmente em uma hora.** Considere acrescentar uma atividade aberta para os estudantes que avançarem mais rapidamente pela lição. Lembre-se de que a maioria das crianças não tem nenhuma experiência em ciência da computação e programação.
 
@@ -183,9 +182,9 @@ Acesse a [página de envio de atividade da Hora do Código][11] e siga as etapas
 
 **Não exija inscrição ou pagamento antes de os alunos experimentarem seu tutorial.** Os tutoriais que exigirem inscrição ou pagamento não serão classificados
 
-**Certifique-se de que seu tutorial pode ser usado em um [paradigma de Programação em Duplas][16].**
+**Certifique-se de que seu tutorial pode ser usado em um [paradigma de Programação em Duplas][15].**
 
- [16]: http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning
+ [15]: http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning
 
 Estas são as três regras de programação em duplas no âmbito escolar:
 
@@ -199,7 +198,7 @@ Benefícios da programação em duplas:
 *   É possível mostrar que a codificação não é uma atividade individual, mas que envolve interação social
 *   Nem todas as salas de aula ou laboratórios têm computadores suficientes para uma experiência de 1:1
 
-[**Voltar ao topo**][10]
+[**Voltar ao topo**][9]
 
 <a id="tm"></a>
 
@@ -217,7 +216,7 @@ Como parte desse trabalho, queremos proteger a marca "Hour of Code" (adaptada pa
 
 4.  É proibido o uso de "Hour of Code" em nomes de aplicativos
 
-[**Voltar ao topo**][10]
+[**Voltar ao topo**][9]
 
 <a id="pixel"></a>
 
@@ -237,7 +236,7 @@ IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Voltar ao topo**][10]
+[**Voltar ao topo**][9]
 
 <a id="promote"></a>
 
@@ -251,7 +250,7 @@ Estamos pedindo para que cada um divulgue seu próprio tutorial de 1 hora aos us
 *   Promova um evento local, ou peça para seus funcionários promoverem um evento em escolas ou grupos comunitários locais.
 *   Consulte nosso kit de recursos para obter mais informações (em breve).
 
-[**Voltar ao topo**][10]
+[**Voltar ao topo**][9]
 
 <a id="disabilities"></a>
 
@@ -259,4 +258,4 @@ Estamos pedindo para que cada um divulgue seu próprio tutorial de 1 hora aos us
 
 Se você criar um tutorial voltado para pessoas com deficiência visual, adoraríamos divulgá-lo para os usuários com leitores de tela. Ainda não recebemos nenhum tutorial com esse perfil, e estamos ansiosos para disponibilizar essa opção para esses estudantes.
 
-[**Voltar ao topo**][10]
+[**Voltar ao topo**][9]
