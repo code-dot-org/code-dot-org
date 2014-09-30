@@ -1,32 +1,34 @@
+---
+layout: wide
+---
+
 # Pokyny k výuce akcím Hodina kódu a Týden informatiky
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn][1].
-
- [1]: http://code.org/learn
+Code.org bude hostit na svých stránkácg Code.org řadu aktivit Hour of Code - Hodina kódu a CSEdWeek - Týden informatiky. Aktuální seznam je na <http://code.org/learn>.
 
 Rádi bychom hostovali i řadu dalších nabízených možností se zapojit, ale hlavním naším cílem je optimalizovat zkušenost studentů a učitelů, pro které je informatika nová. Použijte tento dokument jako příručku k vytvoření aktivit uživatele, který nemá žádné zkušenosti a vzdělání v kódování, programování a informatice.
 
 <a id="top"></a>
 
-## Seznam:
+## Index:
 
-*   [Jak se hodnotí výukové programy pro jejich zařazení][2]
-*   [Všeobecné pokyny pro vytvoření aktivity Hodiny kódu][3]
-*   [Jak odeslat (do 10/1/2014)][4]
-*   [Návrhy pro plánování činnosti][5]
-*   [Pokyny k ochranným známkám][6]
-*   [Sledovací obrázek][7]
-*   [Propagujte výukové programy, akce CSEdWeek a Hodina kódu][8]
-*   [Poznámka: pro studenty se zdravotním postižením][9]
+*   [Jak se hodnotí výukové programy pro jejich zařazení][1]
+*   [Všeobecné pokyny pro vytvoření aktivity Hodiny kódu][2]
+*   [Jak odeslat (do 10/1/2014)][3]
+*   [Návrhy pro plánování činnosti][4]
+*   [Pokyny k ochranným známkám][5]
+*   [Sledovací obrázek][6]
+*   [Propagujte výukové programy, akce CSEdWeek a Hodina kódu][7]
+*   [Poznámka: pro studenty se zdravotním postižením][8]
 
- [2]: #inclusion
- [3]: #guidelines
- [4]: #submit
- [5]: #design
- [6]: #tm
- [7]: #pixel
- [8]: #promote
- [9]: #disabilities
+ [1]: #inclusion
+ [2]: #guidelines
+ [3]: #submit
+ [4]: #design
+ [5]: #tm
+ [6]: #pixel
+ [7]: #promote
+ [8]: #disabilities
 
 <a id="inclusion"></a>
 
@@ -40,20 +42,17 @@ Komise pedagogů z oblasti informatiky určuje pořadí zaslaných výukových p
 *   intuitivní, nevyžadují zvláštní pokyny k provádění
 *   navržené pro začátečníky
 *   plánované jako hodinová aktivita
-*   nevyžaduje se jejich registrace 
-*   bezplatné
-*   není nutná instalace
-*   pracují napříč mnoha provozními platformami bez ohledu na operační systém a hardware, včetně mobilů a tabletů
-*   pracuje ve více jazycích
-*   podporuje vzdělávání všech demografických skupin (zejména málo zastoupených skupin)
-*   Není jen čistě zaměřené na HTML + CSS webový design - (náš cíl je širší, informatika, nikoliv jen HTML kódování)
+*   work across many OS/device platforms, including mobile and tablets
+*   work across multiple languages
+*   promote learning by all demographic groups (esp under-represented groups)
+*   not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
 
 **Výukové programy jsou zařazeny níže, mají-li následující kritéria:**
 
 *   nižší kvalita
 *   pokročilejší úroveň výuky (nikoliv pro začátečníky)
 *   mají omezený počet podporovaných provozních platforem operační systém/hardware - webová platforma by měla podporovat všeobecně používané prohlížeče: IE9 a výš, nejnovější verze Chrome, Firefox a Safari
-*   prácuje pouze v angličtině
+*   pracuje pouze v angličtině
 *   genderově neutrální (např. tematicky zaměřené především na chlapce)
 *   slouží jako nabídka vzdělávací platformy s výběrem školného
 
@@ -73,13 +72,13 @@ Všimněte si též, že CSEdWeek 2013 měl fantastický úspěch, měřeno reak
 
 Jako výsledek loňské kampaně jsou zápisy s rozhodně "dost dobré", hnací důvod při přidávání výukových materiálů do akce Hodina kódu není rozšířit možnosti, ale zvýšit kvalitu (resp. aktuálnost) pro studenty nebo rozšířit možnosti pro neanglické mluvčí s ohledem na globální povahu kampaně 2014.
 
-[**Zpět na začátek**][10]
+[**Zpět na začátek**][9]
 
- [10]: #top
+ [9]: #top
 
 <a id="guidelines"></a>
 
-## Všeobecné pokyny pro vytvoření aktivity Hodina kódu
+## Všeobecné pokyny pro vytvoření aktivity Hodiny kódu
 
 *   **Předmět:** Úvodní informatika nebo programování (nikoliv HTML).
 *   **Cíl:** Zpřístupnit začátečníkům první kontakt s programováním.
@@ -92,15 +91,15 @@ Jako výsledek loňské kampaně jsou zápisy s rozhodně "dost dobré", hnací 
     *   **Dobře, ale ne upřednostňované:** instalovat aplikace, desktopové aplikace nebo zkušenosti z herní konzole .
 *   **Formát:** Samostatně vedené kurzy nebo lekce, volitelně ulehčené učitelem. Měly by být pokyny pro studenty na rozdíl od otevřeně končící hodiny s delší výzvou. Ideální je, aby instrukce a návody byly zabudované přímo do programovací platformy, aby se zabránilo přepínání karet nebo oken mezi výukovým programem a programovací platformou.
 
-[**Zpět na začátek**][10]
+[**Zpět na začátek**][9]
 
 <a id="submit"></a>
 
 ## Jak odeslat (do 10/1/2014)
 
-Navštivte [stránku Hodina kód aktivita odesílání ][11] a postupujte podle pokynů k odeslání vašeho kurzu.
+Navštivte [stránku Hodina kód aktivita odesílání ][10] a postupujte podle pokynů k odeslání vašeho kurzu.
 
- [11]: https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform
+ [10]: https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform
 
 **Co budete potřebovat:**
 
@@ -126,8 +125,8 @@ Navštivte [stránku Hodina kód aktivita odesílání ][11] a postupujte podle 
     *   Výukové programy by měly specifikovat, které jazyky podporují s použitím dvouznakového jazykového kódu, například en - anglicky; Ja - japonština
     *   Je-li třeba specifikovat úžeji jazyk, provede se to pomlčkou, např. fr-be - francouzština (Belgie) nebo fr-ca - francouzština (Kanada)
     *   ***Poznámka: Rozpoznání jazyka je práce zprostředkovatele kurzu, přesměrujeme všechny uživatele na jednu zadanou URL adresu.*** 
-*   Když zasíláte online kurz, musíme vědět, zda je [COPPA kompatibilní][12] nebo nikoliv.
-*   Doporučený stupeň úrovně pro zamýšleného uživatele. Můžete se podívat na [Computer Science Teachers’ Association’s K-12 Standards][13] pro vhodné počítačové vědy pojmy jednotlivých tříd. Příklad školních tříd: 
+*   Když zasíláte online kurz, musíme vědět, zda je [COPPA kompatibilní][11] nebo nikoliv.
+*   Doporučený stupeň úrovně pro zamýšleného uživatele. Můžete se podívat na [Computer Science Teachers’ Association’s K-12 Standards][12] pro vhodné počítačové vědy pojmy jednotlivých tříd. Příklad školních tříd: 
     *   Základní škola: nižší stupeň K-2 nebo 3-5
     *   Základní škola: vyšší stupeň třídy 6-8
     *   Střední školy: třídy 9-12
@@ -150,19 +149,19 @@ Navštivte [stránku Hodina kód aktivita odesílání ][11] a postupujte podle 
     *   Pro offline aktivity 
         *   Počet stažení papírové verze aktivity (je-li k dispozici)
 
- [12]: http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act
- [13]: http://csta.acm.org/Curriculum/sub/K12Standards.html
+ [11]: http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act
+ [12]: http://csta.acm.org/Curriculum/sub/K12Standards.html
 
-[**Zpět na začátek**][10]
+[**Zpět na začátek**][9]
 
 <a id="design"></a>
 
 ## Návrhy pro plánování činnosti
 
-**Začlenění CSEdWeek logo do vašeho kurzu.** Logo CSEdWeek ([malé][14] nebo [velké][15]) můžete zahrnout do vašeho kurzu, ale není to požadováno. Můžete nás též kontaktovat, abyste si požádali o zvláštní povolení používat loga "in Partnership with Code.org". ***Toto logo lze použít pouze v případě uděleného konkrétního písemného povolení od Code.org.*** Možná se nakonec vytvoří logo akce Hodina kódu, ale v této chvíli jej nemáme. Za žádných okolností nelze použít ani Code.org logo, ani název . Obojí jsou ochrannou známkou a nelze je zamíchat s názvem značky třetí strany.
+**Začlenění CSEdWeek logo do vašeho kurzu.** Logo CSEdWeek ([malé][13] nebo [velké][14]) můžete zahrnout do vašeho kurzu, ale není to požadováno. Můžete nás též kontaktovat, abyste si požádali o zvláštní povolení používat loga "in Partnership with Code.org". ***Toto logo lze použít pouze v případě uděleného konkrétního písemného povolení od Code.org.*** Možná se nakonec vytvoří logo akce Hodina kódu, ale v této chvíli jej nemáme. Za žádných okolností nelze použít ani Code.org logo, ani název . Obojí jsou ochrannou známkou a nelze je zamíchat s názvem značky třetí strany.
 
- [14]: https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg
- [15]: https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png
+ [13]: https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg
+ [14]: https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png
 
 **Ujistěte se, že průměrný student může pohodlně dokončit hodinu.** Zvažte zařazení na konci otevřené aktivity pro studenty, kteří rychleji zvládnou hodinu. Nezapomínejte, že většina dětí jsou absolutní začátečníci v informatice a kódování.
 
@@ -175,7 +174,7 @@ Navštivte [stránku Hodina kód aktivita odesílání ][11] a postupujte podle 
 
 **Začlenit na konci činnosti zpětnou vazbu .** (Např.: "dokončil jste 10 úrovní a naučil jste se o cyklech! Skvělá práce!")
 
-**Začlenit sociální média.** Povzbuzovat studenty, aby při dokončení přispívali na sociální média (kde je to vhodné), například "udělal jsem Hodinu kódu s \_\_\_|\\_\_\_|\__ , máš taky? #HourOfCode" nebo "udělal jsem #HourofCode jako součást #CSEdWeek. Už jste udělali? @Scratch." Použijte mřížkovou značku**#HourOfCode** (s písmeny H, O, C)
+**Začlenit sociální média.** Povzbuzovat studenty, aby při dokončení přispívali na sociální média (kde je to vhodné), například "udělal jsem Hodinu kódu s ________, máš taky? #HourOfCode" nebo "udělal jsem #HourofCode jako součást #CSEdWeek. Už jste udělali? @Scratch." Použijte mřížkovou značku**#HourOfCode** (s písmeny H, O, C)
 
 **Vytvořit aktivitu v jazycích mimo angličtiny.** Tento rok zaměřujeme tuto kampaň mezinárodně a rádi bychom chtěli nabízet řadu aktivit neanglicky mluvících účastníků.
 
@@ -183,9 +182,9 @@ Navštivte [stránku Hodina kód aktivita odesílání ][11] a postupujte podle 
 
 **Nepožaduje registraci nebo platbu předem, než si mohou studenti vyzkoušet váš kurz.** Výukové programy vyžadující registraci nebo platbu nebudou zařazeny
 
-**Ujistěte se, zda váš kurz může být použit v [ Párovém programovacím paradigmu][16].**
+**Ujistěte se, zda váš kurz může být použit v [ Párovém programovacím paradigmu][15].**
 
- [16]: http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning
+ [15]: http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning
 
 Tři pravidla programování ve dvojici v prostředí školy:
 
@@ -199,7 +198,7 @@ Výhody programování ve dvojici:
 *   Ukázuje se, že kódování, není sólovou činností, ale zahrnuje sociální interakce
 *   Ne vždy učebny nebo laboratoře mají dostatek počítačů, pro 1:1 zážitek
 
-[**Zpět na začátek**][10]
+[**Zpět na začátek**][9]
 
 <a id="tm"></a>
 
@@ -217,7 +216,7 @@ Jedna část toho je ochránit ochrannou známku "Hour of Code", aby nedošlo k 
 
 4.  Nepoužívejte název "Hodina kódu" v názvech aplikací
 
-[**Zpět na začátek**][10]
+[**Zpět na začátek**][9]
 
 <a id="pixel"></a>
 
@@ -237,7 +236,7 @@ IMG SRC = "http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC = "http://code.org/api/hour/finish_appinventor.png/"
 
-[**Zpět na začátek**][10]
+[**Zpět na začátek**][9]
 
 <a id="promote"></a>
 
@@ -251,12 +250,12 @@ Obracíme se žádostí na každého, aby podpořil jejich vlastním 1 hodinový
 *   Hostujte ji jako místní událost nebo požádejte vaše zaměstnance, aby hostili akci v místních školách nebo komunitních skupinách.
 *   Viz naše sada zdrojů, kde najdete další informace (přijde brzy).
 
-[**Zpět na začátek**][10]
+[**Zpět na začátek**][9]
 
 <a id="disabilities"></a>
 
-## Zvláštní poznámka pro studenty se zdravotním postižením
+## A special note for students with disabilities
 
 Pokud vytváříte kurz určený pro zrakově postižené, rádi bychom, abyste zvýraznili , že se jedná o možnost použít nástroje pro čtení obrazovky. Zatím jsme Jsme dosud nedostaly takový výukový program. který by zahrnoval takovou možnost pro takovéto studenty.
 
-[**Zpět na začátek**][10]
+[**Zpět na začátek**][9]
