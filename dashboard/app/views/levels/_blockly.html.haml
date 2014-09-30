@@ -34,6 +34,8 @@
     // See assets/javascripts/sendReport for definition of lastServerResponse
     var appOptions = {
       levelId: '#{@level.level_num}',
+      #{ "level_source_id: #{@level_source_id}," if @level_source_id }
+      #{ "send_to_phone_url: '#{@phone_share_url}'," if @phone_share_url }
       #{ "disableSocialShare: true," if @current_user && (@current_user.age.nil? || @current_user.age < 13) }
       #{ "scriptId: '#{@script.id}'," if @script }
       #{ "levelGameName: '#{@level.game.name}'," if @level.game }
