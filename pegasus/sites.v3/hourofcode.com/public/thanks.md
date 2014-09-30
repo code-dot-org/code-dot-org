@@ -2,6 +2,12 @@
 title: Thanks for signing up to host an Hour of Code!
 layout: wide
 ---
+<%
+  facebook = {:u=>"http://#{request.site}/"}
+
+  twitter = {:url=>"http://#{request.site}/", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+%>
 
 # Thanks for signing up to host an Hour of Code!
 
@@ -15,6 +21,8 @@ Get your [whole school to participate](/us/prizes) for a chance for big prizes f
 
 ## 1. Spread the word 
 Tell your friends about the #HourOfCode. 
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 <% if @country == 'us' %>
 
@@ -37,4 +45,4 @@ Recruit a local group — boy scouts club, church, university, veterans group or
 ## 5. Ask a local elected official to support the Hour of Code
 [Send this email](/resources#email) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
-
+<%= view 'popup_window.js' %>
