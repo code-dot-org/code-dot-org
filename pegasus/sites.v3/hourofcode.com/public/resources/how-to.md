@@ -54,7 +54,6 @@ Most kids don’t know what computer science is. Here are some ideas:
 - Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
 - Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
 - It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
-- Check the [Hour of Code forum](http://forums.code.org/?forum=322773) to ask questions and see FAQs. 
 
 **What to do if a student finishes early?**
 
@@ -63,9 +62,9 @@ Most kids don’t know what computer science is. Here are some ideas:
 
 **How do I print certificates for my students?**
 
-Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our [Certificates](/certificates) page to print as many certificates as you like, in one fell swoop! :-)
+Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our [Certificates](http://code.org/certificates) page to print as many certificates as you like, in one fell swoop!
 
 **What comes after the Hour of Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, find additional resources for educators [here](/educate). Or encourage your children to learn [online](/learn/beyond) or in a [local camp or workshop](/learn/local)
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, find additional resources for educators [here](http://code.org/educate). Or encourage your children to learn [online](http://code.org/learn/beyond).
 

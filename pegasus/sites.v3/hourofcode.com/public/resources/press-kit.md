@@ -2,67 +2,58 @@
 title: Resources
 nav: resources_nav
 ---
-# How to teach one Hour of Code
+## How to attract media to your Hour of Code event ##
 
-## 1) Try the tutorials: 
-We’ll host a variety of fun, hour-long tutorials on the for students of all ages created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+*For all press and media inquiries, contact [press@code.org](mailto:press@code.org)*
 
-**All Hour of Code tutorials:**
+### Key Tips ###
 
-- Require minimal prep-time for teachers
-- Are self-guided - allowing students to work at their own pace and skill-level
+- Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
+- Ask a school staff member or volunteer to take photos to share online or send to press.
+- Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
+- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 8-14. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
-[![image](http://code.org/images/tutorials.png)](http://code.org/learn)
+### Step-by-step guide:
 
+**1. Plan your event**
 
-## 2) Plan your hardware needs - computers are optional
+- Plan an assembly to kick off the Hour of Code.
+- Send [a letter](/resources#sample-emails) to parents. Ask them to spread the word.
+- Send [a letter](/resources#sample-emails) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+- Organize group activities (like a demonstration of an ‘unplugged’ programming activity), or show off student-created and led activities.
+- Show Code.org’s [Hour of Code video](http://hourofcode.com) or one of [these](/resources#videos) to inspire.
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all. 
+**2.  Identify specific local reporters that cover education or local events.**
 
-- **Test tutorials on student computers or devices.** Make sure they work properly (with sound and video). For more help, [see our IT requirements](http://code.org/educate/it).
-- **Preview the congrats page** to see what students will see when they finish. 
-- **Provide headphones for your class**, or ask students to bring their own, if the tutorial you choose works best with sound.
-- **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
-- **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged/offline tutorials.
+Think a local newspaper, TV station, radio station or blog. 
 
-## 4) Inspire students - show them a video
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
 
-Show students [this video](http://www.youtube.com/watch?v=FC5FbmsH4fw) to kick off the Hour of Code. Also check out [these videos](http://youtube.com/codeorg), featuring Bill Gates, Mark Zuckerberg, Black Eyed Peas founder will.i.am and NBA star Chris Bosh talking about the importance of programming.
-(There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
+**3. Contact local media**
 
-**Get your students excited - give them a short intro**
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](/resources#sample-emails):**
+	
+**4. Prepare to field questions about your school event. Here are some examples:**
 
-Most kids don’t know what computer science is. Here are some ideas:
+*Why is your school doing an Hour of Code?*
 
-- Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-- Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-- Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-- See tips for getting girls interested in computer science [here](/girls). 
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
 
-## 5) Start your Hour of Code
+We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages. 
 
-**Direct students to the activity**
+*Why is this important?*
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://code.org/learn) under the number of participants. (Example: [hourofcode.com/co](http://code.org/learn)) 
-- Tell students to visit the URL and start the tutorial.
+In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will allow give them the confidence and know-how to succeed.
 
-**When your students come across difficulties**
+**More details and a quote you can use in materials**
 
-- Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-- Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-- It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
-- Check the [Hour of Code forum](http://forums.code.org/?forum=322773) to ask questions and see FAQs. 
+"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
-**What to do if a student finishes early?**
+**About Code.org**
 
-- Students can see all tutorials and try another Hour of Code activity at [code.org/learn](http://code.org/learn).
-- Or, ask students who finish early to help classmates who are having trouble with the activity.
+Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [www.code.org](http://code.org).
 
-**How do I print certificates for my students?**
+<br />
+Find more resources and sample emails [here](/resources).
 
-Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our [Certificates](/certificates) page to print as many certificates as you like, in one fell swoop! :-)
-
-**What comes after the Hour of Code?**
-
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, find additional resources for educators [here](/educate). Or encourage your children to learn [online](/learn/beyond) or in a [local camp or workshop](/learn/local)
 
