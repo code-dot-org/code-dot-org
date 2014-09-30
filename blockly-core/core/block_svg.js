@@ -1020,7 +1020,6 @@ Blockly.BlockSvg.prototype.renderDrawRight_ = function(steps, connectionsXY,
           connectionX = connectionsXY.x + oppositeIfRTL(cursorX +
                 BS.TAB_WIDTH - BS.SEP_SPACE_X -
                 input.renderWidth + 1);
-          console.log(this.block_.type + " " + connectionX);
 
           connectionY = connectionsXY.y + cursorY +
               BS.INLINE_PADDING_Y;
