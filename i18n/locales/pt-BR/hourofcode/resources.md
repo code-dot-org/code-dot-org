@@ -1,6 +1,6 @@
 * * *
 
-title: Resources
+título: Recursos
 
 ## layout: wide
 

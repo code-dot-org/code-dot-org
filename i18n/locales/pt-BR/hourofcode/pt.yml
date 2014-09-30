@@ -4,7 +4,7 @@ pt-BR:
   front_title: Participe do maior evento de aprendizagem da história, de 8 a 14 de dezembro de 2014
   coming_soon: Em breve
   front_header_banner: Participe do maior evento de aprendizagem da história, de 8 a 14 de dezembro de 2014
-  front_intro_default: 'A hora de código é um movimento global que atinge dezenas de milhões de estudantes em mais de 170 países. Qualquer pessoa em qualquer lugar pode organizar um evento de Hora de Código. Tutoriais de uma hora estão disponíveis em mais de 30 idiomas. <strong>Não é necessária qualquer experiência. Idades de 4 a 104.</strong>'
+  front_intro_default: 'A hora de código é um movimento global que atinge dezenas de milhões de estudantes em mais de 170 países. Qualquer pessoa em qualquer lugar pode organizar um evento de Hora de Código. Tutoriais de uma hora estão disponíveis em mais de 30 idiomas. Não é necessária qualquer experiência. <strong>Idades de 4 a 104.</strong>'
   front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 170 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>No se necesita experiencia. Para edades entre 4 y 104 años.</strong>'
   front_watch_video: Watch the new video
@@ -22,7 +22,7 @@ pt-BR:
   country_ro: Romênia
   country_uk: Reino Unido
   country_us: Estados Unidos
-  prizes_all: Prizes for every organizer
+  prizes_all: Prêmios para os organizadores
   prizes_every_organizer: Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you
   prizes_technology: 'One public school in every US state (& Washington DC) will win $10,000 worth of technology'
   prizes_tech_chats: 50 classrooms will win video chats with very special guests
@@ -131,19 +131,19 @@ pt-BR:
   hoc_faq_tutorial_ar_a: "Si usted está interesado en convertirse en un socio para tutoriales, <a href='/tutorial-guidelines'>vea nuestras directrices e instrucciones</a>. Nos gustaría presentar varias opciones atractivas, pero la meta principal es optimizar la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales."
   stats_hoc_2013_heading: 'Estatísticas incríveis da Hora do Código do ano passado. Em apenas uma semana:'
   stats_hoc_2013_image_alt: Estatísticas da Hora do Código de 2013
-  stats_growth: It was the fastest to reach 15 million users.
-  stats_tumblr: 'Tumblr: 3.5 years'
-  stats_facebook: 'Facebook: 3 years'
-  stats_twitter: 'Twitter: 2.5 years'
-  stats_pinterest: 'Pinterest: 2 years'
-  stats_instagram: 'Instagram: 14 months'
-  stats_hoc: 'The Hour of Code: 5 days'
-  stats_global: 15 million students in 170 countries learned an Hour of Code.
-  stats_girls_more: More girls tried computer science than in the last 70 years.
-  stats_girls_million: Over 10 million girls in 2013
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
-  stats_michael: 'I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_growth: Foi o mais rápido a chegar a 15 milhões de usuários.
+  stats_tumblr: 'Tumblr: 3,5 anos'
+  stats_facebook: 'Facebook: 3 anos'
+  stats_twitter: 'Twitter: 2,5 anos'
+  stats_pinterest: 'Pinterest: 2 anos'
+  stats_instagram: 'Instagram: 14 meses'
+  stats_hoc: 'Hora do Código: 5 dias'
+  stats_global: 15 milhões de estudantes de 170 países participaram da Hora do Código.
+  stats_girls_more: Mais meninas tiveram contato com a ciência da computação com a Hora do Código do que em toda a história da computação.
+  stats_girls_million: Mais de 10 milhões de meninas em 2013
+  stats_nina: '"Todos os dias produziram os mesmos resultados&mdash; 100% comprometidos." - Nina Nichols Peery, Professor'
+  stats_student: '"Eu sabia que esta era uma chance <b>única</b>." - Mariana Alzate, Aluno do 5º ano'
+  stats_michael: '"Eu <b>nunca, nunca</b> vi meus alunos tão animados para aprender." - Michael Clark, Professor'
   footer_copyright_message: Copyright 2014 Code.org. Todos os direitos reservados.
   footer_trademark_message: Hour of Code™ é uma marca registrada de Code.org.
   footer_menu_contact: Contact us

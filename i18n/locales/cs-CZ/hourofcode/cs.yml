@@ -4,7 +4,7 @@ cs:
   front_title: Připojte se 14. prosince 2014 k největší vzdělávací události v historii
   coming_soon: Bude to brzy
   front_header_banner: Připojte se 14. prosince 2014 k největší vzdělávací události v historii
-  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
+  front_intro_default: 'Hodina kódu je celosvětová akce, které se zúčastní desítky milionů studentů z přes 170 zemí světa. Kdokoliv si může zorganizovat  událost Hodinu kódu.  Jsou k dispozici jednohodinové výukové programy. Nejsou požadované předem zkušenosti. <strong>Věk 4 až 104.</strong>'
   front_intro_default_uk: 'Hodina kódu je globální hnutí, kterého se zúčastnilo desítky milionů studentů ve více než 170 zemích. Přes 3 miliony studentů si udělalo první hodinu kódu v Británii. Zdvojnásobme  toto číslo v prosinci! <strong>Nejsou vyžadované zkušenosti. Věk prakticky neomezený - 4 až 104.</strong>'
   front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando decenas de millones de estudiantes en más de 170 atd. Cualquier osobnost, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>Bez experiencia se necesita. Para edades entre 4 y 104 година.</strong>'
   front_watch_video: Watch the new video
@@ -113,7 +113,7 @@ cs:
   hoc_faq_when_is_hoc_uk_a: "Hodina kódu proběhne 8. až 14. prosince 2014. Je to jedna konkrétní <i>hodina</i>? Ne. Hodinu kódu si můžete udělat kdykoliv během tohoto týdne. Hodina kódu v Británii se uskuteční ve stejném čase jako v USA načasované jako roční oslava <a href='http://csedweek.org'> Týdne informatiky.</a>"
   hoc_faq_behind_hoc_uk_q: 'Kdo je  v pozadí za událostí Hodina kódu?'
   hoc_faq_behind_hoc_uk_a: "Akci Hodina kódu organizuje  <a href='http://uk.code.org'>Code.org</a> veřejná nezisková organizace (podle US 501c3), která se věnuje rozšíření účasti v informatice ve více školách, zvýšení účasti žen a  málo zastoupených skupin studentů (menšin).  <a href='http://uk.code.org/about/partners'>nevídaná koalice partnerů</a> se dala taky dohromady k podpoře akce Hodina kódu &mdash; včetně Microsoftu, Googlu, Cambridge University Press, Tech City a Ministerstva pro vzděláni."
-  hoc_faq_host_uk_q: Nevím nic o kódování. Mohu hostovat akci?
+  hoc_faq_host_uk_q: Nevím nic o programování. Mohu hostovat akci?
   hoc_faq_host_uk_a: "Samozřejmě. Aktivita Hodinu kódu je vedená samostatně. Jediné, co si musíte udělat, je vybrat si kurz a  hodinu &mdash; o ostatní se postaráme my. Máme totiž nabídky pro každý věk a úroveň zkušeností, od školky a výše. <a href='http://code.org/learn'>Vyzkoušejte naše současné kurzy</a>."
   hoc_faq_what_is_hoc_ar_q: Qué es la Hora de Program.AR?
   hoc_faq_what_is_hoc_ar_a: "La Hora de Program.AR es una introducción de una hora a la ciencia computacional, diseñada para desmitificar la programación y demostrar que cualquiera puede aprender los conceptos básicos. <a href='http://code.org/learn'>Revisa los tutoriales</a> y busca otros nuevos para la Hora de Program.AR del 2014."

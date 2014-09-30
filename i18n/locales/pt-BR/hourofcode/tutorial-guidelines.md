@@ -10,7 +10,7 @@ Gostaríamos de disponibilizar uma variedade de opções atrativas, mas nosso ob
 
 <a id="top"></a>
 
-## Index:
+## Índice:
 
 *   [Como os tutoriais serão avaliados para inclusão][1]
 *   [Diretrizes gerais para criação de uma atividade da Hora do Código][2]
@@ -42,10 +42,10 @@ Uma comissão de professores de ciência da computação classificará os tutori
 *   Autoexplicativos, ou seja, não necessitam de instrução
 *   Projetados para iniciantes
 *   Projetados como uma atividade de aproximadamente 1 hora
-*   work across many OS/device platforms, including mobile and tablets
-*   work across multiple languages
-*   promote learning by all demographic groups (esp under-represented groups)
-*   not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
+*   Operam em diversas plataformas de SO/dispositivos, inclusive telefones celulares e tablets
+*   Operam em diferentes idiomas
+*   Promovem o aprendizado em todos os grupos demográficos (especialmente grupos sub-representados)
+*   Não são voltados apenas para projeto de websites HTML+CSS - (nosso objetivo é a ciência da computação, e não apenas codificação HTML)
 
 **Os tutoriais terão classificação mais baixa na lista se apresentarem as seguintes características:**
 
@@ -254,7 +254,7 @@ Estamos pedindo para que cada um divulgue seu próprio tutorial de 1 hora aos us
 
 <a id="disabilities"></a>
 
-## A special note for students with disabilities
+## Aviso para estudantes com necessidades especiais
 
 Se você criar um tutorial voltado para pessoas com deficiência visual, adoraríamos divulgá-lo para os usuários com leitores de tela. Ainda não recebemos nenhum tutorial com esse perfil, e estamos ansiosos para disponibilizar essa opção para esses estudantes.
 
