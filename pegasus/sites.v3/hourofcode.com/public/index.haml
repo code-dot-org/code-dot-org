@@ -5,25 +5,25 @@ title: "<%= hoc_s(:front_title) %>"
 social:
   "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
   "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.site%>/images/hour-of-code-2014-video-thumbnail.jpg"
+  "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg"
   "og:image:width": 1705
   "og:image:height": 949
-  "og:url": "http://<%=request.site%>"
+  "og:url": "http://<%=request.host%>"
 
   "twitter:card": player
   "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.site%>"
+  "twitter:url": "http://<%=request.host%>"
   "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.site%>/images/hour-of-code-2014-video-thumbnail.jpg"
+  "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg"
   "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
   "twitter:player:width": 1920
   "twitter:player:height": 1080
 ---
 
--facebook = {:u=>"http://#{request.site}/"}
+-facebook = {:u=>"http://#{request.host}/"}
 
--twitter = {:url=>"http://#{request.site}/", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+-twitter = {:url=>"http://#{request.host}/", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
 -twitter[:hashtags] = 'HourOfCode' unless hoc_s(:front_header_banner).include? '#HourOfCode'
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
@@ -73,7 +73,7 @@ social:
               %div{style:"clear:both"}
             #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; /*margin-top:100px; */ width:100%"}
               %h1.front-header-banner{style: "color:white; text-shadow: 0px 0px 4px rgba(31, 31, 31, 1); margin-top: 0px; margin-bottom:10px; padding:20px"} Watch the new video
-              %img{src: "/images/play-button.png", width: "120", onclick: "return startVideo();", style: "cursor:pointer"}
+              %img{src: "/images/play-button.png", width: "120", onclick: "return startVideo();"}
         .col-sm-4.col-xs-12
           #textbacking{style: "color:white; text-align: center; background-color:rgba(0,0,0,0.5); margin-top:50px; padding: 20px"}
             %h1.front-header-banner{style: "color:white; margin-top:0px"}= hoc_s(:front_header_banner)
@@ -115,7 +115,7 @@ social:
     .col-xs-6.col-sm-4{style: "text-align:center"}
       %p 15 million students in 170 countries learned an Hour of Code
       %img{src: "/images/stats-info2.jpg", style: "width: 100%"}
-      
+
     .hidden-xs.col-sm-4{style: "text-align:center"}
       %p More girls tried computer science than in the last 70 years
       %img{src: "/images/stats-info3.jpg", style: "width: 100%"}

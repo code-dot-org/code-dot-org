@@ -5,25 +5,25 @@ layout: wide
 social:
   "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
   "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.site%>/images/hour-of-code-2014-video-thumbnail.jpg"
+  "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg"
   "og:image:width": 1705
   "og:image:height": 949
-  "og:url": "http://<%=request.site%>"
+  "og:url": "http://<%=request.host%>"
 
   "twitter:card": player
   "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.site%>"
+  "twitter:url": "http://<%=request.host%>"
   "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.site%>/images/hour-of-code-2014-video-thumbnail.jpg"
+  "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg"
   "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
   "twitter:player:width": 1920
   "twitter:player:height": 1080
 ---
 <%
-  facebook = {:u=>"http://#{request.site}/"}
+  facebook = {:u=>"http://#{request.host}/"}
 
-  twitter = {:url=>"http://#{request.site}/", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter = {:url=>"http://#{request.host}/", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
   twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
