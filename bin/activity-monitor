@@ -44,9 +44,7 @@ class Collater
 
   def each_by_browser()
     browsers = @results[:browsers]
-    browsers.keys.sort do |a, b|
-      a.cdo_name <=> b.cdo_name
-    end.each do |browser|
+    browsers.keys.sort{|a, b| a.cdo_name <=> b.cdo_name}.each do |browser|
       browsers[browser].keys.sort.each do |level|
         i = browsers[browser][level]
         yield i.merge(browser:browser, level:level)
