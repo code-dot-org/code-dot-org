@@ -3,11 +3,11 @@
     %h3.whitetext= data_t_suffix('script.name', current_user.primary_script.name, "title")
   .span3#heading{style: 'text-align: right;'}
     %a.level_link{href: playlab_freeplay_path}
-      %span.puzzle-unplugged
+      %span.puzzle-named
         %i.fa.fa-rocket
         = t('nav.header.free_play.playlab')
     %a.level_link{href: artist_freeplay_path}
-      %span.puzzle-unplugged
+      %span.puzzle-named
         %i.fa.fa-pencil
         = t('nav.header.free_play.artist')
 
