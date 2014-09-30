@@ -112,6 +112,7 @@
   hoc_faq_title: 'FAQs'
   hoc_faq_what_is_hoc_q: 'What is the Hour of Code?'
   hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
+  hoc_faq_last_year: "Try last year's tutorials"
   hoc_faq_when_is_hoc_q: 'When is the Hour of Code?'
   hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 8-14, 2014, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)." 
   hoc_faq_why_cs_q: 'Why computer science?'
