@@ -18,9 +18,9 @@
   },
   "header_links": {
     "HOME": "/",
-    "KIDS": "/learn",
+    "STUDENTS": "/learn",
     "TEACHERS": "/educate",
-    "GROWN-UPS": "/about"
+    "ADULTS": "/about"
   },
   "footer_links": {
     "Tutorials": "/learn",

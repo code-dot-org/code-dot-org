@@ -46,3 +46,6 @@
   padding: 2px 8px;
   min-height: 28px;
 }
+label.has-error {
+  color: #b94a48;
+}
