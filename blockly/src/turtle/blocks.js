@@ -28,6 +28,7 @@ var msg = require('../../locale/current/turtle');
 var commonMsg = require('../../locale/current/common');
 
 var customLevelBlocks = require('./customLevelBlocks');
+var functionalBlocks = require('./functionalBlocks');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -879,5 +880,6 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   customLevelBlocks.install(blockly, generator, gensym);
+  functionalBlocks.install(blockly, generator, gensym);
 
 };
