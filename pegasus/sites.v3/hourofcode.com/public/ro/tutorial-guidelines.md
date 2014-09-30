@@ -1,32 +1,34 @@
+---
+layout: wide
+---
+
 # Recomandări si explicații pentru Hour of Code și săptămâna Computer Science Education
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn][1].
-
- [1]: http://code.org/learn
+Code.org va găzdui o varietate de activităţi dedicate tehnologiei computerelor si programării, pe website-urile Code.org, Hour of Code şi CSEdWeek. Lista curentă a activităților este la <http://code.org/learn>.
 
 Ne dorim sa găzduim o varietate de elemente interactive, dar obiectivul principal este de a optimiza experienţa pentru elevi şi profesori care sunt începători în ceea ce priveste tehnologia computerelor. Vă rugăm să folosiţi acest document ca și ghid pentru organizarea activității, orientată către utilizatorul care nu are nici o experiență în informatică, programare sau tehnologia calculatorului.
 
 <a id="top"></a>
 
-## Cuprins:
+## Index:
 
-*   [Cum vor fi evaluate tutorialele pentru includere][2]
-*   [Recomandări generale pentru a organiza o activitate Hour of Code][3]
-*   [Cum să trimiteți (Termen limită 1/10/2014)][4]
-*   [Sugestii pentru proiectarea activității][5]
-*   [Recomandarile legate de Marca Inregistrată][6]
-*   [Pixel pentru tracking][7]
-*   [Promovarea tutorialelor dumneavoastră, CSEdWeek, și Hour of Code][8]
-*   [O notă pentru elevii cu dizabilități][9]
+*   [Cum vor fi evaluate tutorialele pentru includere][1]
+*   [Recomandări generale pentru a organiza o activitate Hour of Code][2]
+*   [Cum să trimiteți (Termen limită 1/10/2014)][3]
+*   [Sugestii pentru proiectarea activității][4]
+*   [Recomandarile legate de Marca Inregistrată][5]
+*   [Pixel pentru tracking][6]
+*   [Promovarea tutorialelor dumneavoastră, CSEdWeek, și Hour of Code][7]
+*   [O notă pentru elevii cu dizabilități][8]
 
- [2]: #inclusion
- [3]: #guidelines
- [4]: #submit
- [5]: #design
- [6]: #tm
- [7]: #pixel
- [8]: #promote
- [9]: #disabilities
+ [1]: #inclusion
+ [2]: #guidelines
+ [3]: #submit
+ [4]: #design
+ [5]: #tm
+ [6]: #pixel
+ [7]: #promote
+ [8]: #disabilities
 
 <a id="inclusion"></a>
 
@@ -40,13 +42,10 @@ Un comitet de profesori din domeniul tehnologiei computerelor vor nota tutoriale
 *   ușor de înteles, nu are nevoie de instrucţiuni
 *   proiectat pentru incepatori
 *   conceput pentru ~ o 1 oră de activitate
-*   nu necesită înregistrare 
-*   nu necesită plată
-*   nu necesită instalare
-*   functionează pe mai multe sisteme de operare sau dispozitive, inclusiv smartphone şi tablete
-*   funcționează în mai multe limbi straine
-*   se adresează tuturor grupurilor demografice (de ex. minorități)
-*   să nu existe un focus exclusiv HTML + CSS - (scopul acestuia fiind tehnologia computerelor în general și nu doar programare HTML)
+*   work across many OS/device platforms, including mobile and tablets
+*   work across multiple languages
+*   promote learning by all demographic groups (esp under-represented groups)
+*   not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
 
 **Tutorialul va avea punctaj mai mic dacă este:**
 
@@ -73,9 +72,9 @@ De asemenea, reţineţi că în 2013 CSEdWeek a avut un succes fantastic conform
 
 Ca rezultat, tutorialele existente sunt cu siguranţă "suficient de bune" şi motivul principal pentru a adăuga tutoriale noi in cadrul Hour of Code, nu este de a mari numărul opțiunilor, ci de a crește calitatea (sau interactivitarea) pentru elevi, sau pentru a crește opţiunile pentru non-vorbitorii de engleză, având în vedere natura globală a campaniei 2014.
 
-[**La începutul paginii**][10]
+[**La începutul paginii**][9]
 
- [10]: #top
+ [9]: #top
 
 <a id="guidelines"></a>
 
@@ -92,15 +91,15 @@ Ca rezultat, tutorialele existente sunt cu siguranţă "suficient de bune" şi m
     *   **OK, dar nu de preferat:** Aplicații care se instalează, aplicații desktop, sau experienţe de joc pe consolă.
 *   **Format:** Tutoriale intuitive sau lecţii, opţional, facilitate de către profesor. Ar trebui să existe îndrumări pentru elevi, spre deosebire de provocări de rezolvat într-o oră. În mod ideal, instrucţiunile şi tutorialele sunt integrate direct în platformă, pentru a evita întreruperea exterienței prin navigarea între tab-uri sau ferestre între tutorial şi platformă.
 
-[**La începutul paginii**][10]
+[**La începutul paginii**][9]
 
 <a id="submit"></a>
 
 ## Cum să trimiteți (Termen limită 1/10/2014)
 
-Vizitaţi [pagina Hour of Code pentru înregistrarea activității][11] şi urmaţi paşii pentru a trimite tutorialul dumneavoastră.
+Vizitaţi [pagina Hour of Code pentru înregistrarea activității][10] şi urmaţi paşii pentru a trimite tutorialul dumneavoastră.
 
- [11]: https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform
+ [10]: https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform
 
 **Ce aveţi nevoie:**
 
@@ -126,8 +125,8 @@ Vizitaţi [pagina Hour of Code pentru înregistrarea activității][11] şi urma
     *   Tutorialele trebuie să precizeze ce limbi suporta coduri de limba de 2 caractere, ex. en - engleza; Ja - japoneză
     *   Dacă mai multe specificații sunt necesare, folosiți linii, ex. fr-fi - franceză (Belgia) sau fr-ca - franceză (Canada)
     *   ***Notă: Detectarea limbii este atribuția furnizorului tutorialului, noi vom redirecţiona toți utilizatorii către un singur URL-ul furnizat.*** 
-*   Dacă trimiteţi un tutorial online, avem nevoie să ştim dacă este [COPPA compliant][12] sau nu.
-*   Nivelurile recomandate pentru utilizatorii vizați. Ne putem referi la [standardele asociației profesorilor de tehnologia computerelor pentru clasele 1-12][13] în cazul conceptelor de tehnologia computerelor în functie de clasa corespunzătoare. De exemplu: 
+*   Dacă trimiteţi un tutorial online, avem nevoie să ştim dacă este [COPPA compliant][11] sau nu.
+*   Nivelurile recomandate pentru utilizatorii vizați. Ne putem referi la [standardele asociației profesorilor de tehnologia computerelor pentru clasele 1-12][12] în cazul conceptelor de tehnologia computerelor în functie de clasa corespunzătoare. De exemplu: 
     *   Școala primară: clasele a 2-a sau 3-5
     *   Gimnaziu: clasele 6-8
     *   Liceu: 9-12
@@ -150,19 +149,19 @@ Vizitaţi [pagina Hour of Code pentru înregistrarea activității][11] şi urma
     *   Pentru activităţile offline 
         *   Numar de download-uri pentru versiunea de activitate pe suport de hârtie (după caz)
 
- [12]: http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act
- [13]: http://csta.acm.org/Curriculum/sub/K12Standards.html
+ [11]: http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act
+ [12]: http://csta.acm.org/Curriculum/sub/K12Standards.html
 
-[**La începutul paginii**][10]
+[**La începutul paginii**][9]
 
 <a id="design"></a>
 
 ## Sugestii pentru proiectarea activității
 
-**Includeți logo-ul CSEdWeek în tutorialul dvs.** Aveţi posibilitatea să includeţi logo-ul CSEdWeek ([mic][14] sau [mare][15]) în tutorialul dvs., dar acest lucru nu este obligatoriu. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***Acest logo-ul poate fi folosit numai în cazul în care primiți permisiunea Code.org în scris .*** Este posibil să creăm un logo Hour of Code, dar în acest moment nu avem unul. Logo-ul și numele Code.org nu pot fi folosite sub nici o formă fără o aprobare scrisă. Ambele sunt mărci înregistrate, şi nu poate fi incluse în brandul/ identitatea unei terțe părți.
+**Includeți logo-ul CSEdWeek în tutorialul dvs.** Aveţi posibilitatea să includeţi logo-ul CSEdWeek ([mic][13] sau [mare][14]) în tutorialul dvs., dar acest lucru nu este obligatoriu. De asemenea, ne puteți contacta pentru a solicita permisiuni specifice de a utiliza logo-ul "În Parteneriat cu Code.org". ***Acest logo-ul poate fi folosit numai în cazul în care primiți permisiunea Code.org în scris .*** Este posibil să creăm un logo Hour of Code, dar în acest moment nu avem unul. Logo-ul și numele Code.org nu pot fi folosite sub nici o formă fără o aprobare scrisă. Ambele sunt mărci înregistrate, şi nu poate fi incluse în brandul/ identitatea unei terțe părți.
 
- [14]: https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg
- [15]: https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png
+ [13]: https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg
+ [14]: https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png
 
 **Asiguraţi-vă că un elev mediu poate termina confortabil într-o oră.** Luaţi în considerare adăugarea unei activități cu final deschis, pentru elevii care trec mai repede prin lecţie. Amintiţi-vă că majoritatea copiilor vor fi începatori pentru tehnologia computerelor și programare.
 
@@ -175,7 +174,7 @@ Vizitaţi [pagina Hour of Code pentru înregistrarea activității][11] şi urma
 
 **Încorporați feedback la sfârşitul activităţii.** (Ex.: "ai terminat 10 nivele şi ai aflat despre bucle! Buna treaba!")
 
-**Includeți Social Media.** Încurajați elevii să posteze pe rețelele de socializare (după caz), atunci când termină, de exemplu "am terminat Hour of Code cu \___| Tu? #HourOfCode" sau "Am terminat #HourofCode ca parte a #CSEdWeek. Tu? @Scratch." Utilizează hashtag-ul **#HourOfCode** (cu litere mari H, O, C)
+**Includeți Social Media.** Încurajați elevii să posteze pe rețelele de socializare (după caz), atunci când termină, de exemplu "am terminat Hour of Code cu ________ Tu? #HourOfCode" sau "Am terminat #HourofCode ca parte a #CSEdWeek. Tu? @Scratch." Utilizează hashtag-ul **#HourOfCode** (cu litere mari H, O, C)
 
 **Creați activitatea dumneavoastră și în alte limbi în afară de engleză.** Noi promovam această campanie la nivel internaţional în acest an şi am dori să avem un număr de activităţi pentru participanţii care nu vorbesc engleză.
 
@@ -183,9 +182,9 @@ Vizitaţi [pagina Hour of Code pentru înregistrarea activității][11] şi urma
 
 **Nu solicitați înscriere sau plată înainte ca elevii sa poată încerca tutorialul.** Tutoriale care necesită înscriere sau plată nu vor fi listate
 
-**Asiguraţi-vă că tutorialul poate fi folosit într-o [paradigmă de Programare în Perechi][16].**
+**Asiguraţi-vă că tutorialul poate fi folosit într-o [paradigmă de Programare în Perechi][15].**
 
- [16]: http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning
+ [15]: http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning
 
 Cele trei reguli de programare în pereche într-un cadru educațional:
 
@@ -199,7 +198,7 @@ Beneficiile programarii în perechi:
 *   Arată că programarea nu este o activitate solo, ci una care implică interacţiunea socială
 *   Nu toate sălile de clasă sau laboratoarele au suficiente calculatoare pentru o experienţă de 1:1
 
-[**La începutul paginii**][10]
+[**La începutul paginii**][9]
 
 <a id="tm"></a>
 
@@ -217,7 +216,7 @@ Prin această acțiune protejam marca "Hour of Code" pentru a preveni confuzia. 
 
 4.  A nu se utiliza "Hour of Code" în numele aplicației
 
-[**La începutul paginii**][10]
+[**La începutul paginii**][9]
 
 <a id="pixel"></a>
 
@@ -237,11 +236,11 @@ IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**La începutul paginii**][10]
+[**La începutul paginii**][9]
 
 <a id="promote"></a>
 
-## Promovarea tutorialelor dumneavoastră, CSEdWeek și Hour of Code
+## Promovarea tutorialelor dumneavoastră, CSEdWeek, și Hour of Code
 
 Recomandăm tuturor să-și promoveze singuri propriile tutoriale de 1-oră utilizatorilor. Vă rugăm să îi direcționați la pagina dumneavoastră Hour of Code. Utilizatorii dumneavoastră sunt mult mai dispuși să reacționeze la o corespondenţă de la și despre tutorialul dumneavoastră. Utilizaţi campania internațională Hour of Code pentru Computer Science Education Week ca o scuză pentru a încuraja utilizatorii de a invita și pe alţii să se alăture, ajutaţi-ne să ajungem la 100 de milioane de participanti.
 
@@ -251,12 +250,12 @@ Recomandăm tuturor să-și promoveze singuri propriile tutoriale de 1-oră util
 *   Găzduiți un eveniment local sau implicați angajaţii dumneavoastră să găzduiască un eveniment la şcolile locale sau grupurile comunitare.
 *   A se vedea Kit-ul nostru pentru mai multe informaţii (în curând).
 
-[**La începutul paginii**][10]
+[**La începutul paginii**][9]
 
 <a id="disabilities"></a>
 
-## O notă specială pentru elevii cu dizabilități
+## A special note for students with disabilities
 
 Dacă creaţi un tutorial proiectat pentru cei cu deficienți de vedere, ne-ar plăcea să-l evidenţiem pentru cei cu cititoare de ecran. Noi nu au primit încă un astfel de tutorial şi am fi dornici să includem unul ca o opţiune pentru acești elevi.
 
-[**La începutul paginii**][10]
+[**La începutul paginii**][9]

@@ -1,3 +1,7 @@
+* * *
+
+## layout: wide
+
 # Ohjeet Koodituntiin ja Tietotekniikan opetusviikkoon
 
 Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn][1].
@@ -8,7 +12,7 @@ Haluamme pitää monia mielnkiintoisia aktiviteetteja, mutta pääpaino on kokem
 
 <a id="top"></a>
 
-## Indeksi:
+## Index:
 
 *   [How tutorials will be evaluated for inclusion][2]
 *   [Yleiset ohjeet Kooditunti-aktiviteettien luomiseen][3]
@@ -40,11 +44,8 @@ A committee of computer science educators will rank submissions based on qualita
 *   ovat itsestään ohjautuvia, eivät tarvitse ohjeita
 *   ovat suunniteltu aloittelijoille
 *   kestävät noin 1 tunnin verran
-*   eivät vaadi rekisteröitymistä 
-*   ovat ilmaisia
-*   eivät vaadi asentamista
-*   toimivat useilla eri käyttöjärjestelmillä mukaanlukien mobiililaitteet
-*   toimivat useilla eri kielillä
+*   work across many OS/device platforms, including mobile and tablets
+*   work across multiple languages
 *   promote learning by all demographic groups (esp under-represented groups)
 *   not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
 

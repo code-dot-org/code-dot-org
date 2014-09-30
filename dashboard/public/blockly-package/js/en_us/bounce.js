@@ -266,7 +266,9 @@ BlocklyApps.init = function(config) {
 
       belowViz.appendChild(feedback.createSharingDiv({
         response: {
-          level_source: window.location
+          level_source: window.location,
+          level_source_id: config.level_source_id,
+          phone_share_url: config.send_to_phone_url
         },
         twitter: config.twitter
       }));
@@ -4722,12 +4724,12 @@ exports.createSharingDiv = function(options) {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
         sendToPhone.setAttribute('style', 'display:inline-block');
-        var phone = $("#phone");
+        var phone = $(sharingDiv.querySelector("#phone"));
         phone.mask("(999) 999-9999");
         phone.focus();
         var submitButton = sharingDiv.querySelector('#phone-submit');
         dom.addClickTouchEvent(submitButton, function() {
-          var phone = $("#phone");
+          var phone = $(sharingDiv.querySelector("#phone"));
           var params = jQuery.param({
             level_source: options.response.level_source_id,
             phone: phone.val()

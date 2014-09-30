@@ -1,0 +1,12 @@
+name '4-5 Internet Multi 2'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/4-5_images/unplugged/internet_1_q.png'
+question 'If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?'
+#height '100'
+
+wrong '<h4>code.org</h4>'
+right '<h4>csisfun.com</h4>'
+wrong '<h4>thinkersmith.org</h4>'
+wrong '<h4>khanacademy.org</h4>'
+

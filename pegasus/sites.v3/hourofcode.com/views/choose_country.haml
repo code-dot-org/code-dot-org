@@ -7,3 +7,10 @@
           -country_url = "/#{country}"
           -country_url += "/#{@user_language}" if @user_language
           %a{href:country_url}= hoc_s("country_#{country}")
+
+%h2=hoc_s(:prizes_all)
+%ul
+  %li=hoc_s(:prizes_every_organizer)
+  -if @country == 'us'
+    %li=hoc_s(:prizes_technology)
+    %li=hoc_s(:prizes_tech_chats)

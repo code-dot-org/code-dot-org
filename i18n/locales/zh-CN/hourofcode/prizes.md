@@ -1,12 +1,14 @@
 * * *
 
-## title: 奖品
+title: Prizes
+
+## layout: wide
 
 # Hour of Code — — 给每个组织者的奖品
 
 ## 每个组织者都会赢得一个感谢礼品代码
 
-每位为学生举办一次Hour of Code的教育者都将获得 10 GB 的 Dropbox 空间或者 10 美元的 Skype 信用作为感谢礼品！
+Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
 <% if @country == 'us' %>
 

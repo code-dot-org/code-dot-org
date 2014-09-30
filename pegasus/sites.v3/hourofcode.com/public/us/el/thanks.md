@@ -1,10 +1,18 @@
-* * *
+---
+title: Thanks for signing up to host an Hour of Code! 
+layout: wide
+---
 
-## title: Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
+<%
+  facebook = {:u=>"http://#{request.host}/us"}
+
+  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+%>
 
 # Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
 
-**ΚΑΘΕ** διοργανωτής μιας Ώρας του Κώδικα θα λάβει 10 GB χώρο στο Dropbox ή 10$ μονάδες Skype σαν ευχαριστήριο δώρο. [Λεπτομέρειες][1]
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details][1]
 
  [1]: /prizes
 
@@ -12,13 +20,15 @@
 
 Get your [whole school to participate][2] for a chance for big prizes for your entire school.
 
- [2]: /whole-school
+ [2]: /us/prizes
 
 <% end %>
 
 ## 1. Διάδωσέ το
 
-Πες στους φίλους σου για την Ώρα του Κώδικα (#HourOfCode).
+Tell your friends about the #HourOfCode.
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 <% if @country == 'us' %>
 
@@ -27,24 +37,28 @@ Get your [whole school to participate][2] for a chance for big prizes for your e
 [Send this email][3] or [give this handout to your principal][4]. Once your school is on board, [enter to win $10,000 worth of technology for your school][1] and challenge other schools in your area to get on board.
 
  [3]: /resources#email
- [4]: /resources/hoc-one-pager.pdf
+ [4]: /files/schools-handout.pdf
 
 <% else %>
 
 ## 2. Ζήτα να συμμετάσχει όλο το σχολείο σου σε μια Ώρα του Κώδικα
 
-[Στείλε αυτό το email][3] ή [δώσε αυτό το φυλλάδιο στον διευθυντή σου][4].
+[Send this email][3] or give [this handout][4] to your principal.
 
 <% end %>
 
 ## 3. Ζήτα το από τον εργοδότη σου
 
-[Στείλε αυτό το email][3] στον προιστάμενό σου. Ή [δώστου αυτό το φυλλάδιο][4].
+[Send this email][3] to your manager, or the CEO. Or [give them this handout][5].
+
+ [5]: /resources/hoc-one-pager.pdf
 
 ## 4. Προώθησε την Ώρα του Κώδικα στην περιοχή σου
 
-Φτιάξε ένα τμήμα για — ένα σώμα προσκόπων, μια ενορία, ένα πανεπιστήμιο, μια ενώση εργαζομένων. Ή κάνε μια Ώρα του Κώδικα για το τετράγωνο της γειτονιάς σου.
+Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
 ## 5. Ζήτα από ένα τοπικό άρχοντα να υποστηρίξει μια Ώρα του Κώδικα
 
-[Στείλε αυτό το μήνυμα][3] στον δήμαρχο, το δημοτικό συμβούλιο ή τον διευθυντή εκπαίδευσης. Η [δώστους αυτό το φυλλάδιο][4] και προσκάλεσέ τους στο σχολείο σου.
+[Send this email][3] to your mayor, city council, or school board. Or [give them this handout][5] and invite them to visit your school.
+
+<%= view 'popup_window.js' %>

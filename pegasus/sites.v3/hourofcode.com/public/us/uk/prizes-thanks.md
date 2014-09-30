@@ -1,7 +1,8 @@
 ---
 title: Дякуємо
+layout: wide
 ---
 
 # Дякуємо
 
-Ваша школа бере участь у розіграші класу ноутбуків (або іншої техніки вартістю $10,000).
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).

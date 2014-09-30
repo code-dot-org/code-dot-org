@@ -26,6 +26,7 @@
 goog.provide('Blockly.Block');
 
 goog.require('Blockly.BlockSvg');
+goog.require('Blockly.BlockSvgFramed');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Comment');
 goog.require('Blockly.Connection');
@@ -154,7 +155,11 @@ Blockly.Block.prototype.getIcons = function() {
  * Create and initialize the SVG representation of the block.
  */
 Blockly.Block.prototype.initSvg = function() {
-  this.svg_ = new Blockly.BlockSvg(this);
+  if (this.framed_) {
+    this.svg_ = new Blockly.BlockSvgFramed(this);
+  } else {
+    this.svg_ = new Blockly.BlockSvg(this);
+  }
   this.svg_.init();
   if (!Blockly.readOnly) {
     Blockly.bindEvent_(this.svg_.getRootElement(), 'mousedown', this,

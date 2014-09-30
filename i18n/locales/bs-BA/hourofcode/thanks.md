@@ -1,50 +1,66 @@
 * * *
 
-## Naslov: Hvala za prijavu za domaćina Sata programiranja!
+title: Thanks for signing up to host an Hour of Code! layout: wide
+
+social: "og:title": "<%= hoc\_s(:meta\_tag\_og\_title) %>" "og:description": "<%= hoc\_s(:meta\_tag\_og\_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
+
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc\_s(:meta\_tag\_twitter\_title) %>" "twitter:description": "<%= hoc\_s(:meta\_tag\_twitter\_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv\_load\_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920
+
+## "twitter:player:height": 1080
+
+<% facebook = {:u=>"http://#{request.host}/us"}
+
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc\_s(:twitter\_default\_text)} twitter[:hashtags] = 'HourOfCode' unless hoc\_s(:twitter\_default\_text).include? '#HourOfCode' %>
 
 # Hvala za prijavu za domaćina Sata programiranja!
 
-**SVAKI** Organizator Sata programiranja će dobiti 10 GB prostora na Dropbox ili $10 Skype kredit kao zahvalu. [Detalji][1]
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details][1]
 
  [1]: /prizes
 
 <% if @country == 'us' %>
 
-Neka [cijela škola sudjeluje][2] za priliku da osvoje velike nagrade za svoju cijelu školu.
+Get your [whole school to participate][2] for a chance for big prizes for your entire school.
 
- [2]: /whole-school
+ [2]: /us/prizes
 
 <% end %>
 
 ## 1. Reci svima
 
-Recite svojim prijateljima o #HourOfCode.
+Tell your friends about the #HourOfCode.
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 <% if @country == 'us' %>
 
 ## 2. Pitajte cijelu školu da ugoste Sat programiranja
 
-[Pošaljite ovaj e-mail][3] ili [Daj ovaj letak direktoru škole][4]. Nakon što se tvoja škola prijavi, [možete osvojiti 10.000 dolara vrijedan kupon tehnologije za vašu školu][1] i možete izazvati i druge škole u vašem području da učestvuju.
+[Send this email][3] or [give this handout to your principal][4]. Once your school is on board, [enter to win $10,000 worth of technology for your school][1] and challenge other schools in your area to get on board.
 
  [3]: /resources#email
- [4]: /resources/hoc-one-pager.pdf
+ [4]: /files/schools-handout.pdf
 
 <% else %>
 
 ## 2. Pitajte cijelu školu da ugoste Sat programiranja
 
-[Pošaljite ovaj e-mail][3] ili dajte [ovu brošuri][4] tvome direktoru.
+[Send this email][3] or give [this handout][4] to your principal.
 
 <% end %>
 
 ## 3. Pitajte svog poslodavca da se uključite
 
-[Pošalji ovaj e-mail][3] upravitelju ili CEO. Ili [dajte im ovu brošuru][4].
+[Send this email][3] to your manager, or the CEO. Or [give them this handout][5].
+
+ [5]: /resources/hoc-one-pager.pdf
 
 ## 4. Promovirajte Sat programiranja u vašoj zajednici
 
-Uključite lokalne grupe — klub za izviđače, vjersku zajednicu, sveučilište, grupu branitelja ili radničkog sindikata. Ili neka domaćin Sata programiranja bude neka gradska četvrt.
+Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
 ## 5. Pitajte lokalno izabranog u zajednici da podrži Sata programiranja
 
-[Pošalji ovaj e-mail][3] za gradonačelnika, gradsko vijeće ili školski odbor. Ili [daj im ovu brošuru][4] i pozovi ih da posjete vašu školu.
+[Send this email][3] to your mayor, city council, or school board. Or [give them this handout][5] and invite them to visit your school.
+
+<%= view 'popup_window.js' %>

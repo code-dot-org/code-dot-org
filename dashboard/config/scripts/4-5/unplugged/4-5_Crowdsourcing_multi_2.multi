@@ -1,0 +1,12 @@
+name '4-5 Crowdsourcing Multi 2'
+title 'Multiple Choice'
+banner ''
+description ''
+question 'Which one of these activities would be best for practicing crowdsourcing?'
+#height '100'
+
+right '<h4>Cleaning your room</h4>'
+wrong '<h4>Eating your dessert</h4>'
+wrong '<h4>Brushing your hair</h4>'
+wrong '<h4>Washing your face</h4>'
+
