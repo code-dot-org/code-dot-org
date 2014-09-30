@@ -1,7 +1,9 @@
 * * *
 
-## Titel: Danke
+title: Thank you
+
+## layout: wide
 
 # Vielen Dank
 
-Deine gesamte Schule nimmt nun an der Verlosung teil, zu gewinnen gibt es einen Klassensatz Laptops (oder 10.000 $ für andere Technik).
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).

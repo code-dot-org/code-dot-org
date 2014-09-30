@@ -1,32 +1,34 @@
+* * *
+
+## layout: wide
+
 # Panduan tutorial untuk Hour of Code dan Computer Science Education Week
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn][1].
-
- [1]: http://code.org/learn
+Code.org akan mengadakan berbagai macam aktivitas Hour of Code di Code.org, Hour of Code, dan situs web CSEdWeek. Daftar terkini ada di <http://code.org/learn>.
 
 Kami ingin menghelat berbagai pilihan yang menarik, namun tujuan utama kami adalah mengoptimalkan pengalaman para murid dan guru yang awam akan ilmu komputer. Mohon gunakan dokumen ini untuk memandu kreativitas kegiatan anda, untuk ditujukan kepada pengguna yang tidak punya latar belakang dalam pengkodean, program komputer, dan ilmu komputer.
 
 <a id="top"></a>
 
-## Indeks:
+## Index:
 
-*   [Bagaimana tutorial akan dievaluasi untuk disertakan][2]
-*   [Panduan umum untuk menciptakan kegiatan dari Hour of Code][3]
-*   [Cara memasukkan (paling lambat 1 Oktober 2014)][4]
-*   [Saran untuk merancang aktivitas Anda][5]
-*   [Pedoman Merek Dagang][6]
-*   [Pelacakan Pixel][7]
-*   [Promosikan tutorial-tutorial, CSEdWeek dan Hour of Code anda][8]
-*   [Catatan untuk pelajar penyandang cacat][9]
+*   [Bagaimana tutorial akan dievaluasi untuk disertakan][1]
+*   [Panduan umum untuk menciptakan kegiatan dari Hour of Code][2]
+*   [Cara memasukkan (paling lambat 1 Oktober 2014)][3]
+*   [Saran untuk merancang aktivitas Anda][4]
+*   [Pedoman Merek Dagang][5]
+*   [Pelacakan Pixel][6]
+*   [Promosikan tutorial-tutorial, CSEdWeek dan Hour of Code anda][7]
+*   [Catatan untuk pelajar penyandang cacat][8]
 
- [2]: #inclusion
- [3]: #guidelines
- [4]: #submit
- [5]: #design
- [6]: #tm
- [7]: #pixel
- [8]: #promote
- [9]: #disabilities
+ [1]: #inclusion
+ [2]: #guidelines
+ [3]: #submit
+ [4]: #design
+ [5]: #tm
+ [6]: #pixel
+ [7]: #promote
+ [8]: #disabilities
 
 <a id="inclusion"></a>
 
@@ -40,13 +42,10 @@ Sekelompok komite pendidik ilmu komputer akan memberikan peringkat berdasarkan u
 *   mandiri, tidak perlu instruksi
 *   dirancang untuk pemula
 *   Dirancang sebagai kegiatan ~ 1 jam
-*   tidak perlu mendaftar 
-*   tanpa pembayaran
-*   tanpa instalasi
-*   bekerja pada banyak platform Sistem Operasi/perangkat, termasuk tablet dan ponsel
-*   dapat di akses dalam berbagai bahasa
-*   promosikan pembelajaran pada berbagai kelompok demografi (esp dibawah kelompok perwakilan)
-*   fokus desain bukan murni HTML+CSS - (tujuan kami adalah ilmu komputer, bukan pengkodean HTML)
+*   work across many OS/device platforms, including mobile and tablets
+*   work across multiple languages
+*   promote learning by all demographic groups (esp under-represented groups)
+*   not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
 
 **Tutorial akan dicantumkan lebih tingggi jika:**
 
@@ -73,9 +72,9 @@ Catatan, pada CSEWeek 2013 merupakan keberhasilan yang fantastis berdasarkan res
 
 Sebagai hasilnya, "ini telah cukup baik" dan menjadi alasan untuk penambahan tutorial dari Hour of Code bukan berdasarkan banyaknya pilihan, tetapi lebih menjurus pada kualitas (atau materi baru/segar) untuk pelajar, atau memperluas pilihan bagi pembicara yang tidak berbahasa inggris sebagai ciri khas dari kampanye 2014 ini.
 
-[**Kembali ke atas**][10]
+[**Kembali ke atas**][9]
 
- [10]: #top
+ [9]: #top
 
 <a id="guidelines"></a>
 
@@ -92,15 +91,15 @@ Sebagai hasilnya, "ini telah cukup baik" dan menjadi alasan untuk penambahan tut
     *   **Baik, tetapi tidak terlalu diminati:** pemasangan aplikasi, aplikasi desktop, atau bentuk permainan konsol game.
 *   **Format:** Tutorial mandiri atau pelajaran, secara opsional dapat difasilitasi guru. Harus ada pengarahan untuk pelajar daripada tantangan terbuka selama satu jam. Idealnya, instruksi dan tutorial harus terintegrasi dengan platform pemrograman, supaya tidak perlu berpindah tab atau jendela antara tutorial dan platform pemrograman.
 
-[**Kembali ke atas**][10]
+[**Kembali ke atas**][9]
 
 <a id="submit"></a>
 
 ## Cara memasukkan (paling lambat 1 Oktober 2014)
 
-Kunjungi [Halaman Penyerahan Aktivitas Hour of Code][11] dan ikuti langkah-langkah untuk memasukkan tutorial.
+Kunjungi [Halaman Penyerahan Aktivitas Hour of Code][10] dan ikuti langkah-langkah untuk memasukkan tutorial.
 
- [11]: https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform
+ [10]: https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform
 
 **Yang anda perlukan:**
 
@@ -126,8 +125,8 @@ Kunjungi [Halaman Penyerahan Aktivitas Hour of Code][11] dan ikuti langkah-langk
     *   Tutorial harus mampu mendukung 2-karakter bahasa kode, misalnya en - inggris; ja - jepang
     *   JIka diperlukan syarat lebih, gunakan tanda hubung, dll fr-be - prancis (belgium) atau fr-ca - Perancis (Kanada)
     *   ***Catatan: Pendeteksian bahasa adalah pekerjaan dari penyedia tutorial, kami akan mengarahkan semua pengguna ke URL tunggal yang disediakan.*** 
-*   Jika anda memasukan online tutorial, kami butuh untuk mengetahui apakah itu [sesuai COPPA][12] atau tidak.
-*   Direkomendasikan kelas level(s) untuk pengguna. Anda dapat merujuk ke [Asosiasi Guru Ilmu Komputer standar K-12][13] untuk konsep ilmu komputer yang sesuai kelas. Contoh tingkatan kelas yang dicatumkan: 
+*   Jika anda memasukan online tutorial, kami butuh untuk mengetahui apakah itu [sesuai COPPA][11] atau tidak.
+*   Direkomendasikan kelas level(s) untuk pengguna. Anda dapat merujuk ke [Asosiasi Guru Ilmu Komputer standar K-12][12] untuk konsep ilmu komputer yang sesuai kelas. Contoh tingkatan kelas yang dicatumkan: 
     *   SD: kelas K-2 atau 3-5
     *   SMP: kelas 6-8
     *   SMA: kelas 9-12
@@ -150,19 +149,19 @@ Kunjungi [Halaman Penyerahan Aktivitas Hour of Code][11] dan ikuti langkah-langk
     *   Untuk aktivitas online 
         *   Jumlah unduh dari aktivitas versi kertas (jika berlaku)
 
- [12]: http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act
- [13]: http://csta.acm.org/Curriculum/sub/K12Standards.html
+ [11]: http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act
+ [12]: http://csta.acm.org/Curriculum/sub/K12Standards.html
 
-[**Kembali ke atas**][10]
+[**Kembali ke atas**][9]
 
 <a id="design"></a>
 
 ## Saran untuk merancang aktivitas Anda
 
-**Sertakan CSEdWeek logo ke dalam tutorial.** Anda menyertakan CSEdWeek logo berukuran ([kecil][14] atau [besar][15]) ke dalam tutorial, tetapi ini bukan keharusan. Anda juga dapat menghubungi kami untuk meminta izin khusus untuk menggunakan logo "Kerjasama dengan Code.org". ***Logo ini hanya dapat digunakan jika memiliki izin tertulis dari Code.org*** Kami mungkin akan membuat mebuat logo Hour of Code, tetapi untuk saat ini kami belum menyediakannya. Dalam keadaan apapun logo dan nama Code.org digunakan. Kedua merek dagang, tidak dapat digunakan oleh merek dari pihak ke-3.
+**Sertakan CSEdWeek logo ke dalam tutorial.** Anda menyertakan CSEdWeek logo berukuran ([kecil][13] atau [besar][14]) ke dalam tutorial, tetapi ini bukan keharusan. Anda juga dapat menghubungi kami untuk meminta izin khusus untuk menggunakan logo "Kerjasama dengan Code.org". ***Logo ini hanya dapat digunakan jika memiliki izin tertulis dari Code.org*** Kami mungkin akan membuat mebuat logo Hour of Code, tetapi untuk saat ini kami belum menyediakannya. Dalam keadaan apapun logo dan nama Code.org digunakan. Kedua merek dagang, tidak dapat digunakan oleh merek dari pihak ke-3.
 
- [14]: https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg
- [15]: https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png
+ [13]: https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg
+ [14]: https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png
 
 **Pastikan bahwa pelajar dapat menyelesaikannya dalam sejam dengan nyaman** Pertimbangkan untuk menambahkan kegiatan terbuka bagi mahasiswa yang menyelesaikan aktifitas dengan cepat. Ingatlah bahwa kebanyakan anak merupakan pemula dalam ilmu komputer dan pengkodean.
 
@@ -183,9 +182,9 @@ Kunjungi [Halaman Penyerahan Aktivitas Hour of Code][11] dan ikuti langkah-langk
 
 **Tidak perlu menyertajan pendaftaran atau pembayaran pada tutorial yang dipakai pelajar.** Tutorial yang membutuhkan pendaftaran atau pembayaran tidak akan disertakan dalam daftar
 
-**Pastikan tutorial anda dapat digunakan untuk [paradigma Pemrograman berpasangan][16].**
+**Pastikan tutorial anda dapat digunakan untuk [paradigma Pemrograman berpasangan][15].**
 
- [16]: http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning
+ [15]: http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning
 
 Tiga aturan pemrograman berpasangan di sekolah:
 
@@ -199,7 +198,7 @@ Manfaat dari Pemrograman Berpasangan:
 *   Ini menunjukkan bahwa pengkodingan atau pengkodean bukanlah aktivitas yang dilakukan solo, tetapi melibatkan interaksi sosial
 *   Tidak semua ruang kelas atau lab mempunyai komputer untuk pengalaman 1:1 (satu banding satu)
 
-[**Kembali ke atas**][10]
+[**Kembali ke atas**][9]
 
 <a id="tm"></a>
 
@@ -217,7 +216,7 @@ Bagian dari ini yaitu untuk melindungi merek dagang "Hour of Code" dari kebimban
 
 4.  Tidak boleh menggunakan "Hour of Code" dalam nama app
 
-[**Kembali ke atas**][10]
+[**Kembali ke atas**][9]
 
 <a id="pixel"></a>
 
@@ -237,7 +236,7 @@ IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
-[**Kembali ke atas**][10]
+[**Kembali ke atas**][9]
 
 <a id="promote"></a>
 
@@ -251,12 +250,12 @@ Kami minta agar setiap orang mempromosikan tutorial satu jam mereka kepada para 
 *   Adakan kegiatan lokal atau tanya pada bos perusahaan atau organisasi anda untuk mengadakan kegiatan pada sekolah lokal atau kelompok masyarakat.
 *   Lihatlah sumber daya kami untuk informasi lebih lanjut (segera hadir).
 
-[**Kembali ke atas**][10]
+[**Kembali ke atas**][9]
 
 <a id="disabilities"></a>
 
-## Catatan khusus untuk pelajar yang memiliki kecacatan
+## A special note for students with disabilities
 
 Jika anda mebuat sebuah tutorial untuk pengguna yang memiliki ganguan mata, kami akan senang menyorotnya dengan pembaca-layar (screen-readers). Kami belum menerima tutorial seperti ini, dan kami dengan sangat semangat akan memasukkan itu sebagai salah satu pilihan bagi pelajar.
 
-[**Kembali ke atas**][10]
+[**Kembali ke atas**][9]

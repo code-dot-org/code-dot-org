@@ -1,6 +1,8 @@
 * * *
 
-## title: Prizes
+title: Prizes
+
+## layout: wide
 
 # The Hour of Code — prizes for every organizer
 

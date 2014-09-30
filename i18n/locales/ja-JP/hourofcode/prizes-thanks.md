@@ -1,7 +1,9 @@
 * * *
 
-## タイトル:ありがとうございます。
+title: Thank you
+
+## layout: wide
 
 # ありがとうございます。
 
-あなたの学校は団体として、１クラス分のノートパソコン（もしくはテクノロジーに使える10,000ドル相当分）が当たる抽選に今応募しました。
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
