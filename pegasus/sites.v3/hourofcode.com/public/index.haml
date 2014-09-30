@@ -135,34 +135,36 @@ social:
     .col-xs-12
       =view :map
 
-  %h1#joinusarea Join us
-  #calltoaction.row
-    .col-xs-10{style: "text-align: left; font-size: 18px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
-      %p 
-        Any time during December 8-14, Computer Science Education Week, host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!
+  #joinusarea
 
+    #joindescrption.hidden-xs
+      %h1.hidden-xs Join us
+      #calltoaction.hidden-xs.row
+        .col-xs-10{style: "text-align: left; font-size: 18px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
+          %p 
+            Any time during December 8-14, Computer Science Education Week, host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!
 
-  #calltoaction.row
-    .col-xs-10{style: "text-align: left; font-size: 16px; line-height:30px; font-weight: 400; padding-left:3em"}
-      %p
-        %b Are you a teacher?
-        Inspire your students with an Hour of Code in your classroom.
-      %p
-        %b Are you a parent?
-        Ask your local school to host an Hour of Code.
-      %p
-        %b Just love computer science? 
-        Spread the word in your community. Or organize an Hour of Code event yourself. 
+      #calltoaction.row
+        .col-xs-10{style: "text-align: left; font-size: 16px; line-height:30px; font-weight: 400; padding-left:3em"}
+          %p
+            %b Are you a teacher?
+            Inspire your students with an Hour of Code in your classroom.
+          %p
+            %b Are you a parent?
+            Ask your local school to host an Hour of Code.
+          %p
+            %b Just love computer science? 
+            Spread the word in your community. Or organize an Hour of Code event yourself. 
 
-      %p
-        %a{href: "/resources"} 
-          Here's how to get started.
+          %p
+            %a{href: "/resources"} 
+              Here's how to get started.
 
-  #signupform.row
-    .col-xs-12.col-sm-9.col-md-8
-      =view :signup_form
-    .col-xs-12.col-sm-3.col-md-4
-      =view :choose_country
+    #signupform.row
+      .col-xs-12.col-sm-9.col-md-8
+        =view :signup_form
+      .col-xs-12.col-sm-3.col-md-4
+        =view :choose_country
 
   %a#faqs{name:'faq'}
   .row
