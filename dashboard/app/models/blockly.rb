@@ -78,10 +78,6 @@ class Blockly < Level
     self.class.pretty_print(xml_string)
   end
 
-  def is_k1?
-    return is_k1 === 'true'
-  end
-
   def self.convert_toolbox_to_category(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
     return xml_string if xml.nil?
