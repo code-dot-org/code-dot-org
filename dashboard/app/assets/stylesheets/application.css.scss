@@ -292,13 +292,14 @@ th {
         position: relative;
         top: 1px;
       }
-      .puzzle-unplugged {
-        font-size: 13px;
-        padding-left: 6px;
-        padding-right: 6px;
-      }
     }
   }
+}
+
+.puzzle-unplugged {
+  font-size: 13px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 .progress-outer {
