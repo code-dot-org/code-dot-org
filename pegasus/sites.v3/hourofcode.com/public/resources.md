@@ -4,15 +4,15 @@ layout: wide
 ---
 # Resources
 
-[Handouts to spread the word](/resources#handouts)
+[Handouts to spread the word](#handouts)
 <br/>
 [How-to guide for teachers](/resources/how-to)
 <br/>
-[Posters](/resources#posters)
+[Posters](#posters)
 <br/>
-[Videos](/resources#videos)
+[Videos](#videos)
 <br/>
-[Sample emails](/resources#sample-emails)
+[Sample emails](#sample-emails)
 <br/>
 [Press Kit](/resources/press-kit)
 
@@ -20,6 +20,10 @@ layout: wide
 ## Use this handout to spread the word
 
 [![image](/images/fit-250/one-pager.png)](/resources/hoc-one-pager.pdf)
+
+## Give this handout to teachers and schools
+[![image](/images/fit-250/schools-handout.png)](/files/schools-handout.pdf)
+
 
 <a id="videos">
 ## Show these videos to inspire students
@@ -63,7 +67,7 @@ layout: wide
 <a id="sample-emails"></a>
 ## Send these emails to help promote the Hour of Code.
 <a id="email"></a>
-### Ask your school, employer or friends to sign up:
+### **Ask your school, employer or friends to sign up:**
 
 Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week alone, 15 million students tried computer science!
 
@@ -75,7 +79,7 @@ Get the word out. Host an event. Ask a local school to sign up. Or try the Hour 
 
 Help us reach 100 million students total by the end of the year! Get started at http://hourofcode.com
 
-## Invite media to attend your event
+### **Invite media to attend your event**
 
 **Subject line:** Local school joins mission to introduce 100m students to computer science
 
@@ -101,7 +105,7 @@ I look forward to being in touch.
 
 
 <a id="parents"></a>
-## Tell parents about your school's event
+### **Tell parents about your school's event**
 
 Dear Parents,
 
@@ -122,7 +126,7 @@ Your principal
 
 	
 <a id="politicians"></a>
-## Invite a local politician to your school's event
+### **Invite a local politician to your school's event**
 
 Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
