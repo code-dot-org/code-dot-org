@@ -1,6 +1,10 @@
+* * *
+
+## layout: wide
+
 # Premii - termeni și condiții
 
-## Spaţiu Dropbox sau credit Skype:
+## Dropbox space or Skype credit:
 
 Cei 10 GB de spaţiu pe Dropbox sau cei 10 dolari de credit Skype, sunt limitate claselor 1-12, profesori pentru cluburi afterschool şi organizaţii implicate în educaţie. Cei 10 GB de spaţiu gratuit trebuie să fie adăugate la un cont existent Dropbox. Limita este de un premiu pe organizator.
 
@@ -10,13 +14,13 @@ Code.org va contacta organizatorii după Hour of Code (dec 8-14) pentru a oferi 
 
 <% if @country == 'us' %>
 
-## Video chat cu un vorbitor invitat:
+## Video chat with a guest speaker:
 
-Prize limited to K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 14, 2014. Code.org will randomly select winning schools, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details.
+Premiu limitat numai pentru şcoli K-12 din Statele Unite. Pentru a te califica, trebuie să se înregistreze pentru Hour of Code întreaga şcoală până în 14 noiembrie 2014. Code.org va selecta aleator şcolile câştigătoare, ofering un slot de timp pentru web chat şi va lucra cu profesorul pentru a pune la punct detaliile legate de tehnologie.
 
-## Laptopuri pentru întreaga clasă (sau 10.000 USD pentru alte tehnologii):
+## Class-set of laptops (or $10,000 for other technology):
 
-Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here][1]. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+Premiu limitat la şcoli publice K-12 SUA. De ce numai scolile publice? [A se vedea răspunsul aici][1]. Pentru a te califica, trebuie să se înregistreze pentru Hour of Code întreaga şcoală până în 14 noiembrie 2014. O şcoală în fiecare stat al SUA va primi un set de computere pentru clasă. Code.org va selecta şi notifica câştigătorii prin email până la 1 decembrie 2014.
 
  [1]: http://www.hourofcode.com/us#faq
 

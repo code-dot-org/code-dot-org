@@ -1,6 +1,10 @@
+* * *
+
+## layout: wide
+
 # 奖品 - 条款和条件
 
-## Dropbox 空间或 Skype 信用：
+## Dropbox space or Skype credit:
 
 10 GB 的 Dropbox 空间或 10 美元的 Skype 信用仅限于 K 12 教师、课外俱乐部的教育工作者和教育组织。 10 GB 的可用空间必须添加到一个现有的 Dropbox 账户。 每位组织者仅可以兑换一次。
 
@@ -10,11 +14,11 @@ Code.org将在Hour of Code活动（12月8日至14日）之后联系活动组织�
 
 <% if @country == 'us' %>
 
-## 与特邀嘉宾视频聊天：
+## Video chat with a guest speaker:
 
 Prize limited to K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 14, 2014. Code.org will randomly select winning schools, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details.
 
-## 整个班级的电脑（或者用于其他科技产品的10000美元）：
+## Class-set of laptops (or $10,000 for other technology):
 
 Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here][1]. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
 

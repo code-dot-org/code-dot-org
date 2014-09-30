@@ -1,28 +1,29 @@
 ---
-title: Δώρα
+title: Prizes
+layout: wide
 ---
 
 # Η Ώρα του Κώδικα — δώρα για κάθε διοργανωτή
 
 ## Κάθε διοργανωτής κερδίζει ένα ευχαριστήριο δώρο
 
-Κάθε εκπαιδευτικός που διοργανώνει μια Ώρα του Κώδικα για μαθητές θα λάβει 10 GB χώρου στο Dropbox ή 10$ μονάδων Skype ως ευχαριστήριο δώρο!
+Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
 <% if @country == 'us' %>
 
 ## Τα πιο τυχερά τμήματα κερδίζουν μια βινετοσυνομιλία με έναν διακεκριμένο ομιλιτή!
 
-50 τυχερά τμήματα θα προσκληθούν να συμμετάσχουν σε μια βιντεοσυνομιλία για τη γιορτή της Ώρας του Κώδικα την περίοδο 8-14 Δεκεμβρίου. Οι μαθητές σας θα μπορούν να θέσουν ερωτήσεις και να συνομιλήσουν με ηγέτες από τη βιομηχανία της τεχνολογίας. [Δες τις περσινές συνομιλίες][1] με τον Bill Gates, τον ιδρυτή του Twitter Jack Dorsey, τη Susan Wojcicki της Google και τον Gabe Newell της Valve.
+50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats][1] with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
 
  [1]: http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a
 
 ## Τα πιο τυχερά σχολεία κερδίζουν φορητούς υπολογιστές (ή 10.000$ για τεχνολογικό εξοπλισμό)
 
-Ένα τυχερό σχολείο σε ***κάθε*** πολιτεία των Η.Π.Α. (+ Ουάσινγκτον Π.Κ.) θα κερδίσει 10.000$ σε τεχνολογικό εξοπλισμό. Αρκεί να διοργανώσεις την Ώρα του Κώδικα για κάθε μαθητή στο σχολείο σου. Συμπλήρωσε τη παρακάτω αίτηση.
+One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
 
 ## Αίτηση Βραβείου Υλικού:
 
-Εάν έχεις εγγράψει όλο το σχολείο σου για να συμμετάσχει στην Ώρα του Κώδικα, μπές για να κερδίσεις φορητούς υπολογιστές (ή 10.000$ για τεχνολογικό εξοπλισμό) για το σχολείο σου! Ένας εκπαιδευτικός αρκεί για να κάνει αίτηση για όλο το σχολείο.
+If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
 
 <%= view :hardware_prizes_form %>
 

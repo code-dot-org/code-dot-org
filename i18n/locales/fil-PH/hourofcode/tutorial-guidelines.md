@@ -1,3 +1,7 @@
+* * *
+
+## layout: wide
+
 # Mga alituntunin at gabay para sa Hour of Code at Computer Science Education Week
 
 Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn][1].
@@ -8,7 +12,7 @@ Nais naming makapagsimula ng mga aktibidad na makakapag-enganyo sa iba na sumali
 
 <a id="top"></a>
 
-## Mga nilalaman:
+## Index:
 
 *   [Paano titignan ang mga pagsali na gagawin][2]
 *   [Mga general na alituntunin ukol sa paggawa ng mga aktibidad ng Hour of Code][3]
@@ -40,13 +44,10 @@ Isang committee ng mga guro ng computer science ang huhusga base sa mga alituntu
 *   kayang gawin mag-isa, hindi na kailangan ng iba pang tulong
 *   laan para sa mga nagsisimula
 *   laan para sa isang oras na gawain
-*   hindi kailangang mag-signup 
-*   walang bayad
-*   hindi kailangan na maglagay ng iba pang computer program
-*   pwedeng gumana sa iba't ibang platform, kabilang na ang mobile at mga tablet
-*   maaring gumana sa iba't ibang salita
-*   iniinganyong sumali ang lahat ng grupo (lalo na kung hindi pa sila maalam sa computer)
-*   hindi nakatutok sa HTML+CSS codes - (ang layunin ay para sa computer science at hindi lamang para sa HTML codes)
+*   work across many OS/device platforms, including mobile and tablets
+*   work across multiple languages
+*   promote learning by all demographic groups (esp under-represented groups)
+*   not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
 
 **Ang pagtuturo ay mabibigyan ng mababang grado kung ito ay:**
 

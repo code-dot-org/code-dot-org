@@ -1,7 +1,9 @@
 * * *
 
-## العنوان: شكرا لك
+title: Thank you
+
+## layout: wide
 
 # شكرا لك
 
-دخلت مدرستك كلها الآن للفوز بمجموعة من أجهزة الكمبيوتر المحمولة (أو 000 10 دولار للتكنولوجيات الأخرى).
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).

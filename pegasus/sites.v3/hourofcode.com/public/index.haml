@@ -73,7 +73,7 @@ social:
               -#%br/
               %div{style:"clear:both"}
             #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; /*margin-top:100px; */ width:100%"}
-              %h1.front-header-banner{style: "color:white; text-shadow: 0px 0px 4px rgba(31, 31, 31, 1); margin-top: 0px; margin-bottom:10px; padding:20px"} Watch the new video
+              %h1.front-header-banner{style: "color:white; text-shadow: 0px 0px 4px rgba(31, 31, 31, 1); margin-top: 0px; margin-bottom:10px; padding:20px"}=hoc_s(:front_watch_video) 
               %img{src: "/images/play-button.png", width: "120", onclick: "return startVideo();", style: "cursor: pointer"}
         .col-sm-4.col-xs-12
           #textbacking{style: "color:white; text-align: center; background-color:rgba(0,0,0,0.5); margin-top:50px; padding: 20px"}
@@ -97,8 +97,7 @@ social:
     .col-xs-1
       &nbsp;
     .col-xs-10{style: "text-align: center; font-size: 24px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
-      The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. No experience needed. 
-      %b Ages 4 to 104.
+      =hoc_s(:front_intro_default)
 
   %br/
   %br/
@@ -106,38 +105,38 @@ social:
   .row
     .col-xs-12
       %div{style: 'text-align: center; margin: 3em 0;'}
-        %h2= I18n.t(:stats_hoc_2013_heading)
+        %h2=hoc_s(:stats_hoc_2013_heading)
 
   .row#infotop{style: "/*margin: 0 auto; width: 900px; */ font-weight: 500; font-size: 16px; color: rgb(26, 172, 186)"}
     .col-xs-6.col-sm-4{style: "text-align:center;"}
-      %p It was the fastest to reach 15 million users
+      %p=hoc_s(:stats_growth)
       %img{src: "/images/stats-info1.jpg", style: "width: 100%"}
 
     .col-xs-6.col-sm-4{style: "text-align:center"}
-      %p 15 million students in 170 countries learned an Hour of Code
+      %p=hoc_s(:stats_global)
       %img{src: "/images/stats-info2.jpg", style: "width: 100%"}
 
     .hidden-xs.col-sm-4{style: "text-align:center"}
-      %p More girls tried computer science than in the last 70 years
+      %p=hoc_s(:stats_girls_more)
       %img{src: "/images/stats-info3.jpg", style: "width: 100%"}
 
-        %p{style:"color: #ea7717;"} Over 10 million girls in 2013.
+        %p{style:"color: #ea7717;"}=hoc_s(:stats_girls_million)
 
   .row#infobottom{style: "/*margin: 0 auto; width: 800px; */ font-weight: 400; font-size: 16px; color: #ea7717;"}
     .col-xs-6.col-sm-4{style: "text-align:center"}
       %img{src: "/images/stats-kid1.jpg", style: "width: 70%"}
       %br/
-      "Every single day yielded the same results - <b>100% engagement.</b>" - Nina Nichols Peery, Teacher
+      =hoc_s(:stats_nina)
 
     .col-xs-6.col-sm-4{style: "text-align:center"}
       %img{src: "/images/stats-kid2.jpg", style: "width: 70%"}
       %br/
-      I knew this was a <b> once-in-a-lifetime</b> chance" - Mariana Alzate, 5th grader
+      =hoc_s(:stats_student)
 
     .hidden-xs.col-sm-4{style: "text-align:center"}
       %img{src: "/images/stats-kid3.jpg", style: "width: 70%"}
       %br/
-      I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher
+      =hoc_s(:stats_michael)
 
   #map.row
     .col-xs-12
@@ -146,27 +145,27 @@ social:
   #joinusarea
 
     #joindescrption.hidden-xs
-      %h1.hidden-xs Join us
+      %h1.hidden-xs=hoc_s(:front_join_us_button)
       #calltoaction.hidden-xs.row
         .col-xs-10{style: "text-align: left; font-size: 18px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
           %p 
-            Any time during December 8-14, Computer Science Education Week, host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!
+            =hoc_s(:front_join_us_header)
 
       #calltoaction.row
         .col-xs-10{style: "text-align: left; font-size: 16px; line-height:30px; font-weight: 400; padding-left:3em"}
           %p
-            %b Are you a teacher?
-            Inspire your students with an Hour of Code in your classroom.
+            %b=hoc_s(:front_join_us_teacher)
+            =hoc_s(:front_join_us_inspire)
           %p
-            %b Are you a parent?
-            Ask your local school to host an Hour of Code.
+            %b=hoc_s(:front_join_us_parent)
+            =hoc_s(:front_join_us_ask)
           %p
-            %b Just love computer science? 
-            Spread the word in your community. Or organize an Hour of Code event yourself. 
+            %b=hoc_s(:front_join_us_computer_science)
+            =hoc_s(:front_join_us_spread)
 
           %p
             %a{href: "/resources"} 
-              Here's how to get started.
+              =hoc_s(:front_join_us_get_started)
 
     #signupform.row
       .col-xs-12.col-sm-9.col-md-8

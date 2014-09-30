@@ -1,6 +1,10 @@
+* * *
+
+## layout: wide
+
 # Premi - Termini e condizioni di partecipazione
 
-## Spazio su Dropbox o credito Skype:
+## Dropbox space or Skype credit:
 
 I 10 GB di spazio su Dropbox o i 10$ di credito Skype sono riservati a studenti di scuole elementari, medie o superiori, educatori di sostegno e agenzie educative. The 10 GB of free space must be added to an existing Dropbox account. Limit one redemption per organizer.
 
