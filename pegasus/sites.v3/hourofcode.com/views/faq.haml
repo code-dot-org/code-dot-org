@@ -29,9 +29,14 @@
   %div= hoc_s(:hoc_faq_tutorial_ar_a)
 
 -elsif @country == 'uk'
-  %h2= hoc_s(:hoc_faq_what_is_hoc_q)
+  %h2#whatishoc= hoc_s(:hoc_faq_what_is_hoc_q)
   %div= hoc_s(:hoc_faq_what_is_hoc_a)
 
+  %br/
+  %a{href: "http://code.org/learn", target: "_blank"}
+    %button
+      Try last year's tutorials
+      
   %h2= hoc_s(:hoc_faq_when_is_hoc_uk_q)
   %div= hoc_s(:hoc_faq_when_is_hoc_uk_a)
 
@@ -54,8 +59,13 @@
   %div= hoc_s(:hoc_faq_tutorial_a)
 
 -else 
-  %h2= hoc_s(:hoc_faq_what_is_hoc_q)
+  %h2#whatishoc= hoc_s(:hoc_faq_what_is_hoc_q)
   %div= hoc_s(:hoc_faq_what_is_hoc_a)
+
+  %br/
+  %a{href: "http://code.org/learn", target: "_blank"}
+    %button
+      Try last year's tutorials
 
   %h2= hoc_s(:hoc_faq_when_is_hoc_q)
   %div= hoc_s(:hoc_faq_when_is_hoc_a)
