@@ -33,6 +33,7 @@ class LevelSourcesController < ApplicationController
   def common(hide_source)
     @level_source_id = params[:id]
     @level_source = LevelSource.find(@level_source_id)
+    @phone_share_url = send_to_phone_url
     @start_blocks = @level_source.data
     @level = @level_source.level
     @game = @level.game

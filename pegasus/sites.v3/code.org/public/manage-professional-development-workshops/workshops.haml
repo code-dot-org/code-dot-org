@@ -42,10 +42,10 @@ theme: none
       %td
         %span{'ng-show' => 'workshop.state() == "not_started"'}
           Not Started
-          %a.btn.btn-default{"ng-click" => "start_workshop(workshop)"} Start Event
+          %a.btn.btn-default{"ng-click" => "start_workshop(workshop)", 'ng-confirm-click' => 'Are you sure you want to start your workshop?'} Start Event
         %span{'ng-show' => 'workshop.state() == "started"'}
           In Progress
-          %a.btn.btn-default{"ng-click" => "stop_workshop(workshop)", 'ng-confirm-click' => 'Are you sure you want to close this workshop?'} End Event
+          %a.btn.btn-default{"ng-click" => "stop_workshop(workshop)", 'ng-confirm-click' => 'Are you sure you want to end your workshop?'} End Event
         %span{'ng-show' => 'workshop.state() == "stopped"'}
           Ended
       %td{nowrap: true, style: 'white-space: nowrap;'}

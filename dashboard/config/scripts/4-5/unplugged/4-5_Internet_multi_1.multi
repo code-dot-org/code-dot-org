@@ -1,0 +1,12 @@
+name '4-5 Internet Multi 1'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/4-5_images/unplugged/internet_1_q.png'
+question 'When you try to log on to code.org, which IP address is the DNS most likely to take you to?'
+#height '100'
+
+wrong '<h4>23.23.224.106</h4>'
+wrong '<h4>54.209.61.132</h4>'
+wrong '<h4>64.14.68.10</h4>'
+right '<h4>54.243.71.82</h4>'
+

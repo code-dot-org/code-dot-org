@@ -9,7 +9,7 @@ FiveMinutes = 5 * 60 * 1000
 OneHour = 60 * 60 * 1000
 OneDay = 24 * OneHour
 
-ExcludedLevels = [1, 103, 337, 612, 830, 1254, 1255, 1264, 1265, 1370, 1376, 1383, 1393, 1415]
+ExcludedLevels = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415]
 
 HardLevelAttemptsPerHour = {
   50 => 10,

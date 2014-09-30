@@ -1,0 +1,12 @@
+name '4-5 Algorithms Multi 1'
+title 'Multiple Choice'
+banner ''
+description ''
+question 'Which one of these items is hardest to describe an algorithm for?'
+#height '100'
+
+wrong '<h4>Brushing your teeth</h4>'
+wrong '<h4>Baking cookies</h4>'
+wrong '<h4>Shopping from a grocery list</h4>'
+right '<h4>Banana</h4>'
+

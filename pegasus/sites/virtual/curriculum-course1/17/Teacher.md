@@ -181,7 +181,6 @@ Distribute paper and place students in pairs.
  
 > 4) Encourage students to respond to one another’s usernames, confirming that each name follows the rules they have learned.
 
-
 [tip]
 
 # Lesson Tip  
