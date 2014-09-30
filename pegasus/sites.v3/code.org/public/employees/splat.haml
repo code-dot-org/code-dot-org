@@ -32,7 +32,7 @@ max_age: 60
 #company_header= view :employee_engagement_header, company_name:header_name, logo_path:company['logo_path_s']
 
 -# TODO(dave): implement user_entered_markdown function.
-#intro_top
+#intro_top.ee_markdown
   -if company['intro_top_copy_t']
     =TextRender.safe_markdown company['intro_top_copy_t']
   -else
@@ -73,7 +73,7 @@ max_age: 60
     -unless company['video_key_s']
       = view :share_buttons, facebook:facebook, twitter:twitter, gplus:gplus, download_url:"http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"
 
-#intro_bottom
+#intro_bottom.ee_markdown
   -if company['intro_bottom_copy_t']
     =TextRender.safe_markdown company['intro_bottom_copy_t']
   -else
