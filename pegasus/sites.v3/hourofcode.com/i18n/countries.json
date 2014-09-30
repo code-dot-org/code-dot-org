@@ -5,11 +5,11 @@
   },
   "ar": {
     "full_date": "October 11-17, 2014",
-    "default_language": "en"
+    "default_language": "es"
   },
   "br": {
     "full_date": "December 8-14, 2014",
-    "default_language": "en"
+    "default_language": "pt"
   },
   "eu": {
     "full_date": "October 11-17, 2014",
@@ -21,7 +21,7 @@
   },
   "ro": {
     "full_date": "December 8-14, 2014",
-    "default_language": "en"
+    "default_language": "ro"
   },
   "uk": {
     "full_date": "December 8-14, 2014",
