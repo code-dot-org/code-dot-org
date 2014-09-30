@@ -69,6 +69,13 @@
   map_header: 'Hour of Code events around the world'
   map_header_ar: 'Eventos de Hora de Program.AR alrededor del mundo'
 
+  meta_tag_og_title: 'The Hour of Code is coming'
+  meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students in 200 countries and over 30 languages. Ages 4 to 104.'
+  meta_tag_twitter_title: 'The Hour of Code is coming'
+  meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students in 200 countries and over 30 languages. Ages 4 to 104.'
+
+  twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
+
   hardware_prizes_form_name_label: 'Your name'
   hardware_prizes_form_name_placeholder: 'Your name'
   hardware_prizes_form_email_label: 'Your email'
