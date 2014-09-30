@@ -22,12 +22,12 @@ Tell your friends about the #HourOfCode.
 <% if @country == 'us' %>
 
 ## 2. Ask your whole school to offer an Hour of Code
-[Send this email](http://<%= hostname %>/resources#email) or [give this handout to your principal](http://<%= hostname %>/resources/hoc-one-pager.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+[Send this email](http://<%= hostname %>/resources#email) or [give this handout to your principal](http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
 
 <% else %>
 
 ## 2. Ask your whole school to offer an Hour of Code
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) to your principal.
+[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
@@ -38,7 +38,7 @@ Tell your friends about the #HourOfCode.
 Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
 ## 5. Ask a local elected official to support the Hour of Code
-[Send this email](http://<%= hostname %>/resources#email) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
 ---
 Thanks for signing up to host an Hour of Code!
 
@@ -52,11 +52,11 @@ Tell your friends about the #HourOfCode.
 
 2. Ask your whole school to offer an Hour of Code
 
-Send this email (http://<%= hostname %>/resources#email) or give this handout to your principal (http://<%= hostname %>/resources/hoc-one-pager.pdf). Once your school is on board, enter to win $10,000 worth of technology for your school (http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+Send this email (http://<%= hostname %>/resources#email) or give this handout to your principal (http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, enter to win $10,000 worth of technology for your school (http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
 
 3. Ask your employer to get involved
 
-Send this email (http://<%= hostname %>/resources#email) to your manager, or the CEO. Or give them this handout (http://<%= hostname %>/resources/hoc-one-pager.pdf).
+Send this email (http://<%= hostname %>/resources#email) to your manager, or the CEO. Or give them this handout (http://<%= hostname %>/files/schools-handout.pdf).
 
 4. Promote Hour of Code within your community
 
@@ -64,4 +64,4 @@ Recruit a local group — boy scouts club, church, university, veterans group or
 
 5. Ask a local elected official to support the Hour of Code
 
-Send this email (http://<%= hostname %>/resources#email) to your mayor, city council, or school board. Or give them this handout (http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+Send this email (http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or give them this handout (http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.

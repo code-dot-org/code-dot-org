@@ -22,7 +22,7 @@ social:
   "twitter:player:height": 1080
 ---
 <%
-  facebook = {:u=>"http://#{request.host}/"}
+  facebook = {:u=>"http://#{request.host}/us"}
 
   twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
   twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
@@ -62,6 +62,6 @@ Tell your friends about the #HourOfCode.
 Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
 ## 5. Ask a local elected official to support the Hour of Code
-[Send this email](/resources#email) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>
