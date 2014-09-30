@@ -74,7 +74,7 @@ Blockly.BlockSvg.prototype.initChildren = function () {
  */
 Blockly.BlockSvg.INLINE = -1;
 
-Blockly.BlockSvg.DISABLED_OLOUR = '#808080';
+Blockly.BlockSvg.DISABLED_COLOUR = '#808080';
 
 /**
  * Initialize the SVG representation with any block attributes which have
