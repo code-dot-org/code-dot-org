@@ -78,6 +78,10 @@ class Blockly < Level
     self.class.pretty_print(xml_string)
   end
 
+  def is_k1?
+    return is_k1 === 'true'
+  end
+
   def self.convert_toolbox_to_category(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
     return xml_string if xml.nil?
@@ -128,9 +132,5 @@ XML
       block.xpath('statement')[0] << wrap_blocks(category.xpath('block').to_a) unless category.xpath('block').empty?
     end
     xml.serialize(save_with: XML_OPTIONS).gsub("\n", '').strip
-  end
-
-  def self.is_k1?
-    return is_k1 === 'true'
   end
 end

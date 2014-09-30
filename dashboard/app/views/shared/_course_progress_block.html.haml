@@ -2,11 +2,11 @@
   .span9#heading
     %h3.whitetext= data_t_suffix('script.name', current_user.primary_script.name, "title")
   .span3#heading{style: 'text-align: right;'}
-    %a{href: get_freeplay_url('playlab')}
+    %a{href: playlab_freeplay_path}
       %button.btn.btn-primary
         %i.fa.fa-rocket
         = t('nav.header.free_play.playlab')
-    %a{href: get_freeplay_url('artist')}
+    %a{href: artist_freeplay_path}
       %button.btn.btn-primary
         %i.fa.fa-pencil
         = t('nav.header.free_play.artist')
