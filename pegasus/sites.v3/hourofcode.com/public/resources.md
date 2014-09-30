@@ -12,7 +12,7 @@ layout: wide
 <br/>
 [Videos](/resources#videos)
 <br/>
-[Sampe emails](/resources#sample-emails)
+[Sample emails](/resources#sample-emails)
 <br/>
 [Press Kit](/resources/press-kit)
 
