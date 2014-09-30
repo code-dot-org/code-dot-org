@@ -9,6 +9,7 @@ social:
   "og:image:width": 1705
   "og:image:height": 949
   "og:url": "http://<%=request.host%>"
+  "og:video": "https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv_load_policy=3&rel=0&autohide=1&showinfo=0"
 
   "twitter:card": player
   "twitter:site": "@codeorg"
@@ -23,7 +24,7 @@ social:
 <%
   facebook = {:u=>"http://#{request.host}/"}
 
-  twitter = {:url=>"http://#{request.host}/", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
   twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
