@@ -66,8 +66,7 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test "is_k1? when current script returns true for is_k1?" do
-    @script = Script.create!(name: 'course1_test')
-    @script.name = 'course1'
+    @script = Script.find_by_name('course1')
     assert is_k1?
   end
 
