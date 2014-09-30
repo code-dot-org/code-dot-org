@@ -10,8 +10,8 @@ layout: wide
 *   [Posters][3] <br/>
 *   [Videos][4] <br/>
 *   [Sample emails][5] <br/>
-*   [Useful computer science stats][6] <br />
-*   [Press Kit][7] <br />
+*   [Useful computer science stats][6]   
+*   [Press Kit][7]
 
  [1]: #handouts
  [2]: /resources/how-to
@@ -79,9 +79,15 @@ layout: wide
   <div style='clear:both'>
   </div>
   
-<a id="posters">
-<h2>Hang these posters in your school</h2>
-<h4> <a href="http://hourofcode.com/us#signup">Cadastre</a> seu evento da Hora do Código e enviaremos os cartazes por correio gratuitamente.</h4>  
+  <p>
+<a id="posters"></p> <h2>
+  Hang these posters in your school
+</h2>
+
+<h4>
+  <a href="http://hourofcode.com/us#signup">Cadastre</a> seu evento da Hora do Código e enviaremos os cartazes por correio gratuitamente.
+</h4>
+
 <p>
   <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
 </p>
