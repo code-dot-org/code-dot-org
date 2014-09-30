@@ -2,11 +2,11 @@
 title: Resources
 layout: wide
 ---
-## How to attract media to your Hour of Code event ##
+## Useful stats on computer science
 
 *For all press and media inquiries, contact [press@code.org](mailto:press@code.org)*
 
-### Key Tips ###
+### Key Tips
 
 - Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
 - Ask a school staff member or volunteer to take photos to share online or send to press.
