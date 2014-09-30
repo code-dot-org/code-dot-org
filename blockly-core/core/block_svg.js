@@ -96,15 +96,11 @@ Blockly.BlockSvg.prototype.init = function() {
  */
 Blockly.BlockSvg.prototype.updateMovable = function() {
   if (this.block_.isMovable()) {
-    Blockly.addClass_(/** @type {!Element} */ (this.svgGroup_),
-                      'blocklyDraggable');
-    Blockly.removeClass_(/** @type {!Element} */ (this.svgGroup_),
-                      'blocklyUndraggable');
+    Blockly.addClass_(this.svgGroup_, 'blocklyDraggable');
+    Blockly.removeClass_(this.svgGroup_, 'blocklyUndraggable');
   } else {
-    Blockly.removeClass_(/** @type {!Element} */ (this.svgGroup_),
-                         'blocklyDraggable');
-    Blockly.addClass_(/** @type {!Element} */ (this.svgGroup_),
-                         'blocklyUndraggable');
+    Blockly.removeClass_(this.svgGroup_, 'blocklyDraggable');
+    Blockly.addClass_(this.svgGroup_, 'blocklyUndraggable');
   }
   this.updateColour();
 };
@@ -114,15 +110,11 @@ Blockly.BlockSvg.prototype.updateMovable = function() {
  */
 Blockly.BlockSvg.prototype.updateGrayOutCSS = function() {
   if (this.shouldBeGrayedOut()) {
-    Blockly.addClass_(/** @type {!Element} */ (this.svgGroup_),
-                         'blocklyUndeletable');
-    Blockly.removeClass_(/** @type {!Element} */ (this.svgGroup_),
-                         'blocklyDeletable');
+    Blockly.addClass_(this.svgGroup_, 'blocklyUndeletable');
+    Blockly.removeClass_(this.svgGroup_, 'blocklyDeletable');
   } else {
-    Blockly.addClass_(/** @type {!Element} */ (this.svgGroup_),
-                      'blocklyDeletable');
-    Blockly.removeClass_(/** @type {!Element} */ (this.svgGroup_),
-                      'blocklyUndeletable');
+    Blockly.addClass_(this.svgGroup_, 'blocklyDeletable');
+    Blockly.removeClass_(this.svgGroup_, 'blocklyUndeletable');
   }
   this.updateColour();
 };
@@ -191,15 +183,13 @@ BS.TITLE_HEIGHT = 18;
  * Applies to highlighting on around the inside of a curve.
  * @const
  */
-BS.DISTANCE_45_INSIDE = (1 - Math.SQRT1_2) *
-      (BS.CORNER_RADIUS - 1) + 1;
+BS.DISTANCE_45_INSIDE = (1 - Math.SQRT1_2) * (BS.CORNER_RADIUS - 1) + 1;
 /**
  * Distance from shape edge to intersect with a curved corner at 45 degrees.
  * Applies to highlighting on around the outside of a curve.
  * @const
  */
-BS.DISTANCE_45_OUTSIDE = (1 - Math.SQRT1_2) *
-      (BS.CORNER_RADIUS + 1) - 1;
+BS.DISTANCE_45_OUTSIDE = (1 - Math.SQRT1_2) * (BS.CORNER_RADIUS + 1) - 1;
 
 BS.NOTCH_PATH_WIDTH = 15;
 /**
@@ -263,8 +253,7 @@ BS.TOP_LEFT_CORNER_START_HIGHLIGHT_RTL =
  * SVG start point for drawing the top-left corner's highlight in LTR.
  * @const
  */
-BS.TOP_LEFT_CORNER_START_HIGHLIGHT_LTR =
-    'm 1,' + (BS.CORNER_RADIUS - 1);
+BS.TOP_LEFT_CORNER_START_HIGHLIGHT_LTR = 'm 1,' + (BS.CORNER_RADIUS - 1);
 /**
  * SVG path for drawing the rounded top-left corner.
  * @const
@@ -364,7 +353,7 @@ Blockly.BlockSvg.prototype.dispose = function() {
 Blockly.BlockSvg.prototype.disposeUiEffect = function() {
   Blockly.playAudio('delete');
 
-  var xy = Blockly.getSvgXY_(/** @type {!Element} */ (this.svgGroup_));
+  var xy = Blockly.getSvgXY_(this.svgGroup_);
   // Deeply clone the current block.
   var clone = this.svgGroup_.cloneNode(true);
   clone.translateX_ = xy.x;
@@ -420,7 +409,7 @@ Blockly.BlockSvg.prototype.connectionUiEffect = function() {
   Blockly.playAudio('click');
 
   // Determine the absolute coordinates of the inferior block.
-  var xy = Blockly.getSvgXY_(/** @type {!Element} */ (this.svgGroup_));
+  var xy = Blockly.getSvgXY_(this.svgGroup_);
   // Offset the coordinates based on the two connection types.
   if (this.block_.outputConnection) {
     xy.x += oppositeIfRTL(-3);
@@ -500,12 +489,10 @@ Blockly.BlockSvg.prototype.updateToColour_ = function(hexColour) {
  */
 Blockly.BlockSvg.prototype.updateDisabled = function() {
   if (this.block_.disabled || this.block_.getInheritedDisabled()) {
-    Blockly.addClass_(/** @type {!Element} */ (this.svgGroup_),
-                      'blocklyDisabled');
+    Blockly.addClass_(this.svgGroup_, 'blocklyDisabled');
     this.svgPath_.setAttribute('fill', 'url(#blocklyDisabledPattern)');
   } else {
-    Blockly.removeClass_(/** @type {!Element} */ (this.svgGroup_),
-                         'blocklyDisabled');
+    Blockly.removeClass_(this.svgGroup_, 'blocklyDisabled');
     this.updateColour();
   }
   var children = this.block_.getChildren();
@@ -523,8 +510,7 @@ Blockly.BlockSvg.prototype.shouldBeGrayedOut = function() {
  * Select this block.  Highlight it visually.  Move to top of the stack.
  */
 Blockly.BlockSvg.prototype.addSelect = function() {
-  Blockly.addClass_(/** @type {!Element} */ (this.svgGroup_),
-                    'blocklySelected');
+  Blockly.addClass_(this.svgGroup_, 'blocklySelected');
   // Move the selected block to the top of the stack.
   this.svgGroup_.parentNode.appendChild(this.svgGroup_);
 };
@@ -535,16 +521,14 @@ Blockly.BlockSvg.prototype.addSelect = function() {
  * case.
  */
 Blockly.BlockSvg.prototype.addSelectNoMove = function() {
-  Blockly.addClass_(/** @type {!Element} */ (this.svgGroup_),
-                    'blocklySelected');
+  Blockly.addClass_(this.svgGroup_, 'blocklySelected');
 };
 
 /**
  * Unselect this block.  Remove its highlighting.
  */
 Blockly.BlockSvg.prototype.removeSelect = function() {
-  Blockly.removeClass_(/** @type {!Element} */ (this.svgGroup_),
-                       'blocklySelected');
+  Blockly.removeClass_(this.svgGroup_, 'blocklySelected');
 };
 
 /**
@@ -552,32 +536,28 @@ Blockly.BlockSvg.prototype.removeSelect = function() {
  * Also disables the highlights/shadows to improve performance.
  */
 Blockly.BlockSvg.prototype.addDragging = function() {
-  Blockly.addClass_(/** @type {!Element} */ (this.svgGroup_),
-                    'blocklyDragging');
+  Blockly.addClass_(this.svgGroup_, 'blocklyDragging');
 };
 
 /**
  * Removes the dragging class from this block.
  */
 Blockly.BlockSvg.prototype.removeDragging = function() {
-  Blockly.removeClass_(/** @type {!Element} */ (this.svgGroup_),
-                       'blocklyDragging');
+  Blockly.removeClass_(this.svgGroup_, 'blocklyDragging');
 };
 
 /**
  * Adds the spotlight class to this block.
  */
 Blockly.BlockSvg.prototype.addSpotlight = function() {
-  Blockly.addClass_(/** @type {!Element} */ (this.svgGroup_),
-                    'blocklySpotlight');
+  Blockly.addClass_(this.svgGroup_, 'blocklySpotlight');
 };
 
 /**
  * Removes the spotlight class from this block.
  */
 Blockly.BlockSvg.prototype.removeSpotlight = function() {
-  Blockly.removeClass_(/** @type {!Element} */ (this.svgGroup_),
-                       'blocklySpotlight');
+  Blockly.removeClass_(this.svgGroup_, 'blocklySpotlight');
 };
 
 /**
