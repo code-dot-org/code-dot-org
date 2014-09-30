@@ -4,7 +4,6 @@ module ApplicationHelper
 
   include LocaleHelper
   include VideosHelper
-  include BrowsersHelper
   include ScriptLevelsHelper
   include StagesHelper
 

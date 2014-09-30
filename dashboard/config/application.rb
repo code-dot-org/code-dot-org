@@ -1,6 +1,6 @@
 require File.expand_path('../boot', __FILE__)
-require 'rails/all'
 require File.expand_path('../deployment', __FILE__)
+require 'rails/all'
 
 require 'cdo/geocoder'
 
