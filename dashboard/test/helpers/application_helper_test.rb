@@ -59,12 +59,6 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal 'http://localhost.code.org', code_org_root_path
   end
 
-  test "is_k1? when current level has is_k1 property" do
-    @level = Maze.create(@maze_data)
-    @level.properties['is_k1'] = 'true'
-    assert is_k1?
-  end
-
   test "is_k1? when current script returns true for is_k1?" do
     @script = Script.find_by_name('course1')
     assert is_k1?
