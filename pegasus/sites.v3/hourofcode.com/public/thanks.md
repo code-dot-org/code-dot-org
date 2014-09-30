@@ -5,9 +5,9 @@ layout: wide
 social:
   "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
   "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": 'http://#{request.site}/images/hour-of-code-2014-video-thumbnail.jpg'
-  "og:image:width": "1705"
-  "og:image:height": "949"
+  "og:image": "http://#{request.site}/images/hour-of-code-2014-video-thumbnail.jpg"
+  "og:image:width": 1705
+  "og:image:height": 949
   "og:url": "http://#{request.site}"
 
   "twitter:card": player
