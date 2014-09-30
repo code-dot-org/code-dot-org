@@ -18,10 +18,10 @@ max_age: 60
 -twitter = {:url=>"http://#{request.site}/", :related=>'codeorg', :hashtags=>'', :text=>'Join the largest learning event in history, Dec 8-14, 2014'}
 -twitter[:hashtags] = 'HourOfCode'
 
-
-
 -pass unless form = DB[:forms].where(kind:'CompanyProfile', name:request.splat_path_info[1..-1]).first
 -@company = company = JSON.parse(form[:data])
+-if company['gplus_b']
+  -gplus = {:url=>"http://hourofcode.com/"}
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/ee.css"}/
 
@@ -68,7 +68,7 @@ max_age: 60
 
   #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
     -unless company['video_key_s']
-      = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"
+      = view :share_buttons, facebook:facebook, twitter:twitter, gplus:gplus, download_url:"http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"
 
 #intro_bottom
   -if company['intro_bottom_copy_t']

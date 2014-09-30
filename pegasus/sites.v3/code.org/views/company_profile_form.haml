@@ -65,6 +65,12 @@
           %input{name:'video_key_s', value:data['video_key_s']}
       %tr
         %th
+          Show Google+ share button
+        %td
+          -gplus_b = data['gplus_b'] || nil
+          %input{name:'gplus_b', type:'checkbox', value:'1', checked: gplus_b}
+      %tr
+        %th
           Intro - Top
           %br
           (appears above video, formatted in
