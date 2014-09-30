@@ -25,6 +25,10 @@ class Browser
     # Default: no browser support warning
     true
   end
+
+  def cdo_name
+    ie? ? "#{name} #{version}" : name
+  end
 end
 
 # Change the browser.modern? rules to use a conservative blacklist instead of a whitelist
