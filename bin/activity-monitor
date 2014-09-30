@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 require 'csv'
-require 'browser'
 require_relative '../deployment'
 require 'cdo/only_one'
 require 'cdo/hip_chat'
+require 'cdo/browser'
 
 FiveMinutes = 5 * 60 * 1000
 OneHour = 60 * 60 * 1000
@@ -44,7 +44,9 @@ class Collater
 
   def each_by_browser()
     browsers = @results[:browsers]
-    browsers.keys.sort.each do |browser|
+    browsers.keys.sort do |a, b|
+      a.cdo_name <=> b.cdo_name
+    end.each do |browser|
       browsers[browser].keys.sort.each do |level|
         i = browsers[browser][level]
         yield i.merge(browser:browser, level:level)
@@ -85,11 +87,9 @@ class Monitor
 
   def each_row()
     dataset.each do |i|
-      browser = Browser.new(ua: i['user_agent'])
-      next if excluded_browser?(browser)
       yield i['level_id'].to_i,
             i['tag'].to_sym,
-            browser.ie? ? "#{browser.name} #{browser.version}" : browser.name,
+            Browser.new(ua: i['user_agent']),
             i['locale']
     end
   end
@@ -129,6 +129,7 @@ def main()
 
     Monitor.collate(start:start, finish:finish).each_by_browser do |i|
       next if ExcludedLevels.include?(i[:level])
+      next if excluded_browser?(i[:browser])
 
       starts = i[:starts]
       finishes = [starts, i[:finishes]].min
@@ -143,7 +144,7 @@ def main()
 
       if status == :fail
         log_string =
-          "<b>#{i[:browser]}</b> hasn't passed <b><a href=\"http://learn.code.org/levels/#{i[:level]}\">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{hours} hour(s)."
+          "<b>#{i[:browser].cdo_name}</b> hasn't passed <b><a href=\"http://learn.code.org/levels/#{i[:level]}\">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{hours} hour(s)."
         HipChat.developers log_string, color:'red', notify:1
         HipChat.log log_string, color:'red'
       end
