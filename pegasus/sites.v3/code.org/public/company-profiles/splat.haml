@@ -54,9 +54,13 @@ max_age: 60
           %br.desktop-feature
 
           .count{:style=>'font-size: 32px; line-height: 32px; font-weight:500' }
-            5,455 #{company['display_name_s']} employees have tried the Hour of Code.
+            0
+            -if company['num_employees_i']
+              of #{company['num_employees_i']} 
+            #{company['display_name_s']} employees have tried the Hour of Code.
             %h4.desktop-feature{style: 'font-size: 22px;'}
-              40% Started
+              -if company['num_employees_i']
+                0% Started
           %br
 
         #getstarted.col-mobile-44

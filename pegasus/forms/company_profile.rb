@@ -6,6 +6,7 @@ class CompanyProfile
       result[:name_s] = required downcased stripped data[:name_s]
       result[:display_name_s] = required stripped data[:display_name_s]
       result[:name_in_header_b] = nil_if_empty data[:name_in_header_b]
+      result[:num_employees_i] = nil_if_empty data[:num_employees_i]
       result[:video_key_s] = nil_if_empty stripped data[:video_key_s]
       result[:intro_top_copy_t] = nil_if_empty stripped data[:intro_top_copy_t]
       result[:intro_bottom_copy_t] = nil_if_empty stripped data[:intro_bottom_copy_t]
