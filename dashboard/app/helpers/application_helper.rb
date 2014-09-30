@@ -150,4 +150,18 @@ module ApplicationHelper
 
     html.html_safe
   end
+
+  def is_k1?
+    is_k1 = @script.try(:is_k1?)
+    is_k1 = current_user.try(:primary_script).try(:is_k1?) if is_k1.nil?
+    is_k1
+  end
+
+  def playlab_freeplay_path
+    script_stage_script_level_path(*is_k1? ? ['course1', 16, 6] : ['playlab', 1, 10])
+  end
+
+  def artist_freeplay_path
+    script_stage_script_level_path(*is_k1? ? ['course1', 18, 10] : ['artist', 1, 10])
+  end
 end

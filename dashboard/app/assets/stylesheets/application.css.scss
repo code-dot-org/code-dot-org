@@ -292,13 +292,14 @@ th {
         position: relative;
         top: 1px;
       }
-      .puzzle-unplugged {
-        font-size: 13px;
-        padding-left: 6px;
-        padding-right: 6px;
-      }
     }
   }
+}
+
+.puzzle-named {
+  font-size: 13px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 .progress-outer {
@@ -342,6 +343,10 @@ th {
   padding: 3px;
   font-size: 16px;
   display: inline-block;
+}
+
+a.header_status_bar:hover {
+  background-color: orange;
 }
 
 .header_text {
