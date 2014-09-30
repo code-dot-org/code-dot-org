@@ -9,7 +9,7 @@ social:
   "og:image:width": 1705
   "og:image:height": 949
   "og:url": "http://<%=request.host%>"
-  "og:video": "https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv_load_policy=3&rel=0&autohide=1&showinfo=0"
+  "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
 
   "twitter:card": player
   "twitter:site": "@codeorg"

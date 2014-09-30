@@ -27,7 +27,9 @@ max_age: 60
 #congrats.mobile-pad{:style=>'margin: 0 auto;'}
 
   -if company
-    #company_header= view :employee_engagement_header, company_name:company['display_name_s'], logo_path:company['logo_path_s']
+    -name_in_header_b = company['name_in_header_b'] || nil
+    -header_name = name_in_header_b ? company['display_name_s'] : nil
+    #company_header= view :employee_engagement_header, company_name:header_name, logo_path:company['logo_path_s']
 
     %h1.ee_congrats_header=I18n.t :congratulations_on_completing_hoc
 
