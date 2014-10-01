@@ -607,7 +607,6 @@ class ActivitiesControllerTest < ActionController::TestCase
         'level_source' => nil,
         'share_failure' => {
             'message' => "It looks like there is profanity in it. Try changing the text.",
-            'contents' => 'shit'
         }
     }
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -621,7 +620,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
     end
     assert_response :success
-    assert(@response.body.include?('scheiße'))
     expected_response = {'level_source' => nil }
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
