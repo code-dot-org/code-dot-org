@@ -1,0 +1,12 @@
+name '4-5 Suncatchers Multi 1'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/4-5_images/unplugged/suncatchers_2_q.png'
+question 'Which of the programs below <em>does not</em> make the exact same sequence as Program 1'
+height '100'
+
+wrong '/script_assets/4-5_images/unplugged/suncatchers_2_a1.png'
+right '/script_assets/4-5_images/unplugged/suncatchers_2_a2.png'
+wrong '/script_assets/4-5_images/unplugged/suncatchers_2_a3.png'
+wrong '/script_assets/4-5_images/unplugged/suncatchers_2_a4.png'
+

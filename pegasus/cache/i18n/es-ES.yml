@@ -3,7 +3,7 @@
   computer_science: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
   csedweek_dates: Diciembre 9-15, 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>han aprendido una</h3><h2>HORA DE CÓDIGO&trade;</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>han probado la</h3><h2>Hora del Código</h2>"
   anybody_can_learn: Cualquiera puede aprender.
   learn_now: Aprende Ahora
   petition_message: Cada estudiante de cada escuela debería tener la oportunidad de
@@ -45,17 +45,18 @@
   enter_valid_email: Por favor ingresa un correo electrónico válido
   get_a_certificate_message: Te enviaremos un certificado e información acerca de
     cómo <a href='/learn/beyond'>Aprender más allá de una hora</a>
-  get_a_certificate_message_after: El certificado está en camino. Ahora, seguir adelante
-    con nuestro <a href='http://learn.code.org'> curso de 20 horas</a>, o ver más
-    opciones para <a href='/learn/beyond'> aprender más allá de Una Hora</a>.
+  get_a_certificate_message_after: Haga clic en el certificado para descargarlo o
+    imprimirlo. Ahora, continúe con nuestros <a href='http://studio.code.org'>otros
+    cursos</a>, o vea más opciones en <a href='/learn/beyond'>Aprender más allá de
+    Una Hora</a>.
   thanks_for_submitting: "¡Gracias por su envío!"
   if_you_enjoyed: Si disfrutaste aprendiendo, ¡pídele a tus amigos que lo prueben
     tambien! Queremos que todo el mundo aprenda.
   personalize_certificate: Personaliza tu certificado
   share_achievement: Comparte tu logro
-  beyond_hour_message: Seguir adelante con nuestro <a href='http://learn.code.org'>
-    curso de 20 horas</a>, o ver más opciones para <a href='/learn/beyond'> aprender
-    más allá de Una Hora</a>.
+  beyond_hour_message: Continúe con nuestros <a href='http://studio.code.org'>otros
+    cursos</a>, o vea más opciones en <a href='/learn/beyond'>Aprender más allá de
+    Una Hora</a>.
   leaderboards_for_hoc: Líderes de Una Hora de Código.
   country: País
   city: Ciudad
@@ -69,7 +70,7 @@
   thanks_for_voting: "¡ Gracias por tu voto!"
   share_on_facebook: Compartir en Facebook
   share_on_twitter: Compartir en Twitter
-  beyond_an_hour: Más allá de la hora del código
+  beyond_an_hour: Más allá de una Hora de Código
   get_started: Inicio
   i_agree: De acuerdo
   participant_select: "-Seleccionar-"
@@ -81,6 +82,8 @@
   i_am_a: Soy un
   never_spam: Nunca te enviaremos spam
   enter_country: Introduzca el país si reside fuera de los Estados Unidos
+  used_infrequent_updates: Solo se utiliza para las actualizaciones frecuentes
+  privacy_practices_children: Vea nuestras políticas de privacidad para niños
   petition_thankyou: Gracias por firmar la petición
   carousel_heading_international: Tutoriales en tu idioma
   continue_learning_header: Sigue aprendiendo más allá de una hora
@@ -108,14 +111,14 @@
   contact_form_topic_press: Prensa/medios de comunicación (entrevista o compromiso
     de hablar)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_elementary_title: Elementary courses
-  studiobar_elementary_body: Our three new courses for K&#8209;5
+  studiobar_elementary_title: Cursos elementales
+  studiobar_elementary_body: Nuestros tres nuevos cursos para K&#8209;5
   studiobar_hoc_title: La hora de la programación
-  studiobar_hoc_body: Learn to code with Angry Birds
+  studiobar_hoc_body: Aprende a programar con Angry Birds
   studiobar_flappy_title: Código de Flappy
-  studiobar_flappy_body: Make and share your own Flappy game
-  studiobar_teacher_title: Teacher dashboard
-  studiobar_teacher_body: 'For teachers: view your students'' progress'
+  studiobar_flappy_body: Crea y comparte tu propio juego Flappy
+  studiobar_teacher_title: Hecho para los profesores
+  studiobar_teacher_body: Presenta Code Studio en tu aula
   contact_form_topic_student: Soy un estudiante
   contact_form_topic_parent: Soy un padre
   contact_form_topic_teacher: Soy un profesor/educador
@@ -173,59 +176,62 @@
     estudiante de Universidad (o investigador)
   volunteer_engineer_submission_experience_software_professional: Profesional en software
   petition_age: Edad
-  dashboard_landing_title: Teacher Home Page
-  dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
-  dashboard_landing_video: Watch this video
-  dashboard_landing_watch_video: for a tour of the new features!
-  dashboard_landing_view_as_student: View this site as a student
-  dashboard_landing_students_title: Your students
-  dashboard_landing_students_manage: View and manage your students
-  dashboard_landing_news_title: Latest news
-  dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
-  dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
-  dashboard_landing_useful_links: Other useful links
+  dashboard_landing_title: Página de inicio del maestro
+  dashboard_landing_welcome: Bienvenido al nuevo y mejorado panel para profesores.
+  dashboard_landing_video: "¡Mira este vídeo"
+  dashboard_landing_watch_video: para ver un resumen de las novedades!
+  dashboard_landing_view_as_student: Ver este sitio como un alumno
+  dashboard_landing_students_title: Sus alumnos
+  dashboard_landing_students_manage: Ver y administrar tus alumnos
+  dashboard_landing_news_title: "Últimas noticias"
+  dashboard_landing_new_beta: "¡Nuevo! Pruebe nuestros cursos beta para los alumnos
+    de K-5."
+  dashboard_landing_new_k5courses: "¡Nuevo! Pruebe nuestros cursos para los estudiantes
+    de K-5."
+  dashboard_landing_useful_links: Otros enlaces útiles
   dashboard_landing_print_certificates: Imprimir certificados para los alumnos que
     terminan este curso
   dashboard_landing_educator_blog: Lee noticias y actualizaciones de nuestro material
     en nuestro Blog del Educador
-  dashboard_landing_smart_hints: Por favor ayudenos a agregar consejos útiles a los
+  dashboard_landing_smart_hints: Por favor ayúdenos a agregar consejos útiles a los
     tutoriales de Code.org
-  dashboard_landing_video_player: Pruebe nuestro nuevo reproductor de video en su
+  dashboard_landing_video_player: Pruebe nuestro nuevo reproductor de vídeo en su
     escuela
-  dashboard_landing_progress_title: Main class progress
-  dashboard_landing_progress_biggest: This is the progress for your biggest section.
-  dashboard_landing_view_progress: View Progress for %{biggest_section}
-  dashboard_landing_available_title: Available courses
-  dashboard_landing_available_courses: Here are the courses currently available for
-    you and your students.
-  dashboard_landing_loading: Loading...
+  dashboard_landing_progress_title: Progreso de la clase principal
+  dashboard_landing_progress_biggest: Este es el progreso de su sección más grande.
+  dashboard_landing_view_progress: Ver progreso de %{biggest_section}
+  dashboard_landing_available_title: Cursos disponibles
+  dashboard_landing_available_courses: Aquí los cursos están disponibles para usted
+    y sus alumnos.
+  dashboard_landing_loading: Cargando...
   dashboard_action_edit: Editar
-  dashboard_action_save: Save
-  dashboard_action_save_all: Save all
+  dashboard_action_save: Guardar
+  dashboard_action_save_all: Guardar todo
   dashboard_action_cancel: Cancelar
-  dashboard_action_delete: Delete
-  dashboard_action_confirm: Delete?
+  dashboard_action_delete: Borrar
+  dashboard_action_confirm: "¿Borrar?"
   dashboard_action_delete_yes: Sí
   dashboard_action_delete_no: 'No'
-  dashboard_action_done: Done
-  dashboard_action_required: required
-  dashboard_navigation_home_page: Teacher home page
-  dashboard_navigation_all_sections: All sections
-  dashboard_navigation_view_progress: View Progress
-  dashboard_navigation_add_students: Add Students
-  dashboard_navigation_manage_students: Manage Students
-  dashboard_navigation_section: 'Section: %{section_name}'
-  dashboard_navigation_student: 'Student: %{student_name}'
-  dashboard_sections_new_section: New section
-  dashboard_sections_jumbotron_instruction: Create new sections and add students to
-    them. Sections help you organize students into smaller groups so you can track
-    their progress and manage their accounts.
+  dashboard_action_done: Hecho
+  dashboard_action_required: obligatorio
+  dashboard_navigation_home_page: Página de inicio del maestro
+  dashboard_navigation_all_sections: Todas las secciones
+  dashboard_navigation_view_progress: Ver progreso
+  dashboard_navigation_add_students: Añadir alumnos
+  dashboard_navigation_manage_students: Administrar alumnos
+  dashboard_navigation_section: 'Sección: %{section_name}'
+  dashboard_navigation_student: 'Alumno: %{student_name}'
+  dashboard_sections_new_section: Nueva sección
+  dashboard_sections_jumbotron_instruction: Crear nuevas secciones y añadir alumnos
+    a ellos. Las secciones ayudan a organizar los alumnos en grupos más pequeños para
+    que pueda seguir su progreso y administrar sus cuentas.
   dashboard_sections_table_section: Sección
-  dashboard_sections_table_secret: Secret type
+  dashboard_sections_table_secret: Tipo secreto
   dashboard_sections_table_grade: Grado
   dashboard_sections_table_course: Curso
-  dashboard_sections_table_students: Estudiantes
+  dashboard_sections_table_students: Alumnos
   dashboard_sections_table_code: Código de sección
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
     students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
   dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
@@ -244,9 +250,12 @@
     per line:'
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
+  dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Nombre
   dashboard_students_age: Edad
   dashboard_students_gender: Sexo
+  dashboard_students_male: Hombre
+  dashboard_students_female: Mujer
   dashboard_students_secret: Secret
   dashboard_students_password: Contraseña
   dashboard_students_username: 'Username: %{student_username}'
@@ -275,3 +284,27 @@
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: Secuencia
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: Otros
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
+  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
+    week alone:'
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

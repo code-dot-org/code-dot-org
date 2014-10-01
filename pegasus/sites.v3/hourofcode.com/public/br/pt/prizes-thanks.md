@@ -1,7 +1,8 @@
 ---
 title: Obrigado
+layout: wide
 ---
 
 # Obrigado
 
-Sua escola inteira agora está concorrendo a um kit de laptops (ou US$ 10.000 para outra tecnologia).
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).

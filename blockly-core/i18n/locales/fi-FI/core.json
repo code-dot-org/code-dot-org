@@ -65,7 +65,7 @@
   "EXPAND_ALL": "Laajenna lohkot",
   "EXPAND_BLOCK": "Laajenna lohko",
   "EXTERNAL_INPUTS": "Ulkoiset syötteet",
-  "FUNCTION_HEADER": "Function",
+  "FUNCTION_HEADER": "funktio",
   "HELP": "Ohje",
   "INLINE_INPUTS": "Tuo syötteet",
   "LISTS_CREATE_EMPTY_HELPURL": "http://en.wikipedia.org/wiki/Linked_list#Empty_lists",

@@ -33,6 +33,7 @@ class LevelSourcesController < ApplicationController
   def common(hide_source)
     @level_source_id = params[:id]
     @level_source = LevelSource.find(@level_source_id)
+    @phone_share_url = send_to_phone_url
     @start_blocks = @level_source.data
     @level = @level_source.level
     @game = @level.game
@@ -40,7 +41,7 @@ class LevelSourcesController < ApplicationController
     @hide_source = hide_source
     @share = true
     @callback = milestone_level_url(user_id: current_user.try(:id) || 0, level_id: @level.id)
-    @no_padding = @share && phone? && @game.share_mobile_fullscreen?
+    @no_padding = @share && browser.mobile? && @game.share_mobile_fullscreen?
     @callouts = []
   end
 end
