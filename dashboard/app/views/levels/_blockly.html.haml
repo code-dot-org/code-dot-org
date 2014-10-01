@@ -33,6 +33,8 @@
       (!Rails.env.production? && request.location.try(:country_code) == 'RD') |
 
   :javascript
+    var script_path = "#{@script_level && build_script_level_path(@script_level)}";
+    startTiming('Puzzle', script_path, '');
     var level = #{level.to_json};
     // See assets/javascripts/sendReport for definition of lastServerResponse
     var appOptions = {
@@ -115,10 +117,10 @@
           };
         }
         // Track puzzle attempt event
-        script_path = "#{@script_level && build_script_level_path(@script_level)}";
         trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
         if (report.pass) {
           trackEvent('Puzzle', 'Success', script_path, report.attempt);
+          stopTiming('Puzzle', script_path, '');
         }
         trackEvent('Activity', 'Lines of Code', script_path, report.lines);
         sendReport(report);
