@@ -1,3 +1,5 @@
+require 'cdo/text_purifier'
+
 class ActivitiesController < ApplicationController
   include LevelsHelper
 
@@ -22,7 +24,8 @@ class ActivitiesController < ApplicationController
     end
 
     if params[:program]
-      @level_source = LevelSource.lookup(@level, params[:program])
+      share_failure = find_share_failure(params[:program])
+      @level_source = LevelSource.find_identical_or_create(@level, params[:program]) unless share_failure
     end
 
     log_milestone(@level_source, params)
@@ -54,13 +57,38 @@ class ActivitiesController < ApplicationController
                                     solved?: solved,
                                     level_source: @level_source,
                                     activity: @activity,
-                                    new_level_completed: @new_level_completed)
+                                    new_level_completed: @new_level_completed,
+                                    share_failure: share_failure)
 
     slog(:tag => 'activity_finish',
          :script_level_id => @script_level.try(:id),
          :level_id => @level.id,
          :user_agent => request.user_agent,
          :locale => locale) if solved
+  end
+
+  def find_share_failure(program)
+    xml_tag_regexp = /<[^>]*>/
+    program_tags_removed = program.gsub(xml_tag_regexp, "\n")
+    content_violation = TextPurifier.find_first_text_violation(program_tags_removed, ['en', locale])
+    return nil unless content_violation
+    share_failure = {}
+    share_failure['message'] = message_for_content_violation(content_violation)
+    share_failure['contents'] = content_violation.offending_text if program.include?(content_violation.offending_text)
+    share_failure
+  end
+
+  def message_for_content_violation(content_violation)
+    case content_violation
+      when EmailViolation
+        t('share_code.email_not_allowed')
+      when PhoneNumberViolation
+        t('share_code.phone_number_not_allowed')
+      when StreetAddressViolation
+        t('share_code.address_not_allowed')
+      when ProfanityViolation
+        t('share_code.profanity_not_allowed')
+    end
   end
 
   private

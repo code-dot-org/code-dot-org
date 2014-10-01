@@ -420,6 +420,10 @@ en:
     flappy_og_title: "Check out my Flappy Game"
     studio_og_title: "Check out my Play Lab App"
     og_description: "I wrote the code myself with Code.org"
+    phone_number_not_allowed: "It looks like there is a phone number in it. Try changing the text."
+    address_not_allowed: "It looks like there is an address in it. Try changing the text."
+    email_not_allowed: "It looks like there is an email in it. Try changing the text."
+    profanity_not_allowed: "It looks like there is profanity in it. Try changing the text."
   builder:
     created: "You created a new script."
     destroyed: "You destroyed a script."
