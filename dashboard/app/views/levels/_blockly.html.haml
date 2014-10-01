@@ -29,6 +29,9 @@
   -# use local[:symbol] to access locals passed into this render partial (defaults to false if not present)
   - local = Hash.new(false).merge!(local_assigns.delete_if{|_,v|v.nil?})
 
+  - send_to_phone = request.location.try(:country_code) == 'US' ||              |
+      (!Rails.env.production? && request.location.try(:country_code) != 'RD') |
+
   :javascript
     var level = #{level.to_json};
     // See assets/javascripts/sendReport for definition of lastServerResponse
@@ -36,6 +39,7 @@
       levelId: '#{@level.level_num}',
       #{ "level_source_id: #{@level_source_id}," if @level_source_id }
       #{ "send_to_phone_url: '#{@phone_share_url}'," if @phone_share_url }
+      #{ "sendToPhone: true," if send_to_phone}
       #{ "disableSocialShare: true," if @current_user && (@current_user.age.nil? || @current_user.age < 13) }
       #{ "scriptId: '#{@script.id}'," if @script }
       #{ "levelGameName: '#{@level.game.name}'," if @level.game }
