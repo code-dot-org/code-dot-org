@@ -1,4 +1,4 @@
-require 'cdo/text_purifier'
+require 'cdo/regexp'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
@@ -70,25 +70,17 @@ class ActivitiesController < ApplicationController
   def find_share_failure(program)
     xml_tag_regexp = /<[^>]*>/
     program_tags_removed = program.gsub(xml_tag_regexp, "\n")
-    content_violation = TextPurifier.find_first_text_violation(program_tags_removed, ['en', locale])
-    return nil unless content_violation
-    share_failure = {}
-    share_failure['message'] = message_for_content_violation(content_violation)
-    share_failure['contents'] = content_violation.offending_text if program.include?(content_violation.offending_text)
-    share_failure
-  end
 
-  def message_for_content_violation(content_violation)
-    case content_violation
-      when EmailViolation
-        t('share_code.email_not_allowed')
-      when PhoneNumberViolation
-        t('share_code.phone_number_not_allowed')
-      when StreetAddressViolation
-        t('share_code.address_not_allowed')
-      when ProfanityViolation
-        t('share_code.profanity_not_allowed')
+    if email = RegexpUtils.find_potential_email(program_tags_removed)
+      return {message: t('share_code.email_not_allowed'), contents: email}
+    elsif street_address = RegexpUtils.find_potential_street_address(program_tags_removed)
+      return {message: t('share_code.address_not_allowed'), contents: street_address}
+    elsif phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
+      return {message: t('share_code.phone_number_not_allowed'), contents: phone_number}
+    elsif RegexpUtils.find_potential_profanity(program_tags_removed, ['en', locale])
+      return {message: t('share_code.profanity_not_allowed')}
     end
+    nil
   end
 
   private
