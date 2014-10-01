@@ -191,6 +191,7 @@ BlocklyApps.init = function(config) {
   BlocklyApps.share = config.share;
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
+  BlocklyApps.sendToPhone = config.sendToPhone;
   BlocklyApps.noPadding = config.no_padding;
 
   BlocklyApps.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
@@ -270,6 +271,7 @@ BlocklyApps.init = function(config) {
           level_source_id: config.level_source_id,
           phone_share_url: config.send_to_phone_url
         },
+        sendToPhone: config.sendToPhone,
         twitter: config.twitter
       }));
 
@@ -878,6 +880,7 @@ BlocklyApps.displayFeedback = function(options) {
   options.Dialog = BlocklyApps.Dialog;
   options.onContinue = onContinue;
   options.backToPreviousLevel = backToPreviousLevel;
+  options.sendToPhone = BlocklyApps.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
@@ -4700,7 +4703,6 @@ exports.createSharingDiv = function(options) {
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
-    options.sendToPhone = true;
   }
 
   var sharingDiv = document.createElement('div');
@@ -4719,15 +4721,20 @@ exports.createSharingDiv = function(options) {
 
 //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
-  if (sharingPhone) {
+  if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
         sendToPhone.setAttribute('style', 'display:inline-block');
         var phone = $(sharingDiv.querySelector("#phone"));
-        phone.mask("(999) 999-9999");
-        phone.focus();
+        var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
+        submitButton.disabled = true;
+        phone.mask('(000) 000-0000',{
+            onComplete:function(){if(!submitted) submitButton.disabled=false;},
+            onChange: function(){submitButton.disabled=true;}
+        });
+        phone.focus();
         dom.addClickTouchEvent(submitButton, function() {
           var phone = $(sharingDiv.querySelector("#phone"));
           var params = jQuery.param({
@@ -4737,6 +4744,7 @@ exports.createSharingDiv = function(options) {
           $(submitButton).val("Sending..");
           phone.prop('readonly', true);
           submitButton.disabled = true;
+          submitted = true;
           jQuery.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text("Sent!");
