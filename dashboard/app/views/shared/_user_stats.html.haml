@@ -37,7 +37,7 @@
               %a{ href: link, class: "level_link#{passed ? ' level_link_done' : ''}"}
                 - unplugged = sl.level.unplugged?
                 - if unplugged
-                  %span.puzzle-unplugged
+                  %span.puzzle-named
                     =sl.level_display_text
                 - elsif ! passed
                   %span.puzzle-number

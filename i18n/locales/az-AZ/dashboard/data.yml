@@ -114,7 +114,7 @@
         parameters: "Parametrli funksiyalar"
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
+        maze_2_2: 'Nadinc donuzu tutmaqda mənə kömək edə bilərsiniz? Məni ona çatdırmaq üçün bir neçə "irəli get" blokunu ard-arda düzün və "Proqramı icra et"i basın. '
         maze_2_1: "Bu donuzun əlindən lələklərim biz-biz olur. Mənə kömək edin ki, onu tapım!"
         maze_2_2_5: "Yolu izləyərək məni səfeh donuza tərəf aparın. Partladıcı TNT qutusundan yayınaq, yoxsa lələklərim göyə sovrular!"
         maze_2_3: "Məni yaşıl ziyankara aparan yola yönləndirin! (Partladıcı TNT qutusundan ehtiyatlı olun)"

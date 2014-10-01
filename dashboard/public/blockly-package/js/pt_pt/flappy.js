@@ -166,6 +166,20 @@ var codeKeyDown = function(e) {
   }
 };
 
+BlocklyApps.toggleRunReset = function(button) {
+  var showRun = (button === 'run');
+  if (button !== 'run' && button !== 'reset') {
+    throw "Unexpected input";
+  }
+
+  var run = document.getElementById('runButton');
+  var reset = document.getElementById('resetButton');
+  run.style.display = showRun ? 'inline-block' : 'none';
+  run.disabled = !showRun;
+  reset.style.display = !showRun ? 'inline-block' : 'none';
+  reset.disabled = showRun;
+};
+
 /**
  * Common startup tasks for all apps.
  */
@@ -177,6 +191,7 @@ BlocklyApps.init = function(config) {
   BlocklyApps.share = config.share;
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
+  BlocklyApps.sendToPhone = config.sendToPhone;
   BlocklyApps.noPadding = config.no_padding;
 
   BlocklyApps.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
@@ -252,8 +267,11 @@ BlocklyApps.init = function(config) {
 
       belowViz.appendChild(feedback.createSharingDiv({
         response: {
-          level_source: window.location
+          level_source: window.location,
+          level_source_id: config.level_source_id,
+          phone_share_url: config.send_to_phone_url
         },
+        sendToPhone: config.sendToPhone,
         twitter: config.twitter
       }));
 
@@ -355,19 +373,26 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
+    BlocklyApps.editor = window.ace.edit('codeTextbox');
+    BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
+    BlocklyApps.editor.setOptions({
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true
+    });
+
     var codeTextbox = document.getElementById('codeTextbox');
+
+    var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
     var codeFunctions = config.level.codeFunctions;
     // Insert hint text from level codeFunctions into editCode area
     if (codeFunctions) {
-      var hintText = "";
+      var hintText = '';
       for (var i = 0; i < codeFunctions.length; i++) {
-        hintText = hintText + " " + codeFunctions[i].func + "();";
+        hintText += " " + codeFunctions[i].func + "();";
       }
-      var html = utils.escapeHtml(msg.typeFuncs()).replace('%1', hintText);
-      codeTextbox.innerHTML += '// ' + html + '<br><br><br>';
+      startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
     }
-    // Needed to prevent blockly from swallowing up the backspace key
-    codeTextbox.addEventListener('keydown', codeKeyDown, true);
+    BlocklyApps.editor.setValue(startText);
   }
 
   BlocklyApps.Dialog = config.Dialog;
@@ -486,6 +511,7 @@ BlocklyApps.init = function(config) {
   }
 
   if (config.level.editCode) {
+    // Swap the visibility of the codeText element and the blocklyDiv
     document.getElementById('codeTextbox').style.display = 'block';
     div.style.display = 'none';
   }
@@ -854,6 +880,7 @@ BlocklyApps.displayFeedback = function(options) {
   options.Dialog = BlocklyApps.Dialog;
   options.onContinue = onContinue;
   options.backToPreviousLevel = backToPreviousLevel;
+  options.sendToPhone = BlocklyApps.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
@@ -909,8 +936,7 @@ BlocklyApps.report = function(options) {
  */
 BlocklyApps.resetButtonClick = function() {
   onResetPressed();
-  document.getElementById('runButton').style.display = 'inline-block';
-  document.getElementById('resetButton').style.display = 'none';
+  BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
   Blockly.mainWorkspace.setEnableToolbox(true);
   Blockly.mainWorkspace.traceOn(false);
@@ -1956,7 +1982,6 @@ exports.createSharingDiv = function(options) {
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
-    options.sendToPhone = true;
   }
 
   var sharingDiv = document.createElement('div');
@@ -1975,17 +2000,22 @@ exports.createSharingDiv = function(options) {
 
 //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
-  if (sharingPhone) {
+  if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
         sendToPhone.setAttribute('style', 'display:inline-block');
-        var phone = $("#phone");
-        phone.mask("(999) 999-9999");
-        phone.focus();
+        var phone = $(sharingDiv.querySelector("#phone"));
+        var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
+        submitButton.disabled = true;
+        phone.mask('(000) 000-0000',{
+            onComplete:function(){if(!submitted) submitButton.disabled=false;},
+            onChange: function(){submitButton.disabled=true;}
+        });
+        phone.focus();
         dom.addClickTouchEvent(submitButton, function() {
-          var phone = $("#phone");
+          var phone = $(sharingDiv.querySelector("#phone"));
           var params = jQuery.param({
             level_source: options.response.level_source_id,
             phone: phone.val()
@@ -1993,6 +2023,7 @@ exports.createSharingDiv = function(options) {
           $(submitButton).val("Sending..");
           phone.prop('readonly', true);
           submitButton.disabled = true;
+          submitted = true;
           jQuery.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text("Sent!");
@@ -3893,8 +3924,7 @@ BlocklyApps.runButtonClick = function() {
   document.getElementById('instructions').setAttribute('visibility', 'visible');
   document.getElementById('getready').setAttribute('visibility', 'visible');
 
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   // BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -8615,7 +8645,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/pt_pt/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n    // ', escape((37,  msg.typeCode() )), '\n    <br>\n    // ', escape((39,  msg.typeHint() )), '\n    <br>\n  </div>\n');42; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (46,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((52,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((53,  msg.runProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((57,  msg.resetProgram() )), '</div>\n        <img src="', escape((58,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');60; if (data.controls) { ; buf.push('\n      ', (61,  data.controls ), '\n      ');62; } ; buf.push('\n      ');63; if (data.extraControlRows) { ; buf.push('\n      ', (64,  data.extraControlRows ), '\n      ');65; } ; buf.push('\n    </div>\n\n    ');68; instructions() ; buf.push('\n    ');69; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((75,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((76,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((78,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((80,  data.blockCounterClass )), '>\n          ', escape((81,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((84,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((87,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');93; codeArea() ; buf.push('\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n  </div>\n');38; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (42,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((48,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((49,  msg.runProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((53,  msg.resetProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');56; if (data.controls) { ; buf.push('\n      ', (57,  data.controls ), '\n      ');58; } ; buf.push('\n      ');59; if (data.extraControlRows) { ; buf.push('\n      ', (60,  data.extraControlRows ), '\n      ');61; } ; buf.push('\n    </div>\n\n    ');64; instructions() ; buf.push('\n    ');65; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');89; codeArea() ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -9041,7 +9071,7 @@ exports.flapTooltip = function(d){return "Fly Flappy upwards."};
 
 exports.flappySpecificFail = function(d){return "Your code looks good - it will flap with each click. But you need to click many times to flap to the target."};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "marca um ponto"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Adiciona um ponto à pontuação atual do jogador."};
 
@@ -9053,15 +9083,15 @@ exports.numBlocksNeeded = function(d){return "Este puzzle pode ser resolvido com
 
 exports.playSoundRandom = function(d){return "tocar som aleatório"};
 
-exports.playSoundBounce = function(d){return "play bounce sound"};
+exports.playSoundBounce = function(d){return "toca som de salto"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "toca som de triturar"};
 
-exports.playSoundDie = function(d){return "play sad sound"};
+exports.playSoundDie = function(d){return "toca som triste"};
 
-exports.playSoundHit = function(d){return "play smash sound"};
+exports.playSoundHit = function(d){return "toca som esmagar"};
 
-exports.playSoundPoint = function(d){return "play point sound"};
+exports.playSoundPoint = function(d){return "toca som ponto"};
 
 exports.playSoundSwoosh = function(d){return "play swoosh sound"};
 
@@ -9075,31 +9105,31 @@ exports.playSoundJingle = function(d){return "play jingle sound"};
 
 exports.playSoundSplash = function(d){return "play splash sound"};
 
-exports.playSoundLaser = function(d){return "play laser sound"};
+exports.playSoundLaser = function(d){return "toca som laser"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "toca o som escolhido."};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your game."};
+exports.reinfFeedbackMsg = function(d){return "Podes selecionar o botão \"Tenta Novamente\" para voltar e jogares o teu jogo."};
 
 exports.scoreText = function(d){return "Pontuação: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set scene"};
+exports.setBackground = function(d){return "definir cena"};
 
-exports.setBackgroundRandom = function(d){return "set scene Random"};
+exports.setBackgroundRandom = function(d){return "definir cena aleatória"};
 
-exports.setBackgroundFlappy = function(d){return "set scene City (day)"};
+exports.setBackgroundFlappy = function(d){return "definir cena Cidade (dia)"};
 
-exports.setBackgroundNight = function(d){return "set scene City (night)"};
+exports.setBackgroundNight = function(d){return "definir cena Cidade (noite)"};
 
-exports.setBackgroundSciFi = function(d){return "set scene Sci-Fi"};
+exports.setBackgroundSciFi = function(d){return "definir cena ficção cientifica"};
 
-exports.setBackgroundUnderwater = function(d){return "set scene Underwater"};
+exports.setBackgroundUnderwater = function(d){return "definir cena debaixo de água"};
 
-exports.setBackgroundCave = function(d){return "set scene Cave"};
+exports.setBackgroundCave = function(d){return "definir cena Caverna"};
 
-exports.setBackgroundSanta = function(d){return "set scene Santa"};
+exports.setBackgroundSanta = function(d){return "definir cena Pai Natal"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "definir a imagem de fundo"};
 
 exports.setGapRandom = function(d){return "set a random gap"};
 
@@ -9147,21 +9177,21 @@ exports.setGroundLava = function(d){return "set ground Lava"};
 
 exports.setGroundTooltip = function(d){return "Sets the ground image"};
 
-exports.setObstacle = function(d){return "set obstacle"};
+exports.setObstacle = function(d){return "definir obstáculo"};
 
-exports.setObstacleRandom = function(d){return "set obstacle Random"};
+exports.setObstacleRandom = function(d){return "definir obstáculo aleatório"};
 
-exports.setObstacleFlappy = function(d){return "set obstacle Pipe"};
+exports.setObstacleFlappy = function(d){return "definir obstáculo Cano"};
 
-exports.setObstacleSciFi = function(d){return "set obstacle Sci-Fi"};
+exports.setObstacleSciFi = function(d){return "definir obstáculo Ficção Cientifica"};
 
-exports.setObstacleUnderwater = function(d){return "set obstacle Plant"};
+exports.setObstacleUnderwater = function(d){return "definir obstáculo Planta"};
 
-exports.setObstacleCave = function(d){return "set obstacle Cave"};
+exports.setObstacleCave = function(d){return "definir obstáculo Caverna"};
 
-exports.setObstacleSanta = function(d){return "set obstacle Chimney"};
+exports.setObstacleSanta = function(d){return "definir obstáculo Chaminé"};
 
-exports.setObstacleLaser = function(d){return "set obstacle Laser"};
+exports.setObstacleLaser = function(d){return "definir obstáculo Lazer"};
 
 exports.setObstacleTooltip = function(d){return "Sets the obstacle image"};
 
@@ -9179,55 +9209,55 @@ exports.setPlayerUnderwater = function(d){return "set player Fish"};
 
 exports.setPlayerCave = function(d){return "set player Bat"};
 
-exports.setPlayerSanta = function(d){return "set player Santa"};
+exports.setPlayerSanta = function(d){return "definir jogador Pai Natal"};
 
-exports.setPlayerShark = function(d){return "set player Shark"};
+exports.setPlayerShark = function(d){return "definir jogador Tubarão"};
 
-exports.setPlayerEaster = function(d){return "set player Easter Bunny"};
+exports.setPlayerEaster = function(d){return "definir jogador Coelho da Páscoa"};
 
-exports.setPlayerBatman = function(d){return "set player Bat guy"};
+exports.setPlayerBatman = function(d){return "definir jogador Homem Morcego"};
 
-exports.setPlayerSubmarine = function(d){return "set player Submarine"};
+exports.setPlayerSubmarine = function(d){return "definir jogador Submarino"};
 
-exports.setPlayerUnicorn = function(d){return "set player Unicorn"};
+exports.setPlayerUnicorn = function(d){return "definir jogador Unicórnio"};
 
-exports.setPlayerFairy = function(d){return "set player Fairy"};
+exports.setPlayerFairy = function(d){return "definir jogador Fada"};
 
-exports.setPlayerSuperman = function(d){return "set player Flappyman"};
+exports.setPlayerSuperman = function(d){return "definir jogador Homem Flappy"};
 
-exports.setPlayerTurkey = function(d){return "set player Turkey"};
+exports.setPlayerTurkey = function(d){return "definir jogador Peru"};
 
-exports.setPlayerTooltip = function(d){return "Sets the player image"};
+exports.setPlayerTooltip = function(d){return "definir imagem do jogador"};
 
-exports.setScore = function(d){return "set score"};
+exports.setScore = function(d){return "definir pontuação"};
 
-exports.setScoreTooltip = function(d){return "Sets the player's score"};
+exports.setScoreTooltip = function(d){return "definir pontuação do  jogador"};
 
-exports.setSpeed = function(d){return "set speed"};
+exports.setSpeed = function(d){return "definir velocidade"};
 
-exports.setSpeedTooltip = function(d){return "Sets the levels speed"};
+exports.setSpeedTooltip = function(d){return "definir velocidade do nível"};
 
 exports.shareFlappyTwitter = function(d){return "Check out the Flappy game I made. I wrote it myself with @codeorg"};
 
-exports.shareGame = function(d){return "Share your game:"};
+exports.shareGame = function(d){return "Partilha o teu jogo:"};
 
 exports.soundRandom = function(d){return "aleatório"};
 
-exports.soundBounce = function(d){return "bounce"};
+exports.soundBounce = function(d){return "salto"};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "triturar"};
 
-exports.soundDie = function(d){return "sad"};
+exports.soundDie = function(d){return "triste"};
 
-exports.soundHit = function(d){return "smash"};
+exports.soundHit = function(d){return "esmagar"};
 
-exports.soundPoint = function(d){return "point"};
+exports.soundPoint = function(d){return "ponto"};
 
 exports.soundSwoosh = function(d){return "swoosh"};
 
-exports.soundWing = function(d){return "wing"};
+exports.soundWing = function(d){return "asa"};
 
-exports.soundJet = function(d){return "jet"};
+exports.soundJet = function(d){return "jato"};
 
 exports.soundCrash = function(d){return "crash"};
 
@@ -9237,37 +9267,37 @@ exports.soundSplash = function(d){return "splash"};
 
 exports.soundLaser = function(d){return "laser"};
 
-exports.speedRandom = function(d){return "set speed random"};
+exports.speedRandom = function(d){return "definir velocidade aleatória"};
 
-exports.speedVerySlow = function(d){return "set speed very slow"};
+exports.speedVerySlow = function(d){return "definir velocidade muito lenta"};
 
-exports.speedSlow = function(d){return "set speed slow"};
+exports.speedSlow = function(d){return "definir velocidade lenta"};
 
-exports.speedNormal = function(d){return "set speed normal"};
+exports.speedNormal = function(d){return "definir velocidade normal"};
 
-exports.speedFast = function(d){return "set speed fast"};
+exports.speedFast = function(d){return "definir velocidade rápida"};
 
-exports.speedVeryFast = function(d){return "set speed very fast"};
+exports.speedVeryFast = function(d){return "definir velocidade muito rápida"};
 
 exports.whenClick = function(d){return "when click"};
 
 exports.whenClickTooltip = function(d){return "Execute the actions below when a click event occurs."};
 
-exports.whenCollideGround = function(d){return "when hit the ground"};
+exports.whenCollideGround = function(d){return "quando bate no chão"};
 
 exports.whenCollideGroundTooltip = function(d){return "Execute the actions below when Flappy hits the ground."};
 
-exports.whenCollideObstacle = function(d){return "when hit an obstacle"};
+exports.whenCollideObstacle = function(d){return "quando bate num obstáculo"};
 
 exports.whenCollideObstacleTooltip = function(d){return "Execute the actions below when Flappy hits an obstacle."};
 
-exports.whenEnterObstacle = function(d){return "when pass obstacle"};
+exports.whenEnterObstacle = function(d){return "quando passa um obstáculo"};
 
 exports.whenEnterObstacleTooltip = function(d){return "Execute the actions below when Flappy enters an obstacle."};
 
-exports.whenRunButtonClick = function(d){return "when Run is clicked"};
+exports.whenRunButtonClick = function(d){return "quando o jogo começa"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Execute the actions below when the run button is pressed."};
+exports.whenRunButtonClickTooltip = function(d){return "Executa as ações abaixo quando o jogo começar."};
 
 exports.yes = function(d){return "Sim"};
 

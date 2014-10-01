@@ -166,6 +166,20 @@ var codeKeyDown = function(e) {
   }
 };
 
+BlocklyApps.toggleRunReset = function(button) {
+  var showRun = (button === 'run');
+  if (button !== 'run' && button !== 'reset') {
+    throw "Unexpected input";
+  }
+
+  var run = document.getElementById('runButton');
+  var reset = document.getElementById('resetButton');
+  run.style.display = showRun ? 'inline-block' : 'none';
+  run.disabled = !showRun;
+  reset.style.display = !showRun ? 'inline-block' : 'none';
+  reset.disabled = showRun;
+};
+
 /**
  * Common startup tasks for all apps.
  */
@@ -177,6 +191,7 @@ BlocklyApps.init = function(config) {
   BlocklyApps.share = config.share;
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
+  BlocklyApps.sendToPhone = config.sendToPhone;
   BlocklyApps.noPadding = config.no_padding;
 
   BlocklyApps.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
@@ -252,8 +267,11 @@ BlocklyApps.init = function(config) {
 
       belowViz.appendChild(feedback.createSharingDiv({
         response: {
-          level_source: window.location
+          level_source: window.location,
+          level_source_id: config.level_source_id,
+          phone_share_url: config.send_to_phone_url
         },
+        sendToPhone: config.sendToPhone,
         twitter: config.twitter
       }));
 
@@ -355,19 +373,26 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
+    BlocklyApps.editor = window.ace.edit('codeTextbox');
+    BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
+    BlocklyApps.editor.setOptions({
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true
+    });
+
     var codeTextbox = document.getElementById('codeTextbox');
+
+    var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
     var codeFunctions = config.level.codeFunctions;
     // Insert hint text from level codeFunctions into editCode area
     if (codeFunctions) {
-      var hintText = "";
+      var hintText = '';
       for (var i = 0; i < codeFunctions.length; i++) {
-        hintText = hintText + " " + codeFunctions[i].func + "();";
+        hintText += " " + codeFunctions[i].func + "();";
       }
-      var html = utils.escapeHtml(msg.typeFuncs()).replace('%1', hintText);
-      codeTextbox.innerHTML += '// ' + html + '<br><br><br>';
+      startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
     }
-    // Needed to prevent blockly from swallowing up the backspace key
-    codeTextbox.addEventListener('keydown', codeKeyDown, true);
+    BlocklyApps.editor.setValue(startText);
   }
 
   BlocklyApps.Dialog = config.Dialog;
@@ -486,6 +511,7 @@ BlocklyApps.init = function(config) {
   }
 
   if (config.level.editCode) {
+    // Swap the visibility of the codeText element and the blocklyDiv
     document.getElementById('codeTextbox').style.display = 'block';
     div.style.display = 'none';
   }
@@ -854,6 +880,7 @@ BlocklyApps.displayFeedback = function(options) {
   options.Dialog = BlocklyApps.Dialog;
   options.onContinue = onContinue;
   options.backToPreviousLevel = backToPreviousLevel;
+  options.sendToPhone = BlocklyApps.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
@@ -909,8 +936,7 @@ BlocklyApps.report = function(options) {
  */
 BlocklyApps.resetButtonClick = function() {
   onResetPressed();
-  document.getElementById('runButton').style.display = 'inline-block';
-  document.getElementById('resetButton').style.display = 'none';
+  BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
   Blockly.mainWorkspace.setEnableToolbox(true);
   Blockly.mainWorkspace.traceOn(false);
@@ -1956,7 +1982,6 @@ exports.createSharingDiv = function(options) {
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
-    options.sendToPhone = true;
   }
 
   var sharingDiv = document.createElement('div');
@@ -1975,17 +2000,22 @@ exports.createSharingDiv = function(options) {
 
 //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
-  if (sharingPhone) {
+  if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
         sendToPhone.setAttribute('style', 'display:inline-block');
-        var phone = $("#phone");
-        phone.mask("(999) 999-9999");
-        phone.focus();
+        var phone = $(sharingDiv.querySelector("#phone"));
+        var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
+        submitButton.disabled = true;
+        phone.mask('(000) 000-0000',{
+            onComplete:function(){if(!submitted) submitButton.disabled=false;},
+            onChange: function(){submitButton.disabled=true;}
+        });
+        phone.focus();
         dom.addClickTouchEvent(submitButton, function() {
-          var phone = $("#phone");
+          var phone = $(sharingDiv.querySelector("#phone"));
           var params = jQuery.param({
             level_source: options.response.level_source_id,
             phone: phone.val()
@@ -1993,6 +2023,7 @@ exports.createSharingDiv = function(options) {
           $(submitButton).val("Sending..");
           phone.prop('readonly', true);
           submitButton.disabled = true;
+          submitted = true;
           jQuery.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text("Sent!");
@@ -12392,8 +12423,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -13982,7 +14012,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/fr_fr/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n    // ', escape((37,  msg.typeCode() )), '\n    <br>\n    // ', escape((39,  msg.typeHint() )), '\n    <br>\n  </div>\n');42; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (46,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((52,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((53,  msg.runProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((57,  msg.resetProgram() )), '</div>\n        <img src="', escape((58,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');60; if (data.controls) { ; buf.push('\n      ', (61,  data.controls ), '\n      ');62; } ; buf.push('\n      ');63; if (data.extraControlRows) { ; buf.push('\n      ', (64,  data.extraControlRows ), '\n      ');65; } ; buf.push('\n    </div>\n\n    ');68; instructions() ; buf.push('\n    ');69; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((75,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((76,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((78,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((80,  data.blockCounterClass )), '>\n          ', escape((81,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((84,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((87,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');93; codeArea() ; buf.push('\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n  </div>\n');38; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (42,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((48,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((49,  msg.runProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((53,  msg.resetProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');56; if (data.controls) { ; buf.push('\n      ', (57,  data.controls ), '\n      ');58; } ; buf.push('\n      ');59; if (data.extraControlRows) { ; buf.push('\n      ', (60,  data.extraControlRows ), '\n      ');61; } ; buf.push('\n    </div>\n\n    ');64; instructions() ; buf.push('\n    ');65; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');89; codeArea() ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -14263,7 +14293,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Le bloc « Répéter » ou �
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Le bloc fonctionnel doit avoir d'autres blocs à l'intérieur pour fonctionner."};
 
-exports.extraTopBlocks = function(d){return "Vous avez disposé des blocs qui ne sont rattachés à aucun bloc d'évènement."};
+exports.extraTopBlocks = function(d){return "Vous avez des blocs non attachés. Est-ce que vous vouliez les attacher au bloc \"lors du lancement\" ?"};
 
 exports.finalStage = function(d){return "Félicitations ! Vous avez terminé l'étape finale."};
 
@@ -14337,7 +14367,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Production totale : "+
 
 exports.tryAgain = function(d){return "Réessayer"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Voir astuce"};
 
 exports.backToPreviousLevel = function(d){return "Retour au niveau précédent"};
 
@@ -14363,7 +14393,7 @@ exports.wantToLearn = function(d){return "Vous souhaitez apprendre à coder ?"}
 
 exports.watchVideo = function(d){return "Voir la vidéo"};
 
-exports.when = function(d){return "lors"};
+exports.when = function(d){return "lorsque"};
 
 exports.whenRun = function(d){return "lors du lancement"};
 
@@ -14492,7 +14522,7 @@ exports.numBlocksNeeded = function(d){return "Cette énigme peut être résolue 
 
 exports.ouchExclamation = function(d){return "Aïe !"};
 
-exports.playSoundCrunch = function(d){return "jouer le son Croquement"};
+exports.playSoundCrunch = function(d){return "jouer le son accroupir"};
 
 exports.playSoundGoal1 = function(d){return "jouer le son but 1"};
 
@@ -14552,19 +14582,19 @@ exports.positionOutBottomLeft = function(d){return "to the below bottom left pos
 
 exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
 
-exports.positionRandom = function(d){return "vers une position aléatoire"};
+exports.positionRandom = function(d){return "à une position aléatoire"};
 
-exports.projectileBlueFireball = function(d){return "boule de feu bleue"};
+exports.projectileBlueFireball = function(d){return "une boule de feu bleue"};
 
-exports.projectilePurpleFireball = function(d){return "boule de feu violette"};
+exports.projectilePurpleFireball = function(d){return "une boule de feu violette"};
 
-exports.projectileRedFireball = function(d){return "boule de feu rouge"};
+exports.projectileRedFireball = function(d){return "une boule de feu rouge"};
 
-exports.projectileYellowHearts = function(d){return "coeurs jaunes"};
+exports.projectileYellowHearts = function(d){return "des coeurs jaunes"};
 
-exports.projectilePurpleHearts = function(d){return "coeurs violets"};
+exports.projectilePurpleHearts = function(d){return "des coeurs violets"};
 
-exports.projectileRedHearts = function(d){return "coeurs rouges"};
+exports.projectileRedHearts = function(d){return "des coeurs rouges"};
 
 exports.projectileRandom = function(d){return "aléatoire"};
 
@@ -14578,9 +14608,9 @@ exports.repeatForeverTooltip = function(d){return "Exécuter les actions dans ce
 
 exports.saySprite = function(d){return "dire"};
 
-exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
+exports.saySpriteN = function(d){return "l'acteur "+v(d,"spriteIndex")+" dit"};
 
-exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
+exports.saySpriteTooltip = function(d){return "Montre une bulle de texte pour l'acteur spécifié."};
 
 exports.scoreText = function(d){return "Score : "+v(d,"playerScore")};
 
@@ -14590,29 +14620,29 @@ exports.setBackgroundRandom = function(d){return "définir un arrière-plan alé
 
 exports.setBackgroundBlack = function(d){return "définir l'arrière-plan noir"};
 
-exports.setBackgroundCave = function(d){return "définir l'arrière-plan Caverne"};
+exports.setBackgroundCave = function(d){return "définir l'arrière-plan caverne"};
 
-exports.setBackgroundCloudy = function(d){return "définir l'arrière-plan Nuageux"};
+exports.setBackgroundCloudy = function(d){return "définir l'arrière-plan nuageux"};
 
 exports.setBackgroundHardcourt = function(d){return "définir l'arrière-plan Terrain"};
 
-exports.setBackgroundNight = function(d){return "définir l'arrière-plan Nuit"};
+exports.setBackgroundNight = function(d){return "définir l'arrière-plan nuit"};
 
-exports.setBackgroundUnderwater = function(d){return "définir l'arrière-plan Sous-marin"};
+exports.setBackgroundUnderwater = function(d){return "définir l'arrière-plan sous-marin"};
 
-exports.setBackgroundCity = function(d){return "set city background"};
+exports.setBackgroundCity = function(d){return "définir l'arrière plan ville"};
 
-exports.setBackgroundDesert = function(d){return "set desert background"};
+exports.setBackgroundDesert = function(d){return "définir l'arrière plan désert"};
 
-exports.setBackgroundRainbow = function(d){return "set rainbow background"};
+exports.setBackgroundRainbow = function(d){return "définir l'arrière plan arc-en-ciel"};
 
-exports.setBackgroundSoccer = function(d){return "set soccer background"};
+exports.setBackgroundSoccer = function(d){return "définir l'arrière plan football"};
 
-exports.setBackgroundSpace = function(d){return "set space background"};
+exports.setBackgroundSpace = function(d){return "définir l'arrière plan espace"};
 
-exports.setBackgroundTennis = function(d){return "set tennis background"};
+exports.setBackgroundTennis = function(d){return "définir l'arrière plan tennis"};
 
-exports.setBackgroundWinter = function(d){return "set winter background"};
+exports.setBackgroundWinter = function(d){return "définir l'arrière plan hiver"};
 
 exports.setBackgroundTooltip = function(d){return "Définit l'image d'arrière-plan"};
 
@@ -14620,99 +14650,99 @@ exports.setScoreText = function(d){return "mettre le score à"};
 
 exports.setScoreTextTooltip = function(d){return "définit le texte à afficher dans la zone de score."};
 
-exports.setSpriteEmotionAngry = function(d){return "de mauvaise humeur"};
+exports.setSpriteEmotionAngry = function(d){return "une mauvaise humeur"};
 
-exports.setSpriteEmotionHappy = function(d){return "de bonne humeur"};
+exports.setSpriteEmotionHappy = function(d){return "une bonne humeur"};
 
-exports.setSpriteEmotionNormal = function(d){return "d'humeur normal"};
+exports.setSpriteEmotionNormal = function(d){return "une humeur normale"};
 
-exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
+exports.setSpriteEmotionRandom = function(d){return "une humeur aléatoire"};
 
-exports.setSpriteEmotionSad = function(d){return "to a sad emotion"};
+exports.setSpriteEmotionSad = function(d){return "une mauvaise humeur"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Sets the actor emotion"};
+exports.setSpriteEmotionTooltip = function(d){return "Définit l'humeur de l'acteur"};
 
-exports.setSpriteAlien = function(d){return "to an alien image"};
+exports.setSpriteAlien = function(d){return "une image d'extra terrestre"};
 
-exports.setSpriteBat = function(d){return "to a bat image"};
+exports.setSpriteBat = function(d){return "une image de chauve-souris"};
 
-exports.setSpriteBird = function(d){return "to a bird image"};
+exports.setSpriteBird = function(d){return "une image d'oiseau"};
 
-exports.setSpriteCat = function(d){return "to a cat image"};
+exports.setSpriteCat = function(d){return "une image de chat"};
 
-exports.setSpriteCaveBoy = function(d){return "to a cave boy image"};
+exports.setSpriteCaveBoy = function(d){return "une image d'homme des cavernes"};
 
-exports.setSpriteCaveGirl = function(d){return "to a cave girl image"};
+exports.setSpriteCaveGirl = function(d){return "une image de femme des cavernes"};
 
-exports.setSpriteDinosaur = function(d){return "to a dinosaur image"};
+exports.setSpriteDinosaur = function(d){return "une image de dinosaure"};
 
-exports.setSpriteDog = function(d){return "to a dog image"};
+exports.setSpriteDog = function(d){return "une image de chien"};
 
-exports.setSpriteDragon = function(d){return "to a dragon image"};
+exports.setSpriteDragon = function(d){return "une image de dragon"};
 
-exports.setSpriteGhost = function(d){return "to a ghost image"};
+exports.setSpriteGhost = function(d){return "une image de fantôme"};
 
-exports.setSpriteHidden = function(d){return "to a hidden image"};
+exports.setSpriteHidden = function(d){return "une image masquée"};
 
-exports.setSpriteHideK1 = function(d){return "hide"};
+exports.setSpriteHideK1 = function(d){return "cacher"};
 
-exports.setSpriteKnight = function(d){return "to a knight image"};
+exports.setSpriteKnight = function(d){return "une image de chevalier"};
 
-exports.setSpriteMonster = function(d){return "to a monster image"};
+exports.setSpriteMonster = function(d){return "une image de monstre"};
 
-exports.setSpriteNinja = function(d){return "to a masked ninja image"};
+exports.setSpriteNinja = function(d){return "une image de ninja masqué"};
 
-exports.setSpriteOctopus = function(d){return "to an octopus image"};
+exports.setSpriteOctopus = function(d){return "une image de pieuvre"};
 
-exports.setSpritePenguin = function(d){return "to a penguin image"};
+exports.setSpritePenguin = function(d){return "une image de pingouin"};
 
-exports.setSpritePirate = function(d){return "to a pirate image"};
+exports.setSpritePirate = function(d){return "une image de pirate"};
 
-exports.setSpritePrincess = function(d){return "to a princess image"};
+exports.setSpritePrincess = function(d){return "une image de princesse"};
 
-exports.setSpriteRandom = function(d){return "to a random image"};
+exports.setSpriteRandom = function(d){return "une image au hasard"};
 
-exports.setSpriteRobot = function(d){return "to a robot image"};
+exports.setSpriteRobot = function(d){return "une image de robot"};
 
-exports.setSpriteShowK1 = function(d){return "show"};
+exports.setSpriteShowK1 = function(d){return "montrer"};
 
-exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
+exports.setSpriteSpacebot = function(d){return "une image de robot de l'espace"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "une image de joueuse de football"};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "une image de joueur de football"};
 
-exports.setSpriteSquirrel = function(d){return "to a squirrel image"};
+exports.setSpriteSquirrel = function(d){return "une image d'écureuil"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "une image de joueuse de tennis"};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "une image de joueur de tennis"};
 
-exports.setSpriteUnicorn = function(d){return "to a unicorn image"};
+exports.setSpriteUnicorn = function(d){return "une image de licorne"};
 
-exports.setSpriteWitch = function(d){return "to a witch image"};
+exports.setSpriteWitch = function(d){return "une image de sorcier"};
 
-exports.setSpriteWizard = function(d){return "to a wizard image"};
+exports.setSpriteWizard = function(d){return "une image de sorcier"};
 
-exports.setSpritePositionTooltip = function(d){return "Instantly moves an actor to the specified location."};
+exports.setSpritePositionTooltip = function(d){return "Déplace instantanément un acteur à l'emplacement spécifié."};
 
-exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
+exports.setSpriteK1Tooltip = function(d){return "Affiche ou masque l'acteur spécifié."};
 
-exports.setSpriteTooltip = function(d){return "Sets the character image"};
+exports.setSpriteTooltip = function(d){return "Définit l'image de l'acteur"};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "une taille aléatoire"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "une très petite taille"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "une petite taille"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "une taille normale"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "une grande taille"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "une très grande taille"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "Définit la taille d'un acteur"};
 
 exports.setSpriteSpeedRandom = function(d){return "à une vitesse aléatoire"};
 
@@ -14748,7 +14778,7 @@ exports.showTitleScreenTooltip = function(d){return "Afficher un écran titre av
 
 exports.setSprite = function(d){return "mettre"};
 
-exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
+exports.setSpriteN = function(d){return "définir pour l'acteur "+v(d,"spriteIndex")};
 
 exports.soundCrunch = function(d){return "crunch"};
 
@@ -14764,7 +14794,7 @@ exports.soundLosePoint2 = function(d){return "perdre un point 2"};
 
 exports.soundRetro = function(d){return "retro"};
 
-exports.soundRubber = function(d){return "rubber"};
+exports.soundRubber = function(d){return "caoutchouc"};
 
 exports.soundSlap = function(d){return "slap"};
 
@@ -14772,27 +14802,27 @@ exports.soundWinPoint = function(d){return "win point"};
 
 exports.soundWinPoint2 = function(d){return "win point 2"};
 
-exports.soundWood = function(d){return "wood"};
+exports.soundWood = function(d){return "bois"};
 
 exports.speed = function(d){return "vitesse"};
 
 exports.stopSprite = function(d){return "arrêter"};
 
-exports.stopSpriteN = function(d){return "stop actor "+v(d,"spriteIndex")};
+exports.stopSpriteN = function(d){return "stopper l'acteur "+v(d,"spriteIndex")};
 
 exports.stopTooltip = function(d){return "Arrête le mouvement d'un acteur."};
 
 exports.throwSprite = function(d){return "jeter"};
 
-exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
+exports.throwSpriteN = function(d){return "l'acteur "+v(d,"spriteIndex")+" lance"};
 
-exports.throwTooltip = function(d){return "Lance un projectile de l'acteur spécifié."};
+exports.throwTooltip = function(d){return "L'acteur lance le projectile spécifié."};
 
-exports.vanish = function(d){return "vanish"};
+exports.vanish = function(d){return "faire disparaître"};
 
-exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "faire disparaître l'acteur "+v(d,"spriteIndex")};
 
-exports.vanishTooltip = function(d){return "Vanishes the actor."};
+exports.vanishTooltip = function(d){return "Fait disparaître l'acteur."};
 
 exports.waitFor = function(d){return "Attendre"};
 
@@ -14804,13 +14834,13 @@ exports.waitForRandom = function(d){return "attendre un événement aléatoire"}
 
 exports.waitForHalfSecond = function(d){return "Attendre une demi-seconde"};
 
-exports.waitFor1Second = function(d){return "Attendre 1 seconde"};
+exports.waitFor1Second = function(d){return "attendre 1 seconde"};
 
-exports.waitFor2Seconds = function(d){return "Attendre 2 secondes"};
+exports.waitFor2Seconds = function(d){return "attendre 2 secondes"};
 
-exports.waitFor5Seconds = function(d){return "Attendre 5 secondes"};
+exports.waitFor5Seconds = function(d){return "attendre 5 secondes"};
 
-exports.waitFor10Seconds = function(d){return "Attendre 10 secondes"};
+exports.waitFor10Seconds = function(d){return "attendre 10 secondes"};
 
 exports.waitParamsTooltip = function(d){return "Attendez le nombre de secondes indiqué ou utilisez 0 pour attendre jusqu'au clic."};
 
@@ -14830,9 +14860,9 @@ exports.whenDown = function(d){return "quand flèche en bas"};
 
 exports.whenDownTooltip = function(d){return "Exécute les actions ci-dessous quand on presse la touche 'flèche en bas'."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "Quand l'histoire commence"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "Exécuter les actions ci-dessous lorsque l'histoire commence."};
 
 exports.whenLeft = function(d){return "quand flèche à gauche"};
 
@@ -14842,15 +14872,15 @@ exports.whenRight = function(d){return "quand flèche à droite"};
 
 exports.whenRightTooltip = function(d){return "Exécute les actions ci-dessous quand on presse la touche 'flèche à droite'."};
 
-exports.whenSpriteClicked = function(d){return "when actor clicked"};
+exports.whenSpriteClicked = function(d){return "quand on clique sur l'acteur"};
 
-exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
+exports.whenSpriteClickedN = function(d){return "quand on clique sur l'acteur "+v(d,"spriteIndex")};
 
-exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when a character is clicked."};
+exports.whenSpriteClickedTooltip = function(d){return "Exécuter les actions ci-dessous lorsqu'on clique sur un acteur."};
 
-exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "lorsque l'acteur "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when a character touches another character."};
+exports.whenSpriteCollidedTooltip = function(d){return "Exécuter les actions ci-dessous quand un acteur touche un autre acteur."};
 
 exports.whenSpriteCollidedWith = function(d){return "touche"};
 
@@ -14862,19 +14892,19 @@ exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any pr
 
 exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
 
-exports.whenSpriteCollidedWithN = function(d){return "touches actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedWithN = function(d){return "touche acteur "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "touche une boule de feu bleue"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touche une boule de feu violette"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "touche une boule de feu rouge"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "touche des coeurs jaunes"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touche des coeurs violets"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "touche des coeurs rouges"};
 
 exports.whenSpriteCollidedWithBottomEdge = function(d){return "touche le bord du bas"};
 

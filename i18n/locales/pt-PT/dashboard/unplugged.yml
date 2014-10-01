@@ -33,7 +33,7 @@
           - unplug5
         video: "Unplug5"
       Unplug6:
-        title: "Conditions"
+        title: "Condições"
         desc: 'This is a class game.  After introducing the idea of conditionals, if-statements, and loops, the class can practice together using a pre-written program, a deck of cards, and luck of the draw.'
         pdfs:
           - unplug6
@@ -74,7 +74,7 @@
         video: "C1_happy_maps_unplugged"
       MoveIt:
         title: "Move it, Move it"
-        desc: "Students create simple algorithms (sets of instructions) to move a character through a maze using a single command."
+        desc: "Estudantes criam um algoritmo simples (conjunto de instruções) para mover a personagem através de um labirinto usando um único comando."
         video: "C1_moveitmoveit_unplugged"
       PlantASeed:
         title: 'Real-life Algorithms: Plant a Seed'
@@ -98,15 +98,15 @@
         desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
         video: "C2_conditionals_with_cards"
       BigEvent:
-        title: "The Big Event"
+        title: "O Grande Evento"
         desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
         video: "C1_bigevent_unplugged"
       GoingPlacesSafely:
-        title: "Going Places Safely"
+        title: "Ir a Locais de um modo Seguro"
         desc: "The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet."
       GraphPaperProgramming:
         title: "Programação de papel milimetrico"
-        desc: "Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing."
+        desc: "Estudantos escrevem um algoritmo (um conjunto de instruções) usando um conjunto de comandos pré-definidos para direcionar os colegad a reproduzir um desenho."
         video: "C2_graph_paper"
       PaperPlanes:
         title: 'Real-life Algorithms: Paper Planes'

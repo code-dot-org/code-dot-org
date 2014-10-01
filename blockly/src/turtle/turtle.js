@@ -83,6 +83,11 @@ Turtle.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
 
+  // Enable blockly param editing in levelbuilder, regardless of level setting
+  if (config.level.edit_blocks) {
+    config.disableParamEditing = false;
+  }
+
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
 
@@ -338,8 +343,7 @@ Turtle.display = function() {
  * Click the run button.  Start the program.
  */
 BlocklyApps.runButtonClick = function() {
-  document.getElementById('runButton').style.display = 'none';
-  document.getElementById('resetButton').style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.attempts++;
@@ -590,7 +594,7 @@ Turtle.drawJointAtTurtle_ = function () {
  * @return {boolean} True if the level is solved, false otherwise.
  */
 var isCorrect = function(pixelErrors, permittedErrors) {
-  return pixelErrors < permittedErrors;
+  return pixelErrors <= permittedErrors;
 };
 
 /**
@@ -664,7 +668,10 @@ Turtle.checkAnswer = function() {
 
   // Allow some number of pixels to be off, but be stricter
   // for certain levels.
-  var permittedErrors = level.permittedErrors || 150;
+  var permittedErrors = level.permittedErrors;
+  if (permittedErrors === undefined) {
+    permittedErrors = 150;
+  }
 
   // Test whether the current level is a free play level, or the level has
   // been completed

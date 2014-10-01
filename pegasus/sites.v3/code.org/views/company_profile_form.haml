@@ -1,10 +1,12 @@
--landing_page = "/company-profiles/#{data['name_s']}"
+-dont_cache
+-landing_page = "/employees/#{data['name_s']}"
 -congrats_page = "/congrats?co=#{data['name_s']}"
 -markdown_basics = "http://daringfireball.net/projects/markdown/basics"
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/ee_form.css"}/
 
 %form#company_profile
+  %input{name:"logo_path_s", type:"hidden", value:data['logo_path_s']}
   %table
     -if secret
       %tr
@@ -18,10 +20,14 @@
             View #{data['display_name_s']}'s current landing page
       %tr
         %th{colspan:2}
-          2. See 
+          2. See the cheat sheets for customizing the
           %a{href:"/images/company-profile-annotated.png",target:"_blank"}
-            how to customize different parts of the landing page
+            landing page
             %img{src:"/images/company-profile-annotated.png",width:"50px",height:"50px"}
+          and
+          %a{href:"/images/company-congrats-annotated.png",target:"_blank"}
+            certificate page
+            %img{src:"/images/company-congrats-annotated.png",width:"50px",height:"50px"}
 
       %tr
         %th{colspan:2}
@@ -45,6 +51,12 @@
     -if secret
       %tr
         %th
+          Show Display Name in header?
+        %td
+          -name_in_header_b = data['name_in_header_b'] || nil
+          %input{name:'name_in_header_b', type:'checkbox', value:'1', checked: name_in_header_b}
+      %tr
+        %th
           Logo
           %br
           (appears in header, 100x100px or higher recommended)
@@ -52,11 +64,27 @@
           %input{name:'logo_file', type:'file'}
       %tr
         %th
+          Remove Logo?
+        %td
+          %input{name:'remove_logo_b', type:'checkbox', value:'1'}
+      %tr
+        %th
+          Number of Employees
+        %td
+          %input{name:'num_employees_i', type:"number", value:data['num_employees_i']}
+      %tr
+        %th
           Youtube video key
           %br
           (e.g. the FC5FbmsH4fw in http://www.youtube.com/watch?v=FC5FbmsH4fw)
         %td
           %input{name:'video_key_s', value:data['video_key_s']}
+      %tr
+        %th
+          Show Google+ share button
+        %td
+          -gplus_b = data['gplus_b'] || nil
+          %input{name:'gplus_b', type:'checkbox', value:'1', checked: gplus_b}
       %tr
         %th
           Intro - Top

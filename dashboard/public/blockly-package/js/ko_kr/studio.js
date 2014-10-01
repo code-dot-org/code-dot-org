@@ -166,6 +166,20 @@ var codeKeyDown = function(e) {
   }
 };
 
+BlocklyApps.toggleRunReset = function(button) {
+  var showRun = (button === 'run');
+  if (button !== 'run' && button !== 'reset') {
+    throw "Unexpected input";
+  }
+
+  var run = document.getElementById('runButton');
+  var reset = document.getElementById('resetButton');
+  run.style.display = showRun ? 'inline-block' : 'none';
+  run.disabled = !showRun;
+  reset.style.display = !showRun ? 'inline-block' : 'none';
+  reset.disabled = showRun;
+};
+
 /**
  * Common startup tasks for all apps.
  */
@@ -177,6 +191,7 @@ BlocklyApps.init = function(config) {
   BlocklyApps.share = config.share;
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
+  BlocklyApps.sendToPhone = config.sendToPhone;
   BlocklyApps.noPadding = config.no_padding;
 
   BlocklyApps.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
@@ -252,8 +267,11 @@ BlocklyApps.init = function(config) {
 
       belowViz.appendChild(feedback.createSharingDiv({
         response: {
-          level_source: window.location
+          level_source: window.location,
+          level_source_id: config.level_source_id,
+          phone_share_url: config.send_to_phone_url
         },
+        sendToPhone: config.sendToPhone,
         twitter: config.twitter
       }));
 
@@ -355,19 +373,26 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
+    BlocklyApps.editor = window.ace.edit('codeTextbox');
+    BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
+    BlocklyApps.editor.setOptions({
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true
+    });
+
     var codeTextbox = document.getElementById('codeTextbox');
+
+    var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
     var codeFunctions = config.level.codeFunctions;
     // Insert hint text from level codeFunctions into editCode area
     if (codeFunctions) {
-      var hintText = "";
+      var hintText = '';
       for (var i = 0; i < codeFunctions.length; i++) {
-        hintText = hintText + " " + codeFunctions[i].func + "();";
+        hintText += " " + codeFunctions[i].func + "();";
       }
-      var html = utils.escapeHtml(msg.typeFuncs()).replace('%1', hintText);
-      codeTextbox.innerHTML += '// ' + html + '<br><br><br>';
+      startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
     }
-    // Needed to prevent blockly from swallowing up the backspace key
-    codeTextbox.addEventListener('keydown', codeKeyDown, true);
+    BlocklyApps.editor.setValue(startText);
   }
 
   BlocklyApps.Dialog = config.Dialog;
@@ -486,6 +511,7 @@ BlocklyApps.init = function(config) {
   }
 
   if (config.level.editCode) {
+    // Swap the visibility of the codeText element and the blocklyDiv
     document.getElementById('codeTextbox').style.display = 'block';
     div.style.display = 'none';
   }
@@ -854,6 +880,7 @@ BlocklyApps.displayFeedback = function(options) {
   options.Dialog = BlocklyApps.Dialog;
   options.onContinue = onContinue;
   options.backToPreviousLevel = backToPreviousLevel;
+  options.sendToPhone = BlocklyApps.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
@@ -909,8 +936,7 @@ BlocklyApps.report = function(options) {
  */
 BlocklyApps.resetButtonClick = function() {
   onResetPressed();
-  document.getElementById('runButton').style.display = 'inline-block';
-  document.getElementById('resetButton').style.display = 'none';
+  BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
   Blockly.mainWorkspace.setEnableToolbox(true);
   Blockly.mainWorkspace.traceOn(false);
@@ -1956,7 +1982,6 @@ exports.createSharingDiv = function(options) {
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
-    options.sendToPhone = true;
   }
 
   var sharingDiv = document.createElement('div');
@@ -1975,17 +2000,22 @@ exports.createSharingDiv = function(options) {
 
 //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
-  if (sharingPhone) {
+  if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
         sendToPhone.setAttribute('style', 'display:inline-block');
-        var phone = $("#phone");
-        phone.mask("(999) 999-9999");
-        phone.focus();
+        var phone = $(sharingDiv.querySelector("#phone"));
+        var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
+        submitButton.disabled = true;
+        phone.mask('(000) 000-0000',{
+            onComplete:function(){if(!submitted) submitButton.disabled=false;},
+            onChange: function(){submitButton.disabled=true;}
+        });
+        phone.focus();
         dom.addClickTouchEvent(submitButton, function() {
-          var phone = $("#phone");
+          var phone = $(sharingDiv.querySelector("#phone"));
           var params = jQuery.param({
             level_source: options.response.level_source_id,
             phone: phone.val()
@@ -1993,6 +2023,7 @@ exports.createSharingDiv = function(options) {
           $(submitButton).val("Sending..");
           phone.prop('readonly', true);
           submitButton.disabled = true;
+          submitted = true;
           jQuery.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text("Sent!");
@@ -12392,8 +12423,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -13982,7 +14012,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/ko_kr/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n    // ', escape((37,  msg.typeCode() )), '\n    <br>\n    // ', escape((39,  msg.typeHint() )), '\n    <br>\n  </div>\n');42; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (46,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((52,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((53,  msg.runProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((57,  msg.resetProgram() )), '</div>\n        <img src="', escape((58,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');60; if (data.controls) { ; buf.push('\n      ', (61,  data.controls ), '\n      ');62; } ; buf.push('\n      ');63; if (data.extraControlRows) { ; buf.push('\n      ', (64,  data.extraControlRows ), '\n      ');65; } ; buf.push('\n    </div>\n\n    ');68; instructions() ; buf.push('\n    ');69; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((75,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((76,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((78,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((80,  data.blockCounterClass )), '>\n          ', escape((81,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((84,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((87,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');93; codeArea() ; buf.push('\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n  </div>\n');38; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (42,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((48,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((49,  msg.runProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((53,  msg.resetProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');56; if (data.controls) { ; buf.push('\n      ', (57,  data.controls ), '\n      ');58; } ; buf.push('\n      ');59; if (data.extraControlRows) { ; buf.push('\n      ', (60,  data.extraControlRows ), '\n      ');61; } ; buf.push('\n    </div>\n\n    ');64; instructions() ; buf.push('\n    ');65; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');89; codeArea() ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -14257,21 +14287,21 @@ exports.directionEastLetter = function(d){return "동"};
 
 exports.directionWestLetter = function(d){return "서"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "끝"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"반복\" 블럭이나 \"조건\" 블럭이 실행되려면, 그 안에 다른 블럭들이 있어야 합니다. 블럭 안쪽에 필요한 블럭들을 끼워 맞춰 연결하세요."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "함수 블럭 안에는 다른 블럭을 넣어주어야 합니다."};
 
-exports.extraTopBlocks = function(d){return "이벤트 블럭에 연결하지 않은 남는 블럭이 있습니다."};
+exports.extraTopBlocks = function(d){return "블럭들이 떨어져있습니다. 블럭들을 붙이겠습니까?"};
 
 exports.finalStage = function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했습니다."};
 
 exports.finalStageTrophies = function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했고, "+p(d,"numTrophies",0,"ko",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" 을 얻었습니다."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "마침"};
 
-exports.generatedCodeInfo = function(d){return "프로그래밍한 블럭들은 그대로 자바스크립트(JavaScript) 언어로 변환될 수 있습니다:"};
+exports.generatedCodeInfo = function(d){return " "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"와 같은 유명한 대학에서도 블럭기반 프로그래밍을 가르칩니다. 하지만, 블럭들은 모두 JavaScript로 바뀌어 실행됩니다 : "};
 
 exports.hashError = function(d){return "죄송합니다. 저장된 '%1' 프로그램은 없습니다."};
 
@@ -14279,7 +14309,7 @@ exports.help = function(d){return "도움말"};
 
 exports.hintTitle = function(d){return "힌트:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "점프"};
 
 exports.levelIncompleteError = function(d){return "필요한 블럭들을 모두 사용했지만, 정확한 방법은 아닙니다."};
 
@@ -14295,13 +14325,13 @@ exports.nextLevelTrophies = function(d){return "축하합니다! "+v(d,"puzzleNu
 
 exports.nextStage = function(d){return "축하드립니다! "+v(d,"stageName")+"을(를) 완료하셨습니다."};
 
-exports.nextStageTrophies = function(d){return "축하합니다! "+v(d,"stageNumber")+" 단계를 성공적으로 해결했고, "+p(d,"numTrophies",0,"ko",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" 을 얻었습니다."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"ko",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "축하합니다! "+v(d,"puzzleNumber")+" 번 퍼즐을 해결했습니다. (하지만, "+p(d,"numBlocks",0,"ko",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" 만 사용해야 합니다.)"};
 
 exports.numLinesOfCodeWritten = function(d){return "오! 코드 "+p(d,"numLines",0,"ko",{"one":"1 line","other":n(d,"numLines")+" 줄"})+"로 해결했네요!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "실행"};
 
 exports.puzzleTitle = function(d){return "퍼즐 "+v(d,"puzzle_number")+"/"+v(d,"stage_total")};
 
@@ -14313,7 +14343,7 @@ exports.runProgram = function(d){return "실행"};
 
 exports.runTooltip = function(d){return "블럭들로 작성되어있는 프로그램을 실행합니다."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "점수"};
 
 exports.showCodeHeader = function(d){return "코드 보기"};
 
@@ -14337,13 +14367,13 @@ exports.totalNumLinesOfCodeWritten = function(d){return "지금까지: 코드 "+
 
 exports.tryAgain = function(d){return "다시 시도"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "도움 보기"};
 
 exports.backToPreviousLevel = function(d){return "이전 퍼즐"};
 
-exports.saveToGallery = function(d){return "갤러리에 저장"};
+exports.saveToGallery = function(d){return "나의 갤러리에 저장"};
 
-exports.savedToGallery = function(d){return "갤러리에 저장되었습니다!"};
+exports.savedToGallery = function(d){return "나의 갤러리에 저장되었습니다!"};
 
 exports.typeCode = function(d){return "자바스크립트(JavaScript) 코드를 직접 작성하세요."};
 
@@ -14363,28 +14393,28 @@ exports.wantToLearn = function(d){return "코드(code)를 배워볼까요?"};
 
 exports.watchVideo = function(d){return "비디오 보기"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "~할 때"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "~할 때 실행"};
 
 exports.tryHOC = function(d){return "Hour of Code 해보기"};
 
 exports.signup = function(d){return "샘플 코스를 위해 가입하기"};
 
-exports.hintHeader = function(d){return "팁:"};
+exports.hintHeader = function(d){return "도움말:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요."};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ko=function(n){return "other"}
-exports.actor = function(d){return "actor"};
+exports.actor = function(d){return "케릭터"};
 
 exports.catActions = function(d){return "동작"};
 
 exports.catControl = function(d){return "반복"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "이벤트"};
 
 exports.catLogic = function(d){return "논리"};
 
@@ -14396,93 +14426,93 @@ exports.catText = function(d){return "문장"};
 
 exports.catVariables = function(d){return "변수"};
 
-exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
+exports.changeScoreTooltip = function(d){return "점수를 올리거나 내립니다."};
 
-exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
+exports.changeScoreTooltipK1 = function(d){return "점수를 1점 올립니다."};
 
 exports.continue = function(d){return "계속하기"};
 
-exports.decrementPlayerScore = function(d){return "remove point"};
+exports.decrementPlayerScore = function(d){return "점수 지우기"};
 
-exports.defaultSayText = function(d){return "type here"};
+exports.defaultSayText = function(d){return "하고 싶은 말"};
 
-exports.emotion = function(d){return "mood"};
+exports.emotion = function(d){return "감정"};
 
 exports.finalLevel = function(d){return "축하합니다! 마지막 퍼즐을 해결했습니다."};
 
-exports.hello = function(d){return "hello"};
+exports.hello = function(d){return "안녕하세요."};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "안녕하세요. 여러분!"};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "점수 올리기"};
 
-exports.makeProjectileDisappear = function(d){return "disappear"};
+exports.makeProjectileDisappear = function(d){return "보이지 않게 하기"};
 
-exports.makeProjectileBounce = function(d){return "bounce"};
+exports.makeProjectileBounce = function(d){return "튕기게 하기"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "파란 파이어볼 만들기"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "분홍 파이어볼 만들기"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "빨간 파이어볼 만들기"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "노란 하트 만들기"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "분홍 하트 만들기"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "빨간 하트 만들기"};
 
-exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
+exports.makeProjectileTooltip = function(d){return "충돌하면 없어지거나 튕기는 발사체를 만듭니다."};
 
 exports.makeYourOwn = function(d){return "Make Your Own Story"};
 
-exports.moveDirectionDown = function(d){return "down"};
+exports.moveDirectionDown = function(d){return "아래로"};
 
-exports.moveDirectionLeft = function(d){return "left"};
+exports.moveDirectionLeft = function(d){return "왼쪽으로"};
 
-exports.moveDirectionRight = function(d){return "right"};
+exports.moveDirectionRight = function(d){return "오른쪽으로"};
 
-exports.moveDirectionUp = function(d){return "up"};
+exports.moveDirectionUp = function(d){return "위로"};
 
-exports.moveDirectionRandom = function(d){return "랜덤 번째 위치"};
+exports.moveDirectionRandom = function(d){return "랜덤 방향으로"};
 
-exports.moveDistance25 = function(d){return "25 pixels"};
+exports.moveDistance25 = function(d){return "25 픽셀"};
 
-exports.moveDistance50 = function(d){return "50 pixels"};
+exports.moveDistance50 = function(d){return "50 픽셀"};
 
-exports.moveDistance100 = function(d){return "100 pixels"};
+exports.moveDistance100 = function(d){return "100 픽셀"};
 
-exports.moveDistance200 = function(d){return "200 pixels"};
+exports.moveDistance200 = function(d){return "200 픽셀"};
 
-exports.moveDistance400 = function(d){return "400 pixels"};
+exports.moveDistance400 = function(d){return "400 픽셀"};
 
 exports.moveDistancePixels = function(d){return "픽셀"};
 
-exports.moveDistanceRandom = function(d){return "random pixels"};
+exports.moveDistanceRandom = function(d){return "랜덤 픽셀"};
 
-exports.moveDistanceTooltip = function(d){return "Move a character a specific distance in the specified direction."};
+exports.moveDistanceTooltip = function(d){return "케릭터를 지정한 방향으로 지정한 거리만큼 움직입니다."};
 
-exports.moveSprite = function(d){return "move"};
+exports.moveSprite = function(d){return "움직이기"};
 
-exports.moveSpriteN = function(d){return "move actor "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "캐릭터 움직이기 "+v(d,"spriteIndex")};
 
-exports.moveDown = function(d){return "move down"};
+exports.moveDown = function(d){return "아래로 움직이기"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "케릭터를 아래로 움직입니다."};
 
-exports.moveLeft = function(d){return "move left"};
+exports.moveLeft = function(d){return "왼쪽으로 움직이기"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "케릭터를 왼쪽으로 움직입니다."};
 
-exports.moveRight = function(d){return "move right"};
+exports.moveRight = function(d){return "오른쪽으로 움직이기"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "케릭터를 오른쪽으로 움직입니다."};
 
-exports.moveUp = function(d){return "move up"};
+exports.moveUp = function(d){return "위로 올리기"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "케릭터를 위로 움직입니다."};
 
-exports.moveTooltip = function(d){return "Move a character."};
+exports.moveTooltip = function(d){return "케릭터를 움직입니다."};
 
 exports.nextLevel = function(d){return "축하합니다! 퍼즐을 해결했습니다."};
 
@@ -14490,369 +14520,369 @@ exports.no = function(d){return "아니요"};
 
 exports.numBlocksNeeded = function(d){return "%1 개의 블럭으로 퍼즐을 해결할 수 있습니다."};
 
-exports.ouchExclamation = function(d){return "Ouch!"};
+exports.ouchExclamation = function(d){return "앗!"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "부서지는 소리 출력"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "골1 소리 출력"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "골2 소리 출력"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "때리는 소리 출력"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "실점 소리 출력"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "실점 소리2 출력"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "옛날 소리 출력"};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "고무 소리 출력"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "찰싹 소리 출력"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "선택 소리 출력"};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "득점 소리 출력"};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "득점 소리2 출력"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "나무 소리 출력"};
 
-exports.positionOutTopLeft = function(d){return "to the above top left position"};
+exports.positionOutTopLeft = function(d){return "가장 위쪽의 왼쪽 위로"};
 
-exports.positionOutTopRight = function(d){return "to the above top right position"};
+exports.positionOutTopRight = function(d){return "가장 위쪽의 오른쪽 위로"};
 
-exports.positionTopOutLeft = function(d){return "to the top outside left position"};
+exports.positionTopOutLeft = function(d){return "왼쪽 바깥쪽의 가장 위로"};
 
-exports.positionTopLeft = function(d){return "to the top left position"};
+exports.positionTopLeft = function(d){return "왼쪽의 가장 위로"};
 
-exports.positionTopCenter = function(d){return "to the top center position"};
+exports.positionTopCenter = function(d){return "가운데의 가장 위로"};
 
-exports.positionTopRight = function(d){return "to the top right position"};
+exports.positionTopRight = function(d){return "오른쪽의 가장 위로"};
 
-exports.positionTopOutRight = function(d){return "to the top outside right position"};
+exports.positionTopOutRight = function(d){return "오른쪽 바깥쪽의 가장 위로"};
 
-exports.positionMiddleLeft = function(d){return "to the middle left position"};
+exports.positionMiddleLeft = function(d){return "왼쪽의 가운데로"};
 
-exports.positionMiddleCenter = function(d){return "to the middle center position"};
+exports.positionMiddleCenter = function(d){return "오른쪽의 가운데로"};
 
-exports.positionMiddleRight = function(d){return "to the middle right position"};
+exports.positionMiddleRight = function(d){return "오른쪽의 가운데로"};
 
-exports.positionBottomOutLeft = function(d){return "to the bottom outside left position"};
+exports.positionBottomOutLeft = function(d){return "왼쪽 바깥쪽의 가장 아래쪽으로"};
 
-exports.positionBottomLeft = function(d){return "to the bottom left position"};
+exports.positionBottomLeft = function(d){return "왼쪽의 가장 아래쪽으로"};
 
-exports.positionBottomCenter = function(d){return "to the bottom center position"};
+exports.positionBottomCenter = function(d){return "가운데의 가장 아래쪽으로"};
 
-exports.positionBottomRight = function(d){return "to the bottom right position"};
+exports.positionBottomRight = function(d){return "오른쪽의 가장 아래쪽으로"};
 
-exports.positionBottomOutRight = function(d){return "to the bottom outside right position"};
+exports.positionBottomOutRight = function(d){return "오른쪽 바깥쪽의 가장 아래쪽으로"};
 
-exports.positionOutBottomLeft = function(d){return "to the below bottom left position"};
+exports.positionOutBottomLeft = function(d){return "왼쪽 가장 아래쪽 아래로"};
 
-exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
+exports.positionOutBottomRight = function(d){return "오른쪽 가장 아래쪽 아래로"};
 
-exports.positionRandom = function(d){return "to the random position"};
+exports.positionRandom = function(d){return "랜덤 위치로"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "파란 파이어볼"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "분홍 파이어볼"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "빨간 파이어볼"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "노란 하트"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "분홍 하트"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "빨간 하트"};
 
-exports.projectileRandom = function(d){return "랜덤 번째 위치"};
+exports.projectileRandom = function(d){return "랜덤 발사체"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
+exports.reinfFeedbackMsg = function(d){return "\"다시 시작\"을 누르면 이야기를 다시 실행시킬 수 있습니다."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "무한반복"};
 
 exports.repeatDo = function(d){return "실행"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
+exports.repeatForeverTooltip = function(d){return "이 블럭 안에 들어있는 동작들을 스토리가 실행되는 동안 무한히 반복시킵니다."};
 
-exports.saySprite = function(d){return "say"};
+exports.saySprite = function(d){return "말하기 동작"};
 
-exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
+exports.saySpriteN = function(d){return "케릭터 "+v(d,"spriteIndex")+" 가 말 함"};
 
-exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
+exports.saySpriteTooltip = function(d){return "지정한 케릭터가 말하는 말 풍선을 나타냅니다."};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "점수 : "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set background"};
+exports.setBackground = function(d){return "배경 설정"};
 
-exports.setBackgroundRandom = function(d){return "set random scene"};
+exports.setBackgroundRandom = function(d){return "랜덤 배경 설정"};
 
-exports.setBackgroundBlack = function(d){return "set black background"};
+exports.setBackgroundBlack = function(d){return "검은 배경 설정"};
 
-exports.setBackgroundCave = function(d){return "set cave background"};
+exports.setBackgroundCave = function(d){return "동굴 배경 설정"};
 
-exports.setBackgroundCloudy = function(d){return "set cloudy background"};
+exports.setBackgroundCloudy = function(d){return "구름낀 배경 설정"};
 
-exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
+exports.setBackgroundHardcourt = function(d){return "하드 코트 배경 설정"};
 
-exports.setBackgroundNight = function(d){return "set night background"};
+exports.setBackgroundNight = function(d){return "밤 배경 설정"};
 
-exports.setBackgroundUnderwater = function(d){return "set underwater background"};
+exports.setBackgroundUnderwater = function(d){return "수중 배경 설정"};
 
-exports.setBackgroundCity = function(d){return "set city background"};
+exports.setBackgroundCity = function(d){return "도시 배경 설정"};
 
-exports.setBackgroundDesert = function(d){return "set desert background"};
+exports.setBackgroundDesert = function(d){return "사막 배경 설정"};
 
-exports.setBackgroundRainbow = function(d){return "set rainbow background"};
+exports.setBackgroundRainbow = function(d){return "무지개 배경 설정"};
 
-exports.setBackgroundSoccer = function(d){return "set soccer background"};
+exports.setBackgroundSoccer = function(d){return "축구 배경 설정"};
 
-exports.setBackgroundSpace = function(d){return "set space background"};
+exports.setBackgroundSpace = function(d){return "우주 배경 설정"};
 
-exports.setBackgroundTennis = function(d){return "set tennis background"};
+exports.setBackgroundTennis = function(d){return "테니스 배경 설정"};
 
-exports.setBackgroundWinter = function(d){return "set winter background"};
+exports.setBackgroundWinter = function(d){return "겨울 배경 설정"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "배경 그림 설정"};
 
-exports.setScoreText = function(d){return "set score"};
+exports.setScoreText = function(d){return "점수 등록"};
 
-exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
+exports.setScoreTextTooltip = function(d){return "점수 판에 문장이 출력되도록 합니다."};
 
-exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
+exports.setSpriteEmotionAngry = function(d){return "화난 표정으로"};
 
-exports.setSpriteEmotionHappy = function(d){return "to a happy emotion"};
+exports.setSpriteEmotionHappy = function(d){return "즐거운 표정으로"};
 
-exports.setSpriteEmotionNormal = function(d){return "to a normal emotion"};
+exports.setSpriteEmotionNormal = function(d){return "보통 표정으로"};
 
-exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
+exports.setSpriteEmotionRandom = function(d){return "랜덤 표정으로"};
 
-exports.setSpriteEmotionSad = function(d){return "to a sad emotion"};
+exports.setSpriteEmotionSad = function(d){return "슬픈 표정으로"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Sets the actor emotion"};
+exports.setSpriteEmotionTooltip = function(d){return "케릭터의 표정을 설정합니다."};
 
-exports.setSpriteAlien = function(d){return "to an alien image"};
+exports.setSpriteAlien = function(d){return "외계인으로"};
 
-exports.setSpriteBat = function(d){return "to a bat image"};
+exports.setSpriteBat = function(d){return "박쥐로"};
 
-exports.setSpriteBird = function(d){return "to a bird image"};
+exports.setSpriteBird = function(d){return "새로"};
 
-exports.setSpriteCat = function(d){return "to a cat image"};
+exports.setSpriteCat = function(d){return "고양이로"};
 
-exports.setSpriteCaveBoy = function(d){return "to a cave boy image"};
+exports.setSpriteCaveBoy = function(d){return "원시소년으로"};
 
-exports.setSpriteCaveGirl = function(d){return "to a cave girl image"};
+exports.setSpriteCaveGirl = function(d){return "원시소녀로"};
 
-exports.setSpriteDinosaur = function(d){return "to a dinosaur image"};
+exports.setSpriteDinosaur = function(d){return "공룡으로"};
 
-exports.setSpriteDog = function(d){return "to a dog image"};
+exports.setSpriteDog = function(d){return "강아지로"};
 
-exports.setSpriteDragon = function(d){return "to a dragon image"};
+exports.setSpriteDragon = function(d){return "용으로"};
 
-exports.setSpriteGhost = function(d){return "to a ghost image"};
+exports.setSpriteGhost = function(d){return "유령으로"};
 
-exports.setSpriteHidden = function(d){return "to a hidden image"};
+exports.setSpriteHidden = function(d){return "안보이도록"};
 
-exports.setSpriteHideK1 = function(d){return "hide"};
+exports.setSpriteHideK1 = function(d){return "보이지 않게 하기"};
 
-exports.setSpriteKnight = function(d){return "to a knight image"};
+exports.setSpriteKnight = function(d){return "기사로"};
 
-exports.setSpriteMonster = function(d){return "to a monster image"};
+exports.setSpriteMonster = function(d){return "괴물로"};
 
-exports.setSpriteNinja = function(d){return "to a masked ninja image"};
+exports.setSpriteNinja = function(d){return "닌자로"};
 
-exports.setSpriteOctopus = function(d){return "to an octopus image"};
+exports.setSpriteOctopus = function(d){return "문어로"};
 
-exports.setSpritePenguin = function(d){return "to a penguin image"};
+exports.setSpritePenguin = function(d){return "펭귄으로"};
 
-exports.setSpritePirate = function(d){return "to a pirate image"};
+exports.setSpritePirate = function(d){return "해적으로"};
 
-exports.setSpritePrincess = function(d){return "to a princess image"};
+exports.setSpritePrincess = function(d){return "공주로"};
 
-exports.setSpriteRandom = function(d){return "to a random image"};
+exports.setSpriteRandom = function(d){return "랜덤 케릭터로"};
 
-exports.setSpriteRobot = function(d){return "to a robot image"};
+exports.setSpriteRobot = function(d){return "로봇으로"};
 
-exports.setSpriteShowK1 = function(d){return "show"};
+exports.setSpriteShowK1 = function(d){return "보이게 하기"};
 
-exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
+exports.setSpriteSpacebot = function(d){return "우주로봇으로"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "축구소녀로"};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "축구소년으로"};
 
-exports.setSpriteSquirrel = function(d){return "to a squirrel image"};
+exports.setSpriteSquirrel = function(d){return "다람쥐로"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "테니스소녀로"};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "테니스소년으로"};
 
-exports.setSpriteUnicorn = function(d){return "to a unicorn image"};
+exports.setSpriteUnicorn = function(d){return "유니콘으로"};
 
-exports.setSpriteWitch = function(d){return "to a witch image"};
+exports.setSpriteWitch = function(d){return "마녀로"};
 
-exports.setSpriteWizard = function(d){return "to a wizard image"};
+exports.setSpriteWizard = function(d){return "마법사로"};
 
-exports.setSpritePositionTooltip = function(d){return "Instantly moves an actor to the specified location."};
+exports.setSpritePositionTooltip = function(d){return "케릭터를 지정한 위치로 바로 점프 시킵니다."};
 
-exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
+exports.setSpriteK1Tooltip = function(d){return "지정한 케릭터를 보이게 하거나 보이지 않게 합니다."};
 
-exports.setSpriteTooltip = function(d){return "Sets the character image"};
+exports.setSpriteTooltip = function(d){return "케릭터를 바꿉니다."};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "랜덤 크기로"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "매우 작게"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "작게"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "보통 크기로"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "크게"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "매우 크게"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "케릭터의 크기를 설정합니다."};
 
-exports.setSpriteSpeedRandom = function(d){return "to a random speed"};
+exports.setSpriteSpeedRandom = function(d){return "랜덤 속도로"};
 
-exports.setSpriteSpeedVerySlow = function(d){return "to a very slow speed"};
+exports.setSpriteSpeedVerySlow = function(d){return "매우 느리게"};
 
-exports.setSpriteSpeedSlow = function(d){return "to a slow speed"};
+exports.setSpriteSpeedSlow = function(d){return "느리게"};
 
-exports.setSpriteSpeedNormal = function(d){return "to a normal speed"};
+exports.setSpriteSpeedNormal = function(d){return "보통 속도로"};
 
-exports.setSpriteSpeedFast = function(d){return "to a fast speed"};
+exports.setSpriteSpeedFast = function(d){return "빠르게"};
 
-exports.setSpriteSpeedVeryFast = function(d){return "to a very fast speed"};
+exports.setSpriteSpeedVeryFast = function(d){return "매우 빠르게"};
 
-exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of a character"};
+exports.setSpriteSpeedTooltip = function(d){return "케릭터의 속도를 설정합니다."};
 
-exports.setSpriteZombie = function(d){return "to a zombie image"};
+exports.setSpriteZombie = function(d){return "좀비로"};
 
-exports.shareStudioTwitter = function(d){return "Check out the story I made. I wrote it myself with @codeorg"};
+exports.shareStudioTwitter = function(d){return "@codeorg 에서 만든 내 스토리를 살펴보세요."};
 
-exports.shareGame = function(d){return "Share your story:"};
+exports.shareGame = function(d){return "스토리 공유하기:"};
 
-exports.showTitleScreen = function(d){return "show title screen"};
+exports.showTitleScreen = function(d){return "제목 화면 보이기"};
 
-exports.showTitleScreenTitle = function(d){return "title"};
+exports.showTitleScreenTitle = function(d){return "제목화면 주제"};
 
 exports.showTitleScreenText = function(d){return "문장"};
 
-exports.showTSDefTitle = function(d){return "type title here"};
+exports.showTSDefTitle = function(d){return "제목을 입력하세요"};
 
-exports.showTSDefText = function(d){return "type text here"};
+exports.showTSDefText = function(d){return "문장을 넣으세요."};
 
-exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
+exports.showTitleScreenTooltip = function(d){return "제목과 내용을 보여주는 제목 스크린을 나타냅니다."};
 
-exports.setSprite = function(d){return "에서 설정"};
+exports.setSprite = function(d){return "케릭터 설정"};
 
-exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
+exports.setSpriteN = function(d){return "캐릭터 설정 "+v(d,"spriteIndex")};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "부서지는 소리"};
 
-exports.soundGoal1 = function(d){return "goal 1"};
+exports.soundGoal1 = function(d){return "득점 소리1"};
 
-exports.soundGoal2 = function(d){return "goal 2"};
+exports.soundGoal2 = function(d){return "득점 소리2"};
 
-exports.soundHit = function(d){return "hit"};
+exports.soundHit = function(d){return "때리는 소리"};
 
-exports.soundLosePoint = function(d){return "lose point"};
+exports.soundLosePoint = function(d){return "실점 소리"};
 
-exports.soundLosePoint2 = function(d){return "lose point 2"};
+exports.soundLosePoint2 = function(d){return "실점 소리2"};
 
-exports.soundRetro = function(d){return "retro"};
+exports.soundRetro = function(d){return "옛날 소리"};
 
-exports.soundRubber = function(d){return "rubber"};
+exports.soundRubber = function(d){return "고무 소리"};
 
-exports.soundSlap = function(d){return "slap"};
+exports.soundSlap = function(d){return "찰싹 소리"};
 
-exports.soundWinPoint = function(d){return "win point"};
+exports.soundWinPoint = function(d){return "득점 소리"};
 
-exports.soundWinPoint2 = function(d){return "win point 2"};
+exports.soundWinPoint2 = function(d){return "득점 소리2"};
 
-exports.soundWood = function(d){return "wood"};
+exports.soundWood = function(d){return "나무 소리"};
 
-exports.speed = function(d){return "speed"};
+exports.speed = function(d){return "스피드"};
 
-exports.stopSprite = function(d){return "stop"};
+exports.stopSprite = function(d){return "멈춤"};
 
-exports.stopSpriteN = function(d){return "stop actor "+v(d,"spriteIndex")};
+exports.stopSpriteN = function(d){return "캐릭터 "+v(d,"spriteIndex")+" 멈춤"};
 
-exports.stopTooltip = function(d){return "Stops an actor's movement."};
+exports.stopTooltip = function(d){return "케릭터의 움직임을 멈춤니다."};
 
-exports.throwSprite = function(d){return "throw"};
+exports.throwSprite = function(d){return "던지기"};
 
-exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
+exports.throwSpriteN = function(d){return "케릭터 "+v(d,"spriteIndex")+" 던지기"};
 
-exports.throwTooltip = function(d){return "Throws a projectile from the specified actor."};
+exports.throwTooltip = function(d){return "지정한 케릭터에서 물건을 던집니다."};
 
-exports.vanish = function(d){return "vanish"};
+exports.vanish = function(d){return "삭제하기"};
 
-exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "케릭터 "+v(d,"spriteIndex")+" 삭제하기"};
 
-exports.vanishTooltip = function(d){return "Vanishes the actor."};
+exports.vanishTooltip = function(d){return "케릭터를 삭제합니다."};
 
-exports.waitFor = function(d){return "wait for"};
+exports.waitFor = function(d){return "기다리기"};
 
-exports.waitSeconds = function(d){return "seconds"};
+exports.waitSeconds = function(d){return "~초 기다리기"};
 
-exports.waitForClick = function(d){return "wait for click"};
+exports.waitForClick = function(d){return "클릭 기다리기"};
 
-exports.waitForRandom = function(d){return "wait for random"};
+exports.waitForRandom = function(d){return "랜덤 초 기다리기"};
 
-exports.waitForHalfSecond = function(d){return "wait for a half second"};
+exports.waitForHalfSecond = function(d){return "0.5초 기다리기"};
 
-exports.waitFor1Second = function(d){return "wait for 1 second"};
+exports.waitFor1Second = function(d){return "1초 기다리기"};
 
-exports.waitFor2Seconds = function(d){return "wait for 2 seconds"};
+exports.waitFor2Seconds = function(d){return "2초 기다리기"};
 
-exports.waitFor5Seconds = function(d){return "wait for 5 seconds"};
+exports.waitFor5Seconds = function(d){return "5초 기다리기"};
 
-exports.waitFor10Seconds = function(d){return "wait for 10 seconds"};
+exports.waitFor10Seconds = function(d){return "10초 기다리기"};
 
-exports.waitParamsTooltip = function(d){return "Waits for a specified number of seconds or use zero to wait until a click occurs."};
+exports.waitParamsTooltip = function(d){return "원하는 초 만큼 기다립니다. 0초이면 클릭할 때까지 기다립니다."};
 
-exports.waitTooltip = function(d){return "Waits for a specified amount of time or until a click occurs."};
+exports.waitTooltip = function(d){return "원하는 초만큼 기다리거나 클릭할 때까지 기다립니다."};
 
-exports.whenArrowDown = function(d){return "down arrow"};
+exports.whenArrowDown = function(d){return "아래쪽 방향키를 누르면"};
 
-exports.whenArrowLeft = function(d){return "left arrow"};
+exports.whenArrowLeft = function(d){return "왼쪽 방향키를 누르면"};
 
-exports.whenArrowRight = function(d){return "right arrow"};
+exports.whenArrowRight = function(d){return "오른쪽 방향키를 누르면"};
 
-exports.whenArrowUp = function(d){return "up arrow"};
+exports.whenArrowUp = function(d){return "위쪽 방향키를 누르면"};
 
-exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
+exports.whenArrowTooltip = function(d){return "지정된 방향키를 누르면 아래의 동작을 실행합니다."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "아래 방향키를 누르면"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "아래 방향키를 누르면 아래의 동작을 실행합니다."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "스토리가 시작되면"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "스토리가 시작되면 아래의 동작을 실행합니다."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "왼쪽 방향키를 누르면"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "왼쪽 방향키를 누르면 아래의 동작을 실행합니다."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "오른쪽 방향키를 누르면"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "오른쪽 방향키를 누르면 아래의 동작을 실행합니다."};
 
-exports.whenSpriteClicked = function(d){return "when actor clicked"};
+exports.whenSpriteClicked = function(d){return "케릭터를 클릭하면"};
 
-exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
+exports.whenSpriteClickedN = function(d){return "케릭터 "+v(d,"spriteIndex")+" 가 클릭되면"};
 
-exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when a character is clicked."};
+exports.whenSpriteClickedTooltip = function(d){return "케릭터가 클릭되면 아래의 동작을 실행합니다."};
 
-exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "캐릭터가 "+v(d,"spriteIndex")+"에 닿으면"};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when a character touches another character."};
+exports.whenSpriteCollidedTooltip = function(d){return "케릭터가 다른 케릭터에 닿으면 아래의 동작을 실행합니다."};
 
-exports.whenSpriteCollidedWith = function(d){return "touches"};
+exports.whenSpriteCollidedWith = function(d){return "닿으면"};
 
 exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
 
@@ -14862,31 +14892,31 @@ exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any pr
 
 exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
 
-exports.whenSpriteCollidedWithN = function(d){return "touches actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedWithN = function(d){return "케릭터가 "+v(d,"spriteIndex")+"에 닿으면"};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "파란 파이어볼에 닿으면"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "분홍 파이어볼에 닿으면"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "빨간 파이어볼에 닿으면"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "노란 파이어볼에 닿으면"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "분홍 하트에 닿으면"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "빨강 하트에 닿으면"};
 
-exports.whenSpriteCollidedWithBottomEdge = function(d){return "touches bottom edge"};
+exports.whenSpriteCollidedWithBottomEdge = function(d){return "바닥에 닿으면"};
 
-exports.whenSpriteCollidedWithLeftEdge = function(d){return "touches left edge"};
+exports.whenSpriteCollidedWithLeftEdge = function(d){return "화면 왼쪽에 닿으면"};
 
-exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge"};
+exports.whenSpriteCollidedWithRightEdge = function(d){return "화면 오른쪽에 닿으면"};
 
-exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
+exports.whenSpriteCollidedWithTopEdge = function(d){return "화면 천장에 닿으면"};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "위쪽 방향키를 누르면"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "위쪽 방향키를 누르면 아래의 동작을 실행합니다."};
 
 exports.yes = function(d){return "예"};
 

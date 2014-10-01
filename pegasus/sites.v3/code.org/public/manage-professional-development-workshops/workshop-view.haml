@@ -36,7 +36,7 @@ theme: none
             below to create a section for teachers attending the workshop
             to join.
           %p
-            %a.btn.btn-default{"ng-click" => "start_workshop()"} Start Event
+            %a.btn.btn-default{"ng-click" => "start_workshop()", 'ng-confirm-click' => 'Are you sure you want to start your workshop?'} Start Event
         .start-stop{'ng-show' => 'workshop.state() == "started"'}
           %p
             Please ask teachers at the workshop to:
@@ -57,7 +57,7 @@ theme: none
           %p 
             After your workshop is done, click the End Event button below to close the workshop.
           %p
-            %a.btn.btn-default{"ng-click" => "stop_workshop()", 'ng-confirm-click' => 'Are you sure you want to close this workshop?'} End Event
+            %a.btn.btn-default{"ng-click" => "stop_workshop()", 'ng-confirm-click' => 'Are you sure you want to end your workshop?'} End Event
         .start-stop{'ng-show' => 'workshop.state() == "stopped"'}
           %p We hope you had a great workshop!
 .row
@@ -111,7 +111,7 @@ theme: none
     %tr{"ng-repeat" => "signup in workshop_signups | orderBy:order", style: "vertical-align:top"}
       %td {{signup.name_s}}
       %td {{signup.email_s}}
-      %td {{signup.teacher_role_ss.join(', ')}}
+      %td {{signup.teacher_role_ss.concat(signup.teacher_role_other_ss).join(', ')}}
       %td {{signup.school_name_s}}
       %td{nowrap: true, style: 'white-space: nowrap;'}
         %span{"ng-show" => "signup.confirmSignupDelete"}

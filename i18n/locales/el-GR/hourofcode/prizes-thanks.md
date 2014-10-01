@@ -1,7 +1,9 @@
 * * *
 
-## title: Ευχαριστούμε
+title: Thank you
+
+## layout: wide
 
 # Ευχαριστούμε
 
-Όλο το σχολείο σας έχει καταχωρηθεί για να κερδίσει φορητούς υπολογιστές (ή 10.000$ για τεχνολογικό εξοπλισμό).
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).

@@ -2,10 +2,10 @@
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: est nécessaire
     attributes:
       user:
-        name: Nom
+        name: Nom à afficher
         email: Courriel
         username: Nom d'utilisateur
         password: Mot de passe
@@ -32,6 +32,7 @@
     submit: Ajouter l'astuce
   appname: Code.org
   stage: "Étape"
+  stage_number: Stage %{number}
   puzzle: "Énigme"
   trophies: Trophées
   courses: Cours
@@ -51,8 +52,8 @@
     sign_in_with: Se connecter avec %{provider}
     signed_in: Connecté!
     signed_out: Vous vous êtes déconnecté de <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
+    sign_out_of: Vous avez utilisé %{provider} pour vous connecter. <a href="%{url}">Cliquez
+      ici</a> pour vous déconnecter de %{provider}.
     already_signedup: Déjà inscrit ?
     notyet_signedup: Pas encore inscrit ?
     google_oauth2: Compte Google
@@ -63,13 +64,16 @@
     need_confirmation: Vous n'avez pas reçu les instructions de confirmation ?
     need_unlock: Vous n'avez pas reçu les instructions de déverrouillage ?
   signup_form:
-    overview_student: Inscrivez-vous pour suivre votre progression.
-    overview_teacher: Enseignez l'informatique à votre classe en créant un compte.<p/>
-      Vous pourrez suivre les progrès de vos élèves et obtenir des récompenses.
+    overview_student: Inscrivez-vous pour un compte pour suivre vos progrès. Votre
+      email est utilisé principalement pour vous permettre de vous connecter et pour
+      récupérer votre mot de passe. Pour plus d'informations, consultez notre <a href="http://code.org/privacy">Politique
+      de confidentialité</a>.
+    overview_teacher: Enseigner l'informatique à votre salle de classe en vous inscrivant
+      pour un compte. <p/> Vous pourrez ajouter vos élèves et suivre leurs progrès.
     no_signup_message: Vous pouvez <a target="_blank" href="http://learn.code.org">parcourir
       les différentes étapes et énigmes</a>, mais vous devez vous inscrire pour pouvoir
       enregistrer votre progression.
-    prizes_message: Les étudiants états-uniens qui ont remporté chacun des %{num_trophies}
+    prizes_message: Les élèves états-uniens qui ont remporté chacun des %{num_trophies}
       trophées peuvent choisir un prix parmi une sélection incluant du stockage gratuit
       sur Dropbox, des crédits Skype, et des jeux téléchargeables d'Electronic Arts.
     teacher_educator_guide: Consultez le guide de l'enseignant
@@ -79,15 +83,15 @@
     teacher_prize_message: "En partenariat avec <a target=\"_blank\" href=\"http://DonorsChoose.org\">
       DonorsChoose.org</a>, Code.org offrira jusqu'à 1 000 $ \nde financement scolaire
       aux enseignants des écoles publiques des États-Unis qui mèneront au moins 15
-      étudiants jusqu'au cours Introduction à l'informatique pour les écoles primaires
+      élèves jusqu'au cours Introduction à l'informatique pour les écoles primaires
       (avant le 15 juin 2014, jusqu'à l'épuisement des stocks). <a href=\"http://code.org/educate/20hr\">Consultez
       le guide de l'enseignant</a>. (Limite : 1 000 $ par enseignant. <a target=\"_blank\"
       href=\"http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org\">Consultez
       la FAQ pour plus de limites</a>.)\n"
     teacher_pitch: Inscription à Code.org pour les enseignants
     teacher_title: S'inscrire comme enseignant
-    student_pitch: Inscription à Code.org pour les étudiants
-    student_title: S'inscrire comme étudiant
+    student_pitch: Inscription à Code.org pour les élèves
+    student_title: S'inscrire comme élève
     school_name: Nom de l'école (facultatif)
     school_address: Adresse de l'école (facultatif)
     address_placeholder: adresse, ville, état, code postal
@@ -102,13 +106,16 @@
     valid_password: Mot de passe correct !
     invalid_password: Le mot de passe doit comporter au moins 6 caractères
     mismatch_password: Les deux mots de passe entrés sont différents
-    student_terms: J'accepte d'être lié par les termes du contrat Code.org . Si j'ai
-      moins de 13 ans, je confirme en soumettant ce formulaire que j'ai l'autorisation
-      de mes parents ou de mon tuteur légal pour utiliser les services de Code.org.
+    student_terms: J'accepte d'être lié par les Code.org <a href='http://code.org/tos'>
+      conditions de service</a>. Si j'ai moins de 13 ans, je confirme par ce formulaire
+      que j'ai une autorisation provenant d'un de mes parent ou tuteur légal d'utiliser
+      les services de Code.org. <br/>Pour les utilisateurs de moins de 13 ans, les
+      adresses e-mail ne sont pas stockées sous une forme qui permette de communiquer
+      avec eux.
     teacher_terms: J'accepte les <a href='http://code.org/tos'>termes et conditions</a>
       du service Code.org.
-    additional_information: We need some additional information to continue signing
-      you up.
+    additional_information: Nous avons besoin de quelques informations supplémentaires
+      pour continuer votre inscription.
   signin_form:
     title: Vous avez déjà un compte ? Connectez-vous
     login: Courriel ou nom d'utilisateur
@@ -120,8 +127,8 @@
     try_hoc: Essayez d'abord une Heure de Code
     try_20hours: Essayez notre Introduction à l'informatique de 20 heures
   signinsection:
-    welcome: Welcome to %{section_name}
-    name: Choose your name
+    welcome: Bienvenue sur %{section_name}
+    name: Choisissez votre nom
     picture: Now find your secret picture
     words: Now enter your secret words
     login: Connexion
@@ -191,11 +198,11 @@
     teacher_email_required: 'Vous devez confirmer votre adresse de messagerie pour
       obtenir un des prix pour enseignants :'
     confirm:
-      title: Please Confirm
+      title: Merci de confirmer
       'no': Non
       'yes': Oui
       msg: Are you sure you want to claim the %{prize_name} prize?
-      msg_student: 'NOTE: You can only choose one type of prize.'
+      msg_student: 'Remarque : Vous ne pouvez choisir qu''un type de prix.'
       msg_publicschool: Veuillez confirmer que vous êtes enseignant dans une école
         publique aux États-Unis.
       msg_visit_website: Visiter le site web
@@ -213,8 +220,9 @@
     msg:
       choose: 'Choisis un prix :'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: Vous avez remporté un prix ! (Étudiants états-uniens uniquement)
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      earned: Vous avez remporté un prix ! (Elèves états-uniens uniquement)
+      not_earned_title: Terminer le didacticiel, obtenez des récompenses (uniquement
+        pour les élèves états-uniens)
       not_earned: 'Apprenez tous les concepts de l''informatique, remportez l''ensemble
         des %{num_trophies} trophées, et gagnez des vrais prix. Vous pouvez choisir
         entre 10 Go de stockage gratuit sur Dropbox, 10 $ en crédits Skype, et des
@@ -277,7 +285,7 @@
       logout: Déconnexion
       signin: Connexion
       signup: Inscription
-      already_registered: Already registered?
+      already_registered: Déjà inscrit ?
     popup:
       progress: Votre progression
       lines: 'Nombre de lignes de code : %{lines}'
@@ -287,7 +295,7 @@
       prizes: Remportez les %{total_trophies} trophées et gagnez des prix !
       prize_earned: Les %{total_trophies} trophées ont été remportés. Vous avez gagné
         un prix !
-      prize_us_only: "(Étudiants états-uniens seulement)"
+      prize_us_only: "(Elèves états-uniens seulement)"
       prizes_link: plus d'informations
   teacher:
     title:
@@ -300,13 +308,13 @@
     followers:
       section: 'Section:'
       stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      show_past: 'Montrer l''activité passée de l''élève (%{bullet_html})  :'
       levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: Not tried yet
-      activity: Indicates student activity in the last %{hours} %{plural}
+      perfect: Terminé, parfait
+      completed: Terminé, mais en utilisant trop de blocs
+      tried: Essayé, mais pas terminé
+      not_tried: Pas encore essayé
+      activity: Indique l'activité d'élèves dans le dernier %{hours} %{plural}
       no_section: No assigned section
       trophies: Trophées
     students:
@@ -314,32 +322,33 @@
       username: Nom d'utilisateur
       password: Mot de passe
       manage: Gérer les élèves
-      dashboard: Go to Teacher Dashboard
+      dashboard: Aller au tableau de bord enseignant
       add: Ajouter des élèves
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing
-        student data, you can set up your class quickly by asking them to signup.
-        Your students will need to choose usernames and passwords, but they WILL NOT
-        be required to provide an email address. If a student forgets their password,
-        you will be able to reset it for them.
-      register: Ask your students to register themselves
+      remove: Supprimer un élève
+      confirm_remove: "Êtes-vous sûr de que vouloir supprimer cet élève ?"
+      help_reassign: Divisez votre classe en plusieurs sections, afin de sélectionner
+        les élèves pour assigner une nouvelle section.
+      help_register: Au lieu de passer beaucoup de temps à importer individuellement
+        chaque élève, vous pouvez configurer votre classe rapidement en leur demandant
+        de s'inscrire. Vos élèves devront choisir des noms d'utilisateur et mots de
+        passe, mais ils ne seront pas être tenus de fournir une adresse e-mail. Si
+        un élève oublie son mot de passe, vous serez en mesure de le remettre à zéro
+        pour lui.
+      register: Demandez à vos élèves de s'inscrire eux-mêmes
       vist: Ask your students to visit
       section_code: 'and enter their section-code:'
-      first_please: First, please %{add_section}
+      first_please: Tout d'abord, s'il vous plaît %{add_section}
       for: For
       enter: 'enter:'
     sections:
       add: Add section
       manage: Gérer les sections
       section: Section
-      students: Students
+      students: "Élèves"
       section_code: Section Code
       add_section_code: Add Students Section-Code
       secret: Secret type
-      grade: Grade
+      grade: Note
       course: Cours
       rename: renommer
       edit: modifier
@@ -348,7 +357,7 @@
       email: Envoyer par email
     rollup: Tableau de bord de progression
     activity: Activité récente de la classe
-    user_not_found: L'enseignant ou l'étudiant n'a pas été trouvé
+    user_not_found: L'enseignant ou l'élève n'a pas été trouvé
     cant_remove_student_no_email: "%{student_name} ne peut être retiré de votre liste
       d'étudiants car %{student_name} n'a pas enregistré d'adresse de messagerie"
     cant_remove_teacher_no_email: "%{teacher_name} ne peut être retiré de votre liste
@@ -374,8 +383,10 @@
     classroom_activity: Activité manuelle
   home:
     title: Code Studio
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: Déjà inscrit ? %{link}
-    student_reg_link: S'inscrire comme étudiant
+    student_reg_link: S'inscrire comme élève
     teacher_reg_link: S'inscrire comme enseignant
     signin_directions: Utilisez un compte pour suivre les progrès.<br/> Enseignants,
       suivez l'ensemble de votre classe.
@@ -384,8 +395,8 @@
     teacher_student_count: Vous dirigez %{count} élèves.
     teacher_averages: En moyenne, vos élèves ont remporté %{trophy_average} trophées
       « Maîtrise du Concept » sur %{trophy_max}.
-    teacher_print_certificates: Imprimer les certificats pour les étudiants ayant
-      terminé ce cours
+    teacher_print_certificates: Imprimer les certificats pour les élèves ayant terminé
+      ce cours
     teacher_read_blog: Lisez l'actualité et les mises à jour de notre matériel sur
       notre Blog Enseignant
     classroom: Votre classe
@@ -413,7 +424,7 @@
     try_beta_courses: Nouveau ! Essayez nos cours bêta pour les élèves de l'école
       primaire
     use_as_teacher: Utiliser ce site en tant qu'enseignant
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
+    heading_elementary: "<h2>de 20 heures de cours pour</h2><h1>Élèves du primaire</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
   gender:
@@ -429,6 +440,7 @@
     feedback: Envoyer un commentaire
     translate: Aidez-nous à traduire dans votre langue
     support: Assistance
+    support_url: http://support.code.org
     tos: Conditions
     privacy: Politique de confidentialité
     secure: Version sécurisée
@@ -449,12 +461,27 @@
   video:
     tab: Vidéo.
     notes: Pas de vidéo ? Voir le texte de la vidéo.
-    notes_coming_soon: Notes for this video coming soon.
+    notes_coming_soon: Bientôt une description pour cette vidéo.
     autoplay_option: Lire les vidéos automatiquement
     download: Télécharger la vidéo
   compatability:
-    working: Les travaux de prise en charge de votre navigateur sont en cours.
-    upgrade: Merci de mettre à jour votre navigateur.
+    working:
+      header: Nous travaillons pour prendre en charge pour votre navigateur.
+      message: Code.org utilise des technologies web modernes. Cela rend le site plus
+        rapide à utiliser. Votre navigateur ne prend pas en charge toutes les caractéristiques
+        requises, et vous pouvez rencontrer des problèmes lors de l'utilisation de
+        cette partie du site. S'il vous plaît, Aidez-nous en <a href='%{report_issue_url}'>signalant
+        des problèmes que vous trouvez</a>. Vous pouvez également <a href='%{supported_browsers_url}'>mettre
+        à niveau votre navigateur vers une version prise en charge</a>.
+      hide_this_warning: Masquer cet avertissement
+    upgrade:
+      header: Merci de mettre à jour votre navigateur.
+      message: Code.org utilise des technologies web modernes. Cela rend le site plus
+        rapide à utiliser. Malheureusement votre navigateur ne prend pas en charge
+        toutes les fonctionnalités nécessaires à l'exécution de cette partie du site.
+        <br/> <br/>Installer un navigateur pris en charge pour continuer. Vous pouvez
+        <a href='#'>essayez d'afficher la page</a>, mais attendez vous à des erreurs.
+      button: Montrez-moi la liste des navigateurs pris en charge
   slow_loading: Cela prend plus longtemps que d'habitude...
   try_reloading: Essayez de recharger la page
   next_stage: Terminé ! Passer à l'étape suivante
@@ -491,8 +518,8 @@
       title: Cours d'introduction
       body: Essayez notre cours de 20 heures d'introduction à l'informatique.
   gallery:
-    students_drew_these_with_code: Les étudiants les ont dessinés avec du code !
-    picture_count: Ces <b>%{days}</b> derniers jours, les étudiants ont dessiné <b>%{count}</b>
+    students_drew_these_with_code: Les élèves les ont dessinés avec du code !
+    picture_count: Ces <b>%{days}</b> derniers jours, les élèves ont dessiné <b>%{count}</b>
       images en écrivant leurs propres programmes informatiques. Cliquez sur les images
       pour voir chaque programme en action.
     want_to_make_your_own: Envie de faire le vôtre ?
@@ -504,6 +531,7 @@
     feedback: Envoyer un commentaire
     report_bug: Signaler un bogue
     support: Obtenir de l'aide
+    support_url: "//support.code.org"
   multi:
     wrong_title: Réponse incorrecte
     wrong_body: La réponse que vous avez entrée n'est pas correcte. Veuillez réessayer !
@@ -561,8 +589,8 @@
       stronger privacy protections. To do this, we need existing users to enter their
       age here.<br/>As always, code.org will never rent, sell or share this information
       with any third parties.
-    sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
-      out</a>.
-  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
-    You may browse <a href="http://support.code.org">support.code.org</a> without
-    signing in or ask your parent or teacher to contact us for you.
+    sign_out: Si vous ne souhaitez pas fournir votre âge vous pouvez vous <a href="%{url}">déconnecter</a>.
+  zendesk_too_young_message: Désolé, les plus jeunes utilisateurs ne peuvent pas s'enregistrer
+    sur notre site de support. Néanmoins, vous pouvez parcourir les <a href="http://support.code.org">
+    support.code.org</a> en ou demandez à votre parent ou enseignant à nous contacter
+    pour vous.

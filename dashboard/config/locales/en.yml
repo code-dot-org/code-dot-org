@@ -237,6 +237,9 @@ en:
     header:
       finished_hoc: "I've finished my Hour of Code"
       sign_in_to_save: 'Sign in to save progress'
+      free_play:
+        playlab: 'Make an App'
+        artist: 'Draw Something'
     user:
       classroom: 'My students'
       label: 'Hi %{username}'
@@ -333,6 +336,8 @@ en:
     classroom_activity: 'Unplugged Activity'
   home:
     title: "Code Studio"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: "Already registered? %{link}"
     student_reg_link: 'Student Sign Up'
     teacher_reg_link: 'Teacher Sign Up'
@@ -372,7 +377,8 @@ en:
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
     feedback: 'Provide feedback'
     translate: 'Help us translate to your language'
-    support: Support
+    support: 'Support'
+    support_url: 'http://support.code.org'
     tos: 'Terms'
     privacy: 'Privacy Policy'
     secure: 'Secure Version'
@@ -448,6 +454,7 @@ en:
     feedback: "Give Feedback"
     report_bug: "Report Bug"
     support: "Get Help"
+    support_url: "//support.code.org"
   multi:
     wrong_title: "Incorrect answer"
     wrong_body: "The answer you've entered is not correct.  Please try again!"

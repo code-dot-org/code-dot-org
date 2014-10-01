@@ -1,50 +1,64 @@
 ---
-title: Благодаря за записването ви като домакин на Часът на кодирането!
+title: Thanks for signing up to host an Hour of Code! 
+layout: wide
 ---
+
+<%
+  facebook = {:u=>"http://#{request.host}/us"}
+
+  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+%>
 
 # Благодаря за регистрирането ви като домакин Часът на кодрането събитие!
 
-**Всеки**организатор на Часът на кодирането ще получи 10 GB Dropbox пространство или $10 Skype кредит като благодарност. [ детайли][1]
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details][1]
 
  [1]: /prizes
 
 <% if @country == 'us' %>
 
-Накарай [ цялото училище да участва][2] за да имате шанс за големите награди.
+Get your [whole school to participate][2] for a chance for big prizes for your entire school.
 
- [2]: /whole-school
+ [2]: /us/prizes
 
 <% end %>
 
 ## Разпространи новината
 
-Кажете на приятелите си за #HourOfCode.
+Tell your friends about the #HourOfCode.
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 <% if @country == 'us' %>
 
 ## 2. Попитайте във вашето училище, дали предлага участие в Часът на кодирането
 
-[ Изпрати този имейл][3] или [ дай това изложение на своя директор][4]. След като вашето училище е на борда, [ ще може да спечели $10,000 за закупуване на технологии ][1] и да предизвика и други училища във вашия район да се качат на борда.
+[Send this email][3] or [give this handout to your principal][4]. Once your school is on board, [enter to win $10,000 worth of technology for your school][1] and challenge other schools in your area to get on board.
 
  [3]: /resources#email
- [4]: /resources/hoc-one-pager.pdf
+ [4]: /files/schools-handout.pdf
 
 <% else %>
 
 ## 2. Поискайте от вашето училище да предложи Часът на кодирането
 
-[ Изпрати този имейл][3] или дай [ това изложение][4] на своя директор.
+[Send this email][3] or give [this handout][4] to your principal.
 
 <% end %>
 
 ## 3. Посъветвайте се с вашия работодател за възможно включване
 
-[ Изпратете този имейл][3] на вашия ръководител или изпълнителен директор. Или [ му дайте това изложение][4].
+[Send this email][3] to your manager, or the CEO. Or [give them this handout][5].
+
+ [5]: /resources/hoc-one-pager.pdf
 
 ## 4. Насърчете включването в Часът на кодирането в рамките на вашата общност
 
-Ангажирайте локална група — момчета от скаутски клуб, църковна общност, университет, група на ветерани или синдикат. Можете да промотирате Часът на кодирането на "block party" във вашия квартал.
+Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
 ## 5 Ангажирайте местната власт в подкрепа на Часът на Кодирането
 
-[ Изпратете този имейл][3] до кмета, Общинския съвет или училищното настоятелство. Или [ им дайте това изложение][4] и ги поканете да посетят вашето училище.
+[Send this email][3] to your mayor, city council, or school board. Or [give them this handout][5] and invite them to visit your school.
+
+<%= view 'popup_window.js' %>

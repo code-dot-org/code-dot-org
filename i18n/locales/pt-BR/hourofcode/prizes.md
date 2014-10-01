@@ -1,6 +1,8 @@
 * * *
 
-## title: Prêmios
+title: Prêmios
+
+## layout: wide
 
 # A Hora do Código — prêmios para os organizadores
 
@@ -34,7 +36,7 @@ Se a sua escola inteira já se cadastrou para participar da Hora do Código, ins
 
 ## Mais perguntas sobre os prêmios?
 
-Check out [Terms and Conditions][2] or visit our forum to see [FAQs][3] and ask your questions.
+Confira os [Termos e condições][2] ou visite nosso fórum para ver as [Perguntas frequentes][3] e faça suas perguntas.
 
  [2]: /prizes-terms
  [3]: http://support.code.org

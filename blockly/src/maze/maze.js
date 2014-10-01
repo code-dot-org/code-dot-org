@@ -823,13 +823,11 @@ BlocklyApps.runButtonClick = function() {
 function beginAttempt () {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
-  var stepButton = document.getElementById('stepButton');
   // Ensure that Reset button is at least as wide as Run button.
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;

@@ -1,7 +1,7 @@
 "ko":
   devise:
     confirmations:
-      confirmed: "계정이 확인 되었습니다. 로그인 하세요."
+      confirmed: "이메일 확인이 완료되었습니다."
       send_instructions: "계정 인증 메일이 전송되었습니다."
       send_paranoid_instructions: "이메일 주소가 등록되어있다면, 계정 인증 메일이 발송됩니다."
     failure:
@@ -16,9 +16,9 @@
       unconfirmed: "계정이 인증되어야 합니다."
     mailer:
       confirmation_instructions:
-        subject: "계정 인증"
+        subject: Code.org 인증 방법
       reset_password_instructions:
-        subject: "비밀번호 재설정"
+        subject: Code.org 비밀번호 재설정 방법
       unlock_instructions:
         subject: "계정 잠김 해제"
     omniauth_callbacks:

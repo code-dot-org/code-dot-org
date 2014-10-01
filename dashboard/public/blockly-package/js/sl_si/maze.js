@@ -166,6 +166,20 @@ var codeKeyDown = function(e) {
   }
 };
 
+BlocklyApps.toggleRunReset = function(button) {
+  var showRun = (button === 'run');
+  if (button !== 'run' && button !== 'reset') {
+    throw "Unexpected input";
+  }
+
+  var run = document.getElementById('runButton');
+  var reset = document.getElementById('resetButton');
+  run.style.display = showRun ? 'inline-block' : 'none';
+  run.disabled = !showRun;
+  reset.style.display = !showRun ? 'inline-block' : 'none';
+  reset.disabled = showRun;
+};
+
 /**
  * Common startup tasks for all apps.
  */
@@ -177,6 +191,7 @@ BlocklyApps.init = function(config) {
   BlocklyApps.share = config.share;
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
+  BlocklyApps.sendToPhone = config.sendToPhone;
   BlocklyApps.noPadding = config.no_padding;
 
   BlocklyApps.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
@@ -252,8 +267,11 @@ BlocklyApps.init = function(config) {
 
       belowViz.appendChild(feedback.createSharingDiv({
         response: {
-          level_source: window.location
+          level_source: window.location,
+          level_source_id: config.level_source_id,
+          phone_share_url: config.send_to_phone_url
         },
+        sendToPhone: config.sendToPhone,
         twitter: config.twitter
       }));
 
@@ -355,19 +373,26 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
+    BlocklyApps.editor = window.ace.edit('codeTextbox');
+    BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
+    BlocklyApps.editor.setOptions({
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true
+    });
+
     var codeTextbox = document.getElementById('codeTextbox');
+
+    var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
     var codeFunctions = config.level.codeFunctions;
     // Insert hint text from level codeFunctions into editCode area
     if (codeFunctions) {
-      var hintText = "";
+      var hintText = '';
       for (var i = 0; i < codeFunctions.length; i++) {
-        hintText = hintText + " " + codeFunctions[i].func + "();";
+        hintText += " " + codeFunctions[i].func + "();";
       }
-      var html = utils.escapeHtml(msg.typeFuncs()).replace('%1', hintText);
-      codeTextbox.innerHTML += '// ' + html + '<br><br><br>';
+      startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
     }
-    // Needed to prevent blockly from swallowing up the backspace key
-    codeTextbox.addEventListener('keydown', codeKeyDown, true);
+    BlocklyApps.editor.setValue(startText);
   }
 
   BlocklyApps.Dialog = config.Dialog;
@@ -486,6 +511,7 @@ BlocklyApps.init = function(config) {
   }
 
   if (config.level.editCode) {
+    // Swap the visibility of the codeText element and the blocklyDiv
     document.getElementById('codeTextbox').style.display = 'block';
     div.style.display = 'none';
   }
@@ -854,6 +880,7 @@ BlocklyApps.displayFeedback = function(options) {
   options.Dialog = BlocklyApps.Dialog;
   options.onContinue = onContinue;
   options.backToPreviousLevel = backToPreviousLevel;
+  options.sendToPhone = BlocklyApps.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
@@ -909,8 +936,7 @@ BlocklyApps.report = function(options) {
  */
 BlocklyApps.resetButtonClick = function() {
   onResetPressed();
-  document.getElementById('runButton').style.display = 'inline-block';
-  document.getElementById('resetButton').style.display = 'none';
+  BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
   Blockly.mainWorkspace.setEnableToolbox(true);
   Blockly.mainWorkspace.traceOn(false);
@@ -1956,7 +1982,6 @@ exports.createSharingDiv = function(options) {
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
-    options.sendToPhone = true;
   }
 
   var sharingDiv = document.createElement('div');
@@ -1975,17 +2000,22 @@ exports.createSharingDiv = function(options) {
 
 //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
-  if (sharingPhone) {
+  if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
         sendToPhone.setAttribute('style', 'display:inline-block');
-        var phone = $("#phone");
-        phone.mask("(999) 999-9999");
-        phone.focus();
+        var phone = $(sharingDiv.querySelector("#phone"));
+        var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
+        submitButton.disabled = true;
+        phone.mask('(000) 000-0000',{
+            onComplete:function(){if(!submitted) submitButton.disabled=false;},
+            onChange: function(){submitButton.disabled=true;}
+        });
+        phone.focus();
         dom.addClickTouchEvent(submitButton, function() {
-          var phone = $("#phone");
+          var phone = $(sharingDiv.querySelector("#phone"));
           var params = jQuery.param({
             level_source: options.response.level_source_id,
             phone: phone.val()
@@ -1993,6 +2023,7 @@ exports.createSharingDiv = function(options) {
           $(submitButton).val("Sending..");
           phone.prop('readonly', true);
           submitButton.disabled = true;
+          submitted = true;
           jQuery.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text("Sent!");
@@ -10137,13 +10168,11 @@ BlocklyApps.runButtonClick = function() {
 function beginAttempt () {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
-  var stepButton = document.getElementById('stepButton');
   // Ensure that Reset button is at least as wide as Run button.
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -12583,7 +12612,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/sl_si/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n    // ', escape((37,  msg.typeCode() )), '\n    <br>\n    // ', escape((39,  msg.typeHint() )), '\n    <br>\n  </div>\n');42; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (46,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((52,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((53,  msg.runProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((57,  msg.resetProgram() )), '</div>\n        <img src="', escape((58,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');60; if (data.controls) { ; buf.push('\n      ', (61,  data.controls ), '\n      ');62; } ; buf.push('\n      ');63; if (data.extraControlRows) { ; buf.push('\n      ', (64,  data.extraControlRows ), '\n      ');65; } ; buf.push('\n    </div>\n\n    ');68; instructions() ; buf.push('\n    ');69; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((75,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((76,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((78,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((80,  data.blockCounterClass )), '>\n          ', escape((81,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((84,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((87,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');93; codeArea() ; buf.push('\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n  </div>\n');38; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (42,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((48,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((49,  msg.runProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((53,  msg.resetProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');56; if (data.controls) { ; buf.push('\n      ', (57,  data.controls ), '\n      ');58; } ; buf.push('\n      ');59; if (data.extraControlRows) { ; buf.push('\n      ', (60,  data.extraControlRows ), '\n      ');61; } ; buf.push('\n    </div>\n\n    ');64; instructions() ; buf.push('\n    ');65; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');89; codeArea() ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -12891,15 +12920,15 @@ exports.end = function(d){return "konec"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Znotraj 'Ponovi' ali 'če' bloka morajo biti drugi bloki, da bo delovalo. Prepričaj se, da se notranji bloki ustrezno prilegajo zunanjemu bloku."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Da bi blok funkcije delal potrebuje znotraj sebe druge bloke."};
 
-exports.extraTopBlocks = function(d){return "Imate dodatne bloke, ki niso povezani z blokom dogodka."};
+exports.extraTopBlocks = function(d){return "Imaš nedodeljene bloke. Si jih želel dodeliti bloku \"ob zagonu\"?"};
 
 exports.finalStage = function(d){return "Čestitke! Zaključil si zadnjo stopnjo."};
 
 exports.finalStageTrophies = function(d){return "Čestitke! Zaključil/a si stopnjo "+v(d,"stageNumber")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"trofejo","other":n(d,"numTrophies")+" trofej"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Končaj"};
 
 exports.generatedCodeInfo = function(d){return "Celo najboljše univerze učijo kodiranje z bloki (npr. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ampak bloke, ki si jih sestavil, lahko prikažemo v JavaScriptu, najbolj rabljenem programskem jeziku:"};
 
@@ -12931,7 +12960,7 @@ exports.numBlocksNeeded = function(d){return "Čestitke! Zaključil/a si uganko 
 
 exports.numLinesOfCodeWritten = function(d){return "Ravnokar si napisal "+p(d,"numLines",0,"sl",{"one":"1 vrstica","other":n(d,"numLines")+" vrstic"})+" kode!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "igraj"};
 
 exports.puzzleTitle = function(d){return "Uganka "+v(d,"puzzle_number")+" od "+v(d,"stage_total")};
 
@@ -12943,7 +12972,7 @@ exports.runProgram = function(d){return "Teči"};
 
 exports.runTooltip = function(d){return "Zaženi program, definiran z bloki na delovni površini."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "rezultat"};
 
 exports.showCodeHeader = function(d){return "Pokaži kodo"};
 
@@ -12967,7 +12996,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Seštevek vseh skupaj: 
 
 exports.tryAgain = function(d){return "Poskusi ponovno"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Poglej namig"};
 
 exports.backToPreviousLevel = function(d){return "Nazaj na prejšnjo raven"};
 
@@ -12995,7 +13024,7 @@ exports.watchVideo = function(d){return "Glej video"};
 
 exports.when = function(d){return "ko"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "ob zagonu"};
 
 exports.tryHOC = function(d){return "Poizkusi Uro za programiranje (Hour to Code)"};
 
@@ -13003,7 +13032,7 @@ exports.signup = function(d){return "Vpiši se za uvodni tečaj"};
 
 exports.hintHeader = function(d){return "Tukaj je namig:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Poglej kako si končal in poizkusi popraviti svoj program."};
 
 
 },{"messageformat":68}],56:[function(require,module,exports){
@@ -13019,9 +13048,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sl = function 
   }
   return 'other';
 };
-exports.atHoneycomb = function(d){return "v panju"};
+exports.atHoneycomb = function(d){return "pri satovju"};
 
-exports.atFlower = function(d){return "v cvetu"};
+exports.atFlower = function(d){return "v roži"};
 
 exports.avoidCowAndRemove = function(d){return "izogni se kravi in odstrani 1"};
 
@@ -13055,7 +13084,7 @@ exports.fillTooltip = function(d){return "postavi 1 enoto umazanije"};
 
 exports.finalLevel = function(d){return "Čestitke! Rešil/a si zadnjo uganko."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "Roža na kateri si nima več medu."};
 
 exports.get = function(d){return "najdi"};
 
@@ -13065,15 +13094,15 @@ exports.holePresent = function(d){return "tam je luknja"};
 
 exports.honey = function(d){return "naredi med"};
 
-exports.honeyAvailable = function(d){return "honey"};
+exports.honeyAvailable = function(d){return "med"};
 
 exports.honeyTooltip = function(d){return "Naredi med iz nektarja"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "To satovje nima več prostora za še več medu."};
 
 exports.ifCode = function(d){return "če"};
 
-exports.ifInRepeatError = function(d){return "You need an \"if\" block inside a \"repeat\" block. If you're having trouble, try the previous level again to see how it worked."};
+exports.ifInRepeatError = function(d){return "Znotraj \"če\" bloka potrebuješ tudi blok \"ponovi\". Če imaš pri tem težave ponovi prejšnjo sobo in poglej kako deluje."};
 
 exports.ifPathAhead = function(d){return "če je pot naprej"};
 
@@ -13081,17 +13110,17 @@ exports.ifTooltip = function(d){return "Če obstaja pot naprej v določeni smeri
 
 exports.ifelseTooltip = function(d){return "Če obstaja pot naprej v določeni smeri, potem naredi prvi blok dejanj. V nasprotnem primeru, naredi drugi blok dejanj."};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "Če v dani smeri obstaja roža satovje, potem izvedi dejanja."};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "Če v dani smeri obstaja roža/satovje, potem izvedi prvi blok dejanj. Drugače izvedi drugi blok dejanj."};
 
 exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
 
 exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
 
-exports.make = function(d){return "make"};
+exports.make = function(d){return "naredi"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "premakni nazaj"};
 
 exports.moveEastTooltip = function(d){return "Premakni me vzhodno vsaj za eno mesto."};
 
@@ -13103,13 +13132,13 @@ exports.moveNorthTooltip = function(d){return "Premakni me severno za vsaj eno m
 
 exports.moveSouthTooltip = function(d){return "Premakni me južno za vsaj eno mesto."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "Premaknime me za eno mesto naprej/nazaj"};
 
 exports.moveWestTooltip = function(d){return "Premakni me zahodno za vsaj eno mesto."};
 
 exports.nectar = function(d){return "dobi nektar"};
 
-exports.nectarRemaining = function(d){return "nectar"};
+exports.nectarRemaining = function(d){return "nektar"};
 
 exports.nectarTooltip = function(d){return "Dobi nektar iz rože"};
 
@@ -13123,9 +13152,9 @@ exports.noPathLeft = function(d){return "ni poti na levo"};
 
 exports.noPathRight = function(d){return "ni poti na desno"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "Nektar lahko dobiš samo iz rože."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "Med lahko delaš samo pri satovju."};
 
 exports.numBlocksNeeded = function(d){return "Ta uganka je lahko rešena z %1 bloki."};
 
@@ -13149,7 +13178,7 @@ exports.removeStack = function(d){return "odstrani več "+v(d,"shovelfuls")+" ku
 
 exports.removeSquare = function(d){return "odstrani kvadrat"};
 
-exports.repeatCarefullyError = function(d){return "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end."};
+exports.repeatCarefullyError = function(d){return "Za uspešno rešitev dobor premisli o vzorcu premikanja znotraj bloka \"ponovi\". Dodaten obrat na konvu nič ne škodi."};
 
 exports.repeatUntil = function(d){return "ponavljaj dokler"};
 
@@ -13159,9 +13188,9 @@ exports.repeatUntilFinish = function(d){return "ponavljaj do konca"};
 
 exports.step = function(d){return "Korak"};
 
-exports.totalHoney = function(d){return "total honey"};
+exports.totalHoney = function(d){return "skupaj medu"};
 
-exports.totalNectar = function(d){return "total nectar"};
+exports.totalNectar = function(d){return "skupaj nekatrja"};
 
 exports.turnLeft = function(d){return "obrni se levo"};
 
@@ -13169,19 +13198,19 @@ exports.turnRight = function(d){return "obrni se desno"};
 
 exports.turnTooltip = function(d){return "Obrni me levo ali desno za 90 stopinj."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "Prepričaj se, da si preveril vse oblake in izvedel ali so rože ali satovje."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "Prepričaj se, da si pregledal vse vijolične rože, če imajo nektar"};
 
 exports.whileMsg = function(d){return "dokler"};
 
 exports.whileTooltip = function(d){return "Ponavljaj vključena dejanja, dokler ne dosežeš zaključne točke."};
 
-exports.word = function(d){return "Find the word"};
+exports.word = function(d){return "Poišči besedo"};
 
 exports.yes = function(d){return "Ja"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "Ti si črkoval"};
 
 
 },{"messageformat":68}],57:[function(require,module,exports){

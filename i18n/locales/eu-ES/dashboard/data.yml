@@ -114,7 +114,7 @@
         parameters: "Parametrodun funtzioak"
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
+        maze_2_2: 'Lagunduko didazu txerri zikina harrapatzen? Pilatu "aurrera mugitu" bloke pare bat eta klikatu "Hasi programa" hara iristen laguntzeko. '
         maze_2_1: "Txerri honek sutan jartzen nau. Lagundu bera aurkitzen!"
         maze_2_2_5: "Egin bidea eta eraman nazazu txerri mozoloarengana. Ekidin dinamita edo lumek hegan egingo dute!"
         maze_2_3: "Gidatu nazazu gaizkile berdera! (Kontuz dinamitarekin)"

@@ -38,7 +38,7 @@
   "jumpNorthTooltip":"Flytter artisten nord uten noen spor.",
   "jumpSouthTooltip":"Flytter artisten sør uten noen spor.",
   "jumpWestTooltip":"Flytter artisten vest uten noen spor.",
-  "lengthFeedback":"You got it right except for the lengths to move.",
+  "lengthFeedback":"Du fikk den rett bortsett fra lengden å flytte.",
   "lengthParameter":"lengde",
   "loopVariable":"teller",
   "moveBackward":"flytt bakover med",

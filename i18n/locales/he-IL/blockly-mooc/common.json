@@ -21,7 +21,7 @@
   "end":"סוף",
   "emptyBlocksErrorMsg":"בלוקי ה\"חזור שוב\" או \"אם\" צריכים להיות בעלי בלוקים פנימיים כדי לעבוד. וודא כי הבלוק הפנימי מתאים בבלוק המכיל.",
   "emptyFunctionBlocksErrorMsg":"פונקציית הבלוק דורשת בלוקים אחרים בתוך לעבודה.",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"when run\" block?",
+  "extraTopBlocks":"יש לך אבני כעיגולים בצבע. התכוונת לצרף אלה כדי לחסום את \"בעת הפעלת\"?",
   "finalStage":"כל הכבוד! השלמת את השלב הסופי.",
   "finalStageTrophies":"כל הכבוד! השלמת את השלב הסופי וזכית ב{numTrophies, plural, one {פרס} other {# פרסים}}.",
   "finish":"סיים",

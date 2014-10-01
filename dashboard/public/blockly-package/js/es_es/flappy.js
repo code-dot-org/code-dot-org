@@ -166,6 +166,20 @@ var codeKeyDown = function(e) {
   }
 };
 
+BlocklyApps.toggleRunReset = function(button) {
+  var showRun = (button === 'run');
+  if (button !== 'run' && button !== 'reset') {
+    throw "Unexpected input";
+  }
+
+  var run = document.getElementById('runButton');
+  var reset = document.getElementById('resetButton');
+  run.style.display = showRun ? 'inline-block' : 'none';
+  run.disabled = !showRun;
+  reset.style.display = !showRun ? 'inline-block' : 'none';
+  reset.disabled = showRun;
+};
+
 /**
  * Common startup tasks for all apps.
  */
@@ -177,6 +191,7 @@ BlocklyApps.init = function(config) {
   BlocklyApps.share = config.share;
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
+  BlocklyApps.sendToPhone = config.sendToPhone;
   BlocklyApps.noPadding = config.no_padding;
 
   BlocklyApps.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
@@ -252,8 +267,11 @@ BlocklyApps.init = function(config) {
 
       belowViz.appendChild(feedback.createSharingDiv({
         response: {
-          level_source: window.location
+          level_source: window.location,
+          level_source_id: config.level_source_id,
+          phone_share_url: config.send_to_phone_url
         },
+        sendToPhone: config.sendToPhone,
         twitter: config.twitter
       }));
 
@@ -355,19 +373,26 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
+    BlocklyApps.editor = window.ace.edit('codeTextbox');
+    BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
+    BlocklyApps.editor.setOptions({
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true
+    });
+
     var codeTextbox = document.getElementById('codeTextbox');
+
+    var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
     var codeFunctions = config.level.codeFunctions;
     // Insert hint text from level codeFunctions into editCode area
     if (codeFunctions) {
-      var hintText = "";
+      var hintText = '';
       for (var i = 0; i < codeFunctions.length; i++) {
-        hintText = hintText + " " + codeFunctions[i].func + "();";
+        hintText += " " + codeFunctions[i].func + "();";
       }
-      var html = utils.escapeHtml(msg.typeFuncs()).replace('%1', hintText);
-      codeTextbox.innerHTML += '// ' + html + '<br><br><br>';
+      startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
     }
-    // Needed to prevent blockly from swallowing up the backspace key
-    codeTextbox.addEventListener('keydown', codeKeyDown, true);
+    BlocklyApps.editor.setValue(startText);
   }
 
   BlocklyApps.Dialog = config.Dialog;
@@ -486,6 +511,7 @@ BlocklyApps.init = function(config) {
   }
 
   if (config.level.editCode) {
+    // Swap the visibility of the codeText element and the blocklyDiv
     document.getElementById('codeTextbox').style.display = 'block';
     div.style.display = 'none';
   }
@@ -854,6 +880,7 @@ BlocklyApps.displayFeedback = function(options) {
   options.Dialog = BlocklyApps.Dialog;
   options.onContinue = onContinue;
   options.backToPreviousLevel = backToPreviousLevel;
+  options.sendToPhone = BlocklyApps.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
@@ -909,8 +936,7 @@ BlocklyApps.report = function(options) {
  */
 BlocklyApps.resetButtonClick = function() {
   onResetPressed();
-  document.getElementById('runButton').style.display = 'inline-block';
-  document.getElementById('resetButton').style.display = 'none';
+  BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
   Blockly.mainWorkspace.setEnableToolbox(true);
   Blockly.mainWorkspace.traceOn(false);
@@ -1956,7 +1982,6 @@ exports.createSharingDiv = function(options) {
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
-    options.sendToPhone = true;
   }
 
   var sharingDiv = document.createElement('div');
@@ -1975,17 +2000,22 @@ exports.createSharingDiv = function(options) {
 
 //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
-  if (sharingPhone) {
+  if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
         sendToPhone.setAttribute('style', 'display:inline-block');
-        var phone = $("#phone");
-        phone.mask("(999) 999-9999");
-        phone.focus();
+        var phone = $(sharingDiv.querySelector("#phone"));
+        var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
+        submitButton.disabled = true;
+        phone.mask('(000) 000-0000',{
+            onComplete:function(){if(!submitted) submitButton.disabled=false;},
+            onChange: function(){submitButton.disabled=true;}
+        });
+        phone.focus();
         dom.addClickTouchEvent(submitButton, function() {
-          var phone = $("#phone");
+          var phone = $(sharingDiv.querySelector("#phone"));
           var params = jQuery.param({
             level_source: options.response.level_source_id,
             phone: phone.val()
@@ -1993,6 +2023,7 @@ exports.createSharingDiv = function(options) {
           $(submitButton).val("Sending..");
           phone.prop('readonly', true);
           submitButton.disabled = true;
+          submitted = true;
           jQuery.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text("Sent!");
@@ -3893,8 +3924,7 @@ BlocklyApps.runButtonClick = function() {
   document.getElementById('instructions').setAttribute('visibility', 'visible');
   document.getElementById('getready').setAttribute('visibility', 'visible');
 
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   // BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -8615,7 +8645,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/es_es/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n    // ', escape((37,  msg.typeCode() )), '\n    <br>\n    // ', escape((39,  msg.typeHint() )), '\n    <br>\n  </div>\n');42; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (46,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((52,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((53,  msg.runProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((57,  msg.resetProgram() )), '</div>\n        <img src="', escape((58,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');60; if (data.controls) { ; buf.push('\n      ', (61,  data.controls ), '\n      ');62; } ; buf.push('\n      ');63; if (data.extraControlRows) { ; buf.push('\n      ', (64,  data.extraControlRows ), '\n      ');65; } ; buf.push('\n    </div>\n\n    ');68; instructions() ; buf.push('\n    ');69; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((75,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((76,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((78,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((80,  data.blockCounterClass )), '>\n          ', escape((81,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((84,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((87,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');93; codeArea() ; buf.push('\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n  </div>\n');38; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (42,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((48,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((49,  msg.runProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((53,  msg.resetProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');56; if (data.controls) { ; buf.push('\n      ', (57,  data.controls ), '\n      ');58; } ; buf.push('\n      ');59; if (data.extraControlRows) { ; buf.push('\n      ', (60,  data.extraControlRows ), '\n      ');61; } ; buf.push('\n    </div>\n\n    ');64; instructions() ; buf.push('\n    ');65; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');89; codeArea() ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -8896,7 +8926,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Los bloques \"repetir\" o \"si
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "El bloque de función necesita tener otros bloques en su interior para funcionar."};
 
-exports.extraTopBlocks = function(d){return "Tienes bloques adicionales que no están conectados a un bloque de evento."};
+exports.extraTopBlocks = function(d){return "Tiene bloques separados. ¿Quieres decir que quieres fijarlos al bloque \"cuando se ejecuta\"?"};
 
 exports.finalStage = function(d){return "¡Felicidades! Has completado la etapa final."};
 
@@ -8926,9 +8956,9 @@ exports.nextLevel = function(d){return "¡Felicidades! Completaste el Puzzle "+v
 
 exports.nextLevelTrophies = function(d){return "¡Felicidades! Completaste el puzzle "+v(d,"puzzleNumber")+" y ganaste "+p(d,"numTrophies",0,"es",{"one":"un trofeo","other":n(d,"numTrophies")+" trofeos"})+"."};
 
-exports.nextStage = function(d){return "¡Felicitaciones! Ha completado la fase "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "¡ Felicidades! Completaste "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "¡Felicitaciones ha completado la fase "+v(d,"stageName")+" y ha ganado "+p(d,"numTrophies",0,"es",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "¡Felicidades! Completaste la etapa "+v(d,"stageName")+" y ganaste "+p(d,"numTrophies",0,"es",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "¡Felicidades! Completaste el puzzle "+v(d,"puzzleNumber")+". (Sin embargo, podrías haber usado sólo "+p(d,"numBlocks",0,"es",{"one":"1 bloque","other":n(d,"numBlocks")+" bloques"})+".)"};
 
@@ -8974,9 +9004,9 @@ exports.hintRequest = function(d){return "Ver pista"};
 
 exports.backToPreviousLevel = function(d){return "Volver al nivel anterior"};
 
-exports.saveToGallery = function(d){return "Guardar en su galería"};
+exports.saveToGallery = function(d){return "Guardar en tu galería"};
 
-exports.savedToGallery = function(d){return "¡Guardado en su galería!"};
+exports.savedToGallery = function(d){return "¡Guardado en tu galería!"};
 
 exports.typeCode = function(d){return "Escribe tu código JavaScript debajo de estas instrucciones."};
 
@@ -9037,9 +9067,9 @@ exports.flapLarge = function(d){return "aletear fuerte"};
 
 exports.flapVeryLarge = function(d){return "aletear muy fuerte"};
 
-exports.flapTooltip = function(d){return "Vuela alto Flappy."};
+exports.flapTooltip = function(d){return "Hace volar a Flappy."};
 
-exports.flappySpecificFail = function(d){return "Tú código se ve bien, aleteará con cada click que le des. Pero necesitas hacer click varias veces para aletear y así poder llegar a la meta."};
+exports.flappySpecificFail = function(d){return "Tú código se ve bien, aleteará con cada clic que le des. Pero necesitas hacer clic varias veces para aletear y así poder llegar a la meta."};
 
 exports.incrementPlayerScore = function(d){return "anotar un punto"};
 
@@ -9055,31 +9085,31 @@ exports.playSoundRandom = function(d){return "reproducir sonido aleatorio"};
 
 exports.playSoundBounce = function(d){return "Reproducir sonido de rebote"};
 
-exports.playSoundCrunch = function(d){return "reproducir sonido crujido"};
+exports.playSoundCrunch = function(d){return "reproducir sonido de crujido"};
 
 exports.playSoundDie = function(d){return "reproducir sonido triste"};
 
-exports.playSoundHit = function(d){return "reproducir sonido aplastar"};
+exports.playSoundHit = function(d){return "reproducir sonido de aplastar"};
 
-exports.playSoundPoint = function(d){return "reproducir sonido punto"};
+exports.playSoundPoint = function(d){return "reproducir sonido de punto"};
 
-exports.playSoundSwoosh = function(d){return "reproducir sonido crujido"};
+exports.playSoundSwoosh = function(d){return "reproducir sonido de crujido"};
 
-exports.playSoundWing = function(d){return "reproducir sonido ala"};
+exports.playSoundWing = function(d){return "reproducir sonido de aleteo"};
 
-exports.playSoundJet = function(d){return "reproducir sonido jet"};
+exports.playSoundJet = function(d){return "reproducir sonido de avión"};
 
-exports.playSoundCrash = function(d){return "reproducir sonido choque"};
+exports.playSoundCrash = function(d){return "reproducir sonido de choque"};
 
-exports.playSoundJingle = function(d){return "reproducir sonido cascabel"};
+exports.playSoundJingle = function(d){return "reproducir sonido de cascabel"};
 
-exports.playSoundSplash = function(d){return "reproducir sonido splash"};
+exports.playSoundSplash = function(d){return "reproducir sonido de aplastamiento"};
 
-exports.playSoundLaser = function(d){return "reproducir sonido laser"};
+exports.playSoundLaser = function(d){return "reproducir sonido de láser"};
 
 exports.playSoundTooltip = function(d){return "Reproduce el sonido seleccionado."};
 
-exports.reinfFeedbackMsg = function(d){return "Puede pulsar el botón \"Inténtalo de nuevo\" para volver a jugar tu juego."};
+exports.reinfFeedbackMsg = function(d){return "Puede pulsar el botón \"Inténtalo de nuevo\" para volver a jugar a tu juego."};
 
 exports.scoreText = function(d){return "Puntuación: "+v(d,"playerScore")};
 
@@ -9087,17 +9117,17 @@ exports.setBackground = function(d){return "colocar escena"};
 
 exports.setBackgroundRandom = function(d){return "establecer escena aleatoria"};
 
-exports.setBackgroundFlappy = function(d){return "establecer escena ciudad (día)"};
+exports.setBackgroundFlappy = function(d){return "establecer escena de ciudad (día)"};
 
-exports.setBackgroundNight = function(d){return "establecer escena ciudad (noche)"};
+exports.setBackgroundNight = function(d){return "establecer escena de ciudad (noche)"};
 
-exports.setBackgroundSciFi = function(d){return "establecer escena Sci-Fi"};
+exports.setBackgroundSciFi = function(d){return "establecer escena de Sci-Fi"};
 
-exports.setBackgroundUnderwater = function(d){return "establecer escena bajo el agua"};
+exports.setBackgroundUnderwater = function(d){return "establecer escena debajo del agua"};
 
-exports.setBackgroundCave = function(d){return "establecer escena cueva"};
+exports.setBackgroundCave = function(d){return "establecer escena de cueva"};
 
-exports.setBackgroundSanta = function(d){return "establecer escena Santa"};
+exports.setBackgroundSanta = function(d){return "establecer escena de Santa Claus"};
 
 exports.setBackgroundTooltip = function(d){return "Establece la imagen de fondo"};
 
@@ -9113,7 +9143,7 @@ exports.setGapLarge = function(d){return "establecer un espacio grande"};
 
 exports.setGapVeryLarge = function(d){return "establecer un espacio muy grande"};
 
-exports.setGapHeightTooltip = function(d){return "Establece un espacio vertical en los obstáculos"};
+exports.setGapHeightTooltip = function(d){return "Establece el espacio vertical en un obstáculo"};
 
 exports.setGravityRandom = function(d){return "Establece la gravedad al azar"};
 
@@ -9141,7 +9171,7 @@ exports.setGroundUnderwater = function(d){return "establecer fondo bajo el agua"
 
 exports.setGroundCave = function(d){return "establecer fondo Cueva"};
 
-exports.setGroundSanta = function(d){return "establecer fondo Santa"};
+exports.setGroundSanta = function(d){return "establecer fondo Santa Claus"};
 
 exports.setGroundLava = function(d){return "establecer fondo Lava"};
 
@@ -9161,53 +9191,53 @@ exports.setObstacleCave = function(d){return "establecer obstáculo Cueva"};
 
 exports.setObstacleSanta = function(d){return "establecer obstáculo Chimenea"};
 
-exports.setObstacleLaser = function(d){return "establecer obstáculo Laser"};
+exports.setObstacleLaser = function(d){return "establecer obstáculo Láser"};
 
 exports.setObstacleTooltip = function(d){return "Establece la imagen de obstáculo"};
 
 exports.setPlayer = function(d){return "colocar al jugador"};
 
-exports.setPlayerRandom = function(d){return "establecer player Aleatorio obstáculo"};
+exports.setPlayerRandom = function(d){return "establecer jugador al azar"};
 
-exports.setPlayerFlappy = function(d){return "establecer player Pájaro amarillo"};
+exports.setPlayerFlappy = function(d){return "establecer jugador a Pájaro amarillo"};
 
-exports.setPlayerRedBird = function(d){return "establecer player Pájaro rojo"};
+exports.setPlayerRedBird = function(d){return "establecer jugador a Pájaro rojo"};
 
-exports.setPlayerSciFi = function(d){return "establecer player nave espacial"};
+exports.setPlayerSciFi = function(d){return "establecer jugador a Nave espacial"};
 
-exports.setPlayerUnderwater = function(d){return "establecer player pescado"};
+exports.setPlayerUnderwater = function(d){return "establecer jugador a Pescado"};
 
-exports.setPlayerCave = function(d){return "establecer player Murciélago"};
+exports.setPlayerCave = function(d){return "establecer jugador a Murciélago"};
 
-exports.setPlayerSanta = function(d){return "establecer player Santa"};
+exports.setPlayerSanta = function(d){return "establecer jugador a Santa Claus"};
 
-exports.setPlayerShark = function(d){return "establecer player Tiburón"};
+exports.setPlayerShark = function(d){return "establecer jugador a Tiburón"};
 
-exports.setPlayerEaster = function(d){return "establecer player Conejo de Pascua"};
+exports.setPlayerEaster = function(d){return "establecer jugador a Conejo de Pascua"};
 
-exports.setPlayerBatman = function(d){return "configurar a jugador tipo murciélago"};
+exports.setPlayerBatman = function(d){return "establecer jugador a Chico murciélago"};
 
-exports.setPlayerSubmarine = function(d){return "establecer player Submarino"};
+exports.setPlayerSubmarine = function(d){return "establecer jugador a Submarino"};
 
-exports.setPlayerUnicorn = function(d){return "establecer player Unicornio"};
+exports.setPlayerUnicorn = function(d){return "establecer jugador a Unicornio"};
 
-exports.setPlayerFairy = function(d){return "establecer player Ada"};
+exports.setPlayerFairy = function(d){return "establecer jugador a Hada"};
 
-exports.setPlayerSuperman = function(d){return "establecer player Flappyman"};
+exports.setPlayerSuperman = function(d){return "establecer jugador a Flappyman"};
 
-exports.setPlayerTurkey = function(d){return "sistema reproductor Turco"};
+exports.setPlayerTurkey = function(d){return "establecer jugador a Pavo"};
 
-exports.setPlayerTooltip = function(d){return "Establece la imagen del Player"};
+exports.setPlayerTooltip = function(d){return "Establece la imagen del jugador"};
 
-exports.setScore = function(d){return "Establece el puntaje"};
+exports.setScore = function(d){return "Establece la puntuación"};
 
-exports.setScoreTooltip = function(d){return "Establece el puntaje del jugador"};
+exports.setScoreTooltip = function(d){return "Establece la puntuación del jugador"};
 
 exports.setSpeed = function(d){return "establecer velocidad"};
 
 exports.setSpeedTooltip = function(d){return "Establece la velocidad del nivel"};
 
-exports.shareFlappyTwitter = function(d){return "Mira el juego Flappy que yo hice. lo escribí con @codeorg"};
+exports.shareFlappyTwitter = function(d){return "Mira el juego Flappy que hice. Lo escribí con @codeorg"};
 
 exports.shareGame = function(d){return "Comparte tu juego:"};
 
@@ -9223,25 +9253,25 @@ exports.soundHit = function(d){return "pegar"};
 
 exports.soundPoint = function(d){return "punto"};
 
-exports.soundSwoosh = function(d){return "swoosh"};
+exports.soundSwoosh = function(d){return "silbido"};
 
 exports.soundWing = function(d){return "ala"};
 
-exports.soundJet = function(d){return "jet"};
+exports.soundJet = function(d){return "avión"};
 
 exports.soundCrash = function(d){return "choque"};
 
-exports.soundJingle = function(d){return "tintinear"};
+exports.soundJingle = function(d){return "tintineo"};
 
 exports.soundSplash = function(d){return "salpicar"};
 
-exports.soundLaser = function(d){return "laser"};
+exports.soundLaser = function(d){return "láser"};
 
 exports.speedRandom = function(d){return "establecer velocidad aleatoria"};
 
-exports.speedVerySlow = function(d){return "establecer velocidad muy lento"};
+exports.speedVerySlow = function(d){return "establecer velocidad muy lenta"};
 
-exports.speedSlow = function(d){return "establecer velocidad lento"};
+exports.speedSlow = function(d){return "establecer velocidad lenta"};
 
 exports.speedNormal = function(d){return "establecer velocidad normal"};
 
@@ -9249,25 +9279,25 @@ exports.speedFast = function(d){return "establecer velocidad rápida"};
 
 exports.speedVeryFast = function(d){return "establecer velocidad muy rápida"};
 
-exports.whenClick = function(d){return "Cuando haga click "};
+exports.whenClick = function(d){return "Cuando haga clic"};
 
 exports.whenClickTooltip = function(d){return "Ejecute las siguientes acciones cuando se produce un evento de clic."};
 
-exports.whenCollideGround = function(d){return "Cuando toca el suelo"};
+exports.whenCollideGround = function(d){return "cuando toca el suelo"};
 
 exports.whenCollideGroundTooltip = function(d){return "Ejecute las siguientes acciones cuando Flappy toque el suelo."};
 
 exports.whenCollideObstacle = function(d){return "cuando choca con un obstáculo"};
 
-exports.whenCollideObstacleTooltip = function(d){return "Ejecutar las acciones por debajo cuando Flappy golpea un obstáculo."};
+exports.whenCollideObstacleTooltip = function(d){return "Ejecutar las acciones siguientes cuando Flappy choca con un obstáculo."};
 
-exports.whenEnterObstacle = function(d){return "Cuando pase un obstáculo"};
+exports.whenEnterObstacle = function(d){return "cuando pase un obstáculo"};
 
-exports.whenEnterObstacleTooltip = function(d){return "Ejecute las siguientes acciones cuando Flappy entra un obstáculo."};
+exports.whenEnterObstacleTooltip = function(d){return "Ejecute las acciones siguientes cuando Flappy entra en un obstáculo."};
 
-exports.whenRunButtonClick = function(d){return "Cuando el juego comienza"};
+exports.whenRunButtonClick = function(d){return "cuando el juego comienza"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Ejecutar las acciones indicadas debajo cuando empieza el juego."};
+exports.whenRunButtonClickTooltip = function(d){return "Ejecutar las acciones siguientes cuando empieza el juego."};
 
 exports.yes = function(d){return "Sí"};
 

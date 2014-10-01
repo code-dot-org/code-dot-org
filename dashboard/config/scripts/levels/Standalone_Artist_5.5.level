@@ -14,7 +14,7 @@
     "free_play": "false",
     "start_direction": "90",
     "ideal": "10",
-    "instructions": "Notice how we simplified the diamond code by turning it into a loop. You can still put that inside another loop to draw the flower. Hint: You'll need to turn after your diamond loop so you don't keep drawing over the same diamond."
+    "instructions": "Notice how we simplified the diamond code by turning it into a loop. You can still put that inside another loop to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
   }
 }]]></config>
   <blocks>

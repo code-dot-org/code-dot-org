@@ -21,7 +21,7 @@
   "end":"Ende",
   "emptyBlocksErrorMsg":"Die \"Wiederholen\"- und die \"Wenn\"-Bausteine benötigten im Inneren andere Bausteine um zu funktionieren. Stelle sicher, dass der innere Baustein in den umschließenden Baustein passt.",
   "emptyFunctionBlocksErrorMsg":"Der Funktionsblock muss andere Blöcke beinhalten um zu funktionieren.",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"when run\" block?",
+  "extraTopBlocks":"Du hast die Bausteine entfernt. Wolltest du sie an den \"Wenn ausführen\" Baustein anhängen?",
   "finalStage":"Glückwunsch! Du hast das letzte Level erfolgreich abgeschlossen.",
   "finalStageTrophies":"Glückwunsch! Du hast das letzte Level erfolgreich abgeschlossen und {numTrophies, plural, one {eine Trophäe} other {# Trophäen}} gewonnen.",
   "finish":"Abschließen",

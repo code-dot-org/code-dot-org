@@ -166,6 +166,20 @@ var codeKeyDown = function(e) {
   }
 };
 
+BlocklyApps.toggleRunReset = function(button) {
+  var showRun = (button === 'run');
+  if (button !== 'run' && button !== 'reset') {
+    throw "Unexpected input";
+  }
+
+  var run = document.getElementById('runButton');
+  var reset = document.getElementById('resetButton');
+  run.style.display = showRun ? 'inline-block' : 'none';
+  run.disabled = !showRun;
+  reset.style.display = !showRun ? 'inline-block' : 'none';
+  reset.disabled = showRun;
+};
+
 /**
  * Common startup tasks for all apps.
  */
@@ -177,6 +191,7 @@ BlocklyApps.init = function(config) {
   BlocklyApps.share = config.share;
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
+  BlocklyApps.sendToPhone = config.sendToPhone;
   BlocklyApps.noPadding = config.no_padding;
 
   BlocklyApps.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
@@ -252,8 +267,11 @@ BlocklyApps.init = function(config) {
 
       belowViz.appendChild(feedback.createSharingDiv({
         response: {
-          level_source: window.location
+          level_source: window.location,
+          level_source_id: config.level_source_id,
+          phone_share_url: config.send_to_phone_url
         },
+        sendToPhone: config.sendToPhone,
         twitter: config.twitter
       }));
 
@@ -355,19 +373,26 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
+    BlocklyApps.editor = window.ace.edit('codeTextbox');
+    BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
+    BlocklyApps.editor.setOptions({
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true
+    });
+
     var codeTextbox = document.getElementById('codeTextbox');
+
+    var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
     var codeFunctions = config.level.codeFunctions;
     // Insert hint text from level codeFunctions into editCode area
     if (codeFunctions) {
-      var hintText = "";
+      var hintText = '';
       for (var i = 0; i < codeFunctions.length; i++) {
-        hintText = hintText + " " + codeFunctions[i].func + "();";
+        hintText += " " + codeFunctions[i].func + "();";
       }
-      var html = utils.escapeHtml(msg.typeFuncs()).replace('%1', hintText);
-      codeTextbox.innerHTML += '// ' + html + '<br><br><br>';
+      startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
     }
-    // Needed to prevent blockly from swallowing up the backspace key
-    codeTextbox.addEventListener('keydown', codeKeyDown, true);
+    BlocklyApps.editor.setValue(startText);
   }
 
   BlocklyApps.Dialog = config.Dialog;
@@ -486,6 +511,7 @@ BlocklyApps.init = function(config) {
   }
 
   if (config.level.editCode) {
+    // Swap the visibility of the codeText element and the blocklyDiv
     document.getElementById('codeTextbox').style.display = 'block';
     div.style.display = 'none';
   }
@@ -854,6 +880,7 @@ BlocklyApps.displayFeedback = function(options) {
   options.Dialog = BlocklyApps.Dialog;
   options.onContinue = onContinue;
   options.backToPreviousLevel = backToPreviousLevel;
+  options.sendToPhone = BlocklyApps.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
@@ -909,8 +936,7 @@ BlocklyApps.report = function(options) {
  */
 BlocklyApps.resetButtonClick = function() {
   onResetPressed();
-  document.getElementById('runButton').style.display = 'inline-block';
-  document.getElementById('resetButton').style.display = 'none';
+  BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
   Blockly.mainWorkspace.setEnableToolbox(true);
   Blockly.mainWorkspace.traceOn(false);
@@ -2911,8 +2937,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -4678,7 +4703,6 @@ exports.createSharingDiv = function(options) {
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
-    options.sendToPhone = true;
   }
 
   var sharingDiv = document.createElement('div');
@@ -4697,17 +4721,22 @@ exports.createSharingDiv = function(options) {
 
 //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
-  if (sharingPhone) {
+  if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
         sendToPhone.setAttribute('style', 'display:inline-block');
-        var phone = $("#phone");
-        phone.mask("(999) 999-9999");
-        phone.focus();
+        var phone = $(sharingDiv.querySelector("#phone"));
+        var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
+        submitButton.disabled = true;
+        phone.mask('(000) 000-0000',{
+            onComplete:function(){if(!submitted) submitButton.disabled=false;},
+            onChange: function(){submitButton.disabled=true;}
+        });
+        phone.focus();
         dom.addClickTouchEvent(submitButton, function() {
-          var phone = $("#phone");
+          var phone = $(sharingDiv.querySelector("#phone"));
           var params = jQuery.param({
             level_source: options.response.level_source_id,
             phone: phone.val()
@@ -4715,6 +4744,7 @@ exports.createSharingDiv = function(options) {
           $(submitButton).val("Sending..");
           phone.prop('readonly', true);
           submitButton.disabled = true;
+          submitted = true;
           jQuery.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text("Sent!");
@@ -10938,7 +10968,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/sk_sk/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n    // ', escape((37,  msg.typeCode() )), '\n    <br>\n    // ', escape((39,  msg.typeHint() )), '\n    <br>\n  </div>\n');42; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (46,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((52,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((53,  msg.runProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((57,  msg.resetProgram() )), '</div>\n        <img src="', escape((58,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');60; if (data.controls) { ; buf.push('\n      ', (61,  data.controls ), '\n      ');62; } ; buf.push('\n      ');63; if (data.extraControlRows) { ; buf.push('\n      ', (64,  data.extraControlRows ), '\n      ');65; } ; buf.push('\n    </div>\n\n    ');68; instructions() ; buf.push('\n    ');69; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((75,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((76,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((78,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((80,  data.blockCounterClass )), '>\n          ', escape((81,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((84,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((87,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');93; codeArea() ; buf.push('\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n  </div>\n');38; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (42,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((48,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((49,  msg.runProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((53,  msg.resetProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');56; if (data.controls) { ; buf.push('\n      ', (57,  data.controls ), '\n      ');58; } ; buf.push('\n      ');59; if (data.extraControlRows) { ; buf.push('\n      ', (60,  data.extraControlRows ), '\n      ');61; } ; buf.push('\n    </div>\n\n    ');64; instructions() ; buf.push('\n    ');65; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');89; codeArea() ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -11201,9 +11231,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sk = function 
   }
   return 'other';
 };
-exports.bounceBall = function(d){return "bounce ball"};
+exports.bounceBall = function(d){return "odraziť loptu"};
 
-exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
+exports.bounceBallTooltip = function(d){return "Odraziť loptu od predmetu."};
 
 exports.continue = function(d){return "Pokračovať"};
 
@@ -11229,47 +11259,47 @@ exports.ifPathAhead = function(d){return "ak je cesta vpred"};
 
 exports.ifTooltip = function(d){return "Ak sa tam nachádza cesta v určenom smere, sprav niektoré opatrenia."};
 
-exports.ifelseTooltip = function(d){return "Ak je tam cesta v určenom smere, potom urob prvý blok akcií. V opačnom prípade urob druhý blok akcií."};
+exports.ifelseTooltip = function(d){return "Ak je v určenom smere cesta, potom vykonaj prvý blok akcií. V opačnom prípade vykonaj druhý blok akcií."};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "pridať bod súperovi"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
+exports.incrementOpponentScoreTooltip = function(d){return "Pridá bod ku skóre súpera."};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "Pridať bod"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
+exports.incrementPlayerScoreTooltip = function(d){return "Pridá bod k aktuálnemu skóre hráča."};
 
-exports.isWall = function(d){return "is this a wall"};
+exports.isWall = function(d){return "je toto stena"};
 
-exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
+exports.isWallTooltip = function(d){return "Vráti true, ak je tu stena"};
 
-exports.launchBall = function(d){return "launch new ball"};
+exports.launchBall = function(d){return "pridať novú loptu"};
 
-exports.launchBallTooltip = function(d){return "Launch a ball into play."};
+exports.launchBallTooltip = function(d){return "Pridá loptu do hry."};
 
-exports.makeYourOwn = function(d){return "Make Your Own Bounce Game"};
+exports.makeYourOwn = function(d){return "Vytvor svoju vlastnú odrážaciu hru"};
 
 exports.moveDown = function(d){return "posunúť nadol"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Posuň pálku nahor."};
 
 exports.moveForward = function(d){return "posunúť dopredu"};
 
-exports.moveForwardTooltip = function(d){return "Presunúť ma jedno pole dopredu."};
+exports.moveForwardTooltip = function(d){return "Presunúť ma jedno pole vpred."};
 
 exports.moveLeft = function(d){return "posunúť doľava"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Posuň pálku doľava."};
 
 exports.moveRight = function(d){return "posunúť doprava"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Posuň pálku doprava."};
 
 exports.moveUp = function(d){return "posunúť nahor"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Posuň pálku nahor."};
 
-exports.nextLevel = function(d){return "Gratulujem! Vyriešili ste puzzle."};
+exports.nextLevel = function(d){return "Gratulujem! Tento hlavolam je vyriešený."};
 
 exports.no = function(d){return "Nie"};
 
@@ -11279,7 +11309,7 @@ exports.noPathLeft = function(d){return "žiadna cesta vľavo"};
 
 exports.noPathRight = function(d){return "žiadna cesta vpravo"};
 
-exports.numBlocksNeeded = function(d){return "Toto puzzle môže byť vyriešená s %1 blokmi."};
+exports.numBlocksNeeded = function(d){return "Tento hlavolam môže byť vyriešený s %1 blokmi."};
 
 exports.pathAhead = function(d){return "cesta vpred"};
 
@@ -11289,35 +11319,35 @@ exports.pathRight = function(d){return "ak je cesta vpravo"};
 
 exports.pilePresent = function(d){return "tu je hromada"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "prehraj chrumkavý zvuk"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "prehraj zvuk gól 1"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "prehraj zvuk gól 2"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "prehraj zvuk úderu"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "prehraj zvuk straty bodu"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "prehraj zvuk straty bodu 2"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "prehraj retro zvuk"};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "prehraj gumený zvuk"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "prehraj zvuk plesknutia"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Prehrá vybraný zvuk."};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "prehraj so zvukom bodu"};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "prehraj so zvukom bodu 2"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "prehraj drevený zvuk"};
 
-exports.putdownTower = function(d){return "daj dole vežu"};
+exports.putdownTower = function(d){return "polož vežu"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your game."};
+exports.reinfFeedbackMsg = function(d){return "Pre návrat k svojej hre môžeš stlačiť tlačidlo \"Skús to znova\"."};
 
 exports.removeSquare = function(d){return "odstrániť štvorec"};
 
@@ -11327,23 +11357,23 @@ exports.repeatUntilBlocked = function(d){return "pokiaľ je cesta vpred"};
 
 exports.repeatUntilFinish = function(d){return "opakovať do konca"};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Skóre: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
-exports.setBackgroundRandom = function(d){return "set random scene"};
+exports.setBackgroundRandom = function(d){return "nastav náhodné pozadie"};
 
-exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
+exports.setBackgroundHardcourt = function(d){return "nastav kurt na pozadie"};
 
-exports.setBackgroundRetro = function(d){return "set retro scene"};
+exports.setBackgroundRetro = function(d){return "nastaviť retro scénu"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "Nastaví obrázok pozadia"};
 
-exports.setBallRandom = function(d){return "set random ball"};
+exports.setBallRandom = function(d){return "nastaviť náhodnú loptu"};
 
-exports.setBallHardcourt = function(d){return "set hardcourt ball"};
+exports.setBallHardcourt = function(d){return "nastaviť loptu pre tvrdý povrch"};
 
-exports.setBallRetro = function(d){return "set retro ball"};
+exports.setBallRetro = function(d){return "nastaviť retro loptu"};
 
-exports.setBallTooltip = function(d){return "Sets the ball image"};
+exports.setBallTooltip = function(d){return "Nastaví obraz lopty"};
 
 exports.setBallSpeedRandom = function(d){return "nastaviť náhodnú rýchlosť lopty"};
 
@@ -11359,29 +11389,29 @@ exports.setBallSpeedVeryFast = function(d){return "nastaviť veľmi veľkú rýc
 
 exports.setBallSpeedTooltip = function(d){return "nastaviť rýchlosť lopty"};
 
-exports.setPaddleRandom = function(d){return "set random paddle"};
+exports.setPaddleRandom = function(d){return "nastaviť náhodné pádlo"};
 
-exports.setPaddleHardcourt = function(d){return "set hardcourt paddle"};
+exports.setPaddleHardcourt = function(d){return "nastaviť pádlo pre tvrdý povrch"};
 
-exports.setPaddleRetro = function(d){return "set retro paddle"};
+exports.setPaddleRetro = function(d){return "nastaviť retro pádlo"};
 
-exports.setPaddleTooltip = function(d){return "Sets the ball paddle"};
+exports.setPaddleTooltip = function(d){return "Nastaví obraz pádla"};
 
-exports.setPaddleSpeedRandom = function(d){return "set random paddle speed"};
+exports.setPaddleSpeedRandom = function(d){return "nastaviť náhodnú rýchlosť pádla"};
 
-exports.setPaddleSpeedVerySlow = function(d){return "set very slow paddle speed"};
+exports.setPaddleSpeedVerySlow = function(d){return "nastaviť veľmi pomalú rýchlosť pádla"};
 
-exports.setPaddleSpeedSlow = function(d){return "set slow paddle speed"};
+exports.setPaddleSpeedSlow = function(d){return "nastaviť pomalú rýchlosť pádla"};
 
-exports.setPaddleSpeedNormal = function(d){return "set normal paddle speed"};
+exports.setPaddleSpeedNormal = function(d){return "nastaviť normálnu rýchlosť pádla"};
 
-exports.setPaddleSpeedFast = function(d){return "set fast paddle speed"};
+exports.setPaddleSpeedFast = function(d){return "nastaviť rýchlu rýchlosť pádla"};
 
-exports.setPaddleSpeedVeryFast = function(d){return "set very fast paddle speed"};
+exports.setPaddleSpeedVeryFast = function(d){return "nastaviť veľmi rýchlu rýchlosť pádla"};
 
-exports.setPaddleSpeedTooltip = function(d){return "Sets the speed of the paddle"};
+exports.setPaddleSpeedTooltip = function(d){return "Nastaví rýchlosť pádla"};
 
-exports.shareBounceTwitter = function(d){return "Check out the Bounce game I made. I wrote it myself with @codeorg"};
+exports.shareBounceTwitter = function(d){return "Pozrite sa na Bounce hru, čo som urobil. Napísal som to sám s @codeorg"};
 
 exports.shareGame = function(d){return "Zdieľaj svoju hru:"};
 
@@ -11389,47 +11419,47 @@ exports.turnLeft = function(d){return "otočiť vľavo"};
 
 exports.turnRight = function(d){return "otočiť vpravo"};
 
-exports.turnTooltip = function(d){return "Obráť sa doľava alebo doprava o 90 stupňov."};
+exports.turnTooltip = function(d){return "Obráti ma doľava alebo doprava o 90 stupňov."};
 
-exports.whenBallInGoal = function(d){return "when ball in goal"};
+exports.whenBallInGoal = function(d){return "keď loptu je v bránke"};
 
-exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
+exports.whenBallInGoalTooltip = function(d){return "Vykonaj akciu nižšie, keď lopta je v bránke."};
 
-exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
+exports.whenBallMissesPaddle = function(d){return "keď lopta netrafí pádlo"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
+exports.whenBallMissesPaddleTooltip = function(d){return "Vykonať akcie nižšie keď lopta netrafí pádlo."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "keď šípka nadol"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Vykonať akcie nižšie pri stlačení šípky dole."};
 
 exports.whenGameStarts = function(d){return "keď začne hra"};
 
 exports.whenGameStartsTooltip = function(d){return "Vykonať akcie, keď začne hra."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "keď šípka vľavo"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Vykonať akcie nižšie pri stlačení šípky vľavo."};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "keď lopta trafí pádlo"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "Vykonať akcie nižšie, keď lopta sa trafí pádlo."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "keď šípka vpravo"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Vykonať akcie nižšie pri stlačení šípky vpravo."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "keď šípka nahor"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Vykonať akcie nižšie pri stlačení šípky hore."};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "keď lopta narazí do steny"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "Vykonať akcie nižšie keď lopta trafí stenu."};
 
 exports.whileMsg = function(d){return "pokiaľ"};
 
-exports.whileTooltip = function(d){return "Opakujte uzavreté činnosti dokým dosiahnete cieľový bod."};
+exports.whileTooltip = function(d){return "Opakujte priložené činnosti dokým dosiahnete cieľový bod."};
 
 exports.yes = function(d){return "Áno"};
 
@@ -11482,21 +11512,21 @@ exports.directionEastLetter = function(d){return "V"};
 
 exports.directionWestLetter = function(d){return "Z"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "koniec"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"Repeat\", alebo \"If\" bloky musia obsahovať ďalšie bloky vo vnútri aby pracovali. Uistite sa, že vnútorný blok sedí správne vo vnútri týchto blokov."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkčný blok musí obsahovať ďalšie bloky vovnútri aby pracoval správne."};
 
-exports.extraTopBlocks = function(d){return "Máte ďalšie extra bloky, ktoré nie sú pripojené k blokom udalostí."};
+exports.extraTopBlocks = function(d){return "Máte nepriradené bloky. Chceli ste ich pripojiť k bloku \"pri spustení\"?"};
 
 exports.finalStage = function(d){return "Gratulujem! Dokončili ste poslednú úroveň."};
 
 exports.finalStageTrophies = function(d){return "Gratulujem! Dokončili ste poslednú úroveň a vyhrali "+p(d,"numTrophies",0,"sk",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Dokončiť"};
 
-exports.generatedCodeInfo = function(d){return "Bloky pre Váš program môžu byť tiež vyjadrené v JavaScript-e, svetovo najviac rozšírenom programovacom jazyku:"};
+exports.generatedCodeInfo = function(d){return "Dokonca aj popredné univerzity učia programovanie založené na blokoch  (napríklad "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale v skutočnosti  bloky ktoré ste vytvorili môžu byť tiež zobrazené v jazyku JavaScript, svetovo najpoužívanejšom programovacom jazyku:"};
 
 exports.hashError = function(d){return "Prepáčte, '%1' nezodpovedá žiadnemu uloženému programu."};
 
@@ -11518,9 +11548,9 @@ exports.nextLevel = function(d){return "Gratulujem! Dokončili ste úlohu "+v(d,
 
 exports.nextLevelTrophies = function(d){return "Gratulujem! Dokončili ste úlohu "+v(d,"puzzleNumber")+" a vyhrali "+p(d,"numTrophies",0,"sk",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
 
-exports.nextStage = function(d){return "Gratulujem! Dokončili ste úroveň "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Blahoželám! Dokončili ste "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Gratulujem! Dokončili ste úroveň "+v(d,"stageNumber")+" a vyhrali "+p(d,"numTrophies",0,"sk",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
+exports.nextStageTrophies = function(d){return "Blahoželám! Dokončili ste "+v(d,"stageName")+" a vyhrali "+p(d,"numTrophies",0,"sk",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Gratulujem! Dokončili ste úlohu "+v(d,"puzzleNumber")+". (Avšak, mohli ste použiť iba "+p(d,"numBlocks",0,"sk",{"one":"1 blok","other":n(d,"numBlocks")+" blokov"})+".)"};
 
@@ -11534,7 +11564,7 @@ exports.repeat = function(d){return "opakovať"};
 
 exports.resetProgram = function(d){return "Obnoviť"};
 
-exports.runProgram = function(d){return "Spustiť program"};
+exports.runProgram = function(d){return "Spustiť"};
 
 exports.runTooltip = function(d){return "Spustiť program definovaný blokmi v pracovnom priestore."};
 
@@ -11548,7 +11578,7 @@ exports.subtitle = function(d){return "vizuálne programovacie prostredie"};
 
 exports.textVariable = function(d){return "text"};
 
-exports.tooFewBlocksMsg = function(d){return "Používate všetky potrebné typy blokov, ale pokúste sa použiť viac týchto typov na dokončenie tejto úlohy."};
+exports.tooFewBlocksMsg = function(d){return "Používate všetky potrebné typy blokov, ale pokúste sa použiť viac typov týchto blokov na dokončenie tejto úlohy."};
 
 exports.tooManyBlocksMsg = function(d){return "Táto úloha môže byť vyriešená s <x id='START_SPAN'/><x id='END_SPAN'/> blokmi."};
 
@@ -11560,15 +11590,15 @@ exports.openWorkspace = function(d){return "Ako to funguje"};
 
 exports.totalNumLinesOfCodeWritten = function(d){return "Celkovo: "+p(d,"numLines",0,"sk",{"one":"1 riadok","other":n(d,"numLines")+" riadkov"})+" kódu."};
 
-exports.tryAgain = function(d){return "skús znova"};
+exports.tryAgain = function(d){return "Skúsiť znova"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Pozri nápovedu"};
 
-exports.backToPreviousLevel = function(d){return "Späť na predchádzajúcu úlohu"};
+exports.backToPreviousLevel = function(d){return "Späť na predchádzajúcu úroveň"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Uložiť do svojej galérie"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Uložené do tvojej galérie!"};
 
 exports.typeCode = function(d){return "Napíšte Váš JavaScript kód pod tieto pokyny."};
 
@@ -11586,19 +11616,19 @@ exports.orientationLock = function(d){return "Vypnite zámok orientácie v nasta
 
 exports.wantToLearn = function(d){return "Chcete sa naučiť programovať?"};
 
-exports.watchVideo = function(d){return "Pozrieť video"};
+exports.watchVideo = function(d){return "Pozrite si video"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "keď"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "pri spustení"};
 
 exports.tryHOC = function(d){return "Vyskúšajte hodinu kódovania"};
 
 exports.signup = function(d){return "Prihlásiť sa na úvodný kurz"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Tu je rada:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Pozrite ako to dopadlo a pokúste sa opraviť váš program."};
 
 
 },{"messageformat":51}],40:[function(require,module,exports){

@@ -71,7 +71,7 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
       2-3 Big Event Match 1:
-        Matching: Associare
+        Matching: Corrispondenza
         "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
@@ -82,10 +82,10 @@
         "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
       2-3 Binary Match 1:
-        Matching: Associare
+        Matching: Corrispondenza
         "/script_assets/2-3_images/unplugged/binary_1_q.png, 250": "/script_assets/2-3_images/unplugged/binary_1_q.png,
           250"
-        Use the key to mach each code to its letter: Utilizza la chiave per collegare
+        Use the key to mach each code to its letter: Utilizza la chiave per associare
           ogni codice alla sua lettera
         "<strong>N</strong>": "<strong>N</strong>"
         "<strong>O</strong>": "<strong>N</strong>"
@@ -96,8 +96,8 @@
         "/script_assets/2-3_images/unplugged/binary_1_a2.png": "/script_assets/2-3_images/unplugged/binary_1_a2.png"
         "/script_assets/2-3_images/unplugged/binary_1_a4.png": "/script_assets/2-3_images/unplugged/binary_1_a4.png"
       2-3 Graph Paper Match 1:
-        Matching: Associazione
-        Match the grid to the program: Abbina la griglia al programma
+        Matching: Corrispondenza
+        Match the grid to the program: Associa la griglia al programma
         "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
@@ -105,8 +105,8 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
       2-3 Relay Programming Match 1:
-        Matching: Associazione
-        Match the grid to the program: Abbina la griglia al programma
+        Matching: Corrispondenza
+        Match the grid to the program: Associa la griglia al programma
         "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
@@ -125,6 +125,23 @@
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
+      4-5 Computational Thinking Match 1:
+        Matching: Corrispondenza
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Ognuno
+          di questi veicoli è stato decomposto in parti più piccole. Abbinare ogni
+          veicolo con il corretto elenco di parti.
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Ruote per lato: 2<br/>Finestre
+          per lato: 0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Ruote per lato: 2<br/>Finestre
+          per lato: 1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Ruote per lato: 2<br/>Finestre
+          per lato: 6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Ruote per lato: 3<br/>Finestre
+          per lato: 2</h3>"
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
       K-1 Artist 2 Match 1:
         Matching: Corrispondenza
         Is the square next to, above, or below the ball?: Il quadrato si trova vicino
@@ -158,7 +175,7 @@
         "/script_assets/k_1_images/artist_images/small_rectangle2.png": "/script_assets/k_1_images/artist_images/small_rectangle2.png"
         "/script_assets/k_1_images/artist_images/large_triangle2.png": "/script_assets/k_1_images/artist_images/large_triangle2.png"
       K-1 Artist Loops Match 1:
-        Matching: Associazione
+        Matching: Corrispondenza
         Match the code to the stairs it draws.: Associa il codice alle scale che disegna.
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png"
@@ -201,7 +218,7 @@
         "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
         "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
       K-1 Big Event Match 1:
-        Matching: Associare
+        Matching: Corrispondenza
         "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
@@ -210,8 +227,8 @@
         "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
       K-1 Happy Maps Match 1:
-        Matching: Associare
-        Match the Map to the arrow that gets the Flurb to the treasure: Abbina la
+        Matching: Corrispondenza
+        Match the Map to the arrow that gets the Flurb to the treasure: Associa la
           mappa alla freccia che porta il Flurb al tesoro
         "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png"
         "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png"
@@ -220,8 +237,8 @@
         "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
         "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
       K-1 Move It Match 1:
-        Matching: Associare
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Abbina
+        Matching: Corrispondenza
+        Match the Map to the algorithm that gets the Flurb to the flowers.: Associa
           la mappa all'algoritmo che porta il Flurb ai fiori.
         "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png"
         "/script_assets/k_1_images/unplugged_images/move_it_2_q2.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q2.png"
@@ -291,7 +308,7 @@
       parts of contract:
         Parts of a Contract: Parti di un contratto
         Here is a contract for a new function. Match each item with the word that describes it.: Qui
-          c'è un contratto per una nuova funzione. Abbina ogni elemento con la parola
+          c'è un contratto per una nuova funzione. Associa ogni elemento con la parola
           che lo descrive.
         yearbook-picture: foto-annuario
         string numer: stringa numero

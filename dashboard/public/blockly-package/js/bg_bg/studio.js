@@ -166,6 +166,20 @@ var codeKeyDown = function(e) {
   }
 };
 
+BlocklyApps.toggleRunReset = function(button) {
+  var showRun = (button === 'run');
+  if (button !== 'run' && button !== 'reset') {
+    throw "Unexpected input";
+  }
+
+  var run = document.getElementById('runButton');
+  var reset = document.getElementById('resetButton');
+  run.style.display = showRun ? 'inline-block' : 'none';
+  run.disabled = !showRun;
+  reset.style.display = !showRun ? 'inline-block' : 'none';
+  reset.disabled = showRun;
+};
+
 /**
  * Common startup tasks for all apps.
  */
@@ -177,6 +191,7 @@ BlocklyApps.init = function(config) {
   BlocklyApps.share = config.share;
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
+  BlocklyApps.sendToPhone = config.sendToPhone;
   BlocklyApps.noPadding = config.no_padding;
 
   BlocklyApps.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
@@ -252,8 +267,11 @@ BlocklyApps.init = function(config) {
 
       belowViz.appendChild(feedback.createSharingDiv({
         response: {
-          level_source: window.location
+          level_source: window.location,
+          level_source_id: config.level_source_id,
+          phone_share_url: config.send_to_phone_url
         },
+        sendToPhone: config.sendToPhone,
         twitter: config.twitter
       }));
 
@@ -355,19 +373,26 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
+    BlocklyApps.editor = window.ace.edit('codeTextbox');
+    BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
+    BlocklyApps.editor.setOptions({
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true
+    });
+
     var codeTextbox = document.getElementById('codeTextbox');
+
+    var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
     var codeFunctions = config.level.codeFunctions;
     // Insert hint text from level codeFunctions into editCode area
     if (codeFunctions) {
-      var hintText = "";
+      var hintText = '';
       for (var i = 0; i < codeFunctions.length; i++) {
-        hintText = hintText + " " + codeFunctions[i].func + "();";
+        hintText += " " + codeFunctions[i].func + "();";
       }
-      var html = utils.escapeHtml(msg.typeFuncs()).replace('%1', hintText);
-      codeTextbox.innerHTML += '// ' + html + '<br><br><br>';
+      startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
     }
-    // Needed to prevent blockly from swallowing up the backspace key
-    codeTextbox.addEventListener('keydown', codeKeyDown, true);
+    BlocklyApps.editor.setValue(startText);
   }
 
   BlocklyApps.Dialog = config.Dialog;
@@ -486,6 +511,7 @@ BlocklyApps.init = function(config) {
   }
 
   if (config.level.editCode) {
+    // Swap the visibility of the codeText element and the blocklyDiv
     document.getElementById('codeTextbox').style.display = 'block';
     div.style.display = 'none';
   }
@@ -854,6 +880,7 @@ BlocklyApps.displayFeedback = function(options) {
   options.Dialog = BlocklyApps.Dialog;
   options.onContinue = onContinue;
   options.backToPreviousLevel = backToPreviousLevel;
+  options.sendToPhone = BlocklyApps.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
@@ -909,8 +936,7 @@ BlocklyApps.report = function(options) {
  */
 BlocklyApps.resetButtonClick = function() {
   onResetPressed();
-  document.getElementById('runButton').style.display = 'inline-block';
-  document.getElementById('resetButton').style.display = 'none';
+  BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
   Blockly.mainWorkspace.setEnableToolbox(true);
   Blockly.mainWorkspace.traceOn(false);
@@ -1956,7 +1982,6 @@ exports.createSharingDiv = function(options) {
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
-    options.sendToPhone = true;
   }
 
   var sharingDiv = document.createElement('div');
@@ -1975,17 +2000,22 @@ exports.createSharingDiv = function(options) {
 
 //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
-  if (sharingPhone) {
+  if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
         sendToPhone.setAttribute('style', 'display:inline-block');
-        var phone = $("#phone");
-        phone.mask("(999) 999-9999");
-        phone.focus();
+        var phone = $(sharingDiv.querySelector("#phone"));
+        var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
+        submitButton.disabled = true;
+        phone.mask('(000) 000-0000',{
+            onComplete:function(){if(!submitted) submitButton.disabled=false;},
+            onChange: function(){submitButton.disabled=true;}
+        });
+        phone.focus();
         dom.addClickTouchEvent(submitButton, function() {
-          var phone = $("#phone");
+          var phone = $(sharingDiv.querySelector("#phone"));
           var params = jQuery.param({
             level_source: options.response.level_source_id,
             phone: phone.val()
@@ -1993,6 +2023,7 @@ exports.createSharingDiv = function(options) {
           $(submitButton).val("Sending..");
           phone.prop('readonly', true);
           submitButton.disabled = true;
+          submitted = true;
           jQuery.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text("Sent!");
@@ -12392,8 +12423,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -13982,7 +14012,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/bg_bg/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n    // ', escape((37,  msg.typeCode() )), '\n    <br>\n    // ', escape((39,  msg.typeHint() )), '\n    <br>\n  </div>\n');42; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (46,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((52,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((53,  msg.runProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((57,  msg.resetProgram() )), '</div>\n        <img src="', escape((58,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');60; if (data.controls) { ; buf.push('\n      ', (61,  data.controls ), '\n      ');62; } ; buf.push('\n      ');63; if (data.extraControlRows) { ; buf.push('\n      ', (64,  data.extraControlRows ), '\n      ');65; } ; buf.push('\n    </div>\n\n    ');68; instructions() ; buf.push('\n    ');69; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((75,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((76,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((78,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((80,  data.blockCounterClass )), '>\n          ', escape((81,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((84,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((87,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');93; codeArea() ; buf.push('\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n  </div>\n');38; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (42,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((48,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((49,  msg.runProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((53,  msg.resetProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');56; if (data.controls) { ; buf.push('\n      ', (57,  data.controls ), '\n      ');58; } ; buf.push('\n      ');59; if (data.extraControlRows) { ; buf.push('\n      ', (60,  data.extraControlRows ), '\n      ');61; } ; buf.push('\n    </div>\n\n    ');64; instructions() ; buf.push('\n    ');65; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');89; codeArea() ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -14263,7 +14293,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Блоковете за пов
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Блокът за функция трябва да има други блокове вътре в себе си, за да работи."};
 
-exports.extraTopBlocks = function(d){return "Имате допълнителни блокчета, които не са били използвани в събитийния блок."};
+exports.extraTopBlocks = function(d){return "Имате не закачени блокове. Искате ли да кажеш да ги закачите към блокът \"при стартиране\" ?"};
 
 exports.finalStage = function(d){return "Поздравления! Вие завършихте последния етап."};
 
@@ -14434,13 +14464,13 @@ exports.makeProjectileRedHearts = function(d){return "направи черве�
 
 exports.makeProjectileTooltip = function(d){return "Прави снаряд, който се блъска, изчезва или скача."};
 
-exports.makeYourOwn = function(d){return "Създайте своя собствена история"};
+exports.makeYourOwn = function(d){return "Направете свое собствено \"Театрална лаборатория\" приложение"};
 
 exports.moveDirectionDown = function(d){return "надолу"};
 
-exports.moveDirectionLeft = function(d){return "ляво"};
+exports.moveDirectionLeft = function(d){return "наляво"};
 
-exports.moveDirectionRight = function(d){return "дясно"};
+exports.moveDirectionRight = function(d){return "надясно"};
 
 exports.moveDirectionUp = function(d){return "нагоре"};
 
@@ -14462,25 +14492,25 @@ exports.moveDistanceRandom = function(d){return "случаен брой пик�
 
 exports.moveDistanceTooltip = function(d){return "Премества актьорът на определена дистанция в определената посока."};
 
-exports.moveSprite = function(d){return "Премести"};
+exports.moveSprite = function(d){return "премести"};
 
-exports.moveSpriteN = function(d){return "Премести актьор "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "премести актьор "+v(d,"spriteIndex")};
 
-exports.moveDown = function(d){return "Премести надолу"};
+exports.moveDown = function(d){return "премести надолу"};
 
-exports.moveDownTooltip = function(d){return "Премести актьор надолу."};
+exports.moveDownTooltip = function(d){return "Премести актьора надолу."};
 
-exports.moveLeft = function(d){return "движение наляво"};
+exports.moveLeft = function(d){return "премести наляво"};
 
-exports.moveLeftTooltip = function(d){return "Преместване на актьора вляво."};
+exports.moveLeftTooltip = function(d){return "Преместване на актьора наляво."};
 
-exports.moveRight = function(d){return "Преместване надясно"};
+exports.moveRight = function(d){return "премести надясно"};
 
-exports.moveRightTooltip = function(d){return "Преместване на актьора вдясно."};
+exports.moveRightTooltip = function(d){return "Преместване на актьора надясно."};
 
-exports.moveUp = function(d){return "Премести нагоре"};
+exports.moveUp = function(d){return "премести нагоре"};
 
-exports.moveUpTooltip = function(d){return "Премества актьорът нагоре."};
+exports.moveUpTooltip = function(d){return "Премества актьор нагоре."};
 
 exports.moveTooltip = function(d){return "Преместване на актьор."};
 
@@ -14494,11 +14524,11 @@ exports.ouchExclamation = function(d){return "Ох!"};
 
 exports.playSoundCrunch = function(d){return "възпроизвежда звук на болка"};
 
-exports.playSoundGoal1 = function(d){return "възпроизвежда звук  1 гол"};
+exports.playSoundGoal1 = function(d){return "възпроизвежда звук 1 за гол"};
 
-exports.playSoundGoal2 = function(d){return "възпроизвежда звук  2 гол"};
+exports.playSoundGoal2 = function(d){return "възпроизвежда звук 2 за гол"};
 
-exports.playSoundHit = function(d){return "възпроизвежда звук за игра"};
+exports.playSoundHit = function(d){return "възпроизвежда звук на удар"};
 
 exports.playSoundLosePoint = function(d){return "възпроизвежда звук за загуба на точка"};
 
@@ -14512,15 +14542,15 @@ exports.playSoundSlap = function(d){return "възпроизвежда звук 
 
 exports.playSoundTooltip = function(d){return "Възпроизвежда избраният звук."};
 
-exports.playSoundWinPoint = function(d){return "възпроизвежда звук на победа точка"};
+exports.playSoundWinPoint = function(d){return "възпроизвежда звук на победна точка"};
 
-exports.playSoundWinPoint2 = function(d){return "възпроизвежда звук 2 на победа точка"};
+exports.playSoundWinPoint2 = function(d){return "възпроизвежда звук 2 на победна точка"};
 
 exports.playSoundWood = function(d){return "възпроизвежда звук от дърво"};
 
-exports.positionOutTopLeft = function(d){return "на позиция горе вляво"};
+exports.positionOutTopLeft = function(d){return "в позиция горе вляво"};
 
-exports.positionOutTopRight = function(d){return "към позиция горе вдясно"};
+exports.positionOutTopRight = function(d){return "в позиция горе вдясно"};
 
 exports.positionTopOutLeft = function(d){return "горе извън лявата позиция"};
 
@@ -14532,7 +14562,7 @@ exports.positionTopRight = function(d){return "към позиция горе в
 
 exports.positionTopOutRight = function(d){return "горе извън дясната позиция"};
 
-exports.positionMiddleLeft = function(d){return "към положение ляв център"};
+exports.positionMiddleLeft = function(d){return "в позиция ляв център"};
 
 exports.positionMiddleCenter = function(d){return "в позиция център"};
 
@@ -14540,7 +14570,7 @@ exports.positionMiddleRight = function(d){return "в позиция десен �
 
 exports.positionBottomOutLeft = function(d){return "надолу извън лявата позиция"};
 
-exports.positionBottomLeft = function(d){return "в позиция долен ляв"};
+exports.positionBottomLeft = function(d){return "в позиция долен ляв ъгъл"};
 
 exports.positionBottomCenter = function(d){return "в позиция долен център"};
 
@@ -14600,19 +14630,19 @@ exports.setBackgroundNight = function(d){return "задава фон нощ"};
 
 exports.setBackgroundUnderwater = function(d){return "задава подводен фон"};
 
-exports.setBackgroundCity = function(d){return "Задаване на фон град"};
+exports.setBackgroundCity = function(d){return "задаване на фон град"};
 
-exports.setBackgroundDesert = function(d){return "Задаване на фон пустиня"};
+exports.setBackgroundDesert = function(d){return "задаване на фон пустиня"};
 
-exports.setBackgroundRainbow = function(d){return "Задаване на фон дъга"};
+exports.setBackgroundRainbow = function(d){return "задаване на фон дъга"};
 
-exports.setBackgroundSoccer = function(d){return "Задаване на фон стадион"};
+exports.setBackgroundSoccer = function(d){return "задава на фон стадион"};
 
-exports.setBackgroundSpace = function(d){return "Задаване на фон космос"};
+exports.setBackgroundSpace = function(d){return "задаване на фон космос"};
 
-exports.setBackgroundTennis = function(d){return "задаване на фон тенискорт"};
+exports.setBackgroundTennis = function(d){return "задава фон тенискорт"};
 
-exports.setBackgroundWinter = function(d){return "задаване на фон зима"};
+exports.setBackgroundWinter = function(d){return "задава фон зима"};
 
 exports.setBackgroundTooltip = function(d){return "Задаване на фоновото изображение"};
 
@@ -14620,15 +14650,15 @@ exports.setScoreText = function(d){return "поставя резултат"};
 
 exports.setScoreTextTooltip = function(d){return "Задава текстът да се показва в областта на резултата."};
 
-exports.setSpriteEmotionAngry = function(d){return "ядосано настроение"};
+exports.setSpriteEmotionAngry = function(d){return "с ядосано настроение"};
 
 exports.setSpriteEmotionHappy = function(d){return "с весело настроение"};
 
-exports.setSpriteEmotionNormal = function(d){return "за нормалното настроение"};
+exports.setSpriteEmotionNormal = function(d){return "с нормално настроение"};
 
-exports.setSpriteEmotionRandom = function(d){return "за случайно настроение"};
+exports.setSpriteEmotionRandom = function(d){return "със случайно настроение"};
 
-exports.setSpriteEmotionSad = function(d){return "за тъжно настроение"};
+exports.setSpriteEmotionSad = function(d){return "с тъжно настроение"};
 
 exports.setSpriteEmotionTooltip = function(d){return "Задава настроението на Актьора"};
 
@@ -14640,9 +14670,9 @@ exports.setSpriteBird = function(d){return "изображение  на пти�
 
 exports.setSpriteCat = function(d){return "изображение  на котка"};
 
-exports.setSpriteCaveBoy = function(d){return "към изображението на пещерно момче"};
+exports.setSpriteCaveBoy = function(d){return "изображение на пещерно момче"};
 
-exports.setSpriteCaveGirl = function(d){return "към изображението на пещерно момиче"};
+exports.setSpriteCaveGirl = function(d){return "изображение на пещерно момиче"};
 
 exports.setSpriteDinosaur = function(d){return "изображение на динозавър"};
 
@@ -14656,7 +14686,7 @@ exports.setSpriteHidden = function(d){return "към скрито изображ
 
 exports.setSpriteHideK1 = function(d){return "скрива"};
 
-exports.setSpriteKnight = function(d){return "изоражение на кон"};
+exports.setSpriteKnight = function(d){return "изображение на рицар"};
 
 exports.setSpriteMonster = function(d){return "изображение на чудовище"};
 
@@ -14678,15 +14708,15 @@ exports.setSpriteShowK1 = function(d){return "показва"};
 
 exports.setSpriteSpacebot = function(d){return "изображение на космически робот"};
 
-exports.setSpriteSoccerGirl = function(d){return "към изображението на момиче футболист"};
+exports.setSpriteSoccerGirl = function(d){return "изображение на момиче футболист"};
 
-exports.setSpriteSoccerBoy = function(d){return "към изображението на момче футболист"};
+exports.setSpriteSoccerBoy = function(d){return "изображение на момче футболист"};
 
 exports.setSpriteSquirrel = function(d){return "изображение  на катерица"};
 
-exports.setSpriteTennisGirl = function(d){return "към изображението на момиче тенесист"};
+exports.setSpriteTennisGirl = function(d){return "изображение на момиче тенесист"};
 
-exports.setSpriteTennisBoy = function(d){return "към изображението на момче тенесист"};
+exports.setSpriteTennisBoy = function(d){return "изображение на момче тенесист"};
 
 exports.setSpriteUnicorn = function(d){return "изображение  на еднорог"};
 
@@ -14694,7 +14724,7 @@ exports.setSpriteWitch = function(d){return "изображение на вещ�
 
 exports.setSpriteWizard = function(d){return "изображение  на магьосник"};
 
-exports.setSpritePositionTooltip = function(d){return "Веднага предвижва актьор към указаното местоположение."};
+exports.setSpritePositionTooltip = function(d){return "Веднага придвижва актьор към указаното местоположение."};
 
 exports.setSpriteK1Tooltip = function(d){return "Показва или скрива определен актьор."};
 
@@ -14720,7 +14750,7 @@ exports.setSpriteSpeedVerySlow = function(d){return "на много бавна 
 
 exports.setSpriteSpeedSlow = function(d){return "на бавна скорост"};
 
-exports.setSpriteSpeedNormal = function(d){return "за нормална скорост"};
+exports.setSpriteSpeedNormal = function(d){return "на нормална скорост"};
 
 exports.setSpriteSpeedFast = function(d){return "на бърза скорост"};
 
@@ -14742,7 +14772,7 @@ exports.showTitleScreenText = function(d){return "текст"};
 
 exports.showTSDefTitle = function(d){return "въведи заглавието тук"};
 
-exports.showTSDefText = function(d){return "Въведи текст тук"};
+exports.showTSDefText = function(d){return "въведи текст тук"};
 
 exports.showTitleScreenTooltip = function(d){return "Показва заглавието на екрана."};
 
@@ -14786,11 +14816,11 @@ exports.throwSprite = function(d){return "хвърля"};
 
 exports.throwSpriteN = function(d){return "актьор "+v(d,"spriteIndex")+" хвърля"};
 
-exports.throwTooltip = function(d){return "Хвърляне на ракета от определен актьор."};
+exports.throwTooltip = function(d){return "Хвърляне на снаряд от определен актьор."};
 
 exports.vanish = function(d){return "изчезване"};
 
-exports.vanishActorN = function(d){return "изчезва актьорът "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "изчезва актьор "+v(d,"spriteIndex")};
 
 exports.vanishTooltip = function(d){return "Изчезване на актьор."};
 
@@ -14800,7 +14830,7 @@ exports.waitSeconds = function(d){return "секунди"};
 
 exports.waitForClick = function(d){return "изчаква за кликване"};
 
-exports.waitForRandom = function(d){return "изчаква за случайно"};
+exports.waitForRandom = function(d){return "изчаква за случайно време"};
 
 exports.waitForHalfSecond = function(d){return "изчаква за половин секунда"};
 
@@ -14826,11 +14856,11 @@ exports.whenArrowUp = function(d){return "стрелка нагоре"};
 
 exports.whenArrowTooltip = function(d){return "Следва действията по-долу когато е натисната определена стрелка."};
 
-exports.whenDown = function(d){return "Когато стрелката надолу"};
+exports.whenDown = function(d){return "когато стрелка надолу"};
 
 exports.whenDownTooltip = function(d){return "Следвайте действията по-долу когато е натисната стрелка надолу."};
 
-exports.whenGameStarts = function(d){return "Когато историята започне"};
+exports.whenGameStarts = function(d){return "когато историята започне"};
 
 exports.whenGameStartsTooltip = function(d){return "Следвайте действията по-долу, когато историята започва."};
 
@@ -14842,25 +14872,25 @@ exports.whenRight = function(d){return "когато стрелка надясн
 
 exports.whenRightTooltip = function(d){return "Изпълнява действията по-долу когато е натиснат клавиша стрелка надясно."};
 
-exports.whenSpriteClicked = function(d){return "когато актьор натиска"};
+exports.whenSpriteClicked = function(d){return "Когато е кликнато върху актьор"};
 
-exports.whenSpriteClickedN = function(d){return "когато актьор натиска на "+v(d,"spriteIndex")};
+exports.whenSpriteClickedN = function(d){return "Когато е кликнато върху актьор "+v(d,"spriteIndex")};
 
 exports.whenSpriteClickedTooltip = function(d){return "Изпълнява действията по-долу когато се кликне върху актьор."};
 
-exports.whenSpriteCollidedN = function(d){return "Когато актьор "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "когато актьор "+v(d,"spriteIndex")};
 
 exports.whenSpriteCollidedTooltip = function(d){return "Изпълнява действията по-долу когато актьор докосва друг актьор."};
 
 exports.whenSpriteCollidedWith = function(d){return "докосване"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "докосва някой актьор"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "допира някой от краищата"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "докосва снаряд"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "докосва нещо"};
 
 exports.whenSpriteCollidedWithN = function(d){return "докосва актьор "+v(d,"spriteIndex")};
 
@@ -14884,7 +14914,7 @@ exports.whenSpriteCollidedWithRightEdge = function(d){return "докосва д�
 
 exports.whenSpriteCollidedWithTopEdge = function(d){return "докосва горния ръб"};
 
-exports.whenUp = function(d){return "Когато клавишът стрелка нагоре"};
+exports.whenUp = function(d){return "когато стрелка нагоре"};
 
 exports.whenUpTooltip = function(d){return "Изпълнява действията по-долу когато е натисната стрелка нагоре."};
 

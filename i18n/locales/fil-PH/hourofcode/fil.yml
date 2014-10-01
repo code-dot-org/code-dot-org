@@ -4,9 +4,10 @@ fil:
   front_title: Sumali na sa pagkakataong mas matuto sa pinakamaking kaganapan na mangyayari sa Disyembre 8-14, 2014
   coming_soon: Malapit na
   front_header_banner: Sumali na sa pagkakataong mas matuto sa pinakamaking kaganapan na mangyayari sa Disyembre 8-14, 2014
-  front_intro_default: "Ang Hour of Code ay isang pandaigdigang samahan na binubuo ng milyong-milyong mga estudyante mula sa 170+ na bansa. Kahit sino, kahit saan ay pwedeng sumali sa Hour of Code. Ang isang oras ng pag-aaral ay pwedeng makita sa 30 iba't ibang salita. <strong>Hindi kailangang magaling na agad sa computer. Para ito sa mga edad 4 hanggang 104</strong>"
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 170 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>No se necesita experiencia. Para edades entre 4 y 104 años.</strong>'
+  front_watch_video: Watch the new video
   header_menu_resources: Mga pwedeng makatulong
   header_menu_faq: FAQ
   header_menu_prizes: Mga Premyo
@@ -21,14 +22,24 @@ fil:
   country_ro: Romania
   country_uk: United Kingdom
   country_us: Estados Unidos
+  prizes_all: Prizes for every organizer
+  prizes_every_organizer: Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you
+  prizes_technology: 'One public school in every US state (& Washington DC) will win $10,000 worth of technology'
+  prizes_tech_chats: 50 classrooms will win video chats with very special guests
   n_have_learned_an_hoc: '<h1>#</h1><h3>ay nagsimula na ng</h3><h2>HOUR of CODE</h2>'
   anybody_can_learn: Lahat pwedeng matuto.
   register_now: Magparehistro ngayon
   front_join_us_heading: Hour of Code para sa bawat isang estudyante.
   front_join_us_description: Ang pag-aaral ng computer ay pundasyon para sa lahat ng estudyante. Samahan nyo kaming ipamalas ito sa 100 million.
   front_join_us_button: Samahan nyo kami
-  stats_hoc_2013_heading: 'Mga di kapani-paniwalang numero mula sa Hour of Code nung isang taon. Sa isang linggo lang ay:'
-  stats_hoc_2013_image_alt: Mga numero mula sa 2013 Hour of Code
+  front_join_us_header: Any time during December 8-14, Computer Science Education Week, host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!
+  front_join_us_teacher: Are you a teacher?
+  front_join_us_inspire: Inspire your students with an Hour of Code in your classroom.
+  front_join_us_parent: Are you a parent?
+  front_join_us_ask: Ask your local school to host an Hour of Code.
+  front_join_us_computer_science: Just love computer science?
+  front_join_us_spread: Spread the word in your community. Or organize an Hour of Code event yourself.
+  front_join_us_get_started: "Here's how to get started."
   signup_header: Sabihin sa amin kung ikaw ay magsisimula ng gawain para sa Hour of Code
   signup_header_ar: Déjanos saber si estas organizando una Hora de Programación
   signup_name_label: Iyong pangalan
@@ -56,6 +67,11 @@ fil:
   signup_thank_you_message: Nagpadala na kami ng kumpirmasyon sa iyong email kasama ang importasyon upang makapagsimula.
   map_header: Mga aktibidad tungkol sa Hour of Code sa buong mundo
   map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
+  meta_tag_og_title: The Hour of Code is coming
+  meta_tag_og_description: The Hour of Code is a global movement reaching tens of millions of students in 200 countries and over 30 languages. Ages 4 to 104.
+  meta_tag_twitter_title: The Hour of Code is coming
+  meta_tag_twitter_description: The Hour of Code is a global movement reaching tens of millions of students in 200 countries and over 30 languages. Ages 4 to 104.
+  twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
   hardware_prizes_form_name_label: Iyong pangalan
   hardware_prizes_form_name_placeholder: Iyong pangalan
   hardware_prizes_form_email_label: Iyong email
@@ -78,7 +94,7 @@ fil:
   hoc_faq_what_is_hoc_q: What is the Hour of Code?
   hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
   hoc_faq_when_is_hoc_q: When is the Hour of Code?
-  hoc_faq_when_is_hoc_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week</a>."
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 8-14, 2014, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
   hoc_faq_why_cs_q: Why computer science?
   hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path. See more stats on <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: How do I participate in the Hour of Code?
@@ -113,7 +129,24 @@ fil:
   hoc_faq_need_computers_ar_a: "No. Tenemos tutorales de la Hora de Program.AR que funcionan en PCs, teléfonos inteligentes, tabletas y algunos que no requieren ¡ninguna computadora en absoluto! Tú puedes unirte desde donde quiera que estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i> <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes aprenden mejor con <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares de programación</a>, compartiendo una computadora y trabajando juntos. Anima a tus estudiantes a trabajar en pares. <li><b>Una pantalla proyectada.</b> Si tú tienes un proyector y una computadora conectada a Internet, el grupo entero puede hacer una hora de Program.AR juntos. Mira porciones de videos juntos y toma turnos para resolver acertijos o responder preguntas. <li><b>Desconéctate.</b> Ofrecemos tutoriales que no requieren ninguna computadora en absoluto. </ul>"
   hoc_faq_tutorial_ar_q: ¿Cómo puedo hacer un tutoría de la Hora de Program.AR?
   hoc_faq_tutorial_ar_a: "Si usted está interesado en convertirse en un socio para tutoriales, <a href='/tutorial-guidelines'>vea nuestras directrices e instrucciones</a>. Nos gustaría presentar varias opciones atractivas, pero la meta principal es optimizar la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales."
+  stats_hoc_2013_heading: 'Mga di kapani-paniwalang numero mula sa Hour of Code nung isang taon. Sa isang linggo lang ay:'
+  stats_hoc_2013_image_alt: Mga numero mula sa 2013 Hour of Code
+  stats_growth: It was the fastest to reach 15 million users.
+  stats_tumblr: 'Tumblr: 3.5 years'
+  stats_facebook: 'Facebook: 3 years'
+  stats_twitter: 'Twitter: 2.5 years'
+  stats_pinterest: 'Pinterest: 2 years'
+  stats_instagram: 'Instagram: 14 months'
+  stats_hoc: 'The Hour of Code: 5 days'
+  stats_global: 15 million students in 170 countries learned an Hour of Code.
+  stats_girls_more: More girls tried computer science than in the last 70 years.
+  stats_girls_million: Over 10 million girls in 2013
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
+  stats_michael: 'I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   footer_copyright_message: Hindi maaring ankinin. Pagmamay-ari ng Code.org 2014.
   footer_trademark_message: Ang Hour of Code™ ay pagmamay-ari ng Code.org.
+  footer_menu_contact: Contact us
+  footer_menu_support: Support
   footer_menu_terms: Mga alituntunin
   footer_menu_privacy: Mga isyu ukol sa paggamit

@@ -166,6 +166,20 @@ var codeKeyDown = function(e) {
   }
 };
 
+BlocklyApps.toggleRunReset = function(button) {
+  var showRun = (button === 'run');
+  if (button !== 'run' && button !== 'reset') {
+    throw "Unexpected input";
+  }
+
+  var run = document.getElementById('runButton');
+  var reset = document.getElementById('resetButton');
+  run.style.display = showRun ? 'inline-block' : 'none';
+  run.disabled = !showRun;
+  reset.style.display = !showRun ? 'inline-block' : 'none';
+  reset.disabled = showRun;
+};
+
 /**
  * Common startup tasks for all apps.
  */
@@ -177,6 +191,7 @@ BlocklyApps.init = function(config) {
   BlocklyApps.share = config.share;
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
+  BlocklyApps.sendToPhone = config.sendToPhone;
   BlocklyApps.noPadding = config.no_padding;
 
   BlocklyApps.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
@@ -252,8 +267,11 @@ BlocklyApps.init = function(config) {
 
       belowViz.appendChild(feedback.createSharingDiv({
         response: {
-          level_source: window.location
+          level_source: window.location,
+          level_source_id: config.level_source_id,
+          phone_share_url: config.send_to_phone_url
         },
+        sendToPhone: config.sendToPhone,
         twitter: config.twitter
       }));
 
@@ -355,19 +373,26 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
+    BlocklyApps.editor = window.ace.edit('codeTextbox');
+    BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
+    BlocklyApps.editor.setOptions({
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true
+    });
+
     var codeTextbox = document.getElementById('codeTextbox');
+
+    var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
     var codeFunctions = config.level.codeFunctions;
     // Insert hint text from level codeFunctions into editCode area
     if (codeFunctions) {
-      var hintText = "";
+      var hintText = '';
       for (var i = 0; i < codeFunctions.length; i++) {
-        hintText = hintText + " " + codeFunctions[i].func + "();";
+        hintText += " " + codeFunctions[i].func + "();";
       }
-      var html = utils.escapeHtml(msg.typeFuncs()).replace('%1', hintText);
-      codeTextbox.innerHTML += '// ' + html + '<br><br><br>';
+      startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
     }
-    // Needed to prevent blockly from swallowing up the backspace key
-    codeTextbox.addEventListener('keydown', codeKeyDown, true);
+    BlocklyApps.editor.setValue(startText);
   }
 
   BlocklyApps.Dialog = config.Dialog;
@@ -486,6 +511,7 @@ BlocklyApps.init = function(config) {
   }
 
   if (config.level.editCode) {
+    // Swap the visibility of the codeText element and the blocklyDiv
     document.getElementById('codeTextbox').style.display = 'block';
     div.style.display = 'none';
   }
@@ -854,6 +880,7 @@ BlocklyApps.displayFeedback = function(options) {
   options.Dialog = BlocklyApps.Dialog;
   options.onContinue = onContinue;
   options.backToPreviousLevel = backToPreviousLevel;
+  options.sendToPhone = BlocklyApps.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
@@ -909,8 +936,7 @@ BlocklyApps.report = function(options) {
  */
 BlocklyApps.resetButtonClick = function() {
   onResetPressed();
-  document.getElementById('runButton').style.display = 'inline-block';
-  document.getElementById('resetButton').style.display = 'none';
+  BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
   Blockly.mainWorkspace.setEnableToolbox(true);
   Blockly.mainWorkspace.traceOn(false);
@@ -1956,7 +1982,6 @@ exports.createSharingDiv = function(options) {
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
-    options.sendToPhone = true;
   }
 
   var sharingDiv = document.createElement('div');
@@ -1975,17 +2000,22 @@ exports.createSharingDiv = function(options) {
 
 //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
-  if (sharingPhone) {
+  if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
         sendToPhone.setAttribute('style', 'display:inline-block');
-        var phone = $("#phone");
-        phone.mask("(999) 999-9999");
-        phone.focus();
+        var phone = $(sharingDiv.querySelector("#phone"));
+        var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
+        submitButton.disabled = true;
+        phone.mask('(000) 000-0000',{
+            onComplete:function(){if(!submitted) submitButton.disabled=false;},
+            onChange: function(){submitButton.disabled=true;}
+        });
+        phone.focus();
         dom.addClickTouchEvent(submitButton, function() {
-          var phone = $("#phone");
+          var phone = $(sharingDiv.querySelector("#phone"));
           var params = jQuery.param({
             level_source: options.response.level_source_id,
             phone: phone.val()
@@ -1993,6 +2023,7 @@ exports.createSharingDiv = function(options) {
           $(submitButton).val("Sending..");
           phone.prop('readonly', true);
           submitButton.disabled = true;
+          submitted = true;
           jQuery.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text("Sent!");
@@ -10137,13 +10168,11 @@ BlocklyApps.runButtonClick = function() {
 function beginAttempt () {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
-  var stepButton = document.getElementById('stepButton');
   // Ensure that Reset button is at least as wide as Run button.
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -12583,7 +12612,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/ko_kr/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n    // ', escape((37,  msg.typeCode() )), '\n    <br>\n    // ', escape((39,  msg.typeHint() )), '\n    <br>\n  </div>\n');42; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (46,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((52,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((53,  msg.runProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((57,  msg.resetProgram() )), '</div>\n        <img src="', escape((58,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');60; if (data.controls) { ; buf.push('\n      ', (61,  data.controls ), '\n      ');62; } ; buf.push('\n      ');63; if (data.extraControlRows) { ; buf.push('\n      ', (64,  data.extraControlRows ), '\n      ');65; } ; buf.push('\n    </div>\n\n    ');68; instructions() ; buf.push('\n    ');69; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((75,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((76,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((78,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((80,  data.blockCounterClass )), '>\n          ', escape((81,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((84,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((87,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');93; codeArea() ; buf.push('\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n  </div>\n');38; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (42,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((48,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((49,  msg.runProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((53,  msg.resetProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');56; if (data.controls) { ; buf.push('\n      ', (57,  data.controls ), '\n      ');58; } ; buf.push('\n      ');59; if (data.extraControlRows) { ; buf.push('\n      ', (60,  data.extraControlRows ), '\n      ');61; } ; buf.push('\n    </div>\n\n    ');64; instructions() ; buf.push('\n    ');65; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');89; codeArea() ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -12876,21 +12905,21 @@ exports.directionEastLetter = function(d){return "동"};
 
 exports.directionWestLetter = function(d){return "서"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "끝"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"반복\" 블럭이나 \"조건\" 블럭이 실행되려면, 그 안에 다른 블럭들이 있어야 합니다. 블럭 안쪽에 필요한 블럭들을 끼워 맞춰 연결하세요."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "함수 블럭 안에는 다른 블럭을 넣어주어야 합니다."};
 
-exports.extraTopBlocks = function(d){return "이벤트 블럭에 연결하지 않은 남는 블럭이 있습니다."};
+exports.extraTopBlocks = function(d){return "블럭들이 떨어져있습니다. 블럭들을 붙이겠습니까?"};
 
 exports.finalStage = function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했습니다."};
 
 exports.finalStageTrophies = function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했고, "+p(d,"numTrophies",0,"ko",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" 을 얻었습니다."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "마침"};
 
-exports.generatedCodeInfo = function(d){return "프로그래밍한 블럭들은 그대로 자바스크립트(JavaScript) 언어로 변환될 수 있습니다:"};
+exports.generatedCodeInfo = function(d){return " "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"와 같은 유명한 대학에서도 블럭기반 프로그래밍을 가르칩니다. 하지만, 블럭들은 모두 JavaScript로 바뀌어 실행됩니다 : "};
 
 exports.hashError = function(d){return "죄송합니다. 저장된 '%1' 프로그램은 없습니다."};
 
@@ -12898,7 +12927,7 @@ exports.help = function(d){return "도움말"};
 
 exports.hintTitle = function(d){return "힌트:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "점프"};
 
 exports.levelIncompleteError = function(d){return "필요한 블럭들을 모두 사용했지만, 정확한 방법은 아닙니다."};
 
@@ -12914,13 +12943,13 @@ exports.nextLevelTrophies = function(d){return "축하합니다! "+v(d,"puzzleNu
 
 exports.nextStage = function(d){return "축하드립니다! "+v(d,"stageName")+"을(를) 완료하셨습니다."};
 
-exports.nextStageTrophies = function(d){return "축하합니다! "+v(d,"stageNumber")+" 단계를 성공적으로 해결했고, "+p(d,"numTrophies",0,"ko",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" 을 얻었습니다."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"ko",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "축하합니다! "+v(d,"puzzleNumber")+" 번 퍼즐을 해결했습니다. (하지만, "+p(d,"numBlocks",0,"ko",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" 만 사용해야 합니다.)"};
 
 exports.numLinesOfCodeWritten = function(d){return "오! 코드 "+p(d,"numLines",0,"ko",{"one":"1 line","other":n(d,"numLines")+" 줄"})+"로 해결했네요!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "실행"};
 
 exports.puzzleTitle = function(d){return "퍼즐 "+v(d,"puzzle_number")+"/"+v(d,"stage_total")};
 
@@ -12932,7 +12961,7 @@ exports.runProgram = function(d){return "실행"};
 
 exports.runTooltip = function(d){return "블럭들로 작성되어있는 프로그램을 실행합니다."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "점수"};
 
 exports.showCodeHeader = function(d){return "코드 보기"};
 
@@ -12956,13 +12985,13 @@ exports.totalNumLinesOfCodeWritten = function(d){return "지금까지: 코드 "+
 
 exports.tryAgain = function(d){return "다시 시도"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "도움 보기"};
 
 exports.backToPreviousLevel = function(d){return "이전 퍼즐"};
 
-exports.saveToGallery = function(d){return "갤러리에 저장"};
+exports.saveToGallery = function(d){return "나의 갤러리에 저장"};
 
-exports.savedToGallery = function(d){return "갤러리에 저장되었습니다!"};
+exports.savedToGallery = function(d){return "나의 갤러리에 저장되었습니다!"};
 
 exports.typeCode = function(d){return "자바스크립트(JavaScript) 코드를 직접 작성하세요."};
 
@@ -12982,24 +13011,24 @@ exports.wantToLearn = function(d){return "코드(code)를 배워볼까요?"};
 
 exports.watchVideo = function(d){return "비디오 보기"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "~할 때"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "~할 때 실행"};
 
 exports.tryHOC = function(d){return "Hour of Code 해보기"};
 
 exports.signup = function(d){return "샘플 코스를 위해 가입하기"};
 
-exports.hintHeader = function(d){return "팁:"};
+exports.hintHeader = function(d){return "도움말:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요."};
 
 
 },{"messageformat":68}],56:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ko=function(n){return "other"}
-exports.atHoneycomb = function(d){return "at honeycomb"};
+exports.atHoneycomb = function(d){return "벌집에서"};
 
-exports.atFlower = function(d){return "at flower"};
+exports.atFlower = function(d){return "꽃에서"};
 
 exports.avoidCowAndRemove = function(d){return "젖소 피해 치우기 1번"};
 
@@ -13033,7 +13062,7 @@ exports.fillTooltip = function(d){return "메우기1번"};
 
 exports.finalLevel = function(d){return "축하합니다! 마지막 퍼즐을 해결했습니다."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "이 꽃에는 꽃꿀이 없습니다."};
 
 exports.get = function(d){return "아이템 가져오기"};
 
@@ -13041,17 +13070,17 @@ exports.heightParameter = function(d){return "높이:"};
 
 exports.holePresent = function(d){return "구덩이가 있으면"};
 
-exports.honey = function(d){return "make honey"};
+exports.honey = function(d){return "꿀 만들기"};
 
-exports.honeyAvailable = function(d){return "honey"};
+exports.honeyAvailable = function(d){return "꿀"};
 
-exports.honeyTooltip = function(d){return "Make honey from nectar"};
+exports.honeyTooltip = function(d){return "꽃꿀에서 꿀만들기"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "이 벌집에는 더이상 꿀을 보관할 수 없습니다."};
 
 exports.ifCode = function(d){return "만약,"};
 
-exports.ifInRepeatError = function(d){return "\"반복(횟수)\" 블럭 안에 \"조건\" 블럭을 넣어야 합니다. 어렵다면? 이전 퍼즐을 통해, 어떻게 동작하는지 살펴보세요."};
+exports.ifInRepeatError = function(d){return "\"반복하기\"블럭 안에 \"만약\" 블럭을 넣어야 합니다. 이해하기 어렵다면 이전 퍼즐에서 어떻게 동작하는지 살펴보세요."};
 
 exports.ifPathAhead = function(d){return "만약, 앞쪽에 길이 있으면"};
 
@@ -13059,19 +13088,19 @@ exports.ifTooltip = function(d){return "어떤 방향에 길이 있으면, 동�
 
 exports.ifelseTooltip = function(d){return "어떤 방향에 길이 있으면, 첫 번째 블럭의 동작들을 수행하고, 아니면 두 번째 블럭의 동작들을 수행합니다."};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "지정한 방향에 꽃/벌집이 있으면, 동작을 수행합니다."};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "지정한 방향에 꽃/벌집이 있으면, 첫 번째 구역의 동작을 수행하고 그렇지 않으면 두번째 구역의 동작을 수행합니다."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "정확한 블럭들을 모두 사용했지만, 필요한 양의 꿀을 만들지 못했습니다."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "정확한 블럭들을 모두 사용했지만, 필요한 양의 꽃꿀을 모으지 못했습니다."};
 
-exports.make = function(d){return "make"};
+exports.make = function(d){return "만들기"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "뒤로 이동하기"};
 
-exports.moveEastTooltip = function(d){return "동쪽으로 한 칸 움직여 주세요."};
+exports.moveEastTooltip = function(d){return "오른쪽으로 한칸 이동합니다."};
 
 exports.moveForward = function(d){return "앞으로 움직이기"};
 
@@ -13079,17 +13108,17 @@ exports.moveForwardTooltip = function(d){return "한 칸 앞으로 이동합니�
 
 exports.moveNorthTooltip = function(d){return "북쪽으로 한 칸 움직여 주세요."};
 
-exports.moveSouthTooltip = function(d){return "남쪽으로 한 칸 움직여 주세요."};
+exports.moveSouthTooltip = function(d){return "위쪽으로 한칸 이동합니다."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "앞으로/뒤로 한 칸 이동합니다."};
 
-exports.moveWestTooltip = function(d){return "서쪽으로 한 칸 움직여 주세요."};
+exports.moveWestTooltip = function(d){return "왼쪽으로 한칸 이동합니다."};
 
-exports.nectar = function(d){return "get nectar"};
+exports.nectar = function(d){return "꽃꿀 얻기"};
 
-exports.nectarRemaining = function(d){return "nectar"};
+exports.nectarRemaining = function(d){return "꽃꿀의 양"};
 
-exports.nectarTooltip = function(d){return "Get nectar from a flower"};
+exports.nectarTooltip = function(d){return "꽃에서 꽃꿀을 얻어냅니다."};
 
 exports.nextLevel = function(d){return "축하합니다! 퍼즐을 해결했습니다."};
 
@@ -13101,9 +13130,9 @@ exports.noPathLeft = function(d){return "왼쪽에 길이 없으면"};
 
 exports.noPathRight = function(d){return "오른쪽에 길이 없으면"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "꽃꿀은 꽃에서만 얻어낼 수 있습니다."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "꿀은 벌집에서만 만들어낼 수 있습니다."};
 
 exports.numBlocksNeeded = function(d){return "%1 개의 블럭으로 퍼즐을 해결할 수 있습니다."};
 
@@ -13127,7 +13156,7 @@ exports.removeStack = function(d){return "치우기"+v(d,"shovelfuls")+"번"};
 
 exports.removeSquare = function(d){return "사각형 치우기"};
 
-exports.repeatCarefullyError = function(d){return "이 퍼즐을 해결하기 위해서는 반복되는 패턴을 찾아내야 합니다. \"반복\" 블럭 안에 3 개의 블럭을 넣어보세요 : 앞으로 이동, 앞으로 이동, 오른쪽으로 돌기."};
+exports.repeatCarefullyError = function(d){return "이 퍼즐을 해결하기 위해서는 \"반복\" 블럭 안에 이동하기와 방향바꾸기의 방법을 주의깊게 생각해야합니다. 마지막에 방향을 바꾸는 것은 괜찮습니다."};
 
 exports.repeatUntil = function(d){return "반복(~할 때까지):"};
 
@@ -13137,9 +13166,9 @@ exports.repeatUntilFinish = function(d){return "반복(끝 날 때까지)"};
 
 exports.step = function(d){return "단계"};
 
-exports.totalHoney = function(d){return "total honey"};
+exports.totalHoney = function(d){return "꿀의 양"};
 
-exports.totalNectar = function(d){return "total nectar"};
+exports.totalNectar = function(d){return "꽃꿀의 양"};
 
 exports.turnLeft = function(d){return "왼쪽으로 돌기"};
 
@@ -13147,19 +13176,19 @@ exports.turnRight = function(d){return "오른쪽으로 돌기"};
 
 exports.turnTooltip = function(d){return "왼쪽이나 오른쪽으로 90 도 돕니다."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "꽃이나 벌집들이 있는지 살펴보기 위해서는 먼저 구름들을 확인해야 합니다."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "꽃꿀이 들어있는지 살펴보기 위해서는 모든 분홍 꽃들을 확인해야 합니다."};
 
-exports.whileMsg = function(d){return "반복(~인 동안):"};
+exports.whileMsg = function(d){return "~인 동안"};
 
 exports.whileTooltip = function(d){return "어떤 조건이 될 때까지(~할 때까지), 반복적으로 실행합니다."};
 
-exports.word = function(d){return "단어를 찾으세요"};
+exports.word = function(d){return "단어 찾기"};
 
 exports.yes = function(d){return "예"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "말"};
 
 
 },{"messageformat":68}],57:[function(require,module,exports){

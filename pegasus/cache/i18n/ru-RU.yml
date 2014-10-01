@@ -83,6 +83,8 @@
   i_am_a: "Я"
   never_spam: "Мы никогда не пришлём Вам спам"
   enter_country: "Введите страну, если Вы не в  США"
+  used_infrequent_updates: Only used for infrequent updates
+  privacy_practices_children: See our privacy practices for children
   petition_thankyou: "Благодарим Вас за подписание петиции"
   carousel_heading_international: "Обучающее руководство на Вашем языке"
   continue_learning_header: "Продолжайте обучение дальше"
@@ -226,6 +228,7 @@
   dashboard_sections_table_course: "Курс"
   dashboard_sections_table_students: "Ученики"
   dashboard_sections_table_code: "Код раздела"
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: "Если вы хотите раздать учетные записи вашим ученикам,
     выберите тип секретного <b>слова</b> или <b>картинку</b> для данного раздела."
   dashboard_sections_secret_word: "<b>Слово</b> позволяет установить секретное слово
@@ -246,9 +249,12 @@
   dashboard_students_new_section: "Вы создали новый раздел! Теперь добавьте ваших
     учеников, используя кнопки выше: <b>Добавить ученика</b> и <b>Добавить несколько
     учеников</b>."
+  dashboard_students_placeholder_name: Student Name
   dashboard_students_name: "Имя"
   dashboard_students_age: "Возраст"
   dashboard_students_gender: "Пол"
+  dashboard_students_male: "Мужской"
+  dashboard_students_female: "Женский"
   dashboard_students_secret: "Секрет"
   dashboard_students_password: "Пароль"
   dashboard_students_username: "Имя пользователя: %{student_username}"
@@ -277,3 +283,27 @@
   dashboard_students_url: "Ссылка"
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: "Последовательность"
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: "Другое"
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
+  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
+    week alone:'
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

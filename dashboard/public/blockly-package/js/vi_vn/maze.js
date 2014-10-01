@@ -166,6 +166,20 @@ var codeKeyDown = function(e) {
   }
 };
 
+BlocklyApps.toggleRunReset = function(button) {
+  var showRun = (button === 'run');
+  if (button !== 'run' && button !== 'reset') {
+    throw "Unexpected input";
+  }
+
+  var run = document.getElementById('runButton');
+  var reset = document.getElementById('resetButton');
+  run.style.display = showRun ? 'inline-block' : 'none';
+  run.disabled = !showRun;
+  reset.style.display = !showRun ? 'inline-block' : 'none';
+  reset.disabled = showRun;
+};
+
 /**
  * Common startup tasks for all apps.
  */
@@ -177,6 +191,7 @@ BlocklyApps.init = function(config) {
   BlocklyApps.share = config.share;
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
+  BlocklyApps.sendToPhone = config.sendToPhone;
   BlocklyApps.noPadding = config.no_padding;
 
   BlocklyApps.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
@@ -252,8 +267,11 @@ BlocklyApps.init = function(config) {
 
       belowViz.appendChild(feedback.createSharingDiv({
         response: {
-          level_source: window.location
+          level_source: window.location,
+          level_source_id: config.level_source_id,
+          phone_share_url: config.send_to_phone_url
         },
+        sendToPhone: config.sendToPhone,
         twitter: config.twitter
       }));
 
@@ -355,19 +373,26 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
+    BlocklyApps.editor = window.ace.edit('codeTextbox');
+    BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
+    BlocklyApps.editor.setOptions({
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true
+    });
+
     var codeTextbox = document.getElementById('codeTextbox');
+
+    var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
     var codeFunctions = config.level.codeFunctions;
     // Insert hint text from level codeFunctions into editCode area
     if (codeFunctions) {
-      var hintText = "";
+      var hintText = '';
       for (var i = 0; i < codeFunctions.length; i++) {
-        hintText = hintText + " " + codeFunctions[i].func + "();";
+        hintText += " " + codeFunctions[i].func + "();";
       }
-      var html = utils.escapeHtml(msg.typeFuncs()).replace('%1', hintText);
-      codeTextbox.innerHTML += '// ' + html + '<br><br><br>';
+      startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
     }
-    // Needed to prevent blockly from swallowing up the backspace key
-    codeTextbox.addEventListener('keydown', codeKeyDown, true);
+    BlocklyApps.editor.setValue(startText);
   }
 
   BlocklyApps.Dialog = config.Dialog;
@@ -486,6 +511,7 @@ BlocklyApps.init = function(config) {
   }
 
   if (config.level.editCode) {
+    // Swap the visibility of the codeText element and the blocklyDiv
     document.getElementById('codeTextbox').style.display = 'block';
     div.style.display = 'none';
   }
@@ -854,6 +880,7 @@ BlocklyApps.displayFeedback = function(options) {
   options.Dialog = BlocklyApps.Dialog;
   options.onContinue = onContinue;
   options.backToPreviousLevel = backToPreviousLevel;
+  options.sendToPhone = BlocklyApps.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
@@ -909,8 +936,7 @@ BlocklyApps.report = function(options) {
  */
 BlocklyApps.resetButtonClick = function() {
   onResetPressed();
-  document.getElementById('runButton').style.display = 'inline-block';
-  document.getElementById('resetButton').style.display = 'none';
+  BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
   Blockly.mainWorkspace.setEnableToolbox(true);
   Blockly.mainWorkspace.traceOn(false);
@@ -1956,7 +1982,6 @@ exports.createSharingDiv = function(options) {
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
-    options.sendToPhone = true;
   }
 
   var sharingDiv = document.createElement('div');
@@ -1975,17 +2000,22 @@ exports.createSharingDiv = function(options) {
 
 //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
-  if (sharingPhone) {
+  if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
         sendToPhone.setAttribute('style', 'display:inline-block');
-        var phone = $("#phone");
-        phone.mask("(999) 999-9999");
-        phone.focus();
+        var phone = $(sharingDiv.querySelector("#phone"));
+        var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
+        submitButton.disabled = true;
+        phone.mask('(000) 000-0000',{
+            onComplete:function(){if(!submitted) submitButton.disabled=false;},
+            onChange: function(){submitButton.disabled=true;}
+        });
+        phone.focus();
         dom.addClickTouchEvent(submitButton, function() {
-          var phone = $("#phone");
+          var phone = $(sharingDiv.querySelector("#phone"));
           var params = jQuery.param({
             level_source: options.response.level_source_id,
             phone: phone.val()
@@ -1993,6 +2023,7 @@ exports.createSharingDiv = function(options) {
           $(submitButton).val("Sending..");
           phone.prop('readonly', true);
           submitButton.disabled = true;
+          submitted = true;
           jQuery.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text("Sent!");
@@ -10137,13 +10168,11 @@ BlocklyApps.runButtonClick = function() {
 function beginAttempt () {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
-  var stepButton = document.getElementById('stepButton');
   // Ensure that Reset button is at least as wide as Run button.
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -12583,7 +12612,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/vi_vn/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n    // ', escape((37,  msg.typeCode() )), '\n    <br>\n    // ', escape((39,  msg.typeHint() )), '\n    <br>\n  </div>\n');42; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (46,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((52,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((53,  msg.runProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((57,  msg.resetProgram() )), '</div>\n        <img src="', escape((58,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');60; if (data.controls) { ; buf.push('\n      ', (61,  data.controls ), '\n      ');62; } ; buf.push('\n      ');63; if (data.extraControlRows) { ; buf.push('\n      ', (64,  data.extraControlRows ), '\n      ');65; } ; buf.push('\n    </div>\n\n    ');68; instructions() ; buf.push('\n    ');69; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((75,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((76,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((78,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((80,  data.blockCounterClass )), '>\n          ', escape((81,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((84,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((87,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');93; codeArea() ; buf.push('\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n  </div>\n');38; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (42,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((48,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((49,  msg.runProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((53,  msg.resetProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');56; if (data.controls) { ; buf.push('\n      ', (57,  data.controls ), '\n      ');58; } ; buf.push('\n      ');59; if (data.extraControlRows) { ; buf.push('\n      ', (60,  data.extraControlRows ), '\n      ');61; } ; buf.push('\n    </div>\n\n    ');64; instructions() ; buf.push('\n    ');65; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');89; codeArea() ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -12854,7 +12883,7 @@ exports.catLoops = function(d){return "Vòng lặp"};
 
 exports.catMath = function(d){return "Thuật toán"};
 
-exports.catProcedures = function(d){return "Chức năng"};
+exports.catProcedures = function(d){return "Các hàm"};
 
 exports.catText = function(d){return "văn bản"};
 
@@ -12880,17 +12909,17 @@ exports.end = function(d){return "kết thúc"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Miếng ghép được \"Lặp lại\" hay \"Nếu\" cần có những miếng ghép bên trong để hoạt động. Đảm bảo là miếng gạch đó khớp hoàn toàn phần ở trong của miếng gạch kia."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Chức năng của block cần phải có block khác bên trong để khiến nó hoạt động."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Khối \"hàm\"  cần có các khối lệnh bên trong để khiến nó hoạt động."};
 
-exports.extraTopBlocks = function(d){return "Bạn có khối phụ không gắn liền với một sự kiện khối."};
+exports.extraTopBlocks = function(d){return "Bạn có các khối tự do. Ý của bạn là để đính kèm chúng vào khối \"khi chạy\"?"};
 
 exports.finalStage = function(d){return "Chúc mừng. Bạn vừa hoàn thành xong bước cuối cùng."};
 
-exports.finalStageTrophies = function(d){return "Chúc mừng! Bạn vừa hoàn thành bước cuối cùng và dành danh hiệu. "+v(d,"numTrophies")+" nhiều."};
+exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"vi",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.finish = function(d){return "Hoàn Thành"};
 
-exports.generatedCodeInfo = function(d){return "Ngay cả các trường đại học giảng dạy dựa trên block- mã hóa (ví dụ: "+v(d,"berkeleyLink")+" "+v(d,"harvardLink")+"). Tuy nhiên, dưới mui xe, các khối bạn đã lắp ráp có thể cũng được hiển thị trong JavaScript, phần lớn của thế giới rộng rãi sử dụng mã hóa ngôn ngữ:"};
+exports.generatedCodeInfo = function(d){return "Các trường đại học hàng đầu cũng dạy lập trình dựa trên \"khối lệnh\" (block) (như: "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Tuy nhiên, để hổ trợ, các \"khối lệnh\" cũng được hiển thị trong ngôn ngữ JavaScript, ngôn ngữ lập trình thông dụng nhất:"};
 
 exports.hashError = function(d){return "Xin lỗi, '%1' không tương ứng với bất kì chương trình đã lưu."};
 
@@ -12898,25 +12927,25 @@ exports.help = function(d){return "Trợ Giúp"};
 
 exports.hintTitle = function(d){return "Gợi ý:"};
 
-exports.jump = function(d){return "nhảy/cú nhảy"};
+exports.jump = function(d){return "nhảy"};
 
 exports.levelIncompleteError = function(d){return "Bạn đã dùng tất cả các khối cần thiết, nhưng không đúng cách."};
 
 exports.listVariable = function(d){return "danh sách"};
 
-exports.makeYourOwnFlappy = function(d){return "Tạo lấy một bản Flappy Bird của riêng bạn"};
+exports.makeYourOwnFlappy = function(d){return "Tự tạo game Flappy Bird của riêng bạn"};
 
-exports.missingBlocksErrorMsg = function(d){return "Thử dùng một hoặc nhiều khối bên dưới để giải quyết trò này."};
+exports.missingBlocksErrorMsg = function(d){return "Thử dùng một hoặc nhiều khối được cho để giải quyết câu này."};
 
-exports.nextLevel = function(d){return "Chúc mừng! Bạn đã hoàn thành trò số "+v(d,"puzzleNumber")+"."};
+exports.nextLevel = function(d){return "Chúc mừng! Bạn đã hoàn thành câu số "+v(d,"puzzleNumber")+"."};
 
 exports.nextLevelTrophies = function(d){return "Chúc mừng! Bạn đã hoàn thành Câu đố "+v(d,"puzzleNumber")+" và chiến thắng "+v(d,"numTrophies")+"."};
 
 exports.nextStage = function(d){return "Chúc mừng! Bạn đã hoàn thành xong "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Chúc mừng! Bạn đã vượt qua vòng "+v(d,"stageNumber")+" và giành được "+p(d,"numTrophies",0,"vi",{"one":"một danh hiệu","other":n(d,"numTrophies")+" danh hiệu"})+"."};
+exports.nextStageTrophies = function(d){return "Chúc mừng! Bạn đã vượt qua vòng "+v(d,"stageName")+" và giành được "+p(d,"numTrophies",0,"vi",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.numBlocksNeeded = function(d){return "Chúc mừng! Bạn đã hoàn thành câu đố "+v(d,"puzzleNumber")+". Nhưng bạn thật sự chỉ cần "+v(d,"numBlocks")+" khối thôi ."};
+exports.numBlocksNeeded = function(d){return "Chúc mừng! Bạn đã hoàn thành câu đố "+v(d,"puzzleNumber")+". Nhưng bạn thật sự chỉ cần "+p(d,"numBlocks",0,"vi",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" khối thôi ."};
 
 exports.numLinesOfCodeWritten = function(d){return "Bạn vừa mới viết "+p(d,"numLines",0,"vi",{"one":"1 dòng","other":n(d,"numLines")+" dòng"})+" mã!"};
 
@@ -12997,11 +13026,11 @@ exports.genericFeedback = function(d){return "Nhìn xem bằng cách nào bạn 
 
 },{"messageformat":68}],56:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.vi=function(n){return "other"}
-exports.atHoneycomb = function(d){return "at honeycomb"};
+exports.atHoneycomb = function(d){return "tại/ trong tổ ong"};
 
-exports.atFlower = function(d){return "at flower"};
+exports.atFlower = function(d){return "tại/ trên bông hoa"};
 
-exports.avoidCowAndRemove = function(d){return "tránh những con bò và loại bỏ 1"};
+exports.avoidCowAndRemove = function(d){return "tránh con bò và loại bỏ 1"};
 
 exports.continue = function(d){return "Tiếp tục"};
 
@@ -13021,75 +13050,75 @@ exports.doCode = function(d){return "thực hiện"};
 
 exports.elseCode = function(d){return "nếu không thì"};
 
-exports.fill = function(d){return "điền vào 1"};
+exports.fill = function(d){return "lấp đầy"};
 
-exports.fillN = function(d){return "điền vào "+v(d,"shovelfuls")};
+exports.fillN = function(d){return "lấp đầy "+v(d,"shovelfuls")};
 
-exports.fillStack = function(d){return "Điền vào các ngăn xếp của "+v(d,"shovelfuls")+"những cái lỗ"};
+exports.fillStack = function(d){return "lấp đầy dãy "+v(d,"shovelfuls")+" những cái lỗ"};
 
 exports.fillSquare = function(d){return "lấp đầy hình vuông"};
 
 exports.fillTooltip = function(d){return "Đặt 1 đơn vị của bụi bẩn"};
 
-exports.finalLevel = function(d){return "Chúc mừng! Bạn đã giải quyết các câu đố cuối cùng."};
+exports.finalLevel = function(d){return "Chúc mừng! Bạn đã giải được câu đố cuối cùng."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "Bông hoa bạn đang ở trên không còn mật."};
 
 exports.get = function(d){return "lấy thành tố"};
 
 exports.heightParameter = function(d){return "chiều cao"};
 
-exports.holePresent = function(d){return "đó là một lỗ"};
+exports.holePresent = function(d){return "có một cái hố"};
 
-exports.honey = function(d){return "Hãy làm mật ong"};
+exports.honey = function(d){return "tạo mật ong"};
 
 exports.honeyAvailable = function(d){return "mật ong"};
 
-exports.honeyTooltip = function(d){return "Hãy làm mật ong từ phấn hoa"};
+exports.honeyTooltip = function(d){return "Làm mật ong từ phấn hoa"};
 
-exports.honeycombFullError = function(d){return "Tổ ong này không còn chỗ chứa thêm mật ong nữa."};
+exports.honeycombFullError = function(d){return "Tổ ong này không còn chỗ chứa."};
 
-exports.ifCode = function(d){return "Nếu"};
+exports.ifCode = function(d){return "nếu"};
 
-exports.ifInRepeatError = function(d){return "Bạn cần một \"if\" block bên trong một \"repeat\" block. Nếu bạn đang gặp sự cố, hãy thử cấp độ trước đó một lần nữa để xem làm thế nào nó đã làm việc."};
+exports.ifInRepeatError = function(d){return "Bạn cần một khối \"if\" lồng trong khối \"repeat\". Nếu có sự cố, hãy thử lại vòng trước lần nữa để xem nó thực hiện thế nào."};
 
-exports.ifPathAhead = function(d){return "Nếu có đường ở phía trước"};
+exports.ifPathAhead = function(d){return "nếu có đường ở phía trước"};
 
-exports.ifTooltip = function(d){return "Nếu có một con đường theo hướng được chỉ định, sau đó làm một số hành động."};
+exports.ifTooltip = function(d){return "Nếu có đường ở hướng được xem xét, thì thực hiện các lệnh."};
 
-exports.ifelseTooltip = function(d){return "Nếu có đường đi theo hướng được định sẵn, thực hiện hành động trong khối lệnh đầu tiên. Nếu không, thực hiện hành động trong khối lệnh thứ hai."};
+exports.ifelseTooltip = function(d){return "Nếu có đường ở hướng được xét, thực hiện khối lệnh đầu tiên. Nếu không, thực hiện khối lệnh thứ hai."};
 
-exports.ifFlowerTooltip = function(d){return "Nếu đây là một bông hoa/một tổ ong có sẵn theo chỉ định, thì hãy thực hiện một vài hành động sau đó."};
+exports.ifFlowerTooltip = function(d){return "Nếu có một bông hoa hoặc một tổ ong ở hướng được xem xét, thì thực hiện các lệnh ..."};
 
-exports.ifelseFlowerTooltip = function(d){return "Nếu ở đây có sẵn một bông hoa/ một tổ ong, hãy thực hiện hành động của block đầu tiên. Nếu không được, thì thực hiện hành động đối với block thứ hai."};
+exports.ifelseFlowerTooltip = function(d){return "Nếu có một bông hoa hoặc một tổ ong ở hướng được xem xét, thì thực hiện khối lệnh đầu tiên. Nếu không có, thì thực hiện khối lệnh thứ hai."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Bạn đã sử dụng đúng các lệnh, nhưng bạn cần tạo đúng số lượng mật ong."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Bạn đã sử dụng đúng các lệnh, nhưng cần thu lượm đúng số lượng phấn hoa."};
 
 exports.make = function(d){return "Làm cho/ tạo/ khiến cho"};
 
-exports.moveBackward = function(d){return "Di chuyển lại lúc trước"};
+exports.moveBackward = function(d){return "Lùi lại"};
 
-exports.moveEastTooltip = function(d){return "Move me east one space."};
+exports.moveEastTooltip = function(d){return "Dịch chuyển/ di chuyển cho tớ một không gian phía đông."};
 
 exports.moveForward = function(d){return "Tiến một bước"};
 
 exports.moveForwardTooltip = function(d){return "Di chuyển tôi về phía trước một bước."};
 
-exports.moveNorthTooltip = function(d){return "Move me north one space."};
+exports.moveNorthTooltip = function(d){return "Dịch chuyển/ di chuyển cho tớ một không gian phía bắc."};
 
-exports.moveSouthTooltip = function(d){return "Move me south one space."};
+exports.moveSouthTooltip = function(d){return "Dịch chuyển/ di chuyển cho tớ một không gian phía nam."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "Dịch chuyển/ di chuyển cho tớ tiến tới/ lùi lại một khoảng không gian."};
 
-exports.moveWestTooltip = function(d){return "Move me west one space."};
+exports.moveWestTooltip = function(d){return "Dịch chuyển/ di chuyển cho tớ một không gian phía tây."};
 
-exports.nectar = function(d){return "get nectar"};
+exports.nectar = function(d){return "lấy được mật hoa/ phấn hoa"};
 
-exports.nectarRemaining = function(d){return "nectar"};
+exports.nectarRemaining = function(d){return "phấn hoa/ mật hoa"};
 
-exports.nectarTooltip = function(d){return "Get nectar from a flower"};
+exports.nectarTooltip = function(d){return "Lấy phấn hoa từ một bông hoa"};
 
 exports.nextLevel = function(d){return "Chúc mừng! Bạn đã hoàn thành câu đố này."};
 
@@ -13101,9 +13130,9 @@ exports.noPathLeft = function(d){return "không có đường ở bên trái"};
 
 exports.noPathRight = function(d){return "không có đường ở bên phải"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "Bạn chỉ có thể lấy được phấn hoa từ một bông hoa."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "Bạn chỉ có thể làm mật ong tại một tổ ong."};
 
 exports.numBlocksNeeded = function(d){return "Câu đố này có thể được giải quyết với %1 khối."};
 
@@ -13127,7 +13156,7 @@ exports.removeStack = function(d){return "Loại bỏ các ngăn xếp của "+v
 
 exports.removeSquare = function(d){return "xóa ô vuông"};
 
-exports.repeatCarefullyError = function(d){return "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end."};
+exports.repeatCarefullyError = function(d){return "Để giải quyết điều này,hãy suy nghĩ thật kỹ lưỡng về mô hình của hai bước di chuyển và một bước ngoặt để \"lặp lại\" một khối/ block. Điều đó sẽ ổn để có một turn thêm vào lúc cuối."};
 
 exports.repeatUntil = function(d){return "lặp lại cho đến khi"};
 
@@ -13135,11 +13164,11 @@ exports.repeatUntilBlocked = function(d){return "khi có đường phía trướ
 
 exports.repeatUntilFinish = function(d){return "lặp lại đến khi hoàn thành"};
 
-exports.step = function(d){return "Step"};
+exports.step = function(d){return "Bước/ từng bước thực hiện"};
 
-exports.totalHoney = function(d){return "total honey"};
+exports.totalHoney = function(d){return "Tổng số mật ong"};
 
-exports.totalNectar = function(d){return "total nectar"};
+exports.totalNectar = function(d){return "Tổng số phấn hoa/ mật hoa"};
 
 exports.turnLeft = function(d){return "Rẽ Trái"};
 
@@ -13147,19 +13176,19 @@ exports.turnRight = function(d){return "Rẽ Phải"};
 
 exports.turnTooltip = function(d){return "Quay tôi sang trái hoặc phải 90 độ."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "Hãy đảm bảo rằng bạn đã kiểm tra tất cả các đám mây để biết được trong đó là những bông hoa hay những tổ ong."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "Hãy đảm bảo rằng bạn đã kiểm tra hết tất cả bông hoa màu tím để biết chúng có phấn hoa bên trong"};
 
-exports.whileMsg = function(d){return "Trong khi/Cùng lúc đó"};
+exports.whileMsg = function(d){return "Trong khi "};
 
 exports.whileTooltip = function(d){return "Lặp lại các hành động trong câu lệnh cho đến khi có kết quả."};
 
-exports.word = function(d){return "Find the word"};
+exports.word = function(d){return "Tìm các từ"};
 
 exports.yes = function(d){return "Có"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "Bạn hãy đánh vần"};
 
 
 },{"messageformat":68}],57:[function(require,module,exports){

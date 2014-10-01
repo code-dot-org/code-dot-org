@@ -1,0 +1,17 @@
+name '4-5 Algorithms Match 1'
+title 'Matching'
+banner ''
+description 'Match the steps in the Dice Race game to the order that they should appear in the algorithm.'
+#height '100'
+
+question '<h4>1)</h4>'
+answer '<h4>Set Player 1 score to 0</h4>'
+
+question '<h4>2)</h4>'
+answer '<h4>Player 1 rolls die</h4>'
+
+question '<h4>3)</h4>'
+answer '<h4>Add Player 1 roll to total score</h4>'
+
+question '<h4>4)</h4>'
+answer '<h4>Compare player scores to see who wins</h4>'

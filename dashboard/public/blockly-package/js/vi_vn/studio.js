@@ -166,6 +166,20 @@ var codeKeyDown = function(e) {
   }
 };
 
+BlocklyApps.toggleRunReset = function(button) {
+  var showRun = (button === 'run');
+  if (button !== 'run' && button !== 'reset') {
+    throw "Unexpected input";
+  }
+
+  var run = document.getElementById('runButton');
+  var reset = document.getElementById('resetButton');
+  run.style.display = showRun ? 'inline-block' : 'none';
+  run.disabled = !showRun;
+  reset.style.display = !showRun ? 'inline-block' : 'none';
+  reset.disabled = showRun;
+};
+
 /**
  * Common startup tasks for all apps.
  */
@@ -177,6 +191,7 @@ BlocklyApps.init = function(config) {
   BlocklyApps.share = config.share;
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
+  BlocklyApps.sendToPhone = config.sendToPhone;
   BlocklyApps.noPadding = config.no_padding;
 
   BlocklyApps.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
@@ -252,8 +267,11 @@ BlocklyApps.init = function(config) {
 
       belowViz.appendChild(feedback.createSharingDiv({
         response: {
-          level_source: window.location
+          level_source: window.location,
+          level_source_id: config.level_source_id,
+          phone_share_url: config.send_to_phone_url
         },
+        sendToPhone: config.sendToPhone,
         twitter: config.twitter
       }));
 
@@ -355,19 +373,26 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
+    BlocklyApps.editor = window.ace.edit('codeTextbox');
+    BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
+    BlocklyApps.editor.setOptions({
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true
+    });
+
     var codeTextbox = document.getElementById('codeTextbox');
+
+    var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
     var codeFunctions = config.level.codeFunctions;
     // Insert hint text from level codeFunctions into editCode area
     if (codeFunctions) {
-      var hintText = "";
+      var hintText = '';
       for (var i = 0; i < codeFunctions.length; i++) {
-        hintText = hintText + " " + codeFunctions[i].func + "();";
+        hintText += " " + codeFunctions[i].func + "();";
       }
-      var html = utils.escapeHtml(msg.typeFuncs()).replace('%1', hintText);
-      codeTextbox.innerHTML += '// ' + html + '<br><br><br>';
+      startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
     }
-    // Needed to prevent blockly from swallowing up the backspace key
-    codeTextbox.addEventListener('keydown', codeKeyDown, true);
+    BlocklyApps.editor.setValue(startText);
   }
 
   BlocklyApps.Dialog = config.Dialog;
@@ -486,6 +511,7 @@ BlocklyApps.init = function(config) {
   }
 
   if (config.level.editCode) {
+    // Swap the visibility of the codeText element and the blocklyDiv
     document.getElementById('codeTextbox').style.display = 'block';
     div.style.display = 'none';
   }
@@ -854,6 +880,7 @@ BlocklyApps.displayFeedback = function(options) {
   options.Dialog = BlocklyApps.Dialog;
   options.onContinue = onContinue;
   options.backToPreviousLevel = backToPreviousLevel;
+  options.sendToPhone = BlocklyApps.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
@@ -909,8 +936,7 @@ BlocklyApps.report = function(options) {
  */
 BlocklyApps.resetButtonClick = function() {
   onResetPressed();
-  document.getElementById('runButton').style.display = 'inline-block';
-  document.getElementById('resetButton').style.display = 'none';
+  BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
   Blockly.mainWorkspace.setEnableToolbox(true);
   Blockly.mainWorkspace.traceOn(false);
@@ -1956,7 +1982,6 @@ exports.createSharingDiv = function(options) {
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
-    options.sendToPhone = true;
   }
 
   var sharingDiv = document.createElement('div');
@@ -1975,17 +2000,22 @@ exports.createSharingDiv = function(options) {
 
 //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
-  if (sharingPhone) {
+  if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
         sendToPhone.setAttribute('style', 'display:inline-block');
-        var phone = $("#phone");
-        phone.mask("(999) 999-9999");
-        phone.focus();
+        var phone = $(sharingDiv.querySelector("#phone"));
+        var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
+        submitButton.disabled = true;
+        phone.mask('(000) 000-0000',{
+            onComplete:function(){if(!submitted) submitButton.disabled=false;},
+            onChange: function(){submitButton.disabled=true;}
+        });
+        phone.focus();
         dom.addClickTouchEvent(submitButton, function() {
-          var phone = $("#phone");
+          var phone = $(sharingDiv.querySelector("#phone"));
           var params = jQuery.param({
             level_source: options.response.level_source_id,
             phone: phone.val()
@@ -1993,6 +2023,7 @@ exports.createSharingDiv = function(options) {
           $(submitButton).val("Sending..");
           phone.prop('readonly', true);
           submitButton.disabled = true;
+          submitted = true;
           jQuery.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text("Sent!");
@@ -12392,8 +12423,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -13982,7 +14012,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/vi_vn/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n    // ', escape((37,  msg.typeCode() )), '\n    <br>\n    // ', escape((39,  msg.typeHint() )), '\n    <br>\n  </div>\n');42; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (46,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((52,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((53,  msg.runProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((57,  msg.resetProgram() )), '</div>\n        <img src="', escape((58,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');60; if (data.controls) { ; buf.push('\n      ', (61,  data.controls ), '\n      ');62; } ; buf.push('\n      ');63; if (data.extraControlRows) { ; buf.push('\n      ', (64,  data.extraControlRows ), '\n      ');65; } ; buf.push('\n    </div>\n\n    ');68; instructions() ; buf.push('\n    ');69; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((75,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((76,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((78,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((80,  data.blockCounterClass )), '>\n          ', escape((81,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((84,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((87,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');93; codeArea() ; buf.push('\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n  </div>\n');38; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (42,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((48,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((49,  msg.runProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((53,  msg.resetProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');56; if (data.controls) { ; buf.push('\n      ', (57,  data.controls ), '\n      ');58; } ; buf.push('\n      ');59; if (data.extraControlRows) { ; buf.push('\n      ', (60,  data.extraControlRows ), '\n      ');61; } ; buf.push('\n    </div>\n\n    ');64; instructions() ; buf.push('\n    ');65; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');89; codeArea() ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -14235,7 +14265,7 @@ exports.catLoops = function(d){return "Vòng lặp"};
 
 exports.catMath = function(d){return "Thuật toán"};
 
-exports.catProcedures = function(d){return "Chức năng"};
+exports.catProcedures = function(d){return "Các hàm"};
 
 exports.catText = function(d){return "văn bản"};
 
@@ -14261,17 +14291,17 @@ exports.end = function(d){return "kết thúc"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Miếng ghép được \"Lặp lại\" hay \"Nếu\" cần có những miếng ghép bên trong để hoạt động. Đảm bảo là miếng gạch đó khớp hoàn toàn phần ở trong của miếng gạch kia."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Chức năng của block cần phải có block khác bên trong để khiến nó hoạt động."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Khối \"hàm\"  cần có các khối lệnh bên trong để khiến nó hoạt động."};
 
-exports.extraTopBlocks = function(d){return "Bạn có khối phụ không gắn liền với một sự kiện khối."};
+exports.extraTopBlocks = function(d){return "Bạn có các khối tự do. Ý của bạn là để đính kèm chúng vào khối \"khi chạy\"?"};
 
 exports.finalStage = function(d){return "Chúc mừng. Bạn vừa hoàn thành xong bước cuối cùng."};
 
-exports.finalStageTrophies = function(d){return "Chúc mừng! Bạn vừa hoàn thành bước cuối cùng và dành danh hiệu. "+v(d,"numTrophies")+" nhiều."};
+exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"vi",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.finish = function(d){return "Hoàn Thành"};
 
-exports.generatedCodeInfo = function(d){return "Ngay cả các trường đại học giảng dạy dựa trên block- mã hóa (ví dụ: "+v(d,"berkeleyLink")+" "+v(d,"harvardLink")+"). Tuy nhiên, dưới mui xe, các khối bạn đã lắp ráp có thể cũng được hiển thị trong JavaScript, phần lớn của thế giới rộng rãi sử dụng mã hóa ngôn ngữ:"};
+exports.generatedCodeInfo = function(d){return "Các trường đại học hàng đầu cũng dạy lập trình dựa trên \"khối lệnh\" (block) (như: "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Tuy nhiên, để hổ trợ, các \"khối lệnh\" cũng được hiển thị trong ngôn ngữ JavaScript, ngôn ngữ lập trình thông dụng nhất:"};
 
 exports.hashError = function(d){return "Xin lỗi, '%1' không tương ứng với bất kì chương trình đã lưu."};
 
@@ -14279,25 +14309,25 @@ exports.help = function(d){return "Trợ Giúp"};
 
 exports.hintTitle = function(d){return "Gợi ý:"};
 
-exports.jump = function(d){return "nhảy/cú nhảy"};
+exports.jump = function(d){return "nhảy"};
 
 exports.levelIncompleteError = function(d){return "Bạn đã dùng tất cả các khối cần thiết, nhưng không đúng cách."};
 
 exports.listVariable = function(d){return "danh sách"};
 
-exports.makeYourOwnFlappy = function(d){return "Tạo lấy một bản Flappy Bird của riêng bạn"};
+exports.makeYourOwnFlappy = function(d){return "Tự tạo game Flappy Bird của riêng bạn"};
 
-exports.missingBlocksErrorMsg = function(d){return "Thử dùng một hoặc nhiều khối bên dưới để giải quyết trò này."};
+exports.missingBlocksErrorMsg = function(d){return "Thử dùng một hoặc nhiều khối được cho để giải quyết câu này."};
 
-exports.nextLevel = function(d){return "Chúc mừng! Bạn đã hoàn thành trò số "+v(d,"puzzleNumber")+"."};
+exports.nextLevel = function(d){return "Chúc mừng! Bạn đã hoàn thành câu số "+v(d,"puzzleNumber")+"."};
 
 exports.nextLevelTrophies = function(d){return "Chúc mừng! Bạn đã hoàn thành Câu đố "+v(d,"puzzleNumber")+" và chiến thắng "+v(d,"numTrophies")+"."};
 
 exports.nextStage = function(d){return "Chúc mừng! Bạn đã hoàn thành xong "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Chúc mừng! Bạn đã vượt qua vòng "+v(d,"stageNumber")+" và giành được "+p(d,"numTrophies",0,"vi",{"one":"một danh hiệu","other":n(d,"numTrophies")+" danh hiệu"})+"."};
+exports.nextStageTrophies = function(d){return "Chúc mừng! Bạn đã vượt qua vòng "+v(d,"stageName")+" và giành được "+p(d,"numTrophies",0,"vi",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.numBlocksNeeded = function(d){return "Chúc mừng! Bạn đã hoàn thành câu đố "+v(d,"puzzleNumber")+". Nhưng bạn thật sự chỉ cần "+v(d,"numBlocks")+" khối thôi ."};
+exports.numBlocksNeeded = function(d){return "Chúc mừng! Bạn đã hoàn thành câu đố "+v(d,"puzzleNumber")+". Nhưng bạn thật sự chỉ cần "+p(d,"numBlocks",0,"vi",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" khối thôi ."};
 
 exports.numLinesOfCodeWritten = function(d){return "Bạn vừa mới viết "+p(d,"numLines",0,"vi",{"one":"1 dòng","other":n(d,"numLines")+" dòng"})+" mã!"};
 
@@ -14378,111 +14408,111 @@ exports.genericFeedback = function(d){return "Nhìn xem bằng cách nào bạn 
 
 },{"messageformat":53}],41:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.vi=function(n){return "other"}
-exports.actor = function(d){return "actor"};
+exports.actor = function(d){return "diễn viên"};
 
 exports.catActions = function(d){return "hành động"};
 
 exports.catControl = function(d){return "Vòng lặp"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Các sự kiện"};
 
 exports.catLogic = function(d){return "Logic"};
 
 exports.catMath = function(d){return "Thuật toán"};
 
-exports.catProcedures = function(d){return "Hàm số"};
+exports.catProcedures = function(d){return "Các hàm"};
 
 exports.catText = function(d){return "văn bản"};
 
 exports.catVariables = function(d){return "Các biến"};
 
-exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
+exports.changeScoreTooltip = function(d){return "Thêm vào hoặc bớt đi một điểm từ số điểm đang có."};
 
-exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
+exports.changeScoreTooltipK1 = function(d){return "Thêm một điểm vào điểm số hiện có."};
 
 exports.continue = function(d){return "Tiếp tục"};
 
-exports.decrementPlayerScore = function(d){return "remove point"};
+exports.decrementPlayerScore = function(d){return "loại bớt đi điểm"};
 
-exports.defaultSayText = function(d){return "type here"};
+exports.defaultSayText = function(d){return "gõ vào đây"};
 
-exports.emotion = function(d){return "mood"};
+exports.emotion = function(d){return "tâm trạng/ tính tình"};
 
-exports.finalLevel = function(d){return "Chúc mừng! Bạn đã giải quyết các câu đố cuối cùng."};
+exports.finalLevel = function(d){return "Chúc mừng! Bạn đã giải quyết được câu đố cuối cùng."};
 
-exports.hello = function(d){return "hello"};
+exports.hello = function(d){return "Xin chào"};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "Chào cả thế giới!"};
 
-exports.incrementPlayerScore = function(d){return "điểm"};
+exports.incrementPlayerScore = function(d){return "điểm số ghi được"};
 
-exports.makeProjectileDisappear = function(d){return "disappear"};
+exports.makeProjectileDisappear = function(d){return "biến mất/ thoắt ẩn"};
 
-exports.makeProjectileBounce = function(d){return "bounce"};
+exports.makeProjectileBounce = function(d){return "Dòng banh/ tung"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "hãy làm cho quả cầu lửa biến thành màu xanh nước biển"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "hãy làm cho quả cầu lửa biến thành màu tím"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "hãy làm cho quả cầu lửa biến thành màu đỏ"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "hãy làm cho trái tim thành màu vàng"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "hãy làm cho trái tim thành màu tím"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "hãy làm cho trái tim biến thành màu đỏ"};
 
-exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
+exports.makeProjectileTooltip = function(d){return "Hãy làm cho viên đạn chỉ cần va chạm biến mất hoặc dội ngược trở lại."};
 
 exports.makeYourOwn = function(d){return "Make Your Own Story"};
 
-exports.moveDirectionDown = function(d){return "down"};
+exports.moveDirectionDown = function(d){return "xuống"};
 
-exports.moveDirectionLeft = function(d){return "left"};
+exports.moveDirectionLeft = function(d){return "trái/ bên trái"};
 
-exports.moveDirectionRight = function(d){return "right"};
+exports.moveDirectionRight = function(d){return "phải/ bên phải"};
 
-exports.moveDirectionUp = function(d){return "up"};
+exports.moveDirectionUp = function(d){return "trên/ lên"};
 
-exports.moveDirectionRandom = function(d){return "bất kỳ"};
+exports.moveDirectionRandom = function(d){return "ngẫu nhiên"};
 
-exports.moveDistance25 = function(d){return "25 pixels"};
+exports.moveDistance25 = function(d){return "25 pixels/ 25 điểm ảnh"};
 
-exports.moveDistance50 = function(d){return "50 pixels"};
+exports.moveDistance50 = function(d){return "50 pixels/ 50 điểm ảnh"};
 
-exports.moveDistance100 = function(d){return "100 pixels"};
+exports.moveDistance100 = function(d){return "100 pixels/ 100 điểm ảnh"};
 
-exports.moveDistance200 = function(d){return "200 pixels"};
+exports.moveDistance200 = function(d){return "200 pixels/ 200 điểm ảnh"};
 
-exports.moveDistance400 = function(d){return "400 pixels"};
+exports.moveDistance400 = function(d){return "400 pixels/ 400 điểm ảnh"};
 
 exports.moveDistancePixels = function(d){return "các điểm ảnh"};
 
-exports.moveDistanceRandom = function(d){return "random pixels"};
+exports.moveDistanceRandom = function(d){return "điểm ảnh ngẫu nhiên"};
 
-exports.moveDistanceTooltip = function(d){return "Move a character a specific distance in the specified direction."};
+exports.moveDistanceTooltip = function(d){return "Di chuyển một diễn viên một khoảng cách cụ thể theo đúng hướng chỉ định."};
 
-exports.moveSprite = function(d){return "move"};
+exports.moveSprite = function(d){return "di chuyển/ dịch chuyển"};
 
-exports.moveSpriteN = function(d){return "move actor "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "di chuyển diễn viên "+v(d,"spriteIndex")};
 
 exports.moveDown = function(d){return "di chuyển xuống"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Di chuyển một diễn viên xuống."};
 
 exports.moveLeft = function(d){return "qua trái"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Di chuyển một diễn viên sang bên trái."};
 
 exports.moveRight = function(d){return "qua phải"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Di chuyển một diễn viên sang bên phải."};
 
 exports.moveUp = function(d){return "di chuyển lên"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Di chuyển một diễn viên lên trên."};
 
-exports.moveTooltip = function(d){return "Move a character."};
+exports.moveTooltip = function(d){return "Di chuyển một diễn viên."};
 
 exports.nextLevel = function(d){return "Chúc mừng! Bạn đã hoàn thành câu đố này."};
 
@@ -14490,7 +14520,7 @@ exports.no = function(d){return "Không"};
 
 exports.numBlocksNeeded = function(d){return "Câu đố này có thể được giải quyết với %1 khối."};
 
-exports.ouchExclamation = function(d){return "Ouch!"};
+exports.ouchExclamation = function(d){return "ộp!"};
 
 exports.playSoundCrunch = function(d){return "Phát âm thanh \"lạo xạo\""};
 
@@ -14510,33 +14540,33 @@ exports.playSoundRubber = function(d){return "phát âm thanh cao su"};
 
 exports.playSoundSlap = function(d){return "phát âm thanh slap"};
 
-exports.playSoundTooltip = function(d){return "Phát âm thanh tự chọn."};
+exports.playSoundTooltip = function(d){return "Phát âm thanh đã chọn."};
 
-exports.playSoundWinPoint = function(d){return "phát âm thanh giành chiến thắng 1 điểm"};
+exports.playSoundWinPoint = function(d){return "phát âm thanh thắng 1 điểm"};
 
-exports.playSoundWinPoint2 = function(d){return "phát âm thanh giành chiến thắng 2 điểm"};
+exports.playSoundWinPoint2 = function(d){return "phát âm thanh thắng 2 điểm"};
 
 exports.playSoundWood = function(d){return "phát âm thanh gỗ"};
 
-exports.positionOutTopLeft = function(d){return "to the above top left position"};
+exports.positionOutTopLeft = function(d){return "đến vị trí ở đầu trên phía bên trái"};
 
-exports.positionOutTopRight = function(d){return "to the above top right position"};
+exports.positionOutTopRight = function(d){return "đến vị trí ở đầu trên phía bên phải"};
 
-exports.positionTopOutLeft = function(d){return "to the top outside left position"};
+exports.positionTopOutLeft = function(d){return "đến vị trí ở bên ngoài phía bên trái"};
 
-exports.positionTopLeft = function(d){return "to the top left position"};
+exports.positionTopLeft = function(d){return "đến vị trí ở trên phía bên trái"};
 
-exports.positionTopCenter = function(d){return "to the top center position"};
+exports.positionTopCenter = function(d){return "đến vị trí ở trên chính giữa"};
 
-exports.positionTopRight = function(d){return "to the top right position"};
+exports.positionTopRight = function(d){return "đến vị trí ở trên phía bên phải"};
 
-exports.positionTopOutRight = function(d){return "to the top outside right position"};
+exports.positionTopOutRight = function(d){return "đến vị trí ở bên ngoài phía trên trái"};
 
-exports.positionMiddleLeft = function(d){return "to the middle left position"};
+exports.positionMiddleLeft = function(d){return "đến vị trí chính giữa/ trung gian bên trái"};
 
-exports.positionMiddleCenter = function(d){return "to the middle center position"};
+exports.positionMiddleCenter = function(d){return "đến vị trí chính giữa trung tâm"};
 
-exports.positionMiddleRight = function(d){return "to the middle right position"};
+exports.positionMiddleRight = function(d){return "đến vị trí chính giữa phía bên phải"};
 
 exports.positionBottomOutLeft = function(d){return "to the bottom outside left position"};
 
@@ -14566,17 +14596,17 @@ exports.projectilePurpleHearts = function(d){return "purple hearts"};
 
 exports.projectileRedHearts = function(d){return "red hearts"};
 
-exports.projectileRandom = function(d){return "bất kỳ"};
+exports.projectileRandom = function(d){return "ngẫu nhiên"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
+exports.reinfFeedbackMsg = function(d){return "Bạn có thể bấm nút \"Thử lại\" để chơi lại."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "Lặp lại mãi mãi"};
 
 exports.repeatDo = function(d){return "thực hiện"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
 
-exports.saySprite = function(d){return "say"};
+exports.saySprite = function(d){return "nói"};
 
 exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
 

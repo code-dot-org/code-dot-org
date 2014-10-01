@@ -269,7 +269,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show new style unplugged level with PDF link' do
-    @controller.expects :slog
+    @controller.expects(:slog).never
 
     sign_out(@admin)
 

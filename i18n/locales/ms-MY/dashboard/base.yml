@@ -32,6 +32,7 @@
     submit: "Tambah petunjuk"
   appname: "Code.org"
   stage: "Peringkat"
+  stage_number: 'Stage %{number}'
   puzzle: "Teka-teki"
   trophies: "Piala"
   courses: "Kursus"
@@ -302,6 +303,8 @@
     classroom_activity: "Cabut aktiviti"
   home:
     title: "Code Studio"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: 'Sudah mendaftar? %{link}'
     student_reg_link: "Daftar Pelajar"
     teacher_reg_link: "Daftar Guru"
@@ -342,6 +345,7 @@
     feedback: "Sediakan maklum balas"
     translate: "Bantu kami menterjemahkan ke bahasa anda"
     support: "Sokongan"
+    support_url: "http://support.code.org"
     tos: "Terma"
     privacy: "Dasar privasi"
     secure: "Versi Dilindungi"
@@ -366,8 +370,14 @@
     autoplay_option: "Video AutoMain"
     download: "Muat turun Video"
   compatability:
-    working: "Kami sedang berusaha menyokong pelayar anda."
-    upgrade: "Sila naik taraf pelayar anda."
+    working:
+      header: "We are working on support for your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
+      hide_this_warning: "Hide this warning"
+    upgrade:
+      header: "Please upgrade your browser."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
+      button: "Take me to the list of supported browsers"
   slow_loading: "Ini memakan masa lebih lama daripada biasa..."
   try_reloading: "Cuba memuat semula halaman"
   next_stage: "Selesai! Teruskan ke tahap seterusnya"
@@ -378,7 +388,7 @@
     title: "Klik 'Mainkan' untuk lihat program saya berfungsi"
     bounce_og_title: "Semak permainan Lantun saya"
     flappy_og_title: "Semak permainan Flappy saya"
-    studio_og_title: "Lihat cerita saya"
+    studio_og_title: "Check out my Play Lab App"
     og_description: "Saya menulis kod sendiri dengan Code.org"
   builder:
     created: "Anda mencipta skrip baru."
@@ -411,6 +421,7 @@
     feedback: "Give Feedback"
     report_bug: "Report Bug"
     support: "Get Help"
+    support_url: "//support.code.org"
   multi:
     wrong_title: "Jawapan yang salah"
     wrong_body: 'Jawapan yang telah anda masukkan adalah tidak betul.  Sila cuba lagi!'

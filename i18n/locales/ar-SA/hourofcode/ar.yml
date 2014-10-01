@@ -4,9 +4,10 @@ ar:
   front_title: انضم إلى أكبر حدث تعليمي في التاريخ ، 2014/8/14
   coming_soon: قريباً
   front_header_banner: انضم إلى أكبر حدث تعليمي في التاريخ ، 2014/8/14
-  front_intro_default: 'إن "ساعة من الكود البرمجي" تعتبر حمله عالمية تصل إلى عشرات الملايين من الطلاب ، في أكثر من مئة وسبعين بلد. يمكن تنظيم حدث "ساعة من الكود البرمجي" من قبل أي شخص وفي أي مكان. دروس مدتها ساعة واحدة متوفرة بأكثر من ثلاثين لغة. الخبرة غير ضرورية.  <strong> للذين تتراوح أعمارهم بين 4 سنوات إلى 104 سنوات.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 170 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>No se necesita experiencia. Para edades entre 4 y 104 años.</strong>'
+  front_watch_video: Watch the new video
   header_menu_resources: الموارد
   header_menu_faq: الأسئلة المتداولة
   header_menu_prizes: الجوائز
@@ -21,14 +22,24 @@ ar:
   country_ro: رومانيا
   country_uk: المملكة المتحدة
   country_us: الولايات المتحدة الأمريكية
+  prizes_all: Prizes for every organizer
+  prizes_every_organizer: Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you
+  prizes_technology: 'One public school in every US state (& Washington DC) will win $10,000 worth of technology'
+  prizes_tech_chats: 50 classrooms will win video chats with very special guests
   n_have_learned_an_hoc: '<h1>#</h1><h3>قد جرَبت</h3><h2>ساعة من الكود البرمجي</h2>'
   anybody_can_learn: أي شخص يستطيع أن يتعلم.
   register_now: سجِّل الآن
   front_join_us_heading: '"ساعة من الكود البرمجي" لكل طالب.'
   front_join_us_description: إن علوم الحاسوب هو أساس لكل طالب. ساعدنا لنقدمه لمئة مليون.
   front_join_us_button: انضم إلينا
-  stats_hoc_2013_heading: 'إحصائيات لا تصدق عن حدث "ساعة من الكود البرمجي" الذي حدث السنة الماضية. في أسبوع واحد فقط:'
-  stats_hoc_2013_image_alt: 'إحصائيات عن "ساعة من الكود البرمجي" الذي حدث في عام 2013'
+  front_join_us_header: Any time during December 8-14, Computer Science Education Week, host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!
+  front_join_us_teacher: Are you a teacher?
+  front_join_us_inspire: Inspire your students with an Hour of Code in your classroom.
+  front_join_us_parent: Are you a parent?
+  front_join_us_ask: Ask your local school to host an Hour of Code.
+  front_join_us_computer_science: Just love computer science?
+  front_join_us_spread: Spread the word in your community. Or organize an Hour of Code event yourself.
+  front_join_us_get_started: "Here's how to get started."
   signup_header: 'اسمح لنا أن نعرف إذا كنت ستستضيف "ساعة من الكود البرمجي"'
   signup_header_ar: Déjanos saber si estas organizando una Hora de Programación
   signup_name_label: اسمُكَ
@@ -45,8 +56,7 @@ ar:
   signup_name_placeholder: اسمُك
   signup_email_placeholder: بريدك الإلكتروني
   signup_organization_name_placeholder: على سبيل المثال ، مدرسة لينكولن الثانوية
-  signup_event_location_placeholder: "الرمز البريدي والبلد أو العنوان الكامل.\r
-    (سوف نستعمل هذا العنوان لوضع دبوس على الخريطة)"
+  signup_event_location_placeholder: "الرمز البريدي والبلد أو العنوان الكامل.\r\n(سوف نستعمل هذا العنوان لوضع دبوس على الخريطة)"
   signup_special_event_details_placeholder: صِف ما يجعل هذا الحدث مميزاً
   signup_send_posters_address_placeholder: لن تتم مشاركة هذا العنوان على خارطتنا
   signup_event_type_in_school: في مدرسة
@@ -57,6 +67,11 @@ ar:
   signup_thank_you_message: أرسلنا لك رسالة تأكيد بالبريد الإلكتروني مع معلومات لمساعدتك على البدء.
   map_header: 'أحداث "ساعة من الكود البرمجي" حول العالم'
   map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
+  meta_tag_og_title: The Hour of Code is coming
+  meta_tag_og_description: The Hour of Code is a global movement reaching tens of millions of students in 200 countries and over 30 languages. Ages 4 to 104.
+  meta_tag_twitter_title: The Hour of Code is coming
+  meta_tag_twitter_description: The Hour of Code is a global movement reaching tens of millions of students in 200 countries and over 30 languages. Ages 4 to 104.
+  twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
   hardware_prizes_form_name_label: اسمُكَ
   hardware_prizes_form_name_placeholder: اسمُكَ
   hardware_prizes_form_email_label: البريد الإلكتروني الخاص بك
@@ -79,7 +94,7 @@ ar:
   hoc_faq_what_is_hoc_q: ما هي ساعة البرمجة؟
   hoc_faq_what_is_hoc_a: "ساعة البرمجة هي مقدمة لعلوم الحاسوب و تدومة ساعة ، مصممة لإزالة الغموض عن مجال البرمجة، وتبين أن أي شخص يمكن أن تتعلم الأساسيات. <a href='http://code.org/learn'> الق نظرة على الدروس</a>، وابحث عن القائمة الجديدة لدورة عام 2014 من ساعة البرمجة."
   hoc_faq_when_is_hoc_q: متى تقام ساعة البرمجة؟
-  hoc_faq_when_is_hoc_a: "حدث ساعة البرمجة سيكون بين 8 و 14 كانون الأول/ديسمبر،من سنة عام 2014. هل هناك <i>ساعة</i>محددة؟ كلا. يمكنك القيام بساعة البرمجة  في أي وقت خلال ذلك الأسبوع. حدث ساعة البرمجة هو مناسبة للاحتفال السنوي <a href='http://csedweek.org'> بأسبوع تعليم علوم الحاسوب</a>."
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 8-14, 2014, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
   hoc_faq_why_cs_q: لماذا علوم الحاسوب؟
   hoc_faq_why_cs_a: "ينبغي على<i>كل</i> طالب الحصول على الفرصة لتعلم علوم الحاسوب. فذلك يساعد على تنمية مهارات حل المشاكل والمنطق والإبداع. بالبدء في وقت مبكر، سوف تتاح للطلاب أسس للنجاح في أي مسار وظيفي خلال القرن الحادي والعشرين. راجع إحصائيات أكثر في <a href='http://code.org'> Code.org</a>."
   hoc_faq_how_participate_q: كيفية القيام بالمشاركة في ساعة البرمجة؟
@@ -115,7 +130,24 @@ ar:
   hoc_faq_need_computers_ar_a: "No. Tenemos tutorales de la Hora de Program.AR que funcionan en PCs, teléfonos inteligentes, tabletas y algunos que no requieren ¡ninguna computadora en absoluto! Tú puedes unirte desde donde quiera que estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i> <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes aprenden mejor con <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares de programación</a>, compartiendo una computadora y trabajando juntos. Anima a tus estudiantes a trabajar en pares. <li><b>Una pantalla proyectada.</b> Si tú tienes un proyector y una computadora conectada a Internet, el grupo entero puede hacer una hora de Program.AR juntos. Mira porciones de videos juntos y toma turnos para resolver acertijos o responder preguntas. <li><b>Desconéctate.</b> Ofrecemos tutoriales que no requieren ninguna computadora en absoluto. </ul>"
   hoc_faq_tutorial_ar_q: ¿Cómo puedo hacer un tutoría de la Hora de Program.AR?
   hoc_faq_tutorial_ar_a: "Si usted está interesado en convertirse en un socio para tutoriales, <a href='/tutorial-guidelines'>vea nuestras directrices e instrucciones</a>. Nos gustaría presentar varias opciones atractivas, pero la meta principal es optimizar la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales."
+  stats_hoc_2013_heading: 'إحصائيات لا تصدق عن حدث "ساعة من الكود البرمجي" الذي حدث السنة الماضية. في أسبوع واحد فقط:'
+  stats_hoc_2013_image_alt: 'إحصائيات عن "ساعة من الكود البرمجي" الذي حدث في عام 2013'
+  stats_growth: It was the fastest to reach 15 million users.
+  stats_tumblr: 'Tumblr: 3.5 years'
+  stats_facebook: 'Facebook: 3 years'
+  stats_twitter: 'Twitter: 2.5 years'
+  stats_pinterest: 'Pinterest: 2 years'
+  stats_instagram: 'Instagram: 14 months'
+  stats_hoc: 'The Hour of Code: 5 days'
+  stats_global: 15 million students in 170 countries learned an Hour of Code.
+  stats_girls_more: More girls tried computer science than in the last 70 years.
+  stats_girls_million: Over 10 million girls in 2013
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
+  stats_michael: 'I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   footer_copyright_message: حقوق الطبع والنشر Code.org عام 2014. جميع الحقوق محفوظة.
   footer_trademark_message: إن ™Hour of Code هي علامة تجارية لصالح Code.org.
+  footer_menu_contact: Contact us
+  footer_menu_support: Support
   footer_menu_terms: شروط
   footer_menu_privacy: سياسة الخصوصية

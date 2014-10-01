@@ -85,30 +85,30 @@
           dân đã san phẳng đất trên cánh đồng để bắt đầu trồng cây.
       2:
         image: notes/stage9_2.jpg
-        text: You have to help her remove all the piles of dirt and fill in all the
-          holes.
+        text: Bạn phải giúp cô ấy loại bỏ các cọc bị bám bẩn và cắm vào các lỗ.
       3:
         image: notes/stage9_3.jpg
-        text: The new blocks remove 1 shovelful of dirt from a pile and fill in 1
-          shovelful of dirt to a hole.
+        text: Các block mới loại bỏ 1 xẻng bụi bẩn từ đống cọc và lấp 1 xẻng bụi bẩn
+          vào một lỗ.
       4:
         image: notes/stage9_4.jpg
-        text: The piles and holes are different sizes, so you have to tell the farmer
-          how many shovelfuls to use.
+        text: Cọc và lỗ có những kích cỡ khác nhau, do đó bạn cần phải hỏi người nông
+          dân cần bao nhiêu xẻng/ cuốc để dùng.
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: Hi, I'm Katie! One of the most exciting things about computer science
-          is that a computer program can be interactive.
+        text: Chào! Tôi là Katie! Bạn biết đấy, một trong những điều thú vị nhất của
+          khoa học máy tính chính là các chương trình của máy tính có thể tương tác
+          với nhau.
       2:
         image: notes/flappy02.jpg
-        text: Any time somebody clicks or taps or types on a computer or phone, that
-          generates an EVENT, and there's some code that decides what to do when an
-          EVENT occurs.
+        text: Bất cứ thời điểm nào khi ai đó clicks hay taps hay gõ trên máy tính
+          hoặc điện thoại, để tạo ra một sự kiện/ EVENT, và đây là một vài mã/ code
+          để đưa ra quyết định phải làm gì khi một sự kiện/ EVENT diễn ra.
       3:
         image: notes/flappy03.jpg
-        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse
-          is clicked, play a sound" '
+        text: 'Ví dụ cụ thể sau: bạn có một sự kiện trên tay/ EVENT-HANDLER có viết
+          "khi chuột máy tính của được bấm, hãy chơi một giai điệu"'
       4:
         image: notes/flappy04.jpg
         text: Have you ever heard of the game FlappyBird? By using Event handlers,
