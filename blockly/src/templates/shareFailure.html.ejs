@@ -1,4 +1,7 @@
 <p id="share-fail-explanation"><%= shareFailure.message %></p>
+
 <% if (shareFailure.contents) { %>
-  <div class="big-quote"><%= shareFailure.contents %></div>
+  <div class="share-fail-excerpt">
+    <pre class="generatedCode"><%= shareFailure.contents %></pre>
+  </div>
 <% } %>
