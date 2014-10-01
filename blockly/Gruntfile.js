@@ -83,6 +83,9 @@ config.clean = {
 };
 
 var ace_suffix = DEV ? '' : '-min';
+var droplet_suffix = DEV ? '' : '.min';
+var requirejs_dir = DEV ? 'full' : 'min';
+
 config.copy = {
   src: {
     files: [
@@ -128,6 +131,24 @@ config.copy = {
         cwd: 'lib/ace/src' + ace_suffix + '-noconflict/',
         src: ['**/*.js'],
         dest: 'build/package/js/ace/'
+      },
+      {
+        expand: true,
+        cwd: 'lib/requirejs/' + requirejs_dir + '/',
+        src: ['require.js'],
+        dest: 'build/package/js/requirejs/'
+      },
+      {
+        expand: true,
+        cwd: 'lib/droplet',
+        src: ['droplet-full' + droplet_suffix + '.js'],
+        dest: 'build/package/js/droplet/'
+      },
+      {
+        expand: true,
+        cwd: 'lib/droplet',
+        src: ['droplet.min.css'],
+        dest: 'build/package/css/droplet/'
       }
     ]
   }

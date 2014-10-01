@@ -22,7 +22,10 @@ var Collidable = require('./collidable');
 var Projectile = require('./projectile');
 var Hammer = require('../hammer');
 var parseXmlElement = require('../xml').parseElement;
+var utils = require('../utils');
+utils.pre_lodash_require();
 var _ = require('../lodash');
+utils.post_lodash_require();
 
 var Direction = tiles.Direction;
 var NextTurn = tiles.NextTurn;
@@ -1385,18 +1388,8 @@ Studio.execute = function() {
   var i;
 
   if (level.editCode) {
-    var codeTextbox = document.getElementById('codeTextbox');
-    code = dom.getText(codeTextbox);
-    // Insert aliases from level codeBlocks into code
-    if (level.codeFunctions) {
-      for (i = 0; i < level.codeFunctions.length; i++) {
-        var codeFunction = level.codeFunctions[i];
-        if (codeFunction.alias) {
-          code = codeFunction.func +
-              " = function() { " + codeFunction.alias + " };" + code;
-        }
-      }
-    }
+    code = utils.generateCodeAliases(level.codeFunctions);
+    code += BlocklyApps.editor.getValue();
   }
 
   var handlers = [];
