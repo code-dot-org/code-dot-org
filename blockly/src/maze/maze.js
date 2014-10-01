@@ -34,9 +34,7 @@ var feedback = require('../feedback.js');
 var dom = require('../dom');
 var utils = require('../utils');
 var mazeUtils = require('./mazeUtils');
-utils.pre_lodash_require();
-var _ = require('../lodash');
-utils.post_lodash_require();
+var _ = utils.getLodash();
 
 var Bee = require('./bee');
 var WordSearch = require('./wordsearch');
