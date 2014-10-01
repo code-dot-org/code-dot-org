@@ -41,17 +41,23 @@ class ActiveSupport::TestCase
     end
   end
 
+  def with_test_locale(locale)
+    original_locale = I18n.default_locale
+    I18n.default_locale = locale
+    yield if block_given?
+    I18n.default_locale = original_locale
+  end
 
   # Based on assert_difference http://api.rubyonrails.org/classes/ActiveSupport/Testing/Assertions.html#method-i-assert_difference
   # just checks using not_equal instead of a numeric difference so you can compare non-numeric things
   def assert_change(expressions, message = nil, &block)
     expressions = Array(expressions)
-    
+
     exps = expressions.map { |e|
       e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
     }
     before = exps.map { |e| e.call }
-    
+
     yield
 
     expressions.zip(exps).each_with_index do |(code, e), i|
@@ -65,12 +71,12 @@ class ActiveSupport::TestCase
   # just checks using equal instead of a numeric difference so you can compare non-numeric things
   def assert_no_change(expressions, message = nil, &block)
     expressions = Array(expressions)
-    
+
     exps = expressions.map { |e|
       e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
     }
     before = exps.map { |e| e.call }
-    
+
     yield
 
     expressions.zip(exps).each_with_index do |(code, e), i|
@@ -83,7 +89,7 @@ end
 
 
 # Helpers for all controller test cases
-class ActionController::TestCase 
+class ActionController::TestCase
   include Devise::TestHelpers
 
   def assert_redirected_to_sign_in

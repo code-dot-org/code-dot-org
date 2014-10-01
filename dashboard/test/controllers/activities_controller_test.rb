@@ -272,7 +272,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     program = "<whatever>"
 
-    level_source = LevelSource.lookup(@script_level.level, program) # creates it, doesn't just look it up, despite the name
+    level_source = LevelSource.find_identical_or_create(@script_level.level, program)
     level_source_image = LevelSourceImage.find_or_create_by(level_source_id: level_source.id) do |ls|
       ls.image = @good_image
     end
@@ -305,7 +305,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "logged in milestone with existing level source and level source image updates image if old image was blank" do
     program = "<whatever>"
 
-    level_source = LevelSource.lookup(@script_level.level, program) # creates it, doesn't just look it up, despite the name
+    level_source = LevelSource.find_identical_or_create(@script_level.level, program)
     level_source_image = LevelSourceImage.find_or_create_by(level_source_id: level_source.id) do |ls|
       ls.image = @blank_image
     end
@@ -337,7 +337,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "logged in milestone with existing level source and level source image does not update image if new image is blank" do
     program = "<whatever>"
 
-    level_source = LevelSource.lookup(@script_level.level, program) # creates it, doesn't just look it up, despite the name
+    level_source = LevelSource.find_identical_or_create(@script_level.level, program)
     level_source_image = LevelSourceImage.find_or_create_by(level_source_id: level_source.id) do |ls|
       ls.image = @good_image
     end
@@ -369,7 +369,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "logged in milestone with existing level source and level source image does not update image if old image is good" do
     program = "<whatever>"
 
-    level_source = LevelSource.lookup(@script_level.level, program) # creates it, doesn't just look it up, despite the name
+    level_source = LevelSource.find_identical_or_create(@script_level.level, program)
     level_source_image = LevelSourceImage.find_or_create_by(level_source_id: level_source.id) do |ls|
       ls.image = @good_image
     end
@@ -594,6 +594,51 @@ class ActivitiesControllerTest < ActionController::TestCase
                          "level_source"=>"http://test.host/sh/#{assigns(:level_source).id}",
                          "design"=>"white_background"}
 
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+  end
+
+  test 'sharing program with swear word returns error' do
+    return unless CDO.webpurify_key
+    assert_does_not_create(LevelSource, GalleryActivity) do
+      post :milestone, user_id: @user.id, script_level_id: @script_level, :program => '<blockXML>shit</blockXML>'
+    end
+    assert_response :success
+    expected_response = {
+        'level_source' => nil,
+        'share_failure' => {
+            'message' => "It looks like there is profanity in it. Try changing the text.",
+            'contents' => 'shit'
+        }
+    }
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+  end
+
+  test 'sharing program with swear word in German rejects word' do
+    return unless CDO.webpurify_key
+    with_test_locale(:de) do
+      assert_does_not_create(LevelSource, GalleryActivity) do
+        post :milestone, user_id: @user.id, script_level_id: @script_level, :program => '<blockXML>scheiße</blockXML>'
+      end
+    end
+    assert_response :success
+    assert(@response.body.include?('scheiße'))
+    expected_response = {'level_source' => nil }
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+  end
+
+  test 'sharing program with phone number' do
+    assert_does_not_create(LevelSource, GalleryActivity) do
+      post :milestone, user_id: @user.id, script_level_id: @script_level, :program => '<blockXML>800-555-5555</blockXML>'
+    end
+    assert_response :success
+
+    expected_response = {
+        'level_source' => nil,
+        'share_failure' => {
+            'message' => "It looks like there is a phone number in it. Try changing the text.",
+            'contents' => '800-555-5555'
+        }
+    }
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 

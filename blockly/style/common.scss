@@ -934,4 +934,31 @@ $modal-image-margin-gap: 10px;
   text-align: center;
 }
 
+.big-quote {
+  position: relative;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.45;
+  color: #6b6b6b;
+  margin: 8px 10px 6px;
+  padding: 18px 38px;
+  width: 412px;
+  max-height: 120px;
+  overflow: scroll;
+}
 
+.big-quote:before {
+  content: "\201C"; // open quote
+  display: block;
+  padding-left: 14px;
+  font-size: 80px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  color: #7e7e7e;
+}
+
+#share-fail-explanation {
+  font-size: 20px;
+}
