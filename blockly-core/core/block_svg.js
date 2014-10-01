@@ -863,9 +863,9 @@ Blockly.BlockSvg.prototype.renderDraw_ = function(iconWidth, inputRows) {
     curY: 0
   }
 
-  this.renderDrawTop_(steps, inputRows.rightEdge);
+  this.renderDrawTop_(steps, inputRows.rightEdge, connectionsXY);
   this.renderDrawRight_(steps, connectionsXY, inputRows, iconWidth);
-  this.renderDrawBottom_(steps);
+  this.renderDrawBottom_(steps, connectionsXY);
   this.renderDrawLeft_(steps);
 
   var pathString = steps.core.join(' ') + '\n' + steps.inline.join(' ');
@@ -882,47 +882,17 @@ Blockly.BlockSvg.prototype.renderDraw_ = function(iconWidth, inputRows) {
     this.svgPathLight_.setAttribute('transform', 'scale(-1 1)');
     this.svgPathDark_.setAttribute('transform', 'translate(1,1) scale(-1 1)');
   }
-
-  this.updateConnections_(connectionsXY, steps.curY);
 };
-
-/**
- * Fix up the connections as part of rendering
- */
-Blockly.BlockSvg.prototype.updateConnections_ = function (connectionsXY, cursorY) {
-  var connectionX = connectionsXY.x + oppositeIfRTL(BS.NOTCH_WIDTH);
-  var connectionY;
-
-  if (this.block_.previousConnection) {
-    // Create previous block connection.
-    connectionY = connectionsXY.y;
-    this.block_.previousConnection.moveTo(connectionX, connectionY);
-    // This connection will be tightened when the parent renders.
-  }
-
-  if (this.block_.nextConnection) {
-    // Create next block connection.
-    connectionY = connectionsXY.y + cursorY + 1;
-    this.block_.nextConnection.moveTo(connectionX, connectionY);
-    if (this.block_.nextConnection.targetConnection) {
-      this.block_.nextConnection.tighten_();
-    }
-  }
-
-  if (this.block_.outputConnection) {
-    // Create output connection.
-    this.block_.outputConnection.moveTo(connectionsXY.x, connectionsXY.y);
-    // This connection will be tightened when the parent renders.
-  }
-}
 
 /**
  * Render the top edge of the block.
  * @param {!Object} steps Current state of our paths
  * @param {number} rightEdge Minimum width of block.
+ * @param {!Object} connectionsXY Location of block.
  * @private
  */
-Blockly.BlockSvg.prototype.renderDrawTop_ = function(steps, rightEdge) {
+Blockly.BlockSvg.prototype.renderDrawTop_ = function(steps, rightEdge,
+  connectionsXY) {
   // Position the cursor at the top-left starting point.
   if (this.squareTopLeftCorner_) {
     steps.core.push('m 0,0');
@@ -945,6 +915,11 @@ Blockly.BlockSvg.prototype.renderDrawTop_ = function(steps, rightEdge) {
     steps.highlight.push('H', BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH);
     steps.core.push(BS.NOTCH_PATH_LEFT);
     steps.highlight.push(BS.NOTCH_PATH_LEFT_HIGHLIGHT);
+    // Create previous block connection.
+    var connectionX = connectionsXY.x + oppositeIfRTL(BS.NOTCH_WIDTH);
+    var connectionY = connectionsXY.y;
+    this.block_.previousConnection.moveTo(connectionX, connectionY);
+    // This connection will be tightened when the parent renders.
   }
   steps.core.push('H', rightEdge);
   steps.highlight.push('H', rightEdge + (Blockly.RTL ? -1 : 0));
@@ -1042,7 +1017,6 @@ Blockly.BlockSvg.prototype.renderDrawRightInputValue_ = function (steps,
     steps.highlight.push('l', (BS.TAB_WIDTH * 0.42) + ',-1.8');
   }
   // Create external input connection.
-  // todo (brent) - move this out
   connectionX = connectionsXY.x + oppositeIfRTL(inputRows.rightEdge + 1);
   connectionY = connectionsXY.y + steps.curY;
   input.connection.moveTo(connectionX, connectionY);
@@ -1058,8 +1032,6 @@ Blockly.BlockSvg.prototype.renderDrawRightDummyInput_ = function (steps,
   var input = row[0];
   var titleX = steps.curX;
   var titleY = steps.curY + BS.TITLE_HEIGHT;
-  // todo (brent) : is there common alignment code i can find between this
-  // and input value
   if (input.align != Blockly.ALIGN_LEFT) {
     var titleRightX = inputRows.rightEdge - input.titleWidth -
       2 * BS.SEP_SPACE_X;
@@ -1094,7 +1066,6 @@ Blockly.BlockSvg.prototype.renderDrawRightNextStatement_ = function(steps,
   }
   var titleX = steps.curX;
   var titleY = steps.curY + BS.TITLE_HEIGHT;
-  // todo (brent) : alignment code again
   if (input.align != Blockly.ALIGN_LEFT) {
     var titleRightX = inputRows.statementEdge - input.titleWidth -
       2 * BS.SEP_SPACE_X;
@@ -1127,7 +1098,6 @@ Blockly.BlockSvg.prototype.renderDrawRightNextStatement_ = function(steps,
     steps.highlight.push('H', inputRows.rightEdgeWithoutInline);
   }
   // Create statement connection.
-  // todo (brent) - move these
   connectionX = connectionsXY.x + oppositeIfRTL(steps.curX);
   connectionY = connectionsXY.y + steps.curY + 1;
   input.connection.moveTo(connectionX, connectionY);
@@ -1195,8 +1165,6 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (steps, inputRows,
         steps.highlightInline.push('l', (BS.TAB_WIDTH * 0.42) + ',-1.8');
       }
       // Create inline input connection.
-
-      // todo (brent) - move this out
       connectionX = connectionsXY.x + oppositeIfRTL(steps.curX + BS.TAB_WIDTH -
         BS.SEP_SPACE_X - input.renderWidth + 1);
 
@@ -1220,13 +1188,21 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (steps, inputRows,
 /**
  * Render the bottom edge of the block.
  * @param {!Object} steps Current state of our paths
+ * @param {!Object} connectionsXY Location of block.
  * @private
  */
-Blockly.BlockSvg.prototype.renderDrawBottom_ = function(steps) {
+Blockly.BlockSvg.prototype.renderDrawBottom_ = function(steps, connectionsXY) {
   steps.core.push(brokenControlPoints());
 
   if (this.block_.nextConnection) {
     steps.core.push('H', BS.NOTCH_WIDTH + ' ' + BS.NOTCH_PATH_RIGHT);
+    // Create next block connection.
+    var connectionX = connectionsXY.x + oppositeIfRTL(BS.NOTCH_WIDTH);
+    var connectionY = connectionsXY.y + steps.curY + 1;
+    this.block_.nextConnection.moveTo(connectionX, connectionY);
+    if (this.block_.nextConnection.targetConnection) {
+      this.block_.nextConnection.tighten_();
+    }
   }
 
   // Should the bottom-left corner be rounded or square?
