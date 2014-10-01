@@ -30,7 +30,7 @@
   - local = Hash.new(false).merge!(local_assigns.delete_if{|_,v|v.nil?})
 
   - send_to_phone = request.location.try(:country_code) == 'US' ||              |
-      (!Rails.env.production? && request.location.try(:country_code) != 'RD') |
+      (!Rails.env.production? && request.location.try(:country_code) == 'RD') |
 
   :javascript
     var level = #{level.to_json};
