@@ -10,7 +10,9 @@ var msg = require('../../locale/current/flappy');
 var commonMsg = require('../../locale/current/common');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
+utils.pre_lodash_require();
 var _ = require('../lodash');
+utils.post_lodash_require();
 
 var FLAPPY_VALUE = '"flappy"';
 var RANDOM_VALUE = 'random';

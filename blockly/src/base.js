@@ -31,7 +31,9 @@ var utils = require('./utils');
 var blockUtils = require('./block_utils');
 var builder = require('./builder');
 var Slider = require('./slider');
+utils.pre_lodash_require();
 var _ = require('./lodash');
+utils.post_lodash_require();
 var constants = require('./constants.js');
 
 //TODO: These should be members of a BlocklyApp instance.
@@ -280,26 +282,38 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
+    /*
     BlocklyApps.editor = window.ace.edit('codeTextbox');
     BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
     BlocklyApps.editor.setOptions({
       enableBasicAutocompletion: true,
       enableLiveAutocompletion: true
     });
+    */
+    window.require(['droplet'], function(droplet) {
+      var displayMessage, examplePrograms, messageElement, onChange, startingText;
+      var palette = utils.generateDropletPalette(config.level.codeFunctions);
+      BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+        mode: 'javascript',
+        palette: palette
+      });
+      // temporary: use prompt icon to switch text/blocks
+      document.getElementById('prompt-icon').addEventListener('click', function() {
+        BlocklyApps.editor.toggleBlocks();
+      });
 
-    var codeTextbox = document.getElementById('codeTextbox');
-
-    var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
-    var codeFunctions = config.level.codeFunctions;
-    // Insert hint text from level codeFunctions into editCode area
-    if (codeFunctions) {
-      var hintText = '';
-      for (var i = 0; i < codeFunctions.length; i++) {
-        hintText += " " + codeFunctions[i].func + "();";
+      var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
+      var codeFunctions = config.level.codeFunctions;
+      // Insert hint text from level codeFunctions into editCode area
+      if (codeFunctions) {
+        var hintText = '';
+        for (var i = 0; i < codeFunctions.length; i++) {
+          hintText += " " + codeFunctions[i].func + "();";
+        }
+        startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
       }
-      startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
-    }
-    BlocklyApps.editor.setValue(startText);
+      BlocklyApps.editor.setValue(startText);
+    });
   }
 
   BlocklyApps.Dialog = config.Dialog;
