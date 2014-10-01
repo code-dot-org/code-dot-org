@@ -124,7 +124,9 @@ var utils = require('./utils');
 var blockUtils = require('./block_utils');
 var builder = require('./builder');
 var Slider = require('./slider');
+utils.pre_lodash_require();
 var _ = require('./lodash');
+utils.post_lodash_require();
 var constants = require('./constants.js');
 
 //TODO: These should be members of a BlocklyApp instance.
@@ -373,26 +375,38 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
+    /*
     BlocklyApps.editor = window.ace.edit('codeTextbox');
     BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
     BlocklyApps.editor.setOptions({
       enableBasicAutocompletion: true,
       enableLiveAutocompletion: true
     });
+    */
+    window.require(['droplet'], function(droplet) {
+      var displayMessage, examplePrograms, messageElement, onChange, startingText;
+      var palette = utils.generateDropletPalette(config.level.codeFunctions);
+      BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+        mode: 'javascript',
+        palette: palette
+      });
+      // temporary: use prompt icon to switch text/blocks
+      document.getElementById('prompt-icon').addEventListener('click', function() {
+        BlocklyApps.editor.toggleBlocks();
+      });
 
-    var codeTextbox = document.getElementById('codeTextbox');
-
-    var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
-    var codeFunctions = config.level.codeFunctions;
-    // Insert hint text from level codeFunctions into editCode area
-    if (codeFunctions) {
-      var hintText = '';
-      for (var i = 0; i < codeFunctions.length; i++) {
-        hintText += " " + codeFunctions[i].func + "();";
+      var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
+      var codeFunctions = config.level.codeFunctions;
+      // Insert hint text from level codeFunctions into editCode area
+      if (codeFunctions) {
+        var hintText = '';
+        for (var i = 0; i < codeFunctions.length; i++) {
+          hintText += " " + codeFunctions[i].func + "();";
+        }
+        startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
       }
-      startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
-    }
-    BlocklyApps.editor.setValue(startText);
+      BlocklyApps.editor.setValue(startText);
+    });
   }
 
   BlocklyApps.Dialog = config.Dialog;
@@ -1967,6 +1981,7 @@ var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 var dom = require('../dom');
 var Hammer = require('../hammer');
+var utils = require('../utils');
 
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
@@ -2996,18 +3011,8 @@ Bounce.execute = function() {
   Bounce.response = null;
 
   if (level.editCode) {
-    var codeTextbox = document.getElementById('codeTextbox');
-    code = dom.getText(codeTextbox);
-    // Insert aliases from level codeBlocks into code
-    if (level.codeFunctions) {
-      for (var i = 0; i < level.codeFunctions.length; i++) {
-        var codeFunction = level.codeFunctions[i];
-        if (codeFunction.alias) {
-          code = codeFunction.func +
-              " = function() { " + codeFunction.alias + " };" + code;
-        }
-      }
-    }
+    code = utils.generateCodeAliases(level.codeFunctions);
+    code += BlocklyApps.editor.getValue();
   }
 
   var codeWallCollided = Blockly.Generator.workspaceToCode(
@@ -3364,7 +3369,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/is_is/bounce":38,"../../locale/is_is/common":39,"../base":2,"../codegen":15,"../dom":17,"../feedback.js":18,"../hammer":19,"../skins":22,"../templates/page.html":30,"../timeoutList":35,"./api":5,"./controls.html":8,"./tiles":12,"./visualization.html":13}],8:[function(require,module,exports){
+},{"../../locale/is_is/bounce":38,"../../locale/is_is/common":39,"../base":2,"../codegen":15,"../dom":17,"../feedback.js":18,"../hammer":19,"../skins":22,"../templates/page.html":30,"../timeoutList":35,"../utils":36,"./api":5,"./controls.html":8,"./tiles":12,"./visualization.html":13}],8:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -4826,8 +4831,7 @@ exports.canContinueToNextLevel = function(feedbackType) {
  */
 var getGeneratedCodeString = function() {
   if (BlocklyApps.editCode) {
-    var codeTextbox = document.getElementById('codeTextbox');
-    return dom.getText(codeTextbox);
+    return BlocklyApps.editor ? BlocklyApps.editor.getValue() : '';
   }
   else {
     return codegen.workspaceCode(Blockly);
@@ -10303,7 +10307,9 @@ if(typeof define == 'function' && define.amd) {
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
+utils.pre_lodash_require();
 var _ = require('./lodash');
+utils.post_lodash_require();
 
 /**
  * Create the textual XML for a math_number block.
@@ -11080,8 +11086,28 @@ exports.clearTimeouts = function () {
 };
 
 },{}],36:[function(require,module,exports){
-var _ = require('./lodash');
 var xml = require('./xml');
+var savedAmd;
+/**
+ * Special functions for pulling in lodash to avoid node/requirejs issue.
+ */
+exports.pre_lodash_require = function() {
+  if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
+    savedAmd = define.amd;
+    define.amd = 'dont_call_requirejs_define';
+  }
+};
+
+exports.post_lodash_require = function() {
+  if (typeof define == 'function' && savedAmd) {
+    define.amd = savedAmd;
+    savedAmd = null;
+  }
+};
+
+exports.pre_lodash_require();
+var _ = require('./lodash');
+exports.post_lodash_require();
 
 exports.shallowCopy = function(source) {
   var result = {};
@@ -11191,6 +11217,138 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
     }
     return numVal(text);
   };
+};
+
+/**
+ * Generate code aliases in Javascript based on some level data.
+ */
+exports.generateCodeAliases = function (codeFunctions) {
+  var code = '';
+  // Insert aliases from level codeBlocks into code
+  if (codeFunctions) {
+    for (var i = 0; i < codeFunctions.length; i++) {
+      var codeFunction = codeFunctions[i];
+      if (codeFunction.alias) {
+        code += codeFunction.func +
+            " = function() { " + codeFunction.alias + " };\n";
+      }
+    }
+  }
+  return code;
+};
+
+/**
+ * Generate a palette for the droplet editor based on some level data.
+ */
+exports.generateDropletPalette = function (codeFunctions) {
+  // TODO: figure out localization for droplet scenario
+  var palette = [
+    {
+      name: 'Control',
+      color: 'orange',
+      blocks: [
+        {
+          block: 'for (var i = 0; i < 4; i++) {\n  __;\n}',
+          title: 'Do something multiple times'
+        }, {
+          block: 'if (__) {\n  __;\n}',
+          title: 'Do something only if a condition is true'
+        }, {
+          block: 'if (__) {\n  __;\n} else {\n  __;\n}',
+          title: 'Do something if a condition is true, otherwise do something else'
+        }, {
+          block: 'while (__) {\n  __;\n}',
+          title: 'Repeat something while a condition is true'
+        }
+      ]
+    }, {
+      name: 'Math',
+      color: 'green',
+      blocks: [
+        {
+          block: 'var x = __;',
+          title: 'Create a variable for the first time'
+        }, {
+          block: 'x = __;',
+          title: 'Reassign a variable'
+        }, {
+          block: '__ + __',
+          title: 'Add two numbers'
+        }, {
+          block: '__ - __',
+          title: 'Subtract two numbers'
+        }, {
+          block: '__ * __',
+          title: 'Multiply two numbers'
+        }, {
+          block: '__ / __',
+          title: 'Divide two numbers'
+        }, {
+          block: '__ === __',
+          title: 'Compare two numbers'
+        }, {
+          block: '__ > __',
+          title: 'Compare two numbers'
+        }, {
+          block: '__ < __',
+          title: 'Compare two numbers'
+        }, {
+          block: 'random(1, 100)',
+          title: 'Get a random number in a range'
+        }, {
+          block: 'round(__)',
+          title: 'Round to the nearest integer'
+        }, {
+          block: 'abs(__)',
+          title: 'Absolute value'
+        }, {
+          block: 'max(__, __)',
+          title: 'Absolute value'
+        }, {
+          block: 'min(__, __)',
+          title: 'Absolute value'
+        }
+      ]
+    }, {
+      name: 'Functions',
+      color: 'violet',
+      blocks: [
+        {
+          block: 'function myFunction() {\n  __;\n}',
+          title: 'Create a function without an argument'
+        }, {
+          block: 'function myFunction(n) {\n  __;\n}',
+          title: 'Create a function with an argument'
+        }, {
+          block: 'myFunction()',
+          title: 'Use a function without an argument'
+        }, {
+          block: 'myFunction(n)',
+          title: 'Use a function with argument'
+        }
+      ]
+    }
+  ];
+
+  var appPaletteCategory = {
+    name: 'Actions',
+    color: 'blue',
+    blocks: []
+  };
+
+  if (codeFunctions) {
+    for (var i = 0; i < codeFunctions.length; i++) {
+      var blockPair = {
+        block: codeFunctions[i].func + "();",
+        title: codeFunctions[i].alias
+      };
+      appPaletteCategory.blocks[i] = blockPair;
+    }
+  }
+
+  palette.unshift(appPaletteCategory);
+
+  return palette;
 };
 
 },{"./lodash":20,"./xml":37}],37:[function(require,module,exports){
