@@ -538,8 +538,7 @@ exports.canContinueToNextLevel = function(feedbackType) {
  */
 var getGeneratedCodeString = function() {
   if (BlocklyApps.editCode) {
-    var codeTextbox = document.getElementById('codeTextbox');
-    return dom.getText(codeTextbox);
+    return BlocklyApps.editor ? BlocklyApps.editor.getValue() : '';
   }
   else {
     return codegen.workspaceCode(Blockly);
