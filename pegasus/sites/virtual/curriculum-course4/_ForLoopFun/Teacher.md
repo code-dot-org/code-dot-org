@@ -85,7 +85,7 @@ Here are some questions that you can ask in review:
 
 [tip]
 
-# Teaching Tip
+# Lesson Tip
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
 [/tip]
@@ -146,7 +146,7 @@ Sometimes we want to repeat things a certain number of times, but we want to kee
 
 [tip]
 
-# Teaching Tip  
+# Lesson Tip  
 When you play this game, it's as if you're running through a loop like this
 
 for (x=start value; x <= stop value; x = x + interval){
@@ -173,7 +173,7 @@ It may be difficult for young students to understand this written in pseudocode,
 
 [tip]
 
-# Teaching Tip  
+# Lesson Tip  
 Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future.  Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow-partner.
 
 [/tip]
