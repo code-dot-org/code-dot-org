@@ -139,7 +139,7 @@ class User < ActiveRecord::Base
     def self.name_from_omniauth(raw_name)
       return raw_name if raw_name.blank? || raw_name.is_a?(String) # some services just give us a string
       # clever returns a hash instead of a string for name
-      "#{raw_name['first']} #{raw_name['last']}".strip
+      "#{raw_name['first']} #{raw_name['last']}".squish
     end
 
     where(auth.slice(:provider, :uid)).first_or_create do |user|
