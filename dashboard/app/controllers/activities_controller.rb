@@ -1,4 +1,5 @@
 require 'cdo/regexp'
+require 'cdo/geocoder'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
@@ -76,7 +77,7 @@ class ActivitiesController < ApplicationController
 
     if email = RegexpUtils.find_potential_email(program_tags_removed)
       return {message: t('share_code.email_not_allowed'), contents: email}
-    elsif street_address = RegexpUtils.find_potential_street_address(program_tags_removed)
+    elsif street_address = Geocoder.find_potential_street_address(program_tags_removed)
       return {message: t('share_code.address_not_allowed'), contents: street_address}
     elsif phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
       return {message: t('share_code.phone_number_not_allowed'), contents: phone_number}
