@@ -19,6 +19,18 @@
   ga('create', 'UA-37745279-1', 'auto', #{create_params.to_json});
   ga('set', #{dimensions.to_json});
   ga('send', 'pageview');
+  var userTimings = {};
   function trackEvent(category, action, label, value) {
     ga('send', 'event', category, action, label, value);
+  }
+  function startTiming(category, variable, label) {
+    var key = category + variable + label;
+    userTimings[key] = new Date().getTime();
+  }
+  function stopTiming(category, variable, label) {
+    var key = category + variable + label;
+    var endTime = new Date().getTime();
+    var startTime = userTimings[key];
+    var timeElapsed = endTime - startTime;
+    ga('send', 'timing', category, variable, timeElapsed, label);
   }

@@ -71,7 +71,7 @@ layout: wide
 <a id="banners"></a>
 ## Feature these banners on your website
 [![image](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-250/banner3.jpg)](/images/banner2.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 [![image](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="sample-emails"></a>
