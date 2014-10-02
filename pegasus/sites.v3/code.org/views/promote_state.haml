@@ -21,35 +21,26 @@
     %strong{style: "font-size:20px;"}= format_integer_with_commas(data[:count_schools_teach_cs_i])
     schools teach computer science
 
--if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
-  %span.download-fact-sheet<
-    Download
-    %a{:href=>"/files/states/#{state}.pdf", :target=>'_blank'}<
-      #{statename} fact-sheet
-      %img{:src=>"/images/download.png", :width=>"35px", :style=>'margin-top:-5px'}
-
 %div{style: "font-size:15px; margin-left:20px; margin-bottom: 15px;"}
   - if data[:cs_counts_t] == "No"
     %i.fa.fa-times-circle
     &nbsp;
     CS doesn't count as math or science credit
-    %br
   - elsif data[:cs_counts_t] == "Yes"
     %i.fa.fa-check-circle
     &nbsp;
     CS counts as math or science credit
-    %br
+  %br
 
   - if data[:cs_teacher_cert_s] == "No"
     %i.fa.fa-times-circle
     &nbsp;
     No clear CS teacher certification pathways
-    %br
   - elsif data[:cs_teacher_cert_s] == "Yes"
     %i.fa.fa-check-circle
     &nbsp;
     Clear certification pathways for CS teachers
-    %br
+  %br
 
   - if data[:cs_standards_s] == "No"
     %i.fa.fa-times-circle
@@ -59,6 +50,17 @@
     %i.fa.fa-check-circle
     &nbsp;
     CS curriculum standards
+
+-if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
+  %span.download-fact-sheet<
+    %a{:href=>"/files/states/#{state}.pdf", :target=>'_blank'}<
+      #{statename} fact-sheet
+      %img{:src=>"/images/download.png", :width=>"35px", :style=>'margin-top:-5px'}
+
+|
+
+%a{:onclick=>"return adjustScroll('tools-section')", :style=>"color: #BCC2C6; cursor: pointer; line-height: 18px"}
+  More advocacy tools
 
 - if statename == "Washington DC"
   %p
@@ -150,4 +152,10 @@
     $("#count").text(data.signature_count + ' signatures on Change.org');
     $("#title").text(data.title);
     $("#changeorg").show();
+  }
+
+  function adjustScroll(destination) {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
   }
