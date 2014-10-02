@@ -106,3 +106,4 @@ gem 'aws-s3'
 gem 'font-awesome-rails'
 gem 'sequel', '~> 4.10.0'
 gem 'browser'
+gem 'heroku_rails_deflate', :group => [:staging, :test, :production] # gzip rails content and static assets
