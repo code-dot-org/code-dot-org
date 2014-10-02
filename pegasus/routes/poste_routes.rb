@@ -24,7 +24,7 @@ get '/o/:id' do |id|
   dont_cache
   delivery = Poste::Delivery.get_by_encrypted_id(id)
   Poste::Open.create(delivery: delivery, created_ip: request.ip) unless delivery.nil?
-  send_file sites_dir('all/images/1x1.png'), type: 'image/png'
+  send_file pegasus_dir('sites.v3/code.org/public/images/1x1.png'), type: 'image/png'
 end
 
 get '/u/:id' do |id|
