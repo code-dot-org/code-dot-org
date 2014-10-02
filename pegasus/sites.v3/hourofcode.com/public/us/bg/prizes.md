@@ -1,28 +1,29 @@
 ---
-title: награди
+title: Prizes
+layout: wide
 ---
 
 # Часът на кодирането-награди за всеки организатор
 
 ## Всеки организатор печели Благодаря ви-код за подарък
 
-Всеки педагог, който е домакин на Часът на кодирането ще получи 10 GB Dropbox пространство или $10 Skype кредит като подарък!
+Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
 <% if @country == 'us' %>
 
 ## Щастливите класни стаи ще спечелят видео чат с гост-лектор!
 
-50 щастливи класни стаи ще бъдат поканени да се присъединят към видео чат, за да празнуват Часът на кодирането през декември 8-14. Учениците ще могат да задават въпроси и чатят с технологични и индустриялни лидери. [ вижте миналогодишните чатове][1] с Бил Гейтс, Twitter основателят Джак Дорси, Сюзън Войсички от Google и Гейб Нюъл от Valve.
+50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats][1] with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
 
  [1]: http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a
 
 ## Щастливите училища, които ще спечелят набор от преносими компютри (или $10,000 за други технологии)
 
-Едно щастливо училище във ***всеки*** щат на САЩ (+ Вашингтон) ще спечели $10,000 за технологии. Организирайте на Часът на кодирането за всеки ученик във вашето училище за да се класирате. Попълнете формата по-долу за да се регистрирате.
+One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
 
 ## Формуляр за хардуерна награда:
 
-Ако сте регистрирали цялото училище да участва в Часът на кодирането, можете да спечелите набор от преносими компютри (или $10,000 за други технологии) за вашето училище! Само един учител трябва да се регистрира за цялото училище.
+If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
 
 <%= view :hardware_prizes_form %>
 

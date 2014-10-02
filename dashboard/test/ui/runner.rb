@@ -166,6 +166,7 @@ browsers.each do |browser|
   arguments = '';
 
   arguments += "#{$options.feature}" if $options.feature
+  arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
   arguments += " -t ~@no_ie" if browser['browser'] == 'Internet Explorer'
   arguments += " -t ~@chrome" if browser['browser'] != 'chrome'

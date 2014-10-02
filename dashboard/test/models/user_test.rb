@@ -496,6 +496,7 @@ class UserTest < ActiveSupport::TestCase
     old_password = user.encrypted_password
 
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
+    # HACK fix my syntax highlighting "
     token = $1
 
     User.reset_password_by_token(reset_password_token: token,
@@ -762,4 +763,21 @@ class UserTest < ActiveSupport::TestCase
   end
   
 
+  test 'normalize_gender' do
+    assert_equal 'f', User.normalize_gender('f')
+    assert_equal 'm', User.normalize_gender('m')
+
+    assert_equal 'f', User.normalize_gender('F')
+    assert_equal 'm', User.normalize_gender('M')
+
+    assert_equal 'f', User.normalize_gender('Female')
+    assert_equal 'm', User.normalize_gender('Male')
+
+    assert_equal 'f', User.normalize_gender('female')
+    assert_equal 'm', User.normalize_gender('male')
+
+    assert_equal nil, User.normalize_gender('some nonsense')
+    assert_equal nil, User.normalize_gender('')
+    assert_equal nil, User.normalize_gender(nil)
+  end
 end
