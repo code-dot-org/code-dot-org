@@ -32,6 +32,8 @@ max_age: 60
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/ee.css"}/
 
+= view 'popup_window.js'
+
 -name_in_header_b = company['name_in_header_b'] || nil
 -header_name = name_in_header_b ? company['display_name_s'] : nil
 #company_header= view :employee_engagement_header, company_name:header_name, logo_path:company['logo_path_s']
