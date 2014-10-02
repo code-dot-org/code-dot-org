@@ -83,6 +83,12 @@ And /^I've initialized the workspace with an auto\-positioned flappy puzzle with
   @browser.execute_script("BlocklyApps.loadBlocks('" + arranged_blocks_xml + "');")
 end
 
+And /^I've initialized the workspace with a studio say block saying "([^"]*)"$/ do |phrase|
+  @browser.execute_script("Blockly.mainWorkspace.clear();")
+  xml = '<xml><block type="when_run" deletable="false"><next><block type="studio_saySprite"><title name="SPRITE">0</title><title name="TEXT">'+ phrase +'</title></block></next></block></xml>'
+  @browser.execute_script("BlocklyApps.loadBlocks('" + xml + "');")
+end
+
 Then(/^block "([^"]*)" is in front of block "([^"]*)"$/) do |block_front, block_back|
   blocks_have_same_parent = @browser.execute_script("return $(\"[block-id='#{block_front}']\").parent()[0] === $(\"[block-id='#{block_back}']\").parent()[0]")
   raise('Cannot evaluate blocks with different parents') unless blocks_have_same_parent
