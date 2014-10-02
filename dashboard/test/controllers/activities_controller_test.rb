@@ -37,6 +37,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
   end
 
+  def studio_program_with_text(text)
+    '<xml><block type="when_run" deletable="false"><next><block type="studio_showTitleScreen"><title name="TITLE">' +
+        text +
+        '</title><title name="TEXT">type text here</title></block></next></block>'
+  end
+
   test "logged in milestone" do
     # do all the logging
     @controller.expects :log_milestone
@@ -600,7 +606,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'sharing program with swear word returns error' do
     return unless CDO.webpurify_key
     assert_does_not_create(LevelSource, GalleryActivity) do
-      post :milestone, user_id: @user.id, script_level_id: @script_level, :program => '<blockXML>shit</blockXML>'
+      post :milestone, user_id: @user.id, script_level_id: @script_level, :program => studio_program_with_text('shit')
     end
     assert_response :success
     expected_response = {
@@ -614,9 +620,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'sharing program with swear word in German rejects word' do
     return unless CDO.webpurify_key
-    with_test_locale(:de) do
+    with_default_locale(:de) do
       assert_does_not_create(LevelSource, GalleryActivity) do
-        post :milestone, user_id: @user.id, script_level_id: @script_level, :program => '<blockXML>scheiße</blockXML>'
+        post :milestone, user_id: @user.id, script_level_id: @script_level, :program => studio_program_with_text('scheiße')
       end
     end
     assert_response :success
@@ -626,7 +632,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'sharing program with phone number' do
     assert_does_not_create(LevelSource, GalleryActivity) do
-      post :milestone, user_id: @user.id, script_level_id: @script_level, :program => '<blockXML>800-555-5555</blockXML>'
+      post :milestone, user_id: @user.id, script_level_id: @script_level, :program => studio_program_with_text('800-555-5555')
     end
     assert_response :success
 

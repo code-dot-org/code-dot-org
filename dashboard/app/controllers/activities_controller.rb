@@ -11,6 +11,7 @@ class ActivitiesController < ApplicationController
   before_filter :nonminimal, only: :milestone
 
   MAX_INT_MILESTONE = 2147483647
+  USER_ENTERED_TEXT_TITLE_NAMES = %w(TITLE TEXT)
 
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
@@ -68,6 +69,8 @@ class ActivitiesController < ApplicationController
   end
 
   def find_share_failure(program)
+    return nil unless program.match /(#{USER_ENTERED_TEXT_TITLE_NAMES.join('|')})/
+
     xml_tag_regexp = /<[^>]*>/
     program_tags_removed = program.gsub(xml_tag_regexp, "\n")
 
