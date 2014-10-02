@@ -1,5 +1,6 @@
 require 'cdo/regexp'
 require 'cdo/geocoder'
+require 'cdo/web_purify'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
@@ -81,7 +82,7 @@ class ActivitiesController < ApplicationController
       return {message: t('share_code.address_not_allowed'), contents: street_address}
     elsif phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
       return {message: t('share_code.phone_number_not_allowed'), contents: phone_number}
-    elsif RegexpUtils.find_potential_profanity(program_tags_removed, ['en', locale])
+    elsif WebPurify.find_potential_profanity(program_tags_removed, ['en', locale])
       return {message: t('share_code.profanity_not_allowed')}
     end
     nil
