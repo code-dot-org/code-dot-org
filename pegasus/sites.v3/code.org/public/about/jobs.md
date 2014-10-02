@@ -23,22 +23,51 @@ Ability and willingness to travel up to 25% of the time is required.
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## State Policy Intern (Seattle area)
+## Operations/Developer (Seattle)
 
 **Job Summary:** 
 
-Code.org is recruiting a State Policy Intern to support our state-by-state advocacy efforts to expand K-12 access to computer science education. Responsibilities include researching state education policy and synthesizing information for the government affairs team, as well as helping execute our state policy agenda. The State Policy Intern will gain a deep understanding of state policy in our target states and will broaden her/his networks in education policy. Flexible 10-15 hrs per week, Oct 2014-May/June 2015. Hourly wage DOE, no benefits.
+Code.org is recruiting for an operations-focused Ruby developer to run and enhance our continuous integration system.  Day-to-day tasks include monitoring, upgrading, and scaling our AWS instances and infrastructure (e.g. EC2, RDS, S3, DNS, etc.); managing integrations between our CI system and the services we use (e.g. GitHub, NewRelic, HoneyBadger, HipChat, BrowserStack, etc.); and stability and feature work within the CI system using Ruby (e.g. building out our automated test platform, monitoring and reporting scripts, installation scripts, etc.).  Full-time, salaried.
 
-**Qualifications:**
+**Minimum Qualifications:**
 
-
-- Pursuing a degree in public policy, public administration, political science, or education (graduate students preferred) 
-- Must be a self-starter, multi-tasker, excel under pressure, and work independently with a geographically dispersed team
-- Prior experience in education or public policy preferred 
+- Minimum of 3 years of experience as an operations focused developer
+- Ideally: deep expertise in Ruby, build systems, and Amazon Web Services
+- Ideally: has experienced startup culture
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Fundraising/Marketing Assistant (Seattle area)
+## Game and Content Designer (Seattle)
+
+**Job Summary:** 
+
+Code.org is recruiting for a smart and driven individual who's passionate about education (particularly computer science and mathematics) to help us create game/puzzle-based online courses for K-12 students. Full-time, contract-to-hire.
+
+**Minimum Qualifications:**
+
+- Undergrad degree with minor/major in CS/Math
+- Tech savvy and able to pick up new tools
+- Fast learner with strong organization and communication skills
+- Able to decompose complex tasks into easily digestible steps
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## Software Engineer (Seattle)
+
+**Job Summary:**
+
+Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at [http://learn.code.org](http://learn.code.org). With tens of millions of students using our tutorials in over 20 languages and in 170 countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
+
+**Qualifications:**
+
+- A Bachelor's degree or greater in Computer Science
+- Minimum of 3-5 years of experience as a software engineer working on Web sites or services
+- Ideally: deep expertise in either JavaScript or Ruby
+- Ideally: has experienced startup culture
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## Fundraising/Marketing Assistant (Seattle)
 
 **Job Summary:** 
 
@@ -55,21 +84,19 @@ Code.org is recruiting for a Seattle-based Development/Marketing Assistant to su
 
 Interested candidates should email a resume and cover letter, describing what particular skills you bring to a rapidly growing start-up organization that differentiate you from other candidates, to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Software Engineer (Seattle area)
+## State Policy Intern (Seattle)
 
-**Job Summary:**
+**Job Summary:** 
 
-Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at [http://learn.code.org](http://learn.code.org). With tens of millions of students using our tutorials in over 20 languages and in 170 countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
+Code.org is recruiting a State Policy Intern to support our state-by-state advocacy efforts to expand K-12 access to computer science education. Responsibilities include researching state education policy and synthesizing information for the government affairs team, as well as helping execute our state policy agenda. The State Policy Intern will gain a deep understanding of state policy in our target states and will broaden her/his networks in education policy. Flexible 10-15 hrs per week, Oct 2014-May/June 2015. Hourly wage DOE, no benefits.
 
 **Qualifications:**
 
-- A Bachelor's degree or greater in Computer Science
-- Minimum of 3-5 years of experience as a software engineer working on Web sites or services
-- Ideally: deep expertise in either JavaScript or Ruby
-- Ideally: has experienced startup culture
+- Pursuing a degree in public policy, public administration, political science, or education (graduate students preferred) 
+- Must be a self-starter, multi-tasker, excel under pressure, and work independently with a geographically dispersed team
+- Prior experience in education or public policy preferred 
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
 
 ## Benefits 
 

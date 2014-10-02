@@ -2,9 +2,10 @@
   "base":"i18n.code.org",
   "google_analytics_id":"UA-37745279-1",
   "us_site": "Code.org (US Site)",
-  "about_nav": {
-    "About Us": "/about",
-    "Partners": "/about/partners"
+  "adults_nav": {
+    "About Us": "/adults",
+    "Resources": "/adults/resources",
+    "Partners": "/adults/partners"
   },
   "educate_nav": {
     "Educator Resources": "/educate",
@@ -18,14 +19,14 @@
   },
   "header_links": {
     "HOME": "/",
-    "KIDS": "/learn",
+    "STUDENTS": "/learn",
     "TEACHERS": "/educate",
-    "GROWN-UPS": "/about"
+    "ADULTS": "/adults"
   },
   "footer_links": {
     "Tutorials": "/learn",
     "Resources": "/educate",
-    "About": "/about",
-    "Partners": "/about/partners"
+    "About": "/adults",
+    "Partners": "/adults/partners"
   }
 }

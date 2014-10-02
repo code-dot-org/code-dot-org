@@ -15,8 +15,11 @@
 
   %script{src: "#{blockly_path}js/#{js_locale}/vendor.js"}
   - if @game.name == "MazeEC"
+    %script{src: "#{blockly_path}js/requirejs/require.js"}
     %script{src: "#{blockly_path}js/ace/ace.js"}
     %script{src: "#{blockly_path}js/ace/ext-language_tools.js"}
+    %script{src: "#{blockly_path}js/droplet/droplet-full.min.js"}
+    %link{href: "#{blockly_path}css/droplet/droplet.min.css", rel: 'stylesheet', type: 'text/css'}
   %script{src: "#{blockly_path}js/#{js_locale}/#{app}#{pretty ? '' : '.min'}.js"}
 
   -# Create level options object to pass to Blockly
@@ -29,13 +32,19 @@
   -# use local[:symbol] to access locals passed into this render partial (defaults to false if not present)
   - local = Hash.new(false).merge!(local_assigns.delete_if{|_,v|v.nil?})
 
+  - send_to_phone = request.location.try(:country_code) == 'US' ||              |
+      (!Rails.env.production? && request.location.try(:country_code) == 'RD') |
+
   :javascript
+    var script_path = "#{@script_level && build_script_level_path(@script_level)}";
+    startTiming('Puzzle', script_path, '');
     var level = #{level.to_json};
     // See assets/javascripts/sendReport for definition of lastServerResponse
     var appOptions = {
       levelId: '#{@level.level_num}',
       #{ "level_source_id: #{@level_source_id}," if @level_source_id }
       #{ "send_to_phone_url: '#{@phone_share_url}'," if @phone_share_url }
+      #{ "sendToPhone: true," if send_to_phone}
       #{ "disableSocialShare: true," if @current_user && (@current_user.age.nil? || @current_user.age < 13) }
       #{ "scriptId: '#{@script.id}'," if @script }
       #{ "levelGameName: '#{@level.game.name}'," if @level.game }
@@ -87,7 +96,7 @@
         onInitializeListeners.forEach(function(listener) {
           listener();
         });
-        #{render(partial: 'levels/chrome34Fix', formats: :js) if chrome_version == 34}
+        #{render(partial: 'levels/chrome34Fix', formats: :js) if browser.chrome? && browser.version == '34'}
       },
       locale: '#{js_locale}',
       containerId: 'blocklyApp',
@@ -111,10 +120,10 @@
           };
         }
         // Track puzzle attempt event
-        script_path = "#{@script_level && build_script_level_path(@script_level)}";
         trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
         if (report.pass) {
           trackEvent('Puzzle', 'Success', script_path, report.attempt);
+          stopTiming('Puzzle', script_path, '');
         }
         trackEvent('Activity', 'Lines of Code', script_path, report.lines);
         sendReport(report);

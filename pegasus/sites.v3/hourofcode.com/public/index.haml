@@ -22,7 +22,7 @@ social:
   "twitter:player:height": 1080
 ---
 
--facebook = {:u=>"http://#{request.host}/"}
+-facebook = {:u=>"http://#{request.host}/us"}
 
 -twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
 -twitter[:hashtags] = 'HourOfCode' unless hoc_s(:front_header_banner).include? '#HourOfCode'
@@ -47,13 +47,13 @@ social:
 - imageheight = 590
 
 #top{style: "position:relative; /*height: #{imageheight}px; */ width:100%; overflow:hidden"}
-  #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/the-world.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1"}
+  #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/the-world.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 0% 0%"}
 
-  #fullwidth1{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0"}
+  #fullwidth1{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
 
-  #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0"}
+  #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 30% 40%"}
 
-  #fullwidth3{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0"}
+  #fullwidth3{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 40% 50%"}
 
   #fullwidth{style: "/*position:absolute; left:0; top: 0; */width: 100%; /*height:#{imageheight}px*/"}
 
@@ -73,8 +73,8 @@ social:
               -#%br/
               %div{style:"clear:both"}
             #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; /*margin-top:100px; */ width:100%"}
-              %h1.front-header-banner{style: "color:white; text-shadow: 0px 0px 4px rgba(31, 31, 31, 1); margin-top: 0px; margin-bottom:10px; padding:20px"} Watch the new video
-              %img{src: "/images/play-button.png", width: "120", onclick: "return startVideo();"}
+              %h1.front-header-banner{style: "color:white; text-shadow: 0px 0px 4px rgba(31, 31, 31, 1); margin-top: 0px; margin-bottom:10px; padding:20px"}=hoc_s(:front_watch_video) 
+              %img{src: "/images/play-button.png", width: "120", onclick: "return startVideo();", style: "cursor: pointer"}
         .col-sm-4.col-xs-12
           #textbacking{style: "color:white; text-align: center; background-color:rgba(0,0,0,0.5); margin-top:50px; padding: 20px"}
             %h1.front-header-banner{style: "color:white; margin-top:0px"}= hoc_s(:front_header_banner)
@@ -82,6 +82,10 @@ social:
               %a{onclick: "return adjustScroll('joinusarea')"}
                 %button.btn.btn-default{style: "font-size: 24px; font-weight: 500; width: 180px; height: 50px;"}
                   =hoc_s(:front_join_us_button)
+            #trylastyear{style: "margin-top:20px"}
+              %a{onclick: "return adjustScroll('whatishoc')", target: "_blank", style: "color:white; font-weight:500; cursor: pointer"}=hoc_s(:hoc_faq_what_is_hoc_q)
+            %br/
+            =view :share_buttons, facebook:facebook, twitter:twitter
           %br/
           %br/
 
@@ -97,8 +101,10 @@ social:
     .col-xs-1
       &nbsp;
     .col-xs-10{style: "text-align: center; font-size: 24px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
-      The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. No experience needed. 
-      %b Ages 4 to 104.
+      -if @country == 'uk'
+        =hoc_s(:front_intro_default_uk)
+      -else
+        =hoc_s(:front_intro_default)
 
   %br/
   %br/
@@ -106,67 +112,87 @@ social:
   .row
     .col-xs-12
       %div{style: 'text-align: center; margin: 3em 0;'}
-        %h2= I18n.t(:stats_hoc_2013_heading)
+        %h2=hoc_s(:stats_hoc_2013_heading)
 
   .row#infotop{style: "/*margin: 0 auto; width: 900px; */ font-weight: 500; font-size: 16px; color: rgb(26, 172, 186)"}
     .col-xs-6.col-sm-4{style: "text-align:center;"}
-      %p It was the fastest to reach 15 million users
+      %p=hoc_s(:stats_growth)
       %img{src: "/images/stats-info1.jpg", style: "width: 100%"}
 
     .col-xs-6.col-sm-4{style: "text-align:center"}
-      %p 15 million students in 170 countries learned an Hour of Code
+      %p=hoc_s(:stats_global)
       %img{src: "/images/stats-info2.jpg", style: "width: 100%"}
 
     .hidden-xs.col-sm-4{style: "text-align:center"}
-      %p More girls tried computer science than in the last 70 years
+      %p=hoc_s(:stats_girls_more)
       %img{src: "/images/stats-info3.jpg", style: "width: 100%"}
 
-        %p{style:"color: #ea7717;"} Over 10 million girls in 2013.
+        %p{style:"color: #ea7717;"}=hoc_s(:stats_girls_million)
 
   .row#infobottom{style: "/*margin: 0 auto; width: 800px; */ font-weight: 400; font-size: 16px; color: #ea7717;"}
     .col-xs-6.col-sm-4{style: "text-align:center"}
       %img{src: "/images/stats-kid1.jpg", style: "width: 70%"}
       %br/
-      "Every single day yielded the same results - <b>100% engagement.</b>" - Nina Nichols Peery, Teacher
+      =hoc_s(:stats_nina)
 
     .col-xs-6.col-sm-4{style: "text-align:center"}
       %img{src: "/images/stats-kid2.jpg", style: "width: 70%"}
       %br/
-      I knew this was a <b> once-in-a-lifetime</b> chance" - Mariana Alzate, 5th grader
+      =hoc_s(:stats_student)
 
     .hidden-xs.col-sm-4{style: "text-align:center"}
       %img{src: "/images/stats-kid3.jpg", style: "width: 70%"}
       %br/
-      I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher
+      =hoc_s(:stats_michael)
 
-  #map.row
-    .col-xs-12
-      =view :map
+  #maparea
+    =view :map
 
   #joinusarea
 
-    #joindescrption.hidden-xs
-      %h1.hidden-xs Join us
-      #calltoaction.hidden-xs.row
-        .col-xs-10{style: "text-align: left; font-size: 18px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
+    %h1=hoc_s(:front_join_us_button)
+
+    #joindescriptionshort.hidden-sm
+      %p=hoc_s(:front_join_us_header_short)
+
+    #joindescrption
+      #calltoaction.row.hidden-xs
+        .col-xs-12{style: "text-align: left; font-size: 18px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
           %p 
-            Any time during December 8-14, Computer Science Education Week, host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!
+            -if @country == 'uk'
+              =hoc_s(:front_join_us_header_uk)
+            -else
+              =hoc_s(:front_join_us_header)
 
-      #calltoaction.row
-        .col-xs-10{style: "text-align: left; font-size: 16px; line-height:30px; font-weight: 400; padding-left:3em"}
+      #calltoaction.row.hidden-xs
+        .col-xs-12{style: "text-align: left; font-size: 16px; line-height:30px; font-weight: 400; padding-left:3em"}
           %p
-            %b Are you a teacher?
-            Inspire your students with an Hour of Code in your classroom.
-          %p
-            %b Are you a parent?
-            Ask your local school to host an Hour of Code.
-          %p
-            %b Just love computer science? 
-            Spread the word in your community. Or organize an Hour of Code event yourself. 
+            %b=hoc_s(:front_join_us_teacher)
+            =hoc_s(:front_join_us_inspire)
+            %a{href:hoc_uri('/resources/how-to')}
+              =hoc_s(:front_join_us_inspire_link)
+            %br/
 
-          %p
-            %a{href: "/resources"} 
-              Here's how to get started.
+            %b=hoc_s(:front_join_us_parent)
+            %a{href:hoc_uri('/resources')}
+              =hoc_s(:front_join_us_ask_link)
+            =hoc_s(:front_join_us_ask)
+            %br/
+
+            %b=hoc_s(:front_join_us_computer_science)
+            %a{href:hoc_uri('/resources')}
+              =hoc_s(:front_join_us_spread)
+            =hoc_s(:front_join_us_organize)  
+            %br/
+
+      #hoclinks.row
+        .col-xs-12{style: "text-align: left; font-size: 16px; line-height:30px; font-weight: 400; padding-left:3em"}
+          %a{href:hoc_uri('/resources/how-to')} 
+            =hoc_s(:front_join_us_how_to_run)
+          %br/
+
+          %a{href:hoc_uri('/resources')} 
+            =hoc_s(:front_join_us_help_promote)
 
     #signupform.row
       .col-xs-12.col-sm-9.col-md-8

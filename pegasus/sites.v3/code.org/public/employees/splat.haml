@@ -24,15 +24,21 @@ max_age: 60
 -@company = company = JSON.parse(form[:data])
 -if company['gplus_b']
   -gplus = {:url=>"#{share_link}"}
+-hoc_count = DB[:hoc_activity].where(company:company['name_s']).count(:id)
+-num_employees = company['num_employees_i'] ? Integer(company['num_employees_i']) : nil
+-if (num_employees && num_employees != 0)
+  -hoc_percent = [(hoc_count.to_f / num_employees * 100).floor, 100].min
+-hoc_percent ||= nil
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/ee.css"}/
+
+= view 'popup_window.js'
 
 -name_in_header_b = company['name_in_header_b'] || nil
 -header_name = name_in_header_b ? company['display_name_s'] : nil
 #company_header= view :employee_engagement_header, company_name:header_name, logo_path:company['logo_path_s']
 
--# TODO(dave): implement user_entered_markdown function.
-#intro_top
+#intro_top.ee_markdown
   -if company['intro_top_copy_t']
     =TextRender.safe_markdown company['intro_top_copy_t']
   -else
@@ -54,13 +60,13 @@ max_age: 60
           %br.desktop-feature
 
           .count{:style=>'font-size: 32px; line-height: 32px; font-weight:500' }
-            0
-            -if company['num_employees_i']
-              of #{company['num_employees_i']} 
+            #{format_integer_with_commas(hoc_count)}
+            -if num_employees
+              of #{format_integer_with_commas(company['num_employees_i'])} 
             #{company['display_name_s']} employees have tried the Hour of Code.
             %h4.desktop-feature{style: 'font-size: 22px;'}
-              -if company['num_employees_i']
-                0% Started
+              -if hoc_percent
+                #{hoc_percent}% Started
           %br
 
         #getstarted.col-mobile-44
@@ -73,7 +79,7 @@ max_age: 60
     -unless company['video_key_s']
       = view :share_buttons, facebook:facebook, twitter:twitter, gplus:gplus, download_url:"http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"
 
-#intro_bottom
+#intro_bottom.ee_markdown
   -if company['intro_bottom_copy_t']
     =TextRender.safe_markdown company['intro_bottom_copy_t']
   -else

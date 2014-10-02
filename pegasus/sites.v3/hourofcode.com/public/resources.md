@@ -8,9 +8,11 @@ layout: wide
 <br/>
 - [How-to guide for teachers](/resources/how-to)
 <br/>
+- [Videos](#videos)
+<br/>
 - [Posters](#posters)
 <br/>
-- [Videos](#videos)
+- [Banners](#banners)
 <br/>
 - [Sample emails](#sample-emails)
 <br/>
@@ -66,8 +68,14 @@ layout: wide
 [![image](/images/fit-280/barack-obama.png)](/resources/barack-obama-poster.pdf)
 [![image](/images/fit-280/ashton-kutcher.png)](/resources/ashton-kutcher-poster.pdf)
 
+<a id="banners"></a>
+## Feature these banners on your website
+[![image](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+
 <a id="sample-emails"></a>
-## Send these emails to help promote the Hour of Code.
+## Send these emails to help promote the Hour of Code
 <a id="email"></a>
 ## Ask your school, employer or friends to sign up:
 
@@ -81,6 +89,7 @@ Get the word out. Host an event. Ask a local school to sign up. Or try the Hour 
 
 Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
 
+<a id="media-pitch"></a>
 ## Invite media to attend your event:
 
 **Subject line:** Local school joins mission to introduce 100m students to computer science

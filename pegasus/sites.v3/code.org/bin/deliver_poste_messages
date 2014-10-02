@@ -22,6 +22,7 @@ module Poste
 
       locals = params.merge({
         recipient: contact,
+        encrypted_id: encrypted_id,
         unsubscribe_link: unsubscribe_link,
         tracking_pixel: tracking_pixel,
       })
@@ -105,7 +106,7 @@ def main()
 
   count = 0
 
-  Poste::Delivery.all(sent_at: nil).each do |delivery|
+  Poste::Delivery.all(sent_at:nil, limit:1000).each do |delivery|
     mail = delivery.to_mail(template_cache)
     mail.delivery_method :sendmail
     mail.deliver!
