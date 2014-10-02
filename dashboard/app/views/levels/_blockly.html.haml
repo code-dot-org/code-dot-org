@@ -11,11 +11,11 @@
   -# If no param, take default
   - pretty = params.fetch(:pretty, Rails.configuration.pretty_blockly)
   %link{href: "#{blockly_path}css/common.css", rel: 'stylesheet', type: 'text/css'}
-  %script{src: "#{blockly_path}js/requirejs/require.js"}
   %link{href: "#{blockly_path}css/#{app}.css", rel: 'stylesheet', type: 'text/css'}
 
   %script{src: "#{blockly_path}js/#{js_locale}/vendor.js"}
   - if @game.name == "MazeEC"
+    %script{src: "#{blockly_path}js/requirejs/require.js"}
     %script{src: "#{blockly_path}js/ace/ace.js"}
     %script{src: "#{blockly_path}js/ace/ext-language_tools.js"}
     %script{src: "#{blockly_path}js/droplet/droplet-full.min.js"}
