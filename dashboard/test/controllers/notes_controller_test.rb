@@ -8,7 +8,7 @@ class NotesControllerTest< ActionController::TestCase
   end
 
   test 'should use working images from English yml' do
-    with_test_locale('he-IL') do
+    with_default_locale('he-IL') do
       get :index, key: 'flappy_intro'
       assert_not_nil assigns(:slides)
       assigns(:slides).values.each do |slide|
