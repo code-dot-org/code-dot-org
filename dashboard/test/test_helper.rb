@@ -41,10 +41,11 @@ class ActiveSupport::TestCase
     end
   end
 
-  def with_test_locale(locale)
+  def with_default_locale(locale)
     original_locale = I18n.default_locale
     I18n.default_locale = locale
-    yield if block_given?
+    yield
+  ensure
     I18n.default_locale = original_locale
   end
 
