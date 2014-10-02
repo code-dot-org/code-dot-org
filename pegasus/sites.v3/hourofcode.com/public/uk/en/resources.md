@@ -29,9 +29,9 @@ title: Resources
 
 <div style="float:left; padding:10px">
 
-<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/96B5-JGA9EQ?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
             
-            <p><a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama on computer science</strong></a></p>
+            <p><a href="https://www.youtube.com/watch?v=96B5-JGA9EQ"><strong>The UK Hour of Code is Here</strong></a></p>
             
           </div>
 
@@ -61,12 +61,12 @@ title: Resources
 
 ## Send this email to ask your school, employer or friends to sign up
 
-Software and computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week alone, 15 million students tried computer science!
+Software and computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the first Hour of Code, you might know it made history. In one week alone, 15 million students tried computer science!
 
-Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+Computer science was on homepages of Google, MSN, Yahoo! and Disney. Bill Gates, Joanna Shields, Michael Smith. Will.I.Am, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014. 
+This year, let's make it even bigger. Please get involved with an Hour of Code event the week of December 8-14, 2014. Everyone around the world is doing it from the US to the UK, Italy and Australia. We managed to get over 3 million students to try an hour of code in the UK the first time around. Let's double that!
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
 
-Help us reach 100 million students total by the end of the year! Get started at http://hourofcode.com
+Help us reach 100 million students around the world total by the end of the year! Get started at http://hourofcode.com/uk
