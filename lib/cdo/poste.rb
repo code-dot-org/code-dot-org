@@ -3,6 +3,8 @@ require 'mail'
 
 module Poste2
 
+  @@url_cache = {}
+
   def self.email_address?(address)
     begin
       email = Mail::Address.new(address)
@@ -15,6 +17,20 @@ module Poste2
     rescue
       false
     end
+  end
+
+  def self.find_or_create_url(href)
+    hash = Digest::MD5.hexdigest(href)
+
+    url_id = @@url_cache[href]
+    return url_id if url_id
+
+    unless url = DB[:poste_urls].where(hash:hash, url:href).first
+      DB[:poste_urls].insert(hash:hash, url:href)
+      url = DB[:poste_urls].where(hash:hash, url:href).first
+    end
+
+    @@url_cache[href] = url[:id]
   end
 
   def self.create_recipient(address, params={})
