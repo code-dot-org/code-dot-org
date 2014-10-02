@@ -31,9 +31,7 @@ var utils = require('./utils');
 var blockUtils = require('./block_utils');
 var builder = require('./builder');
 var Slider = require('./slider');
-utils.pre_lodash_require();
-var _ = require('./lodash');
-utils.post_lodash_require();
+var _ = utils.getLodash();
 var constants = require('./constants.js');
 
 //TODO: These should be members of a BlocklyApp instance.
@@ -290,6 +288,7 @@ BlocklyApps.init = function(config) {
       enableLiveAutocompletion: true
     });
     */
+    // using window.require forces us to use requirejs version of require
     window.require(['droplet'], function(droplet) {
       var displayMessage, examplePrograms, messageElement, onChange, startingText;
       var palette = utils.generateDropletPalette(config.level.codeFunctions);
