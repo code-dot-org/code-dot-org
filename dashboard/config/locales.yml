@@ -171,8 +171,7 @@
 "lt": "lt-LT"
 "lt-LT":
   english: "Lithuanian"
-  native: "lietuvių kalba"
-  debug: true
+  native: "Lietuvių"
 
 "ms": "ms-MY"
 "ms-MY":

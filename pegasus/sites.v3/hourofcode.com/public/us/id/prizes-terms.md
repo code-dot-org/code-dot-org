@@ -1,6 +1,10 @@
+---
+layout: wide
+---
+
 # Hadiah - syarat dan ketentuan
 
-## Ruang Dropbox atau Kredit Skype:
+## Dropbox space or Skype credit:
 
 10 GB Ruang Dropbox atau $10 Kredit Skype terbatas untuk sekolah K-12, guru pembimbing ekstrakurikuler, dan organisasi pendidikan. 10 GB ruang bebas hanya bisa ditambahkan pada akun Dropbox yang telah ada. Hanya dibatasi 1 bonus untuk setiap organisasi.
 
@@ -10,13 +14,13 @@ Code.org akan menghubungi penyelenggara setelah Hour of Code (Dec. 8-14) untuk m
 
 <% if @country == 'us' %>
 
-## Percakapan video dengan seorang pembicara tamu:
+## Video chat with a guest speaker:
 
-Prize limited to K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 14, 2014. Code.org will randomly select winning schools, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details.
+Hadiah terbatas hanya kepada sekolah K-12 U.S. Untuk memenuhi syarat, sekolahmu harus mendaftar untuk Hour of Code paling lambat tanggal 14 November 2014. Code.org akan secara acak memilih pemenang dari setiap sekolah, menyediakan waktu untuk web chat dan bekerjasama dengan guru yang bersangkutan untuk mengatur teknologi yang diperlukan.
 
-## Satu set laptop untuk kelas (atau teknologi lain yang bernilai $10,000):
+## Class-set of laptops (or $10,000 for other technology):
 
-Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here][1]. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+Hadiah terbatas untuk sekolah publik K-12 U.S. Kenapa hanya sekolah umum? [Lihat jawabannya disini][1]. Untuk memenuhi syarat, sekolahmu harus mendaftar untuk Hour of Code paling lambat tanggal 14 November 2014. Satu sekolah di setiap negara bagian di U.S. akan menerima satu set komputer untuk kelas. Code.org akan memilih dan memberitahukan pemenang melalui email paling lambat tanggal 1 Desember 2014.
 
  [1]: http://www.hourofcode.com/us#faq
 

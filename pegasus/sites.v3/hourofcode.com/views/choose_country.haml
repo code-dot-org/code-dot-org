@@ -1,4 +1,4 @@
-#choose_country
+-#choose_country
   -if @country != 'uk'
     %h2= hoc_s(:choose_country_header)
     %ul
@@ -8,9 +8,11 @@
           -country_url += "/#{@user_language}" if @user_language
           %a{href:country_url}= hoc_s("country_#{country}")
 
-%h2 Prizes for every organizer
+%h2=hoc_s(:prizes_all)
 %ul
-  %li Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you
+  %li=hoc_s(:prizes_every_organizer)
   -if @country == 'us'
-    %li One public school in every US state (& Washington DC) will win $10,000 worth of technology 
-    %li 50 classrooms will win video chats with very special guests
+    %li=hoc_s(:prizes_technology)
+    %li=hoc_s(:prizes_tech_chats)
+  %li 
+    %a{href:hoc_uri("/prizes")}=hoc_s(:prizes_details)

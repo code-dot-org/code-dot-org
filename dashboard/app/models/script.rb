@@ -122,6 +122,10 @@ class Script < ActiveRecord::Base
     false
   end
 
+  def is_k1?
+    name == 'course1'
+  end
+
   def has_banner_image?
     k5_course?
   end

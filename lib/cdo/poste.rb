@@ -3,6 +3,8 @@ require 'mail'
 
 module Poste2
 
+  @@url_cache = {}
+
   def self.email_address?(address)
     begin
       email = Mail::Address.new(address)
@@ -17,6 +19,20 @@ module Poste2
     end
   end
 
+  def self.find_or_create_url(href)
+    hash = Digest::MD5.hexdigest(href)
+
+    url_id = @@url_cache[href]
+    return url_id if url_id
+
+    unless url = DB[:poste_urls].where(hash:hash, url:href).first
+      DB[:poste_urls].insert(hash:hash, url:href)
+      url = DB[:poste_urls].where(hash:hash, url:href).first
+    end
+
+    @@url_cache[href] = url[:id]
+  end
+
   def self.create_recipient(address, params={})
     address = address.to_s.strip.downcase
     raise ArgumentError, 'Invalid email address' unless email_address?(address)
@@ -29,11 +45,14 @@ module Poste2
 
     contact = contacts.where(email:address).first
     if contact
-      contacts.where(id:contact[:id]).update({}.tap do |contact|
-        contact[:name] = name if name
-        contact[:updated_at] = contact[:updated_on] = now
-        contact[:updated_ip] = ip_address
-      end)
+      if contact[:name] != name && !name.nil_or_empty?
+        contacts.where(id:contact[:id]).update(
+          name:name,
+          updated_at:now,
+          updated_on:now,
+          updated_ip:ip_address,
+        )
+      end
     else
       contacts.insert({}.tap do |contact|
         contact[:email] = address

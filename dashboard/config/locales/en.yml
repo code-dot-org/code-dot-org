@@ -237,6 +237,9 @@ en:
     header:
       finished_hoc: "I've finished my Hour of Code"
       sign_in_to_save: 'Sign in to save progress'
+      free_play:
+        playlab: 'Make an App'
+        artist: 'Draw Something'
     user:
       classroom: 'My students'
       label: 'Hi %{username}'

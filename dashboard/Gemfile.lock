@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/code-dot-org/omniauth-clever.git
+  revision: 8c7adde39157d64dc8b05c5eec5b0a7329f8ef95
+  specs:
+    omniauth-clever (1.1.0)
+      omniauth-oauth2 (>= 1.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -40,6 +47,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
+    browser (0.7.0)
     builder (3.1.4)
     cancan (1.6.10)
     childprocess (0.5.2)
@@ -262,6 +270,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
+  browser
   cancan
   chromedriver-helper (~> 0.0.7)
   codeclimate-test-reporter
@@ -288,6 +297,7 @@ DEPENDENCIES
   naturally
   newrelic_rpm
   nokogiri
+  omniauth-clever!
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-windowslive (~> 0.0.9)

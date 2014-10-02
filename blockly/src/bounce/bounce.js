@@ -18,6 +18,7 @@ var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 var dom = require('../dom');
 var Hammer = require('../hammer');
+var utils = require('../utils');
 
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
@@ -1047,18 +1048,8 @@ Bounce.execute = function() {
   Bounce.response = null;
 
   if (level.editCode) {
-    var codeTextbox = document.getElementById('codeTextbox');
-    code = dom.getText(codeTextbox);
-    // Insert aliases from level codeBlocks into code
-    if (level.codeFunctions) {
-      for (var i = 0; i < level.codeFunctions.length; i++) {
-        var codeFunction = level.codeFunctions[i];
-        if (codeFunction.alias) {
-          code = codeFunction.func +
-              " = function() { " + codeFunction.alias + " };" + code;
-        }
-      }
-    }
+    code = utils.generateCodeAliases(level.codeFunctions);
+    code += BlocklyApps.editor.getValue();
   }
 
   var codeWallCollided = Blockly.Generator.workspaceToCode(

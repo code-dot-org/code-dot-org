@@ -11,7 +11,7 @@ var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
 var tiles = require('./tiles');
 var utils = require('../utils');
-var _ = require('../lodash');
+var _ = utils.getLodash();
 
 var Direction = tiles.Direction;
 var Position = tiles.Position;

@@ -9,7 +9,7 @@
 .row
   .col-xs-12.col-sm-8.col-md-6
     %form#hoc-prizes-form{role: "form", onsubmit: "event.preventDefault();", enctype:'multipart/form-data', method: 'post', action: '/forms/HocHardwarePrizes2014'}
-      #error_message
+      #error-message
 
       .form-group
         %label.control-label{for: "hoc-prizes-name"}= hoc_s(:hardware_prizes_form_name_label)
@@ -29,7 +29,7 @@
       .form-group
         %label.control-label{for: "hoc-prizes-school-address"}= hoc_s(:hardware_prizes_form_school_address_label)
         %div
-          %textarea#hoc-prizes-school-address.form-control{name: "school_address_s", placeholder: hoc_s(:hardware_prizes_form_school_address_placeholder), style: "height: 5em;"}
+          %textarea#hoc-prizes-school-address.form-control{name: "school_address_s", placeholder: hoc_s(:hardware_prizes_form_school_address_placeholder), style: "height: 5em;", required: true}
 
       .form-group
         %label.control-label{for: "hoc-prizes-school-type"}= hoc_s(:hardware_prizes_form_school_type_label)
@@ -41,14 +41,14 @@
 
       .form-group
         .checkbox
-          %label
+          %label{style: "font-weight: bold"}
             %input#hoc-prizes-qualifying-school{name: "qualifying_school_b", type: "checkbox", value: "1"}/
             =hoc_s(:hardware_prizes_form_qualifying_school_label)
 
       .form-group
         %label.control-label{for: "hoc-prizes-number-students"}= hoc_s(:hardware_prizes_form_number_students_label)
         %div
-          %input#hoc-prizes-number-students.form-control{name: "number_students_i", placeholder: hoc_s(:hardware_prizes_form_number_students_placeholder), type: "text", required: true}/
+          %input#hoc-prizes-number-students.form-control{name: "number_students_s", placeholder: hoc_s(:hardware_prizes_form_number_students_placeholder), type: "text", required: true}/
 
       .form-group
         %label.control-label{for: "hoc-prizes-plan-file"}= hoc_s(:hardware_prizes_form_plan_file_label)
