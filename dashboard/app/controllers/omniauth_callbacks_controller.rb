@@ -4,9 +4,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # GET /users/auth/:provider/callback
   def all
-    Rails.logger.debug("omniauth.auth = #{request.env['omniauth.auth'].inspect}")
-    Rails.logger.debug("omniauth.params = #{request.env['omniauth.params'].inspect}")
-
     @user = User.from_omniauth(request.env["omniauth.auth"], request.env['omniauth.params'])
     if @user.persisted?
       flash.notice = I18n.t('auth.signed_in')
