@@ -1,25 +1,25 @@
 var xml = require('./xml');
 var savedAmd;
-/**
- * Special functions for pulling in lodash to avoid node/requirejs issue.
- */
-exports.pre_lodash_require = function() {
-  if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
-    savedAmd = define.amd;
-    define.amd = 'dont_call_requirejs_define';
-  }
-};
 
-exports.post_lodash_require = function() {
-  if (typeof define == 'function' && savedAmd) {
-    define.amd = savedAmd;
-    savedAmd = null;
-  }
-};
+// Do some hackery to make it so that lodash doesn't think it's being loaded
+// via require js
+if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
+  savedAmd = define.amd;
+  define.amd = 'dont_call_requirejs_define';
+}
 
-exports.pre_lodash_require();
+// get lodash
 var _ = require('./lodash');
-exports.post_lodash_require();
+
+// undo hackery
+if (typeof define == 'function' && savedAmd) {
+  define.amd = savedAmd;
+  savedAmd = null;
+}
+
+exports.getLodash = function () {
+  return _;
+};
 
 exports.shallowCopy = function(source) {
   var result = {};

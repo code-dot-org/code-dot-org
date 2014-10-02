@@ -23,9 +23,7 @@ var Projectile = require('./projectile');
 var Hammer = require('../hammer');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
-utils.pre_lodash_require();
-var _ = require('../lodash');
-utils.post_lodash_require();
+var _ = utils.getLodash();
 
 var Direction = tiles.Direction;
 var NextTurn = tiles.NextTurn;
