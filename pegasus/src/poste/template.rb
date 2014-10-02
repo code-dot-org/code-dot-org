@@ -41,6 +41,7 @@ module Poste
       doc.css('a').each do |link|
         href = link['href']
         next if href == params[:unsubscribe_link]
+        next unless href =~ /^http:\/\// || href =~ /^https:\/\//
 
         url_id = Poste2::find_or_create_url(href)
         link.attributes['href'].value = "http://#{CDO.poste_host}/l/#{params[:encrypted_id]}/#{Base64.urlsafe_encode64(url_id.to_s)}"
