@@ -6,7 +6,10 @@ rightbar: blank
 
 # Help us translate Code.org
 
-We want help translating the Code.org web site, tutorials, and videos. To sign up, please [fill out this form](http://eepurl.com/Im_In).
+We want help translating the Code.org web site, tutorials, and videos. 
+
+1. Sign up [here](http://eepurl.com/Im_In) to stay up to date on what we need translated.
+2. Create an account on CrowdIn, join the [Code.org project](http://crowdin.net/project/codeorg/invite), and start immediately!
 
 ## Tips for Translating
 The Code.org drag-drop tutorials are based on the Blockly language. Many of the tips below are loosely based on the wiki article [Translating:Blockly](http://translatewiki.net/wiki/Translating:Blockly)
@@ -34,11 +37,6 @@ Code that shows up in peach or green like `var x = 2;`, `&quot;`, `%{keyword}` s
 <embed src="/files/crowdin.swf" width=800 height=550 />
 
 See a larger version of the [demo video](/files/crowdin.swf).
-
-## Ready to Translate?
-
-1. Sign up [here](http://eepurl.com/Im_In) to stay up to date on what we need translated.
-2. Create an account on CrowdIn, join the [Code.org project](http://crowdin.net/project/codeorg/invite), and start immediately!
 
 ---
 

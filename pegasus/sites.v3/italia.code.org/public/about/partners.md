@@ -13,12 +13,6 @@ social:
   "og:video:type": ""
 ---
 
-# Maggiore ci Partners e donatori aziendali
+# Vedi i nostri partner
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'major') %>
-
----
-
-# Partner Tutorial
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'tutorial') %>
+http://programmailfuturo.it/partner
