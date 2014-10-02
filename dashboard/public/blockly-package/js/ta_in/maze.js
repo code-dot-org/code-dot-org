@@ -124,9 +124,7 @@ var utils = require('./utils');
 var blockUtils = require('./block_utils');
 var builder = require('./builder');
 var Slider = require('./slider');
-utils.pre_lodash_require();
-var _ = require('./lodash');
-utils.post_lodash_require();
+var _ = utils.getLodash();
 var constants = require('./constants.js');
 
 //TODO: These should be members of a BlocklyApp instance.
@@ -383,6 +381,7 @@ BlocklyApps.init = function(config) {
       enableLiveAutocompletion: true
     });
     */
+    // using window.require forces us to use requirejs version of require
     window.require(['droplet'], function(droplet) {
       var displayMessage, examplePrograms, messageElement, onChange, startingText;
       var palette = utils.generateDropletPalette(config.level.codeFunctions);
@@ -995,7 +994,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/ta_in/common":55,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":9,"./lodash":11,"./slider":40,"./templates/buttons.html":42,"./templates/instructions.html":44,"./templates/learn.html":45,"./templates/makeYourOwn.html":46,"./utils":53,"./xml":54}],3:[function(require,module,exports){
+},{"../locale/ta_in/common":55,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":9,"./slider":40,"./templates/buttons.html":42,"./templates/instructions.html":44,"./templates/learn.html":45,"./templates/makeYourOwn.html":46,"./utils":53,"./xml":54}],3:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -7271,9 +7270,7 @@ DirtDrawer.__testonly__ = {
 
 },{"./mazeUtils":26}],19:[function(require,module,exports){
 var utils = require('../utils');
-utils.pre_lodash_require();
-var _ = require('../lodash');
-utils.post_lodash_require();
+var _ = utils.getLodash();
 
 /**
  * Stores information about a current Maze execution.  Execution consists of a
@@ -7397,7 +7394,7 @@ ExecutionInfo.prototype.checkTimeout = function() {
   }
 };
 
-},{"../lodash":11,"../utils":53}],20:[function(require,module,exports){
+},{"../utils":53}],20:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9397,9 +9394,7 @@ var feedback = require('../feedback.js');
 var dom = require('../dom');
 var utils = require('../utils');
 var mazeUtils = require('./mazeUtils');
-utils.pre_lodash_require();
-var _ = require('../lodash');
-utils.post_lodash_require();
+var _ = utils.getLodash();
 
 var Bee = require('./bee');
 var WordSearch = require('./wordsearch');
@@ -11052,7 +11047,7 @@ Maze.onExecutionFinish = function () {
   }
 };
 
-},{"../../locale/ta_in/common":55,"../base":2,"../codegen":6,"../dom":8,"../feedback.js":9,"../lodash":11,"../skins":39,"../templates/page.html":47,"../timeoutList":52,"../utils":53,"./api":12,"./bee":13,"./beeItemDrawer":15,"./controls.html":17,"./dirtDrawer":18,"./executionInfo":19,"./extraControlRows.html":20,"./mazeUtils":26,"./tiles":30,"./visualization.html":35,"./wordsearch":36}],26:[function(require,module,exports){
+},{"../../locale/ta_in/common":55,"../base":2,"../codegen":6,"../dom":8,"../feedback.js":9,"../skins":39,"../templates/page.html":47,"../timeoutList":52,"../utils":53,"./api":12,"./bee":13,"./beeItemDrawer":15,"./controls.html":17,"./dirtDrawer":18,"./executionInfo":19,"./extraControlRows.html":20,"./mazeUtils":26,"./tiles":30,"./visualization.html":35,"./wordsearch":36}],26:[function(require,module,exports){
 /**
  * Generalized function for generating ids for cells in a table
  */
@@ -11107,9 +11102,7 @@ module.exports = {
 
 var skinsBase = require('../skins');
 var utils = require('../utils');
-utils.pre_lodash_require();
-var _ = require('../lodash');
-utils.post_lodash_require();
+var _ = utils.getLodash();
 
 var CONFIGS = {
   letters: {
@@ -11262,7 +11255,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../lodash":11,"../skins":39,"../utils":53}],29:[function(require,module,exports){
+},{"../skins":39,"../utils":53}],29:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11471,9 +11464,7 @@ return buf.join('');
 }());
 },{"ejs":57}],36:[function(require,module,exports){
 var utils = require('../utils');
-utils.pre_lodash_require();
-var _ = require('../lodash');
-utils.post_lodash_require();
+var _ = utils.getLodash();
 var cellId = require('./mazeUtils').cellId;
 
 var SquareType = require('./tiles').SquareType;
@@ -11718,7 +11709,7 @@ WordSearch.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../lodash":11,"../utils":53,"./mazeUtils":26,"./tiles":30}],37:[function(require,module,exports){
+},{"../utils":53,"./mazeUtils":26,"./tiles":30}],37:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var reqBlocks = require('./requiredBlocks');
 var blockUtils = require('../block_utils');
@@ -11961,9 +11952,7 @@ module.exports = {
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
-utils.pre_lodash_require();
-var _ = require('./lodash');
-utils.post_lodash_require();
+var _ = utils.getLodash();
 
 /**
  * Create the textual XML for a math_number block.
@@ -12197,7 +12186,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./lodash":11,"./utils":53,"./xml":54}],39:[function(require,module,exports){
+},{"./block_utils":3,"./utils":53,"./xml":54}],39:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -12742,26 +12731,26 @@ exports.clearTimeouts = function () {
 },{}],53:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
-/**
- * Special functions for pulling in lodash to avoid node/requirejs issue.
- */
-exports.pre_lodash_require = function() {
-  if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
-    savedAmd = define.amd;
-    define.amd = 'dont_call_requirejs_define';
-  }
-};
 
-exports.post_lodash_require = function() {
-  if (typeof define == 'function' && savedAmd) {
-    define.amd = savedAmd;
-    savedAmd = null;
-  }
-};
+// Do some hackery to make it so that lodash doesn't think it's being loaded
+// via require js
+if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
+  savedAmd = define.amd;
+  define.amd = 'dont_call_requirejs_define';
+}
 
-exports.pre_lodash_require();
+// get lodash
 var _ = require('./lodash');
-exports.post_lodash_require();
+
+// undo hackery
+if (typeof define == 'function' && savedAmd) {
+  define.amd = savedAmd;
+  savedAmd = null;
+}
+
+exports.getLodash = function () {
+  return _;
+};
 
 exports.shallowCopy = function(source) {
   var result = {};

@@ -124,9 +124,7 @@ var utils = require('./utils');
 var blockUtils = require('./block_utils');
 var builder = require('./builder');
 var Slider = require('./slider');
-utils.pre_lodash_require();
-var _ = require('./lodash');
-utils.post_lodash_require();
+var _ = utils.getLodash();
 var constants = require('./constants.js');
 
 //TODO: These should be members of a BlocklyApp instance.
@@ -383,6 +381,7 @@ BlocklyApps.init = function(config) {
       enableLiveAutocompletion: true
     });
     */
+    // using window.require forces us to use requirejs version of require
     window.require(['droplet'], function(droplet) {
       var displayMessage, examplePrograms, messageElement, onChange, startingText;
       var palette = utils.generateDropletPalette(config.level.codeFunctions);
@@ -995,7 +994,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/sq_al/common":40,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":9,"./lodash":11,"./slider":14,"./templates/buttons.html":28,"./templates/instructions.html":30,"./templates/learn.html":31,"./templates/makeYourOwn.html":32,"./utils":38,"./xml":39}],3:[function(require,module,exports){
+},{"../locale/sq_al/common":40,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":9,"./slider":14,"./templates/buttons.html":28,"./templates/instructions.html":30,"./templates/learn.html":31,"./templates/makeYourOwn.html":32,"./utils":38,"./xml":39}],3:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -7595,9 +7594,7 @@ if(typeof define == 'function' && define.amd) {
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
-utils.pre_lodash_require();
-var _ = require('./lodash');
-utils.post_lodash_require();
+var _ = utils.getLodash();
 
 /**
  * Create the textual XML for a math_number block.
@@ -7831,7 +7828,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./lodash":11,"./utils":38,"./xml":39}],13:[function(require,module,exports){
+},{"./block_utils":3,"./utils":38,"./xml":39}],13:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -8246,9 +8243,7 @@ var commonMsg = require('../../locale/sq_al/common');
 var codegen = require('../codegen');
 var tiles = require('./tiles');
 var utils = require('../utils');
-utils.pre_lodash_require();
-var _ = require('../lodash');
-utils.post_lodash_require();
+var _ = utils.getLodash();
 
 var Direction = tiles.Direction;
 var Position = tiles.Position;
@@ -9701,7 +9696,7 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/sq_al/common":40,"../../locale/sq_al/studio":41,"../codegen":6,"../lodash":11,"../utils":38,"./tiles":25}],17:[function(require,module,exports){
+},{"../../locale/sq_al/common":40,"../../locale/sq_al/studio":41,"../codegen":6,"../utils":38,"./tiles":25}],17:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -11246,9 +11241,7 @@ var Projectile = require('./projectile');
 var Hammer = require('../hammer');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
-utils.pre_lodash_require();
-var _ = require('../lodash');
-utils.post_lodash_require();
+var _ = utils.getLodash();
 
 var Direction = tiles.Direction;
 var NextTurn = tiles.NextTurn;
@@ -13685,7 +13678,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/sq_al/common":40,"../../locale/sq_al/studio":41,"../base":2,"../codegen":6,"../dom":8,"../feedback.js":9,"../hammer":10,"../lodash":11,"../skins":13,"../templates/page.html":33,"../utils":38,"../xml":39,"./api":15,"./blocks":16,"./collidable":17,"./controls.html":18,"./extraControlRows.html":19,"./projectile":22,"./tiles":25,"./visualization.html":26}],25:[function(require,module,exports){
+},{"../../locale/sq_al/common":40,"../../locale/sq_al/studio":41,"../base":2,"../codegen":6,"../dom":8,"../feedback.js":9,"../hammer":10,"../skins":13,"../templates/page.html":33,"../utils":38,"../xml":39,"./api":15,"./blocks":16,"./collidable":17,"./controls.html":18,"./extraControlRows.html":19,"./projectile":22,"./tiles":25,"./visualization.html":26}],25:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -14118,26 +14111,26 @@ return buf.join('');
 },{"ejs":42}],38:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
-/**
- * Special functions for pulling in lodash to avoid node/requirejs issue.
- */
-exports.pre_lodash_require = function() {
-  if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
-    savedAmd = define.amd;
-    define.amd = 'dont_call_requirejs_define';
-  }
-};
 
-exports.post_lodash_require = function() {
-  if (typeof define == 'function' && savedAmd) {
-    define.amd = savedAmd;
-    savedAmd = null;
-  }
-};
+// Do some hackery to make it so that lodash doesn't think it's being loaded
+// via require js
+if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
+  savedAmd = define.amd;
+  define.amd = 'dont_call_requirejs_define';
+}
 
-exports.pre_lodash_require();
+// get lodash
 var _ = require('./lodash');
-exports.post_lodash_require();
+
+// undo hackery
+if (typeof define == 'function' && savedAmd) {
+  define.amd = savedAmd;
+  savedAmd = null;
+}
+
+exports.getLodash = function () {
+  return _;
+};
 
 exports.shallowCopy = function(source) {
   var result = {};
