@@ -15,7 +15,7 @@ Today, erroneous user submissions receive really unhelpful error feedback, such 
 
 ## Ready to help us?
 
-If you're registered as a teacher on the Code.org tutorial platform, you can start adding hints for students.  
+If you're [registered as a teacher](http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher) on the Code.org tutorial platform, you can start adding hints for students.  
 <a href="http://studio.code.org/add_pop_hint/0" style="text-decoration:none">
   <button style="margin-top:10px">Start adding hints</button>
 </a>
