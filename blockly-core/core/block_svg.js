@@ -665,7 +665,7 @@ Blockly.BlockSvg.prototype.renderCompute_ = function(iconWidth) {
       currentRow.height = 0;
       inputRows.push(currentRow);
     }
-    if (currentRow.length > 0) {
+    if (currentRow.length > 0 || input.isInline()) {
       currentRow.type = BS.INLINE;
     }
     currentRow.push(input);
