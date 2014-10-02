@@ -25,12 +25,12 @@ exports.displayFeedback = function(options) {
   }
 
   var hadShareFailure = (options.response && options.response.share_failure);
-  options.showingSharing = options.showingSharing && !hadShareFailure;
+  var showingSharing = options.showingSharing && !hadShareFailure;
 
   var canContinue = exports.canContinueToNextLevel(options.feedbackType);
   var displayShowCode = BlocklyApps.enableShowCode && canContinue;
   var feedback = document.createElement('div');
-  var sharingDiv = (canContinue && options.showingSharing) ? exports.createSharingDiv(options) : null;
+  var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
   var shareFailureDiv = hadShareFailure ? getShareFailure(options) : null;
   var feedbackBlocks = new FeedbackBlocks(options);
@@ -64,7 +64,7 @@ exports.displayFeedback = function(options) {
   if (sharingDiv) {
     feedback.appendChild(sharingDiv);
   }
-  if (options.showingSharing) {
+  if (showingSharing) {
     var shareCodeSpacer = document.createElement('div');
     shareCodeSpacer.className = "share-code-spacer";
     feedback.appendChild(shareCodeSpacer);
