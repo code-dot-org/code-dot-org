@@ -86,8 +86,7 @@ theme: none
       %td
         %span{"ng-hide" => "student.editing"} {{student.age}}
         %span{"ng-show" => "student.editing"}
-          %select{"ng-model" => "student.age", "ng-options"=>"value for value in age_list", required: "true"}
-          %span.required= I18n.t('dashboard_action_required')
+          %select{"ng-model" => "student.age", "ng-options"=>"value for value in age_list"}
       %td
         %span{"ng-hide" => "student.editing"} {{gender_list[student.gender]}}
         %span{"ng-show" => "student.editing"}
