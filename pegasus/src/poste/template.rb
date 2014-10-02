@@ -1,4 +1,6 @@
 require 'mail'
+require 'base64'
+require 'nokogiri'
 require_relative '../env'
 
 module Poste
@@ -28,10 +30,22 @@ module Poste
       locals = OpenStruct.new(params).instance_eval{binding}
 
       header = @header.result(locals) unless @header.nil?
-      html = @html.result(locals) unless @html.nil?
+      html = replace_urls_with_click_trackers @html.result(locals), params unless @html.nil?
       text = @text.result(locals) unless @text.nil?
 
       [header, html, text]
+    end
+
+    def replace_urls_with_click_trackers(html, params)
+      doc = Nokogiri::HTML(html)
+      doc.css('a').each do |link|
+        href = link['href']
+        next if href == params[:unsubscribe_link]
+
+        url_id = Poste2::find_or_create_url(href)
+        link.attributes['href'].value = "http://#{CDO.poste_host}/l/#{params[:encrypted_id]}/#{Base64.urlsafe_encode64(url_id.to_s)}"
+      end
+      doc.to_html
     end
 
   end
