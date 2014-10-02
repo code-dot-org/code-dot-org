@@ -2,13 +2,17 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   before_filter :nonminimal
 
+  # GET /users/auth/:provider/callback
   def all
-    user = User.from_omniauth(request.env["omniauth.auth"], request.env['omniauth.params'])
-    if user.persisted?
+    Rails.logger.debug("omniauth.auth = #{request.env['omniauth.auth'].inspect}")
+    Rails.logger.debug("omniauth.params = #{request.env['omniauth.params'].inspect}")
+
+    @user = User.from_omniauth(request.env["omniauth.auth"], request.env['omniauth.params'])
+    if @user.persisted?
       flash.notice = I18n.t('auth.signed_in')
-      sign_in_and_redirect user
+      sign_in_and_redirect @user
     else
-      session["devise.user_attributes"] = user.attributes
+      session["devise.user_attributes"] = @user.attributes
       redirect_to new_user_registration_url
     end
   end
@@ -16,4 +20,5 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   alias_method :facebook, :all
   alias_method :google_oauth2, :all
   alias_method :windowslive, :all
+  alias_method :clever, :all
 end
