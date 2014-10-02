@@ -45,11 +45,14 @@ module Poste2
 
     contact = contacts.where(email:address).first
     if contact
-      contacts.where(id:contact[:id]).update({}.tap do |contact|
-        contact[:name] = name if name
-        contact[:updated_at] = contact[:updated_on] = now
-        contact[:updated_ip] = ip_address
-      end)
+      if contact[:name] != name && !name.nil_or_empty?
+        contacts.where(id:contact[:id]).update(
+          name:name,
+          updated_at:now,
+          updated_on:now,
+          updated_ip:ip_address,
+        )
+      end
     else
       contacts.insert({}.tap do |contact|
         contact[:email] = address
