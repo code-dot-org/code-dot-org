@@ -1,5 +1,5 @@
 -dont_cache
--landing_page = "/company-profiles/#{data['name_s']}"
+-landing_page = "/employees/#{data['name_s']}"
 -congrats_page = "/congrats?co=#{data['name_s']}"
 -markdown_basics = "http://daringfireball.net/projects/markdown/basics"
 
@@ -51,6 +51,12 @@
     -if secret
       %tr
         %th
+          Show Display Name in header?
+        %td
+          -name_in_header_b = data['name_in_header_b'] || nil
+          %input{name:'name_in_header_b', type:'checkbox', value:'1', checked: name_in_header_b}
+      %tr
+        %th
           Logo
           %br
           (appears in header, 100x100px or higher recommended)
@@ -58,11 +64,27 @@
           %input{name:'logo_file', type:'file'}
       %tr
         %th
+          Remove Logo?
+        %td
+          %input{name:'remove_logo_b', type:'checkbox', value:'1'}
+      %tr
+        %th
+          Number of Employees
+        %td
+          %input{name:'num_employees_i', type:"number", value:data['num_employees_i']}
+      %tr
+        %th
           Youtube video key
           %br
           (e.g. the FC5FbmsH4fw in http://www.youtube.com/watch?v=FC5FbmsH4fw)
         %td
           %input{name:'video_key_s', value:data['video_key_s']}
+      %tr
+        %th
+          Show Google+ share button
+        %td
+          -gplus_b = data['gplus_b'] || nil
+          %input{name:'gplus_b', type:'checkbox', value:'1', checked: gplus_b}
       %tr
         %th
           Intro - Top

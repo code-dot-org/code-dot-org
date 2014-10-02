@@ -1,28 +1,30 @@
 * * *
 
-## title: mga Premyo
+title: Prizes
+
+## layout: wide
 
 # Ang Hour of Code -- mga premyo para sa mga organizer
 
 ## Bawat organizer ay tatanggap ng isang thank you gift-code
 
-Bawat guro na tutulong sa Hour of Code para sa mga estudyante ay tatanggap ng 10 GB na Dropbox space o $10 Skype credit bilang regalo!
+Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
 <% if @country == 'us' %>
 
 ## Ang masuwerteng klase ay mananalo ng video chat kasama ang isang guest speaker!
 
-50 masuwerteng klase ang maiimbitahang sumali sa video chat para makisaya sa Hour of Code sa Disyembre 8-14. Ang iyong mga estudyante ay maaring magtanong at makipagkwentuhan sa mga pinuno ng industriya. [Tignan ang kwentuhan nuong isang taon][1] kasama sa Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki ng Google at Gabe Newell ng Valve.
+50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats][1] with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
 
  [1]: http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a
 
 ## Ang mga masuwerteng paaralan ay mananalo ng Laptop para sa klase (o $10,000 para sa gamit sa technology)
 
-Isang masuwerteng paaralan mula sa ***bawat*** estado ng US (kasama ang Washington D.C.) ay maaaring manalo ng mga kagamitang nagkakahalaga ng $10,000. Magsimula ng mga aktibidad tungkol sa Hour of Code para sa bawat estudyante sa inyong paaralan para makasali. Punan ang form sa ibaba para makasali.
+One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
 
 ## Form tungkol sa Hardware Prize:
 
-Kung naisali mo ang iyong buong paaralan para sa Hour of Code, sumali para manalo ng laptop para sa iyong klase (o kaya ay technology na nagkakahalaga ng $10,000) para sa inyong paaralan! Isang guro lamang ang kailangan para makasali ang buong paaralan.
+If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
 
 <%= view :hardware\_prizes\_form %>
 

@@ -1,3 +1,7 @@
+---
+layout: wide
+---
+
 # Guía para los tutoriales de la Hora de Programación y la semana educativa de Ciencias Computacionales
 
 Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn][1].
@@ -8,7 +12,7 @@ Nos gustaría presentar varias opciones atractivas, pero la meta principal es op
 
 <a id="top"></a>
 
-## Índice:
+## Index:
 
 *   [Cómo serán evaluadas las tutorías en cuánto a inclusión][2]
 *   [Guía general para crear una actividad de la Hora de Programación][3]
@@ -30,7 +34,7 @@ Nos gustaría presentar varias opciones atractivas, pero la meta principal es op
 
 <a id="inclusion"></a>
 
-## ¿Cómo se evaluarán los tutoriales para ser incluidos?
+## Cómo serán evaluadas las tutorías en cuánto a inclusión
 
 Un comité de educadores de ciencias computacionales evaluarán las propuestas con base en métricas cualitativas y cuantitativas, incluso con resultados de encuestas hechas a un grupo más amplio de educadores.
 
@@ -40,13 +44,10 @@ Un comité de educadores de ciencias computacionales evaluarán las propuestas c
 *   son auto-dirigidas, no requieren ninguna instrucción
 *   están diseñadas para principiantes
 *   están diseñadas para actividad de 1 hora aproximádamente
-*   no requieren de registro 
-*   no requieren de pago
-*   no requieren de ninguna instalación
-*   funcionan en diversas plataformas de sistemas operativos, incluso en tabletas y móviles
-*   funcionan en múltiples idiomas
-*   promueven aprendizaje en todos los grupos demográficos (especialmente los grupos marginados)
-*   no se centran solamente en diseño web HTML+CSS - (nuestra meta es la ciencia computacional, no sólo codificación en HTML)
+*   work across many OS/device platforms, including mobile and tablets
+*   work across multiple languages
+*   promote learning by all demographic groups (esp under-represented groups)
+*   not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
 
 **Las tutorías tendrán una posición más baja si:**
 
@@ -79,7 +80,7 @@ Como resultado, los listados actuales están "suficientemente bien", y la razón
 
 <a id="guidelines"></a>
 
-## Lineamientos generales para crear una actividad de la Hora de Programación
+## Guía general para crear una actividad de la Hora de Programación
 
 *   **Tema:** Introducción a la ciencia computacional o programación (no HTML).
 *   **Meta:**Que los principiantes tengan una primera experiencia agradable.
@@ -96,7 +97,7 @@ Como resultado, los listados actuales están "suficientemente bien", y la razón
 
 <a id="submit"></a>
 
-## Cómo entregar (Fecha límite 0/1/2014)
+## ¿Cómo enviar? (Fecha límite 10/1/2014)
 
 Visita la [página de envío de actividades de la Hora de Programación][11] y sigue los pasos para enviar tu tutoría.
 
@@ -176,7 +177,7 @@ Visita la [página de envío de actividades de la Hora de Programación][11] y s
 
 **Incorpora retroalimentación al final de la actividad.** (Por ejemplo: "¡Has terminado 10 niveles y aprendido sobre loops! ¡Buen trabajo!")
 
-**Incorpora redes sociales.** Anima a los estudiantes a publicar en los medios de comunicación social (cuando sea apropiado) cuando hayan terminado, por ejemplo "He hecho una Hora de Programación con \___| ¿Tú? #HourOfCode" o "He hecho una #HourOfCode como parte de #CSEdWeek. ¿Tú? @Scratch." Utilizar el hashtag **#HourOfCode** (con letras mayúsculas H, O, C)
+**Incorpora redes sociales.** Anima a los estudiantes a publicar en los medios de comunicación social (cuando sea apropiado) cuando hayan terminado, por ejemplo "He hecho una Hora de Programación con ________ ¿Tú? #HourOfCode" o "He hecho una #HourOfCode como parte de #CSEdWeek. ¿Tú? @Scratch." Utilizar el hashtag **#HourOfCode** (con letras mayúsculas H, O, C)
 
 **Crea tu actividad en varios idiomas además del Inglés.** La campaña de este año tiene un enfoque internacional y quisiéramos tener algunas actividades para ofrecer a los participantes que no hablan inglés.
 
@@ -204,7 +205,7 @@ Beneficios de la programación en pares:
 
 <a id="tm"></a>
 
-## Lineamientos de Marca Registrada
+## Guía de Marca Registrada
 
 Con 40 millones de estudiantes que probaron la Hora de Programación, y más del 97% de los profesores pidiéndonos repetir este evento cada año, estamos dando los pasos para asegurarnos de convertir a la Hora de Programación en un movimiento que se repita anualmente con mayor fidelidad y sin confusión.
 
@@ -222,7 +223,7 @@ Uno de estos pasos es proteger la marca registrada "Hour of Code" para prevenir 
 
 <a id="pixel"></a>
 
-## Rastrear un Pixel
+## Pixel Rastreador
 
 Para rastrear con más precisión la participación le pedimos a cada socio que hace tutoriales incluir una imagen de 1 pixel en la primera y ultima hoja de sus tutoriales de Hora de Programación (Una imagen de un pixel al inicio y una imagen de un pixel en la página final. No en páginas intermedias).
 
@@ -242,7 +243,7 @@ IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
 <a id="promote"></a>
 
-## Promocionando tus tutorías, CSEdWeek, y Hora de Programación
+## Promocionar tus tutoriales, CSEdWeek, y Hora de Programación
 
 Pedimos a todos que promocionen sus tutorías de 1 hora con todos sus usuarios. Por favor dirigelos a tu página de la Hora de Programación. Es mucho más probable que tus usuarios reaccionen a un mensaje tuyo acerca de tu tutoría. Usa la campaña internacional de la Hora de Programación para la Semana de Educación en Ciencias de Computación como una excusa para animar a usuarios a invitar a otros a unirse, para alcanzar un total de 100 millones de participantes.
 
@@ -256,7 +257,7 @@ Pedimos a todos que promocionen sus tutorías de 1 hora con todos sus usuarios. 
 
 <a id="disabilities"></a>
 
-## Una nota especial para estudiantes con discapacidades
+## A special note for students with disabilities
 
 Si creas una tutoría que está diseñada para personas con discapacidad visual, queremos resaltarlo para espectadores con lectores de pantalla. Aún no hemos recibido una tutoría así y estaríamos muy dispuestos a incluirla como una opción para estos estudiantes.
 

@@ -1,28 +1,30 @@
 * * *
 
-## العنوان: الجوائز
+title: Prizes
+
+## layout: wide
 
 # ساعة البرمجة – جوائز لكل منظم
 
 ## يفوز كل منظم بكود لهدية شكر
 
-سوف يتلقى كل مرب يستضيف ساعة البرمجة للطلاب 10 غيغابايت من Dropbox أو 10 دولاررصيدا لبرنامج سكايب كهدية شكر!
+Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
 <% if @country == 'us' %>
 
 ## الفصول الدراسية المحظوظة ستربح محادثة فيديو مع ضيف!
 
-ستقع دعوة 50 قسم محظوظ للانضمام الى محادثة فيديو للاحتفال بساعة البرمجة خلال الفترة المتراوحة بين 8 و 14 ديسمبر. سوف تكون الفرصة لتلاميذك لطرح الأسئلة والدردشة مع قادة صناعة التكنولوجيا. [راجع محادثات العام الماضي ][1] مع بيل غيتس، مؤسس تويتر جاك دورسي، سوزان وجسيكي من جوجل ونويل غابي من فالف.
+50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats][1] with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
 
  [1]: http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a
 
 ## المدارس المحظوظة ستتحصل على مجموعة حواسيب محمولة (او 10.000 دولار لتقنيات اخرى)
 
-سوف تفوز مدرسة محظوظة واحدة في ***كل*** ولاية من الولايات المتحدة (اضافة الى العاصمة واشنطن) ما قيمته 10000 دولار من التكنولوجيا. للترشح يجب تنظيم ساعة البرمجة لكل تلميذ بمدرستك. ثم املء النموذج أدناه للمشاركة.
+One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
 
 ## استمارة المشاركة في مسابقة الاجهزة:
 
-اذا ادرجت كل مدرستك للمشاركة في ساعة البرمجة، ادخل للفوز بمجموعة من الحواسيب المحمولة لمدرستك ( او 10000 دولار لتكنولوجيا اخرى)! مدرس واحد فقط يحتاج إلى تقديم الطلب بالنسبة لكل مدرسة.
+If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
 
 <%= view :hardware\_prizes\_form %>
 

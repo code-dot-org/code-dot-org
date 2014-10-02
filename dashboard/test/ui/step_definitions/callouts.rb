@@ -1,5 +1,5 @@
 And(/^callout "([^"]*)" has text: (.*)$/) do |callout_id, text|
-  element_has_text("#qtip-#{callout_id}-content", text)
+  callout_has_text(callout_id, text)
 end
 
 And(/^callout "([^"]*)" is visible$/) do |callout_id|
@@ -13,7 +13,7 @@ And(/^callout "([^"]*)" is hidden$/) do |callout_id|
 end
 
 And(/^I close callout "([^"]*)"$/) do |callout_id|
-  xpath = "//*[@id='qtip-#{callout_id}']/div[3]/img"
+  xpath = "(//*[contains(@class, 'cdo-qtips')])[#{callout_id.to_i + 1}]/div[3]/img"
   @button = @browser.find_element(:xpath, xpath)
   @button.click
   short_wait.until { !is_callout_visible(callout_id) }

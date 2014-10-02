@@ -90,7 +90,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":12,"./utils":38}],2:[function(require,module,exports){
+},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":12,"./utils":39}],2:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -124,7 +124,7 @@ var utils = require('./utils');
 var blockUtils = require('./block_utils');
 var builder = require('./builder');
 var Slider = require('./slider');
-var _ = require('./lodash');
+var _ = utils.getLodash();
 var constants = require('./constants.js');
 
 //TODO: These should be members of a BlocklyApp instance.
@@ -191,6 +191,7 @@ BlocklyApps.init = function(config) {
   BlocklyApps.share = config.share;
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
+  BlocklyApps.sendToPhone = config.sendToPhone;
   BlocklyApps.noPadding = config.no_padding;
 
   BlocklyApps.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
@@ -266,8 +267,11 @@ BlocklyApps.init = function(config) {
 
       belowViz.appendChild(feedback.createSharingDiv({
         response: {
-          level_source: window.location
+          level_source: window.location,
+          level_source_id: config.level_source_id,
+          phone_share_url: config.send_to_phone_url
         },
+        sendToPhone: config.sendToPhone,
         twitter: config.twitter
       }));
 
@@ -369,26 +373,39 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
+    /*
     BlocklyApps.editor = window.ace.edit('codeTextbox');
     BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
     BlocklyApps.editor.setOptions({
       enableBasicAutocompletion: true,
       enableLiveAutocompletion: true
     });
+    */
+    // using window.require forces us to use requirejs version of require
+    window.require(['droplet'], function(droplet) {
+      var displayMessage, examplePrograms, messageElement, onChange, startingText;
+      var palette = utils.generateDropletPalette(config.level.codeFunctions);
+      BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+        mode: 'javascript',
+        palette: palette
+      });
+      // temporary: use prompt icon to switch text/blocks
+      document.getElementById('prompt-icon').addEventListener('click', function() {
+        BlocklyApps.editor.toggleBlocks();
+      });
 
-    var codeTextbox = document.getElementById('codeTextbox');
-
-    var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
-    var codeFunctions = config.level.codeFunctions;
-    // Insert hint text from level codeFunctions into editCode area
-    if (codeFunctions) {
-      var hintText = '';
-      for (var i = 0; i < codeFunctions.length; i++) {
-        hintText += " " + codeFunctions[i].func + "();";
+      var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
+      var codeFunctions = config.level.codeFunctions;
+      // Insert hint text from level codeFunctions into editCode area
+      if (codeFunctions) {
+        var hintText = '';
+        for (var i = 0; i < codeFunctions.length; i++) {
+          hintText += " " + codeFunctions[i].func + "();";
+        }
+        startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
       }
-      startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
-    }
-    BlocklyApps.editor.setValue(startText);
+      BlocklyApps.editor.setValue(startText);
+    });
   }
 
   BlocklyApps.Dialog = config.Dialog;
@@ -876,6 +893,7 @@ BlocklyApps.displayFeedback = function(options) {
   options.Dialog = BlocklyApps.Dialog;
   options.onContinue = onContinue;
   options.backToPreviousLevel = backToPreviousLevel;
+  options.sendToPhone = BlocklyApps.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
@@ -976,7 +994,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/hu_hu/common":40,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":9,"./lodash":11,"./slider":14,"./templates/buttons.html":16,"./templates/instructions.html":18,"./templates/learn.html":19,"./templates/makeYourOwn.html":20,"./utils":38,"./xml":39}],3:[function(require,module,exports){
+},{"../locale/hu_hu/common":41,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":9,"./slider":14,"./templates/buttons.html":16,"./templates/instructions.html":18,"./templates/learn.html":19,"./templates/makeYourOwn.html":20,"./utils":39,"./xml":40}],3:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1122,7 +1140,7 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
-},{"./xml":39}],4:[function(require,module,exports){
+},{"./xml":40}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1264,7 +1282,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/hu_hu/common":40}],5:[function(require,module,exports){
+},{"../locale/hu_hu/common":41}],5:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -1294,7 +1312,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":8,"./feedback.js":9,"./templates/builder.html":15,"./utils.js":38,"url":52}],6:[function(require,module,exports){
+},{"./dom.js":8,"./feedback.js":9,"./templates/builder.html":15,"./utils.js":39,"url":53}],6:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -1977,7 +1995,6 @@ exports.createSharingDiv = function(options) {
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
-    options.sendToPhone = true;
   }
 
   var sharingDiv = document.createElement('div');
@@ -1996,17 +2013,22 @@ exports.createSharingDiv = function(options) {
 
 //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
-  if (sharingPhone) {
+  if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
         sendToPhone.setAttribute('style', 'display:inline-block');
-        var phone = $("#phone");
-        phone.mask("(999) 999-9999");
-        phone.focus();
+        var phone = $(sharingDiv.querySelector("#phone"));
+        var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
+        submitButton.disabled = true;
+        phone.mask('(000) 000-0000',{
+            onComplete:function(){if(!submitted) submitButton.disabled=false;},
+            onChange: function(){submitButton.disabled=true;}
+        });
+        phone.focus();
         dom.addClickTouchEvent(submitButton, function() {
-          var phone = $("#phone");
+          var phone = $(sharingDiv.querySelector("#phone"));
           var params = jQuery.param({
             level_source: options.response.level_source_id,
             phone: phone.val()
@@ -2014,6 +2036,7 @@ exports.createSharingDiv = function(options) {
           $(submitButton).val("Sending..");
           phone.prop('readonly', true);
           submitButton.disabled = true;
+          submitted = true;
           jQuery.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text("Sent!");
@@ -2095,8 +2118,7 @@ exports.canContinueToNextLevel = function(feedbackType) {
  */
 var getGeneratedCodeString = function() {
   if (BlocklyApps.editCode) {
-    var codeTextbox = document.getElementById('codeTextbox');
-    return dom.getText(codeTextbox);
+    return BlocklyApps.editor ? BlocklyApps.editor.getValue() : '';
   }
   else {
     return codegen.workspaceCode(Blockly);
@@ -2477,7 +2499,7 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/hu_hu/common":40,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":16,"./templates/code.html":17,"./templates/readonly.html":22,"./templates/sharing.html":23,"./templates/showCode.html":24,"./templates/trophy.html":25,"./utils":38}],10:[function(require,module,exports){
+},{"../locale/hu_hu/common":41,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":16,"./templates/code.html":17,"./templates/readonly.html":22,"./templates/sharing.html":23,"./templates/showCode.html":24,"./templates/trophy.html":25,"./utils":39}],10:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -5467,7 +5489,7 @@ exports.define = function(name) {
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
-var _ = require('./lodash');
+var _ = utils.getLodash();
 
 /**
  * Create the textual XML for a math_number block.
@@ -5701,7 +5723,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./lodash":11,"./utils":38,"./xml":39}],13:[function(require,module,exports){
+},{"./block_utils":3,"./utils":39,"./xml":40}],13:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -6008,7 +6030,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],16:[function(require,module,exports){
+},{"ejs":43}],16:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6029,7 +6051,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/hu_hu/common":40,"ejs":42}],17:[function(require,module,exports){
+},{"../../locale/hu_hu/common":41,"ejs":43}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6050,7 +6072,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],18:[function(require,module,exports){
+},{"ejs":43}],18:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6071,7 +6093,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/hu_hu/common":40,"ejs":42}],19:[function(require,module,exports){
+},{"../../locale/hu_hu/common":41,"ejs":43}],19:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6094,7 +6116,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/hu_hu/common":40,"ejs":42}],20:[function(require,module,exports){
+},{"../../locale/hu_hu/common":41,"ejs":43}],20:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6115,7 +6137,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/hu_hu/common":40,"ejs":42}],21:[function(require,module,exports){
+},{"../../locale/hu_hu/common":41,"ejs":43}],21:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6140,7 +6162,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/hu_hu/common":40,"ejs":42}],22:[function(require,module,exports){
+},{"../../locale/hu_hu/common":41,"ejs":43}],22:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6162,7 +6184,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],23:[function(require,module,exports){
+},{"ejs":43}],23:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6183,7 +6205,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/hu_hu/common":40,"ejs":42}],24:[function(require,module,exports){
+},{"../../locale/hu_hu/common":41,"ejs":43}],24:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6204,7 +6226,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/hu_hu/common":40,"ejs":42}],25:[function(require,module,exports){
+},{"../../locale/hu_hu/common":41,"ejs":43}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6225,7 +6247,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],26:[function(require,module,exports){
+},{"ejs":43}],26:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -6691,6 +6713,7 @@ var msg = require('../../locale/hu_hu/turtle');
 var commonMsg = require('../../locale/hu_hu/common');
 
 var customLevelBlocks = require('./customLevelBlocks');
+var functionalBlocks = require('./functionalBlocks');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -7542,10 +7565,11 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   customLevelBlocks.install(blockly, generator, gensym);
+  functionalBlocks.install(blockly, generator, gensym);
 
 };
 
-},{"../../locale/hu_hu/common":40,"../../locale/hu_hu/turtle":41,"./core":30,"./customLevelBlocks":31}],29:[function(require,module,exports){
+},{"../../locale/hu_hu/common":41,"../../locale/hu_hu/turtle":42,"./core":30,"./customLevelBlocks":31,"./functionalBlocks":32}],29:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7566,7 +7590,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],30:[function(require,module,exports){
+},{"ejs":43}],30:[function(require,module,exports){
 // Create a limited colour palette to avoid overwhelming new users
 // and to make colour checking easier.  These definitions cannot be
 // moved to blocks.js, which is loaded later, since they are used in
@@ -8147,7 +8171,41 @@ function installDrawLowerWave(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/hu_hu/turtle":41}],32:[function(require,module,exports){
+},{"../../locale/hu_hu/turtle":42}],32:[function(require,module,exports){
+/**
+ * A set of functional blocks
+ */
+
+exports.install = function(blockly, generator, gensym) {
+ installPlus(blockly, generator, gensym);
+};
+
+function installPlus(blockly, generator, gensym) {
+  blockly.Blocks.functional_plus = {
+    // Block for turning left or right.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle('+')
+          .setAlign(Blockly.ALIGN_CENTRE);
+      this.appendValueInput('VALUE')
+          .setCheck('Number');
+      this.appendValueInput('VALUE')
+          .setCheck('Number')
+          .setInline(true);
+
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  generator.functional_plus = function() {
+    return '';
+  };
+}
+
+},{}],33:[function(require,module,exports){
 var levelBase = require('../level_base');
 var Colours = require('./core').Colours;
 var answer = require('./answers').answer;
@@ -8999,7 +9057,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/hu_hu/turtle":41,"../block_utils":3,"../level_base":10,"./answers":26,"./core":30,"./requiredBlocks":34,"./startBlocks.xml":35,"./toolbox.xml":36}],33:[function(require,module,exports){
+},{"../../locale/hu_hu/turtle":42,"../block_utils":3,"../level_base":10,"./answers":26,"./core":30,"./requiredBlocks":35,"./startBlocks.xml":36,"./toolbox.xml":37}],34:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Turtle = require('./turtle');
 var blocks = require('./blocks');
@@ -9012,7 +9070,7 @@ window.turtleMain = function(options) {
   appMain(window.Turtle, levels, options);
 };
 
-},{"../appMain":1,"../skins":13,"./blocks":28,"./levels":32,"./turtle":37}],34:[function(require,module,exports){
+},{"../appMain":1,"../skins":13,"./blocks":28,"./levels":33,"./turtle":38}],35:[function(require,module,exports){
 /**
  * Sets BlocklyApp constants that depend on the page and level.
  * This encapsulates many functions used for BlocklyApps.REQUIRED_BLOCKS.
@@ -9216,7 +9274,7 @@ module.exports = {
   defineWithArg: defineWithArg,
 };
 
-},{"../required_block_utils":12}],35:[function(require,module,exports){
+},{"../required_block_utils":12}],36:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9283,7 +9341,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/hu_hu/turtle":41,"ejs":42}],36:[function(require,module,exports){
+},{"../../locale/hu_hu/turtle":42,"ejs":43}],37:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9412,7 +9470,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/hu_hu/turtle":41,"ejs":42}],37:[function(require,module,exports){
+},{"../../locale/hu_hu/turtle":42,"ejs":43}],38:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -10178,9 +10236,29 @@ var getFeedbackImage = function() {
       feedbackCanvas.toDataURL("image/png").split(',')[1]);
 };
 
-},{"../../locale/hu_hu/common":40,"../../locale/hu_hu/turtle":41,"../base":2,"../codegen":6,"../feedback.js":9,"../skins":13,"../templates/page.html":21,"./api":27,"./controls.html":29,"./core":30,"./levels":32}],38:[function(require,module,exports){
-var _ = require('./lodash');
+},{"../../locale/hu_hu/common":41,"../../locale/hu_hu/turtle":42,"../base":2,"../codegen":6,"../feedback.js":9,"../skins":13,"../templates/page.html":21,"./api":27,"./controls.html":29,"./core":30,"./levels":33}],39:[function(require,module,exports){
 var xml = require('./xml');
+var savedAmd;
+
+// Do some hackery to make it so that lodash doesn't think it's being loaded
+// via require js
+if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
+  savedAmd = define.amd;
+  define.amd = 'dont_call_requirejs_define';
+}
+
+// get lodash
+var _ = require('./lodash');
+
+// undo hackery
+if (typeof define == 'function' && savedAmd) {
+  define.amd = savedAmd;
+  savedAmd = null;
+}
+
+exports.getLodash = function () {
+  return _;
+};
 
 exports.shallowCopy = function(source) {
   var result = {};
@@ -10292,7 +10370,139 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
   };
 };
 
-},{"./lodash":11,"./xml":39}],39:[function(require,module,exports){
+/**
+ * Generate code aliases in Javascript based on some level data.
+ */
+exports.generateCodeAliases = function (codeFunctions) {
+  var code = '';
+  // Insert aliases from level codeBlocks into code
+  if (codeFunctions) {
+    for (var i = 0; i < codeFunctions.length; i++) {
+      var codeFunction = codeFunctions[i];
+      if (codeFunction.alias) {
+        code += codeFunction.func +
+            " = function() { " + codeFunction.alias + " };\n";
+      }
+    }
+  }
+  return code;
+};
+
+/**
+ * Generate a palette for the droplet editor based on some level data.
+ */
+exports.generateDropletPalette = function (codeFunctions) {
+  // TODO: figure out localization for droplet scenario
+  var palette = [
+    {
+      name: 'Control',
+      color: 'orange',
+      blocks: [
+        {
+          block: 'for (var i = 0; i < 4; i++) {\n  __;\n}',
+          title: 'Do something multiple times'
+        }, {
+          block: 'if (__) {\n  __;\n}',
+          title: 'Do something only if a condition is true'
+        }, {
+          block: 'if (__) {\n  __;\n} else {\n  __;\n}',
+          title: 'Do something if a condition is true, otherwise do something else'
+        }, {
+          block: 'while (__) {\n  __;\n}',
+          title: 'Repeat something while a condition is true'
+        }
+      ]
+    }, {
+      name: 'Math',
+      color: 'green',
+      blocks: [
+        {
+          block: 'var x = __;',
+          title: 'Create a variable for the first time'
+        }, {
+          block: 'x = __;',
+          title: 'Reassign a variable'
+        }, {
+          block: '__ + __',
+          title: 'Add two numbers'
+        }, {
+          block: '__ - __',
+          title: 'Subtract two numbers'
+        }, {
+          block: '__ * __',
+          title: 'Multiply two numbers'
+        }, {
+          block: '__ / __',
+          title: 'Divide two numbers'
+        }, {
+          block: '__ === __',
+          title: 'Compare two numbers'
+        }, {
+          block: '__ > __',
+          title: 'Compare two numbers'
+        }, {
+          block: '__ < __',
+          title: 'Compare two numbers'
+        }, {
+          block: 'random(1, 100)',
+          title: 'Get a random number in a range'
+        }, {
+          block: 'round(__)',
+          title: 'Round to the nearest integer'
+        }, {
+          block: 'abs(__)',
+          title: 'Absolute value'
+        }, {
+          block: 'max(__, __)',
+          title: 'Absolute value'
+        }, {
+          block: 'min(__, __)',
+          title: 'Absolute value'
+        }
+      ]
+    }, {
+      name: 'Functions',
+      color: 'violet',
+      blocks: [
+        {
+          block: 'function myFunction() {\n  __;\n}',
+          title: 'Create a function without an argument'
+        }, {
+          block: 'function myFunction(n) {\n  __;\n}',
+          title: 'Create a function with an argument'
+        }, {
+          block: 'myFunction()',
+          title: 'Use a function without an argument'
+        }, {
+          block: 'myFunction(n)',
+          title: 'Use a function with argument'
+        }
+      ]
+    }
+  ];
+
+  var appPaletteCategory = {
+    name: 'Actions',
+    color: 'blue',
+    blocks: []
+  };
+
+  if (codeFunctions) {
+    for (var i = 0; i < codeFunctions.length; i++) {
+      var blockPair = {
+        block: codeFunctions[i].func + "();",
+        title: codeFunctions[i].alias
+      };
+      appPaletteCategory.blocks[i] = blockPair;
+    }
+  }
+
+  palette.unshift(appPaletteCategory);
+
+  return palette;
+};
+
+},{"./lodash":11,"./xml":40}],40:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -10320,7 +10530,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],40:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.hu=function(n){return "other"}
 exports.and = function(d){return "és"};
 
@@ -10479,7 +10689,7 @@ exports.hintHeader = function(d){return "Egy tipp:"};
 exports.genericFeedback = function(d){return "Nem sikerült célba érnem. Kérlek javítsd a hibát."};
 
 
-},{"messageformat":53}],41:[function(require,module,exports){
+},{"messageformat":54}],42:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.hu=function(n){return "other"}
 exports.blocksUsed = function(d){return "Használt blokkok: %1"};
 
@@ -10622,7 +10832,7 @@ exports.widthTooltip = function(d){return "A ceruza szélességének módosítá
 exports.wrongColour = function(d){return "A kép színe hibás.  Ehhez a rejtvényhez %1 kell lennie."};
 
 
-},{"messageformat":53}],42:[function(require,module,exports){
+},{"messageformat":54}],43:[function(require,module,exports){
 
 /*!
  * EJS
@@ -10981,7 +11191,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":43,"./utils":44,"fs":45,"path":46}],43:[function(require,module,exports){
+},{"./filters":44,"./utils":45,"fs":46,"path":47}],44:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -11184,7 +11394,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],44:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 
 /*!
  * EJS
@@ -11210,9 +11420,9 @@ exports.escape = function(html){
 };
  
 
-},{}],45:[function(require,module,exports){
-
 },{}],46:[function(require,module,exports){
+
+},{}],47:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -11440,7 +11650,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":47}],47:[function(require,module,exports){
+},{"JkpR2F":48}],48:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -11505,7 +11715,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],48:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -12016,7 +12226,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],49:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -12102,7 +12312,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],50:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -12189,13 +12399,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],51:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":49,"./encode":50}],52:[function(require,module,exports){
+},{"./decode":50,"./encode":51}],53:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -12904,7 +13114,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":48,"querystring":51}],53:[function(require,module,exports){
+},{"punycode":49,"querystring":52}],54:[function(require,module,exports){
 /**
  * messageformat.js
  *
@@ -14487,4 +14697,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[33])
+},{}]},{},[34])

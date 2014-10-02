@@ -4,9 +4,10 @@ en-US:
   front_title: crwdns8436:0crwdne8436:0
   coming_soon: crwdns8437:0crwdne8437:0
   front_header_banner: crwdns8438:0crwdne8438:0
-  front_intro_default: crwdns8439:0crwdne8439:0
+  front_intro_default: crwdns19178:0crwdne19178:0
   front_intro_default_uk: crwdns8848:0crwdne8848:0
   front_intro_default_ar: crwdns9012:0crwdne9012:0
+  front_watch_video: crwdns19179:0crwdne19179:0
   header_menu_resources: crwdns8440:0crwdne8440:0
   header_menu_faq: crwdns8441:0crwdne8441:0
   header_menu_prizes: crwdns8442:0crwdne8442:0
@@ -21,14 +22,24 @@ en-US:
   country_ro: crwdns8999:0crwdne8999:0
   country_uk: crwdns8445:0crwdne8445:0
   country_us: crwdns8446:0crwdne8446:0
+  prizes_all: crwdns19180:0crwdne19180:0
+  prizes_every_organizer: crwdns19181:0crwdne19181:0
+  prizes_technology: crwdns19182:0crwdne19182:0
+  prizes_tech_chats: crwdns19183:0crwdne19183:0
   n_have_learned_an_hoc: crwdns8447:0crwdne8447:0
   anybody_can_learn: crwdns8448:0crwdne8448:0
   register_now: crwdns8449:0crwdne8449:0
   front_join_us_heading: crwdns8450:0crwdne8450:0
   front_join_us_description: crwdns8451:0crwdne8451:0
   front_join_us_button: crwdns8452:0crwdne8452:0
-  stats_hoc_2013_heading: crwdns8453:0crwdne8453:0
-  stats_hoc_2013_image_alt: crwdns8454:0crwdne8454:0
+  front_join_us_header: crwdns19184:0crwdne19184:0
+  front_join_us_teacher: crwdns19185:0crwdne19185:0
+  front_join_us_inspire: crwdns19186:0crwdne19186:0
+  front_join_us_parent: crwdns19187:0crwdne19187:0
+  front_join_us_ask: crwdns19188:0crwdne19188:0
+  front_join_us_computer_science: crwdns19189:0crwdne19189:0
+  front_join_us_spread: crwdns19190:0crwdne19190:0
+  front_join_us_get_started: crwdns19191:0crwdne19191:0
   signup_header: crwdns8455:0crwdne8455:0
   signup_header_ar: crwdns9015:0crwdne9015:0
   signup_name_label: crwdns8456:0crwdne8456:0
@@ -56,6 +67,11 @@ en-US:
   signup_thank_you_message: crwdns8478:0crwdne8478:0
   map_header: crwdns8479:0crwdne8479:0
   map_header_ar: crwdns9016:0crwdne9016:0
+  meta_tag_og_title: crwdns19192:0crwdne19192:0
+  meta_tag_og_description: crwdns19193:0crwdne19193:0
+  meta_tag_twitter_title: crwdns19194:0crwdne19194:0
+  meta_tag_twitter_description: crwdns19195:0crwdne19195:0
+  twitter_default_text: crwdns19196:0crwdne19196:0
   hardware_prizes_form_name_label: crwdns8480:0crwdne8480:0
   hardware_prizes_form_name_placeholder: crwdns8481:0crwdne8481:0
   hardware_prizes_form_email_label: crwdns8482:0crwdne8482:0
@@ -78,7 +94,7 @@ en-US:
   hoc_faq_what_is_hoc_q: crwdns8852:0crwdne8852:0
   hoc_faq_what_is_hoc_a: crwdns8853:0crwdne8853:0
   hoc_faq_when_is_hoc_q: crwdns8854:0crwdne8854:0
-  hoc_faq_when_is_hoc_a: crwdns8855:0crwdne8855:0
+  hoc_faq_when_is_hoc_a: crwdns19197:0crwdne19197:0
   hoc_faq_why_cs_q: crwdns8858:0crwdne8858:0
   hoc_faq_why_cs_a: crwdns8859:0crwdne8859:0
   hoc_faq_how_participate_q: crwdns8860:0crwdne8860:0
@@ -113,7 +129,24 @@ en-US:
   hoc_faq_need_computers_ar_a: crwdns9028:0crwdne9028:0
   hoc_faq_tutorial_ar_q: crwdns9029:0crwdne9029:0
   hoc_faq_tutorial_ar_a: crwdns9030:0crwdne9030:0
+  stats_hoc_2013_heading: crwdns8453:0crwdne8453:0
+  stats_hoc_2013_image_alt: crwdns8454:0crwdne8454:0
+  stats_growth: crwdns19198:0crwdne19198:0
+  stats_tumblr: crwdns19199:0crwdne19199:0
+  stats_facebook: crwdns19200:0crwdne19200:0
+  stats_twitter: crwdns19201:0crwdne19201:0
+  stats_pinterest: crwdns19202:0crwdne19202:0
+  stats_instagram: crwdns19203:0crwdne19203:0
+  stats_hoc: crwdns19204:0crwdne19204:0
+  stats_global: crwdns19205:0crwdne19205:0
+  stats_girls_more: crwdns19206:0crwdne19206:0
+  stats_girls_million: crwdns19207:0crwdne19207:0
+  stats_nina: crwdns19208:0crwdne19208:0
+  stats_student: crwdns19209:0crwdne19209:0
+  stats_michael: crwdns19210:0crwdne19210:0
   footer_copyright_message: crwdns8498:0crwdne8498:0
   footer_trademark_message: crwdns8499:0crwdne8499:0
+  footer_menu_contact: crwdns19211:0crwdne19211:0
+  footer_menu_support: crwdns19212:0crwdne19212:0
   footer_menu_terms: crwdns8500:0crwdne8500:0
   footer_menu_privacy: crwdns8501:0crwdne8501:0

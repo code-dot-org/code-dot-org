@@ -1,7 +1,7 @@
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
-var _ = require('./lodash');
+var _ = utils.getLodash();
 
 /**
  * Create the textual XML for a math_number block.

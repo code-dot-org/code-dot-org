@@ -1,31 +1,15 @@
 #!/usr/bin/env ruby
 require 'csv'
-require 'user_agent_parser'
 require_relative '../deployment'
 require 'cdo/only_one'
 require 'cdo/hip_chat'
+require 'cdo/browser'
 
 FiveMinutes = 5 * 60 * 1000
 OneHour = 60 * 60 * 1000
 OneDay = 24 * OneHour
 
-ExcludedBrowsers = [
-  'bingbot',
-  'Epiphany',
-  'Googlebot',
-  'IE 6.0',
-  'IE 7.0',
-  'IE 8.0',
-  'IE Mobile',
-  'Other',
-  'Slurp',
-  'TwitterBot',
-  'Yandex Browser',
-  'YandexBot',
-  'Mo%20PTT/50 CFNetwork/672.1.15 Darwin/14.0.0'
-]
-
-ExcludedLevels = [1, 103, 337, 612, 830, 1254, 1255, 1264, 1265, 1370, 1376, 1383, 1393, 1415]
+ExcludedLevels = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415]
 
 HardLevelAttemptsPerHour = {
   50 => 10,
@@ -44,19 +28,12 @@ MinimumAttemptsPerHour = 5
 
 HoursToTest = 2
 
-def slog(h)
-  puts ({ application: :dashboard }).merge(h).to_json
+def excluded_browser?(browser)
+  browser.bot? || browser.search_engine? || (browser.ie? && browser.version.to_i < 9)
 end
 
-$user_agent_cache = {}
-def browser_name(user_agent)
-  name = $user_agent_cache[user_agent]
-  return name if name
-  agent = UserAgentParser.parse(user_agent)
-  name = agent.name
-  name = agent.to_s if name == 'IE'
-  name = user_agent if name == 'CFNetwork'
-  $user_agent_cache[user_agent] = name
+def slog(h)
+  puts ({ application: :dashboard }).merge(h).to_json
 end
 
 class Collater
@@ -108,9 +85,11 @@ class Monitor
 
   def each_row()
     dataset.each do |i|
+      browser = Browser.new(ua: i['user_agent'])
+      next if excluded_browser?(browser)
       yield i['level_id'].to_i,
             i['tag'].to_sym,
-            browser_name(i['user_agent']),
+            browser.cdo_name,
             i['locale']
     end
   end
@@ -149,7 +128,6 @@ def main()
   start = finish - (hours * OneHour)
 
     Monitor.collate(start:start, finish:finish).each_by_browser do |i|
-      next if ExcludedBrowsers.include?(i[:browser])
       next if ExcludedLevels.include?(i[:level])
 
       starts = i[:starts]

@@ -1,0 +1,9 @@
+#about_nav{:style=>'width:140px;'}
+  %span.about_list
+    -current_url = request.path_info
+    -{ 'Promote the Hour of Code'=>'/resources','How-to guide'=>'/resources/how-to','Press Kit'=>'/resources/press-kit' }.each_pair do |label,url|
+      - if current_url == url
+        %span.about_list_item_selected= label
+      -else
+        %a.about_list_item{:href=>url}= label
+      %hr.narrow_hr
