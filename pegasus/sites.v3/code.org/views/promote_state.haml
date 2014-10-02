@@ -82,6 +82,10 @@
         can't
       count computer science for credit towards high school graduation.
 
+-if data[:text_t]
+  %p
+    =data[:text_t]
+
 -if data[:action_text_s] && data[:action_url_s]
   %a{:href=>data[:action_url_s], :target=>'_blank'}
     %button{:class=>'state-petition-btn'}= data[:action_text_s]
