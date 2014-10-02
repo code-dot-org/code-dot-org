@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/code-dot-org/omniauth-clever.git
+  revision: 8c7adde39157d64dc8b05c5eec5b0a7329f8ef95
+  specs:
+    omniauth-clever (1.1.0)
+      omniauth-oauth2 (>= 1.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -290,6 +297,7 @@ DEPENDENCIES
   naturally
   newrelic_rpm
   nokogiri
+  omniauth-clever!
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-windowslive (~> 0.0.9)
