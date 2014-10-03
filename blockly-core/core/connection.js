@@ -70,8 +70,9 @@ Blockly.Connection.prototype.dispose = function() {
  * @return {boolean} True if connection faces down or right.
  */
 Blockly.Connection.prototype.isSuperior = function() {
-  return this.type == Blockly.INPUT_VALUE ||
-      this.type == Blockly.NEXT_STATEMENT;
+  return this.type === Blockly.INPUT_VALUE ||
+    this.type === Blockly.NEXT_STATEMENT ||
+    this.type === Blockly.FUNCTIONAL_INPUT;
 };
 
 /**
