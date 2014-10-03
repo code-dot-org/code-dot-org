@@ -10,7 +10,6 @@ Scenario: Sharing a profane studio game
   When I press "x-close"
   Then I press "runButton"
   Then I press ".share" using jQuery
-  And I wait for 3 seconds
   Then I wait to see "#share-fail-explanation"
 
 Scenario: Sharing a phone number studio game
@@ -19,7 +18,6 @@ Scenario: Sharing a phone number studio game
   When I press "x-close"
   Then I press "runButton"
   Then I press ".share" using jQuery
-  And I wait for 3 seconds
   Then I wait to see "#share-fail-explanation"
 
 Scenario: Sharing an email studio game
@@ -28,5 +26,4 @@ Scenario: Sharing an email studio game
   When I press "x-close"
   Then I press "runButton"
   Then I press ".share" using jQuery
-  And I wait for 3 seconds
   Then I wait to see "#share-fail-explanation"
