@@ -53,6 +53,12 @@
   front_join_us_organize: 'Or organize an Hour of Code event yourself.'
   front_join_us_how_to_run: "Here's how to run an Hour of Code"
   front_join_us_help_promote: "Help promote the Hour of Code"
+  front_join_us_students: "Students"
+  front_join_us_teachers: "Teachers"
+  front_join_us_everyone: "Everyone"
+  front_join_us_try: "Try it"
+  front_join_us_host: "Host it"
+  front_join_us_support: "Support it"
 
   signup_header: 'Let us know if you’re hosting an Hour of Code'
   signup_header_ar: Déjanos saber si estas organizando una Hora de Programación
