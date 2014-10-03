@@ -1,0 +1,36 @@
+.field
+  = f.label :first_sprite_index, 'First sprite index'
+  %p Integer representing which sprite to use for the first character. Default is 1.
+  = f.number_field :first_sprite_index
+.field
+  = f.label :protaganist_sprite_index, 'Protaganist sprite index'
+  %p Integer of the protaganist character (zero indexed, counting from the top left of the grid). This character must touch all the waypoint flags to complete the level. Default is 0.
+  = f.number_field :protaganist_sprite_index
+.field
+  = f.label :timeout_failure_tick, 'Timeout failure tick'
+  %p Number of 'ticks' to simulate before marking the level as failed. Default is unlimited.  Step speed (above) controls the length of a tick.
+  = f.number_field :timeout_failure_tick
+.field
+  = f.label :success_condition, 'Success condition'
+  %p Optional JavaScript function to run every tick. If the function ever return true, the level immediately succeeds.
+  = f.text_area :success_condition, rows: 4
+.field
+  = f.label :failure_condition, 'Failure condition'
+  %p Optional JavaScript function to run every tick. If the function ever return true, the level immediately fails.
+  = f.text_area :failure_condition, rows: 4
+.field
+  = f.label :soft_buttons, 'Controls Buttons'
+  = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
+  %p (shift-click to select multiple)
+
+:javascript
+  CodeMirror.fromTextArea($('#level_success_condition').get(0), {
+    mode: 'javascript',
+    viewportMargin: Infinity,
+    matchBrackets: true
+  });
+  CodeMirror.fromTextArea($('#level_failure_condition').get(0), {
+    mode: 'javascript',
+    viewportMargin: Infinity,
+    matchBrackets: true
+  });

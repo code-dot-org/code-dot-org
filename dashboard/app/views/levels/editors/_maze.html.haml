@@ -70,6 +70,9 @@
       else if (parseInt(value) < 5 && parseInt(value) >= 0) {
           Handsontable.renderers.NumericRenderer.apply(this, arguments);
           td.className += ' ' + dataValues[parseInt(value)];
+      } else if (parseInt(value) === 16) {
+          Handsontable.renderers.NumericRenderer.apply(this, arguments);
+          td.className += ' start';
       }
     }
     $("#mazeTable").handsontable({
