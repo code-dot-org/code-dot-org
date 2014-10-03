@@ -97,18 +97,22 @@ class LevelsController < ApplicationController
 
     # Set some defaults.
     params[:level].reverse_merge!(skin: type_class.skins.first) if type_class <= Blockly
-     if type_class <= Studio
-       params[:level][:soft_buttons] = nil
-       params[:level][:success_condition] = "function () {
-  // Sample conditions:
-  // return Studio.sprite[0].isCollidingWith(1);
-  // return Studio.sayComplete > 0;
-  // return Studio.sprite[0].emotion === Emotions.HAPPY;
-  // return Studio.tickCount >= 50;
-}"
-       params[:level][:failure_condition] = "function () {
-}"
-     end
+    params[:level][:maze_data] = Array.new(8){Array.new(8){0}} if type_class <= Maze
+    if type_class <= Studio
+      params[:level][:maze_data][0][0] = 16 # studio must have at least 1 actor
+      params[:level][:soft_buttons] = nil
+      params[:level][:success_condition] = "function () {\n" \
+        "  // Sample conditions:\n"
+        "  // return Studio.sprite[0].isCollidingWith(1);\n" \
+        "  // return Studio.sayComplete > 0;\n" \
+        "  // return Studio.sprite[0].emotion === Emotions.HAPPY;\n" \
+        "  // return Studio.tickCount > 50;\n" \
+        "}"
+      params[:level][:failure_condition] = "function () {\n" \
+        "  \n" \
+        "}"
+    end
+    params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Maze
     params.merge!(user: current_user)
 
     begin
@@ -119,7 +123,7 @@ class LevelsController < ApplicationController
       render status: :not_acceptable, text: invalid and return
     end
 
-    render json: { redirect: level_url(@level) }.to_json
+    render json: { redirect: edit_level_path(@level) }.to_json
   end
 
   # DELETE /levels/1
