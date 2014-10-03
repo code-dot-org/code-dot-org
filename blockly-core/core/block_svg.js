@@ -1135,7 +1135,7 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
     if (input.type != Blockly.DUMMY_INPUT) {
       renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
     }
-    if (input.type === Blockly.INPUT_VALUE || input.type === Blockly.FUNCTIONAL_INPUT) {
+    if (input.type === Blockly.INPUT_VALUE) {
       renderInfo.inline.push('M', (renderInfo.curX - BS.SEP_SPACE_X) +
                        ',' + (renderInfo.curY + BS.INLINE_PADDING_Y));
       renderInfo.inline.push('h', BS.TAB_WIDTH - input.renderWidth);
@@ -1171,6 +1171,34 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
         BS.SEP_SPACE_X - input.renderWidth + 1);
 
       connectionY = connectionsXY.y + renderInfo.curY + BS.INLINE_PADDING_Y;
+      input.connection.moveTo(connectionX, connectionY);
+      if (input.connection.targetConnection) {
+        input.connection.tighten_();
+      }
+    } else if (input.type === Blockly.FUNCTIONAL_INPUT) {
+      // todo - RTL
+      var inputTopRight = {
+        x: (renderInfo.curX - BS.SEP_SPACE_X),
+        y: (renderInfo.curY + BS.INLINE_PADDING_Y)
+      };
+
+      var inputTopLeft = {
+        x: inputTopRight.x - input.renderWidth,
+        y: inputTopRight.y
+      };
+
+      renderInfo.inline.push('M', inputTopRight.x + ',' + inputTopRight.y);
+      renderInfo.inline.push('h', -input.renderWidth);
+      renderInfo.inline.push('v', input.renderHeight);
+      renderInfo.inline.push('h', input.renderWidth);
+      renderInfo.inline.push('z');
+
+      // Create inline input connection.
+
+
+      connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_PATH_WIDTH;
+      connectionY = connectionsXY.y + inputTopRight.y;
+
       input.connection.moveTo(connectionX, connectionY);
       if (input.connection.targetConnection) {
         input.connection.tighten_();

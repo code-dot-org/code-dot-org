@@ -17,6 +17,9 @@ function installPlus(blockly, generator, gensym) {
           .appendTitle('+')
           .setAlign(Blockly.ALIGN_CENTRE);
       this.appendFunctionalInput('VALUE');
+      // this.appendDummyInput()
+      //     .appendTitle('')
+      //     .setInline(true);
       this.appendFunctionalInput('VALUE')
           .setInline(true);
 
