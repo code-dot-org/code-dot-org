@@ -21,7 +21,7 @@
     %strong{style: "font-size:20px;"}= format_integer_with_commas(data[:count_schools_teach_cs_i])
     schools teach computer science
 
-%div{style: "font-size:15px; margin-left:20px; margin-bottom: 15px;"}
+%div{style: "font-size:15px; margin-left:20px;"}
   - if data[:cs_counts_t] == "No"
     %i.fa.fa-times-circle
     &nbsp;
@@ -59,7 +59,7 @@
 
 |
 
-%a{:onclick=>"return adjustScroll('tools-section')", :style=>"color: #BCC2C6; cursor: pointer; line-height: 18px"}
+%a{:onclick=>"return adjustScroll('tools-section')", :style=>"color: #BCC2C6; cursor: pointer; line-height: 56px"}
   More advocacy tools
 
 - if statename == "Washington DC"
