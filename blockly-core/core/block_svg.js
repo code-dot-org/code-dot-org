@@ -685,9 +685,9 @@ Blockly.BlockSvg.prototype.renderCompute_ = function(iconWidth) {
         hasStatement = true;
         titleStatementWidth = Math.max(titleStatementWidth, input.titleWidth);
       } else {
-        if (currentRow.type == Blockly.INPUT_VALUE) {
+        if (currentRow.type === Blockly.INPUT_VALUE || currentRow.type === Blockly.FUNCTIONAL_INPUT) {
           hasValue = true;
-        } else if (currentRow.type == Blockly.DUMMY_INPUT) {
+        } else if (currentRow.type === Blockly.DUMMY_INPUT) {
           hasDummy = true;
         }
         titleValueWidth = Math.max(titleValueWidth, input.titleWidth);
@@ -743,7 +743,9 @@ function thickenInlineRows (inputRows) {
     row.thicker = false;
     if (row.type == BS.INLINE) {
       for (var z = 0, input; input = row[z]; z++) {
-        if (input.type == Blockly.INPUT_VALUE) {
+        // todo (brent) - necessary for FUNCTIONAL_INPUT?
+        if (input.type === Blockly.INPUT_VALUE ||
+          input.type === Blockly.FUNCTIONAL_INPUT) {
           row.height += 2 * BS.INLINE_PADDING_Y;
           row.thicker = true;
           break;
@@ -948,13 +950,13 @@ Blockly.BlockSvg.prototype.renderDrawRight_ = function(renderInfo, connectionsXY
     renderInfo.highlight.push('M', (inputRows.rightEdge - 1) + ',' + (renderInfo.curY + 1));
     if (this.block_.isCollapsed()) {
       this.renderDrawRightCollapsed_(renderInfo ,row);
-    } else if (row.type == BS.INLINE) {
+    } else if (row.type === BS.INLINE) {
       this.renderDrawRightInline_(renderInfo, inputRows, i, connectionsXY);
-    } else if (row.type == Blockly.INPUT_VALUE) {
+    } else if (row.type === Blockly.INPUT_VALUE || row.type === Blockly.FUNCTIONAL_INPUT) {
       this.renderDrawRightInputValue_(renderInfo, inputRows, i, connectionsXY);
-    } else if (row.type == Blockly.DUMMY_INPUT) {
+    } else if (row.type === Blockly.DUMMY_INPUT) {
       this.renderDrawRightDummyInput_(renderInfo, inputRows, i);
-    } else if (row.type == Blockly.NEXT_STATEMENT) {
+    } else if (row.type === Blockly.NEXT_STATEMENT) {
       this.renderDrawRightNextStatement_(renderInfo, inputRows, i, connectionsXY);
     }
     renderInfo.curY += row.height;
@@ -1133,7 +1135,7 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
     if (input.type != Blockly.DUMMY_INPUT) {
       renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
     }
-    if (input.type == Blockly.INPUT_VALUE) {
+    if (input.type === Blockly.INPUT_VALUE || input.type === Blockly.FUNCTIONAL_INPUT) {
       renderInfo.inline.push('M', (renderInfo.curX - BS.SEP_SPACE_X) +
                        ',' + (renderInfo.curY + BS.INLINE_PADDING_Y));
       renderInfo.inline.push('h', BS.TAB_WIDTH - input.renderWidth);

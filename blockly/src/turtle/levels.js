@@ -797,7 +797,7 @@ module.exports = {
     answer: answer(5, 5),
     freePlay: true,
     toolbox: toolbox(5, 5),
-    startBlocks: startBlocks(5, 5),
+    startBlocks: blockUtils.blockOfType('functional_plus') + blockUtils.blockOfType('functional_math_number'),
     sliderSpeed: 1.0
   },
   // Level 6: playground.
