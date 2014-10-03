@@ -39,6 +39,18 @@
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
     startTiming('Puzzle', script_path, '');
     var level = #{level.to_json};
+    (function fixUpFunctions(node) {
+      if (typeof node !== 'object') return;
+      for (var i in node) {
+        if (/^fn_/.test(i)) {
+          try {
+            node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
+          } catch (e) { }
+        } else {
+          fixUpFunctions(node[i]);
+        }
+      }
+    })(level);
     // See assets/javascripts/sendReport for definition of lastServerResponse
     var appOptions = {
       levelId: '#{@level.level_num}',

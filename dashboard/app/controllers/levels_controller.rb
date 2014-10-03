@@ -72,7 +72,12 @@ class LevelsController < ApplicationController
     render json: { redirect: level_url(@level) }
   end
 
+  # PATCH/PUT /levels/1
+  # PATCH/PUT /levels/1.json
   def update
+    # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
+    params[:level][:soft_buttons].delete_if{ |s| s.empty? } if params[:level][:soft_buttons].is_a? Array
+
     if @level.update(level_params)
       render json: { redirect: level_url(@level) }.to_json
     else
@@ -88,6 +93,18 @@ class LevelsController < ApplicationController
 
     # Set some defaults.
     params[:level].reverse_merge!(skin: type_class.skins.first) if type_class <= Blockly
+     if type_class <= Studio
+       params[:level][:soft_buttons] = nil
+       params[:level][:success_condition] = "function () {
+  // Sample conditions:
+  // return Studio.sprite[0].isCollidingWith(1);
+  // return Studio.sayComplete > 0;
+  // return Studio.sprite[0].emotion === Emotions.HAPPY;
+  // return Studio.tickCount >= 50;
+}"
+       params[:level][:failure_condition] = "function () {
+}"
+     end
     params.merge!(user: current_user)
 
     begin
@@ -179,7 +196,8 @@ class LevelsController < ApplicationController
         :level_num,
         :user,
         :match_text,
-        {concept_ids: []}
+        {concept_ids: []},
+        {soft_buttons: []}
       ]
       permitted_params.concat(Level.serialized_properties.values.flatten)
       params[:level].permit(permitted_params)

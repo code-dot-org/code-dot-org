@@ -196,6 +196,12 @@ module LevelsHelper
       slider_speed
       permitted_errors
       disable_param_editing
+      success_condition:fn_successCondition
+      failure_condition:fn_failureCondition
+      first_sprite_index
+      protaganist_sprite_index
+      timeout_failure_tick
+      soft_buttons
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -214,10 +220,15 @@ module LevelsHelper
     level['sliderSpeed'] = level['sliderSpeed'].to_f if level['sliderSpeed']
     level['scale'] = {'stepSpeed' =>  @level.properties['step_speed'].to_i } if @level.properties['step_speed'].present?
 
-    # Blockly requires map as an array not a string
-    %w(map initialDirt finalDirt).each do |x|
+    # Blockly requires these fields to be objects not strings
+    %w(map initialDirt finalDirt goal soft_buttons).each do |x|
       level[x] = JSON.parse(level[x]) if level[x].is_a? String
     end
+
+    # Blockly expects fn_successCondition and fn_failureCondition to be inside a 'goals' object
+    level['goal'] = {fn_successCondition: level['fn_successCondition'], fn_failureCondition: level['fn_failureCondition']}
+    level.delete('fn_successCondition')
+    level.delete('fn_failureCondition')
 
     # Fetch localized strings
     %w(instructions).each do |label|
@@ -285,5 +296,15 @@ module LevelsHelper
 
   def boolean_check_box(f, field_name_symbol)
     f.check_box field_name_symbol, {}, boolean_string_true, boolean_string_false
+  end
+
+  SoftButton = Struct.new(:name, :value)
+  def soft_button_options
+    [
+        SoftButton.new('Left', 'leftButton'),
+        SoftButton.new('Right', 'rightButton'),
+        SoftButton.new('Down', 'downButton'),
+        SoftButton.new('Up', 'upButton'),
+    ]
   end
 end
