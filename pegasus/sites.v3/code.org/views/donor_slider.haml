@@ -1,6 +1,6 @@
 -supporters = DB[:cdo_donors].where(level_s:'platinum').or(level_s:'gold').order(:url_s)
 
-%link{href: "/css/donor_slider.css", rel: "stylesheet"}
+%link{:href=>"/css/donor_slider.css", :rel=>"stylesheet"}
 %script{:src=>"/js/donor_slider.js"}
 
 %div{:class=>'donor-slider'}

@@ -9,7 +9,9 @@ end
 
 def avatar_image_thumbnail(name)
   basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
-  "images/avatars/thumbnails/#{basename}_thumbnail.jpg"
+  path = resolve_image("images/avatars/thumbnails/#{basename}_thumbnail")
+  return nil unless path
+  "/images/avatars/thumbnails/#{File.basename(path)}"
 end
 
 def dont_cache()
