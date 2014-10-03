@@ -27,7 +27,7 @@ social:
 ---
 -row = HourOfActivity.first(session: File.basename(request.path_info))||OpenStruct.new({name:'',email:'',session:''})
 #hoc-certificate
-  %a{:href=>"/api/hour/certificate/#{row.session}.jpg"}
+  %a{:href=>"/printcertificate/#{row.session}"}
     %img{:src=>"/api/hour/certificate/#{row.session}.jpg", :alt=>"Certificate for Completion of One Hour of Code for #{row.name||row.email}"}
 #index
   #gap.feature-codeorg
