@@ -51,29 +51,51 @@ social:
       = view :index_video
 
     #start.col-36
-      #blurb.col-mobile-56.mobile-pad-right
-        %br.desktop-feature
 
-        .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
-          -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-          -if request.locale == 'en-US'
-            %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
-              =count_string
-          -else
-            =count_string
-          %h4.desktop-feature=I18n.t(:anybody_can_learn)
-        %br
+      #hoc2014
 
-      #getstarted.col-mobile-44
-        #largegap.mobile-show-medium{:style=>"height:50px"}
-        %a{:href=>'/learn'}
-          %button{:style=>"font-size: 19px; font-weight: 500; height: 50px;"}
-            =I18n.t(:get_started)
+        #heading
+          =I18n.t :hoc2014_heading
+          %br/
 
-        #beyond.desktop-feature
-          %br
-          %a.beyond{:href=>'/learn/beyond'}
-            =I18n.t :beyond_an_hour
+        %div{style: "height: 30px;"}
+          &nbsp;
+
+        .option
+          .optionleft
+            =I18n.t :hoc2014_students
+            &nbsp;
+          .optionright
+            %a{:href=>'/learn'}
+              %button.optionbutton
+                =I18n.t :hoc2014_try
+            %br/
+
+        .option{style: "clear:both"}
+          .optionleft
+            =I18n.t :hoc2014_teachers
+            &nbsp;
+          .optionright
+            %a{:href=>'http://hourofcode.com/joinus', target: "_blank"}
+              %button.optionbutton
+                =I18n.t :hoc2014_host
+            %br/
+
+        .option{style: "clear:both"}
+          .optionleft
+            =I18n.t :hoc2014_everyone
+            &nbsp;
+          .optionright
+            %a{:href=>'/donate'}
+              %button.optionbutton
+                =I18n.t :hoc2014_support
+            %br/
+
+        .whatishoc{style: "clear:both"}
+          =I18n.t :hoc2014_whatishoc
+
+    %div{style: "height: 15px"}
+      &nbsp;
 
     -download_filename = (request.site == 'code.org') ? 'Code-5-minute.mov' : 'HoC-video-15mb.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
