@@ -14,8 +14,14 @@ social:
 max_age: 60
 ---
 -cert_id = params[:i]
--facebook = {:u=>"http://#{request.host_with_port}/certificates/#{cert_id}"}
--twitter = {:url=>"http://#{request.host_with_port}/certificates/#{cert_id}", :related=>'codeorg', :hashtags=>'', :text=>I18n.t(:just_did_hoc)}
+
+-if cert_id
+  -share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"
+-else
+  -share_url = "http://#{request.host_with_port}/certificates/blank"
+
+-facebook = {:u=>share_url}
+-twitter = {:url=>share_url, :related=>'codeorg', :hashtags=>'', :text=>I18n.t(:just_did_hoc)}
 -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc).include? '#HourOfCode'
 
 -company_param = params[:co]
