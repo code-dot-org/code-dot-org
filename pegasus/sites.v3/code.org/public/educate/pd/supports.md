@@ -40,15 +40,15 @@ The virtual meetings will be hosted via Blue Jeans Video Conference. If this is 
 
 Thursday, October 9th
 <br/>
-Eastern Time Zone: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/2633067423) to join meeting. 
+Eastern Time Zone: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/2633067423/) to join meeting. 
 <br/>
-Pacific Time Zone: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/2633067423) to join meeting. 
+Pacific Time Zone: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/679415895) to join meeting. 
 
 Wednesday, October 22nd
 <br/>
-Eastern Time Zone: 5:00 PM - 6:00 PM - [Click here]() to join meeting. 
+Eastern Time Zone: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/952592269) to join meeting. 
 <br/>
-Pacific Time Zone: 5:00 PM - 6:00 PM - [Click here]() to join meeting. 
+Pacific Time Zone: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/955682651) to join meeting. 
 <br/>
 
 ### Additional ECS Resources
