@@ -7,17 +7,22 @@ theme: none
 
 Dear Educator,
 
-We are writing to let you know your stipend payment was processed, but bounced due to incorrect bank account information. There are two ways you can update your bank account information: 
+Last December, 15 million students tried computer science in one week thanks to educators like you! Since then, over 40 million students have tried the Hour of Code. 
 
-1. Go to [https://code.org/educate/educatorinfo](https://code.org/educate/educatorinfo) and resubmit your bank account information  
-2. Complete the attached bank deposit form and fax it back to us at 866-241-8505  
- 
-If you update your bank account information prior to September 15th, your payment will be processed in the next batch.
+<<VIDEO THUMBNAIL LINKING TO YOUTUBE>>
 
-Please email <pd@code.org> if you have further questions.
+Hour of Code 2014 - let’s reach 100 million students
+You taught Code.org courses, so you know how fun this is for students. Use the Hour of Code to re-engage students with new tutorials. And help grow the campaign by recruiting more teachers and schools to do it this year!
 
-Thank you,
+What’s an Hour of Code?
+It’s an introduction to computer science designed to show that anyone can learn the basics. Code.org provides hour-long tutorials featuring Mark Zuckerberg, Bill Gates, Angry Birds, and Plants vs. Zombies — for your computer, tablet, smartphone, or with no computer at all! 
 
-The Code.org PD Team
+No experience needed from teachers and students
+We owe it to today’s students to start with one hour. Let’s make history.
 
-PS: Please visit our PD website for more information: [http://code.org/educate/pd/faq](http://code.org/educate/pd/faq)
+Sign up to participate, recruit a fellow teacher, or get your whole school to join the fun. 
+
+Start now at http://hourofcode.com
+
+Hadi Partovi
+founder, Code.org 
