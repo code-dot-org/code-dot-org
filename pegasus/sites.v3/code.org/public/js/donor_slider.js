@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   var masterIndex = 2; // The number of badges that have been shown this cycle
   var combinedLength = platinum.length + gold.length;
-  var interval = 3000;
+  var interval = 8000;
   var timer = setInterval(setManager, interval);
 
   function setManager () {
