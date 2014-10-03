@@ -8,15 +8,13 @@ class NotesControllerTest< ActionController::TestCase
   end
 
   test 'should use working images from English yml' do
-    ORIGINAL_LOCALE = I18n.locale
-    TEST_LOCALE = 'he-IL' # known broken image references
-    I18n.locale = TEST_LOCALE
-    get :index, key: 'flappy_intro'
-    assert_not_nil assigns(:slides)
-    assigns(:slides).values.each do |slide|
-      assert_not_nil Rails.application.assets.find_asset(slide[:image])
+    with_default_locale('he-IL') do
+      get :index, key: 'flappy_intro'
+      assert_not_nil assigns(:slides)
+      assigns(:slides).values.each do |slide|
+        assert_not_nil Rails.application.assets.find_asset(slide[:image])
+      end
     end
-    I18n.locale = ORIGINAL_LOCALE
   end
 
   test 'should show coming soon for missing slides' do
