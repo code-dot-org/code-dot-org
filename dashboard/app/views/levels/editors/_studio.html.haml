@@ -20,8 +20,13 @@
   = f.text_area :failure_condition, rows: 4
 .field
   = f.label :soft_buttons, 'Controls Buttons'
+  %p
+    Select
+    %a.select_all{href: '#'} all
+    \/
+    %a.select_none{href: '#'} none
+    (shift-click or cmd-click to select multiple). Arrow buttons to display below the game canvas.
   = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
-  %p (shift-click to select multiple)
 
 :javascript
   CodeMirror.fromTextArea($('#level_success_condition').get(0), {

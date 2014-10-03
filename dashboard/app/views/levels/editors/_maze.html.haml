@@ -1,22 +1,26 @@
-.field
-  = f.label :start_direction
-  = f.select :start_direction, options_for_select(@level.class.start_directions, @level.start_direction)
-.field
-  = f.label :step_mode
-  = f.select :step_mode, options_for_select(@level.class.step_modes, @level.step_mode)
+- unless @level.is_a? Studio
+  .field
+    = f.label :start_direction
+    = f.select :start_direction, options_for_select(@level.class.start_directions, @level.start_direction)
+  .field
+    = f.label :step_mode
+    = f.select :step_mode, options_for_select(@level.class.step_modes, @level.step_mode)
 - if @level.is_a? Maze
   = hidden_field_tag :size, 8
   = f.hidden_field :maze_data
   .field
     = f.label 'level'
     :css
-      .border { background-color: dimgray !important}
-      .path { background-color: darkgreen !important}
-      .start { background-color: firebrick !important}
-      .end {background-color: lime !important}
-      .obstacle {background-color: gold !important}
-      .dirt {background-color: #d1d567 !important}
-      tr { height: 40px; }
+      .label { background-color: black }
+      .border { background-color: dimgray !important }
+      .path { background-color: darkgreen !important }
+      .start { background-color: firebrick !important }
+      .end { background-color: lime !important }
+      .obstacle { background-color: gold !important }
+      .dirt { background-color: #d1d567 !important }
+      tr {
+        height: 40px;
+      }
       td.start {
         background-image: url('/blockly/media/skins/birds/small_static_avatar.png');
         background-size: 100% 100%;
@@ -41,20 +45,24 @@
     .label
       WHAT THE NUMBERS MEAN:
       %ul(style="list-style-type:none;margin:0;")
-        %li(class='border') 0 = border/wall
-        %li(class='path') 1 = path
-        %li(class='start') 2 = start
-        %li(class='end') 3 = end (for Maze levels only)
-        %li(class='obstacle') 4 = obstacle
-        FARMER:
-        %ul(style="list-style-type:none;margin:0;")
-          %li -x hole
-          %li +x pile
-          %li -x &lt;= -11 = hole of unknown size
-        BEE:
-        %ul(style="list-style-type:none;margin:0;")
-          %li +x = nectar. +99 = unlimited
-          %li -x = honey. -99 = unlimited
+        %li.border 0 = border/wall
+        %li.path 1 = path
+        %li.start 2 = start
+        %li.end 3 = end (for Maze levels only)
+        %li.obstacle 4 = obstacle
+      FARMER:
+      %ul(style="list-style-type:none;margin:0;")
+        %li.dirt -x hole
+        %li.dirt +x pile
+        %li.dirt -x &lt;= -11 = hole of unknown size
+      BEE:
+      %ul(style="list-style-type:none;margin:0;")
+        %li.dirt +x = nectar. +99 = unlimited
+        %li.dirt -x = honey. -99 = unlimited
+      PLAYLAB:
+      %ul(style="list-style-type:none;margin:0;")
+        %li.start 16 = character
+        %li.path 1 = waypoint flag
   - default_map = Array.new(8){Array.new(8){0}}
   - default_map[0][0] = 16 if @level.is_a? Studio # studio must have at least 1 actor
   - data = @level.maze_data.try(:to_json) || default_map.to_json
@@ -84,7 +92,7 @@
         if(value[0] == '+' || value[0] == '-' && parseInt(value.substring(1)) % 1 == 0) callback(true);
         callback(parseInt(value) % 1 == 0);
       }, afterChange: function(changes, source) {
-        $('#level_maze_data').attr('value', JSON.stringify(data))
+        $('#level_maze_data').val(JSON.stringify(data));
       }, cells: function(row, col, prop) {
         return {renderer: mazeRenderer};
     }});
