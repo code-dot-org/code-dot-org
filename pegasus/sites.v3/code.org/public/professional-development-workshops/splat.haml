@@ -15,6 +15,7 @@ rightbar: blank
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places,geometry&v=3.7"}
 %script{type: "text/javascript", src: "/js/maplace.min.js"}
@@ -191,7 +192,9 @@ rightbar: blank
   :javascript
 
     $(document).ready(function() {
-      $('#affiliate-workshop-signup-form select').selectize();
+      $('#affiliate-workshop-signup-form select').selectize({
+    	plugins: ['fast_click']
+      });
 
       var location_input = document.getElementById('workshop-signup-school-location');
       var location_autocomplete = new google.maps.places.SearchBox(location_input); // Google Maps autocomplete.
