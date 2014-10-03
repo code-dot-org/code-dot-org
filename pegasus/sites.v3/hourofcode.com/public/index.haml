@@ -64,7 +64,7 @@ social:
 
     .container
       .row
-        .col-sm-8.col-xs-12
+        .col-sm-6.col-xs-12.col-md-7
           #leftbox{style: "position:relative; margin-top:50px; padding-bottom:20px; /*background-color:rgba(0,0,0,0.5);*/"}
 
             #leftvideo{style: "/*position:absolute; left:0; top:0; */ width: 100%; /* margin-top:50px*/"}
@@ -75,17 +75,45 @@ social:
             #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; /*margin-top:100px; */ width:100%"}
               %h1.front-header-banner{style: "color:white; text-shadow: 0px 0px 4px rgba(31, 31, 31, 1); margin-top: 0px; margin-bottom:10px; padding:20px"}=hoc_s(:front_watch_video) 
               %img{src: "/images/play-button.png", width: "120", onclick: "return startVideo();", style: "cursor: pointer"}
-        .col-sm-4.col-xs-12
-          #textbacking{style: "color:white; text-align: center; background-color:rgba(0,0,0,0.5); margin-top:50px; padding: 20px"}
+        .col-sm-6.col-xs-12.col-md-5
+          #textbacking{style: "color:white; background-color:rgba(0,0,0,0.5); margin-top:50px; padding: 20px"}
             %h1.front-header-banner{style: "color:white; margin-top:0px"}= hoc_s(:front_header_banner)
-            #joinus{style: "text-align:center"}
-              %a{onclick: "return adjustScroll('joinusarea')"}
-                %button.btn.btn-default{style: "font-size: 24px; font-weight: 500; width: 180px; height: 50px;"}
-                  =hoc_s(:front_join_us_button)
-            #trylastyear{style: "margin-top:20px"}
-              %a{onclick: "return adjustScroll('whatishoc')", target: "_blank", style: "color:white; font-weight:500; cursor: pointer"}=hoc_s(:hoc_faq_what_is_hoc_q)
-            %br/
-            =view :share_buttons, facebook:facebook, twitter:twitter
+            #joinustext{style: "font-size: 18px; font-weight: 500"}
+              %div{style: "width: 44%; float:left; padding-right: 5px; padding-top:10px; text-align:right; clear:both"}
+                =hoc_s(:front_join_us_students)
+                &nbsp;
+
+              %div{style: "width: 56%; float:left;"}
+                %a{href: "http://code.org/learn", target: "_blank"}
+                  %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; width: 100px; padding-left:5px; height: 40px;"}
+                    =hoc_s(:front_join_us_try)
+                %br/
+                %br/
+
+              %div{style: "width: 44%; float:left; padding-right: 5px; padding-top:10px; text-align:right; clear:both"}
+                =hoc_s(:front_join_us_teachers)
+                &nbsp;
+              %div{style: "width: 56%; float:left;"}
+                %a{onclick: "return adjustScroll('joinus')"}
+                  %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; width: 120px; padding-left:5px; height: 40px;"}
+                    =hoc_s(:front_join_us_host)
+                %br/
+                %br/
+
+              %div{style: "width: 44%; float:left; padding-right: 5px; padding-top:10px; text-align:right; clear:both"}
+                =hoc_s(:front_join_us_everyone)
+                &nbsp;
+              %div{style: "width: 56%; float:left; "}
+                %a{href: "http://code.org/donate", target: "_blank"}
+                  %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; width: 140px; padding-left:5px; height: 40px;"}
+                    =hoc_s(:front_join_us_support)
+              &nbsp;
+
+            #remainder{style: "text-align:center"}
+              #trylastyear{style: "margin-top:20px"}
+                %a{onclick: "return adjustScroll('whatishoc')", target: "_blank", style: "color:white; font-weight:500; cursor: pointer"}=hoc_s(:hoc_faq_what_is_hoc_q)
+              %br/
+              =view :share_buttons, facebook:facebook, twitter:twitter
           %br/
           %br/
 
@@ -148,7 +176,7 @@ social:
   #maparea
     =view :map
 
-  #joinusarea
+  #joinus
 
     %h1=hoc_s(:front_join_us_button)
 
