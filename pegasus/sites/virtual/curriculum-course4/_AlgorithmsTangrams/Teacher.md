@@ -23,20 +23,21 @@ This activity will show both options.
 ### **Getting Started** - 10 minutes
 
 1) [Review](#Review) <br/>
-2) [Intro to Tangrams](#GetStarted) <br/>
+2) [Vocabulary](#Vocab) <br/>
+3) [Intro to Tangrams](#GetStarted) <br/>
 
 ### **Activity: Algorithms with Tangrams** - 20  minutes  
 
-3) [Algorithms](#Activity1)
+4) [Algorithms](#Activity1)
 
 ### **Wrap-up** - 10  minutes 
 
-4) [Flash Chat: What did we learn?](#FlashChat)<br/>
-5) [Vocab-Shmocab](#Shmocab)
+5) [Flash Chat: What did we learn?](#FlashChat)<br/>
+6) [Vocab-Shmocab](#Shmocab)
 
 ### **Assessment** - 10  minutes 
 
-6) [Algorithm Assessment](#Assessment)
+7) [Algorithm Assessment](#Assessment)
 
 
 [/summary]
@@ -92,8 +93,20 @@ Finishing the review by asking about the students' favorite things helps to leav
 [/tip]
 
 
+### <a name="Vocab"></a> 2) Vocabulary
+This lesson has one important word to review:<br/>
 
-### <a name="GetStarted"></a>2) Intro to Tangrams
+[centerIt]
+
+![](vocab.png)
+
+[/centerIt]
+
+**Algorithm** - Say it with me: Al-go-ri-thm <br/>
+A list of steps that you can follow to finish a task 
+
+
+### <a name="GetStarted"></a>3) Intro to Tangrams
 Your students may or may not have played with [tangrams](http://www.techitoutuk.com/projects/tangrams/rules.html) before.  If they have, you can skip this portion, and move right to explaining the Algorithms activity.
 
 Usually, Tangrams are used to solve puzzles. You receive a set of seven Tans and must use them all (without overlapping any) to recreate an image that has been given to you.  Often, this is done as an individual activity, and the player is allowed to see the image that they are trying to recreate. Many times, you can lay your peices right on top of the image silhouette to be sure that the solution is just right. 
@@ -108,7 +121,7 @@ If your class has never used Tangram pieces, you can choose to do an example for
 
 
 ## Activity: Algorithms (20 min)
-### <a name="Activity1"></a>3) [Algorithms](Activity1-Algorithms.pdf)
+### <a name="Activity1"></a>4) [Algorithms](Activity1-Algorithms.pdf)
 We are going to use our tangrams in a slightly different way than most. Instead of looking at our puzzles and trying to guess which shape goes where, we are going to get puzzles that already tell you where each shape goes.  
 
 You might think that this will make it easier, but it won't, because students will also not get to actually *look* at the image that we are trying to recreate!  Instead, a teammate will be *describing* the image to us.
@@ -135,14 +148,14 @@ Play through this several times, with images of increasing difficulty.
 
 
 ## Wrap-up (10 min)
-### <a name="FlashChat"></a>4) Flash Chat: What did we learn? 
+### <a name="FlashChat"></a>5) Flash Chat: What did we learn? 
 
 - What did we learn today?
 - Was it easier or harder than you thought it would be to describe an image to one another?
 - Did any group end up having drawings that all matched?
 - Can you share some tricks that you came up with that helped your group match the Image Card exactly?
 
-### <a name="Shmocab"></a>5) Vocab Shmocab
+### <a name="Shmocab"></a>6) Vocab Shmocab
 You can choose to do these as a class, or have the students discuss with an elbow partner and share.
 
 - Do you remember the definition of the word "algorithm"?
@@ -157,11 +170,11 @@ You can choose to do these as a class, or have the students discuss with an elbo
 > "An algorithm that has been coded into something that can be run by a machine"<br/>
 > "Finding and fixing problems in your algorithm or program"<br/>
 
-- And what is the word for the last definition in that list?
+- And what is the word for the last definition in that list? (Program)
 
 
 ## Assessment (10 min)
-### <a name="Assessment"></a>6) [Algorithm Assessment](Assessment1-Tangrams.pdf) <br/><br/>
+### <a name="Assessment"></a>7) [Algorithm Assessment](Assessment1-Tangrams.pdf) <br/><br/>
 
 
 ## Extended Learning 
