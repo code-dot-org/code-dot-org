@@ -12,6 +12,10 @@ body{
 	page-break-after: always; 
 }
 
+.centerIt{
+	text-align:center;
+}
+
 .headercontent {
 	margin: 0px 40px 20px 20px;	
 }
@@ -115,15 +119,17 @@ body{
   -webkit-print-color-adjust: exact;
 }
 
-/*
+
 @page  
 { 
-    size: auto;    
+    size:8.5in 11in; 
     margin: .4in .25in .25in .25in;  
 }
 
-@media print {
-	body{ margin: .4in .25in .25in .25in; }
-	
-}
-*/
+@media print body {
+	font-size: 1em;
+	margin-top: 2cm;
+	margin-right: 2cm;
+	margin-bottom: 1.5cm;
+	margin-left: 2cm
+        }

@@ -90,7 +90,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":17,"./required_block_utils":21,"./utils":36}],2:[function(require,module,exports){
+},{"./base":2,"./blocksCommon":4,"./dom":17,"./required_block_utils":21,"./utils":37}],2:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -994,7 +994,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/pl_pl/common":39,"./block_utils":3,"./builder":14,"./constants.js":16,"./dom":17,"./feedback.js":18,"./slider":23,"./templates/buttons.html":25,"./templates/instructions.html":27,"./templates/learn.html":28,"./templates/makeYourOwn.html":29,"./utils":36,"./xml":37}],3:[function(require,module,exports){
+},{"../locale/pl_pl/common":40,"./block_utils":3,"./builder":14,"./constants.js":16,"./dom":17,"./feedback.js":18,"./slider":23,"./templates/buttons.html":25,"./templates/instructions.html":27,"./templates/learn.html":28,"./templates/makeYourOwn.html":29,"./utils":37,"./xml":38}],3:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1140,7 +1140,7 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
-},{"./xml":37}],4:[function(require,module,exports){
+},{"./xml":38}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1282,7 +1282,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/pl_pl/common":39}],5:[function(require,module,exports){
+},{"../locale/pl_pl/common":40}],5:[function(require,module,exports){
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
@@ -1959,7 +1959,7 @@ exports.install = function(blockly, blockInstallOptions) {
   delete blockly.Blocks.procedures_ifreturn;
 };
 
-},{"../../locale/pl_pl/bounce":38,"../codegen":15}],7:[function(require,module,exports){
+},{"../../locale/pl_pl/bounce":39,"../codegen":15}],7:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -3368,7 +3368,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/pl_pl/bounce":38,"../../locale/pl_pl/common":39,"../base":2,"../codegen":15,"../dom":17,"../feedback.js":18,"../hammer":19,"../skins":22,"../templates/page.html":30,"../timeoutList":35,"../utils":36,"./api":5,"./controls.html":8,"./tiles":12,"./visualization.html":13}],8:[function(require,module,exports){
+},{"../../locale/pl_pl/bounce":39,"../../locale/pl_pl/common":40,"../base":2,"../codegen":15,"../dom":17,"../feedback.js":18,"../hammer":19,"../skins":22,"../templates/page.html":30,"../timeoutList":36,"../utils":37,"./api":5,"./controls.html":8,"./tiles":12,"./visualization.html":13}],8:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -3392,7 +3392,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pl_pl/bounce":38,"../../locale/pl_pl/common":39,"ejs":40}],9:[function(require,module,exports){
+},{"../../locale/pl_pl/bounce":39,"../../locale/pl_pl/common":40,"ejs":41}],9:[function(require,module,exports){
 /*jshint multistr: true */
 
 var Direction = require('./tiles').Direction;
@@ -3994,7 +3994,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":40}],14:[function(require,module,exports){
+},{"ejs":41}],14:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -4024,7 +4024,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":17,"./feedback.js":18,"./templates/builder.html":24,"./utils.js":36,"url":50}],15:[function(require,module,exports){
+},{"./dom.js":17,"./feedback.js":18,"./templates/builder.html":24,"./utils.js":37,"url":51}],15:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -4311,11 +4311,15 @@ exports.displayFeedback = function(options) {
     trackEvent('Puzzle', 'Completed', options.response.level_path, options.response.level_attempts);
   }
 
+  var hadShareFailure = (options.response && options.response.share_failure);
+  var showingSharing = options.showingSharing && !hadShareFailure;
+
   var canContinue = exports.canContinueToNextLevel(options.feedbackType);
   var displayShowCode = BlocklyApps.enableShowCode && canContinue;
   var feedback = document.createElement('div');
-  var sharingDiv = (canContinue && options.showingSharing) ? exports.createSharingDiv(options) : null;
+  var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
+  var shareFailureDiv = hadShareFailure ? getShareFailure(options) : null;
   var feedbackBlocks = new FeedbackBlocks(options);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
@@ -4347,10 +4351,13 @@ exports.displayFeedback = function(options) {
   if (sharingDiv) {
     feedback.appendChild(sharingDiv);
   }
-  if (options.showingSharing) {
+  if (showingSharing) {
     var shareCodeSpacer = document.createElement('div');
     shareCodeSpacer.className = "share-code-spacer";
     feedback.appendChild(shareCodeSpacer);
+  }
+  if (shareFailureDiv) {
+    feedback.appendChild(shareFailureDiv);
   }
   if (showCode) {
     feedback.appendChild(showCode);
@@ -4546,6 +4553,13 @@ var getFeedbackButtons = function(options) {
   return buttons;
 };
 
+var getShareFailure = function(options) {
+  var shareFailure = options.response.share_failure;
+  var shareFailureDiv = document.createElement('div');
+  shareFailureDiv.innerHTML = require('./templates/shareFailure.html')({shareFailure: shareFailure});
+  return shareFailureDiv;
+};
+
 var useSpecialFeedbackDesign = function (options) {
  return options.response &&
         options.response.design &&
@@ -4556,9 +4570,10 @@ var useSpecialFeedbackDesign = function (options) {
 // The message will be one of the following, from highest to lowest precedence:
 // 1. Message passed in by caller (options.message).
 // 2. Message from dashboard database (options.response.hint).
-// 3. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
+// 3. Header message due to dashboard text check fail (options.response.share_failure).
+// 4. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
 //    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
-// 4. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
+// 5. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
 //    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
 var getFeedbackMessage = function(options) {
   var feedback = document.createElement('p');
@@ -4568,6 +4583,8 @@ var getFeedbackMessage = function(options) {
   // If a message was explicitly passed in, use that.
   if (options.message) {
     message = options.message;
+  } else if (options.response && options.response.share_failure) {
+    message = msg.shareFailure();
   } else if (options.response && options.response.hint) {
     // Otherwise, if there's a dashboard database hint, use that.
     message = options.response.hint;
@@ -5211,7 +5228,7 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/pl_pl/common":39,"./codegen":15,"./constants":16,"./dom":17,"./templates/buttons.html":25,"./templates/code.html":26,"./templates/readonly.html":31,"./templates/sharing.html":32,"./templates/showCode.html":33,"./templates/trophy.html":34,"./utils":36}],19:[function(require,module,exports){
+},{"../locale/pl_pl/common":40,"./codegen":15,"./constants":16,"./dom":17,"./templates/buttons.html":25,"./templates/code.html":26,"./templates/readonly.html":31,"./templates/shareFailure.html":32,"./templates/sharing.html":33,"./templates/showCode.html":34,"./templates/trophy.html":35,"./utils":37}],19:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -10540,7 +10557,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./utils":36,"./xml":37}],22:[function(require,module,exports){
+},{"./block_utils":3,"./utils":37,"./xml":38}],22:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -10847,7 +10864,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":40}],25:[function(require,module,exports){
+},{"ejs":41}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10868,7 +10885,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pl_pl/common":39,"ejs":40}],26:[function(require,module,exports){
+},{"../../locale/pl_pl/common":40,"ejs":41}],26:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10889,7 +10906,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":40}],27:[function(require,module,exports){
+},{"ejs":41}],27:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10910,7 +10927,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pl_pl/common":39,"ejs":40}],28:[function(require,module,exports){
+},{"../../locale/pl_pl/common":40,"ejs":41}],28:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10933,7 +10950,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pl_pl/common":39,"ejs":40}],29:[function(require,module,exports){
+},{"../../locale/pl_pl/common":40,"ejs":41}],29:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10954,7 +10971,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pl_pl/common":39,"ejs":40}],30:[function(require,module,exports){
+},{"../../locale/pl_pl/common":40,"ejs":41}],30:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10979,7 +10996,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pl_pl/common":39,"ejs":40}],31:[function(require,module,exports){
+},{"../../locale/pl_pl/common":40,"ejs":41}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11001,7 +11018,28 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":40}],32:[function(require,module,exports){
+},{"ejs":41}],32:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape, rethrow) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!#?[a-zA-Z0-9]+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/'/g, '&#39;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<p id="share-fail-explanation">', escape((1,  shareFailure.message )), '</p>\n\n');3; if (shareFailure.contents) { ; buf.push('\n  <div class="share-fail-excerpt">\n    <pre class="generatedCode">', escape((5,  shareFailure.contents )), '</pre>\n  </div>\n');7; } ; buf.push('\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":41}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11022,7 +11060,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pl_pl/common":39,"ejs":40}],33:[function(require,module,exports){
+},{"../../locale/pl_pl/common":40,"ejs":41}],34:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11043,7 +11081,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pl_pl/common":39,"ejs":40}],34:[function(require,module,exports){
+},{"../../locale/pl_pl/common":40,"ejs":41}],35:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11064,7 +11102,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":40}],35:[function(require,module,exports){
+},{"ejs":41}],36:[function(require,module,exports){
 var list = [];
 
 /**
@@ -11082,7 +11120,7 @@ exports.clearTimeouts = function () {
   list = [];
 };
 
-},{}],36:[function(require,module,exports){
+},{}],37:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -11348,7 +11386,7 @@ exports.generateDropletPalette = function (codeFunctions) {
   return palette;
 };
 
-},{"./lodash":20,"./xml":37}],37:[function(require,module,exports){
+},{"./lodash":20,"./xml":38}],38:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -11376,7 +11414,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],38:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.pl = function (n) {
   if (n == 1) {
     return 'one';
@@ -11625,7 +11663,7 @@ exports.whileTooltip = function(d){return "Powtarzaj wymienione czynności, aż 
 exports.yes = function(d){return "Tak"};
 
 
-},{"messageformat":51}],39:[function(require,module,exports){
+},{"messageformat":52}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.pl = function (n) {
   if (n == 1) {
     return 'one';
@@ -11767,6 +11805,8 @@ exports.saveToGallery = function(d){return "Zapisz do swojej galerii"};
 
 exports.savedToGallery = function(d){return "Zapisane w twojej galerii!"};
 
+exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+
 exports.typeCode = function(d){return "Wpisz swój JavaScript kod poniżej tych instrukcji."};
 
 exports.typeFuncs = function(d){return "Dostępne funkcje:%1"};
@@ -11798,7 +11838,7 @@ exports.hintHeader = function(d){return "Oto wskazówka:"};
 exports.genericFeedback = function(d){return "Zobacz jak skończyłeś, i spróbuj naprawić swój program."};
 
 
-},{"messageformat":51}],40:[function(require,module,exports){
+},{"messageformat":52}],41:[function(require,module,exports){
 
 /*!
  * EJS
@@ -12157,7 +12197,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":41,"./utils":42,"fs":43,"path":44}],41:[function(require,module,exports){
+},{"./filters":42,"./utils":43,"fs":44,"path":45}],42:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -12360,7 +12400,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],42:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 
 /*!
  * EJS
@@ -12386,9 +12426,9 @@ exports.escape = function(html){
 };
  
 
-},{}],43:[function(require,module,exports){
-
 },{}],44:[function(require,module,exports){
+
+},{}],45:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -12616,7 +12656,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":45}],45:[function(require,module,exports){
+},{"JkpR2F":46}],46:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -12681,7 +12721,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],46:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -13192,7 +13232,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],47:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -13278,7 +13318,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],48:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -13365,13 +13405,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],49:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":47,"./encode":48}],50:[function(require,module,exports){
+},{"./decode":48,"./encode":49}],51:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14080,7 +14120,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":46,"querystring":49}],51:[function(require,module,exports){
+},{"punycode":47,"querystring":50}],52:[function(require,module,exports){
 /**
  * messageformat.js
  *

@@ -90,7 +90,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":38,"./utils":53}],2:[function(require,module,exports){
+},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":38,"./utils":54}],2:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -994,7 +994,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/uk_ua/common":55,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":9,"./slider":40,"./templates/buttons.html":42,"./templates/instructions.html":44,"./templates/learn.html":45,"./templates/makeYourOwn.html":46,"./utils":53,"./xml":54}],3:[function(require,module,exports){
+},{"../locale/uk_ua/common":56,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":9,"./slider":40,"./templates/buttons.html":42,"./templates/instructions.html":44,"./templates/learn.html":45,"./templates/makeYourOwn.html":46,"./utils":54,"./xml":55}],3:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1140,7 +1140,7 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
-},{"./xml":54}],4:[function(require,module,exports){
+},{"./xml":55}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1282,7 +1282,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/uk_ua/common":55}],5:[function(require,module,exports){
+},{"../locale/uk_ua/common":56}],5:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -1312,7 +1312,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":8,"./feedback.js":9,"./templates/builder.html":41,"./utils.js":53,"url":67}],6:[function(require,module,exports){
+},{"./dom.js":8,"./feedback.js":9,"./templates/builder.html":41,"./utils.js":54,"url":68}],6:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -1599,11 +1599,15 @@ exports.displayFeedback = function(options) {
     trackEvent('Puzzle', 'Completed', options.response.level_path, options.response.level_attempts);
   }
 
+  var hadShareFailure = (options.response && options.response.share_failure);
+  var showingSharing = options.showingSharing && !hadShareFailure;
+
   var canContinue = exports.canContinueToNextLevel(options.feedbackType);
   var displayShowCode = BlocklyApps.enableShowCode && canContinue;
   var feedback = document.createElement('div');
-  var sharingDiv = (canContinue && options.showingSharing) ? exports.createSharingDiv(options) : null;
+  var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
+  var shareFailureDiv = hadShareFailure ? getShareFailure(options) : null;
   var feedbackBlocks = new FeedbackBlocks(options);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
@@ -1635,10 +1639,13 @@ exports.displayFeedback = function(options) {
   if (sharingDiv) {
     feedback.appendChild(sharingDiv);
   }
-  if (options.showingSharing) {
+  if (showingSharing) {
     var shareCodeSpacer = document.createElement('div');
     shareCodeSpacer.className = "share-code-spacer";
     feedback.appendChild(shareCodeSpacer);
+  }
+  if (shareFailureDiv) {
+    feedback.appendChild(shareFailureDiv);
   }
   if (showCode) {
     feedback.appendChild(showCode);
@@ -1834,6 +1841,13 @@ var getFeedbackButtons = function(options) {
   return buttons;
 };
 
+var getShareFailure = function(options) {
+  var shareFailure = options.response.share_failure;
+  var shareFailureDiv = document.createElement('div');
+  shareFailureDiv.innerHTML = require('./templates/shareFailure.html')({shareFailure: shareFailure});
+  return shareFailureDiv;
+};
+
 var useSpecialFeedbackDesign = function (options) {
  return options.response &&
         options.response.design &&
@@ -1844,9 +1858,10 @@ var useSpecialFeedbackDesign = function (options) {
 // The message will be one of the following, from highest to lowest precedence:
 // 1. Message passed in by caller (options.message).
 // 2. Message from dashboard database (options.response.hint).
-// 3. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
+// 3. Header message due to dashboard text check fail (options.response.share_failure).
+// 4. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
 //    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
-// 4. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
+// 5. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
 //    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
 var getFeedbackMessage = function(options) {
   var feedback = document.createElement('p');
@@ -1856,6 +1871,8 @@ var getFeedbackMessage = function(options) {
   // If a message was explicitly passed in, use that.
   if (options.message) {
     message = options.message;
+  } else if (options.response && options.response.share_failure) {
+    message = msg.shareFailure();
   } else if (options.response && options.response.hint) {
     // Otherwise, if there's a dashboard database hint, use that.
     message = options.response.hint;
@@ -2499,7 +2516,7 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/uk_ua/common":55,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":42,"./templates/code.html":43,"./templates/readonly.html":48,"./templates/sharing.html":49,"./templates/showCode.html":50,"./templates/trophy.html":51,"./utils":53}],10:[function(require,module,exports){
+},{"../locale/uk_ua/common":56,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":42,"./templates/code.html":43,"./templates/readonly.html":48,"./templates/shareFailure.html":49,"./templates/sharing.html":50,"./templates/showCode.html":51,"./templates/trophy.html":52,"./utils":54}],10:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -5746,7 +5763,7 @@ for (var functionName in Bee.api) {
   exports[functionName] = API_FUNCTION(Bee.api[functionName]);
 }
 
-},{"../utils":53,"./bee":13,"./tiles":30}],13:[function(require,module,exports){
+},{"../utils":54,"./bee":13,"./tiles":30}],13:[function(require,module,exports){
 var utils = require('../utils');
 var mazeMsg = require('../../locale/uk_ua/maze');
 var TestResults = require('../constants.js').TestResults;
@@ -6203,7 +6220,7 @@ Bee.api.honeyCreated = function (id) {
   return Maze.bee.honey_;
 };
 
-},{"../../locale/uk_ua/maze":56,"../constants.js":7,"../utils":53}],14:[function(require,module,exports){
+},{"../../locale/uk_ua/maze":57,"../constants.js":7,"../utils":54}],14:[function(require,module,exports){
 /**
  * Blocks specific to Bee
  */
@@ -6436,7 +6453,7 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
   };
 }
 
-},{"../../locale/uk_ua/maze":56,"../block_utils":3,"../codegen":6}],15:[function(require,module,exports){
+},{"../../locale/uk_ua/maze":57,"../block_utils":3,"../codegen":6}],15:[function(require,module,exports){
 /*jshint -W086 */
 
 var DirtDrawer = require('./dirtDrawer');
@@ -6722,7 +6739,7 @@ BeeItemDrawer.prototype.addCheckerboardTile = function (row, col, isPath) {
   }
 };
 
-},{"../utils":53,"./dirtDrawer":18,"./mazeUtils":26}],16:[function(require,module,exports){
+},{"../utils":54,"./dirtDrawer":18,"./mazeUtils":26}],16:[function(require,module,exports){
 /**
  * Blockly Demo: Maze
  *
@@ -7132,7 +7149,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
 };
 
-},{"../../locale/uk_ua/common":55,"../../locale/uk_ua/maze":56,"../block_utils":3,"../codegen":6,"./beeBlocks":14,"./mazeUtils":26}],17:[function(require,module,exports){
+},{"../../locale/uk_ua/common":56,"../../locale/uk_ua/maze":57,"../block_utils":3,"../codegen":6,"./beeBlocks":14,"./mazeUtils":26}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7154,7 +7171,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/uk_ua/maze":56,"ejs":57}],18:[function(require,module,exports){
+},{"../../locale/uk_ua/maze":57,"ejs":58}],18:[function(require,module,exports){
 var cellId = require('./mazeUtils').cellId;
 
 // The number line is [-inf, min, min+1, ... no zero ..., max-1, max, +inf]
@@ -7394,7 +7411,7 @@ ExecutionInfo.prototype.checkTimeout = function() {
   }
 };
 
-},{"../utils":53}],20:[function(require,module,exports){
+},{"../utils":54}],20:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7417,7 +7434,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/uk_ua/maze":56,"ejs":57}],21:[function(require,module,exports){
+},{"../../locale/uk_ua/maze":57,"ejs":58}],21:[function(require,module,exports){
 /*jshint multistr: true */
 
 var levelBase = require('../level_base');
@@ -8667,7 +8684,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/uk_ua/maze":56,"../block_utils":3,"../level_base":10,"./karelStartBlocks.xml":22,"./tiles":30,"./toolboxes/karel1.xml":31,"./toolboxes/karel2.xml":32,"./toolboxes/karel3.xml":33}],22:[function(require,module,exports){
+},{"../../locale/uk_ua/maze":57,"../block_utils":3,"../level_base":10,"./karelStartBlocks.xml":22,"./tiles":30,"./toolboxes/karel1.xml":31,"./toolboxes/karel2.xml":32,"./toolboxes/karel3.xml":33}],22:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -8699,7 +8716,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/uk_ua/maze":56,"ejs":57}],23:[function(require,module,exports){
+},{"../../locale/uk_ua/maze":57,"ejs":58}],23:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var karelLevels = require('./karelLevels');
 var wordsearchLevels = require('./wordsearchLevels');
@@ -9338,7 +9355,7 @@ cloneWithStep('2_17', true, false);
 cloneWithStep('karel_1_9', true, false);
 cloneWithStep('karel_2_9', true, false);
 
-},{"../../locale/uk_ua/maze":56,"../block_utils":3,"../utils":53,"./karelLevels":21,"./requiredBlocks":27,"./startBlocks.xml":29,"./tiles":30,"./toolboxes/maze.xml":34,"./wordsearchLevels":37}],24:[function(require,module,exports){
+},{"../../locale/uk_ua/maze":57,"../block_utils":3,"../utils":54,"./karelLevels":21,"./requiredBlocks":27,"./startBlocks.xml":29,"./tiles":30,"./toolboxes/maze.xml":34,"./wordsearchLevels":37}],24:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Maze = require('./maze');
@@ -11047,7 +11064,7 @@ Maze.onExecutionFinish = function () {
   }
 };
 
-},{"../../locale/uk_ua/common":55,"../base":2,"../codegen":6,"../dom":8,"../feedback.js":9,"../skins":39,"../templates/page.html":47,"../timeoutList":52,"../utils":53,"./api":12,"./bee":13,"./beeItemDrawer":15,"./controls.html":17,"./dirtDrawer":18,"./executionInfo":19,"./extraControlRows.html":20,"./mazeUtils":26,"./tiles":30,"./visualization.html":35,"./wordsearch":36}],26:[function(require,module,exports){
+},{"../../locale/uk_ua/common":56,"../base":2,"../codegen":6,"../dom":8,"../feedback.js":9,"../skins":39,"../templates/page.html":47,"../timeoutList":53,"../utils":54,"./api":12,"./bee":13,"./beeItemDrawer":15,"./controls.html":17,"./dirtDrawer":18,"./executionInfo":19,"./extraControlRows.html":20,"./mazeUtils":26,"./tiles":30,"./visualization.html":35,"./wordsearch":36}],26:[function(require,module,exports){
 /**
  * Generalized function for generating ids for cells in a table
  */
@@ -11255,7 +11272,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":39,"../utils":53}],29:[function(require,module,exports){
+},{"../skins":39,"../utils":54}],29:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11276,7 +11293,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],30:[function(require,module,exports){
+},{"ejs":58}],30:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -11339,7 +11356,7 @@ Tiles.constrainDirection4 = function(d) {
   return utils.mod(d, 4);
 };
 
-},{"../utils":53}],31:[function(require,module,exports){
+},{"../utils":54}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11360,7 +11377,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],32:[function(require,module,exports){
+},{"ejs":58}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11386,7 +11403,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../../locale/uk_ua/common":55,"../../../locale/uk_ua/maze":56,"ejs":57}],33:[function(require,module,exports){
+},{"../../../locale/uk_ua/common":56,"../../../locale/uk_ua/maze":57,"ejs":58}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11420,7 +11437,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../../locale/uk_ua/common":55,"ejs":57}],34:[function(require,module,exports){
+},{"../../../locale/uk_ua/common":56,"ejs":58}],34:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11441,7 +11458,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],35:[function(require,module,exports){
+},{"ejs":58}],35:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11462,7 +11479,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],36:[function(require,module,exports){
+},{"ejs":58}],36:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var cellId = require('./mazeUtils').cellId;
@@ -11709,7 +11726,7 @@ WordSearch.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":53,"./mazeUtils":26,"./tiles":30}],37:[function(require,module,exports){
+},{"../utils":54,"./mazeUtils":26,"./tiles":30}],37:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var reqBlocks = require('./requiredBlocks');
 var blockUtils = require('../block_utils');
@@ -12186,7 +12203,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./utils":53,"./xml":54}],39:[function(require,module,exports){
+},{"./block_utils":3,"./utils":54,"./xml":55}],39:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -12493,7 +12510,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],42:[function(require,module,exports){
+},{"ejs":58}],42:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12514,7 +12531,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/uk_ua/common":55,"ejs":57}],43:[function(require,module,exports){
+},{"../../locale/uk_ua/common":56,"ejs":58}],43:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12535,7 +12552,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],44:[function(require,module,exports){
+},{"ejs":58}],44:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12556,7 +12573,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/uk_ua/common":55,"ejs":57}],45:[function(require,module,exports){
+},{"../../locale/uk_ua/common":56,"ejs":58}],45:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12579,7 +12596,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/uk_ua/common":55,"ejs":57}],46:[function(require,module,exports){
+},{"../../locale/uk_ua/common":56,"ejs":58}],46:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12600,7 +12617,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/uk_ua/common":55,"ejs":57}],47:[function(require,module,exports){
+},{"../../locale/uk_ua/common":56,"ejs":58}],47:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12625,7 +12642,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/uk_ua/common":55,"ejs":57}],48:[function(require,module,exports){
+},{"../../locale/uk_ua/common":56,"ejs":58}],48:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12647,7 +12664,28 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],49:[function(require,module,exports){
+},{"ejs":58}],49:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape, rethrow) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!#?[a-zA-Z0-9]+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/'/g, '&#39;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<p id="share-fail-explanation">', escape((1,  shareFailure.message )), '</p>\n\n');3; if (shareFailure.contents) { ; buf.push('\n  <div class="share-fail-excerpt">\n    <pre class="generatedCode">', escape((5,  shareFailure.contents )), '</pre>\n  </div>\n');7; } ; buf.push('\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":58}],50:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12668,7 +12706,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/uk_ua/common":55,"ejs":57}],50:[function(require,module,exports){
+},{"../../locale/uk_ua/common":56,"ejs":58}],51:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12689,7 +12727,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/uk_ua/common":55,"ejs":57}],51:[function(require,module,exports){
+},{"../../locale/uk_ua/common":56,"ejs":58}],52:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12710,7 +12748,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],52:[function(require,module,exports){
+},{"ejs":58}],53:[function(require,module,exports){
 var list = [];
 
 /**
@@ -12728,7 +12766,7 @@ exports.clearTimeouts = function () {
   list = [];
 };
 
-},{}],53:[function(require,module,exports){
+},{}],54:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -12994,7 +13032,7 @@ exports.generateDropletPalette = function (codeFunctions) {
   return palette;
 };
 
-},{"./lodash":11,"./xml":54}],54:[function(require,module,exports){
+},{"./lodash":11,"./xml":55}],55:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -13022,7 +13060,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],55:[function(require,module,exports){
+},{}],56:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.uk = function (n) {
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
@@ -13163,6 +13201,8 @@ exports.saveToGallery = function(d){return "Зберегти до вашої к�
 
 exports.savedToGallery = function(d){return "Збережено в галерею!"};
 
+exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+
 exports.typeCode = function(d){return "Запишіть нижче свій код JavaScript згідно із вказівками."};
 
 exports.typeFuncs = function(d){return "Доступні функції: %1"};
@@ -13194,7 +13234,7 @@ exports.hintHeader = function(d){return "Підказка:"};
 exports.genericFeedback = function(d){return "Подивіться, на чому ви зупинились і спробуйте виправити свою програму."};
 
 
-},{"messageformat":68}],56:[function(require,module,exports){
+},{"messageformat":69}],57:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.uk = function (n) {
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
@@ -13374,7 +13414,7 @@ exports.yes = function(d){return "Так"};
 exports.youSpelled = function(d){return "Ви написали"};
 
 
-},{"messageformat":68}],57:[function(require,module,exports){
+},{"messageformat":69}],58:[function(require,module,exports){
 
 /*!
  * EJS
@@ -13733,7 +13773,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":58,"./utils":59,"fs":60,"path":61}],58:[function(require,module,exports){
+},{"./filters":59,"./utils":60,"fs":61,"path":62}],59:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -13936,7 +13976,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],59:[function(require,module,exports){
+},{}],60:[function(require,module,exports){
 
 /*!
  * EJS
@@ -13962,9 +14002,9 @@ exports.escape = function(html){
 };
  
 
-},{}],60:[function(require,module,exports){
-
 },{}],61:[function(require,module,exports){
+
+},{}],62:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -14192,7 +14232,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":62}],62:[function(require,module,exports){
+},{"JkpR2F":63}],63:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -14257,7 +14297,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],63:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -14768,7 +14808,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],64:[function(require,module,exports){
+},{}],65:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14854,7 +14894,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],65:[function(require,module,exports){
+},{}],66:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14941,13 +14981,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],66:[function(require,module,exports){
+},{}],67:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":64,"./encode":65}],67:[function(require,module,exports){
+},{"./decode":65,"./encode":66}],68:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -15656,7 +15696,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":63,"querystring":66}],68:[function(require,module,exports){
+},{"punycode":64,"querystring":67}],69:[function(require,module,exports){
 /**
  * messageformat.js
  *

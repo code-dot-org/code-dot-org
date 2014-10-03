@@ -17,6 +17,7 @@
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 
 /[if lt IE 9]
@@ -129,7 +130,9 @@
 
 :javascript
   $(document).ready(function() {
-    $('#volunteer-engineer-submit-form select').selectize();
+    $('#volunteer-engineer-submit-form select').selectize({
+      plugins: ['fast_click']
+    });
 
     $('#volunteer-languages').change(function() {
       if ($.inArray('other', $(this).val()) > -1) {

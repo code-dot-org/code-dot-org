@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   PROVIDER_MANUAL = 'manual' # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored' # "new" user created by a teacher -- logs in w/ name + secret picture/word 
 
-  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2}
+  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever}
   
   TYPE_STUDENT = 'student'
   TYPE_TEACHER = 'teacher'
@@ -123,13 +123,42 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.normalize_gender(v)
+    return nil if v.blank?
+    case v.downcase
+    when 'f', 'female'
+      'f'
+    when 'm', 'male'
+      'm'
+    else
+      nil
+    end
+  end
+
   def self.from_omniauth(auth, params)
+    def self.name_from_omniauth(raw_name)
+      return raw_name if raw_name.blank? || raw_name.is_a?(String) # some services just give us a string
+      # clever returns a hash instead of a string for name
+      "#{raw_name['first']} #{raw_name['last']}".squish
+    end
+
     where(auth.slice(:provider, :uid)).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
-      user.name = auth.info.name
+      user.name = name_from_omniauth auth.info.name
       user.email = auth.info.email
-      user.user_type = params['user_type'] || User::TYPE_STUDENT
+      user.user_type = params['user_type'] || auth.info.user_type || User::TYPE_STUDENT
+
+      # clever provides us these fields
+      if auth.info.user_type == TYPE_TEACHER
+        # if clever told us that the user is a teacher, we just trust
+        # that they are adults; we don't actually care about age
+        user.age = 21
+      else
+        # student or unspecified type
+        user.birthday = auth.info.dob
+      end
+      user.gender = normalize_gender auth.info.gender
     end
   end
 
@@ -160,6 +189,7 @@ class User < ActiveRecord::Base
     return true if teacher? || admin?
     return false if provider == User::PROVIDER_MANUAL
     return false if provider == User::PROVIDER_SPONSORED
+    return false if oauth?
     true
   end
 
