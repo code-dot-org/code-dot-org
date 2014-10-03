@@ -155,6 +155,7 @@ class Script < ActiveRecord::Base
                     hidden: script_data[:hidden].nil? ? true : script_data[:hidden]},
                    stages.map{|stage| stage[:levels]}.flatten)
       end
+      Rails.cache.clear
       [(default_scripts + custom_scripts), custom_i18n]
     end
   end

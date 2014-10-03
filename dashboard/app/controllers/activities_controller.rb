@@ -171,10 +171,11 @@ class ActivitiesController < ApplicationController
 
     # hash of level_id => test_result
     test_result = params[:testResult].to_i
-    session[:progress] ||= {}
+    session[:progress] ||= {:updated_at => Time.now}
     old_result = session[:progress].fetch(@level.id, -1)
     if test_result > old_result
       session[:progress][@level.id] = test_result
+      session[:progress][:updated_at] = Time.now
     end
 
     # counter of total lines written

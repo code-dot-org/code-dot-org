@@ -26,7 +26,10 @@ SQL
   end
 
   def header_stats
-    render file: "shared/_user_stats", layout: false, locals: { user: current_user }
+    user = current_user
+    if stale?(:etag => [@script, user || session[:progress]], :last_modified => [@script.updated_at, (user || session[:progress]).try(:[], :updated_at) || @script.updated_at].max)
+      render file: "shared/_user_stats", layout: false, locals: { user: user }
+    end
   end
 
   def prizes

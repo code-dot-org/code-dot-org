@@ -2,8 +2,8 @@
 # A Script has one or more Levels, and a Level can belong to one or more Scripts
 class ScriptLevel < ActiveRecord::Base
   belongs_to :level
-  belongs_to :script
-  belongs_to :stage
+  belongs_to :script, :touch => true
+  belongs_to :stage, :touch => true
   acts_as_list scope: :stage
 
   NEXT = 'next'
@@ -12,8 +12,16 @@ class ScriptLevel < ActiveRecord::Base
   # corresponding to this ScriptLevel for a specific user
   attr_accessor :user_level
 
+  def cache(name)
+    Rails.cache.fetch("#{cache_key}/#{name}") do
+      yield
+    end
+  end
+
   def next_level
-    script.script_levels.where(["chapter > ?", self.chapter]).order('chapter asc').first
+    cache(:next_level) do
+      script.script_levels.where(["chapter > ?", self.chapter]).order('chapter asc').first
+    end
   end
 
   def next_progression_level
@@ -25,22 +33,26 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def valid_progression_level?
-    return false if level.unplugged?
-    return false if stage && stage.unplugged?
-    true
+    cache(:valid_progression_level) do
+      (level.unplugged? || (stage && stage.unplugged?)) ? false : true
+    end
   end
 
   def previous_level
-    if self.stage
-      self.higher_item
-    else
-      self.script.try(:get_script_level_by_chapter, self.chapter - 1)
+    cache(:previous_level) do
+      if self.stage
+        self.higher_item
+      else
+        self.script.try(:get_script_level_by_chapter, self.chapter - 1)
+      end
     end
   end
 
   def end_of_stage?
-    stage ? (self.last?) :
-      next_progression_level && (level.game_id != next_progression_level.level.game_id)
+    cache(:end_of_stage) do
+      stage ? (self.last?) :
+          next_progression_level && (level.game_id != next_progression_level.level.game_id)
+    end
   end
 
   def stage_position_str
