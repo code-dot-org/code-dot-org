@@ -57,6 +57,10 @@ class LevelsController < ApplicationController
     @callback = level_update_blocks_path @level, type
     @edit_blocks = type
     @skip_instructions_popup = true
+
+    # Ensure the simulation ends right away when the user clicks 'Run' while editing blocks
+    @level.properties['success_condition'] = 'function () { return true; }'
+
     show
     render :show
   end
