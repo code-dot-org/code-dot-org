@@ -732,3 +732,9 @@ input[type="radio"] {
 #stepButton {
   margin-right: 0;
   text-align: center; }
+
+#share-fail-explanation {
+  font-size: 20px; }
+
+.share-fail-excerpt .generatedCode {
+  font-size: 14px; }
