@@ -339,8 +339,9 @@ Blockly.Connection.prototype.moveBy = function(dx, dy) {
  */
 Blockly.Connection.prototype.highlight = function() {
   var steps;
+  // todo - does functional_output belong here?
   if (this.type === Blockly.INPUT_VALUE || this.type === Blockly.OUTPUT_VALUE ||
-    this.type === Blockly.FUNCTIONAL_INPUT || this.type === Blockly.FUNCTIONAL_OUTPUT) {
+    this.type === Blockly.FUNCTIONAL_OUTPUT) {
     var tabWidth = Blockly.RTL ? -Blockly.BlockSvg.TAB_WIDTH :
                                  Blockly.BlockSvg.TAB_WIDTH;
     steps = 'm 0,0 v 5 c 0,10 ' + -tabWidth + ',-8 ' + -tabWidth + ',7.5 s ' +
