@@ -101,6 +101,18 @@ function foreverUpAndDownBlocks(yPosition) {
  */
 var levels = module.exports = {};
 
+// Base config for levels created via levelbuilder
+levels.custom = {
+  'ideal': 2,
+  'requiredBlocks': [],
+  'scale': {
+    'snapRadius': 2
+  },
+  'startBlocks':
+   '<block type="when_run" deletable="false" x="20" y="20"></block>'
+};
+levels.playlab_test = utils.extend(levels.custom);
+
 // Can you make this dog say "hello world"
 levels.dog_hello = {
   'ideal': 2,

@@ -115,6 +115,10 @@ class LevelsController < ApplicationController
     if @type_class
       if @type_class == Artist
         artist_builder
+      elsif @type_class <= Studio
+        @game = Game.custom_studio
+        @level = @type_class.new
+        render :edit
       elsif @type_class <= Maze
         @game = Game.custom_maze
         @level = @type_class.new
