@@ -4,15 +4,10 @@ $(document).ready(function() {
 
   var masterIndex = 2; // The number of badges that have been shown this cycle
   var combinedLength = platinum.length + gold.length;
-  var interval = 8000;
+  var interval = 3000;
   var timer = setInterval(setManager, interval);
 
   function setManager () {
-    // If you've shown all the badges, start from the beginning.
-    if (masterIndex > combinedLength) {
-      masterIndex = 0;
-    }
-
     // Check if you've gone through all the platinum donors
     if (masterIndex < platinum.length) {
       gold.hide();
@@ -48,7 +43,11 @@ $(document).ready(function() {
         items.eq(index).fadeIn("slow");
         items.eq(index + 1).fadeIn("slow");
         items.eq(index + 2).fadeIn("slow");
-        masterIndex += 3;
+        if (masterIndex + 3 < combinedLength) {
+          masterIndex += 3;
+        } else {
+          masterIndex = 0;
+        }
       });
     }
   }
