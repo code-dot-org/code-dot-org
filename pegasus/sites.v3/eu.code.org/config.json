@@ -7,7 +7,8 @@
   },
   "about_nav": {
     "About Us": "/about",
-    "Partners": "/about/partners"
+    "Partners": "/about/partners",
+    "News": "/about/news"
   },
   "educate_nav": {
     "Educator Resources": "/educate",

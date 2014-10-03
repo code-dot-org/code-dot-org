@@ -16,18 +16,95 @@ social:
 ---
 
 #top{:style=>"margin-top: 40px;"}
-  #video.col-63.desktop-pad-right
+  = view :video
 
   #start.col-36{:style=>'text-align:center; margin-top: 0'}
     .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
 
 %div{:style=>'clear:both'}
 
-%h1{:style=>'text-align:center;'}
-  Join us during EU Code Week
+  %br
+  %br
+    .greybox
+      #column1{:style=>'float:left; width: 50%'}
+        %a{:href=>"http://studio.code.org/hoc/1"}
+          %img{:src=>"/images/codehoc3.jpg", style: "width:100%; height:100%"}
+      #column2{:style=>'float:left; width: 50%; padding-right: 25px; padding-left: 25px; text-align: left;'}
+        %h1white
+          Write your first computer program
+        %br 
+        %br
+          Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+        %br
+          Ages 6-106 | Modern browsers, smartphones, tablets
+        %br  
+        %button{:style=>"font-size: 18px; font-weight: 500; height: 30px; text-align: center;"}
+          Go
 
-%h3{:style=>'text-align:center;'}
-  Video will go here
+  #columns.desktop-feature{:style=>'clear:both; overflow:hidden'}
+    #column1{:style=>'float:left; width: 33.33%'}
+      %h2 Teachers & Educators
+      #column1content
+        Are you a student?
+        %a{:href=>"/learn"} 
+          Try coding now!
+        %hr.narrow_hr
+        Are you a teacher?
+        %a{:href=>"/educate"} 
+          Use these resources
+        %hr.narrow_hr
+        Are you a parent?
+        %a{:href=>"/adults"} 
+          Support computer science
+        %hr.narrow_hr
+        Host an Hour of Code event.
+        %a{:href=>"/educate/hoc"} 
+          Learn how
+        %hr.narrow_hr
+        Want to spread the word about computer science education?
+        %a{:href=>"/educate/inspire"} 
+          Share these videos
+        %hr.narrow_hr
+        %br
+        %a{:href=>"http://code.org/educate/hoc"}
+          %button{:style=>'width:200px'}
+            Teach an Hour of Code
 
-%h2 From the Community
-= view :index_twitter
+        = view 'find-on-fb', current_site:request.site
+
+    #column2{:style=>'float:left; width: 33.33%; padding-right: 25px; padding-left: 25px'}
+      %h2 Latest Highlights
+      #column2content
+        %a{:href=>"http://techcrunch.com/2014/09/12/salesforce-education/", :target=>'_blank'}
+          Salesforce Pours $6M Into SF Schools, Computer Science Education 
+        %br // Tech Crunch
+        %hr.narrow_hr
+        %a{:href=>"http://www.thecrimson.com/article/2014/9/11/cs50-breaks-enrollment-records/", :target=>'_blank'}
+          Computer Science logs record-breaking enrollment at Harvard 
+        %br // Harvard Crimson
+        %hr.narrow_hr
+        %a{:href=>"http://www.washingtonpost.com/local/education/eleven-montgomery-high-schools-get-new-computer-science-offerings/2014/08/14/3f9f7ec0-1c26-11e4-ab7b-696c295ddfd1_story.html", :target=>'_blank'}
+          Washington DC-area schools get new computer science offerings with Code.org 
+        %br // Washington Post
+        %hr.narrow_hr
+        %a{:href=>"http://youtu.be/DJsUb8Qrcy0", :target=>'_blank'}
+          Chicago Mayor Rahm Emanuel supports computer science 
+        %br // Code.org
+        %hr.narrow_hr
+        %a{:href=>"http://www.geekwire.com/2014/imagine-cup/", :target=>'_blank'}
+          Australian students win Microsoft's Imagine Cup with eye-scanning photo app 
+        %br // GeekWire
+        %hr.narrow_hr
+        %a{:href=>"http://www.businessweek.com/articles/2014-07-11/b-schools-finally-acknowledge-companies-want-mbas-who-can-code", :target=>'_blank'}
+          Business schools to MBA students: Learn to code 
+        %br // Bloomberg Businessweek
+        %hr.narrow_hr
+        %a{:href=>"http://codeorg.tumblr.com/post/91961669383/ap-computer-science", :target=>'_blank'}
+          Seeing our impact: A record year for computer science 
+        %br // Code.org 
+        %br
+        %a{:href=>'/about/news', :style=>'float:right'} See all
+
+    #column3{:style=>'float:left; width: 33.33%;'}
+      %h2 From the Community
+      = view :index_twitter
