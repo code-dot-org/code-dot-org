@@ -10,7 +10,9 @@ get '/l/:id/:url' do |id, url_64|
   pass unless url
 
   DB[:poste_clicks].insert(
+    contact_id:delivery.contact_id,
     delivery_id:delivery.id,
+    message_id:delivery.message_id,
     url_id:url[:id],
     created_at:DateTime.now,
     created_ip:request.ip,
