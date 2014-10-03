@@ -96,6 +96,10 @@ class ApplicationController < ActionController::Base
       response[:level_source_id] = options[:level_source].id
     end
 
+    if options[:share_failure]
+      response[:share_failure] = options[:share_failure]
+    end
+
     # logged in users can save solved levels to a gallery (subject to
     # additional logic in the blockly code because blockly owns
     # which levels are worth saving)

@@ -166,10 +166,12 @@ browsers.each do |browser|
   arguments = '';
 
   arguments += "#{$options.feature}" if $options.feature
+  arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
   arguments += " -t ~@no_ie" if browser['browser'] == 'Internet Explorer'
   arguments += " -t ~@chrome" if browser['browser'] != 'chrome'
   arguments += " -t ~@skip"
+  arguments += " -t ~@webpurify" unless CDO.webpurify_key
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access
   arguments += " -t ~@dashboard_db_access" unless $options.dashboard_db_access
   arguments += " -S" # strict mode, so that we fail on undefined steps

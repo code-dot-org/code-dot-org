@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/code-dot-org/omniauth-clever.git
+  revision: 8c7adde39157d64dc8b05c5eec5b0a7329f8ef95
+  specs:
+    omniauth-clever (1.1.0)
+      omniauth-oauth2 (>= 1.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -91,6 +98,10 @@ GEM
       haml (>= 3.1, < 5.0)
       railties (>= 4.0.1)
     hashie (3.3.1)
+    heroku_rails_deflate (1.0.3)
+      actionpack (>= 3.2.13)
+      activesupport (>= 3.2.13)
+      rack (>= 1.4.5)
     hike (1.2.3)
     honeybadger (1.11.2)
       json
@@ -277,6 +288,7 @@ DEPENDENCIES
   geocoder
   haml
   haml-rails
+  heroku_rails_deflate
   honeybadger
   i18nema
   jbuilder (~> 1.2)
@@ -290,6 +302,7 @@ DEPENDENCIES
   naturally
   newrelic_rpm
   nokogiri
+  omniauth-clever!
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-windowslive (~> 0.0.9)

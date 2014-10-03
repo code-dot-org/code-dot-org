@@ -6,6 +6,6 @@ theme: none
 
 -row = HourOfActivity.first(session: File.basename(request.path_info))
 -if row.nil? || (row.name.nil? && row.email.nil?)
-  %img{src:'/images/hour_of_code_certificate.jpg', width:'100%'}
+  %img{src:'/images/hour_of_code_certificate.jpg', alt:"Certificate for Completion of One Hour of Code", width:'100%'}
 -else
   %img{src:"/api/hour/certificate/#{row.session}.jpg", alt:"Certificate for #{row.name||row.email}", width:"100%"}
