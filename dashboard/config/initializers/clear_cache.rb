@@ -1,2 +1,6 @@
 # Clear the Rails cache on application startup.
-Rails.cache.clear
+begin
+  Rails.cache.clear
+rescue SystemCallError
+# ignored
+end
