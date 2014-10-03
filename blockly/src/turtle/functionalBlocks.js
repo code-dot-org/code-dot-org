@@ -16,14 +16,15 @@ function installPlus(blockly, generator, gensym) {
       this.appendDummyInput()
           .appendTitle('+')
           .setAlign(Blockly.ALIGN_CENTRE);
-      this.appendFunctionalInput('VALUE');
+      this.appendFunctionalInput('VALUE1');
       // this.appendDummyInput()
       //     .appendTitle('')
       //     .setInline(true);
-      this.appendFunctionalInput('VALUE')
+      this.appendFunctionalInput('VALUE2')
           .setInline(true);
 
-      this.setPreviousStatement(true);
+      this.setFunctionalOutput(true, 'Number');
+      // this.setPreviousStatement(true);
       // this.setNextStatement(true);
     }
   };

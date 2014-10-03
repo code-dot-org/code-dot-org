@@ -796,8 +796,14 @@ module.exports = {
     minWorkspaceHeight: 1600,
     answer: answer(5, 5),
     freePlay: true,
-    toolbox: toolbox(5, 5),
-    startBlocks: blockUtils.blockOfType('functional_plus') + blockUtils.blockOfType('functional_math_number'),
+    toolbox: blockUtils.createToolbox(
+      blockUtils.blockOfType('functional_plus') +
+      blockUtils.blockOfType('functional_math_number')
+    ),
+    startBlocks: blockUtils.blockOfType('draw_turn_by_constant') +
+      blockUtils.blockOfType('functional_plus') +
+      blockUtils.blockOfType('functional_math_number') +
+      blockUtils.blockOfType('functional_plus'),
     sliderSpeed: 1.0
   },
   // Level 6: playground.
