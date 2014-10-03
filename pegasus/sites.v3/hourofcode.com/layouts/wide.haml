@@ -2,7 +2,15 @@
 = view :header
 
 .container
-  = body
+
+  - if header['nav']
+    .row
+      .col-sm-3{style: "margin-top:50px; background-color: rgba(0,0,0,0.02)"}
+        = view(header['nav'])
+      .col-sm-9
+        = body
+  - else
+    = body
 
 %br/
 %br/
