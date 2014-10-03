@@ -1474,8 +1474,7 @@ Blockly.Block.prototype.setNextStatement = function(newBoolean, opt_check) {
  *     returned types.  Null or undefined if any type could be returned
  *     (e.g. variable get).
  */
-Blockly.Block.prototype.setOutput = function(newBoolean, opt_check, opt_output_type) {
-  opt_output_type = opt_output_type || Blockly.OUTPUT_VALUE;
+Blockly.Block.prototype.setOutput = function(newBoolean, opt_check) {
   if (this.outputConnection) {
     if (this.outputConnection.targetConnection) {
       throw 'Must disconnect output value before removing connection.';
@@ -1491,8 +1490,33 @@ Blockly.Block.prototype.setOutput = function(newBoolean, opt_check, opt_output_t
       opt_check = null;
     }
     this.outputConnection =
-        new Blockly.Connection(this, opt_output_type);
+        new Blockly.Connection(this, Blockly.OUTPUT_VALUE);
     this.outputConnection.setCheck(opt_check);
+  }
+  if (this.rendered) {
+    this.render();
+    this.bumpNeighbours_();
+  }
+};
+
+Blockly.Block.prototype.setFunctionalOutput = function(newBoolean, opt_check) {
+  if (this.previousConnection) {
+    if (this.previousConnection.targetConnection) {
+      throw 'Must disconnect output value before removing connection.';
+    }
+    this.previousConnection.dispose();
+    this.previousConnection = null;
+  }
+  if (newBoolean) {
+    if (this.previousConnection) {
+      throw 'Remove previous connection prior to adding output connection.';
+    }
+    if (opt_check === undefined) {
+      opt_check = null;
+    }
+    this.previousConnection =
+        new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
+    this.previousConnection.setCheck(opt_check);
   }
   if (this.rendered) {
     this.render();

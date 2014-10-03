@@ -38,7 +38,7 @@ function installMathNumber(blockly, generator, gensym) {
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldTextInput('0',
           Blockly.FieldTextInput.numberValidator), 'NUM');
-      this.setOutput(true, 'Number', Blockly.FUNCTIONAL_OUTPUT);
+      this.setFunctionalOutput(true, 'Number');
     }
   };
 
