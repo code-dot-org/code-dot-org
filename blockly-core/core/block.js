@@ -1474,7 +1474,8 @@ Blockly.Block.prototype.setNextStatement = function(newBoolean, opt_check) {
  *     returned types.  Null or undefined if any type could be returned
  *     (e.g. variable get).
  */
-Blockly.Block.prototype.setOutput = function(newBoolean, opt_check) {
+Blockly.Block.prototype.setOutput = function(newBoolean, opt_check, opt_output_type) {
+  opt_output_type = opt_output_type || Blockly.OUTPUT_VALUE;
   if (this.outputConnection) {
     if (this.outputConnection.targetConnection) {
       throw 'Must disconnect output value before removing connection.';
@@ -1490,7 +1491,7 @@ Blockly.Block.prototype.setOutput = function(newBoolean, opt_check) {
       opt_check = null;
     }
     this.outputConnection =
-        new Blockly.Connection(this, Blockly.OUTPUT_VALUE);
+        new Blockly.Connection(this, opt_output_type);
     this.outputConnection.setCheck(opt_check);
   }
   if (this.rendered) {
@@ -1649,6 +1650,10 @@ Blockly.Block.prototype.appendDummyInput = function(opt_name) {
   return this.appendInput_(Blockly.DUMMY_INPUT, opt_name || '');
 };
 
+Blockly.Block.prototype.appendFunctionalInput = function(name) {
+  return this.appendInput_(Blockly.FUNCTIONAL_INPUT, name);
+};
+
 /**
  * Interpolate a message string, creating titles and inputs.
  * @param {string} msg The message string to parse.  %1, %2, etc. are symbols
@@ -1709,7 +1714,8 @@ Blockly.Block.prototype.interpolateMsg = function(msg, var_args) {
  */
 Blockly.Block.prototype.appendInput_ = function(type, name) {
   var connection = null;
-  if (type == Blockly.INPUT_VALUE || type == Blockly.NEXT_STATEMENT) {
+  if (type === Blockly.INPUT_VALUE || type === Blockly.NEXT_STATEMENT ||
+    type === Blockly.FUNCTIONAL_INPUT) {
     connection = new Blockly.Connection(this, type);
   }
   var input = new Blockly.Input(type, name, this, connection);
