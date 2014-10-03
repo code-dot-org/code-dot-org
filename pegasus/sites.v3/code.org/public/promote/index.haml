@@ -21,7 +21,7 @@ social:
 #promote-page
   %h1 Promote Computer Science
 
-  %div{:id=>'us_content', :style=>'visibility: hidden'}
+  %div{:id=>'us_content'}
     #petition-section.section.clear
       = view :petition
     :javascript
@@ -56,25 +56,3 @@ social:
 :javascript
   var petition;
   var promote;
-  $(document).ready(function() {
-    $('#us_content').hide();
-    $('#us_content').css("visibility", "visible");
-    $.ajax({
-      url: "/v2/client-location",
-      type: "get",
-    }).done(function(data) {
-      if (data.country_code === "US") {
-        $('#us_content').insertBefore($('#us_content-map').prev('#universal_content'));
-        $('#us_content').show();
-      } else {
-        $('#universal_content').insertBefore($('#universal_content').prev('#us_content'));
-        $('#us_content').show();
-      }
-    }).fail(function () { console.log("failed to load state data") });
-
-    if (petitionIncluded)
-      petition = new Petition();
-
-    if (promoteIncluded)
-      promote = new Promote();
-  });
