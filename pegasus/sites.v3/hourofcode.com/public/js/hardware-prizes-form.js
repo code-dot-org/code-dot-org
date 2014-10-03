@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
-  $('#hoc-prizes-form select').selectize();
+  $('#hoc-prizes-form select').selectize({
+    plugins: ['fast_click']
+  });
 
   $('#hoc-prizes-form').ajaxForm();
   $("#hoc-prizes-form").submit(function( event ) {

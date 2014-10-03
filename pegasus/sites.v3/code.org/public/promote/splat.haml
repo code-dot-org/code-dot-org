@@ -26,6 +26,10 @@ social:
       %h2{:style=>"margin-top: 0px"} Choose a State
       = view :interactive_map
 
+    #stats-section.section.clear
+      %h2 What’s wrong with this picture? Share these stats.
+      = view :stats_carousel
+
     #petition-section.section.clear
       = view :petition
     :javascript
@@ -34,10 +38,6 @@ social:
     #tools-section.section.clear
       %h2 Tools to help you advocate locally
       = view :promote_tools, state:nil
-
-    #stats-section.section.clear
-      %h2 What’s wrong with this picture? Share these stats.
-      = view :stats_carousel
 
   %div{:id=>'universal_content'}
     #youtube-section.section.clear

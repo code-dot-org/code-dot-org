@@ -12,7 +12,7 @@ class CreateLevelSources < ActiveRecord::Migration
     add_column :activities, :level_source_id, :int
 
     Activity.where('level_source_id is null').includes(:level).find_each do |activity|
-      activity.update_attributes!(level_source: LevelSource.lookup(activity.level, activity.data))
+      activity.update_attributes!(level_source: LevelSource.find_identical_or_create(activity.level, activity.data))
     end
 
     remove_column :activities, :data

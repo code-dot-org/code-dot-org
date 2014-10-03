@@ -63,6 +63,7 @@ body{
   margin-bottom: 30px;
   border-radius: 15px;
   background-color: white;
+  clear: both;
   /*page-break-after:always;*/
 }
 
@@ -159,6 +160,19 @@ th a:link, th a:visited, th a:hover, th a:active {
     font-weight: bold;
 }
 
+.video { float: right !important; }
+
+.video div {
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.container_nonresponsive {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 @page  
 { 
     size: auto;    
@@ -172,5 +186,5 @@ th a:link, th a:visited, th a:hover, th a:active {
         zoom: 75%;
     }
 	img{ max-width: 100%; }
-    .standards{ display: none !important; }
+    .standards, .video { display: none !important; }
 }

@@ -4,9 +4,9 @@ layout: wide
 ---
 # Resources
 
-- [Handouts to spread the word](#handouts)
-<br/>
 - [How-to guide for teachers](/resources/how-to)
+<br/>
+- [Handouts to spread the word](#handouts)
 <br/>
 - [Videos](#videos)
 <br/>

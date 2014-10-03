@@ -2,21 +2,16 @@
   "base":"i18n.code.org",
   "google_analytics_id":"UA-37745279-1",
   "hoc_country_id":"Italy",
-  "us_site": "Code.org (Sito per gli Stati Uniti)",
+  "us_site": "Code.org (Siti per gli Stati Uniti)",
   "nav_links": {
-    "Resources": "/about/resources",
-    "About Us": "/about",
-    "Partners": "/about/partners"
+    "Il progetto": "/about/resources",
+    "Partner": "http://programmailfuturo.it/partner"
   },
   "header_links": {
     "HOME": "/",
-    "TUTORIALS": "/learn",
-    "RESOURCES": "/about/resources"
+    "IL PROGETTO": "/about/resources"
   },
   "footer_links": {
-    "Tutorials": "/learn",
-    "About": "/about",
-    "Resources": "/about/resources",
-    "Partners": "/about/partners"
+    "Partner": "http://programmailfuturo.it/partner"
   }
 }

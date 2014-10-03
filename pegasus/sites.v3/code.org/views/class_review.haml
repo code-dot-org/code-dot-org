@@ -11,7 +11,9 @@
   $(document).ready(function() {
     var review = '';
 
-    $('#review-school-form select').selectize();
+    $('#review-school-form select').selectize({
+      plugins: ['fast_click']
+    });
 
     triggerReviewMode();
 
