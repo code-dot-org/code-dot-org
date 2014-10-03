@@ -63,11 +63,8 @@
       %ul(style="list-style-type:none;margin:0;")
         %li.start 16 = character
         %li.path 1 = waypoint flag
-  - default_map = Array.new(8){Array.new(8){0}}
-  - default_map[0][0] = 16 if @level.is_a? Studio # studio must have at least 1 actor
-  - data = @level.maze_data.try(:to_json) || default_map.to_json
   :javascript
-    var data = eval(#{data})
+    var data = eval(#{@level.maze_data.try(:to_json)})
     function mazeRenderer(instance, td, row, col, prop, value, cellProperties) {
       var dataValues = ['border','path','start','end','obstacle'];
       if(value[0] == '+' || value[0] == '-') {
