@@ -155,7 +155,6 @@ class Script < ActiveRecord::Base
                     hidden: script_data[:hidden].nil? ? true : script_data[:hidden]},
                    stages.map{|stage| stage[:levels]}.flatten)
       end
-      Rails.cache.clear
       [(default_scripts + custom_scripts), custom_i18n]
     end
   end
@@ -288,6 +287,8 @@ class Script < ActiveRecord::Base
     Rake::Task.clear
     Dashboard::Application.load_tasks
     Rake::FileTask['config/scripts/.seeded'].invoke
+    # Ensure cached script data is cleared when server is still running
+    Rails.cache.clear
   end
 
   def self.update_i18n(custom_i18n)
