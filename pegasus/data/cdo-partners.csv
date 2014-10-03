@@ -163,8 +163,8 @@ Pearson,http://www.pearson.com,promotional,TRUE,FALSE,TRUE
 SAS,http://www.sas.com/,promotional,TRUE,FALSE,TRUE
 Scratch,http://scratch.mit.edu/,promotional,TRUE,FALSE,TRUE
 Skype,http://www.skype.com,promotional,TRUE,FALSE,TRUE
-xBox,http://www.xbox.com,promotional,TRUE,FALSE,TRUE
 Valve,http://www.valvesoftware.com/,promotional,TRUE,FALSE,TRUE
+xBox,http://www.xbox.com,promotional,TRUE,FALSE,TRUE
 YouTube,http://www.youtube.com,promotional,TRUE,FALSE,TRUE
 Zulily,http://www.zulily.com/,promotional,TRUE,FALSE,TRUE
 Zynga,http://zynga.com/,promotional,TRUE,FALSE,TRUE
@@ -265,3 +265,4 @@ Facebook,http://www.facebook.com/,eu,TRUE,FALSE,FALSE
 Liberty Global,http://www.libertyglobal.com/,eu,TRUE,FALSE,FALSE
 Oracle,http://www.oracle.com/,eu,TRUE,FALSE,FALSE
 SAP,http://www.sap.com/,eu,TRUE,FALSE,FALSE
+Rovio,http://www.rovio.com,eu,TRUE,FALSE,FALSE
