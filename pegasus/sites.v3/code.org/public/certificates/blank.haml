@@ -1,0 +1,54 @@
+---
+title: "Certificate for Completion of One Hour of Code"
+theme: responsive
+social:
+  "twitter:card": photo
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://<%= request.host_with_port %>/certificates/blank %>"
+  "twitter:image:src" : "http://<%= request.host_with_port %>/images/hour_of_code_certificate-640.jpg"
+  "twitter:image:width" : "640"
+  "twitter:image:height" : "451"
+  "twitter:title": "I just finished the Hour of Code"
+  "twitter:description": "Join 25 million students to learn an hour of computer science. It's the largest learning event in world history."
+  "og:title": "I just finished the Hour of Code"
+  "og:description": "Join 25 million students to learn an hour of computer science. It's the largest learning event in world history."
+  "og:image" : "http://<%= request.host_with_port %>/images/hour_of_code_certificate-640.jpg"
+  "og:url" : "http://<%= request.host_with_port %>/certificates/blank %>"
+  "og:image:width": "640"
+  "og:image:height": "451"
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+#hoc-certificate
+  %a{:href=>"/printcertificate"}
+    %img{:src=>"/images/hour_of_code_certificate.jpg", :alt=>"Certificate for Completion of One Hour of Code"}
+#index
+  #gap.feature-codeorg
+
+  #top
+    #video.col-63.desktop-pad-right
+      = view :index_video
+
+    #start.col-36
+      #blurb.col-mobile-56.mobile-pad-right
+        %br.desktop-feature
+
+        .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
+          -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+          -if request.locale == 'en-US'
+            %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
+              =count_string
+          -else
+            =count_string
+          %h4.desktop-feature=I18n.t(:anybody_can_learn)
+        %br
+
+      #getstarted.col-mobile-44
+        #largegap.mobile-show-medium{:style=>"height:50px"}
+        %a{:href=>'/learn'}
+          %button{:style=>"font-size: 19px; font-weight: 500; height: 50px;"}
+            =I18n.t(:get_started)
+
+    #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
