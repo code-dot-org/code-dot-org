@@ -50,11 +50,15 @@ Blockly.BlockSvg = function(block) {
 };
 
 Blockly.BlockSvg.prototype.initChildren = function () {
-  this.svgPathDark_ = Blockly.createSvgElement('path',
-      {'class': 'blocklyPathDark', 'transform': 'translate(1, 1)'},
-      this.svgGroup_);
-  this.svgPath_ = Blockly.createSvgElement('path', {'class': 'blocklyPath'},
-      this.svgGroup_);
+  this.svgPathDark_ = Blockly.createSvgElement('path', {
+    'class': 'blocklyPathDark',
+    'transform': 'translate(1, 1)',
+    'fill-rule': 'evenodd'
+  }, this.svgGroup_);
+  this.svgPath_ = Blockly.createSvgElement('path', {
+    'class': 'blocklyPath',
+    'fill-rule': 'evenodd'
+  }, this.svgGroup_);
   var pattern = this.block_.getFillPattern();
   if (pattern) {
     this.svgPathFill_ = Blockly.createSvgElement('path', {'class': 'blocklyPath'},
@@ -761,7 +765,10 @@ function thickenInlineRows (inputRows) {
 function inputRenderSize (input) {
   // Compute minimum input size.
   var renderHeight = BS.MIN_BLOCK_Y;
-  var renderWidth = BS.TAB_WIDTH + BS.SEP_SPACE_X;
+  var renderWidth = BS.TAB_WIDTH + BS.SEP_SPACE_X
+  if (input.type === Blockly.FUNCTIONAL_INPUT) {
+    renderWidth = BS.NOTCH_WIDTH + BS.SEP_SPACE_X
+  }
 
   // Expand input size if there is a connection.
   if (input.connection && input.connection.targetConnection) {
@@ -1132,10 +1139,9 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
     // TODO: Align inline title rows (left/right/centre).
     renderInfo.curX += this.renderTitles_(input.titleRow, titleX, titleY);
 
-    if (input.type != Blockly.DUMMY_INPUT) {
-      renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
-    }
+
     if (input.type === Blockly.INPUT_VALUE) {
+      renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
       renderInfo.inline.push('M', (renderInfo.curX - BS.SEP_SPACE_X) +
                        ',' + (renderInfo.curY + BS.INLINE_PADDING_Y));
       renderInfo.inline.push('h', BS.TAB_WIDTH - input.renderWidth);
@@ -1176,33 +1182,38 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
         input.connection.tighten_();
       }
     } else if (input.type === Blockly.FUNCTIONAL_INPUT) {
-      // todo - RTL
-      var inputTopRight = {
-        x: (renderInfo.curX - BS.SEP_SPACE_X),
-        y: (renderInfo.curY + BS.INLINE_PADDING_Y)
-      };
-
+      // todo (brent) - RTL
       var inputTopLeft = {
-        x: inputTopRight.x - input.renderWidth,
-        y: inputTopRight.y
+        x: renderInfo.curX,
+        y: renderInfo.curY + BS.INLINE_PADDING_Y
       };
 
-      renderInfo.inline.push('M', inputTopRight.x + ',' + inputTopRight.y);
-      renderInfo.inline.push('h', -input.renderWidth);
+      var notchStart = BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH;
+
+      renderInfo.inline.push('M', inputTopLeft.x + ',' + inputTopLeft.y);
+      renderInfo.inline.push('h', notchStart);
+      renderInfo.inline.push(BS.NOTCH_PATH_LEFT);
+      renderInfo.inline.push('H', inputTopLeft.x + input.renderWidth);
       renderInfo.inline.push('v', input.renderHeight);
-      renderInfo.inline.push('h', input.renderWidth);
+      renderInfo.inline.push('H', inputTopLeft.x);
       renderInfo.inline.push('z');
 
+
+      // todo (brent)- highlighting
+
+      renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
+
       // Create inline input connection.
-
-
-      connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_PATH_WIDTH;
-      connectionY = connectionsXY.y + inputTopRight.y;
+      connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_WIDTH;
+      connectionY = connectionsXY.y + inputTopLeft.y;
 
       input.connection.moveTo(connectionX, connectionY);
       if (input.connection.targetConnection) {
         input.connection.tighten_();
       }
+
+    } else if (input.type != Blockly.DUMMY_INPUT) {
+      renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
     }
   }
 
