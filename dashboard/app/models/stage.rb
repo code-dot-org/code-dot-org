@@ -11,18 +11,20 @@ class Stage < ActiveRecord::Base
     position.to_s
   end
 
-  def cached_unplugged?
-    script_levels = Script.get_from_cache(self.script.name).script_levels.select{|sl| sl.stage_id == self.id}
-    return false unless script_levels.first
-    return script_levels.first.level.unplugged?
+  def cache(name)
+    Rails.cache.fetch("#{cache_key}/#{name}") do
+      yield
+    end
   end
 
   def unplugged?
-    if script.should_be_cached?
-      cached_unplugged?
-    else
-      return false unless script_levels.first
-      script_levels.first.level.unplugged?
+    cache(:stage_unplugged) do
+      script_levels = Script.get_from_cache(self.script.name).script_levels.select{|sl| sl.stage_id == self.id}
+      if script_levels.first
+        script_levels.first.level.unplugged?
+      else
+        false
+      end
     end
   end
 end

@@ -1,4 +1,6 @@
 - @script ||= Script.twenty_hour_script
+- script = @script
+- user = current_user
 
 -# Temporarily comment out banner about locale not being supported.
 -# if !support_primary_locale?
@@ -9,116 +11,117 @@
 - elsif browser.cdo_partially_supported?
   = render partial: 'layouts/partially_supported_browser'
 
-.header-wrapper.hide_on_mobile{class: ("feedback-bug-links" if @script_level && @script.show_report_bug_link?)}
-  - if @script_level && @script.show_report_bug_link?
-    #betainfo
-      - if @script.feedback_url
-        = link_to t('landing.feedback'), @script.feedback_url
-        |
-      = link_to t('landing.report_bug'), @script_level.report_bug_url(request), target: '_blank'
+- cache([locale, @full_width, @script_level || @game, user || session[:progress]]) do
+  .header-wrapper.hide_on_mobile{class: ("feedback-bug-links" if @script_level && @script.show_report_bug_link?)}
+    - if @script_level && @script.show_report_bug_link?
+      #betainfo
+        - if @script.feedback_url
+          = link_to t('landing.feedback'), @script.feedback_url
+          |
+        = link_to t('landing.report_bug'), @script_level.report_bug_url, target: '_blank'
 
-  .navbar-static-top.header{:class => ('hide_on_mobile' if true)}
-    .container{style:(@full_width ? "width: 880px;" : "")}
-      .navbar-header
-        .row.header_row
-          .header_logo
-            = link_to(image_tag('codeorg-studio-logo.png'), '/', style: "background-color: transparent;")
+    .navbar-static-top.header{:class => ('hide_on_mobile' if true)}
+      .container{style:(@full_width ? "width: 880px;" : "")}
+        .navbar-header
+          .row.header_row
+            .header_logo
+              = link_to(image_tag('codeorg-studio-logo.png'), '/', style: "background-color: transparent;")
 
-          .header_middle
-            - if @script_level
-              = render partial: 'shared/header_progress'
-            - elsif @edit_blocks
-              .header_level{style:'font-size: 250%; line-height: 125%;'} Editing #{@edit_blocks.humanize}
-          - if params[:controller] !~ /^sessions/ and not Rails.configuration.minimal_mode
-            .header_user
-              = render partial: 'shared/user_header'
+            .header_middle
+              - if @script_level
+                = render partial: 'shared/header_progress'
+              - elsif @edit_blocks
+                .header_level{style:'font-size: 250%; line-height: 125%;'} Editing #{@edit_blocks.humanize}
+            - if params[:controller] !~ /^sessions/ and not Rails.configuration.minimal_mode
+              .header_user
+                = render partial: 'shared/user_header'
 
-.transparent_backdrop{style: 'display: none;'}
-- if @script_level
-  .header_popup{id: "headerPopup"}
-    .header_popup_header
-      %span= t('nav.popup.progress')
-      - if current_user
-        .header_text{style: "float: right;"}= t('nav.popup.lines', lines: current_user.total_lines)
-    .header_popup_body{id: "headerPopupBody"}
-      .loading
-    .header_popup_footer
-      %div{id: "popupClose", onclick: "togglePopup();"}
-        = t('nav.popup.close')
+  .transparent_backdrop{style: 'display: none;'}
+  - if @script_level
+    .header_popup{id: "headerPopup"}
+      .header_popup_header
+        %span= t('nav.popup.progress')
+        - if current_user
+          .header_text{style: "float: right;"}= t('nav.popup.lines', lines: current_user.total_lines)
+      .header_popup_body{id: "headerPopupBody"}
+        .loading
+      .header_popup_footer
+        %div{id: "popupClose", onclick: "togglePopup();"}
+          = t('nav.popup.close')
 
-
-:javascript
-  handleUserMenuClick = function () {
-    $('.user_options').toggle();
-    if ($(".user_options").css('display') == 'none') {
-      $(".transparent_backdrop").off('click', handleUserMenuClick);
-      $(".transparent_backdrop").off('touchend', handleUserMenuClick);
-      $(".transparent_backdrop").toggle();
+- cache(@script_level) do
+  :javascript
+    $('#report_bug').attr('href',$('#report_bug').attr('href')+encodeURIComponent('\n#{request.url}\n#{request.user_agent}\n'));
+    handleUserMenuClick = function () {
+      $('.user_options').toggle();
+      if ($(".user_options").css('display') == 'none') {
+        $(".transparent_backdrop").off('click', handleUserMenuClick);
+        $(".transparent_backdrop").off('touchend', handleUserMenuClick);
+        $(".transparent_backdrop").toggle();
+      }
+      else {
+        $(".transparent_backdrop").on('click', handleUserMenuClick);
+        $(".transparent_backdrop").on('touchend', handleUserMenuClick);
+        $(".transparent_backdrop").toggle();
+      }
+      return false;
     }
-    else {
-      $(".transparent_backdrop").on('click', handleUserMenuClick);
-      $(".transparent_backdrop").on('touchend', handleUserMenuClick);
-      $(".transparent_backdrop").toggle();
+    function isShowingPopup()
+    {
+      return $("#headerPopup").css('display') != 'none';
     }
-    return false;
-  }
-  function isShowingPopup()
-  {
-    return $("#headerPopup").css('display') != 'none';
-  }
-  togglePopup = function () {
-    $("#headerPopup").toggle();
-    if (!isShowingPopup()) {
-      $(".header_popup_link_glyph").html("&#x25BC;");
-      $(".header_popup_link_text").html("#{t(:more)}");
-      $(".transparent_backdrop").off('click', handlePopupClick);
-      $(".transparent_backdrop").off('touchend', handlePopupClick);
-      $(".transparent_backdrop").toggle();
-    }
-    else {
-      $(".header_popup_link_glyph").html("&#x25B2;");
-      $(".header_popup_link_text").html("#{t(:less)}");
-      $(".transparent_backdrop").on('click', handlePopupClick);
-      $(".transparent_backdrop").on('touchend', handlePopupClick);
-      $(".transparent_backdrop").toggle();
-    }
-  }
-  var loadedPopup = false;
-  handlePopupClick = function (trophiesClicked) {
-    if (!loadedPopup) {
-      loadedPopup = true;
-      togglePopup();
-      var script_level_id = #{@script_level.try(:level_id).to_json};
-      $.ajax({url:'#{header_stats_path()}', data: { script_id: #{@script.id}, script_level_id: script_level_id }, success:function(result) {
-          $("#headerPopupBody").html(result);
-          if (trophiesClicked === true) {
-            jumpToTrophies();
-          }
-        }
-      });
-    }
-    else {
-      togglePopup();
-      if (isShowingPopup() && trophiesClicked === true) {
-        jumpToTrophies();
+    togglePopup = function () {
+      $("#headerPopup").toggle();
+      if (!isShowingPopup()) {
+        $(".header_popup_link_glyph").html("&#x25BC;");
+        $(".header_popup_link_text").html(t_more);
+        $(".transparent_backdrop").off('click', handlePopupClick);
+        $(".transparent_backdrop").off('touchend', handlePopupClick);
+        $(".transparent_backdrop").toggle();
+      }
+      else {
+        $(".header_popup_link_glyph").html("&#x25B2;");
+        $(".header_popup_link_text").html(t_less);
+        $(".transparent_backdrop").on('click', handlePopupClick);
+        $(".transparent_backdrop").on('touchend', handlePopupClick);
+        $(".transparent_backdrop").toggle();
       }
     }
-    return false;
-  }
-  function jumpToTrophies()
-  {
-    var top = $("#trophies").offset().top;
-    window.scrollTo(0, top);
-  }
-  switchLocale = function() {
-    $('#localeForm').submit();
-  }
-  $('.level_free_play').qtip({
-    content: {
-      attr: 'title'
-    },
-    position: {
-      my: 'top center',
-      at: 'bottom center'
+    var loadedPopup = false;
+    handlePopupClick = function (trophiesClicked) {
+      if (!loadedPopup) {
+        loadedPopup = true;
+        togglePopup();
+        $.ajax({url:'#{header_stats_path}', data: { script_id: #{script.id}}, success:function(result) {
+            $("#headerPopupBody").html(result);
+            if (trophiesClicked === true) {
+              jumpToTrophies();
+            }
+          }
+        });
+      }
+      else {
+        togglePopup();
+        if (isShowingPopup() && trophiesClicked === true) {
+          jumpToTrophies();
+        }
+      }
+      return false;
     }
-  });
+    function jumpToTrophies()
+    {
+      var top = $("#trophies").offset().top;
+      window.scrollTo(0, top);
+    }
+    switchLocale = function() {
+      $('#localeForm').submit();
+    }
+    $('.level_free_play').qtip({
+      content: {
+        attr: 'title'
+      },
+      position: {
+        my: 'top center',
+        at: 'bottom center'
+      }
+    });

@@ -70,12 +70,14 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def level_display_text
-    if level.unplugged?
-      I18n.t('user_stats.classroom_activity')
-    elsif stage && stage.unplugged?
-      stage_or_game_position - 1
-    else
-      stage_or_game_position
+    cache(:script_level_dispay_text) do
+      if unplugged?
+        I18n.t('user_stats.classroom_activity')
+      elsif stage && stage.unplugged?
+        stage_or_game_position - 1
+      else
+        stage_or_game_position
+      end
     end
   end
 
@@ -83,8 +85,16 @@ class ScriptLevel < ActiveRecord::Base
     stage ? stage : level.game
   end
 
+  def unplugged?
+    cache(:script_level_unplugged) do
+      self.level.unplugged?
+    end
+  end
+
   def stage_or_game_position
-    self.stage ? self.position : self.game_chapter
+    cache(:stage_or_game_position) do
+      self.stage ? self.position : self.game_chapter
+    end
   end
 
   def stage_or_game_total
