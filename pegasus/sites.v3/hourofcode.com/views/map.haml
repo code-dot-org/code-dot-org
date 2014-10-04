@@ -67,13 +67,13 @@
         }
       });
 
-      //markerClusterer = new MarkerClusterer(gmap, markers, {
-      //  maxZoom: 6,
-      //  gridSize: 50,
-      //  minimumClusterSize: 1,
-      //  averageCenter: true,
-      //  zoomOnClick: true
-      //});
+      markerClusterer = new MarkerClusterer(gmap, markers, {
+        maxZoom: 6,
+        gridSize: 50,
+        minimumClusterSize: 1,
+        averageCenter: true,
+        zoomOnClick: true
+      });
 
     }).fail(displayQueryError);
   }
