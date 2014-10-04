@@ -14,6 +14,15 @@ Dashboard::Application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+  if CDO.redis_store
+    params = {}
+    # Ensure caching is turned on if the redis store is configured
+    params[:expires_in] = CDO.redis_expires_in.minutes if CDO.redis_expires_in
+    config.cache_store = :redis_store, CDO.redis_store, params
+  else
+    config.cache_store = :memory_store
+  end
+
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
