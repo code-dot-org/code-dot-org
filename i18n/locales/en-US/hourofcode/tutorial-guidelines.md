@@ -1,253 +1,241 @@
 * * *
 
-## crwdns19328:0crwdne19328:0
+crwdns19712:0crwdne19712:0
 
-# crwdns8059:0crwdne8059:0
+* * *
 
-crwdns9041:0crwdne9041:0.
+# crwdns19713:0crwdne19713:0
 
-crwdns8061:0crwdne8061:0 crwdns8062:0crwdne8062:0
+crwdns19714:0crwdne19714:0.
+
+crwdns19715:0crwdne19715:0 crwdns19716:0crwdne19716:0
 
 <a id="top"></a>
 
-## crwdns19329:0crwdne19329:0
+## crwdns19717:0crwdne19717:0
 
-*   [crwdns8064:0crwdne8064:0][1]
-*   [crwdns8065:0crwdne8065:0][2]
-*   [crwdns8066:0crwdne8066:0][3]
-*   [crwdns8067:0crwdne8067:0][4]
-*   [crwdns8068:0crwdne8068:0][5]
-*   [crwdns8069:0crwdne8069:0][6]
-*   [crwdns8070:0crwdne8070:0][7]
-*   [crwdns8071:0crwdne8071:0][8]
-
- [1]: #inclusion
- [2]: #guidelines
- [3]: #submit
- [4]: #design
- [5]: #tm
- [6]: #pixel
- [7]: #promote
- [8]: #disabilities
+  * [crwdns19718:0crwdne19718:0](#inclusion)
+  * [crwdns19719:0crwdne19719:0](#guidelines)
+  * [crwdns19720:0crwdne19720:0](#submit)
+  * [crwdns19721:0crwdne19721:0](#design)
+  * [crwdns19722:0crwdne19722:0](#tm)
+  * [crwdns19723:0crwdne19723:0](#pixel)
+  * [crwdns19724:0crwdne19724:0](#promote)
+  * [crwdns19725:0crwdne19725:0](#disabilities)
 
 <a id="inclusion"></a>
 
-## crwdns19330:0crwdne19330:0
+## crwdns19726:0crwdne19726:0
 
-crwdns8073:0crwdne8073:0
+crwdns19727:0crwdne19727:0
 
-**crwdns8074:0crwdne8074:0**
+**crwdns19728:0crwdne19728:0**
 
-*   crwdns8075:0crwdne8075:0
-*   crwdns8076:0crwdne8076:0
-*   crwdns8077:0crwdne8077:0
-*   crwdns8078:0crwdne8078:0
-*   crwdns19331:0crwdne19331:0
-*   crwdns19332:0crwdne19332:0
-*   crwdns19333:0crwdne19333:0
-*   crwdns19334:0crwdne19334:0
+  * crwdns19729:0crwdne19729:0
+  * crwdns19730:0crwdne19730:0
+  * crwdns19731:0crwdne19731:0
+  * crwdns19732:0crwdne19732:0
+  * crwdns19733:0crwdne19733:0
+  * crwdns19734:0crwdne19734:0
+  * crwdns19735:0crwdne19735:0
+  * crwdns19736:0crwdne19736:0
 
-**crwdns8086:0crwdne8086:0**
+**crwdns19737:0crwdne19737:0**
 
-*   crwdns8087:0crwdne8087:0
-*   crwdns8088:0crwdne8088:0
-*   crwdns8089:0crwdne8089:0
-*   crwdns8090:0crwdne8090:0
-*   crwdns8091:0crwdne8091:0
-*   crwdns8092:0crwdne8092:0
+  * crwdns19738:0crwdne19738:0
+  * crwdns19739:0crwdne19739:0
+  * crwdns19740:0crwdne19740:0
+  * crwdns19741:0crwdne19741:0
+  * crwdns19742:0crwdne19742:0
+  * crwdns19743:0crwdne19743:0
 
-**crwdns8093:0crwdne8093:0**
+**crwdns19744:0crwdne19744:0**
 
-*   crwdns8094:0crwdne8094:0
-*   crwdns8095:0crwdne8095:0
-*   crwdns8096:0crwdne8096:0 
-*   crwdns8097:0crwdne8097:0
-*   crwdns8098:0crwdne8098:0
-*   crwdns8099:0crwdne8099:0
-*   crwdns8100:0crwdne8100:0
+  * crwdns19745:0crwdne19745:0
+  * crwdns19746:0crwdne19746:0
+  * crwdns19747:0crwdne19747:0 
+  * crwdns19748:0crwdne19748:0
+  * crwdns19749:0crwdne19749:0
+  * crwdns19750:0crwdne19750:0
+  * crwdns19751:0crwdne19751:0
 
-crwdns8101:0crwdne8101:0
+crwdns19752:0crwdne19752:0
 
-crwdns8102:0crwdne8102:0
+crwdns19753:0crwdne19753:0
 
-crwdns8103:0crwdne8103:0
+crwdns19754:0crwdne19754:0
 
-[**crwdns8104:0crwdne8104:0**][9]
-
- [9]: #top
+[**crwdns19755:0crwdne19755:0**](#top)
 
 <a id="guidelines"></a>
 
-## crwdns19335:0crwdne19335:0
+## crwdns19756:0crwdne19756:0
 
-*   crwdns8106:0crwdne8106:0
-*   crwdns8107:0crwdne8107:0
-*   **crwdns8108:0crwdne8108:0** 
-    *   crwdns8109:0crwdne8109:0
-    *   crwdns8110:0crwdne8110:0
-    *   crwdns8111:0crwdne8111:0
-*   **crwdns8112:0crwdne8112:0** 
-    *   crwdns8113:0crwdne8113:0). 
-    *   crwdns8114:0crwdne8114:0
-*   crwdns8115:0crwdne8115:0 crwdns8116:0crwdne8116:0 crwdns8117:0crwdne8117:0
+  * crwdns19757:0crwdne19757:0
+  * crwdns19758:0crwdne19758:0
+  * **crwdns19759:0crwdne19759:0** 
+      * crwdns19760:0crwdne19760:0
+      * crwdns19761:0crwdne19761:0
+      * crwdns19762:0crwdne19762:0
+  * **crwdns19763:0crwdne19763:0** 
+      * crwdns19764:0crwdne19764:0). 
+      * crwdns19765:0crwdne19765:0
+  * crwdns19766:0crwdne19766:0 crwdns19767:0crwdne19767:0 crwdns19768:0crwdne19768:0
 
-[**crwdns8118:0crwdne8118:0**][9]
+[**crwdns19769:0crwdne19769:0**](#top)
 
 <a id="submit"></a>
 
-## crwdns19336:0crwdne19336:0
+## crwdns19770:0crwdne19770:0
 
-crwdns8120:0crwdne8120:0
+crwdns19771:0crwdne19771:0
 
-**crwdns8121:0crwdne8121:0**
+**crwdns19772:0crwdne19772:0**
 
-*   crwdns8122:0crwdne8122:0
-*   crwdns8123:0crwdne8123:0 crwdns8124:0crwdne8124:0 crwdns8125:0crwdne8125:0
-*   crwdns8126:0crwdne8126:0
-*   crwdns8127:0crwdne8127:0
-*   crwdns8128:0crwdne8128:0
-*   crwdns8129:0crwdne8129:0
-*   crwdns8130:0crwdne8130:0 
-    *   crwdns8131:0crwdne8131:0
-    *   crwdns8132:0crwdne8132:0
-    *   crwdns8133:0crwdne8133:0 crwdns8134:0crwdne8134:0 crwdns8135:0crwdne8135:0
-*   crwdns8136:0crwdne8136:0 
-    *   **crwdns8137:0crwdne8137:0** 
-        *   crwdns8138:0crwdne8138:0
-        *   crwdns8139:0crwdne8139:0
-        *   crwdns8140:0crwdne8140:0
-        *   crwdns8141:0crwdne8141:0
-    *   crwdns8142:0crwdne8142:0
-    *   crwdns8143:0crwdne8143:0
-*   crwdns8144:0crwdne8144:0 
-    *   crwdns8145:0crwdne8145:0
-    *   crwdns8146:0crwdne8146:0
-    *   ***crwdns8147:0crwdne8147:0*** 
-*   crwdns8148:0crwdne8148:0
-*   crwdns8149:0crwdne8149:0 [crwdns8150:0crwdne8150:0][10] crwdns8151:0crwdne8151:0 
-    *   crwdns8152:0crwdne8152:0
-    *   crwdns8153:0crwdne8153:0
-    *   crwdns8154:0crwdne8154:0
-    *   crwdns8155:0crwdne8155:0
-*   crwdns8156:0crwdne8156:0 crwdns8157:0crwdne8157:0 crwdns8158:0crwdne8158:0
-*   crwdns8159:0crwdne8159:0 
-    *   crwdns8160:0crwdne8160:0 crwdns8161:0crwdne8161:0 crwdns8162:0crwdne8162:0 crwdns8163:0crwdne8163:0 
-    *   crwdns8164:0crwdne8164:0 [crwdns8165:0crwdne8165:0][11] crwdns8166:0crwdne8166:0 
-        *   crwdns8167:0crwdne8167:0
-        *   crwdns8168:0crwdne8168:0
-        *   crwdns8169:0crwdne8169:0
-        *   crwdns8170:0crwdne8170:0 
-*   ***crwdns8171:0crwdne8171:0*** crwdns8172:0crwdne8172:0 
-    *   crwdns8173:0crwdne8173:0 
-        *   crwdns8174:0crwdne8174:0
-        *   crwdns8175:0crwdne8175:0
-        *   crwdns8176:0crwdne8176:0
-        *   crwdns8177:0crwdne8177:0
-        *   crwdns8178:0crwdne8178:0
-    *   crwdns8179:0crwdne8179:0 
-        *   crwdns8180:0crwdne8180:0
+  * crwdns19773:0crwdne19773:0
+  * crwdns19774:0crwdne19774:0 crwdns19775:0crwdne19775:0 crwdns19776:0crwdne19776:0
+  * crwdns19777:0crwdne19777:0
+  * crwdns19778:0crwdne19778:0
+  * crwdns19779:0crwdne19779:0
+  * crwdns19780:0crwdne19780:0
+  * crwdns19781:0crwdne19781:0 
+      * crwdns19782:0crwdne19782:0
+      * crwdns19783:0crwdne19783:0
+      * crwdns19784:0crwdne19784:0 crwdns19785:0crwdne19785:0 crwdns19786:0crwdne19786:0
+  * crwdns19787:0crwdne19787:0 
+      * **crwdns19788:0crwdne19788:0** 
+          * crwdns19789:0crwdne19789:0
+          * crwdns19790:0crwdne19790:0
+          * crwdns19791:0crwdne19791:0
+          * crwdns19792:0crwdne19792:0
+      * crwdns19793:0crwdne19793:0
+      * crwdns19794:0crwdne19794:0
+  * crwdns19795:0crwdne19795:0 
+      * crwdns19796:0crwdne19796:0
+      * crwdns19797:0crwdne19797:0
+      * ***crwdns19798:0crwdne19798:0*** 
+  * crwdns19799:0crwdne19799:0
+  * crwdns19800:0crwdne19800:0 [crwdns19801:0crwdne19801:0](http://csta.acm.org/Curriculum/sub/K12Standards.html) crwdns19802:0crwdne19802:0 
+      * crwdns19803:0crwdne19803:0
+      * crwdns19804:0crwdne19804:0
+      * crwdns19805:0crwdne19805:0
+      * crwdns19806:0crwdne19806:0
+  * crwdns19807:0crwdne19807:0 crwdns19808:0crwdne19808:0 crwdns19809:0crwdne19809:0
+  * crwdns19810:0crwdne19810:0 
+      * crwdns19811:0crwdne19811:0 crwdns19812:0crwdne19812:0 crwdns19813:0crwdne19813:0 crwdns19814:0crwdne19814:0 
+      * crwdns19815:0crwdne19815:0 [crwdns19816:0crwdne19816:0](http://code.org/api/hour/finish) crwdns19817:0crwdne19817:0 
+          * crwdns19818:0crwdne19818:0
+          * crwdns19819:0crwdne19819:0
+          * crwdns19820:0crwdne19820:0
+          * crwdns19821:0crwdne19821:0 
+  * ***crwdns19822:0crwdne19822:0*** crwdns19823:0crwdne19823:0 
+      * crwdns19824:0crwdne19824:0 
+          * crwdns19825:0crwdne19825:0
+          * crwdns19826:0crwdne19826:0
+          * crwdns19827:0crwdne19827:0
+          * crwdns19828:0crwdne19828:0
+          * crwdns19829:0crwdne19829:0
+      * crwdns19830:0crwdne19830:0 
+          * crwdns19831:0crwdne19831:0
 
- [10]: http://csta.acm.org/Curriculum/sub/K12Standards.html
- [11]: http://code.org/api/hour/finish
-
-[**crwdns8181:0crwdne8181:0**][9]
+[**crwdns19832:0crwdne19832:0**](#top)
 
 <a id="design"></a>
 
-## crwdns19337:0crwdne19337:0
+## crwdns19833:0crwdne19833:0
 
-crwdns8183:0crwdne8183:0 crwdns8647:0crwdne8647:0 crwdns8185:0crwdne8185:0 crwdns8186:0crwdne8186:0 crwdns8187:0crwdne8187:0
+crwdns19834:0crwdne19834:0 crwdns19835:0crwdne19835:0 crwdns19836:0crwdne19836:0 crwdns19837:0crwdne19837:0 crwdns19838:0crwdne19838:0
 
-crwdns8188:0crwdne8188:0 crwdns8189:0crwdne8189:0
+crwdns19839:0crwdne19839:0 crwdns19840:0crwdne19840:0
 
-crwdns8190:0crwdne8190:0 crwdns8191:0crwdne8191:0 crwdns8192:0crwdne8192:0
+crwdns19841:0crwdne19841:0 crwdns19842:0crwdne19842:0 crwdns19843:0crwdne19843:0
 
-*   crwdns8193:0crwdne8193:0
-*   crwdns8194:0crwdne8194:0
-*   crwdns8195:0crwdne8195:0 
-*   crwdns8196:0crwdne8196:0
+  * crwdns19844:0crwdne19844:0
+  * crwdns19845:0crwdne19845:0
+  * crwdns19846:0crwdne19846:0 
+  * crwdns19847:0crwdne19847:0
 
-crwdns8197:0crwdne8197:0
+crwdns19848:0crwdne19848:0
 
-crwdns8198:0\_\_\_|\\_\_\_|\__crwdne8198:0 crwdns8199:0crwdne8199:0 crwdns8200:0crwdne8200:0 crwdns8201:0crwdne8201:0
+crwdns19849:0\___\_____crwdne19849:0 crwdns19850:0crwdne19850:0 crwdns19851:0crwdne19851:0 crwdns19852:0crwdne19852:0
 
-crwdns8202:0crwdne8202:0
+crwdns19853:0crwdne19853:0
 
-crwdns8203:0crwdne8203:0
+crwdns19854:0crwdne19854:0
 
-crwdns8204:0crwdne8204:0
+crwdns19855:0crwdne19855:0
 
-**crwdns8205:0crwdne8205:0.**
+**crwdns19856:0crwdne19856:0.**
 
-crwdns8206:0crwdne8206:0
+crwdns19857:0crwdne19857:0
 
-*   crwdns8207:0crwdne8207:0
-*   crwdns8208:0crwdne8208:0 
-*   crwdns8209:0crwdne8209:0
+  * crwdns19858:0crwdne19858:0
+  * crwdns19859:0crwdne19859:0 
+  * crwdns19860:0crwdne19860:0
 
-crwdns8210:0crwdne8210:0
+crwdns19861:0crwdne19861:0
 
-*   crwdns8211:0crwdne8211:0
-*   crwdns8212:0crwdne8212:0
-*   crwdns8213:0crwdne8213:0
+  * crwdns19862:0crwdne19862:0
+  * crwdns19863:0crwdne19863:0
+  * crwdns19864:0crwdne19864:0
 
-[**crwdns8214:0crwdne8214:0**][9]
+[**crwdns19865:0crwdne19865:0**](#top)
 
 <a id="tm"></a>
 
-## crwdns19338:0crwdne19338:0
+## crwdns19866:0crwdne19866:0
 
-crwdns8216:0crwdne8216:0
+crwdns19867:0crwdne19867:0
 
-crwdns8217:0crwdne8217:0 crwdns8218:0crwdne8218:0 crwdns8219:0crwdne8219:0
+crwdns19868:0crwdne19868:0 crwdns19869:0crwdne19869:0 crwdns19870:0crwdne19870:0
 
-1.  crwdns8220:0crwdne8220:0 crwdns8221:0crwdne8221:0 crwdns8222:0crwdne8222:0
-2.  crwdns8223:0crwdne8223:0
-3.  crwdns8224:0crwdne8224:0
+  1. crwdns19871:0crwdne19871:0 crwdns19872:0crwdne19872:0 crwdns19873:0crwdne19873:0
+  2. crwdns19874:0crwdne19874:0
+  3. crwdns19875:0crwdne19875:0
     
-    ***crwdns8225:0[csedweek.org]crwdnd8225:0[code.org]crwdne8225:0***
+    ***crwdns19876:0[csedweek.org]crwdnd19876:0[code.org]crwdne19876:0***
 
-4.  crwdns8226:0crwdne8226:0
+  4. crwdns19877:0crwdne19877:0
 
-[**crwdns8227:0crwdne8227:0**][9]
+[**crwdns19878:0crwdne19878:0**](#top)
 
 <a id="pixel"></a>
 
-## crwdns19339:0crwdne19339:0
+## crwdns19879:0crwdne19879:0
 
-crwdns8229:0crwdne8229:0 crwdns8230:0crwdne8230:0
+crwdns19880:0crwdne19880:0 crwdns19881:0crwdne19881:0
 
-crwdns8231:0crwdne8231:0 crwdns8232:0crwdne8232:0 crwdns8233:0crwdne8233:0
+crwdns19882:0crwdne19882:0 crwdns19883:0crwdne19883:0 crwdns19884:0crwdne19884:0
 
-crwdns8234:0crwdne8234:0
+crwdns19885:0crwdne19885:0
 
-***crwdns8235:0crwdne8235:0***
+***crwdns19886:0crwdne19886:0***
 
-**crwdns8236:0crwdne8236:0**
+**crwdns19887:0crwdne19887:0**
 
-crwdns8237:0crwdne8237:0
+crwdns19888:0crwdne19888:0
 
-crwdns8238:0crwdne8238:0
+crwdns19889:0crwdne19889:0
 
-[**crwdns8239:0crwdne8239:0**][9]
+[**crwdns19890:0crwdne19890:0**](#top)
 
 <a id="promote"></a>
 
-## crwdns19340:0crwdne19340:0
+## crwdns19891:0crwdne19891:0
 
-crwdns8241:0crwdne8241:0 crwdns8242:0crwdne8242:0 crwdns8243:0crwdne8243:0 crwdns8244:0crwdne8244:0
+crwdns19892:0crwdne19892:0 crwdns19893:0crwdne19893:0 crwdns19894:0crwdne19894:0 crwdns19895:0crwdne19895:0
 
-*   crwdns8245:0crwdne8245:0
-*   crwdns8246:0crwdne8246:0
-*   crwdns8247:0crwdne8247:0
-*   crwdns8248:0crwdne8248:0
+  * crwdns19896:0crwdne19896:0
+  * crwdns19897:0crwdne19897:0
+  * crwdns19898:0crwdne19898:0
+  * crwdns19899:0crwdne19899:0
 
-[**crwdns8249:0crwdne8249:0**][9]
+[**crwdns19900:0crwdne19900:0**](#top)
 
 <a id="disabilities"></a>
 
-## crwdns19341:0crwdne19341:0
+## crwdns19901:0crwdne19901:0
 
-crwdns8251:0crwdne8251:0 crwdns8252:0crwdne8252:0
+crwdns19902:0crwdne19902:0 crwdns19903:0crwdne19903:0
 
-[**crwdns8253:0crwdne8253:0**][9]
+[**crwdns19904:0crwdne19904:0**](#top)
