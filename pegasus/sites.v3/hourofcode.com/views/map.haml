@@ -27,6 +27,8 @@
       center: new google.maps.LatLng(28.25,7.39),
       zoom: 2,
       minZoom: 2,
+      scrollwheel: false,
+      draggable: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     gmap = new google.maps.Map(document.getElementById("gmap"), mapOptions);
@@ -73,6 +75,13 @@
         minimumClusterSize: 2,
         averageCenter: true,
         zoomOnClick: true
+      });
+
+      google.maps.event.addListener(gmap, 'click', function(event){
+        this.setOptions({
+          scrollwheel: true,
+          draggable: true,
+        });
       });
 
     }).fail(displayQueryError);
