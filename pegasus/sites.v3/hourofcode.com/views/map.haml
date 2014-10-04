@@ -67,7 +67,7 @@
         }
       });
 
-      markerClusterer = new MarkerClusterer(gmap, markers, {
+      clusterer = new MarkerClusterer(gmap, markers, {
         maxZoom: 6,
         gridSize: 50,
         minimumClusterSize: 1,
@@ -83,17 +83,6 @@
 
     var marker = new google.maps.Marker({
       position: latlng,
-      map: gmap,
-      icon: {
-        path: google.maps.SymbolPath.CIRCLE,
-        strokeWeight: 1,
-        //strokeOpacity: 1,
-        fillColor: '#ea7717', //'#ee0000',
-        fillOpacity: 1,
-        strokeColor: '#ea7717', //'#ee0000',
-        strokeOpacity: 0.5,
-        scale: 4
-      },
       title: label,
       setClickable: false,
       draggable: false
