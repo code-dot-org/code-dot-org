@@ -49,6 +49,10 @@
         %div{id: "popupClose", onclick: "togglePopup();"}
           = t('nav.popup.close')
 
+:javascript
+  var script_level_id = #{@script_level.try(:level_id) || 'null'};
+  var t_more = "#{t(:more)}";
+  var t_less = "#{t(:less)}";
 - cache(@script_level) do
   :javascript
     $('#report_bug').attr('href',$('#report_bug').attr('href')+encodeURIComponent('\n#{request.url}\n#{request.user_agent}\n'));

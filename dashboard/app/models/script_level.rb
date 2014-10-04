@@ -63,9 +63,9 @@ class ScriptLevel < ActiveRecord::Base
     I18n.t("data.script.name.#{script.name}.#{stage ? stage.name : level.game.name}")
   end
 
-  def report_bug_url(request)
+  def report_bug_url(request=nil)
     stage_text = stage ? "Stage #{stage.position} " : ' '
-    message = "Bug in Course #{script.name} #{stage_text}Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
+    message = "Bug in Course #{script.name} #{stage_text}Puzzle #{position}"
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 

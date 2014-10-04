@@ -1,4 +1,4 @@
-- cache([@script, user || session[:progress]]) do
+- cache([@script, locale, user || session[:progress]]) do
   - script = @script || (user && user.primary_script) || Script.twenty_hour_script
   - script_levels = user ? user.levels_from_script(script) : script.script_levels.includes(:script, :stage, level: :game)
   - concept_progress = user ? user.concept_progress : nil
