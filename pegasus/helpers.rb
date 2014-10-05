@@ -9,7 +9,7 @@ end
 
 def avatar_image_thumbnail(name)
   basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
-  "images/avatars/thumbnails/#{basename}_thumbnail.jpg"
+  "images/fit-0x90/avatars/thumbnails/#{basename}_thumbnail.jpg"
 end
 
 def dont_cache()
