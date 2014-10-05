@@ -75,7 +75,7 @@ social:
             =I18n.t :hoc2014_teachers
             &nbsp;
           .optionright
-            %a{:href=>'http://hourofcode.com/#join', target: "_blank"}
+            %a{:href=>"http://#{canonical_hostname('hourofcode.com')}/#join", target: "_blank"}
               %button.optionbutton
                 =I18n.t :hoc2014_host
             %br/
@@ -91,7 +91,8 @@ social:
             %br/
 
         .whatishoc{style: "clear:both"}
-          =I18n.t :hoc2014_whatishoc
+          %a{:href=>"http://#{canonical_hostname('hourofcode.com')}", :target=>'_blank'}
+            =I18n.t :hoc2014_whatishoc
 
     %div{style: "height: 15px"}
       &nbsp;
