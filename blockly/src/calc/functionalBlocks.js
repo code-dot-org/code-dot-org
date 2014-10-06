@@ -3,29 +3,110 @@
  */
 
 exports.install = function(blockly, generator, gensym) {
- installPlus(blockly, generator, gensym);
- installMathNumber(blockly, generator, gensym);
+  installPlus(blockly, generator, gensym);
+  installMinus(blockly, generator, gensym);
+  installTimes(blockly, generator, gensym);
+  installDividedBy(blockly, generator, gensym);
+  installMathNumber(blockly, generator, gensym);
+  installDraw(blockly, generator, gensym);
 };
+
+
+function initFunctionalBlock(block, title, numArgs) {
+  block.setHSV(184, 1.00, 0.74);
+  block.appendDummyInput()
+      .appendTitle(title)
+      .setAlign(Blockly.ALIGN_CENTRE);
+  for (var i = 1; i <= numArgs; i++) {
+    block.appendFunctionalInput('ARG' + i)
+         .setInline(i > 1);
+  }
+  if (numArgs === 1) {
+    // todo (brent) : can we do this without a dummy input, or at least get
+    // the single input centered?
+    block.appendDummyInput()
+        .setInline(true);
+  }
+
+  block.setFunctionalOutput(true);
+}
 
 function installPlus(blockly, generator, gensym) {
   blockly.Blocks.functional_plus = {
     // Block for turning left or right.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle('+')
-          .setAlign(Blockly.ALIGN_CENTRE);
-      this.appendFunctionalInput('VALUE1');
-      this.appendFunctionalInput('VALUE2')
-          .setInline(true);
-
-      this.setFunctionalOutput(true, 'Number');
+      initFunctionalBlock(this, '+', 2)
     }
   };
 
   generator.functional_plus = function() {
-    return '';
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return "(" + arg1 + " + " + arg2 + ")";
+  };
+}
+
+function installMinus(blockly, generator, gensym) {
+  blockly.Blocks.functional_minus = {
+    // Block for turning left or right.
+    helpUrl: '',
+    init: function() {
+      initFunctionalBlock(this, '-', 2)
+    }
+  };
+
+  generator.functional_minus = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return "(" + arg1 + " - " + arg2 + ")";
+  };
+}
+
+function installTimes(blockly, generator, gensym) {
+  blockly.Blocks.functional_times = {
+    // Block for turning left or right.
+    helpUrl: '',
+    init: function() {
+      initFunctionalBlock(this, '*', 2)
+    }
+  };
+
+  generator.functional_times = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return "(" + arg1 + " * " + arg2 + ")";
+  };
+}
+
+function installDividedBy(blockly, generator, gensym) {
+  blockly.Blocks.functional_dividedby = {
+    // Block for turning left or right.
+    helpUrl: '',
+    init: function() {
+      initFunctionalBlock(this, '/', 2)
+    }
+  };
+
+  generator.functional_dividedby = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return "(" + arg1 + " / " + arg2 + ")";
+  };
+}
+
+function installDraw(blockly, generator, gensym) {
+  blockly.Blocks.functional_draw = {
+    // Block for turning left or right.
+    helpUrl: '',
+    init: function() {
+      initFunctionalBlock(this, 'draw', 1);
+    }
+  };
+
+  generator.functional_draw = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    return "Turtle.draw(" + arg1 +", 'block_id_" + this.id + "');\n";
   };
 }
 
@@ -42,6 +123,6 @@ function installMathNumber(blockly, generator, gensym) {
   };
 
   generator.functional_math_number = function() {
-    return '';
+    return this.getTitleValue('NUM');
   };
 }
