@@ -1,11 +1,11 @@
 <Artist>
   <config><![CDATA[{
-  "game_id": 23,
+  "game_id": 33,
   "created_at": "2014-09-29T21:18:43.000Z",
   "level_num": "custom",
   "user_id": 2,
   "properties": {
-    "skin": "artist"
+    "skin": "calc"
   }
 }]]></config>
   <blocks>

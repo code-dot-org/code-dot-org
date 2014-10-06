@@ -5,8 +5,7 @@ var blockUtils = require('../block_utils');
  * Information about level-specific requirements.
  */
 module.exports = {
-  // Level 1: El.
-  'test': {
+  'custom': {
     answer: '',
     ideal: 4,
     toolbox: '',
