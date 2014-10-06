@@ -1,0 +1,1178 @@
+<%
+
+var msg = require('../../locale/current/calc');
+
+/**
+ * Common code for creating procedures drawing different regular polygons.
+ * options:
+ *   title Title of procedure.
+ *   modifiers String containing any optional keys and values for the initial
+ *             <block> tag, such as 'x="20" y="20" editable="false"'.
+ *   sides Number of sides.
+ *   length 0 if a length parameter should be used, a positive number otherwise
+ */
+var polygon = function(options) {
+-%>
+<block type="procedures_defnoreturn" <%- options.modifiers %>>
+    <mutation>
+      <% if (options.length == 0) { -%>
+        <arg name="<%= msg.lengthParameter() %>"></arg>
+      <% } -%>
+    </mutation>
+    <title name="NAME"><%= options.title %></title>
+    <statement name="STACK">
+      <block type="controls_repeat" <%- options.modifiers %>>
+        <title name="TIMES"><%= options.sides %></title>
+        <statement name="DO">
+          <block type="draw_move" <%- options.modifiers %>>
+            <value name="VALUE">
+              <% if (options.length == 0) { -%>
+                <block type="variables_get_length" <%- options.modifiers %>></block>
+              <% } else { -%>
+                <block type="math_number" <%- options.modifiers %>>
+                  <title name="NUM"><%= options.length %></title>
+                </block>
+              <% } -%>
+            </value>
+            <next>
+              <block type="draw_turn" <%- options.modifiers %>>
+                <value name="VALUE">
+                  <block type="math_number" <%- options.modifiers %>>
+                    <title name="NUM"><%= 360 / options.sides %></title>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+<% }; -%>
+
+<%
+/**
+ * Spiral needs a named helper template for recursion.
+ * @param i Loop control variable.
+ */
+var spiral = function(i) {
+-%>
+  <% if (i <= 60) { -%>
+    <block type="draw_move" <% if (i == 25) { %>x="300" y="100"<% } %> inline="false" editable="false" deletable="false" disabled="true">
+      <title name="DIR">moveForward</title>
+      <value name="VALUE">
+        <block type="math_number" editable="false" deletable="false" disabled="true">
+          <title name="NUM"><%= i %></title>
+        </block>
+      </value>
+      <next>
+        <block type="draw_turn" inline="false" editable="false" deletable="false" disabled="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+            <block type="math_number" editable="false" deletable="false" disabled="true">
+              <title name="NUM">90</title>
+            </block>
+          </value>
+          <next>
+            <% spiral(i + 5) -%>
+          </next>
+        </block>
+      </next>
+    </block>
+  <% } %>
+<% }; -%>
+
+<%
+/**
+ * Define the starting blocks for each page and level.
+ * These are referenced from Calc.js.
+ */
+%>
+<% if (page == 1) { -%>
+  <% if (level == 1) { -%>
+    <block type="draw_move_by_constant" x="20" y="20"></block>
+  <% } else if (level == 2) { -%>
+    <block type="draw_colour" inline="true" x="20" y="20">
+      <value name="COLOUR">
+        <block type="colour_picker">
+          <title name="COLOUR">#ff0000</title>
+        </block>
+      </value>
+      <next>
+        <block type="draw_move_by_constant"></block>
+      </next>
+    </block>
+  <% } else if (level == 4) { -%>
+    <block type="controls_repeat" x="20" y="20">
+      <title name="TIMES">3</title>
+      <statement name="DO">
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"></block>
+          </value>
+        </block>
+      </statement>
+    </block>
+  <% } else if (level == 3 || level == 5 || level == 6) { -%>
+    <block type="controls_repeat" x="20" y="20">
+      <title name="TIMES"><% if (level == 3) { %>4<% } else { %>3<% } %></title>
+    </block>
+  <% } else if (level == 7) { -%>
+    <block type="draw_turn_by_constant_restricted" x="20" y="20">
+      <title name="DIR">turnRight</title>
+      <title name="VALUE">90</title>
+    </block>
+  <% } else if (level == 8) { -%>
+    <block id="set-color" type="draw_colour" x="20" y="100">
+      <value name="COLOUR">
+        <block type="colour_random"></block>
+      </value>
+      <next>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+          <next>
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveBackward</title>
+              <title name="VALUE">100</title>
+              <next>
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE">45</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  <% } else if (level == 9) { -%>
+    <block type="controls_repeat" deletable="false"  x="20" y="20">
+      <title name="TIMES">??</title>
+      <statement name="DO">
+        <block type="draw_move" editable="false" deletable="false">
+          <value name="VALUE">
+            <block type="math_number" editable="false" deletable="false">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <next>
+            <block type="draw_turn" editable="false" deletable="false">
+              <value name="VALUE">
+                <block type="math_number" editable="false" deletable="false">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  <% } else if (level == 10) { -%>
+    <block type="draw_move_by_constant" x="20" y="20">
+      <title name="DIR">moveForward</title>
+      <title name="VALUE">100</title>
+    </block>
+  <% } -%>
+<% } else if (page == 2) { -%>
+  <% // No blocks are provided for levels 1 and 2. -%>
+  <% if (level == 3 || level == 5) { -%>
+    <% // Call "draw a square". -%>
+    <block type="draw_a_square" inline="true" x="20" y="20">
+      <value name="VALUE">
+        <block type="math_number">
+          <title name="NUM"><% if (level == 3) { %>100<% } else { %>50<% } %></title>
+        </block>
+      </value>
+    </block>
+  <% } else if (level == 4) { -%>
+    <% // Three-square code. -%>
+    <block type="controls_repeat" deletable="false"  x="20" y="20">
+      <title name="TIMES">???</title>
+      <statement name="DO">
+        <block id="set-color" type="draw_colour" deletable="false">
+          <value name="COLOUR">
+            <block type="colour_random" deletable="false">
+            </block>
+          </value>
+          <next>
+            <block type="draw_a_square" inline="true" editable="false" deletable="false">
+              <value name="VALUE">
+                <block type="math_number" deletable="false">
+                  <title name="NUM">???</title>
+                </block>
+              </value>
+              <next>
+                <block type="draw_turn" editable="false" deletable="false">
+                  <value name="VALUE">
+                    <block type="math_number" deletable="false">
+                      <title name="NUM">???</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  <% } else if (level == 6) { -%>
+    <block type="controls_for_counter" inline="true" x="20" y="20">
+    <title name="VAR"><%= msg.loopVariable() %></title>
+      <value name="FROM">
+        <block type="math_number">
+          <title name="NUM"><% if (level == 6) { %>50<% } else { %>10<% } %></title>
+        </block>
+      </value>
+      <value name="TO">
+        <block type="math_number">
+          <title name="NUM"><% if (level == 6) { %>90<% } else { %>100<% } %></title>
+        </block>
+      </value>
+      <value name="BY">
+        <block type="math_number">
+          <title name="NUM">10</title>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="draw_a_square" inline="true">
+        </block>
+      </statement>
+    </block>
+  <% } else if (level == 7) { -%>
+    <% spiral(25) -%>
+  <% } else if (level == 7.5) { -%>
+    <block type="draw_a_snowman" x="20" y="20" inline="true">
+      <value name="VALUE">
+        <block type="math_number">
+          <title name="NUM">250</title>
+        </block>
+      </value>
+    </block>
+  <% } else if (level == 8 || level == 9) { -%>
+    <block type="draw_a_snowman" x="20" y="20" inline="true">
+      <value name="VALUE">
+        <block type="math_number">
+          <title name="NUM">150</title>
+        </block>
+      </value>
+    </block>
+  <% } else if (level == 10) { -%>
+    <block id="draw-width" type="draw_width_inline" x="158" y="67">
+      <title name="WIDTH">1</title>
+      <next>
+        <block type="controls_for_counter" inline="true">
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+          <value name="BY">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <statement name="DO">
+            <block type="draw_move" inline="false">
+              <title name="DIR">moveForward</title>
+              <value name="VALUE">
+                <block type="variables_get_counter"></block>
+              </value>
+              <next>
+                <block type="draw_turn" inline="false">
+                  <title name="DIR">turnRight</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">91</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </next>
+    </block>
+  <% } -%>
+<% } else if (page == 3) { -%>
+  <% // Define "draw a square". -%>
+  <%- polygon({
+    title: msg.drawASquare(),
+    modifiers: ' x="220" y="40" editable="false" deletable="false"',
+    sides: 4,
+    length: (level >= 6 ? 0 : 100)
+  }) -%>
+  <% if (level == 1) { -%>
+    <% // Define "draw a circle". -%>
+    <%- polygon({
+      title: msg.drawACircle(),
+      modifiers: 'x="220" y="250" editable="false" deletable="false"',
+      sides: 360,
+      length: 1
+    }) -%>
+  <% } -%>
+  <% if (level == 2) { -%>
+    <block type="procedures_defnoreturn" x="220" y="250">
+      <title name="NAME"><%= msg.drawATriangle() %></title>
+    </block>
+  <% } else if (level >= 3) { -%>
+    <% //  Define "draw a triangle". -%>
+    <%- polygon({
+      title: msg.drawATriangle(),
+      modifiers: (level == 6 ? 'x="220" y="250"' : 'x="220" y="250" editable="false" deletable="false"'),
+      sides: 3,
+      length: (level >= 7 ? 0 : 100)
+    }) -%>
+  <% } -%>
+  <% if (level == 7) { -%>
+    <% //  Define "draw a house". -%>
+    <block type="procedures_defnoreturn" x="220" y="460">
+      <mutation>
+        <% if (level == 11) { %><arg name="<%= msg.lengthParameter() %>"></arg><% } -%>
+      </mutation>
+      <title name="NAME"><%= msg.drawAHouse() %></title>
+      <statement name="STACK">
+        <block type="procedures_callnoreturn" inline="false">
+          <mutation name="<%= msg.drawASquare() %>">
+            <arg name="<%= msg.lengthParameter() %>"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+          <next>
+            <block type="draw_move" inline="true">
+              <title name="DIR">moveForward</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">100</title>
+                </block>
+              </value>
+              <next>
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnRight</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">30</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn" inline="false">
+                      <mutation name="<%= msg.drawATriangle() %>">
+                        <arg name="<%= msg.lengthParameter() %>"></arg>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="math_number">
+                          <title name="NUM">100</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  <% } // End of region in which "draw a square" is defined. -%>
+<% } else if (page == 4) { -%>
+  <% if (level == 2) { -%>
+    <block type="draw_colour" inline="true" x="70" y="70" editable="false" deletable="false" movable="true">
+      <value name="COLOUR">
+        <block type="colour_random" editable="false" deletable="false" movable="true"></block>
+      </value>
+      <next>
+        <block type="controls_repeat" editable="false" deletable="false" movable="true">
+          <title name="TIMES">3</title>
+          <statement name="DO">
+            <block type="draw_move_by_constant" editable="false" deletable="false" movable="true">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">100</title>
+              <next>
+                <block type="draw_turn_by_constant" editable="false" deletable="false" movable="true">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE">120</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+          <next>
+            <block type="draw_colour" inline="true" x="70" y="230" editable="false" deletable="false" movable="true">
+              <value name="COLOUR">
+                <block type="colour_random" editable="false" deletable="false" movable="true"></block>
+              </value>
+              <next>
+                <block type="controls_repeat" editable="false" deletable="false" movable="true">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant" editable="false" deletable="false" movable="true">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
+                      <next>
+                        <block type="draw_turn_by_constant" editable="false" deletable="false" movable="true">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">120</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  <% } else if (level == 3) { -%>
+    <block type="draw_colour" inline="true" x="70" y="70" editable="false" deletable="false">
+      <value name="COLOUR">
+        <block type="colour_random" editable="false" deletable="false"></block>
+      </value>
+      <next>
+        <block type="controls_repeat" editable="false" deletable="false">
+          <title name="TIMES">3</title>
+          <statement name="DO">
+            <block type="draw_move_by_constant" editable="false" deletable="false">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">100</title>
+              <next>
+                <block type="draw_turn_by_constant" editable="false" deletable="false">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE">120</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </next>
+    </block>
+  <% } else if (level == 4) { -%>
+    <block type="controls_repeat" x="70" y="70">
+      <title name="TIMES">???</title>
+      <statement name="DO">
+        <block type="draw_colour" inline="true" editable="false" deletable="false">
+          <value name="COLOUR">
+            <block type="colour_random" editable="false" deletable="false"></block>
+          </value>
+          <next>
+            <block type="controls_repeat" editable="false" deletable="false">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant" editable="false" deletable="false">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">100</title>
+                  <next>
+                    <block type="draw_turn_by_constant" editable="false" deletable="false">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">120</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="draw_turn_by_constant" editable="false" deletable="false">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE">36</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  <% } else if (level == 5) { -%>
+    <block type="controls_repeat" x="70" y="70" editable="false" deletable="false">
+      <title name="TIMES">36</title>
+      <statement name="DO">
+        <block type="draw_colour" inline="true" editable="false" deletable="false">
+          <value name="COLOUR">
+            <block type="colour_random" editable="false" deletable="false"></block>
+          </value>
+          <next>
+            <block type="controls_repeat" editable="false" deletable="false">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant" editable="false" deletable="false">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">100</title>
+                  <next>
+                    <block type="draw_turn_by_constant" editable="false" deletable="false">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">120</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE">???</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  <% } else if (level == 7) { -%>
+    <block type="draw_colour" inline="true" x="70" y="70" editable="false" deletable="false">
+      <value name="COLOUR">
+        <block type="colour_random" editable="false" deletable="false"></block>
+      </value>
+      <next>
+        <block type="controls_repeat" editable="false" deletable="false">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+            <block type="draw_move_by_constant" editable="false" deletable="false">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">20</title>
+              <next>
+                <block type="draw_turn_by_constant" editable="false" deletable="false">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE">90</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </next>
+    </block>
+  <% } else if (level == 8) { -%>
+    <block type="controls_repeat" x="70" y="70" editable="false" deletable="false">
+      <title name="TIMES">10</title>
+      <statement name="DO">
+        <block type="draw_colour" inline="true" editable="false" deletable="false">
+          <value name="COLOUR">
+            <block type="colour_random" editable="false" deletable="false"></block>
+          </value>
+          <next>
+            <block type="controls_repeat" editable="false" deletable="false">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant" editable="false" deletable="false">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">20</title>
+                  <next>
+                    <block type="draw_turn_by_constant" editable="false" deletable="false">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="draw_move_by_constant" editable="false" deletable="false">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">20</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  <% } else if (level == 9) { -%>
+    <block type="controls_repeat" x="70" y="70" editable="false" deletable="false">
+      <title name="TIMES">4</title>
+      <statement name="DO">
+        <block type="controls_repeat" editable="false" deletable="false">
+          <title name="TIMES">10</title>
+          <statement name="DO">
+            <block type="draw_colour" inline="true" editable="false" deletable="false">
+              <value name="COLOUR">
+                <block type="colour_random" editable="false" deletable="false"></block>
+              </value>
+              <next>
+                <block type="controls_repeat" editable="false" deletable="false">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant" editable="false" deletable="false">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">20</title>
+                      <next>
+                        <block type="draw_turn_by_constant" editable="false" deletable="false">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_move_by_constant" editable="false" deletable="false">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">20</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+          <next>
+            <block type="draw_turn_by_constant">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE">???</title>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  <% } else if (level == 10) { -%>
+    <block type="controls_repeat" x="70" y="70">
+      <title name="TIMES">???</title>
+      <statement name="DO">
+        <block type="controls_repeat" editable="false" deletable="false">
+          <title name="TIMES">10</title>
+          <statement name="DO">
+            <block type="draw_colour" inline="true" editable="false" deletable="false">
+              <value name="COLOUR">
+                <block type="colour_random" editable="false" deletable="false"></block>
+              </value>
+              <next>
+                <block type="controls_repeat" editable="false" deletable="false">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant" editable="false" deletable="false">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">20</title>
+                      <next>
+                        <block type="draw_turn_by_constant" editable="false" deletable="false">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_move_by_constant" editable="false" deletable="false">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">20</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+          <next>
+            <block type="draw_turn_by_constant" editable="false" deletable="false">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE">80</title>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  <% } else if (level == 11) { -%>
+    <block type="controls_repeat" x="70" y="70">
+      <title name="TIMES">???</title>
+      <statement name="DO">
+        <block type="controls_repeat">
+          <title name="TIMES">10</title>
+          <statement name="DO">
+            <block type="draw_colour" inline="true">
+              <value name="COLOUR">
+                <block type="colour_random"></block>
+              </value>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">20</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">20</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+          <next>
+            <block type="draw_turn_by_constant">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE">???</title>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  <% } -%>
+<% } else if (page == 5) { -%>
+  <% if (level == 1) { -%>
+    <block type="controls_for_counter" inline="true" x="70" y="70">
+      <value name="FROM">
+        <block type="math_number">
+          <title name="NUM">1</title>
+        </block>
+      </value>
+      <value name="TO">
+        <block type="math_number">
+          <title name="NUM">200</title>
+        </block>
+      </value>
+      <value name="BY">
+        <block type="math_number">
+          <title name="NUM">1</title>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"></block>
+          </value>
+          <next>
+            <block type="draw_move" inline="true">
+              <title name="DIR">moveForward</title>
+              <value name="VALUE">
+                <block type="variables_get">
+                  <title name="VAR"><%= msg.loopVariable() %></title>
+                </block>
+              </value>
+              <next>
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnRight</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">90</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  <% } else if (level == 2) { -%>
+    <block type="controls_for_counter" inline="true" x="70" y="70">
+      <value name="FROM">
+        <block type="math_number">
+          <title name="NUM">1</title>
+        </block>
+      </value>
+      <value name="TO">
+        <block type="math_number">
+          <title name="NUM">300</title>
+        </block>
+      </value>
+      <value name="BY">
+        <block type="math_number">
+          <title name="NUM">1</title>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"></block>
+          </value>
+          <next>
+            <block type="draw_move" inline="true">
+              <title name="DIR">moveForward</title>
+              <value name="VALUE">
+                <block type="variables_get">
+                  <title name="VAR"><%= msg.loopVariable() %></title>
+                </block>
+              </value>
+              <next>
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnRight</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">121</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  <% } else if (level == 3) { -%>
+    <block type="controls_for_counter" inline="true" x="70" y="70">
+      <value name="FROM">
+        <block type="math_number">
+          <title name="NUM">1</title>
+        </block>
+      </value>
+      <value name="TO">
+        <block type="math_number">
+          <title name="NUM">300</title>
+        </block>
+      </value>
+      <value name="BY">
+        <block type="math_number">
+          <title name="NUM">1</title>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"></block>
+          </value>
+          <next>
+            <block type="draw_move" inline="true">
+              <title name="DIR">moveForward</title>
+              <value name="VALUE">
+                <block type="variables_get">
+                  <title name="VAR"><%= msg.loopVariable() %></title>
+                </block>
+              </value>
+              <next>
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnRight</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">134</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  <% } else if (level == 4) { -%>
+    <block type="controls_repeat" x="70" y="20">
+      <title name="TIMES">10</title>
+      <statement name="DO">
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"></block>
+          </value>
+          <next>
+            <block type="procedures_callnoreturn" inline="false">
+              <mutation name="<%= msg.drawACircle() %>">
+                <arg name="<%= msg.step() %>"></arg>
+              </mutation>
+              <value name="ARG0">
+                <block type="math_number">
+                  <title name="NUM">6</title>
+                </block>
+              </value>
+              <next>
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnRight</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">36</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block type="procedures_defnoreturn" x="70" y="270">
+      <mutation>
+        <arg name="<%= msg.step() %>"></arg>
+      </mutation>
+      <title name="NAME"><%= msg.drawACircle() %></title>
+      <statement name="STACK">
+        <block type="controls_repeat">
+          <title name="TIMES">60</title>
+          <statement name="DO">
+            <block type="draw_move" inline="true">
+              <title name="DIR">moveForward</title>
+              <value name="VALUE">
+                <block type="variables_get">
+                  <title name="VAR"><%= msg.step() %></title>
+                </block>
+              </value>
+              <next>
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnRight</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">6</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+  <% } else if (level == 5) { -%>
+    <block type="controls_for_counter" inline="true" x="70" y="20">
+      <value name="FROM">
+        <block type="math_number">
+          <title name="NUM">4</title>
+        </block>
+      </value>
+      <value name="TO">
+        <block type="math_number">
+          <title name="NUM">8</title>
+        </block>
+      </value>
+      <value name="BY">
+        <block type="math_number">
+          <title name="NUM">4</title>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="controls_repeat">
+          <title name="TIMES">10</title>
+          <statement name="DO">
+            <block type="draw_colour" inline="true">
+              <value name="COLOUR">
+                <block type="colour_random"></block>
+              </value>
+              <next>
+                <block type="procedures_callnoreturn" inline="false">
+                  <mutation name="<%= msg.drawACircle() %>">
+                    <arg name="<%= msg.step() %>"></arg>
+                  </mutation>
+                  <value name="ARG0">
+                    <block type="variables_get">
+                      <title name="VAR"><%= msg.loopVariable() %></title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" inline="true">
+                      <title name="DIR">turnRight</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">36</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+    <block type="procedures_defnoreturn" x="70" y="320">
+      <mutation>
+        <arg name="<%= msg.step() %>"></arg>
+      </mutation>
+      <title name="NAME"><%= msg.drawACircle() %></title>
+      <statement name="STACK">
+        <block type="controls_repeat">
+          <title name="TIMES">60</title>
+          <statement name="DO">
+            <block type="draw_move" inline="true">
+              <title name="DIR">moveForward</title>
+              <value name="VALUE">
+                <block type="variables_get">
+                  <title name="VAR"><%= msg.step() %></title>
+                </block>
+              </value>
+              <next>
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnRight</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">6</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+  <% } else if (level == 6) { -%>
+    <block type="procedures_callnoreturn" inline="false" x="70" y="20">
+      <mutation name="<%= msg.drawATree() %>">
+        <arg name="<%= msg.depth() %>"></arg>
+        <arg name="<%= msg.branches() %>"></arg>
+      </mutation>
+      <value name="ARG0">
+        <block type="math_number">
+          <title name="NUM">9</title>
+        </block>
+      </value>
+      <value name="ARG1">
+        <block type="math_number">
+          <title name="NUM">2</title>
+        </block>
+      </value>
+    </block>
+    <block type="procedures_defnoreturn" x="70" y="190">
+      <mutation>
+        <arg name="<%= msg.depth() %>"></arg>
+        <arg name="<%= msg.branches() %>"></arg>
+      </mutation>
+      <title name="NAME"><%= msg.drawATree() %></title>
+      <statement name="STACK">
+        <block type="controls_if" inline="false">
+          <value name="IF0">
+            <block type="logic_compare" inline="true">
+              <title name="OP">GT</title>
+              <value name="A">
+                <block type="variables_get">
+                  <title name="VAR"><%= msg.depth() %></title>
+                </block>
+              </value>
+              <value name="B">
+                <block type="math_number">
+                  <title name="NUM">0</title>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="draw_colour" inline="true">
+              <value name="COLOUR">
+                <block type="colour_random"></block>
+              </value>
+              <next>
+                <block type="draw_pen">
+                  <title name="PEN">penDown</title>
+                  <next>
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="math_arithmetic" inline="true">
+                          <title name="OP">MULTIPLY</title>
+                          <value name="A">
+                            <block type="math_number">
+                              <title name="NUM">7</title>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <title name="VAR"><%= msg.depth() %></title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">130</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="controls_repeat_ext" inline="true">
+                              <value name="TIMES">
+                                <block type="variables_get">
+                                  <title name="VAR"><%= msg.branches() %></title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="draw_turn" inline="true">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_arithmetic" inline="true">
+                                      <title name="OP">DIVIDE</title>
+                                      <value name="A">
+                                        <block type="math_number">
+                                          <title name="NUM">180</title>
+                                        </block>
+                                      </value>
+                                      <value name="B">
+                                        <block type="variables_get">
+                                          <title name="VAR"><%= msg.branches() %></title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="procedures_callnoreturn" inline="false">
+                                      <mutation name="<%= msg.drawATree() %>">
+                                        <arg name="<%= msg.depth() %>"></arg>
+                                        <arg name="<%= msg.branches() %>"></arg>
+                                      </mutation>
+                                      <value name="ARG0">
+                                        <block type="math_arithmetic" inline="true">
+                                          <title name="OP">MINUS</title>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <title name="VAR"><%= msg.depth() %></title>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <title name="NUM">1</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <value name="ARG1">
+                                        <block type="variables_get">
+                                          <title name="VAR"><%= msg.branches() %></title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="draw_turn" inline="true">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">50</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="draw_pen">
+                                      <title name="PEN">penUp</title>
+                                      <next>
+                                        <block type="draw_move" inline="true">
+                                          <title name="DIR">moveBackward</title>
+                                          <value name="VALUE">
+                                            <block type="math_arithmetic" inline="true">
+                                              <title name="OP">MULTIPLY</title>
+                                              <value name="A">
+                                                <block type="math_number">
+                                                  <title name="NUM">7</title>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="variables_get">
+                                                  <title name="VAR"><%= msg.depth() %></title>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+  <% } -%>
+<% } -%>
