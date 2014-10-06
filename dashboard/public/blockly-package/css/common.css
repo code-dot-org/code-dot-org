@@ -435,20 +435,6 @@ input[type="radio"] {
   #headers .block-counter-overflow {
     color: #ffb81d; }
 
-.qtip-content {
-  font-size: 20px;
-  line-height: 28px;
-  color: #7e5ba0;
-  font-weight: 500; }
-
-.qtip-default {
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-  border-radius: 8px;
-  box-shadow: 5px 5px 5px #888888;
-  padding: 10px; }
-
 #rotateContainer {
   position: fixed;
   z-index: 10001;

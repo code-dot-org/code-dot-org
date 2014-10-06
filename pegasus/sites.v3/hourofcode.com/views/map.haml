@@ -28,6 +28,8 @@
       center: new google.maps.LatLng(28.25,7.39),
       zoom: 2,
       minZoom: 2,
+      scrollwheel: false,
+      draggable: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     gmap = new google.maps.Map(document.getElementById("gmap"), mapOptions);
@@ -68,13 +70,20 @@
         }
       });
 
-      //markerClusterer = new MarkerClusterer(gmap, markers, {
-      //  maxZoom: 6,
-      //  gridSize: 50,
-      //  minimumClusterSize: 1,
-      //  averageCenter: true,
-      //  zoomOnClick: true
-      //});
+      clusterer = new MarkerClusterer(gmap, markers, {
+        maxZoom: 6,
+        gridSize: 50,
+        minimumClusterSize: 2,
+        averageCenter: true,
+        zoomOnClick: true
+      });
+
+      google.maps.event.addListener(gmap, 'click', function(event){
+        this.setOptions({
+          scrollwheel: true,
+          draggable: true,
+        });
+      });
 
     }).fail(displayQueryError);
   }
@@ -84,17 +93,6 @@
 
     var marker = new google.maps.Marker({
       position: latlng,
-      map: gmap,
-      icon: {
-        path: google.maps.SymbolPath.CIRCLE,
-        strokeWeight: 1,
-        //strokeOpacity: 1,
-        fillColor: '#ea7717', //'#ee0000',
-        fillOpacity: 1,
-        strokeColor: '#ea7717', //'#ee0000',
-        strokeOpacity: 0.5,
-        scale: 4
-      },
       title: label,
       setClickable: false,
       draggable: false
