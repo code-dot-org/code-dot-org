@@ -1197,7 +1197,6 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
       renderInfo.inline.push('H', inputTopLeft.x);
       renderInfo.inline.push('z');
 
-
       // todo (brent)- highlighting
 
       renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
