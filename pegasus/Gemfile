@@ -31,6 +31,7 @@ gem 'bcrypt'
 gem 'chronic', '~> 0.10.2'
 gem 'os'
 gem 'browser'
+gem 'image_optim'
 
 group :development do
   gem 'rerun'

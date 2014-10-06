@@ -149,7 +149,7 @@ class Documents < Sinatra::Base
   end
 
   # Manipulated images
-  get %r{^\/images\/(fit-|fill-)?(\d+)x?(\d*)(\/.*)$} do |mode, width, height, uri|
+  get %r{^\/images\/?(fit-|fill-)?(\d+)?x?(\d*)(\/.*)$} do |mode, width, height, uri|
     mode    = mode.nil?     ? :resize : mode[0..-2].to_sym
     width   = width.to_i
     height  = height.empty? ? nil     : height.to_i
@@ -171,9 +171,7 @@ class Documents < Sinatra::Base
     content_type format.to_sym
     cache_control :public, :must_revalidate, max_age:settings.image_max_age
 
-    img = load_manipulated_image(path, mode, width, height)
-    img.format = format
-    img.to_blob
+    load_manipulated_image(path, mode, format, width, height)
   end
 
   # Map /dashboardapi/ to the local dashboard instance.

@@ -21,8 +21,7 @@
 
   pass unless path = resolve_template('public/images', settings.image_extnames, File.join(dirname, basename))
 
-  img = load_manipulated_image(path, mode, width, height)
-  img.format = extname[1..-1]
-
-  content_type img.format.to_sym
-%><%= img.to_blob %>
+  format = exetname[1..-1]
+  content_type format.to_sym
+  img = load_manipulated_image(path, mode, format, width, height)
+%><%= img %>

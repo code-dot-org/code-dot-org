@@ -67,9 +67,7 @@ module Pegasus
       content_type format.to_sym
       cache_control :public, :must_revalidate, :max_age=>settings.image_max_age
 
-      img = load_manipulated_image(path, mode, width, height)
-      img.format = format
-      img.to_blob
+      load_manipulated_image(path, mode, format, width, height)
     end
 
     def http_vary_add_type(vary,type)
