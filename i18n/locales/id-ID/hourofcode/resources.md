@@ -1,29 +1,30 @@
 * * *
 
-title: Resources
+title: Resources layout: wide
 
-## layout: wide
+* * *
 
 # Sumber daya
 
-*   [Handouts to spread the word][1] <br/>
-*   [How-to guide for teachers][2] <br/>
-*   [Posters][3] <br/>
-*   [Videos][4] <br/>
-*   [Sample emails][5] <br/>
-*   [Useful computer science stats][6]   
+  * [How-to guide for teachers](/resources/how-to)   
     
-*   [Press Kit][7]
+  * [Handouts to spread the word](#handouts)   
+    
+  * [Videos](#videos)   
+    
+  * [Posters](#posters)   
+    
+  * [Banners](#banners)   
+    
+  * [Sample emails](#sample-emails)   
+    
+  * [Stastistik ilmu komputer yang bermanfaat](/resources/stats)   
+    
+  * [Perlengkapan Media](/resources/press-kit)
 
- [1]: #handouts
- [2]: /resources/how-to
- [3]: #posters
- [4]: #videos
- [5]: #sample-emails
- [6]: /resources/stats
- [7]: /resources/press-kit
+<a id="handouts"></p> 
 
-<a id="handouts"></p> <h2>
+<h2>
   Gunakan selebaran ini untuk menyebarkan berita
 </h2>
 
@@ -32,7 +33,7 @@ title: Resources
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Berikan selebaran ini pada guru-guru dan sekolah-sekolah
 </h2>
 
 <p>
@@ -40,8 +41,10 @@ title: Resources
 </p>
 
 <p>
-  <a id="videos"></p> <h2>
-    Show these videos to inspire students
+  <a id="videos"></p> 
+  
+  <h2>
+    Tunjukan video-video ini untuk menginspirasi pelajar
   </h2>
   
   <div style="float:left; padding:10px">
@@ -78,8 +81,10 @@ title: Resources
   </div>
   
   <p>
-    <a id="posters"></p> <h2>
-      Hang these posters in your school
+    <a id="posters"></p> 
+    
+    <h2>
+      Tempelkan poster - poster tersebut di sekolah anda
     </h2>
     
     <h4>
@@ -91,11 +96,23 @@ title: Resources
     </p>
     
     <p>
+      <a id="banners"></a>
+    </p>
+    
+    <h2>
+      Feature these banners on your website
+    </h2>
+    
+    <p>
+      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code.
+      Send these emails to help promote the Hour of Code
     </h2>
     
     <p>
@@ -103,31 +120,35 @@ title: Resources
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Tanyakan di sekolah, bos di tempat kerja atau teman anda untuk mendaftar:
     </h2>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+      Komputer ada dimana-mana, tetapi sedikit sekolah yang mengajar ilmu komputer dari 10 tahun yang lalu. Kabar baiknya, kita berada pada jalur yang tepat untuk merubah itu. Jika anda pernah mendengar Hour of Code tahun lalu, anda mungkin tahu sejarahnya. Dalam satu minggu saja, sudah lebih dari 15 juta pelajar mencoba ilmu komputer!
     </p>
     
     <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Komputer science juga terdapat pada hompage dari Google, MSN, Yahoo! dan Disney. President Obama, Shakira dan Ashton Kutcher juga ikut serta dalam Hour of Code disertai video mereka. Lebih dari 100 mitra kerja datang untuk mendukng gerakan ini.
     </p>
     
     <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+      Untuk tahun ini, marilah kita buat lebih besar lagi. Kami meminta anda untuk bergabung dalam Hour of Code 2014. Ayo bergabunglah dalam Hour of Code saat Computer Education Week, 8-14 Desember 2014.
     </p>
     
     <p>
-      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
+      Sebarkan mengenai berita ini. Selenggarakan aktivitasnya. Tanyakan sekolah dilingkungan anda untuk bergabung. Atau mencoba Hour of Code sendiri -- setiap orang dapat mendapatkan manfaat dengan mempelajari dasarnya.
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+      Bantu kami untuk mencapai 100 juta pelajar yang ikut serta pada akhir tahun! Mulailah pada http://hourofcode.com
+    </p>
+    
+    <p>
+      <a id="media-pitch"></a>
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Undanglah media untuk menghadiri kegiatan anda:
     </h2>
     
     <p>
@@ -139,7 +160,7 @@ title: Resources
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      In one week last year, 15 million students tried computer science! Komputer science juga terdapat pada hompage dari Google, MSN, Yahoo! dan Disney. President Obama, Shakira dan Ashton Kutcher juga ikut serta dalam Hour of Code disertai video mereka. Lebih dari 100 mitra kerja datang untuk mendukng gerakan ini.
     </p>
     
     <p>
@@ -179,7 +200,7 @@ title: Resources
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Beritahu orang tua anda mengenai kegiatan skolah anda:
     </h2>
     
     <p>
@@ -219,7 +240,7 @@ title: Resources
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Undang politisi lokal ke kegiatan sekolah anda:
     </h2>
     
     <p>

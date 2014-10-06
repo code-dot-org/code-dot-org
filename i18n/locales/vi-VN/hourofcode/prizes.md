@@ -1,8 +1,8 @@
 * * *
 
-title: Prizes
+title: Prizes layout: wide
 
-## layout: wide
+* * *
 
 # The Hour of Code - giải thưởng cho tất cả tổ chức tham gia
 
@@ -14,9 +14,7 @@ Every educator who hosts an Hour of Code for students will receive 10 GB of Drop
 
 ## Lớp học may mắn chiến thắng trong video nói chuyện với chúng tôi!
 
-50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats][1] with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
-
- [1]: http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a
+50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
 
 ## Những trường học may mắn khi chiến thắng giải thưởng là một lớp học được trang bị laptops (hoặc 10.000USD cho một công nghê khác)
 
@@ -36,7 +34,4 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 ## Những câu hỏi xung quanh giải thưởng?
 
-Check out [Terms and Conditions][2] or visit our forum to see [FAQs][3] and ask your questions.
-
- [2]: /prizes-terms
- [3]: http://support.code.org
+Check out [Terms and Conditions](/prizes-terms) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.

@@ -1,8 +1,8 @@
 * * *
 
-title: Obrigado
+title: Obrigado layout: wide
 
-## layout: wide
+* * *
 
 # Obrigado
 

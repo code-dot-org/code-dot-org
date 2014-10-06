@@ -1,8 +1,8 @@
 * * *
 
-title: Thank you
+title: Thank you layout: wide
 
-## layout: wide
+* * *
 
 # Děkuji
 

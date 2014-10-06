@@ -2,7 +2,7 @@
 title: Resources
 layout: wide
 ---
-## How to attract media to your Hour of Code event ##
+# How to attract media to your Hour of Code event
 
 ## Some shocking statistics (USA):
 

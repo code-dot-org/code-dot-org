@@ -1,52 +1,61 @@
 * * *
 
-crwdns19232:0crwdne19232:0
+crwdns19597:0crwdne19597:0
 
-## crwdns19233:0crwdne19233:0
+* * *
 
-# crwdns8672:0crwdne8672:0
+# crwdns19598:0crwdne19598:0
 
-*   crwdns19234:0crwdne19234:0
-*   crwdns19235:0crwdne19235:0
-*   crwdns19236:0crwdne19236:0
-*   crwdns19237:0crwdne19237:0
-*   crwdns19238:0crwdne19238:0
-*   crwdns19239:0crwdne19239:0   
+  * crwdns20070:0crwdne20070:0   
     
-*   [crwdns19240:0crwdne19240:0][1]
+  * crwdns20071:0crwdne20071:0   
+    
+  * crwdns19601:0crwdne19601:0   
+    
+  * crwdns19602:0crwdne19602:0   
+    
+  * crwdns19603:0crwdne19603:0   
+    
+  * crwdns19604:0crwdne19604:0   
+    
+  * crwdns19605:0crwdne19605:0   
+    
+  * [crwdns19606:0crwdne19606:0](/resources/press-kit)
 
- [1]: /resources/press-kit
+<a id="handouts"></p> 
 
-<a id="handouts"></p> <h2>
-  crwdns8904:0crwdne8904:0
+<h2>
+  crwdns19607:0crwdne19607:0
 </h2>
 
 <p>
-  <a href="/resources/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="crwdns8979:0crwdne8979:0" /></a>
+  <a href="/resources/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="crwdns19608:0crwdne19608:0" /></a>
 </p>
 
 <h2>
-  crwdns19241:0crwdne19241:0
+  crwdns19609:0crwdne19609:0
 </h2>
 
 <p>
-  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="crwdns19242:0crwdne19242:0" /></a>
+  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="crwdns19610:0crwdne19610:0" /></a>
 </p>
 
 <p>
-  <a id="videos"></p> <h2>
-    crwdns19243:0crwdne19243:0
+  <a id="videos"></p> 
+  
+  <h2>
+    crwdns19611:0crwdne19611:0
   </h2>
   
   <div style="float:left; padding:10px">
     <p>
-      crwdns8906:0crwdne8906:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      crwdns19612:0crwdne19612:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <p>
-      crwdns8907:0crwdne8907:0 <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      crwdns19613:0crwdne19613:0 <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -55,13 +64,13 @@ crwdns19232:0crwdne19232:0
   
   <div style="float:left; padding:10px">
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>crwdns8908:0crwdne8908:0</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>crwdns19614:0crwdne19614:0</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <p>
-      crwdns8909:0crwdne8909:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      crwdns19615:0crwdne19615:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -72,16 +81,30 @@ crwdns19232:0crwdne19232:0
   </div>
   
   <p>
-    <a id="posters"></p> <h2>
-      crwdns19244:0crwdne19244:0
+    <a id="posters"></p> 
+    
+    <h2>
+      crwdns19616:0crwdne19616:0
     </h2>
     
     <h4>
-      crwdns8911:0crwdne8911:0
+      crwdns19617:0crwdne19617:0
     </h4>
     
     <p>
-      <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="crwdns19245:0crwdne19245:0" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="crwdns19246:0crwdne19246:0" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="crwdns19247:0crwdne19247:0" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="crwdns19248:0crwdne19248:0" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="crwdns19249:0crwdne19249:0" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="crwdns19250:0crwdne19250:0" /></a>
+      <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="crwdns19618:0crwdne19618:0" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="crwdns19619:0crwdne19619:0" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="crwdns19620:0crwdne19620:0" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="crwdns19621:0crwdne19621:0" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="crwdns19622:0crwdne19622:0" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="crwdns19623:0crwdne19623:0" /></a>
+    </p>
+    
+    <p>
+      <a id="banners"></a>
+    </p>
+    
+    <h2>
+      crwdns19624:0crwdne19624:0
+    </h2>
+    
+    <p>
+      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="crwdns19625:0crwdne19625:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="crwdns19626:0crwdne19626:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="crwdns19627:0crwdne19627:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -89,7 +112,7 @@ crwdns19232:0crwdne19232:0
     </p>
     
     <h2>
-      crwdns19251:0crwdne19251:0
+      crwdns19628:0crwdne19628:0
     </h2>
     
     <p>
@@ -97,75 +120,79 @@ crwdns19232:0crwdne19232:0
     </p>
     
     <h2>
-      crwdns19252:0crwdne19252:0
+      crwdns19629:0crwdne19629:0
     </h2>
     
     <p>
-      crwdns19253:0crwdne19253:0 crwdns19254:0crwdne19254:0 crwdns19255:0crwdne19255:0 crwdns19256:0crwdne19256:0
+      crwdns19630:0crwdne19630:0 crwdns19631:0crwdne19631:0 crwdns19632:0crwdne19632:0 crwdns19633:0crwdne19633:0
     </p>
     
     <p>
-      crwdns19257:0crwdne19257:0 crwdns19258:0crwdne19258:0 crwdns19259:0crwdne19259:0 crwdns19260:0crwdne19260:0
+      crwdns19634:0crwdne19634:0 crwdns19635:0crwdne19635:0 crwdns19636:0crwdne19636:0 crwdns19637:0crwdne19637:0
     </p>
     
     <p>
-      crwdns19261:0crwdne19261:0
+      crwdns19638:0crwdne19638:0
     </p>
     
     <p>
-      crwdns19262:0crwdne19262:0
+      crwdns19639:0crwdne19639:0
     </p>
     
     <p>
-      crwdns19263:0crwdne19263:0
+      crwdns19640:0crwdne19640:0
+    </p>
+    
+    <p>
+      <a id="media-pitch"></a>
     </p>
     
     <h2>
-      crwdns19264:0crwdne19264:0
+      crwdns19641:0crwdne19641:0
     </h2>
     
     <p>
-      crwdns19265:0crwdne19265:0
+      crwdns19642:0crwdne19642:0
     </p>
     
     <p>
-      crwdns19266:0crwdne19266:0
+      crwdns19643:0crwdne19643:0
     </p>
     
     <p>
-      crwdns19267:0crwdne19267:0 crwdns19268:0crwdne19268:0 crwdns19269:0crwdne19269:0 crwdns19270:0crwdne19270:0 crwdns19271:0crwdne19271:0
+      crwdns19644:0crwdne19644:0 crwdns19645:0crwdne19645:0 crwdns19646:0crwdne19646:0 crwdns19647:0crwdne19647:0 crwdns19648:0crwdne19648:0
     </p>
     
     <p>
-      crwdns19272:0crwdne19272:0
+      crwdns19649:0crwdne19649:0
     </p>
     
     <p>
-      crwdns19273:0crwdne19273:0
+      crwdns19650:0crwdne19650:0
     </p>
     
     <p>
-      crwdns19274:0[DATE]crwdne19274:0
+      crwdns19651:0[DATE]crwdne19651:0
     </p>
     
     <p>
-      crwdns19275:0crwdne19275:0 crwdns19276:0crwdne19276:0
+      crwdns19652:0crwdne19652:0 crwdns19653:0crwdne19653:0
     </p>
     
     <p>
-      crwdns19277:0[TITLE]crwdne19277:0
+      crwdns19654:0[TITLE]crwdne19654:0
     </p>
     
     <p>
-      crwdns19278:0crwdne19278:0
+      crwdns19655:0crwdne19655:0
     </p>
     
     <p>
-      crwdns19279:0crwdne19279:0
+      crwdns19656:0crwdne19656:0
     </p>
     
     <p>
-      crwdns19280:0crwdne19280:0
+      crwdns19657:0crwdne19657:0
     </p>
     
     <p>
@@ -173,39 +200,39 @@ crwdns19232:0crwdne19232:0
     </p>
     
     <h2>
-      crwdns19281:0crwdne19281:0
+      crwdns19658:0crwdne19658:0
     </h2>
     
     <p>
-      crwdns19282:0crwdne19282:0
+      crwdns19659:0crwdne19659:0
     </p>
     
     <p>
-      crwdns19283:0crwdne19283:0 crwdns19284:0crwdne19284:0 crwdns19285:0crwdne19285:0
+      crwdns19660:0crwdne19660:0 crwdns19661:0crwdne19661:0 crwdns19662:0crwdne19662:0
     </p>
     
     <p>
-      crwdns19286:0crwdne19286:0 crwdns19287:0crwdne19287:0 crwdns19288:0crwdne19288:0 crwdns19289:0crwdne19289:0
+      crwdns19663:0crwdne19663:0 crwdns19664:0crwdne19664:0 crwdns19665:0crwdne19665:0 crwdns19666:0crwdne19666:0
     </p>
     
     <p>
-      crwdns19290:0crwdne19290:0 crwdns19291:0crwdne19291:0 crwdns19292:0crwdne19292:0
+      crwdns19667:0crwdne19667:0 crwdns19668:0crwdne19668:0 crwdns19669:0crwdne19669:0
     </p>
     
     <p>
-      crwdns19293:0crwdne19293:0
+      crwdns19670:0crwdne19670:0
     </p>
     
     <p>
-      crwdns19294:0crwdne19294:0
+      crwdns19671:0crwdne19671:0
     </p>
     
     <p>
-      crwdns19295:0crwdne19295:0
+      crwdns19672:0crwdne19672:0
     </p>
     
     <p>
-      crwdns19296:0crwdne19296:0
+      crwdns19673:0crwdne19673:0
     </p>
     
     <p>
@@ -213,29 +240,29 @@ crwdns19232:0crwdne19232:0
     </p>
     
     <h2>
-      crwdns19297:0crwdne19297:0
+      crwdns19674:0crwdne19674:0
     </h2>
     
     <p>
-      crwdns19298:0crwdne19298:0
+      crwdns19675:0crwdne19675:0
     </p>
     
     <p>
-      crwdns19299:0crwdne19299:0 crwdns19300:0crwdne19300:0 crwdns19301:0crwdne19301:0 crwdns19302:0crwdne19302:0
+      crwdns19676:0crwdne19676:0 crwdns19677:0crwdne19677:0 crwdns19678:0crwdne19678:0 crwdns19679:0crwdne19679:0
     </p>
     
     <p>
-      crwdns19303:0crwdne19303:0 crwdns19304:0crwdne19304:0 crwdns19305:0crwdne19305:0 crwdns19306:0crwdne19306:0
+      crwdns19680:0crwdne19680:0 crwdns19681:0crwdne19681:0 crwdns19682:0crwdne19682:0 crwdns19683:0crwdne19683:0
     </p>
     
     <p>
-      crwdns19307:0crwdne19307:0 crwdns19308:0crwdne19308:0 crwdns19309:0crwdne19309:0
+      crwdns19684:0crwdne19684:0 crwdns19685:0crwdne19685:0 crwdns19686:0crwdne19686:0
     </p>
     
     <p>
-      crwdns19310:0crwdne19310:0
+      crwdns19687:0crwdne19687:0
     </p>
     
     <p>
-      crwdns19311:0[NAME]crwdnd19311:0[TITLE]crwdne19311:0
+      crwdns19688:0[NAME]crwdnd19688:0[TITLE]crwdne19688:0
     </p>
