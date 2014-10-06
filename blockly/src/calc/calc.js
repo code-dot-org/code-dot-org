@@ -23,7 +23,7 @@
  */
 'use strict';
 
-window.Calc = module.exports;
+window.calc = module.exports;
 
 /**
  * Create a namespace for the application.
@@ -95,7 +95,6 @@ Calc.init = function(config) {
     assetUrl: BlocklyApps.assetUrl,
     data: {
       localeDirection: BlocklyApps.localeDirection(),
-      controls: require('./controls.html')({assetUrl: BlocklyApps.assetUrl}),
       blockUsed : undefined,
       idealBlockNumber : undefined,
       blockCounterClass : 'block-counter-default'
@@ -417,7 +416,8 @@ Calc.animate = function() {
   Calc.display();
 
   // Scale the speed non-linearly, to give better precision at the fast end.
-  var stepSpeed = 1000 * Math.pow(1 - Calc.speedSlider.getValue(), 2);
+  // var stepSpeed = 1000 * Math.pow(1 - Calc.speedSlider.getValue(), 2);
+  var stepSpeed = 1000;
   Calc.pid = window.setTimeout(Calc.animate, stepSpeed);
 };
 

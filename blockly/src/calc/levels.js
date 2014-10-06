@@ -7,6 +7,7 @@ var blockUtils = require('../block_utils');
 module.exports = {
   // Level 1: El.
   'test': {
+    answer: '',
     ideal: 4,
     toolbox: '',
     startBlocks: '',
