@@ -1,0 +1,439 @@
+<%
+
+var msg = require('../../locale/current/calc');
+// An early hack introduced some levelbuilder levels as page 5, level 7. Long
+// term we can probably do something much cleaner, but for now I'm calling
+// out that this level is special (on page 5).
+var LEVELBUILDER_LEVEL = 7;
+
+/*
+TOOLBOX.
+
+PAGE 1
+======
+Within this page, blocks are only added, never taken away.
+
+Level 1 [el]: Adds draw_move_by_constant and draw_turn_by_constant.
+Level 2 [coloured square]: Adds draw_colour with colour_picker.
+level 3 [square in three blocks]: Adds controls_repeat.
+level 4 [triangle] Adds draw_colour with colour_random.
+Level 5 [overlapping square and triangle (sideways envelope)]
+Level 6 [envelope]
+Level 7 [glasses]
+Level 8 [spikes]
+Level 9 [circle]
+Level 10 [free play]: draw_width_inline
+
+PAGE 2
+======
+Categories are introduced, with contents of:
+- Actions
+  - draw_move with math_number
+  - draw_turn with math_number
+- Color
+  - draw_colour (set colour) with colour_picker
+  - draw_colour (set colour) with colour_random
+- Functions (added at level 2)
+  - [call] draw a square
+  - [call] draw a snowball (added at level 9)
+- Loops
+  - controls_repeat
+  - controls_for (added at level 6)
+- Math
+  - math_number
+- Variables (added at level 6)
+  - get counter (added at level 9)
+  - get height (added at level 7)
+  - get length (levels 6 and 10)
+Level 1 [square]
+Level 2 [square by function call]: add "draw a square"
+Level 3 [3 squares]
+Level 4 [36 squares]
+Level 5 [nested squares without controls_for]
+Level 6 [nested squares with controls_for]
+Level 7 [mini-spiral]
+Level 8 [3 snowmen]: add "draw a snowman"
+Level 9 [snowman family]
+Level 10 [free play]
+
+PAGE 3
+======
+Categories are used, with contents of:
+- Actions
+  - draw_move with math_number
+  - draw_turn with math_number
+- Color
+  - draw_colour (set colour) with colour_picker
+  - draw_colour (set colour) with colour_random
+- Functions (Replaced with custom category at level 2)
+  - [call] draw a circle
+  - [call] draw a square
+- Loops
+  - controls_for
+  - controls_repeat
+- Math
+  - math_number
+- Variables (added at level 6)
+  - get counter
+Variables and functions are manually added until Levels 7 and 8,
+when the custom categories are used
+Level 1 [call "draw a square"]
+Level 2 [create and call "draw a triangle"]
+Level 3 [use "draw a square" and "draw a triangle" to fence animals]
+Level 4 [draw a house]
+Level 5 [create and call "draw a house"]
+Level 6 [add parameter to "draw a triangle"]
+Level 7 [add parameter to "draw a house"]
+Level 8 [modify end location of "create a house"]
+Level 9 [call "draw a house" with for loop]
+Level 10 [free play]
+
+*/ -%>
+<xml id="toolbox" style="display: none;">
+  <% if (page == 1) { -%>
+    <block type="draw_move_by_constant"></block>
+    <block type="draw_turn_by_constant<% if (level <= 8) { %>_restricted<% } %>">
+      <title name="VALUE">90</title>
+    </block>
+    <% if (level >= 2) { -%>
+      <block id="draw-color" type="draw_colour">
+        <value name="COLOUR">
+          <block type="colour_picker"></block>
+        </value>
+      </block>
+    <% } -%>
+    <% if (level >= 4) { /* Out of numeric order to make colour blocks adjacent. */ -%>
+      <block id="draw-color" type="draw_colour">
+        <value name="COLOUR">
+          <block type="colour_random"></block>
+        </value>
+      </block>
+    <% } -%>
+    <% if (level >= 3) { -%>
+      <block type="controls_repeat">
+        <title name="TIMES">4</title>
+      </block>
+    <% } -%>
+    <% if (level == 10) { -%>
+      <block id="draw-width" type="draw_width_inline" x="158" y="67">
+        <title name="WIDTH">1</title>
+      </block>
+    <% } -%>
+  <% } else if (page == 2 || page == 3) { -%>
+    <% // Actions: draw_move, draw_turn. -%>
+    <category id="actions" name="<%= msg.catCalc() %>">
+      <block type="draw_move">
+        <value name="VALUE">
+          <block type="math_number">
+            <title name="NUM">100</title>
+          </block>
+        </value>
+      </block>
+      <% if (page == 2 && level >= 8) { -%>
+        <block type="jump">
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">50</title>
+            </block>
+          </value>
+        </block>
+      <% } -%>
+      <block type="draw_turn">
+        <value name="VALUE">
+          <block type="math_number">
+            <title name="NUM">90</title>
+          </block>
+        </value>
+      </block>
+      <% if (level == 10) { -%>
+        <block id="draw-width" type="draw_width_inline">
+          <title name="WIDTH">1</title>
+        </block>
+      <% } -%>
+    </category>
+    <% // Colour: draw_colour with colour_picker and colour_random. -%>
+    <category name="<%= msg.catColour() %>">
+      <block id="draw-color" type="draw_colour">
+        <value name="COLOUR">
+          <block type="colour_picker"></block>
+        </value>
+      </block>
+      <block id="draw-color" type="draw_colour">
+        <value name="COLOUR">
+          <block type="colour_random"></block>
+        </value>
+      </block>
+    </category>
+    <% // Functions differ depending on page and level. -%>
+    <% if (page == 2 && level >= 2) { -%>
+      <category name="<%= msg.catProcedures() %>">
+        <block type="draw_a_square" inline="true">
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <% if (level >= 8) { -%>
+          <block type="draw_a_snowman" inline="true">
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+          </block>
+        <% } -%>
+      </category>
+    <% } else if (page == 3) { -%>
+      <% if (level == 1) { -%>
+        <% // Don't use custom category yet, since it allows function definition. -%>
+        <category name="<%= msg.catProcedures() %>">
+          <block type="procedures_callnoreturn">
+            <mutation name="<%= msg.drawACircle() %>"></mutation>
+          </block>
+          <block type="procedures_callnoreturn">
+            <mutation name="<%= msg.drawASquare() %>"></mutation>
+          </block>
+        </category>
+      <% } else { %>
+        <category name="<%= msg.catProcedures() %>" custom="PROCEDURE"></category>
+      <% } -%>
+    <% } -%>
+    <% // Control: controls_for_counter (from page 2, level 6) and repeat. -%>
+    <category name="<%= msg.catControl() %>">
+      <% if ((page == 2 && level >= 6) || (page == 3 && level >= 9)) { -%>
+        <block type="controls_for_counter">
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+          <value name="BY">
+            <block type="math_number">
+              <title name="NUM">10</title>
+            </block>
+          </value>
+        </block>
+      <% } -%>
+      <block type="controls_repeat">
+        <title name="TIMES">4</title>
+      </block>
+    </category>
+    <% // Math: Just number blocks until final level. -%>
+    <category name="<%= msg.catMath() %>">
+      <block type="math_number"></block>
+      <% if (level == 10) { -%>
+        <block type="math_arithmetic" inline="true"></block>
+        <block type="math_random_int">
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+        </value>
+      </block>
+      <block type="math_random_float"></block>
+    <% } -%>
+    </category>
+    <% // Variables depends on page and level, although we never use the custom category -%>
+    <% // because we want to offer simplified getters and no setters. -%>
+    <% if (page == 2 && level >= 6) { -%>
+      <category name="<%= msg.catVariables() %>">
+        <block type="variables_get_counter"></block>
+      </category>
+    <% } else if (page == 3 && level >= 6 && level < 10) { -%>
+      <category name="<%= msg.catVariables() %>">
+        <% if (level >= 9) { -%>
+          <block type="variables_get_counter"></block>
+        <% } -%>
+        <% if (level >= 6) { -%>
+          <block type="variables_get_length"></block>
+        <% } -%>
+      </category>
+    <% } else if (page == 3 && level == 10) { -%>
+      <category name="<%= msg.catVariables() %>" custom="VARIABLE">
+      </category>
+    <% } -%>
+  <% } else if (page == 4) { -%>
+    <% // Actions: draw_move, draw_turn. -%>
+    <block type="draw_move_by_constant"></block>
+    <block type="draw_turn_by_constant">
+      <title name="VALUE">90</title>
+    </block>
+    <% if (level == 11) { -%>
+    <block id="draw-width" type="draw_width_inline">
+      <title name="WIDTH">1</title>
+    </block>
+    <% } -%>
+    <% // Colour: draw_colour with colour_picker and colour_random. -%>
+    <block id="draw-color" type="draw_colour">
+      <value name="COLOUR">
+        <block type="colour_picker"></block>
+      </value>
+    </block>
+    <block id="draw-color" type="draw_colour">
+      <value name="COLOUR">
+        <block type="colour_random"></block>
+      </value>
+    </block>
+    <block type="controls_repeat">
+      <title name="TIMES">4</title>
+    </block>
+  <% } else if (page == 5) { -%>
+  <% // K1 simplified blocks for editor: keep in sync with Dashboard artist.rb -%>
+    <% if (level === LEVELBUILDER_LEVEL) { -%>
+      <category name="K1 Simplified">
+        <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="draw_colour_simple"></block>
+        <block type="simple_move_up"></block>
+        <block type="simple_move_down"></block>
+        <block type="simple_move_left"></block>
+        <block type="simple_move_right"></block>
+        <block type="simple_move_up_length"></block>
+        <block type="simple_move_down_length"></block>
+        <block type="simple_move_left_length"></block>
+        <block type="simple_move_right_length"></block>
+        <block type="simple_jump_up"></block>
+        <block type="simple_jump_down"></block>
+        <block type="simple_jump_left"></block>
+        <block type="simple_jump_right"></block>
+      </category>
+    <% } -%>
+    <% // Actions: draw_move, draw_turn. -%>
+    <category id="actions" name="<%= msg.catCalc() %>">
+      <block type="draw_move">
+        <value name="VALUE">
+          <block type="math_number">
+            <title name="NUM">100</title>
+          </block>
+        </value>
+      </block>
+      <block type="jump">
+        <value name="VALUE">
+          <block type="math_number">
+            <title name="NUM">50</title>
+          </block>
+        </value>
+      </block>
+      <block type="draw_turn">
+        <value name="VALUE">
+          <block type="math_number">
+            <title name="NUM">90</title>
+          </block>
+        </value>
+      </block>
+      <block type="draw_pen"></block>
+      <block id="draw-width" type="draw_width_inline">
+        <title name="WIDTH">1</title>
+      </block>
+    </category>
+    <% // Colour: draw_colour with colour_picker and colour_random. -%>
+    <category name="<%= msg.catColour() %>">
+      <block id="draw-color" type="draw_colour">
+        <value name="COLOUR">
+          <block type="colour_picker"></block>
+        </value>
+      </block>
+      <block id="draw-color" type="draw_colour">
+        <value name="COLOUR">
+          <block type="colour_random"></block>
+        </value>
+      </block>
+    </category>
+    <% // Functions -%>
+    <category name="<%= msg.catProcedures() %>" custom="PROCEDURE"></category>
+    <% if (level === LEVELBUILDER_LEVEL) { -%>
+    <category name="Prebuilt">
+      <block type="draw_a_triangle"></block>
+      <block type="draw_a_square_custom"></block>
+      <block type="draw_a_house"></block>
+      <block type="draw_a_flower"></block>
+      <block type="draw_a_snowflake"></block>
+      <block type="draw_a_snowman"></block>
+      <block type="draw_a_hexagon"></block>
+      <block type="draw_a_star"></block>
+      <block type="draw_a_robot"></block>
+      <block type="draw_a_rocket"></block>
+      <block type="draw_a_planet"></block>
+      <block type="draw_a_rhombus"></block>
+      <block type="draw_upper_wave"></block>
+      <block type="draw_lower_wave"></block>
+    </category>
+    <% } -%>
+    <% // Control: controls_for_counter and repeat. -%>
+    <category name="<%= msg.catControl() %>">
+      <block type="controls_for_counter">
+        <value name="FROM">
+          <block type="math_number">
+            <title name="NUM">1</title>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number">
+            <title name="NUM">100</title>
+          </block>
+        </value>
+        <value name="BY">
+          <block type="math_number">
+            <title name="NUM">10</title>
+          </block>
+        </value>
+      </block>
+      <% if (level < 6) { -%>
+        <block type="controls_repeat">
+          <title name="TIMES">4</title>
+        </block>
+      <% } else { -%>
+        <block type="controls_repeat_ext">
+          <value name="TIMES">
+            <block type="math_number">
+              <title name="NUM">10</title>
+            </block>
+          </value>
+        </block>
+      <% } -%>
+    </category>
+  <% // Logic -%>
+    <category name="<%= msg.catLogic() %>">
+      <block type="controls_if"></block>
+      <block type="logic_compare"></block>
+      <block type="logic_operation"></block>
+      <block type="logic_negate"></block>
+      <block type="logic_boolean"></block>
+      <block type="logic_null"></block>
+      <block type="logic_ternary"></block>
+    </category>
+    <% // Math: Just number blocks until final level. -%>
+    <category name="<%= msg.catMath() %>">
+      <block type="math_number"></block>
+      <block type="math_arithmetic" inline="true"></block>
+      <block type="math_random_int">
+        <value name="FROM">
+          <block type="math_number">
+            <title name="NUM">1</title>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number">
+            <title name="NUM">100</title>
+          </block>
+        </value>
+      </block>
+      <block type="math_random_float"></block>
+     </category>
+    <% // Variables -%>
+    <category name="<%= msg.catVariables() %>" custom="VARIABLE">
+    </category>
+  <% } -%>
+</xml>
