@@ -25,8 +25,6 @@ Milestone Complete!
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
 
 #### Save The Dates:
-9/20/2014
-<br />
 11/22/2014
 <br />
 2/7/2015
@@ -37,15 +35,13 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 <br />
 Breakfast and lunch will be served. 
 
-#### Location: ####
-
-**IMPORTANT LOCATION CHANGE **
-
-Constant Contact
+#### November 22nd Location: ####
+Microsoft Technology Center 
 <br />
-1601 Trapelo Road
+1 Memorial Drive 
 <br />
-Waltham, MA 02451
+Cambridge, MA 02142
+
 
 #### What do I bring to Phase 3 PD? ####
 Exploring Computer Science binder with curriculum
@@ -68,22 +64,7 @@ The Administrator / Counselor Phase 1 Professional Development online course [ed
 
 ### Phase 2: Teaching and Learning Studio
 
-#### Dates and Times
-Friday, September 19th
-<br />
-Morning Session: 8:00am - 12:00pm
-<br />
-Afternoon Session: 12:30pm - 4:30pm
-
-Please bring your laptop and review the Phase 1 reflection questions prior to PD.
-
-#### Location
-
-Education Development Center
-<br />
-43 Foundry Ave
-<br />
-Waltham, MA 02453 
+Milestone Complete! 
 
 [**Back to the top**](#top)
 
