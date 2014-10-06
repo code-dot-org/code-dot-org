@@ -947,6 +947,7 @@ Studio.init = function(config) {
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
+  config.insertWhenRun = true;
 
   loadLevel();
 

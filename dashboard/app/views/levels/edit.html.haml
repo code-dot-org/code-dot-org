@@ -3,5 +3,5 @@
 = link_to t('crud.show'), @level
 |
 = link_to t('crud.back'), levels_path
-|
+= '|' unless @level.new_record?
 = link_to t('crud.destroy'), @level, method: :delete, data: { confirm: t('crud.confirm') } unless @level.new_record?

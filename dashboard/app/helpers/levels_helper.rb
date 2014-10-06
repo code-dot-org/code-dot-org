@@ -202,6 +202,11 @@ module LevelsHelper
       protaganist_sprite_index
       timeout_failure_tick
       soft_buttons
+      edge_collisions
+      projectile_collisions
+      allow_sprites_outside_playspace
+      sprites_hidden_to_start
+      free_play
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
