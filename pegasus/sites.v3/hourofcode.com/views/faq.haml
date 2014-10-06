@@ -56,7 +56,7 @@
   %div= hoc_s(:hoc_faq_need_computers_a)
 
   %h2= hoc_s(:hoc_faq_tutorial_q)
-  %div= hoc_s(:hoc_faq_tutorial_a)
+  %div= hoc_s(:hoc_faq_tutorial_a).gsub(/targetHOC/, hoc_uri('/tutorial-guidelines'))
 
 -else 
   %h2#about= hoc_s(:hoc_faq_what_is_hoc_q)
@@ -89,4 +89,4 @@
   %div= hoc_s(:hoc_faq_international_a)
 
   %h2= hoc_s(:hoc_faq_tutorial_q)
-  %div= hoc_s(:hoc_faq_tutorial_a)
+  %div= hoc_s(:hoc_faq_tutorial_a).gsub(/targetHOC/, hoc_uri('/tutorial-guidelines'))
