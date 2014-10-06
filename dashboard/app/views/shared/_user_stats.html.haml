@@ -1,58 +1,58 @@
-- script = @script || (user && user.primary_script) || Script.twenty_hour_script
-- script_levels = user ? user.levels_from_script(script) : script.script_levels.includes(:script, :stage, level: :game)
-- concept_progress = user ? user.concept_progress : nil
+- cache([@script, user || session[:progress]]) do
+  - script = @script || (user && user.primary_script) || Script.twenty_hour_script
+  - script_levels = user ? user.levels_from_script(script) : script.script_levels.includes(:script, :stage, level: :game)
+  - concept_progress = user ? user.concept_progress : nil
 
-.user-stats-block
-  - levels = script_levels.group_by{ |sl| sl.stage ? sl.stage : sl.level.game }
-  - levels.each_pair do |stage_or_game, sl_group|
-    - stage_title = data_t_suffix('script.name', script.name, stage_or_game.name)
-    - game_title = (data_t('game.name', stage_or_game.name) || stage_or_game.name)
-    - color = cycle '#dadada', '#eeeeee'
-    - custom_script = stage_or_game.instance_of? Stage
-    - has_lesson_plan = custom_script && script.k5_course?
-    - should_show_lesson_plan = has_lesson_plan && current_user && current_user.teacher?
-    .game-group{style:"background-color: #{color}"}
-      .stage
-        %span
-          = stage_title + (custom_script ? '' : ': ')
-        - if should_show_lesson_plan
-          .stage-lesson-plan-link
-            = link_to t('view_lesson_plan'), lesson_plan_html_url(stage_or_game)
-        - unless custom_script # Custom script stages don't map to specific games
-          %span.game-title<
-            =game_title
+  .user-stats-block
+    - levels = script_levels.group_by{ |sl| sl.stage ? sl.stage : sl.level.game }
+    - levels.each_pair do |stage_or_game, sl_group|
+      - stage_title = data_t_suffix('script.name', script.name, stage_or_game.name)
+      - game_title = (data_t('game.name', stage_or_game.name) || stage_or_game.name)
+      - color = cycle '#dadada', '#eeeeee'
+      - custom_script = stage_or_game.instance_of? Stage
+      - has_lesson_plan = custom_script && script.k5_course?
+      - should_show_lesson_plan = has_lesson_plan && current_user && current_user.teacher?
+      .game-group{style:"background-color: #{color}"}
+        .stage
+          %span
+            = stage_title + (custom_script ? '' : ': ')
+          - if should_show_lesson_plan
+            .stage-lesson-plan-link
+              = link_to t('view_lesson_plan'), lesson_plan_html_url(stage_or_game)
+          - unless custom_script # Custom script stages don't map to specific games
+            %span.game-title<
+              =game_title
 
-      .games
-        - sl_group = sl_group.sort_by {|sl| sl.stage_or_game_position}
-        - sl_group.each do |sl|
-          .level
-            - passed, link = level_info(user, sl)
-            - if params[:script_level_id] && params[:script_level_id] == sl.level_id.to_s
-              - puzzle_outer_class = 'puzzle_outer_current'
-            - elsif sl.assessment
-              - puzzle_outer_class = 'puzzle_outer_assessment'
-            - else
-              - puzzle_outer_class = 'puzzle_outer_level'
-            %span{class: puzzle_outer_class}
-              %a{ href: link, class: "level_link#{passed ? ' level_link_done' : ''}"}
-                - unplugged = sl.level.unplugged?
-                - if unplugged
-                  %span.puzzle-named
-                    =sl.level_display_text
-                - elsif ! passed
-                  %span.puzzle-number
-                    =sl.level_display_text
-                - if passed
-                  = check_mark_html
-
-            - if current_user.try(:admin?)
-              - if can? :edit, sl.level
-                = link_to(t('crud.edit'), edit_level_path(sl.level), style: 'display: block; width: 30px;', title: sl.level.name)
+        .games
+          - sl_group = sl_group.sort_by {|sl| sl.stage_or_game_position}
+          - sl_group.each do |sl|
+            .level
+              - passed, link = level_info(user, sl)
+              - if sl.assessment
+                - puzzle_outer_class = 'puzzle_outer_assessment'
               - else
-                %span{style: 'display: block; width: 30px;'} &nbsp;
+                - puzzle_outer_class = 'puzzle_outer_level'
+              %span{id: sl.level_id.to_s, class: puzzle_outer_class}
+                %a{ href: link, class: "level_link#{passed ? ' level_link_done' : ''}"}
+                  - unplugged = sl.level.unplugged?
+                  - if unplugged
+                    %span.puzzle-named
+                      =sl.level_display_text
+                  - elsif ! passed
+                    %span.puzzle-number
+                      =sl.level_display_text
+                  - if passed
+                    = check_mark_html
 
--if script.trophies?
-  %div{style:"clear:both"}
-  #trophies
-    =render partial: 'shared/concept_trophy_block', locals: { concept_progress: concept_progress, user: user, added_style: 'padding:10px;' }
+              - if current_user.try(:admin?)
+                - if can? :edit, sl.level
+                  = link_to(t('crud.edit'), edit_level_path(sl.level), style: 'display: block; width: 30px;', title: sl.level.name)
+                - else
+                  %span{style: 'display: block; width: 30px;'} &nbsp;
 
+  -if script.trophies?
+    %div{style:"clear:both"}
+    #trophies
+      =render partial: 'shared/concept_trophy_block', locals: { concept_progress: concept_progress, user: user, added_style: 'padding:10px;' }
+  :javascript
+    $('#' + script_level_id).attr('class', 'puzzle_outer_current');

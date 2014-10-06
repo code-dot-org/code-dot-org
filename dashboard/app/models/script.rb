@@ -287,6 +287,8 @@ class Script < ActiveRecord::Base
     Rake::Task.clear
     Dashboard::Application.load_tasks
     Rake::FileTask['config/scripts/.seeded'].invoke
+    # Ensure cached script data is cleared when server is still running
+    Rails.cache.clear
   end
 
   def self.update_i18n(custom_i18n)

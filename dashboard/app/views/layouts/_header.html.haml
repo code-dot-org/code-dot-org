@@ -151,7 +151,7 @@
     if (!loadedPopup) {
       loadedPopup = true;
       togglePopup();
-      $.ajax({url:'#{header_stats_path()}', data: { script_id: #{script.id}, script_level_id: script_level_id }, success:function(result) {
+      $.ajax({url:'#{header_stats_path()}', data: { script_id: #{script.id}}, success:function(result) {
           $("#headerPopupBody").html(result);
           if (trophiesClicked === true) {
             jumpToTrophies();
