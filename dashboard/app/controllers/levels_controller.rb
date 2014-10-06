@@ -79,9 +79,6 @@ class LevelsController < ApplicationController
   # PATCH/PUT /levels/1
   # PATCH/PUT /levels/1.json
   def update
-    # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
-    params[:level][:soft_buttons].delete_if{ |s| s.empty? } if params[:level][:soft_buttons].is_a? Array
-
     if @level.update(level_params)
       render json: { redirect: level_url(@level) }.to_json
     else
@@ -105,7 +102,7 @@ class LevelsController < ApplicationController
       params[:level][:maze_data][0][0] = 16 # studio must have at least 1 actor
       params[:level][:soft_buttons] = nil
       params[:level][:success_condition] = "function () {\n" \
-        "  // Sample conditions:\n"
+        "  // Sample conditions:\n" \
         "  // return Studio.sprite[0].isCollidingWith(1);\n" \
         "  // return Studio.sayComplete > 0;\n" \
         "  // return Studio.sprite[0].emotion === Emotions.HAPPY;\n" \
@@ -210,6 +207,10 @@ class LevelsController < ApplicationController
         {concept_ids: []},
         {soft_buttons: []}
       ]
+
+      # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
+      params[:level][:soft_buttons].delete_if{ |s| s.empty? } if params[:level][:soft_buttons].is_a? Array
+
       permitted_params.concat(Level.serialized_properties.values.flatten)
       params[:level].permit(permitted_params)
     end
