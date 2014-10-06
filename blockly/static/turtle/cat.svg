@@ -1,1 +1,269 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" version="1"><g><g fill-rule="evenodd" stroke="#000"><path d="M44.333 38.683c-2.556-1.4-4.98-2.398-8.22-3.197-.254-.08-.657-.108-.763-.005-.14.108-.072.564.004.746.7 3.004 1.726 5.618 2.996 8.254l5.983-5.797z" fill="#ffa72a" stroke-width="0.9348000000000001"/><path d="M42.922 39.32c-1.767-1.068-5.608-2.49-5.89-2.167-.41.282 1.397 4.76 2.073 5.89l3.817-3.723z" fill="#ffd5d5"/></g><g fill-rule="evenodd" stroke="#000"><path d="M65.27 38.683c2.556-1.4 4.98-2.398 8.22-3.197.254-.08.657-.108.763-.005.14.108.072.564-.004.746-.7 3.004-1.727 5.618-2.997 8.254l-5.983-5.797z" fill="#ffa72a" stroke-width="0.9348000000000001"/><path d="M66.68 39.32c1.768-1.068 5.61-2.49 5.892-2.167.408.282-1.398 4.76-2.074 5.89L66.68 39.32z" fill="#ffd5d5"/></g><path transform="matrix(.389 0 0 .392 35.29 35.338)" d="M100.258 49.997c0 27.477-22.444 49.75-50.13 49.75C22.444 99.747 0 77.474 0 49.997 0 22.52 22.443.247 50.13.247c27.684 0 50.128 22.274 50.128 49.75z" fill="#ffa72a" stroke="#000" stroke-width="2.5" stroke-linecap="round"/><path d="M54.8 36.126c-4.393.008-7.11.947-9.82 2.757l4.793 5.695 2.536-7.045 2.528 6.96 2.476-6.973s2.504 7.148 2.54 7.047l4.77-5.713c-1.6-1.25-5.198-2.713-9.825-2.728z" fill="#a40" fill-rule="evenodd" stroke="#000" stroke-width="0.3592"/><path d="M35.956 54.95c.007 4.392.947 7.108 2.757 9.82l5.694-4.794-7.045-2.536 6.96-2.53-6.973-2.475s7.147-2.504 7.046-2.54l-5.713-4.77c-1.25 1.6-2.712 5.198-2.727 9.825z" fill="#a40" fill-rule="evenodd" stroke="#000" stroke-width="0.3592"/><path d="M73.798 54.945c-.008-4.39-.967-7.107-2.814-9.817l-5.812 4.79 7.19 2.538-7.103 2.528 7.115 2.476S65.08 59.963 65.183 60l5.83 4.767c1.278-1.6 2.77-5.196 2.785-9.822z" fill="#a40" fill-rule="evenodd" stroke="#000" stroke-width="0.3628"/><g><path d="M42.048 35.003c0 3.853-3.152 6.976-7.04 6.976s-7.04-3.124-7.04-6.977 3.152-6.976 7.04-6.976 7.04 3.123 7.04 6.976z" transform="matrix(.398 0 0 .401 35.877 35.898)" fill="#fff" stroke="#000" stroke-width="1.001" stroke-linecap="round"/><path d="M51.782 49.946c0 1.105-.895 2-1.998 2s-1.997-.895-1.997-2c0-1.104.894-2 1.997-2 1.103 0 1.998.896 1.998 2z"/></g><path transform="matrix(.398 0 0 .401 45.876 35.898)" d="M42.048 35.003c0 3.853-3.152 6.976-7.04 6.976s-7.04-3.124-7.04-6.977 3.152-6.976 7.04-6.976 7.04 3.123 7.04 6.976z" fill="#fff" stroke="#000" stroke-width="1.001" stroke-linecap="round"/><path d="M61.782 49.947c0 1.105-.895 2-1.998 2s-1.997-.895-1.997-2c0-1.104.894-2 1.997-2 1.103 0 1.998.896 1.998 2z"/><path d="M50.956 55.093c-.033-.514 7.69-.53 7.69 0-.614 1.398-1.352 3.67-2.68 3.68l-2.298.02c-1.355-.003-2.12-2.28-2.712-3.7z" fill="#4d4d4d" fill-rule="evenodd" stroke="#000" stroke-width="0.30920000000000003"/><path d="M54.802 58.947v6.113" stroke="#000" stroke-width="1" fill="none"/><path d="M47.26 62.28c2.326 1.584 4.55 2.99 7.583 3.08 2.976-.094 5.144-1.478 7.49-3.09" stroke="#000" stroke-width="0.9199999999999999" stroke-linecap="round" fill="none"/></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="110"
+   height="110"
+   id="svg15051"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.3.1 r9886"
+   version="1.0"
+   sodipodi:docname="Linuxien_Tigre.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs15053" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.21"
+     inkscape:cx="54.800775"
+     inkscape:cy="55.053314"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     width="110px"
+     height="110px"
+     inkscape:window-width="1018"
+     inkscape:window-height="684"
+     inkscape:window-x="65"
+     inkscape:window-y="30"
+     showgrid="false"
+     inkscape:window-maximized="0" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g15077"
+       transform="matrix(0.4,0,0,0.4,20.657619,40.544155)">
+      <g
+         inkscape:export-ydpi="18.9"
+         inkscape:export-xdpi="18.9"
+         inkscape:export-filename="/home/eric/graphique/png/tigre.png"
+         transform="matrix(-1,0,0,1,135.36172,-13.993674)"
+         id="g14030">
+        <path
+           style="fill:#ffa72a;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.33661318;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 76.172134,9.3389133 c 6.391462,-3.4972092 12.449698,-5.99474 20.548944,-7.9924319 0.636205,-0.1971917 1.644214,-0.2701373 1.908613,-0.01176 0.348051,0.2690111 0.179705,1.4077449 -0.0093,1.8631251 C 96.873538,10.707497 94.304589,17.241375 91.130547,23.831693 L 76.172134,9.3389133 z"
+           id="path14032"
+           sodipodi:nodetypes="cccccc"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#ffd5d5;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 79.700634,10.933216 C 84.11863,8.2627832 93.720406,4.7087514 94.427285,5.5138082 95.448333,6.2206875 90.93216,17.412942 89.243504,20.240459 l -9.54287,-9.307243 z"
+           id="path14034"
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         transform="translate(35.35789,-13.993674)"
+         inkscape:export-ydpi="18.9"
+         inkscape:export-xdpi="18.9"
+         inkscape:export-filename="/home/eric/graphique/png/tigre.png"
+         id="g14026">
+        <path
+           style="fill:#ffa72a;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.33661318;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 76.172134,9.3389133 c 6.391462,-3.4972092 12.449698,-5.99474 20.548944,-7.9924319 0.636205,-0.1971917 1.644214,-0.2701373 1.908613,-0.01176 0.348051,0.2690111 0.179705,1.4077449 -0.0093,1.8631251 C 96.873538,10.707497 94.304589,17.241375 91.130547,23.831693 L 76.172134,9.3389133 z"
+           id="path12078"
+           sodipodi:nodetypes="cccccc"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#ffd5d5;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 79.700634,10.933216 C 84.11863,8.2627832 93.720406,4.7087514 94.427285,5.5138082 95.448333,6.2206875 90.93216,17.412942 89.243504,20.240459 l -9.54287,-9.307243 z"
+           id="path13055"
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0" />
+      </g>
+      <path
+         inkscape:export-ydpi="18.9"
+         inkscape:export-xdpi="18.9"
+         inkscape:export-filename="/home/eric/graphique/png/tigre.png"
+         transform="matrix(0.9730737,0,0,0.9804829,36.578854,-13.015317)"
+         d="m 100.25764,49.997448 c 0,27.476173 -22.443439,49.750011 -50.128821,49.750011 C 22.443437,99.747459 0,77.473621 0,49.997448 0,22.521275 22.443437,0.24743652 50.128819,0.24743652 c 27.685382,0 50.128821,22.27383848 50.128821,49.75001148 z"
+         sodipodi:ry="49.750011"
+         sodipodi:rx="50.128819"
+         sodipodi:cy="49.997448"
+         sodipodi:cx="50.128819"
+         id="path9114"
+         style="fill:#ffa72a;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <path
+         inkscape:export-ydpi="18.9"
+         inkscape:export-xdpi="18.9"
+         inkscape:export-filename="/home/eric/graphique/png/tigre.png"
+         sodipodi:nodetypes="ccccccccc"
+         id="path11074"
+         d="m 85.35292,-11.044635 c -10.97982,0.01864 -17.770277,2.3679359 -24.545991,6.8926372 l 11.980538,14.2357758 6.342115,-17.6113017 6.32059,17.3983742 6.191286,-17.4311413 c 0,-2e-7 6.260487,17.8696608 6.350844,17.6166528 L 109.91268,-4.2263695 c -3.9989,-3.1266559 -12.991117,-6.7806715 -24.55976,-6.8182655 z"
+         style="fill:#aa4400;fill-rule:evenodd;stroke:#000000;stroke-width:0.89807713px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="18.9"
+         inkscape:export-xdpi="18.9"
+         inkscape:export-filename="/home/eric/graphique/png/tigre.png"
+         sodipodi:nodetypes="ccccccccc"
+         id="path12066"
+         d="m 38.244724,36.015123 c 0.01864,10.97982 2.367936,17.770277 6.892636,24.54599 L 59.373137,48.580576 41.761835,42.238461 59.160209,35.917871 41.729068,29.726585 c 0,0 17.869661,-6.260487 17.616653,-6.350844 L 45.062989,11.455365 c -3.126655,3.998898 -6.780671,12.991115 -6.818265,24.559758 z"
+         style="fill:#aa4400;fill-rule:evenodd;stroke:#000000;stroke-width:0.89807713px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="18.9"
+         inkscape:export-xdpi="18.9"
+         inkscape:export-filename="/home/eric/graphique/png/tigre.png"
+         sodipodi:nodetypes="ccccccccc"
+         id="path12072"
+         d="m 132.8507,36.001357 c -0.019,-10.977771 -2.41694,-17.766962 -7.03529,-24.541412 l -14.53039,11.978303 17.97578,6.340932 -17.75845,6.319411 17.79189,6.190131 c 0,0 -18.23948,6.259319 -17.98124,6.349659 l 14.57833,11.918153 c 3.19136,-3.998152 6.921,-12.988692 6.95937,-24.555177 z"
+         style="fill:#aa4400;fill-rule:evenodd;stroke:#000000;stroke-width:0.90723807px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <g
+         inkscape:export-ydpi="18.9"
+         inkscape:export-xdpi="18.9"
+         inkscape:export-filename="/home/eric/graphique/png/tigre.png"
+         transform="translate(-51.195565,-15.244223)"
+         id="g14051">
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.00112331;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           id="path8062"
+           sodipodi:cx="35.008099"
+           sodipodi:cy="35.002998"
+           sodipodi:rx="7.0395007"
+           sodipodi:ry="6.976366"
+           d="m 42.047599,35.002998 c 0,3.852941 -3.151692,6.976366 -7.0395,6.976366 -3.887809,0 -7.039501,-3.123425 -7.039501,-6.976366 0,-3.85294 3.151692,-6.976366 7.039501,-6.976366 3.887808,0 7.0395,3.123426 7.0395,6.976366 z"
+           transform="matrix(0.9943886,0,0,1.0033876,89.241802,3.6289746)"
+           inkscape:export-filename="/home/eric/graphique/png/cochon.png"
+           inkscape:export-xdpi="18.9"
+           inkscape:export-ydpi="18.9" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path8408"
+           sodipodi:cx="35.008099"
+           sodipodi:cy="35.097698"
+           sodipodi:rx="5.0191956"
+           sodipodi:ry="4.987628"
+           d="m 40.027294,35.097698 c 0,2.754591 -2.24717,4.987628 -5.019195,4.987628 -2.772026,0 -5.019196,-2.233037 -5.019196,-4.987628 0,-2.754591 2.24717,-4.987628 5.019196,-4.987628 2.772025,0 5.019195,2.233037 5.019195,4.987628 z"
+           transform="matrix(0.9961755,0,0,1.0024806,89.179247,3.5657866)"
+           inkscape:export-filename="/home/eric/graphique/png/cochon.png"
+           inkscape:export-xdpi="18.9"
+           inkscape:export-ydpi="18.9" />
+      </g>
+      <path
+         inkscape:export-ydpi="18.9"
+         inkscape:export-xdpi="18.9"
+         inkscape:export-filename="/home/eric/graphique/png/tigre.png"
+         transform="matrix(0.9943886,0,0,1.0033876,63.046237,-11.615249)"
+         d="m 42.047599,35.002998 c 0,3.852941 -3.151692,6.976366 -7.0395,6.976366 -3.887809,0 -7.039501,-3.123425 -7.039501,-6.976366 0,-3.85294 3.151692,-6.976366 7.039501,-6.976366 3.887808,0 7.0395,3.123426 7.0395,6.976366 z"
+         sodipodi:ry="6.976366"
+         sodipodi:rx="7.0395007"
+         sodipodi:cy="35.002998"
+         sodipodi:cx="35.008099"
+         id="path14055"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.00112331;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <path
+         inkscape:export-ydpi="18.9"
+         inkscape:export-xdpi="18.9"
+         inkscape:export-filename="/home/eric/graphique/png/tigre.png"
+         transform="matrix(0.9961755,0,0,1.0024806,62.983683,-11.678437)"
+         d="m 40.027294,35.097698 c 0,2.754591 -2.24717,4.987628 -5.019195,4.987628 -2.772026,0 -5.019196,-2.233037 -5.019196,-4.987628 0,-2.754591 2.24717,-4.987628 5.019196,-4.987628 2.772025,0 5.019195,2.233037 5.019195,4.987628 z"
+         sodipodi:ry="4.987628"
+         sodipodi:rx="5.0191956"
+         sodipodi:cy="35.097698"
+         sodipodi:cx="35.008099"
+         id="path14057"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         inkscape:export-ydpi="18.9"
+         inkscape:export-xdpi="18.9"
+         inkscape:export-filename="/home/eric/graphique/png/tigre.png"
+         sodipodi:nodetypes="ccccc"
+         id="path14065"
+         d="m 75.744742,36.371601 c -0.08105,-1.285356 19.229873,-1.324305 19.226549,0 -1.534279,3.49607 -3.379454,9.173347 -6.701369,9.202852 l -5.744032,0.04528 c -3.38737,-0.0056 -5.297998,-5.698016 -6.781148,-9.248127 z"
+         style="fill:#4d4d4d;fill-rule:evenodd;stroke:#000000;stroke-width:0.77319598px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="18.9"
+         inkscape:export-xdpi="18.9"
+         inkscape:export-filename="/home/eric/graphique/png/tigre.png"
+         id="path14073"
+         d="m 85.360441,46.006326 0,15.282582"
+         style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="18.9"
+         inkscape:export-xdpi="18.9"
+         inkscape:export-filename="/home/eric/graphique/png/tigre.png"
+         sodipodi:nodetypes="ccc"
+         id="path6430"
+         d="m 66.507844,54.343076 c 5.813047,3.955657 11.373555,7.469373 18.954369,7.700092 7.440715,-0.239601 12.861125,-3.699065 18.723477,-7.726738"
+         style="fill:none;stroke:#000000;stroke-width:2.29990888;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+  <metadata
+     id="metadata3269">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Open Clip Art Library</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title></dc:title>
+        <dc:date>2008-04-10T12:09:03</dc:date>
+        <dc:description>Little tiger of the jungle</dc:description>
+        <dc:source>http://openclipart.org/detail/16291/tigre-by-linuxien</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Linuxien</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>animal</rdf:li>
+            <rdf:li>animal</rdf:li>
+            <rdf:li>cartoon</rdf:li>
+            <rdf:li>cartoon</rdf:li>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>face</rdf:li>
+            <rdf:li>face</rdf:li>
+            <rdf:li>image</rdf:li>
+            <rdf:li>media</rdf:li>
+            <rdf:li>png</rdf:li>
+            <rdf:li>public domain</rdf:li>
+            <rdf:li>smiley</rdf:li>
+            <rdf:li>smiley</rdf:li>
+            <rdf:li>svg</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
