@@ -158,6 +158,15 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
   end
 
+  test "should create studio level" do
+    game = Game.find_by_name("CustomStudio")
+    assert_difference('Level.count') do
+      post :create, :level => { :name => "NewCustomLevel", :type => 'Studio' }, :game_id => game.id, :program => @program
+    end
+
+    assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
+  end
+
   test "should create and destroy custom level with level file" do
     # Enable writing custom level to file for this specific test only
     old_env = ENV.delete 'FORCE_CUSTOM_LEVELS'

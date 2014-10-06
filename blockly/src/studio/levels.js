@@ -110,7 +110,6 @@ levels.custom = {
   },
   'startBlocks': ''
 };
-levels.playlab_test = utils.extend(levels.custom);
 
 // Can you make this dog say "hello world"
 levels.dog_hello = {
