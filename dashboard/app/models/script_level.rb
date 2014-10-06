@@ -63,9 +63,9 @@ class ScriptLevel < ActiveRecord::Base
     I18n.t("data.script.name.#{script.name}.#{stage ? stage.name : level.game.name}")
   end
 
-  def report_bug_url(request)
+  def report_bug_url
     stage_text = stage ? "Stage #{stage.position} " : ' '
-    message = "Bug in Course #{script.name} #{stage_text}Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
+    message = "Bug in Course #{script.name} #{stage_text}Puzzle #{position}"
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
@@ -84,8 +84,10 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def stage_or_game_total
-    stage ? stage.script_levels.count :
-    script.script_levels_from_game(level.game_id).count
+    cache(:stage_or_game_total) do
+      stage ? stage.script_levels.count :
+          script.script_levels_from_game(level.game_id).count
+    end
   end
 
   def self.cache_find(id)

@@ -1,26 +1,28 @@
 module LevelsHelper
 
   def build_script_level_path(script_level)
-    case script_level.script_id
-    when Script::HOC_ID
-      hoc_chapter_path(script_level.chapter)
-    when Script::TWENTY_HOUR_ID
-      script_level_path(script_level.script, script_level)
-    when Script::EDIT_CODE_ID
-      editcode_chapter_path(script_level.chapter)
-    when Script::TWENTY_FOURTEEN_LEVELS_ID
-      twenty_fourteen_chapter_path(script_level.chapter)
-    when Script::BUILDER_ID
-      builder_chapter_path(script_level.chapter)
-    when Script::FLAPPY_ID
-      flappy_chapter_path(script_level.chapter)
-    when Script::JIGSAW_ID
-      jigsaw_chapter_path(script_level.chapter)
-    else
-      if script_level.stage
-        script_stage_script_level_path(script_level.script, script_level.stage, script_level.position)
-      else
-        script_puzzle_path(script_level.script, script_level.chapter)
+    Rails.cache.fetch("#{script_level.cache_key}/build_script_level_path") do
+      case script_level.script_id
+        when Script::HOC_ID
+          hoc_chapter_path(script_level.chapter)
+        when Script::TWENTY_HOUR_ID
+          script_level_path(script_level.script, script_level)
+        when Script::EDIT_CODE_ID
+          editcode_chapter_path(script_level.chapter)
+        when Script::TWENTY_FOURTEEN_LEVELS_ID
+          twenty_fourteen_chapter_path(script_level.chapter)
+        when Script::BUILDER_ID
+          builder_chapter_path(script_level.chapter)
+        when Script::FLAPPY_ID
+          flappy_chapter_path(script_level.chapter)
+        when Script::JIGSAW_ID
+          jigsaw_chapter_path(script_level.chapter)
+        else
+          if script_level.stage
+            script_stage_script_level_path(script_level.script, script_level.stage, script_level.position)
+          else
+            script_puzzle_path(script_level.script, script_level.chapter)
+          end
       end
     end
   end
@@ -67,9 +69,10 @@ module LevelsHelper
 
   def select_and_remember_callouts
     session[:callouts_seen] ||= Set.new()
-    @callouts_to_show = Callout.where(script_level: @script_level)
+    @callouts_to_show = Rails.cache.fetch("#{@script_level}/callouts_to_show") do
+      Callout.where(script_level: @script_level)
       .select(:id, :element_id, :qtip_config, :localization_key)
-      .reject { |c| session[:callouts_seen].include?(c.localization_key) }
+    end.reject { |c| session[:callouts_seen].include?(c.localization_key) }
       .each { |c| session[:callouts_seen].add(c.localization_key) }
     @callouts = make_localized_hash_of_callouts(@callouts_to_show)
   end

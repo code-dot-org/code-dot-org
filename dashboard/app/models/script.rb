@@ -35,16 +35,18 @@ class Script < ActiveRecord::Base
   end
 
   def self.get_from_cache(id)
-    case id
-    when TWENTY_HOUR_ID then twenty_hour_script
-    when HOC_ID then hoc_script
-    else
-      # a bit of trickery so we support both ids which are numbers and
-      # names which are strings that may contain numbers (eg. 2-3)
-      find_by = (id.to_i.to_s == id.to_s) ? :id : :name
-      Script.find_by(find_by => id).tap do |s|
-        raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id}") unless s
-      end
+    script_cache = Rails.cache.fetch('Script.cache') do
+      cache = Script.includes(stages: {script_levels: {stage: [], script: [], level: [:game, :concepts]}}, script_levels: { stage: [], script: [], level: [:game, :concepts]}).all
+      {by_id: cache.index_by(&:id), by_name: cache.index_by(&:name)}
+    end
+    from_cache = script_cache[:by_id][id] || script_cache[:by_name][id]
+    return from_cache if from_cache
+
+    # a bit of trickery so we support both ids which are numbers and
+    # names which are strings that may contain numbers (eg. 2-3)
+    find_by = (id.to_i.to_s == id.to_s) ? :id : :name
+    Script.find_by(find_by => id).tap do |s|
+      raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id}") unless s
     end
   end
 
@@ -104,7 +106,7 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_stage_and_position(stage_position, puzzle_position)
-    self.stages.find_by(position: stage_position).script_levels.find_by(position: puzzle_position)
+    self.stages.detect{|stage|stage.position == stage_position}.script_levels.detect{|sl|sl.position == puzzle_position}
   end
 
   def get_script_level_by_chapter(chapter)

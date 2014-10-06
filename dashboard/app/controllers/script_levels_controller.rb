@@ -79,12 +79,14 @@ private
   end
 
   def load_script_level
-    if params[:chapter]
-      @script_level = @script.get_script_level_by_chapter(params[:chapter])
-    elsif params[:stage_id]
-      @script_level = @script.get_script_level_by_stage_and_position(params[:stage_id], params[:id])
-    else
-      @script_level = @script.get_script_level_by_id(params[:id])
+    @script_level = Rails.cache.fetch("#{params[:chapter]}/#{params[:stage_id]}/#{params[:id]}}") do
+      if params[:chapter]
+        @script_level = @script.get_script_level_by_chapter(params[:chapter])
+      elsif params[:stage_id]
+        @script_level = @script.get_script_level_by_stage_and_position(params[:stage_id].to_i, params[:id].to_i)
+      else
+        @script_level = @script.get_script_level_by_id(params[:id])
+      end
     end
     raise ActiveRecord::RecordNotFound unless @script_level
   end
@@ -95,7 +97,6 @@ private
     @stage = @script_level.stage
 
     set_videos_and_blocks_and_callouts
-
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level)
     @full_width = true
     @fallback_response = {
