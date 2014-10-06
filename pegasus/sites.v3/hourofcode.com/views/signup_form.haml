@@ -70,7 +70,9 @@
 
 :javascript
   $(document).ready(function() {
-    $('#hoc-signup-form select').selectize();
+    $('#hoc-signup-form select').selectize({
+      plugins: ['fast_click']
+    });
 
     $( "#hoc-signup-form" ).submit(function( event ) {
       signupFormSubmit();

@@ -9,6 +9,7 @@ rightbar: blank
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 
 /[if lt IE 9]
@@ -86,7 +87,9 @@ rightbar: blank
 :javascript
 
   $(document).ready(function() {
-    $('#volunteer-translator-form select').selectize();
+    $('#volunteer-translator-form select').selectize({
+      plugins: ['fast_click']
+    });
 
     $('#volunteer-translator-language').change(function() {
       if ($.inArray('Other', $(this).val()) > -1) {
