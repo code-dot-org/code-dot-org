@@ -1,29 +1,30 @@
 * * *
 
-title: Resources
+title: Resources layout: wide
 
-## layout: wide
+* * *
 
 # Rezurse
 
-*   [Handouts to spread the word][1] <br/>
-*   [How-to guide for teachers][2] <br/>
-*   [Posters][3] <br/>
-*   [Videos][4] <br/>
-*   [Sample emails][5] <br/>
-*   [Useful computer science stats][6]   
+  * [How-to guide for teachers](/resources/how-to)   
     
-*   [Press Kit][7]
+  * [Handouts to spread the word](#handouts)   
+    
+  * [Videos](#videos)   
+    
+  * [Posters](#posters)   
+    
+  * [Banners](#banners)   
+    
+  * [Sample emails](#sample-emails)   
+    
+  * [Useful computer science stats](/resources/stats)   
+    
+  * [Press Kit](/resources/press-kit)
 
- [1]: #handouts
- [2]: /resources/how-to
- [3]: #posters
- [4]: #videos
- [5]: #sample-emails
- [6]: /resources/stats
- [7]: /resources/press-kit
+<a id="handouts"></p> 
 
-<a id="handouts"></p> <h2>
+<h2>
   Use this handout to spread the word
 </h2>
 
@@ -40,7 +41,9 @@ title: Resources
 </p>
 
 <p>
-  <a id="videos"></p> <h2>
+  <a id="videos"></p> 
+  
+  <h2>
     Show these videos to inspire students
   </h2>
   
@@ -78,7 +81,9 @@ title: Resources
   </div>
   
   <p>
-    <a id="posters"></p> <h2>
+    <a id="posters"></p> 
+    
+    <h2>
       Hang these posters in your school
     </h2>
     
@@ -91,11 +96,23 @@ title: Resources
     </p>
     
     <p>
+      <a id="banners"></a>
+    </p>
+    
+    <h2>
+      Feature these banners on your website
+    </h2>
+    
+    <p>
+      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code.
+      Send these emails to help promote the Hour of Code
     </h2>
     
     <p>
@@ -124,6 +141,10 @@ title: Resources
     
     <p>
       Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+    </p>
+    
+    <p>
+      <a id="media-pitch"></a>
     </p>
     
     <h2>

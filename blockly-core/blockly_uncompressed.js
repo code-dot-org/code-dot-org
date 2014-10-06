@@ -1169,8 +1169,8 @@ Blockly.BlockSvg = function(block) {
   this.initChildren()
 };
 Blockly.BlockSvg.prototype.initChildren = function() {
-  this.svgPathDark_ = Blockly.createSvgElement("path", {"class":"blocklyPathDark", "transform":"translate(1, 1)"}, this.svgGroup_);
-  this.svgPath_ = Blockly.createSvgElement("path", {"class":"blocklyPath"}, this.svgGroup_);
+  this.svgPathDark_ = Blockly.createSvgElement("path", {"class":"blocklyPathDark", "transform":"translate(1, 1)", "fill-rule":"evenodd"}, this.svgGroup_);
+  this.svgPath_ = Blockly.createSvgElement("path", {"class":"blocklyPath", "fill-rule":"evenodd"}, this.svgGroup_);
   var pattern = this.block_.getFillPattern();
   if(pattern) {
     this.svgPathFill_ = Blockly.createSvgElement("path", {"class":"blocklyPath"}, this.svgGroup_)
@@ -1456,10 +1456,10 @@ Blockly.BlockSvg.prototype.renderCompute_ = function(iconWidth) {
         hasStatement = true;
         titleStatementWidth = Math.max(titleStatementWidth, input.titleWidth)
       }else {
-        if(currentRow.type == Blockly.INPUT_VALUE) {
+        if(currentRow.type === Blockly.INPUT_VALUE || currentRow.type === Blockly.FUNCTIONAL_INPUT) {
           hasValue = true
         }else {
-          if(currentRow.type == Blockly.DUMMY_INPUT) {
+          if(currentRow.type === Blockly.DUMMY_INPUT) {
             hasDummy = true
           }
         }
@@ -1496,7 +1496,7 @@ function thickenInlineRows(inputRows) {
     row.thicker = false;
     if(row.type == BS.INLINE) {
       for(var z = 0, input;input = row[z];z++) {
-        if(input.type == Blockly.INPUT_VALUE) {
+        if(input.type === Blockly.INPUT_VALUE || input.type === Blockly.FUNCTIONAL_INPUT) {
           row.height += 2 * BS.INLINE_PADDING_Y;
           row.thicker = true;
           break
@@ -1508,6 +1508,9 @@ function thickenInlineRows(inputRows) {
 function inputRenderSize(input) {
   var renderHeight = BS.MIN_BLOCK_Y;
   var renderWidth = BS.TAB_WIDTH + BS.SEP_SPACE_X;
+  if(input.type === Blockly.FUNCTIONAL_INPUT) {
+    renderWidth = BS.NOTCH_WIDTH + BS.SEP_SPACE_X
+  }
   if(input.connection && input.connection.targetConnection) {
     var linkedBlock = input.connection.targetBlock();
     var bBox = linkedBlock.getHeightWidth();
@@ -1611,16 +1614,16 @@ Blockly.BlockSvg.prototype.renderDrawRight_ = function(renderInfo, connectionsXY
     if(this.block_.isCollapsed()) {
       this.renderDrawRightCollapsed_(renderInfo, row)
     }else {
-      if(row.type == BS.INLINE) {
+      if(row.type === BS.INLINE) {
         this.renderDrawRightInline_(renderInfo, inputRows, i, connectionsXY)
       }else {
-        if(row.type == Blockly.INPUT_VALUE) {
+        if(row.type === Blockly.INPUT_VALUE || row.type === Blockly.FUNCTIONAL_INPUT) {
           this.renderDrawRightInputValue_(renderInfo, inputRows, i, connectionsXY)
         }else {
-          if(row.type == Blockly.DUMMY_INPUT) {
+          if(row.type === Blockly.DUMMY_INPUT) {
             this.renderDrawRightDummyInput_(renderInfo, inputRows, i)
           }else {
-            if(row.type == Blockly.NEXT_STATEMENT) {
+            if(row.type === Blockly.NEXT_STATEMENT) {
               this.renderDrawRightNextStatement_(renderInfo, inputRows, i, connectionsXY)
             }
           }
@@ -1773,10 +1776,8 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function(renderInfo, inputRo
       titleY += BS.INLINE_PADDING_Y
     }
     renderInfo.curX += this.renderTitles_(input.titleRow, titleX, titleY);
-    if(input.type != Blockly.DUMMY_INPUT) {
-      renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X
-    }
-    if(input.type == Blockly.INPUT_VALUE) {
+    if(input.type === Blockly.INPUT_VALUE) {
+      renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
       renderInfo.inline.push("M", renderInfo.curX - BS.SEP_SPACE_X + "," + (renderInfo.curY + BS.INLINE_PADDING_Y));
       renderInfo.inline.push("h", BS.TAB_WIDTH - input.renderWidth);
       renderInfo.inline.push(BS.TAB_PATH_DOWN);
@@ -1800,6 +1801,29 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function(renderInfo, inputRo
       input.connection.moveTo(connectionX, connectionY);
       if(input.connection.targetConnection) {
         input.connection.tighten_()
+      }
+    }else {
+      if(input.type === Blockly.FUNCTIONAL_INPUT) {
+        var inputTopLeft = {x:renderInfo.curX, y:renderInfo.curY + BS.INLINE_PADDING_Y};
+        var notchStart = BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH;
+        renderInfo.inline.push("M", inputTopLeft.x + "," + inputTopLeft.y);
+        renderInfo.inline.push("h", notchStart);
+        renderInfo.inline.push(BS.NOTCH_PATH_LEFT);
+        renderInfo.inline.push("H", inputTopLeft.x + input.renderWidth);
+        renderInfo.inline.push("v", input.renderHeight);
+        renderInfo.inline.push("H", inputTopLeft.x);
+        renderInfo.inline.push("z");
+        renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
+        connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_WIDTH;
+        connectionY = connectionsXY.y + inputTopLeft.y;
+        input.connection.moveTo(connectionX, connectionY);
+        if(input.connection.targetConnection) {
+          input.connection.tighten_()
+        }
+      }else {
+        if(input.type != Blockly.DUMMY_INPUT) {
+          renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X
+        }
       }
     }
   }
@@ -2486,7 +2510,7 @@ Blockly.Xml.blockToDom_ = function(block, ignoreChildBlocks) {
     commentElement.setAttribute("w", hw.width);
     element.appendChild(commentElement)
   }
-  var hasValues = false;
+  var setInlineAttribute = false;
   for(var i = 0, input;input = block.inputList[i];i++) {
     var container;
     var empty = true;
@@ -2495,13 +2519,19 @@ Blockly.Xml.blockToDom_ = function(block, ignoreChildBlocks) {
     }else {
       var ignoreChild = false;
       var childBlock = input.connection.targetBlock();
-      if(input.type == Blockly.INPUT_VALUE) {
+      if(input.type === Blockly.INPUT_VALUE) {
         container = goog.dom.createDom("value");
-        hasValues = true
+        setInlineAttribute = true
       }else {
-        if(input.type == Blockly.NEXT_STATEMENT) {
+        if(input.type === Blockly.NEXT_STATEMENT) {
           container = goog.dom.createDom("statement");
           ignoreChild = ignoreChildBlocks
+        }else {
+          if(input.type === Blockly.FUNCTIONAL_INPUT) {
+            container = goog.dom.createDom("functional_input");
+            ignoreChild = ignoreChildBlocks;
+            setInlineAttribute = true
+          }
         }
       }
       if(childBlock && !ignoreChild) {
@@ -2514,7 +2544,7 @@ Blockly.Xml.blockToDom_ = function(block, ignoreChildBlocks) {
       element.appendChild(container)
     }
   }
-  if(hasValues) {
+  if(setInlineAttribute) {
     element.setAttribute("inline", block.inputsInline)
   }
   if(block.isCollapsed()) {
@@ -2656,6 +2686,8 @@ Blockly.Xml.domToBlock_ = function(workspace, xmlBlock) {
       case "value":
       ;
       case "statement":
+      ;
+      case "functional_input":
         input = block.getInput(name);
         if(!input) {
           throw"Input does not exist: " + name;
@@ -2663,7 +2695,8 @@ Blockly.Xml.domToBlock_ = function(workspace, xmlBlock) {
         if(firstRealGrandchild && firstRealGrandchild.nodeName.toLowerCase() == "block") {
           blockChild = Blockly.Xml.domToBlock_(workspace, firstRealGrandchild);
           if(blockChild.outputConnection) {
-            input.connection.connect(blockChild.outputConnection)
+            input.connection.connect(blockChild.outputConnection);
+            renderBlock = blockChild
           }else {
             if(blockChild.previousConnection) {
               input.connection.connect(blockChild.previousConnection)
@@ -12834,7 +12867,7 @@ Blockly.Connection.prototype.dispose = function() {
   }
 };
 Blockly.Connection.prototype.isSuperior = function() {
-  return this.type == Blockly.INPUT_VALUE || this.type == Blockly.NEXT_STATEMENT
+  return this.type === Blockly.INPUT_VALUE || (this.type === Blockly.NEXT_STATEMENT || this.type === Blockly.FUNCTIONAL_INPUT)
 };
 Blockly.Connection.prototype.connect = function(otherConnection) {
   if(this.sourceBlock_ == otherConnection.sourceBlock_) {
@@ -12846,7 +12879,7 @@ Blockly.Connection.prototype.connect = function(otherConnection) {
   if(Blockly.OPPOSITE_TYPE[this.type] != otherConnection.type) {
     throw"Attempt to connect incompatible types.";
   }
-  if(this.type == Blockly.INPUT_VALUE || this.type == Blockly.OUTPUT_VALUE) {
+  if(this.type === Blockly.INPUT_VALUE || (this.type === Blockly.OUTPUT_VALUE || (this.type === Blockly.FUNCTIONAL_INPUT || this.type === Blockly.FUNCTIONAL_OUTPUT))) {
     if(this.targetConnection) {
       throw"Source connection already connected (value).";
     }else {
@@ -13017,7 +13050,7 @@ Blockly.Connection.prototype.moveBy = function(dx, dy) {
 };
 Blockly.Connection.prototype.highlight = function() {
   var steps;
-  if(this.type == Blockly.INPUT_VALUE || this.type == Blockly.OUTPUT_VALUE) {
+  if(this.type === Blockly.INPUT_VALUE || (this.type === Blockly.OUTPUT_VALUE || this.type === Blockly.FUNCTIONAL_OUTPUT)) {
     var tabWidth = Blockly.RTL ? -Blockly.BlockSvg.TAB_WIDTH : Blockly.BlockSvg.TAB_WIDTH;
     steps = "m 0,0 v 5 c 0,10 " + -tabWidth + ",-8 " + -tabWidth + ",7.5 s " + tabWidth + ",-2.5 " + tabWidth + ",7.5 v 5"
   }else {
@@ -13085,7 +13118,7 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
   }
   function checkConnection_(yIndex) {
     var connection = db[yIndex];
-    if(connection.type == Blockly.OUTPUT_VALUE || connection.type == Blockly.PREVIOUS_STATEMENT) {
+    if(connection.type === Blockly.OUTPUT_VALUE || (connection.type === Blockly.FUNCTIONAL_OUTPUT || connection.type === Blockly.PREVIOUS_STATEMENT)) {
       if(connection.targetConnection) {
         return true
       }
@@ -13302,6 +13335,8 @@ Blockly.ConnectionDB.init = function(workspace) {
   dbList[Blockly.OUTPUT_VALUE] = new Blockly.ConnectionDB;
   dbList[Blockly.NEXT_STATEMENT] = new Blockly.ConnectionDB;
   dbList[Blockly.PREVIOUS_STATEMENT] = new Blockly.ConnectionDB;
+  dbList[Blockly.FUNCTIONAL_INPUT] = new Blockly.ConnectionDB;
+  dbList[Blockly.FUNCTIONAL_OUTPUT] = new Blockly.ConnectionDB;
   workspace.connectionDBList = dbList
 };
 goog.provide("Blockly.Blocks");
@@ -14603,7 +14638,7 @@ Blockly.Block.prototype.setFieldConfig = function(fieldName, configString) {
 Blockly.Block.prototype.setTooltip = function(newTip) {
   this.tooltip = newTip
 };
-Blockly.Block.prototype.setPreviousStatement = function(newBoolean, opt_check) {
+Blockly.Block.prototype.setPreviousStatement = function(hasPrevious, opt_check) {
   if(this.previousConnection) {
     if(this.previousConnection.targetConnection) {
       throw"Must disconnect previous statement before removing connection.";
@@ -14611,7 +14646,7 @@ Blockly.Block.prototype.setPreviousStatement = function(newBoolean, opt_check) {
     this.previousConnection.dispose();
     this.previousConnection = null
   }
-  if(newBoolean) {
+  if(hasPrevious) {
     if(this.outputConnection) {
       throw"Remove output connection prior to adding previous connection.";
     }
@@ -14626,7 +14661,7 @@ Blockly.Block.prototype.setPreviousStatement = function(newBoolean, opt_check) {
     this.bumpNeighbours_()
   }
 };
-Blockly.Block.prototype.setNextStatement = function(newBoolean, opt_check) {
+Blockly.Block.prototype.setNextStatement = function(hasNext, opt_check) {
   if(this.nextConnection) {
     if(this.nextConnection.targetConnection) {
       throw"Must disconnect next statement before removing connection.";
@@ -14634,7 +14669,7 @@ Blockly.Block.prototype.setNextStatement = function(newBoolean, opt_check) {
     this.nextConnection.dispose();
     this.nextConnection = null
   }
-  if(newBoolean) {
+  if(hasNext) {
     if(opt_check === undefined) {
       opt_check = null
     }
@@ -14646,7 +14681,7 @@ Blockly.Block.prototype.setNextStatement = function(newBoolean, opt_check) {
     this.bumpNeighbours_()
   }
 };
-Blockly.Block.prototype.setOutput = function(newBoolean, opt_check) {
+Blockly.Block.prototype.setOutput = function(hasOutput, opt_check) {
   if(this.outputConnection) {
     if(this.outputConnection.targetConnection) {
       throw"Must disconnect output value before removing connection.";
@@ -14654,7 +14689,7 @@ Blockly.Block.prototype.setOutput = function(newBoolean, opt_check) {
     this.outputConnection.dispose();
     this.outputConnection = null
   }
-  if(newBoolean) {
+  if(hasOutput) {
     if(this.previousConnection) {
       throw"Remove previous connection prior to adding output connection.";
     }
@@ -14669,8 +14704,31 @@ Blockly.Block.prototype.setOutput = function(newBoolean, opt_check) {
     this.bumpNeighbours_()
   }
 };
-Blockly.Block.prototype.setInputsInline = function(newBoolean) {
-  this.inputsInline = newBoolean;
+Blockly.Block.prototype.setFunctionalOutput = function(hasOutput, opt_check) {
+  if(this.previousConnection) {
+    if(this.previousConnection.targetConnection) {
+      throw"Must disconnect output value before removing connection.";
+    }
+    this.previousConnection.dispose();
+    this.previousConnection = null
+  }
+  if(hasOutput) {
+    if(this.previousConnection) {
+      throw"Remove previous connection prior to adding output connection.";
+    }
+    if(opt_check === undefined) {
+      opt_check = null
+    }
+    this.previousConnection = new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
+    this.previousConnection.setCheck(opt_check)
+  }
+  if(this.rendered) {
+    this.render();
+    this.bumpNeighbours_()
+  }
+};
+Blockly.Block.prototype.setInputsInline = function(inputsInline) {
+  this.inputsInline = inputsInline;
   if(this.rendered) {
     this.render();
     this.bumpNeighbours_();
@@ -14761,6 +14819,9 @@ Blockly.Block.prototype.appendStatementInput = function(name) {
 Blockly.Block.prototype.appendDummyInput = function(opt_name) {
   return this.appendInput_(Blockly.DUMMY_INPUT, opt_name || "")
 };
+Blockly.Block.prototype.appendFunctionalInput = function(name) {
+  return this.appendInput_(Blockly.FUNCTIONAL_INPUT, name)
+};
 Blockly.Block.prototype.interpolateMsg = function(msg, var_args) {
   goog.asserts.assertString(msg);
   var dummyAlign = arguments.length - 1;
@@ -14788,7 +14849,7 @@ Blockly.Block.prototype.interpolateMsg = function(msg, var_args) {
 };
 Blockly.Block.prototype.appendInput_ = function(type, name) {
   var connection = null;
-  if(type == Blockly.INPUT_VALUE || type == Blockly.NEXT_STATEMENT) {
+  if(type === Blockly.INPUT_VALUE || (type === Blockly.NEXT_STATEMENT || type === Blockly.FUNCTIONAL_INPUT)) {
     connection = new Blockly.Connection(this, type)
   }
   var input = new Blockly.Input(type, name, this, connection);
@@ -20668,6 +20729,8 @@ Blockly.OUTPUT_VALUE = 2;
 Blockly.NEXT_STATEMENT = 3;
 Blockly.PREVIOUS_STATEMENT = 4;
 Blockly.DUMMY_INPUT = 5;
+Blockly.FUNCTIONAL_INPUT = 6;
+Blockly.FUNCTIONAL_OUTPUT = 7;
 Blockly.ALIGN_LEFT = -1;
 Blockly.ALIGN_CENTRE = 0;
 Blockly.ALIGN_RIGHT = 1;
@@ -20676,6 +20739,8 @@ Blockly.OPPOSITE_TYPE[Blockly.INPUT_VALUE] = Blockly.OUTPUT_VALUE;
 Blockly.OPPOSITE_TYPE[Blockly.OUTPUT_VALUE] = Blockly.INPUT_VALUE;
 Blockly.OPPOSITE_TYPE[Blockly.NEXT_STATEMENT] = Blockly.PREVIOUS_STATEMENT;
 Blockly.OPPOSITE_TYPE[Blockly.PREVIOUS_STATEMENT] = Blockly.NEXT_STATEMENT;
+Blockly.OPPOSITE_TYPE[Blockly.FUNCTIONAL_INPUT] = Blockly.FUNCTIONAL_OUTPUT;
+Blockly.OPPOSITE_TYPE[Blockly.FUNCTIONAL_OUTPUT] = Blockly.FUNCTIONAL_INPUT;
 Blockly.SOUNDS_ = {};
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 if(window.AudioContext) {

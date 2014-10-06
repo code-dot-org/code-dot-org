@@ -1,6 +1,8 @@
 * * *
 
-## layout: wide
+layout: wide
+
+* * *
 
 # Premii - termeni și condiții
 
@@ -20,8 +22,6 @@ Premiu limitat numai pentru şcoli K-12 din Statele Unite. Pentru a te califica,
 
 ## Class-set of laptops (or $10,000 for other technology):
 
-Premiu limitat la şcoli publice K-12 SUA. De ce numai scolile publice? [A se vedea răspunsul aici][1]. Pentru a te califica, trebuie să se înregistreze pentru Hour of Code întreaga şcoală până în 14 noiembrie 2014. O şcoală în fiecare stat al SUA va primi un set de computere pentru clasă. Code.org va selecta şi notifica câştigătorii prin email până la 1 decembrie 2014.
-
- [1]: http://www.hourofcode.com/us#faq
+Premiu limitat la şcoli publice K-12 SUA. De ce numai scolile publice? [A se vedea răspunsul aici](http://www.hourofcode.com/us#faq). Pentru a te califica, trebuie să se înregistreze pentru Hour of Code întreaga şcoală până în 14 noiembrie 2014. O şcoală în fiecare stat al SUA va primi un set de computere pentru clasă. Code.org va selecta şi notifica câştigătorii prin email până la 1 decembrie 2014.
 
 <% end %>

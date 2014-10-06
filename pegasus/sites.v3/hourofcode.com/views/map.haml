@@ -7,8 +7,9 @@
   
 .row
   .col-xs-1.hidden-sm
-  .col-xs-10.col-sm-12
+  .col-xs-10.col-sm-12{style: "position:relative"}
     #gmap{style: 'height: 500px; padding: 3px; border: 3px solid #ddd;'}
+    #cover{style: "position:absolute; top:0; left:0; width:100%; height:500px", onclick: "$(this).remove()"}
 
 :javascript
   var gmap;

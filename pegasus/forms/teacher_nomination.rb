@@ -17,6 +17,7 @@ class TeacherNomination
 
   def self.receipt()
     'teacher_nomination_notice'
+    'teacher_nomination_notice_2'
   end
 
 end
