@@ -26,6 +26,7 @@ class Studio < Maze
 
   def common_blocks(type)
     <<-XML.chomp
+<block type="when_run"></block>
 <block type="studio_setSprite"><title name="VALUE">"witch"</title></block>
 <block type="studio_setBackground">
   <title name="VALUE">"cave"</title>
@@ -45,7 +46,7 @@ class Studio < Maze
 </block>
 <block type="studio_moveDistance">
   <title name="DIR">1</title>
-  <title name="DISTANCE">25</title>
+  #{'<title name="DISTANCE">???</title>' if type == 'required_blocks'}
 </block>
 <block type="studio_stop"></block>
 <block type="studio_wait">
