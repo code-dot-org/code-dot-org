@@ -70,9 +70,11 @@ The Administrator / Counselor Phase 1 Professional Development online course [ed
 
 ### Phase 2: Teaching and Learning Studio
 
-Thursday, October 9th
+*Important Date Change*
+
+**Friday, October 10th**
 <br />
-8:30am - 12:30pm 
+8:30am - 12:30pm
 <br />
 
 Light breakfast and coffee will be served. 
