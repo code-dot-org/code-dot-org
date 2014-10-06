@@ -1499,6 +1499,15 @@ Blockly.Block.prototype.setOutput = function(newBoolean, opt_check) {
   }
 };
 
+/**
+ * Set whether this is a functional block that returns a value. Currently this
+ * will be displayed as previous connection that will only connect with
+ * functional inputs
+ * @param {boolean} newBoolean True if there is an output.
+ * @param {string|Array.<string>|null} opt_check Returned type or list of
+ *     returned types.  Null or undefined if any type could be returned
+ *     (e.g. variable get).
+ */
 Blockly.Block.prototype.setFunctionalOutput = function(newBoolean, opt_check) {
   if (this.previousConnection) {
     if (this.previousConnection.targetConnection) {
@@ -1674,6 +1683,14 @@ Blockly.Block.prototype.appendDummyInput = function(opt_name) {
   return this.appendInput_(Blockly.DUMMY_INPUT, opt_name || '');
 };
 
+/**
+ * Shortcut for appending a functional input. Functional inputs are displayed
+ * similarly to value inputs, but with a notch similar to previous/next
+ * connections instead of the tab on the left.
+ * @param {string} opt_name Language-neutral identifier which may used to find
+ *     this input again.  Should be unique to this block.
+ * @return {!Blockly.Input} The input object created.
+ */
 Blockly.Block.prototype.appendFunctionalInput = function(name) {
   return this.appendInput_(Blockly.FUNCTIONAL_INPUT, name);
 };
