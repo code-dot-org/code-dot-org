@@ -1,27 +1,14 @@
 ---
 title: Ресурси
 layout: wide
+nav: resources_nav
 ---
 
 # Ресурси
 
-*   [Handouts to spread the word][1] <br/>
-*   [How-to guide for teachers][2] <br/>
-*   [Posters][3] <br/>
-*   [Videos][4] <br/>
-*   [Sample emails][5] <br/>
-*   [Useful computer science stats][6]   
-*   [Press Kit][7]
+<a id="handouts"></p> 
 
- [1]: #handouts
- [2]: /resources/how-to
- [3]: #posters
- [4]: #videos
- [5]: #sample-emails
- [6]: /resources/stats
- [7]: /resources/press-kit
-
-<a id="handouts"></p> <h2>
+<h2>
   Поширюйте інформацію у цьому буклеті
 </h2>
 
@@ -30,7 +17,7 @@ layout: wide
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Передайте цю роздруківку вчителям та школам
 </h2>
 
 <p>
@@ -38,20 +25,22 @@ layout: wide
 </p>
 
 <p>
-  <a id="videos"></p> <h2>
-    Show these videos to inspire students
+  <a id="videos"></p> 
+  
+  <h2>
+    Покажіть ці відео, щоб надихнути учнів
   </h2>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
     <p>
-      <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
       <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Те, чому не вчать у більшості шкіл (5 хв)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
     <p>
-      <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
       <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Настала Година коду - навчитись може кожен</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
@@ -60,15 +49,15 @@ layout: wide
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
     <p>
-      <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
       <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Президент Обама про інформатику</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
     <p>
-      <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
       <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Навчитись може кожен (1 хв)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
@@ -80,16 +69,34 @@ layout: wide
   </div>
   
   <p>
-    <a id="posters"></p> <h2>
-      Hang these posters in your school
+    <a id="posters"></p> 
+    
+    <h2>
+      Повісьте плакати у школі
     </h2>
+    
+    <p>
+      <% if @country == 'us' %>
+    </p>
     
     <h4>
       <a href="http://hourofcode.com/us#signup">Зареєструйте</a> свої заходи Години коду і ми надішлемо безкоштовні плакати.
     </h4>
     
     <p>
-      <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+    </p>
+    
+    <p>
+      <a id="banners"></a>
+    </p>
+    
+    <h2>
+      Розмістіть банери на своєму сайті
+    </h2>
+    
+    <p>
+      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -97,7 +104,7 @@ layout: wide
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code.
+      Розішліть ці листи, щоб поширити інформацію про Годину коду
     </h2>
     
     <p>
@@ -105,7 +112,7 @@ layout: wide
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Запросіть підписатись свою школу, працедавця чи друзів:
     </h2>
     
     <p>
@@ -128,8 +135,12 @@ layout: wide
       Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
     </p>
     
+    <p>
+      <a id="media-pitch"></a>
+    </p>
+    
     <h2>
-      Invite media to attend your event:
+      Запросіть ЗМІ на свій захід:
     </h2>
     
     <p>
@@ -181,7 +192,7 @@ layout: wide
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Повідомте батьків про заходи у вашій школі:
     </h2>
     
     <p>
@@ -221,7 +232,7 @@ layout: wide
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Запросіть місцевих політиків на захід у Вашій школі:
     </h2>
     
     <p>
