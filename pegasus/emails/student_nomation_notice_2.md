@@ -1,6 +1,6 @@
 ---
 from: '"Pegasus (Code.org)" <pegasus@code.org>'
-to: '"Roxanne Emadi" <roxanne@code.org>'
+to: '"Kayla Jedele" <kayla.jedele@code.org>'
 subject: Student Nominated
 ---
 ## Student Nominated
