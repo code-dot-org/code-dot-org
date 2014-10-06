@@ -37,7 +37,6 @@ module Pegasus
         $log.warn message
       else
         $log.debug message
-        $log.debug 'HTTP_USER_AGENT: ' + request.env['HTTP_USER_AGENT']
       end
     end
 
