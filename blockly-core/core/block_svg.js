@@ -747,7 +747,6 @@ function thickenInlineRows (inputRows) {
     row.thicker = false;
     if (row.type == BS.INLINE) {
       for (var z = 0, input; input = row[z]; z++) {
-        // todo (brent) - necessary for FUNCTIONAL_INPUT?
         if (input.type === Blockly.INPUT_VALUE ||
           input.type === Blockly.FUNCTIONAL_INPUT) {
           row.height += 2 * BS.INLINE_PADDING_Y;
