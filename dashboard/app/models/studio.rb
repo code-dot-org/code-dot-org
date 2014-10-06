@@ -6,6 +6,11 @@ class Studio < Maze
     failure_condition
     timeout_failure_tick
     soft_buttons
+    edge_collisions
+    projectile_collisions
+    allow_sprites_outside_playspace
+    sprites_hidden_to_start
+    free_play
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -20,7 +25,6 @@ class Studio < Maze
   end
 
   def common_blocks(type)
-    # TODO: k1_blocks
     <<-XML.chomp
 <block type="studio_setSprite"><title name="VALUE">"witch"</title></block>
 <block type="studio_setBackground">
@@ -30,10 +34,7 @@ class Studio < Maze
   <title name="VALUE">up</title>
 </block>
 <block type="studio_whenSpriteClicked"></block>
-<block type="studio_whenSpriteCollided">
-  <title name="SPRITE1">0</title>
-  <title name="SPRITE2">1</title>
-</block>
+<block type="studio_whenSpriteCollided"></block>
 <block type="studio_repeatForever"></block>
 <block type="studio_showTitleScreen">
   <title name="TITLE">type title here</title>
@@ -53,9 +54,7 @@ class Studio < Maze
 <block type="studio_playSound">
   <title name="SOUND">hit</title>
 </block>
-<block type="studio_changeScore">
-  <title name="VALUE">1</title>
-</block>
+<block type="studio_changeScore"></block>
 <block type="studio_saySprite">
   <title name="TEXT">type here</title>
 </block>
@@ -77,6 +76,17 @@ class Studio < Maze
   <title name="VALUE">0</title>
 </block>
 <block type="studio_vanish"></block>
+#{k1_blocks(type) if is_k1 == 'true'}
+    XML
+  end
+
+  # Other K1 blocks are just variants of common_blocks, but display differently when is_k1 is set
+  def k1_blocks(type)
+    <<-XML.chomp
+<block type="studio_moveNorthDistance"></block>
+<block type="studio_moveEastDistance"></block>
+<block type="studio_moveSouthDistance"></block>
+<block type="studio_moveWestDistance"></block>
     XML
   end
 

@@ -19,7 +19,7 @@
   %p Optional JavaScript function to run every tick. If the function ever return true, the level immediately fails.
   = f.text_area :failure_condition, rows: 4
 .field
-  = f.label :soft_buttons, 'Controls Buttons'
+  = f.label :soft_buttons, 'Controls buttons'
   %p
     Select
     %a.select_all{href: '#'} all
@@ -27,6 +27,21 @@
     %a.select_none{href: '#'} none
     (shift-click or cmd-click to select multiple). Arrow buttons to display below the game canvas.
   = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
+.field
+  = f.label :edge_collisions, 'Edge collisions'
+  = boolean_check_box f, :edge_collisions
+.field
+  = f.label :projectile_collisions, 'Projectile collisions'
+  = boolean_check_box f, :projectile_collisions
+.field
+  = f.label :allow_sprites_outside_playspace, 'Allow sprites outside playspace'
+  = boolean_check_box f, :allow_sprites_outside_playspace
+.field
+  = f.label :sprites_hidden_to_start, 'Spires hidden to start'
+  = boolean_check_box f, :sprites_hidden_to_start
+.field
+  = f.label :free_play, 'Free Play'
+  = boolean_check_box f, :free_play
 
 :javascript
   CodeMirror.fromTextArea($('#level_success_condition').get(0), {

@@ -97,7 +97,10 @@ class LevelsController < ApplicationController
 
     # Set some defaults.
     params[:level].reverse_merge!(skin: type_class.skins.first) if type_class <= Blockly
-    params[:level][:maze_data] = Array.new(8){Array.new(8){0}} if type_class <= Maze
+    if type_class <= Maze
+      params[:level][:maze_data] = Array.new(8){Array.new(8){0}}
+      params[:level][:maze_data][0][0] = 16
+    end
     if type_class <= Studio
       params[:level][:maze_data][0][0] = 16 # studio must have at least 1 actor
       params[:level][:soft_buttons] = nil

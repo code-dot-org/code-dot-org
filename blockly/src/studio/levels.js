@@ -108,8 +108,7 @@ levels.custom = {
   'scale': {
     'snapRadius': 2
   },
-  'startBlocks':
-   '<block type="when_run" deletable="false" x="20" y="20"></block>'
+  'startBlocks': ''
 };
 levels.playlab_test = utils.extend(levels.custom);
 
