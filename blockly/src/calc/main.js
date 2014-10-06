@@ -1,11 +1,11 @@
 var appMain = require('../appMain');
-window.Calc = require('./calc');
+window.calc = require('./calc');
 var blocks = require('./blocks');
 var skins = require('../skins');
 var levels = require('./levels');
 
-window.CalcMain = function(options) {
+window.calcMain = function(options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
-  appMain(window.Calc, levels, options);
+  appMain(window.calc, levels, options);
 };
