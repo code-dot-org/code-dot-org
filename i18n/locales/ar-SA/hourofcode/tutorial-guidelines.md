@@ -6,13 +6,13 @@ layout: wide
 
 # المبادئ التوجيهية للدروس التعليمية لحدث "ساعة البرمجة والأسبوع التعليمي لعلوم الحاسب"
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
+موقع Code.org سيحتوي على مجموعة من الانشطة المستمدة من مواقع Code.org، ساعة البرمجة و CSEdWeek. القائمة الحالية موجودة بهذا الرابط <http://code.org/learn>.
 
 بودنا أن تستضيف مجموعة متنوعة من الخيارات، ولكن الهدف الأساسي هو تحسين الخبرة للطلاب والمدرسين المبتدئين في مجال علوم الحاسوب. الرجاء استخدام هذه الوثيقة كدليل لإنشاء النشاط الخاص بك، هذا النشاط موجه للمستخدم الذي ليست لديه أي معرفة في البرمجة وعلوم الكمبيوتر.
 
 <a id="top"></a>
 
-## Index:
+## الفهرس:
 
   * [كيف سيتم تقييم الانشطة للإدراج](#inclusion)
   * [مبادئ توجيهية عامة لإنشاء نشاط لساعة البرمجة](#guidelines)
@@ -35,10 +35,10 @@ Code.org will host a variety of Hour of Code activities on the Code.org, Hour of
   * ذات توجيه ذاتي، لا تتطلب أي تعليمات
   * مصممة للمبتدئين
   * صممت كنشاط تدوم مدته ~ 1 ساعة
-  * work across many OS/device platforms, including mobile and tablets
-  * work across multiple languages
-  * promote learning by all demographic groups (esp under-represented groups)
-  * not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
+  * العمل عبر العديد من انظمة التشغيل و الاجهزة المحمولة، بما في ذلك الهواتف الجوالة و اللوحات الرقمية
+  * متوفربلغات متعددة
+  * تعزيز التعلم للجميع ( بما في ذلك الاقليات)
+  * ليست مركزة على تصميم مواقع الانترنت فقط باستعمال HTML و CSS (أن هدفنا هو علوم الحاسوب ، ليس فقط برمجة إتش تي أم ال HTML)
 
 **ترتيب الانشطة سيكون اقل اذا:**
 
@@ -73,13 +73,13 @@ Code.org will host a variety of Hour of Code activities on the Code.org, Hour of
 
   * **الموضوع:** مقدمة في علوم الحاسوب و البرمجة (ليس نشاط إتش تي أم ال).
   * **الهدف:** إعطاء المبتدئين الفرصة لتذوق البرمجة للمرة الاولى.
-  * **Tone:** 
+  * **الاسلوب:** 
       * علوم الحاسوب ليس فقط للعباقرة. لا يهم عمرك او جنسك اوعرقك. يمكن لأي شخص أن يتعلم!
       * علوم الحاسوب مرتبطة بمجموعة متنوعة من حقول المعرفة. وينبغي للجميع أن يتعلم !
       * تشجيع الطلاب على خلق اشياء يمكن مشاركتها مع الأصدقاء/على الإنترنت.
   * **أنواع الأنشطة:** 
       * **الأفضل:** الأنشطة المعتمدة على ويب، والصديقه للهواتف الذكية، أو الانشطة التى تدرس علوم الحاسوب و التي لا تستحق استعمال الجهاز (انظر <http://csunplugged.com/>). 
-      * **Okay, but not preferred:** app-install, desktop app, or game-console experiences.
+      * **ممكن، لكن ليس المفضل:** تثبيت التطبيق، و البرمجيات التي تشتغل على الحواسيب فقط، أو على اجهزة العاب الفيديو.
   * **الشكل:** دروس ذات توجيه ذاتي، واختياريا بمساعدة المعلم. بجب ان يكون هناك توجيهات للتلاميذ على عكس التحدى الفتوح الذي يدوم ساعة. ومن الناحية المثالية، تكون التعليمات والدروس موجودة بمنصة واحدة، و ذلك لتجنب التنقل بين النوافذ او التنقل بين الدرس و برنامج الانجاز.
 
 [**العودة إلى الأعلى**](#top)
@@ -144,7 +144,7 @@ Code.org will host a variety of Hour of Code activities on the Code.org, Hour of
 
 ## اقتراحات لتصميم النشاط الخاص بك
 
-**Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
+**اضف شعار اسبوع تعليم علوم الحاسوب CSEdWeek في نشاطك .** يمكنك تضمين الشعار ([صغير](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) أو [كبير](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) في البرنامج التعليمي الخاص بك، ولكن هذا غير الزامي. يمكنك أيضا الاتصال بنا لطلب الحصول على إذن خاص باستخدام شعار "في شراكة مع Code.org". ***لا يمكن استخدام هذا الشعار إلا إذا تم منح تصرح سابق و مكتوب على موقع Code.org-*** قد نقوم في نهاية المطاف بخلق شعار "ساعة البرمجة"، ولكن هذا ليس وارد حاليا. لا يمكن تحت أي ظرف من الظروف استعمال اسم و شعار Code.org . Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
 
 **Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
 
@@ -207,7 +207,7 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
 وهذا سيتيح لنا حساب عدد المستخدمين الذين قاموا بزيارة موقع الويب الخاص بك للقيام بساعة البرمجة ، أو المستخدمين الذين يقومون بزيارة الموقع عندما يكتب معلم عنوان URL الخاص بك مباشرة السبورة. فإنه سيؤدي إلى أكثر دقة في حساب المشاركة للبرنامج التعليمي الخاص بك، وسوف تساعدك على جذب المستخدمين. إذا كنت تدمج الصورة بكسل في النهاية فسوف تسمح لنا بقياس معدلات الإنجاز الكامل للنشاط.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+إذا وقع اعتماد النشاط الذي قدمته و وقع ادراجه في اللائحة النهائية، فان موقع Code.org سوف يوفر لك بكسل لادماجه في النشاط. راجع المثال أدناه.
 
 ***NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)***
 
@@ -235,7 +235,7 @@ IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
 <a id="disabilities"></a>
 
-## A special note for students with disabilities
+## ملاحظة خاصة للطلاب ذوي الاحتياجات الخاصة
 
 إذا أنشأت درسً تعليمياً موجهاً للمكفوفين، فإننا نحب أن نسلط الضوء عليه للمشاهدين الذين يملكون قارئات الشاشة. نحن لم نستلم درساً تعليمياً كهذا من قبل، وسنكون متشوقين لجعله خياراً متاحاً لهؤلاء الطلاب.
 

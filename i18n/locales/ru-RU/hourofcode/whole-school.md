@@ -4,6 +4,6 @@ layout: wide
 
 * * *
 
-# Get your whole school to participate
+# Участвуйте со всей школой
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Информация об участии школ в Часе Кода будет опубликована здесь.

@@ -1,6 +1,6 @@
 * * *
 
-from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' subject: Thanks for signing up to host an Hour of Code! view: none theme: none
+od: "Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' předmět: Děkujeme za přihlášení k hostování akce Hodina Kódu! view: none theme: none
 
 * * *
 
@@ -8,11 +8,11 @@ from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x7
 
 # Děkujeme za přihlášení k hostování akce Hodina kódu!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
+**KAŽDÝ** organizátor akce Hodina Kódu, obdrží jako poděkování 10 GB úložného mista na Dropbox, nebo 10$ ve formě kreditu Skype. [Detaily](http://<%= hostname %>/prizes)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+[Zapojte celou školu](http://<%= hostname %>/wholeschool) a získejte možnost vyhrát velké výhry pro celou školu.
 
 <% end %>
 

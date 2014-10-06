@@ -4,8 +4,8 @@ cs:
   front_title: Připojte se 14. prosince 2014 k největší vzdělávací události v historii
   coming_soon: Bude to brzy
   front_header_banner: Připojte se 14. prosince 2014 k největší vzdělávací události v historii
-  front_intro_default: 'Hodina kódu je celosvětová akce, které se zúčastní desítky milionů studentů z přes 170 zemí světa. Kdokoliv si může zorganizovat  událost Hodinu kódu.  Jsou k dispozici jednohodinové výukové programy. Nejsou požadované předem zkušenosti. <strong>Věk 4 až 104.</strong>'
-  front_intro_default_uk: 'Hodina kódu je globální hnutí, kterého se zúčastnilo desítky milionů studentů ve více než 170 zemích. Přes 3 miliony studentů si udělalo první hodinu kódu v Británii. Zdvojnásobme  toto číslo v prosinci! <strong>Nejsou vyžadované zkušenosti. Věk prakticky neomezený - 4 až 104.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in every country. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
+  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando decenas de millones de estudiantes en más de 170 atd. Cualquier osobnost, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>Bez experiencia se necesita. Para edades entre 4 y 104 година.</strong>'
   front_watch_video: Watch the new video
   header_menu_resources: Zdroje
@@ -26,20 +26,33 @@ cs:
   prizes_every_organizer: Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you
   prizes_technology: 'One public school in every US state (& Washington DC) will win $10,000 worth of technology'
   prizes_tech_chats: 50 classrooms will win video chats with very special guests
+  prizes_details: Details
   n_have_learned_an_hoc: '<h1>#</h1><h3>zkusil jsem si</h3><h2>Hodinu kódu</h2>'
   anybody_can_learn: Kdokoliv se může učit.
   register_now: Zaregistrovat se nyní
   front_join_us_heading: Hodina kódu pro každého studenta.
   front_join_us_description: Informatika je základem pro každého studenta. Pomozte nám ji představit stovce milionů.
   front_join_us_button: Připojte se k nám
+  front_what_is_hoc: Jaká je Hodina kódu?
   front_join_us_header: Any time during December 8-14, Computer Science Education Week, host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!
+  front_join_us_header_uk: Any time during December 8-14 host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!
   front_join_us_teacher: Are you a teacher?
-  front_join_us_inspire: Inspire your students with an Hour of Code in your classroom.
+  front_join_us_inspire: Inspire your students with
+  front_join_us_inspire_link: an Hour of Code in your classroom.
   front_join_us_parent: Are you a parent?
-  front_join_us_ask: Ask your local school to host an Hour of Code.
+  front_join_us_ask_link: Ask your local school
+  front_join_us_ask: to host an Hour of Code.
   front_join_us_computer_science: Just love computer science?
-  front_join_us_spread: Spread the word in your community. Or organize an Hour of Code event yourself.
-  front_join_us_get_started: "Here's how to get started."
+  front_join_us_spread: Spread the word in your community.
+  front_join_us_organize: Or organize an Hour of Code event yourself.
+  front_join_us_how_to_run: "Here's how to run an Hour of Code"
+  front_join_us_help_promote: Help promote the Hour of Code
+  front_join_us_students: Students
+  front_join_us_teachers: Teachers
+  front_join_us_everyone: Everyone
+  front_join_us_try: Try it
+  front_join_us_host: Host it
+  front_join_us_support: Support it
   signup_header: Dejte nám vědět, pokud chcete pořádat akci Hodinu kódu
   signup_header_ar: Déjanos saber si estas organizando una Hora de Programación
   signup_name_label: Vaše jméno
@@ -93,27 +106,28 @@ cs:
   hoc_faq_title: Nejčastější dotazy
   hoc_faq_what_is_hoc_q: Jaká je Hodina kódu?
   hoc_faq_what_is_hoc_a: "Hodina kódu je jedna hodina Úvodu do informatiky s cílem odstranit záhadnost kódu a ukázat, že kdokoliv se může naučit základům. <a href='http://code.org/learn'>Podívejte se na výukové programy</a> a dávejte pozor na nově přicházející výukové programy akce Hodina kódu 2014."
+  hoc_faq_last_year: "Try last year's tutorials"
   hoc_faq_when_is_hoc_q: Kdy začne akce Hodina kódu?
   hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 8-14, 2014, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
   hoc_faq_why_cs_q: Proč informatika?
   hoc_faq_why_cs_a: "<i>Každý</i> student by měl mít možnost se učit informatiku. Pomáhá to podporovat dovednost, logiku a tvořivost při řešení problémů. Hned na začátku studenti získají základy pro úspěch v jakékoliv profesní dráze 21.století. Více ve statistikách na <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Jak se zúčastnit akce Hodina kódu?
-  hoc_faq_how_participate_a: "Přihlaste se na hostování na akci Hodina kódu <a href='http://hourofcode.org'>zde</a> a začněte si plánovat. Událost Hodinu kódu si můžete uspořádat ve škole nebo v obci &mdash; v mimoškolním klubu, neziskové organizaci nebo v práci. Nebo si to jen zkusit sami, když přijde 8. prosinec."
+  hoc_faq_how_participate_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.org'>here</a> and <a href='/resources/how-to'>start planning</a>. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
   hoc_faq_behind_hoc_q: 'Kdo je  v pozadí za událostí Hodina kódu?'
   hoc_faq_behind_hoc_a: "Událost Hodina kódu organizuje <a href='http://code.org'>Code.org</a>, veřejná nezisková organizace (US § 501 c3), která se věnuje zvyšování podílu zájmu o informatiku ve společnosti, zvyšování účasti žen a nedostatečně zastoupených menšin. Je k dispozici ve více školách. <a href='http://code.org/about/partners'>Bezprecedentní koalice partnerů</a> se též spojila k podpoře akce Hodina kódu &mdash; včetně Microsoftu, Applu, Amazonu, Boys and Girls Clubs of America a College Board."
   hoc_faq_host_q: Nevím nic o kódování. Mohu hostovat akci?
-  hoc_faq_host_a: "Samozřejmě. Aktivity Hodiny kódu jsou vedené samostatně. Jediné, co si musíte udělat, je vybrat si kurz a vybrat hodinu &mdash; o ostatní se postaráme my. Máme totiž nabídky pro každý věk a úroveň zkušeností, od školky a výše. <a href='http://code.org/learn'>Vyzkoušejte naše současné kurzy</a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='http://code.org/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/resources/how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Potřebuji počítač pro každého účastníka?
   hoc_faq_need_computers_a: "Ne. Máme výukové programy akce Hodina kódu, které pracují na PC, smartfounech, tabletech a některé nevyžadují počítač vůbec! Můžete se připojit kdekoliv jste, s tím co máte. <p><i>Zde je několik možností:</i> <br> <ul> <li><b>Práce ve dvojicích.</b> Výzkumy ukazují, že studenti se učí nejlépe <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programováním ve dvojicích</a>, sdílením počítače, pracují-li společně. Povzbuzujte své studenty v práci ve dvojicích. <li><b>Používejte projektor obrazovky.</b> Pokud máte projektor a monitor počítače připojeném na Webu, celá skupina si může udělat společně událost Hodina kódu. Sledujte společně video části, střídejte se v řešení hádanek nebo odpovědí na otázky. <li><b>Bez připojení.</b> Nabízíme i kurzy, které nevyžadují počítač.</ul>"
   hoc_faq_international_q: Jsem mimo Spojené státy. Jak se mohu zúčastnit mezinárodně?
-  hoc_faq_international_a: 'Kdokoliv může uspořádat událost Hodinu kódu, kdekoliv ve světě. V loňském roce studenti ve 170 zemích s 36 jazyky se dali dohromady  na události Hodina kódu.'
+  hoc_faq_international_a: Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code.
   hoc_faq_tutorial_q: Jak mohu udělat výukový kurz pro akci Hodina kódu?
-  hoc_faq_tutorial_a: "Pokud máte zájem se stát partnerem ve výuce, <a href='/tutorial-guidelines'>Viz naše pokyny a instrukce</a>. Rádi bychom hostovali řadu dalších nabízených možností, ale hlavním naším cílem je optimalizovat zkušenost studentů a učitelů, pro které je informatika něco úplně nového."
-  hoc_faq_when_is_hoc_uk_q: Kdy začne akce Hodina kódu?
+  hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='targetHOC'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
+  hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
   hoc_faq_when_is_hoc_uk_a: "Hodina kódu proběhne 8. až 14. prosince 2014. Je to jedna konkrétní <i>hodina</i>? Ne. Hodinu kódu si můžete udělat kdykoliv během tohoto týdne. Hodina kódu v Británii se uskuteční ve stejném čase jako v USA načasované jako roční oslava <a href='http://csedweek.org'> Týdne informatiky.</a>"
-  hoc_faq_behind_hoc_uk_q: 'Kdo je  v pozadí za událostí Hodina kódu?'
+  hoc_faq_why_cs_uk_a: '<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path.'
+  hoc_faq_how_participate_uk_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.com/uk'>here</a> and start planning. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
   hoc_faq_behind_hoc_uk_a: "Akci Hodina kódu organizuje  <a href='http://uk.code.org'>Code.org</a> veřejná nezisková organizace (podle US 501c3), která se věnuje rozšíření účasti v informatice ve více školách, zvýšení účasti žen a  málo zastoupených skupin studentů (menšin).  <a href='http://uk.code.org/about/partners'>nevídaná koalice partnerů</a> se dala taky dohromady k podpoře akce Hodina kódu &mdash; včetně Microsoftu, Googlu, Cambridge University Press, Tech City a Ministerstva pro vzděláni."
-  hoc_faq_host_uk_q: Nevím nic o programování. Mohu hostovat akci?
   hoc_faq_host_uk_a: "Samozřejmě. Aktivita Hodinu kódu je vedená samostatně. Jediné, co si musíte udělat, je vybrat si kurz a  hodinu &mdash; o ostatní se postaráme my. Máme totiž nabídky pro každý věk a úroveň zkušeností, od školky a výše. <a href='http://code.org/learn'>Vyzkoušejte naše současné kurzy</a>."
   hoc_faq_what_is_hoc_ar_q: Qué es la Hora de Program.AR?
   hoc_faq_what_is_hoc_ar_a: "La Hora de Program.AR es una introducción de una hora a la ciencia computacional, diseñada para desmitificar la programación y demostrar que cualquiera puede aprender los conceptos básicos. <a href='http://code.org/learn'>Revisa los tutoriales</a> y busca otros nuevos para la Hora de Program.AR del 2014."
@@ -138,7 +152,7 @@ cs:
   stats_pinterest: 'Pinterest: 2 years'
   stats_instagram: 'Instagram: 14 months'
   stats_hoc: 'The Hour of Code: 5 days'
-  stats_global: 15 million students in 170 countries learned an Hour of Code.
+  stats_global: 15 million students worldwide learned an Hour of Code.
   stats_girls_more: More girls tried computer science than in the last 70 years.
   stats_girls_million: Over 10 million girls in 2013
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
@@ -146,6 +160,7 @@ cs:
   stats_michael: 'I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   footer_copyright_message: Copyright 2014 Code.org. Všechna práva vyhrazena.
   footer_trademark_message: Hour of Code™ je ochranná známka společnosti Code.org.
+  footer_menu_partners: Partners
   footer_menu_contact: Contact us
   footer_menu_support: Support
   footer_menu_terms: Podmínky

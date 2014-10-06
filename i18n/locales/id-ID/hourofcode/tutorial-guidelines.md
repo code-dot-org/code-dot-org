@@ -36,9 +36,9 @@ Sekelompok komite pendidik ilmu komputer akan memberikan peringkat berdasarkan u
   * dirancang untuk pemula
   * Dirancang sebagai kegiatan ~ 1 jam
   * bekerja pada banyak platform Sistem Operasi/perangkat, termasuk tablet dan ponsel
-  * dapat di akses dalam berbagai bahasa
-  * promosikan pembelajaran pada berbagai kelompok demografi (esp dibawah kelompok perwakilan)
-  * fokus desain bukan murni HTML+CSS - (tujuan kami adalah ilmu komputer, bukan pengkodean HTML)
+  * dapat diakses dalam berbagai bahasa
+  * promosikan pembelajaran pada berbagai kelompok demografi (terutama dibawah kelompok yang terwakilkan)
+  * fokus desain bukan murni HTML+CSS - (tujuan kami adalah ilmu komputer, tidak hanya pengkodean HTML)
 
 **Tutorial akan dicantumkan lebih tingggi jika:**
 
@@ -235,7 +235,7 @@ Kami minta agar setiap orang mempromosikan tutorial satu jam mereka kepada para 
 
 <a id="disabilities"></a>
 
-## Catatan khusus untuk pelajar yang memiliki kecacatan
+## Catatan khusus untuk pelajar yang memiliki keterbatasan
 
 Jika anda mebuat sebuah tutorial untuk pengguna yang memiliki ganguan mata, kami akan senang menyorotnya dengan pembaca-layar (screen-readers). Kami belum menerima tutorial seperti ini, dan kami dengan sangat semangat akan memasukkan itu sebagai salah satu pilihan bagi pelajar.
 

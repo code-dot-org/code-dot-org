@@ -36,13 +36,13 @@ Fale aos seus amigos sobre a #HoraDoCodigo.
 
 ## 3. Peça para seu empregador para participar
 
-[Envie este e-mail](http://<%= hostname %>/resources#email) ao seu gerente ou para o CEO. Ou [dê a eles este folheto](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Envie este e-mail](http://<%= hostname %>/resources#email) ao seu gerente ou Diretor Executivo. Ou [dê a eles este folheto](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
 ## 4. Promova a Hora do Código em sua comunidade
 
 Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de veteranos ou sindicato. Ou ofereça uma "festa" Hora do Código para sua vizinhança.
 
-## 5. Peça a um oficial eleito para apoiar a Hora do Código
+## 5. Peça a um representante político para apoiar a Hora do Código
 
 ## [Envie este e-mail](http://<%= hostname %>/resources#politicians) para seu prefeito, Câmara municipal ou conselho escolar. Ou [dê a eles este folheto](http://<%= hostname %>/resources/hoc-one-pager.pdf) e convide-os a visitar sua escola.
 
@@ -62,12 +62,12 @@ Envie este e-mail (http://<%= hostname %>/resources#email) ou dê este folheto a
 
   1. Peça para seu empregador para participar
 
-Envie este e-mail (http://<%= hostname %>/resources#email) ao seu gerente ou CEO. Ou dê a eles este folheto (http://<%= hostname %>/files/schools-handout.pdf).
+Envie este e-mail (http://<%= hostname %>/resources#email) ao seu gerente ou Diretor Executivo. Ou dê a eles este folheto (http://<%= hostname %>/files/schools-handout.pdf).
 
   1. Promova a Hora do Código em sua comunidade
 
 Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de veteranos ou sindicato. Ou ofereça uma "festa" Hora do Código para sua vizinhança.
 
-  1. Peça a um oficial eleito para apoiar a Hora do Código
+  1. Peça a um representante político para apoiar a Hora do Código
 
-Envie este e-mail (http://<%= hostname %>/resources#politicians) ao seu prefeito, Câmara municipal ou conselho escolar. Ou dê a eles este folheto (http://<%= hostname %>/resources/hoc-one-pager.pdf) e convide-os a visitar sua escola.
+Envie este e-mail (http://<%= hostname %>/resources#politicians) ao seu prefeito, Câmara Municipal ou conselho escolar. Ou dê a eles este folheto (http://<%= hostname %>/resources/hoc-one-pager.pdf) e convide-os a visitar sua escola.

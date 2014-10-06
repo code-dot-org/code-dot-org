@@ -5,9 +5,9 @@ bg:
   coming_soon: Очаквайте скоро
   front_header_banner: Присъединете се към най-голямото събитие за обучение в историята, 8-14 декември 2014
   front_intro_default: 'Часът на кодирането е глобално движение достигнало до десетки милиони  ученици от 170 + страни. Всеки, навсякъде, може да организира час на кодирането събитие. Един час уроци са на разположение в над 30 езика. Не е необходим предварителен опит. <strong>Възраст от 4-104.</strong>'
-  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
+  front_intro_default_uk: 'Часът на кодирането е глобално движение, достигнало до десетки милиони ученици от 170 + страни. Над 3 милиона ученици стартираха първия си Час по кодиране в Обединеното кралство. Нека са двойно повече през декември! <strong>Не е нужен опит. Възраст 4-104.</strong>'
   front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 170 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>No se necesita experiencia. Para edades entre 4 y 104 años.</strong>'
-  front_watch_video: Watch the new video
+  front_watch_video: Гледайте новото видео
   header_menu_resources: Ресурси
   header_menu_faq: ЧЕСТО ЗАДАВАНИ ВЪПРОСИ
   header_menu_prizes: Награди
@@ -22,24 +22,37 @@ bg:
   country_ro: Румъния
   country_uk: Обединено кралство
   country_us: САЩ
-  prizes_all: Prizes for every organizer
-  prizes_every_organizer: Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you
-  prizes_technology: 'One public school in every US state (& Washington DC) will win $10,000 worth of technology'
-  prizes_tech_chats: 50 classrooms will win video chats with very special guests
+  prizes_all: Награди за всеки организатор
+  prizes_every_organizer: Всеки организатор на събитие ще получи Dropbox или Skype кредит в знак на благодарност
+  prizes_technology: По едно държавно училище от всеки американски щат( включително и Вашингтон) ще спечели $10,000 за технологии
+  prizes_tech_chats: 50 учебни зали ще спечелят видео чат с много специални гости
+  prizes_details: Детайли
   n_have_learned_an_hoc: '<h1>#</h1><h3>опитаха</h3><h2>ЧАСЪТ НА КОДИРАНЕТО</h2>'
   anybody_can_learn: Всеки може да се научи.
   register_now: Регистрирайте се сега
   front_join_us_heading: Часът на кодидането за всеки ученик.
   front_join_us_description: Компютърните науки са необходимост за всеки ученик. Помогнете ни да ги представим на 100 милиона.
   front_join_us_button: Присъединете се към нас
-  front_join_us_header: Any time during December 8-14, Computer Science Education Week, host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!
-  front_join_us_teacher: Are you a teacher?
-  front_join_us_inspire: Inspire your students with an Hour of Code in your classroom.
-  front_join_us_parent: Are you a parent?
-  front_join_us_ask: Ask your local school to host an Hour of Code.
-  front_join_us_computer_science: Just love computer science?
-  front_join_us_spread: Spread the word in your community. Or organize an Hour of Code event yourself.
-  front_join_us_get_started: "Here's how to get started."
+  front_what_is_hoc: Какво е Часът на кодирането?
+  front_join_us_header: По всяко време от 8 до14 декември, през седмицата на компютърните науки и образование, можете да организирате събитие часът на кодирането и покажете, че всеки може да научи основите и да се забавлява докато го прави!
+  front_join_us_header_uk: По всяко време през декември 8-14 можете да организирате Часът на кодирането за да покажете, че всеки може да научи основите на програмирането и да се забавлява докато го прави!
+  front_join_us_teacher: Вие учител ли сте?
+  front_join_us_inspire: Вдъхновете учениците си с
+  front_join_us_inspire_link: Часът на кодирането в класната стая.
+  front_join_us_parent: Вие родител ли сте?
+  front_join_us_ask_link: Попитайте в местното училище
+  front_join_us_ask: да организира Часът на кодирането.
+  front_join_us_computer_science: Просто обичате компютърните науки?
+  front_join_us_spread: Разпространете новината във вашата общност.
+  front_join_us_organize: Или организирайте Часът на кодирането сами.
+  front_join_us_how_to_run: Ето как можете да стартирате Часът на кодирането събитие
+  front_join_us_help_promote: Помогнете ни да популяризираме Часът на кодирането
+  front_join_us_students: Ученици
+  front_join_us_teachers: Учители
+  front_join_us_everyone: Всеки
+  front_join_us_try: Опитайте го
+  front_join_us_host: Организирайте го
+  front_join_us_support: Подкрепете го
   signup_header: Нека да знаем, ако сте организатор на Часът на кодирането
   signup_header_ar: Déjanos saber si estas organizando una Hora de Programación
   signup_name_label: Вашето име
@@ -67,11 +80,11 @@ bg:
   signup_thank_you_message: Ние ще ви изпратим имейл за потвърждение с информация, която да ви помогне да започнете.
   map_header: Часът на кодирането събития по света
   map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
-  meta_tag_og_title: The Hour of Code is coming
-  meta_tag_og_description: The Hour of Code is a global movement reaching tens of millions of students in 200 countries and over 30 languages. Ages 4 to 104.
-  meta_tag_twitter_title: The Hour of Code is coming
-  meta_tag_twitter_description: The Hour of Code is a global movement reaching tens of millions of students in 200 countries and over 30 languages. Ages 4 to 104.
-  twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
+  meta_tag_og_title: Часът на кодирането наближава
+  meta_tag_og_description: Часът на кодирането е глобално движение, достигащо до десетки милиони ученици от 200 страни на над 30 езика. Допустима възраст от 4 до 104.
+  meta_tag_twitter_title: Часът на кодирането наближава
+  meta_tag_twitter_description: Часът на кодирането е глобално движение, достигащо до десетки милиони ученици от 200 страни на над 30 езика. Допустима възраст от 4 до 104.
+  twitter_default_text: 'Аз ще участвам тази година в #HourOfCode, а ти? @codeorg'
   hardware_prizes_form_name_label: Вашето име
   hardware_prizes_form_name_placeholder: Вашето име
   hardware_prizes_form_email_label: Вашият имейл
@@ -93,29 +106,30 @@ bg:
   hoc_faq_title: Често задавани въпроси
   hoc_faq_what_is_hoc_q: Какво е Часът на кодирането?
   hoc_faq_what_is_hoc_a: "Часът на кодирането е въведение в компютърните науки в рамките на 1 час, предназначено да демитологизира програмирането и да покаже, че всеки може да се научи да програмира. <a href='http://code.org/learn'>Проверете уроците</a> и следете за нови такива, идващи за Часът на кодирането 2014."
+  hoc_faq_last_year: Опитайте миналогодишните уроци
   hoc_faq_when_is_hoc_q: Кога се провежда Часът на кодирането?
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 8-14, 2014, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "Всеки може да бъде организатор на събитие Часът на кодирането по всяко време, но цел на масовата кампания целта е десетки милиони ученици да пробват Часът на кодирането между 8 и14 декември 2014 г. като част от <a href='http://csedweek.org'> Седмицата на компютърни науки образованието </a>. Това е един конкретен <i>час ли е</i>? Не. Можете да направите  своя Час на кодиране по всяко време през тази седмица. (И по всяко друго време)."
   hoc_faq_why_cs_q: Защо компютърни науки?
   hoc_faq_why_cs_a: "<i>Всеки</i> ученик трябва да има възможност да изучава компютърни науки. Те помагат за възпитаване на умения в решаване на проблеми, логика и креативност. Когато започнат да ги изучават по- рано, учениците ще имат основа за успешна кариера в 21-ви век. Вижте повече статистика на <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Как да участвам в Часът на кодирането?
-  hoc_faq_how_participate_a: "Регистрирайте Часът на кодирането събитие <a href='http://hourofcode.org'>тук</a> и започнете планиране. Можете да организирате Часът на кодирането събитие във вашето училище или във вашата общност &mdash; както и в клуб по извънкласни занимания, с нестопанска цел или на работното място. Или просто го опитайте сами през декември. 8-ми наближава."
+  hoc_faq_how_participate_a: "Регистрирайте Часът на кодирането <a href='http://hourofcode.org'>тук</a> и <a href='/resources/how-to'> започнете планиране</a>. Можете да организирате Часът на кодирането във вашето училище или във вашата общност &mdash; както и в клуб по извънкласни занимания, с нестопанска цел или на работното място. Или просто го опитайте сами през декември. 8-ми наближава."
   hoc_faq_behind_hoc_q: Кой стои зад Часът на кодирането?
-  hoc_faq_behind_hoc_a: "Часът на кодирането е организиран от <a href='http://code.org'>Code.org</a>, публично 501 c 3 с нестопанска цел, посветен на разширяване използването и изучаването на компютърни науки в повече училища, както и увеличаване броя на жените, занимаващи се с програмиране. <a href='http://code.org/about/partners'>Безпрецедентен брой партньори</a> са се обединили в подкрепа на Часът на кодирането, &mdash; включително Microsoft, Apple, Amazon, момчета и момичета от Клуб Америка и College Board."
+  hoc_faq_behind_hoc_a: "Часът на кодирането е организиран от <a href='http://code.org'>Code.org</a>като публично движение с нестопанска цел, посветен на разширяване използването и изучаването на компютърни науки в повече училища, както и увеличаване броя на жените, занимаващи се с програмиране. <a href='http://code.org/about/partners'>Безпрецедентен брой партньори</a> са се обединили в подкрепа на Часът на кодирането, &mdash; включително Microsoft, Apple, Amazon, момчета и момичета от Клуб Америка и College Board."
   hoc_faq_host_q: Аз не умея да програмирам. Може ли все пак да регистрирам събитие?
-  hoc_faq_host_a: "Разбира се. Дейностите в Часът на кодирането са напълно достатъчни. Всичко което трябва да направите е да изберете уроци, които искате да включите в един час &mdash; а ние ще се погрижим за останалото. Ние имаме варианти за всяка възраст и ниво на опит, от детската градина и нагоре. <a href='http://code.org/learn'>Опитайте нашите текущи уроци</a>."
+  hoc_faq_host_a: "Разбира се. Дейностите в Часът на кодирането са самонасочващи. Всичко, което трябва да направите е, <a href='http://code.org/learn'>  да пробвате нашите текущи уроци</a>и да изберете тези, които ще са ви необходими в рамките на вашият Час &mdash; ние ще се погрижим за останалото. Ние сме подготвили варианти за всяка възраст и ниво на опит, от детската градина и нагоре. Започнете да планирате вашето събитие като прочетете нашите <a href='/resources/how-to'> съвети</a>."
   hoc_faq_need_computers_q: Трябва ли компютър за всеки участник?
   hoc_faq_need_computers_a: "Не. Имаме уроци в Часът на кодирането, които работят на компютри, смартфони, таблетки и някои, които не изискват компютър! Можете да се присъедините, където и да сте, с каквото имате. <p><i>Ето няколко възможности:</i> <br><ul><li><b>Работа по двойки,.</b> Изследванията показват, че учениците учат най-добре програмирането <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>когато са по двойки</a>, споделят компютъра и работят заедно. Насърчете вашите ученици да се разделят на двойки. <li><b>Използвайте мултимедиен проектор и екран.</b> Ако имате проектор и екран, свързани към компютър с интернет връзка, направете Часът на кодирането с цялата си група. Гледайте видео клиповете заедно и нека учениците се редуват в решаването на пъзели или в отговарянето на въпроси. <li><b>Опитайте ънплъгд уроците.</b> Ние предлагаме уроци, които не изискват компютър.</ul>"
   hoc_faq_international_q: Аз съм извън Съединените щати. Как да участвам?
-  hoc_faq_international_a: Всеки може да организира събитие Часът на кодирането, навсякъде по света. Миналата година учениците от 170 страни, говорещи 36 езика, се присъединиха към събитието.
+  hoc_faq_international_a: Всеки може да организира събитие Часът на кодирането навсякъде по света. Миналата година, ученици от цял свят се присъединиха към събитието.
   hoc_faq_tutorial_q: 'Как да направя  урок за Часът на кодирането?'
-  hoc_faq_tutorial_a: "Ако сте заинтересувани да станете наш партньор в създаването на уроци, <a href='/tutorial-guidelines'>Вижте нашите указания и инструкции</a>. Бихме искали да има разнообразие от възможности за ангажиране, но основната цел е да се оптимизира опитът на учениците и учителите, за които компютърните науки са новост."
-  hoc_faq_when_is_hoc_uk_q: Кога се провежда Часът на кодирането?
-  hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
-  hoc_faq_behind_hoc_uk_q: Кой стои зад Часът на кодирането?
-  hoc_faq_behind_hoc_uk_a: "The Hour of Code is organised by <a href='http://uk.code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://uk.code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Google, Cambridge University Press, Tech City and The Department of Education."
-  hoc_faq_host_uk_q: Аз не умея да програмирам. Може ли все пак да регистрирам събитие?
-  hoc_faq_host_uk_a: "Of course. Hour of Code activities are self-guided. All you have to do is pick the tutorial you want and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. <a href='http://uk.code.org/learn'>Try our current tutorials</a>."
-  hoc_faq_what_is_hoc_ar_q: Qué es la Hora de Program.AR?
+  hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='targetHOC'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
+  hoc_faq_what_is_hoc_uk_a: "Часът на кодирането е въведение в компютърните науки в рамките на 1 час, предназначено да демитологизира програмирането и да покаже, че всеки може да се научи да програмира. <a href='http://code.org/learn'>Проверете уроците</a> и следете за нови такива, идващи за Часът на кодирането 2014."
+  hoc_faq_when_is_hoc_uk_a: "Часът на кодирането ще се състои през декември 8-14, 2014. Това е един конкретен <i>час ли е</i>? Не. Можете да направите своят час на кодирането по всяко време през тази седмица. Часът на кодирането в Обединеното кралство ще се състои по същото време както в САЩ, където той е във времето на <a href='http://csedweek.org'> седмицата на компютърните науки и образованието.</a>"
+  hoc_faq_why_cs_uk_a: '<i>Всеки</i> ученик трябва да имат възможност да изучава компютърни науки. Те помагат за възпитаване на умения за взимане на решения, в логика и креативност. Като започнат по- ранното им изучаване, учениците ще имат основа за успешна кариера в 21-ви век.'
+  hoc_faq_how_participate_uk_a: "Регистрирайте Часът на кодирането събитие <a href='http://hourofcode.org'>тук</a> и започнете планиране. Можете да организирате Часът на кодирането  във вашето училище или във вашата общност &mdash; както и в клуб по извънкласни занимания, с нестопанска цел или на работното място. Или просто го опитайте сами през декември. 8-ми наближава."
+  hoc_faq_behind_hoc_uk_a: "Часът на кодирането е организиран от <a href='http://uk.code.org'> Code.org</a>, като публично и с нестопанска цел събитие, посветено на разширяване популярността на компютърните науки и изучаването им в повече училища, както и увеличаване на броя  жени, занимаващи се с програмиране. <a href='http://uk.code.org/about/partners'> Безпрецедентен брой коалиционни партньори</a> се обединяват в подкрепа на Часът на кодирането, дори &mdash; такива като Microsoft, Google, Cambridge University Press, Tech City и Министерството на образованието."
+  hoc_faq_host_uk_a: "Разбира се. Дейностите в Часът на кодирането са напълно достатъчни. Всичко което трябва да направите е да изберете уроци, които искате да включите в един час &mdash; а ние ще се погрижим за останалото. Ние имаме варианти за всяка възраст и ниво на опит, от детската градина и нагоре. <a href='http://code.org/learn'>Опитайте нашите текущи уроци</a>."
+  hoc_faq_what_is_hoc_ar_q: Qué es ла Hora де Program.AR?
   hoc_faq_what_is_hoc_ar_a: "La Hora de Program.AR es una introducción de una hora a la ciencia computacional, diseñada para desmitificar la programación y demostrar que cualquiera puede aprender los conceptos básicos. <a href='http://code.org/learn'>Revisa los tutoriales</a> y busca otros nuevos para la Hora de Program.AR del 2014."
   hoc_faq_when_is_hoc_ar_q: ¿Cuándo es la Hora de Program.AR?
   hoc_faq_when_is_hoc_ar_a: "La Hora de Program.AR se llevará a cabo del 8 al 14 de diciembre del 2014. ¿Es una hora <i>específica</i>? No. Puedes hacer la Hora de Program.AR en cualquier momento durante esta semana. La Hora de Program.AR está programada para celebrarse anualmente - <a href='http://csedweek.org'>la Semana de Ciencias de Computación</a>."
@@ -127,26 +141,27 @@ bg:
   hoc_faq_host_ar_a: "Claro. Las actividades de La Hora de Program.AR son autodirigidas. Todo lo que tienes que hacer es elegir el tutorial que quieras y escoge una hora &mdash; nosotros nos encargamos del resto. También tenemos opciones para cada edad y nivel de experiencia, desde el kindergarten y para arriba. <a href='http://code.org/learn'>Pruebe nuestros tutoriales actuales</a>."
   hoc_faq_need_computers_ar_q: ¿Necesito computadoras para cada participante?
   hoc_faq_need_computers_ar_a: "No. Tenemos tutorales de la Hora de Program.AR que funcionan en PCs, teléfonos inteligentes, tabletas y algunos que no requieren ¡ninguna computadora en absoluto! Tú puedes unirte desde donde quiera que estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i> <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes aprenden mejor con <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares de programación</a>, compartiendo una computadora y trabajando juntos. Anima a tus estudiantes a trabajar en pares. <li><b>Una pantalla proyectada.</b> Si tú tienes un proyector y una computadora conectada a Internet, el grupo entero puede hacer una hora de Program.AR juntos. Mira porciones de videos juntos y toma turnos para resolver acertijos o responder preguntas. <li><b>Desconéctate.</b> Ofrecemos tutoriales que no requieren ninguna computadora en absoluto. </ul>"
-  hoc_faq_tutorial_ar_q: ¿Cómo puedo hacer un tutoría de la Hora de Program.AR?
+  hoc_faq_tutorial_ar_q: Cómo puedo hacer un tutoría de la Hora de Program.AR?
   hoc_faq_tutorial_ar_a: "Si usted está interesado en convertirse en un socio para tutoriales, <a href='/tutorial-guidelines'>vea nuestras directrices e instrucciones</a>. Nos gustaría presentar varias opciones atractivas, pero la meta principal es optimizar la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales."
   stats_hoc_2013_heading: 'Невероятната статистика от миналата година за Часът на кодирането. Само за една седмица:'
   stats_hoc_2013_image_alt: Статистика от 2013 за Часът на кодирането
-  stats_growth: It was the fastest to reach 15 million users.
-  stats_tumblr: 'Tumblr: 3.5 years'
-  stats_facebook: 'Facebook: 3 years'
-  stats_twitter: 'Twitter: 2.5 years'
-  stats_pinterest: 'Pinterest: 2 years'
-  stats_instagram: 'Instagram: 14 months'
-  stats_hoc: 'The Hour of Code: 5 days'
-  stats_global: 15 million students in 170 countries learned an Hour of Code.
-  stats_girls_more: More girls tried computer science than in the last 70 years.
-  stats_girls_million: Over 10 million girls in 2013
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
-  stats_michael: 'I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_growth: Това беше най-бързия начин за достигне на 15 милиона потребители.
+  stats_tumblr: 'Tumblr: 3.5 години'
+  stats_facebook: 'Facebook: 3 години'
+  stats_twitter: 'Twitter: 2,5 години'
+  stats_pinterest: 'Pinterest: 2 години'
+  stats_instagram: 'Instagram: 14 месеца'
+  stats_hoc: 'Часът на кодирането: 5 дни'
+  stats_global: 15 милиона ученици от цял свят се обучаваха в Часът на кодирането.
+  stats_girls_more: Повече момичета пробваха компютърни науки отколкото в последните 70 години.
+  stats_girls_million: Над 10 милиона момичета през 2013 г.
+  stats_nina: '"Всеки ден отчитам същите резултати &mdash; 100 % ангажираност."-Нина Никълс Пири, учител'
+  stats_student: '"Знаех, че това е <b>еднократна</b> възможност в живота."-Мариана Алзейт, 5-ти клас'
+  stats_michael: 'Аз никога <b>до сега не съм</b> виждал учениците си толкова развълнувани за нещо в обучението им. "-Майкъл Кларк, учител'
   footer_copyright_message: Copyright 2014 Code.org. Всички права запазени.
   footer_trademark_message: Hour of Code™ е търговска марка на Code.org.
-  footer_menu_contact: Contact us
-  footer_menu_support: Support
+  footer_menu_partners: Партньори
+  footer_menu_contact: Свържете се с нас
+  footer_menu_support: Поддръжка
   footer_menu_terms: Условия
   footer_menu_privacy: Декларация за поверителност

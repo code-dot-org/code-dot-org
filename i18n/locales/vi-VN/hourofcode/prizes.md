@@ -1,6 +1,6 @@
 * * *
 
-title: Prizes layout: wide
+Tiêu đề : Prizes Khung nhìn : rộng
 
 * * *
 
@@ -8,21 +8,21 @@ title: Prizes layout: wide
 
 ## Tất cả tổ chức tham gia đều nhận được một code quà tặng như là một lời cám ơn từ Code.org
 
-Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
+Mọi người dạy muốn tổ chức một khóa Hour of Code cho học sinh sẽ nhận 10GB lưu trữ trên Dropbox hoặc 10 đô la thẻ tín dụng sử dụng trên Skpye như là một món quà.
 
 <% if @country == 'us' %>
 
 ## Lớp học may mắn chiến thắng trong video nói chuyện với chúng tôi!
 
-50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
+50 lớp học may mắn sẽ được mời tham gia vào chat video để chào mừng Hour of Code diễn ra từ 8-14 tháng 12 năm 2014 . Học sinh của bạn có thể đặt câu hỏi và trò chuyện với các nhà lãnh đạo công nghệ hàng đầu. [ xem lại các cuộc nói chuyện năm ngoái](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) với Bill Gates. Nhà sáng lập Twitter : Dorsey, Susan Wojcicki ở Google và Gabe Newell ở Valve. 
 
 ## Những trường học may mắn khi chiến thắng giải thưởng là một lớp học được trang bị laptops (hoặc 10.000USD cho một công nghê khác)
 
-One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
+Có một trường học may mắn trong ***các trường*** Tại bang Washington mỹ sẽ được nhân $10000 đô la giá trị bởi các sản phẩm công nghệ. Tổ chức Hour of Code cho mọi học sinh trong trương của bạn để đánh giá chất lượng. Điền vào form bên dưới để tham gia.
 
 ## Mẫu đăng ký giải thưởng bằng hiện vật:
 
-If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
+Nếu bạn đăng ký cho trường học của bạn tham gia vào Hour of Code, tham gia vào phần dành phần thường là Laptop và các sản phẩm công công nghệ cho trường của bạn! Chỉ cần 1 giáo viên đăng ký để áp dụng cho toàn trường.
 
 <%= view :hardware\_prizes\_form %>
 
@@ -34,4 +34,4 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 ## Những câu hỏi xung quanh giải thưởng?
 
-Check out [Terms and Conditions](/prizes-terms) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+Đọc [Điều khoản và điều kiện](/prizes-terms) hoặc ghé thăm diễn đàn để xem các câu[Hỏi và trả lời](http://support.code.org) và đặt ra các câu hỏi.
