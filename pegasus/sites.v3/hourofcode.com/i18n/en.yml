@@ -90,7 +90,7 @@
   signup_thank_you_header: "Thank you for signing-up to host an Hour of Code event."
   signup_thank_you_message: 'We sent you a confirmation email with information to help you get started.'
 
-  map_header: 'Hour of Code events around the world'
+  map_header: '# Hour of Code events around the world'
   map_header_ar: 'Eventos de Hora de Program.AR alrededor del mundo'
 
   meta_tag_og_title: 'The Hour of Code is coming'

@@ -1,10 +1,11 @@
 .row
   .col-xs-12
+    -total_count = DB[:forms].where(kind:'HocSignup2014').count
     -if @country == 'ar'
       %h2= hoc_s(:map_header_ar)
     -else
-      %h2= hoc_s(:map_header)
-  
+      %h2= hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))
+
 .row
   .col-xs-1.hidden-sm
   .col-xs-10.col-sm-12
