@@ -4,6 +4,6 @@ title: Thank you layout: wide
 
 * * *
 
-# Vă mulţumesc
+# Mulțumesc
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+Şcoala dumneavoastră este înscrisă pentru a câştiga un set de laptop-uri (sau 10.000 dolari pentru alte tehnologii).

@@ -1,6 +1,6 @@
 * * *
 
-from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' subject: Thanks for signing up to host an Hour of Code! view: none theme: none
+from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' subject: Kiitos liiittymisestä Code.org:iin Kooditunnin suosittamiseksi! view: none theme: none
 
 * * *
 
@@ -8,11 +8,11 @@ from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x7
 
 # Kiitos osallistumisestasi Kooditunnin ylläpitäjäksi!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
+**Jokainen** Kooditunnin järjestäjä voi saada ilmaislahjoja sponsoreiltamme, mutta emme välttämättä suosittele kyseisten tuotteiden käyttöä. [Lisätietoja](http://<%= hostname %>/prizes)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Hoida [koko koulu osallistumaan](http://<%= hostname %>/whole-school) niin koulunne voi saada isoja palkintoja (vain USA:ssa).
 
 <% end %>
 
@@ -24,19 +24,19 @@ Tell your friends about the #HourOfCode.
 
 ## Pyydä koko kouluasi osallistumaan Koodituntiin
 
-[Send this email](http://<%= hostname %>/resources#email) or [give this handout to your principal](http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+[Lähetä tämä sähköposti](http://<%= hostname %>/resources#email) tai [anna tämä lehtinen rehtorillesi](http://<%= hostname %>/files/schools-handout.pdf). Kun koko koulusi osallistu, [ilmoittaudu voittaaksesi 10 000 USD arvosta teknologiaa koulullenne](http://<%= hostname %>/prizes) ja haasta muut alueesi koulut mukaan (vain USA:ssa).
 
 <% else %>
 
 ## Pyydä koko kouluasi osallistumaan Koodituntiin
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
+[Lähetä tämä sähköposti](http://<%= hostname %>/resources#email) tai [anna tämä lehtinen rehtorillesi](http://<%= hostname %>/files/schools-handout.pdf).
 
 <% end %>
 
 ## 3. Ask your employer to get involved
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Lähetä tämä sähköposti](http://<%= hostname %>/resources#email) tai [anna tämä lehtinen esimiehellesi tai toimitusjohtajallenne](http://<%= hostname %>/files/hoc-one-pager.pdf)..
 
 ## 4. Promote Hour of Code within your community
 
@@ -44,30 +44,30 @@ Recruit a local group — boy scouts club, church, university, veterans group or
 
 ## 5. Ask a local elected official to support the Hour of Code
 
-## [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+## [Lähetä tämä sähköposti](http://<%= hostname %>/resources#politicians) pormestarille, kaupunginvaltuustolle tai koulun johtokunnalle. Tai [anna heille tämä lehtinen](http://<%= hostname %>/files/hoc-one-pager.pdf) ja pyydä käymään koulullanne tutustumiskäynnillä.
 
 Kiitos osallistumisestasi Kooditunnin ylläpitäjäksi!
 
-EVERY Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. Details (http://<%= hostname %>/prizes)
+Jokainen Kooditunnin järjestäjä voi saada ilmaislahjoja sponsoreiltamme, mutta emme välttämättä suosittele kyseisten tuotteiden käyttöä. Lisätietoja (http://<%= hostname %>/prizes)
 
-Get your whole school to participate (http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Hoida koko koulu osalistumaan (http://<%= hostname %>/whole-school) niin teillä on mahdollisuus voittaa isoja palkintoja koko koulullenne.
 
-  1. Spread the word
+  1. Levitä sanaa
 
 Tell your friends about the #HourOfCode.
 
-  1. Ask your whole school to offer an Hour of Code
+  1. Pyydä kouluasi tarjoamaan Koodituntia
 
-Send this email (http://<%= hostname %>/resources#email) or give this handout to your principal (http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, enter to win $10,000 worth of technology for your school (http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+Lähetä tämä sähköposti (http://<%= hostname %>/resources#email) tai anna tämä esite rehtorillenne (http://<%= hostname %>/files/schools-handout.pdf). Jos koko koulunne osallistuu, ilmoittaudu voittaaksesi 10 000 USD edestä teknologiaa koulullenne (http://<%= hostname %>/prizes) ja haasta muut alueen koulut mukaan. (Vain USA:ssa)
 
-  1. Ask your employer to get involved
+  1. Pyydä työnantajaasi osallistumaan
 
-Send this email (http://<%= hostname %>/resources#email) to your manager, or the CEO. Or give them this handout (http://<%= hostname %>/files/schools-handout.pdf).
+Lähetä tämä sähköposti (http://<%= hostname %>/resources#email) tai anna tämä lehtinen esimiehellesi tai toimitusjohtajallenne (http://<%= hostname %>/files/schools-handout.pdf).
 
-  1. Promote Hour of Code within your community
+  1. Edistä Koodituntia paikkakunnallasi
 
 Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-  1. Ask a local elected official to support the Hour of Code
+  1. Pyydä paikallista politikkoa tukemaan Koodituntia
 
-Send this email (http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or give them this handout (http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+Lähetä tämä sähköposti (http://<%= hostname %>/resources#politicians) pormestarille, kaupunginvaltuustolle tai koulun johtokunnalle. Tai anna heille tämä lehtinen (http://<%= hostname %>/resources/hoc-one-pager.pdf) ja pyydä käymään koulullanne tutustumiskäynnillä.

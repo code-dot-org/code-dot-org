@@ -12,7 +12,7 @@ Rádi bychom hostovali i řadu dalších nabízených možností se zapojit, ale
 
 <a id="top"></a>
 
-## Index:
+## Obsah:
 
   * [Jak se hodnotí výukové programy pro jejich zařazení](#inclusion)
   * [Všeobecné pokyny pro vytvoření aktivity Hodiny kódu](#guidelines)
@@ -35,10 +35,10 @@ Komise pedagogů z oblasti informatiky určuje pořadí zaslaných výukových p
   * intuitivní, nevyžadují zvláštní pokyny k provádění
   * navržené pro začátečníky
   * plánované jako hodinová aktivita
-  * work across many OS/device platforms, including mobile and tablets
-  * work across multiple languages
-  * promote learning by all demographic groups (esp under-represented groups)
-  * not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
+  * pracují napříč mnoha provozními platformami bez ohledu na operační systém a hardware, včetně mobilů a tabletů
+  * pracuje s více jazyky
+  * podporuje vzdělávání všech demografických skupin (zejména málo zastoupených skupin)
+  * Není jen čistě zaměřený na HTML + CSS webový design - (našim cílem je matematická informatika, nikoliv jen HTML kódování)
 
 **Výukové programy jsou zařazeny níže, mají-li následující kritéria:**
 

@@ -1,6 +1,6 @@
 * * *
 
-from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' subject: Thanks for signing up to host an Hour of Code! view: none theme: none
+από: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' θέμα: Ευχαριστούμε για την εγγραφή για την φιλοξενία μιας 'Ώρας του Κώδικα'! Όψη: Καμμία Θέμα:Κανένα
 
 * * *
 
@@ -8,66 +8,66 @@ from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x7
 
 # Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
+**ΚΑΘΕ** διοργανωτής της Ώρα του κώδικα θα λάβει 10 GB χώρου Dropbox ή $10 της πίστωσης Skype ως ένα ευχαριστώ. [ Λεπτομέρειες](http://<%= hostname %>/prizes)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Βοήθησε ώστε [ όλο το σχολείο να συμμετάσχει ](http://<%= hostname %>/whole-school) για να μπορέσει να διεκδικήσει μεγάλα βραβεία.
 
 <% end %>
 
 ## 1. Διάδωσέ το
 
-Tell your friends about the #HourOfCode.
+Πες στους φίλους σου για την Ώρα του Κώδικα #HourOfCode.
 
 <% if @country == 'us' %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Ζήτησε από το σχολείο σου να προσφέρει Μια Ώρα Κώδικα
 
-[Send this email](http://<%= hostname %>/resources#email) or [give this handout to your principal](http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+[Στείλτε αυτό το Ηλεκτρονικό Μήνυμα](http://<%= hostname %>/resources#email) ή [δώστε αυτό το φυλλάδιο στο Διευθυντή σας](http://<%= hostname %>/files/schools-handout.pdf). Μόλις το σχολείο σας εγγραφεί [ μπορεί να διεκδικήσει τεχνολογικό υλικό αξίας 10000$](http://<%= hostname %>/prizes) και να προκαλέσει και άλλα σχολεία της περιοχής να συμμετάσχουν και να διεκδικήσουν.
 
 <% else %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Ζήτησε από το σχολείο σου να προσφέρει Μια Ώρα Κώδικα
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
+[ Στείλε αυτό το μήνυμα](http://<%= hostname %>/resources#email) ή δώσε [αυτό το έντυπο](http://<%= hostname %>/files/schools-handout.pdf) στον διευθυντή σου.
 
 <% end %>
 
 ## 3. Ζήτα το από τον εργοδότη σου
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[ Στείλε αυτό το μήνυμα](http://<%= hostname %>/resources#email) στον διαχειριστή σου, ή τον Διευθύνοντα Σύμβουλο. Ή [δώσε τους αυτό το φυλλάδιο](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
 ## 4. Προώθησε την Ώρα του Κώδικα στην περιοχή σου
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Φτιάξε ένα τμήμα για — ένα σώμα προσκόπων, μια ενορία, ένα πανεπιστήμιο, μια ενώση εργαζομένων. Ή κάνε μια Ώρα του Κώδικα για τη γειτονιά σου.
 
 ## 5. Ζήτα από ένα τοπικό άρχοντα να υποστηρίξει μια Ώρα του Κώδικα
 
-## [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+## [ Στείλε αυτό το μήνυμα](http://<%= hostname %>/resources#politicians) στον δήμαρχο, το δημοτικό συμβούλιο, ή τη σχολική επιτροπή. Ή [δώσε τους αυτό το φυλλάδιο](http://<%= hostname %>/resources/hoc-one-pager.pdf) και καλέσέ τους να επισκεφτούν το σχολείο σας.
 
 Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
 
-EVERY Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. Details (http://<%= hostname %>/prizes)
+ΚΑΘΕ διοργανωτής της Ώρας του Κώδικα θα λάβει 10 GB χώρου Dropbox ή $10 πίστωση στο Skype ως ένα ευχαριστώ. (http://<%= hostname %>/prizes)
 
-Get your whole school to participate (http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Κάνε όλο το σχολείο σου να συμμετάσχει (http://<%= hostname %>/whole-school) για μια ευκαιρία για μεγάλα βραβεία .
 
-  1. Spread the word
+  1. Διάδωσέ το
 
-Tell your friends about the #HourOfCode.
+Πες στους φίλους σου για την Ώρα του Κώδικα #HourOfCode.
 
-  1. Ask your whole school to offer an Hour of Code
+  1. Ζήτησε από το σχολείο σου να προσφέρει την Ώρα του Κώδικα
 
-Send this email (http://<%= hostname %>/resources#email) or give this handout to your principal (http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, enter to win $10,000 worth of technology for your school (http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+Στείλε αυτό το μήνυμα (http://<%= όνομα %>/resources#email), ή δώσε αυτό το φυλλάδιο στον διευθυντή σου (http://<%= hostname %>/files/schools-handout.pdf). Με τη συμμετοχή του σχολείου σου, μπορείς να διεκδικήσεις τεχνολογικό υλικό αξίας 10000$ για το σχολείο σου (http://<%= hostname %>/prizes) και να προκαλέσεις και άλλα σχολεία της περιοχής σου να συμμετάσχουν και αυτά.
 
-  1. Ask your employer to get involved
+  1. Ζήτησε από τον εργοδότη σου να συμμετάσχει
 
-Send this email (http://<%= hostname %>/resources#email) to your manager, or the CEO. Or give them this handout (http://<%= hostname %>/files/schools-handout.pdf).
+Στείλε αυτό το μήνυμα (http://<%= όνομα %>/resources#email), στον διαχειριστή σου, ή τον Διευθύνοντα Σύμβουλο. Ή δώσε τους αυτό το φυλλάδιο (http://<%= όνομα %>/files/schools-handout.pdf).
 
-  1. Promote Hour of Code within your community
+  1. Προώθησε την Ώρα του Κώδικα στην κοινότητά σου
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Φτιάξε ένα τμήμα για — ένα σώμα προσκόπων, μια ενορία, ένα πανεπιστήμιο, μια ενώση εργαζομένων. Ή κάνε μια Ώρα του Κώδικα για τη γειτονιά σου.
 
-  1. Ask a local elected official to support the Hour of Code
+  1. Ζήτησε από έναν τοπικό παράγοντα να υποστηρίξει την Ώρα του Κώδικα
 
-Send this email (http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or give them this handout (http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+Στείλε αυτό το μήνυμα (http://<%= όνομα %>/resources#politicians) στον δήμαρχο, το δημοτικό συμβούλιο, ή τη σχολική επιτροπή. Ή δώστους αυτό το φυλλάδιο (http://<%= όνομα %>/resources/hoc-one-pager.pdf) και κάλεσέ τους να επισκεφτούν το σχολείο σας.

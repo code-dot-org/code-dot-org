@@ -1,73 +1,73 @@
 * * *
 
-from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' subject: Thanks for signing up to host an Hour of Code! view: none theme: none
+từ: ' "Hadi Partovi (Code.org)" [hadi_partovi @&#99; ode.org](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' chủ đề: cảm ơn bạn đã đăng ký để tổ chức Sự kiện Hour of Code! xem: không có chủ đề: không có
 
 * * *
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Thanks for signing up to host an Hour of Code!
+# Cảm ơn bạn đã đăng ký để làm chủ Hour of Code!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
+**MỖI** người tổ chức Hour of Code sẽ nhận được 10 GB dung lượng Dropbox hoặc $10 Skype tín dụng như một cảm ơn bạn. [ chi tiết](http://<%= hostname %>/ giải thưởng)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Hãy để [của bạn tham gia ](http://<%= hostname %>/toàn bộ tường học) để có cơ hội nhận được những giải thưởng lớn.
 
 <% end %>
 
-## 1. Spread the word
+## 1. Truyền tải thông điệp
 
-Tell your friends about the #HourOfCode.
+Nói với bạn bè của bạn về #HourOfCode.
 
 <% if @country == 'us' %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Đề nghị trường của bạn tổ chức Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#email) or [give this handout to your principal](http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+[ gửi email này](http://<%= hostname %>/ tài nguyên #email) hoặc [đưa bản in ra giấy này đến hiêu trưởng nhà trường](http://<%= hostname %>/files/schools-handout.pdf). Sau khi trường học của bạn trên hành trình giành, [ chiến thắng 10.000 $ giá trị của các sản phẩm công nghệ ](http://<%= hostname %>/ giải thưởng) và thách thức các trường khác trong khu vực của bạn tham gia vào cuộc cạnh tranh.
 
 <% else %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Đề nghị trường của bạn tổ chức Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
+[ gửi email này](http://<%= hostname %>/ tài nguyên #email) hoặc đưa [bản in ra giấy ](http://<%= hostname %>/files/schools-handout.pdf) cho hiệu trưởng trường của bạn.
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 3. Đề nghị nhân viên của bạn tham gia cùng
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[ gửi email này](http://<%= hostname %>/resources#email) cho quản lý của bạn, hoặc tổng giám đốc. Hoặc [đưa họ bản in ra giấy này](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Promote Hour of Code within your community
+## 4. Quảng bá Hour of Code tới đất nước của bạn
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Lập thành càng nhóm tại địa phương - nhóm các bạn sinh viên đại học, nhóm những người lớn tuổi, nhóm những người trong độ tuổi lao động. Hoặc tổ chức một sự kiện Hour of Code "block party" cho những người hàng xóm của bạn.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Đưa ra yêu cầu tới quan chức địa phương để hỗ trợ cho sự kiện Hour of Code
 
-## [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+## [ gửi email này](http://<%= hostname %>/resources#politicians)tới thị trưởng, hội đồng thành phố hoặc hội đồng nhà trường. Hoặc [đưa họ bản in ra giấy này](http://<%= hostname %>/resources/hoc-one-pager.pdf) và mời họ tới thăm trường của bạn.
 
-Thanks for signing up to host an Hour of Code!
+Cảm ơn bạn đã đăng ký để làm chủ Hour of Code!
 
-EVERY Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. Details (http://<%= hostname %>/prizes)
+Mối ngừoi tổ chức sự kiện Hour of Code sẽ nhận được 10GB dung lượng lưu trữ trên Dropbox hoặc $10 tín dụng Skype như là lời cảm ơn . Chi tiết (http://<%hostname %>/prizes)
 
-Get your whole school to participate (http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Hãy để toàn bộ tường học của bạn tham gia (http://<%= hostname %>/whole-school) để có cơ hội nhận được những giải thưởng lớn.
 
-  1. Spread the word
+  1. Truyền tải thông điệp
 
-Tell your friends about the #HourOfCode.
+Nói với bạn bè của bạn về #HourOfCode.
 
-  1. Ask your whole school to offer an Hour of Code
+  1. 2. Đề nghị trường của bạn tổ chức Hour of Code
 
-Send this email (http://<%= hostname %>/resources#email) or give this handout to your principal (http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, enter to win $10,000 worth of technology for your school (http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+Gửi email này (http://<%= hostname %>/resources#email) hoặc bản tin này cho hiêu trưởng trường của bạn (http://<%= hostname %>/files/schools-handout.pdf). Sau khi trường học của bạn trên hành trình giành chiến thắng 10.000 $ giá trị của các sản phẩm công nghệ cho trường của bạn (http://<%= hostname %>/prizes) và thách thức các trường khác trong khu vực của bạn tham gia vào cuộc cạnh tranh.
 
-  1. Ask your employer to get involved
+  1. 3. Đề nghị nhân viên của bạn tham gia cùng
 
-Send this email (http://<%= hostname %>/resources#email) to your manager, or the CEO. Or give them this handout (http://<%= hostname %>/files/schools-handout.pdf).
+Gửi email này (http://<%= hostname %>/resources#email) cho quản lý của bạn, hoặc tổng giám đốc. Hoặc cung cấp cho họ bản tin này (http://<%= hostname%>/files/schools-handout.pdf).
 
-  1. Promote Hour of Code within your community
+  1. 4. Quảng bá Hour of Code tới đất nước của bạn
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Lập thành càng nhóm tại địa phương - nhóm các bạn sinh viên đại học, nhóm những người lớn tuổi, nhóm những người trong độ tuổi lao động. Hoặc tổ chức một sự kiện Hour of Code "block party" cho những người hàng xóm của bạn.
 
-  1. Ask a local elected official to support the Hour of Code
+  1. 5. Đưa ra yêu cầu tới quan chức địa phương để hỗ trợ cho sự kiện Hour of Code
 
-Send this email (http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or give them this handout (http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+Gửi email này (http://<%= hostname %>/resources#politicians) cho thị trưởng, hội đồng thành phố hay hội đồng nhà trường của bạn. Hoặc cung cấp cho họ bản tin này (http://<%= hostname %>/resources/hoc-one-pager.pdf) và mời họ tới thăm trường của bạn.

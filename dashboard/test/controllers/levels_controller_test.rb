@@ -73,7 +73,7 @@ class LevelsControllerTest < ActionController::TestCase
 
     assert assigns(:level)
     assert assigns(:level).game
-    assert_equal level_url(assigns(:level)), JSON.parse(@response.body)["redirect"]
+    assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
   end
 
   test "should create maze levels with step mode" do
@@ -135,7 +135,7 @@ class LevelsControllerTest < ActionController::TestCase
     assert assigns(:level).game
     assert_equal @user, assigns(:level).user
 
-    assert_equal level_url(assigns(:level)), JSON.parse(@response.body)["redirect"]
+    assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
   end
 
   test "should not create invalid karel level" do
@@ -155,7 +155,16 @@ class LevelsControllerTest < ActionController::TestCase
       post :create, :level => { :name => "NewCustomLevel", :type => 'Artist' }, :game_id => game.id, :program => @program
     end
 
-    assert_equal level_url(assigns(:level)), JSON.parse(@response.body)["redirect"]
+    assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
+  end
+
+  test "should create studio level" do
+    game = Game.find_by_name("CustomStudio")
+    assert_difference('Level.count') do
+      post :create, :level => { :name => "NewCustomLevel", :type => 'Studio' }, :game_id => game.id, :program => @program
+    end
+
+    assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
   end
 
   test "should create and destroy custom level with level file" do
@@ -362,18 +371,16 @@ class LevelsControllerTest < ActionController::TestCase
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0]]
-    post :create, :level => {:name => "NewCustomLevel", :instructions => "Some Instructions", :maze_data =>maze_array.to_json, :type => 'Karel'},
-      :game_id => game.id, :size => 8
-
+    post :create, :level => {:name => "NewCustomLevel", :instructions => "Some Instructions", :type => 'Karel'}, :game_id => game.id, :size => 8
     my_level = Level.find_by(name: 'NewCustomLevel')
-    maze_json = JSON.parse(my_level.maze)
+
+    patch :update, :level => {:maze_data => maze_array.to_json}, id: my_level, game_id: game.id
+    maze_json = JSON.parse(Level.find_by(name: 'NewCustomLevel').maze)
     maze_array[0][0] = '+2'
     maze_array[2][0] = 1
 
     patch :update, :level => {:maze_data => maze_array.to_json}, id: my_level, game_id: game.id
-
     new_maze = JSON.parse(Level.find_by(name: 'NewCustomLevel').maze)
-    new_initial_dirt = JSON.parse(Level.find_by(name: 'NewCustomLevel').properties['initial_dirt'])
     maze_json[0][0] = 1
     maze_json[2][0] = 1
     assert_equal maze_json, new_maze
