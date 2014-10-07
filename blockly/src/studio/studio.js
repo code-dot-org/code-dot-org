@@ -25,10 +25,10 @@ var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var _ = utils.getLodash();
 
-var rgbcolor = require('../canvg/rgbcolor.js')
-var stackBlur = require('../canvg/StackBlur.js')
-var canvg = require('../canvg/canvg.js')
-var svgToDataUrl = require('../canvg/svg_todataurl')
+var rgbcolor = require('../canvg/rgbcolor.js');
+var stackBlur = require('../canvg/StackBlur.js');
+var canvg = require('../canvg/canvg.js');
+var svgToDataUrl = require('../canvg/svg_todataurl');
 
 var Direction = tiles.Direction;
 var NextTurn = tiles.NextTurn;
