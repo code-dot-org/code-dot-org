@@ -14,20 +14,29 @@ h1.ee_display_name {
   color: dimgray;
 }
 
-#intro_top {
-  color: black;
-}
 #intro_top h1 {
-  color: black;
+  color: dimgray;
 }
 #intro_top h2 {
-  color: black;
+  color: dimgray;
 }
 #intro_top h3 {
-  color: black;
+  color: dimgray;
 }
 #intro_top h4 {
-  color: black;
+  color: dimgray;
+}
+
+a.ee_link {
+  text-decoration:underline;
+}
+
+a.ee_link:link, a.ee_link:visited {
+  color: white;
+}
+
+a.ee_link:hover {
+  color: dimgray;
 }
 
 .ee_markdown {
@@ -68,7 +77,8 @@ h1.ee_congrats_header {
 }
 
 #top {
-  background-color: #000; padding: 20px
+  background-color: rgb(0, 178, 192);
+  padding: 20px
 }
 
 .count {
