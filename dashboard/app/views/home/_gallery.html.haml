@@ -1,10 +1,6 @@
-- [Game::STUDIO, Game::ARTIST].each do |app|
-  - unless current_user.gallery_activities.where(app: app).empty?
-    %h4= t("home.gallery.your_#{app}")
-    %div.gallery{id: "#{app}-gallery"}
-      - current_user.gallery_activities.where(app: app).limit(5).each do |gallery_activity|
-        - level_source = gallery_activity.try(:activity).try(:level_source)
-        - if level_source
-          %div.gallery_activity
-            = link_to(image_tag(original_image_level_source_path(level_source)), level_source)
-    .clear
+%div.gallery
+  - current_user.gallery_activities.limit(5).each do |gallery_activity|
+    - level_source = gallery_activity.try(:activity).try(:level_source)
+    - if level_source
+      %div.gallery_activity
+        = link_to(image_tag(original_image_level_source_path(level_source)), level_source)

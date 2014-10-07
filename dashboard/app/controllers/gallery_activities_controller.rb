@@ -5,21 +5,9 @@ class GalleryActivitiesController < ApplicationController
 
   before_action :set_gallery_activity, only: [:destroy]
 
-  INDEX_PER_PAGE = 30
+  INDEX_PER_PAGE = 25
   def index
-    def gallery_activities_for_app(app)
-      per_page = params[:app] ? INDEX_PER_PAGE : INDEX_PER_PAGE / 2 # when we show both apps, show half as many per app
-      GalleryActivity.where(autosaved: false, app: app).order(id: :desc).page(params[:page]).per(per_page)
-    end
-    
-    if params[:app]
-      @gallery_activities = gallery_activities_for_app params[:app]
-    else
-      # if app is not specified, show both apps
-      @playlab_gallery_activities = gallery_activities_for_app Game::PLAYLAB
-      @artist_gallery_activities = gallery_activities_for_app Game::ARTIST
-    end
-
+    @gallery_activities = GalleryActivity.order(id: :desc).page(params[:page]).per(INDEX_PER_PAGE)
     gallery_feature_ship_date = Date.new(2014, 4, 9)
     @days = (Date.today - gallery_feature_ship_date).to_i
   end
