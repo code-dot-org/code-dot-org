@@ -69,19 +69,7 @@ The Administrator / Counselor Phase 1 Professional Development online course [ed
  
 ### Phase 2: Teaching and Learning Studio
 
-#### Date and Time ####
-Monday, September 29th
-<br />
-Breakfast and check-in: 8:00am - 8:30am 
-<br />
-Workshop: 8:30am - 12:30pm
-
-Please review your reflection questions prior to PD and bring your laptop.
-
-#### Location
-
-More Information Coming Soon!
-
+Milestone Complete!
 
 [**Back to the top**](#top)
 

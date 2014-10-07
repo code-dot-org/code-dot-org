@@ -1,6 +1,8 @@
 * * *
 
-## layout: wide
+layout: wide
+
+* * *
 
 # Nagrade - pojmovi i postavke
 
@@ -20,8 +22,6 @@ Prize limited to K-12 U.S. schools only. To qualify, your entire school must reg
 
 ## Class-set of laptops (or $10,000 for other technology):
 
-Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here][1]. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
-
- [1]: http://www.hourofcode.com/us#faq
+Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here](http://www.hourofcode.com/us#faq). To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
 
 <% end %>
