@@ -1,9 +1,6 @@
 /**
  * Blockly Demo: Calc Graphics
  *
- * Copyright 2012 Google Inc.
- * http://blockly.googlecode.com/
- *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -17,10 +14,6 @@
  * limitations under the License.
  */
 
-/**
- * @fileoverview Demonstration of Blockly: Calc Graphics.
- * @author fraser@google.com (Neil Fraser)
- */
 'use strict';
 
 window.calc = module.exports;
@@ -31,7 +24,7 @@ window.calc = module.exports;
 var BlocklyApps = require('../base');
 var Calc = module.exports;
 var commonMsg = require('../../locale/current/common');
-var CalcMsg = require('../../locale/current/calc');
+var calcMsg = require('../../locale/current/calc');
 var skins = require('../skins');
 var levels = require('./levels');
 var Colours = require('./core').Colours;
@@ -67,12 +60,6 @@ Calc.pid = 0;
 Calc.visible = true;
 
 /**
- * The avatar image
- */
-Calc.avatarImage = new Image();
-Calc.numberAvatarHeadings = undefined;
-
-/**
  * Initialize Blockly and the Calc.  Called on page load.
  */
 Calc.init = function(config) {
@@ -81,15 +68,12 @@ Calc.init = function(config) {
   level = config.level;
 
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = true;
+  config.insertWhenRun = false;
 
   // Enable blockly param editing in levelbuilder, regardless of level setting
   if (config.level.edit_blocks) {
     config.disableParamEditing = false;
   }
-
-  Calc.AVATAR_HEIGHT = 51;
-  Calc.AVATAR_WIDTH = 70;
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -136,7 +120,6 @@ Calc.init = function(config) {
     Calc.ctxDisplay = display.getContext('2d');
 
     // Set their initial contents.
-    Calc.loadCalc();
     Calc.drawImages();
     Calc.drawAnswer();
     if (level.predraw_blocks) {
@@ -225,39 +208,6 @@ Calc.drawImages = function() {
 };
 
 /**
- * Initial the Calc image on load.
- */
-Calc.loadCalc = function() {
-  Calc.avatarImage.onload = function() {
-    Calc.display();
-  };
-  Calc.avatarImage.src = skin.avatar;
-  Calc.numberAvatarHeadings = 180;
-  Calc.avatarImage.height = Calc.AVATAR_HEIGHT;
-  Calc.avatarImage.width = Calc.AVATAR_WIDTH;
-};
-
-/**
- * Draw the Calc image based on Calc.x, Calc.y, and Calc.heading.
- */
-Calc.drawCalc = function() {
-  // Computes the index of the image in the sprite.
-  var index = Math.floor(Calc.heading * Calc.numberAvatarHeadings / 360);
-  var sourceX = Calc.avatarImage.width * index;
-  var sourceY = 0;
-  var sourceWidth = Calc.avatarImage.width;
-  var sourceHeight = Calc.avatarImage.height;
-  var destWidth = Calc.avatarImage.width;
-  var destHeight = Calc.avatarImage.height;
-  var destX = Calc.x - destWidth / 2;
-  var destY = Calc.y - destHeight + 7;
-
-  Calc.ctxDisplay.drawImage(Calc.avatarImage, sourceX, sourceY,
-                              sourceWidth, sourceHeight, destX, destY,
-                              destWidth, destHeight);
-};
-
-/**
  * Reset the Calc to the start position, clear the display, and kill any
  * pending tasks.
  * @param {boolean} ignore Required by the API but ignored by this
@@ -331,11 +281,6 @@ Calc.display = function() {
   // Draw the user layer.
   Calc.ctxDisplay.globalCompositeOperation = 'source-over';
   Calc.ctxDisplay.drawImage(Calc.ctxScratch.canvas, 0, 0);
-
-  // Draw the Calc.
-  if (Calc.visible) {
-    Calc.drawCalc();
-  }
 };
 
 /**
@@ -343,7 +288,6 @@ Calc.display = function() {
  */
 BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
-  document.getElementById('spinner').style.visibility = 'visible';
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.attempts++;
   Calc.execute();
@@ -366,7 +310,11 @@ Calc.evalCode = function(code) {
       if (window.onerror) {
         window.onerror("UserCode:" + e.message, document.URL, 0);
       }
-      window.alert(e);
+      if (console && console.log) {
+        console.log(e);
+      } else {
+        alert(e);
+      }
     }
   }
 };
@@ -376,12 +324,6 @@ Calc.evalCode = function(code) {
  */
 Calc.execute = function() {
   api.log = [];
-
-  if (feedback.hasExtraTopBlocks()) {
-    // immediately check answer, which will fail and report top level blocks
-    Calc.checkAnswer();
-    return;
-  }
 
   Calc.code = Blockly.Generator.workspaceToCode('JavaScript');
   Calc.evalCode(Calc.code);
@@ -405,7 +347,6 @@ Calc.animate = function() {
 
   var tuple = api.log.shift();
   if (!tuple) {
-    document.getElementById('spinner').style.visibility = 'hidden';
     Blockly.mainWorkspace.highlightBlock(null);
     Calc.checkAnswer();
     return;
@@ -423,60 +364,17 @@ Calc.animate = function() {
 
 /**
  * Execute one step.
- * @param {string} command Logo-style command (e.g. 'FD' or 'RT').
+ * @param {string} command Logo-style command (e.g.  or 'RT').
  * @param {!Array} values List of arguments for the command.
  */
 Calc.step = function(command, values) {
   switch (command) {
-    case 'FD':  // Forward
-      Calc.moveForward_(values[0]);
-      break;
-    case 'JF':  // Jump forward
-      Calc.jumpForward_(values[0]);
-      break;
-    case 'MV':  // Move (direction)
-      var distance = values[0];
-      var heading = values[1];
-      Calc.setHeading_(heading);
-      Calc.moveForward_(distance);
-      break;
-    case 'JD':  // Jump (direction)
-      distance = values[0];
-      heading = values[1];
-      Calc.setHeading_(heading);
-      Calc.jumpForward_(distance);
-      break;
-    case 'RT':  // Right Turn
-      Calc.turnByDegrees_(values[0]);
-      break;
-    case 'DP':  // Draw Print
-      Calc.ctxScratch.save();
-      Calc.ctxScratch.translate(Calc.x, Calc.y);
-      Calc.ctxScratch.rotate(2 * Math.PI * (Calc.heading - 90) / 360);
-      Calc.ctxScratch.fillText(values[0], 0, 0);
-      Calc.ctxScratch.restore();
-      break;
-    case 'DF':  // Draw Font
-      Calc.ctxScratch.font = values[2] + ' ' + values[1] + 'pt ' + values[0];
-      break;
-    case 'PU':  // Pen Up
-      Calc.penDownValue = false;
-      break;
-    case 'PD':  // Pen Down
-      Calc.penDownValue = true;
-      break;
-    case 'PW':  // Pen Width
-      Calc.ctxScratch.lineWidth = values[0];
-      break;
-    case 'PC':  // Pen Colour
-      Calc.ctxScratch.strokeStyle = values[0];
-      Calc.ctxScratch.fillStyle = values[0];
-      break;
-    case 'HT':  // Hide Calc
-      Calc.visible = false;
-      break;
-    case 'ST':  // Show Calc
-      Calc.visible = true;
+
+    case 'DRAW':
+      // todo (brent)
+      if (console && console.log) {
+        console.log('draw');
+      }
       break;
   }
 };
@@ -617,8 +515,8 @@ var displayFeedback = function() {
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
     saveToGalleryUrl: level.freePlay && Calc.response.save_to_gallery_url,
     appStrings: {
-      reinfFeedbackMsg: CalcMsg.reinfFeedbackMsg(),
-      sharingText: CalcMsg.shareDrawing()
+      reinfFeedbackMsg: calcMsg.reinfFeedbackMsg(),
+      sharingText: calcMsg.shareDrawing()
     }
   });
 };
@@ -676,7 +574,7 @@ Calc.checkAnswer = function() {
   // Test whether the current level is a free play level, or the level has
   // been completed
   var levelComplete = level.freePlay || isCorrect(delta, permittedErrors);
-  Calc.testResults = BlocklyApps.getTestResults(levelComplete);
+  Calc.testResults = BlocklyApps.getTestResults(levelComplete, {allowTopBlocks: true});
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -689,7 +587,7 @@ Calc.checkAnswer = function() {
       level.solutionBlocks &&
       removeK1Lengths(textBlocks) === removeK1Lengths(level.solutionBlocks)) {
     Calc.testResults = BlocklyApps.TestResults.APP_SPECIFIC_ERROR;
-    Calc.message = CalcMsg.lengthFeedback();
+    Calc.message = calcMsg.lengthFeedback();
   }
 
   // For levels where using too many blocks would allow students
