@@ -1,0 +1,169 @@
+ar:
+  site_name: ساعة من الكود البرمجي
+  language: العربية
+  front_title: انضم إلى أكبر حدث تعليمي في التاريخ ، 2014/8/14
+  coming_soon: قريباً
+  front_header_banner: انضم إلى أكبر حدث تعليمي في التاريخ ، 2014/8/14
+  front_intro_default: 'إن "ساعة من الكود البرمجي" تعتبر حمله عالمية تصل إلى عشرات الملايين من الطلاب ، في أكثر من مئة وسبعين بلد. يمكن تنظيم حدث "ساعة من الكود البرمجي" من قبل أي شخص وفي أي مكان. دروس مدتها ساعة واحدة متوفرة بأكثر من ثلاثين لغة. الخبرة غير ضرورية.  <strong> للذين تتراوح أعمارهم بين 4 سنوات إلى 104 سنوات.</strong>'
+  front_intro_default_uk: 'ساعة البرمجة حركة عالمية تتصل بعشرات ملايين الطلاب في أكثر من 170 بلدا. أي شخص يمكن تنظيم حدث "ساعة البرمجة". اكثر من 3 مليون طالب في المملكة المتحدة انجزوا اول ساعة برمجة. دعونا نضاعف هذا العدد في كانون الأول/ديسمبر! <strong>الخبرة غير لازمة. الاعمار تتراوح من 4 إلى 104-</strong>'
+  front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 170 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>No se necesita experiencia. Para edades entre 4 y 104 años.</strong>'
+  front_watch_video: شاهد الفيديو الجديد
+  header_menu_resources: الموارد
+  header_menu_faq: الأسئلة المتداولة
+  header_menu_prizes: الجوائز
+  header_menu_uk_code_org: uk.code.org
+  choose_country_header: شارك في جميع أنحاء العالم!
+  country_ar: الأرجنتين
+  country_au: أُستراليا
+  country_br: البرازيل
+  country_eu: الاتحاد الأوربي
+  country_it: إيطاليا
+  country_nz: نيوزيلندا
+  country_ro: رومانيا
+  country_uk: المملكة المتحدة
+  country_us: الولايات المتحدة الأمريكية
+  prizes_all: جوائز لكل منظم
+  prizes_every_organizer: سيتلقى كل منظم لساعة البرمجة رصيد Dropbox أو سكايب كشكر
+  prizes_technology: 'سوف تفوز مدرسة عامة واحدة في كل ولاية من الولايات المتحدة (والعاصمة واشنطن )بجائزة  تبلغ قيمتها 10000دولار من المنتجات التكنولوجية'
+  prizes_tech_chats: سيفوز 50 قسم بمحادثة فيديو عبر الانترنت مع ضيوف خاصين جداً
+  prizes_details: التفاصيل
+  n_have_learned_an_hoc: '<h1>#</h1><h3>قد جرَبت</h3><h2>ساعة من الكود البرمجي</h2>'
+  anybody_can_learn: أي شخص يستطيع أن يتعلم.
+  register_now: سجِّل الآن
+  front_join_us_heading: '"ساعة من الكود البرمجي" لكل طالب.'
+  front_join_us_description: إن علوم الحاسوب هو أساس لكل طالب. ساعدنا لنقدمه لمئة مليون.
+  front_join_us_button: انضم إلينا
+  front_what_is_hoc: ما هي ساعة البرمجة؟
+  front_join_us_header: 'في أي وقت خلال الفترة الممتدة  من 8 الى 14 كانون الأول/ديسمبر، الموافق لأسبوع تعليم علوم الحاسوب، استضف حدث ساعة البرمجة لاثبات  بأن أي شخص يمكنه تعلم الأساسيات، و التمتع ايضا في القيام بذلك!'
+  front_join_us_header_uk: 'في أي وقت خلال الفترة الممتدة  من 8 الى 14 كانون الأول/ديسمبر، الموافق لأسبوع تعليم علوم الحاسوب، استضف حدث ساعة البرمجة لاثبات  بأن أي شخص يمكنه تعلم الأساسيات، و التمتع ايضا في القيام بذلك!'
+  front_join_us_teacher: هل أنت معلم؟
+  front_join_us_inspire: الهم طلابك مع
+  front_join_us_inspire_link: ساعة البرمجة في قسمك.
+  front_join_us_parent: هل انت ولي؟
+  front_join_us_ask_link: اسأل المدرسة الموجودة بمنطقتك
+  front_join_us_ask: لاستضافة ساعة البرمجة.
+  front_join_us_computer_science: هل تحب علوم الحاسوب؟
+  front_join_us_spread: انشر الحدث في محيطك.
+  front_join_us_organize: أو نظم حدث ساعة البرمجة بنفسك.
+  front_join_us_how_to_run: وإليك كيفية تنظيم ساعة البرمجة
+  front_join_us_help_promote: ساعد على معاضدة ساعة البرمجة
+  front_join_us_students: التلاميذ
+  front_join_us_teachers: المعلمين
+  front_join_us_everyone: الجميع
+  front_join_us_try: جرب
+  front_join_us_host: استضف
+  front_join_us_support: ادعم
+  signup_header: 'اسمح لنا أن نعرف إذا كنت ستستضيف "ساعة من الكود البرمجي"'
+  signup_header_ar: Déjanos saber si estas organizando una Hora de Programación
+  signup_name_label: اسمُكَ
+  signup_email_label: بريدك الإلكتروني
+  signup_organization_name_label: اسم المدرسة أو المنظمة
+  signup_event_type_label: نوع الحدث
+  signup_event_entire_school_label: مدرستي مشاركة بالكامل
+  signup_event_location_label: مكان الحدث (اختياري)
+  signup_special_event_flag_label: تسليط الضوء على حدثي المميز
+  signup_special_event_details_label: تفاصيل الحدث المميز
+  signup_send_posters_flag_label: 'إرسال <a href= "/resources#posters"> ملصقات</a> لمدرستي أومنظمتي'
+  signup_send_posters_address_label: عنوان المدرسة أو المنظمة
+  signup_whole_school_flag_label: هذا الحدث لمدرسة كاملة
+  signup_name_placeholder: اسمُك
+  signup_email_placeholder: بريدك الإلكتروني
+  signup_organization_name_placeholder: على سبيل المثال ، مدرسة لينكولن الثانوية
+  signup_event_location_placeholder: "الرمز البريدي والبلد أو العنوان الكامل.\r\n(سوف نستعمل هذا العنوان لوضع دبوس على الخريطة)"
+  signup_special_event_details_placeholder: صِف ما يجعل هذا الحدث مميزاً
+  signup_send_posters_address_placeholder: لن تتم مشاركة هذا العنوان على خارطتنا
+  signup_event_type_in_school: في مدرسة
+  signup_event_type_out_of_school: خارج المدرسة
+  signup_submit_label: التسجيل
+  signup_submit_error_message: حدث خطأ ما. رجاءً تأكد أنه قد تم ملء كل الحقول المطلوبة بشكل صحيح.
+  signup_thank_you_header: 'شكرا لك على الاشتراك لاستضافة حدث "ساعة من الكود البرمجي".'
+  signup_thank_you_message: أرسلنا لك رسالة تأكيد بالبريد الإلكتروني مع معلومات لمساعدتك على البدء.
+  map_header: 'أحداث "ساعة من الكود البرمجي" حول العالم'
+  map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
+  meta_tag_og_title: ساعة البرمجة قادمة
+  meta_tag_og_description: ساعة البرمجة حركة عالمية تضم عشرات ملايين طلاب في 200 دولة وما يزيد على 30 لغة. تتراوح الأعمارهم من 4 إلى 104.
+  meta_tag_twitter_title: ساعة البرمجة قادمة
+  meta_tag_twitter_description: ساعة البرمجة حركة عالمية تضم عشرات ملايين طلاب في 200 دولة وما يزيد على 30 لغة. تتراوح الأعمارهم من 4 إلى 104.
+  twitter_default_text: 'أنا اشارك هذا العام في ساعة البرمجة #HourOfCode، و أنت؟ @codeorg'
+  hardware_prizes_form_name_label: اسمُكَ
+  hardware_prizes_form_name_placeholder: اسمُكَ
+  hardware_prizes_form_email_label: بريدك الإلكتروني
+  hardware_prizes_form_email_placeholder: بريدك الإلكتروني
+  hardware_prizes_form_school_name_label: اسم المدرسة
+  hardware_prizes_form_school_name_placeholder: اسم المدرسة
+  hardware_prizes_form_school_address_label: عنوان المدرسة
+  hardware_prizes_form_school_address_placeholder: عنوان المدرسة
+  hardware_prizes_form_school_type_label: نوع المدرسة
+  hardware_prizes_form_school_type_option_elementary: المرحلة الابتدائية
+  hardware_prizes_form_school_type_option_middle_school: المدرسة الإعدادية أو المتوسطة
+  hardware_prizes_form_school_type_option_high_school: المدرسة الثانوية
+  hardware_prizes_form_qualifying_school_label: هذه مدرسة أميركية عامة للتعليم الابتدائي والثانوي
+  hardware_prizes_form_number_students_label: عدد الطلاب المشاركين
+  hardware_prizes_form_number_students_placeholder: عدد الطلاب
+  hardware_prizes_form_plan_file_label: 'تحميل الخطة التنفيذيه لـِ "ساعة من الكود البرمجي" الخاصة بك'
+  hardware_prizes_form_plan_file_description: 'تقديم جدول زمني مبسط عن كيف تخطط لجعل كل طالب يمارس "ساعة من الكود البرمجي" في مدرستك. انظر إلى نموذج الخطة:    #PDF#  |  #Word#'
+  hardware_prizes_form_submit_label: أرسل
+  hoc_faq_title: الأسئلة المتكررة
+  hoc_faq_what_is_hoc_q: ما هي ساعة البرمجة؟
+  hoc_faq_what_is_hoc_a: "ساعة البرمجة هي مقدمة لعلوم الحاسوب و تدومة ساعة ، مصممة لإزالة الغموض عن مجال البرمجة، وتبين أن أي شخص يمكن أن تتعلم الأساسيات. <a href='http://code.org/learn'> الق نظرة على الدروس</a>، وابحث عن القائمة الجديدة لدورة عام 2014 من ساعة البرمجة."
+  hoc_faq_last_year: جرب دروس العام الماضي
+  hoc_faq_when_is_hoc_q: متى تقام ساعة البرمجة؟
+  hoc_faq_when_is_hoc_a: "أي شخص يمكنه أن يستضيف ساعة البرمجة في أي وقت، ولكن هدف الحملة الشعبية هو الوصول لعشرات ملايين الطلاب لمحاولة ساعة البرمجة خلال 8-14 كانون الأول/ديسمبر، عام 2014، و المتزامن مع الاحتفال <a href='http://csedweek.org'> بأسبوع تعليم علوم الحاسوب</a>. هل هناك <i>ساعة</i> محددة؟ لا. يمكنك القيام بساعة البرمجة في أي وقت خلال ذلك الأسبوع. (وإذا لن يكون بامكانك خلال ذلك الأسبوع، يمكن القيام في الأسبوع التالي او اللاحق)."
+  hoc_faq_why_cs_q: لماذا علوم الحاسوب؟
+  hoc_faq_why_cs_a: "ينبغي على<i>كل</i> طالب الحصول على الفرصة لتعلم علوم الحاسوب. فذلك يساعد على تنمية مهارات حل المشاكل والمنطق والإبداع. بالبدء في وقت مبكر، سوف تتاح للطلاب أسس للنجاح في أي مسار وظيفي خلال القرن الحادي والعشرين. راجع إحصائيات أكثر في <a href='http://code.org'> Code.org</a>."
+  hoc_faq_how_participate_q: كيفية القيام بالمشاركة في ساعة البرمجة؟
+  hoc_faq_how_participate_a: |-
+    قم بالتسجيل لاستضافة حدث ساعة البرمجة <a href='http://hourofcode.org'> هنا</a> وابدء التخطيط. يمكنك تنظيم حدث "ساعة البرمجة في المدرسة أو في محيطك &mdash; مثلا في نادٍ لا يستهدف الربح، أو في مكان العمل. أو جرب بنفسك عندما نصل إلى 8 كانون الأول/ديسمبر.
+  hoc_faq_behind_hoc_q: من يقف وراء ساعة البرمجة؟
+  hoc_faq_behind_hoc_a: "ساعة البرمجة تنظمه <a href='http://code.org'> Code.org</a>، و هي منظمة عامة تتبع نظام 501c3  غير هادفة للربح تهدف لتوسيع نطاق المشاركة في علوم الحاسوب بجعلها متاحة في أكبر عدد من المدارس، وزيادة مشاركة النساء والطلاب من الاقليات.  <a href='http://code.org/about/partners'> تحالف لم يسبق له مثيل من الشركاء</a> بدعم حدث ساعة البرمجة، أيضا &mdash; بما في ذلك Microsoft، أبل، الأمازون، أندية الفتية و الفتيات في أمريكا ومجلس الكلية."
+  hoc_faq_host_q: أنا لا أعرف أي شيء حول البرمجة. هل يمكن ان استضيف حدثاً؟
+  hoc_faq_host_a: "طبعًا. أنشطة ساعة البرمجة ذات توجيه الذاتي. كل ما عليك القيام به <a href='http://code.org/learn'> تجريب النشطة الحالية</a>، اختر النشاط الذي تريده، و اختر ساعة &mdash; و سنقوم بالباقي. ولدينا أيضا خيارات لكل الاعمار و حسب مستوى الخبرة، بدءاً من رياض الأطفال و اكثر. ابدء التخطيط للحدث الخاص بك عن طريق قراءة <a href='target-resources-how-to'> الدليل التوجيهي</a>."
+  hoc_faq_need_computers_q: هل احتاج إلى جهاز حاسوب لكل مشارك؟
+  hoc_faq_need_computers_a: "كلا. لدينا انشطة تعمل على أجهزة الكمبيوتر والهواتف الذكية واللوحات الرقمية، وبعضها لا تتطلب حاسوبا على الإطلاق! يمكنك الانضمام إلى أينما كنت، مع كل ما لديك. <p><i>هنا هي عدد قليل من الخيارات:</i> <br><ul><li><b>العمل في أزواج.</b> تبين الابحاث ان تعلم الطلاب أفضل في<a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> اطار مجموعات من شخصين</a>، المشاركة في حاسوب واحد والعمل معا. شجع الطلاب على التعاون. <li><b>استخدام عرض الشاشة على الجميع.</b> إذا كان لديك جهاز العرض و حاسوب متصل بشبكة الإنترنت، المجموعة بأكملها يمكنها القيام بساعة البرمجة معا. شاهدوا أجزاء الفيديو معا، ثم اترك الطلاب يتناوبون على حل الألغاز أو الإجابة على الأسئلة. <li><b>الانشطة الغير موصولة.</b> نحن نقدم الدروس التي تتطلب لا كمبيوتر على الإطلاق. </ul>"
+  hoc_faq_international_q: وأنا خارج الولايات المتحدة. كيف أشارك دوليا؟
+  hoc_faq_international_a: أي شخص يمكنه تنظيم حدث ساعة البرمجة، في أي مكان في العالم. في العام الماضي، انضم الطلاب في مختلف الدول للحدث.
+  hoc_faq_tutorial_q: كيف يمكنني ان انجز درسا لساعة البرمجة؟
+  hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
+  hoc_faq_what_is_hoc_uk_a: "ساعة البرمجة هي مقدمة لعلوم الحاسوب و تدوم ساعة، مصممة لإزالة الغموض عن مجال البرمجة، وتبين أن أي شخص يمكن أن يتعلم الأساسيات. <a href='http://code.org/learn'> الق نظرة على الدروس</a>، وابحث عن الدروس الجديدة لدورة عام 2014 من ساعة البرمجة."
+  hoc_faq_when_is_hoc_uk_a: "حدث ساعة البرمجة سيكون خلال 8-14 كانون الأول/ديسمبر، من سنة 2014. هل هناك <i>ساعة</i> محددة؟ لا. يمكنك القيام بساعة البرمجة في أي وقت خلال ذلك الأسبوع. حدث ساعة البرمجة في المملكة المتحدة سيتم في نفس الوقت كما هو الحال في الولايات المتحدة و هو يناسب الاحتفال السنوي <a href='http://csedweek.org'> لأسبوع تعليم علوم الحاسوب-</a>"
+  hoc_faq_why_cs_uk_a: 'ينبغي أن يكون <i>لكل</i> طالب الفرصة لتعلم علوم الحاسوب. فذلك يساعد على تنمية مهارات حل المشاكل والمنطق والإبداع. بالبدء في وقت مبكر، سوف تتاح للطلاب أسس النجاح في أي مسار وظيفي خلال القرن الحادي والعشرين.'
+  hoc_faq_how_participate_uk_a: |-
+    قم بالتسجيل لاستضافة حدث ساعة البرمجة <a href='http://hourofcode.org'> هنا</a> وابدء التخطيط. يمكنك تنظيم حدث "ساعة البرمجة في المدرسة أو في محيطك &mdash; مثلا في نادٍ لا يستهدف الربح، أو في مكان العمل. أو جرب بنفسك عندما نصل إلى 8 كانون الأول/ديسمبر.
+  hoc_faq_behind_hoc_uk_a: "حدث ساعة البرمجة تنظمه <a href='http://uk.code.org'> Code.org</a>وهي منظمة عامة تحت اطار 501C3  غير هادفة للربح مكرسة لتوسيع نطاق المشاركة في علوم الحاسوب بجعلها متاحة في أكبر عدد من المدارس، وزيادة مشاركة النساء والطلاب من مختلف الاعراق.  <a href='http://uk.code.org/about/partners'> تحالف لم يسبق له مثيل من الشركاء</a> يدعم ساعة البرمجة، &mdash; بما في ذلك مايكروسوفت، جوجل،منشورات جامعة كامبريدج ، مدينة التكنولوجيا ووزارة التربية والتعليم."
+  hoc_faq_host_uk_a: "طبعًا. أنشطة ساعة البرمجة ذات توجيه الذاتي. كل ما عليك القيام به هو اختيار البرنامج التعليمي الذي تريده ثم اختر الساعة &mdash; سنقوم بالبقية. ولدينا أيضا خيارات لكل العمر ومستوى الخبرة، بدءاً من رياض الأطفال واكثر. <a href='http://code.org/learn'> جرب الدروس الحالية</a>."
+  hoc_faq_what_is_hoc_ar_q: Qué es la Hora de Program.AR?
+  hoc_faq_what_is_hoc_ar_a: "La Hora de Program.AR es una introducción de una hora a la ciencia computacional, diseñada para desmitificar la programación y demostrar que cualquiera puede aprender los conceptos básicos. <a href='http://code.org/learn'>Revisa los tutoriales</a> y busca otros nuevos para la Hora de Program.AR del 2014."
+  hoc_faq_when_is_hoc_ar_q: ¿Cuándo es la Hora de Program.AR?
+  hoc_faq_when_is_hoc_ar_a: "La Hora de Program.AR se llevará a cabo del 8 al 14 de diciembre del 2014. ¿Es una hora <i>específica</i>? No. Puedes hacer la Hora de Program.AR en cualquier momento durante esta semana. La Hora de Program.AR está programada para celebrarse anualmente - <a href='http://csedweek.org'>la Semana de Ciencias de Computación</a>."
+  hoc_faq_how_participate_ar_q: ¿Cómo puedo participar en la Hora de Program.AR?
+  hoc_faq_how_participate_ar_a: "Regístrese para organizar un evento de la hora de Program.AR <a href='http://hourofcode.org'>aquí</a> e inicie la planificación. Tú puedes organizar un evento de la Hora de ProProgram.ARgramación en tú escuela o en tú comunidad &mdash; como en un club extracurricular, en una organización sin fines de lucro o en el trabajo. O, simplemente probarlo cuando Diciembre 8 llegue."
+  hoc_faq_behind_hoc_ar_q: ¿Quién está detrás de la Hora de Program.AR?
+  hoc_faq_behind_hoc_ar_a: "La Hora de Program.AR es organizada por <a href='http://code.org'>Code.org</a>, una organización pública sin fines de lucro (501c3) dedicada a ampliar la participación en Ciencias Computacionales poniendose a disposición de más escuelas y aumentando la participación de las mujeres y los estudiantes subrepresentados de color. Una <a href='http://code.org/about/partners'>coalición sin precedentes de socios</a> se ha reunido para apoyar la Hora de Program.AR, también &mdash; incluyendo Microsoft, Apple, Amazon, Boys y Girls Clubs of America y el College Board."
+  hoc_faq_host_ar_q: No sé nada acerca de Program.AR. ¿Aún así puedo organizar un evento?
+  hoc_faq_host_ar_a: "Claro. Las actividades de La Hora de Program.AR son autodirigidas. Todo lo que tienes que hacer es elegir el tutorial que quieras y escoge una hora &mdash; nosotros nos encargamos del resto. También tenemos opciones para cada edad y nivel de experiencia, desde el kindergarten y para arriba. <a href='http://code.org/learn'>Pruebe nuestros tutoriales actuales</a>."
+  hoc_faq_need_computers_ar_q: ¿Necesito computadoras para cada participante?
+  hoc_faq_need_computers_ar_a: "No. Tenemos tutorales de la Hora de Program.AR que funcionan en PCs, teléfonos inteligentes, tabletas y algunos que no requieren ¡ninguna computadora en absoluto! Tú puedes unirte desde donde quiera que estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i> <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes aprenden mejor con <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares de programación</a>, compartiendo una computadora y trabajando juntos. Anima a tus estudiantes a trabajar en pares. <li><b>Una pantalla proyectada.</b> Si tú tienes un proyector y una computadora conectada a Internet, el grupo entero puede hacer una hora de Program.AR juntos. Mira porciones de videos juntos y toma turnos para resolver acertijos o responder preguntas. <li><b>Desconéctate.</b> Ofrecemos tutoriales que no requieren ninguna computadora en absoluto. </ul>"
+  hoc_faq_tutorial_ar_q: ¿Cómo puedo hacer un tutoría de la Hora de Program.AR?
+  hoc_faq_tutorial_ar_a: "Si usted está interesado en convertirse en un socio para tutoriales, <a href='/tutorial-guidelines'>vea nuestras directrices e instrucciones</a>. Nos gustaría presentar varias opciones atractivas, pero la meta principal es optimizar la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales."
+  stats_hoc_2013_heading: 'إحصائيات لا تصدق عن حدث "ساعة من الكود البرمجي" الذي حدث السنة الماضية. في أسبوع واحد فقط:'
+  stats_hoc_2013_image_alt: 'إحصائيات عن "ساعة من الكود البرمجي" الذي حدث في عام 2013'
+  stats_growth: كان الأسرع للوصول ل 15 مليون مستخدم.
+  stats_tumblr: 'موقعTumblr   3.5 سنة'
+  stats_facebook: 'فيسبوك: 3 سنوات'
+  stats_twitter: 'تويتر: 2.5 سنة'
+  stats_pinterest: 'بينتيريست: 2 سنة'
+  stats_instagram: 'انستاغرام: 14 شهر'
+  stats_hoc: 'ساعة البرمجة: 5 أيام'
+  stats_global: تعلم 15 مليون طالب في جميع أنحاء العالم ساعة من البرمجة.
+  stats_girls_more: اكثر بنات جربوا علوم الحاسوب خلال 70 سنة.
+  stats_girls_million: ما يزيد على 10 ملايين بنت خلال 2013
+  stats_nina: 'خلال كل يوم توصلنا لنفس النتائج &mdash;   مائة بالمائة من الالتزام - نينا نيكولس بيري، معلمة'
+  stats_student: '"كنت أعرف ان  هذا كان فرصة <b>وحيدة العمر</b> ."-ماريانا الزاتي، الصف الخامس'
+  stats_michael: 'لم ارى <b>ابدأ، من أي وقت مضى</b> طلابي متحمسين جداً للتعلم. "--كلارك ميكائيل، مدرس'
+  footer_copyright_message: حقوق الطبع والنشر Code.org عام 2014. جميع الحقوق محفوظة.
+  footer_trademark_message: إن ™Hour of Code هي علامة تجارية لصالح Code.org.
+  footer_menu_partners: الشركاء
+  footer_menu_contact: إتصل بنا
+  footer_menu_support: الدعم
+  footer_menu_terms: شروط
+  footer_menu_privacy: سياسة الخصوصية

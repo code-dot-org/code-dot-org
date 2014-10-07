@@ -125,6 +125,11 @@ Blockly.PREVIOUS_STATEMENT = 4;
  */
 Blockly.DUMMY_INPUT = 5;
 
+
+Blockly.FUNCTIONAL_INPUT = 6;
+Blockly.FUNCTIONAL_OUTPUT = 7;
+
+
 /**
  * ENUM for left alignment.
  * @const
@@ -150,6 +155,8 @@ Blockly.OPPOSITE_TYPE[Blockly.INPUT_VALUE] = Blockly.OUTPUT_VALUE;
 Blockly.OPPOSITE_TYPE[Blockly.OUTPUT_VALUE] = Blockly.INPUT_VALUE;
 Blockly.OPPOSITE_TYPE[Blockly.NEXT_STATEMENT] = Blockly.PREVIOUS_STATEMENT;
 Blockly.OPPOSITE_TYPE[Blockly.PREVIOUS_STATEMENT] = Blockly.NEXT_STATEMENT;
+Blockly.OPPOSITE_TYPE[Blockly.FUNCTIONAL_INPUT] = Blockly.FUNCTIONAL_OUTPUT;
+Blockly.OPPOSITE_TYPE[Blockly.FUNCTIONAL_OUTPUT] = Blockly.FUNCTIONAL_INPUT;
 
 /**
  * Database of pre-loaded sounds.

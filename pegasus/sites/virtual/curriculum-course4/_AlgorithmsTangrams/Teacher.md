@@ -18,6 +18,7 @@ This lesson shows us something important about algorithms. If you keep an algori
 This activity will show both options.
 
 [summary]
+
 ## Teaching Summary 
 
 ### **Getting Started** - 10 minutes

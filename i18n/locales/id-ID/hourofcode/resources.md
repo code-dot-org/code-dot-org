@@ -1,29 +1,14 @@
 * * *
 
-title: Resources
+title: Resources layout: wide nav: resources_nav
 
-## layout: wide
+* * *
 
 # Sumber daya
 
-*   [Handouts to spread the word][1] <br/>
-*   [How-to guide for teachers][2] <br/>
-*   [Posters][3] <br/>
-*   [Videos][4] <br/>
-*   [Sample emails][5] <br/>
-*   [Useful computer science stats][6]   
-    
-*   [Press Kit][7]
+<a id="handouts"></p> 
 
- [1]: #handouts
- [2]: /resources/how-to
- [3]: #posters
- [4]: #videos
- [5]: #sample-emails
- [6]: /resources/stats
- [7]: /resources/press-kit
-
-<a id="handouts"></p> <h2>
+<h2>
   Gunakan selebaran ini untuk menyebarkan berita
 </h2>
 
@@ -32,7 +17,7 @@ title: Resources
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Berikan selebaran ini pada guru-guru dan sekolah-sekolah
 </h2>
 
 <p>
@@ -40,8 +25,10 @@ title: Resources
 </p>
 
 <p>
-  <a id="videos"></p> <h2>
-    Show these videos to inspire students
+  <a id="videos"></p> 
+  
+  <h2>
+    Tunjukan video-video ini untuk menginspirasi pelajar
   </h2>
   
   <div style="float:left; padding:10px">
@@ -78,16 +65,34 @@ title: Resources
   </div>
   
   <p>
-    <a id="posters"></p> <h2>
-      Hang these posters in your school
+    <a id="posters"></p> 
+    
+    <h2>
+      Tempelkan poster - poster tersebut di sekolah anda
     </h2>
+    
+    <p>
+      <% if @country == 'us' %>
+    </p>
     
     <h4>
       <a href="http://hourofcode.com/us#signup">Daftar</a> aktivitas Hour of Code anda dan kami akan mengirimkan anda poseter secara gratis.
     </h4>
     
     <p>
-      <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+    </p>
+    
+    <p>
+      <a id="banners"></a>
+    </p>
+    
+    <h2>
+      Feature these banners on your website
+    </h2>
+    
+    <p>
+      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -95,7 +100,7 @@ title: Resources
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code.
+      Send these emails to help promote the Hour of Code
     </h2>
     
     <p>
@@ -103,7 +108,7 @@ title: Resources
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Tanyakan di sekolah, bos di tempat kerja atau teman anda untuk mendaftar:
     </h2>
     
     <p>
@@ -126,8 +131,12 @@ title: Resources
       Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
     </p>
     
+    <p>
+      <a id="media-pitch"></a>
+    </p>
+    
     <h2>
-      Invite media to attend your event:
+      Undanglah media untuk menghadiri kegiatan anda:
     </h2>
     
     <p>
@@ -179,7 +188,7 @@ title: Resources
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Beritahu orang tua anda mengenai kegiatan skolah anda:
     </h2>
     
     <p>
@@ -219,7 +228,7 @@ title: Resources
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Undang politisi lokal ke kegiatan sekolah anda:
     </h2>
     
     <p>

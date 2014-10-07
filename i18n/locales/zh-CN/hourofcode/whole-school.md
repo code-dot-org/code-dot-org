@@ -1,6 +1,8 @@
 * * *
 
-## layout: wide
+layout: wide
+
+* * *
 
 # 让全校同学都参加
 

@@ -1,8 +1,8 @@
 state_code_s!,cs_jobs_i,growth_vs_average_f,cs_graduates_i,count_schools_teach_cs_i,job_student_gap_i,cs_counts_t,cs_teacher_cert_s,cs_standards_s,text_t,petition_url_t,action_url_s,action_text_s
-AK,939,3.2,20,5,-919,No,No,No,,,http://www.congressweb.com/Code/2,Learn More
-AL,4022,3.6,541,26,-3481,Yes,No,No,,,http://www.congressweb.com/Code/2,Learn More
+AK,939,3.2,20,5,-919,No,No,No,,,,
+AL,4022,3.6,541,26,-3481,Yes,No,No,,,,
 AR,1998,3.6,525,19,-1473,No,No,No,,,http://www.change.org/petitions/arkansas-state-board-of-education-please-help-us-make-computer-science-satisfy-existing-high-school-graduation-requirements-for-math-or-science,Take Action
-AZ,10744,3.6,336,33,-10408,Yes,Yes,No,,,,Learn More
+AZ,10744,3.6,336,33,-10408,Yes,Yes,No,,,,
 CA,80321,4.3,4324,311,-75997,Yes,No,No,,,,
 CO,15082,2.9,717,69,-14365,No,No,No,,,https://www.change.org/petitions/colorado-state-board-of-education-and-colorado-school-districts-make-computer-science-courses-count-toward-graduation-credits,Take Action
 CT,9166,4.7,389,65,-8777,No,No,No,,,https://www.change.org/petitions/connecticut-state-department-of-education-please-help-us-make-computer-science-satisfy-existing-high-school-graduation-requirements-for-math-or-science,Take Action
