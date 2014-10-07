@@ -51,29 +51,29 @@ max_age: 60
     = view :employee_engagement_video, custom_video_key:company['video_key_s']
 
   #start.col-36
-    #blurb.col-mobile-56.mobile-pad-right
-      %br.desktop-feature
-
     #companystats.col-mobile-44
-      .desktop-feature
-        #blurb.col-mobile-56.mobile-pad-right
-          %br.desktop-feature
+      .count{:style=>'font-size: 32px; line-height: 32px; font-weight:500' }
+        #{format_integer_with_commas(hoc_count)}
+        -if num_employees
+          of #{format_integer_with_commas(company['num_employees_i'])} 
+        #{company['display_name_s']} employees have tried the Hour of Code.
+        %h4.desktop-feature{style: 'font-size: 22px;'}
+          -if hoc_percent
+            #{hoc_percent}% Started
+      %br
 
-          .count{:style=>'font-size: 32px; line-height: 32px; font-weight:500' }
-            #{format_integer_with_commas(hoc_count)}
-            -if num_employees
-              of #{format_integer_with_commas(company['num_employees_i'])} 
-            #{company['display_name_s']} employees have tried the Hour of Code.
-            %h4.desktop-feature{style: 'font-size: 22px;'}
-              -if hoc_percent
-                #{hoc_percent}% Started
-          %br
-
-        #getstarted.col-mobile-44
-          #largegap.mobile-show-medium
-          %a{:href=>"/api/hour/begin_company/#{company['name_s']}"}
-            %button.btn.btn-default
-              Start now
+      #getstarted.col-mobile-44
+        #largegap.mobile-show-medium
+        %a{:href=>"/api/hour/begin_company/#{company['name_s']}"}
+          %button.btn.btn-default
+            Start now
+      %br
+      %a.ee_link{:href=>"http://hourofcode.com/"} 
+        Host an Hour of Code
+      %br
+      %a.ee_link{:href=>"http://code.org/donate/"}
+        Support the campaign
+             
 
   #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
     -unless company['video_key_s']
