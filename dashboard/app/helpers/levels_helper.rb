@@ -157,7 +157,7 @@ module LevelsHelper
     # Set some specific values
     level['puzzle_number'] = @script_level ? @script_level.stage_or_game_position : 1
     level['stage_total'] = @script_level ? @script_level.stage_or_game_total : @level.game.levels.count
-    if @level.is_a?(Blockly) && @level.step_mode
+    if @level.is_a?(Maze) && @level.step_mode
       @level.step_mode = blockly_value(@level.step_mode)
       level['step'] = @level.step_mode == 1 || @level.step_mode == 2
       level['stepOnly'] = @level.step_mode == 2

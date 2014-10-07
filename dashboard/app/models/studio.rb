@@ -1,4 +1,4 @@
-class Studio < Maze
+class Studio < Grid
   serialized_attrs %w(
     first_sprite_index
     protaganist_sprite_index
