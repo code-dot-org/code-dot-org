@@ -22,7 +22,7 @@ module.exports = {
 
   'custom': {
     answer: '',
-    ideal: 4,
+    ideal: Infinity,
     toolbox: '',
     startBlocks: '',
     requiredBlocks: '',

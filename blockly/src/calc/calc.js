@@ -27,7 +27,6 @@ var commonMsg = require('../../locale/current/common');
 var calcMsg = require('../../locale/current/calc');
 var skins = require('../skins');
 var levels = require('./levels');
-var Colours = require('./core').Colours;
 var codegen = require('../codegen');
 var api = require('./api');
 var page = require('../templates/page.html');
@@ -373,117 +372,13 @@ Calc.step = function(command, values) {
     case 'DRAW':
       // todo (brent)
       if (console && console.log) {
-        console.log('draw');
+        console.log('draw: ' + values[0]);
       }
       break;
   }
 };
 
-Calc.jumpForward_ = function (distance) {
-  Calc.x += distance * Math.sin(2 * Math.PI * Calc.heading / 360);
-  Calc.y -= distance * Math.cos(2 * Math.PI * Calc.heading / 360);
-};
 
-Calc.moveByRelativePosition_ = function (x, y) {
-  Calc.x += x;
-  Calc.y += y;
-};
-
-Calc.dotAt_ = function (x, y) {
-  // WebKit (unlike Gecko) draws nothing for a zero-length line, so draw a very short line.
-  var dotLineLength = 0.1;
-  Calc.ctxScratch.lineTo(x + dotLineLength, y);
-};
-
-Calc.circleAt_ = function (x, y, radius) {
-  Calc.ctxScratch.arc(x, y, radius, 0, 2 * Math.PI);
-};
-
-Calc.drawToCalc_ = function (distance) {
-  var isDot = (distance === 0);
-  if (isDot) {
-    Calc.dotAt_(Calc.x, Calc.y);
-  } else {
-    Calc.ctxScratch.lineTo(Calc.x, Calc.y);
-  }
-};
-
-Calc.turnByDegrees_ = function (degreesRight) {
-  Calc.setHeading_(Calc.heading + degreesRight);
-};
-
-Calc.setHeading_ = function (heading) {
-  heading = Calc.constrainDegrees_(heading);
-  Calc.heading = heading;
-};
-
-Calc.constrainDegrees_ = function (degrees) {
-  degrees %= 360;
-  if (degrees < 0) {
-    degrees += 360;
-  }
-  return degrees;
-};
-
-Calc.moveForward_ = function (distance) {
-  if (!Calc.penDownValue) {
-    Calc.jumpForward_(distance);
-    return;
-  }
-  Calc.drawForward_(distance);
-};
-
-Calc.drawForward_ = function (distance) {
-  if (Calc.shouldDrawJoints_()) {
-    Calc.drawForwardWithJoints_(distance);
-  } else {
-    Calc.drawForwardLine_(distance);
-  }
-};
-
-/**
- * Draws a line of length `distance`, adding joint knobs along the way
- * @param distance
- */
-Calc.drawForwardWithJoints_ = function (distance) {
-  var remainingDistance = distance;
-
-  while (remainingDistance > 0) {
-    var enoughForFullSegment = remainingDistance >= JOINT_SEGMENT_LENGTH;
-    var currentSegmentLength = enoughForFullSegment ? JOINT_SEGMENT_LENGTH : remainingDistance;
-
-    remainingDistance -= currentSegmentLength;
-
-    if (enoughForFullSegment) {
-      Calc.drawJointAtCalc_();
-    }
-
-    Calc.drawForwardLine_(currentSegmentLength);
-
-    if (enoughForFullSegment) {
-      Calc.drawJointAtCalc_();
-    }
-  }
-};
-
-Calc.drawForwardLine_ = function (distance) {
-  Calc.ctxScratch.beginPath();
-  Calc.ctxScratch.moveTo(Calc.x, Calc.y);
-  Calc.jumpForward_(distance);
-  Calc.drawToCalc_(distance);
-  Calc.ctxScratch.stroke();
-};
-
-Calc.shouldDrawJoints_ = function () {
-  return level.isK1 && !Calc.isPredrawing_;
-};
-
-Calc.drawJointAtCalc_ = function () {
-  Calc.ctxScratch.beginPath();
-  Calc.ctxScratch.moveTo(Calc.x, Calc.y);
-  Calc.circleAt_(Calc.x, Calc.y, JOINT_RADIUS);
-  Calc.ctxScratch.stroke();
-};
 
 /**
  * Validate whether the user's answer is correct.
