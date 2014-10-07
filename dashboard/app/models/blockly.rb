@@ -7,7 +7,6 @@ class Blockly < Level
     start_blocks
     toolbox_blocks
     required_blocks
-    step_mode
     ani_gif_url
     is_k1
     skip_instructions_popup
