@@ -24,6 +24,25 @@ class Studio < Maze
     ['studio']
   end
 
+  def self.default_success_condition
+    <<-JS.strip_heredoc.chomp
+        function () {
+          // Sample conditions:
+          // return Studio.sprite[0].isCollidingWith(1);
+          // return Studio.sayComplete > 0;
+          // return Studio.sprite[0].emotion === Emotions.HAPPY;
+          // return Studio.tickCount > 50;
+        }
+    JS
+  end
+
+  def self.default_failure_condition
+    <<-JS.strip_heredoc.chomp
+        function () {
+        }
+    JS
+  end
+
   def common_blocks(type)
     <<-XML.chomp
 <block type="when_run"></block>

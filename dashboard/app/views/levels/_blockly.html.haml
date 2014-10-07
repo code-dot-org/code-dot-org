@@ -39,6 +39,8 @@
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
     startTiming('Puzzle', script_path, '');
     var level = #{level.to_json};
+    // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
+    // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
     (function fixUpFunctions(node) {
       if (typeof node !== 'object') return;
       for (var i in node) {
