@@ -27,16 +27,8 @@ h1.ee_display_name {
   color: dimgray;
 }
 
-a.ee_link {
-  text-decoration:underline;
-}
-
 a.ee_link:link, a.ee_link:visited {
   color: white;
-}
-
-a.ee_link:hover {
-  color: dimgray;
 }
 
 .ee_markdown {
