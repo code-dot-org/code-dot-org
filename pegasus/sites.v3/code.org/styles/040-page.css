@@ -193,21 +193,21 @@ td {
 }
 
 #index .count h1 {
-  color: white; font-size: 16px; line-height: 22px; font-weight: 500; margin: 0px;
-  display: inline; margin-right: 8px; margin-top:0px; margin-bottom:0px;
+  color: white; font-size: 15px; line-height: 22px; font-weight: 500; margin: 0px;
+  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
 }
 
 #index .count h2 {
-  color: white; font-size: 16px; line-height: 22px; font-weight: 500; margin-top:5px; margin-bottom: 0px;
-  display: inline; margin-right: 8px; margin-top:0px; margin-bottom:0px;
+  color: white; font-size: 15px; line-height: 22px; font-weight: 500; margin-top:5px; margin-bottom: 0px;
+  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
 }
 #index .count h3 {
-  color: white; font-size: 16px; line-height: 22px; font-weight: 500; margin-top:5px; margin-bottom:0px;
-  display: inline; margin-right: 8px; margin-top:0px; margin-bottom:0px;
+  color: white; font-size: 15px; line-height: 22px; font-weight: 500; margin-top:5px; margin-bottom:0px;
+  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
 }
 #index .count h4 {
-  color: white; font-size: 16px; line-height: 22px; font-weight: 500; 
-  display: inline; margin-right: 8px; margin-top:0px; margin-bottom:0px;
+  color: white; font-size: 15px; line-height: 22px; font-weight: 500; 
+  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
 }
 
 #index #twentyhour {
@@ -309,7 +309,7 @@ a.about_list_item {
 {
   width: 44%;
   float:left;
-  height: 50px;
+  height: 60px;
   padding-right: 5px;
   padding-top:6px;
   text-align:right;
