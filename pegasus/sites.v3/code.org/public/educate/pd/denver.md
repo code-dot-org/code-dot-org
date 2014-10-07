@@ -41,15 +41,13 @@ Breakfast and lunch will be served.
 Please bring your laptop.
 
 #### Location
-Holiday Inn Express & Suites 
+Holiday Inn Lakewood
 <br />
-Denver Tech Center - Englewood
+7390 W Hampden Ave
 <br />
-7380 South Clinton Street
-<br />
-Englewood, Colorado 80112
+Lakewood, CO 80227
 
-Click [here for directions](http://www.ihg.com/holidayinnexpress/hotels/us/en/englewood/denew/hoteldetail/directions). Parking is available at no cost.
+Click [here for directions](http://www.hilakewood.com/location-directions-en.html). Parking is available at no cost.
 
 #### What do I bring to Phase 3 PD? ####
 Exploring Computer Science binder with curriculum
