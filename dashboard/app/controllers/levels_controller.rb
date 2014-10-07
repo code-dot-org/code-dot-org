@@ -33,7 +33,7 @@ class LevelsController < ApplicationController
 
   # GET /levels/1/edit
   def edit
-    if @level.is_a? Maze
+    if @level.is_a? Grid
       @level.maze_data = @level.class.unparse_maze(@level.properties)
     end
     if @level.is_a? Match
@@ -94,9 +94,9 @@ class LevelsController < ApplicationController
 
     # Set some defaults.
     params[:level].reverse_merge!(skin: type_class.skins.first) if type_class <= Blockly
-    if type_class <= Maze
+    if type_class <= Grid
       params[:level][:maze_data] = Array.new(8){Array.new(8){0}}
-      params[:level][:maze_data][0][0] = 16
+      params[:level][:maze_data][0][0] = 2
     end
     if type_class <= Studio
       params[:level][:maze_data][0][0] = 16 # studio must have at least 1 actor
@@ -104,7 +104,7 @@ class LevelsController < ApplicationController
       params[:level][:success_condition] = Studio.default_success_condition
       params[:level][:failure_condition] = Studio.default_failure_condition
     end
-    params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Maze
+    params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Grid
     params.merge!(user: current_user)
 
     begin
