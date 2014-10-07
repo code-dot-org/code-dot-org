@@ -40,10 +40,19 @@ class HomeControllerTest < ActionController::TestCase
 
   test "logged in user with gallery activities shows gallery" do
     user = create(:user)
-    create :gallery_activity, user: user, app: Game::ARTIST, autosaved: true
-    create :gallery_activity, user: user, app: Game::ARTIST
-    create :gallery_activity, user: user, app: Game::ARTIST
-    create :gallery_activity, user: user, app: Game::STUDIO
+    create :gallery_activity,
+      user: user,
+      autosaved: true,
+      activity: create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::ARTIST)))
+    create :gallery_activity,
+      user: user,
+      activity: create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::ARTIST)))
+    create :gallery_activity,
+      user: user,
+      activity: create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::ARTIST)))
+    create :gallery_activity,
+      user: user,
+      activity: create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::STUDIO)))
     sign_in user
 
     get :index
