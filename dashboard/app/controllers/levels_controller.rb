@@ -101,16 +101,20 @@ class LevelsController < ApplicationController
     if type_class <= Studio
       params[:level][:maze_data][0][0] = 16 # studio must have at least 1 actor
       params[:level][:soft_buttons] = nil
-      params[:level][:success_condition] = "function () {\n" \
-        "  // Sample conditions:\n" \
-        "  // return Studio.sprite[0].isCollidingWith(1);\n" \
-        "  // return Studio.sayComplete > 0;\n" \
-        "  // return Studio.sprite[0].emotion === Emotions.HAPPY;\n" \
-        "  // return Studio.tickCount > 50;\n" \
-        "}"
-      params[:level][:failure_condition] = "function () {\n" \
-        "  \n" \
-        "}"
+      params[:level][:success_condition] = <<-JS.strip_heredoc.chomp
+        function () {
+          // Sample conditions:
+          // return Studio.sprite[0].isCollidingWith(1);
+          // return Studio.sayComplete > 0;
+          // return Studio.sprite[0].emotion === Emotions.HAPPY;
+          // return Studio.tickCount > 50;
+        }
+      JS
+      params[:level][:failure_condition] = <<-JS.strip_heredoc.chomp
+        function () {
+
+        }
+      JS
     end
     params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Maze
     params.merge!(user: current_user)
