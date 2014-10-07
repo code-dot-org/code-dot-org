@@ -3,7 +3,7 @@
   .field
     = f.label :name
     = f.text_field :name, placeholder: 'Level Name'
-  - unless @level.new_record? && @level.is_a?(Maze)
+  - unless @level.new_record? && @level.is_a?(Grid)
     .field
       = f.label 'concepts'
       %p
@@ -17,6 +17,7 @@
     = render partial: 'levels/editors/blockly', locals: {f: f} if @level.is_a? Blockly
     = render partial: 'levels/editors/studio', locals: {f: f} if @level.is_a? Studio
     = render partial: 'levels/editors/maze', locals: {f: f} if @level.is_a? Maze
+    = render partial: 'levels/editors/grid', locals: {f: f} if @level.is_a? Grid
     = render partial: 'levels/editors/karel', locals: {f: f} if @level.is_a? Karel
     = render partial: 'levels/editors/artist', locals: {f: f} if @level.is_a? Artist
     = render partial: 'levels/editors/match', locals: {f: f} if @level.is_a? Match

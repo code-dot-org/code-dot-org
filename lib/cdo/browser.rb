@@ -11,7 +11,7 @@ class Browser
     ver = version.to_i
 
     # IE 9+
-    return false if ie? && ver < 9
+    return false if !webkit? && ie? && ver < 9
 
     # Firefox 10+
     return false if firefox? && ver < 10
