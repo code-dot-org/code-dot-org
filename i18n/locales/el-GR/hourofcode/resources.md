@@ -1,26 +1,10 @@
 * * *
 
-title: Resources layout: wide
+title: Resources layout: wide nav: resources_nav
 
 * * *
 
 # Πόροι
-
-  * [How-to guide for teachers](/resources/how-to)   
-    
-  * [Handouts to spread the word](#handouts)   
-    
-  * [Videos](#videos)   
-    
-  * [Posters](#posters)   
-    
-  * [Banners](#banners)   
-    
-  * [Sample emails](#sample-emails)   
-    
-  * [Useful computer science stats](/resources/stats)   
-    
-  * [Press Kit](/resources/press-kit)
 
 <a id="handouts"></p> 
 
@@ -29,22 +13,22 @@ title: Resources layout: wide
 </h2>
 
 <p>
-  <a href="/resources/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="image" /></a>
+  <a href="/resources/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="εικόνα" /></a>
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Δώστε αυτό το έγγραγο σε εκπαιδευτικούς και σχολεία
 </h2>
 
 <p>
-  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="image" /></a>
+  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="εικόνα" /></a>
 </p>
 
 <p>
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Προβάλετε αυτά τα βίντεο για να εμπνεύσετε μαθητές
   </h2>
   
   <div style="float:left; padding:10px">
@@ -84,15 +68,19 @@ title: Resources layout: wide
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Αναρτήστε αυτές τις αφίσες στο σχολείο σας
     </h2>
+    
+    <p>
+      <% if @country == 'us' %>
+    </p>
     
     <h4>
       <a href="http://hourofcode.com/us#signup">Εγγραφείτε</a> με την δικιά σας εκδήλωση για την Ώρα του Κώδικα και εμείς θα σας στείλουμε αφίσες δωρεάν.
     </h4>
     
     <p>
-      <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="εικόνα" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="εικόνα" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="εικόνα" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="εικόνα" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="εικόνα" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="εικόνα" /></a>
     </p>
     
     <p>
@@ -100,11 +88,11 @@ title: Resources layout: wide
     </p>
     
     <h2>
-      Feature these banners on your website
+      Τοποθετήστε αυτά τα διαφημιστικά στην ιστοσελίδα σας
     </h2>
     
     <p>
-      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -112,7 +100,7 @@ title: Resources layout: wide
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Στείλτε αυτά τα ηλεκτρονικά μηνύματα για να βοηθήσετε στην προβολή της Ώρας του Κώδικα
     </h2>
     
     <p>
@@ -120,7 +108,7 @@ title: Resources layout: wide
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Ζητήστε από το σχολείο, τον εργοδότη ή τους φίλους να εγγραφούν:
     </h2>
     
     <p>
@@ -148,7 +136,7 @@ title: Resources layout: wide
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Καλέστε τα ΜΜΕ να καλύψουν την εκδήλωσή σας:
     </h2>
     
     <p>
@@ -200,7 +188,7 @@ title: Resources layout: wide
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Ενημερώστε τους γονείς για την εκδήλωση του σχολείου:
     </h2>
     
     <p>
@@ -240,7 +228,7 @@ title: Resources layout: wide
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Προσκαλέστε έναν τοπικό πολιτικό στην εκδήλωση του σχολείου:
     </h2>
     
     <p>

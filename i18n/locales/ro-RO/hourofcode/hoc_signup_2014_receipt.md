@@ -8,11 +8,11 @@ from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x7
 
 # Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
 
-**FIECARE** Oră de Codul Organizator va primi 10 GB de spaţiu de Dropbox sau 10 dolari de Skype credit ca o vă mulţumesc. [ detalii](http://<%= hostname %>/ premii)
+**FIECARE** organizator Hour of Code va primi 10 GB de spaţiu de stocare pe Dropbox sau 10 dolari credit Skype ca mulțumire. [premii](http://<%= hostname %>/detalii)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+<a
 
 <% end %>
 
@@ -24,13 +24,13 @@ Tell your friends about the #HourOfCode.
 
 ## 2. Solicită întregii şcoli sa susțină o Oră de Programare
 
-[Send this email](http://<%= hostname %>/resources#email) or [give this handout to your principal](http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+[Trimite acest e-mail](http://<%= hostname %>/resources#email) sau[oferă-i acest fluturaș conducătorului instituției de învățământ](http://<%= hostname %>/files/schools-handout.pdf). Odată școala înscrisă, [intră în cursă pentru șansa de a câstiga tehnologie în valoare de 10.000 de dolari pentru școala ta](http://<%= hostname %>/prizes) si provoaca si alte școli de la tine din zonă.
 
 <% else %>
 
 ## 2. Solicită întregii şcoli sa susțină o Oră de Programare
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
+[Trimite acest e-mail ](http://<%= hostname %>/resources#email) sau [oferă-i acest fluturaș conducătorului instituției de învățământ](http://<%= hostname %>/files/schools-handout.pdf).
 
 <% end %>
 
@@ -44,30 +44,30 @@ Recruit a local group — boy scouts club, church, university, veterans group or
 
 ## 5. Solicită unui oficial, ales local, sprijinul pentru organizarea Hour of Code
 
-## [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+## [ trimite acest e-mail](http://<%= hostname %>/ resurse #politicians) la primarul, primaria, sau consiliul local. Sau [da-le acest poster](http://<%= hostname %>/resources/hoc-one-pager.pdf) şi invită-i să-ți viziteze şcoala.
 
 Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
 
-EVERY Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. Details (http://<%= hostname %>/prizes)
+FIECARE Organizator Hour of Code va primi 10 GB de spaţiu Dropbox sau 10 dolari credit Skype in semn de multumire. Detalii (http://<%= hostname %>/prizes)
 
-Get your whole school to participate (http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Convinge întreaga şcoală să participe (http://<%= hostname %>/whole-school) pentru o şansă la premii pentru întreaga şcoală.
 
-  1. Spread the word
+  1. Răspândește vestea
 
 Tell your friends about the #HourOfCode.
 
-  1. Ask your whole school to offer an Hour of Code
+  1. Solicită întregii şcoli sa susțină o Oră de Programare
 
-Send this email (http://<%= hostname %>/resources#email) or give this handout to your principal (http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, enter to win $10,000 worth of technology for your school (http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+Trimite acest e-mail (http://<%= hostname %>/resources#email) sau ofera acest poster directorului școlii (http://<%= hostname %>/files/schools-handout.pdf). Odată ce şcoala dumneavoastră este hotărâtă, intrați in competitia Hour of Code (http://<%= hostname %>/prizes) şi provocati si alte şcoli din zona dumneavoastră sa participe.
 
-  1. Ask your employer to get involved
+  1. Solicitați angajatorului să se implice
 
-Send this email (http://<%= hostname %>/resources#email) to your manager, or the CEO. Or give them this handout (http://<%= hostname %>/files/schools-handout.pdf).
+Trimite acest e-mail (http://<%= hostname %>/resources#email) pentru administratorul sau CEO. Sau da-le acest poster (http://<%= hostname %>/files/schools-handout.pdf).
 
-  1. Promote Hour of Code within your community
+  1. Promovează Hour of Code în jurul tău
 
 Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-  1. Ask a local elected official to support the Hour of Code
+  1. Solicită unui oficial local sprijinul pentru organizarea Hour of Code
 
-Send this email (http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or give them this handout (http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+Trimite acest e-mail (http://<%= hostname %>/resources#politicians) la primarul, primaria, sau consiliul local. Sau ofera-le acest poster (http://<%= hostname %>/resources/hoc-one-pager.pdf) şi invită-i să-ti viziteze şcoala.

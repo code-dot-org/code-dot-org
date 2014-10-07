@@ -57,6 +57,10 @@ class LevelsController < ApplicationController
     @callback = level_update_blocks_path @level, type
     @edit_blocks = type
     @skip_instructions_popup = true
+
+    # Ensure the simulation ends right away when the user clicks 'Run' while editing blocks
+    @level.properties['success_condition'] = 'function () { return true; }' if @level.is_a? Studio
+
     show
     render :show
   end
@@ -72,6 +76,8 @@ class LevelsController < ApplicationController
     render json: { redirect: level_url(@level) }
   end
 
+  # PATCH/PUT /levels/1
+  # PATCH/PUT /levels/1.json
   def update
     if @level.update(level_params)
       render json: { redirect: level_url(@level) }.to_json
@@ -88,6 +94,17 @@ class LevelsController < ApplicationController
 
     # Set some defaults.
     params[:level].reverse_merge!(skin: type_class.skins.first) if type_class <= Blockly
+    if type_class <= Maze
+      params[:level][:maze_data] = Array.new(8){Array.new(8){0}}
+      params[:level][:maze_data][0][0] = 16
+    end
+    if type_class <= Studio
+      params[:level][:maze_data][0][0] = 16 # studio must have at least 1 actor
+      params[:level][:soft_buttons] = nil
+      params[:level][:success_condition] = Studio.default_success_condition
+      params[:level][:failure_condition] = Studio.default_failure_condition
+    end
+    params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Maze
     params.merge!(user: current_user)
 
     begin
@@ -98,7 +115,7 @@ class LevelsController < ApplicationController
       render status: :not_acceptable, text: invalid and return
     end
 
-    render json: { redirect: level_url(@level) }.to_json
+    render json: { redirect: edit_level_path(@level) }.to_json
   end
 
   # DELETE /levels/1
@@ -115,6 +132,10 @@ class LevelsController < ApplicationController
     if @type_class
       if @type_class == Artist
         artist_builder
+      elsif @type_class <= Studio
+        @game = Game.custom_studio
+        @level = @type_class.new
+        render :edit
       elsif @type_class <= Maze
         @game = Game.custom_maze
         @level = @type_class.new
@@ -175,8 +196,13 @@ class LevelsController < ApplicationController
         :level_num,
         :user,
         :match_text,
-        {concept_ids: []}
+        {concept_ids: []},
+        {soft_buttons: []}
       ]
+
+      # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
+      params[:level][:soft_buttons].delete_if{ |s| s.empty? } if params[:level][:soft_buttons].is_a? Array
+
       permitted_params.concat(Level.serialized_properties.values.flatten)
       params[:level].permit(permitted_params)
     end

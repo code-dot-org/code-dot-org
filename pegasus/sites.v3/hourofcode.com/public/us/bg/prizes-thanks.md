@@ -5,4 +5,4 @@ layout: wide
 
 # Благодаря
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+Цялото училище е регистрирано и може да спечели набор от преносими компютри (или $10,000 за други технологии) за един клас.

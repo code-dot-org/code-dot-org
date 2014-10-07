@@ -1,6 +1,6 @@
 * * *
 
-title: Thanks for signing up to host an Hour of Code! layout: wide
+Спасибо за регистрацию на проведение Часа Кода! layout: wide
 
 social: "og:title": "<%= hoc\_s(:meta\_tag\_og\_title) %>" "og:description": "<%= hoc\_s(:meta\_tag\_og\_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
 
@@ -12,7 +12,7 @@ social: "og:title": "<%= hoc\_s(:meta\_tag\_og\_title) %>" "og:description": "<%
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc\_s(:twitter\_default\_text)} twitter[:hashtags] = 'HourOfCode' unless hoc\_s(:twitter\_default\_text).include? '#HourOfCode' %>
 
-# Thanks for signing up to host an Hour of Code!
+# Спасибо за регистрацию на проведение Часа Кода!
 
 **EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](/prizes)
 

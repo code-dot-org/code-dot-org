@@ -1,26 +1,10 @@
 * * *
 
-crwdns19597:0crwdne19597:0
+crwdns20172:0crwdne20172:0
 
 * * *
 
 # crwdns19598:0crwdne19598:0
-
-  * crwdns20070:0crwdne20070:0   
-    
-  * crwdns20071:0crwdne20071:0   
-    
-  * crwdns19601:0crwdne19601:0   
-    
-  * crwdns19602:0crwdne19602:0   
-    
-  * crwdns19603:0crwdne19603:0   
-    
-  * crwdns19604:0crwdne19604:0   
-    
-  * crwdns19605:0crwdne19605:0   
-    
-  * [crwdns19606:0crwdne19606:0](/resources/press-kit)
 
 <a id="handouts"></p> 
 
@@ -87,12 +71,16 @@ crwdns19597:0crwdne19597:0
       crwdns19616:0crwdne19616:0
     </h2>
     
+    <p>
+      <% if @country == 'us' %>
+    </p>
+    
     <h4>
       crwdns19617:0crwdne19617:0
     </h4>
     
     <p>
-      <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="crwdns19618:0crwdne19618:0" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="crwdns19619:0crwdne19619:0" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="crwdns19620:0crwdne19620:0" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="crwdns19621:0crwdne19621:0" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="crwdns19622:0crwdne19622:0" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="crwdns19623:0crwdne19623:0" /></a>
+      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="crwdns20173:0crwdne20173:0" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="crwdns20174:0crwdne20174:0" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="crwdns20175:0crwdne20175:0" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="crwdns20176:0crwdne20176:0" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="crwdns20177:0crwdne20177:0" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="crwdns20178:0crwdne20178:0" /></a>
     </p>
     
     <p>
@@ -104,7 +92,7 @@ crwdns19597:0crwdne19597:0
     </h2>
     
     <p>
-      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="crwdns19625:0crwdne19625:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="crwdns19626:0crwdne19626:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="crwdns19627:0crwdne19627:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="crwdns20179:0crwdne20179:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="crwdns20180:0crwdne20180:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="crwdns20181:0crwdne20181:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -124,23 +112,23 @@ crwdns19597:0crwdne19597:0
     </h2>
     
     <p>
-      crwdns19630:0crwdne19630:0 crwdns19631:0crwdne19631:0 crwdns19632:0crwdne19632:0 crwdns19633:0crwdne19633:0
+      crwdns20182:0crwdne20182:0 crwdns20183:0crwdne20183:0 crwdns20184:0crwdne20184:0 crwdns20185:0crwdne20185:0
     </p>
     
     <p>
-      crwdns19634:0crwdne19634:0 crwdns19635:0crwdne19635:0 crwdns19636:0crwdne19636:0 crwdns19637:0crwdne19637:0
+      crwdns20186:0crwdne20186:0 crwdns20187:0crwdne20187:0 crwdns20188:0crwdne20188:0 crwdns20189:0crwdne20189:0
     </p>
     
     <p>
-      crwdns19638:0crwdne19638:0
+      crwdns20190:0crwdne20190:0
     </p>
     
     <p>
-      crwdns19639:0crwdne19639:0
+      crwdns20191:0crwdne20191:0
     </p>
     
     <p>
-      crwdns19640:0crwdne19640:0
+      crwdns20192:0crwdne20192:0
     </p>
     
     <p>
@@ -152,47 +140,47 @@ crwdns19597:0crwdne19597:0
     </h2>
     
     <p>
-      crwdns19642:0crwdne19642:0
+      crwdns20193:0crwdne20193:0
     </p>
     
     <p>
-      crwdns19643:0crwdne19643:0
+      crwdns20194:0crwdne20194:0
     </p>
     
     <p>
-      crwdns19644:0crwdne19644:0 crwdns19645:0crwdne19645:0 crwdns19646:0crwdne19646:0 crwdns19647:0crwdne19647:0 crwdns19648:0crwdne19648:0
+      crwdns20195:0crwdne20195:0 crwdns20196:0crwdne20196:0 crwdns20197:0crwdne20197:0 crwdns20198:0crwdne20198:0 crwdns20199:0crwdne20199:0
     </p>
     
     <p>
-      crwdns19649:0crwdne19649:0
+      crwdns20200:0crwdne20200:0
     </p>
     
     <p>
-      crwdns19650:0crwdne19650:0
+      crwdns20201:0crwdne20201:0
     </p>
     
     <p>
-      crwdns19651:0[DATE]crwdne19651:0
+      crwdns20202:0[DATE]crwdne20202:0
     </p>
     
     <p>
-      crwdns19652:0crwdne19652:0 crwdns19653:0crwdne19653:0
+      crwdns20203:0crwdne20203:0 crwdns20204:0crwdne20204:0
     </p>
     
     <p>
-      crwdns19654:0[TITLE]crwdne19654:0
+      crwdns20205:0[TITLE]crwdne20205:0
     </p>
     
     <p>
-      crwdns19655:0crwdne19655:0
+      crwdns20206:0crwdne20206:0
     </p>
     
     <p>
-      crwdns19656:0crwdne19656:0
+      crwdns20207:0crwdne20207:0
     </p>
     
     <p>
-      crwdns19657:0crwdne19657:0
+      crwdns20208:0crwdne20208:0
     </p>
     
     <p>
@@ -204,35 +192,35 @@ crwdns19597:0crwdne19597:0
     </h2>
     
     <p>
-      crwdns19659:0crwdne19659:0
+      crwdns20209:0crwdne20209:0
     </p>
     
     <p>
-      crwdns19660:0crwdne19660:0 crwdns19661:0crwdne19661:0 crwdns19662:0crwdne19662:0
+      crwdns20210:0crwdne20210:0 crwdns20211:0crwdne20211:0 crwdns20212:0crwdne20212:0
     </p>
     
     <p>
-      crwdns19663:0crwdne19663:0 crwdns19664:0crwdne19664:0 crwdns19665:0crwdne19665:0 crwdns19666:0crwdne19666:0
+      crwdns20213:0crwdne20213:0 crwdns20214:0crwdne20214:0 crwdns20215:0crwdne20215:0 crwdns20216:0crwdne20216:0
     </p>
     
     <p>
-      crwdns19667:0crwdne19667:0 crwdns19668:0crwdne19668:0 crwdns19669:0crwdne19669:0
+      crwdns20217:0crwdne20217:0 crwdns20218:0crwdne20218:0 crwdns20219:0crwdne20219:0
     </p>
     
     <p>
-      crwdns19670:0crwdne19670:0
+      crwdns20220:0crwdne20220:0
     </p>
     
     <p>
-      crwdns19671:0crwdne19671:0
+      crwdns20221:0crwdne20221:0
     </p>
     
     <p>
-      crwdns19672:0crwdne19672:0
+      crwdns20222:0crwdne20222:0
     </p>
     
     <p>
-      crwdns19673:0crwdne19673:0
+      crwdns20223:0crwdne20223:0
     </p>
     
     <p>
@@ -244,25 +232,25 @@ crwdns19597:0crwdne19597:0
     </h2>
     
     <p>
-      crwdns19675:0crwdne19675:0
+      crwdns20224:0crwdne20224:0
     </p>
     
     <p>
-      crwdns19676:0crwdne19676:0 crwdns19677:0crwdne19677:0 crwdns19678:0crwdne19678:0 crwdns19679:0crwdne19679:0
+      crwdns20225:0crwdne20225:0 crwdns20226:0crwdne20226:0 crwdns20227:0crwdne20227:0 crwdns20228:0crwdne20228:0
     </p>
     
     <p>
-      crwdns19680:0crwdne19680:0 crwdns19681:0crwdne19681:0 crwdns19682:0crwdne19682:0 crwdns19683:0crwdne19683:0
+      crwdns20229:0crwdne20229:0 crwdns20230:0crwdne20230:0 crwdns20231:0crwdne20231:0 crwdns20232:0crwdne20232:0
     </p>
     
     <p>
-      crwdns19684:0crwdne19684:0 crwdns19685:0crwdne19685:0 crwdns19686:0crwdne19686:0
+      crwdns20233:0crwdne20233:0 crwdns20234:0crwdne20234:0 crwdns20235:0crwdne20235:0
     </p>
     
     <p>
-      crwdns19687:0crwdne19687:0
+      crwdns20236:0crwdne20236:0
     </p>
     
     <p>
-      crwdns19688:0[NAME]crwdnd19688:0[TITLE]crwdne19688:0
+      crwdns20237:0[NAME]crwdnd20237:0[TITLE]crwdne20237:0
     </p>

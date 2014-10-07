@@ -39,6 +39,20 @@
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
     startTiming('Puzzle', script_path, '');
     var level = #{level.to_json};
+    // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
+    // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
+    (function fixUpFunctions(node) {
+      if (typeof node !== 'object') return;
+      for (var i in node) {
+        if (/^fn_/.test(i)) {
+          try {
+            node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
+          } catch (e) { }
+        } else {
+          fixUpFunctions(node[i]);
+        }
+      }
+    })(level);
     // See assets/javascripts/sendReport for definition of lastServerResponse
     var appOptions = {
       levelId: '#{@level.level_num}',

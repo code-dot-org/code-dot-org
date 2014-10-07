@@ -1,0 +1,56 @@
+.field
+  = f.label :first_sprite_index, 'First sprite index'
+  %p Integer representing which sprite to use for the first character. Default is 0.
+  = f.number_field :first_sprite_index
+.field
+  = f.label :protaganist_sprite_index, 'Protaganist sprite index'
+  %p Integer of the protaganist character (zero indexed, counting from the top left of the grid). This character must touch all the waypoint flags to complete the level. Default is 0.
+  = f.number_field :protaganist_sprite_index
+.field
+  = f.label :timeout_failure_tick, 'Timeout failure tick'
+  %p Number of 'ticks' to simulate before marking the level as failed. Default is unlimited.  Step speed (above) controls the length of a tick.
+  = f.number_field :timeout_failure_tick
+.field
+  = f.label :success_condition, 'Success condition'
+  %p Optional JavaScript function to run every tick. If the function ever return true, the level immediately succeeds.
+  = f.text_area :success_condition, rows: 4
+.field
+  = f.label :failure_condition, 'Failure condition'
+  %p Optional JavaScript function to run every tick. If the function ever return true, the level immediately fails.
+  = f.text_area :failure_condition, rows: 4
+.field
+  = f.label :soft_buttons, 'Controls buttons'
+  %p
+    Select
+    %a.select_all{href: '#'} all
+    \/
+    %a.select_none{href: '#'} none
+    (shift-click or cmd-click to select multiple). Arrow buttons to display below the game canvas.
+  = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
+.field
+  = f.label :edge_collisions, 'Edge collisions'
+  = boolean_check_box f, :edge_collisions
+.field
+  = f.label :projectile_collisions, 'Projectile collisions'
+  = boolean_check_box f, :projectile_collisions
+.field
+  = f.label :allow_sprites_outside_playspace, 'Allow sprites outside playspace'
+  = boolean_check_box f, :allow_sprites_outside_playspace
+.field
+  = f.label :sprites_hidden_to_start, 'Spires hidden to start'
+  = boolean_check_box f, :sprites_hidden_to_start
+.field
+  = f.label :free_play, 'Free Play'
+  = boolean_check_box f, :free_play
+
+:javascript
+  CodeMirror.fromTextArea($('#level_success_condition').get(0), {
+    mode: 'javascript',
+    viewportMargin: Infinity,
+    matchBrackets: true
+  });
+  CodeMirror.fromTextArea($('#level_failure_condition').get(0), {
+    mode: 'javascript',
+    viewportMargin: Infinity,
+    matchBrackets: true
+  });

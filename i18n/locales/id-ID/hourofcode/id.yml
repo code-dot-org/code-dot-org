@@ -4,8 +4,8 @@ id:
   front_title: Bergabunglah dalam acara belajar terbesar dalam sejarah pada tanggal 8-14 Desember 2014
   coming_soon: Segera Hadir
   front_header_banner: Bergabunglah dalam acara belajar terbesar dalam sejarah pada tanggal 8-14 Desember 2014
-  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in every country. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
-  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
+  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 170 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>No se necesita experiencia. Para edades entre 4 y 104 años.</strong>'
   front_watch_video: Tonton video terbaru
   header_menu_resources: Sumber daya
@@ -26,7 +26,7 @@ id:
   prizes_every_organizer: Setiap Penyelanggara Hour of Code akan mendapatkan Dropbox atau Kredit Skype sebagai rasa terima kasih
   prizes_technology: 'Satu sekolah umum di setiap negara bagian US (& Washington DC) akan memenagkan teknologi bernilai $10.000'
   prizes_tech_chats: 50 ruang kelas akan memenagnkan video chatting dengan tamu istimewa
-  prizes_details: Details
+  prizes_details: Perincian
   n_have_learned_an_hoc: '<h1>#</h1><h3>telah mencoba</h3><h2>HOUR of CODE</h2>'
   anybody_can_learn: Siapa pun bisa belajar.
   register_now: Daftar Sekarang
@@ -35,24 +35,24 @@ id:
   front_join_us_button: Bergabunglah
   front_what_is_hoc: Apa itu Hour of Code?
   front_join_us_header: 'Setiap waktu saat 8-4 Desember, Computer Science Education Week, selengarakan kegiatan Hour of Code untuk menunjukan pada semua orang bahwa mereka dapat mempelajari dasarnya, dan bersenang - senang melakuknnya!'
-  front_join_us_header_uk: Any time during December 8-14 host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!
+  front_join_us_header_uk: Selenggarakan acara Hour of Code pada jam kapanpun pada tanggal 8-14 Desember untuk menunjukkan siapapun dapat belajar dasar-dasarnya, dan melakukannya dengan senang hati!
   front_join_us_teacher: Apaka anda guru?
   front_join_us_inspire: Inspire your students with
   front_join_us_inspire_link: an Hour of Code in your classroom.
   front_join_us_parent: Apakah Anda orang tua?
-  front_join_us_ask_link: Ask your local school
-  front_join_us_ask: to host an Hour of Code.
+  front_join_us_ask_link: Mintalah kepada sekolah di wilayah setempat
+  front_join_us_ask: untuk mengadakan satu jam Hour of Code.
   front_join_us_computer_science: Hanya mencintai ilmu komputer?
-  front_join_us_spread: Spread the word in your community.
+  front_join_us_spread: Sebarkan informasi ini di komunitas Anda.
   front_join_us_organize: Or organize an Hour of Code event yourself.
   front_join_us_how_to_run: "Here's how to run an Hour of Code"
   front_join_us_help_promote: Help promote the Hour of Code
-  front_join_us_students: Students
-  front_join_us_teachers: Teachers
-  front_join_us_everyone: Everyone
-  front_join_us_try: Try it
-  front_join_us_host: Host it
-  front_join_us_support: Support it
+  front_join_us_students: Murid-murid
+  front_join_us_teachers: Guru-guru
+  front_join_us_everyone: Semua orang
+  front_join_us_try: Cobalah
+  front_join_us_host: Adakanlah
+  front_join_us_support: Dukunglah
   signup_header: Beritahu kami jika anda menyelenggarakan Hour of Code
   signup_header_ar: Déjanos saber si estas organizando una Hora de Programación
   signup_name_label: Nama anda
@@ -81,9 +81,9 @@ id:
   map_header: Acara Hour of Code diseluruh dunia
   map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
   meta_tag_og_title: Hour of Code akan segera hadir
-  meta_tag_og_description: Hour of Code adalah gerakan global mencapai sepuluh juta pelajar dari 200 negara dan lebih dari 30 bahasa. Dari umur 4 sampai 104.
+  meta_tag_og_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.
   meta_tag_twitter_title: Hour of Code akan segera hadir
-  meta_tag_twitter_description: Hour of Code adalah gerakan global mencapai sepuluh juta pelajar dari 200 negara dan lebih dari 30 bahasa. Dari umur 4 sampai 104.
+  meta_tag_twitter_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.
   twitter_default_text: 'Saya berpartisipasi dalam #HourOfCode tahun ini, Bagaimana dengan Anda? @codeorg'
   hardware_prizes_form_name_label: Nama anda
   hardware_prizes_form_name_placeholder: Nama anda
@@ -108,7 +108,7 @@ id:
   hoc_faq_what_is_hoc_a: "Hour of Code adalah pengenalan dalam sejam mengenai ilmu komputer, didesain untuk melawan mitos tentang koding dan memnunjukan bahwa setiap orang dapat memplejari dasarnya. <a href='http://code.org/learn'>Silahkan lihat</a>, dan nantikan tutorial kami yang paling baru pada Hour of Code 2014."
   hoc_faq_last_year: "Try last year's tutorials"
   hoc_faq_when_is_hoc_q: Kapan Hour of Code dilaksanakan?
-  hoc_faq_when_is_hoc_a: "Setiap orang dapat menyelanggarakan Hour of Code mereka, tetapi akar dari kampanye ini yaitu tujuan untuk mencapai sepuluh juta pelajar untuk mencoba Hour of Code saat 8-14 Desember 2014, dalam selebrasi  <a href='http://csedweek.org'>Computer Science Education Week</a>. Apakah harus dalam <i>satu jam</i> saja? No. Kamu dapat melakukan Hour of Code setiap waktu pada minggu ini. (Dan jika tidak bisa lakukan ini saat minggu tersebut, lakukan pada minggu seblum atau sesudah itu)."
+  hoc_faq_when_is_hoc_a: "Setiap orang dapat menyelanggarakan Hour of Code mereka, tetapi akar dari kampanye ini yaitu tujuan untuk mencapai sepuluh juta pelajar untuk mencoba Hour of Code saat 8-14 Desember 2014, dalam selebrasi  <a href='http://csedweek.org'>Computer Science Education Week</a>. Apakah harus dalam <i>satu jam</i> saja? No. Kamu dapat melakukan Hour of Code setiap waktu pada minggu ini. (Dan jika tidak bisa lakukan ini saat minggu tersebut, lakukan pada minggu sebelum atau sesudah itu)."
   hoc_faq_why_cs_q: Mengapa ilmu komputer?
   hoc_faq_why_cs_a: "<i>Setiap</i> pelajar harus mendapatkan kesempatan untuk mempelajari ilmu komputer. Hal ini membantu untuk menumbuhkan kemampuan pemecahan masalah, logika dan kreativitas. Dengan dimulai sejak dini, pelajar-pelajar akan memiliki fondasi untuk sukses dalam karir pada abad 21 ini. Lihat mengenai statistiknya pada <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Bagaimana saya berpartisipasi dalam Hour of Code?
@@ -125,7 +125,7 @@ id:
   hoc_faq_international_q: Saya diluar dari Amerika Serikat. Bagaimana cara saya berpartisipasi?
   hoc_faq_international_a: Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code.
   hoc_faq_tutorial_q: Bagaimana saya dapat membuat tutorial Hour of Code?
-  hoc_faq_tutorial_a: "Jika anda tertarik menjadi mitra tutorial kami, <a href='/tutorial-guidelines'>seilahkan lihat panduan dan instruksi kami</a>. Kami ingin menghelat berbagai pilihan yang menarik, namun tujuan utama kami adalah mengoptimalkan pengalaman para murid dan guru yang awam akan ilmu komputer."
+  hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='targetHOC'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
   hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
   hoc_faq_why_cs_uk_a: '<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path.'
@@ -156,9 +156,9 @@ id:
   stats_instagram: 'Instagram: 14 bulan'
   stats_hoc: 'Hour of Code: 5 hari'
   stats_global: 15 million students worldwide learned an Hour of Code.
-  stats_girls_more: Lebih banyak anak perempuan mencoba ilmu komputer dari 70 tahun terakhir.
+  stats_girls_more: Lebih banyak anak perempuan mencoba ilmu komputer daripada 70 tahun terakhir.
   stats_girls_million: Lebih dari 10 juta anak perempuan di tahun 2013
-  stats_nina: '"Setiap hari menghasilkan hasil yang sama &mdash; 100% mengugah."-Nina Nichols Peery, guru'
+  stats_nina: '"Setiap hari menghasilkan hasil yang sama &mdash; 100% menggugah."-Nina Nichols Peery, guru'
   stats_student: '"Aku tahu ini adalah kesempatan <b>sekali dalam seumur hidup</b>."-Mariana Alzate, anak kelas 5'
   stats_michael: 'Saya <b>tidak pernah</b> melihat murid-murid saya begitu gembira tentang belajar. "-Michael Clark, guru'
   footer_copyright_message: Hak cipta 2014 Code.org. Semua hak dilindungi.

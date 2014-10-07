@@ -1,11 +1,11 @@
 uk:
   site_name: Година Коду
-  language: Українською
+  language: Українська
   front_title: Приєднуйтесь до найбільшої навчальної події в історії, 8-14 грудня 2014 року
   coming_soon: Незабаром
   front_header_banner: Приєднуйтесь до найбільшої навчальної події в історії, 8-14 грудня 2014 року
-  front_intro_default: 'Година Коду є глобальним заходом, який залучає десятки мільйонів учнів у більш, як 170 країнах світу. Кожен може організувати заходи в рамках Години Коду. Одно-годинний курс доступний більш, як 30 мовами. Без попередніх вимог. <strong>Для всіх віком від 4 до 104.</strong>'
-  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
+  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 170 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>No se necesita experiencia. Para edades entre 4 y 104 años.</strong>'
   front_watch_video: Дивіться новий ролик
   header_menu_resources: Ресурси
@@ -35,26 +35,26 @@ uk:
   front_join_us_button: Приєднуйтесь до нас
   front_what_is_hoc: Що таке Година коду?
   front_join_us_header: У будь-який час з 8 по 14 грудня (тиждень інформатики), проведіть захід Години коду для того, щоб показати, що кожен може вивчити основи, і отримати від цього задоволення!
-  front_join_us_header_uk: Any time during December 8-14 host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!
+  front_join_us_header_uk: Проведіть захід Години коду в будь-який час протягом тижня 8-14 грудня, щоб продемонструвати, що кожен може навчитися основам і отримати від цього задоволення!
   front_join_us_teacher: Ви вчитель?
-  front_join_us_inspire: Inspire your students with
-  front_join_us_inspire_link: an Hour of Code in your classroom.
+  front_join_us_inspire: Надихайте учнів
+  front_join_us_inspire_link: Годиною коду на уроці.
   front_join_us_parent: Ви батько/мати?
-  front_join_us_ask_link: Ask your local school
-  front_join_us_ask: to host an Hour of Code.
+  front_join_us_ask_link: Попросіть місцеву школу
+  front_join_us_ask: провести Годину коду.
   front_join_us_computer_science: Просто любите інформатику?
-  front_join_us_spread: Spread the word in your community.
-  front_join_us_organize: Or organize an Hour of Code event yourself.
+  front_join_us_spread: Поширюйте цю інформацію.
+  front_join_us_organize: Або самі організуйте захід Години коду.
   front_join_us_how_to_run: Ось як можна провести Годину коду
   front_join_us_help_promote: Сприяйте Годині коду
-  front_join_us_students: Students
-  front_join_us_teachers: Teachers
-  front_join_us_everyone: Everyone
-  front_join_us_try: Try it
-  front_join_us_host: Host it
-  front_join_us_support: Support it
+  front_join_us_students: Учні
+  front_join_us_teachers: Вчителі
+  front_join_us_everyone: Усі
+  front_join_us_try: Спробуйте
+  front_join_us_host: Проведіть
+  front_join_us_support: Підтримайте
   signup_header: Повідомте, якщо Ви долучаєтесь до Години Коду
-  signup_header_ar: Déjanos saber si estas organizando una Hora de Programación
+  signup_header_ar: Повідомте, що ви організовуєте Годину коду
   signup_name_label: "Ваше ім'я"
   signup_email_label: Ваша скринька
   signup_organization_name_label: Школа чи організація
@@ -81,9 +81,9 @@ uk:
   map_header: Заходи Години Коду по всьому світу
   map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
   meta_tag_og_title: Наближається Година коду
-  meta_tag_og_description: Година коду є глобальним рухом, який залучає мільйони учнів 200 країн, які розмовляють 30 мовами. Для будь-якого віку від 4 до 104.
+  meta_tag_og_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.
   meta_tag_twitter_title: Наближається Година коду
-  meta_tag_twitter_description: Година коду є глобальним рухом, який залучає мільйони учнів 200 країн, які розмовляють 30 мовами. Для будь-якого віку від 4 до 104.
+  meta_tag_twitter_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.
   twitter_default_text: 'Я беру участь в цьогорічній #HourOfCode, а ви? @codeorg'
   hardware_prizes_form_name_label: "Ваше ім'я"
   hardware_prizes_form_name_placeholder: "Ваше ім'я"
@@ -110,23 +110,23 @@ uk:
   hoc_faq_when_is_hoc_q: Коли відбувається Година коду?
   hoc_faq_when_is_hoc_a: "Кожен може провести Годину коду в будь-який час, але основною метою кампанії є залучення десятків мільйонів учнів до цього заняття у  <a href='http://csedweek.org'>тиждень інформатики </a>8-14 грудня 2014 року. Це має бути конкретна  <i>година</i>? Ні. Можна провести Годину коду в будь-який час протягом тижня (а також тижнем раніше чи пізніше)."
   hoc_faq_why_cs_q: Чому інформатика?
-  hoc_faq_why_cs_a: "<i>Кожен</i> учень повинен мати можливість вивчати інформатику. Вона допомагає розвивати навички розв'язання задач, логіку та творчість. Розпочинаючи вивчення рано, учні отримують основу для успіху в будь-якій кар'єрі 21 століття. Ознайомтеся зі статистикою <a href='http://code.org'>Code.org</a>."
+  hoc_faq_why_cs_a: "<i>Кожен</i> учень повинен мати можливість вивчати інформатику. Вона допомагає розвивати навички розв'язання задач, логіку та творчість. Розпочинаючи вивчення раніше, учні отримують основу для успіху в будь-якій кар'єрі 21 століття. Ознайомтеся зі статистикою <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Як взяти участь у Годині коду?
-  hoc_faq_how_participate_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.org'>here</a> and <a href='/resources/how-to'>start planning</a>. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
+  hoc_faq_how_participate_a: "Зареєструйте свій захід Години коду <a href='http://hourofcode.org'>тут</a> та  <a href='/resources/how-to'>починайте планування</a>. Можете організувати Годину коду в школі, або у місцевій громаді &mdash; у вигляді позакласного клубу, громадської організації чи на своїй роботі. Або спробуйте самостійно, коли настане 8 грудня."
   hoc_faq_behind_hoc_q: Хто стоїть за Годиною коду?
   hoc_faq_behind_hoc_a: "Година коду проводиться громадською неприбутковою організацією <a href='http://code.org'>Code.org</a>, яка має на меті поширення інформатики у школах, а також залучення більшої кількості жінок та національних меншин до цієї галузі. Вони зібрали <a href='http://code.org/about/partners'>безпрецедентну коаліцію партнерів</a> для проведення Години коду &mdash; включно із Microsoft, Apple, Amazon, Boys and Girls Clubs of America та College Board."
   hoc_faq_host_q: Я нічого не знаю про програмування. Я все-таки можу організувати захід?
-  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='http://code.org/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/resources/how-to'>how to guide</a>."
+  hoc_faq_host_a: "Звичайно. Завдання Години коду призначені для самостійного вивчення. Все, що потрібно зробити - це  <a href='http://code.org/learn'>обрати підручник</a> та виділити годину &mdash; ми подбаємо про решту. У нас є різні варіанти завдань для різного віку та рівня попередніх знань, починаючи із дитсадка.  Розпочинайте планування своїх заходів з цих <a href='/resources/how-to'>інструкцій</a>."
   hoc_faq_need_computers_q: "Чи потрібні комп'ютери для кожного учасника?"
   hoc_faq_need_computers_a: "Ні. Підручники Години коду працюють на персональних комп'ютерах, смартфонах, планшетах, а деякі з них взагалі не потребують комп'ютерної техніки! Можна приєднатись з будь-якого місця, використовуючи будь-які наявні ресурси. <p><i>Ось кілька варіантів:</i> <br> <ul><li><b>Працювати у парах.</b> Дослідження свідчать, що учні краще навчаються при <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>парному програмуванні</a>, працюючи за одним комп'ютером. Заохочуйте учнів сідати по двоє. <li><b>Використати проектор.</b> Якщо у вас є проектор та комп'ютер з доступом до Інтернету, можна виконувати Годину коду всім класом. Разом переглядайте відео-ролики та по черзі розв'язуйте задачі і давайте відповіді на питання. <li><b>Скористатись безмашинним варіантом.</b> Ми пропонуємо вправи, що не потребують використання комп'ютера. </ul>"
   hoc_faq_international_q: Я живу за межами США. Як взяти участь на міжнародному рівні?
   hoc_faq_international_a: "Кожен може організувати Годину коду, в будь-якому куточку світу. Минулого року учні з усього світу об'єдналися для Години коду."
   hoc_faq_tutorial_q: Я можу створити підручник для Години коду?
-  hoc_faq_tutorial_a: "Якщо ви зацікавлені у створенні власного підручника, <a href='/tutorial-guidelines'>ознайомтесь із нашими рекомендаціями та інструкціями</a>. Ми б хотіли організувати різноманітні зацікавлюючі заходи, але основною метою є оптимізація досвіду для учнів та вчителів, котрі є новачками в інформатиці."
-  hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
+  hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='targetHOC'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
+  hoc_faq_what_is_hoc_uk_a: "Година коду - це одногодинний вступ до інформатики, створений для того, щоб зняти завісу таємничості з програмування та показати, що кожен може навчитись основам. <a href='http://uk.code.org/learn'>Ознайомтесь з підручниками</a>, та очікуйте нових вправ до нової Години коду 2014."
   hoc_faq_when_is_hoc_uk_a: "Година коду проходитиме протягом 8-14 грудня 2014 року. Це має бути конкретна <i>година</i>? Ні. Годину коду можна провести у будь-який час протягом цього тижня. Година коду у Великобританії пройде синхронно із Сполученими Штатами Америки, приурочено до щорічного <a href='http://csedweek.org'>тижня інформатики</a>"
-  hoc_faq_why_cs_uk_a: '<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path.'
-  hoc_faq_how_participate_uk_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.com/uk'>here</a> and start planning. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
+  hoc_faq_why_cs_uk_a: "<i>Кожен</i> учень повинен мати можливість вивчати інформатику. Це допомагає розвивати навички розв'язування задач, логіку та креативність. Розпочинаючи вивчення раніше, учні матимуть ґрунтовну основу для успіху в будь-якій кар'єрі 21-го століття."
+  hoc_faq_how_participate_uk_a: "Зареєструйте свій захід Години коду <a href='http://hourofcode.com/uk'>тут</a> та починайте планування. Можете організувати Годину коду в школі, або у місцевій громаді &mdash; у вигляді позакласного клубу, громадської організації чи на своїй роботі. Або спробуйте самостійно, коли настане 8 грудня."
   hoc_faq_behind_hoc_uk_a: "Година коду організована<a href='http://uk.code.org'>Code.org</a>, громадською неприбутковою організацією, яка має на меті поширення інформатики у школах, а також залучення більшої кількості жінок та національних меншин до цієї галузі. Вони зібрали <a href='http://uk.code.org/about/partners'>безпрецедентну коаліцію партнерів</a>для проведення Години коду &mdash; включно із Microsoft, Google, Cambridge University Press, Tech City та Міністерство освіти Великобританії."
   hoc_faq_host_uk_a: "Звичайно. Завдання Години коду призначені для самостійного вивчення. Все, що потрібно зробити - це обрати підручник та виділити годину &mdash; ми подбаємо про решту. У нас є різні варіанти завдань для різного віку та рівня попередніх знань, починаючи із дитсадка.  <a href='http://uk.code.org/learn'>Спробуйте наявні підручники</a>."
   hoc_faq_what_is_hoc_ar_q: Qué es la Hora de Program.AR?
@@ -139,10 +139,10 @@ uk:
   hoc_faq_behind_hoc_ar_a: "La Hora de Program.AR es organizada por <a href='http://code.org'>Code.org</a>, una organización pública sin fines de lucro (501c3) dedicada a ampliar la participación en Ciencias Computacionales poniendose a disposición de más escuelas y aumentando la participación de las mujeres y los estudiantes subrepresentados de color. Una <a href='http://code.org/about/partners'>coalición sin precedentes de socios</a> se ha reunido para apoyar la Hora de Program.AR, también &mdash; incluyendo Microsoft, Apple, Amazon, Boys y Girls Clubs of America y el College Board."
   hoc_faq_host_ar_q: No sé nada acerca de Program.AR. ¿Aún así puedo organizar un evento?
   hoc_faq_host_ar_a: "Claro. Las actividades de La Hora de Program.AR son autodirigidas. Todo lo que tienes que hacer es elegir el tutorial que quieras y escoge una hora &mdash; nosotros nos encargamos del resto. También tenemos opciones para cada edad y nivel de experiencia, desde el kindergarten y para arriba. <a href='http://code.org/learn'>Pruebe nuestros tutoriales actuales</a>."
-  hoc_faq_need_computers_ar_q: ¿Necesito computadoras para cada participante?
+  hoc_faq_need_computers_ar_q: "Чи потрібні комп'ютери для кожного учасника?"
   hoc_faq_need_computers_ar_a: "No. Tenemos tutorales de la Hora de Program.AR que funcionan en PCs, teléfonos inteligentes, tabletas y algunos que no requieren ¡ninguna computadora en absoluto! Tú puedes unirte desde donde quiera que estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i> <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes aprenden mejor con <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares de programación</a>, compartiendo una computadora y trabajando juntos. Anima a tus estudiantes a trabajar en pares. <li><b>Una pantalla proyectada.</b> Si tú tienes un proyector y una computadora conectada a Internet, el grupo entero puede hacer una hora de Program.AR juntos. Mira porciones de videos juntos y toma turnos para resolver acertijos o responder preguntas. <li><b>Desconéctate.</b> Ofrecemos tutoriales que no requieren ninguna computadora en absoluto. </ul>"
   hoc_faq_tutorial_ar_q: ¿Cómo puedo hacer un tutoría de la Hora de Program.AR?
-  hoc_faq_tutorial_ar_a: "Si usted está interesado en convertirse en un socio para tutoriales, <a href='/tutorial-guidelines'>vea nuestras directrices e instrucciones</a>. Nos gustaría presentar varias opciones atractivas, pero la meta principal es optimizar la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales."
+  hoc_faq_tutorial_ar_a: "Якщо ви зацікавлені у створенні власного підручника, <a href='/tutorial-guidelines'>ознайомтесь із нашими рекомендаціями та інструкціями</a>. Ми б хотіли організувати різноманітні зацікавлюючі заходи, але основною метою є узагальнення досвіду для учнів та вчителів, котрі є новачками в інформатиці."
   stats_hoc_2013_heading: 'Неймовірна статистика з минулорічної Години Коду. Лише за один тиждень:'
   stats_hoc_2013_image_alt: Статистика Години Коду 2013 року
   stats_growth: Це було найшвидшим залученням 15 мільйонів користувачів.
@@ -160,7 +160,7 @@ uk:
   stats_michael: 'Я <b>ніколи раніше</b> не бачив своїх учнів так схвильованими навчанням. "- Майкл Кларк, педагог'
   footer_copyright_message: Copyright 2014 Code.org. Всі права захищені.
   footer_trademark_message: Hour of Code™ є торговою маркою компанії Code.org.
-  footer_menu_partners: Partners
+  footer_menu_partners: Партнери
   footer_menu_contact: Контакти
   footer_menu_support: Підтримка
   footer_menu_terms: Умови

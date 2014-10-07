@@ -1,26 +1,10 @@
 * * *
 
-title: Resources layout: wide
+title: Resources layout: wide nav: resources_nav
 
 * * *
 
 # Nguồn xây dựng
-
-  * [How-to guide for teachers](/resources/how-to)   
-    
-  * [Handouts to spread the word](#handouts)   
-    
-  * [Videos](#videos)   
-    
-  * [Posters](#posters)   
-    
-  * [Banners](#banners)   
-    
-  * [Sample emails](#sample-emails)   
-    
-  * [Useful computer science stats](/resources/stats)   
-    
-  * [Press Kit](/resources/press-kit)
 
 <a id="handouts"></p> 
 
@@ -29,22 +13,22 @@ title: Resources layout: wide
 </h2>
 
 <p>
-  <a href="/resources/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="image" /></a>
+  <a href="/resources/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="hình ảnh" /></a>
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Đưa bản cầm tay này tới các giáo viên và trường học
 </h2>
 
 <p>
-  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="image" /></a>
+  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="hình ảnh" /></a>
 </p>
 
 <p>
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Mở những video này để truyền cảm hứng cho học sinh
   </h2>
   
   <div style="float:left; padding:10px">
@@ -84,15 +68,19 @@ title: Resources layout: wide
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Treo những đề can này trong trường của bạn
     </h2>
+    
+    <p>
+      <% if @country == 'us' %>
+    </p>
     
     <h4>
       <a href="http://hourofcode.com/us#signup">Đăng ký</a> sự kiện Hour of Code của bạn và chúng tôi sẽ gửi cho bạn áp phích quảng cáo miễn phí.
     </h4>
     
     <p>
-      <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="hình ảnh" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="hình ảnh" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="hình ảnh" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="hình ảnh" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="hình ảnh" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="hình ảnh" /></a>
     </p>
     
     <p>
@@ -100,11 +88,11 @@ title: Resources layout: wide
     </p>
     
     <h2>
-      Feature these banners on your website
+      Đặt những bức quảng cáo này lên website của bạn
     </h2>
     
     <p>
-      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="hình ảnh" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="hình ảnh" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="hình ảnh" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -112,7 +100,7 @@ title: Resources layout: wide
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      gửi những email này để quảng bá Hour of Code tới mới người
     </h2>
     
     <p>
@@ -120,7 +108,7 @@ title: Resources layout: wide
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Giới thiệu tới trường học của bạn, nhân viên hoặc bạn bè của bạn để họ đăng ký tham gia:
     </h2>
     
     <p>
@@ -148,7 +136,7 @@ title: Resources layout: wide
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Mời truyền thông tham gia vào sự kiện:
     </h2>
     
     <p>
@@ -200,7 +188,7 @@ title: Resources layout: wide
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Nói với cha mẹ về của bạn trường hợp:
     </h2>
     
     <p>
@@ -240,7 +228,7 @@ title: Resources layout: wide
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Mời một chính trị gia địa phương để của bạn trường hợp:
     </h2>
     
     <p>
