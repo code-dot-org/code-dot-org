@@ -24,6 +24,7 @@
             - if !current_user.teacher? && current_user.teachers.length == 0
               = link_to t('add_teacher_form.submit'), "#section_code"
         - unless current_user.gallery_activities.empty?
+          %h4 #{t('home.gallery')}:
           = render partial: 'home/gallery'
     %br/
 

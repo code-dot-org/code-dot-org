@@ -1,10 +1,5 @@
 Dashboard::Application.routes.draw do
-  resources :gallery_activities, path: '/gallery' do
-    collection do
-      get 'art', to: 'gallery_activities#index', app: Game::ARTIST
-      get 'apps', to: 'gallery_activities#index', app: Game::PLAYLAB
-    end
-  end
+  resources :gallery_activities, path: '/gallery'
   resources :activity_hints, only: [:update]
   resources :teacher_bonus_prizes
   resources :teacher_prizes

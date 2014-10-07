@@ -4,42 +4,16 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   setup do
     @user = create(:user)
     @activity = create(:activity, user: @user)
-    @gallery_activity = create(:gallery_activity, user: @user, activity: @activity, autosaved: false)
-
-    @playlab_gallery_activity = create(:gallery_activity, user: @user, app: Game::PLAYLAB, autosaved: false)
+    @gallery_activity = create(:gallery_activity, user: @user, activity: @activity)
 
     @new_activity = create(:activity, user: @user)
-
-    @autosaved_gallery_activity = create(:gallery_activity, user: @user, autosaved: true)
   end
 
   test "should show index" do
+    # index is public
     get :index
 
     assert_response :success
-
-    # does not include the autosaved one
-    assert_equal [@gallery_activity], assigns(:artist_gallery_activities)
-
-    assert_equal [@playlab_gallery_activity], assigns(:playlab_gallery_activities)
-  end
-
-  test "should show index with only art" do
-    get :index, app: Game::ARTIST, page: 1
-
-    assert_response :success
-
-    # does not include the autosaved one
-    assert_equal [@gallery_activity], assigns(:gallery_activities)
-  end
-
-  test "should show index with only apps" do
-    get :index, app: Game::PLAYLAB, page: 1
-
-    assert_response :success
-
-    # does not include the autosaved one
-    assert_equal [@playlab_gallery_activity], assigns(:gallery_activities)
   end
 
   test "should show index with thousands of pictures with a delimiter in the count" do
@@ -70,7 +44,6 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
 
     assert_equal @user, assigns(:gallery_activity).user
     assert_equal @new_activity, assigns(:gallery_activity).activity
-    assert !assigns(:gallery_activity).autosaved
 
     assert_response :created
   end

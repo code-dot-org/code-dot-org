@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141003211241) do
+ActiveRecord::Schema.define(version: 20140917171128) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20141003211241) do
     t.integer  "lines",           default: 0, null: false
   end
 
-  add_index "activities", ["level_id"], name: "index_activities_on_level_id", using: :btree
   add_index "activities", ["level_source_id"], name: "index_activities_on_level_source_id", using: :btree
   add_index "activities", ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
 
@@ -98,15 +97,12 @@ ActiveRecord::Schema.define(version: 20141003211241) do
   end
 
   create_table "gallery_activities", force: true do |t|
-    t.integer  "user_id",                        null: false
-    t.integer  "activity_id",                    null: false
+    t.integer  "user_id",     null: false
+    t.integer  "activity_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "autosaved"
-    t.string   "app",         default: "turtle", null: false
   end
 
-  add_index "gallery_activities", ["app", "autosaved"], name: "index_gallery_activities_on_app_and_autosaved", using: :btree
   add_index "gallery_activities", ["user_id", "activity_id"], name: "index_gallery_activities_on_user_id_and_activity_id", unique: true, using: :btree
 
   create_table "games", force: true do |t|
@@ -386,7 +382,6 @@ ActiveRecord::Schema.define(version: 20141003211241) do
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
   add_index "users", ["hashed_email"], name: "index_users_on_hashed_email", using: :btree
   add_index "users", ["prize_id"], name: "index_users_on_prize_id", unique: true, using: :btree
-  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["teacher_bonus_prize_id"], name: "index_users_on_teacher_bonus_prize_id", unique: true, using: :btree
   add_index "users", ["teacher_prize_id"], name: "index_users_on_teacher_prize_id", unique: true, using: :btree
