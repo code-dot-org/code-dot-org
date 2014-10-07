@@ -3,7 +3,7 @@ require 'browser'
 class Browser
   # Browsers we don't support and never plan to support fully
   def unsupported?
-    return ie? && version.to_i < 8
+    return !webkit? && ie? && version.to_i < 8
   end
 
   # Returns false for browsers known to have issues on studio.code.org
