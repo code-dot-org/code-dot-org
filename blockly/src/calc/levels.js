@@ -13,7 +13,8 @@ module.exports = {
       blockUtils.blockOfType('functional_plus') +
       blockUtils.blockOfType('functional_minus') +
       blockUtils.blockOfType('functional_times') +
-      blockUtils.blockOfType('functional_dividedby')),
+      blockUtils.blockOfType('functional_dividedby') +
+      blockUtils.blockOfType('functional_math_number')),
     startBlocks: '',
     requiredBlocks: '',
     freePlay: false

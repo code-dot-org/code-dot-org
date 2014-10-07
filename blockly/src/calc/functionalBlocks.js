@@ -106,7 +106,7 @@ function installDraw(blockly, generator, gensym) {
 
   generator.functional_draw = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    return "Turtle.draw(" + arg1 +", 'block_id_" + this.id + "');\n";
+    return "Calc.draw(" + arg1 +", 'block_id_" + this.id + "');\n";
   };
 }
 
