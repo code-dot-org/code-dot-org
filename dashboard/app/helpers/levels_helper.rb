@@ -90,7 +90,7 @@ module LevelsHelper
     end
 
     if user
-      if level.game.app == Game::TURTLE
+      if level.game.app == 'turtle'
         from_level_num = case level.level_num
           when '3_8' then '3_7'
           when '3_9' then '3_8'
