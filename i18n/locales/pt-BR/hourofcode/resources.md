@@ -1,26 +1,10 @@
 * * *
 
-título: Recursos layout: amplo
+title: Recursos layout: amplo nav: resources_nav
 
 * * *
 
 # Recursos
-
-  * [How-to guide for teachers](/resources/how-to)   
-    
-  * [Handouts to spread the word](#handouts)   
-    
-  * [Vídeos](#videos)   
-    
-  * [Cartazes](#posters)   
-    
-  * [Banners](#banners)   
-    
-  * [E-mails de exemplo](#sample-emails)   
-    
-  * [Estatísticas úteis de ciência da computação](/resources/stats)   
-    
-  * [Kit para a imprensa](/resources/press-kit)
 
 <a id="handouts"></p> 
 
@@ -87,12 +71,16 @@ título: Recursos layout: amplo
       Pendure estes cartazes em sua escola
     </h2>
     
+    <p>
+      <% if @country == 'us' %>
+    </p>
+    
     <h4>
       <a href="http://hourofcode.com/us#signup">Cadastre</a> seu evento da Hora do Código e enviaremos os cartazes por correio gratuitamente.
     </h4>
     
     <p>
-      <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
     </p>
     
     <p>
@@ -212,7 +200,7 @@ título: Recursos layout: amplo
     </p>
     
     <p>
-      É por isso que nossa escola inteira participará do maior evento de aprendizagem da história: a Hora do Código. Esse evento ocorrerá durante a Semana da Educação em Ciência da Computação (8-14 de dezembro). No ano passado, 15 milhões de estudantes tiveram acesso à ciência da computação em uma semana. Este ano, estamos nos juntando a alunos em todo o mundo para chegar a 100 milhões de estudantes!
+      É por isso que nossa escola inteira participará do maior evento de aprendizagem da história: a Hora do Código. Esse evento ocorrerá durante a Semana da Educação em Ciência da Computação (8-14 de dezembro). No ano passado, 15 milhões de estudantes tiveram acesso à ciência da computação em uma semana. Este ano, estamos nos juntando a alunos do mundo todo para chegar a 100 milhões de estudantes!
     </p>
     
     <p>
@@ -248,15 +236,15 @@ título: Recursos layout: amplo
     </p>
     
     <p>
-      Você sabia que na economia dos dias de hoje, os empregos de computação ultrapassam o número de alunos que estão se formando na área em uma proporção de 3 para 1? Além disso, a ciência da computação é fundamental para <em>todos</em> os setores atualmente. Ainda assim, 90% das escolas não a ensinam. Na [NOME DA ESCOLA], estamos nos esforçando para mudar isso.
+      Você sabia que, na economia de hoje, os empregos na área de computação ultrapassam o número de alunos que estão se formando em uma proporção de 3 para 1? Além disso, a ciência da computação é fundamental para <em>todos</em> os setores atualmente. Ainda assim, 90% das escolas não a ensinam. Na [NOME DA ESCOLA], estamos nos esforçando para mudar essa realidade.
     </p>
     
     <p>
-      É por isso que nossa escola inteira participará do maior evento de aprendizagem da história: a Hora do Código. Esse evento ocorrerá durante a Semana da Educação em Ciência da Computação (8-14 de dezembro). No ano passado, 15 milhões de estudantes tiveram acesso à ciência da computação em uma semana. Este ano, estamos nos juntando a alunos em todo o mundo para chegar a 100 milhões de estudantes!
+      É por isso que nossa escola inteira participará do maior evento de aprendizagem da história: a Hora do Código. Esse evento ocorrerá durante a Semana da Educação em Ciência da Computação (8-14 de dezembro). No ano passado, 15 milhões de estudantes tiveram acesso à ciência da computação em uma semana. Este ano, estamos nos juntando a alunos do mundo todo para chegar a 100 milhões de estudantes!
     </p>
     
     <p>
-      Estou escrevendo para convidá-lo para participar do nosso evento da Hora do Código e falar em nossa abertura. Ele ocorrerá em [DATA, HORA, LOCAL] e apresentará uma forte declaração de que [nome da cidade ou estado] está pronto(a) para ensinar as principais habilidades do século XXI aos nossos alunos. Queremos garantir que nossos alunos estejam na vanguarda da criação de tecnologia do futuro, e não simplesmente a consumindo.
+      Gostaria de convidá-lo para participar de nosso evento da Hora do Código e se pronunciar em nossa abertura. Ele ocorrerá em [DATA, HORA, LOCAL] e enfatizará que [Nome da Cidade ou Estado] está pronto(a) para ensinar as principais habilidades do século XXI aos nossos alunos. Queremos garantir que nossos alunos estejam na vanguarda da criação de tecnologia do futuro, e não simplesmente consumindo-a.
     </p>
     
     <p>

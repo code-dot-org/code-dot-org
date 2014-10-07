@@ -1,6 +1,6 @@
 * * *
 
-layout: wide
+aspect: wide
 
 * * *
 

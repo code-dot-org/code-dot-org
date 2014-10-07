@@ -4,15 +4,15 @@ layout: wide
 
 * * *
 
-# Tutorial guidelines for the Hour of Code and Computer Science Education Week
+# Tutorial linee guida per" l'ora del codice" e per la settimana di apprendimento delle tecnologie informatiche.
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
+Code.org ospiterà una serie di attività" ora del codice" sul Code.org, "ora del codice" e siti web settimanali CSE. E' possibile accedere all'elenco sul sito[code.org/learn](http://code.org/learn).
 
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+Vorremmo mettere a disposizione dei fruitori il maggior numero di opportunità ma il nostro obiettivo primario è quello di migliorare l'esperienza di alunni e insegnanti che si avvicinano per la prima volta all'informatica. Vi consigliamo di usare queste indicazioni che vi guideranno nella realizzazione della vostra attività , che è mirata all'apprendimento per gli utenti che non hanno alcuna esperienza nella programmazione e nell' informatica.
 
 <a id="top"></a>
 
-## Index:
+## Indice:
 
   * [How tutorials will be evaluated for inclusion](#inclusion)
   * [General guidelines for creating an Hour of Code activity](#guidelines)

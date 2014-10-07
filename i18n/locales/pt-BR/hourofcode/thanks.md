@@ -10,7 +10,7 @@ social: "og:title": "<%= hoc\_s(:meta\_tag\_og\_title) %>" "og:description": "<%
 
 <% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc\_s(:twitter\_default\_text)} twitter[:hashtags] = 'HourOfCode' unless hoc\_s(:twitter\_default\_text).include? '#HourOfCode' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc\_s(:twitter\_default\_text)} twitter[:hashtags] = 'HourOfCode' unless hoc\_s(:twitter\_default\_text).include? '#HoraDoCodigo' %>
 
 # Obrigado por inscrever-se para sediar a Hora do Código!
 
@@ -50,8 +50,8 @@ Fale aos seus amigos sobre a #HoraDoCodigo.
 
 Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de veteranos ou sindicato. Ou ofereça uma "festa" Hora do Código para sua vizinhança.
 
-## 5. Peça a um oficial eleito para apoiar a Hora do Código
+## 5. Peça a um representante político para apoiar a Hora do Código
 
-[Envie este e-mail](/resources#politicians) para o seu prefeito, Câmara Municipal ou conselho escolar. Ou [dar-lhes este folheto](/resources/hoc-one-pager.pdf) e convidá-los a visitar a sua escola.
+[Envie este e-mail](/resources#politicians) para seu prefeito, Câmara Municipal ou conselho escolar. Ou [dê a eles este folheto](/resources/hoc-one-pager.pdf) e convide-os a visitar sua escola.
 
 <%= view 'popup_window.js' %>

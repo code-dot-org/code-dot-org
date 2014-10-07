@@ -1,18 +1,18 @@
 * * *
 
-from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' subject: Thanks for signing up to host an Hour of Code! view: none theme: none
+от: ' «Hadi Partovi (Code.org)» [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' Тема: Спасибо за регистрацию на проведение Часа Кода! просмотр: нет тема: нет
 
 * * *
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Thanks for signing up to host an Hour of Code!
+# Спасибо за регистрацию на проведение Часа Кода!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
+**КАЖДЫЙ ** организатор Часа Кода в благодарность получит 10 ГБ пространства на Dropbox или $10 в Skype. [Подробности](http://<%= hostname %>/призы)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Участвуйте [всей школой,](http://<%= hostname %>/whole-school) чтобы получить шанс на большие подарки для вашей школы.
 
 <% end %>
 
@@ -24,19 +24,19 @@ Tell your friends about the #HourOfCode.
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#email) or [give this handout to your principal](http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+[Отправьте этот e-mail](http://<%= hostname %>/resources#email) или [передайте этот раздаточный материал вашему директору](http://<%= hostname %>/files/schools-handout.pdf). Как только ваша школа начнет участвовать, [вступайте, чтобы выиграть для вашей школы технологии стоимостью в $10,000](http://<%= hostname %>/prizes) и бросьте вызов на участие другим школам в вашем районе.
 
 <% else %>
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
+[Отправьте этот e-mail](http://<%= hostname %>/resources#email) или передайте [этот раздаточный материал](http://<%= hostname %>/files/schools-handout.pdf) вашему директору.
 
 <% end %>
 
 ## 3. Ask your employer to get involved
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Отправьте этот e-mail](http://<%= hostname %>/resources#email) вашему менеджеру, или Исполнительному директору. Или[передайте им этот раздаточный материал](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
 ## 4. Promote Hour of Code within your community
 
@@ -44,30 +44,30 @@ Recruit a local group — boy scouts club, church, university, veterans group or
 
 ## 5. Ask a local elected official to support the Hour of Code
 
-## [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+## [Отправьте этот e-mail](http://<%= hostname %>/resources#politicians) вашему мэру, муниципальному совету или школьному совету. Or [передайте им этот раздаточный материал](http://<%= hostname %>/resources/hoc-one-pager.pdf) и пригласите их посетить вашу школу.
 
-Thanks for signing up to host an Hour of Code!
+Спасибо за регистрацию на проведение Часа Кода!
 
-EVERY Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. Details (http://<%= hostname %>/prizes)
+КАЖДЫЙ организатор Часа Кода в благодарность получит 10 ГБ пространства на Dropbox или $10 в Skype. Подробности(http://<%= hostname %>/prizes)
 
-Get your whole school to participate (http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Участвуйте всей школой (http://<%= hostname %>/whole-school), чтобы получить шанс на большие подарки для вашей школы.
 
-  1. Spread the word
+  1. Расскажите всем
 
 Tell your friends about the #HourOfCode.
 
-  1. Ask your whole school to offer an Hour of Code
+  1. Попросите всю вашу школу предложить Час Кода
 
-Send this email (http://<%= hostname %>/resources#email) or give this handout to your principal (http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, enter to win $10,000 worth of technology for your school (http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+Отправьте этот email (http://<%= hostname %>/resources#email) или передайте этот раздаточный материал вашему директору (http://<%= hostname %>/files/schools-handout.pdf). Как только ваша школа начнет участвовать, вступайте, чтобы выиграть для вашей школы технологии стоимостью в $10,000(http://<%= hostname %>/prizes) и бросьте вызов на участие другим школам в вашем районе.
 
-  1. Ask your employer to get involved
+  1. Попросите вступить вашего работодателя
 
-Send this email (http://<%= hostname %>/resources#email) to your manager, or the CEO. Or give them this handout (http://<%= hostname %>/files/schools-handout.pdf).
+Отправьте этот email (http://<%= hostname %>/resources#email) вашему менеджеру или Исполнительному директору. Или передайте им этот раздаточный материал (http://<%= hostname %>/files/schools-handout.pdf).
 
-  1. Promote Hour of Code within your community
+  1. Содействуйте Часу Кода в вашем сообществе
 
 Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-  1. Ask a local elected official to support the Hour of Code
+  1. Попросите местное должностное лицо поддержать Час Кода
 
-Send this email (http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or give them this handout (http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+Отправьте этот email (http://<%= hostname %>/resources#politicians) вашему мэру, городскому совету или школьному совету. Или передайте им этот раздаточный материал (http://<%= hostname %>/resources/hoc-one-pager.pdf) и пригласите их посетить вашу школу.

@@ -1,26 +1,10 @@
 * * *
 
-title: Resources layout: wide
+title: Resources layout: wide nav: resources_nav
 
 * * *
 
 # Sumber daya
-
-  * [How-to guide for teachers](/resources/how-to)   
-    
-  * [Handouts to spread the word](#handouts)   
-    
-  * [Videos](#videos)   
-    
-  * [Posters](#posters)   
-    
-  * [Banners](#banners)   
-    
-  * [Sample emails](#sample-emails)   
-    
-  * [Stastistik ilmu komputer yang bermanfaat](/resources/stats)   
-    
-  * [Perlengkapan Media](/resources/press-kit)
 
 <a id="handouts"></p> 
 
@@ -87,12 +71,16 @@ title: Resources layout: wide
       Tempelkan poster - poster tersebut di sekolah anda
     </h2>
     
+    <p>
+      <% if @country == 'us' %>
+    </p>
+    
     <h4>
       <a href="http://hourofcode.com/us#signup">Daftar</a> aktivitas Hour of Code anda dan kami akan mengirimkan anda poseter secara gratis.
     </h4>
     
     <p>
-      <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
     </p>
     
     <p>
@@ -124,23 +112,23 @@ title: Resources layout: wide
     </h2>
     
     <p>
-      Komputer ada dimana-mana, tetapi sedikit sekolah yang mengajar ilmu komputer dari 10 tahun yang lalu. Kabar baiknya, kita berada pada jalur yang tepat untuk merubah itu. Jika anda pernah mendengar Hour of Code tahun lalu, anda mungkin tahu sejarahnya. Dalam satu minggu saja, sudah lebih dari 15 juta pelajar mencoba ilmu komputer!
+      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
     </p>
     
     <p>
-      Komputer science juga terdapat pada hompage dari Google, MSN, Yahoo! dan Disney. President Obama, Shakira dan Ashton Kutcher juga ikut serta dalam Hour of Code disertai video mereka. Lebih dari 100 mitra kerja datang untuk mendukng gerakan ini.
+      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      Untuk tahun ini, marilah kita buat lebih besar lagi. Kami meminta anda untuk bergabung dalam Hour of Code 2014. Ayo bergabunglah dalam Hour of Code saat Computer Education Week, 8-14 Desember 2014.
+      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
     </p>
     
     <p>
-      Sebarkan mengenai berita ini. Selenggarakan aktivitasnya. Tanyakan sekolah dilingkungan anda untuk bergabung. Atau mencoba Hour of Code sendiri -- setiap orang dapat mendapatkan manfaat dengan mempelajari dasarnya.
+      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
     </p>
     
     <p>
-      Bantu kami untuk mencapai 100 juta pelajar yang ikut serta pada akhir tahun! Mulailah pada http://hourofcode.com
+      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
     </p>
     
     <p>
@@ -160,7 +148,7 @@ title: Resources layout: wide
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Komputer science juga terdapat pada hompage dari Google, MSN, Yahoo! dan Disney. President Obama, Shakira dan Ashton Kutcher juga ikut serta dalam Hour of Code disertai video mereka. Lebih dari 100 mitra kerja datang untuk mendukng gerakan ini.
+      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
