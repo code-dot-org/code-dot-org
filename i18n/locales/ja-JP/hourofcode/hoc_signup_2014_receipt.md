@@ -1,6 +1,6 @@
 * * *
 
-from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' subject: Thanks for signing up to host an Hour of Code! view: none theme: none
+： '"Hadi Partovi (Code.org)"[hadi_partovi @&#99; ode.org](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' 件名:Hour of codeを主催する事署名していただいてありがとうございます！ 表示： なし テーマ： なし
 
 * * *
 
@@ -8,17 +8,17 @@ from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x7
 
 # Hour of Codeのイベント主催への登録にご協力頂き大変ありがとうございます！
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
+**すべて**主催者コードの時間は、あなたに感謝として Dropbox の容量 10 GB のまたは Skype クレジットの 10 ドルを受け取ります。[ 詳細](http://<%= hostname %>/賞金)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+[学校全体が参加させよう](http://<%= hostname %>/whole-school) 学校全体が大きな賞を獲るチャンスのある
 
 <% end %>
 
 ## 1. みんなに広めましょう
 
-Tell your friends about the #HourOfCode.
+友達に #HourOfCodeを教えましょう。
 
 <% if @country == 'us' %>
 

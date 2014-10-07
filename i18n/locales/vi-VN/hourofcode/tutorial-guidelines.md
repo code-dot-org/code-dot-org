@@ -1,242 +1,242 @@
 * * *
 
-layout: wide
+bố trí: rộng
 
 * * *
 
-# Tutorial guidelines for the Hour of Code and Computer Science Education Week
+# Bảng chỉ dẫn cho Hour of Code và Tuần giáo dục khoa học máy tính
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
+Code.org sẽ tổ chức nhiều hoạt động khác nhau của Hour of Code tại trang Code.org, và CSEdWeek . Danh sách các khóa học hiện tại có ở [code.org/learn](http://code.org/learn).
 
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+Chúng tôi muốn lưu trữ một loạt các lựa chọn hấp dẫn, nhưng mục tiêu chính là để tối ưu hóa kinh nghiệm cho sinh viên và giáo viên những người mới vào khoa học máy tính. Xin vui lòng sử dụng tài liệu này để hướng dẫn việc tạo ra các hoạt động của bạn, nhắm mục tiêu đến người dùng không có nền tảng viết mã nguồn, lập trình máy tính, và khoa học máy tính.
 
 <a id="top"></a>
 
-## Index:
+## Chỉ mục:
 
-  * [How tutorials will be evaluated for inclusion](#inclusion)
-  * [General guidelines for creating an Hour of Code activity](#guidelines)
-  * [How to submit (Due 10/1/2014)](#submit)
-  * [Suggestions for designing your activity](#design)
-  * [Trademark Guidelines](#tm)
-  * [Tracking Pixel](#pixel)
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)
-  * [A note for students with disabilities](#disabilities)
+  * [Làm thế nào hướng dẫn sẽ được đánh giá để đưa vào](#inclusion)
+  * [Hướng dẫn chung để tạo ra một hoạt động giờ mã](#guidelines)
+  * [Làm thế nào để gửi (do 10/1/2014)](#submit)
+  * [Gợi ý cho việc thiết kế các hoạt động của bạn](#design)
+  * [Nguyên tắc thương hiệu](#tm)
+  * [Theo dõi Pixel](#pixel)
+  * [Thúc đẩy của bạn hướng dẫn, CSEdWeek, và giờ mã](#promote)
+  * [Một lưu ý cho các sinh viên Khuyết tật](#disabilities)
 
 <a id="inclusion"></a>
 
-## How tutorials will be evaluated for inclusion
+## Làm thế nào hướng dẫn sẽ được đánh giá để đưa vào
 
-A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
+Một ủy ban của giáo dục khoa học máy tính sẽ xếp hạng gửi dựa trên số liệu tính và định lượng, bao gồm cả kết quả khảo sát từ một tập hợp rộng hơn của giáo dục.
 
-**Tutorials will be listed higher if they are:**
+**Hướng dẫn sẽ được liệt kê cao hơn nếu họ là:**
 
-  * high quality
-  * self-directed, don’t require any instruction
-  * designed for beginners
-  * designed as a ~ 1 hour activity
-  * work across many OS/device platforms, including mobile and tablets
-  * work across multiple languages
-  * promote learning by all demographic groups (esp under-represented groups)
-  * not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
+  * chất lượng cao
+  * tự định hướng, không yêu cầu bất kỳ hướng dẫn
+  * được thiết kế cho người mới bắt đầu
+  * thiết kế như một ~ 1 giờ hoạt động
+  * làm việc trên nhiều nền tảng hệ điều hành/thiết bị, bao gồm cả điện thoại di động và máy tính bảng
+  * hoạt động trên nhiều ngôn ngữ
+  * thúc đẩy học tập của tất cả các nhóm nhân khẩu học (esp dưới đại diện nhóm)
+  * không tinh khiết HTML + CSS web thiết kế tập trung - (mục tiêu của chúng tôi là khoa học máy tính, mã HTML không chỉ)
 
-**Tutorials will be listed lower if they are:**
+**Hướng dẫn sẽ được liệt kê cao hơn nếu họ là:**
 
-  * lower quality
-  * more advanced level of teaching (not for beginners)
-  * have a limited number of supported OS/device platforms - for Web-based platforms you should aim to support all of the following: IE9+, and the latest Chrome, Firefox, and Safari
-  * work only in English
-  * have a gender-specific bent (eg thematically aimed primarily at boys)
-  * serve as an upsell to a learning platform that charges tuition
+  * chất lượng thấp hơn
+  * Thêm nâng cao trình độ của giảng dạy (không phải cho người mới bắt đầu)
+  * có một số giới hạn của nền tảng hệ điều hành/thiết bị được hỗ trợ - cho các trang Web dựa trên nền tảng bạn nên nhằm mục đích để hỗ trợ tất cả những điều sau đây: IE9 +, và các đặt Chrome, Firefox và Safari
+  * làm việc chỉ bằng tiếng Anh
+  * có một cong giới tính cụ thể (ví dụ như thematically nhằm mục đích chủ yếu bé trai)
+  * phục vụ như là một upsell một nền tảng học tập rằng chi phí học phí
 
-**Tutorials will NOT be listed if they:**
+**Hướng dẫn này sẽ không được liệt kê nếu họ:**
 
-  * require a high degree of involvement by a teacher with lots of prep (ie not self-guided for students)
-  * are not designed to be a (roughly) one-hour activity
-  * require sign up 
-  * require payment
-  * require installation
-  * focus only on HTML + CSS web design
-  * are submitted after the submission deadline, or with incomplete information (see below)
+  * yêu cầu một mức độ cao của sự tham gia của một giáo viên với rất nhiều chuẩn bị (tức là không tự hướng dẫn cho sinh viên)
+  * không được thiết kế để là một hoạt động (khoảng) một giờ
+  * yêu cầu đăng ký 
+  * yêu cầu thanh toán
+  * yêu cầu cài đặt
+  * tập trung chỉ trên HTML + CSS thiết kế web
+  * được gửi sau khi thời hạn nộp hồ sơ, hoặc thông tin không đầy đủ (xem bên dưới)
 
-Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
+Cuối cùng, mục tiêu của giờ mã chiến dịch là để mở rộng sự tham gia trong khoa học máy tính của học sinh và giáo viên, và để giúp Hiển thị rằng khoa học máy tính là có thể truy cập cho tất cả, và "dễ dàng hơn bạn nghĩ." Trong nhiều cách, mục tiêu này tốt hơn là đạt được bằng cách cho học sinh và giáo viên lựa chọn ít hơn và đơn giản, với một tập trung vào các tùy chọn chất lượng cao nhất cho một người sử dụng thời gian đầu tiên.
 
-Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
+Ngoài ra, lưu ý rằng 2013 CSEdWeek là một thành công tuyệt vời được đo bằng các phản ứng từ giáo viên và sinh viên - 20M người tham gia từ tháng mười hai 9-23, và 97% nói rằng họ rất thích nó và muốn lặp lại chiến dịch!!
 
-As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
+Nhờ vậy, danh sách hiện tại được chắc chắn "đủ tốt", và lý do lái xe để thêm hướng dẫn vào các bảng liệt kê giờ mã không phải là để mở rộng sự lựa chọn, nhưng để nâng cao chất lượng (hoặc tươi) cho sinh viên, hoặc để mở rộng các tùy chọn cho người nói tiếng Anh cho bản chất toàn cầu của chiến dịch năm 2014.
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Hướng dẫn chung để tạo ra một hoạt động giờ mã
 
-  * **Subject:** Introductory computer science or programming (not HTML).
-  * **Goal:** Give beginners an accessible first taste of programming.
-  * **Tone:** 
-      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody can learn!
-      * Computer science is connected to a wide variety of fields and interests. Everybody should learn!
-      * Encourage students to create something that can be shared with friends/online.
-  * **Types of activities:** 
-      * **Best:** Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). 
-      * **Okay, but not preferred:** app-install, desktop app, or game-console experiences.
-  * **Format:** Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+  * **Chủ đề:** Giới thiệu máy tính khoa học hoặc lập trình (không HTML).
+  * **Mục tiêu:** Cung cấp cho người mới bắt đầu một hương vị đầu tiên có thể truy cập của chương trình.
+  * **Âm:** 
+      * Khoa học máy tính là không chỉ cho thiên tài. Nó không quan trọng của bạn tuổi tác, giới tính, chủng tộc. Bất cứ ai có thể tìm hiểu!
+      * Khoa học máy tính được kết nối với nhiều lĩnh vực và lợi ích. Tất cả mọi người nên tìm hiểu!
+      * Khuyến khích sinh viên để tạo ra một cái gì đó mà có thể được chia sẻ với bạn bè/trực tuyến.
+  * **Các loại hoạt động:** 
+      * **Tốt nhất:** Hoạt động trên nền web, thân thiện với điện thoại thông minh hoặc chưa cắm phít được phong cách giảng dạy khái niệm khoa học máy tính mà không cần sử dụng một máy tính (xem <http://csunplugged.com/>). 
+      * **Okay, nhưng không ưa thích:** cài đặt ứng dụng, ứng dụng máy tính để bàn, hoặc giao diện điều khiển trò chơi kinh nghiệm.
+  * **Định dạng:** Tự hướng dẫn hướng dẫn hoặc bài học, tùy chọn tạo điều kiện của các giáo viên. Có phải là hướng dẫn cho sinh viên như trái ngược với một thách thức mở giờ dài. Lý tưởng nhất, các hướng dẫn và hướng dẫn được tích hợp trực tiếp vào nền tảng lập trình, để tránh chuyển tab hoặc cửa sổ giữa các hướng dẫn và lập trình nền tảng.
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)
 
 <a id="submit"></a>
 
-## How to submit (Due 10/1/2014)
+## Làm thế nào để gửi (do 10/1/2014)
 
-Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
+Truy cập vào [giờ thông tin hoạt động mã trang](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) và làm theo các bước để gửi hướng dẫn của bạn.
 
-**What you’ll need:**
+**Những gì bạn sẽ cần:**
 
-  * Your name, logo (jpg, png, etc.)
-  * URL for a screenshot or marketing image of the HoC activity. Images/screenshots should be 446 x 335 resolution exactly. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it.
-  * URL Link for the logo
-  * Name of the activity
-  * URL Link to the activity
-  * URL Link to teacher notes (optional, see details below)
-  * Description of the activity (both desktop-view and mobile-view) 
-      * **Max character count for desktop-view:** 384
-      * **Max character count for mobile-view:** 74
-      * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-  * A list of tested/compatible platforms: 
-      * **Web based:** 
-          * OS - Mac, Win, and versions
-          * Browsers - IE8, IE9, IE10, Firefox, Chrome, Safari
-          * iOS mobile Safari (mobile-optimized)
-          * Android Chrome (mobile-optimized)
-      * **Non web-based:** specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-      * Unplugged
-  * A list of supported languages and appropriate format: 
-      * Tutorials should specify which languages they support using 2-character language codes, e.g. en - English; ja - Japanese
-      * If more specificity is necessary, using dashes, e.g. fr-be - French (Belgium) or fr-ca - French (Canada)
-      * ***Note: Language-detection is the job of the tutorial provider, we will redirect all users to the single URL provided.*** 
-  * If you submit an online tutorial, we need to know whether it is [COPPA compliant](http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act) or not.
-  * Recommended grade level(s) for intended users. You may refer to the [Computer Science Teachers’ Association’s K-12 Standards](http://csta.acm.org/Curriculum/sub/K12Standards.html) for grade-appropriate computer science concepts. Example grade levels include: 
-      * Elementary school: grades K-2 or 3-5
-      * Middle School: grades 6-8
-      * High School: grades 9-12
-      * All ages
-  * Please also include recommended computer science knowledge within grade level: Beginner, Intermediate, or Advanced. The Hour of Code website will highlight activities for Beginners most prominently. If you’d like to prepare Intermediate and Advanced Hour of Code Activities, please include the prior knowledge needed in the description of your activity.
-  * Technical requirements: 
-      * In order to more accurately track participation we want every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials. Place a starting pixel-image on the start page and a final pixel-image on the end page. Do not place pixels on interim pages). See the Tracking Pixel section below for more details. 
-      * Upon finishing your activity, users should be directed to <http://code.org/api/hour/finish> where they will be able to: 
-          * Share on social media that they completed the Hour of Code
-          * Receive a certificate that they completed the Hour of Code
-          * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to <http://code.org/api/hour/finish> as well. 
-  * ***(Optional)*** We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 8, 12:01 am through Dec. 14, 11:59 pm) 
-      * For online activities (especially smartphone/tablet apps): 
-          * Number of users
-          * How many completed the task
-          * Average time on task
-          * Number of total lines of code written over all users
-          * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-      * For offline activities 
-          * Number of downloads of paper version of activity (if applicable)
+  * Tên của bạn, biểu tượng (jpg, png, vv)
+  * URL cho một hình ảnh ảnh chụp màn hình hoặc tiếp thị của các hoạt động đặc biệt. Hình ảnh/ảnh chụp màn hình có độ phân giải 446 x 335 chính xác. Nếu một hình ảnh phù hợp là không cung cấp, chúng tôi có thể mất của riêng của chúng tôi ảnh chụp màn hình của hướng dẫn của bạn hoặc chúng tôi có thể chọn không vào danh sách đó.
+  * URL liên kết cho biểu tượng
+  * Tên của các hoạt động
+  * URL liên kết đến các hoạt động
+  * Liên kết URL để giáo viên ghi chú (tùy chọn, xem chi tiết dưới đây)
+  * Mô tả về các hoạt động (cả xem máy tính để bàn và điện thoại di động-xem) 
+      * **Tối đa nhân vật count cho máy tính để bàn-view:** 384
+      * **Tối đa nhân vật count cho điện thoại di động-xem:** 74
+      * Xin vui lòng bao gồm trong các mô tả cho dù đó là chủ yếu là hướng dẫn sinh viên hoặc giáo viên tạo điều kiện. Ngoài ra, một số trường quan tâm đến việc biết nếu hoạt động giờ Mã địa chỉ phổ biến cốt lõi hoặc tiếp theo thế hệ khoa học tiêu chuẩn. Nếu các hoạt động địa chỉ tiêu chuẩn cụ thể, hãy xem xét bao gồm thông tin này.
+  * Một danh sách các nền tảng thử nghiệm/tương thích: 
+      * **Dựa trên web:** 
+          * OS - Mac, Win, và phiên bản
+          * Trình duyệt - IE8, IE9, IE10, Firefox, Chrome, Safari
+          * iOS Safari điện thoại di động (điện thoại di động tối ưu)
+          * Android Chrome (điện thoại di động tối ưu)
+      * **Phòng không dựa trên web:** chỉ định nền tảng cho mã nguồn gốc (Mac, Win, iOS, Android, xBox, khác)
+      * Chưa cắm phít được
+  * Một danh sách các ngôn ngữ được hỗ trợ và định dạng thích hợp: 
+      * Hướng dẫn nên chỉ định ngôn ngữ mà họ hỗ trợ bằng cách sử dụng ngôn ngữ 2 ký tự mã số, ví dụ: en - tiếng Anh; Ja - Nhật bản
+      * Nếu thêm đặc trưng là cần thiết, bằng cách sử dụng dấu gạch ngang, ví dụ như fr-là - tiếng Pháp (Bỉ) hoặc fr-ca - tiếng Pháp (Canada)
+      * ***Lưu ý: Các ngôn ngữ-phát hiện là công việc của các nhà cung cấp hướng dẫn, chúng tôi sẽ chuyển hướng tất cả người dùng đến URL duy nhất cung cấp.*** 
+  * Nếu bạn gửi một hướng dẫn trực tuyến, chúng tôi cần phải biết cho dù đó là [COPPA tương thích](http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act) hay không.
+  * Đề nghị cấp level(s) cho người sử dụng dự định. Bạn có thể tham khảo các [Hiệp hội máy tính khoa học giáo viên K-12 tiêu chuẩn](http://csta.acm.org/Curriculum/sub/K12Standards.html) cho các khái niệm khoa học máy tính phù hợp với lớp. Cấp lớp ví dụ bao gồm: 
+      * Trường tiểu học: các lớp K-2 hoặc 3-5
+      * Trung học: hạng 6-8
+      * Trường trung học: lớp 9-12
+      * Mọi lứa tuổi
+  * Xin vui lòng cũng bao gồm các kiến thức khoa học được đề nghị máy tính trong lớp cấp độ: sơ cấp, Trung cấp, hoặc nâng cao. Giờ của mã trang web sẽ đánh dấu hoạt động cho người mới bắt đầu nổi bật nhất. Nếu bạn muốn chuẩn bị Trung cấp và nâng cao giờ của mã hoạt động, xin vui lòng bao gồm kiến thức trước khi cần thiết trong các mô tả về hoạt động của bạn.
+  * Yêu cầu kỹ thuật: 
+      * Để chính xác hơn theo dõi sự tham gia, chúng tôi muốn mỗi đối tác hướng dẫn bên thứ ba để bao gồm các hình ảnh 1-pixel theo dõi trên trang đầu tiên và cuối cùng của hướng dẫn giờ của mã của họ. Nơi xuất phát điểm ảnh, hình ảnh trên trang bắt đầu và một điểm ảnh hình ảnh cuối cùng trên trang cuối cùng. Không đặt điểm ảnh trên tạm thời trang). Xem phần theo dõi Pixel dưới đây để biết thêm chi tiết. 
+      * Sau khi kết thúc hoạt động của bạn, người dùng nên được hướng dẫn đến <http://code.org/api/hour/finish> nơi họ sẽ có thể: 
+          * Chia sẻ trên xã hội truyền thông rằng họ hoàn thành giờ mã
+          * Nhận được một giấy chứng nhận rằng họ hoàn thành giờ mã
+          * Xem các ban lãnh đạo về những quốc gia/thành phố có tỷ lệ tham gia cao nhất trong giờ mã hoạt động
+          * Đối với người sử dụng những người chi tiêu một giờ về hoạt động của bạn và không hoàn thành nó, xin vui lòng bao gồm một nút trên hoạt động của bạn mà nói "Tôi đã hoàn thành với giờ của tôi của mã" mà liên kết quay lại <http://code.org/api/hour/finish> là tốt. 
+  * ***(Tùy ý)*** Chúng tôi sẽ theo dõi với một liên kết trực tuyến khảo sát/hình thức yêu cầu cho một báo cáo của các số liệu hoạt động sau đây trong tuần của tháng mười hai 8, 12:01 trên thông qua tháng mười hai 14, 11:59 pm) 
+      * Cho hoạt động trực tuyến (đặc biệt là các ứng dụng điện thoại thông minh/máy tính bảng): 
+          * Số lượng người dùng
+          * Làm thế nào nhiều hoàn thành nhiệm vụ
+          * Thời gian trung bình trên nhiệm vụ
+          * Số lượng tất cả các dòng mã viết trên tất cả người dùng
+          * Bao nhiêu người tiếp tục đi đến tiếp tục học tập (đo bằng bất kỳ người dùng nào những người kết thúc nhiệm vụ và đi vào các nhiệm vụ bổ sung tại trang web của bạn)
+      * Cho diễn đàn hoạt động 
+          * Số lượng tải phiên bản giấy của hoạt động (nếu có)
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing your activity
+## Gợi ý cho việc thiết kế các hoạt động của bạn
 
-**Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
+**Bao gồm các biểu tượng CSEdWeek trong hướng dẫn của bạn.** Bạn có thể bao gồm các biểu tượng CSEdWeek ([nhỏ](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) hoặc [lớn](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) trong hướng dẫn của bạn, nhưng điều này là không cần thiết. Bạn cũng có thể liên hệ với chúng tôi để yêu cầu sự cho phép cụ thể để sử dụng biểu tượng "Trong quan hệ đối tác với Code.org". ***Biểu tượng này chỉ có thể được sử dụng nếu giấy phép cụ thể được cấp bằng văn bản bởi Code.org.*** Chúng tôi có thể kết thúc việc tạo ra một logo giờ mã, nhưng tại thời điểm này chúng tôi không có một. Trong trường hợp không có thể Code.org logo và tên được sử dụng. Cả hai được đăng ký nhãn hiệu, và không thể được trộn lẫn cùng với một bên thứ 3 thương hiệu.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**Đảm bảo rằng học sinh trung bình có thể kết thúc thoải mái trong một giờ.** Hãy xem xét thêm một hoạt động mở vào cuối cho sinh viên những người di chuyển nhanh hơn thông qua các bài học. Hãy nhớ rằng hầu hết trẻ em sẽ là người mới bắt đầu tuyệt đối để khoa học máy tính và mã hóa.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Bao gồm giáo viên ghi chú.** Hầu hết các hoạt động nên được hướng dẫn sinh viên, nhưng nếu một hoạt động tạo điều kiện hoặc quản lý bởi một giáo viên, xin vui lòng bao gồm chỉ dẫn rõ ràng và đơn giản cho các giáo viên trong các hình thức của giáo viên-đã ghi một URL riêng biệt gửi với hoạt động của bạn. Không chỉ là người mới học sinh, một số các giáo viên là tốt. Bao gồm thông tin như:
 
-  * Our tutorial works best on the following platforms and browsers
-  * Does it work on smartphones? tablets?
-  * Do you recommend pair programming? 
-  * Considerations for use in a classroom? eg if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+  * Hướng dẫn của chúng tôi hoạt động tốt nhất trên các nền tảng và trình duyệt
+  * Nó hoạt động trên điện thoại thông minh? viên nén?
+  * Do you nghị cặp lập trình? 
+  * Cân nhắc để sử dụng trong một lớp học? Ví dụ: nếu có những video, tư vấn cho giáo viên để hiển thị các video trên một màn hình dự kiến cho các lớp học toàn bộ để xem với nhau
 
-**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
+**Phản hồi ở phần cuối của các hoạt động kết hợp.** (Ví dụ: "bạn đã hoàn thành 10 cấp độ và đã học được về vòng! Great job!")
 
-**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with \___\_____ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Kết hợp phương tiện truyền thông xã hội.** Khuyến khích các sinh viên để gửi đến phương tiện truyền thông xã hội (khi thích hợp) khi họ đã hoàn thành, ví dụ: "tôi đã thực hiện một giờ mã với \___ có bạn? #HourOfCode"hoặc"tôi đã thực hiện một #HourofCode như là một phần của #CSEdWeek. Có bạn? @Scratch." Sử dụng hashtag **#HourOfCode** (với chữ H, O, C)
 
-**Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
+**Tạo ra của bạn hoạt động bằng các ngôn ngữ ngoài tiếng Anh.** Chúng tôi đang tập trung này chiến dịch quốc tế năm nay và muốn có một số hoạt động để cung cấp cho người tham gia nói tiếng Anh.
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Giải thích hoặc kết nối hoạt động với một bối cảnh xã hội đáng kể.** Lập trình máy tính trở thành một siêu cường khi học sinh nhìn thấy như thế nào nó có thể thay đổi thế giới cho tốt hơn!
 
-**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
+**Không yêu cầu đăng ký hoặc thanh toán trước khi học sinh có thể thử hướng dẫn của bạn.** Hướng dẫn yêu cầu đăng ký hoặc thanh toán sẽ không được liệt kê
 
-**Make sure your tutorial can be used in a [Pair Programming paradigm](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
+**Đảm bảo rằng hướng dẫn của bạn có thể được sử dụng trong một [mô hình lập trình đôi](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
 
-The three rules of pair programming in a school setting:
+Các quy tắc ba cặp lập trình trong môi trường:
 
-  * The driver controls the mouse and keyboard.
-  * The Navigator makes suggestions, points out errors, and asks questions. 
-  * Students should switch roles at least two times a session.
+  * Trình điều khiển kiểm soát con chuột và bàn phím.
+  * Hoa tiêu làm cho lời đề nghị, chỉ ra lỗi và yêu cầu các câu hỏi. 
+  * Sinh viên nên chuyển đổi vai trò ít nhất hai lần một phiên.
 
-Benefits of Pair Programming:
+Lợi ích của cặp chương trình:
 
-  * Students can help one another instead of relying on the teacher
-  * Show that coding is not a solo activity, but one involving social interaction
-  * Not all classrooms or labs have enough computers for a 1:1 experience
+  * Sinh viên có thể giúp đỡ nhau thay vì dựa vào các giáo viên
+  * Hiển thị rằng mã hóa không phải là một hoạt động solo, nhưng một liên quan đến tương tác xã hội
+  * Không phải tất cả các lớp học hoặc phòng thí nghiệm có đủ máy vi tính cho một kinh nghiệm 1:1
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Nguyên tắc thương hiệu
 
-With ~40 million students having tried the Hour of Code, and over 97% of participating teachers asking us to repeat the event annually, we are taking steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
+Với ~ 40 triệu sinh viên có cố gắng giờ mã, và hơn 97% giáo viên tham gia yêu cầu chúng tôi để lặp lại các sự kiện hàng năm, chúng tôi đang tiến hành các bước để đảm bảo rằng chúng tôi thiết lập giờ mã là một phong trào có thể lặp lại hàng năm với độ trung thực cao hơn và không có sự nhầm lẫn.
 
-One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
+Một phần của điều này là để bảo vệ thương hiệu "Giờ của mã" để tránh nhầm lẫn. Nhiều người trong số các đối tác hướng dẫn đã sử dụng "Giờ mã" trên trang web của bạn. Chúng tôi không muốn để ngăn chặn việc sử dụng này, nhưng chúng tôi muốn đảm bảo rằng nó phù hợp trong giới hạn một vài:
 
-  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp"
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions
-  3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
+  1. Bất kỳ tham chiếu đến "Giờ mã" nên được sử dụng trong một thời trang không gợi ý rằng nó là tên thương hiệu riêng của bạn, nhưng thay vì tham khảo giờ mã như là một phong trào cơ sở. Ví dụ: "Tham gia trong the giờ của mã tại ACMECorp.com". Ví dụ xấu: "Hãy thử giờ của mã bởi ACME Corp"
+  2. Sử dụng một superscript "TM" trong những nơi nổi bật nhất bạn đề cập đến "Giờ mã", cả hai trên trang web của bạn và trong phần giới thiệu ứng dụng
+  3. Bao gồm các ngôn ngữ trên trang (hoặc trong các chân trang), trong đó có liên kết đến các trang web CSEdWeek và Code.org, nói những điều sau đây:
     
-    ***“The 'Hour of Code' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”***
+    ***"'Giờ mã' là một sáng kiến toàn quốc của máy tính khoa học giáo dục Week[csedweek.org] và Code.org [code.org] để giới thiệu hàng triệu sinh viên đến một giờ của khoa học máy tính và lập trình máy tính."***
 
-  4. No use of "Hour of Code" in app names
+  4. Không sử dụng "Giờ của mã" trong tên ứng dụng
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## Theo dõi Pixel
 
-In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
+Để chính xác hơn theo dõi sự tham gia, chúng tôi yêu cầu mỗi hướng dẫn bên thứ ba đối tác để bao gồm các hình ảnh 1-pixel theo dõi trên trang đầu tiên và cuối cùng của giờ mã số hướng dẫn (bắt đầu từ điểm ảnh-hình ảnh trên trang bắt đầu. và một điểm ảnh hình ảnh cuối cùng trên trang cuối Và không phải trên tạm thời trang).
 
-This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
+Điều này sẽ cho phép chúng tôi để tính người sử dụng bạn trực tiếp tuyển dụng để truy cập vào trang web của bạn để làm của giờ mã, hoặc người sử dụng truy cập vào khi một giáo viên loại URL của bạn trực tiếp trên bảng của họ. Nó sẽ dẫn đến chính xác hơn tham gia tính cho hướng dẫn của bạn, mà sẽ giúp bạn thu hút người dùng. Nếu bạn tích hợp các điểm ảnh ở cuối nó cũng sẽ cho phép chúng tôi để đo tỷ lệ hoàn thành hướng dẫn.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Nếu hướng dẫn của bạn được chấp thuận và có trên trang hướng dẫn cuối cùng, Code.org sẽ cung cấp cho bạn với một pixel theo dõi duy nhất để bạn có thể tích hợp vào hướng dẫn của bạn. Xem ví dụ dưới đây.
 
-***NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)***
+***Lưu ý: điều này không quan trọng để làm cho các ứng dụng cài đặt (iOS/Android apps, hoặc máy tính để bàn cài đặt ứng dụng)***
 
-**Example tracking pixels for AppInventor:**
+**Ví dụ theo dõi pixel cho AppInventor:**
 
-IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
+IMG SRC = "http://code.org/api/hour/begin_appinventor.png/"
 
-IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
+IMG SRC = "http://code.org/api/hour/begin_appinventor.png/"
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)
 
 <a id="promote"></a>
 
-## Promoting your tutorials, CSEdWeek, and Hour of Code
+## Thúc đẩy của bạn hướng dẫn, CSEdWeek, và giờ mã
 
-We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
+Chúng tôi đang yêu cầu tất cả mọi người để thúc đẩy mình hướng dẫn 1-giờ để người dùng của bạn. Xin vui lòng trực tiếp cho họ để trang giờ của mã của bạn. Người dùng của bạn là rất có khả năng phản ứng để gửi thư từ bạn về hướng dẫn của bạn. Sử dụng chiến dịch giờ mã quốc tế cho máy tính khoa học giáo dục tuần như một cái cớ để khuyến khích người dùng mời người khác tham gia vào, giúp chúng tôi đạt đến 100 triệu người tham gia tất cả.
 
-  * Feature Hour of Code and CSEdWeek on your website.  
-    Ex: <http://www.tynker.com/hour-of-code>
-  * Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag **#HourOfCode** (with capital letters H, O, C)
-  * Host a local event or ask your employees to host an event at local schools or community groups.
-  * See our resource kit for further information (coming soon).
+  * Tính năng giờ mã và CSEdWeek trên trang web của bạn.   
+    Ví dụ: <http://www.tynker.com/hour-of-code>
+  * Thúc đẩy giờ của mã bằng cách sử dụng phương tiện truyền thông xã hội, phương tiện truyền thông truyền thống, danh sách gửi thư, vv, bằng cách sử dụng hashtag **#HourOfCode** (với chữ H, O, C)
+  * Lưu trữ một sự kiện địa phương hoặc yêu cầu nhân viên của bạn để lưu trữ một sự kiện tại trường học địa phương hoặc các nhóm cộng đồng.
+  * Xem kit tài nguyên của chúng tôi để biết thêm thông tin (đến sớm).
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)
 
 <a id="disabilities"></a>
 
-## A special note for students with disabilities
+## Một lưu ý đặc biệt cho sinh viên Khuyết tật
 
-If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
+Nếu bạn tạo ra một hướng dẫn được thiết kế cho tầm nhìn kém, chúng tôi muốn làm nổi bật nó cho người xem với trình đọc màn hình. Chúng tôi chưa nhận được một hướng dẫn, và sẽ được mong muốn bao gồm một như là một lựa chọn cho những học sinh.
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)

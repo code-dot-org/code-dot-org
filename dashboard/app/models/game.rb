@@ -23,6 +23,10 @@ class Game < ActiveRecord::Base
   BOUNCE = 'bounce'
   PLAYLAB = STUDIO = 'studio'
   
+  def self.custom_studio
+    @@game_custom_studio ||= find_by_name("CustomStudio")
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -77,6 +81,7 @@ class Game < ActiveRecord::Base
         Custom:turtle
         Flappy:flappy:flappy_intro
         CustomMaze:maze
+        CustomStudio:studio
         Studio:studio
         Jigsaw:jigsaw
         MazeStep:maze
