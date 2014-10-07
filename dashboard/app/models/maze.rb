@@ -81,7 +81,6 @@ class Maze < Blockly
     super(level_hash)
   end
 
-
   def common_blocks(type)
     <<-XML.chomp
 #{k1_blocks}
