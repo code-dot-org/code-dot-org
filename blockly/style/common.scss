@@ -669,9 +669,9 @@ $modal-image-margin-gap: 10px;
   }
 
   .feedback-image {
-    width: 40%;
+    width: 180px;
     height: auto;
-    margin: 15px;
+    margin:0 15px 0 0;
     float: left;
     border: lightgrey;
     border-style: solid;
@@ -852,6 +852,7 @@ $modal-image-margin-gap: 10px;
 }
 
 .sharing {
+  float: left;
   margin-top: 15px;
   font-size: 20px;
   color: $charcoal;
@@ -863,7 +864,7 @@ $modal-image-margin-gap: 10px;
   }
 
   div {
-    margin: 15px 0;
+    margin-bottom: 15px;
   }
 
   .saved-to-gallery {
@@ -877,7 +878,7 @@ $modal-image-margin-gap: 10px;
   #sharing-input {
     cursor: copy;
     margin: 0;
-    width: 20em;
+    width: 250px;
   }
 
   input#phone {
