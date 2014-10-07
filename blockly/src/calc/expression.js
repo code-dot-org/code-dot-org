@@ -44,7 +44,7 @@ function getDiff(e1, e2) {
 function getExpressionDiff(src, target) {
   var diff = {};
   diff.numDiffs = 0;
-  diff.args = [];
+  var argDiffs = [];
 
   if (src.operator !== target.operator) {
     diff.numDiffs++;
@@ -58,23 +58,28 @@ function getExpressionDiff(src, target) {
 
   if (diff00.numDiffs === 0) {
     // first args match, second args may/may not
-    diff.args = [diff00, diff11];
+    argDiffs = [diff00, diff11];
   } else if (diff01.numDiffs === 0) {
     // first src arg matches second target arg. other pair may/may not match
-    diff.args = [diff01, diff10];
+    argDiffs = [diff01, diff10];
   } else if (diff10.numDiffs === 0) {
     // second src arg matches first target arg. other pair doesn't match
-    diff.args = [diff01, diff10];
+    argDiffs = [diff01, diff10];
   } else if (diff11.numDiffs === 0) {
     // second src arg matches second target arg. other pair doesn't match
-    diff.args = [diff00, diff11];
+    argDiffs = [diff00, diff11];
   } else {
-    // neither arg has a match
-    throw new Error('not yet implemented"=');
+    // neither arg has a match, choose the mismatch that minimizes our diffs
+    var a = diff00.numDiffs + diff11.numDiffs;
+    var b = diff01.numDiffs + diff10.numDiffs;
+    argDiffs = (a <= b) ? [diff00, diff11] : [diff01, diff10];
   }
 
-  diff.numDiffs += diff.args[0].numDiffs;
-  diff.numDiffs += diff.args[1].numDiffs;
-
+  var numArgDiffs = argDiffs[0].numDiffs + argDiffs[1].numDiffs;
+  if (numArgDiffs > 0) {
+    diff.numDiffs += numArgDiffs;
+    diff.args = argDiffs;
+  }
+  
   return diff;
 }
