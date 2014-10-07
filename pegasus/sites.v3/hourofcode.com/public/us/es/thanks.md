@@ -12,15 +12,11 @@ layout: wide
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora de Programación!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details][1]
-
- [1]: /prizes
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](/prizes)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate][2] for a chance for big prizes for your entire school.
-
- [2]: /us/prizes
+Get your [whole school to participate](/us/prizes) for a chance for big prizes for your entire school.
 
 <% end %>
 
@@ -34,24 +30,19 @@ Tell your friends about the #HourOfCode.
 
 ## 2. Pídele a toda tu escuela que ofrezca una Hora de Programación
 
-[Send this email][3] or [give this handout to your principal][4]. Once your school is on board, [enter to win $10,000 worth of technology for your school][1] and challenge other schools in your area to get on board.
-
- [3]: /resources#email
- [4]: /files/schools-handout.pdf
+[Send this email](/resources#email) or [give this handout to your principal](/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](/prizes) and challenge other schools in your area to get on board.
 
 <% else %>
 
-## 2. Pide a toda tu escuela que ofrezca una Hora de Programación
+## 2. Pídele a toda tu escuela que ofrezca una Hora de Programación
 
-[Send this email][3] or give [this handout][4] to your principal.
+[Send this email](/resources#email) or give [this handout](/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
 ## 3. Pídele a tu jefe que participe
 
-[Send this email][3] to your manager, or the CEO. Or [give them this handout][5].
-
- [5]: /resources/hoc-one-pager.pdf
+[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
 
 ## 4. Promociona la Hora de Programación en tu comunidad
 
@@ -59,6 +50,6 @@ Recruit a local group — boy scouts club, church, university, veterans group or
 
 ## 5. Solicita a un oficial local elegido que apoye la de Hora de Programación
 
-[Send this email][3] to your mayor, city council, or school board. Or [give them this handout][5] and invite them to visit your school.
+[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>
