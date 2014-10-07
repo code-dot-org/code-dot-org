@@ -1,4 +1,5 @@
 require 'nokogiri'
+require 'cdo/user_agent_parser'
 
 module ApplicationHelper
 
@@ -6,6 +7,12 @@ module ApplicationHelper
   include VideosHelper
   include ScriptLevelsHelper
   include StagesHelper
+
+  USER_AGENT_PARSER = UserAgentParser::Parser.new
+
+  def browser
+    @browser ||= USER_AGENT_PARSER.parse request.headers["User-Agent"]
+  end
 
   def ago(from_time)
     s = distance_of_time_in_words_to_now(from_time)
