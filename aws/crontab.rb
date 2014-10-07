@@ -20,7 +20,6 @@ if rack_env?(:production)
   cronjob at:'*/15 * * * *', do:deploy_dir('bin/activity-monitor')
   cronjob at:'0 * * * *', do:bin_dir('import_sendy_unsubscribers')
   cronjob at:'30 2 * * *', do:bin_dir('export_mailing_lists')
-  cronjob at:'45 2 * * *', do:bin_dir('export_to_google_drive')
 end
 
 cronjob at:'*/1 * * * *', do:bin_dir('process_forms')
