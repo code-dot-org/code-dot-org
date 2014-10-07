@@ -25,10 +25,12 @@ var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var _ = utils.getLodash();
 
-var rgbcolor = require('../canvg/rgbcolor.js');
-var stackBlur = require('../canvg/StackBlur.js');
-var canvg = require('../canvg/canvg.js');
-var svgToDataUrl = require('../canvg/svg_todataurl');
+if (typeof SVGElement !== 'undefined') { // tests don't have svgelement??
+  var rgbcolor = require('../canvg/rgbcolor.js');
+  var stackBlur = require('../canvg/StackBlur.js');
+  var canvg = require('../canvg/canvg.js');
+  var svgToDataUrl = require('../canvg/svg_todataurl');
+}
 
 var Direction = tiles.Direction;
 var NextTurn = tiles.NextTurn;
@@ -1435,6 +1437,7 @@ Studio.execute = function() {
 };
 
 Studio.feedbackImage = '';
+Studio.encodedFeedbackImage = '';
 
 Studio.onPuzzleComplete = function() {
   if (level.freePlay) {
@@ -1473,21 +1476,30 @@ Studio.onPuzzleComplete = function() {
 
   Studio.waitingForReport = true;
 
-  document.getElementById('svgStudio').toDataURL("image/png", {
-    callback: function(pngDataUrl) {
-      Studio.feedbackImage = pngDataUrl;
+  var sendReport = function() {
+    BlocklyApps.report({
+      app: 'studio',
+      level: level.id,
+      result: Studio.result === BlocklyApps.ResultType.SUCCESS,
+      testResult: Studio.testResults,
+      program: encodeURIComponent(textBlocks),
+      image: Studio.encodedFeedbackImage,
+      onComplete: Studio.onReportComplete
+    });
+  };
 
-      BlocklyApps.report({
-        app: 'studio',
-        level: level.id,
-        result: Studio.result === BlocklyApps.ResultType.SUCCESS,
-        testResult: Studio.testResults,
-        program: encodeURIComponent(textBlocks),
-        image: encodeURIComponent(Studio.feedbackImage.split(',')[1]),
-        onComplete: Studio.onReportComplete
-      });
-    }
-  });
+  if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') { // don't try it if function is not defined
+    sendReport();
+  } else {
+    document.getElementById('svgStudio').toDataURL("image/png", {
+      callback: function(pngDataUrl) {
+        Studio.feedbackImage = pngDataUrl;
+        Studio.encodedFeedbackImage = encodeURIComponent(Studio.feedbackImage.split(',')[1]);
+        
+        sendReport();
+      }
+    });
+  }
 };
 
 var frameDirTable = {};
