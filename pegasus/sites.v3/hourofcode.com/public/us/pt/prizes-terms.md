@@ -20,8 +20,6 @@ Prêmio limitado apenas às escolas de ensino fundamental e médio dos EUA. Para
 
 ## Kits de laptops (ou US$10.000 para outra tecnologia):
 
-Prêmio limitado apenas às escolas públicas de ensino fundamental e médio dos EUA. Por que apenas as escolas públicas? [Veja a resposta aqui][1]. Para se qualificar, sua escola inteira deve se cadastrar na Hora do Código até 14 de novembro de 2014. Uma escola de cada estado dos EUA receberá um kit de computadores. A Code.org vai selecionar e notificar os vencedores por e-mail em 1 de dezembro de 2014.
-
- [1]: http://www.hourofcode.com/us#faq
+Prêmio limitado apenas às escolas públicas de ensino fundamental e médio dos EUA. Por que apenas as escolas públicas? [Veja a resposta aqui](http://www.hourofcode.com/us#faq). Para se qualificar, sua escola inteira deve se cadastrar na Hora do Código até 14 de novembro de 2014. Uma escola de cada estado dos EUA receberá um kit de computadores. A Code.org vai selecionar e notificar os vencedores por e-mail em 1 de dezembro de 2014.
 
 <% end %>

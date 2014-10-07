@@ -70,8 +70,9 @@ Blockly.Connection.prototype.dispose = function() {
  * @return {boolean} True if connection faces down or right.
  */
 Blockly.Connection.prototype.isSuperior = function() {
-  return this.type == Blockly.INPUT_VALUE ||
-      this.type == Blockly.NEXT_STATEMENT;
+  return this.type === Blockly.INPUT_VALUE ||
+    this.type === Blockly.NEXT_STATEMENT ||
+    this.type === Blockly.FUNCTIONAL_INPUT;
 };
 
 /**
@@ -88,7 +89,8 @@ Blockly.Connection.prototype.connect = function(otherConnection) {
   if (Blockly.OPPOSITE_TYPE[this.type] != otherConnection.type) {
     throw 'Attempt to connect incompatible types.';
   }
-  if (this.type == Blockly.INPUT_VALUE || this.type == Blockly.OUTPUT_VALUE) {
+  if (this.type === Blockly.INPUT_VALUE || this.type === Blockly.OUTPUT_VALUE ||
+    this.type === Blockly.FUNCTIONAL_INPUT || this.type === Blockly.FUNCTIONAL_OUTPUT) {
     if (this.targetConnection) {
       // Can't make a value connection if male block is already connected.
       throw 'Source connection already connected (value).';
@@ -338,7 +340,9 @@ Blockly.Connection.prototype.moveBy = function(dx, dy) {
  */
 Blockly.Connection.prototype.highlight = function() {
   var steps;
-  if (this.type == Blockly.INPUT_VALUE || this.type == Blockly.OUTPUT_VALUE) {
+  // todo - does functional_output belong here?
+  if (this.type === Blockly.INPUT_VALUE || this.type === Blockly.OUTPUT_VALUE ||
+    this.type === Blockly.FUNCTIONAL_OUTPUT) {
     var tabWidth = Blockly.RTL ? -Blockly.BlockSvg.TAB_WIDTH :
                                  Blockly.BlockSvg.TAB_WIDTH;
     steps = 'm 0,0 v 5 c 0,10 ' + -tabWidth + ',-8 ' + -tabWidth + ',7.5 s ' +
@@ -451,8 +455,9 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
    */
   function checkConnection_(yIndex) {
     var connection = db[yIndex];
-    if (connection.type == Blockly.OUTPUT_VALUE ||
-        connection.type == Blockly.PREVIOUS_STATEMENT) {
+    if (connection.type === Blockly.OUTPUT_VALUE ||
+        connection.type === Blockly.FUNCTIONAL_OUTPUT ||
+        connection.type === Blockly.PREVIOUS_STATEMENT) {
       // Don't offer to connect an already connected left (male) value plug to
       // an available right (female) value plug.  Don't offer to connect the
       // bottom of a statement block to one that's already connected.
@@ -785,5 +790,8 @@ Blockly.ConnectionDB.init = function(workspace) {
   dbList[Blockly.OUTPUT_VALUE] = new Blockly.ConnectionDB();
   dbList[Blockly.NEXT_STATEMENT] = new Blockly.ConnectionDB();
   dbList[Blockly.PREVIOUS_STATEMENT] = new Blockly.ConnectionDB();
+  dbList[Blockly.FUNCTIONAL_INPUT] = new Blockly.ConnectionDB();
+  dbList[Blockly.FUNCTIONAL_OUTPUT] = new Blockly.ConnectionDB();
+
   workspace.connectionDBList = dbList;
 };

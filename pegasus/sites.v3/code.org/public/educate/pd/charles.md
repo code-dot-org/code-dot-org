@@ -30,8 +30,6 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 
 #### Save The Dates: ####
 
-9/27/2014
-<br />
 11/1/2014
 <br />
 1/31/2015
@@ -82,9 +80,8 @@ Milestone Complete!
 
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
 
-#### Save The Dates: ####
-9/27/2014
-<br/>
+#### Save The Date: ####
+
 1/31/2015
 
 8:00am - 4:30pm
@@ -123,9 +120,8 @@ Milestone Complete!
 
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
 
-#### Save The Dates: ####
-9/27/2014
-<br/>
+#### Save The Date: ####
+
 1/31/2015
 
 8:00am - 4:30pm
@@ -170,24 +166,7 @@ The Administrator / Counselor Phase 1 Professional Development online course [ed
  
 ### Phase 2: Teaching and Learning Studio
 
-#### Date and Time ####
-Friday, September 26th
-<br />
-8:30am -12:30pm
-
-
-Light breakfast and coffee will be served. 
-<br />
-Please bring your laptop and review the Phase 1 reflection questions prior to PD.
-
-#### Location
-Charles County Public Schools
-<br />
-Professional Development Room
-<br />
-5980 Radio Station Road
-<br />
-La Plata, MD 26046
+Milestone Complete!
 
 [**Back to the top**](#top)
 

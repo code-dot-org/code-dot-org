@@ -251,7 +251,7 @@ class Documents < Sinatra::Base
       line_number_offset = content.lines.count - original_line_count
       @header['social'] = social_metadata
       
-      if @header['require_https'] #&& rack_env == :production
+      if @header['require_https'] && rack_env == :production
         headers['Vary'] = http_vary_add_type(headers['Vary'], 'X-Forwarded-Proto')
         redirect request.url.sub('http://', 'https://') unless request.env['HTTP_X_FORWARDED_PROTO'] == 'https'
       end
