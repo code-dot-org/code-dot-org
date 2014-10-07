@@ -25,6 +25,11 @@ var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var _ = utils.getLodash();
 
+var rgbcolor = require('../canvg/rgbcolor.js');
+var stackBlur = require('../canvg/StackBlur.js');
+var canvg = require('../canvg/canvg.js');
+var svgToDataUrl = require('../canvg/svg_todataurl');
+
 var Direction = tiles.Direction;
 var NextTurn = tiles.NextTurn;
 var SquareType = tiles.SquareType;
@@ -1247,7 +1252,10 @@ var displayFeedback = function() {
       response: Studio.response,
       level: level,
       showingSharing: level.freePlay,
+      feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
+      // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
+      saveToGalleryUrl: level.freePlay && Studio.response.save_to_gallery_url,
       appStrings: {
         reinfFeedbackMsg: studioMsg.reinfFeedbackMsg(),
         sharingText: studioMsg.shareGame()
@@ -1426,6 +1434,8 @@ Studio.execute = function() {
   Studio.intervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
 };
 
+Studio.feedbackImage = '';
+
 Studio.onPuzzleComplete = function() {
   if (level.freePlay) {
     Studio.result = BlocklyApps.ResultType.SUCCESS;
@@ -1463,15 +1473,21 @@ Studio.onPuzzleComplete = function() {
 
   Studio.waitingForReport = true;
 
-  // Report result to server.
-  BlocklyApps.report({
-                     app: 'studio',
-                     level: level.id,
-                     result: Studio.result === BlocklyApps.ResultType.SUCCESS,
-                     testResult: Studio.testResults,
-                     program: encodeURIComponent(textBlocks),
-                     onComplete: Studio.onReportComplete
-                     });
+  document.getElementById('svgStudio').toDataURL("image/png", {
+    callback: function(pngDataUrl) {
+      Studio.feedbackImage = pngDataUrl;
+
+      BlocklyApps.report({
+        app: 'studio',
+        level: level.id,
+        result: Studio.result === BlocklyApps.ResultType.SUCCESS,
+        testResult: Studio.testResults,
+        program: encodeURIComponent(textBlocks),
+        image: encodeURIComponent(Studio.feedbackImage.split(',')[1]),
+        onComplete: Studio.onReportComplete
+      });
+    }
+  });
 };
 
 var frameDirTable = {};
