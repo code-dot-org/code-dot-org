@@ -62,7 +62,7 @@ en:
         video: 'C1_happy_maps_unplugged'
       'MoveIt':
         title: 'Move it, Move it'
-        desc: 'Students learn what it’s like to instruct their classmates to move through a maze in their classroom.'
+        desc: "Students learn what it's like to instruct their classmates to move through a maze in their classroom."
         video: 'C1_moveitmoveit_unplugged'
       'PlantASeed':
         title: 'Real-life Algorithms: Plant a Seed'
