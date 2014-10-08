@@ -229,25 +229,23 @@ td {
   color: white;
 }
 
-#index .count h1 {
-  color: white; font-size: 56px; line-height: 56px; font-weight: 500; margin: 0px;
-}
 
-@media screen and (max-width: 320px)
-{
-  #index .count h1 {
-    font-size: 52px;
-  }
+#index .count h1 {
+  color: white; font-size: 15px; line-height: 22px; font-weight: 500; margin: 0px;
+  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
 }
 
 #index .count h2 {
-  color: white; font-size: 36px; line-height: 36px; font-weight: 600; margin-top:5px; margin-bottom: 0px;
+  color: white; font-size: 15px; line-height: 22px; font-weight: 500; margin-top:5px; margin-bottom: 0px;
+  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
 }
 #index .count h3 {
-  color: white; font-size: 32px; line-height: 32px; font-weight: 400; margin-top:5px; margin-bottom:0px;
+  color: white; font-size: 15px; line-height: 22px; font-weight: 500; margin-top:5px; margin-bottom:0px;
+  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
 }
 #index .count h4 {
-  color: white; font-size: 26px; line-height: 26px; font-weight: 400; margin-top:15px;
+  color: white; font-size: 15px; line-height: 22px; font-weight: 500; 
+  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
 }
 
 .greybox {
@@ -276,6 +274,64 @@ a.about_list_item {
   color: #999c9f;
 }
 
+
+/* for homepage hoc2014 area at top.. */
+
+#hoc2014
+{
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+#hoc2014 #heading
+{
+  font-size: 26px;
+}
+
+#hoc2014 #heading a
+{
+  color:white;
+}
+
+#hoc2014 a
+{
+  color:white;
+}
+
+#hoc2014 .optionleft
+{
+  width: 44%;
+  float:left;
+  height: 50px;
+  padding-right: 5px;
+  padding-top:6px;
+  text-align:right;
+}
+
+#hoc2014 .optionright
+{
+  width: 56%;
+  float: left;
+  text-align: left;
+}
+
+#hoc2014 .optionbutton
+{
+  font-size: 18px;
+  font-weight: 500;
+  height: 40px;
+  /*width: 120px;*/
+}
+
+#hoc2014 .whatishoc
+{
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ..end homepage hoc2014 area at top */
 
 /* for drupal forms that we embed */
 
