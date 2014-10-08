@@ -33,6 +33,7 @@ Hadi Partovi, Founder, Code.org
 Code.org is a public 501c3. Our mailing address is: 1511 3rd Ave #301, Seattle, WA 98101
 
 [Unsubscribe](<%= unsubscribe_link %>)
+
 ![](<%= tracking_pixel %>)
 ---
 CERTIFICATION OF PARTICIPATION

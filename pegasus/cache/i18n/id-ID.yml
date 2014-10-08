@@ -3,7 +3,7 @@
   computer_science: Ilmu komputer
   computer_science_edweek: Minggu pendidikan ilmu komputer
   csedweek_dates: 9-15 Desember 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>telah mencoba</h3><h2>HOUR of CODE</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>telah mencoba</h3><h2>Jam Kode</h2>"
   anybody_can_learn: Siapa pun bisa belajar.
   learn_now: Pelajari sekarang
   petition_message: Setiap siswa di setiap sekolah seharusnya memiliki kesempatan
@@ -17,6 +17,15 @@
   twentyhours_heading: Cobalah pendahuluan pelajaran ilmu Komputer
   twentyhours_text: Selesai dengan Jam pertama 'Hour of Code? Pelajari lebih lanjut
     inti ilmu komputer dan konsep pemrograman di pelajaran selanjutnya.
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Siswa
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: Coba sekarang
   california_heading: Minta sekolah anda untuk mengajarkan ilmu komputer
   california_text: Setiap guru dapat menawarkan <a href='http://learn.code.org/'>intro
@@ -59,6 +68,7 @@
     kursus 20 jam</a>, atau melihat lebih banyak pilihan untuk <a href='/learn/beyond'>
     belajar melampaui satu jam</a>.
   leaderboards_for_hoc: Leaderboards untuk jam kode.
+  support_url: http://support.code.org/
   country: Negara
   city: Kota
   gender: Jenis kelamin
@@ -114,7 +124,7 @@
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: Our three new courses for K&#8209;5
-  studiobar_hoc_title: Jam kode
+  studiobar_hoc_title: Jam Kode
   studiobar_hoc_body: Learn to code with Angry Birds
   studiobar_flappy_title: Kode Flappy
   studiobar_flappy_body: Make and share your own Flappy game
@@ -187,6 +197,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: Cetak sertifikat untuk siswa yang telah menyelesaikan
     kursus ini
   dashboard_landing_educator_blog: Baca lebih lanjut berita dan bahan-bahan di blog
@@ -216,6 +228,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -257,6 +270,8 @@
   dashboard_students_password: Kata sandi
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret

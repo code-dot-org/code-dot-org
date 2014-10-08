@@ -21,7 +21,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding participa
 | Go global | Our courses are available in 30+ languages, used in 170+ countries |
 | Train new CS teachers | We trained 700 new teachers in summer 2014. |
 | Change school district curriculum | [10 districts](/educate/partner-districts) are adding [CS classes](/educate/curriculum) with us, including 3 of the largest 6|
-| Set up policies to support CS | Policy changed in [14 states](/action) including TX, FL, IL, OH.|
+| Set up policies to support CS | Policy changed in [15 states](/action) including TX, FL, IL, OH.|
 
 <br/>
 <br/>

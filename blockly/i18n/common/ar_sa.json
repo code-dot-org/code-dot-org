@@ -62,6 +62,7 @@
   "backToPreviousLevel": "الرجوع إلى المستوى السابق",
   "saveToGallery": "حفظ في معرض الصور الخاص بك",
   "savedToGallery": "حفظ في معرض الصور الخاص بك!",
+  "shareFailure": "Sorry, we can't share this program.",
   "typeCode": "اكتب كود الـ JavaScript الخاص بك تحت هذه التعليمات.",
   "typeFuncs": "الدوال المتاحة: %1",
   "typeHint": "تذكر أن الأقواس والفواصل المنقوطة ضرورية.",

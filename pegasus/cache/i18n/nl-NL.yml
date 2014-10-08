@@ -3,7 +3,7 @@
   computer_science: Informatica
   computer_science_edweek: Week van het Informaticaonderwijs
   csedweek_dates: 9-15 december 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>heeft een</h3><h2>HOUR of CODE&trade;</h2>geprobeerd"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>heeft een</h3><h2>Hour of Code</h2><h3>geprobeerd</h3>"
   anybody_can_learn: Iedereen kan het leren.
   learn_now: Nu leren
   petition_message: Elke student in elke school moet de kans krijgen om computerkunde
@@ -17,6 +17,15 @@
   twentyhours_heading: Probeer onze introductiecursus computerkunde
   twentyhours_text: Klaar met je eerste Hour of Code? Leer meer over kern computerkunde
     en programmeer concepten in deze vervolgcursus.
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Students
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: Probeer nu
   california_heading: Vraag je school om je computerkunde te leren
   california_text: Een leraar kan onze <a href='http://learn.code.org/'> gratis intro
@@ -59,6 +68,7 @@
     cursus</a>, of bekijk meer opties om <a href='/learn/beyond'>voorbij het eerste
     uur te leren</a>.
   leaderboards_for_hoc: Highscores voor het Uur Code.
+  support_url: http://support.code.org/
   country: Land
   city: Plaats
   gender: Geslacht
@@ -95,7 +105,7 @@
   learn_classes: Zoek naar klassen in de buurt
   hoc_is_here: 'Het #UurCode is zover - ga eens kijken! @codeorg'
   just_did_hoc: 'Ik heb net het #UurCode gedaan - ga ook ''s kijken! @codeorg'
-  learn_hoc: Leer een Uur Code
+  learn_hoc: Leer een Hour of Code
   beyond_hoc: Verder dan een Uur Code
   what_gender: Ben je een jongen of een meisje?
   girl: Meisje
@@ -186,6 +196,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: Print certificaten voor leerlingen die deze
     cursus afronden
   dashboard_landing_educator_blog: Lees over nieuws en updates voor onze materialen
@@ -215,6 +227,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -256,6 +269,8 @@
   dashboard_students_password: Wachtwoord
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret
