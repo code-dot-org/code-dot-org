@@ -6,4 +6,4 @@ exports.expression = function (operator, arg1, arg2, blockId) {
   Calc.lastExpression = new Expression(operator, arg1, arg2);
 
   return Calc.lastExpression;
-}
+};
