@@ -32,6 +32,8 @@ var api = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 
+var Expression = require('./expression');
+
 var level;
 var skin;
 
@@ -215,8 +217,8 @@ Calc.drawGoal = function (goal) {
 
 Calc.drawAnswer = function (goal, answer) {
   var ctx = Calc.ctxDisplay;
-  // var diff = Expression.getDiff(answer, goal);
-  var list = answer.toTokenList();
+  var diff = Expression.getDiff(answer, goal);
+  var list = answer.toTokenList(diff);
   var xpos = 0;
   var ypos = 200;
   for (var i = 0; i < list.length; i++) {
@@ -225,6 +227,7 @@ Calc.drawAnswer = function (goal, answer) {
       xpos += ctx.measureText(' ').width;
     }
     // todo - color based on validity
+    ctx.fillStyle = list[i].correct ? 'black' : 'red';
     ctx.fillText(list[i].char, xpos, ypos);
     xpos += ctx.measureText(list[i].char).width;
   }

@@ -24,20 +24,21 @@ function token(char, correct) {
   return { char: char, correct: correct };
 }
 
-function tokenList(expressionOrVal) {
+function tokenList(expressionOrVal, diff) {
   if (isNumber(expressionOrVal)) {
-    return token(expressionOrVal.toString(), true);
+    return token(expressionOrVal.toString(), diff.numDiffs === 0);
   }
-  return expressionOrVal.toTokenList();
+  return expressionOrVal.toTokenList(diff);
 }
 
 
 // todo - takes diff to determine correctness
-Expression.prototype.toTokenList = function () {
+Expression.prototype.toTokenList = function (diff) {
   var list = [token("(", true)];
-  list = list.concat(tokenList(this.args[0]));
-  list = list.concat(token(this.operator, true));
-  list = list.concat(tokenList(this.args[1]));
+  var argsDiff = diff.args || [{ numDiffs: 0 }, { numDiffs: 0 }];
+  list = list.concat(tokenList(this.args[0], argsDiff[0]));
+  list = list.concat(token(this.operator, diff.operator === undefined));
+  list = list.concat(tokenList(this.args[1], argsDiff[1]));
   list = list.concat(token(")", true));
   return list;
 };
@@ -48,18 +49,18 @@ function isNumber(val) {
   return typeof(val) === "number";
 }
 
-function getDiff(e1, e2) {
-  if (e1 instanceof Expression && e2 instanceof Expression) {
-    return getExpressionDiff(e1, e2);
+function getDiff(src, target) {
+  if (src instanceof Expression && target instanceof Expression) {
+    return getExpressionDiff(src, target);
   }
 
   var diff = {};
   diff.numDiffs = 0;
-  if (!isNumber(e1) || !isNumber(e2)) {
+  if (!isNumber(src) || !isNumber(target)) {
     diff.numDiffs = Infinity;
-  } else if (e1 !== e2) {
+  } else if (src !== target) {
     diff.numDiffs = 1;
-    diff.val = e2;
+    diff.val = target;
   }
   return diff;
 }
