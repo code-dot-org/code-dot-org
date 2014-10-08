@@ -15,6 +15,7 @@
 
   %script{src: "#{blockly_path}js/#{js_locale}/vendor.js"}
   - if @game.name == "MazeEC"
+    %script{src: "#{blockly_path}js/jsinterpreter/acorn_interpreter.js"}
     %script{src: "#{blockly_path}js/requirejs/require.js"}
     %script{src: "#{blockly_path}js/ace/ace.js"}
     %script{src: "#{blockly_path}js/ace/ext-language_tools.js"}
