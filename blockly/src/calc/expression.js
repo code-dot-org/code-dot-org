@@ -1,48 +1,51 @@
+/**
+ * An tree representing an expression. Supports only two arguments, although
+ * that could potentially be expanded if necessary.
+ * Example: "2 * (1 + 3)" represented by:
+ * ew Expression('*', 2, new Expression('+', 1, 3)
+ */
 var Expression = function (operator, a, b) {
   this.operator = operator;
   this.args = [a, b];
 }
 module.exports = Expression;
 
-// todo (brent) - may want to only expose these to test
+// todo (brent) - figure out how/where these are exposed
 Expression.getDiff = getDiff;
+Expression.getTokenList = getTokenList;
 
-// todo (brent) - may notn need ordered
-Expression.prototype.toString = function (ordered) {
-  var strs = this.args.map(function (arg) {
-    return arg.toString(arg instanceof Expression ? ordered : 10);
-  });
-
-  if (ordered && strs[0] > strs[1]) {
-    strs = strs.reverse();
-  }
-
-  return "(" + strs[0] + " " + this.operator + " " + strs[1] + ")";
+/**
+ * String representation of expression tree
+ */
+Expression.prototype.toString = function () {
+  return "(" + this.args[0].toString() + " " + this.operator + " " +
+    this.args[1].toString() + ")";
 };
 
+/**
+ * Creates a token with the given char/correctness
+ */
 function token(char, correct) {
   return { char: char, correct: correct };
 }
 
-function tokenList(expressionOrVal, diff) {
+/**
+ * Given an expression or a number, and a diff
+ */
+function getTokenList(expressionOrVal, diff) {
   if (isNumber(expressionOrVal)) {
     return token(expressionOrVal.toString(), diff.numDiffs === 0);
   }
-  return expressionOrVal.toTokenList(diff);
-}
 
-
-// todo - takes diff to determine correctness
-Expression.prototype.toTokenList = function (diff) {
+  var expr = expressionOrVal;
   var list = [token("(", true)];
   var argsDiff = diff.args || [{ numDiffs: 0 }, { numDiffs: 0 }];
-  list = list.concat(tokenList(this.args[0], argsDiff[0]));
-  list = list.concat(token(this.operator, diff.operator === undefined));
-  list = list.concat(tokenList(this.args[1], argsDiff[1]));
+  list = list.concat(getTokenList(expr.args[0], argsDiff[0]));
+  list = list.concat(token(expr.operator, diff.operator === undefined));
+  list = list.concat(getTokenList(expr.args[1], argsDiff[1]));
   list = list.concat(token(")", true));
   return list;
-};
-
+}
 
 function isNumber(val) {
   // todo - do we also need to care about stringified numbers? i.e. "1"
