@@ -62,6 +62,7 @@
   "backToPreviousLevel": "Til baka í fyrri áfanga",
   "saveToGallery": "Vista í safn þitt",
   "savedToGallery": "Vistað í safn þitt!",
+  "shareFailure": "Því miður getum við ekki deilt þessu forriti.",
   "typeCode": "Skrifaðu JavaScript kóða þinn fyrir neðan þessar leiðbeiningar.",
   "typeFuncs": "Tiltæk föll:%1",
   "typeHint": "Athugaðu að svigarnir og semikommurnar eru nauðsynlegar.",

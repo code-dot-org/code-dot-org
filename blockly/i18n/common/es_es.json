@@ -62,6 +62,7 @@
   "backToPreviousLevel": "Volver al nivel anterior",
   "saveToGallery": "Guardar en tu galería",
   "savedToGallery": "¡Guardado en tu galería!",
+  "shareFailure": "Perdón, no podemos compartir este programa.",
   "typeCode": "Escribe tu código JavaScript debajo de estas instrucciones.",
   "typeFuncs": "Funciones disponibles:%1",
   "typeHint": "Ten en cuenta que los paréntesis y los punto y coma son necesarios.",

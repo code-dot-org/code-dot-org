@@ -5,6 +5,7 @@ nav: resources_nav
 ---
 # Resources
 
+## Hosting an Hour of Code? <a href="<%= hoc_uri('/resources/how-to') %>">See the how-to guide</a>
 
 <a id="handouts">
 ## Use this handout to spread the word

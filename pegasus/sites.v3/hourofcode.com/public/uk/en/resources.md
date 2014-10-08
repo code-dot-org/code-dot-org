@@ -59,12 +59,6 @@ nav: resources_nav
 [![image](/images/fit-280/susan-wojcicki.png)](/resources/susan-wojcicki-poster.pdf)
 [![image](/images/fit-280/ashton-kutcher.png)](/resources/ashton-kutcher-poster.pdf)
 
-<a id="banners"></a>
-## Feature these banners on your website
-[![image](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-
 <a id="sample-emails"></a>
 ## Send these emails to help promote the Hour of Code
 

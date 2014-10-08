@@ -15,8 +15,11 @@ h2 {
   border-radius: 0;
   background-color: white;
 }
-img {
-  height: 100%
+.badge img {
+    display: inline-block;
+    overflow: hidden;
+    height: 90px;
+    float: left;
 }
 .gold {
   width: 32.7%;
@@ -44,12 +47,8 @@ a:hover, a:active {
   color: #7665a0;
   font-size: 14px;
   font-weight: normal;
-}
-
-.avatar {
-  display: inline-block;
-  overflow: hidden;
-  height: 90px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .badge > * {
