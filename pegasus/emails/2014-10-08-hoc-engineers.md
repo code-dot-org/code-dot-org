@@ -1,15 +1,8 @@
 ---
-layout: sendy
-theme: none
+from: '"Hadi Partovi (Code.org)" <hadi_partovi@code.org>'
 subject: Calling all engineers. Worldwide. 
 ---
-<%
-  tracking_pixel = '/images/1x1.png'
-  unsubscribe_link = '#'
-  domestic = params['domestic'].nil? || params['domestic'] == 'true'
-%>
-
-### <%= @header['subject'] %>
+### Calling all engineers. Worldwide.
 
 Last year, 40,000 teachers led a grassroots effort called the [Hour of Code](http://hourofcode.com) – to introduce ten million students to one hour of computer science. Kids of all ages tried one hour of writing code and making apps in classrooms, and they loved it.
 
