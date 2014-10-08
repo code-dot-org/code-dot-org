@@ -13,8 +13,6 @@ class WebPurifyTest < Minitest::Unit::TestCase
     assert_equal('ass', WebPurify.find_potential_profanity('ass'))
     assert_nil(WebPurify.find_potential_profanity('scheiße', ['en']))
     assert_equal('scheiße', WebPurify.find_potential_profanity('scheiße', ['de']))
-
-    # contacted support@ regarding this false positive:
-    # assert_nil(WebPurify.find_potential_profanity('8005555555 t'))
+    assert_nil(WebPurify.find_potential_profanity('8005555555 t'))
   end
 end
