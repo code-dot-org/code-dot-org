@@ -1,25 +1,25 @@
 ---
 from: '"Hadi Partovi (Code.org)" <hadi_partovi@code.org>'
-subject: 'Calling all teachers. Worldwide.'
+subject: 'The largest learning event in history'
 ---
-### Calling all teachers. Worldwide.
+### The largest learning event in history
 
 <center>
 **[Join the largest learning event in history](http://hourofcode.com/us/)**
-<br/>[Pridružite se najvećem edukativnom događaju u povijesti](http://hourofcode.com/us/hr)
-<br/>[Mach mit bei der größten Lernveranstaltung in der Geschichte](http://hourofcode.com/us/de)
-<br/>[انضم إلى أكبر حدث تعليمي في التاريخ](http://hourofcode.com/us/ar)
-<br/>[iscriviti all'evento didattico più popolare del mondo](http://hourofcode.com/us/it)
-<br/>[Tham gia sự kiện lớn nhất từ trước đến nay trong lịch sử](http://hourofcode.com/us/vi)
-<br/>[2014 年 12 月 8日ー14 日、歴史上最大の学習イベントに参加しよう。](http://hourofcode.com/us/ja)
+<br/>[Pridružite se najvećem edukativnom događaju u povijesti](http://hourofcode.com/hr/hr)
+<br/>[Mach mit bei der größten Lernveranstaltung in der Geschichte](http://hourofcode.com/de/de)
+<br/>[انضم إلى أكبر حدث تعليمي في التاريخ](http://hourofcode.com/me/ar)
+<br/>[iscriviti all'evento didattico più popolare del mondo](http://hourofcode.com/it/it)
+<br/>[Tham gia sự kiện lớn nhất từ trước đến nay trong lịch sử](http://hourofcode.com/vn/vi)
+<br/>[2014 年 12 月 8日ー14 日、歴史上最大の学習イベントに参加しよう。](http://hourofcode.com/jp/ja)
 <br/>[O maior evento de aprendizagem da história](http://hourofcode.com/br/pt)
-<br/>[Присъединете се към най-голямото събитие за обучение в историята](http://hourofcode.com/us/bg)
+<br/>[Присъединете се към най-голямото събитие за обучение в историята](http://hourofcode.com/bg/bg)
 <br/>[Alăturaţi-vă celui mai mare eveniment educativ din istorie](http://hourofcode.com/ro/ro)
-<br/>[Присоединяйтесь к крупнейшему учебному событию в истории](http://hourofcode.com/us/ru)
-<br/>[Bergabunglah dalam acara belajar terbesar dalam sejarah pada tanggal](http://hourofcode.com/us/id)
-<br/>[Приєднуйтесь до найбільшої навчальної події в історії](http://hourofcode.com/us/uk)
-<br/>[Únete al evento de aprendizaje más grande en la historia](http://hourofcode.com/us/es)
-<br/>[Λάβε μέρος στην μεγαλύτερη  στην ιστορία εκδήλωση για την μάθηση](http://hourofcode.com/us/el)
+<br/>[Присоединяйтесь к крупнейшему учебному событию в истории](http://hourofcode.com/ru/ru)
+<br/>[Bergabunglah dalam acara belajar terbesar dalam sejarah pada tanggal](http://hourofcode.com/id/id)
+<br/>[Приєднуйтесь до найбільшої навчальної події в історії](http://hourofcode.com/ua/uk)
+<br/>[Únete al evento de aprendizaje más grande en la historia](http://hourofcode.com/es/es)
+<br/>[Λάβε μέρος στην μεγαλύτερη  στην ιστορία εκδήλωση για την μάθηση](http://hourofcode.com/gr/el)
 </center>
 
 <br/>
@@ -27,7 +27,7 @@ Over 40 million students have tried the [Hour of Code](http://hourofcode.com). T
 
 <br/>
 <center>
-<a href="http://youtu.be/srH1OEKB2LE"><img src="http://code.org/images/fit-250/calling-teachers.png"/></a>
+<a href="http://hourofcode.com"><img src="http://code.org/images/fit-250/calling-teachers.png"/></a>
 </center>
 <br/>
 
@@ -37,11 +37,12 @@ It’s an introduction to computer science designed to show that anyone can lear
 ### How can you help?
 Join us to be part of the largest learning event in history. No experience needed from teachers and students. 
 
-1. Sign up and host your own event - [read our how to guide](http://hourofcode.com/resources/how-to)
-2. Recruit a teacher or ask your local school to participate - [sign up here](http://hourofcode.com/)
-3. Ask your employer to host an Hour of Code event - [share these resources](http://hourofcode.com/resources)
+1. [Participate](http://code.org/learn) as a student (alone, with a child, or in a group).
+2. Ask your school or employer to participate - [share these resources](http://hourofcode.com/resources)
+3. Sign up and host your own event - [read our how to guide](http://hourofcode.com/resources/how-to)
+4. [Donate to our crowdfunding campaign.](https://www.indiegogo.com/projects/an-hour-of-code-for-every-student/) We just launched what could be the largest education crowdfunding campaign in history, and we need your support to reach 100 million students. Every dollar will be matched, doubling your impact.
 
-**Start now by going to [http://hourofcode.com](http://hourofcode.com)**
+**Together, we’re making history.** Help us, at [http://hourofcode.com](http://hourofcode.com)
 
 P.S. Want to help translate tutorials? Get more [info here](http://code.org/translate)!
 
