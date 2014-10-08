@@ -231,9 +231,11 @@ module LevelsHelper
     end
 
     # Blockly expects fn_successCondition and fn_failureCondition to be inside a 'goals' object
-    level['goal'] = {fn_successCondition: level['fn_successCondition'], fn_failureCondition: level['fn_failureCondition']}
-    level.delete('fn_successCondition')
-    level.delete('fn_failureCondition')
+    if level['fn_successCondition'] || level['fn_failureCondition']
+      level['goal'] = {fn_successCondition: level['fn_successCondition'], fn_failureCondition: level['fn_failureCondition']}
+      level.delete('fn_successCondition')
+      level.delete('fn_failureCondition')
+    end
 
     # Fetch localized strings
     %w(instructions).each do |label|
