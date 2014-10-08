@@ -77,13 +77,13 @@ class ActivitiesController < ApplicationController
     program_tags_removed = program.gsub(xml_tag_regexp, "\n")
 
     if email = RegexpUtils.find_potential_email(program_tags_removed)
-      return {message: t('share_code.email_not_allowed'), contents: email}
+      return {message: t('share_code.email_not_allowed'), contents: email, type: 'email'}
     elsif street_address = Geocoder.find_potential_street_address(program_tags_removed)
-      return {message: t('share_code.address_not_allowed'), contents: street_address}
+      return {message: t('share_code.address_not_allowed'), contents: street_address, type: 'address'}
     elsif phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
-      return {message: t('share_code.phone_number_not_allowed'), contents: phone_number}
+      return {message: t('share_code.phone_number_not_allowed'), contents: phone_number, type: 'phone'}
     elsif WebPurify.find_potential_profanity(program_tags_removed, ['en', locale])
-      return {message: t('share_code.profanity_not_allowed')}
+      return {message: t('share_code.profanity_not_allowed'), type: 'profanity'}
     end
     nil
   end

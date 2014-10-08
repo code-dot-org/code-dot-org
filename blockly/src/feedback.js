@@ -34,7 +34,7 @@ exports.displayFeedback = function(options) {
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
   var shareFailureDiv = hadShareFailure ? getShareFailure(options) : null;
   if (hadShareFailure) {
-    trackEvent('Share', 'Failure', options.response.shareFailure.message);
+    trackEvent('Share', 'Failure', options.response.share_failure.type);
   }
   var feedbackBlocks = new FeedbackBlocks(options);
   // feedbackMessage must be initialized after feedbackBlocks
