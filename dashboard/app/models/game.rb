@@ -14,33 +14,41 @@ class Game < ActiveRecord::Base
   def self.custom_maze
     @@game_custom_maze ||= find_by_name("CustomMaze")
   end
+
+  UNPLUG = 'unplug'
+  MULTI = 'multi'
+  MATCH = 'match'
+  ARTIST = TURTLE = 'turtle' # heh
+  FLAPPY = 'flappy'
+  BOUNCE = 'bounce'
+  PLAYLAB = STUDIO = 'studio'
   
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
   end
 
   def unplugged?
-    app == 'unplug'
+    app == UNPLUG
   end
 
   def multi?
-    app == 'multi'
+    app == MULTI
   end
 
   def match?
-    app == 'match'
+    app == MATCH
   end
 
   def supports_sharing?
-    app == 'turtle' || app == 'flappy' || app == 'bounce' || app == 'studio'
+    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO
   end
 
   def share_mobile_fullscreen?
-    app == 'flappy' || app == 'bounce' || app == 'studio'
+    app == FLAPPY || app == BOUNCE || app == STUDIO
   end
 
   def flappy?
-    app == 'flappy'
+    app == FLAPPY
   end
 
   def self.setup
