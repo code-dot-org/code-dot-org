@@ -879,6 +879,4 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   customLevelBlocks.install(blockly, generator, gensym);
-  functionalBlocks.install(blockly, generator, gensym);
-
 };

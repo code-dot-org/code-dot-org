@@ -43,7 +43,8 @@ function installPlus(blockly, generator, gensym) {
   generator.functional_plus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return "(" + arg1 + " + " + arg2 + ")";
+    // return "(" + arg1 + " + " + arg2 + ")";
+    return "Calc.expression('+', " + arg1 + ", " + arg2 + ")";
   };
 }
 
@@ -59,7 +60,8 @@ function installMinus(blockly, generator, gensym) {
   generator.functional_minus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return "(" + arg1 + " - " + arg2 + ")";
+    // return "(" + arg1 + " - " + arg2 + ")";
+    return "Calc.expression('-', " + arg1 + ", " + arg2 + ")";
   };
 }
 
@@ -75,7 +77,8 @@ function installTimes(blockly, generator, gensym) {
   generator.functional_times = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return "(" + arg1 + " * " + arg2 + ")";
+    // return "(" + arg1 + " * " + arg2 + ")";
+    return "Calc.expression('*', " + arg1 + ", " + arg2 + ")";
   };
 }
 
@@ -91,7 +94,8 @@ function installDividedBy(blockly, generator, gensym) {
   generator.functional_dividedby = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return "(" + arg1 + " / " + arg2 + ")";
+    // return "(" + arg1 + " / " + arg2 + ")";
+    return "Calc.expression('/', " + arg1 + ", " + arg2 + ")";
   };
 }
 
@@ -100,7 +104,8 @@ function installDraw(blockly, generator, gensym) {
     // Block for turning left or right.
     helpUrl: '',
     init: function() {
-      initFunctionalBlock(this, 'draw', 1);
+      initFunctionalBlock(this, ' ', 1);
+      this.setFunctionalOutput(false);
     }
   };
 
