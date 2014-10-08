@@ -33,7 +33,7 @@ At its heart, the Hour of Code is a grassroots movement driven by people who kno
 Hadi Partovi<br/>
 Founder, Code.org
 
-<hr>
+<hr/>
 
 You’re receiving this because you have donated to [Code.org](http://code.org) online in the past. We’ll send you infrequent updates on our progress and the outcomes of your generous support. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](<%= unsubscribe_link %>).
 
