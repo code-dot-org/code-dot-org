@@ -18,3 +18,8 @@ Scenario: Can't delete blocks
   And the workspace has "1" blocks of type "jigsaw_2A"
   # Make sure block was actually dragged
   And block "1" is at offset "-176, 20"
+
+Scenario: Solving puzzle
+  And I drag "[block-id=1]" to "rect[fill-opacity='0.2']"
+  Then I wait to see ".modal"
+  And element ".modal .congrats" contains text "You completed Puzzle 1"
