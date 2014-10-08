@@ -4,9 +4,10 @@ var Expression = function (operator, a, b) {
 }
 module.exports = Expression;
 
-// todo - may want to only expose these to test
+// todo (brent) - may want to only expose these to test
 Expression.getDiff = getDiff;
 
+// todo (brent) - may notn need ordered
 Expression.prototype.toString = function (ordered) {
   var strs = this.args.map(function (arg) {
     return arg.toString(arg instanceof Expression ? ordered : 10);
@@ -17,6 +18,28 @@ Expression.prototype.toString = function (ordered) {
   }
 
   return "(" + strs[0] + " " + this.operator + " " + strs[1] + ")";
+};
+
+function token(char, correct) {
+  return { char: char, correct: correct };
+}
+
+function tokenList(expressionOrVal) {
+  if (isNumber(expressionOrVal)) {
+    return token(expressionOrVal.toString(), true);
+  }
+  return expressionOrVal.toTokenList();
+}
+
+
+// todo - takes diff to determine correctness
+Expression.prototype.toTokenList = function () {
+  var list = [token("(", true)];
+  list = list.concat(tokenList(this.args[0]));
+  list = list.concat(token(this.operator, true));
+  list = list.concat(tokenList(this.args[1]));
+  list = list.concat(token(")", true));
+  return list;
 };
 
 
@@ -80,6 +103,6 @@ function getExpressionDiff(src, target) {
     diff.numDiffs += numArgDiffs;
     diff.args = argDiffs;
   }
-  
+
   return diff;
 }
