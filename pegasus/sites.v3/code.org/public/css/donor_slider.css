@@ -15,7 +15,7 @@ h2 {
   border-radius: 0;
   background-color: white;
 }
-img {
+.badge img {
     display: inline-block;
     overflow: hidden;
     height: 90px;
