@@ -33,6 +33,7 @@ var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 
 var Expression = require('./expression');
+var TestResults = require('../constants').TestResults;
 
 var level;
 var skin;
@@ -203,9 +204,22 @@ Calc.execute = function() {
   BlocklyApps.reset();
 
 
-  Calc.drawAnswer(level.goal(), Calc.lastExpression);
+  var result = Calc.drawAnswer(level.goal(), Calc.lastExpression);
 
-  // todo - reporting somewhere
+  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var textBlocks = Blockly.Xml.domToText(xml);
+
+  var reportData = {
+    app: 'turtle',
+    level: level.id,
+    builder: level.builder,
+    result: result,
+    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    program: encodeURIComponent(textBlocks),
+    onComplete: onReportComplete
+  };
+
+  BlocklyApps.report(reportData);
 };
 
 Calc.drawGoal = function (goal) {
@@ -217,8 +231,10 @@ Calc.drawGoal = function (goal) {
 
 Calc.drawAnswer = function (goal, answer) {
   var ctx = Calc.ctxDisplay;
+  // todo (brent) - should i just have these in one function (i.e. ask for the
+  // token list, given an answer and goal).
   var diff = Expression.getDiff(answer, goal);
-  var list = answer.toTokenList(diff);
+  var list = Expression.getTokenList(answer, diff);
   var xpos = 0;
   var ypos = 200;
   for (var i = 0; i < list.length; i++) {
@@ -231,6 +247,8 @@ Calc.drawAnswer = function (goal, answer) {
     ctx.fillText(list[i].char, xpos, ypos);
     xpos += ctx.measureText(list[i].char).width;
   }
+
+  return (diff.numDiffs === 0);
 };
 
 
@@ -238,25 +256,14 @@ Calc.drawAnswer = function (goal, answer) {
  * App specific displayFeedback function that calls into
  * BlocklyApps.displayFeedback when appropriate
  */
-var displayFeedback = function() {
+var displayFeedback = function(response) {
   BlocklyApps.displayFeedback({
-    app: 'Calc', //XXX
+    app: 'Calc',
     skin: skin.id,
-    feedbackType: Calc.testResults,
-    message: Calc.message,
-    response: Calc.response,
-    level: level,
-    feedbackImage: Calc.ctxScratch.canvas.toDataURL("image/png"),
-    // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
-    showingSharing: level.freePlay || level.impressive,
-    // impressive levels are already saved
-    alreadySaved: level.impressive,
-    // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToGalleryUrl: level.freePlay && Calc.response.save_to_gallery_url,
-    appStrings: {
-      reinfFeedbackMsg: calcMsg.reinfFeedbackMsg(),
-      sharingText: calcMsg.shareDrawing()
-    }
+    // feedbackType: Calc.testResults,
+    message: "todo (brent): temp message",
+    response: response,
+    level: level
   });
 };
 
@@ -264,12 +271,11 @@ var displayFeedback = function() {
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
  */
-Calc.onReportComplete = function(response) {
-  Calc.response = response;
+function onReportComplete(response) {
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
-  displayFeedback();
+  displayFeedback(response);
 };
 
 
