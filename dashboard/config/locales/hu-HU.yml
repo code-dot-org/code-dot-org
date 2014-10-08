@@ -251,6 +251,9 @@
     header:
       finished_hoc: Befejeztem a Kód Óráját
       sign_in_to_save: Jelentkezzen be a mentéshez
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: Diákjaim
       label: "Üdv %{username}"
@@ -469,6 +472,13 @@
     flappy_og_title: Jelentkezzen ki az én Flappy játékomból
     studio_og_title: Check out my story
     og_description: A kódját magam írtam a Code.org segítségével
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: Létrehozott egy új parancsfájlt.
     destroyed: Elpusztult a parancsfájlt.

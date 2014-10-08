@@ -24,7 +24,7 @@
       label: "Додати вчителя, по коду чи адресі електронної пошти:"
       placeholder: "Код (ABCDEF) або електронною поштою (teacher@school.edu)"
     code:
-      label: "Додати вчителя за кодом розділу:"
+      label: "Додати вчителя за кодом групи:"
       placeholder: "Код (ABCDEF)"
     submit: "Додати викладача"
   add_hint_form:
@@ -155,9 +155,9 @@
       no_teacher: "Не можливо знайти кого-небудь зареєстрованого з '%{teacher_email_or_code}'.
         Будь ласка, попросіть їх зареєструватися тут і потім спробуйте знову додати
         їх"
-      section_not_found: "Не вдалося знайти розділ з кодом '%{section_code}'."
-      blank_code: "Будь ласка, введіть код розділу"
-      cant_join_own_section: "На жаль, не можна приєднатись до свого власного розділу."
+      section_not_found: "Не вдалося знайти групу з кодом '%{section_code}'."
+      blank_code: "Будь ласка, введіть код групи"
+      cant_join_own_section: "На жаль, не можна приєднатись до своєї власної групи."
     mail:
       invite_student:
         subject: "Приєднуйтеся до класу з %{teacher_name} на Code.org!"
@@ -261,6 +261,9 @@
     header:
       finished_hoc: "Я вже завершив мою Годину коду"
       sign_in_to_save: "Увійдіть для збереження досягнень"
+      free_play:
+        playlab: "Створити програму"
+        artist: "Намалювати"
     user:
       classroom: "Мої учні"
       label: "Привіт %{username}"
@@ -324,7 +327,7 @@
       enter: "введіть:"
     sections:
       add: "Додати групу"
-      manage: "Керування розділами"
+      manage: "Керування групами"
       section: "Група"
       students: "Учні"
       section_code: "Код групи"
@@ -363,8 +366,8 @@
     classroom_activity: "Безмашинна вправа"
   home:
     title: "Студія коду"
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    all_courses: "Огляд курсів, 1, 2 і 3"
+    lesson_plans: "Плани уроків"
     signin_message: "Вже зареєстровані? %{link}"
     student_reg_link: "Реєстрація учня"
     teacher_reg_link: "Реєстрація вчителя"
@@ -470,6 +473,10 @@
     flappy_og_title: "Поглянь на мою гру в Пурха (Flappy Game)"
     studio_og_title: "Погляньте на мою програму Ігрової студії"
     og_description: "Я самостійно написав код з Code.org"
+    phone_number_not_allowed: "Схоже, що це номер телефону. Спробуйте змінити текст."
+    address_not_allowed: "Схоже, що це адреса. Спробуйте змінити текст."
+    email_not_allowed: "Схоже, що це електронна скринька. Спробуйте змінити текст."
+    profanity_not_allowed: "Схоже, що тут є погані слова. Спробуйте змінити текст."
   builder:
     created: "Ви створили новий сценарій."
     destroyed: "Ви видалили сценарій."

@@ -50,7 +50,7 @@
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png"
       2-3 maze match 1:
-        Maze Match One: Maze Match One
+        Maze Match One: "مطابقة المتاهة واحد"
         Match the puzzles to the blocks: "طابق الألغاز إلى المجموعات"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
@@ -59,7 +59,7 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
       2-3 Maze Match 2:
-        Maze Match: Maze Match
+        Maze Match: "مطابقة المتاهة"
         Match the puzzles to the blocks: "طابق الاحجيات مع القطع"
         Instructions: "تعليمات"
         Drag the blocks to match.: "اسحب القطع حتى تتطابق."
@@ -125,23 +125,51 @@
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
+      4-5 Algorithms Match 1:
+        Matching: "مطابقة"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match
+          the steps in the Dice Race game to the order that they should appear in
+          the algorithm.
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Set Player 1 score to 0</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>Player 1 rolls die</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Add Player 1 roll to total
+          score</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Compare player scores
+          to see who wins</h4>"
       4-5 Computational Thinking Match 1:
         Matching: "مطابقة"
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each
-          of these vehicles has been decomposed into smaller pieces. Match each vehicle
-          with its decomposed list.
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Wheels/side: 2<br/>Windows/side:
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: "كل
+          من هذه المركبات تم تحليلها إلى أجزاء أصغر . طابق كل من هذه المركبات مع قائمتها
+          المتحللة ."
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>عجلات/الجانب: 2<br/>نوافذ/الجانب:
           0</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Wheels/side: 2<br/>Windows/side:
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>عجلات/الجانب: 2<br/>نوافذ/الجانب:
           1</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Wheels/side: 2<br/>Windows/side:
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>عجلات/الجانب: 2<br/>نوافذ/الجانب:
           6</h3>"
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Wheels/side: 3<br/>Windows/side:
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>عجلات/الجانب: 3<br/>نوافذ/الجانب:
           2</h3>"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
+      4-5 Suncatchers Match 1:
+        Matching: "مطابقة"
+        Match each program to the word it makes, using the provided group of skills.: Match
+          each program to the word it makes, using the provided group of skills.
+        "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
       K-1 Artist 2 Match 1:
         Matching: "مطابقة"
         Is the square next to, above, or below the ball?: "هل المربع بجانب أو فوق
@@ -305,14 +333,13 @@
         "(- (+ 72 3) (* 19 15))": "(- (+ 72 3) (* 19 15))"
         "(+ (- (* 3 15) 72) 19)": "(+ (- (* 3 15) 72) 19)"
       parts of contract:
-        Parts of a Contract: Parts of a Contract
-        Here is a contract for a new function. Match each item with the word that describes it.: Here
-          is a contract for a new function. Match each item with the word that describes
-          it.
-        yearbook-picture: yearbook-picture
-        string numer: string numer
+        Parts of a Contract: "أجزاء من العقد"
+        Here is a contract for a new function. Match each item with the word that describes it.: "هذا
+          عقد جديد لمهمة جديدة . طابق كل عنصر مع الكلمة التي تصفه ."
+        yearbook-picture: "الكتاب السنوي - صورة"
+        string numer: "سلسلة numer"
         image: "صورة"
-        (yearbook-picture "Sally" 1992): (yearbook-picture "Sally" 1992)
+        (yearbook-picture "Sally" 1992): (الكتاب السنوي-صورة "سالي" 1992)
         function name: "اسم الدالة"
         domain: "مجال"
         range: "مدى"
@@ -320,10 +347,10 @@
       Match example to contract:
         Contracts of Functions: "تقلصات الدالة"
         Match each example with the correct contract!: "طابق كل مثال مع التقلص الصحيح!"
-        (big-string? "gigantic" 5): (big-string? "gigantic" 5)
-        "(find-price 4)": "(find-price 4)"
+        (big-string? "gigantic" 5): (سلسلة كبيرة؟ 5 "العملاق")
+        "(find-price 4)": "(البحث عن-السعر 4)"
         (small-star "blue"): (small-star "blue")
-        (bigger-string "big" "little"): (bigger-string "big" "little")
+        (bigger-string "big" "little"): (أكبر-سلسلة "كبير" "صغير")
         (small-star "solid"): (small-star "solid")
         (find-price "cheese"): (find-price "cheese")
         'big-string: string number -> boolean': 'big-string: string number -> boolean'
@@ -333,7 +360,7 @@
           string'
         'find-price: string -> number': 'find-price: string -> number'
       test matching image:
-        Matching Images Two: Matching Images Two
+        Matching Images Two: "مطابقة الصور اثنين"
         Match up all the flowers by colour!: "طابق الازهار حسب اللون!"
         "/script_assets/matches/images/head.jpg,300": "/script_assets/matches/images/head.jpg,300"
         Instructions: "تعليمات"
@@ -348,13 +375,13 @@
         "/script_assets/matches/images/a4.jpg": "/script_assets/matches/images/a4.jpg"
       test matching text:
         Matching: "تطابق"
-        Some really easy stuff to match.  Drag it around until you get it.: Some really
-          easy stuff to match.  Drag it around until you get it.
-        What color is the sky?: What color is the sky?
-        What's in the ocean?: What's in the ocean?
-        What's Brent's last name?: What's Brent's last name?
-        Where is Brendan from?: Where is Brendan from?
+        Some really easy stuff to match.  Drag it around until you get it.: "بعض الأشياء
+          حقاً سهلة المطابقة .  اسحبها حتى يمكنك الحصول عليها ."
+        What color is the sky?: "ما هو لون السماء؟?"
+        What's in the ocean?: "ماذا يوجد في المحيط؟?"
+        What's Brent's last name?: "ما هو الاسم الأخير لخام برنت ؟"
+        Where is Brendan from?: "من أين هو برندان ؟"
         blue: "أزرق"
-        salt: salt
-        Van Minnen: Van Minnen
-        Sydney: Sydney
+        salt: "الملح"
+        Van Minnen: "فان مينين"
+        Sydney: "سيدني"

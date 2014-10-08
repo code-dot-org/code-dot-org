@@ -257,6 +257,9 @@
     header:
       finished_hoc: I've finished my Hour of Code
       sign_in_to_save: Sign in to save progress
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: My students
       label: Hi %{username}
@@ -468,6 +471,13 @@
     flappy_og_title: Check out my Flappy Game
     studio_og_title: Check out my story
     og_description: I wrote the code myself with Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: You created a new script.
     destroyed: You destroyed a script.

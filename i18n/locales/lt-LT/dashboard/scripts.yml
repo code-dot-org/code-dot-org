@@ -1,73 +1,73 @@
-"lt":
+lt:
   data:
     script:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Dėlionės: sudėk paveikslėlius'
-          The Maze: "Labirintas"
-          Multi: "Variantai"
-          Match: "Sujungimas"
-          Math Image: "Math Image"
-          title: "Bandomasis etapas"
-          description: "Tai tik vidinis bandomasis etapas."
+          The Maze: Labirintas
+          Multi: Variantai
+          Match: Sujungimas
+          Math Image: Math Image
+          title: Bandomasis etapas
+          description: Tai tik vidinis bandomasis etapas.
         course1:
           "Jigsaw: Learn to drag and drop": 'Dėlionės: sudėk paveikslėlius'
           "Maze: Sequence": 'Labirintas: seka'
           "Maze: Debugging": 'Labirintas: klaidų ieškojimas'
           "Artist 1: Intro": 'Menininkas 1: įžanga'
-          Artists 2: "Menininkai 2"
-          Spelling Bee: "Rašanti bitė"
-          Spelling Bee not blockly: "Rašanti bitė be blokelių"
+          Artists 2: Menininkai 2
+          Spelling Bee: Rašanti bitė
+          Spelling Bee not blockly: Rašanti bitė be blokelių
           "Bee 1: Intro": 'Bitė 1: įžanga'
           "Maze 2: Loops": 'Labirintas 2: Kartojimas'
           "Bee 2: Loops": 'Bitė 2: Kartojimas'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
-          Flappy non blockly: "Flappy be blokelių"
-          title: 'Course 1 - For early readers'
-          Artist 2: "Menininkas 2"
-          Happy Maps: "Laimingieji žemėlapiai"
+          Flappy non blockly: Flappy be blokelių
+          title: 'Kursas 1 - tik pradedantiems skaityti'
+          Artist 2: Menininkas 2
+          Happy Maps: Laimingieji žemėlapiai
           Move it, Move it: Judėk, judėk
           "Real-life Algorithms: Plant a Seed": 'Algoritmai realiame gyvenime: sėklos sodinimas'
-          Building a Foundation: "Building a Foundation"
-          Getting Loopy: "Kartojimo supratimas"
-          The Big Event: "Didelis įvykis"
-          Going Places Safely: "Saugus naršymas internete"
-          description: "Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1."
+          Building a Foundation: Building a Foundation
+          Getting Loopy: Kartojimo supratimas
+          The Big Event: Didelis įvykis
+          Going Places Safely: Saugus naršymas internete
+          description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
           "Bee: Sequence": 'Bitė: seka'
           "Artist: Sequence": 'Menininkas: seka'
           "Artist: Shapes": 'Menininkas: formos'
           "Maze: Loops": 'Labirintas: kartojimas'
           "Bee: Loops": 'Bitė: kartojimas'
           "Studio: Create a Story": 'Laboratorija: sukurk istoriją'
-          description_short: "1 etapas yra sukurtas pradinukams, dar tik pradėjusiems skaityti."
+          description_short: 1 etapas yra sukurtas pradinukams, dar tik pradėjusiems skaityti.
           "Artist: Loops": 'Menininkas: kartojimas'
         course2:
-          The Maze: "Labirintas"
-          Suzi: "Suzi"
-          The Artist: "Menininkas"
+          The Maze: Labirintas
+          Suzi: Suzi
+          The Artist: Menininkas
           Artist Debugging: 'Menininkas: klaidų ieškojimas'
-          Bounce: "Šokinėjimas"
+          Bounce: Šokinėjimas
           "Studio: Create a Story": 'Laboratorija: sukurk istoriją'
           Artist Loops: 'Menininkas: kartojimas'
           Bee Conditionals: 'Bitė: sąlyginiai sakiniai'
-          Flappy: "Flappy"
-          title: "2 etapas"
+          Flappy: Flappy
+          title: Kursas 2
           Bee Loops: 'Bitė: kartojimas'
           Artist Functions: 'Menininkas: funkcijos'
           The Artist Debugging: 'Menininkas: klaidų ieškojimas'
           Bee Debugging: 'Bitė: klaidų ieškojimas'
           Bee Functions: 'Bitė: sudėtinės komandos'
           Maze Loops: 'Labirintas: kartojimas'
-          Graph Paper Programming: "Programavimas ant languoto popieriaus"
+          Graph Paper Programming: Programavimas ant languoto popieriaus
           "Real-life Algorithms: Paper Planes": 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-          Getting Loopy: "Kartojimo supratimas"
-          Relay programming: "Programavimas komandoje"
-          Conditionals: "Sąlyginiai sakiniai"
-          Binary Bracelets: "Dvejetainės apyrankės"
-          The Big Event: "Didelis įvykis"
-          Your Digital Footprint: "Virtualūs pirštų antspaudai"
-          description: "Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
+          Getting Loopy: Kartojimo supratimas
+          Relay programming: Programavimas komandoje
+          Conditionals: Sąlyginiai sakiniai
+          Binary Bracelets: Dvejetainės apyrankės
+          The Big Event: Didelis įvykis
+          Your Digital Footprint: Virtualūs pirštų antspaudai
+          description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
           "Maze: Sequence": 'Labirintas: seka'
           "Artist: Sequence": 'Menininkas: seka'
           "Maze: Loops": 'Labirintas: kartojimas'
@@ -76,73 +76,73 @@
           "Bee: Debugging": 'Bitė: klaidų ieškojimas'
           "Artist: Debugging": 'Menininkas: klaidų ieškojimas'
           "Bee: Conditionals": 'Bitė: sąlyginiai sakiniai'
-          description_short: "2 etapas yra skirtas mokiniams, kurie jau moka skaityti – pradinukams ir šiek tiek vyresniems."
+          description_short: Kursas 2 yra skirtas mokiniams, kurie jau moka skaityti – pradinukams 2-5 klasėms.
           "Artist: Sequence2": 'Menininkas: seka2'
           "Maze: Sequence2": 'Labirintas: seka2'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Artist: Nested Loops": 'Menininkas: kartojimas kartojime'
         course3:
-          The Maze: "Labirintas"
+          The Maze: Labirintas
           "Studio: Create a Story": 'Laboratorija: sukurk istoriją'
-          The Artist: "Menininkas"
-          title: "3 etapas"
+          The Artist: Menininkas
+          title: Kursas 3
           Artist Functions: 'Menininkas: funkcijos'
-          Artist For Loops: "Artist For Loops"
-          Artist Nested Loops: "Artist Nested Loops"
+          Artist For Loops: 'Menininkas: kartojimai'
+          Artist Nested Loops: 'Menininkas: kartojimas kartojime'
           Bee Conditionals: 'Bitė: sąlyginiai sakiniai'
-          Bee Nested Loops: "Bee Nested Loops"
+          Bee Nested Loops: 'Bitė: kartojimas kartojime'
           Bee Debuggin: 'Bitė: klaidų ieškojimas'
           Bee Debugging: 'Bitė: klaidų ieškojimas'
           Bee Functions: 'Bitė: sudėtinės komandos'
           Artist Functions with Params: 'Menininkas: sudėtinės komandos su parametrais'
-          Bounce: "Šokinėjimas"
+          Bounce: Šokinėjimas
           Maze Conditionals: 'Labirintas: sąlyginiai sakiniai'
           Artist Functions with Parameters: 'Menininkas: sudėtinės komandos su parametrais'
-          Computational Thinking: "Skaičiuojamasis mąstymas"
-          Functional Suncatchers: "Functional Suncatchers"
-          Songwriting Parameters: "Songwriting Parameters"
-          Dice Race: "Kauliukų lenktynės"
-          Internet: "Internetas"
-          Crowdsourcing: "Crowdsourcing"
-          Digital Citizenship: "Virtuali pilietybė"
+          Computational Thinking: Skaičiuojamasis mąstymas
+          Functional Suncatchers: Functional Suncatchers
+          Songwriting Parameters: Songwriting Parameters
+          Dice Race: Kauliukų lenktynės
+          Internet: Internetas
+          Crowdsourcing: Crowdsourcing
+          Digital Citizenship: Virtuali pilietybė
           Farmer - While Loops: 'Ūkininkas: kartojimas'
-          description: "Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5."
+          description: Kursas 3 skirtas tiems, kas pabaigė Kursą 2.
           "Studio: Create a Game": 'Laboratorija: sukurk žaidimą'
-          Maze: "Labirintas"
-          Artist: "Menininkas"
+          Maze: Labirintas
+          Artist: Menininkas
           "Artist: Functions": 'Menininkas: sudėtinės komandos'
           "Bee: Functions": 'Bitė: sudėtinės komandos'
           "Bee: Conditionals": 'Bitė: sąlyginiai sakiniai'
           "Maze: Conditionals": 'Labirintas: sąlyginiai sakiniai'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Artist: Nested Loops": 'Menininkas: kartojimas kartojime'
           "Farmer: While Loops": 'Ūkininkas: kartojimas'
-          "Bee: Nested Loops": 'Bee: Nested Loops'
+          "Bee: Nested Loops": 'Bitė: kartojimas kartojime'
           "Bee: Debugging": 'Bitė: klaidų ieškojimas'
-          description_short: "Mokiniai, einantys 3 etapą, turi būti praėję 2 etapą."
-          Maze2: "Labirintas2"
-          Artist2: "Menininkas2"
+          description_short: Mokiniai, einantys 3 etapą, turi būti praėję 2 etapą.
+          Maze2: Labirintas2
+          Artist2: Menininkas2
           "Artist: Functions2": 'Menininkas: sudėtinės komandos2'
           "Bee: Functions2": 'Bitė: sudėtinės komandos2'
           "Bee: Conditionals2": 'Bitė: sąlyginiai sakiniai2'
           "Maze: Conditionals2": 'Labirintas: sąlyginiai sakiniai2'
-          "Artist: Nested Loops2": 'Artist: Nested Loops2'
+          "Artist: Nested Loops2": 'Menininkas: Kartojimas kartojime'
           "Farmer: While Loops2": 'Ūkininkas: kartojimas2'
-          "Bee: Nested Loops2": 'Bee: Nested Loops2'
+          "Bee: Nested Loops2": 'Bitė: kartojimas kartojime'
           "Bee: Debugging2": 'Bitė: klaidų ieškojimas2'
           "Artist: Patterns": 'Artist: Patterns'
         msm:
-          title: "Vidurinės mokyklos matematika"
-          description: "Private work in progress for Middle School Math."
-          Graph Paper Programming: "Programavimas ant languoto popieriaus"
-          Assessments: "Assessments"
-          Unit 1: "Skyrius 1"
-          Unit 2: "Skyrius 2"
+          title: Vidurinės mokyklos matematika
+          description: Private work in progress for Middle School Math.
+          Graph Paper Programming: Programavimas ant languoto popieriaus
+          Assessments: Assessments
+          Unit 1: Skyrius 1
+          Unit 2: Skyrius 2
         playlab:
-          title: "Laboratorija"
-          description: "Sukurk istoriją arba žaidimą su laboratorija!"
-          Play Lab: "Laboratorija"
-          description_short: "Sukurk istoriją arba žaidimą su laboratorija!"
+          title: Laboratorija
+          description: Sukurk istoriją arba žaidimą su laboratorija!
+          Play Lab: Laboratorija
+          description_short: Sukurk istoriją arba žaidimą su laboratorija!
         artist:
-          title: "Menininkas"
-          description: "Nupiešk šaunius piešinius ir ornamentus su menininku!"
-          Artist: "Menininkas"
-          description_short: "Nupiešk šaunius piešinius ir ornamentus su menininku!"
+          title: Menininkas
+          description: Nupiešk šaunius piešinius ir ornamentus su menininku!
+          Artist: Menininkas
+          description_short: Nupiešk šaunius piešinius ir ornamentus su menininku!

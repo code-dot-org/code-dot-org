@@ -532,9 +532,9 @@ input[type="radio"] {
     left: -50px;
     z-index: -1; }
   .modal-content .feedback-image {
-    width: 40%;
+    width: 180px;
     height: auto;
-    margin: 15px;
+    margin: 0 15px 0 0;
     float: left;
     border: lightgrey;
     border-style: solid; }
@@ -676,6 +676,7 @@ input[type="radio"] {
   display: none; }
 
 .sharing {
+  float: left;
   margin-top: 15px;
   font-size: 20px;
   color: #5b6770; }
@@ -684,7 +685,7 @@ input[type="radio"] {
     font-size: 20px;
     color: #5b6770; }
   .sharing div {
-    margin: 15px 0; }
+    margin-bottom: 15px; }
   .sharing .saved-to-gallery {
     color: #7665a0; }
   .sharing .social-buttons a:hover {
@@ -692,7 +693,7 @@ input[type="radio"] {
   .sharing #sharing-input {
     cursor: copy;
     margin: 0;
-    width: 20em; }
+    width: 250px; }
   .sharing input#phone {
     height: 30px;
     padding: 5px;

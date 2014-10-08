@@ -8730,7 +8730,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/de_de/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing-image">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/de_de/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -9309,7 +9309,7 @@ exports.reinfFeedbackMsg = function(d){return "Du kannst den \"Versuche erneut\"
 
 exports.scoreText = function(d){return "Ergebnis: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set scene"};
+exports.setBackground = function(d){return "Hintergrund setzen"};
 
 exports.setBackgroundRandom = function(d){return "Zufällige Szene einstellen"};
 
@@ -9355,7 +9355,7 @@ exports.setGravityVeryHigh = function(d){return "Setze Schwerkraft auf sehr hoch
 
 exports.setGravityTooltip = function(d){return "Setzt die Schwerkraft des Levels"};
 
-exports.setGround = function(d){return "set ground"};
+exports.setGround = function(d){return "Boden setzen"};
 
 exports.setGroundRandom = function(d){return "Setzt den Boden auf zufällig"};
 
@@ -9373,7 +9373,7 @@ exports.setGroundLava = function(d){return "Setzt den Boden auf Lava"};
 
 exports.setGroundTooltip = function(d){return "Setzt den Boden auf ein bestimmtes Bild"};
 
-exports.setObstacle = function(d){return "set obstacle"};
+exports.setObstacle = function(d){return "Hindernis setzen"};
 
 exports.setObstacleRandom = function(d){return "Setzt das Hindernis auf zufällig"};
 
@@ -9391,7 +9391,7 @@ exports.setObstacleLaser = function(d){return "Setzt das Hindernis auf Laser"};
 
 exports.setObstacleTooltip = function(d){return "Setzt das Hindernis auf ein bestimmtes Bild"};
 
-exports.setPlayer = function(d){return "set player"};
+exports.setPlayer = function(d){return "Spieler setzen"};
 
 exports.setPlayerRandom = function(d){return "Setzt den Spieler auf zufällig"};
 
@@ -9441,27 +9441,27 @@ exports.soundRandom = function(d){return "zufällige"};
 
 exports.soundBounce = function(d){return "abprallen"};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "knirschen"};
 
-exports.soundDie = function(d){return "sad"};
+exports.soundDie = function(d){return "traurig"};
 
-exports.soundHit = function(d){return "smash"};
+exports.soundHit = function(d){return "Schlag"};
 
-exports.soundPoint = function(d){return "point"};
+exports.soundPoint = function(d){return "Punkt"};
 
-exports.soundSwoosh = function(d){return "swoosh"};
+exports.soundSwoosh = function(d){return "Swoosh"};
 
-exports.soundWing = function(d){return "wing"};
+exports.soundWing = function(d){return "Flügelsound"};
 
-exports.soundJet = function(d){return "jet"};
+exports.soundJet = function(d){return "Jet"};
 
-exports.soundCrash = function(d){return "crash"};
+exports.soundCrash = function(d){return "Crash"};
 
-exports.soundJingle = function(d){return "jingle"};
+exports.soundJingle = function(d){return "Jingle"};
 
-exports.soundSplash = function(d){return "splash"};
+exports.soundSplash = function(d){return "Splashen"};
 
-exports.soundLaser = function(d){return "laser"};
+exports.soundLaser = function(d){return "Laser"};
 
 exports.speedRandom = function(d){return "Setze Geschwindigkeit auf zufällig"};
 

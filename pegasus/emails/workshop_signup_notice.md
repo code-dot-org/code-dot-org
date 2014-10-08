@@ -29,3 +29,5 @@ Workshop details:
 
 - Date(s): <%= workshop['dates'].map{|i| i['date_s']}.join(', ') %>
 - Location: [<%= workshop['location_name_s'] %>](http://<%=CDO.canonical_hostname('code.org')%>/manage-professional-development-workshops#/<%= workshop_row[:secret] %>/view)
+
+![](<%= tracking_pixel %>)

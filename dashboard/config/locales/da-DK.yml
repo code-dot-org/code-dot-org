@@ -260,6 +260,9 @@
     header:
       finished_hoc: Jeg har afsluttet min En Times Kodning
       sign_in_to_save: Log ind for at gemme fremskridt
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: Mine elever
       label: Hej %{username}
@@ -473,6 +476,13 @@
     flappy_og_title: Tjek mit Flappy spil
     studio_og_title: Tjek min historie
     og_description: Jeg skrev selv koden med Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: Du har oprettet et nyt script.
     destroyed: Du ødelagde et script.

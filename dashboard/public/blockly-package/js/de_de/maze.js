@@ -12698,7 +12698,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/de_de/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing-image">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/de_de/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -13223,7 +13223,7 @@ exports.genericFeedback = function(d){return "Schau dir an, was du gemacht hast 
 
 },{"messageformat":69}],57:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
-exports.atHoneycomb = function(d){return "am Bienenstock"};
+exports.atHoneycomb = function(d){return "an Honigwabe"};
 
 exports.atFlower = function(d){return "an der Blume"};
 
@@ -13273,11 +13273,11 @@ exports.honeyAvailable = function(d){return "Honig"};
 
 exports.honeyTooltip = function(d){return "Erzeuge Honig aus Nektar"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "Die Honigwabe hat keinen Platz mehr für Honig."};
 
 exports.ifCode = function(d){return "wenn"};
 
-exports.ifInRepeatError = function(d){return "Du benötigst einen \"wenn\"-Baustein in einem \"wiederhole\"-Baustein.  Wenn du Probleme hast, dann versuche nochmals das vorherige Level und schau wie es dort läuft."};
+exports.ifInRepeatError = function(d){return "Du benötigst einen \"if\"-Block in einem \"repeat\"-Block. Wenn du Schwierigkeiten hast, dann versuche das vorherige Level, um zu sehen wie es funktioniert."};
 
 exports.ifPathAhead = function(d){return "Wenn Weg voraus"};
 
@@ -13289,13 +13289,13 @@ exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in 
 
 exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Du benutzt die richtigten Bausteine, aber du hast nicht die richtige Menge an Honig."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Du benutzt die richtigten Bausteine, aber du hast nicht die richtige Menge an Nektar."};
 
 exports.make = function(d){return "machen"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "Rückwärts"};
 
 exports.moveEastTooltip = function(d){return "Bewege mich ein Feld Richtung Osten."};
 
@@ -13307,7 +13307,7 @@ exports.moveNorthTooltip = function(d){return "Bewege mich ein Feld Richtung Nor
 
 exports.moveSouthTooltip = function(d){return "Bewege mich ein Feld Richtung Süden."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "Bewege mich vorwärts/rückwärts um einen Platz"};
 
 exports.moveWestTooltip = function(d){return "Bewege mich ein Feld Richtung Westen."};
 
@@ -13327,9 +13327,9 @@ exports.noPathLeft = function(d){return "kein Pfad zur linken Seite"};
 
 exports.noPathRight = function(d){return "kein Pfad zur rechten Seite"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "Du kannst Nektar nur aus einer Blume bekommen."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "Du kannst Honig nur an der Honigwabe herstellen."};
 
 exports.numBlocksNeeded = function(d){return "Dieses Puzzle kann mit dem Baustein %1 gelöst werden."};
 
@@ -13353,7 +13353,7 @@ exports.removeStack = function(d){return v(d,"shovelfuls")+" Schaufeln Erde vom 
 
 exports.removeSquare = function(d){return "Viereck entfernen"};
 
-exports.repeatCarefullyError = function(d){return "Um dieses Problem zu lösen, suche nach einem Muster, dass sich wiederholt. Benutze dann den \"wiederhole\"-Baustein mit diesen drei Bausteinen im Inneren: gehe vorwärts, gehe vorwärts, nach rechts drehen."};
+exports.repeatCarefullyError = function(d){return "Um dieses Level zu schaffen, musst du auf die Muster von zwei Mustern achten, die du in einen \"repeat\"-Block setzt. Es ist in Ordnung, wenn du nach dieser Runde noch Züge übrig hast."};
 
 exports.repeatUntil = function(d){return "wiederholen bis"};
 
@@ -13375,13 +13375,13 @@ exports.turnTooltip = function(d){return "Dreht mich nach links oder rechts um 9
 
 exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "Stelle sicher, dass du alle lila Blumen nach Nektar durchsucht hast"};
 
 exports.whileMsg = function(d){return "solange"};
 
 exports.whileTooltip = function(d){return "Wiederhole diese Aktionen bis das Ziel erreicht ist."};
 
-exports.word = function(d){return "Find the word"};
+exports.word = function(d){return "Finde das Wort"};
 
 exports.yes = function(d){return "Ja"};
 

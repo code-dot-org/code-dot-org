@@ -255,6 +255,9 @@
     header:
       finished_hoc: Kod Saati'ni tamamladım
       sign_in_to_save: "İlerleme kaydetmek için oturum açın"
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: "Öğrencilerim"
       label: Merhaba %{username}
@@ -466,6 +469,13 @@
     flappy_og_title: Benim Flappy Oyun'uma göz atın
     studio_og_title: Benim hikayeme göz atın
     og_description: Ben Code.org ile kendi kodumu yazdım
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: Yeni bir komut dosyası oluşturdu.
     destroyed: Bir komut dosyası yok.

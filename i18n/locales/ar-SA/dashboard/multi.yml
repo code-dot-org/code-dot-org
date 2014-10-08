@@ -1,8 +1,8 @@
-"ar":
+ar:
   data:
     multi:
       2-3 artist debug multi 1:
-        Artist Debugging Multiple Choice One: "تصحيح أخطاء الرسام اختيار من متعدد واحد"
+        Artist Debugging Multiple Choice One: تصحيح أخطاء الرسام اختيار من متعدد واحد
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700
         Why won't this circle go all the way around?: لماذا لا تذهب هذه الدائرة حول كل الطريق ؟
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
@@ -26,9 +26,9 @@
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
       2-3 artist functions multi 1:
-        Artist Functions Multiple Choice One: "مهام الرسام اختيار من متعدد واحد"
+        Artist Functions Multiple Choice One: مهام الرسام اختيار من متعدد واحد
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500
-        Pick the correct blocks to draw this image using the given functions: "اختار القطع الصحيحة لرسم هذه الصورة باستخدام المهام المعطاة"
+        Pick the correct blocks to draw this image using the given functions: اختار القطع الصحيحة لرسم هذه الصورة باستخدام المهام المعطاة
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
@@ -50,7 +50,7 @@
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: 'النحلة الشرطية - اختيار من متعدد - اثنان'
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
-        Choose the best blocks: "إختار القطع الأفضل"
+        Choose the best blocks: إختار القطع الأفضل
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -81,15 +81,15 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png
       2-3 Algorithms Multi 1:
-        Multiple Choice: "اختيار من متعدد"
+        Multiple Choice: اختيار من متعدد
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: "اختر خوارزمية للصورة المقدمة"
+        Choose an algorithm for the image provided: اختر خوارزمية للصورة المقدمة
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'إبدأ مع المربع<br/>ضع مثلثاً فوق المربع<br/>ضع مثلثاً أسفل المربع'
         Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: 'إبدأ مع المربع<br/>ضع مثلثاً على يمين المربع<br/>ضع معين أسفل المربع<br/>ضع مثلثاً على يمين المعين'
         Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: 'إبدأ مع المربع<br/>ضع معيناً فوق المربع<br/>ضع مثلثاً على يمين المعين'
         Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: 'إبدأ مع المربع<br/>ضع مثلثاً تحت المربع<br/>ضع معيناً على يمين المثلث'
       2-3 Algorithms Multi 2:
-        Multiple Choice: "اختيار من متعدد"
+        Multiple Choice: اختيار من متعدد
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'إبدأ مع المثلث<br/>ضع مربعاً تحت المثلث<br/>ضع مثلث آخر تحت المربع'
         Which image does <em>not</em> follow this algorithm?: 'أي صورة <em>لا</em> تتبع هذه الخوارزمية?'
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
@@ -97,22 +97,22 @@
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
       2-3 Binary Multi 1:
-        Multiple Choice: "اختيار من متعدد"
+        Multiple Choice: اختيار من متعدد
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Which program makes this image?: أي برنامج يصنع هذه الصورة ؟
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
       2-3 Conditionals Multi 1:
-        Multiple Choice: "اختيار من متعدد"
+        Multiple Choice: اختيار من متعدد
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        According to the rules of this game, which set of cards was scored correctly for your team?: According to the rules of this game, which set of cards was scored correctly for your team?
+        These are your team's cards - according to the rules of the game, which set is scored correctly?: "These are your team's cards - according to the rules of the game, which set is scored correctly?"
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a4.png: /script_assets/2-3_images/unplugged/conditionals_1_a4.png
       2-3 Getting Loopy Multi 1:
-        Multiple Choice: "اختيار من متعدد"
+        Multiple Choice: اختيار من متعدد
         /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
         How would you simplify this sequence with loops?: كيف يمكنك تبسيط هذا التسلسل مع الحلقات ؟
         /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png
@@ -120,21 +120,21 @@
         /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png
       2-3 Graph Paper Multi 1:
-        Multiple Choice: "اختيار من متعدد"
+        Multiple Choice: اختيار من متعدد
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Which program makes this image?: أي برنامج يصنع هذه الصورة ؟
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
       2-3 Relay Programming Multi 1:
-        Multiple Choice: "اختيار من متعدد"
+        Multiple Choice: اختيار من متعدد
         /script_assets/2-3_images/unplugged/relay_programming_1_q.png: /script_assets/2-3_images/unplugged/relay_programming_1_q.png
         Which program does not create this image?: ما هو البرنامج الذي لا ينشئ هذه الصورة ؟
         /script_assets/2-3_images/unplugged/relay_programming_1_a1.png: /script_assets/2-3_images/unplugged/relay_programming_1_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_1_a2.png: /script_assets/2-3_images/unplugged/relay_programming_1_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
       2-3 Relay Programming Multi 2:
-        Multiple Choice: "اختيار من متعدد"
+        Multiple Choice: اختيار من متعدد
         Which image-program combo does not contain mistakes?: Which image-program combo does not contain mistakes?
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
@@ -154,7 +154,7 @@
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png
       4-5 artist functions multi 1:
-        Artist Functions Multiple Choice: "مهام الرسام اختيار من متعدد"
+        Artist Functions Multiple Choice: مهام الرسام اختيار من متعدد
         /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500
         Which function creates a rectangle that can change its size?: 'أي المهام  يمكنه إنشاء مستطيل قادر على تغيير حجمه ؟'
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
@@ -162,7 +162,7 @@
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png
       4-5 artist loops multi 1:
-        Artist Loops Multiple Choice: "حلقات الرسام اختيار من متعدد"
+        Artist Loops Multiple Choice: حلقات الرسام اختيار من متعدد
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500
         Which blocks will create the design?: أي من القطع سوف ينشئ التصميم ؟
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png
@@ -170,24 +170,24 @@
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png
       4-5 artist loops multi 2:
-        Artist Functions Multiple Choice: "مهام الرسام اختيار من متعدد"
+        Artist Functions Multiple Choice: مهام الرسام اختيار من متعدد
         "Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50": 'اختر الحلقة التي تمثل النمط التالي : 5، 10، 15، 20، 25، 30، 35، 40، 45، 50'
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
       4-5 bee conditionals multi 1:
-        Bee Conditionals Multiple Choice: "النحلة الشرطية اختيار من متعدد"
+        Bee Conditionals Multiple Choice: النحلة الشرطية اختيار من متعدد
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
-        0: "قد تحتوي الزهرة الارجوانية على مقدار 3 أو 2 أو 1 من الرحيق ، ولكن انت لا تعلم كم تحتوي . قأي من القطع يمكنه التحقق بشكل صحيح من ذلك ، وجمع كل الرحيق من الزهرة الأرجوانية ؟"
-        1: "قد تحتوي الزهرة الارجوانية على مقدار 3 أو 2 أو 1 من الرحيق ، ولكن انت لا تعلم كم تحتوي . قأي من القطع يمكنه التحقق بشكل صحيح من ذلك ، وجمع كل الرحيق من الزهرة الأرجوانية ؟"
+        0: قد تحتوي الزهرة الارجوانية على مقدار 3 أو 2 أو 1 من الرحيق ، ولكن انت لا تعلم كم تحتوي . قأي من القطع يمكنه التحقق بشكل صحيح من ذلك ، وجمع كل الرحيق من الزهرة الأرجوانية ؟
+        1: قد تحتوي الزهرة الارجوانية على مقدار 3 أو 2 أو 1 من الرحيق ، ولكن انت لا تعلم كم تحتوي . قأي من القطع يمكنه التحقق بشكل صحيح من ذلك ، وجمع كل الرحيق من الزهرة الأرجوانية ؟
         Choose the best blocks.: اختر القطعة الأفضل.
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
       4-5 bee debug multi 1:
-        Bee Debug Multiple Choice: "تصحيح النحلة اختيار من متعدد"
+        Bee Debug Multiple Choice: تصحيح النحلة اختيار من متعدد
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
         Which version of the function will work?: أي إصدار من المهمة سوف يعمل ؟
@@ -196,7 +196,7 @@
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png
       4-5 bee loops multi 1:
-        Bee Loops Multiple Choice: "حلقات النحلة اختيار من متعدد"
+        Bee Loops Multiple Choice: حلقات النحلة اختيار من متعدد
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
         Which blocks will solve the puzzle?: أي القطع سوف تحل هذا اللغز ؟
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
@@ -204,7 +204,7 @@
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png
       4-5 farmer loops multi 1:
-        Famer Loops Multiple Choice: "Famer Loops Multiple Choice"
+        Famer Loops Multiple Choice: Famer Loops Multiple Choice
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500
         Which blocks solve the puzzle?: أي القطع سوف تحل هذا اللغز ؟
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
@@ -227,8 +227,15 @@
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png
+      4-5 Algorithms Multi 1:
+        Multiple Choice: إختيارات متعددة
+        Which one of these items is hardest to describe an algorithm for?: Which one of these items is hardest to describe an algorithm for?
+        <h4>Brushing your teeth</h4>: '<h4>Brushing your teeth</h4>'
+        <h4>Baking cookies</h4>: '<h4>Baking cookies</h4>'
+        <h4>Shopping from a grocery list</h4>: '<h4>Shopping from a grocery list</h4>'
+        <h4>Banana</h4>: '<h4>Banana</h4>'
       4-5 Computational Thinking Multi 1:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
         1: ': Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
         <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: '<h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>'
@@ -236,8 +243,62 @@
         <h4>_____ is a _____ city.</h4>: '<h4>_____ is a _____ city.</h4>'
         <h4>_____ is _____ a _____.</h4>: '<h4>_____ is _____ a _____.</h4>'
         <h4>Eugene is a _____ city.</h4>: '<h4>Eugene is a _____ city.</h4>'
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: إختيارات متعددة
+        Which of these pictures best represents crowdsourcing?: Which of these pictures best represents crowdsourcing?
+        /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
+        /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
+      4-5 Crowdsourcing Multi 2:
+        Multiple Choice: إختيارات متعددة
+        Which one of these activities would be best for practicing crowdsourcing?: Which one of these activities would be best for practicing crowdsourcing?
+        <h4>Cleaning your room</h4>: '<h4>Cleaning your room</h4>'
+        <h4>Eating your dessert</h4>: '<h4>Eating your dessert</h4>'
+        <h4>Brushing your hair</h4>: '<h4>Brushing your hair</h4>'
+        <h4>Washing your face</h4>: '<h4>Washing your face</h4>'
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: إختيارات متعددة
+        Which piece of information listed below is okay to share on the internet?: Which piece of information listed below is okay to share on the internet?
+        <h4>Your birthday</h4>: '<h4>Your birthday</h4>'
+        <h4>Your favorite food</h4>: '<h4>Your favorite food</h4>'
+        <h4>Your address</h4>: '<h4>Your address</h4>'
+        <h4>Your parent's credit card number</h4>: "<h4>Your parent's credit card number</h4>"
+      4-5 Internet Multi 1:
+        Multiple Choice: إختيارات متعددة
+        /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: When you try to log on to code.org, which IP address is the DNS most likely to take you to?
+        <h4>23.23.224.106</h4>: '<h4>23.23.224.106</h4>'
+        <h4>54.209.61.132</h4>: '<h4>54.209.61.132</h4>'
+        <h4>64.14.68.10</h4>: '<h4>64.14.68.10</h4>'
+        <h4>54.243.71.82</h4>: '<h4>54.243.71.82</h4>'
+      4-5 Internet Multi 2:
+        Multiple Choice: إختيارات متعددة
+        /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?
+        <h4>code.org</h4>: '<h4>code.org</h4>'
+        <h4>csisfun.com</h4>: '<h4>csisfun.com</h4>'
+        <h4>thinkersmith.org</h4>: '<h4>thinkersmith.org</h4>'
+        <h4>khanacademy.org</h4>: '<h4>khanacademy.org</h4>'
+      4-5 Songwriting Multi 1:
+        Multiple Choice: إختيارات متعددة
+        /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
+        0: '? What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        1: ': What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
+        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
+        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
+        4: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
+        5: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: إختيارات متعددة
+        /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: 'Which of the programs below <em>does not</em> make the exact same sequence as Program 1'
+        /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
+        /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
+        /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+        /script_assets/4-5_images/unplugged/suncatchers_2_a4.png: /script_assets/4-5_images/unplugged/suncatchers_2_a4.png
       K-1 Artist 1 Multi 1:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
         Which blocks solve this puzzle?: أي القطع سوف تحل هذا اللغز ؟
         /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
@@ -245,14 +306,14 @@
         /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
         /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
       K-1 Artist 1 Multi 2:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png, 500
         Which blocks draw the square?: ما هي القطع التي رسمت المربع؟
         /script_assets/k_1_images/artist_images/N|E|S|W.png: /script_assets/k_1_images/artist_images/N|E|S|W.png
         /script_assets/k_1_images/artist_images/E|S|W|N.png: /script_assets/k_1_images/artist_images/E|S|W|N.png
         /script_assets/k_1_images/artist_images/N|W|S|E.png: /script_assets/k_1_images/artist_images/N|W|S|E.png
       K-1 Artist 2 Multi 1:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/artist_images/sq+sq.png, 500: /script_assets/k_1_images/artist_images/sq+sq.png, 500
         Which shape do these squares combine to make?: ما هو الشكل الذي تجسده هذه المربعات عند إجتماعها؟
         /script_assets/k_1_images/artist_images/medium_circle.png: /script_assets/k_1_images/artist_images/medium_circle.png
@@ -260,7 +321,7 @@
         /script_assets/k_1_images/artist_images/medium_square.png: /script_assets/k_1_images/artist_images/medium_square.png
         /script_assets/k_1_images/artist_images/medium_triangle.png: /script_assets/k_1_images/artist_images/medium_triangle.png
       K-1 Artist Loops Multi 1:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300
         Which blocks create this picture?: ما القطع التي أنشأت الصورة؟
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png
@@ -268,7 +329,7 @@
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png
       K-1 Bee 1 Multi 1:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/bee_images/1nectar+2nectar.png: /script_assets/k_1_images/bee_images/1nectar+2nectar.png
         How many nectars is this?: كم نكتاراً في هذا؟
         /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
@@ -276,7 +337,7 @@
         /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
         /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
       K-1 Bee 1 Multi 2:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/bee_images/2nectar+2nectar.png: /script_assets/k_1_images/bee_images/2nectar+2nectar.png
         How many nectars is this?: كم نكتاراً في هذا؟
         /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
@@ -284,7 +345,7 @@
         /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
         /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
       K-1 Maze Debugging Multi 1:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png, 700
         Which choice should be the final block?: Which choice should be the final block?
         /script_assets/k_1_images/move_blocks/N.png: /script_assets/k_1_images/move_blocks/N.png
@@ -292,7 +353,7 @@
         /script_assets/k_1_images/move_blocks/E.png: /script_assets/k_1_images/move_blocks/E.png
         /script_assets/k_1_images/move_blocks/W.png: /script_assets/k_1_images/move_blocks/W.png
       K-1 Maze Multiple Choice 2:
-        Maze: "المتاهة"
+        Maze: المتاهة
         /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png, 500
         Which answer solves this level?: ما الإجابة التي تحل هذا المستوى؟
         /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
@@ -300,35 +361,35 @@
         /script_assets/k_1_images/move_blocks/WS.png: /script_assets/k_1_images/move_blocks/WS.png
         /script_assets/k_1_images/move_blocks/WN.png: /script_assets/k_1_images/move_blocks/WN.png
       K-1 Maze Loops Multi 1:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/move_blocks/NNNequals.png, 300: /script_assets/k_1_images/move_blocks/NNNequals.png, 300
         Which repeat block is the same?: Which repeat block is the same?
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r3_NN.png: /script_assets/k_1_images/move_blocks/r3_NN.png
         /script_assets/k_1_images/move_blocks/r4_N.png: /script_assets/k_1_images/move_blocks/r4_N.png
       K-1 Maze Loops Multi 2:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/move_blocks/SESESEequals.png, 240: /script_assets/k_1_images/move_blocks/SESESEequals.png, 240
         Pick the correct repeat block.: Pick the correct repeat block.
         /script_assets/k_1_images/move_blocks/r3_S.png: /script_assets/k_1_images/move_blocks/r3_S.png
         /script_assets/k_1_images/move_blocks/r3_ES.png: /script_assets/k_1_images/move_blocks/r3_ES.png
         /script_assets/k_1_images/move_blocks/r3_SE.png: /script_assets/k_1_images/move_blocks/r3_SE.png
       K-1 Digital Footprint Multi 1:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
         Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 'Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?'
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
       K-1 Getting Loopy Multi 1:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
         How would you simplify this sequence with loops?: How would you simplify this sequence with loops?
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
       K-1 Happy Maps Multi 1:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/unplugged_images/happy_maps_1q.png: /script_assets/k_1_images/unplugged_images/happy_maps_1q.png
         Which arrow gets the Flurb to the treasure?: Which arrow gets the Flurb to the treasure?
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
@@ -336,13 +397,13 @@
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
       K-1 Keep it Private Multi 1:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         Which information should you <strong>not</strong> share online?: 'Which information should you <strong>not</strong> share online?'
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
       K-1 Move It Multi 1:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/unplugged_images/move_it_1_q.png: /script_assets/k_1_images/unplugged_images/move_it_1_q.png
         Which algorithm gets the Flurb to the flowers?: Which algorithm gets the Flurb to the flowers?
         /script_assets/k_1_images/unplugged_images/rightright.png: /script_assets/k_1_images/unplugged_images/rightright.png
@@ -350,56 +411,56 @@
         /script_assets/k_1_images/unplugged_images/upleft.png: /script_assets/k_1_images/unplugged_images/upleft.png
         /script_assets/k_1_images/unplugged_images/leftdown.png: /script_assets/k_1_images/unplugged_images/leftdown.png
       K-1 Plant a Seed Multi 1:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png
         Which step should go at the beginning of this algorithm?: ما الخطوة التي ينبغي أن تكون في بداية الخوارزمية؟
         /script_assets/k_1_images/unplugged_images/poke-hole.png: /script_assets/k_1_images/unplugged_images/poke-hole.png
         /script_assets/k_1_images/unplugged_images/foot-in-shoe.png: /script_assets/k_1_images/unplugged_images/foot-in-shoe.png
         /script_assets/k_1_images/unplugged_images/dirty-teeth.png: /script_assets/k_1_images/unplugged_images/dirty-teeth.png
       K-1 Plant a Seed Multi 2:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png
         Which step should fill in the blank for this algorithm?: Which step should fill in the blank for this algorithm?
         /script_assets/k_1_images/unplugged_images/brush-teeth.png: /script_assets/k_1_images/unplugged_images/brush-teeth.png
         /script_assets/k_1_images/unplugged_images/cover-seed.png: /script_assets/k_1_images/unplugged_images/cover-seed.png
         /script_assets/k_1_images/unplugged_images/water-pot.png: /script_assets/k_1_images/unplugged_images/water-pot.png
       K-1 Word Search Multi 1:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/search_images/move.png, 450: /script_assets/k_1_images/search_images/move.png, 450
         Which blocks spell "MOVE"?: 'Which blocks spell "MOVE"?'
         /script_assets/k_1_images/move_blocks/EEES.png: /script_assets/k_1_images/move_blocks/EEES.png
         /script_assets/k_1_images/move_blocks/EESS.png: /script_assets/k_1_images/move_blocks/EESS.png
         /script_assets/k_1_images/move_blocks/ESSS.png: /script_assets/k_1_images/move_blocks/ESSS.png
       K-1 Word Search Multi 2:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/search_images/jump.png, 450: /script_assets/k_1_images/search_images/jump.png, 450
         Which blocks spell "JUMP"?: 'Which blocks spell "JUMP"?'
         /script_assets/k_1_images/move_blocks/NNEE.png: /script_assets/k_1_images/move_blocks/NNEE.png
         /script_assets/k_1_images/move_blocks/NENE.png: /script_assets/k_1_images/move_blocks/NENE.png
         /script_assets/k_1_images/move_blocks/EENN.png: /script_assets/k_1_images/move_blocks/EENN.png
       K-1 Word Search Multi 3:
-        Multiple Choice: "إختيارات متعددة"
+        Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png, 700
         Which word is spelled?: Which word is spelled?
-        SET: "SET"
-        SQUARE: "SQUARE"
-        SOUTH: "SOUTH"
+        SET: SET
+        SQUARE: SQUARE
+        SOUTH: SOUTH
       K-1 multi 4:
-        Driver and Helper: "Driver and Helper"
+        Driver and Helper: Driver and Helper
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
         Which boy is the <large>helper</large>?: 'Which boy is the <large>helper</large>?'
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
       K-1 multi 5:
-        Driver and Helper: "Driver and Helper"
+        Driver and Helper: Driver and Helper
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
         This time, which boy is the <large>driver</large>?: 'This time, which boy is the <large>driver</large>?'
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
       Math to Code 1:
-        Racket Code for Math Expressions: "Racket Code for Math Expressions"
+        Racket Code for Math Expressions: Racket Code for Math Expressions
         0: '? Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!'
         1: ': Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!'
         (5 + 6) * 8 / 2: '(5 + 6) * 8 / 2'
@@ -408,7 +469,7 @@
         (/ (* (+ 5 6) 8) 2): '(/ (* (+ 5 6) 8) 2)'
         (/ (+ 5 6) (* 8 2)): '(/ (+ 5 6) (* 8 2))'
       Math to Code 2:
-        Racket Code for Math Expressions: "Racket Code for Math Expressions"
+        Racket Code for Math Expressions: Racket Code for Math Expressions
         0: '? Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!'
         1: ': Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!'
         4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 x 3 x 7 + 2
@@ -417,15 +478,15 @@
         (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): '(+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2)'
         (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): '(+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))'
       Warmup questions:
-        Coding in Racket: "Coding in Racket"
+        Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.
         When converting a circle to code, the correct order is: When converting a circle to code, the correct order is
         top, left, right: top, left, right
         left, right, top: left, right, top
-        random: "عشوائي"
-        left top right: "left top right"
+        random: عشوائي
+        left top right: left top right
       Circle to code:
-        Code from Circle: "Code from Circle"
+        Code from Circle: Code from Circle
         /script_assets/msm/Unit%202/exercise_1.png: '/script_assets/msm/Unit%202/exercise_1.png'
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
         (+ 5 (* (- 6 8) 4)): '(+ 5 (* (- 6 8) 4))'
@@ -433,7 +494,7 @@
         (+ (* (- 8 6) 4) 5) : '(+ (* (- 8 6) 4) 5) '
         (+ 5 (* (- 8 6) 4)): '(+ 5 (* (- 8 6) 4))'
       valid contracts multi:
-        Valid Contracts: "Valid Contracts"
+        Valid Contracts: Valid Contracts
         Pick the best answer to the question.: Pick the best answer to the question.
         Which of these is a valid contract for the function circle?: Which of these is a valid contract for the function circle?
         "circle: size style color -> image": 'circle: size style color -> image'
@@ -441,7 +502,7 @@
         "circle: number string string -> shape": 'circle: number string string -> shape'
         "circle: 5 solid blue -> circle ": 'circle: 5 solid blue -> circle '
       image code from circle:
-        Code from Circle: "Code from Circle"
+        Code from Circle: Code from Circle
         /script_assets/msm/Unit%202/exercise_5.png: '/script_assets/msm/Unit%202/exercise_5.png'
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
         (rectangle (10) (2) "solid" "red"): '(rectangle (10) (2) "solid" "red")'
@@ -449,10 +510,10 @@
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rectangle (+ 8 2) (- 7 5) "solid" "red")'
         (rectangle (+ 8 2) (- 7 5) solid red): '(rectangle (+ 8 2) (- 7 5) solid red)'
       test multi image:
-        Maze Multiple Choice Two: "Maze Multiple Choice Two"
+        Maze Multiple Choice Two: Maze Multiple Choice Two
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
         This puzzle is all about selecting the correct flowers.: This puzzle is all about selecting the correct flowers.
-        Instructions: "تعليمات"
+        Instructions: تعليمات
         Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: "Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?"
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Which flowers are yellow?: Which flowers are yellow?
@@ -461,10 +522,10 @@
         /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test multi text:
-        Presidents: "Presidents"
+        Presidents: Presidents
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
-        Fred Flintstone: "Fred Flintstone"
-        Martha Washington: "Martha Washington"
-        George Washington: "George Washington"
-        George Jetson: "George Jetson"
+        Fred Flintstone: Fred Flintstone
+        Martha Washington: Martha Washington
+        George Washington: George Washington
+        George Jetson: George Jetson

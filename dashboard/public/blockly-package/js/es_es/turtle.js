@@ -6235,7 +6235,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/es_es/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing-image">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/es_es/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -10711,7 +10711,7 @@ exports.saveToGallery = function(d){return "Guardar en tu galería"};
 
 exports.savedToGallery = function(d){return "¡Guardado en tu galería!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Perdón, no podemos compartir este programa."};
 
 exports.typeCode = function(d){return "Escribe tu código JavaScript debajo de estas instrucciones."};
 
@@ -10748,7 +10748,7 @@ exports.genericFeedback = function(d){return "Ver como terminaste, y tratar de r
 var MessageFormat = require("messageformat");MessageFormat.locale.es=function(n){return n===1?"one":"other"}
 exports.blocksUsed = function(d){return "Bloques utilizados: %1"};
 
-exports.branches = function(d){return "sucursales"};
+exports.branches = function(d){return "ramas"};
 
 exports.catColour = function(d){return "Color"};
 
@@ -10778,31 +10778,31 @@ exports.drawATriangle = function(d){return "dibujar un triángulo"};
 
 exports.drawACircle = function(d){return "dibujar un círculo"};
 
-exports.drawAFlower = function(d){return "dibujar una flor"};
+exports.drawAFlower = function(d){return "dibuja una flor"};
 
-exports.drawAHexagon = function(d){return "dibujar un hexágono"};
+exports.drawAHexagon = function(d){return "dibuja un hexágono"};
 
 exports.drawAHouse = function(d){return "dibujar una casa"};
 
-exports.drawAPlanet = function(d){return "dibujar un planeta"};
+exports.drawAPlanet = function(d){return "dibuja un planeta"};
 
-exports.drawARhombus = function(d){return "dibujar un rombo"};
+exports.drawARhombus = function(d){return "dibuja un rombo"};
 
-exports.drawARobot = function(d){return "dibujar un robot"};
+exports.drawARobot = function(d){return "dibuja un robot"};
 
-exports.drawARocket = function(d){return "dibujar un cohete"};
+exports.drawARocket = function(d){return "dibuja un cohete"};
 
-exports.drawASnowflake = function(d){return "dibujar un copo de nieve"};
+exports.drawASnowflake = function(d){return "dibuja un copo de nieve"};
 
 exports.drawASnowman = function(d){return "dibujar un muñeco de nieve"};
 
-exports.drawAStar = function(d){return "dibujar una estrella"};
+exports.drawAStar = function(d){return "dibuja una estrella"};
 
 exports.drawATree = function(d){return "dibujar un árbol"};
 
-exports.drawUpperWave = function(d){return "dibujar la onda superior"};
+exports.drawUpperWave = function(d){return "dibuja la onda superior"};
 
-exports.drawLowerWave = function(d){return "dibujar la onda mas baja"};
+exports.drawLowerWave = function(d){return "dibuja la onda inferior"};
 
 exports.heightParameter = function(d){return "altura"};
 
@@ -10818,13 +10818,13 @@ exports.jumpTooltip = function(d){return "Mueve el artista sin dejar ninguna mar
 
 exports.jumpEastTooltip = function(d){return "Mueva al artista hacia el este sin dejar ninguna marca."};
 
-exports.jumpNorthTooltip = function(d){return "Mueva al artista hacia el norte sin dejar ninguna marca."};
+exports.jumpNorthTooltip = function(d){return "Mueve al artista hacia el norte sin dejar ninguna marca."};
 
-exports.jumpSouthTooltip = function(d){return "Mueva al artista hacia el sur sin dejar ninguna marca."};
+exports.jumpSouthTooltip = function(d){return "Mueve al artista hacia el sur sin dejar ninguna marca."};
 
-exports.jumpWestTooltip = function(d){return "Mueva al artista hacia el oeste sin dejar ninguna marca."};
+exports.jumpWestTooltip = function(d){return "Mueve al artista hacia el oeste sin dejar ninguna marca."};
 
-exports.lengthFeedback = function(d){return "Tiene razón excepto por las longitudes a moverse."};
+exports.lengthFeedback = function(d){return "Está correcto, excepto por las longitudes a moverse."};
 
 exports.lengthParameter = function(d){return "longitud"};
 

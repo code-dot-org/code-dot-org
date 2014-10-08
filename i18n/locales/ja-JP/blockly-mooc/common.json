@@ -62,6 +62,7 @@
   "backToPreviousLevel":"前のレベルに戻る",
   "saveToGallery":"ギャラリーに保存",
   "savedToGallery":"ギャラリーに保存しました！",
+  "shareFailure":"Sorry, we can't share this program.",
   "typeCode":"これらの指示の下、JavaScript のコードを入力してください。",
   "typeFuncs":"利用可能な機能:%1",
   "typeHint":"カッコとセミコロンが必要な事に注意してください。",
