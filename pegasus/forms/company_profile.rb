@@ -11,6 +11,7 @@ class CompanyProfile
       result[:intro_top_copy_t] = nil_if_empty stripped data[:intro_top_copy_t]
       result[:intro_bottom_copy_t] = nil_if_empty stripped data[:intro_bottom_copy_t]
       result[:additional_actions_copy_t] = nil_if_empty stripped data[:additional_actions_copy_t]
+      result[:donate_link_s] = nil_if_empty stripped data[:donate_link_s]
       result[:logo_path_s] = nil_if_empty stripped data[:logo_path_s]
       result[:logo_path_s] = nil if nil_if_empty data[:remove_logo_b]
       result[:gplus_b] = nil_if_empty data[:gplus_b]

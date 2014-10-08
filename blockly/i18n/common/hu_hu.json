@@ -62,6 +62,7 @@
   "backToPreviousLevel": "Vissza az előző szintre",
   "saveToGallery": "Mentés a galériába",
   "savedToGallery": "Elmentve a galáriádba",
+  "shareFailure": "Sorry, we can't share this program.",
   "typeCode": "Írd be a JavaScript kódod az instrukciók alá.",
   "typeFuncs": "Elérhető funkciók:%1",
   "typeHint": "Vedd figyelembe, hogy a zárójelek és a pontosvesszők is szükségesek.",

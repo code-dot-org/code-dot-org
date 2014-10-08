@@ -3,7 +3,7 @@
   computer_science: Bilgisayar Bilimleri
   computer_science_edweek: Bilgisayar Bilimleri Eğitim Haftası
   csedweek_dates: 9-15 Aralık, 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>bir denedi</h3><h2>Hour of Code&trade;</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>bir denedi</h3><h2>Kod Saati</h2>"
   anybody_can_learn: Herkes öğrenebilir.
   learn_now: "Şimdi Öğren"
   petition_message: Her okuldaki her öğrencinin bilgisayar bilimlerini öğrenmek için
@@ -16,6 +16,15 @@
   twentyhours_heading: Bilgisayar Bilimlerine Giriş kursumuzu deneyin
   twentyhours_text: "İlk Kod Saati'ni bitirdin mi? Bir sonraki kursta daha fazla bilgisayar
     bilimleri ve programlama kavramlarını öğrenebilirsin."
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: "Öğrenciler"
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: "Şimdi dene"
   california_heading: Okulunuzdan bilgisayar bilimleri kurslarını açmalarını isteyin
   california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
@@ -56,6 +65,7 @@
   beyond_hour_message: "İşte sana nasıl biraz daha <a href='/learn/beyond'>Bir saatin
     ötesinde öğrenebileceğin</a> hakkında bilgi"
   leaderboards_for_hoc: Kod Saati için lider tablosu.
+  support_url: http://support.code.org/
   country: "Ülke"
   city: "Şehir"
   gender: Cinsiyet
@@ -183,6 +193,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Diğer faydalı linkler
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: Bu dersi bitiren öğrenciler için sertifika
     bastır
   dashboard_landing_educator_blog: Ders malzemeleri hakkında haberler ve güncellemeleri
@@ -212,6 +224,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -253,6 +266,8 @@
   dashboard_students_password: Parola
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret

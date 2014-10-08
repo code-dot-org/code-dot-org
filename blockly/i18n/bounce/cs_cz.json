@@ -10,7 +10,7 @@
   "elseCode": "jinak",
   "finalLevel": "Dobrá práce! Vyřešil jsi poslední hádanku.",
   "heightParameter": "výška",
-  "ifCode": "Pokud",
+  "ifCode": "os",
   "ifPathAhead": "když je cesta vpřed",
   "ifTooltip": "Pokud je v daném směru cesta, provede určité akce.",
   "ifelseTooltip": "Pokud je v daném směru cesta, proveď první blok akcí. V opačném případě proveď druhý blok akcí.",

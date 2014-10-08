@@ -3,11 +3,11 @@
   computer_science: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
   csedweek_dates: Diciembre 9-15, 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>han probado la</h3><h2>Hora del Código</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>han probado la</h3><h2>Hora de Código</h2>"
   anybody_can_learn: Cualquiera puede aprender.
   learn_now: Aprende Ahora
-  petition_message: Cada estudiante de cada escuela debería tener la oportunidad de
-    aprender ciencia de la computación
+  petition_message: Cada alumno de cada escuela debería tener la oportunidad de aprender
+    ciencias de la computación
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # others.'
   name: Nombre
   email: Correo electrónico
@@ -16,6 +16,15 @@
   twentyhours_heading: Prueba nuestro curso de Introducción a la Informática
   twentyhours_text: "¿Terminaste tu primera Hora de Código? Conoce más sobre informática
     y conceptos de programación en este curso de seguimiento."
+  hoc2014_heading: Unete a <a href="http://hourofcode.com">Hora del Código</a><br/>Diciembre
+    8 - 14, 2014<br/>
+  hoc2014_students: Alumnos
+  hoc2014_try: Pruébalo
+  hoc2014_teachers: Profesores
+  hoc2014_host: Hostealo
+  hoc2014_everyone: Cualquiera
+  hoc2014_support: Apoyalo
+  hoc2014_whatishoc: "¿Cual es la Hora de Programación?"
   twentyhours_trynow: Probar ahora
   california_heading: Pídele a tu escuela que enseñe ciencia en computación
   california_text: Cualquier maestro puede ofrecer nuestros <a href='http://studio.code.org/'>cursos
@@ -58,6 +67,7 @@
     cursos</a>, o vea más opciones en <a href='/learn/beyond'>Aprender más allá de
     Una Hora</a>.
   leaderboards_for_hoc: Líderes de Una Hora de Código.
+  support_url: http://support.code.org/
   country: País
   city: Ciudad
   gender: Género
@@ -140,13 +150,13 @@
     integrada en otras clases
   class_submission_in_school_summer_school_cs_program: Programa de escuela de verano
     CS
-  class_submission_in_school_exploring_computer_science: Emplorando las ciencias computacionales
+  class_submission_in_school_exploring_computer_science: Explorando las ciencias computacionales
   class_submission_in_school_other: Otros en la escuela
   class_submission_out_of_school: Fuera de la escuela
   class_submission_out_of_school_summer_camp: Campamento de verano
   class_submission_out_of_school_afterschool_program: Programa después de clases
   class_submission_out_of_school_all-day_workshop: Taller durante todo el día (hasta
-    1 semana)
+    una semana)
   class_submission_out_of_school_multi-week_workshop: Taller de varias semanas
   class_submission_out_of_school_other: Otro fuera de la escuela
   class_submission_online: En línea
@@ -155,26 +165,27 @@
   class_submission_online_other: Otros en línea
   class_submission_level_preschool: Preescolar
   class_submission_level_elementary: Escuela primaria
-  class_submission_level_middle_school: Escuela intermedia
-  class_submission_level_high_school: Secundaria
+  class_submission_level_middle_school: Secundaria
+  class_submission_level_high_school: Preparatoria
   class_submission_level_college: Universidad
   class_submission_level_vocational: Vocacional
-  class_submission_languages_other: Otro (s) idioma (s)
+  class_submission_languages_other: Otros idiomas
   volunteer_engineer_submission_commitment_uncertain: Incierto
-  volunteer_engineer_submission_commitment_now_and_then: de vez en cuando
-  volunteer_engineer_submission_commitment_one_hr_per_week: 1 hora por semana
-  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 horas por semana
-  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 horas por semana
+  volunteer_engineer_submission_commitment_now_and_then: De vez en cuando
+  volunteer_engineer_submission_commitment_one_hr_per_week: Una hora por semana
+  volunteer_engineer_submission_commitment_three_hrs_per_week: Tres horas por semana
+  volunteer_engineer_submission_commitment_five_hrs_per_week: Cinco horas por semana
   volunteer_engineer_submission_commitment_more: Más
   volunteer_engineer_submission_location_flexibility_onsite: Presencial en la escuela
   volunteer_engineer_submission_location_flexibility_remote: Tutoría remota (profesores
-    o estudiantes)
+    o alumnos)
   volunteer_engineer_submission_location_flexibility_curriculum: Dispuesto a ayudar
     contribuyendo en proyectos curriculares de código abierto
-  volunteer_engineer_submission_experience_unspecified: No específico
-  volunteer_engineer_submission_experience_university_student_or_researcher: Vigente
-    estudiante de Universidad (o investigador)
-  volunteer_engineer_submission_experience_software_professional: Profesional en software
+  volunteer_engineer_submission_experience_unspecified: No especificado
+  volunteer_engineer_submission_experience_university_student_or_researcher: Alumno
+    actual de Universidad (o investigador)
+  volunteer_engineer_submission_experience_software_professional: Profesional del
+    software
   petition_age: Edad
   dashboard_landing_title: Página de inicio del maestro
   dashboard_landing_welcome: Bienvenido al nuevo y mejorado panel para profesores.
@@ -182,13 +193,15 @@
   dashboard_landing_watch_video: para ver un resumen de las novedades!
   dashboard_landing_view_as_student: Ver este sitio como un alumno
   dashboard_landing_students_title: Sus alumnos
-  dashboard_landing_students_manage: Ver y administrar tus alumnos
-  dashboard_landing_news_title: "Últimas noticias"
+  dashboard_landing_students_manage: Ver y administrar sus alumnos
+  dashboard_landing_news_title: K-5 Recursos de Educador (solo en Inglés)
   dashboard_landing_new_beta: "¡Nuevo! Pruebe nuestros cursos beta para los alumnos
     de K-5."
-  dashboard_landing_new_k5courses: "¡Nuevo! Pruebe nuestros cursos para los estudiantes
+  dashboard_landing_new_k5courses: "¡Nuevo! Pruebe nuestros cursos para los alumnos
     de K-5."
-  dashboard_landing_useful_links: Otros enlaces útiles
+  dashboard_landing_useful_links: Otros links útiles (sólo en Inglés)
+  dashboard_landing_office_hours: "¡Pregunta en persona! Visita nuesta horas mensuales
+    de video desde oficina."
   dashboard_landing_print_certificates: Imprimir certificados para los alumnos que
     terminan este curso
   dashboard_landing_educator_blog: Lee noticias y actualizaciones de nuestro material
@@ -219,92 +232,99 @@
   dashboard_navigation_view_progress: Ver progreso
   dashboard_navigation_add_students: Añadir alumnos
   dashboard_navigation_manage_students: Administrar alumnos
+  dashboard_navigation_view_stats: Ver estadísticas
   dashboard_navigation_section: 'Sección: %{section_name}'
   dashboard_navigation_student: 'Alumno: %{student_name}'
   dashboard_sections_new_section: Nueva sección
-  dashboard_sections_jumbotron_instruction: Crear nuevas secciones y añadir alumnos
+  dashboard_sections_jumbotron_instruction: Cree nuevas secciones y añada alumnos
     a ellos. Las secciones ayudan a organizar los alumnos en grupos más pequeños para
     que pueda seguir su progreso y administrar sus cuentas.
   dashboard_sections_table_section: Sección
   dashboard_sections_table_secret: Tipo secreto
-  dashboard_sections_table_grade: Grado
+  dashboard_sections_table_grade: Calificación
   dashboard_sections_table_course: Curso
   dashboard_sections_table_students: Alumnos
   dashboard_sections_table_code: Código de sección
-  dashboard_sections_name: Section Name
-  dashboard_sections_choose_secret: If you would like to provide accounts to your
-    students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
-  dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
-    each student.
-  dashboard_sections_secret_picture: A <b>picture</b> allows you to set a secret picture
-    for each student, ideal for younger students who can't yet type.
-  dashboard_sections_secret_none: If you would like your students to manage their
-    own accounts, including choosing their own passwords, choose a secret type of
-    <b>none</b>.
-  dashboard_sections_print_secrets: You may then print a sheet of cards containing
-    account information to be distributed to your students individually.
-  dashboard_sections_switch_section: 'Switch section:'
-  dashboard_students_add_student: Add student
-  dashboard_students_add_students: Add multiple students
-  dashboard_students_add_multiple: 'Type or paste the names of your students, one
-    per line:'
-  dashboard_students_new_section: You've created a new section! Now add your students
-    using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_placeholder_name: Student Name
+  dashboard_sections_name: Nombre de sección
+  dashboard_sections_choose_secret: Si desea proporcionar cuentas a sus alumnos, elija
+    un tipo secreto de <b>palabra</b> o <b>imagen</b> para esa sección.
+  dashboard_sections_secret_word: Una <b>palabra</b> le permite establecer una palabra
+    secreta para cada alumno.
+  dashboard_sections_secret_picture: Una <b>imagen</b> le permite ajustar una imagen
+    secreta para cada alumno, ideal para estudiantes más jóvenes que aún no escriben.
+  dashboard_sections_secret_none: Si desea que sus alumnos gestionen sus propias cuentas,
+    incluyendo el elegir sus propias contraseñas, elija un tipo secreto de <b>ninguno</b>.
+  dashboard_sections_print_secrets: Entonces puede imprimir una hoja de tarjetas que
+    contengan información de la cuenta para distribuirlas entre sus alumnos.
+  dashboard_sections_switch_section: 'Cambiar de sección:'
+  dashboard_students_add_student: Añadir alumno
+  dashboard_students_add_students: Añadir varios alumnos
+  dashboard_students_add_multiple: 'Escriba o pegue los nombres de sus alumnos, uno
+    por línea:'
+  dashboard_students_new_section: "¡Ha creado una nueva sección! Ahora, agregue sus
+    alumnos usando los botones anteriores <b>Añadir alumno</b> y <b>Añadir varios
+    alumnos</b>."
+  dashboard_students_placeholder_name: Nombre del alumno
   dashboard_students_name: Nombre
   dashboard_students_age: Edad
   dashboard_students_gender: Sexo
-  dashboard_students_male: Hombre
+  dashboard_students_male: Varón
   dashboard_students_female: Mujer
-  dashboard_students_secret: Secret
+  dashboard_students_secret: Secreto
   dashboard_students_password: Contraseña
-  dashboard_students_username: 'Username: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_show_secret: Show secret
-  dashboard_students_auto_generated: Auto-generated
-  dashboard_students_reset_secret: Reset secret
-  dashboard_students_reset_password: Reset password
-  dashboard_students_share_section: 'Share this section''s sign in page with your
-    students:'
-  dashboard_students_print_info: Print out cards with your students' login information.
-  dashboard_students_secret_picture: Secret Picture
-  dashboard_students_reset_picture: You may reset a student's secret picture at any
-    time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
-    picture will be generated for that student to use when they sign in.
-  dashboard_students_secret_word: Secret Word
-  dashboard_students_reset_word: 'You may reset a student''s secret words at any time
-    by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
-    words will be generated for that student to use when they sign in. '
-  dashboard_students_join_link: Tell your students to create their own accounts and
-    join your section at
-  dashboard_students_no_email: If your students do not have email addresses, or you
-    would like to create accounts for them, change this section's secret type to <b>word</b>
-    or <b>picture</b>.
-  dashboard_students_print_page: Print this page
+  dashboard_students_username: 'Nombre de usuario: %{student_username}'
+  dashboard_students_email: 'Correo: %{student_email}'
+  dashboard_students_completed_levels: Niveles Completados
+  dashboard_students_total_lines: Lineas de Código
+  dashboard_students_show_secret: Mostrar secreto
+  dashboard_students_auto_generated: Generado automáticamente
+  dashboard_students_reset_secret: Reiniciar secreto
+  dashboard_students_reset_password: Restablecer contraseña
+  dashboard_students_share_section: 'Comparta la página de registro de esta sección
+    con sus alumnos:'
+  dashboard_students_print_info: Imprima tarjetas con la información de registro de
+    sus alumnos.
+  dashboard_students_secret_picture: Imagen secreta
+  dashboard_students_reset_picture: Puede restablecer la imagen secreta de un alumno
+    en cualquier momento seleccionando <b>Mostrar secreto</b> y luego <b>Reiniciar
+    secreto</b>. Se generará una nueva imagen secreta para que ese estudiante pueda
+    registrarse.
+  dashboard_students_secret_word: Palabra secreta
+  dashboard_students_reset_word: 'Puede restablecer las palabras secretas de un alumno
+    en cualquier momento seleccionando <b>Mostrar secreto</b> y luego <b>Reiniciar
+    secreto</b>. Se generará un nuevo par de palabras secretas para que ese estudiante
+    pueda registrarse. '
+  dashboard_students_join_link: Pida a sus alumnos que crean sus propias cuentas y
+    que se unan a su sección en
+  dashboard_students_no_email: Si sus alumnos no tienen direcciones de correo, o le
+    gustaría crear cuentas para ellos, cambie el tipo secreto de esta sección a la
+    de <b>palabra</b> o <b>imagen</b>.
+  dashboard_students_print_page: Imprima esta página
   dashboard_students_url: URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
-    here</a> for our privacy document that can be shared or printed for your students.
-  dashboard_curriculum_overview: K-5 Curriculum Overview
-  dashboard_view_all_lesson_plans: View all lesson plans
-  dashboard_course1: 'Course 1:'
-  dashboard_course2: 'Course 2:'
-  dashboard_course3: 'Course 3:'
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Haga
+    clic aquí</a> para ver nuestro documento sobre privacidad, que puede compartirse
+    o imprimirse para sus alumnos.
+  dashboard_curriculum_overview: Resumen de currículo K-5
+  dashboard_view_all_lesson_plans: Ver todos los planes de estudio
+  dashboard_course1: 'Curso 1:'
+  dashboard_course2: 'Curso 2:'
+  dashboard_course3: 'Curso 3:'
   dashboard_sequence: Secuencia
-  dashboard_framework: Framework
-  dashboard_standards: Standards
-  dashboard_implementation_guide: Implementation Guide
-  dashboard_glossary: Glossary
-  dashboard_classroom_strategies: Classroom strategies for teachers
-  dashboard_debugging: 'Debugging:'
-  dashboard_puzzle_solving: 'Puzzle-solving:'
-  dashboard_student_worksheet: student worksheet
-  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_framework: Marco de trabajo
+  dashboard_standards: Estándares
+  dashboard_implementation_guide: Guía de implementación
+  dashboard_glossary: Glosario
+  dashboard_classroom_strategies: Estrategias de aula para maestros
+  dashboard_debugging: 'Depuración:'
+  dashboard_puzzle_solving: 'Resolución de rompecabezas:'
+  dashboard_student_worksheet: hoja de trabajo del estudiante
+  dashboard_teacher_worksheet: hoja de trabajo del profesor
   dashboard_grade_k: K
   dashboard_grade_other: Otros
-  dashboard_login_word: word
-  dashboard_login_picture: picture
-  dashboard_login_none: none
-  dashboard_new_password: new password
-  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
-    week alone:'
-  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_login_word: palabra
+  dashboard_login_picture: imagen
+  dashboard_login_none: ninguno
+  dashboard_new_password: nueva contraseña
+  stats_hoc_2013_heading: 'Increíbles estadísticas de la Hora del Código del año pasado.
+    En solo una semana:'
+  stats_hoc_2013_image_alt: Estadísticas de Hora del Código del 2013

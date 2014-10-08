@@ -1,6 +1,6 @@
 - supporters.each_slice(3).with_index do |group, groupindex|
   - group.each_with_index do |supporter, index|
-    - avatar_url = avatar_image(supporter[:name_s])
+    - avatar_url = avatar_image(supporter[:name_s], 200)
     - if supporter[:level_s] == 'platinum'
       - if index % 2 != 0
         - style = ' border-left: none;'

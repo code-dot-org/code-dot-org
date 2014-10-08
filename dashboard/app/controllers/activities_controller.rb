@@ -1,3 +1,7 @@
+require 'cdo/regexp'
+require 'cdo/geocoder'
+require 'cdo/web_purify'
+
 class ActivitiesController < ApplicationController
   include LevelsHelper
 
@@ -9,6 +13,7 @@ class ActivitiesController < ApplicationController
   before_filter :nonminimal, only: :milestone
 
   MAX_INT_MILESTONE = 2147483647
+  USER_ENTERED_TEXT_TITLE_NAMES = %w(TITLE TEXT)
 
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
@@ -22,13 +27,14 @@ class ActivitiesController < ApplicationController
     end
 
     if params[:program]
-      @level_source = LevelSource.lookup(@level, params[:program])
+      share_failure = find_share_failure(params[:program])
+      @level_source = LevelSource.find_identical_or_create(@level, params[:program]) unless share_failure
     end
 
     log_milestone(@level_source, params)
 
     # Store the image only if the image is set, and the image has not been saved
-    if params[:image]
+    if params[:image] && @level_source
       @level_source_image = LevelSourceImage.find_or_create_by(:level_source_id => @level_source.id)
       @level_source_image.replace_image_if_better Base64.decode64(params[:image])
     end
@@ -54,13 +60,32 @@ class ActivitiesController < ApplicationController
                                     solved?: solved,
                                     level_source: @level_source,
                                     activity: @activity,
-                                    new_level_completed: @new_level_completed)
+                                    new_level_completed: @new_level_completed,
+                                    share_failure: share_failure)
 
     slog(:tag => 'activity_finish',
          :script_level_id => @script_level.try(:id),
          :level_id => @level.id,
          :user_agent => request.user_agent,
          :locale => locale) if solved
+  end
+
+  def find_share_failure(program)
+    return nil unless program.match /(#{USER_ENTERED_TEXT_TITLE_NAMES.join('|')})/
+
+    xml_tag_regexp = /<[^>]*>/
+    program_tags_removed = program.gsub(xml_tag_regexp, "\n")
+
+    if email = RegexpUtils.find_potential_email(program_tags_removed)
+      return {message: t('share_code.email_not_allowed'), contents: email}
+    elsif street_address = Geocoder.find_potential_street_address(program_tags_removed)
+      return {message: t('share_code.address_not_allowed'), contents: street_address}
+    elsif phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
+      return {message: t('share_code.phone_number_not_allowed'), contents: phone_number}
+    elsif WebPurify.find_potential_profanity(program_tags_removed, ['en', locale])
+      return {message: t('share_code.profanity_not_allowed')}
+    end
+    nil
   end
 
   private
@@ -127,7 +152,7 @@ class ActivitiesController < ApplicationController
     # blockly could send us 'undefined' when things are not defined...
     if params[:save_to_gallery] && params[:save_to_gallery] != 'undefined' &&
         @level_source_image && solved
-      @gallery_activity = GalleryActivity.create!(user: current_user, activity: @activity)
+      @gallery_activity = GalleryActivity.create!(user: current_user, activity: @activity, autosaved: true)
     end
 
     begin

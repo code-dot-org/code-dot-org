@@ -9,9 +9,6 @@
   .section.section-light
     %h2= I18n.t('dashboard_landing_news_title')
     %p
-      %a{href: "http://studio.code.org"}
-        %b= I18n.t('dashboard_landing_new_k5courses')
-    %p
       %a{href: "/curriculum/docs/k-5/overview"}
         = I18n.t('dashboard_curriculum_overview')
       |
@@ -76,6 +73,9 @@
 
   .section.section-dark
     %h2= I18n.t('dashboard_landing_useful_links')
+    %p
+      %a{href:"http://code.org/educate/k5/k5officehours", target: "_blank"}
+        = I18n.t('dashboard_landing_office_hours')
     %p
       %a#printcertificates{:href=>"#"}
         = I18n.t('dashboard_landing_print_certificates')

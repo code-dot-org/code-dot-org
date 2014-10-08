@@ -9,3 +9,5 @@ subject: New Translation Volunteer
 - Last Name: <%= last_name_s %> 
 - Email [<%= email_s %>](<%= email_s %>)
 - See database for languages
+
+![](<%= tracking_pixel %>)

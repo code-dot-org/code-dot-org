@@ -1,27 +1,14 @@
 ---
 title: Recursos
 layout: wide
+nav: resources_nav
 ---
 
 # Recursos
 
-*   [Handouts to spread the word][1] <br/>
-*   [How-to guide for teachers][2] <br/>
-*   [Posters][3] <br/>
-*   [Videos][4] <br/>
-*   [Sample emails][5] <br/>
-*   [Useful computer science stats][6] <br />
-*   [Press Kit][7] <br />
+<a id="handouts"></p> 
 
- [1]: #handouts
- [2]: /resources/how-to
- [3]: #posters
- [4]: #videos
- [5]: #sample-emails
- [6]: /resources/stats
- [7]: /resources/press-kit
-
-<a id="handouts"></p> <h2>
+<h2>
   Use este folheto para divulgar o evento
 </h2>
 
@@ -30,7 +17,7 @@ layout: wide
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Entregue este material para professores e escolas
 </h2>
 
 <p>
@@ -38,8 +25,10 @@ layout: wide
 </p>
 
 <p>
-  <a id="videos"></p> <h2>
-    Show these videos to inspire students
+  <a id="videos"></p> 
+  
+  <h2>
+    Mostre estes vídeos para inspirar os alunos
   </h2>
   
   <div style="float:left; padding:10px">
@@ -79,11 +68,35 @@ layout: wide
   <div style='clear:both'>
   </div>
   
-<a id="posters">
-<h2>Hang these posters in your school</h2>
-<h4> <a href="http://hourofcode.com/us#signup">Cadastre</a> seu evento da Hora do Código e enviaremos os cartazes por correio gratuitamente.</h4>  
+  <p>
+<a id="posters"></p> 
+
+<h2>
+  Pendure estes cartazes em sua escola
+</h2>
+
 <p>
-  <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+  <% if @country == 'us' %>
+</p>
+
+<h4>
+  <a href="http://hourofcode.com/us#signup">Cadastre</a> seu evento da Hora do Código e enviaremos os cartazes por correio gratuitamente.
+</h4>
+
+<p>
+  <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+</p>
+
+<p>
+  <a id="banners"></a>
+</p>
+
+<h2>
+  Apresente estes banners em seu site
+</h2>
+
+<p>
+  <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <p>
@@ -91,7 +104,7 @@ layout: wide
 </p>
 
 <h2>
-  Send these emails to help promote the Hour of Code.
+  Envie estes e-mails para ajudar a promover a Hora do Código
 </h2>
 
 <p>
@@ -99,7 +112,7 @@ layout: wide
 </p>
 
 <h2>
-  Ask your school, employer or friends to sign up:
+  Peça para sua escola, empregador ou amigos se inscreverem:
 </h2>
 
 <p>
@@ -122,8 +135,12 @@ layout: wide
   Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
 </p>
 
+<p>
+  <a id="media-pitch"></a>
+</p>
+
 <h2>
-  Invite media to attend your event:
+  Convide a mídia para participar de seu evento
 </h2>
 
 <p>
@@ -175,7 +192,7 @@ layout: wide
 </p>
 
 <h2>
-  Tell parents about your school's event:
+  Informe os pais sobre o evento de sua escola
 </h2>
 
 <p>
@@ -215,7 +232,7 @@ layout: wide
 </p>
 
 <h2>
-  Invite a local politician to your school's event:
+  Convide um representante político local para o evento de sua escola
 </h2>
 
 <p>

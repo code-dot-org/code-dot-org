@@ -1,4 +1,4 @@
-"cs-CZ":
+"cy-GB":
   hello: Ahoj světe
   computer_science: Informatika
   computer_science_edweek: Týden vzdělávání Informatiky
@@ -16,6 +16,15 @@
   twentyhours_heading: Vyzkoušej nsi náš kurz Úvod do počítačové vědy
   twentyhours_text: Dokončil jsi svou první Hodinu kódu? Nauč se více do hloubky počítačové
     vědy a progarmovacích pojmů v tomto následujícím kurzu.
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Students
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: Vyzkoušej hned
   california_heading: Ask your school to teach computer science
   california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
@@ -55,6 +64,7 @@
   beyond_hour_message: Pokračuj s naším <a href='http://learn.code.org'>20hodinovým
     kurzem</a>, nebo další možností <a href='/learn/beyond'>Nauč se za jednu hodinu</a>.
   leaderboards_for_hoc: "Žebříčky pro Hodinu Kódu."
+  support_url: http://support.code.org/
   country: Země
   city: Město
   gender: Pohlaví
@@ -180,6 +190,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: Vytisknout certifikáty pro studenty, kteří
     dokončili tento kurz
   dashboard_landing_educator_blog: Přečti si o novinkách a aktualizacích našich materiálů
@@ -208,6 +220,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -249,6 +262,8 @@
   dashboard_students_password: Heslo
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret

@@ -21,3 +21,5 @@ Workshop details:
 - Workshop facilitator: <%= workshop['name_s'] %> - <%= workshop['email_s'] %>
 
 > <%= workshop['notes_s'] %>
+
+![](<%= tracking_pixel %>)

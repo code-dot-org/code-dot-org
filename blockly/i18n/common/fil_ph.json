@@ -62,6 +62,7 @@
   "backToPreviousLevel": "Bumalik sa nakaraang level",
   "saveToGallery": "I-save sa iyong gallery",
   "savedToGallery": "I-save sa iyong gallery!",
+  "shareFailure": "Sorry, we can't share this program.",
   "typeCode": "I-type ang iyong JavaScript code pagkatapos nitong mga instruction.",
   "typeFuncs": "Magagamit na mga function:%1",
   "typeHint": "Tandaan na ang mga panaklong at semicolons ay kinakailangan.",
