@@ -25,7 +25,7 @@ This year, supported by over 100 organizations, we want to reach 100 million stu
 
 It’s a fun introduction to computer science, for anyone to learn the basics. We provide [easy tutorials](http://code.org/learn) - featuring Mark Zuckerberg and Bill Gates - on computers, tablets, or smartphones.
 
-### Software engineers, we need your help.
+### Software engineers, we need your help
 
 1) [Donate to our crowdfunding campaign](http://code.org/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign in history](http://code.org/donate), and we need your support. Every dollar will be matched, doubling your impact 
 
@@ -42,7 +42,8 @@ speaking schools
 
 <% end %>
 
-Welcome to the 21st Century
+### Welcome to the 21st Century
+
 Computer science is foundational for all students. Yet most schools don’t teach it, and most students never get a chance to try it. We owe it to our children to give them one hour. 
 
 Together, we’re making history. Please support our work,
