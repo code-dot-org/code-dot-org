@@ -26,7 +26,7 @@
           Multi & Match: Risposte Multiple e Corrispondenze
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy senza blocchi
-          title: Corso 1- Per chi sta iniziando a leggere
+          title: Corso 1
           Artist 2: Artista 2
           Happy Maps: Mappe Felici
           Move it, Move it: Muovilo, Muovilo
@@ -48,8 +48,8 @@
           'Maze: Loops': 'Labirinto: Cicli'
           'Bee: Loops': 'Ape: Cicli'
           'Studio: Create a Story': 'Laboratorio: Crea una Storia'
-          description_short: Il Corso 1 è progettato per studenti di prima elementare
-            che stanno iniziando a leggere.
+          description_short: Il Corso 1 è per studenti di prima elementare che stanno
+            iniziando a leggere.
           'Artist: Loops': 'Artista: Cicli'
         course2:
           The Maze: Il Labirinto
@@ -90,8 +90,8 @@
           'Bee: Debugging': 'Ape: Correzione di Errori'
           'Artist: Debugging': 'Artista: Correzione di Errori'
           'Bee: Conditionals': 'Ape: Istruzioni Condizionali'
-          description_short: Il Corso 2 è progettato per studenti delle scuole elementari
-            che hanno già imparato a leggere.
+          description_short: Il Corso 2 è per studenti delle scuole elementari che
+            sanno già leggere.
           'Artist: Sequence2': 'Artista: Sequenza 2'
           'Maze: Sequence2': 'Labirinto: Sequenza 2'
           'Artist: Nested Loops': 'Artista: Cicli Annidati'

@@ -15,6 +15,15 @@
   twentyhours_heading: Prøv vores Intro til datalogi kursus
   twentyhours_text: Færdig med din første time kode? Lær flere kerne datalogi og programmeringbegreber
     i dette opfølgende kursus.
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Studerende
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: Prøv nu
   california_heading: Bed din skole om undervisning i datalogi
   california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
@@ -55,6 +64,7 @@
   beyond_hour_message: Fortsæt med vores  <a href='http://studio.code.org'>andre kurser</a>,
     eller se flere muligheder for at <a href='/learn/beyond'>lære ud over Kodetimen</a>.
   leaderboards_for_hoc: Ranglister for En Times Kodning.
+  support_url: http://support.code.org/
   country: Land
   city: By
   gender: Køn
@@ -180,6 +190,8 @@
   dashboard_landing_new_beta: Nyt! Prøv vores beta kurser for K-5 elever.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Andre nyttige links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: Udskriv certifikater for studerende, der er
     færdig med dette kursus
   dashboard_landing_educator_blog: Læs om nyheder og opdateringer til vores materialer
@@ -208,6 +220,7 @@
   dashboard_navigation_view_progress: Se fremskridt
   dashboard_navigation_add_students: Tilføje studerende
   dashboard_navigation_manage_students: Administrer studerende
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Afsnit: %{section_name}'
   dashboard_navigation_student: 'Studerende: %{student_name}'
   dashboard_sections_new_section: Nyt afsnit
@@ -250,6 +263,8 @@
   dashboard_students_password: Adgangskode
   dashboard_students_username: 'Brugernavn: %{student_username}'
   dashboard_students_email: 'E-mail: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Vis hemmeligt
   dashboard_students_auto_generated: Auto genereret
   dashboard_students_reset_secret: Nulstil hemmeligt

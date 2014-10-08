@@ -79,10 +79,10 @@
       Code.org понудиће до $1000 за финансирање учионица, учитељима државних школа
       у С.А.Д. који спроведу барем 15 ученика кроз овај курс.<a href="http://code.org/educate/20hr">Погледај
       упутство за употребу за више информација.</a> '
-    teacher_pitch: "Предавајте К-8 Увод у Компјутерске Науке  вашем разреду"
+    teacher_pitch: "Регистрација за Code.org - nastavnici"
     teacher_title: "Учитељ пријављивање"
-    student_pitch: "Изван 1 часа: испробајте К-8 Увод у Компјутерске Науке"
-    student_title: "Пријави се"
+    student_pitch: "Регистрација за Code.org - студенти"
+    student_title: "Регистрација - студенти"
     school_name: "Име школе (опционо)"
     school_address: "Адреса школе (опционо)"
     address_placeholder: "адреса, град, држава, поштански код"
@@ -104,7 +104,7 @@
     additional_information: We need some additional information to continue signing
       you up.
   signin_form:
-    title: "Пријави се"
+    title: "Већ имате налог? Пријавите се"
     login: E-mail или корисничко име
     password: "Лозинка"
     remember: "Запамти ме"
@@ -112,10 +112,10 @@
   signin:
     try_heading: Want to try coding without signing up?
     try_hoc: "Прво испробај један Сат Кода"
-    try_20hours: Try our 20 hour Intro to Computer Science
+    try_20hours: "Испробајте наш 20-часовни увод у Рачунарство"
   signinsection:
     welcome: Welcome to %{section_name}
-    name: Choose your name
+    name: "Изаберите име"
     picture: Now find your secret picture
     words: Now enter your secret words
     login: "Пријави се"
@@ -253,6 +253,9 @@
     header:
       finished_hoc: "Завршио сам свој Сат Програмиранја"
       sign_in_to_save: "Пријави се да сачуваш напредак"
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: "Моји студенти"
       label: "Здраво %{username}"
@@ -467,6 +470,13 @@
     flappy_og_title: Check out my Flappy Game
     studio_og_title: Check out my story
     og_description: I wrote the code myself with Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: You created a new script.
     destroyed: You destroyed a script.
@@ -543,7 +553,7 @@
           description: Wanna write your own game in less than 10 minutes? Try our
             Flappy Code tutorial!
         jigsaw:
-          title: Jigsaw
+          title: "Слагалица"
           description: ''
         step:
           title: Step

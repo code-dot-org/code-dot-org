@@ -1,123 +1,123 @@
-"da":
+da:
   activerecord:
     errors:
       messages:
-        blank: "påkrævet"
+        blank: påkrævet
     attributes:
       user:
-        name: "Brugernavn"
-        email: "E-mail"
-        username: "Brugernavn"
-        password: "Adgangskode"
-        password_confirmation: "Adgangskode bekræftelse"
-        current_password: "Nuværende adgangskode"
-        locale: "Sprog"
-        age: "Alder"
-        gender: "Køn"
-        edit_header: "Rediger kontooplysninger"
+        name: Brugernavn
+        email: E-mail
+        username: Brugernavn
+        password: Adgangskode
+        password_confirmation: Adgangskode bekræftelse
+        current_password: Nuværende adgangskode
+        locale: Sprog
+        age: Alder
+        gender: Køn
+        edit_header: Rediger kontooplysninger
         error:
-          future: "kan ikke være i fremtiden"
-  hello: "Hej verden"
+          future: kan ikke være i fremtiden
+  hello: Hej verden
   welcome_back: 'Velkommen tilbage %{name}'
   add_teacher_form:
     code_or_email:
       label: 'Tilføj en lærer med kode eller e-mailadresse:'
-      placeholder: "Kode (ABCDEF) eller e-mail (teacher@school.edu)"
+      placeholder: Kode (ABCDEF) eller e-mail (teacher@school.edu)
     code:
       label: 'Tilføje en lærer af afsnittet kode:'
-      placeholder: "Kode (ABCDEF)"
-    submit: "Tilføj lærer"
+      placeholder: Kode (ABCDEF)
+    submit: Tilføj lærer
   add_hint_form:
-    placeholder: "Skriv dit huske-ord her"
-    submit: "Skriv huske-ord"
-  appname: "Code.org"
-  stage: "Trin"
+    placeholder: Skriv dit huske-ord her
+    submit: Skriv huske-ord
+  appname: Code.org
+  stage: Trin
   stage_number: 'Stage %{number}'
-  puzzle: "Puslespil"
-  trophies: "Trofæer"
-  courses: "Kurser"
-  of: "af"
-  more: "MERE"
-  less: "MINDRE"
+  puzzle: Puslespil
+  trophies: Trofæer
+  courses: Kurser
+  of: af
+  more: MERE
+  less: MINDRE
   try_hoc: 'Prøv En Times Kodning, klik her >> '
-  try_k8intro: "Prøv vores grundskole introduktion til datalogi kurset (15-25 timer)"
-  k8intro: "Grundskole introduktion til datalogi kursus (15-25 timer)"
+  try_k8intro: Prøv vores grundskole introduktion til datalogi kurset (15-25 timer)
+  k8intro: Grundskole introduktion til datalogi kursus (15-25 timer)
   already_started: 'Allerede startet? Fortsæt her >> '
   demos: 'Admin: Alle demoer'
-  continue: "Fortsæt"
-  prize: "præmie"
-  more_info: "Mere information"
+  continue: Fortsæt
+  prize: præmie
+  more_info: Mere information
   auth:
     sign_in_with: 'Log ind med %{provider}'
-    signed_in: "Logget ind!"
+    signed_in: Logget ind!
     signed_out: 'Du har logget sig af <a href="%{url}"> Code.org</a>.'
     sign_out_of: 'Du brugte %{provider} til at logge ind. <a href="%{url}"> Klik her</a> logge af %{provider}.'
-    already_signedup: "Allerede tilmeldt?"
-    notyet_signedup: "Ikke tilmeldt endnu?"
-    google_oauth2: "Google-konto"
-    twitter: "Twitter"
-    facebook: "Facebook"
-    windowslive: "Microsoft-konto"
-    forgot_password: "Glemt din adgangskode?"
-    need_confirmation: "Har ikke modtaget bekræftelses instruktioner?"
-    need_unlock: "Ikke modtaget lås op instruktioner?"
+    already_signedup: Allerede tilmeldt?
+    notyet_signedup: Ikke tilmeldt endnu?
+    google_oauth2: Google-konto
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Microsoft-konto
+    forgot_password: Glemt din adgangskode?
+    need_confirmation: Har ikke modtaget bekræftelses instruktioner?
+    need_unlock: Ikke modtaget lås op instruktioner?
   signup_form:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'Du kan <a target="_blank" href="http://learn.code.org">gennemse de forskellige faser og gåder</a>, men du bliver nødt til at tilmelde dig for at gemme dine fremskridt.'
     prizes_message: 'Amerikanske studerende, der tjener alle %{num_trophies} koncept trofæer kan vælge en række præmier, herunder gratis Dropbox plads, Skype credits og kan downloade spil fra Electronic Arts og Valve.'
-    teacher_educator_guide: "Se lærerens guide"
+    teacher_educator_guide: Se lærerens guide
     teacher_prize_header: 'Vind $1.000 i <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> belønninger (gennem juni 15, 2014, indtil lager haves)'
     teacher_prize_message: 'I partnerskab med <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>, vil Code.org finansiering til amerikanske offentlige skolelærere, der fører mindst 15 studerende gennem K-8 Intro til datalogi kursus (gennem juni 15, 2014).  <a href="http://code.org/educate/20hr"> Se pædagog guide</a>.'
-    teacher_pitch: "Lærer tilmelding til Code.org"
-    teacher_title: "Lærer tilmelding"
-    student_pitch: "Elev tilmelding til Code.org"
-    student_title: "Tilmelding for studerende"
-    school_name: "Skolens navn (valgfrit)"
-    school_address: "Skolens adresse (valgfri)"
-    address_placeholder: "adresse, by, stat, postnummer"
-    gender: "Køn (valgfri)"
-    birthday: "Fødselsdag (valgfri)"
-    age: "Alder"
-    submit: "Tilmeld"
-    teacher: "Er du en lærer?"
-    valid_username: "Tilgængelig!"
-    invalid_username: "Brugernavn skal være mindst 5 tegn"
-    taken_username: "Brugernavnet er allerede taget"
-    valid_password: "Gyldig adgangskode!"
-    invalid_password: "Adgangskoden skal være på mindst 6 tegn"
-    mismatch_password: "De to adgangskoder du har indtastet stemmer ikke overens"
+    teacher_pitch: Lærer tilmelding til Code.org
+    teacher_title: Lærer tilmelding
+    student_pitch: Elev tilmelding til Code.org
+    student_title: Tilmelding for studerende
+    school_name: Skolens navn (valgfrit)
+    school_address: Skolens adresse (valgfri)
+    address_placeholder: adresse, by, stat, postnummer
+    gender: Køn (valgfri)
+    birthday: Fødselsdag (valgfri)
+    age: Alder
+    submit: Tilmeld
+    teacher: Er du en lærer?
+    valid_username: Tilgængelig!
+    invalid_username: Brugernavn skal være mindst 5 tegn
+    taken_username: Brugernavnet er allerede taget
+    valid_password: Gyldig adgangskode!
+    invalid_password: Adgangskoden skal være på mindst 6 tegn
+    mismatch_password: De to adgangskoder du har indtastet stemmer ikke overens
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
     teacher_terms: "Jeg accepterer at være tilsluttet Code.org <a href='http://code.org/tos'> Servicevilkår</a>."
-    additional_information: "Vi har brug for nogle ekstra oplysninger til at fortsætte med at logge dig."
+    additional_information: Vi har brug for nogle ekstra oplysninger til at fortsætte med at logge dig.
   signin_form:
-    title: "Har allerede en konto? Log på"
-    login: "Email eller Brugernavn"
-    password: "Adgangskode"
-    remember: "Husk mig"
-    submit: "Log ind"
+    title: Har allerede en konto? Log på
+    login: Email eller Brugernavn
+    password: Adgangskode
+    remember: Husk mig
+    submit: Log ind
   signin:
-    try_heading: "Vil du prøvekøre kodning uden tilmelding?"
-    try_hoc: "Prøv En Times Kodning først"
-    try_20hours: "Prøv vores 20 timers Introduktion til datalogi"
+    try_heading: Vil du prøvekøre kodning uden tilmelding?
+    try_hoc: Prøv En Times Kodning først
+    try_20hours: Prøv vores 20 timers Introduktion til datalogi
   signinsection:
     welcome: 'Velkommen til %{section_name}'
-    name: "Vælg dit navn"
-    picture: "Nu find dit hemmelige billede"
-    words: "Indtast nu dit hemmelige ord"
-    login: "Log ind"
+    name: Vælg dit navn
+    picture: Nu find dit hemmelige billede
+    words: Indtast nu dit hemmelige ord
+    login: Log ind
   password:
     reset_form:
-      title: "Glemt din adgangskode?"
-      email: "Email adresse"
-      submit: "Send mig nulstil adgangskode instruktioner"
+      title: Glemt din adgangskode?
+      email: Email adresse
+      submit: Send mig nulstil adgangskode instruktioner
     change_form:
-      title: "Skift din adgangskode"
-      new_password: "Ny adgangskode"
-      confirm_password: "Bekræft ny adgangskode"
-      submit: "Skift adgangskode"
+      title: Skift din adgangskode
+      new_password: Ny adgangskode
+      confirm_password: Bekræft ny adgangskode
+      submit: Skift adgangskode
   welcome_email:
-    subject: "Deltag i min klasse (på Code.org)"
+    subject: Deltag i min klasse (på Code.org)
     body: |
       Klik på linket nedenunder for at tilmelde dig Computer Videnskabs vejledninger på Code.org (Med mig som din lærer):
       
@@ -127,17 +127,17 @@
       
       %{name}
   follower:
-    invite_sent: "Invitation sendt"
+    invite_sent: Invitation sendt
     added_teacher: '%{name} er tilføjet som din lærer'
     registered: 'Du er registreret til %{section_name}.'
     error:
-      signed_in: "Log ud inden du fortsætter"
+      signed_in: Log ud inden du fortsætter
       username_not_found: 'Brugernavn %{username} blev ikke fundet'
       username_in_use: '%{username} bruges allerede, vær venlig og vælg et andet'
       no_teacher: "Vi kunne ikke finde nogen brugere der er logget ind med %{teacher_email_or_code}'. Vær venlig og spørg dem om at lave en bruger, og derefter prøv at tilføje dem."
       section_not_found: "Kunne ikke finde en sektion med kode '%{section_code}'."
-      blank_code: "Angiv en sektions kode"
-      cant_join_own_section: "Desværre, ikke kan du deltage i dit eget afsnit."
+      blank_code: Angiv en sektions kode
+      cant_join_own_section: Desværre, ikke kan du deltage i dit eget afsnit.
     mail:
       invite_student:
         subject: 'Tilmeld dig en klasse med %{teacher_name} på Code.org!'
@@ -147,47 +147,47 @@
         subject: 'Code.org anmeldelse: %{teacher_name} er ikke længere tilknyttet som din lærer.'
   reports:
     error:
-      access_denied: "Du har ikke adgang til denne persons statistikker"
+      access_denied: Du har ikke adgang til denne persons statistikker
   redeem_prizes:
     title: 'Indløs præmier: %{name}'
     provider: 'Udbyder:'
     code: 'Kode:'
     redeem_header: 'At indløse:'
-    donorschoose_register: "Tilmeld dig som lærer på DonorsChoose.org"
-    donorschoose_project: "Send et projekt"
-    donorschoose_how_to: "Sådan bruger du din kode"
-    success: "Din præmie blev indløst, se nedenstående kode."
-    error: "Din præmie ikke kunne indløses, prøv igen."
-    error_us_only: "Præmien er kun tilgængelig for amerikanske brugere."
-    error_not_earned: "Du har endnu ikke optjent denne præmie."
-    error_already_redeemed: "Din præmie er allerede blevet indløst."
-    no_prizes_available: "Vi beklager, men vi har i øjeblikket ingen tilgængelige præmier."
+    donorschoose_register: Tilmeld dig som lærer på DonorsChoose.org
+    donorschoose_project: Send et projekt
+    donorschoose_how_to: Sådan bruger du din kode
+    success: Din præmie blev indløst, se nedenstående kode.
+    error: Din præmie ikke kunne indløses, prøv igen.
+    error_us_only: Præmien er kun tilgængelig for amerikanske brugere.
+    error_not_earned: Du har endnu ikke optjent denne præmie.
+    error_already_redeemed: Din præmie er allerede blevet indløst.
+    no_prizes_available: Vi beklager, men vi har i øjeblikket ingen tilgængelige præmier.
     teacher_info_required: 'Lærerpræmier kræver skolens navn og adresse oplysninger:'
     teacher_email_required: 'Lærerpræmier kræver en bekræftet email-adresse:'
     confirm:
-      title: "Bekræft venligst"
+      title: Bekræft venligst
       "no": Nej
       "yes": Ja
       msg: 'Er du sikker på du vil gøre krav på gevinsten for %{prize_name}?'
       msg_student: 'Bemærk: Du kan kun vælge én type præmie.'
-      msg_publicschool: "Bekræft venligst, at du er en Amerikansk offentlig skolelærer."
-      msg_visit_website: "Besøg Hjemmeside"
+      msg_publicschool: Bekræft venligst, at du er en Amerikansk offentlig skolelærer.
+      msg_visit_website: Besøg Hjemmeside
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
-      donors_choose: "DonorsChoose.org $750 credit"
-      donors_choose_bonus: "DonorsChoose.org $250 credit"
-      dropbox: "10GB plads på Dropbox"
-      valve: "Portal 2 (PC or Mac game download)"
-      ea_bejeweled: "Bejeweled 3 (PC game download)"
-      ea_fifa: "FIFA Soccer 13 (PC game download)"
-      ea_simcity: "SimCity 4 Deluxe Edition (PC game download)"
-      ea_pvz: "Plants vs. Zombies (PC game download)"
-      skype: "$10 Skype credit"
+      apple_itunes: $10 iTunes Gift Card
+      donors_choose: DonorsChoose.org $750 credit
+      donors_choose_bonus: DonorsChoose.org $250 credit
+      dropbox: 10GB plads på Dropbox
+      valve: Portal 2 (PC or Mac game download)
+      ea_bejeweled: Bejeweled 3 (PC game download)
+      ea_fifa: FIFA Soccer 13 (PC game download)
+      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
+      ea_pvz: Plants vs. Zombies (PC game download)
+      skype: $10 Skype credit
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: "Du har opnået en præmie! (Kun for amerikanske studerende)"
-      not_earned_title: "Gennemfør øvelse, for at optjene belønninger (kun for amerikanske studerende)"
+      earned: Du har opnået en præmie! (Kun for amerikanske studerende)
+      not_earned_title: Gennemfør øvelse, for at optjene belønninger (kun for amerikanske studerende)
       not_earned: 'Lær alle datalogi begreberne, indsaml alle %{num_trophies} trofæer, og vind præmier. Du kan vælge mellem 10GB gratis Dropbox plads, $10 i Skype credits, og gratis spil downloads. Bemærk: gælder kun amerikanske studerende, og kun så længe lager haves.'
       teacher:
         earned: '15 eller flere studerende har indsamlet alle %{num_trophies} trofæer. Du har vundet en lærerpræmie! (dog kun for amerikanske lærere)'
@@ -199,285 +199,292 @@
           not_earned: 'Hvis mindst 7 af dine elever, der optjener alle %{num_trophies} trofæer er piger, er din belønning yderligere $250 i <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditter. <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditter kan kun bruges af lærere i amerikanske offentlige skoler.'
   crud:
     new_model: 'Ny %{model}'
-    show: "Vis"
-    edit: "Rediger"
+    show: Vis
+    edit: Rediger
     edit_model: 'Rediger %{model}'
-    update: "Opdater"
-    destroy: "Ødelæg"
-    back: "Tilbage"
-    confirm: "Er du sikker?"
+    update: Opdater
+    destroy: Ødelæg
+    back: Tilbage
+    confirm: Er du sikker?
     created: '%{model} blev oprettet.'
     updated: '%{model} blev opdateret.'
     destroyed: '%{model} blev slettet.'
     access_denied: 'Du har ikke adgang til denne %{model}.'
   nav:
     header:
-      finished_hoc: "Jeg har afsluttet min En Times Kodning"
-      sign_in_to_save: "Log ind for at gemme fremskridt"
+      finished_hoc: Jeg har afsluttet min En Times Kodning
+      sign_in_to_save: Log ind for at gemme fremskridt
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
-      classroom: "Mine elever"
+      classroom: Mine elever
       label: 'Hej %{username}'
-      stats: "Mine fremskridt"
-      settings: "Min konto"
-      prizes: "Præmier"
-      logout: "Log ud"
-      signin: "Log ind"
-      signup: "Tilmeld"
-      already_registered: "Allerede registreret?"
+      stats: Mine fremskridt
+      settings: Min konto
+      prizes: Præmier
+      logout: Log ud
+      signin: Log ind
+      signup: Tilmeld
+      already_registered: Allerede registreret?
     popup:
-      progress: "Dine fremskridt"
+      progress: Dine fremskridt
       lines: 'Total linjer kode: %{lines}'
-      close: "LUK"
-      mastery: "Begreber"
-      puzzle_map: "Etaper"
+      close: LUK
+      mastery: Begreber
+      puzzle_map: Etaper
       prizes: 'Indsaml alle %{total_trophies} trofæer og vind præmier!'
       prize_earned: 'Alle %{total_trophies} trofæer indsamlet. Prisen vundet!'
-      prize_us_only: "(Kun for amerikanske studerende)"
-      prizes_link: "mere info"
+      prize_us_only: (Kun for amerikanske studerende)
+      prizes_link: mere info
   teacher:
     title:
       one: 'Din lærer:'
       other: 'Dine lærere:'
-    remove: "(Fjern lærer)"
+    remove: (Fjern lærer)
     confirm:
-      remove: "Er du sikker på, at du vil fjerne denne lærer?"
-    tools: "Lærer redskaber"
+      remove: Er du sikker på, at du vil fjerne denne lærer?
+    tools: Lærer redskaber
     followers:
       section: 'Afsnit:'
       stages: 'Etaper som vises:'
       show_past: 'Vis studerende aktivitet (%{bullet_html}) i fortiden:'
-      levels_key: "Niveau nøgle"
-      perfect: "Afsluttet, perfekt"
-      completed: "Afsluttet, men du brugte for mange blokke"
-      tried: "Forsøgt, men ikke afsluttet"
-      not_tried: "Ikke prøvet endnu"
+      levels_key: Niveau nøgle
+      perfect: Afsluttet, perfekt
+      completed: Afsluttet, men du brugte for mange blokke
+      tried: Forsøgt, men ikke afsluttet
+      not_tried: Ikke prøvet endnu
       activity: 'Angiver studerende aktivitet i de sidste %{hours} %{plural}'
-      no_section: "Ikke tildelt sektion"
-      trophies: "Trofæer"
+      no_section: Ikke tildelt sektion
+      trophies: Trofæer
     students:
-      name: "Navn"
-      username: "Brugernavn"
-      password: "Adgangskode"
-      manage: "Administrer studerende"
-      dashboard: "Gå til lærer Dashboard"
-      add: "Tilføje studerende"
-      remove: "fjern studerende"
-      confirm_remove: "Sikker på, at du ønsker at fjerne denne studerende?"
-      help_reassign: "For at opdele din klasse i flere afsnit, vælg de studerende for at tildele dem til et nyt afsnit."
-      help_register: "I stedet for at du bruger en masse tid individuelt at indlæse de studerendes data, kan du oprette din klasse hurtigt ved at spørge dem til tilmelding. Eleverne skal vælge brugernavne og adgangskoder, men de vil ikke være forpligtet til at angive en e-mail-adresse. Hvis en elev glemmer sin adgangskode, vil du kunne nulstille det til dem."
-      register: "Spørg dine elever til at registrere sig selv"
-      vist: "Spørg dine elever til at besøge"
+      name: Navn
+      username: Brugernavn
+      password: Adgangskode
+      manage: Administrer studerende
+      dashboard: Gå til lærer Dashboard
+      add: Tilføje studerende
+      remove: fjern studerende
+      confirm_remove: Sikker på, at du ønsker at fjerne denne studerende?
+      help_reassign: For at opdele din klasse i flere afsnit, vælg de studerende for at tildele dem til et nyt afsnit.
+      help_register: I stedet for at du bruger en masse tid individuelt at indlæse de studerendes data, kan du oprette din klasse hurtigt ved at spørge dem til tilmelding. Eleverne skal vælge brugernavne og adgangskoder, men de vil ikke være forpligtet til at angive en e-mail-adresse. Hvis en elev glemmer sin adgangskode, vil du kunne nulstille det til dem.
+      register: Spørg dine elever til at registrere sig selv
+      vist: Spørg dine elever til at besøge
       section_code: 'og indtaste deres afsnit-kode:'
       first_please: 'Først, venligst %{add_section}'
-      for: "For"
+      for: For
       enter: 'angiv:'
     sections:
-      add: "Tilføj afsnit"
-      manage: "Administrere sektioner"
-      section: "Afsnit"
-      students: "Studerende"
-      section_code: "Afsnitskode"
-      add_section_code: "Tilføje studerende afsnit-kode"
-      secret: "Hemmelig type"
-      grade: "Graduering"
-      course: "Kursus"
-      rename: "omdøb"
-      edit: "rediger"
-      delete: "slet"
-      confirm_delete: "Er du sikker på du vil slette dette afsnit?"
-      email: "Send i e-mail"
-    rollup: "Fremskridts oversigt"
-    activity: "Seneste klasse aktivitet"
-    user_not_found: "Lærer eller elev kunne ikke findes"
+      add: Tilføj afsnit
+      manage: Administrere sektioner
+      section: Afsnit
+      students: Studerende
+      section_code: Afsnitskode
+      add_section_code: Tilføje studerende afsnit-kode
+      secret: Hemmelig type
+      grade: Graduering
+      course: Kursus
+      rename: omdøb
+      edit: rediger
+      delete: slet
+      confirm_delete: Er du sikker på du vil slette dette afsnit?
+      email: Send i e-mail
+    rollup: Fremskridts oversigt
+    activity: Seneste klasse aktivitet
+    user_not_found: Lærer eller elev kunne ikke findes
     cant_remove_student_no_email: '%{student_name} kan ikke fjernes som din studerende, fordi %{student_name} ikke har registreret en e-mailadresse'
     cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernes som din lærer, fordi du ikke har registreret en e-mailadresse'
     student_teacher_disassociated: '%{teacher_name} er blevet fjernet som lærer for %{student_name}'
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
-    email_resend_confirm: "Gensend bekræftelses instruktioner"
-    new_password_hint: "(Efterlad blank hvis du ikke ønsker at ændre det)"
-    current_password_hint: "(vi har brug for din nuværende adgangskode til at bekræfte dine ændringer)"
+    email_resend_confirm: Gensend bekræftelses instruktioner
+    new_password_hint: (Efterlad blank hvis du ikke ønsker at ændre det)
+    current_password_hint: (vi har brug for din nuværende adgangskode til at bekræfte dine ændringer)
     cancel:
-      title: "Annuller min konto"
-      hint: "Ulykkelig?"
-      button: "Annuller min konto"
+      title: Annuller min konto
+      hint: Ulykkelig?
+      button: Annuller min konto
   user_level:
-    completed: "Fuldført"
-    tried: "Forsøgt"
+    completed: Fuldført
+    tried: Forsøgt
   user_stats:
-    recent_activity: "Nylig aktivitet"
-    show_more: "Vis mere"
-    classroom_activity: "Unplugged aktivitet"
+    recent_activity: Nylig aktivitet
+    show_more: Vis mere
+    classroom_activity: Unplugged aktivitet
   home:
-    title: "Code Studio"
-    all_courses: "Overview of Courses 1, 2, and 3"
-    lesson_plans: "Lesson plans"
+    title: Code Studio
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: 'Allerede registreret? %{link}'
-    student_reg_link: "Tilmelding for studerende"
-    teacher_reg_link: "Tilmelding for studerende"
+    student_reg_link: Tilmelding for studerende
+    teacher_reg_link: Tilmelding for studerende
     signin_directions: 'Brug en konto til at følge op på fremdriften. <br/> Lærere, spor hele din klasse.'
-    teacher_dashboard: "Se fremskridts oversigt"
+    teacher_dashboard: Se fremskridts oversigt
     teacher_student_count_one: 'Du har %{count} studerende.'
     teacher_student_count: 'Du har %{count} studerende.'
     teacher_averages: 'Dine elever har i gennemsnit optjent %{trophy_average} ud af %{trophy_max} "Koncept beherskelse" trofæer.'
-    teacher_print_certificates: "Udskriv certifikater for studerende, der er færdig med dette kursus"
-    teacher_read_blog: "Læs om nyheder og opdateringer til vores materialer på vores underviser blog"
-    classroom: "Dit klasseværelse"
-    student_progress: "Dit lærings fremskridt"
+    teacher_print_certificates: Udskriv certifikater for studerende, der er færdig med dette kursus
+    teacher_read_blog: Læs om nyheder og opdateringer til vores materialer på vores underviser blog
+    classroom: Dit klasseværelse
+    student_progress: Dit lærings fremskridt
     student_stats: 'Du har optjent %{trophy_count} ud af %{trophy_max} "Koncept beherskelses" trofæer.'
     student_left_off: 'Hvor du stoppede sidst:'
     student_finished_prize: 'Du har fuldført alle tutorials, modtag din %{prize_link} og vælg en anden klasse %{online_link} eller her %{local_school_link}'
     student_finished: 'Du har fuldført alle tutorials, vælg en anden klasse %{online_link} eller her %{local_school_link}'
-    local_school: "lokal skole"
-    online: "online"
-    see_details: "Se detaljer"
+    local_school: lokal skole
+    online: online
+    see_details: Se detaljer
     prize_info: 'Præmier for deltagelse (kun amerikanske offentlige skolelærere): op til $1.000 i klasseværelset belønninger.'
     tryfirst: 'Eller du kan prøve det først, og tilmeld dig bagefter:'
-    trynow: "Prøv nu"
-    add_hint_help: "Hjælp os med at tilføje smart tips til Code.org undervisning"
-    20hour_overview: "Dette 20-timers kursus introducerer centrale computer videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det er sjovt at lære i alle aldre."
-    test_videos_help: "Test vores nye video-afspiller på din skole"
-    try_beta_courses: "Nyt! Prøv vores beta kurser for K-5 elever"
-    use_as_teacher: "Bruge dette websted som en lærer"
+    trynow: Prøv nu
+    add_hint_help: Hjælp os med at tilføje smart tips til Code.org undervisning
+    20hour_overview: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det er sjovt at lære i alle aldre.
+    test_videos_help: Test vores nye video-afspiller på din skole
+    try_beta_courses: Nyt! Prøv vores beta kurser for K-5 elever
+    use_as_teacher: Bruge dette websted som en lærer
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Sjov for</h2><h1>Alle</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
   gender:
-    male: "Mand"
-    female: "Kvinde"
-    none: "Foretrækker ikke at svare"
+    male: Mand
+    female: Kvinde
+    none: Foretrækker ikke at svare
   footer:
-    help_from_html: "Ingeniører fra Google, Microsoft, Facebook og Twitter bidraget til at skabe denne øvelse. Oversat af Jan Borup Coyle."
+    help_from_html: Ingeniører fra Google, Microsoft, Facebook og Twitter bidraget til at skabe denne øvelse. Oversat af Jan Borup Coyle.
     art_from_html: 'Angry birds&trade; & &copy; & © 2009-2013 Rovio Entertainment Ltd. Alle rettigheder forbeholdt. <br/>Plants vs zombies&trade; & &copy; & © 2013 Electronic Arts Inc. Alle rettigheder forbeholdes.'
-    feedback: "Giv feedback"
-    translate: "Hjælp os med at oversætte til dit sprog"
-    support: "Support"
-    support_url: "http://support.code.org"
-    tos: "Termer"
-    privacy: "Privatlivspolitik"
-    secure: "Sikker Version"
+    feedback: Giv feedback
+    translate: Hjælp os med at oversætte til dit sprog
+    support: Support
+    support_url: http://support.code.org
+    tos: Termer
+    privacy: Privatlivspolitik
+    secure: Sikker Version
   prize_mail:
     prize_earned:
-      subject: "Redeem your prize at Code.org!"
+      subject: Redeem your prize at Code.org!
     teacher_prize_earned:
-      subject: "Tillykke fra Code.org!"
+      subject: Tillykke fra Code.org!
     teacher_bonus_prize_earned:
-      subject: "Redeem your bonus prize at Code.org!"
+      subject: Redeem your bonus prize at Code.org!
   reference_area:
-    title: "Brug for hjælp?"
-    subtitle: "Se disse videoer og tips"
-    teacher: "Se løsningen"
-    auth_error: "Du har ikke rettigheder til at se løsningen."
-    submit: "Opdater kunstner placering"
-    direction: "Start retning"
+    title: Brug for hjælp?
+    subtitle: Se disse videoer og tips
+    teacher: Se løsningen
+    auth_error: Du har ikke rettigheder til at se løsningen.
+    submit: Opdater kunstner placering
+    direction: Start retning
   video:
-    tab: "Video."
-    notes: "Ingen video? Vis noter."
-    notes_coming_soon: "Noter til denne video kommer snart."
-    autoplay_option: "Automatisk afspil videoer"
-    download: "Hent Video"
+    tab: Video.
+    notes: Ingen video? Vis noter.
+    notes_coming_soon: Noter til denne video kommer snart.
+    autoplay_option: Automatisk afspil videoer
+    download: Hent Video
   compatability:
     working:
-      header: "We are working on support for your browser."
+      header: We are working on support for your browser.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
-      hide_this_warning: "Hide this warning"
+      hide_this_warning: Hide this warning
     upgrade:
-      header: "Please upgrade your browser."
+      header: Please upgrade your browser.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
-      button: "Take me to the list of supported browsers"
-  slow_loading: "Dette tager længere tid end normalt..."
-  try_reloading: "Prøv at genindlæse siden"
-  next_stage: "Færdig! Fortsæt til næste fase"
-  download_pdf: "Åben lektionsplan"
-  view_lesson_plan: "Se lektionsplan"
-  pdf_download: "Download PDF"
+      button: Take me to the list of supported browsers
+  slow_loading: Dette tager længere tid end normalt...
+  try_reloading: Prøv at genindlæse siden
+  next_stage: Færdig! Fortsæt til næste fase
+  download_pdf: Åben lektionsplan
+  view_lesson_plan: Se lektionsplan
+  pdf_download: Download PDF
   share_code:
     title: "Klik på 'Kør' for at se min program i aktion"
-    bounce_og_title: "Tjek mit hoppe spil"
-    flappy_og_title: "Tjek mit Flappy spil"
-    studio_og_title: "Check out my Play Lab App"
-    og_description: "Jeg skrev selv koden med Code.org"
+    bounce_og_title: Tjek mit hoppe spil
+    flappy_og_title: Tjek mit Flappy spil
+    studio_og_title: Check out my Play Lab App
+    og_description: Jeg skrev selv koden med Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the text.
   builder:
-    created: "Du har oprettet et nyt script."
-    destroyed: "Du ødelagde et script."
-    manage: "Byg niveauer"
-    view: "Se"
-    back: "Tilbage til scripts"
-    success: "Du har med held redigeret blokkene."
+    created: Du har oprettet et nyt script.
+    destroyed: Du ødelagde et script.
+    manage: Byg niveauer
+    view: Se
+    back: Tilbage til scripts
+    success: Du har med held redigeret blokkene.
     level:
-      create: "Opret nyt niveau"
-      current: "Nuværende niveau"
-      unused: "Ubrugte niveauer"
+      create: Opret nyt niveau
+      current: Nuværende niveau
+      unused: Ubrugte niveauer
   upsell:
     hoc:
-      title: "En Times Kodning"
-      body: "Prøv grundlæggende i datalogi. Millioner har givet det et forsøg."
+      title: En Times Kodning
+      body: Prøv grundlæggende i datalogi. Millioner har givet det et forsøg.
     flappy:
-      title: "Flappy kode"
-      body: "Vil du skrive dit eget spil på mindre end 10 minutter? Prøv vores Flappy kode undervisning!"
+      title: Flappy kode
+      body: Vil du skrive dit eget spil på mindre end 10 minutter? Prøv vores Flappy kode undervisning!
     20hour:
-      title: "Intro kursus"
-      body: "Prøv vores 20-timers Introduktion til datalogi kursus."
+      title: Intro kursus
+      body: Prøv vores 20-timers Introduktion til datalogi kursus.
   gallery:
-    students_drew_these_with_code: "Studerende tegnede disse med kode!"
+    students_drew_these_with_code: Studerende tegnede disse med kode!
     picture_count: 'Tidligere <b>%{days}</b> dage, studerende har tegnet <b>%{count}</b> billeder ved at skrive deres egne computerprogrammer. Klik på billederne for at se hvert program i aktion.'
-    want_to_make_your_own: "Vil du lave dit eget?"
+    want_to_make_your_own: Vil du lave dit eget?
     more: 'Mere &rarr;'
   landing:
     prerelease: "Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder, at det ikke er den endelige version af kurset, og er undergivet revision som feedback modtages og forbedringer."
-    feedback: "Giv feedback"
-    report_bug: "Rapporter fejl"
-    support: "Få hjælp"
-    support_url: "//support.code.org"
+    feedback: Giv feedback
+    report_bug: Rapporter fejl
+    support: Få hjælp
+    support_url: //support.code.org
   multi:
-    wrong_title: "Forkert svar"
+    wrong_title: Forkert svar
     wrong_body: 'Det svar, du har angivet er ikke korrekte.  Prøv venligst igen!'
-    correct_title: "Rigtigt"
-    correct_body: "Det er det korrekte svar."
+    correct_title: Rigtigt
+    correct_body: Det er det korrekte svar.
   match:
-    wrong_title: "Forkert løsning"
+    wrong_title: Forkert løsning
     wrong_body: 'Den løsning, du har angivet er ikke korrekte.  Prøv venligst igen!'
-    correct_title: "Rigtigt"
-    correct_body: "Det er det korrekte svar."
+    correct_title: Rigtigt
+    correct_body: Det er det korrekte svar.
   dialog:
-    ok: "Ok"
+    ok: Ok
   time:
-    hour: "1 time"
-    day: "dag"
-    week: "uge"
+    hour: 1 time
+    day: dag
+    week: uge
   data:
     script:
       name:
         20-hour:
-          title: "Grundskole introduktion til datalogi kursus (15-25 timer)"
-          description: "Dette 20-timers kursus introducerer centrale computer videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det er sjovt at lære i alle aldre."
+          title: Grundskole introduktion til datalogi kursus (15-25 timer)
+          description: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det er sjovt at lære i alle aldre.
         Hour of Code:
-          title: "En times kodning"
+          title: En times kodning
           description: ""
         edit-code:
-          title: "Rediger kode"
+          title: Rediger kode
           description: ""
         events:
-          title: "Hændelser"
+          title: Hændelser
           description: ""
         builder:
-          title: "Bygger"
+          title: Bygger
           description: ""
         flappy:
-          title: "Flappy kode"
-          description: "Vil du skrive dit eget spil på mindre end 10 minutter? Prøv vores Flappy kode undervisning!"
+          title: Flappy kode
+          description: Vil du skrive dit eget spil på mindre end 10 minutter? Prøv vores Flappy kode undervisning!
         jigsaw:
-          title: "Puslespil"
+          title: Puslespil
           description: ""
         step:
-          title: "Trin"
+          title: Trin
           description: ""
         sample_level_builder:
-          title: "Prøve niveau byggeren"
+          title: Prøve niveau byggeren
           description: ""
   age_interstitial:
-    age: "Din alder"
-    header: "Opdater konto oplysninger"
+    age: Din alder
+    header: Opdater konto oplysninger
     message: 'Vi er i færd med at opdatere vores erfaring for at give dig endnu stærkere privat beskyttelse. For at gøre dette, vi har brug for eksisterende brugere til at indtaste deres alder her. <br/>Som altid, vil code.org aldrig leje, sælge eller dele disse oplysninger med tredjemand.'
     sign_out: 'Hvis du ikke ønsker at give din alder kan <a href="%{url}"> logge ud</a>.'
   zendesk_too_young_message: 'Beklager, yngre brugere kan ikke logge på til vores websted. Du kan gennemse <a href="http://support.code.org"> support.code.org</a> uden at logge på eller spørg dine forældre eller lærer til at kontakte os for dig.'

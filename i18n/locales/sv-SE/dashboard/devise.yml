@@ -1,57 +1,57 @@
-"sv":
+sv:
   devise:
     confirmations:
-      confirmed: "Din e-postadress har bekräftats."
-      send_instructions: "Du kommer få ett mail med instruktioner om hur du bekräftar ditt konto inom några minuter."
-      send_paranoid_instructions: "Om din e-postadress finns i vår databas kommer får du ett mail med instruktioner om hur du bekräftar ditt konto inom några minuter."
+      confirmed: Din e-postadress har bekräftats.
+      send_instructions: Du kommer få ett mail med instruktioner om hur du bekräftar ditt konto inom några minuter.
+      send_paranoid_instructions: Om din e-postadress finns i vår databas kommer får du ett mail med instruktioner om hur du bekräftar ditt konto inom några minuter.
     failure:
-      already_authenticated: "Du är redan inloggad."
-      inactive: "Ditt konto har inte aktiverats ännu."
-      invalid: "Ogiltig e-postadress eller lösenord."
-      invalid_token: "Ogiltig autentiseringstoken."
-      locked: "Ditt konto är låst."
-      not_found_in_database: "Ogiltig e-postadress eller lösenord."
-      timeout: "Din session löpte ut, vänligen logga in igen för att fortsätta."
-      unauthenticated: "Du måste logga in eller registrera dig innan du fortsätter."
-      unconfirmed: "Du måste bekräfta ditt konto innan du fortsätter."
+      already_authenticated: Du är redan inloggad.
+      inactive: Ditt konto har inte aktiverats ännu.
+      invalid: Ogiltig e-postadress eller lösenord.
+      invalid_token: Ogiltig autentiseringstoken.
+      locked: Ditt konto är låst.
+      not_found_in_database: Ogiltig e-postadress eller lösenord.
+      timeout: Din session löpte ut, vänligen logga in igen för att fortsätta.
+      unauthenticated: Du måste logga in eller registrera dig innan du fortsätter.
+      unconfirmed: Du måste bekräfta ditt konto innan du fortsätter.
     mailer:
       confirmation_instructions:
-        subject: "Instruktioner för bekräftelse av e-postadress"
+        subject: Instruktioner för bekräftelse av e-postadress
       reset_password_instructions:
-        subject: "Instruktioner för att återställa lösenord"
+        subject: Instruktioner för att återställa lösenord
       unlock_instructions:
-        subject: "Instruktioner för att låsa upp"
+        subject: Instruktioner för att låsa upp
     omniauth_callbacks:
       failure: 'Kunde inte autentisera dig från %{kind} eftersom "%{reason}".'
       success: 'Autentiserats från %{kind} konto.'
     passwords:
-      no_token: "Du kan inte komma åt den här sidan utan att komma från ett lösenordsåterställnings-e-post. Om du kommer från ett lösenordsåterställnings-e-post, vänligen se till att använt du den fullständiga webbadressen som följde med."
-      send_instructions: "Du kommer få ett mail med instruktioner om hur du återställer ditt lösenord inom några minuter."
-      send_paranoid_instructions: "Om din e-postadress finns i vår databas får du ett lösenordsåterställningslänk till din e-postadress i några minuter."
-      updated: "Lösenordet har ändrats. Du är nu inloggad."
-      updated_not_active: "Lösenordet har ändrats."
+      no_token: Du kan inte komma åt den här sidan utan att komma från ett lösenordsåterställnings-e-post. Om du kommer från ett lösenordsåterställnings-e-post, vänligen se till att använt du den fullständiga webbadressen som följde med.
+      send_instructions: Du kommer få ett mail med instruktioner om hur du återställer ditt lösenord inom några minuter.
+      send_paranoid_instructions: Om din e-postadress finns i vår databas får du ett lösenordsåterställningslänk till din e-postadress i några minuter.
+      updated: Lösenordet har ändrats. Du är nu inloggad.
+      updated_not_active: Lösenordet har ändrats.
     registrations:
-      destroyed: "Hej då! Ditt konto är bort taget. Vi hoppas att få se dig snart igen."
-      signed_up: "Välkommen! Du är registerad."
-      signed_up_but_inactive: "Du är registrerad. Men du kan inte logga in än eftersom ditt konto inte är aktiverat än."
-      signed_up_but_locked: "Du är registrerad. Men du kan inte logga in eftersom ditt konto är låst."
-      signed_up_but_unconfirmed: "Ett meddelande med en bekräftelselänk har skickats till din e-postadress. Vänligen öppna länken för att aktivera ditt konto."
-      update_needs_confirmation: "Du har uppdaterat ditt konto och vi måste verifiera din nya e-postadress. Kontrollera din e-post och klicka på bekräftelselänken för att slutföra bekräftelsen."
-      updated: "Du har uppdaterat ditt konto."
+      destroyed: Hej då! Ditt konto är bort taget. Vi hoppas att få se dig snart igen.
+      signed_up: Välkommen! Du är registerad.
+      signed_up_but_inactive: Du är registrerad. Men du kan inte logga in än eftersom ditt konto inte är aktiverat än.
+      signed_up_but_locked: Du är registrerad. Men du kan inte logga in eftersom ditt konto är låst.
+      signed_up_but_unconfirmed: Ett meddelande med en bekräftelselänk har skickats till din e-postadress. Vänligen öppna länken för att aktivera ditt konto.
+      update_needs_confirmation: Du har uppdaterat ditt konto och vi måste verifiera din nya e-postadress. Kontrollera din e-post och klicka på bekräftelselänken för att slutföra bekräftelsen.
+      updated: Du har uppdaterat ditt konto.
     sessions:
-      signed_in: "Inloggad."
-      signed_out: "Utloggad."
+      signed_in: Inloggad.
+      signed_out: Utloggad.
     unlocks:
-      send_instructions: "Du kommer få ett mail med instruktioner om hur du bekräftar ditt konto inom några minuter."
-      send_paranoid_instructions: "Om kontot finns kommer du få ett mail med instruktioner om hur du kan låsa upp det inom några minuter."
-      unlocked: "Ditt konto har låsts upp. Vänligen logga in att fortsätta."
+      send_instructions: Du kommer få ett mail med instruktioner om hur du bekräftar ditt konto inom några minuter.
+      send_paranoid_instructions: Om kontot finns kommer du få ett mail med instruktioner om hur du kan låsa upp det inom några minuter.
+      unlocked: Ditt konto har låsts upp. Vänligen logga in att fortsätta.
   errors:
     messages:
-      already_confirmed: "var redan bekräftat, försök logga in"
+      already_confirmed: var redan bekräftat, försök logga in
       confirmation_period_expired: 'måste bekräftas inom %{period}, vänligen begär ett nytt'
-      expired: "har löpt ut, vänligen begär ett nytt"
-      not_found: "hittades inte"
-      not_locked: "var inte låst"
+      expired: har löpt ut, vänligen begär ett nytt
+      not_found: hittades inte
+      not_locked: var inte låst
       not_saved:
         one: '1 fel förbjöd %{resource} från att sparas:'
         other: '%{count} fel förbjöd %{resource} från att sparas:'

@@ -255,6 +255,9 @@
     header:
       finished_hoc: "من ساعتی با کد خود را به پایان رسانده ام"
       sign_in_to_save: "وارد گردید تا پیشرفتتان ذخیره شود"
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: "دانش آموزان من"
       label: "سلام %{username}"
@@ -468,6 +471,13 @@
     flappy_og_title: "بازی Flappy من را ببین"
     studio_og_title: Check out my story
     og_description: "من خودم با Code.org کد را نوشتم"
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: "یک اسکریپت جدید ایجاد کردید."
     destroyed: "یک اسکریپت را از بین بردید."

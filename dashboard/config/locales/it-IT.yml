@@ -280,6 +280,9 @@
     header:
       finished_hoc: Ho finito la mia Ora del Codice
       sign_in_to_save: Accedi per salvare i progressi fatti
+      free_play:
+        playlab: Costruisci una App
+        artist: Disegna qualcosa
     user:
       classroom: I miei studenti
       label: Ciao %{username}
@@ -350,7 +353,7 @@
       students: Studenti
       section_code: codice-classe
       add_section_code: Aggiungere il codice-classe degli studenti
-      secret: Tipo segreto
+      secret: Tipo di password
       grade: Livello
       course: Corso
       rename: rinomina
@@ -386,8 +389,8 @@
     classroom_activity: Attività "Senza Rete"
   home:
     title: Officina del Codice
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    all_courses: Panoramica dei corsi 1, 2 e 3
+    lesson_plans: Piani delle lezioni
     signin_message: Già iscritto? %{link}
     student_reg_link: Iscrizione studenti
     teacher_reg_link: Iscrizione insegnanti
@@ -445,7 +448,7 @@
     feedback: Facci sapere che ne pensi
     translate: Aiutaci a tradurre nella tua lingua
     support: Supporto
-    support_url: http://programmailfuturo.it
+    support_url: http://programmailfuturo.it/aiuto
     tos: Termini di servizio
     privacy: Informativa sulla privacy
     secure: Versione sicura
@@ -500,6 +503,14 @@
     flappy_og_title: Prova la mia versione del gioco Flappy
     studio_og_title: Prova la mia versione del Gioco da Laboratorio
     og_description: Ho scritto il codice per conto mio con Code.org
+    phone_number_not_allowed: Sembra che ci sia un numero di telefono nel codice.
+      Prova a cambiare il testo.
+    address_not_allowed: Sembra che ci sia un indirizzo nel codice. Prova a cambiare
+      il testo.
+    email_not_allowed: Sembra che ci sia un indirizzo di posta elettronica nel codice.
+      Prova a cambiare il testo.
+    profanity_not_allowed: Sembra che ci siano delle parole volgari nel codice. Prova
+      a cambiare il testo.
   builder:
     created: Hai creato un nuovo script.
     destroyed: Hai cancellato uno script.
@@ -537,7 +548,7 @@
     feedback: Dicci che ne pensi
     report_bug: Segnala un errore
     support: Ottieni aiuto
-    support_url: "//programmailfuturo.it"
+    support_url: "//programmailfuturo.it/aiuto"
   multi:
     wrong_title: Risposta non corretta
     wrong_body: La risposta che hai inserito non è corretta.  Per favore riprova!

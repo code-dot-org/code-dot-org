@@ -62,6 +62,7 @@
   "backToPreviousLevel":"Kembali ke teka-teki sebelumnya",
   "saveToGallery":"Simpan ke galeri Anda",
   "savedToGallery":"Simpan ke galeri Anda!",
+  "shareFailure":"Sorry, we can't share this program.",
   "typeCode":"Ketik kode JavaScript di bawah instruksi ini.",
   "typeFuncs":"Fungsi yang tersedia: %1",
   "typeHint":"Perhatikan bahwa tanda kurung dan titik koma diperlukan.",

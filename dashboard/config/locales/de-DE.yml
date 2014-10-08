@@ -33,7 +33,7 @@
     submit: Hinweis hinzufügen
   appname: Code.org
   stage: Bühne
-  stage_number: Stage %{number}
+  stage_number: Level %{number}
   puzzle: Puzzle
   trophies: Trophäen
   courses: Kurse
@@ -64,9 +64,12 @@
     need_confirmation: Keine Anmeldebestätigung erhalten?
     need_unlock: Keine Anweisungen zum Entsperren erhalten?
   signup_form:
-    overview_student: Melde DIch an, um Deinen Fortschritt zu speichern.
-    overview_teacher: Lehre Informatik in deinem Klassenzimmer, indem du dich registrierst.<p/>
-      Damit kannst du die Leistungen deiner Schüler verfolgen und Belohnungen bekommen.
+    overview_student: Registriere dich, um deine Erfolge festzuhalten. Deine E-Mail
+      Adresse wird nur zum Einloggen und Passwort-Wiederherstellung benutzt. Für mehr
+      Informationen kannst du unsere <a href="http://code.org/privacy">Datenschutzerklärung</a>
+      anschauen.
+    overview_teacher: 'Für Lehrer: Registrieren Sie sich, um ihre Schüler hinzuzufügen
+      und ihren Lernfortschritt zu verfolgen.'
     no_signup_message: Du kannst <a target="_blank" href="http://learn.code.org">die
       verschiedenen Level und Puzzle</a> durchsuchen, aber um Deinen Fortschritt zu
       speichern musst Du dich anmelden.
@@ -101,10 +104,11 @@
     valid_password: Gültiges Passwort!
     invalid_password: Das Passwort muss mindestens 6 Zeichen lang sein
     mismatch_password: Die eingegebenen Passwörter stimmen nicht überein
-    student_terms: Ich erkläre mich mit den <a href='http://code.org/tos'>Nutzungsbedingungen</a>
-      von Code.org einverstanden. Falls ich unter 13 Jahre alt bin, bestätige ich,
-      dass ich das Einverständnis meiner Eltern oder Personensorgeberechtigten habe,
-      die Dienste von Code.org zu nutzen.
+    student_terms: 'Ich aktzeptiere die <a href=''http://code.org/tos''>AGB</a> von
+      Code.org. Wenn ich unter 13 Jahre alt bin, bestätige ich, dass die die Erlaubnis
+      meiner Eltern/Erziehungsbrechtigten habe, Code.org zu benutzen.<br/>Für unter
+      13 jährige Nutzer: E-Mail Adressen werden nicht so gespeichert, dass wir Kontakt
+      herstellen könnten.'
     teacher_terms: Ich erkläre mich mit den <a href='http://code.org/tos'>Nutzungsbedingungen</a>
       von Code.org einverstanden.
     additional_information: Wir benötigen noch einige Informationen, um mit der Anmeldung
@@ -267,6 +271,9 @@
     header:
       finished_hoc: Ich habe meine Programmierstunde beendet.
       sign_in_to_save: Melden Sie sich an um Ihren Fortschritt zu speichern
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: Meine Schüler
       label: Hallo %{username}
@@ -372,8 +379,8 @@
     classroom_activity: Aktivität ohne Computer
   home:
     title: Code Studio
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    all_courses: "Übersicht der Level 1, 2 und 3"
+    lesson_plans: Arbeitsplan
     signin_message: Schon registriert? %{link}
     student_reg_link: Studenten Anmeldung
     teacher_reg_link: Lehrer Anmeldung
@@ -453,21 +460,21 @@
     download: lade Video herunter
   compatability:
     working:
-      header: Wir arbeiten an der Unterstützung für Ihren Browser.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Your browser doesn't support all the features required, and you may experience
-        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
-        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
-        your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+      header: Wir arbeiten an der Unterstützung für deinen Browser.
+      message: Code.org benutzt aktuellste Web-Technologie. Dies hat die Folge, dass
+        diese Seite schneller lädt. Dein Browser unterstützt leider nicht alle Funtkionen,
+        dies könnte zu Fehlern führen. Bitte hilf uns, indem du <a href='%{report_issue_url}'>Fehler
+        meldest</a>. Du kannst auch deine <a href='%{supported_browsers_url}'>Webbrowser
+        zu einer unterstützten Version updaten</a>.
+      hide_this_warning: Diese Warnung ausblenden
     upgrade:
-      header: Bitte aktualisieren Sie Ihren Browser.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
-      button: Take me to the list of supported browsers
+      header: Bitte aktualisiere deinen Browser.
+      message: Code.org benutzt aktuellste Web-Technologie. Dies hat die Folge, dass
+        diese Seite schneller lädt. Dein Browser unterstützt leider nicht alle Funtkionen,
+        um diesen Teil der Seite zu öffnen.<br/><br/>Installiere einen unterstützten
+        Webbrowser von unserer Liste, um fortzufahren. Du kannst versuchen <a href='#'>diese
+        Seite zu öffnen</a>, aber dies könnte Fehler hervorrufen.
+      button: Liste aller unterstützten Browser
   slow_loading: Das benötigt länger als normal...
   try_reloading: Versuchen Sie die Seite neu zu laden
   next_stage: Geschafft! Fahre mit dem nächsten Level fort.
@@ -478,8 +485,15 @@
     title: Klicken Sie auf "Ausführen", um das Programm in Aktion zu sehen
     bounce_og_title: Schau dir mein Sprung-Spiel an
     flappy_og_title: Schau dir mein Flappy Spiel an
-    studio_og_title: Schauen Sie sich meine Geschichte an
+    studio_og_title: Teste meinen Labor-App
     og_description: Ich habe meinen Code selbst mit Code.org erstellt
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: Du hast ein neues Script erstellt.
     destroyed: Du hast ein Script zerstört.

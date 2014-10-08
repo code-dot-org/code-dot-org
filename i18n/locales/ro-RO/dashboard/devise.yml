@@ -1,57 +1,57 @@
-"ro":
+ro:
   devise:
     confirmations:
-      confirmed: "Adresa ta de email a fost confirmată cu succes."
-      send_instructions: "Vei primi un email cu instrucţiuni despre cum să îți confirmi contul în câteva minute."
-      send_paranoid_instructions: "Dacă adresa ta de email există în baza noastră de date, vei primi un email cu instrucţiuni despre cum să îți confirmi contul în câteva minute."
+      confirmed: Adresa ta de email a fost confirmată cu succes.
+      send_instructions: Vei primi un email cu instrucţiuni despre cum să îți confirmi contul în câteva minute.
+      send_paranoid_instructions: Dacă adresa ta de email există în baza noastră de date, vei primi un email cu instrucţiuni despre cum să îți confirmi contul în câteva minute.
     failure:
-      already_authenticated: "Ești deja logat."
-      inactive: "Contul tău nu a fost încă activat."
-      invalid: "Email sau parolă invalidă."
-      invalid_token: "Token invalid de autentificare."
-      locked: "Contul tău este blocat."
-      not_found_in_database: "Email sau parolă invalidă."
-      timeout: "Sesiunea ta a expirat, te rugăm să te loghezi din nou pentru a continua."
-      unauthenticated: "Trebuie să te loghezi sau să te înregistrezi înainte de a continua."
-      unconfirmed: "Trebuie să îți confirmi contul înainte de a continua."
+      already_authenticated: Ești deja logat.
+      inactive: Contul tău nu a fost încă activat.
+      invalid: Email sau parolă invalidă.
+      invalid_token: Token invalid de autentificare.
+      locked: Contul tău este blocat.
+      not_found_in_database: Email sau parolă invalidă.
+      timeout: Sesiunea ta a expirat, te rugăm să te loghezi din nou pentru a continua.
+      unauthenticated: Trebuie să te loghezi sau să te înregistrezi înainte de a continua.
+      unconfirmed: Trebuie să îți confirmi contul înainte de a continua.
     mailer:
       confirmation_instructions:
-        subject: "Instrucţiuni de confirmare Code.org"
+        subject: Instrucţiuni de confirmare Code.org
       reset_password_instructions:
-        subject: "Instrucțiuni de resetare a parolei Code.org"
+        subject: Instrucțiuni de resetare a parolei Code.org
       unlock_instructions:
-        subject: "Instrucţiuni de deblocare"
+        subject: Instrucţiuni de deblocare
     omniauth_callbacks:
       failure: 'Nu te-ai putut autentifica la %{kind} pentru că "%{reason}".'
       success: 'Te-ai autentificat cu succes din contul %{kind}.'
     passwords:
-      no_token: "Nu poţi accesa această pagină fără să pornești de la un email de resetare a parolei. Dacă revii prin accesarea unui email de resetare a parolei, te rugăm să te asiguri că ai folosit URL-ul furnizat acolo."
-      send_instructions: "Vei primi un email cu instrucţiuni despre cum să îți resetezi parola în câteva minute."
-      send_paranoid_instructions: "Daca adresa ta de email există în baza noastră de date, vei primi un email ce conține linkul pentru recuperarea parolei."
-      updated: "Parola ta a fost schimbată cu succes. Acum ești logat."
-      updated_not_active: "Parola ta a fost schimbată cu succes."
+      no_token: Nu poţi accesa această pagină fără să pornești de la un email de resetare a parolei. Dacă revii prin accesarea unui email de resetare a parolei, te rugăm să te asiguri că ai folosit URL-ul furnizat acolo.
+      send_instructions: Vei primi un email cu instrucţiuni despre cum să îți resetezi parola în câteva minute.
+      send_paranoid_instructions: Daca adresa ta de email există în baza noastră de date, vei primi un email ce conține linkul pentru recuperarea parolei.
+      updated: Parola ta a fost schimbată cu succes. Acum ești logat.
+      updated_not_active: Parola ta a fost schimbată cu succes.
     registrations:
-      destroyed: "La revedere! Contul tău a fost anulat cu succes. Sperăm să te revedem curând."
-      signed_up: "Bine ai venit! Te-ai înregistrat cu succes."
-      signed_up_but_inactive: "Te-ai înregistrat cu succes. Totuși, nu poți să te loghezi deoarece contul tău nu este încă activat."
-      signed_up_but_locked: "Te-ai înregistrat cu succes. Totuși, nu te poți loga deoarece contul tău este blocat."
-      signed_up_but_unconfirmed: "Un mesaj cu un link de confirmare a fost trimis la adresa ta de email. Te rugăm să accesezi link-ul pentru a îți activa contul."
-      update_needs_confirmation: "Ți-ai actualizat contul cu succes, dar noi trebuie sa verificăm noua ta adresa de email. Te rugăm să îți verifici emailul și să dai click pe linkul de confirmare pentru a finaliza modificarea adresei."
-      updated: "Ți-ai actualizat contul cu succes."
+      destroyed: La revedere! Contul tău a fost anulat cu succes. Sperăm să te revedem curând.
+      signed_up: Bine ai venit! Te-ai înregistrat cu succes.
+      signed_up_but_inactive: Te-ai înregistrat cu succes. Totuși, nu poți să te loghezi deoarece contul tău nu este încă activat.
+      signed_up_but_locked: Te-ai înregistrat cu succes. Totuși, nu te poți loga deoarece contul tău este blocat.
+      signed_up_but_unconfirmed: Un mesaj cu un link de confirmare a fost trimis la adresa ta de email. Te rugăm să accesezi link-ul pentru a îți activa contul.
+      update_needs_confirmation: Ți-ai actualizat contul cu succes, dar noi trebuie sa verificăm noua ta adresa de email. Te rugăm să îți verifici emailul și să dai click pe linkul de confirmare pentru a finaliza modificarea adresei.
+      updated: Ți-ai actualizat contul cu succes.
     sessions:
-      signed_in: "Te-ai logat cu succes."
-      signed_out: "Te-ai delogat cu succes."
+      signed_in: Te-ai logat cu succes.
+      signed_out: Te-ai delogat cu succes.
     unlocks:
-      send_instructions: "Vei primi un email cu instrucţiuni despre cum să îți deblochezi contul în câteva minute."
-      send_paranoid_instructions: "Dacă acest cont există, vei primi un email cu instrucțiuni despre cum să-l deblochezi în câteva minute."
-      unlocked: "Contul tău a fost deblocat cu succes. Te rugăm să te loghezi pentru a continua."
+      send_instructions: Vei primi un email cu instrucţiuni despre cum să îți deblochezi contul în câteva minute.
+      send_paranoid_instructions: Dacă acest cont există, vei primi un email cu instrucțiuni despre cum să-l deblochezi în câteva minute.
+      unlocked: Contul tău a fost deblocat cu succes. Te rugăm să te loghezi pentru a continua.
   errors:
     messages:
-      already_confirmed: "a fost confirmat deja, te rugăm să încerci să te loghezi"
+      already_confirmed: a fost confirmat deja, te rugăm să încerci să te loghezi
       confirmation_period_expired: 'trebuie să fie confirmat în %{period}, te rugăm ceri unul nou'
-      expired: "a expirat, te rugăm să soliciți unul nou"
-      not_found: "nu a fost găsit"
-      not_locked: "nu a fost blocat"
+      expired: a expirat, te rugăm să soliciți unul nou
+      not_found: nu a fost găsit
+      not_locked: nu a fost blocat
       not_saved:
         one: '1 eroare interzice acestui %{resource} să fie salvat:'
         other: '%{count} erori interzic acestui %{resource} să fie salvat:'

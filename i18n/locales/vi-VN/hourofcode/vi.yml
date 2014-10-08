@@ -1,129 +1,129 @@
-vi:
-  site_name: Hour of Code
-  language: Tiếng Việt
-  front_title: Tham gia sự kiện lớn nhất từ trước đến nay trong lịch sử, Ngày 14 tháng 8 năm 2014
-  coming_soon: Sắp diễn ra
-  front_header_banner: Tham gia sự kiện lớn nhất từ trước đến nay trong lịch sử, Ngày 14 tháng 8 năm 2014
+"vi":
+  site_name: "Hour of Code"
+  language: "Tiếng Việt"
+  front_title: "Tham gia sự kiện lớn nhất từ trước đến nay trong lịch sử, Ngày 14 tháng 8 năm 2014"
+  coming_soon: "Sắp diễn ra"
+  front_header_banner: "Tham gia sự kiện lớn nhất từ trước đến nay trong lịch sử, Ngày 14 tháng 8 năm 2014"
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 170 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>No se necesita experiencia. Para edades entre 4 y 104 años.</strong>'
-  front_watch_video: Xem video mới
-  header_menu_resources: Nguồn xây dựng
-  header_menu_faq: Những câu hỏi thường gặp
-  header_menu_prizes: Phần thưởng
-  header_menu_uk_code_org: uk.code.org
-  choose_country_header: Cùng tham gia trên toàn thế giới!
-  country_ar: Ác-ghen-tina
-  country_au: Úc
-  country_br: Braxin
-  country_eu: Liên minh châu Âu
+  front_watch_video: "Xem video mới"
+  header_menu_resources: "Nguồn xây dựng"
+  header_menu_faq: "Những câu hỏi thường gặp"
+  header_menu_prizes: "Phần thưởng"
+  header_menu_uk_code_org: "uk.code.org"
+  choose_country_header: "Cùng tham gia trên toàn thế giới!"
+  country_ar: "Ác-ghen-tina"
+  country_au: "Úc"
+  country_br: "Braxin"
+  country_eu: "Liên minh châu Âu"
   country_it: 'Italia - Ý'
-  country_nz: New Zealand
-  country_ro: Rô-ma-ni
-  country_uk: Vương quốc Anh
+  country_nz: "New Zealand"
+  country_ro: "Rô-ma-ni"
+  country_uk: "Vương quốc Anh"
   country_us: 'Hoa kỳ - Mỹ'
-  prizes_all: Giải thưởng cho các tổ chức tham gia
-  prizes_every_organizer: Mỗi nhà tổ chức Giờ Mã sẽ nhận được tín dụng Dropbox hoặc Skype như một cảm ơn bạn
+  prizes_all: "Giải thưởng cho các tổ chức tham gia"
+  prizes_every_organizer: "Mỗi nhà tổ chức Giờ Mã sẽ nhận được tín dụng Dropbox hoặc Skype như một cảm ơn bạn"
   prizes_technology: 'Một trường công lập ở mỗi tiểu bang Hoa Kỳ (& Washington DC) sẽ giành chiến thắng 10.000 $ giá trị của công nghệ'
-  prizes_tech_chats: 50 phòng học sẽ giành chiến thắng video chat với khách mời đặc biệt
-  prizes_details: Thông tin chi tiết
+  prizes_tech_chats: "50 phòng học sẽ giành chiến thắng video chat với khách mời đặc biệt"
+  prizes_details: "Thông tin chi tiết"
   n_have_learned_an_hoc: '<h1>#</h1><h3>đã cố gắng/ trải qua một</h3><h2>THỜI ĐIỂM CỦA CODE</h2>'
-  anybody_can_learn: Bất cứ ai cũng có thể tìm hiểu.
-  register_now: Đăng ký ngay bây giờ
-  front_join_us_heading: Một giờ cho mã lập trình dành cho tất cả học sinh.
-  front_join_us_description: Khoa học máy tính là một nền tảng dành cho tất cả những ai đam mê tìm hiểu. Hãy giúp chúng tôi quảng bá nó đến với tất cả mọi người.
-  front_join_us_button: Hãy tham gia với chúng tớ
-  front_what_is_hoc: Hour of Code là gì?
-  front_join_us_header: Bất kỳ thời gian trong ngày 8-14, máy tính khoa học giáo dục tuần, máy chủ lưu trữ một sự kiện giờ mã để cho thấy rằng bất cứ ai có thể tìm hiểu những điều cơ bản, và có niềm vui với Giờ Mã!
-  front_join_us_header_uk: Bất kỳ lúc nào trong ngày 8-14 lưu trữ một sự kiện giờ mã cho rằng bất cứ ai có thể tìm hiểu những điều cơ bản, và niềm vui!
-  front_join_us_teacher: Bạn có phải là một giáo viên?
-  front_join_us_inspire: Truyền cảm hứng cho học sinh/ sinh viên của bạn với
-  front_join_us_inspire_link: Hour of Code trong lớp của bạn.
-  front_join_us_parent: Bạn có phải là cha/mẹ?
-  front_join_us_ask_link: Yêu cầu trường học của bạn
-  front_join_us_ask: để quản lý khóa học Hour of Code.
-  front_join_us_computer_science: Bạn có yêu khoa học máy tính?
-  front_join_us_spread: Hãy lan tỏa nó tới mọi người xung quanh bạn.
-  front_join_us_organize: hoặc tổ chức khóa học Hour of Code cho chính bạn.
-  front_join_us_how_to_run: Hãy xem cách thức nó hoạt động ra sao
-  front_join_us_help_promote: Quảng bá Hour of Code tới mọi người
-  front_join_us_students: Học sinh
-  front_join_us_teachers: Giáo viên
-  front_join_us_everyone: Mọi người
-  front_join_us_try: Làm thử
-  front_join_us_host: Quản lý nó
-  front_join_us_support: Hỗ trợ nó
-  signup_header: Hãy cho chúng tôi biết bạn đang có
-  signup_header_ar: Cho chúng tôi biết nếu bạn đang tổ chức một lớp Hour of Code
-  signup_name_label: Tên của bạn
-  signup_email_label: Email của bạn
-  signup_organization_name_label: Tên trường hoặc tổ chức bạn đang học hoặc làm việc
-  signup_event_type_label: Kiểu sự kiện
-  signup_event_entire_school_label: Toàn bộ học sinh trường tôi đã tham gia vào
-  signup_event_location_label: Địa điểm sự kiện (tuỳ chọn)
-  signup_special_event_flag_label: Làm nổi bật sự kiện của tôi lên
-  signup_special_event_details_label: Chi tiết về sự kiện đặc biệt
+  anybody_can_learn: "Bất cứ ai cũng có thể tìm hiểu."
+  register_now: "Đăng ký ngay bây giờ"
+  front_join_us_heading: "Một giờ cho mã lập trình dành cho tất cả học sinh."
+  front_join_us_description: "Khoa học máy tính là một nền tảng dành cho tất cả những ai đam mê tìm hiểu. Hãy giúp chúng tôi quảng bá nó đến với tất cả mọi người."
+  front_join_us_button: "Hãy tham gia với chúng tớ"
+  front_what_is_hoc: "Hour of Code là gì?"
+  front_join_us_header: "Bất kỳ thời gian trong ngày 8-14, máy tính khoa học giáo dục tuần, máy chủ lưu trữ một sự kiện giờ mã để cho thấy rằng bất cứ ai có thể tìm hiểu những điều cơ bản, và có niềm vui với Giờ Mã!"
+  front_join_us_header_uk: "Bất kỳ lúc nào trong ngày 8-14 lưu trữ một sự kiện giờ mã cho rằng bất cứ ai có thể tìm hiểu những điều cơ bản, và niềm vui!"
+  front_join_us_teacher: "Bạn có phải là một giáo viên?"
+  front_join_us_inspire: "Truyền cảm hứng cho học sinh/ sinh viên của bạn với"
+  front_join_us_inspire_link: "Hour of Code trong lớp của bạn."
+  front_join_us_parent: "Bạn có phải là cha/mẹ?"
+  front_join_us_ask_link: "Yêu cầu trường học của bạn"
+  front_join_us_ask: "để quản lý khóa học Hour of Code."
+  front_join_us_computer_science: "Bạn có yêu khoa học máy tính?"
+  front_join_us_spread: "Hãy lan tỏa nó tới mọi người xung quanh bạn."
+  front_join_us_organize: "hoặc tổ chức khóa học Hour of Code cho chính bạn."
+  front_join_us_how_to_run: "Hãy xem cách thức nó hoạt động ra sao"
+  front_join_us_help_promote: "Quảng bá Hour of Code tới mọi người"
+  front_join_us_students: "Học sinh"
+  front_join_us_teachers: "Giáo viên"
+  front_join_us_everyone: "Mọi người"
+  front_join_us_try: "Làm thử"
+  front_join_us_host: "Quản lý nó"
+  front_join_us_support: "Hỗ trợ nó"
+  signup_header: "Hãy cho chúng tôi biết bạn đang có"
+  signup_header_ar: "Cho chúng tôi biết nếu bạn đang tổ chức một lớp Hour of Code"
+  signup_name_label: "Tên của bạn"
+  signup_email_label: "Email của bạn"
+  signup_organization_name_label: "Tên trường hoặc tổ chức bạn đang học hoặc làm việc"
+  signup_event_type_label: "Kiểu sự kiện"
+  signup_event_entire_school_label: "Toàn bộ học sinh trường tôi đã tham gia vào"
+  signup_event_location_label: "Địa điểm sự kiện (tuỳ chọn)"
+  signup_special_event_flag_label: "Làm nổi bật sự kiện của tôi lên"
+  signup_special_event_details_label: "Chi tiết về sự kiện đặc biệt"
   signup_send_posters_flag_label: 'Gửi <a href= "/resources#posters"> áp phích</a> cho trường học hoặc tổ chức của tôi'
-  signup_send_posters_address_label: Địa chỉ trường hoặc tổ chức của bạn
-  signup_whole_school_flag_label: Sự kiện này dành cho một trường
-  signup_name_placeholder: Tên của bạn
-  signup_email_placeholder: You@example.com
-  signup_organization_name_placeholder: Ví dụ, Trường THPT Phan Châu Trinh / Tổ chức AIESEC
+  signup_send_posters_address_label: "Địa chỉ trường hoặc tổ chức của bạn"
+  signup_whole_school_flag_label: "Sự kiện này dành cho một trường"
+  signup_name_placeholder: "Tên của bạn"
+  signup_email_placeholder: "You@example.com"
+  signup_organization_name_placeholder: "Ví dụ, Trường THPT Phan Châu Trinh / Tổ chức AIESEC"
   signup_event_location_placeholder: "Mã bưu chính và đất nước OR đầy đủ địa chỉ. \r (chúng tôi sẽ sử dụng điều này để đặt một pin trên bản đồ của chúng tôi)"
-  signup_special_event_details_placeholder: Hãy mô tả điều gì khiến cho sự kiện này trở nên đặc biệt
-  signup_send_posters_address_placeholder: Địa chỉ bạn cung cấp tuyệt đối không được chia sẻ trên trang của chúng tôi
-  signup_event_type_in_school: Trong một trường học
-  signup_event_type_out_of_school: Bên ngoài trường học
-  signup_submit_label: Đăng ký/ Ghi danh
-  signup_submit_error_message: Đã xảy ra lỗi trong quá trình thao tác. Xin vui lòng kiểm tra lại và đảm bảo rằng các ô trống bắt buộc đã được điền thông tin đầy đủ.
-  signup_thank_you_header: Cám ơn bạn đã đăng ký với chúng tôi! HOUR of CODE
-  signup_thank_you_message: Chúng tôi đã gửi cho bạn một thư xác nhận vào địa chỉ email của bạn đã cung cấp. Hãy đảm bảo rằng bạn đã đọc nó trong hộp thư.
-  map_header: Sự kiện Hour of Code trên toàn thế giới
-  map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
-  meta_tag_og_title: Sắp có khóa học Hour of Code
-  meta_tag_og_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.
-  meta_tag_twitter_title: Sắp có khóa học Hour of Code
-  meta_tag_twitter_description: The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.
+  signup_special_event_details_placeholder: "Hãy mô tả điều gì khiến cho sự kiện này trở nên đặc biệt"
+  signup_send_posters_address_placeholder: "Địa chỉ bạn cung cấp tuyệt đối không được chia sẻ trên trang của chúng tôi"
+  signup_event_type_in_school: "Trong một trường học"
+  signup_event_type_out_of_school: "Bên ngoài trường học"
+  signup_submit_label: "Đăng ký/ Ghi danh"
+  signup_submit_error_message: "Đã xảy ra lỗi trong quá trình thao tác. Xin vui lòng kiểm tra lại và đảm bảo rằng các ô trống bắt buộc đã được điền thông tin đầy đủ."
+  signup_thank_you_header: "Cám ơn bạn đã đăng ký với chúng tôi! HOUR of CODE"
+  signup_thank_you_message: "Chúng tôi đã gửi cho bạn một thư xác nhận vào địa chỉ email của bạn đã cung cấp. Hãy đảm bảo rằng bạn đã đọc nó trong hộp thư."
+  map_header: "Sự kiện Hour of Code trên toàn thế giới"
+  map_header_ar: "Eventos de Hora de Program.AR alrededor del mundo"
+  meta_tag_og_title: "Sắp có khóa học Hour of Code"
+  meta_tag_og_description: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104."
+  meta_tag_twitter_title: "Sắp có khóa học Hour of Code"
+  meta_tag_twitter_description: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104."
   twitter_default_text: 'Tôi đang đang tham gia #HourofCode vào năm nay? còn bạn'
-  hardware_prizes_form_name_label: Tên của bạn
-  hardware_prizes_form_name_placeholder: Tên của bạn
-  hardware_prizes_form_email_label: Email của bạn
-  hardware_prizes_form_email_placeholder: Email của bạn
-  hardware_prizes_form_school_name_label: Tên trường
-  hardware_prizes_form_school_name_placeholder: Tên trường
-  hardware_prizes_form_school_address_label: Địa chỉ của trường
-  hardware_prizes_form_school_address_placeholder: Địa chỉ của trường
-  hardware_prizes_form_school_type_label: Bậc học của trường
-  hardware_prizes_form_school_type_option_elementary: Tiểu học
-  hardware_prizes_form_school_type_option_middle_school: Trung học cơ sở
-  hardware_prizes_form_school_type_option_high_school: Trung học phổ thông
-  hardware_prizes_form_qualifying_school_label: Hệ thống trường học với 12 khối học
-  hardware_prizes_form_number_students_label: Số lượng học sinh/ sinh viên tham gia
-  hardware_prizes_form_number_students_placeholder: Số lượng học sinh/ sinh viên
-  hardware_prizes_form_plan_file_label: Hãy tải lên kế hoạch Hour of Code của bạn
+  hardware_prizes_form_name_label: "Tên của bạn"
+  hardware_prizes_form_name_placeholder: "Tên của bạn"
+  hardware_prizes_form_email_label: "Email của bạn"
+  hardware_prizes_form_email_placeholder: "Email của bạn"
+  hardware_prizes_form_school_name_label: "Tên trường"
+  hardware_prizes_form_school_name_placeholder: "Tên trường"
+  hardware_prizes_form_school_address_label: "Địa chỉ của trường"
+  hardware_prizes_form_school_address_placeholder: "Địa chỉ của trường"
+  hardware_prizes_form_school_type_label: "Bậc học của trường"
+  hardware_prizes_form_school_type_option_elementary: "Tiểu học"
+  hardware_prizes_form_school_type_option_middle_school: "Trung học cơ sở"
+  hardware_prizes_form_school_type_option_high_school: "Trung học phổ thông"
+  hardware_prizes_form_qualifying_school_label: "Hệ thống trường học với 12 khối học"
+  hardware_prizes_form_number_students_label: "Số lượng học sinh/ sinh viên tham gia"
+  hardware_prizes_form_number_students_placeholder: "Số lượng học sinh/ sinh viên"
+  hardware_prizes_form_plan_file_label: "Hãy tải lên kế hoạch Hour of Code của bạn"
   hardware_prizes_form_plan_file_description: 'Gửi một lịch trình đơn giản của làm thế nào bạn có kế hoạch tổ chức mỗi học sinh để làm Hour of Code tại trường học của bạn. Bạn có thể tham khảo một kế hoạch mẫu: #PDF # | #Word #'
-  hardware_prizes_form_submit_label: Gửi đi/ Chấp nhận
-  hoc_faq_title: Câu hỏi thường gặp
-  hoc_faq_what_is_hoc_q: Hour of Code là gì?
+  hardware_prizes_form_submit_label: "Gửi đi/ Chấp nhận"
+  hoc_faq_title: "Câu hỏi thường gặp"
+  hoc_faq_what_is_hoc_q: "Hour of Code là gì?"
   hoc_faq_what_is_hoc_a: "Hour of Code là một giới thiệu một giờ về khoa học máy tính, được thiết kế để giúp mọi người hiểu hơn về mã lập trình và hiển thị mà bất cứ ai có thể tìm hiểu những điều cơ bản. <a href='http://code.org/learn'>Xem các hướng dẫn</a>, và tìm ra những cái mới đến cho giờ mã 2014."
-  hoc_faq_last_year: Thử những khóa học năm trước
-  hoc_faq_when_is_hoc_q: Khi là giờ mã?
+  hoc_faq_last_year: "Thử những khóa học năm trước"
+  hoc_faq_when_is_hoc_q: "Khi là giờ mã?"
   hoc_faq_when_is_hoc_a: 'Bất cứ ai cũng có thể tham gia Hour of Code trong bất kỳ thời gian nào, nhưng mục tiêu của chiến dịch là đạt tới 10 triệu người học trong suốt tuần lễ kỷ niệm giáo dục khoa học máy tính từ 8-14 tháng 12 năm 2014. Có phải đó là một giờ học  đặc biệt. Không bạn có thể học Hour of Code bất kỳ lúc nào trong  suốt tuần đó. (và nếu bạn không làm nó trong tuần đó thì có thể bạn đã làm nó lúc trước hoặc sau này)'
-  hoc_faq_why_cs_q: Tại sao lại là khoa học máy tính?
+  hoc_faq_why_cs_q: "Tại sao lại là khoa học máy tính?"
   hoc_faq_why_cs_a: "<i>Mỗi</i> học sinh nên có cơ hội để tìm hiểu khoa học máy tính. Nó giúp nuôi dưỡng giải quyết vấn đề kỹ năng, logic và sáng tạo. Bằng cách bắt đầu sớm, học sinh/ sinh viên sẽ có một nền tảng cho sự thành công trong bất kỳ con đường sự nghiệp thế kỷ 21. Xem thêm thống kê trên <a href='http://code.org'> Code.org</a>."
-  hoc_faq_how_participate_q: Làm thế nào để tham gia vào Hour of Code?
+  hoc_faq_how_participate_q: "Làm thế nào để tham gia vào Hour of Code?"
   hoc_faq_how_participate_a: |2
     đăng ký để làm chủ Hour of Code  
      <a href='http://hourofcode.org'> tại đây </a> and <a href='/resources/how-to'> bắt đầu kế hoạch </a>. Bạn có thể tổ chức Hour of Code tại trường học của bạn hoặc trong cộng đồng của bạn. Giống như một câu lạc bộ, một tổ chức phi lợi nhuận. hoặc tự mình thử sức với nó từ ngày 8-12-2014
-  hoc_faq_behind_hoc_q: Những ai đã làm nên Hour of Code?
+  hoc_faq_behind_hoc_q: "Những ai đã làm nên Hour of Code?"
   hoc_faq_behind_hoc_a: "Giờ mã được tổ chức bởi <a href='http://code.org'> Code.org</a>, một khu vực 501 c 3 phi lợi nhuận chuyên dụng để mở rộng sự tham gia trong khoa học máy tính bằng cách làm cho nó có sẵn trong các trường học thêm, và tăng sự tham gia của phụ nữ và các sinh viên underrepresented của màu sắc. Một <a href='http://code.org/about/partners'> liên minh chưa từng có của các đối tác</a> đã đến với nhau để hỗ trợ giờ mã, quá &mdash; bao gồm Microsoft, Apple, Amazon, chàng trai và cô gái câu lạc bộ của Mỹ và hội đồng quản trị trường cao đẳng."
-  hoc_faq_host_q: Tôi không biết điều gì hết về coding/ lập trình. Tôi vẫn có thể đến tham dự sự kiện?
+  hoc_faq_host_q: "Tôi không biết điều gì hết về coding/ lập trình. Tôi vẫn có thể đến tham dự sự kiện?"
   hoc_faq_host_a: "dĩ nhiên. Các hoạt động Hour of Code đều có hướng dẫn tự động trên trang web. Tất cả những gì bạn cần làm là <a href='http://code.org/learn'>tham gia vào các khóa học của chúng tôi</a>, chọn lấy một khóa học bạn muốn và dành ra 1 giờ, chúng tôi sẽ giúp bạn trong những phần tiếp theo. Chúng tôi cũng có nhiều lựa chọn cho các lứa tuổi và các mức độ người học khác nhau. Băt đầu lên kế hoạch cho việc học của bạn bằng việc đọc  <a href='/resources/how-to'>Hướng dẫn</a> của chúng tôi."
-  hoc_faq_need_computers_q: Tôi có cần máy tính cho mọi người tham gia?
+  hoc_faq_need_computers_q: "Tôi có cần máy tính cho mọi người tham gia?"
   hoc_faq_need_computers_a: "Không. Chúng tôi đã hướng dẫn giờ mã làm việc trên máy tính, điện thoại thông minh, viên nén, và một số đó có yêu cầu máy tính không có ở tất cả! Bạn có thể tham gia ở bất cứ đâu, với bất cứ điều gì bạn có. <p><i>Dưới đây là một vài lựa chọn:</i> <br><ul><li><b>làm việc trong cặp.</b> Nghiên cứu cho thấy học sinh tìm hiểu tốt nhất với <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> cặp lập trình</a>, chia sẻ một máy tính và làm việc cùng nhau. Khuyến khích học sinh của bạn tăng gấp đôi lên. <li><b>Sử dụng một màn hình dự kiến.</b> Nếu bạn có một máy chiếu và màn hình cho một máy tính kết nối Web, toàn bộ nhóm của bạn có thể làm một giờ mã với nhau. Xem video phần với nhau và đưa sang giải những câu đố hoặc trả lời câu hỏi. <li><b>Đi chưa cắm phít được.</b> Chúng tôi cung cấp hướng dẫn yêu cầu máy tính không có ở tất cả. </ul>"
-  hoc_faq_international_q: Tôi không phải là người dân Hoa Kỳ. Làm thế nào tôi có thể tham gia với tư cách là người ở quốc gia khác?
-  hoc_faq_international_a: Mọi người có thể tổi chức một sự kiện Hour of Code, bất kỳ đâu trên thế giới. Năm ngoái, những học sinh trên toàn cầu đã cùng tham gia vào Hour of Code.
-  hoc_faq_tutorial_q: Làm thế nào tôi có thể làm một hướng dẫn về Hour of Code?
+  hoc_faq_international_q: "Tôi không phải là người dân Hoa Kỳ. Làm thế nào tôi có thể tham gia với tư cách là người ở quốc gia khác?"
+  hoc_faq_international_a: "Mọi người có thể tổi chức một sự kiện Hour of Code, bất kỳ đâu trên thế giới. Năm ngoái, những học sinh trên toàn cầu đã cùng tham gia vào Hour of Code."
+  hoc_faq_tutorial_q: "Làm thế nào tôi có thể làm một hướng dẫn về Hour of Code?"
   hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='targetHOC'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
   hoc_faq_what_is_hoc_uk_a: "Hour of Code là một giờ học giới thiệu về khoa học máy tính, được thiết kế để làm sáng tỏ việc lập trình và chỉ ra rằng mọi người có thể học những thứ căn bản.  <a href='http://uk.code.org/learn'>Tham gia vào các khóa học</a>, và tìm ra những điều mới mẻ sắp tới của Hour of Code 2014."
   hoc_faq_when_is_hoc_uk_a: "Hour of Code sẽ đupwjc diễn ra trong suốt 8-14 tháng 12 năm 2014. Có phải đó là một <i>giờ</i> đặc biệt? Không. Bạn có thể học Hour of Code bất kỳ thời gian nào trong suốt tuần đó. Hour of Code tại Nước anh sẽ diễn ra cùng lúc với sự kiện tại Mỹ - nơi tổ chức sự kiện  <a href='http://csedweek.org'>Tuần giáo dục khoa học máy tính</a> hằng năm."
@@ -131,39 +131,39 @@ vi:
   hoc_faq_how_participate_uk_a: "Đăng ký để làm chủ sự kiện Hour of Code <a href='http://hourofcode.com/uk'>tại đây</a> và bắt đầu lên kế hoạch. Bạn có thể tổ chức sự kiện Hour of Code tại trường học của bạn, tại cộng đồng vủa bạn &mdash; giống như một câu lạc bộ , một hoạt động phi lợi nhuận. Hoặc đơn giản là tự thử sức với chính mình từ ngày 8-12-2014."
   hoc_faq_behind_hoc_uk_a: "Hour of Code được tổ chức bởi  <a href='http://uk.code.org'>Code.org</a>, tổ chức phi lới nhuân với mục đích mở rộng hoạt động nghiên cứu khoa học máy tính trong các trường và tăng số lượng nữ giới trong ngành này.  <a href='http://uk.code.org/about/partners'>Tập hợp các đối tác</a> cùng nhau hỗ trợ cho Hour of Code,  &mdash;&mdash; &mdash; gồm Microsoft, Google, Cambridge, University Press, Tech City và The Department of Education."
   hoc_faq_host_uk_a: "dĩ nhiên,hoạt động Hour of Code đều có hướng dẫn cụ thể trên trang web. Bạn chỉ việc chọn lấy một khóa học bạn muốn , dành ra một giờ &mdash; và chúng tôi sẽ đưa ra chỉ dẫn để bạn hoành thành. Chúng tôi cũng có nhiều lựa chọn dành cho nhiều lứa tuổi và nhiều trình độ khác nhau, <a href='http://uk.code.org/learn'>Hãy thử sức với các khóa học của chúng tôi</a>."
-  hoc_faq_what_is_hoc_ar_q: Qué es la Hora de Program.AR?
+  hoc_faq_what_is_hoc_ar_q: "Qué es la Hora de Program.AR?"
   hoc_faq_what_is_hoc_ar_a: "La Hora de Program.AR es una introducción de una hora a la ciencia computacional, diseñada para desmitificar la programación y demostrar que cualquiera puede aprender los conceptos básicos. <a href='http://code.org/learn'>Revisa los tutoriales</a> y busca otros nuevos para la Hora de Program.AR del 2014."
-  hoc_faq_when_is_hoc_ar_q: ¿Cuándo es la Hora de Program.AR?
+  hoc_faq_when_is_hoc_ar_q: "¿Cuándo es la Hora de Program.AR?"
   hoc_faq_when_is_hoc_ar_a: "La Hora de Program.AR se llevará a cabo del 8 al 14 de diciembre del 2014. ¿Es una hora <i>específica</i>? No. Puedes hacer la Hora de Program.AR en cualquier momento durante esta semana. La Hora de Program.AR está programada para celebrarse anualmente - <a href='http://csedweek.org'>la Semana de Ciencias de Computación</a>."
-  hoc_faq_how_participate_ar_q: ¿Cómo puedo participar en la Hora de Program.AR?
+  hoc_faq_how_participate_ar_q: "¿Cómo puedo participar en la Hora de Program.AR?"
   hoc_faq_how_participate_ar_a: "Regístrese para organizar un evento de la hora de Program.AR <a href='http://hourofcode.org'>aquí</a> e inicie la planificación. Tú puedes organizar un evento de la Hora de ProProgram.ARgramación en tú escuela o en tú comunidad &mdash; como en un club extracurricular, en una organización sin fines de lucro o en el trabajo. O, simplemente probarlo cuando Diciembre 8 llegue."
-  hoc_faq_behind_hoc_ar_q: ¿Quién está detrás de la Hora de Program.AR?
+  hoc_faq_behind_hoc_ar_q: "¿Quién está detrás de la Hora de Program.AR?"
   hoc_faq_behind_hoc_ar_a: "La Hora de Program.AR es organizada por <a href='http://code.org'>Code.org</a>, una organización pública sin fines de lucro (501c3) dedicada a ampliar la participación en Ciencias Computacionales poniendose a disposición de más escuelas y aumentando la participación de las mujeres y los estudiantes subrepresentados de color. Una <a href='http://code.org/about/partners'>coalición sin precedentes de socios</a> se ha reunido para apoyar la Hora de Program.AR, también &mdash; incluyendo Microsoft, Apple, Amazon, Boys y Girls Clubs of America y el College Board."
-  hoc_faq_host_ar_q: No sé nada acerca de Program.AR. ¿Aún así puedo organizar un evento?
+  hoc_faq_host_ar_q: "No sé nada acerca de Program.AR. ¿Aún así puedo organizar un evento?"
   hoc_faq_host_ar_a: "Claro. Las actividades de La Hora de Program.AR son autodirigidas. Todo lo que tienes que hacer es elegir el tutorial que quieras y escoge una hora &mdash; nosotros nos encargamos del resto. También tenemos opciones para cada edad y nivel de experiencia, desde el kindergarten y para arriba. <a href='http://code.org/learn'>Pruebe nuestros tutoriales actuales</a>."
-  hoc_faq_need_computers_ar_q: mỗi người tham gia?
+  hoc_faq_need_computers_ar_q: "mỗi người tham gia?"
   hoc_faq_need_computers_ar_a: "No. Tenemos tutorales de la Hora de Program.AR que funcionan en PCs, teléfonos inteligentes, tabletas y algunos que no requieren ¡ninguna computadora en absoluto! Tú puedes unirte desde donde quiera que estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i> <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes aprenden mejor con <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares de programación</a>, compartiendo una computadora y trabajando juntos. Anima a tus estudiantes a trabajar en pares. <li><b>Una pantalla proyectada.</b> Si tú tienes un proyector y una computadora conectada a Internet, el grupo entero puede hacer una hora de Program.AR juntos. Mira porciones de videos juntos y toma turnos para resolver acertijos o responder preguntas. <li><b>Desconéctate.</b> Ofrecemos tutoriales que no requieren ninguna computadora en absoluto. </ul>"
-  hoc_faq_tutorial_ar_q: ¿Cómo puedo hacer un tutoría de la Hora de Program.AR?
+  hoc_faq_tutorial_ar_q: "¿Cómo puedo hacer un tutoría de la Hora de Program.AR?"
   hoc_faq_tutorial_ar_a: "Nếu bạn quan tâm để trở thành người hướng dẫn <a href='/tutorial-guidelines'>Xem hướng dẫn của chúng tôi</a> . Chúng tôi có nhiều lựa chọn hấp dẫn, nhưng mục tiêu chính là để tối ưu hóa trải nghiệm của học sinh và giáo viên những người mới đến khoa học máy tính ."
   stats_hoc_2013_heading: 'Đáng kinh ngạc số liệu thống kê từ cuối năm giờ của mã. Trong một tuần một mình:'
-  stats_hoc_2013_image_alt: Số liệu thống kê từ năm 2013
-  stats_growth: Nó đã nhanh chóng đạt tới 15 triệu người sử dụng.
+  stats_hoc_2013_image_alt: "Số liệu thống kê từ năm 2013"
+  stats_growth: "Nó đã nhanh chóng đạt tới 15 triệu người sử dụng."
   stats_tumblr: 'Tumblr: 3.5 năm'
   stats_facebook: 'Facebook: 3 năm.'
   stats_twitter: 'Twitter: 2.5 năm'
   stats_pinterest: 'Pinterest: 2 năm'
   stats_instagram: 'Instagram: 14 tháng'
   stats_hoc: 'Giờ mã: 5 ngày'
-  stats_global: 15 triệu sinh viên trên toàn thế giới đã học được một giờ mã.
-  stats_girls_more: Nhiều cô gái cố gắng trải nghiệm khoa học máy tính hơn trong 70 năm qua.
-  stats_girls_million: Hơn 10 triệu cô gái vào năm 2013
+  stats_global: "15 triệu sinh viên trên toàn thế giới đã học được một giờ mã."
+  stats_girls_more: "Nhiều cô gái cố gắng trải nghiệm khoa học máy tính hơn trong 70 năm qua."
+  stats_girls_million: "Hơn 10 triệu cô gái vào năm 2013"
   stats_nina: '"Mỗi một ngày mang lại kết quả tương tự &mdash; 100% tham gia."-Nina Nichols Peery, giáo viên'
   stats_student: '"Tôi biết đây là một <b>cơ hội trong suốt cuộc đời</b> có thể có."-Mariana Alzate, học sinh lớp 5'
   stats_michael: 'Tôi đã <b>không bao giờ, đã từng</b> nhìn thấy học sinh của tôi rất vui mừng về chuyện học tập. "-Michael Clark, giáo viên'
-  footer_copyright_message: Tất cả thông tin lấy từ trang Code.org, đều thuộc quyền sở hữu của Code.org, Mọi trích dẫn từ trang vui lòng ghi rõ nguồn Code.org 2014
-  footer_trademark_message: Hour of Code là một tác quyền cá nhân/ thương hiệu của Code.org.
-  footer_menu_partners: Đối tác
-  footer_menu_contact: Liên hệ với chúng tôi
-  footer_menu_support: Hỗ trợ
-  footer_menu_terms: Các điều khoản của Code.org
-  footer_menu_privacy: Chính sách bảo mật của Code.org
+  footer_copyright_message: "Tất cả thông tin lấy từ trang Code.org, đều thuộc quyền sở hữu của Code.org, Mọi trích dẫn từ trang vui lòng ghi rõ nguồn Code.org 2014"
+  footer_trademark_message: "Hour of Code là một tác quyền cá nhân/ thương hiệu của Code.org."
+  footer_menu_partners: "Đối tác"
+  footer_menu_contact: "Liên hệ với chúng tôi"
+  footer_menu_support: "Hỗ trợ"
+  footer_menu_terms: "Các điều khoản của Code.org"
+  footer_menu_privacy: "Chính sách bảo mật của Code.org"

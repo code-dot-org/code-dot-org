@@ -119,9 +119,9 @@
     try_hoc: "Попробуйте сначала один Час Кода"
     try_20hours: Попробуйте наше двадцатичасовое "Введение в информатику"
   signinsection:
-    welcome: Welcome to %{section_name}
+    welcome: "%{section_name} приветствует тебя"
     name: "Выберите ваше имя"
-    picture: Now find your secret picture
+    picture: "Теперь найди свою секретную картинку"
     words: "Теперь введите ваши секретные слова"
     login: "Вход"
   password:
@@ -168,7 +168,7 @@
       access_denied: "Вы не имеете доступа к статистике этого пользователя"
   redeem_prizes:
     title: "Востребовать призы: %{name}"
-    provider: 'Provider:'
+    provider: "Поставщик:"
     code: "Код:"
     redeem_header: 'To redeem:'
     donorschoose_register: "Зарегистрируйтесь как учитель на DonorsChoose.org"
@@ -185,7 +185,7 @@
     teacher_email_required: "Для награда учителю требуется подтверждённый адрес электронной
       почты:"
     confirm:
-      title: Please Confirm
+      title: "Будь любезен, подтверди"
       'no': "Нет"
       'yes': "Да"
       msg: Are you sure you want to claim the %{prize_name} prize?
@@ -250,6 +250,9 @@
     header:
       finished_hoc: "Я закончил мой Час Кода"
       sign_in_to_save: "Войдите для сохранения результатов"
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: "Мои ученики"
       label: "Привет, %{username}"
@@ -465,6 +468,13 @@
     flappy_og_title: "Проверь мои Flappy игру"
     studio_og_title: "Посмотреть свою историю"
     og_description: "Я сам написал код  на Code.org"
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: "Вы создали новый скрипт."
     destroyed: "Вы уничтожили скрипт."

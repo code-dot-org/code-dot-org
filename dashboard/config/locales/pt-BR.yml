@@ -270,6 +270,9 @@
     header:
       finished_hoc: Terminei minha Hora do Código
       sign_in_to_save: Entre para salvar o progresso
+      free_play:
+        playlab: Crie um aplicativo
+        artist: Desenhe alguma coisa
     user:
       classroom: Meus alunos
       label: Oi, %{username}
@@ -375,8 +378,8 @@
     classroom_activity: Atividade off-line
   home:
     title: Code Studio
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    all_courses: Visão geral dos cursos 1, 2 e 3
+    lesson_plans: Planos de aula
     signin_message: Já se registrou? %{link}
     student_reg_link: Cadastro de Aluno
     teacher_reg_link: Cadastro de Professor
@@ -484,8 +487,13 @@
     title: Clique em 'Executar' para ver meu programa em ação
     bounce_og_title: Veja meu jogo de Pingue-pongue
     flappy_og_title: Dê uma olhada no meu jogo Flappy
-    studio_og_title: 'Confira meu Jogo no Laboratório '
+    studio_og_title: Confira meu Aplicativo do Laboratório
     og_description: Eu mesmo escrevi o código com a Code.org
+    phone_number_not_allowed: Parece que há um número de telefone. Tente alterar o
+      texto.
+    address_not_allowed: Parece que há um endereço. Tente alterar o texto.
+    email_not_allowed: Parece que há um e-mail. Tente alterar o texto.
+    profanity_not_allowed: Parece que há palavras inadequadas. Tente alterar o texto.
   builder:
     created: Você criou um novo script.
     destroyed: Você destruiu um script.

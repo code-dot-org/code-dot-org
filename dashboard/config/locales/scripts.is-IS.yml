@@ -7,7 +7,7 @@
           The Maze: Völundarhúsið
           Multi: Val
           Match: Tengja
-          Math Image: Mynd stærðfræði
+          Math Image: Stærðfræðimynd
           title: Tilraunanámskeið
           description: Bara innanhúss tilraunanámskeið.
         course1:
@@ -27,15 +27,15 @@
           title: Námskeið 1 - Fyrir byrjendur í lestri
           Artist 2: Listamaður 2
           Happy Maps: Krúttleg kort
-          Move it, Move it: Hreyfðu mig
+          Move it, Move it: Hreyfa sig, hreyfa sig
           'Real-life Algorithms: Plant a Seed': 'Algrím úr raunheimi: Sá fræi'
           Building a Foundation: Að byggja grunn
-          Getting Loopy: Hringl
+          Getting Loopy: Lykkjulæti
           The Big Event: Stórviðburður
           Going Places Safely: Ferðast í öryggi
           description: Námskeið 1 er hannað til að gera byrjendum í lestri kleift
             að búa til tölvuforrit sem munu hjálpa þeim að læra að vinna með öðrum,
-            þróa hæfni til að leysa verkefni og gefst ekki upp þó verkefni séu erfið.
+            þróa hæfni til að leysa verkefni og gefast ekki upp þó verkefni séu erfið.
             Við lok námskeiðsins búa nemendur til sinn eiginn sérhannaða leik eða
             sögu sem þeir geta svo deilt. Er stílað inn á aldurshópinn 5 - 6 ára.
           'Bee: Sequence': 'Býfluga: Röð'
@@ -66,11 +66,11 @@
           Maze Loops: Völundarhús - lykkjur
           Graph Paper Programming: Forritun rúðublaða
           'Real-life Algorithms: Paper Planes': 'Algrím úr raunheimi: Pappírsskutlur'
-          Getting Loopy: Hringl með lykkjum
+          Getting Loopy: Lykkjulæti
           Relay programming: Boðhlaupsforritun
           Conditionals: Skilyrði
           Binary Bracelets: Stafræn armbönd
-          The Big Event: Stóri atburðurinn
+          The Big Event: Stórviðburður
           Your Digital Footprint: Stafræna fótsporið þitt
           description: Námskeið 2 er hannað fyrir nemendur sem geta lesið og hafa
             enga reynslu af forritun. Á þessu námskeiði munu nemendur búa til forrit
@@ -111,7 +111,7 @@
           Songwriting Parameters: Lagasmíð - stikar
           Dice Race: Teningakapp
           Internet: Internet
-          Crowdsourcing: "Útvistun til hóps"
+          Crowdsourcing: Hópvistun
           Digital Citizenship: Stafrænn borgari
           Farmer - While Loops: Bóndi - meðan lykkjur
           description: Námskeið 3 er ætlað nemendum sem hafa lokið Námskeiði 2. Nemendur
@@ -141,7 +141,7 @@
           'Farmer: While Loops2': 'Bóndi: Meðan lykkjur2'
           'Bee: Nested Loops2': 'Býfluga: Innri lykkjur'
           'Bee: Debugging2': 'Býfluga: Villuleit2'
-          'Artist: Patterns': 'Artist: Patterns'
+          'Artist: Patterns': 'Listamaður: Mynstur'
         msm:
           title: Miðskólastærðfræði
           description: Verið er að vinna í miðskólastærðfræði.

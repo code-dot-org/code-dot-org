@@ -236,6 +236,9 @@
     header:
       finished_hoc: Hour of Code 완료
       sign_in_to_save: "로그인(저장하기)"
+      free_play:
+        playlab: "앱 만들기"
+        artist: "아무거나 그리기"
     user:
       classroom: "내 학생"
       label: "안녕하세요? %{username} 님"
@@ -336,8 +339,8 @@
     classroom_activity: "언플러그드 활동"
   home:
     title: "코드 스튜디오"
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    all_courses: "코스1, 2, 3 살펴보기"
+    lesson_plans: "레슨 계획"
     signin_message: "이미 등록되어있나요? %{link}"
     student_reg_link: "학생 가입하기"
     teacher_reg_link: "선생님 가입하기"
@@ -434,6 +437,10 @@
     flappy_og_title: "내 플래피(Flappy) 게임 확인"
     studio_og_title: Play Lab 의 앱을 살펴보세요.
     og_description: Code.org 에서 직접 코드를 작성하였습니다.
+    phone_number_not_allowed: "휴대폰 번호가 입력되어있는 것 같습니다. 내용을 바꾸세요."
+    address_not_allowed: "집주소가 입력되어있는 것 같습니다. 내용을 바꾸세요."
+    email_not_allowed: "이메일 주소가 입력되어있는 것 같습니다. 내용을 바꾸세요."
+    profanity_not_allowed: "금칙어가 입력되어있는 것 같습니다. 내용을 바꾸세요."
   builder:
     created: "새로운 스크립트를 만들었습니다."
     destroyed: "스크립트를 삭제하였습니다."

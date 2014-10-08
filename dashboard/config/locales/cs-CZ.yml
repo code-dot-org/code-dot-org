@@ -1,4 +1,4 @@
-"cs":
+"cy":
   activerecord:
     errors:
       messages:
@@ -249,6 +249,9 @@
     header:
       finished_hoc: Dokončil jsem svou Hodinu Kódu
       sign_in_to_save: Přihlaš se pro uložení pokroku
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: Moji studenti
       label: Ahoj %{username}
@@ -463,6 +466,13 @@
     flappy_og_title: Podívej se na moji hru Flappy
     studio_og_title: Check out my story
     og_description: Napsal jsem kód s Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: Vytvořil jsi nový skript.
     destroyed: Zrušil jsi skript.

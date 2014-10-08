@@ -62,6 +62,7 @@
   "backToPreviousLevel": "返回上一階段",
   "saveToGallery": "保存到您的收藏簿。",
   "savedToGallery": "已經存放到您的收藏簿了！",
+  "shareFailure": "Sorry, we can't share this program.",
   "typeCode": "在說明下方輸入您的 JavaScript 程式碼",
   "typeFuncs": "可用函數：%1",
   "typeHint": "請注意\"括弧\"和\"分號\"都是必須的。",
