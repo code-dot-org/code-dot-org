@@ -49,3 +49,5 @@ P.S. Want to help translate tutorials? Get more [info here](http://code.org/tran
 <hr>
 
 Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98001. Don't like these emails? [Unsubscribe](<%= unsubscribe_link %>).
+
+![](<%= tracking_pixel %>)

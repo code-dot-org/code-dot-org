@@ -16,3 +16,5 @@ subject: Student Nominated
 ### Message
 
 <pre><%= message_s %></pre>
+
+![](<%= tracking_pixel %>)
