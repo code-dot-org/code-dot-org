@@ -13156,7 +13156,7 @@ exports.play = function(d){return "play"};
 
 exports.puzzleTitle = function(d){return "Hádanka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "opakuj"};
+exports.repeat = function(d){return "ailadrodd"};
 
 exports.resetProgram = function(d){return "Obnovit"};
 
@@ -13277,7 +13277,7 @@ exports.finalLevel = function(d){return "Dobrá práce! Vyřešil si poslední h
 
 exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
 
-exports.get = function(d){return "získej"};
+exports.get = function(d){return "cael"};
 
 exports.heightParameter = function(d){return "výška"};
 
@@ -13291,7 +13291,7 @@ exports.honeyTooltip = function(d){return "Vyrob med z nektaru"};
 
 exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
 
-exports.ifCode = function(d){return "když"};
+exports.ifCode = function(d){return "os"};
 
 exports.ifInRepeatError = function(d){return "Potřebuješ blok \"pokud\" uvnitř bloku \"opakovat\". Pokud máš potíže, zkus znovu předchozí úroveň, aby jsi zjistil, jak fungovala."};
 

@@ -10724,7 +10724,7 @@ exports.saveToGallery = function(d){return "Зберегти до вашої к�
 
 exports.savedToGallery = function(d){return "Збережено в галерею!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "На жаль, цією програмою не можна поділитись."};
 
 exports.typeCode = function(d){return "Запишіть нижче свій код JavaScript згідно із вказівками."};
 

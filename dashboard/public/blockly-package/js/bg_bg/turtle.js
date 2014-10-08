@@ -10711,7 +10711,7 @@ exports.saveToGallery = function(d){return "Запазете във вашата
 
 exports.savedToGallery = function(d){return "Запазено във вашата галерия!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "За съжаление, не можем да сподели тази програма."};
 
 exports.typeCode = function(d){return "Въведете вашия JavaScript код под тези инструкции."};
 

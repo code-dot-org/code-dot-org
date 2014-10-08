@@ -13092,13 +13092,13 @@ exports.dialogCancel = function(d){return "취소"};
 
 exports.dialogOK = function(d){return "확인"};
 
-exports.directionNorthLetter = function(d){return "북"};
+exports.directionNorthLetter = function(d){return "위쪽"};
 
-exports.directionSouthLetter = function(d){return "남"};
+exports.directionSouthLetter = function(d){return "아래쪽"};
 
-exports.directionEastLetter = function(d){return "동"};
+exports.directionEastLetter = function(d){return "오른쪽"};
 
-exports.directionWestLetter = function(d){return "서"};
+exports.directionWestLetter = function(d){return "왼쪽"};
 
 exports.end = function(d){return "끝"};
 
@@ -13188,7 +13188,7 @@ exports.saveToGallery = function(d){return "나의 갤러리에 저장"};
 
 exports.savedToGallery = function(d){return "나의 갤러리에 저장되었습니다!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "프로그램을 공유할 수 없습니다."};
 
 exports.typeCode = function(d){return "자바스크립트(JavaScript) 코드를 직접 작성하세요."};
 
@@ -13235,13 +13235,13 @@ exports.dig = function(d){return "치우기1번"};
 
 exports.digTooltip = function(d){return "치우기1번"};
 
-exports.dirE = function(d){return "동"};
+exports.dirE = function(d){return "오른쪽"};
 
-exports.dirN = function(d){return "북"};
+exports.dirN = function(d){return "위쪽"};
 
-exports.dirS = function(d){return "남"};
+exports.dirS = function(d){return "아래쪽"};
 
-exports.dirW = function(d){return "서"};
+exports.dirW = function(d){return "왼쪽"};
 
 exports.doCode = function(d){return "실행"};
 

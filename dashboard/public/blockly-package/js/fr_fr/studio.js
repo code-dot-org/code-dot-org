@@ -18788,7 +18788,7 @@ exports.makeProjectileRedHearts = function(d){return "fabriquer des coeurs viole
 
 exports.makeProjectileTooltip = function(d){return "Faire disparaitre ou rebondir le projectile qui heurte une surface ."};
 
-exports.makeYourOwn = function(d){return "Créez votre propre histoire"};
+exports.makeYourOwn = function(d){return "Faites votre propre application Play App"};
 
 exports.moveDirectionDown = function(d){return "vers le bas"};
 
@@ -18894,17 +18894,17 @@ exports.positionMiddleRight = function(d){return "à la position au milieu à dr
 
 exports.positionBottomOutLeft = function(d){return "vers le bas extérieur gauche"};
 
-exports.positionBottomLeft = function(d){return "to the bottom left position"};
+exports.positionBottomLeft = function(d){return "en bas à gauche"};
 
-exports.positionBottomCenter = function(d){return "to the bottom center position"};
+exports.positionBottomCenter = function(d){return "en bas au centre"};
 
-exports.positionBottomRight = function(d){return "to the bottom right position"};
+exports.positionBottomRight = function(d){return "en bas à droite"};
 
-exports.positionBottomOutRight = function(d){return "to the bottom outside right position"};
+exports.positionBottomOutRight = function(d){return "en bas à droite ver l'extérieur"};
 
-exports.positionOutBottomLeft = function(d){return "to the below bottom left position"};
+exports.positionOutBottomLeft = function(d){return "en bas à gauche ci-dessous"};
 
-exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
+exports.positionOutBottomRight = function(d){return "en bas à droite ci dessous"};
 
 exports.positionRandom = function(d){return "à une position aléatoire"};
 
@@ -19110,7 +19110,7 @@ exports.soundGoal1 = function(d){return "objectif 1"};
 
 exports.soundGoal2 = function(d){return "objectif 2"};
 
-exports.soundHit = function(d){return "hit"};
+exports.soundHit = function(d){return "touché"};
 
 exports.soundLosePoint = function(d){return "Perdre un point"};
 
@@ -19120,11 +19120,11 @@ exports.soundRetro = function(d){return "retro"};
 
 exports.soundRubber = function(d){return "caoutchouc"};
 
-exports.soundSlap = function(d){return "slap"};
+exports.soundSlap = function(d){return "gifler"};
 
-exports.soundWinPoint = function(d){return "win point"};
+exports.soundWinPoint = function(d){return "point décisif"};
 
-exports.soundWinPoint2 = function(d){return "win point 2"};
+exports.soundWinPoint2 = function(d){return "point décisif 2"};
 
 exports.soundWood = function(d){return "bois"};
 
@@ -19208,13 +19208,13 @@ exports.whenSpriteCollidedTooltip = function(d){return "Exécuter les actions ci
 
 exports.whenSpriteCollidedWith = function(d){return "touche"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "touche n'importe personnage"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "touche n'importe quel bord"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touche n'importe quel projectile"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "touche n'importe quoi"};
 
 exports.whenSpriteCollidedWithN = function(d){return "touche acteur "+v(d,"spriteIndex")};
 

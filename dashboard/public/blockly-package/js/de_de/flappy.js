@@ -9309,7 +9309,7 @@ exports.reinfFeedbackMsg = function(d){return "Du kannst den \"Versuche erneut\"
 
 exports.scoreText = function(d){return "Ergebnis: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set scene"};
+exports.setBackground = function(d){return "Hintergrund setzen"};
 
 exports.setBackgroundRandom = function(d){return "Zufällige Szene einstellen"};
 
@@ -9355,7 +9355,7 @@ exports.setGravityVeryHigh = function(d){return "Setze Schwerkraft auf sehr hoch
 
 exports.setGravityTooltip = function(d){return "Setzt die Schwerkraft des Levels"};
 
-exports.setGround = function(d){return "set ground"};
+exports.setGround = function(d){return "Boden setzen"};
 
 exports.setGroundRandom = function(d){return "Setzt den Boden auf zufällig"};
 
@@ -9373,7 +9373,7 @@ exports.setGroundLava = function(d){return "Setzt den Boden auf Lava"};
 
 exports.setGroundTooltip = function(d){return "Setzt den Boden auf ein bestimmtes Bild"};
 
-exports.setObstacle = function(d){return "set obstacle"};
+exports.setObstacle = function(d){return "Hindernis setzen"};
 
 exports.setObstacleRandom = function(d){return "Setzt das Hindernis auf zufällig"};
 
@@ -9391,7 +9391,7 @@ exports.setObstacleLaser = function(d){return "Setzt das Hindernis auf Laser"};
 
 exports.setObstacleTooltip = function(d){return "Setzt das Hindernis auf ein bestimmtes Bild"};
 
-exports.setPlayer = function(d){return "set player"};
+exports.setPlayer = function(d){return "Spieler setzen"};
 
 exports.setPlayerRandom = function(d){return "Setzt den Spieler auf zufällig"};
 
@@ -9441,27 +9441,27 @@ exports.soundRandom = function(d){return "zufällige"};
 
 exports.soundBounce = function(d){return "abprallen"};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "knirschen"};
 
-exports.soundDie = function(d){return "sad"};
+exports.soundDie = function(d){return "traurig"};
 
-exports.soundHit = function(d){return "smash"};
+exports.soundHit = function(d){return "Schlag"};
 
-exports.soundPoint = function(d){return "point"};
+exports.soundPoint = function(d){return "Punkt"};
 
-exports.soundSwoosh = function(d){return "swoosh"};
+exports.soundSwoosh = function(d){return "Swoosh"};
 
-exports.soundWing = function(d){return "wing"};
+exports.soundWing = function(d){return "Flügelsound"};
 
-exports.soundJet = function(d){return "jet"};
+exports.soundJet = function(d){return "Jet"};
 
-exports.soundCrash = function(d){return "crash"};
+exports.soundCrash = function(d){return "Crash"};
 
-exports.soundJingle = function(d){return "jingle"};
+exports.soundJingle = function(d){return "Jingle"};
 
-exports.soundSplash = function(d){return "splash"};
+exports.soundSplash = function(d){return "Splashen"};
 
-exports.soundLaser = function(d){return "laser"};
+exports.soundLaser = function(d){return "Laser"};
 
 exports.speedRandom = function(d){return "Setze Geschwindigkeit auf zufällig"};
 

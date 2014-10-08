@@ -18776,19 +18776,19 @@ exports.makeProjectileBounce = function(d){return "abprallen"};
 
 exports.makeProjectileBlueFireball = function(d){return "Mache blauen Feuerball"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "Lila Feuerbälle machen"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "Rote Feuerbälle machen"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "Gelbe Herzen machen"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "Lila Herzen machen"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "Rote Herzen machen"};
 
 exports.makeProjectileTooltip = function(d){return "Lasse das kollidierende Projektil verschwinden oder apprallen."};
 
-exports.makeYourOwn = function(d){return "Mache deine eigene Geschichte"};
+exports.makeYourOwn = function(d){return "Mache deine eigene Labor-App"};
 
 exports.moveDirectionDown = function(d){return "runter"};
 
@@ -18862,7 +18862,7 @@ exports.playSoundRetro = function(d){return "Retroton abspielen"};
 
 exports.playSoundRubber = function(d){return "Ton für Gummi abspielen"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "Schlagsound abspielen"};
 
 exports.playSoundTooltip = function(d){return "Den ausgewählten Ton abspielen."};
 
@@ -18872,9 +18872,9 @@ exports.playSoundWinPoint2 = function(d){return "Alternativen Gewinnton abspiele
 
 exports.playSoundWood = function(d){return "Holzton abspielen"};
 
-exports.positionOutTopLeft = function(d){return "to the above top left position"};
+exports.positionOutTopLeft = function(d){return "nach oben links"};
 
-exports.positionOutTopRight = function(d){return "to the above top right position"};
+exports.positionOutTopRight = function(d){return "nach oben rechts"};
 
 exports.positionTopOutLeft = function(d){return "to the top outside left position"};
 
@@ -18914,11 +18914,11 @@ exports.projectilePurpleFireball = function(d){return "Lila Feuerball"};
 
 exports.projectileRedFireball = function(d){return "Roter Feuerball"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "gelbe Herzen"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "lila Herzen"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "rote Herzen"};
 
 exports.projectileRandom = function(d){return "zufällig"};
 
@@ -19104,7 +19104,7 @@ exports.setSprite = function(d){return "setze"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "knirschen"};
 
 exports.soundGoal1 = function(d){return "goal 1"};
 

@@ -18806,7 +18806,7 @@ exports.makeProjectileRedHearts = function(d){return "fă inimi roşii"};
 
 exports.makeProjectileTooltip = function(d){return "Fă proiectilul care tocmai s-a ciocnit să dispară au să sară."};
 
-exports.makeYourOwn = function(d){return "Creează-ți propria poveste"};
+exports.makeYourOwn = function(d){return "Construiește propria ta aplicație Play Lab"};
 
 exports.moveDirectionDown = function(d){return "jos"};
 
@@ -19226,13 +19226,13 @@ exports.whenSpriteCollidedTooltip = function(d){return "Execută acţiunile de m
 
 exports.whenSpriteCollidedWith = function(d){return "atinge"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "atinge orice actor"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "atinge orice margine"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "atinge orice proiectil"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "nu atinge nimic"};
 
 exports.whenSpriteCollidedWithN = function(d){return "atinge actorul "+v(d,"spriteIndex")};
 

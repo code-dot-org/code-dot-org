@@ -7628,13 +7628,13 @@ exports.emptyBlocksErrorMsg = function(d){return "Блокам \"повторя�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Блок функции требует другие блоки внутри для работы."};
 
-exports.extraTopBlocks = function(d){return "У тебя есть оставшиеся блоки, которые не присоединены к основному блоку."};
+exports.extraTopBlocks = function(d){return "У тебя остались неприсоединённые блоки. Ты собирался присоединить их к блоку (when run)?"};
 
 exports.finalStage = function(d){return "Поздравляю! Ты завершил последний этап."};
 
 exports.finalStageTrophies = function(d){return "Поздравляю! Ты завершил последний этап и выиграл "+p(d,"numTrophies",0,"ru",{"one":"кубок","other":n(d,"numTrophies")+" кубков"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Завершить"};
 
 exports.generatedCodeInfo = function(d){return "Даже в лучших университетах изучают блочное программирование (например, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Но на самом деле блоки, которые вы собирали могут быть отображены на JavaScript, наиболее широко используемом в мире языке программирования:"};
 
@@ -7658,7 +7658,7 @@ exports.nextLevel = function(d){return "Поздравляю! Головолом
 
 exports.nextLevelTrophies = function(d){return "Поздравляю! Ты завершил головоломку "+v(d,"puzzleNumber")+" и выиграл "+p(d,"numTrophies",0,"ru",{"one":"кубок","other":n(d,"numTrophies")+" кубков"})+"."};
 
-exports.nextStage = function(d){return "Поздравляем! Ты закончил "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Поздравляю! Ты закончил "+v(d,"stageName")+"."};
 
 exports.nextStageTrophies = function(d){return "Поздравляю! Ты завершил этап "+v(d,"stageName")+" и выиграл "+p(d,"numTrophies",0,"ru",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
@@ -7674,7 +7674,7 @@ exports.repeat = function(d){return "повторить"};
 
 exports.resetProgram = function(d){return "Сбросить"};
 
-exports.runProgram = function(d){return "Запустить"};
+exports.runProgram = function(d){return "Выполнить"};
 
 exports.runTooltip = function(d){return "Запускает программу, заданную блоками в рабочей области."};
 

@@ -11512,23 +11512,23 @@ exports.playSoundGoal2 = function(d){return "Ton für Tor 2 abspielen"};
 
 exports.playSoundHit = function(d){return "spiele treffer ton"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "Ton für Punkteverlust abspielen"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "Alternativer Ton für Punkteverlust abspielen"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "Retrosound abspielen"};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "Gummiton abspielen"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "Schlagsound abspielen"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Den ausgewählten Sound abspielen."};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "Gewinnton abspielen"};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "Alternativer Gewinnton abspielen"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "Holzton abspielen"};
 
 exports.putdownTower = function(d){return "Stellen Sie den Turm ab"};
 
@@ -11542,7 +11542,7 @@ exports.repeatUntilBlocked = function(d){return "Solange ein Weg vor dir liegt"}
 
 exports.repeatUntilFinish = function(d){return "Wiederholen bis abgeschlossen"};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Punktestand: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
 exports.setBackgroundRandom = function(d){return "Setze zufälligen Hintergrund"};
 

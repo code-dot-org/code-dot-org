@@ -13307,9 +13307,9 @@ exports.ifFlowerTooltip = function(d){return "Dacă o floare/un fagure de miere 
 
 exports.ifelseFlowerTooltip = function(d){return "Dacă o floare/un fagure de miere este in direcţia specificată, atunci fă primul block de acţiuni. Altfel, fă al doilea bloc de acţiuni."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Folosești toate blocurile corecte, dar trebuie să produci cantitatea necesară de miere."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Folosești toate blocurile corecte, dar trebuie să aduni cantitatea necesară de nectar."};
 
 exports.make = function(d){return "face"};
 
