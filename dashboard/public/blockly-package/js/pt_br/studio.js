@@ -18697,7 +18697,7 @@ exports.saveToGallery = function(d){return "Salve na sua galeria"};
 
 exports.savedToGallery = function(d){return "Salvo na sua galeria!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Não podemos compartilhar esse programa."};
 
 exports.typeCode = function(d){return "Digite seu código JavaScript abaixo destas instruções."};
 
@@ -18788,7 +18788,7 @@ exports.makeProjectileRedHearts = function(d){return "crie corações vermelhos"
 
 exports.makeProjectileTooltip = function(d){return "Faça o projétil que colidiu desaparecer ou quicar."};
 
-exports.makeYourOwn = function(d){return "Faça seu próprio aplicativo de laboratório de reprodução"};
+exports.makeYourOwn = function(d){return "Faça seu próprio aplicativo do Laboratório"};
 
 exports.moveDirectionDown = function(d){return "baixo"};
 
@@ -19208,13 +19208,13 @@ exports.whenSpriteCollidedTooltip = function(d){return "Execute as ações abaix
 
 exports.whenSpriteCollidedWith = function(d){return "toca"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "toque em qualquer personagem"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "toca qualquer ator"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "toque em qualquer borda"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "toca qualquer borda"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "toque em qualquer projeto"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "toca qualquer projétil"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "tocar em alguma coisa"};
+exports.whenSpriteCollidedWithAnything = function(d){return "toca em alguma coisa"};
 
 exports.whenSpriteCollidedWithN = function(d){return "toca o personagem "+v(d,"spriteIndex")};
 

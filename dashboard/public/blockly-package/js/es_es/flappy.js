@@ -9202,7 +9202,7 @@ exports.saveToGallery = function(d){return "Guardar en tu galería"};
 
 exports.savedToGallery = function(d){return "¡Guardado en tu galería!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Perdón, no podemos compartir este programa."};
 
 exports.typeCode = function(d){return "Escribe tu código JavaScript debajo de estas instrucciones."};
 

@@ -138,9 +138,9 @@
       2-3 Conditionals Multi 1:
         Multiple Choice: "Избор от множество отговори"
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        According to the rules of this game, which set of cards was scored correctly for your team?: "Според
-          правилата на играта, кой набор от карти е бил въведен правилно за вашия
-          отбор?"
+        These are your team's cards - according to the rules of the game, which set is scored correctly?: These
+          are your team's cards - according to the rules of the game, which set is
+          scored correctly?
         "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
@@ -283,6 +283,14 @@
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
+      4-5 Algorithms Multi 1:
+        Multiple Choice: "Избор от множество отговори"
+        Which one of these items is hardest to describe an algorithm for?: "За кой
+          от тези елементи е най-трудно да напишете алгоритъм?"
+        "<h4>Brushing your teeth</h4>": "<h4>Миене на зъбите</h4>"
+        "<h4>Baking cookies</h4>": "<h4>Печене на бисквитки</h4>"
+        "<h4>Shopping from a grocery list</h4>": "<h4>Пазаруване от списък</h4>"
+        "<h4>Banana</h4>": "<h4>Банан</h4>"
       4-5 Computational Thinking Multi 1:
         Multiple Choice: "Избор от множество отговори"
         0: "? Тук има три изречения. Кой от шаблоните по-долу подхожда на примерите
@@ -295,6 +303,84 @@
         "<h4>_____ is a _____ city.</h4>": "<h4>_____ е  _____ град.</h4>"
         "<h4>_____ is _____ a _____.</h4>": "<h4>_____ е _____  _____.</h4>"
         "<h4>Eugene is a _____ city.</h4>": "<h4>Eugene е _____ град.</h4>"
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: "Избор от множество отговори"
+        Which of these pictures best represents crowdsourcing?: "Кои от тези снимки
+          най-добре представлява crowdsourcing?"
+        "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+      4-5 Crowdsourcing Multi 2:
+        Multiple Choice: "Избор от множество отговори"
+        Which one of these activities would be best for practicing crowdsourcing?: "Кое
+          от тези дейности ще бъде най-подходяща за практикуване на crowdsourcing?"
+        "<h4>Cleaning your room</h4>": "<h4>Почистване на стаята</h4>"
+        "<h4>Eating your dessert</h4>": "<h4>Ядене на десерт</h4>"
+        "<h4>Brushing your hair</h4>": "<h4>Сресване на косата </h4>"
+        "<h4>Washing your face</h4>": "<h4>Измиване лицето</h4>"
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: "Избор от множество отговори"
+        Which piece of information listed below is okay to share on the internet?: "Коя
+          част от информацията, изброени по-долу е добре да споделя в интернет?"
+        "<h4>Your birthday</h4>": "<h4>Вашият рожден ден</h4>"
+        "<h4>Your favorite food</h4>": "<h4>Вашата любима храна</h4>"
+        "<h4>Your address</h4>": "<h4>Вашият адрес</h4>"
+        "<h4>Your parent's credit card number</h4>": "<h4>Номерът на кредитната карта
+          на ваш родител</h4>"
+      4-5 Internet Multi 1:
+        Multiple Choice: "Избор от множество отговори"
+        "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.pn"
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: "Когато
+          се опитвате да влезете в code.org, кой IP адрес е най-вероятно ще ви отведе
+          до DNS?"
+        "<h4>23.23.224.106</h4>": "<h4>23.23.224.106</h4>"
+        "<h4>54.209.61.132</h4>": "<h4>54.209.61.132</h4>"
+        "<h4>64.14.68.10</h4>": "<h4>64.14.68.10</h4>"
+        "<h4>54.243.71.82</h4>": "<h4>54.243.71.82</h4>"
+      4-5 Internet Multi 2:
+        Multiple Choice: "Избор от множество отговори"
+        "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.pn"
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: "Ако
+          DNS ви е изпратил на страницата на IP адреса 100.42.50.110, на кой уебсайт
+          сте?"
+        "<h4>code.org</h4>": "<h4>Code.org</h4>"
+        "<h4>csisfun.com</h4>": "<h4>csisfun.com</h4>"
+        "<h4>thinkersmith.org</h4>": "<h4>thinkersmith.org</h4>"
+        "<h4>khanacademy.org</h4>": "<h4>khanacademy.org</h4>"
+      4-5 Songwriting Multi 1:
+        Multiple Choice: "Избор от множество отговори"
+        "/script_assets/4-5_images/unplugged/songwriting_1_q.png": "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
+        0: "? Как се нарича частта от тази песен, която можете да определите като
+          припев, така че този припев да се повтаря на точно определено място всеки
+          път?"
+        1: ": Как се нарича частта от тази песен, която можете да определите като
+          припев, така че този припев да се повтаря на точно определено място всеки
+          път?"
+        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
+          Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
+          to my Lou, <br/>Skip to my Lou, my darlin.
+        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        4: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+        5: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: "Избор от множество отговори"
+        "/script_assets/4-5_images/unplugged/suncatchers_2_q.png": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: "Коя
+          от програмите по-долу <em>не</em> извършва точно същата последователност
+          като програма 1"
+        "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_2_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a4.png"
       K-1 Artist 1 Multi 1:
         Multiple Choice: "Избор от множество отговори"
         "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,

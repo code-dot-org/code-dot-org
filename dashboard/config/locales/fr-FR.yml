@@ -32,7 +32,7 @@
     submit: Ajouter l'astuce
   appname: Code.org
   stage: "Étape"
-  stage_number: Stage %{number}
+  stage_number: pourcentage %{number}
   puzzle: "Énigme"
   trophies: Trophées
   courses: Cours
@@ -129,9 +129,9 @@
   signinsection:
     welcome: Bienvenue sur %{section_name}
     name: Choisissez votre nom
-    picture: Now find your secret picture
-    words: Now enter your secret words
-    login: Connexion
+    picture: maintenant trouve ta photo secrete
+    words: maintenant entre ton mot de passe
+    login: se connecter
   password:
     reset_form:
       title: Mot de passe oublié ?
@@ -182,12 +182,12 @@
     title: 'Obtenir les Prix: %{name}'
     provider: 'Fournisseur :'
     code: 'Code :'
-    redeem_header: 'To redeem:'
+    redeem_header: racheter
     donorschoose_register: S'inscrire comme enseignant sur DonorsChoose.org
     donorschoose_project: Publier un projet
     donorschoose_how_to: Comment utiliser votre code
-    success: Your prize was succesfully redeemed, see code below.
-    error: Your prize could not be redeemed, please try again.
+    success: ta recompense a bien ete rachete , voir le code ci-dessous
+    error: ta recompense n'a pas pu etre racheter veuiller repeter apres
     error_us_only: Les prix ne sont disponibles que pour les utilisateurs états-uniens.
     error_not_earned: Vous n'avez pas encore gagné ce prix.
     error_already_redeemed: Votre prix a déjà été distribué.
@@ -276,6 +276,9 @@
     header:
       finished_hoc: J'ai fini mon Heure de Code
       sign_in_to_save: Connectez-vous pour enregistrer les progrès
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: Mes élèves
       label: Bonjour %{username}
@@ -494,6 +497,13 @@
     flappy_og_title: Regardez mon jeu Flappy Bird
     studio_og_title: Regardez mon histoire
     og_description: J'ai écrit le code moi-même avec Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: Vous avez créé un nouveau script.
     destroyed: Vous avez détruit un script.

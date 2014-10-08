@@ -1,256 +1,269 @@
-"km-KH":
-  hello: "សួស្ដី​ពិភពលោក"
-  computer_science: "វិទ្យាសាស្ត្រ​កុំព្យូទ័រ"
-  computer_science_edweek: "សប្ដាហ៍​នៃ​ការ​សិក្សា​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ"
-  csedweek_dates: "December 9-15, 2013"
+km-KH:
+  hello: សួស្ដី​ពិភពលោក
+  computer_science: វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
+  computer_science_edweek: សប្ដាហ៍​នៃ​ការ​សិក្សា​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
+  csedweek_dates: December 9-15, 2013
   n_have_learned_an_hoc: '<h1>#</h1><h3>have tried an</h3><h2>Hour of Code</h2>'
-  anybody_can_learn: "Anybody can learn."
-  learn_now: "ចាប់ផ្ដើមរៀននៅពេលនេះ"
-  petition_message: "សិស្សទាំងអស់ដែលរៀននៅសាលារៀន គួរតែមានឱកាសបានរៀនអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រ"
+  anybody_can_learn: Anybody can learn.
+  learn_now: ចាប់ផ្ដើមរៀននៅពេលនេះ
+  petition_message: សិស្សទាំងអស់ដែលរៀននៅសាលារៀន គួរតែមានឱកាសបានរៀនអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រ
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
-  name: "ឈ្មោះ"
-  email: "អ៊ីមែល"
-  zipcode: "ZIP code or country"
-  submit: "Submit"
-  twentyhours_heading: "Try our Intro to Computer Science Course"
-  twentyhours_text: "Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course."
-  twentyhours_trynow: "Try now"
-  california_heading: "Ask your school to teach computer science"
+  name: ឈ្មោះ
+  email: អ៊ីមែល
+  zipcode: ZIP code or country
+  submit: Submit
+  twentyhours_heading: Try our Intro to Computer Science Course
+  twentyhours_text: Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course.
+  hoc2014_heading: 'Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December 8 - 14, 2014<br/>'
+  hoc2014_students: Students
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
+  twentyhours_trynow: Try now
+  california_heading: Ask your school to teach computer science
   california_text: "Any teacher can offer our <a href='http://studio.code.org/'>free courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner with us."
-  california_button: "រៀនបន្ថែមទៀត"
-  flappy_heading: "Flappy Birthday to Code.org"
+  california_button: រៀនបន្ថែមទៀត
+  flappy_heading: Flappy Birthday to Code.org
   flappy_text: 'Code.org just turned 1 year old.<br/><br/> Celebrate with us by making your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!'
-  view_english_site: "View English site"
+  view_english_site: View English site
   non_english_tutorials: 'Tutorials translated into multiple languages:'
-  write_your_first_program: "Write your first computer program"
-  learn_cs_concepts: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then statements, and basic algorithms."
-  all_ages: "All ages"
-  beginner: "Beginner"
+  write_your_first_program: Write your first computer program
+  learn_cs_concepts: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then statements, and basic algorithms.
+  all_ages: All ages
+  beginner: Beginner
   n_participants: '# participants'
-  go: "Go"
-  thank_you_: "Thank you!"
-  congratulations: "Congratulations!"
-  congratulations_on_completing_hoc: "Congratulations on completing One Hour of Code."
-  get_a_certificate_of_achievement: "Get a certificate of achievement"
-  enter_valid_email: "Please enter a valid email address"
+  go: Go
+  thank_you_: Thank you!
+  congratulations: Congratulations!
+  congratulations_on_completing_hoc: Congratulations on completing One Hour of Code.
+  get_a_certificate_of_achievement: Get a certificate of achievement
+  enter_valid_email: Please enter a valid email address
   get_a_certificate_message: "We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond One Hour</a>"
   get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
-  thanks_for_submitting: "Thanks for submitting!"
+  thanks_for_submitting: Thanks for submitting!
   if_you_enjoyed: 'If you enjoyed learning, ask friends to try it too!  We want the whole world to learn.'
-  personalize_certificate: "Personalize your certificate"
-  share_achievement: "Share your achievement"
+  personalize_certificate: Personalize your certificate
+  share_achievement: Share your achievement
   beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
-  leaderboards_for_hoc: "Leaderboards for the Hour of Code."
-  country: "Country"
-  city: "City"
-  gender: "ភេទ"
-  boys: "ប្រុស"
-  girls: "Girls"
+  leaderboards_for_hoc: Leaderboards for the Hour of Code.
+  support_url: http://support.code.org/
+  country: Country
+  city: City
+  gender: ភេទ
+  boys: ប្រុស
+  girls: Girls
   give_my_hour: 'Give my Hour to:'
   girls_team: "Girls' Team"
   boys_team: "Boys' Team"
-  tell_the_world: "Tell the world!"
-  thanks_for_voting: "Thanks for voting!"
-  share_on_facebook: "ចែករំលែកទៅកាន់Facebook"
-  share_on_twitter: "Share on Twitter"
+  tell_the_world: Tell the world!
+  thanks_for_voting: Thanks for voting!
+  share_on_facebook: ចែករំលែកទៅកាន់Facebook
+  share_on_twitter: Share on Twitter
   beyond_an_hour: 'Beyond an Hour of Code >'
-  get_started: "Start"
-  i_agree: "I agree"
+  get_started: Start
+  i_agree: I agree
   participant_select: '- Select -'
-  participant_student: "Student"
-  participant_parent: "Parent"
-  participant_educator: "Educator"
-  participant_engineer: "Software Engineer"
-  participant_other: "None of the Above"
-  i_am_a: "I am a"
+  participant_student: Student
+  participant_parent: Parent
+  participant_educator: Educator
+  participant_engineer: Software Engineer
+  participant_other: None of the Above
+  i_am_a: I am a
   never_spam: "We'll never spam you"
-  enter_country: "Enter country if outside the United States"
-  used_infrequent_updates: "Only used for infrequent updates"
-  privacy_practices_children: "See our privacy practices for children"
-  petition_thankyou: "Thank you for signing the petition"
-  carousel_heading_international: "Tutorials in your language"
-  continue_learning_header: "Continue learning beyond One Hour"
+  enter_country: Enter country if outside the United States
+  used_infrequent_updates: Only used for infrequent updates
+  privacy_practices_children: See our privacy practices for children
+  petition_thankyou: Thank you for signing the petition
+  carousel_heading_international: Tutorials in your language
+  continue_learning_header: Continue learning beyond One Hour
   continue_learning_body: 'There are lots of options.  You can learn online, or at a local school, or summer camp.'
-  learn_next_level: "Continue to the next level"
-  learn_online: "Try other courses online"
-  learn_classes: "Find local classes"
+  learn_next_level: Continue to the next level
+  learn_online: Try other courses online
+  learn_classes: Find local classes
   hoc_is_here: 'The #HourOfCode is here - check it out! @codeorg'
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
-  learn_hoc: "Learn an Hour of Code"
-  beyond_hoc: "Beyond One Hour"
-  what_gender: "What gender are you?"
-  girl: "ស្រី"
-  boy: "ប្រុស"
-  help_recruit_coders: "Help us recruit more coders to your team!"
-  help_recruit: "Help us recruit more coders!"
+  learn_hoc: Learn an Hour of Code
+  beyond_hoc: Beyond One Hour
+  what_gender: What gender are you?
+  girl: ស្រី
+  boy: ប្រុស
+  help_recruit_coders: Help us recruit more coders to your team!
+  help_recruit: Help us recruit more coders!
   lines_of_code: 'OVER <b># LINES OF CODE</b> WRITTEN TO DATE.'
   lines_of_code_alt: '<b>#</b> LINES OF CODE WRITTEN BY STUDENTS'
   who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
-  hoc_leaderboards: "The Hour of Code Leaderboards"
+  hoc_leaderboards: The Hour of Code Leaderboards
   students_and_lines: '%{students} students have done the Hour of Code and written %{lines} lines of code.'
-  start_hoc: "Start the Hour of Code now"
-  contact_form_topic_press: "Press/media (interview or speaking engagement)"
+  start_hoc: Start the Hour of Code now
+  contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
-  studiobar_elementary_title: "Elementary courses"
+  studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: 'Our three new courses for K&#8209;5'
-  studiobar_hoc_title: "ពេលវេលា​នៃ​កូដ"
-  studiobar_hoc_body: "Learn to code with Angry Birds"
-  studiobar_flappy_title: "Flappy កូដ"
-  studiobar_flappy_body: "Make and share your own Flappy game"
-  studiobar_teacher_title: "Made for teachers"
-  studiobar_teacher_body: "Introduce Code Studio in your classroom"
-  contact_form_topic_student: "ខ្ញុំគឺជាសិស្ស"
+  studiobar_hoc_title: ពេលវេលា​នៃ​កូដ
+  studiobar_hoc_body: Learn to code with Angry Birds
+  studiobar_flappy_title: Flappy កូដ
+  studiobar_flappy_body: Make and share your own Flappy game
+  studiobar_teacher_title: Made for teachers
+  studiobar_teacher_body: Introduce Code Studio in your classroom
+  contact_form_topic_student: ខ្ញុំគឺជាសិស្ស
   contact_form_topic_parent: "I'm a parent"
-  contact_form_topic_teacher: "ខ្ញុំគឺជាគ្រូបង្រៀន"
+  contact_form_topic_teacher: ខ្ញុំគឺជាគ្រូបង្រៀន
   contact_form_topic_outside_us: "I'm outside the U.S."
-  contact_form_topic_contribution: "Charitable contribution"
+  contact_form_topic_contribution: Charitable contribution
   contact_form_topic_partner: "I'd like to partner"
-  contact_form_topic_other: "ផ្សេងៗ"
-  contact_form_label_topic: "Topic"
-  contact_form_label_email: "Your email address"
-  contact_form_label_message: "Message"
-  contact_form_label_submit: "Send Message"
-  class_submission_in_school: "In school"
-  class_submission_in_school_daily_programming_course: "Daily programming course"
-  class_submission_in_school_ap_computer_science: "AP computer science"
-  class_submission_in_school_full_university_cs_curriculum: "Full university CS curriculum"
-  class_submission_in_school_robotics_club: "Robotics club"
-  class_submission_in_school_programming_integrated_in_other_classes: "Programming integrated in other classes"
-  class_submission_in_school_summer_school_cs_program: "Summer school CS program"
-  class_submission_in_school_exploring_computer_science: "Exploring Computer Science"
-  class_submission_in_school_other: "Other in school"
-  class_submission_out_of_school: "Out of school"
-  class_submission_out_of_school_summer_camp: "Summer camp"
-  class_submission_out_of_school_afterschool_program: "Afterschool program"
+  contact_form_topic_other: ផ្សេងៗ
+  contact_form_label_topic: Topic
+  contact_form_label_email: Your email address
+  contact_form_label_message: Message
+  contact_form_label_submit: Send Message
+  class_submission_in_school: In school
+  class_submission_in_school_daily_programming_course: Daily programming course
+  class_submission_in_school_ap_computer_science: AP computer science
+  class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
+  class_submission_in_school_robotics_club: Robotics club
+  class_submission_in_school_programming_integrated_in_other_classes: Programming integrated in other classes
+  class_submission_in_school_summer_school_cs_program: Summer school CS program
+  class_submission_in_school_exploring_computer_science: Exploring Computer Science
+  class_submission_in_school_other: Other in school
+  class_submission_out_of_school: Out of school
+  class_submission_out_of_school_summer_camp: Summer camp
+  class_submission_out_of_school_afterschool_program: Afterschool program
   class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
   class_submission_out_of_school_multi-week_workshop: Multi-week workshop
-  class_submission_out_of_school_other: "Other out of school"
-  class_submission_online: "Online"
-  class_submission_online_programming_class: "Online programming class"
-  class_submission_online_teacher_resource: "Online teacher resource"
-  class_submission_online_other: "Other online"
-  class_submission_level_preschool: "Preschool"
-  class_submission_level_elementary: "Elementary"
-  class_submission_level_middle_school: "Middle school"
-  class_submission_level_high_school: "High school"
-  class_submission_level_college: "College"
-  class_submission_level_vocational: "Vocational"
-  class_submission_languages_other: "Other language(s)"
-  volunteer_engineer_submission_commitment_uncertain: "Uncertain"
-  volunteer_engineer_submission_commitment_now_and_then: "Every now and then"
-  volunteer_engineer_submission_commitment_one_hr_per_week: "1 hour per week"
-  volunteer_engineer_submission_commitment_three_hrs_per_week: "3 hours per week"
-  volunteer_engineer_submission_commitment_five_hrs_per_week: "5 hours per week"
-  volunteer_engineer_submission_commitment_more: "More"
-  volunteer_engineer_submission_location_flexibility_onsite: "On-site at a school"
-  volunteer_engineer_submission_location_flexibility_remote: "Mentoring remotely (teachers or students)"
-  volunteer_engineer_submission_location_flexibility_curriculum: "Willing to help contribute to open-source curriculum projects"
-  volunteer_engineer_submission_experience_unspecified: "Unspecified"
-  volunteer_engineer_submission_experience_university_student_or_researcher: "Current university student (or researcher)"
-  volunteer_engineer_submission_experience_software_professional: "Software professional"
-  petition_age: "Age"
-  dashboard_landing_title: "Teacher Home Page"
-  dashboard_landing_welcome: "Welcome to the new and improved teacher dashboard."
-  dashboard_landing_video: "Watch this video"
-  dashboard_landing_watch_video: "for a tour of the new features!"
-  dashboard_landing_view_as_student: "View this site as a student"
-  dashboard_landing_students_title: "Your students"
-  dashboard_landing_students_manage: "View and manage your students"
-  dashboard_landing_news_title: "Latest news"
-  dashboard_landing_new_beta: "New! Try our beta courses for K-5 students."
-  dashboard_landing_new_k5courses: "New! Try our courses for K-5 students."
-  dashboard_landing_useful_links: "Other useful links"
-  dashboard_landing_print_certificates: "Print certificates for students who finish this course"
-  dashboard_landing_educator_blog: "Read about news and updates to our materials at our Educator Blog"
-  dashboard_landing_smart_hints: "Please help us to add smart hints to Code.org tutorials"
-  dashboard_landing_video_player: "Test our new video player at your school"
-  dashboard_landing_progress_title: "Main class progress"
-  dashboard_landing_progress_biggest: "This is the progress for your biggest section."
+  class_submission_out_of_school_other: Other out of school
+  class_submission_online: Online
+  class_submission_online_programming_class: Online programming class
+  class_submission_online_teacher_resource: Online teacher resource
+  class_submission_online_other: Other online
+  class_submission_level_preschool: Preschool
+  class_submission_level_elementary: Elementary
+  class_submission_level_middle_school: Middle school
+  class_submission_level_high_school: High school
+  class_submission_level_college: College
+  class_submission_level_vocational: Vocational
+  class_submission_languages_other: Other language(s)
+  volunteer_engineer_submission_commitment_uncertain: Uncertain
+  volunteer_engineer_submission_commitment_now_and_then: Every now and then
+  volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
+  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hours per week
+  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 hours per week
+  volunteer_engineer_submission_commitment_more: More
+  volunteer_engineer_submission_location_flexibility_onsite: On-site at a school
+  volunteer_engineer_submission_location_flexibility_remote: Mentoring remotely (teachers or students)
+  volunteer_engineer_submission_location_flexibility_curriculum: Willing to help contribute to open-source curriculum projects
+  volunteer_engineer_submission_experience_unspecified: Unspecified
+  volunteer_engineer_submission_experience_university_student_or_researcher: Current university student (or researcher)
+  volunteer_engineer_submission_experience_software_professional: Software professional
+  petition_age: Age
+  dashboard_landing_title: Teacher Home Page
+  dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
+  dashboard_landing_video: Watch this video
+  dashboard_landing_watch_video: for a tour of the new features!
+  dashboard_landing_view_as_student: View this site as a student
+  dashboard_landing_students_title: Your students
+  dashboard_landing_students_manage: View and manage your students
+  dashboard_landing_news_title: K-5 Educator Resources (in English only)
+  dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
+  dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
+  dashboard_landing_useful_links: Other useful links (in English only)
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video office hours.
+  dashboard_landing_print_certificates: Print certificates for students who finish this course
+  dashboard_landing_educator_blog: Read about news and updates to our materials at our Educator Blog
+  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
+  dashboard_landing_video_player: Test our new video player at your school
+  dashboard_landing_progress_title: Main class progress
+  dashboard_landing_progress_biggest: This is the progress for your biggest section.
   dashboard_landing_view_progress: 'View Progress for %{biggest_section}'
-  dashboard_landing_available_title: "Available courses"
-  dashboard_landing_available_courses: "Here are the courses currently available for you and your students."
-  dashboard_landing_loading: "Loading..."
-  dashboard_action_edit: "Edit"
-  dashboard_action_save: "Save"
-  dashboard_action_save_all: "Save all"
-  dashboard_action_cancel: "បោះបង់"
-  dashboard_action_delete: "Delete"
-  dashboard_action_confirm: "Delete?"
+  dashboard_landing_available_title: Available courses
+  dashboard_landing_available_courses: Here are the courses currently available for you and your students.
+  dashboard_landing_loading: Loading...
+  dashboard_action_edit: Edit
+  dashboard_action_save: Save
+  dashboard_action_save_all: Save all
+  dashboard_action_cancel: បោះបង់
+  dashboard_action_delete: Delete
+  dashboard_action_confirm: Delete?
   dashboard_action_delete_yes: 'Yes'
   dashboard_action_delete_no: 'No'
-  dashboard_action_done: "Done"
-  dashboard_action_required: "required"
-  dashboard_navigation_home_page: "Teacher home page"
-  dashboard_navigation_all_sections: "All sections"
-  dashboard_navigation_view_progress: "View Progress"
-  dashboard_navigation_add_students: "Add Students"
-  dashboard_navigation_manage_students: "Manage Students"
+  dashboard_action_done: Done
+  dashboard_action_required: required
+  dashboard_navigation_home_page: Teacher home page
+  dashboard_navigation_all_sections: All sections
+  dashboard_navigation_view_progress: View Progress
+  dashboard_navigation_add_students: Add Students
+  dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
-  dashboard_sections_new_section: "New section"
-  dashboard_sections_jumbotron_instruction: "Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts."
-  dashboard_sections_table_section: "Section"
-  dashboard_sections_table_secret: "Secret type"
-  dashboard_sections_table_grade: "Grade"
-  dashboard_sections_table_course: "Course"
-  dashboard_sections_table_students: "Students"
-  dashboard_sections_table_code: "Section Code"
-  dashboard_sections_name: "Section Name"
+  dashboard_sections_new_section: New section
+  dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
+  dashboard_sections_table_section: Section
+  dashboard_sections_table_secret: Secret type
+  dashboard_sections_table_grade: Grade
+  dashboard_sections_table_course: Course
+  dashboard_sections_table_students: Students
+  dashboard_sections_table_code: Section Code
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: 'If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section.'
   dashboard_sections_secret_word: 'A <b>word</b> allows you to set a secret word for each student.'
   dashboard_sections_secret_picture: "A <b>picture</b> allows you to set a secret picture for each student, ideal for younger students who can't yet type."
   dashboard_sections_secret_none: 'If you would like your students to manage their own accounts, including choosing their own passwords, choose a secret type of <b>none</b>.'
-  dashboard_sections_print_secrets: "You may then print a sheet of cards containing account information to be distributed to your students individually."
+  dashboard_sections_print_secrets: You may then print a sheet of cards containing account information to be distributed to your students individually.
   dashboard_sections_switch_section: 'Switch section:'
-  dashboard_students_add_student: "Add student"
-  dashboard_students_add_students: "Add multiple students"
+  dashboard_students_add_student: Add student
+  dashboard_students_add_students: Add multiple students
   dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
-  dashboard_students_placeholder_name: "Student Name"
-  dashboard_students_name: "ឈ្មោះ"
-  dashboard_students_age: "Age"
-  dashboard_students_gender: "ភេទ"
-  dashboard_students_male: "Male"
-  dashboard_students_female: "Female"
-  dashboard_students_secret: "Secret"
-  dashboard_students_password: "ពាក្យ​សម្ងាត់"
+  dashboard_students_placeholder_name: Student Name
+  dashboard_students_name: ឈ្មោះ
+  dashboard_students_age: Age
+  dashboard_students_gender: ភេទ
+  dashboard_students_male: Male
+  dashboard_students_female: Female
+  dashboard_students_secret: Secret
+  dashboard_students_password: ពាក្យ​សម្ងាត់
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_show_secret: "Show secret"
-  dashboard_students_auto_generated: "Auto-generated"
-  dashboard_students_reset_secret: "Reset secret"
-  dashboard_students_reset_password: "Reset password"
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
+  dashboard_students_show_secret: Show secret
+  dashboard_students_auto_generated: Auto-generated
+  dashboard_students_reset_secret: Reset secret
+  dashboard_students_reset_password: Reset password
   dashboard_students_share_section: "Share this section's sign in page with your students:"
   dashboard_students_print_info: "Print out cards with your students' login information."
-  dashboard_students_secret_picture: "Secret Picture"
+  dashboard_students_secret_picture: Secret Picture
   dashboard_students_reset_picture: "You may reset a student's secret picture at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret picture will be generated for that student to use when they sign in."
-  dashboard_students_secret_word: "Secret Word"
+  dashboard_students_secret_word: Secret Word
   dashboard_students_reset_word: "You may reset a student's secret words at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret words will be generated for that student to use when they sign in. "
-  dashboard_students_join_link: "Tell your students to create their own accounts and join your section at"
+  dashboard_students_join_link: Tell your students to create their own accounts and join your section at
   dashboard_students_no_email: "If your students do not have email addresses, or you would like to create accounts for them, change this section's secret type to <b>word</b> or <b>picture</b>."
-  dashboard_students_print_page: "Print this page"
-  dashboard_students_url: "URL"
+  dashboard_students_print_page: Print this page
+  dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Click here</a> for our privacy document that can be shared or printed for your students.'
-  dashboard_curriculum_overview: "K-5 Curriculum Overview"
-  dashboard_view_all_lesson_plans: "View all lesson plans"
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
   dashboard_course1: 'Course 1:'
   dashboard_course2: 'Course 2:'
   dashboard_course3: 'Course 3:'
-  dashboard_sequence: "Sequence"
-  dashboard_framework: "Framework"
-  dashboard_standards: "Standards"
-  dashboard_implementation_guide: "Implementation Guide"
-  dashboard_glossary: "Glossary"
-  dashboard_classroom_strategies: "Classroom strategies for teachers"
+  dashboard_sequence: Sequence
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
   dashboard_debugging: 'Debugging:'
   dashboard_puzzle_solving: 'Puzzle-solving:'
-  dashboard_student_worksheet: "student worksheet"
-  dashboard_teacher_worksheet: "teacher worksheet"
-  dashboard_grade_k: "K"
-  dashboard_grade_other: "ផ្សេងៗ"
-  dashboard_login_word: "word"
-  dashboard_login_picture: "picture"
-  dashboard_login_none: "none"
-  dashboard_new_password: "new password"
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: ផ្សេងៗ
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
-  stats_hoc_2013_image_alt: "Stats from 2013 Hour of Code"
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

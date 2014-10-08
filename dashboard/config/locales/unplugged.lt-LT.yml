@@ -2,14 +2,12 @@
   data:
     unplugged:
       Unplug1:
-        title: Informatikos įvadas
-        desc: "Šioje pamokėlėje bus supažindinama su informatikos samprata ir paaiškinama,
+        title: Programavimo įvadas
+        desc: "Šioje pamokėlėje bus supažindinama su programavimo samprata ir paaiškinama,
           ką dirba IT specialistas. Mokiniams bus suteikta galimybė pasijusti IT specialisto
           kailyje. Pamokėlės pabaigoje kiekvienas mokinys nešis namo priminimą, ką
-          jis ar ji išmoko. Jūs galite būti linkę praleisti tokias pamokėles ir nemokyti
-          vaikų įvairių sąvokų, kurios yra susijusios su pamokėlėmis, tačiau jas mokyti
-          galima labai žaismingai ir tai bus daug labiau produktyvu, nei ieškoti geresnių
-          galimybių."
+          jis ar ji išmoko. Jūs galite būti linkę praleisti  įvairių sąvokų paaiškinimus,
+          tačiau jas mokyti galima labai žaismingai."
         pdfs:
         - unplug1
         video: Unplug1
@@ -110,7 +108,7 @@
         video: Unplug10
       Unplug11:
         title: Apibendrinimas
-        desc: "Šis pirmųjų 20-ties valandų apibendrinimas parės klasei prisiminti
+        desc: "Šis pirmųjų 20-ties valandų apibendrinimas padės klasei prisiminti
           visus savo mėgstamiausius momentus iš pamokėlių. Mokiniams bus duodami patarimai,
           kuriais jie gali vadovautis mokydamiesi informatikos toliau, jeigu jie tuo
           susidomės."

@@ -18697,7 +18697,7 @@ exports.saveToGallery = function(d){return "Vista í safn þitt"};
 
 exports.savedToGallery = function(d){return "Vistað í safn þitt!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Því miður getum við ekki deilt þessu forriti."};
 
 exports.typeCode = function(d){return "Skrifaðu JavaScript kóða þinn fyrir neðan þessar leiðbeiningar."};
 
@@ -18774,21 +18774,21 @@ exports.makeProjectileDisappear = function(d){return "hverfa"};
 
 exports.makeProjectileBounce = function(d){return "skoppa"};
 
-exports.makeProjectileBlueFireball = function(d){return "búa til bláan eldhnött"};
+exports.makeProjectileBlueFireball = function(d){return "láta bláan eldhnött"};
 
-exports.makeProjectilePurpleFireball = function(d){return "búa til fjólubláan eldhnött"};
+exports.makeProjectilePurpleFireball = function(d){return "láta fjólubláan eldhnött"};
 
-exports.makeProjectileRedFireball = function(d){return "búa til rauðan eldhnött"};
+exports.makeProjectileRedFireball = function(d){return "láta rauðan eldhnött"};
 
-exports.makeProjectileYellowHearts = function(d){return "búa til gul hjörtu"};
+exports.makeProjectileYellowHearts = function(d){return "láta gul hjörtu"};
 
-exports.makeProjectilePurpleHearts = function(d){return "búa til fjólublá hjörtu"};
+exports.makeProjectilePurpleHearts = function(d){return "láta fjólublá hjörtu"};
 
-exports.makeProjectileRedHearts = function(d){return "búa til rauð hjörtu"};
+exports.makeProjectileRedHearts = function(d){return "láta rauð hjörtu"};
 
-exports.makeProjectileTooltip = function(d){return "Láta skotið sem var að rekast á hverfa eða skoppa."};
+exports.makeProjectileTooltip = function(d){return "Láta skotið, sem var að rekast á, hverfa eða skoppa."};
 
-exports.makeYourOwn = function(d){return "Make Your Own Story"};
+exports.makeYourOwn = function(d){return "Búðu til þitt eigið Leikjasmiðjuforrit"};
 
 exports.moveDirectionDown = function(d){return "niður"};
 
@@ -18800,19 +18800,19 @@ exports.moveDirectionUp = function(d){return "upp"};
 
 exports.moveDirectionRandom = function(d){return "af handahófi"};
 
-exports.moveDistance25 = function(d){return "25 dílar"};
+exports.moveDistance25 = function(d){return "25 díla"};
 
-exports.moveDistance50 = function(d){return "50 dílar"};
+exports.moveDistance50 = function(d){return "50 díla"};
 
-exports.moveDistance100 = function(d){return "100 dílar"};
+exports.moveDistance100 = function(d){return "100 díla"};
 
-exports.moveDistance200 = function(d){return "200 dílar"};
+exports.moveDistance200 = function(d){return "200 díla"};
 
-exports.moveDistance400 = function(d){return "400 dílar"};
+exports.moveDistance400 = function(d){return "400 díla"};
 
-exports.moveDistancePixels = function(d){return "dílar"};
+exports.moveDistancePixels = function(d){return "díla"};
 
-exports.moveDistanceRandom = function(d){return "dílar af handahófi"};
+exports.moveDistanceRandom = function(d){return "díla af handahófi"};
 
 exports.moveDistanceTooltip = function(d){return "Færa leikmann tiltekna vegalengd í hina tilteknu stefnu."};
 
@@ -18908,11 +18908,11 @@ exports.positionOutBottomRight = function(d){return "á stað neðan við neðst
 
 exports.positionRandom = function(d){return "á stað af handahófi"};
 
-exports.projectileBlueFireball = function(d){return "blár eldhnöttur"};
+exports.projectileBlueFireball = function(d){return "bláan eldhnött"};
 
-exports.projectilePurpleFireball = function(d){return "fjólublár eldhnöttur"};
+exports.projectilePurpleFireball = function(d){return "fjólubláan eldhnött"};
 
-exports.projectileRedFireball = function(d){return "rauður eldhnöttur"};
+exports.projectileRedFireball = function(d){return "rauðan eldhnött"};
 
 exports.projectileYellowHearts = function(d){return "gul hjörtu"};
 
@@ -18924,7 +18924,7 @@ exports.projectileRandom = function(d){return "af handahófi"};
 
 exports.reinfFeedbackMsg = function(d){return "Þú getur ýtt á \"Reyna aftur\" hnappinn til að fara aftur í að spila söguna þína."};
 
-exports.repeatForever = function(d){return "endurtaka að eilífu"};
+exports.repeatForever = function(d){return "endurtaka endalaust"};
 
 exports.repeatDo = function(d){return "gera"};
 
@@ -18938,35 +18938,35 @@ exports.saySpriteTooltip = function(d){return "Birta talblöðru með textanum s
 
 exports.scoreText = function(d){return "Stig alls: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "stilla bakgrunn"};
+exports.setBackground = function(d){return "hafa bakgrunn"};
 
-exports.setBackgroundRandom = function(d){return "stilla bakgrunn af handahófi"};
+exports.setBackgroundRandom = function(d){return "hafa bakgrunn af handahófi"};
 
-exports.setBackgroundBlack = function(d){return "stilla svartan bakgrunn"};
+exports.setBackgroundBlack = function(d){return "hafa svartan bakgrunn"};
 
-exports.setBackgroundCave = function(d){return "stilla hellisbakgrunn"};
+exports.setBackgroundCave = function(d){return "hafa hellisbakgrunn"};
 
-exports.setBackgroundCloudy = function(d){return "stilla skýjaðan bakgrunn"};
+exports.setBackgroundCloudy = function(d){return "hafa skýjaðan bakgrunn"};
 
-exports.setBackgroundHardcourt = function(d){return "stilla vallarbakgrunn"};
+exports.setBackgroundHardcourt = function(d){return "hafa vallarbakgrunn"};
 
-exports.setBackgroundNight = function(d){return "stilla næturbakgrunn"};
+exports.setBackgroundNight = function(d){return "hafa næturbakgrunn"};
 
-exports.setBackgroundUnderwater = function(d){return "stilla neðansjávarbakgrunn"};
+exports.setBackgroundUnderwater = function(d){return "hafa neðansjávarbakgrunn"};
 
-exports.setBackgroundCity = function(d){return "stilla borgarbakgrunn"};
+exports.setBackgroundCity = function(d){return "hafa borgarbakgrunn"};
 
-exports.setBackgroundDesert = function(d){return "stilla eyðimerkurbakgrunn"};
+exports.setBackgroundDesert = function(d){return "hafa eyðimerkurbakgrunn"};
 
-exports.setBackgroundRainbow = function(d){return "stilla regnbogabakgrunn"};
+exports.setBackgroundRainbow = function(d){return "hafa regnbogabakgrunn"};
 
-exports.setBackgroundSoccer = function(d){return "stilla fótboltabakgrunn"};
+exports.setBackgroundSoccer = function(d){return "hafa fótboltabakgrunn"};
 
-exports.setBackgroundSpace = function(d){return "stilla geimbakgrunn"};
+exports.setBackgroundSpace = function(d){return "hafa geimbakgrunn"};
 
-exports.setBackgroundTennis = function(d){return "stilla tennisbakgrunn"};
+exports.setBackgroundTennis = function(d){return "hafa tennisbakgrunn"};
 
-exports.setBackgroundWinter = function(d){return "stilla vetrarbakgrunn"};
+exports.setBackgroundWinter = function(d){return "hafa vetrarbakgrunn"};
 
 exports.setBackgroundTooltip = function(d){return "Stillir bakgrunnsmynd"};
 
@@ -18986,67 +18986,67 @@ exports.setSpriteEmotionSad = function(d){return "á dapurt skap"};
 
 exports.setSpriteEmotionTooltip = function(d){return "Stillir skap leikmanns"};
 
-exports.setSpriteAlien = function(d){return "á ímynd geimveru"};
+exports.setSpriteAlien = function(d){return "geimveru"};
 
-exports.setSpriteBat = function(d){return "á ímynd leðurblöku"};
+exports.setSpriteBat = function(d){return "leðurblöku"};
 
-exports.setSpriteBird = function(d){return "á ímynd fugls"};
+exports.setSpriteBird = function(d){return "fugl"};
 
-exports.setSpriteCat = function(d){return "á ímynd kattar"};
+exports.setSpriteCat = function(d){return "kött"};
 
-exports.setSpriteCaveBoy = function(d){return "á ímynd hellisbúastráks"};
+exports.setSpriteCaveBoy = function(d){return "hellisbúastrák"};
 
-exports.setSpriteCaveGirl = function(d){return "á ímynd hellisbúastelpu"};
+exports.setSpriteCaveGirl = function(d){return "hellisbúastelpu"};
 
-exports.setSpriteDinosaur = function(d){return "á ímynd risaeðlu"};
+exports.setSpriteDinosaur = function(d){return "risaeðlu"};
 
-exports.setSpriteDog = function(d){return "á ímynd hunds"};
+exports.setSpriteDog = function(d){return "hund"};
 
-exports.setSpriteDragon = function(d){return "á ímynd dreka"};
+exports.setSpriteDragon = function(d){return "dreka"};
 
-exports.setSpriteGhost = function(d){return "á ímynd draugs"};
+exports.setSpriteGhost = function(d){return "draug"};
 
-exports.setSpriteHidden = function(d){return "á falda ímynd"};
+exports.setSpriteHidden = function(d){return "falinn"};
 
 exports.setSpriteHideK1 = function(d){return "fela"};
 
-exports.setSpriteKnight = function(d){return "á ímynd riddara"};
+exports.setSpriteKnight = function(d){return "riddara"};
 
-exports.setSpriteMonster = function(d){return "á ímynd skrímslis"};
+exports.setSpriteMonster = function(d){return "skrímsli"};
 
-exports.setSpriteNinja = function(d){return "á ímynd grímuklæddrar ninju"};
+exports.setSpriteNinja = function(d){return "grímuklædda ninju"};
 
-exports.setSpriteOctopus = function(d){return "á ímynd kolkrabba"};
+exports.setSpriteOctopus = function(d){return "kolkrabba"};
 
-exports.setSpritePenguin = function(d){return "á ímynd mörgæsar"};
+exports.setSpritePenguin = function(d){return "mörgæs"};
 
-exports.setSpritePirate = function(d){return "á ímynd sjóræningja"};
+exports.setSpritePirate = function(d){return "sjóræningja"};
 
-exports.setSpritePrincess = function(d){return "á ímynd prinsessu"};
+exports.setSpritePrincess = function(d){return "prinsessu"};
 
-exports.setSpriteRandom = function(d){return "á ímynd af handahófi"};
+exports.setSpriteRandom = function(d){return "af handahófi"};
 
-exports.setSpriteRobot = function(d){return "á ímynd vélmennis"};
+exports.setSpriteRobot = function(d){return "vélmenni"};
 
 exports.setSpriteShowK1 = function(d){return "sýna"};
 
-exports.setSpriteSpacebot = function(d){return "á ímynd geimróbóta"};
+exports.setSpriteSpacebot = function(d){return "geimróbóta"};
 
-exports.setSpriteSoccerGirl = function(d){return "á ímynd fótboltastelpu"};
+exports.setSpriteSoccerGirl = function(d){return "fótboltastelpu"};
 
-exports.setSpriteSoccerBoy = function(d){return "á ímynd fótboltastráks"};
+exports.setSpriteSoccerBoy = function(d){return "fótboltastrák"};
 
-exports.setSpriteSquirrel = function(d){return "á ímynd íkorna"};
+exports.setSpriteSquirrel = function(d){return "íkorna"};
 
-exports.setSpriteTennisGirl = function(d){return "á ímynd tennisstelpu"};
+exports.setSpriteTennisGirl = function(d){return "tennisstelpu"};
 
-exports.setSpriteTennisBoy = function(d){return "á ímynd tennisstráks"};
+exports.setSpriteTennisBoy = function(d){return "tennisstrák"};
 
-exports.setSpriteUnicorn = function(d){return "í ímynd einhyrnings"};
+exports.setSpriteUnicorn = function(d){return "einhyrning"};
 
-exports.setSpriteWitch = function(d){return "í ímynd nornar"};
+exports.setSpriteWitch = function(d){return "norn"};
 
-exports.setSpriteWizard = function(d){return "í ímynd seiðskratta"};
+exports.setSpriteWizard = function(d){return "seiðskratta"};
 
 exports.setSpritePositionTooltip = function(d){return "Færir leikmann samstundis á hinn tiltekna stað."};
 
@@ -19054,35 +19054,35 @@ exports.setSpriteK1Tooltip = function(d){return "Sýnir eða felur hinn tiltekna
 
 exports.setSpriteTooltip = function(d){return "Stillir ímynd leikmanns"};
 
-exports.setSpriteSizeRandom = function(d){return "á stærð af handahófi"};
+exports.setSpriteSizeRandom = function(d){return "stærð af handahófi"};
 
-exports.setSpriteSizeVerySmall = function(d){return "á mjög litla stærð"};
+exports.setSpriteSizeVerySmall = function(d){return "mjög lítill"};
 
-exports.setSpriteSizeSmall = function(d){return "á litla stærð"};
+exports.setSpriteSizeSmall = function(d){return "lítill"};
 
-exports.setSpriteSizeNormal = function(d){return "á venjulega stærð"};
+exports.setSpriteSizeNormal = function(d){return "venjuleg stærð"};
 
-exports.setSpriteSizeLarge = function(d){return "á stóra stærð"};
+exports.setSpriteSizeLarge = function(d){return "stór"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "á mjög stóra stærð"};
+exports.setSpriteSizeVeryLarge = function(d){return "mjög stór"};
 
 exports.setSpriteSizeTooltip = function(d){return "Stillir stærð leikmanns"};
 
-exports.setSpriteSpeedRandom = function(d){return "á hraða af handahófi"};
+exports.setSpriteSpeedRandom = function(d){return "hraði af handahófi"};
 
-exports.setSpriteSpeedVerySlow = function(d){return "á mjög hægan hraða"};
+exports.setSpriteSpeedVerySlow = function(d){return "mjög hægur"};
 
-exports.setSpriteSpeedSlow = function(d){return "á hægan hraða"};
+exports.setSpriteSpeedSlow = function(d){return "hægur"};
 
-exports.setSpriteSpeedNormal = function(d){return "á venjulegan hraða"};
+exports.setSpriteSpeedNormal = function(d){return "venjulegur hraði"};
 
-exports.setSpriteSpeedFast = function(d){return "á hraðan hraða"};
+exports.setSpriteSpeedFast = function(d){return "hraður"};
 
-exports.setSpriteSpeedVeryFast = function(d){return "á mjög hraðan hraða"};
+exports.setSpriteSpeedVeryFast = function(d){return "mjög hraður"};
 
 exports.setSpriteSpeedTooltip = function(d){return "Stillir hraða leikmanns"};
 
-exports.setSpriteZombie = function(d){return "í ímynd uppvaknings"};
+exports.setSpriteZombie = function(d){return "uppvakning"};
 
 exports.shareStudioTwitter = function(d){return "Kíktu á söguna sem ég bjó til. Ég skrifaði hana með @codeorg"};
 
@@ -19100,9 +19100,9 @@ exports.showTSDefText = function(d){return "skrifaðu texta hér"};
 
 exports.showTitleScreenTooltip = function(d){return "Sýna titilskjá með viðkomandi titli og texta."};
 
-exports.setSprite = function(d){return "stilla"};
+exports.setSprite = function(d){return "hafa"};
 
-exports.setSpriteN = function(d){return "stilla leikmann "+v(d,"spriteIndex")};
+exports.setSpriteN = function(d){return "hafa leikmann "+v(d,"spriteIndex")};
 
 exports.soundCrunch = function(d){return "kremja"};
 
@@ -19110,37 +19110,37 @@ exports.soundGoal1 = function(d){return "mark 1"};
 
 exports.soundGoal2 = function(d){return "mark 2"};
 
-exports.soundHit = function(d){return "hitta"};
+exports.soundHit = function(d){return "í mark"};
 
-exports.soundLosePoint = function(d){return "tapa stigi"};
+exports.soundLosePoint = function(d){return "stigatap"};
 
-exports.soundLosePoint2 = function(d){return "tapa stigi 2"};
+exports.soundLosePoint2 = function(d){return "stigatap 2"};
 
 exports.soundRetro = function(d){return "retro"};
 
 exports.soundRubber = function(d){return "gúmmí"};
 
-exports.soundSlap = function(d){return "slá"};
+exports.soundSlap = function(d){return "skellur"};
 
-exports.soundWinPoint = function(d){return "skora stig"};
+exports.soundWinPoint = function(d){return "stigaskor"};
 
-exports.soundWinPoint2 = function(d){return "skora stig 2"};
+exports.soundWinPoint2 = function(d){return "stigaskor 2"};
 
 exports.soundWood = function(d){return "viður"};
 
 exports.speed = function(d){return "hraði"};
 
-exports.stopSprite = function(d){return "stoppa"};
+exports.stopSprite = function(d){return "stöðva"};
 
 exports.stopSpriteN = function(d){return "stöðva leikmann "+v(d,"spriteIndex")};
 
 exports.stopTooltip = function(d){return "Stöðvar hreyfingu leikmanns."};
 
-exports.throwSprite = function(d){return "kasta"};
+exports.throwSprite = function(d){return "senda"};
 
-exports.throwSpriteN = function(d){return "leikmaður "+v(d,"spriteIndex")+" kastar"};
+exports.throwSpriteN = function(d){return "leikmaður "+v(d,"spriteIndex")+" sendir"};
 
-exports.throwTooltip = function(d){return "Varpar skoti frá tiltekna leikmanninum."};
+exports.throwTooltip = function(d){return "Sendir skot frá tiltekna leikmanninum."};
 
 exports.vanish = function(d){return "hverfa"};
 
@@ -19208,13 +19208,13 @@ exports.whenSpriteCollidedTooltip = function(d){return "Gera aðgerðirnar fyrir
 
 exports.whenSpriteCollidedWith = function(d){return "snertir"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "snertir einhvern leikmann"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "snertir einhverja brún"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "snertir eitthvert skot"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "snertir eitthvað"};
 
 exports.whenSpriteCollidedWithN = function(d){return "snertir leikmann "+v(d,"spriteIndex")};
 

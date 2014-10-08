@@ -272,7 +272,7 @@
   "PROCEDURES_DEF_DUPLICATE_WARNING":"Attention : Cette fonction a des paramètres dupliqués.",
   "PROCEDURES_HIGHLIGHT_DEF":"Surligner la définition de la fonction",
   "PROCEDURES_IFRETURN_TOOLTIP":"Si une valeur est vraie, alors renvoyer une seconde valeur.",
-  "PROCEDURES_IFRETURN_WARNING":"Attention : Ce bloc pourrait n’être utilisé que dans une définition de fonction.",
+  "PROCEDURES_IFRETURN_WARNING":"Attention : Ce bloc ne peut être utilisé que dans une définition de fonction.",
   "PROCEDURES_MUTATORARG_TITLE":"nom de l’entrée :",
   "PROCEDURES_MUTATORCONTAINER_TITLE":"entrées",
   "REMOVE_COMMENT":"Supprimer un commentaire",

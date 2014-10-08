@@ -1,0 +1,6 @@
+-form = DB[:forms].where(kind:'CompanyProfile', name:request.splat_path_info[1..-1]).first
+-company = JSON.parse(form[:data]) if form
+-company ||= nil
+-if company && company['donate_link_s']
+  -redirect company['donate_link_s']
+-redirect 'https://www.indiegogo.com/projects/an-hour-of-code-for-every-student/'

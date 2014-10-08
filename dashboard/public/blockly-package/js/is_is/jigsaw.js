@@ -7697,7 +7697,7 @@ exports.saveToGallery = function(d){return "Vista í safn þitt"};
 
 exports.savedToGallery = function(d){return "Vistað í safn þitt!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Því miður getum við ekki deilt þessu forriti."};
 
 exports.typeCode = function(d){return "Skrifaðu JavaScript kóða þinn fyrir neðan þessar leiðbeiningar."};
 

@@ -3,7 +3,7 @@
   computer_science: Informatik
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: 9. bis 15. Dezember 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>absolvierten eine</h3><h2>Hour of Code&trade;</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>absolvierten eine</h3><h2>Hour of Code</h2>"
   anybody_can_learn: Jeder kann es lernen.
   learn_now: Jetzt lernen
   petition_message: Jeder Schüler in jeder Schule sollte die Möglichkeit haben, Informatik
@@ -17,6 +17,15 @@
   twentyhours_heading: Teste unseren Informatik-Einführungkurs
   twentyhours_text: Du hast deine erste "Hour of Code" beendet? Erlerne weitere Informatik-
     und Programmierkonzepte in diesem Folgekurs.
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Schüler
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: Probiere es jetzt aus
   california_heading: Bitte deine Schule Informatik zu unterrichten
   california_text: Jeder Lehrer kann unseren <a href='http://learn.code.org/'>freien
@@ -57,6 +66,7 @@
     Kurs</a>, oder schau dir mehr Möglichkeiten an, um <a href='/learn/beyond'>Mehr
     als eine Stunde zu lernen</a>.
   leaderboards_for_hoc: Rangliste zur Programmierstunde.
+  support_url: http://support.code.org/
   country: Land
   city: Stadt
   gender: Geschlecht
@@ -82,7 +92,7 @@
   never_spam: Wir werden Ihnen niemals Spam senden
   enter_country: Land angeben wenn Sie außerhalb der Vereinigten Staaten sind
   used_infrequent_updates: Only used for infrequent updates
-  privacy_practices_children: See our privacy practices for children
+  privacy_practices_children: Sehe unsere Datenschutzbestimmung für Kinder
   petition_thankyou: Vielen Dank für das Unterzeichnen der Petition
   carousel_heading_international: Anleitungen in deiner Sprache
   continue_learning_header: Weitermachen mit lerne innerhalb einer Stunde
@@ -185,6 +195,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: Drucken sie Zertifikate für Schüler die diesen
     Kurs bestanden haben
   dashboard_landing_educator_blog: Lese Nachrichten und Neuigkeiten zu unseren Materialien
@@ -204,18 +216,19 @@
   dashboard_action_save_all: Alles speichern
   dashboard_action_cancel: Abbrechen
   dashboard_action_delete: Löschen
-  dashboard_action_confirm: Delete?
+  dashboard_action_confirm: Löschen?
   dashboard_action_delete_yes: Ja
   dashboard_action_delete_no: Nein
-  dashboard_action_done: Done
-  dashboard_action_required: required
+  dashboard_action_done: Fertig
+  dashboard_action_required: benötigt
   dashboard_navigation_home_page: Teacher home page
-  dashboard_navigation_all_sections: All sections
-  dashboard_navigation_view_progress: View Progress
-  dashboard_navigation_add_students: Add Students
-  dashboard_navigation_manage_students: Manage Students
-  dashboard_navigation_section: 'Section: %{section_name}'
-  dashboard_navigation_student: 'Student: %{student_name}'
+  dashboard_navigation_all_sections: Alle Bereiche
+  dashboard_navigation_view_progress: Fortschritt sehen
+  dashboard_navigation_add_students: Schüler hinzufügen
+  dashboard_navigation_manage_students: Schüler verwalten
+  dashboard_navigation_view_stats: View Stats
+  dashboard_navigation_section: 'Bereich: %{section_name}'
+  dashboard_navigation_student: 'Schüler: %{student_name}'
   dashboard_sections_new_section: New section
   dashboard_sections_jumbotron_instruction: Create new sections and add students to
     them. Sections help you organize students into smaller groups so you can track
@@ -255,6 +268,8 @@
   dashboard_students_password: Passwort
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret

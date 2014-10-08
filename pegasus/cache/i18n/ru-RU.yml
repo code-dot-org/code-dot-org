@@ -3,7 +3,7 @@
   computer_science: "Информатика"
   computer_science_edweek: "Образовательная неделя компьютерных технологий"
   csedweek_dates: 9-15 декабря 2013 года
-  n_have_learned_an_hoc: "<h1>#</h1><h3>попыток</h3><h2>Часа Кода</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>попыток</h3><h2>Час Кода</h2>"
   anybody_can_learn: "Это может каждый."
   learn_now: "Начать изучение"
   petition_message: "Каждый студент в каждой школе должны иметь возможность для изучения
@@ -17,6 +17,15 @@
   twentyhours_heading: "Попробуй наш курс: введение в информатику"
   twentyhours_text: "Закончил свой первый  Час Кода? Узнай больше об информатике и
     концепциях программирования в следующем курсе."
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Students
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: "Попробуйте сейчас"
   california_heading: "Попросите вашу школу обучать информатике"
   california_text: "Любой учитель может предложить наши <a href='http://studio.code.org/'>бесплатные
@@ -40,7 +49,7 @@
   n_participants: "# участников"
   go: "Старт"
   thank_you_: "Спасибо!"
-  congratulations: "Поздравляем!"
+  congratulations: "Поздравляю!"
   congratulations_on_completing_hoc: "Поздравляем с завершением 1-го Часа программирования."
   get_a_certificate_of_achievement: "Получить сертификат о результате"
   enter_valid_email: "Пожалуйста, введите действительный адрес электронной почты"
@@ -59,6 +68,7 @@
     наших курсов</a> или посмотри какие еще есть возможности <a href='/learn/beyond'>Научиться
     За Один Час</a>."
   leaderboards_for_hoc: "Доска лидеров Часа Кода."
+  support_url: http://support.code.org/
   country: "Страна"
   city: "Город"
   gender: "Пол"
@@ -187,6 +197,8 @@
   dashboard_landing_new_beta: "Новинка! Попробуй наши бета-курсы для учеников 5 класса."
   dashboard_landing_new_k5courses: "Новинка! Попробуй наши курсы для учеников 5 класса."
   dashboard_landing_useful_links: "Другие полезные ссылки"
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: "Распечатать сертификаты учеников, которые
     закончили этот курс"
   dashboard_landing_educator_blog: "Знакомтесь с новостями и обновлениями наших материалов
@@ -216,6 +228,7 @@
   dashboard_navigation_view_progress: "Просмотр хода выполнения"
   dashboard_navigation_add_students: "Добавить Учеников"
   dashboard_navigation_manage_students: "Управление Учениками"
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: "Раздел: %{section_name}"
   dashboard_navigation_student: "Ученик: %{student_name}"
   dashboard_sections_new_section: "Новый раздел"
@@ -259,6 +272,8 @@
   dashboard_students_password: "Пароль"
   dashboard_students_username: "Имя пользователя: %{student_username}"
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: "Показать секрет"
   dashboard_students_auto_generated: "Автоматически сгененированные"
   dashboard_students_reset_secret: "Переустановить секрет"

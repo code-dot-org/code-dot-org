@@ -253,6 +253,9 @@
     header:
       finished_hoc: Jeg har fullført min Kodetimen
       sign_in_to_save: Logg inn for å lagre fremdrift
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: Mine elever
       label: Hei %{username}
@@ -465,6 +468,13 @@
     flappy_og_title: Check out my Flappy Game
     studio_og_title: Se min historie
     og_description: Jeg skrev koden selv med Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: You created a new script.
     destroyed: You destroyed a script.
@@ -541,7 +551,7 @@
           description: Wanna write your own game in less than 10 minutes? Try our
             Flappy Code tutorial!
         jigsaw:
-          title: Jigsaw
+          title: Puslespill
           description: ''
         step:
           title: Trinn

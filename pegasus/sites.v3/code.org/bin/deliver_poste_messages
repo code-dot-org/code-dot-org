@@ -119,7 +119,7 @@ def main()
     count += 1
   end
 
-  HipChat.log "#{count} transactional email(s) sent." unless count == 0
+  HipChat.log "#{count} email(s) sent." unless count == 0
 end
 
 main if only_one_running?(__FILE__)

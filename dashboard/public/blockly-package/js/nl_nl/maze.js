@@ -13285,13 +13285,13 @@ exports.ifTooltip = function(d){return "Als er een pad is in de aangegeven richt
 
 exports.ifelseTooltip = function(d){return "Als er een pad in de opgegeven richting is, doe je het eerste actie blok. anders, doe je de tweede actie blok."};
 
-exports.ifFlowerTooltip = function(d){return "Als er een bloem/bijenkorf is in de gekozen richting, doe een paar acties."};
+exports.ifFlowerTooltip = function(d){return "Als er een bloem/honingraat in de opgegeven richting staat, voer dan enkele acties uit."};
 
-exports.ifelseFlowerTooltip = function(d){return "Als er een bloem/bijenkorf is in de gekozen richting, doe je het eerste actie blok. Anders, voer het tweede blok met acties uit."};
+exports.ifelseFlowerTooltip = function(d){return "Als er een bloem/bijenkorf is in de gekozen richting staat, voer je het eerste actie blok uit. IOs dat niet het geval, voer dan het tweede blok met acties uit."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Je gebruikt wel de juiste blokken, maar je moet ook de juiste hoeveelheid honing maken."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Je gebruikt wel de juiste blokken, maar je moet ook de juiste hoeveelheid nectar verzamelen."};
 
 exports.make = function(d){return "maken"};
 

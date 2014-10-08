@@ -3,7 +3,7 @@
   computer_science: "Επιστήμη Υπολογιστών"
   computer_science_edweek: "Εβδομάδα Εκπαίδευσης στην Επιστήμη Υπολογιστών"
   csedweek_dates: 9-15 Δεκεμβρίου 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>έχουν δοκιμάσει την</h3><h2>Ώρα του Κώδικα</h2>"
   anybody_can_learn: "Οποιοσδήποτε μπορεί να μάθει."
   learn_now: "Μάθε τώρα"
   petition_message: "Κάθε μαθητής σε κάθε σχολείο θα πρέπει να έχει την ευκαιρία να
@@ -16,6 +16,15 @@
   twentyhours_heading: "Δοκιμάστε τη εισαγωγή μας στη σειρά μαθημάτων πληροφορικής"
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Students
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: "Δοκιμάστε τώρα"
   california_heading: "Ζητήστε από το σχολείο σας να διδάξει την επιστήμη της Πληροφορικής"
   california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
@@ -55,6 +64,7 @@
   beyond_hour_message: "Εδώ βρίσκονται περισσότερες πληροφορίες σχετικά με το πώς
     να <a href='/learn/beyond'>Συνεχίστε να μαθαίνετε μετά τη Μία Ώρα</a>"
   leaderboards_for_hoc: Πίνακες με τις ψηλότερες βαθμολογίες για το "Μια Ώρα Κώδικα".
+  support_url: http://support.code.org/
   country: "Χώρα"
   city: "Πόλη"
   gender: "Φύλο"
@@ -110,7 +120,7 @@
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: Our three new courses for K&#8209;5
-  studiobar_hoc_title: The Hour of Code
+  studiobar_hoc_title: "Ώρα του Κώδικα"
   studiobar_hoc_body: Learn to code with Angry Birds
   studiobar_flappy_title: Flappy Code
   studiobar_flappy_body: Make and share your own Flappy game
@@ -169,7 +179,7 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: Current
     university student (or researcher)
   volunteer_engineer_submission_experience_software_professional: Software professional
-  petition_age: Age
+  petition_age: "Ηλικία"
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -181,10 +191,12 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
-  dashboard_landing_print_certificates: Print certificates for students who finish
-    this course
-  dashboard_landing_educator_blog: Read about news and updates to our materials at
-    our Educator Blog
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
+  dashboard_landing_print_certificates: "Εκτύπωση πιστοποιητικών για τους μαθητές
+    που ολοκληρώνουν αυτό το μάθημα"
+  dashboard_landing_educator_blog: "Διαβάστε για τα νέα και τις ενημερώσεις για του
+    υλικό μας στο blog του Παιδαγωγού"
   dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
   dashboard_landing_video_player: Test our new video player at your school
   dashboard_landing_progress_title: Main class progress
@@ -209,6 +221,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -242,7 +255,7 @@
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: "Όνομα"
-  dashboard_students_age: Age
+  dashboard_students_age: "Ηλικία"
   dashboard_students_gender: "Φύλο"
   dashboard_students_male: "Αγόρι"
   dashboard_students_female: "Κορίτσι"
@@ -250,6 +263,8 @@
   dashboard_students_password: "Κωδικός πρόσβασης"
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret

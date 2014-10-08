@@ -261,6 +261,9 @@
     header:
       finished_hoc: Skończyłem moją Godzinę Kodowania (Hour of Code)
       sign_in_to_save: Zaloguj się, by zapisać stan
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: Moi uczniowie
       label: Witaj %{username}
@@ -476,6 +479,13 @@
     flappy_og_title: Sprawdź teraz moją grę Flappy
     studio_og_title: Check out my story
     og_description: Sam napisałem w całości kod za pomocą Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: Stworzyłeś nowy skrypt.
     destroyed: Zniszczyłeś swój skrypt.

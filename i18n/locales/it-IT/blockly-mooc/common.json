@@ -62,6 +62,7 @@
   "backToPreviousLevel":"Torna al livello precedente",
   "saveToGallery":"Salva nella tua galleria",
   "savedToGallery":"Salvato nella tua galleria!",
+  "shareFailure":"Ci dispiace, non possiamo condividere questo programma.",
   "typeCode":"Digita il tuo codice JavaScript sotto queste istruzioni.",
   "typeFuncs":"Funzioni disponibili: %1",
   "typeHint":"Sono necessarie le parentesi e i punto e virgola.",

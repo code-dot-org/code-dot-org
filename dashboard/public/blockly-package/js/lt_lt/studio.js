@@ -18624,7 +18624,7 @@ exports.emptyBlocksErrorMsg = function(d){return "„Kartojimo“ arba „Jei“
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Komandos apraše turi būti išvardintos komandos (įdėtas bent vienas blokas)."};
 
-exports.extraTopBlocks = function(d){return "Tu turi nesujungtų blokų. Gal norėjai juos sujungti prie bloko „paleisti programą“?"};
+exports.extraTopBlocks = function(d){return "Tu turi nesujungtų blokų. Gal norėjai juos prijungti prie bloko „paleidus“?"};
 
 exports.finalStage = function(d){return "Sveikinu! Tu baigei paskutinį etapą."};
 
@@ -18706,7 +18706,7 @@ exports.saveToGallery = function(d){return "Įrašyti į savo galeriją"};
 
 exports.savedToGallery = function(d){return "Įrašyti į savo galeriją!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Deja, šios programos dalintis negalima."};
 
 exports.typeCode = function(d){return "Įvesk savo JavaScript kodą žemiau šių instrukcijų."};
 
@@ -18730,7 +18730,7 @@ exports.when = function(d){return "kada"};
 
 exports.whenRun = function(d){return "paleidus"};
 
-exports.tryHOC = function(d){return "Išmėgink Vienos Valandos Kodą"};
+exports.tryHOC = function(d){return "Išmėgink „Programavimo valandą“"};
 
 exports.signup = function(d){return "Užsiregistruok į kursą pradedantiesiems"};
 
@@ -18806,7 +18806,7 @@ exports.makeProjectileRedHearts = function(d){return "raudonos širdutės"};
 
 exports.makeProjectileTooltip = function(d){return "Susidūręs sviedinys/objektas turi pradingti arba atšokti."};
 
-exports.makeYourOwn = function(d){return "Sukurkite savo istoriją"};
+exports.makeYourOwn = function(d){return "Sukurk savo istoriją su Laboratorija"};
 
 exports.moveDirectionDown = function(d){return "žemyn"};
 

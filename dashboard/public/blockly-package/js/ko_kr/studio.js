@@ -18601,13 +18601,13 @@ exports.dialogCancel = function(d){return "취소"};
 
 exports.dialogOK = function(d){return "확인"};
 
-exports.directionNorthLetter = function(d){return "북"};
+exports.directionNorthLetter = function(d){return "위쪽"};
 
-exports.directionSouthLetter = function(d){return "남"};
+exports.directionSouthLetter = function(d){return "아래쪽"};
 
-exports.directionEastLetter = function(d){return "동"};
+exports.directionEastLetter = function(d){return "오른쪽"};
 
-exports.directionWestLetter = function(d){return "서"};
+exports.directionWestLetter = function(d){return "왼쪽"};
 
 exports.end = function(d){return "끝"};
 
@@ -18697,7 +18697,7 @@ exports.saveToGallery = function(d){return "나의 갤러리에 저장"};
 
 exports.savedToGallery = function(d){return "나의 갤러리에 저장되었습니다!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "프로그램을 공유할 수 없습니다."};
 
 exports.typeCode = function(d){return "자바스크립트(JavaScript) 코드를 직접 작성하세요."};
 
@@ -18788,7 +18788,7 @@ exports.makeProjectileRedHearts = function(d){return "빨간 하트 만들기"};
 
 exports.makeProjectileTooltip = function(d){return "충돌하면 없어지거나 튕기는 발사체를 만듭니다."};
 
-exports.makeYourOwn = function(d){return "Make Your Own Story"};
+exports.makeYourOwn = function(d){return "자신만의 Play Lab 앱을 만드세요."};
 
 exports.moveDirectionDown = function(d){return "아래로"};
 
@@ -19208,13 +19208,13 @@ exports.whenSpriteCollidedTooltip = function(d){return "케릭터가 다른 케�
 
 exports.whenSpriteCollidedWith = function(d){return "닿으면"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "다른 케릭터와 닿았을 때"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "벽에 닿았을 때"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "발사체와 닿았을 때"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "다른 것과 닿았을 때"};
 
 exports.whenSpriteCollidedWithN = function(d){return "케릭터가 "+v(d,"spriteIndex")+"에 닿으면"};
 

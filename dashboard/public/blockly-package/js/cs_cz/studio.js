@@ -18665,7 +18665,7 @@ exports.play = function(d){return "play"};
 
 exports.puzzleTitle = function(d){return "Hádanka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "opakuj"};
+exports.repeat = function(d){return "ailadrodd"};
 
 exports.resetProgram = function(d){return "Obnovit"};
 
@@ -18814,7 +18814,7 @@ exports.moveDirectionRight = function(d){return "vpravo"};
 
 exports.moveDirectionUp = function(d){return "nahoru"};
 
-exports.moveDirectionRandom = function(d){return "náhodné"};
+exports.moveDirectionRandom = function(d){return "ar hap"};
 
 exports.moveDistance25 = function(d){return "25 pixelů"};
 
@@ -18936,7 +18936,7 @@ exports.projectilePurpleHearts = function(d){return "purple hearts"};
 
 exports.projectileRedHearts = function(d){return "red hearts"};
 
-exports.projectileRandom = function(d){return "náhodně"};
+exports.projectileRandom = function(d){return "ar hap"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
 
@@ -19116,7 +19116,7 @@ exports.showTSDefText = function(d){return "type text here"};
 
 exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
 
-exports.setSprite = function(d){return "nastav"};
+exports.setSprite = function(d){return "gosod"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 

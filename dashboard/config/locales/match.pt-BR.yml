@@ -125,23 +125,51 @@
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
+      4-5 Algorithms Match 1:
+        Matching: Associação
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Associe
+          os passos do Jogo da Corrida do Dado até que apareçam no algoritmo.
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Define a pontuação do jogador 1 como
+          0</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>O jogador 1 joga o dado</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Adiciona o resultado do
+          jogador 1 à pontuação total</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Compara a pontuação
+          dos jogadores para ver quem vence</h4>"
       4-5 Computational Thinking Match 1:
-        Matching: Competição
+        Matching: Associação
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Cada
-          um desses veículos tem sido decomposto em partes menores. Corresponde cada
-          veículo com sua lista decomposto.
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Rodas/lateral: 2 <br/>janelas/lado:
+          um desses veículos foi decomposto em partes menores. Associe cada veículo
+          com sua lista de partes correta.
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Rodas/lado: 2 <br/>janelas/lado:
           0</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Rodas/lateral: 2 <br/>janelas/laterais:
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Rodas/lado: 2 <br/>janelas/lado:
           1</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Rodas/lateral: 2 <br/>janelas/laterais:
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Rodas/lado: 2 <br/>janelas/lado:
           1</h3>"
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Rodas/lateral: 2 <br/>janelas/laterais:
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Rodas/lado: 2 <br/>janelas/lado:
           1</h3>"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
+      4-5 Suncatchers Match 1:
+        Matching: Associação
+        Match each program to the word it makes, using the provided group of skills.: Corresponda
+          cada programa à palavra que ele produz, usando o grupo de habilidades fornecidas.
+        "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
       K-1 Artist 2 Match 1:
         Matching: Associação
         Is the square next to, above, or below the ball?: O quadrado está ao lado,

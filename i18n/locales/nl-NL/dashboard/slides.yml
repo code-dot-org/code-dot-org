@@ -1,260 +1,260 @@
-"nl":
+nl:
   slides:
     maze_intro:
       1:
-        image: "notes/hoc1_1.jpg"
-        text: "Welkom bij je eerste uur code! We duiken direct je eerste ontmoeting met programmeren in."
+        image: notes/hoc1_1.jpg
+        text: Welkom bij je eerste uur code! We duiken direct je eerste ontmoeting met programmeren in.
       2:
-        image: "notes/hoc1_2.jpg"
-        text: "We zullen Blockly gebruiken, een visuele programmeertaal waar je met drag-en-drop code schrijft."
+        image: notes/hoc1_2.jpg
+        text: We zullen Blockly gebruiken, een visuele programmeertaal waar je met drag-en-drop code schrijft.
       3:
-        image: "notes/hoc1_3.jpg"
+        image: notes/hoc1_3.jpg
         text: 'De meeste code wordt ingetypt, maar Blockly is visueel. Ieder blok komt overeen met een "echte" regel code.'
       4:
-        image: "notes/hoc1_4.jpg"
-        text: "Je zal de basis van computerwetenschappen leren. Deze concepten worden overal gebruikt, van apps voor je mobiele telefoon tot het besturen van de Mars-lander."
+        image: notes/hoc1_4.jpg
+        text: Je zal de basis van computerwetenschappen leren. Deze concepten worden overal gebruikt, van apps voor je mobiele telefoon tot het besturen van de Mars-lander.
       5:
-        image: "notes/hoc1_5.jpg"
-        text: "Een programma is een reeks instructies die de computer opvolgt."
+        image: notes/hoc1_5.jpg
+        text: Een programma is een reeks instructies die de computer opvolgt.
       6:
-        image: "notes/hoc1_6.jpg"
-        text: "Het doel van je eerste programma is om een Angry Bird door een doolhof te krijgen om een Groen Varken te raken."
+        image: notes/hoc1_6.jpg
+        text: Het doel van je eerste programma is om een Angry Bird door een doolhof te krijgen om een Groen Varken te raken.
       7:
-        image: "notes/hoc1_7.jpg"
-        text: "De linkerkant is het doolhof waar je programma in draait. De opdrachten voor iedere puzzel staan onder het doolhof."
+        image: notes/hoc1_7.jpg
+        text: De linkerkant is het doolhof waar je programma in draait. De opdrachten voor iedere puzzel staan onder het doolhof.
       8:
-        image: "notes/hoc1_8.jpg"
-        text: "De middelste toolbox heeft de opdrachten voor de Angry Bird. Deze gebruik je om je code op te bouwen."
+        image: notes/hoc1_8.jpg
+        text: De middelste toolbox heeft de opdrachten voor de Angry Bird. Deze gebruik je om je code op te bouwen.
       9:
-        image: "notes/hoc1_9.jpg"
-        text: "Aan de rechterkant heb je je werkruimte waar je blokken uit je toolbox heen sleept om je programma op te bouwen. Om een blok te verwijderen sleep je het naar de prullenbak in de hoek."
+        image: notes/hoc1_9.jpg
+        text: Aan de rechterkant heb je je werkruimte waar je blokken uit je toolbox heen sleept om je programma op te bouwen. Om een blok te verwijderen sleep je het naar de prullenbak in de hoek.
       10:
-        image: "notes/hoc1_10.jpg"
+        image: notes/hoc1_10.jpg
         text: 'Ieder blok is een opdracht. Wanneer je een "vooruit"-blok naar je werkruimte sleept en op "Voer Programma Uit" klikt, dan beweegt de vogel een stapje in het doolhof.'
       11:
-        image: "notes/hoc1_11.jpg"
-        text: "Om meer dan een actie uit te voeren, kun je meerder blokken naar je werkruimte slepen en ze aan elkaar plakken. De vogel zal de opdrachten van boven naar beneden uitvoeren."
+        image: notes/hoc1_11.jpg
+        text: Om meer dan een actie uit te voeren, kun je meerder blokken naar je werkruimte slepen en ze aan elkaar plakken. De vogel zal de opdrachten van boven naar beneden uitvoeren.
       12:
-        image: "notes/hoc1_12.jpg"
+        image: notes/hoc1_12.jpg
         text: 'Wanneer je een programma uit hebt gevoerd en het wil repareren en opnieuw beginnen, klik je op de "Opnieuw"-knop.'
       13:
-        image: "notes/hoc1_13.jpg"
-        text: "We zullen dit varkentje wel eens wassen!"
+        image: notes/hoc1_13.jpg
+        text: We zullen dit varkentje wel eens wassen!
     artist_intro:
       1:
-        image: "notes/stage5_1.jpg"
-        text: "Hallo, ik ben JR! Elk raceauto team heeft een computer wetenschapper nodig om te winnen. Ze analyseren data van de auto om hem sneller te laten maken."
+        image: notes/stage5_1.jpg
+        text: Hallo, ik ben JR! Elk raceauto team heeft een computer wetenschapper nodig om te winnen. Ze analyseren data van de auto om hem sneller te laten maken.
       2:
-        image: "notes/stage5_2.jpg"
-        text: "In deze puzzels, ben jij de artiest dat een lijn moet laten trekken overal waar ze gaan."
+        image: notes/stage5_2.jpg
+        text: In deze puzzels, ben jij de artiest dat een lijn moet laten trekken overal waar ze gaan.
       3:
-        image: "notes/stage5_3.jpg"
+        image: notes/stage5_3.jpg
         text: 'Deze blok zegt "beweeg 100 pixels vooruit." Pixels zijn zeer kleine puntjes op je scherm.'
       4:
-        image: "notes/stage5_4.jpg"
+        image: notes/stage5_4.jpg
         text: 'Deze blok zegt "draai rechts voor 90 graden." Dit zal je artiest evenveel draaien als de "draai blok in de doolhof puzzels.'
       5:
-        image: "notes/stage5_5.jpg"
-        text: "Klik op de pijl in deze blokken om de afstand die de kunstenaar naar voren gaat of draait. Speel hier een beetje mee om handig te worden met deze blokken."
+        image: notes/stage5_5.jpg
+        text: Klik op de pijl in deze blokken om de afstand die de kunstenaar naar voren gaat of draait. Speel hier een beetje mee om handig te worden met deze blokken.
     farmer_intro:
       1:
-        image: "notes/stage9_1.jpg"
-        text: "Hallo, ik ben Paola! In deze puzzels ben jij de boer die zijn veld volledig vlak wilt zodat je gewassen kan aanplanten."
+        image: notes/stage9_1.jpg
+        text: Hallo, ik ben Paola! In deze puzzels ben jij de boer die zijn veld volledig vlak wilt zodat je gewassen kan aanplanten.
       2:
-        image: "notes/stage9_2.jpg"
-        text: "Je zal haar moeten helpen alle hopen grond te verwijderen en alle gaten in te vullen."
+        image: notes/stage9_2.jpg
+        text: Je zal haar moeten helpen alle hopen grond te verwijderen en alle gaten in te vullen.
       3:
-        image: "notes/stage9_3.jpg"
-        text: "De nieuwe blokken verwijderen 1 schep modder van een hoop en vult een gat met 1 schep modder."
+        image: notes/stage9_3.jpg
+        text: De nieuwe blokken verwijderen 1 schep modder van een hoop en vult een gat met 1 schep modder.
       4:
-        image: "notes/stage9_4.jpg"
-        text: "De hopen en gaten zijn verschillend van grootte, dus je moet de boer vertellen hoeveel scheppen hij moet gebruiken."
+        image: notes/stage9_4.jpg
+        text: De hopen en gaten zijn verschillend van grootte, dus je moet de boer vertellen hoeveel scheppen hij moet gebruiken.
     flappy_intro:
       1:
-        image: "notes/flappy01.jpg"
-        text: "Hoi, ik ben Katie! Een van de meest spannende dingen over informatica is dat een computerprogramma interactief kan zijn."
+        image: notes/flappy01.jpg
+        text: Hoi, ik ben Katie! Een van de meest spannende dingen over informatica is dat een computerprogramma interactief kan zijn.
       2:
-        image: "notes/flappy02.jpg"
-        text: "Elke keer dat iemand klikt of drukt of typt op een computer of telefoon, dat genereert een gebeurtenis, en er is wat code die beslist wat er gebeurd als er wat gebeurd."
+        image: notes/flappy02.jpg
+        text: Elke keer dat iemand klikt of drukt of typt op een computer of telefoon, dat genereert een gebeurtenis, en er is wat code die beslist wat er gebeurd als er wat gebeurd.
       3:
-        image: "notes/flappy03.jpg"
+        image: notes/flappy03.jpg
         text: 'Bijvoorbeeld, je zou een gebeurtenis-verwerker kunnen hebben die zegt "wanneer iemand met de muis klikt, speel een geluid af" '
       4:
-        image: "notes/flappy04.jpg"
+        image: notes/flappy04.jpg
         text: 'Heb je ooit van het spel FlappyBird gehoord? Met behulp van gebeurtenis-verwerkers gaan we leren om  onze eigen aangepaste versie van FlappyBird te programmeren!'
       5:
-        image: "notes/flappy05.jpg"
-        text: "De code die zul je schrijven omvat slepen en neerzetten van blokken met daarin opdrachten voor de computer. Onder de motorkap wordt elk van deze blokken vertegenwoordigd door echte code."
+        image: notes/flappy05.jpg
+        text: De code die zul je schrijven omvat slepen en neerzetten van blokken met daarin opdrachten voor de computer. Onder de motorkap wordt elk van deze blokken vertegenwoordigd door echte code.
       6:
-        image: "notes/flappy06.jpg"
+        image: notes/flappy06.jpg
         text: 'Als je een kijkje neemt in de werkplaats, zie je een aantal groene blokken die voor je zijn ingevuld - dit zijn "gebeurtenis-verwerkers" '
       7:
-        image: "notes/flappy07.jpg"
+        image: notes/flappy07.jpg
         text: 'Als je wilt dat de vogel FLAPPERT als je met de muis KLIKT, krijg je dat voor elkaar door het "FLAP" blok aan de goede gebeurtenis-verwerker te verbinden. Telkens als je nu in je spel met de muis klikt, zal de vogel flapperen.'
       8:
-        image: "notes/flappy08.jpg"
-        text: "In elke puzzel van deze activiteit introduceren we nieuwe gebeurtenis-types als groene blokken op de werkplaats, en dan kun je de juiste blokken kiezen die reageren op de nieuwe gebeurtenissen."
+        image: notes/flappy08.jpg
+        text: In elke puzzel van deze activiteit introduceren we nieuwe gebeurtenis-types als groene blokken op de werkplaats, en dan kun je de juiste blokken kiezen die reageren op de nieuwe gebeurtenissen.
       9:
-        image: "notes/flappy09.jpg"
+        image: notes/flappy09.jpg
         text: 'Als je een drop-down pijl zoals deze ziet dan kun je de instellingen veranderen - zoals wel geluid af te spelen wanneer flappy de grond raakt.'
       10:
-        image: "notes/flappy10.jpg"
-        text: "In de laatste puzzel kun je je eigen spel maken en deze delen met je virenden. Veel plezier!"
+        image: notes/flappy10.jpg
+        text: In de laatste puzzel kun je je eigen spel maken en deze delen met je virenden. Veel plezier!
     loop_times:
       1:
-        image: "notes/hoc2_1.jpg"
-        text: "Hallo, ik ben Mark! We gaan leren over lussen. Met lussen kun je een computer vertellen om een reeks acties telkens te herhalen, duizenden of zelfs miljarden keren."
+        image: notes/hoc2_1.jpg
+        text: Hallo, ik ben Mark! We gaan leren over lussen. Met lussen kun je een computer vertellen om een reeks acties telkens te herhalen, duizenden of zelfs miljarden keren.
       2:
-        image: "notes/hoc2_2.jpg"
-        text: "In deze puzzel willen we de vogel 5 vakjes naar voren laten bewegen om het varken te krijgen."
+        image: notes/hoc2_2.jpg
+        text: In deze puzzel willen we de vogel 5 vakjes naar voren laten bewegen om het varken te krijgen.
       3:
-        image: "notes/hoc2_3.jpg"
+        image: notes/hoc2_3.jpg
         text: 'We kunnen het nieuwe "herhaal"-blok gebruiken om ons te helpen.'
       4:
-        image: "notes/hoc2_4.jpg"
+        image: notes/hoc2_4.jpg
         text: 'In plaats van 5 "vooruit"-blokken hierheen te slepen...'
       5:
-        image: "notes/hoc2_5.jpg"
+        image: notes/hoc2_5.jpg
         text: 'We kunnen een "vooruit"-blok in het "herhalen"-blok zetten en een getal in het blok zetten om aan te geven hoe vaak het moet herhalen.'
       6:
-        image: "notes/hoc2_6.jpg"
+        image: notes/hoc2_6.jpg
         text: 'Dit is belangrijk: je kunt meer dan een commando in een "herhalen"-blok zetten.'
       7:
-        image: "notes/hoc2_7.jpg"
+        image: notes/hoc2_7.jpg
         text: 'Veel plezier met je nieuwe "herhalen"-blok!'
     loop_until:
       1:
-        image: "notes/hoc3_1.jpg"
+        image: notes/hoc3_1.jpg
         text: 'Hallo, ik ben Chris. Voordat ik bij Miami Heat ging basketballen heb ik in Amerika Informatica gestudeerd. We gaan nu ons nieuwe blok uitproberen: het "herhalen totdat"-blok.'
       2:
-        image: "notes/hoc3_2.jpg"
-        text: "Wat moeten we doen als we niet weten hoe ver de vogel moet bewegen om het varken te krijgen?"
+        image: notes/hoc3_2.jpg
+        text: Wat moeten we doen als we niet weten hoe ver de vogel moet bewegen om het varken te krijgen?
       3:
-        image: "notes/hoc3_3.jpg"
+        image: notes/hoc3_3.jpg
         text: 'Wanneer we een "vooruit"-blok binnen een "herhalen totdat"-blok zetten, dan gaat de vogel vooruit TOT het bij het varken komt (of tegen een muur aanloopt).'
       4:
-        image: "notes/hoc3_4.jpg"
+        image: notes/hoc3_4.jpg
         text: 'En dit is belangrijk: net als eerder, kunnen we meerdere blokken binnen het "herhalen totdat" blok zetten, en zij zullen allemaal worden herhaald.'
     if:
       1:
-        image: "notes/hoc4_1.jpg"
+        image: notes/hoc4_1.jpg
         text: 'Hallo, ik ben Bill! We gaan een fundamenteel nieuw concept leren: "Als"-statements. Zo maken computers beslissingen.'
       2:
-        image: "notes/hoc4_2.jpg"
+        image: notes/hoc4_2.jpg
         text: |-
           Je gebruikt zelf ook dagelijks "Als"-statements. Voor je 's-ochtends naar buiten gaat, zeg je: ALS het regent, dan moet ik mijn regenjas aan.
       3:
-        image: "notes/hoc4_3.jpg"
-        text: "We kunnen de zombie vertellen dat ALS er een pad naar links is, hij die richting op moet draaien."
+        image: notes/hoc4_3.jpg
+        text: We kunnen de zombie vertellen dat ALS er een pad naar links is, hij die richting op moet draaien.
       4:
-        image: "notes/hoc4_4.jpg"
+        image: notes/hoc4_4.jpg
         text: 'Om hier de code voor te schrijven slepen we ons "Als"-blok naar het midden en stoppen we er een "linksaf"-blok in.'
       5:
-        image: "notes/hoc4_5.jpg"
+        image: notes/hoc4_5.jpg
         text: 'Als we er nu een "vooruit"-blok boven zetten en een "herhalen"-blok om alles heen, dan kijkt de zombie iedere keer als hij beweegt of hij naar een pad naar links kan draaien. Het "herhalen"-commando is belangrijk om te zorgen dat hij iedere stap kijkt of er een pad is.'
       6:
-        image: "notes/hoc4_6.jpg"
+        image: notes/hoc4_6.jpg
         text: |-
           "Als"-statements zijn heel belangrijk in de informatica. Een van de eerste programma's die ik heb geschreven was een boter-, kaas- en eieren-spelletje, en er was een "Als"-statement dat zei dat ALS de ander bijna ging winnen, ik het vakje waarmee hij zou winnen in ging pikken.
       7:
-        image: "notes/hoc4_7.jpg"
+        image: notes/hoc4_7.jpg
         text: 'Veel plezier met het "Als"-blok!'
     if_else:
       1:
-        image: "notes/hoc5_1.jpg"
+        image: notes/hoc5_1.jpg
         text: 'Hallo, ik heet Saloni! Ik gebruik informatie om problemen met gezondheid en medicatie op te lossen. Laten we leren over het "als dan"-blok. Het ziet eruit als het "als"-blok, maar met een extra "dan"-stukje.'
       2:
-        image: "notes/hoc5_2.jpg"
+        image: notes/hoc5_2.jpg
         text: 'Als ik een "vooruit"-blok zet bij "uitvoeren" en een "linksaf"-blok bij "anders" dan betekent dat dat de zombie kan kiezen uit 2 opties: ALS er een pad vooruit is dan gaat de zombie vooruit, ANDERS (als er geen pad vooruit is) dan draait de zombie naar links.'
       3:
-        image: "notes/hoc5_3.jpg"
+        image: notes/hoc5_3.jpg
         text: 'Net als het "als"-blok kunnen we "als anders"-blokken in een "herhalen"-blok zetten zodat de zombie blijft bewegen en het "als anders"-blok blijft kijken of hij kan draaien.'
       4:
-        image: "notes/hoc5_4.jpg"
-        text: "Stuur die zombies naar waar ze horen!"
+        image: notes/hoc5_4.jpg
+        text: Stuur die zombies naar waar ze horen!
     function:
       1:
-        image: "notes/stage13_1.jpg"
-        text: "Hoi, ik ben Brina, een engineer bij Instagram. Een functie is een aantal regels code dat je steeds weer wilt kunnen gebruiken, dus in plaats van die code iedere keer helemaal uit te schrijven, kun je gewoon een blok gebruiken."
+        image: notes/stage13_1.jpg
+        text: Hoi, ik ben Brina, een engineer bij Instagram. Een functie is een aantal regels code dat je steeds weer wilt kunnen gebruiken, dus in plaats van die code iedere keer helemaal uit te schrijven, kun je gewoon een blok gebruiken.
       2:
-        image: "notes/stage13_2.jpg"
-        text: "We gaan leren hoe je functies maakt. Functies hebben een ster in het hoekje. De naam van de functie wordt op de bovenste regel geschreven."
+        image: notes/stage13_2.jpg
+        text: We gaan leren hoe je functies maakt. Functies hebben een ster in het hoekje. De naam van de functie wordt op de bovenste regel geschreven.
       3:
-        image: "notes/stage13_3.jpg"
+        image: notes/stage13_3.jpg
         text: "De blokken in de definitie vertellen ons wat de functie doet. Dus deze functiedefinitie hebben we 'vul 5' genoemd, en bestaat uit een 'herhalen' en een 'vul'-blok."
       4:
-        image: "notes/stage13_4.jpg"
+        image: notes/stage13_4.jpg
         text: "De definitie zit op de werkplaats, maar onze boer voert de functie niet uit tot we ons 'vul 5 functie'-blok uit de 'functies'-categorie slepen."
       5:
-        image: "notes/stage13_5.jpg"
+        image: notes/stage13_5.jpg
         text: |-
           Let's put the "fun" back in "FUNction!"
     loop_while:
       1:
-        image: "notes/stage9_5.jpg"
+        image: notes/stage9_5.jpg
         text: |-
           Hi, I'm Makinde! Let's learn about the "while block."
       2:
-        image: "notes/stage9_6.jpg"
+        image: notes/stage9_6.jpg
         text: 'Het "while" blok voert alles uit wat er in staat, ZOLANG het statement bovenaan WAAR is.'
       3:
-        image: "notes/stage9_7.jpg"
-        text: "Bijvoorbeeld, als de boer op een hoop staat, blijft ze 1 schep verwijderen ZOLANG er nog een hoop onder haar is."
+        image: notes/stage9_7.jpg
+        text: Bijvoorbeeld, als de boer op een hoop staat, blijft ze 1 schep verwijderen ZOLANG er nog een hoop onder haar is.
     loop_for:
       1:
-        image: "notes/stage11_1.jpg"
-        text: "Hoi, ik ben Trina, en ik werk voor Pixar. Ik heb aan een heel stel films gewerkt, waaronder Shrek."
+        image: notes/stage11_1.jpg
+        text: Hoi, ik ben Trina, en ik werk voor Pixar. Ik heb aan een heel stel films gewerkt, waaronder Shrek.
       2:
-        image: "notes/stage11_2.jpg"
+        image: notes/stage11_2.jpg
         text: "Dit is onze nieuwe 'teller'-lus. Het voert acties steeds weer uit, en je kunt de actie iedere keer ietsje anders maken."
       3:
-        image: "notes/stage11_3.jpg"
+        image: notes/stage11_3.jpg
         text: |-
           In dit voorbeeld zegt onze 'teller'-lus "tel van 50 tot 90 met 10 tegelijk", en in het blok hebben we ons "teken een vierkant"-blok. Sleep het 'teller'-blok van het 'Variabelen'-stuk naar 'lengte'.
       4:
-        image: "notes/stage11_4.jpg"
-        text: "Dit betekent dat onze kunstenaar een vierkant gaat tekenen met zijden van 50 pixels, daarna telt het daar 10 bij op en tekent een vierkant met zijden van 60 pixels. Daarna blijft het 10 optellen en vierkanten tekenen tot het bij de 90 komt. Dus krijgen we vierkanten van 50, 60, 70, 80 en 90."
+        image: notes/stage11_4.jpg
+        text: Dit betekent dat onze kunstenaar een vierkant gaat tekenen met zijden van 50 pixels, daarna telt het daar 10 bij op en tekent een vierkant met zijden van 60 pixels. Daarna blijft het 10 optellen en vierkanten tekenen tot het bij de 90 komt. Dus krijgen we vierkanten van 50, 60, 70, 80 en 90.
     parameters:
       1:
-        image: "notes/stage15_1.jpg"
-        text: "Hoi, ik ben Janete, en ik ben een engineer bij Zynga."
+        image: notes/stage15_1.jpg
+        text: Hoi, ik ben Janete, en ik ben een engineer bij Zynga.
       2:
-        image: "notes/stage15_2.jpg"
-        text: "En als we nu een stel driehoeken willen tekenen met zijden van verschillende lengten?"
+        image: notes/stage15_2.jpg
+        text: En als we nu een stel driehoeken willen tekenen met zijden van verschillende lengten?
       3:
-        image: "notes/stage15_3.jpg"
-        text: "Ze zouden al die code met de hand kunnen schrijven, of we kunnen een functie met parameters maken."
+        image: notes/stage15_3.jpg
+        text: Ze zouden al die code met de hand kunnen schrijven, of we kunnen een functie met parameters maken.
       4:
-        image: "notes/stage15_4.jpg"
+        image: notes/stage15_4.jpg
         text: |-
           Klik om dat te doen op de blauwe ster op de "teken een driehoek"-functie. Sleep daarna 'invoer naam' naar het 'invoer'-blok.
       5:
-        image: "notes/stage15_5.jpg"
+        image: notes/stage15_5.jpg
         text: "Als we dan 'lengte' schrijven op de plek waar nu 'x' staat en op 'enter' drukken, maak je een 'lengte'-invoer voor je functie."
       6:
-        image: "notes/stage15_6.jpg"
+        image: notes/stage15_6.jpg
         text: "Klik daarna op de ster. Nu wil je op de 'variabelen'-categorie klikken en het 'lengte'-blok in het 'vooruit'-blok van je functie slepen. En sleep het oude nummer-blok weg."
       7:
-        image: "notes/stage15_7.jpg"
+        image: notes/stage15_7.jpg
         text: |-
           Klik om je nieuwe functie met parameters te gebruiken op de 'functies'-categorie en sleep je "teken een driehoek met lengte'-functie eruit.
       8:
-        image: "notes/stage15_8.jpg"
-        text: "Je kunt nu het reken-blok gebruiken om verschillende nummers in te voeren om driehoeken te tekenen met verschillende groottes."
+        image: notes/stage15_8.jpg
+        text: Je kunt nu het reken-blok gebruiken om verschillende nummers in te voeren om driehoeken te tekenen met verschillende groottes.
     hoc_wrapup:
       1:
-        image: "notes/hoc6_1.jpg"
-        text: "Gefeliciteerd! Met die oplossing voor de laatste puzzel heb je net code geschreven die IEDERE robot kan vertellen hoe hij uit een doolhof zonder splitsingen moet komen, of het nu een zombie is, een vogel, een Mars-lander of zelfs een automatisch rijdende auto."
+        image: notes/hoc6_1.jpg
+        text: Gefeliciteerd! Met die oplossing voor de laatste puzzel heb je net code geschreven die IEDERE robot kan vertellen hoe hij uit een doolhof zonder splitsingen moet komen, of het nu een zombie is, een vogel, een Mars-lander of zelfs een automatisch rijdende auto.
       2:
-        image: "notes/hoc6_2.jpg"
+        image: notes/hoc6_2.jpg
         text: 'De basisbegrippen die je hebt gebruikt zijn de kern van ieder programma of app die je gebruikt. We hebben geleerd over lussen, herhalings-statements, "als"-statements en "als anders"-statements.'
       3:
-        image: "notes/hoc6_3.jpg"
+        image: notes/hoc6_3.jpg
         text: "Als je je eerste uur code leuk vond, ga dan naar code.org om verder te gaan met je informatica-opleiding! Zogau je onze cursus van 20 uur klaar hebt, beheers je de grondbeginselen van het programmeren, en kun je beginnen te leren hoe je apps kunt maken voor mobiele telefoons, programma's voor robots, spelletjes, je kunt het zo gek niet bedenken."
       4:
-        image: "notes/hoc6_4.jpg"
+        image: notes/hoc6_4.jpg
         text: 'Technologie verandert alles wat we doen en of je nu jong of oud bent: programmeren is leuk, creatief, en iedereen kan het leren!'
     20_wrapup:
       1:
-        image: "notes/bird.png"
-        text: "Ondertiteling komt eraan!"
+        image: notes/bird.png
+        text: Ondertiteling komt eraan!

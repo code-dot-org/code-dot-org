@@ -10629,13 +10629,13 @@ exports.emptyBlocksErrorMsg = function(d){return "“Repeat”或“If”模块�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "这个函数块，需要有其他块在里面才能工作"};
 
-exports.extraTopBlocks = function(d){return "你有多余的块，这些块没有附加到任何的事件块。"};
+exports.extraTopBlocks = function(d){return "你有一些未连接上的模块。你是否要把这些模块连接在“运行”模块上？"};
 
 exports.finalStage = function(d){return "祝贺你 ！您已完成最后一章。"};
 
 exports.finalStageTrophies = function(d){return "祝贺你 ！已完成最终章并赢得了 "+p(d,"numTrophies",0,"zh",{"one":"1个奖杯","other":n(d,"numTrophies")+" 奖杯"})+"。"};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "完成"};
 
 exports.generatedCodeInfo = function(d){return "即使是顶级的大学教授基于块的编码(如。"+v(d,"berkeleyLink")+","+v(d,"harvardLink")+")。但是,你组装的模块也可以显示在JavaScript中,世界上最广泛使用的编程语言:\n"};
 
@@ -10711,7 +10711,7 @@ exports.saveToGallery = function(d){return "保存到您的画廊"};
 
 exports.savedToGallery = function(d){return "保存到您的画面场景"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "对不起，我们无法分享这程序。"};
 
 exports.typeCode = function(d){return "在这些说明下面输入您的 JavaScript代码。"};
 

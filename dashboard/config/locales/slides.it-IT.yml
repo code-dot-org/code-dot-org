@@ -172,8 +172,8 @@
           stabilire quante ripetizioni fare.
       6:
         image: notes/hoc2_6.jpg
-        text: 'Fai attenzione: "è possibile inserire più di un blocco all''interno
-          di un blocco di ripetizione \"ripeti ... volte\" ."'
+        text: 'Fai attenzione: è possibile inserire più di un blocco all''interno
+          di un blocco di ripetizione "ripeti ... volte" .'
       7:
         image: notes/hoc2_7.jpg
         text: Divertiti ad usare il blocco di ripetizione "ripeti ... volte" !
@@ -194,9 +194,8 @@
           avanti FINO A CHE raggiunge il maiale (o sbatte contro un muro).
       4:
         image: notes/hoc3_4.jpg
-        text: 'Fai attenzione: "proprio come prima, possiamo mettere più blocchi all''interno
-          del blocco di ripetizione \"ripeti fino a che\", ed essi verranno tutti
-          ripetuti."'
+        text: 'Fai attenzione: proprio come prima, possiamo mettere più blocchi all''interno
+          del blocco di ripetizione "ripeti fino a che", ed essi verranno tutti ripetuti.'
     if:
       1:
         image: notes/hoc4_1.jpg

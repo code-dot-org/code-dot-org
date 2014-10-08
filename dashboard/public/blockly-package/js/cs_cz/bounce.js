@@ -11446,7 +11446,7 @@ exports.finalLevel = function(d){return "Dobrá práce! Vyřešil jsi poslední 
 
 exports.heightParameter = function(d){return "výška"};
 
-exports.ifCode = function(d){return "Pokud"};
+exports.ifCode = function(d){return "os"};
 
 exports.ifPathAhead = function(d){return "když je cesta vpřed"};
 
@@ -11753,7 +11753,7 @@ exports.play = function(d){return "play"};
 
 exports.puzzleTitle = function(d){return "Hádanka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "opakuj"};
+exports.repeat = function(d){return "ailadrodd"};
 
 exports.resetProgram = function(d){return "Obnovit"};
 
