@@ -3,7 +3,7 @@
   computer_science: Informatique
   computer_science_edweek: Semaine de l'éducation des sciences informatiques
   csedweek_dates: 9-15 décembre 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>a essayé</h3><h2>HOUR of CODE&trade;</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>a essayé un</h3><h2>Heure de Code</h2>"
   anybody_can_learn: Tout le monde peut apprendre.
   learn_now: Apprends Maintenant
   petition_message: Tous les étudiants dans toutes les écoles devraient avoir la possibilité
@@ -16,6 +16,15 @@
   twentyhours_heading: Essaie notre introduction au cours de Programmation Informatique
   twentyhours_text: Tu as fini ta première heure de programmation ? Apprend encore
     plus sur les concepts fondamentaux de l'informatique dans la suite ce cours.
+  hoc2014_heading: rejoigner
+  hoc2014_students: "Élèves"
+  hoc2014_try: |
+    essayer le
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: Essaie maintenant
   california_heading: Demandez à votre école pour enseigner l'informatique
   california_text: Tout enseignant peut offrir notre <a href='http://learn.code.org/'>
@@ -58,6 +67,7 @@
     de 20 heures</a>, ou voir plus d'options à <a href='/learn/beyond'> savoir au-delà
     d'une heure</a>.
   leaderboards_for_hoc: Classements pour l'Heure de Code.
+  support_url: http://support.code.org/
   country: Pays
   city: Ville
   gender: Sexe
@@ -94,7 +104,7 @@
   learn_classes: Trouver des écoles près de chez vous
   hoc_is_here: 'La #HourOfCode est ici - jetez-y un oeil ! @codeorg'
   just_did_hoc: 'Je viens de faire la #HourOfCode - jetez-y un oeil ! @codeorg'
-  learn_hoc: Apprendre une Heure de Programmation
+  learn_hoc: Apprendre une Heure de Code
   beyond_hoc: Au delà d'Une heure
   what_gender: De quel sexe êtes vous ?
   girl: Fille
@@ -186,6 +196,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: Imprimer les certificats pour les élèves ayant
     terminé ce cours
   dashboard_landing_educator_blog: Lisez l'actualité et les mises à jour de notre
@@ -215,6 +227,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -256,6 +269,8 @@
   dashboard_students_password: Mot de passe
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret

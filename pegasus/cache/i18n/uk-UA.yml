@@ -16,6 +16,15 @@
   twentyhours_heading: "Спробуйте наш курс вступу до інформатики"
   twentyhours_text: "Завершили свою першу Годину Коду? Дізнайтеся більше про основні
     поняття комп'ютерних наук та програмування на подальших курсах."
+  hoc2014_heading: Приєднуйтеся до <a href="http://hourofcode.com">Години коду</a>
+    <br/> 8-14 грудня 2014 року <br/>
+  hoc2014_students: "Учні"
+  hoc2014_try: "Спробуйте"
+  hoc2014_teachers: "Вчителі"
+  hoc2014_host: "Проведіть"
+  hoc2014_everyone: "Усі"
+  hoc2014_support: "Підтримайте"
+  hoc2014_whatishoc: "Що таке Година коду?"
   twentyhours_trynow: "Спробувати"
   california_heading: "Попросіть свою школу викладати інформатику"
   california_text: "Кожен вчитель може провести наш <a href='http://studio.code.org/'>безкоштовний
@@ -58,6 +67,7 @@
     курсі</a>, або перегляньте інші варіанти <a href='/learn/beyond'>навчання поза
     однією Годиною</a>."
   leaderboards_for_hoc: "Лідери „Години Коду“."
+  support_url: http://support.code.org/
   country: "Країна"
   city: "Місто"
   gender: "Стать"
@@ -182,11 +192,13 @@
   dashboard_landing_view_as_student: "Переглянути сайт в ролі учня"
   dashboard_landing_students_title: "Ваші учні"
   dashboard_landing_students_manage: "Перегляд та керування учнями"
-  dashboard_landing_news_title: "Останні новини"
+  dashboard_landing_news_title: "Ресурси для вчителів початкової школи (лише англійською)"
   dashboard_landing_new_beta: "Новинка! Спробуйте наші бета-курси для учнів 1-5 класу."
   dashboard_landing_new_k5courses: "Новинка! Спробуйте наші нові курси для учнів до
     5 класу."
-  dashboard_landing_useful_links: "Інші корисні посилання"
+  dashboard_landing_useful_links: "Інші корисні посилання (лише англійською)"
+  dashboard_landing_office_hours: "Задайте своє питання! Відвідайте щомісячний вебінар
+    за розкладом."
   dashboard_landing_print_certificates: "Надрукуйте сертифікати для учнів, які завершили
     цей курс"
   dashboard_landing_educator_blog: "Читайте новини та інформацію про оновлення матеріалів
@@ -194,8 +206,8 @@
   dashboard_landing_smart_hints: "Будь ласка, допоможіть розставити смарт-теги у підручниках
     Code.org"
   dashboard_landing_video_player: "Випробуйте наш новий відео-плеєр у своїй школі"
-  dashboard_landing_progress_title: "Основний прогрес класу"
-  dashboard_landing_progress_biggest: "Це прогрес Вашого найбільшого підрозділу."
+  dashboard_landing_progress_title: "Прогрес класу"
+  dashboard_landing_progress_biggest: "Це прогрес Вашої найбільшої групи."
   dashboard_landing_view_progress: "Переглянути прогрес для %{biggest_section}"
   dashboard_landing_available_title: "Доступні курси"
   dashboard_landing_available_courses: "Перелік курсів, які на даний момент доступні
@@ -212,25 +224,26 @@
   dashboard_action_done: "Готово"
   dashboard_action_required: "необхідні"
   dashboard_navigation_home_page: "Домашня сторінка вчителя"
-  dashboard_navigation_all_sections: "Всі розділи"
+  dashboard_navigation_all_sections: "Всі групи"
   dashboard_navigation_view_progress: "Перегляд прогресу"
   dashboard_navigation_add_students: "Додати учнів"
   dashboard_navigation_manage_students: "Керування учнями"
-  dashboard_navigation_section: "Підрозділ: %{section_name}"
+  dashboard_navigation_view_stats: "Статистика"
+  dashboard_navigation_section: "Група: %{section_name}"
   dashboard_navigation_student: "Учень: %{student_name}"
-  dashboard_sections_new_section: "Новий розділ"
-  dashboard_sections_jumbotron_instruction: "Створюйте нові підрозділи і додавайте
-    до них учнів. Підрозділи допоможуть організувати учнів у менші групи для зручнішого
-    відстеження прогресу та керування обліковими записами."
-  dashboard_sections_table_section: "Розділ"
+  dashboard_sections_new_section: "Нова група"
+  dashboard_sections_jumbotron_instruction: "Створюйте нові групи і додавайте до них
+    учнів. Це допоможе організувати учнів у менші групи для зручнішого відстеження
+    прогресу та керування обліковими записами."
+  dashboard_sections_table_section: "Група"
   dashboard_sections_table_secret: "Таємний код"
   dashboard_sections_table_grade: "Клас"
   dashboard_sections_table_course: "Курс"
   dashboard_sections_table_students: "Учні"
-  dashboard_sections_table_code: "Код розділу"
+  dashboard_sections_table_code: "Код групи"
   dashboard_sections_name: "Назва групи"
   dashboard_sections_choose_secret: "Якщо Ви хочете створити облікові записи для своїх
-    учнів, оберіть таємне  <b>слово</b> або  <b>зображення</b> для цього підрозділу."
+    учнів, оберіть таємне  <b>слово</b> або  <b>зображення</b> для цієї групи."
   dashboard_sections_secret_word: "<b>Слово</b> дозволяє задати таємне слово для кожного
     учня."
   dashboard_sections_secret_picture: "<b>Зображення</b>дозволяє задати таємне зображення
@@ -239,12 +252,12 @@
     записи і задавали паролі, оберіть таємне слово<b>жодне</b>."
   dashboard_sections_print_secrets: "Можете роздрукувати аркуш карток, що містять
     інформацію про облікові записи учнів та індивідуально роздати їх учням."
-  dashboard_sections_switch_section: "Перемикач розділів:"
+  dashboard_sections_switch_section: "Перемикач груп:"
   dashboard_students_add_student: "Додати учня"
   dashboard_students_add_students: "Додати учнів"
   dashboard_students_add_multiple: "Надрукуйте або вставте імена Ваших учнів, по одному
     на рядок:"
-  dashboard_students_new_section: "Ви створили новий розділ! Тепер додавайте учнів,
+  dashboard_students_new_section: "Ви створили нову групу! Тепер додавайте учнів,
     використовуючи кнопки <b>Додати учня</b> та <b>Додати учнів</b>."
   dashboard_students_placeholder_name: "Ім'я учня"
   dashboard_students_name: "Ім’я"
@@ -256,6 +269,8 @@
   dashboard_students_password: "Пароль"
   dashboard_students_username: "Ім'я користувача: %{student_username}"
   dashboard_students_email: "Електронна скринька: %{student_email}"
+  dashboard_students_completed_levels: "Завершені рівні"
+  dashboard_students_total_lines: "Рядків коду"
   dashboard_students_show_secret: "Показати таємний код"
   dashboard_students_auto_generated: "Створено автоматично"
   dashboard_students_reset_secret: "Скинути таємний код"
@@ -286,16 +301,16 @@
   dashboard_course1: "Курс 1:"
   dashboard_course2: "Курс 2:"
   dashboard_course3: "Курс 3:"
-  dashboard_sequence: "Послідовність"
-  dashboard_framework: "Рамки"
+  dashboard_sequence: "Огляд"
+  dashboard_framework: "Програма"
   dashboard_standards: "Стандарти"
-  dashboard_implementation_guide: "Керівництво із впровадження"
+  dashboard_implementation_guide: "Практика впровадження"
   dashboard_glossary: "Глосарій"
   dashboard_classroom_strategies: "Прийоми для вчителів"
   dashboard_debugging: "Налагодження:"
-  dashboard_puzzle_solving: "Розв'язання головоломок:"
-  dashboard_student_worksheet: "аркуш учня"
-  dashboard_teacher_worksheet: "аркуш вчителя"
+  dashboard_puzzle_solving: "Розв'язання задач:"
+  dashboard_student_worksheet: "інструкція для учня"
+  dashboard_teacher_worksheet: "інструкція для вчителя"
   dashboard_grade_k: Kлас
   dashboard_grade_other: "Інше"
   dashboard_login_word: "слово"

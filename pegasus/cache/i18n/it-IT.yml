@@ -17,6 +17,15 @@
   twentyhours_heading: Prova la nostra introduzione all'Informatica
   twentyhours_text: Hai terminato la tua prima Ora del Codice? Impara un altro po'
     di concetti di informatica e di programmazione in quest'altro corso.
+  hoc2014_heading: Iscriviti alla <a href="http://hourofcode.com/it">Ora del Codice</a>
+    <br/>8-14 dicembre 2014 <br/>
+  hoc2014_students: Studenti
+  hoc2014_try: Prova
+  hoc2014_teachers: Insegnanti
+  hoc2014_host: Ospita
+  hoc2014_everyone: Tutti
+  hoc2014_support: Sostienici
+  hoc2014_whatishoc: Cosa è l'Ora del Codice?
   twentyhours_trynow: Prova adesso
   california_heading: Chiedi alla tua scuola di insegnare informatica
   california_text: Ogni insegnante può offrire i nostri <a href='http://learn.code.org/'>corsi
@@ -58,6 +67,7 @@
   beyond_hour_message: Vai avanti con <a href='http://studio.code.org'>altri corsi</a>,
     o vedi altre opzioni per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>.
   leaderboards_for_hoc: Classifiche per l'Ora del Codice.
+  support_url: http://programmailfuturo.it/aiuto
   country: Nazione
   city: Città
   gender: Sesso
@@ -189,13 +199,15 @@
     delle scuole elementari (in versione provvisoria).
   dashboard_landing_new_k5courses: Nuovo! Prova i nostri corsi per gli studenti della
     scuola primaria.
-  dashboard_landing_useful_links: Altri siti utili
+  dashboard_landing_useful_links: Altre pagine utili (solo in lingua inglese)
+  dashboard_landing_office_hours: Fai una domanda di persona! Visita il nostro ufficio
+    di assistenza. L'assistenza viene fornita in inglese dal personale di code.org.
   dashboard_landing_print_certificates: Stampa i certificati per gli studenti che
     completano questo corso
   dashboard_landing_educator_blog: Leggi notizie e aggiornamenti relativi al nostro
     materiale didattico sul nostro Blog dell'Insegnante
   dashboard_landing_smart_hints: Per favore aiutaci ad aggiungere suggerimenti intelligenti
-    ai corsi di Code.org
+    ai corsi di Code.org (per il momento possibile solo in inglese)
   dashboard_landing_video_player: Prova il nostro nuovo visualizzatore di video nella
     tua scuola
   dashboard_landing_progress_title: Progressi della classe principale
@@ -220,6 +232,7 @@
   dashboard_navigation_view_progress: Controlla i progressi
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
+  dashboard_navigation_view_stats: Guarda le statistiche
   dashboard_navigation_section: 'Classe: %{section_name}'
   dashboard_navigation_student: 'Studente: %{student_name}'
   dashboard_sections_new_section: Nuova classe
@@ -227,21 +240,21 @@
     Le classi ti aiutano a organizzare gli studenti in gruppi più piccoli, così è
     possibile controllare i loro progressi e gestire i loro account.
   dashboard_sections_table_section: Classe
-  dashboard_sections_table_secret: Tipo di segreto
+  dashboard_sections_table_secret: Tipo di password
   dashboard_sections_table_grade: Livello
   dashboard_sections_table_course: Corso
   dashboard_sections_table_students: Studenti
   dashboard_sections_table_code: Codice Classe
   dashboard_sections_name: Nome della classe
   dashboard_sections_choose_secret: Se vuoi creare tu gli account per i tuoi studenti,
-    scegli un tipo di segreto <b>parola</b> o <b>immagine</b> per quella classe.
-  dashboard_sections_secret_word: Una <b>parola</b> ti permette di impostare una parola
-    segreta per ogni studente.
-  dashboard_sections_secret_picture: Un'<b>immagine</b> consente di impostare un'immagine
-    segreta per ogni studente. È la scelta ideale per gli studenti più piccoli che
-    ancora non sanno digitare sulla tastiera.
+    scegli un tipo di password <b>parola</b> o <b>immagine</b> per quella classe.
+  dashboard_sections_secret_word: Una <b>parola</b> ti permette di impostare come
+    password una parola segreta per ogni studente.
+  dashboard_sections_secret_picture: Un'<b>immagine</b> ti permette di impostare come
+    password un'immagine segreta per ogni studente. È la scelta ideale per gli studenti
+    più piccoli che ancora non sanno digitare sulla tastiera.
   dashboard_sections_secret_none: Se vuoi che i tuoi studenti gestiscano i propri
-    account, anche scegliendo la propria password, scegli un tipo di segreto di <b>email</b>.
+    account, anche scegliendo la propria password, imposta il tipo di password a <b>email</b>.
   dashboard_sections_print_secrets: Dopo puoi stampare un insieme di schede contenenti
     le informazioni degli account di ognuno dei tuoi studenti.
   dashboard_sections_switch_section: 'Cambia classe:'
@@ -258,32 +271,34 @@
   dashboard_students_gender: Sesso
   dashboard_students_male: Maschile
   dashboard_students_female: Femminile
-  dashboard_students_secret: Tipo di segreto
+  dashboard_students_secret: Password
   dashboard_students_password: Password
   dashboard_students_username: 'Nome utente: %{student_username}'
   dashboard_students_email: 'Indirizzo di posta elettronica: %{student_email}'
-  dashboard_students_show_secret: Mostra il segreto
+  dashboard_students_completed_levels: Livelli completati
+  dashboard_students_total_lines: Linee di codice
+  dashboard_students_show_secret: Mostra la password
   dashboard_students_auto_generated: Auto-generata
-  dashboard_students_reset_secret: Ripristinare il segreto
+  dashboard_students_reset_secret: Reimposta la password
   dashboard_students_reset_password: Ripristinare la password
   dashboard_students_share_section: 'Condividi la pagina di accesso di questa classe
     con i tuoi studenti:'
   dashboard_students_print_info: Stampa le schede con le informazioni di login dei
     tuoi studenti.
   dashboard_students_secret_picture: Immagine segreta
-  dashboard_students_reset_picture: Puoi ripristinare l'immagine segreta di uno studente
-    in qualsiasi momento scegliendo <b>Mostra il segreto</b> e quindi <b>Reimposta
-    il segreto</b>. Una nuova immagine segreta verrà generata per quello studente,
-    da usare per l'accesso.
+  dashboard_students_reset_picture: Puoi reimpostare l'immagine segreta di uno studente
+    in qualsiasi momento scegliendo <b>Mostra la password</b> e quindi <b>Reimposta
+    la password</b>. Una nuova immagine segreta verrà generata come password per quello
+    studente, da usare per l'accesso.
   dashboard_students_secret_word: Parola segreta
-  dashboard_students_reset_word: 'Puoi ripristinare la parola segreta di uno studente
-    in qualsiasi momento scegliendo <b>Mostra il segreto</b> e quindi <b>Reimposta
-    il segreto</b>. Una nuova parola segreta verrà generata per quello studente da
-    utilizzare quando accede. '
+  dashboard_students_reset_word: 'Puoi reimpostare la parola segreta di uno studente
+    in qualsiasi momento scegliendo <b>Mostra la password</b> e quindi <b>Reimposta
+    la password</b>. Una nuova parola segreta verrà generata come password per quello
+    studente da utilizzare quando accede. '
   dashboard_students_join_link: Dì agli studenti di creare i propri account e di collegarsi
     alla tua sezione a
   dashboard_students_no_email: Se i tuoi studenti non hanno indirizzi di posta elettronica,
-    o tu vuoi creare gli account per loro, imposta il tipo di segreto di questa classe
+    o tu vuoi creare gli account per loro, imposta il tipo di password di questa classe
     a <b>parola</b> o <b>immagine</b>.
   dashboard_students_print_page: Stampa questa pagina
   dashboard_students_url: URL

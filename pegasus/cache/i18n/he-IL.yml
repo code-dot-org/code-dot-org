@@ -15,6 +15,15 @@
   twentyhours_heading: "נסה את קורס המבוא למדעי המחשב"
   twentyhours_text: "גמרת את שעת הקוד הראשונה שלך? למד עוד מבסיס מדעי המחשב ומושגים
     בתכנות בקורס הבא הזה."
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Students
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: "נסה עכשיו"
   california_heading: "בקש מבית הספר שלך ללמד מדעי המחשב"
   california_text: "כל מורה יכול להציע את <a href='http://learn.code.org/'> קורס המבוא
@@ -52,6 +61,7 @@
   beyond_hour_message: "נמשיך עם <a href='http://learn.code.org'> 20 שעות הקורס</a>
     שלנו, או לראות אפשרויות נוספות כדי <a href='/learn/beyond'> ללמוד מעבר שעה אחת</a>."
   leaderboards_for_hoc: "טבלת המובילים בשעה של קוד."
+  support_url: http://support.code.org/
   country: "מדינה"
   city: "עיר"
   gender: "מין"
@@ -179,6 +189,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: "הדפס תעודות לתלמידים שגמרו את הקורס הזה"
   dashboard_landing_educator_blog: קרא על חדשות ועדכונים לחומרים שלנו ב"בלוג מחנכים"
   dashboard_landing_smart_hints: "אנא עזור לנו להוסים רמזים חכמים למדריכים code.org"
@@ -205,6 +217,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -246,6 +259,8 @@
   dashboard_students_password: "סיסמא"
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret
