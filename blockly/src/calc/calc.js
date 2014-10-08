@@ -182,12 +182,10 @@ function evalCode (code) {
       }
       if (console && console.log) {
         console.log(e);
-      } else {
-        alert(e);
       }
     }
   }
-};
+}
 
 /**
  * Execute the user's code.  Heaven help us...
@@ -276,7 +274,7 @@ function onReportComplete(response) {
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
   displayFeedback(response);
-};
+}
 
 
 var getFeedbackImage = function() {

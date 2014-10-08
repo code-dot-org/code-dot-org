@@ -36,7 +36,7 @@ function installPlus(blockly, generator, gensym) {
     // Block for turning left or right.
     helpUrl: '',
     init: function() {
-      initFunctionalBlock(this, '+', 2)
+      initFunctionalBlock(this, '+', 2);
     }
   };
 
@@ -53,7 +53,7 @@ function installMinus(blockly, generator, gensym) {
     // Block for turning left or right.
     helpUrl: '',
     init: function() {
-      initFunctionalBlock(this, '-', 2)
+      initFunctionalBlock(this, '-', 2);
     }
   };
 
@@ -70,7 +70,7 @@ function installTimes(blockly, generator, gensym) {
     // Block for turning left or right.
     helpUrl: '',
     init: function() {
-      initFunctionalBlock(this, '*', 2)
+      initFunctionalBlock(this, '*', 2);
     }
   };
 
@@ -87,7 +87,7 @@ function installDividedBy(blockly, generator, gensym) {
     // Block for turning left or right.
     helpUrl: '',
     init: function() {
-      initFunctionalBlock(this, '/', 2)
+      initFunctionalBlock(this, '/', 2);
     }
   };
 

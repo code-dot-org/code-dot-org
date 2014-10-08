@@ -7,7 +7,7 @@
 var Expression = function (operator, a, b) {
   this.operator = operator;
   this.args = [a, b];
-}
+};
 module.exports = Expression;
 
 // todo (brent) - figure out how/where these are exposed

@@ -10,8 +10,6 @@ it('simple expressions to strings', function () {
 
   assert.equal(expr1.toString(), "(1 + 2)");
   assert.equal(expr2.toString(), "(2 + 1)");
-  assert.equal(expr1.toString(true), "(1 + 2)");
-  assert.equal(expr2.toString(true), "(1 + 2)");
 });
 
 describe("getDiff", function () {
