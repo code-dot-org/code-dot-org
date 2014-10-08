@@ -28,10 +28,11 @@ There are currently three projects, the [Hour of Code](https://crowdin.com/proje
 ## Translating video captions
 Translations for video captions is done through Google Translate Toolkit. To get started, send a request for an invite from translations@code.org, including a gmail email address (or one hosted on Gmail) and the language you'd like to translate. The videos we would like to be translated in order of priority are listed below. If you would like to translate additional videos, please include these in your request.
 
-1. [Hour of Code tutorial videos](http://www.youtube.com/playlist?list=PLzdnOPI1iJNemVBckyuo_m97bFF2hbL9J)
-2. [K-8 Intro Course videos](http://www.youtube.com/playlist?list=PLzdnOPI1iJNf1Xpah9NDGSFDYYc-uJMR1)
-3. [What Most Schools Don't Teach](https://www.youtube.com/watch?v=nKIu9yen5nc)
-4. [Hour of Code 2013 promotional video](https://www.youtube.com/watch?v=FC5FbmsH4fw)
+1. [Hour of Code 2014 promotional video](https://www.youtube.com/watch?v=rH7AjDMz_dc)
+2. [Hour of Code tutorial videos](http://www.youtube.com/playlist?list=PLzdnOPI1iJNemVBckyuo_m97bFF2hbL9J)
+3. [K-8 Intro Course videos](http://www.youtube.com/playlist?list=PLzdnOPI1iJNf1Xpah9NDGSFDYYc-uJMR1)
+4. [What Most Schools Don't Teach](https://www.youtube.com/watch?v=nKIu9yen5nc)
+5. [Hour of Code 2013 promotional video](https://www.youtube.com/watch?v=FC5FbmsH4fw)
 
 
 ## How to Use CrowdIn
