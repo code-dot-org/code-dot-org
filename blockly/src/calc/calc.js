@@ -102,7 +102,7 @@ Calc.init = function(config) {
     visualization.appendChild(display);
     Calc.ctxDisplay = display.getContext('2d');
 
-    // todo - draw goal function
+    // todo - draw target function
 
     // todo - figure out LB story
 
@@ -150,7 +150,7 @@ Calc.display = function() {
     Calc.ctxDisplay.canvas.width);
   Calc.ctxDisplay.fillStyle = style;
 
-  Calc.drawGoal(level.goal());
+  Calc.drawTarget(level.target());
 };
 
 /**
@@ -204,7 +204,7 @@ Calc.execute = function() {
   BlocklyApps.reset();
 
 
-  var result = Calc.drawAnswer(level.goal(), Calc.lastExpression);
+  var result = Calc.drawAnswer(level.target(), Calc.lastExpression);
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -222,18 +222,18 @@ Calc.execute = function() {
   BlocklyApps.report(reportData);
 };
 
-Calc.drawGoal = function (goal) {
+Calc.drawTarget = function (target) {
   Calc.ctxDisplay.fillStyle = 'black';
   Calc.ctxDisplay.font="30px Verdana";
-  var str = goal.toString();
+  var str = target.toString();
   Calc.ctxDisplay.fillText(str, 0, 350);
 };
 
-Calc.drawAnswer = function (goal, answer) {
+Calc.drawAnswer = function (target, answer) {
   var ctx = Calc.ctxDisplay;
   // todo (brent) - should i just have these in one function (i.e. ask for the
-  // token list, given an answer and goal).
-  var diff = Expression.getDiff(answer, goal);
+  // token list, given an answer and target).
+  var diff = Expression.getDiff(answer, target);
   var list = Expression.getTokenList(answer, diff);
   var xpos = 0;
   var ypos = 200;

@@ -1,6 +1,6 @@
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
-var Expression = require('./Expression');
+var Expression = require('./expression');
 
 /**
  * Information about level-specific requirements.
@@ -8,7 +8,7 @@ var Expression = require('./Expression');
 module.exports = {
   'example1': {
     // todo (brent) - probably want this to be blocks
-    goal: function () {
+    target: function () {
       return new Expression('*',
         new Expression('+', 1, 2),
         new Expression('+', 3, 4));
