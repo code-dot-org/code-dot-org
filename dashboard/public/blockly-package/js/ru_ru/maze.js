@@ -1608,6 +1608,9 @@ exports.displayFeedback = function(options) {
   var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
   var shareFailureDiv = hadShareFailure ? getShareFailure(options) : null;
+  if (hadShareFailure) {
+    trackEvent('Share', 'Failure', options.response.share_failure.type);
+  }
   var feedbackBlocks = new FeedbackBlocks(options);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
