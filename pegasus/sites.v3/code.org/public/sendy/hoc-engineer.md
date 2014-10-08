@@ -46,10 +46,12 @@ speaking schools
 
 Computer science is foundational for all students. Yet most schools don’t teach it, and most students never get a chance to try it. We owe it to our children to give them one hour. 
 
-Together, we’re making history. Please support our work,
+Together, we’re making history. Please support our work.
 
 Hadi Partovi<br/>
 Founder, Code.org
+
+<hr>
 
 You signed our petition at http://code.org, to bring computer science to all our schools. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](<%= unsubscribe_link %>).
 
