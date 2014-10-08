@@ -17,6 +17,15 @@
   twentyhours_heading: "Опитайте нашите въвеждащи курсове по компютърни науки"
   twentyhours_text: "Завършихте ли първия час на code.org? Научете повече за основните
     понятия в компютърните науки и програмиране в този следващ курс."
+  hoc2014_heading: Присъединете се към <a href="http://hourofcode.com"> Часът на кодирането</a>
+    <br/>на 8-14 декември 2014 г. <br/>
+  hoc2014_students: "Ученици"
+  hoc2014_try: "Опитайте"
+  hoc2014_teachers: "Учители"
+  hoc2014_host: "Организирайте"
+  hoc2014_everyone: "Всеки"
+  hoc2014_support: "Подкрепете го"
+  hoc2014_whatishoc: "Какво е Часът на кодирането?"
   twentyhours_trynow: "Опитайте сега"
   california_heading: "Попитайте във вашето училище дали се изучават компютърни науки"
   california_text: "Всеки учител може да предложи нашия <a href='http://studio.code.org/'>
@@ -60,6 +69,7 @@
     курс</a>, или вижте повече възможности да <a href='/learn/beyond'> учите след
     ПЪРВИЯ час</a>."
   leaderboards_for_hoc: "Класации за Часа на Кодирането."
+  support_url: http://support.code.org
   country: "Държава"
   city: "Град"
   gender: "Пол"
@@ -184,10 +194,11 @@
   dashboard_landing_view_as_student: "Вижте сайта като ученик"
   dashboard_landing_students_title: "Вашите ученици"
   dashboard_landing_students_manage: "Преглед и управление на вашите ученици"
-  dashboard_landing_news_title: "Последни новини"
+  dashboard_landing_news_title: K-5 ресурси за учителя (само на английски език)
   dashboard_landing_new_beta: "Ново! Опитайте нашите бета курсове за K-5 ученици."
   dashboard_landing_new_k5courses: "Ново! Опитайте нашите курсове за K-5 ученици."
-  dashboard_landing_useful_links: "Други полезни връзки"
+  dashboard_landing_useful_links: "Други полезни връзки (само на английски език)"
+  dashboard_landing_office_hours: "Задайте въпрос лично! Посетете ни в работно време."
   dashboard_landing_print_certificates: "Печат на сертификати за ученици, които завършват
     този курс"
   dashboard_landing_educator_blog: "Прочетете за новини и актуализации на нашите материали
@@ -217,6 +228,7 @@
   dashboard_navigation_view_progress: "Преглед на напредъка"
   dashboard_navigation_add_students: "Добавяне на ученици"
   dashboard_navigation_manage_students: "Управление на ученици"
+  dashboard_navigation_view_stats: "Преглед на статистиката"
   dashboard_navigation_section: "Раздел: %{section_name}"
   dashboard_navigation_student: "Ученик: %{student_name}"
   dashboard_sections_new_section: "Нов раздел"
@@ -259,6 +271,8 @@
   dashboard_students_password: "Парола"
   dashboard_students_username: "Потребителско име: %{student_username}"
   dashboard_students_email: "Имейл: %{student_email}"
+  dashboard_students_completed_levels: "Завършени нива"
+  dashboard_students_total_lines: "Редовете с код"
   dashboard_students_show_secret: "Покажи тайна"
   dashboard_students_auto_generated: "Автоматично генериран"
   dashboard_students_reset_secret: "Нова тайна"

@@ -15,6 +15,15 @@
   twentyhours_heading: "جرب  لدينا دورة العلوم مقدمة إلى الكمبيوتر"
   twentyhours_text: أتممت أول "ساعة من التعليمات البرمجية" الخاصة بك؟ تعلم المزيد
     عن الكمبيوتر العلوم والبرمجة و المفاهيم الأساسية في الدورة التالية.
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: "طالب"
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: "جرب الآن"
   california_heading: "أطلب من مدرستك لتعليم علوم الحاسب الآلي"
   california_text: "أي معلم يمكن أن يقدم لدينا <a href='http://studio.code.org/'>دورات
@@ -54,6 +63,7 @@
     الأخرى</a>, أو شاهد خيارات أخرى لـ <a href='/learn/beyond'>تعلم ما بعد ساعة من
     البرمجة</a>."
   leaderboards_for_hoc: "المتصدرين لبرنامج ساعة من البرمجة."
+  support_url: http://support.code.org/
   country: "الدولة"
   city: "المدينة"
   gender: "الجنس"
@@ -182,6 +192,8 @@
     لطلاب K-5 ."
   dashboard_landing_new_k5courses: "جديد ! جرب دوراتنا للطلاب K-5."
   dashboard_landing_useful_links: "روابط أخرى مفيدة"
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: "طباعة الشهادات لطلاب الذين أنجزوا هذه الدورة
     التدريبية"
   dashboard_landing_educator_blog: "أقرأ عن أخبار ومستجدات موادنا على مدونة معلمنا"
@@ -209,6 +221,7 @@
   dashboard_navigation_view_progress: "عرض عملية التقدم"
   dashboard_navigation_add_students: "إضافة طلاب"
   dashboard_navigation_manage_students: "إدارة الطلاب"
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: "القسم: %{section_name}"
   dashboard_navigation_student: "الطالب: %{student_name}"
   dashboard_sections_new_section: "القسم جديد"
@@ -247,6 +260,8 @@
   dashboard_students_password: "كلمة المرور"
   dashboard_students_username: "اسم المستخدم: %{student_username}"
   dashboard_students_email: "البريد الإلكتروني: %{student_email}"
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: "إظهار طريقة الدخول السرية"
   dashboard_students_auto_generated: "إنشاء تلقائي"
   dashboard_students_reset_secret: "إعادة تعيين طريقة الدخول السرية"

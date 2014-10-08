@@ -16,6 +16,15 @@
   twentyhours_heading: Próbálja ki az bevezető tanfolyamunkat, a számítógép tudományhoz
   twentyhours_text: Elvégezte az első tanfolyamot? Tudjon meg többet számítógép tudomány
     lényegéből és a programozási fogalmakról az ezt követő tanfolyamon.
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Tanuló
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: Próbálja ki most
   california_heading: Kérd a sulidban, hogy tanítsanak számítstechnikát
   california_text: Minden tanár tud felajánhat egy  ingyenes<a href='http://learn.code.org/'>
@@ -56,6 +65,7 @@
   beyond_hour_message: Folytassa  a <a href='http://learn.code.org'> 20 órás tanfolyamunkat</a>,
     vagy nézze meg a <a href='/learn/beyond'> Tanulj az Egy Órán túl</a> további lehetőségeit.
   leaderboards_for_hoc: Ranglisták a Kód Órájáról.
+  support_url: http://support.code.org/
   country: Ország
   city: Település
   gender: Nem
@@ -181,6 +191,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: Nyomtasa ki a bizonyítványokat a diákoknak,
     akik befejezték a tanfolyamot
   dashboard_landing_educator_blog: Olvastam a híreket és frissítéseket az anyagokhoz  a
@@ -210,6 +222,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -251,6 +264,8 @@
   dashboard_students_password: Jelszó
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret

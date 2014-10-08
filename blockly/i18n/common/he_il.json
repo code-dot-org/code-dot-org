@@ -62,6 +62,7 @@
   "backToPreviousLevel": "חזרה לשלב הקודם",
   "saveToGallery": "לשמור את הגלריה שלך",
   "savedToGallery": "נשמר לגלריה שלך!",
+  "shareFailure": "Sorry, we can't share this program.",
   "typeCode": "הקלד את קוד ה JavaScript שלך מתחת להוראות אלו.",
   "typeFuncs": "פונקציות אפשריות: %1",
   "typeHint": "שימו לב כי סוגריים ונקודה-פסיק הכרחיים.",
