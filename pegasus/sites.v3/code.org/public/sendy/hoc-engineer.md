@@ -51,8 +51,9 @@ Together, we’re making history. Please support our work.
 Hadi Partovi<br/>
 Founder, Code.org
 
-<hr>
+<hr/>
 
 You signed our petition at http://code.org, to bring computer science to all our schools. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](<%= unsubscribe_link %>).
 
 ![](<%= tracking_pixel %>)
+
