@@ -55,13 +55,16 @@ Tell your friends about the #HourOfCode.
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 3. Make a generous donation
+[Donate to our crowdfunding campaign](http://code.org/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://code.org/donate) in history. Every dollar will be matched by major Code.org [donors](http://code.org/about/donors), doubling your impact. 
+
+## 4. Ask your employer to get involved
 [Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
 
-## 4. Promote Hour of Code within your community
+## 5. Promote Hour of Code within your community
 Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 6. Ask a local elected official to support the Hour of Code
 [Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>
