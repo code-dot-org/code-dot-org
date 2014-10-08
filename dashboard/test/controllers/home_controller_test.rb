@@ -40,16 +40,27 @@ class HomeControllerTest < ActionController::TestCase
 
   test "logged in user with gallery activities shows gallery" do
     user = create(:user)
-    activity1 = create(:activity, user: user)
-    GalleryActivity.create!(activity: activity1, user: user)
-    activity2 = create(:activity, user: user)
-    GalleryActivity.create!(activity: activity2, user: user)
+    create :gallery_activity,
+      user: user,
+      autosaved: true,
+      activity: create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::ARTIST)))
+    create :gallery_activity,
+      user: user,
+      activity: create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::ARTIST)))
+    create :gallery_activity,
+      user: user,
+      activity: create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::ARTIST)))
+    create :gallery_activity,
+      user: user,
+      activity: create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::STUDIO)))
     sign_in user
 
     get :index
 
-    assert_select 'h4', "Gallery:" # title of the gallery section
-    assert_select 'div.gallery_activity img', 2 # 2 gallery items
+    assert_select 'h4', "My Apps" # title of the gallery section
+    assert_select 'h4', "My Art" # title of the gallery section
+    assert_select '#turtle-gallery div.gallery_activity img', 3 # artist items
+    assert_select '#studio-gallery div.gallery_activity img', 1 # playlab item
 
   end
 
