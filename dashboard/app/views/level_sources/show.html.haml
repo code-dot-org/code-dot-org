@@ -19,13 +19,13 @@ fjs.parentNode.insertBefore(js, fjs);
     = tag('meta', :property => 'og:image', :content => show_image(:id => @level_source_id))
     = tag('meta', :name => 'twitter:image', :content => show_image(:id => @level_source_id))
 
-    - if @game.app == "flappy"
+    - if @game.app == Game::FLAPPY
       = tag('meta', :property => 'og:title', :content => t('share_code.flappy_og_title'))
 
-    - if @game.app == "bounce"
+    - if @game.app == Game::BOUNCE
       = tag('meta', :property => 'og:title', :content => t('share_code.bounce_og_title'))
 
-    - if @game.app == "studio"
+    - if @game.app == Game::PLAYLAB
       = tag('meta', :property => 'og:title', :content => t('share_code.studio_og_title'))
 
     - if @game.share_mobile_fullscreen?

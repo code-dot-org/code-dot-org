@@ -31,6 +31,14 @@ a.ee_link:link, a.ee_link:visited {
   color: white;
 }
 
+button.ee_button {
+  font-size: 20px;
+  font-weight: 500;
+  height: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .ee_markdown {
   color: black;
 }
