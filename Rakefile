@@ -149,16 +149,20 @@ namespace :production do
 
     task :upgrade do
       CDO.varnish_instances.each do |host|
-        remote_command = [
-          'cd production/aws',
-          'git pull',
-          'bundle',
-          'touch Rakefile',
-          'rake',
-          'cd ..',
-          'rake build:varnish',
-        ].join('; ')
-        RakeUtils.system 'ssh', host, "'#{remote_command} 2>&1'"
+        begin
+          remote_command = [
+            'cd production/aws',
+            'git pull',
+            'bundle',
+            'touch Rakefile',
+            'rake',
+            'cd ..',
+            'rake build:varnish',
+          ].join('; ')
+          RakeUtils.system 'ssh', host, "'#{remote_command} 2>&1'"
+        rescue
+          puts "Unable to update #{host}!"
+        end
       end
     end
 
