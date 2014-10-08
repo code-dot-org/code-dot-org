@@ -6,10 +6,14 @@
 <br/>
 - <a href="<%= hoc_uri('/resources#posters') %>"><%= hoc_s(:resources_posters)%></a>
 <br/>
+<% if @country != 'uk' %>
 - <a href="<%= hoc_uri('/resources#banners') %>"><%= hoc_s(:resources_banners)%></a>
 <br/>
+<% end %>
 - <a href="<%= hoc_uri('/resources#sample-emails') %>"><%= hoc_s(:resources_emails)%></a>
 <br/>
+<% if @country != 'uk' %>
 - <a href="<%= hoc_uri('/resources/stats') %>"><%= hoc_s(:resources_stats)%></a>
 <br />
+<% end %>
 - <a href="<%= hoc_uri('/resources/press-kit') %>"><%= hoc_s(:resources_press_kit)%></a>
