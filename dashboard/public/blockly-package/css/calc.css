@@ -1,0 +1,40 @@
+#visualization {
+  background-color: white; }
+
+/* Slider. */
+.sliderContainer {
+  float: left; }
+
+.sliderTrack {
+  stroke: #aaaaaa;
+  stroke-width: 6px;
+  stroke-linecap: round; }
+
+.sliderKnob {
+  fill: #dddddd;
+  stroke: #bbbbcc;
+  stroke-width: 1px;
+  stroke-linejoin: round; }
+
+.sliderKnob:hover {
+  fill: #eeeeee; }
+
+/* Sprited icons. */
+.icon21 {
+  height: 21px;
+  width: 21px;
+  background-image: url("/blockly/media/turtle/icons.png"); }
+
+.code {
+  background-position: -42px 0px; }
+
+.link {
+  background-position: -21px 0px; }
+
+.run {
+  background-position: -63px -21px;
+  margin-right: 3px; }
+
+.stop {
+  background-position: -63px 0px;
+  margin-right: 3px; }
