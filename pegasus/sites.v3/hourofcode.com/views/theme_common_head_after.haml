@@ -2,8 +2,12 @@
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
+
 :javascript
   $(function() {
-    selectize = $('#language-dropdown select').selectize();
+    selectize = $('#language-dropdown select').selectize({
+      plugins: ['fast_click']
+    });
     $('#language-dropdown').attr('style', 'visibility: visible;');
   });

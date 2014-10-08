@@ -535,22 +535,6 @@ $aniGifPreviewHeight: 60px;
   }
 }
 
-.qtip-content {
-  font-size: 20px;
-  line-height: 28px;
-  color: #7E5BA0;
-  font-weight: 500;
-}
-
-.qtip-default {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
-  border-radius: 8px;
-  box-shadow: 5px 5px 5px #888;
-  padding: 10px;
-}
-
 #rotateContainer {
   position: fixed;
   z-index: 10001;
@@ -685,9 +669,9 @@ $modal-image-margin-gap: 10px;
   }
 
   .feedback-image {
-    width: 40%;
+    width: 180px;
     height: auto;
-    margin: 15px;
+    margin:0 15px 0 0;
     float: left;
     border: lightgrey;
     border-style: solid;
@@ -868,6 +852,7 @@ $modal-image-margin-gap: 10px;
 }
 
 .sharing {
+  float: left;
   margin-top: 15px;
   font-size: 20px;
   color: $charcoal;
@@ -879,7 +864,7 @@ $modal-image-margin-gap: 10px;
   }
 
   div {
-    margin: 15px 0;
+    margin-bottom: 15px;
   }
 
   .saved-to-gallery {
@@ -893,7 +878,7 @@ $modal-image-margin-gap: 10px;
   #sharing-input {
     cursor: copy;
     margin: 0;
-    width: 20em;
+    width: 250px;
   }
 
   input#phone {
@@ -934,4 +919,10 @@ $modal-image-margin-gap: 10px;
   text-align: center;
 }
 
+#share-fail-explanation {
+  font-size: 20px;
+}
 
+.share-fail-excerpt .generatedCode {
+  font-size: 14px;
+}

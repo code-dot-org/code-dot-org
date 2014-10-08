@@ -1,0 +1,46 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 26,
+  "created_at": "2014-10-06T20:50:18.000Z",
+  "level_num": "custom",
+  "user_id": 2,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  return Studio.sayComplete >= 1;\r\n}",
+    "failure_condition": "function () {\r\n  \r\n}",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "instructions": "Can you make this dog say \"hello world\"?",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "free_play": "false",
+    "timeout_failure_tick": "100",
+    "ideal": "2"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_saySprite">
+          <title name="TEXT">type here</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="studio_saySprite">
+          <title name="TEXT">???</title>
+        </block>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Studio>

@@ -254,6 +254,9 @@
     header:
       finished_hoc: "لقد انهيت ساعة من البرمجة "
       sign_in_to_save: "قم بتسجيل الدخول لحفظ التقدم"
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: "طلابي"
       label: "مرحباً %{username}"
@@ -462,6 +465,13 @@
     flappy_og_title: "تحقق من لعبة Flappy"
     studio_og_title: "تحقق من مختبر اللعب خاصتي"
     og_description: "كتبت المدونة نفسي بCode.org"
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: "لقد أنشأت برنامج نصي جديد."
     destroyed: "أنت دمرت البرنامج النصي."

@@ -1,0 +1,14 @@
+- app ||= nil
+
+%br{clear: :all}
+
+- gallery_activities.each do |gallery_activity|
+  %div.gallery_activity
+    - activity = gallery_activity.activity
+    - level_source = activity.level_source
+    = link_to image_tag(original_image_level_source_path(level_source)), level_source
+    %div.caption
+      = time_ago_in_words activity.created_at
+      ago
+
+%br{clear: :all}

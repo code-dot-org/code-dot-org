@@ -3,7 +3,7 @@
   computer_science: "컴퓨터과학(Computer Science, 정보과학)"
   computer_science_edweek: "컴퓨터과학(Computer Science, 정보과학) 교육 주간"
   csedweek_dates: 2013년 12월 9일 부터 15일 까지
-  n_have_learned_an_hoc: "<h1>#</h1><h3>명이</h3><h2>Hour of Code를 경험하였습니다.</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>명이</h3><h2>Hour of Code</h2><h3>를 경험하였습니다</h3>"
   anybody_can_learn: "누구나 배울 수 있습니다."
   learn_now: "해보기"
   petition_message: "모든 학교의 모든 학생은 컴퓨터과학(정보과학)을 배울 기회가 있어야 합니다."
@@ -15,6 +15,15 @@
   twentyhours_heading: "컴퓨터과학(정보과학) 과정을 시도해 보세요."
   twentyhours_text: Hour of Code 를 모두 마쳤나요? 다음과 같은 과정들을 통해 컴퓨터과학(정보과학)의 원리나 프로그래밍
     기초개념들을 학습해 보세요.
+  hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a><br/>를 해보세요. December
+    8 - 14, 2014<br/>
+  hoc2014_students: "학생들"
+  hoc2014_try: "해보기"
+  hoc2014_teachers: "선생님들"
+  hoc2014_host: "주관하기"
+  hoc2014_everyone: "모든사람"
+  hoc2014_support: "도움주기"
+  hoc2014_whatishoc: Hour of Code 란?
   twentyhours_trynow: "지금 해보기"
   california_heading: "학교에 컴퓨터과학(정보과학) 수업을 요청하세요."
   california_text: "어떤 선생님이건 우리의 <a href='http://studio.code.org/'>무료 강좌</a>를 사용할
@@ -49,6 +58,7 @@
   beyond_hour_message: "우리의 <a href='http://studio.code.org'>다른 강좌들</a>을 계속 듣거나, <a
     href='/learn/beyond'>Hour of Code를 넘어서</a>에서 다른 선택들을 둘러보세요."
   leaderboards_for_hoc: Hour of Code 순위
+  support_url: http://support.code.org/
   country: "국가"
   city: "도시"
   gender: "성별"
@@ -166,10 +176,11 @@
   dashboard_landing_view_as_student: "학생 모드로 살펴보기"
   dashboard_landing_students_title: "나의 학생"
   dashboard_landing_students_manage: "내 학생 관리하기"
-  dashboard_landing_news_title: "최신 뉴스"
+  dashboard_landing_news_title: K-5(초등5학년) 교사 교수학습자료(영어)
   dashboard_landing_new_beta: "초등학교 5학년을 위한 코스(beta) 살펴보기!"
   dashboard_landing_new_k5courses: "초등학교 5학년을 위한 코스(beta) 살펴보기!"
-  dashboard_landing_useful_links: "다른 유용한 링크"
+  dashboard_landing_useful_links: "유용한 링크(영어)"
+  dashboard_landing_office_hours: "직접 물어보세요! monthly video office hours 를 방문해 보세요."
   dashboard_landing_print_certificates: "이 코스를 완료한 학생들을 위해 인증서 출력하기"
   dashboard_landing_educator_blog: "교육 블로그를 통해 관련 뉴스와 최신정보 확인하기"
   dashboard_landing_smart_hints: Code.org 튜토리얼을 위해 참신한 도움 내용을 만드는 것을 도와주세요.
@@ -195,6 +206,7 @@
   dashboard_navigation_view_progress: "진도 보기"
   dashboard_navigation_add_students: "학생 추가"
   dashboard_navigation_manage_students: "학생 관리"
+  dashboard_navigation_view_stats: "상태보기"
   dashboard_navigation_section: "섹션: %{section_name}"
   dashboard_navigation_student: "학생: %{student_name}"
   dashboard_sections_new_section: "새 섹션"
@@ -229,6 +241,8 @@
   dashboard_students_password: "비밀번호"
   dashboard_students_username: "사용자명: %{student_username}"
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: "단계 완료"
+  dashboard_students_total_lines: "총 코드 라인"
   dashboard_students_show_secret: "비밀보호 보기"
   dashboard_students_auto_generated: "자동생성"
   dashboard_students_reset_secret: "비밀보호 재설정"

@@ -1,10 +1,11 @@
 .row
   .col-xs-12
+    -total_count = DB[:forms].where(kind:'HocSignup2014').count
     -if @country == 'ar'
       %h2= hoc_s(:map_header_ar)
     -else
-      %h2= hoc_s(:map_header)
-  
+      %h2= hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))
+
 .row
   .col-xs-1.hidden-sm
   .col-xs-10.col-sm-12
@@ -27,8 +28,11 @@
       center: new google.maps.LatLng(28.25,7.39),
       zoom: 2,
       minZoom: 2,
+      scrollwheel: false,
+      draggable: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
+
     gmap = new google.maps.Map(document.getElementById("gmap"), mapOptions);
 
     return gmap;
@@ -37,22 +41,65 @@
   function getSignups() {
     var params = [];
 
+    var styles = 
+    [
+      {
+        height: 53,
+        url: "/images/map_m1.png",
+        width: 53
+      },
+      {
+        height: 56,
+        url: "/images/map_m2.png",
+        width: 56
+      },
+      {
+        height: 66,
+        url: "/images/map_m3.png",
+        width: 66
+      },
+      {
+        height: 78,
+        url: "/images/map_m4.png",
+        width: 78
+      },
+      {
+        height: 90,
+        url: "/images/map_m5.png",
+        width: 90
+      }
+    ];
+
+    // Uncomment this for sample dots on the USA...
+    /*
     function getRandomArbitrary(min, max) {
       return Math.random() * (max - min) + min;
     }
 
-    // Just uncomment for sample dots on the US.
-    /*
-    for (var i = 0; i < 100; i++)
+    for (var i = 0; i < 10000; i++)
     {
       var long = getRandomArbitrary(32,50);
       var lat = getRandomArbitrary(-120,-70);
       addMarker(long.toString(), lat.toString(), "School");
     }
+    
+    clusterer = new MarkerClusterer(gmap, markers, {
+      maxZoom: 6,
+      gridSize: 50,
+      minimumClusterSize: 2,
+      averageCenter: true,
+      zoomOnClick: true,
+      styles: styles
+    });
     */
+    // ...end of commented-out sample dots.
 
-    // Just uncomment for sample dot on the east coast.
-    // addMarker("41.0697172", "-73.84479879999999", "School");
+    google.maps.event.addListener(gmap, 'click', function(event){
+      this.setOptions({
+        scrollwheel: true,
+        draggable: true,
+      });
+    });
 
     $.post('/forms/HocSignup2014/query', $.param(params), function(response) {
       var results = JSON.parse(response);
@@ -67,13 +114,14 @@
         }
       });
 
-      //markerClusterer = new MarkerClusterer(gmap, markers, {
-      //  maxZoom: 6,
-      //  gridSize: 50,
-      //  minimumClusterSize: 1,
-      //  averageCenter: true,
-      //  zoomOnClick: true
-      //});
+      clusterer = new MarkerClusterer(gmap, markers, {
+        maxZoom: 6,
+        gridSize: 50,
+        minimumClusterSize: 2,
+        averageCenter: true,
+        zoomOnClick: true,
+        styles: styles
+      });
 
     }).fail(displayQueryError);
   }
@@ -83,20 +131,16 @@
 
     var marker = new google.maps.Marker({
       position: latlng,
-      map: gmap,
-      icon: {
-        path: google.maps.SymbolPath.CIRCLE,
-        strokeWeight: 1,
-        //strokeOpacity: 1,
-        fillColor: '#ea7717', //'#ee0000',
-        fillOpacity: 1,
-        strokeColor: '#ea7717', //'#ee0000',
-        strokeOpacity: 0.5,
-        scale: 4
-      },
       title: label,
       setClickable: false,
-      draggable: false
+      draggable: false,
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        strokeWeight: 0,
+        fillColor: '#F86B00',
+        fillOpacity: 1,
+        scale: 5
+      }
     });
 
     google.maps.event.addListener(marker, 'click', function() {

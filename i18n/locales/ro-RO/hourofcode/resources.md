@@ -1,30 +1,15 @@
 * * *
 
-title: Resources
+title: Resources layout: wide nav: resources_nav
 
-## layout: wide
+* * *
 
 # Resurse
 
-*   [Handouts to spread the word][1] <br/>
-*   [How-to guide for teachers][2] <br/>
-*   [Posters][3] <br/>
-*   [Videos][4] <br/>
-*   [Sample emails][5] <br/>
-*   [Useful computer science stats][6]   
-    
-*   [Press Kit][7]
+<a id="handouts"></p> 
 
- [1]: #handouts
- [2]: /resources/how-to
- [3]: #posters
- [4]: #videos
- [5]: #sample-emails
- [6]: /resources/stats
- [7]: /resources/press-kit
-
-<a id="handouts"></p> <h2>
-  Utilizaţi acest poster pentru a promova Hour of Code
+<h2>
+  Folosiți această broșură pentru a promova Hour of Code
 </h2>
 
 <p>
@@ -40,8 +25,10 @@ title: Resources
 </p>
 
 <p>
-  <a id="videos"></p> <h2>
-    Show these videos to inspire students
+  <a id="videos"></p> 
+  
+  <h2>
+    Arătați aceste videoclipuri pentru a inspira elevii
   </h2>
   
   <div style="float:left; padding:10px">
@@ -78,16 +65,34 @@ title: Resources
   </div>
   
   <p>
-    <a id="posters"></p> <h2>
-      Hang these posters in your school
+    <a id="posters"></p> 
+    
+    <h2>
+      Afișează aceste postere în şcoala ta
     </h2>
+    
+    <p>
+      <% if @country == 'us' %>
+    </p>
     
     <h4>
       <a href="http://hourofcode.com/us#signup">Înscrieţi</a> evenimentul dumneavoastră Hour of Code şi noi vă vom trimite postere gratuit.
     </h4>
     
     <p>
-      <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+    </p>
+    
+    <p>
+      <a id="banners"></a>
+    </p>
+    
+    <h2>
+      Feature these banners on your website
+    </h2>
+    
+    <p>
+      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -95,7 +100,7 @@ title: Resources
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code.
+      Trimite aceste e-mailuri pentru a ajuta la promovarea evenimentului Hour of Code
     </h2>
     
     <p>
@@ -103,7 +108,7 @@ title: Resources
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Roaga-ți școala, angajatorul sau prietenii sa se înscrie:
     </h2>
     
     <p>
@@ -126,8 +131,12 @@ title: Resources
       Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
     </p>
     
+    <p>
+      <a id="media-pitch"></a>
+    </p>
+    
     <h2>
-      Invite media to attend your event:
+      Invitaţi mass-media să participe la eveniment:
     </h2>
     
     <p>

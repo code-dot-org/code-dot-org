@@ -62,6 +62,7 @@
   "backToPreviousLevel":"برگرد به سطح قبلی",
   "saveToGallery":"ذخیره در گالری شما",
   "savedToGallery":"در گالری شما ذخیره شد!",
+  "shareFailure":"Sorry, we can't share this program.",
   "typeCode":"در زیر این دستورات کد جاوا اسکریپتِ خودت رو بنویس.",
   "typeFuncs":"توابع قابل استفاده: %1",
   "typeHint":"توجه کن که علامت‌های پرانتز و نقطه‌ویرگول لازم هستن.",

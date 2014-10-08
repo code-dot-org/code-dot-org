@@ -322,7 +322,8 @@ config.jshint = {
     'test/**/*.js',
     '!src/hammer.js',
     '!src/lodash.js',
-    '!src/lodash.min.js'
+    '!src/lodash.min.js',
+    '!src/canvg/*.js'
   ]
 };
 

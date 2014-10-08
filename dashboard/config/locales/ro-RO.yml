@@ -265,6 +265,9 @@
     header:
       finished_hoc: Am terminat Ora mea de Cod
       sign_in_to_save: Loghează-te pentru a salva progresul
+      free_play:
+        playlab: Make an App
+        artist: Desenează ceva
     user:
       classroom: Elevii mei
       label: Salut %{username}
@@ -478,6 +481,13 @@
     flappy_og_title: Aruncă-ți o privire asupra jocului meu Flappy
     studio_og_title: Verifică-mi povestea
     og_description: Am scris codul chiar eu cu Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: Ai creat un nou script.
     destroyed: Ai distrus un script.

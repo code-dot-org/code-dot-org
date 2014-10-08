@@ -1,5 +1,5 @@
 ---
-title: Thanks for signing up to host an Hour of Code! 
+title: Obrigado por se inscrever para sediar a Hora do Código!
 layout: wide
 ---
 
@@ -12,21 +12,17 @@ layout: wide
 
 # Obrigado por inscrever-se para sediar a Hora do Código!
 
-**TODO** organizador da Hora do Código receberá 10 GB de espaço no Dropbox ou US$10 de crédito no Skype como agradecimento. [Detalhes][1]
-
- [1]: /prizes
+**TODO** organizador da Hora do Código receberá 10 GB de espaço no Dropbox ou US$10 de crédito no Skype como agradecimento. [Detalhes](/prizes)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate][2] for a chance for big prizes for your entire school.
-
- [2]: /us/prizes
+Estimule sua [escola inteira a participar](/us/prizes), assim ela terá a oportunidade de ganhar grandes prêmios.
 
 <% end %>
 
 ## 1. Espalhe a notícia
 
-Fale aos seus amigos sobre o #HoraDoCódigo.
+Fale aos seus amigos sobre a #HoraDoCodigo.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
@@ -34,31 +30,26 @@ Fale aos seus amigos sobre o #HoraDoCódigo.
 
 ## 2. Peça para sua escola oferecer uma Hora do Código
 
-[Send this email][3] or [give this handout to your principal][4]. Quando toda a escola estiver participando, [inscreva-se para ganhar US$10.000 em tecnologia para sua escola][1] e desafie outras escolas de sua região a participar.
-
- [3]: /resources#email
- [4]: /files/schools-handout.pdf
+[Envie este e-mail](/resources#email) ou [entregue este folheto para seu diretor](/files/schools-handout.pdf). Quando toda a escola estiver participando, [inscreva-se para ganhar US$10.000 em tecnologia para sua escola](/prizes) e desafie outras escolas de sua região a participar.
 
 <% else %>
 
 ## 2. Peça para sua escola oferecer uma Hora do Código
 
-[Send this email][3] or give [this handout][4] to your principal.
+[Envie este e-mail](/resources#email) ou entregue [este folheto](/files/schools-handout.pdf) para seu diretor.
 
 <% end %>
 
-## 3. Peça para seu chefe para participar
+## 3. Peça para seu empregador para participar
 
-[Envie este email][3] para seu gerente, ou para seu Diretor Executivo. Ou [entregue este folheto a eles][5].
-
- [5]: /resources/hoc-one-pager.pdf
+[Envie este email](/resources#email) para seu gerente, ou para seu Diretor Executivo. Ou [entregue este folheto a eles](/resources/hoc-one-pager.pdf).
 
 ## 4. Promova a Hora do Código em sua comunidade
 
 Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de veteranos ou sindicato. Ou ofereça uma "festa" Hora do Código para sua vizinhança.
 
-## 5. Peça a um oficial eleito para apoiar a Hora do Código
+## 5. Peça a um representante político para apoiar a Hora do Código
 
-[Envie este e-mail][3] para seu prefeito, Câmara Municipal ou conselho escolar. Ou [entregue este folheto][5] e convide-os a visitar sua escola.
+[Envie este e-mail](/resources#politicians) para seu prefeito, Câmara Municipal ou conselho escolar. Ou [dê a eles este folheto](/resources/hoc-one-pager.pdf) e convide-os a visitar sua escola.
 
 <%= view 'popup_window.js' %>

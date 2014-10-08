@@ -14,6 +14,15 @@
   submit: "送信"
   twentyhours_heading: "コンピュータ科学コースの紹介します。"
   twentyhours_text: "最初のHour of Codeが終了？このフォローアップコースでコンピュータ科学やプログラミング概念をさらに学びます。"
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Students
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: "今すぐ試す"
   california_heading: Ask your school to teach computer science
   california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
@@ -47,6 +56,7 @@
   beyond_hour_message: " <a href='http://learn.code.org'> 20 時間のコース</a> を続けるか <a href='/learn/beyond'>
     1 時間を超えて学ぶ</a> からもっと多くの選択肢を試してください。"
   leaderboards_for_hoc: Hour of Codeのリーダー会議。
+  support_url: http://support.code.org/
   country: "国"
   city: "都市"
   gender: "性別"
@@ -170,6 +180,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: "このコースを終了した生徒の証明書を印刷します。"
   dashboard_landing_educator_blog: "ニュースと更新（教師用ブログ）を読みます"
   dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
@@ -196,6 +208,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -237,6 +250,8 @@
   dashboard_students_password: "パスワード"
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret

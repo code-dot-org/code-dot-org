@@ -1,10 +1,10 @@
 {
-  "continue":"Συνέχεια",
+  "continue":"Συνέχισε",
   "nextLevel":"Συγχαρητήρια! Έχεις ολοκληρώσει αυτό το παζλ.",
   "no":"Όχι",
   "numBlocksNeeded":"Αυτό το παζλ μπορεί να λυθεί με %1 μπλοκ.",
-  "reinfFeedbackMsg":"You can press the \"Try again\" button to go back to playing your game.",
-  "share":"Share",
-  "shareGame":"Share your game:",
+  "reinfFeedbackMsg":"Μπορείς να πατήσεις το πλήκτρο \"Δοκίμασε ξανά\" για να επιστρέψεις στο παιχνίδι σου.",
+  "share":"Μοιράσου",
+  "shareGame":"Μοιράσου το παιχνίδι σου:",
   "yes":"Ναι"
 }

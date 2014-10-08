@@ -1,47 +1,34 @@
 * * *
 
-title: Resources
+title: Resources layout: wide nav: resources_nav
 
-## layout: wide
+* * *
 
 # Πόροι
 
-*   [Handouts to spread the word][1] <br/>
-*   [How-to guide for teachers][2] <br/>
-*   [Posters][3] <br/>
-*   [Videos][4] <br/>
-*   [Sample emails][5] <br/>
-*   [Useful computer science stats][6]   
-    
-*   [Press Kit][7]
+<a id="handouts"></p> 
 
- [1]: #handouts
- [2]: /resources/how-to
- [3]: #posters
- [4]: #videos
- [5]: #sample-emails
- [6]: /resources/stats
- [7]: /resources/press-kit
-
-<a id="handouts"></p> <h2>
+<h2>
   Χρησιμοποιήστε αυτό το φυλλάδιο για να εξαπλωθεί το νέο
 </h2>
 
 <p>
-  <a href="/resources/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="image" /></a>
+  <a href="/resources/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="εικόνα" /></a>
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Δώστε αυτό το έγγραγο σε εκπαιδευτικούς και σχολεία
 </h2>
 
 <p>
-  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="image" /></a>
+  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="εικόνα" /></a>
 </p>
 
 <p>
-  <a id="videos"></p> <h2>
-    Show these videos to inspire students
+  <a id="videos"></p> 
+  
+  <h2>
+    Προβάλετε αυτά τα βίντεο για να εμπνεύσετε μαθητές
   </h2>
   
   <div style="float:left; padding:10px">
@@ -78,16 +65,34 @@ title: Resources
   </div>
   
   <p>
-    <a id="posters"></p> <h2>
-      Hang these posters in your school
+    <a id="posters"></p> 
+    
+    <h2>
+      Αναρτήστε αυτές τις αφίσες στο σχολείο σας
     </h2>
+    
+    <p>
+      <% if @country == 'us' %>
+    </p>
     
     <h4>
       <a href="http://hourofcode.com/us#signup">Εγγραφείτε</a> με την δικιά σας εκδήλωση για την Ώρα του Κώδικα και εμείς θα σας στείλουμε αφίσες δωρεάν.
     </h4>
     
     <p>
-      <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="εικόνα" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="εικόνα" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="εικόνα" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="εικόνα" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="εικόνα" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="εικόνα" /></a>
+    </p>
+    
+    <p>
+      <a id="banners"></a>
+    </p>
+    
+    <h2>
+      Τοποθετήστε αυτά τα διαφημιστικά στην ιστοσελίδα σας
+    </h2>
+    
+    <p>
+      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -95,7 +100,7 @@ title: Resources
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code.
+      Στείλτε αυτά τα ηλεκτρονικά μηνύματα για να βοηθήσετε στην προβολή της Ώρας του Κώδικα
     </h2>
     
     <p>
@@ -103,7 +108,7 @@ title: Resources
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Ζητήστε από το σχολείο, τον εργοδότη ή τους φίλους να εγγραφούν:
     </h2>
     
     <p>
@@ -126,8 +131,12 @@ title: Resources
       Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
     </p>
     
+    <p>
+      <a id="media-pitch"></a>
+    </p>
+    
     <h2>
-      Invite media to attend your event:
+      Καλέστε τα ΜΜΕ να καλύψουν την εκδήλωσή σας:
     </h2>
     
     <p>
@@ -179,7 +188,7 @@ title: Resources
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Ενημερώστε τους γονείς για την εκδήλωση του σχολείου:
     </h2>
     
     <p>
@@ -219,7 +228,7 @@ title: Resources
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Προσκαλέστε έναν τοπικό πολιτικό στην εκδήλωση του σχολείου:
     </h2>
     
     <p>

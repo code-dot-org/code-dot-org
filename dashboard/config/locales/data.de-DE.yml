@@ -575,17 +575,22 @@
           zu machen?
         studio_k1_6: Erzähl deine eigene Geschichte! Bewege die Katze und den Hund,
           und bring sie zum reden.
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
-          the word STORY
+        maze_wordsearch_k_1: Bewege mich, um das Wort EAST (Osten) zu schreiben
+        maze_wordsearch_k_2: Bewege mich, um das Wort SOUTH (Süden) zu schreiben
+        maze_wordsearch_k_3: Bewege mich, um das Wort WEST (Westen) zu schreiben
+        maze_wordsearch_k_4: Bewege mich, um das Wort NORTH (Norden) zu schreiben
+        maze_wordsearch_k_6: Bewegen mich nach Osten, dann nach Süden, um das Wort
+          JUMP zu schreiben
+        maze_wordsearch_k_9: Bewege mich ein Feld, dann noch eins, um das Wort CODE
+          zu schreiben
+        maze_wordsearch_k_13: Bewege mich ein Feld, dann noch eins, um das Wort DEBUG
+          zu schreiben
+        maze_wordsearch_k_15: Bewege mich ein Feld, dann noch eins, um das Wort ABOVE
+          zu schreiben
+        maze_wordsearch_k_16: Bewege mich ein Feld, dann noch eins, um das Wort BELOW
+          zu schreiben
+        maze_wordsearch_k_20: Das ist ein Test! Bewege mich ein Feld, dann noch eins,
+          um das Wort STORY zu buchstabieren
     video:
       name:
         maze_intro: Labyrinth Einführung

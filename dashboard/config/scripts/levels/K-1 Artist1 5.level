@@ -15,7 +15,8 @@
     "skip_instructions_popup": "false",
     "free_play": "false",
     "ideal": "3",
-    "slider_speed": "0.2"
+    "slider_speed": "0.2",
+    "disable_param_editing": "true"
   }
 }]]></config>
   <blocks>
@@ -37,18 +38,9 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_colour" inline="true">
-              <value name="COLOUR">
-                <block type="colour_picker">
-                  <title name="COLOUR">#228b22</title>
-                </block>
-              </value>
+            <block type="simple_move_up">
               <next>
-                <block type="simple_move_up">
-                  <next>
-                    <block type="simple_move_up"/>
-                  </next>
-                </block>
+                <block type="simple_move_up"/>
               </next>
             </block>
           </next>

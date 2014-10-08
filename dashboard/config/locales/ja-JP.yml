@@ -234,6 +234,9 @@
     header:
       finished_hoc: "コーディングの時間を終わる"
       sign_in_to_save: "プログレスを保存するためにはサインインをしてください。"
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: "私の生徒"
       label: "こんにちは  %{username}"
@@ -441,6 +444,13 @@
     flappy_og_title: "フラッピーゲームを調べる"
     studio_og_title: Check out my story
     og_description: Code.org でコード（プログラム）を書きました。
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: "新しいスクリプトを作成しました。"
     destroyed: "スクリプトを破棄しました。"

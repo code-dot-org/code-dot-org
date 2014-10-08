@@ -26,8 +26,6 @@ Milestone Complete!
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
 
 #### Save The Dates:
-9/20/2014
-<br/>
 11/8/2014
 <br/>
 2/7/2015
@@ -38,15 +36,14 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 <br />
 Breakfast and lunch will be served. 
 
-#### Location 
-
-Rainier Square Tower 
-<br />
-1301 Fifth Ave.
-<br />
-30th Floor, Conference Room
-<br />
+#### November 8th Location 
+Rainier Square Conference Center
+<br/>
+1333 Fifth Ave. 
+<br/>
 Seattle, WA 98101
+
+Located on the 3rd Floor of the Rainier Square Atrium. 
 
 #### What do I bring to Phase 3 PD? ####
 Exploring Computer Science binder with curriculum
@@ -69,24 +66,7 @@ The Administrator / Counselor Phase 1 Professional Development online course [ed
 
 ### Phase 2: Teaching and Learning Studio
 
-#### Date and Time
-Friday, September 19th
-<br />
-8:30am - 12:30 pm
-
-Light breakfast and coffee will be served. 
-<br />
-Please review your reflection questions prior to PD and bring your laptop.
-
-#### Location
-
-Rainier Square Tower 
-<br />
-1301 Fifth Ave.
-<br />
-30th Floor, Conference Room
-<br />
-Seattle, WA 98101
+Milestone Complete!
 
 [**Back to the top**](#top)
 

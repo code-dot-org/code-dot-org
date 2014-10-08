@@ -1,6 +1,8 @@
 * * *
 
-## layout: wide
+layout: wide
+
+* * *
 
 # Ceny - podmínky
 
@@ -20,8 +22,6 @@ Cena pouze pro USA K-12 školy. Nárok získá celá zaregistrovaná škola pro 
 
 ## Class-set of laptops (or $10,000 for other technology):
 
-Cena je omezená pouze na USA veřejné K-12 školy. Proč pouze veřejné školy? [Viz odpověď zde][1]. Nárok získá celá zaregistrovaná škola pro akci Kód hodiny do 14 listopadu 2014. Jedna škola v každém státě USA obdrží sadu počítačů pro třídu. Code.org vybere a oznámí vítěze prostřednictvím e-mailu do 1 prosince 2014.
-
- [1]: http://www.hourofcode.com/us#faq
+Cena je omezená pouze na USA veřejné K-12 školy. Proč pouze veřejné školy? [Viz odpověď zde](http://www.hourofcode.com/us#faq). Nárok získá celá zaregistrovaná škola pro akci Kód hodiny do 14 listopadu 2014. Jedna škola v každém státě USA obdrží sadu počítačů pro třídu. Code.org vybere a oznámí vítěze prostřednictvím e-mailu do 1 prosince 2014.
 
 <% end %>

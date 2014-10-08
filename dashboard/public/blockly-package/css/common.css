@@ -435,20 +435,6 @@ input[type="radio"] {
   #headers .block-counter-overflow {
     color: #ffb81d; }
 
-.qtip-content {
-  font-size: 20px;
-  line-height: 28px;
-  color: #7e5ba0;
-  font-weight: 500; }
-
-.qtip-default {
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-  border-radius: 8px;
-  box-shadow: 5px 5px 5px #888888;
-  padding: 10px; }
-
 #rotateContainer {
   position: fixed;
   z-index: 10001;
@@ -546,9 +532,9 @@ input[type="radio"] {
     left: -50px;
     z-index: -1; }
   .modal-content .feedback-image {
-    width: 40%;
+    width: 180px;
     height: auto;
-    margin: 15px;
+    margin: 0 15px 0 0;
     float: left;
     border: lightgrey;
     border-style: solid; }
@@ -690,6 +676,7 @@ input[type="radio"] {
   display: none; }
 
 .sharing {
+  float: left;
   margin-top: 15px;
   font-size: 20px;
   color: #5b6770; }
@@ -698,7 +685,7 @@ input[type="radio"] {
     font-size: 20px;
     color: #5b6770; }
   .sharing div {
-    margin: 15px 0; }
+    margin-bottom: 15px; }
   .sharing .saved-to-gallery {
     color: #7665a0; }
   .sharing .social-buttons a:hover {
@@ -706,7 +693,7 @@ input[type="radio"] {
   .sharing #sharing-input {
     cursor: copy;
     margin: 0;
-    width: 20em; }
+    width: 250px; }
   .sharing input#phone {
     height: 30px;
     padding: 5px;
@@ -732,3 +719,9 @@ input[type="radio"] {
 #stepButton {
   margin-right: 0;
   text-align: center; }
+
+#share-fail-explanation {
+  font-size: 20px; }
+
+.share-fail-excerpt .generatedCode {
+  font-size: 14px; }

@@ -252,6 +252,9 @@
     header:
       finished_hoc: "סיימתי את שעת הקוד שלי"
       sign_in_to_save: "התחבר כדי לשמור את התקדמות"
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: "התלמידים שלי"
       label: "היי %{username}"
@@ -461,6 +464,13 @@
     flappy_og_title: "תראה את משחק ההתנופפות שלי"
     studio_og_title: "תראה את הסיפור שלי"
     og_description: "כתבתי קוד בעצמי באמצעות code.org"
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: "יצרתי תסריט חדש."
     destroyed: "הרסתי תסריט."

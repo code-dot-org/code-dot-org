@@ -1,174 +1,174 @@
-"tr":
+tr:
   data:
     script:
       name:
         20-hour:
-          desc: "K-8 bilgisayar bilimine giriş dersi"
-          Unplug1: "1. Aşama"
-          Maze: "2. Aşama"
-          Unplug2: "3. Aşama"
-          Unplug3: "4. Aşama"
-          Artist: "5. Aşama"
-          Unplug4: "6. Aşama"
-          Artist2: "7. Aşama"
-          Unplug5: "8. Aşama"
-          Farmer: "9. Aşama"
-          Unplug6: "10. Aşama"
-          Artist3: "11. Aşama"
-          Unplug7: "12. Aşama"
-          Farmer2: "13. Aşama"
-          Unplug8: "14. Aşama"
-          Artist4: "15. Aşama"
-          Unplug9: "16. Aşama"
-          Farmer3: "17. Aşama"
-          Unplug10: "18. Aşama"
-          Artist5: "19. Aşama"
-          Unplug11: "20. Aşama"
+          desc: K-8 bilgisayar bilimine giriş dersi
+          Unplug1: 1. Aşama
+          Maze: 2. Aşama
+          Unplug2: 3. Aşama
+          Unplug3: 4. Aşama
+          Artist: 5. Aşama
+          Unplug4: 6. Aşama
+          Artist2: 7. Aşama
+          Unplug5: 8. Aşama
+          Farmer: 9. Aşama
+          Unplug6: 10. Aşama
+          Artist3: 11. Aşama
+          Unplug7: 12. Aşama
+          Farmer2: 13. Aşama
+          Unplug8: 14. Aşama
+          Artist4: 15. Aşama
+          Unplug9: 16. Aşama
+          Farmer3: 17. Aşama
+          Unplug10: 18. Aşama
+          Artist5: 19. Aşama
+          Unplug11: 20. Aşama
         Hour of Code:
-          desc: "Kod Saati"
-          Maze: "1. Aşama"
+          desc: Kod Saati
+          Maze: 1. Aşama
         Edit Code:
-          desc: "Kodu Düzenle (beta)"
-          MazeEC: "1. Aşama"
+          desc: Kodu Düzenle (beta)
+          MazeEC: 1. Aşama
         2014 Levels:
-          desc: "Sıçrama (beta)"
-          Bounce: "1. Aşama"
+          desc: Sıçrama (beta)
+          Bounce: 1. Aşama
         Builder Levels:
-          desc: "Kullanıcı tarafından oluşturulan bulmacalar (beta)"
-          Custom: "Bölüm 1"
+          desc: Kullanıcı tarafından oluşturulan bulmacalar (beta)
+          Custom: Bölüm 1
         Flappy Levels:
-          desc: "Flappy Bird"
-          Flappy: "Aşama 1"
+          desc: Flappy Bird
+          Flappy: Aşama 1
         Jigsaw Levels:
-          desc: "Yapboz (beta)"
-          Jigsaw: "Bölüm 1"
+          desc: Yapboz (beta)
+          Jigsaw: Bölüm 1
         Step Levels:
-          desc: "Labirent (beta)"
-          MazeStep: "Aşama Adımı"
+          desc: Labirent (beta)
+          MazeStep: Aşama Adımı
         edit-code:
-          desc: "Kodu Düzenle (beta)"
-          MazeEC: "Bölüm 1"
+          desc: Kodu Düzenle (beta)
+          MazeEC: Bölüm 1
         events:
-          desc: "Sıçrama (beta)"
-          Bounce: "Bölüm 1"
-          Studio: "Bölüm 2"
+          desc: Sıçrama (beta)
+          Bounce: Bölüm 1
+          Studio: Bölüm 2
         builder:
-          desc: "Kullanıcı Yapımı Bulmacalar (beta)"
-          Custom: "Bölüm 1"
+          desc: Kullanıcı Yapımı Bulmacalar (beta)
+          Custom: Bölüm 1
         flappy:
-          desc: "Flappy Bird"
-          Flappy: "Bölüm 1"
+          desc: Flappy Bird
+          Flappy: Bölüm 1
         jigsaw:
-          desc: "Yapboz (beta)"
-          Jigsaw: "Aşama 1"
+          desc: Yapboz (beta)
+          Jigsaw: Aşama 1
         step:
-          desc: "Labirent (beta)"
-          MazeStep: "Aşama Adımı"
+          desc: Labirent (beta)
+          MazeStep: Aşama Adımı
         wordsearch:
-          desc: "Bilge Arı (beta)"
-          WordSearch: "Aşama 1"
+          desc: Bilge Arı (beta)
+          WordSearch: Aşama 1
     game:
       name:
-        Unplug1: "Bilgisayar Bilimine Giriş"
-        Maze: "Labirent"
-        Multi: "Çok Seçimli Şeyler"
-        Unplug2: "Bilgisayarımsı Düşünme"
-        Unplug3: "Grafik kağıdı programlama"
-        Artist: "Sanatçı"
-        Unplug4: "Algoritmalar"
-        Artist2: "Sanatçı 2"
-        Unplug5: "Fonksiyonlar"
-        Farmer: "Çiftçi"
-        Unplug6: "Koşullar"
-        Artist3: "Sanatçı 3"
-        Unplug7: "Şarkı yazma"
-        Farmer2: "Çiftçi 2"
-        Unplug8: "Soyutlama"
-        Artist4: "Sanatçı 4"
-        Unplug9: "Röle programlama"
-        Farmer3: "Çiftçi 3"
-        Unplug10: "İnternet"
-        Artist5: "Sanatçı 5"
-        Unplug11: "Özet"
-        MazeEC: "Labirent"
-        Bounce: "Bounce"
-        Flappy: "Flappy Bird"
-        Jigsaw: "Yapboz"
-        MazeStep: "Labirent Adım Modu"
-        Wordsearch: "Kelime arama"
+        Unplug1: Bilgisayar Bilimine Giriş
+        Maze: Labirent
+        Multi: Çok Seçimli Şeyler
+        Unplug2: Bilgisayarımsı Düşünme
+        Unplug3: Grafik kağıdı programlama
+        Artist: Sanatçı
+        Unplug4: Algoritmalar
+        Artist2: Sanatçı 2
+        Unplug5: Fonksiyonlar
+        Farmer: Çiftçi
+        Unplug6: Koşullar
+        Artist3: Sanatçı 3
+        Unplug7: Şarkı yazma
+        Farmer2: Çiftçi 2
+        Unplug8: Soyutlama
+        Artist4: Sanatçı 4
+        Unplug9: Röle programlama
+        Farmer3: Çiftçi 3
+        Unplug10: İnternet
+        Artist5: Sanatçı 5
+        Unplug11: Özet
+        MazeEC: Labirent
+        Bounce: Bounce
+        Flappy: Flappy Bird
+        Jigsaw: Yapboz
+        MazeStep: Labirent Adım Modu
+        Wordsearch: Kelime arama
     trophy:
       name:
-        Bronze: "Bronz"
-        Silver: "Gümüş"
-        Gold: "Altın"
+        Bronze: Bronz
+        Silver: Gümüş
+        Gold: Altın
     concept:
       description:
-        sequence: "Sıra"
-        if: "Eğer bloğu"
-        if_else: "Eğer-değilse bloğu"
-        loop_times: "Bloğu tekrarlayın"
-        loop_until: "-e kadar bloğu tekrarla"
-        loop_while: "Blok ise"
-        loop_for: "Sayaç bloğu"
-        function: "Fonksiyonlar"
-        parameters: "Fonksiyon parametreleri"
+        sequence: Sıra
+        if: Eğer bloğu
+        if_else: Eğer-değilse bloğu
+        loop_times: Bloğu tekrarlayın
+        loop_until: -e kadar bloğu tekrarla
+        loop_while: Blok ise
+        loop_for: Sayaç bloğu
+        function: Fonksiyonlar
+        parameters: Fonksiyon parametreleri
     level:
       instructions:
         maze_2_2: 'Yaramaz domuzu yakalamama yardım edebilir misin? Oraya gitmem için birkaç "İlerle" bloğunu birleştirmeli ve "Programı Çalıştır" tuşuna basmalısın.'
-        maze_2_1: "Bu domuz benim tüylerimi diken diken ediyor. Onu bulmama yardımcı ol!"
-        maze_2_2_5: "Yolu takip et ve beni sersem domuza götür. Patlayıcılardan uzak dur yoksa bu tüylerim havaya uçacak!"
-        maze_2_3: "Yeşil şeytana gitmeme önderlik et! (Patlayıcılara dikkat et)"
-        maze_2_4: "Sakin ol ve kötü domuzu bulmama yardımcı ol. Aksi halde kızmaya başlayabilirim!"
-        maze_2_5: "2 blok kullanarak yeşil domuzcuğa ulaşabileceğim bir yol var. Bunu çözebilir misin?"
-        maze_2_6: "Sadece üç blok kullanarak beni yeşil haine ulaştırmaya çalış."
+        maze_2_1: Bu domuz benim tüylerimi diken diken ediyor. Onu bulmama yardımcı ol!
+        maze_2_2_5: Yolu takip et ve beni sersem domuza götür. Patlayıcılardan uzak dur yoksa bu tüylerim havaya uçacak!
+        maze_2_3: Yeşil şeytana gitmeme önderlik et! (Patlayıcılara dikkat et)
+        maze_2_4: Sakin ol ve kötü domuzu bulmama yardımcı ol. Aksi halde kızmaya başlayabilirim!
+        maze_2_5: 2 blok kullanarak yeşil domuzcuğa ulaşabileceğim bir yol var. Bunu çözebilir misin?
+        maze_2_6: Sadece üç blok kullanarak beni yeşil haine ulaştırmaya çalış.
         maze_2_7: 'Bloklar en az sayıda kullanarak bu kötü domuzcuğu ortadan kaldırmama yardım et. Birden fazla "defa tekrar" bloğu kullanmayı dene.'
         maze_2_8: 'Eğer blok gri ise, bu onu silemeyeceğin anlamına gelir. Yapbozu 3 defa tekrar eden "tekrar" bloğunu kullanarak çöz. Bu 3 bloğu gri renkteki "tekrar" bloğunun içine yerleştir: oynat, oynat, dön.'
         maze_2_9: 'Tamam, yeni "e kadar tekrarla" bloğunu dene. Bu, ben yeşil domuza ulaşana kadar tekrarlayacak.'
-        maze_2_10: "Tamam, pratik için son kez. Bunu sadece 4 blok kullanarak çözebilir misin?"
-        maze_2_11: "Değerli kişi.Ben zombi.Açım. Ayçiçeklerini almam gerekli.Bana onları sadece 5 blok kullanarak getirebilir misin?"
-        maze_2_12: "Tamam, Bu benzer ama biraz farklı. Bunu sadece 5 blok ile yapabilir misin?"
+        maze_2_10: Tamam, pratik için son kez. Bunu sadece 4 blok kullanarak çözebilir misin?
+        maze_2_11: Değerli kişi.Ben zombi.Açım. Ayçiçeklerini almam gerekli.Bana onları sadece 5 blok kullanarak getirebilir misin?
+        maze_2_12: Tamam, Bu benzer ama biraz farklı. Bunu sadece 5 blok ile yapabilir misin?
         maze_2_13: 'Ne zaman döneceğime karar vermem için yeni "eğer" bloğunu kullan. İpucu: Sadece bir bloğa daha ihtiyacın var. Ancak bunu nasıl kurduğumuzu öğrenki bir dahakine kullanabil.'
         maze_2_14: 'Tamam, bu sadece son bulmaca gibi ama "Eğer" bloğu ile "Tekrarla" bloğunu nasıl birlikte kullandığını hatırlaman gerekiyor.'
         maze_2_15: 'Ayçiçeğini istiyorum! Sadece bir "Eğer" bloğu kullanarak, en az sayıda blok ile oraya ulaşmamı sağla.'
         maze_2_16: 'Tamam, sadece alıştırma olsun diye bunu tekrar yapalım - çok farklı değil, sadece canavar bitkilere dikkat et!'
         maze_2_17: '"Eğer-Değilse" bloğu bir koşulu kontrol eder ve bir şeyi YA DA diğerini yapar. Ayçiçeğine ulaşmam için bu yeni bloğu kullanmayı dene.'
         maze_2_18: '"Eğer değilse" bloğunun bir örneğini daha, ilk denemenizde doğru yapabildiniz mi?'
-        maze_2_19: "Daha karmaşık bir labireti sadece 3 blok ekleyerek çözmeme yardımcı olur musun? Eğer doğru yaptıysan, bu kıvrımlı yolda uzunluğu ne olursa olsun yürüyebilirim."
-        turtle_1_1: "Merhaba , ben bir sanatçıyım. İstediğin herhangi bir şeyi çizmek için beni programlayabilirsin. Resimdeki gri çizgileri çizdirmek için bir kaç blok kullan."
+        maze_2_19: Daha karmaşık bir labireti sadece 3 blok ekleyerek çözmeme yardımcı olur musun? Eğer doğru yaptıysan, bu kıvrımlı yolda uzunluğu ne olursa olsun yürüyebilirim.
+        turtle_1_1: Merhaba , ben bir sanatçıyım. İstediğin herhangi bir şeyi çizmek için beni programlayabilirsin. Resimdeki gri çizgileri çizdirmek için bir kaç blok kullan.
         turtle_1_2: 'Şimdi bir kare çiz. Not: Bunu "rengi belirle" bloğununda en sevdiğin rengi seçerek yapabilirsin.'
-        turtle_1_3: "Sadece 3 blok kullanarak bir kare yapın."
+        turtle_1_3: Sadece 3 blok kullanarak bir kare yapın.
         turtle_1_4: 'Her seferinde farklı bir renk alan "rastgele renk" seçeneğini kullanarak tüm kenarları farklı renkte olan bir üçgen çizin. İpucu: Ne kadar uzağa dönmeniz gerektiğini dönüş blogundaki numaraya tıklayarak bulmanız gerek.'
-        turtle_1_5: "Şimdi, uygulama için bir üçgen ve sonra bir zarf çizmek için bir kare çizin."
+        turtle_1_5: Şimdi, uygulama için bir üçgen ve sonra bir zarf çizmek için bir kare çizin.
         turtle_1_6: 'Bir karenin ve bir üçgenin nasıl çizileceğini anlayabildiniz mi? İpucu: Önce üçgeni çizin, sonra kare çizmeden önce kaç kez dönmeniz gerektiğini bulun.'
         turtle_1_7: 'Hadi biraz daha zorlaştıralım - yeşil gözlükleri çizip çizemeyeceğinizi görelim. Her köşede bulunan kareler 100 piksel büyüklüğünde birbirlerinden 50 piksel uzaklıktadır. Çizgilerinizi yeşik renk ile çizmeyi unutmayın!'
         turtle_1_8: 'Tamam, bu kodu çalıştırıdığınızda ne olduğunu görelim (ya da "Çalıştır" düğmesini tıklayın). O halde, çizimi tamalamak için yeteri kadar tekrar edin. Renkler her defasında farkı olsun.'
-        turtle_1_9: "Çember çizmek için soru işaretli yere gelmesi gereken sayısı bulabilir misiniz?"
+        turtle_1_9: Çember çizmek için soru işaretli yere gelmesi gereken sayısı bulabilir misiniz?
         turtle_1_10: 'Başardınız! Şimdi, istediğiniz her hangi bir şeyi çiziniz.Eğlenceli olabilecek bazı fikirler:kartanesi ya da spiral olabilir.Ayrıca "kalınlığını belirleyin " bloğunu kullanabilirisniz.Eğlenin!'
         turtle_4_1: 'Sadece 3 blok kullanarak bir üçgen(her kenarı 100 piksel olacka) çizebilir misin? İpucu:"tekrar" bloğu kullanın.'
         turtle_4_2: 'Bu üçgenleri çizebilmek için çalışma masasında mevcut olan programın ortasına bir "90 derece sağa dön" bloğu ekle.'
         turtle_4_3: 'Tamam, bir üçgen çizmek için yazdığınız kod burda."Tekrarla" ve "dön" bloğu ile güzel bir çiçek yapabilir misiniz?'
         turtle_4_4: 'Bir önceki labirent ile aynı kodları verdik , fakat her üçgen çizdikten sonra 36 derecelik bir açıyla döneceğiz.Bu işlemi kaç kez tekrar etmelisiniz? (İpucu: Tam bir çember oluşturmak için 360 derece dönmeniz gerekmektedir.)'
-        turtle_4_5: "Bir önceki bulmaca ile aynı kodları görüyorsunuz fakat 36 kez dönme işlemi uygulanıyor. Her defasında kaç derecelik bir açıyla döndürülmeli?(İpucu:Tam bir çember 360 derece döndürülerek oluşturulabilir.)"
-        turtle_4_6: "Sadece üç blok kullanarak bir kenarı 20 piksel lacak bir kare çizebilir misiniz?"
+        turtle_4_5: Bir önceki bulmaca ile aynı kodları görüyorsunuz fakat 36 kez dönme işlemi uygulanıyor. Her defasında kaç derecelik bir açıyla döndürülmeli?(İpucu:Tam bir çember 360 derece döndürülerek oluşturulabilir.)
+        turtle_4_6: Sadece üç blok kullanarak bir kenarı 20 piksel lacak bir kare çizebilir misiniz?
         turtle_4_7: 'İşte kare çizmek için son bulmacadan bir kod. Bu kodu birbirine merdiven gibi bitişik 10 tane kare çizmek için tekrarlayabilir misin? İpucu: Yalnızca iki bloga daha ihtiyacın var.'
-        turtle_4_8: "Önceki bulmaca çözümü burada. Çizimi tamamlamak için sadece 2 blok daha ekleyebilir misin?"
-        turtle_4_9: "Önceki bulmaca çözümü burada. Kaç derece çizimin tamamlanması için kaç derece dönmen gerekir? (Birkaç kez tahmin etmen gerekebilir)"
-        turtle_4_10: "Önceki bulmaca çözümü burada. Çizimi tamamlamak için kaç tekrar gerekli?"
+        turtle_4_8: Önceki bulmaca çözümü burada. Çizimi tamamlamak için sadece 2 blok daha ekleyebilir misin?
+        turtle_4_9: Önceki bulmaca çözümü burada. Kaç derece çizimin tamamlanması için kaç derece dönmen gerekir? (Birkaç kez tahmin etmen gerekebilir)
+        turtle_4_10: Önceki bulmaca çözümü burada. Çizimi tamamlamak için kaç tekrar gerekli?
         turtle_4_11: 'Farklı desenler yapmak için "dön" ve "tekrarla" bloklarındaki sayıları değiştirmeyi dene. Ya da, istediğin herhangi bir şeyi çizmek için kodun geri kalanını değiştirmeyi dene.'
         maze_karel_1_1: 'Merhaba, ben bir çiftçiyim. Çiftlikteki alanı ekime hazırlamak için düzleştirmemde yardımına ihtiyacım var. Beni bir toprak yığınına doğru hareket ettir ve "Kaldır" bloğunu yığını kaldırmam için kullan.'
         maze_karel_1_2: 'Daha sonra beni deliğe hareket ve  deliği "doldur" blogunu kullanarak, iki kürek dolusu toprak ile doldur.'
-        maze_karel_1_3: "Beni toprak yığınına doğru hareket ettir ve olabildiğince az blok kullanarak kaç kürek dolusu boşaltmam gerektiğini söyle."
+        maze_karel_1_3: Beni toprak yığınına doğru hareket ettir ve olabildiğince az blok kullanarak kaç kürek dolusu boşaltmam gerektiğini söyle.
         maze_karel_1_4: 'Tüm toprak yığınlarını kaldırmama yardımcı olabilir miin? İpucu: Mümkünse repeat blogunu kullan.'
         maze_karel_1_5: 'Delikleri 5 kürekdolusu toprakla doldurmam için bana yardım et. İpucu: "While" blogunun içine "tekrar" blogunu yerleştirebilirsin.'
-        maze_karel_1_6: "Tüm toprak yığınlarını kullanabildiğin kadar az blok kullanarak kaldır.Liste menüsündeki yeni secenekler bana bir yığının mı yoksa bir deliğin mi üstünde olduğumu söyler."
-        maze_karel_1_7: "Wow,çok derin bir çukur buldum!Kaç kürek dolusu toprağa ihtiyacı olur bilmiyorum.Dolana kadar onu dolduracak bir program yazabilir misin ?"
-        maze_karel_1_8: "Alanın sonundaki çukuru doldurmama yardım et,kullanabildiğin kadar az blok kullanarak."
+        maze_karel_1_6: Tüm toprak yığınlarını kullanabildiğin kadar az blok kullanarak kaldır.Liste menüsündeki yeni secenekler bana bir yığının mı yoksa bir deliğin mi üstünde olduğumu söyler.
+        maze_karel_1_7: Wow,çok derin bir çukur buldum!Kaç kürek dolusu toprağa ihtiyacı olur bilmiyorum.Dolana kadar onu dolduracak bir program yazabilir misin ?
+        maze_karel_1_8: Alanın sonundaki çukuru doldurmama yardım et,kullanabildiğin kadar az blok kullanarak.
         maze_karel_1_9: 'Tüm toprak yığınlarını yok etmememi sağla.Kullanabildiğin kadar az blok kullanmaya çalış.İpucu:"while" bloğunu kullanmaya çalış.'
         maze_karel_1_10: 'Geç saatlere kadar çalışıyorum,yani dışarısı karanlık,ve yığınların ne kadar geniş olduğunu söyleyemem."while" bloğunda eskiden olduğu kadar seçeneğe sahip değilim.Beni alanda hareket ettir,ve bir yığın varsa onu kaldır.'
         maze_karel_1_11: 'Dışarısı hala karanlık. Beni alan boyunca ilerlet. Önümde bir yığın varsa kaldır. Eğer bir delik var ise içini doldur. İpucu: eğer bloğunun üzerinde, seçeneklerin aşağı doğru açılan menüsünü kullan.'
         turtle_2_1: 'Merhaba. Ben olmak zombi sanatçı! Ben sevmek çizmeyi! Özel renkte bir kare çizmeme yardım et. Önemli not: aynı bloklara sahipsin ama artık kategorilere ayrıldılar.'
         turtle_2_2: 'Fonksiyonların kullanımına hoş geldiniz,yeni bloklar tanımanıza imkan veren yere!Yeni "bir kare çiz bloğu,50x50 yeşil küçük bir kare çizmek için Fonksiyonlar kategorisinde bulunuyor.'
-        turtle_2_3: "100 boyutunda 120 derece aralıklı 3 kare çizmek için döngüler kategorisinde ki tekrar et bloğunu kullan.Ve 3 ünüde farklı,rastgele renklerde yap."
+        turtle_2_3: 100 boyutunda 120 derece aralıklı 3 kare çizmek için döngüler kategorisinde ki tekrar et bloğunu kullan.Ve 3 ünüde farklı,rastgele renklerde yap.
         turtle_2_4: 'Şimdi biraz kafayı çekeceğiz. Kodu 36 kare çizmek için ayarla, 100 piksel genişliğinde ve her biri 10 aşama uzakta olsun. İpucu: Belki daha hızlı gitmem için kaydırgacı kullanmak istersin.'
         turtle_2_5: '"Kare çiz" fonksiyonunu 5 kere kullanarak, 50, 60, 70, 80 ve 90 piksel boyutlarında kareler çizin.'
         turtle_2_6: 'Pekala,  bu program sonuncu karenin aynısını çizmek için bir sayaç kullanacaktır. Karenin sayaçla aynı boyutta olmasını istiyorsunuz, yani "sayaç" parçasını kullanın. İpucu: Bu parça Değişkenler kategorisindedir.'
@@ -176,52 +176,51 @@
         turtle_2_7_5: 'Fonksiyonlar kategorisinde yeni bir fonksiyon var: "Kardan adam çiz". Boyları 250 ve 100 olan iki kardan adam çiz.'
         turtle_2_8: 'Bu biraz uğraştıracak. "Kardan adam çiz" ve yeni "İleri zıpla" (Hareketler kategorisinde) fonksiyonunu kullanarak aralarında 100 piksel bulunan 3 farklı renkte kardan adam çiz.'
         turtle_2_9: '110, 100, 90, 80 ve 70 boylarında kardan adam ailesi çizmek için "ile say" döngüsünü kullanın. Kardan adamların tümü 60 piksel uzaklıkta olmalıdır.'
-        turtle_2_10: "Değişik spirallerle çalışman için bir kod. Dönme miktarını değiştirirsen ne olur? Ya da döngüyü rastgele renge ayarlasan? İstediğin herhangi bir şey çiz."
+        turtle_2_10: Değişik spirallerle çalışman için bir kod. Dönme miktarını değiştirirsen ne olur? Ya da döngüyü rastgele renge ayarlasan? İstediğin herhangi bir şey çiz.
         maze_karel_2_1: 'Tüm yığınları kaldırmam ve yerdeki tüm delikler doldurmama yardım etmek için blokları kullanmayı dene. Pek çok blok kullanmaktansa döngüleri kullanmayı dene. İpucu: Bir döngünün içinde başka bir döngü kullanabilirsin.'
         maze_karel_2_2: 'Şu an Fonksiyonlar kategorisinde olan "5 dolgu" isimli kendi bloğu biz tanımladık. O bloğu çukuru doldurmamda bana yardımcı olmak için kullan.'
         maze_karel_2_3: 'Yeni "5 dolgu" isimli bloğu kullanarak tüm çukurları doldurmamı sağla. "5 dolgu" bloğunu Fonksiyonlar kategorisinden sürükleyerek çıkarmalısın.'
-        maze_karel_2_4: "7 kürek atabilen yeni bir fonksiyon tanımla. Daha sonra bu blok ile tüm yığınları kaldırmama yardımcı olacak bir program yaz."
-        maze_karel_2_5: "Bir yığından 6 kürek atabilen yeni bir fonksiyon oluştur ve tüm yığınları kaldırmama yardımcı olmakta kullan."
+        maze_karel_2_4: 7 kürek atabilen yeni bir fonksiyon tanımla. Daha sonra bu blok ile tüm yığınları kaldırmama yardımcı olacak bir program yaz.
+        maze_karel_2_5: Bir yığından 6 kürek atabilen yeni bir fonksiyon oluştur ve tüm yığınları kaldırmama yardımcı olmakta kullan.
         maze_karel_2_6: '"5 dolgu" ve "8 kaldır" isimli iki yeni fonksiyon oluştur, yığını kaldırmama ve çukuru doldurmama yardım et.'
-        maze_karel_2_7: "Sahamda bir inek var! Beni inekten kaçındıracak ve çamuru kaldıracak yeni bir kod yazın. Bu yeni kodun içine bütün parçalarınızı ekleyin."
+        maze_karel_2_7: Sahamda bir inek var! Beni inekten kaçındıracak ve çamuru kaldıracak yeni bir kod yazın. Bu yeni kodun içine bütün parçalarınızı ekleyin.
         maze_karel_2_8: |-
           Bana bütün yığınları kaldırmama yardım etmek için bu yeni fonksiyonu kullan: "İnekten kaçın ve 1'i kaldır".
-        maze_karel_2_9: "Tamam, burada dikey kolonda bulunan 4 farklı çöp yığınını kaldırabilen bir fonksiyon var. Bu fonksiyonu döngünün içine koymayı dene. Yalnızca birkaç yeni blok ekleyerek tüm kir yığınlarını kaldırmaya çalış."
-        maze_karel_2_10: "Beni alanda oynat, bu iki fonksiyonu kullanarak tüm çukurları doldurmama ve tüm yığınları kaldırmama yardım et."
-        turtle_3_1: |-
-          This puzzle shows you how the "draw a square" and "draw a circle" functions are defined.  Defining a function doesn't run its blocks.  You have to pull out the "draw a square" block to actually draw a square.
-        turtle_3_2: 'Using the "draw a square" function as an example, create a "draw a triangle" function and use it.'
-        turtle_3_3: 'Draw triangular fences around the cats and a square fence around the cow.  Tip: test the program as you go along.'
+        maze_karel_2_9: Tamam, burada dikey kolonda bulunan 4 farklı çöp yığınını kaldırabilen bir fonksiyon var. Bu fonksiyonu döngünün içine koymayı dene. Yalnızca birkaç yeni blok ekleyerek tüm kir yığınlarını kaldırmaya çalış.
+        maze_karel_2_10: Beni alanda oynat, bu iki fonksiyonu kullanarak tüm çukurları doldurmama ve tüm yığınları kaldırmama yardım et.
+        turtle_3_1: 'Bu bulmaca "bir kare çiz" ve "bir çember çiz" fonksiyonlarının nasıl tanımlandığını gösterir. Bir fonksiyonun tanımlanması bloklardaki komutları çalıştırmaz. Kareyi çizmek için "bir kare çiz" bloğunu komutlara eklemen gerekir.'
+        turtle_3_2: '"bir kare çiz" fonksiyonunu örnek olarak kullanmak için "bir üçgen çiz" fonksiyonu oluşturman ve komutlara eklemen gerekir.'
+        turtle_3_3: 'Kediler etrafında üçgen şeklinde bir çit ve ineğin etrafında ise kare şeklinde bir çit oluşturun. İpucu: komutları oluşturdukça doğruluğunu kontrol edin.'
         turtle_3_4: 'See if you can figure out how to use "draw a square" and "draw a triangle" (and some other blocks) to draw a house around the lion.'
         turtle_3_5: 'Now create a new "draw a house" function and use it to house two cats. Hint: create a new function using the "do something" block, and type your own text to name the block.'
         turtle_3_6: 'Using "draw a square" as an example, add an input named "length" to "draw a triangle". Then, draw triangles in different sizes. (Hint: click the star to add an input to a function)'
         turtle_3_7: 'Add an input named "length" to "draw a house" and build a big house for the elephant (with edges 150 pixels long)'
         turtle_3_8: 'Here are all of the blocks from the previous puzzle.  Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: '"Ev çiz" fonksiyonunu yardım almadan yeniden yapabilir misin? Bir dene ve bir dizi ev çiz.'
-        turtle_3_10: "Çok şey öğrendiz! Şimdi istediklerinizi çizebilirsiniz. Yıldız, spiral veya bir kar tanesi çizmeye çalışın."
-        maze_karel_debug_seq_1: "Hata ayıklamaya (debugging) hoşgeldin! Kodum düzgün çalışmıyor. Problemi bulup düzeltebilir misin? Böylece tarlam düzleşir ve ekim için hazır olur."
-        maze_karel_debug_seq_2: "Bu programın sorunu ne? Şu yığını kaldırabilmem için düzeltebilir misin?"
-        maze_karel_debug_repeat: "Tarlamın düz ve hoş olması için programı hatalarından arındırabilir misin?"
-        maze_karel_debug_while: "Deliği doldurmam için bu programı nasıl değiştirmelisin?"
-        maze_karel_debug_if: "Yardım et! Programı düzelt ki tarlam dümdüz olsun."
-        maze_karel_debug_if_else: "Delikleri doldurabilmem ve yığınları kaldırabilmem için programı hatalarından arındır."
-        maze_karel_debug_function_1: "Tüm yığınları kaldırabilmem için bu programda neyi değiştirmelisin?"
-        maze_karel_debug_function_2: "Tarlamı düzleştirebilmem için programı hatalarından arındırabilir misin?"
+        turtle_3_10: Çok şey öğrendiz! Şimdi istediklerinizi çizebilirsiniz. Yıldız, spiral veya bir kar tanesi çizmeye çalışın.
+        maze_karel_debug_seq_1: Hata ayıklamaya (debugging) hoşgeldin! Kodum düzgün çalışmıyor. Problemi bulup düzeltebilir misin? Böylece tarlam düzleşir ve ekim için hazır olur.
+        maze_karel_debug_seq_2: Bu programın sorunu ne? Şu yığını kaldırabilmem için düzeltebilir misin?
+        maze_karel_debug_repeat: Tarlamın düz ve hoş olması için programı hatalarından arındırabilir misin?
+        maze_karel_debug_while: Deliği doldurmam için bu programı nasıl değiştirmelisin?
+        maze_karel_debug_if: Yardım et! Programı düzelt ki tarlam dümdüz olsun.
+        maze_karel_debug_if_else: Delikleri doldurabilmem ve yığınları kaldırabilmem için programı hatalarından arındır.
+        maze_karel_debug_function_1: Tüm yığınları kaldırabilmem için bu programda neyi değiştirmelisin?
+        maze_karel_debug_function_2: Tarlamı düzleştirebilmem için programı hatalarından arındırabilir misin?
         maze_karel_debug_function_3: 'Tüm yığınları kaldırabilmem için programı düzenle. '
-        turtle_5_1: "Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler yapın. Nasıl çalıştığını tahmin edebiliyor musunuz? (Ya da silin ve tamamen farklı bir şey ile değiştirin)"
-        turtle_5_2: "Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler yapın. Nasıl çalıştığını tahmin edebiliyor musunuz? (Ya da silin ve tamamen farklı bir şey ile değiştirin)"
-        turtle_5_3: "Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler yapın. Nasıl çalıştığını tahmin edebiliyor musunuz? (Ya da silin ve tamamen farklı bir şey ile değiştirin)"
-        turtle_5_4: "Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler yapın. Nasıl çalıştığını tahmin edebiliyor musunuz? (Ya da silin ve tamamen farklı bir şey ile değiştirin)"
-        turtle_5_5: "Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler yapın. Nasıl çalıştığını tahmin edebiliyor musun? (Ya da silin ve tamamen farklı bir şey ile değiştirin)"
-        turtle_5_6: "Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler yapın. Nasıl çalıştığını tahmin edebiliyor musun? (Ya da silin ve tamamen farklı bir şey ile değiştirin)"
-        maze_3_1: "O domuzu almam gerek! Birkaç telefon görüşmesi için move() yazın; böylece yumurtalarımı geri alabilirim."
-        maze_3_2: "Bana bir program yaz, böylece domuza giden tüm yolları yapabileyim."
-        maze_3_3: "Domuzu nasıl alabilirim? TNT kutusuna doğru gitmediğimden emin olun!"
-        maze_3_4: "Ahh! Beni TNT ve domuz çevresine alan bir program yazın."
+        turtle_5_1: Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler yapın. Nasıl çalıştığını tahmin edebiliyor musunuz? (Ya da silin ve tamamen farklı bir şey ile değiştirin)
+        turtle_5_2: Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler yapın. Nasıl çalıştığını tahmin edebiliyor musunuz? (Ya da silin ve tamamen farklı bir şey ile değiştirin)
+        turtle_5_3: Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler yapın. Nasıl çalıştığını tahmin edebiliyor musunuz? (Ya da silin ve tamamen farklı bir şey ile değiştirin)
+        turtle_5_4: Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler yapın. Nasıl çalıştığını tahmin edebiliyor musunuz? (Ya da silin ve tamamen farklı bir şey ile değiştirin)
+        turtle_5_5: Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler yapın. Nasıl çalıştığını tahmin edebiliyor musun? (Ya da silin ve tamamen farklı bir şey ile değiştirin)
+        turtle_5_6: Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler yapın. Nasıl çalıştığını tahmin edebiliyor musun? (Ya da silin ve tamamen farklı bir şey ile değiştirin)
+        maze_3_1: O domuzu almam gerek! Birkaç telefon görüşmesi için move() yazın; böylece yumurtalarımı geri alabilirim.
+        maze_3_2: Bana bir program yaz, böylece domuza giden tüm yolları yapabileyim.
+        maze_3_3: Domuzu nasıl alabilirim? TNT kutusuna doğru gitmediğimden emin olun!
+        maze_3_4: Ahh! Beni TNT ve domuz çevresine alan bir program yazın.
         bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
         bounce_2: 'Attach a block to the "when right arrow" and "when left arrow" blocks. Move the paddle to reach both finish targets.'
         bounce_3: 'Now try something similar with the "when up arrow" block. Move the paddle to the finish target at the top.'
-        bounce_4: "This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle."
+        bounce_4: This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle.
         bounce_5: |-
           We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
         bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
@@ -238,12 +237,12 @@
           Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
         flappy_5: |-
           Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_6: "See if you can still score a point after making Flappy flap either a smaller or larger amount."
+        flappy_6: See if you can still score a point after making Flappy flap either a smaller or larger amount.
         flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
-        flappy_8: "You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle."
-        flappy_9: "To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0."
+        flappy_8: You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.
+        flappy_9: To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0.
         flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
-        flappy_k1_1: "Play Flappy"
+        flappy_k1_1: Play Flappy
         flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
         flappy_k1_3: |-
           Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
@@ -252,159 +251,159 @@
           Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
         flappy_k1_6: |-
           Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: "See if you can score multiple points for making it past an obstacle"
+        flappy_k1_7: See if you can score multiple points for making it past an obstacle
         flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
         flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
-        jigsaw_1: "Click the block"
-        jigsaw_2: "Drag the block to the target"
-        jigsaw_3: "Arrange the blocks to form the image"
-        jigsaw_4: "Arrange the blocks to form the image"
-        jigsaw_5: "Arrange the blocks to form the image"
-        jigsaw_6: "Arrange the blocks to form the image"
-        jigsaw_7: "Arrange the blocks to form the image"
-        jigsaw_8: "Arrange the blocks to form the image"
-        jigsaw_9: "Arrange the blocks to form the image"
-        jigsaw_10: "Arrange the blocks to form the image"
-        jigsaw_11: "Arrange the blocks to form the image"
-        jigsaw_12: "Arrange the blocks to form the image"
-        jigsaw_13: "Fix the puzzle!"
-        mazestep_1: "Maze step description here"
-        mazestep_2: "Maze step description here"
-        mazestep_3: "Maze step description here"
-        mazestep_4: "Maze step description here"
-        mazestep_5: "Maze step description here"
+        jigsaw_1: Click the block
+        jigsaw_2: Drag the block to the target
+        jigsaw_3: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_4: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_5: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_6: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_7: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_8: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_9: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_10: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_11: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_12: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_13: Fix the puzzle!
+        mazestep_1: Maze step description here
+        mazestep_2: Maze step description here
+        mazestep_3: Maze step description here
+        mazestep_4: Maze step description here
+        mazestep_5: Maze step description here
         studio_c2_1: 'Can you make this dog say "hello world"?'
-        studio_c2_2: "Can you make the dog say something and then have the cat say something afterwards?"
-        studio_c2_3: "Can you write a program to make this dog move to the cat?"
+        studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_c2_3: Can you write a program to make this dog move to the cat?
         studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
         studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c2_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
+        studio_c2_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
         studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
         studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
-        studio_c2_10: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
+        studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
+        studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_story_1: 'Can you make this dog say "hello world"?'
-        studio_c3_story_2: "Can you make the dog say something and then have the cat say something afterwards?"
-        studio_c3_story_3: "Can you write a program to make this dog move to the cat?"
+        studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_c3_story_3: Can you write a program to make this dog move to the cat?
         studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c3_story_5: "Can you add a block to make the octopus happy?"
+        studio_c3_story_5: Can you add a block to make the octopus happy?
         studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c3_game_2: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
+        studio_c3_game_2: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
         studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
         studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
-        studio_c3_game_6: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
+        studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
+        studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_playlab_1: 'Can you make this dog say "hello world"?'
-        studio_playlab_2: "Can you make the dog say something and then have the cat say something afterwards?"
-        studio_playlab_3: "Can you write a program to make this dog move to the cat?"
+        studio_playlab_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_playlab_3: Can you write a program to make this dog move to the cat?
         studio_playlab_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
         studio_playlab_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_playlab_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
+        studio_playlab_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
         studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_playlab_8: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
-        studio_playlab_9: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
+        studio_playlab_8: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
+        studio_playlab_9: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_k1_1: 'Can you make this dog say "hello world"?'
-        studio_k1_2: "Can you make the dog say something and then have the cat say something afterwards?"
-        studio_k1_3: "Can you write a program to make this dog move to the cat?"
+        studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_k1_3: Can you write a program to make this dog move to the cat?
         studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
-        studio_k1_5: "Can you add a block to make the octopus happy?"
-        studio_k1_6: "Create your own story! Move around the cat and dog, and make them say things."
-        maze_wordsearch_k_1: "Move me to spell the word EAST"
-        maze_wordsearch_k_2: "Move me to spell the word SOUTH"
-        maze_wordsearch_k_3: "Move me to spell the word WEST"
-        maze_wordsearch_k_4: "Move me to spell the word NORTH"
-        maze_wordsearch_k_6: "Move me East and then South to spell the word JUMP"
-        maze_wordsearch_k_9: "Move me one way, then another to spell the word CODE"
-        maze_wordsearch_k_13: "Move me one way, then another to spell the word DEBUG"
-        maze_wordsearch_k_15: "Move me one way, then another to spell the word ABOVE"
-        maze_wordsearch_k_16: "Move me one way, then another to spell the word BELOW"
-        maze_wordsearch_k_20: "This is a test! Move me one way, then another to spell the word STORY"
+        studio_k1_5: Can you add a block to make the octopus happy?
+        studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
+        maze_wordsearch_k_1: Move me to spell the word EAST
+        maze_wordsearch_k_2: Move me to spell the word SOUTH
+        maze_wordsearch_k_3: Move me to spell the word WEST
+        maze_wordsearch_k_4: Move me to spell the word NORTH
+        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
+        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
+        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
+        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
+        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
+        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
     video:
       name:
-        maze_intro: "Labirent girişi"
-        artist_intro: "Sanatçı girişi"
-        farmer_intro: "Çiftçi girişi"
-        flappy_intro: "Flappy Tanıtım"
-        loop_times: "Bloğu tekrarlayın"
-        loop_until: "Blok kadar tekrarlayın"
-        if: "if bloğu"
-        if_else: "İf/else bloğu"
-        function: "Fonksiyonlar"
-        loop_while: "while bloğu"
-        loop_for: "Sayaç bloğu"
-        parameters: "Fonksiyon parametreleri"
-        hoc_wrapup: "Kod saatini tamamla"
-        20_wrapup: "20 saati tamamla"
-        Unplug1: "What is CS?"
-        Unplug2: "Bilgisayarımsı Düşünme"
-        Unplug3: "Grafik kağıdı programlama"
-        Unplug4: "Algoritmalar"
-        Unplug5: "Fonksiyonlar"
-        Unplug6: "Koşullar"
-        Unplug7: "Songwriting"
-        Unplug8: "Soyutlama"
-        Unplug9: "Röle Programlama"
-        Unplug10: "İnternet"
-        Unplug11: "Özet"
-        C1_happy_maps_unplugged: "Mutlu Haritalar"
-        C1_moveitmoveit_unplugged: "Move It, Move It"
-        C1_bigevent_unplugged: "Büyük Olay"
-        C1_getting_loop: "Döngüselleşme"
-        C1_pair_programming: "Pair Programming"
-        C1_maze_intro_sequencing: "Maze Sequencing Intro"
-        C1_maze_debugging: "Maze Debugging"
-        C1_bee_level_intro: 'Bee Level - Intro'
-        C1_artist_intro: "Sanatçı girişi"
-        C1_spelling_bee_intro: "Spelling Bee Intro"
-        C1_zuck_repeat_loop: "Labirent Döngüleri"
-        C1_bee_loops: "Arı Döngüleri"
-        C1_maze_loops: "Labirent Döngüleri"
-        C1_playlab_storytelling: 'Play Lab - Create a Story'
-        C1_planting_seed: "Planting a Seed"
-        C1_building_foundating: "Bir Temel Oluşturma"
-        C2_maze_intro: "Labirent girişi"
-        C2_artist_intro: "Sanatçı girişi"
-        C2_zuck_repeat_loop: "Labirent Döngüleri"
-        C2_artist_loops: "Aktör Döngüleri"
-        C2_bee_conditionals: "Arı Koşullandırmaları"
-        C2_playlab_createstory: 'Play Lab - Create a Story'
-        C2_graph_paper: "Grafik kağıdı programlama"
-        C2_conditionals_with_cards: "Koşullar"
-        C2_binary_bracelets: "İkilik Bileklikler"
-        C2_replay_programming: "Röle programlama"
-        C2_paper_airplanes: "Paper Airplanes"
-        C3_maze_intro: "Labirent girişi"
-        C3_artist_intro: "Sanatçı girişi"
-        C3_artist_functions: "Aktör Fonksiyonları"
-        C3_bee_functions: "Arı Fonksiyonları"
-        C3_bee_conditionals: "Arı Koşullandırmaları"
-        C3_maze_conditionals: "Labirent Koşullandırıcıları"
-        C3_artist_nested_loops: "Nested Loops"
-        C3_farmer_while: "While Loops"
-        C3_bee_nested_loops: "Nested Loops"
-        C3_bee_debugging: "Arı Ayıklama"
-        C3_bounce: "Bounce"
+        maze_intro: Labirent girişi
+        artist_intro: Sanatçı girişi
+        farmer_intro: Çiftçi girişi
+        flappy_intro: Flappy Tanıtım
+        loop_times: Bloğu tekrarlayın
+        loop_until: Blok kadar tekrarlayın
+        if: if bloğu
+        if_else: İf/else bloğu
+        function: Fonksiyonlar
+        loop_while: while bloğu
+        loop_for: Sayaç bloğu
+        parameters: Fonksiyon parametreleri
+        hoc_wrapup: Kod saatini tamamla
+        20_wrapup: 20 saati tamamla
+        Unplug1: What is CS?
+        Unplug2: Bilgisayarımsı Düşünme
+        Unplug3: Grafik kağıdı programlama
+        Unplug4: Algoritmalar
+        Unplug5: Fonksiyonlar
+        Unplug6: Koşullar
+        Unplug7: Şarkı yazma
+        Unplug8: Soyutlama
+        Unplug9: Röle Programlama
+        Unplug10: İnternet
+        Unplug11: Özet
+        C1_happy_maps_unplugged: Mutlu Haritalar
+        C1_moveitmoveit_unplugged: Çabuk, Çabuk Taşı
+        C1_bigevent_unplugged: Büyük Olay
+        C1_getting_loop: Döngüselleşme
+        C1_pair_programming: Eşli Programlama
+        C1_maze_intro_sequencing: Labirent Dizilemeye Giriş
+        C1_maze_debugging: Labirent Hata Ayıklaması
+        C1_bee_level_intro: 'Arı Seviyesi - Giriş'
+        C1_artist_intro: 'Ressam: Giriş'
+        C1_spelling_bee_intro: 'Yazar Arı: Giriş'
+        C1_zuck_repeat_loop: Labirent Döngüleri
+        C1_bee_loops: Arı Döngüleri
+        C1_maze_loops: Labirent Döngüleri
+        C1_playlab_storytelling: 'Laboratuvar Oyna - Bir Hikaye Oluştur'
+        C1_planting_seed: Tohum Ekme
+        C1_building_foundating: Temel Atma
+        C2_maze_intro: 'Labirent: Tanıtım'
+        C2_artist_intro: 'Ressam: Tanıtım'
+        C2_zuck_repeat_loop: Labirent Döngüleri
+        C2_artist_loops: Aktör Döngüleri
+        C2_bee_conditionals: Arı Koşullandırmaları
+        C2_playlab_createstory: 'Laboratuvar Oyna - Bir Hikaye Oluştur'
+        C2_graph_paper: Grafik kağıdı programlama
+        C2_conditionals_with_cards: Koşullar
+        C2_binary_bracelets: İkilik Bileklikler
+        C2_replay_programming: Röle programlama
+        C2_paper_airplanes: Kağıt Uçaklar
+        C3_maze_intro: Labirent girişi
+        C3_artist_intro: Sanatçı girişi
+        C3_artist_functions: Aktör Fonksiyonları
+        C3_bee_functions: Arı Fonksiyonları
+        C3_bee_conditionals: Arı Koşullandırmaları
+        C3_maze_conditionals: Labirent Koşullandırıcıları
+        C3_artist_nested_loops: İç İçe Döngüler
+        C3_farmer_while: While(...durumunda) Döngüleri
+        C3_bee_nested_loops: İç İçe Döngüler
+        C3_bee_debugging: Arı Ayıklama
+        C3_bounce: Bounce
         C3_playlab_create_game: 'Play Lab - Create a Game'
-        C3_computational_thinking: "Bilgisayarımsı Düşünme"
-        C3_dice_race: "Zar Yarışı"
-        C3_internet: "İnternet"
+        C3_computational_thinking: Bilgisayarımsı Düşünme
+        C3_dice_race: Zar Yarışı
+        C3_internet: İnternet
         C3_crowdsourcing: "Kalabalık Kaynaklandırma 'Crowdsourcing'"
-        C3_functional_suncatchers: "Fonksiyonel Güneş Avcıları"
-        C3_songwriting_with_parameters: "Songwriting With Parameters"
+        C3_functional_suncatchers: Fonksiyonel Güneş Avcıları
+        C3_songwriting_with_parameters: Değiştirgenlerle Şarkı Yazma
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'
         run: 'Hit "Run" to try your program'
-        watch_again: "Click here to watch the video again"
+        watch_again: Click here to watch the video again
         gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
         show_code_explanation: "Click here to see the code for the program you're making"
-        instructions_repeat_explanation: "The instructions for each puzzle are repeated here"
+        instructions_repeat_explanation: The instructions for each puzzle are repeated here
         category_explanation: "You have all the same blocks but they've now been arranged in categories"
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
-        studio_say_text: "Type what you want your actor to say within these quotes"
-        jigsaw_click: "Click this block!"
+        studio_say_text: Type what you want your actor to say within these quotes
+        jigsaw_click: Click this block!

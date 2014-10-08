@@ -4,13 +4,12 @@
       Unplug1:
         title: Introducción al Arte de las Ciencias de la Computación
         desc: Esta clase dará una introducción al concepto de “Ciencias de la Computación”
-          y explicará qué hace un “informático”. Los estudiantes, tambièn tendrán
-          la chance de asumir el rol de un informático. Al finalizar la actividad,
-          cada estudiante tendrá un recordatorio para llevar a su hogar sobre qué
-          aprendió durante la clase. Tal vez Ud. crea que es conveniente evitar enseñar
-          a los niños más pequeños el complejo vocabulario asociado a las clases que
-          siguen, pero presentarlo de manera lùdica y divertida ahora es mucho màs
-          productivo que esperar otras oportunidades.
+          y explicará qué hace un “informático”. Los estudiantes  tendrán la oportunidad
+          de asumir el rol de un informático. Al finalizar la actividad, cada estudiante
+          tendrá un recordatorio sobre qué aprendió durante la clase. Tal vez Ud.
+          crea que es conveniente evitar enseñar a los niños más pequeños el complejo
+          vocabulario asociado a las clases que siguen, pero presentarlo de manera
+          lùdica y divertida ahora es mucho màs productivo que esperar otras oportunidades.
         pdfs:
         - unplug1-es-ES
         video: Unplug1
@@ -30,7 +29,7 @@
         - unplug2-es-ES
         video: Unplug2
       Unplug3:
-        title: Programación en hoja cuadriculada
+        title: Programación de hoja cuadriculada
         desc: Programando algunos dibujos, los estudiantes empezarán a entender de
           qué trata la programación. La clase empezará haciendo que los estudiantes
           intercambien instrucciones para colorear cuadrados en una hoja cuadriculada,
@@ -118,56 +117,57 @@
         - unplug11-es-ES
         video: Unplug11
       UnplugHappyMaps:
-        title: Mapas divertidos
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
-        video: C1_happy_maps_unplugged
+        title: Mapas Felices
+        desc: Los estudiantes crean algoritmos sencillos (conjuntos de instrucciones)
+          para mover un personaje a través de un laberinto utilizando un solo comando.
+        video: C1_mapas_felices_desconectado
       MoveIt:
         title: Muévelo, muévelo
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
-        video: C1_moveitmoveit_unplugged
+        desc: Los estudiantes crean algoritmos sencillos (conjuntos de instrucciones)
+          para mover un personaje a través de un laberinto utilizando un solo comando.
+        video: C1_muévelomuévelo_desconectado
       PlantASeed:
         title: 'Algoritmos de la vida real: Plantar una semilla'
         desc: Esta lección resalta formas en lao que usamos algoritmos en nuestra
           vida cotidiana, usando el acto de plantar una semilla como ejemplo. También
           se centra en el panorama general de la informática y cómo los algoritmos
           juegan un papel esencial.
-        video: C1_planting_seed
+        video: C1_plantando_semillas
       BuildingAFoundation:
         title: Construyendo una base
-        desc: Students build a structure using only provided supplies. Structures
-          must complete a task (reach a certain height or bear a certain weight),
-          and students discuss the idea of being persistent when things get complicated.
-        video: C1_building_foundation
+        desc: Los estudiantes construyen una estructura utilizando solamente lo suministrado.
+          Las estructuras deben completar una tarea (alcanzar una cierta altura o
+          soportar un cierto peso), y los estudiantes discuten la idea de ser persistente
+          cuando las cosas se complican.
+        video: C1_construyendo_cimientos
       GettingLoopy:
-        title: Getting Loopy
-        desc: This lesson introduces the programming concept of loops (repeated instructions)
-          through a dance activity. Students will learn simple choreography, then
-          be instructed to repeat it.
+        title: Alocandose
+        desc: Esta lección introduce el conepto de programación de los bucles (instruciones
+          repetidas) atravéz de una actividad de baile. Los estudiantes aprenderan
+          simple coreografía, despues se les dira que la repitan.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relay programming
-        desc: Students run a relay race, where they dash across the yard to write
-          an algorithm based on a "Graph Paper Programming" image. They can only write
-          one instruction at a time and if there's an error somewhere, they have to
-          erase everything back to that point.
-        video: C2_relay_programming
+        title: Programación de relevos
+        desc: Los estudiantes corren una carrera de relevos, donde aceleran por la
+          yarda para escribir un algoritmo basado en una imagen "Grafica de Programación".
+          Ellos solo puede escribir una instrucción a la vez y si hay algun error
+          en algun lugar, deben borrar todo hasta ese punto.
+        video: C2_programación_relevos
       Conditionals:
         title: Condicionales
-        desc: To learn about conditional statements, students play a card game and
-          create rules like "If I draw a red card, I get a point" and "If I draw a
-          black card, you get a point."
-        video: C2_conditionals_with_cards
+        desc: Para aprender acerca de declaraciones condicionales, los estudiantes
+          jugaran un juego de cartas y crean reglas como "si tomo una tarjeta roja,
+          obtengo un punto" y "si tomo una carta negra, tu obtienes un punto."
+        video: C2_condiciones_con_tarjetas
       BigEvent:
         title: El Gran Evento
         desc: Los estudiantes son introducidos al concepto de "eventos" en programación,
           que son acciones que un ordenador controla constantemente. El profesor presionará
           botones en un control remoto de papel y los estudiantes reaccionaran dependiendo
           de que botón se presiona.
-        video: C1_bigevent_unplugged
+        video: C1_granevento_desconectado
       GoingPlacesSafely:
-        title: Ir a sitios seguros
+        title: Ir a Sitios Seguro
         desc: El Internet es una herramienta poderosa, pero a veces peligrosa. Los
           maestros muestran cómo mantenerse a salvo mientras se navega en Internet.
       GraphPaperProgramming:
@@ -175,59 +175,61 @@
         desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones)
           usando un conjunto de  comandos predefinidos para dirigir a sus compañeros
           en la reproducción de un dibujo.
-        video: C2_graph_paper
+        video: C2_papel_cuadriculado
       PaperPlanes:
-        title: 'Real-life Algorithms: Paper Planes'
-        desc: This lesson calls out ways we use algorithms in our daily lives, specifically
-          making paper airplanes. This lesson also focuses on the bigger picture of
-          computer science and how algorithms play an essential part.
-        video: C2_paper_airplanes
+        title: 'Algoritmos de la vida real : Aviones de papel'
+        desc: Esta lección hace ver modos en los que usamos algoritmos en nuestra
+          vida diaria, especificamente haciendo aviones de papel. Esta lección también
+          se enfoca la gran imagen de las Ciencias Computacionales y como los algoritmos
+          juegan una parte escencial.
+        video: C2_aviones_de_papel
       BinaryBracelets:
-        title: Binary Bracelets
-        desc: Students create bracelets as a binary representations of the first letter
-          of their name. Students learn that data can be represented and stored in
-          more than one way.
-        video: C2_binary_bracelets
+        title: Pulseras Binarias
+        desc: Los estudiantes crearan pulseras como representaciones binarias de la
+          primera letra de su nombre. Aprenderan que la información puede ser representada
+          y guardada en mas de un modo.
+        video: C2_pulseras_binarias
       DigitalFootprint:
-        title: Your Digital Footprint
-        desc: Teachers introduce to students the idea that putting information about
-          themselves online creates a digital footprint or "trail" that has consequences.
+        title: Tu huella Digital
+        desc: Los profesores le presentan a los alumnos la idea de poner información
+          sobre ellos en línea crea una huella digital o un "rastro" que tiene consecuencias.
       ComputationalThinking:
         title: Pensamiento computacional
-        desc: Students use the steps of computational thinking (decompose, pattern
-          match, abstract, algorithm) to figure out how to play a game that comes
-          with no instructions.
-        video: C3_computational_thinking
+        desc: Los estudiantes utilizan los pasos del pensamiento computacional (descomponer,
+          unir patrones, abstraer, algoritmo) para averiguar como jugar un juego que
+          viene sin instrucciones.
+        video: C3_pensamiento_computacional
       FunctionalSuncatchers:
-        title: Functional Suncatchers
-        desc: Students create an algorithm with variables and functions (pieces of
-          code that you want to use over and over again) to create suncatchers using
-          string and beads.
-        video: C3_functional_suncatchers
+        title: Tragaluces Funcionales
+        desc: Los estudiantes crean un algoritmo con variables y funciones (pedazos
+          de código que quieres usar una y otra vez) para crear un tragalúz con hilos
+          y cuentas.
+        video: C3_tragaluz_funcional
       SongwritingParameters:
-        title: Songwriting with Parameters
-        desc: Students use the concept of the chorus in a song to learn about passing
-          parameters (which customize a function without having to rewrite the entire
-          function).
-        video: C3_songwriting_with_parameters
+        title: Composicion musical con Parámetros
+        desc: Los estudiantes usan el concepto del coro en una canción para aprender
+          sobre el paso de parámetros (que personaliza una función sin tener que reescrbir
+          la función entera).
+        video: C3_composición_musical_con_paràmetros
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
-        desc: This lesson calls out ways we use algorithms in our daily lives. As
-          part of that, students will identify and write down the algorithm for a
-          dice race game.
-        video: C3_dice_race
+        title: 'Algoritmos de la vida real: Carrera de Dados'
+        desc: Esta lección muestra modos en los que usamos algoritmos en nuestra vida
+          diaria. Como parte de eso, los estudiantes identificarán y escribirán el
+          algoritmo de un juego de carrera de dados.
+        video: C3_carrera_dados
       Internet:
         title: Internet
-        desc: Students send messages representing various Internet transmission methods
-          using pieces of paper.
+        desc: Los estudiantes enviaran mensajes representando varios métodos de transmision
+          de Internet usando pedazos de papel.
         video: C3_internet
       Crowdsourcing:
-        title: Crowdsourcing
-        desc: Student use crowdsourcing, a problem-solving technique common in computer
-          science, to complete a task together as a classroom more efficiently than
-          if a student attempted it alone.
+        title: Colaboración Abierta
+        desc: Los estudiantes usan colaboración abierta, una técnica resuelve-problemas
+          común en Ciencias de la Computación, para completar una tarea juntos como
+          clase mas eficientemente que si un estudiante lo intentara solo.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
-        desc: Students explore the difference between private information and personal
-          information, distinguishing what is safe and unsafe to share online.
+        title: Ciudadanía Digital
+        desc: Los estudiantes exploraran la diferencia entre infromación privada e
+          información personal, distinguiendo que es seguro e inseguro compartir en
+          línea.

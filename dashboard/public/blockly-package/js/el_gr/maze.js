@@ -90,7 +90,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":38,"./utils":53}],2:[function(require,module,exports){
+},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":38,"./utils":54}],2:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -994,7 +994,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/el_gr/common":55,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":9,"./slider":40,"./templates/buttons.html":42,"./templates/instructions.html":44,"./templates/learn.html":45,"./templates/makeYourOwn.html":46,"./utils":53,"./xml":54}],3:[function(require,module,exports){
+},{"../locale/el_gr/common":56,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":9,"./slider":40,"./templates/buttons.html":42,"./templates/instructions.html":44,"./templates/learn.html":45,"./templates/makeYourOwn.html":46,"./utils":54,"./xml":55}],3:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1140,7 +1140,7 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
-},{"./xml":54}],4:[function(require,module,exports){
+},{"./xml":55}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1282,7 +1282,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/el_gr/common":55}],5:[function(require,module,exports){
+},{"../locale/el_gr/common":56}],5:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -1312,7 +1312,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":8,"./feedback.js":9,"./templates/builder.html":41,"./utils.js":53,"url":67}],6:[function(require,module,exports){
+},{"./dom.js":8,"./feedback.js":9,"./templates/builder.html":41,"./utils.js":54,"url":68}],6:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -1599,11 +1599,15 @@ exports.displayFeedback = function(options) {
     trackEvent('Puzzle', 'Completed', options.response.level_path, options.response.level_attempts);
   }
 
+  var hadShareFailure = (options.response && options.response.share_failure);
+  var showingSharing = options.showingSharing && !hadShareFailure;
+
   var canContinue = exports.canContinueToNextLevel(options.feedbackType);
   var displayShowCode = BlocklyApps.enableShowCode && canContinue;
   var feedback = document.createElement('div');
-  var sharingDiv = (canContinue && options.showingSharing) ? exports.createSharingDiv(options) : null;
+  var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
+  var shareFailureDiv = hadShareFailure ? getShareFailure(options) : null;
   var feedbackBlocks = new FeedbackBlocks(options);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
@@ -1635,10 +1639,13 @@ exports.displayFeedback = function(options) {
   if (sharingDiv) {
     feedback.appendChild(sharingDiv);
   }
-  if (options.showingSharing) {
+  if (showingSharing) {
     var shareCodeSpacer = document.createElement('div');
     shareCodeSpacer.className = "share-code-spacer";
     feedback.appendChild(shareCodeSpacer);
+  }
+  if (shareFailureDiv) {
+    feedback.appendChild(shareFailureDiv);
   }
   if (showCode) {
     feedback.appendChild(showCode);
@@ -1834,6 +1841,13 @@ var getFeedbackButtons = function(options) {
   return buttons;
 };
 
+var getShareFailure = function(options) {
+  var shareFailure = options.response.share_failure;
+  var shareFailureDiv = document.createElement('div');
+  shareFailureDiv.innerHTML = require('./templates/shareFailure.html')({shareFailure: shareFailure});
+  return shareFailureDiv;
+};
+
 var useSpecialFeedbackDesign = function (options) {
  return options.response &&
         options.response.design &&
@@ -1844,9 +1858,10 @@ var useSpecialFeedbackDesign = function (options) {
 // The message will be one of the following, from highest to lowest precedence:
 // 1. Message passed in by caller (options.message).
 // 2. Message from dashboard database (options.response.hint).
-// 3. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
+// 3. Header message due to dashboard text check fail (options.response.share_failure).
+// 4. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
 //    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
-// 4. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
+// 5. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
 //    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
 var getFeedbackMessage = function(options) {
   var feedback = document.createElement('p');
@@ -1856,6 +1871,8 @@ var getFeedbackMessage = function(options) {
   // If a message was explicitly passed in, use that.
   if (options.message) {
     message = options.message;
+  } else if (options.response && options.response.share_failure) {
+    message = msg.shareFailure();
   } else if (options.response && options.response.hint) {
     // Otherwise, if there's a dashboard database hint, use that.
     message = options.response.hint;
@@ -2499,7 +2516,7 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/el_gr/common":55,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":42,"./templates/code.html":43,"./templates/readonly.html":48,"./templates/sharing.html":49,"./templates/showCode.html":50,"./templates/trophy.html":51,"./utils":53}],10:[function(require,module,exports){
+},{"../locale/el_gr/common":56,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":42,"./templates/code.html":43,"./templates/readonly.html":48,"./templates/shareFailure.html":49,"./templates/sharing.html":50,"./templates/showCode.html":51,"./templates/trophy.html":52,"./utils":54}],10:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -5746,7 +5763,7 @@ for (var functionName in Bee.api) {
   exports[functionName] = API_FUNCTION(Bee.api[functionName]);
 }
 
-},{"../utils":53,"./bee":13,"./tiles":30}],13:[function(require,module,exports){
+},{"../utils":54,"./bee":13,"./tiles":30}],13:[function(require,module,exports){
 var utils = require('../utils');
 var mazeMsg = require('../../locale/el_gr/maze');
 var TestResults = require('../constants.js').TestResults;
@@ -6203,7 +6220,7 @@ Bee.api.honeyCreated = function (id) {
   return Maze.bee.honey_;
 };
 
-},{"../../locale/el_gr/maze":56,"../constants.js":7,"../utils":53}],14:[function(require,module,exports){
+},{"../../locale/el_gr/maze":57,"../constants.js":7,"../utils":54}],14:[function(require,module,exports){
 /**
  * Blocks specific to Bee
  */
@@ -6436,7 +6453,7 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
   };
 }
 
-},{"../../locale/el_gr/maze":56,"../block_utils":3,"../codegen":6}],15:[function(require,module,exports){
+},{"../../locale/el_gr/maze":57,"../block_utils":3,"../codegen":6}],15:[function(require,module,exports){
 /*jshint -W086 */
 
 var DirtDrawer = require('./dirtDrawer');
@@ -6722,7 +6739,7 @@ BeeItemDrawer.prototype.addCheckerboardTile = function (row, col, isPath) {
   }
 };
 
-},{"../utils":53,"./dirtDrawer":18,"./mazeUtils":26}],16:[function(require,module,exports){
+},{"../utils":54,"./dirtDrawer":18,"./mazeUtils":26}],16:[function(require,module,exports){
 /**
  * Blockly Demo: Maze
  *
@@ -7132,7 +7149,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
 };
 
-},{"../../locale/el_gr/common":55,"../../locale/el_gr/maze":56,"../block_utils":3,"../codegen":6,"./beeBlocks":14,"./mazeUtils":26}],17:[function(require,module,exports){
+},{"../../locale/el_gr/common":56,"../../locale/el_gr/maze":57,"../block_utils":3,"../codegen":6,"./beeBlocks":14,"./mazeUtils":26}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7154,7 +7171,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/el_gr/maze":56,"ejs":57}],18:[function(require,module,exports){
+},{"../../locale/el_gr/maze":57,"ejs":58}],18:[function(require,module,exports){
 var cellId = require('./mazeUtils').cellId;
 
 // The number line is [-inf, min, min+1, ... no zero ..., max-1, max, +inf]
@@ -7394,7 +7411,7 @@ ExecutionInfo.prototype.checkTimeout = function() {
   }
 };
 
-},{"../utils":53}],20:[function(require,module,exports){
+},{"../utils":54}],20:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7417,7 +7434,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/el_gr/maze":56,"ejs":57}],21:[function(require,module,exports){
+},{"../../locale/el_gr/maze":57,"ejs":58}],21:[function(require,module,exports){
 /*jshint multistr: true */
 
 var levelBase = require('../level_base');
@@ -8667,7 +8684,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/el_gr/maze":56,"../block_utils":3,"../level_base":10,"./karelStartBlocks.xml":22,"./tiles":30,"./toolboxes/karel1.xml":31,"./toolboxes/karel2.xml":32,"./toolboxes/karel3.xml":33}],22:[function(require,module,exports){
+},{"../../locale/el_gr/maze":57,"../block_utils":3,"../level_base":10,"./karelStartBlocks.xml":22,"./tiles":30,"./toolboxes/karel1.xml":31,"./toolboxes/karel2.xml":32,"./toolboxes/karel3.xml":33}],22:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -8699,7 +8716,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/el_gr/maze":56,"ejs":57}],23:[function(require,module,exports){
+},{"../../locale/el_gr/maze":57,"ejs":58}],23:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var karelLevels = require('./karelLevels');
 var wordsearchLevels = require('./wordsearchLevels');
@@ -9338,7 +9355,7 @@ cloneWithStep('2_17', true, false);
 cloneWithStep('karel_1_9', true, false);
 cloneWithStep('karel_2_9', true, false);
 
-},{"../../locale/el_gr/maze":56,"../block_utils":3,"../utils":53,"./karelLevels":21,"./requiredBlocks":27,"./startBlocks.xml":29,"./tiles":30,"./toolboxes/maze.xml":34,"./wordsearchLevels":37}],24:[function(require,module,exports){
+},{"../../locale/el_gr/maze":57,"../block_utils":3,"../utils":54,"./karelLevels":21,"./requiredBlocks":27,"./startBlocks.xml":29,"./tiles":30,"./toolboxes/maze.xml":34,"./wordsearchLevels":37}],24:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Maze = require('./maze');
@@ -11047,7 +11064,7 @@ Maze.onExecutionFinish = function () {
   }
 };
 
-},{"../../locale/el_gr/common":55,"../base":2,"../codegen":6,"../dom":8,"../feedback.js":9,"../skins":39,"../templates/page.html":47,"../timeoutList":52,"../utils":53,"./api":12,"./bee":13,"./beeItemDrawer":15,"./controls.html":17,"./dirtDrawer":18,"./executionInfo":19,"./extraControlRows.html":20,"./mazeUtils":26,"./tiles":30,"./visualization.html":35,"./wordsearch":36}],26:[function(require,module,exports){
+},{"../../locale/el_gr/common":56,"../base":2,"../codegen":6,"../dom":8,"../feedback.js":9,"../skins":39,"../templates/page.html":47,"../timeoutList":53,"../utils":54,"./api":12,"./bee":13,"./beeItemDrawer":15,"./controls.html":17,"./dirtDrawer":18,"./executionInfo":19,"./extraControlRows.html":20,"./mazeUtils":26,"./tiles":30,"./visualization.html":35,"./wordsearch":36}],26:[function(require,module,exports){
 /**
  * Generalized function for generating ids for cells in a table
  */
@@ -11255,7 +11272,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":39,"../utils":53}],29:[function(require,module,exports){
+},{"../skins":39,"../utils":54}],29:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11276,7 +11293,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],30:[function(require,module,exports){
+},{"ejs":58}],30:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -11339,7 +11356,7 @@ Tiles.constrainDirection4 = function(d) {
   return utils.mod(d, 4);
 };
 
-},{"../utils":53}],31:[function(require,module,exports){
+},{"../utils":54}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11360,7 +11377,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],32:[function(require,module,exports){
+},{"ejs":58}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11386,7 +11403,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../../locale/el_gr/common":55,"../../../locale/el_gr/maze":56,"ejs":57}],33:[function(require,module,exports){
+},{"../../../locale/el_gr/common":56,"../../../locale/el_gr/maze":57,"ejs":58}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11420,7 +11437,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../../locale/el_gr/common":55,"ejs":57}],34:[function(require,module,exports){
+},{"../../../locale/el_gr/common":56,"ejs":58}],34:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11441,7 +11458,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],35:[function(require,module,exports){
+},{"ejs":58}],35:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11462,7 +11479,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],36:[function(require,module,exports){
+},{"ejs":58}],36:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var cellId = require('./mazeUtils').cellId;
@@ -11709,7 +11726,7 @@ WordSearch.__testonly__ = {
 };
 /* end-test-block */
 
-},{"../utils":53,"./mazeUtils":26,"./tiles":30}],37:[function(require,module,exports){
+},{"../utils":54,"./mazeUtils":26,"./tiles":30}],37:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var reqBlocks = require('./requiredBlocks');
 var blockUtils = require('../block_utils');
@@ -12186,7 +12203,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./utils":53,"./xml":54}],39:[function(require,module,exports){
+},{"./block_utils":3,"./utils":54,"./xml":55}],39:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -12493,7 +12510,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],42:[function(require,module,exports){
+},{"ejs":58}],42:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12514,7 +12531,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/el_gr/common":55,"ejs":57}],43:[function(require,module,exports){
+},{"../../locale/el_gr/common":56,"ejs":58}],43:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12535,7 +12552,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],44:[function(require,module,exports){
+},{"ejs":58}],44:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12556,7 +12573,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/el_gr/common":55,"ejs":57}],45:[function(require,module,exports){
+},{"../../locale/el_gr/common":56,"ejs":58}],45:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12579,7 +12596,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/el_gr/common":55,"ejs":57}],46:[function(require,module,exports){
+},{"../../locale/el_gr/common":56,"ejs":58}],46:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12600,7 +12617,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/el_gr/common":55,"ejs":57}],47:[function(require,module,exports){
+},{"../../locale/el_gr/common":56,"ejs":58}],47:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12625,7 +12642,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/el_gr/common":55,"ejs":57}],48:[function(require,module,exports){
+},{"../../locale/el_gr/common":56,"ejs":58}],48:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12647,7 +12664,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],49:[function(require,module,exports){
+},{"ejs":58}],49:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12660,7 +12677,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/el_gr/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing-image">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('<p id="share-fail-explanation">', escape((1,  shareFailure.message )), '</p>\n\n');3; if (shareFailure.contents) { ; buf.push('\n  <div class="share-fail-excerpt">\n    <pre class="generatedCode">', escape((5,  shareFailure.contents )), '</pre>\n  </div>\n');7; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -12668,7 +12685,28 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/el_gr/common":55,"ejs":57}],50:[function(require,module,exports){
+},{"ejs":58}],50:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape, rethrow) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!#?[a-zA-Z0-9]+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/'/g, '&#39;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/el_gr/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"../../locale/el_gr/common":56,"ejs":58}],51:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12689,7 +12727,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/el_gr/common":55,"ejs":57}],51:[function(require,module,exports){
+},{"../../locale/el_gr/common":56,"ejs":58}],52:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12710,7 +12748,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":57}],52:[function(require,module,exports){
+},{"ejs":58}],53:[function(require,module,exports){
 var list = [];
 
 /**
@@ -12728,7 +12766,7 @@ exports.clearTimeouts = function () {
   list = [];
 };
 
-},{}],53:[function(require,module,exports){
+},{}],54:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -12994,7 +13032,7 @@ exports.generateDropletPalette = function (codeFunctions) {
   return palette;
 };
 
-},{"./lodash":11,"./xml":54}],54:[function(require,module,exports){
+},{"./lodash":11,"./xml":55}],55:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -13022,7 +13060,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],55:[function(require,module,exports){
+},{}],56:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.el=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "και"};
 
@@ -13062,21 +13100,21 @@ exports.directionEastLetter = function(d){return "Α"};
 
 exports.directionWestLetter = function(d){return "Δ"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "τέλος"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Το μπλοκ του \"Repeat\" ή του \"If\" πρέπει να περιέχει άλλα μπλοκ για να δουλέψει. Σιγουρέψου ότι το εσωτερικό μπλοκ ταιριάζει μέσα στο εξωτερικό."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Στο μπλόκ της συνάρτησης χρειάζεται να υπάρχουν άλλα μπλοκ για να μπορεί να δουλέψει."};
 
-exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
+exports.extraTopBlocks = function(d){return "Έχεις ασύνδετα μπλοκ. Θέλεις να τα συνδέσεις στο μπλοκ \"όταν εκτελείται\";"};
 
 exports.finalStage = function(d){return "Συγχαρητήρια! τέλειωσες το τελικό στάδιο."};
 
 exports.finalStageTrophies = function(d){return "Συγχαρητήρια! Τέλειωσες το τελευταίο στάδιο και κέρδισες "+p(d,"numTrophies",0,"el",{"one":"τρόπαιο","other":n(d,"numTrophies")+" τράπαια"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Τερματισμός"};
 
-exports.generatedCodeInfo = function(d){return "Τα πλακίδια από το πρόγραμμά σου μπορούν επίσης να αναπαρασταθούν στην Javascript, την πιο ευρέως διαδεδομένη γλώσσα προγραμματισμού παγκοσμίως:"};
+exports.generatedCodeInfo = function(d){return "Ακόμη και τα κορυφαία πανεπιστήμια διδάσκουν κώδικα με βάση τα μπλοκ (π.χ. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Αλλά στο παρασκήνιο τα μπλοκ που συναρμολόγησες μπορούν να εμφανιστούν σε JavaScript, την πιο διαδεδομένη γλώσσα προγραμματισμού στον κόσμο:"};
 
 exports.hashError = function(d){return "Συγνώμη, το '%1' δεν αντιστοιχεί με αποθηκευμένο πρόγραμμα."};
 
@@ -13084,13 +13122,13 @@ exports.help = function(d){return "Βοήθεια"};
 
 exports.hintTitle = function(d){return "Υπόδειξη:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "πήδα"};
 
 exports.levelIncompleteError = function(d){return "Χρησιμοποιείς όλα τα αναγκαία είδη μπλοκ, αλλά όχι με τον σωστό τρόπο."};
 
 exports.listVariable = function(d){return "λίστα"};
 
-exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
+exports.makeYourOwnFlappy = function(d){return "Φτιάξτε το δικό σας Flappy παιχνίδι"};
 
 exports.missingBlocksErrorMsg = function(d){return "Δοκίμασε ένα ή περισσότερα από τα παρακάτω μπλοκ για να λύσεις το παζλ."};
 
@@ -13098,15 +13136,15 @@ exports.nextLevel = function(d){return "Συγχαρητήρια! Τελείωσ
 
 exports.nextLevelTrophies = function(d){return "Συγχαρητήρια! Τελείωσες το παζλ "+v(d,"puzzleNumber")+" και κέρδισες "+p(d,"numTrophies",0,"el",{"one":"τρόπαιο","other":n(d,"numTrophies")+" τρόπαια"})+"."};
 
-exports.nextStage = function(d){return "Συγχαρητήρια! Ολοκλληρωσες το στάδιο "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Συγχαρητήρια! Ολοκληρώσατε "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Συγχαρητήρια! Τελείωσες το στάδιο "+v(d,"stageNumber")+" και κέρδισες "+p(d,"numTrophies",0,"el",{"one":"τρόπαιο","other":n(d,"numTrophies")+" τρόπαια"})+"."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"el",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Συγχαρητήρια! Τελείωσες το πάζλ "+v(d,"puzzleNumber")+". (Όμως, θα μπορούσες να βάλεις μόνο   "+p(d,"numBlocks",0,"el",{"one":"1 μπλοκ","other":n(d,"numBlocks")+" μπλοκ"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Μόλις έγραψες "+p(d,"numLines",0,"el",{"one":"1 γραμμή","other":n(d,"numLines")+" γραμμές"})+" κώδικα!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "παίξε"};
 
 exports.puzzleTitle = function(d){return "Παζλ "+v(d,"puzzle_number")+" από "+v(d,"stage_total")};
 
@@ -13114,11 +13152,11 @@ exports.repeat = function(d){return "επανάλαβε"};
 
 exports.resetProgram = function(d){return "Επαναφορά"};
 
-exports.runProgram = function(d){return "Εκτέλεση Προγράμματος"};
+exports.runProgram = function(d){return "Τρέξτε"};
 
 exports.runTooltip = function(d){return "Τρέξε το πρόγραμμα που ορίζεται από τα μπλοκ στο χώρο εργασίας."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "σκορ"};
 
 exports.showCodeHeader = function(d){return "Προβολή Κώδικα"};
 
@@ -13142,13 +13180,15 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Γενικό σύνολ
 
 exports.tryAgain = function(d){return "Δοκίμασε ξανά"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Δείτε την υπόδειξη"};
 
 exports.backToPreviousLevel = function(d){return "Πίσω στο προηγούμενο επίπεδο"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Αποθήκευση στη συλλογή σου"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Αποθηκεύτηκε στη συλλογή σου!"};
+
+exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
 exports.typeCode = function(d){return "Γράψε το δικό σου κώδικα JavaScript κάτω από αυτές τις οδηγίες."};
 
@@ -13164,28 +13204,28 @@ exports.rotateText = function(d){return "Γυρίστε τη συσκευή σα
 
 exports.orientationLock = function(d){return "Απενεργοποιήστε το κλείδωμα περιστροφής στις ρυθμίσης της συσκευής."};
 
-exports.wantToLearn = function(d){return "Want to learn to code?"};
+exports.wantToLearn = function(d){return "Θέλετε να μάθετε προγραμματισμό;"};
 
-exports.watchVideo = function(d){return "Watch the Video"};
+exports.watchVideo = function(d){return "Δείτε το βίντεο"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "όταν"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "όταν εκτελείται"};
 
-exports.tryHOC = function(d){return "Try the Hour of Code"};
+exports.tryHOC = function(d){return "Δοκίμασε την Ώρα του Κώδικα"};
 
-exports.signup = function(d){return "Sign up for the intro course"};
+exports.signup = function(d){return "Κάνε εγγραφή στο εισαγωγικό μάθημα"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Να μια βοήθεια:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου."};
 
 
-},{"messageformat":68}],56:[function(require,module,exports){
+},{"messageformat":69}],57:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.el=function(n){return n===1?"one":"other"}
-exports.atHoneycomb = function(d){return "at honeycomb"};
+exports.atHoneycomb = function(d){return "στην κυψέλη"};
 
-exports.atFlower = function(d){return "at flower"};
+exports.atFlower = function(d){return "στο λουλούδι"};
 
 exports.avoidCowAndRemove = function(d){return "απόφυγε την αγελάδα και αφαίρεσε 1"};
 
@@ -13211,15 +13251,15 @@ exports.fill = function(d){return "γέμισε 1"};
 
 exports.fillN = function(d){return "γέμισε "+v(d,"shovelfuls")};
 
-exports.fillStack = function(d){return "fill stack of "+v(d,"shovelfuls")+" holes"};
+exports.fillStack = function(d){return "γέμισε τη στοίβα των φτυαριές"+v(d,"shovelfuls")+" τρυπών"};
 
 exports.fillSquare = function(d){return "γέμισε το τετράγωνο"};
 
-exports.fillTooltip = function(d){return "βάλε 1 μονάδα χώμα"};
+exports.fillTooltip = function(d){return "βάλε 1 μονάδα χώματος"};
 
 exports.finalLevel = function(d){return "Συγχαρητήρια! Έλυσες το τελευταίο Παζλ."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "Το λουλούδι στο οποίο βρίσκεσαι δεν έχει άλλο νέκταρ."};
 
 exports.get = function(d){return "πάρε"};
 
@@ -13227,55 +13267,55 @@ exports.heightParameter = function(d){return "ύψος"};
 
 exports.holePresent = function(d){return "υπάρχει μια τρύπα"};
 
-exports.honey = function(d){return "make honey"};
+exports.honey = function(d){return "φτιάξε μέλι"};
 
-exports.honeyAvailable = function(d){return "honey"};
+exports.honeyAvailable = function(d){return "μέλι"};
 
-exports.honeyTooltip = function(d){return "Make honey from nectar"};
+exports.honeyTooltip = function(d){return "Φτιάξε μέλι από νέκταρ"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "Αυτή η κυψέλη δεν έχει χώρο για άλλο μέλι."};
 
 exports.ifCode = function(d){return "εάν"};
 
-exports.ifInRepeatError = function(d){return "Χρειάζεσαι ένα πλακίδιο  «εάν» μέσα σε ένα πλακίδιο «επανάλαβε».  Εάν αντιμετωπίζεις προβλήματα, δοκίμασε το προηγούμενο επίπεδο πάλι για να δεις πώς λειτούργησε."};
+exports.ifInRepeatError = function(d){return "Χρειάζεσαι ένα πλακίδιο «εάν» μέσα σε ένα πλακίδιο «επανάλαβε». Εάν αντιμετωπίζεις προβλήματα, δοκίμασε το προηγούμενο επίπεδο πάλι για να δεις πώς λειτούργησε."};
 
 exports.ifPathAhead = function(d){return "Εάν υπάρχει διαδρομή μπροστά"};
 
-exports.ifTooltip = function(d){return "Αν υπάρχει ένα μονοπάτι προς τη συγκεκριμένη κατεύθυνση, τότε κάνε κάποιες ενέργειες."};
+exports.ifTooltip = function(d){return "Εάν υπάρχει ένα μονοπάτι προς τη συγκεκριμένη κατεύθυνση, τότε κάνε κάποιες ενέργειες."};
 
-exports.ifelseTooltip = function(d){return "Αν υπάρχει ένα μονοπάτι στη συγκεκριμένη κατεύθυνση, τότε κάντε το πρώτο μπλοκ ενέργειες. Διαφορετικά, κάνε το δεύτερο μπλοκ ενέργειες."};
+exports.ifelseTooltip = function(d){return "Εάν υπάρχει ένα μονοπάτι στη συγκεκριμένη κατεύθυνση, τότε κάνε το πρώτο σετ ενεργειών. Διαφορετικά, κάνε το δεύτερο σετ ενεργειών."};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "Εάν υπάρχει λουλούδι / κυψέλη στη συγκεκριμένη κατεύθυνση, τότε κάνε κάποιες ενέργειες."};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "Εάν υπάρχει λουλούδι / κυψέλη στη συγκεκριμένη κατεύθυνση, τότε κάνε το πρώτο σετ από ενέργειες. Διαφορετικά, κάνε το δεύτερο σετ από ενέργειες."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Χρησιμοποιείς όλα τα σωστά πλακίδια, αλλά χρειάζεται να φτιάξεις τη σωστή ποσότητα μελιού."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Χρησιμοποιείς όλα τα σωστά πλακίδια, αλλά χρειάζεται να μαζέψεις τη σωστή ποσότητα μελιού."};
 
-exports.make = function(d){return "make"};
+exports.make = function(d){return "φτιάξε"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "πήγαινε πίσω"};
 
-exports.moveEastTooltip = function(d){return "Move me east one space."};
+exports.moveEastTooltip = function(d){return "Πήγαινέ με ανατολικά ένα βήμα."};
 
 exports.moveForward = function(d){return "πήγαινε εμπρός"};
 
 exports.moveForwardTooltip = function(d){return "Μετακίνησε με προς τα μπροστά κατά ένα βήμα."};
 
-exports.moveNorthTooltip = function(d){return "Move me north one space."};
+exports.moveNorthTooltip = function(d){return "Πήγαινέ με βόρεια ένα βήμα."};
 
-exports.moveSouthTooltip = function(d){return "Move me south one space."};
+exports.moveSouthTooltip = function(d){return "Πήγαινέ με νότια ένα βήμα."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "Πήγαινέ με εμπρός / πίσω ένα βήμα"};
 
-exports.moveWestTooltip = function(d){return "Move me west one space."};
+exports.moveWestTooltip = function(d){return "Πήγαινέ με δυτικά ένα βήμα."};
 
-exports.nectar = function(d){return "get nectar"};
+exports.nectar = function(d){return "πάρε νέκταρ"};
 
-exports.nectarRemaining = function(d){return "nectar"};
+exports.nectarRemaining = function(d){return "νέκταρ"};
 
-exports.nectarTooltip = function(d){return "Get nectar from a flower"};
+exports.nectarTooltip = function(d){return "Πάρε νέκταρ από το λουλούδι"};
 
 exports.nextLevel = function(d){return "Συγχαρητήρια! Έχεις ολοκληρώσει αυτό το παζλ."};
 
@@ -13287,21 +13327,21 @@ exports.noPathLeft = function(d){return "κανένα μονοπάτι προς 
 
 exports.noPathRight = function(d){return "κανένα μονοπάτι προς τα δεξιά"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "Μπορείς να πάρεις νέκταρ μόνο από ένα λουλούδι."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "Μπορείς να φτιάξεις μέλι μόνο στην κυψέλη."};
 
 exports.numBlocksNeeded = function(d){return "Αυτό το παζλ μπορεί να λυθεί με %1 μπλοκ."};
 
-exports.pathAhead = function(d){return "μονοπάτι εμπρός"};
+exports.pathAhead = function(d){return "μονοπάτι ελεύθερο"};
 
-exports.pathLeft = function(d){return "Εάν μονοπάτι προς τα αριστερά"};
+exports.pathLeft = function(d){return "εάν υπάρχει μονοπάτι αριστερά"};
 
-exports.pathRight = function(d){return "Εάν μονοπάτι προς τα δεξιά"};
+exports.pathRight = function(d){return "εάν υπάρχει μονοπάτι δεξιά"};
 
-exports.pilePresent = function(d){return "υπάρχει σωρός"};
+exports.pilePresent = function(d){return "υπάρχει ένας σωρός"};
 
-exports.putdownTower = function(d){return "άφησε πύργο"};
+exports.putdownTower = function(d){return "άφησε κάτω τον πύργο"};
 
 exports.removeAndAvoidTheCow = function(d){return "αφαίρεσε ένα και απέφυγε την αγελάδα"};
 
@@ -13309,11 +13349,11 @@ exports.removeN = function(d){return "αφαίρεσε "+v(d,"shovelfuls")};
 
 exports.removePile = function(d){return "αφαίρεσε το σωρό"};
 
-exports.removeStack = function(d){return "αφαίρεσε τη στοίβα από σωρούς "+v(d,"shovelfuls")};
+exports.removeStack = function(d){return "αφαίρεσε τη στοίβα από "+v(d,"shovelfuls")+" σωρούς"};
 
 exports.removeSquare = function(d){return "αφαίρεσε το τετράγωνο"};
 
-exports.repeatCarefullyError = function(d){return "Για να λυθεί αυτό, βρες το μοτίβο που επαναλαμβάνεται. Χρησιμοποίησε ένα \"επανάλαβε\" πλακίδιο με αυτά τα 3 πλακίδια μέσα σ '' αυτό: κινήσου, κινήσου, στρίψε δεξιά."};
+exports.repeatCarefullyError = function(d){return "Για να το λύσεις αυτό, σκέψου προσεκτικά σχετικά με το μοτίβο των δύο κινήσεων και της μιας στροφής που θα βάλεις στο πλακίδιο «επανάληψη».  Δεν υπάρχει πρόβλημα αν έχεις μία επιπλέον στροφή στο τέλος."};
 
 exports.repeatUntil = function(d){return "επανάλαβε έως"};
 
@@ -13321,11 +13361,11 @@ exports.repeatUntilBlocked = function(d){return "όσο μονοπάτι εμπ�
 
 exports.repeatUntilFinish = function(d){return "επανάλαβε μέχρι τέλος"};
 
-exports.step = function(d){return "Step"};
+exports.step = function(d){return "Βήμα"};
 
-exports.totalHoney = function(d){return "total honey"};
+exports.totalHoney = function(d){return "συνολικό μέλι"};
 
-exports.totalNectar = function(d){return "total nectar"};
+exports.totalNectar = function(d){return "συνολικό νέκταρ"};
 
 exports.turnLeft = function(d){return "στρίψε αριστερά"};
 
@@ -13333,22 +13373,22 @@ exports.turnRight = function(d){return "στρίψε δεξιά"};
 
 exports.turnTooltip = function(d){return "Με περιστρέφει αριστερά ή δεξιά κατά 90 μοίρες."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "Βεβαιώσου ότι έλεγξες όλα τα σύννεφα για να δεις εάν είναι λουλούδια ή κυψέλες."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "Βεβαιώσου ότι έλεγξες όλα τα μοβ λουλούδια για να δεις εάν έχουν νέκταρ"};
 
 exports.whileMsg = function(d){return "ενώ"};
 
 exports.whileTooltip = function(d){return "Επανάλαβε τις εσωτερικές ενέργειες μέχρι το τελικό σημείο."};
 
-exports.word = function(d){return "Find the word"};
+exports.word = function(d){return "Βρες τη λέξη"};
 
 exports.yes = function(d){return "Ναι"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "Έγραψες"};
 
 
-},{"messageformat":68}],57:[function(require,module,exports){
+},{"messageformat":69}],58:[function(require,module,exports){
 
 /*!
  * EJS
@@ -13707,7 +13747,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":58,"./utils":59,"fs":60,"path":61}],58:[function(require,module,exports){
+},{"./filters":59,"./utils":60,"fs":61,"path":62}],59:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -13910,7 +13950,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],59:[function(require,module,exports){
+},{}],60:[function(require,module,exports){
 
 /*!
  * EJS
@@ -13936,9 +13976,9 @@ exports.escape = function(html){
 };
  
 
-},{}],60:[function(require,module,exports){
-
 },{}],61:[function(require,module,exports){
+
+},{}],62:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -14166,7 +14206,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":62}],62:[function(require,module,exports){
+},{"JkpR2F":63}],63:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -14231,7 +14271,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],63:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -14742,7 +14782,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],64:[function(require,module,exports){
+},{}],65:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14828,7 +14868,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],65:[function(require,module,exports){
+},{}],66:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14915,13 +14955,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],66:[function(require,module,exports){
+},{}],67:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":64,"./encode":65}],67:[function(require,module,exports){
+},{"./decode":65,"./encode":66}],68:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -15630,7 +15670,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":63,"querystring":66}],68:[function(require,module,exports){
+},{"punycode":64,"querystring":67}],69:[function(require,module,exports){
 /**
  * messageformat.js
  *
