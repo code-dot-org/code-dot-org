@@ -93,7 +93,7 @@ social:
             =I18n.t :hoc2014_everyone
             &nbsp;
           .optionright
-            %a{:href=>'https://www.indiegogo.com/projects/an-hour-of-code-for-every-student'}
+            %a{:href=>'/donate'}
               %button.optionbutton
                 =I18n.t :hoc2014_support
             %br/
@@ -165,7 +165,7 @@ social:
         %a{:href=>'/about/news', :style=>'float:right'} See all
 
     #column3{:style=>'float:left; width: 33.33%;'}
-      %h2 Thank you to our Donors
+      %h2 Thank You to Our Donors
       %div{:style=>'background-color: lightgrey; padding: 10px;'}
         %div{:style=>'background-color: white; padding: 10px;'}
           = view :indiegogo_progress_bar
