@@ -62,6 +62,7 @@
   "backToPreviousLevel":"Torna al nivell anterior",
   "saveToGallery":"Save to your gallery",
   "savedToGallery":"Saved to your gallery!",
+  "shareFailure":"Sorry, we can't share this program.",
   "typeCode":"Escriu el teu codi JavaScript sota aquestes instruccions.",
   "typeFuncs":"Funcions disponibles:%1",
   "typeHint":"Tingueu en compte que els parèntesis i els punts i coma són obligatoris.",

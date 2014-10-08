@@ -3,7 +3,7 @@
     script:
       name:
         20-hour:
-          desc: "Įvadas į informatikos kursą 5-8 kl"
+          desc: "Įvadas į programavimo kursą 5-8 kl"
           Unplug1: 1 Etapas
           Maze: 2 Etapas
           Unplug2: 3 Etapas
@@ -25,7 +25,7 @@
           Artist5: 19 Etapas
           Unplug11: 20 Etapas
         Hour of Code:
-          desc: Vienos Valandos Kodas
+          desc: "„Programavimo valanda“"
           Maze: 1 Etapas
         Edit Code:
           desc: Redaguoti kodą (beta)
@@ -115,7 +115,7 @@
     level:
       instructions:
         maze_2_2: 'Ar gali man padėti sugauti neklaužadą kiaulę? Sujunk keletą „judėk
-          į priekį“ blokų ir nuspausk „Paleisti programą“, kad aš ją sugaučiau. '
+          į priekį“ blokų ir nuspausk „Paleisti“, kad aš ją sugaučiau. '
         maze_2_1: "Ši kiaulė sutaršė mano plunksnas. Padėk man ją pasiekti!"
         maze_2_2_5: Surask kelią ir nuvesk mane pas kvailą kiaulę. Tik neleisk man
           prisiliesti prie TNT dėžučių, nes susprogsiu!
@@ -155,7 +155,7 @@
           beveik bet ką. Panaudok porą blokelių, kad aš nupieščiau tai, kas yra pavaizduota
           pilkomis linijomis.
         turtle_1_2: 'O dabar nubrėžk kvadratą. PASTABA: gali pasirinkti pieštuko spalvą
-          naujame blokelyje „pasirink spalvą“.'
+          naujame blokelyje „nustatyk spalvą“.'
         turtle_1_3: "Šį kartą nubraižyk kvadratą panaudodamas tik 3 blokelius."
         turtle_1_4: 'Nubrėžk trikampį, kurio visos kraštinės yra skirtingų spalvų,
           panaudodamas blokelį „atsitiktinė spalva“. Jis kiekvieną kartą parenka vis
@@ -304,8 +304,8 @@
         turtle_3_4: Sugalvok, kaip panaudoti funkcijas „nubrėžk trikampį“ ir „nubrėžk
           kvadratą“ (bei keletą kitų blokelių), kad nupieštum namą aplink liūtą.
         turtle_3_5: "Sukurk komandą „nupiešk namą“ ir panaudok ją, kad nupieštum namą
-          aplink dvi kates. \nSufleris: \"tiks blokelis „Komanda: daryk kažką“, tik
-          įrašyk norimą komandos pavadinimą.\"\n"
+          aplink dvi kates. \nSufleris: tiks blokelis „Komanda: daryk kažką“, tik
+          įrašyk norimą komandos pavadinimą.\n"
         turtle_3_6: 'Naudodamas pavyzdį, komandai „nubrėžk trikampį“  leisk gauti
           informaciją „dydis“. Tada nupiešk du skirtingo dydžio trikampius. (Sufleris:
           kad komandai pridėtum informacijos laukus (parametrus), nuspausk ant žvaigždės)'
@@ -361,11 +361,10 @@
         maze_3_3: Kaip man pasiekti kiaulę? Saugokis, kad nepaliesčiau TNT dėžės!
         maze_3_4: Oi! Parašyk programą, kuri mane privers apibėgti aplinkui TNT dėžę
           ir pasiekti kiaulę.
-        bounce_1: Pridėk blokelį prie blokelio „kai rodyklė kairėn“ ir nuspausk „Paleisti
-          programą“. Judink irklą spausdamas kairę rodyklę klaviatūroje, kad pasiektum
-          tikslą.
-        bounce_2: Pridėk blokelį prie blokelio „kai rodyklė dešinėn“ ir nuspausk „Paleisti
-          programą“. Judink irklą, kad pasiektum abu taikinius.
+        bounce_1: Pridėk blokelį prie blokelio „kai rodyklė kairėn“ ir nuspausk „Paleisti“.
+          Judink irklą spausdamas kairę rodyklę klaviatūroje, kad pasiektum tikslą.
+        bounce_2: Pridėk blokelį prie blokelio „kai rodyklė dešinėn“ ir nuspausk „Paleisti“.
+          Judink irklą, kad pasiektum abu taikinius.
         bounce_3: Dabar pabandyk atlikti kažką panašaus su blokeliu „kai rodyklė aukštyn“.
           Judink irklą iki taikinio viršuje.
         bounce_4: "Šį kartą reikia pridėti keturis blokelius. Pajudink irklą į keturis
@@ -380,14 +379,16 @@
           priešininkui“ blokelius prie „kai kamuolys yra įvartyje“ ir „kai kamuolys
           nepataiko į irklą“ blokelius, kad sukurtum žaidimą. Pažiūrėk, kiek taškų
           surinksi per tą patį laiką, kai priešininkas surinks taškų dvigubai daugiau.
-        bounce_11: You can now attach blocks to the "when run" block. Try changing
-          the speed of the paddle and the ball and see how many points you can score
-          before your opponent scores twice.
+        bounce_11: Dabar gali prikabinti blokelius prie blokelio „paleidus“. Tau reikia
+          prijungti naują blokelį „paleisk naują kamuolį“ daugiau nei vienoje vietoje.
+          Taip pat pamėgink pakeisti scenos foną ar irklo greitį ir pažiūrėk, kiek
+          taškų sugebėsi surinkti per tą patį laiką, kai tavo varžovas surinks dukart
+          daugiau taškų.
         bounce_12: Sukurk savo "Pong" žaidimą. Tu gali pakeisti išvaizdą bei taisykles.
           Kai pabaigsi, spustelk "Finišas", ir draugai galės išbandyti jį savo telefonuose
           (ar pan.).
         Custom_builder: Nutempk blokelius ir įrankinės į darbo lauką, kad galėtum
-          nupiešti lygį, kurį nori sukurti. Nuspausk „Paleisti programą“ kai užbaigsi.
+          nupiešti lygį, kurį nori sukurti. Nuspausk „Paleisti“ kai užbaigsi.
         flappy_1: Pridėk reikiamą blokelį prie blokelio „kai nuspausta“, o tada nuspausk
           „Paleisti“. Spustelk pelės klavišą arba ekraną, kad Flappy skristų į tikslą.
         flappy_2: Dabar pridėjome žemę žaidime. Prijunk reikalingą blokelį prie blokelio
@@ -560,7 +561,7 @@
         loop_while: "„Kol“ blokelis"
         loop_for: Blokelis-skaitiklis
         parameters: Komandų parametrai (gaunama informacija)
-        hoc_wrapup: Vienos Valandos Kodo apibendrinimas
+        hoc_wrapup: "„Programavimo valandos“ apibendrinimas"
         20_wrapup: 20-ties valandų įvado apibendrinimas
         Unplug1: Kas yra CS?
         Unplug2: Skaičiuojamasis mąstymas
@@ -607,25 +608,25 @@
         C3_bee_conditionals: 'Bitė: sąlyginiai sakiniai'
         C3_maze_conditionals: 'Labirintas: sąlyginiai sakiniai'
         C3_artist_nested_loops: Kartojimas kartojime
-        C3_farmer_while: While Loops
+        C3_farmer_while: "„Kol“ kartojimas"
         C3_bee_nested_loops: Kartojimas kartojime
         C3_bee_debugging: 'Bitė: klaidų ieškojimas'
         C3_bounce: "Šokinėjimas"
-        C3_playlab_create_game: Play Lab - Create a Game
+        C3_playlab_create_game: 'Laboratorija: sukurk žaidimą'
         C3_computational_thinking: Skaičiuojamasis mąstymas
         C3_dice_race: Kauliukų lenktynės
         C3_internet: Internetas
-        C3_crowdsourcing: Crowdsourcing
+        C3_crowdsourcing: Komandinis programavimas
         C3_functional_suncatchers: Functional Suncatchers
-        C3_songwriting_with_parameters: Songwriting With Parameters
+        C3_songwriting_with_parameters: Dainų rašymas su parametrais
     callout:
       text:
         drag_blocks: Nutempk blokelį „judėk į priekį“ ir sujunk jį su kitu tokiu pat
           blokeliu
-        run: Nuspausk „Paleisti programą“, kad išmėgintum savo programą
+        run: Nuspausk „Paleisti“, kad išmėgintum savo programą
         watch_again: Nuspausk čia, kad iš naujo galėtum peržiūrėti vaizdo įrašą
-        gray_block_explanation: Pilki blokeliai yra nepajudinami ir nepakeičiami.
-          Ar su juo sugebėsi išspręsti užduotį?
+        gray_block_explanation: Pilkų blokelių negalima pašalinti. Ar vis tiek sugebėsi
+          išspręsti šią užduotį?
         show_code_explanation: Nuspausk čia, kad peržiūrėtum savo programos kodą
         instructions_repeat_explanation: Kiekvienos užduoties instrukcija yra parašyta
           čia

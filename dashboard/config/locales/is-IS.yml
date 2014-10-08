@@ -265,6 +265,9 @@
     header:
       finished_hoc: "Ég hef lokið við mína Kóðun í klukkustund"
       sign_in_to_save: Skráðu þig inn til að vista framvinduna
+      free_play:
+        playlab: Búa til forrit
+        artist: Teikna eitthvað
     user:
       classroom: Mínir nemendur
       label: Hæ %{username}
@@ -334,7 +337,7 @@
       students: Nemendur
       section_code: Hópkóði
       add_section_code: Bæta við hópkóða nemenda
-      secret: Leynileg gerð
+      secret: Tegund leyndarmáls
       grade: Bekkur
       course: Námskeið
       rename: endurnefna
@@ -370,8 +373,8 @@
     classroom_activity: Verkefni án tölvu
   home:
     title: Kóðastúdíó
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    all_courses: Yfirlit yfir námskeið 1, 2 og 3
+    lesson_plans: Námsáætlun
     signin_message: "Þegar skráð(ur)? %{link}"
     student_reg_link: Skráning nemanda
     teacher_reg_link: Skráning kennara
@@ -478,6 +481,13 @@
     flappy_og_title: Prófaðu leikinn minn Flappy
     studio_og_title: Kíktu á Leikjasmiðjuforritið mitt
     og_description: "Ég skrifaði kóðann sjálf(ur) með Code.org"
+    phone_number_not_allowed: "Það virðist vera símanúmer í þessu. Prófaðu að breyta
+      textanum."
+    address_not_allowed: "Það virðist vera heimilisfang í þessu. Prófaðu að breyta
+      textanum."
+    email_not_allowed: "Það virðist vera netfang í þessu. Prófaðu að breyta textanum."
+    profanity_not_allowed: "Það virðist vera blótsyrði í þessu. Prófaðu að breyta
+      textanum."
   builder:
     created: "Þú bjóst til nýja skriftu."
     destroyed: "Þú eyddir skriftu."

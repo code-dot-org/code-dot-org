@@ -263,6 +263,9 @@
     header:
       finished_hoc: "Аз приключих моя 'Час на Кодирането'"
       sign_in_to_save: "Впишете се, за да запазите напредъка си"
+      free_play:
+        playlab: "Направи приложение"
+        artist: "Начертай нещо"
     user:
       classroom: "Моите ученици"
       label: "Здравейте %{username}"
@@ -367,8 +370,8 @@
     classroom_activity: "Ънплъгт дейност"
   home:
     title: "Студио по кодиране"
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    all_courses: "Преглед на курсове 1, 2 и 3"
+    lesson_plans: "Учебни планове"
     signin_message: "Вече сте регистриран? %{link}"
     student_reg_link: "Вход за ученик"
     teacher_reg_link: "Вход за учител"
@@ -475,6 +478,14 @@
     flappy_og_title: "Вижте моята Flappy игра"
     studio_og_title: Вижте моето приложение "Театрална лаборатория"
     og_description: "Аз написах кодът с Code.org"
+    phone_number_not_allowed: "Изглежда като че ли в него има телефонен номер. Опитайте
+      да промените текста."
+    address_not_allowed: "Изглежда като че ли има адрес в него. Опитайте да промените
+      текста."
+    email_not_allowed: "Изглежда като че ли в него има имейл адрес. Опитайте да промените
+      текста."
+    profanity_not_allowed: "Изглежда има нецензурни думи в него. Опитайте да промените
+      текста."
   builder:
     created: "Вие създадохте нов скрипт."
     destroyed: "Вие унищожихте скрипт."

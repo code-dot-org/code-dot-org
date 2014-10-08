@@ -18748,17 +18748,17 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sk = function 
   }
   return 'other';
 };
-exports.actor = function(d){return "actor"};
+exports.actor = function(d){return "herec"};
 
-exports.catActions = function(d){return "Akcie"};
+exports.catActions = function(d){return "Úlohy"};
 
-exports.catControl = function(d){return "Slučky"};
+exports.catControl = function(d){return "Opakovania"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Udalosti"};
 
-exports.catLogic = function(d){return "Logické"};
+exports.catLogic = function(d){return "Logika"};
 
-exports.catMath = function(d){return "Matematické"};
+exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkcie"};
 
@@ -18766,87 +18766,87 @@ exports.catText = function(d){return "Text"};
 
 exports.catVariables = function(d){return "Premenné"};
 
-exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
+exports.changeScoreTooltip = function(d){return "Pridať alebo odstrániť bod z počtu bodov."};
 
-exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
+exports.changeScoreTooltipK1 = function(d){return "Pridaj bod k počtu bodov."};
 
 exports.continue = function(d){return "Pokračovať"};
 
-exports.decrementPlayerScore = function(d){return "remove point"};
+exports.decrementPlayerScore = function(d){return "odstrániť bod"};
 
-exports.defaultSayText = function(d){return "type here"};
+exports.defaultSayText = function(d){return "Zadajte tu"};
 
-exports.emotion = function(d){return "mood"};
+exports.emotion = function(d){return "nálada"};
 
 exports.finalLevel = function(d){return "Gratulujem! Vyriešili ste posledné puzzle."};
 
-exports.hello = function(d){return "hello"};
+exports.hello = function(d){return "ahoj"};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "Ahoj svet!"};
 
-exports.incrementPlayerScore = function(d){return "Pridať bod"};
+exports.incrementPlayerScore = function(d){return "získať bod"};
 
-exports.makeProjectileDisappear = function(d){return "disappear"};
+exports.makeProjectileDisappear = function(d){return "zmizne"};
 
-exports.makeProjectileBounce = function(d){return "bounce"};
+exports.makeProjectileBounce = function(d){return "skok"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "zmeň ohnivú guľu na modrú"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "zmeň ohnivú guľu na fialovú"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "zmeň ohnivú guľu na červenú"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "zmeň srdiečka na žltú"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "zmeň srdiečka na fialovú"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "zmeň srdiečka na červenú"};
 
-exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
+exports.makeProjectileTooltip = function(d){return "Projektil ktorý práve narazil nechajte zmiznúť alebo odraziť."};
 
-exports.makeYourOwn = function(d){return "Make Your Own Story"};
+exports.makeYourOwn = function(d){return "Spravte si svoj vlastnú Play Lab aplikáciu"};
 
-exports.moveDirectionDown = function(d){return "down"};
+exports.moveDirectionDown = function(d){return "nadol"};
 
-exports.moveDirectionLeft = function(d){return "left"};
+exports.moveDirectionLeft = function(d){return "vľavo"};
 
-exports.moveDirectionRight = function(d){return "right"};
+exports.moveDirectionRight = function(d){return "vpravo"};
 
-exports.moveDirectionUp = function(d){return "up"};
+exports.moveDirectionUp = function(d){return "hore"};
 
 exports.moveDirectionRandom = function(d){return "náhodný"};
 
-exports.moveDistance25 = function(d){return "25 pixels"};
+exports.moveDistance25 = function(d){return "25 pixelov"};
 
-exports.moveDistance50 = function(d){return "50 pixels"};
+exports.moveDistance50 = function(d){return "50 pixelov"};
 
-exports.moveDistance100 = function(d){return "100 pixels"};
+exports.moveDistance100 = function(d){return "100 pixelov"};
 
-exports.moveDistance200 = function(d){return "200 pixels"};
+exports.moveDistance200 = function(d){return "200 pixelov"};
 
-exports.moveDistance400 = function(d){return "400 pixels"};
+exports.moveDistance400 = function(d){return "400 pixelov"};
 
-exports.moveDistancePixels = function(d){return "pixelov"};
+exports.moveDistancePixels = function(d){return "pixely"};
 
-exports.moveDistanceRandom = function(d){return "random pixels"};
+exports.moveDistanceRandom = function(d){return "náhodne pixely"};
 
-exports.moveDistanceTooltip = function(d){return "Move a character a specific distance in the specified direction."};
+exports.moveDistanceTooltip = function(d){return "Presunúť herca na špecifickú vzdialenosť v určenom smere."};
 
-exports.moveSprite = function(d){return "move"};
+exports.moveSprite = function(d){return "presunúť"};
 
-exports.moveSpriteN = function(d){return "move actor "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "presunúť herca "+v(d,"spriteIndex")};
 
 exports.moveDown = function(d){return "posunúť nadol"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Posunúť herca nadol."};
 
 exports.moveLeft = function(d){return "posunúť doľava"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Posunúť herca vľavo."};
 
 exports.moveRight = function(d){return "posunúť doprava"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Posunúť herca vpravo."};
 
 exports.moveUp = function(d){return "posunúť nahor"};
 
@@ -18934,105 +18934,105 @@ exports.projectileYellowHearts = function(d){return "yellow hearts"};
 
 exports.projectilePurpleHearts = function(d){return "purple hearts"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "červené srdcia"};
 
 exports.projectileRandom = function(d){return "náhodný"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
+exports.reinfFeedbackMsg = function(d){return "Pre návrat k svojej hre môžete stlačiť tlačidlo \"Skúsiť znova\"."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "opakovať donekonečna"};
 
 exports.repeatDo = function(d){return "vykonaj"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
+exports.repeatForeverTooltip = function(d){return "Vykonajte akcie v tomto bloku opakovane pokiaľ príbeh prebieha."};
 
-exports.saySprite = function(d){return "say"};
+exports.saySprite = function(d){return "povedať"};
 
-exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
+exports.saySpriteN = function(d){return "herec "+v(d,"spriteIndex")+" povie"};
 
 exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
 
 exports.scoreText = function(d){return "Počet bodov: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set background"};
+exports.setBackground = function(d){return "nastaviť pozadie"};
 
-exports.setBackgroundRandom = function(d){return "set random scene"};
+exports.setBackgroundRandom = function(d){return "náhodné pozadie"};
 
-exports.setBackgroundBlack = function(d){return "set black background"};
+exports.setBackgroundBlack = function(d){return "nastaviť čierne pozadie"};
 
-exports.setBackgroundCave = function(d){return "set cave background"};
+exports.setBackgroundCave = function(d){return "nastaviť jaskyňu ako pozadie"};
 
-exports.setBackgroundCloudy = function(d){return "set cloudy background"};
+exports.setBackgroundCloudy = function(d){return "nastaviť oblaky ako pozadie"};
 
-exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
+exports.setBackgroundHardcourt = function(d){return "nastaviť antuku ako pozadie"};
 
-exports.setBackgroundNight = function(d){return "set night background"};
+exports.setBackgroundNight = function(d){return "nastaviť noc ako pozadie"};
 
-exports.setBackgroundUnderwater = function(d){return "set underwater background"};
+exports.setBackgroundUnderwater = function(d){return "nastaviť pozadie pod vodou"};
 
-exports.setBackgroundCity = function(d){return "set city background"};
+exports.setBackgroundCity = function(d){return "nastaviť mesto ko pozadie"};
 
-exports.setBackgroundDesert = function(d){return "set desert background"};
+exports.setBackgroundDesert = function(d){return "nastaviť púšť ako pozadie"};
 
-exports.setBackgroundRainbow = function(d){return "set rainbow background"};
+exports.setBackgroundRainbow = function(d){return "nastaviť dúhu ako pozadie"};
 
-exports.setBackgroundSoccer = function(d){return "set soccer background"};
+exports.setBackgroundSoccer = function(d){return "nastaviť futbal ako pozadie"};
 
-exports.setBackgroundSpace = function(d){return "set space background"};
+exports.setBackgroundSpace = function(d){return "nastaviť vesmír ako pozadie"};
 
-exports.setBackgroundTennis = function(d){return "set tennis background"};
+exports.setBackgroundTennis = function(d){return "nastaviť tenis ako pozadie"};
 
-exports.setBackgroundWinter = function(d){return "set winter background"};
+exports.setBackgroundWinter = function(d){return "nastaviť zimu ako pozadie"};
 
 exports.setBackgroundTooltip = function(d){return "Nastaví obrázok pozadia"};
 
 exports.setScoreText = function(d){return "nastaviť skóre"};
 
-exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
+exports.setScoreTextTooltip = function(d){return "Nastaviť text, ktorý sa zobrazí v oblasti počtu bodov."};
 
-exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
+exports.setSpriteEmotionAngry = function(d){return "prejdi k nahnevanej nálade"};
 
-exports.setSpriteEmotionHappy = function(d){return "to a happy emotion"};
+exports.setSpriteEmotionHappy = function(d){return "prejdi k radostnej nálade"};
 
-exports.setSpriteEmotionNormal = function(d){return "to a normal emotion"};
+exports.setSpriteEmotionNormal = function(d){return "prejdi k normálnej nálade"};
 
-exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
+exports.setSpriteEmotionRandom = function(d){return "prejdi k náhodnej nálade"};
 
-exports.setSpriteEmotionSad = function(d){return "to a sad emotion"};
+exports.setSpriteEmotionSad = function(d){return "prejdi k smutnej nálade"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Sets the actor emotion"};
+exports.setSpriteEmotionTooltip = function(d){return "Nastaví náladu herca"};
 
-exports.setSpriteAlien = function(d){return "to an alien image"};
+exports.setSpriteAlien = function(d){return "k obrazu cudzinca"};
 
-exports.setSpriteBat = function(d){return "to a bat image"};
+exports.setSpriteBat = function(d){return "k obrazu netopiera"};
 
-exports.setSpriteBird = function(d){return "to a bird image"};
+exports.setSpriteBird = function(d){return "k obrazu vtáka"};
 
-exports.setSpriteCat = function(d){return "to a cat image"};
+exports.setSpriteCat = function(d){return "k obrazu mačky"};
 
-exports.setSpriteCaveBoy = function(d){return "to a cave boy image"};
+exports.setSpriteCaveBoy = function(d){return "k obrazu jaskynného chlapca"};
 
-exports.setSpriteCaveGirl = function(d){return "to a cave girl image"};
+exports.setSpriteCaveGirl = function(d){return "k obrazu jaskynného dievčaťa"};
 
-exports.setSpriteDinosaur = function(d){return "to a dinosaur image"};
+exports.setSpriteDinosaur = function(d){return "k obrazu dinosaura"};
 
-exports.setSpriteDog = function(d){return "to a dog image"};
+exports.setSpriteDog = function(d){return "k obrazu psa"};
 
-exports.setSpriteDragon = function(d){return "to a dragon image"};
+exports.setSpriteDragon = function(d){return "k obrazu draka"};
 
-exports.setSpriteGhost = function(d){return "to a ghost image"};
+exports.setSpriteGhost = function(d){return "k obrazu ducha"};
 
-exports.setSpriteHidden = function(d){return "to a hidden image"};
+exports.setSpriteHidden = function(d){return "k skrytému obrazu"};
 
-exports.setSpriteHideK1 = function(d){return "hide"};
+exports.setSpriteHideK1 = function(d){return "skryť"};
 
-exports.setSpriteKnight = function(d){return "to a knight image"};
+exports.setSpriteKnight = function(d){return "k obrazu rytiera"};
 
-exports.setSpriteMonster = function(d){return "to a monster image"};
+exports.setSpriteMonster = function(d){return "k obrazu príšery"};
 
-exports.setSpriteNinja = function(d){return "to a masked ninja image"};
+exports.setSpriteNinja = function(d){return "k obrazu maskovaného ninju"};
 
-exports.setSpriteOctopus = function(d){return "to an octopus image"};
+exports.setSpriteOctopus = function(d){return "k obrazu chobotnice"};
 
 exports.setSpritePenguin = function(d){return "to a penguin image"};
 
@@ -19124,85 +19124,85 @@ exports.soundCrunch = function(d){return "chrúmať"};
 
 exports.soundGoal1 = function(d){return "goal 1"};
 
-exports.soundGoal2 = function(d){return "goal 2"};
+exports.soundGoal2 = function(d){return "cieľ 2"};
 
-exports.soundHit = function(d){return "hit"};
+exports.soundHit = function(d){return "zásah"};
 
-exports.soundLosePoint = function(d){return "lose point"};
+exports.soundLosePoint = function(d){return "stratiť bod"};
 
-exports.soundLosePoint2 = function(d){return "lose point 2"};
+exports.soundLosePoint2 = function(d){return "stratiť bod 2"};
 
 exports.soundRetro = function(d){return "retro"};
 
-exports.soundRubber = function(d){return "rubber"};
+exports.soundRubber = function(d){return "guma"};
 
-exports.soundSlap = function(d){return "slap"};
+exports.soundSlap = function(d){return "facka"};
 
-exports.soundWinPoint = function(d){return "win point"};
+exports.soundWinPoint = function(d){return "vyherný bod"};
 
-exports.soundWinPoint2 = function(d){return "win point 2"};
+exports.soundWinPoint2 = function(d){return "vyherný bod 2"};
 
-exports.soundWood = function(d){return "wood"};
+exports.soundWood = function(d){return "drevo"};
 
-exports.speed = function(d){return "speed"};
+exports.speed = function(d){return "rýchlosť"};
 
-exports.stopSprite = function(d){return "stop"};
+exports.stopSprite = function(d){return "zastaviť"};
 
-exports.stopSpriteN = function(d){return "stop actor "+v(d,"spriteIndex")};
+exports.stopSpriteN = function(d){return "zastaviť herca "+v(d,"spriteIndex")};
 
-exports.stopTooltip = function(d){return "Stops an actor's movement."};
+exports.stopTooltip = function(d){return "Zastaví pohyb herca."};
 
-exports.throwSprite = function(d){return "throw"};
+exports.throwSprite = function(d){return "hodiť"};
 
-exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
+exports.throwSpriteN = function(d){return "hod herca "+v(d,"spriteIndex")};
 
-exports.throwTooltip = function(d){return "Throws a projectile from the specified actor."};
+exports.throwTooltip = function(d){return "Hodí projektil od zadaného herca."};
 
-exports.vanish = function(d){return "vanish"};
+exports.vanish = function(d){return "zmiznúť"};
 
-exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "herec "+v(d,"spriteIndex")+" zmizne"};
 
 exports.vanishTooltip = function(d){return "Vanishes the actor."};
 
-exports.waitFor = function(d){return "wait for"};
+exports.waitFor = function(d){return "čakať na"};
 
-exports.waitSeconds = function(d){return "seconds"};
+exports.waitSeconds = function(d){return "sekundy"};
 
-exports.waitForClick = function(d){return "wait for click"};
+exports.waitForClick = function(d){return "čakať na kliknutie"};
 
-exports.waitForRandom = function(d){return "wait for random"};
+exports.waitForRandom = function(d){return "čakať na náhodné"};
 
-exports.waitForHalfSecond = function(d){return "wait for a half second"};
+exports.waitForHalfSecond = function(d){return "čakať pol sekundy"};
 
-exports.waitFor1Second = function(d){return "wait for 1 second"};
+exports.waitFor1Second = function(d){return "čakať 1 sekundu"};
 
-exports.waitFor2Seconds = function(d){return "wait for 2 seconds"};
+exports.waitFor2Seconds = function(d){return "čakať 2 sekundy"};
 
-exports.waitFor5Seconds = function(d){return "wait for 5 seconds"};
+exports.waitFor5Seconds = function(d){return "čakať 5 sekúnd"};
 
-exports.waitFor10Seconds = function(d){return "wait for 10 seconds"};
+exports.waitFor10Seconds = function(d){return "čakať 10 sekúnd"};
 
-exports.waitParamsTooltip = function(d){return "Waits for a specified number of seconds or use zero to wait until a click occurs."};
+exports.waitParamsTooltip = function(d){return "Čaká zadaný počet sekúnd alebo použie nulu kým sa vyskytne kliknutie."};
 
-exports.waitTooltip = function(d){return "Waits for a specified amount of time or until a click occurs."};
+exports.waitTooltip = function(d){return "Čaká určitý čas alebo kým sa vyskytne kliknutie."};
 
-exports.whenArrowDown = function(d){return "down arrow"};
+exports.whenArrowDown = function(d){return "šípka nadol"};
 
-exports.whenArrowLeft = function(d){return "left arrow"};
+exports.whenArrowLeft = function(d){return "šípka vľavo"};
 
-exports.whenArrowRight = function(d){return "right arrow"};
+exports.whenArrowRight = function(d){return "šípka vpravo"};
 
-exports.whenArrowUp = function(d){return "up arrow"};
+exports.whenArrowUp = function(d){return "šípka hore"};
 
-exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
+exports.whenArrowTooltip = function(d){return "Vykonajte akcie uvedené nižšie, keď je stlačená šípka."};
 
 exports.whenDown = function(d){return "keď šípka nadol"};
 
 exports.whenDownTooltip = function(d){return "Vykonať akcie nižšie pri stlačení šípky dole."};
 
-exports.whenGameStarts = function(d){return "keď začne hra"};
+exports.whenGameStarts = function(d){return "keď začína príbeh"};
 
-exports.whenGameStartsTooltip = function(d){return "Vykonať akcie, keď začne hra."};
+exports.whenGameStartsTooltip = function(d){return "Vykonajte akcie uvedené nižšie, keď sa príbeh začína."};
 
 exports.whenLeft = function(d){return "keď šípka vľavo"};
 
@@ -19212,17 +19212,17 @@ exports.whenRight = function(d){return "keď šípka vpravo"};
 
 exports.whenRightTooltip = function(d){return "Vykonať akcie nižšie pri stlačení šípky vpravo."};
 
-exports.whenSpriteClicked = function(d){return "when actor clicked"};
+exports.whenSpriteClicked = function(d){return "po kliknutí na herca"};
 
-exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
+exports.whenSpriteClickedN = function(d){return "po kliknutí na herca "+v(d,"spriteIndex")};
 
-exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when a character is clicked."};
+exports.whenSpriteClickedTooltip = function(d){return "Vykonajte akcie po kliknutí na herca."};
 
-exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "keď herec "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when a character touches another character."};
+exports.whenSpriteCollidedTooltip = function(d){return "Vykonajte akcie uvedené nižšie, keď herec sa dotýka iného herca."};
 
-exports.whenSpriteCollidedWith = function(d){return "touches"};
+exports.whenSpriteCollidedWith = function(d){return "dotýka sa"};
 
 exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
 

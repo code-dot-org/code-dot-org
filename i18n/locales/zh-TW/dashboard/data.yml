@@ -1,106 +1,106 @@
-"zh":
+zh:
   data:
     script:
       name:
         20-hour:
-          desc: "K-8 電腦科學課程簡介"
-          Unplug1: "階段 1"
-          Maze: "階段 2"
-          Unplug2: "階段 3"
-          Unplug3: "階段 4"
-          Artist: "階段 5"
-          Unplug4: "階段 6"
-          Artist2: "階段 7"
-          Unplug5: "階段 8"
-          Farmer: "階段 9"
-          Unplug6: "階段 10"
-          Artist3: "階段 11"
-          Unplug7: "階段 12"
-          Farmer2: "階段 13"
-          Unplug8: "階段 14"
-          Artist4: "階段 15"
-          Unplug9: "階段 16"
-          Farmer3: "階段 17"
-          Unplug10: "階段 18"
-          Artist5: "階段 19"
-          Unplug11: "階段 20"
+          desc: K-8 電腦科學課程簡介
+          Unplug1: 階段 1
+          Maze: 階段 2
+          Unplug2: 階段 3
+          Unplug3: 階段 4
+          Artist: 階段 5
+          Unplug4: 階段 6
+          Artist2: 階段 7
+          Unplug5: 階段 8
+          Farmer: 階段 9
+          Unplug6: 階段 10
+          Artist3: 階段 11
+          Unplug7: 階段 12
+          Farmer2: 階段 13
+          Unplug8: 階段 14
+          Artist4: 階段 15
+          Unplug9: 階段 16
+          Farmer3: 階段 17
+          Unplug10: 階段 18
+          Artist5: 階段 19
+          Unplug11: 階段 20
         Hour of Code:
-          desc: "一小時的程式設計課程"
-          Maze: "階段 1"
+          desc: 一小時的程式設計課程
+          Maze: 階段 1
         Edit Code:
-          desc: "Edit Code (beta)"
-          MazeEC: "階段 1"
+          desc: Edit Code (beta)
+          MazeEC: 階段 1
         2014 Levels:
-          desc: "Bounce (beta)"
-          Bounce: "第一階段"
+          desc: Bounce (beta)
+          Bounce: 第一階段
         Builder Levels:
-          desc: "使用者創建的謎題(測試版)"
-          Custom: "階段 1"
+          desc: 使用者創建的謎題(測試版)
+          Custom: 階段 1
         Flappy Levels:
-          desc: "Flappy Bird"
-          Flappy: "階段 1"
+          desc: Flappy Bird
+          Flappy: 階段 1
         Jigsaw Levels:
-          desc: "Jigsaw (beta)"
-          Jigsaw: "階段 1"
+          desc: Jigsaw (beta)
+          Jigsaw: 階段 1
         Step Levels:
-          desc: "Maze (beta)"
-          MazeStep: "Stage Step"
+          desc: Maze (beta)
+          MazeStep: Stage Step
         edit-code:
-          desc: "Edit Code (beta)"
-          MazeEC: "階段 1"
+          desc: Edit Code (beta)
+          MazeEC: 階段 1
         events:
-          desc: "Bounce (beta)"
-          Bounce: "階段 1"
-          Studio: "階段 2"
+          desc: Bounce (beta)
+          Bounce: 階段 1
+          Studio: 階段 2
         builder:
-          desc: "使用者創建的謎題(測試版)"
-          Custom: "階段 1"
+          desc: 使用者創建的謎題(測試版)
+          Custom: 階段 1
         flappy:
-          desc: "Flappy Bird"
-          Flappy: "階段 1"
+          desc: Flappy Bird
+          Flappy: 階段 1
         jigsaw:
-          desc: "Jigsaw (beta)"
-          Jigsaw: "階段 1"
+          desc: Jigsaw (beta)
+          Jigsaw: 階段 1
         step:
-          desc: "Maze (beta)"
-          MazeStep: "Stage Step"
+          desc: Maze (beta)
+          MazeStep: Stage Step
         wordsearch:
-          desc: "Spelling Bee (beta)"
-          WordSearch: "階段 1"
+          desc: Spelling Bee (beta)
+          WordSearch: 階段 1
     game:
       name:
-        Unplug1: "電腦科學導論"
-        Maze: "迷宮"
-        Multi: "Multiple Choice Stuffs"
-        Unplug2: "電腦計算式思維"
-        Unplug3: "圖畫紙程式設計"
-        Artist: "藝術家"
-        Unplug4: "演算法"
+        Unplug1: 電腦科學導論
+        Maze: 迷宮
+        Multi: Multiple Choice Stuffs
+        Unplug2: 電腦計算式思維
+        Unplug3: 圖畫紙程式設計
+        Artist: 藝術家
+        Unplug4: 演算法
         Artist2: '藝術家 2 '
-        Unplug5: "函數"
-        Farmer: "農夫"
-        Unplug6: "條件式陳述"
+        Unplug5: 函數
+        Farmer: 農夫
+        Unplug6: 條件式陳述
         Artist3: '藝術家 3 '
-        Unplug7: "歌曲創作"
+        Unplug7: 歌曲創作
         Farmer2: '農夫 2 '
-        Unplug8: "抽象"
+        Unplug8: 抽象
         Artist4: '藝術家 4 '
-        Unplug9: "接力式程式設計"
+        Unplug9: 接力式程式設計
         Farmer3: '農夫 3 '
-        Unplug10: "網際網路"
+        Unplug10: 網際網路
         Artist5: '藝術家 5 '
-        Unplug11: "總結"
-        MazeEC: "迷宮"
-        Bounce: "彈跳"
-        Flappy: "Flappy Bird"
-        Jigsaw: "Jigsaw"
-        MazeStep: "Maze Step Mode"
-        Wordsearch: "Wordsearch"
+        Unplug11: 總結
+        MazeEC: 迷宮
+        Bounce: 彈跳
+        Flappy: Flappy Bird
+        Jigsaw: Jigsaw
+        MazeStep: Maze Step Mode
+        Wordsearch: Wordsearch
     trophy:
       name:
-        Bronze: "銅牌"
-        Silver: "銀牌"
-        Gold: "金牌"
+        Bronze: 銅牌
+        Silver: 銀牌
+        Gold: 金牌
     concept:
       description:
         sequence: '序列 '
@@ -110,67 +110,67 @@
         loop_until: '"重覆...直到" 程式積木'
         loop_while: '"當..." 程式積木'
         loop_for: '"計數器" 程式積木'
-        function: "函數"
-        parameters: "具有參數的函數"
+        function: 函數
+        parameters: 具有參數的函數
     level:
       instructions:
         maze_2_2: '你可以幫我抓住這隻淘氣的豬嗎？試著使用幾個"向前移動"的程式積木堆疊在一起，然後按下"執行程式"來幫我達到目的地。 '
-        maze_2_1: "這隻豬實在是太讓人生氣了。幫我把牠找出來吧！"
-        maze_2_2_5: "順著這條路把我帶領到傻豬那。記得不要碰到 TNT黃色炸藥，不然你會見到我的羽毛滿天飛 XD"
-        maze_2_3: "將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)"
-        maze_2_4: "冷靜下來，趕快幫我找到那隻壞豬豬。不然我真的會抓狂喔！！"
-        maze_2_5: "聽說有辦法只使用 2 個程式積木就能抓到那隻綠色笨豬。你有辦法辦到嗎？"
-        maze_2_6: "想辦法只用3個程式積木將我送到那個綠色入侵者那裡。"
+        maze_2_1: 這隻豬實在是太讓人生氣了。幫我把牠找出來吧！
+        maze_2_2_5: 順著這條路把我帶領到傻豬那。記得不要碰到 TNT黃色炸藥，不然你會見到我的羽毛滿天飛 XD
+        maze_2_3: 將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)
+        maze_2_4: 冷靜下來，趕快幫我找到那隻壞豬豬。不然我真的會抓狂喔！！
+        maze_2_5: 聽說有辦法只使用 2 個程式積木就能抓到那隻綠色笨豬。你有辦法辦到嗎？
+        maze_2_6: 想辦法只用3個程式積木將我送到那個綠色入侵者那裡。
         maze_2_7: '幫我想想辦法試著使用最少的程式積木趕走這隻壞豬豬。試著使用多個"重複次數"程式積木來完成目標吧！'
         maze_2_8: |-
           When a block is grey, that means you can't delete it. Solve this puzzle using the "repeat" block that repeats 3 times. Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
         maze_2_9: '好，接著讓我們試試這個新的"重複直到"程式積木，他會一直重複直到我抓到這隻惹人厭的豬豬。'
-        maze_2_10: "好，最後一次的練習--你可以使用4個程式積木解決這個問題嗎？"
-        maze_2_11: "親愛的人類。我~僵屍。我~餓了。必須...吃到...向日葵...你有辦法只用 5 個程式積木就讓我到那兒嗎？"
-        maze_2_12: "好，這個也差不多，但還是有一些不同。你可以只用 5 個程式積木完成它嗎？"
+        maze_2_10: 好，最後一次的練習--你可以使用4個程式積木解決這個問題嗎？
+        maze_2_11: 親愛的人類。我~僵屍。我~餓了。必須...吃到...向日葵...你有辦法只用 5 個程式積木就讓我到那兒嗎？
+        maze_2_12: 好，這個也差不多，但還是有一些不同。你可以只用 5 個程式積木完成它嗎？
         maze_2_13: '使用新的"如果"程式積木讓我來決定何時要轉彎。提示： 只要在新增一個程式積木就可以了。但記得看看我們是如何安排其他程式積木，這樣下次你就可以自己完成整個程式設計囉。'
         maze_2_14: '好，這就像是最後一個關卡，但你需要記住的是如何同時使用"如果"及"重複"程式積木的方式。'
         maze_2_15: '我想要吃向日葵！試著使用"如果"程式積木，讓我用最少的程式積木吃到向日葵。'
-        maze_2_16: "好，讓我們再練習一次--這次跟之前差不多，但記得注意食殭花喔 ！"
+        maze_2_16: 好，讓我們再練習一次--這次跟之前差不多，但記得注意食殭花喔 ！
         maze_2_17: '這個"如果--其他"程式積木會檢查當前的條件，決定做那些事情。使用這個新的程式積木把我送到向日葵那吧！'
         maze_2_18: '再練習一次"假如-其它"程式積木，你可以在第一次嘗試就成功嗎?'
-        maze_2_19: "你可以只靠新增3個程式積木，來幫我完成一個更複雜的關卡嗎？只要你成功了，往後不管任何長度的彎曲路徑我都可以行動自如啦！"
+        maze_2_19: 你可以只靠新增3個程式積木，來幫我完成一個更複雜的關卡嗎？只要你成功了，往後不管任何長度的彎曲路徑我都可以行動自如啦！
         turtle_1_1: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
         turtle_1_2: '現在，畫一個正方形。提醒：你可以從新的"設置顏色"程式積木中，挑選您最喜愛的顏色。'
-        turtle_1_3: "使用 3 個程式積木來畫出一個正方形。"
+        turtle_1_3: 使用 3 個程式積木來畫出一個正方形。
         turtle_1_4: '使用"隨機顏色"選項來選取不同的顏色，讓三角形的三邊有不同顏色。提示： 你得先想清楚應該要轉多少角度，然後在經由點選"轉彎"程式積木中的角度數值來進行設定。'
-        turtle_1_5: "現在，練習畫一個三角形以及一個正方形來繪製一個信封。"
-        turtle_1_6: "你知道該如何畫出這個三角形以及正方形嗎？提示： 先畫三角形，然後想想在畫正方形之前應該要轉幾度。"
-        turtle_1_7: "好，讓我們試著提高一點點難度，試看看你有沒有辦法畫出這付綠色的眼鏡。正方形的邊長為 100 像素，兩個正方形之間間隔50像素。對了，不要忘記要用綠色來畫畫喔 ！"
+        turtle_1_5: 現在，練習畫一個三角形以及一個正方形來繪製一個信封。
+        turtle_1_6: 你知道該如何畫出這個三角形以及正方形嗎？提示： 先畫三角形，然後想想在畫正方形之前應該要轉幾度。
+        turtle_1_7: 好，讓我們試著提高一點點難度，試看看你有沒有辦法畫出這付綠色的眼鏡。正方形的邊長為 100 像素，兩個正方形之間間隔50像素。對了，不要忘記要用綠色來畫畫喔 ！
         turtle_1_8: |
           試著想看看如果你按下"執行程式"按鈕來執行這個程式後會發生那些事情呢？
           接著在想辦法讓它多"重複"幾次來完成整個繪圖作品。每次畫線的顏色都會不同喔。
           
-        turtle_1_9: "你知道用那一個數字來取代問號可以畫出一個圓形嗎？"
+        turtle_1_9: 你知道用那一個數字來取代問號可以畫出一個圓形嗎？
         turtle_1_10: '你做到了！現在你可以畫任何你想畫的東西。一些有趣的點子：你可以畫一個火柴人、雪花或是螺旋圖形。同時也別忘了試試新的"設定寬度"程式積木喔！祝你玩得開心！'
         turtle_4_1: '你有辦法只用3個程式積木畫出一個邊長為100像素的三角形嗎？提示：可以使用"重複"程式積木。'
         turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
         turtle_4_3: '這裡你所寫的繪製三角型的程式碼。你有辦法透過新增"重複"及"轉彎"的程式積木，來畫出一朵漂亮的花嗎？'
         turtle_4_4: '這裡的程式碼跟之前的關卡相同，改變的地方只有畫完每個三角形後會轉36度。如果要完成這個圖形，要"重複"多少次呢？(提示：轉360度後畫出的圖形會繞成一個圓。)'
         turtle_4_5: '這裡的程式碼跟之前的關卡相同，改變的地方只有轉彎的部份"重複"36次。如果要完成這個圖形，每次轉的"角度"應該是多少呢？(提示：轉360度後畫出的圖形會繞成一個圓。)'
-        turtle_4_6: "你可以只用3個程式積木，畫出每邊長為20像素的正方形嗎？"
+        turtle_4_6: 你可以只用3個程式積木，畫出每邊長為20像素的正方形嗎？
         turtle_4_7: '這是你在上一個關卡畫正方形所使用的程式碼。你有辦法"重複"畫出10個一樣的正方形來組成一個梯子嗎？提示：你只需要在增加 2 個程式積木。'
-        turtle_4_8: "這是前一個關卡的解法。你有辦法透過再新增2個程式積木來完成這件繪圖作品嗎?"
-        turtle_4_9: "這是前一個關卡的解法。應該要轉幾度才能完成這件繪圖作品呢？(可能需要多猜幾次才能猜對喔！)"
-        turtle_4_10: "這是前一個關卡的解法。應該要重複幾次才能完成這件繪圖作品呢？"
+        turtle_4_8: 這是前一個關卡的解法。你有辦法透過再新增2個程式積木來完成這件繪圖作品嗎?
+        turtle_4_9: 這是前一個關卡的解法。應該要轉幾度才能完成這件繪圖作品呢？(可能需要多猜幾次才能猜對喔！)
+        turtle_4_10: 這是前一個關卡的解法。應該要重複幾次才能完成這件繪圖作品呢？
         turtle_4_11: '試著改變"轉彎"程式積木的角度，以及"重複"程式積木的次數來產生不同的圖案。或者實驗看看改變其它的程式碼來畫出你想畫的東西。'
         maze_karel_1_1: '嗨！我是一位農夫。我需要你協助我將農地整平好讓我可以種植農作物。將我移到土堆那，然後使用"移除"程式積木來移除土堆。'
         maze_karel_1_2: '接下來，將我移到坑洞那裡，使用"填充"程式積木往洞裡填入2鏟的泥土。'
-        maze_karel_1_3: "將我移到小土堆上，試著使用最少的程式積木來告訴我該移除多少鏟的泥土。"
+        maze_karel_1_3: 將我移到小土堆上，試著使用最少的程式積木來告訴我該移除多少鏟的泥土。
         maze_karel_1_4: '你能協助我將四個小土堆移除嗎？提示：盡可能使用"重複"程式積木來完成這個工作。'
         maze_karel_1_5: '幫助我填滿這些大的坑洞，每個坑洞需要填入5鏟的泥土。提示：你可以在"當"程式積木中，放進"重複"程式積木來完成這次的任務。'
         maze_karel_1_6: '盡可能使用最少的程式積木來移除所有的小土堆。在"當"程式積木的下拉式選單中多了幾個新選項，可以用來協助你判斷現在是站在土堆或是坑洞的上方。'
-        maze_karel_1_7: "哇！我發現一個很深的坑洞！我不知道該用多少鏟泥土才能填平它。你可以撰寫一個程式來填平這個坑洞嗎？"
-        maze_karel_1_8: "盡可能使用最少的程式積木，幫我將田地最後面的坑洞填平。"
+        maze_karel_1_7: 哇！我發現一個很深的坑洞！我不知道該用多少鏟泥土才能填平它。你可以撰寫一個程式來填平這個坑洞嗎？
+        maze_karel_1_8: 盡可能使用最少的程式積木，幫我將田地最後面的坑洞填平。
         maze_karel_1_9: '試著盡可能使用最少的程式積木，讓我將所有的小土丘通通移除。提示：試著使用"當"程式積木。'
         maze_karel_1_10: '我工作到太晚，以致於現在外面天都黑了，所以我沒法知道那些土堆到底有多大。現在"當"程式積木中的某些選項消失不見了。讓我沿著田地移動，同時如果有土堆的話，就將它們全部移除。'
         maze_karel_1_11: '現在外面還是一片漆黑。讓我沿著田地移動，如果有土堆就將它移除，如果有坑洞就將它填滿。提示：使用"如果"程式積木選項中的下拉式選單。'
-        turtle_2_1: "你好‧我是僵屍藝術家。我愛畫畫。幫我用特定的顏色畫一個正方形。重要說明：所有的程式積木已經被歸類到不同的類別當中，試著點選各類別看看裡面有那些程式積木。"
+        turtle_2_1: 你好‧我是僵屍藝術家。我愛畫畫。幫我用特定的顏色畫一個正方形。重要說明：所有的程式積木已經被歸類到不同的類別當中，試著點選各類別看看裡面有那些程式積木。
         turtle_2_2: '歡迎使用"函數類別"，在這裡你可以定義新的程式積木！你可以在"函數類別"中找到新的"畫一個正方形"程式積木，試著使用它畫一個 "50x50" 的 "綠色" 正方形。'
         turtle_2_3: '使用"重覆"程式積木(在"迴圈類別"目錄下)，畫出三個大小為100的正方形，每個角度差120度。同時使用三個不同的隨機顏色來繪製。'
         turtle_2_4: '現在讓我們試著繪製花式的圖形吧。改變程式碼畫出36個寬度為100像素的正方形，每個角度相差10度。提示：你可能會想使用下方的"滑桿"來讓我走得更快些。'
@@ -180,50 +180,50 @@
         turtle_2_7_5: '(在函數類別） 中有一個新的"繪製一個雪人"函數。繪製兩個高度 250 和 100 的雪人。'
         turtle_2_8: '這個關卡有點小小的難度。請使用"繪製雪人"函數以及新的"向前跳"程式積木(位在"動作類別"中)，分別用不同顏色畫出三個間隔100像素的雪人。'
         turtle_2_9: '使用"計數"迴圈程式積木來繪製一個高度為110、100、90、80和70像素的雪人家庭。每個雪人之間要間隔60像素喔。'
-        turtle_2_10: "這裡有一些程式碼可以讓你進行試驗，產生一些不同的螺旋圖形。如果改變轉彎的角度，會發生什麼事情呢？或是在迴圈中設定隨機顏色，圖形又會變怎樣呢？隨性的畫些你喜歡的東西吧！"
-        maze_karel_2_1: "請幫我將地上所有的土堆移除並填平所有的坑洞。試著使用迴圈來減少程式積木的使用數量。提示：你可以將迴圈放在另一個迴圈當中喔。"
+        turtle_2_10: 這裡有一些程式碼可以讓你進行試驗，產生一些不同的螺旋圖形。如果改變轉彎的角度，會發生什麼事情呢？或是在迴圈中設定隨機顏色，圖形又會變怎樣呢？隨性的畫些你喜歡的東西吧！
+        maze_karel_2_1: 請幫我將地上所有的土堆移除並填平所有的坑洞。試著使用迴圈來減少程式積木的使用數量。提示：你可以將迴圈放在另一個迴圈當中喔。
         maze_karel_2_2: '在函數類別中，我們定義了一個程式積木叫 "填充5"。試著使用它來幫我填平這個坑洞。'
         maze_karel_2_3: '將新的"填充5"程式積木從函數類別中拖拉到工作區，使用它幫我將地上所有的坑洞通通填平。'
         maze_karel_2_4: '定義一個新的"函數"讓它可以移除7鏟的泥土。接著使用它來幫我移除所有的土堆。'
         maze_karel_2_5: '建立一個新"函數"，讓它可以從土堆中移除6鏟泥土，使用它來幫助我擺脫這些土堆。'
         maze_karel_2_6: '使用兩個新函數，"填充 8"及"移除 8"幫我移除所有的土堆及填滿所有的坑洞。'
-        maze_karel_2_7: "我的田地上有一頭牛！撰寫一個新函數，用它來幫助我避開牛隻並移除所有的土堆。記得把所有你需要的程式積木通通放在新函數中喔。"
+        maze_karel_2_7: 我的田地上有一頭牛！撰寫一個新函數，用它來幫助我避開牛隻並移除所有的土堆。記得把所有你需要的程式積木通通放在新函數中喔。
         maze_karel_2_8: '使用"避開牛及移除1"這個新函數，來幫助我移除田裡所有的土堆。'
-        maze_karel_2_9: "這裡有一個函數可以將同一列中的四個土堆一次移除。請試著將它放在迴圈內，讓你可以使用最少的程式積木將田裡的土堆通通移除。"
-        maze_karel_2_10: "使用這兩個函數來幫助我移除所有的土堆及填平所有的坑洞，好讓我可以穿越這片田地。"
+        maze_karel_2_9: 這裡有一個函數可以將同一列中的四個土堆一次移除。請試著將它放在迴圈內，讓你可以使用最少的程式積木將田裡的土堆通通移除。
+        maze_karel_2_10: 使用這兩個函數來幫助我移除所有的土堆及填平所有的坑洞，好讓我可以穿越這片田地。
         turtle_3_1: '在這個關卡中我們提供你"畫正方形"及"畫圓形"這兩個函數。定義一個函數並不會執行它內部的程式積木。如果你要畫一個正方形，那麼你必需把"畫正方形"程式積木拖拉到工作區域才能執行。 '
         turtle_3_2: '使用"畫正方形"函數當範例，試著建立一個"畫三角形"的函數，並使用它。'
-        turtle_3_3: "在貓的周圍畫一個三角形的籬巴，在牛的周圍畫一個正方形的籬巴。提示：你可以邊寫程式邊測試。"
+        turtle_3_3: 在貓的周圍畫一個三角形的籬巴，在牛的周圍畫一個正方形的籬巴。提示：你可以邊寫程式邊測試。
         turtle_3_4: '試看看你能不能利用"畫正方形"跟"畫三角形"以及其它程式積木，圍繞著獅子的畫出一間房子。'
         turtle_3_5: '現在建立一個新的"繪製房子"函數，並使用它來圍住兩隻貓咪。提示：使用"執行...."程式積木來建立函數，並且記得替它命名。'
         turtle_3_6: '使用"畫正方形"當範例，替"畫三角形"函數新增一個名為"長度"的輸入變數。然後使用它來畫幾個不同大小的三角形。(提示：按下"函數"程式積木上的星星來新增輸入變數。)'
         turtle_3_7: '替"繪製房子"新增一個名叫"長度"的輸入變數，然後用它來替大象蓋間房子吧。(房子的長度為150像素)'
         turtle_3_8: '這些是前一個關卡的程式積木。修改"繪製房子"函數讓我在畫完房子後停在右下角。最後使用這個修改過的函數畫出三間房子。'
         turtle_3_9: '你可以在沒人幫助的情況下重新建立"繪製房子"的函數嗎？試著自己完成它，然後用它畫出一排房子。'
-        turtle_3_10: "你已經學了好多東西！現在你可以隨意畫些你想畫的東西，畫個星星或是一個螺旋，或是更炫一點的畫個雪花吧。"
-        maze_karel_debug_seq_1: "歡迎來除錯 ！我的程式不能正常運行。你可以發現問題並修復它，這樣我的田地會是平坦的並能即刻種植作物嗎？"
-        maze_karel_debug_seq_2: "這程式怎麼了？我應該如何修正它所以我可以移除這土堆呢？"
-        maze_karel_debug_repeat: "除錯此程式所以我的領域將是漂亮和平坦的。"
-        maze_karel_debug_while: "你應該如何改變這個程式來協助我補這個缺口？"
-        maze_karel_debug_if: "幫我! 修正這個程式所以我的田地將完全是平坦的。"
-        maze_karel_debug_if_else: "除錯此程式所以我可以填平這些洞和移除所有土堆。"
-        maze_karel_debug_function_1: "你應該改變有關此程式的什麼來幫我移除所有的土堆？"
-        maze_karel_debug_function_2: "你可以除錯此程式因此我可以使我的田地平坦嗎？"
-        maze_karel_debug_function_3: "編輯此程式所以我會移除所有在我的田地上的土堆。"
-        turtle_5_1: "試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)"
-        turtle_5_2: "試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)"
-        turtle_5_3: "試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)"
-        turtle_5_4: "試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)"
-        turtle_5_5: "試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)"
-        turtle_5_6: "試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)"
-        maze_3_1: "我要去抓那頭豬 ！輸入幾個呼叫 move() 的程式；那我可以拿我的蛋回來。"
-        maze_3_2: "給我寫一個程式，所以我可以用它抓到那頭豬。"
-        maze_3_3: "我應該如何抓到那頭豬？確保我不會碰到那 TNT 的盒子！"
-        maze_3_4: "阿！給我一個程式讓我可以繞過那些TNT炸藥，然後抓到那隻豬。"
+        turtle_3_10: 你已經學了好多東西！現在你可以隨意畫些你想畫的東西，畫個星星或是一個螺旋，或是更炫一點的畫個雪花吧。
+        maze_karel_debug_seq_1: 歡迎來除錯 ！我的程式不能正常運行。你可以發現問題並修復它，這樣我的田地會是平坦的並能即刻種植作物嗎？
+        maze_karel_debug_seq_2: 這程式怎麼了？我應該如何修正它所以我可以移除這土堆呢？
+        maze_karel_debug_repeat: 除錯此程式所以我的領域將是漂亮和平坦的。
+        maze_karel_debug_while: 你應該如何改變這個程式來協助我補這個缺口？
+        maze_karel_debug_if: 幫我! 修正這個程式所以我的田地將完全是平坦的。
+        maze_karel_debug_if_else: 除錯此程式所以我可以填平這些洞和移除所有土堆。
+        maze_karel_debug_function_1: 你應該改變有關此程式的什麼來幫我移除所有的土堆？
+        maze_karel_debug_function_2: 你可以除錯此程式因此我可以使我的田地平坦嗎？
+        maze_karel_debug_function_3: 編輯此程式所以我會移除所有在我的田地上的土堆。
+        turtle_5_1: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
+        turtle_5_2: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
+        turtle_5_3: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
+        turtle_5_4: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
+        turtle_5_5: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
+        turtle_5_6: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
+        maze_3_1: 我要去抓那頭豬 ！輸入幾個呼叫 move() 的程式；那我可以拿我的蛋回來。
+        maze_3_2: 給我寫一個程式，所以我可以用它抓到那頭豬。
+        maze_3_3: 我應該如何抓到那頭豬？確保我不會碰到那 TNT 的盒子！
+        maze_3_4: 阿！給我一個程式讓我可以繞過那些TNT炸藥，然後抓到那隻豬。
         bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
         bounce_2: '新增一個程式積木到"當右箭頭按下"以及"當左箭頭按下"程式積木。接著使用左右鍵頭將球拍移動到達兩個目標區。'
         bounce_3: '現在，嘗試與"當向上箭頭"程式積木類似的東西。將槳移動到頂部以完成目標。'
-        bounce_4: "現在你需要加入四個程式積木塊。移動槳到這四個積木塊來達成目標並完成題目。"
+        bounce_4: 現在你需要加入四個程式積木塊。移動槳到這四個積木塊來達成目標並完成題目。
         bounce_5: '我們打算把球丟向槳。夾放一個"當球打中槳"的積木塊來確保球有達成目標。'
         bounce_6: '現在要完成的目標在最上方。您需要將附加積木到兩個"當球擊中"積木上，來解決這一關卡。'
         bounce_7: '新增一個程式積木到"當"程式積木中。試著將球反彈，直到球碰到目標區為止。'
@@ -237,171 +237,171 @@
         flappy_3: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
         flappy_4: 'Flappy 會飛過障礙物，除非你寫程式讓它掉下來。接下來，試著新增一個程式積木到"當碰到障礙物"程式積木中。你的程式碼必須在Flappy因撞到第一組水管而掉下來的時候，同時將遊戲結束掉。'
         flappy_5: '讓我們添加記分牌，在 Flappy 越過障礙時可以記分。添加"當通過障礙"積木，然後當 Flappy 飛過第一組水管障礙時計分。'
-        flappy_6: "看看你在讓 Flappy 拍動更小或更大的數值時，是否仍能得分。"
+        flappy_6: 看看你在讓 Flappy 拍動更小或更大的數值時，是否仍能得分。
         flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
-        flappy_8: "不單只有在遊戲開始時，事實上你可以隨時設定想要的視覺效果。試著在某些事件發生的時候，例如：當通過障礙物的時候，隨機變換一個場景。"
-        flappy_9: "現在我們要將前面學的全部混在一起囉，現在當碰到障礙物或地面時，請將分數設為0分，而不要將遊戲結束。"
+        flappy_8: 不單只有在遊戲開始時，事實上你可以隨時設定想要的視覺效果。試著在某些事件發生的時候，例如：當通過障礙物的時候，隨機變換一個場景。
+        flappy_9: 現在我們要將前面學的全部混在一起囉，現在當碰到障礙物或地面時，請將分數設為0分，而不要將遊戲結束。
         flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
-        flappy_k1_1: "Play Flappy"
+        flappy_k1_1: Play Flappy
         flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
         flappy_k1_3: |-
           現在我們已經添加了一些地面。將一個程式積木附加到"撞到地面時"程式積木上。當 Flappy 掛點時您的程式碼要能夠'結束遊戲'。
         flappy_k1_4: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
         flappy_k1_5: 'Flappy 會飛過障礙物，除非你寫程式讓它掉下來。接下來，試著新增一個程式積木到"當碰到障礙物"程式積木中。你的程式碼必須在Flappy因撞到第一組水管而掉下來的時候，同時將遊戲結束掉。'
         flappy_k1_6: '讓我們添加記分牌，在 Flappy 越過障礙時可以記分。添加"當通過障礙"積木，然後當 Flappy 飛過第一組水管障礙時計分。'
-        flappy_k1_7: "See if you can score multiple points for making it past an obstacle"
+        flappy_k1_7: See if you can score multiple points for making it past an obstacle
         flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
         flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
-        jigsaw_1: "按一下程式積木"
-        jigsaw_2: "Drag the block to the target"
-        jigsaw_3: "Arrange the blocks to form the image"
-        jigsaw_4: "Arrange the blocks to form the image"
-        jigsaw_5: "Arrange the blocks to form the image"
-        jigsaw_6: "Arrange the blocks to form the image"
-        jigsaw_7: "Arrange the blocks to form the image"
-        jigsaw_8: "Arrange the blocks to form the image"
-        jigsaw_9: "Arrange the blocks to form the image"
-        jigsaw_10: "Arrange the blocks to form the image"
-        jigsaw_11: "Arrange the blocks to form the image"
-        jigsaw_12: "Arrange the blocks to form the image"
-        jigsaw_13: "Fix the puzzle!"
-        mazestep_1: "Maze step description here"
-        mazestep_2: "Maze step description here"
-        mazestep_3: "Maze step description here"
-        mazestep_4: "Maze step description here"
-        mazestep_5: "Maze step description here"
+        jigsaw_1: 按一下程式積木
+        jigsaw_2: Drag the block to the target
+        jigsaw_3: Arrange the blocks to form the image
+        jigsaw_4: Arrange the blocks to form the image
+        jigsaw_5: Arrange the blocks to form the image
+        jigsaw_6: Arrange the blocks to form the image
+        jigsaw_7: Arrange the blocks to form the image
+        jigsaw_8: Arrange the blocks to form the image
+        jigsaw_9: Arrange the blocks to form the image
+        jigsaw_10: Arrange the blocks to form the image
+        jigsaw_11: Arrange the blocks to form the image
+        jigsaw_12: Arrange the blocks to form the image
+        jigsaw_13: Fix the puzzle!
+        mazestep_1: Maze step description here
+        mazestep_2: Maze step description here
+        mazestep_3: Maze step description here
+        mazestep_4: Maze step description here
+        mazestep_5: Maze step description here
         studio_c2_1: 'Can you make this dog say "hello world"?'
-        studio_c2_2: "Can you make the dog say something and then have the cat say something afterwards?"
-        studio_c2_3: "Can you write a program to make this dog move to the cat?"
+        studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_c2_3: Can you write a program to make this dog move to the cat?
         studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
         studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c2_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
+        studio_c2_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
         studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
         studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
-        studio_c2_10: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
+        studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
+        studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_story_1: 'Can you make this dog say "hello world"?'
-        studio_c3_story_2: "Can you make the dog say something and then have the cat say something afterwards?"
-        studio_c3_story_3: "Can you write a program to make this dog move to the cat?"
+        studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_c3_story_3: Can you write a program to make this dog move to the cat?
         studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c3_story_5: "Can you add a block to make the octopus happy?"
+        studio_c3_story_5: Can you add a block to make the octopus happy?
         studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c3_game_2: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
+        studio_c3_game_2: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
         studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
         studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
-        studio_c3_game_6: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
+        studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
+        studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_playlab_1: 'Can you make this dog say "hello world"?'
-        studio_playlab_2: "Can you make the dog say something and then have the cat say something afterwards?"
-        studio_playlab_3: "Can you write a program to make this dog move to the cat?"
+        studio_playlab_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_playlab_3: Can you write a program to make this dog move to the cat?
         studio_playlab_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
         studio_playlab_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_playlab_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
+        studio_playlab_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
         studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_playlab_8: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
-        studio_playlab_9: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
+        studio_playlab_8: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
+        studio_playlab_9: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_k1_1: 'Can you make this dog say "hello world"?'
-        studio_k1_2: "Can you make the dog say something and then have the cat say something afterwards?"
-        studio_k1_3: "Can you write a program to make this dog move to the cat?"
+        studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_k1_3: Can you write a program to make this dog move to the cat?
         studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
-        studio_k1_5: "Can you add a block to make the octopus happy?"
-        studio_k1_6: "Create your own story! Move around the cat and dog, and make them say things."
-        maze_wordsearch_k_1: "Move me to spell the word EAST"
-        maze_wordsearch_k_2: "Move me to spell the word SOUTH"
-        maze_wordsearch_k_3: "Move me to spell the word WEST"
-        maze_wordsearch_k_4: "Move me to spell the word NORTH"
-        maze_wordsearch_k_6: "Move me East and then South to spell the word JUMP"
-        maze_wordsearch_k_9: "Move me one way, then another to spell the word CODE"
-        maze_wordsearch_k_13: "Move me one way, then another to spell the word DEBUG"
-        maze_wordsearch_k_15: "Move me one way, then another to spell the word ABOVE"
-        maze_wordsearch_k_16: "Move me one way, then another to spell the word BELOW"
-        maze_wordsearch_k_20: "This is a test! Move me one way, then another to spell the word STORY"
+        studio_k1_5: Can you add a block to make the octopus happy?
+        studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
+        maze_wordsearch_k_1: Move me to spell the word EAST
+        maze_wordsearch_k_2: Move me to spell the word SOUTH
+        maze_wordsearch_k_3: Move me to spell the word WEST
+        maze_wordsearch_k_4: Move me to spell the word NORTH
+        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
+        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
+        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
+        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
+        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
+        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
     video:
       name:
-        maze_intro: "迷宮簡介"
-        artist_intro: "藝術家簡介"
-        farmer_intro: "農夫簡介"
-        flappy_intro: "Flappy 介紹"
+        maze_intro: 迷宮簡介
+        artist_intro: 藝術家簡介
+        farmer_intro: 農夫簡介
+        flappy_intro: Flappy 介紹
         loop_times: '"重覆...次"程式積木'
         loop_until: '"重覆...直到"程式積木'
         if: '"如果"程式積木'
         if_else: '"如果..否則"程式積木'
-        function: "函數"
+        function: 函數
         loop_while: '"當...時"程式積木'
         loop_for: '"計數" 程式積木'
-        parameters: "具有參數的函數"
-        hoc_wrapup: "一小時程式碼總結"
-        20_wrapup: "20小時課程總結"
-        Unplug1: "What is CS?"
-        Unplug2: "電腦計算式思維"
-        Unplug3: "圖畫紙程式設計"
-        Unplug4: "演算法"
-        Unplug5: "函數"
-        Unplug6: "條件式陳述"
-        Unplug7: "Songwriting"
-        Unplug8: "抽象"
-        Unplug9: "Relay programming"
-        Unplug10: "Internet"
-        Unplug11: "總結"
-        C1_happy_maps_unplugged: "Happy Maps"
-        C1_moveitmoveit_unplugged: "Move It, Move It"
-        C1_bigevent_unplugged: "The Big Event"
-        C1_getting_loop: "Getting Loopy"
-        C1_pair_programming: "Pair Programming"
-        C1_maze_intro_sequencing: "Maze Sequencing Intro"
-        C1_maze_debugging: "Maze Debugging"
+        parameters: 具有參數的函數
+        hoc_wrapup: 一小時程式碼總結
+        20_wrapup: 20小時課程總結
+        Unplug1: What is CS?
+        Unplug2: 電腦計算式思維
+        Unplug3: 圖畫紙程式設計
+        Unplug4: 演算法
+        Unplug5: 函數
+        Unplug6: 條件式陳述
+        Unplug7: Songwriting
+        Unplug8: 抽象
+        Unplug9: Relay programming
+        Unplug10: Internet
+        Unplug11: 總結
+        C1_happy_maps_unplugged: Happy Maps
+        C1_moveitmoveit_unplugged: Move It, Move It
+        C1_bigevent_unplugged: The Big Event
+        C1_getting_loop: Getting Loopy
+        C1_pair_programming: Pair Programming
+        C1_maze_intro_sequencing: Maze Sequencing Intro
+        C1_maze_debugging: Maze Debugging
         C1_bee_level_intro: 'Bee Level - Intro'
-        C1_artist_intro: "藝術家簡介"
-        C1_spelling_bee_intro: "Spelling Bee Intro"
-        C1_zuck_repeat_loop: "Maze Loops"
-        C1_bee_loops: "Bee Loops"
-        C1_maze_loops: "Maze Loops"
+        C1_artist_intro: 藝術家簡介
+        C1_spelling_bee_intro: Spelling Bee Intro
+        C1_zuck_repeat_loop: Maze Loops
+        C1_bee_loops: Bee Loops
+        C1_maze_loops: Maze Loops
         C1_playlab_storytelling: 'Play Lab - Create a Story'
-        C1_planting_seed: "Planting a Seed"
-        C1_building_foundating: "Building a Foundation"
-        C2_maze_intro: "迷宮簡介"
-        C2_artist_intro: "藝術家簡介"
-        C2_zuck_repeat_loop: "Maze Loops"
-        C2_artist_loops: "Artist Loops"
-        C2_bee_conditionals: "Bee Conditionals"
+        C1_planting_seed: Planting a Seed
+        C1_building_foundating: Building a Foundation
+        C2_maze_intro: 迷宮簡介
+        C2_artist_intro: 藝術家簡介
+        C2_zuck_repeat_loop: Maze Loops
+        C2_artist_loops: Artist Loops
+        C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: 'Play Lab - Create a Story'
-        C2_graph_paper: "圖畫紙程式設計"
-        C2_conditionals_with_cards: "條件式陳述"
-        C2_binary_bracelets: "Binary Bracelets"
-        C2_replay_programming: "接力式程式設計"
-        C2_paper_airplanes: "Paper Airplanes"
-        C3_maze_intro: "迷宮簡介"
-        C3_artist_intro: "藝術家簡介"
-        C3_artist_functions: "Artist Functions"
-        C3_bee_functions: "Bee Functions"
-        C3_bee_conditionals: "Bee Conditionals"
-        C3_maze_conditionals: "Maze Conditionals"
-        C3_artist_nested_loops: "Nested Loops"
-        C3_farmer_while: "While Loops"
-        C3_bee_nested_loops: "Nested Loops"
-        C3_bee_debugging: "Bee Debugging"
-        C3_bounce: "彈跳"
+        C2_graph_paper: 圖畫紙程式設計
+        C2_conditionals_with_cards: 條件式陳述
+        C2_binary_bracelets: Binary Bracelets
+        C2_replay_programming: 接力式程式設計
+        C2_paper_airplanes: Paper Airplanes
+        C3_maze_intro: 迷宮簡介
+        C3_artist_intro: 藝術家簡介
+        C3_artist_functions: Artist Functions
+        C3_bee_functions: Bee Functions
+        C3_bee_conditionals: Bee Conditionals
+        C3_maze_conditionals: Maze Conditionals
+        C3_artist_nested_loops: Nested Loops
+        C3_farmer_while: While Loops
+        C3_bee_nested_loops: Nested Loops
+        C3_bee_debugging: Bee Debugging
+        C3_bounce: 彈跳
         C3_playlab_create_game: 'Play Lab - Create a Game'
-        C3_computational_thinking: "電腦計算式思維"
-        C3_dice_race: "Dice Race"
-        C3_internet: "Internet"
-        C3_crowdsourcing: "Crowdsourcing"
-        C3_functional_suncatchers: "Functional Suncatchers"
-        C3_songwriting_with_parameters: "Songwriting With Parameters"
+        C3_computational_thinking: 電腦計算式思維
+        C3_dice_race: Dice Race
+        C3_internet: Internet
+        C3_crowdsourcing: Crowdsourcing
+        C3_functional_suncatchers: Functional Suncatchers
+        C3_songwriting_with_parameters: Songwriting With Parameters
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'
         run: 'Hit "Run" to try your program'
-        watch_again: "Click here to watch the video again"
+        watch_again: Click here to watch the video again
         gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
         show_code_explanation: "Click here to see the code for the program you're making"
-        instructions_repeat_explanation: "The instructions for each puzzle are repeated here"
+        instructions_repeat_explanation: The instructions for each puzzle are repeated here
         category_explanation: "You have all the same blocks but they've now been arranged in categories"
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
-        studio_say_text: "Type what you want your actor to say within these quotes"
-        jigsaw_click: "按一下這個程式積木！"
+        studio_say_text: Type what you want your actor to say within these quotes
+        jigsaw_click: 按一下這個程式積木！

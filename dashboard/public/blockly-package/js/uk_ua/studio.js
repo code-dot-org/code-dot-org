@@ -18710,7 +18710,7 @@ exports.saveToGallery = function(d){return "Зберегти до вашої к�
 
 exports.savedToGallery = function(d){return "Збережено в галерею!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "На жаль, цією програмою не можна поділитись."};
 
 exports.typeCode = function(d){return "Запишіть нижче свій код JavaScript згідно із вказівками."};
 
@@ -18800,17 +18800,17 @@ exports.makeProjectileDisappear = function(d){return "зникнути"};
 
 exports.makeProjectileBounce = function(d){return "відбитись"};
 
-exports.makeProjectileBlueFireball = function(d){return "зробити синю вогняну кулю"};
+exports.makeProjectileBlueFireball = function(d){return "змусити синю вогняну кулю"};
 
-exports.makeProjectilePurpleFireball = function(d){return "зробити фіолетову вогняну кулю"};
+exports.makeProjectilePurpleFireball = function(d){return "змусити фіолетову вогняну кулю"};
 
-exports.makeProjectileRedFireball = function(d){return "зробити червону вогняну кулю"};
+exports.makeProjectileRedFireball = function(d){return "змусити червону вогняну кулю"};
 
-exports.makeProjectileYellowHearts = function(d){return "зробити жовті серця"};
+exports.makeProjectileYellowHearts = function(d){return "змусити жовті серця"};
 
-exports.makeProjectilePurpleHearts = function(d){return "зробити фіолетові серця"};
+exports.makeProjectilePurpleHearts = function(d){return "змусити фіолетові серця"};
 
-exports.makeProjectileRedHearts = function(d){return "зробити червоні серця"};
+exports.makeProjectileRedHearts = function(d){return "змусити червоні серця"};
 
 exports.makeProjectileTooltip = function(d){return "Змусити снаряд зникнути або відбитись при зіткненні."};
 

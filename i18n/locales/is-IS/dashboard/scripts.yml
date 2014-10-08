@@ -1,72 +1,72 @@
-"is":
+is:
   data:
     script:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Púsl: Læra að draga og sleppa'
-          The Maze: "Völundarhúsið"
-          Multi: "Val"
-          Match: "Tengja"
-          Math Image: "Mynd stærðfræði"
-          title: "Tilraunanámskeið"
-          description: "Bara innanhúss tilraunanámskeið."
+          The Maze: Völundarhúsið
+          Multi: Val
+          Match: Tengja
+          Math Image: Stærðfræðimynd
+          title: Tilraunanámskeið
+          description: Bara innanhúss tilraunanámskeið.
         course1:
           "Jigsaw: Learn to drag and drop": 'Púsl: Læra að draga og sleppa'
           "Maze: Sequence": 'Völundarhús: Röð'
           "Maze: Debugging": 'Völundarhús: Villuleit'
           "Artist 1: Intro": 'Listamaður 1: Kynning'
-          Artists 2: "Listamenn 2"
-          Spelling Bee: "Stafsetning"
-          Spelling Bee not blockly: "Stafsetning án blockly"
+          Artists 2: Listamenn 2
+          Spelling Bee: Stafsetning
+          Spelling Bee not blockly: Stafsetning án blockly
           "Bee 1: Intro": 'Býfluga 1: Kynning'
           "Maze 2: Loops": 'Völundarhús 2: Lykkjur'
           "Bee 2: Loops": 'Býfluga 2: Lykkjur'
           Multi & Match: Val og tenging
           K-1 Flappy: Flappy 5-6 ára
-          Flappy non blockly: "Flappy án blockly"
+          Flappy non blockly: Flappy án blockly
           title: 'Námskeið 1 - Fyrir byrjendur í lestri'
-          Artist 2: "Listamaður 2"
-          Happy Maps: "Krúttleg kort"
-          Move it, Move it: Hreyfðu mig
+          Artist 2: Listamaður 2
+          Happy Maps: Krúttleg kort
+          Move it, Move it: Hreyfa sig, hreyfa sig
           "Real-life Algorithms: Plant a Seed": 'Algrím úr raunheimi: Sá fræi'
-          Building a Foundation: "Að byggja grunn"
-          Getting Loopy: "Hringl"
-          The Big Event: "Stórviðburður"
-          Going Places Safely: "Ferðast í öryggi"
-          description: 'Námskeið 1 er hannað til að gera byrjendum í lestri kleift að búa til tölvuforrit sem munu hjálpa þeim að læra að vinna með öðrum, þróa hæfni til að leysa verkefni og gefst ekki upp þó verkefni séu erfið. Við lok námskeiðsins búa nemendur til sinn eiginn sérhannaða leik eða sögu sem þeir geta svo deilt. Er stílað inn á aldurshópinn 5 - 6 ára.'
+          Building a Foundation: Að byggja grunn
+          Getting Loopy: Lykkjulæti
+          The Big Event: Stórviðburður
+          Going Places Safely: Ferðast í öryggi
+          description: 'Námskeið 1 er hannað til að gera byrjendum í lestri kleift að búa til tölvuforrit sem munu hjálpa þeim að læra að vinna með öðrum, þróa hæfni til að leysa verkefni og gefast ekki upp þó verkefni séu erfið. Við lok námskeiðsins búa nemendur til sinn eiginn sérhannaða leik eða sögu sem þeir geta svo deilt. Er stílað inn á aldurshópinn 5 - 6 ára.'
           "Bee: Sequence": 'Býfluga: Röð'
           "Artist: Sequence": 'Listamaður: Röð'
           "Artist: Shapes": 'Listamaður: Form'
           "Maze: Loops": 'Völundarhús: Lykkjur'
           "Bee: Loops": 'Býfluga: Lykkjur'
           "Studio: Create a Story": 'Leikjasmiðja: Búa til sögu'
-          description_short: "Námskeið 1 er hannað fyrir byrjendur í lestri í neðri bekkjum grunnskóla."
+          description_short: Námskeið 1 er hannað fyrir byrjendur í lestri í neðri bekkjum grunnskóla.
           "Artist: Loops": 'Listamaður: Lykkjur'
         course2:
-          The Maze: "Völundarhúsið"
-          Suzi: "Súsí"
-          The Artist: "Listamaðurinn"
+          The Maze: Völundarhúsið
+          Suzi: Súsí
+          The Artist: Listamaðurinn
           Artist Debugging: 'Listamaður - Villuleit'
-          Bounce: "Skopp"
+          Bounce: Skopp
           "Studio: Create a Story": 'Leikjasmiðja: Búa til sögu'
           Artist Loops: 'Listamaður - lykkjur'
           Bee Conditionals: 'Býfluga - skilyrði'
-          Flappy: "Flappy"
-          title: "Námskeið 2"
+          Flappy: Flappy
+          title: Námskeið 2
           Bee Loops: 'Býfluga - lykkjur'
           Artist Functions: 'Listamaður - föll'
           The Artist Debugging: 'Listamaðurinn - villuleit'
           Bee Debugging: 'Býfluga - villuleit'
           Bee Functions: 'Býfluga - föll'
           Maze Loops: 'Völundarhús - lykkjur'
-          Graph Paper Programming: "Forritun rúðublaða"
+          Graph Paper Programming: Forritun rúðublaða
           "Real-life Algorithms: Paper Planes": 'Algrím úr raunheimi: Pappírsskutlur'
-          Getting Loopy: "Hringl með lykkjum"
-          Relay programming: "Boðhlaupsforritun"
-          Conditionals: "Skilyrði"
-          Binary Bracelets: "Stafræn armbönd"
-          The Big Event: "Stóri atburðurinn"
-          Your Digital Footprint: "Stafræna fótsporið þitt"
+          Getting Loopy: Lykkjulæti
+          Relay programming: Boðhlaupsforritun
+          Conditionals: Skilyrði
+          Binary Bracelets: Stafræn armbönd
+          The Big Event: Stórviðburður
+          Your Digital Footprint: Stafræna fótsporið þitt
           description: 'Námskeið 2 er hannað fyrir nemendur sem geta lesið og hafa enga reynslu af forritun. Á þessu námskeiði munu nemendur búa til forrit til að leysa verkefni og þróa gagnvirka leiki eða sögur sem þeir geta deilt. Stílað inn á aldurhópinn 6 - 9 ára.'
           "Maze: Sequence": 'Völundarhús: Röð'
           "Artist: Sequence": 'Listamaður: Röð'
@@ -76,15 +76,15 @@
           "Bee: Debugging": 'Býfluga: Villuleit'
           "Artist: Debugging": 'Listamaður: Villuleit'
           "Bee: Conditionals": 'Býfluga: Skilyrði'
-          description_short: "Námskeið 2 er ætlað nemendum sem geta lesið og eru í neðri eða miðbekkjum grunnskóla."
+          description_short: Námskeið 2 er ætlað nemendum sem geta lesið og eru í neðri eða miðbekkjum grunnskóla.
           "Artist: Sequence2": 'Listamaður: Röð2'
           "Maze: Sequence2": 'Völundarhús: Röð2'
           "Artist: Nested Loops": 'Listamaður: Innri lykkjur'
         course3:
-          The Maze: "Völundarhúsið"
+          The Maze: Völundarhúsið
           "Studio: Create a Story": 'Leikjasmiðja: Búa til sögu'
-          The Artist: "Listamaðurinn"
-          title: "Námskeið 3"
+          The Artist: Listamaðurinn
+          title: Námskeið 3
           Artist Functions: 'Listamaður - föll'
           Artist For Loops: 'Listamaður - frá/til lykkjur'
           Artist Nested Loops: 'Listamaður - innri lykkjur'
@@ -94,21 +94,21 @@
           Bee Debugging: 'Býfluga - villuleit'
           Bee Functions: 'Býfluga - föll'
           Artist Functions with Params: 'Listamaður - föll með stikum'
-          Bounce: "Skopp"
+          Bounce: Skopp
           Maze Conditionals: 'Völundarhús - skilyrði'
           Artist Functions with Parameters: 'Listamaður - föll með stikum'
-          Computational Thinking: "Tölvunarmiðuð hugsun"
-          Functional Suncatchers: "Sólarskraut með föllum"
+          Computational Thinking: Tölvunarmiðuð hugsun
+          Functional Suncatchers: Sólarskraut með föllum
           Songwriting Parameters: 'Lagasmíð - stikar'
-          Dice Race: "Teningakapp"
-          Internet: "Internet"
-          Crowdsourcing: "Útvistun til hóps"
-          Digital Citizenship: "Stafrænn borgari"
+          Dice Race: Teningakapp
+          Internet: Internet
+          Crowdsourcing: Hópvistun
+          Digital Citizenship: Stafrænn borgari
           Farmer - While Loops: 'Bóndi - meðan lykkjur'
           description: 'Námskeið 3 er ætlað nemendum sem hafa lokið Námskeiði 2. Nemendur munu kafa dýpra í efni sem var kynnt á fyrri forritunarnámskeiðum til að geta beitt sveigjanlegri lausnum á flóknari verkefni. Í lok þessa námskeiðs búa nemendur til gagnvirkar sögur og leiki sem þeir geta svo deilt með öðrum. Stílað inn á aldurshópinn 9 - 10 ára.'
           "Studio: Create a Game": 'Leikjasmiðja: Búa til leik'
-          Maze: "Völundarhús"
-          Artist: "Listamaður"
+          Maze: Völundarhús
+          Artist: Listamaður
           "Artist: Functions": 'Listamaður: Föll'
           "Bee: Functions": 'Býfluga: Föll'
           "Bee: Conditionals": 'Býfluga: Skilyrði'
@@ -117,9 +117,9 @@
           "Farmer: While Loops": 'Bóndi: Meðan lykkjur'
           "Bee: Nested Loops": 'Býfluga: Innri lykkjur'
           "Bee: Debugging": 'Býfluga: Villuleit'
-          description_short: "Nemendur á Námskeiði 3 ættu að ljúka Námskeiði 2 áður."
-          Maze2: "Völundarhús2"
-          Artist2: "Listamaður2"
+          description_short: Nemendur á Námskeiði 3 ættu að ljúka Námskeiði 2 áður.
+          Maze2: Völundarhús2
+          Artist2: Listamaður2
           "Artist: Functions2": 'Listamaður: Föll2'
           "Bee: Functions2": 'Býfluga: Föll2'
           "Bee: Conditionals2": 'Býfluga: Skilyrði2'
@@ -128,21 +128,21 @@
           "Farmer: While Loops2": 'Bóndi: Meðan lykkjur2'
           "Bee: Nested Loops2": 'Býfluga: Innri lykkjur'
           "Bee: Debugging2": 'Býfluga: Villuleit2'
-          "Artist: Patterns": 'Artist: Patterns'
+          "Artist: Patterns": 'Listamaður: Mynstur'
         msm:
-          title: "Miðskólastærðfræði"
-          description: "Verið er að vinna í miðskólastærðfræði."
-          Graph Paper Programming: "Forritun rúðublaða"
-          Assessments: "Mat"
-          Unit 1: "1. eining"
-          Unit 2: "2. eining"
+          title: Miðskólastærðfræði
+          description: Verið er að vinna í miðskólastærðfræði.
+          Graph Paper Programming: Forritun rúðublaða
+          Assessments: Mat
+          Unit 1: 1. eining
+          Unit 2: 2. eining
         playlab:
-          title: "Leikjasmiðja"
-          description: "Búðu til sögu eða leik með Leikjasmiðju!"
-          Play Lab: "Leikjasmiðja"
-          description_short: "Búðu til sögu eða leik með Leikjasmiðju!"
+          title: Leikjasmiðja
+          description: Búðu til sögu eða leik með Leikjasmiðju!
+          Play Lab: Leikjasmiðja
+          description_short: Búðu til sögu eða leik með Leikjasmiðju!
         artist:
-          title: "Listamaður"
-          description: "Teiknaðu flottar myndir og mynstur með listamanninum!"
-          Artist: "Listamaður"
-          description_short: "Teiknaðu flottar myndir og mynstur með listamanninum!"
+          title: Listamaður
+          description: Teiknaðu flottar myndir og mynstur með listamanninum!
+          Artist: Listamaður
+          description_short: Teiknaðu flottar myndir og mynstur með listamanninum!

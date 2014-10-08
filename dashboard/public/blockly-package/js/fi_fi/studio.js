@@ -18613,15 +18613,15 @@ exports.end = function(d){return "loppu"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"Toista\" ja \"Jos\"-lohkot tarvitsevat toisen lohkon sisäänsä toimiakseen. Varmista, että sisempi lohko asettuu oikein ulompaan lohkoon."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Lisää Funktio-lohkon sisään muita lohkoja saadaksesi koodin toimimaan oikein."};
 
-exports.extraTopBlocks = function(d){return "Sinulla on ylimääräisiä lohkoja, joita ei ole kytketty tapahtumalohkoon."};
+exports.extraTopBlocks = function(d){return "Ohjelmassa on lohkoja, joita ei ole kiinnitetty mihinkään. Ehkä ne pitäisi kiinnittää \"suoritettaessa\"-lohkoon?"};
 
 exports.finalStage = function(d){return "Onneksi olkoon! Olet suorittanut viimeisen vaiheen."};
 
 exports.finalStageTrophies = function(d){return "Onneksi olkoon! Olet suorittanut viimeisen vaiheen ja voittanut "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Valmis"};
 
 exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
 
@@ -18689,7 +18689,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Kokonaismäärä: "+p(d
 
 exports.tryAgain = function(d){return "Yritä uudestaan"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Katso vihje"};
 
 exports.backToPreviousLevel = function(d){return "Takaisin edelliseen tasoon"};
 
@@ -18719,7 +18719,7 @@ exports.watchVideo = function(d){return "Katso Video"};
 
 exports.when = function(d){return "kun"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "suoritettaessa"};
 
 exports.tryHOC = function(d){return "Kokeile koodaustuntia"};
 
@@ -18768,7 +18768,7 @@ exports.hello = function(d){return "hello"};
 
 exports.helloWorld = function(d){return "Hello World!"};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "lisää piste"};
 
 exports.makeProjectileDisappear = function(d){return "kadota"};
 
@@ -18846,31 +18846,31 @@ exports.numBlocksNeeded = function(d){return "Pulman voi ratkaista %1 lohkolla."
 
 exports.ouchExclamation = function(d){return "Ouch!"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "soita räsähdyksen ääni"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "soita maalin ääni"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "soita maalin toinen ääni"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "soita osuman ääni"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "soita pisteen menetyksen ääni"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "soita pisteen menetyksen toinen ääni"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "soita retro ääni"};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "soita kumin ääni"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "soita läpsähdyksen ääni"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Soita valittu ääni."};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "soita pisteen voittamisen ääni"};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "soita pisteen voittamisen toinen ääni"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "soita puinen ääni"};
 
 exports.positionOutTopLeft = function(d){return "to the above top left position"};
 
@@ -18970,7 +18970,7 @@ exports.setBackgroundWinter = function(d){return "set winter background"};
 
 exports.setBackgroundTooltip = function(d){return "Aseta taustakuva"};
 
-exports.setScoreText = function(d){return "set score"};
+exports.setScoreText = function(d){return "aseta pisteet"};
 
 exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
 
@@ -19180,21 +19180,21 @@ exports.whenArrowUp = function(d){return "up arrow"};
 
 exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "kun alas nuoli"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Suorita alla olevat toiminnot, kun alas-nuolinäppäintä painetaan."};
 
 exports.whenGameStarts = function(d){return "when game starts"};
 
 exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "kun vasen nuoli"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Suorita alla olevat toiminnot, kun vasenta nuolinäppäintä painetaan."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "kun oikea nuoli"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Suorita alla olevat toiminnot, kun oikeaa nuolinäppäintä painetaan."};
 
 exports.whenSpriteClicked = function(d){return "when actor clicked"};
 
@@ -19238,9 +19238,9 @@ exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge
 
 exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "kun ylös nuoli"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Suorita alla olevat toiminnot, kun ylös-nuolinäppäintä painetaan."};
 
 exports.yes = function(d){return "Kyllä"};
 

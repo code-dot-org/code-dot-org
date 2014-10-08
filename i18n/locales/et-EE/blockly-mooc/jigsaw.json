@@ -1,10 +1,10 @@
 {
-  "continue":"Continue",
-  "nextLevel":"Congratulations! You have completed this puzzle.",
-  "no":"No",
-  "numBlocksNeeded":"This puzzle can be solved with %1 blocks.",
+  "continue":"Jätka",
+  "nextLevel":"Palju õnne! See ülesanne on lahendatud.",
+  "no":"Ei",
+  "numBlocksNeeded":"Selle ülesande saab lahendada %1 pusletükiga.",
   "reinfFeedbackMsg":"You can press the \"Try again\" button to go back to playing your game.",
-  "share":"Share",
+  "share":"Jaga",
   "shareGame":"Share your game:",
-  "yes":"Yes"
+  "yes":"Jah"
 }

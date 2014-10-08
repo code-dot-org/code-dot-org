@@ -266,8 +266,8 @@
           њега све док је услов на врху тачан.'
       3:
         image: notes/stage9_7.jpg
-        text: For example, if the farmer is standing on a pile, she will continue
-          to remove 1 shovelful WHILE there is still a pile beneath her.
+        text: "На пример, ако фармерка стоји на гомили, она ће наставити да уклања
+          1 пуну лопату све док испод ње постоји гомила."
     loop_for:
       1:
         image: notes/stage11_1.jpg

@@ -1,57 +1,57 @@
-"tr":
+tr:
   devise:
     confirmations:
-      confirmed: "Eposta adresiniz başarıyla doğrulandı."
-      send_instructions: "Birkaç dakika içinde hesabınızı nasıl aktifleştireceğinizi anlatan bir mail alacaksınız."
-      send_paranoid_instructions: "Eğer mail adresiniz bizde kayıtlı ise, birkaç dakika içinde hesabınızı nasıl aktifleştireceğinizi anlatan bir mail alacaksınız."
+      confirmed: Eposta adresiniz başarıyla doğrulandı.
+      send_instructions: Birkaç dakika içinde hesabınızı nasıl aktifleştireceğinizi anlatan bir mail alacaksınız.
+      send_paranoid_instructions: Eğer mail adresiniz bizde kayıtlı ise, birkaç dakika içinde hesabınızı nasıl aktifleştireceğinizi anlatan bir mail alacaksınız.
     failure:
-      already_authenticated: "Zaten oturum açtınız."
-      inactive: "Hesabınız aktifleştirilmedi."
-      invalid: "Geçersiz e-posta veya şifre."
-      invalid_token: "Geçersiz kimlik doğrulama belirteci."
-      locked: "Hesabınız kilitlendi."
-      not_found_in_database: "Geçersiz e-posta veya şifre."
-      timeout: "Oturumunuzun süresi doldu, lütfen devam etmek oturum açın."
-      unauthenticated: "Devam etmeden önce kayıt olun veya giriş yapın."
-      unconfirmed: "Devam etmeden önce hesabınızı onaylamanız gerekir."
+      already_authenticated: Zaten oturum açtınız.
+      inactive: Hesabınız aktifleştirilmedi.
+      invalid: Geçersiz e-posta veya şifre.
+      invalid_token: Geçersiz kimlik doğrulama belirteci.
+      locked: Hesabınız kilitlendi.
+      not_found_in_database: Geçersiz e-posta veya şifre.
+      timeout: Oturumunuzun süresi doldu, lütfen devam etmek oturum açın.
+      unauthenticated: Devam etmeden önce kayıt olun veya giriş yapın.
+      unconfirmed: Devam etmeden önce hesabınızı onaylamanız gerekir.
     mailer:
       confirmation_instructions:
-        subject: "Code.org onay yönergeleri"
+        subject: Code.org onay yönergeleri
       reset_password_instructions:
-        subject: "Code.org parola sıfırlama yönergeleri"
+        subject: Code.org parola sıfırlama yönergeleri
       unlock_instructions:
-        subject: "Talimatların kilidini aç"
+        subject: Talimatların kilidini aç
     omniauth_callbacks:
       failure: '%{kind} kimliği %{reason} nedeniyle doğrulanamadı.'
       success: '%{kind} hesabından başarıyla kimlik doğrulandı.'
     passwords:
       no_token: "Parola sıfırlama maili olmadan bu sayfaya erişemezsiniz. Eğer parola sıfırlama mailinden geldiyseniz, lütfen verilen URL'nin tamamını kullandığınızdan emin olun."
-      send_instructions: "Birkaç dakika içinde parolanızı nasıl sıfırlamanız hakkında talimatlar içeren bir e-posta alacaksınız."
-      send_paranoid_instructions: "Eğer e-posta adresiniz veritabanımızda kayıtlı ise, birkaç dakika içinde parola kurtarma bağlantısı içeren bir e-posta alacaksınız."
-      updated: "Parolanız başarıyla değiştirildi. Şu anda giriş yaptınız."
-      updated_not_active: "Şifreniz başarıyla değiştirildi."
+      send_instructions: Birkaç dakika içinde parolanızı nasıl sıfırlamanız hakkında talimatlar içeren bir e-posta alacaksınız.
+      send_paranoid_instructions: Eğer e-posta adresiniz veritabanımızda kayıtlı ise, birkaç dakika içinde parola kurtarma bağlantısı içeren bir e-posta alacaksınız.
+      updated: Parolanız başarıyla değiştirildi. Şu anda giriş yaptınız.
+      updated_not_active: Şifreniz başarıyla değiştirildi.
     registrations:
-      destroyed: "Hoşça kal! Hesabın başarıyla iptal edildi. Seni tekrar aramızda görmeyi umuyoruz."
-      signed_up: "Hoşgeldiniz! Kaydınız başarı ile oluşturuldu."
-      signed_up_but_inactive: "Kaydınız başarı ile oluşturuldu. Ancak hesabınız henüz onaylanmadığı için giriş yapamıyorsunuz."
-      signed_up_but_locked: "Kaydınız başarı ile yapıldı. Ancak hesabınız kilitli olduğu için giriş yapamıyorsunuz."
-      signed_up_but_unconfirmed: "E-posta adresine onay bağlantısını içeren bir mesaj gönderildi. Lütfen bağlantıyı açarak hesabınızı aktifleştirin."
-      update_needs_confirmation: "Hesabınız başarı ile güncelleştirildi, Ancak yeni e-posta adresini doğrulamamız gerekiyor. Lütfen e-posta adresinizi kontrol ederek onay bağlantısına tıklayın ve e-posta hesabınızı onaylama işlemini sonlandırın."
-      updated: "Hesabınızı başarı ile güncelleştirdiniz."
+      destroyed: Hoşça kal! Hesabın başarıyla iptal edildi. Seni tekrar aramızda görmeyi umuyoruz.
+      signed_up: Hoşgeldiniz! Kaydınız başarı ile oluşturuldu.
+      signed_up_but_inactive: Kaydınız başarı ile oluşturuldu. Ancak hesabınız henüz onaylanmadığı için giriş yapamıyorsunuz.
+      signed_up_but_locked: Kaydınız başarı ile yapıldı. Ancak hesabınız kilitli olduğu için giriş yapamıyorsunuz.
+      signed_up_but_unconfirmed: E-posta adresine onay bağlantısını içeren bir mesaj gönderildi. Lütfen bağlantıyı açarak hesabınızı aktifleştirin.
+      update_needs_confirmation: Hesabınız başarı ile güncelleştirildi, Ancak yeni e-posta adresini doğrulamamız gerekiyor. Lütfen e-posta adresinizi kontrol ederek onay bağlantısına tıklayın ve e-posta hesabınızı onaylama işlemini sonlandırın.
+      updated: Hesabınızı başarı ile güncelleştirdiniz.
     sessions:
-      signed_in: "Başarı ile giriş yapıldı."
-      signed_out: "Başarıyla oturum kapatıldı."
+      signed_in: Başarı ile giriş yapıldı.
+      signed_out: Başarıyla oturum kapatıldı.
     unlocks:
-      send_instructions: "Birkaç dakika içinde hesabınızın kilidini nasıl açacağınızı anlatan bir e-posta alacaksınız."
-      send_paranoid_instructions: "Eğer hesabınız varsa, birkaç dakika içinde hesabınızın kilidini nasıl kaldırılacağını anlatan bir e-posta alacaksınız."
-      unlocked: "Hesabınızın kilidi başarı ile kaldırıldı. Lüfen devam etmek için giriş yapınız."
+      send_instructions: Birkaç dakika içinde hesabınızın kilidini nasıl açacağınızı anlatan bir e-posta alacaksınız.
+      send_paranoid_instructions: Eğer hesabınız varsa, birkaç dakika içinde hesabınızın kilidini nasıl kaldırılacağını anlatan bir e-posta alacaksınız.
+      unlocked: Hesabınızın kilidi başarı ile kaldırıldı. Lüfen devam etmek için giriş yapınız.
   errors:
     messages:
-      already_confirmed: "zaten onaylandı, lütfen giriş yapmayı deneyiniz"
+      already_confirmed: zaten onaylandı, lütfen giriş yapmayı deneyiniz
       confirmation_period_expired: '%{period} içinde onaylanması gerekliydi.Lütfen yeni bir istekte bulunun'
-      expired: "süresi doldu, yeni bir tane isteyiniz"
-      not_found: "bulunamadı"
-      not_locked: "kilitli değil"
+      expired: süresi doldu, yeni bir tane isteyiniz
+      not_found: bulunamadı
+      not_locked: kilitli değil
       not_saved:
         one: '1 hata %{resource} kaynağın kaydedilmesini engelledi:'
         other: '%{count} hata %{resource} kaynağının kaydedilmesini engelledi:'

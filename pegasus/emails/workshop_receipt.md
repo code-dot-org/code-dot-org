@@ -7,3 +7,5 @@ subject: "[Code.org] Workshop added"
 You have added a workshop. To invite people to sign up for it, send them this link:
 
 <%= signup_link %>
+
+![](<%= tracking_pixel %>)

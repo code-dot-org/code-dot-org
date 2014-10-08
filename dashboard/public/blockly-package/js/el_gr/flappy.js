@@ -9114,21 +9114,21 @@ exports.directionEastLetter = function(d){return "Α"};
 
 exports.directionWestLetter = function(d){return "Δ"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "τέλος"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Το μπλοκ του \"Repeat\" ή του \"If\" πρέπει να περιέχει άλλα μπλοκ για να δουλέψει. Σιγουρέψου ότι το εσωτερικό μπλοκ ταιριάζει μέσα στο εξωτερικό."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Στο μπλόκ της συνάρτησης χρειάζεται να υπάρχουν άλλα μπλοκ για να μπορεί να δουλέψει."};
 
-exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
+exports.extraTopBlocks = function(d){return "Έχεις ασύνδετα μπλοκ. Θέλεις να τα συνδέσεις στο μπλοκ \"όταν εκτελείται\";"};
 
 exports.finalStage = function(d){return "Συγχαρητήρια! τέλειωσες το τελικό στάδιο."};
 
 exports.finalStageTrophies = function(d){return "Συγχαρητήρια! Τέλειωσες το τελευταίο στάδιο και κέρδισες "+p(d,"numTrophies",0,"el",{"one":"τρόπαιο","other":n(d,"numTrophies")+" τράπαια"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Τερματισμός"};
 
-exports.generatedCodeInfo = function(d){return "Τα πλακίδια από το πρόγραμμά σου μπορούν επίσης να αναπαρασταθούν στην Javascript, την πιο ευρέως διαδεδομένη γλώσσα προγραμματισμού παγκοσμίως:"};
+exports.generatedCodeInfo = function(d){return "Ακόμη και τα κορυφαία πανεπιστήμια διδάσκουν κώδικα με βάση τα μπλοκ (π.χ. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Αλλά στο παρασκήνιο τα μπλοκ που συναρμολόγησες μπορούν να εμφανιστούν σε JavaScript, την πιο διαδεδομένη γλώσσα προγραμματισμού στον κόσμο:"};
 
 exports.hashError = function(d){return "Συγνώμη, το '%1' δεν αντιστοιχεί με αποθηκευμένο πρόγραμμα."};
 
@@ -9136,13 +9136,13 @@ exports.help = function(d){return "Βοήθεια"};
 
 exports.hintTitle = function(d){return "Υπόδειξη:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "πήδα"};
 
 exports.levelIncompleteError = function(d){return "Χρησιμοποιείς όλα τα αναγκαία είδη μπλοκ, αλλά όχι με τον σωστό τρόπο."};
 
 exports.listVariable = function(d){return "λίστα"};
 
-exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
+exports.makeYourOwnFlappy = function(d){return "Φτιάξτε το δικό σας Flappy παιχνίδι"};
 
 exports.missingBlocksErrorMsg = function(d){return "Δοκίμασε ένα ή περισσότερα από τα παρακάτω μπλοκ για να λύσεις το παζλ."};
 
@@ -9150,15 +9150,15 @@ exports.nextLevel = function(d){return "Συγχαρητήρια! Τελείωσ
 
 exports.nextLevelTrophies = function(d){return "Συγχαρητήρια! Τελείωσες το παζλ "+v(d,"puzzleNumber")+" και κέρδισες "+p(d,"numTrophies",0,"el",{"one":"τρόπαιο","other":n(d,"numTrophies")+" τρόπαια"})+"."};
 
-exports.nextStage = function(d){return "Συγχαρητήρια! Ολοκλληρωσες το στάδιο "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Συγχαρητήρια! Ολοκληρώσατε "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Συγχαρητήρια! Τελείωσες το στάδιο "+v(d,"stageNumber")+" και κέρδισες "+p(d,"numTrophies",0,"el",{"one":"τρόπαιο","other":n(d,"numTrophies")+" τρόπαια"})+"."};
+exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"el",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Συγχαρητήρια! Τελείωσες το πάζλ "+v(d,"puzzleNumber")+". (Όμως, θα μπορούσες να βάλεις μόνο   "+p(d,"numBlocks",0,"el",{"one":"1 μπλοκ","other":n(d,"numBlocks")+" μπλοκ"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Μόλις έγραψες "+p(d,"numLines",0,"el",{"one":"1 γραμμή","other":n(d,"numLines")+" γραμμές"})+" κώδικα!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "παίξε"};
 
 exports.puzzleTitle = function(d){return "Παζλ "+v(d,"puzzle_number")+" από "+v(d,"stage_total")};
 
@@ -9166,11 +9166,11 @@ exports.repeat = function(d){return "επανάλαβε"};
 
 exports.resetProgram = function(d){return "Επαναφορά"};
 
-exports.runProgram = function(d){return "Εκτέλεση Προγράμματος"};
+exports.runProgram = function(d){return "Τρέξτε"};
 
 exports.runTooltip = function(d){return "Τρέξε το πρόγραμμα που ορίζεται από τα μπλοκ στο χώρο εργασίας."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "σκορ"};
 
 exports.showCodeHeader = function(d){return "Προβολή Κώδικα"};
 
@@ -9194,13 +9194,13 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Γενικό σύνολ
 
 exports.tryAgain = function(d){return "Δοκίμασε ξανά"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Δείτε την υπόδειξη"};
 
 exports.backToPreviousLevel = function(d){return "Πίσω στο προηγούμενο επίπεδο"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Αποθήκευση στη συλλογή σου"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Αποθηκεύτηκε στη συλλογή σου!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
@@ -9218,21 +9218,21 @@ exports.rotateText = function(d){return "Γυρίστε τη συσκευή σα
 
 exports.orientationLock = function(d){return "Απενεργοποιήστε το κλείδωμα περιστροφής στις ρυθμίσης της συσκευής."};
 
-exports.wantToLearn = function(d){return "Want to learn to code?"};
+exports.wantToLearn = function(d){return "Θέλετε να μάθετε προγραμματισμό;"};
 
-exports.watchVideo = function(d){return "Watch the Video"};
+exports.watchVideo = function(d){return "Δείτε το βίντεο"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "όταν"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "όταν εκτελείται"};
 
-exports.tryHOC = function(d){return "Try the Hour of Code"};
+exports.tryHOC = function(d){return "Δοκίμασε την Ώρα του Κώδικα"};
 
-exports.signup = function(d){return "Sign up for the intro course"};
+exports.signup = function(d){return "Κάνε εγγραφή στο εισαγωγικό μάθημα"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Να μια βοήθεια:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου."};
 
 
 },{"messageformat":50}],38:[function(require,module,exports){
@@ -9265,7 +9265,7 @@ exports.flapVeryLarge = function(d){return "Φτερούγισε πάρα πολ
 
 exports.flapTooltip = function(d){return "Πέτα τον Φλάπυ προς τα επάνω."};
 
-exports.flappySpecificFail = function(d){return "Your code looks good - it will flap with each click. But you need to click many times to flap to the target."};
+exports.flappySpecificFail = function(d){return "Ο κώδικάς σου δείχνει σωστός - θα φτερουγίζει με κάθε κλικ. Αλλά χρειάζεται να κάνεις κλικ πολλές φορές για να πετάξεις προς το στόχο."};
 
 exports.incrementPlayerScore = function(d){return "σκόραρε έναν πόντο"};
 
@@ -9289,211 +9289,211 @@ exports.playSoundHit = function(d){return "παίξε ήχο χτυπήματο�
 
 exports.playSoundPoint = function(d){return "παίξε ήχο πόντου"};
 
-exports.playSoundSwoosh = function(d){return "play swoosh sound"};
+exports.playSoundSwoosh = function(d){return "παίξε ήχο στροβιλισμού"};
 
 exports.playSoundWing = function(d){return "παίξε ήχο φτερού"};
 
-exports.playSoundJet = function(d){return "play jet sound"};
+exports.playSoundJet = function(d){return "παίξε ήχο τζετ"};
 
-exports.playSoundCrash = function(d){return "play crash sound"};
+exports.playSoundCrash = function(d){return "παίξε ήχο συντριβής"};
 
-exports.playSoundJingle = function(d){return "play jingle sound"};
+exports.playSoundJingle = function(d){return "παίξε ήχο κουδουνίσματος"};
 
-exports.playSoundSplash = function(d){return "play splash sound"};
+exports.playSoundSplash = function(d){return "παίξε ήχο πλατσουρίσματος"};
 
-exports.playSoundLaser = function(d){return "play laser sound"};
+exports.playSoundLaser = function(d){return "παίξε ήχο λέιζερ"};
 
 exports.playSoundTooltip = function(d){return "Παίξε τον επιλεγμένο ήχο."};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your game."};
+exports.reinfFeedbackMsg = function(d){return "Μπορείς να πατήσεις το πλήκτρο \"Δοκίμασε ξανά\" για να επιστρέψεις στο παιχνίδι σου."};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Βαθμολογία: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set scene"};
+exports.setBackground = function(d){return "όρισε τη σκηνή"};
 
-exports.setBackgroundRandom = function(d){return "set scene Random"};
+exports.setBackgroundRandom = function(d){return "όρισε Τυχαία σκηνή"};
 
-exports.setBackgroundFlappy = function(d){return "set scene City (day)"};
+exports.setBackgroundFlappy = function(d){return "όρισε τη σκηνή Πόλης (ημέρα)"};
 
-exports.setBackgroundNight = function(d){return "set scene City (night)"};
+exports.setBackgroundNight = function(d){return "όρισε τη σκηνή Πόλης (νύχτα)"};
 
-exports.setBackgroundSciFi = function(d){return "set scene Sci-Fi"};
+exports.setBackgroundSciFi = function(d){return "όρισε τη σκηνή Διαστήματος"};
 
-exports.setBackgroundUnderwater = function(d){return "set scene Underwater"};
+exports.setBackgroundUnderwater = function(d){return "όρισε τη σκηνή Κάτω από το Νερό"};
 
-exports.setBackgroundCave = function(d){return "set scene Cave"};
+exports.setBackgroundCave = function(d){return "όρισε τη σκηνή Σπηλιά"};
 
-exports.setBackgroundSanta = function(d){return "set scene Santa"};
+exports.setBackgroundSanta = function(d){return "όρισε τη σκηνή Άη Βασίλης"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "Ορίζει την εικόνα στο φόντο"};
 
-exports.setGapRandom = function(d){return "set a random gap"};
+exports.setGapRandom = function(d){return "όρισε τυχαίο κενό"};
 
-exports.setGapVerySmall = function(d){return "set a very small gap"};
+exports.setGapVerySmall = function(d){return "όρισε πολύ μικρό κενό"};
 
-exports.setGapSmall = function(d){return "set a small gap"};
+exports.setGapSmall = function(d){return "όρισε μικρό κενό"};
 
-exports.setGapNormal = function(d){return "set a normal gap"};
+exports.setGapNormal = function(d){return "όρισε κανονικό κενό"};
 
-exports.setGapLarge = function(d){return "set a large gap"};
+exports.setGapLarge = function(d){return "όρισε μεγάλο κενό"};
 
-exports.setGapVeryLarge = function(d){return "set a very large gap"};
+exports.setGapVeryLarge = function(d){return "όρισε πολύ μεγάλο κενό"};
 
-exports.setGapHeightTooltip = function(d){return "Sets the vertical gap in an obstacle"};
+exports.setGapHeightTooltip = function(d){return "Ορίζει το κάθετο κενό σε ένα εμπόδιο"};
 
-exports.setGravityRandom = function(d){return "set gravity random"};
+exports.setGravityRandom = function(d){return "όρισε τυχαία βαρύτητα"};
 
-exports.setGravityVeryLow = function(d){return "set gravity very low"};
+exports.setGravityVeryLow = function(d){return "όρισε πολύ μικρή βαρύτητα"};
 
-exports.setGravityLow = function(d){return "set gravity low"};
+exports.setGravityLow = function(d){return "όρισε μικρή βαρύτητα"};
 
-exports.setGravityNormal = function(d){return "set gravity normal"};
+exports.setGravityNormal = function(d){return "όρισε κανονική βαρύτητα"};
 
-exports.setGravityHigh = function(d){return "set gravity high"};
+exports.setGravityHigh = function(d){return "όρισε μεγάλη βαρύτητα"};
 
-exports.setGravityVeryHigh = function(d){return "set gravity very high"};
+exports.setGravityVeryHigh = function(d){return "όρισε πολύ μεγάλη βαρύτητα"};
 
-exports.setGravityTooltip = function(d){return "Sets the level's gravity"};
+exports.setGravityTooltip = function(d){return "Ορίζει τη βαρύτητα του επιπέδου"};
 
-exports.setGround = function(d){return "set ground"};
+exports.setGround = function(d){return "όρισε το έδαφος"};
 
-exports.setGroundRandom = function(d){return "set ground Random"};
+exports.setGroundRandom = function(d){return "όρισε Τυχαίο έδαφος"};
 
-exports.setGroundFlappy = function(d){return "set ground Ground"};
+exports.setGroundFlappy = function(d){return "όρισε το έδαφος Πάτωμα"};
 
-exports.setGroundSciFi = function(d){return "set ground Sci-Fi"};
+exports.setGroundSciFi = function(d){return "όρισε το έδαφος Διάστημα"};
 
-exports.setGroundUnderwater = function(d){return "set ground Underwater"};
+exports.setGroundUnderwater = function(d){return "όρισε το έδαφος Κάτω από το Νερό"};
 
-exports.setGroundCave = function(d){return "set ground Cave"};
+exports.setGroundCave = function(d){return "όρισε το έδαφος Σπηλιά"};
 
-exports.setGroundSanta = function(d){return "set ground Santa"};
+exports.setGroundSanta = function(d){return "όρισε το έδαφος Άη Βασίλης"};
 
-exports.setGroundLava = function(d){return "set ground Lava"};
+exports.setGroundLava = function(d){return "όρισε το έδαφος Λάβα"};
 
-exports.setGroundTooltip = function(d){return "Sets the ground image"};
+exports.setGroundTooltip = function(d){return "Ορίζει την εικόνα του εδάφους"};
 
-exports.setObstacle = function(d){return "set obstacle"};
+exports.setObstacle = function(d){return "όρισε εμπόδιο"};
 
-exports.setObstacleRandom = function(d){return "set obstacle Random"};
+exports.setObstacleRandom = function(d){return "όρισε Τυχαίο εμπόδιο"};
 
-exports.setObstacleFlappy = function(d){return "set obstacle Pipe"};
+exports.setObstacleFlappy = function(d){return "όρισε εμπόδιο Σωλήνας"};
 
-exports.setObstacleSciFi = function(d){return "set obstacle Sci-Fi"};
+exports.setObstacleSciFi = function(d){return "όρισε Διαστημικό εμπόδιο"};
 
-exports.setObstacleUnderwater = function(d){return "set obstacle Plant"};
+exports.setObstacleUnderwater = function(d){return "όρισε εμπόδιο Φυτό"};
 
-exports.setObstacleCave = function(d){return "set obstacle Cave"};
+exports.setObstacleCave = function(d){return "όρισε εμπόδιο Σπηλιά"};
 
-exports.setObstacleSanta = function(d){return "set obstacle Chimney"};
+exports.setObstacleSanta = function(d){return "όρισε εμπόδιο Καμινάδα"};
 
-exports.setObstacleLaser = function(d){return "set obstacle Laser"};
+exports.setObstacleLaser = function(d){return "όρισε εμπόδιο Λέιζερ"};
 
-exports.setObstacleTooltip = function(d){return "Sets the obstacle image"};
+exports.setObstacleTooltip = function(d){return "Ορίζει την εικόνα του εμποδίου"};
 
-exports.setPlayer = function(d){return "set player"};
+exports.setPlayer = function(d){return "όρισε παίκτη"};
 
-exports.setPlayerRandom = function(d){return "set player Random"};
+exports.setPlayerRandom = function(d){return "όρισε Τυχαίο παίκτη"};
 
-exports.setPlayerFlappy = function(d){return "set player Yellow Bird"};
+exports.setPlayerFlappy = function(d){return "όρισε παίκτη Κίτρινο Πουλί"};
 
-exports.setPlayerRedBird = function(d){return "set player Red Bird"};
+exports.setPlayerRedBird = function(d){return "όρισε παίκτη Κόκκινο Πουλί"};
 
-exports.setPlayerSciFi = function(d){return "set player Spaceship"};
+exports.setPlayerSciFi = function(d){return "όρισε παίκτη Διαστημόπλοιο"};
 
-exports.setPlayerUnderwater = function(d){return "set player Fish"};
+exports.setPlayerUnderwater = function(d){return "όρισε παίκτη Ψάρι"};
 
-exports.setPlayerCave = function(d){return "set player Bat"};
+exports.setPlayerCave = function(d){return "όρισε παίκτη Νυχτερίδα"};
 
-exports.setPlayerSanta = function(d){return "set player Santa"};
+exports.setPlayerSanta = function(d){return "όρισε παίκτη Άη Βασίλης"};
 
-exports.setPlayerShark = function(d){return "set player Shark"};
+exports.setPlayerShark = function(d){return "όρισε παίκτη Καρχαρία"};
 
-exports.setPlayerEaster = function(d){return "set player Easter Bunny"};
+exports.setPlayerEaster = function(d){return "όρισε παίκτη Λαγουδάκι"};
 
-exports.setPlayerBatman = function(d){return "set player Bat guy"};
+exports.setPlayerBatman = function(d){return "όρισε παίκτη Ροπαλοφόρος"};
 
-exports.setPlayerSubmarine = function(d){return "set player Submarine"};
+exports.setPlayerSubmarine = function(d){return "όρισε παίκτη Υποβρύχιο"};
 
-exports.setPlayerUnicorn = function(d){return "set player Unicorn"};
+exports.setPlayerUnicorn = function(d){return "όρισε παίκτη Μονόκερως"};
 
-exports.setPlayerFairy = function(d){return "set player Fairy"};
+exports.setPlayerFairy = function(d){return "όρισε παίκτη Νεράιδα"};
 
-exports.setPlayerSuperman = function(d){return "set player Flappyman"};
+exports.setPlayerSuperman = function(d){return "όρισε παίκτη Φτερούγης"};
 
-exports.setPlayerTurkey = function(d){return "set player Turkey"};
+exports.setPlayerTurkey = function(d){return "όρισε παίκτη Γαλοπούλα"};
 
-exports.setPlayerTooltip = function(d){return "Sets the player image"};
+exports.setPlayerTooltip = function(d){return "Ορίζει την εικόνα του παίκτη"};
 
-exports.setScore = function(d){return "set score"};
+exports.setScore = function(d){return "όρισε σκορ"};
 
-exports.setScoreTooltip = function(d){return "Sets the player's score"};
+exports.setScoreTooltip = function(d){return "Ορίζει το σκορ του παίκτη"};
 
-exports.setSpeed = function(d){return "set speed"};
+exports.setSpeed = function(d){return "όρισε ταχύτητα"};
 
-exports.setSpeedTooltip = function(d){return "Sets the levels speed"};
+exports.setSpeedTooltip = function(d){return "Ορίζει την ταχύτητα του επιπέδου"};
 
-exports.shareFlappyTwitter = function(d){return "Check out the Flappy game I made. I wrote it myself with @codeorg"};
+exports.shareFlappyTwitter = function(d){return "Κοίτα το παιχνίδι Φλάπι που έφτιαξα. Το έγραψα μόνος μου με το @codeorg"};
 
-exports.shareGame = function(d){return "Share your game:"};
+exports.shareGame = function(d){return "Μοιράσου το παιχνίδι σου:"};
 
 exports.soundRandom = function(d){return "τυχαίο"};
 
-exports.soundBounce = function(d){return "bounce"};
+exports.soundBounce = function(d){return "αναπήδηση"};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "τρίξιμο"};
 
-exports.soundDie = function(d){return "sad"};
+exports.soundDie = function(d){return "λυπητερό"};
 
-exports.soundHit = function(d){return "smash"};
+exports.soundHit = function(d){return "θρυμματισμός"};
 
-exports.soundPoint = function(d){return "point"};
+exports.soundPoint = function(d){return "σκοράρισμα"};
 
-exports.soundSwoosh = function(d){return "swoosh"};
+exports.soundSwoosh = function(d){return "στροβιλισμός"};
 
-exports.soundWing = function(d){return "wing"};
+exports.soundWing = function(d){return "φτερούγισμα"};
 
-exports.soundJet = function(d){return "jet"};
+exports.soundJet = function(d){return "τζετ"};
 
-exports.soundCrash = function(d){return "crash"};
+exports.soundCrash = function(d){return "συντριβή"};
 
-exports.soundJingle = function(d){return "jingle"};
+exports.soundJingle = function(d){return "κουδούνισμα"};
 
-exports.soundSplash = function(d){return "splash"};
+exports.soundSplash = function(d){return "πλατσούρισμα"};
 
-exports.soundLaser = function(d){return "laser"};
+exports.soundLaser = function(d){return "λέιζερ"};
 
-exports.speedRandom = function(d){return "set speed random"};
+exports.speedRandom = function(d){return "όρισε τυχαία ταχύτητα"};
 
-exports.speedVerySlow = function(d){return "set speed very slow"};
+exports.speedVerySlow = function(d){return "όρισε πολύ μικρή ταχύτητα"};
 
-exports.speedSlow = function(d){return "set speed slow"};
+exports.speedSlow = function(d){return "όρισε μικρή ταχύτητα"};
 
-exports.speedNormal = function(d){return "set speed normal"};
+exports.speedNormal = function(d){return "όρισε κανονική ταχύτητα"};
 
-exports.speedFast = function(d){return "set speed fast"};
+exports.speedFast = function(d){return "όρισε μεγάλη ταχύτητα"};
 
-exports.speedVeryFast = function(d){return "set speed very fast"};
+exports.speedVeryFast = function(d){return "όρισε πολύ μεγάλη ταχύτητα"};
 
-exports.whenClick = function(d){return "when click"};
+exports.whenClick = function(d){return "με το κλικ"};
 
-exports.whenClickTooltip = function(d){return "Execute the actions below when a click event occurs."};
+exports.whenClickTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν γίνει κλικ."};
 
-exports.whenCollideGround = function(d){return "when hit the ground"};
+exports.whenCollideGround = function(d){return "όταν χτυπήσει στο έδαφος"};
 
-exports.whenCollideGroundTooltip = function(d){return "Execute the actions below when Flappy hits the ground."};
+exports.whenCollideGroundTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν ο Φλάπι χτυπήσει στο έδαφος."};
 
-exports.whenCollideObstacle = function(d){return "when hit an obstacle"};
+exports.whenCollideObstacle = function(d){return "όταν χτυπήσει εμπόδιο"};
 
-exports.whenCollideObstacleTooltip = function(d){return "Execute the actions below when Flappy hits an obstacle."};
+exports.whenCollideObstacleTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν ο Φλάπι κτυπήσει ένα εμπόδιο."};
 
-exports.whenEnterObstacle = function(d){return "when pass obstacle"};
+exports.whenEnterObstacle = function(d){return "όταν περάσει εμπόδιο"};
 
-exports.whenEnterObstacleTooltip = function(d){return "Execute the actions below when Flappy enters an obstacle."};
+exports.whenEnterObstacleTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν ο Φλάπι ακουμπήσει ένα εμπόδιο."};
 
-exports.whenRunButtonClick = function(d){return "when Run is clicked"};
+exports.whenRunButtonClick = function(d){return "όταν το παιχνίδι αρχίζει"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Execute the actions below when the run button is pressed."};
+exports.whenRunButtonClickTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν το παιχνίδι αρχίζει."};
 
 exports.yes = function(d){return "Ναι"};
 

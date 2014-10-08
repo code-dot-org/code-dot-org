@@ -9170,7 +9170,7 @@ exports.play = function(d){return "play"};
 
 exports.puzzleTitle = function(d){return "Hádanka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "opakuj"};
+exports.repeat = function(d){return "ailadrodd"};
 
 exports.resetProgram = function(d){return "Obnovit"};
 
@@ -9453,7 +9453,7 @@ exports.shareFlappyTwitter = function(d){return "Podívejte se na hru Flappy, kt
 
 exports.shareGame = function(d){return "Sdílej svou hru:"};
 
-exports.soundRandom = function(d){return "náhodně"};
+exports.soundRandom = function(d){return "ar hap"};
 
 exports.soundBounce = function(d){return "Odrazit"};
 

@@ -11552,7 +11552,7 @@ exports.setBackgroundRetro = function(d){return "Establecer escena retro"};
 
 exports.setBackgroundTooltip = function(d){return "Establece la imagen de fondo"};
 
-exports.setBallRandom = function(d){return "Establecer pelota al azar"};
+exports.setBallRandom = function(d){return "Establecer pelota aleatoria"};
 
 exports.setBallHardcourt = function(d){return "Establecer pelota para cancha dura"};
 
@@ -11610,7 +11610,7 @@ exports.whenBallInGoal = function(d){return "Cuando la pelota esté en la porter
 
 exports.whenBallInGoalTooltip = function(d){return "Ejecuta las instrucciones siguientes cuando la pelota entra en la portería."};
 
-exports.whenBallMissesPaddle = function(d){return "cuando la paleta no golpea a la pelota"};
+exports.whenBallMissesPaddle = function(d){return "Cuando la bola no golpea la palanca"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Ejecuta las instrucciones siguientes cuando la paleta no golpea la pelota."};
 
@@ -11777,7 +11777,7 @@ exports.saveToGallery = function(d){return "Guardar en tu galería"};
 
 exports.savedToGallery = function(d){return "¡Guardado en tu galería!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Perdón, no podemos compartir este programa."};
 
 exports.typeCode = function(d){return "Escribe tu código JavaScript debajo de estas instrucciones."};
 

@@ -1,73 +1,73 @@
-"cs":
+cy:
   data:
     script:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
-          The Maze: "Bludiště"
-          Multi: "Multi"
-          Match: "Match"
-          Math Image: "Math Image"
-          title: "Test Course"
-          description: "Just an internal test course."
+          The Maze: The Maze
+          Multi: Multi
+          Match: Match
+          Math Image: Math Image
+          title: Test Course
+          description: Just an internal test course.
         course1:
           "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
           "Maze: Sequence": 'Maze: Sequence'
           "Maze: Debugging": 'Maze: Debugging'
           "Artist 1: Intro": 'Artist 1: Intro'
-          Artists 2: "Artists 2"
-          Spelling Bee: "Spelling Bee"
-          Spelling Bee not blockly: "Spelling Bee not blockly"
+          Artists 2: Artists 2
+          Spelling Bee: Spelling Bee
+          Spelling Bee not blockly: Spelling Bee not blockly
           "Bee 1: Intro": 'Bee 1: Intro'
           "Maze 2: Loops": 'Maze 2: Loops'
           "Bee 2: Loops": 'Bee 2: Loops'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
-          Flappy non blockly: "Flappy non blockly"
+          Flappy non blockly: Flappy non blockly
           title: 'Course 1 - For early readers'
-          Artist 2: "Artist 2"
-          Happy Maps: "Happy Maps"
+          Artist 2: Artist 2
+          Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: "Building a Foundation"
-          Getting Loopy: "Getting Loopy"
-          The Big Event: "The Big Event"
-          Going Places Safely: "Going Places Safely"
-          description: "Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1."
+          Building a Foundation: Building a Foundation
+          Getting Loopy: Getting Loopy
+          The Big Event: The Big Event
+          Going Places Safely: Going Places Safely
+          description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
           "Bee: Sequence": 'Bee: Sequence'
           "Artist: Sequence": 'Artist: Sequence'
           "Artist: Shapes": 'Artist: Shapes'
           "Maze: Loops": 'Maze: Loops'
           "Bee: Loops": 'Bee: Loops'
           "Studio: Create a Story": 'Play Lab: Create a Story'
-          description_short: "Course 1 is designed for early readers in the lower elementary grades."
+          description_short: Course 1 is designed for early readers in the lower elementary grades.
           "Artist: Loops": 'Artist: Loops'
         course2:
-          The Maze: "Bludiště"
-          Suzi: "Suzi"
-          The Artist: "Malíř"
-          Artist Debugging: "Artist Debugging"
-          Bounce: "Odraz"
+          The Maze: The Maze
+          Suzi: Suzi
+          The Artist: The Artist
+          Artist Debugging: Artist Debugging
+          Bounce: Bounce
           "Studio: Create a Story": 'Play Lab: Create a Story'
-          Artist Loops: "Artist Loops"
-          Bee Conditionals: "Bee Conditionals"
-          Flappy: "Flappy"
-          title: "Course 2"
-          Bee Loops: "Bee Loops"
-          Artist Functions: "Artist Functions"
-          The Artist Debugging: "The Artist Debugging"
-          Bee Debugging: "Bee Debugging"
-          Bee Functions: "Bee Functions"
-          Maze Loops: "Maze Loops"
-          Graph Paper Programming: "Programování Na Milimetrovém Papíru"
+          Artist Loops: Artist Loops
+          Bee Conditionals: Bee Conditionals
+          Flappy: Flappy
+          title: Course 2
+          Bee Loops: Bee Loops
+          Artist Functions: Artist Functions
+          The Artist Debugging: The Artist Debugging
+          Bee Debugging: Bee Debugging
+          Bee Functions: Bee Functions
+          Maze Loops: Maze Loops
+          Graph Paper Programming: Graph Paper Programming
           "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: "Getting Loopy"
-          Relay programming: "Relay programming"
-          Conditionals: "Podmínky"
-          Binary Bracelets: "Binary Bracelets"
-          The Big Event: "The Big Event"
-          Your Digital Footprint: "Your Digital Footprint"
-          description: "Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
+          Getting Loopy: Getting Loopy
+          Relay programming: Relay programming
+          Conditionals: Conditionals
+          Binary Bracelets: Binary Bracelets
+          The Big Event: The Big Event
+          Your Digital Footprint: Your Digital Footprint
+          description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
           "Maze: Sequence": 'Maze: Sequence'
           "Artist: Sequence": 'Artist: Sequence'
           "Maze: Loops": 'Maze: Loops'
@@ -76,39 +76,39 @@
           "Bee: Debugging": 'Bee: Debugging'
           "Artist: Debugging": 'Artist: Debugging'
           "Bee: Conditionals": 'Bee: Conditionals'
-          description_short: "Course 2 is designed for students who can read in the lower and middle elementary grades."
+          description_short: Course 2 is designed for students who can read in the lower and middle elementary grades.
           "Artist: Sequence2": 'Artist: Sequence2'
           "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": 'Artist: Nested Loops'
         course3:
-          The Maze: "Bludiště"
+          The Maze: The Maze
           "Studio: Create a Story": 'Play Lab: Create a Story'
-          The Artist: "Malíř"
-          title: "Course 3"
-          Artist Functions: "Artist Functions"
-          Artist For Loops: "Artist For Loops"
-          Artist Nested Loops: "Artist Nested Loops"
-          Bee Conditionals: "Bee Conditionals"
-          Bee Nested Loops: "Bee Nested Loops"
-          Bee Debuggin: "Bee Debuggin"
-          Bee Debugging: "Bee Debugging"
-          Bee Functions: "Bee Functions"
-          Artist Functions with Params: "Artist Functions with Params"
-          Bounce: "Odraz"
-          Maze Conditionals: "Maze Conditionals"
-          Artist Functions with Parameters: "Artist Functions with Parameters"
-          Computational Thinking: "Aritmetické Myšlení"
-          Functional Suncatchers: "Functional Suncatchers"
-          Songwriting Parameters: "Songwriting Parameters"
-          Dice Race: "Dice Race"
-          Internet: "Internet"
-          Crowdsourcing: "Crowdsourcing"
-          Digital Citizenship: "Digital Citizenship"
+          The Artist: The Artist
+          title: Course 3
+          Artist Functions: Artist Functions
+          Artist For Loops: Artist For Loops
+          Artist Nested Loops: Artist Nested Loops
+          Bee Conditionals: Bee Conditionals
+          Bee Nested Loops: Bee Nested Loops
+          Bee Debuggin: Bee Debuggin
+          Bee Debugging: Bee Debugging
+          Bee Functions: Bee Functions
+          Artist Functions with Params: Artist Functions with Params
+          Bounce: Bounce
+          Maze Conditionals: Maze Conditionals
+          Artist Functions with Parameters: Artist Functions with Parameters
+          Computational Thinking: Computational Thinking
+          Functional Suncatchers: Functional Suncatchers
+          Songwriting Parameters: Songwriting Parameters
+          Dice Race: Dice Race
+          Internet: Internet
+          Crowdsourcing: Crowdsourcing
+          Digital Citizenship: Digital Citizenship
           Farmer - While Loops: 'Farmer - While Loops'
-          description: "Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5."
+          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
           "Studio: Create a Game": 'Play Lab: Create a Game'
-          Maze: "Maze"
-          Artist: "Artist"
+          Maze: Maze
+          Artist: Artist
           "Artist: Functions": 'Artist: Functions'
           "Bee: Functions": 'Bee: Functions'
           "Bee: Conditionals": 'Bee: Conditionals'
@@ -117,9 +117,9 @@
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Bee: Debugging": 'Bee: Debugging'
-          description_short: "Students taking Course 3 should have already taken Course 2."
-          Maze2: "Maze2"
-          Artist2: "Artist2"
+          description_short: Students taking Course 3 should have already taken Course 2.
+          Maze2: Maze2
+          Artist2: Artist2
           "Artist: Functions2": 'Artist: Functions2'
           "Bee: Functions2": 'Bee: Functions2'
           "Bee: Conditionals2": 'Bee: Conditionals2'
@@ -130,19 +130,19 @@
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
         msm:
-          title: "Middle School Math"
-          description: "Private work in progress for Middle School Math."
-          Graph Paper Programming: "Programování Na Milimetrovém Papíru"
-          Assessments: "Assessments"
-          Unit 1: "Unit 1"
-          Unit 2: "Unit 2"
+          title: Middle School Math
+          description: Private work in progress for Middle School Math.
+          Graph Paper Programming: Graph Paper Programming
+          Assessments: Assessments
+          Unit 1: Unit 1
+          Unit 2: Unit 2
         playlab:
-          title: "Play Lab"
-          description: "Create a story or make a game with Play Lab!"
-          Play Lab: "Play Lab"
-          description_short: "Create a story or make a game with Play Lab!"
+          title: Play Lab
+          description: Create a story or make a game with Play Lab!
+          Play Lab: Play Lab
+          description_short: Create a story or make a game with Play Lab!
         artist:
-          title: "Artist"
-          description: "Draw cool pictures and designs with the Artist!"
-          Artist: "Artist"
-          description_short: "Draw cool pictures and designs with the Artist!"
+          title: Artist
+          description: Draw cool pictures and designs with the Artist!
+          Artist: Artist
+          description_short: Draw cool pictures and designs with the Artist!

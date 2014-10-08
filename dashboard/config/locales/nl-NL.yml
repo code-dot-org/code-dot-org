@@ -5,7 +5,7 @@
         blank: is required
     attributes:
       user:
-        name: naam
+        name: Weergegeven naam
         email: email
         username: Gebruikersnaam
         password: Wachtwoord
@@ -51,9 +51,9 @@
   auth:
     sign_in_with: Meld je aan met %{provider}
     signed_in: Ingelogd!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
+    signed_out: Je bent nu uitgelogd uit <a href="%{url}">Code.org</a>.
+    sign_out_of: Je hebt %{provider} gebruikt om in te loggen. <a href="%{url}">Klik
+      hier </a> om je af te melden bij %{provider}.
     already_signedup: Al aangemeld?
     notyet_signedup: nog niet aangesloten?
     google_oauth2: Google Account
@@ -64,7 +64,10 @@
     need_confirmation: Geen bevestigingsinstructies ontvangen?
     need_unlock: Nog niet uw ontgrendel instructies ontvangen?
   signup_form:
-    overview_student: Registreren voor een account voor het bijhouden van uw vooruitgang.
+    overview_student: Meld je aan voor een account om je voortgang bij te houden.
+      Je e-mail wordt in eerste instantie gebruikt om je te laten inloggen en om je
+      wachtwoord aan te passen. Zie voor meer informatie onze <a href="http://code.org/privacy">Privacy
+      Policy</a>.
     overview_teacher: Verzorg informaticalessen in je eigen klaslokaal nadat je je
       hebt aangemeld voor een account.<p/>Je kunt dan ook de vorderingen van je leerlingen
       volgen.
@@ -268,6 +271,9 @@
     header:
       finished_hoc: Ik heb mijn Uur Code afgemaakt
       sign_in_to_save: Log in om je vooruitgang op te slaan
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: Mijn leerlingen
       label: Hallo %{username}
@@ -484,6 +490,13 @@
     flappy_og_title: Check mijn Flappy Game
     studio_og_title: Lees mijn verhaal
     og_description: Ik heb met Code.org het programma zelf geschreven
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: Je hebt een nieuw script gemaakt.
     destroyed: Je hebt een script vernietigd.

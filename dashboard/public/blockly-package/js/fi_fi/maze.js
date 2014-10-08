@@ -13104,15 +13104,15 @@ exports.end = function(d){return "loppu"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"Toista\" ja \"Jos\"-lohkot tarvitsevat toisen lohkon sisäänsä toimiakseen. Varmista, että sisempi lohko asettuu oikein ulompaan lohkoon."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Lisää Funktio-lohkon sisään muita lohkoja saadaksesi koodin toimimaan oikein."};
 
-exports.extraTopBlocks = function(d){return "Sinulla on ylimääräisiä lohkoja, joita ei ole kytketty tapahtumalohkoon."};
+exports.extraTopBlocks = function(d){return "Ohjelmassa on lohkoja, joita ei ole kiinnitetty mihinkään. Ehkä ne pitäisi kiinnittää \"suoritettaessa\"-lohkoon?"};
 
 exports.finalStage = function(d){return "Onneksi olkoon! Olet suorittanut viimeisen vaiheen."};
 
 exports.finalStageTrophies = function(d){return "Onneksi olkoon! Olet suorittanut viimeisen vaiheen ja voittanut "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Valmis"};
 
 exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
 
@@ -13180,7 +13180,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Kokonaismäärä: "+p(d
 
 exports.tryAgain = function(d){return "Yritä uudestaan"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Katso vihje"};
 
 exports.backToPreviousLevel = function(d){return "Takaisin edelliseen tasoon"};
 
@@ -13210,7 +13210,7 @@ exports.watchVideo = function(d){return "Katso Video"};
 
 exports.when = function(d){return "kun"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "suoritettaessa"};
 
 exports.tryHOC = function(d){return "Kokeile koodaustuntia"};
 

@@ -1,168 +1,168 @@
-"id":
+id:
   data:
     script:
       name:
         20-hour:
-          desc: "Kursus Perkenalan ilmu komputer untuk siswa tingkat sekolah dasar dan menengah"
-          Unplug1: "Tahap 1"
-          Maze: "Tahap 2"
-          Unplug2: "Tahap 3"
-          Unplug3: "Tahap 4"
-          Artist: "Tahap 5"
-          Unplug4: "Tahap 6"
-          Artist2: "Tahap 7"
-          Unplug5: "Tahap 8"
-          Farmer: "Tahap 9"
-          Unplug6: "Tahap 10"
-          Artist3: "Tahap 11"
-          Unplug7: "Tahap 12"
-          Farmer2: "Tahap 13"
-          Unplug8: "Tahap 14"
-          Artist4: "Tahap 15"
-          Unplug9: "Tahap 16"
-          Farmer3: "Tahap 17"
-          Unplug10: "Tahap 18"
-          Artist5: "Tahap 19"
-          Unplug11: "Tahap 20"
+          desc: Kursus Perkenalan ilmu komputer untuk siswa tingkat sekolah dasar dan menengah
+          Unplug1: Tahap 1
+          Maze: Tahap 2
+          Unplug2: Tahap 3
+          Unplug3: Tahap 4
+          Artist: Tahap 5
+          Unplug4: Tahap 6
+          Artist2: Tahap 7
+          Unplug5: Tahap 8
+          Farmer: Tahap 9
+          Unplug6: Tahap 10
+          Artist3: Tahap 11
+          Unplug7: Tahap 12
+          Farmer2: Tahap 13
+          Unplug8: Tahap 14
+          Artist4: Tahap 15
+          Unplug9: Tahap 16
+          Farmer3: Tahap 17
+          Unplug10: Tahap 18
+          Artist5: Tahap 19
+          Unplug11: Tahap 20
         Hour of Code:
-          desc: "Jam kode"
-          Maze: "Tahap 1"
+          desc: Jam kode
+          Maze: Tahap 1
         Edit Code:
-          desc: "Edit kode (beta)"
-          MazeEC: "Tahap 1"
+          desc: Edit kode (beta)
+          MazeEC: Tahap 1
         2014 Levels:
-          desc: "Memantul (beta)"
-          Bounce: "Tahap 1"
+          desc: Memantul (beta)
+          Bounce: Tahap 1
         Builder Levels:
-          desc: "Teka-teki dari pengguna (beta)"
-          Custom: "Tahap 1"
+          desc: Teka-teki dari pengguna (beta)
+          Custom: Tahap 1
         Flappy Levels:
-          desc: "Burung Flappy"
-          Flappy: "Tahap 1"
+          desc: Burung Flappy
+          Flappy: Tahap 1
         Jigsaw Levels:
-          desc: "Teka-teki (beta)"
-          Jigsaw: "Tahap 1"
+          desc: Teka-teki (beta)
+          Jigsaw: Tahap 1
         Step Levels:
-          desc: "Labirin (beta)"
-          MazeStep: "Tahapan"
+          desc: Labirin (beta)
+          MazeStep: Tahapan
         edit-code:
-          desc: "Edit kode (beta)"
-          MazeEC: "Tahap 1"
+          desc: Edit kode (beta)
+          MazeEC: Tahap 1
         events:
-          desc: "Memantul (beta)"
-          Bounce: "Tahap 1"
-          Studio: "Tahap 2"
+          desc: Memantul (beta)
+          Bounce: Tahap 1
+          Studio: Tahap 2
         builder:
-          desc: "Teka-teki buatan pengguna (beta)"
-          Custom: "Tahap 1"
+          desc: Teka-teki buatan pengguna (beta)
+          Custom: Tahap 1
         flappy:
-          desc: "Flappy Bird"
-          Flappy: "Tahap 1"
+          desc: Flappy Bird
+          Flappy: Tahap 1
         jigsaw:
-          desc: "Jigsaw (beta)"
-          Jigsaw: "Tahap 1"
+          desc: Jigsaw (beta)
+          Jigsaw: Tahap 1
         step:
-          desc: "Labirin (beta)"
-          MazeStep: "Tahapan"
+          desc: Labirin (beta)
+          MazeStep: Tahapan
         wordsearch:
-          desc: "Spelling Bee (beta)"
-          WordSearch: "Tahap 1"
+          desc: Spelling Bee (beta)
+          WordSearch: Tahap 1
     game:
       name:
-        Unplug1: "Perkenalan ilmu komputer"
-        Maze: "Labirin"
-        Multi: "Beberapa pilihan barang"
-        Unplug2: "Berpikir secara komputasi"
-        Unplug3: "Pemrograman grafis diatas kertas"
-        Artist: "Artis"
-        Unplug4: "Algoritma"
-        Artist2: "Artis 2"
-        Unplug5: "Fungsi"
-        Farmer: "Petani"
-        Unplug6: "Kondisi"
-        Artist3: "Artis 3"
-        Unplug7: "Menulis lagu"
-        Farmer2: "Petani 2"
-        Unplug8: "Abstraksi"
-        Artist4: "Artis 4"
-        Unplug9: "Pemrograman relay"
-        Farmer3: "Petani 3"
-        Unplug10: "Internet"
-        Artist5: "Artis 5"
-        Unplug11: "Penutupan"
-        MazeEC: "Labirin"
-        Bounce: "Terpental"
-        Flappy: "Burung Flappy"
-        Jigsaw: "Teka-teki"
-        MazeStep: "Mode tahapan labirin"
-        Wordsearch: "Carikata"
+        Unplug1: Perkenalan ilmu komputer
+        Maze: Labirin
+        Multi: Beberapa pilihan barang
+        Unplug2: Berpikir secara komputasi
+        Unplug3: Pemrograman grafis diatas kertas
+        Artist: Artis
+        Unplug4: Algoritma
+        Artist2: Artis 2
+        Unplug5: Fungsi
+        Farmer: Petani
+        Unplug6: Kondisi
+        Artist3: Artis 3
+        Unplug7: Menulis lagu
+        Farmer2: Petani 2
+        Unplug8: Abstraksi
+        Artist4: Artis 4
+        Unplug9: Pemrograman relay
+        Farmer3: Petani 3
+        Unplug10: Internet
+        Artist5: Artis 5
+        Unplug11: Penutupan
+        MazeEC: Labirin
+        Bounce: Terpental
+        Flappy: Burung Flappy
+        Jigsaw: Teka-teki
+        MazeStep: Mode tahapan labirin
+        Wordsearch: Carikata
     trophy:
       name:
-        Bronze: "Perunggu"
-        Silver: "Perak"
-        Gold: "Emas"
+        Bronze: Perunggu
+        Silver: Perak
+        Gold: Emas
     concept:
       description:
-        sequence: "Urutan (Sequence)"
-        if: "Blok Jika (if)"
-        if_else: "Blok jika tidak (if/else)"
-        loop_times: "Blok berulang kali (Repeat)"
-        loop_until: "Blok Ulangi sampai (Repeat until)"
-        loop_while: "Blok selagi (while)"
-        loop_for: "Blok konter (Counter)"
-        function: "Fungsi"
-        parameters: "Fungsi dengan parameter"
+        sequence: Urutan (Sequence)
+        if: Blok Jika (if)
+        if_else: Blok jika tidak (if/else)
+        loop_times: Blok berulang kali (Repeat)
+        loop_until: Blok Ulangi sampai (Repeat until)
+        loop_while: Blok selagi (while)
+        loop_for: Blok konter (Counter)
+        function: Fungsi
+        parameters: Fungsi dengan parameter
     level:
       instructions:
         maze_2_2: 'Dapatkah Anda membantu saya untuk menangkap babi yang nakal? Susun beberapa blok "maju" dan tekan "Jalankan Program" untuk membantu saya. '
-        maze_2_1: "Babi ini mengganggu saya. Ayo bantu saya untuk menangkapnya!"
-        maze_2_2_5: "Bawa saya menelusuri jalan menuju babi nakal itu. Hindarilah TNT kalau tidak bulu-bulu akan beterbangan!"
-        maze_2_3: "Bantu saya untuk mencapai si babi hijau nakal! (Hati-hati ada TNT)"
-        maze_2_4: "Tetap tenang dan bantu saya untuk menangkap si babi nakal itu. Kalau tidak saya akan marah!"
-        maze_2_5: "Ada cara untuk mendapatkan babi hijau hanya dengan menggunakan 2 blok. Apakah anda bisa menemukannya?"
-        maze_2_6: "Cobalah bantu saya menangkap si babi hijau dengan menggunakan hanya tiga blok."
+        maze_2_1: Babi ini mengganggu saya. Ayo bantu saya untuk menangkapnya!
+        maze_2_2_5: Bawa saya menelusuri jalan menuju babi nakal itu. Hindarilah TNT kalau tidak bulu-bulu akan beterbangan!
+        maze_2_3: Bantu saya untuk mencapai si babi hijau nakal! (Hati-hati ada TNT)
+        maze_2_4: Tetap tenang dan bantu saya untuk menangkap si babi nakal itu. Kalau tidak saya akan marah!
+        maze_2_5: Ada cara untuk mendapatkan babi hijau hanya dengan menggunakan 2 blok. Apakah anda bisa menemukannya?
+        maze_2_6: Cobalah bantu saya menangkap si babi hijau dengan menggunakan hanya tiga blok.
         maze_2_7: 'Bantu saya menangkap si babi nakal ini dengan menggunakan blok sesedikit mungkin. Cobalah gunakan lebih dari satu blok "Ulangi".'
         maze_2_8: 'Ketika sebuah blok berwarna abu-abu, yang berarti Anda tidak dapat menghapus itu. Memecahkan teka-teki ini menggunakan "Ulangi" blok yang berulang 3 kali. Mencoba menempatkan blok ini 3 dalam blok "Ulangi" abu-abu: gerak, gerak, ubah arah.'
         maze_2_9: 'OK, cobalah blok "Ulangi sampai" - blok ini akan mengulangi sampai saya mencapai si babi yang menjengkelkan itu.'
-        maze_2_10: "Ayo coba lagi! Apakah anda dapat menyelesaikan yang satu ini dengan hanya 4 blok?"
-        maze_2_11: "Halo manusia. Saya zombie. Saya lapar. Harus... ambil... bunga matahari... Anda bisa membawa saya hanya dengan 5 blok?"
-        maze_2_12: "OK, yang satu ini sedikit berbeda. Bisakah anda lakukan hanya dengan 5 blok?"
+        maze_2_10: Ayo coba lagi! Apakah anda dapat menyelesaikan yang satu ini dengan hanya 4 blok?
+        maze_2_11: Halo manusia. Saya zombie. Saya lapar. Harus... ambil... bunga matahari... Anda bisa membawa saya hanya dengan 5 blok?
+        maze_2_12: OK, yang satu ini sedikit berbeda. Bisakah anda lakukan hanya dengan 5 blok?
         maze_2_13: 'Gunakan blok baru "jika" (If) untuk membiarkan saya memutuskan kapan untuk membelok. Tips: Anda hanya perlu menambahkan satu blok, tapi pelajari bagaimana kami mengatur blok-blok tersebut sehingga lain kali anda bisa melakukannya sendiri.'
         maze_2_14: 'OK, ini seperti teka-teki yang terakhir, tetapi anda harus ingat bagaimana menggunakan blok "jika" (if) dan blok "ulangi" (repeat) bersama-sama.'
         maze_2_15: 'Saya ingin bunga matahari! Gunakan blok "jika" (if) untuk menggerakkan saya kesana dengan blok sesedikit mungkin.'
-        maze_2_16: "OK, ayo coba lagi! Yang ini tidak jauh berbeda, tapi hati-hati dengan bunga pemakan daging!"
+        maze_2_16: OK, ayo coba lagi! Yang ini tidak jauh berbeda, tapi hati-hati dengan bunga pemakan daging!
         maze_2_17: 'Blok "jika tidak" (if-else) akan memeriksa kondisi, lalu  melakukan satu hal atau hal yang lain. Untuk membantu saya mendapatkan bunga matahari cobalah gunakan blok baru.'
         maze_2_18: 'Cobalah sekali lagi praktekkan blok "jika tidak" (if-else), bisakah Anda mendapatkannya jawaban yang benar pada percobaan pertama?'
-        maze_2_19: "Dapatkah Anda menambahkan hanya 3 blok untuk membantu saya memecahkan labirin yang lebih kompleks? Jika Anda melakukannya dengan benar, saya bisa berjalan melewati jalur berbelok manapun tidak perduli berapa panjangnya."
+        maze_2_19: Dapatkah Anda menambahkan hanya 3 blok untuk membantu saya memecahkan labirin yang lebih kompleks? Jika Anda melakukannya dengan benar, saya bisa berjalan melewati jalur berbelok manapun tidak perduli berapa panjangnya.
         turtle_1_1: 'Hi, saya seorang artis. Anda dapat menulis kode untuk membuat saya menggambar  apa pun. Gunakan beberapa blok untuk membuat saya menarik garis-garis abu-abu dalam gambar.'
         turtle_1_2: 'Sekarang, gambarlah persegi empat. Catatan: Gunakan warna favorit Anda dengan memilih di blok baru "atur warna".'
-        turtle_1_3: "Buatlah persegi empat dengan hanya 3 blok."
+        turtle_1_3: Buatlah persegi empat dengan hanya 3 blok.
         turtle_1_4: 'Gambarlah sebuah segitiga sisi yang memiliki warna yang berbeda, gunakan opsi "acak warna" yang mengambil warna yang berbeda setiap kali. Tips: Anda harus cari tahu sejauh mana membelok dengan mengklik nomor di blok belok.'
-        turtle_1_5: "Sekarang, untuk latihan, gambarlah sebuah amplop dengan menggunakan sebuah segitiga dan kemudian persegi empat."
+        turtle_1_5: Sekarang, untuk latihan, gambarlah sebuah amplop dengan menggunakan sebuah segitiga dan kemudian persegi empat.
         turtle_1_6: 'Apa anda tahu bagaimana menggambar segitiga dan segi empat? Tips: Pertama-tama buatlah segitiga, kemudian carilah cara untuk memutarnya sebelum menggambar persegi empat.'
         turtle_1_7: 'OK, ayo kita coba yang sedikit lebih sulit - Cobalah gambar kacamata hijau ini. Segi empat adalah 100 piksel pada setiap sisi, dan mereka berjarak 50 pixel. Jangan lupa untuk menggambar menggunakan warna hijau!'
         turtle_1_8: 'OK, cobalah untuk mencari tahu apa yang terjadi jika Anda menjalankan kode ini (atau tekan "Kerjakan" (run) untuk mencoba). Kemudian, ulangi untuk melengkapi gambar. Warna akan berbeda setiap saat.'
-        turtle_1_9: "Tebaklah angka apa yang harus menganti tanda tanya ini sehingga bisa tergambar sebuah lingkaran?"
+        turtle_1_9: Tebaklah angka apa yang harus menganti tanda tanya ini sehingga bisa tergambar sebuah lingkaran?
         turtle_1_10: 'Selamat Anda telah berhasil! Sekarang, gambarlah apapun yang Anda mau. Tips: anda bisa menggambar tongkat, kepingan salju atau spiral. Cobalah gunakan blok baru "atur lebar". Selamat bersenang-senang!'
         turtle_4_1: 'Dapatkan Anda menggambar segitiga (panjang 100 piksel) dengan menggunakan hanya 3 blok? Tips: Gunakanlah blok "Ulangi" (repeat).'
         turtle_4_2: 'Tambahkan blok "belok kanan 90 derajat" di suatu tempat di tengah program sudah keluar pada ruang kerja untuk menggambar segitiga ini.'
         turtle_4_3: 'OK, di sini adalah kode yang anda tulis untuk menggambar sebuah segitiga. Dapatkah Anda menambahkan blok "Ulangi" (repeat) dan blok "Belok" (turn) untuk membuat sebuah bunga yang cantik?'
         turtle_4_4: 'Berikut adalah kode yang sama dari teka-teki sebelumnya, tetapi mengubah hanya 36 derajat setelah gambar untuk setiap segitiga. Berapa kali Apakah ini perlu mengulangi? (Tips: setelah 360 derajat berputar gambar akan terbuatlah sebuah lingkaran)'
         turtle_4_5: 'Berikut adalah kode yang sama dari teka-teki sebelumnya, tetapi mengulangi perputaran 36 kali. Berapa banyak derajat yang diperlukan? (Tips: setelah 360 derajat akan terbentuklah sebuah lingkaran)'
-        turtle_4_6: "Dengan menggunakan hanya 3 blok, dapatkah Anda menggambar persegi dengan sisi 20 pixel?"
+        turtle_4_6: Dengan menggunakan hanya 3 blok, dapatkah Anda menggambar persegi dengan sisi 20 pixel?
         turtle_4_7: 'Berikut adalah kode untuk menggambar persegi siku siku dari teka-teki yang terakhir. Dapatkah anda ulangi untuk menarik 10 kotak berdekatan seperti tangga? Tips: Anda hanya perlu 2  blok extra.'
-        turtle_4_8: "Berikut adalah solusi untuk teka-teki sebelumnya. Dapatkah Anda tambahkan hanya 2 blok lain untuk menyelesaikan gambar ini?"
-        turtle_4_9: "Berikut adalah solusi untuk teka-teki sebelumnya. Berapa banyak derajat yang harus Anda ubah untuk melengkapi gambar? (Anda mungkin perlu untuk mencobanya beberapa kali)"
-        turtle_4_10: "Berikut adalah solusi untuk teka-teki sebelumnya. Berapa kali harus Anda mengulangi untuk melengkapi gambar?"
+        turtle_4_8: Berikut adalah solusi untuk teka-teki sebelumnya. Dapatkah Anda tambahkan hanya 2 blok lain untuk menyelesaikan gambar ini?
+        turtle_4_9: Berikut adalah solusi untuk teka-teki sebelumnya. Berapa banyak derajat yang harus Anda ubah untuk melengkapi gambar? (Anda mungkin perlu untuk mencobanya beberapa kali)
+        turtle_4_10: Berikut adalah solusi untuk teka-teki sebelumnya. Berapa kali harus Anda mengulangi untuk melengkapi gambar?
         turtle_4_11: 'Cobalah mengubah nomor di blok "Belok" (turn) dan blok "Ulangi" (repeat) untuk membuat pola yang berbeda. Atau, cobalah mengubah bagian dari kode untuk menggambar apapun yang Anda inginkan.'
         maze_karel_1_1: 'Hi, saya seorang petani. Saya butuh bantuan Anda untuk meratakan ladang supaya siap tanam. Pindahkan saya ke tumpukan tanah dan gunakan blok "Pindahkan" untuk memindahkannya.'
         maze_karel_1_2: 'Lalu bawalah saya ke lubang dan bantulah saya mengisi lubang dengan dua skop tanah, gunakan blok "Isi".'
-        maze_karel_1_3: "Bawa saya ke tumpukan tanah dan beritahu saya perlu berapa banyak sekop untuk pindahkan tanah menggunakan blok sesedikit mungkin."
+        maze_karel_1_3: Bawa saya ke tumpukan tanah dan beritahu saya perlu berapa banyak sekop untuk pindahkan tanah menggunakan blok sesedikit mungkin.
         maze_karel_1_4: 'Dapatkah Anda membantu saya memindahkan empat tumpukan tanah ini? Tips: Gunakan blok ulangi (repeat) jika Anda bisa.'
         maze_karel_1_5: 'Bantu saya mengisi di semua lubang ini dengan 5 sekop tanah. Tips: Anda dapat menempatkan blok "Ulangi" di dalam blok "sementara".'
         maze_karel_1_6: 'Pindahkan semua tumpukan tanah, gunakan blok sesedikit mungkin. Pilihan baru dalam dropdown menu di blok "selagi" (while) beritahu saya jika saya sedang berdiri di tumpukan atau lubang.'
-        maze_karel_1_7: "Waduh, saya menemukan lubang yang sangat dalam! Saya tidak tahu berapa banyak sekop tanah yang dibutuhkan. Dapatkah Anda menulis sebuah program yang mengisi sampai tanah sehingga datar?"
-        maze_karel_1_8: "Bantu saya menimbun lubang di ujung ladang menggunakan blok sesedikit mungkin."
+        maze_karel_1_7: Waduh, saya menemukan lubang yang sangat dalam! Saya tidak tahu berapa banyak sekop tanah yang dibutuhkan. Dapatkah Anda menulis sebuah program yang mengisi sampai tanah sehingga datar?
+        maze_karel_1_8: Bantu saya menimbun lubang di ujung ladang menggunakan blok sesedikit mungkin.
         maze_karel_1_9: 'Buatlah supaya saya bisa memindahkan semua tumpukan tanah. Cobalah gunakan blok sesedikit mungkin. Tips: Coba gunakan blok "Selama".'
         maze_karel_1_10: 'Saya bekerja lembur sehingga malam, dan tidak dapat melihat seberapa besar tumpukan ini. Karena gelap saya tidak memiliki banyak pilihan seperti ketika saya gunakan blok "sementara" (while). Bawa saya sepanjang lapangan, dan jika ada tumpukan, bantu saya memindahkannya.'
         maze_karel_1_11: 'Di luar masih gelap. Bawa saya sepanjang ladang. Jika ada tumpukan, buanglah, dan jika ada lubang, isilah. Tips: Gunakan dropdown menu pilihan di blok "jika" (if).'
@@ -180,13 +180,13 @@
         maze_karel_2_1: 'Dengan menggunakan blok-blok, bantu saya memindahkan tumpukan dan mengisi lubang di ladang. Cobalah gunakan loop daripada menggunakan banyak blok. Tips: Anda dapat menempatkan sebuah loop dalam loop lain.'
         maze_karel_2_2: 'Kita sudah mendefinisikan blok yang bernama "Isi 5", yang kini dalam kategori fungsi. Gunakanlah untuk membantu saya mengisi lubang ini.'
         maze_karel_2_3: 'Gunakan blok fungsi "Isi 5" yang baru untuk membuat saya mengisi di semua lubang. Anda harus menyeret keluar blok "Isi 5" keluar dari kategori fungsi.'
-        maze_karel_2_4: "Definisikan fungsi baru yang menghilangkan 7 sekop-sekop. Kemudian gunakanlah untuk menulis sebuah program yang membantu saya menghilangkan semua tumpukan."
-        maze_karel_2_5: "Buat fungsi baru yang menghapus 6 sekop-sekop dari tumpukan, dan gunakanlah untuk membantu saya tingkat keluar semua tumpukan."
+        maze_karel_2_4: Definisikan fungsi baru yang menghilangkan 7 sekop-sekop. Kemudian gunakanlah untuk menulis sebuah program yang membantu saya menghilangkan semua tumpukan.
+        maze_karel_2_5: Buat fungsi baru yang menghapus 6 sekop-sekop dari tumpukan, dan gunakanlah untuk membantu saya tingkat keluar semua tumpukan.
         maze_karel_2_6: 'Gunakan kedua fungsi baru, "Isi 8" dan "Hapus 8", untuk membantu saya meratakan tumpukan dan mengisi lubang.'
-        maze_karel_2_7: "Ada sapi di ladang! Buatlah fungsi baru yang membantu saya menghindari sapi dan memindahkan tumpukan. Menempatkan semua blok-blok tersebut dalam fungsi tersebut."
+        maze_karel_2_7: Ada sapi di ladang! Buatlah fungsi baru yang membantu saya menghindari sapi dan memindahkan tumpukan. Menempatkan semua blok-blok tersebut dalam fungsi tersebut.
         maze_karel_2_8: 'Menggunakan fungsi baru ini, "hindari sapi dan pindahkan 1", untuk membantu saya memindahkan semua tumpukan.'
-        maze_karel_2_9: "OK, ini adalah sebuah fungsi yang menghilangkan 4 tumpukan tanah berbeda di kolom vertikal. Cobalah menempatkan fungsi ini dalam sebuah loop, sehingga Anda menghilangkan semua tumpukan tanah hanya dengan menggunakan beberapa blok."
-        maze_karel_2_10: "Bawa saya keliling ladang, dan gunakan kedua fungsi ini untuk membantu saya memindahkan semua tumpukan dan mengisi semua lubang."
+        maze_karel_2_9: OK, ini adalah sebuah fungsi yang menghilangkan 4 tumpukan tanah berbeda di kolom vertikal. Cobalah menempatkan fungsi ini dalam sebuah loop, sehingga Anda menghilangkan semua tumpukan tanah hanya dengan menggunakan beberapa blok.
+        maze_karel_2_10: Bawa saya keliling ladang, dan gunakan kedua fungsi ini untuk membantu saya memindahkan semua tumpukan dan mengisi semua lubang.
         turtle_3_1: 'Teka-teki ini menunjukkan kepada Anda bagaimana membuat fungsi "gambar persegi empat" dan fungsi "gambar sebuah lingkaran".  Membuat sebuah fungsi tidak otomatis menjalankan fungsi tersebut.  Untuk menjalankan blok tersebut Anda harus menarik blok keluar untuk menjalankan program yang menggambar persegi empat.'
         turtle_3_2: 'Gunakan fungsi "gambar persegi" sebagai contoh, buat fungsi "gambar segitiga" dan  gunakanlah.'
         turtle_3_3: 'Gambar pagar segitiga mengelilingi kucing-kucing dan pagar segi empat mengelilingi sapi. Tips: uji program selagi anda membuatnya.'
@@ -196,38 +196,38 @@
         turtle_3_7: 'Tambahkan input bernama "tinggi" untuk "gambar rumah" dan membangun sebuah rumah yang besar untuk gajah (panjang 150 pixel)'
         turtle_3_8: 'Berikut adalah semua blok dari teka-teki sebelumnya.  Modifikasi "gambar rumah" sehingga saya berada di sudut kanan bawah setelah mengambar rumah baru. Gunakan fungsi yang telah dimodifikasi ini untuk menggambar tiga rumah.'
         turtle_3_9: 'Dapatkah Anda kembali membuat fungsi "gambar sebuah rumah" tanpa bantuan? Cobalah, dan kemudian gambarlah sederetan rumah.'
-        turtle_3_10: "Anda telah banyak belajar! Sekarang cobalah untuk menggambar apapun yang anda mau. Misalnya cobalah untuk menggambar sebuah bintang, sebuah spiral, atau kepingan salju."
-        maze_karel_debug_seq_1: "Selamat datang di debugging! Kode saya tidak bekerja dengan benar. Bisakah anda menemukan masalah dan memperbaikinya sehingga saya bisa mendapat lapangan datar dan siap tanam?"
-        maze_karel_debug_seq_2: "Apa salah dengan program ini? Bagaimana Anda harus memperbaikinya sehingga saya dapat memindahkan tumpukan itu?"
-        maze_karel_debug_repeat: "Perbaiki program ini untuk saya sehingga menjadi ladang yang bagus dan datar."
-        maze_karel_debug_while: "Dapatkah anda membetulkan program ini sehingga saya bisa menimbun lubang?"
-        maze_karel_debug_if: "Tolong! Perbaiki program ini sehingga ladang saya menjadi benar-benar datar."
-        maze_karel_debug_if_else: "Perbaiki program ini sehingga saya bisa mengisi lubang dan memindahkan semua tumpukkan."
-        maze_karel_debug_function_1: "Apa yang harus diubah di dalam program ini supaya bisa menolong saya memindahkan semua tumpukan ini?"
+        turtle_3_10: Anda telah banyak belajar! Sekarang cobalah untuk menggambar apapun yang anda mau. Misalnya cobalah untuk menggambar sebuah bintang, sebuah spiral, atau kepingan salju.
+        maze_karel_debug_seq_1: Selamat datang di debugging! Kode saya tidak bekerja dengan benar. Bisakah anda menemukan masalah dan memperbaikinya sehingga saya bisa mendapat lapangan datar dan siap tanam?
+        maze_karel_debug_seq_2: Apa salah dengan program ini? Bagaimana Anda harus memperbaikinya sehingga saya dapat memindahkan tumpukan itu?
+        maze_karel_debug_repeat: Perbaiki program ini untuk saya sehingga menjadi ladang yang bagus dan datar.
+        maze_karel_debug_while: Dapatkah anda membetulkan program ini sehingga saya bisa menimbun lubang?
+        maze_karel_debug_if: Tolong! Perbaiki program ini sehingga ladang saya menjadi benar-benar datar.
+        maze_karel_debug_if_else: Perbaiki program ini sehingga saya bisa mengisi lubang dan memindahkan semua tumpukkan.
+        maze_karel_debug_function_1: Apa yang harus diubah di dalam program ini supaya bisa menolong saya memindahkan semua tumpukan ini?
         maze_karel_debug_function_2: 'Dapatkah anda memperbaiki program ini untuk saya supaya  dapat membuat ladang ini menjadi datar?'
         maze_karel_debug_function_3: 'Perbaiki program ini sehingga saya bisa memindahkan semua tumpukan di ladang saya. '
-        turtle_5_1: "Cobalah jalankan program ini, dan buatlah perubahan untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus dan ganti dengan komposisi yang berbeda)"
-        turtle_5_2: "Cobalah jalankan program ini, dan buatlah perubahan untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus dan ganti dengan komposisi yang berbeda)"
-        turtle_5_3: "Cobalah jalankan program ini, dan buatlah perubahan untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus dan ganti dengan komposisi yang berbeda)"
-        turtle_5_4: "Cobalah jalankan program ini, dan buatlah perubahan untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus dan ganti dengan komposisi yang berbeda)"
-        turtle_5_5: "Cobalah jalankan program ini, dan buatlah perubahan untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus dan ganti dengan komposisi yang berbeda)"
-        turtle_5_6: "Cobalah jalankan program ini, dan buatlah perubahan untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus dan ganti dengan komposisi yang berbeda)"
-        maze_3_1: "Saya perlu dapatkan babi itu! Ketik beberapa panggilan untuk move(); sehingga saya bisa dapatkan telur saya kembali."
-        maze_3_2: "Buatkan saya sebuah program, sehingga saya bisa mencapai babi itu."
-        maze_3_3: "Bagaimanacara saya bisa menangkap babi itu? Pastikan saya tidak menabrak kotak TNT!"
+        turtle_5_1: Cobalah jalankan program ini, dan buatlah perubahan untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus dan ganti dengan komposisi yang berbeda)
+        turtle_5_2: Cobalah jalankan program ini, dan buatlah perubahan untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus dan ganti dengan komposisi yang berbeda)
+        turtle_5_3: Cobalah jalankan program ini, dan buatlah perubahan untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus dan ganti dengan komposisi yang berbeda)
+        turtle_5_4: Cobalah jalankan program ini, dan buatlah perubahan untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus dan ganti dengan komposisi yang berbeda)
+        turtle_5_5: Cobalah jalankan program ini, dan buatlah perubahan untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus dan ganti dengan komposisi yang berbeda)
+        turtle_5_6: Cobalah jalankan program ini, dan buatlah perubahan untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus dan ganti dengan komposisi yang berbeda)
+        maze_3_1: Saya perlu dapatkan babi itu! Ketik beberapa panggilan untuk move(); sehingga saya bisa dapatkan telur saya kembali.
+        maze_3_2: Buatkan saya sebuah program, sehingga saya bisa mencapai babi itu.
+        maze_3_3: Bagaimanacara saya bisa menangkap babi itu? Pastikan saya tidak menabrak kotak TNT!
         maze_3_4: |
           Waduh! Buatkan saya sebuah program yang membantu saya mencapai babi tetapi menghindari TNT.
           
         bounce_1: 'Tempatkan satu blok ke blok "Jika anak panah kiri" dan tekan "Jalankan Program". Gerakkan menggunakan tombol panah kiri untuk mencapai target.'
         bounce_2: 'Tempelkan sebuah blok ke blok "Jika anak panah kanan" dan blok "Jika anak panah kiri". Pindahkan dayung untuk mencapai kedua target.'
         bounce_3: 'Sekarang cobalah sesuatu yang mirip dengan blok "ketika panah keatas". Jalankan dayung untuk mencapai target diatas.'
-        bounce_4: "Kali ini Anda perlu menambahkan empat blok. Pindahkan dayung untuk mencapai keempat target dan menyelesaikan teka-teki ini."
+        bounce_4: Kali ini Anda perlu menambahkan empat blok. Pindahkan dayung untuk mencapai keempat target dan menyelesaikan teka-teki ini.
         bounce_5: 'Kami akan melemparkan bola menuju dayung. Tempelkan satu blok ke blok "ketika bola mengenai dayung" untuk memastikan bola mencapai garis finish.'
         bounce_6: 'Sekarang target garis finish ada di atas. Anda harus tempelkan blok kepada dua blok "Ketika bola mengenai" untuk memecahkan teka-teki ini.'
         bounce_7: 'Tempelkan blok untuk masing-masing blok "Jika". Pantulkan bola sampai mengenai target.'
         bounce_10: 'Ada sebuah target di atas. Tempelkan blok "Skor poin" dan blok "Skor poin lawan" ke blok "Jika bola di target" dan blok "Jika bola meleset dari dayung" untuk membuat permainan. Lihat berapa banyak poin yang Anda bisa dapat, sebelum lawan Anda mendapat dua kali lebih banyak.'
         bounce_11: 'Anda sekarang dapat menempatkan blok-blok kepada blok "ketika permainan dimulai". Anda harus menempelkan blok "luncuran bola baru" lebih dari satu tempat. Lalu cobalah mengubah adegan atau kecepatan kayuh dan bola dan untuk melihat berapa banyak poin yang Anda dapat sebelum lawan Anda mendapatkan poin dua kali lebih banyak.'
-        bounce_12: "Butalah game Bounce anda. Anda dapat merubah semua visualisasi dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda agar ia mencoba pada ponselnya."
+        bounce_12: Butalah game Bounce anda. Anda dapat merubah semua visualisasi dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda agar ia mencoba pada ponselnya.
         Custom_builder: 'Tarik blok dari toolbox ke ruang kerja untuk menggambar tingkat yang Anda ingin buat. Tekan "Jalankan Program" ketika Anda selesai.'
         flappy_1: 'Tempatkan satu blok pada blok "Ketika klik", kemudian tekan "Jalankan Program". Klik atau sentuh layar untuk mengerakkan Flappy menuju target.'
         flappy_2: |-
@@ -236,12 +236,12 @@
         flappy_4: |-
           Flappy akan terbang melalui hambatan kecuali Anda menulis kode untuk membuatnya menabrak. Lampirkan blok ke blok "ketika mengenai hambatan". Kode Anda perlu 'Permainan berakhir' ketika Flappy menghantam set pipa pertama.
         flappy_5: 'Mari kita tambahkan scoreboard, dan menghitung poin saat Flappy melewati hambatan. Tambahkan ke blok "ketika melewati hambatan", dan kemudian raihlah Skor lebih dengan membuat Flappy terbang melalui set pipa pertama.'
-        flappy_6: "Perhatikan apakah Anda masih bisa mendapat Skor setelah mengubah Flappy mengepak sayap lebih banyak atau lebih sedikit."
+        flappy_6: Perhatikan apakah Anda masih bisa mendapat Skor setelah mengubah Flappy mengepak sayap lebih banyak atau lebih sedikit.
         flappy_7: 'Selanjutnya, cobalah mengubah adegan dengan melampirkan blok yang lain ke blok "ketika menjalankan".'
-        flappy_8: "Kamu dapat mengatur visual kapan saja, tidak perlu hanya ketika permainan dimulai. Cobalah membuat latar belakang berubah secara acak ketika event berganti, misalnya ketika melewati penghalang."
-        flappy_9: "Untuk membuat permainan lebih bervariasi, jika mengenai hambatan atau suatu permukaan, Anda dapat membuat permainan kembali ke skor 0, daripada mengakhiri permainan."
-        flappy_11: "Butalah game Flappy anda. Anda dapat merubah semua visualisasi dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda agar ia mencoba pada ponselnya."
-        flappy_k1_1: "Mainkan Flappy"
+        flappy_8: Kamu dapat mengatur visual kapan saja, tidak perlu hanya ketika permainan dimulai. Cobalah membuat latar belakang berubah secara acak ketika event berganti, misalnya ketika melewati penghalang.
+        flappy_9: Untuk membuat permainan lebih bervariasi, jika mengenai hambatan atau suatu permukaan, Anda dapat membuat permainan kembali ke skor 0, daripada mengakhiri permainan.
+        flappy_11: Butalah game Flappy anda. Anda dapat merubah semua visualisasi dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda agar ia mencoba pada ponselnya.
+        flappy_k1_1: Mainkan Flappy
         flappy_k1_2: 'Tempatkan satu blok pada blok "Ketika klik", kemudian tekan "Jalankan Program". Klik atau sentuh layar untuk mengerakkan Flappy menuju target.'
         flappy_k1_3: |-
           Sekarang kita telah menambahkan beberapa permukaan.  Tempelkan blok ke blok "ketika mencapai permukaan".  Kode Anda memerlukan 'PERMAINAN BERAKHIR' ketika Flappy menghantam permukaan.
@@ -249,159 +249,159 @@
         flappy_k1_5: |-
           Flappy akan terbang melalui hambatan kecuali Anda menulis kode untuk membuatnya menabrak. Temaptkan blok-blok ke dalam blok "ketika mengenai hambatan". Kode Anda perlu 'Permainan berakhir' ketika Flappy menghantam sekumpulan pipa.
         flappy_k1_6: 'Mari kita tambahkan scoreboard, dan menghitung poin saat Flappy melewati hambatan. Tambahkan ke blok "ketika melewati hambatan", dan kemudian raihlah Skor lebih dengan membuat Flappy terbang melalui sekumpulan pipa.'
-        flappy_k1_7: "Lihat jika Anda dapat Skor beberapa poin untuk melewati hambatan"
+        flappy_k1_7: Lihat jika Anda dapat Skor beberapa poin untuk melewati hambatan
         flappy_k1_8: 'Selanjutnya, cobalah mengubah adegan dengan melampirkan blok yang lain ke blok "ketika menjalankan".'
         flappy_k1_9: 'Cobalah mengubah pemain dengan menempatkan "mengatur pemain" blok ke blok "ketika menjalankan".'
-        jigsaw_1: "Klik blok"
-        jigsaw_2: "Tarik blok ke target"
-        jigsaw_3: "Atur blok untuk membentuk gambar"
-        jigsaw_4: "Atur blok untuk membentuk gambar"
-        jigsaw_5: "Atur blok untuk membentuk gambar"
-        jigsaw_6: "Atur blok untuk membentuk gambar"
-        jigsaw_7: "Atur blok untuk membentuk gambar"
-        jigsaw_8: "Atur blok untuk membentuk gambar"
-        jigsaw_9: "Atur blok untuk membentuk gambar"
-        jigsaw_10: "Atur blok untuk membentuk gambar"
-        jigsaw_11: "Atur blok untuk membentuk gambar"
-        jigsaw_12: "Atur blok untuk membentuk gambar"
-        jigsaw_13: "Perbaiki teka-teki!"
-        mazestep_1: "Deskripsi tahapan labirin di sini"
-        mazestep_2: "Deskripsi tahapan labirin di sini"
-        mazestep_3: "Deskripsi tahapan labirin di sini"
-        mazestep_4: "Deskripsi tahapan labirin di sini"
-        mazestep_5: "Deskripsi tahapan labirin di sini"
+        jigsaw_1: Klik blok
+        jigsaw_2: Tarik blok ke target
+        jigsaw_3: Atur blok untuk membentuk gambar
+        jigsaw_4: Atur blok untuk membentuk gambar
+        jigsaw_5: Atur blok untuk membentuk gambar
+        jigsaw_6: Atur blok untuk membentuk gambar
+        jigsaw_7: Atur blok untuk membentuk gambar
+        jigsaw_8: Atur blok untuk membentuk gambar
+        jigsaw_9: Atur blok untuk membentuk gambar
+        jigsaw_10: Atur blok untuk membentuk gambar
+        jigsaw_11: Atur blok untuk membentuk gambar
+        jigsaw_12: Atur blok untuk membentuk gambar
+        jigsaw_13: Perbaiki teka-teki!
+        mazestep_1: Deskripsi tahapan labirin di sini
+        mazestep_2: Deskripsi tahapan labirin di sini
+        mazestep_3: Deskripsi tahapan labirin di sini
+        mazestep_4: Deskripsi tahapan labirin di sini
+        mazestep_5: Deskripsi tahapan labirin di sini
         studio_c2_1: 'Dapatkah anda membuat anjing ini mengatakan "Halo dunia"?'
-        studio_c2_2: "Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian membuat kucing itu mengatakan sesuatu?"
-        studio_c2_3: "Dapatkah anda menulis program untuk membuat anjing ini bergerak menuju kucing?"
+        studio_c2_2: Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian membuat kucing itu mengatakan sesuatu?
+        studio_c2_3: Dapatkah anda menulis program untuk membuat anjing ini bergerak menuju kucing?
         studio_c2_4: 'Dapatkah anda menulis program untuk membuat anjing menuju kucing dan membuat kucing mengatakan "halo" ketika anjing mencapainya?'
         studio_c2_5: 'Bisakah kamu menuliskan program untuk membuat si gurita mengatakan "halo" saat diklik?'
-        studio_c2_6: "Dapatkah anda menulis program untuk membuat penguin bergerak menggunakan tombol atas / bawah / kiri / kanan untuk memukul semua sasaran?"
+        studio_c2_6: Dapatkah anda menulis program untuk membuat penguin bergerak menggunakan tombol atas / bawah / kiri / kanan untuk memukul semua sasaran?
         studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
         studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
-        studio_c2_10: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
+        studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
+        studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_story_1: 'Bisakah kamu membuat anjing ini berkata "halo dunia"?'
-        studio_c3_story_2: "Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian membuat kucing itu mengatakan sesuatu?"
-        studio_c3_story_3: "Dapatkah anda menulis program untuk membuat anjing ini bergerak menuju kucing?"
+        studio_c3_story_2: Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian membuat kucing itu mengatakan sesuatu?
+        studio_c3_story_3: Dapatkah anda menulis program untuk membuat anjing ini bergerak menuju kucing?
         studio_c3_story_4: 'Dapatkah anda menulis program untuk membuat anjing menuju kucing dan membuat kucing mengatakan "halo" ketika anjing mencapainya?'
-        studio_c3_story_5: "Can you add a block to make the octopus happy?"
+        studio_c3_story_5: Can you add a block to make the octopus happy?
         studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_game_1: 'Bisakah kamu menuliskan program untuk membuat si gurita mengatakan "halo" saat diklik?'
-        studio_c3_game_2: "Dapatkah anda menulis program untuk membuat penguin bergerak menggunakan tombol atas / bawah / kiri / kanan untuk memukul semua sasaran?"
+        studio_c3_game_2: Dapatkah anda menulis program untuk membuat penguin bergerak menggunakan tombol atas / bawah / kiri / kanan untuk memukul semua sasaran?
         studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
         studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
-        studio_c3_game_6: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
+        studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
+        studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_playlab_1: 'Bisakah kamu membuat anjing ini berkata "halo dunia"?'
-        studio_playlab_2: "Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian membuat kucing itu mengatakan sesuatu?"
-        studio_playlab_3: "Dapatkah anda menulis program untuk membuat anjing ini bergerak menuju kucing?"
+        studio_playlab_2: Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian membuat kucing itu mengatakan sesuatu?
+        studio_playlab_3: Dapatkah anda menulis program untuk membuat anjing ini bergerak menuju kucing?
         studio_playlab_4: 'Dapatkah anda menulis program untuk membuat anjing menuju kucing dan membuat kucing mengatakan "halo" ketika anjing mencapainya?'
         studio_playlab_5: 'Bisakah kamu menuliskan program untuk membuat si gurita mengatakan "halo" saat diklik?'
-        studio_playlab_6: "Dapatkah anda menulis program untuk membuat penguin bergerak menggunakan tombol atas / bawah / kiri / kanan untuk memukul semua sasaran?"
+        studio_playlab_6: Dapatkah anda menulis program untuk membuat penguin bergerak menggunakan tombol atas / bawah / kiri / kanan untuk memukul semua sasaran?
         studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_playlab_8: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
-        studio_playlab_9: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
+        studio_playlab_8: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
+        studio_playlab_9: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_k1_1: 'Bisakah kamu membuat anjing ini berkata "halo dunia"?'
-        studio_k1_2: "Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian membuat kucing itu mengatakan sesuatu?"
-        studio_k1_3: "Dapatkah anda menulis program untuk membuat anjing ini bergerak menuju kucing?"
+        studio_k1_2: Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian membuat kucing itu mengatakan sesuatu?
+        studio_k1_3: Dapatkah anda menulis program untuk membuat anjing ini bergerak menuju kucing?
         studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
-        studio_k1_5: "Can you add a block to make the octopus happy?"
-        studio_k1_6: "Create your own story! Move around the cat and dog, and make them say things."
-        maze_wordsearch_k_1: "Pindahkan saya untuk mengeja kata Timur"
-        maze_wordsearch_k_2: "Pindahkan saya untuk mengeja kata Selatan"
-        maze_wordsearch_k_3: "Pindahkan saya untuk mengeja kata Barat"
-        maze_wordsearch_k_4: "Pindahkan saya untuk mengeja kata Utara"
-        maze_wordsearch_k_6: "Move me East and then South to spell the word JUMP"
-        maze_wordsearch_k_9: "Move me one way, then another to spell the word CODE"
-        maze_wordsearch_k_13: "Move me one way, then another to spell the word DEBUG"
-        maze_wordsearch_k_15: "Move me one way, then another to spell the word ABOVE"
-        maze_wordsearch_k_16: "Move me one way, then another to spell the word BELOW"
-        maze_wordsearch_k_20: "This is a test! Move me one way, then another to spell the word STORY"
+        studio_k1_5: Can you add a block to make the octopus happy?
+        studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
+        maze_wordsearch_k_1: Pindahkan saya untuk mengeja kata Timur
+        maze_wordsearch_k_2: Pindahkan saya untuk mengeja kata Selatan
+        maze_wordsearch_k_3: Pindahkan saya untuk mengeja kata Barat
+        maze_wordsearch_k_4: Pindahkan saya untuk mengeja kata Utara
+        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
+        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
+        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
+        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
+        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
+        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
     video:
       name:
-        maze_intro: "Apa itu Labirin?"
-        artist_intro: "Apa itu Artis?"
-        farmer_intro: "Apa itu Petani?"
+        maze_intro: Apa itu Labirin?
+        artist_intro: Apa itu Artis?
+        farmer_intro: Apa itu Petani?
         flappy_intro: 'Introduksi untuk Flappy '
-        loop_times: "Blok Ulangi"
-        loop_until: "Blok Ulangi Sampai"
-        if: "Blok Jika (if)"
-        if_else: "Blok jika tidak (if/else)"
-        function: "Fungsi"
-        loop_while: "Blok Selagi (while)"
-        loop_for: "Blok konter (Counter)"
-        parameters: "Fungsi dengan parameter"
-        hoc_wrapup: "Penutupan Jam kode"
+        loop_times: Blok Ulangi
+        loop_until: Blok Ulangi Sampai
+        if: Blok Jika (if)
+        if_else: Blok jika tidak (if/else)
+        function: Fungsi
+        loop_while: Blok Selagi (while)
+        loop_for: Blok konter (Counter)
+        parameters: Fungsi dengan parameter
+        hoc_wrapup: Penutupan Jam kode
         20_wrapup: 'Penutupan 20 Jam '
-        Unplug1: "What is CS?"
-        Unplug2: "Berpikir secara komputasi"
-        Unplug3: "Pemrograman grafis diatas kertas"
-        Unplug4: "Algoritma"
-        Unplug5: "Fungsi"
-        Unplug6: "Kondisi"
-        Unplug7: "Penulis lagu"
-        Unplug8: "Abstraksi"
-        Unplug9: "Relay programming"
-        Unplug10: "Internet"
-        Unplug11: "Penutupan"
-        C1_happy_maps_unplugged: "Happy Maps"
-        C1_moveitmoveit_unplugged: "Gerakkan itu, Gerakkan itu"
-        C1_bigevent_unplugged: "Acara besar"
-        C1_getting_loop: "Getting Loopy"
-        C1_pair_programming: "Pemrograman berpasangan"
-        C1_maze_intro_sequencing: "Introduksi Sekuensi Labirin"
-        C1_maze_debugging: "Labirin Debugging"
+        Unplug1: What is CS?
+        Unplug2: Berpikir secara komputasi
+        Unplug3: Pemrograman grafis diatas kertas
+        Unplug4: Algoritma
+        Unplug5: Fungsi
+        Unplug6: Kondisi
+        Unplug7: Penulis lagu
+        Unplug8: Abstraksi
+        Unplug9: Relay programming
+        Unplug10: Internet
+        Unplug11: Penutupan
+        C1_happy_maps_unplugged: Happy Maps
+        C1_moveitmoveit_unplugged: Gerakkan itu, Gerakkan itu
+        C1_bigevent_unplugged: Acara besar
+        C1_getting_loop: Getting Loopy
+        C1_pair_programming: Pemrograman berpasangan
+        C1_maze_intro_sequencing: Introduksi Sekuensi Labirin
+        C1_maze_debugging: Labirin Debugging
         C1_bee_level_intro: 'Tingkat Lebah - Introduksi'
-        C1_artist_intro: "Introduksi Artis"
-        C1_spelling_bee_intro: "Intro Spelling Bee"
-        C1_zuck_repeat_loop: "Pengulangan labirin"
-        C1_bee_loops: "Pengulangan lebah"
-        C1_maze_loops: "Pengulangan labirin"
+        C1_artist_intro: Introduksi Artis
+        C1_spelling_bee_intro: Intro Spelling Bee
+        C1_zuck_repeat_loop: Pengulangan labirin
+        C1_bee_loops: Pengulangan lebah
+        C1_maze_loops: Pengulangan labirin
         C1_playlab_storytelling: 'Mainkan Lab - Buat sebuah Cerita'
-        C1_planting_seed: "Penanaman benih"
-        C1_building_foundating: "Membangun dasar"
-        C2_maze_intro: "Introduksi labirin"
-        C2_artist_intro: "Introduksi Artis"
-        C2_zuck_repeat_loop: "Pengulangan labirin"
-        C2_artist_loops: "Artist Loops"
-        C2_bee_conditionals: "kondisi lebah"
+        C1_planting_seed: Penanaman benih
+        C1_building_foundating: Membangun dasar
+        C2_maze_intro: Introduksi labirin
+        C2_artist_intro: Introduksi Artis
+        C2_zuck_repeat_loop: Pengulangan labirin
+        C2_artist_loops: Artist Loops
+        C2_bee_conditionals: kondisi lebah
         C2_playlab_createstory: 'Mainkan Lab - Buat sebuah Cerita'
-        C2_graph_paper: "Pemrograman grafis diatas kertas"
-        C2_conditionals_with_cards: "Kondisi"
-        C2_binary_bracelets: "Gelang biner"
-        C2_replay_programming: "Pemrograman relay"
-        C2_paper_airplanes: "Pesawat kertas"
-        C3_maze_intro: "Apa itu Labirin?"
-        C3_artist_intro: "Apa itu Artis?"
-        C3_artist_functions: "Artist Functions"
-        C3_bee_functions: "Bee Functions"
-        C3_bee_conditionals: "Bee Conditionals"
-        C3_maze_conditionals: "Maze Conditionals"
-        C3_artist_nested_loops: "Nested Loops"
-        C3_farmer_while: "While Loops"
-        C3_bee_nested_loops: "Nested Loops"
-        C3_bee_debugging: "Bee Debugging"
-        C3_bounce: "Terpental"
+        C2_graph_paper: Pemrograman grafis diatas kertas
+        C2_conditionals_with_cards: Kondisi
+        C2_binary_bracelets: Gelang biner
+        C2_replay_programming: Pemrograman relay
+        C2_paper_airplanes: Pesawat kertas
+        C3_maze_intro: Apa itu Labirin?
+        C3_artist_intro: Apa itu Artis?
+        C3_artist_functions: Artist Functions
+        C3_bee_functions: Bee Functions
+        C3_bee_conditionals: Bee Conditionals
+        C3_maze_conditionals: Maze Conditionals
+        C3_artist_nested_loops: Nested Loops
+        C3_farmer_while: While Loops
+        C3_bee_nested_loops: Nested Loops
+        C3_bee_debugging: Bee Debugging
+        C3_bounce: Terpental
         C3_playlab_create_game: 'Play Lab - Create a Game'
-        C3_computational_thinking: "Berpikir secara komputasi"
-        C3_dice_race: "Dice Race"
-        C3_internet: "Internet"
-        C3_crowdsourcing: "Crowdsourcing"
-        C3_functional_suncatchers: "Functional Suncatchers"
-        C3_songwriting_with_parameters: "Songwriting With Parameters"
+        C3_computational_thinking: Berpikir secara komputasi
+        C3_dice_race: Dice Race
+        C3_internet: Internet
+        C3_crowdsourcing: Crowdsourcing
+        C3_functional_suncatchers: Functional Suncatchers
+        C3_songwriting_with_parameters: Songwriting With Parameters
     callout:
       text:
         drag_blocks: 'Tarik blok "gerak" dan letakkan di bawah blok lain'
         run: 'Klik "Jalankan program" untuk mencoba program Anda'
-        watch_again: "Klik di sini untuk menonton video lagi"
-        gray_block_explanation: "Blok berwarna abu-abu tidak dapat dihapus. Dapatkah anda memecahkan teka-teki ini?"
-        show_code_explanation: "Klik di sini untuk melihat kode untuk program yang Anda buat"
-        instructions_repeat_explanation: "Petunjuk untuk setiap teka-teki dapat diulang di sini"
-        category_explanation: "Anda memiliki semua sama blok tetapi mereka sekarang diatur dalam kategori"
+        watch_again: Klik di sini untuk menonton video lagi
+        gray_block_explanation: Blok berwarna abu-abu tidak dapat dihapus. Dapatkah anda memecahkan teka-teki ini?
+        show_code_explanation: Klik di sini untuk melihat kode untuk program yang Anda buat
+        instructions_repeat_explanation: Petunjuk untuk setiap teka-teki dapat diulang di sini
+        category_explanation: Anda memiliki semua sama blok tetapi mereka sekarang diatur dalam kategori
         set_sprite_image: 'Temaptkan "mengatur aktor gambar" blok ke dalam blok "ketika cerita mulai" untuk mengaktifkan aktor untuk cerita ini'
-        studio_say_text: "Tuliskan apa yang anda inginkan untuk aktor katakan dalam tanda kutip tersebut"
-        jigsaw_click: "Klik blok ini!"
+        studio_say_text: Tuliskan apa yang anda inginkan untuk aktor katakan dalam tanda kutip tersebut
+        jigsaw_click: Klik blok ini!

@@ -10711,7 +10711,7 @@ exports.saveToGallery = function(d){return "Salva nella tua galleria"};
 
 exports.savedToGallery = function(d){return "Salvato nella tua galleria!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Ci dispiace, non possiamo condividere questo programma."};
 
 exports.typeCode = function(d){return "Digita il tuo codice JavaScript sotto queste istruzioni."};
 

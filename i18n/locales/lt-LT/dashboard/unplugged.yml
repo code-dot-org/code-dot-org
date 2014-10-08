@@ -1,147 +1,147 @@
-"lt":
+lt:
   data:
     unplugged:
       Unplug1:
-        title: "Informatikos įvadas"
-        desc: "Šioje pamokėlėje bus supažindinama su informatikos samprata ir paaiškinama, ką dirba IT specialistas. Mokiniams bus suteikta galimybė pasijusti IT specialisto kailyje. Pamokėlės pabaigoje kiekvienas mokinys nešis namo priminimą, ką jis ar ji išmoko. Jūs galite būti linkę praleisti tokias pamokėles ir nemokyti vaikų įvairių sąvokų, kurios yra susijusios su pamokėlėmis, tačiau jas mokyti galima labai žaismingai ir tai bus daug labiau produktyvu, nei ieškoti geresnių galimybių."
+        title: Programavimo įvadas
+        desc: 'Šioje pamokėlėje bus supažindinama su programavimo samprata ir paaiškinama, ką dirba IT specialistas. Mokiniams bus suteikta galimybė pasijusti IT specialisto kailyje. Pamokėlės pabaigoje kiekvienas mokinys nešis namo priminimą, ką jis ar ji išmoko. Jūs galite būti linkę praleisti  įvairių sąvokų paaiškinimus, tačiau jas mokyti galima labai žaismingai.'
         pdfs:
           - unplug1
-        video: "Unplug1"
+        video: Unplug1
       Unplug2:
-        title: "Skaičiuojamasis mąstymas"
-        desc: "Mokiniai, nenaudodami kompiuterių, o tik popierių ir flomasterius, išmoks keturis kompiuterinio mąstymo žingsnius. Po trumpos įžangos, mokinius reikėtų padalyti į kelias grupes, kuriose jie surašys instrukcijas kitiems mokiniams, pagal kurias reikės nupiešti tam tikrus monstrus (iš jau paruošto monstrų katalogo). Užduotis turi būti išskaidyta, o mokinių komandos analizuos visus monstrus iš katalogo ir peržiūrės skirtingas jų detales. Tuomet, panaudodami šią informaciją, jie sukurs algoritmą (instrukcijas) kitai komandai, kad ji nupieštų tam tikrą monstrą. Komandos turės apsikeisti algoritmais ir pagal juos nupiešti monstrus. Po to bus patikrinama, ar mokiniai nupiešė tokį monstrą, kurį sugalvojo kita grupė."
+        title: Skaičiuojamasis mąstymas
+        desc: Mokiniai, nenaudodami kompiuterių, o tik popierių ir flomasterius, išmoks keturis kompiuterinio mąstymo žingsnius. Po trumpos įžangos, mokinius reikėtų padalyti į kelias grupes, kuriose jie surašys instrukcijas kitiems mokiniams, pagal kurias reikės nupiešti tam tikrus monstrus (iš jau paruošto monstrų katalogo). Užduotis turi būti išskaidyta, o mokinių komandos analizuos visus monstrus iš katalogo ir peržiūrės skirtingas jų detales. Tuomet, panaudodami šią informaciją, jie sukurs algoritmą (instrukcijas) kitai komandai, kad ji nupieštų tam tikrą monstrą. Komandos turės apsikeisti algoritmais ir pagal juos nupiešti monstrus. Po to bus patikrinama, ar mokiniai nupiešė tokį monstrą, kurį sugalvojo kita grupė.
         pdfs:
           - unplug2
-        video: "Unplug2"
+        video: Unplug2
       Unplug3:
-        title: "Programavimas ant languoto popieriaus"
+        title: Programavimas ant languoto popieriaus
         desc: "By programming one another to draw pictures, students will begin to understand what programming is really about. The class will begin by students instructing each other to color squares in on graph paper in an effort to reproduce an existing picture.  If there's time, the lesson can conclude with images that the students create themselves."
         pdfs:
           - unplug3
-        video: "Unplug3"
+        video: Unplug3
       Unplug4:
-        title: "Algoritmai"
+        title: Algoritmai
         desc: 'This lesson covers algorithms.  Using tangram shapes and graph paper, the first exercise will show how important it is to make each instruction as clear and unambiguous as possible.  Afterward, the class will explore how many ways you can fold paper into a rectangle, noting how some methods can take more or fewer folds than others.'
         pdfs:
           - unplug4
-        video: "Unplug4"
+        video: Unplug4
       Unplug5:
-        title: "Sudėtinės komandos"
+        title: Sudėtinės komandos
         desc: |-
           In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of "skills" that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to "abstract out" the details of their specific materials and create vague terms for an individual's supplies.  This use of generic placeholders is a wonderful introduction to variables.
         pdfs:
           - unplug5
-        video: "Unplug5"
+        video: Unplug5
       Unplug6:
-        title: "Sąlygos"
-        desc: "Tai yra žaidimas klasėje. Kai mokiniai bus supažindinti su sąlyginiais sakiniais ir kartojimu, klasėje visi kartu galės praktikuotis, naudodami iš anksto parašytą programą, žaisdami su kortomis."
+        title: Sąlygos
+        desc: Tai yra žaidimas klasėje. Kai mokiniai bus supažindinti su sąlyginiais sakiniais ir kartojimu, klasėje visi kartu galės praktikuotis, naudodami iš anksto parašytą programą, žaisdami su kortomis.
         pdfs:
           - unplug6
-        video: "Unplug6"
+        video: Unplug6
       Unplug7:
-        title: "Dainos ir funkcijos"
-        desc: "Skaityti dainos tekstą moka visi mokiniai. Mes paimsime šį visiems suprantamą dalyką ir pritaikysime jį mokydami sudėtinių komandų. Kai mokiniai supras, kaip iškviesti sudėtinę komandą (funckiją), pridėsime papildomų dalykų, t. y. parametrų, su kuriais yra iškviečiamos sudėtinės komandos."
+        title: Dainos ir funkcijos
+        desc: Skaityti dainos tekstą moka visi mokiniai. Mes paimsime šį visiems suprantamą dalyką ir pritaikysime jį mokydami sudėtinių komandų. Kai mokiniai supras, kaip iškviesti sudėtinę komandą (funckiją), pridėsime papildomų dalykų, t. y. parametrų, su kuriais yra iškviečiamos sudėtinės komandos.
         pdfs:
           - unplug7
-        video: "Unplug7"
+        video: Unplug7
       Unplug8:
-        title: "Komandos su parametrais"
+        title: Komandos su parametrais
         desc: "This activity combines your students' everyday routine and a Mad-Lib style thinking game to help your class learn about the effectiveness of abstraction."
         pdfs:
           - unplug8
-        video: "Unplug8"
+        video: Unplug8
       Unplug9:
-        title: "Programavimas komandoje"
+        title: Programavimas komandoje
         desc: 'This lesson will take an idea from a previous activity (4. Graph Paper Programming) and use those skills to emphasize the importance of completing programs that operate in sequence and frequently checking programs for "bugs".'
         pdfs:
           - unplug9
-        video: "Unplug9"
+        video: Unplug9
       Unplug10:
-        title: "Internetas"
-        desc: "In this lesson, students will pretend to flow through the Internet, all the while learning about web addresses, IPs and the DNS."
+        title: Internetas
+        desc: In this lesson, students will pretend to flow through the Internet, all the while learning about web addresses, IPs and the DNS.
         pdfs:
           - unplug10
-        video: "Unplug10"
+        video: Unplug10
       Unplug11:
-        title: "Apibendrinimas"
-        desc: "Šis pirmųjų 20-ties valandų apibendrinimas parės klasei prisiminti visus savo mėgstamiausius momentus iš pamokėlių. Mokiniams bus duodami patarimai, kuriais jie gali vadovautis mokydamiesi informatikos toliau, jeigu jie tuo susidomės."
+        title: Apibendrinimas
+        desc: Šis pirmųjų 20-ties valandų apibendrinimas padės klasei prisiminti visus savo mėgstamiausius momentus iš pamokėlių. Mokiniams bus duodami patarimai, kuriais jie gali vadovautis mokydamiesi informatikos toliau, jeigu jie tuo susidomės.
         pdfs:
           - unplug11
-        video: "Unplug11"
+        video: Unplug11
       UnplugHappyMaps:
-        title: "Laimingieji žemėlapiai"
-        desc: "Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų veikėją per labirintą, naudodami vieną komandą."
-        video: "C1_laimingi_žemėlapiai_specialus"
+        title: Laimingieji žemėlapiai
+        desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų veikėją per labirintą, naudodami vieną komandą.
+        video: C1_laimingi_žemėlapiai_specialus
       MoveIt:
-        title: "Judėk, judėk"
-        desc: "Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų veikėją per labirintą, naudodami vieną komandą."
-        video: "C1_judėkjudėk_specialus"
+        title: Judėk, judėk
+        desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų veikėją per labirintą, naudodami vieną komandą.
+        video: C1_judėkjudėk_specialus
       PlantASeed:
         title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-        desc: "Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai."
-        video: "C1_sėklos_sodinimas"
+        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
+        video: C1_sėklos_sodinimas
       BuildingAFoundation:
-        title: "Pamatų kūrimas"
-        desc: "Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated."
-        video: "C1_pamatų_kūrimas"
+        title: Pamatų kūrimas
+        desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
+        video: C1_pamatų_kūrimas
       GettingLoopy:
-        title: "Kartojimo supratimas"
-        desc: "Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami) šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu."
-        video: "C1_kartojimo_supratimas"
+        title: Kartojimo supratimas
+        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami) šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
+        video: C1_kartojimo_supratimas
       RelayProgramming:
-        title: "Programavimas komandoje"
-        desc: "Mokiniai dalyvaus estafetėje, kur kiekvienas dalyvis, nubėgęs prie lapo, turės užrašyti vieną algoritmo komandą. Jeigu mokinys algoritme ras klaidą, visas algoritmas turės būti ištrintas ir kuriamas iš naujo."
-        video: "C2_programavimas_komandoje"
+        title: Programavimas komandoje
+        desc: Mokiniai dalyvaus estafetėje, kur kiekvienas dalyvis, nubėgęs prie lapo, turės užrašyti vieną algoritmo komandą. Jeigu mokinys algoritme ras klaidą, visas algoritmas turės būti ištrintas ir kuriamas iš naujo.
+        video: C2_programavimas_komandoje
       Conditionals:
-        title: "Sąlyginiai sakiniai"
-        desc: "Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“ arba „jei ištrauksiu juodą kortą, tu gausi tašką“."
-        video: "C2_sąlygos_su_kortomis"
+        title: Sąlyginiai sakiniai
+        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“ arba „jei ištrauksiu juodą kortą, tu gausi tašką“.
+        video: C2_sąlygos_su_kortomis
       BigEvent:
-        title: "Didelis įvykis"
-        desc: "Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus ant popieriaus, o mokiniai turės reaguoti atitinkamai, priklausomai nuo to, kuris mygtukas bus nuspaustas."
-        video: "C1_didysis_įvykis_specialus"
+        title: Didelis įvykis
+        desc: Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus ant popieriaus, o mokiniai turės reaguoti atitinkamai, priklausomai nuo to, kuris mygtukas bus nuspaustas.
+        video: C1_didysis_įvykis_specialus
       GoingPlacesSafely:
-        title: "Saugus naršymas internete"
-        desc: "Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko, kaip būti saugiam naršant internete."
+        title: Saugus naršymas internete
+        desc: Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko, kaip būti saugiam naršant internete.
       GraphPaperProgramming:
-        title: "Programavimas ant languoto popieriaus"
-        desc: "Mokiniai rašo algoritmus (instrukcijas) savo klasės draugams, kuriomis naudodamasis, kitas mokinys turės nupiešti piešinį."
-        video: "C2_languotas_popierius"
+        title: Programavimas ant languoto popieriaus
+        desc: Mokiniai rašo algoritmus (instrukcijas) savo klasės draugams, kuriomis naudodamasis, kitas mokinys turės nupiešti piešinį.
+        video: C2_languotas_popierius
       PaperPlanes:
         title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-        desc: "Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus kalbama apie informatiką ir algoritmų svarbą joje."
-        video: "C2_popieriniai_lėktuvėliai"
+        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus kalbama apie informatiką ir algoritmų svarbą joje.
+        video: C2_popieriniai_lėktuvėliai
       BinaryBracelets:
-        title: "Dvejetainės apyrankės"
-        desc: "Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu kodu. Mokiniai sužinos, kad duomenys gali būti pavaizduojami ir išsaugomi daugiau nei vienu būdu."
-        video: "C2_dvejetainės_apyrankės"
+        title: Dvejetainės apyrankės
+        desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu kodu. Mokiniai sužinos, kad duomenys gali būti pavaizduojami ir išsaugomi daugiau nei vienu būdu.
+        video: C2_dvejetainės_apyrankės
       DigitalFootprint:
-        title: "Virtualūs pirštų antspaudai"
-        desc: "Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų galima sekti ir tai gali turėti pasėkmių."
+        title: Virtualūs pirštų antspaudai
+        desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų galima sekti ir tai gali turėti pasėkmių.
       ComputationalThinking:
-        title: "Skaičiuojamasis mąstymas"
-        desc: "Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions."
-        video: "C3_skaičiuojamasis_mąstymas"
+        title: Skaičiuojamasis mąstymas
+        desc: Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions.
+        video: C3_skaičiuojamasis_mąstymas
       FunctionalSuncatchers:
-        title: "Functional Suncatchers"
-        desc: "Students create an algorithm with variables and functions (pieces of code that you want to use over and over again) to create suncatchers using string and beads."
-        video: "C3_functional_suncatchers"
+        title: Functional Suncatchers
+        desc: Students create an algorithm with variables and functions (pieces of code that you want to use over and over again) to create suncatchers using string and beads.
+        video: C3_functional_suncatchers
       SongwritingParameters:
-        title: "Dainų rašymas su parametrais"
-        desc: "Mokiniai panaudos priedainio sąvoką dainoje ir išmoks, kas yra parametrai (kurie pakeičia sudėtines komandas, kad jų nereikėtų perrašyti iš naujo)."
-        video: "C3_dainų_rašymas_su_parametrais"
+        title: Dainų rašymas su parametrais
+        desc: Mokiniai panaudos priedainio sąvoką dainoje ir išmoks, kas yra parametrai (kurie pakeičia sudėtines komandas, kad jų nereikėtų perrašyti iš naujo).
+        video: C3_dainų_rašymas_su_parametrais
       DiceRace:
         title: 'Algoritmai realiame gyvenime: kauliukų lenktynės'
-        desc: "This lesson calls out ways we use algorithms in our daily lives. As part of that, students will identify and write down the algorithm for a dice race game."
-        video: "C3_kauliukų_lenktynės"
+        desc: This lesson calls out ways we use algorithms in our daily lives. As part of that, students will identify and write down the algorithm for a dice race game.
+        video: C3_kauliukų_lenktynės
       Internet:
-        title: "Internetas"
-        desc: "Mokiniai siunčia pranešimus, parašytus ant popieriaus lapo, kurie simbolizuoja įvairius prisijungimo prie interneto būdus."
-        video: "C3_internetas"
+        title: Internetas
+        desc: Mokiniai siunčia pranešimus, parašytus ant popieriaus lapo, kurie simbolizuoja įvairius prisijungimo prie interneto būdus.
+        video: C3_internetas
       Crowdsourcing:
-        title: "Komandinis programavimas"
-        desc: "Mokiniai naudoja komandinį programavimą – metodą, kuris yra dažnai naudojamas informatikoje, kai užduotį atlieka visi kartu – tokiu būdu užduotis yra išsprendžiama daug efektyviau nei ją būtų sprendęs vienas mokinys."
-        video: "C3_komandinis_programavimas"
+        title: Komandinis programavimas
+        desc: Mokiniai naudoja komandinį programavimą – metodą, kuris yra dažnai naudojamas informatikoje, kai užduotį atlieka visi kartu – tokiu būdu užduotis yra išsprendžiama daug efektyviau nei ją būtų sprendęs vienas mokinys.
+        video: C3_komandinis_programavimas
       DigitalCitizenship:
-        title: "Virtuali pilietybė"
-        desc: "Mokiniai nagrinėja skirtumus tarp asmeninės informacijos ir privačios informacijos, mokosi atskirti, ką yra saugu, o ką nesaugu skelbti internete."
+        title: Virtuali pilietybė
+        desc: Mokiniai nagrinėja skirtumus tarp asmeninės informacijos ir privačios informacijos, mokosi atskirti, ką yra saugu, o ką nesaugu skelbti internete.

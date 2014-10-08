@@ -228,6 +228,9 @@
     header:
       finished_hoc: 我已經完成我的"一小時程式設計"課程。
       sign_in_to_save: "登入以儲存進度"
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: "我的學生"
       label: "嗨 %{username}"
@@ -431,6 +434,13 @@
     flappy_og_title: "快來嘗試我設計的Flappy Game"
     studio_og_title: Check out my story
     og_description: "我用 Code.org寫了自己的程式碼"
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: "您創建了一個新的腳本。"
     destroyed: "你毀了一個腳本。"

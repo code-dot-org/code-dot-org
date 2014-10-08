@@ -16,6 +16,15 @@
   twentyhours_heading: Experimente nosso Curso de Introdução à Ciência da Computação
   twentyhours_text: Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência
     da computação e seus conceitos nesse curso.
+  hoc2014_heading: Participe da <a href="http://hourofcode.com">Hora do código</a><br/>de
+    8 a 14 de dezembro de 2014<br/>
+  hoc2014_students: Alunos
+  hoc2014_try: Experimentar
+  hoc2014_teachers: Professores
+  hoc2014_host: Hospedar
+  hoc2014_everyone: Todos
+  hoc2014_support: Apoiar
+  hoc2014_whatishoc: O que é a Hora do Código?
   twentyhours_trynow: Experimente agora
   california_heading: Peça a sua escola para ensinar ciência da computação
   california_text: Qualquer professor pode oferecer nossos <a href='http://studio.code.org/'>cursos
@@ -57,6 +66,7 @@
   beyond_hour_message: Faça nossos <a href='http://studio.code.org'>outros cursos</a>,
     ou veja mais opções para <a href='/learn/beyond'>Aprender além da Hora do Código</a>.
   leaderboards_for_hoc: Classificações para a Hora do Código.
+  support_url: http://support.code.org
   country: País
   city: Cidade
   gender: Gênero
@@ -116,7 +126,7 @@
   studiobar_flappy_title: Código do Flappy bird
   studiobar_flappy_body: Faça e compartilhe seu próprio jogo Flappy bird
   studiobar_teacher_title: Feito para professores
-  studiobar_teacher_body: Introduzir código Studio em sua sala de aula
+  studiobar_teacher_body: Apresente o Code Studio em sua sala de aula
   contact_form_topic_student: Sou um aluno
   contact_form_topic_parent: Sou um pai
   contact_form_topic_teacher: Sou um professor/educador
@@ -182,12 +192,14 @@
   dashboard_landing_view_as_student: Visualize o site como um aluno
   dashboard_landing_students_title: Seus alunos
   dashboard_landing_students_manage: Visualize e gerencie seus alunos
-  dashboard_landing_news_title: "Últimas notícias"
+  dashboard_landing_news_title: Recursos dos educadores K-5 (disponível apenas em
+    inglês)
   dashboard_landing_new_beta: Novo! Conheça nossos cursos experimentais para alunos
     do pré ao 5º ano.
   dashboard_landing_new_k5courses: Novo! Conheça nossos cursos para alunos do pré
     ao 5º ano.
-  dashboard_landing_useful_links: Outros links úteis
+  dashboard_landing_useful_links: Outros links úteis (disponível apenas em inglês)
+  dashboard_landing_office_hours: Faça uma pergunta pessoalmente! Visite nossos escritórios.
   dashboard_landing_print_certificates: Imprima certificados para os alunos que terminarem
     esse curso
   dashboard_landing_educator_blog: Leia sobre notícias e atualizações nos materiais
@@ -217,6 +229,7 @@
   dashboard_navigation_view_progress: Exibir progresso
   dashboard_navigation_add_students: Adicionar alunos
   dashboard_navigation_manage_students: Gerenciar alunos
+  dashboard_navigation_view_stats: Visualizar status
   dashboard_navigation_section: 'Turma: %{section_name}'
   dashboard_navigation_student: 'Aluno: %{student_name}'
   dashboard_sections_new_section: Nova turma
@@ -259,6 +272,8 @@
   dashboard_students_password: Senha
   dashboard_students_username: 'Nome de usuário: %{student_username}'
   dashboard_students_email: 'E-mail: %{student_email}'
+  dashboard_students_completed_levels: Níveis concluídos
+  dashboard_students_total_lines: Linhas de código
   dashboard_students_show_secret: Mostrar segredo
   dashboard_students_auto_generated: Gerar automaticamente
   dashboard_students_reset_secret: Redefinir o segredo
@@ -285,8 +300,8 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Clique
     aqui</a> para ver nosso documento de privacidade. Ele pode ser compartilhado ou
     impresso para entregar a seus alunos.
-  dashboard_curriculum_overview: Visão geral do currículo de K-5
-  dashboard_view_all_lesson_plans: Visualizar todos os planos de aula
+  dashboard_curriculum_overview: Visão geral do currículo do pré ao 5º ano
+  dashboard_view_all_lesson_plans: Ver todos os planos de aula
   dashboard_course1: 'Curso 1:'
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
@@ -298,9 +313,9 @@
   dashboard_classroom_strategies: Estratégias de sala de aula para professores
   dashboard_debugging: 'Depuração:'
   dashboard_puzzle_solving: 'Quebra-cabeças:'
-  dashboard_student_worksheet: planilha de estudante
-  dashboard_teacher_worksheet: planilha professor
-  dashboard_grade_k: K
+  dashboard_student_worksheet: planilha do estudante
+  dashboard_teacher_worksheet: planilha do professor
+  dashboard_grade_k: Nível
   dashboard_grade_other: Outros
   dashboard_login_word: palavra
   dashboard_login_picture: imagem
