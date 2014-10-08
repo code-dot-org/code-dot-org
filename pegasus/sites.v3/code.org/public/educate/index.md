@@ -5,20 +5,22 @@ nav: educate_nav
 
 # Educator resources
 
-## Start with an Hour of Code for your students
+## Start with an Hour of Code
 More than 44 million people of all ages have learned an [Hour of Code](http://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics. Participate this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of 2014. 
 
 [<button>Join us</button>](http://hourofcode.com)
 
-## Bring computer science to your elementary school
-Code.org has developed an elementary school curriculum that allows even the youngest students to explore the limitless world of computing- at no cost for schools. There are three levels of computer science at the elementary school level.
 
-[<button>Learn more</button>](/k5)
+## Teach one of our online courses 
+Code.org's online platform [Code Studio](studio.code.org) enables students to learn the basic concepts of computer science as early as kindergarten. Within Code Studio, a new Play Lab has been developed where elementary students can create and send apps or animations directly to a cell phone, just by typing in the phone number. Or try our general course designed for any educator to host in a classroom, after-school program, or even in a club outside of school. 
 
+[<button>Learn more</button>](http://studio.code.org)
 
 **Professional development workshops- at no cost (US teachers only):**  Code.org is offering amazing, zero-cost, 1-day workshops to prepare educators and content-area teachers (librarians, tech-ed specialists, etc.) to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5).  The workshop will cover content for all three courses and teachers will receive the supplies they need to teach the course- at no cost.
 
 These workshops will be led by experienced Code.org K-5 Facilitators in over 60 cities across the United States.
+
+[<button>Learn more</button>](/k5)
 
 [<button>Find a workshop (for teachers only)</button>](/professional-development-workshops)
 
@@ -27,15 +29,9 @@ Bring permanent computer science courses to your entire district. Code.org will 
 
 [<button>Learn How</button>](/educate/districts)&nbsp;&nbsp;[<button>See Partners</button>](/educate/partner-districts)
 
-## Teach our short intro course in any classroom or club (self-serve)
-Code.org's K-8 Intro to Computer Science course is a 20-hour series of tutorials and activities, designed for any educator to host in a classroom, after-school, or even in a club outside of school. 
-
-[<button>Try it now</button>](/educate/20hr)
-
 ## K-12 computer science curriculum
-We aim to provide curriculum resources for a full K-12 pathway in computer science. This is a work in progress, in collaboration with educators throughout the computer science community. All of our curriculum resources will be publicly available under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
-[<button>Learn more</button>](/educate/curriculum)
+We aim to provide curriculum resources for a full K-12 pathway in computer science. This is a work in progress, in collaboration with educators throughout the computer science community. All of our curriculum resources will be publicly available under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
 ## Inspire students (especially women) to try computer science
 
