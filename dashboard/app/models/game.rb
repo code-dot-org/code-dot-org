@@ -22,7 +22,7 @@ class Game < ActiveRecord::Base
   FLAPPY = 'flappy'
   BOUNCE = 'bounce'
   PLAYLAB = STUDIO = 'studio'
-  
+
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
   end
@@ -54,6 +54,7 @@ class Game < ActiveRecord::Base
   def self.setup
     transaction do
       # Format: name:app:intro_video
+      # Don't change the order of existing entries! Always append to the end of the list.
       reset_db
       %w(
         Maze:maze:maze_intro
@@ -81,7 +82,6 @@ class Game < ActiveRecord::Base
         Custom:turtle
         Flappy:flappy:flappy_intro
         CustomMaze:maze
-        CustomStudio:studio
         Studio:studio
         Jigsaw:jigsaw
         MazeStep:maze
@@ -89,6 +89,8 @@ class Game < ActiveRecord::Base
         Match:match
         Unplugged:unplug
         Wordsearch:wordsearch
+        CustomStudio:studio
+        Calc:calc
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

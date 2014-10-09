@@ -141,5 +141,8 @@ function setAppSpecificGlobals (app) {
       // and drawImage was having issues in a node environment
       global.Turtle.drawTurtle = function () {};
       break;
+    case 'calc':
+      global.Calc = window.Calc;
+      break;
   }
 }
