@@ -102,7 +102,7 @@ Calc.init = function(config) {
     visualization.appendChild(display);
     Calc.ctxDisplay = display.getContext('2d');
 
-    Calc.answerExpression = generateExpressionFromBlockXml(level.answer);
+    Calc.answerExpression = generateExpressionFromBlockXml(level.solutionBlocks);
 
     // todo - figure out LB story
 
@@ -188,13 +188,15 @@ function evalCode (code) {
 }
 
 function generateExpressionFromBlockXml(blockXml) {
+  var xml = blockXml || '';
+
   if (Blockly.mainWorkspace.getTopBlocks().length !== 0) {
     throw new Error("generateExpressionFromBlockXml shouldn't be called if " +
       "we already have blocks in the workspace");
   }
 
   // Temporarily put the blocks into the workspace so that we can generate code
-  BlocklyApps.loadBlocks(blockXml);
+  BlocklyApps.loadBlocks(xml);
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
 

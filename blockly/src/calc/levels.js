@@ -7,7 +7,7 @@ var Expression = require('./expression');
  */
 module.exports = {
   'example1': {
-    answer: blockUtils.calcBlockXml('functional_times', [
+    solutionBlocks: blockUtils.calcBlockXml('functional_times', [
       blockUtils.calcBlockXml('functional_plus', [1, 2]),
       blockUtils.calcBlockXml('functional_plus', [3, 4])
     ]),
