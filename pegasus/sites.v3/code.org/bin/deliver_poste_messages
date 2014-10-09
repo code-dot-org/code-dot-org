@@ -6,9 +6,15 @@ require_relative src_dir 'poste/api'
 require_relative src_dir 'poste/template'
 
 def format_email_address(email, display_name='')
-  address = Mail::Address.new(email)
-  address.display_name = display_name unless display_name.empty?
-  return address.to_s
+  begin
+    address = Mail::Address.new(email)
+    address.display_name = display_name unless display_name.empty?
+    return address.to_s
+  rescue
+    display_name = display_name.to_s.gsub('"', '\"')
+    display_name = "\"#{display_name}\"" if display_name.include?('"')
+    "#{display_name.strip} <#{email.strip}>".strip
+  end
 end
 
 module Poste
@@ -119,7 +125,9 @@ def main()
     count += 1
   end
 
-  HipChat.log "#{count} email(s) sent." unless count == 0
+  remaining = DB[:poste_deliveries].where(sent_at:nil).count
+
+  HipChat.log "#{count} email(s) sent, #{remaining} still queued." unless count == 0 && remaining == 0
 end
 
 main if only_one_running?(__FILE__)

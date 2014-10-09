@@ -1,9 +1,9 @@
 ---
 from: '"Hadi Partovi (Code.org)" <hadi_partovi@code.org>'
-subject: _SUBJECT_
+subject: How many apps can 100 million students make?
 ---
 
-### _SUBJECT_
+### How many apps can 100 million students make?
 
 <% if domestic %>
 
