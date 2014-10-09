@@ -270,8 +270,9 @@ angular: professionalDevelopmentWorkshop
 
         if ($scope.workshop.secret) { // existing
           $scope.workshop =
-            workshopsService.update({secret: $scope.workshop.secret}, $scope.workshop);
-          $location.path("/");
+            workshopsService.update({secret: $scope.workshop.secret}, $scope.workshop, function() {
+              $location.path("/");
+            });
         } else { // new
           $scope.workshop =
             workshopsService.save($scope.workshop, function() {
