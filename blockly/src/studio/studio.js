@@ -478,7 +478,7 @@ var setSvgText = function(opts) {
     opts.svgText.removeChild(opts.svgText.firstChild);
   }
 
-  var words = opts.text.split(' ');
+  var words = opts.text.toString().split(' ');
   // Create first tspan element
   var tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
   tspan.setAttribute("x", opts.width / 2);

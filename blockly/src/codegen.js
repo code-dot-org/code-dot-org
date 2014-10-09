@@ -55,19 +55,52 @@ exports.workspaceCode = function(blockly) {
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Use JS interpreter on editCode levels
+    var initFunc = function(interpreter, scope) {
+      // helper function used below..
+      function makeNativeMemberFunction(nativeFunc, parentObj) {
+        return function() {
+          return interpreter.createPrimitive(
+                                nativeFunc.apply(parentObj, arguments));
+        };
+      }
+      for (var optsObj in options) {
+        // Create global objects in the interpreter for everything in options
+        var obj = this.createObject(interpreter.OBJECT);
+        this.setProperty(scope, optsObj.toString(), obj);
+        for (var prop in options[optsObj]) {
+          var func = options[optsObj][prop];
+          if (func instanceof Function) {
+            // Populate each of the global objects with native functions
+            // NOTE: other properties are not passed to the interpreter
+            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
+            interpreter.setProperty(obj,
+                                    prop,
+                                    interpreter.createNativeFunction(wrapper));
+          }
+        }
+      }
+    };
+    var myInterpreter = new Interpreter(code, initFunc);
+    // interpret the JS program all at once:
+    myInterpreter.run();
+  } else {
+    // execute JS code "natively"
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    var fn = new ctor();
+    return fn.apply(null, args);
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  var fn = new ctor();
-  return fn.apply(null, args);
 };
 
 /**

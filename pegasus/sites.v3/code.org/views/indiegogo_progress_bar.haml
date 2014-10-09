@@ -12,7 +12,7 @@
 
 %a{:href=>'https://www.indiegogo.com/projects/an-hour-of-code-for-every-student/contributions/new'}
   %button
-    Contribute Now
+    Donate
 
 :javascript
   $.ajax({
@@ -24,7 +24,7 @@
       var collected = data["response"]["collected_funds"];
       var interval = 1;
       var timer = setInterval(increaseNumber, interval);
-      var increase = 231;
+      var increase = Math.round(collected / 499 + 111);
       var currentFundsContainer = $('#current_funds');
 
       function increaseNumber() {
