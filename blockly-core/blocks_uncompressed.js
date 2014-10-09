@@ -1,6 +1,7 @@
 // Do not edit this generated file
 "use strict";
 
+
 Blockly.Blocks.colour = {};
 Blockly.Blocks.colour_picker = {init:function() {
   this.setHelpUrl(Blockly.Msg.COLOUR_PICKER_HELPURL);
