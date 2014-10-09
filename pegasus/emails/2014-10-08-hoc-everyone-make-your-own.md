@@ -1,9 +1,9 @@
 ---
 from: '"Hadi Partovi (Code.org)" <hadi_partovi@code.org>'
-subject: _SUBJECT_
+subject: Anybody can learn – to make your own apps!
 ---
 
-### _SUBJECT_
+### Anybody can learn – to make your own apps!
 
 <% if domestic %>
 

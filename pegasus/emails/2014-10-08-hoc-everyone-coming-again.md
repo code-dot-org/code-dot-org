@@ -1,9 +1,9 @@
 ---
 from: '"Hadi Partovi (Code.org)" <hadi_partovi@code.org>'
-subject: _SUBJECT_
+subject: 'The Hour of Code is coming... again!'
 ---
 
-### _SUBJECT_
+### The Hour of Code is coming... again!
 
 <% if domestic %>
 
