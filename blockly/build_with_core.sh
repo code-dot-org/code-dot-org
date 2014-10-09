@@ -1,10 +1,7 @@
 #!/bin/bash
 
 if [[ $1 == "debug" ]]; then
-  export target=uncompressed.js
   export MOOC_DEV=1
-else
-  export target=blockly_compressed.js
 fi
 
 (
