@@ -1334,8 +1334,7 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.saySprite());
       }
       if (block.params) {
-        this.appendValueInput('TEXT')
-          .setCheck('String');
+        this.appendValueInput('TEXT');
       } else {
         var quotedTextInput = this.appendDummyInput();
         if (isK1) {
