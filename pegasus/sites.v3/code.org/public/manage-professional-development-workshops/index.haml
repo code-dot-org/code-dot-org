@@ -195,8 +195,8 @@ angular: professionalDevelopmentWorkshop
 
   }]);
 
-  app.controller('WorkshopController', ['$scope', '$routeParams', 'workshopsService', 'workshopSignupsService', 'sectionsService', 'workshopStartStop',
-    function($scope, $routeParams, workshopsService, workshopSignupsService, sectionsService, workshopStartStop) {
+  app.controller('WorkshopController', ['$scope', '$location', '$routeParams', 'workshopsService', 'workshopSignupsService', 'sectionsService', 'workshopStartStop',
+    function($scope, $location, $routeParams, workshopsService, workshopSignupsService, sectionsService, workshopStartStop) {
       $scope.addNewDate = function($event) {
         $scope.newDate();
         $event.preventDefault();
@@ -227,7 +227,7 @@ angular: professionalDevelopmentWorkshop
       $scope.action = $routeParams.action;
 
       $scope.cancel_workshop = function() {
-        window.location = "#";
+        $location.path("/");
       };
 
       $scope.load = function() {
@@ -271,11 +271,11 @@ angular: professionalDevelopmentWorkshop
         if ($scope.workshop.secret) { // existing
           $scope.workshop =
             workshopsService.update({secret: $scope.workshop.secret}, $scope.workshop);
-            window.location = "#";
+          $location.path("/");
         } else { // new
           $scope.workshop =
             workshopsService.save($scope.workshop, function() {
-              window.location = "#";
+              $location.path("/");
             });
         }
       };
