@@ -96,7 +96,7 @@
         {
           var levelInfo = allLevels[s][l];
 
-          var passed = levelInfo && levelInfo.best_result >= 100;
+          var passed = levelInfo && levelInfo.best_result >= #{Activity::MINIMUM_PASS_RESULT};
           if (passed)
           {
             highestLevel = l;

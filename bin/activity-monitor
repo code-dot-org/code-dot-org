@@ -121,7 +121,7 @@ class Monitor
 end
 
 def main()
-  now = DateTime.now
+  now = DateTime.now.new_offset(0)
 
   hours = HoursToTest
   finish = DateTime.new(now.year, now.month, now.day, now.hour, now.minute).new_offset(0).strftime('%Q').to_i
