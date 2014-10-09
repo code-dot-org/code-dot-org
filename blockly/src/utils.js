@@ -141,7 +141,7 @@ exports.generateCodeAliases = function (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var codeFunction = codeFunctions[i];
       if (codeFunction.alias) {
-        code += codeFunction.func +
+        code += "var " + codeFunction.func +
             " = function() { " + codeFunction.alias + " };\n";
       }
     }

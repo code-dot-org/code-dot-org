@@ -150,6 +150,12 @@ config.copy = {
         cwd: 'lib/droplet',
         src: ['droplet.min.css'],
         dest: 'build/package/css/droplet/'
+      },
+      {
+        expand: true,
+        cwd: 'lib/jsinterpreter',
+        src: ['acorn_interpreter.js'],
+        dest: 'build/package/js/jsinterpreter/'
       }
     ]
   }
