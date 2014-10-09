@@ -23,6 +23,6 @@
 - if devise_mapping.omniauthable?
   - [:google_oauth2, :facebook, :windowslive].each do |provider|
     = link_to image_tag("auth/#{provider}.png"), omniauth_authorize_path(resource_name, provider)
-    = link_to t('auth.sign_in_with', provider: t("auth.#{provider}")), omniauth_authorize_path(resource_name, provider, user_type: resource.try(:user_type) || User::TYPE_STUDENT)
+    = link_to t('auth.sign_in_with', provider: t("auth.#{provider}")), "http://learn.code.org" + omniauth_authorize_path(resource_name, provider, user_type: resource.try(:user_type) || User::TYPE_STUDENT)
     %br/
     %br/
