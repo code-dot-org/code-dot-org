@@ -80,12 +80,12 @@ social:
   var promote;
   $(document).ready()
   {
-    if (petitionIncluded)
+    if (petitionIncluded) {
       petition = new Petition();
-
-    if (promoteIncluded)
+    }
+    if (promoteIncluded) {
       promote = new Promote();
-
+    }
     if (document.referrer.indexOf(location.origin) === 0) {
       $("#thank-you-box").slideDown();
       $("#petition-section").hide();
