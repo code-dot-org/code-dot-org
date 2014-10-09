@@ -22,6 +22,7 @@ social:
 - Broward County Public Schools (FL)
 - Charles County Public Schools (MD)
 - San Francisco Unified School District (CA)
+- Los Angeles Unified School District (CA)
 - [See all 30+ partner districts](/educate/partner-districts)
 
 
