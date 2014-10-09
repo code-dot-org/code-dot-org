@@ -236,8 +236,8 @@ LOCALES.forEach(function(locale) {
     nonull: true,
     src: [
       'lib/blockly/blockly_' + ext + '.js',
-      'lib/blockly/blocks_compressed.js',
-      'lib/blockly/javascript_compressed.js',
+      'lib/blockly/blocks_' + ext + '.js',
+      'lib/blockly/javascript_' + ext + '.js',
       'lib/blockly/' + locale + '.js'
     ],
     dest: 'build/package/js/' + locale + '/vendor.js'
