@@ -156,6 +156,12 @@ config.copy = {
         cwd: 'lib/jsinterpreter',
         src: ['acorn_interpreter.js'],
         dest: 'build/package/js/jsinterpreter/'
+      },
+      {
+        expand: true,
+        cwd: 'lib/js-numbers/',
+        src: ['js-numbers.js'],
+        dest: 'build/package/js/js-numbers/'
       }
     ]
   }
