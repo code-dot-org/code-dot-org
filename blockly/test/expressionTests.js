@@ -12,11 +12,13 @@ it('simple expressions to strings', function () {
   assert.equal(expr2.toString(), "(2 + 1)");
 });
 
-describe("getDiff", function () {
+describe("getDifference", function () {
+  var getDifference = Expression.__testonly__.getDifference;
+
   it("of numbers", function () {
-    assert.deepEqual(Expression.getDiff(0, 0), { numDiffs: 0 });
-    assert.deepEqual(Expression.getDiff(0, 1), { numDiffs: 1, val: 1 });
-    assert.deepEqual(Expression.getDiff(1, 0), { numDiffs: 1, val: 0 });
+    assert.deepEqual(getDifference(0, 0), { numDiffs: 0 });
+    assert.deepEqual(getDifference(0, 1), { numDiffs: 1, val: 1 });
+    assert.deepEqual(getDifference(1, 0), { numDiffs: 1, val: 0 });
   });
 
   describe("of single level expressions", function () {
@@ -25,12 +27,12 @@ describe("getDiff", function () {
         numDiffs: 0
       };
 
-      var diff = Expression.getDiff(
+      var diff = getDifference(
         new Expression('+', 1, 2),
         new Expression('+', 1, 2));
       assert.deepEqual(diff, expected);
 
-      diff = Expression.getDiff(
+      diff = getDifference(
         new Expression('+', 1, 2),
         new Expression('+', 2, 1));
       assert.deepEqual(diff, expected);
@@ -42,18 +44,18 @@ describe("getDiff", function () {
         operator: "-"
       };
 
-      var diff = Expression.getDiff(
+      var diff = getDifference(
         new Expression('+', 1, 2),
         new Expression('-', 1, 2));
       assert.deepEqual(diff, expected);
-      diff = Expression.getDiff(
+      diff = getDifference(
         new Expression('+', 1, 2),
         new Expression('-', 2, 1));
       assert.deepEqual(diff, expected);
     });
 
     it("that only differ in a single arg", function () {
-      var diff = Expression.getDiff(
+      var diff = getDifference(
         new Expression('+', 1, 2),
         new Expression('+', 3, 2));
       assert.deepEqual(diff, {
@@ -64,7 +66,7 @@ describe("getDiff", function () {
         ]
       });
 
-      diff = Expression.getDiff(
+      diff = getDifference(
         new Expression('+', 1, 2),
         new Expression('+', 1, 3));
       assert.deepEqual(diff, {
@@ -77,7 +79,7 @@ describe("getDiff", function () {
     });
 
     it("that differ in both args", function () {
-      var diff = Expression.getDiff(
+      var diff = getDifference(
         new Expression('+', 1, 2),
         new Expression('+', 3, 4));
       assert.deepEqual(diff, {
@@ -92,14 +94,14 @@ describe("getDiff", function () {
 
   describe("of more complex expressions", function () {
     it("mirrored expression", function () {
-      var diff = Expression.getDiff(
+      var diff = getDifference(
         new Expression('+', 1, new Expression('+', 2, 3)),
         new Expression('+', new Expression('+', 3, 2), 1));
       assert.deepEqual(diff, { numDiffs: 0 });
     });
 
     it ("replace value", function () {
-      var diff = Expression.getDiff(
+      var diff = getDifference(
         new Expression('+', 1, new Expression('+', 2, 3)),
         new Expression('+', 2, new Expression('+', 2, 3)));
       assert.deepEqual(diff, {
@@ -112,7 +114,7 @@ describe("getDiff", function () {
     });
 
     it ("with two child expressions, one mistake", function () {
-      var diff = Expression.getDiff(
+      var diff = getDifference(
         new Expression('+', new Expression('+', 1, 2), new Expression('+', 3, 4)),
         new Expression('+', new Expression('+', 1, 2), new Expression('+', 3, 8)));
       assert.deepEqual(diff, {
@@ -131,7 +133,7 @@ describe("getDiff", function () {
     });
 
     it ("with two child expressions, each have a mistake", function () {
-      var diff = Expression.getDiff(
+      var diff = getDifference(
         new Expression('+', new Expression('+', 1, 2), new Expression('+', 3, 4)),
         new Expression('+', new Expression('+', 5, 2), new Expression('+', 3, 8)));
       assert.deepEqual(diff, {
@@ -156,7 +158,7 @@ describe("getDiff", function () {
     });
 
     it ("with two child expressions, different numbers of mistakes", function () {
-      var diff = Expression.getDiff(
+      var diff = getDifference(
         new Expression('+', new Expression('+', 1, 2), new Expression('+', 3, 4)),
         new Expression('+', new Expression('+', 5, 2), new Expression('-', 3, 8)));
       assert.deepEqual(diff, {
