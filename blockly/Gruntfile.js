@@ -241,7 +241,12 @@ APPS.forEach(function(app) {
   });
 });
 
-config.concat = {};
+config.concat = {
+  lib: {
+    src: ['lib/cdo/*.js'],
+    dest: 'build/package/js/cdo/lib.js'
+  }
+};
 LOCALES.forEach(function(locale) {
   var ext = DEV ? 'uncompressed' : 'compressed';
   config.concat['vendor_' + locale] = {
