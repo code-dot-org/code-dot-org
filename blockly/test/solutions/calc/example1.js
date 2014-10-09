@@ -1,27 +1,6 @@
 var TestResults = require('../../../src/constants.js').TestResults;
 var blockUtils = require('../../../src/block_utils');
 
-// todo (brent) - move to block utils?
-function calcBlock(type, args) {
-  var str = '<block type="' + type + '" inline="false">'
-  for (var i = 1; i <= args.length; i++) {
-    str += '<functional_input name="ARG' + i + '">'
-    var arg = args[i - 1];
-    if (typeof(arg) === "number") {
-      arg = calcNumberBlockXml(arg);
-    }
-    str += arg;
-    str += '</functional_input>';
-  }
-  str+= '</block>';
-
-  return str;
-}
-
-function calcNumberBlockXml(num) {
-  return '<block type="functional_math_number"><title name="NUM">' + num +'</title></block>';
-}
-
 module.exports = {
   app: "calc",
   skinId: 'calc',
@@ -35,9 +14,9 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       xml: '<xml>' +
-        calcBlock('functional_times', [
-          calcBlock('functional_plus', [1, 2]),
-          calcBlock('functional_plus', [3, 4])
+        blockUtils.calcBlockXml('functional_times', [
+          blockUtils.calcBlockXml('functional_plus', [1, 2]),
+          blockUtils.calcBlockXml('functional_plus', [3, 4])
         ]) +
       '</xml>'
     },
@@ -48,9 +27,9 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       xml: '<xml>' +
-        calcBlock('functional_times', [
-          calcBlock('functional_plus', [4, 3]),
-          calcBlock('functional_plus', [2, 1])
+        blockUtils.calcBlockXml('functional_times', [
+          blockUtils.calcBlockXml('functional_plus', [4, 3]),
+          blockUtils.calcBlockXml('functional_plus', [2, 1])
         ]) +
       '</xml>'
     },
@@ -61,9 +40,9 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       xml: '<xml>' +
-        calcBlock('functional_times', [
-          calcBlock('functional_plus', [1, 2]),
-          calcBlock('functional_plus', [3, 3])
+        blockUtils.calcBlockXml('functional_times', [
+          blockUtils.calcBlockXml('functional_plus', [1, 2]),
+          blockUtils.calcBlockXml('functional_plus', [3, 3])
         ]) +
       '</xml>'
     }

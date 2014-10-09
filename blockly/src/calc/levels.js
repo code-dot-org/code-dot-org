@@ -7,13 +7,11 @@ var Expression = require('./expression');
  */
 module.exports = {
   'example1': {
-    // todo (brent) - probably want this to be blocks
-    target: function () {
-      return new Expression('*',
-        new Expression('+', 1, 2),
-        new Expression('+', 3, 4));
-    },
-    ideal: 4,
+    answer: blockUtils.calcBlockXml('functional_times', [
+      blockUtils.calcBlockXml('functional_plus', [1, 2]),
+      blockUtils.calcBlockXml('functional_plus', [3, 4])
+    ]),
+    ideal: Infinity,
     toolbox: blockUtils.createToolbox(
       blockUtils.blockOfType('functional_draw') +
       blockUtils.blockOfType('functional_plus') +

@@ -22,7 +22,7 @@ Expression.prototype.getTokenList = function (expectedExpression) {
   var delta = getDifference(this, expectedExpression);
 
   return getTokenList(this, delta);
-}
+};
 
 /**
  * Creates a token with the given char/correctness
@@ -72,7 +72,7 @@ function getDifference(src, target) {
     diff.val = target;
   }
   return diff;
-};
+}
 
 /**
  * Get the delta when going from src to target. Src and target are both assumed
