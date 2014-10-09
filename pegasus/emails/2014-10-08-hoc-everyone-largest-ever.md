@@ -1,9 +1,9 @@
 ---
 from: '"Hadi Partovi (Code.org)" <hadi_partovi@code.org>'
-subject: _SUBJECT_
+subject: The largest learning event in history!
 ---
 
-### _SUBJECT_
+### The largest learning event in history!
 
 <% if domestic %>
 
