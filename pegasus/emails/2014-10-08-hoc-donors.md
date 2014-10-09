@@ -1,8 +1,8 @@
 ---
 from: '"Hadi Partovi (Code.org)" <hadi_partovi@code.org>'
-subject: Calling all donors. Worldwide. 
+subject: A historic crowdfunding campaign - double your impact for students
 ---
-### Calling all donors. Worldwide.
+### A historic crowdfunding campaign - double your impact for students
 
 Thanks to your generous support of Code.org, 44 million students have learned their first [Hour of Code](http://hourofcode.com) to date. 1.5 million continued to learn beyond the first hour, across 40,000 classrooms. 15 states changed education policies in support. And this fall, 300 urban high school classrooms began new computer science courses reaching [13,000 students, 60% of whom are African American and Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity). This wouldn’t be possible without your generous gift. 
 
