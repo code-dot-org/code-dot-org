@@ -229,10 +229,8 @@ Calc.drawTarget = function (target) {
 
 Calc.drawAnswer = function (target, answer) {
   var ctx = Calc.ctxDisplay;
-  // todo (brent) - should i just have these in one function (i.e. ask for the
-  // token list, given an answer and target).
-  var diff = Expression.getDiff(answer, target);
-  var list = Expression.getTokenList(answer, diff);
+  var errors = false;
+  var list = answer.getTokenList(target);
   var xpos = 0;
   var ypos = 200;
   for (var i = 0; i < list.length; i++) {
@@ -240,13 +238,15 @@ Calc.drawAnswer = function (target, answer) {
       ctx.fillText(' ', xpos, ypos);
       xpos += ctx.measureText(' ').width;
     }
-    // todo - color based on validity
     ctx.fillStyle = list[i].correct ? 'black' : 'red';
+    if (!list[i].correct) {
+      errors = true;
+    }
     ctx.fillText(list[i].char, xpos, ypos);
     xpos += ctx.measureText(list[i].char).width;
   }
 
-  return (diff.numDiffs === 0);
+  return !errors;
 };
 
 
