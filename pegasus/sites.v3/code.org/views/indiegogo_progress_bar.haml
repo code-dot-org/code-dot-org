@@ -24,14 +24,16 @@
       var collected = data["response"]["collected_funds"];
       var interval = 1;
       var timer = setInterval(increaseNumber, interval);
+      var increase = 231;
+      var currentFundsContainer = $('#current_funds');
 
       function increaseNumber() {
         if (current < collected) {
-          if (current + 51 < collected) {
-            $('#current_funds').text("$" + (current + 101).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-            current += 101;
+          if (current + increase < collected) {
+            currentFundsContainer.text("$" + (current + increase).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+            current += increase;
           } else {
-            $('#current_funds').text("$" + (current + (collected - current)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+            currentFundsContainer.text("$" + (current + (collected - current)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
             current += (collected - current);
           }
         }
@@ -50,10 +52,10 @@
     $("#current_bar").animate({width: barWidth + "%"}, 2500, function () {
       $('#percent').css("float", "left");
       $('#percent').fadeIn("slow");
-      if (Math.round(collected / goal * 100) < 1) {
+      if (Math.floor(collected / goal * 100) < 1) {
         $('#percent').text("Less than 1%");
       } else {
-        $('#percent').text(Math.round(collected / goal * 100) + "%");
+        $('#percent').text(Math.floor(collected / goal * 100) + "%");
       }
     });
 
