@@ -11,9 +11,6 @@ fi
   if [[ ( -d "../blockly-core" ) && ( -d "../blockly" ) ]] ; then
     cd ../blockly-core
     ./deploy.sh $1
-    cp blockly_$target ../blockly/lib/blockly
-    cp javascript_$target ../blockly/lib/blockly
-    cp blocks_$target ../blockly/lib/blockly
   else
     echo "Skipping core. No ../blockly-core"
   fi

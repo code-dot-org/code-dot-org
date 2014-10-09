@@ -27,7 +27,9 @@ if rack_env?(:staging)
     'blockly_compressed.js',
     'blockly_uncompressed.js',
     'javascript_compressed.js',
-    'blocks_compressed.js'
+    'javascript_uncompressed.js',
+    'blocks_compressed.js',
+    'blocks_uncompressed.js'
   ]
   BLOCKLY_CORE_PRODUCT_FILES = BLOCKLY_CORE_PRODUCTS.map{|i| blockly_core_dir(i)}
   BLOCKLY_CORE_SOURCE_FILES = Dir.glob(blockly_core_dir('**/*')) - BLOCKLY_CORE_PRODUCT_FILES
