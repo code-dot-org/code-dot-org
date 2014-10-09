@@ -86,7 +86,7 @@ social:
     if (promoteIncluded) {
       promote = new Promote();
     }
-    if (document.referrer.indexOf(location.origin) === 0) {
+    if (document.referrer.indexOf(location.host) !== -1) {
       $("#thank-you-box").slideDown();
       $("#petition-section").hide();
     }
