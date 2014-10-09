@@ -3,12 +3,7 @@
   = tag 'meta', property: 'og:title', content: @page_title
   = tag 'meta', property: 'og:image', content: image_url('gallery_thumbnail.png')
   = tag 'meta', property: 'og:description', content: strip_tags(t('gallery.picture_count', days: @days, count: number_with_delimiter(GalleryActivity.count)))
-  = tag 'meta', name: 'twitter:card', content: "gallery"
-  = tag 'meta', name: 'twitter:creator', content: "@codeorg"
-  - 0.upto(3).each do |i|
-    - if level_source = @gallery_activities[i].try(:activity).try(:level_source)
-      = tag 'meta', name: "twitter:image#{i}:src", content: original_image_level_source_url(level_source)
-
+ 
 .row
   %h1{style: 'text-align:center;'}
     = link_to t('gallery.students_made_these_with_code'), gallery_activities_path
