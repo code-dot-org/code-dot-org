@@ -20,6 +20,9 @@ social:
 
 #promote-page
   %h1 Promote Computer Science
+  %div{:id=>'thanks', :style=>'display: none; padding: 5px; width: 100%; height: 50px; background-color: rgba(102, 209, 217, 0.5); float: left; margin-bottom: 15px'}
+    %p{:id=>'thank-you', :style=>'display: inline-block; font-size: 18px; vertical-align: middle; height: 100%; margin-left: 10px; line-height: 38px;'}
+      Thank you for filling out our petition. Your participation makes a difference.
 
   %div{:id=>'us_content'}
     #interactive-map.section.clear
@@ -63,4 +66,10 @@ social:
 
     if (promoteIncluded)
       promote = new Promote();
+
+    if (document.referrer.indexOf(location.origin) === 0) {
+      $("#thanks").slideDown();
+      $("#petition-section").css("display", "none");
+
+    }
   }
