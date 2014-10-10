@@ -172,6 +172,7 @@
 "lt-LT":
   english: "Lithuanian"
   native: "Lietuvių"
+  webfonts: false
 
 "ms": "ms-MY"
 "ms-MY":
