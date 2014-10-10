@@ -101,7 +101,11 @@ file aws_dir('postfix/sasl_password') => [aws_dir('postfix/sasl_password.erb')] 
 end
 
 file aws_dir('postfix/sasl_password.db') => [secrets_dir('postfix_sasl_password.db'), aws_dir('postfix/sasl_password')] + DEPENDENCIES do |t|
-  RakeUtils.sudo 'cp', t.prerequisites[0], t.name
+  if [:production, :staging, :test].include?(rack_env)
+    RakeUtils.sudo 'cp', t.prerequisites[0], t.name
+  else
+    cp t.prerequisites[0], t.name
+  end
 end
 
 file aws_dir('postfix/main.cf') => [aws_dir('postfix/main.cf.erb'), aws_dir('postfix/sasl_password.db')] + DEPENDENCIES do |t|
