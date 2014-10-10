@@ -90,7 +90,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":12,"./utils":40}],2:[function(require,module,exports){
+},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":12,"./utils":39}],2:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -994,7 +994,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/cs_cz/common":42,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":9,"./slider":14,"./templates/buttons.html":16,"./templates/instructions.html":18,"./templates/learn.html":19,"./templates/makeYourOwn.html":20,"./utils":40,"./xml":41}],3:[function(require,module,exports){
+},{"../locale/cs_cz/common":41,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":9,"./slider":14,"./templates/buttons.html":16,"./templates/instructions.html":18,"./templates/learn.html":19,"./templates/makeYourOwn.html":20,"./utils":39,"./xml":40}],3:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1140,7 +1140,7 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
-},{"./xml":41}],4:[function(require,module,exports){
+},{"./xml":40}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1282,7 +1282,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/cs_cz/common":42}],5:[function(require,module,exports){
+},{"../locale/cs_cz/common":41}],5:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -1312,7 +1312,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":8,"./feedback.js":9,"./templates/builder.html":15,"./utils.js":40,"url":54}],6:[function(require,module,exports){
+},{"./dom.js":8,"./feedback.js":9,"./templates/builder.html":15,"./utils.js":39,"url":53}],6:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -1370,19 +1370,52 @@ exports.workspaceCode = function(blockly) {
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Use JS interpreter on editCode levels
+    var initFunc = function(interpreter, scope) {
+      // helper function used below..
+      function makeNativeMemberFunction(nativeFunc, parentObj) {
+        return function() {
+          return interpreter.createPrimitive(
+                                nativeFunc.apply(parentObj, arguments));
+        };
+      }
+      for (var optsObj in options) {
+        // Create global objects in the interpreter for everything in options
+        var obj = this.createObject(interpreter.OBJECT);
+        this.setProperty(scope, optsObj.toString(), obj);
+        for (var prop in options[optsObj]) {
+          var func = options[optsObj][prop];
+          if (func instanceof Function) {
+            // Populate each of the global objects with native functions
+            // NOTE: other properties are not passed to the interpreter
+            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
+            interpreter.setProperty(obj,
+                                    prop,
+                                    interpreter.createNativeFunction(wrapper));
+          }
+        }
+      }
+    };
+    var myInterpreter = new Interpreter(code, initFunc);
+    // interpret the JS program all at once:
+    myInterpreter.run();
+  } else {
+    // execute JS code "natively"
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    var fn = new ctor();
+    return fn.apply(null, args);
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  var fn = new ctor();
-  return fn.apply(null, args);
 };
 
 /**
@@ -1608,6 +1641,9 @@ exports.displayFeedback = function(options) {
   var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
   var shareFailureDiv = hadShareFailure ? getShareFailure(options) : null;
+  if (hadShareFailure) {
+    trackEvent('Share', 'Failure', options.response.share_failure.type);
+  }
   var feedbackBlocks = new FeedbackBlocks(options);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
@@ -2516,7 +2552,7 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/cs_cz/common":42,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":16,"./templates/code.html":17,"./templates/readonly.html":22,"./templates/shareFailure.html":23,"./templates/sharing.html":24,"./templates/showCode.html":25,"./templates/trophy.html":26,"./utils":40}],10:[function(require,module,exports){
+},{"../locale/cs_cz/common":41,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":16,"./templates/code.html":17,"./templates/readonly.html":22,"./templates/shareFailure.html":23,"./templates/sharing.html":24,"./templates/showCode.html":25,"./templates/trophy.html":26,"./utils":39}],10:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -5740,7 +5776,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./utils":40,"./xml":41}],13:[function(require,module,exports){
+},{"./block_utils":3,"./utils":39,"./xml":40}],13:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -6047,7 +6083,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],16:[function(require,module,exports){
+},{"ejs":43}],16:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6068,7 +6104,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/cs_cz/common":42,"ejs":44}],17:[function(require,module,exports){
+},{"../../locale/cs_cz/common":41,"ejs":43}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6089,7 +6125,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],18:[function(require,module,exports){
+},{"ejs":43}],18:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6110,7 +6146,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/cs_cz/common":42,"ejs":44}],19:[function(require,module,exports){
+},{"../../locale/cs_cz/common":41,"ejs":43}],19:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6133,7 +6169,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/cs_cz/common":42,"ejs":44}],20:[function(require,module,exports){
+},{"../../locale/cs_cz/common":41,"ejs":43}],20:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6154,7 +6190,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/cs_cz/common":42,"ejs":44}],21:[function(require,module,exports){
+},{"../../locale/cs_cz/common":41,"ejs":43}],21:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6179,7 +6215,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/cs_cz/common":42,"ejs":44}],22:[function(require,module,exports){
+},{"../../locale/cs_cz/common":41,"ejs":43}],22:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6201,7 +6237,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],23:[function(require,module,exports){
+},{"ejs":43}],23:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6222,7 +6258,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],24:[function(require,module,exports){
+},{"ejs":43}],24:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6243,7 +6279,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/cs_cz/common":42,"ejs":44}],25:[function(require,module,exports){
+},{"../../locale/cs_cz/common":41,"ejs":43}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6264,7 +6300,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/cs_cz/common":42,"ejs":44}],26:[function(require,module,exports){
+},{"../../locale/cs_cz/common":41,"ejs":43}],26:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6285,7 +6321,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],27:[function(require,module,exports){
+},{"ejs":43}],27:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -6751,7 +6787,6 @@ var msg = require('../../locale/cs_cz/turtle');
 var commonMsg = require('../../locale/cs_cz/common');
 
 var customLevelBlocks = require('./customLevelBlocks');
-var functionalBlocks = require('./functionalBlocks');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -7603,11 +7638,9 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   customLevelBlocks.install(blockly, generator, gensym);
-  functionalBlocks.install(blockly, generator, gensym);
-
 };
 
-},{"../../locale/cs_cz/common":42,"../../locale/cs_cz/turtle":43,"./core":31,"./customLevelBlocks":32,"./functionalBlocks":33}],30:[function(require,module,exports){
+},{"../../locale/cs_cz/common":41,"../../locale/cs_cz/turtle":42,"./core":31,"./customLevelBlocks":32}],30:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7628,7 +7661,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],31:[function(require,module,exports){
+},{"ejs":43}],31:[function(require,module,exports){
 // Create a limited colour palette to avoid overwhelming new users
 // and to make colour checking easier.  These definitions cannot be
 // moved to blocks.js, which is loaded later, since they are used in
@@ -8209,56 +8242,7 @@ function installDrawLowerWave(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/cs_cz/turtle":43}],33:[function(require,module,exports){
-/**
- * A set of functional blocks
- */
-
-exports.install = function(blockly, generator, gensym) {
- installPlus(blockly, generator, gensym);
- installMathNumber(blockly, generator, gensym);
-};
-
-function installPlus(blockly, generator, gensym) {
-  blockly.Blocks.functional_plus = {
-    // Block for turning left or right.
-    helpUrl: '',
-    init: function() {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle('+')
-          .setAlign(Blockly.ALIGN_CENTRE);
-      this.appendFunctionalInput('VALUE1');
-      this.appendFunctionalInput('VALUE2')
-          .setInline(true);
-
-      this.setFunctionalOutput(true, 'Number');
-    }
-  };
-
-  generator.functional_plus = function() {
-    return '';
-  };
-}
-
-function installMathNumber(blockly, generator, gensym) {
-  blockly.Blocks.functional_math_number = {
-    // Numeric value.
-    init: function() {
-      this.setHSV(258, 0.35, 0.62);
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldTextInput('0',
-          Blockly.FieldTextInput.numberValidator), 'NUM');
-      this.setFunctionalOutput(true, 'Number');
-    }
-  };
-
-  generator.functional_math_number = function() {
-    return '';
-  };
-}
-
-},{}],34:[function(require,module,exports){
+},{"../../locale/cs_cz/turtle":42}],33:[function(require,module,exports){
 var levelBase = require('../level_base');
 var Colours = require('./core').Colours;
 var answer = require('./answers').answer;
@@ -9110,7 +9094,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/cs_cz/turtle":43,"../block_utils":3,"../level_base":10,"./answers":27,"./core":31,"./requiredBlocks":36,"./startBlocks.xml":37,"./toolbox.xml":38}],35:[function(require,module,exports){
+},{"../../locale/cs_cz/turtle":42,"../block_utils":3,"../level_base":10,"./answers":27,"./core":31,"./requiredBlocks":35,"./startBlocks.xml":36,"./toolbox.xml":37}],34:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Turtle = require('./turtle');
 var blocks = require('./blocks');
@@ -9123,7 +9107,7 @@ window.turtleMain = function(options) {
   appMain(window.Turtle, levels, options);
 };
 
-},{"../appMain":1,"../skins":13,"./blocks":29,"./levels":34,"./turtle":39}],36:[function(require,module,exports){
+},{"../appMain":1,"../skins":13,"./blocks":29,"./levels":33,"./turtle":38}],35:[function(require,module,exports){
 /**
  * Sets BlocklyApp constants that depend on the page and level.
  * This encapsulates many functions used for BlocklyApps.REQUIRED_BLOCKS.
@@ -9327,7 +9311,7 @@ module.exports = {
   defineWithArg: defineWithArg,
 };
 
-},{"../required_block_utils":12}],37:[function(require,module,exports){
+},{"../required_block_utils":12}],36:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9394,7 +9378,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/cs_cz/turtle":43,"ejs":44}],38:[function(require,module,exports){
+},{"../../locale/cs_cz/turtle":42,"ejs":43}],37:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9523,7 +9507,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/cs_cz/turtle":43,"ejs":44}],39:[function(require,module,exports){
+},{"../../locale/cs_cz/turtle":42,"ejs":43}],38:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -10289,7 +10273,7 @@ var getFeedbackImage = function() {
       feedbackCanvas.toDataURL("image/png").split(',')[1]);
 };
 
-},{"../../locale/cs_cz/common":42,"../../locale/cs_cz/turtle":43,"../base":2,"../codegen":6,"../feedback.js":9,"../skins":13,"../templates/page.html":21,"./api":28,"./controls.html":30,"./core":31,"./levels":34}],40:[function(require,module,exports){
+},{"../../locale/cs_cz/common":41,"../../locale/cs_cz/turtle":42,"../base":2,"../codegen":6,"../feedback.js":9,"../skins":13,"../templates/page.html":21,"./api":28,"./controls.html":30,"./core":31,"./levels":33}],39:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10433,7 +10417,7 @@ exports.generateCodeAliases = function (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var codeFunction = codeFunctions[i];
       if (codeFunction.alias) {
-        code += codeFunction.func +
+        code += "var " + codeFunction.func +
             " = function() { " + codeFunction.alias + " };\n";
       }
     }
@@ -10555,7 +10539,7 @@ exports.generateDropletPalette = function (codeFunctions) {
   return palette;
 };
 
-},{"./lodash":11,"./xml":41}],41:[function(require,module,exports){
+},{"./lodash":11,"./xml":40}],40:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -10583,7 +10567,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],42:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.cs = function (n) {
   if (n == 1) {
     return 'one';
@@ -10752,7 +10736,7 @@ exports.hintHeader = function(d){return "Zde je rada:"};
 exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
 
 
-},{"messageformat":55}],43:[function(require,module,exports){
+},{"messageformat":54}],42:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.cs = function (n) {
   if (n == 1) {
     return 'one';
@@ -10903,7 +10887,7 @@ exports.widthTooltip = function(d){return "Změní tloušťku tužky."};
 exports.wrongColour = function(d){return "Tvůj obrázek nemá správnou barvu. V této hádance to musí být %1."};
 
 
-},{"messageformat":55}],44:[function(require,module,exports){
+},{"messageformat":54}],43:[function(require,module,exports){
 
 /*!
  * EJS
@@ -11262,7 +11246,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":45,"./utils":46,"fs":47,"path":48}],45:[function(require,module,exports){
+},{"./filters":44,"./utils":45,"fs":46,"path":47}],44:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -11465,7 +11449,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],46:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 
 /*!
  * EJS
@@ -11491,9 +11475,9 @@ exports.escape = function(html){
 };
  
 
-},{}],47:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 
-},{}],48:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -11721,7 +11705,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":49}],49:[function(require,module,exports){
+},{"JkpR2F":48}],48:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -11786,7 +11770,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],50:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -12297,7 +12281,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],51:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -12383,7 +12367,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],52:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -12470,13 +12454,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],53:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":51,"./encode":52}],54:[function(require,module,exports){
+},{"./decode":50,"./encode":51}],53:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -13185,7 +13169,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":50,"querystring":53}],55:[function(require,module,exports){
+},{"punycode":49,"querystring":52}],54:[function(require,module,exports){
 /**
  * messageformat.js
  *
@@ -14768,4 +14752,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[35])
+},{}]},{},[34])

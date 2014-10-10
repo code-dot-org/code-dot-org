@@ -1,0 +1,45 @@
+$root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
+
+#visualization {
+  background-color: #fff;
+}
+
+/* Slider. */
+.sliderContainer {
+  float: left
+}
+.sliderTrack {
+  stroke: #aaa;
+  stroke-width: 6px;
+  stroke-linecap: round;
+}
+.sliderKnob {
+  fill: #ddd;
+  stroke: #bbc;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+}
+.sliderKnob:hover {
+  fill: #eee;
+}
+
+/* Sprited icons. */
+.icon21 {
+  height: 21px;
+  width: 21px;
+  background-image: url("#{$root}icons.png");
+}
+.code {
+ background-position: -42px 0px;
+}
+.link {
+  background-position: -21px 0px;
+}
+.run {
+  background-position: -63px -21px;
+  margin-right: 3px;
+}
+.stop {
+  background-position: -63px 0px;
+  margin-right: 3px;
+}
