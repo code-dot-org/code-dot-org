@@ -51,11 +51,11 @@ Blockly.JavaScript.math_arithmetic = function() {
 };
 
 Blockly.JavaScript.math_arithmetic.OPERATORS = {
-  ADD: ['.add', Blockly.JavaScript.ORDER_COMMA],
-  MINUS: ['.subtract', Blockly.JavaScript.ORDER_COMMA],
-  MULTIPLY: ['.multiply', Blockly.JavaScript.ORDER_COMMA],
-  DIVIDE: ['.divide', Blockly.JavaScript.ORDER_COMMA],
-  POWER: ['.expt', Blockly.JavaScript.ORDER_COMMA]
+  ADD: ['.add', Blockly.JavaScript.ORDER_FUNCTION_CALL],
+  MINUS: ['.subtract', Blockly.JavaScript.ORDER_FUNCTION_CALL],
+  MULTIPLY: ['.multiply', Blockly.JavaScript.ORDER_FUNCTION_CALL],
+  DIVIDE: ['.divide', Blockly.JavaScript.ORDER_FUNCTION_CALL],
+  POWER: ['.expt', Blockly.JavaScript.ORDER_FUNCTION_CALL]
 };
 
 Blockly.JavaScript.math_single = function() {

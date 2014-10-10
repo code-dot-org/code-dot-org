@@ -25,12 +25,35 @@ exports.loopHighlight = function (apiName, blockId) {
  * @return {string} The code without serial numbers and timeout checks.
  */
 exports.strip = function(code) {
+
+  var statementOpenCount = 0;
+  var statements = {
+    'jsnums.ensureExact(' : '',
+    '.add(' : '+',
+    '.subtact(' : '-',
+    '.multiply(' : '*',
+    '.divide(' : '/'
+  };
+
+  // Strip out exact number conversion and operators.
+  code = code.split(/(jsnums\.ensureExact\()|(\))/).map(function (token) {
+    if (token in statements) {
+      statementOpenCount++;
+      return statements[token];
+    }
+    if (token === ')' && statementOpenCount > 0) {
+      statementOpenCount--;
+      return '';
+    }
+    return token;
+  }).join('');
+
   return (code
     // Strip out serial numbers.
     .replace(/(,\s*)?'block_id_\d+'\)/g, ')')
     // Remove timeouts.
     .replace(INFINITE_LOOP_TRAP, '')
-    // Strip out loop highlight
+    // Strip out loop highlight.
     .replace(LOOP_HIGHLIGHT_RE, '')
     // Strip out class namespaces.
     .replace(/(BlocklyApps|Maze|Turtle)\./g, '')
