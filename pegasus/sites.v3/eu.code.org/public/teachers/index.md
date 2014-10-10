@@ -1,6 +1,6 @@
 ---
 title: Educator resources
-nav: educate_nav
+nav: teachers_nav
 ---
 
 # Educator resources
@@ -8,18 +8,18 @@ nav: educate_nav
 ## Start with an Hour of Code for your students
 The Hour of Code is an opportunity for every student to try computer science for one hour. You can also teach the Hour of Code all year-round. Tutorials work on browsers, tablets, smartphones, or "unplugged."
 
-[<button>Get Started</button>](/educate/hoc)
+[<button>Get Started</button>](/teachers/hoc)
 
 ## Teach our short intro course in any classroom or club (self-serve)
 Code.org's K-8 Intro to Computer Science course is a 20-hour series of tutorials and activities, designed for any educator to host in a classroom, after-school, or even in a club outside of school. 
 
-[<button>Try it now</button>](/educate/20hr)
+[<button>Try it now</button>](/teachers/20hr)
 
 ## Inspire students (especially women) to try computer science
 
-Here's a collection of videos, posters, and how-to resources to help inspire students to try computer science. Also, use our [educational video library](/educate/videos) and [nominate a student](/sotw) or [teacher](/totm) you know for a Code.org award.
+Here's a collection of videos, posters, and how-to resources to help inspire students to try computer science. Also, use our [educational video library](/teachers/videos) and [nominate a student](/sotw) or [teacher](/totm) you know for a Code.org award.
 
-[<button>Start Inspiring</button>](/educate/inspire)
+[<button>Start Inspiring</button>](/teachers/inspire)
 
 <br />
 <br />
