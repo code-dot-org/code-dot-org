@@ -28,9 +28,13 @@ goog.provide('Blockly.JavaScript.math');
 goog.require('Blockly.JavaScript');
 
 
+function ensureExact(n) {
+  return 'jsnums.ensureExact(' + n + ')';
+}
+
 Blockly.JavaScript.math_number = function() {
   // Numeric value.
-  var code = 'jsnums.makeFloat(' + window.parseFloat(this.getTitleValue('NUM')) + ').toExact()';
+  var code = ensureExact(window.parseFloat(this.getTitleValue('NUM')));
   return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
 
@@ -40,8 +44,8 @@ Blockly.JavaScript.math_arithmetic = function() {
   var tuple = Blockly.JavaScript.math_arithmetic.OPERATORS[mode];
   var operator = tuple[0];
   var order = tuple[1];
-  var argument0 = Blockly.JavaScript.valueToCode(this, 'A', order) || 'jsnums.makeRational(0)';
-  var argument1 = Blockly.JavaScript.valueToCode(this, 'B', order) || 'jsnums.makeRational(0)';
+  var argument0 = ensureExact(Blockly.JavaScript.valueToCode(this, 'A', order) || '0');
+  var argument1 = ensureExact(Blockly.JavaScript.valueToCode(this, 'B', order) || '0');
   var code = argument0 + operator + '(' + argument1 + ')';
   return [code, order];
 };
