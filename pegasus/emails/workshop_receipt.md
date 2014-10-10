@@ -8,4 +8,13 @@ You have added a workshop. To invite people to sign up for it, send them this li
 
 <%= signup_link %>
 
+Thanks again for your support,
+
+Hadi Partovi,<br/>
+Founder, Code.org
+
+<hr/>
+
+Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](<%= unsubscribe_link %>).
+
 ![](<%= tracking_pixel %>)
