@@ -14,20 +14,21 @@ social:
   var petitionIncluded = false;
   var promoteIncluded = false;
 
--state ||= nil
+-state = File.basename(request.path_info)
 
 %script{:src=>"/js/jquery.placeholder.js"}
 
 #promote-page
   %h1 Promote Computer Science
+
   %div{:id=>'thank-you-box'}
     %p{:id=>'thank-you-message'}
       Thank you for filling out our petition. Your participation makes a difference.
-
   %div{:id=>'us_content'}
-    #interactive-map.section.clear
-      %h2{:style=>"margin-top: 0px"} Choose a State
-      = view :interactive_map
+    - if state != "thanks"
+      #interactive-map.section.clear
+        %h2{:style=>"margin-top: 0px"} Choose a State
+        = view :interactive_map
 
     #stats-section.section.clear
       %h2 What’s wrong with this picture? Share these stats.
@@ -41,6 +42,11 @@ social:
     #tools-section.section.clear
       %h2 Tools to help you advocate locally
       = view :promote_tools, state:nil
+
+  - if state == "thanks"
+    #interactive-map.section.clear
+      %h2{:style=>"margin-top: 0px"} Choose a State
+      = view :interactive_map
 
   %div{:id=>'universal_content'}
     #youtube-section.section.clear
