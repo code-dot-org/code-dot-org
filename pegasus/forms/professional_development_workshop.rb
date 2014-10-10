@@ -68,10 +68,10 @@ class ProfessionalDevelopmentWorkshop
 
         results['progress_snapshot_t'] = uploaded_data "workshop-progress-snapshot-#{data['section_id_s']}", snapshot.to_json
 
-        send_completion_messages(snapshot.map { |row| {email: row[:email], name: row[:name]}},
-                                 location_name: data['location_name_s'],
-                                 facilitator_name: data['name_s'],
-                                 start_date: data['dates'] && data['dates'].first ? data['dates'].first['date_s'] : nil)
+        #send_completion_messages(snapshot.map { |row| {email: row[:email], name: row[:name]}},
+        #                         location_name: data['location_name_s'],
+        #                         facilitator_name: data['name_s'],
+        #                         start_date: data['dates'] && data['dates'].first ? data['dates'].first['date_s'] : nil)
       end
     end
   end
