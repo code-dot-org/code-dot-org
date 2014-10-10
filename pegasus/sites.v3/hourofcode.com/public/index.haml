@@ -85,7 +85,7 @@ social:
 
               %div{style: "width: 56%; float:left;"}
                 -#%a{href: "http://#{canonical_hostname('code.org')}/learn", target: "_blank", style: "text-decoration:none"}
-                %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;", onclick: "ga('send','event','button','click','hoc_try'); window.open('http://#{canonical_hostname('code.org')}/learn', '_blank');"}
+                %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;", onclick: "ga('send','event','button','click',{label:'hoc_try', hitCallback: function() { window.location.href = 'http://#{canonical_hostname('code.org')}/learn'; }});"}
                   =hoc_s(:front_join_us_try)
                 %br/
                 %br/
@@ -95,7 +95,7 @@ social:
                 &nbsp;
               %div{style: "width: 56%; float:left;"}
                 -#%a{onclick: "return adjustScroll('join')", style: "text-decoration:none"}
-                %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;", onclick: "ga('send','event','button','click','hoc_host'); adjustScroll('join');  "}
+                %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;", onclick: "ga('send','event','button','click',{label:'hoc_host', hitCallback: function() { adjustScroll('join'); }});"}
                   =hoc_s(:front_join_us_host)
                 %br/
                 %br/
@@ -105,7 +105,7 @@ social:
                 &nbsp;
               %div{style: "width: 56%; float:left; "}
                 -#%a{href: "http://#{canonical_hostname('code.org')}/donate", target: "_blank", style: "text-decoration:none"}
-                %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;", onclick: "ga('send','event','button','click','hoc_support'); window.open('http://#{canonical_hostname('code.org')}/donate', '_blank'); "}
+                %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;", onclick: "ga('send','event','button','click',{label:'hoc_support', hitCallback: function() { window.location.href = 'http://#{canonical_hostname('code.org')}/donate'; }});"}
                   =hoc_s(:front_join_us_support)
               &nbsp;
 
