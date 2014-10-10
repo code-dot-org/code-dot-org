@@ -1,0 +1,28 @@
+---
+title: Go Beyond One Hour
+theme: responsive
+social:
+  'og:title' : 'The EU Hour of Code is coming'
+  'og:description' : "For every student: learn how fun coding is in just one hour, October 11-17."
+  'og:image' : ""
+  'og:image:width' : ""
+  'og:image:height' : ""
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+
+%link{href: "/css/learn_tabs.css", rel: "stylesheet"}
+
+#learn-tabs{style: "padding-top:20px; padding-left:20px; padding-right:20px; background-color:white; background-color: rgb(219, 219, 219); overflow: hidden; margin-bottom: 10px;"}
+  .content
+    %ul.nav.nav-tabs
+      %li{:class=>(request.path_info == '/students') ? 'active tab' : 'tab'}<
+        %a{:href=>'/students'} Learn an Hour of Code
+      %li{:class=>(request.path_info == '/students/beyond') ? 'active tab' : 'tab'}<
+        %a{:href=>'/students/beyond'} Beyond One Hour
+      %li{:class=>(request.path_info == '/students/codingclubs') ? 'active tab' : 'tab'}<
+        %a{:href=>'/students/codingclubs'} Coding Clubs
+        
+= view :learn_carousels, variation:'beyond'

@@ -22,7 +22,7 @@ class Game < ActiveRecord::Base
   FLAPPY = 'flappy'
   BOUNCE = 'bounce'
   PLAYLAB = STUDIO = 'studio'
-  
+
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
   end
@@ -90,6 +90,7 @@ class Game < ActiveRecord::Base
         Unplugged:unplug
         Wordsearch:wordsearch
         CustomStudio:studio
+        Calc:calc
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

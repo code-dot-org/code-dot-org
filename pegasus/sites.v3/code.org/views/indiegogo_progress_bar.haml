@@ -5,14 +5,14 @@
   raised of $5,000,000 goal!
 
 %div{:style=>'height: 20px; width 100%; background-color: #f5f5f5'}
-  %div{:id=>'current_bar', :style=>'float: left; margin-right: 5px; height: 20px; width: 0; background-color: rgb(0, 178, 192); padding-right: 10px; display: none'}
+  %div{:id=>'current_bar', :style=>'float: left; margin-right: 5px; height: 20px; width: 0; background-color: rgb(0, 178, 192); padding-right: 10px; display: none;'}
   %p{:id=>'percent', :style=>'display: none;'}
     0%
 %br
 
 %a{:href=>'https://www.indiegogo.com/projects/an-hour-of-code-for-every-student/contributions/new'}
   %button
-    Contribute Now
+    Donate
 
 :javascript
   $.ajax({
@@ -24,14 +24,16 @@
       var collected = data["response"]["collected_funds"];
       var interval = 1;
       var timer = setInterval(increaseNumber, interval);
+      var increase = Math.round(collected / 499 + 111);
+      var currentFundsContainer = $('#current_funds');
 
       function increaseNumber() {
         if (current < collected) {
-          if (current + 51 < collected) {
-            $('#current_funds').text("$" + (current + 101));
-            current += 101;
+          if (current + increase < collected) {
+            currentFundsContainer.text("$" + (current + increase).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+            current += increase;
           } else {
-            $('#current_funds').text("$" + (current + (collected - current)));
+            currentFundsContainer.text("$" + (current + (collected - current)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
             current += (collected - current);
           }
         }
@@ -50,10 +52,10 @@
     $("#current_bar").animate({width: barWidth + "%"}, 2500, function () {
       $('#percent').css("float", "left");
       $('#percent').fadeIn("slow");
-      if (Math.round(collected / goal * 100) < 1) {
+      if (Math.floor(collected / goal * 100) < 1) {
         $('#percent').text("Less than 1%");
       } else {
-        $('#percent').text(Math.round(collected / goal * 100) + "%");
+        $('#percent').text(Math.floor(collected / goal * 100) + "%");
       }
     });
 

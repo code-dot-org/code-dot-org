@@ -78,6 +78,7 @@ class Studio < Grid
 <block type="studio_saySprite">
   <title name="TEXT">type here</title>
 </block>
+<block type="studio_saySpriteParams"></block>
 <block type="studio_setSpritePosition">
   <title name="VALUE">7</title>
 </block>
@@ -96,6 +97,9 @@ class Studio < Grid
   <title name="VALUE">0</title>
 </block>
 <block type="studio_vanish"></block>
+<block type="text"></block>
+<block type="math_number"></block>
+<block type="math_arithmetic" inline="true"></block>
 #{k1_blocks(type) if is_k1 == 'true'}
     XML
   end
