@@ -4,7 +4,8 @@
     -if @country == 'ar'
       %h2= hoc_s(:map_header_ar)
     -else
-      %h2= hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))
+      %a{href: "/events"}
+        %h2= hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))
 
 .row
   .col-xs-1.hidden-sm
