@@ -74,7 +74,7 @@ social:
             &nbsp;
           .optionright
             -#%a{:href=>'/learn'}
-            %button.optionbutton{onclick: "ga('send','event','button','click',{label:'code_try', hitCallback: function() { window.location.href = '/learn'; }});"}
+            %button.optionbutton{onclick: "ga('send','event','button','click',{eventLabel:'code_try', hitCallback: function() { window.location.href = '/learn'; }});"}
               =I18n.t :hoc2014_try
             %br/
 
@@ -84,7 +84,7 @@ social:
             &nbsp;
           .optionright
             -#%a{:href=>"http://#{canonical_hostname('hourofcode.com')}/#join", target: "_blank"}
-            %button.optionbutton{onclick: "ga('send','event','button','click',{label:'code_host', hitCallback: function() { window.location.href = 'http://#{canonical_hostname('hourofcode.com')}/#join'; }});"}
+            %button.optionbutton{onclick: "ga('send','event','button','click',{eventLabel:'code_host', hitCallback: function() { window.location.href = 'http://#{canonical_hostname('hourofcode.com')}/#join'; }});"}
               =I18n.t :hoc2014_host
             %br/
 
@@ -94,7 +94,7 @@ social:
             &nbsp;
           .optionright
             -#%a{:href=>'/donate'}
-            %button.optionbutton{onclick: "ga('send','event','button','click',{label:'code_support', hitCallback: function() { window.location.href = '/donate'; }});"}
+            %button.optionbutton{onclick: "ga('send','event','button','click',{eventLabel:'code_support', hitCallback: function() { window.location.href = '/donate'; }});"}
               =I18n.t :hoc2014_support
             %br/
 
