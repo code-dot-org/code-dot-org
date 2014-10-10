@@ -143,11 +143,15 @@ Blockly.Connection.prototype.connect = function(connectTo) {
   }
 };
 
+/**
+ * Handle the orphaned block of existingConnection when connecting this to
+ * existingConnection.
+ */
 Blockly.Connection.prototype.handleOrphan_ = function (existingConnection) {
   var orphanBlock = existingConnection.targetBlock();
+  orphanBlock.setParent(null);
 
   if (this.type === Blockly.INPUT_VALUE || this.type === Blockly.OUTPUT_VALUE) {
-    orphanBlock.setParent(null);
     if (!orphanBlock.outputConnection) {
       throw 'Orphan block does not have an output connection.';
     }
@@ -156,14 +160,18 @@ Blockly.Connection.prototype.handleOrphan_ = function (existingConnection) {
       orphanBlock.outputConnection.bumpAwayFrom_(existingConnection);
     }, Blockly.BUMP_DELAY);
   } else if (this.type === Blockly.FUNCTIONAL_INPUT || this.type === Blockly.FUNCTIONAL_OUTPUT) {
-    throw "Not yet implemented";
+    if (!orphanBlock.previousConnection) {
+      throw 'Orphan block does not have a previous connection.';
+    }
+    window.setTimeout(function() {
+      orphanBlock.previousConnection.bumpAwayFrom_(existingConnection);
+    }, Blockly.BUMP_DELAY);
   } else {
     // Statement blocks may be inserted into the middle of a stack.
     if (this.type != Blockly.PREVIOUS_STATEMENT) {
       throw 'Can only do a mid-stack connection with the top of a block.';
     }
 
-    orphanBlock.setParent(null);
     if (!orphanBlock.previousConnection) {
       throw 'Orphan block does not have a previous connection.';
     }
