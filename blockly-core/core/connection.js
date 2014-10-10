@@ -47,10 +47,17 @@ Blockly.Connection = function(source, type) {
 };
 
 /**
+ * Is this connection currently connected to another connection.
+ */
+Blockly.Connection.prototype.isConnected_ = function () {
+  return this.targetConnection !== null;
+};
+
+/**
  * Sever all links to this connection (not including from the source object).
  */
 Blockly.Connection.prototype.dispose = function() {
-  if (this.targetConnection) {
+  if (this.isConnected_()) {
     throw 'Disconnect connection before disposing of it.';
   }
   if (this.inDB_) {
@@ -77,86 +84,24 @@ Blockly.Connection.prototype.isSuperior = function() {
 
 /**
  * Connect this connection to another connection.
- * @param {!Blockly.Connection} otherConnection Connection to connect to.
+ * @param {!Blockly.Connection} connectTo Connection to connect to.
  */
-Blockly.Connection.prototype.connect = function(otherConnection) {
-  if (this.sourceBlock_ == otherConnection.sourceBlock_) {
+Blockly.Connection.prototype.connect = function(connectTo) {
+  if (this.sourceBlock_ == connectTo.sourceBlock_) {
     throw 'Attempted to connect a block to itself.';
   }
-  if (this.sourceBlock_.workspace !== otherConnection.sourceBlock_.workspace) {
+  if (this.sourceBlock_.workspace !== connectTo.sourceBlock_.workspace) {
     throw 'Blocks are on different workspaces.';
   }
-  if (Blockly.OPPOSITE_TYPE[this.type] != otherConnection.type) {
+  if (Blockly.OPPOSITE_TYPE[this.type] != connectTo.type) {
     throw 'Attempt to connect incompatible types.';
   }
-  if (this.type === Blockly.INPUT_VALUE || this.type === Blockly.OUTPUT_VALUE ||
-    this.type === Blockly.FUNCTIONAL_INPUT || this.type === Blockly.FUNCTIONAL_OUTPUT) {
-    if (this.targetConnection) {
-      // Can't make a value connection if male block is already connected.
-      throw 'Source connection already connected (value).';
-    } else if (otherConnection.targetConnection) {
-      // If female block is already connected, disconnect and bump the male.
-      var orphanBlock = otherConnection.targetBlock();
-      orphanBlock.setParent(null);
-      if (!orphanBlock.outputConnection) {
-        throw 'Orphan block does not have an output connection.';
-      }
-      // Attempt to reattach the orphan at the end of the newly inserted
-      // block.  Since this block may be a row, walk down to the end.
-      var newBlock = this.sourceBlock_;
-      var connection;
-      while (connection =
-          Blockly.Connection.singleConnection_(
-          /** @type {!Blockly.Block} */ (newBlock), orphanBlock)) {
-        // '=' is intentional in line above.
-        if (connection.targetBlock()) {
-          newBlock = connection.targetBlock();
-        } else {
-          connection.connect(orphanBlock.outputConnection);
-          orphanBlock = null;
-          break;
-        }
-      }
-      if (orphanBlock) {
-        // Unable to reattach orphan.  Bump it off to the side.
-        window.setTimeout(function() {
-              orphanBlock.outputConnection.bumpAwayFrom_(otherConnection);
-            }, Blockly.BUMP_DELAY);
-      }
-    }
-  } else {
-    if (this.targetConnection) {
-      throw 'Source connection already connected (block).';
-    } else if (otherConnection.targetConnection) {
-      // Statement blocks may be inserted into the middle of a stack.
-      if (this.type != Blockly.PREVIOUS_STATEMENT) {
-        throw 'Can only do a mid-stack connection with the top of a block.';
-      }
-      // Split the stack.
-      var orphanBlock = otherConnection.targetBlock();
-      orphanBlock.setParent(null);
-      if (!orphanBlock.previousConnection) {
-        throw 'Orphan block does not have a previous connection.';
-      }
-      // Attempt to reattach the orphan at the bottom of the newly inserted
-      // block.  Since this block may be a stack, walk down to the end.
-      var newBlock = this.sourceBlock_;
-      while (newBlock.nextConnection) {
-        if (newBlock.nextConnection.targetConnection) {
-          newBlock = newBlock.nextConnection.targetBlock();
-        } else {
-          newBlock.nextConnection.connect(orphanBlock.previousConnection);
-          orphanBlock = null;
-          break;
-        }
-      }
-      if (orphanBlock) {
-        // Unable to reattach orphan.  Bump it off to the side.
-        window.setTimeout(function() {
-              orphanBlock.previousConnection.bumpAwayFrom_(otherConnection);
-            }, Blockly.BUMP_DELAY);
-      }
-    }
+  if (this.isConnected_()) {
+    throw 'Source connection already connected.';
+  }
+
+  if (connectTo.targetConnection) {
+    this.handleOrphan_(connectTo);
   }
 
   // Determine which block is superior (higher in the source stack).
@@ -164,16 +109,16 @@ Blockly.Connection.prototype.connect = function(otherConnection) {
   if (this.isSuperior()) {
     // Superior block.
     parentBlock = this.sourceBlock_;
-    childBlock = otherConnection.sourceBlock_;
+    childBlock = connectTo.sourceBlock_;
   } else {
     // Inferior block.
-    parentBlock = otherConnection.sourceBlock_;
+    parentBlock = connectTo.sourceBlock_;
     childBlock = this.sourceBlock_;
   }
 
   // Establish the connections.
-  this.targetConnection = otherConnection;
-  otherConnection.targetConnection = this;
+  this.targetConnection = connectTo;
+  connectTo.targetConnection = this;
 
   // Demote the inferior block so that one is a child of the superior one.
   childBlock.setParent(parentBlock);
@@ -198,29 +143,50 @@ Blockly.Connection.prototype.connect = function(otherConnection) {
   }
 };
 
-/**
- * Does the given block have one and only one connection point that will accept
- * the orphaned block?
- * @param {!Blockly.Block} block The superior block.
- * @param {!Blockly.Block} orphanBlock The inferior block.
- * @return {Blockly.Connection} The suitable connection point on 'block',
- *     or null.
- * @private
- */
-Blockly.Connection.singleConnection_ = function(block, orphanBlock) {
-  var connection = false;
-  for (var x = 0; x < block.inputList.length; x++) {
-    var thisConnection = block.inputList[x].connection;
-    if (thisConnection && thisConnection.type == Blockly.INPUT_VALUE &&
-        orphanBlock.outputConnection.checkType_(thisConnection)) {
-      if (connection) {
-        return null;  // More than one connection.
+Blockly.Connection.prototype.handleOrphan_ = function (existingConnection) {
+  var orphanBlock = existingConnection.targetBlock();
+
+  if (this.type === Blockly.INPUT_VALUE || this.type === Blockly.OUTPUT_VALUE) {
+    orphanBlock.setParent(null);
+    if (!orphanBlock.outputConnection) {
+      throw 'Orphan block does not have an output connection.';
+    }
+
+    window.setTimeout(function() {
+      orphanBlock.outputConnection.bumpAwayFrom_(existingConnection);
+    }, Blockly.BUMP_DELAY);
+  } else if (this.type === Blockly.FUNCTIONAL_INPUT || this.type === Blockly.FUNCTIONAL_OUTPUT) {
+    throw "Not yet implemented";
+  } else {
+    // Statement blocks may be inserted into the middle of a stack.
+    if (this.type != Blockly.PREVIOUS_STATEMENT) {
+      throw 'Can only do a mid-stack connection with the top of a block.';
+    }
+
+    orphanBlock.setParent(null);
+    if (!orphanBlock.previousConnection) {
+      throw 'Orphan block does not have a previous connection.';
+    }
+    // Attempt to reattach the orphan at the bottom of the newly inserted
+    // block.  Since this block may be a stack, walk down to the end.
+    var newBlock = this.sourceBlock_;
+    while (newBlock.nextConnection) {
+      if (newBlock.nextConnection.targetConnection) {
+        newBlock = newBlock.nextConnection.targetBlock();
+      } else {
+        newBlock.nextConnection.connect(orphanBlock.previousConnection);
+        orphanBlock = null;
+        break;
       }
-      connection = thisConnection;
+    }
+    if (orphanBlock) {
+      // Unable to reattach orphan.  Bump it off to the side.
+      window.setTimeout(function() {
+        orphanBlock.previousConnection.bumpAwayFrom_(existingConnection);
+      }, Blockly.BUMP_DELAY);
     }
   }
-  return connection;
-};
+}
 
 /**
  * Disconnect this connection.
@@ -340,9 +306,7 @@ Blockly.Connection.prototype.moveBy = function(dx, dy) {
  */
 Blockly.Connection.prototype.highlight = function() {
   var steps;
-  // todo - does functional_output belong here?
-  if (this.type === Blockly.INPUT_VALUE || this.type === Blockly.OUTPUT_VALUE ||
-    this.type === Blockly.FUNCTIONAL_OUTPUT) {
+  if (this.type === Blockly.INPUT_VALUE || this.type === Blockly.OUTPUT_VALUE) {
     var tabWidth = Blockly.RTL ? -Blockly.BlockSvg.TAB_WIDTH :
                                  Blockly.BlockSvg.TAB_WIDTH;
     steps = 'm 0,0 v 5 c 0,10 ' + -tabWidth + ',-8 ' + -tabWidth + ',7.5 s ' +
@@ -404,7 +368,7 @@ Blockly.Connection.prototype.tighten_ = function() {
  *     another connection or null, and 'radius' which is the distance.
  */
 Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
-  if (this.targetConnection) {
+  if (this.isConnected_()) {
     // Don't offer to connect to a connection that's already connected.
     return {connection: null, radius: maxLimit};
   }
@@ -627,7 +591,7 @@ Blockly.Connection.prototype.hideAll = function() {
   if (this.inDB_) {
     this.dbList_[this.type].removeConnection_(this);
   }
-  if (this.targetConnection) {
+  if (this.isConnected_()) {
     var blocks = this.targetBlock().getDescendants();
     for (var b = 0; b < blocks.length; b++) {
       var block = blocks[b];
