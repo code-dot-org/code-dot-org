@@ -3,7 +3,7 @@
   .field
     = f.label :name
     = f.text_field :name, placeholder: 'Level Name'
-  - unless @level.new_record? && @level.is_a?(Grid)
+  - if !@level.new_record? or @level.is_a?(Artist)
     .field
       = f.label 'concepts'
       %p
