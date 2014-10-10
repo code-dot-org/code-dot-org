@@ -8,7 +8,7 @@
     /[if IE 9]
       %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=Edge"}
     = stylesheet_link_tag    "application", media: "all"
-    - if !serve_fonts?
+    - if serve_fonts?
       = stylesheet_link_tag    "//cloud.typography.com/7425452/678642/css/fonts.css", media: "all"
     = javascript_include_tag "application"
     = javascript_include_tag "//cdn.optimizely.com/js/400912536.js" if Rails.env.production?
