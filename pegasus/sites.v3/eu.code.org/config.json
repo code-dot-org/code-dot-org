@@ -2,6 +2,16 @@
   "base":"i18n.code.org",
   "google_analytics_id":"UA-37745279-1",
   "us_site": "Code.org (US Site)",
+  "teachers_nav": {
+    "Educator Resources": "/teachers",
+    "Hour of Code": "/teachers/hoc",
+    "New K-5 Program": "/teachers/k5",
+    "K-8 Intro Course": "/teachers/20hr",
+    "Curriculum": "/teachers/curriculum",
+    "Inspire Students": "/teachers/inspire",
+    "Educational Videos": "/teachers/videos",
+    "3rd Party": "/teachers/3rdparty"
+  },
   "adults_nav": {
     "Resources": "/adults"
   },
@@ -10,25 +20,15 @@
     "Partners": "/about/partners",
     "News": "/about/news"
   },
-  "educate_nav": {
-    "Educator Resources": "/educate",
-    "Hour of Code": "/educate/hoc",
-    "New K-5 Program": "/educate/k5",
-    "K-8 Intro Course": "/educate/20hr",
-    "Curriculum": "/educate/curriculum",
-    "Inspire Students": "/educate/inspire",
-    "Educational Videos": "/educate/videos",
-    "3rd Party": "/educate/3rdparty"
-  },
   "header_links": {
     "HOME": "/",
-    "STUDENTS": "/learn",
-    "TEACHERS": "/educate",
+    "STUDENTS": "/students",
+    "TEACHERS": "/teachers",
     "ADULTS": "/adults",
     "ABOUT": "/about"
   },
   "footer_links": {
-    "Tutorials": "/learn",
+    "Tutorials": "/students",
     "About": "/about",
     "Partners": "/about/partners"
   }
