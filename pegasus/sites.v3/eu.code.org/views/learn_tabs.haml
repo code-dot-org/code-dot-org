@@ -1,7 +1,9 @@
 #learn-tabs.desktop-feature
   .content
     %ul.nav.nav-tabs
-      %li{:class=>(request.path_info == '/learn') ? 'active tab' : 'tab'}<
-        %a{:href=>'/learn'} Learn an Hour of Code
-      %li{:class=>(request.path_info == '/learn/beyond') ? 'active tab' : 'tab'}<
-        %a{:href=>'/learn/beyond'} Beyond One Hour
+      %li{:class=>(request.path_info == '/students') ? 'active tab' : 'tab'}<
+        %a{:href=>'/students'} Learn an Hour of Code
+      %li{:class=>(request.path_info == '/students/beyond') ? 'active tab' : 'tab'}<
+        %a{:href=>'/students/beyond'} Beyond One Hour
+      %li{:class=>(request.path_info == '/students/codingclubs') ? 'active tab' : 'tab'}<
+        %a{:href=>'/students/codingclubs'} Coding Clubs

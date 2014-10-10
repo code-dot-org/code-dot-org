@@ -1,6 +1,6 @@
 ---
 title: Teach the Hour of Code
-nav: educate_nav
+nav: teachers_nav
 social:
   'og:title' : 'The EU Hour of Code is coming'
   'og:description' : "For every student: learn how fun coding is in just one hour, October 11-17."
@@ -33,7 +33,7 @@ Watch on [YouTube](http://youtu.be/hfZrX5YDltU) | [Download](https://dl.dropboxu
 
 **Choose a tutorial for your students**
 
-- Check out the [tutorials](/learn) and pick one for your class. 
+- Check out the [tutorials](/students) and pick one for your class. 
 - Go through the tutorial yourself so you can help students during the Hour of Code.
 - Test tutorials on student computers or devices. Make sure they work properly (with sound and video).
 - Preview the congrats page to see what students will see when they finish. 
@@ -75,5 +75,5 @@ Most kids don’t know what computer science is. Here are some ideas:
 
 **What to do if a student finishes early?**
 
-- Students can try more [tutorials](/learn/beyond)
+- Students can try more [tutorials](/students/beyond)
 - Or, ask students who finish early to help classmates who are having trouble with the activity.
