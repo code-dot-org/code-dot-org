@@ -35,7 +35,7 @@ function ensureExact(n) {
 Blockly.JavaScript.math_number = function() {
   // Numeric value.
   var code = ensureExact(window.parseFloat(this.getTitleValue('NUM')));
-  return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 Blockly.JavaScript.math_arithmetic = function() {
@@ -51,11 +51,11 @@ Blockly.JavaScript.math_arithmetic = function() {
 };
 
 Blockly.JavaScript.math_arithmetic.OPERATORS = {
-  ADD: ['.add', Blockly.JavaScript.ORDER_FUNCTION_CALL],
-  MINUS: ['.subtract', Blockly.JavaScript.ORDER_FUNCTION_CALL],
-  MULTIPLY: ['.multiply', Blockly.JavaScript.ORDER_FUNCTION_CALL],
-  DIVIDE: ['.divide', Blockly.JavaScript.ORDER_FUNCTION_CALL],
-  POWER: ['.expt', Blockly.JavaScript.ORDER_FUNCTION_CALL]
+  ADD: ['.add', Blockly.JavaScript.ORDER_ADDITION],
+  MINUS: ['.subtract', Blockly.JavaScript.ORDER_SUBTRACTION],
+  MULTIPLY: ['.multiply', Blockly.JavaScript.ORDER_MULTIPLICATION],
+  DIVIDE: ['.divide', Blockly.JavaScript.ORDER_FUNCTION_DIVISION],
+  POWER: ['.expt', Blockly.JavaScript.ORDER_COMMA]
 };
 
 Blockly.JavaScript.math_single = function() {
