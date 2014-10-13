@@ -12851,8 +12851,11 @@ Blockly.Connection = function(source, type) {
   this.inDB_ = false;
   this.dbList_ = this.sourceBlock_.workspace.connectionDBList
 };
+Blockly.Connection.prototype.isConnected_ = function() {
+  return this.targetConnection !== null
+};
 Blockly.Connection.prototype.dispose = function() {
-  if(this.targetConnection) {
+  if(this.isConnected_()) {
     throw"Disconnect connection before disposing of it.";
   }
   if(this.inDB_) {
@@ -12869,85 +12872,32 @@ Blockly.Connection.prototype.dispose = function() {
 Blockly.Connection.prototype.isSuperior = function() {
   return this.type === Blockly.INPUT_VALUE || (this.type === Blockly.NEXT_STATEMENT || this.type === Blockly.FUNCTIONAL_INPUT)
 };
-Blockly.Connection.prototype.connect = function(otherConnection) {
-  if(this.sourceBlock_ == otherConnection.sourceBlock_) {
+Blockly.Connection.prototype.connect = function(connectTo) {
+  if(this.sourceBlock_ == connectTo.sourceBlock_) {
     throw"Attempted to connect a block to itself.";
   }
-  if(this.sourceBlock_.workspace !== otherConnection.sourceBlock_.workspace) {
+  if(this.sourceBlock_.workspace !== connectTo.sourceBlock_.workspace) {
     throw"Blocks are on different workspaces.";
   }
-  if(Blockly.OPPOSITE_TYPE[this.type] != otherConnection.type) {
+  if(Blockly.OPPOSITE_TYPE[this.type] != connectTo.type) {
     throw"Attempt to connect incompatible types.";
   }
-  if(this.type === Blockly.INPUT_VALUE || (this.type === Blockly.OUTPUT_VALUE || (this.type === Blockly.FUNCTIONAL_INPUT || this.type === Blockly.FUNCTIONAL_OUTPUT))) {
-    if(this.targetConnection) {
-      throw"Source connection already connected (value).";
-    }else {
-      if(otherConnection.targetConnection) {
-        var orphanBlock = otherConnection.targetBlock();
-        orphanBlock.setParent(null);
-        if(!orphanBlock.outputConnection) {
-          throw"Orphan block does not have an output connection.";
-        }
-        var newBlock = this.sourceBlock_;
-        var connection;
-        while(connection = Blockly.Connection.singleConnection_((newBlock), orphanBlock)) {
-          if(connection.targetBlock()) {
-            newBlock = connection.targetBlock()
-          }else {
-            connection.connect(orphanBlock.outputConnection);
-            orphanBlock = null;
-            break
-          }
-        }
-        if(orphanBlock) {
-          window.setTimeout(function() {
-            orphanBlock.outputConnection.bumpAwayFrom_(otherConnection)
-          }, Blockly.BUMP_DELAY)
-        }
-      }
-    }
-  }else {
-    if(this.targetConnection) {
-      throw"Source connection already connected (block).";
-    }else {
-      if(otherConnection.targetConnection) {
-        if(this.type != Blockly.PREVIOUS_STATEMENT) {
-          throw"Can only do a mid-stack connection with the top of a block.";
-        }
-        var orphanBlock = otherConnection.targetBlock();
-        orphanBlock.setParent(null);
-        if(!orphanBlock.previousConnection) {
-          throw"Orphan block does not have a previous connection.";
-        }
-        var newBlock = this.sourceBlock_;
-        while(newBlock.nextConnection) {
-          if(newBlock.nextConnection.targetConnection) {
-            newBlock = newBlock.nextConnection.targetBlock()
-          }else {
-            newBlock.nextConnection.connect(orphanBlock.previousConnection);
-            orphanBlock = null;
-            break
-          }
-        }
-        if(orphanBlock) {
-          window.setTimeout(function() {
-            orphanBlock.previousConnection.bumpAwayFrom_(otherConnection)
-          }, Blockly.BUMP_DELAY)
-        }
-      }
-    }
+  if(this.isConnected_()) {
+    throw"Source connection already connected.";
+  }
+  if(connectTo.targetConnection) {
+    this.handleOrphan_(connectTo)
   }
   var parentBlock, childBlock;
   if(this.isSuperior()) {
     parentBlock = this.sourceBlock_;
-    childBlock = otherConnection.sourceBlock_
+    childBlock = connectTo.sourceBlock_
   }else {
-    parentBlock = otherConnection.sourceBlock_;
+    parentBlock = connectTo.sourceBlock_;
     childBlock = this.sourceBlock_
   }
-  this.targetConnection = otherConnection;
-  otherConnection.targetConnection = this;
+  this.targetConnection = connectTo;
+  connectTo.targetConnection = this;
   childBlock.setParent(parentBlock);
   if(parentBlock.rendered) {
     parentBlock.svg_.updateDisabled()
@@ -12960,6 +12910,62 @@ Blockly.Connection.prototype.connect = function(otherConnection) {
       childBlock.render()
     }else {
       parentBlock.render()
+    }
+  }
+};
+Blockly.Connection.prototype.handleOrphan_ = function(existingConnection) {
+  var orphanBlock = existingConnection.targetBlock();
+  orphanBlock.setParent(null);
+  if(this.type === Blockly.INPUT_VALUE || this.type === Blockly.OUTPUT_VALUE) {
+    if(!orphanBlock.outputConnection) {
+      throw"Orphan block does not have an output connection.";
+    }
+    var newBlock = this.sourceBlock_;
+    var connection;
+    while(connection = Blockly.Connection.singleConnection_(newBlock, orphanBlock)) {
+      if(connection.targetBlock()) {
+        newBlock = connection.targetBlock()
+      }else {
+        connection.connect(orphanBlock.outputConnection);
+        orphanBlock = null;
+        break
+      }
+    }
+    if(orphanBlock) {
+      window.setTimeout(function() {
+        orphanBlock.outputConnection.bumpAwayFrom_(existingConnection)
+      }, Blockly.BUMP_DELAY)
+    }
+  }else {
+    if(this.type === Blockly.FUNCTIONAL_INPUT || this.type === Blockly.FUNCTIONAL_OUTPUT) {
+      if(!orphanBlock.previousConnection) {
+        throw"Orphan block does not have a previous connection.";
+      }
+      window.setTimeout(function() {
+        orphanBlock.previousConnection.bumpAwayFrom_(existingConnection)
+      }, Blockly.BUMP_DELAY)
+    }else {
+      if(this.type != Blockly.PREVIOUS_STATEMENT) {
+        throw"Can only do a mid-stack connection with the top of a block.";
+      }
+      if(!orphanBlock.previousConnection) {
+        throw"Orphan block does not have a previous connection.";
+      }
+      var newBlock = this.sourceBlock_;
+      while(newBlock.nextConnection) {
+        if(newBlock.nextConnection.targetConnection) {
+          newBlock = newBlock.nextConnection.targetBlock()
+        }else {
+          newBlock.nextConnection.connect(orphanBlock.previousConnection);
+          orphanBlock = null;
+          break
+        }
+      }
+      if(orphanBlock) {
+        window.setTimeout(function() {
+          orphanBlock.previousConnection.bumpAwayFrom_(existingConnection)
+        }, Blockly.BUMP_DELAY)
+      }
     }
   }
 };
@@ -13050,7 +13056,7 @@ Blockly.Connection.prototype.moveBy = function(dx, dy) {
 };
 Blockly.Connection.prototype.highlight = function() {
   var steps;
-  if(this.type === Blockly.INPUT_VALUE || (this.type === Blockly.OUTPUT_VALUE || this.type === Blockly.FUNCTIONAL_OUTPUT)) {
+  if(this.type === Blockly.INPUT_VALUE || this.type === Blockly.OUTPUT_VALUE) {
     var tabWidth = Blockly.RTL ? -Blockly.BlockSvg.TAB_WIDTH : Blockly.BlockSvg.TAB_WIDTH;
     steps = "m 0,0 v 5 c 0,10 " + -tabWidth + ",-8 " + -tabWidth + ",7.5 s " + tabWidth + ",-2.5 " + tabWidth + ",7.5 v 5"
   }else {
@@ -13085,7 +13091,7 @@ Blockly.Connection.prototype.tighten_ = function() {
   }
 };
 Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
-  if(this.targetConnection) {
+  if(this.isConnected_()) {
     return{connection:null, radius:maxLimit}
   }
   var oppositeType = Blockly.OPPOSITE_TYPE[this.type];
@@ -13223,7 +13229,7 @@ Blockly.Connection.prototype.hideAll = function() {
   if(this.inDB_) {
     this.dbList_[this.type].removeConnection_(this)
   }
-  if(this.targetConnection) {
+  if(this.isConnected_()) {
     var blocks = this.targetBlock().getDescendants();
     for(var b = 0;b < blocks.length;b++) {
       var block = blocks[b];
