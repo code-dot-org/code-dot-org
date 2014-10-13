@@ -1,21 +1,35 @@
 -facebook = {:u=>'http://code.org/quotes'}
--twitter = {:url=>'http://code.org/quotes', :related=>'codeorg', :hashtags=>'hourofcode', :text=>'Lideri și trendsetteri din întreaga lume susțin că tot mai mulți elevi ar trebui să învețe programare. 
- @codeorg'}
--DB[:uk_quotes].where(tag_s:'promote').each do |value|
-  #block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
-    #headshot{:style=>'float:left; width: 25%'}
-      %img{:src=>value[:image_url_s].to_s.sub(/^\/images\//, '/images/fill-90x90/')}
-    #text{:style=>'float:left; width:75%'}
-      %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
-        =value[:name_s]
-      %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
-        -unless value[:title_s].nil_or_empty?
-          =value[:title_s]
-      %p{:style=>'font-size: 13px;line-height: 18px;'}
-        =value[:quote_t]
+-twitter = {:url=>'http://code.org/quotes', :related=>'codeorg', :hashtags=>'hourofcode', :text=>'Lideri și trendsetteri din întreaga lume susțin că tot mai mulți elevi ar trebui să învețe programare. @codeorg'}
 
--#links{:style=>'clear:both;'}
-  = view :share_buttons, facebook:facebook, twitter:twitter)
-  .all-quotes-link
-    %a{:href=>'http://code.org/quotes'}
-      See all quotes
+#block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
+  #headshot{:style=>'float:left; width: 25%'}
+    %img{:src=>'/images/radu-georgescu.png', :style=>'width:90px; height:90px;'}
+  .text{:style=>'float:left; width:75%'}
+    %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+      Radu Georgescu
+    %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+      Founding Partner, GECAD Group
+    %p{:style=>'font-size: 13px;line-height: 18px;'}
+      Pasiunea se naste experimentand. Un programator nu se naste scriind linii de cod, ci isi descopera aceasta pasiune. Romania are nevoie de oameni pasionati in orice domeniu, iar noi, in IT, avem nevoie de multi astfel de oameni. Salut initiativa Hour of Code si cred ca este unul dintre proiectele care vor starni multa curiozitate si apoi pasiune pentru programare.
+
+#block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
+  #headshot{:style=>'float:left; width: 25%'}
+    %img{:src=>'/images/ela-moraru.jpg', :style=>'width:90px; height:90px;'}
+  .text{:style=>'float:left; width:75%'}
+    %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+      Ela Moraru
+    %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+      Education and Computer Science Champ, Google Romania
+    %p{:style=>'font-size: 13px;line-height: 18px;'}
+      Tinerii de astazi vor fi consumatorii tehnologiei de maine sau creatorii ei. Este in puterea noastra sa ii sustinem sa aleaga ce isi doresc pentru viitorul lor. Sustinem Hour of Code pentru ca astfel de initiative fac diferenta si ofera o sansa in plus tinerilor pasionati de inovatie si dezvoltare!
+
+#block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
+  #headshot{:style=>'float:left; width: 25%'}
+    %img{:src=>'/images/simona-lapusan.jpg', :style=>'width:90px; height:90px;'}
+  .text{:style=>'float:left; width:75%'}
+    %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+      Simona Lapusan
+    %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+      COO & Founding Partner, ZITEC
+    %p{:style=>'font-size: 13px;line-height: 18px;'}
+      In viitor, analfabetismul nu va insemna sa nu stii sa citesti si sa scrii,  ci sa consideri ca tehnologia se "intampla" prin magie. Intr-o societate in continua schimbare, in care oamenii sunt din ce in ce mai conectati virtual, a sti sa programezi te ajuta nu doar sa abordezi problemele intr-un mod structurat, algoritmic, ci sa intelegi mecanismele de functionare ale acestei societati informationale si sa fii participant activ in schimbare.
