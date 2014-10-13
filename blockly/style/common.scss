@@ -97,7 +97,7 @@ html[dir="RTL"] .farSide {
 /* Shrink the visualization area on small displays. */
 
 @media screen and (max-width: 1150px) {
-  #visualization.responsive > svg, #visualization.responsive > canvas {
+  #visualization.responsive > * {
     -webkit-transform-origin: 0 0;
     -ms-transform-origin: 0 0;
     transform-origin: 0 0;
@@ -124,7 +124,7 @@ html[dir="RTL"] .farSide {
   #visualizationColumn.responsive {
     max-width: 350px;
   }
-  #visualization.responsive > svg, #visualization.responsive > canvas {
+  #visualization.responsive > * {
     -webkit-transform: scale(0.875);
     -ms-transform: scale(0.875);
     transform: scale(0.875);
@@ -142,7 +142,7 @@ html[dir="RTL"] .farSide {
   #visualizationColumn.responsive {
     max-width: 300px;
   }
-  #visualization.responsive > svg, #visualization.responsive > canvas {
+  #visualization.responsive > * {
     -webkit-transform: scale(0.75);
     -ms-transform: scale(0.75);
     transform: scale(0.75);
@@ -160,7 +160,7 @@ html[dir="RTL"] .farSide {
   #visualizationColumn.responsive {
     max-width: 250px;
   }
-  #visualization.responsive > svg, #visualization.responsive > canvas {
+  #visualization.responsive > * {
     -webkit-transform: scale(0.625);
     -ms-transform: scale(0.625);
     transform: scale(0.625);
@@ -178,7 +178,7 @@ html[dir="RTL"] .farSide {
   #visualizationColumn.responsive {
     max-width: 200px;
   }
-  #visualization.responsive > svg, #visualization.responsive > canvas {
+  #visualization.responsive > * {
     -webkit-transform: scale(0.5);
     -ms-transform: scale(0.5);
     transform: scale(0.5);
