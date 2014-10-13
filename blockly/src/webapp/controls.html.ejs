@@ -1,0 +1,20 @@
+<% var msg = require('../../locale/current/common') %>
+
+<div id="soft-buttons" class="soft-buttons-none">
+  <button id="leftButton" class="arrow">
+    <img src="<%= assetUrl('media/1x1.gif') %>" class="left-btn icon21">
+  <button id="rightButton" class="arrow">
+    <img src="<%= assetUrl('media/1x1.gif') %>" class="right-btn icon21">
+  <button id="upButton" class="arrow">
+    <img src="<%= assetUrl('media/1x1.gif') %>" class="up-btn icon21">
+  <button id="downButton" class="arrow">
+    <img src="<%= assetUrl('media/1x1.gif') %>" class="down-btn icon21">
+</div>
+
+<% if (finishButton) { %>
+  <div id="share-cell" class="share-cell-none">
+    <button id="finishButton" class="share">
+      <img src="<%= assetUrl('media/1x1.gif') %>"><%= msg.finish() %>
+    </button>
+  </div>
+<% } %>
