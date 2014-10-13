@@ -71,5 +71,9 @@ app.get('/calc', function(req, res) {
   renderApp('calc', req, res);
 });
 
+app.get('/webapp', function(req, res) {
+  renderApp('webapp', req, res);
+});
+
 
 module.exports = app;
