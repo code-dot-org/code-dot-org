@@ -1140,6 +1140,26 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
+/**
+ * Generate the xml for a block for the calc app.
+ */
+exports.calcBlockXml = function (type, args) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var i = 1; i <= args.length; i++) {
+    str += '<functional_input name="ARG' + i + '">';
+    var arg = args[i - 1];
+    if (typeof(arg) === "number") {
+      arg = '<block type="functional_math_number"><title name="NUM">' + arg +
+        '</title></block>';
+    }
+    str += arg;
+    str += '</functional_input>';
+  }
+  str+= '</block>';
+
+  return str;
+};
+
 },{"./xml":35}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
@@ -1476,7 +1496,7 @@ Calc.init = function(config) {
     visualization.appendChild(display);
     Calc.ctxDisplay = display.getContext('2d');
 
-    // todo - draw target function
+    Calc.answerExpression = generateExpressionFromBlockXml(level.solutionBlocks);
 
     // todo - figure out LB story
 
@@ -1524,7 +1544,7 @@ Calc.display = function() {
     Calc.ctxDisplay.canvas.width);
   Calc.ctxDisplay.fillStyle = style;
 
-  Calc.drawTarget(level.target());
+  Calc.drawCorrectAnswer(Calc.answerExpression);
 };
 
 /**
@@ -1561,6 +1581,27 @@ function evalCode (code) {
   }
 }
 
+function generateExpressionFromBlockXml(blockXml) {
+  var xml = blockXml || '';
+
+  if (Blockly.mainWorkspace.getTopBlocks().length !== 0) {
+    throw new Error("generateExpressionFromBlockXml shouldn't be called if " +
+      "we already have blocks in the workspace");
+  }
+
+  // Temporarily put the blocks into the workspace so that we can generate code
+  BlocklyApps.loadBlocks(xml);
+  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  evalCode(code);
+
+  // Remove the blocks
+  Blockly.mainWorkspace.getTopBlocks().forEach(function (b) { b.dispose(); });
+  var expression = Calc.lastExpression;
+  Calc.lastExpression = null;
+
+  return expression;
+}
+
 /**
  * Execute the user's code.  Heaven help us...
  */
@@ -1576,7 +1617,7 @@ Calc.execute = function() {
   BlocklyApps.reset();
 
 
-  var result = Calc.drawAnswer(level.target(), Calc.lastExpression);
+  var result = Calc.drawUserAnswer(Calc.answerExpression, Calc.lastExpression);
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -1594,19 +1635,17 @@ Calc.execute = function() {
   BlocklyApps.report(reportData);
 };
 
-Calc.drawTarget = function (target) {
+Calc.drawCorrectAnswer = function (correctAnswer) {
   Calc.ctxDisplay.fillStyle = 'black';
   Calc.ctxDisplay.font="30px Verdana";
-  var str = target.toString();
+  var str = correctAnswer.toString();
   Calc.ctxDisplay.fillText(str, 0, 350);
 };
 
-Calc.drawAnswer = function (target, answer) {
+Calc.drawUserAnswer = function (correctAnswer, userAnswer) {
   var ctx = Calc.ctxDisplay;
-  // todo (brent) - should i just have these in one function (i.e. ask for the
-  // token list, given an answer and target).
-  var diff = Expression.getDiff(answer, target);
-  var list = Expression.getTokenList(answer, diff);
+  var errors = false;
+  var list = userAnswer.getTokenList(correctAnswer);
   var xpos = 0;
   var ypos = 200;
   for (var i = 0; i < list.length; i++) {
@@ -1614,13 +1653,15 @@ Calc.drawAnswer = function (target, answer) {
       ctx.fillText(' ', xpos, ypos);
       xpos += ctx.measureText(' ').width;
     }
-    // todo - color based on validity
     ctx.fillStyle = list[i].correct ? 'black' : 'red';
+    if (!list[i].correct) {
+      errors = true;
+    }
     ctx.fillText(list[i].char, xpos, ypos);
     xpos += ctx.measureText(list[i].char).width;
   }
 
-  return (diff.numDiffs === 0);
+  return !errors;
 };
 
 
@@ -1683,10 +1724,10 @@ exports.Colours = {
 
 },{}],10:[function(require,module,exports){
 /**
- * An tree representing an expression. Supports only two arguments, although
+ * A tree representing an expression. Supports only two arguments, although
  * that could potentially be expanded if necessary.
  * Example: "2 * (1 + 3)" represented by:
- * ew Expression('*', 2, new Expression('+', 1, 3)
+ * new Expression('*', 2, new Expression('+', 1, 3)
  */
 var Expression = function (operator, a, b) {
   this.operator = operator;
@@ -1694,16 +1735,18 @@ var Expression = function (operator, a, b) {
 };
 module.exports = Expression;
 
-// todo (brent) - figure out how/where these are exposed
-Expression.getDiff = getDiff;
-Expression.getTokenList = getTokenList;
-
 /**
  * String representation of expression tree
  */
 Expression.prototype.toString = function () {
   return "(" + this.args[0].toString() + " " + this.operator + " " +
     this.args[1].toString() + ")";
+};
+
+Expression.prototype.getTokenList = function (expectedExpression) {
+  var delta = getDifference(this, expectedExpression);
+
+  return getTokenList(this, delta);
 };
 
 /**
@@ -1717,7 +1760,7 @@ function token(char, correct) {
  * Given an expression or a number, and a diff
  */
 function getTokenList(expressionOrVal, diff) {
-  if (isNumber(expressionOrVal)) {
+  if (typeof(expressionOrVal) === "number") {
     return token(expressionOrVal.toString(), diff.numDiffs === 0);
   }
 
@@ -1731,13 +1774,17 @@ function getTokenList(expressionOrVal, diff) {
   return list;
 }
 
-function isNumber(val) {
-  // todo - do we also need to care about stringified numbers? i.e. "1"
-  return typeof(val) === "number";
-}
+/**
+ * Get the delta when going from src to target. Src and target can both be
+ * either numbers or Expressions.
+ */
+function getDifference(src, target) {
+  if (!isNumber(src) && !isExpression(src) ||
+    !isNumber(target) && !isExpression(target)) {
+    throw new Error('getDifference requires number or expression');
+  }
 
-function getDiff(src, target) {
-  if (src instanceof Expression && target instanceof Expression) {
+  if (isExpression(src) && isExpression(target)) {
     return getExpressionDiff(src, target);
   }
 
@@ -1752,6 +1799,10 @@ function getDiff(src, target) {
   return diff;
 }
 
+/**
+ * Get the delta when going from src to target. Src and target are both assumed
+ * to be expressions.
+ */
 function getExpressionDiff(src, target) {
   var diff = {};
   diff.numDiffs = 0;
@@ -1762,10 +1813,10 @@ function getExpressionDiff(src, target) {
     diff.operator = target.operator;
   }
 
-  var diff00 = getDiff(src.args[0], target.args[0]);
-  var diff01 = getDiff(src.args[0], target.args[1]);
-  var diff10 = getDiff(src.args[1], target.args[0]);
-  var diff11 = getDiff(src.args[1], target.args[1]);
+  var diff00 = getDifference(src.args[0], target.args[0]);
+  var diff01 = getDifference(src.args[0], target.args[1]);
+  var diff10 = getDifference(src.args[1], target.args[0]);
+  var diff11 = getDifference(src.args[1], target.args[1]);
 
   if (diff00.numDiffs === 0) {
     // first args match, second args may/may not
@@ -1794,6 +1845,22 @@ function getExpressionDiff(src, target) {
 
   return diff;
 }
+
+function isNumber(val) {
+  // todo - do we also need to care about stringified numbers? i.e. "1"
+  return typeof(val) === "number";
+}
+
+function isExpression(val) {
+  return (val instanceof Expression);
+}
+
+/* start-test-block */
+// export private function(s) to expose to unit testing
+module.exports.__testonly__ = {
+  getDifference: getDifference
+};
+/* end-test-block */
 
 },{}],11:[function(require,module,exports){
 /**
@@ -1940,13 +2007,11 @@ var Expression = require('./expression');
  */
 module.exports = {
   'example1': {
-    // todo (brent) - probably want this to be blocks
-    target: function () {
-      return new Expression('*',
-        new Expression('+', 1, 2),
-        new Expression('+', 3, 4));
-    },
-    ideal: 4,
+    solutionBlocks: blockUtils.calcBlockXml('functional_times', [
+      blockUtils.calcBlockXml('functional_plus', [1, 2]),
+      blockUtils.calcBlockXml('functional_plus', [3, 4])
+    ]),
+    ideal: Infinity,
     toolbox: blockUtils.createToolbox(
       blockUtils.blockOfType('functional_draw') +
       blockUtils.blockOfType('functional_plus') +

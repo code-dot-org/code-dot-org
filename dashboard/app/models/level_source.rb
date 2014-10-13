@@ -3,7 +3,7 @@ require 'digest/md5'
 # A specific solution attempt for a specific level
 class LevelSource < ActiveRecord::Base
   belongs_to :level
-  has_one :level_source_images
+  has_one :level_source_image
   has_many :level_source_hints
 
   validates_length_of :data, :maximum => 20000
