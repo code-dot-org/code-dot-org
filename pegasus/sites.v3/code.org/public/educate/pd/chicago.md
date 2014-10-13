@@ -44,9 +44,9 @@ Breakfast and lunch will be served.
 
 DePaul University 
 <br />
-14 East Jackson
+243 S. Wabash Ave
 <br />
-Daley Building, Rooms 503 and 507 
+CDM Room 924
 <br />
 Chicago, IL 60604​​​​​ 
 
