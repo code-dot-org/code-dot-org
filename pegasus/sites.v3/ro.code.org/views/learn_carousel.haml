@@ -18,7 +18,7 @@
 
           -count = 0
           -items.each_pair do |key, tutorial|
-            -tags = tutorial[:gradelevel_ro] + ' | ' + tutorial[:platformtext_ro]
+            -tags = tutorial[:gradelevel] + ' | ' + tutorial[:platformtext]
             -url = tutorials.launch_url_for(key,request.host_with_port)
             -short_url = ('http://hourofcode.com/' + tutorial[:short_code]) unless tutorial[:short_code].nil_or_empty?
             -styling = "display:none" unless count == 0
