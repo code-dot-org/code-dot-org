@@ -123,6 +123,12 @@ Webapp.init = function(config) {
     }
   });
 
+  config.loadAudio = function() {
+    Blockly.loadAudio_(skin.winSound, 'win');
+    Blockly.loadAudio_(skin.startSound, 'start');
+    Blockly.loadAudio_(skin.failureSound, 'failure');
+  };
+
   config.afterInject = function() {
     /**
      * The richness of block colours, regardless of the hue.
