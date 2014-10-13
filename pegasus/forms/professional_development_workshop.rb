@@ -87,6 +87,9 @@ class ProfessionalDevelopmentWorkshop
 
     data.delete('dates')
 
+    # Removed temporarily.
+    data.delete('stopped_dt')
+
     data.delete('progress_snapshot_t')
 
     data
