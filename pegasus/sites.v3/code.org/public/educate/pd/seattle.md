@@ -45,6 +45,8 @@ Seattle, WA 98101
 
 Located on the 3rd Floor of the Rainier Square Atrium. 
 
+The Rainier Square parking garage address is 409 Union Street, located between 4th and 5th on Union Street. For rate information please go [here](/files/rainierparking.pdf). 
+
 #### What do I bring to Phase 3 PD? ####
 Exploring Computer Science binder with curriculum
 <br />

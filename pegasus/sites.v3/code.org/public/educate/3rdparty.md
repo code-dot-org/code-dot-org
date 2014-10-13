@@ -31,6 +31,9 @@ Fun classroom exercises to teach computer science principles, no computers neede
 ### [Teach AP CS](http://teachapcs.com/)
 Downloads, guides, videos, and tools to help teach AP Computer Science.
 
+### [CS First](http://cs-first.com/)
+Free curriculum from Google that uses online, project-based tutorials for elementary and middle school students and offers free club plans and resources to create an easy computer science entry point for educators and students alike.
+
 ## Bring Classes to Your School
 ### [Globaloria](http://www.globaloria.org/)
 Teach computer programming through game design - as a full-time class, an in-class module, or afterschool program.
