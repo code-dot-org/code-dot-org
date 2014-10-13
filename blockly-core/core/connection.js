@@ -145,7 +145,8 @@ Blockly.Connection.prototype.connect = function(connectTo) {
 
 /**
  * Handle the orphaned block of existingConnection when connecting this to
- * existingConnection.
+ * existingConnection. This consists of detaching the orphan, and then depending
+ * on its type, potentially trying to reattach it elsewhere.
  */
 Blockly.Connection.prototype.handleOrphan_ = function (existingConnection) {
   var orphanBlock = existingConnection.targetBlock();
@@ -156,18 +157,39 @@ Blockly.Connection.prototype.handleOrphan_ = function (existingConnection) {
       throw 'Orphan block does not have an output connection.';
     }
 
-    window.setTimeout(function() {
-      orphanBlock.outputConnection.bumpAwayFrom_(existingConnection);
-    }, Blockly.BUMP_DELAY);
+    // Attempt to reattach the orphan at the end of the newly inserted
+    // block.  Since this block may be a row, walk down to the end.
+    var newBlock = this.sourceBlock_;
+    var connection;
+    while (connection = Blockly.Connection.singleConnection_(newBlock,
+      orphanBlock)) {
+      // '=' is intentional in line above.
+      if (connection.targetBlock()) {
+        newBlock = connection.targetBlock();
+      } else {
+        connection.connect(orphanBlock.outputConnection);
+        orphanBlock = null;
+        break;
+      }
+    }
+
+    // if we didn't find a new location for our orphan, bump it away
+    if (orphanBlock) {
+      window.setTimeout(function() {
+        orphanBlock.outputConnection.bumpAwayFrom_(existingConnection);
+      }, Blockly.BUMP_DELAY);
+    }
   } else if (this.type === Blockly.FUNCTIONAL_INPUT || this.type === Blockly.FUNCTIONAL_OUTPUT) {
     if (!orphanBlock.previousConnection) {
       throw 'Orphan block does not have a previous connection.';
     }
+    // bump away the orphaned block
     window.setTimeout(function() {
       orphanBlock.previousConnection.bumpAwayFrom_(existingConnection);
     }, Blockly.BUMP_DELAY);
   } else {
-    // Statement blocks may be inserted into the middle of a stack.
+    // Statement blocks may be inserted into the middle of a stack, which case
+    // we want to attach the orphan to the end of the inserted blocks
     if (this.type != Blockly.PREVIOUS_STATEMENT) {
       throw 'Can only do a mid-stack connection with the top of a block.';
     }
@@ -195,6 +217,30 @@ Blockly.Connection.prototype.handleOrphan_ = function (existingConnection) {
     }
   }
 }
+
+/**
+ * Does the given block have one and only one connection point that will accept
+ * the orphaned block?
+ * @param {!Blockly.Block} block The superior block.
+ * @param {!Blockly.Block} orphanBlock The inferior block.
+ * @return {Blockly.Connection} The suitable connection point on 'block',
+ *     or null.
+ * @private
+ */
+Blockly.Connection.singleConnection_ = function(block, orphanBlock) {
+  var connection = false;
+  for (var x = 0; x < block.inputList.length; x++) {
+    var thisConnection = block.inputList[x].connection;
+    if (thisConnection && thisConnection.type == Blockly.INPUT_VALUE &&
+        orphanBlock.outputConnection.checkType_(thisConnection)) {
+      if (connection) {
+        return null;  // More than one connection.
+      }
+      connection = thisConnection;
+    }
+  }
+  return connection;
+};
 
 /**
  * Disconnect this connection.
