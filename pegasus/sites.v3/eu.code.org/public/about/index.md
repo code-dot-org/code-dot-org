@@ -14,7 +14,7 @@ social:
 ---
 # About Us
 
-The European Coding Initiative brings together a wide array of stakeholders to promote coding and computational thinking at all levels of education, as well as in more informal settings. The project was created in June 2014 under the auspices of the European Commission, and is supported by partners from the technology industry, including Microsoft, Oracle, SAP, Rovio, Liberty Global and Facebook. The initiative also involves not-for-profit organisations involved in the promotion of coding and computer science education, including Code.org, CoderDojo and European Schoolnet.
+The European Coding Initiative brings together a wide array of stakeholders to promote coding and computational thinking at all levels of education, as well as in more informal settings. The project was created in June 2014 under the auspices of the European Commission, and is supported by partners from the technology industry, including Microsoft, SAP, Rovio, Liberty Global and Facebook. The initiative also involves not-for-profit organisations involved in the promotion of coding and computer science education, including Code.org, CoderDojo and European Schoolnet.
 
 <br />
 
