@@ -59,8 +59,14 @@ angular: professionalDevelopmentWorkshop
 
   services.factory('workshopsService', ['$resource',
     function($resource){
-      var Workshop = $resource('/v2/forms/ProfessionalDevelopmentWorkshop/:secret/update', {}, {
-         update: {method:'POST'},
+      var Workshop = $resource('/v2/forms/ProfessionalDevelopmentWorkshop/:secret', {}, {
+      // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+      //  'get':    {method:'GET'},
+      //  'save':   {method:'POST'},
+      //  'query':  {method:'GET', isArray:true},
+      //  'remove': {method:'DELETE'},
+      //  'delete': {method:'DELETE'} 
+         update: {method:'POST', url: '/v2/forms/ProfessionalDevelopmentWorkshop/:secret/update'},
       });
 
       Workshop.prototype.name = function() {
