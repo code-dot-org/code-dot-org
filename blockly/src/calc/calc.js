@@ -102,7 +102,7 @@ Calc.init = function(config) {
     visualization.appendChild(display);
     Calc.ctxDisplay = display.getContext('2d');
 
-    // todo - draw target function
+    Calc.answerExpression = generateExpressionFromBlockXml(level.solutionBlocks);
 
     // todo - figure out LB story
 
@@ -150,7 +150,7 @@ Calc.display = function() {
     Calc.ctxDisplay.canvas.width);
   Calc.ctxDisplay.fillStyle = style;
 
-  Calc.drawTarget(level.target());
+  Calc.drawCorrectAnswer(Calc.answerExpression);
 };
 
 /**
@@ -187,6 +187,27 @@ function evalCode (code) {
   }
 }
 
+function generateExpressionFromBlockXml(blockXml) {
+  var xml = blockXml || '';
+
+  if (Blockly.mainWorkspace.getTopBlocks().length !== 0) {
+    throw new Error("generateExpressionFromBlockXml shouldn't be called if " +
+      "we already have blocks in the workspace");
+  }
+
+  // Temporarily put the blocks into the workspace so that we can generate code
+  BlocklyApps.loadBlocks(xml);
+  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  evalCode(code);
+
+  // Remove the blocks
+  Blockly.mainWorkspace.getTopBlocks().forEach(function (b) { b.dispose(); });
+  var expression = Calc.lastExpression;
+  Calc.lastExpression = null;
+
+  return expression;
+}
+
 /**
  * Execute the user's code.  Heaven help us...
  */
@@ -202,7 +223,7 @@ Calc.execute = function() {
   BlocklyApps.reset();
 
 
-  var result = Calc.drawAnswer(level.target(), Calc.lastExpression);
+  var result = Calc.drawUserAnswer(Calc.answerExpression, Calc.lastExpression);
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -220,19 +241,17 @@ Calc.execute = function() {
   BlocklyApps.report(reportData);
 };
 
-Calc.drawTarget = function (target) {
+Calc.drawCorrectAnswer = function (correctAnswer) {
   Calc.ctxDisplay.fillStyle = 'black';
   Calc.ctxDisplay.font="30px Verdana";
-  var str = target.toString();
+  var str = correctAnswer.toString();
   Calc.ctxDisplay.fillText(str, 0, 350);
 };
 
-Calc.drawAnswer = function (target, answer) {
+Calc.drawUserAnswer = function (correctAnswer, userAnswer) {
   var ctx = Calc.ctxDisplay;
-  // todo (brent) - should i just have these in one function (i.e. ask for the
-  // token list, given an answer and target).
-  var diff = Expression.getDiff(answer, target);
-  var list = Expression.getTokenList(answer, diff);
+  var errors = false;
+  var list = userAnswer.getTokenList(correctAnswer);
   var xpos = 0;
   var ypos = 200;
   for (var i = 0; i < list.length; i++) {
@@ -240,13 +259,15 @@ Calc.drawAnswer = function (target, answer) {
       ctx.fillText(' ', xpos, ypos);
       xpos += ctx.measureText(' ').width;
     }
-    // todo - color based on validity
     ctx.fillStyle = list[i].correct ? 'black' : 'red';
+    if (!list[i].correct) {
+      errors = true;
+    }
     ctx.fillText(list[i].char, xpos, ypos);
     xpos += ctx.measureText(list[i].char).width;
   }
 
-  return (diff.numDiffs === 0);
+  return !errors;
 };
 
 

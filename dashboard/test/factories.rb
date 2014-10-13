@@ -73,6 +73,11 @@ FactoryGirl.define do
     md5 { Digest::MD5.hexdigest(data) }
   end
 
+  factory :level_source_image do
+    level_source
+    image File.read('test/fixtures/artist_image_blank.png', binmode: true)
+  end
+
   factory :script do
     sequence(:name) { |n| "Bogus Script #{n}" }
   end

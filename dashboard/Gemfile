@@ -78,7 +78,7 @@ gem 'newrelic_rpm'
 
 gem 'geocoder'
 
-gem 'rmagick'
+gem 'rmagick', require: 'RMagick'
 
 gem 'acts_as_list'
 
