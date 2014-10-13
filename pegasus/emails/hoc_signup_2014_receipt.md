@@ -40,6 +40,15 @@ Recruit a local group — boy scouts club, church, university, veterans group or
 ## 5. Ask a local elected official to support the Hour of Code
 [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
+<% if @country == 'ro' %>
+
+Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
+
+Echipa Hour of Code Romania
+hoc@adfaber.org
+
+<% end %>
+
 <hr/>
 
 Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](<%= unsubscribe_link %>).
