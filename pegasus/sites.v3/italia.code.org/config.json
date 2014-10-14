@@ -2,14 +2,14 @@
   "base":"i18n.code.org",
   "google_analytics_id":"UA-37745279-1",
   "hoc_country_id":"Italy",
-  "us_site": "Code.org (Siti per gli Stati Uniti)",
+  "us_site": "Code.org (Il sito negli Stati Uniti)",
   "nav_links": {
-    "Il progetto": "/about/resources",
+    "Il progetto": "/il-progetto",
     "Partner": "http://programmailfuturo.it/partner"
   },
   "header_links": {
     "HOME": "/",
-    "IL PROGETTO": "/about/resources"
+    "IL PROGETTO": "/il-progetto"
   },
   "footer_links": {
     "Partner": "http://programmailfuturo.it/partner"
