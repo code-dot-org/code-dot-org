@@ -2,7 +2,7 @@
 title: Professional Development Workshops
 ---
 
-<h1>Professional Development Workshops</h1>
+# Professional Development Workshops
 
 <%
   from, to = nil
@@ -14,20 +14,21 @@ title: Professional Development Workshops
   rows = generate_professional_development_workshop_payment_report(from, to)
 %>
 
-<h3>Filter by date:</h3>
+## Filter by date:
+
 <form>
   From: <input type="text" name="from" value="<%= params[:from] ? URI.escape(params[:from]) : '' %>"/>
   To: <input type="text" name="to" value="<%= params[:to] ? URI.escape(params[:to]) : '' %>"/>
   <input type="submit"/>
 </form>
 
-<br/>
-<br/>
+<% if rows.empty? %>
+## No results
+<% else %>
 
-[Download CSV](/private/professional-development-workshop-report.csv?from=<%= params[:from] ? URI.escape(params[:from]) : ''%>&to=<%= params[:to] ? URI.escape(params[:to]) : '' %>)
+## [<i class="fa fa-download"></i> Download CSV](/private/professional-development-workshop-report.csv?from=<%= params[:from] ? URI.escape(params[:from]) : ''%>&to=<%= params[:to] ? URI.escape(params[:to]) : '' %>)
 
-<br/>
-<br/>
+## Preview
 
 <table>
   <tr>
@@ -43,3 +44,5 @@ title: Professional Development Workshops
   </tr>
   <% end %>
 </table>
+
+<% end %>
