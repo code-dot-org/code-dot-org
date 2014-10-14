@@ -38,17 +38,26 @@ The virtual meetings will be hosted via Blue Jeans Video Conference. If this is 
 
 ### October Office Hours
 
-Thursday, October 9th
-<br/>
-Eastern Time Zone: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/2633067423/) to join meeting. 
-<br/>
-Pacific Time Zone: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/679415895) to join meeting. 
-
 Wednesday, October 22nd
 <br/>
-Eastern Time Zone: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/952592269) to join meeting. 
+- Eastern Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/952592269) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 952592269.
 <br/>
-Pacific Time Zone: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/955682651) to join meeting. 
+- Pacific Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/955682651) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 955682651.
+<br/>
+
+### November Office Hours
+
+Tuesday, November 4th
+<br/>
+- Eastern Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/757225757) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 757225757. 
+<br/>
+- Pacific Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/612114978) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 612114978.
+
+Thursday, November 20th
+<br/>
+- Eastern Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/727972202) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 727972202.
+<br/>
+- Pacific Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/188278137) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 188278137.
 <br/>
 
 ### Additional ECS Resources
