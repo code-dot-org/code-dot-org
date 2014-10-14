@@ -1,133 +1,274 @@
 #!/usr/bin/env ruby
-require 'base64'
 require_relative '../../../src/env'
-require 'cdo/hip_chat'
 require_relative src_dir 'poste/api'
-require_relative src_dir 'poste/template'
+require 'cdo/hip_chat'
+require 'base64'
+require 'nokogiri'
 
-def format_email_address(email, display_name='')
-  begin
-    address = Mail::Address.new(email)
-    address.display_name = display_name unless display_name.empty?
-    return address.to_s
-  rescue
-    display_name = display_name.to_s.gsub('"', '\"')
-    display_name = "\"#{display_name}\"" if display_name.include?('"')
-    "#{display_name.strip} <#{email.strip}>".strip
+BATCH_SIZE = 10000
+MAX_THREAD_COUNT = 400
+MIN_MESSAGES_PER_THREAD = 25
+
+POSTE_DB = Sequel.connect(CDO.pegasus_db_writer.sub('mysql:', 'mysql2:'), max_connections:MAX_THREAD_COUNT)
+#POSTE_DB.loggers << $log
+
+SMTP_OPTIONS = {
+  address:CDO.poste_smtp_server,
+  port:587,
+  domain:'code.org',
+  user_name:CDO.poste_smtp_user,
+  password:CDO.poste_smtp_password,
+  authentication:'plain',
+  enable_starttls_auto:true,
+}
+#SMTP_OPTIONS = {
+#  address:'localhost',
+#  port:1025,
+#  domain:'code.org',
+#}
+
+MESSAGE_TEMPLATES = {}.tap do |results|
+  POSTE_DB[:poste_messages].all.each do |message|
+    results[message[:id]] = message
   end
 end
 
 module Poste
 
-  class Delivery
+  class Template
 
-    def render(cache={})
-      if(template = cache[message.id]).nil?
-        template = cache[message.id] = message.template
-      end
-
-      locals = params.merge({
-        recipient: contact,
-        encrypted_id: encrypted_id,
-        unsubscribe_link: unsubscribe_link,
-        tracking_pixel: tracking_pixel,
-      })
-
-      template.render(locals)
-    end
-
-    def to_mail(cache={})
-      recipient = contact
-
-      header, html, text = render(cache)
-
-      Mail.new do |mail|
-        to = header['to'].to_s.strip
-        to = format_email_address(recipient.email, recipient.name) if to.empty?
-        mail.to(to)
-
-        from = header['from'].to_s.strip
-        from = format_email_address('help@code.org', 'Code.org') if from.empty?
-        mail.from(from)
-
-        reply_to = header['reply-to'].to_s.strip
-        mail.reply_to(reply_to) unless reply_to.empty?
-
-        sender = header['sender'].to_s.strip
-        mail.sender(sender) unless sender.empty?
-
-        subject = header['subject'].to_s.strip
-        mail.subject(subject) unless subject.empty?
-
-        mail.part(content_type: 'multipart/alternative') do |part|
-          unless html.nil?
-            part.html_part = Mail::Part.new do
-              content_type 'text/html; charset=UTF-8'
-              body html
-            end
-          end
-
-          unless text.nil?
-            part.text_part = Mail::Part.new do
-              content_type 'text/plain; charset=UTF-8'
-              body text
-            end
-          end
-        end
-
-        attachments = header['attachments']
-        unless attachments.nil?
-          attachments.each_pair do |filename, content|
-            mail.add_file({filename: filename, content: Base64.decode64(content)})
-          end
-        end
+    def initialize(body, engine=TextRender::MarkdownEngine)
+      if match = body.match(/^---\s*\n(?<header>.*?\n?)^(---\s*$\n?)(?<html>\s*\n.*?\n?)^(---\s*$\n?)(?<text>\s*\n.*?\n?\z)/m)
+        @header = TextRender::YamlEngine.new(match[:header].strip)
+        @html = engine.new(match[:html].strip)
+        @text = TextRender::ErbEngine.new(match[:text].strip)
+      elsif match = body.match(/^---\s*\n(?<header>.*?\n?)^(---\s*$\n?)(?<html>\s*\n.*?\n?\z)/m)
+        @header = TextRender::YamlEngine.new(match[:header].strip)
+        @html = engine.new(match[:html].strip)
+      else
+        @html = engine.new(body.strip)
       end
     end
-  end
 
-  class Message
+    def render(params={})
+      if params.has_key?('form_id')
+        form = Form.get(params['form_id'])
+        params.merge! form.data
+        params.merge! form.processed_data
+        params['form'] = form
+      end
+      locals = OpenStruct.new(params).instance_eval{binding}
 
-    def template()
-      path = File.find_first_existing(String.multiply_concat([Message.template_dir(name)],Message.template_extnames))
-      raise ArgumentError.new, "[Poste] '#{name}' template wasn't found." if path.nil?
-      $log.debug "[Poste] Loading message template from '#{path}'"
+      header = @header.result(locals) unless @header.nil?
+      html = replace_urls_with_click_trackers @html.result(locals), params unless @html.nil?
+      text = @text.result(locals) unless @text.nil?
 
-      engine = {
-        '.haml'=>TextRender::HamlEngine,
-        '.html'=>TextRender::ErbEngine,
-        '.md'=>TextRender::MarkdownEngine,
-        '.txt'=>TextRender::MarkdownEngine,
-        '.yml'=>TextRender::YamlEngine,
-      }[File.extname(path).downcase]
+      [header, html, text]
+    end
 
-      Poste::Template.new(IO.read(path), engine)
+    def replace_urls_with_click_trackers(html, params)
+      doc = Nokogiri::HTML(html)
+      doc.css('a').each do |link|
+        href = link['href']
+        next if href == params[:unsubscribe_link]
+        next unless href =~ /^http:\/\// || href =~ /^https:\/\//
+
+        url_id = Poste2::find_or_create_url(href)
+        link.attributes['href'].value = "http://#{CDO.poste_host}/l/#{params[:encrypted_id]}/#{Base64.urlsafe_encode64(url_id.to_s)}"
+      end
+      doc.to_html
     end
 
   end
 
 end
 
-def main()
-  template_cache = {}
+class Deliverer
+  
+  def initialize(params)
+    @params = params.dup
+    @smtp = smtp_connect
+    @templates = {}
+  end
+  
+  def send(delivery)
+    recipient = POSTE_DB[:contacts].where(id:delivery[:contact_id]).first
+    message = MESSAGE_TEMPLATES[delivery[:message_id]]
+    encrypted_id = Poste::Delivery.encrypt_id(delivery[:id])
+    params = JSON.parse(delivery[:params])
 
-  count = 0
+    header, html, text = load_template(message[:name]).render(params.merge({
+      recipient:OpenStruct.new(recipient),
+      encrypted_id:encrypted_id,
+      unsubscribe_link:"http://#{CDO.poste_host}/u/#{encrypted_id}",
+      tracking_pixel:"http://#{CDO.poste_host}/o/#{encrypted_id}",
+    }))
+    
+    message = StringIO.new
 
-  Poste::Delivery.all(sent_at:nil, limit:1000).each do |delivery|
-    mail = delivery.to_mail(template_cache)
-    mail.delivery_method :sendmail
-    mail.deliver!
+    to_address = parse_address(header['to'], recipient)
+    message.puts 'To: ' + format_address(to_address)
 
-    delivery.sent_at = DateTime.now
-    delivery.save
+    from_address = parse_address(header['from'], {email:'help@code.org', name:'Code.org'})
+    message.puts 'From: ' + format_address(from_address)
 
-    slog(tag: :email_sent, kind:delivery.message, to:delivery.contact.email, id:delivery.id)
+    ['Reply-To', 'Sender'].each do |field|
+      next unless address = parse_address(header[field.downcase])
+      message.puts "#{field}: " + format_address(address)
+    end
+    
+    subject = header['subject'].to_s.strip
+    message.puts 'Subject: ' + subject unless subject.empty?
+    
+    message.puts 'MIME-Version: 1.0'
 
-    count += 1
+    attachments = header['attachments'] || {}
+
+    unless attachments.empty?
+      marker = "==_mimepart_#{SecureRandom.hex(17)}"
+      message.puts "Content-Type: multipart/mixed; boundary=\"#{marker}\""
+
+      message.puts ''
+      message.puts "--#{marker}"
+    end
+
+    message.puts 'Content-Type: text/html; charset=UTF-8'
+    message.puts 'Content-Transfer-Encoding: 8bit'
+    message.puts ''
+    message.write html
+
+    unless attachments.empty?
+      attachments.each_pair do |filename, content|
+        message.puts ''
+        message.puts "--#{marker}"
+        message.puts "Content-Type: image/jpeg; charset=UTF-8; filename=\"#{filename}\""
+        message.puts 'Content-Transfer-Encoding: base64'
+        message.puts "Content-Disposition: attachment; filename=\"#{filename}\""
+        message.puts ''
+        message.write content.scan(/.{61}/).join("\n")
+      end
+
+      message.puts ''
+      message.puts "--#{marker}--"
+    end
+
+    @smtp.send_message message.string, from_address[:email], to_address[:email]
+  end
+  
+  private
+  
+  def format_address(address)
+    email = address[:email].to_s.strip
+    raise ArgumentError, 'No :email' if email.empty?
+    
+    name = address[:name].to_s.strip
+    return email if name.empty?
+    
+    name = "\"#{name.gsub('"', '\"')}\"" if name.include?('"')
+    "#{name} <#{email}>".strip
+  end
+  
+  def load_template(name)
+    template = @templates[name]
+    return template if template
+
+    path = File.find_first_existing(String.multiply_concat([Poste::Message.template_dir(name)],Poste::Message.template_extnames))
+    raise ArgumentError, "[Poste] '#{name}' template wasn't found." if path.nil?
+
+    engine = {
+      '.haml'=>TextRender::HamlEngine,
+      '.html'=>TextRender::ErbEngine,
+      '.md'=>TextRender::MarkdownEngine,
+      '.txt'=>TextRender::MarkdownEngine,
+      '.yml'=>TextRender::YamlEngine,
+    }[File.extname(path).downcase]
+
+    @templates[name] = Poste::Template.new IO.read(path), engine
+  end
+  
+  def parse_addresses(string)
+    string.split(', ').map do |user_string|
+      if user_string.include? '<'
+        user_string =~ /^([^<]*)<([^>]*)>$/
+        {name:$1.strip, email:$2}
+      else
+        {name:nil, email:user_string}
+      end
+    end
   end
 
-  remaining = DB[:poste_deliveries].where(sent_at:nil).count
+  def parse_address(address, defaults={})
+    address = address.to_s.strip
+    return parse_addresses(address).first unless address.empty?
+    
+    email = defaults[:email].to_s.strip
+    return nil if email.empty?
+  
+    {email:email}.tap do |address|
+      name = defaults[:name].to_s.strip
+      address[:name] = name unless name.empty?
+    end
+  end
+  
+  def smtp_connect()
+    Net::SMTP.new(@params[:address], @params[:port]).tap do |smtp|
+      smtp.enable_starttls if @params[:enable_starttls_auto]
+      smtp.start(@params[:domain], @params[:user_name], @params[:password], @params[:authentication])
+    end
+  end
+  
+end
 
-  HipChat.log "#{count} email(s) sent, #{remaining} still queued." unless count == 0 && remaining == 0
+def create_threads(count)
+  [].tap do |threads|
+    (1..count).each do |i|
+      threads << Thread.new do
+        yield
+      end
+    end
+  end
+end
+
+def main()
+  started_at = Time.now
+
+  queue = Queue.new.tap do |results|
+    POSTE_DB[:poste_deliveries].where(sent_at:nil).limit(BATCH_SIZE).reverse_order(:id).each{|i| results << i}
+  end
+
+  queue_count = queue.length
+
+  worker_count = [[queue_count / MIN_MESSAGES_PER_THREAD, MAX_THREAD_COUNT].min, 1].max
+
+  workers = create_threads(worker_count) do
+    deliverer = Deliverer.new SMTP_OPTIONS
+
+    until queue.empty?
+      next unless delivery = queue.pop(true) rescue nil
+
+      #begin
+        deliverer.send delivery
+      #rescue => e
+        #puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+      #end
+
+      POSTE_DB[:poste_deliveries].where(id:delivery[:id]).update(sent_at:DateTime.now)
+    end
+  end
+  workers.each(&:join)
+
+  remaining_count = POSTE_DB[:poste_deliveries].where(sent_at:nil).count
+
+  elapsed_seconds = ((Time.now - started_at) * 100.0).to_i / 100.0
+
+  unless queue_count == 0 && remaining_count == 0
+    message = "#{queue_count} email(s) sent in #{elapsed_seconds} seconds using #{worker_count} threads, #{remaining_count} still queued." 
+    if rack_env?(:development)
+      puts message
+    else
+      HipChat.log message
+    end
+  end
 end
 
 main if only_one_running?(__FILE__)

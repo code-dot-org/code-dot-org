@@ -24,6 +24,7 @@ Scenario: Solving puzzle 2
   Then I wait to see ".modal"
   And element ".modal .congrats" contains text "You completed Puzzle 2"
 
+@no_mobile
 Scenario: Failing puzzle 2
   Given I am on "http://learn.code.org/flappy/2?noautoplay=true"
   And I rotate to landscape
