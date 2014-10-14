@@ -5,15 +5,13 @@ title: Professional Development Workshops
 <h1>Professional Development Workshops</h1>
 
 <%
-  require 'cdo/csv'
-
   from, to = nil
   if params[:from] && params[:to]
     from = Chronic.parse(params[:from])
     to = Chronic.parse(params[:to])
   end  
 
-  rows = ProfessionalDevelopmentWorkshop.report(from, to)
+  rows = generate_professional_development_workshop_payment_report(from, to)
 %>
 
 <h3>Filter by date:</h3>
