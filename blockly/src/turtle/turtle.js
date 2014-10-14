@@ -148,6 +148,20 @@ Turtle.init = function(config) {
       Turtle.isPredrawing_ = false;
     }
 
+    //pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
+    //enough in this case, so we're actually creating and reusing the object within the document body.
+    var imageContainer = document.createElement('div'); 
+    imageContainer.style.display='none';
+    document.body.appendChild(imageContainer);
+
+    for( var i=0; i <  Blockly.Blocks.draw_line_style_pattern.Options.length; i++) {
+      var pattern = Blockly.Blocks.draw_line_style_pattern.Options[i][1];
+      var img = new Image();
+      img.src = skin[pattern];
+      img.id = pattern;
+      imageContainer.appendChild(img);
+    }
+
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
@@ -481,12 +495,11 @@ Turtle.step = function(command, values) {
       Turtle.isDrawingWithPattern = false;
       break;
     case 'PS':  // Pen style with image
-      if ( !values[0] || values[0] == 'DEFAULT') {
+      if (!values[0] || values[0] == 'DEFAULT') {
         Turtle.patternForPaths = new Image();
         Turtle.isDrawingWithPattern = false;
       } else {
-        var img = document.createElement('img');
-        img.src = values[0];
+        var img = document.getElementById(values[0]);
         Turtle.patternForPaths = img;
         Turtle.isDrawingWithPattern = true; 
       }
