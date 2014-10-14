@@ -110,14 +110,17 @@ class ProfessionalDevelopmentWorkshop
   end
 
   def self.solr_query(params)
-    query = {
+    fq = {
       kind_s: self.name,
       type_s: 'Public',
+      first_date_dt: '[NOW TO *]',
     }.map{|key,value| "#{key.to_s}:#{value.to_s}"}.join(' AND ')
 
     {
-      q:query,
-      rows:200,
+      q: "*:*",
+      fq: fq,
+      rows: 800,
+      sort: 'first_date_dt asc',
     }
   end
 
