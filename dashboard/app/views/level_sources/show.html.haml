@@ -8,7 +8,7 @@ js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=#{CDO.dashboard_face
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 </script>
-- if @game.share_mobile_fullscreen? && browser.name == 'Safari'
+- if @game.share_mobile_fullscreen? && browser.safari?
   <script>
   if (!window.navigator.standalone) { window.addEventListener("load", function() { addToHome.show(true); }, false); }
   </script>
