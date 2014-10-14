@@ -25,12 +25,12 @@ exports.loopHighlight = function (apiName, blockId) {
  * @return {string} The code without serial numbers and timeout checks.
  */
 exports.strip = function(code) {
-  return (code
+  return (removeJSNumbersCode(code)
     // Strip out serial numbers.
     .replace(/(,\s*)?'block_id_\d+'\)/g, ')')
     // Remove timeouts.
     .replace(INFINITE_LOOP_TRAP, '')
-    // Strip out loop highlight
+    // Strip out loop highlight.
     .replace(LOOP_HIGHLIGHT_RE, '')
     // Strip out class namespaces.
     .replace(/(BlocklyApps|Maze|Turtle)\./g, '')
@@ -120,3 +120,40 @@ exports.functionFromCode = function(code, options) {
   ctor.prototype = Function.prototype;
   return new ctor();
 };
+
+/**
+ * Removes js-numbers library calls from the given code string and returns the result.
+ */
+function removeJSNumbersCode(code) {
+  var openParenStack = [];
+  // These statements will be removed, along with their closing parenthesis.
+  var statements = {
+    'jsnums.ensureExact(' : '',
+    '.add(' : '+',
+    '.subtact(' : '-',
+    '.multiply(' : '*',
+    '.divide(' : '/'
+  };
+  // RegExp to split code on the statements listed above. Capture groups are used to keep split tokens.
+  var tokenizeRegExp = new RegExp(Object.getOwnPropertyNames(statements).map(function (statement) {
+    return '(' + statement.replace(/(\.|\(|\))/g, '\\$1') + ')';
+  }).join('|') + '|(\()|(\))');
+
+  // Tokenize, map individual statement & parenthsis tokens, then rejoin.
+  return code.split(tokenizeRegExp).map(function (token) {
+    if (token in statements) {
+      // When the corresponding parenthesis is found, it should be removed.
+      openParenStack.push('removed');
+      return statements[token];
+    }
+    if (token === '(') {
+      // When the corresponding parenthesis is found, it should be kept.
+      openParenStack.push('kept');
+    }
+    if (token === ')') {
+      // Pop 'removed' or 'kept' off the openParenStack and remove or keep the closing parenthesis.
+      return openParenStack.pop() === 'removed' ? '' : ')';
+    }
+    return token;
+  }).join('');
+}

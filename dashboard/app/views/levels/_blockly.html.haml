@@ -14,6 +14,7 @@
   %link{href: "#{blockly_path}css/#{app}.css", rel: 'stylesheet', type: 'text/css'}
 
   %script{src: "#{blockly_path}js/#{js_locale}/vendor.js"}
+  %script{src: "#{blockly_path}js/js-numbers/js-numbers.js"}
   - if @game.name == "MazeEC"
     %script{src: "#{blockly_path}js/jsinterpreter/acorn_interpreter.js"}
     %script{src: "#{blockly_path}js/requirejs/require.js"}
@@ -21,6 +22,7 @@
     %script{src: "#{blockly_path}js/ace/ext-language_tools.js"}
     %script{src: "#{blockly_path}js/droplet/droplet-full.min.js"}
     %link{href: "#{blockly_path}css/droplet/droplet.min.css", rel: 'stylesheet', type: 'text/css'}
+  %script{src: "#{blockly_path}js/cdo/lib.js"}
   %script{src: "#{blockly_path}js/#{js_locale}/#{app}#{pretty ? '' : '.min'}.js"}
 
   -# Create level options object to pass to Blockly

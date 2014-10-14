@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="../css/<%= app %>.css">
 
   <script type="text/javascript" src="../js/<%= options.locale %>/vendor.js"></script>
+  <script type="text/javascript" src="../js/js-numbers/js-numbers.js"></script>
 
 <% if (app === "maze" && options.levelId.indexOf('3_') === 0) { -%>
   <script type="text/javascript" src="../js/jsinterpreter/acorn_interpreter.js"></script>
@@ -20,6 +21,7 @@
   <link rel="stylesheet" type="text/css" href="../css/droplet/droplet.min.css">
 <% } -%>
 
+  <script type="text/javascript" src="../js/cdo/lib.js"></script>
   <script type="text/javascript" src="../js/<%= options.locale %>/<%= app %>.js"></script>
   <script type="text/javascript">
     <%= app %>Main(<%-: options | json %>);

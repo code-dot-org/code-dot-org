@@ -28,9 +28,13 @@ goog.provide('Blockly.JavaScript.math');
 goog.require('Blockly.JavaScript');
 
 
+function ensureExact(n) {
+  return 'jsnums.ensureExact(' + n + ')';
+}
+
 Blockly.JavaScript.math_number = function() {
   // Numeric value.
-  var code = window.parseFloat(this.getTitleValue('NUM'));
+  var code = ensureExact(window.parseFloat(this.getTitleValue('NUM')));
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
@@ -40,24 +44,18 @@ Blockly.JavaScript.math_arithmetic = function() {
   var tuple = Blockly.JavaScript.math_arithmetic.OPERATORS[mode];
   var operator = tuple[0];
   var order = tuple[1];
-  var argument0 = Blockly.JavaScript.valueToCode(this, 'A', order) || '0';
-  var argument1 = Blockly.JavaScript.valueToCode(this, 'B', order) || '0';
-  var code;
-  // Power in JavaScript requires a special case since it has no operator.
-  if (!operator) {
-    code = 'Math.pow(' + argument0 + ', ' + argument1 + ')';
-    return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
-  }
-  code = argument0 + operator + argument1;
+  var argument0 = ensureExact(Blockly.JavaScript.valueToCode(this, 'A', order) || '0');
+  var argument1 = ensureExact(Blockly.JavaScript.valueToCode(this, 'B', order) || '0');
+  var code = argument0 + operator + '(' + argument1 + ')';
   return [code, order];
 };
 
 Blockly.JavaScript.math_arithmetic.OPERATORS = {
-  ADD: [' + ', Blockly.JavaScript.ORDER_ADDITION],
-  MINUS: [' - ', Blockly.JavaScript.ORDER_SUBTRACTION],
-  MULTIPLY: [' * ', Blockly.JavaScript.ORDER_MULTIPLICATION],
-  DIVIDE: [' / ', Blockly.JavaScript.ORDER_DIVISION],
-  POWER: [null, Blockly.JavaScript.ORDER_COMMA]  // Handle power separately.
+  ADD: ['.add', Blockly.JavaScript.ORDER_ADDITION],
+  MINUS: ['.subtract', Blockly.JavaScript.ORDER_SUBTRACTION],
+  MULTIPLY: ['.multiply', Blockly.JavaScript.ORDER_MULTIPLICATION],
+  DIVIDE: ['.divide', Blockly.JavaScript.ORDER_FUNCTION_DIVISION],
+  POWER: ['.expt', Blockly.JavaScript.ORDER_COMMA]
 };
 
 Blockly.JavaScript.math_single = function() {
