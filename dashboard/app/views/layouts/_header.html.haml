@@ -2,9 +2,9 @@
 -# if !support_primary_locale?
   #warning-banner
     = link_to "Non-English translations coming soon. Help us translate!", 'http://eepurl.com/Im_In'
-- if browser.unsupported?
+- if browser.cdo_unsupported?
   = render partial: 'layouts/unsupported_browser'
-- elsif !browser.modern?
+- elsif browser.cdo_partially_supported?
   = render partial: 'layouts/partially_supported_browser'
 
 - script = @script || Script.twenty_hour_script
