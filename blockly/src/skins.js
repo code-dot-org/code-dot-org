@@ -57,10 +57,6 @@ exports.load = function(assetUrl, id) {
     pattern2 : assetUrl('media/common_images/rope.png'),
     pattern3 : assetUrl('media/common_images/squiggly.png'),
     pattern4 : assetUrl('media/common_images/swirlyline.png'),
-    pattern1Path : '/blockly/media/common_images/rainbow.png',
-    pattern2Path : '/blockly/media/common_images/rope.png',
-    pattern3Path : '/blockly/media/common_images/squiggly.png',
-    pattern4Path : '/blockly/media/common_images/swirlyline.png',
     randomPurpleIcon: assetUrl('media/common_images/random-purple.png'),
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
