@@ -1,0 +1,12 @@
+.form-group
+  %label.control-label{for: "k5-#{name}"}
+    =label
+    %span.form-required-field *
+  %div
+    %select.form-control{id: "k5-#{name}", name: "name", required: true, type: "select"}
+      %option{selected: "selected", value: ""} -- Select --
+      %option{value: "2"} Strongly Agree
+      %option{value: "1"} Agree
+      %option{value: "0"} Neutral
+      %option{value: "-1"} Disagree
+      %option{value: "-2"} Strongly Disagree
