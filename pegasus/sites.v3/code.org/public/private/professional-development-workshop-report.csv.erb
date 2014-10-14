@@ -4,6 +4,6 @@ dont_cache
 content_type :csv
 response.headers['Content-Disposition'] = "attachment;filename=#{File.basename(request.path_info)}"
 
-CSV.generate_from_dataset(DistrictPartnerInfo.all.collect(&:attributes))
+CSV.generate_from_dataset(ProfessionalDevelopmentWorkshop.report)
 
 %>
