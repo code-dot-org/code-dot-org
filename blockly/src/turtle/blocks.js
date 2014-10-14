@@ -815,16 +815,6 @@ exports.install = function(blockly, blockInstallOptions) {
         this.id + '\');\n';
   };
 
-  // image icons and image paths for the 'set pattern block'
-  var patternValues =
-    [[skin.patternDefault, 'DEFAULT'],//  signals return to default path drawing
-     [skin.pattern1Menu, skin.pattern1Path],
-     [skin.pattern2Menu, skin.pattern2Path],
-     [skin.pattern3Menu, skin.pattern3Path],
-     [skin.pattern4Menu, skin.pattern4Path]]; 
-
-  // TODO: Need to preload images, otherwise some line segments may not be drawn
-  //  initially (will draw on re-run of script)
 
   blockly.Blocks.draw_line_style_pattern = {
     // Block to handle event when an arrow button is pressed.
@@ -836,10 +826,18 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendDummyInput()
            .appendTitle(msg.setPattern())
            .appendTitle( new blockly.FieldImageDropdown(
-              patternValues, 150, 20 ), 'VALUE' );
-      this.setTooltip("my tooltip");
+              blockly.Blocks.draw_line_style_pattern.Options, 150, 20 ), 'VALUE' );
+      this.setTooltip(msg.setPattern());
     }
   };
+
+  // image icons and image paths for the 'set pattern block'
+  blockly.Blocks.draw_line_style_pattern.Options =
+    [[skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
+     [skin.pattern1Menu, 'pattern1'],  // set to property name for image within skin
+     [skin.pattern2Menu, 'pattern2'],  // referenced as skin[pattern];
+     [skin.pattern3Menu, 'pattern3'],
+     [skin.pattern4Menu, 'pattern4']];
 
   generator.draw_line_style_pattern = function() {
     // Generate JavaScript for setting the image for a patterned line.
