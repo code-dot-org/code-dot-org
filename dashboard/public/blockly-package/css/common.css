@@ -73,11 +73,11 @@ html[dir="RTL"] .farSide {
 @media screen and (max-width: 1150px) {
   /* Make buttons, videos, etc. clickable. Otherwise, the scaled svg/canvas
    * obscures clicks on its original, unscaled position.  */
-  #visualization.responsive > svg, #visualization.responsive > canvas {
+  #visualization.responsive > * {
     -webkit-transform-origin: 0 0;
     -ms-transform-origin: 0 0;
     transform-origin: 0 0; }
-    html[dir="RTL"] #visualization.responsive > svg, html[dir="RTL"] #visualization.responsive > canvas {
+    html[dir="RTL"] #visualization.responsive > * {
       -webkit-transform-origin: 100% 0;
       -ms-transform-origin: 100% 0;
       transform-origin: 100% 0; }
@@ -90,7 +90,7 @@ html[dir="RTL"] .farSide {
     max-height: 350px; }
   #visualizationColumn.responsive {
     max-width: 350px; }
-  #visualization.responsive > svg, #visualization.responsive > canvas {
+  #visualization.responsive > * {
     -webkit-transform: scale(0.875);
     -ms-transform: scale(0.875);
     transform: scale(0.875); }
@@ -103,7 +103,7 @@ html[dir="RTL"] .farSide {
     max-height: 300px; }
   #visualizationColumn.responsive {
     max-width: 300px; }
-  #visualization.responsive > svg, #visualization.responsive > canvas {
+  #visualization.responsive > * {
     -webkit-transform: scale(0.75);
     -ms-transform: scale(0.75);
     transform: scale(0.75); }
@@ -116,7 +116,7 @@ html[dir="RTL"] .farSide {
     max-height: 250px; }
   #visualizationColumn.responsive {
     max-width: 250px; }
-  #visualization.responsive > svg, #visualization.responsive > canvas {
+  #visualization.responsive > * {
     -webkit-transform: scale(0.625);
     -ms-transform: scale(0.625);
     transform: scale(0.625); }
@@ -129,7 +129,7 @@ html[dir="RTL"] .farSide {
     max-height: 200px; }
   #visualizationColumn.responsive {
     max-width: 200px; }
-  #visualization.responsive > svg, #visualization.responsive > canvas {
+  #visualization.responsive > * {
     -webkit-transform: scale(0.5);
     -ms-transform: scale(0.5);
     transform: scale(0.5); }
