@@ -75,7 +75,7 @@ FactoryGirl.define do
 
   factory :level_source_image do
     level_source
-    image File.read('test/fixtures/artist_image_blank.png', binmode: true)
+    image File.read(Rails.root.join('test/fixtures/artist_image_blank.png'), binmode: true)
   end
 
   factory :script do
