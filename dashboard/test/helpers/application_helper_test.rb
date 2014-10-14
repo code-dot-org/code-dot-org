@@ -79,4 +79,23 @@ class ApplicationHelperTest < ActionView::TestCase
   test "artist_freeplay_path for non-k1 levels" do
     assert_equal(script_stage_script_level_path('artist', 1, 10), artist_freeplay_path)
   end
+
+  test "windows phone 8.1 supported" do
+    def request
+      OpenStruct.new(headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ' \
+      'ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 930) like iPhone OS 7_0_3 Mac OS X ' \
+      'AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537'))
+    end
+    assert(!browser.cdo_unsupported?)
+    assert(!browser.cdo_partially_supported?)
+  end
+
+  test "chrome 34 detected" do
+    def request
+      OpenStruct.new(headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) ' \
+      'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36'))
+    end
+    assert(browser.chrome?)
+    assert(browser.version.to_s.to_i == 34)
+  end
 end
