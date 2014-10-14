@@ -11,3 +11,7 @@
 - <%= (HourOfActivity.all(:updated_on.gte=>Date.today-7, started: true) | HourOfActivity.all(:updated_on.gte=>Date.today-7, pixel_started: true)).count %> participants since <%= Date.today-7 %>
 - [Countries](/private/countries_leaderboard)
 - [States](/private/states_leaderboard)
+
+## Affiliate Workshops
+
+- [Report](/private/professional-development-workshop-report)

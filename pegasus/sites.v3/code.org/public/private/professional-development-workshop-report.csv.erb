@@ -1,0 +1,17 @@
+<%=
+
+dont_cache
+content_type :csv
+response.headers['Content-Disposition'] = "attachment;filename=#{File.basename(request.path_info)}"
+
+require 'cdo/csv'
+
+from, to = nil
+if params[:from] && params[:to]
+  from = Chronic.parse(params[:from])
+  to = Chronic.parse(params[:to])
+end  
+
+CSV.generate_from_dataset(generate_professional_development_workshop_payment_report(from, to))
+
+%>
