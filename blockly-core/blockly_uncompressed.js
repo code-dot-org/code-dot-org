@@ -2695,8 +2695,7 @@ Blockly.Xml.domToBlock_ = function(workspace, xmlBlock) {
         if(firstRealGrandchild && firstRealGrandchild.nodeName.toLowerCase() == "block") {
           blockChild = Blockly.Xml.domToBlock_(workspace, firstRealGrandchild);
           if(blockChild.outputConnection) {
-            input.connection.connect(blockChild.outputConnection);
-            renderBlock = blockChild
+            input.connection.connect(blockChild.outputConnection)
           }else {
             if(blockChild.previousConnection) {
               input.connection.connect(blockChild.previousConnection)
