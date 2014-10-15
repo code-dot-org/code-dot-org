@@ -1,255 +1,255 @@
-"ms":
+ms:
   slides:
     maze_intro:
       1:
-        image: "notes/hoc1_1.jpg"
-        text: "Selamat datang ke Satu Jam Kod pertama anda! Mari bersama merasai pengalaman programming pertama anda."
+        image: notes/hoc1_1.jpg
+        text: Selamat datang ke Satu Jam Kod pertama anda! Mari bersama merasai pengalaman programming pertama anda.
       2:
-        image: "notes/hoc1_2.jpg"
-        text: "Kita akan menggunakan Blockly, bahasa programming visual di mana anda seret (drag) and lepas (drop) blok untuk menulis kod."
+        image: notes/hoc1_2.jpg
+        text: Kita akan menggunakan Blockly, bahasa programming visual di mana anda seret (drag) and lepas (drop) blok untuk menulis kod.
       3:
-        image: "notes/hoc1_3.jpg"
+        image: notes/hoc1_3.jpg
         text: 'Kebanyakan kod ditaip, tetapi Blockly adalah visual. Setiap blok sepadan dengan baris kod "asal".'
       4:
-        image: "notes/hoc1_4.jpg"
-        text: "Anda akan mempelajari asas sains komputer, konsep yang digunakan di mana jua daripada membuat aplikasi hingga mengawal rover Marikh."
+        image: notes/hoc1_4.jpg
+        text: Anda akan mempelajari asas sains komputer, konsep yang digunakan di mana jua daripada membuat aplikasi hingga mengawal rover Marikh.
       5:
-        image: "notes/hoc1_5.jpg"
-        text: "Program ialah set arahan untuk diikuti oleh komputer anda."
+        image: notes/hoc1_5.jpg
+        text: Program ialah set arahan untuk diikuti oleh komputer anda.
       6:
-        image: "notes/hoc1_6.jpg"
-        text: "Matlamat program pertama ini ialah supaya Angry Bird dapat melalui simpang siur untuk melanggar Green Pig."
+        image: notes/hoc1_6.jpg
+        text: Matlamat program pertama ini ialah supaya Angry Bird dapat melalui simpang siur untuk melanggar Green Pig.
       7:
-        image: "notes/hoc1_7.jpg"
-        text: "Di sebelah kiri ialah Simpang Siur di program anda dimainkan. Arahan untuk setiap Susun Suai berada di bawah Simpang Siur."
+        image: notes/hoc1_7.jpg
+        text: Di sebelah kiri ialah Simpang Siur di program anda dimainkan. Arahan untuk setiap Susun Suai berada di bawah Simpang Siur.
       8:
-        image: "notes/hoc1_8.jpg"
-        text: "Kotak peralatan di tengah mempunyai arahan untuk Angry Bird. Anda akan menggunakannya untuk membina kod."
+        image: notes/hoc1_8.jpg
+        text: Kotak peralatan di tengah mempunyai arahan untuk Angry Bird. Anda akan menggunakannya untuk membina kod.
       9:
-        image: "notes/hoc1_9.jpg"
-        text: "Di sebelah kanan merupakan ruang kerja anda di mana anda akan menyeret (drag) blok dari kotak peralatan untuk membina program. Untuk membuang blok, seretkan ke dalam bakul sampah di sudut."
+        image: notes/hoc1_9.jpg
+        text: Di sebelah kanan merupakan ruang kerja anda di mana anda akan menyeret (drag) blok dari kotak peralatan untuk membina program. Untuk membuang blok, seretkan ke dalam bakul sampah di sudut.
       10:
-        image: "notes/hoc1_10.jpg"
+        image: notes/hoc1_10.jpg
         text: 'Setiap blok adalah satu arahan. Jika anda seret blok "maju kehadapan" ke ruang kerja anda dan tekan "Mainkan Program", burung itu akan bergerak satu ruang pada maze.'
       11:
-        image: "notes/hoc1_11.jpg"
-        text: "Untuk melakukan lebih daripada satu gerakan, anda boleh seret (drag) banyak blok kr ruang kerja anda dan sambungkan mereka bersama. Burung itu akan melakukan arahan dari atas ke bawah."
+        image: notes/hoc1_11.jpg
+        text: Untuk melakukan lebih daripada satu gerakan, anda boleh seret (drag) banyak blok kr ruang kerja anda dan sambungkan mereka bersama. Burung itu akan melakukan arahan dari atas ke bawah.
       12:
-        image: "notes/hoc1_12.jpg"
+        image: notes/hoc1_12.jpg
         text: 'Jika anda menjalankan aturcara dan ingin betulkan dan cuba lagi, tekan butang "Set Semula".'
       13:
-        image: "notes/hoc1_13.jpg"
-        text: "Mari dapatkan pig itu!"
+        image: notes/hoc1_13.jpg
+        text: Mari dapatkan pig itu!
     artist_intro:
       1:
-        image: "notes/stage5_1.jpg"
-        text: "Hai, saya JR! Setiap pasukan kereta lumba perlukan saintis komputer untuk menang. Mereka menganalisis data dari kereta untuk membuat ia bergerak lebih laju."
+        image: notes/stage5_1.jpg
+        text: Hai, saya JR! Setiap pasukan kereta lumba perlukan saintis komputer untuk menang. Mereka menganalisis data dari kereta untuk membuat ia bergerak lebih laju.
       2:
-        image: "notes/stage5_2.jpg"
-        text: "Dalam susun suai ini, anda akan menjadi pelukis yang melukis garisan di mana dia berada."
+        image: notes/stage5_2.jpg
+        text: Dalam susun suai ini, anda akan menjadi pelukis yang melukis garisan di mana dia berada.
       3:
-        image: "notes/stage5_3.jpg"
+        image: notes/stage5_3.jpg
         text: 'Blok ini menunjukkan "maju kehadapan 100 piksel." Piksel adalah titik-titik kecil di skrin anda.'
       4:
-        image: "notes/stage5_4.jpg"
+        image: notes/stage5_4.jpg
         text: 'Blok ini menunjukkan "belok kanan 90 darjah." Ini akan pusingkan pelukis anda dengan jumlah yang sama seperti blok "pusing" di dalam susun suai simpang siur.'
       5:
-        image: "notes/stage5_5.jpg"
-        text: "Klik pada anak panah pada mana-mana blok untuk tukar jumlah gerakan pelukis ke hadapan atau pusing. Banyakkan mencuba untuk biasakan diri dengan blok-blok baru ini."
+        image: notes/stage5_5.jpg
+        text: Klik pada anak panah pada mana-mana blok untuk tukar jumlah gerakan pelukis ke hadapan atau pusing. Banyakkan mencuba untuk biasakan diri dengan blok-blok baru ini.
     farmer_intro:
       1:
-        image: "notes/stage9_1.jpg"
-        text: "Hai, saya Paola! Dalam susun suai ini, anda adalah seorang pekebun yang perlu meratakan kebunnya untuk mula menanam tanaman."
+        image: notes/stage9_1.jpg
+        text: Hai, saya Paola! Dalam susun suai ini, anda adalah seorang pekebun yang perlu meratakan kebunnya untuk mula menanam tanaman.
       2:
-        image: "notes/stage9_2.jpg"
-        text: "Bantu dia untuk membuang semua timbunan kotoran dan isikan semua lubang-lubang."
+        image: notes/stage9_2.jpg
+        text: Bantu dia untuk membuang semua timbunan kotoran dan isikan semua lubang-lubang.
       3:
-        image: "notes/stage9_3.jpg"
-        text: "Blok-blok baru membuang 1 sodok kotoran dari longgokan dan masukkan 1 sodok kotoran ke lubang."
+        image: notes/stage9_3.jpg
+        text: Blok-blok baru membuang 1 sodok kotoran dari longgokan dan masukkan 1 sodok kotoran ke lubang.
       4:
-        image: "notes/stage9_4.jpg"
-        text: "Timbunan dan lubang adalah berlainan saiz, jadi and perlu memberitahu pekebun itu berapa sodok untuk digunakan."
+        image: notes/stage9_4.jpg
+        text: Timbunan dan lubang adalah berlainan saiz, jadi and perlu memberitahu pekebun itu berapa sodok untuk digunakan.
     flappy_intro:
       1:
-        image: "notes/flappy01.jpg"
-        text: "Hi, saya Katie! Salah satu daripada perkara yang paling menarik tentang sains komputer ialah program komputer boleh menjadi interaktif."
+        image: notes/flappy01.jpg
+        text: Hi, saya Katie! Salah satu daripada perkara yang paling menarik tentang sains komputer ialah program komputer boleh menjadi interaktif.
       2:
-        image: "notes/flappy02.jpg"
+        image: notes/flappy02.jpg
         text: 'Bila ada sesiapa klik, tepuk atau taip  pada komputer atau telefon, ianya mengeluarkan ACARA dan terdapat kod yang menetukan apa yang perlu dilakukan apabilan ACARA berlaku.'
       3:
-        image: "notes/flappy03.jpg"
+        image: notes/flappy03.jpg
         text: 'Contohya, anda boleh mempunyai PENGENDALI-ACARA yang mengatakan "apabila mause di klik, mainkan satu bunyi" '
       4:
-        image: "notes/flappy04.jpg"
+        image: notes/flappy04.jpg
         text: 'Anda tahu tak permainan FlappyBird? Dengan menggunakan  pengendali ACARA, kita akan belajar untuk program kan FlappyBird buatan kita sendiri!'
       5:
-        image: "notes/flappy05.jpg"
-        text: "Kod yang akan anda tulis melibatkan menyeret (drag) dan melepaskan (drop) blok yang mewakili arahan untuk komputer. Sebenarnya, setiap blok ini diwakili oleh kod yang sebenar."
+        image: notes/flappy05.jpg
+        text: Kod yang akan anda tulis melibatkan menyeret (drag) dan melepaskan (drop) blok yang mewakili arahan untuk komputer. Sebenarnya, setiap blok ini diwakili oleh kod yang sebenar.
       6:
-        image: "notes/flappy06.jpg"
+        image: notes/flappy06.jpg
         text: 'Jika anda lihat di ruang kerja, ada beberapa blok hijau yang sudah di isi untuk anda - ini adalah pengendali "acara" '
       7:
-        image: "notes/flappy07.jpg"
+        image: notes/flappy07.jpg
         text: 'Jika anda mahu burung untuk MENGEPAK apabila and klik pada tetikus, anda boleh berbuat demikian dengan melekatkan blok "MENGEPAK (FLAP)" pada pengendali acara yang sesuai, dan sekarang di dalam permainan anda bila sahaja anda klik pada tetikus burung itu akan mengepak.'
       8:
-        image: "notes/flappy08.jpg"
-        text: "Dalam setiap aktiviti susun suai, kami akan memperkenalkan jenis acara yang baru sebagai blok hijau di ruang kerja, dan anda boleh tentukan blok yang sesuai untuk ditambah sebagai tindak balas kepada acara tersebut."
+        image: notes/flappy08.jpg
+        text: Dalam setiap aktiviti susun suai, kami akan memperkenalkan jenis acara yang baru sebagai blok hijau di ruang kerja, dan anda boleh tentukan blok yang sesuai untuk ditambah sebagai tindak balas kepada acara tersebut.
       9:
-        image: "notes/flappy09.jpg"
+        image: notes/flappy09.jpg
         text: 'Bila anda lihat anak panah lepas bawah seperti ini, anda boleh tukarkan aturan - seperti bunyi apa yang perlu dimainkan bila flappy menyentuh tanah.'
       10:
-        image: "notes/flappy10.jpg"
-        text: "Dalam susun suai yang terakhir, anda boleh mencipta permainan anda sendiri dan kongsikan bersama rakan-rakan. Selamat bergembira!"
+        image: notes/flappy10.jpg
+        text: Dalam susun suai yang terakhir, anda boleh mencipta permainan anda sendiri dan kongsikan bersama rakan-rakan. Selamat bergembira!
     loop_times:
       1:
-        image: "notes/hoc2_1.jpg"
-        text: "Hi, saya Mark! Mari belajar tentang pusingan. Menggunakan pusingan anda boleh memberitahu komputer untuk ulang mana-mana set tindakan berulang kali, beribu-ribu dan malah berbilion-bilion kali."
+        image: notes/hoc2_1.jpg
+        text: Hi, saya Mark! Mari belajar tentang pusingan. Menggunakan pusingan anda boleh memberitahu komputer untuk ulang mana-mana set tindakan berulang kali, beribu-ribu dan malah berbilion-bilion kali.
       2:
-        image: "notes/hoc2_2.jpg"
-        text: "Dalam susun suai ini, kita mahu burung gerak kehadapan 5 ruang untuk dapat sampai ke khinzir."
+        image: notes/hoc2_2.jpg
+        text: Dalam susun suai ini, kita mahu burung gerak kehadapan 5 ruang untuk dapat sampai ke khinzir.
       3:
-        image: "notes/hoc2_3.jpg"
+        image: notes/hoc2_3.jpg
         text: 'Kita boleh gunakan blok "ulang"  yang baru untuk membantu kita.'
       4:
-        image: "notes/hoc2_4.jpg"
+        image: notes/hoc2_4.jpg
         text: 'Daripada mengheret (drag) 5 blok "maju kehadapan"...'
       5:
-        image: "notes/hoc2_5.jpg"
+        image: notes/hoc2_5.jpg
         text: 'Kita boleh letakkan blok "maju kehadapan" di dalam blok "ulang" dan tulis berapa banyak untuk di ulang.'
       6:
-        image: "notes/hoc2_6.jpg"
+        image: notes/hoc2_6.jpg
         text: 'Ini adalah penting: anda boleh memasukan lebih dari satu arahan dalam blok "ulang".'
       7:
-        image: "notes/hoc2_7.jpg"
+        image: notes/hoc2_7.jpg
         text: 'Berseronoklah dengan menggunakan blok "ulang" baru anda!'
     loop_until:
       1:
-        image: "notes/hoc3_1.jpg"
+        image: notes/hoc3_1.jpg
         text: 'Hi, saya Chris, sebelum menyertai Miami Heat, saya pergi ke Georgia Tech untuk belajar Sains Komputer. Mari cuba blok baru kita, blok "ulang hingga".'
       2:
-        image: "notes/hoc3_2.jpg"
-        text: "Bagaimana jika kita tidak tahu sejauh mana burung itu perlu bergerak untuk dapat sampai kepada khinzir?"
+        image: notes/hoc3_2.jpg
+        text: Bagaimana jika kita tidak tahu sejauh mana burung itu perlu bergerak untuk dapat sampai kepada khinzir?
       3:
-        image: "notes/hoc3_3.jpg"
+        image: notes/hoc3_3.jpg
         text: 'Jika kita letakkan "maju kehadapan" dalam blok "ulang hingga", burung itu akan bergerak ke depan HINGGA ia sampai ke khinzir (atau melanggar ke dinding).'
       4:
-        image: "notes/hoc3_4.jpg"
+        image: notes/hoc3_4.jpg
         text: 'Ini adalah penting: seperti sebelum ini, kita boleh letakkan banyak blok ke dalam blok "ulang hingga" dan blok tersebut akan diulang.'
     if:
       1:
-        image: "notes/hoc4_1.jpg"
+        image: notes/hoc4_1.jpg
         text: 'Hai, saya Bill! Mari belajar konsep asas baru: Penyata "Jika". Ini adalah bagaimana komputer membuat keputusan.'
       2:
-        image: "notes/hoc4_2.jpg"
+        image: notes/hoc4_2.jpg
         text: 'Anda sendiri menggunakan penyata "Jika" setiap hari. Sebelum anda pergi ke luar setiap pagi, anda kata JIKA hujan di luar, saya perlu pakai jaket saya.'
       3:
-        image: "notes/hoc4_3.jpg"
-        text: "Kita boleh memberitahu zombie untuk menyemak jika terdapat laluan ke kiri, dan jika dia jumpa laluan di sebelah kiri, kita boleh buatkan dia belok ke arah itu."
+        image: notes/hoc4_3.jpg
+        text: Kita boleh memberitahu zombie untuk menyemak jika terdapat laluan ke kiri, dan jika dia jumpa laluan di sebelah kiri, kita boleh buatkan dia belok ke arah itu.
       4:
-        image: "notes/hoc4_4.jpg"
+        image: notes/hoc4_4.jpg
         text: 'Untuk menulis kod ini, mari kita mengheret blok "Jika" dan letakkan blok "belok kiri" di dalamnya.'
       5:
-        image: "notes/hoc4_5.jpg"
+        image: notes/hoc4_5.jpg
         text: 'Sekarang, jika kita letakkan blok "maju kehadapan" di atas dan satu blok "ulang" disekeliling semua, zombie akan mencari  jika terdapat laluan untuk ke kiri atau ke kanan setiap kali dia bergerak. Arahan "ulang" adalah penting untuk mencari belokan dalam setiap langkah.'
       6:
-        image: "notes/hoc4_6.jpg"
-        text: "Penyata Jika adalah amat penting dalam sains komputer. Satu daripada program pertama yang saya tulis ialah permainan tic-tac-toe, dan terdapat penyata Jika yang menyatakan JIKA orang lain akan menang, halang tempat yang membolehkan mereka menang."
+        image: notes/hoc4_6.jpg
+        text: Penyata Jika adalah amat penting dalam sains komputer. Satu daripada program pertama yang saya tulis ialah permainan tic-tac-toe, dan terdapat penyata Jika yang menyatakan JIKA orang lain akan menang, halang tempat yang membolehkan mereka menang.
       7:
-        image: "notes/hoc4_7.jpg"
+        image: notes/hoc4_7.jpg
         text: 'Berseronok menggunakan blok "Jika"!'
     if_else:
       1:
-        image: "notes/hoc5_1.jpg"
+        image: notes/hoc5_1.jpg
         text: 'Hai, nama saya Saloni. Saya menggunakan sains komputer untuk membantu menyelesaikan masalah dalam perubatan dan kesihatan. Mari belajar mengenai blok "jika lain". ianya kelihat seperti blok "jika", tetapi ianya mempunyai bahagian ekstra di penghujung yang menyatakan "lain".'
       2:
-        image: "notes/hoc5_2.jpg"
+        image: notes/hoc5_2.jpg
         text: 'Jika saya letakkan blok "maju kehadapan" di dalam tempat yang menyatakan "buat" dan blok "pusing kiri" di tempat yang menyatakan "lain" maksudnya zombie akan memlih antara 2 pilihan. JIKA ada lauan kehadapan, zombie akan bergerak kehadapan, dan SEBALIKNYA (tiada laluan kehadapan), zombie akan pusing ke kiri.'
       3:
-        image: "notes/hoc5_3.jpg"
+        image: notes/hoc5_3.jpg
         text: 'Seperti blok "jika", kita boleh masukkan blok "jika lain" ke dalam blok "ulang" supaya zombie terus bergerak dan blok "jika lain" akan sentiasa menyemak jika ada tempat untuk berpusing.'
       4:
-        image: "notes/hoc5_4.jpg"
-        text: "Sekarang, hantarkan zombie tersebut ke mana sepatutnya mereka pergi!"
+        image: notes/hoc5_4.jpg
+        text: Sekarang, hantarkan zombie tersebut ke mana sepatutnya mereka pergi!
     function:
       1:
-        image: "notes/stage13_1.jpg"
-        text: "Hi, saya Brina, seorang jurutera di Instagram. Fungsi adalah baris-baris kod tertentu yang anda ingin gunakan berulang-ulang kali, jadi dariapda menulis kod banyak kali, anda boleh menggunakan satu blok."
+        image: notes/stage13_1.jpg
+        text: Hi, saya Brina, seorang jurutera di Instagram. Fungsi adalah baris-baris kod tertentu yang anda ingin gunakan berulang-ulang kali, jadi dariapda menulis kod banyak kali, anda boleh menggunakan satu blok.
       2:
-        image: "notes/stage13_2.jpg"
-        text: "Kita akan belajar bagaimana untuk menyebut fungsi. Sebutan fungsi mempunyai sebuah bintang di sudut. Nama fungsi tersebut ditulis di baris atas."
+        image: notes/stage13_2.jpg
+        text: Kita akan belajar bagaimana untuk menyebut fungsi. Sebutan fungsi mempunyai sebuah bintang di sudut. Nama fungsi tersebut ditulis di baris atas.
       3:
-        image: "notes/stage13_3.jpg"
+        image: notes/stage13_3.jpg
         text: 'Blok-blok yang ada di dalam penyebut memberitahu kita apa yang ia lakukan. Jadi penyebut fungsi ini dipanggil "isi 5" dan ia terdiri daripada sebuah blok "ulang" dan blok "isi".'
       4:
-        image: "notes/stage13_4.jpg"
+        image: notes/stage13_4.jpg
         text: 'Penetapan berada pada ruang kerja, tetapi peladang kita tidak mainkan fungsi sehingga kita leret (drag) blok fungsi "isi 5" kita dari kategori fungsi.'
       5:
-        image: "notes/stage13_5.jpg"
+        image: notes/stage13_5.jpg
         text: 'Jom kembalikan "fun" kembali pada "FUNgsi!" '
     loop_while:
       1:
-        image: "notes/stage9_5.jpg"
+        image: notes/stage9_5.jpg
         text: 'Hai, saya Makinde! Jom kita belajar tentang ini "blok apabila." '
       2:
-        image: "notes/stage9_6.jpg"
+        image: notes/stage9_6.jpg
         text: '"Blok apabila" akan buat apa sahaja yang anda masukkan SELAGI penyata di atas adalah BENAR.'
       3:
-        image: "notes/stage9_7.jpg"
-        text: "Sebagai contoh, jika peladang berdiri di atas timbunan, dia akan terus membuang 1 sodok APABILA masih ada lagi timbunan di bawahnya."
+        image: notes/stage9_7.jpg
+        text: Sebagai contoh, jika peladang berdiri di atas timbunan, dia akan terus membuang 1 sodok APABILA masih ada lagi timbunan di bawahnya.
     loop_for:
       1:
-        image: "notes/stage11_1.jpg"
-        text: "Hai, saya Trina, dan saya bekerja untuk Pixar. Saya telah bekerja untuk beberapa filem, termasuk Shrek."
+        image: notes/stage11_1.jpg
+        text: Hai, saya Trina, dan saya bekerja untuk Pixar. Saya telah bekerja untuk beberapa filem, termasuk Shrek.
       2:
-        image: "notes/stage11_2.jpg"
+        image: notes/stage11_2.jpg
         text: 'Ini pusingan "kaunter" yang baru. Ia akan melakukan tindakan berulang kali dan anda boleh buat tindakan berubah  sedikit pada setiap kali.'
       3:
-        image: "notes/stage11_3.jpg"
+        image: notes/stage11_3.jpg
         text: 'Dalam contoh ini, pusingan "kaunter" kita nyatakan "kira dengan kaunter dari 50 hingga 90 selang 10" dan di dalamnya, kita ada blok "lukis empat segi". Leret (drag) blok "kaunter" dari bahagian "pembolehubah" ke dalam bahagian "panjang".'
       4:
-        image: "notes/stage11_4.jpg"
-        text: "Maksudnya, pelukis kita akan melukis segi empat dengan 50 piksel panjang sisi, kemudian ditambahkan 10 dan lukis segi empat dengan 60 piksel panjang sisi. Kemudian ia akan bertambah 10 dan lukisan empat segi sehingga mencapai 90. Dengan itu kita akan mempunyai segi empat dengan panjang sisi 50, 60, 70, 80 dan 90."
+        image: notes/stage11_4.jpg
+        text: Maksudnya, pelukis kita akan melukis segi empat dengan 50 piksel panjang sisi, kemudian ditambahkan 10 dan lukis segi empat dengan 60 piksel panjang sisi. Kemudian ia akan bertambah 10 dan lukisan empat segi sehingga mencapai 90. Dengan itu kita akan mempunyai segi empat dengan panjang sisi 50, 60, 70, 80 dan 90.
     parameters:
       1:
-        image: "notes/stage15_1.jpg"
-        text: "Hai, saya Janete, dan saya seorang jurutera di Zynga."
+        image: notes/stage15_1.jpg
+        text: Hai, saya Janete, dan saya seorang jurutera di Zynga.
       2:
-        image: "notes/stage15_2.jpg"
-        text: "Bagaimana jika kita ingin melukis beberapa Segitiga dan mempunyai panjang saiz yang berbeza?"
+        image: notes/stage15_2.jpg
+        text: Bagaimana jika kita ingin melukis beberapa Segitiga dan mempunyai panjang saiz yang berbeza?
       3:
-        image: "notes/stage15_3.jpg"
-        text: "Kita boleh menulis semua kod itu dengan tangan atau kita boleh menggunakan fungsi dengan penetapan."
+        image: notes/stage15_3.jpg
+        text: Kita boleh menulis semua kod itu dengan tangan atau kita boleh menggunakan fungsi dengan penetapan.
       4:
-        image: "notes/stage15_4.jpg"
+        image: notes/stage15_4.jpg
         text: 'Untuk buat ini, klik bintang biru pada tetapan fungsi "lukis segi tiga". Kemudian seret (drag) "nama input" ke dalam blok "input".'
       5:
-        image: "notes/stage15_5.jpg"
+        image: notes/stage15_5.jpg
         text: 'Kemudian jika anda menulis "panjang" di tempat yang di mana ia mengatakan "x" dan tekan "Enter" anda akan mewujudkan panjangn input untuk fungsi anda.'
       6:
-        image: "notes/stage15_6.jpg"
+        image: notes/stage15_6.jpg
         text: 'Kemudian klik pada bintang. Sekarang, anda mahu klik pada kategori pembolehubah dan seret (drag) blok "panjang" ke dalam blok "maju kehadapan" tetapan fungsi anda. Dan seret daripada blok nombor yang lama.'
       7:
-        image: "notes/stage15_7.jpg"
+        image: notes/stage15_7.jpg
         text: 'Untuk menggunakan fungsi anda dengan penetapan, klik pada kategori fungsi tersebut dan leret (drag) fungsi "lukis segi tiga dengan panjang".'
       8:
-        image: "notes/stage15_8.jpg"
-        text: "Sekarang anda boleh gunakan blok matematik untuk memasukkan nombor yang berbeza untuk melukis segi tiga yang berbeza saiz."
+        image: notes/stage15_8.jpg
+        text: Sekarang anda boleh gunakan blok matematik untuk memasukkan nombor yang berbeza untuk melukis segi tiga yang berbeza saiz.
     hoc_wrapup:
       1:
-        image: "notes/hoc6_1.jpg"
-        text: "Tahniah! Dengan susun suai terakhir yang anda selesaikan, anda telah menulis kod yang boleh arahakan mana-mana robot bagaimana untuk mencari jalan melalui simpang siur atau terowong apa jua panjang, sama ada ia adalah zombie, burung, rover Marikh atau kereta pandu sendiri."
+        image: notes/hoc6_1.jpg
+        text: Tahniah! Dengan susun suai terakhir yang anda selesaikan, anda telah menulis kod yang boleh arahakan mana-mana robot bagaimana untuk mencari jalan melalui simpang siur atau terowong apa jua panjang, sama ada ia adalah zombie, burung, rover Marikh atau kereta pandu sendiri.
       2:
-        image: "notes/hoc6_2.jpg"
+        image: notes/hoc6_2.jpg
         text: 'Konsep-konsep asas yang digunakan adalah jantung setiap program atau aplikasi yang anda akan pernah cuba.  Kita belajar tentang ulang pusingan, penyata ulang sehingga , penyata jika, dan penyata jika  lain.'
       3:
-        image: "notes/hoc6_3.jpg"
-        text: "Jika anda suka Satu Jam Kod and yang pertama, lawati code.org untuk meneruskan pengajian anda dalam sains komputer! Setelah tamatkan 20 jam kursus, and akan menguasai asas programming, dan boleh mula belajar bagaimana menulis applikasi telefon, arahan robot, permainan, anda sebut saja."
+        image: notes/hoc6_3.jpg
+        text: Jika anda suka Satu Jam Kod and yang pertama, lawati code.org untuk meneruskan pengajian anda dalam sains komputer! Setelah tamatkan 20 jam kursus, and akan menguasai asas programming, dan boleh mula belajar bagaimana menulis applikasi telefon, arahan robot, permainan, anda sebut saja.
       4:
-        image: "notes/hoc6_4.jpg"
+        image: notes/hoc6_4.jpg
         text: |
           Teknoloji mengubah segalanya yang kita buat dan tidak kira jika anda tua atau muda:
           programming adalah menyeronokkan, kreatif dan sesiapa sahaj boleh belajar!
     20_wrapup:
       1:
-        image: "notes/bird.png"
-        text: "Papar nota akan datang!"
+        image: notes/bird.png
+        text: Papar nota akan datang!

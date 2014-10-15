@@ -32,6 +32,8 @@
   "ifelseTooltip": "Dacă există o cale de acces în direcţia specificată, atunci realizează primul bloc de acţiuni. Altfel, fă-l pe al doilea bloc de acţiuni.",
   "ifFlowerTooltip": "Dacă o floare/un fagure de miere este in direcţia specificată, atunci fă nişte acţiuni.",
   "ifelseFlowerTooltip": "Dacă o floare/un fagure de miere este in direcţia specificată, atunci fă primul block de acţiuni. Altfel, fă al doilea bloc de acţiuni.",
+  "insufficientHoney": "Folosești toate blocurile corecte, dar trebuie să produci cantitatea necesară de miere.",
+  "insufficientNectar": "Folosești toate blocurile corecte, dar trebuie să aduni cantitatea necesară de nectar.",
   "make": "face",
   "moveBackward": "mută înapoi",
   "moveEastTooltip": "Mută-mă un spaţiu la est.",

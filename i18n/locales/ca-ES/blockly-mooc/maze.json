@@ -32,6 +32,8 @@
   "ifelseTooltip":"Si hi ha un camí en la direcció específicada, fer el primer bloc d'accions. En cas contrari, fer el segon bloc d'accions.",
   "ifFlowerTooltip":"If there is a flower\/honeycomb in the specified direction, then do some actions.",
   "ifelseFlowerTooltip":"If there is a flower\/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions.",
+  "insufficientHoney":"You're using all the right blocks, but you need to make the right amount of honey.",
+  "insufficientNectar":"You're using all the right blocks, but you need to collect the right amount of nectar.",
   "make":"make",
   "moveBackward":"move backward",
   "moveEastTooltip":"Move me east one space.",

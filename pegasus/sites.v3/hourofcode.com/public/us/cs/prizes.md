@@ -1,28 +1,27 @@
 ---
-title: ceny
+title: Prizes
+layout: wide
 ---
 
 # Hodina kódu – ceny pro každého pořadatele
 
 ## Každý pořadatel vyhraje poděkování ve formě dárkového kódu
 
-Každý pedagog, který hostí akci Hodina kódu pro studenty obdrží jako poděkování dárek 10 GB Dropbox prostoru nebo 10 dolarů Skype kreditu!
+Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
 <% if @country == 'us' %>
 
-## Šťastné učebny vyhrají video chat s pozvaným řečníkem!
+## Šťastné třídy vyhrají video chat s pozvaným řečníkem!
 
-Padesát šťastných učeben bude pozváno k video konverzaci na oslavu Hodiny kódu během 8. prosince 2014. Vaši studenti budou moci klást otázky a chatovat s technologickými lídry . [Podívejte se na loňské chaty][1] s Billem Gatesem, zakladatelem Twitteru Jackem Dorseyem, Susanou Wojcicki z Googlu a Gabem Newellem z Valve.
-
- [1]: http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a
+50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
 
 ## Šťastné školy vyhrají sadu notebooků pro třídu (nebo 10 000 dolarů jiné technologie)
 
-Jedna šťastná škola v ***každém*** státě USA (+ Washington D.C.) vyhraje technologii v hodnotě $10 000 dolarů. Organizujte akci Hodinu kódu pro každého studenta ve škole, abyste se kvalifikovali. Vyplňte formulář níže pro přihlášku.
+One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
 
 ## Přihlašovací formulář pro cenu na hardware:
 
-Pokud jste zaregistrovali celou vaši školu k účasti v Hodině kódu, zapište se na výhru sady notebooků pro třídu vaši školy (nebo 10 000 dolarů pro jinou technologii)! Jen jeden učitel může přihlásit celou vaši školu.
+If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
 
 <%= view :hardware_prizes_form %>
 
@@ -34,7 +33,4 @@ Pokud jste zaregistrovali celou vaši školu k účasti v Hodině kódu, zapišt
 
 ## Další otázky ohledně cen?
 
-Check out [Terms and Conditions][2] or visit our forum to see [FAQs][3] and ask your questions.
-
- [2]: /prizes-terms
- [3]: http://support.code.org
+Check out [Terms and Conditions](/prizes-terms) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.

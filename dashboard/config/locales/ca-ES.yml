@@ -32,6 +32,7 @@
     submit: Afegeix pista
   appname: Code.org
   stage: Etapa
+  stage_number: Stage %{number}
   puzzle: Puzzle
   trophies: Trofeus
   courses: Cursos
@@ -254,6 +255,9 @@
     header:
       finished_hoc: He acabat la meva Hora de Codi
       sign_in_to_save: Inicia la sessió per a desar el progrés
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: Els meus alumnes
       label: Hola %{username}
@@ -359,6 +363,8 @@
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: O si ja estàs registrat, %{link}
     student_reg_link: Estudiant
     teacher_reg_link: Mestre
@@ -414,6 +420,7 @@
     feedback: Proporcionar comentari
     translate: Ajuda'ns a traduir al teu idioma
     support: Support
+    support_url: http://support.code.org
     tos: Condicions del servei
     privacy: Política de Privacitat
     secure: Secure Version
@@ -438,8 +445,22 @@
     autoplay_option: Reprodueix automàticament els vídeos
     download: Descarregar vídeo
   compatability:
-    working: Estem treballant per a afegir suport per al teu navegador.
-    upgrade: Si us plau, actualitza el teu navegador.
+    working:
+      header: Estem treballant per a afegir suport per al teu navegador.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Your browser doesn't support all the features required, and you may experience
+        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
+        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
+        your browser to a supported version</a>.
+      hide_this_warning: Hide this warning
+    upgrade:
+      header: Si us plau, actualitza el teu navegador.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Unfortunately your browser doesn't support all the features required
+        to run this part of the site.<br/><br/>Install a browser on our supported
+        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
+        expect functionality to be broken.
+      button: Take me to the list of supported browsers
   slow_loading: Això està trigant més de l'habitual...
   try_reloading: Prova de tornar a carregar la pàgina
   next_stage: Has acabat! Continua amb la següent etapa
@@ -452,6 +473,13 @@
     flappy_og_title: Check out my Flappy Game
     studio_og_title: Check out my story
     og_description: I wrote the code myself with Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: Has creat un script nou.
     destroyed: Has destruït un script.
@@ -486,6 +514,7 @@
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
+    support_url: "//support.code.org"
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!

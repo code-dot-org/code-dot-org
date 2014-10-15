@@ -9,7 +9,9 @@ var APPS = process.env.MOOC_APP ? [process.env.MOOC_APP] : [
   'bounce',
   'flappy',
   'studio',
-  'jigsaw'
+  'jigsaw',
+  'calc',
+  'webapp'
 ];
 
 // Parse options from environment.
@@ -82,6 +84,10 @@ config.clean = {
   all: ['build']
 };
 
+var ace_suffix = DEV ? '' : '-min';
+var droplet_suffix = DEV ? '' : '.min';
+var requirejs_dir = DEV ? 'full' : 'min';
+
 config.copy = {
   src: {
     files: [
@@ -117,6 +123,40 @@ config.copy = {
         src: ['**'],
         //TODO: Would be preferrable to separate Blockly media.
         dest: 'build/package/media'
+      }
+    ]
+  },
+  lib: {
+    files: [
+      {
+        expand: true,
+        cwd: 'lib/ace/src' + ace_suffix + '-noconflict/',
+        src: ['**/*.js'],
+        dest: 'build/package/js/ace/'
+      },
+      {
+        expand: true,
+        cwd: 'lib/requirejs/' + requirejs_dir + '/',
+        src: ['require.js'],
+        dest: 'build/package/js/requirejs/'
+      },
+      {
+        expand: true,
+        cwd: 'lib/droplet',
+        src: ['droplet-full' + droplet_suffix + '.js'],
+        dest: 'build/package/js/droplet/'
+      },
+      {
+        expand: true,
+        cwd: 'lib/droplet',
+        src: ['droplet.min.css'],
+        dest: 'build/package/css/droplet/'
+      },
+      {
+        expand: true,
+        cwd: 'lib/jsinterpreter',
+        src: ['acorn_interpreter.js'],
+        dest: 'build/package/js/jsinterpreter/'
       }
     ]
   }
@@ -203,8 +243,8 @@ LOCALES.forEach(function(locale) {
     nonull: true,
     src: [
       'lib/blockly/blockly_' + ext + '.js',
-      'lib/blockly/blocks_compressed.js',
-      'lib/blockly/javascript_compressed.js',
+      'lib/blockly/blocks_' + ext + '.js',
+      'lib/blockly/javascript_' + ext + '.js',
       'lib/blockly/' + locale + '.js'
     ],
     dest: 'build/package/js/' + locale + '/vendor.js'
@@ -252,7 +292,7 @@ config.watch = {
   },
   vendor_js: {
     files: ['lib/**/*.js'],
-    tasks: ['concat']
+    tasks: ['concat', 'copy:lib']
   },
   ejs: {
     files: ['src/**/*.ejs'],
@@ -290,7 +330,8 @@ config.jshint = {
     'test/**/*.js',
     '!src/hammer.js',
     '!src/lodash.js',
-    '!src/lodash.min.js'
+    '!src/lodash.min.js',
+    '!src/canvg/*.js'
   ]
 };
 
@@ -346,6 +387,7 @@ module.exports = function(grunt) {
     'uglify:browserified',
     'copy:browserified',
     'copy:static',
+    'copy:lib',
     'concat',
     'sass'
   ]);

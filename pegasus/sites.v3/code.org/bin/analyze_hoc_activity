@@ -114,6 +114,8 @@ def main()
     countries: total_countries,
   }
 
+  lines_of_code = PROPERTIES.get(:metrics)['lines_of_code']
+
   time = DateTime.now
   PROPERTIES.set :metrics, {
     created_at:               time,
@@ -124,8 +126,9 @@ def main()
     csedweek_students:        4875091,
     csedweek_countries:       356,
     petition_signatures:      DB[:forms].where(kind:'Petition').count,
-    lines_of_code:            JSON.parse(Net::HTTP.get(URI('http://archive.learn.code.org/line_data.json')))['all'],
+    lines_of_code:            lines_of_code, #JSON.parse(Net::HTTP.get(URI('http://archive.learn.code.org/line_data.json')))['all'],
   }
 end
 
 main()
+

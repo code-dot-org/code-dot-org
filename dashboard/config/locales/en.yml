@@ -237,6 +237,9 @@ en:
     header:
       finished_hoc: "I've finished my Hour of Code"
       sign_in_to_save: 'Sign in to save progress'
+      free_play:
+        playlab: 'Make an App'
+        artist: 'Draw Something'
     user:
       classroom: 'My students'
       label: 'Hi %{username}'
@@ -333,6 +336,8 @@ en:
     classroom_activity: 'Unplugged Activity'
   home:
     title: "Code Studio"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: "Already registered? %{link}"
     student_reg_link: 'Student Sign Up'
     teacher_reg_link: 'Teacher Sign Up'
@@ -363,6 +368,9 @@ en:
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: 'Male'
     female: 'Female'
@@ -372,7 +380,8 @@ en:
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
     feedback: 'Provide feedback'
     translate: 'Help us translate to your language'
-    support: Support
+    support: 'Support'
+    support_url: 'http://support.code.org'
     tos: 'Terms'
     privacy: 'Privacy Policy'
     secure: 'Secure Version'
@@ -417,6 +426,10 @@ en:
     flappy_og_title: "Check out my Flappy Game"
     studio_og_title: "Check out my Play Lab App"
     og_description: "I wrote the code myself with Code.org"
+    phone_number_not_allowed: "It looks like there is a phone number in it. Try changing the text."
+    address_not_allowed: "It looks like there is an address in it. Try changing the text."
+    email_not_allowed: "It looks like there is an email in it. Try changing the text."
+    profanity_not_allowed: "It looks like there is profanity in it. Try changing the text."
   builder:
     created: "You created a new script."
     destroyed: "You destroyed a script."
@@ -440,14 +453,19 @@ en:
       body: 'Try our 20-hour Intro to Computer Science course.'
   gallery:
     students_drew_these_with_code: "Students drew these with code!"
+    students_made_these_with_code: "Students made these with code!"
     picture_count: "In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action."
+    activity_count: "In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action."
     want_to_make_your_own: "Want to make your own?"
     more: "More &rarr;"
+    caption_by_name_age: "by %{name}, age %{age}"
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: "Give Feedback"
     report_bug: "Report Bug"
     support: "Get Help"
+    support_url: "//support.code.org"
   multi:
     wrong_title: "Incorrect answer"
     wrong_body: "The answer you've entered is not correct.  Please try again!"

@@ -1,0 +1,28 @@
+---
+title: Promote Computer Science
+layout: none
+template: none
+theme: none
+---
+-state = File.basename(request.path_info)
+-raise Sinatra::NotFound unless state.downcase == state
+-unless state == 'thanks'
+  -state.upcase!
+  -raise Sinatra::NotFound unless us_state_code?(state)
+
+#promote-page
+  -if state.nil_or_empty?
+    #petition-section.section.clear
+      = view :petition
+  -elsif state == "thanks"
+    #thanks-section.section.clear
+      %p{:style=>"font-size:18px;"}
+        Computer science drives innovation in the US economy and society. Despite growing demand for jobs in the field, it remains marginalized throughout the US K-12 education system.
+      %p{:style=>"font-size:18px;"}
+        Currently,
+        %strong
+          =no_credit_count()
+        states still don't allow students to count computer science courses toward high school graduation.
+  -else
+    #state-section.clear
+      = view :promote_state, state:state

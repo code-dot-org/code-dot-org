@@ -1,3 +1,9 @@
-# Get your whole school to participate
+* * *
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+bố trí: rộng
+
+* * *
+
+# Hãy mang trường học của bạn tới Hour of Code
+
+Thông tin về việc để trường học tham gia vào Hour of Code sẽ được đặt tại đây.

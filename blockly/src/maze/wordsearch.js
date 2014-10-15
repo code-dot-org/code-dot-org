@@ -1,4 +1,5 @@
-var _ = require('../lodash');
+var utils = require('../utils');
+var _ = utils.getLodash();
 var cellId = require('./mazeUtils').cellId;
 
 var SquareType = require('./tiles').SquareType;

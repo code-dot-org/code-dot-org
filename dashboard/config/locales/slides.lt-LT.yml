@@ -3,8 +3,8 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: Sveiki atvykę į savo pirmąjį Vienos Valandos Kodą! Pamėginkime pažiūrėti,
-          kaip atrodo programavimas.
+        text: Sveiki atvykę į savo pirmąją „Programavimo valandą“ (Hour of Code)!
+          Pamėginkime pažiūrėti, kaip atrodo programavimas.
       2:
         image: notes/hoc1_2.jpg
         text: Naudosime Blockly, vizualią programavimo kalbą, kurioje reikia vilkti
@@ -15,8 +15,8 @@
           Kiekvienas blokelis atitinką vieną eilutę tikro rašomo kodo.
       4:
         image: notes/hoc1_4.jpg
-        text: 'Susipažinsite su informatikos pagrindais, programavimo koncepcijomis,
-          kurios yra naudojamos visur: nuo programėlių kūrimo iki robotų valdymo.'
+        text: 'Susipažinsite su programavimo pagrindais, kurie yra naudojami visur:
+          nuo programėlių kūrimo iki robotų valdymo.'
       5:
         image: notes/hoc1_5.jpg
         text: Programa yra instrukcijų sąrašas, kurias turi įvykdyti Jūsų kompiuteris.
@@ -347,11 +347,10 @@
           „jei-tai“ ir „jei-priešingu atveju“.
       3:
         image: notes/hoc6_3.jpg
-        text: Jeigu Jums patiko Vienos Valandos Kodo kursas, apsilankykite code.org
-          svetainėje ir toliau mokykitės informatikos! Kai užbaigsite mūsų pateiktą
-          20-ties valandų kursą, būsite įgijęs programavimo pagrindus ir galėsite
-          mokytis, kaip galima sukurti programėles telefonams, valdyti robotus, kurti
-          žaidimus ir t. t.
+        text: Jeigu Jums patiko Kodavimo Valandos kursas, apsilankykite code.org svetainėje
+          ir toliau mokykitės informatikos! Kai užbaigsite mūsų pateiktą 20-ties valandų
+          kursą, būsite įgijęs programavimo pagrindus ir galėsite mokytis, kaip galima
+          sukurti programėles telefonams, valdyti robotus, kurti žaidimus ir t. t.
       4:
         image: notes/hoc6_4.jpg
         text: 'Technologijos keičia viską, ką mes darome ir visiškai nesvarbu, ar

@@ -32,6 +32,7 @@
     submit: "İpucu ekle"
   appname: Code.org
   stage: Kademe
+  stage_number: Stage %{number}
   puzzle: Yapboz
   trophies: Kupalar
   courses: Kurslar
@@ -254,6 +255,9 @@
     header:
       finished_hoc: Kod Saati'ni tamamladım
       sign_in_to_save: "İlerleme kaydetmek için oturum açın"
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: "Öğrencilerim"
       label: Merhaba %{username}
@@ -357,6 +361,8 @@
     classroom_activity: Bağlantısız Etkinlik
   home:
     title: Code Studio
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: Zaten üye misiniz? % {link}
     student_reg_link: "Öğrenci Üyelik"
     teacher_reg_link: "Öğretmen Üyelik"
@@ -410,6 +416,7 @@
     feedback: Geri besleme sağla
     translate: Kendi dilinize çevirmemiz için bize yardım edin
     support: Destek
+    support_url: http://support.code.org
     tos: "Şartlar"
     privacy: Gizlilik Politikası
     secure: Güvenli sürüm
@@ -434,8 +441,22 @@
     autoplay_option: Otomatik oynayan video
     download: Videoyu indir
   compatability:
-    working: Tarayıcı desteği üzerinde çalışıyoruz.
-    upgrade: Lütfen tarayıcınızı yükseltin.
+    working:
+      header: Tarayıcı desteği üzerinde çalışıyoruz.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Your browser doesn't support all the features required, and you may experience
+        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
+        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
+        your browser to a supported version</a>.
+      hide_this_warning: Hide this warning
+    upgrade:
+      header: Lütfen tarayıcınızı yükseltin.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Unfortunately your browser doesn't support all the features required
+        to run this part of the site.<br/><br/>Install a browser on our supported
+        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
+        expect functionality to be broken.
+      button: Take me to the list of supported browsers
   slow_loading: Bu normalden uzun sürüyor...
   try_reloading: Sayfayı yeniden yüklemeyi deneyin
   next_stage: Bitti! Bir sonraki aşamaya geç
@@ -448,6 +469,13 @@
     flappy_og_title: Benim Flappy Oyun'uma göz atın
     studio_og_title: Benim hikayeme göz atın
     og_description: Ben Code.org ile kendi kodumu yazdım
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: Yeni bir komut dosyası oluşturdu.
     destroyed: Bir komut dosyası yok.
@@ -483,6 +511,7 @@
     feedback: Geri bildirimde bulun
     report_bug: Hata bildir
     support: Yardım Al
+    support_url: "//support.code.org"
   multi:
     wrong_title: Yanlış cevap
     wrong_body: Girdiğiniz cevap doğru değil.  Lütfen tekrar deneyin!

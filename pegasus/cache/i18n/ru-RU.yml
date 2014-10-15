@@ -3,7 +3,7 @@
   computer_science: "Информатика"
   computer_science_edweek: "Образовательная неделя компьютерных технологий"
   csedweek_dates: 9-15 декабря 2013 года
-  n_have_learned_an_hoc: "<h1>#</h1><h3>попыток</h3><h2>Часа Кода</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>попыток</h3><h2>Час Кода</h2>"
   anybody_can_learn: "Это может каждый."
   learn_now: "Начать изучение"
   petition_message: "Каждый студент в каждой школе должны иметь возможность для изучения
@@ -17,6 +17,15 @@
   twentyhours_heading: "Попробуй наш курс: введение в информатику"
   twentyhours_text: "Закончил свой первый  Час Кода? Узнай больше об информатике и
     концепциях программирования в следующем курсе."
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Students
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: "Попробуйте сейчас"
   california_heading: "Попросите вашу школу обучать информатике"
   california_text: "Любой учитель может предложить наши <a href='http://studio.code.org/'>бесплатные
@@ -40,7 +49,7 @@
   n_participants: "# участников"
   go: "Старт"
   thank_you_: "Спасибо!"
-  congratulations: "Поздравляем!"
+  congratulations: "Поздравляю!"
   congratulations_on_completing_hoc: "Поздравляем с завершением 1-го Часа программирования."
   get_a_certificate_of_achievement: "Получить сертификат о результате"
   enter_valid_email: "Пожалуйста, введите действительный адрес электронной почты"
@@ -59,6 +68,7 @@
     наших курсов</a> или посмотри какие еще есть возможности <a href='/learn/beyond'>Научиться
     За Один Час</a>."
   leaderboards_for_hoc: "Доска лидеров Часа Кода."
+  support_url: http://support.code.org/
   country: "Страна"
   city: "Город"
   gender: "Пол"
@@ -83,6 +93,8 @@
   i_am_a: "Я"
   never_spam: "Мы никогда не пришлём Вам спам"
   enter_country: "Введите страну, если Вы не в  США"
+  used_infrequent_updates: Only used for infrequent updates
+  privacy_practices_children: See our privacy practices for children
   petition_thankyou: "Благодарим Вас за подписание петиции"
   carousel_heading_international: "Обучающее руководство на Вашем языке"
   continue_learning_header: "Продолжайте обучение дальше"
@@ -185,6 +197,8 @@
   dashboard_landing_new_beta: "Новинка! Попробуй наши бета-курсы для учеников 5 класса."
   dashboard_landing_new_k5courses: "Новинка! Попробуй наши курсы для учеников 5 класса."
   dashboard_landing_useful_links: "Другие полезные ссылки"
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: "Распечатать сертификаты учеников, которые
     закончили этот курс"
   dashboard_landing_educator_blog: "Знакомтесь с новостями и обновлениями наших материалов
@@ -214,6 +228,7 @@
   dashboard_navigation_view_progress: "Просмотр хода выполнения"
   dashboard_navigation_add_students: "Добавить Учеников"
   dashboard_navigation_manage_students: "Управление Учениками"
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: "Раздел: %{section_name}"
   dashboard_navigation_student: "Ученик: %{student_name}"
   dashboard_sections_new_section: "Новый раздел"
@@ -226,6 +241,7 @@
   dashboard_sections_table_course: "Курс"
   dashboard_sections_table_students: "Ученики"
   dashboard_sections_table_code: "Код раздела"
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: "Если вы хотите раздать учетные записи вашим ученикам,
     выберите тип секретного <b>слова</b> или <b>картинку</b> для данного раздела."
   dashboard_sections_secret_word: "<b>Слово</b> позволяет установить секретное слово
@@ -246,13 +262,18 @@
   dashboard_students_new_section: "Вы создали новый раздел! Теперь добавьте ваших
     учеников, используя кнопки выше: <b>Добавить ученика</b> и <b>Добавить несколько
     учеников</b>."
+  dashboard_students_placeholder_name: Student Name
   dashboard_students_name: "Имя"
   dashboard_students_age: "Возраст"
   dashboard_students_gender: "Пол"
+  dashboard_students_male: "Мужской"
+  dashboard_students_female: "Женский"
   dashboard_students_secret: "Секрет"
   dashboard_students_password: "Пароль"
   dashboard_students_username: "Имя пользователя: %{student_username}"
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: "Показать секрет"
   dashboard_students_auto_generated: "Автоматически сгененированные"
   dashboard_students_reset_secret: "Переустановить секрет"
@@ -277,3 +298,27 @@
   dashboard_students_url: "Ссылка"
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: "Последовательность"
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: "Другое"
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
+  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
+    week alone:'
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

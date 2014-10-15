@@ -11,7 +11,7 @@ var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
 var tiles = require('./tiles');
 var utils = require('../utils');
-var _ = require('../lodash');
+var _ = utils.getLodash();
 
 var Direction = tiles.Direction;
 var Position = tiles.Position;
@@ -1334,8 +1334,7 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.saySprite());
       }
       if (block.params) {
-        this.appendValueInput('TEXT')
-          .setCheck('String');
+        this.appendValueInput('TEXT');
       } else {
         var quotedTextInput = this.appendDummyInput();
         if (isK1) {

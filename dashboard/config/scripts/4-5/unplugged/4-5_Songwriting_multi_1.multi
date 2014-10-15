@@ -1,0 +1,14 @@
+name '4-5 Songwriting Multi 1'
+title 'Multiple Choice'
+banner ''
+description '/script_assets/4-5_images/unplugged/songwriting_1_q.png'
+
+question 'What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+
+height '150'
+
+wrong 'Lou, Lou, skip to my Lou,'
+right 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
+wrong "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
+wrong "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
+

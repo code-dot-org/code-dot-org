@@ -32,6 +32,7 @@
     submit: "Добавить подсказку"
   appname: Code.org
   stage: "Этап"
+  stage_number: Stage %{number}
   puzzle: "Головоломка"
   trophies: "Кубки"
   courses: "Курсы"
@@ -118,9 +119,9 @@
     try_hoc: "Попробуйте сначала один Час Кода"
     try_20hours: Попробуйте наше двадцатичасовое "Введение в информатику"
   signinsection:
-    welcome: Welcome to %{section_name}
+    welcome: "%{section_name} приветствует тебя"
     name: "Выберите ваше имя"
-    picture: Now find your secret picture
+    picture: "Теперь найди свою секретную картинку"
     words: "Теперь введите ваши секретные слова"
     login: "Вход"
   password:
@@ -167,7 +168,7 @@
       access_denied: "Вы не имеете доступа к статистике этого пользователя"
   redeem_prizes:
     title: "Востребовать призы: %{name}"
-    provider: 'Provider:'
+    provider: "Поставщик:"
     code: "Код:"
     redeem_header: 'To redeem:'
     donorschoose_register: "Зарегистрируйтесь как учитель на DonorsChoose.org"
@@ -184,7 +185,7 @@
     teacher_email_required: "Для награда учителю требуется подтверждённый адрес электронной
       почты:"
     confirm:
-      title: Please Confirm
+      title: "Будь любезен, подтверди"
       'no': "Нет"
       'yes': "Да"
       msg: Are you sure you want to claim the %{prize_name} prize?
@@ -249,6 +250,9 @@
     header:
       finished_hoc: "Я закончил мой Час Кода"
       sign_in_to_save: "Войдите для сохранения результатов"
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: "Мои ученики"
       label: "Привет, %{username}"
@@ -353,6 +357,8 @@
     classroom_activity: "Отключить активность"
   home:
     title: Code Studio
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: "Уже зарегистрированы? %{link}"
     student_reg_link: "Регистрация для ученика"
     teacher_reg_link: "Регистрация для учителя"
@@ -409,6 +415,7 @@
     feedback: "Оставить отзыв"
     translate: "Помогите нам выполнить перевод на Ваш язык"
     support: "Поддержка"
+    support_url: http://support.code.org
     tos: "Условия"
     privacy: "Правила конфиденциальности"
     secure: "Защищенная версия"
@@ -433,8 +440,22 @@
     autoplay_option: "Автозапуск видео"
     download: "Скачать видео"
   compatability:
-    working: "Мы работаем над поддержкой для Вашего браузера."
-    upgrade: "Пожалуйста, обновите Ваш браузер."
+    working:
+      header: "Мы работаем над поддержкой для Вашего браузера."
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Your browser doesn't support all the features required, and you may experience
+        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
+        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
+        your browser to a supported version</a>.
+      hide_this_warning: Hide this warning
+    upgrade:
+      header: "Пожалуйста, обновите Ваш браузер."
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Unfortunately your browser doesn't support all the features required
+        to run this part of the site.<br/><br/>Install a browser on our supported
+        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
+        expect functionality to be broken.
+      button: Take me to the list of supported browsers
   slow_loading: "Это занимает больше времени, чем обычно..."
   try_reloading: "Попробуйте перезагрузить страницу"
   next_stage: "Закончил! Перейти к следующему этапу"
@@ -447,6 +468,13 @@
     flappy_og_title: "Проверь мои Flappy игру"
     studio_og_title: "Посмотреть свою историю"
     og_description: "Я сам написал код  на Code.org"
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: "Вы создали новый скрипт."
     destroyed: "Вы уничтожили скрипт."
@@ -481,6 +509,7 @@
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
+    support_url: "//support.code.org"
   multi:
     wrong_title: "Неправильный ответ"
     wrong_body: "Ответ, который вы ввели неправильный.  Пожалуйста, попробуйте еще

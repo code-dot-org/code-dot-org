@@ -2,9 +2,64 @@
 layout: none
 theme: none
 ---
+:css
+  #nav {
+    margin: 10px 0;
+  }
+  h1 {
+    margin: 30px 0;
+  }
+  .start-stop p {
+    margin: 10px 0;
+  }
+   
+#nav
+  #goback
+    %a{href: '#/'} Workshop Dashboard
+    %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
+    %b{style: "color: #ff8b02;"} {{workshop.name()}}
 
-%h1 View workshop
+%h1 {{workshop.name()}}
 
+.row
+  .col-sm-12
+    .panel.panel-default
+      .panel-heading
+        Current State:
+        %span{'ng-show' => 'workshop.state() == "not_started"'} Not Started
+        %span{'ng-show' => 'workshop.state() == "started"'} In Progress
+        %span{'ng-show' => 'workshop.state() == "stopped"'} Ended
+      .panel-body
+        .start-stop{'ng-show' => 'workshop.state() == "not_started"'}
+          %p 
+            On the day of your workshop, click the Start Event button
+            below to create a section for teachers attending the workshop
+            to join.
+          %p
+            %a.btn.btn-default{"ng-click" => "start_workshop()", 'ng-confirm-click' => 'Are you sure you want to start your workshop?'} Start Event
+        .start-stop{'ng-show' => 'workshop.state() == "started"'}
+          %p
+            Please ask teachers at the workshop to:
+          %ol
+            %li
+              Create a teacher account at
+              %a{href: "http://#{canonical_hostname('studio.code.org')}"}
+                http://#{canonical_hostname('studio.code.org')}
+            %li
+              Join your section using this URL:
+              %a{"ng-href" => "http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}", target: "_blank"}
+                http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}
+          %p
+            You can
+            %a{"ng-href" => "/teacher-dashboard#/sections/{{section.id}}/manage", target: '_blank'}
+              view this section in your Teacher Dashboard
+            to make sure everyone has joined.
+          %p 
+            After your workshop is done, click the End Event button below to close the workshop.
+          %p
+            %a.btn.btn-default{"ng-click" => "stop_workshop()", 'ng-confirm-click' => 'Are you sure you want to end your workshop?'} End Event
+        .start-stop{'ng-show' => 'workshop.state() == "stopped"'}
+          %p We hope you had a great workshop!
 .row
   .col-sm-4
     .panel.panel-default
@@ -33,7 +88,8 @@ theme: none
   %a.btn.btn-default{"ng-href" => "#/{{workshop.secret}}/edit"} Edit
   %a#btn-cancel.btn.btn-link{"ng-click" => "cancel_workshop()"} Cancel
 
-%div{'ng-show' => 'workshop.signups.length > 0'}
+
+%div{'ng-show' => 'workshop_signups.length > 0'}
   %h2 Signups
   %table{style: "width:970px; table-layout:fixed;"}
     %colgroup
@@ -52,10 +108,10 @@ theme: none
       %th.manage-th
         School
       %th.manage-th
-    %tr{"ng-repeat" => "signup in workshop.signups | orderBy:order", style: "vertical-align:top"}
+    %tr{"ng-repeat" => "signup in workshop_signups | orderBy:order", style: "vertical-align:top"}
       %td {{signup.name_s}}
       %td {{signup.email_s}}
-      %td {{signup.teacher_role_ss.join(', ')}}
+      %td {{signup.teacher_role_ss.concat(signup.teacher_role_other_ss).join(', ')}}
       %td {{signup.school_name_s}}
       %td{nowrap: true, style: 'white-space: nowrap;'}
         %span{"ng-show" => "signup.confirmSignupDelete"}

@@ -114,6 +114,7 @@ function addGeocomplete() {
     $('#geocomplete').val('');
     gmap.setCenter(new google.maps.LatLng(37.6, -95.665));
     gmap.setZoom(4);
+    info_window.close();
     if (html5_storage_supported()) {
       localStorage.removeItem('geocomplete');
     }

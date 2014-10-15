@@ -1,0 +1,16 @@
+#logos{:style=>'width: 780px; padding: 0; margin: 0;'}
+  - logos.each_slice(4) do |group|
+    .logo_row{:style=>'width: 780px; padding: 0; margin: 0;'}
+      - group.each do |logo|
+        .logo_column{:style=>'width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px'}
+          - logo_name = logo[:name_s].downcase.gsub(/\W/, '_').gsub(/_+/, '_')
+          - file_path = resolve_image("images/#{logo_name}").to_s[/([^\/]*)$/]
+          - avatar_url = "/images/#{file_path}"
+          - unless logo[:url_s].nil_or_empty?
+            %a{:href=>logo[:url_s], :style=>'display: table-cell; vertical-align: middle; text-align: center;'}
+              %img{:src=>avatar_url, :style=>'max-width: 140px; max-height: 140px;'}
+          - else
+            %a{:style=>'display: table-cell; vertical-align: middle; text-align: center;'}
+              %img{:src=>avatar_url, :style=>'max-width: 140px; max-height: 140px;'}
+          %p= logo[:description_t]
+    %br{:style=>'clear: both;'}

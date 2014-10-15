@@ -90,7 +90,7 @@ module LevelsHelper
     end
 
     if user
-      if level.game.app == 'turtle'
+      if level.game.app == Game::TURTLE
         from_level_num = case level.level_num
           when '3_8' then '3_7'
           when '3_9' then '3_8'
@@ -152,12 +152,12 @@ module LevelsHelper
   # Code for generating the blockly options hash
   def blockly_options(local_assigns={})
     # Use values from properties json when available (use String keys instead of Symbols for consistency)
-    level = @level.properties.dup || {}  
+    level = @level.properties.dup || {}
 
     # Set some specific values
     level['puzzle_number'] = @script_level ? @script_level.stage_or_game_position : 1
     level['stage_total'] = @script_level ? @script_level.stage_or_game_total : @level.game.levels.count
-    if @level.is_a?(Blockly) && @level.step_mode
+    if @level.is_a?(Maze) && @level.step_mode
       @level.step_mode = blockly_value(@level.step_mode)
       level['step'] = @level.step_mode == 1 || @level.step_mode == 2
       level['stepOnly'] = @level.step_mode == 2
@@ -195,6 +195,18 @@ module LevelsHelper
       min_workspace_height
       slider_speed
       permitted_errors
+      disable_param_editing
+      success_condition:fn_successCondition
+      failure_condition:fn_failureCondition
+      first_sprite_index
+      protaganist_sprite_index
+      timeout_failure_tick
+      soft_buttons
+      edge_collisions
+      projectile_collisions
+      allow_sprites_outside_playspace
+      sprites_hidden_to_start
+      free_play
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -213,9 +225,16 @@ module LevelsHelper
     level['sliderSpeed'] = level['sliderSpeed'].to_f if level['sliderSpeed']
     level['scale'] = {'stepSpeed' =>  @level.properties['step_speed'].to_i } if @level.properties['step_speed'].present?
 
-    # Blockly requires map as an array not a string
-    %w(map initialDirt finalDirt).each do |x|
+    # Blockly requires these fields to be objects not strings
+    %w(map initialDirt finalDirt goal soft_buttons).each do |x|
       level[x] = JSON.parse(level[x]) if level[x].is_a? String
+    end
+
+    # Blockly expects fn_successCondition and fn_failureCondition to be inside a 'goals' object
+    if level['fn_successCondition'] || level['fn_failureCondition']
+      level['goal'] = {fn_successCondition: level['fn_successCondition'], fn_failureCondition: level['fn_failureCondition']}
+      level.delete('fn_successCondition')
+      level.delete('fn_failureCondition')
     end
 
     # Fetch localized strings
@@ -259,7 +278,8 @@ module LevelsHelper
     if (script = @script_level.try(:script)) && !(script.default_script?)
       "#{data_t_suffix('script.name', script.name, 'title')}: #{@script_level.name} ##{@script_level.stage_or_game_position}"
     else
-      "#{data_t('game.name', @game.name)} ##{@script_level.try(:game_chapter) || @level.level_num} "
+      level_num = "##{@script_level.try(:game_chapter) || @level.level_num} " unless @game.name == "Flappy" and @level.level_num == "1"
+      "#{data_t('game.name', @game.name)} #{level_num}"
     end
   end
 
@@ -283,5 +303,15 @@ module LevelsHelper
 
   def boolean_check_box(f, field_name_symbol)
     f.check_box field_name_symbol, {}, boolean_string_true, boolean_string_false
+  end
+
+  SoftButton = Struct.new(:name, :value)
+  def soft_button_options
+    [
+        SoftButton.new('Left', 'leftButton'),
+        SoftButton.new('Right', 'rightButton'),
+        SoftButton.new('Down', 'downButton'),
+        SoftButton.new('Up', 'upButton'),
+    ]
   end
 end

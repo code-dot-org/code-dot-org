@@ -62,6 +62,7 @@
   "backToPreviousLevel":"Povratak na prethodni nivo",
   "saveToGallery":"Spremi u svoju galeriju",
   "savedToGallery":"Spremljeno u tvoju galeriju!",
+  "shareFailure":"Sorry, we can't share this program.",
   "typeCode":"Napiši svoj JavaScript kôd ispod ovih uputa.",
   "typeFuncs":"Dostupne funkcije:%1",
   "typeHint":"Uoči da su neophodne zagrade i znak \";\".",

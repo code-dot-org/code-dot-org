@@ -28,50 +28,50 @@
           desc: Kóðun í klukkustund
           Maze: "Áfangi 1"
         Edit Code:
-          desc: Breyta kóða
+          desc: Breyta kóða (beta)
           MazeEC: "Áfangi 1"
         2014 Levels:
-          desc: 2014 þrautir (beta)
+          desc: Skopp (beta)
           Bounce: "Áfangi 1"
         Builder Levels:
-          desc: User-Created Puzzles (beta)
+          desc: "Þrautir gerðar af notendum (beta)"
           Custom: "Áfangi 1"
         Flappy Levels:
           desc: Fuglinn Flappy
           Flappy: "Áfangi 1"
         Jigsaw Levels:
-          desc: Jigsaw (beta)
+          desc: Púsl (beta)
           Jigsaw: "Áfangi 1"
         Step Levels:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: Völundarhús (beta)
+          MazeStep: "Þrep í áfanga"
         edit-code:
-          desc: Edit Code (beta)
+          desc: Breyta kóða (beta)
           MazeEC: "Áfangi 1"
         events:
-          desc: Bounce (beta)
+          desc: Skopp (beta)
           Bounce: "Áfangi 1"
           Studio: "Áfangi 2"
         builder:
-          desc: User-Created Puzzles (beta)
+          desc: "Þrautir gerðar af notendum (beta)"
           Custom: "Áfangi 1"
         flappy:
           desc: Fuglinn Flappy
           Flappy: "Áfangi 1"
         jigsaw:
-          desc: Jigsaw (beta)
+          desc: Púsl (beta)
           Jigsaw: "Áfangi 1"
         step:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: Völundarhús (beta)
+          MazeStep: "Þrep í áfanga"
         wordsearch:
-          desc: Spelling Bee (beta)
+          desc: Stafsetning (beta)
           WordSearch: "Áfangi 1"
     game:
       name:
         Unplug1: Kynning á tölvunarfræði
         Maze: Völundarhúsið
-        Multi: Multiple Choice Stuffs
+        Multi: Alls konar val
         Unplug2: Tölvunarmiðuð hugsun
         Unplug3: Forritun rúðublaða
         Artist: Listamaðurinn
@@ -93,9 +93,9 @@
         MazeEC: Völundarhúsið
         Bounce: Skopp
         Flappy: Fuglinn Flappy
-        Jigsaw: Jigsaw
-        MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
+        Jigsaw: Púsl
+        MazeStep: Völundarhús, þrep
+        Wordsearch: Orðaleit
     trophy:
       name:
         Bronze: Brons
@@ -128,8 +128,9 @@
         maze_2_6: Reyndu að koma mér til grænu boðflennunnar með aðeins 3 kubbum.
         maze_2_7: Hjálpaðu mér að hrekja vonda grísinn í burtu með sem fæstum kubbum.
           Prófaðu að nota fleiri en einn "endurtaka" kubb.
-        maze_2_8: 'Reyndu að leysa þetta með "endurtaka" kubbi sem inniheldur þessa
-          3 kubba: færa, færa, snúa.'
+        maze_2_8: 'Þegar kubbur er grár merkir það að þú getur ekki eytt honum. Leystu
+          þessa þraut með "endurtaka" kubbi sem endurtekur 3svar sinnum. Prófaðu að
+          setja þessa 3 kubba inn í gráa "endurtaka" kubbinn: færa, færa, snúa.'
         maze_2_9: Prófaðu að nota nýja "endurtaka þar til" kubbinn - hann endurtekur
           þar til ég kemst til svínka.
         maze_2_10: Bara ein æfing í viðbót  - geturðu leyst þetta með því að nota
@@ -183,9 +184,8 @@
           breidd" kubbinn. Góða skemmtun!'
         turtle_4_1: 'Getur þú teiknað þríhyrning (með 100 pixla hliðar) með aðeins
           3 kubbum? Vísbending: Notaðu "endurtaka" kubb.'
-        turtle_4_2: 'Reyndu að leysa þessa þraut með því að bæta við einum kubbi.
-          Vísbending: Við höfum sett kubba sem teikna 2 eins þrihyrninga. Þú þarft
-          að setja snúningskubb á milli þeirra og ákveða hve mikið á að snúa.'
+        turtle_4_2: Bættu "snúa til hægri um 90 gráður" kubbi inn í forritið sem er
+          nú þegar á vinnusvæðinu til að teikna þessa þríhyrninga.
         turtle_4_3: Hér er kóðinn sem þú skrifaðir til að teikna einn þríhyrning.
           Getur þú bætt við "endurtaka" og "snúa" kubbum til að búa til fallegt blóm?
         turtle_4_4: 'Hér er sami kóðinn frá þrautinni á undan, en þessi snýr aðeins
@@ -356,7 +356,7 @@
           sprengiefnið!
         maze_3_4: Arrg! Skrifaðu forrit fyrir mig sem kemur mér í kringum TNT sprengiefnið
           og til svínsins.
-        bounce_1: Tengdu kubb við "þegar vinstri ör" kubb og ýttu á "Keyra forrit".
+        bounce_1: Tengdu kubb við "þegar vinstri ör" kubbinn og ýttu á "Keyra forrit".
           Færðu spaðann með vinstri ör til að komast að endamarkinu.
         bounce_2: Tengdu kubb við "þegar til hægri" og "þegar til vinstri" kubbana.
           Færðu spaðann til að ná báðum endamörkum.
@@ -375,20 +375,21 @@
           við kubbana "þegar bolti í marki" og "þegar bolti hittir ekki spaða" til
           að búa til leik. Reyndu að skora sem flest stig áður en andstæðingurinn
           skorar tvisvar.
-        bounce_11: You can now attach blocks to the "when run" block. Try changing
-          the speed of the paddle and the ball and see how many points you can score
-          before your opponent scores twice.
-        bounce_12: Create your own Bounce game. You can change all the visuals and
-          the rules. When you're done, click Share to let friends try your game on
-          their phones.
+        bounce_11: Þú getur núna tengt kubba við kubbinn "þegar keyrt". Þú verður
+          að tengja nýja "varpa nýjum bolta" kubbinn á fleiri en einum stað. Prófaðu
+          líka að breyta sviðinu eða hraða spaðans og boltans og sjáðu hvað þú getur
+          skorað mörg stig áður en andstæðingurinn hefur skorað tvisvar.
+        bounce_12: Búðu til þinn eigin Skopp leik. Þú getur breytt öllu myndefninu
+          og reglunum. Þegar leikurinn er tilbúinn getur þú smellt á Ljúka til að
+          vinir geti prófað leikinn í símunum sínum.
         Custom_builder: Dragðu kubba úr verkfærakassanum inn á vinnusvæðið til að
           teikna áfangann sem þú vilt búa til. Ýttu svo á Keyra forrit.
-        flappy_1: Tengdu kubb til "þegar smellt" kubbinn og ýttu svo á "Keyra forrit".
+        flappy_1: Tengdu kubb við "þegar smellt" kubbinn og ýttu svo á "Keyra forrit".
           Smelltu eða sláðu á skjáinn til að færa Flappy að markinu.
         flappy_2: Nú höfum bætt við jörð. Tengdu kubb við kubbinn "þegar rekst á jörð".
           Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy hrapar til jarðar.
-        flappy_3: Með kubbnum "þegar leikur byrjar" getur þú keyrt kóða þegar leikurinn
-          byrjar. Prófaðu að stilla hraðann og fljúga að markinu.
+        flappy_3: Með kubbnum "þegar keyrt" getur þú keyrt kóða þegar leikurinn byrjar.
+          Prófaðu að stilla hraðann og fljúga að markinu.
         flappy_4: Flappy mun fljúga í gegnum hindranir nema þú skrifir kóða til að
           láta hann rekast á. Tengdu kubb við kubbinn "þegar rekst á hindrun". Kóðinn
           þinn verður að "LJÚKA LEIK" þegar Flappy rekst á fyrstu pípurnar.
@@ -397,137 +398,143 @@
           stig með því að fljúga Flappy framhjá fyrstu pípunum.
         flappy_6: Prófaðu hvort þú getir enn skorað stig eftir að þú lætur Flappy
           blaka vængjunum meira eða minna.
-        flappy_7: Prófaðu nú að breyta umhverfinu með því að tengja annan kubb við
-          kubbinn "þegar leikur byrjar".
+        flappy_7: Prófaðu svo að breyta leiknum með því að tengja annan kubb við "þegar
+          keyrt" kubbinn.
         flappy_8: "Þú getur stillt umhverfið hvenær sem er, ekki bara í byrjun. Prófaðu
           að still umhverfið á HANDAHÓF þegar aðrir atburðir gerast, t.d. þegar farið
           er framhjá hindrun."
         flappy_9: Prófaðu nú aðra útfærslu með því að ljúka ekki leiknum heldur núllstilla
           skorið þegar rekist er á hindrun eða jörð.
-        flappy_11: Búðu nú til þinn eiginn Flappy leik. Þú getur breytt öllu umhverfi
-          og reglum, jafnvel þyngdaraflinu. Smelltu svo á Deila til að vinir þínir
-          geti prófað leikinn í símunum sínum.
-        flappy_k1_1: Play Flappy
-        flappy_k1_2: Attach a block to the "when click" block, then press "Run". Click
-          or tap the screen to move Flappy to the target.
-        flappy_k1_3: Nú höfum bætt við jörð. Tengdu kubb við kubbinn "þegar rekst
+        flappy_11: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu umhverfi
+          og öllum reglum, jafnvel þyngdaraflinu. Smelltu svo á Ljúka til að vinir
+          þínir geti prófað leikinn í símunum sínum.
+        flappy_k1_1: Spila Flappy
+        flappy_k1_2: Tengdu kubb við "þegar smellt" kubbinn og ýttu svo á "Keyra forrit".
+          Smelltu eða sláðu á skjáinn til að færa Flappy að markinu.
+        flappy_k1_3: Nú höfum við  bætt við jörð. Tengdu kubb við kubbinn "þegar rekst
           á jörð". Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy hrapar til jarðar.
-        flappy_k1_4: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
+        flappy_k1_4: Með kubbnum "þegar keyrt" getur þú keyrt kóða þegar leikurinn
+          byrjar. Prófaðu að stilla hraðann og fljúga að markinu.
         flappy_k1_5: Flappy mun fljúga í gegnum hindranir nema þú skrifir kóða til
           að láta hann rekast á. Tengdu kubb við kubbinn "þegar rekst á hindrun".
           Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy rekst á fyrstu pípurnar.
         flappy_k1_6: Nú skulum við bæta við stigagjöf og telja stig þegar Flappy kemst
           fram hjá hindrunum. Bættu við kubbinn "þegar framhjá hindrun" og skoraðu
           stig með því að fljúga Flappy framhjá fyrstu pípunum.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: Next, try changing the scene by attaching another block to the
-          "when run" block.
-        flappy_k1_9: Try changing the player by attaching a "set player" block to
-          the "when run" block.
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
-        studio_c2_1: Can you make this dog say "hello world"?
-        studio_c2_2: Can you make the dog say something and then have the cat say
-          something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: Can you write a program that makes the dog move to the cat, and
-          have the cat say "hello" when the dog reaches him?
-        studio_c2_5: Can you write a program to make the octopus say "hello" when
-          it is clicked?
-        studio_c2_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
-        studio_c2_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c2_8: Can you have the penguin say "Ouch!" and play a "hit" sound if
-          he runs into the dinosaur, and then move him with the arrows to make that
-          happen?
-        studio_c2_9: Can you add a block to score a point when the penguin runs into
-          the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of
-          the penguin, and then move him with the arrows until you score?
-        studio_c2_11: Create your own story. When you're done, click Finish to let
-          friends try your story on their phones.
-        studio_c3_story_1: Can you make this dog say "hello world"?
-        studio_c3_story_2: Can you make the dog say something and then have the cat
-          say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: Can you write a program that makes the dog move to the
-          cat, and have the cat say "hello" when the dog reaches him?
-        studio_c3_story_5: Can you add a block to make the octopus happy?
-        studio_c3_story_6: Create your own story. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_c3_game_1: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_c3_game_2: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c3_game_4: Can you have the penguin say "Ouch!" and play a "hit" sound
-          if he runs into the dinosaur, and then move him with the arrows to make
-          that happen?
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
-        studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_playlab_1: Can you make this dog say "hello world"?
-        studio_playlab_2: Can you make the dog say something and then have the cat
-          say something afterwards?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: Can you write a program that makes the dog move to the cat,
-          and have the cat say "hello" when the dog reaches him?
-        studio_playlab_5: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_playlab_6: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_playlab_8: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
-        studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your story on their phones.
-        studio_k1_1: Can you make this dog say "hello world"?
-        studio_k1_2: Can you make the dog say something and then have the cat say
-          something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the target?
-        studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
-          gets there.
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
-          the word STORY
+        flappy_k1_7: Gáðu hvort þú getir skorað mörg stig fyrir að komast framhjá
+          hindrun
+        flappy_k1_8: Prófaðu svo að breyta leiknum með því að tengja annan kubb við
+          "þegar keyrt" kubbinn.
+        flappy_k1_9: Prófaðu að skipta um leikmann með því að tengja "stilla leikmann"
+          kubb við "þegar keyrt" kubbinn.
+        jigsaw_1: Smelltu á kubbinn
+        jigsaw_2: Dragðu kubbinn að markinu
+        jigsaw_3: Raðaðu kubbunum til að búa til myndina
+        jigsaw_4: Raðaðu kubbunum til að búa til myndina
+        jigsaw_5: Raðaðu kubbunum til að búa til myndina
+        jigsaw_6: Raðaðu kubbunum til að búa til myndina
+        jigsaw_7: Raðaðu kubbunum til að búa til myndina
+        jigsaw_8: Raðaðu kubbunum til að búa til myndina
+        jigsaw_9: Raðaðu kubbunum til að búa til myndina
+        jigsaw_10: Raðaðu kubbunum til að búa til myndina
+        jigsaw_11: Raðaðu kubbunum til að búa til myndina
+        jigsaw_12: Raðaðu kubbunum til að búa til myndina
+        jigsaw_13: Lagaðu þrautina!
+        mazestep_1: Lýsing á þrepi völundarhúss hér
+        mazestep_2: Lýsing á þrepi völundarhúss hér
+        mazestep_3: Lýsing á þrepi völundarhúss hér
+        mazestep_4: Lýsing á þrepi völundarhúss hér
+        mazestep_5: Lýsing á þrepi völundarhúss hér
+        studio_c2_1: Getur þú látið hundinn segja "Halló heimur"?
+        studio_c2_2: Getur þú látið hundinn segja eitthvað og síðan látið köttinn
+          segja eitthvað?
+        studio_c2_3: Getur þú skrifað forrit sem færir hundinn að kettinum?
+        studio_c2_4: Getur þú skrifað forrit sem lætur hundinn færa sig að kettinum
+          og látið köttinn segja "Hæ" þegar hundurinn kemur til hans?
+        studio_c2_5: Getur þú skrifað forrit sem lætur kolkrabbann segja "Hæ" þegar
+          smellt er á hann?
+        studio_c2_6: Getur þú skrifað forrit sem lætur þessa mörgæs hreyfast með því
+          að nota örvarlyklana upp / niður / vinstri / hægri til að snerta öll mörkin?
+        studio_c2_7: Með kubbnum "endurtaka endalaust" getur þú látið kóða keyra án
+          þess að stöðvast. Geturðu bætt við kubbum svo að risaeðlan hreyfist stanslaust
+          upp og niður?
+        studio_c2_8: Getur þú látið mörgæsina segja "Ááá!" og spilað viðeigandi hljóð
+          þegar hún rekst á risaeðluna og notað örvarlykla til að færa hana svo það
+          geti orðið árekstur?
+        studio_c2_9: Getur þú bætt við kubbi til að skora stig þegar mörgæsin rekst
+          á kolkrabbann og síðan fært hana með örvarlyklunum þar til þú skorar?
+        studio_c2_10: Getur þú bætt við kubbum til að breyta bakgrunni og hraða mörgæsarinnar
+          og síðan fært hana með örvarlyklunum þar til þú skorar?
+        studio_c2_11: Búðu til leik eftir eigin höfði. Smelltu svo á Ljúka til að
+          leyfa vinum að prófa söguna í símum sínum.
+        studio_c3_story_1: Getur þú látið hundinn segja "Halló heimur"?
+        studio_c3_story_2: Getur þú látið hundinn segja eitthvað og síðan látið köttinn
+          segja eitthvað?
+        studio_c3_story_3: Getur þú skrifað forrit sem færir hundinn að kettinum?
+        studio_c3_story_4: Getur þú skrifað forrit sem lætur hundinn færa sig að kettinum
+          og látið köttinn segja "Hæ" þegar hundurinn kemur til hans?
+        studio_c3_story_5: Getur þú bætt við kubbi sem kemur kolkrabbanum í gott skap?
+        studio_c3_story_6: Búðu til sögu eftir eigin höfði. Smelltu svo á Ljúka til
+          að leyfa vinum að prófa söguna í símum sínum.
+        studio_c3_game_1: Getur þú skrifað forrit sem lætur kolkrabbann segja "Hæ"
+          þegar smellt er á hann?
+        studio_c3_game_2: Getur þú skrifað forrit sem lætur þessa mörgæs hreyfast
+          með því að nota örvarlyklana upp / niður / vinstri / hægri til að snerta
+          öll mörkin?
+        studio_c3_game_3: Með kubbnum "endurtaka endalaust" getur þú látið kóða keyra
+          án þess að stöðvast. Geturðu bætt við kubbum svo að risaeðlan hreyfist stanslaust
+          upp og niður?
+        studio_c3_game_4: Getur þú látið mörgæsina segja "Ááá!" og spilað viðeigandi
+          hljóð þegar hún rekst á risaeðluna og notað örvarlykla til að færa hana
+          svo það geti orðið árekstur?
+        studio_c3_game_5: Getur þú bætt við kubbi til að skora stig þegar mörgæsin
+          rekst á kolkrabbann og síðan fært hana með örvarlyklunum þar til þú skorar?
+        studio_c3_game_6: Getur þú bætt við kubbum til að breyta bakgrunni og hraða
+          mörgæsarinnar og síðan fært hana með örvarlyklunum þar til þú skorar?
+        studio_c3_game_7: Búðu til leik eftir eigin höfði. Smelltu svo á Ljúka til
+          að leyfa vinum að prófa söguna í símum sínum.
+        studio_playlab_1: Getur þú látið hundinn segja "Halló heimur"?
+        studio_playlab_2: Getur þú látið hundinn segja eitthvað og síðan látið köttinn
+          segja eitthvað?
+        studio_playlab_3: Getur þú skrifað forrit sem færir hundinn að kettinum?
+        studio_playlab_4: Getur þú skrifað forrit sem lætur hundinn færa sig að kettinum
+          og látið köttinn segja "Hæ" þegar hundurinn kemur til hans?
+        studio_playlab_5: Getur þú skrifað forrit sem lætur kolkrabbann segja "Hæ"
+          þegar smellt er á hann?
+        studio_playlab_6: Getur þú skrifað forrit sem lætur þessa mörgæs hreyfast
+          með því að nota örvarlyklana upp / niður / vinstri / hægri til að snerta
+          öll mörkin?
+        studio_playlab_7: Með kubbnum "endurtaka endalaust" getur þú látið kóða keyra
+          án þess að stöðvast. Geturðu bætt við kubbum svo að risaeðlan hreyfist stanslaust
+          upp og niður?
+        studio_playlab_8: Getur þú bætt við kubbi til að skora stig þegar mörgæsin
+          rekst á kolkrabbann og síðan fært hana með örvarlyklunum þar til þú skorar?
+        studio_playlab_9: Getur þú bætt við kubbum til að breyta bakgrunni og hraða
+          mörgæsarinnar og síðan fært hana með örvarlyklunum þar til þú skorar?
+        studio_playlab_10: Búðu til leik eftir eigin höfði. Smelltu svo á Ljúka til
+          að leyfa vinum að prófa söguna í símum sínum.
+        studio_full_sandbox: Búðu til leik eftir eigin höfði. Smelltu svo á Ljúka
+          til að leyfa vinum að prófa söguna í símum sínum.
+        studio_k1_1: Getur þú látið hundinn segja "Halló heimur"?
+        studio_k1_2: Getur þú látið hundinn segja eitthvað og síðan látið köttinn
+          segja eitthvað?
+        studio_k1_3: Getur þú skrifað forrit sem færir hundinn að kettinum?
+        studio_k1_4: Láttu hundinn færa sig að kettinum og köttinn segja "Hæ" þegar
+          hundurinn kemur.
+        studio_k1_5: Getur þú bætt við kubbi sem kemur kolkrabbanum í gott skap?
+        studio_k1_6: Búðu til þína eigin sögu! Láttu hundinn og köttinn hreyfast og
+          láttu þá tala.
+        maze_wordsearch_k_1: Færðu mig svo ég stafi orðið EAST
+        maze_wordsearch_k_2: Færðu mig svo ég stafi orðið SOUTH
+        maze_wordsearch_k_3: Færðu mig svo ég stafi orðið WEST
+        maze_wordsearch_k_4: Færðu mig svo ég stafi orðið NORTH
+        maze_wordsearch_k_6: Færðu mig austur og svo suður til að stafa orðið JUMP
+        maze_wordsearch_k_9: Færðu mig í eina átt og svo aðra til að stafa orðið CODE
+        maze_wordsearch_k_13: Færðu mig í eina átt svo aðra til að stafa orðið DEBUG
+        maze_wordsearch_k_15: Færðu mig í eina átt svo aðra til að stafa orðið ABOVE
+        maze_wordsearch_k_16: Færðu mig í eina átt svo aðra til að stafa orðið BELOW
+        maze_wordsearch_k_20: "Þetta er próf! Færðu mig í eina átt svo aðra til að
+          stafa orðið STORY"
     video:
       name:
         maze_intro: Kynning á Völundarhúsi
@@ -544,75 +551,76 @@
         parameters: Föll með stikum
         hoc_wrapup: Samantekt á Kóðun í klukkustund
         20_wrapup: Samantekt 20 klukkustunda
-        Unplug1: What is CS?
+        Unplug1: Hvað er tölvunarfræði?
         Unplug2: Tölvunarmiðuð hugsun
         Unplug3: Forritun rúðublaða
         Unplug4: Algrím
         Unplug5: Föll
         Unplug6: Skilyrði
-        Unplug7: Songwriting
-        Unplug8: Kjarni
-        Unplug9: Relay programming
+        Unplug7: Lagasmíð
+        Unplug8: Greining kjarna
+        Unplug9: Boðhlaupsforritun
         Unplug10: Internet
         Unplug11: Samantekt
-        C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loop: Getting Loopy
-        C1_pair_programming: Pair Programming
-        C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
-        C1_bee_level_intro: Bee Level - Intro
+        C1_happy_maps_unplugged: Krúttleg kort
+        C1_moveitmoveit_unplugged: Hreyfa sig, hreyfa sig
+        C1_bigevent_unplugged: Stórviðburður
+        C1_getting_loop: Lykkjulæti
+        C1_pair_programming: Félagaforritun
+        C1_maze_intro_sequencing: Röð í völundarhúsi - kynning
+        C1_maze_debugging: Villuleit í völundarhúsi
+        C1_bee_level_intro: Býflugnaborð - kynning
         C1_artist_intro: Kynning á listamanni
-        C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
-        C1_playlab_storytelling: Play Lab - Create a Story
-        C1_planting_seed: Planting a Seed
-        C1_building_foundating: Building a Foundation
+        C1_spelling_bee_intro: Stafsetning - kynning
+        C1_zuck_repeat_loop: Lykkjur völundarhúss
+        C1_bee_loops: Lykkjur býflugu
+        C1_maze_loops: Lykkjur völundarhúss
+        C1_playlab_storytelling: Leikjasmiðja - búa til sögu
+        C1_planting_seed: Fræsáning
+        C1_building_foundating: Að byggja grunn
         C2_maze_intro: Kynning á Völundarhúsi
         C2_artist_intro: Kynning á listamanni
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_bee_conditionals: Bee Conditionals
-        C2_playlab_createstory: Play Lab - Create a Story
+        C2_zuck_repeat_loop: Lykkjur völundarhúss
+        C2_artist_loops: Lykkjur listamanns
+        C2_bee_conditionals: Skilyrði býflugu
+        C2_playlab_createstory: Leikjasmiðja - Búa til sögu
         C2_graph_paper: Forritun rúðublaða
         C2_conditionals_with_cards: Skilyrði
-        C2_binary_bracelets: Binary Bracelets
+        C2_binary_bracelets: Stafræn armbönd
         C2_replay_programming: Boðhlaupsforritun
-        C2_paper_airplanes: Paper Airplanes
+        C2_paper_airplanes: Pappírsflaugar
         C3_maze_intro: Kynning á Völundarhúsi
         C3_artist_intro: Kynning á listamanni
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
+        C3_artist_functions: Föll listamanns
+        C3_bee_functions: Föll býflugu
+        C3_bee_conditionals: Skilyrði býflugu
+        C3_maze_conditionals: Skilyrði völundarhúss
+        C3_artist_nested_loops: Innri lykkjur
+        C3_farmer_while: "Á meðan lykkjur"
+        C3_bee_nested_loops: Innri lykkjur
+        C3_bee_debugging: Villuleit býflugu
         C3_bounce: Skopp
-        C3_playlab_create_game: Play Lab - Create a Game
+        C3_playlab_create_game: Leikjasmiðja - Búa til leik
         C3_computational_thinking: Tölvunarmiðuð hugsun
-        C3_dice_race: Dice Race
+        C3_dice_race: Teningakapp
         C3_internet: Internet
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
-        C3_songwriting_with_parameters: Songwriting With Parameters
+        C3_crowdsourcing: Hópvistun
+        C3_functional_suncatchers: Sólarskraut með föllum
+        C3_songwriting_with_parameters: Lagasmíð með stikum
     callout:
       text:
-        drag_blocks: Drag a "move" block and snap it below the other block
-        run: Hit "Run" to try your program
-        watch_again: Click here to watch the video again
-        gray_block_explanation: Blocks that are grey can't be moved or deleted. Can
-          you solve the puzzle anyway?
-        show_code_explanation: Click here to see the code for the program you're making
-        instructions_repeat_explanation: The instructions for each puzzle are repeated
-          here
-        category_explanation: You have all the same blocks but they've now been arranged
-          in categories
-        set_sprite_image: Attach a "set actor to image" block to the "when story starts"
-          block to enable an actor for this story
-        studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
+        drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn
+        run: Smelltu á "Keyra" til að prófa forritið þitt
+        watch_again: Smelltu hér til að sjá myndskeiðið aftur
+        gray_block_explanation: Gráum kubbum er ekki hægt að eyða. Getur þú samt leyst
+          þrautina?
+        show_code_explanation: Smelltu hér til að sjá kóða forritsins sem þú ert að
+          búa til
+        instructions_repeat_explanation: Leiðbeiningar fyrir hverja þraut eru endurteknar
+          hér
+        category_explanation: "Þú hefur alla sömu kubbana en nú er búið að raða þeim
+          í flokka"
+        set_sprite_image: Tengdu "hafa leikmann" kubb við "þegar sagan byrjar" kubb
+          til að virkja leikmann fyrir þessa sögu
+        studio_say_text: Skrifaðu það sem leikmaðurinn á að segja innan þessara gæsalappa
+        jigsaw_click: Smelltu á þennan kubb!

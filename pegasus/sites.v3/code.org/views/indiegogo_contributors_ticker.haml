@@ -1,0 +1,44 @@
+:javascript
+  var contributorCount = 0;
+  var interval = 10000;
+  var timer = setInterval(scrollList, interval);
+  var uniqueContributors = [];
+
+  $.ajax({
+    url: "/v2/indiegogo_contributions",
+    type: "get",
+    dataType: "JSON"
+  }).done(function(data) {
+    var contributions = data["response"];
+
+    // Remove duplicates
+    $.each(contributions, function(i, el){
+        if(el['by'] !== "Anonymous" && $.inArray(el["by"], uniqueContributors) === -1) {
+          uniqueContributors.push(el["by"]);
+        }
+    });
+
+    contributorCount = uniqueContributors.length;
+
+    uniqueContributors.forEach(function(e) {
+      $("#donors").append("<li>" + e + "</li>");
+    });
+  }).fail(function () {
+
+  });
+
+  function scrollList () {
+    if (contributorCount > 13) {
+      var top = $('#donors li').first();
+
+      top.hide(200, function () {
+        top.remove();
+        $('ul').append(top);
+        top.show();
+      });
+
+    }
+  }
+
+
+%ul{:id=>'donors', :style=>'font-size: 16px; line-height: 34px; transition: transform 2s;'}

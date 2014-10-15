@@ -1,6 +1,8 @@
 * * *
 
-## judul: Hadiah-hadiah
+title: Prizes layout: wide
+
+* * *
 
 # Hour of Code — hadiah untuk setiap penyelenggara
 
@@ -12,9 +14,7 @@ Setiap guru yang menyelenggarakan Hour of Code untuk pelajar akan mendapatkan 10
 
 ## Kelas yang beruntung akan memenangkan kesempatan untuk video chat dengan seorang tamu pembicara!
 
-50 kelas yang beruntung akan diundang untuk bergabung dalam video chat untuk merayakan Hour of Code pada 8-14 Desember. Pelajar akan dapat bertanya dan berbicara dengan pemimpin industri-teknologi. [Coba cek chat tahun lalu][1] dengan Bill Gates, pendiri Twitter Jack Dorsey, Susan Wojcicki Google dan Gabe Newell Valve.
-
- [1]: http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a
+50 kelas yang beruntung akan diundang untuk bergabung dalam video chat untuk merayakan Hour of Code pada 8-14 Desember. Pelajar akan dapat bertanya dan berbicara dengan pemimpin industri-teknologi. [Coba cek percakapan tahun lalu](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) dengan Bill Gates, pendiri Twitter Jack Dorsey, Susan Wojcicki Google dan Gabe Newell Valve.
 
 ## Sekolah yang beruntung akan memenangkan satu set laptop untuk kelas (atau teknologi lain yang bernilai $10,000)
 
@@ -34,7 +34,4 @@ Jika anda mendaftarkan sekolah anda untuk berpartisipasi dalam Hour of Code, and
 
 ## Pertanyaan lebih lanjut mengenai hadiah?
 
-Check out [Terms and Conditions][2] or visit our forum to see [FAQs][3] and ask your questions.
-
- [2]: /prizes-terms
- [3]: http://support.code.org
+Silahkan periksa [dyarat dan ketentuan](/prizes-terms) atau kunjungi forum untuk melihat [FAQ](http://support.code.org) dan mengajukan pertanyaan.

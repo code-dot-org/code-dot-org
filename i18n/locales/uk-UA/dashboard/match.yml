@@ -1,10 +1,10 @@
-"uk":
+uk:
   data:
     match:
       2-3 artist loops match 1:
         Artist Loops Matching One: 'Художник - відповідність - цикли 1'
-        Matching loops: "Відповідність циклів"
-        Match the loop to the shape: "Встановіть відповідність між циклом та фігурою"
+        Matching loops: Відповідність циклів
+        Match the loop to the shape: Встановіть відповідність між циклом та фігурою
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
@@ -26,8 +26,8 @@
         /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
       2-3 bounce match 1:
         Bounce Matching: 'Відбивання - відповідність'
-        Matching: "Відповідність"
-        Match the events with the actions: "Встановіть відповідність подій та дій"
+        Matching: Відповідність
+        Match the events with the actions: Встановіть відповідність подій та дій
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
@@ -40,8 +40,8 @@
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
       2-3 flappy match 1:
         Flappy Matching One: 'Пурх - відповідність 1'
-        Matching: "Відповідність"
-        Match the events with the actions: "Встановіть відповідність подій та дій"
+        Matching: Відповідність
+        Match the events with the actions: Встановіть відповідність подій та дій
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
@@ -50,7 +50,7 @@
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
         Maze Match One: 'Лабіринт - відповідність 1'
-        Match the puzzles to the blocks: "Встановіть відповідність завдань та блоків"
+        Match the puzzles to the blocks: Встановіть відповідність завдань та блоків
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
@@ -59,8 +59,8 @@
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
         Maze Match: 'Лабіринт - встановлення відповідності'
-        Match the puzzles to the blocks: "Встановіть відповідність завдань та блоків"
-        Instructions: "Вказівки"
+        Match the puzzles to the blocks: Встановіть відповідність завдань та блоків
+        Instructions: Вказівки
         Drag the blocks to match.: Перетягніть блоки для встановлення відповідності.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
@@ -70,7 +70,7 @@
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png
       2-3 Big Event Match 1:
-        Matching: "Зіставлення"
+        Matching: Зіставлення
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
@@ -81,9 +81,9 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a4.png: /script_assets/k_1_images/unplugged_images/big_event_1_a4.png
       2-3 Binary Match 1:
-        Matching: "Зіставлення"
+        Matching: Зіставлення
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
-        Use the key to mach each code to its letter: "Використайте ключ, щоб встановити відповідність коду та літери"
+        Use the key to mach each code to its letter: Використайте ключ, щоб встановити відповідність коду та літери
         <strong>N</strong>: '<strong>N</strong>'
         <strong>O</strong>: '<strong>O</strong>'
         <strong>P</strong>: '<strong>P</strong>'
@@ -93,8 +93,8 @@
         /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
-        Matching: "Зіставлення"
-        Match the grid to the program: "Встановіть відповідність сітки та програми"
+        Matching: Зіставлення
+        Match the grid to the program: Встановіть відповідність сітки та програми
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -102,8 +102,8 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       2-3 Relay Programming Match 1:
-        Matching: "Зіставлення"
-        Match the grid to the program: "Встановіть відповідність сітки та програми"
+        Matching: Зіставлення
+        Match the grid to the program: Встановіть відповідність сітки та програми
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -112,8 +112,8 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
         Maze Match: 'Лабіринт - встановлення відповідності'
-        Match the puzzles to the blocks: "Встановіть відповідність завдань та блоків"
-        Instructions: "Вказівки"
+        Match the puzzles to the blocks: Встановіть відповідність завдань та блоків
+        Instructions: Вказівки
         Drag the blocks to match.: Перетягніть блоки для встановлення відповідності.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
@@ -122,8 +122,42 @@
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
+      4-5 Algorithms Match 1:
+        Matching: Відповідність
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Встановіть відповідність між кроками гри в кубики та порядком їх розташування в алгоритмі.
+        <h4>1)</h4>: '<h4>1)</h4>'
+        <h4>2)</h4>: '<h4>2)</h4>'
+        <h4>3)</h4>: '<h4>3)</h4>'
+        <h4>4)</h4>: '<h4>4)</h4>'
+        <h4>Set Player 1 score to 0</h4>: '<h4>Встановити бали гравця 1 в 0</h4>'
+        <h4>Player 1 rolls die</h4>: '<h4>Гравець 1 кидає кубик</h4>'
+        <h4>Add Player 1 roll to total score</h4>: '<h4>Додати бал гравця 1 до загального рахунку</h4>'
+        <h4>Compare player scores to see who wins</h4>: '<h4>Порівняти рахунки гравців та визначити переможця</h4>'
+      4-5 Computational Thinking Match 1:
+        Matching: Відповідність
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Кожен із цих автомобілів можна представити у вигляді складових. Встановіть відповідність між автомобілем та його складовими.
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Колеса/сторони: 2<br/>Вікна/сторони: 0</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Колеса/сторони: 2<br/>Вікна/сторони: 1</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Колеса/сторони: 2<br/>Вікна/сторони: 6</h3>'
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Колеса/сторони: 3<br/>Вікна/сторони: 2</h3>'
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
+        /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
+      4-5 Suncatchers Match 1:
+        Matching: Відповідність
+        Match each program to the word it makes, using the provided group of skills.: Встановіть відповідність програм та утворених ними слів, використовуючи надані навички.
+        /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
+        /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
+        <h4>STACK</h4>: '<h4>STACK</h4>'
+        <h4>STAMP</h4>: '<h4>STAMP</h4>'
+        <h4>STAR</h4>: '<h4>STAR</h4>'
+        <h4>RAMP</h4>: '<h4>RAMP</h4>'
       K-1 Artist 2 Match 1:
-        Matching: "Відповідність"
+        Matching: Відповідність
         Is the square next to, above, or below the ball?: "Квадрат розміщено поруч, вище чи нижче м'яча?"
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -132,7 +166,7 @@
         <br/><br/>below: '<br/> <br/> нижче'
         <br/><br/>next to: '<br/> <br/> поруч'
       K-1 Artist 2 Match 2:
-        Matching: "Відповідність"
+        Matching: Відповідність
         Match the shapes based on type.: Встановіть відповідність фігур за типом.
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
@@ -143,7 +177,7 @@
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
         /script_assets/k_1_images/artist_images/large_triangle.png: /script_assets/k_1_images/artist_images/large_triangle.png
       K-1 Artist 2 Match 3:
-        Matching: "Відповідність"
+        Matching: Відповідність
         Match the shapes based on type.: Встановіть відповідність фігур за типом.
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
@@ -154,7 +188,7 @@
         /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
         /script_assets/k_1_images/artist_images/large_triangle2.png: /script_assets/k_1_images/artist_images/large_triangle2.png
       K-1 Artist Loops Match 1:
-        Matching: "Зіставлення"
+        Matching: Зіставлення
         Match the code to the stairs it draws.: Встановіть відповідність коду та сходинок, які малюються.
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
@@ -163,8 +197,8 @@
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png
       K-1 Bee Loops Match 1:
-        Matching: "Відповідність"
-        Match the blocks: "Встановіть відповідність для блоків"
+        Matching: Відповідність
+        Match the blocks: Встановіть відповідність для блоків
         /script_assets/k_1_images/bee_images/r4_gnectar.png: /script_assets/k_1_images/bee_images/r4_gnectar.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/bee_images/r5_ghoney.png: /script_assets/k_1_images/bee_images/r5_ghoney.png
@@ -174,8 +208,8 @@
         /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
         /script_assets/k_1_images/move_blocks/EEEEE.png: /script_assets/k_1_images/move_blocks/EEEEE.png
       K-1 Flappy Match 1:
-        Matching: "Відповідність"
-        Match the blocks: "Встановіть відповідність для блоків"
+        Matching: Відповідність
+        Match the blocks: Встановіть відповідність для блоків
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
@@ -183,9 +217,9 @@
         /script_assets/k_1_images/flappy_images/end.png: /script_assets/k_1_images/flappy_images/end.png
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
       K-1 Maze Match 1:
-        Matching: "Відповідність"
-        Match the puzzles and blocks: "Встановіть відповідність між завданнями і блоками"
-        Instructions: "Вказівки"
+        Matching: Відповідність
+        Match the puzzles and blocks: Встановіть відповідність між завданнями і блоками
+        Instructions: Вказівки
         Drag the blocks to match.: Перетягніть блоки для встановлення відповідності.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
@@ -197,7 +231,7 @@
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
       K-1 Big Event Match 1:
-        Matching: "Зіставлення"
+        Matching: Зіставлення
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
@@ -206,8 +240,8 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
       K-1 Happy Maps Match 1:
-        Matching: "Зіставлення"
-        Match the Map to the arrow that gets the Flurb to the treasure: "Встановіть відповідність карти та стрілок, які доставлять Флурба до скарбу"
+        Matching: Зіставлення
+        Match the Map to the arrow that gets the Flurb to the treasure: Встановіть відповідність карти та стрілок, які доставлять Флурба до скарбу
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png
@@ -215,7 +249,7 @@
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
       K-1 Move It Match 1:
-        Matching: "Зіставлення"
+        Matching: Зіставлення
         Match the Map to the algorithm that gets the Flurb to the flowers.: Встановіть відповідність карти та алгоритму, який доставить Флурба до квітів.
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q2.png: /script_assets/k_1_images/unplugged_images/move_it_2_q2.png
@@ -224,19 +258,19 @@
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
       Coordinate Matching:
-        Coordinates of Ninjacat: "Координати Ніндзя-кота"
+        Coordinates of Ninjacat: Координати Ніндзя-кота
         Match each character with its correct coordinate!: Встановіть відповідність персонажів з координатами!
         /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
-        Cloud: "Хмара"
-        Ruby: "Рубін"
-        Dog: "Собака"
-        Ninjacat: "Ніндзя-кіт"
+        Cloud: Хмара
+        Ruby: Рубін
+        Dog: Собака
+        Ninjacat: Ніндзя-кіт
         (250, 400): (250, 400)
         (500, 240): (500, 240)
         (480, 100): (480, 100)
         (320, 240): (320, 240)
       Match math to circles:
-        Converting Math to Circles of Evaluation: "Переведення математики у кола оцінювання"
+        Converting Math to Circles of Evaluation: Переведення математики у кола оцінювання
         Match each mathematical expression with the correct circle of evaluation!: Встановіть відповідність математичних виразів з правильним колом оцінювання!
         (2 + 3) * 5 / 2: '(2 + 3) * 5 / 2'
         2 + 3 * (5 / 2): '2 + 3 * (5 / 2)'
@@ -246,7 +280,7 @@
         /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit 1/Exercise_4_question_3.png
         /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit 1/Exercise_4_question_4.png
       Match circles to code:
-        Converting Circles to Code: "Перетворення кіл на код"
+        Converting Circles to Code: Перетворення кіл на код
         Match each circle of evaluation with the correct code!: Встановіть відповідність між колами оцінювання та кодом!
         (+ (- (/ 4 7) 9) 3): '(+ (- (/ 4 7) 9) 3)'
         (+ (- 9 3) (* 4 7)): '(+ (- 9 3) (* 4 7))'
@@ -257,7 +291,7 @@
         /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
         /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
       Match math to code:
-        Converting Math to Code: "Перетворення математики в код"
+        Converting Math to Code: Перетворення математики в код
         Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Встановіть відповідність між математичними виразами та кодом. Використайте коло оцінок як допомогу при пошуку відповіді!
         (15 + 3) x (72 - 19): '(15 + 3) x (72 - 19)'
         3 x 15 + (- 72 19): '3 x 15 + (- 72 19)'
@@ -268,18 +302,18 @@
         (- (+ 72 3) (* 19 15)): '(- (+ 72 3) (* 19 15))'
         (+ (- (* 3 15) 72) 19): '(+ (- (* 3 15) 72) 19)'
       parts of contract:
-        Parts of a Contract: "Частини визначення"
+        Parts of a Contract: Частини визначення
         Here is a contract for a new function. Match each item with the word that describes it.: Це визначення для нової функції. Зіставте кожен елемент зі словом, що його описує.
         yearbook-picture: альбом-зображення
-        string numer: "рядок число"
-        image: "зображення"
+        string numer: рядок число
+        image: зображення
         (yearbook-picture "Sally" 1992): '(альбом-зображення "Саллі" 1992)'
         function name: "ім'я функції"
-        domain: "домен"
-        range: "діапазон"
-        example: "приклад"
+        domain: домен
+        range: діапазон
+        example: приклад
       Match example to contract:
-        Contracts of Functions: "Визначення функцій"
+        Contracts of Functions: Визначення функцій
         Match each example with the correct contract!: Встановіть відповідність кожного прикладу з правильним визначенням!
         (big-string? "gigantic" 5): '(великий рядок? "величезне" 5)'
         (find-price 4): (знайти-ціну 4)
@@ -293,10 +327,10 @@
         "bigger-string: string string -> string": 'більший-рядок: рядок рядок -> рядок'
         "find-price: string -> number": 'знайти-ціну: рядок  -> число'
       test matching image:
-        Matching Images Two: "Відповідність зображень 2"
+        Matching Images Two: Відповідність зображень 2
         Match up all the flowers by colour!: Встановіть відповідність квітів за кольором!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
-        Instructions: "Вказівки"
+        Instructions: Вказівки
         Drag the images from right to center.: Перетягніть зображення справа до центру.
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
@@ -307,13 +341,13 @@
         /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test matching text:
-        Matching: "Відповідність"
+        Matching: Відповідність
         Some really easy stuff to match.  Drag it around until you get it.: Деякі відповіді дуже просто зіставити. Просто перетягуйте, поки не отримаєте правильну відповідність.
         What color is the sky?: Якого кольору небо?
         What's in the ocean?: Що в океані?
         What's Brent's last name?: Яке прізвище Брента?
         Where is Brendan from?: Звідки Брендон?
-        blue: "синій"
-        salt: "сіль"
-        Van Minnen: "Ван Мінен"
-        Sydney: "Сидней"
+        blue: синій
+        salt: сіль
+        Van Minnen: Ван Мінен
+        Sydney: Сидней

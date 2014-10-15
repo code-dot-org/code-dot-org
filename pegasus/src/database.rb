@@ -1,10 +1,5 @@
-require 'sequel'
-Sequel::Model.plugin :timestamps
-Sequel.extension :migration
-DB = Sequel.connect(CDO.pegasus_db_writer.sub('mysql:', 'mysql2:'))
-#DB.loggers << $log if rack_env?(:development)
-DASHBOARD_DB = Sequel.connect(CDO.dashboard_db_writer.sub('mysql:', 'mysql2:'))
-#DASHBOARD_DB.loggers << $log if rack_env?(:development)
+require 'cdo/db'
+DB = PEGASUS_DB
 
 class Properties
 
@@ -44,6 +39,9 @@ class Tutorials
     return DB[:beyond_tutorials].where(code:code).first[:url] if @table == :beyond_tutorials
 
     api_domain = domain.gsub('csedweek.org','code.org')
+    api_domain = api_domain.gsub('br.code.org','code.org')
+    api_domain = api_domain.gsub('eu.code.org','code.org')
+    api_domain = api_domain.gsub('ro.code.org','code.org')
     api_domain = api_domain.gsub('uk.code.org','code.org')
     "http://#{api_domain}/api/hour/begin/#{code}"
   end
@@ -85,7 +83,9 @@ def country_name_from_code(code)
   return code unless country
   country[:name_s]
 end
-
+def no_credit_count
+    DB[:cdo_state_promote].where(cs_counts_t:'No').exclude(state_code_s:'DC').count
+end
 def us_state_from_code(code)
   DB[:geography_us_states].where(code_s:code.to_s.strip.upcase).first
 end
@@ -126,7 +126,6 @@ def fetch_hoc_metrics()
     'finished'=>0,
     'tutorials'=>{'codeorg'=>0},
     'cities'=>{'Seattle'=>0},
-    'states'=>{'Washington'=>0},
     'countries'=>{'United States'=>0},
   }
   metrics['started'] += 409216

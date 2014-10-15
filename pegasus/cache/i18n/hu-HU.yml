@@ -3,7 +3,7 @@
   computer_science: Számítógép-tudomány
   computer_science_edweek: Számítógép Tudomány Oktatási Hét
   csedweek_dates: December 9-15, 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>kipróbáltam a</h3><h2>Kód Óráját&trade;</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>Kipróbáltam a</h3><h2>Kód óráját.</h2>"
   anybody_can_learn: Tanulni bárki tud.
   learn_now: Tanulj most
   petition_message: Minden diáknak, minden iskolában meg kellene adni a lehetőséget,
@@ -16,6 +16,15 @@
   twentyhours_heading: Próbálja ki az bevezető tanfolyamunkat, a számítógép tudományhoz
   twentyhours_text: Elvégezte az első tanfolyamot? Tudjon meg többet számítógép tudomány
     lényegéből és a programozási fogalmakról az ezt követő tanfolyamon.
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Tanuló
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: Próbálja ki most
   california_heading: Kérd a sulidban, hogy tanítsanak számítstechnikát
   california_text: Minden tanár tud felajánhat egy  ingyenes<a href='http://learn.code.org/'>
@@ -56,6 +65,7 @@
   beyond_hour_message: Folytassa  a <a href='http://learn.code.org'> 20 órás tanfolyamunkat</a>,
     vagy nézze meg a <a href='/learn/beyond'> Tanulj az Egy Órán túl</a> további lehetőségeit.
   leaderboards_for_hoc: Ranglisták a Kód Órájáról.
+  support_url: http://support.code.org/
   country: Ország
   city: Település
   gender: Nem
@@ -69,7 +79,7 @@
   share_on_facebook: Megosztás a Facebookon
   share_on_twitter: Megosztás a Twitteren
   beyond_an_hour: Túl a KÓD ÓRÁJÁN >
-  get_started: Kezdjük el
+  get_started: Kezdés
   i_agree: Egyetértek
   participant_select: "-Válasszon-"
   participant_student: Diák
@@ -80,6 +90,8 @@
   i_am_a: "Én vagyok egy"
   never_spam: Mi soha sem fogjuk spammelni Önt
   enter_country: Adja meg az országát, ha az Egyesült Államok területén kívül él
+  used_infrequent_updates: Only used for infrequent updates
+  privacy_practices_children: See our privacy practices for children
   petition_thankyou: Köszönjük, hogy feliratkozott a petícióra
   carousel_heading_international: Oktatóanyagok az Ön nyelvén
   continue_learning_header: Folytatni a tanulást a Kód Óráján túl
@@ -154,10 +166,10 @@
   class_submission_languages_other: Egyéb nyelv(ek)
   volunteer_engineer_submission_commitment_uncertain: Uncertain
   volunteer_engineer_submission_commitment_now_and_then: Every now and then
-  volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
-  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hours per week
-  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 hours per week
-  volunteer_engineer_submission_commitment_more: More
+  volunteer_engineer_submission_commitment_one_hr_per_week: 1 óra hetente
+  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 óra hetente
+  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 óra hetente
+  volunteer_engineer_submission_commitment_more: Mégtöbb
   volunteer_engineer_submission_location_flexibility_onsite: On-site at a school
   volunteer_engineer_submission_location_flexibility_remote: Mentoring remotely (teachers
     or students)
@@ -167,7 +179,7 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: Current
     university student (or researcher)
   volunteer_engineer_submission_experience_software_professional: Software professional
-  petition_age: Age
+  petition_age: Kor
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -179,6 +191,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: Nyomtasa ki a bizonyítványokat a diákoknak,
     akik befejezték a tanfolyamot
   dashboard_landing_educator_blog: Olvastam a híreket és frissítéseket az anyagokhoz  a
@@ -208,6 +222,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -218,8 +233,9 @@
   dashboard_sections_table_secret: Secret type
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
-  dashboard_sections_table_students: Students
+  dashboard_sections_table_students: Tanuló
   dashboard_sections_table_code: Section Code
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
     students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
   dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
@@ -238,13 +254,18 @@
     per line:'
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
+  dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Név
-  dashboard_students_age: Age
+  dashboard_students_age: Kor
   dashboard_students_gender: Nem
+  dashboard_students_male: Férfi
+  dashboard_students_female: Nő
   dashboard_students_secret: Secret
   dashboard_students_password: Jelszó
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret
@@ -269,3 +290,27 @@
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: Sorozat
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: Egyéb
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
+  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
+    week alone:'
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

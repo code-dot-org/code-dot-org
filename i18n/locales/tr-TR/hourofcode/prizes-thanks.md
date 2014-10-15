@@ -1,7 +1,9 @@
 * * *
 
-## Başlık: Teşekkür ederim
+title: Thank you layout: wide
+
+* * *
 
 # Teşekkür ederiz
 
-Okul olarak, bir sınıf için yeterli dizüstü bilgisayarlar (veya 10.000 $ değerinde diğer teknolojiler) kazanmak için giriş yaptınız.
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).

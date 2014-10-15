@@ -62,6 +62,7 @@
   "backToPreviousLevel": "Gå tillbaka till föregående nivå",
   "saveToGallery": "Spara till ditt galleri",
   "savedToGallery": "Sparat till ditt galleri!",
+  "shareFailure": "Sorry, we can't share this program.",
   "typeCode": "Skriv din JavaScript-kod under instruktionerna.",
   "typeFuncs": "Tillgängliga funktioner:%1",
   "typeHint": "Observera att parenteserna och semikolonen är obligatoriska.",

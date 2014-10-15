@@ -1,10 +1,17 @@
 require 'cdo/aws/s3'
 
-def avatar_image(name)
+def avatar_image(name,width=320)
   basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
   path = resolve_image("images/avatars/#{basename}")
   return nil unless path
-  "/images/fit-320/avatars/#{File.basename(path)}"
+  "/images/fit-#{width}/avatars/#{File.basename(path)}"
+end
+
+def avatar_image_thumbnail(name)
+  basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
+  path = resolve_image("images/avatars/thumbnails/#{basename}_thumbnail")
+  return nil unless path
+  "/images/avatars/thumbnails/#{File.basename(path)}"
 end
 
 def dont_cache()
@@ -96,4 +103,4 @@ def unsupported_media_type!()
   halt(415, "Unsupported Media Type\n")
 end
 
-Dir.glob(pegasus_dir('helpers/*.rb')).sort.each{|path| puts path; load path}
+Dir.glob(pegasus_dir('helpers/*.rb')).sort.each{|path| $log.debug path; load path}

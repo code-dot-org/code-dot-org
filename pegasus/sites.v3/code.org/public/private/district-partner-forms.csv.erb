@@ -1,0 +1,10 @@
+<%=
+
+dont_cache
+content_type :csv
+response.headers['Content-Disposition'] = "attachment;filename=#{File.basename(request.path_info)}"
+
+require 'cdo/csv'
+CSV.generate_from_dataset(DistrictPartnerInfo.all.collect(&:attributes))
+
+%>

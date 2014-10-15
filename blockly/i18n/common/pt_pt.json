@@ -62,6 +62,7 @@
   "backToPreviousLevel": "Voltar ao nível anterior",
   "saveToGallery": "Guarda na tua galeria de imagens",
   "savedToGallery": "Saved to your gallery!",
+  "shareFailure": "Sorry, we can't share this program.",
   "typeCode": "Coloca o teu código Javascript abaixo destas instruções.",
   "typeFuncs": "Funções disponíveis:%1",
   "typeHint": "Repara que os parêntesis e ponto e vírgula são necessários.",

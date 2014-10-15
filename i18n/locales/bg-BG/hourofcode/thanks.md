@@ -1,18 +1,24 @@
 * * *
 
-## Заглавие: Благодаря за записването ви като домакин на Часът на кодирането!
+Заглавие: Благодаря, че регистрирахте събитие Часът на кодирането! оформление: широк
+
+social: "og:title": "<%= hoc\_s(:meta\_tag\_og\_title) %>" "og:description": "<%= hoc\_s(:meta\_tag\_og\_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
+
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc\_s(:meta\_tag\_twitter\_title) %>" "twitter:description": "<%= hoc\_s(:meta\_tag\_twitter\_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv\_load\_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920
+
+* * *
+
+<% facebook = {:u=>"http://#{request.host}/us"}
+
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc\_s(:twitter\_default\_text)} twitter[:hashtags] = 'HourOfCode' unless hoc\_s(:twitter\_default\_text).include? '#HourOfCode' %>
 
 # Благодаря за регистрирането ви като домакин Часът на кодрането събитие!
 
-**Всеки**организатор на Часът на кодирането ще получи 10 GB Dropbox пространство или $10 Skype кредит като благодарност. [ детайли][1]
-
- [1]: /prizes
+**Всеки**организатор на Часът на кодирането ще получи 10 GB Dropbox пространство или $10 Skype кредит като благодарност. [ Детайли](/prizes)
 
 <% if @country == 'us' %>
 
-Накарай [ цялото училище да участва][2] за да имате шанс за големите награди.
-
- [2]: /whole-school
+Регистрирайте [ цялото училище да участва](/us/prizes) за шанс за големи награди.
 
 <% end %>
 
@@ -20,26 +26,25 @@
 
 Кажете на приятелите си за #HourOfCode.
 
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+
 <% if @country == 'us' %>
 
 ## 2. Попитайте във вашето училище, дали предлага участие в Часът на кодирането
 
-[ Изпрати този имейл][3] или [ дай това изложение на своя директор][4]. След като вашето училище е на борда, [ ще може да спечели $10,000 за закупуване на технологии ][1] и да предизвика и други училища във вашия район да се качат на борда.
-
- [3]: /resources#email
- [4]: /resources/hoc-one-pager.pdf
+[ Изпратете този имейл](/resources#email) или [ дайте това изложение на своя директор](/files/schools-handout.pdf). След като вашето училище е на борда, [ ще има шанса да спечели $10,000 за закупуване на технологии ](/prizes) и да предизвика и други училища във вашия район да участват.
 
 <% else %>
 
-## 2. Поискайте от вашето училище да предложи Часът на кодирането
+## 2. Попитайте във вашето училище, дали предлага участие в Часът на кодирането
 
-[ Изпрати този имейл][3] или дай [ това изложение][4] на своя директор.
+[ Изпратете този имейл](/resources#email) или дайте [ това изложение](/files/schools-handout.pdf) на своя директор.
 
 <% end %>
 
 ## 3. Посъветвайте се с вашия работодател за възможно включване
 
-[ Изпратете този имейл][3] на вашия ръководител или изпълнителен директор. Или [ му дайте това изложение][4].
+[ Изпратете този имейл](/resources#email) на вашия ръководител или изпълнителен директор. Или [ му дайте това изложение](/resources/hoc-one-pager.pdf).
 
 ## 4. Насърчете включването в Часът на кодирането в рамките на вашата общност
 
@@ -47,4 +52,6 @@
 
 ## 5 Ангажирайте местната власт в подкрепа на Часът на Кодирането
 
-[ Изпратете този имейл][3] до кмета, Общинския съвет или училищното настоятелство. Или [ им дайте това изложение][4] и ги поканете да посетят вашето училище.
+[ Изпратете този имейл](/resources#politicians) до кмета, Общинския съвет или училищното настоятелство. Или [ им дайте това изложение](/resources/hoc-one-pager.pdf) и ги поканете да посетят вашето училище.
+
+<%= view 'popup_window.js' %>

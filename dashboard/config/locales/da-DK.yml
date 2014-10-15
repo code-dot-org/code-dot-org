@@ -32,6 +32,7 @@
     submit: Skriv huske-ord
   appname: Code.org
   stage: Trin
+  stage_number: Stage %{number}
   puzzle: Puslespil
   trophies: Trofæer
   courses: Kurser
@@ -259,6 +260,9 @@
     header:
       finished_hoc: Jeg har afsluttet min En Times Kodning
       sign_in_to_save: Log ind for at gemme fremskridt
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: Mine elever
       label: Hej %{username}
@@ -364,6 +368,8 @@
     classroom_activity: Unplugged aktivitet
   home:
     title: Code Studio
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: Allerede registreret? %{link}
     student_reg_link: Tilmelding for studerende
     teacher_reg_link: Tilmelding for studerende
@@ -417,6 +423,7 @@
     feedback: Giv feedback
     translate: Hjælp os med at oversætte til dit sprog
     support: Support
+    support_url: http://support.code.org
     tos: Termer
     privacy: Privatlivspolitik
     secure: Sikker Version
@@ -441,8 +448,22 @@
     autoplay_option: Automatisk afspil videoer
     download: Hent Video
   compatability:
-    working: Vi arbejder på at understøtte din browser.
-    upgrade: Vær venlig at opgradere din browser.
+    working:
+      header: Vi arbejder på at understøtte din browser.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Your browser doesn't support all the features required, and you may experience
+        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
+        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
+        your browser to a supported version</a>.
+      hide_this_warning: Hide this warning
+    upgrade:
+      header: Vær venlig at opgradere din browser.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Unfortunately your browser doesn't support all the features required
+        to run this part of the site.<br/><br/>Install a browser on our supported
+        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
+        expect functionality to be broken.
+      button: Take me to the list of supported browsers
   slow_loading: Dette tager længere tid end normalt...
   try_reloading: Prøv at genindlæse siden
   next_stage: Færdig! Fortsæt til næste fase
@@ -455,6 +476,13 @@
     flappy_og_title: Tjek mit Flappy spil
     studio_og_title: Tjek min historie
     og_description: Jeg skrev selv koden med Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: Du har oprettet et nyt script.
     destroyed: Du ødelagde et script.
@@ -491,6 +519,7 @@
     feedback: Giv feedback
     report_bug: Rapporter fejl
     support: Få hjælp
+    support_url: "//support.code.org"
   multi:
     wrong_title: Forkert svar
     wrong_body: Det svar, du har angivet er ikke korrekte.  Prøv venligst igen!

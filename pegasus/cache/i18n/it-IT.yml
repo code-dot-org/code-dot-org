@@ -3,7 +3,7 @@
   computer_science: Informatica
   computer_science_edweek: Settimana di Educazione all'Informatica
   csedweek_dates: 9-15 dicembre 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>hai provato un'</h3><h2>Ora del Codice</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>hanno completato la</h3><h2>Ora del Codice</h2>"
   anybody_can_learn: Chiunque può imparare.
   learn_now: Impara Adesso
   petition_message: Ogni studente di ogni Scuola dovrebbe avere l'opportunità di imparare
@@ -17,12 +17,21 @@
   twentyhours_heading: Prova la nostra introduzione all'Informatica
   twentyhours_text: Hai terminato la tua prima Ora del Codice? Impara un altro po'
     di concetti di informatica e di programmazione in quest'altro corso.
+  hoc2014_heading: Iscriviti alla <a href="http://hourofcode.com/it">Ora del Codice</a>
+    <br/>8-14 dicembre 2014 <br/>
+  hoc2014_students: Studenti
+  hoc2014_try: Prova
+  hoc2014_teachers: Insegnanti
+  hoc2014_host: Ospita
+  hoc2014_everyone: Tutti
+  hoc2014_support: Sostienici
+  hoc2014_whatishoc: Cosa è l'Ora del Codice?
   twentyhours_trynow: Prova adesso
   california_heading: Chiedi alla tua scuola di insegnare informatica
-  california_text: Ogni insegnante può offrire i nostri <a href='http://learn.code.org/'>
-    corsi gratuiti</a>.  Qualsiasi scuola elementare può <a href='http://code.org/educate/k5'>
-    insegnare informatica</a>. Chiedi alle scuole superiori di <a href = 'http://code.org/educate/districts'
-    >collaborare con noi.
+  california_text: Ogni insegnante può offrire i nostri <a href='http://learn.code.org/'>corsi
+    gratuiti</a>.  Qualsiasi scuola elementare può <a href='http://code.org/educate/k5'>insegnare
+    informatica</a>. Chiedi alle scuole superiori di <a href = 'http://code.org/educate/districts'
+    >collaborare con noi</a>.
   california_button: Ulteriori informazioni
   flappy_heading: Buon Compleanno da Flappy a Code.org
   flappy_text: Code.org ha appena compiuto 1 anno di età. <br/> <br/> Festeggia con
@@ -47,18 +56,18 @@
   enter_valid_email: Per favore inserisci un indirizzo valido di posta elettronica
   get_a_certificate_message: Ti manderemo un certificato e le informazioni su come
     <a href='/learn/beyond'>continuare ad imparare dopo la prima Ora del Codice</a>
-  get_a_certificate_message_after: Fare clic sul certificato per scaricarlo o stamparlo.
-    Ora, continua con i nostri <a href='http://studio.code.org'> altri corsi</a>,
-    o vedi più opzioni per <a href='/learn/beyond'>Impara oltre Un'Ora di Codice</a>.
+  get_a_certificate_message_after: Clicca sul certificato per scaricarlo o stamparlo.
+    Poi, continua con <a href='http://studio.code.org'>altri corsi</a>, o vedi altre
+    possibilità per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>.
   thanks_for_submitting: Grazie per l'invio!
   if_you_enjoyed: Se ti è piaciuto imparare, chiedi anche ai tuoi amici di provare!  Vogliamo
     che tutto il mondo impari.
   personalize_certificate: Personalizza il tuo certificato
   share_achievement: Condividi il tuo successo
-  beyond_hour_message: Vai avanti con i nostri<a href='http://learn.code.org'>altri
-    corsi</a>, o vedi altre opzioni per <a href='/learn/beyond'>Imparare dopo l'Ora
-    del Codice</a>.
+  beyond_hour_message: Vai avanti con <a href='http://studio.code.org'>altri corsi</a>,
+    o vedi altre opzioni per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>.
   leaderboards_for_hoc: Classifiche per l'Ora del Codice.
+  support_url: http://programmailfuturo.it/aiuto
   country: Nazione
   city: Città
   gender: Sesso
@@ -71,7 +80,7 @@
   thanks_for_voting: Grazie per aver votato!
   share_on_facebook: Condividi su Facebook
   share_on_twitter: Condividi su Twitter
-  beyond_an_hour: Oltre Un'Ora di Codice >
+  beyond_an_hour: Dopo l'Ora del Codice >
   get_started: Inizia
   i_agree: Firmo
   participant_select: "- Seleziona -"
@@ -83,6 +92,8 @@
   i_am_a: Io sono un
   never_spam: Non ti invieremo mai posta elettronica indesiderata
   enter_country: Inserisci la tua nazione se non sei negli Stati Uniti
+  used_infrequent_updates: Utilizzato solo per aggiornamenti poco frequenti
+  privacy_practices_children: Vedi la nostra informativa sulla privacy per i bambini
   petition_thankyou: Grazie per aver firmato la petizione
   carousel_heading_international: Corsi nella tua lingua
   continue_learning_header: Continua ad imparare dopo l'Ora del Codice
@@ -92,7 +103,7 @@
   learn_online: Prova altri corsi on-line
   learn_classes: Trova le scuole locali
   hoc_is_here: 'L''Ora del Codice #HourOfCode è qua - provala! @codeorg'
-  just_did_hoc: 'Ho appena completatola mia prima Ora del Codice #HourOfCode - provala!
+  just_did_hoc: 'Ho appena completato la mia prima Ora del Codice #HourOfCode - provala!
     @codeorg'
   learn_hoc: Fai l'Ora del Codice
   beyond_hoc: Dopo la prima ora
@@ -110,16 +121,15 @@
   start_hoc: Inizia l'Ora del Codice adesso
   contact_form_topic_press: Stampa/media (appuntamento per un'intervista o per un
     intervento)
-  studiobar_title: Esplora lo<a href='http://studio.code.org'>Studio del Codice</a>
-  studiobar_elementary_title: Corsi Elementari
-  studiobar_elementary_body: I nostri tre nuovi corsi per la classe&#8209;quinta della
-    scuola primaria
+  studiobar_title: Esplora l'<a href='http://studio.code.org'>Officina del Codice</a>
+  studiobar_elementary_title: Scuola Primaria
+  studiobar_elementary_body: I nostri tre nuovi corsi, specifici per la Scuola Primaria
   studiobar_hoc_title: L'Ora del Codice
   studiobar_hoc_body: Imparare a programmare con Angry Birds
   studiobar_flappy_title: Codice "Flappy"
   studiobar_flappy_body: Crea e condividi il tuo gioco di Flappy
-  studiobar_teacher_title: Pannello strumenti dell'insegnante
-  studiobar_teacher_body: 'Per gli insegnanti: Vedi i progressi dei tuoi studenti'
+  studiobar_teacher_title: Fatto per gli insegnanti
+  studiobar_teacher_body: Introduci l'Officina del Codice nella tua classe
   contact_form_topic_student: Io sono uno studente
   contact_form_topic_parent: Io sono un genitore
   contact_form_topic_teacher: Io sono un insegnante
@@ -177,35 +187,36 @@
     studente o ricercatore universitario
   volunteer_engineer_submission_experience_software_professional: Professionista informatico
   petition_age: Età
-  dashboard_landing_title: Home Page dell'Insegnante
-  dashboard_landing_welcome: Benvenuti al nuovo e migliorato pannello strumenti dell'insegnante
-    .
+  dashboard_landing_title: Home Page dell'insegnante
+  dashboard_landing_welcome: Benvenuti al nuovo cruscotto di controllo dell'insegnante.
   dashboard_landing_video: Guarda questo video
-  dashboard_landing_watch_video: per un tour delle nuove funzionalità!
-  dashboard_landing_view_as_student: Guarda questo sito come studente
+  dashboard_landing_watch_video: per vedere le sue nuove funzioni!
+  dashboard_landing_view_as_student: Guarda come appare il sito ad uno studente
   dashboard_landing_students_title: I tuoi studenti
   dashboard_landing_students_manage: Vedi e gestisci i tuoi studenti
   dashboard_landing_news_title: Ultime notizie
   dashboard_landing_new_beta: Novità! Prova i nostri corsi specifici per studenti
-    della scuola primaria in versione provvisoria.
-  dashboard_landing_new_k5courses: Nuovo! Prova i nostri corsi per studenti della
+    delle scuole elementari (in versione provvisoria).
+  dashboard_landing_new_k5courses: Nuovo! Prova i nostri corsi per gli studenti della
     scuola primaria.
-  dashboard_landing_useful_links: Altri collegamenti utili
+  dashboard_landing_useful_links: Altre pagine utili (solo in lingua inglese)
+  dashboard_landing_office_hours: Fai una domanda di persona! Visita il nostro ufficio
+    di assistenza. L'assistenza viene fornita in inglese dal personale di code.org.
   dashboard_landing_print_certificates: Stampa i certificati per gli studenti che
     completano questo corso
   dashboard_landing_educator_blog: Leggi notizie e aggiornamenti relativi al nostro
     materiale didattico sul nostro Blog dell'Insegnante
   dashboard_landing_smart_hints: Per favore aiutaci ad aggiungere suggerimenti intelligenti
-    alle guide di Code.org
+    ai corsi di Code.org (per il momento possibile solo in inglese)
   dashboard_landing_video_player: Prova il nostro nuovo visualizzatore di video nella
     tua scuola
-  dashboard_landing_progress_title: Situazione della classe principale
-  dashboard_landing_progress_biggest: Questo è la situazione per la tua sezione maggiore.
-  dashboard_landing_view_progress: Visualizza situazione per la%{biggest_section}
+  dashboard_landing_progress_title: Progressi della classe principale
+  dashboard_landing_progress_biggest: Questo è la situazione per la tua classe principale.
+  dashboard_landing_view_progress: Controlla i progressi della classe %{biggest_section}
   dashboard_landing_available_title: Corsi disponibili
-  dashboard_landing_available_courses: Qui i corsi attualmente disponibili per voi
-    e i vostri studenti.
-  dashboard_landing_loading: Caricamento...
+  dashboard_landing_available_courses: Ecco i corsi attualmente disponibili per te
+    e i tuoi studenti.
+  dashboard_landing_loading: Sto caricando...
   dashboard_action_edit: Modifica
   dashboard_action_save: Salva
   dashboard_action_save_all: Salva tutto
@@ -215,74 +226,107 @@
   dashboard_action_delete_yes: Sì
   dashboard_action_delete_no: 'No'
   dashboard_action_done: Fatto
-  dashboard_action_required: richiesto
-  dashboard_navigation_home_page: Home page dell'Insegnante
-  dashboard_navigation_all_sections: Tutte le sezioni
-  dashboard_navigation_view_progress: Visualizza lo stato di avanzamento
-  dashboard_navigation_add_students: Aggiungi studenti
+  dashboard_action_required: obbligatorio
+  dashboard_navigation_home_page: Home page dell'insegnante
+  dashboard_navigation_all_sections: Tutte le classi
+  dashboard_navigation_view_progress: Controlla i progressi
+  dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
-  dashboard_navigation_section: 'Sezione: %{section_name}'
+  dashboard_navigation_view_stats: Guarda le statistiche
+  dashboard_navigation_section: 'Classe: %{section_name}'
   dashboard_navigation_student: 'Studente: %{student_name}'
-  dashboard_sections_new_section: Nuova sezione
-  dashboard_sections_jumbotron_instruction: Crea nuove sezioni e aggiungi gli studenti.
-    Le sezioni ti aiutano a organizzare gli studenti in gruppi più piccoli, così è
-    possibile monitorare i progressi e gestire i propri account.
-  dashboard_sections_table_section: Sezione
-  dashboard_sections_table_secret: Tipo segreto
-  dashboard_sections_table_grade: Valutazione
+  dashboard_sections_new_section: Nuova classe
+  dashboard_sections_jumbotron_instruction: Crea nuove classi e aggiungici studenti.
+    Le classi ti aiutano a organizzare gli studenti in gruppi più piccoli, così è
+    possibile controllare i loro progressi e gestire i loro account.
+  dashboard_sections_table_section: Classe
+  dashboard_sections_table_secret: Tipo di password
+  dashboard_sections_table_grade: Livello
   dashboard_sections_table_course: Corso
   dashboard_sections_table_students: Studenti
-  dashboard_sections_table_code: Codice sezione
-  dashboard_sections_choose_secret: Se desideri fornire gli account ai vostri studenti,
-    scegli un tipo di segreto di <b>parola</b> o <b>immagine</b> per quella sezione.
-  dashboard_sections_secret_word: Una <b>parola</b> ti permette di impostare una parola
-    segreta per ogni studente.
-  dashboard_sections_secret_picture: Una <b>foto</b> consente di impostare un'immagine
-    segreta per ogni studente, ideale per gli studenti più giovani che ancora non
-    sanno digitare sulla tastiera.
+  dashboard_sections_table_code: Codice Classe
+  dashboard_sections_name: Nome della classe
+  dashboard_sections_choose_secret: Se vuoi creare tu gli account per i tuoi studenti,
+    scegli un tipo di password <b>parola</b> o <b>immagine</b> per quella classe.
+  dashboard_sections_secret_word: Una <b>parola</b> ti permette di impostare come
+    password una parola segreta per ogni studente.
+  dashboard_sections_secret_picture: Un'<b>immagine</b> ti permette di impostare come
+    password un'immagine segreta per ogni studente. È la scelta ideale per gli studenti
+    più piccoli che ancora non sanno digitare sulla tastiera.
   dashboard_sections_secret_none: Se vuoi che i tuoi studenti gestiscano i propri
-    account, anche scegliendo la propria password, scegli un tipo di segreto di <b>none</b>.
-  dashboard_sections_print_secrets: Tu puoi quindi stampare un insieme di cartellini
-    contenenti informazioni sull'account da distribuire ai tuoi studenti individualmente.
-  dashboard_sections_switch_section: 'Passa alla sezione:'
-  dashboard_students_add_student: Aggiungi studente
+    account, anche scegliendo la propria password, imposta il tipo di password a <b>email</b>.
+  dashboard_sections_print_secrets: Dopo puoi stampare un insieme di schede contenenti
+    le informazioni degli account di ognuno dei tuoi studenti.
+  dashboard_sections_switch_section: 'Cambia classe:'
+  dashboard_students_add_student: Aggiungi uno studente
   dashboard_students_add_students: Aggiungi più studenti
-  dashboard_students_add_multiple: 'Digita o incolla i nomi dei tuoi studenti, uno
+  dashboard_students_add_multiple: 'Scrivi o incolla i nomi dei tuoi studenti, uno
     per riga:'
-  dashboard_students_new_section: Hai creato una nuova sezione! Ora aggiungi gli studenti
-    utilizzando i pulsanti <b>Aggiungi studente</b> e <b>Aggiungi più studenti</b>qui
+  dashboard_students_new_section: Hai creato una nuova classe! Ora aggiungi gli studenti
+    utilizzando i pulsanti <b>Aggiungi uno studente</b> e <b>Aggiungi più studenti</b>qui
     sopra.
+  dashboard_students_placeholder_name: Nome dello studente
   dashboard_students_name: Nome
   dashboard_students_age: Età
-  dashboard_students_gender: Genere
-  dashboard_students_secret: Segreto
+  dashboard_students_gender: Sesso
+  dashboard_students_male: Maschile
+  dashboard_students_female: Femminile
+  dashboard_students_secret: Password
   dashboard_students_password: Password
   dashboard_students_username: 'Nome utente: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_show_secret: Mostra il codice segreto
+  dashboard_students_email: 'Indirizzo di posta elettronica: %{student_email}'
+  dashboard_students_completed_levels: Livelli completati
+  dashboard_students_total_lines: Linee di codice
+  dashboard_students_show_secret: Mostra la password
   dashboard_students_auto_generated: Auto-generata
-  dashboard_students_reset_secret: Reimpostare il codice segreto
-  dashboard_students_reset_password: Reimposta la password
-  dashboard_students_share_section: 'Condividi la pagina di accesso di questa sezione
+  dashboard_students_reset_secret: Reimposta la password
+  dashboard_students_reset_password: Ripristinare la password
+  dashboard_students_share_section: 'Condividi la pagina di accesso di questa classe
     con i tuoi studenti:'
   dashboard_students_print_info: Stampa le schede con le informazioni di login dei
     tuoi studenti.
   dashboard_students_secret_picture: Immagine segreta
-  dashboard_students_reset_picture: Puoi ripristinare la foto segreta di uno studente
-    in qualsiasi momento scegliendo <b>Visualizza segreta</b> e quindi <b>Reimposta
-    il codice segreto</b>. Una nuova immagine segreta verrà generata per quell'allievo
-    da utilizzare quando si autentica.
+  dashboard_students_reset_picture: Puoi reimpostare l'immagine segreta di uno studente
+    in qualsiasi momento scegliendo <b>Mostra la password</b> e quindi <b>Reimposta
+    la password</b>. Una nuova immagine segreta verrà generata come password per quello
+    studente, da usare per l'accesso.
   dashboard_students_secret_word: Parola segreta
-  dashboard_students_reset_word: 'Puoi ripristinare la parola segreta di uno studente
-    in qualsiasi momento scegliendo <b>Visualizza segreta</b> e quindi <b>Reimposta
-    il codice segreto</b>. Una nuova parola segreta verrà generata per quell''allievo
-    da utilizzare quando si autentica. '
+  dashboard_students_reset_word: 'Puoi reimpostare la parola segreta di uno studente
+    in qualsiasi momento scegliendo <b>Mostra la password</b> e quindi <b>Reimposta
+    la password</b>. Una nuova parola segreta verrà generata come password per quello
+    studente da utilizzare quando accede. '
   dashboard_students_join_link: Dì agli studenti di creare i propri account e di collegarsi
     alla tua sezione a
-  dashboard_students_no_email: Se gli studenti non hanno indirizzi email, o piacerebbe
-    creare accounts per loro, cambia il tipo di codice segreta di questa sezione a<b>parola</b>
-    o <b>immagine</b>.
+  dashboard_students_no_email: Se i tuoi studenti non hanno indirizzi di posta elettronica,
+    o tu vuoi creare gli account per loro, imposta il tipo di password di questa classe
+    a <b>parola</b> o <b>immagine</b>.
   dashboard_students_print_page: Stampa questa pagina
   dashboard_students_url: URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
-    here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Clicca
+    qui</a> per il nostro documento sulla privacy che puoi stampare e distribuire
+    ai tuoi studenti.
+  dashboard_curriculum_overview: Panoramica del curriculum specifico per le scuole
+    elementari
+  dashboard_view_all_lesson_plans: Mostra i Piani di Lavoro di tutte le lezioni
+  dashboard_course1: 'Corso 1:'
+  dashboard_course2: 'Corso 2:'
+  dashboard_course3: 'Corso 3:'
+  dashboard_sequence: Sequenza
+  dashboard_framework: Quadro di riferimento
+  dashboard_standards: Livelli di riferimento
+  dashboard_implementation_guide: Guida alla realizzazione
+  dashboard_glossary: Glossario
+  dashboard_classroom_strategies: Strategie di aula per gli insegnanti
+  dashboard_debugging: 'Correzione di errori:'
+  dashboard_puzzle_solving: 'Risoluzione di problemi:'
+  dashboard_student_worksheet: piano di lavoro dello studente
+  dashboard_teacher_worksheet: piano di lavoro dell'insegnante
+  dashboard_grade_k: livello
+  dashboard_grade_other: Altro
+  dashboard_login_word: parola
+  dashboard_login_picture: immagine
+  dashboard_login_none: email
+  dashboard_new_password: nuova password
+  stats_hoc_2013_heading: 'incredibili statistiche dell''Ora del Codice dello scorso
+    anno. In una settimana soltanto:'
+  stats_hoc_2013_image_alt: Statistiche dell'Ora del Codice per il 2013

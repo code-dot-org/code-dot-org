@@ -60,7 +60,7 @@ def validate_form(kind, data)
   def email_address(value)
     email = downcased stripped value
     return nil if email.nil_or_empty?
-    return FieldError.new(value, :invalid) unless Poste.email_address?(email)
+    return FieldError.new(value, :invalid) unless Poste2.email_address?(email)
     email
   end
 

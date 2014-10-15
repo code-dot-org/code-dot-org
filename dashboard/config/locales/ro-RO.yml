@@ -32,6 +32,7 @@
     submit: Adaugă sugestie
   appname: Code.org
   stage: Etapă
+  stage_number: Stage %{number}
   puzzle: Puzzle
   trophies: Trofee
   courses: Cursuri
@@ -264,6 +265,9 @@
     header:
       finished_hoc: Am terminat Ora mea de Cod
       sign_in_to_save: Loghează-te pentru a salva progresul
+      free_play:
+        playlab: Make an App
+        artist: Desenează ceva
     user:
       classroom: Elevii mei
       label: Salut %{username}
@@ -369,6 +373,8 @@
     classroom_activity: Activitate Unplugged
   home:
     title: Studio de Cod
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: Deja înregistrat? %{link}
     student_reg_link: "Înregistrare student"
     teacher_reg_link: "Înregistrare profesor"
@@ -422,6 +428,7 @@
     feedback: Oferă feedback
     translate: Ajută-ne să  traducem în limba ta
     support: Suport
+    support_url: http://support.code.org
     tos: Termeni
     privacy: Politică de confidențialitate
     secure: Versiunea Securizată
@@ -446,8 +453,22 @@
     autoplay_option: Redare Automată clipuri video
     download: Descarcă Video
   compatability:
-    working: Momentan efectuăm lucrări de susținere a browser-ului tău.
-    upgrade: Te rugăm să-ți actualizezi browser-ul.
+    working:
+      header: Momentan efectuăm lucrări de susținere a browser-ului tău.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Your browser doesn't support all the features required, and you may experience
+        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
+        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
+        your browser to a supported version</a>.
+      hide_this_warning: Hide this warning
+    upgrade:
+      header: Te rugăm să-ți actualizezi browser-ul.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Unfortunately your browser doesn't support all the features required
+        to run this part of the site.<br/><br/>Install a browser on our supported
+        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
+        expect functionality to be broken.
+      button: Take me to the list of supported browsers
   slow_loading: Aceasta durează mai mult decât de obicei...
   try_reloading: "Încearcă să reîncarci pagina"
   next_stage: Ai terminat! Continuă cu următoarea etapă
@@ -460,6 +481,13 @@
     flappy_og_title: Aruncă-ți o privire asupra jocului meu Flappy
     studio_og_title: Verifică-mi povestea
     og_description: Am scris codul chiar eu cu Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: Ai creat un nou script.
     destroyed: Ai distrus un script.
@@ -497,6 +525,7 @@
     feedback: Trimiteți feedback
     report_bug: Raporteazã eroare
     support: Obţine ajutor
+    support_url: "//support.code.org"
   multi:
     wrong_title: Răspuns incorect
     wrong_body: Răspunsul introdus nu este corect.  Te rugăm să încerci din nou!

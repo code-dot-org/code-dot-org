@@ -81,47 +81,40 @@
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: "안녕하세요 저는 케이티입니다. 컴퓨터 과학의 흥미로운 점의 하나를 들자면 컴퓨터 프로그램이 상호작용을 할 수 있다는 점을
-          말씀 드릴 수 있습니다."
+        text: "안녕하세요 저는 케이티입니다. 컴퓨터 과학의 재미있는 점 하나를 이야기하자면 컴퓨터 프로그램이 사람이 원하는데로 상호작용을
+          하도록 만들 수 있다는 것입니다."
       2:
         image: notes/flappy02.jpg
-        text: "언제든 누군가 컴퓨터나 휴대폰을 클릭하거나 탭 혹은 타이핑을 하면 그 것은 이벤트를 생성합니다. 그리고 그 이벤트가 발생되었을
-          때 무엇을 할지 결정을 하는 코드가 있습니다. "
+        text: "컴퓨터나 스마트폰을 클릭하거나 문자를 입력하면 이벤트라는 것이 발생합니다. 이러한 이벤트가 발생했을 때 실행시킬 수 있는
+          코드들을 마음대로 결정할 수 있습니다."
       3:
         image: notes/flappy03.jpg
-        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse
-          is clicked, play a sound" '
+        text: 예를 들어, "마우스가 클릭되었을 때, 소리를 출력해라."와 같은 이벤트 핸들러를 사용할 수 있습니다.
       4:
         image: notes/flappy04.jpg
-        text: Have you ever heard of the game FlappyBird? By using Event handlers,
-          we're going to learn to program our own custom version of FlappyBird!
+        text: "플래피버드(FlappyBird) 게임을 들어본 적이 있나요? 이벤트 핸들러들을 이용해서 자기만의 플래피버드 프로그램을 만들어
+          보도록 할 것입니다."
       5:
         image: notes/flappy05.jpg
-        text: The code you'll write involves dragging and dropping blocks that represent
-          commands for the computer. Under the hood, each of these blocks is represented
-          by real code.
+        text: "드래그/드롭하는 블럭들은 컴퓨터가 수행해야할 명령들을 의미합니다. 블럭들은 실제 코드로 변환되어 실행됩니다."
       6:
         image: notes/flappy06.jpg
-        text: 'If you take a look at the workspace, there are some green blocks that
-          are filled in for you - these are "event handlers" '
+        text: "코드 블럭 편집창을 보면, 연두색 블럭들이 있는데 이것이 이벤트 핸들러입니다."
       7:
         image: notes/flappy07.jpg
-        text: If you want the bird to FLAP when you CLICK the mouse, you can do that
-          by attaching the "FLAP" block to the appropriate event handler, and now
-          in your game whenever you click the mouse, the bird will flap.
+        text: 마우스를 클릭 했을 때 날개를 펄럭이려면, "펄럭" 블럭을 이벤트 핸들러에 붙이면 됩니다. 그렇게 하면 마우스를 클릭할 때마다
+          날개를 펄럭일 것입니다.
       8:
         image: notes/flappy08.jpg
-        text: In each puzzle of this activity we'll introduce new types of events
-          as green blocks on the workspace, and you can decide the appropriate blocks
-          to add in response to those events.
+        text: "이 퍼즐들에서는 연두색의 새로운 이벤트 블럭이 주어지고, 원하는 이벤트가 발생했을 때에 따른 적당한 블럭을 생각해 사용할
+          수 있습니다."
       9:
         image: notes/flappy09.jpg
-        text: When you see a drop down arrow like this, that means you can change
-          the settings - like what sound to play when flappy hits the ground.
+        text: "이와 같은 선택 메뉴 화살표가 나타나면 설정을 바꿀 수 있다는 것을 의미합니다. 플래피가 땅에 닿았을 때 소리가 나도록
+          하는 것과 같은 것이 가능합니다."
       10:
         image: notes/flappy10.jpg
-        text: In the final puzzle you'll be able to create your own game and share
-          it with your friends. Have fun!
+        text: "마지막 퍼즐에서는 자신이 원하는 게임을 만들고 다른 친구들과 공유할 수 있습니다. 재미있게 즐기세요!"
     loop_times:
       1:
         image: notes/hoc2_1.jpg

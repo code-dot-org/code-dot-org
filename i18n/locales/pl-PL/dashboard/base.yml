@@ -1,122 +1,123 @@
-"pl":
+pl:
   activerecord:
     errors:
       messages:
-        blank: "is required"
+        blank: is required
     attributes:
       user:
-        name: "Display Name"
-        email: "Email"
-        username: "Nazwa użytkownika"
-        password: "Hasło"
-        password_confirmation: "Potwierdzenie hasła"
-        current_password: "Aktualne hasło"
-        locale: "Język"
-        age: "Wiek"
-        gender: "Płeć"
-        edit_header: "Edytuj dane konta"
+        name: Display Name
+        email: Email
+        username: Nazwa użytkownika
+        password: Hasło
+        password_confirmation: Potwierdzenie hasła
+        current_password: Aktualne hasło
+        locale: Język
+        age: Wiek
+        gender: Płeć
+        edit_header: Edytuj dane konta
         error:
-          future: "nie może być w przyszłości"
-  hello: "Witaj świecie"
+          future: nie może być w przyszłości
+  hello: Witaj świecie
   welcome_back: 'Witaj z powrotem, %{name}'
   add_teacher_form:
     code_or_email:
       label: 'Dodaj nauczyciela używając kodu lub adresu e-mail:'
-      placeholder: "Kod (ABCDEF) lub e-mail (teacher@school.edu)"
+      placeholder: Kod (ABCDEF) lub e-mail (teacher@school.edu)
     code:
       label: 'Add a teacher by section code:'
-      placeholder: "Code (ABCDEF)"
-    submit: "Dodaj nauczyciela"
+      placeholder: Code (ABCDEF)
+    submit: Dodaj nauczyciela
   add_hint_form:
-    placeholder: "Wprowadź tutaj swoją wskazówkę"
-    submit: "Dodaj wskazówkę"
-  appname: "Code.org"
-  stage: "Etap"
-  puzzle: "Łamigłówka"
-  trophies: "Trofea"
-  courses: "Kursy"
-  of: "z"
-  more: "WIĘCEJ"
-  less: "MNIEJ"
+    placeholder: Wprowadź tutaj swoją wskazówkę
+    submit: Dodaj wskazówkę
+  appname: Code.org
+  stage: Etap
+  stage_number: 'Stage %{number}'
+  puzzle: Łamigłówka
+  trophies: Trofea
+  courses: Kursy
+  of: z
+  more: WIĘCEJ
+  less: MNIEJ
   try_hoc: 'Spróbuj Godziny Kodowania (Hour of Code), kliknij tutaj >> '
   try_k8intro: 'Spróbuj naszego wprowadzającego kursu K-8 z informatyki  (15-25 godzin)'
-  k8intro: "Kurs K-8 Wprowadzenie do Informatyki (15-25 godzin)"
+  k8intro: Kurs K-8 Wprowadzenie do Informatyki (15-25 godzin)
   already_started: 'Już rozpocząłeś ? Wznów tutaj >> '
   demos: 'Admin: Wszystkie dema'
-  continue: "Kontynuuj"
-  prize: "nagroda"
-  more_info: "Więcej informacji"
+  continue: Kontynuuj
+  prize: nagroda
+  more_info: Więcej informacji
   auth:
     sign_in_with: 'Zaloguj się przy użyciu %{provider}'
-    signed_in: "Zalogowany!"
+    signed_in: Zalogowany!
     signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
     sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
-    already_signedup: "Czy masz już założone konto?"
-    notyet_signedup: "Jeszcze nie dołączyłeś?"
-    google_oauth2: "Konto Google"
-    twitter: "Twitter"
-    facebook: "Facebook"
-    windowslive: "Konto Microsoft"
-    forgot_password: "Nie pamiętasz hasła?"
-    need_confirmation: "Czy nie otrzymałeś instrukcji potwierdzającej?"
-    need_unlock: "Czy nie otrzymałeś instrukcji, jak odblokować?"
+    already_signedup: Czy masz już założone konto?
+    notyet_signedup: Jeszcze nie dołączyłeś?
+    google_oauth2: Konto Google
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Konto Microsoft
+    forgot_password: Nie pamiętasz hasła?
+    need_confirmation: Czy nie otrzymałeś instrukcji potwierdzającej?
+    need_unlock: Czy nie otrzymałeś instrukcji, jak odblokować?
   signup_form:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'Możesz <a target="_blank" href="http://learn.code.org"> przeglądać różne etapy i łamigłówki </a>, ale musisz się zarejestrować, aby zapisać swoje wyniki.'
     prizes_message: 'Uczniowie z USA, którzy zdobyli wszystkie %{num_trophies} trofea dotyczące pojęć mogą wybrać wiele nagród, w tym wolne miejsce na Dropbox, kredyty Skype i gry do pobrania z Electronic Arts and Valve.'
-    teacher_educator_guide: "Patrz podręcznik nauczyciela"
+    teacher_educator_guide: Patrz podręcznik nauczyciela
     teacher_prize_header: 'Wygraj 1000 $ w <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> (od 15 czerwca 2014, do wyczerpania zapasów)'
     teacher_prize_message: 'We współpracy z <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> Code.org będzie oferować aż do 1.000 $ dla nauczycieli amerykańskich szkół publicznych, którzy wprowadzą dla co najmniej 15 uczniów  K-8 do kursu informatyki (od 15 czerwca 2014 r. do wyczerpania zapasów).  <a href="http://code.org/educate/20hr"> Szczegóły w podręczniku</a>.  (Limit: 1.000 dolarów dla nauczyciela.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org"> Zobacz często zadawane pytania</a>.)'
-    teacher_pitch: "Rejestracja do Code.org dla nauczycieli"
-    teacher_title: "Rejestracja nauczyciela"
-    student_pitch: "Rejestracja w Code.org dla uczniów"
-    student_title: "Zarejestruj ucznia"
-    school_name: "Nazwa szkoły (opcjonalnie)"
-    school_address: "Adres szkoły (opcjonalnie)"
-    address_placeholder: "adres, miasto, województwo, kod pocztowy"
-    gender: "Płeć (opcjonalnie)"
-    birthday: "Data urodzenia (opcjonalnie)"
-    age: "Wiek"
-    submit: "Zarejestruj się"
-    teacher: "Czy jesteś nauczycielem?"
-    valid_username: "Dostępny!"
-    invalid_username: "Nazwa użytkownika musi zawierać co najmniej 5 znaków"
-    taken_username: "Ta nazwa użytkownika jest już zajęta"
-    valid_password: "Prawidłowe hasło!"
-    invalid_password: "Hasło musi zawierać przynajmniej 6 znaków"
-    mismatch_password: "Dwa hasła, które podałeś, nie są zgodne"
+    teacher_pitch: Rejestracja do Code.org dla nauczycieli
+    teacher_title: Rejestracja nauczyciela
+    student_pitch: Rejestracja w Code.org dla uczniów
+    student_title: Zarejestruj ucznia
+    school_name: Nazwa szkoły (opcjonalnie)
+    school_address: Adres szkoły (opcjonalnie)
+    address_placeholder: adres, miasto, województwo, kod pocztowy
+    gender: Płeć (opcjonalnie)
+    birthday: Data urodzenia (opcjonalnie)
+    age: Wiek
+    submit: Zarejestruj się
+    teacher: Czy jesteś nauczycielem?
+    valid_username: Dostępny!
+    invalid_username: Nazwa użytkownika musi zawierać co najmniej 5 znaków
+    taken_username: Ta nazwa użytkownika jest już zajęta
+    valid_password: Prawidłowe hasło!
+    invalid_password: Hasło musi zawierać przynajmniej 6 znaków
+    mismatch_password: Dwa hasła, które podałeś, nie są zgodne
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
     teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
-    additional_information: "We need some additional information to continue signing you up."
+    additional_information: We need some additional information to continue signing you up.
   signin_form:
-    title: "Masz już konto? Zaloguj się"
-    login: "E-mail lub nazwa użytkownika"
-    password: "Hasło"
-    remember: "Zapamiętaj mnie"
-    submit: "Zaloguj się"
+    title: Masz już konto? Zaloguj się
+    login: E-mail lub nazwa użytkownika
+    password: Hasło
+    remember: Zapamiętaj mnie
+    submit: Zaloguj się
   signin:
-    try_heading: "Chcesz spróbować kodowania bez rejestracji?"
-    try_hoc: "Najpierw wypróbuj Godzinę Kodowania"
-    try_20hours: "Wypróbuj nasz 20 godzinny Wstęp do informatyki"
+    try_heading: Chcesz spróbować kodowania bez rejestracji?
+    try_hoc: Najpierw wypróbuj Godzinę Kodowania
+    try_20hours: Wypróbuj nasz 20 godzinny Wstęp do informatyki
   signinsection:
     welcome: 'Welcome to %{section_name}'
-    name: "Choose your name"
-    picture: "Now find your secret picture"
-    words: "Now enter your secret words"
-    login: "Zaloguj się"
+    name: Choose your name
+    picture: Now find your secret picture
+    words: Now enter your secret words
+    login: Zaloguj się
   password:
     reset_form:
-      title: "Nie pamiętasz swojego hasła?"
-      email: "Adres e-mail"
-      submit: "Wyślij mi instrukcje resetowania hasła"
+      title: Nie pamiętasz swojego hasła?
+      email: Adres e-mail
+      submit: Wyślij mi instrukcje resetowania hasła
     change_form:
-      title: "Zmień swoje hasło"
-      new_password: "Nowe hasło"
-      confirm_password: "Potwierdź nowe hasło"
-      submit: "Zmień moje hasło"
+      title: Zmień swoje hasło
+      new_password: Nowe hasło
+      confirm_password: Potwierdź nowe hasło
+      submit: Zmień moje hasło
   welcome_email:
-    subject: "Dołącz do mojej klasy (na Code.org)"
+    subject: Dołącz do mojej klasy (na Code.org)
     body: |
       Kliknij w poniższy link, by zapisać się na kursy z informatyki na Code.org (ze mną w roli twojego "nauczyciela"):
       
@@ -126,16 +127,16 @@
       
       %{name}
   follower:
-    invite_sent: "Zaproszenie wysłane"
+    invite_sent: Zaproszenie wysłane
     added_teacher: '%{name} dodany jako Twój nauczyciel'
     registered: 'Zarejestrowałeś się do %{section_name}.'
     error:
-      signed_in: "Wyloguj się, zanim będziesz kontynuować"
+      signed_in: Wyloguj się, zanim będziesz kontynuować
       username_not_found: 'Nie znaleziono nazwy użytkownika %{username}'
       username_in_use: 'nazwa użytkownika %{username} jest już zajęta, wybierz inną'
       no_teacher: "Nie odnaleziono osoby zalogowanej jako '%{teacher_email_or_code}'. Poproś, by się zarejestrowali tutaj a później spróbuj dodać ich ponownie"
       section_not_found: "Could not find a section with code '%{section_code}'."
-      blank_code: "Please enter a section code"
+      blank_code: Please enter a section code
       cant_join_own_section: "Sorry, you can't join your own section."
     mail:
       invite_student:
@@ -146,47 +147,47 @@
         subject: 'Powiadomienie Code.org: %{teacher_name} nie jest już Twoim nauczycielem.'
   reports:
     error:
-      access_denied: "Nie masz dostępu do statystyk tej osoby"
+      access_denied: Nie masz dostępu do statystyk tej osoby
   redeem_prizes:
     title: 'Odbierz Nagrody: %{name}'
     provider: 'Dostawca:'
     code: 'Kod:'
     redeem_header: 'Do pobrania:'
-    donorschoose_register: "Zarejestruj jako nauczyciel w DonorsChoose.org"
-    donorschoose_project: "Wyślij projekt"
-    donorschoose_how_to: "Jak wykorzystać Twój kod"
-    success: "Twoja nagroda została z powodzeniem odebrana, zobacz poniższy kod."
-    error: "Twoja nagroda nie może być odebrana, spróbuj ponownie."
-    error_us_only: "Oferta nagrody dotyczy tylko użytkowników w USA."
-    error_not_earned: "Nie zdobyłeś jeszcze tej nagrody."
-    error_already_redeemed: "Twoja nagroda została już przyznana."
-    no_prizes_available: "Przykro nam, ale obecnie nie mamy żadnej nagrody do zaoferowania."
+    donorschoose_register: Zarejestruj jako nauczyciel w DonorsChoose.org
+    donorschoose_project: Wyślij projekt
+    donorschoose_how_to: Jak wykorzystać Twój kod
+    success: Twoja nagroda została z powodzeniem odebrana, zobacz poniższy kod.
+    error: Twoja nagroda nie może być odebrana, spróbuj ponownie.
+    error_us_only: Oferta nagrody dotyczy tylko użytkowników w USA.
+    error_not_earned: Nie zdobyłeś jeszcze tej nagrody.
+    error_already_redeemed: Twoja nagroda została już przyznana.
+    no_prizes_available: Przykro nam, ale obecnie nie mamy żadnej nagrody do zaoferowania.
     teacher_info_required: 'Nagrody dla nauczyciela wymagają nazwy i adresu szkoły:'
     teacher_email_required: 'Nagrody dla nauczycieli wymagają podania potwierdzonego adres e-mail:'
     confirm:
-      title: "Prosimy o potwierdzenie"
+      title: Prosimy o potwierdzenie
       "no": Nie
       "yes": Tak
       msg: 'Jesteś pewien, że chcesz nagrodę %{prize_name}?'
       msg_student: 'Uwaga: Możesz wybrać tylko jeden typ nagrody.'
-      msg_publicschool: "Proszę potwierdzić, że jesteś nauczycielem szkoły publicznej w USA."
-      msg_visit_website: "Odwiedź naszą stronę"
+      msg_publicschool: Proszę potwierdzić, że jesteś nauczycielem szkoły publicznej w USA.
+      msg_visit_website: Odwiedź naszą stronę
     providers:
-      apple_itunes: "10$ iTunes Gift Card"
-      donors_choose: "Kredytu 750$ DonorsChoose.org"
-      donors_choose_bonus: "Kredyt 250$ DonorsChoose.org"
-      dropbox: "10GB miejsca na Dropbox"
-      valve: "Portal 2 (do pobrania gry na PC lub Mac )"
-      ea_bejeweled: "Ozdobiony klejnotami 3 (gra do pobrania na PC)"
-      ea_fifa: "FIFA Soccer 13 (gra do pobrania na PC)"
-      ea_simcity: "SimCity 4 Deluxe Edition (gra do pobrania na PC)"
-      ea_pvz: "Rośliny vs Zombies (gra do pobrania na PC)"
+      apple_itunes: 10$ iTunes Gift Card
+      donors_choose: Kredytu 750$ DonorsChoose.org
+      donors_choose_bonus: Kredyt 250$ DonorsChoose.org
+      dropbox: 10GB miejsca na Dropbox
+      valve: Portal 2 (do pobrania gry na PC lub Mac )
+      ea_bejeweled: Ozdobiony klejnotami 3 (gra do pobrania na PC)
+      ea_fifa: FIFA Soccer 13 (gra do pobrania na PC)
+      ea_simcity: SimCity 4 Deluxe Edition (gra do pobrania na PC)
+      ea_pvz: Rośliny vs Zombies (gra do pobrania na PC)
       skype: '10% na koncie Skype'
     msg:
       choose: 'Wybierz nagrodę:'
       choose_teacher: 'Kliknij na logo poniżej, aby odebrać nagrodę:'
-      earned: "Zdobyłeś nagrodę! (Tylko dla uczniów z US)"
-      not_earned_title: "Zakończenie kursu, weź nagrodę (tylko dla uczniów z USA)"
+      earned: Zdobyłeś nagrodę! (Tylko dla uczniów z US)
+      not_earned_title: Zakończenie kursu, weź nagrodę (tylko dla uczniów z USA)
       not_earned: 'Poznaj wszystkie pojęcia informatyczne, zbierz wszystkie trofea %{num_trophies} i odbierz prawdziwe nagrody. Możesz wybrać spośród 10$ kart podarunkowych iTunes, 10GB wolnego miejsca na Dropbox, 10$ kredytu Skype i pobrać darmowe gry. Uwaga: oferta ważna dla uczniów z USA i tylko do wyczerpania zapasów.'
       teacher:
         earned: '10 lub więcej uczniów zebrało wszystkie trofea %{num_trophies}. Wygrałeś nagrodę nauczyciela w wysokości 750$! (tylko dla nauczycieli z USA)'
@@ -198,275 +199,292 @@
           not_earned: 'Jeśli wśród Twoich uczniów, którzy zebrali wszystkie trofea %{num_trophies}, jest przynajmniej 7 dziewcząt, to Twoja nagroda jest wyższa o 250$ w kredytach <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>. Kredyty <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> mogą być wykorzystane tylko przez nauczycieli ze szkół publicznych w USA.'
   crud:
     new_model: 'Nowy %{model}'
-    show: "Pokaż"
-    edit: "Edytuj"
+    show: Pokaż
+    edit: Edytuj
     edit_model: 'Edytuj %{model}'
-    update: "Uaktualnij"
-    destroy: "Zniszcz"
-    back: "Wstecz"
-    confirm: "Czy jesteś pewny?"
+    update: Uaktualnij
+    destroy: Zniszcz
+    back: Wstecz
+    confirm: Czy jesteś pewny?
     created: '%{model} został pomyślnie utworzony.'
     updated: '%{model} został pomyślnie zaktualizowany.'
     destroyed: '%{model} został pomyślnie usunięty.'
     access_denied: 'Nie masz dostępu do tego %{model}.'
   nav:
     header:
-      finished_hoc: "Skończyłem moją Godzinę Kodowania (Hour of Code)"
-      sign_in_to_save: "Zaloguj się, by zapisać stan"
+      finished_hoc: Skończyłem moją Godzinę Kodowania (Hour of Code)
+      sign_in_to_save: Zaloguj się, by zapisać stan
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
-      classroom: "Moi uczniowie"
+      classroom: Moi uczniowie
       label: 'Witaj %{username}'
-      stats: "Moje postępy"
-      settings: "Moje konto"
-      prizes: "Nagrody"
-      logout: "Wyloguj się"
-      signin: "Zaloguj się"
-      signup: "Zarejestruj się"
-      already_registered: "Already registered?"
+      stats: Moje postępy
+      settings: Moje konto
+      prizes: Nagrody
+      logout: Wyloguj się
+      signin: Zaloguj się
+      signup: Zarejestruj się
+      already_registered: Already registered?
     popup:
-      progress: "Twoje postępy"
+      progress: Twoje postępy
       lines: 'Łączna ilość linii kodu: %{lines}'
-      close: "ZAMKNIJ"
-      mastery: "Pomysły"
-      puzzle_map: "Etapy"
+      close: ZAMKNIJ
+      mastery: Pomysły
+      puzzle_map: Etapy
       prizes: 'Zbierz wszystkie %{total_trophies} trofeów i wygraj nagrody!'
       prize_earned: 'Zebrane zostały wszystkie %{total_trophies} trofeów. Wygrałeś nagrodę!'
-      prize_us_only: "(Tylko dla uczniów w USA)"
-      prizes_link: "więcej informacji"
+      prize_us_only: (Tylko dla uczniów w USA)
+      prizes_link: więcej informacji
   teacher:
     title:
       one: 'Twój nauczyciel:'
       other: 'Twoi nauczyciele:'
-    remove: "(usuń nauczyciela)"
+    remove: (usuń nauczyciela)
     confirm:
-      remove: "Czy na pewno chcesz usunąć tego nauczyciela?"
-    tools: "Narzędzia Nauczyciela"
+      remove: Czy na pewno chcesz usunąć tego nauczyciela?
+    tools: Narzędzia Nauczyciela
     followers:
       section: 'Section:'
       stages: 'Stage(s) to display:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: "Levels key"
-      perfect: "Completed, perfect"
-      completed: "Completed, but using too many blocks"
-      tried: "Tried, but not completed"
-      not_tried: "Not tried yet"
+      levels_key: Levels key
+      perfect: Completed, perfect
+      completed: Completed, but using too many blocks
+      tried: Tried, but not completed
+      not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
-      no_section: "No assigned section"
-      trophies: "Trofea"
+      no_section: No assigned section
+      trophies: Trofea
     students:
-      name: "Imię/Nazwisko"
-      username: "Nazwa użytkownika"
-      password: "Hasło"
-      manage: "Zarządzaj uczniami"
-      dashboard: "Go to Teacher Dashboard"
-      add: "Dodaj uczniów"
-      remove: "remove student"
-      confirm_remove: "Are you sure you want to remove this student?"
-      help_reassign: "To divide your class into multiple sections, select students to assign to a new section."
-      help_register: "Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them."
-      register: "Ask your students to register themselves"
-      vist: "Ask your students to visit"
+      name: Imię/Nazwisko
+      username: Nazwa użytkownika
+      password: Hasło
+      manage: Zarządzaj uczniami
+      dashboard: Go to Teacher Dashboard
+      add: Dodaj uczniów
+      remove: remove student
+      confirm_remove: Are you sure you want to remove this student?
+      help_reassign: To divide your class into multiple sections, select students to assign to a new section.
+      help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
+      register: Ask your students to register themselves
+      vist: Ask your students to visit
       section_code: 'and enter their section-code:'
       first_please: 'First, please %{add_section}'
-      for: "For"
+      for: For
       enter: 'enter:'
     sections:
-      add: "Add section"
-      manage: "Zarządzanie sekcjami"
-      section: "Section"
-      students: "Students"
-      section_code: "Section Code"
-      add_section_code: "Add Students Section-Code"
-      secret: "Secret type"
-      grade: "Grade"
-      course: "Course"
-      rename: "rename"
-      edit: "edit"
-      delete: "delete"
-      confirm_delete: "Are you sure you want to delete this section?"
-      email: "Send in email"
-    rollup: "Tablica Postępów"
-    activity: "Ostatnia aktywność klasy"
-    user_not_found: "Nie można odnaleźć nauczyciela lub ucznia"
+      add: Add section
+      manage: Zarządzanie sekcjami
+      section: Section
+      students: Students
+      section_code: Section Code
+      add_section_code: Add Students Section-Code
+      secret: Secret type
+      grade: Grade
+      course: Course
+      rename: rename
+      edit: edit
+      delete: delete
+      confirm_delete: Are you sure you want to delete this section?
+      email: Send in email
+    rollup: Tablica Postępów
+    activity: Ostatnia aktywność klasy
+    user_not_found: Nie można odnaleźć nauczyciela lub ucznia
     cant_remove_student_no_email: '%{student_name} nie może być usunięty jako student, ponieważ %{student_name} nie zarejestrował swojego adresu e-mail'
     cant_remove_teacher_no_email: '%{teacher_name} nie może być usunięty jako nauczyciel, ponieważ nie ma zarejestrowanego adresu e-mail'
     student_teacher_disassociated: '%{teacher_name} został usunięty jako nauczyciel %{student_name}'
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
-    email_resend_confirm: "Wyślij ponownie instrukcje potwierdzenia"
-    new_password_hint: "(zostaw puste, jeśli nie chcesz tego zmienić)"
-    current_password_hint: "(potrzebujemy Twojego aktualnego hasła, aby potwierdzić Twoje zmiany)"
+    email_resend_confirm: Wyślij ponownie instrukcje potwierdzenia
+    new_password_hint: (zostaw puste, jeśli nie chcesz tego zmienić)
+    current_password_hint: (potrzebujemy Twojego aktualnego hasła, aby potwierdzić Twoje zmiany)
     cancel:
-      title: "Zlikwiduj moje konto"
-      hint: "Niezadowolony?"
-      button: "Zlikwiduj moje konto"
+      title: Zlikwiduj moje konto
+      hint: Niezadowolony?
+      button: Zlikwiduj moje konto
   user_level:
-    completed: "Ukończono"
-    tried: "Próbowałem"
+    completed: Ukończono
+    tried: Próbowałem
   user_stats:
-    recent_activity: "Ostatnia aktywność"
-    show_more: "Pokaż więcej"
-    classroom_activity: "Brak aktywności"
+    recent_activity: Ostatnia aktywność
+    show_more: Pokaż więcej
+    classroom_activity: Brak aktywności
   home:
-    title: "Code Studio"
+    title: Code Studio
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: 'Jesteś już zarejestrowany? %{link}'
-    student_reg_link: "Uczeń zalogował się"
-    teacher_reg_link: "Nauczyciel zalogował się"
+    student_reg_link: Uczeń zalogował się
+    teacher_reg_link: Nauczyciel zalogował się
     signin_directions: 'Użyj konta, żeby śledzić postępy.<br/> Nauczyciele mogą śledzić postępy całej klasy.'
-    teacher_dashboard: "Zobacz panel postępu"
+    teacher_dashboard: Zobacz panel postępu
     teacher_student_count_one: 'Masz %{count} uczniów.'
     teacher_student_count: 'Masz %{count} uczniów.'
     teacher_averages: 'Średnio Twoi uczniowie zdobyli %{trophy_average} z %{trophy_max} trofeów "Concept Mastery".'
-    teacher_print_certificates: "Drukowanie certyfikatów dla uczniów, którzy ukończyli ten kurs"
-    teacher_read_blog: "Przeczytaj o nowościach i aktualizacjach materiałów na naszym blogu pedagogicznym"
-    classroom: "Twoja klasa"
-    student_progress: "Twoje postępy w nauce"
+    teacher_print_certificates: Drukowanie certyfikatów dla uczniów, którzy ukończyli ten kurs
+    teacher_read_blog: Przeczytaj o nowościach i aktualizacjach materiałów na naszym blogu pedagogicznym
+    classroom: Twoja klasa
+    student_progress: Twoje postępy w nauce
     student_stats: 'Zdobyłeś %{trophy_count} z %{trophy_max} trofeów "Concept Mastery".'
     student_left_off: 'Gdzie przerwałeś:'
     student_finished_prize: 'Ukończyłeś wszystkie samouczki, zgłoś się po swoją %{prize_link} i wybierz inną klasę %{online_link} lub %{local_school_link}'
     student_finished: 'Ukończyłeś wszystkie samouczki, wybierz inną klasę %{online_link} lub %{local_school_link}'
-    local_school: "miejscowa szkoła"
-    online: "online"
-    see_details: "Zobacz szczegóły"
+    local_school: miejscowa szkoła
+    online: online
+    see_details: Zobacz szczegóły
     prize_info: 'Nagrody za udział (tylko nauczyciele szkół publicznych USA): do 1000 $ na klasę.'
     tryfirst: 'Możesz wpierw spróbować, a zarejestrować się później:'
-    trynow: "Spróbuj teraz"
-    add_hint_help: "Pomóż nam dodać podpowiedzi do samouczków Code.org"
+    trynow: Spróbuj teraz
+    add_hint_help: Pomóż nam dodać podpowiedzi do samouczków Code.org
     20hour_overview: 'Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia z zakresu informatyki i programowania. Kurs jest przeznaczony do użytku w  klasach od 1 do 8, może być również przyjemną nauką we wszystkich grupach wiekowych.'
-    test_videos_help: "Test our new video player at your school"
-    try_beta_courses: "New! Try our beta courses for K-5 students"
-    use_as_teacher: "Use this site as a teacher"
+    test_videos_help: Test our new video player at your school
+    try_beta_courses: New! Try our beta courses for K-5 students
+    use_as_teacher: Use this site as a teacher
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
   gender:
-    male: "Mężczyzna"
-    female: "Kobieta"
-    none: "Wolę nie odpowiadać"
+    male: Mężczyzna
+    female: Kobieta
+    none: Wolę nie odpowiadać
   footer:
-    help_from_html: "Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial."
+    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
-    feedback: "Wyraź swoją opinię"
-    translate: "Pomóż nam tłumaczyć na Twój język"
-    support: "Wsparcie"
-    tos: "Terms"
-    privacy: "Polityka prywatności"
-    secure: "Secure Version"
+    feedback: Wyraź swoją opinię
+    translate: Pomóż nam tłumaczyć na Twój język
+    support: Wsparcie
+    support_url: http://support.code.org
+    tos: Terms
+    privacy: Polityka prywatności
+    secure: Secure Version
   prize_mail:
     prize_earned:
-      subject: "Odbierz swoją nagrodę w Code.org!"
+      subject: Odbierz swoją nagrodę w Code.org!
     teacher_prize_earned:
-      subject: "Congratulations from Code.org!"
+      subject: Congratulations from Code.org!
     teacher_bonus_prize_earned:
-      subject: "Odbierz swoją dodatkowa nagrodę w Code.org!"
+      subject: Odbierz swoją dodatkowa nagrodę w Code.org!
   reference_area:
-    title: "Czy potrzebujesz pomocy?"
-    subtitle: "Zobacz te filmiki i wskazówki"
-    teacher: "Zobacz rozwiązanie"
-    auth_error: "Nie masz uprawnienia, by zobaczyć rozwiązanie."
-    submit: "Zaktualizuj lokalizację artysty"
-    direction: "Rozpocznij w wybranym kierunku"
+    title: Czy potrzebujesz pomocy?
+    subtitle: Zobacz te filmiki i wskazówki
+    teacher: Zobacz rozwiązanie
+    auth_error: Nie masz uprawnienia, by zobaczyć rozwiązanie.
+    submit: Zaktualizuj lokalizację artysty
+    direction: Rozpocznij w wybranym kierunku
   video:
-    tab: "Filmiki."
-    notes: "Brak filmu? Pokaż uwagi."
-    notes_coming_soon: "Notes for this video coming soon."
-    autoplay_option: "Odtwarzaj filmy automatycznie"
-    download: "Pobierz wideo"
+    tab: Filmiki.
+    notes: Brak filmu? Pokaż uwagi.
+    notes_coming_soon: Notes for this video coming soon.
+    autoplay_option: Odtwarzaj filmy automatycznie
+    download: Pobierz wideo
   compatability:
-    working: "Pracujemy nad wsparciem dla Twojej przeglądarki."
-    upgrade: "Uaktualnij swoją przeglądarkę."
-  slow_loading: "To trwa dłużej niż zwykle..."
-  try_reloading: "Spróbuj odświeżyć stronę"
-  next_stage: "Skończyłeś! Przejdź do następnego etapu"
-  download_pdf: "Otwórz plan lekcji"
-  view_lesson_plan: "View Lesson Plan"
-  pdf_download: "Download PDF"
+    working:
+      header: We are working on support for your browser.
+      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
+      hide_this_warning: Hide this warning
+    upgrade:
+      header: Please upgrade your browser.
+      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
+      button: Take me to the list of supported browsers
+  slow_loading: To trwa dłużej niż zwykle...
+  try_reloading: Spróbuj odświeżyć stronę
+  next_stage: Skończyłeś! Przejdź do następnego etapu
+  download_pdf: Otwórz plan lekcji
+  view_lesson_plan: View Lesson Plan
+  pdf_download: Download PDF
   share_code:
     title: 'Kliknij "Uruchom", aby zobaczyć swój program w akcji'
-    bounce_og_title: "Sprawdź moją grę Bounce"
-    flappy_og_title: "Sprawdź teraz moją grę Flappy"
-    studio_og_title: "Check out my story"
-    og_description: "Sam napisałem w całości kod za pomocą Code.org"
+    bounce_og_title: Sprawdź moją grę Bounce
+    flappy_og_title: Sprawdź teraz moją grę Flappy
+    studio_og_title: Check out my Play Lab App
+    og_description: Sam napisałem w całości kod za pomocą Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the text.
   builder:
-    created: "Stworzyłeś nowy skrypt."
-    destroyed: "Zniszczyłeś swój skrypt."
-    manage: "Buduj poziomy"
-    view: "Zobacz"
-    back: "Powrót do skryptu"
-    success: "You successfully edited the blocks."
+    created: Stworzyłeś nowy skrypt.
+    destroyed: Zniszczyłeś swój skrypt.
+    manage: Buduj poziomy
+    view: Zobacz
+    back: Powrót do skryptu
+    success: You successfully edited the blocks.
     level:
-      create: "Stwórz nowy poziom"
-      current: "Aktualne poziomy"
-      unused: "Niewykorzystane poziomy"
+      create: Stwórz nowy poziom
+      current: Aktualne poziomy
+      unused: Niewykorzystane poziomy
   upsell:
     hoc:
-      title: "Godzina kodowania (Hour of Code)"
-      body: "Spróbuj podstaw informatyki. Miliony dały im już szansę."
+      title: Godzina kodowania (Hour of Code)
+      body: Spróbuj podstaw informatyki. Miliony dały im już szansę.
     flappy:
-      title: "Flappy Code"
-      body: "Chciałbyś napisać własną grę w mniej niż 10 minut? Spróbuj naszego poradnika Flappy Code!"
+      title: Flappy Code
+      body: Chciałbyś napisać własną grę w mniej niż 10 minut? Spróbuj naszego poradnika Flappy Code!
     20hour:
-      title: "Wprowadzenie do kursu"
-      body: "Wypróbuj nasze 20-sto godzinne wprowadzenie do kursu informatyki."
+      title: Wprowadzenie do kursu
+      body: Wypróbuj nasze 20-sto godzinne wprowadzenie do kursu informatyki.
   gallery:
-    students_drew_these_with_code: "Ten kod stworzyli uczniowie!"
+    students_drew_these_with_code: Ten kod stworzyli uczniowie!
     picture_count: 'Przez ostatnie <b>%{days}</b> dni, studenci wyciągnęli <b>%{count}</b> zdjęć pisząc własne programy komputerowe. Kliknij na zdjęcia aby zobaczyć każdy program w akcji.'
-    want_to_make_your_own: "Chcesz zrobić własną?"
+    want_to_make_your_own: Chcesz zrobić własną?
     more: 'Więcej &rarr;'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
-    feedback: "Give Feedback"
-    report_bug: "Report Bug"
-    support: "Get Help"
+    feedback: Give Feedback
+    report_bug: Report Bug
+    support: Get Help
+    support_url: //support.code.org
   multi:
-    wrong_title: "Błędna odpowiedź"
-    wrong_body: "Wprowadzona przez Ciebie odpowiedź nie jest poprawna. Spróbuj ponownie!"
-    correct_title: "Correct"
-    correct_body: "That is the correct answer."
+    wrong_title: Błędna odpowiedź
+    wrong_body: Wprowadzona przez Ciebie odpowiedź nie jest poprawna. Spróbuj ponownie!
+    correct_title: Correct
+    correct_body: That is the correct answer.
   match:
-    wrong_title: "Niepoprawne rozwiązanie"
-    wrong_body: "Wprowadzone przez Ciebie rozwiązanie nie jest poprawne. Spróbuj ponownie!"
-    correct_title: "Correct"
-    correct_body: "That is the correct answer."
+    wrong_title: Niepoprawne rozwiązanie
+    wrong_body: Wprowadzone przez Ciebie rozwiązanie nie jest poprawne. Spróbuj ponownie!
+    correct_title: Correct
+    correct_body: That is the correct answer.
   dialog:
-    ok: "Ok"
+    ok: Ok
   time:
-    hour: "1 hour"
-    day: "day"
-    week: "week"
+    hour: 1 hour
+    day: day
+    week: week
   data:
     script:
       name:
         20-hour:
-          title: "Kurs K-8 Wprowadzenie do Informatyki (15-25 godzin)"
+          title: Kurs K-8 Wprowadzenie do Informatyki (15-25 godzin)
           description: 'Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia z zakresu informatyki i programowania. Kurs jest przeznaczony do użytku w  klasach od 1 do 8, może być również przyjemną nauką we wszystkich grupach wiekowych.'
         Hour of Code:
-          title: "Godzina kodowania (Hour of Code)"
+          title: Godzina kodowania (Hour of Code)
           description: ""
         edit-code:
-          title: "Edit Code"
+          title: Edit Code
           description: ""
         events:
-          title: "Zdarzenia"
+          title: Zdarzenia
           description: ""
         builder:
-          title: "Builder"
+          title: Builder
           description: ""
         flappy:
-          title: "Flappy Code"
-          description: "Chciałbyś napisać własną grę w mniej niż 10 minut? Spróbuj naszego poradnika Flappy Code!"
+          title: Flappy Code
+          description: Chciałbyś napisać własną grę w mniej niż 10 minut? Spróbuj naszego poradnika Flappy Code!
         jigsaw:
-          title: "Układanka"
+          title: Układanka
           description: ""
         step:
-          title: "Krok"
+          title: Krok
           description: ""
         sample_level_builder:
-          title: "Sample Level Builder"
+          title: Sample Level Builder
           description: ""
   age_interstitial:
-    age: "Your age"
-    header: "Account Information Update"
+    age: Your age
+    header: Account Information Update
     message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'

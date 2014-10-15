@@ -14,7 +14,8 @@
     "free_play": "false",
     "start_direction": "90",
     "ideal": "10",
-    "instructions": "Notice how we simplified the diamond code by turning it into a loop. You can still put that inside another loop to draw the flower. Hint: You'll need to turn after your diamond loop so you don't keep drawing over the same diamond."
+    "instructions": "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond.",
+    "disable_param_editing": "true"
   }
 }]]></config>
   <blocks>
@@ -22,27 +23,27 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
+            <block type="controls_repeat" editable="false" deletable="false">
               <title name="TIMES">2</title>
               <statement name="DO">
-                <block type="draw_colour" inline="true">
+                <block type="draw_colour" inline="true" editable="false" deletable="false">
                   <value name="COLOUR">
-                    <block type="colour_random"/>
+                    <block type="colour_random" editable="false" deletable="false"/>
                   </value>
                   <next>
-                    <block type="draw_move_by_constant">
+                    <block type="draw_move_by_constant" editable="false" deletable="false">
                       <title name="DIR">moveForward</title>
                       <title name="VALUE">60</title>
                       <next>
-                        <block type="draw_turn_by_constant">
+                        <block type="draw_turn_by_constant" editable="false" deletable="false">
                           <title name="DIR">turnRight</title>
                           <title name="VALUE">30</title>
                           <next>
-                            <block type="draw_move_by_constant">
+                            <block type="draw_move_by_constant" editable="false" deletable="false">
                               <title name="DIR">moveForward</title>
                               <title name="VALUE">60</title>
                               <next>
-                                <block type="draw_turn_by_constant">
+                                <block type="draw_turn_by_constant" editable="false" deletable="false">
                                   <title name="DIR">turnRight</title>
                                   <title name="VALUE">150</title>
                                 </block>
@@ -86,7 +87,24 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-</xml>
+        <block type="controls_repeat">
+          <title name="TIMES">12</title>
+        </block>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_turn_by_constant">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE">30</title>
+              <next>
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE">30</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
     </required_blocks>
     <solution_blocks>
       <xml>

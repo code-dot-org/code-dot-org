@@ -3,7 +3,7 @@
     script:
       name:
         test:
-          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+          'Jigsaw: Learn to drag and drop': 'Puslespill: Lær å dra og slippe'
           The Maze: Labyrinten
           Multi: Multi
           Match: Kamp
@@ -11,7 +11,7 @@
           title: Test Course
           description: Just an internal test course.
         course1:
-          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+          'Jigsaw: Learn to drag and drop': 'Puslespill: Lær å dra og slippe'
           'Maze: Sequence': 'Maze: Sequence'
           'Maze: Debugging': 'Maze: Debugging'
           'Artist 1: Intro': 'Artist 1: Intro'
@@ -44,12 +44,13 @@
           'Studio: Create a Story': 'Studio: Create a Story'
           description_short: Course 1 is designed for early readers in the lower elementary
             grades.
+          'Artist: Loops': 'Artist: Loops'
         course2:
           The Maze: Labyrinten
           Suzi: Suzi
           The Artist: Kunstneren
           Artist Debugging: Artist Debugging
-          Bounce: Bounce
+          Bounce: Sprett
           'Studio: Create a Story': 'Studio: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
@@ -85,6 +86,7 @@
             lower and middle elementary grades.
           'Artist: Sequence2': 'Artist: Sequence2'
           'Maze: Sequence2': 'Maze: Sequence2'
+          'Artist: Nested Loops': 'Artist: Nested Loops'
         course3:
           The Maze: Labyrinten
           'Studio: Create a Story': 'Studio: Create a Story'
@@ -99,7 +101,7 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
+          Bounce: Sprett
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
           Computational Thinking: Programmeringstenkning
@@ -137,6 +139,7 @@
           'Farmer: While Loops2': 'Farmer: While Loops2'
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
           'Bee: Debugging2': 'Bee: Debugging2'
+          'Artist: Patterns': 'Artist: Patterns'
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

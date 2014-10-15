@@ -1,6 +1,12 @@
+* * *
+
+layout: wide
+
+* * *
+
 # 賞品 - 利用規約
 
-## Dropbox の容量、または Skypeのクレジット:
+## Dropbox space or Skype credit:
 
 Dropboxの10 GBの無料容量もしくは、Skypeからの10ドル分のクレジットはK-12の教職員、また放課後クラブや教育機関の教育者のみに制限され与えられます。 10 GB の無料容量は既存の Dropbox アカウントに追加されます。 1 主催者当たり 1 回のみ利用可能となります。
 
@@ -10,14 +16,12 @@ Code.org は Dropbox の容量や Skypeのクレジットの使用の仕方に�
 
 <% if @country == 'us' %>
 
-## ゲストで演説される方とのビデオ会話:
+## Video chat with a guest speaker:
 
 Prize limited to K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 14, 2014. Code.org will randomly select winning schools, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details.
 
-## クラス全員分のノートパソコン (またはその他技術のために使用できる $10,000) :
+## Class-set of laptops (or $10,000 for other technology):
 
-Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here][1]. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
-
- [1]: http://www.hourofcode.com/us#faq
+Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here](http://www.hourofcode.com/us#faq). To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
 
 <% end %>

@@ -13,12 +13,18 @@ social:
   "og:video:type": ""
 ---
 
-# Parteneri și Donatori Corporate
+# Parteneri Hour of Code România 
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'ro') %>
+
+---
+
+## Parteneri și Donatori Corporate
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'major') %>
 
 ---
 
-# Parteneri Tutorial 
+## Parteneri Tutorial 
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'tutorial') %>

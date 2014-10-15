@@ -1,50 +1,57 @@
 * * *
 
-## العنوان : شكراً لمشاركتك في استضافة حدث ساعة البرمجة !
+title: Thanks for signing up to host an Hour of Code! layout: wide
+
+social: "og:title": "<%= hoc\_s(:meta\_tag\_og\_title) %>" "og:description": "<%= hoc\_s(:meta\_tag\_og\_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
+
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc\_s(:meta\_tag\_twitter\_title) %>" "twitter:description": "<%= hoc\_s(:meta\_tag\_twitter\_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv\_load\_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+
+* * *
+
+<% facebook = {:u=>"http://#{request.host}/us"}
+
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc\_s(:twitter\_default\_text)} twitter[:hashtags] = 'HourOfCode' unless hoc\_s(:twitter\_default\_text).include? '#HourOfCode' %>
 
 # شكراً لمشاركتك في استضافة حدث "ساعة من الكود البرمجي"!
 
-**كل** منظم لحدث "ساعة من الكود البرمجي" سوف يتلقى عشرة جيجا بايت من سعة التخزين على Dropbox ، أو رصيد Skype بقيمة عشرة دولارات كـ شكر له. [التفاصيل][1]
-
- [1]: /prizes
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](/prizes)
 
 <% if @country == 'us' %>
 
-اجعل [ مدرستك بالكامل تشارك][2] لكي تحظى بفرصة الفوز بجوائز ضخمة لكامل المدرسة.
-
- [2]: /whole-school
+Get your [whole school to participate](/us/prizes) for a chance for big prizes for your entire school.
 
 <% end %>
 
 ## انشر الكلمة
 
-اخبر أصدقائك عن #ساعة\_من\_الكود_البرمجي.
+Tell your friends about the #HourOfCode.
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 <% if @country == 'us' %>
 
 ## اطلب من مدرستك كلها أن تشارك في حدث "ساعة من الكود البرمجي"
 
-[أرسل هذا البريد الإلكتروني][3]، أو [إعطِ هذه النشرات للمشرف أو الموجه][4]. حالما يتم اختيار مدرستك ، [أدخل في السحب للفوز بتجهيزات تقنية بقيمة عشرة آلاف دولار لمدرستك][1] وتحدى المدارس الأخرى في منطقتك للمشاركة في هذا الحدث.
-
- [3]: /resources#email
- [4]: /resources/hoc-one-pager.pdf
+[Send this email](/resources#email) or [give this handout to your principal](/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](/prizes) and challenge other schools in your area to get on board.
 
 <% else %>
 
-## 2. اطلب من مدرستك كلها أن تشارك في حدث "ساعة من الكود البرمجي"
+## اطلب من مدرستك كلها أن تشارك في حدث "ساعة من الكود البرمجي"
 
-[إرسال هذا البريد الإلكتروني][3] أو إعط [هذه النشرات][4] للمشرف أو الموجه.
+[Send this email](/resources#email) or give [this handout](/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
 ## 3. اطلب من صاحب العمل أن يشارك
 
-[إرسال هذا البريد الإلكتروني ][3] لمديرك، أو الرئيس التنفيذي. أو [ أعطهم هذه النشرات][4].
+[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
 
 ## 4. شجع و روج حدث "ساعة من الكود البرمجي" في المجتمع
 
-اطلب متطوعين من المجموعات المحلبة - الكشافة، الجامعة، اتحاد العمال. او نظم هذا الحدث لجيرانك.
+Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
 ## 5. أطلب من مسؤول محلي لدعم حدث "ساعة من الكود البرمجي"
 
-[ إرسال هذا البريد الإلكتروني][3] إلى العمدة ، مجلس المدينة، أو مجلس إدارة المدرسة. أو [ أعطهم هذه النشرات ][4]، وادعوهم لزيارة مدرستك.
+[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+
+<%= view 'popup_window.js' %>

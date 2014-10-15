@@ -32,6 +32,8 @@
   "ifelseTooltip":"Jika ada jalan ke arah yang ditentukan, maka lakukan perintah yang berada di blok pertama. Jika tidak ada, maka lakukan perintah yang berada di blok kedua.",
   "ifFlowerTooltip":"Jika ada bunga\/sarang lebah ke arah yang ditentukan, kemudian lakukan beberapa aksi.",
   "ifelseFlowerTooltip":"Jika ada bunga\/sarang lebah di arahan yang telah ditetapkan, maka lakukan blok pertama dari aksi. Jika tidak, melakukan blok kedua aksi.",
+  "insufficientHoney":"Anda menggunakan semua blok kanan, tetapi anda perlu membuat jumlah madu yang tepat.",
+  "insufficientNectar":"Anda menggunakan semua blok kanan, tetapi anda perlu membuat jumlah nektar yang tepat.",
   "make":"membuat",
   "moveBackward":"bergerak mundur",
   "moveEastTooltip":"Memindahkan saya ke Timur satu langkah.",

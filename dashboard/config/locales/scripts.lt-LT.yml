@@ -5,11 +5,11 @@
         test:
           'Jigsaw: Learn to drag and drop': 'Dėlionės: sudėk paveikslėlius'
           The Maze: Labirintas
-          Multi: Multi
-          Match: Match
+          Multi: Variantai
+          Match: Sujungimas
           Math Image: Math Image
-          title: Bandomieji kursai
-          description: Just an internal test course.
+          title: Bandomasis etapas
+          description: Tai tik vidinis bandomasis etapas.
         course1:
           'Jigsaw: Learn to drag and drop': 'Dėlionės: sudėk paveikslėlius'
           'Maze: Sequence': 'Labirintas: seka'
@@ -24,15 +24,16 @@
           Multi & Match: Multi & Match
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy be blokelių
-          title: Kursas 1
+          title: Kursas 1 - tik pradedantiems skaityti
           Artist 2: Menininkas 2
           Happy Maps: Laimingieji žemėlapiai
           Move it, Move it: Judėk, judėk
-          'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
+          'Real-life Algorithms: Plant a Seed': 'Algoritmai realiame gyvenime: sėklos
+            sodinimas'
           Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
+          Getting Loopy: Kartojimo supratimas
           The Big Event: Didelis įvykis
-          Going Places Safely: Going Places Safely
+          Going Places Safely: Saugus naršymas internete
           description: Course 1 is designed for early readers in the lower elementary
             grades.  Create computer programs with loops and events.  By the end of
             the course, create your very own custom game or story that you can share.
@@ -42,8 +43,9 @@
           'Maze: Loops': 'Labirintas: kartojimas'
           'Bee: Loops': 'Bitė: kartojimas'
           'Studio: Create a Story': 'Laboratorija: sukurk istoriją'
-          description_short: Course 1 is designed for early readers in the lower elementary
-            grades.
+          description_short: 1 etapas yra sukurtas pradinukams, dar tik pradėjusiems
+            skaityti.
+          'Artist: Loops': 'Menininkas: kartojimas'
         course2:
           The Maze: Labirintas
           Suzi: Suzi
@@ -64,12 +66,12 @@
           Graph Paper Programming: Programavimas ant languoto popieriaus
           'Real-life Algorithms: Paper Planes': 'Algoritmai realiame gyvenime: popieriniai
             lėktuvėliai'
-          Getting Loopy: Getting Loopy
+          Getting Loopy: Kartojimo supratimas
           Relay programming: Programavimas komandoje
           Conditionals: Sąlyginiai sakiniai
           Binary Bracelets: Dvejetainės apyrankės
           The Big Event: Didelis įvykis
-          Your Digital Footprint: Your Digital Footprint
+          Your Digital Footprint: Virtualūs pirštų antspaudai
           description: Course 2 is designed for students who can read in the lower
             and middle elementary grades.  Create programs with loops, events, and
             conditionals.  By the end of the course, create your very own interactive
@@ -77,44 +79,42 @@
           'Maze: Sequence': 'Labirintas: seka'
           'Artist: Sequence': 'Menininkas: seka'
           'Maze: Loops': 'Labirintas: kartojimas'
-          'Artist: Loops': 'Artist: Loops'
+          'Artist: Loops': 'Menininkas: kartojimas'
           'Bee: Loops': 'Bitė: kartojimas'
-          'Bee: Debugging': 'Bee: Debugging'
-          'Artist: Debugging': 'Artist: Debugging'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          description_short: Course 2 is designed for students who can read in the
-            lower and middle elementary grades.
-          'Artist: Sequence2': 'Artist: Sequence2'
-          'Maze: Sequence2': 'Maze: Sequence2'
+          'Bee: Debugging': 'Bitė: klaidų ieškojimas'
+          'Artist: Debugging': 'Menininkas: klaidų ieškojimas'
+          'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
+          description_short: Kursas 2 yra skirtas mokiniams, kurie jau moka skaityti
+            – pradinukams 2-5 klasėms.
+          'Artist: Sequence2': 'Menininkas: seka2'
+          'Maze: Sequence2': 'Labirintas: seka2'
+          'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
         course3:
           The Maze: Labirintas
           'Studio: Create a Story': 'Laboratorija: sukurk istoriją'
           The Artist: Menininkas
-          title: Course 3
+          title: Kursas 3
           Artist Functions: 'Menininkas: funkcijos'
-          Artist For Loops: Artist For Loops
-          Artist Nested Loops: Artist Nested Loops
+          Artist For Loops: 'Menininkas: kartojimai'
+          Artist Nested Loops: 'Menininkas: kartojimas kartojime'
           Bee Conditionals: 'Bitė: sąlyginiai sakiniai'
-          Bee Nested Loops: Bee Nested Loops
-          Bee Debuggin: Bee Debuggin
+          Bee Nested Loops: 'Bitė: kartojimas kartojime'
+          Bee Debuggin: 'Bitė: klaidų ieškojimas'
           Bee Debugging: 'Bitė: klaidų ieškojimas'
           Bee Functions: 'Bitė: sudėtinės komandos'
-          Artist Functions with Params: Artist Functions with Params
+          Artist Functions with Params: 'Menininkas: sudėtinės komandos su parametrais'
           Bounce: "Šokinėjimas"
-          Maze Conditionals: Maze Conditionals
-          Artist Functions with Parameters: Artist Functions with Parameters
+          Maze Conditionals: 'Labirintas: sąlyginiai sakiniai'
+          Artist Functions with Parameters: 'Menininkas: sudėtinės komandos su parametrais'
           Computational Thinking: Skaičiuojamasis mąstymas
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Dainų rašymas
-          Dice Race: Dice Race
-          Internet: Internet
+          Dice Race: Kauliukų lenktynės
+          Internet: Internetas
           Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital Citizenship
-          Farmer - While Loops: Farmer - While Loops
-          description: Students taking Course 3 should have already taken Course 2.  Students
-            create programs with different kinds of loops, events, functions, and
-            conditions.  By the end of the course, create your very own interactive
-            game or story that you can share with anyone.
+          Digital Citizenship: Virtuali pilietybė
+          Farmer - While Loops: "Ūkininkas: kartojimas"
+          description: Kursas 3 skirtas tiems, kas pabaigė Kursą 2.
           'Studio: Create a Game': 'Laboratorija: sukurk žaidimą'
           Maze: Labirintas
           Artist: Menininkas
@@ -122,21 +122,22 @@
           'Bee: Functions': 'Bitė: sudėtinės komandos'
           'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
           'Maze: Conditionals': 'Labirintas: sąlyginiai sakiniai'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
           'Farmer: While Loops': "Ūkininkas: kartojimas"
-          'Bee: Nested Loops': 'Bee: Nested Loops'
+          'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
-          description_short: Mokiniai, einantys 3 kursą, turėtų būti praėję 2 kursą.
+          description_short: Mokiniai, einantys 3 etapą, turi būti praėję 2 etapą.
           Maze2: Labirintas2
           Artist2: Menininkas2
           'Artist: Functions2': 'Menininkas: sudėtinės komandos2'
           'Bee: Functions2': 'Bitė: sudėtinės komandos2'
           'Bee: Conditionals2': 'Bitė: sąlyginiai sakiniai2'
           'Maze: Conditionals2': 'Labirintas: sąlyginiai sakiniai2'
-          'Artist: Nested Loops2': 'Artist: Nested Loops2'
+          'Artist: Nested Loops2': 'Menininkas: Kartojimas kartojime'
           'Farmer: While Loops2': "Ūkininkas: kartojimas2"
-          'Bee: Nested Loops2': 'Bee: Nested Loops2'
+          'Bee: Nested Loops2': 'Bitė: kartojimas kartojime'
           'Bee: Debugging2': 'Bitė: klaidų ieškojimas2'
+          'Artist: Patterns': 'Artist: Patterns'
         msm:
           title: Vidurinės mokyklos matematika
           description: Private work in progress for Middle School Math.

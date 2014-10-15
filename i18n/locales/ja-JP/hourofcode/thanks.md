@@ -1,50 +1,57 @@
 * * *
 
-## タイトル: Hour of Codeのイベント主催への登録にご協力頂き大変ありがとうございます！
+title: Thanks for signing up to host an Hour of Code! layout: wide
+
+social: "og:title": "<%= hoc\_s(:meta\_tag\_og\_title) %>" "og:description": "<%= hoc\_s(:meta\_tag\_og\_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
+
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc\_s(:meta\_tag\_twitter\_title) %>" "twitter:description": "<%= hoc\_s(:meta\_tag\_twitter\_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv\_load\_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+
+* * *
+
+<% facebook = {:u=>"http://#{request.host}/us"}
+
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc\_s(:twitter\_default\_text)} twitter[:hashtags] = 'HourOfCode' unless hoc\_s(:twitter\_default\_text).include? '#HourOfCode' %>
 
 # Hour of Codeのイベント主催への登録にご協力頂き大変ありがとうございます！
 
-**すべての** Hour of Code の主催者は10 GB分のDropboxの容量 もしくは $10ドル分のSkype クレジットを感謝の気持ちとして受け取る事が出来ます。[詳細][1]
-
- [1]: /prizes
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](/prizes)
 
 <% if @country == 'us' %>
 
-あなたの [学校全体を参加させて][2] 学校全体に送られる大きな賞がもらえるチャンスをつかもう。 
-
- [2]: /whole-school
+Get your [whole school to participate](/us/prizes) for a chance for big prizes for your entire school.
 
 <% end %>
 
 ## 1. みんなに広めましょう
 
-友達に #HourOfCodeを教えましょう。
+Tell your friends about the #HourOfCode.
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 <% if @country == 'us' %>
 
 ## 2. Hour of Codeを主催するよう学校と交渉しましょう。
 
-[このメール][3] もしくは [この資料][4]をあなたの学校長へ渡しましょう。 あなたの学校が参加したならば, [10,000ドル分の価値があるテクノロジーがあなたの学校に当選するチャンスがあります ][1]そして、あなたの住まいの地域にある学校にも参加するよう誘ってください。
-
- [3]: /resources#email
- [4]: /resources/hoc-one-pager.pdf
+[Send this email](/resources#email) or [give this handout to your principal](/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](/prizes) and challenge other schools in your area to get on board.
 
 <% else %>
 
 ## 2. Hour of Codeを主催するよう学校と交渉しましょう。
 
-[このメール][3] もしくは [この資料を][4]あなたの学校長に渡してください。 
+[Send this email](/resources#email) or give [this handout](/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
 ## 3. 雇用主にも参加するよう聞いてみてください。
 
-[このメール][3]を あなたのマネージャーもしくはCEOに送る, もしくは[この資料][4]を渡してください。.
+[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
 
 ## 4. あなたのコミュニティーにもHour of Codeを宣伝しましょう。
 
-地域のグループ — ボーイスカウト、教会、大学、退役軍人のグループや労働組合、もしくは Hour of Code "ブロックパーティー"を地元で開いたりして募集してください。
+Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
 ## 5. Hour of Codeを支援してもらえるよう地元の議員に聞いてみましょう。
 
-[このメール][3]をあなたの市長や、市議会、学校の理事会に送りましょう。もしくは[ この資料][4]を渡して、あなたの学校を訪問するよう招待しましょう。
+[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+
+<%= view 'popup_window.js' %>

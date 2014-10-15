@@ -15,6 +15,15 @@
   twentyhours_heading: "جرب  لدينا دورة العلوم مقدمة إلى الكمبيوتر"
   twentyhours_text: أتممت أول "ساعة من التعليمات البرمجية" الخاصة بك؟ تعلم المزيد
     عن الكمبيوتر العلوم والبرمجة و المفاهيم الأساسية في الدورة التالية.
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: "طالب"
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: "جرب الآن"
   california_heading: "أطلب من مدرستك لتعليم علوم الحاسب الآلي"
   california_text: "أي معلم يمكن أن يقدم لدينا <a href='http://studio.code.org/'>دورات
@@ -54,6 +63,7 @@
     الأخرى</a>, أو شاهد خيارات أخرى لـ <a href='/learn/beyond'>تعلم ما بعد ساعة من
     البرمجة</a>."
   leaderboards_for_hoc: "المتصدرين لبرنامج ساعة من البرمجة."
+  support_url: http://support.code.org/
   country: "الدولة"
   city: "المدينة"
   gender: "الجنس"
@@ -78,6 +88,8 @@
   i_am_a: "انا"
   never_spam: "نحن لن نزعجك"
   enter_country: "أدخل اسم البلد اذا كنت خارج الولايات المتحدة"
+  used_infrequent_updates: Only used for infrequent updates
+  privacy_practices_children: See our privacy practices for children
   petition_thankyou: "شكرا لك على توقيع العريضة"
   carousel_heading_international: "دروس تعليمية بلغتك"
   continue_learning_header: "مواصلة التعلم بعد ساعة واحدة من البرمجة"
@@ -180,6 +192,8 @@
     لطلاب K-5 ."
   dashboard_landing_new_k5courses: "جديد ! جرب دوراتنا للطلاب K-5."
   dashboard_landing_useful_links: "روابط أخرى مفيدة"
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: "طباعة الشهادات لطلاب الذين أنجزوا هذه الدورة
     التدريبية"
   dashboard_landing_educator_blog: "أقرأ عن أخبار ومستجدات موادنا على مدونة معلمنا"
@@ -207,6 +221,7 @@
   dashboard_navigation_view_progress: "عرض عملية التقدم"
   dashboard_navigation_add_students: "إضافة طلاب"
   dashboard_navigation_manage_students: "إدارة الطلاب"
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: "القسم: %{section_name}"
   dashboard_navigation_student: "الطالب: %{student_name}"
   dashboard_sections_new_section: "القسم جديد"
@@ -219,6 +234,7 @@
   dashboard_sections_table_course: "الدورة"
   dashboard_sections_table_students: "الطلاب"
   dashboard_sections_table_code: "قسم البرمجة"
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: "إذا كنت ترغب في تقديم حسابات لطلابك بك، اختر
     <b>كلمة</b> أو <b>صورة</b> سرية لهذا القسم."
   dashboard_sections_secret_word: "يسمح لك تعيين كلمة سر لكل طالب <b>كلمة سرية</b>."
@@ -234,13 +250,18 @@
   dashboard_students_add_multiple: "اكتب أو إلصق أسماء الطلاب. واحداً في كل سطر:"
   dashboard_students_new_section: "قمت بإنشاء قسم جديد! الآن أضف طلابك باستخدام أزرار
     <b>إضافة الطالب</b> و <b>إضافة العديد من الطلاب</b> أعلاه."
+  dashboard_students_placeholder_name: Student Name
   dashboard_students_name: "الاسم"
   dashboard_students_age: "العمر"
   dashboard_students_gender: "الجنس"
+  dashboard_students_male: "ذكر"
+  dashboard_students_female: "أنثى"
   dashboard_students_secret: "سر"
   dashboard_students_password: "كلمة المرور"
   dashboard_students_username: "اسم المستخدم: %{student_username}"
   dashboard_students_email: "البريد الإلكتروني: %{student_email}"
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: "إظهار طريقة الدخول السرية"
   dashboard_students_auto_generated: "إنشاء تلقائي"
   dashboard_students_reset_secret: "إعادة تعيين طريقة الدخول السرية"
@@ -262,5 +283,29 @@
     أو <b>صورة</b>."
   dashboard_students_print_page: "إطبع هذة الصفحة"
   dashboard_students_url: "عنوان URL"
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
-    here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
+    انقر هنا</a> للحصول على مستند الخصوصية الذي يمكن مشاركته أو طباعته لطلابك .
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: "المتسلسلة"
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: "الأخرى"
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
+  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
+    week alone:'
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

@@ -1,0 +1,12 @@
+name '4-5 Digital Footprint Multi 1'
+title 'Multiple Choice'
+banner ''
+description ''
+question 'Which piece of information listed below is okay to share on the internet?'
+#height '100'
+
+wrong '<h4>Your birthday</h4>'
+right '<h4>Your favorite food</h4>'
+wrong '<h4>Your address</h4>'
+wrong "<h4>Your parent's credit card number</h4>"
+

@@ -1,7 +1,9 @@
 * * *
 
-## 标题： 感谢
+title: Thank you layout: wide
+
+* * *
 
 # 感谢
 
-您的学校有机会赢得适合整个班级的电脑（或者用于其他科技产品的10000美元）：
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).

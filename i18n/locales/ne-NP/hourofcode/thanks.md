@@ -1,50 +1,57 @@
 * * *
 
-## सिर्शक: Hour of Code होस्ट गर्नुकोलागी sign up गर्नु भएकोमा धन्यवाद!
+title: Thanks for signing up to host an Hour of Code! layout: wide
+
+social: "og:title": "<%= hoc\_s(:meta\_tag\_og\_title) %>" "og:description": "<%= hoc\_s(:meta\_tag\_og\_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
+
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc\_s(:meta\_tag\_twitter\_title) %>" "twitter:description": "<%= hoc\_s(:meta\_tag\_twitter\_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv\_load\_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+
+* * *
+
+<% facebook = {:u=>"http://#{request.host}/us"}
+
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc\_s(:twitter\_default\_text)} twitter[:hashtags] = 'HourOfCode' unless hoc\_s(:twitter\_default\_text).include? '#HourOfCode' %>
 
 # Hour of Code होस्ट गर्नुकोलागी sign up गर्नु भएकोमा धन्यवाद!
 
-**सबै** Hour of Code संचालकले धन्यवाद स्वरुप पाउनु हुनेछ १० GB Dropbox space अथवा $१० Skype credit. [बिस्तृत जानकारी][1]
-
- [1]: /prizes
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](/prizes)
 
 <% if @country == 'us' %>
 
-तपाईको स्कूलबाट [सबैलाई सहभागी][2] गराएर ठुला पुरस्कारहरु जित्ने मौका पौनुहोअस.
-
- [2]: /whole-school
+Get your [whole school to participate](/us/prizes) for a chance for big prizes for your entire school.
 
 <% end %>
 
 ## १. जानकारी फैलाउनुहोअस्
 
-#HourOfCode बारेमा साथिहरुलाई भन्नुहोश.
+Tell your friends about the #HourOfCode.
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 <% if @country == 'us' %>
 
 ## २. तपाईको स्कूललाई Hour of Code को प्रस्ताब राखन भन्नुहोश
 
-यो [इमेल पठौनुहोश][3] अथवा तपाईको [प्रिन्सिपललाई यो चिट्ठी दिनुहोश][4]. तपाइको स्कूल सहभागी भएपछि, [$१०००० बराबर को टेक्नोलोजी समान पाउन भाग लिनुहोश][1], र अरु स्कूललाई सहभागी हुन आमन्त्रण गर्नुहोश.
-
- [3]: /resources#email
- [4]: /resources/hoc-one-pager.pdf
+[Send this email](/resources#email) or [give this handout to your principal](/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](/prizes) and challenge other schools in your area to get on board.
 
 <% else %>
 
-## तपाईको स्कूललाई Hour of Code को प्रस्ताब राखन भन्नुहोश
+## २. तपाईको स्कूललाई Hour of Code को प्रस्ताब राखन भन्नुहोश
 
-यो [इमेल पठौनुहोश][3] अथवा तपाईको [प्रिन्सिपललाई यो चिट्ठी दिनुहोश][4].
+[Send this email](/resources#email) or give [this handout](/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
 ## ३. तपाईको कम्पनीलाई संलग्न हुन भन्नुहोश
 
-तपाइको प्रबन्धक, अथवा सीईओलाई [यो इमेल पठौनुहोश][3]. अथवा [यौ चिट्ठी दिनुहोश][4].
+[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
 
 ## ४. तपाईको समुदायमा Hour of Code को प्रवर्द्धन गर्नुहोश
 
-स्थानीय समूहलाई भर्ती - क्लब, मन्दिर, विश्वविद्यालय, वा श्रम संघ. अथवा आफ्नो छिमेकीका लागि Hour of Code "ब्लक पार्टी" को संचालन गर्नुहोश.
+Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
 ## ५. Hour of Code समर्थनगर्नुकोलागी स्थानीय निर्वाचित आधिकारिकको सहयोग मग्नुहोश
 
-नगरप्रमुख, नगर परिषद, वा स्कूल बोर्डलाई [यो इमेल पठौनुहोश][3]. अथवा [यो चिट्ठी][4] दिएर आफ्नो स्कूल भ्रमण गर्न आग्रह गर्नुहोश.
+[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+
+<%= view 'popup_window.js' %>

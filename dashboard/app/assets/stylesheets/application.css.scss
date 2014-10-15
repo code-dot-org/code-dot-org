@@ -292,13 +292,14 @@ th {
         position: relative;
         top: 1px;
       }
-      .puzzle-unplugged {
-        font-size: 13px;
-        padding-left: 6px;
-        padding-right: 6px;
-      }
     }
   }
+}
+
+.puzzle-named {
+  font-size: 13px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 .progress-outer {
@@ -342,6 +343,10 @@ th {
   padding: 3px;
   font-size: 16px;
   display: inline-block;
+}
+
+a.header_status_bar:hover {
+  background-color: orange;
 }
 
 .header_text {
@@ -923,6 +928,22 @@ tr.manage-tr {
   @include close-button($cornerOffset: -20px);
 }
 
+.qtip-content {
+  font-size: 20px;
+  line-height: 28px;
+  color: #7E5BA0;
+  font-weight: 500;
+}
+
+.qtip-default {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px #888;
+  padding: 10px;
+}
+
 .no-tip .qtip-tip {
   visibility: hidden;
 }
@@ -1359,6 +1380,7 @@ div.gallery_activity {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center;
   }
 }
 

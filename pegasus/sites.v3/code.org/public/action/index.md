@@ -34,6 +34,7 @@ social:
 | -------- | ----------- |
 | Alabama | Math |
 | Arizona | Math |
+| California | Math |
 | District of Columbia    | Math |
 | Florida | Math, Science |
 | Georgia   | Science |

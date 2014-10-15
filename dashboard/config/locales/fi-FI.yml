@@ -2,17 +2,17 @@
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: vaaditaan
     attributes:
       user:
-        name: Nimi
+        name: Nimimerkki
         email: Sähköposti
         username: Käyttäjätunnus
         password: Salasana
         password_confirmation: Salasanan vahvistus
         current_password: Nykyinen salasana
         locale: Kieli
-        age: Age
+        age: Ikä
         gender: Sukupuoli
         edit_header: Muokkaa tiliä
         error:
@@ -32,6 +32,7 @@
     submit: Lisää vihje
   appname: Code.org
   stage: Taso
+  stage_number: Taso %{number}
   puzzle: Pulma
   trophies: Pokaalit
   courses: Kurssit
@@ -40,7 +41,7 @@
   less: VÄHEMMÄN
   try_hoc: 'Kokeile Koodaustuntia, napsauta tästä >> '
   try_k8intro: Tai kokeile ala-asteen johdantoa tietojenkäsittelyyn (15-25 tuntia)
-  k8intro: K-8 Intro to Computer Science Course (15-25 hours)
+  k8intro: Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)
   already_started: 'Aloititko jo? Jatka tästä >> '
   demos: 'Ylläpitäjä: Kaikki demot'
   continue: Jatka
@@ -49,22 +50,24 @@
   auth:
     sign_in_with: Kirjaudu %{provider} -tunnuksella
     signed_in: Kirjautunut!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
+    signed_out: Olet kirjautunut ulos palvelusta <a href="%{url}">Code.org</a>.
+    sign_out_of: Olet kirjautuneena sisään palvelun %{provider} kautta. <a href="%{url}">Kirjaudu
+      ulos</a> palvelusta %{provider}.
     already_signedup: Joko rekisteröidyit?
     notyet_signedup: Etkö ole vielä rekisteröitynyt?
-    google_oauth2: Google Account
+    google_oauth2: Google-tili
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
+    windowslive: Microsoft-tili
     forgot_password: Unohditko salasanasi?
     need_confirmation: Etkö saanut vahvistusviestiä?
     need_unlock: Etkö saanut avausohjeita?
   signup_form:
-    overview_student: Sign up for an account to track your progress.
-    overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to track your students' progress and get rewards.
+    overview_student: Rekisteröidy niin voit seurata edistymistäsi. Sähköpostiosoitettasi
+      käytetään pääasiassa sisäänkirjautumiseen ja salasanan palauttamiseen. Katso
+      lisätietoja <a href="http://code.org/privacy">Yksityisyyskäytännöstämme</a>.
+    overview_teacher: Rekisteröidy niin saat apua tietojenkäsittelyn opettamiseen.<p/>Voit
+      lisätä oppilaita ja seurata heidän edistymistään.
     no_signup_message: Voit <a target="_blank" href="http://learn.code.org">selata
       eri tasoja ja pulmia</a>, mutta sinun pitää rekistöröityä, jotta voit tallentaa
       edistymisesi.
@@ -88,7 +91,7 @@
     address_placeholder: osoite, postinumero, postitoimipaikka
     gender: Sukupuoli (vapaaehtoinen)
     birthday: Syntymäpäivä (vapaaehtoinen)
-    age: Ikä (vaapaaehtoinen)
+    age: Ikä
     submit: Rekisteröidy
     teacher: Oletko opettaja?
     valid_username: Vapaa!
@@ -223,8 +226,8 @@
             href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
             only)
           earned: "Hieno suoritus! 7 tai useampi oppilaistasi, jotka keräsivät kaikki
-            %{num_trophies} ovat tyttöjä. \n\nHuom: \"sivustolla mainitut raha- ja
-            tavarapalkinnot ovat voimassa vain USA:ssa\"\n"
+            %{num_trophies} ovat tyttöjä. \n\nHuom: sivustolla mainitut raha- ja tavarapalkinnot
+            ovat voimassa vain USA:ssa\n"
           not_earned: "(sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa
             vain USA:ssa)"
   crud:
@@ -244,6 +247,9 @@
     header:
       finished_hoc: Olen suorittanut Koodituntini
       sign_in_to_save: Kirjaudu, jos haluat tallentaa edistymisesi
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: Oppilaani
       label: Hei %{username}
@@ -352,6 +358,8 @@
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: Tai jos olet jo rekisteröitynyt, %{link}
     student_reg_link: Oppilas
     teacher_reg_link: Opettaja
@@ -407,6 +415,7 @@
     feedback: Anna palautetta
     translate: Auta meitä kääntämään palvelu omalle kielellesi
     support: Support
+    support_url: http://support.code.org
     tos: Käyttöehdot
     privacy: Yksityisyyskäytäntö
     secure: Secure Version
@@ -431,8 +440,22 @@
     autoplay_option: Toista videot automaattisesti
     download: Lataa video
   compatability:
-    working: Emme juuri nyt tue käyttämääsi selainta.
-    upgrade: Ole hyvä ja päivitä selaimesi.
+    working:
+      header: Emme juuri nyt tue käyttämääsi selainta.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Your browser doesn't support all the features required, and you may experience
+        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
+        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
+        your browser to a supported version</a>.
+      hide_this_warning: Hide this warning
+    upgrade:
+      header: Ole hyvä ja päivitä selaimesi.
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Unfortunately your browser doesn't support all the features required
+        to run this part of the site.<br/><br/>Install a browser on our supported
+        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
+        expect functionality to be broken.
+      button: Take me to the list of supported browsers
   slow_loading: Tämä kestää kauemmin kuin tavallisesti...
   try_reloading: Yritä ladata sivu uudelleen
   next_stage: Valmis! Siirry seuraavalle tasolle
@@ -445,6 +468,13 @@
     flappy_og_title: Check out my Flappy Game
     studio_og_title: Check out my story
     og_description: I wrote the code myself with Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: You created a new script.
     destroyed: You destroyed a script.
@@ -479,6 +509,7 @@
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
+    support_url: "//support.code.org"
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
@@ -499,7 +530,7 @@
     script:
       name:
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
+          title: Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)
           description: This 20-hour course introduces core computer science and programming
             concepts. The course is designed for use in classrooms for grades K-8,
             but it is fun to learn at all ages.

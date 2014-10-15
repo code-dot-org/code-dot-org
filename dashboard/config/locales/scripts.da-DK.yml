@@ -44,6 +44,7 @@
           'Bee: Loops': 'Bi: Sløjfer'
           'Studio: Create a Story': Spil Lab - Opret en historie
           description_short: Kursus 1 er designet for tidlige læsere i de yngste klassetrin.
+          'Artist: Loops': 'Kunstner: Sløjfer'
         course2:
           The Maze: Labyrinten
           Suzi: Suzi
@@ -85,6 +86,7 @@
             lavere og mellemste klassetrin.
           'Artist: Sequence2': 'Kunstner: Sekvens 2'
           'Maze: Sequence2': 'Labyrint: Sekvens 2'
+          'Artist: Nested Loops': 'Kunstner: Indlejrede løkker'
         course3:
           The Maze: Labyrinten
           'Studio: Create a Story': Spil Lab - Opret en historie
@@ -138,6 +140,7 @@
           'Farmer: While Loops2': 'Landmand: Når sløjfer 2'
           'Bee: Nested Loops2': 'Bi: Indlejrede løkker 2'
           'Bee: Debugging2': 'Bi: Fejlfinding 2'
+          'Artist: Patterns': 'Artist: Patterns'
         msm:
           title: Efterskole matematik
           description: Privat arbejde i gang for efterskole matematik.

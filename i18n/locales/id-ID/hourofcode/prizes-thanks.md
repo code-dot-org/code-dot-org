@@ -1,6 +1,8 @@
 * * *
 
-## judul: Terima kasih
+title: Thank you layout: wide
+
+* * *
 
 # Terima kasih
 

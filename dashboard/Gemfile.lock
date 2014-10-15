@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/code-dot-org/omniauth-clever.git
+  revision: 8c7adde39157d64dc8b05c5eec5b0a7329f8ef95
+  specs:
+    omniauth-clever (1.1.0)
+      omniauth-oauth2 (>= 1.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -90,6 +97,10 @@ GEM
       haml (>= 3.1, < 5.0)
       railties (>= 4.0.1)
     hashie (3.3.1)
+    heroku_rails_deflate (1.0.3)
+      actionpack (>= 3.2.13)
+      activesupport (>= 3.2.13)
+      rack (>= 1.4.5)
     hike (1.2.3)
     honeybadger (1.11.2)
       json
@@ -112,7 +123,7 @@ GEM
       activesupport (>= 3.0.0)
     kgio (2.9.2)
     le (2.2.8)
-    libv8 (3.16.14.3)
+    libv8 (3.16.14.7)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -150,7 +161,7 @@ GEM
       multi_json (~> 1.3)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
-    omniauth-windowslive (0.0.8.1)
+    omniauth-windowslive (0.0.9)
       multi_json (>= 1.0.3)
       omniauth-oauth2 (~> 1.0)
     orm_adapter (0.5.0)
@@ -208,6 +219,7 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
+    sequel (4.10.0)
     simplecov (0.8.2)
       docile (~> 1.1.0)
       multi_json
@@ -225,7 +237,7 @@ GEM
     stringex (2.5.2)
     syck (1.0.1)
     therubyracer (0.12.1)
-      libv8 (~> 3.16.14.0)
+      libv8 (~> 3.16.14.7)
       ref
     thor (0.19.1)
     thread_safe (0.3.3)
@@ -246,6 +258,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    user_agent_parser (2.1.5)
     videojs_rails (4.5.2)
     warden (1.2.3)
       rack (>= 1.0)
@@ -274,6 +287,7 @@ DEPENDENCIES
   geocoder
   haml
   haml-rails
+  heroku_rails_deflate
   honeybadger
   i18nema
   jbuilder (~> 1.2)
@@ -287,13 +301,14 @@ DEPENDENCIES
   naturally
   newrelic_rpm
   nokogiri
+  omniauth-clever!
   omniauth-facebook
   omniauth-google-oauth2
-  omniauth-windowslive
+  omniauth-windowslive (~> 0.0.9)
   os
   quiet_assets
   rails (= 4.0.3)
-  redcarpet
+  redcarpet (~> 3.1.1)
   retryable
   rmagick
   rspec
@@ -302,6 +317,7 @@ DEPENDENCIES
   sdoc
   seamless_database_pool
   selenium-webdriver
+  sequel (~> 4.10.0)
   simplecov
   stringex (~> 2.5.2)
   therubyracer
@@ -309,4 +325,5 @@ DEPENDENCIES
   twilio-ruby
   uglifier (>= 1.3.0)
   unicorn
+  user_agent_parser
   videojs_rails

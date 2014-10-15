@@ -269,7 +269,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show new style unplugged level with PDF link' do
-    @controller.expects :slog
+    @controller.expects(:slog).never
 
     sign_out(@admin)
 
@@ -371,7 +371,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     blocks = "<hey>"
     level = Level.where(level_num: "3_8").first
     script_level = ScriptLevel.where(level_id: level.id).first
-    level_source = LevelSource.lookup(level, blocks)
+    level_source = LevelSource.find_identical_or_create(level, blocks)
     Activity.create!(user: @admin, level: level, lines: "1", attempt: "1", test_result: "100", time: "1000", level_source: level_source)
     next_script_level = ScriptLevel.where(level: Level.where(level_num: "3_9").first).first
     get :show, script_id: script_level.script.id, id: next_script_level.id

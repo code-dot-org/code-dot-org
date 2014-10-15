@@ -1,0 +1,10 @@
+name '4-5 Crowdsourcing Multi 1'
+title 'Multiple Choice'
+banner ''
+description ''
+question 'Which of these pictures best represents crowdsourcing?'
+height '100'
+
+wrong '/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png'
+right '/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png'
+

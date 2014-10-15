@@ -1,72 +1,73 @@
-"ar":
+ar:
   data:
     script:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'بانوراما : تعلم السحب و الإسقاط'
-          The Maze: "المتاهة"
-          Multi: "متعدد"
-          Match: "تماثل"
-          Math Image: "صورة الرياضيات"
-          title: "إختبار الدرس"
-          description: "فقط إختبار داخلي لدرس."
+          The Maze: المتاهة
+          Multi: متعدد
+          Match: تماثل
+          Math Image: صورة الرياضيات
+          title: إختبار الدرس
+          description: فقط إختبار داخلي لدرس.
         course1:
           "Jigsaw: Learn to drag and drop": 'لغز التركيب: تعلم كيف تسحب وتفلت'
           "Maze: Sequence": 'متاهة: التسلسل'
           "Maze: Debugging": 'متاهة: تصحيح الأخطاء'
           "Artist 1: Intro": 'الرسام 1: مقدمة'
-          Artists 2: "الفنانين 2"
-          Spelling Bee: "مسابقة التهجئة"
-          Spelling Bee not blockly: "مسابقة التهجئة الغير تركيبية"
+          Artists 2: الفنانين 2
+          Spelling Bee: مسابقة التهجئة
+          Spelling Bee not blockly: مسابقة التهجئة الغير تركيبية
           "Bee 1: Intro": 'التهجئة 1: مقدمة'
           "Maze 2: Loops": 'المتاهة 2: الحلقات'
           "Bee 2: Loops": 'التهجئة 2: الحلقات'
           Multi & Match: التعدد والتوصيل
           K-1 Flappy: لعبة الطائر الوثاب لصف K-1
-          Flappy non blockly: "لعبة الطائر الوثاب الغير تركيبية"
-          title: "الدورة 1"
-          Artist 2: "الفنان 2"
-          Happy Maps: "الخرائط السعيدة"
+          Flappy non blockly: لعبة الطائر الوثاب الغير تركيبية
+          title: 'Course 1 - For early readers'
+          Artist 2: الفنان 2
+          Happy Maps: الخرائط السعيدة
           Move it, Move it: حركها ! حركها
           "Real-life Algorithms: Plant a Seed": 'خوارزميات الحياة الحقيقية: زراعة البذور'
-          Building a Foundation: "بناء قاعدة"
-          Getting Loopy: "القبض على المعتوهون"
-          The Big Event: "الحدث الكبير"
-          Going Places Safely: "الذهاب للأماكن بأمان"
-          description: "الدرس الأول صمم للقارئين الناشئيين في الصفوف الإبتدائية الأولية. إصنع برامج حاسوبية بستخدام الحلقات والأحداث. في نهاية الدورة قم بصناعة لعبتك أو فنك أو قصتك المصممة بطريقتك الخاصة ثم يمكنك مشاركتهم مع الآخرين."
+          Building a Foundation: بناء قاعدة
+          Getting Loopy: القبض على المعتوهون
+          The Big Event: الحدث الكبير
+          Going Places Safely: الذهاب للأماكن بأمان
+          description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
           "Bee: Sequence": 'التهجئة: التسلسل'
           "Artist: Sequence": 'الفنان: التسلسل'
           "Artist: Shapes": 'الفنان: الأشكال'
           "Maze: Loops": 'المتاهة: الحلقات'
           "Bee: Loops": 'التهجئة: الحلقات'
           "Studio: Create a Story": 'مختبر اللعب: إنشاء قصة'
-          description_short: "الدورة 1 مصممة للقراء الصغار في الصفوف الدنيا من المرحلة الابتدائية ."
+          description_short: الدورة 1 مصممة للقراء الصغار في الصفوف الدنيا من المرحلة الابتدائية .
+          "Artist: Loops": 'الرسام : الحلقات'
         course2:
-          The Maze: "المتاهة"
-          Suzi: "سوزي"
-          The Artist: "الفنان"
-          Artist Debugging: "تصحيح الأخطاء للرسام"
-          Bounce: "الارتداد"
+          The Maze: المتاهة
+          Suzi: سوزي
+          The Artist: الفنان
+          Artist Debugging: تصحيح الأخطاء للرسام
+          Bounce: الارتداد
           "Studio: Create a Story": 'مختبر اللعب: إنشاء قصة'
-          Artist Loops: "حلقات الفنان"
-          Bee Conditionals: "النحل الشرطية"
-          Flappy: "فلابي"
-          title: "الدورة الثانية"
-          Bee Loops: "حلقات النحلة"
-          Artist Functions: "وظائف الرسام"
-          The Artist Debugging: "تصحيح الأخطاء للرسام"
-          Bee Debugging: "تصحيح الأخطاء للنحلة"
-          Bee Functions: "مهام النحلة"
-          Maze Loops: "حلقات المتاهة"
-          Graph Paper Programming: "برمجة ورقة الرسم البياني"
+          Artist Loops: حلقات الفنان
+          Bee Conditionals: النحل الشرطية
+          Flappy: فلابي
+          title: الدورة الثانية
+          Bee Loops: حلقات النحلة
+          Artist Functions: وظائف الرسام
+          The Artist Debugging: تصحيح الأخطاء للرسام
+          Bee Debugging: تصحيح الأخطاء للنحلة
+          Bee Functions: مهام النحلة
+          Maze Loops: حلقات المتاهة
+          Graph Paper Programming: برمجة ورقة الرسم البياني
           "Real-life Algorithms: Paper Planes": 'خوارزميات من واقع الحياة : طائرات ورقية'
-          Getting Loopy: "القبض على المعتوهون"
-          Relay programming: "برمجة السباق"
-          Conditionals: "الجمل الشرطية"
-          Binary Bracelets: "Binary Bracelets"
-          The Big Event: "الحدث الكبير"
-          Your Digital Footprint: "البصمة الرقمية الخاصة بك"
-          description: "الدورة 2 مصممة للطلاب الذين يستطيعون القراءة في الصفوف الدنيا و المتوسطة من المرحلة الإبتدائية . أنشئ البرامج باستخدام الحلقات و الأحداث و الجمل الشرطية . في نهاية الدورة أنشئ بطريقتك لعبتك الخاصة , بفنك , أو قصة تشاركها مع أي أحد ."
+          Getting Loopy: القبض على المعتوهون
+          Relay programming: برمجة السباق
+          Conditionals: الجمل الشرطية
+          Binary Bracelets: Binary Bracelets
+          The Big Event: الحدث الكبير
+          Your Digital Footprint: البصمة الرقمية الخاصة بك
+          description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
           "Maze: Sequence": 'المتاهة : التسلسل'
           "Artist: Sequence": 'الرسام : التسلسل'
           "Maze: Loops": 'المتاهة : الحلقات'
@@ -75,38 +76,39 @@
           "Bee: Debugging": 'النحلة : تصحيح الأخطاء'
           "Artist: Debugging": 'الرسام : تصحيح الأخطاء'
           "Bee: Conditionals": 'النحلة : الجمل الشرطية'
-          description_short: "الدورة 2 مصممة للطلاب الذين يستطيعون القراءة في الصفوف الابتدائية , الدنيا والمتوسطة."
+          description_short: الدورة 2 مصممة للطلاب الذين يستطيعون القراءة في الصفوف الابتدائية , الدنيا والمتوسطة.
           "Artist: Sequence2": 'الرسام : التسلسل 2'
           "Maze: Sequence2": 'المتاهة : التسلسل 2'
+          "Artist: Nested Loops": 'الرسام : الحلقات المتداخلة'
         course3:
-          The Maze: "المتاهة"
+          The Maze: المتاهة
           "Studio: Create a Story": 'مختبر اللعب : أنشئ قصة'
-          The Artist: "الرسام"
-          title: "الدورة الثالثة"
-          Artist Functions: "وظائف الرسام"
-          Artist For Loops: "Artist For Loops"
+          The Artist: الرسام
+          title: الدورة الثالثة
+          Artist Functions: وظائف الرسام
+          Artist For Loops: Artist For Loops
           Artist Nested Loops: 'الرسام : الحلقات المتداخلة'
-          Bee Conditionals: "النحل الشرطية"
-          Bee Nested Loops: "حلقات النحلة المتداخلة"
-          Bee Debuggin: "تصحيح الأخطاء للنحلة"
-          Bee Debugging: "تصحيح الأخطاء للنحلة"
-          Bee Functions: "مهام النحلة"
-          Artist Functions with Params: "مهام الرسام مع Params"
-          Bounce: "ترتد"
-          Maze Conditionals: "Maze Conditionals"
-          Artist Functions with Parameters: "مهام الرسام مع المعلمات"
-          Computational Thinking: "التفكير الحسابي"
-          Functional Suncatchers: "Functional Suncatchers"
-          Songwriting Parameters: "تأليف الأغاني"
-          Dice Race: "Dice Race"
-          Internet: "الإنترنت"
-          Crowdsourcing: "Crowdsourcing"
-          Digital Citizenship: "Digital Citizenship"
+          Bee Conditionals: النحل الشرطية
+          Bee Nested Loops: حلقات النحلة المتداخلة
+          Bee Debuggin: تصحيح الأخطاء للنحلة
+          Bee Debugging: تصحيح الأخطاء للنحلة
+          Bee Functions: مهام النحلة
+          Artist Functions with Params: مهام الرسام مع Params
+          Bounce: ترتد
+          Maze Conditionals: Maze Conditionals
+          Artist Functions with Parameters: مهام الرسام مع المعلمات
+          Computational Thinking: التفكير الحسابي
+          Functional Suncatchers: Functional Suncatchers
+          Songwriting Parameters: Songwriting Parameters
+          Dice Race: Dice Race
+          Internet: الإنترنت
+          Crowdsourcing: Crowdsourcing
+          Digital Citizenship: Digital Citizenship
           Farmer - While Loops: 'المزارع : حلقات بينما'
-          description: "الطلاب الذين يأخذون الدورة 3 يجب أن يكونوا قد أخذوا الدورة 2 . الطلاب يقومون بإنشاء البرامج مع أنواع مختلفة من الحلقات و الأحداث و الوظائف و الشروط . في نهاية الدورة , أنشئ بطريقتك لعبتك الخاصة , بفنك , أو قصة تشاركها مع أي أحد ."
+          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
           "Studio: Create a Game": 'مختبر اللعب : أنشئ لعبة'
-          Maze: "المتاهة"
-          Artist: "الرسام"
+          Maze: المتاهة
+          Artist: الرسام
           "Artist: Functions": 'الرسام : المهام'
           "Bee: Functions": 'النحلة : الوظائف'
           "Bee: Conditionals": 'النحلة: الجمل الشرطية'
@@ -115,9 +117,9 @@
           "Farmer: While Loops": 'المزارع : حلقات بينما'
           "Bee: Nested Loops": 'النحلة : الحلقات المتداخلة'
           "Bee: Debugging": 'النحلة: تصحيح الأخطاء'
-          description_short: "الطلاب الذين يأخذون الدورة 3 يجب أن يكونوا قد أنهوا الدورة 2 ."
-          Maze2: "المتاهة 2"
-          Artist2: "الرسام 2"
+          description_short: الطلاب الذين يأخذون الدورة 3 يجب أن يكونوا قد أنهوا الدورة 2 .
+          Maze2: المتاهة 2
+          Artist2: الرسام 2
           "Artist: Functions2": 'الرسام : المهام 2'
           "Bee: Functions2": 'النحلة : الوظائف 2'
           "Bee: Conditionals2": 'النحلة : الجمل الشرطية 2'
@@ -126,20 +128,21 @@
           "Farmer: While Loops2": 'المزارع : حلقات بينما 2'
           "Bee: Nested Loops2": 'النحلة : الحلقات المتداخلة 2'
           "Bee: Debugging2": 'النحلة: تصحيح الأخطاء 2'
+          "Artist: Patterns": 'Artist: Patterns'
         msm:
-          title: "مدرسة الرياضيات المتوسطة"
-          description: "العمل الخاص في التقدم لمدرسة الرياضيات المتوسطة ."
-          Graph Paper Programming: "برمجة ورقة الرسم البياني"
-          Assessments: "التقييمات"
-          Unit 1: "الوحدة الأولى"
-          Unit 2: "الوحدة الثانية"
+          title: مدرسة الرياضيات المتوسطة
+          description: العمل الخاص في التقدم لمدرسة الرياضيات المتوسطة .
+          Graph Paper Programming: برمجة ورقة الرسم البياني
+          Assessments: التقييمات
+          Unit 1: الوحدة الأولى
+          Unit 2: الوحدة الثانية
         playlab:
-          title: "مختبر اللعب"
-          description: "أنشئ قصة أو إصنع لعبة مع مختبر اللعب !"
-          Play Lab: "مختبر اللعب"
-          description_short: "أنشئ قصة أو إصنع لعبة مع مختبر اللعب !"
+          title: مختبر اللعب
+          description: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
+          Play Lab: مختبر اللعب
+          description_short: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
         artist:
-          title: "الرسام"
-          description: "ارسم صور رائعة و صمم مع الرسام !"
-          Artist: "الرسام"
-          description_short: "ارسم صور رائعة و صمم مع الرسام !"
+          title: الرسام
+          description: ارسم صور رائعة و صمم مع الرسام !
+          Artist: الرسام
+          description_short: ارسم صور رائعة و صمم مع الرسام !

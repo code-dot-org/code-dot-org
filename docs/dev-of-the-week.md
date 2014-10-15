@@ -2,7 +2,13 @@
 
 So you want to learn about Dev of the Week!  Maybe it's your first time as DotW, or it's been a few months and you want a refresher on everything you need to cover.  This document is written as a TODO list, with items look at 2-3x per week or in response to alerts (usually in the Developer HipChat room).
 
-Dev of the Week is on point for any issues that arise in the Production, Test, or Staging environments.  You don't have to personally fix every issue, but DotW is responsible for delegating and coordinating fixes.  There are the main areas:
+Dev of the Week is on point for any issues that arise in the Production, Test, or Staging environments.  You don't have to personally fix every issue, but DotW is responsible for delegating and coordinating fixes.  
+
+This is a living document.  Please update it to help the next DotW, and to help future-you next time you're DotW.  You can edit directly in GitHub via the pencil icon at the top right.
+
+### [Schedule](https://docs.google.com/a/code.org/spreadsheets/d/1Fplt568RCaeXjomfRgBxdO0Z5bu8MFG0abMxfDRIurk/edit#gid=0)
+
+### Areas of responsibility
 
 * 2-3x per week
   * [Check New & Existing Zendesk Tickets](#zendesk)
@@ -10,8 +16,6 @@ Dev of the Week is on point for any issues that arise in the Production, Test, o
   * [Investigate Build Failures](#build-failures)
   * [Level Activity Monitor](#level-activity-monitor)
   * [HoneyBadger Notifications](#honeybadger-notifications)
-
-This is a living document.  Please update it to help the next DotW, and to help future-you next time you're DotW.  You can edit directly in GitHub via the pencil icon at the top right.
 
 ### Zendesk
 

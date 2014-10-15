@@ -32,6 +32,8 @@
   "ifelseTooltip":"Ako staza vodi u zadanom smjeru, onda napravi prvi grupu radnji, a inače napravi drugu grupu radnji.",
   "ifFlowerTooltip":"If there is a flower\/honeycomb in the specified direction, then do some actions.",
   "ifelseFlowerTooltip":"If there is a flower\/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions.",
+  "insufficientHoney":"You're using all the right blocks, but you need to make the right amount of honey.",
+  "insufficientNectar":"You're using all the right blocks, but you need to collect the right amount of nectar.",
   "make":"napravi",
   "moveBackward":"move backward",
   "moveEastTooltip":"Pomiče me za jedno polje na Istok.",

@@ -3,7 +3,7 @@
   computer_science: "计算机科学"
   computer_science_edweek: "计算机科学教育周"
   csedweek_dates: 2013年12月9日 -- 15日
-  n_have_learned_an_hoc: "<h1>#</h1><h3>尝试了</h3><h2>编程一小时&trade;</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>尝试了</h3><h2>编程一小时</h2>"
   anybody_can_learn: "人人都可以学。"
   learn_now: "现在学习"
   petition_message: "在每个学校每个学生都应该有机会学习计算机科学"
@@ -14,6 +14,15 @@
   submit: "提交"
   twentyhours_heading: "看看我们对计算机科学课程的简介"
   twentyhours_text: "完成您的第一个 编程一小时 吗？在此后续课程中了解更多核心计算机科学和编程的概念。"
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: "学生"
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: "现在就试试"
   california_heading: Ask your school to teach computer science
   california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
@@ -47,6 +56,7 @@
   beyond_hour_message: "现在，保持前行来学习我们的 <a href='http://learn.code.org'> 20 小时的课程</a>，或来看看
     <a href='/learn/beyond'> 超出一小时学习</a>的 更多的选择。"
   leaderboards_for_hoc: "编程一小时的排行榜。"
+  support_url: http://support.code.org/
   country: "国家"
   city: "城市"
   gender: "性别"
@@ -71,6 +81,8 @@
   i_am_a: "我是"
   never_spam: "我们绝不会发送垃圾邮件"
   enter_country: "如果在美国以外，请输入国家"
+  used_infrequent_updates: Only used for infrequent updates
+  privacy_practices_children: See our privacy practices for children
   petition_thankyou: "谢谢你在请愿书上签名"
   carousel_heading_international: "中文教程"
   continue_learning_header: "继续学习"
@@ -168,6 +180,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: "为完成此课程的学生打印证书"
   dashboard_landing_educator_blog: "阅读有关新闻和我们在教育家博客的材料的更新"
   dashboard_landing_smart_hints: "请帮助我们将智能提示添加到 Code.org 教程"
@@ -194,6 +208,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -206,6 +221,7 @@
   dashboard_sections_table_course: "课程："
   dashboard_sections_table_students: "学生"
   dashboard_sections_table_code: "节代码"
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
     students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
   dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
@@ -224,13 +240,18 @@
     per line:'
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
+  dashboard_students_placeholder_name: Student Name
   dashboard_students_name: "姓名"
   dashboard_students_age: Age
   dashboard_students_gender: "性别:"
+  dashboard_students_male: "男性"
+  dashboard_students_female: "女性"
   dashboard_students_secret: Secret
   dashboard_students_password: "密码:"
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret
@@ -255,3 +276,27 @@
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: "序列"
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: "其他"
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
+  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
+    week alone:'
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

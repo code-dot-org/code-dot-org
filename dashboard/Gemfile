@@ -60,7 +60,8 @@ gem 'cancan'
 
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
-gem 'omniauth-windowslive'
+gem 'omniauth-windowslive', '~> 0.0.9'
+gem 'omniauth-clever', git: 'https://github.com/code-dot-org/omniauth-clever.git'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'haml'
@@ -71,13 +72,13 @@ gem 'nokogiri'
 
 gem 'honeybadger'
 
-gem 'redcarpet'
+gem 'redcarpet', '~> 3.1.1'
 
 gem 'newrelic_rpm'
 
 gem 'geocoder'
 
-gem 'rmagick'
+gem 'rmagick', require: 'RMagick'
 
 gem 'acts_as_list'
 
@@ -104,3 +105,6 @@ gem 'twilio-ruby' # SMS API for send-to-phone feature
 gem 'aws-s3'
 
 gem 'font-awesome-rails'
+gem 'sequel', '~> 4.10.0'
+gem 'user_agent_parser'
+gem 'heroku_rails_deflate', :group => [:staging, :test, :production] # gzip rails content and static assets

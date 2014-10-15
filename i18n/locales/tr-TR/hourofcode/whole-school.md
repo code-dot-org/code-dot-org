@@ -1,3 +1,9 @@
-# Get your whole school to participate
+* * *
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+layout: wide
+
+* * *
+
+# Bütün okulunuzu dahil edin
+
+Bütün okulunuzu bu etkinliğe katmak için gerekli bilgiler burada olacaktır.

@@ -5,15 +5,51 @@
   },
   "ar": {
     "full_date": "October 11-17, 2014",
-    "default_language": "en"
+    "default_language": "es"
+  },
+  "bg": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "bg"
   },
   "br": {
     "full_date": "December 8-14, 2014",
-    "default_language": "en"
+    "default_language": "pt"
+  },
+  "de": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "de"
+  },
+  "es": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "es"
   },
   "eu": {
     "full_date": "October 11-17, 2014",
     "default_language": "en"
+  },
+  "gr": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "el"
+  },
+  "hr": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "hr"
+  },
+  "id": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "id"
+  },
+  "it": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "it"
+  },
+  "jp": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "ja"
+  },
+  "me": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "ar"
   },
   "nz": {
     "full_date": "December 8-14, 2014",
@@ -21,7 +57,15 @@
   },
   "ro": {
     "full_date": "December 8-14, 2014",
-    "default_language": "en"
+    "default_language": "ro"
+  },
+  "ru": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "ru"
+  },
+  "ua": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "uk"
   },
   "uk": {
     "full_date": "December 8-14, 2014",
@@ -30,5 +74,9 @@
   "us": {
     "full_date": "December 8-14, 2014",
     "default_language": "en"
+  },
+  "vn": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "vi"
   }
 }

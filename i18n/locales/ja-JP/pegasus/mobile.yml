@@ -1,227 +1,269 @@
-"ja-JP":
-  hello: "ハローワールド"
-  computer_science: "コンピュータ ・ サイエンス"
-  computer_science_edweek: "コンピューター科学教育ウィーク"
-  csedweek_dates: "2013 年 12 月 9-15日"
+ja-JP:
+  hello: ハローワールド
+  computer_science: コンピュータ ・ サイエンス
+  computer_science_edweek: コンピューター科学教育ウィーク
+  csedweek_dates: 2013 年 12 月 9-15日
   n_have_learned_an_hoc: '<h1>#</h1><h3>have tried an</h3><h2>Hour of Code</h2>'
-  anybody_can_learn: "誰もが学ぶことができます。"
-  learn_now: "今すぐ学習"
-  petition_message: "Every student in every school should have the opportunity to learn computer science"
-  petition_sign_message: "同意する場合に署名をします。＃ 他を参加します。"
-  name: "名前"
-  email: "Eメール"
-  zipcode: "Zip コードまたは国"
-  submit: "送信"
-  twentyhours_heading: "コンピュータ科学コースの紹介します。"
-  twentyhours_text: "最初のHour of Codeが終了？このフォローアップコースでコンピュータ科学やプログラミング概念をさらに学びます。"
-  twentyhours_trynow: "今すぐ試す"
-  california_heading: "Ask your school to teach computer science"
+  anybody_can_learn: 誰もが学ぶことができます。
+  learn_now: 今すぐ学習
+  petition_message: Every student in every school should have the opportunity to learn computer science
+  petition_sign_message: 同意する場合に署名をします。＃ 他を参加します。
+  name: 名前
+  email: Eメール
+  zipcode: Zip コードまたは国
+  submit: 送信
+  twentyhours_heading: コンピュータ科学コースの紹介します。
+  twentyhours_text: 最初のHour of Codeが終了？このフォローアップコースでコンピュータ科学やプログラミング概念をさらに学びます。
+  hoc2014_heading: 'Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December 8 - 14, 2014<br/>'
+  hoc2014_students: Students
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
+  twentyhours_trynow: 今すぐ試す
+  california_heading: Ask your school to teach computer science
   california_text: "Any teacher can offer our <a href='http://studio.code.org/'>free courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner with us."
-  california_button: "Learn More"
-  flappy_heading: "フラッピーバースデー to Code.org"
+  california_button: Learn More
+  flappy_heading: フラッピーバースデー to Code.org
   flappy_text: 'Code.org は誕生してちょうど 1 年になります。 <br/> <br/>。あなたがカスタムした <b>フラッピー</b> ゲームで祝いましょう。独自のルールをコードし、友達と共有しましょう！'
-  view_english_site: "英語のサイトを見る"
-  non_english_tutorials: "チュートリアルは複数の言語に翻訳されています。"
-  write_your_first_program: "あなたの最初のコンピュータ プログラムを書きます。"
+  view_english_site: 英語のサイトを見る
+  non_english_tutorials: チュートリアルは複数の言語に翻訳されています。
+  write_your_first_program: あなたの最初のコンピュータ プログラムを書きます。
   learn_cs_concepts: 'ドラッグ&ドロップでコンピュータ科学の基本概念を学びましょう。これはビル·ゲイツ、マーク·ザッカーバーグ、「アングリーバード」、そして「プラント vs. ゾンビ」によるビデオ講義を見ながらのゲームのようなチュートリアルです。repeat-loop、if-then文、および基本的なアルゴリズムはを学びましょう。'
-  all_ages: "すべての年齢"
-  beginner: "初心者のため"
+  all_ages: すべての年齢
+  beginner: 初心者のため
   n_participants: '# 参加者'
-  go: "行く"
-  thank_you_: "ありがとう！"
-  congratulations: "おめでとうございます ！"
-  congratulations_on_completing_hoc: "コード１時間を修了、おめでとうございます。"
-  get_a_certificate_of_achievement: "達成の証明書を取得します。"
-  enter_valid_email: "有効なメール アドレスを入力してください。"
+  go: 行く
+  thank_you_: ありがとう！
+  congratulations: おめでとうございます ！
+  congratulations_on_completing_hoc: コード１時間を修了、おめでとうございます。
+  get_a_certificate_of_achievement: 達成の証明書を取得します。
+  enter_valid_email: 有効なメール アドレスを入力してください。
   get_a_certificate_message: "証明書および<a href='/learn/beyond'>1 時間を超えて学ぶ</a>のやり方について情報を送ります。"
   get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
-  thanks_for_submitting: "提出してくれてありがとう ！"
-  if_you_enjoyed: "学ぶことを楽しかったら、ぜひ友達にも勧めてみてください！私たちは世界中のみんなが学んでほしいと思っています。"
-  personalize_certificate: "証明書のカスタマイズをします。"
-  share_achievement: "あなたの成果を共有します。"
+  thanks_for_submitting: 提出してくれてありがとう ！
+  if_you_enjoyed: 学ぶことを楽しかったら、ぜひ友達にも勧めてみてください！私たちは世界中のみんなが学んでほしいと思っています。
+  personalize_certificate: 証明書のカスタマイズをします。
+  share_achievement: あなたの成果を共有します。
   beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
-  leaderboards_for_hoc: "Hour of Codeのリーダー会議。"
-  country: "国"
-  city: "都市"
-  gender: "性別"
-  boys: "男の子"
-  girls: "女の子"
-  give_my_hour: "私の時間を与える："
-  girls_team: "女子チーム"
-  boys_team: "男子チーム"
-  tell_the_world: "世界に伝える ！"
-  thanks_for_voting: "投票ありがとう ！"
-  share_on_facebook: "Facebook 上で共有します。"
-  share_on_twitter: "ツイッターで共有します。"
+  leaderboards_for_hoc: Hour of Codeのリーダー会議。
+  support_url: http://support.code.org/
+  country: 国
+  city: 都市
+  gender: 性別
+  boys: 男の子
+  girls: 女の子
+  give_my_hour: 私の時間を与える：
+  girls_team: 女子チーム
+  boys_team: 男子チーム
+  tell_the_world: 世界に伝える ！
+  thanks_for_voting: 投票ありがとう ！
+  share_on_facebook: Facebook 上で共有します。
+  share_on_twitter: ツイッターで共有します。
   beyond_an_hour: 'Beyond an Hour of Code >'
-  get_started: "Start"
-  i_agree: "賛成です"
-  participant_select: "-選択-"
-  participant_student: "生徒"
-  participant_parent: "親"
-  participant_educator: "教育者"
-  participant_engineer: "ソフトウェア エンジニア"
-  participant_other: "上記に該当なし"
-  i_am_a: "私は、"
-  never_spam: "私達は決してスパムをおくりません。"
-  enter_country: "米国以外の場合、国名を入力します。"
-  petition_thankyou: "請願書に署名していただきありがとうございます"
-  carousel_heading_international: "あなたの言語のチュートリアル"
-  continue_learning_header: "1 時間以上の学習を継続します。"
-  continue_learning_body: "選択肢はたくさんあります。オンライン、または地元の学校や夏のキャンプで学ぶことができます。"
-  learn_next_level: "次のレベルに続行します。"
-  learn_online: "他のオンラインのコースを試してください。"
-  learn_classes: "近隣でクラスを見つける"
+  get_started: Start
+  i_agree: 賛成です
+  participant_select: -選択-
+  participant_student: 生徒
+  participant_parent: 親
+  participant_educator: 教育者
+  participant_engineer: ソフトウェア エンジニア
+  participant_other: 上記に該当なし
+  i_am_a: 私は、
+  never_spam: 私達は決してスパムをおくりません。
+  enter_country: 米国以外の場合、国名を入力します。
+  used_infrequent_updates: Only used for infrequent updates
+  privacy_practices_children: See our privacy practices for children
+  petition_thankyou: 請願書に署名していただきありがとうございます
+  carousel_heading_international: あなたの言語のチュートリアル
+  continue_learning_header: 1 時間以上の学習を継続します。
+  continue_learning_body: 選択肢はたくさんあります。オンライン、または地元の学校や夏のキャンプで学ぶことができます。
+  learn_next_level: 次のレベルに続行します。
+  learn_online: 他のオンラインのコースを試してください。
+  learn_classes: 近隣でクラスを見つける
   hoc_is_here: '#HourOfCode はここです - それをチェック アウト ！@codeorg'
   just_did_hoc: '私はちょうど、#HourOfCodeやりました - それをチェック アウト ！@codeorg'
-  learn_hoc: "コードの時間を学ぶ"
-  beyond_hoc: "1 時間を超えて"
-  what_gender: "性別は？"
-  girl: "女の子"
-  boy: "男の子"
-  help_recruit_coders: "あなたのチームでより多くのプログラマーを募集するのを手伝ってください ！"
-  help_recruit: "より多くのプログラマーを募集するのを手伝ってください ！"
+  learn_hoc: コードの時間を学ぶ
+  beyond_hoc: 1 時間を超えて
+  what_gender: 性別は？
+  girl: 女の子
+  boy: 男の子
+  help_recruit_coders: あなたのチームでより多くのプログラマーを募集するのを手伝ってください ！
+  help_recruit: より多くのプログラマーを募集するのを手伝ってください ！
   lines_of_code: '<b># コードの行</b> 上に日付が書き込まれます。'
   lines_of_code_alt: '<b>#</b>学生によって書かれたコードの行'
   who_has_done_hoc: '誰が、#HourOfCode を行っていますか？@codeorg'
-  hoc_leaderboards: "コード リーダー ボードの時間"
+  hoc_leaderboards: コード リーダー ボードの時間
   students_and_lines: '学生%{students} がHour of Code を行い、%{lines}行のコードを記述。'
-  start_hoc: "Hour of Codeを今すぐ開始します。"
-  contact_form_topic_press: "プレス/メディア(インタビュー や講演の契約)"
+  start_hoc: Hour of Codeを今すぐ開始します。
+  contact_form_topic_press: プレス/メディア(インタビュー や講演の契約)
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
-  studiobar_elementary_title: "Elementary courses"
+  studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: 'Our three new courses for K&#8209;5'
-  studiobar_hoc_title: "The Hour of Code"
-  studiobar_hoc_body: "Learn to code with Angry Birds"
-  studiobar_flappy_title: "Flappy Code"
-  studiobar_flappy_body: "Make and share your own Flappy game"
-  studiobar_teacher_title: "Teacher dashboard"
-  studiobar_teacher_body: "For teachers: view your students' progress"
-  contact_form_topic_student: "私は学生です"
-  contact_form_topic_parent: "私は親です"
-  contact_form_topic_teacher: "私は、教師/教育者です"
-  contact_form_topic_outside_us: "米国外にいます"
-  contact_form_topic_contribution: "慈善寄付"
-  contact_form_topic_partner: "パートナー希望"
-  contact_form_topic_other: "その他"
-  contact_form_label_topic: "トピック"
-  contact_form_label_email: "あなたのメール アドレス"
-  contact_form_label_message: "メッセージ"
-  contact_form_label_submit: "メッセージを送信"
-  class_submission_in_school: "In school"
-  class_submission_in_school_daily_programming_course: "Daily programming course"
-  class_submission_in_school_ap_computer_science: "AP computer science"
-  class_submission_in_school_full_university_cs_curriculum: "Full university CS curriculum"
-  class_submission_in_school_robotics_club: "Robotics club"
-  class_submission_in_school_programming_integrated_in_other_classes: "Programming integrated in other classes"
-  class_submission_in_school_summer_school_cs_program: "Summer school CS program"
-  class_submission_in_school_exploring_computer_science: "Exploring Computer Science"
-  class_submission_in_school_other: "Other in school"
-  class_submission_out_of_school: "Out of school"
-  class_submission_out_of_school_summer_camp: "Summer camp"
-  class_submission_out_of_school_afterschool_program: "Afterschool program"
+  studiobar_hoc_title: The Hour of Code
+  studiobar_hoc_body: Learn to code with Angry Birds
+  studiobar_flappy_title: Flappy Code
+  studiobar_flappy_body: Make and share your own Flappy game
+  studiobar_teacher_title: Made for teachers
+  studiobar_teacher_body: Introduce Code Studio in your classroom
+  contact_form_topic_student: 私は学生です
+  contact_form_topic_parent: 私は親です
+  contact_form_topic_teacher: 私は、教師/教育者です
+  contact_form_topic_outside_us: 米国外にいます
+  contact_form_topic_contribution: 慈善寄付
+  contact_form_topic_partner: パートナー希望
+  contact_form_topic_other: その他
+  contact_form_label_topic: トピック
+  contact_form_label_email: あなたのメール アドレス
+  contact_form_label_message: メッセージ
+  contact_form_label_submit: メッセージを送信
+  class_submission_in_school: In school
+  class_submission_in_school_daily_programming_course: Daily programming course
+  class_submission_in_school_ap_computer_science: AP computer science
+  class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
+  class_submission_in_school_robotics_club: Robotics club
+  class_submission_in_school_programming_integrated_in_other_classes: Programming integrated in other classes
+  class_submission_in_school_summer_school_cs_program: Summer school CS program
+  class_submission_in_school_exploring_computer_science: Exploring Computer Science
+  class_submission_in_school_other: Other in school
+  class_submission_out_of_school: Out of school
+  class_submission_out_of_school_summer_camp: Summer camp
+  class_submission_out_of_school_afterschool_program: Afterschool program
   class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
   class_submission_out_of_school_multi-week_workshop: Multi-week workshop
-  class_submission_out_of_school_other: "Other out of school"
-  class_submission_online: "Online"
-  class_submission_online_programming_class: "Online programming class"
-  class_submission_online_teacher_resource: "Online teacher resource"
-  class_submission_online_other: "Other online"
-  class_submission_level_preschool: "Preschool"
-  class_submission_level_elementary: "Elementary"
-  class_submission_level_middle_school: "Middle school"
-  class_submission_level_high_school: "High school"
-  class_submission_level_college: "College"
-  class_submission_level_vocational: "Vocational"
-  class_submission_languages_other: "Other language(s)"
-  volunteer_engineer_submission_commitment_uncertain: "Uncertain"
-  volunteer_engineer_submission_commitment_now_and_then: "Every now and then"
-  volunteer_engineer_submission_commitment_one_hr_per_week: "1 hour per week"
-  volunteer_engineer_submission_commitment_three_hrs_per_week: "3 hours per week"
-  volunteer_engineer_submission_commitment_five_hrs_per_week: "5 hours per week"
-  volunteer_engineer_submission_commitment_more: "More"
-  volunteer_engineer_submission_location_flexibility_onsite: "On-site at a school"
-  volunteer_engineer_submission_location_flexibility_remote: "Mentoring remotely (teachers or students)"
-  volunteer_engineer_submission_location_flexibility_curriculum: "Willing to help contribute to open-source curriculum projects"
-  volunteer_engineer_submission_experience_unspecified: "Unspecified"
-  volunteer_engineer_submission_experience_university_student_or_researcher: "Current university student (or researcher)"
-  volunteer_engineer_submission_experience_software_professional: "Software professional"
-  petition_age: "年齢"
-  dashboard_landing_title: "Teacher Home Page"
-  dashboard_landing_welcome: "Welcome to the new and improved teacher dashboard."
-  dashboard_landing_video: "Watch this video"
-  dashboard_landing_watch_video: "for a tour of the new features!"
-  dashboard_landing_view_as_student: "View this site as a student"
-  dashboard_landing_students_title: "Your students"
-  dashboard_landing_students_manage: "View and manage your students"
-  dashboard_landing_news_title: "Latest news"
-  dashboard_landing_new_beta: "New! Try our beta courses for K-5 students."
-  dashboard_landing_new_k5courses: "New! Try our courses for K-5 students."
-  dashboard_landing_useful_links: "Other useful links"
-  dashboard_landing_print_certificates: "このコースを終了した生徒の証明書を印刷します。"
-  dashboard_landing_educator_blog: "ニュースと更新（教師用ブログ）を読みます"
-  dashboard_landing_smart_hints: "Please help us to add smart hints to Code.org tutorials"
-  dashboard_landing_video_player: "Test our new video player at your school"
-  dashboard_landing_progress_title: "Main class progress"
-  dashboard_landing_progress_biggest: "This is the progress for your biggest section."
+  class_submission_out_of_school_other: Other out of school
+  class_submission_online: Online
+  class_submission_online_programming_class: Online programming class
+  class_submission_online_teacher_resource: Online teacher resource
+  class_submission_online_other: Other online
+  class_submission_level_preschool: Preschool
+  class_submission_level_elementary: Elementary
+  class_submission_level_middle_school: Middle school
+  class_submission_level_high_school: High school
+  class_submission_level_college: College
+  class_submission_level_vocational: Vocational
+  class_submission_languages_other: Other language(s)
+  volunteer_engineer_submission_commitment_uncertain: Uncertain
+  volunteer_engineer_submission_commitment_now_and_then: Every now and then
+  volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
+  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hours per week
+  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 hours per week
+  volunteer_engineer_submission_commitment_more: More
+  volunteer_engineer_submission_location_flexibility_onsite: On-site at a school
+  volunteer_engineer_submission_location_flexibility_remote: Mentoring remotely (teachers or students)
+  volunteer_engineer_submission_location_flexibility_curriculum: Willing to help contribute to open-source curriculum projects
+  volunteer_engineer_submission_experience_unspecified: Unspecified
+  volunteer_engineer_submission_experience_university_student_or_researcher: Current university student (or researcher)
+  volunteer_engineer_submission_experience_software_professional: Software professional
+  petition_age: 年齢
+  dashboard_landing_title: Teacher Home Page
+  dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
+  dashboard_landing_video: Watch this video
+  dashboard_landing_watch_video: for a tour of the new features!
+  dashboard_landing_view_as_student: View this site as a student
+  dashboard_landing_students_title: Your students
+  dashboard_landing_students_manage: View and manage your students
+  dashboard_landing_news_title: K-5 Educator Resources (in English only)
+  dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
+  dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
+  dashboard_landing_useful_links: Other useful links (in English only)
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video office hours.
+  dashboard_landing_print_certificates: このコースを終了した生徒の証明書を印刷します。
+  dashboard_landing_educator_blog: ニュースと更新（教師用ブログ）を読みます
+  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
+  dashboard_landing_video_player: Test our new video player at your school
+  dashboard_landing_progress_title: Main class progress
+  dashboard_landing_progress_biggest: This is the progress for your biggest section.
   dashboard_landing_view_progress: 'View Progress for %{biggest_section}'
-  dashboard_landing_available_title: "Available courses"
-  dashboard_landing_available_courses: "Here are the courses currently available for you and your students."
-  dashboard_landing_loading: "Loading..."
-  dashboard_action_edit: "編集"
-  dashboard_action_save: "Save"
-  dashboard_action_save_all: "Save all"
-  dashboard_action_cancel: "キャンセル"
-  dashboard_action_delete: "Delete"
-  dashboard_action_confirm: "Delete?"
-  dashboard_action_delete_yes: "はい"
-  dashboard_action_delete_no: "いいえ"
-  dashboard_action_done: "Done"
-  dashboard_action_required: "required"
-  dashboard_navigation_home_page: "Teacher home page"
-  dashboard_navigation_all_sections: "All sections"
-  dashboard_navigation_view_progress: "View Progress"
-  dashboard_navigation_add_students: "Add Students"
-  dashboard_navigation_manage_students: "Manage Students"
+  dashboard_landing_available_title: Available courses
+  dashboard_landing_available_courses: Here are the courses currently available for you and your students.
+  dashboard_landing_loading: Loading...
+  dashboard_action_edit: 編集
+  dashboard_action_save: Save
+  dashboard_action_save_all: Save all
+  dashboard_action_cancel: キャンセル
+  dashboard_action_delete: Delete
+  dashboard_action_confirm: Delete?
+  dashboard_action_delete_yes: はい
+  dashboard_action_delete_no: いいえ
+  dashboard_action_done: Done
+  dashboard_action_required: required
+  dashboard_navigation_home_page: Teacher home page
+  dashboard_navigation_all_sections: All sections
+  dashboard_navigation_view_progress: View Progress
+  dashboard_navigation_add_students: Add Students
+  dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
-  dashboard_sections_new_section: "New section"
-  dashboard_sections_jumbotron_instruction: "Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts."
-  dashboard_sections_table_section: "Section"
-  dashboard_sections_table_secret: "Secret type"
-  dashboard_sections_table_grade: "Grade"
-  dashboard_sections_table_course: "Course"
-  dashboard_sections_table_students: "Students"
-  dashboard_sections_table_code: "Section Code"
+  dashboard_sections_new_section: New section
+  dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
+  dashboard_sections_table_section: Section
+  dashboard_sections_table_secret: Secret type
+  dashboard_sections_table_grade: Grade
+  dashboard_sections_table_course: Course
+  dashboard_sections_table_students: Students
+  dashboard_sections_table_code: Section Code
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: 'If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section.'
   dashboard_sections_secret_word: 'A <b>word</b> allows you to set a secret word for each student.'
   dashboard_sections_secret_picture: "A <b>picture</b> allows you to set a secret picture for each student, ideal for younger students who can't yet type."
   dashboard_sections_secret_none: 'If you would like your students to manage their own accounts, including choosing their own passwords, choose a secret type of <b>none</b>.'
-  dashboard_sections_print_secrets: "You may then print a sheet of cards containing account information to be distributed to your students individually."
+  dashboard_sections_print_secrets: You may then print a sheet of cards containing account information to be distributed to your students individually.
   dashboard_sections_switch_section: 'Switch section:'
-  dashboard_students_add_student: "Add student"
-  dashboard_students_add_students: "Add multiple students"
+  dashboard_students_add_student: Add student
+  dashboard_students_add_students: Add multiple students
   dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
-  dashboard_students_name: "名前"
-  dashboard_students_age: "年齢"
-  dashboard_students_gender: "性別"
-  dashboard_students_secret: "Secret"
-  dashboard_students_password: "パスワード"
+  dashboard_students_placeholder_name: Student Name
+  dashboard_students_name: 名前
+  dashboard_students_age: 年齢
+  dashboard_students_gender: 性別
+  dashboard_students_male: 男性
+  dashboard_students_female: 女性
+  dashboard_students_secret: Secret
+  dashboard_students_password: パスワード
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_show_secret: "Show secret"
-  dashboard_students_auto_generated: "Auto-generated"
-  dashboard_students_reset_secret: "Reset secret"
-  dashboard_students_reset_password: "Reset password"
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
+  dashboard_students_show_secret: Show secret
+  dashboard_students_auto_generated: Auto-generated
+  dashboard_students_reset_secret: Reset secret
+  dashboard_students_reset_password: Reset password
   dashboard_students_share_section: "Share this section's sign in page with your students:"
   dashboard_students_print_info: "Print out cards with your students' login information."
-  dashboard_students_secret_picture: "Secret Picture"
+  dashboard_students_secret_picture: Secret Picture
   dashboard_students_reset_picture: "You may reset a student's secret picture at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret picture will be generated for that student to use when they sign in."
-  dashboard_students_secret_word: "Secret Word"
+  dashboard_students_secret_word: Secret Word
   dashboard_students_reset_word: "You may reset a student's secret words at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret words will be generated for that student to use when they sign in. "
-  dashboard_students_join_link: "Tell your students to create their own accounts and join your section at"
+  dashboard_students_join_link: Tell your students to create their own accounts and join your section at
   dashboard_students_no_email: "If your students do not have email addresses, or you would like to create accounts for them, change this section's secret type to <b>word</b> or <b>picture</b>."
-  dashboard_students_print_page: "Print this page"
-  dashboard_students_url: "URL"
+  dashboard_students_print_page: Print this page
+  dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Click here</a> for our privacy document that can be shared or printed for your students.'
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: 連続
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: その他
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
+  stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

@@ -212,7 +212,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 [together]
 
 ## Assessment (0 min)
-### <a name="Assessment"></a>7) No Indivdual Assessment
+### <a name="Assessment"></a>7) No Individual Assessment
 - The final assessment of this lesson is the result of the previous activity.
 
 [/together]

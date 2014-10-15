@@ -32,6 +32,7 @@
     submit: "Додај савет"
   appname: Code.org
   stage: "Ниво"
+  stage_number: Stage %{number}
   puzzle: "Пузле"
   trophies: "Трофеји"
   courses: "Курсеви"
@@ -78,10 +79,10 @@
       Code.org понудиће до $1000 за финансирање учионица, учитељима државних школа
       у С.А.Д. који спроведу барем 15 ученика кроз овај курс.<a href="http://code.org/educate/20hr">Погледај
       упутство за употребу за више информација.</a> '
-    teacher_pitch: "Предавајте К-8 Увод у Компјутерске Науке  вашем разреду"
+    teacher_pitch: "Регистрација за Code.org - nastavnici"
     teacher_title: "Учитељ пријављивање"
-    student_pitch: "Изван 1 часа: испробајте К-8 Увод у Компјутерске Науке"
-    student_title: "Пријави се"
+    student_pitch: "Регистрација за Code.org - студенти"
+    student_title: "Регистрација - студенти"
     school_name: "Име школе (опционо)"
     school_address: "Адреса школе (опционо)"
     address_placeholder: "адреса, град, држава, поштански код"
@@ -103,7 +104,7 @@
     additional_information: We need some additional information to continue signing
       you up.
   signin_form:
-    title: "Пријави се"
+    title: "Већ имате налог? Пријавите се"
     login: E-mail или корисничко име
     password: "Лозинка"
     remember: "Запамти ме"
@@ -111,10 +112,10 @@
   signin:
     try_heading: Want to try coding without signing up?
     try_hoc: "Прво испробај један Сат Кода"
-    try_20hours: Try our 20 hour Intro to Computer Science
+    try_20hours: "Испробајте наш 20-часовни увод у Рачунарство"
   signinsection:
     welcome: Welcome to %{section_name}
-    name: Choose your name
+    name: "Изаберите име"
     picture: Now find your secret picture
     words: Now enter your secret words
     login: "Пријави се"
@@ -252,6 +253,9 @@
     header:
       finished_hoc: "Завршио сам свој Сат Програмиранја"
       sign_in_to_save: "Пријави се да сачуваш напредак"
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: "Моји студенти"
       label: "Здраво %{username}"
@@ -357,6 +361,8 @@
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    all_courses: Overview of Courses 1, 2, and 3
+    lesson_plans: Lesson plans
     signin_message: "Или ако сте већ регистровани, %{link}"
     student_reg_link: "Регистрација за Ученике"
     teacher_reg_link: "Регистрација за Учитеље"
@@ -411,6 +417,7 @@
     feedback: "Обезбедити податке о резултатима"
     translate: "Помози нам превести на твој језик"
     support: Support
+    support_url: http://support.code.org
     tos: "Увјети кориштенја"
     privacy: "Политика приватности"
     secure: Secure Version
@@ -435,8 +442,22 @@
     autoplay_option: "Аутоматски покрени видео"
     download: "Преузмите видео"
   compatability:
-    working: "Радимо на потпори за твој претраживаћ."
-    upgrade: "Молимо набавите савременији претраживаћ."
+    working:
+      header: "Радимо на потпори за твој претраживаћ."
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Your browser doesn't support all the features required, and you may experience
+        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
+        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
+        your browser to a supported version</a>.
+      hide_this_warning: Hide this warning
+    upgrade:
+      header: "Молимо набавите савременији претраживаћ."
+      message: Code.org uses modern web technology. This makes the site faster to
+        use. Unfortunately your browser doesn't support all the features required
+        to run this part of the site.<br/><br/>Install a browser on our supported
+        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
+        expect functionality to be broken.
+      button: Take me to the list of supported browsers
   slow_loading: "Ово траје дуже него што је уобичајено ..."
   try_reloading: "Покушајте са поновним покретањем странице"
   next_stage: "Завршено! Наставите на следећу фазу"
@@ -449,6 +470,13 @@
     flappy_og_title: Check out my Flappy Game
     studio_og_title: Check out my story
     og_description: I wrote the code myself with Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: You created a new script.
     destroyed: You destroyed a script.
@@ -483,6 +511,7 @@
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
+    support_url: "//support.code.org"
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
@@ -524,7 +553,7 @@
           description: Wanna write your own game in less than 10 minutes? Try our
             Flappy Code tutorial!
         jigsaw:
-          title: Jigsaw
+          title: "Слагалица"
           description: ''
         step:
           title: Step

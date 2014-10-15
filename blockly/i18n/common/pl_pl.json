@@ -62,6 +62,7 @@
   "backToPreviousLevel": "Wróć do poprzedniego poziomu",
   "saveToGallery": "Zapisz do swojej galerii",
   "savedToGallery": "Zapisane w twojej galerii!",
+  "shareFailure": "Sorry, we can't share this program.",
   "typeCode": "Wpisz swój JavaScript kod poniżej tych instrukcji.",
   "typeFuncs": "Dostępne funkcje:%1",
   "typeHint": "Zauważ, że nawiasy i średniki są wymagane.",
