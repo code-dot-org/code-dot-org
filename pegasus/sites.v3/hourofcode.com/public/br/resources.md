@@ -11,7 +11,7 @@ nav: resources_nav
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Use este folheto para divulgar o evento
 </h2>
 
 <p>
@@ -19,7 +19,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Entregue este material para professores e escolas
 </h2>
 
 <p>
@@ -30,7 +30,7 @@ nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Mostre estes vídeos para inspirar os alunos
   </h2>
   
   <div style="float:left; padding:10px">
@@ -74,7 +74,7 @@ nav: resources_nav
 <a id="posters"></p> 
 
 <h2>
-  Hang these posters in your school
+  Mostre estes vídeos para inspirar os alunos
 </h2>
 
 <p>
@@ -94,7 +94,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Feature these banners on your website
+  Apresente estes banners em seu site
 </h2>
 
 <p>
@@ -106,7 +106,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Send these emails to help promote the Hour of Code
+  Envie estes e-mails para ajudar a promover a Hora do Código
 </h2>
 
 <p>
@@ -114,7 +114,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Ask your school, employer or friends to sign up:
+  Peça para sua escola, empregador ou amigos se inscreverem:
 </h2>
 
 <p>
@@ -142,7 +142,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Invite media to attend your event:
+  Convide a mídia para participar de seu evento:
 </h2>
 
 <p>
