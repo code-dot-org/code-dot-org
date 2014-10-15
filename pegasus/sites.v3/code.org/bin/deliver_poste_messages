@@ -164,7 +164,7 @@ class Deliverer
     name = address[:name].to_s.strip
     return email if name.empty?
     
-    name = "\"#{name.gsub('"', '\"')}\"" if name.include?('"')
+    name = "\"#{name.gsub('"', '\"')}\"" if name.include?('"') || name.include?(',')
     "#{name} <#{email}>".strip
   end
   
