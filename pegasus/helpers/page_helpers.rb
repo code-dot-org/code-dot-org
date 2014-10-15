@@ -10,7 +10,7 @@ def page_translated?()
 end
 
 def locale_ro?()
-  request.locale == 'ro'
+  request.locale == 'ro-RO'
 end
 
 def locale_br?()
@@ -18,7 +18,7 @@ def locale_br?()
 end
 
 def locale_it?()
-  request.locale == 'it'
+  request.locale == 'it-IT'
 end
 
 def not_partner_site?()
