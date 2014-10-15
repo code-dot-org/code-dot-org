@@ -64,6 +64,15 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
   }
   for (var optsObj in options) {
     var func, wrapper;
+    // In general, the options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // We have one special case if there is a key called 'codeFunctions'
+    // This is a table of objects, each representing a function (name in .func)
+    // that we want to expose to the interpreter in the global/window namespace
+    // (not belonging to an object)
     if (optsObj.toString() === 'codeFunctions') {
       for (var i = 0; i < optsObj.length; i++) {
         // Populate each of the codeFunctions with native functions
@@ -74,14 +83,14 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
                                 interpreter.createNativeFunction(wrapper));
       }
     } else {
-      // Create global objects in the interpreter for everything in options
+      // Create global objects in the interpreter for everything else in options
       var obj = interpreter.createObject(interpreter.OBJECT);
       interpreter.setProperty(scope, optsObj.toString(), obj);
       for (var prop in options[optsObj]) {
         func = options[optsObj][prop];
         if (func instanceof Function) {
           // Populate each of the global objects with native functions
-          // NOTE: other properties are not passed to the interpreter
+          // NOTE: other properties are not currently passed to the interpreter
           wrapper = makeNativeMemberFunction(func, options[optsObj]);
           interpreter.setProperty(obj,
                                   prop,
@@ -116,6 +125,8 @@ exports.evalWith = function(code, options) {
  */
 exports.functionFromCode = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
     throw "Unexpected";
   } else {
     var params = [];
