@@ -26,12 +26,12 @@ class UserAgentParser::UserAgent
   end
 
   def cdo_unsupported?
-    return ie? && version && version.major < 8
+    return ie? && version && version.major.to_i < 8
   end
 
   def cdo_partially_supported?
     return false if version.nil?
-    ver = version.major
+    ver = version.major.to_i
 
     # IE 9+
     return true if ie? && ver < 9
