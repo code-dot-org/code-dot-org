@@ -11,9 +11,6 @@ nav: resources_nav
 ## Use this handout to spread the word
 [![image](/images/fit-250/one-pager.png)](/resources/hoc-one-pager.pdf)
 
-## Give this handout to teachers and schools
-[![image](/images/fit-250/schools-handout.png)](/files/schools-handout.pdf)
-
 <a id="videos">
 ## Show these videos to inspire students
 

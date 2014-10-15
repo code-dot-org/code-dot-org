@@ -272,6 +272,16 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'some', create(:user, :name => '  some whitespace in front  ').short_name # whitespace in front
   end
 
+
+  test "initial" do
+    assert_equal 'L', create(:user, :name => 'Laurel Fan', :username => 'laurelfan').initial # first name last name
+    assert_equal 'W', create(:user, :name => 'Winnie the Pooh').initial # middle name
+    assert_equal "D", create(:user, :name => "D'Andre Means").initial # punctuation ok
+    assert_equal '樊', create(:user, :name => '樊瑞').initial # ok, this isn't actually right but ok for now
+    assert_equal 'L', create(:user, :name => 'Laurel').initial # just one name
+    assert_equal 'S', create(:user, :name => '  some whitespace in front  ').initial # whitespace in front
+  end
+
   test "find_for_authentication with nonsense" do
     # login by username still works
     user = create :user, username: 'blahblah'

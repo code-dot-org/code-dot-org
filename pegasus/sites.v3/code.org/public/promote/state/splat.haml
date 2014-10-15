@@ -16,7 +16,13 @@ theme: none
       = view :petition
   -elsif state == "thanks"
     #thanks-section.section.clear
-      %p Thank you for your support. Please help us spread the word.
+      %p{:style=>"font-size:18px;"}
+        Computer science drives innovation in the US economy and society. Despite growing demand for jobs in the field, it remains marginalized throughout the US K-12 education system.
+      %p{:style=>"font-size:18px;"}
+        Currently,
+        %strong
+          =no_credit_count()
+        states still don't allow students to count computer science courses toward high school graduation.
   -else
     #state-section.clear
       = view :promote_state, state:state

@@ -409,6 +409,12 @@ SQL
     name.split.first # 'first name'
   end
 
+  def initial
+    return nil if name.blank?
+    return name.strip[0].upcase
+  end
+
+
   # override the default devise password to support old and new style hashed passwords
   # based on Devise::Models::DatabaseAuthenticatable#valid_password?
   # https://github.com/plataformatec/devise/blob/master/lib/devise/models/database_authenticatable.rb#L46

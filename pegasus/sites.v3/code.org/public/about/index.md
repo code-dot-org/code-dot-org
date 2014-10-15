@@ -14,13 +14,13 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding participa
 
 | Code.org Goal | Accomplishment |
 |------|----------------|
-| Inspire students | 42 million students have tried the [Hour of Code](/learn). |
+| Inspire students | 44 million students have tried the [Hour of Code](/learn). |
 | Create fantastic  courses | 99% of teachers recommend the Code.org [intro CS curriculum](http://learn.code.org) |
-| Reach classrooms | Our [intro course](http://studio.code.org) is in 38,000 classrooms, reaching 1.5M students |
+| Reach classrooms | Our [intro course](http://studio.code.org) is in 46,000 classrooms, reaching 1.5M students |
 | Improve diversity in CS | In our online courses, 40% of the students are girls. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity) |
 | Go global | Our courses are available in 30+ languages, used in 170+ countries |
 | Train new CS teachers | We trained 700 new teachers in summer 2014. |
-| Change school district curriculum | [10 districts](/educate/partner-districts) are adding [CS classes](/educate/curriculum) with us, including 3 of the largest 6|
+| Change school district curriculum | [30+ districts](/educate/partner-districts) are adding [CS classes](/educate/curriculum) with us, including 3 of the largest 6|
 | Set up policies to support CS | Policy changed in [15 states](/action) including TX, FL, IL, OH.|
 
 <br/>

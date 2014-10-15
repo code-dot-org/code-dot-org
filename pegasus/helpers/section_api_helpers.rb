@@ -1,3 +1,10 @@
+# TODO -- remove this and change the APIs below to check logged in user instead of passing in a user id
+class Dashboard
+  def self.admin?(user_id)
+    !!DASHBOARD_DB[:users].where(id: user_id, admin: true).first
+  end
+end
+
 class DashboardStudent
   def self.fetch_user_students(user_id)
     DASHBOARD_DB[:users].
@@ -40,7 +47,7 @@ class DashboardStudent
 
     return unless DASHBOARD_DB[:followers].
       where(student_user_id: id,
-            user_id: dashboard_user_id)
+            user_id: dashboard_user_id) || Dashboard::admin?(user_id)
 
     row = DASHBOARD_DB[:users].
       left_outer_join(:secret_pictures, id: :secret_picture_id).
@@ -249,7 +256,7 @@ class DashboardSection
       first
 
     section = self.new(row)
-    return section if section.member?(user_id)
+    return section if section.member?(user_id) || Dashboard::admin?(user_id)
     nil
   end
 
@@ -261,7 +268,7 @@ class DashboardSection
       first
 
     section = self.new(row)
-    return section if section.teacher?(user_id)
+    return section if section.teacher?(user_id) || Dashboard::admin?(user_id)
     nil
   end
 
