@@ -12,7 +12,7 @@ Rádi bychom hostovali i řadu dalších nabízených možností se zapojit, ale
 
 <a id="top"></a>
 
-## Obsah:
+## Seznam:
 
   * [Jak se hodnotí výukové programy pro jejich zařazení](#inclusion)
   * [Všeobecné pokyny pro vytvoření aktivity Hodiny kódu](#guidelines)
@@ -36,9 +36,9 @@ Komise pedagogů z oblasti informatiky určuje pořadí zaslaných výukových p
   * navržené pro začátečníky
   * plánované jako hodinová aktivita
   * pracují napříč mnoha provozními platformami bez ohledu na operační systém a hardware, včetně mobilů a tabletů
-  * pracuje s více jazyky
+  * pracuje ve více jazycích
   * podporuje vzdělávání všech demografických skupin (zejména málo zastoupených skupin)
-  * Není jen čistě zaměřený na HTML + CSS webový design - (našim cílem je matematická informatika, nikoliv jen HTML kódování)
+  * Není jen čistě zaměřené na HTML + CSS webový design - (náš cíl je širší, informatika, nikoliv jen HTML kódování)
 
 **Výukové programy jsou zařazeny níže, mají-li následující kritéria:**
 
@@ -157,7 +157,7 @@ Navštivte [stránku Hodina kód aktivita odesílání ](https://docs.google.com
 
 **Začlenit na konci činnosti zpětnou vazbu .** (Např.: "dokončil jste 10 úrovní a naučil jste se o cyklech! Skvělá práce!")
 
-**Začlenit sociální média.** Povzbuzovat studenty, aby při dokončení přispívali na sociální média (kde je to vhodné), například "udělal jsem Hodinu kódu s \___\_____ , máš taky? #HourOfCode" nebo "udělal jsem #HourofCode jako součást #CSEdWeek. Už jste udělali? @Scratch." Použijte mřížkovou značku**#HourOfCode** (s písmeny H, O, C)
+**Začlenit sociální média.** Povzbuzovat studenty, aby při dokončení přispívali na sociální média (kde je to vhodné), například "udělal jsem Hodinu kódu s ________ , máš taky? #HourOfCode" nebo "udělal jsem #HourofCode jako součást #CSEdWeek. Už jste udělali? @Scratch." Použijte mřížkovou značku**#HourOfCode** (s písmeny H, O, C)
 
 **Vytvořit aktivitu v jazycích mimo angličtiny.** Tento rok zaměřujeme tuto kampaň mezinárodně a rádi bychom chtěli nabízet řadu aktivit neanglicky mluvících účastníků.
 
@@ -235,7 +235,7 @@ Obracíme se žádostí na každého, aby podpořil jejich vlastním 1 hodinový
 
 <a id="disabilities"></a>
 
-## A special note for students with disabilities
+## Zvláštní poznámka pro studenty se zdravotním postižením
 
 Pokud vytváříte kurz určený pro zrakově postižené, rádi bychom, abyste zvýraznili , že se jedná o možnost použít nástroje pro čtení obrazovky. Zatím jsme Jsme dosud nedostaly takový výukový program. který by zahrnoval takovou možnost pro takovéto studenty.
 

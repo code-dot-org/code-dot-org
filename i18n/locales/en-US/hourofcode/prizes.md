@@ -10,21 +10,29 @@ crwdns19580:0crwdne19580:0
 
 crwdns19583:0crwdne19583:0
 
-<% if @country == 'us' %>
+<% if @country == 'uk' %>
 
 ## crwdns19584:0crwdne19584:0
 
-crwdns19585:0crwdne19585:0 crwdns19586:0crwdne19586:0 crwdns19587:0crwdne19587:0
+crwdns20692:0crwdne20692:0 crwdns19586:0crwdne19586:0 crwdns19587:0crwdne19587:0
 
-## crwdns19588:0crwdne19588:0
+<% end %>
 
-crwdns19589:0crwdne19589:0 crwdns19590:0crwdne19590:0 crwdns19591:0crwdne19591:0
+<% if @country == 'us' %>
 
-## crwdns19592:0crwdne19592:0
+## crwdns20693:0crwdne20693:0
 
-crwdns19593:0crwdne19593:0 crwdns19594:0crwdne19594:0
+crwdns20694:0crwdne20694:0 crwdns20695:0crwdne20695:0 crwdns20696:0crwdne20696:0
 
-<%= view :hardware\_prizes\_form %>
+## crwdns20697:0crwdne20697:0
+
+crwdns20698:0crwdne20698:0 crwdns20699:0crwdne20699:0 crwdns20700:0crwdne20700:0
+
+## crwdns20701:0crwdne20701:0
+
+crwdns20702:0crwdne20702:0 crwdns20703:0crwdne20703:0
+
+<%= view :hardware_prizes_form %>
 
 <what are your odds of winning?>
 
@@ -32,6 +40,6 @@ crwdns19593:0crwdne19593:0 crwdns19594:0crwdne19594:0
 
 <% end %>
 
-## crwdns19595:0crwdne19595:0
+## crwdns20704:0crwdne20704:0
 
-crwdns19596:0crwdne19596:0
+crwdns20705:0crwdne20705:0

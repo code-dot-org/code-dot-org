@@ -1,6 +1,6 @@
 * * *
 
-title: Resources layout: wide
+عنوان: منابع نما: بزرگ
 
 * * *
 

@@ -8,14 +8,14 @@ título: Recursos layout: amplo
 
 ## 1) Veja os tutoriais:
 
-Nós vamos disponibilizar diversos tutoriais divertidos com duração de uma hora para alunos de todas as idades, criados por vários parceiros. Novos tutoriais estão a caminho para dar início à Hora do Código, que acontecerá de 8 a 14 de dezembro.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
 **Todos os tutoriais da Hora do Código:**
 
   * Exigem um tempo mínimo de preparação dos professores
   * São autoexplicativos, o que permite que os alunos trabalhem em seu próprio ritmo e nível de habilidade
 
-[![imagem](http://code.org/images/tutorials.png)](http://code.org/learn)
+[![image](http://code.org/images/tutorials.png)](http://code.org/learn)
 
 ## 2) Planeje suas necessidades de hardware (computadores são opcionais)
 
@@ -32,7 +32,7 @@ Para a melhor experiência com a Hora do Código, o ideal são computadores cone
 
 ## 4) Inspire seus alunos - mostre-lhes um vídeo
 
-Show students <% if @country == 'uk' %> [this video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [this video](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %> to kick off the Hour of Code. Veja também [estes vídeos](http://youtube.com/codeorg), com Bill Gates, Mark Zuckerberg, will.i.am (fundador da banda Black Eyed Peas) e Chris Bosh (estrela da NBA) falando sobre a importância da programação. (Há versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
+Mostre aos alunos <% if @country == 'uk' %> [este vídeo](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [este vídeo](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %> para dar início à Hora do Código. Veja também [estes vídeos](http://youtube.com/codeorg), com Bill Gates, Mark Zuckerberg, will.i.am (fundador da banda Black Eyed Peas) e Chris Bosh (estrela da NBA) falando sobre a importância da programação. (Há versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
 
 **Estimule seus alunos - faça uma breve introdução**
 
@@ -47,7 +47,7 @@ A maioria das crianças não sabe o que é a ciência da computação. Estas sã
 
 **Direcione os alunos para a atividade**
 
-  * Escreva o link do tutorial na lousa. Find the link listed on the <% if @country == 'uk' %> [information for your selected tutorial](http://uk.code.org/learn) <% else %> [information for your selected tutorial](http://code.org/learn) <% end %>under the number of participants. (Exemplo: [hourofcode.com/co](http://code.org/learn)) 
+  * Escreva o link do tutorial na lousa. Encontre o link listado nas <% if @country == 'uk' %> [informações do tutorial que você selecionou](http://uk.code.org/learn) <% else %> [informações do tutorial que você selecionou](http://code.org/learn) <% end %>abaixo do número de participantes. (Exemplo: [hourofcode.com/co](http://code.org/learn)) 
   * Peça aos alunos que visitem a URL e comecem o tutorial.
 
 **Quando seus alunos se depararem com dificuldades**
@@ -58,13 +58,13 @@ A maioria das crianças não sabe o que é a ciência da computação. Estas sã
 
 **O que fazer se um aluno terminar mais cedo?**
 
-  * Students can see all tutorials and try another Hour of Code activity at <% if @country == 'uk' %> [uk.code.org/learn](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
+  * Os alunos podem ver todos os tutoriais e tentar fazer outra atividade da Hora do Código em <% if @country == 'uk' %> [uk.code.org/learn](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
   * Ou, peça aos alunos que terminarem mais cedo para ajudar os colegas que estão tendo problemas com a atividade.
 
 **Como posso imprimir certificados para meus alunos?**
 
-Todos os alunos podem receber um certificado por e-mail ao terminar os [tutoriais da Code.org](http://studio.code.org). Você pode clicar no certificado para imprimi-lo. However, if you want to make new certificates for your students, visit our <% if @country == 'uk' %> [Certificates](http://uk.code.org/certificates) <% else %> [Certificates](http://code.org/certificates) <% end %> page to print as many certificates as you like, in one fell swoop!
+Todos os alunos podem receber um certificado por e-mail ao terminar os [tutoriais da Code.org](http://studio.code.org). Você pode clicar no certificado para imprimi-lo. Entretanto, se quiser fazer novos certificados para seus alunos, visite nossa página <% if @country == 'uk' %> [Certificados](http://uk.code.org/certificates) <% else %> [Certificados](http://code.org/certificates) <% end %> para imprimir quantos certificados quiser, em um piscar de olhos!
 
 **O que vem depois da Hora do Código?**
 
-A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como devemos criar aplicativos de software. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://code.org/educate). Ou incentive as crianças a aprender [on-line](http://code.org/learn/beyond). <% end %>
+A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como devemos criar aplicativos de software. <% if @country == 'uk' %> A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como devemos criar aplicativos de software. Para continuar esta jornada, [incentive seus filhos a aprenderem on-line](http://uk.code.org/learn/beyond). <% else %> Para continuar nessa jornada, encontre recursos adicionais para educadores [aqui](http://code.org/educate). Ou incentive as crianças a aprender [on-line](http://code.org/learn/beyond). <% end %>

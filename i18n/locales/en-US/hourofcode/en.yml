@@ -16,12 +16,23 @@ en-US:
   country_ar: crwdns19416:0crwdne19416:0
   country_au: crwdns19417:0crwdne19417:0
   country_br: crwdns19418:0crwdne19418:0
+  country_bg: crwdns20668:0crwdne20668:0
+  country_de: crwdns20669:0crwdne20669:0
+  country_es: crwdns20670:0crwdne20670:0
   country_eu: crwdns19419:0crwdne19419:0
+  country_gr: crwdns20671:0crwdne20671:0
+  country_hr: crwdns20672:0crwdne20672:0
+  country_id: crwdns20673:0crwdne20673:0
   country_it: crwdns19420:0crwdne19420:0
+  country_jp: crwdns20674:0crwdne20674:0
+  country_me: crwdns20675:0crwdne20675:0
   country_nz: crwdns19421:0crwdne19421:0
   country_ro: crwdns19422:0crwdne19422:0
+  country_ru: crwdns20676:0crwdne20676:0
+  country_ua: crwdns20677:0crwdne20677:0
   country_uk: crwdns19423:0crwdne19423:0
   country_us: crwdns19424:0crwdne19424:0
+  country_vn: crwdns20678:0crwdne20678:0
   prizes_all: crwdns19425:0crwdne19425:0
   prizes_every_organizer: crwdns19426:0crwdne19426:0
   prizes_technology: crwdns19427:0crwdne19427:0
@@ -78,7 +89,7 @@ en-US:
   signup_submit_error_message: crwdns19468:0crwdne19468:0
   signup_thank_you_header: crwdns19469:0crwdne19469:0
   signup_thank_you_message: crwdns19470:0crwdne19470:0
-  map_header: crwdns19471:0crwdne19471:0
+  map_header: crwdns20679:0crwdne20679:0
   map_header_ar: crwdns19472:0crwdne19472:0
   meta_tag_og_title: crwdns19473:0crwdne19473:0
   meta_tag_og_description: crwdns20250:0crwdne20250:0
@@ -112,17 +123,17 @@ en-US:
   hoc_faq_why_cs_q: crwdns19502:0crwdne19502:0
   hoc_faq_why_cs_a: crwdns19503:0crwdne19503:0
   hoc_faq_how_participate_q: crwdns19504:0crwdne19504:0
-  hoc_faq_how_participate_a: crwdns20064:0crwdne20064:0
+  hoc_faq_how_participate_a: crwdns20680:0crwdne20680:0
   hoc_faq_behind_hoc_q: crwdns19506:0crwdne19506:0
   hoc_faq_behind_hoc_a: crwdns19507:0crwdne19507:0
   hoc_faq_host_q: crwdns19508:0crwdne19508:0
-  hoc_faq_host_a: crwdns20065:0crwdne20065:0
+  hoc_faq_host_a: crwdns20681:0crwdne20681:0
   hoc_faq_need_computers_q: crwdns19510:0crwdne19510:0
   hoc_faq_need_computers_a: crwdns19511:0crwdne19511:0
   hoc_faq_international_q: crwdns19512:0crwdne19512:0
   hoc_faq_international_a: crwdns19513:0crwdne19513:0
   hoc_faq_tutorial_q: crwdns19514:0crwdne19514:0
-  hoc_faq_tutorial_a: crwdns20171:0crwdne20171:0
+  hoc_faq_tutorial_a: crwdns20682:0crwdne20682:0
   hoc_faq_what_is_hoc_uk_a: crwdns20066:0crwdne20066:0
   hoc_faq_when_is_hoc_uk_a: crwdns19517:0crwdne19517:0
   hoc_faq_why_cs_uk_a: crwdns20067:0crwdne20067:0
@@ -158,6 +169,14 @@ en-US:
   stats_nina: crwdns19548:0crwdne19548:0
   stats_student: crwdns19549:0crwdne19549:0
   stats_michael: crwdns19550:0crwdne19550:0
+  resources_how_to: crwdns20683:0crwdne20683:0
+  resources_handouts: crwdns20684:0crwdne20684:0
+  resources_videos: crwdns20685:0crwdne20685:0
+  resources_posters: crwdns20686:0crwdne20686:0
+  resources_banners: crwdns20687:0crwdne20687:0
+  resources_emails: crwdns20688:0crwdne20688:0
+  resources_stats: crwdns20689:0crwdne20689:0
+  resources_press_kit: crwdns20690:0crwdne20690:0
   footer_copyright_message: crwdns19551:0crwdne19551:0
   footer_trademark_message: crwdns19552:0crwdne19552:0
   footer_menu_partners: crwdns20069:0crwdne20069:0

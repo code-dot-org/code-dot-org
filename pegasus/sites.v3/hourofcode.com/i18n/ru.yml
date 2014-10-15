@@ -4,8 +4,8 @@ ru:
   front_title: Присоединяйтесь к крупнейшему учебному событию в истории, 8-14 декабря 2014
   coming_soon: Скоро
   front_header_banner: Присоединяйтесь к крупнейшему учебному событию в истории, 8-14 декабря 2014
-  front_intro_default: 'Час Кода - это глобальное движение, которое охватывает десятки миллионов учеников в каждой стране. Любой человек, где угодно может организовать Час Кода. Уроки длительностью в час доступны на более чем 30 языках. Не требуется никакого опыта. <strong>Возраст от 4 до 104.</strong>'
-  front_intro_default_uk: 'Час кода - это глобальное движение охватывающее десятки миллионов учеников в 170+ странах. Любой может организовать Час Кода. Более 3 миллионов учеников участвовали в первом Часе Кода в Соединенном Королевстве. Давайте удвоим это число в декабре! <strong>Не требуется никакого опыта. Возраст от 4 до 104.</strong>'
+  front_intro_default: 'Час Кода - это глобальное движение, которое охватывает десятки миллионов студентов в более чем 180 странах. Каждый, где угодно может организовать Час Кода. Уроки длительностью в час доступны более чем на 30 языках. Не требуется никакого опыта.<strong>Возраст от 4 от 104.</strong>'
+  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 170 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>No se necesita experiencia. Para edades entre 4 y 104 años.</strong>'
   front_watch_video: Посмотреть новое видео
   header_menu_resources: Ресурсы
@@ -16,12 +16,23 @@ ru:
   country_ar: Аргентина
   country_au: Австралия
   country_br: Бразилия
+  country_bg: Bulgaria
+  country_de: Germany
+  country_es: Latin America
   country_eu: Европейский Союз
+  country_gr: Greece
+  country_hr: Croatia
+  country_id: Indonesia
   country_it: Италия
+  country_jp: Japan
+  country_me: Middle East and North Africa
   country_nz: Новая Зеландия
   country_ro: Румыния
+  country_ru: Russia
+  country_ua: Ukraine
   country_uk: Соединенное Королевство
   country_us: Соединенные Штаты
+  country_vn: Vietnam
   prizes_all: Призы для каждого организатора
   prizes_every_organizer: Каждый организатор Часа Кода в благодарность получит бонусы в Dropbox или Skype
   prizes_technology: Одна из государственных школ в каждом штате США (и Вашингтоне оК) выиграет технологии стоимостью в $10,000
@@ -78,12 +89,12 @@ ru:
   signup_submit_error_message: Ошибка. Пожалуйста, убедитесь, что все поля были правильно заполнены.
   signup_thank_you_header: Спасибо, что зарегистрировались на проведение Часа Кода.
   signup_thank_you_message: Мы выслали Вам электронное письмо с информацией, которая поможет Вам начать.
-  map_header: Час Кода по всему миру
+  map_header: '# Hour of Code events around the world'
   map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
   meta_tag_og_title: Грядет Час Кода
-  meta_tag_og_description: 'Час Кода - глобальное движение, которое охватывает миллионы учеников в 200 странах и более 30 языков. Возраст с 4 до 104.'
+  meta_tag_og_description: 'Час Кода - это глобальное движение, охватывающее десятки миллионов учеников в более чем 180 странах и более чем на 30 языках. В возрасте от 4 до 104.'
   meta_tag_twitter_title: Грядет Час Кода
-  meta_tag_twitter_description: 'Час Кода - глобальное движение, которое охватывает миллионы учеников в 200 странах и более 30 языков. Возраст с 4 до 104.'
+  meta_tag_twitter_description: 'Час Кода - это глобальное движение, охватывающее десятки миллионов учеников в более чем 180 странах и более чем на 30 языках. В возрасте от 4 до 104.'
   twitter_default_text: 'Я участвую в этом году в #HourOfCode, а ты? @codeorg'
   hardware_prizes_form_name_label: Ваше имя
   hardware_prizes_form_name_placeholder: Ваше имя
@@ -112,15 +123,15 @@ ru:
   hoc_faq_why_cs_q: Почему информатика?
   hoc_faq_why_cs_a: "<i>Каждый</i> ученик должен иметь возможность изучать информатику. Она помогает питать способности к решению задач, логику и изобретательность. Начав заранее, ученики будут иметь основы для успеха в любом карьерном пути в 21 веке. Больше статистика на <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Как мне участвовать в Часе Кода?
-  hoc_faq_how_participate_a: "Зарегистрируйтесь для проведения Часа Кода <a href='http://hourofcode.org'>here</a> и<a href='target-resources-how-to'>начните планировать</a>. Вы можете организвать Час Кода в вашей школе или в вашем сообществе &mdash; в клубе по интересам, некоммерческой организации или на работе. Или просто попробуйте сами 8 декабря."
+  hoc_faq_how_participate_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.org'>here</a> and <a href='target-resources-how-to'>start planning</a>. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
   hoc_faq_behind_hoc_q: Кто стоит за Часом Кода?
   hoc_faq_behind_hoc_a: "Час Кода организован <a href='http://code.org'>Code.org</a>, публичной (501c3) некоммерческой организацией, направленной на расширение участия в информатике, делая её доступной в большем количестве школ, и увеличивая участие женщин и студентов, принадлежащих расовым меньшинствами. Также, <a href='http://code.org/about/partners'>небывалый союз партнеров</a> собрался для поддержки Часа Кода, &mdash; включая Microsoft, Apple, Amazon, Boys and Girls Clubs of America и College Board."
   hoc_faq_host_q: Я не знаю ничего о написании кода. Могу ли я участвовать?
-  hoc_faq_host_a: "Конечно. Мероприятия Часа Кода не нуждаются в ведении. Всё, что Вам нужно сделать - это <a href='http://code.org/learn'>попробовать наши уроки</a>, выбрать урок, который вы хотите,и выбрать время &mdash; об остальном мы позаботимся. У нас также есть варианты для всех возрастов и уровней опыта - от детского сада и выше. Начните планировать ваше мероприятие прочитав <a href='target-resources-how-to'>как вести</a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='http://code.org/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='target-resources-how-to'>how to guide</a>."
   hoc_faq_need_computers_q: Нужны ли мне компьютеры для каждого участника?
-  hoc_faq_need_computers_a: "No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work in pairs.</b> Research shows students learn best with <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pair programming</a>, sharing a computer and working together. Encourage your students to double up. <li><b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b> We offer tutorials that require no computer at all. </ul>"
+  hoc_faq_need_computers_a: "Нет. У нас есть уроки, которые работают на ПК, смартфонах, планшетах, и уроки, для которых не нужны компьютеры! Вы можете присоединиться где бы Вы не находились, что бы у Вас не было в руках. <p><i>Вот несколько вариантов:</i> <br> <ul> <li><b>Работайте в парах.</b> Исследования показывают, что студенты учатся лучше всего в<a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>парах</a>, деля компьютер и работая вместе. Поощряйте парную работу. <li><b>Используйте проектор.</b> Если у Вас есть проектор и экран, подключенные к компьютеру с доступом в сеть, вся Ваша группа может заниматься Часом Кода вместе. Смотрите видео вместе и решайте по очереди задачи или отвечайте на вопросы. <li><b>Работайте без подключения в сеть.</b> Мы предлагаем уроки, для которых вообще не нужно компьютеры. </ul>"
   hoc_faq_international_q: Я нахожусь за пределами Соединенных Штатов. Как участвовать на международном уровне?
-  hoc_faq_international_a: Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code.
+  hoc_faq_international_a: Каждый может организовать Час Кода, где угодно в мире. В прошлом году, ученики со всего мира объединились для Часа Кода.
   hoc_faq_tutorial_q: Как я могу создать урок для Часа Кода?
   hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -145,7 +156,7 @@ ru:
   hoc_faq_tutorial_ar_a: "Si usted está interesado en convertirse en un socio para tutoriales, <a href='/tutorial-guidelines'>vea nuestras directrices e instrucciones</a>. Nos gustaría presentar varias opciones atractivas, pero la meta principal es optimizar la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales."
   stats_hoc_2013_heading: 'Невероятная статистика с прошлогоднего Часа Кода. За одну неделю:'
   stats_hoc_2013_image_alt: Статистика с Часа Кода 2013 года
-  stats_growth: It was the fastest to reach 15 million users.
+  stats_growth: Мероприятие, быстрее других набравшее 15 миллионов пользователей.
   stats_tumblr: 'Tumblr: 3.5 года'
   stats_facebook: 'Facebook: 3 года'
   stats_twitter: 'Twitter: 2.5 года'
@@ -158,6 +169,14 @@ ru:
   stats_nina: '"Каждый день приносил один и тот же результат - &mdash; 100% участие." - Nina Nichols Peery, Учитель'
   stats_student: '"Я знала, что этот шанс - <b>единственный в жизни</b>." - Mariana Alzate, пятиклассница'
   stats_michael: 'Я <b>никогда</b> не видел моих учеников такими восхищенными обучением ." - Michael Clark, Учитель'
+  resources_how_to: How-to guide for teachers
+  resources_handouts: Handouts to spread the word
+  resources_videos: Videos
+  resources_posters: Posters
+  resources_banners: Banners
+  resources_emails: Sample emails
+  resources_stats: Useful computer science stats
+  resources_press_kit: Press Kit
   footer_copyright_message: Авторские права 2014 Code.org. Все права защищены.
   footer_trademark_message: Hour of Code™ является торговой маркой Code.org.
   footer_menu_partners: Партнеры

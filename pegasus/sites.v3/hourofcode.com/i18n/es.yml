@@ -4,8 +4,8 @@ es:
   front_title: Únete al evento de aprendizaje más grande en la historia, 8 al 14 de diciembre 2014
   coming_soon: Próximamente
   front_header_banner: Únete al evento de aprendizaje más grande en la historia, 8 al 14 de diciembre 2014
-  front_intro_default: 'La Hora de Código es un movimiento global, en el que están involucrados decenas de millones de estudiantes de diferentes países. Cualquiera persona, en cualquier lugar, puede organizar un evento "Una Hora de Código". Hay lecciones de una hora de código disponibles en más de treinta idiomas distintos. No se requiere experiencia previa. <strong>Está pensado para alumnos desde cuatro a cientocuatro años de edad.</strong>'
-  front_intro_default_uk: 'Una hora de código es un movimiento global que involucra a decenas de millones de estudiantes en más de ciento setenta países. Cualquier persona puede organizar un evento "Una Hora de Código".  En el primer evento "Una Hora de Código" celebrado en el Reino Unido participaron más de tres millones de estudiantes. ¡Doblemos esta cantidad en Diciembre! <strong>No se requiere experiencia. Se admiten participantes desde cuatro a ciento cuatro años de edad.</strong>'
+  front_intro_default: 'La Hora del Código es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 180+ países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Código. Tutoriales de una hora están disponibles en más de 30 idiomas. No se necesita experiencia. <strong>Para edades entre 4 y 104 años.</strong>'
+  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 170 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>No se necesita experiencia. Para edades entre 4 y 104 años.</strong>'
   front_watch_video: Mira el nuevo vídeo
   header_menu_resources: Recursos
@@ -16,22 +16,33 @@ es:
   country_ar: Argentina
   country_au: Australia
   country_br: Brasil
+  country_bg: Bulgaria
+  country_de: Germany
+  country_es: Latin America
   country_eu: Unión Europea
+  country_gr: Greece
+  country_hr: Croatia
+  country_id: Indonesia
   country_it: Italia
+  country_jp: Japan
+  country_me: Middle East and North Africa
   country_nz: Nueva Zelanda
   country_ro: Rumania
+  country_ru: Russia
+  country_ua: Ukraine
   country_uk: Reino Unido
   country_us: Estados Unidos
+  country_vn: Vietnam
   prizes_all: Todos los organizadores reciben una recompensa
   prizes_every_organizer: 'Cada organizador de "Una hora de programación" recibirá créditos de Dropbox o Skype como muestra de agradecimiento'
   prizes_technology: Una escuela pública en cada estado de EE UU (y Washington DC) ganará equipos tecnológicos por valor de 10.000 dólares
   prizes_tech_chats: 50 clases conseguirán chats en vídeo con invitados muy especiales
   prizes_details: Detalles
-  n_have_learned_an_hoc: '<h1>#</h1><h3>han probado una</h3><h2>HORA de PROGRAMACIÓN</h2>'
+  n_have_learned_an_hoc: '<h1>#</h1><h3>han probado la</h3><h2>Hora del código</h2>'
   anybody_can_learn: Cualquier persona puede aprender.
-  register_now: Regístrate Ahora
-  front_join_us_heading: Una hora de programación para cada estudiante.
-  front_join_us_description: La ciencia de computación es una base para todo estudiante. Ayúdanos a introducirla a 100 millones.
+  register_now: Registrate Ahora
+  front_join_us_heading: Una hora de código para cada estudiante.
+  front_join_us_description: Las ciencias de computación son una base para todo estudiante. Ayúdanos a presentarlas a 100 millones.
   front_join_us_button: Acompáñanos
   front_what_is_hoc: Qué es la Hora de Programación?
   front_join_us_header: 'En cualquier momento entre el 8 y el 14 de diciembre, la Semana de la Educación de Ciencias de la Computación, celebra un evento de "Una hora de programación" para mostrar que todo el mundo puede aprender los fundamentos básicos, ¡y diviértete haciéndolo!'
@@ -75,15 +86,15 @@ es:
   signup_event_type_in_school: En una escuela
   signup_event_type_out_of_school: Afuera de la escuela
   signup_submit_label: Suscribirme
-  signup_submit_error_message: Se ha producido un error. Por favor verifique que han sido llenados todos los campos requeridos correctamente.
-  signup_thank_you_header: Gracias por registrarse para ser anfitrión del evento de la Hora del Programación.
-  signup_thank_you_message: Te enviamos un email de confirmación con información que te ayudará a comenzar.
-  map_header: Eventos de Hora de Programación alrededor del mundo
+  signup_submit_error_message: Se ha producido un error. Por favor verifique que ha llenado todos los campos requeridos correctamente.
+  signup_thank_you_header: Gracias por registrarse para presentar un evento de la Hora del Programación.
+  signup_thank_you_message: Te enviamos un email de confirmación con la información que le ayudará a comenzar.
+  map_header: '# Hour of Code events around the world'
   map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
   meta_tag_og_title: Hora de Código está al llegar
-  meta_tag_og_description: Hora de Código es un movimiento global en el que participan decenas de millones de estudiantes de 200 países y en más de 30 lenguas. Con edades comprendidas entre 4 y 104 años.
+  meta_tag_og_description: La hora del código es un movimiento global en el que participan decenas de millones de estudiantes en más de 180 países y en más de 30 idiomas, con edades entre 4 y 104 años.
   meta_tag_twitter_title: Hora de Código está al llegar
-  meta_tag_twitter_description: Hora de Código es un movimiento global en el que participan decenas de millones de estudiantes de 200 países y en más de 30 lenguas. Con edades comprendidas entre 4 y 104 años.
+  meta_tag_twitter_description: La hora del código es un movimiento global en el que participan decenas de millones de estudiantes en más de 180 países y en más de 30 idiomas, con edades entre 4 y 104 años.
   twitter_default_text: 'Yo participo este año en #HoraDeCódigo, ¿Y tú? @codeorg'
   hardware_prizes_form_name_label: Tu nombre
   hardware_prizes_form_name_placeholder: Tu nombre
@@ -97,11 +108,11 @@ es:
   hardware_prizes_form_school_type_option_elementary: Escuela primaria
   hardware_prizes_form_school_type_option_middle_school: Escuela Secundaria
   hardware_prizes_form_school_type_option_high_school: Secundaria
-  hardware_prizes_form_qualifying_school_label: Ésta es una escuela pública de Kínder a Grado 12
+  hardware_prizes_form_qualifying_school_label: Esta es una escuela K-12 pública
   hardware_prizes_form_number_students_label: Número de estudiantes que participan
   hardware_prizes_form_number_students_placeholder: Número de estudiantes
   hardware_prizes_form_plan_file_label: Carga tu plan de logística para la Hora de Programación
-  hardware_prizes_form_plan_file_description: 'Envía un calendario sencillo de como planeas organizar a cada estudiante para hacer la Hora de Programación en tu escuela. Observa un plan de muestra: #PDF # | #Word #'
+  hardware_prizes_form_plan_file_description: 'Envía un calendario sencillo de como planea organizar organizar a todos los estudiantes para hacer la Hora de Programación en tu escuela. Observer un de ejemplo: #PDF # | #Word #'
   hardware_prizes_form_submit_label: Enviar
   hoc_faq_title: Preguntas más frecuentes
   hoc_faq_what_is_hoc_q: Qué es la Hora de Programación?
@@ -121,7 +132,7 @@ es:
   hoc_faq_need_computers_q: ¿Necesito computadoras para cada participante?
   hoc_faq_need_computers_a: "No. Tenemos tutorales de la Hora de Programación que funcionan en PCs, teléfonos inteligentes, tabletas y algunos que no requieren ¡ninguna computadora en absoluto! Tú puedes unirte desde donde quiera que estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i> <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes aprenden mejor con <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares de programación</a>, compartiendo una computadora y trabajando juntos. Anima a tus estudiantes a trabajar en pares. <li><b>Una pantalla proyectada.</b> Si tú tienes un proyector y una computadora conectada a Internet, el grupo entero puede hacer una hora de programación juntos. Mira porciones de videos juntos y toma turnos para resolver acertijos o responder preguntas. <li><b>Desconéctate.</b> Ofrecemos tutoriales que no requieren ninguna computadora en absoluto. </ul>"
   hoc_faq_international_q: Estoy fuera de los Estados Unidos. ¿Cómo puedo participar internacionalmente?
-  hoc_faq_international_a: Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code.
+  hoc_faq_international_a: Cualquiera puede organizar un evento de la hora del código, en cualquier parte del mundo. El año pasado, estudiantes de todo el mundo se unieron para la hora del código.
   hoc_faq_tutorial_q: ¿Cómo puedo hacer un tutoría de la Hora de Programación?
   hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -146,23 +157,31 @@ es:
   hoc_faq_tutorial_ar_a: "Si usted está interesado en convertirse en un socio para tutoriales, <a href='/tutorial-guidelines'>vea nuestras directrices e instrucciones</a>. Nos gustaría presentar varias opciones atractivas, pero la meta principal es optimizar la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales."
   stats_hoc_2013_heading: 'Estadísticas increíbles de la Hora de Programación del año pasado. En tan sólo una semana:'
   stats_hoc_2013_image_alt: Estadísticas de la Hora de Programación del 2013
-  stats_growth: It was the fastest to reach 15 million users.
-  stats_tumblr: 'Tumblr: 3.5 years'
-  stats_facebook: 'Facebook: 3 years'
-  stats_twitter: 'Twitter: 2.5 years'
-  stats_pinterest: 'Pinterest: 2 years'
-  stats_instagram: 'Instagram: 14 months'
-  stats_hoc: 'The Hour of Code: 5 days'
-  stats_global: 15 million students worldwide learned an Hour of Code.
-  stats_girls_more: More girls tried computer science than in the last 70 years.
-  stats_girls_million: Over 10 million girls in 2013
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
-  stats_michael: 'I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_growth: Fue el más rápido para llegar a 15 millones de usuarios.
+  stats_tumblr: 'Tumblr: 3.5 años'
+  stats_facebook: 'Facebook: 3 años'
+  stats_twitter: 'Twitter: 2.5 años'
+  stats_pinterest: 'Pinterest: 2 años'
+  stats_instagram: 'Instagram: 14 meses'
+  stats_hoc: 'La hora del código: 5 días'
+  stats_global: 15 millones de estudiantes en todo el mundo aprendieron una hora del código.
+  stats_girls_more: Más chicas intentaron informática que en los últimos 70 años.
+  stats_girls_million: Más de 10 millones de chicas en 2013
+  stats_nina: '"Cada día produjo los mismos resultados &mdash; 100% de compromiso."-Nina Nichols Peery, profesor'
+  stats_student: '"Sabía que era una oportunidad <b>única</b> ."-Mariana Alzate, estudiante de 5° grado'
+  stats_michael: '<b>nunca</b> había visto a mis alumnos tan emocionados por aprender. "-Michael Clark, profesor'
+  resources_how_to: How-to guide for teachers
+  resources_handouts: Handouts to spread the word
+  resources_videos: Videos
+  resources_posters: Posters
+  resources_banners: Banners
+  resources_emails: Sample emails
+  resources_stats: Useful computer science stats
+  resources_press_kit: Press Kit
   footer_copyright_message: Copyright Code.org 2014. Todos los derechos reservados.
-  footer_trademark_message: Hour of Code™ es una marca registrada de Code.org.
-  footer_menu_partners: Partners
-  footer_menu_contact: Contact us
-  footer_menu_support: Support
+  footer_trademark_message: Hora de código ™ es una marca registrada de Code.org.
+  footer_menu_partners: Asociados
+  footer_menu_contact: Contáctenos
+  footer_menu_support: Soporte
   footer_menu_terms: Términos
   footer_menu_privacy: Política de Privacidad

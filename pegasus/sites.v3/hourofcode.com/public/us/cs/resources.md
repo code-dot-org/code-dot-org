@@ -80,7 +80,7 @@ nav: resources_nav
 </p>
 
 <h4>
-  <a href="http://hourofcode.com/us#signup">Přihlaste se </a> na událost Hodina kódu a my vám namailujeme zdarma plakáty.
+  <a href="http://hourofcode.com/#signup">Přihlaste se </a> na událost Hodina kódu a my vám namailujeme zdarma plakáty.
 </h4>
 
 <p>

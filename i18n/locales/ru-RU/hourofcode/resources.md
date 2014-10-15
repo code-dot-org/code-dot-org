@@ -1,10 +1,12 @@
 * * *
 
-title: Resources layout: wide nav: resources_nav
+Название: Ресурсы макет: широкий nav: resources_nav
 
 * * *
 
 # Ресурсы
+
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
 
 <a id="handouts"></p> 
 
@@ -32,14 +34,16 @@ title: Resources layout: wide nav: resources_nav
   </h2>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>What Most Schools Don't Teach (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>То, чему большинство школ не учат (5 мин)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code is Here - Anybody Can Learn</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>"Час программирования" здесь - Каждый Может Научиться</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -47,14 +51,16 @@ title: Resources layout: wide nav: resources_nav
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama on computer science</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Президент Obama на информатике</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Anybody Can Learn (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Каждый Может Научиться (1мин)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -76,7 +82,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h4>
-      <a href="http://hourofcode.com/us#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
+      <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
     </h4>
     
     <p>
@@ -112,23 +118,23 @@ title: Resources layout: wide nav: resources_nav
     </h2>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+      Компьютеры везде, но сейчас меньше школ учат информатике чем 10 лет назад. Хорошая новость заключается в том, мы на пути того, чтобы изменить это. Если вы слышали о "Часе программирования" в прошлом году, то вы наверно знаете, что он вошел в историю. За одну неделю 15 миллионов учеников попробовали себя в информатике!
     </p>
     
     <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Информатика была на домашних страницах Google, MSN, Yahoo! и Disney. Президент Obama, Шакира и Эштон Катчер начали "Час программирования" с видео. Более 100 партнеров, собрались вместе, чтобы поддержать это движение.
     </p>
     
     <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+      В этом году давайте сделаем его еще больше. Я прошу вас присоединиться к "Часу программирования" 2014. Пожалуйста, примите участие в событии "Час программирования" в рамках недели информатики, 8-14 декабря 2014 года.
     </p>
     
     <p>
-      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
+      Распространите новость. Проведите мероприятие. Попросите местную школу зарегистрироваться. Или попробуйте "Час программирования" сами -- каждый может извлечь пользу из обучения основам.
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+      Помогите нам достичь 100 миллионов учеников в конце года! Начать работу на http://hourofcode.com
     </p>
     
     <p>
@@ -140,27 +146,27 @@ title: Resources layout: wide nav: resources_nav
     </h2>
     
     <p>
-      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
+      <strong>Тема:</strong> Местная школа присоединяется к миссии представить 100 ученикам информатику
     </p>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
+      Компьютеры везде, но сейчас школы учат информатике меньше чем 10 лет назад. Девушки и меньшинства крайне незначительном количестве. Хорошая новость в том, что мы находимся на пути, чтобы изменить это.
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      В течение одной недели в прошлом году 15 миллионов учеников попробовали себя в информатике! Информатика была на домашних страницах Google, MSN, Yahoo! и Disney. Президент Obama, Шакира и Эштон Катчер начали "Час программирования" с видео. Более 100 партнеров, собрались вместе, чтобы поддержать это движение.
     </p>
     
     <p>
-      Now the Hour of Code movement is aiming for 100 million students.
+      Теперь движение "Час программирования" стремится к 100 миллионам учеников.
     </p>
     
     <p>
-      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
+      Вот почему каждый из [number X] ученики в [SCHOOL NAME] объединяются в крупнейшем в истории обучения: "Часе программирования", 8-14 декабря.
     </p>
     
     <p>
-      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
+      Я пишу, чтобы пригласить вас принять участие в нашей стартовой сборке, и, чтобы увидеть как дети начинают узнавать информатику [DATE].
     </p>
     
     <p>

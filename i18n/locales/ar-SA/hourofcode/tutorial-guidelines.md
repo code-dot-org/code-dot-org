@@ -8,7 +8,7 @@ layout: wide
 
 موقع Code.org سيحتوي على مجموعة من الانشطة المستمدة من مواقع Code.org، ساعة البرمجة و CSEdWeek. القائمة الحالية موجودة بهذا الرابط <http://code.org/learn>.
 
-بودنا أن تستضيف مجموعة متنوعة من الخيارات، ولكن الهدف الأساسي هو تحسين الخبرة للطلاب والمدرسين المبتدئين في مجال علوم الحاسوب. الرجاء استخدام هذه الوثيقة كدليل لإنشاء النشاط الخاص بك، هذا النشاط موجه للمستخدم الذي ليست لديه أي معرفة في البرمجة وعلوم الكمبيوتر.
+نود أن تستضيف مجموعة متنوعة من خيارات جذابة، ولكن الهدف الأساسي هو تحسين الخبرة للطلاب والمدرسين المبتدئين في مجال علوم الحاسوب. الرجاء استخدام هذه الوثيقة كدليل لإنشاء النشاط الخاص بك، هذا النشاط موجه للمستخدم الذي ليست لديه أي معرفة في البرمجة وعلوم الكمبيوتر.
 
 <a id="top"></a>
 
@@ -35,10 +35,10 @@ layout: wide
   * ذات توجيه ذاتي، لا تتطلب أي تعليمات
   * مصممة للمبتدئين
   * صممت كنشاط تدوم مدته ~ 1 ساعة
-  * العمل عبر العديد من انظمة التشغيل و الاجهزة المحمولة، بما في ذلك الهواتف الجوالة و اللوحات الرقمية
-  * متوفربلغات متعددة
-  * تعزيز التعلم للجميع ( بما في ذلك الاقليات)
-  * ليست مركزة على تصميم مواقع الانترنت فقط باستعمال HTML و CSS (أن هدفنا هو علوم الحاسوب ، ليس فقط برمجة إتش تي أم ال HTML)
+  * العمل عبر العديد من انظمة التشغيل للحواسيب و الاجهزة المحمولة، بما في ذلك الهواتف الجوالة و اللوحات الرقمية
+  * العمل عبر لغات متعددة
+  * تعزيز التعلم بجميع المجموعات السكانية ( مثل الاقليات )
+  * ليست مركزة على تصميم مواقع الانترنت فقط باستعمال HTML و CSS (أن هدفنا هو علوم الحاسوب ، ليس فقط ربمجة إتش تي أم ال HTML)
 
 **ترتيب الانشطة سيكون اقل اذا:**
 
@@ -157,7 +157,7 @@ layout: wide
 
 **Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with \___\_____ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
 **Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
 

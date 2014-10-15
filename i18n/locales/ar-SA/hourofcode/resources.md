@@ -6,14 +6,16 @@ title: Resources layout: wide nav: resources_nav
 
 # الموارد
 
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
 <a id="handouts"></p> 
 
 <h2>
-  استخدام هذه النشرات لنشر الحدث
+  Use this handout to spread the word
 </h2>
 
 <p>
-  <a href="/resources/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="image" /></a>
+  <a href="/resources/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="الصورة" /></a>
 </p>
 
 <h2>
@@ -21,7 +23,7 @@ title: Resources layout: wide nav: resources_nav
 </h2>
 
 <p>
-  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="image" /></a>
+  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="الصورة" /></a>
 </p>
 
 <p>
@@ -32,12 +34,14 @@ title: Resources layout: wide nav: resources_nav
   </h2>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>ما معظم المدارس لا تعلم (5 دقائق)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>هنا ساعة البرمجة - الجميع بامكانه التعلم</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -47,12 +51,14 @@ title: Resources layout: wide nav: resources_nav
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>الرئيس أوباما حول علوم الحاسوب</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>أي شخص يمكن أن يتعلم (1 دقيقة)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -76,11 +82,11 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h4>
-      <a href="http://hourofcode.com/us#signup">سجل </a> حدثك حول ساعة البرمجة و سوف نرسل لك الملصقات مجاناً.
+      <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
     </h4>
     
     <p>
-      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="الصورة" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="الصورة" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="الصورة" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="الصورة" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="الصورة" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="الصورة" /></a>
     </p>
     
     <p>
@@ -92,7 +98,7 @@ title: Resources layout: wide nav: resources_nav
     </h2>
     
     <p>
-      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -112,23 +118,23 @@ title: Resources layout: wide nav: resources_nav
     </h2>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+      أجهزة الكمبيوتر موجودة في كل مكان، ولكن هناك أقل مدارس تعلم علوم الحاسوب مقارنة مع 10 سنوات مضت. الخبر السار، نحن في طريقنا لتغيير هذا. إذا كنت قد سمعت عن ساعة البرمجة في العام الماضي، قد تعرف أنها دخلت التاريخ. في أسبوع واحد فقط، جرب 15 مليون طالب علوم الحاسوب!
     </p>
     
     <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      علوم الحاسوب كانت في الصفحات الرئيسية من جوجل، MSN، ياهو! وديزني. أوباما الرئيس، شاكيرا، والسيدة أشتون كاتشر دعموا الساعة بأشرطة الفيديو. جاء ما يزيد على 100 من الشركاء معا لدعم هذه الحركة.
     </p>
     
     <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+      هذا العام، دعونا نجعل الحدث أكبر حجماً. أنا أطلب منك للانضمام ساعة البرمجة دورة 2014. الرجاء المشاركة في هذا الحدث خلال أسبوع التعليم علوم الحاسوب، 8-14 كانون الأول/ديسمبر، عام 2014.
     </p>
     
     <p>
-      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
+      انشر المعلومة. استضف هذا حدث. اطلب من المدرسة القريبة منك التسجيل. أو حاول ساعة البرمجة بنفسك--ويمكن للجميع الاستفادة من تعلم الأساسيات.
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+      ساعدنا على الوصول إلى 100 مليون من التلاميذ قبل نهاية السنة! للشروع في العمل في http://hourofcode.com
     </p>
     
     <p>
@@ -140,23 +146,23 @@ title: Resources layout: wide nav: resources_nav
     </h2>
     
     <p>
-      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
+      <strong>الموضوع:</strong>تنضم المدرسة إلى مبادرة تهدف لتعريف 100 مليون طالب بعلوم الحاسب
     </p>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
+      أجهزة الكمبيوتر موجودة في كل مكان، ولكن عدد المدارس التي تعلم علوم الحاسوب اقل مما عليه 10 سنوات مضت. الفتيات والأقليات يمثلون نسبة قليلة . والخبر السار، نحن في طريقنا تغيير هذا.
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      في أسبوع واحد من العام الماضي، حاول 15 مليون طالب علوم الحاسوب! علوم الحاسوب كانت في الصفحات الرئيسية من جوجل، MSN، ياهو! وديزني. أوباما الرئيس، شاكيرا، والسيدة أشتون كاتشر دعموا الساعة بأشرطة الفيديو. جاء ما يزيد على 100 من الشركاء معا لدعم هذه الحركة.
     </p>
     
     <p>
-      Now the Hour of Code movement is aiming for 100 million students.
+      وتهدف حركة "ساعة البرمجة" الآن للوصول الى 100 مليون طالب.
     </p>
     
     <p>
-      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
+      لهذا السبب كل واحد من [عدد الطلبة] في [اسم المدرسة] سينضمون الى أكبر حدث تعليمي في التاريخ: "ساعة البرمجة"، خلال الفترة من 8-14 كانون الأول/ديسمبر.
     </p>
     
     <p>
