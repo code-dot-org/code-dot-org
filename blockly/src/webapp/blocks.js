@@ -42,8 +42,8 @@ exports.install = function(blockly, blockInstallOptions) {
     return '\n';
   };
 
-  // started separating block generation for each block into it's own function
   installTurnBlack(blockly, generator, blockInstallOptions);
+  installCreateHtmlBlock(blockly, generator, blockInstallOptions);
 };
 
 function installTurnBlack(blockly, generator, blockInstallOptions) {
@@ -61,5 +61,30 @@ function installTurnBlack(blockly, generator, blockInstallOptions) {
 
   generator.webapp_turnBlack = function() {
     return 'Webapp.turnBlack(\'block_id_' + this.id + '\');\n';
+  };
+}
+
+function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
+  blockly.Blocks.webapp_createHtmlBlock = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput().appendTitle(msg.createHtmlBlock());
+      this.appendValueInput('ID');
+      this.appendValueInput('HTML');
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.createHtmlBlockTooltip());
+    }
+  };
+
+  generator.webapp_createHtmlBlock = function() {
+    var idParam = Blockly.JavaScript.valueToCode(this, 'ID',
+        Blockly.JavaScript.ORDER_NONE) || '';
+    var htmlParam = Blockly.JavaScript.valueToCode(this, 'HTML',
+        Blockly.JavaScript.ORDER_NONE) || '';
+    return 'Webapp.createHtmlBlock(\'block_id_' + this.id +
+               '\', ' + idParam + ', ' + htmlParam + ');\n';
   };
 }
