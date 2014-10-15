@@ -161,20 +161,27 @@ class K5ProfessionalDevelopmentSurvey
       '46-50',
       '51+',
     ]
+
     result[:send_materials_flag_b] = stripped data[:send_materials_flag_b]
-    result[:send_materials_name_s] = required stripped data[:send_materials_name_s]
-    result[:send_materials_street1_s] = required stripped data[:send_materials_street1_s]
-    result[:send_materials_street2_s] = stripped data[:send_materials_street2_s]
-    result[:send_materials_city_s] = required stripped data[:send_materials_city_s]
-    result[:send_materials_state_s] = required stripped data[:send_materials_state_s]
-    result[:send_materials_zip_s] = required stripped data[:send_materials_zip_s]
-    result[:send_materials_email_s] = required stripped data[:send_materials_email_s]
-    result[:send_materials_phone_s] = required stripped data[:send_materials_phone_s]
-    result[:send_materials_course_s] = required enum data[:send_materials_course_s].to_s.strip.downcase, [
-      'course 1 (beginners to computer science; early)',
-      'course 2 (beginners to computer science; readers)',
-      'course 3 (builds on course 2)',
-    ]
+
+    if result[:send_materials_flag_b] == 1
+      result[:send_materials_name_s] = required stripped data[:send_materials_name_s]
+      result[:send_materials_street1_s] = required stripped data[:send_materials_street1_s]
+      result[:send_materials_street2_s] = stripped data[:send_materials_street2_s]
+      result[:send_materials_city_s] = required stripped data[:send_materials_city_s]
+      result[:send_materials_state_s] = required stripped data[:send_materials_state_s]
+      result[:send_materials_zip_s] = required stripped data[:send_materials_zip_s]
+      result[:send_materials_email_s] = required stripped data[:send_materials_email_s]
+      result[:send_materials_phone_s] = required stripped data[:send_materials_phone_s]
+      result[:send_materials_course_s] = required enum data[:send_materials_course_s].to_s.strip.downcase, [
+        'course 1 (beginners to computer science; early)',
+        'course 2 (beginners to computer science; readers)',
+        'course 3 (builds on course 2)',
+      ]
+    end
+
+    result
+
   end
 
 end
