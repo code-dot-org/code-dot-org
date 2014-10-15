@@ -12,8 +12,9 @@ rightbar: blank
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 
 %form#k5-professional-development-survey-form{role: "form"}
-  #error-message{style: 'display: none'}
   %h1 Satisfaction Survey for Code.org's K-5 Professional Development Workshop
+
+  #error-message{style: 'display: none'}
 
   .main-section
     %h2 About your workshop facilitator
@@ -117,11 +118,11 @@ rightbar: blank
   .main-section
     %h2 About yourself
     .form-group
-      %label.control-label{for: "k5-teacher_type"}
+      %label.control-label{for: "k5-teacher-type"}
         Are you a...
         %span.form-required-field *
       %div
-        %select#k5-teacher_type.form-control{name: "teacher_type_s", required: true, type: "select"}
+        %select#k5-teacher-type.form-control{name: "teacher_type_s", required: true, type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "in-service teacher, currently teaching"} In-service Teacher, Currently Teaching
           %option{value: "pre-service teacher, also working in a classroom under a master-teacher"} Pre-service Teacher, Also Working In A Classroom Under A Master-teacher
@@ -130,12 +131,12 @@ rightbar: blank
           %option{value: "out-of-school educator"} Out-of-school Educator
           %option{value: "administrator"} Administrator
           %option{value: "other"} other
-      %div{id: 'k5-teacher_type_other-wrapper', style: 'display: none;'}
-        %label.control-label{for: "k5-teacher_type_other"}<
+      %div{id: 'k5-teacher-type-other-wrapper', style: 'display: none;'}
+        %label.control-label{for: "k5-teacher-type-other"}<
           %em{style: 'font-weight: normal;'} Other type of teacher
           %span.form-required-field *
         %div
-          %input#k5-teacher_type_other.form-control{name: "teacher_type_other_s", placeholder: "other", type: "text"}
+          %input#k5-teacher-type_other.form-control{name: "teacher_type_other_s", placeholder: "other", type: "text"}
     .form-group
       %label.control-label{for: "k5-district"}
         What school district do you teach in?
@@ -147,11 +148,11 @@ rightbar: blank
       %div
         %input#k5-school.form-control{name: "school_s", type: "text"}
     .form-group
-      %label.control-label{for: "k5-school_type"}
+      %label.control-label{for: "k5-school-type"}
         School type
         %span.form-required-field *
       %div
-        %select#k5-school_type.form-control{name: "school_type_s", required: true, type: "select"}
+        %select#k5-school-type.form-control{name: "school_type_s", required: true, type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "public school"} Public School
           %option{value: "charter (public or private)"} Charter (Public or Private)
@@ -162,17 +163,17 @@ rightbar: blank
           %option{value: "home school"} Home School
           %option{value: "other"} other
       %div{id: 'k5-school_type_other-wrapper', style: 'display: none;'}
-        %label.control-label{for: "k5-school_type_other"}<
+        %label.control-label{for: "k5-school-type-other"}<
           %em{style: 'font-weight: normal;'} Other type of organization
           %span.form-required-field *
         %div
-          %input#k5-school_type_other.form-control{name: "school_type_other_s", placeholder: "other", type: "text"}
+          %input#k5-school-type-other.form-control{name: "school_type_other_s", placeholder: "other", type: "text"}
     .form-group
-      %label.control-label{for: "k5-teacher_years"}
+      %label.control-label{for: "k5-teacher-years"}
         Including this year, how many years have you been a teacher?
         %span.form-required-field *
       %div
-        %select#k5-teacher_years.form-control{name: "teacher_years_s", required: true, type: "select"}
+        %select#k5-teacher-years.form-control{name: "teacher_years_s", required: true, type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "0-2"} 0-2
           %option{value: "3-5"} 3-5
@@ -182,10 +183,10 @@ rightbar: blank
           %option{value: "21-25"} 21-25
           %option{value: "26+"} 26+
     .form-group
-      %label.control-label{for: "k5-teacher_grades"}
+      %label.control-label{for: "k5-teacher-grades"}
         What grade(s) do you teach? Select all that apply.
       %div
-        %select#k5-teacher_grades.form-control{name: "teacher_grades_ss", type: "select", multiple: true}
+        %select#k5-teacher-grades.form-control{name: "teacher_grades_ss", type: "select", multiple: true}
           %option{selected: "selected", value: ""} -- Select all that apply--
           %option{value: "pre-kindergarten"} Pre-kindergarten
           %option{value: "kindergarten"} Kindergarten
@@ -202,11 +203,11 @@ rightbar: blank
           %option{value: "11th"} 11th
           %option{value: "12th"} 12th
     .form-group
-      %label.control-label{for: "k5-teacher_describe"}
+      %label.control-label{for: "k5-teacher-describe"}
         Which best describes you?
         %span.form-required-field *
       %div
-        %select#k5-teacher_describe.form-control{name: "teacher_describe_s", required: true, type: "select"}
+        %select#k5-teacher-describe.form-control{name: "teacher_describe_s", required: true, type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "elementary classroom teacher"} Elementary Classroom Teacher
           %option{value: "math teacher"} Math Teacher
@@ -215,36 +216,36 @@ rightbar: blank
           %option{value: "librarian"} Librarian
           %option{value: "stem specialist"} STEM Specialist
           %option{value: "other"} other
-      %div{id: 'k5-teacher_describe_other-wrapper', style: 'display: none;'}
-        %label.control-label{for: "k5-teacher_describe_other"}<
+      %div{id: 'k5-teacher-describe-other-wrapper', style: 'display: none;'}
+        %label.control-label{for: "k5-teacher-describe-other"}<
           %em{style: 'font-weight: normal;'} Other type of teacher
           %span.form-required-field *
         %div
-          %input#k5-teacher_describe_other.form-control{name: "teacher_describe_other_s", placeholder: "other", type: "text"}
+          %input#k5-teacher-describe-other.form-control{name: "teacher_describe_other_s", placeholder: "other", type: "text"}
     .form-group
-      %label.control-label{for: "k5-course_offering"}
+      %label.control-label{for: "k5-course-offering"}
         Will you be offering the course to your students?
         %span.form-required-field *
       %div
-        %select#k5-course_offering.form-control{name: "course_offering_s", required: true, type: "select"}
+        %select#k5-course-offering.form-control{name: "course_offering_s", required: true, type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "yes"} Yes
           %option{value: "no"} No
           %option{value: "maybe"} Maybe
     .form-group
-      %label.control-label{for: "k5-teaching_cs"}
+      %label.control-label{for: "k5-teaching-cs"}
         Will this be your first year teaching computer science?
         %span.form-required-field *
       %div
-        %select#k5-teaching_cs.form-control{name: "teaching_cs_s", required: true, type: "select"}
+        %select#k5-teaching-cs.form-control{name: "teaching_cs_s", required: true, type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "yes"} Yes
           %option{value: "no"} No
     .form-group
-      %label.control-label{for: "k5-cs_materials"}
+      %label.control-label{for: "k5-cs-materials"}
         If you have taught computer science before, what materials/resources have you used? Please select all that apply.
       %div
-        %select#k5-cs_materials.form-control{name: "cs_materials_ss", required: true, type: "select", multiple: true}
+        %select#k5-cs-materials.form-control{name: "cs_materials_ss", required: true, type: "select", multiple: true}
           %option{selected: "selected", value: ""} -- Select all that apply--
           %option{value: "scratch"} Scratch
           %option{value: "tynker"} Tynker
@@ -253,18 +254,18 @@ rightbar: blank
           %option{value: "appinventor"} Appinventor
           %option{value: "code.org"} Code.org
           %option{value: "other"} other
-      %div{id: 'k5-cs_materials_other-wrapper', style: 'display: none;'}
-        %label.control-label{for: "k5-cs_materials_other"}<
+      %div{id: 'k5-cs_materials-other-wrapper', style: 'display: none;'}
+        %label.control-label{for: "k5-cs-materials-other"}<
           %em{style: 'font-weight: normal;'} Other type of computer science materials
           %span.form-required-field *
         %div
-          %input#k5-cs_materials_other.form-control{name: "cs_materials_other_s", placeholder: "other", type: "text"}
+          %input#k5-cs-materials-other.form-control{name: "cs_materials_other_s", placeholder: "other", type: "text"}
     .form-group
-      %label.control-label{for: "k5-undergrad_degree"}
+      %label.control-label{for: "k5-undergrad-degree"}
         In what area is your primary undergraduate degree?
         %span.form-required-field *
       %div
-        %select#k5-undergrad_degree.form-control{name: "undergrad_degree_s", required: true, type: "select"}
+        %select#k5-undergrad-degree.form-control{name: "undergrad_degree_s", required: true, type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "art"} Art
           %option{value: "business"} Business
@@ -277,26 +278,26 @@ rightbar: blank
           %option{value: "science"} Science
           %option{value: "social science"} Social Science
           %option{value: "other"} other
-      %div{id: 'k5-undergrad_degree_other-wrapper', style: 'display: none;'}
-        %label.control-label{for: "k5-undergrad_degree_other"}<
+      %div{id: 'k5-undergrad-degree-other-wrapper', style: 'display: none;'}
+        %label.control-label{for: "k5-undergrad-degree-other"}<
           %em{style: 'font-weight: normal;'} Other type of degree
           %span.form-required-field *
         %div
-          %input#k5-undergrad_degree_other.form-control{name: "undergrad_degree_other_s", placeholder: "other", type: "text"}
+          %input#k5-undergrad-degree-other.form-control{name: "undergrad_degree_other_s", placeholder: "other", type: "text"}
     .form-group
-      %label.control-label{for: "k5-grad_degree"}
+      %label.control-label{for: "k5-grad-degree"}
         Do you have a graduate degree(s)?
         %span.form-required-field *
       %div
-        %select#k5-grad_degree.form-control{name: "grad_degree_s", required: true, type: "select"}
+        %select#k5-grad-degree.form-control{name: "grad_degree_s", required: true, type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "yes"} Yes
           %option{value: "no"} No
     .form-group
-      %label.control-label{for: "k5-grad_type"}
+      %label.control-label{for: "k5-grad-type"}
         If you have a graduate degree, what area is it in?
       %div
-        %select#k5-grad_type.form-control{name: "grad_type_s", type: "select"}
+        %select#k5-grad-type.form-control{name: "grad_type_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "art"} Art
           %option{value: "business"} Business
@@ -309,36 +310,36 @@ rightbar: blank
           %option{value: "science"} Science
           %option{value: "social science"} Social Science
           %option{value: "other"} other
-      %div{id: 'k5-grad_type_other-wrapper', style: 'display: none;'}
-        %label.control-label{for: "k5-grad_type_other"}<
+      %div{id: 'k5-grad-type-other-wrapper', style: 'display: none;'}
+        %label.control-label{for: "k5-grad-type-other"}<
           %em{style: 'font-weight: normal;'} Other type of graduate degree
           %span.form-required-field *
         %div
-          %input#k5-grad_type_other.form-control{name: "grad_type_other_s", placeholder: "other", type: "text"}
+          %input#k5-grad-type-other.form-control{name: "grad_type_other_s", placeholder: "other", type: "text"}
     .form-group
-      %label.control-label{for: "k5-cs_certification"}
+      %label.control-label{for: "k5-cs-certification"}
         Do you have any computer science certifications or endorsements?
         %span.form-required-field *
       %div
-        %select#k5-cs_certification.form-control{name: "cs_certification_s", required: true, type: "select"}
+        %select#k5-cs-certification.form-control{name: "cs_certification_s", required: true, type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "yes"} Yes
           %option{value: "no"} No
     .form-group
-      %label.control-label{for: "k5-cs_professional"}
+      %label.control-label{for: "k5-cs-professional"}
         Do you have experience working as a professional in the computer science industry?
         %span.form-required-field *
       %div
-        %select#k5-cs_professional.form-control{name: "cs_professional_s", required: true, type: "select"}
+        %select#k5-cs-professional.form-control{name: "cs_professional_s", required: true, type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "yes"} Yes
           %option{value: "no"} No
     .form-group
-      %label.control-label{for: "k5-other_teachers"}
+      %label.control-label{for: "k5-other-teachers"}
         Are there other teachers who teach computer science classes at your school?
         %span.form-required-field *
       %div
-        %select#k5-other_teachers.form-control{name: "other_teachers_s", required: true, type: "select"}
+        %select#k5-other-teachers.form-control{name: "other_teachers_s", required: true, type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "yes"} Yes
           %option{value: "no"} No
@@ -366,12 +367,12 @@ rightbar: blank
           %option{value: "native american or american indian"} Native American Or American Indian
           %option{value: "prefer not to answer"} Prefer Not To Answer
           %option{value: "other"} other
-      %div{id: 'k5-race_other-wrapper', style: 'display: none;'}
-        %label.control-label{for: "k5-race_other"}<
+      %div{id: 'k5-race-other-wrapper', style: 'display: none;'}
+        %label.control-label{for: "k5-race-other"}<
           %em{style: 'font-weight: normal;'} Other type of race
           %span.form-required-field *
         %div
-          %input#k5-race_other.form-control{name: "race_other_s", placeholder: "other", type: "text"}
+          %input#k5-race-other.form-control{name: "race_other_s", placeholder: "other", type: "text"}
     .form-group
       %label.control-label{for: "k5-age"}
         How old are you?
@@ -393,62 +394,62 @@ rightbar: blank
     .form-group
       .checkbox
         %label
-          %input#k5-send_materials_flag{name: "send_materials_flag_b", type: "checkbox", value: "1"}/
+          %input#k5-send-materials-flag{name: "send_materials_flag_b", type: "checkbox", value: "1"}/
           Check this box if you'd like to receive materials to teach the unplugged lessons in Course 1, 2, or 3 (US attendees only)
-      %div{id: 'k5-send_materials-wrapper', style: 'display: none;'}
+      %div{id: 'k5-send-materials-wrapper', style: 'display: none;'}
         .form-group
-          %label.control-label{for: "k5-send_materials_name"}<
+          %label.control-label{for: "k5-send-materials-name"}<
             Name
             %span.form-required-field *
           %div
-            %input#k5-send_materials_name.form-control{name: "send_materials_name_s", placeholder: "Name", type: "text"}
+            %input#k5-send-materials-name.form-control{name: "send_materials_name_s", placeholder: "Name", type: "text"}
         .form-group
-          %label.control-label{for: "k5-send_materials_street1"}<
+          %label.control-label{for: "k5-send-materials-street1"}<
             Street address 1
             %span.form-required-field *
           %div
-            %input#k5-send_materials_street1.form-control{name: "send_materials_street1_s", placeholder: "Street Address 1", type: "text"}
+            %input#k5-send-materials-street1.form-control{name: "send_materials_street1_s", placeholder: "Street Address 1", type: "text"}
         .form-group
-          %label.control-label{for: "k5-send_materials_street2"}<
+          %label.control-label{for: "k5-send-materials-street2"}<
             Street address 2
           %div
-            %input#k5-send_materials_street2.form-control{name: "send_materials_street2_s", placeholder: "Street Address 2", type: "text"}
+            %input#k5-send-materials-street2.form-control{name: "send_materials_street2_s", placeholder: "Street Address 2", type: "text"}
         .form-group
-          %label.control-label{for: "k5-send_materials_city"}<
+          %label.control-label{for: "k5-send-materials-city"}<
             City
             %span.form-required-field *
           %div
-            %input#k5-send_materials_city.form-control{name: "send_materials_city_s", placeholder: "City", type: "text"}
+            %input#k5-send-materials-city.form-control{name: "send_materials_city_s", placeholder: "City", type: "text"}
         .form-group
-          %label.control-label{for: "k5-send_materials_state"}<
+          %label.control-label{for: "k5-send-materials-state"}<
             State
             %span.form-required-field *
           %div
-            %input#k5-send_materials_state.form-control{name: "send_materials_state_s", placeholder: "State", type: "text"}
+            %input#k5-send-materials-state.form-control{name: "send_materials_state_s", placeholder: "State", type: "text"}
         .form-group
-          %label.control-label{for: "k5-send_materials_zip"}<
+          %label.control-label{for: "k5-send-materials-zip"}<
             Zip code
             %span.form-required-field *
           %div
-            %input#k5-send_materials_zip.form-control{name: "send_materials_zip_s", placeholder: "Zip Code", type: "text"}
+            %input#k5-send-materials-zip.form-control{name: "send_materials_zip_s", placeholder: "Zip Code", type: "text"}
         .form-group
-          %label.control-label{for: "k5-send_materials_email"}<
+          %label.control-label{for: "k5-send-materials-email"}<
             Email
             %span.form-required-field *
           %div
-            %input#k5-send_materials_email.form-control{name: "send_materials_email_s", placeholder: "Email", type: "text"}
+            %input#k5-send-materials-email.form-control{name: "send_materials_email_s", placeholder: "Email", type: "text"}
         .form-group
-          %label.control-label{for: "k5-send_materials_phone"}<
+          %label.control-label{for: "k5-send-materials-phone"}<
             Phone number
             %span.form-required-field *
           %div
-            %input#k5-send_materials_phone.form-control{name: "send_materials_phone_s", placeholder: "Phone number", type: "text"}
+            %input#k5-send-materials-phone.form-control{name: "send_materials_phone_s", placeholder: "Phone number", type: "text"}
         .form-group
-          %label.control-label{for: "k5-send_materials_course"}<
+          %label.control-label{for: "k5-send-materials-course"}<
             Which course materials would you like to receive?
             %span.form-required-field *
           %div
-            %select#k5-send_materials_course.form-control{name: "send_materials_course_s", type: "select"}
+            %select#k5-send-materials-course.form-control{name: "send_materials_course_s", type: "select"}
               %option{selected: "selected", value: ""} -- Select --
               %option{value: "course 1 (beginners to computer science; early)"} Course 1 (beginners to computer science; early) readers)
               %option{value: "course 2 (beginners to computer science; readers)"} Course 2 (beginners to computer science; readers)
@@ -471,84 +472,84 @@ rightbar: blank
       k5ProfessionalDevelopmentSurveyFormSubmit();
     });
 
-    $('#k5-teacher_type').change(function() {
+    $('#k5-teacher-type').change(function() {
       if ($(this).val().toString() == "other"){
-        $('#k5-teacher_type_other').attr("required", true)
-        $('#k5-teacher_type_other-wrapper').show();
+        $('#k5-teacher-type-other').attr("required", true)
+        $('#k5-teacher-type-other-wrapper').show();
       } else {
-        $('#k5-teacher_type_other').val('').removeAttr("required");
-        $('#k5-teacher_type_other-wrapper').hide();
+        $('#k5-teacher-type-other').val('').removeAttr("required");
+        $('#k5-teacher-type-other-wrapper').hide();
       }
     });
 
-    $('#k5-school_type').change(function() {
+    $('#k5-school-type').change(function() {
       if ($(this).val().toString() == "other"){
-        $('#k5-school_type_other').attr("required", true)
-        $('#k5-school_type_other-wrapper').show();
+        $('#k5-school-type-other').attr("required", true)
+        $('#k5-school-type-other-wrapper').show();
       } else {
-        $('#k5-school_type_other').val('').removeAttr("required");
-        $('#k5-school_type_other-wrapper').hide();
+        $('#k5-school-type-other').val('').removeAttr("required");
+        $('#k5-school-type-other-wrapper').hide();
       }
     });
 
-    $('#k5-teacher_describe').change(function() {
+    $('#k5-teacher-describe').change(function() {
       if ($(this).val().toString() == "other"){
-        $('#k5-teacher_describe_other').attr("required", true)
-        $('#k5-teacher_describe_other-wrapper').show();
+        $('#k5-teacher-describe-other').attr("required", true)
+        $('#k5-teacher-describe-other-wrapper').show();
       } else {
-        $('#k5-teacher_describe_other').val('').removeAttr("required");
-        $('#k5-teacher_describe_other-wrapper').hide();
+        $('#k5-teacher-describe-other').val('').removeAttr("required");
+        $('#k5-teacher-describe-other-wrapper').hide();
       }
     });
 
-    $('#k5-cs_materials').change(function() {
+    $('#k5-cs-materials').change(function() {
       if ($.inArray('other', $(this).val()) > -1) {
-        $('#k5-cs_materials_other').attr("required", true)
-        $('#k5-cs_materials_other-wrapper').show();
+        $('#k5-cs-materials-other').attr("required", true)
+        $('#k5-cs-materials-other-wrapper').show();
       } else {
-        $('#k5-cs_materials_other').val('').removeAttr("required");
-        $('#k5-cs_materials_other-wrapper').hide();
+        $('#k5-cs-materials-other').val('').removeAttr("required");
+        $('#k5-cs-materials-other-wrapper').hide();
       }
     });
 
-    $('#k5-undergrad_degree').change(function() {
+    $('#k5-undergrad-degree').change(function() {
       if ($(this).val().toString() == "other"){
-        $('#k5-undergrad_degree_other').attr("required", true)
-        $('#k5-undergrad_degree_other-wrapper').show();
+        $('#k5-undergrad-degree-other').attr("required", true)
+        $('#k5-undergrad-degree-other-wrapper').show();
       } else {
-        $('#k5-undergrad_degree_other').val('').removeAttr("required");
-        $('#k5-undergrad_degree_other-wrapper').hide();
+        $('#k5-undergrad-degree-other').val('').removeAttr("required");
+        $('#k5-undergrad-degree-other-wrapper').hide();
       }
     });
 
-    $('#k5-grad_type').change(function() {
+    $('#k5-grad-type').change(function() {
       if ($(this).val().toString() == "other"){
-        $('#k5-grad_type_other').attr("required", true)
-        $('#k5-grad_type_other-wrapper').show();
+        $('#k5-grad-type-other').attr("required", true)
+        $('#k5-grad-type-other-wrapper').show();
       } else {
-        $('#k5-grad_type_other').val('').removeAttr("required");
-        $('#k5-grad_type_other-wrapper').hide();
+        $('#k5-grad-type-other').val('').removeAttr("required");
+        $('#k5-grad-type-other-wrapper').hide();
       }
     });
 
     $('#k5-race').change(function() {
       if ($(this).val().toString() == "other"){
-        $('#k5-race_other').attr("required", true)
-        $('#k5-race_other-wrapper').show();
+        $('#k5-race-other').attr("required", true)
+        $('#k5-race-other-wrapper').show();
       } else {
-        $('#k5-race_other').val('').removeAttr("required");
-        $('#k5-race_other-wrapper').hide();
+        $('#k5-race-other').val('').removeAttr("required");
+        $('#k5-race-other-wrapper').hide();
       }
     });
 
-    $('#k5-send_materials_flag').change(function() {
+    $('#k5-send-materials-flag').change(function() {
       if($(this).is(':checked')) {
-        $('#k5-send_materials-wrapper').slideDown();
-        $('#k5-send_materials-wrapper').find("input, select").attr("required", true);
-        $('#k5-send_materials-wrapper').find("#k5-send_materials_street2").removeAttr("required");
+        $('#k5-send-materials-wrapper').slideDown();
+        $('#k5-send-materials-wrapper').find("input, select").attr("required", true);
+        $('#k5-send-materials-wrapper').find("#k5-send-materials-street2").removeAttr("required");
       } else {
-        $('#k5-send_materials-wrapper').slideUp();
-        $('#k5-send_materials-wrapper').find("input, select").val('').removeAttr("required");
+        $('#k5-send-materials-wrapper').slideUp();
+        $('#k5-send-materials-wrapper').find("input, select").val('').removeAttr("required");
       }
     });
   });
@@ -570,6 +571,7 @@ rightbar: blank
     for (i = 0; i < errors_count; ++i) {
       error_id = '#k5-' + errors[i];
       error_id = error_id.replace(/_[sbi]s?$/, '');
+      error_id = error_id.replace('_', '-');
       $(error_id).parents('.form-group').addClass('has-error');
     }
 
