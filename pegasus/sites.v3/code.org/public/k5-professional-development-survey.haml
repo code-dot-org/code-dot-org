@@ -1,5 +1,7 @@
 ---
 title: "K5 Professional Development Survey"
+nav: blank
+rightbar: blank
 ---
 
 
@@ -9,32 +11,31 @@ title: "K5 Professional Development Survey"
 %script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 
-%form#k5-professional-development-survey-form{role: "form", onsubmit: "return k5professionaldevelopmentsurveyFormSubmit()"}
+%form#k5-professional-development-survey-form{role: "form"}
   #error-message{style: 'display: none'}
-  %br
-    %h1 Satisfaction Survey for Code.org's K-5 Professional Development Workshop
-  %br
+  %h1 Satisfaction Survey for Code.org's K-5 Professional Development Workshop
+
+  .main-section
     %h2 About your workshop facilitator
-    %h3 Please answer to what extent you agree or disagree with the following statements.
-  %br  
+    %p Please answer to what extent you agree or disagree with the following statements.
     =view(:k5_professional_development_survey_select_satisfaction, name: "facilitator_prepared_i", label: "My facilitator came prepared to facilitate the workshop.")
     =view(:k5_professional_development_survey_select_satisfaction, name: "facilitator_knowledgeable_i", label: "My facilitator was very knowledgeable in the workshop content and Code.org curriculum.")
     =view(:k5_professional_development_survey_select_satisfaction, name: "facilitator_enjoyable_i", label: "My facilitator was an enjoyable person.")
     =view(:k5_professional_development_survey_select_satisfaction, name: "facilitator_professional_i", label: "My facilitator acted in a professional manner.")
-  %br
+
+  .main-section
     %h2 About your workshop logistics and materials
-    %h3 Please answer to what extent you agree or disagree with the following statements.
-  %br  
+    %p Please answer to what extent you agree or disagree with the following statements.
     =view(:k5_professional_development_survey_select_satisfaction, name: "workshop_start_i", label: "The workshop started on time.")
     =view(:k5_professional_development_survey_select_satisfaction, name: "workshop_end_i", label: "The workshop ended on time.")
     =view(:k5_professional_development_survey_select_satisfaction, name: "workshop_materials_i", label: "The workshop materials were in perfect condition.")
     =view(:k5_professional_development_survey_select_satisfaction, name: "workshop_venue_i", label: "The venue was clean with adequate space to work.")
     =view(:k5_professional_development_survey_select_satisfaction, name: "workshop_food_i", label: "The food provided was what the facilitator described.")
     =view(:k5_professional_development_survey_select_satisfaction, name: "workshop_tech_i", label: "The workshop had no issues with technology access (computers / Internet / WiFi).")
-  %br
+
+  .main-section
     %h2 About your overall experience
-    %h3 Please answer to what extent you agree or disagree with the following statements.
-  %br  
+    %p Please answer to what extent you agree or disagree with the following statements.
     =view(:k5_professional_development_survey_select_satisfaction, name: "experience_courses_i", label: "I feel prepared to teach the Code.org computer science courses.")
     =view(:k5_professional_development_survey_select_satisfaction, name: "experience_useful_i", label: "The information presented at the workshop was useful.")
     =view(:k5_professional_development_survey_select_satisfaction, name: "experience_sequence_i", label: "The organization/sequence of this professional development made sense to me.")
@@ -43,8 +44,9 @@ title: "K5 Professional Development Survey"
     =view(:k5_professional_development_survey_select_satisfaction, name: "experience_bestpd_i", label: "This was the absolute best professional development I’ve ever participated in.")
     =view(:k5_professional_development_survey_select_satisfaction, name: "experience_level_i", label: "The professional development session was suitable for my level of experience with teaching computer science.")
     =view(:k5_professional_development_survey_select_satisfaction, name: "experience_equitable_i", label: "This professional development session prepared me to facilitate an equitable computer science classroom.")
-  %br  
-    .form-group
+
+  .main-section
+    .form-group{style: "margin-top: 45px"}
       %label.control-label{for: "k5-beliefs"}
         On a 1-10 scale, how much have your beliefs and values about teaching computer science changed after attending Code.org's professional  development workshop?
         %span.form-required-field *
@@ -111,9 +113,9 @@ title: "K5 Professional Development Survey"
         What would you like to tell Code.org about your experience at the workshop? Please include anything that would help improve the K-5 Professional Development workshops.
       %div
         %textarea#improve_pd.form-control{name: "improve_pd_s", rows: "8", type: "text"}
-  %br
+
+  .main-section
     %h2 About yourself
-  %br  
     .form-group
       %label.control-label{for: "k5-teacher_type"}
         Are you a...
@@ -161,7 +163,7 @@ title: "K5 Professional Development Survey"
           %option{value: "other"} other
       %div{id: 'k5-school_type_other-wrapper', style: 'display: none;'}
         %label.control-label{for: "k5-school_type_other"}<
-          %em{style: 'font-weight: normal;'} other type of organization
+          %em{style: 'font-weight: normal;'} Other type of organization
           %span.form-required-field *
         %div
           %input#k5-school_type_other.form-control{name: "school_type_other_s", placeholder: "other", type: "text"}
@@ -185,7 +187,7 @@ title: "K5 Professional Development Survey"
       %div
         %select#k5-teacher_grades.form-control{name: "teacher_grades_ss", type: "select", multiple: true}
           %option{selected: "selected", value: ""} -- Select all that apply--
-          %option{value: "pre-kindergarten"} Pre-kindergarten 
+          %option{value: "pre-kindergarten"} Pre-kindergarten
           %option{value: "kindergarten"} Kindergarten
           %option{value: "1st"} 1st
           %option{value: "2nd"} 2nd
@@ -215,7 +217,7 @@ title: "K5 Professional Development Survey"
           %option{value: "other"} other
       %div{id: 'k5-teacher_describe_other-wrapper', style: 'display: none;'}
         %label.control-label{for: "k5-teacher_describe_other"}<
-          %em{style: 'font-weight: normal;'} other type of teacher
+          %em{style: 'font-weight: normal;'} Other type of teacher
           %span.form-required-field *
         %div
           %input#k5-teacher_describe_other.form-control{name: "teacher_describe_other_s", placeholder: "other", type: "text"}
@@ -253,7 +255,7 @@ title: "K5 Professional Development Survey"
           %option{value: "other"} other
       %div{id: 'k5-cs_materials_other-wrapper', style: 'display: none;'}
         %label.control-label{for: "k5-cs_materials_other"}<
-          %em{style: 'font-weight: normal;'} other type of computer science materials
+          %em{style: 'font-weight: normal;'} Other type of computer science materials
           %span.form-required-field *
         %div
           %input#k5-cs_materials_other.form-control{name: "cs_materials_other_s", placeholder: "other", type: "text"}
@@ -277,7 +279,7 @@ title: "K5 Professional Development Survey"
           %option{value: "other"} other
       %div{id: 'k5-undergrad_degree_other-wrapper', style: 'display: none;'}
         %label.control-label{for: "k5-undergrad_degree_other"}<
-          %em{style: 'font-weight: normal;'} other type of degree
+          %em{style: 'font-weight: normal;'} Other type of degree
           %span.form-required-field *
         %div
           %input#k5-undergrad_degree_other.form-control{name: "undergrad_degree_other_s", placeholder: "other", type: "text"}
@@ -309,7 +311,7 @@ title: "K5 Professional Development Survey"
           %option{value: "other"} other
       %div{id: 'k5-grad_type_other-wrapper', style: 'display: none;'}
         %label.control-label{for: "k5-grad_type_other"}<
-          %em{style: 'font-weight: normal;'} other type of graduate degree
+          %em{style: 'font-weight: normal;'} Other type of graduate degree
           %span.form-required-field *
         %div
           %input#k5-grad_type_other.form-control{name: "grad_type_other_s", placeholder: "other", type: "text"}
@@ -366,7 +368,7 @@ title: "K5 Professional Development Survey"
           %option{value: "other"} other
       %div{id: 'k5-race_other-wrapper', style: 'display: none;'}
         %label.control-label{for: "k5-race_other"}<
-          %em{style: 'font-weight: normal;'} other type of race
+          %em{style: 'font-weight: normal;'} Other type of race
           %span.form-required-field *
         %div
           %input#k5-race_other.form-control{name: "race_other_s", placeholder: "other", type: "text"}
@@ -384,8 +386,10 @@ title: "K5 Professional Development Survey"
           %option{value: "36-40"} 36-40
           %option{value: "41-45"} 41-45
           %option{value: "46-50"} 46-50
-          %option{value: "51+"} 51+ 
-  %br
+          %option{value: "51+"} 51+
+
+  .main-section
+    %h2 Unplugged lesson materials
     .form-group
       .checkbox
         %label
@@ -449,16 +453,22 @@ title: "K5 Professional Development Survey"
               %option{value: "course 1 (beginners to computer science; early)"} Course 1 (beginners to computer science; early) readers)
               %option{value: "course 2 (beginners to computer science; readers)"} Course 2 (beginners to computer science; readers)
               %option{value: "course 3 (builds on course 2)"} Course 3 (builds on Course 2)
-  %br
+
+  .main-section
     .form-group.submit-btn
       %button#btn-submit.btn.btn-default{type: "submit"} Submit
 
-
 :javascript
   $(document).ready(function() {
+    $(':input').removeAttr('required');
+
     $('#thanks').hide();
     $('#k5-professional-development-survey-form').find("select").selectize({
       plugins: ['fast_click']
+    });
+
+    $('#k5-professional-development-survey-form').submit(function(event) {
+      k5ProfessionalDevelopmentSurveyFormSubmit();
     });
 
     $('#k5-teacher_type').change(function() {
@@ -532,22 +542,13 @@ title: "K5 Professional Development Survey"
     });
 
     $('#k5-send_materials_flag').change(function() {
-    console.log($(this).val());
-      if ($(this).val() == 1){
-        $('#k5-send_materials-wrapper').show();
+      if($(this).is(':checked')) {
+        $('#k5-send_materials-wrapper').slideDown();
         $('#k5-send_materials-wrapper').find("input, select").attr("required", true);
         $('#k5-send_materials-wrapper').find("#k5-send_materials_street2").removeAttr("required");
       } else {
+        $('#k5-send_materials-wrapper').slideUp();
         $('#k5-send_materials-wrapper').find("input, select").val('').removeAttr("required");
-        $('#k5-send_materials-wrapper').hide();
-      }
-    });
-
-    $('#k5-send_materials_flag').change(function() {
-      if($(this).is(':checked')) {
-        $('#k5-send_materials-wrapper').closest('.form-group').slideDown();
-      } else {
-        $('#k5-send_materials-wrapper').closest('div').slideUp();
       }
     });
   });
@@ -579,8 +580,10 @@ title: "K5 Professional Development Survey"
     $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
   }
 
-  function k5professionaldevelopmentsurveyFormSubmit()
+  function k5ProfessionalDevelopmentSurveyFormSubmit()
   {
+    event.preventDefault();
+
     $("#btn-submit").attr('disabled','disabled');
     $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
 
