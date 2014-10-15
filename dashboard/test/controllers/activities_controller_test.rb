@@ -631,6 +631,21 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
+  test 'sharing program with http error slogs' do
+    # allow sharing when there's an error, slog so it's possible to look up and review later
+
+    @controller.stubs(:find_share_failure).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
+    @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
+      params[:tag] == 'share_checking_error' && params[:error] == 'something broke' && params[:level_source_id] != nil
+    end
+
+    assert_creates(LevelSource) do
+      post :milestone, user_id: @user.id, script_level_id: @script_level, :program => studio_program_with_text('shit')
+    end
+
+    assert_response :success
+  end
+
   test 'sharing program with phone number' do
     assert_does_not_create(LevelSource, GalleryActivity) do
       post :milestone, user_id: @user.id, script_level_id: @script_level, :program => studio_program_with_text('800-555-5555')
