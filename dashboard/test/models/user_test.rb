@@ -272,6 +272,16 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'some', create(:user, :name => '  some whitespace in front  ').short_name # whitespace in front
   end
 
+
+  test "initial" do
+    assert_equal 'L', create(:user, :name => 'Laurel Fan', :username => 'laurelfan').initial # first name last name
+    assert_equal 'W', create(:user, :name => 'Winnie the Pooh').initial # middle name
+    assert_equal "D", create(:user, :name => "D'Andre Means").initial # punctuation ok
+    assert_equal '樊', create(:user, :name => '樊瑞').initial # ok, this isn't actually right but ok for now
+    assert_equal 'L', create(:user, :name => 'Laurel').initial # just one name
+    assert_equal 'S', create(:user, :name => '  some whitespace in front  ').initial # whitespace in front
+  end
+
   test "find_for_authentication with nonsense" do
     # login by username still works
     user = create :user, username: 'blahblah'
@@ -496,6 +506,7 @@ class UserTest < ActiveSupport::TestCase
     old_password = user.encrypted_password
 
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
+    # HACK fix my syntax highlighting "
     token = $1
 
     User.reset_password_by_token(reset_password_token: token,
@@ -762,4 +773,21 @@ class UserTest < ActiveSupport::TestCase
   end
   
 
+  test 'normalize_gender' do
+    assert_equal 'f', User.normalize_gender('f')
+    assert_equal 'm', User.normalize_gender('m')
+
+    assert_equal 'f', User.normalize_gender('F')
+    assert_equal 'm', User.normalize_gender('M')
+
+    assert_equal 'f', User.normalize_gender('Female')
+    assert_equal 'm', User.normalize_gender('Male')
+
+    assert_equal 'f', User.normalize_gender('female')
+    assert_equal 'm', User.normalize_gender('male')
+
+    assert_equal nil, User.normalize_gender('some nonsense')
+    assert_equal nil, User.normalize_gender('')
+    assert_equal nil, User.normalize_gender(nil)
+  end
 end

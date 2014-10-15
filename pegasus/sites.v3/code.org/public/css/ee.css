@@ -13,50 +13,53 @@ h1.ee_display_name {
   vertical-align: middle;
   color: dimgray;
 }
-#intro_top {
-  color: black;
-}
+
 #intro_top h1 {
-  color: black;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  color: dimgray;
 }
 #intro_top h2 {
-  color: black;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  color: dimgray;
 }
 #intro_top h3 {
+  color: dimgray;
+}
+#intro_top h4 {
+  color: dimgray;
+}
+
+a.ee_link:link, a.ee_link:visited {
+  color: white;
+}
+
+button.ee_button {
+  font-size: 20px;
+  font-weight: 500;
+  height: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.ee_markdown {
   color: black;
+}
+.ee_markdown h1 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-#intro_top h4 {
-  color: black;
+.ee_markdown h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.ee_markdown h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.ee_markdown h4 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-#intro_bottom {
-  color: black;
-}
-#intro_bottom h1 {
-  color: black;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-#intro_bottom h2 {
-  color: black;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-#intro_bottom h3 {
-  color: black;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-#intro_bottom h4 {
-  color: black;
+h1.ee_congrats_header {
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -73,12 +76,9 @@ h1.ee_display_name {
   margin-bottom: 20px;
 }
 
-#additional_actions {
-  max-width: 600px;
-}
-
 #top {
-  background-color: #000; padding: 20px
+  background-color: rgb(0, 178, 192);
+  padding: 20px
 }
 
 .count {

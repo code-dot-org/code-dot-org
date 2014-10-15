@@ -3,7 +3,7 @@
   computer_science: "Επιστήμη Υπολογιστών"
   computer_science_edweek: "Εβδομάδα Εκπαίδευσης στην Επιστήμη Υπολογιστών"
   csedweek_dates: 9-15 Δεκεμβρίου 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>έχουν δοκιμάσει την</h3><h2>Ώρα του Κώδικα</h2>"
   anybody_can_learn: "Οποιοσδήποτε μπορεί να μάθει."
   learn_now: "Μάθε τώρα"
   petition_message: "Κάθε μαθητής σε κάθε σχολείο θα πρέπει να έχει την ευκαιρία να
@@ -16,6 +16,15 @@
   twentyhours_heading: "Δοκιμάστε τη εισαγωγή μας στη σειρά μαθημάτων πληροφορικής"
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Students
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: "Δοκιμάστε τώρα"
   california_heading: "Ζητήστε από το σχολείο σας να διδάξει την επιστήμη της Πληροφορικής"
   california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
@@ -55,6 +64,7 @@
   beyond_hour_message: "Εδώ βρίσκονται περισσότερες πληροφορίες σχετικά με το πώς
     να <a href='/learn/beyond'>Συνεχίστε να μαθαίνετε μετά τη Μία Ώρα</a>"
   leaderboards_for_hoc: Πίνακες με τις ψηλότερες βαθμολογίες για το "Μια Ώρα Κώδικα".
+  support_url: http://support.code.org/
   country: "Χώρα"
   city: "Πόλη"
   gender: "Φύλο"
@@ -79,6 +89,8 @@
   i_am_a: "Είμαι ένας/μια"
   never_spam: "Δεν θα σας στείλουμε ποτέ ενοχλητική αλληλογραφία"
   enter_country: "Εισάγετε τη χώρα σας αν βρίσκεστε εκτός των Ηνωμένων Πολιτειών"
+  used_infrequent_updates: Only used for infrequent updates
+  privacy_practices_children: See our privacy practices for children
   petition_thankyou: "Σας ευχαριστούμε για την συμμετοχή σας στην συλλογή υπογραφών"
   carousel_heading_international: "Σεμινάρια στη γλώσσα σας"
   continue_learning_header: "Συνεχίστε την εκμάθηση πέρα από τη μία Ώρα"
@@ -108,7 +120,7 @@
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: Our three new courses for K&#8209;5
-  studiobar_hoc_title: The Hour of Code
+  studiobar_hoc_title: "Ώρα του Κώδικα"
   studiobar_hoc_body: Learn to code with Angry Birds
   studiobar_flappy_title: Flappy Code
   studiobar_flappy_body: Make and share your own Flappy game
@@ -167,7 +179,7 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: Current
     university student (or researcher)
   volunteer_engineer_submission_experience_software_professional: Software professional
-  petition_age: Age
+  petition_age: "Ηλικία"
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -179,10 +191,12 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
-  dashboard_landing_print_certificates: Print certificates for students who finish
-    this course
-  dashboard_landing_educator_blog: Read about news and updates to our materials at
-    our Educator Blog
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
+  dashboard_landing_print_certificates: "Εκτύπωση πιστοποιητικών για τους μαθητές
+    που ολοκληρώνουν αυτό το μάθημα"
+  dashboard_landing_educator_blog: "Διαβάστε για τα νέα και τις ενημερώσεις για του
+    υλικό μας στο blog του Παιδαγωγού"
   dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
   dashboard_landing_video_player: Test our new video player at your school
   dashboard_landing_progress_title: Main class progress
@@ -207,6 +221,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -219,6 +234,7 @@
   dashboard_sections_table_course: Course
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
     students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
   dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
@@ -237,13 +253,18 @@
     per line:'
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
+  dashboard_students_placeholder_name: Student Name
   dashboard_students_name: "Όνομα"
-  dashboard_students_age: Age
+  dashboard_students_age: "Ηλικία"
   dashboard_students_gender: "Φύλο"
+  dashboard_students_male: "Αγόρι"
+  dashboard_students_female: "Κορίτσι"
   dashboard_students_secret: Secret
   dashboard_students_password: "Κωδικός πρόσβασης"
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret
@@ -268,3 +289,27 @@
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: "Ακολουθία"
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: Other
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
+  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
+    week alone:'
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

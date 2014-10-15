@@ -26,6 +26,7 @@
 goog.provide('Blockly.Block');
 
 goog.require('Blockly.BlockSvg');
+goog.require('Blockly.BlockSvgFramed');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Comment');
 goog.require('Blockly.Connection');
@@ -154,7 +155,11 @@ Blockly.Block.prototype.getIcons = function() {
  * Create and initialize the SVG representation of the block.
  */
 Blockly.Block.prototype.initSvg = function() {
-  this.svg_ = new Blockly.BlockSvg(this);
+  if (this.framed_) {
+    this.svg_ = new Blockly.BlockSvgFramed(this);
+  } else {
+    this.svg_ = new Blockly.BlockSvg(this);
+  }
   this.svg_.init();
   if (!Blockly.readOnly) {
     Blockly.bindEvent_(this.svg_.getRootElement(), 'mousedown', this,
@@ -1405,11 +1410,11 @@ Blockly.Block.prototype.setTooltip = function(newTip) {
 
 /**
  * Set whether this block can chain onto the bottom of another block.
- * @param {boolean} newBoolean True if there can be a previous statement.
+ * @param {boolean} hasPrevious True if there can be a previous statement.
  * @param {string|Array.<string>|null} opt_check Statement type or list of
  *     statement types.  Null or undefined if any type could be connected.
  */
-Blockly.Block.prototype.setPreviousStatement = function(newBoolean, opt_check) {
+Blockly.Block.prototype.setPreviousStatement = function(hasPrevious, opt_check) {
   if (this.previousConnection) {
     if (this.previousConnection.targetConnection) {
       throw 'Must disconnect previous statement before removing connection.';
@@ -1417,7 +1422,7 @@ Blockly.Block.prototype.setPreviousStatement = function(newBoolean, opt_check) {
     this.previousConnection.dispose();
     this.previousConnection = null;
   }
-  if (newBoolean) {
+  if (hasPrevious) {
     if (this.outputConnection) {
       throw 'Remove output connection prior to adding previous connection.';
     }
@@ -1436,11 +1441,11 @@ Blockly.Block.prototype.setPreviousStatement = function(newBoolean, opt_check) {
 
 /**
  * Set whether another block can chain onto the bottom of this block.
- * @param {boolean} newBoolean True if there can be a next statement.
+ * @param {boolean} hasNext True if there can be a next statement.
  * @param {string|Array.<string>|null} opt_check Statement type or list of
  *     statement types.  Null or undefined if any type could be connected.
  */
-Blockly.Block.prototype.setNextStatement = function(newBoolean, opt_check) {
+Blockly.Block.prototype.setNextStatement = function(hasNext, opt_check) {
   if (this.nextConnection) {
     if (this.nextConnection.targetConnection) {
       throw 'Must disconnect next statement before removing connection.';
@@ -1448,7 +1453,7 @@ Blockly.Block.prototype.setNextStatement = function(newBoolean, opt_check) {
     this.nextConnection.dispose();
     this.nextConnection = null;
   }
-  if (newBoolean) {
+  if (hasNext) {
     if (opt_check === undefined) {
       opt_check = null;
     }
@@ -1464,12 +1469,12 @@ Blockly.Block.prototype.setNextStatement = function(newBoolean, opt_check) {
 
 /**
  * Set whether this block returns a value.
- * @param {boolean} newBoolean True if there is an output.
+ * @param {boolean} hasOutput True if there is an output.
  * @param {string|Array.<string>|null} opt_check Returned type or list of
  *     returned types.  Null or undefined if any type could be returned
  *     (e.g. variable get).
  */
-Blockly.Block.prototype.setOutput = function(newBoolean, opt_check) {
+Blockly.Block.prototype.setOutput = function(hasOutput, opt_check) {
   if (this.outputConnection) {
     if (this.outputConnection.targetConnection) {
       throw 'Must disconnect output value before removing connection.';
@@ -1477,7 +1482,7 @@ Blockly.Block.prototype.setOutput = function(newBoolean, opt_check) {
     this.outputConnection.dispose();
     this.outputConnection = null;
   }
-  if (newBoolean) {
+  if (hasOutput) {
     if (this.previousConnection) {
       throw 'Remove previous connection prior to adding output connection.';
     }
@@ -1495,11 +1500,45 @@ Blockly.Block.prototype.setOutput = function(newBoolean, opt_check) {
 };
 
 /**
- * Set whether value inputs are arranged horizontally or vertically.
- * @param {boolean} newBoolean True if inputs are horizontal.
+ * Set whether this is a functional block that returns a value. Currently this
+ * will be displayed as previous connection that will only connect with
+ * functional inputs
+ * @param {boolean} hasOutput True if there is an output.
+ * @param {string|Array.<string>|null} opt_check Returned type or list of
+ *     returned types.  Null or undefined if any type could be returned
+ *     (e.g. variable get).
  */
-Blockly.Block.prototype.setInputsInline = function(newBoolean) {
-  this.inputsInline = newBoolean;
+Blockly.Block.prototype.setFunctionalOutput = function(hasOutput, opt_check) {
+  if (this.previousConnection) {
+    if (this.previousConnection.targetConnection) {
+      throw 'Must disconnect output value before removing connection.';
+    }
+    this.previousConnection.dispose();
+    this.previousConnection = null;
+  }
+  if (hasOutput) {
+    if (this.previousConnection) {
+      throw 'Remove previous connection prior to adding output connection.';
+    }
+    if (opt_check === undefined) {
+      opt_check = null;
+    }
+    this.previousConnection =
+        new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
+    this.previousConnection.setCheck(opt_check);
+  }
+  if (this.rendered) {
+    this.render();
+    this.bumpNeighbours_();
+  }
+};
+
+/**
+ * Set whether value inputs are arranged horizontally or vertically.
+ * @param {boolean} inputsInline True if inputs are horizontal.
+ */
+Blockly.Block.prototype.setInputsInline = function(inputsInline) {
+  this.inputsInline = inputsInline;
   if (this.rendered) {
     this.render();
     this.bumpNeighbours_();
@@ -1645,6 +1684,18 @@ Blockly.Block.prototype.appendDummyInput = function(opt_name) {
 };
 
 /**
+ * Shortcut for appending a functional input. Functional inputs are displayed
+ * similarly to value inputs, but with a notch similar to previous/next
+ * connections instead of the tab on the left.
+ * @param {string} opt_name Language-neutral identifier which may used to find
+ *     this input again.  Should be unique to this block.
+ * @return {!Blockly.Input} The input object created.
+ */
+Blockly.Block.prototype.appendFunctionalInput = function(name) {
+  return this.appendInput_(Blockly.FUNCTIONAL_INPUT, name);
+};
+
+/**
  * Interpolate a message string, creating titles and inputs.
  * @param {string} msg The message string to parse.  %1, %2, etc. are symbols
  *     for value inputs.
@@ -1704,7 +1755,8 @@ Blockly.Block.prototype.interpolateMsg = function(msg, var_args) {
  */
 Blockly.Block.prototype.appendInput_ = function(type, name) {
   var connection = null;
-  if (type == Blockly.INPUT_VALUE || type == Blockly.NEXT_STATEMENT) {
+  if (type === Blockly.INPUT_VALUE || type === Blockly.NEXT_STATEMENT ||
+    type === Blockly.FUNCTIONAL_INPUT) {
     connection = new Blockly.Connection(this, type);
   }
   var input = new Blockly.Input(type, name, this, connection);

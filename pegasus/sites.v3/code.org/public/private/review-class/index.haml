@@ -6,7 +6,7 @@ title: Review Class Submissions
 %h1 Review class submissions
 
 -submissions = []
--DB[:forms].where(kind:'ClassSubmission', review:nil).limit(40).each do |i|
+-DB[:forms].where(kind:'ClassSubmission', review:nil).limit(1000).each do |i|
   -submissions << JSON.parse(i[:data]).merge(secret: i[:secret])
 
 -if submissions.nil_or_empty?

@@ -17,7 +17,7 @@
         - if @script.feedback_url
           = link_to t('landing.feedback'), @script.feedback_url
           %br/
-        = link_to t('landing.support'), "//support.code.org"
+        = link_to t('landing.support'), t('landing.support_url')
         %br/
 
     - if @script.has_banner_image?
@@ -39,13 +39,13 @@
   %br/
 
   - if @script.k5_course?
-    %a{href: "https://docs.google.com/a/code.org/document/d/1VBgpBodJgIouJejMoijXFV0BbAHVUqSeN_ZJAR-HEP8/pub"}
-      Overview of Courses 1, 2 and 3
+    %a{href: "//#{canonical_hostname('code.org')}/curriculum/docs/k-5/overview"}
+      = t('home.all_courses')
     %br/
     %br/
 
     %a{href: "http://code.org/curriculum/" + @script.name }
-      Lesson plans
+      = t('home.lesson_plans')
     %br/
     %br/
 

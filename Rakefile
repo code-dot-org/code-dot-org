@@ -149,16 +149,20 @@ namespace :production do
 
     task :upgrade do
       CDO.varnish_instances.each do |host|
-        remote_command = [
-          'cd production/aws',
-          'git pull',
-          'bundle',
-          'touch Rakefile',
-          'rake',
-          'cd ..',
-          'rake build:varnish',
-        ].join('; ')
-        RakeUtils.system 'ssh', host, "'#{remote_command} 2>&1'"
+        begin
+          remote_command = [
+            'cd production/aws',
+            'git pull',
+            'bundle',
+            'touch Rakefile',
+            'rake',
+            'cd ..',
+            'rake build:varnish',
+          ].join('; ')
+          RakeUtils.system 'ssh', host, "'#{remote_command} 2>&1'"
+        rescue
+          puts "Unable to update #{host}!"
+        end
       end
     end
 
@@ -262,7 +266,7 @@ namespace :install do
 
   WebserverDependencies = [:postfix, rack_env?(:production) ? :mysql_client : [:mysql_server, :solr], :varnish].flatten
   task :webserver => WebserverDependencies do
-    RakeUtils.sudo 'aptitude', 'install', '-y', 'libxslt1-dev', 'libssl-dev', 'zlib1g-dev', 'imagemagick', 'libmagickcore-dev', 'libmagickwand-dev'
+    RakeUtils.sudo 'aptitude', 'install', '-y', 'libxslt1-dev', 'libssl-dev', 'zlib1g-dev', 'imagemagick', 'libmagickcore-dev', 'libmagickwand-dev', 'pdftk', 'enscript'
   end
 
   task :dashboard => [:webserver] do

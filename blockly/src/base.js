@@ -31,7 +31,7 @@ var utils = require('./utils');
 var blockUtils = require('./block_utils');
 var builder = require('./builder');
 var Slider = require('./slider');
-var _ = require('./lodash');
+var _ = utils.getLodash();
 var constants = require('./constants.js');
 
 //TODO: These should be members of a BlocklyApp instance.
@@ -73,6 +73,20 @@ var codeKeyDown = function(e) {
   }
 };
 
+BlocklyApps.toggleRunReset = function(button) {
+  var showRun = (button === 'run');
+  if (button !== 'run' && button !== 'reset') {
+    throw "Unexpected input";
+  }
+
+  var run = document.getElementById('runButton');
+  var reset = document.getElementById('resetButton');
+  run.style.display = showRun ? 'inline-block' : 'none';
+  run.disabled = !showRun;
+  reset.style.display = !showRun ? 'inline-block' : 'none';
+  reset.disabled = showRun;
+};
+
 /**
  * Common startup tasks for all apps.
  */
@@ -84,6 +98,7 @@ BlocklyApps.init = function(config) {
   BlocklyApps.share = config.share;
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
+  BlocklyApps.sendToPhone = config.sendToPhone;
   BlocklyApps.noPadding = config.no_padding;
 
   BlocklyApps.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
@@ -159,8 +174,11 @@ BlocklyApps.init = function(config) {
 
       belowViz.appendChild(feedback.createSharingDiv({
         response: {
-          level_source: window.location
+          level_source: window.location,
+          level_source_id: config.level_source_id,
+          phone_share_url: config.send_to_phone_url
         },
+        sendToPhone: config.sendToPhone,
         twitter: config.twitter
       }));
 
@@ -262,19 +280,39 @@ BlocklyApps.init = function(config) {
 
   if (config.level.editCode) {
     BlocklyApps.editCode = true;
-    var codeTextbox = document.getElementById('codeTextbox');
-    var codeFunctions = config.level.codeFunctions;
-    // Insert hint text from level codeFunctions into editCode area
-    if (codeFunctions) {
-      var hintText = "";
-      for (var i = 0; i < codeFunctions.length; i++) {
-        hintText = hintText + " " + codeFunctions[i].func + "();";
+    /*
+    BlocklyApps.editor = window.ace.edit('codeTextbox');
+    BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
+    BlocklyApps.editor.setOptions({
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true
+    });
+    */
+    // using window.require forces us to use requirejs version of require
+    window.require(['droplet'], function(droplet) {
+      var displayMessage, examplePrograms, messageElement, onChange, startingText;
+      var palette = utils.generateDropletPalette(config.level.codeFunctions);
+      BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+        mode: 'javascript',
+        palette: palette
+      });
+      // temporary: use prompt icon to switch text/blocks
+      document.getElementById('prompt-icon').addEventListener('click', function() {
+        BlocklyApps.editor.toggleBlocks();
+      });
+
+      var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
+      var codeFunctions = config.level.codeFunctions;
+      // Insert hint text from level codeFunctions into editCode area
+      if (codeFunctions) {
+        var hintText = '';
+        for (var i = 0; i < codeFunctions.length; i++) {
+          hintText += " " + codeFunctions[i].func + "();";
+        }
+        startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
       }
-      var html = utils.escapeHtml(msg.typeFuncs()).replace('%1', hintText);
-      codeTextbox.innerHTML += '// ' + html + '<br><br><br>';
-    }
-    // Needed to prevent blockly from swallowing up the backspace key
-    codeTextbox.addEventListener('keydown', codeKeyDown, true);
+      BlocklyApps.editor.setValue(startText);
+    });
   }
 
   BlocklyApps.Dialog = config.Dialog;
@@ -393,6 +431,7 @@ BlocklyApps.init = function(config) {
   }
 
   if (config.level.editCode) {
+    // Swap the visibility of the codeText element and the blocklyDiv
     document.getElementById('codeTextbox').style.display = 'block';
     div.style.display = 'none';
   }
@@ -761,6 +800,7 @@ BlocklyApps.displayFeedback = function(options) {
   options.Dialog = BlocklyApps.Dialog;
   options.onContinue = onContinue;
   options.backToPreviousLevel = backToPreviousLevel;
+  options.sendToPhone = BlocklyApps.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
@@ -816,8 +856,7 @@ BlocklyApps.report = function(options) {
  */
 BlocklyApps.resetButtonClick = function() {
   onResetPressed();
-  document.getElementById('runButton').style.display = 'inline-block';
-  document.getElementById('resetButton').style.display = 'none';
+  BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
   Blockly.mainWorkspace.setEnableToolbox(true);
   Blockly.mainWorkspace.traceOn(false);

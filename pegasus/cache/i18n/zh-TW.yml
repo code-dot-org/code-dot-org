@@ -3,7 +3,7 @@
   computer_science: "電腦科學"
   computer_science_edweek: "電腦科學教育周"
   csedweek_dates: 2013 年 12 月 9-15 日
-  n_have_learned_an_hoc: "<h1>#</h1><h3>嘗試過嗎？</h3><h2>一小時的編程 ™</h2> "
+  n_have_learned_an_hoc: "<h1>#</h1><h3>嘗試過嗎</h3><h2>一小時的編程</h2>"
   anybody_can_learn: "任何人都可以學習。"
   learn_now: "現在就開始進行學習課程"
   petition_message: "每個在學校的學生都應該有機會去學習電腦科學"
@@ -14,6 +14,15 @@
   submit: "送出"
   twentyhours_heading: "試試看我們的電腦科學課程簡介"
   twentyhours_text: "完成您的第一個小時的編程了嗎？在此後續課程可以瞭解更多核心電腦科學和程式設計的概念。"
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Students
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: "快來試試"
   california_heading: "邀請你的學校推行計算機科學教育"
   california_text: "任何一個老師可以提供我們 <a href='HTTP://learn.code.org/'> 免費介紹課程</a>。任何小學可以
@@ -48,6 +57,7 @@
   beyond_hour_message: "持續的跟著我們 <a href='HTTP://learn.code.org'> 20 小時的課程</a>，或到 <a
     href='/learn/beyond'> 一小時外的學習</a> 看更多的選擇。"
   leaderboards_for_hoc: "一小時的程式設計課程排行榜。"
+  support_url: http://support.code.org/
   country: "國家"
   city: "城市"
   gender: "性別"
@@ -72,6 +82,8 @@
   i_am_a: "我是"
   never_spam: "我們永遠不會發送垃圾郵件"
   enter_country: "如果在美國以外，輸入您的國家"
+  used_infrequent_updates: Only used for infrequent updates
+  privacy_practices_children: See our privacy practices for children
   petition_thankyou: "感謝你在請願書上簽名"
   carousel_heading_international: "使用你語言的教程"
   continue_learning_header: "繼續學習在一個小時之後"
@@ -98,7 +110,7 @@
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: Our three new courses for K&#8209;5
-  studiobar_hoc_title: The Hour of Code
+  studiobar_hoc_title: "一小時的編程"
   studiobar_hoc_body: Learn to code with Angry Birds
   studiobar_flappy_title: Flappy Code
   studiobar_flappy_body: Make and share your own Flappy game
@@ -165,6 +177,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: "為完成此課程的學生列印證書"
   dashboard_landing_educator_blog: "在Educator Blog閱讀我們的最新資訊"
   dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
@@ -191,6 +205,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -203,6 +218,7 @@
   dashboard_sections_table_course: Course
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
     students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
   dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
@@ -221,13 +237,18 @@
     per line:'
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
+  dashboard_students_placeholder_name: Student Name
   dashboard_students_name: "你的名字"
   dashboard_students_age: Age
   dashboard_students_gender: "性別"
+  dashboard_students_male: "男性"
+  dashboard_students_female: "女性"
   dashboard_students_secret: Secret
   dashboard_students_password: "密碼"
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret
@@ -252,3 +273,27 @@
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: "序列 "
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: "其他"
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
+  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
+    week alone:'
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

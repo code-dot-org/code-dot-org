@@ -1,65 +1,143 @@
+-dont_cache
+-landing_page = "/employees/#{data['name_s']}"
+-congrats_page = "/congrats?co=#{data['name_s']}"
+-markdown_basics = "http://daringfireball.net/projects/markdown/basics"
+
 %link{rel: "stylesheet", type: "text/css", href: "/css/ee_form.css"}/
 
 %form#company_profile
+  %input{name:"logo_path_s", type:"hidden", value:data['logo_path_s']}
   %table
     -if secret
       %tr
         %th{colspan:2}
-          Instructions:
+          Welcome to the Code.org Employee Engagement program! Here's what you need to do to customize your Hour of Code landing page:
+    -if secret
       %tr
         %th{colspan:2}
-          1. Bookmark this page! (Cmd-D or Ctrl-D)
+          1. 
+          %a{href:landing_page, target:"_blank"}
+            View #{data['display_name_s']}'s current landing page
       %tr
         %th{colspan:2}
-          2. update company info:
+          2. See the cheat sheets for customizing the
+          %a{href:"/images/company-profile-annotated.png",target:"_blank"}
+            landing page
+            %img{src:"/images/company-profile-annotated.png",width:"50px",height:"50px"}
+          and
+          %a{href:"/images/company-congrats-annotated.png",target:"_blank"}
+            certificate page
+            %img{src:"/images/company-congrats-annotated.png",width:"50px",height:"50px"}
+
+      %tr
+        %th{colspan:2}
+          3. Provide your own content for any parts of the page you want to customize by filling in the following fields:
     %tr
       %th
-        Name
+        *Name
+        -if secret
+          %br
+          (appears in url)
       %td
         %input{name:'name_s', value:data['name_s']}
     %tr
       %th
-        Display Name
+        *Display Name
+        -if secret
+          %br
+          (appears in header)
       %td
         %input{name:'display_name_s', value:data['display_name_s']}
     -if secret
       %tr
         %th
-          Video Key
+          Show Display Name in header?
+        %td
+          -name_in_header_b = data['name_in_header_b'] || nil
+          %input{name:'name_in_header_b', type:'checkbox', value:'1', checked: name_in_header_b}
+      %tr
+        %th
+          Logo
+          %br
+          (appears in header, 100x100px or higher recommended)
+        %td
+          %input{name:'logo_file', type:'file'}
+      %tr
+        %th
+          Remove Logo?
+        %td
+          %input{name:'remove_logo_b', type:'checkbox', value:'1'}
+      %tr
+        %th
+          Number of Employees
+        %td
+          %input{name:'num_employees_i', type:"number", value:data['num_employees_i']}
+      %tr
+        %th
+          Indiegogo donate link
+        %td
+          %input{name:'donate_link_s', value:data['donate_link_s']}
+      %tr
+        %th
+          Youtube video key
+          %br
+          (e.g. the rH7AjDMz_dc in http://www.youtube.com/watch?v=rH7AjDMz_dc)
         %td
           %input{name:'video_key_s', value:data['video_key_s']}
       %tr
         %th
-          Intro (Top)
+          Show Google+ share button
+        %td
+          -gplus_b = data['gplus_b'] || nil
+          %input{name:'gplus_b', type:'checkbox', value:'1', checked: gplus_b}
+      %tr
+        %th
+          Intro - Top
+          %br
+          (appears above video, formatted in
+          %a{href:markdown_basics, target:"_blank"}
+            markdown
+          )
         %td
           %textarea{name:'intro_top_copy_t', cols:'80', rows:'4'}= data['intro_top_copy_t']
       %tr
         %th
-          Intro (Bottom)
+          Intro - Bottom
+          %br
+          (appears below video on 
+          %a{href:landing_page,target:"_blank"}
+            landing page
+          , formatted in
+          %a{href:markdown_basics,target:"_blank"}
+            markdown
+          )
         %td
           %textarea{name:'intro_bottom_copy_t', cols:'80', rows:'4'}= data['intro_bottom_copy_t']
       %tr
         %th
           Additional Actions
+          %br
+          (appears below certificate on
+          %a{href:congrats_page, target:"_blank"}
+            congrats page
+          , formatted in
+          %a{href:markdown_basics, target:"_blank"}
+            markdown
+          )
         %td
           %textarea{name:'additional_actions_copy_t', cols:'80', rows:'4'}= data['additional_actions_copy_t']
-      %tr
-        %th
-          Logo
-        %td
-          %input{name:'logo_file', type:'file'}
     %tr
       %th{colspan:2}
         -if secret
-          3. 
-        %button Submit
-    -if secret
-      %tr
-        %th{colspan:2}
           4. 
-          %a{href: "/company-profiles/#{data['name_s']}"}
-            View #{data['display_name_s']}'s landing page
-
+        %button Save your changes
+        -if secret
+          %tr
+            %th{colspan:2}
+              5. View 
+              %a{href:landing_page, target:"_blank"}
+                #{data['display_name_s']}'s landing page
+              again to see your changes (they may take a few minutes to become visible)
 
 
 :javascript

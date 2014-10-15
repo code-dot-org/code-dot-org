@@ -1,6 +1,8 @@
 - @header['social'].each_pair do |property, content|
   %meta{property:property, content:content}
 
+%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+
 %title= page_title_with_tagline
 
 %link{rel:'shortcut icon', href:'/images/favicon.ico'}

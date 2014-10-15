@@ -7,7 +7,7 @@ This is the participation kit information.
 
 This is the Computer Science Education Week participation kit for CS teachers in particular.
 
-## How can you promote computer science during CS Ed Week 2013?
+## How can you promote computer science during CS Ed Week 2014?
 
 ## 1) Use the Hour of Code campaign to introduce students to Computer Science
 

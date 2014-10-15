@@ -48,6 +48,7 @@ en:
           'Studio: Create a Story': 'Play Lab: Create a Story'
           description_short: Course 1 is designed for early readers in the lower elementary
             grades.
+          'Artist: Loops': 'Artist: Loops'
         course2:
           The Maze: The Maze
           Suzi: Suzi
@@ -89,6 +90,7 @@ en:
             lower and middle elementary grades.
           'Artist: Sequence2': 'Artist: Sequence2'
           'Maze: Sequence2': 'Maze: Sequence2'
+          'Artist: Nested Loops': 'Artist: Nested Loops'
         course3:
           The Maze: The Maze
           'Studio: Create a Story': 'Play Lab: Create a Story'
@@ -142,6 +144,8 @@ en:
           'Farmer: While Loops2': 'Farmer: While Loops2'
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
           'Bee: Debugging2': 'Bee: Debugging2'
+          'Artist: Patterns': 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

@@ -3,7 +3,7 @@
   computer_science: Informatique
   computer_science_edweek: Semaine de l'éducation des sciences informatiques
   csedweek_dates: 9-15 décembre 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>a essayé</h3><h2>HOUR of CODE&trade;</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>a essayé un</h3><h2>Heure de Code</h2>"
   anybody_can_learn: Tout le monde peut apprendre.
   learn_now: Apprends Maintenant
   petition_message: Tous les étudiants dans toutes les écoles devraient avoir la possibilité
@@ -16,6 +16,15 @@
   twentyhours_heading: Essaie notre introduction au cours de Programmation Informatique
   twentyhours_text: Tu as fini ta première heure de programmation ? Apprend encore
     plus sur les concepts fondamentaux de l'informatique dans la suite ce cours.
+  hoc2014_heading: rejoigner
+  hoc2014_students: "Élèves"
+  hoc2014_try: |
+    essayer le
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: Essaie maintenant
   california_heading: Demandez à votre école pour enseigner l'informatique
   california_text: Tout enseignant peut offrir notre <a href='http://learn.code.org/'>
@@ -58,6 +67,7 @@
     de 20 heures</a>, ou voir plus d'options à <a href='/learn/beyond'> savoir au-delà
     d'une heure</a>.
   leaderboards_for_hoc: Classements pour l'Heure de Code.
+  support_url: http://support.code.org/
   country: Pays
   city: Ville
   gender: Sexe
@@ -82,6 +92,8 @@
   i_am_a: Je suis un
   never_spam: Nous ne vous enverrons jamais de courrier électronique intempestif
   enter_country: Entrer le pays si hors des Etats-Unis
+  used_infrequent_updates: Only used for infrequent updates
+  privacy_practices_children: See our privacy practices for children
   petition_thankyou: Merci d'avoir signé la pétition
   carousel_heading_international: Tutoriel dans votre langue
   continue_learning_header: Continuez à apprendre après Une Heure
@@ -92,7 +104,7 @@
   learn_classes: Trouver des écoles près de chez vous
   hoc_is_here: 'La #HourOfCode est ici - jetez-y un oeil ! @codeorg'
   just_did_hoc: 'Je viens de faire la #HourOfCode - jetez-y un oeil ! @codeorg'
-  learn_hoc: Apprendre une Heure de Programmation
+  learn_hoc: Apprendre une Heure de Code
   beyond_hoc: Au delà d'Une heure
   what_gender: De quel sexe êtes vous ?
   girl: Fille
@@ -184,8 +196,10 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
-  dashboard_landing_print_certificates: Imprimer les certificats pour les étudiants
-    ayant terminé ce cours
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
+  dashboard_landing_print_certificates: Imprimer les certificats pour les élèves ayant
+    terminé ce cours
   dashboard_landing_educator_blog: Lisez l'actualité et les mises à jour de notre
     matériel sur notre Blog Enseignant
   dashboard_landing_smart_hints: Aidez-nous à ajouter des astuces pertinentes aux
@@ -213,6 +227,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -221,10 +236,11 @@
     their progress and manage their accounts.
   dashboard_sections_table_section: Section
   dashboard_sections_table_secret: Secret type
-  dashboard_sections_table_grade: Grade
+  dashboard_sections_table_grade: Note
   dashboard_sections_table_course: Cours
-  dashboard_sections_table_students: Students
+  dashboard_sections_table_students: "Élèves"
   dashboard_sections_table_code: Section Code
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
     students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
   dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
@@ -243,13 +259,18 @@
     per line:'
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
+  dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Nom
   dashboard_students_age: Age
   dashboard_students_gender: Sexe
+  dashboard_students_male: Masculin
+  dashboard_students_female: Féminin
   dashboard_students_secret: Secret
   dashboard_students_password: Mot de passe
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret
@@ -274,3 +295,27 @@
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: Séquence
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: Autre
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
+  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
+    week alone:'
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

@@ -1,20 +1,20 @@
 ---
 theme: responsive
-banner: <%= request.site == 'csedweek.org' ? :index_hoc : :index_k5workshops %>
+banner: <%= request.site == 'csedweek.org' ? :index_hoc : :index_donate %>
 <%
   if request.site == 'csedweek.org'
     twitter_meta = {
-      'title' => 'The Hour of Code is here',
-      'description' => 'Join millions of students to learn about the Hour of Code, the largest learning event in world history.',
-      'image_src' => 'http://csedweek.org/images/hoc-video-thumbnail.jpg',
-      'player' => 'https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0',
+      'title' => 'The Hour of Code is coming',
+      'description' => 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.',
+      'image_src' => 'http://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg',
+      'player' => 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0',
     }
   else
     twitter_meta = {
-      'title' => "What most schools don't teach",
-      'description' => "Learn about a new \\\"superpower\\\" that isn't being taught in 90% of US schools.",
-      'image_src' => 'http://code.org/images/code-video-thumbnail.jpg',
-      'player' => 'https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0',
+      'title' => "The Hour of Code is coming",
+      'description' => "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
+      'image_src' => 'http://code.org/images/hour-of-code-2014-video-thumbnail.jpg',
+      'player' => 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0',
     }
   end
 %>
@@ -51,29 +51,56 @@ social:
       = view :index_video
 
     #start.col-36
-      #blurb.col-mobile-56.mobile-pad-right
-        %br.desktop-feature
 
-        .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
+      #hoc2014
+
+        .count{:style=>'font-weight:500; margin-bottom:15px' }
           -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
           -if request.locale == 'en-US'
             %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
               =count_string
           -else
             =count_string
-          %h4.desktop-feature=I18n.t(:anybody_can_learn)
-        %br
 
-      #getstarted.col-mobile-44
-        #largegap.mobile-show-medium{:style=>"height:50px"}
-        %a{:href=>'/learn'}
-          %button{:style=>"font-size: 19px; font-weight: 500; height: 50px;"}
-            =I18n.t(:get_started)
+        #heading
+          =I18n.t :hoc2014_heading
 
-        #beyond.desktop-feature
-          %br
-          %a.beyond{:href=>'/learn/beyond'}
-            =I18n.t :beyond_an_hour
+        %div{style: "height: 12px;"}
+          &nbsp;
+
+        .option
+          .optionleft
+            =I18n.t :hoc2014_students
+            &nbsp;
+          .optionright
+            -#%a{:href=>'/learn'}
+            %button.optionbutton#trybutton{onclick: "ga('send','event','button','click',{eventLabel:'code_try', hitCallback: function() { window.location.href = '/learn'; }});"}
+              =I18n.t :hoc2014_try
+            %br/
+
+        .option{style: "clear:both"}
+          .optionleft
+            =I18n.t :hoc2014_teachers
+            &nbsp;
+          .optionright
+            -#%a{:href=>"http://#{canonical_hostname('hourofcode.com')}/#join", target: "_blank"}
+            %button.optionbutton#hostbutton{onclick: "ga('send','event','button','click',{eventLabel:'code_host', hitCallback: function() { window.location.href = 'http://#{canonical_hostname('hourofcode.com')}/#join'; }});"}
+              =I18n.t :hoc2014_host
+            %br/
+
+        .option{style: "clear:both"}
+          .optionleft
+            =I18n.t :hoc2014_everyone
+            &nbsp;
+          .optionright
+            -#%a{:href=>'/donate'}
+            %button.optionbutton#supportbutton{onclick: "ga('send','event','button','click',{eventLabel:'code_support', hitCallback: function() { window.location.href = '/donate'; }});"}
+              =I18n.t :hoc2014_support
+            %br/
+
+        .whatishoc{style: "clear:both"}
+          %a{:href=>"http://#{canonical_hostname('hourofcode.com')}", :target=>'_blank'}
+            =I18n.t :hoc2014_whatishoc
 
     -download_filename = (request.site == 'code.org') ? 'Code-5-minute.mov' : 'HoC-video-15mb.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
@@ -98,6 +125,30 @@ social:
 
   %div{:style=>'clear:both;'}
   = view :petition
+
+  -if locale_ro?
+    %br
+    %br
+    %h1{:style=>'text-align: center;'}
+      Esti din Romania? Te rugam sa vizitezi
+      %a{:href=>'http://ro.code.org'}
+        ro.code.org
+
+  -if locale_br?
+    %br
+    %br
+    %h1{:style=>'text-align: center;'}
+      Voce está no Brasil? Por favor, visite
+      %a{:href=>'http://br.code.org'}
+        br.code.org
+
+  -if locale_it?
+    %br
+    %br
+    %h1{:style=>'text-align: center;'}
+      Are you in Italy? Please visit 
+      %a{:href=>'http://italia.code.org'}
+        italia.code.org!
 
   #columns.desktop-feature{:style=>'clear:both; overflow:hidden'}
     #column1{:style=>'float:left; width: 33.33%'}
@@ -138,9 +189,22 @@ social:
         %a{:href=>'/about/news', :style=>'float:right'} See all
 
     #column3{:style=>'float:left; width: 33.33%;'}
-      %h2 From the Community
-      = view :index_twitter
+      %h2 Thank You to Our Donors
+      %div{:style=>'background-color: lightgrey; padding: 10px;'}
+        %div{:style=>'background-color: white; padding: 10px;'}
+          = view :indiegogo_progress_bar
+        %div{:style=>'background-color: white; padding: 10px; margin-top: 10px; height: 490px; overflow: hidden'}
+          %h3{:style=>'margin-top: 10px'}
+            %strong{:style=>'font-size: 18px'} Thank you for contributing:
+          = view :indiegogo_contributors_ticker
+      %a{:href=>'https://www.indiegogo.com/projects/an-hour-of-code-for-every-student', :style=>'float: right'}
+        Donate now on Indiegogo
+      /%h2 From the Community
+      /= view :index_twitter
   #gap
+
+  #donor_slider.desktop-feature{:style=>'width: 100%'}
+    = view :donor_slider
 
 = view 'popup_window.js'
 

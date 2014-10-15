@@ -6,14 +6,14 @@ theme: none
 [![Code.org](/images/fit-48/logo.png)](/)
 
 ####Dear Educator,
+Dear Educator,
 
-We were recently informed of a communication error that affects our information on Administrator and Counselor PD attendees for Chicago Public Schools. We received a list of administrators and counselors who have teachers participating in a Code.org program and did not realize that k-8 Principals, Administrators, and Counselors were included.
+We are writing to let you know that we were unable to pay you on September 15th as you had not completed a W9. Please go to https://code.org/educate/educatorthanks1 and complete the W9. If you submit this form information prior to September 30th, your payment will be processed in the next batch.
 
-Although it is important for Administrators and Counselors from elementary and middle schools to understand the programs CPS teachers are participating in, our current professional development for Administrators and Counselors is tailored to our high school school program 
+If you have already provided a W9 please disregard this e-mail. If you have any additional questions or concerns please e-mail PD@code.org. 
 
-If you are an elementary or middle school Administrator or Counselor please ignore our recent announcement about the upcoming professional developments. You will be removed from any further communications and are not required to finish our online course or attend the in-person PD session you may have registered for.
+Thanks,
 
-We, here at Code.org are very sorry for any inconvience and confusion this may have caused. If you have any questions or concerns please email them to PD@code.org.   
+The Code.org Finance Team
 
---The Code.org PD Team
-
+PS: Please visit our PD website for more information: http://code.org/educate/pd/faq

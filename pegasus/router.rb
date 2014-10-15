@@ -88,7 +88,15 @@ class Documents < Sinatra::Base
 
     Poste::Message.import_templates
 
-    vary_uris = ['/', '/learn', '/congrats', '/language_test', '/teacher-dashboard']
+    vary_uris = ['/', '/learn', '/congrats', '/language_test', 
+                 '/teacher-dashboard', 
+                 '/teacher-dashboard/landing',
+                 '/teacher-dashboard/nav',
+                 '/teacher-dashboard/section_manage',
+                 '/teacher-dashboard/section_progress',
+                 '/teacher-dashboard/sections',
+                 '/teacher-dashboard/signin_cards',
+                 '/teacher-dashboard/student']
     set :vary, { 'X-Varnish-Accept-Language'=>vary_uris, 'Cookie'=>vary_uris }
   end
 
@@ -234,21 +242,36 @@ class Documents < Sinatra::Base
 
     def document(path)
       content = IO.read(path)
+      original_line_count = content.lines.count
       match = content.match(/^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
       if match
         @header = @locals[:header] = YAML.load(render_(match[:yaml], '.erb'))
         content = match.post_match
       end
+      line_number_offset = content.lines.count - original_line_count
       @header['social'] = social_metadata
-
-      if @header['require_https'] #&& rack_env == :production
+      
+      if @header['require_https'] && rack_env == :production
         headers['Vary'] = http_vary_add_type(headers['Vary'], 'X-Forwarded-Proto')
         redirect request.url.sub('http://', 'https://') unless request.env['HTTP_X_FORWARDED_PROTO'] == 'https'
       end
 
-      cache_control :public, :must_revalidate, max_age:settings.document_max_age
+      if @header['max_age']
+        cache_control :public, :must_revalidate, max_age:@header['max_age']
+      else
+        cache_control :public, :must_revalidate, max_age:settings.document_max_age
+      end
+
       response.headers['X-Pegasus-Version'] = '3'
-      render_(content, File.extname(path))
+      begin
+        render_(content, File.extname(path))
+      rescue Haml::Error => e
+        if e.backtrace.first =~ /router\.rb:/
+          actual_line_number = e.line - line_number_offset + 1
+          e.set_backtrace e.backtrace.unshift("#{path}:#{actual_line_number}")
+        end
+        raise e
+      end
     end
 
     def post_process_html_from_markdown(full_document)
@@ -324,6 +347,11 @@ class Documents < Sinatra::Base
 
     def render_template(path, locals={})
       render_(IO.read(path), File.extname(path), locals)
+    rescue Haml::Error => e
+      if e.backtrace.first =~ /router\.rb:/
+        e.set_backtrace e.backtrace.unshift("#{path}:#{e.line}")
+      end
+      raise e
     end
 
     def render_(body, extname, locals={})
@@ -361,34 +389,34 @@ class Documents < Sinatra::Base
     def social_metadata()
       if request.site == 'csedweek.org'
         metadata = {
-          'og:title'          => @header['title'] || "The Hour of Code is here",
-          'og:description'    => @header['description'] || "Join millions of students to learn about the Hour of Code, the largest learning event in world history.",
-          'og:image'          => @header['og:image'] || 'http://csedweek.org/images/hoc-video-thumbnail.jpg',
-          'og:image:width'    => @header['og:image:width'] || '1200',
-          'og:image:height'   => @header['og:image:height'] || '627',
+          'og:title'          => @header['title'] || "The Hour of Code is coming",
+          'og:description'    => @header['description'] || "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
+          'og:image'          => @header['og:image'] || 'http://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg',
+          'og:image:width'    => @header['og:image:width'] || '1705',
+          'og:image:height'   => @header['og:image:height'] || '949',
           'og:site_name'      => 'CSEd Week',
-          'og:video'          => 'https://youtube.googleapis.com/v/FC5FbmsH4fw',
-          'og:video:width'    => '720',
-          'og:video:height'   => '404',
+          # 'og:video'          => 'https://youtube.googleapis.com/v/rH7AjDMz_dc',
+          # 'og:video:width'    => '720',
+          # 'og:video:height'   => '404',
         }
       else
         metadata = {
-          'og:title'          => @header['title'] || "What most schools don't teach",
-          'og:description'    => @header['description'] || "Learn about a new \"superpower\" that isn't being taught in 90% of US schools.",
-          'og:image'          => @header['og:image'] || 'http://code.org/images/code-video-thumbnail.jpg',
-          'og:image:width'    => @header['og:image:width'] || '1440',
-          'og:image:height'   => @header['og:image:height'] || '810',
+          'og:title'          => @header['title'] || "The Hour of Code is coming",
+          'og:description'    => @header['description'] || "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
+          'og:image'          => @header['og:image'] || 'http://code.org/images/hour-of-code-2014-video-thumbnail.jpg',
+          'og:image:width'    => @header['og:image:width'] || '1705',
+          'og:image:height'   => @header['og:image:height'] || '949',
           'og:site_name'      => 'Code.org',
-          'og:video'          => 'https://youtube.googleapis.com/v/nKIu9yen5nc',
-          'og:video:width'    => '720',
-          'og:video:height'   => '404',
+          # 'og:video'          => 'https://youtube.googleapis.com/v/rH7AjDMz_dc',
+          # 'og:video:width'    => '720',
+          # 'og:video:height'   => '404',
         }
       end
 
       # Metatags common to all sites.
       metadata['fb:app_id'] = '500177453358606'
       metadata['og:type'] = 'article'
-      metadata['og:video:type'] = 'application/x-shockwave-flash'
+      # metadata['og:video:type'] = 'application/x-shockwave-flash'
       metadata['article:publisher'] = 'https://www.facebook.com/Code.org'
       metadata['og:url'] = request.url
 

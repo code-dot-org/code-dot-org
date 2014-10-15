@@ -22,7 +22,15 @@ var Collidable = require('./collidable');
 var Projectile = require('./projectile');
 var Hammer = require('../hammer');
 var parseXmlElement = require('../xml').parseElement;
-var _ = require('../lodash');
+var utils = require('../utils');
+var _ = utils.getLodash();
+
+if (typeof SVGElement !== 'undefined') { // tests don't have svgelement??
+  var rgbcolor = require('../canvg/rgbcolor.js');
+  var stackBlur = require('../canvg/StackBlur.js');
+  var canvg = require('../canvg/canvg.js');
+  var svgToDataUrl = require('../canvg/svg_todataurl');
+}
 
 var Direction = tiles.Direction;
 var NextTurn = tiles.NextTurn;
@@ -470,7 +478,7 @@ var setSvgText = function(opts) {
     opts.svgText.removeChild(opts.svgText.firstChild);
   }
 
-  var words = opts.text.split(' ');
+  var words = opts.text.toString().split(' ');
   // Create first tspan element
   var tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
   tspan.setAttribute("x", opts.width / 2);
@@ -1217,8 +1225,7 @@ BlocklyApps.runButtonClick = function() {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -1247,7 +1254,10 @@ var displayFeedback = function() {
       response: Studio.response,
       level: level,
       showingSharing: level.freePlay,
+      feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
+      // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
+      saveToGalleryUrl: level.freePlay && Studio.response.save_to_gallery_url,
       appStrings: {
         reinfFeedbackMsg: studioMsg.reinfFeedbackMsg(),
         sharingText: studioMsg.shareGame()
@@ -1386,18 +1396,8 @@ Studio.execute = function() {
   var i;
 
   if (level.editCode) {
-    var codeTextbox = document.getElementById('codeTextbox');
-    code = dom.getText(codeTextbox);
-    // Insert aliases from level codeBlocks into code
-    if (level.codeFunctions) {
-      for (i = 0; i < level.codeFunctions.length; i++) {
-        var codeFunction = level.codeFunctions[i];
-        if (codeFunction.alias) {
-          code = codeFunction.func +
-              " = function() { " + codeFunction.alias + " };" + code;
-        }
-      }
-    }
+    code = utils.generateCodeAliases(level.codeFunctions);
+    code += BlocklyApps.editor.getValue();
   }
 
   var handlers = [];
@@ -1436,6 +1436,9 @@ Studio.execute = function() {
   Studio.intervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
 };
 
+Studio.feedbackImage = '';
+Studio.encodedFeedbackImage = '';
+
 Studio.onPuzzleComplete = function() {
   if (level.freePlay) {
     Studio.result = BlocklyApps.ResultType.SUCCESS;
@@ -1473,15 +1476,30 @@ Studio.onPuzzleComplete = function() {
 
   Studio.waitingForReport = true;
 
-  // Report result to server.
-  BlocklyApps.report({
-                     app: 'studio',
-                     level: level.id,
-                     result: Studio.result === BlocklyApps.ResultType.SUCCESS,
-                     testResult: Studio.testResults,
-                     program: encodeURIComponent(textBlocks),
-                     onComplete: Studio.onReportComplete
-                     });
+  var sendReport = function() {
+    BlocklyApps.report({
+      app: 'studio',
+      level: level.id,
+      result: Studio.result === BlocklyApps.ResultType.SUCCESS,
+      testResult: Studio.testResults,
+      program: encodeURIComponent(textBlocks),
+      image: Studio.encodedFeedbackImage,
+      onComplete: Studio.onReportComplete
+    });
+  };
+
+  if (typeof document.getElementById('svgStudio').toDataURL === 'undefined') { // don't try it if function is not defined
+    sendReport();
+  } else {
+    document.getElementById('svgStudio').toDataURL("image/png", {
+      callback: function(pngDataUrl) {
+        Studio.feedbackImage = pngDataUrl;
+        Studio.encodedFeedbackImage = encodeURIComponent(Studio.feedbackImage.split(',')[1]);
+        
+        sendReport();
+      }
+    });
+  }
 };
 
 var frameDirTable = {};

@@ -15,6 +15,15 @@
   twentyhours_heading: Prøv vores Intro til datalogi kursus
   twentyhours_text: Færdig med din første time kode? Lær flere kerne datalogi og programmeringbegreber
     i dette opfølgende kursus.
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Studerende
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: Prøv nu
   california_heading: Bed din skole om undervisning i datalogi
   california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
@@ -55,6 +64,7 @@
   beyond_hour_message: Fortsæt med vores  <a href='http://studio.code.org'>andre kurser</a>,
     eller se flere muligheder for at <a href='/learn/beyond'>lære ud over Kodetimen</a>.
   leaderboards_for_hoc: Ranglister for En Times Kodning.
+  support_url: http://support.code.org/
   country: Land
   city: By
   gender: Køn
@@ -79,6 +89,8 @@
   i_am_a: Jeg er en
   never_spam: Vi vil aldrig spamme dig
   enter_country: Indtast land, hvis udenfor USA
+  used_infrequent_updates: Only used for infrequent updates
+  privacy_practices_children: See our privacy practices for children
   petition_thankyou: Tak for at du underskrev indsamlingen
   carousel_heading_international: Vejledninger på dit sprog
   continue_learning_header: Fortsat læring efter En Time
@@ -178,6 +190,8 @@
   dashboard_landing_new_beta: Nyt! Prøv vores beta kurser for K-5 elever.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Andre nyttige links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: Udskriv certifikater for studerende, der er
     færdig med dette kursus
   dashboard_landing_educator_blog: Læs om nyheder og opdateringer til vores materialer
@@ -206,6 +220,7 @@
   dashboard_navigation_view_progress: Se fremskridt
   dashboard_navigation_add_students: Tilføje studerende
   dashboard_navigation_manage_students: Administrer studerende
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Afsnit: %{section_name}'
   dashboard_navigation_student: 'Studerende: %{student_name}'
   dashboard_sections_new_section: Nyt afsnit
@@ -218,6 +233,7 @@
   dashboard_sections_table_course: Kursus
   dashboard_sections_table_students: Studerende
   dashboard_sections_table_code: Afsnitskode
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: Hvis du vil give dine elever konti, Vælg en hemmelige
     <b>ord</b> eller <b>billede</b> for det pågældende afsnit.
   dashboard_sections_secret_word: Et <b>ord</b> tillader du kan indstille et hemmeligt
@@ -237,13 +253,18 @@
   dashboard_students_new_section: Du har oprettet et nyt afsnit! Tilføje nu dine elever
     ved hjælp af knapperne <b>Tilføj studerende</b> og <b>Tilføje flere studerende</b>
     ovenfor.
+  dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Navn
   dashboard_students_age: Alder
   dashboard_students_gender: Køn
+  dashboard_students_male: Mand
+  dashboard_students_female: Kvinde
   dashboard_students_secret: Hemmeligt
   dashboard_students_password: Adgangskode
   dashboard_students_username: 'Brugernavn: %{student_username}'
   dashboard_students_email: 'E-mail: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Vis hemmeligt
   dashboard_students_auto_generated: Auto genereret
   dashboard_students_reset_secret: Nulstil hemmeligt
@@ -269,3 +290,27 @@
   dashboard_students_url: Web-adresse
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: Sekvens
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: Andre
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
+  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
+    week alone:'
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 require 'csv'
-require 'user_agent_parser'
 require_relative '../deployment'
 require 'cdo/only_one'
 require 'cdo/hip_chat'
+require 'cdo/user_agent_parser'
 
 FiveMinutes = 5 * 60 * 1000
 OneHour = 60 * 60 * 1000
@@ -25,7 +25,7 @@ ExcludedBrowsers = [
   'Mo%20PTT/50 CFNetwork/672.1.15 Darwin/14.0.0'
 ]
 
-ExcludedLevels = [1, 103, 337, 612, 830, 1254, 1255, 1264, 1265, 1370, 1376, 1383, 1393, 1415]
+ExcludedLevels = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415]
 
 HardLevelAttemptsPerHour = {
   50 => 10,
@@ -44,10 +44,6 @@ MinimumAttemptsPerHour = 5
 
 HoursToTest = 2
 
-def slog(h)
-  puts ({ application: :dashboard }).merge(h).to_json
-end
-
 $user_agent_cache = {}
 def browser_name(user_agent)
   name = $user_agent_cache[user_agent]
@@ -57,6 +53,10 @@ def browser_name(user_agent)
   name = agent.to_s if name == 'IE'
   name = user_agent if name == 'CFNetwork'
   $user_agent_cache[user_agent] = name
+end
+
+def slog(h)
+  puts ({ application: :dashboard }).merge(h).to_json
 end
 
 class Collater
@@ -142,7 +142,7 @@ class Monitor
 end
 
 def main()
-  now = DateTime.now
+  now = DateTime.now.new_offset(0)
 
   hours = HoursToTest
   finish = DateTime.new(now.year, now.month, now.day, now.hour, now.minute).new_offset(0).strftime('%Q').to_i

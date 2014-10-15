@@ -17,6 +17,7 @@ var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 var dom = require('../dom');
 var constants = require('./constants');
+var utils = require('../utils');
 
 /**
  * Create a namespace for the application.
@@ -658,8 +659,7 @@ BlocklyApps.runButtonClick = function() {
   document.getElementById('instructions').setAttribute('visibility', 'visible');
   document.getElementById('getready').setAttribute('visibility', 'visible');
 
-  runButton.style.display = 'none';
-  resetButton.style.display = 'inline-block';
+  BlocklyApps.toggleRunReset('reset');
   Blockly.mainWorkspace.traceOn(true);
   // BlocklyApps.reset(false);
   BlocklyApps.attempts++;
@@ -711,24 +711,15 @@ Flappy.onReportComplete = function(response) {
  * Execute the user's code.  Heaven help us...
  */
 Flappy.execute = function() {
+  var code;
   Flappy.result = BlocklyApps.ResultType.UNSET;
   Flappy.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   Flappy.waitingForReport = false;
   Flappy.response = null;
 
   if (level.editCode) {
-    var codeTextbox = document.getElementById('codeTextbox');
-    var code = dom.getText(codeTextbox);
-    // Insert aliases from level codeBlocks into code
-    if (level.codeFunctions) {
-      for (var i = 0; i < level.codeFunctions.length; i++) {
-        var codeFunction = level.codeFunctions[i];
-        if (codeFunction.alias) {
-          code = codeFunction.func +
-              " = function() { " + codeFunction.alias + " };" + code;
-        }
-      }
-    }
+    code = utils.generateCodeAliases(level.codeFunctions);
+    code += BlocklyApps.editor.getValue();
   }
 
   var codeClick = Blockly.Generator.workspaceToCode(

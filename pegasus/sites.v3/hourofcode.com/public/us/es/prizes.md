@@ -1,28 +1,27 @@
 ---
-title: Premios
+title: Prizes
+layout: wide
 ---
 
 # La Hora de Programación — premios para cada organizador
 
 ## Cada organizar gana un código de regalo en agradecimiento
 
-¡Cada educador que organice una Hora de Programación para sus estudiantes recibirá 10 GB de espacio en Dropbox o un crédito de $10 en Skype como regalo de agradecimiento!
+Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
 <% if @country == 'us' %>
 
 ## ¡Aulas con suerte ganan una video conferencia con un invitado!
 
-50 aulas con suerte serán invitadas a unirse a una video conferencia para celebrar la Hora de Programación entre el 8 al 14 de diciembre. Tus estudiantes podrán hacer preguntas y chatear con líderes de la industria tecnológica. [Mira las conversaciones del año pasado ][1]con Bill Gates, el fundador de Twitter Jack Dorsey, Susan Wojciki de Google y Gabe Newell de Valve.
-
- [1]: http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a
+50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
 
 ## Escuelas con suerte ganarán laptops para toda una clase (o $10,000 para otras tecnologías)
 
-Una escuela con suerte en *** cada *** estado de EE.UU. (+ Washington D.C.) ganará el equivalente a $10,000 en tecnología. Para calificar, organiza la Hora de Programación para cada estudiante de tu escuela. Llena el siguiente formulario para aplicar.
+One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
 
 ## Solicitud para el Premio de Hardware:
 
-¡Si inscribiste a toda tu escuela a participar en la Hora de Programación, entra para ganar laptops para toda una clase (ó $10,000 en otras tecnologías) en tu escuela! Sólo un profesor tiene que aplicar para toda la escuela.
+If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
 
 <%= view :hardware_prizes_form %>
 
@@ -34,7 +33,4 @@ Una escuela con suerte en *** cada *** estado de EE.UU. (+ Washington D.C.) gana
 
 ## ¿Más preguntas sobre premios?
 
-Check out [Terms and Conditions][2] or visit our forum to see [FAQs][3] and ask your questions.
-
- [2]: /prizes-terms
- [3]: http://support.code.org
+Check out [Terms and Conditions](/prizes-terms) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.

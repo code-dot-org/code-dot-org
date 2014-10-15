@@ -1,0 +1,35 @@
+---
+title: Workshop signups
+---
+- unless dashboard_user
+  - redirect("http://#{canonical_hostname('learn.code.org')}/users/sign_in?return_to=#{request.url}", 302) unless dashboard_user
+- forbidden! unless dashboard_user[:user_type] == 'teacher'
+- forbidden! unless have_permission?('create_professional_development_workshop') || dashboard_user[:admin]
+- dont_cache
+
+-workshop_rows = DB[:forms].where(kind:'ProfessionalDevelopmentWorkshop')
+
+%h1 Workshop signups
+
+%table
+  %tr
+    %th Affiliate
+    %th Date
+    %th Location
+    %th Type
+    %th Signups
+
+  -total_signups = 0
+  -workshop_rows.each do |workshop_row|
+    -workshop = JSON.parse(workshop_row[:data]).merge(JSON.parse(workshop_row[:processed_data]))
+    -signup_count = DB[:forms].where(kind:'ProfessionalDevelopmentWorkshopSignup').and(parent_id:workshop_row[:id]).count
+    -total_signups = total_signups + signup_count
+    %tr
+      %td #{workshop_row[:name]} (#{workshop_row[:email]})
+      %td #{workshop['dates'].map{|i| i['date_s']}.join('<br />')}
+      %td #{workshop['location_name_s']} (#{workshop['location_address_s']})
+      %td #{workshop['type_s']}
+      %td #{signup_count} / #{workshop['capacity_s']}
+
+%div{style: "margin-top: 2em;"}
+  %strong Total signups: #{total_signups}

@@ -3,7 +3,7 @@ require 'digest/md5'
 # A specific solution attempt for a specific level
 class LevelSource < ActiveRecord::Base
   belongs_to :level
-  has_one :level_source_images
+  has_one :level_source_image
   has_many :level_source_hints
 
   validates_length_of :data, :maximum => 20000
@@ -13,7 +13,7 @@ class LevelSource < ActiveRecord::Base
   # A level_source is considered to be standardized if it does not have this.
   XMLNS_STRING = ' xmlns="http://www.w3.org/1999/xhtml"'
 
-  def self.lookup(level, data)
+  def self.find_identical_or_create(level, data)
     md5 = Digest::MD5.hexdigest(data)
     self.where(level: level, md5: md5).first_or_create do |ls|
       ls.data = data

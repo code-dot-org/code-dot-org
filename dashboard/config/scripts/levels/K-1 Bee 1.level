@@ -16,7 +16,7 @@
     "flower_type": "redWithNectar",
     "skip_instructions_popup": "false",
     "nectar_goal": "1",
-    "honey_goal": "-1",
+    "honey_goal": "1",
     "ideal": "6",
     "video_key": "C1_bee_level_intro",
     "maze_data": null

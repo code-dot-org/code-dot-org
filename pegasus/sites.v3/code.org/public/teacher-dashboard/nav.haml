@@ -25,6 +25,9 @@ theme: none
       %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
           'ng-class' => 'tab == "progress" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/progress"}= I18n.t('dashboard_navigation_view_progress')
+      %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
+          'ng-class' => 'tab == "stats" ? "active tab" : "tab"'}
+        %a{'ng-href' => "#/sections/{{section.id}}/stats"}= I18n.t('dashboard_navigation_view_stats')
       %li{'ng-show' => 'section && ! editingAll(section.students)',
           'ng-class' => 'tab == "manage" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/manage"}= I18n.t('dashboard_navigation_manage_students')

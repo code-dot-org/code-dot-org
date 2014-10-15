@@ -3,7 +3,7 @@
   computer_science: "علوم رایانه"
   computer_science_edweek: "هفته آموزشی علوم رایانه"
   csedweek_dates: 9 تا 15 دسامبر 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE&trade;</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>تلاش کرده اند</h3><h2>ساعتی با کدنویسی</h2>"
   anybody_can_learn: "هر کسی می تواند یاد بگیرند."
   learn_now: "همین حالا یاد بگیرید"
   petition_message: "هر دانش آموز در هر مدرسه باید فرصت یادگیری علم کامپیوتر را داشته
@@ -17,6 +17,15 @@
   twentyhours_heading: "دوره‌ی مقدماتی علوم کامپیوتر ما را شروع کنید"
   twentyhours_text: "اولین ساعت کدنویسی را به پایان رساندید؟ علوم کامپیوتر و مفاهیم
     برنامه نویسی را در درس بعدی، بیشتر یاد بگیرید."
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Students
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: "هم اکنون شروع کنید"
   california_heading: "از مدرسه تان بخواهید که علم کامپیوتر را آموزش بدهند"
   california_text: |
@@ -56,6 +65,7 @@
   beyond_hour_message: Keep going with our <a href='http://learn.code.org'>20-hour
     course</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>.
   leaderboards_for_hoc: "تابلو اعلانات برای ساعتی با کد."
+  support_url: http://support.code.org/
   country: "کشور"
   city: "شهر"
   gender: "جنسیت"
@@ -80,6 +90,8 @@
   i_am_a: "من هستم یک"
   never_spam: "ما هرگز شما را اسپم نمیکنیم"
   enter_country: "اگر خارج از ایالات متحده آمریکا هستید کشورتان را وارد کنید"
+  used_infrequent_updates: Only used for infrequent updates
+  privacy_practices_children: See our privacy practices for children
   petition_thankyou: "تشکر میکنم برای امضای دادخواست"
   carousel_heading_international: "آموزش به زبان شما"
   continue_learning_header: "ادامه یادگیری فراتر از یک ساعت"
@@ -179,6 +191,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: "گواهینامه‌هایی برای دانش‌آموزانی که این دوره
     را تمام می‌کنند چاپ کنید"
   dashboard_landing_educator_blog: "درباره اخبار و بروزرسانی مواد درسی، وبلاگ آموزگار
@@ -208,6 +222,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -220,6 +235,7 @@
   dashboard_sections_table_course: Course
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
+  dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
     students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
   dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
@@ -238,13 +254,18 @@
     per line:'
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
+  dashboard_students_placeholder_name: Student Name
   dashboard_students_name: "نام"
   dashboard_students_age: Age
   dashboard_students_gender: "جنسیت"
+  dashboard_students_male: "مرد"
+  dashboard_students_female: "زن"
   dashboard_students_secret: Secret
   dashboard_students_password: "کلمه عبور"
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret
@@ -269,3 +290,27 @@
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_sequence: "دنباله"
+  dashboard_framework: Framework
+  dashboard_standards: Standards
+  dashboard_implementation_guide: Implementation Guide
+  dashboard_glossary: Glossary
+  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_debugging: 'Debugging:'
+  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_student_worksheet: student worksheet
+  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_grade_k: K
+  dashboard_grade_other: "دیگر"
+  dashboard_login_word: word
+  dashboard_login_picture: picture
+  dashboard_login_none: none
+  dashboard_new_password: new password
+  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
+    week alone:'
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code

@@ -44,7 +44,14 @@ class Artist < Blockly
         <title name="VALUE">100</title>
       </block>
       <block type="draw_move_by_constant_dropdown">
-        <title name="VALUE" config="50,100,150,200,300">50</title>
+        <title name="VALUE" config="50,100,150,200,300">100</title>
+      </block>
+      <block type="draw_move">
+        <value name="VALUE">
+          <block type="math_number">
+            <title name="NUM">100</title>
+          </block>
+        </value>
       </block>
       <block type="draw_turn_by_constant">
         <title name="VALUE">90</title>
@@ -52,11 +59,35 @@ class Artist < Blockly
       <block type="draw_turn_by_constant_dropdown">
         <title name="VALUE" config="45,60,90,120,180">90</title>
       </block>
-      <block type="draw_width_inline">
-        <title name="WIDTH">1</title>
+      <block type="draw_turn">
+        <value name="VALUE">
+          <block type="math_number">
+            <title name="NUM">90</title>
+          </block>
+        </value>
       </block>
       <block type="jump_by_constant">
         <title name="VALUE">100</title>
+      </block>
+      <block type="jump_by_constant_dropdown">
+        <title name="VALUE" config="50,100,150,200,300">100</title>
+      </block>
+      <block type="jump">
+        <value name="VALUE">
+          <block type="math_number">
+            <title name="NUM">100</title>
+          </block>
+        </value>
+      </block>
+      <block type="draw_width_inline">
+        <title name="WIDTH">1</title>
+      </block>
+      <block type="draw_width">
+        <value name="WIDTH">
+          <block type="math_number">
+            <title name="NUM">1</title>
+          </block>
+        </value>
       </block>
       <block type="draw_pen"></block>
       <block type="draw_line_style_pattern"></block>
@@ -119,6 +150,19 @@ class Artist < Blockly
       </block>
       <block type="controls_repeat_dropdown">
         <title name="TIMES" config="3-10">3</title>
+      </block>
+      <block type="controls_repeat_ext">
+        <value name="TIMES"></value>
+        <statement name="DO"></statement>
+      </block>
+    </category>
+    <category name="Logic">
+      <block type="controls_if" inline="false">
+        <value name="IF0">
+          <block type="logic_compare" inline="true">
+            <title name="OP">EQ</title>
+          </block>
+        </value>
       </block>
     </category>
     <category name="Math">

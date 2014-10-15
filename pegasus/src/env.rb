@@ -4,6 +4,7 @@ require 'i18n'
 require 'i18n/backend/fallbacks'
 require 'logger'
 require 'bcrypt'
+require 'chronic'
 
 def slog(h)
   CDO.slog ({ application: :pegasus }).merge(h)

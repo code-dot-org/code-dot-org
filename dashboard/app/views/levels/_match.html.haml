@@ -157,11 +157,11 @@
     var winPos = win.scrollTop() + win.height();
     var elPos = el.offset().top + el.height() - 10;
 
-    console.log(winPos, elPos);
+    //console.log(winPos, elPos);
 
     if (winPos < elPos)
     {
-      console.log("scroll into view!");
+      //console.log("scroll into view!");
       $('html, body').animate({
         scrollTop: $(".submitButton:first").offset().top - 10
       }, 1000);
