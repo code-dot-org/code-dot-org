@@ -4,18 +4,7 @@ dont_cache
 content_type :csv
 response.headers['Content-Disposition'] = "attachment;filename=#{File.basename(request.path_info)}"
 
-[].tap do |results|
-  columns = nil
-
-  DistrictPartnerInfo.all.each do |i|
-    row = i.attributes
-
-    if results.empty?
-      columns ||= row.keys
-      results << CSV.generate_line(columns)
-    end
-    results << CSV.generate_line(columns.map{|i| row[i]})
-  end
-end.join
+require 'cdo/csv'
+CSV.generate_from_dataset(DistrictPartnerInfo.all.collect(&:attributes))
 
 %>

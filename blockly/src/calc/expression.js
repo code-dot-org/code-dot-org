@@ -1,8 +1,8 @@
 /**
- * An tree representing an expression. Supports only two arguments, although
+ * A tree representing an expression. Supports only two arguments, although
  * that could potentially be expanded if necessary.
  * Example: "2 * (1 + 3)" represented by:
- * ew Expression('*', 2, new Expression('+', 1, 3)
+ * new Expression('*', 2, new Expression('+', 1, 3)
  */
 var Expression = function (operator, a, b) {
   this.operator = operator;
@@ -10,16 +10,18 @@ var Expression = function (operator, a, b) {
 };
 module.exports = Expression;
 
-// todo (brent) - figure out how/where these are exposed
-Expression.getDiff = getDiff;
-Expression.getTokenList = getTokenList;
-
 /**
  * String representation of expression tree
  */
 Expression.prototype.toString = function () {
   return "(" + this.args[0].toString() + " " + this.operator + " " +
     this.args[1].toString() + ")";
+};
+
+Expression.prototype.getTokenList = function (expectedExpression) {
+  var delta = getDifference(this, expectedExpression);
+
+  return getTokenList(this, delta);
 };
 
 /**
@@ -33,7 +35,7 @@ function token(char, correct) {
  * Given an expression or a number, and a diff
  */
 function getTokenList(expressionOrVal, diff) {
-  if (isNumber(expressionOrVal)) {
+  if (typeof(expressionOrVal) === "number") {
     return token(expressionOrVal.toString(), diff.numDiffs === 0);
   }
 
@@ -47,13 +49,17 @@ function getTokenList(expressionOrVal, diff) {
   return list;
 }
 
-function isNumber(val) {
-  // todo - do we also need to care about stringified numbers? i.e. "1"
-  return typeof(val) === "number";
-}
+/**
+ * Get the delta when going from src to target. Src and target can both be
+ * either numbers or Expressions.
+ */
+function getDifference(src, target) {
+  if (!isNumber(src) && !isExpression(src) ||
+    !isNumber(target) && !isExpression(target)) {
+    throw new Error('getDifference requires number or expression');
+  }
 
-function getDiff(src, target) {
-  if (src instanceof Expression && target instanceof Expression) {
+  if (isExpression(src) && isExpression(target)) {
     return getExpressionDiff(src, target);
   }
 
@@ -68,6 +74,10 @@ function getDiff(src, target) {
   return diff;
 }
 
+/**
+ * Get the delta when going from src to target. Src and target are both assumed
+ * to be expressions.
+ */
 function getExpressionDiff(src, target) {
   var diff = {};
   diff.numDiffs = 0;
@@ -78,10 +88,10 @@ function getExpressionDiff(src, target) {
     diff.operator = target.operator;
   }
 
-  var diff00 = getDiff(src.args[0], target.args[0]);
-  var diff01 = getDiff(src.args[0], target.args[1]);
-  var diff10 = getDiff(src.args[1], target.args[0]);
-  var diff11 = getDiff(src.args[1], target.args[1]);
+  var diff00 = getDifference(src.args[0], target.args[0]);
+  var diff01 = getDifference(src.args[0], target.args[1]);
+  var diff10 = getDifference(src.args[1], target.args[0]);
+  var diff11 = getDifference(src.args[1], target.args[1]);
 
   if (diff00.numDiffs === 0) {
     // first args match, second args may/may not
@@ -110,3 +120,19 @@ function getExpressionDiff(src, target) {
 
   return diff;
 }
+
+function isNumber(val) {
+  // todo - do we also need to care about stringified numbers? i.e. "1"
+  return typeof(val) === "number";
+}
+
+function isExpression(val) {
+  return (val instanceof Expression);
+}
+
+/* start-test-block */
+// export private function(s) to expose to unit testing
+module.exports.__testonly__ = {
+  getDifference: getDifference
+};
+/* end-test-block */

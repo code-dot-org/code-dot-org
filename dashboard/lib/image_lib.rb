@@ -1,5 +1,3 @@
-require 'RMagick'
-
 module ImageLib
 
   def self.overlay_image(params)

@@ -17,8 +17,7 @@
   },
   "about_nav": {
     "About Us": "/about",
-    "Partners": "/about/partners",
-    "News": "/about/news"
+    "Partners": "/about/partners"
   },
   "header_links": {
     "HOME": "/",

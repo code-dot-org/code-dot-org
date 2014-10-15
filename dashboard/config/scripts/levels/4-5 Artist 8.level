@@ -14,7 +14,8 @@
     "skip_instructions_popup": "false",
     "free_play": "false",
     "ideal": "9",
-    "slider_speed": "0.4"
+    "slider_speed": "0.4",
+    "disable_param_editing": "true"
   }
 }]]></config>
   <blocks>
@@ -55,13 +56,19 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">160</title>
-        </block>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">240</title>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">240</title>
+              <next>
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">120</title>
+                </block>
+              </next>
+            </block>
+          </statement>
         </block>
         <block type="pick_one">
           <statement name="PICK">
@@ -76,6 +83,10 @@
               </next>
             </block>
           </statement>
+        </block>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">160</title>
         </block>
       </xml>
     </required_blocks>
