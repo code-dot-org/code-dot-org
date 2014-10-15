@@ -80,7 +80,7 @@ nav: resources_nav
 </p>
 
 <h4>
-  <a href="http://hourofcode.com/us#signup">Cadastre</a> seu evento da Hora do Código e enviaremos os cartazes por correio gratuitamente.
+  <a href="http://hourofcode.com/#signup">Cadastre</a> seu evento da Hora do Código e enviaremos os cartazes por correio gratuitamente.
 </h4>
 
 <p>
