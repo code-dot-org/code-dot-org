@@ -126,6 +126,22 @@ social:
   %div{:style=>'clear:both;'}
   = view :petition
 
+  -if locale_ro?
+    %br
+    %br
+    %h1{:style=>'text-align: center;'}
+      Are you in Romania? Please visit 
+      %a{:href=>'http://ro.code.org'}
+        ro.code.org!
+
+  -if locale_br?
+    %br
+    %br
+    %h1{:style=>'text-align: center;'}
+      Are you in Brazil? Please visit 
+      %a{:href=>'http://br.code.org'}
+        br.code.org!
+
   #columns.desktop-feature{:style=>'clear:both; overflow:hidden'}
     #column1{:style=>'float:left; width: 33.33%'}
       %h2 Teachers & Educators

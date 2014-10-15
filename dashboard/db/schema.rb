@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141003211241) do
+ActiveRecord::Schema.define(version: 20141014222914) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20141003211241) do
     t.integer  "lines",           default: 0, null: false
   end
 
+  add_index "activities", ["level_id"], name: "index_activities_on_level_id", using: :btree
   add_index "activities", ["level_source_id"], name: "index_activities_on_level_source_id", using: :btree
   add_index "activities", ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
 
@@ -355,12 +356,6 @@ ActiveRecord::Schema.define(version: 20141003211241) do
     t.string   "user_type",                  limit: 16
     t.string   "school"
     t.string   "full_address",               limit: 1024
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
-    t.float    "lat"
-    t.float    "lon"
     t.integer  "total_lines",                             default: 0,       null: false
     t.boolean  "prize_earned",                            default: false
     t.integer  "prize_id"
