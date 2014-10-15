@@ -415,7 +415,7 @@ end
   }
 
   # Always cache the following file types for all users.
-  if (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js)(\?[a-z0-9]+)?$") {
+  if( (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js)(\?[a-z0-9]+)?$") && (!(req.url ~ "^/api/")) ) {
     unset req.http.Cookie;
   }
 
@@ -499,7 +499,7 @@ end
 
 # Code determining what to do when serving items from the Apache servers.
 sub vcl_fetch {
-  if (req.url ~ "^/api/hour/begin/" || req.url ~ "^/auth$" || req.url ~ "^/auth/") {
+  if (req.url ~ "^/api/hour/begin/" || req.url ~ "^/api/hour/begin_" || req.url ~ "^/auth$" || req.url ~ "^/auth/") {
     # allow this route to always set cookies.
   } else if (req.url ~ "(?i)\.(png|gif|jpeg|jpg|ico|swf|css|js)(\?[a-z0-9]+)?$") {
     # Don't allow static files to set cookies.
