@@ -131,9 +131,9 @@ end
 
 def launch_tutorial_pixel(tutorial)
   unless settings.read_only
-    row = HourOfActivity.first(:session=>request.cookies['hour_of_code'])
+    session = request.cookies['hour_of_code']
+    row = HourOfActivity.first(session:session)
     if row && !row.pixel_started && !row.pixel_finished && !row.finished
-      session = row.session
       row.pixel_started = true
       row.update_ip = request.ip
       row.save
@@ -149,10 +149,10 @@ def launch_tutorial_pixel(tutorial)
       # Set the cookie to match the session in the HourOfActivity table.
       # TODO: when we move to the hoc_activity table below, set the
       # cookie to match the session in hoc_activity instead.
-      set_tutorial_session_cookie(row.session)
+      set_tutorial_session_cookie(session)
     end
 
-    row = DB[:hoc_activity].where(session:request.cookies['hour_of_code'], pixel_started_at:nil, pixel_finished_at:nil, finished_at:nil).first
+    row = DB[:hoc_activity].where(session:session, pixel_started_at:nil, pixel_finished_at:nil, finished_at:nil).first
     if row
       DB[:hoc_activity].where(id:row[:id]).update(pixel_started_at:DateTime.now, pixel_started_ip:request.ip)
     else
