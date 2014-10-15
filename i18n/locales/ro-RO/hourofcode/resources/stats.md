@@ -1,6 +1,6 @@
 * * *
 
-title: Resources layout: wide
+Titlu: Resurse aspect: wide
 
 * * *
 
@@ -8,12 +8,12 @@ title: Resources layout: wide
 
 ## Câteva statistici şocante (SUA):
 
-  * There will be one million more computing jobs than students over the next 10 years (adding up to $500 billion in salaries).
-  * More than 50 percent of all projected math and science occupations are in computing occupations. 
-  * Computing occupations are among the highest-paying jobs for new graduates. Yet fewer than 3% of college students graduate with a degree in computer science.
-  * In 26 states, computer science classes don’t count toward math or science high school graduation requirements. 
-  * Less than 20% of AP Computer Science students are women. Less than 10% are black or Latino.
+  * Vor exista cu un milion mai multe locuri de muncă in domeniul programării decât elevii în următorii 10 ani (până la 500 miliarde dolari în salarii).
+  * Mai mult de 50 la sută din toate proiectele de matematică aplicata şi ştiinţă sunt în programare. 
+  * Locurile de muncă din programare sunt printre cele mai bine plătite pentru absolvenți. Cu toate acestea mai puțin de 3% dintre studenți sunt absolvenți de informatică.
+  * În 26 de state, orele de informatică nu se iau în calcul la cerintele de absolvire din liceele de matematică sau știinte. 
+  * Mai putin de 20% din elevii inscrisi in programul AP Computer Science sunt fete. Mai putin de 10% sunt de negri sau latini.
 
-## Infrographic version:
+## Versiune grafică:
 
-![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+![imagine](http://code.org/images/fit-8000/Code.org_infographic.png)

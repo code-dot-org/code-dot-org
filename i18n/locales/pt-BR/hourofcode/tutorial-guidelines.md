@@ -12,7 +12,7 @@ Gostaríamos de disponibilizar uma variedade de opções atrativas, mas nosso ob
 
 <a id="top"></a>
 
-## Índice
+## Índice:
 
   * [Como os tutoriais serão avaliados para inclusão](#inclusion)
   * [Diretrizes gerais para criação de uma atividade da Hora do Código](#guidelines)
@@ -157,7 +157,7 @@ Acesse a [página de envio de atividade da Hora do Código](https://docs.google.
 
 **Incorporar feedback ao final da atividade.** (Por exemplo: "Você terminou 10 níveis e aprendou sobre loops! Ótimo trabalho!")
 
-**Incorporar mídias sociais.** Incentive os estudantes a publicar nas mídias sociais (quando apropriado), assim que terminarem sua participação, por exemplo: "Fiz uma Hora do Código com \___\_____. E você? #HoraDoCodigo"ou"Eu fiz uma #HoraDoCodigo como parte da #SemEduCC. E você? @Scratch." Use a hashtag **#HoraDoCodigo** (com letras maiúsculas H, D, C).
+**Incorporar mídias sociais.** Incentive os estudantes a publicar nas mídias sociais (quando apropriado), assim que terminarem sua participação, por exemplo: "Fiz uma Hora do Código com ________. E você? #HoraDoCodigo"ou"Eu fiz uma #HoraDoCodigo como parte da #SemEduCC. E você? @Scratch." Use a hashtag **#HoraDoCodigo** (com letras maiúsculas H, D, C).
 
 **Crie sua atividade em outros idiomas além do inglês.** Este ano estamos apostando em uma campanha internacional e gostaríamos de ter atividades para oferecer a falantes de outros idiomas.
 
@@ -167,13 +167,13 @@ Acesse a [página de envio de atividade da Hora do Código](https://docs.google.
 
 **Certifique-se de que seu tutorial pode ser usado em um [paradigma de Programação em Duplas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
 
-Estas são as três regras de programação em duplas no âmbito escolar:
+Estas são as três regras de programação em pares no âmbito escolar:
 
   * O condutor controla o mouse e o teclado.
   * O navegador faz sugestões, aponta os erros e faz perguntas. 
   * Os alunos devem alternar os papéis pelo menos duas vezes por sessão.
 
-Benefícios da programação em duplas:
+Benefícios da programação em pares:
 
   * Os alunos podem ajudar um ao outro em vez de depender do professor
   * É possível mostrar que a codificação não é uma atividade individual, mas que envolve interação social

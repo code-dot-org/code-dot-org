@@ -4,6 +4,6 @@ title: Thank you layout: wide
 
 * * *
 
-# Thank you
+# 감사합니다.
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+소속 학교 전체가 상품(1학급 분량의 노트북 또는 $10,000 상당의 다른 기기)을 받을 수 있도록 등록되었습니다.

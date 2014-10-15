@@ -1,6 +1,6 @@
 * * *
 
-title: Resources layout: wide
+naslov: Resursi postav: širok
 
 * * *
 
