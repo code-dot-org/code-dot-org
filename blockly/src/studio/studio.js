@@ -1396,7 +1396,7 @@ Studio.execute = function() {
   var i;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions);
+    code = utils.generateCodeAliases(level.codeFunctions, 'Studio');
     code += BlocklyApps.editor.getValue();
   }
 

@@ -209,6 +209,10 @@ BlocklyApps.reset = function(first) {
   var divWebapp = document.getElementById('divWebapp');
   divWebapp.style.backgroundColor = 'white';
 
+  while (divWebapp.firstChild) {
+    divWebapp.removeChild(divWebapp.firstChild);
+  }
+
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -307,18 +311,18 @@ Webapp.execute = function() {
 
   BlocklyApps.reset(false);
 
-  // Define any top-level procedures the user may have created
-  // (must be after reset(), which resets the Webapp.Globals namespace)
-  defineProcedures('procedures_defreturn');
-  defineProcedures('procedures_defnoreturn');
-
   // Set event handlers and start the onTick timer
 
   var codeWhenRun;
   if (level.editCode) {
-    codeWhenRun = utils.generateCodeAliases(level.codeFunctions);
+    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Webapp');
     codeWhenRun += BlocklyApps.editor.getValue();
   } else {
+    // Define any top-level procedures the user may have created
+    // (must be after reset(), which resets the Webapp.Globals namespace)
+    defineProcedures('procedures_defreturn');
+    defineProcedures('procedures_defnoreturn');
+
     var blocks = Blockly.mainWorkspace.getTopBlocks();
     for (var x = 0; blocks[x]; x++) {
       var block = blocks[x];
@@ -421,7 +425,7 @@ Webapp.executeCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  Webapp.callCmd(cmd);
+  return Webapp.callCmd(cmd);
 };
 
 //
@@ -434,6 +438,7 @@ Webapp.executeCmd = function (id, name, opts) {
 //
 
 Webapp.callCmd = function (cmd) {
+  var retVal = true;
   switch (cmd.name) {
     /* 
     case 'wait':
@@ -444,10 +449,14 @@ Webapp.callCmd = function (cmd) {
     */
     case 'turnBlack':
       BlocklyApps.highlight(cmd.id);
-      Webapp.turnBlack(cmd.opts);
+      retVal = Webapp.turnBlack(cmd.opts);
+      break;
+    case 'createHtmlBlock':
+      BlocklyApps.highlight(cmd.id);
+      retVal = Webapp.createHtmlBlock(cmd.opts);
       break;
   }
-  return true;
+  return retVal;
 };
 
 Webapp.turnBlack = function (opts) {
@@ -455,6 +464,20 @@ Webapp.turnBlack = function (opts) {
 
   // sample
   divWebapp.style.backgroundColor = 'black';
+
+  return true;
+};
+
+Webapp.createHtmlBlock = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newDiv = document.createElement("div");
+  newDiv.id = opts.elementId;
+  newDiv.innerHTML = opts.html;
+
+  divWebapp.appendChild(newDiv);
+
+  return newDiv;
 };
 
 /*
