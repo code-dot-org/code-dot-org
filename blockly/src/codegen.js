@@ -115,7 +115,7 @@ exports.evalWith = function(code, options) {
     myInterpreter.run();
   } else {
     // execute JS code "natively"
-    var fn = functionFromCode(code, options);
+    var fn = exports.functionFromCode(code, options);
     return fn.apply(null, args);
   }
 };
