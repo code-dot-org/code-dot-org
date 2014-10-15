@@ -93,7 +93,7 @@ exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      initJSInterpreter(interpreter, scope, options);
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
