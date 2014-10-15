@@ -80,7 +80,7 @@ nav: resources_nav
 </p>
 
 <h4>
-  <a href="http://hourofcode.com/us#signup">سجل </a> حدثك حول ساعة البرمجة و سوف نرسل لك الملصقات مجاناً.
+  <a href="http://hourofcode.com/#signup">سجل </a> حدثك حول ساعة البرمجة و سوف نرسل لك الملصقات مجاناً.
 </h4>
 
 <p>

@@ -47,7 +47,7 @@ nav: resources_nav
 <a id="posters">
 ## Hang these posters in your school
 <% if @country == 'us' %>
-#### [Sign up](http://hourofcode.com/us#signup) your Hour of Code event and we'll mail you posters for free.
+#### [Sign up](http://hourofcode.com/#signup) your Hour of Code event and we'll mail you posters for free.
 <% end %>
 <br />
 [![image](/images/fit-280/mark-zuckerberg.png)](/resources/mark-zuckerberg-poster.pdf)
