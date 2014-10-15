@@ -44,16 +44,16 @@ Fale aos seus amigos sobre o #HoraDoCódigo.
 
 [Donate to our crowdfunding campaign](http://code.org/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://code.org/donate) in history. Every dollar will be matched by major Code.org [donors](http://code.org/about/donors), doubling your impact.
 
-## 4. Ask your employer to get involved
+## 4. Peça para seu empregador para participar
 
 [Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
 
-## 5. Promote Hour of Code within your community
+## 5. Promova a Hora do Código em sua comunidade
 
 Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de veteranos ou sindicato. Ou ofereça uma "festa" Hora do Código para sua vizinhança.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 6. Peça a um oficial eleito para apoiar a Hora do Código
 
-[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Envie este e-mail](/resources#politicians) para seu prefeito, Câmara Municipal ou conselho escolar. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>
