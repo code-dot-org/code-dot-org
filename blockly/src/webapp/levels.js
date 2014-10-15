@@ -24,6 +24,13 @@ levels.simple = {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
+levels.ec_simple = {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'turnBlack', 'alias': 'Webapp.turnBlack();' },
+  ],
+};
+
 levels.full_sandbox =  {
   'scrollbars' : true,
   'requiredBlocks': [
