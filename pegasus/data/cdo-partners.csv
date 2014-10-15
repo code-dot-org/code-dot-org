@@ -2,7 +2,6 @@ name_s,url_s,kind_s,codeorg_b,csedweek_b,hourofcode_b
 Access Computing,http://doit-prod.s.uw.edu/accesscomputing/,additional,TRUE,FALSE,TRUE
 Akamai,http://www.akamai.com,additional,TRUE,FALSE,TRUE
 AngelHack,http://www.angelhack.com/,additional,TRUE,FALSE,TRUE
-AthleTECH,http://www.AthleTECH.org,additional,TRUE,FALSE,TRUE
 Better Lesson,http://betterlesson.com,additional,TRUE,FALSE,TRUE
 Black Girl Nerds,http://blackgirlnerds.com,additional,TRUE,FALSE,TRUE
 Black Girls Code,http://blackgirlscode.org/,additional,TRUE,FALSE,TRUE
@@ -168,7 +167,7 @@ Amazon,http://www.amazon.com,promotional,FALSE,TRUE,FALSE
 Apple,http://www.apple.com,promotional,FALSE,TRUE,FALSE
 Bing,http://www.bing.com,promotional,TRUE,TRUE,TRUE
 Boys & Girls Clubs of America,http://GreatFutures.org,promotional,FALSE,TRUE,FALSE
-City Year,http://www.cityyear.org/home-WhatWeDo.aspx,promotional,TRUE,TRUE,TRUE
+City Year,http://www.cityyear.org,promotional,TRUE,TRUE,TRUE
 Computing Research Association,http://www.cra.org/,promotional,TRUE,FALSE,TRUE
 Dice.com,http://dice.com,promotional,TRUE,TRUE,TRUE
 Donors Choose,http://www.donorschoose.org/,promotional,FALSE,TRUE,FALSE
@@ -201,6 +200,12 @@ YouTube,http://www.youtube.com,promotional,TRUE,TRUE,TRUE
 Zappos.com,http://www.Zappos.com,promotional,FALSE,TRUE,FALSE
 Zulily,http://www.zulily.com/,promotional,TRUE,TRUE,TRUE
 Zynga,http://zynga.com/,promotional,TRUE,TRUE,TRUE
+UPC,http://www.upc.ro/,ro,TRUE,FALSE,FALSE
+ANIS,http://www.anis.ro/,ro,TRUE,FALSE,FALSE
+GEYC,http://www.geyc.ro/,ro,TRUE,FALSE,FALSE
+RGDA,http://www.rgda.ro/,ro,TRUE,FALSE,FALSE
+STRATEGAD,http://strategad.com/,ro,TRUE,FALSE,FALSE
+TechSoup Romania,http://www.techsoup.ro/,ro,TRUE,FALSE,FALSE
 AgentSheets,http://www.agentsheets.com/,tutorial,TRUE,TRUE,TRUE
 Alice,http://www.alice.org/,tutorial,TRUE,TRUE,TRUE
 BirdBrain Technologies,http://www.birdbraintechnologies.com/,tutorial,TRUE,TRUE,TRUE
@@ -214,7 +219,6 @@ Hopscotch,http://www.gethopscotch.com/,tutorial,TRUE,TRUE,TRUE
 Khan Academy,https://www.khanacademy.org/,tutorial,TRUE,TRUE,TRUE
 Kodable,http://www.surfscore.com/,tutorial,TRUE,TRUE,TRUE
 Kodu,http://fuse.microsoft.com/projects/kodu,tutorial,TRUE,TRUE,TRUE
-LearnStreet,http://www.learnstreet.com/,tutorial,TRUE,TRUE,TRUE
 LightBot,http://light-bot.com/,tutorial,TRUE,TRUE,TRUE
 LiveCode,http://livecode.com/hour-of-code/,tutorial,TRUE,TRUE,TRUE
 Lynda.com,http://www.lynda.com/Developer-training-tutorials/50-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=524&utm_campaign=CD14814&bid=524&aid=CD14814&opt=,tutorial,TRUE,TRUE,TRUE
