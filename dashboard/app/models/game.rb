@@ -27,8 +27,8 @@ class Game < ActiveRecord::Base
     @@game_custom_studio ||= find_by_name("CustomStudio")
   end
 
-  def self.custom_calc
-    @@game_custom_calc ||= find_by_name("CustomCalc")
+  def self.calc
+    @@game_calc ||= find_by_name("Calc")
   end
 
   def unplugged?
@@ -94,7 +94,7 @@ class Game < ActiveRecord::Base
         Unplugged:unplug
         Wordsearch:wordsearch
         CustomStudio:studio
-        CustomCalc:calc
+        Calc:calc
         Webapp:webapp
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
