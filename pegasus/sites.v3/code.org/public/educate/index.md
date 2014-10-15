@@ -12,7 +12,7 @@ More than 44 million people of all ages have learned an [Hour of Code](http://ho
 
 
 ## Teach one of our online courses 
-Code.org's online platform [Code Studio](studio.code.org) enables students to learn the basic concepts of computer science as early as kindergarten. Within Code Studio, a new Play Lab has been developed where elementary students can create and send apps or animations directly to a cell phone, just by typing in the phone number. Or try our general course designed for any educator to host in a classroom, after-school program, or even in a club outside of school. 
+Code.org's online platform [Code Studio](http://studio.code.org) enables students to learn the basic concepts of computer science as early as kindergarten. Within Code Studio, a new Play Lab has been developed where elementary students can create and send apps or animations directly to a cell phone, just by typing in the phone number. Or try our general course designed for any educator to host in a classroom, after-school program, or even in a club outside of school. 
 
 [<button>Learn more</button>](http://studio.code.org)
 
