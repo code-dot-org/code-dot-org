@@ -27,8 +27,16 @@ class ActivitiesController < ApplicationController
     end
 
     if params[:program]
-      share_failure = find_share_failure(params[:program])
-      @level_source = LevelSource.find_identical_or_create(@level, params[:program]) unless share_failure
+      begin
+        share_failure = find_share_failure(params[:program])
+      rescue OpenURI::HTTPError => e
+        share_checking_error = e
+      end
+
+      unless share_failure
+        @level_source = LevelSource.find_identical_or_create(@level, params[:program])
+        slog(tag: 'share_checking_error', error: "#{e}", level_source_id: @level_source.id) if share_checking_error
+      end
     end
 
     log_milestone(@level_source, params)
