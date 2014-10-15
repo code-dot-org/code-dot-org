@@ -110,9 +110,9 @@ describe("ExpressionNode", function () {
 
     node = new ExpressionNode(0);
     expected = new ExpressionNode(0);
-    assert.equal(node.valMetExpectation, null);
+    assert.equal(node.valMetExpectation_, null);
     node.applyExpectation(expected);
-    assert.equal(node.valMetExpectation, true);
+    assert.equal(node.valMetExpectation_, true);
     list = node.getTokenList();
     assert.deepEqual(list, [
       { char: "0", correct: true}
@@ -121,7 +121,7 @@ describe("ExpressionNode", function () {
     node = new ExpressionNode(0);
     expected = new ExpressionNode(1);
     node.applyExpectation(expected);
-    assert.equal(node.valMetExpectation, false);
+    assert.equal(node.valMetExpectation_, false);
     list = node.getTokenList();
     assert.deepEqual(list, [
       { char: "0", correct: false}
@@ -130,7 +130,7 @@ describe("ExpressionNode", function () {
     node = new ExpressionNode("+", 1, 2);
     expected = new ExpressionNode("+", 2, 1);
     node.applyExpectation(expected);
-    assert.equal(node.valMetExpectation, true);
+    assert.equal(node.valMetExpectation_, true);
     list = node.getTokenList();
     assert.deepEqual(list, [
       { char: "(", correct: true},
@@ -143,7 +143,7 @@ describe("ExpressionNode", function () {
     node = new ExpressionNode("+", 1, 2);
     expected = new ExpressionNode("-", 3, 1);
     node.applyExpectation(expected);
-    assert.equal(node.valMetExpectation, false);
+    assert.equal(node.valMetExpectation_, false);
     list = node.getTokenList();
     assert.deepEqual(list, [
       { char: "(", correct: true},
@@ -156,5 +156,81 @@ describe("ExpressionNode", function () {
     // todo - more of these
   });
 
+  it("evaluate", function () {
+    var node;
+
+    node = new ExpressionNode(2);
+    assert.equal(node.evaluate(), 2);
+
+    node = new ExpressionNode("+", 1, 2);
+    assert.equal(node.evaluate(), 3);
+
+    node = new ExpressionNode("*",
+      new ExpressionNode("+", 1, 2),
+      new ExpressionNode("-", 3, 1)
+    );
+    assert.equal(node.evaluate(), 6);
+  });
+
+  it("depth", function () {
+    var node;
+
+    node = new ExpressionNode(2);
+    assert.equal(node.depth(), 0);
+
+    node = new ExpressionNode("+", 1, 2);
+    assert.equal(node.depth(), 1);
+
+    node = new ExpressionNode("+", 1, new ExpressionNode("+", 2, 3));
+    assert.equal(node.depth(), 2);
+
+    node = new ExpressionNode("+", new ExpressionNode("+", 2, 3), 1);
+    assert.equal(node.depth(), 2);
+
+    node = new ExpressionNode("*",
+      new ExpressionNode("+", 1, 2),
+      new ExpressionNode("-", 3, 1)
+    );
+    assert.equal(node.depth(), 2);
+  });
+
+  it ("collapse", function () {
+    var node, result;
+
+    node = new ExpressionNode(2);
+    result = node.collapse();
+    assert.equal(result, false);
+    assert.equal(node.toString(), "2");
+
+    node = new ExpressionNode("+", 1, 2);
+    result = node.collapse();
+    assert.equal(result, true);
+    assert.equal(node.toString(), "3");
+    assert.equal(node.val, 3);
+    assert.equal(node.left, null);
+    assert.equal(node.right, null);
+
+    node = new ExpressionNode("+", new ExpressionNode("+", 1, 2), 3);
+    result = node.collapse();
+    assert.equal(result, true);
+    assert.equal(node.toString(), "(3 + 3)");
+
+
+    node = new ExpressionNode("+", 1, new ExpressionNode("+", 2, 3));
+    result = node.collapse();
+    assert.equal(result, true);
+    assert.equal(node.toString(), "(1 + 5)");
+
+    node = new ExpressionNode("*",
+      new ExpressionNode("+", 1, 2),
+      new ExpressionNode("-", 3, 1)
+    );
+    result = node.collapse();
+    assert.equal(result, true);
+    assert.equal(node.toString(), "(3 * (3 - 1))");
+
+    // todo - test collapsing with mistakes
+
+  });
 
 });

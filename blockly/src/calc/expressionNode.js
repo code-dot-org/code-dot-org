@@ -12,7 +12,7 @@ var ExpressionNode = function (val, left, right) {
   }
 
   // null indicates not set. otherwise will be true/false
-  this.valMetExpectation = null;
+  this.valMetExpectation_ = null;
 };
 module.exports = ExpressionNode;
 
@@ -46,12 +46,98 @@ ExpressionNode.prototype.clone = function () {
 /**
  * todo
  */
+ExpressionNode.prototype.failedExpectation = function (includeDescendants) {
+  // Don't fail if we don't have an expectation set
+  if (this.valMetExpectation_ === null) {
+    return false;
+  }
+
+  var fails = (this.valMetExpectation_ === false);
+  if (includeDescendants && this.left && this.left.failedExpectation(true)) {
+    fails = true;
+  }
+  if (includeDescendants && this.right && this.right.failedExpectation(true)) {
+    fails = true;
+  }
+
+  return fails;
+};
+
+/**
+ * todo
+ */
+ExpressionNode.prototype.evaluate = function () {
+  if (!this.isOperation()) {
+    return this.val;
+  }
+
+  var left = this.left.evaluate();
+  var right = this.right.evaluate();
+
+  switch (this.val) {
+    case '+':
+      return left + right;
+    case '-':
+      return left - right;
+    case '*':
+      return left * right;
+    case '/':
+      return left / right;
+    default:
+      throw new Error('Unknown operator: ' + this.val);
+    }
+};
+
+/**
+ * todo
+ */
+ExpressionNode.prototype.depth = function () {
+  if (!this.isOperation()) {
+    return 0;
+  }
+
+  return 1 + Math.max(this.left.depth(), this.right.depth());
+}
+
+/**
+ * todo
+ */
+ExpressionNode.prototype.collapse = function () {
+  if (!this.isOperation()) {
+    return false;
+  }
+
+  var leftDepth = this.left.depth();
+  var rightDepth = this.right.depth();
+
+  if (leftDepth === 0 && rightDepth === 0) {
+    if (this.failedExpectation(true)) {
+      // dont allow collapsing if we're a leaf operation with a mistake
+      return false;
+    }
+    this.val = this.evaluate();
+    this.left = null;
+    this.right = null;
+    return true;
+  } else {
+    if (rightDepth > leftDepth) {
+      return this.right.collapse();
+    }
+    return this.left.collapse();
+  }
+
+  return true;
+};
+
+/**
+ * todo
+ */
 ExpressionNode.prototype.applyExpectation = function (expectationNode) {
-  if (this.valMetExpectation !== null) {
+  if (this.valMetExpectation_ !== null) {
     throw new Error('Node already has an expectedVal');
   }
 
-  this.valMetExpectation = expectationNode ? expectationNode.val === this.val : null;
+  this.valMetExpectation_ = expectationNode ? expectationNode.val === this.val : null;
 
   if (this.isOperation() || expectationNode.isOperation()) {
     // todo - can i share this with getNumDiffs_ ?
@@ -76,17 +162,17 @@ ExpressionNode.prototype.applyExpectation = function (expectationNode) {
  * todo
  */
 ExpressionNode.prototype.getTokenList = function () {
-  if (this.valMetExpectation === null) {
+  if (this.valMetExpectation_ === null) {
     throw new Error("Can't get token list without expectation set");
   }
 
   if (!this.isOperation()) {
-    return [token(this.val.toString(), this.valMetExpectation)];
+    return [token(this.val.toString(), this.valMetExpectation_)];
   }
 
   var list = [token("(", true)];
   list = list.concat(this.left.getTokenList());
-  list = list.concat(token(this.val, this.valMetExpectation));
+  list = list.concat(token(this.val, this.valMetExpectation_));
   list = list.concat(this.right.getTokenList());
   list = list.concat(token(")", true));
   return list;
