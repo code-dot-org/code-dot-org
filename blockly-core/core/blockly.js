@@ -934,13 +934,13 @@ Blockly.openFunctionEditor = function(functionDefinitionXML) {
     };
   }
 
-  // Initialize workspace with some blocks
+  // Initialize workspace with specified function definition block
   {
     var xml = Blockly.Xml.textToDom(functionDefinitionXML);
     Blockly.Xml.domToWorkspace(workspace, xml);
   }
 
-  // Initialize flyout with some blocks
+  // Initialize flyout with a couple of studio blocks
   {
     workspace.flyout_.init(workspace, true);
     var flyoutBlocks = Blockly.Xml.textToDom('<xml><block type="studio_showTitleScreenParams" inline="false"><value name="TITLE"><block type="text"><title name="TEXT"></title></block></value><value name="TEXT"><block type="text"><title name="TEXT"></title></block></value></block><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">1</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block><block type="studio_playSound"><title name="SOUND">hit</title></block></xml>');
