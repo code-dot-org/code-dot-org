@@ -1399,38 +1399,23 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
   }
   for (var optsObj in options) {
     var func, wrapper;
-    // In general, the options object contains objects that will be referenced
+    // The options object contains objects that will be referenced
     // by the code we plan to execute. Since these objects exist in the native
     // world, we need to create associated objects in the interpreter's world
     // so the interpreted code can call out to these native objects
 
-    // We have one special case if there is a key called 'codeFunctions'
-    // This is a table of objects, each representing a function (name in .func)
-    // that we want to expose to the interpreter in the global/window namespace
-    // (not belonging to an object)
-    if (optsObj.toString() === 'codeFunctions') {
-      for (var i = 0; i < optsObj.length; i++) {
-        // Populate each of the codeFunctions with native functions
-        func = window[optsObj[i].func];
-        wrapper = makeNativeMemberFunction(func, window);
-        interpreter.setProperty(scope,
-                                optsObj[i].func,
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
                                 interpreter.createNativeFunction(wrapper));
-      }
-    } else {
-      // Create global objects in the interpreter for everything else in options
-      var obj = interpreter.createObject(interpreter.OBJECT);
-      interpreter.setProperty(scope, optsObj.toString(), obj);
-      for (var prop in options[optsObj]) {
-        func = options[optsObj][prop];
-        if (func instanceof Function) {
-          // Populate each of the global objects with native functions
-          // NOTE: other properties are not currently passed to the interpreter
-          wrapper = makeNativeMemberFunction(func, options[optsObj]);
-          interpreter.setProperty(obj,
-                                  prop,
-                                  interpreter.createNativeFunction(wrapper));
-        }
       }
     }
   }
@@ -1443,7 +1428,7 @@ exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      initJSInterpreter(interpreter, scope, options);
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -7501,16 +7486,16 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += "var " + codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = [''].concat(arguments); return " +
+          parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -7617,9 +7602,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
