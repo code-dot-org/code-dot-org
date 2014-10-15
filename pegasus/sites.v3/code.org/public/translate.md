@@ -11,8 +11,6 @@ We want help translating the Code.org site, tutorials, and videos.
 2. Join the [Hour of Code project](https://crowdin.com/project/hour-of-code/invite), and start immediately!
 3. To translate video captions, please see more info below.
 
-# About the translation process
-
 ## Translating the site and tutorials
 The majority of our translations are done through CrowdIn, a localization management platform. It is free to join and any volunteer can immediately contribute to the project by providing translations. The final translation that appears on our site can be chosen in two ways: 
 
@@ -26,13 +24,27 @@ To apply to be a proofreader, please send an email to translations@code.org with
 There are currently three projects, the [Hour of Code](https://crowdin.com/project/hour-of-code), [Code.org](https://crowdin.com/project/codeorg), and [Lesson Plans](https://crowdin.com/project/lesson-plans). Please complete translations for these projects in that order of priority. If you have completed translations for the Hour of Code or Code.org project and you do not see your language in the drop down menu, please send a report to translations@code.org.
 
 ## Translating video captions
-Translations for video captions is done through Google Translate Toolkit. To get started, send a request for an invite from translations@code.org, including a gmail email address (or one hosted on Gmail) and the language you'd like to translate. The videos we would like to be translated in order of priority are listed below. If you would like to translate additional videos, please include these in your request.
+Translations for video captions is done through Google Translate Toolkit. To get started, send a request for an invite to translations@code.org, including a gmail email address (or one hosted on Gmail) and the language you'd like to translate. The videos we would like to be translated in order of priority are listed below. If you would like to translate additional videos, please include these in your request.
 
-1. [Hour of Code 2014 promotional video](https://www.youtube.com/watch?v=rH7AjDMz_dc)
+1. [Hour of Code - Worldwide](https://www.youtube.com/watch?v=rH7AjDMz_dc)
 2. [Hour of Code tutorial videos](http://www.youtube.com/playlist?list=PLzdnOPI1iJNemVBckyuo_m97bFF2hbL9J)
-3. [K-8 Intro Course videos](http://www.youtube.com/playlist?list=PLzdnOPI1iJNf1Xpah9NDGSFDYYc-uJMR1)
+3. [Malala Challenges Girls to do the Hour of Code](http://youtu.be/cFdncBMDtP8)
 4. [What Most Schools Don't Teach](https://www.youtube.com/watch?v=nKIu9yen5nc)
-5. [Hour of Code 2013 promotional video](https://www.youtube.com/watch?v=FC5FbmsH4fw)
+5. [The Hour of Code is Here](https://www.youtube.com/watch?v=FC5FbmsH4fw)
+
+<br>
+The process for translating video captions is as follows:
+
+1. I send you an invite for a video translation with an English caption track.
+2. As you work on the translations, you can click File/Save or wait for it to save automatically every few minutes). 
+3. When you're sure the translations are complete, click the "Publish to YouTube" button. This sends me an email telling me you're done.
+4. After receiving this email, I will manually publish them.
+5. I will then send you a confirmation e-mail that it's been published.
+
+Note, that when you click "Publish to YouTube" it will give you an error message because you don't have access to do so. This is OK. It will not actually publish it to YouTube, but it will still send me the e-mail notifying me that you're done.
+
+## Be a Lead Translator
+If you'd like to be a lead translator, please e-mail translations@code.org with your name, language, and credentials. A lead translator will be the first point of contact when we need something translated immediately. We will ask that you translate regularly, as we update the site constantly. The commitment is about 5-10 hours per week. As a thank you for your dedication, we will feature Lead Translators on the site.
 
 
 ## How to Use CrowdIn
