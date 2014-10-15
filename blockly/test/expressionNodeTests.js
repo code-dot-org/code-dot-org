@@ -50,61 +50,6 @@ describe("ExpressionNode", function () {
     assert.notEqual(clone.left.right.val, node.left.right.val);
   });
 
-  it("getNumDiffs_", function () {
-    var node, expected;
-
-    node = new ExpressionNode(0);
-    expected = new ExpressionNode(0);
-    assert.equal(node.getNumDiffs_(expected), 0);
-
-    node = new ExpressionNode(0);
-    expected = new ExpressionNode(1);
-    assert.equal(node.getNumDiffs_(expected), 1);
-
-    node = new ExpressionNode("+", 1, 2);
-    expected = new ExpressionNode("+", 1, 2);
-    assert.equal(node.getNumDiffs_(expected), 0);
-
-    node = new ExpressionNode("+", 1, 2);
-    expected = new ExpressionNode("+", 2, 1);
-    assert.equal(node.getNumDiffs_(expected), 0);
-
-    node = new ExpressionNode("+", 1, 2);
-    expected = new ExpressionNode("-", 1, 2);
-    assert.equal(node.getNumDiffs_(expected), 1);
-
-    node = new ExpressionNode("+", 1, 2);
-    expected = new ExpressionNode("+", 2, 2);
-    assert.equal(node.getNumDiffs_(expected), 1);
-
-    node = new ExpressionNode("+", 1, 2);
-    expected = new ExpressionNode("-", 3, 4);
-    assert.equal(node.getNumDiffs_(expected), 3);
-
-    node = new ExpressionNode("+", 1, new ExpressionNode("+", 3, 4));
-    expected = new ExpressionNode("+", 1, new ExpressionNode("+", 3, 4));
-    assert.equal(node.getNumDiffs_(expected), 0);
-
-    node = new ExpressionNode("+", 1, new ExpressionNode("+", 3, 4));
-    expected = new ExpressionNode("+", new ExpressionNode("+", 4, 3), 1);
-    assert.equal(node.getNumDiffs_(expected), 0);
-
-    node = new ExpressionNode("+", 1, new ExpressionNode("+", 3, 4));
-    expected = new ExpressionNode("+", 1, 2);
-    assert.equal(node.getNumDiffs_(expected), Infinity);
-
-
-    node = new ExpressionNode("+",
-      new ExpressionNode("*", 1, 2),
-      new ExpressionNode("/", 3, 4)
-    );
-    expected = new ExpressionNode("+",
-      new ExpressionNode("-", 1, 2),
-      new ExpressionNode("-", 3, 5)
-    );
-    assert.equal(node.getNumDiffs_(expected), 3);
-  });
-
   it("applyExpectation/getTokenList", function () {
     var node, expected, list;
 
@@ -134,14 +79,14 @@ describe("ExpressionNode", function () {
     list = node.getTokenList();
     assert.deepEqual(list, [
       { char: "(", correct: true},
-      { char: "1", correct: true},
+      { char: "1", correct: false},
       { char: "+", correct: true},
-      { char: "2", correct: true},
+      { char: "2", correct: false},
       { char: ")", correct: true}
     ]);
 
     node = new ExpressionNode("+", 1, 2);
-    expected = new ExpressionNode("-", 3, 1);
+    expected = new ExpressionNode("-", 1, 3);
     node.applyExpectation(expected);
     assert.equal(node.valMetExpectation_, false);
     list = node.getTokenList();
@@ -153,7 +98,42 @@ describe("ExpressionNode", function () {
       { char: ")", correct: true}
     ]);
 
+    node = new ExpressionNode("+", 1, 2);
+    expected = new ExpressionNode("+", new ExpressionNode("+", 0, 1), 2);
+    node.applyExpectation(expected);
+    assert.equal(node.valMetExpectation_, true);
+    assert.equal(node.left.valMetExpectation_, false);
+    assert.equal(node.right.valMetExpectation_, true);
+    list = node.getTokenList();
+    assert.deepEqual(list, [
+      { char: "(", correct: true},
+      { char: "1", correct: false},
+      { char: "+", correct: true},
+      { char: "2", correct: true},
+      { char: ")", correct: true}
+    ]);
+
+    node = new ExpressionNode("+", new ExpressionNode("+", 0, 1), 2);
+    expected = new ExpressionNode("+", 1, 2);
+    node.applyExpectation(expected);
+    assert.equal(node.valMetExpectation_, true);
+    assert.equal(node.left.valMetExpectation_, false);
+    assert.equal(node.right.valMetExpectation_, true);
+    list = node.getTokenList();
+    assert.deepEqual(list, [
+      { char: "(", correct: true},
+      { char: "(", correct: true}, // todo - should this actually be false?
+      { char: "0", correct: false},
+      { char: "+", correct: false},
+      { char: "1", correct: false},
+      { char: ")", correct: true}, // todo - should this actually be false?
+      { char: "+", correct: true},
+      { char: "2", correct: true},
+      { char: ")", correct: true}
+    ]);
+
     // todo - more of these
+
   });
 
   it("evaluate", function () {
@@ -230,6 +210,55 @@ describe("ExpressionNode", function () {
     assert.equal(node.toString(), "(3 * (3 - 1))");
 
     // todo - test collapsing with mistakes
+
+  });
+
+  it("isEquivalent", function () {
+    var node, target;
+
+    node = new ExpressionNode(0);
+    target = new ExpressionNode(0);
+    assert.equal(node.isEquivalent(target), true);
+
+    node = new ExpressionNode(0);
+    target = new ExpressionNode(1);
+    assert.equal(node.isEquivalent(target), false);
+
+    node = new ExpressionNode("+", 1, 2);
+    target = new ExpressionNode("+", 1, 2);
+    assert.equal(node.isEquivalent(target), true);
+
+    node = new ExpressionNode(3);
+    target = new ExpressionNode("+", 1, 2);
+    assert.equal(node.isEquivalent(target), false);
+
+    node = new ExpressionNode("+", 1, 2);
+    target = new ExpressionNode("-", 1, 2);
+    assert.equal(node.isEquivalent(target), false);
+
+    node = new ExpressionNode("+", 1, 2);
+    target = new ExpressionNode("-", 2, 1);
+    assert.equal(node.isEquivalent(target), false);
+
+    node = new ExpressionNode("+", 1, new ExpressionNode("+", 2, 3));
+    target = new ExpressionNode("+", new ExpressionNode("+", 2, 3), 1);
+    assert.equal(node.isEquivalent(target), true);
+
+    node = new ExpressionNode("+", 1, new ExpressionNode("+", 2, 3));
+    target = new ExpressionNode("+", new ExpressionNode("+", 2, 4), 1);
+    assert.equal(node.isEquivalent(target), false);
+
+    node = new ExpressionNode("+",
+      new ExpressionNode("*", 1, 2),
+      new ExpressionNode("/", 3, 4)
+    );
+    target = new ExpressionNode("+",
+      new ExpressionNode("/", 3, 4),
+      new ExpressionNode("*", 1, 2)
+    );
+    assert.equal(node.isEquivalent(target), true);
+
+    // todo - more of these
 
   });
 

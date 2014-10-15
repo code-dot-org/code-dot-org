@@ -102,7 +102,7 @@ ExpressionNode.prototype.depth = function () {
 /**
  * todo
  */
-ExpressionNode.prototype.collapse = function () {
+ExpressionNode.prototype.collapse = function (ignoreFailures) {
   if (!this.isOperation()) {
     return false;
   }
@@ -111,7 +111,7 @@ ExpressionNode.prototype.collapse = function () {
   var rightDepth = this.right.depth();
 
   if (leftDepth === 0 && rightDepth === 0) {
-    if (this.failedExpectation(true)) {
+    if (this.failedExpectation(true) && !ignoreFailures) {
       // dont allow collapsing if we're a leaf operation with a mistake
       return false;
     }
@@ -121,9 +121,9 @@ ExpressionNode.prototype.collapse = function () {
     return true;
   } else {
     if (rightDepth > leftDepth) {
-      return this.right.collapse();
+      return this.right.collapse(ignoreFailures);
     }
-    return this.left.collapse();
+    return this.left.collapse(ignoreFailures);
   }
 
   return true;
@@ -132,30 +132,42 @@ ExpressionNode.prototype.collapse = function () {
 /**
  * todo
  */
-ExpressionNode.prototype.applyExpectation = function (expectationNode) {
-  if (this.valMetExpectation_ !== null) {
-    throw new Error('Node already has an expectedVal');
+ExpressionNode.prototype.applyExpectation = function (expected) {
+  // if (this.valMetExpectation_ !== null) {
+  //   throw new Error('Node already has an expectedVal');
+  // }
+
+  this.valMetExpectation_ = expected ? expected.val === this.val : false;
+
+  if (this.isOperation()) {
+    this.left.applyExpectation(expected.left);
+    this.right.applyExpectation(expected.right);
+  }
+};
+
+/**
+ * Do the two nodes differ only in argument order.
+ */
+ExpressionNode.prototype.isEquivalent = function (target) {
+  if (this.val !== target.val) {
+    return false;
   }
 
-  this.valMetExpectation_ = expectationNode ? expectationNode.val === this.val : null;
-
-  if (this.isOperation() || expectationNode.isOperation()) {
-    // todo - can i share this with getNumDiffs_ ?
-    var diffLeftLeft = getNumDiffs(this.left, expectationNode.left);
-    var diffLeftRight = getNumDiffs(this.left, expectationNode.right);
-    var diffRightLeft = getNumDiffs(this.right, expectationNode.left);
-    var diffRightRight = getNumDiffs(this.right, expectationNode.right);
-
-    var matchSame = diffLeftLeft + diffRightRight;
-    var matchOpposite = diffLeftRight + diffRightLeft;
-    if (matchSame <= matchOpposite) {
-      this.left.applyExpectation(expectationNode.left);
-      this.right.applyExpectation(expectationNode.right);
-    } else {
-      this.left.applyExpectation(expectationNode.right);
-      this.right.applyExpectation(expectationNode.left);
-    }
+  if (this.isOperation() !== target.isOperation()) {
+    return false;
   }
+
+  if (!this.isOperation()) {
+    return true;
+  }
+
+  if (this.left.isEquivalent(target.left)) {
+    return this.right.isEquivalent(target.right);
+  } else if (this.left.isEquivalent(target.right)) {
+    return this.right.isEquivalent(target.left);
+  }
+
+  return false;
 };
 
 /**
@@ -176,41 +188,6 @@ ExpressionNode.prototype.getTokenList = function () {
   list = list.concat(this.right.getTokenList());
   list = list.concat(token(")", true));
   return list;
-};
-
-/**
- * todo
- */
-ExpressionNode.prototype.getNumDiffs_ = function (expected) {
-  var numDiffs = 0;
-
-  if (this.val !== expected.val) {
-    numDiffs++;
-  }
-
-  if (this.isOperation() || expected.isOperation()) {
-
-    // For purposes of diffing, we don't want to care about whether children are
-    // left or right. Figure out how we can minimize our numDiffs.
-    var diffLeftLeft = getNumDiffs(this.left, expected.left);
-    var diffLeftRight = getNumDiffs(this.left, expected.right);
-    var diffRightLeft = getNumDiffs(this.right, expected.left);
-    var diffRightRight = getNumDiffs(this.right, expected.right);
-
-    var matchSame = diffLeftLeft + diffRightRight;
-    var matchOpposite = diffLeftRight + diffRightLeft;
-    numDiffs += Math.min(matchSame, matchOpposite);
-  }
-
-  return numDiffs;
-};
-
-// todo - comment me
-function getNumDiffs(src, target) {
-  if (src === null || target === null) {
-    return Infinity;
-  }
-  return src.getNumDiffs_(target);
 };
 
 /**

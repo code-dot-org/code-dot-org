@@ -31,6 +31,8 @@ var codegen = require('../codegen');
 var api = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
+var dom = require('../dom');
+
 
 var ExpressionNode = require('./expressionNode');
 var TestResults = require('../constants').TestResults;
@@ -69,6 +71,9 @@ Calc.init = function(config) {
     assetUrl: BlocklyApps.assetUrl,
     data: {
       localeDirection: BlocklyApps.localeDirection(),
+      controls: require('./controls.html')({
+        assetUrl: BlocklyApps.assetUrl
+      }),
       blockUsed : undefined,
       idealBlockNumber : undefined,
       blockCounterClass : 'block-counter-default'
@@ -109,6 +114,10 @@ Calc.init = function(config) {
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
+
+    dom.addClickTouchEvent(document.getElementById("continueButton"), function () {
+      Calc.step(true);
+    });
   };
 
   config.getDisplayWidth = function() {
@@ -150,7 +159,7 @@ Calc.display = function() {
     Calc.ctxDisplay.canvas.width);
   Calc.ctxDisplay.fillStyle = style;
 
-  Calc.drawCorrectAnswer(Calc.answerExpression);
+  Calc.draw(Calc.answerExpression, null);
 };
 
 /**
@@ -217,8 +226,11 @@ function generateExpressionFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
+  // todo (brent) perhaps try to share user vs. expected generation better
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
+
+  // todo - handle case of no expression
 
   Calc.expressions = {
     user: Calc.lastExpression.clone(),
@@ -226,18 +238,29 @@ Calc.execute = function() {
   };
   Calc.expressions.user.applyExpectation(Calc.expressions.expected);
 
+  var result = !Calc.expressions.user.failedExpectation(true);
+
+  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.expected);
+
   // api.log now contains a transcript of all the user's actions.
   // Reset the graphic and animate the transcript.
   BlocklyApps.reset();
 
 
-  var result = Calc.drawUserAnswer(Calc.expressions.user);
+  Calc.draw(Calc.expressions.expected, Calc.expressions.user);
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
+  // todo - better way of doing this
+  if (equivalent) {
+    Calc.message = result ? "correct" : "expression equivalent";
+  } else {
+    Calc.message = null;
+  }
+
   var reportData = {
-    app: 'turtle',
+    app: 'calc',
     level: level.id,
     builder: level.builder,
     result: result,
@@ -247,62 +270,77 @@ Calc.execute = function() {
   };
 
   BlocklyApps.report(reportData);
+
+  window.setTimeout(function () {
+    Calc.step();
+  }, 1000);
 };
 
-Calc.step = function () {
-  // todo - figure out what it means if only one collapses
-  var collapsed = Calc.expressions.user.collapse();
-  var collapsed2 = Calc.expressions.expected.right.collapse();
-  if (collapsed) {
+Calc.step = function (ignoreFailures) {
+  if (!Calc.expressions.user.isOperation()) {
+    displayFeedback();
+    return;
+  }
+
+  var continueButton = document.getElementById('continueButton');
+
+  var collapsed = Calc.expressions.user.collapse(ignoreFailures);
+  if (!collapsed) {
+    continueButton.className = continueButton.className.replace(/hide/g, "");
+  } else {
+    Calc.expressions.expected.collapse();
     Calc.ctxDisplay.clearRect(0, 0, 400, 400);
-    Calc.drawCorrectAnswer(Calc.expressions.expected);
-    Calc.drawUserAnswer(Calc.expressions.user);
+    Calc.draw(Calc.expressions.expected, Calc.expressions.user);
+
+    continueButton.className += " hide";
+
+    window.setTimeout(function () {
+      Calc.step();
+    }, 1000);
   }
 };
 
-Calc.drawCorrectAnswer = function (correctAnswer) {
-  Calc.ctxDisplay.fillStyle = 'black';
-  Calc.ctxDisplay.font="30px Verdana";
-  var str = correctAnswer.toString();
-  Calc.ctxDisplay.fillText(str, 0, 350);
-};
-
-Calc.drawUserAnswer = function (userAnswer) {
+Calc.draw = function (correct, user) {
   var ctx = Calc.ctxDisplay;
-  var errors = false;
-  var list = userAnswer.getTokenList();
-  var xpos = 0;
-  var ypos = 200;
-  for (var i = 0; i < list.length; i++) {
-    if (i > 0 && list[i-1].char !== '(' && list[i].char !== ')') {
-      ctx.fillText(' ', xpos, ypos);
-      xpos += ctx.measureText(' ').width;
+
+  ctx.fillStyle = 'black';
+  ctx.font="30px Verdana";
+  var str = correct.toString();
+  ctx.fillText(str, 0, 350);
+
+  if (user) {
+    // todo - move back towards getTokenList(expected) ?
+    user.applyExpectation(correct);
+    var list = user.getTokenList();
+    var xpos = 0;
+    var ypos = 200;
+    for (var i = 0; i < list.length; i++) {
+      if (i > 0 && list[i-1].char !== '(' && list[i].char !== ')') {
+        ctx.fillText(' ', xpos, ypos);
+        xpos += ctx.measureText(' ').width;
+      }
+      ctx.fillStyle = list[i].correct ? 'black' : 'red';
+      ctx.fillText(list[i].char, xpos, ypos);
+      xpos += ctx.measureText(list[i].char).width;
     }
-    ctx.fillStyle = list[i].correct ? 'black' : 'red';
-    if (!list[i].correct) {
-      errors = true;
-    }
-    ctx.fillText(list[i].char, xpos, ypos);
-    xpos += ctx.measureText(list[i].char).width;
   }
-
-  return !errors;
 };
-
 
 /**
  * App specific displayFeedback function that calls into
  * BlocklyApps.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
-  BlocklyApps.displayFeedback({
-    app: 'Calc',
-    skin: skin.id,
-    // feedbackType: Calc.testResults,
-    message: "todo (brent): temp message",
-    response: response,
-    level: level
-  });
+  if (!Calc.expressions.user.isOperation()) {
+    BlocklyApps.displayFeedback({
+      app: 'Calc',
+      skin: skin.id,
+      // feedbackType: Calc.testResults,
+      message: Calc.message ? Calc.message : "todo (brent): wrong",
+      response: response,
+      level: level
+    });
+  }
 };
 
 /**
