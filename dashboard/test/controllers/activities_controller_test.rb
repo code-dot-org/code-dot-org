@@ -646,6 +646,18 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'sharing program with swear word in Spanish rejects word' do
+    return unless CDO.webpurify_key
+    with_default_locale(:es) do
+      assert_does_not_create(LevelSource, GalleryActivity) do
+        post :milestone, user_id: @user.id, script_level_id: @script_level, :program => studio_program_with_text('putamadre')
+      end
+    end
+    assert_response :success
+    expected_response = {'level_source' => nil }
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+  end
+
   test 'sharing program with phone number' do
     assert_does_not_create(LevelSource, GalleryActivity) do
       post :milestone, user_id: @user.id, script_level_id: @script_level, :program => studio_program_with_text('800-555-5555')
