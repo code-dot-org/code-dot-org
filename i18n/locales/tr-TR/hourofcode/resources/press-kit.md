@@ -1,59 +1,59 @@
 * * *
 
-title: Resources layout: wide
+başlık: Kaynaklar düzen: geniş
 
 * * *
 
-## Useful stats on computer science
+## Bilgisayar bilimi üzerine yararlı istatistikler
 
-*For all press and media inquiries, contact <press@code.org>*
+*Tüm medya ile ilgili teklifler için, iletişime geçin <press@code.org>*
 
-### Key Tips
+### Anahtar İpuçları
 
-  * Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
-  * Ask a school staff member or volunteer to take photos to share online or send to press.
-  * Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 8-14. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+  * Etkinliğinizden iki hafta öncesinde medyaya e-posta yoluyla ulaşın. Eğer bir geri dönüş almazsanız, e-posta ve telefon yoluyla denemeye devam edin.
+  * Bir okul çalışanından veya bir gönüllüden, internette paylaşmak veya medyaya göndermek üzere fotoğraflar çekmesini rica edin.
+  * Web sitenizin anasayfasında ve okul gazetenizde Kodlama Saati ile ilgili yazılar yazın. Etkinliğinizin detaylarını ve öğrenci aktivitelerinin fotoğraflarını paylaşın.
+  * Facebook ve Twitter'da planlarınızla ilgili güncellemeleri paylaşın, etkinliğinizi duyurun ve 8-14 Aralık'ta fotoğrafları paylaşın. Paylaşımlarınızda **#HourOfCode** etiketini kullanın, böylece Code.org etkinliğinizi görür ve destekler.
 
-### Step-by-step guide:
+### Adım adım kılavuz:
 
-**1. Plan your event**
+**1. Etkinliğinizi planlayın**
 
-  * Plan an assembly to kick off the Hour of Code.
-  * Send [a letter](/resources#sample-emails) to parents. Ask them to spread the word.
-  * Send [a letter](/resources#sample-emails) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Organize group activities (like a demonstration of an ‘unplugged’ programming activity), or show off student-created and led activities.
-  * Show Code.org’s [Hour of Code video](http://hourofcode.com) or one of [these](/resources#videos) to inspire.
+  * Kodlama Saatini başlatmak için bir toplantı planlayın.
+  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Grup aktiviteleri organize edin (çevrimdışı bir programlama aktivitesinin denemesi gibi), ya da öğrenciler tarafından yaratılmış ve yönetilmiş aktiviteleri yapın.
+  * Show Code.org’s [Hour of Code video](<%= hoc_uri('/') %>) or one of [these](<%= hoc_uri('/resources#videos') %>) to inspire.
 
-**2. Identify specific local reporters that cover education or local events.**
+**2. Eğitim veya yerel haberleri konu edinen yerel gazetecileri saptayın.**
 
-Think a local newspaper, TV station, radio station or blog.
+Bir yerel gazete, televizyon kanalı, radyo istasyonu veya blog düşünün.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Gazetecilerin iletişim bilgilerini internetten araştırın. Bulamazsanız, sormak için kurumu arayın veya kurumun e-posta adresine istediğiniz gazeteciye ulaştırmak amacıyla yazdığınızı belirttiğiniz bir e-posta yazın.
 
-**3. Contact local media**
+**3. Yerel medyaya ulaşın**
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](/resources#sample-emails):**
+En iyi yol e-posta ile ulaşmaktır. Kısa ve öz olmalı: Neden bu etkinlik diğer insanların da ilgisini çeker? Etkinlikte sahada olacak kişilerin iletişim bilgilerini dahil edin (cep telefonu numaraları dahil). **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
 
-**4. Prepare to field questions about your school event. Here are some examples:**
+**4. Okul etkinliğinizle ilgili sorulara cevap vermeye hazırlanın. İşte bazı örnekler:**
 
-*Why is your school doing an Hour of Code?*
+*Neden okulunuz bir Kodlama Saati yapıyor?*
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+Hepimiz bugünün teknolojiyle dolu dünyasını yönlendirebilmeyi öğrenmenin öğrenciler için önemli olduğunu biliyoruz, ancak birçok öğretmen bilgisayar bilimi konusunda tecrübeli değil ve nereden başlayacaklarını bilemiyor. Bu etkinlik hepimizin bilgisayar bilimiyle tanışması için bir şans.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+Umuyoruz ki bu etkinlik öğrencilerde öğrenmeye devam etmek için bir ilgi uyandırır. Ayrıca araştırmalar gösteriyor ki çocuklar okuma yazma öğrenmeden önce programlama konseptlerini kavrayabiliyorlar. Üstelik, onların beyinleri bilgisayar dillerine karşı genç yaşta daha açık, tıpkı yabancı diller gibi.
 
-*Why is this important?*
+*Bu neden önemli?*
 
-In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will allow give them the confidence and know-how to succeed.
+Çin'de, her öğrenci liseden mezun olabilmek için bilgisayar bilimi öğrenir. ABD'de, okulların %90'ı bunu öğretmiyor bile. Artık 21. yüzyıla yetişme vaktimiz geldi. Öğrenciler ileride kariyer olarak tıp, işletme, politika veya sanat seçebilirler, ancak biliyoruz ki kazanmış olacakları teknoloji yaratma becerisi onlara özgüven verecek ve mesleklerinde başarıya ulaşmalarını sağlayacaktır.
 
-**More details and a quote you can use in materials**
+**Daha fazla detay ve materyallerinizde kullanabileceğiniz bir söz**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+Code.org'un kurucusu ve CEO'su Hadi Partovi, "Kodlama Saati, kodlamanın sırrını çözmek ve bilgisayar bilimini anlamanın çok da zor olmadığını göstermek için tasarlanmıştır. Herkes temelleri öğrenebilir," diyor. "Geçen yıl bir haftada, 15 milyon öğrenci Kodlama Saati'ni denedi. Şimdi amacımız dünya çapında 100 milyon öğrenciye ulaşarak 21. yüzyıl bilgisayar bilimi eğitimine olan talebin tüm sınırları aştığını ve engel tanımadığını kanıtlamak."
 
-**About Code.org**
+**Code.org hakkında**
 
-Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [www.code.org](http://code.org).
+Code.org® bir 501c3 halka açık, kar amacı gütmeyen, bilgisayar bilimine katılımı arttırmayı; özellikle kadınlar ve azınlık ırklardan öğrencilerin katılımını çoğaltmayı amaçlayan bir organizasyondur. Vizyonu, her okuldaki her öğrencinin bilgisayar programlamasını öğrenme fırsatına sahip olması gerektiğidir. 2013'te başladığından itibaren, Code.org Kodlama Saati kampanyasını organize etti - bu organizasyon milyonlarca öğrenciye bilgisayar bilimini tanıştırdı. Ülke çapında 30 devlet okulu bölgesinde ortaklık sağlandı ve bir açık-kaynak, her yaş için çevrimiçi bir öğrenme platformu olan Kod Stüdyosu açıldı. For more information, please visit: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
 
   
-Find more resources and sample emails [here](/resources).
+Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).

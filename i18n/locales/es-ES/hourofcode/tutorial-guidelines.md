@@ -12,14 +12,14 @@ Nos gustaría presentar varias opciones atractivas, pero la meta principal es op
 
 <a id="top"></a>
 
-## Index:
+## Índice:
 
   * [Cómo serán evaluadas las tutorías en cuánto a inclusión](#inclusion)
   * [Guía general para crear una actividad de la Hora de Programación](#guidelines)
   * [¿Cómo enviar? (Fecha límite 10/1/2014)](#submit)
   * [Sugerencias para diseñar tu actividad](#design)
   * [Guía de Marca Registrada](#tm)
-  * [Pixel Rastreador](#pixel)
+  * [Rastrear un Pixel](#pixel)
   * [Promocionar tus tutoriales, CSEdWeek, y Hora de Programación](#promote)
   * [Una nota para estudiantes con discapacidades](#disabilities)
 
@@ -35,10 +35,10 @@ Un comité de educadores de ciencias computacionales evaluarán las propuestas c
   * son auto-dirigidas, no requieren ninguna instrucción
   * están diseñadas para principiantes
   * están diseñadas para actividad de 1 hora aproximádamente
-  * work across many OS/device platforms, including mobile and tablets
-  * work across multiple languages
-  * promote learning by all demographic groups (esp under-represented groups)
-  * not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
+  * funcionan en diversas plataformas de sistemas operativos, incluso en tabletas y móviles
+  * funcionan en múltiples idiomas
+  * promueven aprendizaje en todos los grupos demográficos (especialmente los grupos marginados)
+  * no se centran solamente en diseño web HTML+CSS - (nuestra meta es la ciencia computacional, no sólo codificación en HTML)
 
 **Las tutorías tendrán una posición más baja si:**
 
@@ -157,7 +157,7 @@ Visita la [página de envío de actividades de la Hora de Programación](https:/
 
 **Incorpora retroalimentación al final de la actividad.** (Por ejemplo: "¡Has terminado 10 niveles y aprendido sobre loops! ¡Buen trabajo!")
 
-**Incorpora redes sociales.** Anima a los estudiantes a publicar en los medios de comunicación social (cuando sea apropiado) cuando hayan terminado, por ejemplo "He hecho una Hora de Programación con \___ ¿Tú? #HourOfCode" o "He hecho una #HourOfCode como parte de #CSEdWeek. ¿Tú? @Scratch." Utilizar el hashtag **#HourOfCode** (con letras mayúsculas H, O, C)
+**Incorpora redes sociales.** Anima a los estudiantes a publicar en los medios de comunicación social (cuando sea apropiado) cuando hayan terminado, por ejemplo "He hecho una Hora de Programación con ___ ¿Tú? #HourOfCode" o "He hecho una #HourOfCode como parte de #CSEdWeek. ¿Tú? @Scratch." Utilizar el hashtag **#HourOfCode** (con letras mayúsculas H, O, C)
 
 **Crea tu actividad en varios idiomas además del Inglés.** La campaña de este año tiene un enfoque internacional y quisiéramos tener algunas actividades para ofrecer a los participantes que no hablan inglés.
 
@@ -201,7 +201,7 @@ Uno de estos pasos es proteger la marca registrada "Hour of Code" para prevenir 
 
 <a id="pixel"></a>
 
-## Pixel Rastreador
+## Rastrear un Pixel
 
 Para rastrear con más precisión la participación le pedimos a cada socio que hace tutoriales incluir una imagen de 1 pixel en la primera y ultima hoja de sus tutoriales de Hora de Programación (Una imagen de un pixel al inicio y una imagen de un pixel en la página final. No en páginas intermedias).
 
@@ -235,7 +235,7 @@ Pedimos a todos que promocionen sus tutorías de 1 hora con todos sus usuarios. 
 
 <a id="disabilities"></a>
 
-## A special note for students with disabilities
+## Una nota especial para estudiantes con discapacidades
 
 Si creas una tutoría que está diseñada para personas con discapacidad visual, queremos resaltarlo para espectadores con lectores de pantalla. Aún no hemos recibido una tutoría así y estaríamos muy dispuestos a incluirla como una opción para estos estudiantes.
 

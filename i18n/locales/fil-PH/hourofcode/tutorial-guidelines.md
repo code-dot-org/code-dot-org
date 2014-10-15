@@ -12,7 +12,7 @@ Nais naming makapagsimula ng mga aktibidad na makakapag-enganyo sa iba na sumali
 
 <a id="top"></a>
 
-## Index:
+## Mga nilalaman:
 
   * [Paano titignan ang mga pagsali na gagawin](#inclusion)
   * [Mga general na alituntunin ukol sa paggawa ng mga aktibidad ng Hour of Code](#guidelines)
@@ -35,10 +35,10 @@ Isang committee ng mga guro ng computer science ang huhusga base sa mga alituntu
   * kayang gawin mag-isa, hindi na kailangan ng iba pang tulong
   * laan para sa mga nagsisimula
   * laan para sa isang oras na gawain
-  * work across many OS/device platforms, including mobile and tablets
-  * work across multiple languages
-  * promote learning by all demographic groups (esp under-represented groups)
-  * not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
+  * pwedeng gumana sa iba't ibang platform, kabilang na ang mobile at mga tablet
+  * maaring gumana sa iba't ibang salita
+  * iniinganyong sumali ang lahat ng grupo (lalo na kung hindi pa sila maalam sa computer)
+  * hindi nakatutok sa HTML+CSS codes - (ang layunin ay para sa computer science at hindi lamang para sa HTML codes)
 
 **Ang pagtuturo ay mabibigyan ng mababang grado kung ito ay:**
 
@@ -157,7 +157,7 @@ Bumisita sa [Hour of Code Activity Submission page](https://docs.google.com/a/co
 
 **Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with \___\_____ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
 **Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
 

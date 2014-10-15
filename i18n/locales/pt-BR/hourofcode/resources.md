@@ -6,10 +6,12 @@ title: Recursos layout: amplo nav: resources_nav
 
 # Recursos
 
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
 <a id="handouts"></p> 
 
 <h2>
-  Use este folheto para divulgar o evento
+  Use this handout to spread the word
 </h2>
 
 <p>
@@ -17,7 +19,7 @@ title: Recursos layout: amplo nav: resources_nav
 </p>
 
 <h2>
-  Entregue este material para professores e escolas
+  Give this handout to teachers and schools
 </h2>
 
 <p>
@@ -28,16 +30,18 @@ title: Recursos layout: amplo nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Mostre estes vídeos para inspirar os alunos
+    Show these videos to inspire students
   </h2>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>O que a maioria das escolas não ensina (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hora do Código está aqui - Qualquer um pode aprender</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -47,12 +51,14 @@ title: Recursos layout: amplo nav: resources_nav
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Presidente Obama fala sobre ciência da computação</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Qualquer um pode aprender (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -68,7 +74,7 @@ title: Recursos layout: amplo nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Pendure estes cartazes em sua escola
+      Hang these posters in your school
     </h2>
     
     <p>
@@ -76,7 +82,7 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <h4>
-      <a href="http://hourofcode.com/us#signup">Cadastre</a> seu evento da Hora do Código e enviaremos os cartazes por correio gratuitamente.
+      <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
     </h4>
     
     <p>
@@ -88,7 +94,7 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <h2>
-      Apresente estes banners em seu site
+      Feature these banners on your website
     </h2>
     
     <p>
@@ -100,7 +106,7 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <h2>
-      Envie estes e-mails para ajudar a promover a Hora do Código
+      Send these emails to help promote the Hour of Code
     </h2>
     
     <p>
@@ -108,7 +114,7 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <h2>
-      Peça para sua escola, empregador ou amigos se inscreverem:
+      Ask your school, employer or friends to sign up:
     </h2>
     
     <p>
@@ -136,7 +142,7 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <h2>
-      Convide a mídia para participar de seu evento
+      Invite media to attend your event:
     </h2>
     
     <p>
@@ -188,7 +194,7 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <h2>
-      Informe os pais sobre o evento de sua escola
+      Tell parents about your school's event:
     </h2>
     
     <p>
@@ -228,7 +234,7 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <h2>
-      Convide um representante político local para o evento de sua escola
+      Invite a local politician to your school's event:
     </h2>
     
     <p>

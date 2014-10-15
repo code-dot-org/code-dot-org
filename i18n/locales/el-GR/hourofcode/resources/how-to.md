@@ -8,7 +8,7 @@
 
 ## 1) Δοκίμασε τα προγράμματα εκμάθησης:
 
-Θα φιλοξενούμε μια ποικιλία από διασκεδαστικούς οδηγούς της μιας ώρας για τους μαθητές όλων των ηλικιών που δημιουργούνται από μία ποικιλία συνεργατών. Έρχονται τα νέοι οδηγοί ειδικά φτιαγμένοι για τη στην Ώρα του Κώδικα στις 8-14 Δεκεμβρίου.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
 **Όλοι οι εκπαιδευτικοί οδηγοί για την Ώρα του Κώδικα:**
 
@@ -32,7 +32,7 @@
 
 ## 4) Ενέπνευσε τους μαθητές - Δείξε τους ένα βίντεο
 
-Show students <% if @country == 'uk' %> [this video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [this video](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %> to kick off the Hour of Code. Δες ακόμη και [αυτά τα βίντεο](http://youtube.com/codeorg) όπου ο Bill Gates, ο Mark Zuckerberg, ο Black Eyed Peas ιδρυτής του will.i.am and ο σταρ του NBA Chris Bosh μιλούν για την σημασία του προγραμματισμού. (Υπάρχουν εκδόσεις του [1ος λεπτού](https://www.youtube.com/watch?v=qYZF6oIZtfc), των [5 λεπτών](https://www.youtube.com/watch?v=nKIu9yen5nc), και των [9 λεπτών](https://www.youtube.com/watch?v=dU1xS07N-FA) )
+Δείξτε στους μαθητές <% if @country == 'uk' %>[αυτό το βίντεο](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %>[αυτό το βίντεο](http://www.youtube.com/watch?v=FC5FbmsH4fw)<% end %> στην έναρξη της Ώρας του Κώδικα. Δείτε και [αυτά τα βίντεο](http://youtube.com/codeorg) όπου ο Bill Gates, ο Mark Zuckerberg, ο Black Eyed Peas ιδρυτής του will.i.am and ο σταρ του NBA Chris Bosh μιλούν για την σημασία του Προγραμματισμού. (Υπάρχουν εκδόσεις του [1ος λεπτού](https://www.youtube.com/watch?v=qYZF6oIZtfc), των [5 λεπτών](https://www.youtube.com/watch?v=nKIu9yen5nc), και των [9 λεπτών](https://www.youtube.com/watch?v=dU1xS07N-FA) )
 
 **Ενθουσίασε τους μαθητές σου - Κάνε τους μια μικρή εισαγωγή**
 
@@ -41,13 +41,13 @@ Show students <% if @country == 'uk' %> [this video](https://www.youtube.com/wat
   * Εξήγησε με απλό τρόπο, περιλαμβάνοντας παραδείγματα, τα οποία θα ενδιαφέρουν και τα αγόρια και τα κορίτσια (πχ. προστασία της ζωής του ανθρώπου, επικοινωνία, βοήθεια κλπ).
   * Δοκίμασε το εξής: «Σκεφτείτε πράγματα της καθημερινότητάς σας που χρησιμοποιούν την Επιστήμη των Υπολογιστών: το κινητό, ο φούρνος μικροκυμάτων, ο υπολογιστής, τα φανάρια κυκλοφορίας... όλα αυτά χρειάζονται έναν επιστήμονα πληροφορικής για να βοηθήσει στην κατασκευή τους.»
   * Ή: «Η Επιστήμη των Υπολογιστών είναι η τέχνη της ανάμειξης των ανθρώπινων ιδεών και των ψηφιακών εργαλείων για την αύξηση της δύναμής μας. Οι επιστήμονες Πληροφορικής εργάζονται σε πολλούς τομείς: αναπτύσσουν εφαρμογές για τηλέφωνα, βοηθούν στην αντιμετώπιση ασθενιών, δουλεύουν στην ανάπτυξη κοινωνικών δικτύων, κατασκευάζουν ρομπότ που εξερευνούν άλλους πλανήτες και πολλά άλλα."
-  * See tips for getting girls interested in computer science [here](http://code.org/girls). 
+  * Δείτε μερικές συμβουλές για το πώς να βοηθήσετε τα κορίτσια να ενδιαφερθούν για την Επιστήμη των Υπολογιστών [εδώ](http://code.org/girls). 
 
 ## 5) Ξεκίνησε τη δική σου Ώρα του Κώδικα
 
 **Οδήγησε τους μαθητές στη δραστηριότητα**
 
-  * Γράψε τον υπερσύνδεσμο του εκπαιδευτικού οδηγού στον πίνακα. Find the link listed on the <% if @country == 'uk' %> [information for your selected tutorial](http://uk.code.org/learn) <% else %> [information for your selected tutorial](http://code.org/learn) <% end %>under the number of participants. (Παράδειγμα: [hourofcode.com/co](http://code.org/learn)) 
+  * Γράψε τον υπερσύνδεσμο του εκπαιδευτικού οδηγού στον πίνακα. Βρείτε το σύνδεσμο που βρίσκεται<% if @country == 'uk' %> [πληροφορίες για τη δραστηριότητα που επιλέξατε](http://uk.code.org/learn) <% else %> [πληροφορίες για τη δραστηριότητα που επιλέξατε](http://code.org/learn) <% end %>κάτω από τον αριθμό των συμμετεχόντων. (Παράδειγμα: [hourofcode.com/co](http://code.org/learn)) 
   * Πες στους μαθητές να επισκεφθούν τον σύνδεσμο και να ξεκινήσουν το μάθημα.
 
 **Όταν οι μαθητές σου δυσκολεύονται**
@@ -58,13 +58,13 @@ Show students <% if @country == 'uk' %> [this video](https://www.youtube.com/wat
 
 **Τι να κάνεις αν ένας μαθητής τελειώσει πολύ νωρίς;**
 
-  * Students can see all tutorials and try another Hour of Code activity at <% if @country == 'uk' %> [uk.code.org/learn](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
+  * Οι μαθητές μπορούν να δούν όλους τους οδηγούς και να δοκιμάσουν μια άλλη δραστηριότητα της Ώρας του Κώδικα στο <% if @country == 'uk' %> [uk.code.org/learn](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
   * Ή μπορείς να ζητήσεις από τους μαθητές που τελείωσαν νωρίς να βοηθήσουν συμμαθητές τους που έχουν κάποια δυσκολία με τη δραστηριότητά τους.
 
 **Πως μπορώ να εκτυπώσω πιστοποιητικά συμμετοχής για τους μαθητές μου;**
 
-Κάθε μαθητής έχει την ευκαιρία να πάρει ένα πιστοποιητικό μέσω email όταν τελειώσει με τη δραστηριότητά του στο [Code.org](http://studio.code.org). Μπορείς να κάνεις κλικ στο πιστοποιητικό για να το εκτυπώσεις. However, if you want to make new certificates for your students, visit our <% if @country == 'uk' %> [Certificates](http://uk.code.org/certificates) <% else %> [Certificates](http://code.org/certificates) <% end %> page to print as many certificates as you like, in one fell swoop!
+Κάθε μαθητής έχει την ευκαιρία να πάρει ένα πιστοποιητικό μέσω email όταν τελειώσει με τη δραστηριότητά του στο [Code.org](http://studio.code.org). Μπορείς να κάνεις κλικ στο πιστοποιητικό για να το εκτυπώσεις. Ωστόσο, αν θέλεις να φτιάξεις νέα πιστοποιητικά για τους μαθητές σου, επισκέψου τη σελίδα <% if @country == 'uk' %> [Πιστοποιητικά](http://uk.code.org/certificates) <% else %> [Πιστοποιητικά](http://code.org/certificates)<% end %> και εκτύπωσε όσα θέλεις μονομιάς!
 
 **Τι γίνεται μετά την Ώρα του Κώδικα;**
 
-Η Ώρα του Κώδικα είναι απλά ένα πρώτο βήμα για το ταξίδι της μάθησης για το πως λειτουργεί η τεχνολογία και πως δημιουργούνται οι εφαρμογές που χρησιμοποιούμε. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://code.org/educate). Or encourage your children to learn [online](http://code.org/learn/beyond). <% end %>
+Η Ώρα του Κώδικα είναι απλά ένα πρώτο βήμα για το ταξίδι της μάθησης για το πως λειτουργεί η τεχνολογία και πως δημιουργούνται οι εφαρμογές που χρησιμοποιούμε. <% if @country == 'uk' %> Η Ώρα του Κώδικα είναι μόνο το πρώτο βήμα σε ένα ταξίδι όπου κάποιος μπορεί να μάθει πως λειτουργεί η τεχνολογία και πώς μπορεί να δημιουργήσεις εφαρμογές λογισμικού. Για να συνεχιστεί αυτό το ταξίδι,[ ενθάρρυνε τα παιδιά σου να μάθουν online](http://uk.code.org/learn/beyond). <% else %> Για να συνεχίσεις το ταξίδι, βρές επιπλέον πηγές για εκπαιδευτικούς [εδώ](http://code.org/educate). Ή ενθάρρυνε τα παιδιά σου να μάθουν [online](http://code.org/learn/beyond). <% end %>

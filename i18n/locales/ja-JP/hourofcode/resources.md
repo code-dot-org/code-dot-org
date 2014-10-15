@@ -6,10 +6,12 @@ title: Resources layout: wide nav: resources_nav
 
 # リソース
 
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
 <a id="handouts"></p> 
 
 <h2>
-  この資料を使って周りに広めてください。
+  Use this handout to spread the word
 </h2>
 
 <p>
@@ -32,12 +34,14 @@ title: Resources layout: wide nav: resources_nav
   </h2>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>ほとんどの学校は教えない。 (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code はここです - 誰でも学べます</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -47,12 +51,14 @@ title: Resources layout: wide nav: resources_nav
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>オバマ大統領もコンピューター科学を</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>誰でも学べる (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -76,7 +82,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h4>
-      <a href="http://hourofcode.com/us#signup">サインアップしましょう</a> あなたの Hour of Code イベント用に無料でポスターをお送り致します。
+      <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
     </h4>
     
     <p>
@@ -112,19 +118,19 @@ title: Resources layout: wide nav: resources_nav
     </h2>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+      Computers are everywhere, but fewer schools teach computer science than 10 years ago. 良いお知らせは、私たちはこれを変えようとしているということです。 去年開催したHour of Codeについて聞いた事がある人は、それが新たな歴史を産んだという事をわかっていらっしゃると思います。 In one week, 15 million students tried computer science!
     </p>
     
     <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      コンピューター科学はGoogle,MSN, Yahoo!のホームページ上にありました。 そしてディズニーも。 オバマ大統領、シャキーラやアシュトン・カッチャーが動画でHour of Codeのキックオフに参加しました。 100 以上のパートナー会社が、この動きをサポートするために支援してくれました。
     </p>
     
     <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+      今年はさらによりよいものにしましょう。Hour of Code 2014に参加しませんか。2014年12月8日〜14日に行われるコンピューター科学教育週間の間に行われるHour of Codeのイベントにぜひ覗いてみてください。
     </p>
     
     <p>
-      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
+      どんどん広めてください。イベントを開催してください。地域の学校にサインアップするようお勧めください。もしくはHour of Codeを自分自身で経験してみてください--基礎を学ぶことによって得る物があります。
     </p>
     
     <p>
@@ -148,7 +154,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      In one week last year, 15 million students tried computer science! コンピューター科学はGoogle,MSN, Yahoo!のホームページ上にありました。 そしてディズニーも。 オバマ大統領、シャキーラやアシュトン・カッチャーが動画でHour of Codeのキックオフに参加しました。 100 以上のパートナー会社が、この動きをサポートするために支援してくれました。
     </p>
     
     <p>

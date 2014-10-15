@@ -4,8 +4,8 @@ ar:
   front_title: انضم إلى أكبر حدث تعليمي في التاريخ ، 2014/8/14
   coming_soon: قريباً
   front_header_banner: انضم إلى أكبر حدث تعليمي في التاريخ ، 2014/8/14
-  front_intro_default: 'إن "ساعة من الكود البرمجي" تعتبر حمله عالمية تصل إلى عشرات الملايين من الطلاب ، في أكثر من مئة وسبعين بلد. يمكن تنظيم حدث "ساعة من الكود البرمجي" من قبل أي شخص وفي أي مكان. دروس مدتها ساعة واحدة متوفرة بأكثر من ثلاثين لغة. الخبرة غير ضرورية.  <strong> للذين تتراوح أعمارهم بين 4 سنوات إلى 104 سنوات.</strong>'
-  front_intro_default_uk: 'ساعة البرمجة حركة عالمية تتصل بعشرات ملايين الطلاب في أكثر من 170 بلدا. أي شخص يمكن تنظيم حدث "ساعة البرمجة". اكثر من 3 مليون طالب في المملكة المتحدة انجزوا اول ساعة برمجة. دعونا نضاعف هذا العدد في كانون الأول/ديسمبر! <strong>الخبرة غير لازمة. الاعمار تتراوح من 4 إلى 104-</strong>'
+  front_intro_default: 'تعتبر "ساعة البرمجة" حمله عالمية تصل إلى عشرات الملايين من الطلاب ، في أكثر من مئة وسبعين بلد. يمكن تنظيم حدث "ساعة البرمجة" من قبل أي شخص وفي أي مكان. دروس مدتها ساعة واحدة متوفرة بأكثر من ثلاثين لغة. الخبرة غير ضرورية.  <strong> للذين تتراوح أعمارهم بين 4 سنوات إلى 104 سنوات.</strong>'
+  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 170 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>No se necesita experiencia. Para edades entre 4 y 104 años.</strong>'
   front_watch_video: شاهد الفيديو الجديد
   header_menu_resources: الموارد
@@ -16,12 +16,23 @@ ar:
   country_ar: الأرجنتين
   country_au: أُستراليا
   country_br: البرازيل
+  country_bg: Bulgaria
+  country_de: Germany
+  country_es: Latin America
   country_eu: الاتحاد الأوربي
+  country_gr: Greece
+  country_hr: Croatia
+  country_id: Indonesia
   country_it: إيطاليا
+  country_jp: Japan
+  country_me: Middle East and North Africa
   country_nz: نيوزيلندا
   country_ro: رومانيا
+  country_ru: Russia
+  country_ua: Ukraine
   country_uk: المملكة المتحدة
   country_us: الولايات المتحدة الأمريكية
+  country_vn: Vietnam
   prizes_all: جوائز لكل منظم
   prizes_every_organizer: سيتلقى كل منظم لساعة البرمجة رصيد Dropbox أو سكايب كشكر
   prizes_technology: 'سوف تفوز مدرسة عامة واحدة في كل ولاية من الولايات المتحدة (والعاصمة واشنطن )بجائزة  تبلغ قيمتها 10000دولار من المنتجات التكنولوجية'
@@ -78,7 +89,7 @@ ar:
   signup_submit_error_message: حدث خطأ ما. رجاءً تأكد أنه قد تم ملء كل الحقول المطلوبة بشكل صحيح.
   signup_thank_you_header: 'شكرا لك على الاشتراك لاستضافة حدث "ساعة من الكود البرمجي".'
   signup_thank_you_message: أرسلنا لك رسالة تأكيد بالبريد الإلكتروني مع معلومات لمساعدتك على البدء.
-  map_header: 'أحداث "ساعة من الكود البرمجي" حول العالم'
+  map_header: '# Hour of Code events around the world'
   map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
   meta_tag_og_title: ساعة البرمجة قادمة
   meta_tag_og_description: ساعة البرمجة حركة عالمية تضم عشرات ملايين طلاب في 200 دولة وما يزيد على 30 لغة. تتراوح الأعمارهم من 4 إلى 104.
@@ -112,12 +123,11 @@ ar:
   hoc_faq_why_cs_q: لماذا علوم الحاسوب؟
   hoc_faq_why_cs_a: "ينبغي على<i>كل</i> طالب الحصول على الفرصة لتعلم علوم الحاسوب. فذلك يساعد على تنمية مهارات حل المشاكل والمنطق والإبداع. بالبدء في وقت مبكر، سوف تتاح للطلاب أسس للنجاح في أي مسار وظيفي خلال القرن الحادي والعشرين. راجع إحصائيات أكثر في <a href='http://code.org'> Code.org</a>."
   hoc_faq_how_participate_q: كيفية القيام بالمشاركة في ساعة البرمجة؟
-  hoc_faq_how_participate_a: |-
-    قم بالتسجيل لاستضافة حدث ساعة البرمجة <a href='http://hourofcode.org'> هنا</a> وابدء التخطيط. يمكنك تنظيم حدث "ساعة البرمجة في المدرسة أو في محيطك &mdash; مثلا في نادٍ لا يستهدف الربح، أو في مكان العمل. أو جرب بنفسك عندما نصل إلى 8 كانون الأول/ديسمبر.
+  hoc_faq_how_participate_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.org'>here</a> and <a href='target-resources-how-to'>start planning</a>. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
   hoc_faq_behind_hoc_q: من يقف وراء ساعة البرمجة؟
   hoc_faq_behind_hoc_a: "ساعة البرمجة تنظمه <a href='http://code.org'> Code.org</a>، و هي منظمة عامة تتبع نظام 501c3  غير هادفة للربح تهدف لتوسيع نطاق المشاركة في علوم الحاسوب بجعلها متاحة في أكبر عدد من المدارس، وزيادة مشاركة النساء والطلاب من الاقليات.  <a href='http://code.org/about/partners'> تحالف لم يسبق له مثيل من الشركاء</a> بدعم حدث ساعة البرمجة، أيضا &mdash; بما في ذلك Microsoft، أبل، الأمازون، أندية الفتية و الفتيات في أمريكا ومجلس الكلية."
   hoc_faq_host_q: أنا لا أعرف أي شيء حول البرمجة. هل يمكن ان استضيف حدثاً؟
-  hoc_faq_host_a: "طبعًا. أنشطة ساعة البرمجة ذات توجيه الذاتي. كل ما عليك القيام به <a href='http://code.org/learn'> تجريب النشطة الحالية</a>، اختر النشاط الذي تريده، و اختر ساعة &mdash; و سنقوم بالباقي. ولدينا أيضا خيارات لكل الاعمار و حسب مستوى الخبرة، بدءاً من رياض الأطفال و اكثر. ابدء التخطيط للحدث الخاص بك عن طريق قراءة <a href='target-resources-how-to'> الدليل التوجيهي</a>."
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='http://code.org/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='target-resources-how-to'>how to guide</a>."
   hoc_faq_need_computers_q: هل احتاج إلى جهاز حاسوب لكل مشارك؟
   hoc_faq_need_computers_a: "كلا. لدينا انشطة تعمل على أجهزة الكمبيوتر والهواتف الذكية واللوحات الرقمية، وبعضها لا تتطلب حاسوبا على الإطلاق! يمكنك الانضمام إلى أينما كنت، مع كل ما لديك. <p><i>هنا هي عدد قليل من الخيارات:</i> <br><ul><li><b>العمل في أزواج.</b> تبين الابحاث ان تعلم الطلاب أفضل في<a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> اطار مجموعات من شخصين</a>، المشاركة في حاسوب واحد والعمل معا. شجع الطلاب على التعاون. <li><b>استخدام عرض الشاشة على الجميع.</b> إذا كان لديك جهاز العرض و حاسوب متصل بشبكة الإنترنت، المجموعة بأكملها يمكنها القيام بساعة البرمجة معا. شاهدوا أجزاء الفيديو معا، ثم اترك الطلاب يتناوبون على حل الألغاز أو الإجابة على الأسئلة. <li><b>الانشطة الغير موصولة.</b> نحن نقدم الدروس التي تتطلب لا كمبيوتر على الإطلاق. </ul>"
   hoc_faq_international_q: وأنا خارج الولايات المتحدة. كيف أشارك دوليا؟
@@ -160,6 +170,14 @@ ar:
   stats_nina: 'خلال كل يوم توصلنا لنفس النتائج &mdash;   مائة بالمائة من الالتزام - نينا نيكولس بيري، معلمة'
   stats_student: '"كنت أعرف ان  هذا كان فرصة <b>وحيدة العمر</b> ."-ماريانا الزاتي، الصف الخامس'
   stats_michael: 'لم ارى <b>ابدأ، من أي وقت مضى</b> طلابي متحمسين جداً للتعلم. "--كلارك ميكائيل، مدرس'
+  resources_how_to: How-to guide for teachers
+  resources_handouts: Handouts to spread the word
+  resources_videos: Videos
+  resources_posters: Posters
+  resources_banners: Banners
+  resources_emails: Sample emails
+  resources_stats: Useful computer science stats
+  resources_press_kit: Press Kit
   footer_copyright_message: حقوق الطبع والنشر Code.org عام 2014. جميع الحقوق محفوظة.
   footer_trademark_message: إن ™Hour of Code هي علامة تجارية لصالح Code.org.
   footer_menu_partners: الشركاء

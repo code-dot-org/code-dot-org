@@ -1,20 +1,28 @@
 * * *
 
-title: Prizes layout: wide
+title: Premi layout: wide
 
 * * *
 
-# The Hour of Code — prizes for every organizer
+# L'ora del Codice — premi per tutti gli organizzatori
 
-## Every organizer wins a thank you gift-code
+## Ogni organizzatore ha diritto a un codice regalo di ringraziamento
 
-Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
+Ogni educatore che organizza un evento dell'Ora del Codice per gli studenti riceverà 10 GB di spazio Dropbox gratuito o $10 di credito Skype come regalo di ringraziamento!
+
+<% if @country == 'uk' %>
+
+## Le aule fortunate vinceranno una video chat con un ospite d'onore!
+
+20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. I vostri studenti potranno fare domande e chattare con i leader delle aziende tecnologiche. [Dai un'occhiata alle chat dell'anno](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) con Bill Gates, con il fondatore di Twitter Jack Dorsey, con Susan Wojcicki di Google e con Gabe Newell di Valve.
+
+<% end %>
 
 <% if @country == 'us' %>
 
-## Lucky classrooms win a video chat with a guest speaker!
+## Le aule fortunate vinceranno una video chat con un ospite d'onore!
 
-50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
+50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. I vostri studenti potranno fare domande e chattare con i leader delle aziende tecnologiche. [Dai un'occhiata alle chat dell'anno](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) con Bill Gates, con il fondatore di Twitter Jack Dorsey, con Susan Wojcicki di Google e con Gabe Newell di Valve.
 
 ## Lucky schools win a class-set of laptops (or $10,000 for other technology)
 
@@ -24,7 +32,7 @@ One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 
 
 If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
 
-<%= view :hardware\_prizes\_form %>
+<%= view :hardware_prizes_form %>
 
 <what are your odds of winning?>
 
