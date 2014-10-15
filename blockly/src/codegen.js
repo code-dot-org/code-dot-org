@@ -115,8 +115,18 @@ exports.evalWith = function(code, options) {
     myInterpreter.run();
   } else {
     // execute JS code "natively"
-    var fn = exports.functionFromCode(code, options);
-    return fn.apply(null, args);
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor().apply(null, args);
   }
 };
 
