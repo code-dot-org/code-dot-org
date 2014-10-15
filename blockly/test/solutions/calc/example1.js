@@ -21,10 +21,12 @@ module.exports = {
       '</xml>'
     },
     {
+      // todo (brent) - validate error messages. this should fail, but
+      // differently having completely the wrong answer
       description: "mirrored answer",
       expected: {
-        result: true,
-        testResult: TestResults.ALL_PASS
+        result: false,
+        testResult: TestResults.APP_SPECIFIC_FAIL
       },
       xml: '<xml>' +
         blockUtils.calcBlockXml('functional_times', [

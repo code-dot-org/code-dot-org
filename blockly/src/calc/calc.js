@@ -46,10 +46,6 @@ BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
-/**
- * PID of animation task currently executing.
- */
-Calc.pid = 0;
 
 /**
  * Initialize Blockly and the Calc.  Called on page load.
@@ -58,6 +54,12 @@ Calc.init = function(config) {
 
   skin = config.skin;
   level = config.level;
+
+  Calc.expressions = {
+    target: null, // the complete target expression
+    user: null, // the current state of the user expression
+    current: null // the current state of the target expression
+  };
 
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = false;
@@ -107,7 +109,7 @@ Calc.init = function(config) {
     visualization.appendChild(display);
     Calc.ctxDisplay = display.getContext('2d');
 
-    Calc.answerExpression = generateExpressionFromBlockXml(level.solutionBlocks);
+    Calc.expressions.target = generateExpressionFromBlockXml(level.solutionBlocks);
 
     // todo - figure out LB story
 
@@ -126,25 +128,6 @@ Calc.init = function(config) {
   };
 
   BlocklyApps.init(config);
-};
-
-/**
- * Reset the Calc to the start position, clear the display, and kill any
- * pending tasks.
- * @param {boolean} ignore Required by the API but ignored by this
- *     implementation.
- */
-BlocklyApps.reset = function(ignore) {
-  Calc.display();
-
-  // Kill any task.
-  if (Calc.pid) {
-    window.clearTimeout(Calc.pid);
-  }
-  Calc.pid = 0;
-
-  // Stop the looping sound.
-  // BlocklyApps.stopLoopingAudio('start');
 };
 
 /**
@@ -230,29 +213,23 @@ Calc.execute = function() {
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
 
-  // todo - handle case of no expression
+  // todo (brent) - handle case of no expression
 
-  Calc.expressions = {
-    user: Calc.lastExpression.clone(),
-    expected: Calc.answerExpression.clone()
-  };
-  Calc.expressions.user.applyExpectation(Calc.expressions.expected);
+  Calc.expressions.user = Calc.lastExpression.clone();
+  Calc.expressions.current = Calc.expressions.target.clone();
+
+  Calc.expressions.user.applyExpectation(Calc.expressions.target);
 
   var result = !Calc.expressions.user.failedExpectation(true);
 
-  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.expected);
-
-  // api.log now contains a transcript of all the user's actions.
-  // Reset the graphic and animate the transcript.
-  BlocklyApps.reset();
-
+  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
 
   Calc.draw(Calc.expressions.expected, Calc.expressions.user);
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
-  // todo - better way of doing this
+  // todo (brent) - better way of doing this
   if (equivalent) {
     Calc.message = result ? "correct" : "expression equivalent";
   } else {
@@ -276,6 +253,12 @@ Calc.execute = function() {
   }, 1000);
 };
 
+/**
+ * Perform a step in our expression evaluation animation. This consists of
+ * collapsing the next node in our tree. If that node failed expectations, we
+ * will instead bring up a continue button, and refrain from further
+ * collapses/animations until continue is pressed.
+ */
 Calc.step = function (ignoreFailures) {
   if (!Calc.expressions.user.isOperation()) {
     displayFeedback();
@@ -288,9 +271,9 @@ Calc.step = function (ignoreFailures) {
   if (!collapsed) {
     continueButton.className = continueButton.className.replace(/hide/g, "");
   } else {
-    Calc.expressions.expected.collapse();
+    Calc.expressions.current.collapse();
     Calc.ctxDisplay.clearRect(0, 0, 400, 400);
-    Calc.draw(Calc.expressions.expected, Calc.expressions.user);
+    Calc.draw();
 
     continueButton.className += " hide";
 
@@ -300,8 +283,14 @@ Calc.step = function (ignoreFailures) {
   }
 };
 
-Calc.draw = function (correct, user) {
+/**
+ * Draw the current state of our two expressions.
+ */
+Calc.draw = function () {
   var ctx = Calc.ctxDisplay;
+
+  var correct = Calc.expressions.current;
+  var user = Calc.expressions.user;
 
   ctx.fillStyle = 'black';
   ctx.font="30px Verdana";
@@ -309,7 +298,6 @@ Calc.draw = function (correct, user) {
   ctx.fillText(str, 0, 350);
 
   if (user) {
-    // todo - move back towards getTokenList(expected) ?
     user.applyExpectation(correct);
     var list = user.getTokenList();
     var xpos = 0;
@@ -353,13 +341,3 @@ function onReportComplete(response) {
   runButton.disabled = false;
   displayFeedback(response);
 }
-
-
-var getFeedbackImage = function() {
-  // Copy the user layer
-  Calc.ctxFeedback.globalCompositeOperation = 'copy';
-  Calc.ctxFeedback.drawImage(Calc.ctxScratch.canvas, 0, 0, 154, 154);
-  var feedbackCanvas = Calc.ctxFeedback.canvas;
-  return encodeURIComponent(
-      feedbackCanvas.toDataURL("image/png").split(',')[1]);
-};
