@@ -72,7 +72,11 @@ Webapp.onTick = function() {
   Webapp.tickCount++;
 
   if (Webapp.tickCount === 1) {
+    if (Webapp.interpreter) {
+      Webapp.interpreter.run();
+    } else {
     try { Webapp.whenRunFunc(BlocklyApps, api, Webapp.Globals); } catch (e) { }
+    }
   }
 
   if (checkFinished()) {
@@ -212,6 +216,7 @@ BlocklyApps.reset = function(first) {
 
   // Reset the Globals object used to contain program variables:
   Webapp.Globals = {};
+  Webapp.interpreter = null;
 };
 
 /**
@@ -280,7 +285,9 @@ Webapp.onReportComplete = function(response) {
 
 var defineProcedures = function (blockType) {
   var code = Blockly.Generator.workspaceToCode('JavaScript', blockType);
+  // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
+                         codeFunctions: level.codeFunctions,
                          BlocklyApps: BlocklyApps,
                          Studio: api,
                          Globals: Webapp.Globals } ); } catch (e) { }
@@ -306,21 +313,36 @@ Webapp.execute = function() {
   defineProcedures('procedures_defnoreturn');
 
   // Set event handlers and start the onTick timer
-  var blocks = Blockly.mainWorkspace.getTopBlocks();
-  for (var x = 0; blocks[x]; x++) {
-    var block = blocks[x];
-    if (block.type === 'when_run') {
-      var code = Blockly.Generator.blocksToCode('JavaScript', [ block ]);
-      if (level.editCode) {
-        code = utils.generateCodeAliases(level.codeFunctions);
-        code += BlocklyApps.editor.getValue();
+
+  var codeWhenRun;
+  if (level.editCode) {
+    codeWhenRun = utils.generateCodeAliases(level.codeFunctions);
+    codeWhenRun += BlocklyApps.editor.getValue();
+  } else {
+    var blocks = Blockly.mainWorkspace.getTopBlocks();
+    for (var x = 0; blocks[x]; x++) {
+      var block = blocks[x];
+      if (block.type === 'when_run') {
+        codeWhenRun = Blockly.Generator.blocksToCode('JavaScript', [ block ]);
+        break;
       }
-      if (code) {
-        Webapp.whenRunFunc = codegen.functionFromCode(code, {
-                                            BlocklyApps: BlocklyApps,
-                                            Webapp: api,
-                                            Globals: Webapp.Globals } );
-      }
+    }
+  }
+  if (codeWhenRun) {
+    if (level.editCode) {
+      // Use JS interpreter on editCode levels
+      var initFunc = function(interpreter, scope) {
+        codegen.initJSInterpreter(interpreter, scope, {
+                                          BlocklyApps: BlocklyApps,
+                                          Webapp: api,
+                                          Globals: Webapp.Globals } );
+      };
+      Webapp.interpreter = new window.Interpreter(codeWhenRun, initFunc);
+    } else {
+      Webapp.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
+                                          BlocklyApps: BlocklyApps,
+                                          Webapp: api,
+                                          Globals: Webapp.Globals } );
     }
   }
 
