@@ -32,7 +32,7 @@ var api = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 
-var Expression = require('./expression');
+var ExpressionNode = require('./expressionNode');
 var TestResults = require('../constants').TestResults;
 
 var level;
@@ -187,6 +187,11 @@ function evalCode (code) {
   }
 }
 
+/**
+ * Given the xml for a set of blocks, generates an expression from them by
+ * temporarily sticking them into the workspace, generating code, and
+ * evaluating said code.
+ */
 function generateExpressionFromBlockXml(blockXml) {
   var xml = blockXml || '';
 
@@ -215,15 +220,18 @@ Calc.execute = function() {
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
 
-  var expression = Calc.lastExpression;
-
+  Calc.expressions = {
+    user: Calc.lastExpression.clone(),
+    expected: Calc.answerExpression.clone()
+  };
+  Calc.expressions.user.applyExpectation(Calc.expressions.expected);
 
   // api.log now contains a transcript of all the user's actions.
   // Reset the graphic and animate the transcript.
   BlocklyApps.reset();
 
 
-  var result = Calc.drawUserAnswer(Calc.answerExpression, Calc.lastExpression);
+  var result = Calc.drawUserAnswer(Calc.expressions.user);
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -241,6 +249,17 @@ Calc.execute = function() {
   BlocklyApps.report(reportData);
 };
 
+Calc.step = function () {
+  // todo - figure out what it means if only one collapses
+  var collapsed = Calc.expressions.user.collapse();
+  var collapsed2 = Calc.expressions.expected.right.collapse();
+  if (collapsed) {
+    Calc.ctxDisplay.clearRect(0, 0, 400, 400);
+    Calc.drawCorrectAnswer(Calc.expressions.expected);
+    Calc.drawUserAnswer(Calc.expressions.user);
+  }
+};
+
 Calc.drawCorrectAnswer = function (correctAnswer) {
   Calc.ctxDisplay.fillStyle = 'black';
   Calc.ctxDisplay.font="30px Verdana";
@@ -248,10 +267,10 @@ Calc.drawCorrectAnswer = function (correctAnswer) {
   Calc.ctxDisplay.fillText(str, 0, 350);
 };
 
-Calc.drawUserAnswer = function (correctAnswer, userAnswer) {
+Calc.drawUserAnswer = function (userAnswer) {
   var ctx = Calc.ctxDisplay;
   var errors = false;
-  var list = userAnswer.getTokenList(correctAnswer);
+  var list = userAnswer.getTokenList();
   var xpos = 0;
   var ypos = 200;
   for (var i = 0; i < list.length; i++) {
