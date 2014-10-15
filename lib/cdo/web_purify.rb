@@ -3,7 +3,9 @@ require 'json'
 
 module WebPurify
   ISO_639_1_TO_WEBPURIFY = {
-      'es' => 'sp'
+      'es' => 'sp',
+      'ko' => 'kr',
+      'ja' => 'jp'
   }
 
   def self.find_potential_profanity(text, language_codes = ['en'])
