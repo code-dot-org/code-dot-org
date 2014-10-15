@@ -226,7 +226,7 @@ Blockly.Workspace.prototype.getAllBlocks = function() {
   for (var x = 0; x < blocks.length; x++) {
     blocks = blocks.concat(blocks[x].getChildren());
   }
-  return blocks;
+  return (this === Blockly.mainWorkspace) ? blocks : blocks.concat(Blockly.mainWorkspace.getAllBlocks());
 };
 
 /**
