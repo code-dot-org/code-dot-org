@@ -5,5 +5,12 @@ exports.random = function (values) {
 };
 
 exports.turnBlack = function (id) {
-  Webapp.executeCmd(id, 'turnBlack');
+  return Webapp.executeCmd(String(id), 'turnBlack');
+};
+
+exports.createHtmlBlock = function (blockId, elementId, html) {
+  return Webapp.executeCmd(String(blockId),
+                          'createHtmlBlock',
+                          {'elementId': elementId,
+                           'html': html });
 };
