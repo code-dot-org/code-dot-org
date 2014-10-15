@@ -2,6 +2,8 @@
 
 <img src="https://s3.amazonaws.com/uploads.hipchat.com/65395/678893/4WEuCy7El54KBk1/upload.png"/>
 
+Table below is scrollable, even if github's markdown renderer doesn't make that obvious
+
 | ENV         | build                                                                                             | ui tests                                                                                                                             | pegasus server                                                           | dashboard server                                                                 |
 |-------------|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|----------------------------------------------------------------------------------|
 | development |                                                                                                   | `code-dot-org/dashboard/test/ui/*.log`                                                                                               | in the console window where you ran `./up`                               | code-dot-org/dashboard/development.log                                           |
