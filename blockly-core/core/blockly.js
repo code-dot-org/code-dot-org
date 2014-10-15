@@ -860,3 +860,99 @@ Blockly.addChangeListener = function(func) {
 Blockly.removeChangeListener = function(bindData) {
   Blockly.unbindEvent_(bindData);
 };
+
+/**
+ * Handful of terrible, just-barely-work-ish hacks to open a function editor dialog
+ */
+
+Blockly.functionEditorOpen = true;
+
+Blockly.createNewFunction = function() {
+  Blockly.openFunctionEditor(this.newBlockXML('my new function'));
+};
+
+Blockly.newBlockXML = function (name) {
+  return '<xml><block type="procedures_defnoreturn"><mutation></mutation><title name="NAME">' + name + '</title></block></xml>';
+};
+
+Blockly.openFunctionEditor = function(functionDefinitionXML) {
+  var blocklyTopLeftDiv = document.getElementById('blocklyApp');
+
+  // Handle toggling
+  {
+    if (Blockly.functionEditorOpen) {
+      Blockly.functionEditorOpen = false;
+      goog.dom.removeNode(goog.dom.getElementByClass('newFunctionDiv'));
+      return;
+    }
+    Blockly.functionEditorOpen = true;
+  }
+
+  var workspace = new Blockly.Workspace(Blockly.mainWorkspace.getMetrics, Blockly.mainWorkspace.setMetrics);
+
+  // Initialize workspace and construct DOM elements
+  {
+    var functionDefinitionDiv = goog.dom.createDom("div", "newFunctionDiv");
+    var svgWorkspaceContainer = Blockly.createSvgElement('svg', {width: 1200, height: 700, x: 0, y: 0}, null);
+    Blockly.createSvgElement('rect', {'class': 'blocklyMutatorBackground', 'height': '100%', 'width': '100%'}, svgWorkspaceContainer);
+
+    workspace.flyout_ = new Blockly.Flyout();
+    workspace.flyout_.autoClose = false;
+    svgWorkspaceContainer.appendChild(workspace.flyout_.createDom());
+    svgWorkspaceContainer.appendChild(workspace.createDom());
+    functionDefinitionDiv.appendChild(svgWorkspaceContainer);
+    blocklyTopLeftDiv.appendChild(functionDefinitionDiv);
+  }
+
+  // Override top block methods to make new functions available to main workspace during domToWorkspace
+  {
+    workspace.addTopBlock = function (block) {
+      Blockly.mainWorkspace.addTopBlock(block);
+
+      // vvv begin existing code vvv
+      workspace.topBlocks_.push(block);
+      workspace.fireChangeEvent();
+      // ^^^ end existing code ^^^
+    };
+    workspace.removeTopBlock = function (block) {
+      Blockly.mainWorkspace.removeTopBlock(block);
+
+      // vvv begin existing code vvv
+      var found = false;
+      for (var child, x = 0; child = workspace.topBlocks_[x]; x++) {
+        if (child == block) {
+          workspace.topBlocks_.splice(x, 1);
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        throw 'Block not present in workspace\'s list of top-most blocks.';
+      }
+      workspace.fireChangeEvent();
+      // ^^^ end existing code ^^^
+    };
+  }
+
+  // Initialize workspace with some blocks
+  {
+    var xml = Blockly.Xml.textToDom(functionDefinitionXML);
+    Blockly.Xml.domToWorkspace(workspace, xml);
+  }
+
+  // Initialize flyout with some blocks
+  {
+    workspace.flyout_.init(workspace, true);
+    var flyoutBlocks = Blockly.Xml.textToDom('<xml><block type="studio_showTitleScreenParams" inline="false"><value name="TITLE"><block type="text"><title name="TEXT"></title></block></value><value name="TEXT"><block type="text"><title name="TEXT"></title></block></value></block><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">1</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block><block type="studio_playSound"><title name="SOUND">hit</title></block></xml>');
+    workspace.flyout_.show(flyoutBlocks.childNodes);
+  }
+
+  // Flyout boilerplate: translate the workspace to be next to flyout
+  {
+    workspace.pageXOffset = workspace.flyout_.width_;
+    var translation = 'translate(' + workspace.pageXOffset + ', 0)';
+    workspace.getCanvas().setAttribute('transform', translation);
+    workspace.getBubbleCanvas().setAttribute('transform', translation);
+  }
+
+};

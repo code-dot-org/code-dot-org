@@ -280,9 +280,31 @@ Blockly.Blocks.procedures_callnoreturn = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);
     this.setHSV(94, 0.84, 0.60);
+    var editLabel = new Blockly.FieldLabel('edit');
+    Blockly.bindEvent_(editLabel.textElement_, 'mousedown', this, function() {
+      var functionName = this.getTitleValue('NAME');
+      var definitionBlock;
+
+      // Get hidden function definition from workspace
+      {
+        var blocks = this.workspace.getAllBlocks();
+        for (var x = 0, block; block = blocks[x]; x++) {
+          if (block.type == 'procedures_defnoreturn' && Blockly.Names.equals(functionName, block.getTitleValue('NAME'))) {
+            definitionBlock = block;
+          }
+        }
+      }
+      if (!definitionBlock) {
+        throw new Error("Can't find definition block to edit");
+      }
+
+      Blockly.mainWorkspace.removeTopBlock(definitionBlock);
+      Blockly.openFunctionEditor('<xml>' + goog.dom.getOuterHtml(Blockly.Xml.blockToDom_(definitionBlock)) + '</xml>');
+    });
     this.appendDummyInput()
         .appendTitle(Blockly.Msg.PROCEDURES_CALLNORETURN_CALL)
-        .appendTitle('', 'NAME');
+        .appendTitle('', 'NAME')
+        .appendTitle(editLabel);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip(Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP);

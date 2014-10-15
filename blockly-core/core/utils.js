@@ -254,7 +254,7 @@ Blockly.getSvgXY_ = function(element) {
     x += xy.x;
     y += xy.y;
     element = element.parentNode;
-  } while (element && element != Blockly.svg);
+  } while (element && element.tagName !== 'svg');
   return {x: x, y: y};
 };
 
