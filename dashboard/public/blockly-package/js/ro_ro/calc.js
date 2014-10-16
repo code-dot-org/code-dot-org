@@ -1665,6 +1665,9 @@ Calc.execute = function() {
  * collapses/animations until continue is pressed.
  */
 Calc.step = function (ignoreFailures) {
+  if (!Calc.expressions.user) {
+    return;
+  }
 
   if (!Calc.expressions.user.isOperation()) {
     displayFeedback();
@@ -1694,31 +1697,40 @@ Calc.step = function (ignoreFailures) {
 Calc.drawExpressions = function () {
   var ctx = Calc.ctxDisplay;
 
-  var correct = Calc.expressions.current || Calc.expressions.target;
+  var expected = Calc.expressions.current || Calc.expressions.target;
   var user = Calc.expressions.user;
 
   ctx.clearRect(0, 0, 400, 400);
-  ctx.fillStyle = 'black';
   ctx.font="30px Verdana";
-  var str = correct.toString();
-  ctx.fillText(str, 0, 350);
+  expected.applyExpectation(expected);
+  drawExpression(ctx, expected, 350, user !== null);
 
   if (user) {
-    user.applyExpectation(correct);
-    var list = user.getTokenList();
-    var xpos = 0;
-    var ypos = 200;
-    for (var i = 0; i < list.length; i++) {
-      if (i > 0 && list[i-1].char !== '(' && list[i].char !== ')') {
-        ctx.fillText(' ', xpos, ypos);
-        xpos += ctx.measureText(' ').width;
-      }
-      ctx.fillStyle = list[i].correct ? 'black' : 'red';
-      ctx.fillText(list[i].char, xpos, ypos);
-      xpos += ctx.measureText(list[i].char).width;
-    }
+    user.applyExpectation(expected);
+    drawExpression(ctx, user, 250, true);
   }
 };
+
+function drawExpression(ctx, expr, ypos, styleMarks) {
+  var list = expr.getTokenList(true);
+  var xpos = 0;
+  for (var i = 0; i < list.length; i++) {
+    var char = list[i].char;
+    var prevChar = i > 0 ? list[i - 1].char : '(';
+    if (prevChar !== '(' && char !== ')') {
+      // add a space
+      ctx.fillText(' ', xpos, ypos);
+      xpos += ctx.measureText(' ').width;
+    }
+    ctx.fillStyle = 'black';
+    if (styleMarks && list[i].marked) {
+      // marked parens are green, other marks ar ered
+      ctx.fillStyle = /^[\(|\)]$/.test(char) ? 'green' : 'red';
+    }
+    ctx.fillText(char, xpos, ypos);
+    xpos += ctx.measureText(char).width;
+  }
+}
 
 /**
  * App specific displayFeedback function that calls into
@@ -1974,28 +1986,33 @@ ExpressionNode.prototype.isEquivalent = function (target) {
  * string representation of that portion of the expression, and whether or not
  * it is correct.
  */
-ExpressionNode.prototype.getTokenList = function () {
+ExpressionNode.prototype.getTokenList = function (markNextParens) {
   if (this.valMetExpectation_ === null) {
     throw new Error("Can't get token list without expectation set");
   }
 
   if (!this.isOperation()) {
-    return [token(this.val.toString(), this.valMetExpectation_)];
+    return [token(this.val.toString(), this.valMetExpectation_ === false)];
   }
 
-  var list = [token("(", true)];
-  list = list.concat(this.left.getTokenList());
-  list = list.concat(token(this.val, this.valMetExpectation_));
-  list = list.concat(this.right.getTokenList());
-  list = list.concat(token(")", true));
+  var leafOperation = !this.left.isOperation() && !this.right.isOperation();
+  var rightDeeper = this.right.depth() > this.left.depth();
+
+  var list = [token("(", markNextParens === true && leafOperation)];
+  list = list.concat(this.left.getTokenList(markNextParens && !rightDeeper));
+  list = list.concat(token(this.val, this.valMetExpectation_ === false));
+  list = list.concat(this.right.getTokenList(markNextParens && rightDeeper));
+  list = list.concat(token(")", markNextParens === true && leafOperation));
   return list;
 };
 
 /**
- * Creates a token with the given char/correctness
+ * Creates a token with the given char (which can really be a string), that
+ * may or may not be "marked". Marking indicates different things depending on
+ * the char.
  */
-function token(char, correct) {
-  return { char: char, correct: correct };
+function token(char, marked) {
+  return { char: char, marked: marked };
 }
 
 // todo (brent)- may want to use lodash's isNumber
