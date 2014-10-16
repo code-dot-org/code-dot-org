@@ -1,0 +1,18 @@
+#logos{:style=>'width: 780px; padding: 0; margin: 0;'}
+  - logos.each do |logo|
+    #image{:style=>'float:left; width: 30%; margin-top: 50px'}
+      - avatar_url = avatar_image(logo[:name_s])
+      - unless logo[:url_s].nil_or_empty?
+        %a{:href=>logo[:url_s], :style=>'display: table-cell; vertical-align: middle; text-align: center;'}
+          %img{:src=>avatar_url, :style=>'max-width: 200px; max-height: 200px;'}
+      - else
+        %a{:style=>'display: table-cell; vertical-align: middle; text-align: center;'}
+          %img{:src=>avatar_url, :style=>'max-width: 200px; max-height: 200px;'}
+    .text{:style=>'float:left; width: 70%; margin-top: 50px'}
+      .title{:style=>'font-size: 20px; color: #00adbc; font-weight: 500'}
+        = logo[:name_s]
+      %a{:href=>logo[:url_s]}  
+        %p= logo[:url_s]      
+      %p= logo[:description_t]
+
+%p{:style=>'clear: both;'}
