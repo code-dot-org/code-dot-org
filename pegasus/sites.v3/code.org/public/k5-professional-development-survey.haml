@@ -459,6 +459,10 @@ rightbar: blank
     .form-group.submit-btn
       %button#btn-submit.btn.btn-default{type: "submit"} Submit
 
+#thanks{:style=>"display: none;"}
+  %h1 Thank you
+  %p Your submission was received.
+
 :javascript
   $(document).ready(function() {
     $(':input').removeAttr('required');
@@ -563,8 +567,7 @@ rightbar: blank
   {
     $("#btn-submit").removeAttr('disabled');
     $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
-    $('#sotw-intro').hide();
-    $('#sotw-form').hide();
+    $('#k5-professional-development-survey-form').hide();
     $('#thanks').show();
   }
 
