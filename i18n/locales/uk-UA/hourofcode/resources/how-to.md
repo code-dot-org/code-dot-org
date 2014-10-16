@@ -8,7 +8,7 @@ title: Resources layout: wide
 
 ## 1) Спробуйте підручники:
 
-Ми розмістимо різноманітні цікаві одно-годинні підручники для учнів різного віку, створені нашими партнерами. Готуються нові підручники до Години коду 8-14 грудня.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
 **Всі підручники Години коду:**
 
@@ -32,7 +32,7 @@ title: Resources layout: wide
 
 ## 4) Надихайте учнів - покажіть відео-ролики
 
-Show students <% if @country == 'uk' %> [this video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [this video](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %> to kick off the Hour of Code. Також можна переглянути [ці ролики](http://youtube.com/codeorg), з Білом Гейтсом, Марком Цукенбергом, засновником Black Eyed Peas will.i.am та зіркою NBA Кросом Бошем, які розповідають про важливість програмування. (Існують версії тривалістю [1 хвилина](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 хвилин](https://www.youtube.com/watch?v=nKIu9yen5nc), та [9 хвилин](https://www.youtube.com/watch?v=dU1xS07N-FA))
+Покажіть учням <% if @country == 'uk' %> [цей ролик](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [цей ролик](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %>, і розпочніть Годину коду. Також можна переглянути [ці ролики](http://youtube.com/codeorg), з Білом Гейтсом, Марком Цукенбергом, засновником Black Eyed Peas will.i.am та зіркою NBA Кросом Бошем, які розповідають про важливість програмування. (Існують версії тривалістю [1 хвилина](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 хвилин](https://www.youtube.com/watch?v=nKIu9yen5nc), та [9 хвилин](https://www.youtube.com/watch?v=dU1xS07N-FA))
 
 **Запаліть учнів - проведіть короткий вступ**
 
@@ -41,13 +41,13 @@ Show students <% if @country == 'uk' %> [this video](https://www.youtube.com/wat
   * Пояснюйте простими аналогіями із діяльностями, котрі важливі для дітей (порятунок життя, допомога людям, спілкування тощо).
   * Спробуйте таке: "Подумайте про те, як у вашому житті застосовуються здобутки інформатики: в телефоні, мікрохвильовці, комп'ютері, світлофорі... всі ці речі можливі завдяки тому, що програмісти створили відповідні програми."
   * Або: "Інформатика - це мистецтво поєднання людських ідей та цифрових інструментів для розширення наших можливостей. Програмісти працюють у різноманітних сферах: пишуть програми для телефонів, здійснюють розробки для медицини, створюють мультфільми, працюють у соціальних медіа, розробляють роботів, які досліджують інші планети та багатьох інших."
-  * See tips for getting girls interested in computer science [here](http://code.org/girls). 
+  * Поради для зацікавлення дівчаток інформатикою можна знайти [тут](http://code.org/girls). 
 
 ## 5) Розпочніть свою Годину коду
 
 **Скеруйте учнів до діяльності**
 
-  * Запишіть посилання на підручник на дошці. Find the link listed on the <% if @country == 'uk' %> [information for your selected tutorial](http://uk.code.org/learn) <% else %> [information for your selected tutorial](http://code.org/learn) <% end %>under the number of participants. (Наприклад: [hourofcode.com/co](http://code.org/learn)) 
+  * Запишіть посилання на підручник на дошці. Посилання на <% if @country == 'uk' %> [вибраний підручник](http://uk.code.org/learn) <% else %> [вибраний підручник](http://code.org/learn) <% end %>знаходиться під кількістю учасників. (Наприклад: [hourofcode.com/co](http://code.org/learn)) 
   * Запросіть учнів відкрити URL-адресу та розпочати навчання.
 
 **Коли учні стикаються із труднощами**
@@ -58,13 +58,13 @@ Show students <% if @country == 'uk' %> [this video](https://www.youtube.com/wat
 
 **Що робити, якщо учень справився швидше?**
 
-  * Students can see all tutorials and try another Hour of Code activity at <% if @country == 'uk' %> [uk.code.org/learn](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
+  * Учні можуть переглянути всі підручники і вибрати інші вправи Години коду на <% if @country == 'uk' %> [uk.code.org/learn](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
   * Або попросіть учнів, які швидше завершили навчання, допомогти однокласникам, у яких виникають труднощі.
 
 **Як надрукувати сертифікати для учнів?**
 
-Кожен учень може отримати сертифікат електронною поштою після завершення навчання на [Code.org](http://studio.code.org). Його можна роздрукувати, якщо клацнути на сертифікаті. However, if you want to make new certificates for your students, visit our <% if @country == 'uk' %> [Certificates](http://uk.code.org/certificates) <% else %> [Certificates](http://code.org/certificates) <% end %> page to print as many certificates as you like, in one fell swoop!
+Кожен учень може отримати сертифікат електронною поштою після завершення навчання на [Code.org](http://studio.code.org). Його можна роздрукувати, якщо клацнути на сертифікаті. Проте, якщо Вам потрібно більше сертифікатів, відвідайте сторінку <% if @country == 'uk' %> [Сертифікати](http://uk.code.org/certificates) <% else %> [Сертифікати](http://code.org/certificates) <% end %> і надрукуйте їх достатню кількість!
 
 **Що після Години коду?**
 
-Година коду є лише першим кроком на шляху вивчення технологій, принципів їх роботи, та створення програмних проектів. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://code.org/educate). Or encourage your children to learn [online](http://code.org/learn/beyond). <% end %>
+Година коду є лише першим кроком на шляху вивчення технологій, принципів їх роботи, та створення програмних проектів. <% if @country == 'uk' %> Година коду є лише першим кроком на шляху вивчення технологій, принципів їх роботи, та створення програмних проектів. Щоб продовжити цю подорож, [заохочуйте учнів до самостійного дистанційного навчання](http://uk.code.org/learn/beyond). <% else %> Щоб продовжити цю подорож, ознайомтесь із ресурсами для вчителів [тут](http://code.org/educate). Або заохочуйте учнів навчатись [онлайн](http://code.org/learn/beyond). <% end %>

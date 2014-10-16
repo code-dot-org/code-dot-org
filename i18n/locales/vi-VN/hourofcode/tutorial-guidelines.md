@@ -157,7 +157,7 @@ Truy cập vào [giờ thông tin hoạt động mã trang](https://docs.google.
 
 **Phản hồi ở phần cuối của các hoạt động kết hợp.** (Ví dụ: "bạn đã hoàn thành 10 cấp độ và đã học được về vòng! Great job!")
 
-**Kết hợp phương tiện truyền thông xã hội.** Khuyến khích các sinh viên để gửi đến phương tiện truyền thông xã hội (khi thích hợp) khi họ đã hoàn thành, ví dụ: "tôi đã thực hiện một giờ mã với \___ có bạn? #HourOfCode"hoặc"tôi đã thực hiện một #HourofCode như là một phần của #CSEdWeek. Có bạn? @Scratch." Sử dụng hashtag **#HourOfCode** (với chữ H, O, C)
+**Kết hợp phương tiện truyền thông xã hội.** Khuyến khích các sinh viên để gửi đến phương tiện truyền thông xã hội (khi thích hợp) khi họ đã hoàn thành, ví dụ: "tôi đã thực hiện một giờ mã với ___ có bạn? #HourOfCode"hoặc"tôi đã thực hiện một #HourofCode như là một phần của #CSEdWeek. Có bạn? @Scratch." Sử dụng hashtag **#HourOfCode** (với chữ H, O, C)
 
 **Tạo ra của bạn hoạt động bằng các ngôn ngữ ngoài tiếng Anh.** Chúng tôi đang tập trung này chiến dịch quốc tế năm nay và muốn có một số hoạt động để cung cấp cho người tham gia nói tiếng Anh.
 

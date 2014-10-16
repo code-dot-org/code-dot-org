@@ -12,7 +12,7 @@ Ne dorim sa găzduim o varietate de elemente interactive, dar obiectivul princip
 
 <a id="top"></a>
 
-## Index:
+## Cuprins:
 
   * [Cum vor fi evaluate tutorialele pentru includere](#inclusion)
   * [Recomandări generale pentru a organiza o activitate Hour of Code](#guidelines)
@@ -33,12 +33,12 @@ Un comitet de profesori din domeniul tehnologiei computerelor vor nota tutoriale
 
   * de înaltă calitate
   * ușor de înteles, nu are nevoie de instrucţiuni
-  * proiectate pentru incepatori
+  * proiectat pentru incepatori
   * conceput pentru ~ o 1 oră de activitate
-  * work across many OS/device platforms, including mobile and tablets
-  * work across multiple languages
-  * promote learning by all demographic groups (esp under-represented groups)
-  * not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
+  * functionează pe mai multe sisteme de operare sau dispozitive, inclusiv smartphone şi tablete
+  * funcționează în mai multe limbi straine
+  * se adresează tuturor grupurilor demografice (de ex. minorități)
+  * să nu existe un focus exclusiv HTML + CSS - (scopul acestuia fiind tehnologia computerelor în general și nu doar programare HTML)
 
 **Tutorialul va avea punctaj mai mic dacă este:**
 
@@ -115,7 +115,7 @@ Vizitaţi [pagina Hour of Code pentru înregistrarea activității](https://docs
       * Dacă mai multe specificații sunt necesare, folosiți linii, ex. fr-fi - franceză (Belgia) sau fr-ca - franceză (Canada)
       * ***Notă: Detectarea limbii este atribuția furnizorului tutorialului, noi vom redirecţiona toți utilizatorii către un singur URL-ul furnizat.*** 
   * Dacă trimiteţi un tutorial online, avem nevoie să ştim dacă este [COPPA compliant](http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act) sau nu.
-  * Nivelurile recomandate pentru utilizatorii vizați. Ne putem referi la [standardele asociației profesorilor de tehnologia computerelor ale claselor 1-12](http://csta.acm.org/Curriculum/sub/K12Standards.html) în cazul conceptelor de tehnologia computerelor în functie de clasa corespunzătoare. De exemplu: 
+  * Nivelurile recomandate pentru utilizatorii vizați. Ne putem referi la [standardele asociației profesorilor de tehnologia computerelor pentru clasele 1-12](http://csta.acm.org/Curriculum/sub/K12Standards.html) în cazul conceptelor de tehnologia computerelor în functie de clasa corespunzătoare. De exemplu: 
       * Școala primară: clasele a 2-a sau 3-5
       * Gimnaziu: clasele 6-8
       * Liceu: 9-12
@@ -157,7 +157,7 @@ Vizitaţi [pagina Hour of Code pentru înregistrarea activității](https://docs
 
 **Încorporați feedback la sfârşitul activităţii.** (Ex.: "ai terminat 10 nivele şi ai aflat despre bucle! Buna treaba!")
 
-**Includeți Social Media.** Încurajați elevii să posteze pe rețelele de socializare (după caz), atunci când termină, de exemplu "am terminat Hour of Code cu \___ Tu? #HourOfCode" sau "Am terminat #HourofCode ca parte a #CSEdWeek. Tu? @Scratch." Utilizează hashtag-ul **#HourOfCode** (cu litere mari H, O, C)
+**Includeți Social Media.** Încurajați elevii să posteze pe rețelele de socializare (după caz), atunci când termină, de exemplu "am terminat Hour of Code cu ___ Tu? #HourOfCode" sau "Am terminat #HourofCode ca parte a #CSEdWeek. Tu? @Scratch." Utilizează hashtag-ul **#HourOfCode** (cu litere mari H, O, C)
 
 **Creați activitatea dumneavoastră și în alte limbi în afară de engleză.** Noi promovam această campanie la nivel internaţional în acest an şi am dori să avem un număr de activităţi pentru participanţii care nu vorbesc engleză.
 
@@ -235,7 +235,7 @@ Recomandăm tuturor să-și promoveze singuri propriile tutoriale de 1-oră util
 
 <a id="disabilities"></a>
 
-## A special note for students with disabilities
+## O notă specială pentru elevii cu dizabilități
 
 Dacă creaţi un tutorial proiectat pentru cei cu deficienți de vedere, ne-ar plăcea să-l evidenţiem pentru cei cu cititoare de ecran. Noi nu au primit încă un astfel de tutorial şi am fi dornici să includem unul ca o opţiune pentru acești elevi.
 

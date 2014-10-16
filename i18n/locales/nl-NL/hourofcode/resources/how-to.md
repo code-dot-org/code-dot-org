@@ -1,70 +1,70 @@
 * * *
 
-title: Resources layout: wide
+title: Materialen layout: wide
 
 * * *
 
-# How to teach one Hour of Code
+# Hoe begeleid je een Uur Code
 
-## 1) Try the tutorials:
+## 1) Probeer de opdrachten:
 
-We’ll host a variety of fun, hour-long tutorials on the for students of all ages created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**All Hour of Code tutorials:**
+**Alle Uur Code handleidingen:**
 
-  * Require minimal prep-time for teachers
-  * Are self-guided - allowing students to work at their own pace and skill-level
+  * Hebben minimale voorbereidingstijd nodig voor leraren
+  * Zijn zelf-sturend, waardoor scholieren op hun eigen tempo en vaardigheidsniveau kunnen werken
 
-[![image](http://code.org/images/tutorials.png)](http://code.org/learn)
+[![afbeelding](http://code.org/images/tutorials.png)](http://code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Plan uw hardware benodigdheden - computers zijn optioneel
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
+Je ervaart het Uur Code het best met een aan het Internet verbonden computer. Maar je hebt niet voor ieder kind een computer nodig, en je kunt het Uur Code zelfs helemaal zonder computer doen.
 
-  * **Test tutorials on student computers or devices.** Make sure they work properly (with sound and video).
-  * **Preview the congrats page** to see what students will see when they finish. 
-  * **Provide headphones for your class**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **Probeer de opdrachten op de computers of apparaten van leerlingen.** Controleer dat ze goed werken (met geluid en video).
+  * **Bekijk de felicitatiepagina alvast** om te zien wat leerlingen zien wanneer ze klaar zijn. 
+  * **Zorg voor koptelefoons voor de klas**, of vraag leerlingen ze zelf mee te nemen, als de opdracht die je kiest het beste werkt met geluid.
 
-## 3) Plan ahead based on your technology available
+## 3) Plan vooruit op basis van de beschikbare techniek
 
-  * **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
-  * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+  * **Heb je niet genoeg apparaten?** Gebruik [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Als leerlingen in paren werken helpen ze elkaar en zijn ze minder afhankelijk van de leerkracht. Ze zullen ook inzien dat informatica sociaal is en samenwerking vereist.
+  * **Weinig bandbreedte?** Toon de video's klassikaal zodat niet iedere leerling ze hoeft te downloaden. Of probeer de unplugged/offline-opdrachten.
 
-## 4) Inspire students - show them a video
+## 4) Inspireer leerlingen - laat ze een video zien
 
-Show students <% if @country == 'uk' %> [this video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [this video](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %> to kick off the Hour of Code. Also check out [these videos](http://youtube.com/codeorg), featuring Bill Gates, Mark Zuckerberg, Black Eyed Peas founder will.i.am and NBA star Chris Bosh talking about the importance of programming. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
+Laat leerlingen <% if @country == 'uk' %> [deze video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [deze video](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %> zien om het Uur Code af te trappen. Kijk ook naar [deze video's](http://youtube.com/codeorg) waarin Bill Gates, Mark Zuckerberg, Black Eyed Peas-oprichter will.i.am en basketbalheld Chris Bosh het hebben over het belang van programmeren. (Er zijn versies van [1 minuut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuten](https://www.youtube.com/watch?v=nKIu9yen5nc) en [9 minutaen](https://www.youtube.com/watch?v=dU1xS07N-FA))
 
-**Get your students excited - give them a short intro**
+**Maak je leerlingen enthousiast - geef ze een korte inleiding**
 
-Most kids don’t know what computer science is. Here are some ideas:
+De meeste kinderen weten niet wat informatica is. Hier zijn wat ideeen:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://code.org/girls). 
+  * Leg het op een eenvoudige manier uit met voorbeelden van toepassingen waar jongens en meisjes om geven (levens redden, mensen helpen, mensen verbinden, etc.).
+  * Probeer: "Denk eens na over de dingen in je dagelijks leven waar informatica in zit: een mobiele telefoon, een magnetron, een computer, een stoplicht... voor al dit soort dingen is een informaticus nodig geweest om het te helpen bouwen."
+  * Of: "Informatica is de unst van het samenbrengen van de ideeen van mensen en digitale hulpmiddelen om onze kracht te vergroten. Informatici werken in allerlei verschillende gebieden: apps schrijven voor telefoons, ziekten genezen, animatiefilms maken, aan sociale media werken, robots bouwen die andere planeten verkennen en nog veel meer."
+  * [Hier](http://code.org/girls) zijn wat tips om meisjes geinteresseerd te krijgen in informatica. 
 
-## 5) Start your Hour of Code
+## 5) Begin met je Uur Code
 
-**Direct students to the activity**
+**Wijs de leerlingen de weg naar de activiteit**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the <% if @country == 'uk' %> [information for your selected tutorial](http://uk.code.org/learn) <% else %> [information for your selected tutorial](http://code.org/learn) <% end %>under the number of participants. (Example: [hourofcode.com/co](http://code.org/learn)) 
-  * Tell students to visit the URL and start the tutorial.
+  * Schrijf de link naar de opdracht op het whiteboard. Je kunt de link vinden bij de <% if @country == 'uk' %> [informatie over je gekozen opdracht](http://uk.code.org/learn) <% else %> [informatie over je gekozen opdracht](http://code.org/learn) <% end %> onder het aantal deelnemers. (Voorbeeld: [hourofcode.com/co](http://code.org/learn)) 
+  * Zeg leerlingen dat ze naar de URL moeten gaan en met de opdracht kunnen beginnen.
 
-**When your students come across difficulties**
+**Wanneer leerlingen tegen problemen aanlopen**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * Vertel je leerlingen dat ze eerst 3 klasgenootjes om hulp moeten vragen. Als het ze dan nog niet lukt, vraag het dan aan de leerkracht.
+  * Moedig leerlingen aan en biedt positieve bevestiging: "Je doet het heel goed, dus gewoon blijven proberen."
+  * Het is prima om te zeggen: "Ik weet het ook niet. Laten we het samen uitzoeken." Als je niet uit een probleem komt, gebruik het dan als een goede les voor de klas: "Technologie werkt niet altijd zoals we willen. We leren er samen van." En: "Leren programmeren is net zoals het leren van een vreemde taal: je spreekt hem niet direct vloeiend."
 
-**What to do if a student finishes early?**
+**Wat kun je doen als een leerling sneller klaar is?**
 
-  * Students can see all tutorials and try another Hour of Code activity at <% if @country == 'uk' %> [uk.code.org/learn](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * Leerlingen kunnen alle opdrachten zien en een andere Uur Code-activiteit uitproberen op <% if @country == 'uk' %> [uk.code.org/learn](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
+  * Of vraag leerlingen die eerder klaar zijn hun klasgenootjes te helpen als zij problemen hebben met de activiteit.
 
-**How do I print certificates for my students?**
+**Hoe maak ik certificaten voor mijn leerlingen?**
 
-Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our <% if @country == 'uk' %> [Certificates](http://uk.code.org/certificates) <% else %> [Certificates](http://code.org/certificates) <% end %> page to print as many certificates as you like, in one fell swoop!
+Iedere leerling krijgt de kans een certificaat te ontvangen via e-mail wanneer ze de [Code.org opdrachten](http://studio.code.org) volbrengen. Je kunt het certificaat aanklikken om het af te drukken. Wanneer je nieuwe certificaten wilt aanmaken voor je leerlingen, ga dan naar onze <% if @country == 'uk' %> [Certificaten](http://uk.code.org/certificates) <% else %> [Certificaten](http://code.org/certificates) <% end %>-pagina om er zo veel uit te printen als nodig, in een keer!
 
-**What comes after the Hour of Code?**
+**Wat komt er na het Uur Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://code.org/educate). Or encourage your children to learn [online](http://code.org/learn/beyond). <% end %>
+Het Uur Code is nog maar de eerste stap in het leren over hoe technologie werkt en hoe je software kunt maken. <% if @country == 'uk' %> [Moedig je kinderen aan online te leren](http://uk.code.org/learn/beyond) om de reis te vervolgen. <% else %> Meer materiaal voor leraren is [hier](http://code.org/educate) te vinden. Of moedig je kinderen aan [online](http://code.org/learn/beyond) te leren. <% end %>

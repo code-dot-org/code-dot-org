@@ -1,18 +1,18 @@
 * * *
 
-layout: wide
+सजावट: फराकिलो
 
 * * *
 
 # Hour of Code र Computer Science Education Week लागि ट्यूटोरियल दिशानिर्देश
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
+Code.org Code.org, Hour of Code, र CSEdWeek वेबसाइट (हरू) मा Hour of Code को गतिविधिहरूको एक प्रकारले स्वागत गर्नेछ। [code.org/learn](http://code.org/learn) मा भएको अहिलेको सूची.
 
-हामी आकर्षक विकल्प को एक किसिम पाहुना गर्न चाहन्छु , तर मुख्य लक्ष्य कम्प्युटर विज्ञान लागि नयाँ हो , जो विद्यार्थी र शिक्षकहरू लागि अनुभव अनुकूलन गर्न छ । Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+हामी आकर्षक विकल्प को एक किसिम पाहुना गर्न चाहन्छु , तर मुख्य लक्ष्य कम्प्युटर विज्ञान लागि नयाँ हो , जो विद्यार्थी र शिक्षकहरू लागि अनुभव अनुकूलन गर्न छ । कृपया यो कागजातलाई तपाइँको क्रियाकलापको सिर्जनामा मार्गदर्शन गर्न, कोडिङ, कम्प्युटर प्रोगामिङ्, र कम्प्युटर विज्ञानको पृष्ठभूमि नभएका प्रयोगकर्तामा लक्षित गर्न प्रयोग गर्नुहोस्।
 
 <a id="top"></a>
 
-## Index:
+## सूचकांक:
 
   * [ट्यूटोरियल समावेशीकरणका लागि मूल्यांकन कसरी गरिनेछ](#inclusion)
   * [Hour of Code को लागि क्रियाकलाब बनाउनको सामान्य दिशानिर्देश](#guidelines)
@@ -27,7 +27,7 @@ Code.org will host a variety of Hour of Code activities on the Code.org, Hour of
 
 ## ट्यूटोरियल समावेशीकरणका लागि मूल्यांकन कसरी गरिनेछ
 
-A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
+कम्प्यूटर विज्ञान शिक्षकहरूको एक समितिले शिक्षहरूको एक व्यापक सेटबाट सर्वेक्षणको नतिजाहरू सहित गुणात्मक र परिमाणात्मक मैट्रिक्सको आधारमा क्रमको प्रस्तुत गर्छन्।
 
 **तल दिएका विशेषताहरु भेटिएमा ट्यूटोरियलहरुलाई उच्च क्रम अनुसार राखिनेछ:**
 
@@ -35,65 +35,65 @@ A committee of computer science educators will rank submissions based on qualita
   * आत्म-निर्देशन, कुनै पनि निर्देशन आवश्यकता नचाहिने
   * शुरुआती को लागि डिजाइन गरिएको
   * डिजाइन ~ 1 घण्टा गतिविधि भएको
-  * work across many OS/device platforms, including mobile and tablets
-  * work across multiple languages
-  * promote learning by all demographic groups (esp under-represented groups)
-  * not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
+  * धेरै मोबाइल र ट्याबलेटहरूको समावेश गरि ओएस/साधनको प्लेटफार्महरूमा काम गर्नुहोस्
+  * धेरै भाषाहरूमा काम गर्न
+  * सबै जनसांख्यिकीय समूहहरूमा (प्रतिनिधित्व गरेका समूहहरू मूनिको esp) द्वारा सिक्न प्रवर्तन गर्न 
+  * अशुद्ध HTML +CSS वेब डिज़ाइनमा ध्यान दिन - (हाम्रो लक्ष्य कम्प्यूटर विज्ञान हो, HTML कोडिंग मात्र होइन)
 
 **तल दिएका विशेषताहरु भेटिएमा ट्यूटोरियलहरुलाई निम्न क्रम अनुसार राखिनेछ:**
 
   * निम्न गुणस्तर
-  * more advanced level of teaching (not for beginners)
-  * have a limited number of supported OS/device platforms - for Web-based platforms you should aim to support all of the following: IE9+, and the latest Chrome, Firefox, and Safari
-  * work only in English
-  * have a gender-specific bent (eg thematically aimed primarily at boys)
-  * serve as an upsell to a learning platform that charges tuition
+  * सिकाउन (सिकारूहरूको लागि होइन) को थप उन्नत स्तर
+  * समर्थित OS/साधनको प्लेटफर्महरूको एक सीमित संख्या हुन्छ - वेब-आधारित प्लेटफर्मको लागि तपाइँले निम्नलिखित सबैको समर्थन गर्न लक्ष्य चाहिन्छ: IE9, र नौलो Chrome, Firefox, र Safari
+  * अङ्ग्रेजीमा मात्र काम गर्न
+  * एक लिंग-विशिष्ट (उदाहरण केटाहरूलाई प्राथमिक रूपले विषयकको गरिएको उद्देश्य) रूपले झुकेको हुन्छ
+  * एक सिक्ने मञ्चको ट्यूशन शूल्कहरूको लागि एक अपसेलको रूपमा सेवा गर्न
 
-**Tutorials will NOT be listed if they:**
+**यदि तिनिहरू हुन्छन् भने अभ्यासहरूलाई सूचीबद्ध गरिने छैन:**
 
-  * require a high degree of involvement by a teacher with lots of prep (ie not self-guided for students)
-  * are not designed to be a (roughly) one-hour activity
-  * require sign up 
-  * require payment
-  * require installation
-  * focus only on HTML + CSS web design
-  * are submitted after the submission deadline, or with incomplete information (see below)
+  * (उदाहरण विद्यार्थिहरूको लागि स्वतः-निर्देशित छैन) धेरै तयारीको साथ शिक्षकद्वारा उच्च स्तरको डिग्रीको आवश्यकता पर्छ
+  * एक (लगभग) एक घण्टे गतिविधि हुन तैयार गरिएको छैन
+  * साइन अप गर्न आवश्यक 
+  * भुक्तानीको आवश्यक
+  * स्थापनाको आवश्यक
+  * HTML + CSS वेब डिजाइनमा मात्र ध्यान दिन
+  * पेस गर्ने समय सीमा पछि, वा अधूरो जानकारी (तल हेर्नुहोस्) को साथ पेस गरिएको हुन्छ
 
-Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
+अन्तत:, Hour of Code को कम्प्यूटर विज्ञानमा विद्यार्थी र शिक्षकहरूद्वारा व्यापक सहभागी हुने अभियान गर्न, र त्यस कम्प्यूटर विज्ञान सबैको लागि पहुँचयोग्य छ, र "तपाइँले सोच्नुभएको भन्दा सहज" छ भनि देखाउने लक्ष्य छ। धेरै तरिकाहरूमा, पहिलो-पटकको प्रयोगकर्ताको लागि उच्च गुणस्तरको विकल्पहरूमा ध्यान दिई विद्यार्थी र शिक्षकहरूलाई केहि स सामान्य छनोटहरू प्रदान गरि बढी मात्रामा लक्ष्यको प्राप्त गरिनेछ।
 
-Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
+2013 CSEdWeek सहभागीहरूबाट 9-23 डिसेम्बरको शिक्षख र विदयार्थीहरूको -20 एमबाट प्रतिक्रियाहरू द्वारा मापनको रूपमा एक उतकृष्ट सफलता थियो, र 97% ले तिनिहरूले यसबाट रमाइलो गरे र अभियानलाई दोहोर्याउन चाहन्छन् भनि ध्यान दिनुहोस्!!
 
-As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
+एक नतिजाको रूपमा, भएको नामांकन, र Hour of Code को नामांकनमा अभ्यासहरू थप्ने कारणहरू विस्तृत छनोटहरू होइनन्, तर विद्यार्थीहरूको लागि (वा ताजापन) गुणस्तर बढाउन, वा 2014 अभियानको विश्वव्यापि प्रकृतिलाई हेरि अङ्ग्रेजी-नबोलने वक्ताहरूको लागि विकल्पहरूलाई बढाउन निश्चित रूपले "एकदमै राम्रो" छ।
 
-[**Back to the top**](#top)
+[**माथि फर्कन**](#top)
 
 <a id="guidelines"></a>
 
 ## Hour of Code को लागि क्रियाकलाब बनाउनको सामान्य दिशानिर्देश
 
-  * **Subject:** Introductory computer science or programming (not HTML).
-  * **Goal:** Give beginners an accessible first taste of programming.
-  * **Tone:** 
-      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody can learn!
-      * Computer science is connected to a wide variety of fields and interests. Everybody should learn!
-      * Encourage students to create something that can be shared with friends/online.
-  * **Types of activities:** 
-      * **Best:** Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). 
-      * **Okay, but not preferred:** app-install, desktop app, or game-console experiences.
-  * **Format:** Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+  * **विषय:** परिचयात्मक कम्प्यूटर विज्ञान वा (HTML होइन) प्रोग्रामिङ्।
+  * **लक्ष्य:** सुरुवात गर्नेहरूलाई प्रोग्रामिङ्को पहिलो एक सुलभ अनुभव दिनुहोस्।
+  * **स्वत:** 
+      * कम्प्यूटर विज्ञान प्रतिभाहरूको लागि मात्र होइन। यसले तपाइँको उमेर, लिङ्ग, जाति केहिको लागि वस्ता राख्दैन। जो कोहिले पनि सिक्न सक्छ!
+      * कम्प्यूटर विज्ञान एक विस्तृत फाँट र रूचिहरूमा सम्बन्धित छ। सबैले सिक्नु पर्छ!
+      * विद्यार्थीहरूलाई साथीहरू/अनलाइनमा साझा गर्न सक्ने केहि बनाउन प्रोत्साहित गर्छ।
+  * **गतिविधिका प्रकारहरू:** 
+      * **राम्रो:** एक कम्प्यूटरको प्रयोग बीना कम्प्यूटर विज्ञान अवधारणाहरू सिकाउने वेब-आधारित, स्मार्टफोन-अनुकूल या प्लगनगरिएको-शैली गतिविधिहरू छन् (हेर्नुहोस्<http://csunplugged.com/>). 
+      * **ठीक छ, तर नरूचाइएको:** एप-स्थापित गर्नुहोस्, डेस्कटप एप, वा गेम-बुझाउने अनुभवहरू।
+  * **ढाँचा:** स्वतः-निर्देशित अभ्यास वा पाठहरू, शिक्षकहरूद्वारा वैकल्पिक रूपले सहज बनाइएको। एक खुला-सकिने घण्टा लामो चुनौतिको रूपमा विरोध अनुसार विद्यार्थीहरूको लागि दिशा हनुपर्छ। आदर्श रूपमा, निर्देशन र अभ्यासहरूलाई प्रोग्रामिङ् प्लेटफर्ममा, अभ्यास र प्रोगामिङ्को प्लेटफर्मको बीच स्विच गर्ने ट्याब वा सन्झ्यालहरू हटाउन सीधै एकिकृत गरिएको हुन्छ।
 
-[**Back to the top**](#top)
+[**माथि फर्कन**](#top)
 
 <a id="submit"></a>
 
 ## सब्मित कसरि गर्ने (१०/१/२०१४ भित्र)
 
-Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
+[Hour of Code को गतिविधि पेस गर्ने पृष्ठ](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) मा जानुहोस् र आफ्नो अभ्यास पेस गर्ने चरणहरू पछ्याउनुहोस्।
 
-**What you’ll need:**
+**तपाइँलाई के चाहिनेछ:**
 
-  * Your name, logo (jpg, png, etc.)
-  * URL for a screenshot or marketing image of the HoC activity. Images/screenshots should be 446 x 335 resolution exactly. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it.
+  * तपाइँको नाम, लोगो (jpg, png, आदि।)
+  * HoC गतिविधिको एक स्क्रिनसट वा विज्ञापन छविको लागि URL. छवि/स्क्रिनसटहरू ठीक 446 x 335 रिजोल्यूसनको हुनुपर्छ। यदि मिल्दो छवि प्रदान गरिएन छैन, हामी तपाइँको अभ्यासमा आफ्नो स्क्रिनसटहरू लिन वा यसको सूचीमा छनोट नगर्न सक्छौँ।
   * URL Link for the logo
   * Name of the activity
   * URL Link to the activity
@@ -138,7 +138,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
       * For offline activities 
           * Number of downloads of paper version of activity (if applicable)
 
-[**Back to the top**](#top)
+[**माथि फर्कन**](#top)
 
 <a id="design"></a>
 
@@ -157,7 +157,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
 
 **Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with \___\_____ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
 **Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
 
@@ -179,7 +179,7 @@ Benefits of Pair Programming:
   * Show that coding is not a solo activity, but one involving social interaction
   * Not all classrooms or labs have enough computers for a 1:1 experience
 
-[**Back to the top**](#top)
+[**माथि फर्कन**](#top)
 
 <a id="tm"></a>
 
@@ -197,7 +197,7 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
   4. No use of "Hour of Code" in app names
 
-[**Back to the top**](#top)
+[**माथि फर्कन**](#top)
 
 <a id="pixel"></a>
 
@@ -217,7 +217,7 @@ IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Back to the top**](#top)
+[**माथि फर्कन**](#top)
 
 <a id="promote"></a>
 
@@ -231,7 +231,7 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
   * Host a local event or ask your employees to host an event at local schools or community groups.
   * See our resource kit for further information (coming soon).
 
-[**Back to the top**](#top)
+[**माथि फर्कन**](#top)
 
 <a id="disabilities"></a>
 
@@ -239,4 +239,4 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
 
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Back to the top**](#top)
+[**माथि फर्कन**](#top)

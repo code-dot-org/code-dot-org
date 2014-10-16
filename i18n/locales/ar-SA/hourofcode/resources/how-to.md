@@ -4,18 +4,18 @@
 
 * * *
 
-# كيفية تدريس ساعة واحدة "ساعة البرمجة"
+# كيف تدرس ساعة واحدة في تعلم البرمحة
 
 ## 1) جرب الدروس:
 
-سوف نستضيف مجموعة متنوعة من الدروس الممتعة، و التي تدوم ساعة واحدة لطلاب من جميع الإعمار، تم إنشاؤها بواسطة مجموعة من الشركاء. دروس جديدة تأتي لاطلاق حدث "ساعة البرمجة" قبل 8-14 كانون الأول/ديسمبر.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
 **جميع دروس ساعة البرمجة:**
 
   * تتطلب الحد الأدنى من الوقت للاعداد بالنسبة للمعلمين
   * ذات توجيه ذاتي - و هو ما يمكن التلاميذ من العمل حسب نسقهم و مهارتهم
 
-[![image](http://code.org/images/tutorials.png)](http://code.org/learn)
+[![الصورة](http://code.org/images/tutorials.png)](http://code.org/learn)
 
 ## 2) حدد الاحتياجات اللازمة من الاجهزة مع العلم ان الحواسيب اختيارية
 
@@ -30,7 +30,7 @@
   * **ليس لديك ما يكفي من الأجهزة؟** استخدم [البرمجة في مجموعات تضم فردين](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). عندما يتعاون الطلبة، يقل الاعتماد على المعلم. سيعرفون ان علوم الحاسوب اجتماعية و تعاونية.
   * **سرعة الانترنات منخفضة ؟** قم بعرض أشرطة الفيديو امام كل القسم، بحيث لا يستحق كل طالب تحميل أشرطة الفيديو. أو حاول الدروس الغير موصولة.
 
-## 4) Inspire students - show them a video
+## 4) شجع الطلاب ! إعرض لهم فيديو
 
 Show students <% if @country == 'uk' %> [this video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [this video](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %> to kick off the Hour of Code. Also check out [these videos](http://youtube.com/codeorg), featuring Bill Gates, Mark Zuckerberg, Black Eyed Peas founder will.i.am and NBA star Chris Bosh talking about the importance of programming. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
 

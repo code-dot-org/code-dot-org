@@ -1,9 +1,9 @@
 * * *
 
-title: Thank you layout: wide
+عنوان: قدرداني طرح: پهن
 
 * * *
 
-# Thank you
+# از شما متشكريم
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+كل مدرسه براي برنده شدن لپ‌تاپ‌ (و يا ابزار فناوري به ارزش 10،000 دلار آمريكا) شركت داده شديد.

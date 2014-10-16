@@ -19,7 +19,7 @@ class Calc < Blockly
   def self.create_from_level_builder(params, level_params)
     create!(level_params.merge(
         user: params[:user],
-        game: Game.custom_calc,
+        game: Game.calc,
         level_num: 'custom',
         properties: {
           solution_blocks: params[:program] || '<block type="functional_plus"></block>',
