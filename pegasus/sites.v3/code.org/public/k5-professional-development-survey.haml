@@ -4,7 +4,6 @@ nav: blank
 rightbar: blank
 ---
 
-
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
@@ -136,7 +135,7 @@ rightbar: blank
           %em{style: 'font-weight: normal;'} Other type of teacher
           %span.form-required-field *
         %div
-          %input#k5-teacher-type_other.form-control{name: "teacher_type_other_s", placeholder: "other", type: "text"}
+          %input#k5-teacher-type_other.form-control{name: "teacher_type_other_s", placeholder: "Other", type: "text"}
     .form-group
       %label.control-label{for: "k5-district"}
         What school district do you teach in?
@@ -162,12 +161,12 @@ rightbar: blank
           %option{value: "summer camp"} Summer Camp
           %option{value: "home school"} Home School
           %option{value: "other"} Other
-      %div{id: 'k5-school_type_other-wrapper', style: 'display: none;'}
+      %div{id: 'k5-school-type-other-wrapper', style: 'display: none;'}
         %label.control-label{for: "k5-school-type-other"}<
           %em{style: 'font-weight: normal;'} Other type of organization
           %span.form-required-field *
         %div
-          %input#k5-school-type-other.form-control{name: "school_type_other_s", placeholder: "other", type: "text"}
+          %input#k5-school-type-other.form-control{name: "school_type_other_s", placeholder: "Other", type: "text"}
     .form-group
       %label.control-label{for: "k5-teacher-years"}
         Including this year, how many years have you been a teacher?
@@ -221,7 +220,7 @@ rightbar: blank
           %em{style: 'font-weight: normal;'} Other type of teacher
           %span.form-required-field *
         %div
-          %input#k5-teacher-describe-other.form-control{name: "teacher_describe_other_s", placeholder: "other", type: "text"}
+          %input#k5-teacher-describe-other.form-control{name: "teacher_describe_other_s", placeholder: "Other", type: "text"}
     .form-group
       %label.control-label{for: "k5-course-offering"}
         Will you be offering the course to your students?
@@ -259,7 +258,7 @@ rightbar: blank
           %em{style: 'font-weight: normal;'} Other type of computer science materials
           %span.form-required-field *
         %div
-          %input#k5-cs-materials-other.form-control{name: "cs_materials_other_s", placeholder: "other", type: "text"}
+          %input#k5-cs-materials-other.form-control{name: "cs_materials_other_s", placeholder: "Other", type: "text"}
     .form-group
       %label.control-label{for: "k5-undergrad-degree"}
         In what area is your primary undergraduate degree?
@@ -283,7 +282,7 @@ rightbar: blank
           %em{style: 'font-weight: normal;'} Other type of degree
           %span.form-required-field *
         %div
-          %input#k5-undergrad-degree-other.form-control{name: "undergrad_degree_other_s", placeholder: "other", type: "text"}
+          %input#k5-undergrad-degree-other.form-control{name: "undergrad_degree_other_s", placeholder: "Other", type: "text"}
     .form-group
       %label.control-label{for: "k5-grad-degree"}
         Do you have a graduate degree(s)?
@@ -315,7 +314,7 @@ rightbar: blank
           %em{style: 'font-weight: normal;'} Other type of graduate degree
           %span.form-required-field *
         %div
-          %input#k5-grad-type-other.form-control{name: "grad_type_other_s", placeholder: "other", type: "text"}
+          %input#k5-grad-type-other.form-control{name: "grad_type_other_s", placeholder: "Other", type: "text"}
     .form-group
       %label.control-label{for: "k5-cs-certification"}
         Do you have any computer science certifications or endorsements?
@@ -372,7 +371,7 @@ rightbar: blank
           %em{style: 'font-weight: normal;'} Other type of race
           %span.form-required-field *
         %div
-          %input#k5-race-other.form-control{name: "race_other_s", placeholder: "other", type: "text"}
+          %input#k5-race-other.form-control{name: "race_other_s", placeholder: "Other", type: "text"}
     .form-group
       %label.control-label{for: "k5-age"}
         How old are you?
@@ -468,7 +467,7 @@ rightbar: blank
     $(':input').removeAttr('required');
 
     $("#k5-professional-development-survey-form").find("select").each(function(index) {
-      var option = $(this).children('option').eq(1);
+      var option = $(this).children('option:last-child');
       option.attr('selected', 'selected');
     });
 
@@ -489,7 +488,7 @@ rightbar: blank
         $('#k5-teacher-type-other').val('').removeAttr("required");
         $('#k5-teacher-type-other-wrapper').hide();
       }
-    });
+    }).triggerHandler('change');;
 
     $('#k5-school-type').change(function() {
       if ($(this).val().toString() == "other"){
@@ -499,7 +498,7 @@ rightbar: blank
         $('#k5-school-type-other').val('').removeAttr("required");
         $('#k5-school-type-other-wrapper').hide();
       }
-    });
+    }).triggerHandler('change');;
 
     $('#k5-teacher-describe').change(function() {
       if ($(this).val().toString() == "other"){
@@ -509,7 +508,7 @@ rightbar: blank
         $('#k5-teacher-describe-other').val('').removeAttr("required");
         $('#k5-teacher-describe-other-wrapper').hide();
       }
-    });
+    }).triggerHandler('change');;
 
     $('#k5-cs-materials').change(function() {
       if ($.inArray('other', $(this).val()) > -1) {
@@ -519,7 +518,7 @@ rightbar: blank
         $('#k5-cs-materials-other').val('').removeAttr("required");
         $('#k5-cs-materials-other-wrapper').hide();
       }
-    });
+    }).triggerHandler('change');;
 
     $('#k5-undergrad-degree').change(function() {
       if ($(this).val().toString() == "other"){
@@ -529,7 +528,7 @@ rightbar: blank
         $('#k5-undergrad-degree-other').val('').removeAttr("required");
         $('#k5-undergrad-degree-other-wrapper').hide();
       }
-    });
+    }).triggerHandler('change');;
 
     $('#k5-grad-type').change(function() {
       if ($(this).val().toString() == "other"){
@@ -539,7 +538,7 @@ rightbar: blank
         $('#k5-grad-type-other').val('').removeAttr("required");
         $('#k5-grad-type-other-wrapper').hide();
       }
-    });
+    }).triggerHandler('change');;
 
     $('#k5-race').change(function() {
       if ($(this).val().toString() == "other"){
@@ -549,7 +548,7 @@ rightbar: blank
         $('#k5-race-other').val('').removeAttr("required");
         $('#k5-race-other-wrapper').hide();
       }
-    });
+    }).triggerHandler('change');;
 
     $('#k5-send-materials-flag').change(function() {
       if($(this).is(':checked')) {
@@ -560,7 +559,7 @@ rightbar: blank
         $('#k5-send-materials-wrapper').slideUp();
         $('#k5-send-materials-wrapper').find("input, select").val('').removeAttr("required");
       }
-    });
+    }).triggerHandler('change');;
   });
 
   function processResponse(data)
