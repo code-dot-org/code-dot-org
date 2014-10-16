@@ -545,11 +545,8 @@ rightbar: blank
     $('#k5-send-materials-flag').change(function() {
       if($(this).is(':checked')) {
         $('#k5-send-materials-wrapper').slideDown();
-        $('#k5-send-materials-wrapper').find("input, select").attr("required", true);
-        $('#k5-send-materials-wrapper').find("#k5-send-materials-street2").removeAttr("required");
       } else {
         $('#k5-send-materials-wrapper').slideUp();
-        $('#k5-send-materials-wrapper').find("input, select").val('').removeAttr("required");
       }
     }).triggerHandler('change');;
   });
