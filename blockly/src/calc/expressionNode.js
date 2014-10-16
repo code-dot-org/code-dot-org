@@ -192,7 +192,7 @@ ExpressionNode.prototype.getTokenList = function (markNextParens) {
 
   var list = [token("(", markNextParens === true && leafOperation)];
   list = list.concat(this.left.getTokenList(markNextParens && !rightDeeper));
-  list = list.concat(token(this.val, this.valMetExpectation_ === false));
+  list = list.concat(token(" " + this.val + " ", this.valMetExpectation_ === false));
   list = list.concat(this.right.getTokenList(markNextParens && rightDeeper));
   list = list.concat(token(")", markNextParens === true && leafOperation));
   return list;
