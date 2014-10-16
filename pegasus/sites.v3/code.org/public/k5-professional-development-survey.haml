@@ -135,7 +135,7 @@ rightbar: blank
           %em{style: 'font-weight: normal;'} Other type of teacher
           %span.form-required-field *
         %div
-          %input#k5-teacher-type_other.form-control{name: "teacher_type_other_s", placeholder: "Other", type: "text"}
+          %input#k5-teacher-type-other.form-control{name: "teacher_type_other_s", placeholder: "Other", type: "text"}
     .form-group
       %label.control-label{for: "k5-district"}
         What school district do you teach in?
@@ -253,7 +253,7 @@ rightbar: blank
           %option{value: "appinventor"} Appinventor
           %option{value: "code.org"} Code.org
           %option{value: "other"} Other
-      %div{id: 'k5-cs_materials-other-wrapper', style: 'display: none;'}
+      %div{id: 'k5-cs-materials-other-wrapper', style: 'display: none;'}
         %label.control-label{for: "k5-cs-materials-other"}<
           %em{style: 'font-weight: normal;'} Other type of computer science materials
           %span.form-required-field *
@@ -575,10 +575,14 @@ rightbar: blank
     errors = Object.keys(data.responseJSON);
     errors_count = errors.length;
 
+    console.log(errors);
+
     for (i = 0; i < errors_count; ++i) {
       error_id = '#k5-' + errors[i];
       error_id = error_id.replace(/_[sbi]s?$/, '');
-      error_id = error_id.replace('_', '-');
+      error_id = error_id.replace(new RegExp('_', 'g'), '-');
+
+      console.log(error_id);
       $(error_id).parents('.form-group').addClass('has-error');
     }
 
