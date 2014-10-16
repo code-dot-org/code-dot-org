@@ -395,64 +395,64 @@ rightbar: blank
         %label
           %input#k5-send-materials-flag{name: "send_materials_flag_b", type: "checkbox", value: "1"}/
           Check this box if you'd like to receive materials to teach the unplugged lessons in Course 1, 2, or 3 (US attendees only)
-      %div{id: 'k5-send-materials-wrapper', style: 'display: none;'}
-        .form-group
-          %label.control-label{for: "k5-send-materials-name"}<
-            Name
-            %span.form-required-field *
-          %div
-            %input#k5-send-materials-name.form-control{name: "send_materials_name_s", placeholder: "Name", type: "text"}
-        .form-group
-          %label.control-label{for: "k5-send-materials-street1"}<
-            Street address 1
-            %span.form-required-field *
-          %div
-            %input#k5-send-materials-street1.form-control{name: "send_materials_street1_s", placeholder: "Street Address 1", type: "text"}
-        .form-group
-          %label.control-label{for: "k5-send-materials-street2"}<
-            Street address 2
-          %div
-            %input#k5-send-materials-street2.form-control{name: "send_materials_street2_s", placeholder: "Street Address 2", type: "text"}
-        .form-group
-          %label.control-label{for: "k5-send-materials-city"}<
-            City
-            %span.form-required-field *
-          %div
-            %input#k5-send-materials-city.form-control{name: "send_materials_city_s", placeholder: "City", type: "text"}
-        .form-group
-          %label.control-label{for: "k5-send-materials-state"}<
-            State
-            %span.form-required-field *
-          %div
-            %input#k5-send-materials-state.form-control{name: "send_materials_state_s", placeholder: "State", type: "text"}
-        .form-group
-          %label.control-label{for: "k5-send-materials-zip"}<
-            Zip code
-            %span.form-required-field *
-          %div
-            %input#k5-send-materials-zip.form-control{name: "send_materials_zip_s", placeholder: "Zip Code", type: "text"}
-        .form-group
-          %label.control-label{for: "k5-send-materials-email"}<
-            Email
-            %span.form-required-field *
-          %div
-            %input#k5-send-materials-email.form-control{name: "send_materials_email_s", placeholder: "Email", type: "text"}
-        .form-group
-          %label.control-label{for: "k5-send-materials-phone"}<
-            Phone number
-            %span.form-required-field *
-          %div
-            %input#k5-send-materials-phone.form-control{name: "send_materials_phone_s", placeholder: "Phone number", type: "text"}
-        .form-group
-          %label.control-label{for: "k5-send-materials-course"}<
-            Which course materials would you like to receive?
-            %span.form-required-field *
-          %div
-            %select#k5-send-materials-course.form-control{name: "send_materials_course_s", type: "select"}
-              %option{selected: "selected", value: ""} -- Select --
-              %option{value: "course 1 (beginners to computer science; early)"} Course 1 (beginners to computer science; early) readers)
-              %option{value: "course 2 (beginners to computer science; readers)"} Course 2 (beginners to computer science; readers)
-              %option{value: "course 3 (builds on course 2)"} Course 3 (builds on Course 2)
+    %div{id: 'k5-send-materials-wrapper', style: 'display: none;'}
+      .form-group
+        %label.control-label{for: "k5-send-materials-name"}<
+          Name
+          %span.form-required-field *
+        %div
+          %input#k5-send-materials-name.form-control{name: "send_materials_name_s", placeholder: "Name", type: "text"}
+      .form-group
+        %label.control-label{for: "k5-send-materials-street1"}<
+          Street address 1
+          %span.form-required-field *
+        %div
+          %input#k5-send-materials-street1.form-control{name: "send_materials_street1_s", placeholder: "Street Address 1", type: "text"}
+      .form-group
+        %label.control-label{for: "k5-send-materials-street2"}<
+          Street address 2
+        %div
+          %input#k5-send-materials-street2.form-control{name: "send_materials_street2_s", placeholder: "Street Address 2", type: "text"}
+      .form-group
+        %label.control-label{for: "k5-send-materials-city"}<
+          City
+          %span.form-required-field *
+        %div
+          %input#k5-send-materials-city.form-control{name: "send_materials_city_s", placeholder: "City", type: "text"}
+      .form-group
+        %label.control-label{for: "k5-send-materials-state"}<
+          State
+          %span.form-required-field *
+        %div
+          %input#k5-send-materials-state.form-control{name: "send_materials_state_s", placeholder: "State", type: "text"}
+      .form-group
+        %label.control-label{for: "k5-send-materials-zip"}<
+          Zip code
+          %span.form-required-field *
+        %div
+          %input#k5-send-materials-zip.form-control{name: "send_materials_zip_s", placeholder: "Zip Code", type: "text"}
+      .form-group
+        %label.control-label{for: "k5-send-materials-email"}<
+          Email
+          %span.form-required-field *
+        %div
+          %input#k5-send-materials-email.form-control{name: "send_materials_email_s", placeholder: "Email", type: "text"}
+      .form-group
+        %label.control-label{for: "k5-send-materials-phone"}<
+          Phone number
+          %span.form-required-field *
+        %div
+          %input#k5-send-materials-phone.form-control{name: "send_materials_phone_s", placeholder: "Phone number", type: "text"}
+      .form-group
+        %label.control-label{for: "k5-send-materials-course"}<
+          Which course materials would you like to receive?
+          %span.form-required-field *
+        %div
+          %select#k5-send-materials-course.form-control{name: "send_materials_course_s", type: "select"}
+            %option{selected: "selected", value: ""} -- Select --
+            %option{value: "course 1 (beginners to computer science; early)"} Course 1 (beginners to computer science; early) readers)
+            %option{value: "course 2 (beginners to computer science; readers)"} Course 2 (beginners to computer science; readers)
+            %option{value: "course 3 (builds on course 2)"} Course 3 (builds on Course 2)
 
   .main-section
     .form-group.submit-btn
@@ -464,14 +464,6 @@ rightbar: blank
 
 :javascript
   $(document).ready(function() {
-    $(':input').removeAttr('required');
-
-    $("#k5-professional-development-survey-form").find("select").each(function(index) {
-      var option = $(this).children('option:last-child');
-      option.attr('selected', 'selected');
-    });
-
-    $('#thanks').hide();
     $('#k5-professional-development-survey-form').find("select").selectize({
       plugins: ['fast_click']
     });
@@ -575,14 +567,11 @@ rightbar: blank
     errors = Object.keys(data.responseJSON);
     errors_count = errors.length;
 
-    console.log(errors);
-
     for (i = 0; i < errors_count; ++i) {
       error_id = '#k5-' + errors[i];
       error_id = error_id.replace(/_[sbi]s?$/, '');
       error_id = error_id.replace(new RegExp('_', 'g'), '-');
 
-      console.log(error_id);
       $(error_id).parents('.form-group').addClass('has-error');
     }
 
