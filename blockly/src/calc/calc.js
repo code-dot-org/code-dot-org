@@ -271,6 +271,9 @@ Calc.execute = function() {
  * collapses/animations until continue is pressed.
  */
 Calc.step = function (ignoreFailures) {
+  if (!Calc.expressions.user) {
+    return;
+  }
 
   if (!Calc.expressions.user.isOperation()) {
     displayFeedback();
@@ -300,31 +303,40 @@ Calc.step = function (ignoreFailures) {
 Calc.drawExpressions = function () {
   var ctx = Calc.ctxDisplay;
 
-  var correct = Calc.expressions.current || Calc.expressions.target;
+  var expected = Calc.expressions.current || Calc.expressions.target;
   var user = Calc.expressions.user;
 
   ctx.clearRect(0, 0, 400, 400);
-  ctx.fillStyle = 'black';
   ctx.font="30px Verdana";
-  var str = correct.toString();
-  ctx.fillText(str, 0, 350);
+  expected.applyExpectation(expected);
+  drawExpression(ctx, expected, 350, user !== null);
 
   if (user) {
-    user.applyExpectation(correct);
-    var list = user.getTokenList();
-    var xpos = 0;
-    var ypos = 200;
-    for (var i = 0; i < list.length; i++) {
-      if (i > 0 && list[i-1].char !== '(' && list[i].char !== ')') {
-        ctx.fillText(' ', xpos, ypos);
-        xpos += ctx.measureText(' ').width;
-      }
-      ctx.fillStyle = list[i].correct ? 'black' : 'red';
-      ctx.fillText(list[i].char, xpos, ypos);
-      xpos += ctx.measureText(list[i].char).width;
-    }
+    user.applyExpectation(expected);
+    drawExpression(ctx, user, 250, true);
   }
 };
+
+function drawExpression(ctx, expr, ypos, styleMarks) {
+  var list = expr.getTokenList(true);
+  var xpos = 0;
+  for (var i = 0; i < list.length; i++) {
+    var char = list[i].char;
+    var prevChar = i > 0 ? list[i - 1].char : '(';
+    if (prevChar !== '(' && char !== ')') {
+      // add a space
+      ctx.fillText(' ', xpos, ypos);
+      xpos += ctx.measureText(' ').width;
+    }
+    ctx.fillStyle = 'black';
+    if (styleMarks && list[i].marked) {
+      // marked parens are green, other marks ar ered
+      ctx.fillStyle = /^[\(|\)]$/.test(char) ? 'green' : 'red';
+    }
+    ctx.fillText(char, xpos, ypos);
+    xpos += ctx.measureText(char).width;
+  }
+}
 
 /**
  * App specific displayFeedback function that calls into
