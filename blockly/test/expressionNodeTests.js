@@ -80,7 +80,7 @@ describe("ExpressionNode", function () {
     assert.deepEqual(list, [
       { char: "(", marked: true},
       { char: "1", marked: true},
-      { char: "+", marked: false},
+      { char: " + ", marked: false},
       { char: "2", marked: true},
       { char: ")", marked: true}
     ]);
@@ -93,7 +93,7 @@ describe("ExpressionNode", function () {
     assert.deepEqual(list, [
       { char: "(", marked: true},
       { char: "1", marked: false},
-      { char: "+", marked: true},
+      { char: " + ", marked: true},
       { char: "2", marked: true},
       { char: ")", marked: true}
     ]);
@@ -108,7 +108,7 @@ describe("ExpressionNode", function () {
     assert.deepEqual(list, [
       { char: "(", marked: true},
       { char: "1", marked: true},
-      { char: "+", marked: false},
+      { char: " + ", marked: false},
       { char: "2", marked: false},
       { char: ")", marked: true}
     ]);
@@ -124,10 +124,10 @@ describe("ExpressionNode", function () {
       { char: "(", marked: false},
       { char: "(", marked: true},
       { char: "0", marked: true},
-      { char: "+", marked: true},
+      { char: " + ", marked: true},
       { char: "1", marked: true},
       { char: ")", marked: true},
-      { char: "+", marked: false},
+      { char: " + ", marked: false},
       { char: "2", marked: false},
       { char: ")", marked: false}
     ]);
