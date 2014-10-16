@@ -865,7 +865,7 @@ Blockly.removeChangeListener = function(bindData) {
  * Handful of terrible, just-barely-work-ish hacks to open a function editor dialog
  */
 
-Blockly.functionEditorOpen = true;
+Blockly.functionEditorOpen = false;
 
 Blockly.createNewFunction = function() {
   Blockly.openFunctionEditor(this.newBlockXML('my new function'));
