@@ -56,6 +56,10 @@ class Studio < Grid
 <category name="Actions">
   <block type="studio_setSprite" />
   <block type="studio_setBackground" />
+  <block type="studio_showTitleScreen">
+    <title name="TITLE">type title here</title>
+    <title name="TEXT">type text here</title>
+  </block>
   <block type="studio_showTitleScreenParams">
     <value name="TITLE">
       <block type="text" />
@@ -65,6 +69,10 @@ class Studio < Grid
     </value>
   </block>
   <block type="studio_move" />
+  <block type="studio_moveDistance">
+    <title name="DIR">1</title>
+    #{'<title name="DISTANCE">???</title>' if type == 'required_blocks'}
+  </block>
   <block type="studio_moveDistanceParams" inline="true">
     <value name="DISTANCE">
       <block type="math_number">
@@ -73,6 +81,9 @@ class Studio < Grid
     </value>
   </block>
   <block type="studio_stop" />
+  <block type="studio_wait">
+    <title name="VALUE">500</title>
+  </block>
   <block type="studio_waitParams" inline="true">
     <value name="VALUE">
       <block type="math_number">
@@ -81,10 +92,14 @@ class Studio < Grid
     </value>
   </block>
   <block type="studio_playSound" />
+  <block type="studio_changeScore" />
   <block type="studio_setScoreText" inline="true">
     <value name="TEXT">
       <block type="text" />
     </value>
+  </block>
+  <block type="studio_saySprite">
+    <title name="TEXT">type here</title>
   </block>
   <block type="studio_saySpriteParams" inline="true">
     <value name="TEXT">
