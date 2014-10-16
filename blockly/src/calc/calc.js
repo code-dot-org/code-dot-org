@@ -61,6 +61,8 @@ Calc.init = function(config) {
     current: null // the current state of the target expression
   };
 
+  Calc.shownFeedback_ = false;
+
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = false;
 
@@ -110,6 +112,7 @@ Calc.init = function(config) {
     Calc.ctxDisplay = display.getContext('2d');
 
     Calc.expressions.target = generateExpressionFromBlockXml(level.solutionBlocks);
+    Calc.drawExpressions();
 
     // todo - figure out LB story
 
@@ -120,6 +123,10 @@ Calc.init = function(config) {
     dom.addClickTouchEvent(document.getElementById("continueButton"), function () {
       Calc.step(true);
     });
+
+    // base's BlocklyApps.resetButtonClick will be called first
+    var resetButton = document.getElementById('resetButton');
+    dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
   };
 
   config.getDisplayWidth = function() {
@@ -131,21 +138,6 @@ Calc.init = function(config) {
 };
 
 /**
- * Copy the scratch canvas to the display canvas. Add a Calc marker.
- */
-Calc.display = function() {
-  // FF on linux retains drawing of previous location of artist unless we clear
-  // the canvas first.
-  var style = Calc.ctxDisplay.fillStyle;
-  Calc.ctxDisplay.fillStyle = 'white';
-  Calc.ctxDisplay.clearRect(0, 0, Calc.ctxDisplay.canvas.width,
-    Calc.ctxDisplay.canvas.width);
-  Calc.ctxDisplay.fillStyle = style;
-
-  Calc.draw(Calc.answerExpression, null);
-};
-
-/**
  * Click the run button.  Start the program.
  */
 BlocklyApps.runButtonClick = function() {
@@ -154,6 +146,23 @@ BlocklyApps.runButtonClick = function() {
   BlocklyApps.attempts++;
   Calc.execute();
 };
+
+/**
+ * App specific reset button click logic.  BlocklyApps.resetButtonClick will be
+ * called first.
+ */
+Calc.resetButtonClick = function () {
+  var continueButton = document.getElementById('continueButton');
+  // todo - single location for toggling hide state?
+  continueButton.className += " hide";
+
+  Calc.expressions.user = null;
+  Calc.expressions.current = null;
+  Calc.shownFeedback_ = false;
+
+  Calc.drawExpressions();
+};
+
 
 function evalCode (code) {
   try {
@@ -213,7 +222,9 @@ Calc.execute = function() {
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
 
-  // todo (brent) - handle case of no expression
+  if (!Calc.lastExpression) {
+    Calc.lastExpression = new ExpressionNode(0);
+  }
 
   Calc.expressions.user = Calc.lastExpression.clone();
   Calc.expressions.current = Calc.expressions.target.clone();
@@ -224,7 +235,7 @@ Calc.execute = function() {
 
   var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
 
-  Calc.draw(Calc.expressions.expected, Calc.expressions.user);
+  Calc.drawExpressions();
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -260,6 +271,7 @@ Calc.execute = function() {
  * collapses/animations until continue is pressed.
  */
 Calc.step = function (ignoreFailures) {
+
   if (!Calc.expressions.user.isOperation()) {
     displayFeedback();
     return;
@@ -272,8 +284,7 @@ Calc.step = function (ignoreFailures) {
     continueButton.className = continueButton.className.replace(/hide/g, "");
   } else {
     Calc.expressions.current.collapse();
-    Calc.ctxDisplay.clearRect(0, 0, 400, 400);
-    Calc.draw();
+    Calc.drawExpressions();
 
     continueButton.className += " hide";
 
@@ -286,12 +297,13 @@ Calc.step = function (ignoreFailures) {
 /**
  * Draw the current state of our two expressions.
  */
-Calc.draw = function () {
+Calc.drawExpressions = function () {
   var ctx = Calc.ctxDisplay;
 
-  var correct = Calc.expressions.current;
+  var correct = Calc.expressions.current || Calc.expressions.target;
   var user = Calc.expressions.user;
 
+  ctx.clearRect(0, 0, 400, 400);
   ctx.fillStyle = 'black';
   ctx.font="30px Verdana";
   var str = correct.toString();
@@ -319,7 +331,8 @@ Calc.draw = function () {
  * BlocklyApps.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
-  if (!Calc.expressions.user.isOperation()) {
+  if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
+    Calc.shownFeedback_ = true;
     BlocklyApps.displayFeedback({
       app: 'Calc',
       skin: skin.id,
