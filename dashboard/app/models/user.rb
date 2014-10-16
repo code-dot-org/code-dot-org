@@ -417,7 +417,10 @@ SQL
     
     similar_users = User.where(["username like ?", prefix + '%'])
 
-    suffix = similar_users.map(&:username).map{|n| n.gsub(/^#{prefix}/, '')}.map(&:to_i).max + 1 # first integer suffix
+    # find the current maximum integer suffix and add 1. Not guaranteed to be the "next" as in not leave holes,
+    # but is guaranteed to be (currently) unique
+    # (there's a unique constraint in the db -- callers should retry to handle race conditions)
+    suffix = similar_users.map(&:username).map{|n| n.gsub(/^#{prefix}/, '')}.map(&:to_i).max + 1
     return "#{prefix}#{suffix}"
   end
 
