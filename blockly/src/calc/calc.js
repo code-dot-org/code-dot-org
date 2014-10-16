@@ -319,15 +319,13 @@ Calc.drawExpressions = function () {
 
 function drawExpression(ctx, expr, ypos, styleMarks) {
   var list = expr.getTokenList(true);
-  var xpos = 0;
+
+  var strSize = ctx.measureText(expr.toString());
+
+  // todo - handle long strings
+  var xpos = (CANVAS_WIDTH - strSize.width) / 2;  
   for (var i = 0; i < list.length; i++) {
     var char = list[i].char;
-    var prevChar = i > 0 ? list[i - 1].char : '(';
-    if (prevChar !== '(' && char !== ')') {
-      // add a space
-      ctx.fillText(' ', xpos, ypos);
-      xpos += ctx.measureText(' ').width;
-    }
     ctx.fillStyle = 'black';
     if (styleMarks && list[i].marked) {
       // marked parens are green, other marks ar ered
