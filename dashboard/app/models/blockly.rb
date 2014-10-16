@@ -80,12 +80,12 @@ class Blockly < Level
   def self.convert_toolbox_to_category(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
     return xml_string if xml.nil? || xml.xpath('/xml/block[@type="category"]').empty?
-    default_category = category_node = Nokogiri::XML("<category name='Default'").child
+    default_category = category_node = Nokogiri::XML("<category name='Default'>").child
     xml.child << default_category
     xml.xpath('/xml/block').each do |block|
       if block.attr('type') == 'category'
         category_name = block.xpath('title').text
-        category_node = Nokogiri::XML("<category name='#{category_name}'").child
+        category_node = Nokogiri::XML("<category name='#{category_name}'>").child
         category_node['custom'] = 'PROCEDURE' if category_name == 'Functions'
         category_node['custom'] = 'VARIABLE' if category_name == 'Variables'
         xml.child << category_node
