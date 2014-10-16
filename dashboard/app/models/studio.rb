@@ -95,7 +95,9 @@ class Studio < Grid
   <block type="studio_changeScore" />
   <block type="studio_setScoreText" inline="true">
     <value name="TEXT">
-      <block type="text" />
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
     </value>
   </block>
   <block type="studio_saySprite">
