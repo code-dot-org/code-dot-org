@@ -168,7 +168,7 @@ class K5ProfessionalDevelopmentSurvey
 
     result[:send_materials_flag_b] = stripped data[:send_materials_flag_b]
 
-    if result[:send_materials_flag_b] == 1
+    if result[:send_materials_flag_b].to_i == 1
       result[:send_materials_name_s] = required stripped data[:send_materials_name_s]
       result[:send_materials_street1_s] = required stripped data[:send_materials_street1_s]
       result[:send_materials_street2_s] = stripped data[:send_materials_street2_s]
