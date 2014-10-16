@@ -908,29 +908,11 @@ Blockly.openFunctionEditor = function(functionDefinitionXML) {
   {
     workspace.addTopBlock = function (block) {
       Blockly.mainWorkspace.addTopBlock(block);
-
-      // vvv begin existing code vvv
-      workspace.topBlocks_.push(block);
-      workspace.fireChangeEvent();
-      // ^^^ end existing code ^^^
+      Blockly.Workspace.prototype.addTopBlock.apply(this, arguments);
     };
     workspace.removeTopBlock = function (block) {
       Blockly.mainWorkspace.removeTopBlock(block);
-
-      // vvv begin existing code vvv
-      var found = false;
-      for (var child, x = 0; child = workspace.topBlocks_[x]; x++) {
-        if (child == block) {
-          workspace.topBlocks_.splice(x, 1);
-          found = true;
-          break;
-        }
-      }
-      if (!found) {
-        throw 'Block not present in workspace\'s list of top-most blocks.';
-      }
-      workspace.fireChangeEvent();
-      // ^^^ end existing code ^^^
+      Blockly.Workspace.prototype.removeTopBlock.apply(this, arguments);
     };
   }
 
