@@ -1700,32 +1700,53 @@ Calc.drawExpressions = function () {
   var expected = Calc.expressions.current || Calc.expressions.target;
   var user = Calc.expressions.user;
 
-  ctx.clearRect(0, 0, 400, 400);
+  resetCanvas();
+
   ctx.font="30px Verdana";
   expected.applyExpectation(expected);
-  drawExpression(ctx, expected, 350, user !== null);
+  drawExpression(ctx, expected, 365, user !== null);
 
   if (user) {
     user.applyExpectation(expected);
-    drawExpression(ctx, user, 250, true);
+    drawExpression(ctx, user, 165, true);
   }
 };
 
+function resetCanvas() {
+  var ctx = Calc.ctxDisplay;
+
+  var divider = 300;
+
+  ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  ctx.fillStyle = '#33ccff';
+  ctx.fillRect(0, 0, 400, divider);
+  ctx.fillStyle = '#996633';
+  ctx.fillRect(0, divider, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+
+  var height = 20;
+  ctx.font= height + "px Verdana";
+  ctx.fillStyle = 'black';
+
+  var goalText = "Goal:"; // todo - i18n
+  var yourExpression = "Your expression:"; // todo -i18n
+  ctx.fillText(yourExpression, 0, height);
+  ctx.fillText(goalText, 0, divider + height);
+}
+
 function drawExpression(ctx, expr, ypos, styleMarks) {
   var list = expr.getTokenList(true);
-  var xpos = 0;
+
+  var strSize = ctx.measureText(expr.toString());
+
+  // todo - handle long strings
+  var xpos = (CANVAS_WIDTH - strSize.width) / 2;
   for (var i = 0; i < list.length; i++) {
     var char = list[i].char;
-    var prevChar = i > 0 ? list[i - 1].char : '(';
-    if (prevChar !== '(' && char !== ')') {
-      // add a space
-      ctx.fillText(' ', xpos, ypos);
-      xpos += ctx.measureText(' ').width;
-    }
     ctx.fillStyle = 'black';
     if (styleMarks && list[i].marked) {
       // marked parens are green, other marks ar ered
-      ctx.fillStyle = /^[\(|\)]$/.test(char) ? 'green' : 'red';
+      ctx.fillStyle = /^[\(|\)]$/.test(char) ? 'white' : 'red';
     }
     ctx.fillText(char, xpos, ypos);
     xpos += ctx.measureText(char).width;
@@ -2000,7 +2021,7 @@ ExpressionNode.prototype.getTokenList = function (markNextParens) {
 
   var list = [token("(", markNextParens === true && leafOperation)];
   list = list.concat(this.left.getTokenList(markNextParens && !rightDeeper));
-  list = list.concat(token(this.val, this.valMetExpectation_ === false));
+  list = list.concat(token(" " + this.val + " ", this.valMetExpectation_ === false));
   list = list.concat(this.right.getTokenList(markNextParens && rightDeeper));
   list = list.concat(token(")", markNextParens === true && leafOperation));
   return list;
