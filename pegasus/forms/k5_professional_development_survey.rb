@@ -26,8 +26,11 @@ class K5ProfessionalDevelopmentSurvey
   def self.normalize(data)
     result = {}
 
-    # Set a default email address, in case one wasn't submitted with the form.
-    result[:email_s] = 'anonymous@code.org'
+    if data[:send_materials_email_s].nil_or_empty?
+      result[:email_s] = 'anonymous@code.org'
+    else
+      result[:email_s] = data[:send_materials_email_s]
+    end
 
     result[:facilitator_prepared_i] = required enum data[:facilitator_prepared_i], AGREEMENT_ANSWERS
     result[:facilitator_knowledgeable_i] = required enum data[:facilitator_knowledgeable_i], AGREEMENT_ANSWERS
