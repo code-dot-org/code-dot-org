@@ -800,22 +800,22 @@ class UserTest < ActiveSupport::TestCase
     # username regex: /\A[a-z0-9\-\_\.]+\z/
 
     # new name
-    assert_equal 'captain_picard',  User.generate_username("Captain Picard")
+    assert_equal 'captain_picard', User.generate_username("Captain Picard")
 
     create(:user, username: 'captain_picard')
     # first prefix
-    assert_equal 'captain_picard1',  User.generate_username("Captain Picard")
+    assert_equal 'captain_picard1', User.generate_username("Captain Picard")
 
     # collisions are not numeric
-    assert_equal 'captain',  User.generate_username("Captain")
-    assert_equal 'captain_p',  User.generate_username("Captain    P")
+    assert_equal 'captain', User.generate_username("Captain")
+    assert_equal 'captain_p', User.generate_username("Captain    P")
 
     create(:user, username: 'captain')
     create(:user, username: 'captain1')
     create(:user, username: 'captain2')
     create(:user, username: 'captain55')
 
-    assert_equal 'captain56',  User.generate_username("Captain")
+    assert_equal 'captain56', User.generate_username("Captain")
 
     assert_equal "d_andre_means", User.generate_username("D'Andre Means")
     assert_equal "coder", User.generate_username('樊瑞')
