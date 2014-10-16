@@ -1,7 +1,7 @@
 class K5ProfessionalDevelopmentSurvey
 
-  AGREEMENT_ANSWERS = (-2..2).to_a
-  SCALE_ANSWERS = (1..10).to_a
+  AGREEMENT_ANSWERS = (-2..2).map{|i| i.to_s}
+  SCALE_ANSWERS = (1..10).map{|i| i.to_s}
   SIMPLE_ANSWERS = (
     ['yes',
     'no',
@@ -25,6 +25,10 @@ class K5ProfessionalDevelopmentSurvey
 
   def self.normalize(data)
     result = {}
+
+    # Set a default email address, in case one wasn't submitted with the form.
+    result[:email_s] = 'anonymous@code.org'
+
     result[:facilitator_prepared_i] = required enum data[:facilitator_prepared_i], AGREEMENT_ANSWERS
     result[:facilitator_knowledgeable_i] = required enum data[:facilitator_knowledgeable_i], AGREEMENT_ANSWERS
     result[:facilitator_enjoyable_i] = required enum data[:facilitator_enjoyable_i], AGREEMENT_ANSWERS
@@ -53,7 +57,7 @@ class K5ProfessionalDevelopmentSurvey
       'moderately dissatisfied',
       'dissatisfied (would not recommend to others)',
     ]
-    result[:improve_pd_s] = required stripped data[:improve_pd_s]
+    result[:improve_pd_s] = stripped data[:improve_pd_s]
     result[:teacher_type_s] = required enum data[:teacher_type_s].to_s.strip.downcase, [
       'in-service teacher, currently teaching',
       'pre-service teacher, also working in a classroom under a master-teacher',

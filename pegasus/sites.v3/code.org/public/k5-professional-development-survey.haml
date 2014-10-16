@@ -380,7 +380,7 @@ rightbar: blank
       %div
         %select#k5-age.form-control{name: "age_s", required: true, type: "select"}
           %option{selected: "selected", value: ""} -- Select --
-          %option{value: "<20"} < 20
+          %option{value: "< 20"} < 20
           %option{value: "21-25"} 21-25
           %option{value: "26-30"} 26-30
           %option{value: "31-35"} 31-35
@@ -462,6 +462,11 @@ rightbar: blank
 :javascript
   $(document).ready(function() {
     $(':input').removeAttr('required');
+
+    $("#k5-professional-development-survey-form").find("select").each(function(index) {
+      var option = $(this).children('option').eq(1);
+      option.attr('selected', 'selected');
+    });
 
     $('#thanks').hide();
     $('#k5-professional-development-survey-form').find("select").selectize({
