@@ -1,6 +1,5 @@
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
-var Expression = require('./expression');
 
 /**
  * Information about level-specific requirements.
