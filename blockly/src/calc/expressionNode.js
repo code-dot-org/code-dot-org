@@ -178,28 +178,33 @@ ExpressionNode.prototype.isEquivalent = function (target) {
  * string representation of that portion of the expression, and whether or not
  * it is correct.
  */
-ExpressionNode.prototype.getTokenList = function () {
+ExpressionNode.prototype.getTokenList = function (markNextParens) {
   if (this.valMetExpectation_ === null) {
     throw new Error("Can't get token list without expectation set");
   }
 
   if (!this.isOperation()) {
-    return [token(this.val.toString(), this.valMetExpectation_)];
+    return [token(this.val.toString(), this.valMetExpectation_ === false)];
   }
 
-  var list = [token("(", true)];
-  list = list.concat(this.left.getTokenList());
-  list = list.concat(token(this.val, this.valMetExpectation_));
-  list = list.concat(this.right.getTokenList());
-  list = list.concat(token(")", true));
+  var leafOperation = !this.left.isOperation() && !this.right.isOperation();
+  var rightDeeper = this.right.depth() > this.left.depth();
+
+  var list = [token("(", markNextParens === true && leafOperation)];
+  list = list.concat(this.left.getTokenList(markNextParens && !rightDeeper));
+  list = list.concat(token(this.val, this.valMetExpectation_ === false));
+  list = list.concat(this.right.getTokenList(markNextParens && rightDeeper));
+  list = list.concat(token(")", markNextParens === true && leafOperation));
   return list;
 };
 
 /**
- * Creates a token with the given char/correctness
+ * Creates a token with the given char (which can really be a string), that
+ * may or may not be "marked". Marking indicates different things depending on
+ * the char.
  */
-function token(char, correct) {
-  return { char: char, correct: correct };
+function token(char, marked) {
+  return { char: char, marked: marked };
 }
 
 // todo (brent)- may want to use lodash's isNumber

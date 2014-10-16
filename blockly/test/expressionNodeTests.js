@@ -58,44 +58,44 @@ describe("ExpressionNode", function () {
     assert.equal(node.valMetExpectation_, null);
     node.applyExpectation(expected);
     assert.equal(node.valMetExpectation_, true);
-    list = node.getTokenList();
+    list = node.getTokenList(true);
     assert.deepEqual(list, [
-      { char: "0", correct: true}
+      { char: "0", marked: false}
     ]);
 
     node = new ExpressionNode(0);
     expected = new ExpressionNode(1);
     node.applyExpectation(expected);
     assert.equal(node.valMetExpectation_, false);
-    list = node.getTokenList();
+    list = node.getTokenList(true);
     assert.deepEqual(list, [
-      { char: "0", correct: false}
+      { char: "0", marked: true}
     ]);
 
     node = new ExpressionNode("+", 1, 2);
     expected = new ExpressionNode("+", 2, 1);
     node.applyExpectation(expected);
     assert.equal(node.valMetExpectation_, true);
-    list = node.getTokenList();
+    list = node.getTokenList(true);
     assert.deepEqual(list, [
-      { char: "(", correct: true},
-      { char: "1", correct: false},
-      { char: "+", correct: true},
-      { char: "2", correct: false},
-      { char: ")", correct: true}
+      { char: "(", marked: true},
+      { char: "1", marked: true},
+      { char: "+", marked: false},
+      { char: "2", marked: true},
+      { char: ")", marked: true}
     ]);
 
     node = new ExpressionNode("+", 1, 2);
     expected = new ExpressionNode("-", 1, 3);
     node.applyExpectation(expected);
     assert.equal(node.valMetExpectation_, false);
-    list = node.getTokenList();
+    list = node.getTokenList(true);
     assert.deepEqual(list, [
-      { char: "(", correct: true},
-      { char: "1", correct: true},
-      { char: "+", correct: false},
-      { char: "2", correct: false},
-      { char: ")", correct: true}
+      { char: "(", marked: true},
+      { char: "1", marked: false},
+      { char: "+", marked: true},
+      { char: "2", marked: true},
+      { char: ")", marked: true}
     ]);
 
     node = new ExpressionNode("+", 1, 2);
@@ -104,13 +104,13 @@ describe("ExpressionNode", function () {
     assert.equal(node.valMetExpectation_, true);
     assert.equal(node.left.valMetExpectation_, false);
     assert.equal(node.right.valMetExpectation_, true);
-    list = node.getTokenList();
+    list = node.getTokenList(true);
     assert.deepEqual(list, [
-      { char: "(", correct: true},
-      { char: "1", correct: false},
-      { char: "+", correct: true},
-      { char: "2", correct: true},
-      { char: ")", correct: true}
+      { char: "(", marked: true},
+      { char: "1", marked: true},
+      { char: "+", marked: false},
+      { char: "2", marked: false},
+      { char: ")", marked: true}
     ]);
 
     node = new ExpressionNode("+", new ExpressionNode("+", 0, 1), 2);
@@ -119,17 +119,17 @@ describe("ExpressionNode", function () {
     assert.equal(node.valMetExpectation_, true);
     assert.equal(node.left.valMetExpectation_, false);
     assert.equal(node.right.valMetExpectation_, true);
-    list = node.getTokenList();
+    list = node.getTokenList(true);
     assert.deepEqual(list, [
-      { char: "(", correct: true},
-      { char: "(", correct: true}, // todo - should this actually be false?
-      { char: "0", correct: false},
-      { char: "+", correct: false},
-      { char: "1", correct: false},
-      { char: ")", correct: true}, // todo - should this actually be false?
-      { char: "+", correct: true},
-      { char: "2", correct: true},
-      { char: ")", correct: true}
+      { char: "(", marked: false},
+      { char: "(", marked: true},
+      { char: "0", marked: true},
+      { char: "+", marked: true},
+      { char: "1", marked: true},
+      { char: ")", marked: true},
+      { char: "+", marked: false},
+      { char: "2", marked: false},
+      { char: ")", marked: false}
     ]);
 
     // todo - more of these
