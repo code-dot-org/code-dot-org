@@ -968,5 +968,10 @@ Blockly.openFunctionEditor = function(functionDefinitionXML) {
       var xml = Blockly.Xml.textToDom(functionDefinitionXML);
       Blockly.Xml.domToWorkspace(workspace, xml);
     }
+
+    // Add trashcan
+    {
+      workspace.addTrashcan();
+    }
   }
 };
