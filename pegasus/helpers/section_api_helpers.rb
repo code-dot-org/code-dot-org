@@ -88,7 +88,9 @@ class DashboardStudent
 
   def self.birthday_to_age(birthday)
     return if birthday.nil?
-    ((Date.today - birthday) / 365).to_i # TODO should this be 365.25
+    age = ((Date.today - birthday) / 365).to_i # TODO should this be 365.25
+    age = "21+" if age >= 21
+    age
   end
 
   def self.fields()
