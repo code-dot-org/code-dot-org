@@ -7,7 +7,6 @@ class Blockly < Level
     start_blocks
     toolbox_blocks
     required_blocks
-    step_mode
     ani_gif_url
     is_k1
     skip_instructions_popup
@@ -17,6 +16,7 @@ class Blockly < Level
     step_speed
     slider_speed
     disable_param_editing
+    disable_variable_editing
   )
 
   before_validation {

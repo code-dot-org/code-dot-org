@@ -1,4 +1,5 @@
 require 'nokogiri'
+require 'cdo/user_agent_parser'
 
 module ApplicationHelper
 
@@ -6,6 +7,12 @@ module ApplicationHelper
   include VideosHelper
   include ScriptLevelsHelper
   include StagesHelper
+
+  USER_AGENT_PARSER = UserAgentParser::Parser.new
+
+  def browser
+    @browser ||= USER_AGENT_PARSER.parse request.headers["User-Agent"]
+  end
 
   def ago(from_time)
     s = distance_of_time_in_words_to_now(from_time)
@@ -106,26 +113,23 @@ module ApplicationHelper
   end
 
   def show_image(params)
+    level_source = nil
     if params[:id]
       level_source = LevelSource.find(params[:id])
       app = level_source.level.game.app
     else
       app = params[:app]
     end
+    
+    # playlab/studio and artist/turtle can have images
 
-    if app == 'flappy'
-      asset_url 'flappy_sharing_drawing.png'
-    elsif app == 'bounce'
-      asset_url 'bounce_sharing_drawing.png'
-    elsif app == 'studio'
-      asset_url 'studio_sharing_drawing.png'
+    level_source_image = LevelSourceImage.find_by_level_source_id(level_source.id) if level_source
+    if level_source_image.try(:image)
+      url_for(:controller => "level_sources", :action => "generate_image", :id => params[:id], only_path: false)
+    elsif app == Game::FLAPPY || app == Game::BOUNCE || app == Game::STUDIO
+      asset_url "#{app}_sharing_drawing.png"
     else
-      level_source_image = LevelSourceImage.find_by_level_source_id(level_source.id)
-      if !level_source_image.nil? && !level_source_image.image.nil?
-        url_for(:controller => "level_sources", :action => "generate_image", :id => params[:id], only_path: false)
-      else
-        asset_url 'sharing_drawing.png'
-      end
+      asset_url 'sharing_drawing.png'
     end
   end
 

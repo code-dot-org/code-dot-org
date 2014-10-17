@@ -62,10 +62,13 @@ class User < ActiveRecord::Base
 
   validates_length_of :parent_email, maximum: 255
 
+  USERNAME_ALLOWED_CHARACTERS = /[a-z0-9\-\_\.]/
+  USERNAME_REGEX = /\A#{USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
-  validates_format_of :username, with: /\A[a-z0-9\-\_\.]+\z/i, on: :create, allow_blank: true
+  validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false
   validates_presence_of :username, if: :username_required?
+  before_validation :generate_username, on: :create
 
   validates_uniqueness_of :prize_id, allow_nil: true
   validates_uniqueness_of :teacher_prize_id, allow_nil: true
@@ -403,11 +406,41 @@ SQL
     age.nil? || age < 13
   end
 
+  def self.generate_username(name)
+    prefix = name.downcase.gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..16].squish.gsub(' ', '_')
+
+    prefix = 'coder' if prefix.empty? || prefix == '_'
+
+    prefix = "coder_#{prefix}" if prefix.length < 5
+
+    return prefix unless User.where(username: prefix).exists?
+    
+    similar_users = User.where(["username like ?", prefix + '%'])
+
+    # find the current maximum integer suffix and add 1. Not guaranteed to be the "next" as in not leave holes,
+    # but is guaranteed to be (currently) unique
+    # (there's a unique constraint in the db -- callers should retry to handle race conditions)
+    suffix = similar_users.map(&:username).map{|n| n.gsub(/^#{prefix}/, '')}.map(&:to_i).max + 1
+    return "#{prefix}#{suffix}"
+  end
+
+  def generate_username
+    return unless username.blank?
+    return if name.blank?
+    self.username = User.generate_username(name)
+  end
+
   def short_name
     return username if name.blank?
 
     name.split.first # 'first name'
   end
+
+  def initial
+    return nil if name.blank?
+    return name.strip[0].upcase
+  end
+
 
   # override the default devise password to support old and new style hashed passwords
   # based on Devise::Models::DatabaseAuthenticatable#valid_password?

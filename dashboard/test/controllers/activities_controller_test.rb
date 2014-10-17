@@ -37,6 +37,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
   end
 
+  def studio_program_with_text(text)
+    '<xml><block type="when_run" deletable="false"><next><block type="studio_showTitleScreen"><title name="TITLE">' +
+        text +
+        '</title><title name="TEXT">type text here</title></block></next></block>'
+  end
+
   test "logged in milestone" do
     # do all the logging
     @controller.expects :log_milestone
@@ -272,7 +278,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     program = "<whatever>"
 
-    level_source = LevelSource.lookup(@script_level.level, program) # creates it, doesn't just look it up, despite the name
+    level_source = LevelSource.find_identical_or_create(@script_level.level, program)
     level_source_image = LevelSourceImage.find_or_create_by(level_source_id: level_source.id) do |ls|
       ls.image = @good_image
     end
@@ -305,7 +311,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "logged in milestone with existing level source and level source image updates image if old image was blank" do
     program = "<whatever>"
 
-    level_source = LevelSource.lookup(@script_level.level, program) # creates it, doesn't just look it up, despite the name
+    level_source = LevelSource.find_identical_or_create(@script_level.level, program)
     level_source_image = LevelSourceImage.find_or_create_by(level_source_id: level_source.id) do |ls|
       ls.image = @blank_image
     end
@@ -337,7 +343,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "logged in milestone with existing level source and level source image does not update image if new image is blank" do
     program = "<whatever>"
 
-    level_source = LevelSource.lookup(@script_level.level, program) # creates it, doesn't just look it up, despite the name
+    level_source = LevelSource.find_identical_or_create(@script_level.level, program)
     level_source_image = LevelSourceImage.find_or_create_by(level_source_id: level_source.id) do |ls|
       ls.image = @good_image
     end
@@ -369,7 +375,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "logged in milestone with existing level source and level source image does not update image if old image is good" do
     program = "<whatever>"
 
-    level_source = LevelSource.lookup(@script_level.level, program) # creates it, doesn't just look it up, despite the name
+    level_source = LevelSource.find_identical_or_create(@script_level.level, program)
     level_source_image = LevelSourceImage.find_or_create_by(level_source_id: level_source.id) do |ls|
       ls.image = @good_image
     end
@@ -594,6 +600,78 @@ class ActivitiesControllerTest < ActionController::TestCase
                          "level_source"=>"http://test.host/sh/#{assigns(:level_source).id}",
                          "design"=>"white_background"}
 
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+  end
+
+  test 'sharing program with swear word returns error' do
+    return unless CDO.webpurify_key
+    assert_does_not_create(LevelSource, GalleryActivity) do
+      post :milestone, user_id: @user.id, script_level_id: @script_level, :program => studio_program_with_text('shit')
+    end
+    assert_response :success
+    expected_response = {
+        'level_source' => nil,
+        'share_failure' => {
+            'message' => "It looks like there is profanity in it. Try changing the text.",
+            'type' => 'profanity'
+        }
+    }
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+  end
+
+  test 'sharing program with swear word in German rejects word' do
+    return unless CDO.webpurify_key
+    with_default_locale(:de) do
+      assert_does_not_create(LevelSource, GalleryActivity) do
+        post :milestone, user_id: @user.id, script_level_id: @script_level, :program => studio_program_with_text('scheiße')
+      end
+    end
+    assert_response :success
+    expected_response = {'level_source' => nil }
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+  end
+
+  test 'sharing program with http error slogs' do
+    # allow sharing when there's an error, slog so it's possible to look up and review later
+
+    @controller.stubs(:find_share_failure).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
+    @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
+      params[:tag] == 'share_checking_error' && params[:error] == 'something broke' && params[:level_source_id] != nil
+    end
+
+    assert_creates(LevelSource) do
+      post :milestone, user_id: @user.id, script_level_id: @script_level, :program => studio_program_with_text('shit')
+    end
+
+    assert_response :success
+  end
+
+  test 'sharing program with swear word in Spanish rejects word' do
+    return unless CDO.webpurify_key
+    with_default_locale(:es) do
+      assert_does_not_create(LevelSource, GalleryActivity) do
+        post :milestone, user_id: @user.id, script_level_id: @script_level, :program => studio_program_with_text('putamadre')
+      end
+    end
+    assert_response :success
+    expected_response = {'level_source' => nil }
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+  end
+
+  test 'sharing program with phone number' do
+    assert_does_not_create(LevelSource, GalleryActivity) do
+      post :milestone, user_id: @user.id, script_level_id: @script_level, :program => studio_program_with_text('800-555-5555')
+    end
+    assert_response :success
+
+    expected_response = {
+        'level_source' => nil,
+        'share_failure' => {
+            'message' => "It looks like there is a phone number in it. Try changing the text.",
+            'contents' => '800-555-5555',
+            'type' => 'phone'
+        }
+    }
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 

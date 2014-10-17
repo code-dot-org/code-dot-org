@@ -1,27 +1,14 @@
 ---
 title: Recursos
 layout: wide
+nav: resources_nav
 ---
 
 # Recursos
 
-*   [Handouts to spread the word][1] <br/>
-*   [How-to guide for teachers][2] <br/>
-*   [Posters][3] <br/>
-*   [Videos][4] <br/>
-*   [Sample emails][5] <br/>
-*   [Useful computer science stats][6]   
-*   [Press Kit][7]
+<a id="handouts"></p> 
 
- [1]: #handouts
- [2]: /resources/how-to
- [3]: #posters
- [4]: #videos
- [5]: #sample-emails
- [6]: /resources/stats
- [7]: /resources/press-kit
-
-<a id="handouts"></p> <h2>
+<h2>
   Use this handout to spread the word
 </h2>
 
@@ -38,7 +25,9 @@ layout: wide
 </p>
 
 <p>
-  <a id="videos"></p> <h2>
+  <a id="videos"></p> 
+  
+  <h2>
     Show these videos to inspire students
   </h2>
   
@@ -80,16 +69,34 @@ layout: wide
   </div>
   
   <p>
-<a id="posters"></p> <h2>
+<a id="posters"></p> 
+
+<h2>
   Hang these posters in your school
 </h2>
 
+<p>
+  <% if @country == 'us' %>
+</p>
+
 <h4>
-  <a href="http://hourofcode.com/us#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
+  <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
 </h4>
 
 <p>
-  <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="imagen" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="imagen" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="imagen" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="imagen" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="imagen" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="imagen" /></a>
+  <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="imagen" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="imagen" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="imagen" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="imagen" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="imagen" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="imagen" /></a>
+</p>
+
+<p>
+  <a id="banners"></a>
+</p>
+
+<h2>
+  Feature these banners on your website
+</h2>
+
+<p>
+  <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="imagen" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="imagen" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="imagen" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <p>
@@ -97,7 +104,7 @@ layout: wide
 </p>
 
 <h2>
-  Send these emails to help promote the Hour of Code.
+  Send these emails to help promote the Hour of Code
 </h2>
 
 <p>
@@ -126,6 +133,10 @@ layout: wide
 
 <p>
   Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+</p>
+
+<p>
+  <a id="media-pitch"></a>
 </p>
 
 <h2>

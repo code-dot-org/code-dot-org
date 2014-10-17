@@ -15,19 +15,140 @@ social:
   "og:video:type": ""
 ---
 
-#top{:style=>"margin-top: 40px;"}
-  #video.col-63.desktop-pad-right
+-facebook = {:u=>"http://code.org/"}
+-twitter = {:url=>"http://codeweek.eu/", :related=>'codeorg', :hashtags=>'', :text=>"Why don't more schools teach computer science? We can fix this. @CodeWeekEU"}
+-download_filename = 'Code-5-minute.mov'
 
-  #start.col-36{:style=>'text-align:center; margin-top: 0'}
-    .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
+#index
+  #top{:style=>"margin-top: 40px;"}
+    #video.col-63.desktop-pad-right
+      = view :video
+
+    #start.col-36{:style=>'text-align: left; margin-top: 0'}
+      %img{:src=>"/images/eu-code-logo.png", style: "width:100%; height:100%"}
+      .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
+        %h4.desktop-feature{:style=>"font-size: 25px; line-height: 26px; font-weight: 400; margin-top: 15px;"}<
+          The European Coding Initiative promotes coding and computer science across Europe, both within schools and beyond.
+      %a{:href=>'/students', :style=>"text-decoration: none;"}
+        %button{:style=>"font-size: 19px; font-weight: 500; height: 50px;margin-top: 10px;"}
+          Get started coding today!
+    #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
+      = view :share_buttons, facebook:facebook, twitter:twitter
+
 
 %div{:style=>'clear:both'}
 
-%h1{:style=>'text-align:center;'}
-  Join us during EU Code Week
+  %br
+  %br
+    .greybox
+      #column1{:style=>'float:left; width: 50%'}
+        %a{:href=>"http://studio.code.org/hoc/1"}
+          %img{:src=>"/images/codehoc3.jpg", style: "width:100%; height:100%"}
+      #column2{:style=>'float:left; width: 50%; padding-right: 25px; padding-left: 25px; text-align: left;'}
+        %h1white
+          Write your first computer program
+        %br 
+        %br
+          Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+        %br
+          Ages 6-106  |  Modern browsers, smartphones, tablets
+        %br  
+        %button{:style=>"font-size: 18px; height: 40px; text-align: center;"}
+          %a{:href=>"http://studio.code.org/hoc/1", style:"color: white;"}
+            Go
 
-%h3{:style=>'text-align:center;'}
-  Video will go here
+  #columns.desktop-feature{:style=>'clear:both; overflow:hidden'}
+    #column1{:style=>'float:left; width: 33.33%'}
+      %h2 Teachers & Educators
+      #column1content
+        Are you a student?
+        %a{:href=>"/students"} 
+          Try coding now!
+        %hr.narrow_hr
+        Are you a teacher?
+        %a{:href=>"/teachers"} 
+          Use these resources
+        %hr.narrow_hr
+        Are you a parent?
+        %a{:href=>"/adults"} 
+          Support computer science
+        %hr.narrow_hr
+        Host an Hour of Code event.
+        %a{:href=>"/teachers/hoc"} 
+          Learn how
+        %hr.narrow_hr
+        Want to spread the word about computer science education?
+        %a{:href=>"/teachers/inspire"} 
+          Share these videos
+        %hr.narrow_hr
+        %br
+        %a{:href=>"http://hourofcode.com"}
+          %button{:style=>'width:200px'}
+            Teach an Hour of Code
 
-%h2 From the Community
-= view :index_twitter
+        = view 'find-on-fb', current_site:request.site
+
+    #column2{:style=>'float:left; width: 33.33%; padding-right: 25px; padding-left: 25px'}
+      %h2 Latest Highlights
+      #column2content
+        %a{:href=>"http://bit.ly/1y6pcr3", :target=>'_blank'}
+          EU Code Week 11-17 October
+        %br // Scientix.eu
+        %hr.narrow_hr
+        %a{:href=>"http://forumblog.org/2014/10/embracing-digital-era-ensure-europes-competitiveness", :target=>'_blank'}
+          How can Europe embrace a digital future?
+        %br // World Economic Forum
+        %hr.narrow_hr
+        %a{:href=>"http://www.bbc.com/news/technology-29145904", :target=>'_blank'}
+          Does a five-year-old need to learn how to code?
+        %br // BBC
+        %hr.narrow_hr
+        %a{:href=>"http://www.computerweekly.com/news/2240225794/Lack-of-coding-skills-may-lead-to-severe-shortage-of-ICT-pros-in-Europe-by-2020-warns-EC", :target=>'_blank'}
+          Lack of coding skills may lead to skills shortage in Europe
+        %br // Computer Weekly
+        %hr.narrow_hr
+        %a{:href=>"http://www.euractiv.com/sections/infosociety/commissioners-urges-coding-classes-school-303820", :target=>'_blank'}
+          Commissioners Urge Coding Classes at School
+        %br // EurActiv.com
+        %hr.narrow_hr
+        %a{:href=>"http://www.huffingtonpost.co.uk/rachel-swidenbank/is-pink-it-shrink-it-real_b_5939546.html", :target=>'_blank'}
+          Is 'Pink It, Shrink It' Really the Answer?
+        %br // HuffPost Tech UK
+        %hr.narrow_hr
+        %a{:href=>"http://www.eun.org/publications/detail?publicationID=481", :target=>'_blank'}
+          Report: 'Computing Our Future'
+        %br // EUN.org
+
+        %hr.narrow_hr
+        %a{:href=>"http://codeorg.tumblr.com/post/91961669383/ap-computer-science", :target=>'_blank'}
+          Seeing our impact: A record year for computer science 
+        %br // Code.org 
+
+    #column3{:style=>'float:left; width: 33.33%;'}
+      %h2 From the Community
+      = view :index_twitter
+
+%br
+%br
+
+  %div{:style=>'float:left; width: 16.66%;'}
+    %a{:href=>'http://www.eun.org/', :target=>'_blank'}
+      %img{:src=>"/images/european_schoolnet.png", :style=>'max-width: 140px; max-height: 140px;'}
+  %div{:style=>'float:left; width: 16.66%; padding-right: 10px; padding-left: 10px'}
+    %a{:href=>'http://www.facebook.com/', :target=>'_blank'}
+      %img{:src=>"/images/facebook.jpg", :style=>'max-width: 140px; max-height: 140px;'}
+  %div{:style=>'float:left; width: 16.66%; padding-right: 10px; padding-left: 10px'}
+    %a{:href=>'http://www.libertyglobal.com/', :target=>'_blank'}
+      %img{:src=>"/images/liberty_global.jpg", :style=>'max-width: 140px; max-height: 140px;'}
+  %div{:style=>'float:left; width: 16.66%; padding-right: 10px; padding-left: 10px'}
+    %a{:href=>'http://www.microsoft.com', :target=>'_blank'}
+      %img{:src=>"/images/microsoft.jpg", :style=>'max-width: 140px; max-height: 140px;'}
+  %div{:style=>'float:left; width: 16.66%; padding-right: 10px; padding-left: 10px'}
+    %a{:href=>'http://www.rovio.com', :target=>'_blank'}
+      %img{:src=>"/images/rovio.png", :style=>'max-width: 140px; max-height: 140px;'}
+  %div{:style=>'float:left; width: 16.66%; padding-right: 10px; padding-left: 10px'}
+    %a{:href=>'http://www.sap.com/', :target=>'_blank'}
+      %img{:src=>"/images/sap.png", :style=>'max-width: 140px; max-height: 140px;'}
+
+
+

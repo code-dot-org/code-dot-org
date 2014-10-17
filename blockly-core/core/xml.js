@@ -90,7 +90,7 @@ Blockly.Xml.blockToDom_ = function(block, ignoreChildBlocks) {
     element.appendChild(commentElement);
   }
 
-  var hasValues = false;
+  var setInlineAttribute = false;
   for (var i = 0, input; input = block.inputList[i]; i++) {
     var container;
     var empty = true;
@@ -99,12 +99,16 @@ Blockly.Xml.blockToDom_ = function(block, ignoreChildBlocks) {
     } else {
       var ignoreChild = false;
       var childBlock = input.connection.targetBlock();
-      if (input.type == Blockly.INPUT_VALUE) {
+      if (input.type === Blockly.INPUT_VALUE) {
         container = goog.dom.createDom('value');
-        hasValues = true;
-      } else if (input.type == Blockly.NEXT_STATEMENT) {
+        setInlineAttribute = true;
+      } else if (input.type === Blockly.NEXT_STATEMENT) {
         container = goog.dom.createDom('statement');
         ignoreChild = ignoreChildBlocks;
+      } else if (input.type === Blockly.FUNCTIONAL_INPUT) {
+        container = goog.dom.createDom('functional_input');
+        ignoreChild = ignoreChildBlocks;
+        setInlineAttribute = true;
       }
       if (childBlock && !ignoreChild) {
         container.appendChild(Blockly.Xml.blockToDom_(childBlock));
@@ -116,7 +120,7 @@ Blockly.Xml.blockToDom_ = function(block, ignoreChildBlocks) {
       element.appendChild(container);
     }
   }
-  if (hasValues) {
+  if (setInlineAttribute) {
     element.setAttribute('inline', block.inputsInline);
   }
   if (block.isCollapsed()) {
@@ -321,6 +325,7 @@ Blockly.Xml.domToBlock_ = function(workspace, xmlBlock) {
         break;
       case 'value':
       case 'statement':
+      case 'functional_input':
         input = block.getInput(name);
         if (!input) {
           throw 'Input does not exist: ' + name;

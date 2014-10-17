@@ -236,9 +236,9 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
-  config.omniauth :facebook, CDO.dashboard_facebook_key, CDO.dashboard_facebook_secret, :scope => 'email,user_birthday', :display => 'popup'
+  config.omniauth :facebook, CDO.dashboard_facebook_key, CDO.dashboard_facebook_secret, :scope => 'email,public_profile'
   config.omniauth :google_oauth2, CDO.dashboard_google_key, CDO.dashboard_google_secret
-  config.omniauth :windowslive, CDO.dashboard_windowslive_key, CDO.dashboard_windowslive_secret, :scope => 'wl.basic'
+  config.omniauth :windowslive, CDO.dashboard_windowslive_key, CDO.dashboard_windowslive_secret, :scope => 'wl.basic wl.emails'
 
   # for clever (and only clever) we ignore state because clever
   # initiates the oauth flow (instead of us as we do with facebook

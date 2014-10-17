@@ -921,7 +921,6 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('TEXT')
-        .setCheck('String')
         .appendTitle(msg.setScoreText());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -1334,8 +1333,7 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.saySprite());
       }
       if (block.params) {
-        this.appendValueInput('TEXT')
-          .setCheck('String');
+        this.appendValueInput('TEXT');
       } else {
         var quotedTextInput = this.appendDummyInput();
         if (isK1) {

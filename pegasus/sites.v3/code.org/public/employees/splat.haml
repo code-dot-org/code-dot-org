@@ -5,9 +5,9 @@ social:
   "twitter:site": "@codeorg"
   "twitter:url": "http://code.org/"
   "twitter:title": "Join the largest learning event in history, Dec 8-14, 2014"
-  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students in 170+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. <strong>No experience needed. Ages 4 to 104.</strong>"
-  "twitter:image:src": 'http://csedweek.org/images/hoc-video-thumbnail.jpg'
-  "twitter:player": 'https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
+  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. <strong>No experience needed. Ages 4 to 104.</strong>"
+  "twitter:image:src": 'http://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg'
+  "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
   "twitter:player:width": 1920
   "twitter:player:height": 1080
 max_age: 60
@@ -51,29 +51,27 @@ max_age: 60
     = view :employee_engagement_video, custom_video_key:company['video_key_s']
 
   #start.col-36
-    #blurb.col-mobile-56.mobile-pad-right
-      %br.desktop-feature
-
     #companystats.col-mobile-44
-      .desktop-feature
-        #blurb.col-mobile-56.mobile-pad-right
-          %br.desktop-feature
+      .count{:style=>'font-size: 32px; line-height: 32px; font-weight:500' }
+        #{format_integer_with_commas(hoc_count)}
+        -if num_employees
+          of #{format_integer_with_commas(company['num_employees_i'])} 
+        #{company['display_name_s']} employees have tried the Hour of Code.
+        %h4.desktop-feature{style: 'font-size: 22px;'}
+          -if hoc_percent
+            #{hoc_percent}% Started
+      %br
 
-          .count{:style=>'font-size: 32px; line-height: 32px; font-weight:500' }
-            #{format_integer_with_commas(hoc_count)}
-            -if num_employees
-              of #{format_integer_with_commas(company['num_employees_i'])} 
-            #{company['display_name_s']} employees have tried the Hour of Code.
-            %h4.desktop-feature{style: 'font-size: 22px;'}
-              -if hoc_percent
-                #{hoc_percent}% Started
-          %br
-
-        #getstarted.col-mobile-44
-          #largegap.mobile-show-medium
-          %a{:href=>"/api/hour/begin_company/#{company['name_s']}"}
-            %button.btn.btn-default
-              Start now
+      #getstarted.col-mobile-44
+        #largegap.mobile-show-medium
+        %a{:href=>"/api/hour/begin_company/#{company['name_s']}"}
+          %button.btn.btn-default.ee_button
+            Start now
+      %br
+      %a.ee_link{:href=>"http://hourofcode.com/"} Host an Hour of Code
+      %br
+      %a.ee_link{:href=>"http://code.org/donate/#{company['name_s']}"} Support the campaign
+   
 
   #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
     -unless company['video_key_s']

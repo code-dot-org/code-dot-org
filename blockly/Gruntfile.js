@@ -9,7 +9,9 @@ var APPS = process.env.MOOC_APP ? [process.env.MOOC_APP] : [
   'bounce',
   'flappy',
   'studio',
-  'jigsaw'
+  'jigsaw',
+  'calc',
+  'webapp'
 ];
 
 // Parse options from environment.
@@ -149,6 +151,12 @@ config.copy = {
         cwd: 'lib/droplet',
         src: ['droplet.min.css'],
         dest: 'build/package/css/droplet/'
+      },
+      {
+        expand: true,
+        cwd: 'lib/jsinterpreter',
+        src: ['acorn_interpreter.js'],
+        dest: 'build/package/js/jsinterpreter/'
       }
     ]
   }
@@ -235,8 +243,8 @@ LOCALES.forEach(function(locale) {
     nonull: true,
     src: [
       'lib/blockly/blockly_' + ext + '.js',
-      'lib/blockly/blocks_compressed.js',
-      'lib/blockly/javascript_compressed.js',
+      'lib/blockly/blocks_' + ext + '.js',
+      'lib/blockly/javascript_' + ext + '.js',
       'lib/blockly/' + locale + '.js'
     ],
     dest: 'build/package/js/' + locale + '/vendor.js'
@@ -322,7 +330,8 @@ config.jshint = {
     'test/**/*.js',
     '!src/hammer.js',
     '!src/lodash.js',
-    '!src/lodash.min.js'
+    '!src/lodash.min.js',
+    '!src/canvg/*.js'
   ]
 };
 

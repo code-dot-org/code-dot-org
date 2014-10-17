@@ -7,7 +7,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw a two lines east and two lines north to finish the house!",
+    "instructions": "Draw two lines east and two lines north to finish the house!",
     "x": "150",
     "y": "350",
     "start_direction": "90",
@@ -15,7 +15,8 @@
     "skip_instructions_popup": "false",
     "free_play": "false",
     "ideal": "5",
-    "slider_speed": "0.2"
+    "slider_speed": "0.2",
+    "disable_param_editing": "true"
   }
 }]]></config>
   <blocks>

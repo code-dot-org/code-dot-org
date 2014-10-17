@@ -46,7 +46,7 @@ Nova Southeastern University (NSU)
 <br />
 Carl DeSantis Building
 <br />
-Rooms 1053 & 1054
+Room 2072
 <br />
 3301 College Avenue
 <br />
@@ -95,7 +95,7 @@ Nova Southeastern University (NSU)
 <br />
 Carl DeSantis Building
 <br />
-Room 3028
+Room 1053
 <br />
 3301 College Avenue
 <br />
@@ -144,7 +144,7 @@ Nova Southeastern University (NSU)
 <br />
 Carl DeSantis Building
 <br />
-Room 1048
+Room 1054
 <br />
 3301 College Avenue
 <br />

@@ -121,8 +121,10 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal "xml", toolbox.root().name
     assert_equal "toolbox", toolbox.root().attributes["id"].value
 
-    first_block = toolbox.root().children.first
+    first_category = toolbox.root().children.first
+    assert_equal "category", first_category.name
 
+    first_block = toolbox.root().css('category > *').first
     assert_equal "block", first_block.name
     assert_equal 'procedures_defnoreturn', first_block.attributes['type'].value
   end

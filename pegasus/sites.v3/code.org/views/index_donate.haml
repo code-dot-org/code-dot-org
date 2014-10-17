@@ -1,0 +1,38 @@
+- today = Time.new
+- deadline = Time.new(2014, 12, 15)
+- weeks = ((deadline - today) / 60 / 60 / 24 / 7).round
+- days_remainder = ((deadline - today) / 60 / 60 / 24).round - ((deadline - today) / 60 / 60 / 24 / 7).round * 7
+
+%a.lines_of_code_link{:href=>"https://www.indiegogo.com/projects/an-hour-of-code-for-every-student/"}
+  .lines_of_code_header#orange-banner{:style=>"font-size: 28px"}
+    %div{:style=>'width: 970px; margin-left: auto; margin-right: auto'}
+      %div{:style=>'text-align: right; float: left'}
+        %p{:style=>"font-size: 28px"}
+          Donate to our crowdfunding campaign.
+        %p{:style=>"font-size: 18px"}
+          Only #{weeks}
+          weeks, #{days_remainder}
+          - if days_remainder == 1
+            day
+          - else
+            days
+          remaining
+      %button#make-history-button Click to make history.
+
+:css
+  #make-history-button {
+    font-size: 36px;
+    float: right; height:
+    50px; box-shadow: rgb(169, 169, 169) 3px 3px 3px;
+    border-style: none;
+    background-color: rgb(118, 101, 160);
+    border-radius: 10px
+  }
+  #orange-banner {
+    background-color: #ffa400;
+    background-image: none;
+    height: 100px;
+  }
+  #orange-banner:hover p {
+    text-decoration: underline;
+  }

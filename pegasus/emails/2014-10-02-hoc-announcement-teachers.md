@@ -50,4 +50,6 @@ We're offering free, in-person workshops in 60 cities nationwide! Get a head sta
 
 <% end %>
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98001. Don't like these emails? [Unsubscribe](<%= unsubscribe_link %>).
+Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](<%= unsubscribe_link %>).
+
+![](<%= tracking_pixel %>)

@@ -1,24 +1,11 @@
 ---
 title: Resources
 layout: wide
+nav: resources_nav
 ---
 # Resources
 
-- [Handouts to spread the word](#handouts)
-<br/>
-- [How-to guide for teachers](/resources/how-to)
-<br/>
-- [Videos](#videos)
-<br/>
-- [Posters](#posters)
-<br/>
-- [Banners](#banners)
-<br/>
-- [Sample emails](#sample-emails)
-<br/>
-- [Useful computer science stats](/resources/stats)
-<br />
-- [Press Kit](/resources/press-kit)
+## Hosting an Hour of Code? <a href="<%= hoc_uri('/resources/how-to') %>">See the how-to guide</a>
 
 <a id="handouts">
 ## Use this handout to spread the word
@@ -59,7 +46,9 @@ layout: wide
 <div style='clear:both'></div>
 <a id="posters">
 ## Hang these posters in your school
-#### [Sign up](http://hourofcode.com/us#signup) your Hour of Code event and we'll mail you posters for free.
+<% if @country == 'us' %>
+#### [Sign up](http://hourofcode.com/#signup) your Hour of Code event and we'll mail you posters for free.
+<% end %>
 <br />
 [![image](/images/fit-280/mark-zuckerberg.png)](/resources/mark-zuckerberg-poster.pdf)
 [![image](/images/fit-280/marissa-mayer.png)](/resources/marissa-mayer-poster.pdf)

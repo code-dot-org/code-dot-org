@@ -1,6 +1,6 @@
 -supporters = DB[:cdo_donors].where(level_s:'platinum').or(level_s:'gold').order(:url_s)
 
-%link{href: "/css/donor_slider.css", rel: "stylesheet"}
+%link{:href=>"/css/donor_slider.css", :rel=>"stylesheet"}
 %script{:src=>"/js/donor_slider.js"}
 
 %div{:class=>'donor-slider'}
@@ -10,10 +10,14 @@
     - avatar_url = avatar_image_thumbnail(supporter[:name_s])
     %a{:href=>supporter[:url_s]}
       %div{:class=>"badge "  + supporter[:level_s], :style=>"display: none;"}
-        %div{:class=>"avatar", :style=>"float: left"}
+        - if avatar_url != nil
           %img{:src=> avatar_url}
-          %p{:class=>"label"}
-            - if supporter[:level_s] != "platinum"
-              =supporter[:name_s]
+        - if supporter[:level_s] != "platinum" && supporter[:name_s] != "Google"
+          %p{:class=>"label", :style=>'text-align: center; vertical-align: middle; line-height: 90px; display: block; margin: 0; padding: 0;'}
+            =supporter[:name_s]
+        - elsif supporter[:name_s] == "Google"
+          %p{:class=>"label", :style=>'text-align: center; vertical-align: middle; line-height: 90px; display: block; visibility: hidden; margin: 0; padding: 0;'}
+            =supporter[:name_s]
+
   %br
   %a{:href=>'../about/donors'} See all donors

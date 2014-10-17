@@ -3,7 +3,7 @@
   computer_science: Informatyka
   computer_science_edweek: Tydzień Edukacji Informatycznej
   csedweek_dates: 9-15 Grudnia 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>próbowali</h3><h2>Godzinę kodowania ™</h2>"
+  n_have_learned_an_hoc: "<h1>#</h1><h3>próbowali</h3><h2>Godzina Kodowania</h2>"
   anybody_can_learn: Każdy może się uczyć.
   learn_now: Rozpocznij naukę teraz
   petition_message: Każdy uczeń w każdej szkole, powinien mieć możliwość nauki informatyki
@@ -16,6 +16,15 @@
   twentyhours_heading: Wypróbuj nasz kurs Wstęp do informatyki
   twentyhours_text: Czy ukończyłeś pierwszą Godzinę Kodowania? Poznaj więcej podstawowych
     pojęć informatycznych i dotyczących programowania w tym kursie, który następuje.
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Students
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: Spróbuj teraz
   california_heading: Zapytaj swoją szkołę o naukę informatyki
   california_text: Każdy nauczyciel może zaoferować nasz <a href='http://learn.code.org/'>
@@ -58,6 +67,7 @@
     20-godzinnym kursie</a>, lub zobacz więcej możliwości w <a href='/learn/beyond'>
     Ucz się poza Godziną Kodowania</a>.
   leaderboards_for_hoc: Liderzy Godziny Programowania (Hour of Code).
+  support_url: http://support.code.org/
   country: Kraj
   city: Miasto
   gender: Płeć
@@ -184,6 +194,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: Drukowanie certyfikatów dla uczniów, którzy
     ukończyli ten kurs
   dashboard_landing_educator_blog: Przeczytaj o nowościach i aktualizacjach materiałów
@@ -212,6 +224,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -253,6 +266,8 @@
   dashboard_students_password: Hasło
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret

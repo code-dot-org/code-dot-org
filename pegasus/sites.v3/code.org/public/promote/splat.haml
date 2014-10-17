@@ -14,17 +14,25 @@ social:
   var petitionIncluded = false;
   var promoteIncluded = false;
 
--state ||= nil
+-state = File.basename(request.path_info)
 
 %script{:src=>"/js/jquery.placeholder.js"}
 
 #promote-page
   %h1 Promote Computer Science
 
+  %div{:id=>'thank-you-box'}
+    %p{:id=>'thank-you-message'}
+      Thank you for filling out our petition. Your participation makes a difference.
   %div{:id=>'us_content'}
-    #interactive-map.section.clear
-      %h2{:style=>"margin-top: 0px"} Choose a State
-      = view :interactive_map
+    - if state != "thanks"
+      #interactive-map.section.clear
+        %h2{:style=>"margin-top: 0px"} Choose a State
+        = view :interactive_map
+
+    #stats-section.section.clear
+      %h2 What’s wrong with this picture? Share these stats.
+      = view :stats_carousel
 
     #petition-section.section.clear
       = view :petition
@@ -35,9 +43,10 @@ social:
       %h2 Tools to help you advocate locally
       = view :promote_tools, state:nil
 
-    #stats-section.section.clear
-      %h2 What’s wrong with this picture? Share these stats.
-      = view :stats_carousel
+  - if state == "thanks"
+    #interactive-map.section.clear
+      %h2{:style=>"margin-top: 0px"} Choose a State
+      = view :interactive_map
 
   %div{:id=>'universal_content'}
     #youtube-section.section.clear
@@ -53,14 +62,39 @@ social:
 
 = view 'popup_window.js'
 
+:css
+  #thank-you-box {
+    display: none;
+    padding: 5px;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(102, 209, 217, 0.5);
+    float: left;
+    margin-bottom: 15px
+  }
+  #thank-you-message {
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: middle;
+    height: 100%;
+    margin-left: 10px;
+    line-height: 38px;
+  }
+
 :javascript
   var petition;
   var promote;
   $(document).ready()
   {
-    if (petitionIncluded)
+    if (petitionIncluded) {
       petition = new Petition();
-
-    if (promoteIncluded)
+    }
+    if (promoteIncluded) {
       promote = new Promote();
+    }
+    if (document.referrer.indexOf(location.host) !== -1) {
+      $("#thank-you-box").slideDown();
+      $("#petition-section").hide();
+    }
   }
+

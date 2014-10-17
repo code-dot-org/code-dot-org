@@ -280,6 +280,17 @@ class ReportsControllerTest < ActionController::TestCase
     assert_equal @not_admin.id, session['warden.user.user.key'].first.first
   end
 
+
+  test "should assume_identity by hashed email" do
+    email = 'someone_under13@somewhere.xx'
+    user = create :user, age: 12, email: email
+
+    post :assume_identity, {:user_id => email}
+    assert_redirected_to '/'
+
+    assert_equal user.id, session['warden.user.user.key'].first.first
+  end
+
   test "should assume_identity error if not found" do
     post :assume_identity, {:user_id => 'asdkhaskdj'}
 

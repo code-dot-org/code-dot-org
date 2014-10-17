@@ -1,7 +1,7 @@
 #pageheader.row{style: "background-color: rgba(0,0,0,0.5)"}
   .container{style:'overflow:visible'}
     .row
-      #left{style: "padding: 15px"}
+      #left{style: "padding-left: 15px; padding-top: 15px"}
         #hoc-header-branding{style: "border-left: 0px; border-right: 0px"}
           #logoholder{style: "position:relative"}
             #imageheld{style: "position:absolute; top:-18px; left:0"}
@@ -11,7 +11,7 @@
       #language-dropdown.hidden-xs{style: "visibility: hidden;"}
         = view :language_dropdown
       #right.hidden-xs
-        %a.headerlink{href:hoc_uri('/resources')}= hoc_s(:header_menu_resources)
+        %a.headerlink{href:hoc_uri('/resources'), style: "margin-left:0px"}= hoc_s(:header_menu_resources)
         - if request.path == "/"
           %a.headerlink{href:"#", onclick:"return adjustScroll('faqs')"}= hoc_s(:header_menu_faq)
         - else

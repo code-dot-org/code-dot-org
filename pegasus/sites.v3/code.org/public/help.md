@@ -3,38 +3,26 @@ title: How to help
 ---
 
 # How to Help
+## Host an Hour of Code- at work, in your community, or local school
+More than 45 million people of all ages have learned an [Hour of Code](http://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics.  Participate this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of 2014. 
+
+[<button>Join us</button>](http://hourofcode.com)
+
+## Make a generous donation - before December 14!
+[Donate to our crowdfunding campaign](/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](/donate) in history. Every dollar will be matched by major Code.org [donors](/about/donors), doubling your impact. 
+
+
+[<button>Please consider a donation</button>](/donate)
+
+## Ask your school to teach computer science
+Encourage local elementary schools to teach our [K-5 curriculum](/k5) or recruit teachers to attend a [one-day workshop](/professional-development-workshops)- at no cost. Or [partner with Code.org](/educate/districts) to bring permanent courses into middle and high schools.
+ 
+[<button>See Options</button>](/educate)
 
 ## Advocate for computer science locally
 Petition your state to allow computer science to count towards math or science high school graduation credits. And promote computer science in your area with these [stats, quotes and videos](/promote).
 
 [<button>Add your support</button>](/promote)
-
-## Ask your school to teach computer science
-If your local school doesn't offer computer science, ask them to teach our [upcoming elementary curriculum](/educate/k5) or [partner with Code.org](/educate/districts) to bring permanent courses into middle and high schools.
- 
-[<button>See Options</button>](/educate)
-
-## Host an Hour of Code - at work or in your community
-More than 30 million people of all ages have learned an Hour of Code, a one-hour intro to computer science. Then, encourage your students to [learn beyond one hour](/learn/beyond), or to sign up for a [local camp or workshop](/learn/local).
-
-[<button>Learn more</button>](/educate/hoc)
-
-## Wear [Code.org T-shirts](http://zazzle.com/codeorg) to promote computer science
-
-<a href="http://www.zazzle.com/codeorg?rf=238030311084619396&pm=ZAZZLECODE10">
-<img src="/images/swag1.jpg" width=150/>
-<img src="/images/swag4.jpg" width=150/>
-<img src="/images/swag2.jpg" width=150/>
-<img src="/images/swag6.jpg" width=150/>
-<img src="/images/swag3.jpg" width=150/>
-<img src="/images/swag5.jpg" width=150/>
-</a>
-
-
-## Make a generous donation
-Code.org is a public 501c3, with support from the general public. Founded initially by Ali Partovi and Hadi Partovi, we've been overwhelmed by small and large acts of generosity from [individuals and companies](/about/donors) who support our vision.
-
-[<button>Donate</button>](/donate)
 
 ---
 <a name="engineer"></a>
@@ -53,11 +41,11 @@ If you're already a software engineer, there are many opportunities to get invol
 
 
 ## Teach an online course to your child, or in any classroom
-Code.org's K-8 Intro to Computer Science course is a ~20 hour series of tutorials and activities, designed for any educator to host in a classroom, after-school activity, or even in a club outside of school or online at home.
+Code.org's online platform [Code Studio](studio.code.org) enables students to learn the basic concepts of computer science as early as kindergarten. Within Code Studio, a new Play Lab has been developed where elementary students can create and send apps or animations directly to a cell phone, just by typing in the phone number. 
 
-[<button>Learn more</button>](/educate/20hr)
+[<button>Learn more</button>](http://studio.code.org)
 
-## Spent 10 minutes adding "hints" to our tutorials
+## Spend 10 minutes adding "hints" to our tutorials
 With millions of students trying the Hour of Code, and hundreds of thousands doing the Code.org introductory online courses, we could use your help adding helpful hints for students who make mistakes. In just 10 minutes you can help improve our courses.
 
 [<button>Learn more</button>](/hints)

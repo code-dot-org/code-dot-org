@@ -28,7 +28,7 @@
         \/
         = link_to "edit", edit_level_path(@level)
         (
-        - if @level.is_a? Artist
+        - if @level.is_a? Artist or @level.is_a? Calc
           = link_to "solution", level_edit_blocks_path(@level, :solution_blocks)
           \/
         = link_to "toolbox", level_edit_blocks_path(@level, :toolbox_blocks)

@@ -14,7 +14,8 @@
     "free_play": "false",
     "slider_speed": "1",
     "instructions": "Now let's go one level deeper! Take your code that draws a row of squares and repeat the whole thing to draw a 15x15 grid of squares. Hint: at the end of each row you'll need to move down to the next row and all the way back to the left.",
-    "ideal": "13"
+    "ideal": "13",
+    "disable_param_editing": "true"
   }
 }]]></config>
   <blocks>
@@ -22,9 +23,9 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_colour" inline="true">
+            <block type="draw_colour" inline="true" deletable="false" editable="false">
               <value name="COLOUR">
-                <block type="colour_random"/>
+                <block type="colour_random" deletable="false" editable="false"/>
               </value>
               <next>
                 <block type="controls_repeat" deletable="false" editable="false">
@@ -63,10 +64,6 @@
       <xml>
         <block type="draw_move_by_constant">
           <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
-        </block>
-        <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
         </block>
         <block type="draw_turn_by_constant">

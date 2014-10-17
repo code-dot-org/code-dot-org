@@ -5,7 +5,9 @@ $(function() {
   var location_input = document.getElementById('location');
   var location_autocomplete = new google.maps.places.SearchBox(location_input); // Google Maps autocomplete.
 
-  selectize = $('#class-search-facets select').selectize();
+  selectize = $('#class-search-facets select').selectize({
+    plugins: ['fast_click']
+  });
 
   // Trigger query when location is selected.
   google.maps.event.addListener(location_autocomplete, 'places_changed', function(){

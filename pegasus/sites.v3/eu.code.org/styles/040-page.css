@@ -40,6 +40,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: 'Gotham A','Gotham B',sans-serif;
 }
 
+h1white {
+  color: #ffffff;
+  font-size: 32px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  line-height: 1.2em;
+}
+
 a {
   font-weight: bold;
 }
@@ -416,6 +424,7 @@ button {
 .btn-carousel-slide {
   background: #ffa401;
 }
+
 .course-carousel .slide-prev, .course-carousel .slide-next {
   background-color: #7765a1;
 }

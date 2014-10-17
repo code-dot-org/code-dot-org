@@ -17,7 +17,9 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,-1,2,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,-1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "honey_goal": "2",
-    "ideal": "20"
+    "ideal": "20",
+    "disable_param_editing": "true",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -25,28 +27,28 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat" deletable="false" editable="false">
+            <block type="controls_repeat" deletable="false" editable="false" movable="false">
               <title name="TIMES">2</title>
               <statement name="DO">
-                <block type="maze_moveForward" deletable="false" editable="false">
+                <block type="maze_moveForward" deletable="false" editable="false" movable="false">
                   <next>
-                    <block type="maze_turn" deletable="false" editable="false">
+                    <block type="maze_turn" deletable="false" editable="false" movable="false">
                       <title name="DIR">turnRight</title>
                       <next>
-                        <block type="maze_moveForward" deletable="false" editable="false">
+                        <block type="maze_moveForward" deletable="false" editable="false" movable="false">
                           <next>
-                            <block type="maze_turn" deletable="false" editable="false">
+                            <block type="maze_turn" deletable="false" editable="false" movable="false">
                               <title name="DIR">turnLeft</title>
                               <next>
-                                <block type="procedures_callnoreturn" deletable="false" editable="false">
+                                <block type="procedures_callnoreturn" deletable="false" editable="false" movable="false">
                                   <mutation name="check flower make honey"/>
                                   <next>
-                                    <block type="maze_turn" deletable="false" editable="false">
+                                    <block type="maze_turn" deletable="false" editable="false" movable="false">
                                       <title name="DIR">turnRight</title>
                                       <next>
-                                        <block type="maze_moveForward" deletable="false" editable="false">
+                                        <block type="maze_moveForward" deletable="false" editable="false" movable="false">
                                           <next>
-                                            <block type="maze_turn" deletable="false" editable="false">
+                                            <block type="maze_turn" deletable="false" editable="false" movable="false">
                                               <title name="DIR">turnLeft</title>
                                             </block>
                                           </next>
