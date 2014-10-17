@@ -66,11 +66,6 @@ Calc.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = false;
 
-  // Enable blockly param editing in levelbuilder, regardless of level setting
-  if (config.level.edit_blocks) {
-    config.disableParamEditing = false;
-  }
-
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
     data: {
