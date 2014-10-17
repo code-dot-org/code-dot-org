@@ -16,6 +16,7 @@ class Blockly < Level
     step_speed
     slider_speed
     disable_param_editing
+    disable_variable_editing
   )
 
   before_validation {
