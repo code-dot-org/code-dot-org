@@ -126,7 +126,7 @@ class LevelTest < ActiveSupport::TestCase
 
     first_block = toolbox.root().css('category > *').first
     assert_equal "block", first_block.name
-    assert_equal 'procedures_defnoreturn', first_block.attributes['type'].value
+    assert_equal 'category', first_block.attributes['type'].value
   end
 
   test "include type in json" do
