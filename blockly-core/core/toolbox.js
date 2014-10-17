@@ -67,13 +67,12 @@ Blockly.Toolbox.CONFIG_ = {
 /**
  * Creates the toolbox's DOM.  Only needs to be called once.
  * @param {!Element} svg The top-level SVG element.
- * @param {!Element} container The SVG's HTML parent element.
  */
-Blockly.Toolbox.createDom = function(svg, container) {
+Blockly.Toolbox.createDom = function (svg) {
   // Create an HTML container for the Toolbox menu.
   Blockly.Toolbox.HtmlDiv = goog.dom.createDom('div', 'blocklyToolboxDiv');
   Blockly.Toolbox.HtmlDiv.setAttribute('dir', Blockly.RTL ? 'RTL' : 'LTR');
-  container.appendChild(Blockly.Toolbox.HtmlDiv);
+  goog.dom.insertSiblingBefore(Blockly.Toolbox.HtmlDiv, svg);
 
   /**
    * @type {!Blockly.Flyout}
@@ -82,7 +81,7 @@ Blockly.Toolbox.createDom = function(svg, container) {
   Blockly.Toolbox.flyout_ = new Blockly.Flyout();
   svg.appendChild(Blockly.Toolbox.flyout_.createDom());
 
-  // Clicking on toolbar closes popups.
+  // Clicking on toolbox closes popups.
   Blockly.bindEvent_(Blockly.Toolbox.HtmlDiv, 'mousedown', null,
       function(e) {
         Blockly.fireUiEvent(window, 'resize');
@@ -98,8 +97,9 @@ Blockly.Toolbox.createDom = function(svg, container) {
 
 /**
  * Initializes the toolbox.
+ * @param {!Workspace} workspace The workspace this toolbox's flyout will create blocks in
  */
-Blockly.Toolbox.init = function() {
+Blockly.Toolbox.init = function(workspace) {
   Blockly.Toolbox.CONFIG_['cleardotPath'] = Blockly.assetUrl('media/1x1.gif');
   Blockly.Toolbox.CONFIG_['cssCollapsedFolderIcon'] =
       'blocklyTreeIconClosed' + (Blockly.RTL ? 'Rtl' : 'Ltr');
@@ -111,7 +111,7 @@ Blockly.Toolbox.init = function() {
   tree.setSelectedItem(null);
 
   Blockly.Toolbox.HtmlDiv.style.display = 'block';
-  Blockly.Toolbox.flyout_.init(Blockly.mainWorkspace, true);
+  Blockly.Toolbox.flyout_.init(workspace, true);
   Blockly.Toolbox.populate_();
   tree.render(Blockly.Toolbox.HtmlDiv);
 
