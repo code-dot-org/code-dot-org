@@ -27,6 +27,7 @@
 goog.provide('Blockly.utils');
 
 goog.require('goog.array');
+goog.require('goog.memoize');
 
 /**
  * Add a CSS class to a element.
@@ -248,13 +249,14 @@ Blockly.getRelativeXY_ = function(element) {
 Blockly.getSvgXY_ = function(element) {
   var x = 0;
   var y = 0;
+  var topMostSVG = Blockly.topMostSVGParent(element);
   do {
     // Loop through this block and every parent.
     var xy = Blockly.getRelativeXY_(element);
     x += xy.x;
     y += xy.y;
     element = element.parentNode;
-  } while (element && element.tagName !== 'svg');
+  } while (element && element !== topMostSVG);
   return {x: x, y: y};
 };
 
@@ -267,8 +269,28 @@ Blockly.getSvgXY_ = function(element) {
  */
 Blockly.getAbsoluteXY_ = function(element) {
   var xy = Blockly.getSvgXY_(element);
-  return Blockly.convertCoordinates(xy.x, xy.y, false);
+  return Blockly.convertCoordinates(xy.x, xy.y, Blockly.topMostSVGParent(element), false);
 };
+
+/**
+ * Find top-most SVG element the given element is a child of
+ * @param {!Element} element Element to find the coordinates of.
+ * @return {!Element|null} topmost SVG element, if one exists
+ */
+Blockly.topMostSVGParent = goog.memoize(
+  function(element) {
+    var topMostSVG = null;
+
+    while (element) {
+      if (element.tagName === 'svg') {
+        topMostSVG = element;
+      }
+      element = goog.dom.getParentElement(element);
+    }
+
+    return topMostSVG;
+  }
+);
 
 /**
  * Helper method for creating SVG elements.
@@ -310,18 +332,19 @@ Blockly.isRightButton = function(e) {
  * @param {number} x X input coordinate.
  * @param {number} y Y input coordinate.
  * @param {boolean} toSvg True to convert to SVG coordinates.
+ * @param {Element} svg parent SVG element
  *     False to convert to mouse/HTML coordinates.
  * @return {!Object} Object with x and y properties in output coordinates.
  */
-Blockly.convertCoordinates = function(x, y, toSvg) {
+Blockly.convertCoordinates = function(x, y, svg, toSvg) {
   if (toSvg) {
     x -= window.pageXOffset;
     y -= window.pageYOffset;
   }
-  var svgPoint = Blockly.svg.createSVGPoint();
+  var svgPoint = svg.createSVGPoint();
   svgPoint.x = x;
   svgPoint.y = y;
-  var matrix = Blockly.svg.getScreenCTM();
+  var matrix = svg.getScreenCTM();
   if (toSvg) {
     matrix = matrix.inverse();
   }
@@ -349,7 +372,7 @@ Blockly.convertCoordinates = function(x, y, toSvg) {
  */
 Blockly.mouseToSvg = function(e) {
   return Blockly.convertCoordinates(e.clientX + window.pageXOffset,
-      e.clientY + window.pageYOffset, true);
+    e.clientY + window.pageYOffset, Blockly.topMostSVGParent(e.target), true);
 };
 
 /**
