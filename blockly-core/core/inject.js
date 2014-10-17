@@ -162,6 +162,7 @@ Blockly.createDom_ = function(container) {
     'version': '1.1',
     'class': 'blocklySvg'
   }, null);
+  container.appendChild(svg);
   goog.events.listen(svg, 'selectstart', function() { return false; });
   /*
   <defs>
@@ -252,7 +253,7 @@ Blockly.createDom_ = function(container) {
     // Determine if there needs to be a category tree, or a simple list of
     // blocks.  This cannot be changed later, since the UI is very different.
     if (Blockly.hasCategories) {
-      Blockly.Toolbox.createDom(svg, container);
+      Blockly.Toolbox.createDom(svg);
     } else {
       /**
        * @type {!Blockly.Flyout}
@@ -331,8 +332,6 @@ Blockly.createDom_ = function(container) {
 
   svg.appendChild(Blockly.Tooltip.createDom());
 
-  // The SVG is now fully assembled.  Add it to the container.
-  container.appendChild(svg);
   Blockly.svg = svg;
   Blockly.svgResize();
 
@@ -406,7 +405,7 @@ Blockly.init_ = function() {
 
   if (Blockly.languageTree) {
     if (Blockly.hasCategories) {
-      Blockly.Toolbox.init();
+      Blockly.Toolbox.init(Blockly.mainWorkspace);
     } else {
       // Build a fixed flyout with the root blocks.
       Blockly.mainWorkspace.flyout_.init(Blockly.mainWorkspace, true);

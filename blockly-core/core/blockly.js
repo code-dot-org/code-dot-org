@@ -294,11 +294,11 @@ Blockly.getWorkspaceWidth = function() {
 };
 
 /**
- * @return {number} Return the width, in pixels, of the toolbox. Note, this
- * only includes the 'flyout' part, not the categories tree.
+ * @return {number} Return the width, in pixels, of the main workspace's toolbox.
+ * Note, this only includes the 'flyout' part, not the categories tree.
  */
 Blockly.getToolboxWidth = function() {
-  var flyout = Blockly.mainWorkspace.flyout_ || Blockly.Toolbox.flyout_;
+  var flyout = Blockly.mainWorkspace.flyout_ || Blockly.mainWorkspaceFlyout || Blockly.Toolbox.flyout_;
   var metrics = flyout.workspace_.getMetrics();
   var width = metrics ? metrics.viewWidth : 0;
   return width;
@@ -750,52 +750,59 @@ Blockly.setCursorHand_ = function(closed) {
  * @private
  */
 Blockly.getMainWorkspaceMetrics_ = function() {
-  var svgSize = Blockly.svgSize();
-  svgSize.width -= Blockly.Toolbox.width;  // Zero if no Toolbox.
-  var viewWidth = svgSize.width - Blockly.Scrollbar.scrollbarThickness;
-  var viewHeight = svgSize.height - Blockly.Scrollbar.scrollbarThickness;
-  try {
-        if (Blockly.isMsie() || Blockly.isTrident()) {
-            Blockly.mainWorkspace.getCanvas().style.display = "inline";   /* reqd for IE */
-            var blockBox = {
-                x: Blockly.mainWorkspace.getCanvas().getBBox().x,
-                y: Blockly.mainWorkspace.getCanvas().getBBox().y,
-                width: Blockly.mainWorkspace.getCanvas().scrollWidth,
-                height: Blockly.mainWorkspace.getCanvas().scrollHeight
-            };
-        }
-        else {
-            var blockBox = Blockly.mainWorkspace.getCanvas().getBBox();
-        }
-  } catch (e) {
-    // Firefox has trouble with hidden elements (Bug 528969).
-    return null;
-  }
-  if (Blockly.mainWorkspace.scrollbar) {
-    // add some buffer space to the right/below existing contents
-    var leftEdge = 0;
-    var rightEdge = Math.max(blockBox.x + blockBox.width + viewWidth, viewWidth * 1.5);
-    var topEdge = 0;
-    var bottomEdge = Math.max(blockBox.y + blockBox.height + viewHeight, viewHeight * 1.5);
+  return Blockly.generateGetWorkspaceMetrics_(Blockly.mainWorkspace)();
+};
 
-  } else {
-    var leftEdge = blockBox.x;
-    var rightEdge = leftEdge + blockBox.width;
-    var topEdge = blockBox.y;
-    var bottomEdge = topEdge + blockBox.height;
-  }
-  var absoluteLeft = Blockly.RTL ? 0 : Blockly.Toolbox.width;
-  return {
-    viewHeight: svgSize.height,
-    viewWidth: svgSize.width,
-    contentHeight: bottomEdge - topEdge,
-    contentWidth: rightEdge - leftEdge,
-    viewTop: -Blockly.mainWorkspace.pageYOffset,
-    viewLeft: -Blockly.mainWorkspace.pageXOffset,
-    contentTop: topEdge,
-    contentLeft: leftEdge,
-    absoluteTop: 0,
-    absoluteLeft: absoluteLeft
+Blockly.generateGetWorkspaceMetrics_ = function(workspace) {
+  return function() {
+
+    var svgSize = Blockly.svgSize();
+    svgSize.width -= Blockly.Toolbox.width;  // Zero if no Toolbox.
+    var viewWidth = svgSize.width - Blockly.Scrollbar.scrollbarThickness;
+    var viewHeight = svgSize.height - Blockly.Scrollbar.scrollbarThickness;
+    try {
+      if (Blockly.isMsie() || Blockly.isTrident()) {
+        workspace.getCanvas().style.display = "inline";   /* reqd for IE */
+        var blockBox = {
+          x: workspace.getCanvas().getBBox().x,
+          y: workspace.getCanvas().getBBox().y,
+          width: workspace.getCanvas().scrollWidth,
+          height: workspace.getCanvas().scrollHeight
+        };
+      }
+      else {
+        var blockBox = workspace.getCanvas().getBBox();
+      }
+    } catch (e) {
+      // Firefox has trouble with hidden elements (Bug 528969).
+      return null;
+    }
+    if (workspace.scrollbar) {
+      // add some buffer space to the right/below existing contents
+      var leftEdge = 0;
+      var rightEdge = Math.max(blockBox.x + blockBox.width + viewWidth, viewWidth * 1.5);
+      var topEdge = 0;
+      var bottomEdge = Math.max(blockBox.y + blockBox.height + viewHeight, viewHeight * 1.5);
+
+    } else {
+      var leftEdge = blockBox.x;
+      var rightEdge = leftEdge + blockBox.width;
+      var topEdge = blockBox.y;
+      var bottomEdge = topEdge + blockBox.height;
+    }
+    var absoluteLeft = Blockly.RTL ? 0 : Blockly.Toolbox.width;
+    return {
+      viewHeight: svgSize.height,
+      viewWidth: svgSize.width,
+      contentHeight: bottomEdge - topEdge,
+      contentWidth: rightEdge - leftEdge,
+      viewTop: -workspace.pageYOffset,
+      viewLeft: -workspace.pageXOffset,
+      contentTop: topEdge,
+      contentLeft: leftEdge,
+      absoluteTop: 0,
+      absoluteLeft: absoluteLeft
+    };
   };
 };
 
@@ -806,24 +813,30 @@ Blockly.getMainWorkspaceMetrics_ = function() {
  * @private
  */
 Blockly.setMainWorkspaceMetrics_ = function(xyRatio) {
-  if (!Blockly.mainWorkspace.scrollbar) {
-    throw 'Attempt to set main workspace scroll without scrollbars.';
-  }
-  var metrics = Blockly.getMainWorkspaceMetrics_();
-  if (goog.isNumber(xyRatio.x)) {
-      Blockly.mainWorkspace.pageXOffset = -metrics.contentWidth * xyRatio.x -
+  return Blockly.generateSetWorkspaceMetrics_(Blockly.mainWorkspace)(xyRatio);
+};
+
+Blockly.generateSetWorkspaceMetrics_ = function(workspace) {
+  return function(xyRatio) {
+    if (!workspace.scrollbar) {
+      throw 'Attempt to set main workspace scroll without scrollbars.';
+    }
+    var metrics = Blockly.generateGetWorkspaceMetrics_(workspace)();
+    if (goog.isNumber(xyRatio.x)) {
+      workspace.pageXOffset = -metrics.contentWidth * xyRatio.x -
         metrics.contentLeft;
-  }
-  if (goog.isNumber(xyRatio.y)) {
-      Blockly.mainWorkspace.pageYOffset = -metrics.contentHeight * xyRatio.y -
+    }
+    if (goog.isNumber(xyRatio.y)) {
+      workspace.pageYOffset = -metrics.contentHeight * xyRatio.y -
         metrics.contentTop;
+    }
+    var translation = 'translate(' +
+      (workspace.pageXOffset + metrics.absoluteLeft) + ',' +
+      (workspace.pageYOffset + metrics.absoluteTop) + ')';
+    workspace.getCanvas().setAttribute('transform', translation);
+    workspace.getBubbleCanvas().setAttribute('transform',
+      translation);
   }
-  var translation = 'translate(' +
-      (Blockly.mainWorkspace.pageXOffset + metrics.absoluteLeft) + ',' +
-      (Blockly.mainWorkspace.pageYOffset + metrics.absoluteTop) + ')';
-  Blockly.mainWorkspace.getCanvas().setAttribute('transform', translation);
-  Blockly.mainWorkspace.getBubbleCanvas().setAttribute('transform',
-                                                       translation);
 };
 
 /**
@@ -866,6 +879,8 @@ Blockly.removeChangeListener = function(bindData) {
  */
 
 Blockly.functionEditorOpen = false;
+Blockly.mainWorkspaceFlyout = null;
+Blockly.mainWorkspaceCategoryHTMLDiv = null;
 
 Blockly.createNewFunction = function() {
   Blockly.openFunctionEditor(this.newBlockXML('my new function'));
@@ -883,12 +898,16 @@ Blockly.openFunctionEditor = function(functionDefinitionXML) {
     if (Blockly.functionEditorOpen) {
       Blockly.functionEditorOpen = false;
       goog.dom.removeNode(goog.dom.getElementByClass('newFunctionDiv'));
+      Blockly.Toolbox.flyout_ = Blockly.mainWorkspaceFlyout;
+      Blockly.Toolbox.HtmlDiv = Blockly.mainWorkspaceCategoryHTMLDiv;
       return;
     }
     Blockly.functionEditorOpen = true;
   }
 
-  var workspace = new Blockly.Workspace(Blockly.mainWorkspace.getMetrics, Blockly.mainWorkspace.setMetrics);
+  var workspace = new Blockly.Workspace(null, null);
+  workspace.getMetrics = Blockly.generateGetWorkspaceMetrics_(workspace);
+  workspace.setMetrics = Blockly.generateSetWorkspaceMetrics_(workspace);
 
   // Initialize workspace and construct DOM elements
   {
@@ -896,9 +915,6 @@ Blockly.openFunctionEditor = function(functionDefinitionXML) {
     var svgWorkspaceContainer = Blockly.createSvgElement('svg', {width: 1200, height: 700, x: 0, y: 0}, null);
     Blockly.createSvgElement('rect', {'class': 'blocklyMutatorBackground', 'height': '100%', 'width': '100%'}, svgWorkspaceContainer);
 
-    workspace.flyout_ = new Blockly.Flyout();
-    workspace.flyout_.autoClose = false;
-    svgWorkspaceContainer.appendChild(workspace.flyout_.createDom());
     svgWorkspaceContainer.appendChild(workspace.createDom());
     functionDefinitionDiv.appendChild(svgWorkspaceContainer);
     blocklyTopLeftDiv.appendChild(functionDefinitionDiv);
@@ -916,25 +932,41 @@ Blockly.openFunctionEditor = function(functionDefinitionXML) {
     };
   }
 
-  // Initialize workspace with specified function definition block
+  // Initialize toolbox
   {
-    var xml = Blockly.Xml.textToDom(functionDefinitionXML);
-    Blockly.Xml.domToWorkspace(workspace, xml);
-  }
+    if (Blockly.hasCategories) {
+      Blockly.mainWorkspaceFlyout = Blockly.Toolbox.flyout_;
+      Blockly.mainWorkspaceCategoryHTMLDiv = Blockly.Toolbox.HtmlDiv;
+      Blockly.Toolbox.createDom(svgWorkspaceContainer);
+      Blockly.Toolbox.init(workspace);
+    } else {
+      // Construct flyout DOM
+      {
+        workspace.flyout_ = new Blockly.Flyout();
+        workspace.flyout_.autoClose = false;
+        svgWorkspaceContainer.appendChild(workspace.flyout_.createDom());
+      }
 
-  // Initialize flyout with a couple of studio blocks
-  {
-    workspace.flyout_.init(workspace, true);
-    var flyoutBlocks = Blockly.Xml.textToDom('<xml><block type="studio_showTitleScreenParams" inline="false"><value name="TITLE"><block type="text"><title name="TEXT"></title></block></value><value name="TEXT"><block type="text"><title name="TEXT"></title></block></value></block><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">1</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block><block type="studio_playSound"><title name="SOUND">hit</title></block></xml>');
-    workspace.flyout_.show(flyoutBlocks.childNodes);
-  }
+      // Init with some studio blocks
+      {
+        workspace.flyout_.init(workspace, true);
+        var flyoutBlocks = Blockly.Xml.textToDom('<xml><block type="studio_showTitleScreenParams" inline="false"><value name="TITLE"><block type="text"><title name="TEXT"></title></block></value><value name="TEXT"><block type="text"><title name="TEXT"></title></block></value></block><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">1</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block><block type="studio_playSound"><title name="SOUND">hit</title></block></xml>');
+        workspace.flyout_.show(flyoutBlocks.childNodes);
+      }
 
-  // Flyout boilerplate: translate the workspace to be next to flyout
-  {
-    workspace.pageXOffset = workspace.flyout_.width_;
-    var translation = 'translate(' + workspace.pageXOffset + ', 0)';
-    workspace.getCanvas().setAttribute('transform', translation);
-    workspace.getBubbleCanvas().setAttribute('transform', translation);
-  }
+      // Flyout init boilerplate: translate the workspace to be next to flyout
+      {
+        workspace.pageXOffset = workspace.flyout_.width_;
+        var translation = 'translate(' + workspace.pageXOffset + ', 0)';
+        workspace.getCanvas().setAttribute('transform', translation);
+        workspace.getBubbleCanvas().setAttribute('transform', translation);
+      }
+    }
 
+    // Initialize workspace with specified function definition block
+    {
+      var xml = Blockly.Xml.textToDom(functionDefinitionXML);
+      Blockly.Xml.domToWorkspace(workspace, xml);
+    }
+  }
 };
