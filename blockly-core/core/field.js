@@ -188,6 +188,15 @@ Blockly.Field.prototype.getSize = function() {
 };
 
 /**
+ * Returns how many pixels of buffer space we want about field. Override by
+ * children.
+ * @return {Number} Number of pixels
+ */
+Blockly.Field.prototype.getBufferY = function() {
+  return 0;
+};
+
+/**
  * Get the text from this field.
  * @return {string} Current text.
  */
