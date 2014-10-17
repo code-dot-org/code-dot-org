@@ -240,8 +240,11 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
+    // If in level builder editing blocks, make workspace extra tall
     visualizationColumn.style.height = "2000px";
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -497,6 +500,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1459,11 +1464,6 @@ Calc.init = function(config) {
 
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = false;
-
-  // Enable blockly param editing in levelbuilder, regardless of level setting
-  if (config.level.edit_blocks) {
-    config.disableParamEditing = false;
-  }
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
