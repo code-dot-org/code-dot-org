@@ -124,6 +124,7 @@ Blockly.parseOptions_ = function(options) {
     varsInGlobals: varsInGlobals,
     languageTree: tree,
     disableParamEditing: options['disableParamEditing'] || false,
+    disableVariableEditing: options['disableVariableEditing'] || false,
     grayOutUndeletableBlocks: grayOutUndeletableBlocks
   };
 };
