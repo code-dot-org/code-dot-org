@@ -69,7 +69,7 @@ XML
   <block type="simple_move_left"/>
 </xml>
 XML
-    @blocks_outside_categoty_xml = <<XML
+    @blocks_outside_category_xml = <<XML
 <xml>
   <category name="Default">
     <block type="simple_move_up"/>
@@ -99,7 +99,7 @@ XML
   end
 
   test 'blocks placed outside a category are placed in a default category' do
-    assert_equal_xml @blocks_outside_categoty_xml, Blockly.convert_toolbox_to_category(@blocks_in_default_category_xml)
+    assert_equal_xml @blocks_outside_category_xml, Blockly.convert_toolbox_to_category(@blocks_in_default_category_xml)
   end
 
   test 'skip conversion when category not present' do
