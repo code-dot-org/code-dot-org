@@ -14,7 +14,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding participa
 
 | Code.org Goal | Accomplishment |
 |------|----------------|
-| Inspire students | 44 million students have tried the [Hour of Code](/learn). |
+| Inspire students | 45 million students have tried the [Hour of Code](/learn). |
 | Create fantastic  courses | 99% of teachers recommend the Code.org [intro CS curriculum](http://learn.code.org) |
 | Reach classrooms | Our [intro course](http://studio.code.org) is in 46,000 classrooms, reaching 1.5M students |
 | Improve diversity in CS | In our online courses, 40% of the students are girls. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity) |
