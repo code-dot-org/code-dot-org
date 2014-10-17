@@ -944,7 +944,7 @@ Blockly.openFunctionEditor = function(functionDefinitionXML) {
       {
         workspace.flyout_ = new Blockly.Flyout();
         workspace.flyout_.autoClose = false;
-        svgWorkspaceContainer.appendChild(workspace.flyout_.createDom());
+        goog.dom.insertChildAt(svgWorkspaceContainer, workspace.flyout_.createDom(), 0);
       }
 
       // Init with some studio blocks
