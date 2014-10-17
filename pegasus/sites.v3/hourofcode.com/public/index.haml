@@ -173,7 +173,17 @@ social:
       =hoc_s(:stats_michael)
 
   #maparea
-    =view :map
+    .row
+    .col-xs-12
+      -if @country == 'ar'
+        %h2= hoc_s(:map_header_ar)
+      -else
+        %h2= hoc_s(:map_header)
+
+  .row
+    .col-xs-1.hidden-sm
+    .col-xs-10.col-sm-12
+      %img{src: "/images/static-worldmap.jpg", width: "100%"}
 
   #join
 
