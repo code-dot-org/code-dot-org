@@ -69,6 +69,9 @@
 %script{:src=>'/js/jquery.touchSwipe.min.js'}
 :javascript
 
+  // enable swipe on links by removing 'a' from excludedElements.
+  $.fn.swipe.defaults.excludedElements = "label, button, input, select, textarea, .noSwipe";
+
   $(document).ready(function() {
     createCarousels();
   });
