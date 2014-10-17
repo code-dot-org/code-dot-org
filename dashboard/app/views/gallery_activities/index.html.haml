@@ -1,46 +1,47 @@
-- @page_title = t('gallery.students_drew_these_with_code')
+- @page_title = t('gallery.students_made_these_with_code')
 - content_for :head do
   = tag 'meta', property: 'og:title', content: @page_title
   = tag 'meta', property: 'og:image', content: image_url('gallery_thumbnail.png')
   = tag 'meta', property: 'og:description', content: strip_tags(t('gallery.picture_count', days: @days, count: number_with_delimiter(GalleryActivity.count)))
-  = tag 'meta', name: 'twitter:card', content: "gallery"
-  = tag 'meta', name: 'twitter:creator', content: "@codeorg"
-  - 0.upto(3).each do |i|
-    - if level_source = @gallery_activities[i].try(:activity).try(:level_source)
-      = tag 'meta', name: "twitter:image#{i}:src", content: original_image_level_source_url(level_source)
-
+ 
 .row
   %h1{style: 'text-align:center;'}
-    = t('gallery.students_drew_these_with_code')
+    = link_to t('gallery.students_made_these_with_code'), gallery_activities_path
 
-.row
-  .span2
-  .span8.infobox
-    = t('gallery.picture_count', days: @days, count: number_with_delimiter(GalleryActivity.count)).html_safe
-  .span2
+- if params[:app] # pagination page: just one type of activity
+  .span{style: 'float:right;'}
+    = link_to_next_page @gallery_activities,  t('gallery.more').html_safe, {params: {app: params[:app] || app}}
+  = render partial: 'gallery_activities', locals: {gallery_activities: @gallery_activities}
+  .span{style: 'float:right;'}
+    = link_to_next_page @gallery_activities,  t('gallery.more').html_safe, {params: {app: params[:app] || app}}
+- else
+  .row
+    .span2
+    .span8.infobox
+      = t('gallery.activity_count', days: @days, count: number_with_delimiter(GalleryActivity.count)).html_safe
+    .span2
 
-.span{style: 'float:right;'}
-  = link_to_next_page @gallery_activities,  t('gallery.more').html_safe
+  .row
+    %h2{style: 'text-align:center;'} Apps
+
+  = render partial: 'gallery_activities', locals: {gallery_activities: @playlab_gallery_activities, app: Game::PLAYLAB}
+  .span{style: 'float:right;'}
+    = link_to t('gallery.more').html_safe, app: Game::PLAYLAB
+
+  .row
+    %h2{style: 'text-align:center;'} Art
+
+  = render partial: 'gallery_activities', locals: {gallery_activities: @artist_gallery_activities, app: Game::ARTIST}
+  .span{style: 'float:right;'}
+    = link_to t('gallery.more').html_safe, app: Game::ARTIST
 
 %br{clear: :all}
 
-
-- @gallery_activities.each do |gallery_activity|
-  %div.gallery_activity
-    - activity = gallery_activity.activity
-    - level_source = activity.level_source
-    = link_to image_tag(original_image_level_source_path(level_source)), level_source
-    %div.caption
-      = time_ago_in_words activity.created_at
-      ago
-
-.span{style: 'float:right;'}
-  = link_to_next_page @gallery_activities, t('gallery.more').html_safe
-
-%br{clear: :all}
-
 .row
-  %h2.lesson{style: 'text-align:center'}= t('gallery.want_to_make_your_own')
+  %h2.lesson{style: 'text-align:center'}
+    = t('gallery.want_to_make_your_own')
 .row
-  = render partial: 'shared/course_wide_block', locals: { id: "hoc" }
-  = render partial: 'shared/course_wide_block', locals: { id: "20hour" }
+  .span3
+  = render partial: 'shared/course_tall_block', locals: { id: "playlab" }
+  = render partial: 'shared/course_tall_block', locals: { id: "artist" }
+  .span3

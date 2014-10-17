@@ -62,6 +62,7 @@
   "backToPreviousLevel": "Önceki seviyeye dön",
   "saveToGallery": "Galerine kaydet",
   "savedToGallery": "Galerine kaydedildi!",
+  "shareFailure": "Sorry, we can't share this program.",
   "typeCode": "Açıklamaların altına kendi JavaScript kodunu yaz.",
   "typeFuncs": "Uygun fonksiyon:%1",
   "typeHint": "Parantezlerin ve noktalı virgüllerin gerekli olduğuna dikkat et.",

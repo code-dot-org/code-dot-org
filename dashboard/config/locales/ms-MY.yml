@@ -257,6 +257,9 @@
     header:
       finished_hoc: Saya telah menyelesaikan Hour of Code saya
       sign_in_to_save: Daftar Masuk untuk menyimpan kemajuan
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: Pelajar-pelajar saya
       label: Hi %{username}
@@ -472,6 +475,13 @@
     flappy_og_title: Semak permainan Flappy saya
     studio_og_title: Lihat cerita saya
     og_description: Saya menulis kod sendiri dengan Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: Anda mencipta skrip baru.
     destroyed: Anda telah musnahkan skrip.

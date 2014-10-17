@@ -14,7 +14,8 @@
   %link{href: "#{blockly_path}css/#{app}.css", rel: 'stylesheet', type: 'text/css'}
 
   %script{src: "#{blockly_path}js/#{js_locale}/vendor.js"}
-  - if @game.name == "MazeEC"
+  - if @game.name == "MazeEC" || @game.name == "Webapp"
+    %script{src: "#{blockly_path}js/jsinterpreter/acorn_interpreter.js"}
     %script{src: "#{blockly_path}js/requirejs/require.js"}
     %script{src: "#{blockly_path}js/ace/ace.js"}
     %script{src: "#{blockly_path}js/ace/ext-language_tools.js"}
@@ -39,6 +40,20 @@
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
     startTiming('Puzzle', script_path, '');
     var level = #{level.to_json};
+    // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
+    // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
+    (function fixUpFunctions(node) {
+      if (typeof node !== 'object') return;
+      for (var i in node) {
+        if (/^fn_/.test(i)) {
+          try {
+            node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
+          } catch (e) { }
+        } else {
+          fixUpFunctions(node[i]);
+        }
+      }
+    })(level);
     // See assets/javascripts/sendReport for definition of lastServerResponse
     var appOptions = {
       levelId: '#{@level.level_num}',
@@ -96,7 +111,7 @@
         onInitializeListeners.forEach(function(listener) {
           listener();
         });
-        #{render(partial: 'levels/chrome34Fix', formats: :js) if browser.chrome? && browser.version == '34'}
+        #{render(partial: 'levels/chrome34Fix', formats: :js) if browser.chrome? && browser.version.to_s.to_i == 34}
       },
       locale: '#{js_locale}',
       containerId: 'blocklyApp',

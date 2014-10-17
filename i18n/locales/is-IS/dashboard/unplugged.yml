@@ -1,148 +1,146 @@
-"is":
+is:
   data:
     unplugged:
       Unplug1:
-        title: "Kynning á tölvunarfræði"
-        desc: 'This lesson will introduce the concept of Computer Science and explain what a Computer Scientist does.  It will also give students an opportunity to assume the role of a computer scientist.  By the end of the activity, each student will have a take-home reminder of what he or she learned.  You may be tempted to skip teaching young children the vocabulary words that are associated with the lessons that follow, but presenting them in a fun and playful light now is far more productive than waiting for more advanced opportunities.'
+        title: Kynning á tölvunarfræði
+        desc: Þessi kennslustund mun kynna hugtakið tölvunarfræði og útskýra hvað tölvunarfræðingur gerir. Hún mun einnig gefa nemendum kost á að setja sig í spor tölvunarfræðings. Við lok stundarinnar mun hver nemandi vera kominn með hlut til að eiga og til að minna á það sem hún eða hann hefur lært. Það gæti verið freistandi að sleppa því að kenna ungum börnum orðfærið sem tengist þessu námi, en það er mun árangursríkara að kynna það núna á skemmtilegan og leikrænan hátt heldur en að bíða með það þar til efnið er flóknara.
         pdfs:
           - unplug1
-        video: "Unplug1"
+        video: Unplug1
       Unplug2:
-        title: "Tölvunarmiðuð hugsun"
-        desc: "With nothing but paper and markers, students will learn the four steps of computational thinking. After a brief introduction, students should be split into groups where they will have to create directions for other students to draw a specific monster (from a catalog of pre-selected monsters). The entire task must be decomposed, then teams will analyze all monsters in the catalog for patterns, abstract different details from the monsters, then use that information to create an algorithm (directions) for another team to draw a certain monster. Teams will then switch algorithms with another group and draw the monster based on what that algorithm indicates. Is the drawing what the original team intended?"
+        title: Tölvunarmiðuð hugsun
+        desc: Með ekkert annað en pappír og tússpenna munu nemendur læra fjögur þrep tölvunarmiðaðrar hugsunar. Eftir stutta kynningu ætti að skipta nemendum í hópa þar sem þeir þurfa að búa til leiðbeiningar fyrir aðra nemendur að teikna tiltekið skrímsli (úr lista yfir áður valin skrímsli). Brjóta þarf verkefnið niður í þrep og síðan munu hóparnir greina öll skrímsli á listanum til að finna mynstur, draga fram aðalatriði í gerð hvers skrímslis og nota þær upplýsingar til að búa til algrím (leiðbeiningar) sem annar hópur getur farið eftir til að teikna tiltekið skrímsli. Hver hópur mun síðan skiptast á algrími við annan hóp og teikna skrímslið eftir algríminu frá honum. Er teikningin eitthvað lík því sem hinn hópurinn ætlaði?
         pdfs:
           - unplug2
-        video: "Unplug2"
+        video: Unplug2
       Unplug3:
-        title: "Forritun rúðublaða"
-        desc: "By programming one another to draw pictures, students will begin to understand what programming is really about. The class will begin by students instructing each other to color squares in on graph paper in an effort to reproduce an existing picture.  If there's time, the lesson can conclude with images that the students create themselves."
+        title: Forritun rúðublaða
+        desc: Með því að forrita hvern annan til að teikna myndir munu nemendur byrja að skilja út á hvað forritun gengur. Tíminn byrjar með því að nemendur gefa hver öðrum fyrirmæli um að teikna litaða ferninga á rúðublöð í því skyni að endurgera tiltekna mynd. Ef tími vinnst til, má enda tímann á myndum sem nemendur teikna sjálfir.
         pdfs:
           - unplug3
-        video: "Unplug3"
+        video: Unplug3
       Unplug4:
-        title: "Algrím"
-        desc: 'This lesson covers algorithms.  Using tangram shapes and graph paper, the first exercise will show how important it is to make each instruction as clear and unambiguous as possible.  Afterward, the class will explore how many ways you can fold paper into a rectangle, noting how some methods can take more or fewer folds than others.'
+        title: Algrím
+        desc: Þessi kennslustund fjallar um algrím. Með því að nota tangram form og rúðublöð mun fyrsta æfingin sýna hve mikilvægt það er að hafa öll fyrirmæli eins skír og ótvíræð og hægt er. Á eftir mun bekkurinn kanna á hve marga vegu er hægt að brjóta saman pappír til að mynda ferning og athygli er dregin að því að sumar aðferðir nota færri brot en aðrar.
         pdfs:
           - unplug4
-        video: "Unplug4"
+        video: Unplug4
       Unplug5:
-        title: "Föll"
-        desc: |-
-          In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of "skills" that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to "abstract out" the details of their specific materials and create vague terms for an individual's supplies.  This use of generic placeholders is a wonderful introduction to variables.
+        title: Föll
+        desc: Í þessari kennslustund munu nemendur búa til sólarskraut (suncatcher) úr bandi, perlum og sérstökum skrautmun. Við gerð skrautsins endurtaka nemendur sömu aðgerðirnar nokkrum sinnum og á eftir eru þeir beðnir að koma auga á hvaða aðgerðir það eru. Þegar búið er að greina þessar aðgerðir verður kallað á þær úr aðalforritinu og allt sköpunarferlið verður skráð á eitt pappírsblað. Lokaforritið verður miðað við allan bekkinn óháð gerð bands, perla eða skrautmuna. Til að þetta takist verða nemendur að greina sameiginleg einkenni ólíkra efna og nota almenn orð yfir þau. Þessi notkun almennra heita er fínn inngangur að breytum (variables).
         pdfs:
           - unplug5
-        video: "Unplug5"
+        video: Unplug5
       Unplug6:
-        title: "Conditions"
-        desc: 'This is a class game.  After introducing the idea of conditionals, if-statements, and loops, the class can practice together using a pre-written program, a deck of cards, and luck of the draw.'
+        title: Skilyrði
+        desc: Þetta er bekkjarleikur. Eftir kynningu á skilyrðum, ef-setningum og lykkjum, getur bekkurinn æft saman með forskrifuðu forriti og spilum dregnum úr spilastokk.
         pdfs:
           - unplug6
-        video: "Unplug6"
+        video: Unplug6
       Unplug7:
-        title: "Lagasmíð"
-        desc: "Reading lyrics is a pretty intuitive venture for most students.  We'll take an activity that's already common knowledge and shift it into a solid education on defining and calling functions. Once students are familiar with the define/call process, we will add the extra capabilities that come along with passing parameters within those function calls."
+        title: Lagasmíð
+        desc: Að lesa lagatexta er vel skiljanlegt viðfangsefni fyrir flesta nemendur. Við tökum þetta þekkta athæfi og búum til úr því æfingu í að skilgreina og kalla á föll (functions). Eftir að nemendur eru búnir að læra að skilgreina og kalla á föll, munum við kynna þá auknu möguleika sem skapast þegar kallað er á föllin með stikum (parameters).
         pdfs:
           - unplug7
-        video: "Unplug7"
+        video: Unplug7
       Unplug8:
-        title: "Kjarni"
-        desc: "This activity combines your students' everyday routine and a Mad-Lib style thinking game to help your class learn about the effectiveness of abstraction."
+        title: Greining aðalatriða
+        desc: Í þessu verkefni er blandað saman hversdagslegri rútínu nemenda og eyðufyllingarleik til að hjálpa nemendum að skilja hve árangursrík greining aðalatriða er.
         pdfs:
           - unplug8
-        video: "Unplug8"
+        video: Unplug8
       Unplug9:
-        title: "Boðhlaupsforritun"
-        desc: 'This lesson will take an idea from a previous activity (4. Graph Paper Programming) and use those skills to emphasize the importance of completing programs that operate in sequence and frequently checking programs for "bugs".'
+        title: Boðhlaupsforritun
+        desc: Þessi kennslustund notar hugmynd úr fyrra verkefni (forritun á rúðublöðr) og notar færnina sem vannst þá til að undirstrika mikilvægi þess að ljúka forritum sem byggjast á röð aðgerða og að prófa forrit oft í leit að göllum.
         pdfs:
           - unplug9
-        video: "Unplug9"
+        video: Unplug9
       Unplug10:
-        title: "Internetið"
-        desc: "In this lesson, students will pretend to flow through the Internet, all the while learning about web addresses, IPs and the DNS."
+        title: Internetið
+        desc: Í þessari kennslustund munu nemendur þykjast fara í gegnum internetið og læra í leiðinni um vefslóðir, IP tölur og DNS kerfið.
         pdfs:
           - unplug10
-        video: "Unplug10"
+        video: Unplug10
       Unplug11:
-        title: "Wrap-Up"
-        desc: "The final wrap-up in the first 20-hour series will help the class relive all of their favorite moments, while giving them next steps that they can take on their own if they are interested in continuing their computer science journey."
+        title: Samantekt
+        desc: Lokasamantektin eftir fyrstu 20 klst. verkefnaröðina á að hjálpa nemendum að rifja upp það sem þeim fannst best en um leið beina þeim á brautir sem þeir geta farið sjálfir ef þeir hafa áhuga á að halda áfram könnunarleiðangri um heim tölvunarfræðinnar.
         pdfs:
           - unplug11
-        video: "Unplug11"
+        video: Unplug11
       UnplugHappyMaps:
-        title: "Krúttleg kort"
-        desc: "Students create simple algorithms (sets of instructions) to move a character through a maze using a single command."
-        video: "C1_happy_maps_unplugged"
+        title: Krúttleg kort
+        desc: Nemendur búa til einföld algrím (röð leiðbeininga) til að láta einhvern ferðast um völundarhús með einni skipun.
+        video: C1_happy_maps_unplugged
       MoveIt:
-        title: "Hreyfðu mig"
-        desc: "Students create simple algorithms (sets of instructions) to move a character through a maze using a single command."
-        video: "C1_moveitmoveit_unplugged"
+        title: Hreyfa sig, hreyfa sig
+        desc: Nemendur búa til einföld algrím (röð leiðbeininga) til að láta einhvern ferðast um völundarhús með einni skipun.
+        video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Algrím úr raunheimi: Sá fræi'
-        desc: "This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part."
-        video: "C1_planting_seed"
+        desc: Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi og notar fræsáningu sem dæmi. Einnig er horft almennar til tölvunarfræði og hvernig algrím gegna nauðsynlegu hlutverki.
+        video: C1_planting_seed
       BuildingAFoundation:
-        title: "Að byggja grunn"
-        desc: "Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated."
-        video: "C1_building_foundation"
+        title: Að byggja grunn
+        desc: Nemendur byggja hlut með því að nota aðeins gefið efni. Hlutirnir verða að uppfylla kröfur (ná vissri hæð eða þola vissa þyngd) og nemendur ræða þá hugmynd að hvika ekki frá markmiði þó málin flækist.
+        video: C1_building_foundation
       GettingLoopy:
-        title: "Hringl"
-        desc: "This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it."
-        video: "C1_getting_loopy"
+        title: Lykkjulæti
+        desc: Þessi kennslustund kynnir forritunarhugtakið lykkju (endurteknar skipanir) með dansi. Nemendur læra einföld dansspor og fá síðan fyrirmæli um að endurtaka þau.
+        video: C1_getting_loopy
       RelayProgramming:
-        title: "Boðhlaupsforritun"
-        desc: |-
-          Students run a relay race, where they dash across the yard to write an algorithm based on a "Graph Paper Programming" image. They can only write one instruction at a time and if there's an error somewhere, they have to erase everything back to that point.
-        video: "C2_relay_programming"
+        title: Boðhlaupsforritun
+        desc: 'Nemendur hlaupa boðhlaup þar sem þeir hlaupa yfir lóðina til að skrifa algrím sem byggir á mynd frá "Forritun með rúðublöðum". Þeir mega aðeins skrifa eina skipun í einu og ef það er villa einhversstaðar verða þeir að stroka allt út til baka að þeim stað.'
+        video: C2_relay_programming
       Conditionals:
-        title: "Skilyrði"
-        desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
-        video: "C2_conditionals_with_cards"
+        title: Skilyrði
+        desc: 'Nemendur læra um skilyrtar setningar með því að spila á spil og búa til reglur eins og "ef ég dreg rautt spil, fæ ég stig" og "ef ég dreg svart spil, færð þú stig."'
+        video: C2_conditionals_with_cards
       BigEvent:
-        title: "Stórviðburður"
-        desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
-        video: "C1_bigevent_unplugged"
+        title: Stórviðburður
+        desc: 'Nemendur fá kynningu á forritunarhugtakinu "atvik" sem eru aðgerðir sem tölvan er stöðugt að vakta. Kennarinn ýtir á hnapp á pappírsfjarstýringu og nemendur bregðast mismunandi við eftir því á hvaða hnapp var ýtt.'
+        video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: "Ferðast í öryggi"
-        desc: "The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet."
+        title: Ferðast í öryggi
+        desc: Internetið er öflugur en stundum hættulegur staður. Kennarar kynna hvernig þarf að passa sig þegar farið er um netið.
       GraphPaperProgramming:
-        title: "Forritun rúðublaða"
-        desc: "Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing."
-        video: "C2_graph_paper"
+        title: Forritun rúðublaða
+        desc: Nemendur skrifa algrím (röð leiðbeininga) með fyrirfram ákveðnum skipunum til að stýra bekkjarfélögum í að endurskapa teikningu.
+        video: C2_graph_paper
       PaperPlanes:
         title: 'Algrím úr raunheimi: Pappírsskutlur'
-        desc: "This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part."
-        video: "C2_paper_airplanes"
+        desc: Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi og tekur sem dæmi að búa til pappírsskutlu. Einnig er horft almennar til tölvunarfræði og hvernig algrím gegna nauðsynlegu hlutverki.
+        video: C2_paper_airplanes
       BinaryBracelets:
-        title: "Stafræn armbönd"
-        desc: "Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way."
-        video: "C2_binary_bracelets"
+        title: Stafræn armbönd
+        desc: Nemendur búa til armbönd sem sýna fyrsta stafinn í nafni hvers með gildi hans í tvenndarkerfi. Nemendur læra að það er hægt að tákna og geyma gögn á ýmsa vegu.
+        video: C2_binary_bracelets
       DigitalFootprint:
-        title: "Stafræna fótsporið þitt"
-        desc: 'Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.'
+        title: Stafræna fótsporið þitt
+        desc: Kennarinn kynnir fyrir nemendum þá hugmynd að með því að setja upplýsingar um sig á netið búi þeir til stafrænt fótspor eða slóð sem getur haft afleiðingar.
       ComputationalThinking:
-        title: "Tölvunarmiðuð hugsun"
-        desc: "Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions."
-        video: "C3_computational_thinking"
+        title: Tölvunarmiðuð hugsun
+        desc: Nemendur nota þrepin í tölvunarmiðaðri hugsun (niðurbrot, greiningu mynstra, greiningu aðalatriða, algrím) til að finna út hvernig á að spila leik þar sem vantar leiðbeiningar.
+        video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: "Sólarskraut með föllum"
-        desc: "Students create an algorithm with variables and functions (pieces of code that you want to use over and over again) to create suncatchers using string and beads."
-        video: "C3_functional_suncatchers"
+        title: Sólarskraut með föllum
+        desc: Nemendur búa til algrím með breytum og föllum (kóða sem nýtist aftur og aftur) til að búa til sólarskraut (suncatcher) úr perlum og bandi.
+        video: C3_functional_suncatchers
       SongwritingParameters:
-        title: "Songwriting with Parameters"
-        desc: "Students use the concept of the chorus in a song to learn about passing parameters (which customize a function without having to rewrite the entire function)."
-        video: "C3_songwriting_with_parameters"
+        title: Lagasmíð með stikum
+        desc: Nemendur nota hugmyndina um viðlag í söng til að læra um að yfirfæra stika (sem sérsníða fall án þess að það þurfi að skrifa allt fallið upp á nýtt).
+        video: C3_songwriting_with_parameters
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
-        desc: "This lesson calls out ways we use algorithms in our daily lives. As part of that, students will identify and write down the algorithm for a dice race game."
-        video: "C3_dice_race"
+        title: 'Algrím úr raunheimi: Teningakapp'
+        desc: Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi. Meðal annars munu nemendur greina og skrifa niður algrím fyrir kappleik sem notar teningakast.
+        video: C3_dice_race
       Internet:
-        title: "Internet"
-        desc: "Students send messages representing various Internet transmission methods using pieces of paper."
-        video: "C3_internet"
+        title: Internet
+        desc: Nemendur senda skilaboð á pappír til að líkja eftir hinum ýmsu sendingaraðferðum sem notaðar eru á netinu.
+        video: C3_internet
       Crowdsourcing:
-        title: "Útvistun til hóps"
-        desc: "Student use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone."
-        video: "C3_crowdsourcing"
+        title: Hópvistun
+        desc: Nemendur nota hópvistun (crowdsourcing) til að leysa verkefni saman sem bekkur með meiri árangri en ef nemandi reyndi að glíma við það einn. Þetta er algeng aðferð við að leita lausna í tölvunarfræði.
+        video: C3_crowdsourcing
       DigitalCitizenship:
-        title: "Stafrænn borgari"
-        desc: "Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online."
+        title: Stafrænn borgari
+        desc: 'Nemendur kanna muninn á einkaupplýsingum og persónuupplýsingum og greina hverju er  öruggt og hverju óöruggt að deila á netinu.'

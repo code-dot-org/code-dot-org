@@ -62,6 +62,7 @@
   "backToPreviousLevel":"Terug naar het vorige niveau",
   "saveToGallery":"Sla op in je galerij",
   "savedToGallery":"Opgeslagen in je galerij!",
+  "shareFailure":"Sorry, we can't share this program.",
   "typeCode":"Typ jouw JavaScript-code onder deze instructies.",
   "typeFuncs":"Beschikbare functies: %1",
   "typeHint":"Merk op dat de haakjes en puntkomma's vereist zijn.",

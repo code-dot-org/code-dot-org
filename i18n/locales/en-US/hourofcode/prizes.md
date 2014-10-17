@@ -1,30 +1,38 @@
 * * *
 
-crwdns19220:0crwdne19220:0
+crwdns19580:0crwdne19580:0
 
-## crwdns19221:0crwdne19221:0
+* * *
 
-# crwdns8023:0crwdne8023:0
+# crwdns19581:0crwdne19581:0
 
-## crwdns8024:0crwdne8024:0
+## crwdns19582:0crwdne19582:0
 
-crwdns19222:0crwdne19222:0
+crwdns19583:0crwdne19583:0
+
+<% if @country == 'uk' %>
+
+## crwdns19584:0crwdne19584:0
+
+crwdns20692:0crwdne20692:0 crwdns19586:0crwdne19586:0 crwdns19587:0crwdne19587:0
+
+<% end %>
 
 <% if @country == 'us' %>
 
-## crwdns8026:0crwdne8026:0
+## crwdns20693:0crwdne20693:0
 
-crwdns19223:0crwdne19223:0 crwdns19224:0crwdne19224:0 crwdns19225:0crwdne19225:0
+crwdns20694:0crwdne20694:0 crwdns20695:0crwdne20695:0 crwdns20696:0crwdne20696:0
 
-## crwdns8030:0crwdne8030:0
+## crwdns20697:0crwdne20697:0
 
-crwdns19226:0crwdne19226:0 crwdns19227:0crwdne19227:0 crwdns19228:0crwdne19228:0
+crwdns20698:0crwdne20698:0 crwdns20699:0crwdne20699:0 crwdns20700:0crwdne20700:0
 
-## crwdns8034:0crwdne8034:0
+## crwdns20701:0crwdne20701:0
 
-crwdns19229:0crwdne19229:0 crwdns19230:0crwdne19230:0
+crwdns20702:0crwdne20702:0 crwdns20703:0crwdne20703:0
 
-<%= view :hardware\_prizes\_form %>
+<%= view :hardware_prizes_form %>
 
 <what are your odds of winning?>
 
@@ -32,6 +40,6 @@ crwdns19229:0crwdne19229:0 crwdns19230:0crwdne19230:0
 
 <% end %>
 
-## crwdns8037:0crwdne8037:0
+## crwdns20704:0crwdne20704:0
 
-crwdns19231:0crwdne19231:0
+crwdns20705:0crwdne20705:0

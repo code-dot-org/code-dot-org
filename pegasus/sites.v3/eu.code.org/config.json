@@ -2,31 +2,33 @@
   "base":"i18n.code.org",
   "google_analytics_id":"UA-37745279-1",
   "us_site": "Code.org (US Site)",
-  "adults_nav": {
-    "About Us": "/adults",
-    "Resources": "/adults/resources",
-    "Partners": "/adults/partners"
+  "teachers_nav": {
+    "Educator Resources": "/teachers",
+    "Hour of Code": "/teachers/hoc",
+    "New K-5 Program": "/teachers/k5",
+    "K-8 Intro Course": "/teachers/20hr",
+    "Curriculum": "/teachers/curriculum",
+    "Inspire Students": "/teachers/inspire",
+    "Educational Videos": "/teachers/videos",
+    "3rd Party": "/teachers/3rdparty"
   },
-  "educate_nav": {
-    "Educator Resources": "/educate",
-    "Hour of Code": "/educate/hoc",
-    "New K-5 Program": "/educate/k5",
-    "K-8 Intro Course": "/educate/20hr",
-    "Curriculum": "/educate/curriculum",
-    "Inspire Students": "/educate/inspire",
-    "Educational Videos": "/educate/videos",
-    "3rd Party": "/educate/3rdparty"
+  "adults_nav": {
+    "Resources": "/adults"
+  },
+  "about_nav": {
+    "About Us": "/about",
+    "Partners": "/about/partners"
   },
   "header_links": {
     "HOME": "/",
-    "STUDENTS": "/learn",
-    "TEACHERS": "/educate",
-    "ADULTS": "/adults"
+    "STUDENTS": "/students",
+    "TEACHERS": "/teachers",
+    "ADULTS": "/adults",
+    "ABOUT": "/about"
   },
   "footer_links": {
-    "Tutorials": "/learn",
-    "Resources": "/educate",
-    "About": "/adults",
-    "Partners": "/adults/partners"
+    "Tutorials": "/students",
+    "About": "/about",
+    "Partners": "/about/partners"
   }
 }

@@ -1,9 +1,9 @@
 * * *
 
-title: Thank you
+título: Obrigado formato: amplo
 
-## layout: wide
+* * *
 
-# Thank you
+# Obrigado
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+A tua escola inteira está neste momento habilitada a ganhar um conjunto de portáteis para uma sala de aulas (ou em alternativa, 10000 dólares noutros equipamentos informáticos).

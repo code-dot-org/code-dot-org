@@ -1,146 +1,146 @@
-"pt":
+pt:
   data:
     unplugged:
       Unplug1:
-        title: "Introdução à Ciência da Computação"
-        desc: "Essa lição vai introduzir o conceito de Ciência da Computação e explicar o que um Cientista da Computação faz. Ela também vai dar aos alunos a oportunidade de assumir o papel de um cientista da computação. No final da atividade, cada aluno vai levar para casa uma lembrança do que ele ou ela aprenderam. Você pode pensar em não ensinar às crianças mais jovens as palavras do vocabulário relacionado às lições a seguir, mas apresentá-las a eles e forma divertida e descontraída agora é muito mais produtivo do que esperar por oportunidades futuras."
+        title: Introdução à Ciência da Computação
+        desc: Essa lição vai introduzir o conceito de Ciência da Computação e explicar o que um Cientista da Computação faz. Ela também vai dar aos alunos a oportunidade de assumir o papel de um cientista da computação. No final da atividade, cada aluno vai levar para casa uma lembrança do que ele ou ela aprenderam. Você pode pensar em não ensinar às crianças mais jovens as palavras do vocabulário relacionado às lições a seguir, mas apresentá-las a eles e forma divertida e descontraída agora é muito mais produtivo do que esperar por oportunidades futuras.
         pdfs:
           - unplug1
-        video: "Unplug1"
+        video: Unplug1
       Unplug2:
-        title: "Pensamento Computacional"
-        desc: "Com nada além de papel e caneta, os alunos vão aprender os quatro passos do pensamento computacional. Após uma breve introdução, eles devem se dividir em grupos e criar instruções para que os outros alunos desenhem um monstro específico (a partir de um catálogo de monstros previamente selecionados). A tarefa deve ser dividida, e então os grupos vão analisar todos os monstros no catálogo, procurando por padrões, detalhes abstratos e diferentes, e então usar essa informação para criar um algoritmo (instruções) para que outro grupo desenhe um certo monstro. Os grupos, então, vão trocar os algoritmos entre si e desenhar o monstro com base no algoritmo. O desenho vai ser parecido com o que o grupo que criou o algoritmo queria?"
+        title: Pensamento Computacional
+        desc: Com nada além de papel e caneta, os alunos vão aprender os quatro passos do pensamento computacional. Após uma breve introdução, eles devem se dividir em grupos e criar instruções para que os outros alunos desenhem um monstro específico (a partir de um catálogo de monstros previamente selecionados). A tarefa deve ser dividida, e então os grupos vão analisar todos os monstros no catálogo, procurando por padrões, detalhes abstratos e diferentes, e então usar essa informação para criar um algoritmo (instruções) para que outro grupo desenhe um certo monstro. Os grupos, então, vão trocar os algoritmos entre si e desenhar o monstro com base no algoritmo. O desenho vai ser parecido com o que o grupo que criou o algoritmo queria?
         pdfs:
           - unplug2
-        video: "Unplug2"
+        video: Unplug2
       Unplug3:
-        title: "Programação em Papel Quadriculado"
-        desc: "Através da programação para desenhar as figuras, os alunos vão começar a entender o que de fato é programar. A aula vai começar com alunos dando instruções uns aos outros para colorir os quadrados em um papel quadriculado na tentativa de reproduzir uma figura existente. Se houver tempo, a aula pode ser concluída com imagens que os próprios alunos criaram."
+        title: Programação em Papel Quadriculado
+        desc: Através da programação para desenhar as figuras, os alunos vão começar a entender o que de fato é programar. A aula vai começar com alunos dando instruções uns aos outros para colorir os quadrados em um papel quadriculado na tentativa de reproduzir uma figura existente. Se houver tempo, a aula pode ser concluída com imagens que os próprios alunos criaram.
         pdfs:
           - unplug3
-        video: "Unplug3"
+        video: Unplug3
       Unplug4:
-        title: "Algoritmos"
-        desc: "Essa lição aborda os algoritmos. Usando formas de tangram (um quebra-cabeça chinês) e papel quadriculado, o primeiro exercício mostra a importância de escrever cada instrução da forma mais clara e menos ambígua possível. Depois, a aula vai explorar de quantas formas você pode dobrar um papel para fazer um retângulo, mostrando como alguns métodos podem exigir mais ou menos dobras que outros."
+        title: Algoritmos
+        desc: Essa lição aborda os algoritmos. Usando formas de tangram (um quebra-cabeça chinês) e papel quadriculado, o primeiro exercício mostra a importância de escrever cada instrução da forma mais clara e menos ambígua possível. Depois, a aula vai explorar de quantas formas você pode dobrar um papel para fazer um retângulo, mostrando como alguns métodos podem exigir mais ou menos dobras que outros.
         pdfs:
           - unplug4
-        video: "Unplug4"
+        video: Unplug4
       Unplug5:
-        title: "Funções"
+        title: Funções
         desc: 'Nessa lição, os alunos vão fazer um suncatcher com cordas, miçangas, e um amuleto. Os alunos vão seguir uma série de passos repetitivos, e então devem identificar certos conjuntos de "habilidades" que são duplicadas várias vezes. Uma vez que essas habilidades estejam definidas, elas vão ser chamadas a partir de um programa principal, e todo o belo processo de criação será anotado em uma única folha de papel. O programa final será direcionado a toda a sala, seja qual for o tipo de cordas, miçangas, e amuletos usados. Para isso de fato funcionar, os alunos vão precisar "abstrair" os detalhes dos materiais específicos e criar condições vagas. O uso de espaços reservados genéricos é uma ótima forma de fazer uma introdução às variáveis.'
         pdfs:
           - unplug5
-        video: "Unplug5"
+        video: Unplug5
       Unplug6:
-        title: "Condições"
-        desc: "Essa aula é um jogo. Depois de introduzir a ideia de estruturas condicionais, declarações se, e laços, os alunos podem praticar juntos, usando um programa, ou um baralho de cartas."
+        title: Condições
+        desc: Essa aula é um jogo. Depois de introduzir a ideia de estruturas condicionais, declarações se, e laços, os alunos podem praticar juntos, usando um programa, ou um baralho de cartas.
         pdfs:
           - unplug6
-        video: "Unplug6"
+        video: Unplug6
       Unplug7:
-        title: "Escrevendo uma Canção"
-        desc: "Ler letras de música é uma coisa bastante intuitiva para a maioria dos alunos. Vamos pegar uma atividade que já é de conhecimento comum e transformá-la em uma maneira sólida de ensinar a definição e a chamada de funções. Uma vez que os alunos estiverem familiarizados com o processo de definição e a chamada, vamos adicionar capacidades extras, que vêm com a passagem de parâmetros nas chamadas de funções."
+        title: Escrevendo uma Canção
+        desc: Ler letras de música é uma coisa bastante intuitiva para a maioria dos alunos. Vamos pegar uma atividade que já é de conhecimento comum e transformá-la em uma maneira sólida de ensinar a definição e a chamada de funções. Uma vez que os alunos estiverem familiarizados com o processo de definição e a chamada, vamos adicionar capacidades extras, que vêm com a passagem de parâmetros nas chamadas de funções.
         pdfs:
           - unplug7
-        video: "Unplug7"
+        video: Unplug7
       Unplug8:
-        title: "Abstração"
-        desc: "Essa atividade combina a rotina diária de seus alunos e um jogo de raciocínio no estilo Mad-Lib para ajudar a classe a aprender sobre a eficácia da abstração."
+        title: Abstração
+        desc: Essa atividade combina a rotina diária de seus alunos e um jogo de raciocínio no estilo Mad-Lib para ajudar a classe a aprender sobre a eficácia da abstração.
         pdfs:
           - unplug8
-        video: "Unplug8"
+        video: Unplug8
       Unplug9:
-        title: "Programação Relay"
+        title: Programação Relay
         desc: 'Essa lição vai usar uma ideia de uma atividade anterior (4. Programação em Papel Quadriculado) e usar as habilidades nela presentes para enfatizar a importância de completar programas que operam em sequência e de frequentemente verificar os programas a procura de "bugs".'
         pdfs:
           - unplug9
-        video: "Unplug9"
+        video: Unplug9
       Unplug10:
-        title: "A Internet"
-        desc: "Nessa lição, os alunos vão fingir que navegam pela Internet, enquanto aprendem sobre endereçamento web, IPs e DNS."
+        title: A Internet
+        desc: Nessa lição, os alunos vão fingir que navegam pela Internet, enquanto aprendem sobre endereçamento web, IPs e DNS.
         pdfs:
           - unplug10
-        video: "Unplug10"
+        video: Unplug10
       Unplug11:
-        title: "Resumo"
-        desc: "O resumo final na primeira série de 20 horas de atividade vai ajudar os alunos a reviverem seus momentos preferidos, ao mesmo tempo que vai ajudá-los nos próximos passos que eles mesmos podem dar se estiverem interessados em continuar sua jornada na ciência da computação."
+        title: Resumo
+        desc: O resumo final na primeira série de 20 horas de atividade vai ajudar os alunos a reviverem seus momentos preferidos, ao mesmo tempo que vai ajudá-los nos próximos passos que eles mesmos podem dar se estiverem interessados em continuar sua jornada na ciência da computação.
         pdfs:
           - unplug11
-        video: "Unplug11"
+        video: Unplug11
       UnplugHappyMaps:
-        title: "Mapas divertidos"
-        desc: "Os alunos criam algoritmos simples (conjuntos de instruções) para mover um personagem por um labirinto usando um único comando."
-        video: "C1_happy_maps_unplugged"
+        title: Mapas divertidos
+        desc: Os alunos criam algoritmos simples (conjuntos de instruções) para mover um personagem por um labirinto usando um único comando.
+        video: C1_happy_maps_unplugged
       MoveIt:
-        title: "Criando caminhos"
-        desc: "Os alunos criam algoritmos simples (conjuntos de instruções) para mover um personagem por um labirinto usando um único comando."
-        video: "C1_moveitmoveit_unplugged"
+        title: Criando caminhos
+        desc: Os alunos criam algoritmos simples (conjuntos de instruções) para mover um personagem por um labirinto usando um único comando.
+        video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Algoritmos da vida real: plante uma semente'
-        desc: "Esta lição apresenta como usamos algoritmos em nossa vida diária, usando o ato de plantar uma semente como exemplo. Também se concentra no quadro geral de ciência da computação e como os algoritmos desempenham um papel fundamental."
-        video: "C1_planting_seed"
+        desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando o ato de plantar uma semente como exemplo. Também se concentra no quadro geral de ciência da computação e como os algoritmos desempenham um papel fundamental.
+        video: C1_planting_seed
       BuildingAFoundation:
-        title: "Criando uma base"
-        desc: "Os alunos constroem uma estrutura usando apenas os materiais fornecidos. Essas estruturas devem completar uma tarefa (chegar a uma certa altura ou suportar um determinado peso), e os alunos discutem a ideia de ser persistente quando as coisas ficam complicadas."
-        video: "C1_building_foundation"
+        title: Criando uma base
+        desc: Os alunos constroem uma estrutura usando apenas os materiais fornecidos. Essas estruturas devem completar uma tarefa (chegar a uma certa altura ou suportar um determinado peso), e os alunos discutem a ideia de ser persistente quando as coisas ficam complicadas.
+        video: C1_building_foundation
       GettingLoopy:
-        title: "Repetindo"
-        desc: "Esta aula introduz o conceito de programação de laços (loops, ou instruções repetidas) por meio de uma atividade de dança. Os alunos vão aprender uma coreografia simples e então serão instruídos a repeti-la."
-        video: "C1_getting_loopy"
+        title: Repetindo
+        desc: Esta aula introduz o conceito de programação de laços (loops, ou instruções repetidas) por meio de uma atividade de dança. Os alunos vão aprender uma coreografia simples e então serão instruídos a repeti-la.
+        video: C1_getting_loopy
       RelayProgramming:
-        title: "Programação por revezamento"
+        title: Programação por revezamento
         desc: 'Os alunos participam de uma corrida de revezamento na qual devem atravessar o pátio para escrever um algoritmo baseado em uma imagem em "papel quadriculado de programação". Eles só podem escrever uma instrução por vez, e, se houver um erro em algum lugar, eles têm que apagar e refazer os passos a partir daquele ponto.'
-        video: "C2_relay_programming"
+        video: C2_relay_programming
       Conditionals:
-        title: "Condicionais"
+        title: Condicionais
         desc: 'Para aprender sobre estruturas condicionais, o aluno joga um jogo de cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um ponto", e "se eu comprar uma carta preta, você ganha um ponto".'
-        video: "C2_conditionals_with_cards"
+        video: C2_conditionals_with_cards
       BigEvent:
-        title: "O grande evento"
+        title: O grande evento
         desc: 'Os alunos são introduzidos ao conceito de "eventos" em programação, que são ações que um computador monitora constantemente. O professor vai apertar os botões de forma remota, e os alunos vão reagir de acordo com o botão pressionado.'
-        video: "C1_bigevent_unplugged"
+        video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: "Navegando com segurança"
-        desc: "A Internet é poderosa, mas às vezes perigosa. Os professores mostram como navegar em segurança pela Internet."
+        title: Navegando com segurança
+        desc: A Internet é poderosa, mas às vezes perigosa. Os professores mostram como navegar em segurança pela Internet.
       GraphPaperProgramming:
-        title: "Programação em papel quadriculado"
-        desc: "Os alunos escrevem um algoritmo (um conjunto de instruções) usando um conjunto predefinido de comandos para orientar seus colegas de classe na reprodução de um desenho."
-        video: "C2_graph_paper"
+        title: Programação em papel quadriculado
+        desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um conjunto predefinido de comandos para orientar seus colegas de classe na reprodução de um desenho.
+        video: C2_graph_paper
       PaperPlanes:
         title: 'Algoritmos da vida real: aviões de papel'
-        desc: "Esta lição mostra como usamos algoritmos em nossa vida, especificamente na hora de fazer aviões de papel. Esta lição também apresenta a ciência da computação de forma geral, e como os algoritmos têm um papel essencial."
-        video: "C2_paper_airplanes"
+        desc: Esta lição mostra como usamos algoritmos em nossa vida, especificamente na hora de fazer aviões de papel. Esta lição também apresenta a ciência da computação de forma geral, e como os algoritmos têm um papel essencial.
+        video: C2_paper_airplanes
       BinaryBracelets:
-        title: "Pulseiras binárias"
-        desc: "Os alunos criam pulseiras como representações binárias da primeira letra de seus nomes. Os alunos aprendem que os dados podem ser representados e armazenados de mais de uma forma."
-        video: "C2_binary_bracelets"
+        title: Pulseiras binárias
+        desc: Os alunos criam pulseiras como representações binárias da primeira letra de seus nomes. Os alunos aprendem que os dados podem ser representados e armazenados de mais de uma forma.
+        video: C2_binary_bracelets
       DigitalFootprint:
-        title: "Sua impressão digital"
+        title: Sua impressão digital
         desc: 'Os professores informam aos alunos que colocar informações pessoais online cria uma impressão digital, ou um "rastro" que tem consequências.'
       ComputationalThinking:
-        title: "Pensamento computacional"
-        desc: "Os alunos usam as etapas do pensamento computacional (decomposição, relação entre padrões, abstração, algoritmos) para descobrir como jogar um jogo que não tem instruções."
-        video: "C3_computational_thinking"
+        title: Pensamento computacional
+        desc: Os alunos usam as etapas do pensamento computacional (decomposição, relação entre padrões, abstração, algoritmos) para descobrir como jogar um jogo que não tem instruções.
+        video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: "Caça-sóis funcionais"
-        desc: "Os alunos criam um algoritmo com variáveis e funções (trechos de código que você usa várias vezes) para criar caça-sóis usando fios e contas."
-        video: "C3_functional_suncatchers"
+        title: Caça-sóis funcionais
+        desc: Os alunos criam um algoritmo com variáveis e funções (trechos de código que você usa várias vezes) para criar caça-sóis usando fios e contas.
+        video: C3_functional_suncatchers
       SongwritingParameters:
-        title: "Composição de música com parâmetros"
-        desc: "Os alunos usam o conceito de refrão em uma música para aprender sobre a passagem de parâmetros (os quais personalizam uma função sem a necessidade de reescrevê-la)."
-        video: "C3_songwriting_with_parameters"
+        title: Composição de música com parâmetros
+        desc: Os alunos usam o conceito de refrão em uma música para aprender sobre a passagem de parâmetros (os quais personalizam uma função sem a necessidade de reescrevê-la).
+        video: C3_songwriting_with_parameters
       DiceRace:
         title: 'Algoritmos da via real: jogo de dados'
-        desc: "Esta lição mostra como usamos algoritmos em nossa vida. Como parte disso, os alunos vão identificar e escrever um algoritmo para um jogo de dados."
-        video: "C3_dice_race"
+        desc: Esta lição mostra como usamos algoritmos em nossa vida. Como parte disso, os alunos vão identificar e escrever um algoritmo para um jogo de dados.
+        video: C3_dice_race
       Internet:
-        title: "Internet"
-        desc: "Os alunos enviam mensagens que representam vários métodos de transmissão de Internet usando pedaços de papel."
-        video: "C3_internet"
+        title: Internet
+        desc: Os alunos enviam mensagens que representam vários métodos de transmissão de Internet usando pedaços de papel.
+        video: C3_internet
       Crowdsourcing:
-        title: "Crowdsourcing"
-        desc: "O aluno usa o crowdsourcing, uma técnica de resolução de problemas comum em ciência da computação, para realizar uma tarefa em conjunto, com a turma toda, obtendo um resultado mais eficiente do que quando feito sozinho."
-        video: "C3_crowdsourcing"
+        title: Crowdsourcing
+        desc: O aluno usa o crowdsourcing, uma técnica de resolução de problemas comum em ciência da computação, para realizar uma tarefa em conjunto, com a turma toda, obtendo um resultado mais eficiente do que quando feito sozinho.
+        video: C3_crowdsourcing
       DigitalCitizenship:
-        title: "Cidadania digital"
-        desc: "Os alunos exploram a diferença entre informações privadas e pessoais, distinguindo o que é seguro e o que não é seguro para compartilhar online."
+        title: Cidadania digital
+        desc: Os alunos exploram a diferença entre informações privadas e pessoais, distinguindo o que é seguro e o que não é seguro para compartilhar online.

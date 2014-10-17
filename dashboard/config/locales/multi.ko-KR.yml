@@ -122,8 +122,9 @@
       2-3 Conditionals Multi 1:
         Multiple Choice: "객관식"
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        According to the rules of this game, which set of cards was scored correctly for your team?: "이
-          게임의 규칙에 따르면, 어떤 카드 세트의 점수를 얻을 수 있을까요?"
+        These are your team's cards - according to the rules of the game, which set is scored correctly?: These
+          are your team's cards - according to the rules of the game, which set is
+          scored correctly?
         "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
@@ -253,6 +254,14 @@
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
+      4-5 Algorithms Multi 1:
+        Multiple Choice: "객관식"
+        Which one of these items is hardest to describe an algorithm for?: "다음 중 알고리즘으로
+          표현하기 가장 어려운 것은?"
+        "<h4>Brushing your teeth</h4>": "<h4>양치하기</h4>"
+        "<h4>Baking cookies</h4>": "<h4>과자 굽기</h4>"
+        "<h4>Shopping from a grocery list</h4>": "<h4>식료품 목록으로 장보기</h4>"
+        "<h4>Banana</h4>": "<h4>바나나</h4>"
       4-5 Computational Thinking Multi 1:
         Multiple Choice: "객관식"
         0: "? 3개의 문장이 있습니다. 주어진 3개의 패턴을 정확히 만들어낼 수 있는 것은 무엇일까요?"
@@ -263,6 +272,76 @@
         "<h4>_____ is a _____ city.</h4>": "<h4>_____ is a _____ city.</h4>"
         "<h4>_____ is _____ a _____.</h4>": "<h4>_____ is _____ a _____.</h4>"
         "<h4>Eugene is a _____ city.</h4>": "<h4>Eugene is a _____ city.</h4>"
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: "객관식"
+        Which of these pictures best represents crowdsourcing?: "다음 크라우드 소싱을 가장 잘
+          표현하는 것은?"
+        "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+      4-5 Crowdsourcing Multi 2:
+        Multiple Choice: "객관식"
+        Which one of these activities would be best for practicing crowdsourcing?: "클라우드소싱을
+          연습하기에 가장 좋은 활동은?"
+        "<h4>Cleaning your room</h4>": "<h4>방 청소하기</h4>"
+        "<h4>Eating your dessert</h4>": "<h4>디저트 먹기</h4>"
+        "<h4>Brushing your hair</h4>": "<h4>머리 빗기</h4>"
+        "<h4>Washing your face</h4>": "<h4>세수하기</h4>"
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: "객관식"
+        Which piece of information listed below is okay to share on the internet?: "다음
+          중 인터넷을 통해 공유하기 적당한 정보는?"
+        "<h4>Your birthday</h4>": "<h4>내 생일</h4>"
+        "<h4>Your favorite food</h4>": "<h4>좋아하는 음식</h4>"
+        "<h4>Your address</h4>": "<h4>내 집 주소</h4>"
+        "<h4>Your parent's credit card number</h4>": "<h4>부모님의 신용카드 번호</h4>"
+      4-5 Internet Multi 1:
+        Multiple Choice: "객관식"
+        "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: code.org에
+          접속하기 위해 사용하는 IP 주소로 가장 적당한 것은?
+        "<h4>23.23.224.106</h4>": "<h4>23.23.224.106</h4>"
+        "<h4>54.209.61.132</h4>": "<h4>54.209.61.132</h4>"
+        "<h4>64.14.68.10</h4>": "<h4>64.14.68.10</h4>"
+        "<h4>54.243.71.82</h4>": "<h4>54.243.71.82</h4>"
+      4-5 Internet Multi 2:
+        Multiple Choice: "객관식"
+        "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: IP
+          주소 100.42.50.110 을 입력하면 나오는 웹페이지는?
+        "<h4>code.org</h4>": "<h4>code.org</h4>"
+        "<h4>csisfun.com</h4>": "<h4>csisfun.com</h4>"
+        "<h4>thinkersmith.org</h4>": "<h4>thinkersmith.org</h4>"
+        "<h4>khanacademy.org</h4>": "<h4>khanacademy.org</h4>"
+      4-5 Songwriting Multi 1:
+        Multiple Choice: "객관식"
+        "/script_assets/4-5_images/unplugged/songwriting_1_q.png": "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
+        0: "? 이 노래의 가장 긴 코러스 후렴구로 정의할 수 있는 것은?"
+        1: ": 이 노래의 가장 긴 코러스 후렴구로 정의할 수 있는 것은?"
+        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
+          Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
+          to my Lou, <br/>Skip to my Lou, my darlin.
+        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        4: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+        5: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: "객관식"
+        "/script_assets/4-5_images/unplugged/suncatchers_2_q.png": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: Program
+          1의 결과와 <em> 같지 않은 </em> 프로그램은?
+        "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_2_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a4.png"
       K-1 Artist 1 Multi 1:
         Multiple Choice: "객관식"
         "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,

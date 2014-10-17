@@ -1,9 +1,9 @@
 * * *
 
-title: Thank you
+tiêu đề: Cảm ơn bố cục: rộng
 
-## layout: wide
+* * *
 
 # Chân thành cám ơn
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+Toàn bộ trường học của bạn giờ tham gia vào để giành chiến thắng một lớp-tập hợp các máy tính xách tay (hay $10.000 cho công nghệ khác).

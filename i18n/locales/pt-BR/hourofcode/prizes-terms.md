@@ -1,10 +1,12 @@
 * * *
 
-## layout: wide
+layout: wide
+
+* * *
 
 # Prêmios - termos e condições
 
-## Espaço no Dropbox ou crédito para o Skype:
+## Espaço no Dropbox ou crédito para o Skype
 
 Os 10 GB de espaço no Dropbox ou os US$10 de crédito no Skype limitam-se a professores do ensino fundamental e médio, educadores de clubes de programação e instituições de ensino. Os 10 GB de espaço livre devem ser adicionados a uma conta do Dropbox já existente. Limite de um resgate por organizador.
 
@@ -14,14 +16,12 @@ A Code.org entrará em contato com os organizadores após a Hora de Código (8-1
 
 <% if @country == 'us' %>
 
-## Chat com vídeo com um orador convidado:
+## Chat com vídeo com um orador convidado
 
 Prêmio limitado apenas às escolas de ensino fundamental e médio dos EUA. Para se qualificar, sua escola inteira deve se cadastrar na Hora do Código até 14 de novembro de 2014. A Code.org selecionará aleatoriamente as escolas vencedoras, determinará um horário para o bate-papo via Web e trabalhará com o professor apropriado para definir os detalhes da tecnologia.
 
-## Kits de laptops (ou US$10.000 para outra tecnologia):
+## Kits de laptops (ou US$10.000 para outra tecnologia)
 
-Prêmio limitado apenas às escolas públicas de ensino fundamental e médio dos EUA. Por que apenas as escolas públicas? [Veja a resposta aqui][1]. Para se qualificar, sua escola inteira deve se cadastrar na Hora do Código até 14 de novembro de 2014. Uma escola de cada estado dos EUA receberá um kit de computadores. A Code.org vai selecionar e notificar os vencedores por e-mail em 1 de dezembro de 2014.
-
- [1]: http://www.hourofcode.com/us#faq
+Prêmio limitado apenas às escolas públicas de ensino fundamental e médio dos EUA. Por que apenas as escolas públicas? [See the answer here](http://www.hourofcode.com/#faq). Para se qualificar, sua escola inteira deve se cadastrar na Hora do Código até 14 de novembro de 2014. Uma escola de cada estado dos EUA receberá um kit de computadores. A Code.org vai selecionar e notificar os vencedores por e-mail em 1 de dezembro de 2014.
 
 <% end %>

@@ -28,44 +28,44 @@
           desc: Kodetimen
           Maze: Trinn 1
         Edit Code:
-          desc: Forandre kode
+          desc: Rediger kode (beta)
           MazeEC: Trinn 1
         2014 Levels:
-          desc: 2014 Puzzles (beta)
+          desc: Sprett (beta)
           Bounce: Trinn 1
         Builder Levels:
-          desc: User-Created Puzzles (beta)
+          desc: Brukeropprettede oppgaver (beta)
           Custom: Trinn 1
         Flappy Levels:
           desc: Flappy Bird
           Flappy: Trinn 1
         Jigsaw Levels:
-          desc: Jigsaw (beta)
+          desc: Puslespill (beta)
           Jigsaw: Trinn 1
         Step Levels:
-          desc: Maze (beta)
+          desc: Labyrint (beta)
           MazeStep: Stage Step
         edit-code:
-          desc: Edit Code (beta)
+          desc: Rediger kode (beta)
           MazeEC: Trinn 1
         events:
-          desc: Bounce (beta)
+          desc: Sprett (beta)
           Bounce: Trinn 1
           Studio: Nivå 2
         builder:
-          desc: User-Created Puzzles (beta)
+          desc: Brukeropprettede oppgaver (beta)
           Custom: Trinn 1
         flappy:
           desc: Flappy Bird
           Flappy: Trinn 1
         jigsaw:
-          desc: Jigsaw (beta)
+          desc: Puslespill (beta)
           Jigsaw: Trinn 1
         step:
-          desc: Maze (beta)
+          desc: Labyrint (beta)
           MazeStep: Stage Step
         wordsearch:
-          desc: Spelling Bee (beta)
+          desc: Stavekonkurranse (beta)
           WordSearch: Trinn 1
     game:
       name:
@@ -91,10 +91,10 @@
         Artist5: Kunstneren 5
         Unplug11: Oppsummering
         MazeEC: Labyrinten
-        Bounce: Bounce
+        Bounce: Sprett
         Flappy: Flappy Bird
-        Jigsaw: Jigsaw
-        MazeStep: Maze Step Mode
+        Jigsaw: Puslespill
+        MazeStep: Labyrint trinn modus
         Wordsearch: Wordsearch
     trophy:
       name:
@@ -128,8 +128,9 @@
           blokker.
         maze_2_7: Hjelp meg å bli kvitt den slemme grisen med færrest mulig blokker.
           Prøv å bruke mer enn en "gjenta" blokk.
-        maze_2_8: 'For å løse denne oppgaven, prøv en "gjenta"-blokk med følgende
-          blokker inni seg: fremover, fremover, sving.'
+        maze_2_8: 'Når en blokk er grå, betyr det at du ikke kan slette den. Løs dette
+          puslespillet med "gjenta" blokken som gjentas 3 ganger. Prøv å sette disse
+          3 blokkene i den grå "gjenta" blokken: flytte, flytte, snu.'
         maze_2_9: OK, prøv å bruke den nye "Gjenta inntil" blokken - den vil gjentas
           inntil jeg når den irriterende grisen.
         maze_2_10: Ok, en siste øvelse - klarer du å løse denne oppgaven med bare
@@ -376,11 +377,10 @@
         bounce_11: You can now attach blocks to the "when run" block. Try changing
           the speed of the paddle and the ball and see how many points you can score
           before your opponent scores twice.
-        bounce_12: Create your own Bounce game. You can change all the visuals and
-          the rules. When you're done, click Share to let friends try your game on
-          their phones.
-        Custom_builder: Drag blocks from the toolbox to the workspace to draw the
-          level you wish to create. Press "Run Program" when you are ready.
+        bounce_12: Opprett ditt eget Sprett spill. Du kan endre alle bilder og reglene.
+          Når du er ferdig, klikk Fullfør for å la venner prøve spillet på sine telefoner.
+        Custom_builder: Dra blokker fra verktøykassen til arbeidsområdet for å tegne
+          nivået du vil opprette. Trykk "Kjør" når du er klar.
         flappy_1: Attach a block to the "when click" block, then press "Run Program"
           and click or tap to move Flappy to the target.
         flappy_2: Now we've added some ground.  Attach a block to the "when hit the
@@ -425,36 +425,37 @@
           "when run" block.
         flappy_k1_9: Try changing the player by attaching a "set player" block to
           the "when run" block.
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
+        jigsaw_1: Klikk blokken
+        jigsaw_2: Dra blokken til målet
+        jigsaw_3: Ordne blokkene for å danne bildet
+        jigsaw_4: Ordne blokkene for å danne bildet
+        jigsaw_5: Ordne blokkene for å danne bildet
+        jigsaw_6: Ordne blokkene for å danne bildet
+        jigsaw_7: Ordne blokkene for å danne bildet
+        jigsaw_8: Ordne blokkene for å danne bildet
+        jigsaw_9: Ordne blokkene for å danne bildet
+        jigsaw_10: Ordne blokkene for å danne bildet
+        jigsaw_11: Ordne blokkene for å danne bildet
+        jigsaw_12: Ordne blokkene for å danne bildet
+        jigsaw_13: Løse puslespillet!
+        mazestep_1: Labyrint trinn beskrivelse her
+        mazestep_2: Labyrint trinn beskrivelse her
+        mazestep_3: Labyrint trinn beskrivelse her
+        mazestep_4: Labyrint trinn beskrivelse her
+        mazestep_5: Labyrint trinn beskrivelse her
         studio_c2_1: Can you make this dog say "hello world"?
         studio_c2_2: Can you make the dog say something and then have the cat say
           something afterwards?
         studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: Can you write a program that makes the dog move to the cat, and
-          have the cat say "hello" when the dog reaches him?
-        studio_c2_5: Can you write a program to make the octopus say "hello" when
-          it is clicked?
-        studio_c2_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
-        studio_c2_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
+        studio_c2_4: Kan du skrive et program som gjør at hunden flytter til katten,
+          og lar katten si "Hei" når hunden når ham?
+        studio_c2_5: Kan du skrive et program som får en blekksprut til å si "Hei"
+          når den klikkes?
+        studio_c2_6: Kan du skrive et program for å få denne pingvinen til å gå rundt
+          med opp / ned / venstre/høyre-tastene for å treffe alle målene?
+        studio_c2_7: '"Gjenta alltid" blokken tillater deg å kjøre kode kontinuerlig.
+          Kan du legge til blokker for å flytte denne dinosauren opp og ned flere
+          ganger?'
         studio_c2_8: Can you have the penguin say "Ouch!" and play a "hit" sound if
           he runs into the dinosaur, and then move him with the arrows to make that
           happen?
@@ -468,17 +469,18 @@
         studio_c3_story_2: Can you make the dog say something and then have the cat
           say something afterwards?
         studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: Can you write a program that makes the dog move to the
-          cat, and have the cat say "hello" when the dog reaches him?
+        studio_c3_story_4: Kan du skrive et program som gjør at hunden flytter til
+          katten, og lar katten si "Hei" når hunden når ham?
         studio_c3_story_5: Can you add a block to make the octopus happy?
         studio_c3_story_6: Create your own story. When you're done, click Finish to
           let friends try your story on their phones.
-        studio_c3_game_1: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_c3_game_2: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
+        studio_c3_game_1: Kan du skrive et program som får en blekksprut til å si
+          "Hei" når den klikkes?
+        studio_c3_game_2: Kan du skrive et program for å få denne pingvinen til å
+          gå rundt med opp / ned / venstre/høyre-tastene for å treffe alle målene?
+        studio_c3_game_3: '"Gjenta alltid" blokken tillater deg å kjøre kode kontinuerlig.
+          Kan du legge til blokker for å flytte denne dinosauren opp og ned flere
+          ganger?'
         studio_c3_game_4: Can you have the penguin say "Ouch!" and play a "hit" sound
           if he runs into the dinosaur, and then move him with the arrows to make
           that happen?
@@ -492,14 +494,15 @@
         studio_playlab_2: Can you make the dog say something and then have the cat
           say something afterwards?
         studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: Can you write a program that makes the dog move to the cat,
-          and have the cat say "hello" when the dog reaches him?
-        studio_playlab_5: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_playlab_6: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
+        studio_playlab_4: Kan du skrive et program som gjør at hunden flytter til
+          katten, og lar katten si "Hei" når hunden når ham?
+        studio_playlab_5: Kan du skrive et program som får en blekksprut til å si
+          "Hei" når den klikkes?
+        studio_playlab_6: Kan du skrive et program for å få denne pingvinen til å
+          gå rundt med opp / ned / venstre/høyre-tastene for å treffe alle målene?
+        studio_playlab_7: '"Gjenta alltid" blokken tillater deg å kjøre kode kontinuerlig.
+          Kan du legge til blokker for å flytte denne dinosauren opp og ned flere
+          ganger?'
         studio_playlab_8: Can you add a block to score a point when the penguin runs
           into the octopus, and then move him with the arrows until you score?
         studio_playlab_9: Can you add blocks to change the background and the speed
@@ -544,67 +547,67 @@
         parameters: Funksjoner med parametre
         hoc_wrapup: Slutt på Kodetimen
         20_wrapup: Slutt etter 20 timer
-        Unplug1: What is CS?
+        Unplug1: Hva er CS?
         Unplug2: Programmeringstenkning
         Unplug3: Millimeterpapirprogrammering
         Unplug4: Algoritmer
         Unplug5: Funksjoner
         Unplug6: Betingelser
-        Unplug7: Songwriting
+        Unplug7: Låtskriving
         Unplug8: Abstraksjon
-        Unplug9: Relay programming
-        Unplug10: Internet
+        Unplug9: Relé programmering
+        Unplug10: Internett
         Unplug11: Oppsummering
         C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Move It, Move It
+        C1_moveitmoveit_unplugged: Flytt den, flytt den
         C1_bigevent_unplugged: Den store begivenheten
         C1_getting_loop: Getting Loopy
         C1_pair_programming: Pair Programming
-        C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
-        C1_bee_level_intro: Bee Level - Intro
+        C1_maze_intro_sequencing: Labyrint sekvensering Intro
+        C1_maze_debugging: Labyrint feilsøking
+        C1_bee_level_intro: Bie nivå - Intro
         C1_artist_intro: Kunstner intro
         C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
-        C1_playlab_storytelling: Play Lab - Create a Story
-        C1_planting_seed: Planting a Seed
-        C1_building_foundating: Building a Foundation
+        C1_zuck_repeat_loop: Labyrint løkker
+        C1_bee_loops: Bie løkker
+        C1_maze_loops: Labyrint løkker
+        C1_playlab_storytelling: Spill Lab - lage en historie
+        C1_planting_seed: Plante et frø
+        C1_building_foundating: Bygg ett grunnlag
         C2_maze_intro: Labyrint intro
         C2_artist_intro: Kunstner intro
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
+        C2_zuck_repeat_loop: Labyrint løkker
+        C2_artist_loops: Kunstner løkker
         C2_bee_conditionals: Bee Conditionals
-        C2_playlab_createstory: Play Lab - Create a Story
+        C2_playlab_createstory: Spill Lab - lage en historie
         C2_graph_paper: Millimeterpapirprogrammering
         C2_conditionals_with_cards: Betingelser
-        C2_binary_bracelets: Binary Bracelets
+        C2_binary_bracelets: Binær armbånd
         C2_replay_programming: Relé-programmering
-        C2_paper_airplanes: Paper Airplanes
+        C2_paper_airplanes: Papir fly
         C3_maze_intro: Labyrint intro
         C3_artist_intro: Kunstner intro
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
+        C3_artist_functions: Kunstner funksjoner
+        C3_bee_functions: Bie funksjoner
         C3_bee_conditionals: Bee Conditionals
         C3_maze_conditionals: Maze Conditionals
         C3_artist_nested_loops: Nested Loops
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
-        C3_bounce: Bounce
-        C3_playlab_create_game: Play Lab - Create a Game
+        C3_bee_debugging: Bie feilsøking
+        C3_bounce: Sprett
+        C3_playlab_create_game: Spill Lab - lage et spill
         C3_computational_thinking: Programmeringstenkning
         C3_dice_race: Dice Race
-        C3_internet: Internet
+        C3_internet: Internett
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
-        C3_songwriting_with_parameters: Songwriting With Parameters
+        C3_songwriting_with_parameters: Låtskriving med parametere
     callout:
       text:
-        drag_blocks: Drag a "move" block and snap it below the other block
-        run: Hit "Run" to try your program
-        watch_again: Click here to watch the video again
+        drag_blocks: Dra en "flytt" blokk og fest den under den andre blokken
+        run: Trykk "Kjør" for å prøve programmet
+        watch_again: Klikk her for å se filmen igjen
         gray_block_explanation: Blocks that are grey can't be moved or deleted. Can
           you solve the puzzle anyway?
         show_code_explanation: Click here to see the code for the program you're making
@@ -615,4 +618,4 @@
         set_sprite_image: Attach a "set actor to image" block to the "when story starts"
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
+        jigsaw_click: Klikk denne blokken!

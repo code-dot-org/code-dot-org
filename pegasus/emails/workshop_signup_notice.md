@@ -1,5 +1,17 @@
 ---
 <%
+def format_email_address(email, display_name='')
+  begin
+    address = Mail::Address.new(email)
+    address.display_name = display_name unless display_name.empty?
+    return address.to_s
+  rescue
+    display_name = display_name.to_s.gsub('"', '\"')
+    display_name = "\"#{display_name}\"" if display_name.include?('"')
+    "#{display_name.strip} <#{email.strip}>".strip
+  end
+end
+
   workshop_row = DB[:forms].first(id:form.parent_id)
   workshop = JSON.parse(workshop_row[:data]).merge(JSON.parse(workshop_row[:processed_data]))
 %>
@@ -29,3 +41,5 @@ Workshop details:
 
 - Date(s): <%= workshop['dates'].map{|i| i['date_s']}.join(', ') %>
 - Location: [<%= workshop['location_name_s'] %>](http://<%=CDO.canonical_hostname('code.org')%>/manage-professional-development-workshops#/<%= workshop_row[:secret] %>/view)
+
+![](<%= tracking_pixel %>)

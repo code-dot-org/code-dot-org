@@ -62,6 +62,7 @@
   "backToPreviousLevel": "Tilbage til forrige niveau",
   "saveToGallery": "Gem til dit galleri",
   "savedToGallery": "Gem til dit galleri!",
+  "shareFailure": "Sorry, we can't share this program.",
   "typeCode": "Skriv din JavaScript kode under disse instruktioner.",
   "typeFuncs": "Tilgængelige funktioner: %1",
   "typeHint": "Bemærk, at parenteser og semikoloner er nødvendige.",

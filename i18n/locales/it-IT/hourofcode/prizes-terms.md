@@ -1,27 +1,27 @@
 * * *
 
-## layout: wide
+layout: wide
+
+* * *
 
 # Premi - Termini e condizioni di partecipazione
 
-## Dropbox space or Skype credit:
+## Spazio su Dropbox o credito Skype:
 
-I 10 GB di spazio su Dropbox o i 10$ di credito Skype sono riservati a studenti di scuole elementari, medie o superiori, educatori di sostegno e agenzie educative. The 10 GB of free space must be added to an existing Dropbox account. Limit one redemption per organizer.
+I 10 GB di spazio su Dropbox o i 10$ di credito Skype sono riservati a studenti di scuole elementari, medie o superiori, educatori di sostegno e agenzie educative. I 10 GB di spazio gratuito devono essere aggiunti a un account Dropbox già esistente. Ogni organizzatore può ricevere un solo premio.
 
-Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
+Per poter ricevere il credito Skype o lo spazio Dropbox è necessario che l'organizzatore si sia registrato per l'Ora del Codice . Se tutta la vostra intera scuola partecipa all'Ora del Codice, è necessario che ogni educatore si registrarsi singolarmente come organizzatore.
 
-Code.org will contact organizers after the Hour of Code (Dec. 8-14) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org contatterà gli organizzatori dopo il termina dell'Ora del Codice (8-14 Dicembre) per fornire le istruzioni per la richiesta dello spazio Dropbox o del credito Skype.
 
 <% if @country == 'us' %>
 
-## Video chat with a guest speaker:
+## Video chat con un ospite d'onore:
 
-Prize limited to K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 14, 2014. Code.org will randomly select winning schools, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details.
+Premio limitato alle scuole elementari, medie e superiori degli Stati Uniti. Per qualificarsi, l'intera scuola deve registrarsi per l'Ora del Codice entro il 14 novembre 2014. Code.org selezionerà casualmente le scuole vincenti, fornirà una fascia oraria per la web chat e lavorerà con l'insegnante appropriato per definire i dettagli di relativi alla strumentazione tecnologia necessaria.
 
-## Class-set of laptops (or $10,000 for other technology):
+## Portatili per una intera classe (o $10.000 in altra strumentazione tecnologica):
 
-Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here][1]. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
-
- [1]: http://www.hourofcode.com/us#faq
+Premio limitato alle scuole pubbliche elementari, medie e superiori degli Stati Uniti. Perché solo le scuole pubbliche? [See the answer here](http://www.hourofcode.com/#faq). Per qualificarsi, l'intera scuola deve registrarsi per l'Ora del Codice entro il 14 novembre 2014. Una sola scuola per ogni stato americano riceverà un set computer per un'intera classe. Code.org selezionerà e notificherà i vincitori via email entro il 1° dicembre 2014.
 
 <% end %>

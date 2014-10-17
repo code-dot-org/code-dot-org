@@ -1,7 +1,9 @@
 * * *
 
-## layout: wide
+layout: wide
 
-# Get your whole school to participate
+* * *
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+# Zorg dat je hele school meedoet
+
+Hier komt informatie waarmee je je hele school kunt laten meedoen met het Uur Code.

@@ -30,7 +30,7 @@ gem 'aws-s3'
 gem 'bcrypt'
 gem 'chronic', '~> 0.10.2'
 gem 'os'
-gem 'browser'
+gem 'user_agent_parser'
 
 group :development do
   gem 'rerun'

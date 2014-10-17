@@ -1,7 +1,9 @@
 * * *
 
-## layout: wide
+layout: wide
 
-# Get your whole school to participate
+* * *
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+# Saa koko koulusi osallistumaan
+
+Tietoa miten saada koko kouluja osallistumaan Koodaustuntiin tulee näkymään täällä.

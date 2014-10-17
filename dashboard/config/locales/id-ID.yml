@@ -269,6 +269,9 @@
     header:
       finished_hoc: Saya telah menyelesaikan jam kode!
       sign_in_to_save: Masuk untuk mencatat kemajuan belajar
+      free_play:
+        playlab: Make an App
+        artist: Draw Something
     user:
       classroom: Murid-murid saya
       label: Halo %{username}
@@ -486,6 +489,13 @@
     flappy_og_title: Cobalah permainan Flappyku
     studio_og_title: Periksa cerita saya
     og_description: Saya menulis kode ini sendiri dengan Code.org
+    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
+      the text.
+    address_not_allowed: It looks like there is an address in it. Try changing the
+      text.
+    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+      text.
   builder:
     created: Kamu membuat skript baru.
     destroyed: Anda menghapus satu script.

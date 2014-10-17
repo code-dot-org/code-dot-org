@@ -1,9 +1,9 @@
 * * *
 
-title: Thank you
+शीर्षक: तपाइँलाई धन्यवाद सजावट: फराकिलो
 
-## layout: wide
+* * *
 
 # धन्यवाद
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+तपाइको स्कूल अब क्लास-सेट ल्याप्टप (वा $१०,००० बराबर को अरु प्रविधिक समान) कोलागि सहभागी भएको छ.

@@ -24,7 +24,7 @@
       label: 'Pridėk mokytoją įvedęs kodą arba jo el. pašto adresą:'
       placeholder: Kodas (ABCDEF) arba mokytojo el. pašto adresas (mokytojas@paštas.lt)
     code:
-      label: 'Pridėk mokytoją pagal sekcijos kodą:'
+      label: 'Pridėti mokytoją pagal grupės kodą:'
       placeholder: Kodas (ABCDEF)
     submit: Pridėk mokytoją
   add_hint_form:
@@ -32,7 +32,7 @@
     submit: Pridėk suflerį
   appname: Code.org
   stage: Etapas
-  stage_number: Stage %{number}
+  stage_number: Etapas %{number}
   puzzle: Galvosūkis
   trophies: Laimėjimai
   courses: Kursai
@@ -40,8 +40,8 @@
   more: DAUGIAU
   less: MAŽIAU
   try_hoc: 'Pamėgink Valandos Kodą, spausk čia >> '
-  try_k8intro: Išmėginkite mūsų įvadą į informatikos kursus (15-25 valandos)
-  k8intro: "Įvadas į informatikos kursą (15-25 valandos)"
+  try_k8intro: Išmėginkite mūsų programavimo įvado kursą (15-25 valandos)
+  k8intro: Programavimo įvado kursas (15-25 valandos)
   already_started: 'Jau esate pradėjęs? Tęskite čia >> '
   demos: 'Administratorius: Visos demonstracijos'
   continue: Tęsti
@@ -114,13 +114,13 @@
     submit: Prisijungti
   signin:
     try_heading: Nori išmėginti programavimą neprisiregistravęs?
-    try_hoc: Pirmiausia išmėginkite Vienos Valandos Kodą
+    try_hoc: Pirmiausia išmėginkite Kodavimo Valandą
     try_20hours: Išmėginkite 20-ties valandų įvadą į informatiką
   signinsection:
     welcome: Sveiki atvykę į %{section_name}
     name: Pasirink savo vardą
-    picture: Atrask savo slaptą paveikslėlį
-    words: "Įvesk savo slaptus žodžius"
+    picture: Atrask savo prisijungimo paveikslėlį
+    words: "Įvesk savo prisijungimo žodžius"
     login: Prisijungti
   password:
     reset_form:
@@ -153,9 +153,9 @@
       no_teacher: Nepavyko rasti nieko prisijungusio su '%{teacher_email_or_code}'.
         Prašome paprašyti to žmogaus prisijungti čia ir dabar, o tada mėginkite dar
         kartą
-      section_not_found: Nepavyko rasti sekcijos su kodu '%{section_code}'.
-      blank_code: "Įveskite skyriaus kodą"
-      cant_join_own_section: Atsiprašome, bet prie savo sekcijos prisijungti negalite.
+      section_not_found: Nepavyko rasti grupės su kodu '%{section_code}'.
+      blank_code: "Įveskite grupės kodą"
+      cant_join_own_section: Atsiprašome, bet prie savo grupės prisijungti negalite.
     mail:
       invite_student:
         subject: Prisijunk prie klasės su %{teacher_name} Code.org svetainėje!
@@ -245,6 +245,9 @@
     header:
       finished_hoc: Aš jau užbaigiau savo Kodavimo Valandą
       sign_in_to_save: Prisijunkite, kad išsaugotumėte savo pažangą
+      free_play:
+        playlab: Sukurk programėlę
+        artist: Nupiešk ką nors
     user:
       classroom: Mano mokiniai
       label: Sveiki, %{username}
@@ -274,7 +277,7 @@
       remove: Ar tikrai nori pašalinti šį mokytoją?
     tools: Mokytojo įrankiai
     followers:
-      section: 'Sekcija:'
+      section: 'Grupė:'
       stages: 'Rodyti etapą(-us):'
       show_past: 'Rodyti ankstesnį mokinių aktyvumą (%{bullet_html}):'
       levels_key: Lygio raktas
@@ -283,43 +286,43 @@
       tried: Bandyta, bet neišspręsta
       not_tried: Dar nebandyta
       activity: Rodo mokinių veiklą prieš %{hours}%{plural}
-      no_section: Nėra priskirta sekcijai
+      no_section: Nepriskirta grupė
       trophies: Laimėjimai
     students:
       name: Vardas
       username: Naudotojo vardas
       password: Slaptažodis
-      manage: Redaguoti mokinius
+      manage: Tvarkyti ir pridėti mokinius
       dashboard: Eiti į mokytojo puslapį
       add: Pridėti mokinius
       remove: pašalinti mokinį
       confirm_remove: Ar tikrai norite pašalinti šį mokinį?
-      help_reassign: Kad padalytumėte savo klasę į keletą sekcijų, pažymėkite mokinius
-        ir priskirkite jiems naują sekciją.
+      help_reassign: Kad padalytumėte savo klasę į keletą grupių, pažymėkite mokinius
+        ir priskirkite jiems  grupę.
       help_register: Vietoj to, kad praleistumėte daug laiko, kad gauti mokinių duomenis,
         Jūs galite paprašyti mokinių, kad jie prisiregistruotų. Jūsų mokiniai turės
         susigalvoti prisijungimo vardus ir slaptažodžius ir jiems NEREIKĖS įvesti
         el. pašto adreso. Jeigu mokinys užmirš savo slaptažodį, galėsite jam jį pakeisti.
       register: Paprašykite, kad mokiniai prisiregistruotų patys
       vist: Pasakykite, kad Jūsų mokiniai apsilankytų
-      section_code: 'ir įvestų savo sekcijos kodą:'
-      first_please: Visų pirma prašome %{add_section}
+      section_code: 'ir įvestų savo grupės kodą:'
+      first_please: Visų pirma  %{add_section}
       for: Už
       enter: "įveskite:"
     sections:
-      add: Pridėti sekciją
-      manage: Valdyti skyrius
-      section: Sekcija
+      add: Pridėti grupę
+      manage: Tvarkyti grupes
+      section: Grupė
       students: Mokiniai
       section_code: Sekcijos kodas
-      add_section_code: Pridėti mokinių sekcijos kodą
-      secret: Paslapties tipas
+      add_section_code: Pridėti grupės kodą
+      secret: Prisijungimo rakto tipas
       grade: Klasė
       course: Kursas
       rename: pervadinti
       edit: redaguoti
       delete: pašalinti
-      confirm_delete: Ar tikrai norite pašalinti šią sekciją?
+      confirm_delete: Ar tikrai norite pašalinti šią grupę?
       email: Siųsti el. paštu
     rollup: Mokinių pažanga
     activity: Paskutinė klasės veikla
@@ -347,8 +350,8 @@
     classroom_activity: Vaizdo įrašas mokytojams
   home:
     title: Studio Kodas
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    all_courses: 1, 2 ir 3 kursų apžvalga
+    lesson_plans: Pamokų planai
     signin_message: Jau užsiregistravote? %{link}
     student_reg_link: Mokinių registracija
     teacher_reg_link: Mokytojų registracija
@@ -382,7 +385,7 @@
       pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis
       esant bet kurioje amžiaus grupėje."
     test_videos_help: Išbandykite mūsų naują vaizdo grotuvą savo mokykloje
-    try_beta_courses: Naujiena! Išmėginkite beta kursą pradinukams
+    try_beta_courses: Naujiena! Išmėginkite testuojamus kursus pradinukams
     use_as_teacher: Naudokite šią svetainę kaip mokytojas
     heading_elementary: "<h2>20 valandų kursas </h2><h1>pradinių klasių mokiniams</h1>"
     heading_apps: "<h2>Smagumynai</h2><h1>visiems</h1>"
@@ -399,11 +402,11 @@
       Arts Inc. Visos teisės saugomos.
     feedback: Pateikti atsiliepimus
     translate: Padėkite mums išversti į savo kalbą
-    support: Parama
+    support: Pagalba
     support_url: http://support.code.org
-    tos: Terminai
+    tos: Naudojimo taisyklės
     privacy: Privatumo politika
-    secure: Saugi versija
+    secure: Saugaus ryšio versija
   prize_mail:
     prize_earned:
       subject: Redeem your prize at Code.org!
@@ -427,20 +430,20 @@
   compatability:
     working:
       header: Mes dirbame, kad būtų palaikoma Jūsų naršyklė.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Your browser doesn't support all the features required, and you may experience
-        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
-        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
-        your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+      message: Code.org naudoja šiuolaikines interneto technologijas, kurios šią svetainę
+        padaro greitesne. Jūsų naršyklė nepalaiko šių technologijų, todėl Jūs galite
+        susidurti su problemomis. Prašome pranešti <a href='%{report_issue_url}'>apie
+        pastebėtas klaidas</a>. Taip pat galite <a href='%{supported_browsers_url}'>atnaujinti
+        savo naršyklę</a>.
+      hide_this_warning: Slėpti šį įspėjimą
     upgrade:
       header: Prašome atnaujinti savo naršyklę.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
-      button: Take me to the list of supported browsers
+      message: Code.org naudoja šiuolaikines interneto technologijas, kurios šią svetainę
+        padaro greitesne. Jūsų naršyklė nepalaiko šių technologijų.<br/><br/>Įsidiekite
+        į savo kompiuterį naršyklę iš mūsų paruošto sąrašo ir teskite. Galite mėginti
+        su savo naršykle<a href='#'>naršyti šiame puslapyje</a>, bet galite susidurti
+        su problemomis.
+      button: Perkelkite mane į palaikomų interneto naršyklių sąrašą
   slow_loading: Tai trunka ilgiau nei įprasta...
   try_reloading: Pabandykite perkrauti puslapį
   next_stage: Baigta! Pereikite į kitą etapą
@@ -453,6 +456,12 @@
     flappy_og_title: Išmėginkite žaidimą my Flappy Game
     studio_og_title: Peržiūrėk mano istoriją
     og_description: Aš pats parašiau kodą Code.org svetainėje
+    phone_number_not_allowed: Panašu, kad yra įrašytas kažkieno telefono numeris.
+      Pakeisk tekstą.
+    address_not_allowed: Panašu, kad yra parašytas kažkieno adresas. Pakeisk tekstą.
+    email_not_allowed: Panašu, kad yra įrašytas kažkieno el. pašto adresas. Pakeisk
+      tekstą.
+    profanity_not_allowed: Panašu, kad yra parašyta negražių žodžių. Pakeisk juos.
   builder:
     created: Jūs sukūrėte naują scenarijų.
     destroyed: Jūs sunaikinote scenarijų.
@@ -466,15 +475,15 @@
       unused: Nepanaudoti lygiai
   upsell:
     hoc:
-      title: Vienos Valandos Kodas
-      body: Išmėginkite informatikos pagrindus. Juos išbandė jau milijonai žmonių.
+      title: "„Programavimo valanda“"
+      body: Išmėginkite programavimo pagrindus. Juos išbandė jau milijonai žmonių.
     flappy:
       title: Flappy Kodas
       body: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy
         Code pamokėles!
     20hour:
       title: "Įvadiniai kursai"
-      body: Išmėginkite mūsų 20-ties valandų įvadą į informatiką.
+      body: Išmėginkite mūsų 20-ties valandų įvadą į programavimą.
   gallery:
     students_drew_these_with_code: Mokiniai nupiešė juos parašę kodą!
     picture_count: "Šiomis <b>%{days}</b> dienomis, mokiniai nupiešė <b>%{count}</b>
@@ -509,12 +518,12 @@
     script:
       name:
         20-hour:
-          title: "Įvadas į informatikos kursą (15-25 valandos)"
+          title: Programavimo įvado kursas (15-25 valandos)
           description: "Šis 20-ties valandų informatikos kursas supažindina su programavimo
             pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis
             esant bet kurioje amžiaus grupėje."
         Hour of Code:
-          title: Vienos Valandos Kodas
+          title: "„Programavimo valanda“"
           description: ''
         edit-code:
           title: Redaguoti kodą

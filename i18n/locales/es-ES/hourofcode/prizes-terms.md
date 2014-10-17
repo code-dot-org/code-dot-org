@@ -1,10 +1,12 @@
 * * *
 
-## layout: wide
+layout: wide
+
+* * *
 
 # Premios - términos y condiciones
 
-## Dropbox space or Skype credit:
+## Espacio de Dropbox o crédito de Skype:
 
 Los 10 GB de espacio en Dropbox o los $10 USD de crédito en Skype son para profesores de K-12, educadores para clubes después de la escuela, y organizaciones educativas. Los 10 GB de espacio gratuito se agregarán a una cuenta existente de Dropbox. Limitado a un regalo por organizador.
 
@@ -14,14 +16,12 @@ Code.org se comunicará con los organizadores después de la Hora de Programaci�
 
 <% if @country == 'us' %>
 
-## Video chat with a guest speaker:
+## Video chat con un orador invitado:
 
-Prize limited to K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 14, 2014. Code.org will randomly select winning schools, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details.
+El premio es para escuelas K-12 en Estados Unidos únicamente. Para calificar, toda tu escuela debe registrarse para la Hora de Programación a más tardar el 14 de noviembre de 2014. Code.org seleccionará al azar escuelas ganadoras, pondrá una hora para el web chat, y trabajará con el profesor apropiado para instalar los detalles tecnológicos.
 
-## Class-set of laptops (or $10,000 for other technology):
+## Paquete de laptops (ó $10,000 para otras tecnologías):
 
-Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here][1]. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
-
- [1]: http://www.hourofcode.com/us#faq
+El premio es para escuelas públicas K-12 en Estados Unidos únicamente. ¿Por qué sólo escuelas públicas? [See the answer here](http://www.hourofcode.com/#faq). Para calificar, toda tu escuela debe registrarse para la Hora de Programación a más tardar el 14 de noviembre de 2014. Una escuela en cada estado de Estados Unidos, recibirá un conjunto de computadoras para una clase. Code.org seleccionará y notificará a los ganadores vía correo electrónico para el 1ero de diciembre de 2014.
 
 <% end %>

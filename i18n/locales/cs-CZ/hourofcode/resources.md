@@ -1,30 +1,17 @@
 * * *
 
-title: Resources
+title: Resources layout: wide nav: resources_nav
 
-## layout: wide
+* * *
 
 # Zdroje
 
-*   [Handouts to spread the word][1] <br/>
-*   [How-to guide for teachers][2] <br/>
-*   [Posters][3] <br/>
-*   [Videos][4] <br/>
-*   [Sample emails][5] <br/>
-*   [Useful computer science stats][6]   
-    
-*   [Press Kit][7]
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
 
- [1]: #handouts
- [2]: /resources/how-to
- [3]: #posters
- [4]: #videos
- [5]: #sample-emails
- [6]: /resources/stats
- [7]: /resources/press-kit
+<a id="handouts"></p> 
 
-<a id="handouts"></p> <h2>
-  Použíjte tento leták k šíření této zprávy
+<h2>
+  Use this handout to spread the word
 </h2>
 
 <p>
@@ -40,17 +27,21 @@ title: Resources
 </p>
 
 <p>
-  <a id="videos"></p> <h2>
+  <a id="videos"></p> 
+  
+  <h2>
     Show these videos to inspire students
   </h2>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Co většina škol neučí (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hodina kódu je zde - kdokoliv se může učit</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -60,12 +51,14 @@ title: Resources
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Prezident Obama o informatice</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Kdokoliv se může učit (1 minuta)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -78,16 +71,34 @@ title: Resources
   </div>
   
   <p>
-    <a id="posters"></p> <h2>
+    <a id="posters"></p> 
+    
+    <h2>
       Hang these posters in your school
     </h2>
     
+    <p>
+      <% if @country == 'us' %>
+    </p>
+    
     <h4>
-      <a href="http://hourofcode.com/us#signup">Přihlaste se </a> na událost Hodina kódu a my vám namailujeme zdarma plakáty.
+      <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
     </h4>
     
     <p>
-      <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="obrázek" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="obrázek" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="obrázek" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="obrázek" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="obrázek" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="obrázek" /></a>
+      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="obrázek" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="obrázek" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="obrázek" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="obrázek" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="obrázek" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="obrázek" /></a>
+    </p>
+    
+    <p>
+      <a id="banners"></a>
+    </p>
+    
+    <h2>
+      Feature these banners on your website
+    </h2>
+    
+    <p>
+      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -95,7 +106,7 @@ title: Resources
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code.
+      Send these emails to help promote the Hour of Code
     </h2>
     
     <p>
@@ -107,23 +118,27 @@ title: Resources
     </h2>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Dobrou zprávou je, že jsme na cestě jak to změnit. Pokud v loňském roce jste slyšeli o Hodině kódu , možná víte, že vstoupila do dějin. In one week, 15 million students tried computer science!
     </p>
     
     <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Informatika byla na domovských stránkách Google, MSN, Yahoo! a Disney. Prezident Obama, Shakira a Ashton Kutcher odstartovali Hodinu kódu z videí. Přes 100 partnerů se dalo dohromady na podporu tohoto hnutí.
     </p>
     
     <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+      V letošním roce to bude ještě větší. Přidejte se, prosím, na Hodinu kódu 2014. Zapojte se k události Hodina kódu během vzdělávacího týdne informatiky od 8. až 14. prosinci 2014.
     </p>
     
     <p>
-      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
+      Dostanete slovo. Hostit akci. Požádejte místní školu, aby se přihlásila. Nebo zkuste Hodinu kódu sami – každý může využívat výhody se naučit základům.
     </p>
     
     <p>
       Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+    </p>
+    
+    <p>
+      <a id="media-pitch"></a>
     </p>
     
     <h2>
@@ -139,7 +154,7 @@ title: Resources
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      In one week last year, 15 million students tried computer science! Informatika byla na domovských stránkách Google, MSN, Yahoo! a Disney. Prezident Obama, Shakira a Ashton Kutcher odstartovali Hodinu kódu z videí. Přes 100 partnerů se dalo dohromady na podporu tohoto hnutí.
     </p>
     
     <p>

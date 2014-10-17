@@ -81,7 +81,7 @@ angular: teacherDashboard
       //  'query':  {method:'GET', isArray:true},
       //  'remove': {method:'DELETE'},
       //  'delete': {method:'DELETE'} 
-         update: {method:'PATCH'},
+         update: {method:'POST', url: 'v2/sections/:id/update'},
          addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
       });
@@ -96,7 +96,7 @@ angular: teacherDashboard
       //  'query':  {method:'GET', isArray:true},
       //  'remove': {method:'DELETE'},
       //  'delete': {method:'DELETE'} 
-         update: {method:'PATCH'},
+         update: {method:'POST', url: 'v2/students/:id/update'},
       });
     }]);
 
@@ -120,7 +120,8 @@ angular: teacherDashboard
       section.editing = true;
     };
 
-    $scope.genericError = function() {
+    $scope.genericError = function(result) {
+      console.log(result);
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
 
@@ -231,7 +232,8 @@ angular: teacherDashboard
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
 
-    $scope.genericError = function() {
+    $scope.genericError = function(result) {
+      console.log(result);
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
 

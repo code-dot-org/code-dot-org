@@ -1,0 +1,61 @@
+* * *
+
+от: "'Хади Парвати(Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)'тема: Благодаря Ви, че организирате Часът на кодирането! Изглед: няма тема: няма
+
+* * *
+
+<% hostname = CDO.canonical_hostname('hourofcode.com') %>
+
+# Благодаря за регистрирането ви като домакин Часът на кодрането събитие!
+
+**Всеки** организатор на събитие "Часът на кодирането" ще получи 10 GB Dropbox пространство или $10 Skype кредит катоблагодарност.[Details](http://<%= hostname %>/prizes)
+
+<% if @country == 'us' %>
+
+Регистрирайте[ цялото училище](http://<%= hostname %>/whole-school) за възможност да спечелите големите награди.
+
+<% end %>
+
+## Разпространи новината
+
+Кажете на приятелите си за #HourOfCode.
+
+<% if @country == 'us' %>
+
+## 2. Попитайте във вашето училище, дали предлага участие в Часът на кодирането
+
+[S Изпратете този имейл](http://<%= hostname %>/resources#email) или [дайте този материал на вашия директор](http://<%= hostname %>/files/schools-handout.pdf). След като вашето училище е на борда,[вече имате възможност да спечелите $10,000 за технологии](http://<%= hostname %>/prizes) и можете да предизвикате други училища във вашия район да се присъединят.
+
+<% else %>
+
+## 2. Попитайте във вашето училище, дали предлага участие в Часът на кодирането
+
+[ Изпратете този имейл](http://<%= hostname %>/resources#email) или дайте [това изложение](http://<%= hostname %>/files/schools-handout.pdf) на своя ръководител.
+
+<% end %>
+
+## 3. Посъветвайте се с вашия работодател за възможно включване
+
+[Изпратете този имейл](http://<%= hostname %>/resources#email) на вашия ръководител или изпълнителен директор. Или [им дайте това изложение](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+
+## 4. Насърчете включването в Часът на кодирането в рамките на вашата общност
+
+Ангажирайте локална група — момчета от скаутски клуб, църковна общност, университет, група на ветерани или синдикат. Можете да промотирате Часът на кодирането на "block party" във вашия квартал.
+
+## 5 Ангажирайте местната власт в подкрепа на Часът на Кодирането
+
+[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+
+<% if @country == 'ro' %>
+
+Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
+
+Echipa Hour of Code Romania hoc@adfaber.org
+
+<% end %>
+
+* * *
+
+Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+
+![](<%= tracking_pixel %>)

@@ -15,33 +15,50 @@ class Game < ActiveRecord::Base
     @@game_custom_maze ||= find_by_name("CustomMaze")
   end
 
+  UNPLUG = 'unplug'
+  MULTI = 'multi'
+  MATCH = 'match'
+  ARTIST = TURTLE = 'turtle' # heh
+  FLAPPY = 'flappy'
+  BOUNCE = 'bounce'
+  PLAYLAB = STUDIO = 'studio'
+
+  def self.custom_studio
+    @@game_custom_studio ||= find_by_name("CustomStudio")
+  end
+
+  def self.calc
+    @@game_calc ||= find_by_name("Calc")
+  end
+
   def unplugged?
-    app == 'unplug'
+    app == UNPLUG
   end
 
   def multi?
-    app == 'multi'
+    app == MULTI
   end
 
   def match?
-    app == 'match'
+    app == MATCH
   end
 
   def supports_sharing?
-    app == 'turtle' || app == 'flappy' || app == 'bounce' || app == 'studio'
+    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO
   end
 
   def share_mobile_fullscreen?
-    app == 'flappy' || app == 'bounce' || app == 'studio'
+    app == FLAPPY || app == BOUNCE || app == STUDIO
   end
 
   def flappy?
-    app == 'flappy'
+    app == FLAPPY
   end
 
   def self.setup
     transaction do
       # Format: name:app:intro_video
+      # Don't change the order of existing entries! Always append to the end of the list.
       reset_db
       %w(
         Maze:maze:maze_intro
@@ -76,6 +93,9 @@ class Game < ActiveRecord::Base
         Match:match
         Unplugged:unplug
         Wordsearch:wordsearch
+        CustomStudio:studio
+        Calc:calc
+        Webapp:webapp
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

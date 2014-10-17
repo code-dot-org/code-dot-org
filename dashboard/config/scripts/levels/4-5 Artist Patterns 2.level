@@ -12,9 +12,10 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "If you place your square loop inside another loop, we call that a nested loop. What to you need to add to your outer loop to make sure all 15 squares line up next to each other?",
+    "instructions": "If you place your square loop inside another loop, we call that a nested loop. What do you need to add to your outer loop to make sure all 15 squares line up next to each other?",
     "slider_speed": ".8",
-    "ideal": "6"
+    "ideal": "6",
+    "disable_param_editing": "true"
   }
 }]]></config>
   <blocks>

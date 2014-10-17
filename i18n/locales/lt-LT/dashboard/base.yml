@@ -1,123 +1,123 @@
-"lt":
+lt:
   activerecord:
     errors:
       messages:
-        blank: "reikalingas"
+        blank: reikalingas
     attributes:
       user:
-        name: "Rodyti vardą"
-        email: "El. pašto adresas"
-        username: "Naudotojo vardas"
-        password: "Slaptažodis"
-        password_confirmation: "Slaptažodžio patvirtinimas"
-        current_password: "Dabartinis slaptažodis"
-        locale: "Kalba"
-        age: "Amžius"
-        gender: "Lytis"
-        edit_header: "Keisti paskyros duomenis"
+        name: Rodyti vardą
+        email: El. pašto adresas
+        username: Naudotojo vardas
+        password: Slaptažodis
+        password_confirmation: Slaptažodžio patvirtinimas
+        current_password: Dabartinis slaptažodis
+        locale: Kalba
+        age: Amžius
+        gender: Lytis
+        edit_header: Keisti paskyros duomenis
         error:
-          future: "negali būti ateitis"
-  hello: "Sveikas, pasauli"
+          future: negali būti ateitis
+  hello: Sveikas, pasauli
   welcome_back: 'Sveiki sugrįžę, %{name}'
   add_teacher_form:
     code_or_email:
       label: 'Pridėk mokytoją įvedęs kodą arba jo el. pašto adresą:'
-      placeholder: "Kodas (ABCDEF) arba mokytojo el. pašto adresas (mokytojas@paštas.lt)"
+      placeholder: Kodas (ABCDEF) arba mokytojo el. pašto adresas (mokytojas@paštas.lt)
     code:
-      label: 'Pridėk mokytoją pagal sekcijos kodą:'
-      placeholder: "Kodas (ABCDEF)"
-    submit: "Pridėk mokytoją"
+      label: 'Pridėti mokytoją pagal grupės kodą:'
+      placeholder: Kodas (ABCDEF)
+    submit: Pridėk mokytoją
   add_hint_form:
-    placeholder: "Įvesk savo suflerį čia"
-    submit: "Pridėk suflerį"
-  appname: "Code.org"
-  stage: "Etapas"
-  stage_number: 'Stage %{number}'
-  puzzle: "Galvosūkis"
-  trophies: "Laimėjimai"
-  courses: "Kursai"
-  of: "iš"
-  more: "DAUGIAU"
-  less: "MAŽIAU"
+    placeholder: Įvesk savo suflerį čia
+    submit: Pridėk suflerį
+  appname: Code.org
+  stage: Etapas
+  stage_number: 'Etapas %{number}'
+  puzzle: Galvosūkis
+  trophies: Laimėjimai
+  courses: Kursai
+  of: iš
+  more: DAUGIAU
+  less: MAŽIAU
   try_hoc: 'Pamėgink Valandos Kodą, spausk čia >> '
-  try_k8intro: "Išmėginkite mūsų įvadą į informatikos kursus (15-25 valandos)"
-  k8intro: "Įvadas į informatikos kursą (15-25 valandos)"
+  try_k8intro: Išmėginkite mūsų programavimo įvado kursą (15-25 valandos)
+  k8intro: Programavimo įvado kursas (15-25 valandos)
   already_started: 'Jau esate pradėjęs? Tęskite čia >> '
   demos: 'Administratorius: Visos demonstracijos'
-  continue: "Tęsti"
-  prize: "prizas"
-  more_info: "Daugiau informacijos"
+  continue: Tęsti
+  prize: prizas
+  more_info: Daugiau informacijos
   auth:
     sign_in_with: 'Prisijungti naudojant %{provider}'
-    signed_in: "Prisijungta!"
+    signed_in: Prisijungta!
     signed_out: 'Jūs atsijungėte iš <a href="%{url}">Code.org</a>.'
     sign_out_of: 'Prisijungimui jūs panaudojote %{provider}. <a href="%{url}">Spauskite čia</a>, kad atsijungtumėte nuo %{provider}.'
-    already_signedup: "Jau užsiregistravote?"
-    notyet_signedup: "Dar nesate užsiregistravę?"
-    google_oauth2: "Google paskyra"
-    twitter: "Twitter"
-    facebook: "Facebook"
-    windowslive: "Microsoft paskyra"
-    forgot_password: "Užmiršai savo slaptažodį?"
-    need_confirmation: "Negavai patvirtinimo instrukcijų?"
-    need_unlock: "Negavai atrakinimo instrukcijų?"
+    already_signedup: Jau užsiregistravote?
+    notyet_signedup: Dar nesate užsiregistravę?
+    google_oauth2: Google paskyra
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Microsoft paskyra
+    forgot_password: Užmiršai savo slaptažodį?
+    need_confirmation: Negavai patvirtinimo instrukcijų?
+    need_unlock: Negavai atrakinimo instrukcijų?
   signup_form:
     overview_student: 'Užsiregistruok, kad galėtum sekti savo progresą. Tavo el. paštas bus naudojamas, kad galėtum prisijungti bei pasikeisti savo slaptažodį. Daugiau informacijos skaityk <a href="http://code.org/privacy">privatimo politikoje</a>.'
     overview_teacher: 'Mokykite informatikos savo klasėje ir prisiregistruokite. <p/>Galėsite pridėti savo mokinius ir stebėti jų pažangą.'
     no_signup_message: 'Jūs galite <a target="_blank" href="http://learn.code.org"> peržiūrėti įvairius etapus bei galvosūkius </a>, bet Jums reikės prisiregistruoti, kad Jūsų veiksmai išsisaugotų.'
     prizes_message: 'JAV moksleiviai, kurie gauna visus %{num_trophies} laimėjimus, gali išsirinkti įvairius prizus, pavyzdžiui, papildomą vietą Dropbox svetainėje ir t. t.'
-    teacher_educator_guide: "Peržiūrėti pedagogo vadovą"
+    teacher_educator_guide: Peržiūrėti pedagogo vadovą
     teacher_prize_header: 'Laimėkite $1,000 <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> (Tik JAV mokytojams)'
     teacher_prize_message: 'Bendradarbiaujant su <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>, Code.org padovanos $1,000 JAV mokyklų mokytojams, kurių bent 15 mokinių praeis informatikos kurso įvadą (iki 2014 m. birželio 15 d.). <a href="http://code.org/educate/20hr">Peržiūrėkite pedagogų vadovą</a>. (Limitas: $1,000 vienam mokytojui. <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">See FAQ for more limits</a>.)'
-    teacher_pitch: "Mokytojų registracija prie Code.org"
-    teacher_title: "Mokytojų registracija"
-    student_pitch: "Mokinių registracija prie Code.org"
-    student_title: "Mokinių registracija"
-    school_name: "Mokyklos vardas (nebūtina)"
-    school_address: "Mokyklos adresas (nebūtina)"
-    address_placeholder: "adresas, miestas, rajonas, pašto indeksas"
-    gender: "Lytis (neprivaloma)"
-    birthday: "Gimimo data (neprivaloma)"
-    age: "Amžius"
-    submit: "Užsiregistruoti"
-    teacher: "Ar jūs mokytojas?"
-    valid_username: "Galima!"
-    invalid_username: "Naudotojo vardas turi būti ne trumpesnis nei 5 simboliai"
-    taken_username: "Naudotojo vardas jau užimtas"
-    valid_password: "Galiojantis slaptažodis!"
-    invalid_password: "Slaptažodį turi sudaryti mažiausiai 6 simboliai"
-    mismatch_password: "Slaptažodžiai nesutampa"
+    teacher_pitch: Mokytojų registracija prie Code.org
+    teacher_title: Mokytojų registracija
+    student_pitch: Mokinių registracija prie Code.org
+    student_title: Mokinių registracija
+    school_name: Mokyklos vardas (nebūtina)
+    school_address: Mokyklos adresas (nebūtina)
+    address_placeholder: adresas, miestas, rajonas, pašto indeksas
+    gender: Lytis (neprivaloma)
+    birthday: Gimimo data (neprivaloma)
+    age: Amžius
+    submit: Užsiregistruoti
+    teacher: Ar jūs mokytojas?
+    valid_username: Galima!
+    invalid_username: Naudotojo vardas turi būti ne trumpesnis nei 5 simboliai
+    taken_username: Naudotojo vardas jau užimtas
+    valid_password: Galiojantis slaptažodis!
+    invalid_password: Slaptažodį turi sudaryti mažiausiai 6 simboliai
+    mismatch_password: Slaptažodžiai nesutampa
     student_terms: "Aš sutinku su Code.org<a href='http://code.org/tos'>sąlygomis</a>. Jeigu man yra mažiau nei 13 metų, aš patvirtinu, kad turiu savo tėvų ar globejų leidimą naudotis Code.org paslaugomis.<br/>Naudotojams, jaunesniems nei 13 metų, el. pašto adresai nėra išsaugomi taip, kad galėtume su jais susisiekti."
     teacher_terms: "Sutinku su Code.org<a href='http://code.org/tos'>taisyklėmis</a>."
-    additional_information: "Mums reikia papildomos informacijos, kad galėtum prisiregistruoti."
+    additional_information: Mums reikia papildomos informacijos, kad galėtum prisiregistruoti.
   signin_form:
-    title: "Jau esate prisiregistravęs? Prisijunkite"
-    login: "El. pašto adresas arba naudotojo vardas"
-    password: "Slaptažodis"
-    remember: "Prisiminti mane"
-    submit: "Prisijungti"
+    title: Jau esate prisiregistravęs? Prisijunkite
+    login: El. pašto adresas arba naudotojo vardas
+    password: Slaptažodis
+    remember: Prisiminti mane
+    submit: Prisijungti
   signin:
-    try_heading: "Nori išmėginti programavimą neprisiregistravęs?"
-    try_hoc: "Pirmiausia išmėginkite Vienos Valandos Kodą"
-    try_20hours: "Išmėginkite 20-ties valandų įvadą į informatiką"
+    try_heading: Nori išmėginti programavimą neprisiregistravęs?
+    try_hoc: Pirmiausia išmėginkite Kodavimo Valandą
+    try_20hours: Išmėginkite 20-ties valandų įvadą į informatiką
   signinsection:
     welcome: 'Sveiki atvykę į %{section_name}'
-    name: "Pasirink savo vardą"
-    picture: "Atrask savo slaptą paveikslėlį"
-    words: "Įvesk savo slaptus žodžius"
-    login: "Prisijungti"
+    name: Pasirink savo vardą
+    picture: Atrask savo prisijungimo paveikslėlį
+    words: Įvesk savo prisijungimo žodžius
+    login: Prisijungti
   password:
     reset_form:
-      title: "Užmiršai savo slaptažodį?"
-      email: "El. pašto adresas"
-      submit: "Atsiųskite man slaptažodžio pakeitimo instrukciją"
+      title: Užmiršai savo slaptažodį?
+      email: El. pašto adresas
+      submit: Atsiųskite man slaptažodžio pakeitimo instrukciją
     change_form:
-      title: "Pasikeisti slaptažodį"
-      new_password: "Naujas slaptažodis"
-      confirm_password: "Patvirtinkite naują slaptažodį"
-      submit: "Pakeisti mano slaptažodį"
+      title: Pasikeisti slaptažodį
+      new_password: Naujas slaptažodis
+      confirm_password: Patvirtinkite naują slaptažodį
+      submit: Pakeisti mano slaptažodį
   welcome_email:
-    subject: "Prisijungti prie mano klasės (Code.org svetainėje)"
+    subject: Prisijungti prie mano klasės (Code.org svetainėje)
     body: |
       Nuspauskite žemiau esančią nuorodą, kad prisiregistruotumėte prie informatikos įvado Core.org svetainėję (aš būsiu Jūsų „mokytojas“):
       
@@ -127,17 +127,17 @@
       
       %{name}
   follower:
-    invite_sent: "Pakvietimas išsiųstas"
+    invite_sent: Pakvietimas išsiųstas
     added_teacher: '%{name} pridėtas(-a) kaip tavo mokytojas(-a)'
     registered: 'Jūs užsiregistravote į %{section_name}.'
     error:
-      signed_in: "Prieš tęsdami prašome atsijungti"
+      signed_in: Prieš tęsdami prašome atsijungti
       username_not_found: 'Naudotojo vardas %{username} nerastas'
       username_in_use: '%{username} jau užimtas, prašome pasirinkti kitokį'
       no_teacher: "Nepavyko rasti nieko prisijungusio su '%{teacher_email_or_code}'. Prašome paprašyti to žmogaus prisijungti čia ir dabar, o tada mėginkite dar kartą"
-      section_not_found: "Nepavyko rasti sekcijos su kodu '%{section_code}'."
-      blank_code: "Įveskite skyriaus kodą"
-      cant_join_own_section: "Atsiprašome, bet prie savo sekcijos prisijungti negalite."
+      section_not_found: "Nepavyko rasti grupės su kodu '%{section_code}'."
+      blank_code: Įveskite grupės kodą
+      cant_join_own_section: Atsiprašome, bet prie savo grupės prisijungti negalite.
     mail:
       invite_student:
         subject: 'Prisijunk prie klasės su %{teacher_name} Code.org svetainėje!'
@@ -147,47 +147,47 @@
         subject: '%{teacher_name} nebėra pažymėtas kaip tavo mokytojas(-a).'
   reports:
     error:
-      access_denied: "Jūs neturite prieigos prie šio asmens statistikos"
+      access_denied: Jūs neturite prieigos prie šio asmens statistikos
   redeem_prizes:
     title: 'Gauti prizus: %{name}'
     provider: 'Tiekėjas:'
     code: 'Kodas:'
     redeem_header: 'Atsiimti:'
-    donorschoose_register: "Užsiregistruokite kaip mokytojas puslapyje DonorsChoose.org"
-    donorschoose_project: "Rašyti projektą"
-    donorschoose_how_to: "Kaip panaudoti savo kodą"
-    success: "Jūsų prizas buvo sėkmingai atsiimtas, žiūrėkite kodą žemiau."
-    error: "Jūsų prizo nepavyko atsiimti, mėginkite iš naujo."
-    error_us_only: "Premijos siūlymas galioja tik JAV naudotojams."
-    error_not_earned: "Jūs dar negavote šio prizo."
-    error_already_redeemed: "Jūsų prizas jau buvo atsiimtas."
-    no_prizes_available: "Labai atsiprašome, bet šiuo metu neturime prizų."
+    donorschoose_register: Užsiregistruokite kaip mokytojas puslapyje DonorsChoose.org
+    donorschoose_project: Rašyti projektą
+    donorschoose_how_to: Kaip panaudoti savo kodą
+    success: Jūsų prizas buvo sėkmingai atsiimtas, žiūrėkite kodą žemiau.
+    error: Jūsų prizo nepavyko atsiimti, mėginkite iš naujo.
+    error_us_only: Premijos siūlymas galioja tik JAV naudotojams.
+    error_not_earned: Jūs dar negavote šio prizo.
+    error_already_redeemed: Jūsų prizas jau buvo atsiimtas.
+    no_prizes_available: Labai atsiprašome, bet šiuo metu neturime prizų.
     teacher_info_required: 'Mokytojo prizams reikalingas mokyklos pavadinimas ir adresas:'
     teacher_email_required: 'Mokytojo prizams reikia pateikti el. pašto adresą:'
     confirm:
-      title: "Prašome patvirtinti"
+      title: Prašome patvirtinti
       "no": Ne
       "yes": Taip
       msg: 'Ar tikrai norite atsiimti savo %{prize_name} prizą?'
       msg_student: 'PASTABA: Galite pasirinkti tik vienos rūšies prizą.'
-      msg_publicschool: "Patvirtinkite, kad esate JAV mokyklos mokytojas."
-      msg_visit_website: "Eiti į svetainę"
+      msg_publicschool: Patvirtinkite, kad esate JAV mokyklos mokytojas.
+      msg_visit_website: Eiti į svetainę
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
-      donors_choose: "DonorsChoose.org $750 credit"
-      donors_choose_bonus: "DonorsChoose.org $250 credit"
-      dropbox: "10GB Dropbox vietos"
-      valve: "Portal 2 (PC or Mac game download)"
-      ea_bejeweled: "Bejeweled 3 (PC game download)"
-      ea_fifa: "FIFA Soccer 13 (PC game download)"
-      ea_simcity: "SimCity 4 Deluxe Edition (PC game download)"
-      ea_pvz: "Plants vs. Zombies (PC game download)"
-      skype: "$10 Skype credit"
+      apple_itunes: $10 iTunes Gift Card
+      donors_choose: DonorsChoose.org $750 credit
+      donors_choose_bonus: DonorsChoose.org $250 credit
+      dropbox: 10GB Dropbox vietos
+      valve: Portal 2 (PC or Mac game download)
+      ea_bejeweled: Bejeweled 3 (PC game download)
+      ea_fifa: FIFA Soccer 13 (PC game download)
+      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
+      ea_pvz: Plants vs. Zombies (PC game download)
+      skype: $10 Skype credit
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: "Laimėjote prizą! (tik JAV mokiniams)"
-      not_earned_title: "Išspręsk užduotis ir gauk prizus (tik JAV mokiniams)"
+      earned: Laimėjote prizą! (tik JAV mokiniams)
+      not_earned_title: Išspręsk užduotis ir gauk prizus (tik JAV mokiniams)
       not_earned: 'Susipažink su visomis informatikos gudrybėmis, gauk visus %{num_trophies} laimėjimus ir laimėk tikrus prizus. Galima rinktis iš: 10 GB vietos Dropbox svetainėje, 10 Skype kreditų bei kompiuterinių žaidimų. PASTABA: galioja tik JAV moksleiviams.'
       teacher:
         earned: '15 ar daugiau mokinių surinko visus %{num_trophies} laimėjimus. Laimėjote prizą! (tik JAV mokytojams)'
@@ -201,285 +201,292 @@
           not_earned: 'Jei bent 7 Jūsų mokiniai, kurie gaus visus %{num_trophies} laimėjimus, yra mergaitės, Jūsų prizas yra papildomi 250 dolerių <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> svetainėje. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> Šiuos pinigus gali būti panaudoti tik JAV mokytojai.'
   crud:
     new_model: 'Nauja %{model}'
-    show: "Rodyti"
-    edit: "Redaguoti"
+    show: Rodyti
+    edit: Redaguoti
     edit_model: 'Redaguoti %{model}'
-    update: "Atnaujinti"
-    destroy: "Sunaikinti"
-    back: "Atgal"
-    confirm: "Ar esate tuo tikras?"
+    update: Atnaujinti
+    destroy: Sunaikinti
+    back: Atgal
+    confirm: Ar esate tuo tikras?
     created: '%{model} buvo sėkmingai sukurtas.'
     updated: '%{model} buvo sėkmingai atnaujintas.'
     destroyed: '%{model} buvo sėkmingai pašalintas.'
     access_denied: 'Neturite prieigos prie šio %{model}.'
   nav:
     header:
-      finished_hoc: "Aš jau užbaigiau savo Kodavimo Valandą"
-      sign_in_to_save: "Prisijunkite, kad išsaugotumėte savo pažangą"
+      finished_hoc: Aš jau užbaigiau savo Kodavimo Valandą
+      sign_in_to_save: Prisijunkite, kad išsaugotumėte savo pažangą
+      free_play:
+        playlab: Sukurk programėlę
+        artist: Nupiešk ką nors
     user:
-      classroom: "Mano mokiniai"
+      classroom: Mano mokiniai
       label: 'Sveiki, %{username}'
-      stats: "Mano pažanga"
-      settings: "Mano paskyra"
-      prizes: "Prizai"
-      logout: "Atsijungti"
-      signin: "Prisijungti"
-      signup: "Užsiregistruoti"
-      already_registered: "Jau užsiregistravote?"
+      stats: Mano pažanga
+      settings: Mano paskyra
+      prizes: Prizai
+      logout: Atsijungti
+      signin: Prisijungti
+      signup: Užsiregistruoti
+      already_registered: Jau užsiregistravote?
     popup:
-      progress: "Jūsų pažanga"
+      progress: Jūsų pažanga
       lines: 'Iš viso kodo eilučių: %{lines}'
-      close: "UŽDARYTI"
-      mastery: "Laimėjimai"
-      puzzle_map: "Etapai"
+      close: UŽDARYTI
+      mastery: Laimėjimai
+      puzzle_map: Etapai
       prizes: 'Surink visus %{total_trophies} laimėjimus ir laimėk prizus!'
       prize_earned: 'Visi %{total_trophies} laimėjimai surinkti. Laimėjai prizą!'
-      prize_us_only: "(Tik JAV mokiniams)"
-      prizes_link: "daugiau informacijos"
+      prize_us_only: (Tik JAV mokiniams)
+      prizes_link: daugiau informacijos
   teacher:
     title:
       one: 'Tavo mokytojas:'
       other: 'Tavo mokytojai:'
-    remove: "(pašalinti mokytoją)"
+    remove: (pašalinti mokytoją)
     confirm:
-      remove: "Ar tikrai nori pašalinti šį mokytoją?"
-    tools: "Mokytojo įrankiai"
+      remove: Ar tikrai nori pašalinti šį mokytoją?
+    tools: Mokytojo įrankiai
     followers:
-      section: 'Sekcija:'
+      section: 'Grupė:'
       stages: 'Rodyti etapą(-us):'
       show_past: 'Rodyti ankstesnį mokinių aktyvumą (%{bullet_html}):'
-      levels_key: "Lygio raktas"
-      perfect: "Puikiai išspręsta"
-      completed: "Išspręsta, tačiau naudojant per daug blokų"
-      tried: "Bandyta, bet neišspręsta"
-      not_tried: "Dar nebandyta"
+      levels_key: Lygio raktas
+      perfect: Puikiai išspręsta
+      completed: Išspręsta, tačiau naudojant per daug blokų
+      tried: Bandyta, bet neišspręsta
+      not_tried: Dar nebandyta
       activity: 'Rodo mokinių veiklą prieš %{hours}%{plural}'
-      no_section: "Nėra priskirta sekcijai"
-      trophies: "Laimėjimai"
+      no_section: Nepriskirta grupė
+      trophies: Laimėjimai
     students:
-      name: "Vardas"
-      username: "Naudotojo vardas"
-      password: "Slaptažodis"
-      manage: "Redaguoti mokinius"
-      dashboard: "Eiti į mokytojo puslapį"
-      add: "Pridėti mokinius"
-      remove: "pašalinti mokinį"
-      confirm_remove: "Ar tikrai norite pašalinti šį mokinį?"
-      help_reassign: "Kad padalytumėte savo klasę į keletą sekcijų, pažymėkite mokinius ir priskirkite jiems naują sekciją."
-      help_register: "Vietoj to, kad praleistumėte daug laiko, kad gauti mokinių duomenis, Jūs galite paprašyti mokinių, kad jie prisiregistruotų. Jūsų mokiniai turės susigalvoti prisijungimo vardus ir slaptažodžius ir jiems NEREIKĖS įvesti el. pašto adreso. Jeigu mokinys užmirš savo slaptažodį, galėsite jam jį pakeisti."
-      register: "Paprašykite, kad mokiniai prisiregistruotų patys"
-      vist: "Pasakykite, kad Jūsų mokiniai apsilankytų"
-      section_code: 'ir įvestų savo sekcijos kodą:'
-      first_please: 'Visų pirma prašome %{add_section}'
-      for: "Už"
+      name: Vardas
+      username: Naudotojo vardas
+      password: Slaptažodis
+      manage: Tvarkyti ir pridėti mokinius
+      dashboard: Eiti į mokytojo puslapį
+      add: Pridėti mokinius
+      remove: pašalinti mokinį
+      confirm_remove: Ar tikrai norite pašalinti šį mokinį?
+      help_reassign: 'Kad padalytumėte savo klasę į keletą grupių, pažymėkite mokinius ir priskirkite jiems  grupę.'
+      help_register: Vietoj to, kad praleistumėte daug laiko, kad gauti mokinių duomenis, Jūs galite paprašyti mokinių, kad jie prisiregistruotų. Jūsų mokiniai turės susigalvoti prisijungimo vardus ir slaptažodžius ir jiems NEREIKĖS įvesti el. pašto adreso. Jeigu mokinys užmirš savo slaptažodį, galėsite jam jį pakeisti.
+      register: Paprašykite, kad mokiniai prisiregistruotų patys
+      vist: Pasakykite, kad Jūsų mokiniai apsilankytų
+      section_code: 'ir įvestų savo grupės kodą:'
+      first_please: 'Visų pirma  %{add_section}'
+      for: Už
       enter: 'įveskite:'
     sections:
-      add: "Pridėti sekciją"
-      manage: "Valdyti skyrius"
-      section: "Sekcija"
-      students: "Mokiniai"
-      section_code: "Sekcijos kodas"
-      add_section_code: "Pridėti mokinių sekcijos kodą"
-      secret: "Paslapties tipas"
-      grade: "Klasė"
-      course: "Kursas"
-      rename: "pervadinti"
-      edit: "redaguoti"
-      delete: "pašalinti"
-      confirm_delete: "Ar tikrai norite pašalinti šią sekciją?"
-      email: "Siųsti el. paštu"
-    rollup: "Mokinių pažanga"
-    activity: "Paskutinė klasės veikla"
-    user_not_found: "Mokytojo arba mokinio nepavyko rasti"
+      add: Pridėti grupę
+      manage: Tvarkyti grupes
+      section: Grupė
+      students: Mokiniai
+      section_code: Sekcijos kodas
+      add_section_code: Pridėti grupės kodą
+      secret: Prisijungimo rakto tipas
+      grade: Klasė
+      course: Kursas
+      rename: pervadinti
+      edit: redaguoti
+      delete: pašalinti
+      confirm_delete: Ar tikrai norite pašalinti šią grupę?
+      email: Siųsti el. paštu
+    rollup: Mokinių pažanga
+    activity: Paskutinė klasės veikla
+    user_not_found: Mokytojo arba mokinio nepavyko rasti
     cant_remove_student_no_email: '%{student_name} negalima pašalinti, nes %{student_name} neprisiregistravo su el. pašto adresu'
     cant_remove_teacher_no_email: '%{teacher_name} negalima pašalinti, nes tu neprisiregistravai su savo el. pašto adresu'
     student_teacher_disassociated: '%{teacher_name} buvo pašalintas %{student_name}'
   user:
     email_confirm_needed: 'El. pašto adresas nebuvo patvirtintas:'
-    email_resend_confirm: "Persiųsti iš naujo patvirtinimo instrukciją"
-    new_password_hint: "(palikite tuščią, jei nenorite pakeisti)"
-    current_password_hint: "(įveskite dabartinį slaptažodį, kad išsaugoti pakeitimus)"
+    email_resend_confirm: Persiųsti iš naujo patvirtinimo instrukciją
+    new_password_hint: (palikite tuščią, jei nenorite pakeisti)
+    current_password_hint: (įveskite dabartinį slaptažodį, kad išsaugoti pakeitimus)
     cancel:
-      title: "Panaikinti mano paskyrą"
-      hint: "Nepatenkintas?"
-      button: "Panaikinti mano paskyrą"
+      title: Panaikinti mano paskyrą
+      hint: Nepatenkintas?
+      button: Panaikinti mano paskyrą
   user_level:
-    completed: "Baigta"
-    tried: "Išbandyta"
+    completed: Baigta
+    tried: Išbandyta
   user_stats:
-    recent_activity: "Neseniai atlikta veikla"
-    show_more: "Rodyti daugiau"
-    classroom_activity: "Vaizdo įrašas mokytojams"
+    recent_activity: Neseniai atlikta veikla
+    show_more: Rodyti daugiau
+    classroom_activity: Vaizdo įrašas mokytojams
   home:
-    title: "Studio Kodas"
-    all_courses: "Overview of Courses 1, 2, and 3"
-    lesson_plans: "Lesson plans"
+    title: Studio Kodas
+    all_courses: 1, 2 ir 3 kursų apžvalga
+    lesson_plans: Pamokų planai
     signin_message: 'Jau užsiregistravote? %{link}'
-    student_reg_link: "Mokinių registracija"
-    teacher_reg_link: "Mokytojų registracija"
+    student_reg_link: Mokinių registracija
+    teacher_reg_link: Mokytojų registracija
     signin_directions: 'Naudokite savo paskyrą, kad stebėtumėte savo pažangą. <br/> Mokytojai gali stebėti visos klasės pažangą.'
-    teacher_dashboard: "Peržiūrėti pažangą"
+    teacher_dashboard: Peržiūrėti pažangą
     teacher_student_count_one: 'Jūs turite %{count} mokinį.'
     teacher_student_count: 'Jūs turite %{count} mokinių.'
     teacher_averages: 'Vidutiniškai Jūsų mokiniai gavo %{trophy_average} iš %{trophy_max} "Concept Mastery" laimėjimus(-ų).'
-    teacher_print_certificates: "Išspausdinkite sertifikatus mokiniams, kurie užbaigs šias pamokėles"
-    teacher_read_blog: "Informaciją apie naujienas rasite Pedagogų Tinklaraštyje"
-    classroom: "Jūsų klasė"
-    student_progress: "Tavo mokymosi pažanga"
+    teacher_print_certificates: Išspausdinkite sertifikatus mokiniams, kurie užbaigs šias pamokėles
+    teacher_read_blog: Informaciją apie naujienas rasite Pedagogų Tinklaraštyje
+    classroom: Jūsų klasė
+    student_progress: Tavo mokymosi pažanga
     student_stats: 'Tu gavai %{trophy_count} iš %{trophy_max} "Concept Mastery" laimėjimus(-ų).'
     student_left_off: 'Kur baigei paskutinį kartą:'
     student_finished_prize: 'Jūs baigėte visas pamokėles, gaukite prizą %{prize_link} ir pasirinkite kitas pamokėles %{online_link} arba %{local_school_link}'
     student_finished: 'Jūs baigėte visas pamokėles, išmėginkite kitas pamokas %{online_link} arba %{local_school_link}'
-    local_school: "vietinėje mokykloje"
-    online: "internetu"
-    see_details: "Peržiūrėti informaciją"
+    local_school: vietinėje mokykloje
+    online: internetu
+    see_details: Peržiūrėti informaciją
     prize_info: 'Prizai už dalyvavimą (tik JAV mokytojams): iki 1000 dolerių vienai klasei.'
     tryfirst: 'Arba iš pradžių galite pamėginti, o prisiregistruoti vėliau:'
-    trynow: "Išmėginkite dabar"
-    add_hint_help: "Padėkite mums sukurti gudrius suflerius Code.org pamokėlėms"
-    20hour_overview: "Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet kurioje amžiaus grupėje."
-    test_videos_help: "Išbandykite mūsų naują vaizdo grotuvą savo mokykloje"
-    try_beta_courses: "Naujiena! Išmėginkite beta kursą pradinukams"
-    use_as_teacher: "Naudokite šią svetainę kaip mokytojas"
+    trynow: Išmėginkite dabar
+    add_hint_help: Padėkite mums sukurti gudrius suflerius Code.org pamokėlėms
+    20hour_overview: Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet kurioje amžiaus grupėje.
+    test_videos_help: Išbandykite mūsų naują vaizdo grotuvą savo mokykloje
+    try_beta_courses: Naujiena! Išmėginkite testuojamus kursus pradinukams
+    use_as_teacher: Naudokite šią svetainę kaip mokytojas
     heading_elementary: '<h2>20 valandų kursas </h2><h1>pradinių klasių mokiniams</h1>'
     heading_apps: '<h2>Smagumynai</h2><h1>visiems</h1>'
     heading_legacy: '<h2>Mūsų bendri kursai</h2><h1>visoms amžių grupėms</h1>'
   gender:
-    male: "Vyras"
-    female: "Moteris"
-    none: "Nenoriu atsakyti"
+    male: Vyras
+    female: Moteris
+    none: Nenoriu atsakyti
   footer:
-    help_from_html: "Google, Microsoft, Facebook ir Twitter inžinieriai padėjo sukurti šias pamokėles."
+    help_from_html: Google, Microsoft, Facebook ir Twitter inžinieriai padėjo sukurti šias pamokėles.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Visos teisės saugomos.<br/>Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Visos teisės saugomos.'
-    feedback: "Pateikti atsiliepimus"
-    translate: "Padėkite mums išversti į savo kalbą"
-    support: "Parama"
-    support_url: "http://support.code.org"
-    tos: "Terminai"
-    privacy: "Privatumo politika"
-    secure: "Saugi versija"
+    feedback: Pateikti atsiliepimus
+    translate: Padėkite mums išversti į savo kalbą
+    support: Pagalba
+    support_url: http://support.code.org
+    tos: Naudojimo taisyklės
+    privacy: Privatumo politika
+    secure: Saugaus ryšio versija
   prize_mail:
     prize_earned:
-      subject: "Redeem your prize at Code.org!"
+      subject: Redeem your prize at Code.org!
     teacher_prize_earned:
-      subject: "Code.org sveikinimai!"
+      subject: Code.org sveikinimai!
     teacher_bonus_prize_earned:
-      subject: "Redeem your bonus prize at Code.org!"
+      subject: Redeem your bonus prize at Code.org!
   reference_area:
-    title: "Reikia pagalbos?"
-    subtitle: "Peržiūrėkite šiuos vaizdo įrašus bei patarimus"
-    teacher: "Peržiūrėti sprendimą"
-    auth_error: "Jums neleidžiama pamatyti sprendimo."
-    submit: "Atnaujinti menininko padėtį"
-    direction: "Pradžios kryptis"
+    title: Reikia pagalbos?
+    subtitle: Peržiūrėkite šiuos vaizdo įrašus bei patarimus
+    teacher: Peržiūrėti sprendimą
+    auth_error: Jums neleidžiama pamatyti sprendimo.
+    submit: Atnaujinti menininko padėtį
+    direction: Pradžios kryptis
   video:
-    tab: "Vaizdo įrašas."
-    notes: "Nerodo vaizdo? Rodyti tekstą."
-    notes_coming_soon: "Šiam vaizdo įrašui dar nėra pastabų."
-    autoplay_option: "Automatiškas vaizdo įrašų paleidimas"
-    download: "Atsisiųsti vaizdo įrašą"
+    tab: Vaizdo įrašas.
+    notes: Nerodo vaizdo? Rodyti tekstą.
+    notes_coming_soon: Šiam vaizdo įrašui dar nėra pastabų.
+    autoplay_option: Automatiškas vaizdo įrašų paleidimas
+    download: Atsisiųsti vaizdo įrašą
   compatability:
     working:
-      header: "We are working on support for your browser."
-      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
-      hide_this_warning: "Hide this warning"
+      header: Mes dirbame, kad būtų palaikoma Jūsų naršyklė.
+      message: "Code.org naudoja šiuolaikines interneto technologijas, kurios šią svetainę padaro greitesne. Jūsų naršyklė nepalaiko šių technologijų, todėl Jūs galite susidurti su problemomis. Prašome pranešti <a href='%{report_issue_url}'>apie pastebėtas klaidas</a>. Taip pat galite <a href='%{supported_browsers_url}'>atnaujinti savo naršyklę</a>."
+      hide_this_warning: Slėpti šį įspėjimą
     upgrade:
-      header: "Please upgrade your browser."
-      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
-      button: "Take me to the list of supported browsers"
-  slow_loading: "Tai trunka ilgiau nei įprasta..."
-  try_reloading: "Pabandykite perkrauti puslapį"
-  next_stage: "Baigta! Pereikite į kitą etapą"
-  download_pdf: "Atviros pamokos planas"
-  view_lesson_plan: "Peržiūrėti pamokos planą"
-  pdf_download: "Parsisiųsti PDF"
+      header: Prašome atnaujinti savo naršyklę.
+      message: "Code.org naudoja šiuolaikines interneto technologijas, kurios šią svetainę padaro greitesne. Jūsų naršyklė nepalaiko šių technologijų.<br/><br/>Įsidiekite į savo kompiuterį naršyklę iš mūsų paruošto sąrašo ir teskite. Galite mėginti su savo naršykle<a href='#'>naršyti šiame puslapyje</a>, bet galite susidurti su problemomis."
+      button: Perkelkite mane į palaikomų interneto naršyklių sąrašą
+  slow_loading: Tai trunka ilgiau nei įprasta...
+  try_reloading: Pabandykite perkrauti puslapį
+  next_stage: Baigta! Pereikite į kitą etapą
+  download_pdf: Atviros pamokos planas
+  view_lesson_plan: Peržiūrėti pamokos planą
+  pdf_download: Parsisiųsti PDF
   share_code:
-    title: "Nuspausk „Paleisti“, kad programa būtų įvykdyta"
-    bounce_og_title: "Peržiūrėk mano Bounce žaidimą"
-    flappy_og_title: "Išmėginkite žaidimą my Flappy Game"
-    studio_og_title: "Check out my Play Lab App"
-    og_description: "Aš pats parašiau kodą Code.org svetainėje"
+    title: Nuspausk „Paleisti“, kad programa būtų įvykdyta
+    bounce_og_title: Peržiūrėk mano Bounce žaidimą
+    flappy_og_title: Išmėginkite žaidimą my Flappy Game
+    studio_og_title: Peržiūrėk mano istoriją
+    og_description: Aš pats parašiau kodą Code.org svetainėje
+    phone_number_not_allowed: Panašu, kad yra įrašytas kažkieno telefono numeris. Pakeisk tekstą.
+    address_not_allowed: Panašu, kad yra parašytas kažkieno adresas. Pakeisk tekstą.
+    email_not_allowed: Panašu, kad yra įrašytas kažkieno el. pašto adresas. Pakeisk tekstą.
+    profanity_not_allowed: Panašu, kad yra parašyta negražių žodžių. Pakeisk juos.
   builder:
-    created: "Jūs sukūrėte naują scenarijų."
-    destroyed: "Jūs sunaikinote scenarijų."
-    manage: "Sukurti etapus"
-    view: "Žiūrėti"
-    back: "Atgal į scenarijus"
-    success: "Tu sėkmingai redagavai blokus."
+    created: Jūs sukūrėte naują scenarijų.
+    destroyed: Jūs sunaikinote scenarijų.
+    manage: Sukurti etapus
+    view: Žiūrėti
+    back: Atgal į scenarijus
+    success: Tu sėkmingai redagavai blokus.
     level:
-      create: "Sukurti naują lygį"
-      current: "Dabartinis lygis"
-      unused: "Nepanaudoti lygiai"
+      create: Sukurti naują lygį
+      current: Dabartinis lygis
+      unused: Nepanaudoti lygiai
   upsell:
     hoc:
-      title: "Vienos Valandos Kodas"
-      body: "Išmėginkite informatikos pagrindus. Juos išbandė jau milijonai žmonių."
+      title: „Programavimo valanda“
+      body: Išmėginkite programavimo pagrindus. Juos išbandė jau milijonai žmonių.
     flappy:
-      title: "Flappy Kodas"
-      body: "Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy Code pamokėles!"
+      title: Flappy Kodas
+      body: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy Code pamokėles!
     20hour:
-      title: "Įvadiniai kursai"
-      body: "Išmėginkite mūsų 20-ties valandų įvadą į informatiką."
+      title: Įvadiniai kursai
+      body: Išmėginkite mūsų 20-ties valandų įvadą į programavimą.
   gallery:
-    students_drew_these_with_code: "Mokiniai nupiešė juos parašę kodą!"
+    students_drew_these_with_code: Mokiniai nupiešė juos parašę kodą!
     picture_count: 'Šiomis <b>%{days}</b> dienomis, mokiniai nupiešė <b>%{count}</b> piešinių parašydami savo kompiuterines programas. Nuspausk ant šių piešinių, kad pamatytum parašytas programas.'
-    want_to_make_your_own: "Norėtum sukurti savo?"
+    want_to_make_your_own: Norėtum sukurti savo?
     more: 'Daugiau &rarr;'
   landing:
     prerelease: "Šis kursas yra <span class='betatext'>beta</span>. Tai reiškia, kad tai nėra galutinis šio kurso variantas ir jis dar yra tobulinamas."
-    feedback: "Pateikti atsiliepimus"
-    report_bug: "Pranešti apie problemą"
-    support: "Pagalba"
-    support_url: "//support.code.org"
+    feedback: Pateikti atsiliepimus
+    report_bug: Pranešti apie problemą
+    support: Pagalba
+    support_url: //support.code.org
   multi:
-    wrong_title: "Neteisingas atsakymas"
-    wrong_body: "Atsakymas, kurį įvedei, nėra teisingas. Pabandyk dar kartą!"
-    correct_title: "Teisingai"
-    correct_body: "Tai yra teisingas atsakymas."
+    wrong_title: Neteisingas atsakymas
+    wrong_body: Atsakymas, kurį įvedei, nėra teisingas. Pabandyk dar kartą!
+    correct_title: Teisingai
+    correct_body: Tai yra teisingas atsakymas.
   match:
-    wrong_title: "Neteisingas sprendimas"
-    wrong_body: "Sprendimas, kurį įvedei, nėra teisingas. Pamėgink dar kartą!"
-    correct_title: "Teisingai"
-    correct_body: "Tai yra teisingas atsakymas."
+    wrong_title: Neteisingas sprendimas
+    wrong_body: Sprendimas, kurį įvedei, nėra teisingas. Pamėgink dar kartą!
+    correct_title: Teisingai
+    correct_body: Tai yra teisingas atsakymas.
   dialog:
-    ok: "Gerai"
+    ok: Gerai
   time:
-    hour: "1 val"
-    day: "diena"
-    week: "savaitė"
+    hour: 1 val
+    day: diena
+    week: savaitė
   data:
     script:
       name:
         20-hour:
-          title: "Įvadas į informatikos kursą (15-25 valandos)"
-          description: "Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet kurioje amžiaus grupėje."
+          title: Programavimo įvado kursas (15-25 valandos)
+          description: Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet kurioje amžiaus grupėje.
         Hour of Code:
-          title: "Vienos Valandos Kodas"
+          title: „Programavimo valanda“
           description: ""
         edit-code:
-          title: "Redaguoti kodą"
+          title: Redaguoti kodą
           description: ""
         events:
-          title: "Įvykiai"
+          title: Įvykiai
           description: ""
         builder:
-          title: "Kūrimas"
+          title: Kūrimas
           description: ""
         flappy:
-          title: "Flappy kodas"
-          description: "Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy Code pamokėles!"
+          title: Flappy kodas
+          description: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy Code pamokėles!
         jigsaw:
-          title: "Dėlionės"
+          title: Dėlionės
           description: ""
         step:
-          title: "Žingsnis"
+          title: Žingsnis
           description: ""
         sample_level_builder:
-          title: "Pavyzdinis lygio kūrimas"
+          title: Pavyzdinis lygio kūrimas
           description: ""
   age_interstitial:
-    age: "Tavo amžius"
-    header: "Paskyros informacijos atnaujinimas"
+    age: Tavo amžius
+    header: Paskyros informacijos atnaujinimas
     message: 'Šiuo metu mes atnaujiname privatumo apsaugą, kad Jūsų duomenys būtų dar saugesni. Norėdami tai padaryti, mums reikia, kad visi naudotojai įvestų savo amžių.<br/>Kaip ir visuomet, code.org niekada neparduos ir neišduos Jūsų asmeninių duomenų tretiesiems asmenims.'
     sign_out: 'Jeigu nenori skelbti savo amžiaus, gali <a href="%{url}">atsijungti</a>.'
   zendesk_too_young_message: 'Atsiprašome, jaunesnio amžiaus naudotojai negali prisijungti prie mūsų palaikymo svetainės. Galite peržiūrėti <a href="http://support.code.org"> support.code.org</a> nesiregistruojant arba paklausti savo tėvų ar mokytojų, kad susisiektų su mumis už jus.'

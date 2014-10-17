@@ -24,7 +24,7 @@
           Multi & Match: Multi & Match
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy be blokelių
-          title: Kursas 1
+          title: Kursas 1 - tik pradedantiems skaityti
           Artist 2: Menininkas 2
           Happy Maps: Laimingieji žemėlapiai
           Move it, Move it: Judėk, judėk
@@ -56,7 +56,7 @@
           Artist Loops: 'Menininkas: kartojimas'
           Bee Conditionals: 'Bitė: sąlyginiai sakiniai'
           Flappy: Flappy
-          title: 2 etapas
+          title: Kursas 2
           Bee Loops: 'Bitė: kartojimas'
           Artist Functions: 'Menininkas: funkcijos'
           The Artist Debugging: 'Menininkas: klaidų ieškojimas'
@@ -84,21 +84,21 @@
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
           'Artist: Debugging': 'Menininkas: klaidų ieškojimas'
           'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
-          description_short: 2 etapas yra skirtas mokiniams, kurie jau moka skaityti
-            – pradinukams ir šiek tiek vyresniems.
+          description_short: Kursas 2 yra skirtas mokiniams, kurie jau moka skaityti
+            – pradinukams 2-5 klasėms.
           'Artist: Sequence2': 'Menininkas: seka2'
           'Maze: Sequence2': 'Labirintas: seka2'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
         course3:
           The Maze: Labirintas
           'Studio: Create a Story': 'Laboratorija: sukurk istoriją'
           The Artist: Menininkas
-          title: 3 etapas
+          title: Kursas 3
           Artist Functions: 'Menininkas: funkcijos'
-          Artist For Loops: Artist For Loops
-          Artist Nested Loops: Artist Nested Loops
+          Artist For Loops: 'Menininkas: kartojimai'
+          Artist Nested Loops: 'Menininkas: kartojimas kartojime'
           Bee Conditionals: 'Bitė: sąlyginiai sakiniai'
-          Bee Nested Loops: Bee Nested Loops
+          Bee Nested Loops: 'Bitė: kartojimas kartojime'
           Bee Debuggin: 'Bitė: klaidų ieškojimas'
           Bee Debugging: 'Bitė: klaidų ieškojimas'
           Bee Functions: 'Bitė: sudėtinės komandos'
@@ -114,10 +114,7 @@
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Virtuali pilietybė
           Farmer - While Loops: "Ūkininkas: kartojimas"
-          description: Students taking Course 3 should have already taken Course 2.  Students
-            create programs with different kinds of loops, events, functions, and
-            conditions.  By the end of the course, create your very own interactive
-            game or story that you can share with anyone.
+          description: Kursas 3 skirtas tiems, kas pabaigė Kursą 2.
           'Studio: Create a Game': 'Laboratorija: sukurk žaidimą'
           Maze: Labirintas
           Artist: Menininkas
@@ -125,9 +122,9 @@
           'Bee: Functions': 'Bitė: sudėtinės komandos'
           'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
           'Maze: Conditionals': 'Labirintas: sąlyginiai sakiniai'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
           'Farmer: While Loops': "Ūkininkas: kartojimas"
-          'Bee: Nested Loops': 'Bee: Nested Loops'
+          'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
           description_short: Mokiniai, einantys 3 etapą, turi būti praėję 2 etapą.
           Maze2: Labirintas2
@@ -136,9 +133,9 @@
           'Bee: Functions2': 'Bitė: sudėtinės komandos2'
           'Bee: Conditionals2': 'Bitė: sąlyginiai sakiniai2'
           'Maze: Conditionals2': 'Labirintas: sąlyginiai sakiniai2'
-          'Artist: Nested Loops2': 'Artist: Nested Loops2'
+          'Artist: Nested Loops2': 'Menininkas: Kartojimas kartojime'
           'Farmer: While Loops2': "Ūkininkas: kartojimas2"
-          'Bee: Nested Loops2': 'Bee: Nested Loops2'
+          'Bee: Nested Loops2': 'Bitė: kartojimas kartojime'
           'Bee: Debugging2': 'Bitė: klaidų ieškojimas2'
           'Artist: Patterns': 'Artist: Patterns'
         msm:

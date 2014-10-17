@@ -70,6 +70,11 @@ class UserTest < ActiveSupport::TestCase
     assert user.errors.messages.length == 1
   end
 
+  test "cannot create user with no name" do
+    user = User.create(@good_data.merge(name: nil))
+    assert user.errors.messages.length == 1
+  end
+
   test "cannot create user with invalid type" do
     user = User.create(@good_data.merge(user_type: 'xxxxx'))
     assert user.errors.messages.length == 1
@@ -272,6 +277,16 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'some', create(:user, :name => '  some whitespace in front  ').short_name # whitespace in front
   end
 
+
+  test "initial" do
+    assert_equal 'L', create(:user, :name => 'Laurel Fan', :username => 'laurelfan').initial # first name last name
+    assert_equal 'W', create(:user, :name => 'Winnie the Pooh').initial # middle name
+    assert_equal "D", create(:user, :name => "D'Andre Means").initial # punctuation ok
+    assert_equal '樊', create(:user, :name => '樊瑞').initial # ok, this isn't actually right but ok for now
+    assert_equal 'L', create(:user, :name => 'Laurel').initial # just one name
+    assert_equal 'S', create(:user, :name => '  some whitespace in front  ').initial # whitespace in front
+  end
+
   test "find_for_authentication with nonsense" do
     # login by username still works
     user = create :user, username: 'blahblah'
@@ -291,9 +306,9 @@ class UserTest < ActiveSupport::TestCase
     # this used to raise a mysql error, now we sanitize it into a nonsense string
   end
 
-  test "cannot create manual provider user without username" do
+  test "creating manual provider user without username generates username" do
     user = User.create(@good_data.merge({username: nil, provider: User::PROVIDER_MANUAL}))
-    assert_equal ["Username is required"], user.errors.full_messages
+    assert_equal 'tester', user.username
   end
 
   test 'can get next unfinished level if not completed any unplugged levels' do
@@ -779,5 +794,57 @@ class UserTest < ActiveSupport::TestCase
     assert_equal nil, User.normalize_gender('some nonsense')
     assert_equal nil, User.normalize_gender('')
     assert_equal nil, User.normalize_gender(nil)
+  end
+
+  test 'generate username' do
+    # username regex: /\A[a-z0-9\-\_\.]+\z/
+
+    # new name
+    assert_equal 'captain_picard', User.generate_username("Captain Picard")
+
+    create(:user, username: 'captain_picard')
+    # first prefix
+    assert_equal 'captain_picard1', User.generate_username("Captain Picard")
+
+    # collisions are not numeric
+    assert_equal 'captain', User.generate_username("Captain")
+    assert_equal 'captain_p', User.generate_username("Captain    P")
+
+    create(:user, username: 'captain')
+    create(:user, username: 'captain1')
+    create(:user, username: 'captain2')
+    create(:user, username: 'captain55')
+
+    assert_equal 'captain56', User.generate_username("Captain")
+
+    assert_equal "d_andre_means", User.generate_username("D'Andre Means")
+    assert_equal "coder", User.generate_username('樊瑞')
+
+    create(:user, username: 'coder')
+    create(:user, username: 'coder1')
+    create(:user, username: 'coder99')
+    create(:user, username: 'coder556')
+    assert_equal "coder557", User.generate_username('樊瑞')
+
+    # short names
+    assert_equal "coder_a", User.generate_username('a')
+
+    # long names
+    assert_equal "this_is_a_really", User.generate_username('This is a really long name' + ' blah' * 10)
+
+    # parens
+    assert_equal "kermit_the_frog", User.generate_username("Kermit (the frog)")
+  end
+
+  test 'generates usernames' do
+    names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', '樊瑞', 'فاطمة بنت أسد', 'this is a really long name blah blah blah blah blah blah']
+    expected_usernames = ['coder_a', 'coder_b', 'captain_picard', 'captain_picard1', 'captain_picard2', 'coder', 'coder1', 'this_is_a_really']
+
+    i = 0
+    users = names.map do |name|
+      User.create!(@good_data.merge(name: name, email: "test_email#{i+=1}@test.xx")) # use real create method not the factory
+    end
+    
+    assert_equal expected_usernames, users.collect(&:username)
   end
 end

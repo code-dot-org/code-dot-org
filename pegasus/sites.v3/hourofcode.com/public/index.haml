@@ -9,15 +9,14 @@ social:
   "og:image:width": 1705
   "og:image:height": 949
   "og:url": "http://<%=request.host%>"
-  "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
 
   "twitter:card": player
   "twitter:site": "@codeorg"
   "twitter:url": "http://<%=request.host%>"
   "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg"
-  "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
+  "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg?123"
+  "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=1'
   "twitter:player:width": 1920
   "twitter:player:height": 1080
 ---
@@ -29,8 +28,8 @@ social:
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
-%script{type: "text/javascript", src: "/js/selectize.min.js"}
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
+%script{type: "text/javascript", src: "/js/markerclusterer_packed.js"}
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 
@@ -64,7 +63,7 @@ social:
 
     .container
       .row
-        .col-sm-8.col-xs-12
+        .col-sm-6.col-xs-12.col-md-7
           #leftbox{style: "position:relative; margin-top:50px; padding-bottom:20px; /*background-color:rgba(0,0,0,0.5);*/"}
 
             #leftvideo{style: "/*position:absolute; left:0; top:0; */ width: 100%; /* margin-top:50px*/"}
@@ -75,17 +74,45 @@ social:
             #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; /*margin-top:100px; */ width:100%"}
               %h1.front-header-banner{style: "color:white; text-shadow: 0px 0px 4px rgba(31, 31, 31, 1); margin-top: 0px; margin-bottom:10px; padding:20px"}=hoc_s(:front_watch_video) 
               %img{src: "/images/play-button.png", width: "120", onclick: "return startVideo();", style: "cursor: pointer"}
-        .col-sm-4.col-xs-12
-          #textbacking{style: "color:white; text-align: center; background-color:rgba(0,0,0,0.5); margin-top:50px; padding: 20px"}
+        .col-sm-6.col-xs-12.col-md-5
+          #textbacking{style: "color:white; background-color:rgba(0,0,0,0.5); margin-top:50px; padding: 20px; border-radius: 17px"}
             %h1.front-header-banner{style: "color:white; margin-top:0px"}= hoc_s(:front_header_banner)
-            #joinus{style: "text-align:center"}
-              %a{onclick: "return adjustScroll('joinusarea')"}
-                %button.btn.btn-default{style: "font-size: 24px; font-weight: 500; width: 180px; height: 50px;"}
-                  =hoc_s(:front_join_us_button)
-            #trylastyear{style: "margin-top:20px"}
-              %a{onclick: "return adjustScroll('whatishoc')", target: "_blank", style: "color:white; font-weight:500; cursor: pointer"}=hoc_s(:hoc_faq_what_is_hoc_q)
-            %br/
-            =view :share_buttons, facebook:facebook, twitter:twitter
+            #joinustext{style: "font-size: 18px; font-weight: 500"}
+              %div{style: "width: 44%; float:left; padding-right: 5px; padding-top:10px; text-align:right; clear:both"}
+                =hoc_s(:front_join_us_students)
+                &nbsp;
+
+              %div{style: "width: 56%; float:left;"}
+                -#%a{href: "http://#{canonical_hostname('code.org')}/learn", target: "_blank", style: "text-decoration:none"}
+                %button.btn.btn-default#trybutton{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;", onclick: "ga('send','event','button','click',{eventLabel:'hoc_try', hitCallback: function() { window.location.href = 'http://#{canonical_hostname('code.org')}/learn'; }});"}
+                  =hoc_s(:front_join_us_try)
+                %br/
+                %br/
+
+              %div{style: "width: 44%; float:left; padding-right: 5px; padding-top:10px; text-align:right; clear:both"}
+                =hoc_s(:front_join_us_teachers)
+                &nbsp;
+              %div{style: "width: 56%; float:left;"}
+                -#%a{onclick: "return adjustScroll('join')", style: "text-decoration:none"}
+                %button.btn.btn-default#hostbutton{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;", onclick: "ga('send','event','button','click',{eventLabel:'hoc_host', hitCallback: function() { adjustScroll('join'); }});"}
+                  =hoc_s(:front_join_us_host)
+                %br/
+                %br/
+
+              %div{style: "width: 44%; float:left; padding-right: 5px; padding-top:10px; text-align:right; clear:both"}
+                =hoc_s(:front_join_us_everyone)
+                &nbsp;
+              %div{style: "width: 56%; float:left; "}
+                -#%a{href: "http://#{canonical_hostname('code.org')}/donate", target: "_blank", style: "text-decoration:none"}
+                %button.btn.btn-default#supportbutton{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;", onclick: "ga('send','event','button','click',{eventLabel:'hoc_support', hitCallback: function() { window.location.href = 'http://#{canonical_hostname('code.org')}/donate'; }});"}
+                  =hoc_s(:front_join_us_support)
+              &nbsp;
+
+            #remainder{style: "text-align:center"}
+              #trylastyear{style: "margin-top:20px"}
+                %a{onclick: "return adjustScroll('about')", target: "_blank", style: "color:white; font-weight:500; cursor: pointer"}=hoc_s(:hoc_faq_what_is_hoc_q)
+              %br/
+              =view :share_buttons, facebook:facebook, twitter:twitter
           %br/
           %br/
 
@@ -148,7 +175,7 @@ social:
   #maparea
     =view :map
 
-  #joinusarea
+  #join
 
     %h1=hoc_s(:front_join_us_button)
 
@@ -244,8 +271,8 @@ social:
   {
     if (videoStarted)
       return;
-
-    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+    
+    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
 
     $("#videodiv").fadeTo(1000, 1);
     $("#leftbutton").fadeTo(500, 0).remove();

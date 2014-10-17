@@ -3,7 +3,7 @@
     script:
       name:
         test:
-          'Jigsaw: Learn to drag and drop': "Головоломки: Научитесь перетаскивать"
+          'Jigsaw: Learn to drag and drop': "Головоломки: Научись переносить мышью"
           The Maze: "Лабиринт"
           Multi: "Мульти"
           Match: "Соответствие"
@@ -11,7 +11,7 @@
           title: "Тестовый курс"
           description: Just an internal test course.
         course1:
-          'Jigsaw: Learn to drag and drop': "Головоломки: Научитесь перетаскивать"
+          'Jigsaw: Learn to drag and drop': "Головоломки: Научись переносить мышью"
           'Maze: Sequence': 'Maze: Sequence'
           'Maze: Debugging': 'Maze: Debugging'
           'Artist 1: Intro': 'Artist 1: Intro'
@@ -33,17 +33,18 @@
           Getting Loopy: Getting Loopy
           The Big Event: The Big Event
           Going Places Safely: Going Places Safely
-          description: Course 1 is designed for early readers in the lower elementary
-            grades.  Create computer programs with loops and events.  By the end of
-            the course, create your very own custom game or story that you can share.
+          description: "Курс 1 позволяет рано научившимся читать создавать компьютерные
+            программы, которые помогут ученикам взаимодействовать друг с другом, развивать
+            навыки решения задач и преодолевать трудности. К концу курса ученики создадут
+            свои первые собственные игры или истории, которыми можно поделиться. Рекомендуется
+            для дошкольников и первокласников."
           'Bee: Sequence': 'Bee: Sequence'
           'Artist: Sequence': 'Artist: Sequence'
           'Artist: Shapes': 'Artist: Shapes'
           'Maze: Loops': 'Maze: Loops'
           'Bee: Loops': 'Bee: Loops'
           'Studio: Create a Story': 'Studio: Create a Story'
-          description_short: Course 1 is designed for early readers in the lower elementary
-            grades.
+          description_short: "Курс 1 разработан для рано начавших читать младшекласников."
           'Artist: Loops': 'Artist: Loops'
         course2:
           The Maze: "Лабиринт"
@@ -70,10 +71,10 @@
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
-          description: Course 2 is designed for students who can read in the lower
-            and middle elementary grades.  Create programs with loops, events, and
-            conditionals.  By the end of the course, create your very own interactive
-            game or story that you can share.
+          description: "Курс 2 разработан для учеников, умеющих читать, без опыта
+            программирования. В этом курсе ученики будут создавать программы для решения
+            задач и разрабатывать интерактивные игры или истории, которыми они могут
+            поделиться. Рекомендуется для 2-5 классов."
           'Maze: Sequence': 'Maze: Sequence'
           'Artist: Sequence': 'Artist: Sequence'
           'Maze: Loops': 'Maze: Loops'
@@ -82,8 +83,8 @@
           'Bee: Debugging': 'Bee: Debugging'
           'Artist: Debugging': 'Artist: Debugging'
           'Bee: Conditionals': 'Bee: Conditionals'
-          description_short: Course 2 is designed for students who can read in the
-            lower and middle elementary grades.
+          description_short: "Курс 2 разработан для учеников младших и средних классов
+            начальной школы, умеющих читать."
           'Artist: Sequence2': 'Artist: Sequence2'
           'Maze: Sequence2': 'Maze: Sequence2'
           'Artist: Nested Loops': 'Artist: Nested Loops'
@@ -112,10 +113,11 @@
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digital Citizenship
           Farmer - While Loops: Farmer - While Loops
-          description: Students taking Course 3 should have already taken Course 2.  Students
-            create programs with different kinds of loops, events, functions, and
-            conditions.  By the end of the course, create your very own interactive
-            game or story that you can share with anyone.
+          description: "Курс 3 разработан для учеников, освоивших Курс 2. Ученики
+            будут глубже вникать в темы, с которыми познакомились в предыдущем курсе,
+            осваивая решение более сложных задач. К концу курса ученики создают интерактивные
+            истории и игры, которыми они могут поделиться с другими. Рекомендовано
+            для 4-5 классов."
           'Studio: Create a Game': 'Studio: Create a Game'
           Maze: Maze
           Artist: Artist

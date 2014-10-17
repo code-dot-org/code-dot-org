@@ -1,9 +1,9 @@
 * * *
 
-title: Thank you
+title: Bedankt layout: wide
 
-## layout: wide
+* * *
 
-# Thank you
+# Bedankt
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+Je hele school doet nu mee om een klaslokaal vol laptops (of $10.000 aan andere technologie) te winnen.

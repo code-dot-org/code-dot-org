@@ -1,6 +1,8 @@
 * * *
 
-## layout: wide
+affichage: large
+
+* * *
 
 # Get your whole school to participate
 

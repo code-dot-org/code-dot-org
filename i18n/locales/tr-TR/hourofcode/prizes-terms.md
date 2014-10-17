@@ -1,27 +1,27 @@
 * * *
 
-## layout: wide
+düzen: geniş
+
+* * *
 
 # Ödüller - Şartlar ve Koşullar
 
-## Dropbox space or Skype credit:
+## Dropbox alanı veya Skype kredisi:
 
-The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account. Limit one redemption per organizer.
+10 GB'lık Dropbox alanı ve 10$'lık Skype kredisi okul öğretmenlerini, okul sonrası eğitimcilerini ve eğitim organizasyonlarını kapsar. 10 GB'lık Dropbox alanı var olan bir Dropbox hesabına ilave edilir. Organizatör başına 1 ödeme ile sınırlıdır.
 
-Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
+Her organizatör Dropbox alanı ve Skype kredisi almak için Kodlama Saatine üye olmalıdır. Okulunuzdaki herkes Kodlama Saatine katılacaksa, her bir eğitimci yetkilendirme için bireysel olarak üye olmalıdır.
 
-Code.org will contact organizers after the Hour of Code (Dec. 8-14) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org, Kodlama Saatinden (8-14 Aralık) sonra organizatörlerle iletişim kuracak ve Dropbox alanı veya Skype kredisini ödül sahibine teslim etmek için gerekli yönlendirmeleri sağlayacaktır.
 
 <% if @country == 'us' %>
 
-## Video chat with a guest speaker:
+## Bir konuk konuşmacıyla video sohbeti:
 
-Prize limited to K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 14, 2014. Code.org will randomly select winning schools, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details.
+Sadece Amerikan okulları ile sınırlı olan ödüldür. Hak kazanmak için, tüm okul Kodlama Saatine 14 Kasım 2014'ten önce kaydolmalıdır. Code.org kazanan okulları rastgele seçecek, web görüşmesi için bir zaman aralığı belirleyecek ve uygun öğretmenle işbirliği içinde teknoloji detaylarını kuracaktır.
 
-## Class-set of laptops (or $10,000 for other technology):
+## Tüm sınıfa dizüstü bilgisayar (veya 10.000$ değerinde başka bir teknoloji):
 
-Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here][1]. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
-
- [1]: http://www.hourofcode.com/us#faq
+Ödül sadece Amerikan devlet okulları ile sınırlı. Neden sadece devlet okulları? [See the answer here](http://www.hourofcode.com/#faq). Hak kazanmak için, tüm okul Kodlama Saatine 14 Kasım 2014'ten önce kaydolmalıdır. ABD'de her bir eyalette birer okula bir sınıfa yetecek kadar dizüstü bilgisayar verilecektir. Code.org, kazananları 1 Aralık 2014 tarihinde e-posta yolu ile bilgilendirecektir.
 
 <% end %>

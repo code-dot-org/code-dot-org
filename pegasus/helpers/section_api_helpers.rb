@@ -1,3 +1,10 @@
+# TODO -- remove this and change the APIs below to check logged in user instead of passing in a user id
+class Dashboard
+  def self.admin?(user_id)
+    !!DASHBOARD_DB[:users].where(id: user_id, admin: true).first
+  end
+end
+
 class DashboardStudent
   def self.fetch_user_students(user_id)
     DASHBOARD_DB[:users].
@@ -40,7 +47,7 @@ class DashboardStudent
 
     return unless DASHBOARD_DB[:followers].
       where(student_user_id: id,
-            user_id: dashboard_user_id)
+            user_id: dashboard_user_id) || Dashboard::admin?(user_id)
 
     row = DASHBOARD_DB[:users].
       left_outer_join(:secret_pictures, id: :secret_picture_id).
@@ -147,7 +154,7 @@ class DashboardSection
     @row = row
   end
 
-  VALID_LOGIN_TYPES = %w(word picture none)
+  VALID_LOGIN_TYPES = %w(word picture email)
 
   def self.valid_login_type?(login_type)
     VALID_LOGIN_TYPES.include? login_type
@@ -191,7 +198,8 @@ class DashboardSection
     name = params[:name].to_s
     name = 'New Section' if name.empty?
 
-    params[:login_type] = 'none' unless valid_login_type?(params[:login_type].to_s)
+    params[:login_type] = 'email' if params[:login_type].to_s == 'none'
+    params[:login_type] = 'word' unless valid_login_type?(params[:login_type].to_s)
 
     params[:grade] = nil unless valid_grade?(params[:grade].to_s)
 
@@ -249,7 +257,7 @@ class DashboardSection
       first
 
     section = self.new(row)
-    return section if section.member?(user_id)
+    return section if section.member?(user_id) || Dashboard::admin?(user_id)
     nil
   end
 
@@ -261,7 +269,7 @@ class DashboardSection
       first
 
     section = self.new(row)
-    return section if section.teacher?(user_id)
+    return section if section.teacher?(user_id) || Dashboard::admin?(user_id)
     nil
   end
 

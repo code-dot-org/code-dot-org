@@ -17,6 +17,7 @@ angular: professionalDevelopmentWorkshop
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
 %script{type: "text/javascript", src: "/js/bootstrap.min.js"}
 %script{type: "text/javascript", src: "/js/bootstrap-datepicker.js"}
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
@@ -59,7 +60,13 @@ angular: professionalDevelopmentWorkshop
   services.factory('workshopsService', ['$resource',
     function($resource){
       var Workshop = $resource('/v2/forms/ProfessionalDevelopmentWorkshop/:secret', {}, {
-         update: {method:'PATCH'},
+      // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
+      //  'get':    {method:'GET'},
+      //  'save':   {method:'POST'},
+      //  'query':  {method:'GET', isArray:true},
+      //  'remove': {method:'DELETE'},
+      //  'delete': {method:'DELETE'} 
+         update: {method:'POST', url: '/v2/forms/ProfessionalDevelopmentWorkshop/:secret/update'},
       });
 
       Workshop.prototype.name = function() {
@@ -109,7 +116,7 @@ angular: professionalDevelopmentWorkshop
       //  'query':  {method:'GET', isArray:true},
       //  'remove': {method:'DELETE'},
       //  'delete': {method:'DELETE'} 
-         update: {method:'PATCH'},
+         update: {method:'POST', url: 'v2/sections/:id/update'},
          addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
       });
@@ -194,8 +201,8 @@ angular: professionalDevelopmentWorkshop
 
   }]);
 
-  app.controller('WorkshopController', ['$scope', '$routeParams', 'workshopsService', 'workshopSignupsService', 'sectionsService', 'workshopStartStop',
-    function($scope, $routeParams, workshopsService, workshopSignupsService, sectionsService, workshopStartStop) {
+  app.controller('WorkshopController', ['$scope', '$location', '$routeParams', 'workshopsService', 'workshopSignupsService', 'sectionsService', 'workshopStartStop',
+    function($scope, $location, $routeParams, workshopsService, workshopSignupsService, sectionsService, workshopStartStop) {
       $scope.addNewDate = function($event) {
         $scope.newDate();
         $event.preventDefault();
@@ -226,7 +233,7 @@ angular: professionalDevelopmentWorkshop
       $scope.action = $routeParams.action;
 
       $scope.cancel_workshop = function() {
-        window.location = "#";
+        $location.path("/");
       };
 
       $scope.load = function() {
@@ -269,12 +276,13 @@ angular: professionalDevelopmentWorkshop
 
         if ($scope.workshop.secret) { // existing
           $scope.workshop =
-            workshopsService.update({secret: $scope.workshop.secret}, $scope.workshop);
-            window.location = "#";
+            workshopsService.update({secret: $scope.workshop.secret}, $scope.workshop, function() {
+              $location.path("/");
+            });
         } else { // new
           $scope.workshop =
             workshopsService.save($scope.workshop, function() {
-              window.location = "#";
+              $location.path("/");
             });
         }
       };

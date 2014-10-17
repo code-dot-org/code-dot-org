@@ -62,6 +62,7 @@
   "backToPreviousLevel":"กลับไปยังระดับก่อนหน้า",
   "saveToGallery":"บันทึกไว้ในแกลลอรี่",
   "savedToGallery":"บันทึกแล้ว!",
+  "shareFailure":"Sorry, we can't share this program.",
   "typeCode":"พิมพ์โค้ด JavaScript ของคุณด้านล่างคำสั่งเหล่านี้",
   "typeFuncs":"จำนวนฟังก์ชันที่ใช้ได้: %1",
   "typeHint":"หมายเหตุวงเล็บและเครื่องหมายอัฒภาคจำเป็นต้องใช้.",

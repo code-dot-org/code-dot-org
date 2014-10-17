@@ -1,32 +1,38 @@
 * * *
 
-title: Prizes
+title: Призи layout: wide
 
-## layout: wide
+* * *
 
 # Година коду - призи для кожного організатора
 
 ## Кожен організатор отримує подарунковий код
 
-Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
+Кожен вчитель, який організує заходи в межах Години коду, отримує 10 GB постору в Dropbox або кредит у $10 в Skype у подарунок!
+
+<% if @country == 'uk' %>
+
+## Класам може пощастити виграти чат-сесію із запрошеним гостем!
+
+20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Ваші учні зможуть поставити питання та поспілкуватись із лідерами індустрії інформаційних технологій. [Перегляньте записи минулого року](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) з Білом Гейтсом, засновником Твітера Джеком Дорсі, Сюзен Войчицьки з Гугл та Гейбом Ньювелом з Валв.
+
+<% end %>
 
 <% if @country == 'us' %>
 
 ## Класам може пощастити виграти чат-сесію із запрошеним гостем!
 
-50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats][1] with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
+50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Ваші учні зможуть поставити питання та поспілкуватись із лідерами індустрії інформаційних технологій. [Перегляньте записи минулого року](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) з Білом Гейтсом, засновником Твітера Джеком Дорсі, Сюзен Войчицьки з Гугл та Гейбом Ньювелом з Валв.
 
- [1]: http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a
-
-## Деяким школам пощастить виграти клас ноутбуків (або іншої техніки вартістю $10,000)
+## Lucky schools win a class-set of laptops (or $10,000 for other technology)
 
 One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
 
-## Форма анкети апаратного приза:
+## Hardware Prize application form:
 
 If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
 
-<%= view :hardware\_prizes\_form %>
+<%= view :hardware_prizes_form %>
 
 <what are your odds of winning?>
 
@@ -34,9 +40,6 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 <% end %>
 
-## Інші запитання про призи?
+## More questions about prizes?
 
-Check out [Terms and Conditions][2] or visit our forum to see [FAQs][3] and ask your questions.
-
- [2]: /prizes-terms
- [3]: http://support.code.org
+Check out [Terms and Conditions](/prizes-terms) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.

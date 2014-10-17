@@ -240,8 +240,11 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
+    // If in level builder editing blocks, make workspace extra tall
     visualizationColumn.style.height = "2000px";
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -497,6 +500,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1140,6 +1145,26 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
+/**
+ * Generate the xml for a block for the calc app.
+ */
+exports.calcBlockXml = function (type, args) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var i = 1; i <= args.length; i++) {
+    str += '<functional_input name="ARG' + i + '">';
+    var arg = args[i - 1];
+    if (typeof(arg) === "number") {
+      arg = '<block type="functional_math_number"><title name="NUM">' + arg +
+        '</title></block>';
+    }
+    str += arg;
+    str += '</functional_input>';
+  }
+  str+= '</block>';
+
+  return str;
+};
+
 },{"./xml":40}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
@@ -1367,40 +1392,91 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  // helper function used below..
+  function makeNativeMemberFunction(nativeFunc, parentObj) {
+    return function() {
+      return interpreter.createPrimitive(
+                            nativeFunc.apply(parentObj, arguments));
+    };
+  }
+  for (var optsObj in options) {
+    var func, wrapper;
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
+                                interpreter.createNativeFunction(wrapper));
+      }
+    }
+  }
+};
+
+/**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Use JS interpreter on editCode levels
+    var initFunc = function(interpreter, scope) {
+      exports.initJSInterpreter(interpreter, scope, options);
+    };
+    var myInterpreter = new Interpreter(code, initFunc);
+    // interpret the JS program all at once:
+    myInterpreter.run();
+  } else {
+    // execute JS code "natively"
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor().apply(null, args);
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  var fn = new ctor();
-  return fn.apply(null, args);
 };
 
 /**
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  return new ctor();
 };
 
 },{}],7:[function(require,module,exports){
@@ -1599,11 +1675,18 @@ exports.displayFeedback = function(options) {
     trackEvent('Puzzle', 'Completed', options.response.level_path, options.response.level_attempts);
   }
 
+  var hadShareFailure = (options.response && options.response.share_failure);
+  var showingSharing = options.showingSharing && !hadShareFailure;
+
   var canContinue = exports.canContinueToNextLevel(options.feedbackType);
   var displayShowCode = BlocklyApps.enableShowCode && canContinue;
   var feedback = document.createElement('div');
-  var sharingDiv = (canContinue && options.showingSharing) ? exports.createSharingDiv(options) : null;
+  var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
+  var shareFailureDiv = hadShareFailure ? getShareFailure(options) : null;
+  if (hadShareFailure) {
+    trackEvent('Share', 'Failure', options.response.share_failure.type);
+  }
   var feedbackBlocks = new FeedbackBlocks(options);
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
@@ -1635,10 +1718,13 @@ exports.displayFeedback = function(options) {
   if (sharingDiv) {
     feedback.appendChild(sharingDiv);
   }
-  if (options.showingSharing) {
+  if (showingSharing) {
     var shareCodeSpacer = document.createElement('div');
     shareCodeSpacer.className = "share-code-spacer";
     feedback.appendChild(shareCodeSpacer);
+  }
+  if (shareFailureDiv) {
+    feedback.appendChild(shareFailureDiv);
   }
   if (showCode) {
     feedback.appendChild(showCode);
@@ -1834,6 +1920,13 @@ var getFeedbackButtons = function(options) {
   return buttons;
 };
 
+var getShareFailure = function(options) {
+  var shareFailure = options.response.share_failure;
+  var shareFailureDiv = document.createElement('div');
+  shareFailureDiv.innerHTML = require('./templates/shareFailure.html')({shareFailure: shareFailure});
+  return shareFailureDiv;
+};
+
 var useSpecialFeedbackDesign = function (options) {
  return options.response &&
         options.response.design &&
@@ -1844,9 +1937,10 @@ var useSpecialFeedbackDesign = function (options) {
 // The message will be one of the following, from highest to lowest precedence:
 // 1. Message passed in by caller (options.message).
 // 2. Message from dashboard database (options.response.hint).
-// 3. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
+// 3. Header message due to dashboard text check fail (options.response.share_failure).
+// 4. Level-specific message (e.g., options.level.emptyBlocksErrorMsg) for
 //    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
-// 4. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
+// 5. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
 //    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
 var getFeedbackMessage = function(options) {
   var feedback = document.createElement('p');
@@ -1856,6 +1950,8 @@ var getFeedbackMessage = function(options) {
   // If a message was explicitly passed in, use that.
   if (options.message) {
     message = options.message;
+  } else if (options.response && options.response.share_failure) {
+    message = msg.shareFailure();
   } else if (options.response && options.response.hint) {
     // Otherwise, if there's a dashboard database hint, use that.
     message = options.response.hint;
@@ -2499,7 +2595,7 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/bn_bd/common":41,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":16,"./templates/code.html":17,"./templates/readonly.html":22,"./templates/sharing.html":23,"./templates/showCode.html":24,"./templates/trophy.html":25,"./utils":39}],10:[function(require,module,exports){
+},{"../locale/bn_bd/common":41,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":16,"./templates/code.html":17,"./templates/readonly.html":22,"./templates/shareFailure.html":23,"./templates/sharing.html":24,"./templates/showCode.html":25,"./templates/trophy.html":26,"./utils":39}],10:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -6197,7 +6293,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/bn_bd/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing-image">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('<p id="share-fail-explanation">', escape((1,  shareFailure.message )), '</p>\n\n');3; if (shareFailure.contents) { ; buf.push('\n  <div class="share-fail-excerpt">\n    <pre class="generatedCode">', escape((5,  shareFailure.contents )), '</pre>\n  </div>\n');7; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -6205,7 +6301,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/bn_bd/common":41,"ejs":43}],24:[function(require,module,exports){
+},{"ejs":43}],24:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6218,7 +6314,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/bn_bd/common'); ; buf.push('\n\n<p id="num-lines-of-code" class="lines-of-code-message">\n  ', escape((4,  msg.numLinesOfCodeWritten({ numLines: numLinesWritten }) )), '\n  <button id="show-code-button" href="#">\n    ', escape((6,  msg.showGeneratedCode() )), '\n  </button>\n</p>\n\n');10; if (totalNumLinesWritten !== 0) { ; buf.push('\n  <p id="total-num-lines-of-code" class="lines-of-code-message">\n    ', escape((12,  msg.totalNumLinesOfCodeWritten({ numLines: totalNumLinesWritten }) )), '\n  </p>\n');14; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/bn_bd/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -6239,6 +6335,27 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/bn_bd/common'); ; buf.push('\n\n<p id="num-lines-of-code" class="lines-of-code-message">\n  ', escape((4,  msg.numLinesOfCodeWritten({ numLines: numLinesWritten }) )), '\n  <button id="show-code-button" href="#">\n    ', escape((6,  msg.showGeneratedCode() )), '\n  </button>\n</p>\n\n');10; if (totalNumLinesWritten !== 0) { ; buf.push('\n  <p id="total-num-lines-of-code" class="lines-of-code-message">\n    ', escape((12,  msg.totalNumLinesOfCodeWritten({ numLines: totalNumLinesWritten }) )), '\n  </p>\n');14; } ; buf.push('\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"../../locale/bn_bd/common":41,"ejs":43}],26:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape, rethrow) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!#?[a-zA-Z0-9]+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/'/g, '&#39;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
  buf.push('<div class=\'trophy\'><img class=\'trophyimg\' src=\'', escape((1,  img_url )), '\'><br>', escape((1,  concept_name )), '</div>\n'); })();
 } 
 return buf.join('');
@@ -6247,7 +6364,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":43}],26:[function(require,module,exports){
+},{"ejs":43}],27:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -6597,7 +6714,7 @@ exports.answer = function(page, level) {
   return api.log;
 };
 
-},{"../base":2,"./api":27}],27:[function(require,module,exports){
+},{"../base":2,"./api":28}],28:[function(require,module,exports){
 var BlocklyApps = require('../base');
 
 exports.log = [];
@@ -6682,7 +6799,7 @@ exports.showTurtle = function(id) {
   this.log.push(['ST', id]);
 };
 
-},{"../base":2}],28:[function(require,module,exports){
+},{"../base":2}],29:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -6713,7 +6830,6 @@ var msg = require('../../locale/bn_bd/turtle');
 var commonMsg = require('../../locale/bn_bd/common');
 
 var customLevelBlocks = require('./customLevelBlocks');
-var functionalBlocks = require('./functionalBlocks');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -7565,11 +7681,9 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   customLevelBlocks.install(blockly, generator, gensym);
-  functionalBlocks.install(blockly, generator, gensym);
-
 };
 
-},{"../../locale/bn_bd/common":41,"../../locale/bn_bd/turtle":42,"./core":30,"./customLevelBlocks":31,"./functionalBlocks":32}],29:[function(require,module,exports){
+},{"../../locale/bn_bd/common":41,"../../locale/bn_bd/turtle":42,"./core":31,"./customLevelBlocks":32}],30:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7590,7 +7704,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":43}],30:[function(require,module,exports){
+},{"ejs":43}],31:[function(require,module,exports){
 // Create a limited colour palette to avoid overwhelming new users
 // and to make colour checking easier.  These definitions cannot be
 // moved to blocks.js, which is loaded later, since they are used in
@@ -7611,7 +7725,7 @@ exports.Colours = {
   PLUM: '#843179'
 };
 
-},{}],31:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 /**
  * A set of blocks used by some of our custom levels (i.e. built by level builder)
  */
@@ -8171,41 +8285,7 @@ function installDrawLowerWave(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/bn_bd/turtle":42}],32:[function(require,module,exports){
-/**
- * A set of functional blocks
- */
-
-exports.install = function(blockly, generator, gensym) {
- installPlus(blockly, generator, gensym);
-};
-
-function installPlus(blockly, generator, gensym) {
-  blockly.Blocks.functional_plus = {
-    // Block for turning left or right.
-    helpUrl: '',
-    init: function() {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle('+')
-          .setAlign(Blockly.ALIGN_CENTRE);
-      this.appendValueInput('VALUE')
-          .setCheck('Number');
-      this.appendValueInput('VALUE')
-          .setCheck('Number')
-          .setInline(true);
-
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  generator.functional_plus = function() {
-    return '';
-  };
-}
-
-},{}],33:[function(require,module,exports){
+},{"../../locale/bn_bd/turtle":42}],33:[function(require,module,exports){
 var levelBase = require('../level_base');
 var Colours = require('./core').Colours;
 var answer = require('./answers').answer;
@@ -9057,7 +9137,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/bn_bd/turtle":42,"../block_utils":3,"../level_base":10,"./answers":26,"./core":30,"./requiredBlocks":35,"./startBlocks.xml":36,"./toolbox.xml":37}],34:[function(require,module,exports){
+},{"../../locale/bn_bd/turtle":42,"../block_utils":3,"../level_base":10,"./answers":27,"./core":31,"./requiredBlocks":35,"./startBlocks.xml":36,"./toolbox.xml":37}],34:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Turtle = require('./turtle');
 var blocks = require('./blocks');
@@ -9070,7 +9150,7 @@ window.turtleMain = function(options) {
   appMain(window.Turtle, levels, options);
 };
 
-},{"../appMain":1,"../skins":13,"./blocks":28,"./levels":33,"./turtle":38}],35:[function(require,module,exports){
+},{"../appMain":1,"../skins":13,"./blocks":29,"./levels":33,"./turtle":38}],35:[function(require,module,exports){
 /**
  * Sets BlocklyApp constants that depend on the page and level.
  * This encapsulates many functions used for BlocklyApps.REQUIRED_BLOCKS.
@@ -9555,11 +9635,6 @@ Turtle.init = function(config) {
 
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
-
-  // Enable blockly param editing in levelbuilder, regardless of level setting
-  if (config.level.edit_blocks) {
-    config.disableParamEditing = false;
-  }
 
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
@@ -10236,7 +10311,7 @@ var getFeedbackImage = function() {
       feedbackCanvas.toDataURL("image/png").split(',')[1]);
 };
 
-},{"../../locale/bn_bd/common":41,"../../locale/bn_bd/turtle":42,"../base":2,"../codegen":6,"../feedback.js":9,"../skins":13,"../templates/page.html":21,"./api":27,"./controls.html":29,"./core":30,"./levels":33}],39:[function(require,module,exports){
+},{"../../locale/bn_bd/common":41,"../../locale/bn_bd/turtle":42,"../base":2,"../codegen":6,"../feedback.js":9,"../skins":13,"../templates/page.html":21,"./api":28,"./controls.html":30,"./core":31,"./levels":33}],39:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10373,16 +10448,16 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = [''].concat(arguments); return " +
+          parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -10489,9 +10564,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
@@ -10657,6 +10743,8 @@ exports.backToPreviousLevel = function(d){return "Back to previous level"};
 exports.saveToGallery = function(d){return "Save to your gallery"};
 
 exports.savedToGallery = function(d){return "Saved to your gallery!"};
+
+exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
 exports.typeCode = function(d){return "Type your JavaScript code below these instructions."};
 

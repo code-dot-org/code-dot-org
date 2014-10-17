@@ -15,6 +15,15 @@
   twentyhours_heading: Try our Intro to Computer Science Course
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_students: Students
+  hoc2014_try: Try it
+  hoc2014_teachers: Teachers
+  hoc2014_host: Host it
+  hoc2014_everyone: Everyone
+  hoc2014_support: Support it
+  hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: "ลองตอนนี้"
   california_heading: "ขอโรงเรียนของคุณให้สอนวิทยาศาสตร์คอมพิวเตอร์"
   california_text: "ครูทุกคนสามารถนำเสนอ<a href='http://learn.code.org/'>หลักสูตรเบื้องต้น</a>ของเราฟรี
@@ -54,6 +63,7 @@
   beyond_hour_message: Here is more information about how to <a href='/learn/beyond'>Learn
     beyond One Hour</a>
   leaderboards_for_hoc: Leaderboards for the Hour of Code.
+  support_url: http://support.code.org/
   country: "ประเทศ"
   city: "เมือง"
   gender: "เพศ"
@@ -179,6 +189,8 @@
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
+  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
+    office hours.
   dashboard_landing_print_certificates: Print certificates for students who finish
     this course
   dashboard_landing_educator_blog: Read about news and updates to our materials at
@@ -207,6 +219,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -248,6 +261,8 @@
   dashboard_students_password: "รหัสผ่าน"
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
+  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
   dashboard_students_reset_secret: Reset secret
