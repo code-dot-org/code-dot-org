@@ -80,7 +80,7 @@ nav: resources_nav
 </p>
 
 <h4>
-  <a href="http://hourofcode.com/us#signup">Đăng ký</a> sự kiện Hour of Code của bạn và chúng tôi sẽ gửi cho bạn áp phích quảng cáo miễn phí.
+  <a href="http://hourofcode.com/#signup">Đăng ký</a> sự kiện Hour of Code của bạn và chúng tôi sẽ gửi cho bạn áp phích quảng cáo miễn phí.
 </h4>
 
 <p>

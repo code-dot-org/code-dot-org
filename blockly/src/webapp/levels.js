@@ -19,7 +19,10 @@ levels.simple = {
     'snapRadius': 2
   },
   'toolbox':
-    tb(blockOfType('webapp_turnBlack')),
+    tb(blockOfType('webapp_turnBlack') +
+      '<block type="webapp_createHtmlBlock" inline="true"> \
+        <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
+        <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>'),
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
@@ -27,7 +30,8 @@ levels.simple = {
 levels.ec_simple = {
   'editCode': true,
   'codeFunctions': [
-    {'func': 'turnBlack', 'alias': 'Webapp.turnBlack();' },
+    {'func': 'turnBlack' },
+    {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
   ],
 };
 
@@ -47,8 +51,12 @@ levels.full_sandbox =  {
   'minWorkspaceHeight': 1400,
   'freePlay': true,
   'toolbox':
-    tb(createCategory(msg.catActions(),
-                        blockOfType('webapp_turnBlack')) +
+    tb(createCategory(
+        msg.catActions(),
+        blockOfType('webapp_turnBlack') +
+        '<block type="webapp_createHtmlBlock" inline="true"> \
+          <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
+          <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>') +
        createCategory(msg.catControl(),
                         blockOfType('controls_whileUntil') +
                        '<block type="controls_for"> \

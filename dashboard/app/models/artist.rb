@@ -105,9 +105,7 @@ class Artist < Blockly
       </block>
     </category>
     <category name="Category">
-      <block type="procedures_defnoreturn">
-        <title name="NAME">CATEGORY=Category</title>
-      </block>
+      <block type="category"></block>
     </category>
     <category name="Functions" custom="PROCEDURE">
     </category>

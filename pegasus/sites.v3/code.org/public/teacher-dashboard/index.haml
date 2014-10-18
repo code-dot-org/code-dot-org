@@ -260,7 +260,7 @@ angular: teacherDashboard
     $scope.section.$promise.catch($scope.genericError);
     $scope.sections.$promise.catch($scope.genericError);
 
-    $scope.age_list = #{(4..100).to_a.inspect};
+    $scope.age_list = #{((4..20).to_a << '21+').inspect};
 
     $scope.gender_list = {f: '#{I18n.t('dashboard_students_female')}', m: '#{I18n.t('dashboard_students_male')}'};
 

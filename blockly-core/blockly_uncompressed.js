@@ -20392,7 +20392,7 @@ Blockly.parseOptions_ = function(options) {
   }
   return{RTL:!!options["rtl"], collapse:hasCollapse, readOnly:readOnly, maxBlocks:options["maxBlocks"] || Infinity, assetUrl:options["assetUrl"] || function(path) {
     return"./" + path
-  }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasConcreteBlocks:hasConcreteBlocks, hasTrashcan:hasTrashcan, varsInGlobals:varsInGlobals, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, grayOutUndeletableBlocks:grayOutUndeletableBlocks}
+  }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasConcreteBlocks:hasConcreteBlocks, hasTrashcan:hasTrashcan, varsInGlobals:varsInGlobals, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, grayOutUndeletableBlocks:grayOutUndeletableBlocks}
 };
 Blockly.createDom_ = function(container) {
   container.setAttribute("dir", "LTR");

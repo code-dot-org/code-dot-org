@@ -1,20 +1,124 @@
 -facebook = {:u=>'http://code.org/quotes'}
--twitter = {:url=>'http://code.org/quotes', :related=>'codeorg', :hashtags=>'hourofcode', :text=>'Leaders and trendsetters agree more students should learn computer science @codeorg'}
--DB[:uk_quotes].where(tag_s:'promote').each do |value|
-  #block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
-    #headshot{:style=>'float:left; width: 25%'}
-      %img{:src=>value[:image_url_s].to_s.sub(/^\/images\//, '/images/fill-90x90/')}
-    #text{:style=>'float:left; width:75%'}
-      %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
-        =value[:name_s]
-      %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
-        -unless value[:title_s].nil_or_empty?
-          =value[:title_s]
-      %p{:style=>'font-size: 13px;line-height: 18px;'}
-        =value[:quote_t]
+-twitter = {:url=>'http://code.org/quotes', :related=>'codeorg', :hashtags=>'hourofcode', :text=>"Tutti concordano nel dire che più studenti dovrebbero imparare l'informatica! @codeorg"}
 
--#links{:style=>'clear:both;'}
-  = view :share_buttons, facebook:facebook, twitter:twitter)
-  .all-quotes-link
-    %a{:href=>'http://code.org/quotes'}
-      See all quotes
+#block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
+  #headshot{:style=>'float:left; width: 25%'}
+    %img{:src=>'/images/people/richard-branson.jpg', :style=>'width:90px; height:90px;'}
+  .text{:style=>'float:left; width:75%'}
+    %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+      Richard Branson
+    %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+      Founder, Virgin Group
+    %p{:style=>'font-size: 13px;line-height: 18px;'}
+      “Whether we're fighting climate change or going to space, everything is moved forward by computers, and we don't have enough people who can code. Teaching young people to code early on can help build skills and confidence and energize the classroom with learning-by-doing opportunities. I learned how to fly a hot air balloon when I was 30,000 feet up and my life was in the balance: you can learn skills at any age but why wait when we can teach everyone to code now!“
+
+#block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
+  #headshot{:style=>'float:left; width: 25%'}
+    %img{:src=>'/images/people/mark-zuckerberg.jpg', :style=>'width:90px; height:90px;'}
+  .text{:style=>'float:left; width:75%'}
+    %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+      Mark Zuckerberg
+    %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+      Founder, Facebook
+    %p{:style=>'font-size: 13px;line-height: 18px;'}
+      “Our policy at Facebook is literally to hire as many talented engineers as we can find. There just aren't enough people who are trained and have these skills today.“
+
+#block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
+  #headshot{:style=>'float:left; width: 25%'}
+    %img{:src=>'/images/people/bill-gates.jpg', :style=>'width:90px; height:90px;'}
+  .text{:style=>'float:left; width:75%'}
+    %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+      Bill Gates
+    %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+      Chairman, Microsoft
+    %p{:style=>'font-size: 13px;line-height: 18px;'}
+      “Learning to write programs stretches your mind, and helps you think better, creates a way of thinking about things that I think is helpful in all domains.“
+
+#block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
+  #headshot{:style=>'float:left; width: 25%'}
+    %img{:src=>'/images/people/william.jpg', :style=>'width:90px; height:90px;'}
+  .text{:style=>'float:left; width:75%'}
+    %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+      will.i.am
+    %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+      Musician/The Black Eyed Peas and Entrepreneur
+    %p{:style=>'font-size: 13px;line-height: 18px;'}
+      “Here we are, 2013, we ALL depend on technology to communicate, to bank, and none of us know how to read and write code. It's important for these kids, right now, starting at 8 years old, to read and write code.“
+
+#block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
+  #headshot{:style=>'float:left; width: 25%'}
+    %img{:src=>'/images/people/jack-dorsey.jpg', :style=>'width:90px; height:90px;'}
+  .text{:style=>'float:left; width:75%'}
+    %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+      Jack Dorsey
+    %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+      Creator, Twitter. Founder and CEO, Square
+    %p{:style=>'font-size: 13px;line-height: 18px;'}
+      “I think that great programming is not all that dissimilar to great art. Once you start thinking in concepts of programming it makes you a better person...as does learning a foreign language, as does learning math, as does learning how to read.“
+
+#block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
+  #headshot{:style=>'float:left; width: 25%'}
+    %img{:src=>'/images/people/sheryl-sandberg.jpg', :style=>'width:90px; height:90px;'}
+  .text{:style=>'float:left; width:75%'}
+    %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+      Sheryl Sandberg
+    %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+      Chief Operating Officer, Facebook
+    %p{:style=>'font-size: 13px;line-height: 18px;'}
+      “An understanding of computer science is becoming increasingly essential in today’s world. Our national competitiveness depends upon our ability to educate our children – and that includes our girls – in this critical field.“
+
+#block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
+  #headshot{:style=>'float:left; width: 25%'}
+    %img{:src=>'/images/people/ashton-kutcher.jpg', :style=>'width:90px; height:90px;'}
+  .text{:style=>'float:left; width:75%'}
+    %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+      Ashton Kutcher
+    %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+      Actor
+    %p{:style=>'font-size: 13px;line-height: 18px;'}
+      “I'd like to advocate for computer coding to be an institution in the public school systems right next to biology, chemistry, physics, etc. If we want to spur job growth in the US we have to educate ourselves in the disciplines where jobs are available and where economic growth is feasible.“
+
+#block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
+  #headshot{:style=>'float:left; width: 25%'}
+    %img{:src=>'/images/people/eric-schmidt.jpg', :style=>'width:90px; height:90px;'}
+  .text{:style=>'float:left; width:75%'}
+    %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+      Eric Schmidt
+    %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+      Executive Chairman, Google
+    %p{:style=>'font-size: 13px;line-height: 18px;'}
+      “For most people on Earth, the digital revolution hasn't even started yet. Within the next 10 years, all that will change. Let's get the whole world coding!“
+
+#block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
+  #headshot{:style=>'float:left; width: 25%'}
+    %img{:src=>'/images/people/steven-hawking.jpg', :style=>'width:90px; height:90px;'}
+  .text{:style=>'float:left; width:75%'}
+    %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+      Steven Hawking
+    %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+      Theoretical Physicist, Cosmologist, and Author
+    %p{:style=>'font-size: 13px;line-height: 18px;'}
+      “Whether you want to uncover the secrets of the universe, or you just want to pursue a career in the 21st century, basic computer programming is an essential skill to learn.“
+
+#block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
+  #headshot{:style=>'float:left; width: 25%'}
+    %img{:src=>'/images/people/drew-houston.jpg', :style=>'width:90px; height:90px;'}
+  .text{:style=>'float:left; width:75%'}
+    %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+      Drew Houston
+    %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+      Founder & CEO, Dropbox
+    %p{:style=>'font-size: 13px;line-height: 18px;'}
+      “Software touches all of these different things you use, and tech companies are revolutionizing all different areas of the world...from how we shop to how farming works, all these things that aren't technical are being turned upside down by software. So being able to play in that universe really makes a difference.“
+
+#block{:style=>'width:50%; float:left; padding:30px; padding-top:0px'}
+  #headshot{:style=>'float:left; width: 25%'}
+    %img{:src=>'/images/people/susan-wojcicki.jpg', :style=>'width:90px; height:90px;'}
+  .text{:style=>'float:left; width:75%'}
+    %h3{:style=>'margin-top:0px; margin-bottom:0px;'}
+      Susan Wojcicki
+    %h4{:style=>'margin-top:3px; margin-bottom:5px; font-weight:400'}
+      Senior Vice President, Google
+    %p{:style=>'font-size: 13px;line-height: 18px;'}
+      “Learning to code makes kids feel empowered, creative, and confident. If we want our young women to retain these traits into adulthood, a great option is to expose them to computer programming in their youth.“
+

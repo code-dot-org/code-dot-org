@@ -14,12 +14,12 @@ Code.org va contacta organizatorii după Hour of Code (dec 8-14) pentru a oferi 
 
 <% if @country == 'us' %>
 
-## Video chat cu un invitat special:
+## Video chat cu un vorbitor invitat:
 
-Premiu limitat numai pentru şcoli K-12 din Statele Unite. Pentru a te califica, trebuie să se înregistreze pentru Hour of Code întreaga şcoală până în 14 noiembrie 2014. Code.org va selecta aleator şcolile câştigătoare, ofering un slot de timp pentru web chat şi va lucra cu profesorul pentru a pune la punct detaliile legate de tehnologie.
+Premiul limitat numai pentru şcoli K-12 din Statele Unite. Pentru a se califica, trebuie să se înregistreze pentru Hour of Code întreaga şcoală până în 14 noiembrie 2014. Code.org va selecta aleator şcolile câştigătoare, ofering un slot de timp de web chat şi va lucra cu profesorul pentru a pune la punct detaliile legate de tehnologie.
 
 ## Laptopuri pentru întreaga clasă (sau 10.000 USD pentru alte tehnologii):
 
-Premiu limitat la şcoli publice K-12 SUA. De ce numai scolile publice? [A se vedea răspunsul aici](http://www.hourofcode.com/us#faq). Pentru a te califica, trebuie să se înregistreze pentru Hour of Code întreaga şcoală până în 14 noiembrie 2014. O şcoală în fiecare stat al SUA va primi un set de computere pentru clasă. Code.org va selecta şi notifica câştigătorii prin email până la 1 decembrie 2014.
+Premiul limitat numai pentru şcoli publice K-12 SUA. De ce numai scolile publice? [See the answer here](http://www.hourofcode.com/#faq). Pentru a se califica, trebuie să se înregistreze pentru Hour of Code întreaga şcoală până în 14 noiembrie 2014. O şcoală în fiecare stat al SUA va primi un set de calculatoare pentru clasă. Code.org va selecta şi notifica câştigătorii prin email până la 1 decembrie 2014.
 
 <% end %>

@@ -18,6 +18,9 @@
   = f.label :disable_param_editing, "Enable param editing in function blocks"
   = f.check_box :disable_param_editing, {}, 'false', 'true'
 .field
+  = f.label :disable_variable_editing, "Disable editing of variable names and creation of new variables"
+  = boolean_check_box f, :disable_variable_editing
+.field
   = f.label :scrollbars, 'Scrollbars'
   %div
     Default:

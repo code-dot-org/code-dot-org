@@ -44,30 +44,18 @@ crwdns20031:0crwdne20031:0
 
 ## crwdns20032:0crwdne20032:0
 
-## crwdns20033:0crwdne20033:0 crwdns20034:0crwdne20034:0
+crwdns20740:0crwdne20740:0 crwdns20741:0crwdne20741:0
 
-crwdns20035:0crwdne20035:0
+<% if @country == 'ro' %>
 
-crwdns20036:0crwdne20036:0
+crwdns20742:0crwdne20742:0
 
-crwdns20037:0crwdne20037:0
+crwdns20743:0crwdne20743:0
 
-  1. crwdns20038:0crwdne20038:0
+<% end %>
 
-crwdns20039:0crwdne20039:0
+* * *
 
-  1. crwdns20040:0crwdne20040:0
+crwdns20744:0crwdne20744:0.
 
-crwdns20041:0crwdne20041:0 crwdns20042:0crwdne20042:0
-
-  1. crwdns20043:0crwdne20043:0
-
-crwdns20044:0crwdne20044:0
-
-  1. crwdns20045:0crwdne20045:0
-
-crwdns20046:0crwdne20046:0
-
-  1. crwdns20047:0crwdne20047:0
-
-crwdns20048:0crwdne20048:0 crwdns20049:0crwdne20049:0
+![](<%= tracking_pixel %>)
