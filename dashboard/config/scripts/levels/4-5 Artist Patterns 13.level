@@ -12,8 +12,9 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "Now let's loop that whole thing to create this picture frame. Hint: Watch out for the corners - you can just turn 90 degrees! If looping a 3 degree turn 60 times makes a half circle, how many times do you need to loop to draw a quarter circle?",
-    "ideal": "14"
+    "instructions": "Now let's loop that whole thing to create this picture frame. Hint: Watch out for the corners - you can't just turn 90 degrees! If looping a 3 degree turn 60 times makes a half circle, how many times do you need to loop to draw a quarter circle?",
+    "ideal": "14",
+    "disable_param_editing": "true"
   }
 }]]></config>
   <blocks>

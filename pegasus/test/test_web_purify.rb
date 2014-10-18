@@ -13,6 +13,7 @@ class WebPurifyTest < Minitest::Unit::TestCase
     assert_equal('ass', WebPurify.find_potential_profanity('ass'))
     assert_nil(WebPurify.find_potential_profanity('scheiße', ['en']))
     assert_equal('scheiße', WebPurify.find_potential_profanity('scheiße', ['de']))
+    assert_equal('puta', WebPurify.find_potential_profanity('puta madre', ['es']))
     assert_nil(WebPurify.find_potential_profanity('8005555555 t'))
   end
 end

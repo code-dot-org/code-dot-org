@@ -80,7 +80,7 @@ nav: resources_nav
 </p>
 
 <h4>
-  <a href="http://hourofcode.com/us#signup">サインアップしましょう</a> あなたの Hour of Code イベント用に無料でポスターをお送り致します。
+  <a href="http://hourofcode.com/#signup">サインアップしましょう</a> あなたの Hour of Code イベント用に無料でポスターをお送り致します。
 </h4>
 
 <p>

@@ -1,5 +1,8 @@
 .lines_of_code_header
   -loc = fetch_metrics['lines_of_code']
   %a.lines_of_code_link{:href=>"/loc"}
-    %b=format_integer_with_commas(loc)
+  	-if locale_chapter_partner?
+      %b=format_integer_with_decimals(loc)
+    -else  
+      %b=format_integer_with_commas(loc)
     LINES OF CODE WRITTEN BY STUDENTS

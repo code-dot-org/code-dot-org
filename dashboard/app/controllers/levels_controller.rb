@@ -137,7 +137,7 @@ class LevelsController < ApplicationController
         @level = @type_class.new
         render :edit
       elsif @type_class <= Calc
-        @game = Game.custom_calc
+        @game = Game.calc
         @level = @type_class.new
         render :edit
       elsif @type_class <= Maze
