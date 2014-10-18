@@ -854,10 +854,10 @@ exports.install = function(blockly, blockInstallOptions) {
   // image icons and image paths for the 'set pattern block'
   blockly.Blocks.draw_line_style_pattern.Options =
     [[skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
-     [skin.pattern1Menu, 'pattern1'],  // set to property name for image within skin
-     [skin.pattern2Menu, 'pattern2'],  // referenced as skin[pattern];
-     [skin.pattern3Menu, 'pattern3'],
-     [skin.pattern4Menu, 'pattern4']];
+     [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
+     [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
+     [skin.squigglyMenu, 'squigglyLine'],
+     [skin.swirlyMenu, 'swirlyLine']];
 
   generator.draw_line_style_pattern = function() {
     // Generate JavaScript for setting the image for a patterned line.
