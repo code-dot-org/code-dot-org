@@ -14902,7 +14902,7 @@ Blockly.Block.prototype.moveInputBefore = function(name, refName) {
     this.bumpNeighbours_()
   }
 };
-Blockly.Block.prototype.removeInput = function(name) {
+Blockly.Block.prototype.removeInput = function(name, opt_quiet) {
   for(var x = 0, input;input = this.inputList[x];x++) {
     if(input.name == name) {
       if(input.connection && input.connection.targetConnection) {
@@ -14917,7 +14917,9 @@ Blockly.Block.prototype.removeInput = function(name) {
       return
     }
   }
-  throw'Input "' + name + '" not found.';
+  if(!opt_quiet) {
+    goog.asserts.fail('Input "%s" not found.', name)
+  }
 };
 Blockly.Block.prototype.getInput = function(name) {
   for(var x = 0, input;input = this.inputList[x];x++) {
