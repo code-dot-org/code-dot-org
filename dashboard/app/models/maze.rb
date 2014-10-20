@@ -85,7 +85,7 @@ class Maze < Grid
   def toolbox(type)
     <<-XML.chomp
 <category name="Category">
-  <block type="procedures_defnoreturn"><title name="NAME">CATEGORY=Category</title></block>
+  <block type="category"></block>
 </category>
 #{common_blocks(type)}
     XML
