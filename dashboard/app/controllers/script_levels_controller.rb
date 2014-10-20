@@ -7,8 +7,7 @@ class ScriptLevelsController < ApplicationController
     authorize! :show, ScriptLevel
     if current_user.teacher? || current_user.admin?
       @level = Level.find(params[:level_id])
-      source = LevelSource.find_by_id(@level.ideal_level_source_id)
-      @start_blocks = source ? source.data : ''
+      @start_blocks = @level.ideal_level_source.try(:data)
       @game = @level.game
       @full_width = true
       @share = true

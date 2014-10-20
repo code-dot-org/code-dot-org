@@ -148,7 +148,12 @@ BlocklyApps.init = function(config) {
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
     // If in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
     // Enable param & var editing in levelbuilder, regardless of level setting
     config.level.disableParamEditing = false;
     config.level.disableVariableEditing = false;
