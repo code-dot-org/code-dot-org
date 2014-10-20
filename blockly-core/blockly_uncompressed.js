@@ -2695,8 +2695,7 @@ Blockly.Xml.domToBlock_ = function(workspace, xmlBlock) {
         if(firstRealGrandchild && firstRealGrandchild.nodeName.toLowerCase() == "block") {
           blockChild = Blockly.Xml.domToBlock_(workspace, firstRealGrandchild);
           if(blockChild.outputConnection) {
-            input.connection.connect(blockChild.outputConnection);
-            renderBlock = blockChild
+            input.connection.connect(blockChild.outputConnection)
           }else {
             if(blockChild.previousConnection) {
               input.connection.connect(blockChild.previousConnection)
@@ -20393,7 +20392,7 @@ Blockly.parseOptions_ = function(options) {
   }
   return{RTL:!!options["rtl"], collapse:hasCollapse, readOnly:readOnly, maxBlocks:options["maxBlocks"] || Infinity, assetUrl:options["assetUrl"] || function(path) {
     return"./" + path
-  }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasConcreteBlocks:hasConcreteBlocks, hasTrashcan:hasTrashcan, varsInGlobals:varsInGlobals, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, grayOutUndeletableBlocks:grayOutUndeletableBlocks}
+  }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasConcreteBlocks:hasConcreteBlocks, hasTrashcan:hasTrashcan, varsInGlobals:varsInGlobals, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, grayOutUndeletableBlocks:grayOutUndeletableBlocks}
 };
 Blockly.createDom_ = function(container) {
   container.setAttribute("dir", "LTR");

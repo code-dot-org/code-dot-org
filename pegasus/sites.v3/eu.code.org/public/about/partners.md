@@ -1,3 +1,7 @@
+---
+title: EU Partners
+nav: about_nav
+---
 
 # Partners
 

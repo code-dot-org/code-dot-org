@@ -6,68 +6,56 @@ from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x7
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Thanks for signing up to host an Hour of Code!
+# Grazie per aver accettato di ospitare un evento dell'Ora del Codice! layout!
 
 **EVERY** Gli organizzatori di Un'ora di Codice riceveranno 10 GB di spazio su Dropbox o 10 $ di credito Skype in segno di ringraziamento [Details](http://<%= hostname %>/prizes)
 
 <% if @country == 'us' %>
 
-Fai partecipare tutta la tua scuola[](http://<%= hostname %>/whole-school)per l'opportunità di vincere grandi premi.
+Fai partecipare [tutta la tua scuola](http://<%= hostname %>/whole-school) per avere l'opportunità di vincere grandi premi per tutta la scuola.
 
 <% end %>
 
-## 1. Spread the word
+## 1. Diffondi la notizia
 
-Tell your friends about the #HourOfCode.
+Dì ai tuoi amici dell'#HourOfCode.
 
 <% if @country == 'us' %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## Chiedi a tutta la tua scuola di offrire ai vostri studenti un'Ora del Codice
 
 [Invia questa mail](http://<%= hostname %>/resources#email) oppure[consegna questo depliant al tuo dirigente ](http://<%= hostname %>/files/schools-handout.pdf). Se la tua scuola parteciperà al progetto, [potrete vincere $10,000 in tecnologia per il vostro istituto](http://<%= hostname %>/prizes) e invitare altre scuole della tua zona a partecipare.
 
 <% else %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## Chiedi a tutta la tua scuola di offrire ai vostri studenti un'Ora del Codice
 
 [Invia questa maili](http://<%= hostname %>/resources#email) o consegna [questo depliant](http://<%= hostname %>/files/schools-handout.pdf) al tuo dirigente.
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 3. chiedi al tuo datore di lavoro di poter essere coinvolti
 
-[Manda questa mail](http://<%= hostname %>/resources#email) al tuo capo. Oppure [fagli avere questo depliant.](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Manda questa mail](http://<%= hostname %>/resources#email) al tuo capo o al tuo presidente. Oppure [fagli avere questo depliant](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Promote Hour of Code within your community
+## $. Promuovi un'Ora del Codice nella tua comunità
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Recluta un gruppo locale — un gruppo di boy scout, la tua chiesa, l'università o un sindacato. Oppure organizza una "festa di quartiere" per un'Ora del Codice.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Chiedi ad un funzionario locale di sostenere l'Ora del Codice
 
-## [Invia questa mail](http://<%= hostname %>/resources#politicians) al tuo sindaco, al consiglio comunale , o al consiglio di istituto. Or [fai avere loro questo depliant](http://<%= hostname %>/resources/hoc-one-pager.pdf) e invitali a visitare la tua scuola.
+[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
-Thanks for signing up to host an Hour of Code!
+<% if @country == 'ro' %>
 
-OGNI organizzatore di Un'ora di codice riceverà 10 GB di spazio su Dropbox o 10 $ di credito Skype come ringraziamento. Dettagli (http://<%= hostname %>/prizes)
+Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
 
-Convinci tutta la tua scuola a partecipare (http://<%= hostname %>/whole-school) per avere l'opportunità di vincere grandi premi.
+Echipa Hour of Code Romania hoc@adfaber.org
 
-  1. Diffondi il verbo
+<% end %>
 
-Tell your friends about the #HourOfCode.
+* * *
 
-  1. Chiedi a tutto il tuo istituto di offrire Un'ora di codice
+Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
 
-Invia questa mail (http://<%= hostname %>/resources#email) o consegna questo depliant al tuo dirigente (http://<%= hostname %>/files/schools-handout.pdf). Una volta che la tua scuola sarà iscritta, potrai vincere 10,000 $ in tecnologia per la scuola (http://<%= hostname %>/prizes) e sfidare altre scuole della tua zona a iscriversi.
-
-  1. Chiedi al tuo datore di lavoro di poter partecipare
-
-Invia questa mail (http://<%= hostname %>/resources#email) al tuo capo. O fagli avere questo depliant (http://<%= hostname %>/files/schools-handout.pdf).
-
-  1. Promuovi Un'ora di codice nella tua comunità
-
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
-
-  1. Chiedi a un funzionario locale in carica di sostenere Un'ora di codice
-
-Manda questa mail(http://<%= hostname %>/resources#politicians) al tuo sindaco, consiglio comunale o consiglio di istituto. O fai loro avere questo depliant (http://<%= hostname %>/resources/hoc-one-pager.pdf) e invitali a visitare la tua scuola.
+![](<%= tracking_pixel %>)

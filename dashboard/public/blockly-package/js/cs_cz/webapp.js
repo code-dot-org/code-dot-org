@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -1387,35 +1420,48 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  // helper function used below..
+  function makeNativeMemberFunction(nativeFunc, parentObj) {
+    return function() {
+      return interpreter.createPrimitive(
+                            nativeFunc.apply(parentObj, arguments));
+    };
+  }
+  for (var optsObj in options) {
+    var func, wrapper;
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
+                                interpreter.createNativeFunction(wrapper));
+      }
+    }
+  }
+};
+
+/**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      // helper function used below..
-      function makeNativeMemberFunction(nativeFunc, parentObj) {
-        return function() {
-          return interpreter.createPrimitive(
-                                nativeFunc.apply(parentObj, arguments));
-        };
-      }
-      for (var optsObj in options) {
-        // Create global objects in the interpreter for everything in options
-        var obj = this.createObject(interpreter.OBJECT);
-        this.setProperty(scope, optsObj.toString(), obj);
-        for (var prop in options[optsObj]) {
-          var func = options[optsObj][prop];
-          if (func instanceof Function) {
-            // Populate each of the global objects with native functions
-            // NOTE: other properties are not passed to the interpreter
-            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
-            interpreter.setProperty(obj,
-                                    prop,
-                                    interpreter.createNativeFunction(wrapper));
-          }
-        }
-      }
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -1433,8 +1479,7 @@ exports.evalWith = function(code, options) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
-    var fn = new ctor();
-    return fn.apply(null, args);
+    return new ctor().apply(null, args);
   }
 };
 
@@ -1442,18 +1487,24 @@ exports.evalWith = function(code, options) {
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  return new ctor();
 };
 
 },{}],7:[function(require,module,exports){
@@ -6419,16 +6470,16 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += "var " + codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = [''].concat(arguments); return " +
+          parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -6535,9 +6586,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
@@ -6556,7 +6618,14 @@ exports.random = function (values) {
 };
 
 exports.turnBlack = function (id) {
-  Webapp.executeCmd(id, 'turnBlack');
+  return Webapp.executeCmd(String(id), 'turnBlack');
+};
+
+exports.createHtmlBlock = function (blockId, elementId, html) {
+  return Webapp.executeCmd(String(blockId),
+                          'createHtmlBlock',
+                          {'elementId': elementId,
+                           'html': html });
 };
 
 },{}],28:[function(require,module,exports){
@@ -6604,8 +6673,8 @@ exports.install = function(blockly, blockInstallOptions) {
     return '\n';
   };
 
-  // started separating block generation for each block into it's own function
   installTurnBlack(blockly, generator, blockInstallOptions);
+  installCreateHtmlBlock(blockly, generator, blockInstallOptions);
 };
 
 function installTurnBlack(blockly, generator, blockInstallOptions) {
@@ -6623,6 +6692,31 @@ function installTurnBlack(blockly, generator, blockInstallOptions) {
 
   generator.webapp_turnBlack = function() {
     return 'Webapp.turnBlack(\'block_id_' + this.id + '\');\n';
+  };
+}
+
+function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
+  blockly.Blocks.webapp_createHtmlBlock = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput().appendTitle(msg.createHtmlBlock());
+      this.appendValueInput('ID');
+      this.appendValueInput('HTML');
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.createHtmlBlockTooltip());
+    }
+  };
+
+  generator.webapp_createHtmlBlock = function() {
+    var idParam = Blockly.JavaScript.valueToCode(this, 'ID',
+        Blockly.JavaScript.ORDER_NONE) || '';
+    var htmlParam = Blockly.JavaScript.valueToCode(this, 'HTML',
+        Blockly.JavaScript.ORDER_NONE) || '';
+    return 'Webapp.createHtmlBlock(\'block_id_' + this.id +
+               '\', ' + idParam + ', ' + htmlParam + ');\n';
   };
 }
 
@@ -6690,9 +6784,20 @@ levels.simple = {
     'snapRadius': 2
   },
   'toolbox':
-    tb(blockOfType('webapp_turnBlack')),
+    tb(blockOfType('webapp_turnBlack') +
+      '<block type="webapp_createHtmlBlock" inline="true"> \
+        <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
+        <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>'),
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
+};
+
+levels.ec_simple = {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'turnBlack' },
+    {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
+  ],
 };
 
 levels.full_sandbox =  {
@@ -6711,8 +6816,12 @@ levels.full_sandbox =  {
   'minWorkspaceHeight': 1400,
   'freePlay': true,
   'toolbox':
-    tb(createCategory(msg.catActions(),
-                        blockOfType('webapp_turnBlack')) +
+    tb(createCategory(
+        msg.catActions(),
+        blockOfType('webapp_turnBlack') +
+        '<block type="webapp_createHtmlBlock" inline="true"> \
+          <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
+          <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>') +
        createCategory(msg.catControl(),
                         blockOfType('controls_whileUntil') +
                        '<block type="controls_for"> \
@@ -6908,7 +7017,11 @@ Webapp.onTick = function() {
   Webapp.tickCount++;
 
   if (Webapp.tickCount === 1) {
+    if (Webapp.interpreter) {
+      Webapp.interpreter.run();
+    } else {
     try { Webapp.whenRunFunc(BlocklyApps, api, Webapp.Globals); } catch (e) { }
+    }
   }
 
   if (checkFinished()) {
@@ -7041,6 +7154,10 @@ BlocklyApps.reset = function(first) {
   var divWebapp = document.getElementById('divWebapp');
   divWebapp.style.backgroundColor = 'white';
 
+  while (divWebapp.firstChild) {
+    divWebapp.removeChild(divWebapp.firstChild);
+  }
+
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -7048,6 +7165,7 @@ BlocklyApps.reset = function(first) {
 
   // Reset the Globals object used to contain program variables:
   Webapp.Globals = {};
+  Webapp.interpreter = null;
 };
 
 /**
@@ -7116,7 +7234,9 @@ Webapp.onReportComplete = function(response) {
 
 var defineProcedures = function (blockType) {
   var code = Blockly.Generator.workspaceToCode('JavaScript', blockType);
+  // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
+                         codeFunctions: level.codeFunctions,
                          BlocklyApps: BlocklyApps,
                          Studio: api,
                          Globals: Webapp.Globals } ); } catch (e) { }
@@ -7136,27 +7256,42 @@ Webapp.execute = function() {
 
   BlocklyApps.reset(false);
 
-  // Define any top-level procedures the user may have created
-  // (must be after reset(), which resets the Webapp.Globals namespace)
-  defineProcedures('procedures_defreturn');
-  defineProcedures('procedures_defnoreturn');
-
   // Set event handlers and start the onTick timer
-  var blocks = Blockly.mainWorkspace.getTopBlocks();
-  for (var x = 0; blocks[x]; x++) {
-    var block = blocks[x];
-    if (block.type === 'when_run') {
-      var code = Blockly.Generator.blocksToCode('JavaScript', [ block ]);
-      if (level.editCode) {
-        code = utils.generateCodeAliases(level.codeFunctions);
-        code += BlocklyApps.editor.getValue();
+
+  var codeWhenRun;
+  if (level.editCode) {
+    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Webapp');
+    codeWhenRun += BlocklyApps.editor.getValue();
+  } else {
+    // Define any top-level procedures the user may have created
+    // (must be after reset(), which resets the Webapp.Globals namespace)
+    defineProcedures('procedures_defreturn');
+    defineProcedures('procedures_defnoreturn');
+
+    var blocks = Blockly.mainWorkspace.getTopBlocks();
+    for (var x = 0; blocks[x]; x++) {
+      var block = blocks[x];
+      if (block.type === 'when_run') {
+        codeWhenRun = Blockly.Generator.blocksToCode('JavaScript', [ block ]);
+        break;
       }
-      if (code) {
-        Webapp.whenRunFunc = codegen.functionFromCode(code, {
-                                            BlocklyApps: BlocklyApps,
-                                            Webapp: api,
-                                            Globals: Webapp.Globals } );
-      }
+    }
+  }
+  if (codeWhenRun) {
+    if (level.editCode) {
+      // Use JS interpreter on editCode levels
+      var initFunc = function(interpreter, scope) {
+        codegen.initJSInterpreter(interpreter, scope, {
+                                          BlocklyApps: BlocklyApps,
+                                          Webapp: api,
+                                          Globals: Webapp.Globals } );
+      };
+      Webapp.interpreter = new window.Interpreter(codeWhenRun, initFunc);
+    } else {
+      Webapp.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
+                                          BlocklyApps: BlocklyApps,
+                                          Webapp: api,
+                                          Globals: Webapp.Globals } );
     }
   }
 
@@ -7235,7 +7370,7 @@ Webapp.executeCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  Webapp.callCmd(cmd);
+  return Webapp.callCmd(cmd);
 };
 
 //
@@ -7248,6 +7383,7 @@ Webapp.executeCmd = function (id, name, opts) {
 //
 
 Webapp.callCmd = function (cmd) {
+  var retVal = true;
   switch (cmd.name) {
     /* 
     case 'wait':
@@ -7258,10 +7394,14 @@ Webapp.callCmd = function (cmd) {
     */
     case 'turnBlack':
       BlocklyApps.highlight(cmd.id);
-      Webapp.turnBlack(cmd.opts);
+      retVal = Webapp.turnBlack(cmd.opts);
+      break;
+    case 'createHtmlBlock':
+      BlocklyApps.highlight(cmd.id);
+      retVal = Webapp.createHtmlBlock(cmd.opts);
       break;
   }
-  return true;
+  return retVal;
 };
 
 Webapp.turnBlack = function (opts) {
@@ -7269,6 +7409,20 @@ Webapp.turnBlack = function (opts) {
 
   // sample
   divWebapp.style.backgroundColor = 'black';
+
+  return true;
+};
+
+Webapp.createHtmlBlock = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newDiv = document.createElement("div");
+  newDiv.id = opts.elementId;
+  newDiv.innerHTML = opts.html;
+
+  divWebapp.appendChild(newDiv);
+
+  return newDiv;
 };
 
 /*
@@ -7556,6 +7710,10 @@ exports.catText = function(d){return "Text"};
 exports.catVariables = function(d){return "Variables"};
 
 exports.continue = function(d){return "Continue"};
+
+exports.createHtmlBlock = function(d){return "create html block"};
+
+exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
 exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
 

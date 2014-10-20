@@ -72,7 +72,11 @@ Webapp.onTick = function() {
   Webapp.tickCount++;
 
   if (Webapp.tickCount === 1) {
+    if (Webapp.interpreter) {
+      Webapp.interpreter.run();
+    } else {
     try { Webapp.whenRunFunc(BlocklyApps, api, Webapp.Globals); } catch (e) { }
+    }
   }
 
   if (checkFinished()) {
@@ -205,6 +209,10 @@ BlocklyApps.reset = function(first) {
   var divWebapp = document.getElementById('divWebapp');
   divWebapp.style.backgroundColor = 'white';
 
+  while (divWebapp.firstChild) {
+    divWebapp.removeChild(divWebapp.firstChild);
+  }
+
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -212,6 +220,7 @@ BlocklyApps.reset = function(first) {
 
   // Reset the Globals object used to contain program variables:
   Webapp.Globals = {};
+  Webapp.interpreter = null;
 };
 
 /**
@@ -280,7 +289,9 @@ Webapp.onReportComplete = function(response) {
 
 var defineProcedures = function (blockType) {
   var code = Blockly.Generator.workspaceToCode('JavaScript', blockType);
+  // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
+                         codeFunctions: level.codeFunctions,
                          BlocklyApps: BlocklyApps,
                          Studio: api,
                          Globals: Webapp.Globals } ); } catch (e) { }
@@ -300,27 +311,42 @@ Webapp.execute = function() {
 
   BlocklyApps.reset(false);
 
-  // Define any top-level procedures the user may have created
-  // (must be after reset(), which resets the Webapp.Globals namespace)
-  defineProcedures('procedures_defreturn');
-  defineProcedures('procedures_defnoreturn');
-
   // Set event handlers and start the onTick timer
-  var blocks = Blockly.mainWorkspace.getTopBlocks();
-  for (var x = 0; blocks[x]; x++) {
-    var block = blocks[x];
-    if (block.type === 'when_run') {
-      var code = Blockly.Generator.blocksToCode('JavaScript', [ block ]);
-      if (level.editCode) {
-        code = utils.generateCodeAliases(level.codeFunctions);
-        code += BlocklyApps.editor.getValue();
+
+  var codeWhenRun;
+  if (level.editCode) {
+    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Webapp');
+    codeWhenRun += BlocklyApps.editor.getValue();
+  } else {
+    // Define any top-level procedures the user may have created
+    // (must be after reset(), which resets the Webapp.Globals namespace)
+    defineProcedures('procedures_defreturn');
+    defineProcedures('procedures_defnoreturn');
+
+    var blocks = Blockly.mainWorkspace.getTopBlocks();
+    for (var x = 0; blocks[x]; x++) {
+      var block = blocks[x];
+      if (block.type === 'when_run') {
+        codeWhenRun = Blockly.Generator.blocksToCode('JavaScript', [ block ]);
+        break;
       }
-      if (code) {
-        Webapp.whenRunFunc = codegen.functionFromCode(code, {
-                                            BlocklyApps: BlocklyApps,
-                                            Webapp: api,
-                                            Globals: Webapp.Globals } );
-      }
+    }
+  }
+  if (codeWhenRun) {
+    if (level.editCode) {
+      // Use JS interpreter on editCode levels
+      var initFunc = function(interpreter, scope) {
+        codegen.initJSInterpreter(interpreter, scope, {
+                                          BlocklyApps: BlocklyApps,
+                                          Webapp: api,
+                                          Globals: Webapp.Globals } );
+      };
+      Webapp.interpreter = new window.Interpreter(codeWhenRun, initFunc);
+    } else {
+      Webapp.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
+                                          BlocklyApps: BlocklyApps,
+                                          Webapp: api,
+                                          Globals: Webapp.Globals } );
     }
   }
 
@@ -399,7 +425,7 @@ Webapp.executeCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  Webapp.callCmd(cmd);
+  return Webapp.callCmd(cmd);
 };
 
 //
@@ -412,6 +438,7 @@ Webapp.executeCmd = function (id, name, opts) {
 //
 
 Webapp.callCmd = function (cmd) {
+  var retVal = true;
   switch (cmd.name) {
     /* 
     case 'wait':
@@ -422,10 +449,14 @@ Webapp.callCmd = function (cmd) {
     */
     case 'turnBlack':
       BlocklyApps.highlight(cmd.id);
-      Webapp.turnBlack(cmd.opts);
+      retVal = Webapp.turnBlack(cmd.opts);
+      break;
+    case 'createHtmlBlock':
+      BlocklyApps.highlight(cmd.id);
+      retVal = Webapp.createHtmlBlock(cmd.opts);
       break;
   }
-  return true;
+  return retVal;
 };
 
 Webapp.turnBlack = function (opts) {
@@ -433,6 +464,20 @@ Webapp.turnBlack = function (opts) {
 
   // sample
   divWebapp.style.backgroundColor = 'black';
+
+  return true;
+};
+
+Webapp.createHtmlBlock = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newDiv = document.createElement("div");
+  newDiv.id = opts.elementId;
+  newDiv.innerHTML = opts.html;
+
+  divWebapp.appendChild(newDiv);
+
+  return newDiv;
 };
 
 /*

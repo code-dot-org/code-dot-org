@@ -8,14 +8,14 @@ title: Resources layout: wide
 
 ## 1) Try the tutorials:
 
-We’ll host a variety of fun, hour-long tutorials on the for students of all ages created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
 **All Hour of Code tutorials:**
 
   * Require minimal prep-time for teachers
   * Are self-guided - allowing students to work at their own pace and skill-level
 
-[![image](http://code.org/images/tutorials.png)](http://code.org/learn)
+[![gambar](http://code.org/images/tutorials.png)](http://code.org/learn)
 
 ## 2) Plan your hardware needs - computers are optional
 

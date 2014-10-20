@@ -9,6 +9,8 @@ class Artist < Blockly
     permitted_errors
   )
 
+  before_save :update_ideal_level_source
+
   def xml_blocks
     super + %w(solution_blocks predraw_blocks)
   end
@@ -104,9 +106,7 @@ class Artist < Blockly
       </block>
     </category>
     <category name="Category">
-      <block type="procedures_defnoreturn">
-        <title name="NAME">CATEGORY=Category</title>
-      </block>
+      <block type="category"></block>
     </category>
     <category name="Functions" custom="PROCEDURE">
     </category>

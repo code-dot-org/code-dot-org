@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141014222914) do
+ActiveRecord::Schema.define(version: 20141017233919) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20141014222914) do
     t.integer  "lines",           default: 0, null: false
   end
 
-  add_index "activities", ["level_id"], name: "index_activities_on_level_id", using: :btree
   add_index "activities", ["level_source_id"], name: "index_activities_on_level_source_id", using: :btree
   add_index "activities", ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
 
@@ -235,7 +234,7 @@ ActiveRecord::Schema.define(version: 20141014222914) do
   add_index "secret_words", ["word"], name: "index_secret_words_on_word", unique: true, using: :btree
 
   create_table "sections", force: true do |t|
-    t.integer  "user_id",                     null: false
+    t.integer  "user_id",                      null: false
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -243,7 +242,7 @@ ActiveRecord::Schema.define(version: 20141014222914) do
     t.integer  "script_id"
     t.string   "grade"
     t.string   "admin_code"
-    t.string   "login_type", default: "none", null: false
+    t.string   "login_type", default: "email", null: false
   end
 
   add_index "sections", ["code"], name: "index_sections_on_code", unique: true, using: :btree

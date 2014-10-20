@@ -18,7 +18,7 @@
 
 ## 1. Spread the word
 
-Tell your friends about the #HourOfCode.
+Расскажите своим друзьям про #ЧасКода.
 
 <% if @country == 'us' %>
 
@@ -44,30 +44,18 @@ Recruit a local group — boy scouts club, church, university, veterans group or
 
 ## 5. Ask a local elected official to support the Hour of Code
 
-## [Отправьте этот e-mail](http://<%= hostname %>/resources#politicians) вашему мэру, муниципальному совету или школьному совету. Or [передайте им этот раздаточный материал](http://<%= hostname %>/resources/hoc-one-pager.pdf) и пригласите их посетить вашу школу.
+[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
-Спасибо за регистрацию на проведение Часа Кода!
+<% if @country == 'ro' %>
 
-КАЖДЫЙ организатор Часа Кода в благодарность получит 10 ГБ пространства на Dropbox или $10 в Skype. Подробности(http://<%= hostname %>/prizes)
+Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
 
-Участвуйте всей школой (http://<%= hostname %>/whole-school), чтобы получить шанс на большие подарки для вашей школы.
+Echipa Hour of Code Romania hoc@adfaber.org
 
-  1. Расскажите всем
+<% end %>
 
-Tell your friends about the #HourOfCode.
+* * *
 
-  1. Попросите всю вашу школу предложить Час Кода
+Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
 
-Отправьте этот email (http://<%= hostname %>/resources#email) или передайте этот раздаточный материал вашему директору (http://<%= hostname %>/files/schools-handout.pdf). Как только ваша школа начнет участвовать, вступайте, чтобы выиграть для вашей школы технологии стоимостью в $10,000(http://<%= hostname %>/prizes) и бросьте вызов на участие другим школам в вашем районе.
-
-  1. Попросите вступить вашего работодателя
-
-Отправьте этот email (http://<%= hostname %>/resources#email) вашему менеджеру или Исполнительному директору. Или передайте им этот раздаточный материал (http://<%= hostname %>/files/schools-handout.pdf).
-
-  1. Содействуйте Часу Кода в вашем сообществе
-
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
-
-  1. Попросите местное должностное лицо поддержать Час Кода
-
-Отправьте этот email (http://<%= hostname %>/resources#politicians) вашему мэру, городскому совету или школьному совету. Или передайте им этот раздаточный материал (http://<%= hostname %>/resources/hoc-one-pager.pdf) и пригласите их посетить вашу школу.
+![](<%= tracking_pixel %>)

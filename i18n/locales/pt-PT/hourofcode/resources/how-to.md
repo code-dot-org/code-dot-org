@@ -8,18 +8,18 @@ title: Resources layout: wide
 
 ## 1) Experimenta os tutoriais:
 
-Nós vamos promover muita diversão com tutoriais de uma hora, para estudantes de todas as idades, criados por diferentes parceiros. Novos tutoriais estão a ser criados e serão lançados antes de 8 de Dezembro de 2014 para o arranque da Hour of Code.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**All Hour of Code tutorials:**
+**Todos os turoriais da Hour of Code:**
 
-  * Require minimal prep-time for teachers
+  * Requerem apenas preparação mínima por parte dos professores
   * Are self-guided - allowing students to work at their own pace and skill-level
 
 [![image](http://code.org/images/tutorials.png)](http://code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Planeie o hardware de que vai necessitar - os computadores são opcionais
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
+Para proporcionar a melhor experiência da "Hour of Code" convém ter computadores com ligação à internet. No entanto, não é necessário ter um computador por criança e, na verdade, até é possível fazer a "Hour of Code" sem computadores.
 
   * **Test tutorials on student computers or devices.** Make sure they work properly (with sound and video).
   * **Preview the congrats page** to see what students will see when they finish. 

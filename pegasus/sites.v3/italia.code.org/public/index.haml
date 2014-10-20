@@ -22,9 +22,9 @@ social:
   #start.col-36{:style=>'text-align:center; margin-top: 0'}
     .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
       %h3{:style=>"font-size: 22px; line-height: 26px; font-weight: 400; margin-top: 5px; margin-bottom: 0;"}<
-        Dal 1 settembre 2014 in Italia
+        Dal 23 settembre 2014 in Italia
       %h1{:style=>"font-size: 56px; line-height: 56px; margin: 0;"}<
-        =format_integer_with_commas(fetch_hoc_metrics['countries']['Italy'].to_i - 122282).to_s
+        =format_integer_with_commas(fetch_hoc_metrics['countries']['Italy'].to_i).to_s
       %h3{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 5px; margin-bottom: 0;"}<
         hanno partecipato alla
       %h2{:style=>"font-size: 36px; line-height: 36px; font-weight: 600; margin-top: 5px; margin-bottom: 0;"}<
@@ -33,18 +33,21 @@ social:
         Chiunque può imparare
     %a{:href=>'http://programmailfuturo.it', :style=>"text-decoration: none;"}
       %button{:style=>"font-size: 19px; font-weight: 500; height: 50px;margin-top: 10px;"}
-        Inizia
+        Inizia e "Programma il Futuro"!
 
     %br
 
     %ul
       %li Nessuna esperienza è necessaria
       %li Neanche un calcolatore
-      %li Da 6 a 106 anni
+      %li Da 4 a 104 anni
 
 %div{:style=>'clear:both'}
 
-%br Nel 2013 l'Ora del Codice ha avuto quasi 40 milioni di partecipanti in tutto il mondo, con commenti entusiasti  da parte di studenti, insegnanti e genitori.
+.desktop-feature
+  %h2 In Italia l'Ora del Codice è parte del progetto "<a href="il-progetto">Programma il Futuro</a>"
+
+%br Nel 2013 l'Ora del Codice ha avuto quasi 40 milioni di partecipanti in tutto il mondo, con commenti entusiasti  da parte di studenti, insegnanti e genitori:
 %ul
   %li "Ho visto fuochi d'artificio accendersi sulle teste dei miei studenti, non lampadine." - Insegnante
   %li "Il miglior prodotto educativo abbia mai visto." - Genitore e imprenditore
@@ -58,4 +61,5 @@ social:
 
 .desktop-feature
   %h2 Tutti concordano nel dire che più studenti dovrebbero imparare l'informatica!
+  
   //= view :top_quotes

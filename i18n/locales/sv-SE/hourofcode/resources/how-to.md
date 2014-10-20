@@ -1,14 +1,14 @@
 * * *
 
-title: Resources layout: wide
+Titel: resurser layout: bred
 
 * * *
 
-# How to teach one Hour of Code
+# Hur lära ut En timme av kod
 
-## 1) Try the tutorials:
+## 1) Testa övningshandledningarna:
 
-We’ll host a variety of fun, hour-long tutorials on the for students of all ages created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
 **All Hour of Code tutorials:**
 

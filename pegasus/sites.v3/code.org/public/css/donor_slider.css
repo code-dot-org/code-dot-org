@@ -50,7 +50,3 @@ a:hover, a:active {
   padding: 0px;
   margin: 0px;
 }
-
-.badge > * {
-  vertical-align: middle;
-}
