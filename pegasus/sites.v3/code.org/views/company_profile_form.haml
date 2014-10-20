@@ -51,6 +51,11 @@
     -if secret
       %tr
         %th
+          Alternate string for "employees" in "N Microsoft employees have tried the hour of code"
+        %td
+          %input{name:'employees_string_s', value:data['employees_string_s']}        
+      %tr
+        %th
           Show Display Name in header?
         %td
           -name_in_header_b = data['name_in_header_b'] || nil

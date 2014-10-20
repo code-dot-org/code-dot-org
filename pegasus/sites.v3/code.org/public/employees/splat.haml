@@ -29,6 +29,7 @@ max_age: 60
 -if (num_employees && num_employees != 0)
   -hoc_percent = [(hoc_count.to_f / num_employees * 100).floor, 100].min
 -hoc_percent ||= nil
+-employees_string = company['employees_string_s'] ? company['employees_string_s'] : "employees"
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/ee.css"}/
 
@@ -56,7 +57,7 @@ max_age: 60
         #{format_integer_with_commas(hoc_count)}
         -if num_employees
           of #{format_integer_with_commas(company['num_employees_i'])} 
-        #{company['display_name_s']} employees have tried the Hour of Code.
+        #{company['display_name_s']} #{employees_string} have tried the Hour of Code.
         %h4.desktop-feature{style: 'font-size: 22px;'}
           -if hoc_percent
             #{hoc_percent}% Started
