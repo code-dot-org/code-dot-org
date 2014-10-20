@@ -4,25 +4,6 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   background-color: #fff;
 }
 
-/* Slider. */
-.sliderContainer {
-  float: left
-}
-.sliderTrack {
-  stroke: #aaa;
-  stroke-width: 6px;
-  stroke-linecap: round;
-}
-.sliderKnob {
-  fill: #ddd;
-  stroke: #bbc;
-  stroke-width: 1px;
-  stroke-linejoin: round;
-}
-.sliderKnob:hover {
-  fill: #eee;
-}
-
 /* Sprited icons. */
 .icon21 {
   height: 21px;
@@ -42,4 +23,19 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 .stop {
   background-position: -63px 0px;
   margin-right: 3px;
+}
+.calcHeader {
+  font-size: 25px;
+}
+
+.highlightedParen {
+  fill: white;
+}
+
+.exprMistake {
+  fill: red;
+}
+
+.expr {
+  font-size: 20px;
 }

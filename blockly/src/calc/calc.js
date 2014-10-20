@@ -46,7 +46,6 @@ BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
-
 /**
  * Initialize Blockly and the Calc.  Called on page load.
  */
@@ -70,6 +69,7 @@ Calc.init = function(config) {
     assetUrl: BlocklyApps.assetUrl,
     data: {
       localeDirection: BlocklyApps.localeDirection(),
+      visualization: require('./visualization.html')(),
       controls: require('./controls.html')({
         assetUrl: BlocklyApps.assetUrl
       }),
@@ -86,30 +86,17 @@ Calc.init = function(config) {
   };
 
   config.afterInject = function() {
+    var svg = document.getElementById('svgCalc');
+    svg.setAttribute('width', CANVAS_WIDTH);
+    svg.setAttribute('height', CANVAS_HEIGHT);
+
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
     //XXX Not sure if this is still right.
     Blockly.JavaScript.addReservedWords('Calc,code');
 
-    // Helper for creating canvas elements.
-    var createCanvas = function(id, width, height) {
-      var el = document.createElement('canvas');
-      el.id = id;
-      el.width = width;
-      el.height = height;
-      return el;
-    };
-
-    // Create display canvas.
-    var display = createCanvas('display', 400, 400);
-    var visualization = document.getElementById('visualization');
-    visualization.appendChild(display);
-    Calc.ctxDisplay = display.getContext('2d');
-
     Calc.expressions.target = generateExpressionFromBlockXml(level.solutionBlocks);
     Calc.drawExpressions();
-
-    // todo - figure out LB story
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -296,62 +283,69 @@ Calc.step = function (ignoreFailures) {
  * Draw the current state of our two expressions.
  */
 Calc.drawExpressions = function () {
-  var ctx = Calc.ctxDisplay;
-
   var expected = Calc.expressions.current || Calc.expressions.target;
   var user = Calc.expressions.user;
 
-  resetCanvas();
-
-  ctx.font="30px Verdana";
   expected.applyExpectation(expected);
-  drawExpression(ctx, expected, 365, user !== null);
+  drawSvgExpression('answerExpression', expected, user !== null);
 
   if (user) {
     user.applyExpectation(expected);
-    drawExpression(ctx, user, 165, true);
+    drawSvgExpression('userExpression', user, true);
+  } else {
+    clearSvgExpression('userExpression');
   }
 };
 
-function resetCanvas() {
-  var ctx = Calc.ctxDisplay;
-
-  var divider = 300;
-
-  ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  ctx.fillStyle = '#33ccff';
-  ctx.fillRect(0, 0, 400, divider);
-  ctx.fillStyle = '#996633';
-  ctx.fillRect(0, divider, CANVAS_WIDTH, CANVAS_HEIGHT);
-
-
-  var height = 20;
-  ctx.font= height + "px Verdana";
-  ctx.fillStyle = 'black';
-
-  var goalText = "Goal:"; // todo - i18n
-  var yourExpression = "Your expression:"; // todo -i18n
-  ctx.fillText(yourExpression, 0, height);
-  ctx.fillText(goalText, 0, divider + height);
+function clearSvgExpression(elementId) {
+  var g = document.getElementById(elementId);
+  // remove all existing children, in reverse order so that we don't have to
+  // worry about indexes changing
+  for (var i = g.childNodes.length - 1; i >= 0; i--) {
+    g.removeChild(g.childNodes[i]);
+  }
 }
 
-function drawExpression(ctx, expr, ypos, styleMarks) {
-  var list = expr.getTokenList(true);
+function drawSvgExpression(elementId, expr, styleMarks) {
+  var i, text, textLength, char;
+  var g = document.getElementById(elementId);
+  clearSvgExpression(elementId);
 
-  var strSize = ctx.measureText(expr.toString());
+  var tokenList = expr.getTokenList(styleMarks);
+  var xPos = 0;
+  for (i = 0; i < tokenList.length; i++) {
+    text = document.createElementNS(Blockly.SVG_NS, 'text');
 
-  // todo - handle long strings
-  var xpos = (CANVAS_WIDTH - strSize.width) / 2;
-  for (var i = 0; i < list.length; i++) {
-    var char = list[i].char;
-    ctx.fillStyle = 'black';
-    if (styleMarks && list[i].marked) {
-      // marked parens are green, other marks ar ered
-      ctx.fillStyle = /^[\(|\)]$/.test(char) ? 'white' : 'red';
+    // getComputedTextLength doesn't respect trailing spaces, so we replace them
+    // with _, calculate our size, then return to the version with spaces.
+    char = tokenList[i].char;
+    text.innerHTML = char.replace(/ /g, '_');
+    g.appendChild(text);
+    // getComputedTextLength isn't available to us in our mochaTests
+    textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
+    text.innerHTML = char;
+
+    text.setAttribute('x', xPos + textLength / 2);
+    text.setAttribute('text-anchor', 'middle');
+    xPos += textLength;
+
+    if (styleMarks && tokenList[i].marked) {
+      if (char === '(' || char === ')') {
+        text.setAttribute('class', 'highlightedParen');
+      } else {
+        text.setAttribute('class', 'exprMistake');
+      }
     }
-    ctx.fillText(char, xpos, ypos);
-    xpos += ctx.measureText(char).width;
   }
+
+  // center entire expression
+  // todo (brent): handle case where expression is longer than width
+  var width = g.getBoundingClientRect().width;
+  var xPadding = (CANVAS_WIDTH - width) / 2;
+  var currentTransform = g.getAttribute('transform');
+  var newTransform = currentTransform.replace(/translate\(.*,/,
+    "translate(" + xPadding + ",");
+  g.setAttribute('transform', newTransform);
 }
 
 /**
