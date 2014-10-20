@@ -9,6 +9,8 @@ class Artist < Blockly
     permitted_errors
   )
 
+  before_save :update_ideal_level_source
+
   def xml_blocks
     super + %w(solution_blocks predraw_blocks)
   end
