@@ -277,20 +277,18 @@ Blockly.getAbsoluteXY_ = function(element) {
  * @param {!Element} element Element to find the coordinates of.
  * @return {!Element|null} topmost SVG element, if one exists
  */
-Blockly.topMostSVGParent = goog.memoize(
-  function(element) {
-    var topMostSVG = null;
+Blockly.topMostSVGParent = function(element) {
+  var topMostSVG = null;
 
-    while (element) {
-      if (element.tagName === 'svg') {
-        topMostSVG = element;
-      }
-      element = goog.dom.getParentElement(element);
+  while (element) {
+    if (element.tagName === 'svg') {
+      topMostSVG = element;
     }
-
-    return topMostSVG;
+    element = goog.dom.getParentElement(element);
   }
-);
+
+  return topMostSVG;
+};
 
 /**
  * Helper method for creating SVG elements.

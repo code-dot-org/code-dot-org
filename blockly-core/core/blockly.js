@@ -298,7 +298,7 @@ Blockly.getWorkspaceWidth = function() {
  * Note, this only includes the 'flyout' part, not the categories tree.
  */
 Blockly.getToolboxWidth = function() {
-  var flyout = Blockly.mainWorkspace.flyout_ || Blockly.mainWorkspaceFlyout || Blockly.Toolbox.flyout_;
+  var flyout = Blockly.mainWorkspace.flyout_ || Blockly.mainWorkspaceFlyout || Blockly.mainToolbox.flyout_;
   var metrics = flyout.workspace_.getMetrics();
   var width = metrics ? metrics.viewWidth : 0;
   return width;
@@ -522,8 +522,8 @@ Blockly.hideChaff = function(opt_allowToolbox) {
   Blockly.Tooltip.hide();
   Blockly.WidgetDiv.hide();
   if (!opt_allowToolbox &&
-      Blockly.Toolbox.flyout_ && Blockly.Toolbox.flyout_.autoClose) {
-    Blockly.Toolbox.clearSelection();
+      Blockly.mainToolbox.flyout_ && Blockly.mainToolbox.flyout_.autoClose) {
+    Blockly.mainToolbox.clearSelection();
   }
 };
 
@@ -757,7 +757,7 @@ Blockly.generateGetWorkspaceMetrics_ = function(workspace) {
   return function() {
 
     var svgSize = Blockly.svgSize();
-    svgSize.width -= Blockly.Toolbox.width;  // Zero if no Toolbox.
+    svgSize.width -= Blockly.mainToolbox.width;  // Zero if no Toolbox.
     var viewWidth = svgSize.width - Blockly.Scrollbar.scrollbarThickness;
     var viewHeight = svgSize.height - Blockly.Scrollbar.scrollbarThickness;
     try {
@@ -790,7 +790,7 @@ Blockly.generateGetWorkspaceMetrics_ = function(workspace) {
       var topEdge = blockBox.y;
       var bottomEdge = topEdge + blockBox.height;
     }
-    var absoluteLeft = Blockly.RTL ? 0 : Blockly.Toolbox.width;
+    var absoluteLeft = Blockly.RTL ? 0 : Blockly.mainToolbox.width;
     return {
       viewHeight: svgSize.height,
       viewWidth: svgSize.width,
@@ -898,8 +898,6 @@ Blockly.openFunctionEditor = function(functionDefinitionXML) {
     if (Blockly.functionEditorOpen) {
       Blockly.functionEditorOpen = false;
       goog.dom.removeNode(goog.dom.getElementByClass('newFunctionDiv'));
-      Blockly.Toolbox.flyout_ = Blockly.mainWorkspaceFlyout;
-      Blockly.Toolbox.HtmlDiv = Blockly.mainWorkspaceCategoryHTMLDiv;
       return;
     }
     Blockly.functionEditorOpen = true;
@@ -935,10 +933,9 @@ Blockly.openFunctionEditor = function(functionDefinitionXML) {
   // Initialize toolbox
   {
     if (Blockly.hasCategories) {
-      Blockly.mainWorkspaceFlyout = Blockly.Toolbox.flyout_;
-      Blockly.mainWorkspaceCategoryHTMLDiv = Blockly.Toolbox.HtmlDiv;
-      Blockly.Toolbox.createDom(svgWorkspaceContainer);
-      Blockly.Toolbox.init(workspace);
+      var toolbox = new Blockly.Toolbox();
+      toolbox.createDom(svgWorkspaceContainer);
+      toolbox.init(workspace);
     } else {
       // Construct flyout DOM
       {

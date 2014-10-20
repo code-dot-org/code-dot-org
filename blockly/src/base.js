@@ -667,7 +667,7 @@ BlocklyApps.onResize = function(gameWidth) {
 // |                 |         <--------- workspaceWidth ---------->         |
 BlocklyApps.resizeHeaders = function() {
   var categoriesWidth = 0;
-  var categories = Blockly.Toolbox.HtmlDiv;
+  var categories = Blockly.mainToolbox.HtmlDiv;
   if (categories) {
     categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
   }

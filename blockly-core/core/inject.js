@@ -253,7 +253,8 @@ Blockly.createDom_ = function(container) {
     // Determine if there needs to be a category tree, or a simple list of
     // blocks.  This cannot be changed later, since the UI is very different.
     if (Blockly.hasCategories) {
-      Blockly.Toolbox.createDom(svg);
+      Blockly.mainToolbox = new Blockly.Toolbox();
+      Blockly.mainToolbox.createDom(svg);
     } else {
       /**
        * @type {!Blockly.Flyout}
@@ -326,7 +327,7 @@ Blockly.createDom_ = function(container) {
     if (Blockly.mainWorkspace.flyout_) {
       Blockly.mainWorkspace.flyout_.setEnabled(enabled);
     } else {
-      Blockly.Toolbox.enabled = enabled;
+      Blockly.mainToolbox.enabled = enabled;
     }
   };
 
@@ -405,7 +406,7 @@ Blockly.init_ = function() {
 
   if (Blockly.languageTree) {
     if (Blockly.hasCategories) {
-      Blockly.Toolbox.init(Blockly.mainWorkspace);
+      Blockly.mainToolbox.init(Blockly.mainWorkspace);
     } else {
       // Build a fixed flyout with the root blocks.
       Blockly.mainWorkspace.flyout_.init(Blockly.mainWorkspace, true);
