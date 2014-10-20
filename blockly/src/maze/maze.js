@@ -160,6 +160,8 @@ var TILE_SHAPES = {
   'null4': [1, 3]
 };
 
+var idleAnimationFrame = 0;
+
 function drawMap () {
   var svg = document.getElementById('svgMaze');
   var x, y, k, tile;
@@ -271,21 +273,64 @@ function drawMap () {
 
   // Add idle pegman.
   if (skin.idlePegmanAnimation) {
-    createPegmanAnimation({
+    var params = {
       idStr: 'idle',
       pegmanImage: skin.idlePegmanAnimation,
       row: Maze.start_.y,
       col: Maze.start_.x,
       direction: Maze.startDirection
-    });
+    };
+
+    if (mazeUtils.isScratSkin(skin.id))
+    {
+      params.numColPegman = 4;
+      params.numRowPegman = 11;
+    }
+
+    createPegmanAnimation(params);
   }
+
+  if (mazeUtils.isScratSkin(skin.id))
+  {
+    // temporary hack to play idle animation
+    if (skin.idlePegmanAnimation) {
+      var numFrames = skin.idlePegmanAnimationFrameNumber;
+      var pegmanIcon = document.getElementById('pegman');
+      var idlePegmanIcon = document.getElementById('idlePegman');
+      var timePerFrame = 600; // timeForAnimation / numFrames;
+
+      setInterval(function() {
+        pegmanIcon.setAttribute('visibility', 'hidden');
+        if (! runningAnAttempt)
+        {
+          updatePegmanAnimation({
+            idStr: 'idle',
+            row: Maze.start_.y,
+            col: Maze.start_.x,
+            direction: Maze.startDirection,
+            animationRow: idleAnimationFrame
+          });
+          idleAnimationFrame = (idleAnimationFrame + 1) % skin.idlePegmanAnimationFrameNumber;
+        }
+      }, timePerFrame);
+    }
+  }
+
 
   // Add the hidden dazed pegman when hitting the wall.
   if (skin.wallPegmanAnimation) {
-    createPegmanAnimation({
+    var params = {
       idStr: 'wall',
       pegmanImage: skin.wallPegmanAnimation
-    });
+    };
+
+    if (mazeUtils.isScratSkin(skin.id))
+    {
+      params.numColPegman = 1;
+      params.numRowPegman = 20;
+    }
+
+    createPegmanAnimation(params);
   }
 
   // Add the hidden moving pegman animation.
@@ -345,6 +390,12 @@ function drawMapTiles(svg) {
           tile = 'null0';
         }
 
+        // scrat gets nothing on non-path tiles
+        if (mazeUtils.isScratSkin(skin.id))
+        {
+          tile = '10010';
+        }
+
         if (mazeUtils.isBeeSkin(skin.id)) {
           // begin with three trees
           var tileChoices = ['null3', 'null4', 'null0'];
@@ -356,6 +407,14 @@ function drawMapTiles(svg) {
           }
 
           tile = _.sample(tileChoices);
+        }
+      }
+      else
+      {
+        // scrat gets ice on the path tiles
+        if (mazeUtils.isScratSkin(skin.id))
+        {
+          tile = 'null1';
         }
       }
 
@@ -818,6 +877,8 @@ BlocklyApps.runButtonClick = function() {
   Maze.execute(false);
 };
 
+var runningAnAttempt = false;
+
 function beginAttempt () {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
@@ -829,6 +890,8 @@ function beginAttempt () {
   Blockly.mainWorkspace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
+
+  runningAnAttempt = true;
 }
 
 /**
@@ -840,6 +903,8 @@ Maze.resetButtonClick = function () {
   stepButton.removeAttribute('disabled');
 
   reenableCachedBlockStates();
+
+  runningAnAttempt = false;
 };
 
 function reenableCachedBlockStates () {
@@ -1363,21 +1428,42 @@ Maze.scheduleFail = function(forward) {
 
     // Play the animation of hitting the wall
     if (skin.hittingWallAnimation) {
-      timeoutList.setTimeout(function() {
+      if (mazeUtils.isScratSkin(skin.id))
+      {
+        var numFrames = skin.hittingWallAnimationFrameNumber;
         var wallAnimationIcon = document.getElementById('wallAnimation');
-        wallAnimationIcon.setAttribute(
-            'x',
-            Maze.SQUARE_SIZE * (Maze.pegmanX + 0.5 + deltaX * 0.5) -
-            wallAnimationIcon.getAttribute('width') / 2);
-        wallAnimationIcon.setAttribute(
-            'y',
-            Maze.SQUARE_SIZE * (Maze.pegmanY + 1 + deltaY * 0.5) -
-            wallAnimationIcon.getAttribute('height'));
-        wallAnimationIcon.setAttribute('visibility', 'visible');
-        wallAnimationIcon.setAttributeNS(
-          'http://www.w3.org/1999/xlink', 'xlink:href',
-          skin.hittingWallAnimation);
-      }, stepSpeed / 2);
+
+        var timePerFrame = 100; //timeForAnimation / numFrames;
+
+        utils.range(0, numFrames - 1).forEach(function (frame) {
+            timeoutList.setTimeout(function() {
+              wallAnimationIcon.setAttribute('visibility', 'hidden');
+              updatePegmanAnimation({
+                idStr: 'wall',
+                col: Maze.pegmanX + deltaX * frame / numFrames,
+                row: Maze.pegmanY + deltaY * frame / numFrames,
+                direction: 0,
+                animationRow: frame
+              });
+            }, timePerFrame * frame);
+          });
+      } else {
+        timeoutList.setTimeout(function() {
+          var wallAnimationIcon = document.getElementById('wallAnimation');
+          wallAnimationIcon.setAttribute(
+              'x',
+              Maze.SQUARE_SIZE * (Maze.pegmanX + 0.5 + deltaX * 0.5) -
+              wallAnimationIcon.getAttribute('width') / 2);
+          wallAnimationIcon.setAttribute(
+              'y',
+              Maze.SQUARE_SIZE * (Maze.pegmanY + 1 + deltaY * 0.5) -
+              wallAnimationIcon.getAttribute('height'));
+          wallAnimationIcon.setAttribute('visibility', 'visible');
+          wallAnimationIcon.setAttributeNS(
+            'http://www.w3.org/1999/xlink', 'xlink:href',
+            skin.hittingWallAnimation);
+        }, stepSpeed / 2);
+      }
     }
     timeoutList.setTimeout(function() {
       Maze.displayPegman(Maze.pegmanX,
