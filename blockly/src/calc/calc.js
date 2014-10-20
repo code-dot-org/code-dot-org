@@ -319,11 +319,11 @@ function drawSvgExpression(elementId, expr, styleMarks) {
     // getComputedTextLength doesn't respect trailing spaces, so we replace them
     // with _, calculate our size, then return to the version with spaces.
     char = tokenList[i].char;
-    text.innerHTML = char.replace(/ /g, '_');
+    text.textContent = char.replace(/ /g, '_');
     g.appendChild(text);
     // getComputedTextLength isn't available to us in our mochaTests
     textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
-    text.innerHTML = char;
+    text.textContent = char;
 
     text.setAttribute('x', xPos + textLength / 2);
     text.setAttribute('text-anchor', 'middle');
@@ -343,7 +343,8 @@ function drawSvgExpression(elementId, expr, styleMarks) {
   var width = g.getBoundingClientRect().width;
   var xPadding = (CANVAS_WIDTH - width) / 2;
   var currentTransform = g.getAttribute('transform');
-  var newTransform = currentTransform.replace(/translate\(.*,/,
+  // IE has space separated args, others use comma to separate
+  var newTransform = currentTransform.replace(/translate\(.*[,|\s]/,
     "translate(" + xPadding + ",");
   g.setAttribute('transform', newTransform);
 }
