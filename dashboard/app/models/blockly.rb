@@ -129,4 +129,10 @@ XML
     end
     xml.serialize(save_with: XML_OPTIONS).gsub("\n", '').strip
   end
+
+  # for levels with solutions
+  def update_ideal_level_source
+    return if !self.respond_to?(:solution_blocks) || solution_blocks.blank?
+    self.ideal_level_source = LevelSource.find_identical_or_create(self, solution_blocks)
+  end
 end

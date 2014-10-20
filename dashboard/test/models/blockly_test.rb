@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class LevelTest < ActiveSupport::TestCase
+class BlocklyTest < ActiveSupport::TestCase
   setup do
     @toolbox_xml = <<XML
 <xml>
@@ -107,16 +107,6 @@ XML
     xml = level.to_xml
     xml2 = Level.load_custom_level_xml(xml, name).to_xml
     level.destroy
-    assert_equal xml, xml2
-  end
-
-  test 'Load old level format, create new level format' do
-    name = '2-3 Artist 1 new'
-    level = Level.load_custom_level(name)
-    xml = level.to_xml
-    level.destroy
-    level = Level.load_custom_level_xml(xml, name)
-    xml2 = level.to_xml
     assert_equal xml, xml2
   end
 
