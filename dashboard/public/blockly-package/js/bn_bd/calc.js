@@ -90,7 +90,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":17,"./required_block_utils":20,"./utils":35}],2:[function(require,module,exports){
+},{"./base":2,"./blocksCommon":4,"./dom":18,"./required_block_utils":21,"./utils":36}],2:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -1004,7 +1004,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/bn_bd/common":38,"./block_utils":3,"./builder":5,"./constants.js":16,"./dom":17,"./feedback.js":18,"./slider":22,"./templates/buttons.html":24,"./templates/instructions.html":26,"./templates/learn.html":27,"./templates/makeYourOwn.html":28,"./utils":35,"./xml":36}],3:[function(require,module,exports){
+},{"../locale/bn_bd/common":39,"./block_utils":3,"./builder":5,"./constants.js":17,"./dom":18,"./feedback.js":19,"./slider":23,"./templates/buttons.html":25,"./templates/instructions.html":27,"./templates/learn.html":28,"./templates/makeYourOwn.html":29,"./utils":36,"./xml":37}],3:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1170,7 +1170,7 @@ exports.calcBlockXml = function (type, args) {
   return str;
 };
 
-},{"./xml":36}],4:[function(require,module,exports){
+},{"./xml":37}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1335,7 +1335,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/bn_bd/common":38}],5:[function(require,module,exports){
+},{"../locale/bn_bd/common":39}],5:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -1365,7 +1365,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":17,"./feedback.js":18,"./templates/builder.html":23,"./utils.js":35,"url":49}],6:[function(require,module,exports){
+},{"./dom.js":18,"./feedback.js":19,"./templates/builder.html":24,"./utils.js":36,"url":50}],6:[function(require,module,exports){
 var ExpressionNode = require('./expressionNode');
 
 exports.expression = function (operator, arg1, arg2, blockId) {
@@ -1424,7 +1424,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
 };
 
-},{"../../locale/bn_bd/calc":37,"../../locale/bn_bd/common":38,"./core":10,"./functionalBlocks":12}],8:[function(require,module,exports){
+},{"../../locale/bn_bd/calc":38,"../../locale/bn_bd/common":39,"./core":10,"./functionalBlocks":12}],8:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1473,7 +1473,6 @@ BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
-
 /**
  * Initialize Blockly and the Calc.  Called on page load.
  */
@@ -1497,6 +1496,7 @@ Calc.init = function(config) {
     assetUrl: BlocklyApps.assetUrl,
     data: {
       localeDirection: BlocklyApps.localeDirection(),
+      visualization: require('./visualization.html')(),
       controls: require('./controls.html')({
         assetUrl: BlocklyApps.assetUrl
       }),
@@ -1513,30 +1513,17 @@ Calc.init = function(config) {
   };
 
   config.afterInject = function() {
+    var svg = document.getElementById('svgCalc');
+    svg.setAttribute('width', CANVAS_WIDTH);
+    svg.setAttribute('height', CANVAS_HEIGHT);
+
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
     //XXX Not sure if this is still right.
     Blockly.JavaScript.addReservedWords('Calc,code');
 
-    // Helper for creating canvas elements.
-    var createCanvas = function(id, width, height) {
-      var el = document.createElement('canvas');
-      el.id = id;
-      el.width = width;
-      el.height = height;
-      return el;
-    };
-
-    // Create display canvas.
-    var display = createCanvas('display', 400, 400);
-    var visualization = document.getElementById('visualization');
-    visualization.appendChild(display);
-    Calc.ctxDisplay = display.getContext('2d');
-
     Calc.expressions.target = generateExpressionFromBlockXml(level.solutionBlocks);
     Calc.drawExpressions();
-
-    // todo - figure out LB story
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -1723,62 +1710,70 @@ Calc.step = function (ignoreFailures) {
  * Draw the current state of our two expressions.
  */
 Calc.drawExpressions = function () {
-  var ctx = Calc.ctxDisplay;
-
   var expected = Calc.expressions.current || Calc.expressions.target;
   var user = Calc.expressions.user;
 
-  resetCanvas();
-
-  ctx.font="30px Verdana";
   expected.applyExpectation(expected);
-  drawExpression(ctx, expected, 365, user !== null);
+  drawSvgExpression('answerExpression', expected, user !== null);
 
   if (user) {
     user.applyExpectation(expected);
-    drawExpression(ctx, user, 165, true);
+    drawSvgExpression('userExpression', user, true);
+  } else {
+    clearSvgExpression('userExpression');
   }
 };
 
-function resetCanvas() {
-  var ctx = Calc.ctxDisplay;
-
-  var divider = 300;
-
-  ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  ctx.fillStyle = '#33ccff';
-  ctx.fillRect(0, 0, 400, divider);
-  ctx.fillStyle = '#996633';
-  ctx.fillRect(0, divider, CANVAS_WIDTH, CANVAS_HEIGHT);
-
-
-  var height = 20;
-  ctx.font= height + "px Verdana";
-  ctx.fillStyle = 'black';
-
-  var goalText = "Goal:"; // todo - i18n
-  var yourExpression = "Your expression:"; // todo -i18n
-  ctx.fillText(yourExpression, 0, height);
-  ctx.fillText(goalText, 0, divider + height);
+function clearSvgExpression(elementId) {
+  var g = document.getElementById(elementId);
+  // remove all existing children, in reverse order so that we don't have to
+  // worry about indexes changing
+  for (var i = g.childNodes.length - 1; i >= 0; i--) {
+    g.removeChild(g.childNodes[i]);
+  }
 }
 
-function drawExpression(ctx, expr, ypos, styleMarks) {
-  var list = expr.getTokenList(true);
+function drawSvgExpression(elementId, expr, styleMarks) {
+  var i, text, textLength, char;
+  var g = document.getElementById(elementId);
+  clearSvgExpression(elementId);
 
-  var strSize = ctx.measureText(expr.toString());
+  var tokenList = expr.getTokenList(styleMarks);
+  var xPos = 0;
+  for (i = 0; i < tokenList.length; i++) {
+    text = document.createElementNS(Blockly.SVG_NS, 'text');
 
-  // todo - handle long strings
-  var xpos = (CANVAS_WIDTH - strSize.width) / 2;
-  for (var i = 0; i < list.length; i++) {
-    var char = list[i].char;
-    ctx.fillStyle = 'black';
-    if (styleMarks && list[i].marked) {
-      // marked parens are green, other marks ar ered
-      ctx.fillStyle = /^[\(|\)]$/.test(char) ? 'white' : 'red';
+    // getComputedTextLength doesn't respect trailing spaces, so we replace them
+    // with _, calculate our size, then return to the version with spaces.
+    char = tokenList[i].char;
+    text.textContent = char.replace(/ /g, '_');
+    g.appendChild(text);
+    // getComputedTextLength isn't available to us in our mochaTests
+    textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
+    text.textContent = char;
+
+    text.setAttribute('x', xPos + textLength / 2);
+    text.setAttribute('text-anchor', 'middle');
+    xPos += textLength;
+
+    if (styleMarks && tokenList[i].marked) {
+      if (char === '(' || char === ')') {
+        text.setAttribute('class', 'highlightedParen');
+      } else {
+        text.setAttribute('class', 'exprMistake');
+      }
     }
-    ctx.fillText(char, xpos, ypos);
-    xpos += ctx.measureText(char).width;
   }
+
+  // center entire expression
+  // todo (brent): handle case where expression is longer than width
+  var width = g.getBoundingClientRect().width;
+  var xPadding = (CANVAS_WIDTH - width) / 2;
+  var currentTransform = g.getAttribute('transform');
+  // IE has space separated args, others use comma to separate
+  var newTransform = currentTransform.replace(/translate\(.*[,|\s]/,
+    "translate(" + xPadding + ",");
+  g.setAttribute('transform', newTransform);
 }
 
 /**
@@ -1810,7 +1805,7 @@ function onReportComplete(response) {
   displayFeedback(response);
 }
 
-},{"../../locale/bn_bd/calc":37,"../../locale/bn_bd/common":38,"../base":2,"../codegen":15,"../constants":16,"../dom":17,"../feedback.js":18,"../skins":21,"../templates/page.html":29,"./api":6,"./controls.html":9,"./expressionNode":11,"./levels":13}],9:[function(require,module,exports){
+},{"../../locale/bn_bd/calc":38,"../../locale/bn_bd/common":39,"../base":2,"../codegen":16,"../constants":17,"../dom":18,"../feedback.js":19,"../skins":22,"../templates/page.html":30,"./api":6,"./controls.html":9,"./expressionNode":11,"./levels":13,"./visualization.html":15}],9:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -1833,7 +1828,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/bn_bd/calc":37,"ejs":39}],10:[function(require,module,exports){
+},{"../../locale/bn_bd/calc":38,"ejs":40}],10:[function(require,module,exports){
 // Create a limited colour palette to avoid overwhelming new users
 // and to make colour checking easier.  These definitions cannot be
 // moved to blocks.js, which is loaded later, since they are used in
@@ -2240,7 +2235,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/bn_bd/calc":37,"../block_utils":3}],14:[function(require,module,exports){
+},{"../../locale/bn_bd/calc":38,"../block_utils":3}],14:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Calc = require('./calc');
 var blocks = require('./blocks');
@@ -2253,7 +2248,28 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":1,"../skins":21,"./blocks":7,"./calc":8,"./levels":13}],15:[function(require,module,exports){
+},{"../appMain":1,"../skins":22,"./blocks":7,"./calc":8,"./levels":13}],15:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape, rethrow) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!#?[a-zA-Z0-9]+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/'/g, '&#39;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">Your expression:</text> <!-- todo - i18n -->\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">Goal:</text> <!-- todo - i18n -->\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":40}],16:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -2395,7 +2411,7 @@ exports.functionFromCode = function(code, options) {
   }
 };
 
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -2457,7 +2473,7 @@ exports.BeeTerminationValue = {
   INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
 };
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -2564,7 +2580,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
 var readonly = require('./templates/readonly.html');
@@ -3511,7 +3527,7 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/bn_bd/common":38,"./codegen":15,"./constants":16,"./dom":17,"./templates/buttons.html":24,"./templates/code.html":25,"./templates/readonly.html":30,"./templates/shareFailure.html":31,"./templates/sharing.html":32,"./templates/showCode.html":33,"./templates/trophy.html":34,"./utils":35}],19:[function(require,module,exports){
+},{"../locale/bn_bd/common":39,"./codegen":16,"./constants":17,"./dom":18,"./templates/buttons.html":25,"./templates/code.html":26,"./templates/readonly.html":31,"./templates/shareFailure.html":32,"./templates/sharing.html":33,"./templates/showCode.html":34,"./templates/trophy.html":35,"./utils":36}],20:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -6438,7 +6454,7 @@ var generateXMLForBlocks = function(blocks) {
 }.call(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],20:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -6676,7 +6692,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./utils":35,"./xml":36}],21:[function(require,module,exports){
+},{"./block_utils":3,"./utils":36,"./xml":37}],22:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -6736,7 +6752,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{}],22:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -6962,7 +6978,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":17}],23:[function(require,module,exports){
+},{"./dom":18}],24:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6983,7 +6999,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":39}],24:[function(require,module,exports){
+},{"ejs":40}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7004,7 +7020,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/bn_bd/common":38,"ejs":39}],25:[function(require,module,exports){
+},{"../../locale/bn_bd/common":39,"ejs":40}],26:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7025,7 +7041,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":39}],26:[function(require,module,exports){
+},{"ejs":40}],27:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7046,7 +7062,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/bn_bd/common":38,"ejs":39}],27:[function(require,module,exports){
+},{"../../locale/bn_bd/common":39,"ejs":40}],28:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7069,7 +7085,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/bn_bd/common":38,"ejs":39}],28:[function(require,module,exports){
+},{"../../locale/bn_bd/common":39,"ejs":40}],29:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7090,7 +7106,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/bn_bd/common":38,"ejs":39}],29:[function(require,module,exports){
+},{"../../locale/bn_bd/common":39,"ejs":40}],30:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7115,7 +7131,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/bn_bd/common":38,"ejs":39}],30:[function(require,module,exports){
+},{"../../locale/bn_bd/common":39,"ejs":40}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7137,7 +7153,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":39}],31:[function(require,module,exports){
+},{"ejs":40}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7158,7 +7174,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":39}],32:[function(require,module,exports){
+},{"ejs":40}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7179,7 +7195,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/bn_bd/common":38,"ejs":39}],33:[function(require,module,exports){
+},{"../../locale/bn_bd/common":39,"ejs":40}],34:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7200,7 +7216,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/bn_bd/common":38,"ejs":39}],34:[function(require,module,exports){
+},{"../../locale/bn_bd/common":39,"ejs":40}],35:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7221,7 +7237,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":39}],35:[function(require,module,exports){
+},{"ejs":40}],36:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -7498,7 +7514,7 @@ exports.generateDropletPalette = function (codeFunctions) {
   return palette;
 };
 
-},{"./lodash":19,"./xml":36}],36:[function(require,module,exports){
+},{"./lodash":20,"./xml":37}],37:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -7526,7 +7542,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],37:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.bn=function(n){return n===1?"one":"other"}
 exports.blocksUsed = function(d){return "Blocks used: %1"};
 
@@ -7669,7 +7685,7 @@ exports.widthTooltip = function(d){return "পেন্সিলের প্র
 exports.wrongColour = function(d){return "আপনার ছবির রঙ ভুল আছে।  এই ধাঁধার জন্য এটি %1 করা প্রয়োজন।"};
 
 
-},{"messageformat":50}],38:[function(require,module,exports){
+},{"messageformat":51}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.bn=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "এবং"};
 
@@ -7830,7 +7846,7 @@ exports.hintHeader = function(d){return "Here's a tip:"};
 exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
 
 
-},{"messageformat":50}],39:[function(require,module,exports){
+},{"messageformat":51}],40:[function(require,module,exports){
 
 /*!
  * EJS
@@ -8189,7 +8205,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":40,"./utils":41,"fs":42,"path":43}],40:[function(require,module,exports){
+},{"./filters":41,"./utils":42,"fs":43,"path":44}],41:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -8392,7 +8408,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],41:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 
 /*!
  * EJS
@@ -8418,9 +8434,9 @@ exports.escape = function(html){
 };
  
 
-},{}],42:[function(require,module,exports){
-
 },{}],43:[function(require,module,exports){
+
+},{}],44:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -8648,7 +8664,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":44}],44:[function(require,module,exports){
+},{"JkpR2F":45}],45:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -8713,7 +8729,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],45:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -9224,7 +9240,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],46:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -9310,7 +9326,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],47:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -9397,13 +9413,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],48:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":46,"./encode":47}],49:[function(require,module,exports){
+},{"./decode":47,"./encode":48}],50:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -10112,7 +10128,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":45,"querystring":48}],50:[function(require,module,exports){
+},{"punycode":46,"querystring":49}],51:[function(require,module,exports){
 /**
  * messageformat.js
  *
