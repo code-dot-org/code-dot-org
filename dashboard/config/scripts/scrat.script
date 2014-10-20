@@ -1,0 +1,18 @@
+title 'Scrat'
+description_short "Scrat short description."
+description "Scrat long description"
+hidden 'false'
+
+stage 'Maze: Sequence'
+skin 'scrat'
+level 'k-1 maze 1'
+level 'K-1 Maze 2'
+level 'K-1 Maze 3'
+level 'K-1 Maze 4'
+level 'K-1 Maze 5'
+level 'K-1 Maze 7'
+level 'K-1 Maze 6'
+level 'K-1 Maze 8'
+level 'K-1 Maze 9'
+level 'K-1 Maze 10'
+level 'K-1 Maze 11'
