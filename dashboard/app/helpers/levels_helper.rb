@@ -196,6 +196,7 @@ module LevelsHelper
       slider_speed
       permitted_errors
       disable_param_editing
+      disable_variable_editing
       success_condition:fn_successCondition
       failure_condition:fn_failureCondition
       first_sprite_index
