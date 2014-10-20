@@ -1818,8 +1818,11 @@ Blockly.Block.prototype.moveInputBefore = function(name, refName) {
 /**
  * Remove an input from this block.
  * @param {string} name The name of the input.
+ * @param {boolean} opt_quiet True to prevent error if input is not present.
+ * @throws {goog.asserts.AssertionError} if the input is not present and
+ *     opt_quiet is not true.
  */
-Blockly.Block.prototype.removeInput = function(name) {
+Blockly.Block.prototype.removeInput = function(name, opt_quiet) {
   for (var x = 0, input; input = this.inputList[x]; x++) {
     if (input.name == name) {
       if (input.connection && input.connection.targetConnection) {
@@ -1836,7 +1839,9 @@ Blockly.Block.prototype.removeInput = function(name) {
       return;
     }
   }
-  throw 'Input "' + name + '" not found.';
+  if (!opt_quiet) {
+    goog.asserts.fail('Input "%s" not found.', name);
+  }
 };
 
 /**
