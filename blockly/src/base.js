@@ -474,7 +474,7 @@ BlocklyApps.init = function(config) {
 
   var toolboxHeader = document.getElementById('new-block-button');
   dom.addClickTouchEvent(toolboxHeader, function() {
-    Blockly.createNewFunction();
+    Blockly.FunctionEditor.getSharedEditor().createNewFunction();
   });
 };
 
