@@ -1,0 +1,9 @@
+title 'Frozen'
+description_short "Frozen short description."
+description "Frozen long description"
+hidden 'false'
+
+stage 'Artist: Sequence'
+skin 'frozen'
+level 'K-1 Artist1 1'
+level 'K-1 Artist1 2'
