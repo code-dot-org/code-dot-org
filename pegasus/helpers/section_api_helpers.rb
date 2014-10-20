@@ -88,7 +88,9 @@ class DashboardStudent
 
   def self.birthday_to_age(birthday)
     return if birthday.nil?
-    ((Date.today - birthday) / 365).to_i # TODO should this be 365.25
+    age = ((Date.today - birthday) / 365).to_i # TODO should this be 365.25
+    age = "21+" if age >= 21
+    age
   end
 
   def self.fields()
@@ -154,7 +156,7 @@ class DashboardSection
     @row = row
   end
 
-  VALID_LOGIN_TYPES = %w(word picture none)
+  VALID_LOGIN_TYPES = %w(word picture email)
 
   def self.valid_login_type?(login_type)
     VALID_LOGIN_TYPES.include? login_type
@@ -198,7 +200,8 @@ class DashboardSection
     name = params[:name].to_s
     name = 'New Section' if name.empty?
 
-    params[:login_type] = 'none' unless valid_login_type?(params[:login_type].to_s)
+    params[:login_type] = 'email' if params[:login_type].to_s == 'none'
+    params[:login_type] = 'word' unless valid_login_type?(params[:login_type].to_s)
 
     params[:grade] = nil unless valid_grade?(params[:grade].to_s)
 

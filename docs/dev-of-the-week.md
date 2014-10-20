@@ -42,7 +42,7 @@ These notifications are generated when a blockly level has received `MinimumAtte
 1. Play through the level to see if it's passable.
   1. Passing the level on BrowserStack via the public-facing link will register as a success and stop the HipChat notifications.  Consider increasing the tolerance for common false-positives.
   1. If the level is unplayable, fix the level by clicking the edit link (for levels created in levelbuilder — must be logged in as an admin) or by editing the corresponding .level file.
-1. Update the [blocky per-level-alert outliers](https://docs.google.com/a/code.org/spreadsheets/d/1Va5hKlT6-uQJ0mZ6_QpDIaeBIhAjem-n1egWn316tJM/) ghseet if the level needs to be redesigned to address difficulty.
+1. Update the [blocky per-level-alert outliers](https://docs.google.com/a/code.org/spreadsheets/d/1Va5hKlT6-uQJ0mZ6_QpDIaeBIhAjem-n1egWn316tJM/) gsheet if the level needs to be redesigned to address difficulty.
 
 An attempt is defined as the user loading the page and a success is the user solving the puzzle so the "Congratulations" dialog appears.  See `activity_start` in `ScriptLevelsController::show` and `activity_finish` in `ActivitiesController::milestone`.
 
