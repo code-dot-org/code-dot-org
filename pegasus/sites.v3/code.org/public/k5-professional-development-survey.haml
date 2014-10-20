@@ -469,7 +469,7 @@ rightbar: blank
     });
 
     $('#k5-professional-development-survey-form').submit(function(event) {
-      k5ProfessionalDevelopmentSurveyFormSubmit();
+      k5ProfessionalDevelopmentSurveyFormSubmit(event);
     });
 
     $('#k5-teacher-type').change(function() {
@@ -480,7 +480,7 @@ rightbar: blank
         $('#k5-teacher-type-other').val('').removeAttr("required");
         $('#k5-teacher-type-other-wrapper').hide();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
 
     $('#k5-school-type').change(function() {
       if ($(this).val().toString() == "other"){
@@ -490,7 +490,7 @@ rightbar: blank
         $('#k5-school-type-other').val('').removeAttr("required");
         $('#k5-school-type-other-wrapper').hide();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
 
     $('#k5-teacher-describe').change(function() {
       if ($(this).val().toString() == "other"){
@@ -500,7 +500,7 @@ rightbar: blank
         $('#k5-teacher-describe-other').val('').removeAttr("required");
         $('#k5-teacher-describe-other-wrapper').hide();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
 
     $('#k5-cs-materials').change(function() {
       if ($.inArray('other', $(this).val()) > -1) {
@@ -510,7 +510,7 @@ rightbar: blank
         $('#k5-cs-materials-other').val('').removeAttr("required");
         $('#k5-cs-materials-other-wrapper').hide();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
 
     $('#k5-undergrad-degree').change(function() {
       if ($(this).val().toString() == "other"){
@@ -520,7 +520,7 @@ rightbar: blank
         $('#k5-undergrad-degree-other').val('').removeAttr("required");
         $('#k5-undergrad-degree-other-wrapper').hide();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
 
     $('#k5-grad-type').change(function() {
       if ($(this).val().toString() == "other"){
@@ -530,17 +530,17 @@ rightbar: blank
         $('#k5-grad-type-other').val('').removeAttr("required");
         $('#k5-grad-type-other-wrapper').hide();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
 
     $('#k5-race').change(function() {
-      if ($(this).val().toString() == "other"){
+      if ($.inArray('other', $(this).val()) > -1) {
         $('#k5-race-other').attr("required", true)
         $('#k5-race-other-wrapper').show();
       } else {
         $('#k5-race-other').val('').removeAttr("required");
         $('#k5-race-other-wrapper').hide();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
 
     $('#k5-send-materials-flag').change(function() {
       if($(this).is(':checked')) {
@@ -548,7 +548,7 @@ rightbar: blank
       } else {
         $('#k5-send-materials-wrapper').slideUp();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
   });
 
   function processResponse(data)
@@ -579,10 +579,8 @@ rightbar: blank
     $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
   }
 
-  function k5ProfessionalDevelopmentSurveyFormSubmit()
+  function k5ProfessionalDevelopmentSurveyFormSubmit(event)
   {
-    event.preventDefault();
-
     $("#btn-submit").attr('disabled','disabled');
     $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
 
@@ -593,5 +591,5 @@ rightbar: blank
       data: $('#k5-professional-development-survey-form').serialize()
     }).done(processResponse).fail(processError);
 
-    return false;
+    event.preventDefault();
   }
