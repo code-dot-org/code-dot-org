@@ -2,7 +2,8 @@ class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
   has_many :script_levels, dependent: :destroy
-  belongs_to :solution_level_source, :class_name => "LevelSource"
+  belongs_to :solution_level_source, :class_name => "LevelSource" # TODO do we even use this
+  belongs_to :ideal_level_source, :class_name => "LevelSource" # "see the solution" link uses this
   belongs_to :user
   validates_length_of :name, within: 1..70
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
