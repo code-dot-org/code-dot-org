@@ -31,8 +31,10 @@ var codegen = require('../codegen');
 var api = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
+var dom = require('../dom');
 
-var Expression = require('./expression');
+
+var ExpressionNode = require('./expressionNode');
 var TestResults = require('../constants').TestResults;
 
 var level;
@@ -45,11 +47,6 @@ var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
 /**
- * PID of animation task currently executing.
- */
-Calc.pid = 0;
-
-/**
  * Initialize Blockly and the Calc.  Called on page load.
  */
 Calc.init = function(config) {
@@ -57,18 +54,25 @@ Calc.init = function(config) {
   skin = config.skin;
   level = config.level;
 
+  Calc.expressions = {
+    target: null, // the complete target expression
+    user: null, // the current state of the user expression
+    current: null // the current state of the target expression
+  };
+
+  Calc.shownFeedback_ = false;
+
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = false;
-
-  // Enable blockly param editing in levelbuilder, regardless of level setting
-  if (config.level.edit_blocks) {
-    config.disableParamEditing = false;
-  }
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
     data: {
       localeDirection: BlocklyApps.localeDirection(),
+      visualization: require('./visualization.html')(),
+      controls: require('./controls.html')({
+        assetUrl: BlocklyApps.assetUrl
+      }),
       blockUsed : undefined,
       idealBlockNumber : undefined,
       blockCounterClass : 'block-counter-default'
@@ -82,33 +86,29 @@ Calc.init = function(config) {
   };
 
   config.afterInject = function() {
+    var svg = document.getElementById('svgCalc');
+    svg.setAttribute('width', CANVAS_WIDTH);
+    svg.setAttribute('height', CANVAS_HEIGHT);
+
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
     //XXX Not sure if this is still right.
     Blockly.JavaScript.addReservedWords('Calc,code');
 
-    // Helper for creating canvas elements.
-    var createCanvas = function(id, width, height) {
-      var el = document.createElement('canvas');
-      el.id = id;
-      el.width = width;
-      el.height = height;
-      return el;
-    };
-
-    // Create display canvas.
-    var display = createCanvas('display', 400, 400);
-    var visualization = document.getElementById('visualization');
-    visualization.appendChild(display);
-    Calc.ctxDisplay = display.getContext('2d');
-
-    Calc.answerExpression = generateExpressionFromBlockXml(level.solutionBlocks);
-
-    // todo - figure out LB story
+    Calc.expressions.target = generateExpressionFromBlockXml(level.solutionBlocks);
+    Calc.drawExpressions();
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
+
+    dom.addClickTouchEvent(document.getElementById("continueButton"), function () {
+      Calc.step(true);
+    });
+
+    // base's BlocklyApps.resetButtonClick will be called first
+    var resetButton = document.getElementById('resetButton');
+    dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
   };
 
   config.getDisplayWidth = function() {
@@ -120,40 +120,6 @@ Calc.init = function(config) {
 };
 
 /**
- * Reset the Calc to the start position, clear the display, and kill any
- * pending tasks.
- * @param {boolean} ignore Required by the API but ignored by this
- *     implementation.
- */
-BlocklyApps.reset = function(ignore) {
-  Calc.display();
-
-  // Kill any task.
-  if (Calc.pid) {
-    window.clearTimeout(Calc.pid);
-  }
-  Calc.pid = 0;
-
-  // Stop the looping sound.
-  // BlocklyApps.stopLoopingAudio('start');
-};
-
-/**
- * Copy the scratch canvas to the display canvas. Add a Calc marker.
- */
-Calc.display = function() {
-  // FF on linux retains drawing of previous location of artist unless we clear
-  // the canvas first.
-  var style = Calc.ctxDisplay.fillStyle;
-  Calc.ctxDisplay.fillStyle = 'white';
-  Calc.ctxDisplay.clearRect(0, 0, Calc.ctxDisplay.canvas.width,
-    Calc.ctxDisplay.canvas.width);
-  Calc.ctxDisplay.fillStyle = style;
-
-  Calc.drawCorrectAnswer(Calc.answerExpression);
-};
-
-/**
  * Click the run button.  Start the program.
  */
 BlocklyApps.runButtonClick = function() {
@@ -162,6 +128,23 @@ BlocklyApps.runButtonClick = function() {
   BlocklyApps.attempts++;
   Calc.execute();
 };
+
+/**
+ * App specific reset button click logic.  BlocklyApps.resetButtonClick will be
+ * called first.
+ */
+Calc.resetButtonClick = function () {
+  var continueButton = document.getElementById('continueButton');
+  // todo - single location for toggling hide state?
+  continueButton.className += " hide";
+
+  Calc.expressions.user = null;
+  Calc.expressions.current = null;
+  Calc.shownFeedback_ = false;
+
+  Calc.drawExpressions();
+};
+
 
 function evalCode (code) {
   try {
@@ -187,6 +170,11 @@ function evalCode (code) {
   }
 }
 
+/**
+ * Given the xml for a set of blocks, generates an expression from them by
+ * temporarily sticking them into the workspace, generating code, and
+ * evaluating said code.
+ */
 function generateExpressionFromBlockXml(blockXml) {
   var xml = blockXml || '';
 
@@ -212,24 +200,37 @@ function generateExpressionFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
+  // todo (brent) perhaps try to share user vs. expected generation better
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
 
-  var expression = Calc.lastExpression;
+  if (!Calc.lastExpression) {
+    Calc.lastExpression = new ExpressionNode(0);
+  }
 
+  Calc.expressions.user = Calc.lastExpression.clone();
+  Calc.expressions.current = Calc.expressions.target.clone();
 
-  // api.log now contains a transcript of all the user's actions.
-  // Reset the graphic and animate the transcript.
-  BlocklyApps.reset();
+  Calc.expressions.user.applyExpectation(Calc.expressions.target);
 
+  var result = !Calc.expressions.user.failedExpectation(true);
 
-  var result = Calc.drawUserAnswer(Calc.answerExpression, Calc.lastExpression);
+  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
+
+  Calc.drawExpressions();
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
+  // todo (brent) - better way of doing this
+  if (equivalent) {
+    Calc.message = result ? "correct" : "expression equivalent";
+  } else {
+    Calc.message = null;
+  }
+
   var reportData = {
-    app: 'turtle',
+    app: 'calc',
     level: level.id,
     builder: level.builder,
     result: result,
@@ -239,51 +240,131 @@ Calc.execute = function() {
   };
 
   BlocklyApps.report(reportData);
+
+  window.setTimeout(function () {
+    Calc.step();
+  }, 1000);
 };
 
-Calc.drawCorrectAnswer = function (correctAnswer) {
-  Calc.ctxDisplay.fillStyle = 'black';
-  Calc.ctxDisplay.font="30px Verdana";
-  var str = correctAnswer.toString();
-  Calc.ctxDisplay.fillText(str, 0, 350);
-};
-
-Calc.drawUserAnswer = function (correctAnswer, userAnswer) {
-  var ctx = Calc.ctxDisplay;
-  var errors = false;
-  var list = userAnswer.getTokenList(correctAnswer);
-  var xpos = 0;
-  var ypos = 200;
-  for (var i = 0; i < list.length; i++) {
-    if (i > 0 && list[i-1].char !== '(' && list[i].char !== ')') {
-      ctx.fillText(' ', xpos, ypos);
-      xpos += ctx.measureText(' ').width;
-    }
-    ctx.fillStyle = list[i].correct ? 'black' : 'red';
-    if (!list[i].correct) {
-      errors = true;
-    }
-    ctx.fillText(list[i].char, xpos, ypos);
-    xpos += ctx.measureText(list[i].char).width;
+/**
+ * Perform a step in our expression evaluation animation. This consists of
+ * collapsing the next node in our tree. If that node failed expectations, we
+ * will instead bring up a continue button, and refrain from further
+ * collapses/animations until continue is pressed.
+ */
+Calc.step = function (ignoreFailures) {
+  if (!Calc.expressions.user) {
+    return;
   }
 
-  return !errors;
+  if (!Calc.expressions.user.isOperation()) {
+    displayFeedback();
+    return;
+  }
+
+  var continueButton = document.getElementById('continueButton');
+
+  var collapsed = Calc.expressions.user.collapse(ignoreFailures);
+  if (!collapsed) {
+    continueButton.className = continueButton.className.replace(/hide/g, "");
+  } else {
+    Calc.expressions.current.collapse();
+    Calc.drawExpressions();
+
+    continueButton.className += " hide";
+
+    window.setTimeout(function () {
+      Calc.step();
+    }, 1000);
+  }
 };
 
+/**
+ * Draw the current state of our two expressions.
+ */
+Calc.drawExpressions = function () {
+  var expected = Calc.expressions.current || Calc.expressions.target;
+  var user = Calc.expressions.user;
+
+  expected.applyExpectation(expected);
+  drawSvgExpression('answerExpression', expected, user !== null);
+
+  if (user) {
+    user.applyExpectation(expected);
+    drawSvgExpression('userExpression', user, true);
+  } else {
+    clearSvgExpression('userExpression');
+  }
+};
+
+function clearSvgExpression(elementId) {
+  var g = document.getElementById(elementId);
+  // remove all existing children, in reverse order so that we don't have to
+  // worry about indexes changing
+  for (var i = g.childNodes.length - 1; i >= 0; i--) {
+    g.removeChild(g.childNodes[i]);
+  }
+}
+
+function drawSvgExpression(elementId, expr, styleMarks) {
+  var i, text, textLength, char;
+  var g = document.getElementById(elementId);
+  clearSvgExpression(elementId);
+
+  var tokenList = expr.getTokenList(styleMarks);
+  var xPos = 0;
+  for (i = 0; i < tokenList.length; i++) {
+    text = document.createElementNS(Blockly.SVG_NS, 'text');
+
+    // getComputedTextLength doesn't respect trailing spaces, so we replace them
+    // with _, calculate our size, then return to the version with spaces.
+    char = tokenList[i].char;
+    text.textContent = char.replace(/ /g, '_');
+    g.appendChild(text);
+    // getComputedTextLength isn't available to us in our mochaTests
+    textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
+    text.textContent = char;
+
+    text.setAttribute('x', xPos + textLength / 2);
+    text.setAttribute('text-anchor', 'middle');
+    xPos += textLength;
+
+    if (styleMarks && tokenList[i].marked) {
+      if (char === '(' || char === ')') {
+        text.setAttribute('class', 'highlightedParen');
+      } else {
+        text.setAttribute('class', 'exprMistake');
+      }
+    }
+  }
+
+  // center entire expression
+  // todo (brent): handle case where expression is longer than width
+  var width = g.getBoundingClientRect().width;
+  var xPadding = (CANVAS_WIDTH - width) / 2;
+  var currentTransform = g.getAttribute('transform');
+  // IE has space separated args, others use comma to separate
+  var newTransform = currentTransform.replace(/translate\(.*[,|\s]/,
+    "translate(" + xPadding + ",");
+  g.setAttribute('transform', newTransform);
+}
 
 /**
  * App specific displayFeedback function that calls into
  * BlocklyApps.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
-  BlocklyApps.displayFeedback({
-    app: 'Calc',
-    skin: skin.id,
-    // feedbackType: Calc.testResults,
-    message: "todo (brent): temp message",
-    response: response,
-    level: level
-  });
+  if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
+    Calc.shownFeedback_ = true;
+    BlocklyApps.displayFeedback({
+      app: 'Calc',
+      skin: skin.id,
+      // feedbackType: Calc.testResults,
+      message: Calc.message ? Calc.message : "todo (brent): wrong",
+      response: response,
+      level: level
+    });
+  }
 };
 
 /**
@@ -296,13 +377,3 @@ function onReportComplete(response) {
   runButton.disabled = false;
   displayFeedback(response);
 }
-
-
-var getFeedbackImage = function() {
-  // Copy the user layer
-  Calc.ctxFeedback.globalCompositeOperation = 'copy';
-  Calc.ctxFeedback.drawImage(Calc.ctxScratch.canvas, 0, 0, 154, 154);
-  var feedbackCanvas = Calc.ctxFeedback.canvas;
-  return encodeURIComponent(
-      feedbackCanvas.toDataURL("image/png").split(',')[1]);
-};

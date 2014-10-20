@@ -20,7 +20,7 @@ theme: none
   %br/
   %br/
 
-  #learn-tabs{"ng-show"=>"section.id", "ng-hide"=>"! section || section.login_type === 'none' && section.students.length <= 0", style: "padding-top:20px; padding-left:20px; padding-right:20px; background-color:white; background-color: rgb(219, 219, 219); overflow: hidden; margin-bottom: 10px;"}
+  #learn-tabs{"ng-show"=>"section.id", "ng-hide"=>"! section || section.login_type === 'email' && section.students.length <= 0", style: "padding-top:20px; padding-left:20px; padding-right:20px; background-color:white; background-color: rgb(219, 219, 219); overflow: hidden; margin-bottom: 10px;"}
     %ul.nav.nav-tabs{style: "float: left;"}
       %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
           'ng-class' => 'tab == "progress" ? "active tab" : "tab"'}
@@ -35,7 +35,7 @@ theme: none
         -# Just an invisible element for some padding to keep things looking good when we're not showing tabs.
         &nbsp;
 
-    %managebuttons{"ng-if" => "tab == 'manage' && section.login_type !== 'none'", style: "float:right"}
+    %managebuttons{"ng-if" => "tab == 'manage' && section.login_type !== 'email'", style: "float:right"}
       %button.btn.btn-white{"ng-click" => "new_student()", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_student')
       %button.btn.btn-white{"ng-click" => "bulk_import.editing = true", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_students')
 

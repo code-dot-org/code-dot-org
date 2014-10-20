@@ -51,13 +51,10 @@ namespace :blockly do
   end
 
   task :dev, [:src] => :environment do |t, args|
-    src = args[:src]
-    unless src
-      raise 'Expected argument: path to blockly mooc source.'
-    end
+    src = args[:src] || '../blockly'
     fullsrc = "#{File.absolute_path(src)}/build/package"
     unless File.directory?(fullsrc)
-      raise "No such directory: #{fullsrc}"
+      raise "No such directory: #{fullsrc}\n(Specify a different location with 'blockly:dev[/path/to/blockly]')"
     end
     clean!
     File.symlink(fullsrc, dest)

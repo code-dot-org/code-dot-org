@@ -20,6 +20,6 @@ Hadiah terbatas hanya kepada sekolah K-12 U.S. Untuk memenuhi syarat, sekolahmu 
 
 ## Satu set laptop untuk kelas (atau teknologi lain yang bernilai $10,000):
 
-Hadiah terbatas untuk sekolah publik K-12 U.S. Kenapa hanya sekolah umum? [Lihat jawabannya disini](http://www.hourofcode.com/us#faq). Untuk memenuhi syarat, sekolahmu harus mendaftar untuk Hour of Code paling lambat tanggal 14 November 2014. Satu sekolah di setiap negara bagian di U.S. akan menerima satu set komputer untuk kelas. Code.org akan memilih dan memberitahukan pemenang melalui email paling lambat tanggal 1 Desember 2014.
+Hadiah terbatas untuk sekolah publik K-12 U.S. Kenapa hanya sekolah umum? [Lihat jawabannya disini](http://www.hourofcode.com/#faq). Untuk memenuhi syarat, sekolahmu harus mendaftar untuk Hour of Code paling lambat tanggal 14 November 2014. Satu sekolah di setiap negara bagian di U.S. akan menerima satu set komputer untuk kelas. Code.org akan memilih dan memberitahukan pemenang melalui email paling lambat tanggal 1 Desember 2014.
 
 <% end %>
