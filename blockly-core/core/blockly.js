@@ -28,6 +28,7 @@ goog.provide('Blockly');
 
 // Blockly core dependencies.
 goog.require('Blockly.Block');
+goog.require('Blockly.FunctionEditor');
 goog.require('Blockly.Connection');
 goog.require('Blockly.FieldAngle');
 goog.require('Blockly.FieldCheckbox');
@@ -872,103 +873,4 @@ Blockly.addChangeListener = function(func) {
  */
 Blockly.removeChangeListener = function(bindData) {
   Blockly.unbindEvent_(bindData);
-};
-
-/**
- * Handful of terrible, just-barely-work-ish hacks to open a function editor dialog
- */
-
-Blockly.functionEditorOpen = false;
-Blockly.mainWorkspaceFlyout = null;
-Blockly.mainWorkspaceCategoryHTMLDiv = null;
-
-Blockly.createNewFunction = function() {
-  Blockly.openFunctionEditor(this.newBlockXML('my new function'));
-};
-
-Blockly.newBlockXML = function (name) {
-  return '<xml><block type="procedures_defnoreturn"><mutation></mutation><title name="NAME">' + name + '</title></block></xml>';
-};
-
-Blockly.openFunctionEditor = function(functionDefinitionXML) {
-  var blocklyTopLeftDiv = document.getElementById('blocklyApp');
-
-  // Handle toggling
-  {
-    if (Blockly.functionEditorOpen) {
-      Blockly.functionEditorOpen = false;
-      goog.dom.removeNode(goog.dom.getElementByClass('newFunctionDiv'));
-      return;
-    }
-    Blockly.functionEditorOpen = true;
-  }
-
-  var workspace = new Blockly.Workspace(null, null);
-  workspace.getMetrics = Blockly.generateGetWorkspaceMetrics_(workspace);
-  workspace.setMetrics = Blockly.generateSetWorkspaceMetrics_(workspace);
-
-  // Initialize workspace and construct DOM elements
-  {
-    var functionDefinitionDiv = goog.dom.createDom("div", "newFunctionDiv");
-    var svgWorkspaceContainer = Blockly.createSvgElement('svg', {width: 1200, height: 700, x: 0, y: 0}, null);
-    Blockly.createSvgElement('rect', {'class': 'blocklyMutatorBackground', 'height': '100%', 'width': '100%'}, svgWorkspaceContainer);
-
-    svgWorkspaceContainer.appendChild(workspace.createDom());
-    functionDefinitionDiv.appendChild(svgWorkspaceContainer);
-    blocklyTopLeftDiv.appendChild(functionDefinitionDiv);
-  }
-
-  // Override top block methods to make new functions available to main workspace during domToWorkspace
-  {
-    workspace.addTopBlock = function (block) {
-      Blockly.mainWorkspace.addTopBlock(block);
-      Blockly.Workspace.prototype.addTopBlock.apply(this, arguments);
-    };
-    workspace.removeTopBlock = function (block) {
-      Blockly.mainWorkspace.removeTopBlock(block);
-      Blockly.Workspace.prototype.removeTopBlock.apply(this, arguments);
-    };
-  }
-
-  // Initialize toolbox
-  {
-    if (Blockly.hasCategories) {
-      var toolbox = new Blockly.Toolbox();
-      toolbox.createDom(svgWorkspaceContainer);
-      toolbox.init(workspace);
-    } else {
-      // Construct flyout DOM
-      {
-        workspace.flyout_ = new Blockly.Flyout();
-        workspace.flyout_.autoClose = false;
-        goog.dom.insertChildAt(svgWorkspaceContainer, workspace.flyout_.createDom(), 0);
-      }
-
-      // Init with some studio blocks
-      {
-        workspace.flyout_.init(workspace, true);
-        var flyoutBlocks = Blockly.Xml.textToDom('<xml><block type="studio_showTitleScreenParams" inline="false"><value name="TITLE"><block type="text"><title name="TEXT"></title></block></value><value name="TEXT"><block type="text"><title name="TEXT"></title></block></value></block><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">1</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block><block type="studio_playSound"><title name="SOUND">hit</title></block></xml>');
-        workspace.flyout_.show(flyoutBlocks.childNodes);
-      }
-
-      // Flyout init boilerplate: translate the workspace to be next to flyout
-      {
-        workspace.pageXOffset = workspace.flyout_.width_;
-        var translation = 'translate(' + workspace.pageXOffset + ', 0)';
-        workspace.getCanvas().setAttribute('transform', translation);
-        workspace.getBubbleCanvas().setAttribute('transform', translation);
-      }
-    }
-
-    // Initialize workspace with specified function definition block
-    {
-      var xml = Blockly.Xml.textToDom(functionDefinitionXML);
-      Blockly.Xml.domToWorkspace(workspace, xml);
-    }
-
-    // Add trashcan
-    {
-      workspace.addTrashcan();
-    }
-  }
 };

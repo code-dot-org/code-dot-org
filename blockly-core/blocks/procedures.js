@@ -299,7 +299,7 @@ Blockly.Blocks.procedures_callnoreturn = {
       }
 
       Blockly.mainWorkspace.removeTopBlock(definitionBlock);
-      Blockly.openFunctionEditor('<xml>' + goog.dom.getOuterHtml(Blockly.Xml.blockToDom_(definitionBlock)) + '</xml>');
+      Blockly.FunctionEditor.getSharedEditor().openFunctionEditor('<xml>' + goog.dom.getOuterHtml(Blockly.Xml.blockToDom_(definitionBlock)) + '</xml>');
     });
     this.appendDummyInput()
         .appendTitle(Blockly.Msg.PROCEDURES_CALLNORETURN_CALL)
