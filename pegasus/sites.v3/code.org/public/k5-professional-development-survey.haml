@@ -533,7 +533,7 @@ rightbar: blank
     }).triggerHandler('change');;
 
     $('#k5-race').change(function() {
-      if ($(this).val().toString() == "other"){
+      if ($.inArray('other', $(this).val()) > -1) {
         $('#k5-race-other').attr("required", true)
         $('#k5-race-other-wrapper').show();
       } else {
