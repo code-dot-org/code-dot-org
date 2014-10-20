@@ -469,7 +469,7 @@ rightbar: blank
     });
 
     $('#k5-professional-development-survey-form').submit(function(event) {
-      k5ProfessionalDevelopmentSurveyFormSubmit();
+      k5ProfessionalDevelopmentSurveyFormSubmit(event);
     });
 
     $('#k5-teacher-type').change(function() {
@@ -579,10 +579,8 @@ rightbar: blank
     $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
   }
 
-  function k5ProfessionalDevelopmentSurveyFormSubmit()
+  function k5ProfessionalDevelopmentSurveyFormSubmit(event)
   {
-    event.preventDefault();
-
     $("#btn-submit").attr('disabled','disabled');
     $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
 
@@ -593,5 +591,5 @@ rightbar: blank
       data: $('#k5-professional-development-survey-form').serialize()
     }).done(processResponse).fail(processError);
 
-    return false;
+    event.preventDefault();
   }
