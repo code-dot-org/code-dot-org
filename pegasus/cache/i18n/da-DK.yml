@@ -38,10 +38,10 @@
   view_english_site: Se engelske side
   non_english_tutorials: 'Vejledninger oversat til flere sprog:'
   write_your_first_program: Skriv dit første computerprogram
-  learn_cs_concepts: Lær de grundlæggende begreber i datalogi med træk og slip-programmering.
-    Dette er en spil-lignende vejledning med stjernespækket video foredrag af Bill
-    Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær gentagelses-løkker,
-    hvis-så præmisser og grundlæggende algoritmer.
+  learn_cs_concepts: Lær de grundlæggende begreber i computer videnskab med træk og
+    slip-programmering. Dette er en spil-lignende vejledning med stjernespækket video
+    foredrag af Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær
+    gentag-loops, hvis-så præmisser og grundlæggende algoritmer.
   all_ages: Alle aldre
   beginner: Nybegynder
   n_participants: "# deltagere"
@@ -52,7 +52,7 @@
   get_a_certificate_of_achievement: Få et certifikat for gennemførelsen
   enter_valid_email: Angiv en gyldig email adresse
   get_a_certificate_message: Vi sender dig et certifikat og oplysninger om, hvordan
-    man <a href='/learn/beyond'>lærer mere end en time</a>
+    man <a href='/learn/beyond'> lærer ud over En Time</a>
   get_a_certificate_message_after: Klik på beviset for download eller print det. Fortsæt
     nu med vores <a href='http://studio.code.org'>andre kurser</a>, eller se flere
     muligheder for at <a href='/learn/beyond'>lære udover Kodetimen</a>.
@@ -81,7 +81,7 @@
   get_started: Kom i gang
   i_agree: Jeg er enig
   participant_select: "- Vælg -"
-  participant_student: Studerende
+  participant_student: studerende
   participant_parent: Forælder
   participant_educator: Pædagog
   participant_engineer: Software ingeniør
@@ -112,8 +112,8 @@
   lines_of_code_alt: "<b>#</b> LINJER AF KODE SKREVET AF STUDERENDE"
   who_has_done_hoc: 'Hvem har lavet #HourOfCode @codeorg'
   hoc_leaderboards: Rangelisten for Hour Of Code
-  students_and_lines: '%{students} studerende har lavet "Kode Timen" and har skrevet
-    %{lines} linjer kode.'
+  students_and_lines: "%{students} studerende har lavet Hour of Code and har skrevet
+    %{lines} linjer af kode."
   start_hoc: Start Hour of Code nu
   contact_form_topic_press: Pressen/medierne (interview eller taler-arrangementer)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -260,7 +260,7 @@
   dashboard_students_male: Mand
   dashboard_students_female: Kvinde
   dashboard_students_secret: Hemmeligt
-  dashboard_students_password: Adgangskode
+  dashboard_students_password: adgangskode
   dashboard_students_username: 'Brugernavn: %{student_username}'
   dashboard_students_email: 'E-mail: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -309,8 +309,21 @@
   dashboard_grade_other: Andre
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_none: E-mail
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: studerende
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

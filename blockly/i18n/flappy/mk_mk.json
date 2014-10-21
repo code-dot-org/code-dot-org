@@ -1,7 +1,7 @@
 {
   "continue": "Continue",
-  "doCode": "do",
-  "elseCode": "else",
+  "doCode": "изврши",
+  "elseCode": "инаку",
   "endGame": "end game",
   "endGameTooltip": "Ends the game.",
   "finalLevel": "Congratulations! You have solved the final puzzle.",
