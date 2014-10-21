@@ -2,15 +2,16 @@
 title: Italia Hour of Code Risorse
 nav: about_nav
 social:
-  'og:title' : "L'Ora del Codice è partita anche in Italia!"
-  'og:description' : "Per ogni studente ed ogni classe in Italia: impara in una sola ora com'è divertente la programmazione." 
-  'og:image' : ""
-  'og:image:width' : ""
-  'og:image:height' : ""
+  'og:title' : 'L'Ora di Codice sta arrivando'
+  'og:description' : "L'Ora del Codice è un movimento globale che sta coinvolgendo decine di milioni di studenti in più di 180 paesi e in più di 30 lingue. Con età dai 4 ai 104 anni."
+  'og:image' : "http://italia.code.org/images/ogimage.png"
+  'og:image:width' : "1200"
+  'og:image:height' : "626"
+  "og:url": "http://italia.code.org"
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
-  "og:video:type": ""
+  "og:video:type": "" 
 ---
 
 # Descrizione del progetto "Programma il Futuro"
