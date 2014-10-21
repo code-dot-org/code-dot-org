@@ -29,7 +29,7 @@ class Petition
     result
   end
 
-  def self.process(data, last_processed_data)
+  def self.process(data)
     result = {}
 
     location = data['zip_code_s'] || data['country_s']

@@ -56,7 +56,10 @@ class ProfessionalDevelopmentWorkshop
     AWS::S3.upload_to_bucket('cdo-form-uploads', name, value)
   end
 
-  def self.process(data, last_processed_data)
+  def self.process_(row)
+    data = JSON.load(row[:data])
+    last_processed_data = JSON.load(row[:processed_data])
+
     {}.tap do |results|
       location = search_for_address(data['location_address_s'])
       results.merge! location.to_solr if location
@@ -72,7 +75,7 @@ class ProfessionalDevelopmentWorkshop
         #recipients.each do |recipient|
         #  Poste2.send_message 'professional-development-workshop-section-receipt',
         #                      Poste2.ensure_recipient(recipient[:email], name: recipient[:name], ip_address: '127.0.0.1'),
-        #                      workshop_id: 0,
+        #                      workshop_id: row[:id],
         #                      location_name: data['location_name_s'],
         #                      facilitator_name: data['name_s'],
         #                      start_date: data['dates'] && data['dates'].first ? data['dates'].first['date_s'] : nil)

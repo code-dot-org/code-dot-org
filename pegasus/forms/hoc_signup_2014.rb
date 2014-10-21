@@ -20,7 +20,7 @@ class HocSignup2014
     'hoc_signup_2014_receipt'
   end
 
-  def self.process(data, last_processed_data)
+  def self.process(data)
     {}.tap do |results|
       location = search_for_address(data['event_location_s'])
       results.merge! location.to_solr if location
