@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: Inleiding tot de informatica
+        title: Inleiding Informatica
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -155,7 +155,7 @@
           erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: Voorwaardelijk
+        title: Voorwaardelijke instructies
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."

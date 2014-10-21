@@ -47,7 +47,7 @@
   n_participants: "# учесници"
   go: "Иди"
   thank_you_: "Хвала!"
-  congratulations: "Честитке!"
+  congratulations: "Честитамо!"
   congratulations_on_completing_hoc: "Ћеститамо јер сте завршили 1 Сат Програмирања."
   get_a_certificate_of_achievement: "Узмите сертификат о достигнућу"
   enter_valid_email: "Молимо да унесете валидну емаил адресу"
@@ -81,7 +81,7 @@
   get_started: "Покрени"
   i_agree: "Слажем се"
   participant_select: "-Изабери-"
-  participant_student: "Студент"
+  participant_student: "студент"
   participant_parent: "Родитељ"
   participant_educator: "Учитељ"
   participant_engineer: "Софтверски инжињер"
@@ -108,8 +108,8 @@
   boy: "Дечак"
   help_recruit_coders: "Помозите нам да рекрутујемо више кодера вашем тиму!"
   help_recruit: "помозите нам да рекрутујемо више кодера!"
-  lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
-  lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
+  lines_of_code: "Преко<b># Линије кода</b> Исписане по датуму."
+  lines_of_code_alt: "<b>#</b>Линије кода написане од стране сутдената"
   who_has_done_hoc: "Ко је одрадио #HourOfCode? @codeorg"
   hoc_leaderboards: "Табела најуспешнијих учесника сата кодирања"
   students_and_lines: "%{students} студената је одрадило сат кодирања и напислао %{lines}
@@ -212,7 +212,7 @@
   dashboard_action_delete: Delete
   dashboard_action_confirm: Delete?
   dashboard_action_delete_yes: "Да"
-  dashboard_action_delete_no: "не"
+  dashboard_action_delete_no: "Не"
   dashboard_action_done: Done
   dashboard_action_required: required
   dashboard_navigation_home_page: Teacher home page
@@ -259,7 +259,7 @@
   dashboard_students_male: "Мушко"
   dashboard_students_female: "Женско"
   dashboard_students_secret: Secret
-  dashboard_students_password: "Лозинка"
+  dashboard_students_password: "Шифра"
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -307,8 +307,21 @@
   dashboard_grade_other: "Други"
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_none: "Електронска пошта"
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: "студент"
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

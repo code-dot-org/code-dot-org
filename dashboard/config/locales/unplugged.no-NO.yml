@@ -3,14 +3,13 @@
     unplugged:
       Unplug1:
         title: Introduksjon til informatikk
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the vocabulary words that
-          are associated with the lessons that follow, but presenting them in a fun
-          and playful light now is far more productive than waiting for more advanced
-          opportunities.
+        desc: Denne leksjonen introduserer begrepet informatikk og forklarer hva en
+          informatiker gjør. Den vil også gi elever muligheten til å prøve rollen
+          som en informatiker. Etter aktiviteten vil eleven kunne ta med seg en påminnelse
+          hjem av hva han eller hun har lært. Du kan bli fristet til å hoppe over
+          å lære unge barn ordforrådet forbundet med oppgavene som følger, men presenter
+          dem på et morsomt og lekent lys allerede nå er langt mer produktivt enn
+          å vente på mer avanserte muligheter.
         pdfs:
         - unplug1
         video: Koble fra 1
@@ -149,7 +148,7 @@
           be instructed to repeat it.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relay programming
+        title: Relé programmering
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to

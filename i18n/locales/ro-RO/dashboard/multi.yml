@@ -106,10 +106,10 @@ ro:
       2-3 Conditionals Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        These are your team's cards - according to the rules of the game, which set is scored correctly?: "These are your team's cards - according to the rules of the game, which set is scored correctly?"
+        According to the rules of the game, which set of cards is scored correctly?: According to the rules of the game, which set of cards is scored correctly?
+        /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
-        /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a4.png: /script_assets/2-3_images/unplugged/conditionals_1_a4.png
       2-3 Getting Loopy Multi 1:
         Multiple Choice: Multiple Choice
@@ -296,7 +296,6 @@ ro:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
-        /script_assets/4-5_images/unplugged/suncatchers_2_a4.png: /script_assets/4-5_images/unplugged/suncatchers_2_a4.png
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -353,7 +352,7 @@ ro:
         /script_assets/k_1_images/move_blocks/E.png: /script_assets/k_1_images/move_blocks/E.png
         /script_assets/k_1_images/move_blocks/W.png: /script_assets/k_1_images/move_blocks/W.png
       K-1 Maze Multiple Choice 2:
-        Maze: Maze
+        Maze: Labirint
         /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png, 500
         Which answer solves this level?: Which answer solves this level?
         /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
@@ -513,7 +512,7 @@ ro:
         Maze Multiple Choice Two: Maze Multiple Choice Two
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
         This puzzle is all about selecting the correct flowers.: This puzzle is all about selecting the correct flowers.
-        Instructions: Instructions
+        Instructions: Instrucţiuni
         Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: "Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?"
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Which flowers are yellow?: Which flowers are yellow?
@@ -522,10 +521,10 @@ ro:
         /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test multi text:
-        Presidents: Presidents
-        This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
-        Who was the first president of the USA?: Who was the first president of the USA?
-        Fred Flintstone: Fred Flintstone
+        Presidents: Președinți
+        This multiple choice is all about the presidents of the United States.: Această joc cu alegere multiplă este despre preşedinţi ai Statelor Unite.
+        Who was the first president of the USA?: Cine a fost primul preşedinte al SUA?
+        Fred Flintstone: Fred Flinstone
         Martha Washington: Martha Washington
         George Washington: George Washington
         George Jetson: George Jetson

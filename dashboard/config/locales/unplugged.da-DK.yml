@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: Introduktion til datalogi
+        title: Introduktion til Computer Videnskab
         desc: Denne lektion vil indføre begrebet datalogi og forklare hvad en datalog
           gør.  Det vil også give de studerende en mulighed for at påtage sig rollen
           som en datalog.  Ved udgangen af aktiviteten, vil hver elev har en tag-med-hjem
@@ -72,7 +72,7 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: Sangskrivning
+        title: Sang Skrivning
         desc: Læse tekster er en temmelig intuitivt for de fleste studerende.  Vi
           vil tage en aktivitet, der allerede er fælles viden og flytte det ind i
           en solid uddannelse på definition og kaldende funktioner. Når studerende
@@ -125,7 +125,7 @@
           en figur gennem en labyrint, ved brug af en enkelt kommando.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life algoritmer: Plant et frø'
+        title: 'Real-life algoritmer: Plante et frø'
         desc: Denne lektion gør opmærksom på måder, vi bruge algoritmer i vores daglige
           liv, ved hjælp af handlingen "plant et frø" som eksempel. Der lægges også
           vægt på det større billede i datalogi og hvordan algoritmer spiller en væsentlig

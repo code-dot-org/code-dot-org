@@ -81,7 +81,7 @@ ko:
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png
       2-3 Algorithms Multi 1:
-        Multiple Choice: 객관식
+        Multiple Choice: 다중선택
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
         Choose an algorithm for the image provided: 주어진 이미지를 위한 알고리즘을 고르세요.
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: '사각형에서 시작해서<br/>사각형 위에 삼각형을 그리고<br/>사각형 위에 삼각형을 그리세요.'
@@ -89,7 +89,7 @@ ko:
         Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: '사각형에서 시작해서<br/>사각형 위에 마름모를 그리고<br/>마름모 오른쪽에 삼각형을 그리세요.'
         Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: '사각형에서 시작해서<br/>사각형 아래에 삼각형을 그리고<br/>삼각형 오른쪽에 마름모를 그리세요.'
       2-3 Algorithms Multi 2:
-        Multiple Choice: 다중선택
+        Multiple Choice: 객관식
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: '삼각형에서 시작해서<br/>삼각형 아래에 사각형을 그리고<br/>사각형 아래에 또 다른 삼각형을 그리세요.'
         Which image does <em>not</em> follow this algorithm?: '어떤 이미지가 이 알고리즘으로 만들 수 <em>없나요?</em>'
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
@@ -106,10 +106,10 @@ ko:
       2-3 Conditionals Multi 1:
         Multiple Choice: 객관식
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        These are your team's cards - according to the rules of the game, which set is scored correctly?: "These are your team's cards - according to the rules of the game, which set is scored correctly?"
+        According to the rules of the game, which set of cards is scored correctly?: According to the rules of the game, which set of cards is scored correctly?
+        /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
-        /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a4.png: /script_assets/2-3_images/unplugged/conditionals_1_a4.png
       2-3 Getting Loopy Multi 1:
         Multiple Choice: 객관식
@@ -296,7 +296,6 @@ ko:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
-        /script_assets/4-5_images/unplugged/suncatchers_2_a4.png: /script_assets/4-5_images/unplugged/suncatchers_2_a4.png
       K-1 Artist 1 Multi 1:
         Multiple Choice: 객관식
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -353,7 +352,7 @@ ko:
         /script_assets/k_1_images/move_blocks/E.png: /script_assets/k_1_images/move_blocks/E.png
         /script_assets/k_1_images/move_blocks/W.png: /script_assets/k_1_images/move_blocks/W.png
       K-1 Maze Multiple Choice 2:
-        Maze: 미로 퍼즐
+        Maze: Maze
         /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png, 500
         Which answer solves this level?: 이 레벨을 해결할 수 있는 답은?
         /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
@@ -483,7 +482,7 @@ ko:
         When converting a circle to code, the correct order is: '원을 코드로 변환할 때, 정확한 명령은 '
         top, left, right: 위쪽, 왼쪽, 오른쪽
         left, right, top: 왼쪽, 오른쪽, 위쪽
-        random: 랜덤 번째 위치
+        random: random(랜덤)
         left top right: 왼쪽, 위쪽, 오른쪽
       Circle to code:
         Code from Circle: 원으로 부터 만들어진 코드

@@ -3,7 +3,7 @@ pt:
     script:
       name:
         20-hour:
-          desc: Introdução ao Curso de Ciência da Computação para o Ensino Fundamental
+          desc: Introdução ao curso de ciência da computação para primeira a nona série.
           Unplug1: Fase 1
           Maze: Fase 2
           Unplug2: Fase 3
@@ -48,6 +48,7 @@ pt:
         edit-code:
           desc: Editar Código (beta)
           MazeEC: Fase 1
+          Webapp: Fase 2
         events:
           desc: Pingue-pongue (beta)
           Bounce: Fase 1
@@ -85,7 +86,7 @@ pt:
         Farmer2: A Fazendeira 2
         Unplug8: Abstração
         Artist4: O Artista 4
-        Unplug9: Programação por revezamento
+        Unplug9: Programação Relay
         Farmer3: A Fazendeira 3
         Unplug10: A Internet
         Artist5: O Artista 5
@@ -96,6 +97,7 @@ pt:
         Jigsaw: Quebra-cabeça
         MazeStep: Modo Labirinto
         Wordsearch: Caça Palavras
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Bronze
@@ -104,12 +106,12 @@ pt:
     concept:
       description:
         sequence: Sequência
-        if: Bloco se
+        if: 'Bloco "se"'
         if_else: Bloco se-senão
-        loop_times: Bloco repita
-        loop_until: Bloco repita até
-        loop_while: Bloco enquanto
-        loop_for: Bloco contador
+        loop_times: 'Bloco "Repetir Vezes"'
+        loop_until: 'Bloco "Repita até que"'
+        loop_while: 'Bloco "Enquanto"'
+        loop_for: 'Bloco "contador"'
         function: Funções
         parameters: Funções com parâmetros
     level:
@@ -130,7 +132,7 @@ pt:
         maze_2_13: 'Use o novo bloco "se" para me deixar decidir quando virar. Dica: você só precisa de mais um bloco, mas veja como o configuramos, então você mesmo poderá fazê-lo na próxima vez.'
         maze_2_14: 'Ok, esse desafio é como o último, mas você precisa se lembrar de como você usou o bloco "se" e o bloco "repita" juntos.'
         maze_2_15: 'Mim querer girassol! Use um bloco "se" para que eu chegue lá com o menor número de blocos possível.'
-        maze_2_16: 'Ok, praticar mais uma vez - essa parte não é muito diferente, mas fique de olho nos comilões!'
+        maze_2_16: Ok, vamos praticar mais uma vez. Essa parte não é muito diferente, mas fique de olho nos comilões!
         maze_2_17: 'O bloco "se-senão" verifica uma condição e, em seguida, faz uma coisa OU outra. Para me levar ao girassol, tente usar esse novo bloco.'
         maze_2_18: 'Vamos praticar o uso do bloco "se-senão" mais uma vez, você consegue na primeira tentativa?'
         maze_2_19: Você consegue usar apenas 3 blocos para me ajudar a percorrer um labirinto mais complexo? Se fizer isso direito, eu posso percorrer qualquer caminho cheio de curvas, não importa o comprimento.
@@ -227,7 +229,7 @@ pt:
         bounce_11: 'Agora você pode conectar blocos ao bloco "quando o jogo começa". Você tem que anexar o novo bloco "jogue uma nova bola" em mais de um lugar. Além disso, tente mudar o cenário ou a velocidade da raquete e da bola e veja quantos pontos você pode marcar antes de seu oponente marcar duas vezes.'
         bounce_12: Crie seu próprio jogo de Pingue-pongue. Você pode mudar o visual e todas as regras. Quando terminar, clique em Concluir para que seus amigos possam jogar seu jogo em seus celulares.
         Custom_builder: 'Arraste os blocos da caixa de ferramentas para a área de trabalho para desenhar o nível que você deseja criar. Quando estiver pronto, clique em "Executar".'
-        flappy_1: 'Conecte um bloco no bloco "quando clicar" e, em seguida, clique em "Executar". Clique ou toque na tela para mover o passarinho em direção ao alvo.'
+        flappy_1: 'Conecte um bloco ao bloco "quando clicar" e então clique em "Executar". Clique ou toque na tela para mover o passarinho até o alvo.'
         flappy_2: |-
           Agora que já temos uma base. Conecte um bloco ao bloco "quando bater no chão". Seu código precisa 'TERMINAR O JOGO' quando o passarinho bater.
         flappy_3: 'O bloco "quando o jogo começa" permite que você execute o código quando o jogo começa. Defina a velocidade do nível e voe em direção ao alvo.'
@@ -240,7 +242,7 @@ pt:
         flappy_9: Para mudar um pouco, ao bater em um obstáculo ou no chão, faça com que o placar volte a 0 ao invés de terminar o jogo.
         flappy_11: Crie seu próprio jogo Flappy Bird. Você pode mudar o visual e todas as regras, até mesmo a gravidade. Quando terminar, clique em Concluir para que seus amigos joguem seu jogo em seus celulares.
         flappy_k1_1: Jogar Flappy Bird
-        flappy_k1_2: 'Conecte um bloco ao bloco "quando clicar" e então clique em "Executar". Clique ou toque na tela para mover o passarinho até o alvo.'
+        flappy_k1_2: 'Conecte um bloco no bloco "quando clicar" e, em seguida, clique em "Executar". Clique ou toque na tela para mover o passarinho em direção ao alvo.'
         flappy_k1_3: |-
           Agora que já temos uma base. Conecte um bloco ao bloco "quando bater no chão". Seu código precisa 'TERMINAR O JOGO' quando o passarinho bater.
         flappy_k1_4: 'O bloco "quando o jogo começa" permite que você execute o código quando o jogo começa. Defina a velocidade do nível e voe em direção ao alvo.'
@@ -268,21 +270,21 @@ pt:
         mazestep_3: Descrição do labirinto aqui
         mazestep_4: Descrição do labirinto aqui
         mazestep_5: Descrição do labirinto aqui
-        studio_c2_1: 'Você consegue fazer esse cachorro dizer "olá, mundo"?'
+        studio_c2_1: 'Você consegue fazer esse cachorro dizer "Olá, mundo"?'
         studio_c2_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer o gato dizer alguma coisa?
         studio_c2_3: Você consegue desenvolver um programa para fazer este cachorro se mover em direção ao gato?
-        studio_c2_4: 'Você consegue desenvolver um programa que faça com que o cachorro se mova em direção ao gato e que faça com que o gato diga "olá" quando o cachorro o alcançar?'
+        studio_c2_4: 'Você consegue desenvolver um programa que faça com que o cachorro se mova em direção ao gato e que faça com que o gato diga "Olá" quando o cachorro o alcançar?'
         studio_c2_5: 'Você pode escrever um programa para fazer o polvo dizer "olá" quando clicarem nele?'
-        studio_c2_6: Você pode desenvolver um programa que faça o pinguim se mover usando as teclas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos?
+        studio_c2_6: Você pode desenvolver um programa que faça o pinguim se mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos?
         studio_c2_7: 'O bloco "repita infinitamente" possibilita a execução contínua do programa. Você pode anexar blocos para mover esse dinossauro para cima e para baixo repetidamente?'
         studio_c2_8: 'Você pode fazer com que o pinguim diga "Ai!" e reproduza um som de "batida" se ele encontrar o dinossauro, e então movê-lo com as setas para fazer isso acontecer?'
-        studio_c2_9: Você pode adicionar um bloco que soma um ponto quando o pinguim se encontra com o polvo, e então movê-lo com as setas para conseguir o ponto?
+        studio_c2_9: Você pode adicionar um bloco que some um ponto quando o pinguim se encontra com o polvo, e então movê-lo até que você consiga o ponto?
         studio_c2_10: Você pode adicionar blocos para mudar o plano de fundo e a velocidade do pinguim, e então movê-lo com as setas até que você pontue?
         studio_c2_11: Crie sua própria história. Quando tiver terminado, clique em Concluir para que seus amigos possam vê-la em seus celulares.
-        studio_c3_story_1: 'Você consegue fazer esse cachorro dizer "olá, mundo"?'
+        studio_c3_story_1: 'Você consegue fazer esse cachorro dizer "Olá, mundo"?'
         studio_c3_story_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer o gato dizer alguma coisa?
         studio_c3_story_3: Você consegue desenvolver um programa para fazer este cachorro se mover em direção ao gato?
-        studio_c3_story_4: 'Você consegue desenvolver um programa que faça com que o cachorro se mova em direção ao gato, e que faça com que o gato diga "olá" quando o cachorro o alcançar?'
+        studio_c3_story_4: 'Você consegue desenvolver um programa que faça com que o cachorro se mova em direção ao gato e que faça com que o gato diga "Olá" quando o cachorro o alcançar?'
         studio_c3_story_5: Você pode adicionar um bloco para deixar o polvo feliz?
         studio_c3_story_6: Crie sua própria história. Quando tiver terminado, clique em Concluir para que seus amigos possam vê-la em seus celulares.
         studio_c3_game_1: 'Você pode escrever um programa para fazer o polvo dizer "olá" quando clicarem nele?'
@@ -292,18 +294,18 @@ pt:
         studio_c3_game_5: Você pode adicionar um bloco que some um ponto quando o pinguim se encontra com o polvo, e então movê-lo até que você consiga o ponto?
         studio_c3_game_6: Você pode adicionar blocos para mudar o plano de fundo e a velocidade do pinguim, e então movê-lo com as setas até que você pontue?
         studio_c3_game_7: Crie seu próprio jogo. Quando tiver terminado, clique em Concluir para que seus amigos possam jogá-lo em seus celulares.
-        studio_playlab_1: 'Você consegue fazer esse cachorro dizer "olá, mundo"?'
+        studio_playlab_1: 'Você consegue fazer esse cachorro dizer "Olá, mundo"?'
         studio_playlab_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer o gato dizer alguma coisa?
         studio_playlab_3: Você consegue desenvolver um programa para fazer este cachorro se mover em direção ao gato?
-        studio_playlab_4: 'Você consegue desenvolver um programa que faça com que o cachorro se mova em direção ao gato e que faça com que o gato diga "olá" quando o cachorro o alcançar?'
+        studio_playlab_4: 'Você consegue desenvolver um programa que faça com que o cachorro se mova em direção ao gato e que faça com que o gato diga "Olá" quando o cachorro o alcançar?'
         studio_playlab_5: 'Você pode escrever um programa para fazer o polvo dizer "olá" quando clicarem nele?'
         studio_playlab_6: Você pode desenvolver um programa que faça o pinguim se mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos?
         studio_playlab_7: 'O bloco "repita infinitamente" possibilita a execução contínua do programa. Você pode anexar blocos para mover esse dinossauro para cima e para baixo repetidamente?'
-        studio_playlab_8: Você pode adicionar um bloco que soma um ponto quando o pinguim se encontra com o polvo, e então movê-lo com as setas para conseguir o ponto?
+        studio_playlab_8: Você pode adicionar um bloco que some um ponto quando o pinguim se encontra com o polvo, e então movê-lo até que você consiga o ponto?
         studio_playlab_9: Você pode adicionar blocos para mudar o plano de fundo e a velocidade do pinguim, e então movê-lo com as setas até que você pontue?
         studio_playlab_10: Crie seu próprio jogo. Quando tiver terminado, clique em Concluir para que seus amigos possam jogá-lo em seus celulares.
         studio_full_sandbox: Crie seu próprio jogo. Quando tiver terminado, clique em Concluir para que seus amigos possam jogá-lo em seus celulares.
-        studio_k1_1: 'Você pode fazer o cachorro dizer "Olá, mundo"?'
+        studio_k1_1: 'Você consegue fazer esse cachorro dizer "Olá, mundo"?'
         studio_k1_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer o gato dizer alguma coisa?
         studio_k1_3: Você consegue desenvolver um programa para fazer este cachorro se mover em direção ao gato?
         studio_k1_4: 'Faça o cachorro se mover até o gato e dizer "olá" quando chegar.'
@@ -340,8 +342,8 @@ pt:
         Unplug3: Programação em Papel Quadriculado
         Unplug4: Algoritmos
         Unplug5: Funções
-        Unplug6: Condicionais
-        Unplug7: Escrevendo uma canção
+        Unplug6: Condições
+        Unplug7: Composição
         Unplug8: Abstração
         Unplug9: Programação por revezamento
         Unplug10: Internet
@@ -369,9 +371,9 @@ pt:
         C2_bee_conditionals: Condicionais da abelha
         C2_playlab_createstory: 'Laboratório - Crie uma história'
         C2_graph_paper: Programação em Papel Quadriculado
-        C2_conditionals_with_cards: Condicionais
+        C2_conditionals_with_cards: Condições
         C2_binary_bracelets: Pulseiras binárias
-        C2_replay_programming: Programação por revezamento
+        C2_replay_programming: Programação Relay
         C2_paper_airplanes: Aviões de papel
         C3_maze_intro: Introdução ao Labirinto
         C3_artist_intro: Introdução ao Artista
@@ -385,7 +387,7 @@ pt:
         C3_bee_debugging: Depuração da abelha
         C3_bounce: Pingue-pongue
         C3_playlab_create_game: 'Laboratório - Crie um jogo'
-        C3_computational_thinking: Pensamento computacional
+        C3_computational_thinking: Pensamento Computacional
         C3_dice_race: Jogo de dados
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing

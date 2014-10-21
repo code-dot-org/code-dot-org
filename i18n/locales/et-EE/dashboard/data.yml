@@ -48,6 +48,7 @@ et:
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Stage 1
+          Webapp: Stage 2
         events:
           desc: Bounce (beta)
           Bounce: Stage 1
@@ -77,7 +78,7 @@ et:
         Artist: The Artist
         Unplug4: Algorithms
         Artist2: The Artist 2
-        Unplug5: Functions
+        Unplug5: Funktsioonid
         Farmer: The Farmer
         Unplug6: Conditionals
         Artist3: The Artist 3
@@ -96,6 +97,7 @@ et:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Bronze
@@ -110,7 +112,7 @@ et:
         loop_until: Repeat until block
         loop_while: While block
         loop_for: Counter block
-        function: Functions
+        function: Funktsioonid
         parameters: Functions with parameters
     level:
       instructions:
@@ -346,7 +348,7 @@ et:
         loop_until: Repeat Until Block
         if: If Block
         if_else: If/else Block
-        function: Functions
+        function: Funktsioonid
         loop_while: While Block
         loop_for: Counter Block
         parameters: Functions with Parameters
@@ -356,7 +358,7 @@ et:
         Unplug2: Computational Thinking
         Unplug3: Graph Paper Programming
         Unplug4: Algorithms
-        Unplug5: Functions
+        Unplug5: Funktsioonid
         Unplug6: Conditionals
         Unplug7: Songwriting
         Unplug8: Abstraction

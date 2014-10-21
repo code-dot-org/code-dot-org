@@ -6,14 +6,14 @@ zh:
     attributes:
       user:
         name: Display Name
-        email: 邮箱
-        username: '用户名:'
-        password: '密码:'
+        email: 电子邮件
+        username: 用户名
+        password: 密码
         password_confirmation: 密码确认：
         current_password: 当前密码：
         locale: 语言：
         age: Age
-        gender: '性别:'
+        gender: 性别
         edit_header: 编辑用户信息
         error:
           future: 不能在未来
@@ -108,7 +108,7 @@ zh:
     login: 登录
   password:
     reset_form:
-      title: 忘记密码？
+      title: 忘记了您的密码吗？
       email: 电子邮件地址
       submit: 发送给我重置密码的指令
     change_form:
@@ -163,7 +163,7 @@ zh:
     teacher_email_required: 老师奖品需要一个已确认电子邮件地址：
     confirm:
       title: 请确认
-      "no": 否
+      "no": 不
       "yes": 是
       msg: '你确定你希望领取奖品%{prize_name}吗？'
       msg_student: 注意：你只能选择一种奖品。
@@ -233,7 +233,7 @@ zh:
       prizes: '收集所有 %{total_trophies} 的奖杯，并赢取奖品 ！'
       prize_earned: '所有 %{total_trophies} 奖杯都收集了。赢到奖品了 ！'
       prize_us_only: （仅适用于美国学生）
-      prizes_link: 更多的信息
+      prizes_link: 更多信息
   teacher:
     title:
       one: 你的老师：
@@ -256,8 +256,8 @@ zh:
       trophies: 奖杯
     students:
       name: 姓名
-      username: '用户名:'
-      password: '密码:'
+      username: 用户名
+      password: 密码
       manage: 管理学生
       dashboard: Go to Teacher Dashboard
       add: 添加学生
@@ -335,13 +335,16 @@ zh:
     tryfirst: 或者，你也可以先试一试，晚些再注册：
     trynow: 现在就试试
     add_hint_help: 请帮助我们将智能提示添加到 Code.org 教程
-    20hour_overview: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，并且所有年龄段学习起来都很有趣。
+    20hour_overview: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
     test_videos_help: 在你的学校测试我们新的视频播放器
     try_beta_courses: 新增功能！尝试我们为K-5 学生准备的 beta 版课程
     use_as_teacher: 使用本网站作为一名教师
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: 男性
     female: 女性
@@ -369,7 +372,7 @@ zh:
     teacher: 请参阅解决方案
     auth_error: 您无权查看该解决方案。
     submit: 更新艺术家的位置
-    direction: 开始方向
+    direction: Start Direction (in degrees)
   video:
     tab: 视频。
     notes: 没有视频吗？请看笔记。
@@ -378,11 +381,11 @@ zh:
     download: 下载视频
   compatability:
     working:
-      header: We are working on support for your browser.
+      header: 我们在努力加入对你的浏览器的支持。
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
       hide_this_warning: Hide this warning
     upgrade:
-      header: Please upgrade your browser.
+      header: 请升级你的浏览器。
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
       button: Take me to the list of supported browsers
   slow_loading: 请稍微多等一会...
@@ -390,7 +393,7 @@ zh:
   next_stage: 完成 ！继续下一个阶段
   download_pdf: 开放课程
   view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
+  pdf_download: 下载 PDF
   share_code:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: 看看我的弹球游戏
@@ -414,7 +417,7 @@ zh:
       unused: 未使用的水平
   upsell:
     hoc:
-      title: 一小时编程
+      title: 编程一小时
       body: 请尝试计算机科学的基本知识。数百万人尝试了它
     flappy:
       title: 飞扬的代码
@@ -424,9 +427,13 @@ zh:
       body: 尝试我们 20 小时计算机科学课程简介 。
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Want to make your own?
     more: 'More &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
@@ -436,7 +443,7 @@ zh:
   multi:
     wrong_title: Incorrect answer
     wrong_body: "The answer you've entered is not correct.  Please try again!"
-    correct_title: Correct
+    correct_title: 正确。
     correct_body: That is the correct answer.
   match:
     wrong_title: Incorrect solution
@@ -474,7 +481,7 @@ zh:
           title: 拼图
           description: ""
         step:
-          title: 步骤
+          title: 踏步
           description: ""
         sample_level_builder:
           title: 样品水平生成器

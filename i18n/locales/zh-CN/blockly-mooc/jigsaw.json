@@ -1,10 +1,10 @@
 {
   "continue":"继续",
-  "nextLevel":"恭喜！您已完成了这个难题。",
+  "nextLevel":"恭喜你！你解决了这个谜题。",
   "no":"不",
-  "numBlocksNeeded":"这个难题可以用%1个块解决。",
+  "numBlocksNeeded":"这个谜题可以用%1个块解决。",
   "reinfFeedbackMsg":"你可以按“重试”按钮来返回你的游戏",
   "share":"分享",
   "shareGame":"分享你的游戏:",
-  "yes":"是"
+  "yes":"对"
 }

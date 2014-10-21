@@ -2,39 +2,39 @@
   data:
     unplugged:
       Unplug1:
-        title: Introducción al Arte de las Ciencias de la Computación
+        title: Introducción a la informática
         desc: Esta clase dará una introducción al concepto de “Ciencias de la Computación”
           y explicará qué hace un “informático”. Los estudiantes  tendrán la oportunidad
           de asumir el rol de un informático. Al finalizar la actividad, cada estudiante
           tendrá un recordatorio sobre qué aprendió durante la clase. Tal vez Ud.
           crea que es conveniente evitar enseñar a los niños más pequeños el complejo
           vocabulario asociado a las clases que siguen, pero presentarlo de manera
-          lùdica y divertida ahora es mucho màs productivo que esperar otras oportunidades.
+          lúdica y divertida ahora es mucho más productivo que esperar otras oportunidades.
         pdfs:
         - unplug1-es-ES
         video: Unplug1
       Unplug2:
         title: Pensamiento computacional
-        desc: Con papel y fibrones, los estudiantes deben aprender los 4 pasos del
-          pensamiento computacional.  Después de una breve introducción, deben dividirse
-          en grupos y pensar instrucciones para dar a los otros grupos para dibujar
-          un monstruo específico (del catálogo de monstruos preseleccionados). La
-          tarea debe ser dividida, para que luego los equipos encuentren patrones
+        desc: Sólo con papel y fibrones, los estudiantes aprenderán los 4 pasos del
+          pensamiento computacional.  Después de una breve introducción, los alumnos
+          deben dividirse en grupos donde darán instrucciones para otros alumnos que
+          les permitan dibujar un monstruo específico (del catálogo de monstruos preseleccionados).
+          La tarea debe ser dividida, para que luego los equipos encuentren patrones
           en todos los monstruos del catálogo, y abstraigan detalles similares entre
           los monstruos. Deben usar esa información para crear un algoritmo (instrucciones)
-          para que otro equipo dibuje un monstruo específico. Los equipos deben intercambiar
-          algoritmos y dibujar un monstruo siguiendo el algoritmo que les toque. Analizar
-          si el dibujo coincide con lo que sus creadores pensaron.
+          para que otro equipo dibuje un monstruo específico. Los equipos deben luego
+          intercambiar algoritmos con otro grupo y dibujar un monstruo siguiendo el
+          algoritmo que les toque. ¿El dibujo lo que el equipo original quiso hacer?
         pdfs:
         - unplug2-es-ES
         video: Unplug2
       Unplug3:
-        title: Programación de hoja cuadriculada
-        desc: Programando algunos dibujos, los estudiantes empezarán a entender de
-          qué trata la programación. La clase empezará haciendo que los estudiantes
-          intercambien instrucciones para colorear cuadrados en una hoja cuadriculada,
-          con el fin de reproducir una imagen en la hoja. La clase puede terminar
-          exhibiendo los dibujos que los estudiantes realizaron.
+        title: Programación en papel cuadriculado
+        desc: Programándose unos a otros para hacer dibujos, los estudiantes empezarán
+          a entender de qué trata la programación. La clase empezará haciendo que
+          los estudiantes intercambien instrucciones para colorear cuadrados en una
+          hoja cuadriculada, con el fin de reproducir una imagen. Si hay tiempo, la
+          clase puede terminar con dibujos que los estudiantes crean.
         pdfs:
         - unplug3-es-ES
         video: Unplug3
@@ -49,18 +49,18 @@
         - unplug4-es-ES
         video: Unplug4
       Unplug5:
-        title: Funciones
-        desc: En esta clase, los estudiantes harán un collar hecho de cuerdas, cuentas
-          y un amuleto especial. Seguirán una serie de tareas repetitivas, y luego
+        title: funciones
+        desc: En esta clase, los estudiantes harán un collar con cuerdas, piedritas
+          y una medalla especial. Seguirán una serie de tareas repetitivas, y luego
           se les pedirá que identifiquen ciertos conjuntos de “habilidades” que se
           duplican varias veces. Una vez que esas habilidades fueron definidas, serán
           llamadas desde un programa principal y el bello proceso de creación será
-          copiado en una sola pieza de papel. El programa final será escrito por toda
-          la clase, independientemente del tipo de cuerdas, cuentas o medallones.
-          Para efectivamente permitir esto, los estudiantes necesitarán “abstraer”
-          los detalles específicos entre los materiales y crear términos vagos para
-          los suministros de cada uno. El uso de huecos genéricos es una maravillosa
-          introducción a las variables.
+          volcado en una sola pieza de papel. El programa final será escrito por toda
+          la clase, independientemente del tipo de cuerdas, piedritas o medallas.
+          Para efectivamente permitir esto, los estudiantes deberán “abstraer” los
+          detalles específicos entre los materiales y crear términos vagos para los
+          suministros de cada uno. El uso de huecos genéricos es una maravillosa introducción
+          a las variables.
         pdfs:
         - unplug5-es-ES
         video: Unplug5
@@ -73,7 +73,7 @@
         - unplug6-es-ES
         video: Unplug6
       Unplug7:
-        title: Escribir canciones
+        title: Escritura de la canción
         desc: Leer letras de canciones puede ser una aventura intuitiva para los estudiantes.
           Vamos a tomar una actividad que hace uso de conocimientos previos para dar
           una buena clase sobre definición y llamada de funciones. Una vez que los
@@ -83,7 +83,7 @@
         - unplug7-es-ES
         video: Unplug7
       Unplug8:
-        title: Liberación abstracta
+        title: Abstracción
         desc: Vamos a combinar la rutina diaria de los estudiantes y un juego que
           trata de juegos de palabras, para que la clase aprenda sobre la efectividad
           que posee la abstracción.
@@ -91,7 +91,7 @@
         - unplug8-es-ES
         video: Unplug8
       Unplug9:
-        title: Programación bajo presión
+        title: Programación de relé
         desc: Esta lección tomará una idea de una actividad anterior (4. Programación
           en hoja cuadriculada) y el uso de esas habilidades para hacer hincapié en
           la importancia de completar los programas que funcionan con una determinada
@@ -111,8 +111,8 @@
         title: Cierre
         desc: Este cierre final en nuestra primera serie de 20 horas ayudará a la
           clase a volver a vivir sus momentos favoritos, mientras se les dan los próximos
-          pasos para que puedan continuar, si están interesados, en continuar el viaje
-          a través de las Ciencias de la computación.
+          pasos para que puedan continuar, si están interesados, el viaje a través
+          de las Ciencias de la computación.
         pdfs:
         - unplug11-es-ES
         video: Unplug11
@@ -127,49 +127,49 @@
           para mover un personaje a través de un laberinto utilizando un solo comando.
         video: C1_muévelomuévelo_desconectado
       PlantASeed:
-        title: 'Algoritmos de la vida real: Plantar una semilla'
-        desc: Esta lección resalta formas en lao que usamos algoritmos en nuestra
+        title: 'Algoritmos de la Vida Real: Planta una Semilla'
+        desc: Esta lección resalta formas en las que usamos algoritmos en nuestra
           vida cotidiana, usando el acto de plantar una semilla como ejemplo. También
           se centra en el panorama general de la informática y cómo los algoritmos
           juegan un papel esencial.
         video: C1_plantando_semillas
       BuildingAFoundation:
-        title: Construyendo una base
+        title: Construyendo una Base
         desc: Los estudiantes construyen una estructura utilizando solamente lo suministrado.
           Las estructuras deben completar una tarea (alcanzar una cierta altura o
           soportar un cierto peso), y los estudiantes discuten la idea de ser persistente
           cuando las cosas se complican.
         video: C1_construyendo_cimientos
       GettingLoopy:
-        title: Alocandose
-        desc: Esta lección introduce el conepto de programación de los bucles (instruciones
+        title: Bucleandose
+        desc: Esta lección introduce el concepto de programación de los bucles (instruciones
           repetidas) atravéz de una actividad de baile. Los estudiantes aprenderan
-          simple coreografía, despues se les dira que la repitan.
+          simple coreografía, despues se les dirá que la repitan.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Programación de relevos
-        desc: Los estudiantes corren una carrera de relevos, donde aceleran por la
-          yarda para escribir un algoritmo basado en una imagen "Grafica de Programación".
-          Ellos solo puede escribir una instrucción a la vez y si hay algun error
-          en algun lugar, deben borrar todo hasta ese punto.
+        title: Programación de Relevos
+        desc: Los estudiantes corren una carrera de relevos, donde aceleran por el
+          camino para escribir un algoritmo basado en una imagen "Grafica en Papel
+          de Programación". Ellos sólo pueden escribir una instrucción a la vez y
+          si hay algun error en algun lugar, deben borrar todo hasta ese punto.
         video: C2_programación_relevos
       Conditionals:
         title: Condicionales
-        desc: Para aprender acerca de declaraciones condicionales, los estudiantes
-          jugaran un juego de cartas y crean reglas como "si tomo una tarjeta roja,
-          obtengo un punto" y "si tomo una carta negra, tu obtienes un punto."
+        desc: Para aprender acerca de las instrucciones condicionales, los estudiantes
+          juegan con cartas y crean reglas como "si tomo una tarjeta roja, obtengo
+          un punto" y "si tomo una carta negra, tu obtienes un punto."
         video: C2_condiciones_con_tarjetas
       BigEvent:
         title: El Gran Evento
         desc: Los estudiantes son introducidos al concepto de "eventos" en programación,
-          que son acciones que un ordenador controla constantemente. El profesor presionará
-          botones en un control remoto de papel y los estudiantes reaccionaran dependiendo
-          de que botón se presiona.
+          que son acciones que una computadora monitorea constantemente. El profesor
+          presionará botones en un control remoto de papel y los estudiantes reaccionarán
+          dependiendo de qué botón se presiona.
         video: C1_granevento_desconectado
       GoingPlacesSafely:
         title: Ir a Sitios Seguro
-        desc: El Internet es una herramienta poderosa, pero a veces peligrosa. Los
-          maestros muestran cómo mantenerse a salvo mientras se navega en Internet.
+        desc: Internet es una herramienta poderosa, pero a veces peligrosa. Los maestros
+          muestran cómo mantenerse a salvo mientras se navega en Internet.
       GraphPaperProgramming:
         title: Programación en papel cuadriculado
         desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones)
@@ -179,57 +179,57 @@
       PaperPlanes:
         title: 'Algoritmos de la vida real : Aviones de papel'
         desc: Esta lección hace ver modos en los que usamos algoritmos en nuestra
-          vida diaria, especificamente haciendo aviones de papel. Esta lección también
-          se enfoca la gran imagen de las Ciencias Computacionales y como los algoritmos
-          juegan una parte escencial.
+          vida diaria, específicamente haciendo aviones de papel. Esta lección también
+          se enfoca en las ciencias de la computación en general y cómo los algoritmos
+          juegan un papel escencial.
         video: C2_aviones_de_papel
       BinaryBracelets:
         title: Pulseras Binarias
-        desc: Los estudiantes crearan pulseras como representaciones binarias de la
-          primera letra de su nombre. Aprenderan que la información puede ser representada
-          y guardada en mas de un modo.
+        desc: Los estudiantes crean pulseras como representaciones binarias de la
+          primera letra de su nombre. Aprenden que los datos pueden ser representada
+          y guardados de más de una forma.
         video: C2_pulseras_binarias
       DigitalFootprint:
         title: Tu huella Digital
-        desc: Los profesores le presentan a los alumnos la idea de poner información
+        desc: Los profesores le presentan a los alumnos la idea de que poner información
           sobre ellos en línea crea una huella digital o un "rastro" que tiene consecuencias.
       ComputationalThinking:
         title: Pensamiento computacional
-        desc: Los estudiantes utilizan los pasos del pensamiento computacional (descomponer,
-          unir patrones, abstraer, algoritmo) para averiguar como jugar un juego que
-          viene sin instrucciones.
+        desc: Los alumnos usan los pasos del pensamiento computacional (descomponer,
+          combinar patrones, abstraer, algoritmo) para averiguar cómo jugar un juego
+          que viene sin instrucciones.
         video: C3_pensamiento_computacional
       FunctionalSuncatchers:
         title: Tragaluces Funcionales
         desc: Los estudiantes crean un algoritmo con variables y funciones (pedazos
-          de código que quieres usar una y otra vez) para crear un tragalúz con hilos
-          y cuentas.
-        video: C3_tragaluz_funcional
+          de código que quieres usar una y otra vez) para crear un tragaluz con un
+          hilo y pequeños cristales.
+        video: C3_tragaluces_funcionales
       SongwritingParameters:
         title: Composicion musical con Parámetros
         desc: Los estudiantes usan el concepto del coro en una canción para aprender
           sobre el paso de parámetros (que personaliza una función sin tener que reescrbir
           la función entera).
-        video: C3_composición_musical_con_paràmetros
+        video: C3_composición_musical_con_parámetros
       DiceRace:
         title: 'Algoritmos de la vida real: Carrera de Dados'
-        desc: Esta lección muestra modos en los que usamos algoritmos en nuestra vida
+        desc: Esta clase muestra modos en los que usamos algoritmos en nuestra vida
           diaria. Como parte de eso, los estudiantes identificarán y escribirán el
           algoritmo de un juego de carrera de dados.
         video: C3_carrera_dados
       Internet:
         title: Internet
-        desc: Los estudiantes enviaran mensajes representando varios métodos de transmision
+        desc: Los alumnos envían mensajes representando varios métodos de transmision
           de Internet usando pedazos de papel.
         video: C3_internet
       Crowdsourcing:
         title: Colaboración Abierta
-        desc: Los estudiantes usan colaboración abierta, una técnica resuelve-problemas
-          común en Ciencias de la Computación, para completar una tarea juntos como
-          clase mas eficientemente que si un estudiante lo intentara solo.
+        desc: Los estudiantes usan colaboración abierta (crowdsourcing), una técnica
+          de resolución de problemas común en las Ciencias de la Computación, para
+          completar una tarea juntos como clase más eficientemente que si un estudiante
+          lo intentara solo.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Ciudadanía Digital
-        desc: Los estudiantes exploraran la diferencia entre infromación privada e
-          información personal, distinguiendo que es seguro e inseguro compartir en
-          línea.
+        desc: Los estudiantes exploran la diferencia entre información privada e información
+          personal, distinguiendo qué es seguro y qué es inseguro compartir en línea.

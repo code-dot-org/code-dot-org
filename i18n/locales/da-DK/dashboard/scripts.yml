@@ -3,7 +3,7 @@ da:
     script:
       name:
         test:
-          "Jigsaw: Learn to drag and drop": 'Puslespil: Lære at trække og slippe'
+          "Jigsaw: Learn to drag and drop": 'Puslespil: Lær at trække og slippe'
           The Maze: Labyrinten
           Multi: Multi
           Match: Match
@@ -57,7 +57,7 @@ da:
           Artist Functions: Kunstner funktioner
           The Artist Debugging: Kunstneren fejlfinding
           Bee Debugging: Bi fejlfinding
-          Bee Functions: 'Bi: Funktioner'
+          Bee Functions: Bi Funktioner
           Maze Loops: Labyrint sløjfer
           Graph Paper Programming: Programmering på millimeterpapir
           "Real-life Algorithms: Paper Planes": 'Real-life algoritmer: Papir fly'
@@ -129,6 +129,7 @@ da:
           "Bee: Nested Loops2": 'Bi: Indlejrede løkker 2'
           "Bee: Debugging2": 'Bi: Fejlfinding 2'
           "Artist: Patterns": 'Artist: Patterns'
+          Songwriting: Sangskrivning
         msm:
           title: Efterskole matematik
           description: Privat arbejde i gang for efterskole matematik.
@@ -138,7 +139,7 @@ da:
           Unit 2: Enhed 2
         playlab:
           title: Spille Lab
-          description: Oprette en historie eller gøre et spil med spille Lab!
+          description: Oprette en historie eller lav et spil med Play Lab!
           Play Lab: Spille Lab
           description_short: Oprette en historie eller lav et spil med Play Lab!
         artist:

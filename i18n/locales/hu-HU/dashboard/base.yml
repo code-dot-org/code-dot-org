@@ -7,8 +7,8 @@ hu:
       user:
         name: Megjelenítendő név
         email: Email
-        username: Felhasználónév
-        password: Jelszó
+        username: felhasználónév
+        password: jelszó
         password_confirmation: Jelszó megerősítése
         current_password: Jelenlegi jelszó
         locale: Nyelv
@@ -31,11 +31,11 @@ hu:
     placeholder: Kérjük, írja ide a véleményét
     submit: Írja le a véleményét
   appname: Code.org
-  stage: Szakasz
+  stage: szakasz
   stage_number: 'Szint %{number}'
-  puzzle: Rejtvény
-  trophies: Trófeák
-  courses: Tanfolyamok
+  puzzle: Kirakós
+  trophies: trófeák
+  courses: tanfolyamok
   of: a
   more: TÖBB
   less: KEVESEBB
@@ -108,7 +108,7 @@ hu:
     login: Bejelentkezés
   password:
     reset_form:
-      title: Elfelejtette a jelszavát?
+      title: Elfelejtette jelszavát?
       email: E-mail cím
       submit: Küldj új jelszó beállítási útmutatót
     change_form:
@@ -231,7 +231,7 @@ hu:
       prizes: 'Gyűjtse össze az összes %{total_trophies} trófeát, és nyerjen díjakat!'
       prize_earned: 'Az összes  %{total_trophies}  trófeát  összegyűjtötte. Megnyerte a díjat!'
       prize_us_only: (Kizárólag U.S. Diákoknak)
-      prizes_link: további információk
+      prizes_link: További információk
   teacher:
     title:
       one: 'A tanára:'
@@ -251,11 +251,11 @@ hu:
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
-      trophies: Trófeák
+      trophies: trófeák
     students:
       name: Név
-      username: Felhasználónév
-      password: Jelszó
+      username: felhasználónév
+      password: jelszó
       manage: Diákok kezelése
       dashboard: Go to Teacher Dashboard
       add: Diákok hozzáadása
@@ -279,7 +279,7 @@ hu:
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
+      rename: átnevezés
       edit: edit
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
@@ -331,15 +331,18 @@ hu:
     see_details: Részletek
     prize_info: 'Részvételért járó díjak (csak USA állami iskolai tanároknak): akár $1,000.'
     tryfirst: 'Akár ki is próbálhatja, és csak utána jelentkezik be:'
-    trynow: Póbálja ki
+    trynow: Próbálja ki most
     add_hint_help: Kérlek, segíts bennünket, okos tippekkel oktatóanyagainkhoz a code.org felületére
-    20hour_overview: 'Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alapfogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.'
+    20hour_overview: 'Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.'
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Férfi
     female: Nő
@@ -367,7 +370,7 @@ hu:
     teacher: Megoldás megtekintése
     auth_error: Nem vagy jogosult a megoldás megtekintésére.
     submit: Frissítsd a szereplő helyét
-    direction: kezdőirány
+    direction: Start Direction (in degrees)
   video:
     tab: Videó.
     notes: Nem látszik a videó? Olvassa el a szöveges magyarázatot!
@@ -376,11 +379,11 @@ hu:
     download: Videó letöltése
   compatability:
     working:
-      header: We are working on support for your browser.
+      header: Azon dolgozunk, hogy a rendszerünk az Ön böngészőjével is tökéletesen együtt tudjon működni.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
       hide_this_warning: Hide this warning
     upgrade:
-      header: Please upgrade your browser.
+      header: Kérjük frissítse a böngészőjét.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
       button: Take me to the list of supported browsers
   slow_loading: Ez tovább tart majd, mint szokásosan...
@@ -422,9 +425,13 @@ hu:
       body: Próbáld ki a 20 órás, bevezetés a számítógép-tudományba óránkat.
   gallery:
     students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
+    students_made_these_with_code: Students made these with code!
     picture_count: 'Az elmúlt  <b>% {napok}</b> napon, diákok <b>% {count}</b>képet rajzoltak saját számítógépes programuk írásakor. Kattints a képekre, hogy minden egyes programot láthass működés közben.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Szeretnéd elkészíteni a sajátodat?
     more: 'Több &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
@@ -452,12 +459,12 @@ hu:
       name:
         20-hour:
           title: 'K-8 Bevezető tanfolyam a  számítógép tudományhoz  (15-25 óra)'
-          description: 'Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alapfogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.'
+          description: 'Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.'
         Hour of Code:
           title: A kódolás órája
           description: ""
         edit-code:
-          title: Edit Code
+          title: Kód szerkesztése
           description: ""
         events:
           title: Események

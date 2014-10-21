@@ -3,7 +3,7 @@ pt-PT:
     script:
       name:
         20-hour:
-          desc: K-8 Introdução ao curso de informática
+          desc: Introdução ao curso de ciência da computação até ao 3º ciclo
           Unplug1: Etapa 1
           Maze: Etapa 2
           Unplug2: Etapa 3
@@ -48,6 +48,7 @@ pt-PT:
         edit-code:
           desc: Editar Código (beta)
           MazeEC: Etapa 1
+          Webapp: Etapa 2
         events:
           desc: Bounce (beta)
           Bounce: Etapa 1
@@ -69,7 +70,7 @@ pt-PT:
           WordSearch: Etapa 1
     game:
       name:
-        Unplug1: Introdução à informática
+        Unplug1: Introdução à Ciência Computacional
         Maze: O Labirinto
         Multi: Multiple Choice Stuffs
         Unplug2: Pensamento computacional
@@ -96,6 +97,7 @@ pt-PT:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Bronze
@@ -106,8 +108,8 @@ pt-PT:
         sequence: Seqüência
         if: Bloco Se
         if_else: Bloco Se-Senão
-        loop_times: Bloco Repetir vezes
-        loop_until: Bloco Repetir até
+        loop_times: Bloco Repetir Vezes
+        loop_until: Bloco Repetir Até
         loop_while: Bloco Enquanto
         loop_for: Bloco Contador
         function: Funções
@@ -352,7 +354,7 @@ pt-PT:
         Unplug11: Resumo
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
+        C1_bigevent_unplugged: O Grande Evento
         C1_getting_loop: Getting Loopy
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro

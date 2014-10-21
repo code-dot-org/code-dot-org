@@ -6,10 +6,10 @@
   "dirN":"N",
   "dirS":"S",
   "dirW":"W",
-  "doCode":"fer",
-  "elseCode":"més",
+  "doCode":"fes",
+  "elseCode":"en cas contrari",
   "finalLevel":"Felicitats! Has resolt el puzzle final.",
-  "heightParameter":"altura",
+  "heightParameter":"alçcada",
   "ifCode":"si",
   "ifPathAhead":"si camí endevant",
   "ifTooltip":"Si hi ha un camí en la direcció especificada, fer algunes accions.",
@@ -112,7 +112,7 @@
   "whenUpTooltip":"Execute the actions below when the up arrow key is pressed.",
   "whenWallCollided":"when ball hits wall",
   "whenWallCollidedTooltip":"Execute the actions below when a ball collides with a wall.",
-  "whileMsg":"while",
+  "whileMsg":"mentres",
   "whileTooltip":"Repetiu les accions tancades fins que s'arribi al punt final.",
   "yes":"Sí"
 }

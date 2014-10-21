@@ -59,7 +59,7 @@
   "putdownTower":"put down tower",
   "reinfFeedbackMsg":"You can press the \"Try again\" button to go back to playing your game.",
   "removeSquare":"remove square",
-  "repeatUntil":"repeat until",
+  "repeatUntil":"दोहराएँ जब तक",
   "repeatUntilBlocked":"while path ahead",
   "repeatUntilFinish":"repeat until finish",
   "scoreText":"Score: {playerScore} : {opponentScore}",

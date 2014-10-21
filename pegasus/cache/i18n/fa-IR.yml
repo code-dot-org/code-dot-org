@@ -39,10 +39,10 @@
   view_english_site: "مشاهده سایت به زبان انگلیسی"
   non_english_tutorials: "آموزش ها به چندین زبان ترجمه شده است:"
   write_your_first_program: "اولین برنامه کامپیوتر خودت را بنویس"
-  learn_cs_concepts: "مفاهیم پایه علم کامپیوتر را به وسیله روش برنامه نویسی  کشیدن
-    و انداختن (drag and drop) یاد بگیرید.این بازی است که در فیلم آموزشی بوسیله بیل
-    گیتس،مارک زاکربرگ،پرندگان خشمگین و گیاهان علیه زامبی ها توضیح داده می شود.روش
-    تکرار،حلقه و شرط و عبارت نویسی و الگوریتم های پایه را یاد بگیرید."
+  learn_cs_concepts: "یادگیری پایه اساسی علوم کامپیوتر با برنامه نویسی از طریق کشیدن
+    و رها کردن. این خودآموز مانند سخنرانی ضبط شده توسط بیل گیتس و مارک زوکربرگ و پرندگان
+    عصبانی و گیاهان در مقابل زامبی است. یادگیری حلقه های تکراری، اگر-سپس بیانیه، و
+    الگوریتم های اساسی."
   all_ages: "همه سنین"
   beginner: "مبتدی"
   n_participants: "# شرکت کنندگان"
@@ -109,8 +109,8 @@
   boy: "پسر"
   help_recruit_coders: "به ما کمک کنید به گروه شما برنامه نویس بیشتر استخدام کنیم!"
   help_recruit: "به ما کمک کنید برنامه نویس بیشتر استخدام کنیم!"
-  lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
-  lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
+  lines_of_code: "بیش از #<b> تا خطوط کد</b> تا حالا نوشته شده."
+  lines_of_code_alt: "<b>#</b> خط کد توسط دانش آموزان نوشته شده"
   who_has_done_hoc: "چه کسی ساعت کد را انجام داده است؟ codeorg@"
   hoc_leaderboards: "صفحه پیشگامان ساعت کد"
   students_and_lines: "%{students} دانش آموز ساعت کد را انجام داده اند و %{lines}
@@ -261,7 +261,7 @@
   dashboard_students_male: "مرد"
   dashboard_students_female: "زن"
   dashboard_students_secret: Secret
-  dashboard_students_password: "کلمه عبور"
+  dashboard_students_password: "رمز عبور"
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -309,8 +309,21 @@
   dashboard_grade_other: "دیگر"
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_none: "ایمیل"
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: "دانش آموز"
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

@@ -6,13 +6,13 @@
     attributes:
       user:
         name: Tampilan Nama
-        email: Email
-        username: Nama Pengguna
-        password: Kata sandi
+        email: email
+        username: nama pengguna
+        password: kata sandi
         password_confirmation: Konfirmasi sandi
         current_password: Sandi saat ini
         locale: Bahasa
-        age: Usia
+        age: Umur
         gender: Jenis kelamin
         edit_header: Edit rincian akun
         error:
@@ -31,10 +31,10 @@
     placeholder: Masukkan pentunjuk anda disini
     submit: tambah petunjuk
   appname: Code.org
-  stage: Tahap
+  stage: tahapan
   stage_number: tahapan%{number}
   puzzle: Teka-teki
-  trophies: Piala-piala
+  trophies: Piala
   courses: Kursus
   of: dari
   more: lebih
@@ -42,10 +42,10 @@
   try_hoc: 'Cobalah Jam Kode, klik di sini >> '
   try_k8intro: Cobalah pendahuluan K-8 kami tentang pelajaran ilmu komputer (15-25
     jam)
-  k8intro: Kursus pengenalan ilmu komputer (15-25 jam)
+  k8intro: K-8 Kursus pengenalan Ilmu komputer (15-25 jam)
   already_started: 'Sudah mulai? Lanjutkan di sini >> '
   demos: 'Admin: Semua demo'
-  continue: Lanjutkan
+  continue: Ayo lanjutkan!
   prize: hadiah
   more_info: Info lebih lanjut
   auth:
@@ -314,8 +314,8 @@
       trophies: Piala
     students:
       name: Nama
-      username: Nama Pengguna
-      password: Kata sandi
+      username: nama pengguna
+      password: kata sandi
       manage: Mengelola siswa
       dashboard: Pergi ke Dashboard Guru
       add: Cantumkan nama siswa
@@ -344,7 +344,7 @@
       secret: Tulisan rahasia
       grade: Kelas
       course: Kursus
-      rename: Ganti nama
+      rename: ubah nama
       edit: edit
       delete: hapus
       confirm_delete: Anda yakin untuk menghapus sesi ini ?
@@ -421,6 +421,9 @@
     heading_elementary: "<h2>20 jam kursus untuk</h2><h1>Pelajar Sekolah Dasar</h1>"
     heading_apps: "<h2>Menyenagkan bagi</h2><h1>Semua orang</h1>"
     heading_legacy: "<h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Laki-laki
     female: Wanita
@@ -460,8 +463,7 @@
     download: Ungah Video
   compatability:
     working:
-      header: Kami dalam tahap pengerjaan untuk menyediakan layanan didalam browser
-        Anda.
+      header: Kami dalam tahap bekerja untuk menyediakan layanan didalam browser Anda.
       message: Code.org menggunakan teknologi modern web. Hal ini membuat situs lebih
         cepat untuk digunakan. Browser Anda tidak mendukung semua fitur yang diperlukan,
         dan Anda mungkin mengalami masalah ketika menggunakan ini bagian dari situs.
@@ -470,7 +472,7 @@
         meng-upgrade browser Anda ke versi yang didukung </a>.
       hide_this_warning: Sembunyikan peringatan
     upgrade:
-      header: Silahkan upgrade browser Anda.
+      header: Silakan upgrade browser Anda.
       message: Code.org menggunakan teknologi web modern. Hal ini membuat situs lebih
         cepat untuk menggunakan. Sayangnya browser Anda tidak mendukung semua fitur
         yang diperlukan untuk menjalankan bagian ini situs. <br/> <br/>Instal browser
@@ -513,18 +515,24 @@
       body: Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.
     flappy:
       title: Kode Flappy
-      body: Anda ingin menulis permainan anda sendiri dalam waktu kurang dari 10 menit?
-        Mencoba tutorial Flappy kode dari kami!
+      body: Ingin membuat game anda sendiri dalam waktu kurang dari 10 menit? Coba
+        Tutorial Flappy code kami!
     20hour:
       title: Kursus perkenalan
       body: Mencoba kami Introduksi Kursus ilmu komputer dalam 20 jam.
   gallery:
     students_drew_these_with_code: Siswa-siswa telah menggambar ini dengan kode!
+    students_made_these_with_code: Students made these with code!
     picture_count: Masa lalu <b>%{days}</b> hari, siswa-siswa telah membuat <b>%{count}</b>
       gambar dengan pemrograman komputer. Klik gambar untuk melihat jalannya setiap
       program.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Mau membuat sendiri ?
     more: lebih &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: Kursus ini dalam <span class='betatext'>beta</span>.  Ini bukan berarti
       sebuah kursus final dan ditujukan untuk revisi saat usulan diterima dan pengembangan
@@ -537,14 +545,14 @@
     wrong_title: Jawaban Salah
     wrong_body: Jawaban yang anda masukkan salah. Silakan coba lagi!
     correct_title: Benar
-    correct_body: Itu jawabn yang benar.
+    correct_body: Itu jawaban yang benar.
   match:
     wrong_title: Solusi yang salah
     wrong_body: Solusi yang anda masukkan salah, Coba Lagi!
     correct_title: Benar
     correct_body: Itu jawaban yang benar.
   dialog:
-    ok: OK
+    ok: Oke!
   time:
     hour: 1 jam
     day: hari
@@ -553,31 +561,32 @@
     script:
       name:
         20-hour:
-          title: K-8 Kursus pengenalan Ilmu komputer (15-25 jam)
-          description: Kursus 20 jam ini mengenalkan inti ilmu komputer dan konsep
-            pemrograman. Kursus ini dirancang untuk kelas k-8, tapi pasti akan menyenangkan
-            untuk semua umur.
+          title: Kursus pengenalan ilmu komputer (15-25 jam)
+          description: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat
+            dasar dan konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan
+            di ruang kelas untuk sekolah dasar dan menengah, tapi tetap menyenangkan
+            dipelajari untuk semua usia.
         Hour of Code:
-          title: Hour of Code
+          title: Jam kode
           description: ''
         edit-code:
-          title: merubah kode
+          title: Mengedit kode
           description: ''
         events:
-          title: Kegiatan-kegiatan
+          title: kegiatan
           description: ''
         builder:
           title: Pembangun
           description: ''
         flappy:
-          title: Flappy Code
-          description: Ingin membuat game anda sendiri dalam waktu kurang dari 10
-            menit? Coba Tutorial Flappy code kami!
+          title: Kode Flappy
+          description: Anda ingin menulis permainan anda sendiri dalam waktu kurang
+            dari 10 menit? Mencoba tutorial Flappy kode dari kami!
         jigsaw:
-          title: Teka teki
+          title: Teka-teki
           description: ''
         step:
-          title: langkah
+          title: Langkah
           description: ''
         sample_level_builder:
           title: Contoh Pembangun level

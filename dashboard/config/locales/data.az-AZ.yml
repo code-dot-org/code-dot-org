@@ -3,7 +3,7 @@
     script:
       name:
         20-hour:
-          desc: K-8 İnformatikaya Giriş kursu
+          desc: K-8 İnformatika Kursuna Giriş
           Unplug1: Mərhələ 1
           Maze: Mərhələ 2
           Unplug2: Mərhələ 3
@@ -48,6 +48,7 @@
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Mərhələ 1
+          Webapp: Mərhələ 2
         events:
           desc: Bounce (beta)
           Bounce: Mərhələ 1
@@ -96,6 +97,7 @@
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Bürünc
