@@ -40,8 +40,12 @@ def process_batch_of_forms(batch_size)
   DB[:forms].where(processed_at:nil).limit(batch_size).each do |form|
     kind = Object.const_get(form[:kind])
 
-    processed_data = kind.process(JSON.load(form[:data]), JSON.load(form[:processed_data])) if kind.respond_to?(:process)
-    processed_data ||= {}
+    processed_data = {}
+    if kind.respond_to?(:process_)
+      processed_data = kind.process_row(form)
+    elsif kind.respond_to?(:process)
+      processed_data = kind.process(JSON.load(form[:data]))
+    end
 
     DB[:forms].where(id:form[:id]).update(processed_data:processed_data.to_json, processed_at:DateTime.now)
 
