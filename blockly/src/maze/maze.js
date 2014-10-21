@@ -102,6 +102,7 @@ var loadLevel = function() {
   Maze.SQUARE_SIZE = 50;
   Maze.PEGMAN_HEIGHT = skin.pegmanHeight;
   Maze.PEGMAN_WIDTH = skin.pegmanWidth;
+  Maze.PEGMAN_X_OFFSET = skin.pegmanXOffset || 0;
   Maze.PEGMAN_Y_OFFSET = skin.pegmanYOffset;
   // Height and width of the goal and obstacles.
   Maze.MARKER_HEIGHT = 43;
@@ -373,9 +374,13 @@ function drawMapTiles(svg) {
           tile = 'null0';
         }
 
-        // scrat gets nothing on non-path tiles
         if (mazeUtils.isScratSkin(skin.id)) {
+          // if next to the path, always just have water. otherwise, there's
+          // a chance of one of our other tiles
           tile = '10010';
+          if (!adjacentToPath) {
+            tile = _.sample( ['10010', '10010', '10010', '10010',  'null3', 'null4']);
+          }
         }
 
         if (mazeUtils.isBeeSkin(skin.id)) {
@@ -666,7 +671,7 @@ var createPegmanAnimation = function(options) {
   var rect = document.createElementNS(Blockly.SVG_NS, 'rect');
   rect.setAttribute('id', options.idStr + 'PegmanClipRect');
   if (options.col !== undefined) {
-    rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1);
+    rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
   }
   if (options.row !== undefined) {
     rect.setAttribute('y', getPegmanYForRow(options.row));
@@ -689,7 +694,7 @@ var createPegmanAnimation = function(options) {
   // Update pegman icon & clip path.
   if (options.col !== undefined && options.direction !== undefined) {
     var x = Maze.SQUARE_SIZE * options.col -
-        options.direction * Maze.PEGMAN_WIDTH + 1;
+      options.direction * Maze.PEGMAN_WIDTH + 1  + Maze.PEGMAN_X_OFFSET;
     img.setAttribute('x', x);
   }
   if (options.row !== undefined) {
@@ -708,11 +713,11 @@ var createPegmanAnimation = function(options) {
   */
 var updatePegmanAnimation = function(options) {
   var rect = document.getElementById(options.idStr + 'PegmanClipRect');
-  rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1);
+  rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
   rect.setAttribute('y', getPegmanYForRow(options.row));
   var img = document.getElementById(options.idStr + 'Pegman');
   var x = Maze.SQUARE_SIZE * options.col -
-      options.direction * Maze.PEGMAN_WIDTH + 1;
+      options.direction * Maze.PEGMAN_WIDTH + 1 + Maze.PEGMAN_X_OFFSET;
   img.setAttribute('x', x);
   var y = getPegmanYForRow(options.row) - getPegmanFrameOffsetY(options.animationRow);
   img.setAttribute('y', y);
@@ -1408,6 +1413,12 @@ Maze.scheduleFail = function(forward) {
 
         utils.range(0, numFrames - 1).forEach(function (frame) {
           timeoutList.setTimeout(function() {
+            if (frame === 0) {
+              // as we start the animation of pegman falling into the water,
+              // hide the pegman image. (this will reappear when the user
+              // clicks reset)
+              document.getElementById('pegman').setAttribute('visibility', 'hidden');
+            }
             wallAnimationIcon.setAttribute('visibility', 'hidden');
             updatePegmanAnimation({
               idStr: 'wall',
@@ -1592,11 +1603,11 @@ Maze.scheduleDance = function(victoryDance, timeAlloted) {
 Maze.displayPegman = function(x, y, frame) {
   var pegmanIcon = document.getElementById('pegman');
   pegmanIcon.setAttribute('x',
-      x * Maze.SQUARE_SIZE - frame * Maze.PEGMAN_WIDTH + 1);
+    x * Maze.SQUARE_SIZE - frame * Maze.PEGMAN_WIDTH + 1 + Maze.PEGMAN_X_OFFSET);
   pegmanIcon.setAttribute('y', getPegmanYForRow(y));
 
   var clipRect = document.getElementById('clipRect');
-  clipRect.setAttribute('x', x * Maze.SQUARE_SIZE + 1);
+  clipRect.setAttribute('x', x * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
   clipRect.setAttribute('y', pegmanIcon.getAttribute('y'));
 };
 
