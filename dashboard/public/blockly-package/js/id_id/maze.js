@@ -13198,13 +13198,13 @@ exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Fungsi"};
 
-exports.catText = function(d){return "Teks"};
+exports.catText = function(d){return "teks"};
 
 exports.catVariables = function(d){return "Variabel"};
 
 exports.codeTooltip = function(d){return "Lihat kode JavaScript."};
 
-exports.continue = function(d){return "Ayo lanjutkan!"};
+exports.continue = function(d){return "Lanjutkan"};
 
 exports.dialogCancel = function(d){return "Batal"};
 
@@ -13266,7 +13266,7 @@ exports.play = function(d){return "mainkan"};
 
 exports.puzzleTitle = function(d){return "Teka-teki ke "+v(d,"puzzle_number")+" dari "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "ulangi"};
+exports.repeat = function(d){return "Ulangi"};
 
 exports.resetProgram = function(d){return "Kembali ke awal"};
 
@@ -13290,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "Teka-teki ini dapat diselesaikan 
 
 exports.tooMuchWork = function(d){return "Anda membuat saya melakukan terlalu banyak pekerjaan!  Bisakan Anda coba membuat pengulangan yang lebih sedikit?"};
 
-exports.toolboxHeader = function(d){return "Blok"};
+exports.toolboxHeader = function(d){return "blok"};
 
 exports.openWorkspace = function(d){return "Cara kerjanya"};
 
@@ -13347,7 +13347,7 @@ exports.atFlower = function(d){return "di bunga"};
 
 exports.avoidCowAndRemove = function(d){return "Hindari sapi dan pindahkan 1"};
 
-exports.continue = function(d){return "Lanjutkan"};
+exports.continue = function(d){return "lanjutkan"};
 
 exports.dig = function(d){return "Pindahkan 1"};
 
@@ -13361,7 +13361,7 @@ exports.dirS = function(d){return "S"};
 
 exports.dirW = function(d){return "B"};
 
-exports.doCode = function(d){return "maka"};
+exports.doCode = function(d){return "kerjakan"};
 
 exports.elseCode = function(d){return "jika tidak"};
 
@@ -13375,11 +13375,11 @@ exports.fillSquare = function(d){return "isi persegi empat"};
 
 exports.fillTooltip = function(d){return "tempat 1 unit tanah"};
 
-exports.finalLevel = function(d){return "Horee! Anda telah memecahkan teka-teki akhir."};
+exports.finalLevel = function(d){return "Selamat! Anda telah menyelesaikan teka-teki terakhir."};
 
 exports.flowerEmptyError = function(d){return "Bunga dimana anda berada sekarang tidak memiliki nektar lebih."};
 
-exports.get = function(d){return "dapat"};
+exports.get = function(d){return "dapatkan"};
 
 exports.heightParameter = function(d){return "tinggi"};
 
@@ -13397,11 +13397,11 @@ exports.ifCode = function(d){return "Jika (if)"};
 
 exports.ifInRepeatError = function(d){return "Anda perlu blok \"jika\" (if) didalam blok \"ulangi\" (repeat). Jika anda mengalami kesulitan, cobalah level sebelumnya untuk mengulang kembali pelajarannya."};
 
-exports.ifPathAhead = function(d){return "Jika jalan ke depan"};
+exports.ifPathAhead = function(d){return "jika ada jalan di depan"};
 
-exports.ifTooltip = function(d){return "Jika ada jalan ke arah yang ditentukan, lakukan beberapa perintah."};
+exports.ifTooltip = function(d){return "jika ada jalan di arah yang ditentukan, lakukan beberapa tindakan."};
 
-exports.ifelseTooltip = function(d){return "Jika ada jalan ke arah yang ditentukan, maka lakukan perintah yang berada di blok pertama. Jika tidak ada, maka lakukan perintah yang berada di blok kedua."};
+exports.ifelseTooltip = function(d){return "jika ada jalan di arah yang sudah ditentukan, lakukan blok perintah pertama. Jika tidak, lakukan blok perintah ke dua."};
 
 exports.ifFlowerTooltip = function(d){return "Jika ada bunga/sarang lebah ke arah yang ditentukan, kemudian lakukan beberapa aksi."};
 
@@ -13419,7 +13419,7 @@ exports.moveEastTooltip = function(d){return "Memindahkan saya ke Timur satu lan
 
 exports.moveForward = function(d){return "Gerak maju"};
 
-exports.moveForwardTooltip = function(d){return "Bergerak maju satu kotak."};
+exports.moveForwardTooltip = function(d){return "Gerak maju satu petak."};
 
 exports.moveNorthTooltip = function(d){return "Memindahkan saya ke Utara satu langkah."};
 
@@ -13435,15 +13435,15 @@ exports.nectarRemaining = function(d){return "nektar"};
 
 exports.nectarTooltip = function(d){return "Mendapatkan nektar dari bunga"};
 
-exports.nextLevel = function(d){return "Horee! Anda telah menyelesaikan teka-teki ini."};
+exports.nextLevel = function(d){return "Selamat! Kamu telah menyelesaikan teka-teki ini."};
 
 exports.no = function(d){return "Tidak"};
 
-exports.noPathAhead = function(d){return "jalan diblokir"};
+exports.noPathAhead = function(d){return "jalur terhalang"};
 
-exports.noPathLeft = function(d){return "tidak ada jalan ke kiri"};
+exports.noPathLeft = function(d){return "tidak ada jalur ke kiri"};
 
-exports.noPathRight = function(d){return "tidak ada jalan ke kanan"};
+exports.noPathRight = function(d){return "tidak ada jalur ke kanan"};
 
 exports.notAtFlowerError = function(d){return "Anda hanya bisa mendapatkan nektar dari bunga."};
 
@@ -13451,7 +13451,7 @@ exports.notAtHoneycombError = function(d){return "Anda hanya dapat membuat madu 
 
 exports.numBlocksNeeded = function(d){return "Teka-teki ini dapat diselesaikan dengan %1 blok."};
 
-exports.pathAhead = function(d){return "jalan ke depan"};
+exports.pathAhead = function(d){return "jalur ke depan"};
 
 exports.pathLeft = function(d){return "Jika jalur ke kiri"};
 
@@ -13475,7 +13475,7 @@ exports.repeatCarefullyError = function(d){return "Untuk memecahkan masalah ini,
 
 exports.repeatUntil = function(d){return "Ulangi sampai"};
 
-exports.repeatUntilBlocked = function(d){return "Selagi ada jalan ke depan"};
+exports.repeatUntilBlocked = function(d){return "Selagi ada jalur ke depan"};
 
 exports.repeatUntilFinish = function(d){return "Ulangi sampai selesai"};
 
@@ -13485,9 +13485,9 @@ exports.totalHoney = function(d){return "total madu"};
 
 exports.totalNectar = function(d){return "total nektar"};
 
-exports.turnLeft = function(d){return "Belok Kiri"};
+exports.turnLeft = function(d){return "belok kiri"};
 
-exports.turnRight = function(d){return "Belok Kanan"};
+exports.turnRight = function(d){return "belok kanan"};
 
 exports.turnTooltip = function(d){return "Belok ke kiri atau ke kanan 90 derajat."};
 
@@ -13495,9 +13495,9 @@ exports.uncheckedCloudError = function(d){return "Pastikan untuk memeriksa semua
 
 exports.uncheckedPurpleError = function(d){return "Pastikan untuk memeriksa semua bunga-bunga ungu untuk melihat apakah memiliki nektar"};
 
-exports.whileMsg = function(d){return "Sementara"};
+exports.whileMsg = function(d){return "Selagi"};
 
-exports.whileTooltip = function(d){return "Ulangi perintah sampai tujuan tercapai."};
+exports.whileTooltip = function(d){return "Ulangi aksi sampai tujuan tercapai."};
 
 exports.word = function(d){return "Mencari kata"};
 

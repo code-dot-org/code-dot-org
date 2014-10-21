@@ -9267,7 +9267,7 @@ exports.generatedCodeInfo = function(d){return "The blocks for your program can 
 
 exports.hashError = function(d){return "Sorry, '%1' doesn't correspond with any saved program."};
 
-exports.help = function(d){return "Help"};
+exports.help = function(d){return "Cymorth"};
 
 exports.hintTitle = function(d){return "Hint:"};
 
@@ -9275,7 +9275,7 @@ exports.jump = function(d){return "jump"};
 
 exports.levelIncompleteError = function(d){return "You are using all of the necessary types of blocks but not in the right way."};
 
-exports.listVariable = function(d){return "list"};
+exports.listVariable = function(d){return "rhestr"};
 
 exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
 
@@ -9391,9 +9391,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.cy = function 
 };
 exports.continue = function(d){return "Continue"};
 
-exports.doCode = function(d){return "do"};
+exports.doCode = function(d){return "gweithredu"};
 
-exports.elseCode = function(d){return "else"};
+exports.elseCode = function(d){return "wedyn"};
 
 exports.endGame = function(d){return "end game"};
 

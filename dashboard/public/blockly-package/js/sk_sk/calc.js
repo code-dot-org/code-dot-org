@@ -7576,7 +7576,7 @@ exports.degrees = function(d){return "stupňov"};
 
 exports.depth = function(d){return "hĺbka"};
 
-exports.dots = function(d){return "pixelov"};
+exports.dots = function(d){return "pixely"};
 
 exports.drawASquare = function(d){return "nakresli štvorec"};
 
@@ -7662,13 +7662,13 @@ exports.penTooltip = function(d){return "Posúva pero hore, alebo dole, aby zač
 
 exports.penUp = function(d){return "pero hore"};
 
-exports.reinfFeedbackMsg = function(d){return "Vyzerá to ako ste chceli? Môžete stlačiť tlačidlo \"skúsiť znova\" aby ste videli Vašu kresbu."};
+exports.reinfFeedbackMsg = function(d){return "Vyzerá to tak ako ste chceli? Môžete stlačiť tlačidlo \"skús znova\" aby ste videli Vašu kresbu."};
 
 exports.setColour = function(d){return "nastaviť farbu"};
 
 exports.setWidth = function(d){return "nastaviť šírku"};
 
-exports.shareDrawing = function(d){return "Zdielať Vašu kresbu:"};
+exports.shareDrawing = function(d){return "Zdieľajte Vašu kresbu:"};
 
 exports.showMe = function(d){return "Ukáž mi"};
 
@@ -7715,9 +7715,9 @@ exports.catLogic = function(d){return "Logické"};
 
 exports.catLists = function(d){return "Zoznamy"};
 
-exports.catLoops = function(d){return "Slučky"};
+exports.catLoops = function(d){return "Cykly"};
 
-exports.catMath = function(d){return "Matematické"};
+exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkcie"};
 
@@ -7759,11 +7759,11 @@ exports.generatedCodeInfo = function(d){return "Dokonca aj popredné univerzity 
 
 exports.hashError = function(d){return "Prepáčte, '%1' nezodpovedá žiadnemu uloženému programu."};
 
-exports.help = function(d){return "pomoc"};
+exports.help = function(d){return "Pomoc"};
 
 exports.hintTitle = function(d){return "Tip:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "skoč"};
 
 exports.levelIncompleteError = function(d){return "Používate všetky potrebné typy blokov, ale nie tým správnym spôsobom."};
 

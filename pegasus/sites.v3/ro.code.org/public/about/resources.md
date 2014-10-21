@@ -19,7 +19,14 @@ Mai jos, găsiți resursele necesare pentru a-i învăța programare și a preda
 
 ## Organizați un eveniment Hour of Code pentru elevii sau studenții dumneavoastră 
 
-Hai să facem istorie împreună! Vrem ca Românii să poată încerca o introducere în tehnologia computerelor, timp de o oră, în timpul săptămânii 08-14 Decembrie. Încearcă [tutorialele noastre aici].
+Hai să facem istorie împreună! Vrem ca Românii să poată încerca o introducere în tehnologia computerelor, timp de o oră, în timpul săptămânii 08-14 Decembrie. Încearcă [<a href="http://ro.code.org/learn">tutorialele noastre aici</a>].
+
+## Este atat de simplu 
+
+1. Alegeti un tutorial
+2. Alegeti o data in perioada 8-14 Decembrie si inscrieti evenimentul pe [Hour of Code](http://hourofcode.com/ro/ro).
+3. Beneficiati de resursele disponibile gratuit pentru a atrage atentia presei, politicienilor si companiilor locale.
+4. Organizati Ora de Programare pentru elevii dumneavoastra.
 
 ## Resurse suplimentare pentru elevii tăi
 

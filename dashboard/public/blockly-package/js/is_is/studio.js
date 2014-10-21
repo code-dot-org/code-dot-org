@@ -18707,13 +18707,13 @@ exports.catMath = function(d){return "Reikningur"};
 
 exports.catProcedures = function(d){return "Föll"};
 
-exports.catText = function(d){return "Texti"};
+exports.catText = function(d){return "texti"};
 
 exports.catVariables = function(d){return "Breytur"};
 
 exports.codeTooltip = function(d){return "Sjá samsvarandi JavaScript kóða."};
 
-exports.continue = function(d){return "Áfram"};
+exports.continue = function(d){return "Halda áfram"};
 
 exports.dialogCancel = function(d){return "Hætta við"};
 
@@ -18799,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "Þessa þraut er hægt að leysa 
 
 exports.tooMuchWork = function(d){return "Þú lagðir á mig mjög mikla vinnu! Gætirðu reynt að nota færri endurtekningar?"};
 
-exports.toolboxHeader = function(d){return "Kubbar"};
+exports.toolboxHeader = function(d){return "kubbar"};
 
 exports.openWorkspace = function(d){return "Hvernig það virkar"};
 
@@ -18864,7 +18864,7 @@ exports.catMath = function(d){return "Reikningur"};
 
 exports.catProcedures = function(d){return "Föll"};
 
-exports.catText = function(d){return "Texti"};
+exports.catText = function(d){return "texti"};
 
 exports.catVariables = function(d){return "Breytur"};
 
@@ -18928,7 +18928,7 @@ exports.moveDistance200 = function(d){return "200 díla"};
 
 exports.moveDistance400 = function(d){return "400 díla"};
 
-exports.moveDistancePixels = function(d){return "díla"};
+exports.moveDistancePixels = function(d){return "dílar"};
 
 exports.moveDistanceRandom = function(d){return "díla af handahófi"};
 
@@ -19218,7 +19218,7 @@ exports.showTSDefText = function(d){return "skrifaðu texta hér"};
 
 exports.showTitleScreenTooltip = function(d){return "Sýna titilskjá með viðkomandi titli og texta."};
 
-exports.setSprite = function(d){return "hafa"};
+exports.setSprite = function(d){return "setja"};
 
 exports.setSpriteN = function(d){return "hafa leikmann "+v(d,"spriteIndex")};
 

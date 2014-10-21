@@ -10648,7 +10648,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
 exports.and = function(d){return "そして"};
 
-exports.blocklyMessage = function(d){return "ブロック状の"};
+exports.blocklyMessage = function(d){return "ブロッキー"};
 
 exports.catActions = function(d){return "操作"};
 
@@ -10658,19 +10658,19 @@ exports.catLogic = function(d){return "ロジック（論理）"};
 
 exports.catLists = function(d){return "リスト"};
 
-exports.catLoops = function(d){return "繰り返し"};
+exports.catLoops = function(d){return "ループ"};
 
 exports.catMath = function(d){return "数値"};
 
 exports.catProcedures = function(d){return "関数"};
 
-exports.catText = function(d){return "文字列"};
+exports.catText = function(d){return "テキスト"};
 
 exports.catVariables = function(d){return "変数"};
 
 exports.codeTooltip = function(d){return "生成されたJavaScriptコードを見る。"};
 
-exports.continue = function(d){return "次へ"};
+exports.continue = function(d){return "続行"};
 
 exports.dialogCancel = function(d){return "キャンセル"};
 
@@ -10756,7 +10756,7 @@ exports.tooManyBlocksMsg = function(d){return "このパズルは <x id='START_S
 
 exports.tooMuchWork = function(d){return "ちょっと作業が多すぎますね！もう少し繰り返し回数を少なくできませんか？"};
 
-exports.toolboxHeader = function(d){return "ブロック"};
+exports.toolboxHeader = function(d){return "ブロック達"};
 
 exports.openWorkspace = function(d){return "仕組み"};
 
@@ -10813,9 +10813,9 @@ exports.branches = function(d){return "branches"};
 
 exports.catColour = function(d){return "色"};
 
-exports.catControl = function(d){return "ループ"};
+exports.catControl = function(d){return "繰り返し"};
 
-exports.catMath = function(d){return "数値"};
+exports.catMath = function(d){return "数学"};
 
 exports.catProcedures = function(d){return "関数"};
 
@@ -10917,13 +10917,13 @@ exports.penTooltip = function(d){return "鉛筆を持ち上げたり、下げた
 
 exports.penUp = function(d){return "鉛筆を上げる。\n"};
 
-exports.reinfFeedbackMsg = function(d){return "この図でよろしいですか？「再試行」ボタンで描いた図を確認する事ができます。"};
+exports.reinfFeedbackMsg = function(d){return "これは自分が描こうとしていた画でしょうか？「もう一度」ボタンで自分で描いた画を確認する事ができます。"};
 
 exports.setColour = function(d){return "色の設定"};
 
 exports.setWidth = function(d){return "幅を設定"};
 
-exports.shareDrawing = function(d){return "描いた図を共有"};
+exports.shareDrawing = function(d){return "図面を共有します。"};
 
 exports.showMe = function(d){return "見せてください"};
 

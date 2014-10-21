@@ -48,6 +48,7 @@
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Etapa 1
+          Webapp: Etapa 2
         events:
           desc: Bounce (beta)
           Bounce: Etapa 1
@@ -90,12 +91,13 @@
         Unplug10: Internet
         Artist5: L'artista 5
         Unplug11: Recapitulació
-        MazeEC: El laberint
+        MazeEC: El Laberint
         Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Bronze
@@ -106,12 +108,12 @@
         sequence: Seqüència
         if: Bloc Si
         if_else: Bloc Si-Sino
-        loop_times: Bloc repiteix vegades
-        loop_until: Bloc repeteix fins
-        loop_while: Bloc mentres
-        loop_for: Bloc for
+        loop_times: Bloc Repetir Vegades
+        loop_until: Repetir Bloc Fins
+        loop_while: Bloc Mentre
+        loop_for: Bloc Comptador
         function: Funcions
-        parameters: Funcions amb paràmetres
+        parameters: Funcions amb Paràmetres
     level:
       instructions:
         maze_2_2: 'Em pots ajudar a atrapar a aquest porc malcriat. Apila un parell
@@ -348,7 +350,7 @@
         maze_karel_debug_function_3: 'Edita aquest programa per a que pugui llevar
           totes les piles del meu camp. '
         turtle_5_1: Intenta executar aquest programa, i fer canvis per veure què passa.
-          Pots averiguar com funciona? (O elimina'l i reemplaça'l amb algo totalment
+          Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment
           diferent)
         turtle_5_2: Intenta executar aquest programa, i fer canvis per veure què passa.
           Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment

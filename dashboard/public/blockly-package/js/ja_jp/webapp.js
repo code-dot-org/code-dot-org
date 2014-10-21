@@ -7518,7 +7518,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
 exports.and = function(d){return "そして"};
 
-exports.blocklyMessage = function(d){return "ブロック状の"};
+exports.blocklyMessage = function(d){return "ブロッキー"};
 
 exports.catActions = function(d){return "操作"};
 
@@ -7528,19 +7528,19 @@ exports.catLogic = function(d){return "ロジック（論理）"};
 
 exports.catLists = function(d){return "リスト"};
 
-exports.catLoops = function(d){return "繰り返し"};
+exports.catLoops = function(d){return "ループ"};
 
 exports.catMath = function(d){return "数値"};
 
 exports.catProcedures = function(d){return "関数"};
 
-exports.catText = function(d){return "文字列"};
+exports.catText = function(d){return "テキスト"};
 
 exports.catVariables = function(d){return "変数"};
 
 exports.codeTooltip = function(d){return "生成されたJavaScriptコードを見る。"};
 
-exports.continue = function(d){return "次へ"};
+exports.continue = function(d){return "続行"};
 
 exports.dialogCancel = function(d){return "キャンセル"};
 
@@ -7626,7 +7626,7 @@ exports.tooManyBlocksMsg = function(d){return "このパズルは <x id='START_S
 
 exports.tooMuchWork = function(d){return "ちょっと作業が多すぎますね！もう少し繰り返し回数を少なくできませんか？"};
 
-exports.toolboxHeader = function(d){return "ブロック"};
+exports.toolboxHeader = function(d){return "ブロック達"};
 
 exports.openWorkspace = function(d){return "仕組み"};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "どうなったかよく見て、�
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "操作"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "ループ"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "イベント"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "ロジック（論理）"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "数値"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "関数"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "テキスト"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "変数"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "続行"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "おめでとうございます ！最後のパズルを解決しました。"};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "おめでとうございます ！このパズルを完了しました。"};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "いいえ"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "このパズルは%1個のブロックで解けます。"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "実行"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "はい"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

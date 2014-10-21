@@ -11538,7 +11538,7 @@ exports.bounceBall = function(d){return "μπάλα που αναπηδά"};
 
 exports.bounceBallTooltip = function(d){return "Κάνε τη μπάλα να αναπηδήσει μακρυά από ένα αντικείμενο."};
 
-exports.continue = function(d){return "Συνέχισε"};
+exports.continue = function(d){return "Συνέχεια"};
 
 exports.dirE = function(d){return "Α"};
 
@@ -11582,13 +11582,13 @@ exports.launchBallTooltip = function(d){return "Εκτόξευσε νέα μπά
 
 exports.makeYourOwn = function(d){return "Φτιάξε το Δικό Σου παιχνίδι Αναπήδησης"};
 
-exports.moveDown = function(d){return "Προχώρησε προς τα κάτω"};
+exports.moveDown = function(d){return "προχώρησε προς τα κάτω"};
 
 exports.moveDownTooltip = function(d){return "Μετακίνησε τη ρακέτα προς τα κάτω."};
 
 exports.moveForward = function(d){return "προχώρησε μπροστά"};
 
-exports.moveForwardTooltip = function(d){return "Μετακίνησέ με προς τα μπροστά κατά ένα βήμα."};
+exports.moveForwardTooltip = function(d){return "Μετακίνησε με προς τα μπροστά κατά ένα βήμα."};
 
 exports.moveLeft = function(d){return "Προχώρησε αριστερά"};
 
@@ -11602,15 +11602,15 @@ exports.moveUp = function(d){return "προχώρησε προς τα επάνω
 
 exports.moveUpTooltip = function(d){return "Μετακίνησε τη ρακέτα προς τα πάνω."};
 
-exports.nextLevel = function(d){return "Συγχαρητήρια! Έχεις ολοκληρώσει αυτό το παζλ."};
+exports.nextLevel = function(d){return "Συγχαρητήρια! Έχετε ολοκληρώσει αυτό το παζλ."};
 
 exports.no = function(d){return "Όχι"};
 
-exports.noPathAhead = function(d){return "το μονοπάτι είναι κλειστό"};
+exports.noPathAhead = function(d){return "μονοπάτι κλειστό"};
 
-exports.noPathLeft = function(d){return "δεν υπάρχει μονοπάτι προς τα αριστερά"};
+exports.noPathLeft = function(d){return "κανένα μονοπάτι προς τα αριστερά"};
 
-exports.noPathRight = function(d){return "δεν υπάρχει μονοπάτι προς τα δεξιά"};
+exports.noPathRight = function(d){return "κανένα μονοπάτι προς τα δεξιά"};
 
 exports.numBlocksNeeded = function(d){return "Αυτό το παζλ μπορεί να λυθεί με %1 μπλοκ."};
 
@@ -11654,7 +11654,7 @@ exports.reinfFeedbackMsg = function(d){return "Μπορείς να πατήσε�
 
 exports.removeSquare = function(d){return "αφαίρεσε το τετράγωνο"};
 
-exports.repeatUntil = function(d){return "επανάλαβε έως"};
+exports.repeatUntil = function(d){return "επανάλαβε μέχρις ότου"};
 
 exports.repeatUntilBlocked = function(d){return "όσο μονοπάτι εμπρός"};
 
@@ -11668,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "όρισε σκηνή γη�
 
 exports.setBackgroundRetro = function(d){return "όρισε σκηνή ρετρό"};
 
-exports.setBackgroundTooltip = function(d){return "Ορίζει την εικόνα του φόντου"};
+exports.setBackgroundTooltip = function(d){return "Ορίζει την εικόνα στο φόντο"};
 
 exports.setBallRandom = function(d){return "όρισε τυχαία μπάλα"};
 
@@ -11738,7 +11738,7 @@ exports.whenDownTooltip = function(d){return "Εκτέλεσε τις παρακ
 
 exports.whenGameStarts = function(d){return "όταν το παιχνίδι αρχίζει"};
 
-exports.whenGameStartsTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν ξεκινά το παιχνίδι."};
+exports.whenGameStartsTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν το παιχνίδι αρχίζει."};
 
 exports.whenLeft = function(d){return "όταν πατηθεί το αριστερό βέλος"};
 
@@ -11752,7 +11752,7 @@ exports.whenRight = function(d){return "όταν πατηθεί το δεξί β
 
 exports.whenRightTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν πατηθεί το πλήκτρο δεξί βέλος."};
 
-exports.whenUp = function(d){return "όταν πατηθεί το επάνω βέλος"};
+exports.whenUp = function(d){return "όταν πατηθεί το πάνω βέλος"};
 
 exports.whenUpTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν πατηθεί το πλήκτρο πάνω βέλος."};
 
@@ -11760,7 +11760,7 @@ exports.whenWallCollided = function(d){return "όταν η μπάλα κτυπή
 
 exports.whenWallCollidedTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν η μπάλα συγκρουσθεί με έναν τοίχο."};
 
-exports.whileMsg = function(d){return "ενώ"};
+exports.whileMsg = function(d){return "όσο"};
 
 exports.whileTooltip = function(d){return "Επανάλαβε τις εσωτερικές ενέργειες μέχρι το τελικό σημείο."};
 
@@ -11777,7 +11777,7 @@ exports.catActions = function(d){return "Ενέργειες"};
 
 exports.catColour = function(d){return "Χρώμα"};
 
-exports.catLogic = function(d){return "Λογικά"};
+exports.catLogic = function(d){return "Λογική"};
 
 exports.catLists = function(d){return "Λίστες"};
 
@@ -11787,7 +11787,7 @@ exports.catMath = function(d){return "Μαθηματικά"};
 
 exports.catProcedures = function(d){return "Συναρτήσεις"};
 
-exports.catText = function(d){return "Κείμενο"};
+exports.catText = function(d){return "κείμενο"};
 
 exports.catVariables = function(d){return "Μεταβλητές"};
 
@@ -11865,7 +11865,7 @@ exports.runTooltip = function(d){return "Τρέξε το πρόγραμμα πο
 
 exports.score = function(d){return "σκορ"};
 
-exports.showCodeHeader = function(d){return "Προβολή Κώδικα"};
+exports.showCodeHeader = function(d){return "Προβολή κώδικα"};
 
 exports.showGeneratedCode = function(d){return "Προβολή κώδικα"};
 
@@ -11879,7 +11879,7 @@ exports.tooManyBlocksMsg = function(d){return "Αυτό το παζλ μπορε
 
 exports.tooMuchWork = function(d){return "Με ανάγκασες να κάνω πολλή δουλειά! Μπορείς με λιγότερες επαναλήψεις;"};
 
-exports.toolboxHeader = function(d){return "Μπλοκ"};
+exports.toolboxHeader = function(d){return "μπλοκ"};
 
 exports.openWorkspace = function(d){return "Πώς λειτουργεί"};
 

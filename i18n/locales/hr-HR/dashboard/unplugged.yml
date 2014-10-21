@@ -2,7 +2,7 @@ hr:
   data:
     unplugged:
       Unplug1:
-        title: Uvod u računalstvo
+        title: Uvod u Informatiku
         desc: 'This lesson will introduce the concept of Computer Science and explain what a Computer Scientist does.  It will also give students an opportunity to assume the role of a computer scientist.  By the end of the activity, each student will have a take-home reminder of what he or she learned.  You may be tempted to skip teaching young children the vocabulary words that are associated with the lessons that follow, but presenting them in a fun and playful light now is far more productive than waiting for more advanced opportunities.'
         pdfs:
           - unplug1

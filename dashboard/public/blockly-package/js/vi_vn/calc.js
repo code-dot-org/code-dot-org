@@ -7691,7 +7691,7 @@ exports.and = function(d){return "và"};
 
 exports.blocklyMessage = function(d){return "Mảnh ghép"};
 
-exports.catActions = function(d){return "hành động"};
+exports.catActions = function(d){return "Các hành động"};
 
 exports.catColour = function(d){return "màu sắc"};
 
@@ -7701,7 +7701,7 @@ exports.catLists = function(d){return "Danh sách"};
 
 exports.catLoops = function(d){return "Vòng lặp"};
 
-exports.catMath = function(d){return "Thuật toán"};
+exports.catMath = function(d){return "thuật toán"};
 
 exports.catProcedures = function(d){return "Các hàm"};
 
@@ -7797,7 +7797,7 @@ exports.tooManyBlocksMsg = function(d){return "Câu đố này có thể đượ
 
 exports.tooMuchWork = function(d){return "Bạn làm tôi phải làm quá nhiều việc! Bạn làm ơn thử làm cho nó ít hơn được không?"};
 
-exports.toolboxHeader = function(d){return "Các khối lệnh"};
+exports.toolboxHeader = function(d){return "các khối"};
 
 exports.openWorkspace = function(d){return "Hoạt động ra sao"};
 

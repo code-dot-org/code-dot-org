@@ -9208,17 +9208,17 @@ exports.catLists = function(d){return "Lijsten"};
 
 exports.catLoops = function(d){return "Lussen"};
 
-exports.catMath = function(d){return "wiskundige"};
+exports.catMath = function(d){return "Wiskunde"};
 
 exports.catProcedures = function(d){return "Functies"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Variabelen"};
 
 exports.codeTooltip = function(d){return "Zie gegenereerde JavaScript-code."};
 
-exports.continue = function(d){return "Doorgaan"};
+exports.continue = function(d){return "Verder"};
 
 exports.dialogCancel = function(d){return "Annuleren"};
 
@@ -9236,21 +9236,21 @@ exports.end = function(d){return "einde"};
 
 exports.emptyBlocksErrorMsg = function(d){return "De \"herhaal\" of \"als\" blokken hebben andere blokken in hun nodig om te werken. Zorg ervoor dat de binnenste blok correct past in de bevattende blok."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Het functie-blok moet andere blokken bevatten om te werken."};
 
-exports.extraTopBlocks = function(d){return "Je hebt blokken over die niet aan een gebeurtenisblok geplakt zijn."};
+exports.extraTopBlocks = function(d){return "Je hebt blokken die nergens aan vast zitten. Was het je bedoeling die aan het \"bij uitvoeren\"-blok toe te voegen?"};
 
 exports.finalStage = function(d){return "Gefeliciteerd! U hebt de laatste fase voltooid."};
 
 exports.finalStageTrophies = function(d){return "Gefeliciteerd! U hebt de laatste fase voltooid en won "+p(d,"numTrophies",0,"nl",{"one":"een trofee","other":n(d,"numTrophies")+" trofeeën"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Voltooien"};
 
 exports.generatedCodeInfo = function(d){return "Zelf op topuniversiteiten wordt les gegevens met programmeertalen die op blokken zijn gebaseerd (bijv. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Maar onder de motorkop kunnen de blokken waarmee je een programma hebt gemaakt ook getoond worden in JavaScript, de programmeertaal die wereldwijd het meest wordt gebruikt:"};
 
 exports.hashError = function(d){return "Sorry, '%1' komt niet overeen met een opgeslagen programma."};
 
-exports.help = function(d){return "Help"};
+exports.help = function(d){return "Hulp"};
 
 exports.hintTitle = function(d){return "Tip:"};
 
@@ -9284,7 +9284,7 @@ exports.repeat = function(d){return "herhaal"};
 
 exports.resetProgram = function(d){return "Herstellen"};
 
-exports.runProgram = function(d){return "Ren"};
+exports.runProgram = function(d){return "Uitvoeren"};
 
 exports.runTooltip = function(d){return "Voer het programma gedefinieerd door de blokken uit in de werkruimte."};
 
@@ -9304,7 +9304,7 @@ exports.tooManyBlocksMsg = function(d){return "Deze puzzel kan worden opgelost m
 
 exports.tooMuchWork = function(d){return "Je laat me veel werk doen! Kun je proberen minder te herhalen?"};
 
-exports.toolboxHeader = function(d){return "Blokken"};
+exports.toolboxHeader = function(d){return "blokken"};
 
 exports.openWorkspace = function(d){return "Hoe het werkt"};
 
@@ -9312,7 +9312,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Totale tijd: "+p(d,"num
 
 exports.tryAgain = function(d){return "Probeer opnieuw"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Bekijk tip"};
 
 exports.backToPreviousLevel = function(d){return "Terug naar het vorige niveau"};
 
@@ -9320,7 +9320,7 @@ exports.saveToGallery = function(d){return "Sla op in je galerij"};
 
 exports.savedToGallery = function(d){return "Opgeslagen in je galerij!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Sorry, we kunnen dit programma niet delen."};
 
 exports.typeCode = function(d){return "Typ jouw JavaScript-code onder deze instructies."};
 
@@ -9342,7 +9342,7 @@ exports.watchVideo = function(d){return "Bekijk de video"};
 
 exports.when = function(d){return "wanneer"};
 
-exports.whenRun = function(d){return "wanneer het wordt uitgevoerd"};
+exports.whenRun = function(d){return "begin"};
 
 exports.tryHOC = function(d){return "Probeer \"Hour of Code\""};
 
@@ -9350,7 +9350,7 @@ exports.signup = function(d){return "Neem deel aan de introductie cursus"};
 
 exports.hintHeader = function(d){return "Een tip:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Kijk waar je uitkwam, en probeer je programma te verbeteren."};
 
 
 },{"messageformat":50}],38:[function(require,module,exports){
@@ -9365,13 +9365,13 @@ exports.endGame = function(d){return "beëinding spel"};
 
 exports.endGameTooltip = function(d){return "Beëindigt het spel."};
 
-exports.finalLevel = function(d){return "Gefeliciteerd! Je hebt de laatste puzzel opgelost."};
+exports.finalLevel = function(d){return "Gefeliciteerd! je hebt de laatste puzzel opgelost."};
 
 exports.flap = function(d){return "flapperen"};
 
 exports.flapRandom = function(d){return "flapper een willekeurig aantal keer"};
 
-exports.flapVerySmall = function(d){return "flapper een klein beetje"};
+exports.flapVerySmall = function(d){return "een heel klein beetje flapperen"};
 
 exports.flapSmall = function(d){return "een klein beetje flapperen"};
 
@@ -9383,7 +9383,7 @@ exports.flapVeryLarge = function(d){return "heel hard flapperen"};
 
 exports.flapTooltip = function(d){return "Flappy hoger laten vliegen."};
 
-exports.flappySpecificFail = function(d){return "Je code is goed - hij zalf flapperen bij elke klik. Maar je moet vaak klikken om naar het doel te flapperen."};
+exports.flappySpecificFail = function(d){return "Je programma ziet er goed uit - bij elke klik zal hij flapperen. Maak je moet nu heel vaak klikken om naar het doel te flapperen."};
 
 exports.incrementPlayerScore = function(d){return "een punt scoren"};
 
@@ -9393,7 +9393,7 @@ exports.nextLevel = function(d){return "Gefeliciteerd! Je hebt de puzzel voltooi
 
 exports.no = function(d){return "Nee"};
 
-exports.numBlocksNeeded = function(d){return "Deze puzzel kan opgelost worden met %1 blokken."};
+exports.numBlocksNeeded = function(d){return "Deze puzzel kan worden opgelost met %1 blokken."};
 
 exports.playSoundRandom = function(d){return "willekeurige geluid afspelen"};
 
@@ -9421,11 +9421,11 @@ exports.playSoundSplash = function(d){return "plons geluid afspelen"};
 
 exports.playSoundLaser = function(d){return "laser geluid afspelen"};
 
-exports.playSoundTooltip = function(d){return "Het gekozen geluid afspelen."};
+exports.playSoundTooltip = function(d){return "Speel het gekozen geluid af."};
 
 exports.reinfFeedbackMsg = function(d){return "Klik 'Probeer opnieuw' om terug te gaan naar uw spel."};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Punten: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "Kies scene"};
 
@@ -9443,7 +9443,7 @@ exports.setBackgroundCave = function(d){return "grot als achtergrond instellen"}
 
 exports.setBackgroundSanta = function(d){return "kerst als achtergrond instellen"};
 
-exports.setBackgroundTooltip = function(d){return "Hiermee stelt u de achtergrondafbeelding in"};
+exports.setBackgroundTooltip = function(d){return "Hiermee stel je de achtergrondafbeelding in"};
 
 exports.setGapRandom = function(d){return "instellen van een willekeurig gat"};
 

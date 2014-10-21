@@ -7693,7 +7693,7 @@ exports.and = function(d){return "dhe"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
-exports.catActions = function(d){return "aksionet"};
+exports.catActions = function(d){return "Veprimet"};
 
 exports.catColour = function(d){return "Colour"};
 
@@ -7701,15 +7701,15 @@ exports.catLogic = function(d){return "Logic"};
 
 exports.catLists = function(d){return "Listat"};
 
-exports.catLoops = function(d){return "Loops"};
+exports.catLoops = function(d){return "perseritje"};
 
-exports.catMath = function(d){return "Matematika"};
+exports.catMath = function(d){return "Matematikë"};
 
-exports.catProcedures = function(d){return "Funksionet"};
+exports.catProcedures = function(d){return "funksionet"};
 
 exports.catText = function(d){return "Tekst"};
 
-exports.catVariables = function(d){return "Variablat"};
+exports.catVariables = function(d){return "variabla"};
 
 exports.codeTooltip = function(d){return "Shikoni kodin e gjenerua JavaScript."};
 
@@ -7745,7 +7745,7 @@ exports.generatedCodeInfo = function(d){return "The blocks for your program can 
 
 exports.hashError = function(d){return "Sorry, '%1' doesn't correspond with any saved program."};
 
-exports.help = function(d){return "Ndihm"};
+exports.help = function(d){return "Ndihmë"};
 
 exports.hintTitle = function(d){return "Ndihmes:"};
 
@@ -7753,7 +7753,7 @@ exports.jump = function(d){return "jump"};
 
 exports.levelIncompleteError = function(d){return "You are using all of the necessary types of blocks but not in the right way."};
 
-exports.listVariable = function(d){return "lista"};
+exports.listVariable = function(d){return "listë"};
 
 exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
 
@@ -7785,7 +7785,7 @@ exports.runTooltip = function(d){return "Run the program defined by the blocks i
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Shfaq Kodin"};
+exports.showCodeHeader = function(d){return "Shfaq kodin"};
 
 exports.showGeneratedCode = function(d){return "Shfaq kodin"};
 
@@ -7799,7 +7799,7 @@ exports.tooManyBlocksMsg = function(d){return "This puzzle can be solved with <x
 
 exports.tooMuchWork = function(d){return "You made me do a lot of work!  Could you try repeating fewer times?"};
 
-exports.toolboxHeader = function(d){return "Ndalesat"};
+exports.toolboxHeader = function(d){return "blloqe"};
 
 exports.openWorkspace = function(d){return "How It Works"};
 
@@ -7858,7 +7858,7 @@ exports.no = function(d){return "Jo"};
 
 exports.numBlocksNeeded = function(d){return "Kjo enigme mund te zgjidhet me %1 rreshta."};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your game."};
+exports.reinfFeedbackMsg = function(d){return "Ju mund te shtypni butonin \"Provo Perseri\" per tu kthyer mrapa dhe per te luajtur lojen tuaj."};
 
 exports.share = function(d){return "Share"};
 

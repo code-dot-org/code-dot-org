@@ -13198,13 +13198,13 @@ exports.catMath = function(d){return "Reikningur"};
 
 exports.catProcedures = function(d){return "Föll"};
 
-exports.catText = function(d){return "Texti"};
+exports.catText = function(d){return "texti"};
 
 exports.catVariables = function(d){return "Breytur"};
 
 exports.codeTooltip = function(d){return "Sjá samsvarandi JavaScript kóða."};
 
-exports.continue = function(d){return "Áfram"};
+exports.continue = function(d){return "Halda áfram"};
 
 exports.dialogCancel = function(d){return "Hætta við"};
 
@@ -13290,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "Þessa þraut er hægt að leysa 
 
 exports.tooMuchWork = function(d){return "Þú lagðir á mig mjög mikla vinnu! Gætirðu reynt að nota færri endurtekningar?"};
 
-exports.toolboxHeader = function(d){return "Kubbar"};
+exports.toolboxHeader = function(d){return "kubbar"};
 
 exports.openWorkspace = function(d){return "Hvernig það virkar"};
 
@@ -13395,13 +13395,13 @@ exports.honeycombFullError = function(d){return "Þessi býkúpa hefur ekki plá
 
 exports.ifCode = function(d){return "ef"};
 
-exports.ifInRepeatError = function(d){return "Þú þarft \"ef\" kubb innan í \"endurtaka\" kubbi. Ef þú átt í erfiðleikum: prófaðu þá síðustu þraut aftur til að sjá hvernig það virkaði."};
+exports.ifInRepeatError = function(d){return "Þú þarft að nota \"ef\" kubb innan í \"endurtaka\" kubb. Ef þú lendir í vandræðum er ágætt að skoða síðustu þraut til sjá hvernig þetta var leyst."};
 
 exports.ifPathAhead = function(d){return "ef slóð framundan"};
 
-exports.ifTooltip = function(d){return "Ef það er slóð í tiltekna stefnu þá á að gera eitthvað."};
+exports.ifTooltip = function(d){return "Ef það er slóð í þessa stefnu þá á að gera eitthvað."};
 
-exports.ifelseTooltip = function(d){return "Ef það er slóð í tiltekna stefnu, þá að gera fyrri kubbastæðuna. Annars á að gera seinni kubbastæðuna."};
+exports.ifelseTooltip = function(d){return "Ef það er slóð í þessa stefnu þá á að gera fyrstu kubbastæðuna. Annars á að gera stæðu númer tvö."};
 
 exports.ifFlowerTooltip = function(d){return "Ef það er blóm/býkúpa í hina tilteknu átt, þá skal gera einhverjar aðgerðir."};
 
@@ -13419,7 +13419,7 @@ exports.moveEastTooltip = function(d){return "Færa mig austur um eitt bil."};
 
 exports.moveForward = function(d){return "færa áfram"};
 
-exports.moveForwardTooltip = function(d){return "Færa mig áfram um einn reit."};
+exports.moveForwardTooltip = function(d){return "Færa mig fram um eitt bil."};
 
 exports.moveNorthTooltip = function(d){return "Færa mig norður um eitt bil."};
 
@@ -13435,11 +13435,11 @@ exports.nectarRemaining = function(d){return "blómasafi"};
 
 exports.nectarTooltip = function(d){return "Ná í blómasafa úr blómi"};
 
-exports.nextLevel = function(d){return "Til hamingju! Þú hefur klárað þessa þraut."};
+exports.nextLevel = function(d){return "Til hamingju! Þú hefur lokið við þessa þraut."};
 
 exports.no = function(d){return "Nei"};
 
-exports.noPathAhead = function(d){return "slóðin er lokuð"};
+exports.noPathAhead = function(d){return "slóð er lokuð"};
 
 exports.noPathLeft = function(d){return "engin slóð til vinstri"};
 
@@ -13473,11 +13473,11 @@ exports.removeSquare = function(d){return "fjarlægja ferning"};
 
 exports.repeatCarefullyError = function(d){return "Til að leysa þetta skaltu athuga vel mynstrið tvær hreyfingar - einn snúningur sem fer í \"endurtaka\" kubbinn. Það er í lagi að hafa aukasnúning í lokin."};
 
-exports.repeatUntil = function(d){return "endurtaka þar til"};
+exports.repeatUntil = function(d){return "endurtaka uns"};
 
 exports.repeatUntilBlocked = function(d){return "meðan slóð framundan"};
 
-exports.repeatUntilFinish = function(d){return "endurtaka þar til búið"};
+exports.repeatUntilFinish = function(d){return "endurtaka til loka"};
 
 exports.step = function(d){return "Þrep"};
 
@@ -13495,9 +13495,9 @@ exports.uncheckedCloudError = function(d){return "Gættu þess að athuga öll s
 
 exports.uncheckedPurpleError = function(d){return "Gættu þess að athuga öll fjólublá blóm til að kanna hvort þau hafi blómasafa"};
 
-exports.whileMsg = function(d){return "á meðan"};
+exports.whileMsg = function(d){return "meðan"};
 
-exports.whileTooltip = function(d){return "Endurtaka innifaldar aðgerðir þar til endapunkti er náð."};
+exports.whileTooltip = function(d){return "Endurtaka aðgerðirnar í kubbnum þar til endamarki er náð."};
 
 exports.word = function(d){return "Finna orðið"};
 

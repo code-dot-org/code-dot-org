@@ -7701,13 +7701,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Listor"};
 
-exports.catLoops = function(d){return "loopar"};
+exports.catLoops = function(d){return "Loopar"};
 
 exports.catMath = function(d){return "Matte"};
 
 exports.catProcedures = function(d){return "Funktioner"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -7749,7 +7749,7 @@ exports.help = function(d){return "Hjälp"};
 
 exports.hintTitle = function(d){return "Tips:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "hoppa"};
 
 exports.levelIncompleteError = function(d){return "Du använder alla nödvändiga typer av block, men inte på rätt sätt."};
 
@@ -7799,7 +7799,7 @@ exports.tooManyBlocksMsg = function(d){return "Detta pusslet kan lösas med <x i
 
 exports.tooMuchWork = function(d){return "Du fick mig att göra en hel del arbete!  Du kan försöka upprepa färre gånger?"};
 
-exports.toolboxHeader = function(d){return "Block"};
+exports.toolboxHeader = function(d){return "bitar"};
 
 exports.openWorkspace = function(d){return "Hur det fungerar"};
 
@@ -7852,7 +7852,7 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 var MessageFormat = require("messageformat");MessageFormat.locale.sv=function(n){return n===1?"one":"other"}
 exports.continue = function(d){return "Fortsätt"};
 
-exports.nextLevel = function(d){return "Grattis! Du har klarat den här uppgiften."};
+exports.nextLevel = function(d){return "Grattis! Du har slutfört den här uppgiften."};
 
 exports.no = function(d){return "Nej"};
 

@@ -7546,7 +7546,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.blocksUsed = function(d){return "Lohkoja käytetty: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "haarat"};
 
 exports.catColour = function(d){return "Väri"};
 
@@ -7566,9 +7566,9 @@ exports.colourTooltip = function(d){return "Muuttaa kynän väriä."};
 
 exports.degrees = function(d){return "astetta"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "syvyys"};
 
-exports.dots = function(d){return "kuvapistettä"};
+exports.dots = function(d){return "kuvapisteet"};
 
 exports.drawASquare = function(d){return "piirrä neliö"};
 
@@ -7576,31 +7576,31 @@ exports.drawATriangle = function(d){return "piirrä kolmio"};
 
 exports.drawACircle = function(d){return "piirrä ympyrä"};
 
-exports.drawAFlower = function(d){return "draw a flower"};
+exports.drawAFlower = function(d){return "piirrä kukka"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "piirrä kuusikulmio"};
 
 exports.drawAHouse = function(d){return "piirrä talo"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "piirrä planeetta"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "piirrä vinoneliö"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "piirrä robotti"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "piirrä raketti"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "piirrä lumihiutale"};
 
 exports.drawASnowman = function(d){return "piirrä lumiukko"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "piirrä tähti"};
 
 exports.drawATree = function(d){return "piirrä puu"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "piirrä ylempi aalto"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "piirrä alempi aalto"};
 
 exports.heightParameter = function(d){return "korkeus"};
 
@@ -7614,15 +7614,15 @@ exports.jumpForward = function(d){return "hyppää eteenpäin"};
 
 exports.jumpTooltip = function(d){return "Siirtää taiteilijaa piirtämättä jälkeä."};
 
-exports.jumpEastTooltip = function(d){return "Moves the artist east without leaving any marks."};
+exports.jumpEastTooltip = function(d){return "Siirtää taiteilijaa itään piirtämättä jälkeä."};
 
-exports.jumpNorthTooltip = function(d){return "Moves the artist north without leaving any marks."};
+exports.jumpNorthTooltip = function(d){return "Siirtää taiteilijaa pohjoiseen piirtämättä jälkeä."};
 
-exports.jumpSouthTooltip = function(d){return "Moves the artist south without leaving any marks."};
+exports.jumpSouthTooltip = function(d){return "Siirtää taiteilijaa etelään piirtämättä jälkeä."};
 
-exports.jumpWestTooltip = function(d){return "Moves the artist west without leaving any marks."};
+exports.jumpWestTooltip = function(d){return "Siirtää taiteilijaa länteen piirtämättä jälkeä."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "Sait tämän oikein lukuunottamatta siirtojen pituuksia."};
 
 exports.lengthParameter = function(d){return "pituus"};
 
@@ -7630,17 +7630,17 @@ exports.loopVariable = function(d){return "laskuri"};
 
 exports.moveBackward = function(d){return "siirry taaksepäin"};
 
-exports.moveEastTooltip = function(d){return "Moves the artist east."};
+exports.moveEastTooltip = function(d){return "Siirtää taiteilijaa itään."};
 
 exports.moveForward = function(d){return "siirry eteenpäin"};
 
 exports.moveForwardTooltip = function(d){return "Siirtää taiteilijaa eteenpäin."};
 
-exports.moveNorthTooltip = function(d){return "Moves the artist north."};
+exports.moveNorthTooltip = function(d){return "Siirtää taitelijaa pohjoiseen."};
 
-exports.moveSouthTooltip = function(d){return "Moves the artist south."};
+exports.moveSouthTooltip = function(d){return "Siirtää taitelijaa etelään."};
 
-exports.moveWestTooltip = function(d){return "Moves the artist west."};
+exports.moveWestTooltip = function(d){return "Siirtää taitelijaa länteen."};
 
 exports.moveTooltip = function(d){return "Siirtää taiteilijaa eteenpäin tai taaksepäin annetun etäisyyden."};
 
@@ -7654,19 +7654,19 @@ exports.penTooltip = function(d){return "Nostaa tai laskee kynän, aloittaakseen
 
 exports.penUp = function(d){return "kynä ylös"};
 
-exports.reinfFeedbackMsg = function(d){return "Does this look like what you want? You can press the \"Try again\" button to see your drawing."};
+exports.reinfFeedbackMsg = function(d){return "Näyttääkö tämä siltä, mitä halusit? Voit painaa \"Yritä uudelleen\" -painiketta nähdäksesi piirustuksesi."};
 
 exports.setColour = function(d){return "aseta väri"};
 
 exports.setWidth = function(d){return "aseta leveys"};
 
-exports.shareDrawing = function(d){return "Share your drawing:"};
+exports.shareDrawing = function(d){return "Jaa piirrustuksesi:"};
 
 exports.showMe = function(d){return "Näytä minulle"};
 
 exports.showTurtle = function(d){return "näytä taiteilija"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "askel"};
 
 exports.tooFewColours = function(d){return "Tässä pulmassa pitää käyttää ainakin %1 väriä. Käytit vain %2 väriä."};
 
@@ -7689,7 +7689,7 @@ exports.wrongColour = function(d){return "Kuvasi on väärän värinen. Tässä 
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "ja"};
 
-exports.blocklyMessage = function(d){return "Blockly"};
+exports.blocklyMessage = function(d){return "Blocky"};
 
 exports.catActions = function(d){return "Toiminnot"};
 
@@ -7705,7 +7705,7 @@ exports.catMath = function(d){return "Matematiikka"};
 
 exports.catProcedures = function(d){return "Funktiot"};
 
-exports.catText = function(d){return "Teksti"};
+exports.catText = function(d){return "teksti"};
 
 exports.catVariables = function(d){return "Muuttujat"};
 
@@ -7749,7 +7749,7 @@ exports.hintTitle = function(d){return "Vihje:"};
 
 exports.jump = function(d){return "hyppää"};
 
-exports.levelIncompleteError = function(d){return "Käytät kaikkia oikeanlaisia lohkoja, mutta et oikella tavalla."};
+exports.levelIncompleteError = function(d){return "Käytät kaikkia oikeanlaisia lohkoja, mutta et oikealla tavalla."};
 
 exports.listVariable = function(d){return "lista"};
 
@@ -7769,7 +7769,7 @@ exports.numBlocksNeeded = function(d){return "Onneksi olkoon! Olet suorittanut "
 
 exports.numLinesOfCodeWritten = function(d){return "Kirjoitit juuri "+p(d,"numLines",0,"fi",{"one":"yhden rivin","other":n(d,"numLines")+" riviä"})+" koodia!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "pelaa"};
 
 exports.puzzleTitle = function(d){return "Pulma "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
@@ -7781,7 +7781,7 @@ exports.runProgram = function(d){return "Suorita"};
 
 exports.runTooltip = function(d){return "Suorittaa työtilassa olevien lohkojen määrittämän ohjelman."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "pisteet"};
 
 exports.showCodeHeader = function(d){return "Näytä koodi"};
 
@@ -7797,7 +7797,7 @@ exports.tooManyBlocksMsg = function(d){return "Tämän pulman voi ratkaista <x i
 
 exports.tooMuchWork = function(d){return "Sait minut tekemään paljon töitä! Voisitko kokeilla samaa vähemmillä toistoilla?"};
 
-exports.toolboxHeader = function(d){return "Lohkot"};
+exports.toolboxHeader = function(d){return "lohkot"};
 
 exports.openWorkspace = function(d){return "Miten se toimii"};
 
@@ -7813,7 +7813,7 @@ exports.saveToGallery = function(d){return "Tallenna galleriaasi"};
 
 exports.savedToGallery = function(d){return "Tallennettu galleriaasi!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Emme valitettavasti toi jakaa tätä ohjelmaa."};
 
 exports.typeCode = function(d){return "Kirjoita JavaScript-koodisi näiden ohjeiden alle."};
 
@@ -7831,19 +7831,19 @@ exports.orientationLock = function(d){return "Poista laitteesi asentolukko."};
 
 exports.wantToLearn = function(d){return "Haluatko oppia koodaamaan?"};
 
-exports.watchVideo = function(d){return "Katso Video"};
+exports.watchVideo = function(d){return "Katso video"};
 
 exports.when = function(d){return "kun"};
 
-exports.whenRun = function(d){return "suoritettaessa"};
+exports.whenRun = function(d){return "ajettaessa"};
 
-exports.tryHOC = function(d){return "Kokeile koodaustuntia"};
+exports.tryHOC = function(d){return "Kokeile koodituntia"};
 
 exports.signup = function(d){return "Rekisteröidy johdantokurssille"};
 
 exports.hintHeader = function(d){return "Tässä on Vihje:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Katso miten päädyit tähän, ja koita korjata ohjelmasi."};
 
 
 },{"messageformat":51}],40:[function(require,module,exports){

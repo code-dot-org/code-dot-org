@@ -7665,7 +7665,7 @@ exports.penTooltip = function(d){return "Dvigne ali spusti svinčnik, da začne 
 
 exports.penUp = function(d){return "dvigni svinčnik"};
 
-exports.reinfFeedbackMsg = function(d){return "Ali to zgleda tako, kot želiš? Lahko pritisneš gumb 'Poskusi ponovno', da vidiš svojo sliko."};
+exports.reinfFeedbackMsg = function(d){return "Ali to zgleda tako, kot želiš? Lahko pritisneš gumb 'Poskusi ponovno', da vidiš tvojo sliko."};
 
 exports.setColour = function(d){return "določi barvo"};
 

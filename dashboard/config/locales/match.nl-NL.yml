@@ -184,7 +184,7 @@
         "<br/><br/>next to": "<br/><br/>naast"
       K-1 Artist 2 Match 2:
         Matching: Koppelen
-        Match the shapes based on type.: Koppel de vomren met elkaar gebaseerd op
+        Match the shapes based on type.: Koppel de vormen met elkaar gebaseerd op
           type.
         "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
         "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
@@ -382,13 +382,13 @@
         "/script_assets/matches/images/a4.jpg": "/script_assets/matches/images/a4.jpg"
       test matching text:
         Matching: Koppelen
-        Some really easy stuff to match.  Drag it around until you get it.: Enkele
+        Some really easy stuff to match.  Drag it around until you get it.: enkele
           eenvoudige dingen om bij elkaar te zoeken.  Sleep het rond totdat je het
-          snapt.
-        What color is the sky?: Welke kleur heeft de lucht?
-        What's in the ocean?: Wat is er in de zee?
+          ziet.
+        What color is the sky?: wat voor kleur is de lucht?
+        What's in the ocean?: wat ligt er in de oceaan?
         What's Brent's last name?: Wat is Brent's achternaam?
-        Where is Brendan from?: Waar woont Brendan?
+        Where is Brendan from?: Waar komt Brendan vandaan?
         blue: blauw
         salt: zout
         Van Minnen: Van Minnen

@@ -1,138 +1,138 @@
-tr:
-  site_name: Kodlama Zamanı
-  language: İngilizce
-  front_title: Tarihteki en geniş eğitim etkinliğine sende katıl, 8-14 Ekim 2014
-  coming_soon: Çok Yakında
-  front_header_banner: Tarihteki en geniş eğitim etkinliğine sende katıl, 8-14 Ekim 2014
+"tr":
+  site_name: "Kodlama Zamanı"
+  language: "İngilizce"
+  front_title: "Tarihteki en geniş eğitim etkinliğine sende katıl, 8-14 Ekim 2014"
+  coming_soon: "Çok Yakında"
+  front_header_banner: "Tarihteki en geniş eğitim etkinliğine sende katıl, 8-14 Ekim 2014"
   front_intro_default: "Kodlama Saati 180'den fazla ülkede gerçekleşen 10 milyonlarca öğrenciye ulaşmış küresel bir harekettir. Herkes dünyanın herhangi bir yerinde herhangi bir Kodlama Saati etkinliğini organize edebilir. Bir saatlik dersler 30'dan fazla dile çevrilmiştir. <strong>4'ten 104 yaşına kadar herkes için.</strong>"
   front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 170 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>No se necesita experiencia. Para edades entre 4 y 104 años.</strong>'
-  front_watch_video: Yeni videoyu izleyin
-  header_menu_resources: Kaynaklar
-  header_menu_faq: Sıkça Sorulanlar
-  header_menu_prizes: Ödüller
-  header_menu_uk_code_org: uk.code.org
-  choose_country_header: Dünya Çapında Katılım!
-  country_ar: Arjantin
-  country_au: Avusturalya
-  country_br: Brezilya
-  country_bg: Bulgaria
-  country_de: Germany
-  country_es: Latin America
-  country_eu: Avrupa Birliği
-  country_gr: Greece
-  country_hr: Croatia
-  country_id: Indonesia
-  country_it: İtalya
-  country_jp: Japan
-  country_me: Middle East and North Africa
-  country_nz: Yeni Zelanda
-  country_ro: Romanya
-  country_ru: Russia
-  country_ua: Ukraine
-  country_uk: İngiltere
-  country_us: Amerika
-  country_vn: Vietnam
-  prizes_all: Her organizatör için ödüller
-  prizes_every_organizer: Her Kodlama Saati organizatörü, hediye olarak Dropbox ve Skype kredileri kazanacaktır
+  front_watch_video: "Yeni videoyu izleyin"
+  header_menu_resources: "Kaynaklar"
+  header_menu_faq: "Sıkça Sorulanlar"
+  header_menu_prizes: "Ödüller"
+  header_menu_uk_code_org: "uk.code.org"
+  choose_country_header: "Dünya Çapında Katılım!"
+  country_ar: "Arjantin"
+  country_au: "Avusturalya"
+  country_br: "Brezilya"
+  country_bg: "Bulgaria"
+  country_de: "Germany"
+  country_es: "Latin America"
+  country_eu: "Avrupa Birliği"
+  country_gr: "Greece"
+  country_hr: "Croatia"
+  country_id: "Indonesia"
+  country_it: "İtalya"
+  country_jp: "Japan"
+  country_me: "Middle East and North Africa"
+  country_nz: "Yeni Zelanda"
+  country_ro: "Romanya"
+  country_ru: "Russia"
+  country_ua: "Ukraine"
+  country_uk: "İngiltere"
+  country_us: "Amerika"
+  country_vn: "Vietnam"
+  prizes_all: "Her organizatör için ödüller"
+  prizes_every_organizer: "Her Kodlama Saati organizatörü, hediye olarak Dropbox ve Skype kredileri kazanacaktır"
   prizes_technology: "Amerika'da her eyaletten bir okul 10,000 dolarlık teknoloji ödülü kazanacaktır"
-  prizes_tech_chats: 50 sınıf çok özel bir misafirlerle video sohbetleri yapmaya hak kazanacaktır
-  prizes_details: Detaylar
+  prizes_tech_chats: "50 sınıf çok özel bir misafirlerle video sohbetleri yapmaya hak kazanacaktır"
+  prizes_details: "Detaylar"
   n_have_learned_an_hoc: '<h1>#</h1><h3>kez</h3><h2>HOUR of CODE</h2><h3>uygulamasını denedin.</h3>'
-  anybody_can_learn: Herkes öğrenebilir.
-  register_now: Şimdi kayıt olun
-  front_join_us_heading: Hour of Code her öğrenci içindir.
-  front_join_us_description: Bilgisayar bilimleri her öğrenci için bir temeldir.100 milyon kişiye tanıtmak için bize yardım edin.
-  front_join_us_button: Bize katıl
-  front_what_is_hoc: Kodlama Saati nedir?
-  front_join_us_header: Bilgisayar Bilimi Eğitimi Haftasında, 8-14 Aralık tarihleri arasında herhangi bir zaman, bir Kodlama Saati etkinliğine ev sahipliği yaparak herkesin kodlamanın temellerini öğrenebileceğini gösterin, ve bunu yaparken eğleneceklerini de!
-  front_join_us_header_uk: 8-14 Aralık tarihleri arasında herhangi bir zaman, bir Kodlama Saati etkinliğine ev sahipliği yaparak herkesin kodlamanın temellerini öğrenebileceğini gösterin, ve bunu yaparken eğleneceklerini de!
-  front_join_us_teacher: Öğretmen misiniz?
-  front_join_us_inspire: Öğrencilerinize ilham verin
-  front_join_us_inspire_link: sınıfınızdaki Kodlama Saati ile.
-  front_join_us_parent: Bir ebeveyn misiniz?
-  front_join_us_ask_link: Yerel bir okula sorun
-  front_join_us_ask: Kodlama Saatine ev sahipliği yapması için.
-  front_join_us_computer_science: Sadece bilgisayar bilimini mi seviyorsunuz?
-  front_join_us_spread: Çevrenize yayın.
-  front_join_us_organize: veya kendiniz bir Kodlama Saati organize edin.
-  front_join_us_how_to_run: İşte bir Kodlama Saati böyle yapılır
-  front_join_us_help_promote: Kodlama Saatini tanıtmak için yardımcı olun
-  front_join_us_students: Öğrenciler
-  front_join_us_teachers: Öğretmenler
-  front_join_us_everyone: Herkes
-  front_join_us_try: Deneyin
-  front_join_us_host: Ev sahipliği yapın
-  front_join_us_support: Destekleyin
-  signup_header: Eğer Hour of Code uygulamarı için kişileri organize ediyorsan, lütfen bizi bilgilendir
-  signup_header_ar: Déjanos saber si estas organizando una Hora de Programación
-  signup_name_label: İsminiz
-  signup_email_label: E-Posta
-  signup_organization_name_label: Okul veya kuruluşun ismi
-  signup_event_type_label: Etkinlik Türü
-  signup_event_entire_school_label: Okul olarak katılıyoruz
-  signup_event_location_label: Etkinlik yeri (isteğe bağlı)
-  signup_special_event_flag_label: Özel etkinliğimi vurgula
-  signup_special_event_details_label: Özel etkinliğin detayları
+  anybody_can_learn: "Herkes öğrenebilir."
+  register_now: "Şimdi kayıt olun"
+  front_join_us_heading: "Hour of Code her öğrenci içindir."
+  front_join_us_description: "Bilgisayar bilimleri her öğrenci için bir temeldir.100 milyon kişiye tanıtmak için bize yardım edin."
+  front_join_us_button: "Bize katıl"
+  front_what_is_hoc: "Kodlama Saati nedir?"
+  front_join_us_header: "Bilgisayar Bilimi Eğitimi Haftasında, 8-14 Aralık tarihleri arasında herhangi bir zaman, bir Kodlama Saati etkinliğine ev sahipliği yaparak herkesin kodlamanın temellerini öğrenebileceğini gösterin, ve bunu yaparken eğleneceklerini de!"
+  front_join_us_header_uk: "8-14 Aralık tarihleri arasında herhangi bir zaman, bir Kodlama Saati etkinliğine ev sahipliği yaparak herkesin kodlamanın temellerini öğrenebileceğini gösterin, ve bunu yaparken eğleneceklerini de!"
+  front_join_us_teacher: "Öğretmen misiniz?"
+  front_join_us_inspire: "Öğrencilerinize ilham verin"
+  front_join_us_inspire_link: "sınıfınızdaki Kodlama Saati ile."
+  front_join_us_parent: "Bir ebeveyn misiniz?"
+  front_join_us_ask_link: "Yerel bir okula sorun"
+  front_join_us_ask: "Kodlama Saatine ev sahipliği yapması için."
+  front_join_us_computer_science: "Sadece bilgisayar bilimini mi seviyorsunuz?"
+  front_join_us_spread: "Çevrenize yayın."
+  front_join_us_organize: "veya kendiniz bir Kodlama Saati organize edin."
+  front_join_us_how_to_run: "İşte bir Kodlama Saati böyle yapılır"
+  front_join_us_help_promote: "Kodlama Saatini tanıtmak için yardımcı olun"
+  front_join_us_students: "Öğrenciler"
+  front_join_us_teachers: "Öğretmenler"
+  front_join_us_everyone: "Herkes"
+  front_join_us_try: "Deneyin"
+  front_join_us_host: "Ev sahipliği yapın"
+  front_join_us_support: "Destekleyin"
+  signup_header: "Eğer Hour of Code uygulamarı için kişileri organize ediyorsan, lütfen bizi bilgilendir"
+  signup_header_ar: "Déjanos saber si estas organizando una Hora de Programación"
+  signup_name_label: "İsminiz"
+  signup_email_label: "E-Posta"
+  signup_organization_name_label: "Okul veya kuruluşun ismi"
+  signup_event_type_label: "Etkinlik Türü"
+  signup_event_entire_school_label: "Okul olarak katılıyoruz"
+  signup_event_location_label: "Etkinlik yeri (isteğe bağlı)"
+  signup_special_event_flag_label: "Özel etkinliğimi vurgula"
+  signup_special_event_details_label: "Özel etkinliğin detayları"
   signup_send_posters_flag_label: 'Okuluma ya da kuruluşuma <a href= "/resources#posters">posterleri</a> gönderin'
-  signup_send_posters_address_label: Okulun veya kuruluşun adresi
-  signup_whole_school_flag_label: Bu etkinlik bütün okul içindir
-  signup_name_placeholder: İsminiz
-  signup_email_placeholder: ornek@hotmail.com
-  signup_organization_name_placeholder: Örnek, Bursa Hocailyas Ortakulu
+  signup_send_posters_address_label: "Okulun veya kuruluşun adresi"
+  signup_whole_school_flag_label: "Bu etkinlik bütün okul içindir"
+  signup_name_placeholder: "İsminiz"
+  signup_email_placeholder: "ornek@hotmail.com"
+  signup_organization_name_placeholder: "Örnek, Bursa Hocailyas Ortakulu"
   signup_event_location_placeholder: "Posta Kodu ve Ülke veya Tam Adres.\r\n(Harita'da işaretlemek için kullanılacak)"
-  signup_special_event_details_placeholder: Bu etkinliği özel yapan ayrıntıları tanımlayın
-  signup_send_posters_address_placeholder: Harita üzerinde bu adres paylaşılmayacaktır
-  signup_event_type_in_school: Okul içinde
-  signup_event_type_out_of_school: Okulun dışında
-  signup_submit_label: Kayıt Ol
-  signup_submit_error_message: Bir hata oluştu. Lütfen tüm gerekli alanların düzgün doldurulduğundan emin olun.
-  signup_thank_you_header: Hour of Code etkinliği oluşturduğunuz için teşekkürler.
-  signup_thank_you_message: Size başlamanıza yardımcı olacak bilgiler içeren bir onay e-postası gönderdik.
+  signup_special_event_details_placeholder: "Bu etkinliği özel yapan ayrıntıları tanımlayın"
+  signup_send_posters_address_placeholder: "Harita üzerinde bu adres paylaşılmayacaktır"
+  signup_event_type_in_school: "Okul içinde"
+  signup_event_type_out_of_school: "Okulun dışında"
+  signup_submit_label: "Kayıt Ol"
+  signup_submit_error_message: "Bir hata oluştu. Lütfen tüm gerekli alanların düzgün doldurulduğundan emin olun."
+  signup_thank_you_header: "Hour of Code etkinliği oluşturduğunuz için teşekkürler."
+  signup_thank_you_message: "Size başlamanıza yardımcı olacak bilgiler içeren bir onay e-postası gönderdik."
   map_header: '# Hour of Code events around the world'
-  map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
-  meta_tag_og_title: Kodlama Saati geliyor
+  map_header_ar: "Eventos de Hora de Program.AR alrededor del mundo"
+  meta_tag_og_title: "Kodlama Saati geliyor"
   meta_tag_og_description: "Kodlama Saati 180'den fazla ülkede gerçekleşen 10 milyonlarca öğrenciye ulaşmış küresel bir harekettir. 4'ten 104 yaşına kadar herkes için."
-  meta_tag_twitter_title: Kodlama Saati geliyor
+  meta_tag_twitter_title: "Kodlama Saati geliyor"
   meta_tag_twitter_description: "Kodlama Saati 180'den fazla ülkede gerçekleşen 10 milyonlarca öğrenciye ulaşmış küresel bir harekettir. 4'ten 104 yaşına kadar herkes için."
   twitter_default_text: "Ben bu yıl #KodlamaSaati 'ne katılıyorum, ya siz? @codeorg"
-  hardware_prizes_form_name_label: İsminiz
-  hardware_prizes_form_name_placeholder: İsminiz
-  hardware_prizes_form_email_label: E-Posta
-  hardware_prizes_form_email_placeholder: E-Posta
-  hardware_prizes_form_school_name_label: Okulun Adı
-  hardware_prizes_form_school_name_placeholder: Okulun Adı
-  hardware_prizes_form_school_address_label: Okulun Adresi
-  hardware_prizes_form_school_address_placeholder: Okulun Adresi
-  hardware_prizes_form_school_type_label: Okulun türü
-  hardware_prizes_form_school_type_option_elementary: İlkokul
-  hardware_prizes_form_school_type_option_middle_school: Ortaokul
-  hardware_prizes_form_school_type_option_high_school: Lise
-  hardware_prizes_form_qualifying_school_label: Bir devlet okulu
-  hardware_prizes_form_number_students_label: Etkinliğe katılacak öğrenci sayısı
-  hardware_prizes_form_number_students_placeholder: Öğrencilerin Sayısı
-  hardware_prizes_form_plan_file_label: Hour of Code etkinliğinizin konum planını yükleyin
+  hardware_prizes_form_name_label: "İsminiz"
+  hardware_prizes_form_name_placeholder: "İsminiz"
+  hardware_prizes_form_email_label: "E-Posta"
+  hardware_prizes_form_email_placeholder: "E-Posta"
+  hardware_prizes_form_school_name_label: "Okulun Adı"
+  hardware_prizes_form_school_name_placeholder: "Okulun Adı"
+  hardware_prizes_form_school_address_label: "Okulun Adresi"
+  hardware_prizes_form_school_address_placeholder: "Okulun Adresi"
+  hardware_prizes_form_school_type_label: "Okulun türü"
+  hardware_prizes_form_school_type_option_elementary: "İlkokul"
+  hardware_prizes_form_school_type_option_middle_school: "Ortaokul"
+  hardware_prizes_form_school_type_option_high_school: "Lise"
+  hardware_prizes_form_qualifying_school_label: "Bir devlet okulu"
+  hardware_prizes_form_number_students_label: "Etkinliğe katılacak öğrenci sayısı"
+  hardware_prizes_form_number_students_placeholder: "Öğrencilerin Sayısı"
+  hardware_prizes_form_plan_file_label: "Hour of Code etkinliğinizin konum planını yükleyin"
   hardware_prizes_form_plan_file_description: 'Hour of Code etkinliğinizi okulda her öğrenciye nasıl düzenleyeceğinizi belirten basit bir zaman çizelgesi gönderin. Bir örnek plan bkz: #PDF # | #Word #'
-  hardware_prizes_form_submit_label: Gönder
-  hoc_faq_title: SSS
-  hoc_faq_what_is_hoc_q: Kodlama Saati nedir?
+  hardware_prizes_form_submit_label: "Gönder"
+  hoc_faq_title: "SSS"
+  hoc_faq_what_is_hoc_q: "Kodlama Saati nedir?"
   hoc_faq_what_is_hoc_a: "Kodlama Saati herkesin programlamanın temellerini kısa bir sürede öğrenebileceğini göstermek için tasarlanmış bir saatlik bir başlangıç programıdır. <a href='http://code.org/learn'>Öğreticilerimize göz atın</a>, ve Kodlama Saati 2014 için gelen yenilerini bekleyin."
-  hoc_faq_last_year: Geçen yılki öğreticileri deneyin
-  hoc_faq_when_is_hoc_q: Kodlama Saati ne zaman?
+  hoc_faq_last_year: "Geçen yılki öğreticileri deneyin"
+  hoc_faq_when_is_hoc_q: "Kodlama Saati ne zaman?"
   hoc_faq_when_is_hoc_a: "Herkes istediği zaman bir Kodlama Saatine ev sahipliği yapabilir, fakat kampanyanın temel amacı 8-14 Aralık 2014 tarihleri arasında <a href='http://csedweek.org'>Bilgisayar Bilimleri Eğitim Haftası</a> kutlaması olarak on milyonlarca öğrencinin Kodlama Saati'ni denemesidir. Bu, belli <i>bir saat</i> midir? Hayır. Kodlama Saatini hafta boyunca herhangi bir zamanda yapabilirsiniz. (Eğer o hafta boyunca yapamazsanız, bir önceki veya bir sonraki hafta da yapabilirsiniz)."
-  hoc_faq_why_cs_q: Neden bilgisayar bilimi?
+  hoc_faq_why_cs_q: "Neden bilgisayar bilimi?"
   hoc_faq_why_cs_a: "<i>Her</i> öğrenci bilgisayar bilimini öğrenebilme şansına sahip olmalı. Bu, öğrencilerin problem çözme becerisini, mantığını ve yaratıcılığını beslemeye yardımcı olur. Erken başlayarak öğrenciler, herhangi bir 21. yüzyıl kariyerine sağlam bir temel atarlar. Daha fazla istatistik için <a href='http://code.org'>Code.org</a>."
-  hoc_faq_how_participate_q: Kodlama Saatine nasıl katılabilirim?
+  hoc_faq_how_participate_q: "Kodlama Saatine nasıl katılabilirim?"
   hoc_faq_how_participate_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.org'>here</a> and <a href='target-resources-how-to'>start planning</a>. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
-  hoc_faq_behind_hoc_q: Kodlama Saatinin arkasında kimler var?
+  hoc_faq_behind_hoc_q: "Kodlama Saatinin arkasında kimler var?"
   hoc_faq_behind_hoc_a: "Kodlama Saati, <a href='http://code.org'>Code.org</a> tarafından organize edilen, halka açık 501c3 kar amacı gütmeyen, bilgisayar biliminin hayatımızdaki katkısını daha fazla okulda öğretilmesini sağlayarak arttırmaya adanmış, aynı zamanda kadınların ve azınlık ırklardan öğrencilerin de katılımını arttırmayı amaçlayan bir organizasyondur. <a href='http://code.org/about/partners'>Eşi benzeri görülmemiş bir ortaklar topluluğu</a> Kodlama Saatini desteklemek için bir araya geldi; &mdash;bu ortaklar arasında Microsoft, Apple, Amazon gibi şirketler de var."
-  hoc_faq_host_q: Kodlama hakkında hiç bir fikrim yok. Yine de bir aktiviteye ev sahipliği yapabilir miyim?
+  hoc_faq_host_q: "Kodlama hakkında hiç bir fikrim yok. Yine de bir aktiviteye ev sahipliği yapabilir miyim?"
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='http://code.org/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='target-resources-how-to'>how to guide</a>."
-  hoc_faq_need_computers_q: Her katılımcı için bilgisayara ihtiyaç var mı?
+  hoc_faq_need_computers_q: "Her katılımcı için bilgisayara ihtiyaç var mı?"
   hoc_faq_need_computers_a: "Hayır. Bilgisayarlara, akıllı telefonlara, tabletlere uyumlu Kodlama Saati öğreticilerimiz var, hatta bazıları için bilgisayara bile ihtiyacınız yok! Nerede olursanız olun, elinizde ne varsa onunla katılabilirsiniz. <p><i>İşte birkaç seçeneğiniz:</i> <br> <ul> <li><b>Eşli çalışın.</b> Araştırmalar gösteriyor ki öğrenciler en iyi bir bilgisayarı paylaşıp <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>eşli çalıştıklarında</a> öğreniyorlar. Öğrencilerinizi takım olmaya teşvik edin. <li> <b>Projeksiyon kullanın.</b> Eğer projeksiyonunuz ve internet bağlantılı bir bilgisayarınız varsa, tüm grubunuz bir Kodlama Saatini birlikte yapabilir. Videoları beraber izleyin ve sırayla soruları cevaplandırıp bulmacaları çözün. <li><b>Çevrimdışına geçin.</b> Bilgisayara ihtiyaç bile duymayan öğreticilerimiz de var. </ul>"
-  hoc_faq_international_q: Ben Amerika Birleşik Devletlerinde değilim. Uluslararası nasıl katılabilirim?
-  hoc_faq_international_a: Herkes bir Kodlama Saati etkinliğini dünyanın herhangi bir yerinde düzenleyebilir. Geçtiğimiz sene, dünya çapında birçok öğrenci Kodlama Saati için bir araya geldi.
-  hoc_faq_tutorial_q: Nasıl bir Kodlama Saati öğreticisi hazırlayabilirim?
+  hoc_faq_international_q: "Ben Amerika Birleşik Devletlerinde değilim. Uluslararası nasıl katılabilirim?"
+  hoc_faq_international_a: "Herkes bir Kodlama Saati etkinliğini dünyanın herhangi bir yerinde düzenleyebilir. Geçtiğimiz sene, dünya çapında birçok öğrenci Kodlama Saati için bir araya geldi."
+  hoc_faq_tutorial_q: "Nasıl bir Kodlama Saati öğreticisi hazırlayabilirim?"
   hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
   hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
@@ -140,47 +140,47 @@ tr:
   hoc_faq_how_participate_uk_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.com/uk'>here</a> and start planning. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
   hoc_faq_behind_hoc_uk_a: "The Hour of Code is organised by <a href='http://uk.code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://uk.code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Google, Cambridge University Press, Tech City and The Department of Education."
   hoc_faq_host_uk_a: "Of course. Hour of Code activities are self-guided. All you have to do is pick the tutorial you want and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. <a href='http://uk.code.org/learn'>Try our current tutorials</a>."
-  hoc_faq_what_is_hoc_ar_q: Qué es la Hora de Program.AR?
+  hoc_faq_what_is_hoc_ar_q: "Qué es la Hora de Program.AR?"
   hoc_faq_what_is_hoc_ar_a: "La Hora de Program.AR es una introducción de una hora a la ciencia computacional, diseñada para desmitificar la programación y demostrar que cualquiera puede aprender los conceptos básicos. <a href='http://code.org/learn'>Revisa los tutoriales</a> y busca otros nuevos para la Hora de Program.AR del 2014."
-  hoc_faq_when_is_hoc_ar_q: ¿Cuándo es la Hora de Program.AR?
+  hoc_faq_when_is_hoc_ar_q: "¿Cuándo es la Hora de Program.AR?"
   hoc_faq_when_is_hoc_ar_a: "La Hora de Program.AR se llevará a cabo del 8 al 14 de diciembre del 2014. ¿Es una hora <i>específica</i>? No. Puedes hacer la Hora de Program.AR en cualquier momento durante esta semana. La Hora de Program.AR está programada para celebrarse anualmente - <a href='http://csedweek.org'>la Semana de Ciencias de Computación</a>."
-  hoc_faq_how_participate_ar_q: ¿Cómo puedo participar en la Hora de Program.AR?
+  hoc_faq_how_participate_ar_q: "¿Cómo puedo participar en la Hora de Program.AR?"
   hoc_faq_how_participate_ar_a: "Regístrese para organizar un evento de la hora de Program.AR <a href='http://hourofcode.org'>aquí</a> e inicie la planificación. Tú puedes organizar un evento de la Hora de ProProgram.ARgramación en tú escuela o en tú comunidad &mdash; como en un club extracurricular, en una organización sin fines de lucro o en el trabajo. O, simplemente probarlo cuando Diciembre 8 llegue."
-  hoc_faq_behind_hoc_ar_q: ¿Quién está detrás de la Hora de Program.AR?
+  hoc_faq_behind_hoc_ar_q: "¿Quién está detrás de la Hora de Program.AR?"
   hoc_faq_behind_hoc_ar_a: "La Hora de Program.AR es organizada por <a href='http://code.org'>Code.org</a>, una organización pública sin fines de lucro (501c3) dedicada a ampliar la participación en Ciencias Computacionales poniendose a disposición de más escuelas y aumentando la participación de las mujeres y los estudiantes subrepresentados de color. Una <a href='http://code.org/about/partners'>coalición sin precedentes de socios</a> se ha reunido para apoyar la Hora de Program.AR, también &mdash; incluyendo Microsoft, Apple, Amazon, Boys y Girls Clubs of America y el College Board."
-  hoc_faq_host_ar_q: No sé nada acerca de Program.AR. ¿Aún así puedo organizar un evento?
+  hoc_faq_host_ar_q: "No sé nada acerca de Program.AR. ¿Aún así puedo organizar un evento?"
   hoc_faq_host_ar_a: "Claro. Las actividades de La Hora de Program.AR son autodirigidas. Todo lo que tienes que hacer es elegir el tutorial que quieras y escoge una hora &mdash; nosotros nos encargamos del resto. También tenemos opciones para cada edad y nivel de experiencia, desde el kindergarten y para arriba. <a href='http://code.org/learn'>Pruebe nuestros tutoriales actuales</a>."
-  hoc_faq_need_computers_ar_q: ¿Necesito computadoras para cada participante?
+  hoc_faq_need_computers_ar_q: "¿Necesito computadoras para cada participante?"
   hoc_faq_need_computers_ar_a: "No. Tenemos tutorales de la Hora de Program.AR que funcionan en PCs, teléfonos inteligentes, tabletas y algunos que no requieren ¡ninguna computadora en absoluto! Tú puedes unirte desde donde quiera que estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i> <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes aprenden mejor con <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares de programación</a>, compartiendo una computadora y trabajando juntos. Anima a tus estudiantes a trabajar en pares. <li><b>Una pantalla proyectada.</b> Si tú tienes un proyector y una computadora conectada a Internet, el grupo entero puede hacer una hora de Program.AR juntos. Mira porciones de videos juntos y toma turnos para resolver acertijos o responder preguntas. <li><b>Desconéctate.</b> Ofrecemos tutoriales que no requieren ninguna computadora en absoluto. </ul>"
-  hoc_faq_tutorial_ar_q: ¿Cómo puedo hacer un tutoría de la Hora de Program.AR?
+  hoc_faq_tutorial_ar_q: "¿Cómo puedo hacer un tutoría de la Hora de Program.AR?"
   hoc_faq_tutorial_ar_a: "Si usted está interesado en convertirse en un socio para tutoriales, <a href='/tutorial-guidelines'>vea nuestras directrices e instrucciones</a>. Nos gustaría presentar varias opciones atractivas, pero la meta principal es optimizar la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales."
   stats_hoc_2013_heading: "Geçen yıl Hour of Code 'dan inanılmaz istatistikler. Sadece bir hafta içinde:"
   stats_hoc_2013_image_alt: "2013 'deki Hour of Code 'dan istatistikler"
-  stats_growth: 15 milyon kullanıcıya ulaşmanın en hızlı yolu oldu.
+  stats_growth: "15 milyon kullanıcıya ulaşmanın en hızlı yolu oldu."
   stats_tumblr: 'Tumblr: 3.5 yıl'
   stats_facebook: 'Facebook: 3 yıl'
   stats_twitter: 'Twitter: 2,5 yıl'
   stats_pinterest: 'Pinterest: 2 yıl'
   stats_instagram: 'Instagram: 14 ay'
   stats_hoc: 'Kodlama Saati: 5 gün'
-  stats_global: Dünya çapında 15 milyon öğrenci bir saatlik kodlama öğrendi.
-  stats_girls_more: Son 70 yıl süresince olduğundan daha fazla kız bilgisayar bilimini denedi.
+  stats_global: "Dünya çapında 15 milyon öğrenci bir saatlik kodlama öğrendi."
+  stats_girls_more: "Son 70 yıl süresince olduğundan daha fazla kız bilgisayar bilimini denedi."
   stats_girls_million: "2013'te 10 milyondan fazla kız"
   stats_nina: '"Her bir gün aynı sonucu verdi&mdash; %100 bağlılık." - Nina Nichols Peery, Öğretmen'
   stats_student: '"Bunun <b>hayatta ancak bir kere</b> karşıma çıkacak bir şans olduğunu biliyordum." - Mariana Alzate, 5. sınıf öğrencisi'
   stats_michael: 'Öğrencilerimi <b>asla ama asla</b> hiç bu kadar öğrenmeye hevesli görmedim." - Michael Clark, Öğretmen'
-  resources_how_to: How-to guide for teachers
-  resources_handouts: Handouts to spread the word
-  resources_videos: Videos
-  resources_posters: Posters
-  resources_banners: Banners
-  resources_emails: Sample emails
-  resources_stats: Useful computer science stats
-  resources_press_kit: Press Kit
-  footer_copyright_message: Copyright 2014 Code.org. Tüm hakları saklıdır.
-  footer_trademark_message: Hour of Code™ Code.org markasıdır.
-  footer_menu_partners: Ortaklar
-  footer_menu_contact: Bize Ulaşın
-  footer_menu_support: Destek
-  footer_menu_terms: Şartlar
-  footer_menu_privacy: Gizlilik Politikası
+  resources_how_to: "How-to guide for teachers"
+  resources_handouts: "Handouts to spread the word"
+  resources_videos: "Videos"
+  resources_posters: "Posters"
+  resources_banners: "Banners"
+  resources_emails: "Sample emails"
+  resources_stats: "Useful computer science stats"
+  resources_press_kit: "Press Kit"
+  footer_copyright_message: "Copyright 2014 Code.org. Tüm hakları saklıdır."
+  footer_trademark_message: "Hour of Code™ Code.org markasıdır."
+  footer_menu_partners: "Ortaklar"
+  footer_menu_contact: "Bize Ulaşın"
+  footer_menu_support: "Destek"
+  footer_menu_terms: "Şartlar"
+  footer_menu_privacy: "Gizlilik Politikası"

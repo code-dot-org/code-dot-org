@@ -7707,7 +7707,7 @@ exports.catProcedures = function(d){return "ফাংশনগুলি"};
 
 exports.catText = function(d){return "পাঠ"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "চলকগুলো"};
 
 exports.codeTooltip = function(d){return "See generated JavaScript code."};
 

@@ -7528,13 +7528,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Senarai"};
 
-exports.catLoops = function(d){return "Pusingan"};
+exports.catLoops = function(d){return "Gelung"};
 
 exports.catMath = function(d){return "Matematik"};
 
 exports.catProcedures = function(d){return "Fungsi"};
 
-exports.catText = function(d){return "Teks"};
+exports.catText = function(d){return "teks"};
 
 exports.catVariables = function(d){return "Pembolehubah"};
 
@@ -7602,7 +7602,7 @@ exports.play = function(d){return "Main"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" dari "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "ulang"};
+exports.repeat = function(d){return "Ulang"};
 
 exports.resetProgram = function(d){return "Tetapkan semula"};
 
@@ -7612,7 +7612,7 @@ exports.runTooltip = function(d){return "Jalankan program yang ditetapkan dengan
 
 exports.score = function(d){return "skor"};
 
-exports.showCodeHeader = function(d){return "Tunjuk Kod"};
+exports.showCodeHeader = function(d){return "Tunjukkan Kod"};
 
 exports.showGeneratedCode = function(d){return "Tunjukkan Kod"};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ms=function(n){return "other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Tindakan"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Gelung"};
 
 exports.catEvents = function(d){return "Events"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logik"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Matematik"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Fungsi"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "teks"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Pembolehubah"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Teruskan"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Tahniah! Anda berjaya menyelesaikan puzzle terakhir."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Tahniah! Anda telah melengkapkan puzzle ini."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Tidak"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Puzzle ini boleh diselesaikan dengan %1 blok."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "buat"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Ya"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

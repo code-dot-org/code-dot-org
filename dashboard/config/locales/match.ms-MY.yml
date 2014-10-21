@@ -61,7 +61,7 @@
       2-3 Maze Match 2:
         Maze Match: Maze Match
         Match the puzzles to the blocks: Match the puzzles to the blocks
-        Instructions: Instructions
+        Instructions: Arahan
         Drag the blocks to match.: Drag the blocks to match.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
@@ -116,7 +116,7 @@
       4-5 maze match 1:
         Maze Match: Maze Match
         Match the puzzles to the blocks: Match the puzzles to the blocks
-        Instructions: Instructions
+        Instructions: Arahan
         Drag the blocks to match.: Drag the blocks to match.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
@@ -234,7 +234,7 @@
       K-1 Maze Match 1:
         Matching: Matching
         Match the puzzles and blocks: Match the puzzles and blocks
-        Instructions: Instructions
+        Instructions: Arahan
         Drag the blocks to match.: Drag the blocks to match.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
@@ -365,7 +365,7 @@
         Matching Images Two: Matching Images Two
         Match up all the flowers by colour!: Match up all the flowers by colour!
         "/script_assets/matches/images/head.jpg,300": "/script_assets/matches/images/head.jpg,300"
-        Instructions: Instructions
+        Instructions: Arahan
         Drag the images from right to center.: Drag the images from right to center.
         "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
         "/script_assets/matches/images/q1.jpg": "/script_assets/matches/images/q1.jpg"

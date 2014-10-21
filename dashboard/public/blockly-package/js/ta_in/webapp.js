@@ -7540,7 +7540,7 @@ exports.catVariables = function(d){return "மாறிலிகள்"};
 
 exports.codeTooltip = function(d){return "உருவாக்கப்பட்ட ஜாவாஉரைக் குறியீடுகளை பார்க்க."};
 
-exports.continue = function(d){return "தொடர்ந்து"};
+exports.continue = function(d){return "தொடர்க"};
 
 exports.dialogCancel = function(d){return "ரத்து செய்"};
 
@@ -7677,35 +7677,35 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ta=function(n){return n===1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "செயல்கள்"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "சுழற்சிகள்"};
 
 exports.catEvents = function(d){return "Events"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "தர்க்கம்"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "கணிதம்"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "செயல்பாடுகள்"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "உரை"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "மாறிலிகள்"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "தொடர்க"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "வாழ்த்துக்கள்! நீங்கள் இறுதிப் புதிரை முடித்துவிட்டீர்கள்."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
 exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "இல்லை"};
 
 exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
 
@@ -7713,7 +7713,7 @@ exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" b
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "செய்க"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "ஆம்"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

@@ -201,7 +201,7 @@ zh-CN:
   dashboard_sections_new_section: New section
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
   dashboard_sections_table_section: 节点
-  dashboard_sections_table_secret: 秘密类型
+  dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: 年级
   dashboard_sections_table_course: 课程：
   dashboard_sections_table_students: 学生
@@ -220,11 +220,11 @@ zh-CN:
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: 姓名
   dashboard_students_age: Age
-  dashboard_students_gender: '性别:'
+  dashboard_students_gender: 性别
   dashboard_students_male: 男性
   dashboard_students_female: 女性
   dashboard_students_secret: Secret
-  dashboard_students_password: '密码:'
+  dashboard_students_password: 密码
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -261,9 +261,21 @@ zh-CN:
   dashboard_teacher_worksheet: teacher worksheet
   dashboard_grade_k: K
   dashboard_grade_other: 其他
-  dashboard_login_word: word
-  dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_word: Word
+  dashboard_login_picture: Picture
+  dashboard_login_none: 电子邮件
   dashboard_new_password: new password
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: 学生
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: "Who creates the student's account?"
+  dashboard_sections_password question: 'What do students use as a "password"?'
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: 'Unique web-page listed on "Manage Students" tab'
+  dashboard_sections_sign_in_main: 'http://code.org and click "Sign in"'
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."

@@ -7707,7 +7707,7 @@ exports.catMath = function(d){return "Matemática"};
 
 exports.catProcedures = function(d){return "Funções"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
 exports.catVariables = function(d){return "Variáveis"};
 
@@ -7785,7 +7785,7 @@ exports.runTooltip = function(d){return "Execute o programa definido pelos bloco
 
 exports.score = function(d){return "pontuação"};
 
-exports.showCodeHeader = function(d){return "Mostrar Código"};
+exports.showCodeHeader = function(d){return "Mostrar código"};
 
 exports.showGeneratedCode = function(d){return "Mostrar código"};
 
@@ -7799,7 +7799,7 @@ exports.tooManyBlocksMsg = function(d){return "Esse desafio pode ser resolvido c
 
 exports.tooMuchWork = function(d){return "Você me fez trabalhar bastante! Podemos tentar repetindo menos vezes?"};
 
-exports.toolboxHeader = function(d){return "Blocos"};
+exports.toolboxHeader = function(d){return "blocos"};
 
 exports.openWorkspace = function(d){return "Como funciona"};
 
@@ -7815,7 +7815,7 @@ exports.saveToGallery = function(d){return "Salve na sua galeria"};
 
 exports.savedToGallery = function(d){return "Salvo na sua galeria!"};
 
-exports.shareFailure = function(d){return "Não podemos compartilhar esse programa."};
+exports.shareFailure = function(d){return "Desculpe, não é possível compartilhar esse programa."};
 
 exports.typeCode = function(d){return "Digite seu código JavaScript abaixo destas instruções."};
 
@@ -7852,13 +7852,13 @@ exports.genericFeedback = function(d){return "Veja como você terminou e tente c
 var MessageFormat = require("messageformat");MessageFormat.locale.pt=function(n){return n===1?"one":"other"}
 exports.continue = function(d){return "Continuar"};
 
-exports.nextLevel = function(d){return "Parabéns! Você completou este desafio."};
+exports.nextLevel = function(d){return "Parabéns! Você completou o desafio."};
 
 exports.no = function(d){return "Não"};
 
-exports.numBlocksNeeded = function(d){return "Esse desafio pode ser resolvido com %1 blocos."};
+exports.numBlocksNeeded = function(d){return "Esse desafio pode ser resolvido com blocos de %1."};
 
-exports.reinfFeedbackMsg = function(d){return "Você pode clicar em \"Tente novamente\" para voltar a jogar o jogo."};
+exports.reinfFeedbackMsg = function(d){return "Você pode pressionar o botão de \"Tentar novamente\" para voltar a jogar o seu jogo."};
 
 exports.share = function(d){return "Compartilhar"};
 

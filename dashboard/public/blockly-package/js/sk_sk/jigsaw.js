@@ -7709,9 +7709,9 @@ exports.catLogic = function(d){return "Logické"};
 
 exports.catLists = function(d){return "Zoznamy"};
 
-exports.catLoops = function(d){return "Slučky"};
+exports.catLoops = function(d){return "Cykly"};
 
-exports.catMath = function(d){return "Matematické"};
+exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkcie"};
 
@@ -7753,11 +7753,11 @@ exports.generatedCodeInfo = function(d){return "Dokonca aj popredné univerzity 
 
 exports.hashError = function(d){return "Prepáčte, '%1' nezodpovedá žiadnemu uloženému programu."};
 
-exports.help = function(d){return "pomoc"};
+exports.help = function(d){return "Pomoc"};
 
 exports.hintTitle = function(d){return "Tip:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "skoč"};
 
 exports.levelIncompleteError = function(d){return "Používate všetky potrebné typy blokov, ale nie tým správnym spôsobom."};
 
@@ -7868,11 +7868,11 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sk = function 
 };
 exports.continue = function(d){return "Pokračovať"};
 
-exports.nextLevel = function(d){return "Gratulujem! Vyriešili ste puzzle."};
+exports.nextLevel = function(d){return "Gratulujem! Vyriešil si hádanku."};
 
 exports.no = function(d){return "Nie"};
 
-exports.numBlocksNeeded = function(d){return "Toto puzzle môže byť vyriešená s %1 blokmi."};
+exports.numBlocksNeeded = function(d){return "Táto hádanka môže byť vyriešená s %1 blokmi."};
 
 exports.reinfFeedbackMsg = function(d){return "Pre návrat k svojej hre môžeš stlačiť tlačidlo \"Skúsiť znova\"."};
 

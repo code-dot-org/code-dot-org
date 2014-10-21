@@ -7720,7 +7720,7 @@ exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Процедуры"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Переменные"};
 
@@ -7728,7 +7728,7 @@ exports.codeTooltip = function(d){return "Просмотреть созданн�
 
 exports.continue = function(d){return "Продолжить"};
 
-exports.dialogCancel = function(d){return "Отменить"};
+exports.dialogCancel = function(d){return "Отмена"};
 
 exports.dialogOK = function(d){return "Продолжить"};
 
@@ -7744,17 +7744,17 @@ exports.end = function(d){return "конец"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Блокам \"повторять\" или \"если\" необходимо иметь внутри другие блоки для работы. Убедись  в том, что внутренний блок должным образом подходит к блоку, в котором он содержится."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Блок функции требует другие блоки внутри для работы."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Блок процедуры требует для работы другие блоки внутри себя."};
 
-exports.extraTopBlocks = function(d){return "У тебя остались неприсоединённые блоки. Ты собирался присоединить их к блоку (when run)?"};
+exports.extraTopBlocks = function(d){return "У тебя остались неприсоединённые блоки. Ты собирался присоединить их к блоку \"При запуске\"?"};
 
 exports.finalStage = function(d){return "Поздравляю! Ты завершил последний этап."};
 
 exports.finalStageTrophies = function(d){return "Поздравляю! Ты завершил последний этап и выиграл "+p(d,"numTrophies",0,"ru",{"one":"кубок","other":n(d,"numTrophies")+" кубков"})+"."};
 
-exports.finish = function(d){return "Завершить"};
+exports.finish = function(d){return "Готово"};
 
-exports.generatedCodeInfo = function(d){return "Даже в лучших университетах изучают блочное программирование (например, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Но на самом деле блоки, которые вы собирали могут быть отображены на JavaScript, наиболее широко используемом в мире языке программирования:"};
+exports.generatedCodeInfo = function(d){return "Даже в лучших университетах изучают блочное программирование (например, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Но на самом деле блоки, которые вы собирали, могут быть отображены на JavaScript, наиболее широко используемом в мире языке программирования:"};
 
 exports.hashError = function(d){return "К сожалению, «%1» не соответствует какой-либо сохранённой программе."};
 
@@ -7762,7 +7762,7 @@ exports.help = function(d){return "Справка"};
 
 exports.hintTitle = function(d){return "Подсказка:"};
 
-exports.jump = function(d){return "прыжок"};
+exports.jump = function(d){return "прыгнуть"};
 
 exports.levelIncompleteError = function(d){return "Ты используешь все необходимые виды блоков, но неправильным способом."};
 
@@ -7812,7 +7812,7 @@ exports.tooManyBlocksMsg = function(d){return "Эта головоломка м�
 
 exports.tooMuchWork = function(d){return "Ты заставил меня попотеть! Может, будешь стараться делать меньше попыток?"};
 
-exports.toolboxHeader = function(d){return "Блоки"};
+exports.toolboxHeader = function(d){return "блоков"};
 
 exports.openWorkspace = function(d){return "Как это работает"};
 
@@ -7828,7 +7828,7 @@ exports.saveToGallery = function(d){return "Сохранить в твоей г�
 
 exports.savedToGallery = function(d){return "Сохранено в твоей галереи!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "К сожалению, мы не можем поделиться этой программой."};
 
 exports.typeCode = function(d){return "Введите ваш код  на JavaScript под этой инструкцией."};
 
@@ -7878,17 +7878,17 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ru = function 
 };
 exports.continue = function(d){return "Продолжить"};
 
-exports.nextLevel = function(d){return "Поздравляем! Вы завершили этот пазл."};
+exports.nextLevel = function(d){return "Поздравляю! Головоломка решена."};
 
 exports.no = function(d){return "Нет"};
 
-exports.numBlocksNeeded = function(d){return "Эта головоломка может быть решена с помощью %1 блока."};
+exports.numBlocksNeeded = function(d){return "Эта головоломка может быть решена с помощью %1 блоков."};
 
 exports.reinfFeedbackMsg = function(d){return "Вы можете нажать кнопку «Повторить», чтобы вернуться в игру."};
 
-exports.share = function(d){return "Поделиться"};
+exports.share = function(d){return "Поделитесь"};
 
-exports.shareGame = function(d){return "Поделиться вашей игрой:"};
+exports.shareGame = function(d){return "Поделиться твоей игрой:"};
 
 exports.yes = function(d){return "Да"};
 

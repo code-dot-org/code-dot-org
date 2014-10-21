@@ -18701,13 +18701,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Lister"};
 
-exports.catLoops = function(d){return "Løkker"};
+exports.catLoops = function(d){return "Sløjfer"};
 
 exports.catMath = function(d){return "Matematik"};
 
 exports.catProcedures = function(d){return "Funktioner"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -18799,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "Dette puslespil kan løses med <x
 
 exports.tooMuchWork = function(d){return "Du fik mig til at gøre en masse arbejde! Kunne du prøve at gentage færre gange?"};
 
-exports.toolboxHeader = function(d){return "Blokke"};
+exports.toolboxHeader = function(d){return "blokke"};
 
 exports.openWorkspace = function(d){return "Sådan fungerer det"};
 
@@ -18880,7 +18880,7 @@ exports.defaultSayText = function(d){return "Skriv her"};
 
 exports.emotion = function(d){return "humør"};
 
-exports.finalLevel = function(d){return "Tillykke! Du har løst den sidste opgave."};
+exports.finalLevel = function(d){return "Tillykke! Du har løst det sidste puslespil."};
 
 exports.hello = function(d){return "hej"};
 
@@ -18964,7 +18964,7 @@ exports.numBlocksNeeded = function(d){return "Denne opgave kan løses med %1 blo
 
 exports.ouchExclamation = function(d){return "Av!"};
 
-exports.playSoundCrunch = function(d){return "afspil knaselyd"};
+exports.playSoundCrunch = function(d){return "afspil kvaselyd"};
 
 exports.playSoundGoal1 = function(d){return "afspil mål 1 lyd"};
 

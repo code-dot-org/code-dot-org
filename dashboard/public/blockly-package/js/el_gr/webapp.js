@@ -7524,7 +7524,7 @@ exports.catActions = function(d){return "Ενέργειες"};
 
 exports.catColour = function(d){return "Χρώμα"};
 
-exports.catLogic = function(d){return "Λογικά"};
+exports.catLogic = function(d){return "Λογική"};
 
 exports.catLists = function(d){return "Λίστες"};
 
@@ -7534,7 +7534,7 @@ exports.catMath = function(d){return "Μαθηματικά"};
 
 exports.catProcedures = function(d){return "Συναρτήσεις"};
 
-exports.catText = function(d){return "Κείμενο"};
+exports.catText = function(d){return "κείμενο"};
 
 exports.catVariables = function(d){return "Μεταβλητές"};
 
@@ -7612,7 +7612,7 @@ exports.runTooltip = function(d){return "Τρέξε το πρόγραμμα πο
 
 exports.score = function(d){return "σκορ"};
 
-exports.showCodeHeader = function(d){return "Προβολή Κώδικα"};
+exports.showCodeHeader = function(d){return "Προβολή κώδικα"};
 
 exports.showGeneratedCode = function(d){return "Προβολή κώδικα"};
 
@@ -7626,7 +7626,7 @@ exports.tooManyBlocksMsg = function(d){return "Αυτό το παζλ μπορε
 
 exports.tooMuchWork = function(d){return "Με ανάγκασες να κάνω πολλή δουλειά! Μπορείς με λιγότερες επαναλήψεις;"};
 
-exports.toolboxHeader = function(d){return "Μπλοκ"};
+exports.toolboxHeader = function(d){return "μπλοκ"};
 
 exports.openWorkspace = function(d){return "Πώς λειτουργεί"};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "Δες πως κατέληξες �
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.el=function(n){return n===1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Ενέργειες"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Βρόχοι"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Συμβάντα"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Λογική"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Μαθηματικά"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Συναρτήσεις"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "κείμενο"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Μεταβλητές"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Συνέχεια"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Συγχαρητήρια! Έλυσες το τελευταίο Παζλ."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Συγχαρητήρια! Έχετε ολοκληρώσει αυτό το παζλ."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Όχι"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Αυτό το παζλ μπορεί να λυθεί με %1 μπλοκ."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "επανάλαβε για πάντα"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "κάνε"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Ναι"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

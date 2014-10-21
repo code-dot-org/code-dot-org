@@ -2,11 +2,11 @@
   slides:
     maze_intro:
       1:
-        image: notes/hoc1_1.jpg
+        image: notities/hoc1_1.jpg
         text: Welkom bij je eerste uur code! We duiken direct je eerste ontmoeting
           met programmeren in.
       2:
-        image: notes/hoc1_2.jpg
+        image: notities/hoc1_1.jpg
         text: We zullen Blockly gebruiken, een visuele programmeertaal waar je met
           drag-en-drop code schrijft.
       3:

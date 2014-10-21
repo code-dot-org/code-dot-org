@@ -7528,13 +7528,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Listor"};
 
-exports.catLoops = function(d){return "loopar"};
+exports.catLoops = function(d){return "Loopar"};
 
 exports.catMath = function(d){return "Matte"};
 
 exports.catProcedures = function(d){return "Funktioner"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -7576,7 +7576,7 @@ exports.help = function(d){return "Hjälp"};
 
 exports.hintTitle = function(d){return "Tips:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "hoppa"};
 
 exports.levelIncompleteError = function(d){return "Du använder alla nödvändiga typer av block, men inte på rätt sätt."};
 
@@ -7626,7 +7626,7 @@ exports.tooManyBlocksMsg = function(d){return "Detta pusslet kan lösas med <x i
 
 exports.tooMuchWork = function(d){return "Du fick mig att göra en hel del arbete!  Du kan försöka upprepa färre gånger?"};
 
-exports.toolboxHeader = function(d){return "Block"};
+exports.toolboxHeader = function(d){return "bitar"};
 
 exports.openWorkspace = function(d){return "Hur det fungerar"};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.sv=function(n){return n===1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Handlingar"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Loopar"};
 
 exports.catEvents = function(d){return "Events"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logik"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Matte"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Funktioner"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Variabler"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Fortsätt"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Grattis! Du har löst det sista pusslet."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Grattis! Du har slutfört detta pusslet."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Nej"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Detta pusslet kan lösas med %1 block."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "utför"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Ja"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

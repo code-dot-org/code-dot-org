@@ -7553,7 +7553,7 @@ exports.continue = function(d){return "Tęsti"};
 
 exports.dialogCancel = function(d){return "Atšaukti"};
 
-exports.dialogOK = function(d){return "gerai"};
+exports.dialogOK = function(d){return "Gerai"};
 
 exports.directionNorthLetter = function(d){return "Š"};
 
@@ -7695,43 +7695,43 @@ var MessageFormat = require("messageformat");MessageFormat.locale.lt = function 
   }
   return 'other';
 };
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Komandos"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Kartojimas"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Įvykiai"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logika"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Sudėtinės komandos"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "Tekstas"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Kintamieji"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Tęsti"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Sveikinu! Tu išsprendei paskutinį galvosūkį."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Sveikinu! Išsprendei šią užduotį."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Ne"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Ši užduotis gali būti išspręsta su %1 blokų(-ais)."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "kartok visada"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return " "};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7743,7 +7743,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Taip"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

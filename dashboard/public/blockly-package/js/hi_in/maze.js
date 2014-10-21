@@ -13473,7 +13473,7 @@ exports.removeSquare = function(d){return "remove square"};
 
 exports.repeatCarefullyError = function(d){return "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end."};
 
-exports.repeatUntil = function(d){return "repeat until"};
+exports.repeatUntil = function(d){return "दोहराएँ जब तक"};
 
 exports.repeatUntilBlocked = function(d){return "while path ahead"};
 

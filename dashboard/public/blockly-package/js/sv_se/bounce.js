@@ -11560,7 +11560,7 @@ exports.ifCode = function(d){return "om"};
 
 exports.ifPathAhead = function(d){return "om väg finns framåt"};
 
-exports.ifTooltip = function(d){return "Om det finns en sökväg i den angivna riktningen, utför ett antal åtgärder."};
+exports.ifTooltip = function(d){return "Om det finns en väg i den angivna riktningen, gör några handlingar."};
 
 exports.ifelseTooltip = function(d){return "Om det finns en väg i den angivna riktningen, gör i så fall det första blocket av handlingar. Annars, gör den andra blocket av handlingar."};
 
@@ -11570,7 +11570,7 @@ exports.incrementOpponentScoreTooltip = function(d){return "Lägg till en till d
 
 exports.incrementPlayerScore = function(d){return "increment player score"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
+exports.incrementPlayerScoreTooltip = function(d){return "Lägg till ett till den nuvarande spelarens poängsumma."};
 
 exports.isWall = function(d){return "is this a wall"};
 
@@ -11582,7 +11582,7 @@ exports.launchBallTooltip = function(d){return "Sätt en ny boll i spel."};
 
 exports.makeYourOwn = function(d){return "Gör ditt eget Studsa-spel"};
 
-exports.moveDown = function(d){return "flytta ner"};
+exports.moveDown = function(d){return "flytta neråt"};
 
 exports.moveDownTooltip = function(d){return "Flytta paddeln nedåt."};
 
@@ -11590,15 +11590,15 @@ exports.moveForward = function(d){return "gå framåt"};
 
 exports.moveForwardTooltip = function(d){return "Flytta mig framåt en ruta."};
 
-exports.moveLeft = function(d){return "move left"};
+exports.moveLeft = function(d){return "flytta vänster"};
 
 exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
 
-exports.moveRight = function(d){return "move right"};
+exports.moveRight = function(d){return "flytta höger"};
 
 exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
 
-exports.moveUp = function(d){return "move up"};
+exports.moveUp = function(d){return "flytta uppåt"};
 
 exports.moveUpTooltip = function(d){return "Move the paddle up."};
 
@@ -11606,13 +11606,13 @@ exports.nextLevel = function(d){return "Grattis! Du har slutfört detta pusslet.
 
 exports.no = function(d){return "Nej"};
 
-exports.noPathAhead = function(d){return "stigen är blockerad"};
+exports.noPathAhead = function(d){return "vägen är blockerad"};
 
-exports.noPathLeft = function(d){return "ingen stig till vänster"};
+exports.noPathLeft = function(d){return "ingen väg till vänster"};
 
-exports.noPathRight = function(d){return "ingen stig åt höger"};
+exports.noPathRight = function(d){return "ingen väg till höger"};
 
-exports.numBlocksNeeded = function(d){return "Detta pussel kan lösas med %1 block."};
+exports.numBlocksNeeded = function(d){return "Detta pusslet kan lösas med %1 block."};
 
 exports.pathAhead = function(d){return "väg framåt"};
 
@@ -11622,7 +11622,7 @@ exports.pathRight = function(d){return "Om vägen finns till höger"};
 
 exports.pilePresent = function(d){return "Det finns en hög"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "spela krossa ljud"};
 
 exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
 
@@ -11634,13 +11634,13 @@ exports.playSoundLosePoint = function(d){return "play lose point sound"};
 
 exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "spela retro-ljud"};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "spela gummi-ljud"};
 
 exports.playSoundSlap = function(d){return "play slap sound"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Spela upp det valda ljudet."};
 
 exports.playSoundWinPoint = function(d){return "play win point sound"};
 
@@ -11668,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "Ange hardcourt scen"};
 
 exports.setBackgroundRetro = function(d){return "Ange retro scen"};
 
-exports.setBackgroundTooltip = function(d){return "Anger en bakgrundsbild"};
+exports.setBackgroundTooltip = function(d){return "Ange bakgrundsbild"};
 
 exports.setBallRandom = function(d){return "Ange slumpmässig boll"};
 
@@ -11718,9 +11718,9 @@ exports.shareBounceTwitter = function(d){return "Kolla in Bounce spelet jag gjor
 
 exports.shareGame = function(d){return "Dela ditt spel:"};
 
-exports.turnLeft = function(d){return "Sväng vänster"};
+exports.turnLeft = function(d){return "sväng vänster"};
 
-exports.turnRight = function(d){return "Sväng höger"};
+exports.turnRight = function(d){return "sväng höger"};
 
 exports.turnTooltip = function(d){return "Vänder mig åt vänster eller höger 90 grader."};
 
@@ -11736,9 +11736,9 @@ exports.whenDown = function(d){return "when Down arrow"};
 
 exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
 
-exports.whenGameStarts = function(d){return "När spelet startar"};
+exports.whenGameStarts = function(d){return "när spelet börjar"};
 
-exports.whenGameStartsTooltip = function(d){return "Utför åtgärderna nedan när spelet startar."};
+exports.whenGameStartsTooltip = function(d){return "Utför kommandona nedan när spelet startar."};
 
 exports.whenLeft = function(d){return "when Left arrow"};
 
@@ -11752,9 +11752,9 @@ exports.whenRight = function(d){return "when Right arrow"};
 
 exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "när pil upp"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Utför handlingarna nedan när pil-upptangenten trycks ner."};
 
 exports.whenWallCollided = function(d){return "when ball hits wall"};
 
@@ -11781,13 +11781,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Listor"};
 
-exports.catLoops = function(d){return "loopar"};
+exports.catLoops = function(d){return "Loopar"};
 
 exports.catMath = function(d){return "Matte"};
 
 exports.catProcedures = function(d){return "Funktioner"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -11829,7 +11829,7 @@ exports.help = function(d){return "Hjälp"};
 
 exports.hintTitle = function(d){return "Tips:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "hoppa"};
 
 exports.levelIncompleteError = function(d){return "Du använder alla nödvändiga typer av block, men inte på rätt sätt."};
 
@@ -11879,7 +11879,7 @@ exports.tooManyBlocksMsg = function(d){return "Detta pusslet kan lösas med <x i
 
 exports.tooMuchWork = function(d){return "Du fick mig att göra en hel del arbete!  Du kan försöka upprepa färre gånger?"};
 
-exports.toolboxHeader = function(d){return "Block"};
+exports.toolboxHeader = function(d){return "bitar"};
 
 exports.openWorkspace = function(d){return "Hur det fungerar"};
 

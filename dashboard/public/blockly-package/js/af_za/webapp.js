@@ -7677,7 +7677,7 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.af=function(n){return n===1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Aksies"};
 
 exports.catControl = function(d){return "Loops"};
 
@@ -7689,11 +7689,11 @@ exports.catMath = function(d){return "Math"};
 
 exports.catProcedures = function(d){return "Functions"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "Teks"};
 
 exports.catVariables = function(d){return "Variables"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Gaan voort"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
@@ -7713,7 +7713,7 @@ exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" b
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "doen"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 

@@ -26,13 +26,13 @@
           Flappy non blockly: Flappy non blockly
           title: Kurs 1
           Artist 2: Künstler 2
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
+          Happy Maps: Glücklich Karten
+          Move it, Move it: Achtung, fertig, LOS
           'Real-life Algorithms: Plant a Seed': 'Real-Life-Algorithmen: Pflanze Samen'
           Building a Foundation: Grundlagen aufbauen
-          Getting Loopy: Getting Loopy
+          Getting Loopy: Schöne Schleifen
           The Big Event: Der große Event
-          Going Places Safely: Going Places Safely
+          Going Places Safely: Sicher unterwegs
           description: Kurs 1 ist für Schüler in der frühen Grundschule gedacht. Es
             werden Programme mit Schleifen und Events erstellt. Am Ende wirst du ein
             eigenes Spiel, eine Story oder ein Bild erstellen, welches du deinen Freunden
@@ -42,7 +42,7 @@
           'Artist: Shapes': 'Künstler: Formen'
           'Maze: Loops': 'Labyrinth: Schleifen'
           'Bee: Loops': 'Biene: Schleifen'
-          'Studio: Create a Story': 'Studio: Create a Story'
+          'Studio: Create a Story': 'Play Lab: Erstelle eine Story'
           description_short: Course 1 is designed for early readers in the lower elementary
             grades.
           'Artist: Loops': 'Künstler: Schleifen'
@@ -50,11 +50,11 @@
           The Maze: Das Labyrinth
           Suzi: Suzi
           The Artist: Der Künstler
-          Artist Debugging: 'Der Künstler: Debuggen'
+          Artist Debugging: Künstler Debuggen
           Bounce: Bounce
-          'Studio: Create a Story': 'Studio: Create a Story'
-          Artist Loops: Artist Loops
-          Bee Conditionals: Bee Conditionals
+          'Studio: Create a Story': 'Play Lab: Erstelle eine Story'
+          Artist Loops: Künstler Schleifen
+          Bee Conditionals: Biene Bedingungen
           Flappy: Flappy
           title: Kurs 2
           Bee Loops: Biene Schleifen
@@ -63,7 +63,7 @@
           Bee Debugging: Biene Debuggen
           Bee Functions: Biene Funktionen
           Maze Loops: Labyrinth Schleifen
-          Graph Paper Programming: Millimeterpapier Programmierung
+          Graph Paper Programming: Programmieren auf Millimeterpapier
           'Real-life Algorithms: Paper Planes': 'Alltagsalgorithmen: Papierflieger'
           Getting Loopy: Schöne Schleifen
           Relay programming: Relais-Programmierung
@@ -102,18 +102,18 @@
           Bounce: Bounce
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: Computerbezogenes Denken
-          Functional Suncatchers: Functional Suncatchers
+          Computational Thinking: Computerorientiertes Denken
+          Functional Suncatchers: Funktionale Sonnenfänger
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
           Internet: Internet
           Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital Citizenship
+          Digital Citizenship: Digitalen Staatsbürgerschaft
           Farmer - While Loops: Farmer - While Loops
           description: Formerly known as a 4-5 course.
           'Studio: Create a Game': 'Studio: Create a Game'
           Maze: Labyrinth
-          Artist: Artist
+          Artist: Künstler
           'Artist: Functions': 'Artist: Functions'
           'Bee: Functions': 'Bee: Functions'
           'Bee: Conditionals': 'Biene: Bedingungen'
@@ -135,10 +135,11 @@
           'Bee: Nested Loops2': 'Biene: verschachtelte Schleifen2'
           'Bee: Debugging2': 'Biene: Debuggen2'
           'Artist: Patterns': 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Mittelschule Mathematik
           description: Selbständige Arbeit für mittelschule Mathematik.
-          Graph Paper Programming: Millimeterpapier Programmierung
+          Graph Paper Programming: Programmieren auf Millimeterpapier
           Assessments: Prüfungen
           Unit 1: Einheit 1
           Unit 2: Einheit 2

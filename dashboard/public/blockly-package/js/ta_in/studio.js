@@ -18713,7 +18713,7 @@ exports.catVariables = function(d){return "மாறிலிகள்"};
 
 exports.codeTooltip = function(d){return "உருவாக்கப்பட்ட ஜாவாஉரைக் குறியீடுகளை பார்க்க."};
 
-exports.continue = function(d){return "தொடர்ந்து"};
+exports.continue = function(d){return "தொடர்க"};
 
 exports.dialogCancel = function(d){return "ரத்து செய்"};
 
@@ -18872,7 +18872,7 @@ exports.changeScoreTooltip = function(d){return "Add or remove a point to the sc
 
 exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
 
-exports.continue = function(d){return "தொடர்ந்து"};
+exports.continue = function(d){return "தொடர்க"};
 
 exports.decrementPlayerScore = function(d){return "remove point"};
 
@@ -18880,7 +18880,7 @@ exports.defaultSayText = function(d){return "type here"};
 
 exports.emotion = function(d){return "mood"};
 
-exports.finalLevel = function(d){return "வாழ்த்துக்கள்! நீங்கள் இறுதிப் புதிரை தீர்த்துவிட்டீர்கள்."};
+exports.finalLevel = function(d){return "வாழ்த்துக்கள்! நீங்கள் இறுதிப் புதிரை முடித்துவிட்டீர்கள்."};
 
 exports.hello = function(d){return "hello"};
 
@@ -18916,7 +18916,7 @@ exports.moveDirectionRight = function(d){return "right"};
 
 exports.moveDirectionUp = function(d){return "up"};
 
-exports.moveDirectionRandom = function(d){return "எழுமாறான"};
+exports.moveDirectionRandom = function(d){return "தொடர்பின்றி எடுக்கப்பட்ட"};
 
 exports.moveDistance25 = function(d){return "25 pixels"};
 
@@ -19038,13 +19038,13 @@ exports.projectilePurpleHearts = function(d){return "purple hearts"};
 
 exports.projectileRedHearts = function(d){return "red hearts"};
 
-exports.projectileRandom = function(d){return "எழுமாறான"};
+exports.projectileRandom = function(d){return "தொடர்பின்றி எடுக்கப்பட்ட"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "செய்"};
+exports.repeatDo = function(d){return "செய்க"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
 

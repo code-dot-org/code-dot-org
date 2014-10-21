@@ -13375,17 +13375,17 @@ exports.dig = function(d){return "odstrani 1"};
 
 exports.digTooltip = function(d){return "odstrani 1 enoto umazanije"};
 
-exports.dirE = function(d){return "E"};
+exports.dirE = function(d){return "V"};
 
-exports.dirN = function(d){return "N"};
+exports.dirN = function(d){return "S"};
 
-exports.dirS = function(d){return "S"};
+exports.dirS = function(d){return "J"};
 
-exports.dirW = function(d){return "W"};
+exports.dirW = function(d){return "Z"};
 
-exports.doCode = function(d){return "naredi"};
+exports.doCode = function(d){return "izvrši"};
 
-exports.elseCode = function(d){return "drugače"};
+exports.elseCode = function(d){return "potem"};
 
 exports.fill = function(d){return "zapolni 1"};
 
@@ -13479,7 +13479,7 @@ exports.pathLeft = function(d){return "če je pot na levo"};
 
 exports.pathRight = function(d){return "če je pot na desno"};
 
-exports.pilePresent = function(d){return "če je kup"};
+exports.pilePresent = function(d){return "tukaj je kup"};
 
 exports.putdownTower = function(d){return "postavi stolp"};
 
@@ -13511,7 +13511,7 @@ exports.turnLeft = function(d){return "obrni se levo"};
 
 exports.turnRight = function(d){return "obrni se desno"};
 
-exports.turnTooltip = function(d){return "Obrni me levo ali desno za 90 stopinj."};
+exports.turnTooltip = function(d){return "Obrne me levo ali desno za 90 stopinj."};
 
 exports.uncheckedCloudError = function(d){return "Prepričaj se, da si preveril vse oblake in izvedel ali so rože ali satovje."};
 
@@ -13523,7 +13523,7 @@ exports.whileTooltip = function(d){return "Ponavljaj vključena dejanja, dokler 
 
 exports.word = function(d){return "Poišči besedo"};
 
-exports.yes = function(d){return "Ja"};
+exports.yes = function(d){return "Da"};
 
 exports.youSpelled = function(d){return "Ti si črkoval"};
 

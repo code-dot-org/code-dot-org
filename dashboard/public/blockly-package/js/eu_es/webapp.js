@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.eu=function(n){return n===1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Ekintzak"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Itzuliak"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Gertaerak"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logika"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Funtzioak"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "Testua"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Aldagaiak"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Jarraitu"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Zorionak! Amaierako puzlea ebatzi duzu."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Zorionak! Puzle hau osatu duzu."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Ez"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Puzle hau %1 blokeekin ebaz daiteke."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "errepikatu betirako"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "egin"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Bai"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

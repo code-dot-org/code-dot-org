@@ -3,7 +3,7 @@ lt:
     script:
       name:
         test:
-          "Jigsaw: Learn to drag and drop": 'Dėlionės: sudėk paveikslėlius'
+          "Jigsaw: Learn to drag and drop": 'Dėlionės: išmokite, kaip nuvilkti'
           The Maze: Labirintas
           Multi: Variantai
           Match: Sujungimas
@@ -11,7 +11,7 @@ lt:
           title: Bandomasis etapas
           description: Tai tik vidinis bandomasis etapas.
         course1:
-          "Jigsaw: Learn to drag and drop": 'Dėlionės: sudėk paveikslėlius'
+          "Jigsaw: Learn to drag and drop": 'Dėlionės: išmokite, kaip nuvilkti'
           "Maze: Sequence": 'Labirintas: seka'
           "Maze: Debugging": 'Labirintas: klaidų ieškojimas'
           "Artist 1: Intro": 'Menininkas 1: įžanga'
@@ -29,32 +29,32 @@ lt:
           Happy Maps: Laimingieji žemėlapiai
           Move it, Move it: Judėk, judėk
           "Real-life Algorithms: Plant a Seed": 'Algoritmai realiame gyvenime: sėklos sodinimas'
-          Building a Foundation: Building a Foundation
+          Building a Foundation: Pamatų kūrimas
           Getting Loopy: Kartojimo supratimas
           The Big Event: Didelis įvykis
           Going Places Safely: Saugus naršymas internete
-          description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
+          description: 'Kursas 1 yra skirtas dar tik pradedatiems skaityti.  Čia jie lavins sprendimo, bendradarbiavimo įgūdžius bei kantrybę :). Mokiniai ne tik spręs užduotis, bet ir sukurs savo istoriją ar žaidimą, kuriuo galės pasidalinti su kitais.'
           "Bee: Sequence": 'Bitė: seka'
           "Artist: Sequence": 'Menininkas: seka'
           "Artist: Shapes": 'Menininkas: formos'
           "Maze: Loops": 'Labirintas: kartojimas'
           "Bee: Loops": 'Bitė: kartojimas'
-          "Studio: Create a Story": 'Laboratorija: sukurk istoriją'
-          description_short: 1 etapas yra sukurtas pradinukams, dar tik pradėjusiems skaityti.
+          "Studio: Create a Story": 'Žaidimų laboratorija: sukurk istoriją'
+          description_short: Kursas 1 yra sukurtas pradinukams, dar tik pradedantiems skaityti.
           "Artist: Loops": 'Menininkas: kartojimas'
         course2:
           The Maze: Labirintas
           Suzi: Suzi
           The Artist: Menininkas
           Artist Debugging: 'Menininkas: klaidų ieškojimas'
-          Bounce: Šokinėjimas
-          "Studio: Create a Story": 'Laboratorija: sukurk istoriją'
+          Bounce: Bounce
+          "Studio: Create a Story": 'Žaidimų laboratorija: sukurk istoriją'
           Artist Loops: 'Menininkas: kartojimas'
           Bee Conditionals: 'Bitė: sąlyginiai sakiniai'
           Flappy: Flappy
           title: Kursas 2
           Bee Loops: 'Bitė: kartojimas'
-          Artist Functions: 'Menininkas: funkcijos'
+          Artist Functions: 'Menininkas: sudėtinės komandos'
           The Artist Debugging: 'Menininkas: klaidų ieškojimas'
           Bee Debugging: 'Bitė: klaidų ieškojimas'
           Bee Functions: 'Bitė: sudėtinės komandos'
@@ -67,7 +67,7 @@ lt:
           Binary Bracelets: Dvejetainės apyrankės
           The Big Event: Didelis įvykis
           Your Digital Footprint: Virtualūs pirštų antspaudai
-          description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          description: 'Kursas 2 yra skirtas tiems, kas jau išmoko skaityti, bet anksčiau niekada neprogramavo. Jo metu, mokiniai spręs programavimo galvosūkius, kurs  interaktyvius žaidimus ar istorijas. Rekomenduojama 2-5 klasėms.'
           "Maze: Sequence": 'Labirintas: seka'
           "Artist: Sequence": 'Menininkas: seka'
           "Maze: Loops": 'Labirintas: kartojimas'
@@ -82,7 +82,7 @@ lt:
           "Artist: Nested Loops": 'Menininkas: kartojimas kartojime'
         course3:
           The Maze: Labirintas
-          "Studio: Create a Story": 'Laboratorija: sukurk istoriją'
+          "Studio: Create a Story": 'Žaidimų laboratorija: sukurk istoriją'
           The Artist: Menininkas
           title: Kursas 3
           Artist Functions: 'Menininkas: funkcijos'
@@ -94,7 +94,7 @@ lt:
           Bee Debugging: 'Bitė: klaidų ieškojimas'
           Bee Functions: 'Bitė: sudėtinės komandos'
           Artist Functions with Params: 'Menininkas: sudėtinės komandos su parametrais'
-          Bounce: Šokinėjimas
+          Bounce: Bounce
           Maze Conditionals: 'Labirintas: sąlyginiai sakiniai'
           Artist Functions with Parameters: 'Menininkas: sudėtinės komandos su parametrais'
           Computational Thinking: Skaičiuojamasis mąstymas
@@ -102,7 +102,7 @@ lt:
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Kauliukų lenktynės
           Internet: Internetas
-          Crowdsourcing: Crowdsourcing
+          Crowdsourcing: Komandinis programavimas
           Digital Citizenship: Virtuali pilietybė
           Farmer - While Loops: 'Ūkininkas: kartojimas'
           description: Kursas 3 skirtas tiems, kas pabaigė Kursą 2.
@@ -117,7 +117,7 @@ lt:
           "Farmer: While Loops": 'Ūkininkas: kartojimas'
           "Bee: Nested Loops": 'Bitė: kartojimas kartojime'
           "Bee: Debugging": 'Bitė: klaidų ieškojimas'
-          description_short: Mokiniai, einantys 3 etapą, turi būti praėję 2 etapą.
+          description_short: Mokiniai, bandantys 3 kursą, turi būti pabaigę 2 kursą :).
           Maze2: Labirintas2
           Artist2: Menininkas2
           "Artist: Functions2": 'Menininkas: sudėtinės komandos2'
@@ -128,7 +128,8 @@ lt:
           "Farmer: While Loops2": 'Ūkininkas: kartojimas2'
           "Bee: Nested Loops2": 'Bitė: kartojimas kartojime'
           "Bee: Debugging2": 'Bitė: klaidų ieškojimas2'
-          "Artist: Patterns": 'Artist: Patterns'
+          "Artist: Patterns": 'Menininkas: raštai'
+          Songwriting: Dainų rašymas
         msm:
           title: Vidurinės mokyklos matematika
           description: Private work in progress for Middle School Math.
@@ -138,9 +139,9 @@ lt:
           Unit 2: Skyrius 2
         playlab:
           title: Laboratorija
-          description: Sukurk istoriją arba žaidimą su laboratorija!
+          description: Sukurk istoriją arba žaidimą!
           Play Lab: Laboratorija
-          description_short: Sukurk istoriją arba žaidimą su laboratorija!
+          description_short: Sukurk istoriją arba žaidimą!
         artist:
           title: Menininkas
           description: Nupiešk šaunius piešinius ir ornamentus su menininku!

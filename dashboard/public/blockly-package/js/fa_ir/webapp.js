@@ -7520,7 +7520,7 @@ exports.and = function(d){return "و"};
 
 exports.blocklyMessage = function(d){return "بلاکلی"};
 
-exports.catActions = function(d){return "کارها"};
+exports.catActions = function(d){return "اقدامات"};
 
 exports.catColour = function(d){return "رنگ"};
 
@@ -7528,9 +7528,9 @@ exports.catLogic = function(d){return "منطق"};
 
 exports.catLists = function(d){return "لیست ها"};
 
-exports.catLoops = function(d){return "حلقه‌ها"};
+exports.catLoops = function(d){return "حلقه ها"};
 
-exports.catMath = function(d){return "ریاضی"};
+exports.catMath = function(d){return "محاسبات ریاضی"};
 
 exports.catProcedures = function(d){return "توابع"};
 
@@ -7580,7 +7580,7 @@ exports.jump = function(d){return "پرش"};
 
 exports.levelIncompleteError = function(d){return "شما همه‌ی بلوک‌های مورد نیاز را بکار بردید، ولی نه به روش درست."};
 
-exports.listVariable = function(d){return "لیست"};
+exports.listVariable = function(d){return "فهرست"};
 
 exports.makeYourOwnFlappy = function(d){return "Flappy Bird خودتان را بسازید"};
 
@@ -7602,7 +7602,7 @@ exports.play = function(d){return "بازی"};
 
 exports.puzzleTitle = function(d){return "معمای "+v(d,"puzzle_number")+" از "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "تکرار"};
+exports.repeat = function(d){return "تکرار کن"};
 
 exports.resetProgram = function(d){return "بازنشانی"};
 
@@ -7612,7 +7612,7 @@ exports.runTooltip = function(d){return "اجرای برنامه‌ی تعریف
 
 exports.score = function(d){return "نمره"};
 
-exports.showCodeHeader = function(d){return "نمایشِ کد"};
+exports.showCodeHeader = function(d){return "کد نمایش"};
 
 exports.showGeneratedCode = function(d){return "نمایشِ کد"};
 
@@ -7626,7 +7626,7 @@ exports.tooManyBlocksMsg = function(d){return "این معما را می‌تو�
 
 exports.tooMuchWork = function(d){return "شما منو مجبور به انجام مقدار زیادی کار کردید. میشه تعداد تکرار رو کمتر کنید؟"};
 
-exports.toolboxHeader = function(d){return "بلوک‌ها"};
+exports.toolboxHeader = function(d){return "بلوک ها"};
 
 exports.openWorkspace = function(d){return "چگونگیِ کار"};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "ببینبد چطور تمامش �
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fa=function(n){return "other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "اقدامات"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "حلقه ها"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "رویدادها"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "منطق"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "محاسبات ریاضی"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "توابع"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "متن"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "متغیرها"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "ادامه"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "تبریک! شما پازل نهایی را حل کردید."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "تبریک! شما این پازل را به اتمام رساندید."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "نه"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "این پازل می تواند با %1 از بلوکها حل شود."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "تکرار بی‌پایان"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "انجام بده"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "بله"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

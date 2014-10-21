@@ -7544,11 +7544,11 @@ exports.catLists = function(d){return "Listy"};
 
 exports.catLoops = function(d){return "Pętle"};
 
-exports.catMath = function(d){return "Matematyczne"};
+exports.catMath = function(d){return "Matematyka"};
 
 exports.catProcedures = function(d){return "Funkcje"};
 
-exports.catText = function(d){return "Tekstowe"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Zmienne"};
 
@@ -7580,7 +7580,7 @@ exports.finalStage = function(d){return "Gratulacje! Ukończyłeś ostatni etap.
 
 exports.finalStageTrophies = function(d){return "Gratulacje! Ukończyłeś ostatni etap i wygrałeś "+p(d,"numTrophies",0,"pl",{"one":"trofeum","other":n(d,"numTrophies")+" trofea"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Koniec"};
 
 exports.generatedCodeInfo = function(d){return "Nawet najlepsze uczelnie uczą kodowania opartego o bloki (np. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale bloki które zostały użyte, można również zobaczyć w JavaScript, jednym z najbardziej powszechnie stosowanym języku programowania na świecie:"};
 
@@ -7632,7 +7632,7 @@ exports.showGeneratedCode = function(d){return "Pokaż kod"};
 
 exports.subtitle = function(d){return "graficzne środowisko programistyczne"};
 
-exports.textVariable = function(d){return "tekst"};
+exports.textVariable = function(d){return "Tekst"};
 
 exports.tooFewBlocksMsg = function(d){return "Używasz wszystkich wymaganych bloków, ale spróbuj użyć ich więcej, aby ukończyć łamigłówkę."};
 
@@ -7640,7 +7640,7 @@ exports.tooManyBlocksMsg = function(d){return "Ta łamigłówka może być rozwi
 
 exports.tooMuchWork = function(d){return "Spowodowałeś, że miałem dużo pracy. Czy możesz zmniejszyć liczbę powtórzeń?"};
 
-exports.toolboxHeader = function(d){return "Bloki"};
+exports.toolboxHeader = function(d){return "bloki"};
 
 exports.openWorkspace = function(d){return "Jak to działa"};
 
@@ -7705,43 +7705,43 @@ var MessageFormat = require("messageformat");MessageFormat.locale.pl = function 
   }
   return 'other';
 };
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Działania"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Pętle"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Zdarzenia"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logika"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Matematyka"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Funkcje"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "tekst"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Zmienne"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Dalej"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Gratulacje! Rozwiązałeś końcową łamigłówkę."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Gratulacje! Ukończyłeś tę łamigłówkę."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Nie"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Ta łamigłówka może być rozwiązana z użyciem %1 bloków."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "powtarzaj w nieskończoność"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "wykonaj"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7753,7 +7753,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Tak"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

@@ -18714,7 +18714,7 @@ exports.catActions = function(d){return "الاجراءات"};
 
 exports.catColour = function(d){return "لون"};
 
-exports.catLogic = function(d){return "العمليات المنطقية"};
+exports.catLogic = function(d){return "منطق"};
 
 exports.catLists = function(d){return "القوائم والمصفوفات"};
 
@@ -18724,7 +18724,7 @@ exports.catMath = function(d){return "العمليات الحسابية"};
 
 exports.catProcedures = function(d){return "الدوال"};
 
-exports.catText = function(d){return "الجمل"};
+exports.catText = function(d){return "نص"};
 
 exports.catVariables = function(d){return "المتغيرات"};
 
@@ -18766,7 +18766,7 @@ exports.help = function(d){return "مساعدة"};
 
 exports.hintTitle = function(d){return "تلميح:"};
 
-exports.jump = function(d){return "قفز"};
+exports.jump = function(d){return "إقفز"};
 
 exports.levelIncompleteError = function(d){return "أنت استخدمت كل انواع القطع الضرورية ولكن ليس في الطريق الصحيح."};
 
@@ -18792,7 +18792,7 @@ exports.play = function(d){return "إلعب"};
 
 exports.puzzleTitle = function(d){return "اللغز "+v(d,"puzzle_number")+" من "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "إعادة"};
+exports.repeat = function(d){return "كرر"};
 
 exports.resetProgram = function(d){return "إعادة تعيين"};
 
@@ -18886,19 +18886,19 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ar = function(
 };
 exports.actor = function(d){return "الممثل"};
 
-exports.catActions = function(d){return "الأفعال"};
+exports.catActions = function(d){return "الاجراءات"};
 
-exports.catControl = function(d){return "الجمل التكرارية"};
+exports.catControl = function(d){return "الحلقات"};
 
 exports.catEvents = function(d){return "الأحداث"};
 
-exports.catLogic = function(d){return "منطق"};
+exports.catLogic = function(d){return "العمليات المنطقية"};
 
 exports.catMath = function(d){return "العمليات الحسابية"};
 
-exports.catProcedures = function(d){return "الدوال"};
+exports.catProcedures = function(d){return "دوال"};
 
-exports.catText = function(d){return "نص"};
+exports.catText = function(d){return "الجمل"};
 
 exports.catVariables = function(d){return "المتغيرات"};
 
@@ -18906,7 +18906,7 @@ exports.changeScoreTooltip = function(d){return "إضافة أو إزالة نق
 
 exports.changeScoreTooltipK1 = function(d){return "إضافة نقطة إلى النقاط."};
 
-exports.continue = function(d){return "استمرار"};
+exports.continue = function(d){return "أستمر"};
 
 exports.decrementPlayerScore = function(d){return "إزالة نقطة"};
 
@@ -18920,11 +18920,11 @@ exports.hello = function(d){return "مرحبا"};
 
 exports.helloWorld = function(d){return "مرحباً بالعالم!"};
 
-exports.incrementPlayerScore = function(d){return "تحصيل نقطة"};
+exports.incrementPlayerScore = function(d){return "عدد النقاط"};
 
 exports.makeProjectileDisappear = function(d){return "تختفي"};
 
-exports.makeProjectileBounce = function(d){return "ترتد"};
+exports.makeProjectileBounce = function(d){return "إرتداد"};
 
 exports.makeProjectileBlueFireball = function(d){return "إصنع كرة ملتهلة زرقاء"};
 
@@ -18962,7 +18962,7 @@ exports.moveDistance200 = function(d){return "200 بكسل"};
 
 exports.moveDistance400 = function(d){return "400 بكسل"};
 
-exports.moveDistancePixels = function(d){return "بكسل"};
+exports.moveDistancePixels = function(d){return "بكسلات"};
 
 exports.moveDistanceRandom = function(d){return " بكسل عشوائي"};
 
@@ -18990,11 +18990,11 @@ exports.moveUpTooltip = function(d){return "تحريك عنصر فاعل لأع�
 
 exports.moveTooltip = function(d){return "نقل عنصر فاعل."};
 
-exports.nextLevel = function(d){return "تهانينا! لقد قمت بإكمال هذا اللغز."};
+exports.nextLevel = function(d){return "تهانينا ! لقد تم الانتهاء من اللغز."};
 
 exports.no = function(d){return "لا"};
 
-exports.numBlocksNeeded = function(d){return "يمكن حل هذا اللغز مع % 1من الكتل ."};
+exports.numBlocksNeeded = function(d){return "يمكن حل هذا اللغز مع قطع %1."};
 
 exports.ouchExclamation = function(d){return "أي (الم) !"};
 
@@ -19120,7 +19120,7 @@ exports.setBackgroundTennis = function(d){return "وضع خلفية للتنس"}
 
 exports.setBackgroundWinter = function(d){return "وضع خلفية الشتاء"};
 
-exports.setBackgroundTooltip = function(d){return "تحديد صورة الخلفية"};
+exports.setBackgroundTooltip = function(d){return "تعيين صورة الخلفية"};
 
 exports.setScoreText = function(d){return "تعيين نقاط"};
 
@@ -19332,7 +19332,7 @@ exports.whenArrowUp = function(d){return "سهم لأعلى"};
 
 exports.whenArrowTooltip = function(d){return "قم بتنفيذ الإجراءات ادناه عندما يتم الضغط على المفتاح المحدد."};
 
-exports.whenDown = function(d){return "السهم لأسفل"};
+exports.whenDown = function(d){return "عندما يكون السهم للاسفل"};
 
 exports.whenDownTooltip = function(d){return "تنفيذ الإجراءات أدناه عند الضغط على مفتاح السهم لأسفل."};
 
@@ -19340,11 +19340,11 @@ exports.whenGameStarts = function(d){return "عندما تبدأ القصة"};
 
 exports.whenGameStartsTooltip = function(d){return "تنفيذ الإجراءات أدناه عندما تبدأ القصة."};
 
-exports.whenLeft = function(d){return "السهم الايسر"};
+exports.whenLeft = function(d){return "عندما يكون السهم الى اليسار"};
 
 exports.whenLeftTooltip = function(d){return "تنفيذ الإجراءات أدناه عند الضغط على مفتاح السهم الأيسر."};
 
-exports.whenRight = function(d){return "السهم الأيمن"};
+exports.whenRight = function(d){return "عندما يكون السهم الى الايمن"};
 
 exports.whenRightTooltip = function(d){return "تنفيذ الإجراءات أدناه عند الضغط على مفتاح السهم الأيمن."};
 
@@ -19390,7 +19390,7 @@ exports.whenSpriteCollidedWithRightEdge = function(d){return "يلمس الحا�
 
 exports.whenSpriteCollidedWithTopEdge = function(d){return "يلمس الحافة العليا"};
 
-exports.whenUp = function(d){return "عند الضغط على السهم لاعلى"};
+exports.whenUp = function(d){return "عندما يكون السهم الى الاعلى"};
 
 exports.whenUpTooltip = function(d){return "تنفيذ الإجراءات أدناه عند الضغط على مفتاح سهم لأعلى."};
 

@@ -7546,7 +7546,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.el=function(n){return n===1?"one":"other"}
 exports.blocksUsed = function(d){return "Μπλοκ χρησιμοποιημένα: %1"};
 
-exports.branches = function(d){return "Κλάδοι"};
+exports.branches = function(d){return "διακλαδώσεις"};
 
 exports.catColour = function(d){return "Χρώμα"};
 
@@ -7576,37 +7576,37 @@ exports.drawATriangle = function(d){return "σχεδίασε ένα τρίγων
 
 exports.drawACircle = function(d){return "Σχεδίασε ένα κύκλο"};
 
-exports.drawAFlower = function(d){return "σχεδιάστε ένα λουλούδι"};
+exports.drawAFlower = function(d){return "σχεδίασε ένα λουλούδι"};
 
-exports.drawAHexagon = function(d){return "σχεδιάστε ένα εξάγωνο"};
+exports.drawAHexagon = function(d){return "σχεδίασε ένα εξάγωνο"};
 
 exports.drawAHouse = function(d){return "σχεδίασε ένα σπίτι"};
 
-exports.drawAPlanet = function(d){return "σχεδιάστε ένα πλανήτη"};
+exports.drawAPlanet = function(d){return "σχεδίασε έναν πλανήτη"};
 
-exports.drawARhombus = function(d){return "σχεδιάστε ένα ρόμβο"};
+exports.drawARhombus = function(d){return "σχεδίασε έναν ρόμβο"};
 
-exports.drawARobot = function(d){return "σχεδιάστε ένα ρομπότ"};
+exports.drawARobot = function(d){return "σχεδίασε ένα ρομπότ"};
 
-exports.drawARocket = function(d){return "Σχεδιάστε έναν πύραυλο"};
+exports.drawARocket = function(d){return "σχεδίασε έναν πύραυλο"};
 
-exports.drawASnowflake = function(d){return "σχεδιάστε μια νιφάδα χιονιού"};
+exports.drawASnowflake = function(d){return "σχεδίασε μια νιφάδα χιονιού"};
 
 exports.drawASnowman = function(d){return "σχεδίασε έναν χιονάνθρωπο"};
 
-exports.drawAStar = function(d){return "σχεδιάστε ένα αστέρι"};
+exports.drawAStar = function(d){return "σχεδίασε ένα αστέρι"};
 
 exports.drawATree = function(d){return "σχεδίασε ένα δέντρο"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "σχεδίασε επάνω κύμα"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "σχεδίασε κάτω κύμα"};
 
 exports.heightParameter = function(d){return "ύψος"};
 
-exports.hideTurtle = function(d){return "απόκρυψη καλλιτέχνη"};
+exports.hideTurtle = function(d){return "κρύψε τον καλλιτέχνη"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "πήδα"};
 
 exports.jumpBackward = function(d){return "κάνε άλμα προς τα πίσω κατά"};
 
@@ -7614,15 +7614,15 @@ exports.jumpForward = function(d){return "κάνε άλμα προς τα εμπ
 
 exports.jumpTooltip = function(d){return "Μετακινεί τον καλλιτέχνη χωρίς να αφήνει ίχνη."};
 
-exports.jumpEastTooltip = function(d){return "Κινεί τον καλλιτέχνη ανατολικά χωρίς να αφήνει σημάδια."};
+exports.jumpEastTooltip = function(d){return "Μετακινεί τον καλλιτέχνη ανατολικά χωρίς να αφήνει σημάδια."};
 
-exports.jumpNorthTooltip = function(d){return "Κινεί τον καλλιτέχνη βόρεια χωρίς να αφήνει σημάδια."};
+exports.jumpNorthTooltip = function(d){return "Μετακινεί τον καλλιτέχνη βόρεια χωρίς να αφήνει σημάδια."};
 
-exports.jumpSouthTooltip = function(d){return "Κινεί τον καλλιτέχνη νότια χωρίς να αφήνει σημάδια."};
+exports.jumpSouthTooltip = function(d){return "Μετακινεί τον καλλιτέχνη νότια χωρίς να αφήνει σημάδια."};
 
-exports.jumpWestTooltip = function(d){return "Κινεί τον καλλιτέχνη δυτικά χωρίς να αφήνει σημάδια."};
+exports.jumpWestTooltip = function(d){return "Μετακινεί τον καλλιτέχνη δυτικά χωρίς να αφήνει σημάδια."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "Το πέτυχες σωστά εκτός από το μήκος που θα πηδήξεις."};
 
 exports.lengthParameter = function(d){return "μήκος"};
 
@@ -7630,21 +7630,21 @@ exports.loopVariable = function(d){return "μετρητής"};
 
 exports.moveBackward = function(d){return "προχώρησε προς τα πίσω κατά"};
 
-exports.moveEastTooltip = function(d){return "Κινεί τον καλλιτέχνη ανατολικά."};
+exports.moveEastTooltip = function(d){return "Μετακινεί τον καλλιτέχνη ανατολικά."};
 
 exports.moveForward = function(d){return "προχώρησε προς τα εμπρός κατά"};
 
 exports.moveForwardTooltip = function(d){return "Μετακινεί τον καλλιτέχνη μπροστά."};
 
-exports.moveNorthTooltip = function(d){return "Κινεί τον καλλιτέχνη βόρεια."};
+exports.moveNorthTooltip = function(d){return "Μετακινεί τον καλλιτέχνη βόρεια."};
 
-exports.moveSouthTooltip = function(d){return "Κινεί τον καλλιτέχνη νότια."};
+exports.moveSouthTooltip = function(d){return "Μετακινεί τον καλλιτέχνη νότια."};
 
-exports.moveWestTooltip = function(d){return "Κινεί τον καλλιτέχνη δυτικά."};
+exports.moveWestTooltip = function(d){return "Μετακινεί τον καλλιτέχνη δυτικά."};
 
-exports.moveTooltip = function(d){return "Μετακινεί τον καλλιτέχνη μπροστά ή πίσω κατά την ορισμένη τιμή."};
+exports.moveTooltip = function(d){return "Μετακινεί τον καλλιτέχνη μπροστά ή πίσω κατά την καθορισμένη τιμή."};
 
-exports.notBlackColour = function(d){return "Πρέπει να ορίσετε ένα χρώμα διαφορετικό από το μαύρο για αυτό το παζλ."};
+exports.notBlackColour = function(d){return "Πρέπει να ορίσεις ένα χρώμα διαφορετικό από το μαύρο γι αυτό το παζλ."};
 
 exports.numBlocksNeeded = function(d){return "Αυτό το παζλ μπορεί να λυθεί με %1 μπλοκ. Χρησιμοποιήσατε %2."};
 
@@ -7658,13 +7658,13 @@ exports.reinfFeedbackMsg = function(d){return "Αυτό θέλεις;  Πάτα 
 
 exports.setColour = function(d){return "όρισε χρώμα"};
 
-exports.setWidth = function(d){return "όρισε πλάτος"};
+exports.setWidth = function(d){return "όρισε πάχος"};
 
-exports.shareDrawing = function(d){return "Μοιράσου το σχέδιο σου:"};
+exports.shareDrawing = function(d){return "Μοιράσου το σχέδιό σου:"};
 
 exports.showMe = function(d){return "Δείξε μου"};
 
-exports.showTurtle = function(d){return "εμφάνιση καλλιτέχνη"};
+exports.showTurtle = function(d){return "δείξε καλλιτέχνη"};
 
 exports.step = function(d){return "βήμα"};
 
@@ -7682,7 +7682,7 @@ exports.turtleVisibilityTooltip = function(d){return "Κάνει τον καλλ
 
 exports.widthTooltip = function(d){return "Αλλάζει το πάχος του μολυβιού."};
 
-exports.wrongColour = function(d){return "Η εικόνα σας έχει το λάθος χρώμα. Για αυτό το παζλ, πρέπει να είναι %1."};
+exports.wrongColour = function(d){return "Η εικόνα σας έχει λάθος χρώμα. Για αυτό το παζλ, πρέπει να είναι %1."};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){
@@ -7695,7 +7695,7 @@ exports.catActions = function(d){return "Ενέργειες"};
 
 exports.catColour = function(d){return "Χρώμα"};
 
-exports.catLogic = function(d){return "Λογικά"};
+exports.catLogic = function(d){return "Λογική"};
 
 exports.catLists = function(d){return "Λίστες"};
 
@@ -7705,7 +7705,7 @@ exports.catMath = function(d){return "Μαθηματικά"};
 
 exports.catProcedures = function(d){return "Συναρτήσεις"};
 
-exports.catText = function(d){return "Κείμενο"};
+exports.catText = function(d){return "κείμενο"};
 
 exports.catVariables = function(d){return "Μεταβλητές"};
 
@@ -7783,7 +7783,7 @@ exports.runTooltip = function(d){return "Τρέξε το πρόγραμμα πο
 
 exports.score = function(d){return "σκορ"};
 
-exports.showCodeHeader = function(d){return "Προβολή Κώδικα"};
+exports.showCodeHeader = function(d){return "Προβολή κώδικα"};
 
 exports.showGeneratedCode = function(d){return "Προβολή κώδικα"};
 
@@ -7797,7 +7797,7 @@ exports.tooManyBlocksMsg = function(d){return "Αυτό το παζλ μπορε
 
 exports.tooMuchWork = function(d){return "Με ανάγκασες να κάνω πολλή δουλειά! Μπορείς με λιγότερες επαναλήψεις;"};
 
-exports.toolboxHeader = function(d){return "Μπλοκ"};
+exports.toolboxHeader = function(d){return "μπλοκ"};
 
 exports.openWorkspace = function(d){return "Πώς λειτουργεί"};
 

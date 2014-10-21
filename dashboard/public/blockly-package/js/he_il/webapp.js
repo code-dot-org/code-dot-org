@@ -7516,15 +7516,15 @@ exports.parseElement = function(text) {
 
 },{}],37:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
-exports.and = function(d){return "וגם"};
+exports.and = function(d){return "ו"};
 
-exports.blocklyMessage = function(d){return "Blockly"};
+exports.blocklyMessage = function(d){return "בלוקלי"};
 
 exports.catActions = function(d){return "פעולות"};
 
 exports.catColour = function(d){return "צבע"};
 
-exports.catLogic = function(d){return "לוגיקה"};
+exports.catLogic = function(d){return "הגיון"};
 
 exports.catLists = function(d){return "רשימות"};
 
@@ -7548,7 +7548,7 @@ exports.dialogOK = function(d){return "אישור"};
 
 exports.directionNorthLetter = function(d){return "צ"};
 
-exports.directionSouthLetter = function(d){return "ס"};
+exports.directionSouthLetter = function(d){return "ד"};
 
 exports.directionEastLetter = function(d){return "מז"};
 
@@ -7576,7 +7576,7 @@ exports.help = function(d){return "עזרה"};
 
 exports.hintTitle = function(d){return "רמז:"};
 
-exports.jump = function(d){return "קפיצה"};
+exports.jump = function(d){return "קפוץ"};
 
 exports.levelIncompleteError = function(d){return "הנך משתמש בכל סוגי הבלוקים הנדרשים אך לא באופן הנכון."};
 
@@ -7602,7 +7602,7 @@ exports.play = function(d){return "לשחק"};
 
 exports.puzzleTitle = function(d){return "חידה "+v(d,"puzzle_number")+" מ- "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "חזור"};
+exports.repeat = function(d){return "חזור על"};
 
 exports.resetProgram = function(d){return "אפס"};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "לראות איך גמרת, ולנ
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "פעולות"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "לולאות"};
 
 exports.catEvents = function(d){return "Events"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "הגיון"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "מתמטיקה"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "פונקציות"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "טקסט"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "משתנים"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "המשך"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "כל הכבוד! פתרת את החידה האחרונה."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "כל הכבוד! השלמת את החידה הזה."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "לא"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "ניתן לפתור את החידה עם %1 של אבני בנייה."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "בצע"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "כן"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

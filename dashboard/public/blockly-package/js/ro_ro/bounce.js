@@ -11567,13 +11567,13 @@ exports.heightParameter = function(d){return "înălțime"};
 
 exports.ifCode = function(d){return "dacă"};
 
-exports.ifPathAhead = function(d){return "dacă drum înainte"};
+exports.ifPathAhead = function(d){return "dacă drum înainte "};
 
 exports.ifTooltip = function(d){return "Dacă există o cale de acces în direcţia specificată, atunci realizează unele acțiunii."};
 
-exports.ifelseTooltip = function(d){return "Dacă există o cale de acces în direcţia specificată, atunci realizează primul bloc de acţiuni. Altfel, execută al doilea bloc de acţiuni."};
+exports.ifelseTooltip = function(d){return "Dacă există o cale de acces în direcţia specificată, atunci realizează primul bloc de acţiuni. Altfel, fă-l pe al doilea bloc de acţiuni."};
 
-exports.incrementOpponentScore = function(d){return "punct de scor al adversarului"};
+exports.incrementOpponentScore = function(d){return "adaugă punct la scorul adversarului"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Adaugă unu la scorul curent al adversarului."};
 
@@ -11625,47 +11625,47 @@ exports.numBlocksNeeded = function(d){return "Acest puzzle poate fi rezolvat cu 
 
 exports.pathAhead = function(d){return "cale înainte"};
 
-exports.pathLeft = function(d){return "dacă cale de acces la stânga"};
+exports.pathLeft = function(d){return "dacă cale la stânga"};
 
-exports.pathRight = function(d){return "dacă cale de acces la dreapta"};
+exports.pathRight = function(d){return "dacă cale la dreapta"};
 
-exports.pilePresent = function(d){return "există o grămadă"};
+exports.pilePresent = function(d){return "este o grămadă"};
 
-exports.playSoundCrunch = function(d){return "Redă un sunet de zdrobire"};
+exports.playSoundCrunch = function(d){return "redă sunet de zdrobire"};
 
-exports.playSoundGoal1 = function(d){return "Redă sunet obiectiv 1"};
+exports.playSoundGoal1 = function(d){return "redă sunet obiectiv 1"};
 
-exports.playSoundGoal2 = function(d){return "Redă sunet obiectiv 2"};
+exports.playSoundGoal2 = function(d){return "redă sunet obiectiv 2"};
 
-exports.playSoundHit = function(d){return "redă sunet de lovitură"};
+exports.playSoundHit = function(d){return "redă sunet lovit"};
 
-exports.playSoundLosePoint = function(d){return "redă sunet de punct slab"};
+exports.playSoundLosePoint = function(d){return "redă sunet punct pierdut"};
 
-exports.playSoundLosePoint2 = function(d){return "redă sunet de punct slab 2"};
+exports.playSoundLosePoint2 = function(d){return "redă sunet punct pierdut 2"};
 
 exports.playSoundRetro = function(d){return "redă sunet retro"};
 
-exports.playSoundRubber = function(d){return "redă sunet de cauciuc"};
+exports.playSoundRubber = function(d){return "redă sunet radieră"};
 
-exports.playSoundSlap = function(d){return "redă sunet de plezneală"};
+exports.playSoundSlap = function(d){return "redă sunet pălmuire"};
 
 exports.playSoundTooltip = function(d){return "Redă sunetul ales."};
 
-exports.playSoundWinPoint = function(d){return "redă sunet de punct victorios"};
+exports.playSoundWinPoint = function(d){return "redă sunet punct câștigat"};
 
-exports.playSoundWinPoint2 = function(d){return "redă sunet de punct victorios 2"};
+exports.playSoundWinPoint2 = function(d){return "redă sunet punct câștigat 2"};
 
-exports.playSoundWood = function(d){return "redă sunet de lemn"};
+exports.playSoundWood = function(d){return "redă sunet lemn"};
 
 exports.putdownTower = function(d){return "pune jos turnul"};
 
-exports.reinfFeedbackMsg = function(d){return "Poţi apăsa butonul \"Încearcă din nou\" pentru a reveni la jocul tău."};
+exports.reinfFeedbackMsg = function(d){return "Tu poţi apăsa butonul \"Încercaţi din nou\" pentru a reveni să joci jocul tău."};
 
 exports.removeSquare = function(d){return "elimină pătratul"};
 
 exports.repeatUntil = function(d){return "repetă până când"};
 
-exports.repeatUntilBlocked = function(d){return "atâta timp cât există cale de acces înainte"};
+exports.repeatUntilBlocked = function(d){return "atîta timp cât există cale de acces înainte"};
 
 exports.repeatUntilFinish = function(d){return "repetă până la final"};
 
@@ -11725,7 +11725,7 @@ exports.setPaddleSpeedTooltip = function(d){return "Setează viteza paletei"};
 
 exports.shareBounceTwitter = function(d){return "Hai să vezi ce  joc Ţopăială am creat. L-am realizat cu @codeorg"};
 
-exports.shareGame = function(d){return "distribuie jocul tău:"};
+exports.shareGame = function(d){return "condivide jocul tău:"};
 
 exports.turnLeft = function(d){return "ia-o la stânga"};
 
@@ -11741,15 +11741,15 @@ exports.whenBallMissesPaddle = function(d){return "Când bila ratează paleta"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Execută acţiunile de mai jos când o minge ratează paletele."};
 
-exports.whenDown = function(d){return "când săgeata în jos"};
+exports.whenDown = function(d){return "când tasta săgeată în jos"};
 
 exports.whenDownTooltip = function(d){return "Execută acțiunile de mai jos atunci când tasta săgeată în jos este apăsată."};
 
-exports.whenGameStarts = function(d){return "Când începe jocul"};
+exports.whenGameStarts = function(d){return "când începe jocul"};
 
 exports.whenGameStartsTooltip = function(d){return "Execută acţiunile de mai jos atunci când începe jocul."};
 
-exports.whenLeft = function(d){return "când săgeată la stânga"};
+exports.whenLeft = function(d){return "când tasta săgeată la stânga"};
 
 exports.whenLeftTooltip = function(d){return "Execută acțiunile de mai jos atunci când tasta săgeată la stânga este apăsată."};
 
@@ -11757,11 +11757,11 @@ exports.whenPaddleCollided = function(d){return "când bila lovește paleta"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Execută acţiunile de mai jos când o bilă se ciocneşte cu o paletă."};
 
-exports.whenRight = function(d){return "când săgeată la dreapta"};
+exports.whenRight = function(d){return "când tasta săgeată la dreapta"};
 
 exports.whenRightTooltip = function(d){return "Execută acțiunile de mai jos atunci când tasta săgeată la dreapta este apăsată."};
 
-exports.whenUp = function(d){return "când săgeată în sus"};
+exports.whenUp = function(d){return "atunci când săgeată în sus"};
 
 exports.whenUpTooltip = function(d){return "Execută acțiunile de mai jos atunci când tasta săgeată în sus este apăsată."};
 
@@ -11787,7 +11787,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ro = function 
   }
   return 'other';
 };
-exports.and = function(d){return "și"};
+exports.and = function(d){return "şi"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -11805,7 +11805,7 @@ exports.catMath = function(d){return "Matematică"};
 
 exports.catProcedures = function(d){return "Funcţii"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variabile"};
 
@@ -11813,7 +11813,7 @@ exports.codeTooltip = function(d){return "Vezi codul JavaScript generat."};
 
 exports.continue = function(d){return "Continuă"};
 
-exports.dialogCancel = function(d){return "Revocare"};
+exports.dialogCancel = function(d){return "Anulează"};
 
 exports.dialogOK = function(d){return "OK"};
 
@@ -11837,7 +11837,7 @@ exports.finalStage = function(d){return "Felicitări! Ai terminat ultima etapă.
 
 exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"ro",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Finalizare"};
+exports.finish = function(d){return "Sfârsit"};
 
 exports.generatedCodeInfo = function(d){return "Chiar și în universităţi de top se predă programarea bazată pe blocuri de coduri (de exemplu, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Dar în esență, blocurile de cod pe care le-ai compus pot fi de asemenea afișate în JavaScript, limbajul de programare cel mai utilizat din lume:"};
 
@@ -11847,7 +11847,7 @@ exports.help = function(d){return "Ajutor"};
 
 exports.hintTitle = function(d){return "Sugestie:"};
 
-exports.jump = function(d){return "sări"};
+exports.jump = function(d){return "sari"};
 
 exports.levelIncompleteError = function(d){return "Utilizezi toate tipurile de blocuri necesare, dar nu așa cum trebuie."};
 
@@ -11883,13 +11883,13 @@ exports.runTooltip = function(d){return "Rulează programul definit de blocuri �
 
 exports.score = function(d){return "scor"};
 
-exports.showCodeHeader = function(d){return "Arată Codul"};
+exports.showCodeHeader = function(d){return "Arată codul"};
 
 exports.showGeneratedCode = function(d){return "Arată codul"};
 
 exports.subtitle = function(d){return "un mediu de programare vizual"};
 
-exports.textVariable = function(d){return "text"};
+exports.textVariable = function(d){return "scris"};
 
 exports.tooFewBlocksMsg = function(d){return "Folosești toate tipurile necesare de blocuri, dar încearcă să utilizezi mai multe din aceste tipuri de blocuri pentru a completa puzzle-ul."};
 
@@ -11897,7 +11897,7 @@ exports.tooManyBlocksMsg = function(d){return "Acest puzzle poate fi rezolvat cu
 
 exports.tooMuchWork = function(d){return "M-ai făcut să lucrez foarte mult! Ai putea să încerci să repeți de mai puține ori?"};
 
-exports.toolboxHeader = function(d){return "Blocuri"};
+exports.toolboxHeader = function(d){return "blocuri"};
 
 exports.openWorkspace = function(d){return "Cum funcţionează"};
 

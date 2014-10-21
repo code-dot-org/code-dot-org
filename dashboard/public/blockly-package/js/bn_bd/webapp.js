@@ -7536,7 +7536,7 @@ exports.catProcedures = function(d){return "ফাংশনগুলি"};
 
 exports.catText = function(d){return "পাঠ"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "চলকগুলো"};
 
 exports.codeTooltip = function(d){return "See generated JavaScript code."};
 
@@ -7677,23 +7677,23 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.bn=function(n){return n===1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "ক্রিয়া"};
 
 exports.catControl = function(d){return "Loops"};
 
 exports.catEvents = function(d){return "Events"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "যুক্তি"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "গণিত"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "ফাংশনগুলি"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "পাঠ"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "চলকগুলো"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "চালিয়ে যান"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
@@ -7703,9 +7703,9 @@ exports.finalLevel = function(d){return "Congratulations! You have solved the fi
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "অভিনন্দন! আপনি এই ধাঁধা সম্পন্ন করেছেন।"};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "না"};
 
 exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
 
@@ -7713,7 +7713,7 @@ exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" b
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "করা"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "\"হ্যাঁ\""};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

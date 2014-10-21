@@ -7520,7 +7520,7 @@ exports.and = function(d){return "ve"};
 
 exports.blocklyMessage = function(d){return "Parçalı"};
 
-exports.catActions = function(d){return "İşlemler"};
+exports.catActions = function(d){return "Eylemler"};
 
 exports.catColour = function(d){return "Renk"};
 
@@ -7534,13 +7534,13 @@ exports.catMath = function(d){return "Matematik"};
 
 exports.catProcedures = function(d){return "Fonksiyonlar"};
 
-exports.catText = function(d){return "Yazı"};
+exports.catText = function(d){return "yazı"};
 
 exports.catVariables = function(d){return "Değişkenler"};
 
 exports.codeTooltip = function(d){return "Oluşturulan JavaScript kodunu gör."};
 
-exports.continue = function(d){return "Devam"};
+exports.continue = function(d){return "Devam Et"};
 
 exports.dialogCancel = function(d){return "İptal"};
 
@@ -7560,13 +7560,13 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Tekrar\" bloğu veya \"Eğer
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Fonksiyon bloğunun çalışabilmesi için içine başka bloklar koymalısın."};
 
-exports.extraTopBlocks = function(d){return "Bir olay bloğuna eklenmemiş ekstra blokların var."};
+exports.extraTopBlocks = function(d){return "Blokları bağlamadın. \"Çalıştığı zaman\" bloğuna bağlamayı denediniz mi?"};
 
 exports.finalStage = function(d){return "Son aşamayı bitirdiniz. Tebrikler!"};
 
 exports.finalStageTrophies = function(d){return "Tebrikler! Son aşamayı bitirerek "+p(d,"numTrophies",0,"tr",{"one":"bir ganimet","other":n(d,"numTrophies")+" ganimet"})+" kazandınız."};
 
-exports.finish = function(d){return "Bitir"};
+exports.finish = function(d){return "Bitiş"};
 
 exports.generatedCodeInfo = function(d){return "Dünyanın en iyi üniversiteleri bile yap-boz oyun tabanlı kodlama öğretiyor (Örn. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ayrıca detaylı incelerseniz, birleştirdiğiniz bloklar dünyanın en yaygın kullanılan kodlama dili olan JavaScript dilinde de görüntüleniyor:"};
 
@@ -7576,7 +7576,7 @@ exports.help = function(d){return "Yardım"};
 
 exports.hintTitle = function(d){return "İpucu:"};
 
-exports.jump = function(d){return "atla"};
+exports.jump = function(d){return "zıpla"};
 
 exports.levelIncompleteError = function(d){return "Tüm gerekli türdeki blokları kullanıyorsunuz ama doğru şekilde değil."};
 
@@ -7602,7 +7602,7 @@ exports.play = function(d){return "oynat"};
 
 exports.puzzleTitle = function(d){return "Bulmaca "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "tekrarla"};
+exports.repeat = function(d){return "bu işlemleri"};
 
 exports.resetProgram = function(d){return "Yeniden başla"};
 
@@ -7618,7 +7618,7 @@ exports.showGeneratedCode = function(d){return "Kodu Görüntüle"};
 
 exports.subtitle = function(d){return "Bir görsel programa ortamı"};
 
-exports.textVariable = function(d){return "metin yazısı"};
+exports.textVariable = function(d){return "metin"};
 
 exports.tooFewBlocksMsg = function(d){return "Tüm gerekli blok türlerini kullanıyorsun,fakat bulmacayı tamamlamak için bu blok tiplerinden daha fazla kullanmayı dene."};
 
@@ -7626,7 +7626,7 @@ exports.tooManyBlocksMsg = function(d){return "Bu bulmaca <x id='START_SPAN'/><x
 
 exports.tooMuchWork = function(d){return "Bana çok fazla iş yaptırdın!Daha az tekrar etmeyi deneyebilir misin ?"};
 
-exports.toolboxHeader = function(d){return "Bloklar"};
+exports.toolboxHeader = function(d){return "bloklar"};
 
 exports.openWorkspace = function(d){return "Nasıl Çalışır"};
 
@@ -7642,7 +7642,7 @@ exports.saveToGallery = function(d){return "Galerine kaydet"};
 
 exports.savedToGallery = function(d){return "Galerine kaydedildi!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Üzgünüz, bu programı paylaşamıyoruz."};
 
 exports.typeCode = function(d){return "Açıklamaların altına kendi JavaScript kodunu yaz."};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "Sonucunu gör ve programını düz
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.tr=function(n){return "other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Eylemler"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Döngüler"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Olaylar"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Mantık"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Matematik"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Fonksiyonlar"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "yazı"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Değişkenler"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Devam Et"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Tebrikler! Son bulmacayı da çözdünüz."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Tebrikler! Bu bulmacayı tamamladınız."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Hayır"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Bu bulmaca %1 blok kullanılarak çözülebilir."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "Sonsuza kadar tekrarla"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "yap"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Evet"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

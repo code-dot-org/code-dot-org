@@ -13495,7 +13495,7 @@ exports.uncheckedCloudError = function(d){return "Make sure to check all clouds 
 
 exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
 
-exports.whileMsg = function(d){return "while"};
+exports.whileMsg = function(d){return "habang"};
 
 exports.whileTooltip = function(d){return "Ulitin ang mga nakalakip na mga aksyon hanggang ang dulo ay maabot."};
 

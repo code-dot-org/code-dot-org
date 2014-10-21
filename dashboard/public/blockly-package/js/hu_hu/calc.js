@@ -7554,7 +7554,7 @@ exports.catControl = function(d){return "Ciklusok"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Funkciók"};
+exports.catProcedures = function(d){return "Függvények"};
 
 exports.catTurtle = function(d){return "Műveletek"};
 
@@ -7568,7 +7568,7 @@ exports.degrees = function(d){return "fok"};
 
 exports.depth = function(d){return "depth"};
 
-exports.dots = function(d){return "pixel"};
+exports.dots = function(d){return "képpontok"};
 
 exports.drawASquare = function(d){return "rajzoljon egy négyzetet"};
 
@@ -7592,7 +7592,7 @@ exports.drawARocket = function(d){return "Rajzolj egy rakétát"};
 
 exports.drawASnowflake = function(d){return "Rajzolj egy hópelyhet"};
 
-exports.drawASnowman = function(d){return "rajzoljon egy hóembert"};
+exports.drawASnowman = function(d){return "rajzolj egy hóembert"};
 
 exports.drawAStar = function(d){return "Rajzolj egy csillagot"};
 
@@ -7602,7 +7602,7 @@ exports.drawUpperWave = function(d){return "draw upper wave"};
 
 exports.drawLowerWave = function(d){return "draw lower wave"};
 
-exports.heightParameter = function(d){return "Magasság"};
+exports.heightParameter = function(d){return "magasság"};
 
 exports.hideTurtle = function(d){return "művész elrejtése"};
 
@@ -7654,13 +7654,13 @@ exports.penTooltip = function(d){return "Felemeli vagy lenyonja a ceruzát, hogy
 
 exports.penUp = function(d){return "ceruza fel"};
 
-exports.reinfFeedbackMsg = function(d){return "Úgy néz ez ki ahogy akarta? Nyomja meg a \"Próbáld újra\" gombot , hogy lása a saját rajzát."};
+exports.reinfFeedbackMsg = function(d){return "Ez úgy néz ki amit akartál? Nyomd meg a \"Próbáld újra\" gombot ,hogy lásd a rajzod."};
 
 exports.setColour = function(d){return "színbeállítások megadása"};
 
 exports.setWidth = function(d){return "szélesség beállítása"};
 
-exports.shareDrawing = function(d){return "Ossza meg a rajzát:"};
+exports.shareDrawing = function(d){return "Oszd meg a rajzodat:"};
 
 exports.showMe = function(d){return "mutasd"};
 
@@ -7691,7 +7691,7 @@ exports.and = function(d){return "és"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
-exports.catActions = function(d){return "Cselekvések"};
+exports.catActions = function(d){return "Műveletek"};
 
 exports.catColour = function(d){return "Szín"};
 
@@ -7703,9 +7703,9 @@ exports.catLoops = function(d){return "Ciklusok"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Függvények"};
+exports.catProcedures = function(d){return "Funkciók"};
 
-exports.catText = function(d){return "Szöveg"};
+exports.catText = function(d){return "szöveg"};
 
 exports.catVariables = function(d){return "Változók"};
 
@@ -7783,7 +7783,7 @@ exports.runTooltip = function(d){return "A munkalapon összeépített program fu
 
 exports.score = function(d){return "pontszám"};
 
-exports.showCodeHeader = function(d){return "Kód Megjelenítése"};
+exports.showCodeHeader = function(d){return "Kód megjelenítése"};
 
 exports.showGeneratedCode = function(d){return "Kód megjelenítése"};
 
@@ -7797,7 +7797,7 @@ exports.tooManyBlocksMsg = function(d){return "Ez a feladvány megoldható a <x 
 
 exports.tooMuchWork = function(d){return "Sokat dolgoztattál. Megpróbálnád egy kicsit kevesebb ismétléssel?"};
 
-exports.toolboxHeader = function(d){return "Blokkok"};
+exports.toolboxHeader = function(d){return "blokkok"};
 
 exports.openWorkspace = function(d){return "Hogyan is működik"};
 

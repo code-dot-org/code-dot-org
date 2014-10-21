@@ -7547,7 +7547,7 @@ exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkcije"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Varijable"};
 
@@ -7559,13 +7559,13 @@ exports.dialogCancel = function(d){return "Odustani"};
 
 exports.dialogOK = function(d){return "U redu"};
 
-exports.directionNorthLetter = function(d){return "S"};
+exports.directionNorthLetter = function(d){return "Sjever"};
 
-exports.directionSouthLetter = function(d){return "J"};
+exports.directionSouthLetter = function(d){return "Jug"};
 
-exports.directionEastLetter = function(d){return "I"};
+exports.directionEastLetter = function(d){return "Istok"};
 
-exports.directionWestLetter = function(d){return "Z"};
+exports.directionWestLetter = function(d){return "Zapad"};
 
 exports.end = function(d){return "kraj"};
 
@@ -7579,7 +7579,7 @@ exports.finalStage = function(d){return "Čestitamo! Posljednja etapa je završe
 
 exports.finalStageTrophies = function(d){return "Čestitamo! Završena je posljednja etapa i osvajaš "+p(d,"numTrophies",0,"hr",{"one":"trofej","other":n(d,"numTrophies")+" trofeja"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Kraj"};
 
 exports.generatedCodeInfo = function(d){return "Čak i vrhunska sveučilišta podučavaju kodiranje pomoću blokova (npr. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ali u suštini, blokovi koje si spojio se mogu prikazati kao kôd u JavaScriptu, najkorištenijem programskom jeziku na svijetu:"};
 
@@ -7593,7 +7593,7 @@ exports.jump = function(d){return "skoči"};
 
 exports.levelIncompleteError = function(d){return "Koristiš sve potrebne vrste blokova, ali na pogrešan način."};
 
-exports.listVariable = function(d){return "popis"};
+exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Napravi vlastitu Flappy igricu"};
 
@@ -7703,43 +7703,43 @@ var MessageFormat = require("messageformat");MessageFormat.locale.hr = function 
   }
   return 'other';
 };
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Akcije"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Petlje"};
 
 exports.catEvents = function(d){return "Events"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logika"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Funkcije"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "tekst"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Varijable"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Nastavi"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Čestitamo ! Riješili ste posljednji zadatak."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Čestitamo! Ovaj zadatak je riješen."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Ne"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Ovaj zadatak se može riješiti s %1 blokova."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "napravi"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7751,7 +7751,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Da"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

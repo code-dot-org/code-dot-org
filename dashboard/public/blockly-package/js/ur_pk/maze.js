@@ -13236,7 +13236,7 @@ exports.generatedCodeInfo = function(d){return "The blocks for your program can 
 
 exports.hashError = function(d){return "Sorry, '%1' doesn't correspond with any saved program."};
 
-exports.help = function(d){return "Help"};
+exports.help = function(d){return "مدد"};
 
 exports.hintTitle = function(d){return "Hint:"};
 
@@ -13244,7 +13244,7 @@ exports.jump = function(d){return "jump"};
 
 exports.levelIncompleteError = function(d){return "You are using all of the necessary types of blocks but not in the right way."};
 
-exports.listVariable = function(d){return "list"};
+exports.listVariable = function(d){return "فہرست"};
 
 exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
 
@@ -13361,9 +13361,9 @@ exports.dirS = function(d){return "S"};
 
 exports.dirW = function(d){return "W"};
 
-exports.doCode = function(d){return "do"};
+exports.doCode = function(d){return "کر"};
 
-exports.elseCode = function(d){return "else"};
+exports.elseCode = function(d){return "ni to"};
 
 exports.fill = function(d){return "fill 1"};
 
@@ -13473,7 +13473,7 @@ exports.removeSquare = function(d){return "remove square"};
 
 exports.repeatCarefullyError = function(d){return "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end."};
 
-exports.repeatUntil = function(d){return "repeat until"};
+exports.repeatUntil = function(d){return "تک دہرائیں"};
 
 exports.repeatUntilBlocked = function(d){return "while path ahead"};
 

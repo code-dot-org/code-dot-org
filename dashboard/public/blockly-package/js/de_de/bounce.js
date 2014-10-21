@@ -11562,7 +11562,7 @@ exports.ifPathAhead = function(d){return "Wenn Weg voraus"};
 
 exports.ifTooltip = function(d){return "Wenn ein Weg in die benannte Richtung existiert, dann führe ein paar Aktionen aus."};
 
-exports.ifelseTooltip = function(d){return "Wenn ein Weg in die benannte Richtung existiert, beginne mit dem ersten Block, ansonsten den zweiten Block vor."};
+exports.ifelseTooltip = function(d){return "Wenn ein Weg in die benannte Richtung existiert, beginnen Sie mit dem ersten Block, ansonsten nehmen Sie sich den zweiten Block vor."};
 
 exports.incrementOpponentScore = function(d){return "Punkt für den Gegner"};
 
@@ -11570,7 +11570,7 @@ exports.incrementOpponentScoreTooltip = function(d){return "Einen Punkt zum gegn
 
 exports.incrementPlayerScore = function(d){return "Punkt erzielen"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Punktestand des Spielers um eins erhöhen."};
+exports.incrementPlayerScoreTooltip = function(d){return "Erhöhe den Punktestand um 1."};
 
 exports.isWall = function(d){return "ist das eine Wand"};
 
@@ -11588,7 +11588,7 @@ exports.moveDownTooltip = function(d){return "Bewege das Paddel nach unten."};
 
 exports.moveForward = function(d){return "vorwärts bewegen"};
 
-exports.moveForwardTooltip = function(d){return "Bewege mich ein Feld nach vorne."};
+exports.moveForwardTooltip = function(d){return "Bewegen Sie mich ein Feld nach vorne."};
 
 exports.moveLeft = function(d){return "nach links bewegen"};
 
@@ -11608,35 +11608,35 @@ exports.no = function(d){return "Nein"};
 
 exports.noPathAhead = function(d){return "Pfad ist blockiert"};
 
-exports.noPathLeft = function(d){return "kein Pfad auf der linken Seite"};
+exports.noPathLeft = function(d){return "kein Pfad zur linken Seite"};
 
-exports.noPathRight = function(d){return "kein Pfad auf der rechten Seite"};
+exports.noPathRight = function(d){return "kein Pfad zur rechten Seite"};
 
-exports.numBlocksNeeded = function(d){return "Dieses Puzzle kann mit %1 Bausteinen gelöst werden."};
+exports.numBlocksNeeded = function(d){return "Dieses Puzzle kann mit  %1 Bausteinen gelöst werden."};
 
-exports.pathAhead = function(d){return "Pfad voraus"};
+exports.pathAhead = function(d){return "Weg voraus"};
 
-exports.pathLeft = function(d){return "falls auf der linken Seite ein Pfad ist"};
+exports.pathLeft = function(d){return "Wenn Weg auf der linken Seite"};
 
-exports.pathRight = function(d){return "falls auf der rechten Seite ein Pfad ist"};
+exports.pathRight = function(d){return "Wenn Weg auf der rechten Seite"};
 
-exports.pilePresent = function(d){return "Da ist ein Stapel"};
+exports.pilePresent = function(d){return "Auf einem Haufen"};
 
-exports.playSoundCrunch = function(d){return "das Knuspergeräusch abspielen"};
+exports.playSoundCrunch = function(d){return "Crunch sound abspielen"};
 
 exports.playSoundGoal1 = function(d){return "Ton für Tor 1 abspielen"};
 
 exports.playSoundGoal2 = function(d){return "Ton für Tor 2 abspielen"};
 
-exports.playSoundHit = function(d){return "spiele treffer ton"};
+exports.playSoundHit = function(d){return "Trefferton abspielen"};
 
-exports.playSoundLosePoint = function(d){return "Ton für Punkteverlust abspielen"};
+exports.playSoundLosePoint = function(d){return "Ton für Punktverlust abspielen"};
 
-exports.playSoundLosePoint2 = function(d){return "Alternativer Ton für Punkteverlust abspielen"};
+exports.playSoundLosePoint2 = function(d){return "Alternativen Ton für Punktverlust abspielen"};
 
-exports.playSoundRetro = function(d){return "Retrosound abspielen"};
+exports.playSoundRetro = function(d){return "Retroton abspielen"};
 
-exports.playSoundRubber = function(d){return "Gummiton abspielen"};
+exports.playSoundRubber = function(d){return "Ton für Gummi abspielen"};
 
 exports.playSoundSlap = function(d){return "Schlagsound abspielen"};
 
@@ -11644,17 +11644,17 @@ exports.playSoundTooltip = function(d){return "Den ausgewählten Sound abspielen
 
 exports.playSoundWinPoint = function(d){return "Gewinnton abspielen"};
 
-exports.playSoundWinPoint2 = function(d){return "Alternativer Gewinnton abspielen"};
+exports.playSoundWinPoint2 = function(d){return "Alternativen Gewinnton abspielen"};
 
 exports.playSoundWood = function(d){return "Holzton abspielen"};
 
 exports.putdownTower = function(d){return "Stellen Sie den Turm ab"};
 
-exports.reinfFeedbackMsg = function(d){return "Du kannst den \"Versuche es erneut\"-Knopf drücken, um weiterzuspielen."};
+exports.reinfFeedbackMsg = function(d){return "Du kannst den \"Versuche erneut\"-Button drücken, um weiterzuspielen."};
 
 exports.removeSquare = function(d){return "Viereck entfernen"};
 
-exports.repeatUntil = function(d){return "wiederholen bis"};
+exports.repeatUntil = function(d){return "Wiederhole bis"};
 
 exports.repeatUntilBlocked = function(d){return "Solange ein Weg vor dir liegt"};
 
@@ -11668,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "Setze Hartplatz als Hinterg
 
 exports.setBackgroundRetro = function(d){return "Setze retro Hintergrund"};
 
-exports.setBackgroundTooltip = function(d){return "Legt das Hintergrundbild fest"};
+exports.setBackgroundTooltip = function(d){return "Hintergrundbild auswählen"};
 
 exports.setBallRandom = function(d){return "Setze zufälligen Ball"};
 
@@ -11734,15 +11734,15 @@ exports.whenBallMissesPaddleTooltip = function(d){return "Führe die nachfolgend
 
 exports.whenDown = function(d){return "Wenn Pfeil-nach-unten"};
 
-exports.whenDownTooltip = function(d){return "Führe die nachfolgenden Aktionen aus, wenn die Pfeil-nach-unten Taste gedrückt ist."};
+exports.whenDownTooltip = function(d){return "Führe die nachfolgenden Aktionen aus, wenn die Pfeil-runter-Taste gedrückt wird."};
 
-exports.whenGameStarts = function(d){return "Wenn das Spiel beginnt"};
+exports.whenGameStarts = function(d){return "Wenn Spiel gestartet wird"};
 
-exports.whenGameStartsTooltip = function(d){return "Führe die folgenden Aktionen aus, wenn das Spiel beginnt."};
+exports.whenGameStartsTooltip = function(d){return "Führe die Aktionen unten aus, wenn das Spiel startet."};
 
 exports.whenLeft = function(d){return "Wenn Pfeil-nach-links"};
 
-exports.whenLeftTooltip = function(d){return "Führe die nachfolgenden Aktionen aus, wenn die Pfeil-links-Taste gedrückt ist."};
+exports.whenLeftTooltip = function(d){return "Führe die nachfolgenden Aktionen aus, wenn die Pfeil-links-Taste gedrückt wird."};
 
 exports.whenPaddleCollided = function(d){return "Wenn Ball den Schläger trifft"};
 
@@ -11762,7 +11762,7 @@ exports.whenWallCollidedTooltip = function(d){return "Führe untere Aktion aus w
 
 exports.whileMsg = function(d){return "solange"};
 
-exports.whileTooltip = function(d){return "Wiederhole die umschlossenen Aktionen bis der Endpunkt erreicht ist."};
+exports.whileTooltip = function(d){return "Wiederhole diese Aktionen bis das Ziel erreicht ist."};
 
 exports.yes = function(d){return "Ja"};
 
@@ -11855,7 +11855,7 @@ exports.play = function(d){return "spielen"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" von "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "wiederholen"};
+exports.repeat = function(d){return "wiederhole"};
 
 exports.resetProgram = function(d){return "Zurücksetzen"};
 

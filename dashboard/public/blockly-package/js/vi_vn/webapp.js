@@ -7520,7 +7520,7 @@ exports.and = function(d){return "và"};
 
 exports.blocklyMessage = function(d){return "Mảnh ghép"};
 
-exports.catActions = function(d){return "hành động"};
+exports.catActions = function(d){return "Các hành động"};
 
 exports.catColour = function(d){return "màu sắc"};
 
@@ -7530,7 +7530,7 @@ exports.catLists = function(d){return "Danh sách"};
 
 exports.catLoops = function(d){return "Vòng lặp"};
 
-exports.catMath = function(d){return "Thuật toán"};
+exports.catMath = function(d){return "thuật toán"};
 
 exports.catProcedures = function(d){return "Các hàm"};
 
@@ -7626,7 +7626,7 @@ exports.tooManyBlocksMsg = function(d){return "Câu đố này có thể đượ
 
 exports.tooMuchWork = function(d){return "Bạn làm tôi phải làm quá nhiều việc! Bạn làm ơn thử làm cho nó ít hơn được không?"};
 
-exports.toolboxHeader = function(d){return "Các khối lệnh"};
+exports.toolboxHeader = function(d){return "các khối"};
 
 exports.openWorkspace = function(d){return "Hoạt động ra sao"};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "Nhìn xem bằng cách nào bạn 
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.vi=function(n){return "other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Các hành động"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Vòng lặp"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Các sự kiện"};
 
 exports.catLogic = function(d){return "Logic"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "thuật toán"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Các hàm"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "văn bản"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Các biến"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Tiếp tục"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Xin chúc mừng! Bạn đã hoàn thành câu đố cuối cùng."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Chúc mừng. Bạn vừa hoàn thành bài tập này."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Không"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Câu đố này có thể được giải quyết chỉ với %1 khối."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "Lặp lại mãi mãi"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "thực hiện"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Đồng ý"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

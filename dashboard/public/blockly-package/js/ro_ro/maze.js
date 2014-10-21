@@ -13189,7 +13189,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ro = function 
   }
   return 'other';
 };
-exports.and = function(d){return "și"};
+exports.and = function(d){return "şi"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -13207,7 +13207,7 @@ exports.catMath = function(d){return "Matematică"};
 
 exports.catProcedures = function(d){return "Funcţii"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variabile"};
 
@@ -13215,7 +13215,7 @@ exports.codeTooltip = function(d){return "Vezi codul JavaScript generat."};
 
 exports.continue = function(d){return "Continuă"};
 
-exports.dialogCancel = function(d){return "Revocare"};
+exports.dialogCancel = function(d){return "Anulează"};
 
 exports.dialogOK = function(d){return "OK"};
 
@@ -13239,7 +13239,7 @@ exports.finalStage = function(d){return "Felicitări! Ai terminat ultima etapă.
 
 exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"ro",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Finalizare"};
+exports.finish = function(d){return "Sfârsit"};
 
 exports.generatedCodeInfo = function(d){return "Chiar și în universităţi de top se predă programarea bazată pe blocuri de coduri (de exemplu, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Dar în esență, blocurile de cod pe care le-ai compus pot fi de asemenea afișate în JavaScript, limbajul de programare cel mai utilizat din lume:"};
 
@@ -13249,7 +13249,7 @@ exports.help = function(d){return "Ajutor"};
 
 exports.hintTitle = function(d){return "Sugestie:"};
 
-exports.jump = function(d){return "sări"};
+exports.jump = function(d){return "sari"};
 
 exports.levelIncompleteError = function(d){return "Utilizezi toate tipurile de blocuri necesare, dar nu așa cum trebuie."};
 
@@ -13285,13 +13285,13 @@ exports.runTooltip = function(d){return "Rulează programul definit de blocuri �
 
 exports.score = function(d){return "scor"};
 
-exports.showCodeHeader = function(d){return "Arată Codul"};
+exports.showCodeHeader = function(d){return "Arată codul"};
 
 exports.showGeneratedCode = function(d){return "Arată codul"};
 
 exports.subtitle = function(d){return "un mediu de programare vizual"};
 
-exports.textVariable = function(d){return "text"};
+exports.textVariable = function(d){return "scris"};
 
 exports.tooFewBlocksMsg = function(d){return "Folosești toate tipurile necesare de blocuri, dar încearcă să utilizezi mai multe din aceste tipuri de blocuri pentru a completa puzzle-ul."};
 
@@ -13299,7 +13299,7 @@ exports.tooManyBlocksMsg = function(d){return "Acest puzzle poate fi rezolvat cu
 
 exports.tooMuchWork = function(d){return "M-ai făcut să lucrez foarte mult! Ai putea să încerci să repeți de mai puține ori?"};
 
-exports.toolboxHeader = function(d){return "Blocuri"};
+exports.toolboxHeader = function(d){return "blocuri"};
 
 exports.openWorkspace = function(d){return "Cum funcţionează"};
 
@@ -13413,13 +13413,13 @@ exports.honeycombFullError = function(d){return "Acest fagure de miere nu are lo
 
 exports.ifCode = function(d){return "dacă"};
 
-exports.ifInRepeatError = function(d){return "Ai nevoie de un bloc \"if\" în interiorul unui bloc \"repeat\". Dacă ai probleme, încearcă din nou nivelul anterior pentru a vedea cum a funcționat."};
+exports.ifInRepeatError = function(d){return "Ai nevoie de un bloc \"dacă\" în interiorul unui bloc \"repetă\". Dacă ai probleme, încearcă din nou nivelul anterior pentru a vedea cum a funcționat."};
 
-exports.ifPathAhead = function(d){return "dacă drum înainte "};
+exports.ifPathAhead = function(d){return "dacă drum înainte"};
 
 exports.ifTooltip = function(d){return "Dacă există o cale de acces în direcţia specificată, atunci realizează unele acțiunii."};
 
-exports.ifelseTooltip = function(d){return "Dacă există o cale de acces în direcţia specificată, atunci realizează primul bloc de acţiuni. Altfel, fă-l pe al doilea bloc de acţiuni."};
+exports.ifelseTooltip = function(d){return "Dacă există o cale de acces în direcţia specificată, atunci realizează primul bloc de acţiuni. Altfel, execută al doilea bloc de acţiuni."};
 
 exports.ifFlowerTooltip = function(d){return "Dacă o floare/un fagure de miere este in direcţia specificată, atunci fă nişte acţiuni."};
 
@@ -13435,7 +13435,7 @@ exports.moveBackward = function(d){return "mută înapoi"};
 
 exports.moveEastTooltip = function(d){return "Mută-mă un spaţiu la est."};
 
-exports.moveForward = function(d){return "mergi înainte"};
+exports.moveForward = function(d){return "mută înainte"};
 
 exports.moveForwardTooltip = function(d){return "Mută-mă înainte un spațiu."};
 
@@ -13471,11 +13471,11 @@ exports.numBlocksNeeded = function(d){return "Acest puzzle poate fi rezolvat cu 
 
 exports.pathAhead = function(d){return "cale înainte"};
 
-exports.pathLeft = function(d){return "dacă cale la stânga"};
+exports.pathLeft = function(d){return "dacă cale de acces la stânga"};
 
-exports.pathRight = function(d){return "dacă cale la dreapta"};
+exports.pathRight = function(d){return "dacă cale de acces la dreapta"};
 
-exports.pilePresent = function(d){return "este o grămadă"};
+exports.pilePresent = function(d){return "există o grămadă"};
 
 exports.putdownTower = function(d){return "pune jos turnul"};
 
@@ -13493,7 +13493,7 @@ exports.repeatCarefullyError = function(d){return "Pentru a rezolva acest lucru,
 
 exports.repeatUntil = function(d){return "repetă până când"};
 
-exports.repeatUntilBlocked = function(d){return "atîta timp cât există cale de acces înainte"};
+exports.repeatUntilBlocked = function(d){return "atâta timp cât există cale de acces înainte"};
 
 exports.repeatUntilFinish = function(d){return "repetă până la final"};
 

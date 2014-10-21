@@ -18709,7 +18709,7 @@ exports.catProcedures = function(d){return "ফাংশনগুলি"};
 
 exports.catText = function(d){return "পাঠ"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "চলকগুলো"};
 
 exports.codeTooltip = function(d){return "See generated JavaScript code."};
 
@@ -18862,11 +18862,11 @@ exports.catLogic = function(d){return "যুক্তি"};
 
 exports.catMath = function(d){return "গণিত"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "ফাংশনগুলি"};
 
 exports.catText = function(d){return "পাঠ"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "চলকগুলো"};
 
 exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
 
@@ -19086,7 +19086,7 @@ exports.setBackgroundTennis = function(d){return "set tennis background"};
 
 exports.setBackgroundWinter = function(d){return "set winter background"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "ব্যাকগ্রাউন্ড ইমেজ সেট করে"};
 
 exports.setScoreText = function(d){return "set score"};
 
@@ -19218,7 +19218,7 @@ exports.showTSDefText = function(d){return "type text here"};
 
 exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
 
-exports.setSprite = function(d){return "স্থির"};
+exports.setSprite = function(d){return "ঠীক করা"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 

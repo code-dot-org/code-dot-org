@@ -17,7 +17,7 @@
         edit_header: Palitan ang Account Details
         error:
           future: hindi maaari sa hinaharap
-  hello: Hello world
+  hello: Mabuhay!
   welcome_back: Maligayang pagbabalik, %{name}
   add_teacher_form:
     code_or_email:
@@ -125,7 +125,7 @@
     login: Sign in
   password:
     reset_form:
-      title: Nakalimutan ang password?
+      title: Hindi matandaan ang password?
       email: Email address
       submit: Send me reset password instructions
     change_form:
@@ -280,7 +280,7 @@
       prizes: Collect all %{total_trophies} trophies and win prizes!
       prize_earned: All %{total_trophies} trophies collected. Prize won!
       prize_us_only: "(U.S. students only)"
-      prizes_link: more info
+      prizes_link: Para sa maraming kaalaman
   teacher:
     title:
       one: Your teacher is %{name}
@@ -397,15 +397,19 @@
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Subukan ngayon
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming
-      concepts. The course is designed for use in classrooms for grades K-8, but it
-      is fun to learn at all ages.
+    20hour_overview: 'Ang kursong ito ay binubuo ng 20 oras upang ipakilala ang buod
+      ng computer science at mga konsepto ng programming. Ang kursong ito ay ginawa
+      para magamit sa loob ng silid-paaralan  ng mga baitang ng K-8, at para na rin
+      sa lahat ng edad. '
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Male
     female: Female
@@ -505,11 +509,17 @@
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
       each program in action.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
@@ -537,9 +547,10 @@
       name:
         20-hour:
           title: K-8 Intro to Computer Science Course (15-25 oras)
-          description: This 20-hour course introduces core computer science and programming
-            concepts. The course is designed for use in classrooms for grades K-8,
-            but it is fun to learn at all ages.
+          description: 'Ang kursong ito ay binubuo ng 20 oras upang ipakilala ang
+            buod ng computer science at mga konsepto ng programming. Ang kursong ito
+            ay ginawa para magamit sa loob ng silid-paaralan  ng mga baitang ng K-8,
+            at para na rin sa lahat ng edad. '
         Hour of Code:
           title: Hour of Code
           description: ''

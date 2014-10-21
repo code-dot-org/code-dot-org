@@ -3,7 +3,7 @@
     script:
       name:
         20-hour:
-          desc: "Σειρά μαθημάτων στην Εισαγωγή στην Επιστήμη Υπολογιστών για το Δημοτικό"
+          desc: "Εισαγωγή στην Επιστήμη Υπολογιστών Δημοτικού"
           Unplug1: "Στάδιο 1"
           Maze: "Στάδιο 2"
           Unplug2: "Στάδιο 3"
@@ -25,7 +25,7 @@
           Artist5: "Στάδιο 19"
           Unplug11: "Στάδιο 20"
         Hour of Code:
-          desc: "Ώρα του Κώδικα"
+          desc: "Η Ώρα του Κώδικα"
           Maze: "Στάδιο 1"
         Edit Code:
           desc: "Επεξεργασία κώδικα"
@@ -48,6 +48,7 @@
         edit-code:
           desc: Edit Code (beta)
           MazeEC: "Στάδιο 1"
+          Webapp: "Στάδιο 2"
         events:
           desc: Bounce (beta)
           Bounce: "Στάδιο 1"
@@ -69,10 +70,10 @@
           WordSearch: "Στάδιο 1"
     game:
       name:
-        Unplug1: "Εισαγωγή στην Επιστήμη Υπολογιστών"
+        Unplug1: "Εισαγωγή στην Επιστήμη των Υπολογιστών"
         Maze: "Ο Λαβύρινθος"
         Multi: Multiple Choice Stuffs
-        Unplug2: "Αλγοριθμική σκέψη"
+        Unplug2: "Αλγοριθμική Σκέψη"
         Unplug3: "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
         Artist: "Ο Καλλιτέχνης"
         Unplug4: "Αλγόριθμοι"
@@ -89,13 +90,14 @@
         Farmer3: "Ο Γεωργός 3"
         Unplug10: "Το Διαδίκτυο"
         Artist5: "Ο Καλλιτέχνης 5"
-        Unplug11: "Περίληψη"
+        Unplug11: "συνοψίζω"
         MazeEC: "Ο Λαβύρινθος"
         Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
     trophy:
       name:
         Bronze: "Χάλκινο"
@@ -104,11 +106,11 @@
     concept:
       description:
         sequence: "Ακολουθία"
-        if: "Πλακίδιο Αν"
+        if: "Πλακίδιο Εάν"
         if_else: "Πλακίδιο Αν-Αλλιώς"
-        loop_times: "Πλακίδιο Επανάλαβε Φορές"
-        loop_until: "Πλακίδιο Επανάλαβε Έως"
-        loop_while: "Πλακίδιο Όσο"
+        loop_times: "Πλακίδιο Επανάλαβε για"
+        loop_until: "Πλακίδιο Επανάλαβε μέχρι"
+        loop_while: "Πλακίδιο όσο"
         loop_for: "Πλακίδιο Μετρητής"
         function: "Συναρτήσεις"
         parameters: "Συναρτήσεις με παραμέτρους"
@@ -575,7 +577,7 @@
         hoc_wrapup: "Ώρα του κώδικα"
         20_wrapup: "Η σύνοψη των 20-ωρών"
         Unplug1: What is CS?
-        Unplug2: "Αλγοριθμική σκέψη"
+        Unplug2: "Αλγοριθμική Σκέψη"
         Unplug3: "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
         Unplug4: "Αλγόριθμοι"
         Unplug5: "Συναρτήσεις"
@@ -584,7 +586,7 @@
         Unplug8: "Αφαίρεση"
         Unplug9: Relay programming
         Unplug10: Internet
-        Unplug11: "Περίληψη"
+        Unplug11: "συνοψίζω"
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
@@ -624,7 +626,7 @@
         C3_bee_debugging: Bee Debugging
         C3_bounce: Bounce
         C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: "Αλγοριθμική σκέψη"
+        C3_computational_thinking: "Αλγοριθμική Σκέψη"
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing

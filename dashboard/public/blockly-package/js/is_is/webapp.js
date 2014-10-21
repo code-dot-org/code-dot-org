@@ -7534,13 +7534,13 @@ exports.catMath = function(d){return "Reikningur"};
 
 exports.catProcedures = function(d){return "Föll"};
 
-exports.catText = function(d){return "Texti"};
+exports.catText = function(d){return "texti"};
 
 exports.catVariables = function(d){return "Breytur"};
 
 exports.codeTooltip = function(d){return "Sjá samsvarandi JavaScript kóða."};
 
-exports.continue = function(d){return "Áfram"};
+exports.continue = function(d){return "Halda áfram"};
 
 exports.dialogCancel = function(d){return "Hætta við"};
 
@@ -7626,7 +7626,7 @@ exports.tooManyBlocksMsg = function(d){return "Þessa þraut er hægt að leysa 
 
 exports.tooMuchWork = function(d){return "Þú lagðir á mig mjög mikla vinnu! Gætirðu reynt að nota færri endurtekningar?"};
 
-exports.toolboxHeader = function(d){return "Kubbar"};
+exports.toolboxHeader = function(d){return "kubbar"};
 
 exports.openWorkspace = function(d){return "Hvernig það virkar"};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "Athugaðu hvernig þetta fór og r
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.is=function(n){return n===1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Aðgerðir"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Lykkjur"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Atvik"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Rökvísi"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Reikningur"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Föll"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "texti"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Breytur"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Halda áfram"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Til hamingju! Þú hefur leyst síðustu þrautina."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Til hamingju! Þú hefur lokið við þessa þraut."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Nei"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Þessa þraut er hægt að leysa með %1 kubbum."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "endurtaka endalaust"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "gera"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Já"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

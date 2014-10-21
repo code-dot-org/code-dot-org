@@ -19086,7 +19086,7 @@ exports.setBackgroundTennis = function(d){return "set tennis background"};
 
 exports.setBackgroundWinter = function(d){return "set winter background"};
 
-exports.setBackgroundTooltip = function(d){return "Nilalagay ang larawan sa background"};
+exports.setBackgroundTooltip = function(d){return "Nilalagay ang imahe ng background"};
 
 exports.setScoreText = function(d){return "ilagay ang puntos"};
 

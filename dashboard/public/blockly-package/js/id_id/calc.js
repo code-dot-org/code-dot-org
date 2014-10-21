@@ -7572,7 +7572,7 @@ exports.dots = function(d){return "piksel"};
 
 exports.drawASquare = function(d){return "menggambar sebuah persegi empat"};
 
-exports.drawATriangle = function(d){return "gambar sebuah segitiga"};
+exports.drawATriangle = function(d){return "menggambar sebuah segitiga"};
 
 exports.drawACircle = function(d){return "Gambar sebuah lingkaran"};
 
@@ -7592,7 +7592,7 @@ exports.drawARocket = function(d){return "menggambar roket"};
 
 exports.drawASnowflake = function(d){return "menggambar kristal salju"};
 
-exports.drawASnowman = function(d){return "Gambar manusia salju"};
+exports.drawASnowman = function(d){return "Menggambar manusia salju"};
 
 exports.drawAStar = function(d){return "menggambar bintang"};
 
@@ -7626,7 +7626,7 @@ exports.lengthFeedback = function(d){return "sudah benar sih, cuma jumlah langka
 
 exports.lengthParameter = function(d){return "panjang"};
 
-exports.loopVariable = function(d){return "konter"};
+exports.loopVariable = function(d){return "Pencacah"};
 
 exports.moveBackward = function(d){return "gerak mundur"};
 
@@ -7705,13 +7705,13 @@ exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Fungsi"};
 
-exports.catText = function(d){return "Teks"};
+exports.catText = function(d){return "teks"};
 
 exports.catVariables = function(d){return "Variabel"};
 
 exports.codeTooltip = function(d){return "Lihat kode JavaScript."};
 
-exports.continue = function(d){return "Ayo lanjutkan!"};
+exports.continue = function(d){return "Lanjutkan"};
 
 exports.dialogCancel = function(d){return "Batal"};
 
@@ -7773,7 +7773,7 @@ exports.play = function(d){return "mainkan"};
 
 exports.puzzleTitle = function(d){return "Teka-teki ke "+v(d,"puzzle_number")+" dari "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "ulangi"};
+exports.repeat = function(d){return "Ulangi"};
 
 exports.resetProgram = function(d){return "Kembali ke awal"};
 
@@ -7797,7 +7797,7 @@ exports.tooManyBlocksMsg = function(d){return "Teka-teki ini dapat diselesaikan 
 
 exports.tooMuchWork = function(d){return "Anda membuat saya melakukan terlalu banyak pekerjaan!  Bisakan Anda coba membuat pengulangan yang lebih sedikit?"};
 
-exports.toolboxHeader = function(d){return "Blok"};
+exports.toolboxHeader = function(d){return "blok"};
 
 exports.openWorkspace = function(d){return "Cara kerjanya"};
 

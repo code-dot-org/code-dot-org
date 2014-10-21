@@ -6,9 +6,9 @@
     attributes:
       user:
         name: "نام"
-        email: "رایانامه"
+        email: "ایمیل"
         username: "نام کاربری"
-        password: "کلمه عبور"
+        password: "رمز عبور"
         password_confirmation: "تکرار کلمه عبور"
         current_password: "کلمه عبور فعلی"
         locale: "زبان"
@@ -34,8 +34,8 @@
   stage: "مرحله"
   stage_number: Stage %{number}
   puzzle: "پازل"
-  trophies: "نشان‌های پیروزی"
-  courses: "دوره‌ها"
+  trophies: "جایزها"
+  courses: "مراحل"
   of: "از"
   more: "بیشتر"
   less: "کمتر"
@@ -110,7 +110,7 @@
   signin_form:
     title: "دارای حساب کاربری در حال حاضر؟ ورود"
     login: "رایانامه یا نام کاربری"
-    password: "کلمه عبور"
+    password: "رمز عبور"
     remember: "مرا به خاطر بسپار"
     submit: "ورود"
   signin:
@@ -297,11 +297,11 @@
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
-      trophies: "نشان‌های پیروزی"
+      trophies: "جایزها"
     students:
       name: "نام"
       username: "نام کاربری"
-      password: "کلمه عبور"
+      password: "رمز عبور"
       manage: "مدیریت دانش آموزان"
       dashboard: Go to Teacher Dashboard
       add: "افزودن دانش آموزان"
@@ -330,7 +330,7 @@
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
+      rename: "تغییر نام"
       edit: edit
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
@@ -383,8 +383,9 @@
     student_stats: "شما %{trophy_count} گنج از مجموع %{trophy_max} گنج مرتبط با «تسلط
       بر مفهوم» را به دست آورده اید."
     student_left_off: "جایی که شما ترک کردید:"
-    student_finished_prize: "شما همه آموزش‌ها را به پایان رساندید، %{prize_link} را
-      بگیرید و یک کلاس دیگر بصورت %{online_link} یا در یک %{local_school_link} بردارید"
+    student_finished_prize: "شما همه خودآموزهای خود را به پایان بردید، %{prize_link}
+      خود را ادعا کرده و کلاس دیگری را از %{online_link} و یا در %{local_school_link}
+      انتخاب کنید"
     student_finished: "شما همه آموزش‌ها را به پایان رساندید، کلاس دیگری بصورت %{online_link}
       یا در یک %{local_school_link} بردارید"
     local_school: "مدرسه محلی"
@@ -396,15 +397,19 @@
     trynow: "هم اکنون شروع کنید"
     add_hint_help: "لطفا به ما کمک کنید تا نکات هوشمندانه‌ای به آموزش‌های Code.org
       اضافه کنیم"
-    20hour_overview: "این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه‌نویسی
-      می‌پردازد. این دوره برای استفاده در کلاس‌های درس K-8 (دوره ابتدایی تا پایان
-      دوره راهنمایی) طراحی شده است، اما می‌تواند برای همه سنین دیگر نیز جالب باشد."
+    20hour_overview: "این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه
+      نویسی می پردازد. این دوره برای استفاده در کلاس های درس K-8 (دوره ابتدایی تا
+      پایان دوره راهنمایی)طراحی شده است، اما می تواند برای همه سنین دیگر نیز جالب
+      باشد."
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: "مرد"
     female: "زن"
@@ -503,11 +508,17 @@
       body: "دوره 20 ساعته آشنایی با علوم کامپیوتر را امتحان کن."
   gallery:
     students_drew_these_with_code: "دانش‌آموزان اینها را با کدنویسی رسم کرده‌اند!"
+    students_made_these_with_code: Students made these with code!
     picture_count: "در <b>%{days}</b> روز گذشته، دانش‌آموزان با نوشتن برنامه‌های کامپیوتری
       خودشان <b>%{count}</b> تصویر رسم کرده‌اند. روی تصاویر کلیک کنید تا هر برنامه
       را در عمل ببینید."
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: "می‌خواهی مال خودت را بسازی؟"
     more: "بیشتر &rarr;"
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This course is in <span class='betatext'>beta</span>.  This means
       it is not the final version of the course, and is subject to revision as feedback
@@ -537,15 +548,15 @@
       name:
         20-hour:
           title: "دوره معرفی علوم کامپیوتر(15 تا 25 ساعت)"
-          description: "این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه‌نویسی
-            می‌پردازد. این دوره برای استفاده در کلاس‌های درس K-8 (دوره ابتدایی تا
-            پایان دوره راهنمایی) طراحی شده است، اما می‌تواند برای همه سنین دیگر نیز
-            جالب باشد."
+          description: "این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه
+            نویسی می پردازد. این دوره برای استفاده در کلاس های درس K-8 (دوره ابتدایی
+            تا پایان دوره راهنمایی)طراحی شده است، اما می تواند برای همه سنین دیگر
+            نیز جالب باشد."
         Hour of Code:
           title: "ساعتی با کد"
           description: ''
         edit-code:
-          title: Edit Code
+          title: "ویرایش کد"
           description: ''
         events:
           title: "رویدادها"

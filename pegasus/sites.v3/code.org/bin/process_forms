@@ -42,7 +42,7 @@ def process_batch_of_forms(batch_size)
 
     processed_data = {}
     if kind.respond_to?(:process_)
-      processed_data = kind.process_row(form)
+      processed_data = kind.process_(form)
     elsif kind.respond_to?(:process)
       processed_data = kind.process(JSON.load(form[:data]))
     end

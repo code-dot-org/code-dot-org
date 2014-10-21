@@ -9383,7 +9383,7 @@ exports.flapVeryLarge = function(d){return "mag-flap ng napakalaking amount"};
 
 exports.flapTooltip = function(d){return "Paliparin ang Flappy pataas."};
 
-exports.flappySpecificFail = function(d){return "Your code looks good - it will flap with each click. But you need to click many times to flap to the target."};
+exports.flappySpecificFail = function(d){return "Ang iyong code ay mukhang maganda - ito ay lilipad sa isang click lamang. Ngunit kailangan mo ito i-click ng maraming beses hanggang sa iyong target."};
 
 exports.incrementPlayerScore = function(d){return "mag-score ng puntos"};
 
@@ -9443,7 +9443,7 @@ exports.setBackgroundCave = function(d){return "ilagay ang scene sa Kuweba"};
 
 exports.setBackgroundSanta = function(d){return "ilagay ang scene sa Santa"};
 
-exports.setBackgroundTooltip = function(d){return "Nilalagay ang imahe ng background"};
+exports.setBackgroundTooltip = function(d){return "Nilalagay ang larawan sa background"};
 
 exports.setGapRandom = function(d){return "maglagay ng random na gap"};
 

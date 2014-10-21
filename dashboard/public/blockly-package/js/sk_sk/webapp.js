@@ -7536,9 +7536,9 @@ exports.catLogic = function(d){return "Logické"};
 
 exports.catLists = function(d){return "Zoznamy"};
 
-exports.catLoops = function(d){return "Slučky"};
+exports.catLoops = function(d){return "Cykly"};
 
-exports.catMath = function(d){return "Matematické"};
+exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkcie"};
 
@@ -7580,11 +7580,11 @@ exports.generatedCodeInfo = function(d){return "Dokonca aj popredné univerzity 
 
 exports.hashError = function(d){return "Prepáčte, '%1' nezodpovedá žiadnemu uloženému programu."};
 
-exports.help = function(d){return "pomoc"};
+exports.help = function(d){return "Pomoc"};
 
 exports.hintTitle = function(d){return "Tip:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "skoč"};
 
 exports.levelIncompleteError = function(d){return "Používate všetky potrebné typy blokov, ale nie tým správnym spôsobom."};
 
@@ -7693,43 +7693,43 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sk = function 
   }
   return 'other';
 };
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Akcie"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Cykly"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Udalosti"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logické"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Funkcie"};
 
 exports.catText = function(d){return "Text"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Premenné"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Pokračovať"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Gratulujem! Vyriešil si poslednú úlohu."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Gratulujem! Vyriešil si hádanku."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Nie"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Táto hádanka môže byť vyriešená s %1 blokmi."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "opakovať donekonečna"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "vykonaj"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7741,7 +7741,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Áno"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

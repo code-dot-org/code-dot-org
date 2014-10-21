@@ -7654,7 +7654,7 @@ exports.penTooltip = function(d){return "Løfter eller senker pennen, for å sta
 
 exports.penUp = function(d){return "penn opp"};
 
-exports.reinfFeedbackMsg = function(d){return "Ser dette ut slik du ønsker? Du kan trykke \"Prøv igjen\"-knappen for å se tegningen din."};
+exports.reinfFeedbackMsg = function(d){return "Ser dette ut slik du ønsker? Du kan trykke \"Forsøk igjen\"-knappen for å se tegningen din."};
 
 exports.setColour = function(d){return "angi farge"};
 
@@ -7705,7 +7705,7 @@ exports.catMath = function(d){return "Matematikk"};
 
 exports.catProcedures = function(d){return "Funksjoner"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -7721,7 +7721,7 @@ exports.directionNorthLetter = function(d){return "N"};
 
 exports.directionSouthLetter = function(d){return "S"};
 
-exports.directionEastLetter = function(d){return "E"};
+exports.directionEastLetter = function(d){return "Ø"};
 
 exports.directionWestLetter = function(d){return "V"};
 
@@ -7797,7 +7797,7 @@ exports.tooManyBlocksMsg = function(d){return "Denne oppgaven kan løses med <x 
 
 exports.tooMuchWork = function(d){return "Du fikk meg til å gjøre masse arbeid! Kan du forsøke med mindre repetisjon?"};
 
-exports.toolboxHeader = function(d){return "Blokker"};
+exports.toolboxHeader = function(d){return "blokker"};
 
 exports.openWorkspace = function(d){return "Slik fungerer det"};
 
@@ -7813,7 +7813,7 @@ exports.saveToGallery = function(d){return "Lagre til galleriet"};
 
 exports.savedToGallery = function(d){return "Lagret i galleriet!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Beklager, vi kan ikke dele dette programmet."};
 
 exports.typeCode = function(d){return "Skriv din JavaScript-kode under disse instruksjonene."};
 

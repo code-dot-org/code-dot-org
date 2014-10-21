@@ -18912,7 +18912,7 @@ exports.incrementPlayerScore = function(d){return "dosežena točka"};
 
 exports.makeProjectileDisappear = function(d){return "disappear"};
 
-exports.makeProjectileBounce = function(d){return "bounce"};
+exports.makeProjectileBounce = function(d){return "poskočiti"};
 
 exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
 
@@ -18938,7 +18938,7 @@ exports.moveDirectionRight = function(d){return "right"};
 
 exports.moveDirectionUp = function(d){return "up"};
 
-exports.moveDirectionRandom = function(d){return "poljuben"};
+exports.moveDirectionRandom = function(d){return "naključno"};
 
 exports.moveDistance25 = function(d){return "25 pixels"};
 
@@ -19004,7 +19004,7 @@ exports.playSoundRubber = function(d){return "predvajaj zvok: radirka"};
 
 exports.playSoundSlap = function(d){return "predvajaj zvok: udarec"};
 
-exports.playSoundTooltip = function(d){return "Predvajaj izbran zvok."};
+exports.playSoundTooltip = function(d){return "Predvajaj izbrani zvok."};
 
 exports.playSoundWinPoint = function(d){return "predvajaj zvok: dobljena točka"};
 
@@ -19060,13 +19060,13 @@ exports.projectilePurpleHearts = function(d){return "purple hearts"};
 
 exports.projectileRedHearts = function(d){return "red hearts"};
 
-exports.projectileRandom = function(d){return "poljuben"};
+exports.projectileRandom = function(d){return "naključno"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "naredi"};
+exports.repeatDo = function(d){return "izvrši"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
 
@@ -19240,7 +19240,7 @@ exports.showTSDefText = function(d){return "type text here"};
 
 exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
 
-exports.setSprite = function(d){return "določi"};
+exports.setSprite = function(d){return "nastavi"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 
@@ -19382,7 +19382,7 @@ exports.whenUp = function(d){return "ko je pritisnjena puščica gor"};
 
 exports.whenUpTooltip = function(d){return "Ko je pritisnjena gor puščica izvedi sledeče ukaze."};
 
-exports.yes = function(d){return "Ja"};
+exports.yes = function(d){return "Da"};
 
 
 },{"messageformat":58}],47:[function(require,module,exports){

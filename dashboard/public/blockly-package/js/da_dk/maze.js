@@ -13192,13 +13192,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Lister"};
 
-exports.catLoops = function(d){return "Løkker"};
+exports.catLoops = function(d){return "Sløjfer"};
 
 exports.catMath = function(d){return "Matematik"};
 
 exports.catProcedures = function(d){return "Funktioner"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -13290,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "Dette puslespil kan løses med <x
 
 exports.tooMuchWork = function(d){return "Du fik mig til at gøre en masse arbejde! Kunne du prøve at gentage færre gange?"};
 
-exports.toolboxHeader = function(d){return "Blokke"};
+exports.toolboxHeader = function(d){return "blokke"};
 
 exports.openWorkspace = function(d){return "Sådan fungerer det"};
 
@@ -13375,7 +13375,7 @@ exports.fillSquare = function(d){return "Udfyld firkanten"};
 
 exports.fillTooltip = function(d){return "placér 1 enhed af jord"};
 
-exports.finalLevel = function(d){return "Tillykke! Du har løst det sidste puslespil."};
+exports.finalLevel = function(d){return "Tillykke! Du har løst den sidste opgave."};
 
 exports.flowerEmptyError = function(d){return "Blomsten du er på, har ikke mere nektar."};
 
@@ -13417,7 +13417,7 @@ exports.moveBackward = function(d){return "Flyt bagud"};
 
 exports.moveEastTooltip = function(d){return "Flyt mig én plads øst."};
 
-exports.moveForward = function(d){return "flyt fremad"};
+exports.moveForward = function(d){return "bevæg fremad"};
 
 exports.moveForwardTooltip = function(d){return "Flyt mig en plads frem."};
 
@@ -13489,7 +13489,7 @@ exports.turnLeft = function(d){return "drej til venstre"};
 
 exports.turnRight = function(d){return "drej til højre"};
 
-exports.turnTooltip = function(d){return "Drejer mig venstre eller højre med 90 grader."};
+exports.turnTooltip = function(d){return "Vender mig venstre eller højre med 90 grader."};
 
 exports.uncheckedCloudError = function(d){return "Sørg for at tjekke alle skyer, for at se om der er blomster eller bistader."};
 
@@ -13497,7 +13497,7 @@ exports.uncheckedPurpleError = function(d){return "Sørg for at tjekke alle lill
 
 exports.whileMsg = function(d){return "mens"};
 
-exports.whileTooltip = function(d){return "Gentag de indsatte handlinger indtil målet er nået."};
+exports.whileTooltip = function(d){return "Gentag de lukkede handlinger indtil målet er nået."};
 
 exports.word = function(d){return "Find ordet"};
 

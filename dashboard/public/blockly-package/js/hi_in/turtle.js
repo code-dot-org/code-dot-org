@@ -10817,7 +10817,7 @@ exports.catControl = function(d){return "फंदे"};
 
 exports.catMath = function(d){return "गणित"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "कार्य"};
 
 exports.catTurtle = function(d){return "क्रियाएँ"};
 

@@ -7624,7 +7624,7 @@ exports.jumpWestTooltip = function(d){return "将艺术家向西移动，不留�
 
 exports.lengthFeedback = function(d){return "你答对了正确移动的长度。"};
 
-exports.lengthParameter = function(d){return "边长"};
+exports.lengthParameter = function(d){return "长度"};
 
 exports.loopVariable = function(d){return "计数器"};
 
@@ -7689,7 +7689,7 @@ exports.wrongColour = function(d){return "您的图片显示颜色是错误的�
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.and = function(d){return "和"};
 
-exports.blocklyMessage = function(d){return "模块化"};
+exports.blocklyMessage = function(d){return "布洛克里"};
 
 exports.catActions = function(d){return "操作"};
 
@@ -7797,7 +7797,7 @@ exports.tooManyBlocksMsg = function(d){return "可以使用 < x id = 'START_SPAN
 
 exports.tooMuchWork = function(d){return "你让我多做很多工作 ！你可以尝试少重复几次吗？"};
 
-exports.toolboxHeader = function(d){return "模块"};
+exports.toolboxHeader = function(d){return "块"};
 
 exports.openWorkspace = function(d){return "它是如何工作的？"};
 

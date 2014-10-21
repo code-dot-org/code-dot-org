@@ -7570,7 +7570,7 @@ exports.depth = function(d){return "depth"};
 
 exports.dots = function(d){return "pixels"};
 
-exports.drawASquare = function(d){return "desenha um quadrado"};
+exports.drawASquare = function(d){return "desenhar um quadrado"};
 
 exports.drawATriangle = function(d){return "desenha um triângulo"};
 
@@ -7654,7 +7654,7 @@ exports.penTooltip = function(d){return "Levanta ou baixa o lápis, para iniciar
 
 exports.penUp = function(d){return "lápis para cima"};
 
-exports.reinfFeedbackMsg = function(d){return "Isto parece-se com o que queres? Podes seleccionar \"Tentar novamente\" para ver o teu desenho."};
+exports.reinfFeedbackMsg = function(d){return "Parece o que queres? Podes premir o botão \"Tentar novamente\" para ver o teu desenho."};
 
 exports.setColour = function(d){return "definir cor"};
 
@@ -7705,7 +7705,7 @@ exports.catMath = function(d){return "Matemática"};
 
 exports.catProcedures = function(d){return "Funções"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
 exports.catVariables = function(d){return "Variáveis"};
 
@@ -7783,7 +7783,7 @@ exports.runTooltip = function(d){return "Executa o programa definido pelos bloco
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Mostrar o Código"};
+exports.showCodeHeader = function(d){return "Mostrar o código"};
 
 exports.showGeneratedCode = function(d){return "Mostrar o código"};
 
@@ -7797,7 +7797,7 @@ exports.tooManyBlocksMsg = function(d){return "Este puzzle pode ser resolvido co
 
 exports.tooMuchWork = function(d){return "Fizeste-me ter muito trabalho! Podes tentar repetir menos vezes?"};
 
-exports.toolboxHeader = function(d){return "Blocos"};
+exports.toolboxHeader = function(d){return "blocos"};
 
 exports.openWorkspace = function(d){return "Como funciona"};
 

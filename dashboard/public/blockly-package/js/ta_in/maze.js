@@ -13204,7 +13204,7 @@ exports.catVariables = function(d){return "மாறிலிகள்"};
 
 exports.codeTooltip = function(d){return "உருவாக்கப்பட்ட ஜாவாஉரைக் குறியீடுகளை பார்க்க."};
 
-exports.continue = function(d){return "தொடர்ந்து"};
+exports.continue = function(d){return "தொடர்க"};
 
 exports.dialogCancel = function(d){return "ரத்து செய்"};
 
@@ -13347,7 +13347,7 @@ exports.atFlower = function(d){return "at flower"};
 
 exports.avoidCowAndRemove = function(d){return "avoid the cow and remove 1"};
 
-exports.continue = function(d){return "தொடர்க"};
+exports.continue = function(d){return "தொடர்ந்து"};
 
 exports.dig = function(d){return "1 நீக்கு"};
 
@@ -13361,9 +13361,9 @@ exports.dirS = function(d){return "தெற்கு"};
 
 exports.dirW = function(d){return "மேற்கு"};
 
-exports.doCode = function(d){return "செய்"};
+exports.doCode = function(d){return "செய்க"};
 
-exports.elseCode = function(d){return "இல்லையெனின்"};
+exports.elseCode = function(d){return "அல்லது"};
 
 exports.fill = function(d){return "1 நிரப்பு"};
 
@@ -13375,7 +13375,7 @@ exports.fillSquare = function(d){return "சதுரத்தை நிரப�
 
 exports.fillTooltip = function(d){return "place 1 unit of dirt"};
 
-exports.finalLevel = function(d){return "வாழ்த்துக்கள்! நீங்கள் இறுதிப் புதிரை தீர்த்துவிட்டீர்கள்."};
+exports.finalLevel = function(d){return "வாழ்த்துக்கள்! நீங்கள் இறுதிப் புதிரை முடித்துவிட்டீர்கள்."};
 
 exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
 
@@ -13393,15 +13393,15 @@ exports.honeyTooltip = function(d){return "Make honey from nectar"};
 
 exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
 
-exports.ifCode = function(d){return "எனின்"};
+exports.ifCode = function(d){return "இருந்தால்"};
 
 exports.ifInRepeatError = function(d){return "You need an \"if\" block inside a \"repeat\" block. If you're having trouble, try the previous level again to see how it worked."};
 
-exports.ifPathAhead = function(d){return "முன்னால் பாதை எனின்"};
+exports.ifPathAhead = function(d){return "முன்னால் பாதை என்றால்"};
 
-exports.ifTooltip = function(d){return "If there is a path in the specified direction, then do some actions."};
+exports.ifTooltip = function(d){return "குறிப்பிட்ட திசையில் ஒரு பாதை உள்ளது என்றால், சில செயல்களை செய்ய."};
 
-exports.ifelseTooltip = function(d){return "If there is a path in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseTooltip = function(d){return "குறிப்பிட்ட திசையில் ஒரு பாதை உள்ளது என்றால், நடவடிக்கைகள் முதல் தொகுதி செய்கிறது. இல்லையெனில், நடவடிக்கைகள் இரண்டாவது தொகுதி செய்கிறது."};
 
 exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
 
@@ -13417,7 +13417,7 @@ exports.moveBackward = function(d){return "move backward"};
 
 exports.moveEastTooltip = function(d){return "Move me east one space."};
 
-exports.moveForward = function(d){return "முன்னோக்கி நகர்"};
+exports.moveForward = function(d){return "முன்னோக்கி நகர்த்த"};
 
 exports.moveForwardTooltip = function(d){return "Move me forward one space."};
 

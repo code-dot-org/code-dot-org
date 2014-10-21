@@ -7577,7 +7577,7 @@ exports.degrees = function(d){return "laipsnių"};
 
 exports.depth = function(d){return "gylis"};
 
-exports.dots = function(d){return "pikselių"};
+exports.dots = function(d){return "pikseliai"};
 
 exports.drawASquare = function(d){return "nubrėžk kvadratą"};
 
@@ -7641,7 +7641,7 @@ exports.moveBackward = function(d){return "judėk atgal"};
 
 exports.moveEastTooltip = function(d){return "Pajudina menininką į rytus."};
 
-exports.moveForward = function(d){return "judėk į priekį"};
+exports.moveForward = function(d){return "eik į priekį"};
 
 exports.moveForwardTooltip = function(d){return "Pajudina menininką į priekį."};
 
@@ -7733,7 +7733,7 @@ exports.continue = function(d){return "Tęsti"};
 
 exports.dialogCancel = function(d){return "Atšaukti"};
 
-exports.dialogOK = function(d){return "gerai"};
+exports.dialogOK = function(d){return "Gerai"};
 
 exports.directionNorthLetter = function(d){return "Š"};
 

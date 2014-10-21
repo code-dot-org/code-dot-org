@@ -84,7 +84,7 @@ es:
         text: ¿Has oído del juego FlappyBird? Mediante el uso de controladores de eventos, vamos a aprender a programar nuestra propia versión personalizada de FlappyBird!
       5:
         image: notes/flappy05.jpg
-        text: El código que escribiras consiste en arrastrar y soltar bloques que representan los comandos de la computadora. Bajo ellos, hay una representacion de codigo real.
+        text: El código que escribirás consiste de arrastrar y soltar bloques que representan los comandos de la computadora. Sin que puedas verlo, cada uno de estos bloques está representado por código real.
       6:
         image: notes/flappy06.jpg
         text: 'Si echas un vistazo en el espacio de trabajo, hay algunos bloques verdes que son rellenados por ti - son "los controladores de eventos" '
@@ -96,7 +96,7 @@ es:
         text: En cada puzzle de esta actividad te presentamos nuevos tipos de eventos como bloques verdes en el espacio de trabajo, tu puedes decidir los bloques apropiados para agregar en respuesta a esos eventos.
       9:
         image: notes/flappy09.jpg
-        text: 'Cuando ves un menú desplegable como este así, significa que puede cambiar los ajustes - como qué sonido usar para jugar cuando flappy caiga al suelo.'
+        text: 'Cuando ves un menú desplegable como este, significa que puedes cambiar los ajustes - como qué sonido usar cuando flappy caiga al suelo.'
       10:
         image: notes/flappy10.jpg
         text: En el puzzle final serás capaz de crear tu propio juego y compartirlo con tus amigos. ¡Que te diviertas!
@@ -115,7 +115,7 @@ es:
         text: 'En lugar arrastrar 5 bloques "avanzar"...'
       5:
         image: notes/hoc2_5.jpg
-        text: 'Podemos poner el bloque "avanzar" dentro del bloque "repetir" y escribir un número en el bloque para decirle cuántas veces debe repetirse.'
+        text: 'Podemos poner el bloque "avanzar" dentro del bloque "repetir" y escribir un número en el bloque para decirle cuántas veces repetirlo.'
       6:
         image: notes/hoc2_6.jpg
         text: 'Y esto es importante: puedes poner más de un comando dentro de un bloque "repetir".'

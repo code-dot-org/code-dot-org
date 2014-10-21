@@ -13188,7 +13188,7 @@ exports.catActions = function(d){return "Ενέργειες"};
 
 exports.catColour = function(d){return "Χρώμα"};
 
-exports.catLogic = function(d){return "Λογικά"};
+exports.catLogic = function(d){return "Λογική"};
 
 exports.catLists = function(d){return "Λίστες"};
 
@@ -13198,7 +13198,7 @@ exports.catMath = function(d){return "Μαθηματικά"};
 
 exports.catProcedures = function(d){return "Συναρτήσεις"};
 
-exports.catText = function(d){return "Κείμενο"};
+exports.catText = function(d){return "κείμενο"};
 
 exports.catVariables = function(d){return "Μεταβλητές"};
 
@@ -13276,7 +13276,7 @@ exports.runTooltip = function(d){return "Τρέξε το πρόγραμμα πο
 
 exports.score = function(d){return "σκορ"};
 
-exports.showCodeHeader = function(d){return "Προβολή Κώδικα"};
+exports.showCodeHeader = function(d){return "Προβολή κώδικα"};
 
 exports.showGeneratedCode = function(d){return "Προβολή κώδικα"};
 
@@ -13290,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "Αυτό το παζλ μπορε
 
 exports.tooMuchWork = function(d){return "Με ανάγκασες να κάνω πολλή δουλειά! Μπορείς με λιγότερες επαναλήψεις;"};
 
-exports.toolboxHeader = function(d){return "Μπλοκ"};
+exports.toolboxHeader = function(d){return "μπλοκ"};
 
 exports.openWorkspace = function(d){return "Πώς λειτουργεί"};
 
@@ -13363,7 +13363,7 @@ exports.dirW = function(d){return "Δ"};
 
 exports.doCode = function(d){return "κάνε"};
 
-exports.elseCode = function(d){return "διαφορετικά"};
+exports.elseCode = function(d){return "αλλιώς"};
 
 exports.fill = function(d){return "γέμισε 1"};
 
@@ -13395,13 +13395,13 @@ exports.honeycombFullError = function(d){return "Αυτή η κυψέλη δεν
 
 exports.ifCode = function(d){return "εάν"};
 
-exports.ifInRepeatError = function(d){return "Χρειάζεσαι ένα πλακίδιο «εάν» μέσα σε ένα πλακίδιο «επανάλαβε». Εάν αντιμετωπίζεις προβλήματα, δοκίμασε το προηγούμενο επίπεδο πάλι για να δεις πώς λειτούργησε."};
+exports.ifInRepeatError = function(d){return "Χρειάζεσαι ένα πλακίδιο  «εάν» μέσα σε ένα πλακίδιο «επανάλαβε». Εάν αντιμετωπίζεις προβλήματα, δοκίμασε το προηγούμενο επίπεδο πάλι για να δεις πώς λειτούργησε."};
 
 exports.ifPathAhead = function(d){return "Εάν υπάρχει διαδρομή μπροστά"};
 
-exports.ifTooltip = function(d){return "Εάν υπάρχει ένα μονοπάτι προς τη συγκεκριμένη κατεύθυνση, τότε κάνε κάποιες ενέργειες."};
+exports.ifTooltip = function(d){return "Αν υπάρχει ένα μονοπάτι προς τη συγκεκριμένη κατεύθυνση, τότε κάνε κάποιες ενέργειες."};
 
-exports.ifelseTooltip = function(d){return "Εάν υπάρχει ένα μονοπάτι στη συγκεκριμένη κατεύθυνση, τότε κάνε το πρώτο σετ ενεργειών. Διαφορετικά, κάνε το δεύτερο σετ ενεργειών."};
+exports.ifelseTooltip = function(d){return "Αν υπάρχει ένα μονοπάτι στη συγκεκριμένη κατεύθυνση, τότε εκτέλεσε την πρώτη ομάδα ενεργειών. Διαφορετικά, εκτέλεσε τη δεύτερη ομάδα ενεργειών."};
 
 exports.ifFlowerTooltip = function(d){return "Εάν υπάρχει λουλούδι / κυψέλη στη συγκεκριμένη κατεύθυνση, τότε κάνε κάποιες ενέργειες."};
 
@@ -13417,9 +13417,9 @@ exports.moveBackward = function(d){return "πήγαινε πίσω"};
 
 exports.moveEastTooltip = function(d){return "Πήγαινέ με ανατολικά ένα βήμα."};
 
-exports.moveForward = function(d){return "πήγαινε εμπρός"};
+exports.moveForward = function(d){return "προχώρησε μπροστά"};
 
-exports.moveForwardTooltip = function(d){return "Μετακίνησε με προς τα μπροστά κατά ένα βήμα."};
+exports.moveForwardTooltip = function(d){return "Μετακίνησέ με προς τα μπροστά κατά ένα βήμα."};
 
 exports.moveNorthTooltip = function(d){return "Πήγαινέ με βόρεια ένα βήμα."};
 
@@ -13435,15 +13435,15 @@ exports.nectarRemaining = function(d){return "νέκταρ"};
 
 exports.nectarTooltip = function(d){return "Πάρε νέκταρ από το λουλούδι"};
 
-exports.nextLevel = function(d){return "Συγχαρητήρια! Έχεις ολοκληρώσει αυτό το παζλ."};
+exports.nextLevel = function(d){return "Συγχαρητήρια! Έχετε ολοκληρώσει αυτό το παζλ."};
 
 exports.no = function(d){return "Όχι"};
 
-exports.noPathAhead = function(d){return "μονοπάτι κλειστό"};
+exports.noPathAhead = function(d){return "το μονοπάτι είναι κλειστό"};
 
-exports.noPathLeft = function(d){return "κανένα μονοπάτι προς τα αριστερά"};
+exports.noPathLeft = function(d){return "δεν υπάρχει μονοπάτι προς τα αριστερά"};
 
-exports.noPathRight = function(d){return "κανένα μονοπάτι προς τα δεξιά"};
+exports.noPathRight = function(d){return "δεν υπάρχει μονοπάτι προς τα δεξιά"};
 
 exports.notAtFlowerError = function(d){return "Μπορείς να πάρεις νέκταρ μόνο από ένα λουλούδι."};
 
@@ -13473,7 +13473,7 @@ exports.removeSquare = function(d){return "αφαίρεσε το τετράγω�
 
 exports.repeatCarefullyError = function(d){return "Για να το λύσεις αυτό, σκέψου προσεκτικά σχετικά με το μοτίβο των δύο κινήσεων και της μιας στροφής που θα βάλεις στο πλακίδιο «επανάληψη».  Δεν υπάρχει πρόβλημα αν έχεις μία επιπλέον στροφή στο τέλος."};
 
-exports.repeatUntil = function(d){return "επανάλαβε έως"};
+exports.repeatUntil = function(d){return "επανάλαβε μέχρις ότου"};
 
 exports.repeatUntilBlocked = function(d){return "όσο μονοπάτι εμπρός"};
 
@@ -13495,7 +13495,7 @@ exports.uncheckedCloudError = function(d){return "Βεβαιώσου ότι έλ
 
 exports.uncheckedPurpleError = function(d){return "Βεβαιώσου ότι έλεγξες όλα τα μοβ λουλούδια για να δεις εάν έχουν νέκταρ"};
 
-exports.whileMsg = function(d){return "ενώ"};
+exports.whileMsg = function(d){return "όσο"};
 
 exports.whileTooltip = function(d){return "Επανάλαβε τις εσωτερικές ενέργειες μέχρι το τελικό σημείο."};
 

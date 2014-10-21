@@ -7520,7 +7520,7 @@ exports.and = function(d){return "dhe"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
-exports.catActions = function(d){return "aksionet"};
+exports.catActions = function(d){return "Veprimet"};
 
 exports.catColour = function(d){return "Colour"};
 
@@ -7528,15 +7528,15 @@ exports.catLogic = function(d){return "Logic"};
 
 exports.catLists = function(d){return "Listat"};
 
-exports.catLoops = function(d){return "Loops"};
+exports.catLoops = function(d){return "perseritje"};
 
-exports.catMath = function(d){return "Matematika"};
+exports.catMath = function(d){return "Matematikë"};
 
-exports.catProcedures = function(d){return "Funksionet"};
+exports.catProcedures = function(d){return "funksionet"};
 
 exports.catText = function(d){return "Tekst"};
 
-exports.catVariables = function(d){return "Variablat"};
+exports.catVariables = function(d){return "variabla"};
 
 exports.codeTooltip = function(d){return "Shikoni kodin e gjenerua JavaScript."};
 
@@ -7572,7 +7572,7 @@ exports.generatedCodeInfo = function(d){return "The blocks for your program can 
 
 exports.hashError = function(d){return "Sorry, '%1' doesn't correspond with any saved program."};
 
-exports.help = function(d){return "Ndihm"};
+exports.help = function(d){return "Ndihmë"};
 
 exports.hintTitle = function(d){return "Ndihmes:"};
 
@@ -7580,7 +7580,7 @@ exports.jump = function(d){return "jump"};
 
 exports.levelIncompleteError = function(d){return "You are using all of the necessary types of blocks but not in the right way."};
 
-exports.listVariable = function(d){return "lista"};
+exports.listVariable = function(d){return "listë"};
 
 exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
 
@@ -7612,7 +7612,7 @@ exports.runTooltip = function(d){return "Run the program defined by the blocks i
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Shfaq Kodin"};
+exports.showCodeHeader = function(d){return "Shfaq kodin"};
 
 exports.showGeneratedCode = function(d){return "Shfaq kodin"};
 
@@ -7626,7 +7626,7 @@ exports.tooManyBlocksMsg = function(d){return "This puzzle can be solved with <x
 
 exports.tooMuchWork = function(d){return "You made me do a lot of work!  Could you try repeating fewer times?"};
 
-exports.toolboxHeader = function(d){return "Ndalesat"};
+exports.toolboxHeader = function(d){return "blloqe"};
 
 exports.openWorkspace = function(d){return "How It Works"};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.sq=function(n){return n===1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Veprimet"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "perseritje"};
 
 exports.catEvents = function(d){return "Events"};
 
 exports.catLogic = function(d){return "Logic"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Matematikë"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Funksionet"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "Tekst"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "variabla"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Vazhdo"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Urime! Ju keni perfunduar enigmen perfundimatare."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Urime! Ju keni perfunduar kete enigme."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Jo"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Kjo enigme mund te zgjidhet me %1 rreshta."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "ekzekuto"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Po"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){
