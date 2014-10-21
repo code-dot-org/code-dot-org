@@ -121,9 +121,10 @@ var CONFIGS = {
     movePegmanAnimationFrameNumber: 9,
 
     approachingGoalAnimation: 'close_goal.png',
-    pegmanHeight: 68,
-    pegmanWidth: 51,
-    pegmanYOffset: -14,
+    pegmanHeight: 84,
+    pegmanWidth: 63,
+    pegmanXOffset: -6,
+    pegmanYOffset: -20,
     turnAfterVictory: true
   }
 };
