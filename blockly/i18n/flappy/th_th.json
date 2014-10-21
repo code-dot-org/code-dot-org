@@ -1,5 +1,5 @@
 {
-  "continue": "ต่อไป\n",
+  "continue": "ดำเนินการต่อไป",
   "doCode": "ทำ",
   "elseCode": "อีกอย่างหนึ่ง",
   "endGame": "จบเกมส์",
@@ -17,7 +17,7 @@
   "incrementPlayerScore": "ได้แต้ม",
   "incrementPlayerScoreTooltip": "เพิ่มคะแนนผู้เล่น 1 คะแนน",
   "nextLevel": "ขอแสดงความยินดีคุณสำเร็จปริศนานี้.",
-  "no": "ไม่",
+  "no": "ไม่ใช่",
   "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
   "playSoundRandom": "เล่นเพลงไม่ตามลำดับ",
   "playSoundBounce": "play bounce sound",
@@ -43,7 +43,7 @@
   "setBackgroundUnderwater": "set scene Underwater",
   "setBackgroundCave": "set scene Cave",
   "setBackgroundSanta": "set scene Santa",
-  "setBackgroundTooltip": "Sets the background image",
+  "setBackgroundTooltip": "ตั่งค่าภาพพื้นหลัง",
   "setGapRandom": "set a random gap",
   "setGapVerySmall": "set a very small gap",
   "setGapSmall": "set a small gap",
@@ -126,7 +126,7 @@
   "whenCollideObstacleTooltip": "Execute the actions below when Flappy hits an obstacle.",
   "whenEnterObstacle": "when pass obstacle",
   "whenEnterObstacleTooltip": "Execute the actions below when Flappy enters an obstacle.",
-  "whenRunButtonClick": "when Run is clicked",
+  "whenRunButtonClick": "เมื่อเกมเริ่ม",
   "whenRunButtonClickTooltip": "Execute the actions below when the run button is pressed.",
   "yes": "ใช่"
 }

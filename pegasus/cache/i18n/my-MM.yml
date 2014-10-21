@@ -46,7 +46,7 @@
   n_participants: "# ပါဝင္သူမ်ား"
   go: "သြားသည္"
   thank_you_: "ေက်းဇူးတင္ပါသည္"
-  congratulations: Congratulations!
+  congratulations: "ဂုဏ္ယူပါတယ္"
   congratulations_on_completing_hoc: Congratulations on completing One Hour of Code.
   get_a_certificate_of_achievement: "ေအာင္ျမင္စြာျပီးဆံုးေၾကာင္း လက္မွတ္ရယူပါ"
   enter_valid_email: "ေက်းဇူးျပဳ၍ email ေရးေပးပါ"
@@ -55,7 +55,7 @@
   get_a_certificate_message_after: We'll send you a certificate. Now, keep going with
     our <a href='http://learn.code.org'>20-hour course</a>, or see more options to
     <a href='/learn/beyond'>Learn beyond One Hour</a>.
-  thanks_for_submitting: Thanks for submitting!
+  thanks_for_submitting: "ေပးပို႔မႈအတြက္ ေက်းဇူးတင္ပါတယ္။"
   if_you_enjoyed: If you enjoyed learning, ask friends to try it too!  We want the
     whole world to learn.
   personalize_certificate: Personalize your certificate
@@ -254,7 +254,7 @@
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: "အမည္"
   dashboard_students_age: Age
-  dashboard_students_gender: Gender
+  dashboard_students_gender: "က်ား/မ"
   dashboard_students_male: Male
   dashboard_students_female: Female
   dashboard_students_secret: Secret
@@ -306,8 +306,21 @@
   dashboard_grade_other: Other
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_none: email လိပ္စာ
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: Student
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

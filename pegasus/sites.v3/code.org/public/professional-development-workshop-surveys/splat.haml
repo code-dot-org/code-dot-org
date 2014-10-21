@@ -1,5 +1,5 @@
 ---
-title: "Professional Development Workshop Survey"
+title: "K-5 Professional Development Workshop Survey"
 nav: blank
 rightbar: blank
 ---
@@ -13,7 +13,7 @@ rightbar: blank
 -pass if section_id == 0
 -# BUGBUG: Display a "workshop not closed" message?
     
--membership = DASHBOARD_DB[:followers].where(section_id:section_id, student_user_id:dashboard_user_id)
+-membership = !!DASHBOARD_DB[:followers].where(section_id:section_id, student_user_id:dashboard_user_id).first
 -pass unless membership
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
