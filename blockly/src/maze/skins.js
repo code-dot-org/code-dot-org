@@ -104,21 +104,21 @@ var CONFIGS = {
     obstacleScale: 1.2,
     additionalSound: true,
     idlePegmanAnimation: 'idle_avatar_sheet.png',
-    idlePegmanAnimationFrameNumber: 11,
     idlePegmanAnimationSpeedScale: 1.5,
+    idlePegmanCol: 4,
+    idlePegmanRow: 11,
 
     wallPegmanAnimation: 'wall_avatar_sheet.png',
+    hittingWallAnimation: 'wall_avatar_sheet.png',
     hittingWallAnimationFrameNumber: 20,
     hittingWallAnimationSpeedScale: 1.5,
+    wallPegmanCol: 1,
+    wallPegmanRow: 20,
 
     movePegmanAnimation: 'move_avatar.png',
     movePegmanAnimationSpeedScale: 1.5,
     // This is required when move pegman animation is set
     movePegmanAnimationFrameNumber: 9,
-
-    hittingWallAnimation: 'wall_avatar_sheet.png',
-    hittingWallAnimationFrameNumber: 20,
-    hittingWallAnimationSpeedScale: 1.5,
 
     approachingGoalAnimation: 'close_goal.png',
     pegmanHeight: 68,
