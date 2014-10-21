@@ -22,7 +22,7 @@ Thank you for attending a Code.org K-5 workshop with <%= facilitator_name %> on 
 
 Attached to this email, you will find a personalized certificate acknowledging your successful completion of Code.org's K-5 professional development. We are continuously working to improve our K-5 professional development program.
 
-Please take a moment to complete [this short survey](#) to rate your facilitator and workshop experience. Completing the survey will qualify you to receive supplies at no cost for the unplugged activities from Course 1, 2 or 3.
+Please take a moment to complete [this short survey](http://code.org/professional-development-workshop-surveys/<%= workshop_id %>) to rate your facilitator and workshop experience. Completing the survey will qualify you to receive supplies at no cost for the unplugged activities from Course 1, 2 or 3.
 
 For more support, check out Code.org's [online office hours](http://code.org/educate/k5/k5officehours), [K-5 forum](http://support.code.org/hc/communities/public/topics) and [FAQ](http://support.code.org/). Or [contact us](http://code.org/contact).
 
