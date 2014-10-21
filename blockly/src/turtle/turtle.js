@@ -267,10 +267,10 @@ var turtleFrameSlowdown = 5;
  * Draw the turtle image based on Turtle.x, Turtle.y, and Turtle.heading.
  */
 Turtle.drawTurtle = function() {
+  var sourceY;
   // Computes the index of the image in the sprite.
   var index = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
-  if (skin.id == "frozen")
-  {
+  if (skin.id == "frozen") {
     // the rotations in the sprite sheet go in the opposite direction.
     index = Turtle.numberAvatarHeadings - index;
 
@@ -278,14 +278,11 @@ Turtle.drawTurtle = function() {
     index = (index + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
   }
   var sourceX = Turtle.avatarImage.width * index;
-  if (skin.id == "frozen")
-  {
-    var sourceY = Turtle.avatarImage.height * turtleFrame;
+  if (skin.id == "frozen") {
+    sourceY = Turtle.avatarImage.height * turtleFrame;
     turtleFrame = (turtleFrame + 1) % turtleNumFrames;
-  }
-  else
-  {
-    var sourceY = 0;
+  } else {
+    sourceY = 0;
   }
   var sourceWidth = Turtle.avatarImage.width;
   var sourceHeight = Turtle.avatarImage.height;
@@ -331,7 +328,7 @@ BlocklyApps.reset = function(ignore) {
   else
   {
     Turtle.ctxScratch.strokeStyle = '#000000';
-    Turtle.ctxScratch.fillStyle = '#000000';  
+    Turtle.ctxScratch.fillStyle = '#000000';
   }
   Turtle.ctxScratch.lineWidth = 5;
   Turtle.ctxScratch.lineCap = 'round';
@@ -466,18 +463,16 @@ Turtle.animate = function() {
   var command = tuple.shift();
   BlocklyApps.highlight(tuple.pop());
 
-  if (skin.id == "frozen")
-  {
-    for (var i = 0; i < jumpSubsteps; i++)
-    {
-      setTimeout(function() {
-        Turtle.step(command, tuple);
-        Turtle.display();
-      }, 100*i);
+  if (skin.id == "frozen") {
+    var stepAndDisplay = function () {
+      Turtle.step(command, tuple);
+      Turtle.display();
+    };
+
+    for (var i = 0; i < jumpSubsteps; i++) {
+      setTimeout(stepAndDisplay, 100 * i);
     }
-  }
-  else
-  {
+  } else {
     Turtle.step(command, tuple);
     Turtle.display();
   }

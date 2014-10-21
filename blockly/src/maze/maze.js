@@ -286,7 +286,6 @@ function drawMap () {
       // our idle is a sprite sheet instead of a gif. schedule cycling through
       // the frames
       var numFrames = skin.idlePegmanRow;
-      var pegmanIcon = document.getElementById('pegman');
       var idlePegmanIcon = document.getElementById('idlePegman');
       var timePerFrame = 600; // timeForAnimation / numFrames;
       var idleAnimationFrame = 0;
