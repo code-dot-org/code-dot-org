@@ -127,7 +127,7 @@ class ClassSubmission
     ]
   end
 
-  def self.process(data, last_processed_data)
+  def self.process(data)
     {
       'location_p' => data['location_p'] || geocode_address(data['school_address_s'])
     }
