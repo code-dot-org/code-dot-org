@@ -817,40 +817,40 @@ class UserTest < ActiveSupport::TestCase
     # username regex: /\A[a-z0-9\-\_\.]+\z/
 
     # new name
-    assert_equal 'captain_picard', User.generate_username("Captain Picard")
+    assert_equal 'captain_picard', UserHelpers.generate_username(User, "Captain Picard")
 
     create(:user, username: 'captain_picard')
     # first prefix
-    assert_equal 'captain_picard1', User.generate_username("Captain Picard")
+    assert_equal 'captain_picard1', UserHelpers.generate_username(User, "Captain Picard")
 
     # collisions are not numeric
-    assert_equal 'captain', User.generate_username("Captain")
-    assert_equal 'captain_p', User.generate_username("Captain    P")
+    assert_equal 'captain', UserHelpers.generate_username(User, "Captain")
+    assert_equal 'captain_p', UserHelpers.generate_username(User, "Captain    P")
 
     create(:user, username: 'captain')
     create(:user, username: 'captain1')
     create(:user, username: 'captain2')
     create(:user, username: 'captain55')
 
-    assert_equal 'captain56', User.generate_username("Captain")
+    assert_equal 'captain56', UserHelpers.generate_username(User, "Captain")
 
-    assert_equal "d_andre_means", User.generate_username("D'Andre Means")
-    assert_equal "coder", User.generate_username('樊瑞')
+    assert_equal "d_andre_means", UserHelpers.generate_username(User, "D'Andre Means")
+    assert_equal "coder", UserHelpers.generate_username(User, '樊瑞')
 
     create(:user, username: 'coder')
     create(:user, username: 'coder1')
     create(:user, username: 'coder99')
     create(:user, username: 'coder556')
-    assert_equal "coder557", User.generate_username('樊瑞')
+    assert_equal "coder557", UserHelpers.generate_username(User, '樊瑞')
 
     # short names
-    assert_equal "coder_a", User.generate_username('a')
+    assert_equal "coder_a", UserHelpers.generate_username(User, 'a')
 
     # long names
-    assert_equal "this_is_a_really", User.generate_username('This is a really long name' + ' blah' * 10)
+    assert_equal "this_is_a_really", UserHelpers.generate_username(User, 'This is a really long name' + ' blah' * 10)
 
     # parens
-    assert_equal "kermit_the_frog", User.generate_username("Kermit (the frog)")
+    assert_equal "kermit_the_frog", UserHelpers.generate_username(User, "Kermit (the frog)")
   end
 
   test 'generates usernames' do
