@@ -1,8 +1,8 @@
 ---
-title: Partners de La Hora de Program.AR
+title: Partners de La Hora del Código
 nav: about_nav
 social:
-  'og:title' : 'La Hora de Program.AR está llegando'
+  'og:title' : 'La Hora del Código está llegando'
   'og:description' : "Enterate, en sólo una hora, lo divertido que es programar computadoras." 
   'og:image' : ""
   'og:image:width' : ""
