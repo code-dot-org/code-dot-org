@@ -1292,7 +1292,7 @@ function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
       });
     }, timePerFrame * frame);
   });
-};
+}
 
 /**
  * Schedule the animations for a move from the current position
