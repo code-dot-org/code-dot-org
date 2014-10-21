@@ -3,21 +3,18 @@ title: "Professional Development Workshop Survey"
 nav: blank
 rightbar: blank
 ---
-<%
-  workshop_id = request.splat_path_info[1..-1].to_i
-  workshop = DB[:forms].where(id:workshop_id)
-  pass unless workshop
+-authentication_required!
+
+-workshop_id = request.splat_path_info[1..-1].to_i
+-workshop = DB[:forms].where(id:workshop_id)
+-pass unless workshop
   
-  section_id = workshop[:section_id_s].to_i
-  pass if section_id == 0
-  # BUGBUG: Display a "workshop not closed" message?
-  
-  not_authorized! unless dashboard_user
-  # BUGBUG: Redirect to sign-in page?
-  
-  membership = DASHBOARD_DB[:followers].where(section_id:section_id, student_user_id:dashboard_user_id)
-  pass unless membership
-%>
+-section_id = workshop[:section_id_s].to_i
+-pass if section_id == 0
+-# BUGBUG: Display a "workshop not closed" message?
+    
+-membership = DASHBOARD_DB[:followers].where(section_id:section_id, student_user_id:dashboard_user_id)
+-pass unless membership
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
