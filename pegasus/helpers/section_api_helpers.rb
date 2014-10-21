@@ -1,3 +1,4 @@
+require 'cdo/user_helpers'
 # TODO -- remove this and change the APIs below to check logged in user instead of passing in a user id
 class Dashboard
   def self.admin?(user_id)
@@ -31,6 +32,7 @@ class DashboardStudent
       birthday:params[:birthday],
       created_at:created_at,
       updated_at:created_at,
+      username:UserHelpers.generate_username(DASHBOARD_DB[:users], name)
     }.merge(random_secrets))
     return nil unless row
 
