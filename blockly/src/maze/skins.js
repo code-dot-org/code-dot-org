@@ -97,7 +97,7 @@ var CONFIGS = {
   },
 
  scrat: {
-    goalAnimation: 'goal.gif',
+    goalAnimation: 'goal.png',
     maze_forever: 'maze_forever.png',
     largerObstacleAnimationTiles: 'tiles-broken.png',
 
@@ -114,6 +114,10 @@ var CONFIGS = {
     hittingWallAnimationSpeedScale: 1.5,
     wallPegmanCol: 1,
     wallPegmanRow: 20,
+
+    acornAnimation: 'splash.png',
+    acornPegmanCol: 1,
+    acornPegmanRow: 20,
 
     movePegmanAnimation: 'move_avatar.png',
     movePegmanAnimationSpeedScale: 1.5,
