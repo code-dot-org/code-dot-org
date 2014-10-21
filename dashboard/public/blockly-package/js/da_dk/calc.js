@@ -7656,7 +7656,7 @@ exports.penUp = function(d){return "blyant op"};
 
 exports.reinfFeedbackMsg = function(d){return "Ser dette se ud, som det du ønsker? Du kan trykke på \"Prøv igen\" knappen for at se din tegning."};
 
-exports.setColour = function(d){return "vælg farve"};
+exports.setColour = function(d){return "sæt farve"};
 
 exports.setWidth = function(d){return "indstil bredde"};
 
@@ -7699,13 +7699,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Lister"};
 
-exports.catLoops = function(d){return "Løkker"};
+exports.catLoops = function(d){return "Sløjfer"};
 
 exports.catMath = function(d){return "Matematik"};
 
 exports.catProcedures = function(d){return "Funktioner"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -7797,7 +7797,7 @@ exports.tooManyBlocksMsg = function(d){return "Dette puslespil kan løses med <x
 
 exports.tooMuchWork = function(d){return "Du fik mig til at gøre en masse arbejde! Kunne du prøve at gentage færre gange?"};
 
-exports.toolboxHeader = function(d){return "Blokke"};
+exports.toolboxHeader = function(d){return "blokke"};
 
 exports.openWorkspace = function(d){return "Sådan fungerer det"};
 

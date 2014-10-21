@@ -10670,7 +10670,7 @@ exports.catVariables = function(d){return "மாறிலிகள்"};
 
 exports.codeTooltip = function(d){return "உருவாக்கப்பட்ட ஜாவாஉரைக் குறியீடுகளை பார்க்க."};
 
-exports.continue = function(d){return "தொடர்ந்து"};
+exports.continue = function(d){return "தொடர்க"};
 
 exports.dialogCancel = function(d){return "ரத்து செய்"};
 
@@ -10889,7 +10889,7 @@ exports.lengthFeedback = function(d){return "You got it right except for the len
 
 exports.lengthParameter = function(d){return "நீளம்"};
 
-exports.loopVariable = function(d){return "counter"};
+exports.loopVariable = function(d){return "கணக்கிடுகிளவன்"};
 
 exports.moveBackward = function(d){return "move backward by"};
 
@@ -10917,13 +10917,13 @@ exports.penTooltip = function(d){return "Lifts or lowers the pencil, to start or
 
 exports.penUp = function(d){return "pencil up"};
 
-exports.reinfFeedbackMsg = function(d){return "Does this look like what you want? You can press the \"Try again\" button to see your drawing."};
+exports.reinfFeedbackMsg = function(d){return "நீங்கள் எதிர்பார்த்தது இவ்வாறானதா? நீங்கள் உங்கள் வரைதலை பார்க்க \"மீள முயல்க\" பொத்தானை அழுத்தவும்."};
 
 exports.setColour = function(d){return "நிறத்தை அமை"};
 
 exports.setWidth = function(d){return "அகலத்தை அமை"};
 
-exports.shareDrawing = function(d){return "Share your drawing:"};
+exports.shareDrawing = function(d){return "உங்கள் சித்திரத்தை பகிரவும்:"};
 
 exports.showMe = function(d){return "எனக்கு காட்டு"};
 

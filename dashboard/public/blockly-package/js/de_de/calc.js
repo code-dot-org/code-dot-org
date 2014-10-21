@@ -7660,7 +7660,7 @@ exports.setColour = function(d){return "Farbe festlegen"};
 
 exports.setWidth = function(d){return "Breite festlegen"};
 
-exports.shareDrawing = function(d){return "Zeige deine Zeichnung:"};
+exports.shareDrawing = function(d){return "Teile deine Zeichnung:"};
 
 exports.showMe = function(d){return "Zeigen"};
 
@@ -7773,7 +7773,7 @@ exports.play = function(d){return "spielen"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" von "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "wiederholen"};
+exports.repeat = function(d){return "wiederhole"};
 
 exports.resetProgram = function(d){return "Zurücksetzen"};
 

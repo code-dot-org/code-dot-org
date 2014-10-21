@@ -9212,13 +9212,13 @@ exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Функции"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Променливи"};
 
 exports.codeTooltip = function(d){return "Виж генерирания JavaScript код."};
 
-exports.continue = function(d){return "Продължение"};
+exports.continue = function(d){return "Продължи"};
 
 exports.dialogCancel = function(d){return "Отмяна"};
 
@@ -9238,7 +9238,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Блоковете за пов
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Блокът за функция трябва да има други блокове вътре в себе си, за да работи."};
 
-exports.extraTopBlocks = function(d){return "Имате не закачени блокове. Искате ли да кажеш да ги закачите към блокът \"при стартиране\" ?"};
+exports.extraTopBlocks = function(d){return "Имате не закачени блокове. Искате ли да ги закачите към блока \"при стартиране\" ?"};
 
 exports.finalStage = function(d){return "Поздравления! Вие завършихте последния етап."};
 
@@ -9280,17 +9280,17 @@ exports.play = function(d){return "играй"};
 
 exports.puzzleTitle = function(d){return "Пъзел "+v(d,"puzzle_number")+" от "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "повтори"};
+exports.repeat = function(d){return "повтарям"};
 
 exports.resetProgram = function(d){return "Начално състояние"};
 
-exports.runProgram = function(d){return "Пусни"};
+exports.runProgram = function(d){return "Старт"};
 
 exports.runTooltip = function(d){return "Стартира програмата, определена от блоковете в работното поле."};
 
 exports.score = function(d){return "резултат"};
 
-exports.showCodeHeader = function(d){return "Покажи кода"};
+exports.showCodeHeader = function(d){return "Покажи код"};
 
 exports.showGeneratedCode = function(d){return "Покажи кода"};
 
@@ -9312,7 +9312,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "All-time total: "+p(d,"
 
 exports.tryAgain = function(d){return "Опитайте отново"};
 
-exports.hintRequest = function(d){return "Виж съвета"};
+exports.hintRequest = function(d){return "Вижте съвета"};
 
 exports.backToPreviousLevel = function(d){return "Обратно към предишното ниво"};
 
@@ -9357,7 +9357,7 @@ exports.genericFeedback = function(d){return "Вижте какво сте въ�
 var MessageFormat = require("messageformat");MessageFormat.locale.bg=function(n){return n===1?"one":"other"}
 exports.continue = function(d){return "Напред"};
 
-exports.doCode = function(d){return "направи"};
+exports.doCode = function(d){return "прави"};
 
 exports.elseCode = function(d){return "иначе"};
 
@@ -9393,13 +9393,13 @@ exports.nextLevel = function(d){return "Поздравления! Вие зав�
 
 exports.no = function(d){return "Не"};
 
-exports.numBlocksNeeded = function(d){return "Този пъзел може да бъде решен с %1 блокове."};
+exports.numBlocksNeeded = function(d){return "Този пъзел може да бъде решен с %1 блока."};
 
 exports.playSoundRandom = function(d){return "пусни случаен звук"};
 
 exports.playSoundBounce = function(d){return "пусни звук \"Подскок\""};
 
-exports.playSoundCrunch = function(d){return "възпроизвеждане на звук за разбиване"};
+exports.playSoundCrunch = function(d){return "възпроизвежда звук на болка"};
 
 exports.playSoundDie = function(d){return "възпроизвеждане тъжен звук"};
 
@@ -9421,9 +9421,9 @@ exports.playSoundSplash = function(d){return "Възпроизвеждане н�
 
 exports.playSoundLaser = function(d){return "възпроизвеждане на звук от лазер"};
 
-exports.playSoundTooltip = function(d){return "Възпроизвеждане на избраният звук."};
+exports.playSoundTooltip = function(d){return "Възпроизвежда избраният звук."};
 
-exports.reinfFeedbackMsg = function(d){return "Може да натиснете бутона \"Опитай отново\", за да се върнете в играта си."};
+exports.reinfFeedbackMsg = function(d){return "Може да натиснете бутона \"Опитай отново\", за да се върнете да играете играта си."};
 
 exports.scoreText = function(d){return "Резултат: "+v(d,"playerScore")};
 
@@ -9443,7 +9443,7 @@ exports.setBackgroundCave = function(d){return "Задава сцена \"пещ
 
 exports.setBackgroundSanta = function(d){return "Задава сцена \"Дядо Коледа\""};
 
-exports.setBackgroundTooltip = function(d){return "Задава фоновото изображение"};
+exports.setBackgroundTooltip = function(d){return "Задаване на фоновото изображение"};
 
 exports.setGapRandom = function(d){return "задава случайна пролука"};
 
@@ -9543,7 +9543,7 @@ exports.setPlayerTurkey = function(d){return "Задай герой \"пуйка
 
 exports.setPlayerTooltip = function(d){return "Задава изображение на герой"};
 
-exports.setScore = function(d){return "постави резултат"};
+exports.setScore = function(d){return "поставя резултат"};
 
 exports.setScoreTooltip = function(d){return "Задава резултата на играча"};
 
@@ -9555,9 +9555,9 @@ exports.shareFlappyTwitter = function(d){return "Вижте Flappy играта,
 
 exports.shareGame = function(d){return "Споделете играта си:"};
 
-exports.soundRandom = function(d){return "вземи случаен"};
+exports.soundRandom = function(d){return "случаен"};
 
-exports.soundBounce = function(d){return "скок"};
+exports.soundBounce = function(d){return "скача"};
 
 exports.soundCrunch = function(d){return "криза"};
 

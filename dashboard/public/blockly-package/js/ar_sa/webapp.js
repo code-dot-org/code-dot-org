@@ -7541,7 +7541,7 @@ exports.catActions = function(d){return "الاجراءات"};
 
 exports.catColour = function(d){return "لون"};
 
-exports.catLogic = function(d){return "العمليات المنطقية"};
+exports.catLogic = function(d){return "منطق"};
 
 exports.catLists = function(d){return "القوائم والمصفوفات"};
 
@@ -7551,7 +7551,7 @@ exports.catMath = function(d){return "العمليات الحسابية"};
 
 exports.catProcedures = function(d){return "الدوال"};
 
-exports.catText = function(d){return "الجمل"};
+exports.catText = function(d){return "نص"};
 
 exports.catVariables = function(d){return "المتغيرات"};
 
@@ -7593,7 +7593,7 @@ exports.help = function(d){return "مساعدة"};
 
 exports.hintTitle = function(d){return "تلميح:"};
 
-exports.jump = function(d){return "قفز"};
+exports.jump = function(d){return "إقفز"};
 
 exports.levelIncompleteError = function(d){return "أنت استخدمت كل انواع القطع الضرورية ولكن ليس في الطريق الصحيح."};
 
@@ -7619,7 +7619,7 @@ exports.play = function(d){return "إلعب"};
 
 exports.puzzleTitle = function(d){return "اللغز "+v(d,"puzzle_number")+" من "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "إعادة"};
+exports.repeat = function(d){return "كرر"};
 
 exports.resetProgram = function(d){return "إعادة تعيين"};
 
@@ -7711,43 +7711,43 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ar = function(
   }
   return 'other';
 };
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "الاجراءات"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "الجمل التكرارية"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "الأحداث"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "منطق"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "العمليات الحسابية"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "الدوال"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "نص"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "المتغيرات"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "أستمر"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "تهانينا ! لقد قمت بحل اللغز الاخير."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "تهانينا! لقد قمت بإكمال هذا اللغز."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "لا"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "يمكن حل هذا الغز ب  %1 من القطع."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "تكرار إلى الأبد"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "نفّذ"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7759,7 +7759,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "نعم"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

@@ -7528,13 +7528,13 @@ exports.catLogic = function(d){return "Məntiq"};
 
 exports.catLists = function(d){return "Siyahılar"};
 
-exports.catLoops = function(d){return "Dövrlər"};
+exports.catLoops = function(d){return "Dövlər"};
 
 exports.catMath = function(d){return "Riyaziyyat"};
 
 exports.catProcedures = function(d){return "Funksiyalar"};
 
-exports.catText = function(d){return "Mətn"};
+exports.catText = function(d){return "mətn"};
 
 exports.catVariables = function(d){return "Dəyişənlər"};
 
@@ -7626,7 +7626,7 @@ exports.tooManyBlocksMsg = function(d){return "Bu tapmaca <x id='START_SPAN'/><x
 
 exports.tooMuchWork = function(d){return "Siz mənə çox iş gördürdünüz! Təkrarlamaları azalda bilərsiniz?"};
 
-exports.toolboxHeader = function(d){return "Bloklar"};
+exports.toolboxHeader = function(d){return "bloklar"};
 
 exports.openWorkspace = function(d){return "Bu necə işləyir?"};
 
@@ -7666,7 +7666,7 @@ exports.when = function(d){return "when"};
 
 exports.whenRun = function(d){return "when run"};
 
-exports.tryHOC = function(d){return "Kodlama Saati'ni dənə"};
+exports.tryHOC = function(d){return "Kod Saatında özünüzü sınayın"};
 
 exports.signup = function(d){return "Sign up for the intro course"};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Əmrlər"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Dövlər"};
 
 exports.catEvents = function(d){return "Events"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Məntiq"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Riyaziyyat"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Funksiyalar"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "mətn"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Dəyişənlər"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Davam et"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Təbriklər! Axırıncı tapmacanı da tapdınız."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Təbriklər! Siz bu tapmacanı tamamladınız."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Xeyr"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Bu  tapmaca %1 blokla həll oluna bilər."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "et"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Bəli"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

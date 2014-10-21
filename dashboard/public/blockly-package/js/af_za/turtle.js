@@ -10889,7 +10889,7 @@ exports.lengthFeedback = function(d){return "You got it right except for the len
 
 exports.lengthParameter = function(d){return "length"};
 
-exports.loopVariable = function(d){return "counter"};
+exports.loopVariable = function(d){return "Teller"};
 
 exports.moveBackward = function(d){return "move backward by"};
 

@@ -1474,6 +1474,7 @@ Blockly.Msg.LISTS_INLIST = "yn rhestr";
 Blockly.Msg.LISTS_IS_EMPTY_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#is_empty";
 Blockly.Msg.LISTS_IS_EMPTY_TITLE = "Mae %1 yn wag";
 Blockly.Msg.LISTS_LENGTH_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#length_of";
+Blockly.Msg.LISTS_LENGTH_INPUT_LENGTH = "length of";
 Blockly.Msg.LISTS_LENGTH_TITLE = "hyd %1";
 Blockly.Msg.LISTS_LENGTH_TOOLTIP = "Yn cynhyrchu hyd y rhestr.";
 Blockly.Msg.LISTS_REPEAT_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#create_list_with";

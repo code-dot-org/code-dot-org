@@ -7654,7 +7654,7 @@ exports.penTooltip = function(d){return "Alza o abbassa la matita, per avviare o
 
 exports.penUp = function(d){return "Alza la matita"};
 
-exports.reinfFeedbackMsg = function(d){return "Somiglia a quello che volevi? Se premi il pulsante \"Riprova\" puoi tornare indietro per modificare il tuo disegno."};
+exports.reinfFeedbackMsg = function(d){return "Somiglia a quello che volevi? Puoi premere il pulsante \"Riprova\" per rivedere il tuo disegno."};
 
 exports.setColour = function(d){return "Imposta il colore"};
 
@@ -7705,7 +7705,7 @@ exports.catMath = function(d){return "Matematica"};
 
 exports.catProcedures = function(d){return "Funzioni"};
 
-exports.catText = function(d){return "Testo"};
+exports.catText = function(d){return "testo"};
 
 exports.catVariables = function(d){return "Variabili"};
 
@@ -7737,7 +7737,7 @@ exports.finalStage = function(d){return "Complimenti! Hai completato l'ultima le
 
 exports.finalStageTrophies = function(d){return "Complimenti! Hai completato l'ultima lezione e vinto "+p(d,"numTrophies",0,"it",{"one":"un trofeo","other":n(d,"numTrophies")+" trofei"})+"."};
 
-exports.finish = function(d){return "Condividi"};
+exports.finish = function(d){return "Fine"};
 
 exports.generatedCodeInfo = function(d){return "Anche le migliori università (p.es., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") insegnano la programmazione visuale con i blocchi. Ma i blocchi che metti insieme possono essere rappresentati anche in JavaScript, uno dei linguaggi di programmazione più usati al mondo:"};
 
@@ -7751,7 +7751,7 @@ exports.jump = function(d){return "salta"};
 
 exports.levelIncompleteError = function(d){return "Stai usando tutti i tipi di blocchi necessari, ma non nel modo giusto."};
 
-exports.listVariable = function(d){return "lista"};
+exports.listVariable = function(d){return "elenco"};
 
 exports.makeYourOwnFlappy = function(d){return "Costruisci la tua versione del gioco Flappy"};
 
@@ -7783,7 +7783,7 @@ exports.runTooltip = function(d){return "Esegui il programma definito dai blocch
 
 exports.score = function(d){return "punteggio"};
 
-exports.showCodeHeader = function(d){return "Mostra il codice"};
+exports.showCodeHeader = function(d){return "Visualizza codice"};
 
 exports.showGeneratedCode = function(d){return "Mostra il codice"};
 
@@ -7797,7 +7797,7 @@ exports.tooManyBlocksMsg = function(d){return "Questo esercizio può essere riso
 
 exports.tooMuchWork = function(d){return "Mi hai fatto fare un sacco di lavoro!  Puoi provare a farmi fare meno ripetizioni?"};
 
-exports.toolboxHeader = function(d){return "Blocchi"};
+exports.toolboxHeader = function(d){return "blocchi"};
 
 exports.openWorkspace = function(d){return "Come funziona"};
 

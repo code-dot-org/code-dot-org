@@ -7570,7 +7570,7 @@ exports.depth = function(d){return "djup"};
 
 exports.dots = function(d){return "pixlar"};
 
-exports.drawASquare = function(d){return "Rita en fyrkant"};
+exports.drawASquare = function(d){return "rita en kvadrat"};
 
 exports.drawATriangle = function(d){return "rita en triangel"};
 
@@ -7592,7 +7592,7 @@ exports.drawARocket = function(d){return "rita en raket"};
 
 exports.drawASnowflake = function(d){return "rita en snöflinga"};
 
-exports.drawASnowman = function(d){return "Rita en snögubbe"};
+exports.drawASnowman = function(d){return "rita en snögubbe"};
 
 exports.drawAStar = function(d){return "rita en stjärna"};
 
@@ -7656,9 +7656,9 @@ exports.penUp = function(d){return "lyft pennan"};
 
 exports.reinfFeedbackMsg = function(d){return "Ser det ut som du vill? Du kan trycka på \"Försök igen\"-knappen för att se din teckning."};
 
-exports.setColour = function(d){return "välj färg"};
+exports.setColour = function(d){return "Ställ in färg"};
 
-exports.setWidth = function(d){return "Välj bredd"};
+exports.setWidth = function(d){return "Ställ in bredd"};
 
 exports.shareDrawing = function(d){return "Dela din teckning:"};
 
@@ -7699,13 +7699,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Listor"};
 
-exports.catLoops = function(d){return "loopar"};
+exports.catLoops = function(d){return "Loopar"};
 
 exports.catMath = function(d){return "Matte"};
 
 exports.catProcedures = function(d){return "Funktioner"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -7747,7 +7747,7 @@ exports.help = function(d){return "Hjälp"};
 
 exports.hintTitle = function(d){return "Tips:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "hoppa"};
 
 exports.levelIncompleteError = function(d){return "Du använder alla nödvändiga typer av block, men inte på rätt sätt."};
 
@@ -7797,7 +7797,7 @@ exports.tooManyBlocksMsg = function(d){return "Detta pusslet kan lösas med <x i
 
 exports.tooMuchWork = function(d){return "Du fick mig att göra en hel del arbete!  Du kan försöka upprepa färre gånger?"};
 
-exports.toolboxHeader = function(d){return "Block"};
+exports.toolboxHeader = function(d){return "bitar"};
 
 exports.openWorkspace = function(d){return "Hur det fungerar"};
 

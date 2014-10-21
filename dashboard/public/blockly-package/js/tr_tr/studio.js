@@ -18693,7 +18693,7 @@ exports.and = function(d){return "ve"};
 
 exports.blocklyMessage = function(d){return "Parçalı"};
 
-exports.catActions = function(d){return "İşlemler"};
+exports.catActions = function(d){return "Eylemler"};
 
 exports.catColour = function(d){return "Renk"};
 
@@ -18707,13 +18707,13 @@ exports.catMath = function(d){return "Matematik"};
 
 exports.catProcedures = function(d){return "Fonksiyonlar"};
 
-exports.catText = function(d){return "Yazı"};
+exports.catText = function(d){return "yazı"};
 
 exports.catVariables = function(d){return "Değişkenler"};
 
 exports.codeTooltip = function(d){return "Oluşturulan JavaScript kodunu gör."};
 
-exports.continue = function(d){return "Devam"};
+exports.continue = function(d){return "Devam Et"};
 
 exports.dialogCancel = function(d){return "İptal"};
 
@@ -18733,13 +18733,13 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Tekrar\" bloğu veya \"Eğer
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Fonksiyon bloğunun çalışabilmesi için içine başka bloklar koymalısın."};
 
-exports.extraTopBlocks = function(d){return "Bir olay bloğuna eklenmemiş ekstra blokların var."};
+exports.extraTopBlocks = function(d){return "Blokları bağlamadın. \"Çalıştığı zaman\" bloğuna bağlamayı denediniz mi?"};
 
 exports.finalStage = function(d){return "Son aşamayı bitirdiniz. Tebrikler!"};
 
 exports.finalStageTrophies = function(d){return "Tebrikler! Son aşamayı bitirerek "+p(d,"numTrophies",0,"tr",{"one":"bir ganimet","other":n(d,"numTrophies")+" ganimet"})+" kazandınız."};
 
-exports.finish = function(d){return "Bitir"};
+exports.finish = function(d){return "Bitiş"};
 
 exports.generatedCodeInfo = function(d){return "Dünyanın en iyi üniversiteleri bile yap-boz oyun tabanlı kodlama öğretiyor (Örn. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ayrıca detaylı incelerseniz, birleştirdiğiniz bloklar dünyanın en yaygın kullanılan kodlama dili olan JavaScript dilinde de görüntüleniyor:"};
 
@@ -18749,7 +18749,7 @@ exports.help = function(d){return "Yardım"};
 
 exports.hintTitle = function(d){return "İpucu:"};
 
-exports.jump = function(d){return "atla"};
+exports.jump = function(d){return "zıpla"};
 
 exports.levelIncompleteError = function(d){return "Tüm gerekli türdeki blokları kullanıyorsunuz ama doğru şekilde değil."};
 
@@ -18775,7 +18775,7 @@ exports.play = function(d){return "oynat"};
 
 exports.puzzleTitle = function(d){return "Bulmaca "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "tekrarla"};
+exports.repeat = function(d){return "bu işlemleri"};
 
 exports.resetProgram = function(d){return "Yeniden başla"};
 
@@ -18791,7 +18791,7 @@ exports.showGeneratedCode = function(d){return "Kodu Görüntüle"};
 
 exports.subtitle = function(d){return "Bir görsel programa ortamı"};
 
-exports.textVariable = function(d){return "metin yazısı"};
+exports.textVariable = function(d){return "metin"};
 
 exports.tooFewBlocksMsg = function(d){return "Tüm gerekli blok türlerini kullanıyorsun,fakat bulmacayı tamamlamak için bu blok tiplerinden daha fazla kullanmayı dene."};
 
@@ -18799,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "Bu bulmaca <x id='START_SPAN'/><x
 
 exports.tooMuchWork = function(d){return "Bana çok fazla iş yaptırdın!Daha az tekrar etmeyi deneyebilir misin ?"};
 
-exports.toolboxHeader = function(d){return "Bloklar"};
+exports.toolboxHeader = function(d){return "bloklar"};
 
 exports.openWorkspace = function(d){return "Nasıl Çalışır"};
 
@@ -18815,7 +18815,7 @@ exports.saveToGallery = function(d){return "Galerine kaydet"};
 
 exports.savedToGallery = function(d){return "Galerine kaydedildi!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Üzgünüz, bu programı paylaşamıyoruz."};
 
 exports.typeCode = function(d){return "Açıklamaların altına kendi JavaScript kodunu yaz."};
 
@@ -18852,7 +18852,7 @@ exports.genericFeedback = function(d){return "Sonucunu gör ve programını düz
 var MessageFormat = require("messageformat");MessageFormat.locale.tr=function(n){return "other"}
 exports.actor = function(d){return "aktör"};
 
-exports.catActions = function(d){return "Eylemler"};
+exports.catActions = function(d){return "İşlemler"};
 
 exports.catControl = function(d){return "Döngüler"};
 
@@ -18864,7 +18864,7 @@ exports.catMath = function(d){return "Matematik"};
 
 exports.catProcedures = function(d){return "Fonksiyonlar"};
 
-exports.catText = function(d){return "metin yazısı"};
+exports.catText = function(d){return "yazı"};
 
 exports.catVariables = function(d){return "Değişkenler"};
 
@@ -18872,7 +18872,7 @@ exports.changeScoreTooltip = function(d){return "Skoru bir puan arttır veya aza
 
 exports.changeScoreTooltipK1 = function(d){return "Skora bir puan ekle."};
 
-exports.continue = function(d){return "Devam Et"};
+exports.continue = function(d){return "Devam"};
 
 exports.decrementPlayerScore = function(d){return "Puanı sil"};
 
@@ -18906,7 +18906,7 @@ exports.makeProjectileRedHearts = function(d){return "kırmızı kalpler yap"};
 
 exports.makeProjectileTooltip = function(d){return "Çarpıştığında yok olan veya sıçrayan bir mermi yap."};
 
-exports.makeYourOwn = function(d){return "Kendi Hikayeni Yarat"};
+exports.makeYourOwn = function(d){return "Kendi oyun atölyesi uygulamanızı yapın"};
 
 exports.moveDirectionDown = function(d){return "aşağı"};
 
@@ -18916,7 +18916,7 @@ exports.moveDirectionRight = function(d){return "sağ"};
 
 exports.moveDirectionUp = function(d){return "yukarı"};
 
-exports.moveDirectionRandom = function(d){return "rastgele"};
+exports.moveDirectionRandom = function(d){return "gelişigüzel"};
 
 exports.moveDistance25 = function(d){return "25 piksel"};
 
@@ -18928,7 +18928,7 @@ exports.moveDistance200 = function(d){return "200 piksel"};
 
 exports.moveDistance400 = function(d){return "400 piksel"};
 
-exports.moveDistancePixels = function(d){return "piksel"};
+exports.moveDistancePixels = function(d){return "pikseller"};
 
 exports.moveDistanceRandom = function(d){return "rasgele piksel"};
 
@@ -18960,11 +18960,11 @@ exports.nextLevel = function(d){return "Tebrikler! Bu bulmacayı tamamladınız.
 
 exports.no = function(d){return "Hayır"};
 
-exports.numBlocksNeeded = function(d){return "Bu puzzle %1 blok ile çözülebilir."};
+exports.numBlocksNeeded = function(d){return "Bu bulmaca %1 blok kullanılarak çözülebilir."};
 
 exports.ouchExclamation = function(d){return "Ah!"};
 
-exports.playSoundCrunch = function(d){return "ezilme sesi çal"};
+exports.playSoundCrunch = function(d){return "kırılma sesi çal"};
 
 exports.playSoundGoal1 = function(d){return "\"Hedef 1\" sesi çal"};
 
@@ -19038,7 +19038,7 @@ exports.projectilePurpleHearts = function(d){return "mor kalpler"};
 
 exports.projectileRedHearts = function(d){return "kırmızı kalpler"};
 
-exports.projectileRandom = function(d){return "rastgele"};
+exports.projectileRandom = function(d){return "gelişigüzel"};
 
 exports.reinfFeedbackMsg = function(d){return "Oyununuzu tekrar oynamak için \"yeniden dene\" butonuna basabilirsiniz."};
 
@@ -19086,7 +19086,7 @@ exports.setBackgroundTennis = function(d){return "Tenis arka planını ayarla"};
 
 exports.setBackgroundWinter = function(d){return "Kış arka planını ayarla"};
 
-exports.setBackgroundTooltip = function(d){return "Arka plan resmini ayarlar"};
+exports.setBackgroundTooltip = function(d){return "arkaplanda resmini ayarla"};
 
 exports.setScoreText = function(d){return "skor ayarla"};
 
@@ -19210,15 +19210,15 @@ exports.showTitleScreen = function(d){return "ekran başlığını göster"};
 
 exports.showTitleScreenTitle = function(d){return "başlık"};
 
-exports.showTitleScreenText = function(d){return "metin"};
+exports.showTitleScreenText = function(d){return "metin yazısı"};
 
-exports.showTSDefTitle = function(d){return "başlık tipi burada"};
+exports.showTSDefTitle = function(d){return "başlığı buraya yazın"};
 
-exports.showTSDefText = function(d){return "yazı tipi burada"};
+exports.showTSDefText = function(d){return "yazıyı buraya yazın"};
 
 exports.showTitleScreenTooltip = function(d){return "İlişkili başlık ve metin içeren bir başlık ekranı göster."};
 
-exports.setSprite = function(d){return "ayarla"};
+exports.setSprite = function(d){return "atamak"};
 
 exports.setSpriteN = function(d){return "ayarla aktör "+v(d,"spriteIndex")};
 
@@ -19326,27 +19326,27 @@ exports.whenSpriteCollidedTooltip = function(d){return "Bir aktör başka bir ak
 
 exports.whenSpriteCollidedWith = function(d){return "dokunur"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "herhangi bir aktöre dokunur"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "herhangi bir kenara dokunur"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "herhangi bir mermiye dokunur"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "herhangi bir şeye dokunur"};
 
 exports.whenSpriteCollidedWithN = function(d){return "dokunur aktör "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "mavi ateş topuna dokunur"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "mor ateş topuna dokunur"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "kırmızı ateş topuna dokunur"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "sarı kalplere dokunur"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "mor kalplere dokunur"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "kırmızı kalplere dokunur"};
 
 exports.whenSpriteCollidedWithBottomEdge = function(d){return "alt kenara dokunur"};
 

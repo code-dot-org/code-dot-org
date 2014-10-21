@@ -13206,7 +13206,7 @@ exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkce"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Proměnné"};
 
@@ -13238,7 +13238,7 @@ exports.finalStage = function(d){return "Dobrá práce! Dokončil si poslední f
 
 exports.finalStageTrophies = function(d){return "Dobrá práce! Dokončil si poslední fázi a vyhrál "+p(d,"numTrophies",0,"cs",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Dokončit"};
 
 exports.generatedCodeInfo = function(d){return "Dokonce nejlepší university učí programovat pomocí bloků (např. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale vnitřek bloků, které jsi sestavil, lze zobrazit také v JavaScriptu, světově nejrozšířenějším programovacím jazyce:"};
 
@@ -13274,7 +13274,7 @@ exports.play = function(d){return "play"};
 
 exports.puzzleTitle = function(d){return "Hádanka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "ailadrodd"};
+exports.repeat = function(d){return "opakuj"};
 
 exports.resetProgram = function(d){return "Obnovit"};
 
@@ -13284,7 +13284,7 @@ exports.runTooltip = function(d){return "Spustí program definovaný bloky na pr
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Zobrazit Kód"};
+exports.showCodeHeader = function(d){return "Zobrazit kód"};
 
 exports.showGeneratedCode = function(d){return "Zobrazit kód"};
 
@@ -13298,7 +13298,7 @@ exports.tooManyBlocksMsg = function(d){return "Tato hádanka může být vyřeš
 
 exports.tooMuchWork = function(d){return "Přinutil jsi mne udělat spoustu práce! Mohl bys zkusit opakovat méně krát?"};
 
-exports.toolboxHeader = function(d){return "Bloky"};
+exports.toolboxHeader = function(d){return "bloky"};
 
 exports.openWorkspace = function(d){return "Jak To Funguje"};
 
@@ -13377,7 +13377,7 @@ exports.dirS = function(d){return "J"};
 
 exports.dirW = function(d){return "Z"};
 
-exports.doCode = function(d){return "dělej"};
+exports.doCode = function(d){return "proveď"};
 
 exports.elseCode = function(d){return "jinak"};
 
@@ -13391,11 +13391,11 @@ exports.fillSquare = function(d){return "vyplň čtverec"};
 
 exports.fillTooltip = function(d){return "umísti 1 jednotku hlíny"};
 
-exports.finalLevel = function(d){return "Dobrá práce! Vyřešil si poslední hádanku."};
+exports.finalLevel = function(d){return "Dobrá práce! Vyřešil jsi poslední hádanku."};
 
 exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
 
-exports.get = function(d){return "cael"};
+exports.get = function(d){return "získat"};
 
 exports.heightParameter = function(d){return "výška"};
 
@@ -13409,7 +13409,7 @@ exports.honeyTooltip = function(d){return "Vyrob med z nektaru"};
 
 exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
 
-exports.ifCode = function(d){return "os"};
+exports.ifCode = function(d){return "Pokud"};
 
 exports.ifInRepeatError = function(d){return "Potřebuješ blok \"pokud\" uvnitř bloku \"opakovat\". Pokud máš potíže, zkus znovu předchozí úroveň, aby jsi zjistil, jak fungovala."};
 
@@ -13433,7 +13433,7 @@ exports.moveBackward = function(d){return "move backward"};
 
 exports.moveEastTooltip = function(d){return "Posuň mě na východ o jedno políčko."};
 
-exports.moveForward = function(d){return "posuň vpřed"};
+exports.moveForward = function(d){return "posunout vpřed"};
 
 exports.moveForwardTooltip = function(d){return "Posuň mě jedno pole vpřed."};
 
@@ -13451,7 +13451,7 @@ exports.nectarRemaining = function(d){return "nectar"};
 
 exports.nectarTooltip = function(d){return "Získej nektar z květiny"};
 
-exports.nextLevel = function(d){return "Dobrá práce! Dokončili jsi tuto hádanku."};
+exports.nextLevel = function(d){return "Dobrá práce! Dokončil jsi tuto hádanku."};
 
 exports.no = function(d){return "Ne"};
 
@@ -13489,7 +13489,7 @@ exports.removeSquare = function(d){return "odstraň čtverec"};
 
 exports.repeatCarefullyError = function(d){return "K vyřešení této hádanky, najdi vzorec, který se opakuje. Použij blok \"opakovat\" a do něj vlož tyto 3 bloky: posunout, posunout, otočit vpravo."};
 
-exports.repeatUntil = function(d){return "opakuj dokud"};
+exports.repeatUntil = function(d){return "Opakovat do"};
 
 exports.repeatUntilBlocked = function(d){return "dokud je cesta vpřed"};
 
@@ -13501,9 +13501,9 @@ exports.totalHoney = function(d){return "total honey"};
 
 exports.totalNectar = function(d){return "total nectar"};
 
-exports.turnLeft = function(d){return "otoč vlevo"};
+exports.turnLeft = function(d){return "otočit vlevo"};
 
-exports.turnRight = function(d){return "otoč vpravo"};
+exports.turnRight = function(d){return "otočit vpravo"};
 
 exports.turnTooltip = function(d){return "Otočí mě doleva nebo doprava o 90 stupňů."};
 

@@ -9411,11 +9411,11 @@ exports.incrementPlayerScore = function(d){return "Doseči točko"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Dodaj ena k trenutnemu dosežku."};
 
-exports.nextLevel = function(d){return "Čestitam! Rešili ste to uganko."};
+exports.nextLevel = function(d){return "Čestitke! Zaključil/a si to uganko."};
 
 exports.no = function(d){return "Ne"};
 
-exports.numBlocksNeeded = function(d){return "Ta uganka je lahko rešena z %1 blokom."};
+exports.numBlocksNeeded = function(d){return "Ta uganka je lahko rešena z %1 bloki."};
 
 exports.playSoundRandom = function(d){return "Zaigraj naključni zvok"};
 
@@ -9631,11 +9631,11 @@ exports.whenEnterObstacle = function(d){return "when pass obstacle"};
 
 exports.whenEnterObstacleTooltip = function(d){return "Execute the actions below when Flappy enters an obstacle."};
 
-exports.whenRunButtonClick = function(d){return "when Run is clicked"};
+exports.whenRunButtonClick = function(d){return "ko se igra začne"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Execute the actions below when the run button is pressed."};
+exports.whenRunButtonClickTooltip = function(d){return "Izvedite spodnja dejanja, ko se igra začne."};
 
-exports.yes = function(d){return "Ja"};
+exports.yes = function(d){return "Da"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

@@ -7534,13 +7534,13 @@ exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Функции"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Променливи"};
 
 exports.codeTooltip = function(d){return "Виж генерирания JavaScript код."};
 
-exports.continue = function(d){return "Продължение"};
+exports.continue = function(d){return "Продължи"};
 
 exports.dialogCancel = function(d){return "Отмяна"};
 
@@ -7560,7 +7560,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Блоковете за пов
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Блокът за функция трябва да има други блокове вътре в себе си, за да работи."};
 
-exports.extraTopBlocks = function(d){return "Имате не закачени блокове. Искате ли да кажеш да ги закачите към блокът \"при стартиране\" ?"};
+exports.extraTopBlocks = function(d){return "Имате не закачени блокове. Искате ли да ги закачите към блока \"при стартиране\" ?"};
 
 exports.finalStage = function(d){return "Поздравления! Вие завършихте последния етап."};
 
@@ -7602,17 +7602,17 @@ exports.play = function(d){return "играй"};
 
 exports.puzzleTitle = function(d){return "Пъзел "+v(d,"puzzle_number")+" от "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "повтори"};
+exports.repeat = function(d){return "повтарям"};
 
 exports.resetProgram = function(d){return "Начално състояние"};
 
-exports.runProgram = function(d){return "Пусни"};
+exports.runProgram = function(d){return "Старт"};
 
 exports.runTooltip = function(d){return "Стартира програмата, определена от блоковете в работното поле."};
 
 exports.score = function(d){return "резултат"};
 
-exports.showCodeHeader = function(d){return "Покажи кода"};
+exports.showCodeHeader = function(d){return "Покажи код"};
 
 exports.showGeneratedCode = function(d){return "Покажи кода"};
 
@@ -7634,7 +7634,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "All-time total: "+p(d,"
 
 exports.tryAgain = function(d){return "Опитайте отново"};
 
-exports.hintRequest = function(d){return "Виж съвета"};
+exports.hintRequest = function(d){return "Вижте съвета"};
 
 exports.backToPreviousLevel = function(d){return "Обратно към предишното ниво"};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "Вижте какво сте въ�
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.bg=function(n){return n===1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Действия"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Цикли"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Събития"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Логика"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Математика"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Функции"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "текст"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Променливи"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Продължи"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Поздравления! Вие решихте последния пъзел."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Поздравления! Вие завършихте този пъзел."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Не"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Този пъзел може да бъде решен с %1 блокове."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "Повтаря завинаги"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "правя"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Да"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

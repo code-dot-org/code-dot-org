@@ -11550,13 +11550,13 @@ exports.dirW = function(d){return "W"};
 
 exports.doCode = function(d){return "করা"};
 
-exports.elseCode = function(d){return "else"};
+exports.elseCode = function(d){return "আর"};
 
 exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
 
 exports.heightParameter = function(d){return "উচ্চতা"};
 
-exports.ifCode = function(d){return "যদি"};
+exports.ifCode = function(d){return "যদী"};
 
 exports.ifPathAhead = function(d){return "if path ahead"};
 
@@ -11654,7 +11654,7 @@ exports.reinfFeedbackMsg = function(d){return "আপনি  পুনঃরা�
 
 exports.removeSquare = function(d){return "remove square"};
 
-exports.repeatUntil = function(d){return "repeat until"};
+exports.repeatUntil = function(d){return "যতক্ষণ না পুনরাবৃত্তি"};
 
 exports.repeatUntilBlocked = function(d){return "যদি সামনে পথ"};
 
@@ -11789,7 +11789,7 @@ exports.catProcedures = function(d){return "ফাংশনগুলি"};
 
 exports.catText = function(d){return "পাঠ"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "চলকগুলো"};
 
 exports.codeTooltip = function(d){return "See generated JavaScript code."};
 

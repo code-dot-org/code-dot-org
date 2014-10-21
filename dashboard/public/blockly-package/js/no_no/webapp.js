@@ -7534,7 +7534,7 @@ exports.catMath = function(d){return "Matematikk"};
 
 exports.catProcedures = function(d){return "Funksjoner"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -7550,7 +7550,7 @@ exports.directionNorthLetter = function(d){return "N"};
 
 exports.directionSouthLetter = function(d){return "S"};
 
-exports.directionEastLetter = function(d){return "E"};
+exports.directionEastLetter = function(d){return "Ø"};
 
 exports.directionWestLetter = function(d){return "V"};
 
@@ -7626,7 +7626,7 @@ exports.tooManyBlocksMsg = function(d){return "Denne oppgaven kan løses med <x 
 
 exports.tooMuchWork = function(d){return "Du fikk meg til å gjøre masse arbeid! Kan du forsøke med mindre repetisjon?"};
 
-exports.toolboxHeader = function(d){return "Blokker"};
+exports.toolboxHeader = function(d){return "blokker"};
 
 exports.openWorkspace = function(d){return "Slik fungerer det"};
 
@@ -7642,7 +7642,7 @@ exports.saveToGallery = function(d){return "Lagre til galleriet"};
 
 exports.savedToGallery = function(d){return "Lagret i galleriet!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Beklager, vi kan ikke dele dette programmet."};
 
 exports.typeCode = function(d){return "Skriv din JavaScript-kode under disse instruksjonene."};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "Se hvordan du endte opp, og prøv 
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.no=function(n){return n===1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Handlinger"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Løkker"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Hendelser"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logikk"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Matematikk"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Funksjoner"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "tekst"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Variabler"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Fortsett"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Gratulerer! Du har løst den siste oppgaven."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Gratulerer! Du har fullført denne utfordringen."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Nei"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Denne utfordringen kan bli løst med %1 blokker."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "gjenta for alltid"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "gjør"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Ja"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

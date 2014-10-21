@@ -18862,7 +18862,7 @@ exports.catLogic = function(d){return "तर्क"};
 
 exports.catMath = function(d){return "गणित"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "कार्य"};
 
 exports.catText = function(d){return "पाठ"};
 
@@ -19218,7 +19218,7 @@ exports.showTSDefText = function(d){return "type text here"};
 
 exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
 
-exports.setSprite = function(d){return "set"};
+exports.setSprite = function(d){return "सेट करें"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 

@@ -9280,7 +9280,7 @@ exports.play = function(d){return "spielen"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" von "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "wiederholen"};
+exports.repeat = function(d){return "wiederhole"};
 
 exports.resetProgram = function(d){return "Zurücksetzen"};
 
@@ -9357,7 +9357,7 @@ exports.genericFeedback = function(d){return "Schau dir an, was du gemacht hast 
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
 exports.continue = function(d){return "Fortfahren"};
 
-exports.doCode = function(d){return "mache"};
+exports.doCode = function(d){return "machen"};
 
 exports.elseCode = function(d){return "ansonsten"};
 
@@ -9383,23 +9383,23 @@ exports.flapVeryLarge = function(d){return "sehr oft flattern"};
 
 exports.flapTooltip = function(d){return "Nach oben fliegen."};
 
-exports.flappySpecificFail = function(d){return "Dein Code sieht gut aus - er wird bei jedem Klick mit den Flügeln schlagen. Aber du musst viele Male klicken, um zum Ziel zu fliegen."};
+exports.flappySpecificFail = function(d){return "Dein Code sieht gut aus - er wird bei jedem Klick die Flügel schlagen. Aber du musst viele Male klicken, um zum Ziel zu flattern."};
 
 exports.incrementPlayerScore = function(d){return "Erziele einen Punkt"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Erhöhe den Punktestand um 1."};
+exports.incrementPlayerScoreTooltip = function(d){return "Punktestand des Spielers um eins erhöhen."};
 
 exports.nextLevel = function(d){return "Herzlichen Glückwunsch! Du hast dieses Puzzle abgeschlossen."};
 
 exports.no = function(d){return "Nein"};
 
-exports.numBlocksNeeded = function(d){return "Dieses Puzzle kann mit  %1 Bausteinen gelöst werden."};
+exports.numBlocksNeeded = function(d){return "Dieses Puzzle kann mit %1 Blöcken gelöst werden."};
 
 exports.playSoundRandom = function(d){return "zufälliger Sound wiedergeben"};
 
 exports.playSoundBounce = function(d){return "Bounce Klang abspielen"};
 
-exports.playSoundCrunch = function(d){return "Crunch sound abspielen"};
+exports.playSoundCrunch = function(d){return "Knirschgeräusch abspielen"};
 
 exports.playSoundDie = function(d){return "trauriger Sound wiedergeben"};
 
@@ -9421,11 +9421,11 @@ exports.playSoundSplash = function(d){return "platsch sound abspielen"};
 
 exports.playSoundLaser = function(d){return "Laser sound abspielen"};
 
-exports.playSoundTooltip = function(d){return "Den ausgewählten Sound abspielen."};
+exports.playSoundTooltip = function(d){return "Den ausgewählten Ton abspielen."};
 
 exports.reinfFeedbackMsg = function(d){return "Du kannst den \"Versuche erneut\"-Button drücken, um weiterzuspielen."};
 
-exports.scoreText = function(d){return "Ergebnis: "+v(d,"playerScore")};
+exports.scoreText = function(d){return "Punktestand: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "Hintergrund setzen"};
 
@@ -9443,7 +9443,7 @@ exports.setBackgroundCave = function(d){return "Szene Höhle setzen"};
 
 exports.setBackgroundSanta = function(d){return "Szene Santa setzen"};
 
-exports.setBackgroundTooltip = function(d){return "Hintergrundbild auswählen"};
+exports.setBackgroundTooltip = function(d){return "Hintergrundbild setzen"};
 
 exports.setGapRandom = function(d){return "Zufällige Lücke setzen"};
 
@@ -9543,7 +9543,7 @@ exports.setPlayerTurkey = function(d){return "Setzt den Spieler auf Truthahn"};
 
 exports.setPlayerTooltip = function(d){return "Setzt den Spieler auf ein bestimmtes Bild"};
 
-exports.setScore = function(d){return "Setzt den Punktestand"};
+exports.setScore = function(d){return "Punktestand setzen"};
 
 exports.setScoreTooltip = function(d){return "Setzt den Punktestand des Spielers"};
 
@@ -9555,7 +9555,7 @@ exports.shareFlappyTwitter = function(d){return "Schau dir das Flappy Spiel an, 
 
 exports.shareGame = function(d){return "Teile dein Spiel:"};
 
-exports.soundRandom = function(d){return "zufällige"};
+exports.soundRandom = function(d){return "zufällig"};
 
 exports.soundBounce = function(d){return "abprallen"};
 
@@ -9609,9 +9609,9 @@ exports.whenEnterObstacle = function(d){return "Wenn Hindernis passiert wird"};
 
 exports.whenEnterObstacleTooltip = function(d){return "Führen sie die unteren Aktionen aus, wenn Flappy ein Hindernis betritt."};
 
-exports.whenRunButtonClick = function(d){return "Wenn Spiel gestartet wird"};
+exports.whenRunButtonClick = function(d){return "Wenn das Spiel beginnt"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Führe die Aktionen unten aus, wenn das Spiel startet."};
+exports.whenRunButtonClickTooltip = function(d){return "Führe die folgenden Aktionen aus, wenn das Spiel beginnt."};
 
 exports.yes = function(d){return "Ja"};
 

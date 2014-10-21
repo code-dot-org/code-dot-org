@@ -7602,7 +7602,7 @@ exports.play = function(d){return "spielen"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" von "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "wiederholen"};
+exports.repeat = function(d){return "wiederhole"};
 
 exports.resetProgram = function(d){return "Zurücksetzen"};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "Schau dir an, was du gemacht hast 
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Aktionen"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Schleifen"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Ereignisse"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logik"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Mathematik"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Funktionen"};
 
 exports.catText = function(d){return "Text"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Variablen"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Weiter"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Glückwunsch! Sie haben das letzte Puzzle gelöst."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Herzlichen Glückwunsch! Du hast dieses Puzzle abgeschlossen."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Nein"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Dieses Puzzle kann mit  %1 Bausteinen gelöst werden."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "ewig wiederholen"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "mache"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Ja"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

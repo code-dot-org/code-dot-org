@@ -11557,7 +11557,7 @@ exports.dirS = function(d){return "P"};
 
 exports.dirW = function(d){return "V"};
 
-exports.doCode = function(d){return "daryk"};
+exports.doCode = function(d){return " "};
 
 exports.elseCode = function(d){return "kitu atveju"};
 
@@ -11573,13 +11573,13 @@ exports.ifTooltip = function(d){return "Jei kelias yra nurodytoje kryptyje, atli
 
 exports.ifelseTooltip = function(d){return "Jei kelias yra nurodytoje kryptyje, atlik pirmą veiksmų bloką. Priešingu atveju, atlik antrą veiksmų bloką."};
 
-exports.incrementOpponentScore = function(d){return "pridėk tašką priešininkui"};
+exports.incrementOpponentScore = function(d){return "priešininko surinkti taškai"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Pridėk vieną tašką dabartiniam priešininkui."};
 
 exports.incrementPlayerScore = function(d){return "pridėk tašką"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Pridėk vieną tašką prie dabartinio žaidėjo rezultato."};
+exports.incrementPlayerScoreTooltip = function(d){return "Pridėk vieną tašką prie esamo žaidėjo rezultato."};
 
 exports.isWall = function(d){return "ar tai yra siena"};
 
@@ -11625,37 +11625,37 @@ exports.numBlocksNeeded = function(d){return "Ši užduotis gali būti išspręs
 
 exports.pathAhead = function(d){return "kelias priešaky"};
 
-exports.pathLeft = function(d){return "jei yra kelias į kairę"};
+exports.pathLeft = function(d){return "jei kelias yra į kairę"};
 
-exports.pathRight = function(d){return "jei yra kelias į dešinę"};
+exports.pathRight = function(d){return "jei kelias yra į dešinę"};
 
 exports.pilePresent = function(d){return "čia yra žemių krūva"};
 
-exports.playSoundCrunch = function(d){return "grok garsą „trakšt“"};
+exports.playSoundCrunch = function(d){return "garsas = trakšt"};
 
-exports.playSoundGoal1 = function(d){return "grok garsą „įvartis 1“"};
+exports.playSoundGoal1 = function(d){return "garsas = įvartis 1"};
 
-exports.playSoundGoal2 = function(d){return "grok garsą „įvartis 2“"};
+exports.playSoundGoal2 = function(d){return "garsas = įvartis 2"};
 
-exports.playSoundHit = function(d){return "grok garsą „atsimušimas“"};
+exports.playSoundHit = function(d){return "garsas = atsimušimas"};
 
-exports.playSoundLosePoint = function(d){return "grok garsą „taško praradimas“"};
+exports.playSoundLosePoint = function(d){return "garsas = taško praradimas"};
 
-exports.playSoundLosePoint2 = function(d){return "grok garsą „taško praradimas 2“"};
+exports.playSoundLosePoint2 = function(d){return "garsas = taško praradimas 2"};
 
-exports.playSoundRetro = function(d){return "grok garsą „retro“"};
+exports.playSoundRetro = function(d){return "garsas = retro"};
 
-exports.playSoundRubber = function(d){return "grok garsą „guma“"};
+exports.playSoundRubber = function(d){return "garsas = guma"};
 
-exports.playSoundSlap = function(d){return "grok garsą „pliaukšt“"};
+exports.playSoundSlap = function(d){return "garsas = pliaukšt"};
 
 exports.playSoundTooltip = function(d){return "Grok pasirinktą garsą."};
 
-exports.playSoundWinPoint = function(d){return "grok garsą „pelnytas taškas 1“"};
+exports.playSoundWinPoint = function(d){return "garsas = pelnyti taškai 1"};
 
-exports.playSoundWinPoint2 = function(d){return "grok garsą „pelnytas taškas 2“"};
+exports.playSoundWinPoint2 = function(d){return "garsas = pelnyti taškai 2"};
 
-exports.playSoundWood = function(d){return "grok garsą „mediena“"};
+exports.playSoundWood = function(d){return "garsas = mediena"};
 
 exports.putdownTower = function(d){return "padėk bokštą"};
 
@@ -11663,9 +11663,9 @@ exports.reinfFeedbackMsg = function(d){return "Gali nuspausti mygtuką „Mėgin
 
 exports.removeSquare = function(d){return "pašalink kvadratą"};
 
-exports.repeatUntil = function(d){return "kartok, kol pasieksi"};
+exports.repeatUntil = function(d){return "kartok, kol"};
 
-exports.repeatUntilBlocked = function(d){return "kol yra kelias į priekį"};
+exports.repeatUntilBlocked = function(d){return "kol yra kelias į priekį "};
 
 exports.repeatUntilFinish = function(d){return "kartok iki finišo"};
 
@@ -11747,7 +11747,7 @@ exports.whenDownTooltip = function(d){return "Įvykdyk žemiau nurodytus veiksmu
 
 exports.whenGameStarts = function(d){return "kai žaidimas prasideda"};
 
-exports.whenGameStartsTooltip = function(d){return "Vykdyti žemiau nurodytus veiksmus, kai žaidimas prasideda."};
+exports.whenGameStartsTooltip = function(d){return "Vykdyti nurodytus veiksmus, kai žaidimas prasideda."};
 
 exports.whenLeft = function(d){return "kai rodyklė į kairę"};
 
@@ -11815,7 +11815,7 @@ exports.continue = function(d){return "Tęsti"};
 
 exports.dialogCancel = function(d){return "Atšaukti"};
 
-exports.dialogOK = function(d){return "gerai"};
+exports.dialogOK = function(d){return "Gerai"};
 
 exports.directionNorthLetter = function(d){return "Š"};
 

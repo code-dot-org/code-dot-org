@@ -9194,15 +9194,15 @@ exports.parseElement = function(text) {
 
 },{}],37:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
-exports.and = function(d){return "וגם"};
+exports.and = function(d){return "ו"};
 
-exports.blocklyMessage = function(d){return "Blockly"};
+exports.blocklyMessage = function(d){return "בלוקלי"};
 
 exports.catActions = function(d){return "פעולות"};
 
 exports.catColour = function(d){return "צבע"};
 
-exports.catLogic = function(d){return "לוגיקה"};
+exports.catLogic = function(d){return "הגיון"};
 
 exports.catLists = function(d){return "רשימות"};
 
@@ -9226,7 +9226,7 @@ exports.dialogOK = function(d){return "אישור"};
 
 exports.directionNorthLetter = function(d){return "צ"};
 
-exports.directionSouthLetter = function(d){return "ס"};
+exports.directionSouthLetter = function(d){return "ד"};
 
 exports.directionEastLetter = function(d){return "מז"};
 
@@ -9254,7 +9254,7 @@ exports.help = function(d){return "עזרה"};
 
 exports.hintTitle = function(d){return "רמז:"};
 
-exports.jump = function(d){return "קפיצה"};
+exports.jump = function(d){return "קפוץ"};
 
 exports.levelIncompleteError = function(d){return "הנך משתמש בכל סוגי הבלוקים הנדרשים אך לא באופן הנכון."};
 
@@ -9280,7 +9280,7 @@ exports.play = function(d){return "לשחק"};
 
 exports.puzzleTitle = function(d){return "חידה "+v(d,"puzzle_number")+" מ- "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "חזור"};
+exports.repeat = function(d){return "חזור על"};
 
 exports.resetProgram = function(d){return "אפס"};
 
@@ -9365,7 +9365,7 @@ exports.endGame = function(d){return "סיים המשחק"};
 
 exports.endGameTooltip = function(d){return "מסיים את המשחק."};
 
-exports.finalLevel = function(d){return "מזל טוב! פתרת את החידה האחרונה."};
+exports.finalLevel = function(d){return "מזל טוב! השלמת את הפאזל האחרון."};
 
 exports.flap = function(d){return "עוּף"};
 
@@ -9383,21 +9383,21 @@ exports.flapVeryLarge = function(d){return "נופף הרבה מאוד"};
 
 exports.flapTooltip = function(d){return "הטס פלאפי למעלה."};
 
-exports.flappySpecificFail = function(d){return "הקוד שלך נראה טוב, זה ינופף עם כל לחיצה. אבל תצטרך ללחוץ הרבה פעמים כדי להגיע למטרה."};
+exports.flappySpecificFail = function(d){return "הקוד שלך נראה טוב -. זה יעוף עם כל לחיצה. אבל אתה צריך ללחוץ הרבה פעמים כדי לנופף אל המטרה."};
 
 exports.incrementPlayerScore = function(d){return "זכה בנקודה"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "הוסף אחד לניקוד הנוכחי של השחקן."};
 
-exports.nextLevel = function(d){return "מזל טוב! השלמת את החידה הזו."};
+exports.nextLevel = function(d){return "מזל טוב! השלמת את הפאזל הזה."};
 
 exports.no = function(d){return "לא"};
 
-exports.numBlocksNeeded = function(d){return "ניתן לפתור את הפאזל עם %1 בלוקים."};
+exports.numBlocksNeeded = function(d){return "ניתן לפתור את הפאזל עם %1 בלוק."};
 
 exports.playSoundRandom = function(d){return "תשמיע צליל אקראי"};
 
-exports.playSoundBounce = function(d){return "תשמיע צליל הקפצת כדור"};
+exports.playSoundBounce = function(d){return "נגן צליל הקפצת כדור"};
 
 exports.playSoundCrunch = function(d){return "תשמיע צליל מעיכה"};
 
@@ -9443,7 +9443,7 @@ exports.setBackgroundCave = function(d){return "set scene Cave"};
 
 exports.setBackgroundSanta = function(d){return "set scene Santa"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "קובע את תמונת הרקע"};
 
 exports.setGapRandom = function(d){return "set a random gap"};
 

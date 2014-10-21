@@ -7882,11 +7882,11 @@ exports.numBlocksNeeded = function(d){return "Ta uganka je lahko rešena z %1 bl
 
 exports.reinfFeedbackMsg = function(d){return "Lahko pritisnete gumb \"Poskusi znova\" in se vrnete nazaj k igranju svoje igre."};
 
-exports.share = function(d){return "Deli z ostalimi"};
+exports.share = function(d){return "Deli"};
 
 exports.shareGame = function(d){return "Delite vašo igro z ostalimi:"};
 
-exports.yes = function(d){return "Ja"};
+exports.yes = function(d){return "Da"};
 
 
 },{"messageformat":47}],36:[function(require,module,exports){

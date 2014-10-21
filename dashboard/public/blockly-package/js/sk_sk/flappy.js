@@ -9214,9 +9214,9 @@ exports.catLogic = function(d){return "Logické"};
 
 exports.catLists = function(d){return "Zoznamy"};
 
-exports.catLoops = function(d){return "Slučky"};
+exports.catLoops = function(d){return "Cykly"};
 
-exports.catMath = function(d){return "Matematické"};
+exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkcie"};
 
@@ -9258,11 +9258,11 @@ exports.generatedCodeInfo = function(d){return "Dokonca aj popredné univerzity 
 
 exports.hashError = function(d){return "Prepáčte, '%1' nezodpovedá žiadnemu uloženému programu."};
 
-exports.help = function(d){return "pomoc"};
+exports.help = function(d){return "Pomoc"};
 
 exports.hintTitle = function(d){return "Tip:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "skoč"};
 
 exports.levelIncompleteError = function(d){return "Používate všetky potrebné typy blokov, ale nie tým správnym spôsobom."};
 
@@ -9381,7 +9381,7 @@ exports.endGame = function(d){return "koniec hry"};
 
 exports.endGameTooltip = function(d){return "Ukončí hru."};
 
-exports.finalLevel = function(d){return "Gratulujem! Vyriešil si poslednú úlohu."};
+exports.finalLevel = function(d){return "Gratulujem! Vyriešili ste posledné puzzle."};
 
 exports.flap = function(d){return "mávni"};
 
@@ -9399,7 +9399,7 @@ exports.flapVeryLarge = function(d){return "mávni veľmi veľký počet krát"}
 
 exports.flapTooltip = function(d){return "Leť Flappym smerom nahor."};
 
-exports.flappySpecificFail = function(d){return "Tvoj kód vyzerá dobre - vták mávne krídlami pri každom kliknutí, ale musíš kliknúť viac krát, aby si sa dostal k cieľu."};
+exports.flappySpecificFail = function(d){return "Tvoj kód vyzerá dobre - vták mávne krídlami pri každom kliknutí, ale musíš kliknúť viac krát, aby si sa dostal k cieľu. "};
 
 exports.incrementPlayerScore = function(d){return "získaj bod"};
 

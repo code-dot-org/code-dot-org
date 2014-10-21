@@ -11538,7 +11538,7 @@ exports.bounceBall = function(d){return "bounce ball"};
 
 exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
 
-exports.continue = function(d){return "繼續 "};
+exports.continue = function(d){return "繼續"};
 
 exports.dirE = function(d){return "東"};
 
@@ -11552,7 +11552,7 @@ exports.doCode = function(d){return "執行"};
 
 exports.elseCode = function(d){return "否則"};
 
-exports.finalLevel = function(d){return "恭喜你 ！你已經解決了最後的關卡。"};
+exports.finalLevel = function(d){return "恭喜！你已經完成最後的關卡。"};
 
 exports.heightParameter = function(d){return "高度"};
 
@@ -11568,9 +11568,9 @@ exports.incrementOpponentScore = function(d){return "increment opponent score"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "得分"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
+exports.incrementPlayerScoreTooltip = function(d){return "替玩家加一分"};
 
 exports.isWall = function(d){return "is this a wall"};
 
@@ -11582,7 +11582,7 @@ exports.launchBallTooltip = function(d){return "發出一顆球開始遊戲"};
 
 exports.makeYourOwn = function(d){return "設計屬於你的反彈球遊戲"};
 
-exports.moveDown = function(d){return "move down"};
+exports.moveDown = function(d){return "向下移動"};
 
 exports.moveDownTooltip = function(d){return "Move the paddle down."};
 
@@ -11590,15 +11590,15 @@ exports.moveForward = function(d){return "向前移動"};
 
 exports.moveForwardTooltip = function(d){return "將我向前移動一格"};
 
-exports.moveLeft = function(d){return "move left"};
+exports.moveLeft = function(d){return "向左移動"};
 
 exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
 
-exports.moveRight = function(d){return "move right"};
+exports.moveRight = function(d){return "向右移動"};
 
 exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
 
-exports.moveUp = function(d){return "move up"};
+exports.moveUp = function(d){return "向上移動"};
 
 exports.moveUpTooltip = function(d){return "Move the paddle up."};
 
@@ -11622,35 +11622,35 @@ exports.pathRight = function(d){return "如果右邊有路"};
 
 exports.pilePresent = function(d){return "有一堆土"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "播放嘎吱音效"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "播放得分1的音效"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "播放得分2的音效"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "播放命中的音效"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "播放失分的音效"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "播放失分2的音效"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "播放復古的音效"};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "播放橡膠的音效"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "播放掌聲音效"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "播放所選音效"};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "播放得分音效"};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "播放得分2的音效"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "播放木頭音效"};
 
 exports.putdownTower = function(d){return "將小土丘放下"};
 
-exports.reinfFeedbackMsg = function(d){return "您可以按下\"重試\"按鈕，再玩一次遊戲。"};
+exports.reinfFeedbackMsg = function(d){return "您可以按\"重試\"按鈕，回去玩您的遊戲。"};
 
 exports.removeSquare = function(d){return "移除正方型內的土堆"};
 
@@ -11732,29 +11732,29 @@ exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "當按下＂下方向鍵＂"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "當按下＂下方向鍵＂，就會執行動作"};
 
-exports.whenGameStarts = function(d){return "當遊戲開始"};
+exports.whenGameStarts = function(d){return "當遊戲開始時"};
 
-exports.whenGameStartsTooltip = function(d){return "當游戲開始，執行以下動作。"};
+exports.whenGameStartsTooltip = function(d){return "當游戲開始時，執行以下動作。"};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "當按下＂左方向鍵＂"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "當按下＂左方向鍵＂，就會執行動作"};
 
 exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "當按下＂右方向鍵＂"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "當按下＂右方向鍵＂，就會執行動作"};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "當＂上方向鍵＂"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "當按下＂上方向鍵＂，就會執行動作"};
 
 exports.whenWallCollided = function(d){return "when ball hits wall"};
 
@@ -11764,12 +11764,12 @@ exports.whileMsg = function(d){return "當"};
 
 exports.whileTooltip = function(d){return "重覆程式積木內的動作，直到完成為止。"};
 
-exports.yes = function(d){return "確定"};
+exports.yes = function(d){return "是"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
-exports.and = function(d){return "及"};
+exports.and = function(d){return "且"};
 
 exports.blocklyMessage = function(d){return "模組化"};
 
@@ -11787,7 +11787,7 @@ exports.catMath = function(d){return "運算類別"};
 
 exports.catProcedures = function(d){return "函數類別"};
 
-exports.catText = function(d){return "字串類別"};
+exports.catText = function(d){return "本文"};
 
 exports.catVariables = function(d){return "變數類別"};
 
@@ -11819,7 +11819,7 @@ exports.finalStage = function(d){return "恭喜你 ！你已完成最後關卡�
 
 exports.finalStageTrophies = function(d){return "恭喜! 你已完成最後關卡並且贏得 "+p(d,"numTrophies",0,"zh",{"one":"一個獎盃","other":n(d,"numTrophies")+" 獎盃"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "完成 "};
 
 exports.generatedCodeInfo = function(d){return "甚至頂尖大學也同樣以\"程式積木\"來進行程式教學。(例如 :  "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+")。在程式積木的底層，所有組裝完成的程式積木功能，也可以用JavaScript 語法來顯示。"};
 
@@ -11829,11 +11829,11 @@ exports.help = function(d){return "說明"};
 
 exports.hintTitle = function(d){return "提示："};
 
-exports.jump = function(d){return "跳轉"};
+exports.jump = function(d){return "跳"};
 
 exports.levelIncompleteError = function(d){return "您已使用了所有必要類型的程式積木，但方式不太正確。"};
 
-exports.listVariable = function(d){return "列表變數\n"};
+exports.listVariable = function(d){return "列表變數"};
 
 exports.makeYourOwnFlappy = function(d){return "做出自己的 Flappy 遊戲"};
 
@@ -11871,7 +11871,7 @@ exports.showGeneratedCode = function(d){return "顯示程式碼"};
 
 exports.subtitle = function(d){return "一個視覺化的程式設計環境\n\n"};
 
-exports.textVariable = function(d){return "文字變數"};
+exports.textVariable = function(d){return "文本"};
 
 exports.tooFewBlocksMsg = function(d){return "你已使用所有必要類型的程式積木，但請嘗試使用更多同類型的程式積木來完成這個關卡。"};
 

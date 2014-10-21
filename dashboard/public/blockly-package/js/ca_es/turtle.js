@@ -10660,11 +10660,11 @@ exports.catLists = function(d){return "Llistes"};
 
 exports.catLoops = function(d){return "Bucles"};
 
-exports.catMath = function(d){return "Matemàtiques"};
+exports.catMath = function(d){return "Mates"};
 
 exports.catProcedures = function(d){return "Funcions"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variables"};
 
@@ -10710,7 +10710,7 @@ exports.jump = function(d){return "jump"};
 
 exports.levelIncompleteError = function(d){return "Estàs utilitzant tots els tipus de blocs necessaris, però no de la manera correcta."};
 
-exports.listVariable = function(d){return "Llista"};
+exports.listVariable = function(d){return "llista"};
 
 exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
 
@@ -10756,7 +10756,7 @@ exports.tooManyBlocksMsg = function(d){return "Aquest puzzle pot ser resolt amb 
 
 exports.tooMuchWork = function(d){return "Em fas fer molta feina! Podries intentar repetir menys vegades?"};
 
-exports.toolboxHeader = function(d){return "Blocs"};
+exports.toolboxHeader = function(d){return "blocs"};
 
 exports.openWorkspace = function(d){return "How It Works"};
 
@@ -10815,7 +10815,7 @@ exports.catColour = function(d){return "Color"};
 
 exports.catControl = function(d){return "Bucles"};
 
-exports.catMath = function(d){return "Mates"};
+exports.catMath = function(d){return "Matemàtiques"};
 
 exports.catProcedures = function(d){return "Funcions"};
 
@@ -10865,7 +10865,7 @@ exports.drawUpperWave = function(d){return "draw upper wave"};
 
 exports.drawLowerWave = function(d){return "draw lower wave"};
 
-exports.heightParameter = function(d){return "altura"};
+exports.heightParameter = function(d){return "alçcada"};
 
 exports.hideTurtle = function(d){return "amaga l'artista"};
 
@@ -10917,7 +10917,7 @@ exports.penTooltip = function(d){return "Aixeca o baixa el llapis per començar 
 
 exports.penUp = function(d){return "puja el llapis"};
 
-exports.reinfFeedbackMsg = function(d){return "Does this look like what you want? You can press the \"Try again\" button to see your drawing."};
+exports.reinfFeedbackMsg = function(d){return "S'assembla al que tu vols? Pots clicar en \"Intentar de nou\" per veure el teu dibuix."};
 
 exports.setColour = function(d){return "defineix color"};
 

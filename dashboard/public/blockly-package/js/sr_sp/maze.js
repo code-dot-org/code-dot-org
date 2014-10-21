@@ -13193,7 +13193,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sr = function 
   }
   return 'other';
 };
-exports.and = function(d){return "и"};
+exports.and = function(d){return "И"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -13205,13 +13205,13 @@ exports.catLogic = function(d){return "Логика"};
 
 exports.catLists = function(d){return "Листе"};
 
-exports.catLoops = function(d){return "Понављања"};
+exports.catLoops = function(d){return "Петље"};
 
 exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Функције"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Променљиве"};
 
@@ -13279,7 +13279,7 @@ exports.play = function(d){return "играј"};
 
 exports.puzzleTitle = function(d){return "Мозгалица "+v(d,"puzzle_number")+" од "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "понови"};
+exports.repeat = function(d){return "понављај"};
 
 exports.resetProgram = function(d){return "Почни поново"};
 
@@ -13289,7 +13289,7 @@ exports.runTooltip = function(d){return "Покрени програм саст�
 
 exports.score = function(d){return "Резултат"};
 
-exports.showCodeHeader = function(d){return "Покажи код програма"};
+exports.showCodeHeader = function(d){return "Покажи Програмски код"};
 
 exports.showGeneratedCode = function(d){return "Покажи код програма"};
 
@@ -13303,7 +13303,7 @@ exports.tooManyBlocksMsg = function(d){return "Ова мозгалица мож�
 
 exports.tooMuchWork = function(d){return "Задао си ми много посла! Покушај са мање понављања."};
 
-exports.toolboxHeader = function(d){return "Блокови"};
+exports.toolboxHeader = function(d){return "блокови"};
 
 exports.openWorkspace = function(d){return "Како то ради"};
 
@@ -13385,11 +13385,11 @@ exports.dirN = function(d){return "Север"};
 
 exports.dirS = function(d){return "Југ"};
 
-exports.dirW = function(d){return "Запад"};
+exports.dirW = function(d){return "w"};
 
 exports.doCode = function(d){return "уради"};
 
-exports.elseCode = function(d){return "у супротном"};
+exports.elseCode = function(d){return "иначе"};
 
 exports.fill = function(d){return "упишите број 1"};
 
@@ -13423,11 +13423,11 @@ exports.ifCode = function(d){return "ако"};
 
 exports.ifInRepeatError = function(d){return "Потребан ти је \"ако\" блок унутар \"понови\" блока. Ако имаш проблем, уради претходни ниво опет, како бих видео како је функционисао."};
 
-exports.ifPathAhead = function(d){return "ако путања испред"};
+exports.ifPathAhead = function(d){return "ако постоји путања напред"};
 
-exports.ifTooltip = function(d){return "Ако постоји стаза у одређеном правцу, онда одрадите неке акције."};
+exports.ifTooltip = function(d){return "ако постоји путања у наведеном смеру, онда покрени неке акције."};
 
-exports.ifelseTooltip = function(d){return "Ако постоји стаза у одређеном правцу, онда одрадите први блок акција. У супротном, одрадите други блок акција."};
+exports.ifelseTooltip = function(d){return "ако постоји путања у наведеном смеру, онда уради први блок акција. У супротном, уради други блок акција."};
 
 exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
 
@@ -13445,7 +13445,7 @@ exports.moveEastTooltip = function(d){return "Move me east one space."};
 
 exports.moveForward = function(d){return "помери се напред"};
 
-exports.moveForwardTooltip = function(d){return "Помери ме напред за једно место."};
+exports.moveForwardTooltip = function(d){return "Помери ме за једно поље."};
 
 exports.moveNorthTooltip = function(d){return "Move me north one space."};
 
@@ -13461,31 +13461,31 @@ exports.nectarRemaining = function(d){return "nectar"};
 
 exports.nectarTooltip = function(d){return "Get nectar from a flower"};
 
-exports.nextLevel = function(d){return "Честитке! Завршили сте пузлу."};
+exports.nextLevel = function(d){return "Честитамо! Завршили сте слагалицу."};
 
 exports.no = function(d){return "не"};
 
-exports.noPathAhead = function(d){return "путања је блокирана"};
+exports.noPathAhead = function(d){return "путања је затворена"};
 
-exports.noPathLeft = function(d){return "нема пута за лево"};
+exports.noPathLeft = function(d){return "нема путање на лево"};
 
-exports.noPathRight = function(d){return "нема пута за десно"};
+exports.noPathRight = function(d){return "нема путање на десно"};
 
 exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
 
 exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
 
-exports.numBlocksNeeded = function(d){return "Ова слагалица се може решити са %1 блокова."};
+exports.numBlocksNeeded = function(d){return "Ова слагалица може бити решена са %1 блоком."};
 
-exports.pathAhead = function(d){return "пут напред"};
+exports.pathAhead = function(d){return "путања напред"};
 
-exports.pathLeft = function(d){return "ако пут на лево"};
+exports.pathLeft = function(d){return "ако постоји путања лево"};
 
-exports.pathRight = function(d){return "ако пут на десно"};
+exports.pathRight = function(d){return "ако постоји путања десно"};
 
-exports.pilePresent = function(d){return "ту је гомила"};
+exports.pilePresent = function(d){return "тамо је гомила"};
 
-exports.putdownTower = function(d){return "спусти кулу"};
+exports.putdownTower = function(d){return "сруши кулу"};
 
 exports.removeAndAvoidTheCow = function(d){return "уклони 1 и избегни краву"};
 
@@ -13499,11 +13499,11 @@ exports.removeSquare = function(d){return "уклони квадрат"};
 
 exports.repeatCarefullyError = function(d){return "Како бих сте решили ово, пронађите сличност која се понавља. Користите \"понови\" блок са ова 3 блока унутар: крени, крени, скрени десно."};
 
-exports.repeatUntil = function(d){return "понављај док"};
+exports.repeatUntil = function(d){return "понављај до испуњења"};
 
-exports.repeatUntilBlocked = function(d){return "док је стаза испред"};
+exports.repeatUntilBlocked = function(d){return "док је путања напред"};
 
-exports.repeatUntilFinish = function(d){return "понавлјај до цилја"};
+exports.repeatUntilFinish = function(d){return "понављај до завршетка"};
 
 exports.step = function(d){return "Step"};
 
@@ -13515,7 +13515,7 @@ exports.turnLeft = function(d){return "скрени лево"};
 
 exports.turnRight = function(d){return "скрени десно"};
 
-exports.turnTooltip = function(d){return "Закрене ме на лево или десно за 90 степени."};
+exports.turnTooltip = function(d){return "Окрени ме у лево или десно за 90 степени."};
 
 exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
 
@@ -13523,7 +13523,7 @@ exports.uncheckedPurpleError = function(d){return "Make sure to check all purple
 
 exports.whileMsg = function(d){return "док"};
 
-exports.whileTooltip = function(d){return "Понавлјај затворену акцију док се не досегне циљна тачка."};
+exports.whileTooltip = function(d){return "Понови акције у загради док се не постигне последњи поен."};
 
 exports.word = function(d){return "Find the word"};
 

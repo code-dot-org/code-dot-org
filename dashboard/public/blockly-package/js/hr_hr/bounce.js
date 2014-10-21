@@ -11561,11 +11561,11 @@ exports.dirS = function(d){return "Jug"};
 
 exports.dirW = function(d){return "Zapad"};
 
-exports.doCode = function(d){return "uradi"};
+exports.doCode = function(d){return "napravi"};
 
-exports.elseCode = function(d){return "u suprotnom"};
+exports.elseCode = function(d){return "inače"};
 
-exports.finalLevel = function(d){return "Čestitamo! Riješen je posljednji zadatak."};
+exports.finalLevel = function(d){return "Čestitamo ! Riješili ste posljednji zadatak."};
 
 exports.heightParameter = function(d){return "visina"};
 
@@ -11583,7 +11583,7 @@ exports.incrementOpponentScoreTooltip = function(d){return "Dodaj jedan protivni
 
 exports.incrementPlayerScore = function(d){return "osvoji bod"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Dodaj jedan igračevim bodovima."};
+exports.incrementPlayerScoreTooltip = function(d){return "Povećava trenutni broj bodova za jedan."};
 
 exports.isWall = function(d){return "jeli ovo zid"};
 
@@ -11635,35 +11635,35 @@ exports.pathRight = function(d){return "ako postoji staza s desne strane"};
 
 exports.pilePresent = function(d){return "ovdje je gomila"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "pokreni zvuk krckanja"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "pokreni zvuk cilj 1"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "pokreni zvuk cilj 2"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "pokreni zvuk udara"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "pokreni zvuk gubitak boda"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "pokreni zvuk izgubljen bod 2"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "pokreni retro zvuk"};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "pokreni zvuk gume"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "pokreni zvuk pljeska"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Pušta odrabrani zvuk."};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "pokreni zvuk dobiveni bod"};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "pokreni zvuk dobiven bod 2"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "pokreni zvuk drvo"};
 
 exports.putdownTower = function(d){return "spusti kulu"};
 
-exports.reinfFeedbackMsg = function(d){return "Pritisni gumb \"Pokušaj ponovno\" da se vratiš na igru."};
+exports.reinfFeedbackMsg = function(d){return "Pritisni tipku \"Pokušaj ponovno\" da se vratiš na igru."};
 
 exports.removeSquare = function(d){return "ukloni kvadrat"};
 
@@ -11745,29 +11745,29 @@ exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "kad strelica dolje"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Izvrši sljedeće akcije kad se pritisne tipka dolje."};
 
 exports.whenGameStarts = function(d){return "na početku igre"};
 
-exports.whenGameStartsTooltip = function(d){return "Izvršava dolje navedene radnje kada igra započne."};
+exports.whenGameStartsTooltip = function(d){return "Izvršava dolje navedene radnje na početku igre."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "kad lijeva strelica"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Izvrši sljedeće akcije kad se pritisne lijeva strelica."};
 
 exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "kad desna strelica"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Izvrši sljedeće akcije kad se pritisne desna strelica."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "kad strelica gore"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Izvrši sljedeće akcije kad se pritisne strelica gore."};
 
 exports.whenWallCollided = function(d){return "when ball hits wall"};
 
@@ -11813,7 +11813,7 @@ exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkcije"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Varijable"};
 
@@ -11825,13 +11825,13 @@ exports.dialogCancel = function(d){return "Odustani"};
 
 exports.dialogOK = function(d){return "U redu"};
 
-exports.directionNorthLetter = function(d){return "S"};
+exports.directionNorthLetter = function(d){return "Sjever"};
 
-exports.directionSouthLetter = function(d){return "J"};
+exports.directionSouthLetter = function(d){return "Jug"};
 
-exports.directionEastLetter = function(d){return "I"};
+exports.directionEastLetter = function(d){return "Istok"};
 
-exports.directionWestLetter = function(d){return "Z"};
+exports.directionWestLetter = function(d){return "Zapad"};
 
 exports.end = function(d){return "kraj"};
 
@@ -11845,7 +11845,7 @@ exports.finalStage = function(d){return "Čestitamo! Posljednja etapa je završe
 
 exports.finalStageTrophies = function(d){return "Čestitamo! Završena je posljednja etapa i osvajaš "+p(d,"numTrophies",0,"hr",{"one":"trofej","other":n(d,"numTrophies")+" trofeja"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Kraj"};
 
 exports.generatedCodeInfo = function(d){return "Čak i vrhunska sveučilišta podučavaju kodiranje pomoću blokova (npr. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ali u suštini, blokovi koje si spojio se mogu prikazati kao kôd u JavaScriptu, najkorištenijem programskom jeziku na svijetu:"};
 
@@ -11859,7 +11859,7 @@ exports.jump = function(d){return "skoči"};
 
 exports.levelIncompleteError = function(d){return "Koristiš sve potrebne vrste blokova, ali na pogrešan način."};
 
-exports.listVariable = function(d){return "popis"};
+exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Napravi vlastitu Flappy igricu"};
 

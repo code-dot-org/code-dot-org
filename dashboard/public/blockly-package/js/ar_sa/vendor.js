@@ -1398,7 +1398,7 @@ Blockly.Msg.CONTROLS_IF_HELPURL = "http://code.google.com/p/blockly/wiki/If_Then
 Blockly.Msg.CONTROLS_IF_IF_TOOLTIP = "أضف, إزل, أو أعد ترتيب المقاطع لإعادة تكوين القطعة الشرطية \"إذا\".";
 Blockly.Msg.CONTROLS_IF_MSG_ELSE = "والا";
 Blockly.Msg.CONTROLS_IF_MSG_ELSEIF = "وإﻻ إذا";
-Blockly.Msg.CONTROLS_IF_MSG_IF = "إذا";
+Blockly.Msg.CONTROLS_IF_MSG_IF = "إذا كان";
 Blockly.Msg.CONTROLS_IF_TOOLTIP_1 = "إذا كانت قيمة ما تساوي \"صحيح\" , إذن قم بتنفيذ أمر ما.";
 Blockly.Msg.CONTROLS_IF_TOOLTIP_2 = "إذا كانت قيمة ما تساوي \"صحيح\"، إذن قم بتنفيذ أول قطعة من الأوامر. والا ،قم بتنفيذ القطعة الثانية من الأوامر.";
 Blockly.Msg.CONTROLS_IF_TOOLTIP_3 = "إذا كانت القيمة الأولى تساوي \"صحيح\", إذن قم بتنفيذ القطعة الأولى من الأوامر. والا, إذا كانت القيمة الثانية تساوي \"صحيح\", قم بتنفيذ القطعة الثانية من الأوامر.";
@@ -1433,12 +1433,12 @@ Blockly.Msg.LISTS_CREATE_WITH_CONTAINER_TOOLTIP = "أضف, إزل, أو أعد �
 Blockly.Msg.LISTS_CREATE_WITH_INPUT_WITH = "أنشئ قائمة مع";
 Blockly.Msg.LISTS_CREATE_WITH_ITEM_TOOLTIP = "أضف عنصرا إلى القائمة.";
 Blockly.Msg.LISTS_CREATE_WITH_TOOLTIP = "أنشيء قائمة من أي عدد من العناصر.";
-Blockly.Msg.LISTS_GET_INDEX_FIRST = "أول";
+Blockly.Msg.LISTS_GET_INDEX_FIRST = "الأول";
 Blockly.Msg.LISTS_GET_INDEX_FROM_END = "# من النهاية";
 Blockly.Msg.LISTS_GET_INDEX_FROM_START = "#";
 Blockly.Msg.LISTS_GET_INDEX_GET = "احصل على";
 Blockly.Msg.LISTS_GET_INDEX_GET_REMOVE = "احصل على و ازل";
-Blockly.Msg.LISTS_GET_INDEX_LAST = "أخير";
+Blockly.Msg.LISTS_GET_INDEX_LAST = "الأخير";
 Blockly.Msg.LISTS_GET_INDEX_RANDOM = "عشوائي";
 Blockly.Msg.LISTS_GET_INDEX_REMOVE = "ازل";
 Blockly.Msg.LISTS_GET_INDEX_TAIL = "";
@@ -1474,6 +1474,7 @@ Blockly.Msg.LISTS_INLIST = "في قائمة";
 Blockly.Msg.LISTS_IS_EMPTY_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#is_empty";
 Blockly.Msg.LISTS_IS_EMPTY_TITLE = "%1 فارغ";
 Blockly.Msg.LISTS_LENGTH_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#length_of";
+Blockly.Msg.LISTS_LENGTH_INPUT_LENGTH = "length of";
 Blockly.Msg.LISTS_LENGTH_TITLE = "طول %1";
 Blockly.Msg.LISTS_LENGTH_TOOLTIP = "تقوم بإرجاع طول القائمة.";
 Blockly.Msg.LISTS_REPEAT_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#create_list_with";
@@ -1494,7 +1495,7 @@ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_FROM_START = "يحدد العنصر في
 Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_LAST = "يحدد العنصر الأخير في قائمة.";
 Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_RANDOM = "يحدد عنصرا عشوائيا في القائمة.";
 Blockly.Msg.LISTS_TOOLTIP = "يرجع \"صحيح\" إذا كانت القائمة فارغة.";
-Blockly.Msg.LOGIC_BOOLEAN_FALSE = "خاطئ";
+Blockly.Msg.LOGIC_BOOLEAN_FALSE = "خطأ";
 Blockly.Msg.LOGIC_BOOLEAN_HELPURL = "http://code.google.com/p/blockly/wiki/True_False";
 Blockly.Msg.LOGIC_BOOLEAN_TOOLTIP = "يرجع صحيح أو خاطئ.";
 Blockly.Msg.LOGIC_BOOLEAN_TRUE = "صحيح";
@@ -1530,7 +1531,7 @@ Blockly.Msg.MATH_ARITHMETIC_TOOLTIP_MULTIPLY = "يرجع حاصل ضرب رقم�
 Blockly.Msg.MATH_ARITHMETIC_TOOLTIP_POWER = "يرجع الرقم الأول مرفوع إلى أس الرقم الثاني.";
 Blockly.Msg.MATH_CHANGE_HELPURL = "http://en.wikipedia.org/wiki/Programming_idiom#Incrementing_a_counter";
 Blockly.Msg.MATH_CHANGE_INPUT_BY = "بـ";
-Blockly.Msg.MATH_CHANGE_TITLE_CHANGE = "غير";
+Blockly.Msg.MATH_CHANGE_TITLE_CHANGE = "تغيير";
 Blockly.Msg.MATH_CHANGE_TOOLTIP = "إضف رقم إلى متغير '%1'.";
 Blockly.Msg.MATH_CONSTANT_HELPURL = "http://en.wikipedia.org/wiki/Mathematical_constant";
 Blockly.Msg.MATH_CONSTANT_TOOLTIP = "يرجع أحد الثوابت الشائعة : π (3.141…), e (2.718…), φ (1.618…), sqrt(2) (1.414…), sqrt(½) (0.707…), or ∞ (infinity).";
@@ -1654,7 +1655,7 @@ Blockly.Msg.TEXT_CHARAT_RANDOM = "الحصول على حرف عشوائي";
 Blockly.Msg.TEXT_CHARAT_TAIL = "";
 Blockly.Msg.TEXT_CHARAT_TOOLTIP = "يرجع حرف ما في الموضع المحدد.";
 Blockly.Msg.TEXT_CREATE_JOIN_ITEM_TOOLTIP = "إضف عنصر إلى النص.";
-Blockly.Msg.TEXT_CREATE_JOIN_TITLE_JOIN = "الانضمام إلى";
+Blockly.Msg.TEXT_CREATE_JOIN_TITLE_JOIN = "انضم";
 Blockly.Msg.TEXT_CREATE_JOIN_TOOLTIP = "أضف, إحذف, أو أعد ترتيب المقاطع لإعادة تكوين النص من القطع التالية.";
 Blockly.Msg.TEXT_GET_SUBSTRING_END_FROM_END = "إلى حرف # من النهاية";
 Blockly.Msg.TEXT_GET_SUBSTRING_END_FROM_START = "إلى حرف #";

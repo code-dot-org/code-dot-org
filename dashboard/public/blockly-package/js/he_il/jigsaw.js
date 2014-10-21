@@ -7689,15 +7689,15 @@ exports.parseElement = function(text) {
 
 },{}],34:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
-exports.and = function(d){return "וגם"};
+exports.and = function(d){return "ו"};
 
-exports.blocklyMessage = function(d){return "Blockly"};
+exports.blocklyMessage = function(d){return "בלוקלי"};
 
 exports.catActions = function(d){return "פעולות"};
 
 exports.catColour = function(d){return "צבע"};
 
-exports.catLogic = function(d){return "לוגיקה"};
+exports.catLogic = function(d){return "הגיון"};
 
 exports.catLists = function(d){return "רשימות"};
 
@@ -7721,7 +7721,7 @@ exports.dialogOK = function(d){return "אישור"};
 
 exports.directionNorthLetter = function(d){return "צ"};
 
-exports.directionSouthLetter = function(d){return "ס"};
+exports.directionSouthLetter = function(d){return "ד"};
 
 exports.directionEastLetter = function(d){return "מז"};
 
@@ -7749,7 +7749,7 @@ exports.help = function(d){return "עזרה"};
 
 exports.hintTitle = function(d){return "רמז:"};
 
-exports.jump = function(d){return "קפיצה"};
+exports.jump = function(d){return "קפוץ"};
 
 exports.levelIncompleteError = function(d){return "הנך משתמש בכל סוגי הבלוקים הנדרשים אך לא באופן הנכון."};
 
@@ -7775,7 +7775,7 @@ exports.play = function(d){return "לשחק"};
 
 exports.puzzleTitle = function(d){return "חידה "+v(d,"puzzle_number")+" מ- "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "חזור"};
+exports.repeat = function(d){return "חזור על"};
 
 exports.resetProgram = function(d){return "אפס"};
 

@@ -7574,7 +7574,7 @@ exports.drawASquare = function(d){return "צייר ריבוע"};
 
 exports.drawATriangle = function(d){return "צייר משולש"};
 
-exports.drawACircle = function(d){return "צייר עיגול"};
+exports.drawACircle = function(d){return "צייר מעגל"};
 
 exports.drawAFlower = function(d){return "draw a flower"};
 
@@ -7626,7 +7626,7 @@ exports.lengthFeedback = function(d){return "You got it right except for the len
 
 exports.lengthParameter = function(d){return "אורך"};
 
-exports.loopVariable = function(d){return "מונה"};
+exports.loopVariable = function(d){return "סופר"};
 
 exports.moveBackward = function(d){return "הזז אחורה"};
 
@@ -7654,11 +7654,11 @@ exports.penTooltip = function(d){return "מרים או מוריד את העפר�
 
 exports.penUp = function(d){return "הרם את העיפרון"};
 
-exports.reinfFeedbackMsg = function(d){return "האם זה נראה כמו מה שרצית? אתה יכול ללחוץ על \"נסה שוב\" כדי לראות את הציור שלך."};
+exports.reinfFeedbackMsg = function(d){return "האם זה נראה כמו מה שרצית? באפשרותך להקיש על לחצן 'נסה שוב' כדי לראות את הציור שלך."};
 
-exports.setColour = function(d){return "קבע צבע"};
+exports.setColour = function(d){return "צבע קבוע"};
 
-exports.setWidth = function(d){return "קבע רוחב"};
+exports.setWidth = function(d){return "העובי הקבוע"};
 
 exports.shareDrawing = function(d){return "שתף את הציור שלך:"};
 
@@ -7687,15 +7687,15 @@ exports.wrongColour = function(d){return "התמונה בצבע לא נכון. �
 
 },{"messageformat":51}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
-exports.and = function(d){return "וגם"};
+exports.and = function(d){return "ו"};
 
-exports.blocklyMessage = function(d){return "Blockly"};
+exports.blocklyMessage = function(d){return "בלוקלי"};
 
 exports.catActions = function(d){return "פעולות"};
 
 exports.catColour = function(d){return "צבע"};
 
-exports.catLogic = function(d){return "לוגיקה"};
+exports.catLogic = function(d){return "הגיון"};
 
 exports.catLists = function(d){return "רשימות"};
 
@@ -7719,7 +7719,7 @@ exports.dialogOK = function(d){return "אישור"};
 
 exports.directionNorthLetter = function(d){return "צ"};
 
-exports.directionSouthLetter = function(d){return "ס"};
+exports.directionSouthLetter = function(d){return "ד"};
 
 exports.directionEastLetter = function(d){return "מז"};
 
@@ -7747,7 +7747,7 @@ exports.help = function(d){return "עזרה"};
 
 exports.hintTitle = function(d){return "רמז:"};
 
-exports.jump = function(d){return "קפיצה"};
+exports.jump = function(d){return "קפוץ"};
 
 exports.levelIncompleteError = function(d){return "הנך משתמש בכל סוגי הבלוקים הנדרשים אך לא באופן הנכון."};
 
@@ -7773,7 +7773,7 @@ exports.play = function(d){return "לשחק"};
 
 exports.puzzleTitle = function(d){return "חידה "+v(d,"puzzle_number")+" מ- "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "חזור"};
+exports.repeat = function(d){return "חזור על"};
 
 exports.resetProgram = function(d){return "אפס"};
 

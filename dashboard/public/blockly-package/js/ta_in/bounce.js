@@ -11538,7 +11538,7 @@ exports.bounceBall = function(d){return "துள்ளல் பந்து"}
 
 exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
 
-exports.continue = function(d){return "தொடர்ந்து"};
+exports.continue = function(d){return "தொடர்க"};
 
 exports.dirE = function(d){return "கிழக்கு"};
 
@@ -11556,7 +11556,7 @@ exports.finalLevel = function(d){return "வாழ்த்துக்கள்
 
 exports.heightParameter = function(d){return "உயரம்"};
 
-exports.ifCode = function(d){return "எனின்"};
+exports.ifCode = function(d){return "இருந்தால்"};
 
 exports.ifPathAhead = function(d){return "முன்னால் பாதை என்றால்"};
 
@@ -11586,7 +11586,7 @@ exports.moveDown = function(d){return "கீழே நகர்த்த"};
 
 exports.moveDownTooltip = function(d){return "Move the paddle down."};
 
-exports.moveForward = function(d){return "முன்னோக்கி நகர்"};
+exports.moveForward = function(d){return "முன்னோக்கி நகர்த்த"};
 
 exports.moveForwardTooltip = function(d){return "Move me forward one space."};
 
@@ -11736,9 +11736,9 @@ exports.whenDown = function(d){return "when Down arrow"};
 
 exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "விளையாட்டு தொடங்கும் போது"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "விளையாட்டு தொடங்கும் போது, கீழே கொடுக்கப்பட்டுள்ள செயல்களை செய்து முடிக்கவும்."};
 
 exports.whenLeft = function(d){return "when Left arrow"};
 
@@ -11793,7 +11793,7 @@ exports.catVariables = function(d){return "மாறிலிகள்"};
 
 exports.codeTooltip = function(d){return "உருவாக்கப்பட்ட ஜாவாஉரைக் குறியீடுகளை பார்க்க."};
 
-exports.continue = function(d){return "தொடர்ந்து"};
+exports.continue = function(d){return "தொடர்க"};
 
 exports.dialogCancel = function(d){return "ரத்து செய்"};
 

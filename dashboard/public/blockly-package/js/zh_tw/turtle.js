@@ -10646,7 +10646,7 @@ exports.parseElement = function(text) {
 
 },{}],41:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
-exports.and = function(d){return "及"};
+exports.and = function(d){return "且"};
 
 exports.blocklyMessage = function(d){return "模組化"};
 
@@ -10664,7 +10664,7 @@ exports.catMath = function(d){return "運算類別"};
 
 exports.catProcedures = function(d){return "函數類別"};
 
-exports.catText = function(d){return "字串類別"};
+exports.catText = function(d){return "本文"};
 
 exports.catVariables = function(d){return "變數類別"};
 
@@ -10696,7 +10696,7 @@ exports.finalStage = function(d){return "恭喜你 ！你已完成最後關卡�
 
 exports.finalStageTrophies = function(d){return "恭喜! 你已完成最後關卡並且贏得 "+p(d,"numTrophies",0,"zh",{"one":"一個獎盃","other":n(d,"numTrophies")+" 獎盃"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "完成 "};
 
 exports.generatedCodeInfo = function(d){return "甚至頂尖大學也同樣以\"程式積木\"來進行程式教學。(例如 :  "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+")。在程式積木的底層，所有組裝完成的程式積木功能，也可以用JavaScript 語法來顯示。"};
 
@@ -10706,11 +10706,11 @@ exports.help = function(d){return "說明"};
 
 exports.hintTitle = function(d){return "提示："};
 
-exports.jump = function(d){return "跳轉"};
+exports.jump = function(d){return "跳"};
 
 exports.levelIncompleteError = function(d){return "您已使用了所有必要類型的程式積木，但方式不太正確。"};
 
-exports.listVariable = function(d){return "列表變數\n"};
+exports.listVariable = function(d){return "列表變數"};
 
 exports.makeYourOwnFlappy = function(d){return "做出自己的 Flappy 遊戲"};
 
@@ -10748,7 +10748,7 @@ exports.showGeneratedCode = function(d){return "顯示程式碼"};
 
 exports.subtitle = function(d){return "一個視覺化的程式設計環境\n\n"};
 
-exports.textVariable = function(d){return "文字變數"};
+exports.textVariable = function(d){return "文本"};
 
 exports.tooFewBlocksMsg = function(d){return "你已使用所有必要類型的程式積木，但請嘗試使用更多同類型的程式積木來完成這個關卡。"};
 
@@ -10831,7 +10831,7 @@ exports.degrees = function(d){return "度"};
 
 exports.depth = function(d){return "深度"};
 
-exports.dots = function(d){return "像素"};
+exports.dots = function(d){return "像素 "};
 
 exports.drawASquare = function(d){return "畫一個正方形"};
 
@@ -10917,13 +10917,13 @@ exports.penTooltip = function(d){return "使用\"下筆\"或\"停筆\"來開始�
 
 exports.penUp = function(d){return "停筆"};
 
-exports.reinfFeedbackMsg = function(d){return "這看起來是你想要的嗎？你可以按\"重試\"鈕來看看你的畫作。"};
+exports.reinfFeedbackMsg = function(d){return "這看起來像你想要的嗎？你可以按\"再試一次\"按鈕來看看你畫出來的圖形。"};
 
 exports.setColour = function(d){return "設定顏色"};
 
 exports.setWidth = function(d){return "設定寬度"};
 
-exports.shareDrawing = function(d){return "分享您的畫作："};
+exports.shareDrawing = function(d){return "分享您的畫作"};
 
 exports.showMe = function(d){return "顯示"};
 

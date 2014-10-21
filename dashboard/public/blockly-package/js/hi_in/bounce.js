@@ -11654,7 +11654,7 @@ exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" b
 
 exports.removeSquare = function(d){return "remove square"};
 
-exports.repeatUntil = function(d){return "repeat until"};
+exports.repeatUntil = function(d){return "दोहराएँ जब तक"};
 
 exports.repeatUntilBlocked = function(d){return "while path ahead"};
 

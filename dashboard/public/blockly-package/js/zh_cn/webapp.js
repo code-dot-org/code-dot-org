@@ -7518,7 +7518,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.and = function(d){return "和"};
 
-exports.blocklyMessage = function(d){return "模块化"};
+exports.blocklyMessage = function(d){return "布洛克里"};
 
 exports.catActions = function(d){return "操作"};
 
@@ -7626,7 +7626,7 @@ exports.tooManyBlocksMsg = function(d){return "可以使用 < x id = 'START_SPAN
 
 exports.tooMuchWork = function(d){return "你让我多做很多工作 ！你可以尝试少重复几次吗？"};
 
-exports.toolboxHeader = function(d){return "模块"};
+exports.toolboxHeader = function(d){return "块"};
 
 exports.openWorkspace = function(d){return "它是如何工作的？"};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "看你的程序时如何结束的�
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "操作"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "循环"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "事件"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "逻辑"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "数学"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "函数"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "文本"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "变量"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "继续"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "恭喜你！你完成了最后一个谜题。"};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "恭喜你！你解决了这个谜题。"};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "不"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "这个谜题可以用%1个语句块解决。"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "一直重复下去"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "做"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "是"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

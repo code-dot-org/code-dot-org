@@ -7677,23 +7677,23 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.hi=function(n){return n===0||n==1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "क्रियाएँ"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "फंदे"};
 
 exports.catEvents = function(d){return "Events"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "तर्क"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "गणित"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "कार्य"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "पाठ"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "चर"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "जारी रखें"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 

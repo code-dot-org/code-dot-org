@@ -13192,13 +13192,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Listor"};
 
-exports.catLoops = function(d){return "loopar"};
+exports.catLoops = function(d){return "Loopar"};
 
 exports.catMath = function(d){return "Matte"};
 
 exports.catProcedures = function(d){return "Funktioner"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -13240,7 +13240,7 @@ exports.help = function(d){return "Hjälp"};
 
 exports.hintTitle = function(d){return "Tips:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "hoppa"};
 
 exports.levelIncompleteError = function(d){return "Du använder alla nödvändiga typer av block, men inte på rätt sätt."};
 
@@ -13290,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "Detta pusslet kan lösas med <x i
 
 exports.tooMuchWork = function(d){return "Du fick mig att göra en hel del arbete!  Du kan försöka upprepa färre gånger?"};
 
-exports.toolboxHeader = function(d){return "Block"};
+exports.toolboxHeader = function(d){return "bitar"};
 
 exports.openWorkspace = function(d){return "Hur det fungerar"};
 
@@ -13399,7 +13399,7 @@ exports.ifInRepeatError = function(d){return "Du behöver ett \"Om\"-block inuti
 
 exports.ifPathAhead = function(d){return "om väg finns framåt"};
 
-exports.ifTooltip = function(d){return "Om det finns en väg i den angivna riktningen, gör några handlingar."};
+exports.ifTooltip = function(d){return "Om det finns en sökväg i den angivna riktningen, utför ett antal åtgärder."};
 
 exports.ifelseTooltip = function(d){return "Om det finns en väg i den angivna riktningen, gör i så fall det första blocket av handlingar. Annars, gör den andra blocket av handlingar."};
 
@@ -13439,11 +13439,11 @@ exports.nextLevel = function(d){return "Grattis! Du har slutfört detta pusslet.
 
 exports.no = function(d){return "Nej"};
 
-exports.noPathAhead = function(d){return "vägen är blockerad"};
+exports.noPathAhead = function(d){return "stigen är blockerad"};
 
-exports.noPathLeft = function(d){return "ingen väg till vänster"};
+exports.noPathLeft = function(d){return "ingen stig till vänster"};
 
-exports.noPathRight = function(d){return "ingen väg till höger"};
+exports.noPathRight = function(d){return "ingen stig åt höger"};
 
 exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
 
@@ -13485,9 +13485,9 @@ exports.totalHoney = function(d){return "total honey"};
 
 exports.totalNectar = function(d){return "total nectar"};
 
-exports.turnLeft = function(d){return "Sväng vänster"};
+exports.turnLeft = function(d){return "sväng vänster"};
 
-exports.turnRight = function(d){return "Sväng höger"};
+exports.turnRight = function(d){return "sväng höger"};
 
 exports.turnTooltip = function(d){return "Vänder mig åt vänster eller höger 90 grader."};
 

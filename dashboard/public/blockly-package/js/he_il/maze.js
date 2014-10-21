@@ -13180,15 +13180,15 @@ exports.parseElement = function(text) {
 
 },{}],56:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
-exports.and = function(d){return "וגם"};
+exports.and = function(d){return "ו"};
 
-exports.blocklyMessage = function(d){return "Blockly"};
+exports.blocklyMessage = function(d){return "בלוקלי"};
 
 exports.catActions = function(d){return "פעולות"};
 
 exports.catColour = function(d){return "צבע"};
 
-exports.catLogic = function(d){return "לוגיקה"};
+exports.catLogic = function(d){return "הגיון"};
 
 exports.catLists = function(d){return "רשימות"};
 
@@ -13212,7 +13212,7 @@ exports.dialogOK = function(d){return "אישור"};
 
 exports.directionNorthLetter = function(d){return "צ"};
 
-exports.directionSouthLetter = function(d){return "ס"};
+exports.directionSouthLetter = function(d){return "ד"};
 
 exports.directionEastLetter = function(d){return "מז"};
 
@@ -13240,7 +13240,7 @@ exports.help = function(d){return "עזרה"};
 
 exports.hintTitle = function(d){return "רמז:"};
 
-exports.jump = function(d){return "קפיצה"};
+exports.jump = function(d){return "קפוץ"};
 
 exports.levelIncompleteError = function(d){return "הנך משתמש בכל סוגי הבלוקים הנדרשים אך לא באופן הנכון."};
 
@@ -13266,7 +13266,7 @@ exports.play = function(d){return "לשחק"};
 
 exports.puzzleTitle = function(d){return "חידה "+v(d,"puzzle_number")+" מ- "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "חזור"};
+exports.repeat = function(d){return "חזור על"};
 
 exports.resetProgram = function(d){return "אפס"};
 
@@ -13375,7 +13375,7 @@ exports.fillSquare = function(d){return "מלא את הריבוע"};
 
 exports.fillTooltip = function(d){return "שים יחידה אחת של עפר"};
 
-exports.finalLevel = function(d){return "מזל טוב! פתרת את החידה האחרונה."};
+exports.finalLevel = function(d){return "כל הכבוד! פתרת את החידה האחרונה."};
 
 exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
 
@@ -13395,13 +13395,13 @@ exports.honeycombFullError = function(d){return "This honeycomb does not have ro
 
 exports.ifCode = function(d){return "אם"};
 
-exports.ifInRepeatError = function(d){return "אתה צריך בלוק 'אם' בתוך בלוק 'חזור שוב'. אם אתה מתקשה, נסה את השלב הקודם שוב כדי לראות איך זה עבד."};
+exports.ifInRepeatError = function(d){return "אתה צריך בלוק \"אם\" בתוך בלוק \"חזור שוב\". אם אתה מתקשה, נסה את השלב הקודם שוב כדי לראות איך זה עבד."};
 
-exports.ifPathAhead = function(d){return "אם יש דרך מקדימה"};
+exports.ifPathAhead = function(d){return "אם קיימת דרך לפניך"};
 
-exports.ifTooltip = function(d){return "אם ישנה דרך בכיוון הנתון, אז תעשה פעולות כלשהן."};
+exports.ifTooltip = function(d){return "אם יש דרך בכיוון שנבחר, בצע מספר פעולות."};
 
-exports.ifelseTooltip = function(d){return "אם ישנה דרך בכיוון הנתון, אז בצע את הבלוק הראשון של הפעולות. אחרת, בצע את הבלוק השני של הפעולות."};
+exports.ifelseTooltip = function(d){return "אם יש דרך בכיוון שנבחר, אז בצע את המקבץ הראשון של פעולות. אחרת, בצע את המקבץ השני של פעולות."};
 
 exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
 
@@ -13417,9 +13417,9 @@ exports.moveBackward = function(d){return "move backward"};
 
 exports.moveEastTooltip = function(d){return "תזיז אותי חתיכה אחת מזרחה."};
 
-exports.moveForward = function(d){return "זוז קדימה"};
+exports.moveForward = function(d){return "לזוז קדימה"};
 
-exports.moveForwardTooltip = function(d){return "העבר אותיי מקום אחד קדימה."};
+exports.moveForwardTooltip = function(d){return "הזז אותי צעד אחד קדימה."};
 
 exports.moveNorthTooltip = function(d){return "תזיז אותי חתיכה אחת צפונה."};
 
@@ -13435,21 +13435,21 @@ exports.nectarRemaining = function(d){return "nectar"};
 
 exports.nectarTooltip = function(d){return "להשיג צוף מפרח"};
 
-exports.nextLevel = function(d){return "מזל טוב! השלמת את הפאזל הזה."};
+exports.nextLevel = function(d){return "כל הכבוד! השלמת את החידה הזה."};
 
 exports.no = function(d){return "לא"};
 
 exports.noPathAhead = function(d){return "הדרך חסומה"};
 
-exports.noPathLeft = function(d){return "אין דרך לצד שמאל"};
+exports.noPathLeft = function(d){return "אין דרך שמאלה"};
 
-exports.noPathRight = function(d){return "אין דרך לצד ימין"};
+exports.noPathRight = function(d){return "אין דרך ימינה"};
 
 exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
 
 exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
 
-exports.numBlocksNeeded = function(d){return "ניתן לפתור את הפאזל עם %1 בלוק."};
+exports.numBlocksNeeded = function(d){return "ניתן לפתור את החידה עם %1 של אבני בנייה."};
 
 exports.pathAhead = function(d){return "דרך לפניך"};
 
@@ -13473,11 +13473,11 @@ exports.removeSquare = function(d){return "הסר ריבוע"};
 
 exports.repeatCarefullyError = function(d){return "כדי לפתור את זה, נסה למצוא את התבנית שחוזרת. השתמש בבלוק 'חזור שוב' עם שלושת הבלוקים האלו בתוכו: זוז, זוז, פנה ימינה."};
 
-exports.repeatUntil = function(d){return "חזור עד ש..."};
+exports.repeatUntil = function(d){return "חזור עד אשר"};
 
-exports.repeatUntilBlocked = function(d){return "כאשר דרך מקדימה"};
+exports.repeatUntilBlocked = function(d){return "כל עוד יש דרך מקדימה"};
 
-exports.repeatUntilFinish = function(d){return "חזור עד סיום"};
+exports.repeatUntilFinish = function(d){return "חזור עד לסיום"};
 
 exports.step = function(d){return "צעד"};
 
@@ -13495,9 +13495,9 @@ exports.uncheckedCloudError = function(d){return "Make sure to check all clouds 
 
 exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
 
-exports.whileMsg = function(d){return "זמן"};
+exports.whileMsg = function(d){return "כאשר"};
 
-exports.whileTooltip = function(d){return "חזור על הפעולות עד שנקודת הסיום הושגה."};
+exports.whileTooltip = function(d){return "חזור על שורת הפעולות עד שתגיע לנקודת הסיום."};
 
 exports.word = function(d){return "Find the word"};
 

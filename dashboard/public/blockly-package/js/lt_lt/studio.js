@@ -18726,7 +18726,7 @@ exports.continue = function(d){return "Tęsti"};
 
 exports.dialogCancel = function(d){return "Atšaukti"};
 
-exports.dialogOK = function(d){return "gerai"};
+exports.dialogOK = function(d){return "Gerai"};
 
 exports.directionNorthLetter = function(d){return "Š"};
 
@@ -18908,7 +18908,7 @@ exports.incrementPlayerScore = function(d){return "pridėk tašką"};
 
 exports.makeProjectileDisappear = function(d){return "pradink"};
 
-exports.makeProjectileBounce = function(d){return "atsimušk"};
+exports.makeProjectileBounce = function(d){return "atsitrenkimas"};
 
 exports.makeProjectileBlueFireball = function(d){return "mėlynas ugnies kamuolys"};
 
@@ -18924,13 +18924,13 @@ exports.makeProjectileRedHearts = function(d){return "raudonos širdutės"};
 
 exports.makeProjectileTooltip = function(d){return "Susidūręs sviedinys/objektas turi pradingti arba atšokti."};
 
-exports.makeYourOwn = function(d){return "Sukurk savo istoriją su Laboratorija"};
+exports.makeYourOwn = function(d){return "Sukurk savo istoriją programėlių laboratorijoje."};
 
 exports.moveDirectionDown = function(d){return "žemyn"};
 
-exports.moveDirectionLeft = function(d){return "kairėn"};
+exports.moveDirectionLeft = function(d){return "kairė"};
 
-exports.moveDirectionRight = function(d){return "dešinėn"};
+exports.moveDirectionRight = function(d){return "dešinė"};
 
 exports.moveDirectionUp = function(d){return "aukštyn"};
 
@@ -18946,7 +18946,7 @@ exports.moveDistance200 = function(d){return "200 pikselių"};
 
 exports.moveDistance400 = function(d){return "400 pikselių"};
 
-exports.moveDistancePixels = function(d){return "pikseliai"};
+exports.moveDistancePixels = function(d){return "pikselių"};
 
 exports.moveDistanceRandom = function(d){return "atsitiktinis pikselių skaičius"};
 
@@ -18982,31 +18982,31 @@ exports.numBlocksNeeded = function(d){return "Ši užduotis gali būti išspręs
 
 exports.ouchExclamation = function(d){return "Ojoj!"};
 
-exports.playSoundCrunch = function(d){return "garsas = trakšt"};
+exports.playSoundCrunch = function(d){return "grok trakšt garsą"};
 
-exports.playSoundGoal1 = function(d){return "garsas = įvartis 1"};
+exports.playSoundGoal1 = function(d){return "grok garsą „įvartis 1“"};
 
-exports.playSoundGoal2 = function(d){return "garsas = įvartis 2"};
+exports.playSoundGoal2 = function(d){return "grok garsą „įvartis 2“"};
 
-exports.playSoundHit = function(d){return "garsas = atsimušimas"};
+exports.playSoundHit = function(d){return "grok garsą „atsimušimas“"};
 
-exports.playSoundLosePoint = function(d){return "garsas = taško praradimas"};
+exports.playSoundLosePoint = function(d){return "grok garsą „taško praradimas“"};
 
-exports.playSoundLosePoint2 = function(d){return "garsas = taško praradimas 2"};
+exports.playSoundLosePoint2 = function(d){return "grok garsą „taško praradimas 2“"};
 
-exports.playSoundRetro = function(d){return "garsas = retro"};
+exports.playSoundRetro = function(d){return "grok garsą „retro“"};
 
-exports.playSoundRubber = function(d){return "garsas = guma"};
+exports.playSoundRubber = function(d){return "grok garsą „guma“"};
 
-exports.playSoundSlap = function(d){return "garsas = pliaukšt"};
+exports.playSoundSlap = function(d){return "grok garsą „pliaukšt“"};
 
 exports.playSoundTooltip = function(d){return "Grok pasirinktą garsą."};
 
-exports.playSoundWinPoint = function(d){return "garsas = pelnyti taškai 1"};
+exports.playSoundWinPoint = function(d){return "grok garsą „pelnytas taškas 1“"};
 
-exports.playSoundWinPoint2 = function(d){return "garsas = pelnyti taškai 2"};
+exports.playSoundWinPoint2 = function(d){return "grok garsą „pelnytas taškas 2“"};
 
-exports.playSoundWood = function(d){return "garsas = mediena"};
+exports.playSoundWood = function(d){return "grok garsą „mediena“"};
 
 exports.positionOutTopLeft = function(d){return "pozicija = virš viršutinio kairio kampo"};
 
@@ -19062,7 +19062,7 @@ exports.reinfFeedbackMsg = function(d){return "Gali nuspausti mygtuką „Mėgin
 
 exports.repeatForever = function(d){return "kartok visada"};
 
-exports.repeatDo = function(d){return "daryk"};
+exports.repeatDo = function(d){return " "};
 
 exports.repeatForeverTooltip = function(d){return "Vykdyk veiksmus, esančius šiame bloke, pakartotinai, kol istorija yra rodoma."};
 
@@ -19072,7 +19072,7 @@ exports.saySpriteN = function(d){return "veikėjas "+v(d,"spriteIndex")+" sakys"
 
 exports.saySpriteTooltip = function(d){return "Virš veikėjo galvos atsiras burbulas su nurodytu tekstu."};
 
-exports.scoreText = function(d){return "Taškai: "+v(d,"playerScore")};
+exports.scoreText = function(d){return "Rezultatas: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "fonas = "};
 
@@ -19106,7 +19106,7 @@ exports.setBackgroundWinter = function(d){return "fonas = žiema"};
 
 exports.setBackgroundTooltip = function(d){return "Nustato fono paveikslėlį"};
 
-exports.setScoreText = function(d){return "taškai = "};
+exports.setScoreText = function(d){return "taškai ="};
 
 exports.setScoreTextTooltip = function(d){return "Kokį tekstą rodyti šalia taškų."};
 
@@ -19236,7 +19236,7 @@ exports.showTSDefText = function(d){return "įrašykite tekstą"};
 
 exports.showTitleScreenTooltip = function(d){return "Parodyti pradinį ekraną su pavadinimu ir tekstu."};
 
-exports.setSprite = function(d){return "nustatyk"};
+exports.setSprite = function(d){return " "};
 
 exports.setSpriteN = function(d){return "nustatyk aktoriui "+v(d,"spriteIndex")+":"};
 

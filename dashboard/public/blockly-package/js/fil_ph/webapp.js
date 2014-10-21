@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fil=function(n){return n===0||n==1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Mga aksyon"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Mga loop"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Mga event"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Lohika"};
 
 exports.catMath = function(d){return "Math"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Mga function"};
 
 exports.catText = function(d){return "Text"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Mga variable"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Magpatuloy"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Maligayang pagbati! Nalutas mo na ang pinakahuling puzzle."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Maligayang pagbati! Natapos mo ang puzzle na ito."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Hindi"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Ang puzzle na ito ay maaaring malutas sa %1 na mga block."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "ulitin ng walang katapusan"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "gawin"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Oo"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

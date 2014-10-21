@@ -9212,13 +9212,13 @@ exports.catMath = function(d){return "Reikningur"};
 
 exports.catProcedures = function(d){return "Föll"};
 
-exports.catText = function(d){return "Texti"};
+exports.catText = function(d){return "texti"};
 
 exports.catVariables = function(d){return "Breytur"};
 
 exports.codeTooltip = function(d){return "Sjá samsvarandi JavaScript kóða."};
 
-exports.continue = function(d){return "Áfram"};
+exports.continue = function(d){return "Halda áfram"};
 
 exports.dialogCancel = function(d){return "Hætta við"};
 
@@ -9304,7 +9304,7 @@ exports.tooManyBlocksMsg = function(d){return "Þessa þraut er hægt að leysa 
 
 exports.tooMuchWork = function(d){return "Þú lagðir á mig mjög mikla vinnu! Gætirðu reynt að nota færri endurtekningar?"};
 
-exports.toolboxHeader = function(d){return "Kubbar"};
+exports.toolboxHeader = function(d){return "kubbar"};
 
 exports.openWorkspace = function(d){return "Hvernig það virkar"};
 
@@ -9383,11 +9383,11 @@ exports.flapVeryLarge = function(d){return "blaka vængjum mjög mikið"};
 
 exports.flapTooltip = function(d){return "Fljúga Flappy upp á við."};
 
-exports.flappySpecificFail = function(d){return "Kóðinn þinn virðist í lagi - hann lætur blaka við hvern smell. En þú þarft að smella oft til að fljúga að markinu."};
+exports.flappySpecificFail = function(d){return "Kóðinn þinn lítur vel út - fuglinn flögrar við hvern smell. En þú þarft að smella oft til að flögra að endamarkinu."};
 
 exports.incrementPlayerScore = function(d){return "skora stig"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Bæta einu stigi við núverandi stöðu."};
+exports.incrementPlayerScoreTooltip = function(d){return "Bæta 1 við núverandi skor leikmanns."};
 
 exports.nextLevel = function(d){return "Til hamingju! Þú hefur klárað þessa þraut."};
 
@@ -9399,7 +9399,7 @@ exports.playSoundRandom = function(d){return "spila hljóð af handahófi"};
 
 exports.playSoundBounce = function(d){return "spila skopphljóð"};
 
-exports.playSoundCrunch = function(d){return "spila kremjuhljóð"};
+exports.playSoundCrunch = function(d){return "spila brothljóð"};
 
 exports.playSoundDie = function(d){return "spila sorgarhljóð"};
 
@@ -9443,7 +9443,7 @@ exports.setBackgroundCave = function(d){return "umhverfi - hellir"};
 
 exports.setBackgroundSanta = function(d){return "umhverfi - Jólasveinn"};
 
-exports.setBackgroundTooltip = function(d){return "Stillir bakgrunnsmynd"};
+exports.setBackgroundTooltip = function(d){return "Stillir bakgrunninn"};
 
 exports.setGapRandom = function(d){return "op af handahófi"};
 
@@ -9611,7 +9611,7 @@ exports.whenEnterObstacleTooltip = function(d){return "Gera aðgerðirnar hér f
 
 exports.whenRunButtonClick = function(d){return "þegar leikur byrjar"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Gera aðgerðirnar hér fyrir neðan þegar leikurinn byrjar."};
+exports.whenRunButtonClickTooltip = function(d){return "Gera aðgerðirnar fyrir neðan þegar leikurinn byrjar."};
 
 exports.yes = function(d){return "Já"};
 

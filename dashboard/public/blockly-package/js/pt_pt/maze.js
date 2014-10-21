@@ -13198,7 +13198,7 @@ exports.catMath = function(d){return "Matemática"};
 
 exports.catProcedures = function(d){return "Funções"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
 exports.catVariables = function(d){return "Variáveis"};
 
@@ -13276,7 +13276,7 @@ exports.runTooltip = function(d){return "Executa o programa definido pelos bloco
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Mostrar o Código"};
+exports.showCodeHeader = function(d){return "Mostrar o código"};
 
 exports.showGeneratedCode = function(d){return "Mostrar o código"};
 
@@ -13290,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "Este puzzle pode ser resolvido co
 
 exports.tooMuchWork = function(d){return "Fizeste-me ter muito trabalho! Podes tentar repetir menos vezes?"};
 
-exports.toolboxHeader = function(d){return "Blocos"};
+exports.toolboxHeader = function(d){return "blocos"};
 
 exports.openWorkspace = function(d){return "Como funciona"};
 
@@ -13347,7 +13347,7 @@ exports.atFlower = function(d){return "at flower"};
 
 exports.avoidCowAndRemove = function(d){return "evita a vaca e remove 1"};
 
-exports.continue = function(d){return "Continuar"};
+exports.continue = function(d){return "Continua"};
 
 exports.dig = function(d){return "Remover 1"};
 
@@ -13361,7 +13361,7 @@ exports.dirS = function(d){return "S"};
 
 exports.dirW = function(d){return "O"};
 
-exports.doCode = function(d){return "Faça"};
+exports.doCode = function(d){return "faça"};
 
 exports.elseCode = function(d){return "senão"};
 
@@ -13375,7 +13375,7 @@ exports.fillSquare = function(d){return "Preencha o quadrado"};
 
 exports.fillTooltip = function(d){return "Coloca 1 unidade de terra"};
 
-exports.finalLevel = function(d){return "Parabéns! Resolveste o enigma final."};
+exports.finalLevel = function(d){return "Parabéns! Resolveste o puzzle final."};
 
 exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
 
@@ -13417,9 +13417,9 @@ exports.moveBackward = function(d){return "move backward"};
 
 exports.moveEastTooltip = function(d){return "Move me east one space."};
 
-exports.moveForward = function(d){return "Segue em frente"};
+exports.moveForward = function(d){return "segue em frente"};
 
-exports.moveForwardTooltip = function(d){return "Segue em frente uma unidade."};
+exports.moveForwardTooltip = function(d){return "Move para a frente uma unidade."};
 
 exports.moveNorthTooltip = function(d){return "Move me north one space."};
 
@@ -13449,7 +13449,7 @@ exports.notAtFlowerError = function(d){return "You can only get nectar from a fl
 
 exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
 
-exports.numBlocksNeeded = function(d){return "Este puzzle pode ser resolvido com blocos de %1."};
+exports.numBlocksNeeded = function(d){return "Este puzzle pode ser resolvido com blocos de  %1 ."};
 
 exports.pathAhead = function(d){return "caminho em frente"};
 
@@ -13473,7 +13473,7 @@ exports.removeSquare = function(d){return "remove o quadrado"};
 
 exports.repeatCarefullyError = function(d){return "Para resolver isso, encontra o padrão que se repete. Use um bloco \"repetir\" com estes 3 blocos dentro: move, move, virar à direita."};
 
-exports.repeatUntil = function(d){return "repete até"};
+exports.repeatUntil = function(d){return "repita até"};
 
 exports.repeatUntilBlocked = function(d){return "enquanto houver caminho em frente"};
 
@@ -13485,9 +13485,9 @@ exports.totalHoney = function(d){return "total honey"};
 
 exports.totalNectar = function(d){return "total nectar"};
 
-exports.turnLeft = function(d){return "vira à esquerda"};
+exports.turnLeft = function(d){return "Virar à esquerda"};
 
-exports.turnRight = function(d){return "vira à direita"};
+exports.turnRight = function(d){return "Virar à direita"};
 
 exports.turnTooltip = function(d){return "Vira à esquerda ou à direita 90 graus."};
 

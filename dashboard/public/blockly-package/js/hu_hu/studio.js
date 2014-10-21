@@ -18693,7 +18693,7 @@ exports.and = function(d){return "és"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
-exports.catActions = function(d){return "Cselekvések"};
+exports.catActions = function(d){return "Műveletek"};
 
 exports.catColour = function(d){return "Szín"};
 
@@ -18705,9 +18705,9 @@ exports.catLoops = function(d){return "Ciklusok"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Függvények"};
+exports.catProcedures = function(d){return "Funkciók"};
 
-exports.catText = function(d){return "Szöveg"};
+exports.catText = function(d){return "szöveg"};
 
 exports.catVariables = function(d){return "Változók"};
 
@@ -18785,7 +18785,7 @@ exports.runTooltip = function(d){return "A munkalapon összeépített program fu
 
 exports.score = function(d){return "pontszám"};
 
-exports.showCodeHeader = function(d){return "Kód Megjelenítése"};
+exports.showCodeHeader = function(d){return "Kód megjelenítése"};
 
 exports.showGeneratedCode = function(d){return "Kód megjelenítése"};
 
@@ -18799,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "Ez a feladvány megoldható a <x 
 
 exports.tooMuchWork = function(d){return "Sokat dolgoztattál. Megpróbálnád egy kicsit kevesebb ismétléssel?"};
 
-exports.toolboxHeader = function(d){return "Blokkok"};
+exports.toolboxHeader = function(d){return "blokkok"};
 
 exports.openWorkspace = function(d){return "Hogyan is működik"};
 
@@ -18854,7 +18854,7 @@ exports.actor = function(d){return "színész"};
 
 exports.catActions = function(d){return "Műveletek"};
 
-exports.catControl = function(d){return "Ciklusok"};
+exports.catControl = function(d){return "hurkok"};
 
 exports.catEvents = function(d){return "Események"};
 
@@ -18862,11 +18862,11 @@ exports.catLogic = function(d){return "Logika"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Funkciók"};
+exports.catProcedures = function(d){return "funkciók"};
 
-exports.catText = function(d){return "Szöveg"};
+exports.catText = function(d){return "szöveg"};
 
-exports.catVariables = function(d){return "Változók"};
+exports.catVariables = function(d){return "változók"};
 
 exports.changeScoreTooltip = function(d){return "Adjon hozzá vagy vegyen el egy pontot a pontszámból."};
 
@@ -18880,7 +18880,7 @@ exports.defaultSayText = function(d){return "Ide írj"};
 
 exports.emotion = function(d){return "hangulat"};
 
-exports.finalLevel = function(d){return "Gratulálok! A megoldottad az utolsó feladványt."};
+exports.finalLevel = function(d){return "Gratulálok, megoldottad az utolsó feladatot."};
 
 exports.hello = function(d){return "helló"};
 
@@ -18916,7 +18916,7 @@ exports.moveDirectionRight = function(d){return "jobb"};
 
 exports.moveDirectionUp = function(d){return "fel"};
 
-exports.moveDirectionRandom = function(d){return "véletlenszerű"};
+exports.moveDirectionRandom = function(d){return "véletlen"};
 
 exports.moveDistance25 = function(d){return "25 pixel"};
 
@@ -18928,7 +18928,7 @@ exports.moveDistance200 = function(d){return "200 képpont"};
 
 exports.moveDistance400 = function(d){return "400 képpont"};
 
-exports.moveDistancePixels = function(d){return "pixel"};
+exports.moveDistancePixels = function(d){return "képpontok"};
 
 exports.moveDistanceRandom = function(d){return "véletlenszerű képpontok"};
 
@@ -18956,11 +18956,11 @@ exports.moveUpTooltip = function(d){return "művész mozogjon felfele."};
 
 exports.moveTooltip = function(d){return "mozogjon a művész."};
 
-exports.nextLevel = function(d){return "Gratulálunk! Teljesítetted ezt a feladványt."};
+exports.nextLevel = function(d){return "Gratulálok! Ezt a feladatot megoldottad."};
 
-exports.no = function(d){return "nem"};
+exports.no = function(d){return "Nem"};
 
-exports.numBlocksNeeded = function(d){return "Ezt a puzzle-t a(z) % 1 blokkal megoldható."};
+exports.numBlocksNeeded = function(d){return "Ez a feladat a(z) %1 blokkal megoldható."};
 
 exports.ouchExclamation = function(d){return "Jaj!"};
 
@@ -19038,7 +19038,7 @@ exports.projectilePurpleHearts = function(d){return "lila szívek"};
 
 exports.projectileRedHearts = function(d){return "piros szívek"};
 
-exports.projectileRandom = function(d){return "véletlenszerű"};
+exports.projectileRandom = function(d){return "véletlen"};
 
 exports.reinfFeedbackMsg = function(d){return "Nyomja meg a \"Játszd újra\" gombot hogy visszatérj a saját játékodhoz."};
 
@@ -19086,7 +19086,7 @@ exports.setBackgroundTennis = function(d){return "set tennis background"};
 
 exports.setBackgroundWinter = function(d){return "set winter background"};
 
-exports.setBackgroundTooltip = function(d){return "Add meg a háttér képet"};
+exports.setBackgroundTooltip = function(d){return "Adja meg a háttér képet"};
 
 exports.setScoreText = function(d){return "Pontszám beállítása"};
 
@@ -19218,7 +19218,7 @@ exports.showTSDefText = function(d){return "type text here"};
 
 exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
 
-exports.setSprite = function(d){return "beállítás"};
+exports.setSprite = function(d){return "állítsd be"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 
@@ -19298,7 +19298,7 @@ exports.whenArrowUp = function(d){return "up arrow"};
 
 exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
 
-exports.whenDown = function(d){return "Lefele nyílnál"};
+exports.whenDown = function(d){return "Ha van lefelé nyíl"};
 
 exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
 
@@ -19306,11 +19306,11 @@ exports.whenGameStarts = function(d){return "Amikor a történet kezdődik"};
 
 exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
 
-exports.whenLeft = function(d){return "balra nyíl esetén"};
+exports.whenLeft = function(d){return "Ha van balra nyíl"};
 
 exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
 
-exports.whenRight = function(d){return "jobbra nyíl esetén"};
+exports.whenRight = function(d){return "Ha van jobbra nyíl"};
 
 exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
 
@@ -19360,7 +19360,7 @@ exports.whenUp = function(d){return "Ha van felfelé nyíl"};
 
 exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
 
-exports.yes = function(d){return "igen"};
+exports.yes = function(d){return "Igen"};
 
 
 },{"messageformat":58}],47:[function(require,module,exports){

@@ -13211,7 +13211,7 @@ exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkcije"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Varijable"};
 
@@ -13223,13 +13223,13 @@ exports.dialogCancel = function(d){return "Odustani"};
 
 exports.dialogOK = function(d){return "U redu"};
 
-exports.directionNorthLetter = function(d){return "S"};
+exports.directionNorthLetter = function(d){return "Sjever"};
 
-exports.directionSouthLetter = function(d){return "J"};
+exports.directionSouthLetter = function(d){return "Jug"};
 
-exports.directionEastLetter = function(d){return "I"};
+exports.directionEastLetter = function(d){return "Istok"};
 
-exports.directionWestLetter = function(d){return "Z"};
+exports.directionWestLetter = function(d){return "Zapad"};
 
 exports.end = function(d){return "kraj"};
 
@@ -13243,7 +13243,7 @@ exports.finalStage = function(d){return "Čestitamo! Posljednja etapa je završe
 
 exports.finalStageTrophies = function(d){return "Čestitamo! Završena je posljednja etapa i osvajaš "+p(d,"numTrophies",0,"hr",{"one":"trofej","other":n(d,"numTrophies")+" trofeja"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Kraj"};
 
 exports.generatedCodeInfo = function(d){return "Čak i vrhunska sveučilišta podučavaju kodiranje pomoću blokova (npr. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ali u suštini, blokovi koje si spojio se mogu prikazati kao kôd u JavaScriptu, najkorištenijem programskom jeziku na svijetu:"};
 
@@ -13257,7 +13257,7 @@ exports.jump = function(d){return "skoči"};
 
 exports.levelIncompleteError = function(d){return "Koristiš sve potrebne vrste blokova, ali na pogrešan način."};
 
-exports.listVariable = function(d){return "popis"};
+exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Napravi vlastitu Flappy igricu"};
 
@@ -13387,7 +13387,7 @@ exports.dirS = function(d){return "Jug"};
 
 exports.dirW = function(d){return "Zapad"};
 
-exports.doCode = function(d){return "uradi"};
+exports.doCode = function(d){return "napravi"};
 
 exports.elseCode = function(d){return "inače"};
 
@@ -13401,7 +13401,7 @@ exports.fillSquare = function(d){return "ispuni kvadrat"};
 
 exports.fillTooltip = function(d){return "stavi 1 komad zemlje"};
 
-exports.finalLevel = function(d){return "Čestitamo! Riješen je posljednji zadatak."};
+exports.finalLevel = function(d){return "Čestitamo ! Riješili ste posljednji zadatak."};
 
 exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
 
@@ -13423,7 +13423,7 @@ exports.ifCode = function(d){return "ako"};
 
 exports.ifInRepeatError = function(d){return "You need an \"if\" block inside a \"repeat\" block. If you're having trouble, try the previous level again to see how it worked."};
 
-exports.ifPathAhead = function(d){return "ako ima staze koja vodi ravno"};
+exports.ifPathAhead = function(d){return "ako je put ispred"};
 
 exports.ifTooltip = function(d){return "Ako staza ide u zadanom smjeru, onda napravi zadane radnje."};
 

@@ -13182,7 +13182,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "ja"};
 
-exports.blocklyMessage = function(d){return "Blockly"};
+exports.blocklyMessage = function(d){return "Blocky"};
 
 exports.catActions = function(d){return "Toiminnot"};
 
@@ -13198,7 +13198,7 @@ exports.catMath = function(d){return "Matematiikka"};
 
 exports.catProcedures = function(d){return "Funktiot"};
 
-exports.catText = function(d){return "Teksti"};
+exports.catText = function(d){return "teksti"};
 
 exports.catVariables = function(d){return "Muuttujat"};
 
@@ -13242,7 +13242,7 @@ exports.hintTitle = function(d){return "Vihje:"};
 
 exports.jump = function(d){return "hyppää"};
 
-exports.levelIncompleteError = function(d){return "Käytät kaikkia oikeanlaisia lohkoja, mutta et oikella tavalla."};
+exports.levelIncompleteError = function(d){return "Käytät kaikkia oikeanlaisia lohkoja, mutta et oikealla tavalla."};
 
 exports.listVariable = function(d){return "lista"};
 
@@ -13262,7 +13262,7 @@ exports.numBlocksNeeded = function(d){return "Onneksi olkoon! Olet suorittanut "
 
 exports.numLinesOfCodeWritten = function(d){return "Kirjoitit juuri "+p(d,"numLines",0,"fi",{"one":"yhden rivin","other":n(d,"numLines")+" riviä"})+" koodia!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "pelaa"};
 
 exports.puzzleTitle = function(d){return "Pulma "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
@@ -13274,7 +13274,7 @@ exports.runProgram = function(d){return "Suorita"};
 
 exports.runTooltip = function(d){return "Suorittaa työtilassa olevien lohkojen määrittämän ohjelman."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "pisteet"};
 
 exports.showCodeHeader = function(d){return "Näytä koodi"};
 
@@ -13290,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "Tämän pulman voi ratkaista <x i
 
 exports.tooMuchWork = function(d){return "Sait minut tekemään paljon töitä! Voisitko kokeilla samaa vähemmillä toistoilla?"};
 
-exports.toolboxHeader = function(d){return "Lohkot"};
+exports.toolboxHeader = function(d){return "lohkot"};
 
 exports.openWorkspace = function(d){return "Miten se toimii"};
 
@@ -13306,7 +13306,7 @@ exports.saveToGallery = function(d){return "Tallenna galleriaasi"};
 
 exports.savedToGallery = function(d){return "Tallennettu galleriaasi!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Emme valitettavasti toi jakaa tätä ohjelmaa."};
 
 exports.typeCode = function(d){return "Kirjoita JavaScript-koodisi näiden ohjeiden alle."};
 
@@ -13324,19 +13324,19 @@ exports.orientationLock = function(d){return "Poista laitteesi asentolukko."};
 
 exports.wantToLearn = function(d){return "Haluatko oppia koodaamaan?"};
 
-exports.watchVideo = function(d){return "Katso Video"};
+exports.watchVideo = function(d){return "Katso video"};
 
 exports.when = function(d){return "kun"};
 
-exports.whenRun = function(d){return "suoritettaessa"};
+exports.whenRun = function(d){return "ajettaessa"};
 
-exports.tryHOC = function(d){return "Kokeile koodaustuntia"};
+exports.tryHOC = function(d){return "Kokeile koodituntia"};
 
 exports.signup = function(d){return "Rekisteröidy johdantokurssille"};
 
 exports.hintHeader = function(d){return "Tässä on Vihje:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Katso miten päädyit tähän, ja koita korjata ohjelmasi."};
 
 
 },{"messageformat":69}],57:[function(require,module,exports){
@@ -13375,7 +13375,7 @@ exports.fillSquare = function(d){return "täytä neliö"};
 
 exports.fillTooltip = function(d){return "aseta yksi yksikkö maata"};
 
-exports.finalLevel = function(d){return "Onneksi olkoon! Olet suorittanut viimeisen pulman."};
+exports.finalLevel = function(d){return "Onneksi olkoon! Olet suorittanut viimeisen ongelman."};
 
 exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
 

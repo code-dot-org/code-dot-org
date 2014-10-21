@@ -11561,7 +11561,7 @@ exports.dirW = function(d){return "Z"};
 
 exports.doCode = function(d){return "izvrši"};
 
-exports.elseCode = function(d){return "sicer"};
+exports.elseCode = function(d){return "potem"};
 
 exports.finalLevel = function(d){return "Čestitke! Rešil/a si zadnjo uganko."};
 
@@ -11581,7 +11581,7 @@ exports.incrementOpponentScoreTooltip = function(d){return "Dodaj ena k nasprotn
 
 exports.incrementPlayerScore = function(d){return "dosežena točka"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Dodaj ena k trenutnim točkam."};
+exports.incrementPlayerScoreTooltip = function(d){return "Dodaj ena k trenutnemu dosežku."};
 
 exports.isWall = function(d){return "je to stena"};
 
@@ -11613,7 +11613,7 @@ exports.moveUp = function(d){return "premakni se gor"};
 
 exports.moveUpTooltip = function(d){return "Move the paddle up."};
 
-exports.nextLevel = function(d){return "Čestitke! Zaključil/a si to uganko."};
+exports.nextLevel = function(d){return "Čestitam! Rešili ste to uganko."};
 
 exports.no = function(d){return "Ne"};
 
@@ -11623,7 +11623,7 @@ exports.noPathLeft = function(d){return "ni poti na levo"};
 
 exports.noPathRight = function(d){return "ni poti na desno"};
 
-exports.numBlocksNeeded = function(d){return "Ta uganka je lahko rešena z %1 bloki."};
+exports.numBlocksNeeded = function(d){return "Ta uganka je lahko rešena z %1 blokom."};
 
 exports.pathAhead = function(d){return "pot naprej"};
 
@@ -11651,7 +11651,7 @@ exports.playSoundRubber = function(d){return "predvajaj zvok: radirka"};
 
 exports.playSoundSlap = function(d){return "predvajaj zvok: udarec"};
 
-exports.playSoundTooltip = function(d){return "Predvajaj izbran zvok."};
+exports.playSoundTooltip = function(d){return "Predvajaj izbrani zvok."};
 
 exports.playSoundWinPoint = function(d){return "predvajaj zvok: dobljena točka"};
 
@@ -11727,7 +11727,7 @@ exports.setPaddleSpeedTooltip = function(d){return "Nastavi hitrost vesla"};
 
 exports.shareBounceTwitter = function(d){return "Check out the Bounce game I made. I wrote it myself with @codeorg"};
 
-exports.shareGame = function(d){return "Delite vašo igro:"};
+exports.shareGame = function(d){return "Delite vašo igro z ostalimi:"};
 
 exports.turnLeft = function(d){return "obrni se levo"};
 

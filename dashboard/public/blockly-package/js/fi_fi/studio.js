@@ -18691,7 +18691,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "ja"};
 
-exports.blocklyMessage = function(d){return "Blockly"};
+exports.blocklyMessage = function(d){return "Blocky"};
 
 exports.catActions = function(d){return "Toiminnot"};
 
@@ -18707,7 +18707,7 @@ exports.catMath = function(d){return "Matematiikka"};
 
 exports.catProcedures = function(d){return "Funktiot"};
 
-exports.catText = function(d){return "Teksti"};
+exports.catText = function(d){return "teksti"};
 
 exports.catVariables = function(d){return "Muuttujat"};
 
@@ -18751,7 +18751,7 @@ exports.hintTitle = function(d){return "Vihje:"};
 
 exports.jump = function(d){return "hyppää"};
 
-exports.levelIncompleteError = function(d){return "Käytät kaikkia oikeanlaisia lohkoja, mutta et oikella tavalla."};
+exports.levelIncompleteError = function(d){return "Käytät kaikkia oikeanlaisia lohkoja, mutta et oikealla tavalla."};
 
 exports.listVariable = function(d){return "lista"};
 
@@ -18771,7 +18771,7 @@ exports.numBlocksNeeded = function(d){return "Onneksi olkoon! Olet suorittanut "
 
 exports.numLinesOfCodeWritten = function(d){return "Kirjoitit juuri "+p(d,"numLines",0,"fi",{"one":"yhden rivin","other":n(d,"numLines")+" riviä"})+" koodia!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "pelaa"};
 
 exports.puzzleTitle = function(d){return "Pulma "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
@@ -18783,7 +18783,7 @@ exports.runProgram = function(d){return "Suorita"};
 
 exports.runTooltip = function(d){return "Suorittaa työtilassa olevien lohkojen määrittämän ohjelman."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "pisteet"};
 
 exports.showCodeHeader = function(d){return "Näytä koodi"};
 
@@ -18799,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "Tämän pulman voi ratkaista <x i
 
 exports.tooMuchWork = function(d){return "Sait minut tekemään paljon töitä! Voisitko kokeilla samaa vähemmillä toistoilla?"};
 
-exports.toolboxHeader = function(d){return "Lohkot"};
+exports.toolboxHeader = function(d){return "lohkot"};
 
 exports.openWorkspace = function(d){return "Miten se toimii"};
 
@@ -18815,7 +18815,7 @@ exports.saveToGallery = function(d){return "Tallenna galleriaasi"};
 
 exports.savedToGallery = function(d){return "Tallennettu galleriaasi!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Emme valitettavasti toi jakaa tätä ohjelmaa."};
 
 exports.typeCode = function(d){return "Kirjoita JavaScript-koodisi näiden ohjeiden alle."};
 
@@ -18833,28 +18833,28 @@ exports.orientationLock = function(d){return "Poista laitteesi asentolukko."};
 
 exports.wantToLearn = function(d){return "Haluatko oppia koodaamaan?"};
 
-exports.watchVideo = function(d){return "Katso Video"};
+exports.watchVideo = function(d){return "Katso video"};
 
 exports.when = function(d){return "kun"};
 
-exports.whenRun = function(d){return "suoritettaessa"};
+exports.whenRun = function(d){return "ajettaessa"};
 
-exports.tryHOC = function(d){return "Kokeile koodaustuntia"};
+exports.tryHOC = function(d){return "Kokeile koodituntia"};
 
 exports.signup = function(d){return "Rekisteröidy johdantokurssille"};
 
 exports.hintHeader = function(d){return "Tässä on Vihje:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Katso miten päädyit tähän, ja koita korjata ohjelmasi."};
 
 
 },{"messageformat":58}],46:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
-exports.actor = function(d){return "actor"};
+exports.actor = function(d){return "toimija"};
 
 exports.catActions = function(d){return "Toiminnot"};
 
-exports.catControl = function(d){return "Silmukat"};
+exports.catControl = function(d){return "silmukat"};
 
 exports.catEvents = function(d){return "Tapahtumat"};
 
@@ -18862,51 +18862,51 @@ exports.catLogic = function(d){return "Logiikka"};
 
 exports.catMath = function(d){return "Matematiikka"};
 
-exports.catProcedures = function(d){return "Funktiot"};
+exports.catProcedures = function(d){return "funktiot"};
 
-exports.catText = function(d){return "Teksti"};
+exports.catText = function(d){return "teksti"};
 
-exports.catVariables = function(d){return "Muuttujat"};
+exports.catVariables = function(d){return "muuttujat"};
 
-exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
+exports.changeScoreTooltip = function(d){return "LIsää tai poista piste pistemäärästä."};
 
-exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
+exports.changeScoreTooltipK1 = function(d){return "Lisää piste pistemäärään."};
 
 exports.continue = function(d){return "Jatka"};
 
-exports.decrementPlayerScore = function(d){return "remove point"};
+exports.decrementPlayerScore = function(d){return "poista piste"};
 
 exports.defaultSayText = function(d){return "kirjoita tähän"};
 
-exports.emotion = function(d){return "mood"};
+exports.emotion = function(d){return "mieliala"};
 
 exports.finalLevel = function(d){return "Onneksi olkoon! Olet suorittanut viimeisen pulman."};
 
-exports.hello = function(d){return "hello"};
+exports.hello = function(d){return "hei"};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "Hei maailma!"};
 
 exports.incrementPlayerScore = function(d){return "lisää piste"};
 
 exports.makeProjectileDisappear = function(d){return "kadota"};
 
-exports.makeProjectileBounce = function(d){return "bounce"};
+exports.makeProjectileBounce = function(d){return "hyppää"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "tee sininen tulipallo"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "tee violetti tulipallo"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "tee punainen tulipallo"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "tee keltaisia sydämiä"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "tee violetteja sydämiä"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "tee punaisia sydämiä"};
 
-exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
+exports.makeProjectileTooltip = function(d){return "Laita juuri törmännyt ammus katoamaan tai kimpoamaan."};
 
-exports.makeYourOwn = function(d){return "Tee oma tarinasi"};
+exports.makeYourOwn = function(d){return "Tee oma Play Lab -sovelluksesi"};
 
 exports.moveDirectionDown = function(d){return "alas"};
 
@@ -18928,33 +18928,33 @@ exports.moveDistance200 = function(d){return "200 pikseliä"};
 
 exports.moveDistance400 = function(d){return "400 pikseliä"};
 
-exports.moveDistancePixels = function(d){return "pikseliä"};
+exports.moveDistancePixels = function(d){return "kuvapisteet"};
 
-exports.moveDistanceRandom = function(d){return "random pixels"};
+exports.moveDistanceRandom = function(d){return "satunnaisia pikseleitä"};
 
-exports.moveDistanceTooltip = function(d){return "Move a character a specific distance in the specified direction."};
+exports.moveDistanceTooltip = function(d){return "Siirrä hahmoa määrättyyn määrä suuntaansa."};
 
 exports.moveSprite = function(d){return "siirrä"};
 
-exports.moveSpriteN = function(d){return "move actor "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "siirrä hahmoa "+v(d,"spriteIndex")};
 
 exports.moveDown = function(d){return "siirrä alas"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Siirrä hahmoa alas."};
 
 exports.moveLeft = function(d){return "siirrä vasemmalle"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Siirrä hahmoa vasemmalle."};
 
 exports.moveRight = function(d){return "siirrä oikealle"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Siirrä hahmoa oikealle."};
 
 exports.moveUp = function(d){return "siirrä ylös"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Siirrä hahmoa ylös."};
 
-exports.moveTooltip = function(d){return "Move a character."};
+exports.moveTooltip = function(d){return "Siirrä hahmoa."};
 
 exports.nextLevel = function(d){return "Onneksi olkoon! Olet suorittanut tämän pulman."};
 
@@ -18962,7 +18962,7 @@ exports.no = function(d){return "Ei"};
 
 exports.numBlocksNeeded = function(d){return "Pulman voi ratkaista %1 lohkolla."};
 
-exports.ouchExclamation = function(d){return "Ouch!"};
+exports.ouchExclamation = function(d){return "Auts!"};
 
 exports.playSoundCrunch = function(d){return "soita räsähdyksen ääni"};
 
@@ -18990,19 +18990,19 @@ exports.playSoundWinPoint2 = function(d){return "soita pisteen voittamisen toine
 
 exports.playSoundWood = function(d){return "soita puinen ääni"};
 
-exports.positionOutTopLeft = function(d){return "to the above top left position"};
+exports.positionOutTopLeft = function(d){return "yläpuolelle vasempaan yläreunaan"};
 
-exports.positionOutTopRight = function(d){return "to the above top right position"};
+exports.positionOutTopRight = function(d){return "yläpuolelle oikeaan yläreunaan"};
 
-exports.positionTopOutLeft = function(d){return "to the top outside left position"};
+exports.positionTopOutLeft = function(d){return "vasemmalle yläreunan ulkopuolelle"};
 
-exports.positionTopLeft = function(d){return "to the top left position"};
+exports.positionTopLeft = function(d){return "vasempaan yläreunaan"};
 
-exports.positionTopCenter = function(d){return "to the top center position"};
+exports.positionTopCenter = function(d){return "yläreunan keskelle"};
 
-exports.positionTopRight = function(d){return "to the top right position"};
+exports.positionTopRight = function(d){return "oikeaan yläreunaan"};
 
-exports.positionTopOutRight = function(d){return "to the top outside right position"};
+exports.positionTopOutRight = function(d){return "oikealle yläreunan ulkopuolelle"};
 
 exports.positionMiddleLeft = function(d){return "to the middle left position"};
 
@@ -19024,287 +19024,287 @@ exports.positionOutBottomLeft = function(d){return "to the below bottom left pos
 
 exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
 
-exports.positionRandom = function(d){return "to the random position"};
+exports.positionRandom = function(d){return "satunnaiseen sijaintiin"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "sininen tulipallo"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "violetti tulipallo"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "punainen tulipallo"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "keltaiset sydämet"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "violetit sydämet"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "punaiset sydämet"};
 
 exports.projectileRandom = function(d){return "satunnainen"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
+exports.reinfFeedbackMsg = function(d){return "Voit painaa \"Yritä uudelleen\" -painiketta palatakseksi toistamaan tarinaasi."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "toista jatkuvasti"};
 
 exports.repeatDo = function(d){return "tee"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
+exports.repeatForeverTooltip = function(d){return "Toista lohkon toiminnot toistuvastu niin kauan kuin tarina on käynnissä."};
 
-exports.saySprite = function(d){return "say"};
+exports.saySprite = function(d){return "sano"};
 
-exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
+exports.saySpriteN = function(d){return "hahmo "+v(d,"spriteIndex")+" sanoo"};
 
-exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
+exports.saySpriteTooltip = function(d){return "Näytä puhekupla liitetyllä tekstillä määritellylle hahmolle."};
 
 exports.scoreText = function(d){return "Pisteet: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set background"};
+exports.setBackground = function(d){return "aseta tausta"};
 
-exports.setBackgroundRandom = function(d){return "set random scene"};
+exports.setBackgroundRandom = function(d){return "aseta satunnainen tausta"};
 
-exports.setBackgroundBlack = function(d){return "set black background"};
+exports.setBackgroundBlack = function(d){return "aseta musta tausta"};
 
-exports.setBackgroundCave = function(d){return "set cave background"};
+exports.setBackgroundCave = function(d){return "aseta luolatausta"};
 
-exports.setBackgroundCloudy = function(d){return "set cloudy background"};
+exports.setBackgroundCloudy = function(d){return "aseta pilvinen tausta"};
 
-exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
+exports.setBackgroundHardcourt = function(d){return "aseta tenniskenttätausta"};
 
-exports.setBackgroundNight = function(d){return "set night background"};
+exports.setBackgroundNight = function(d){return "aseta yötausta"};
 
-exports.setBackgroundUnderwater = function(d){return "set underwater background"};
+exports.setBackgroundUnderwater = function(d){return "aseta vedenalainen tausta"};
 
-exports.setBackgroundCity = function(d){return "set city background"};
+exports.setBackgroundCity = function(d){return "aseta kaupunkitausta"};
 
-exports.setBackgroundDesert = function(d){return "set desert background"};
+exports.setBackgroundDesert = function(d){return "aseta autiomaatausta"};
 
-exports.setBackgroundRainbow = function(d){return "set rainbow background"};
+exports.setBackgroundRainbow = function(d){return "aseta sateenkaaritausta"};
 
-exports.setBackgroundSoccer = function(d){return "set soccer background"};
+exports.setBackgroundSoccer = function(d){return "aseta jalkapallotausta"};
 
-exports.setBackgroundSpace = function(d){return "set space background"};
+exports.setBackgroundSpace = function(d){return "aseta avaruustausta"};
 
-exports.setBackgroundTennis = function(d){return "set tennis background"};
+exports.setBackgroundTennis = function(d){return "aseta tennistausta"};
 
-exports.setBackgroundWinter = function(d){return "set winter background"};
+exports.setBackgroundWinter = function(d){return "aseta talvitausta"};
 
 exports.setBackgroundTooltip = function(d){return "Aseta taustakuva"};
 
 exports.setScoreText = function(d){return "aseta pisteet"};
 
-exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
+exports.setScoreTextTooltip = function(d){return "Asettaa tekstin näytettäväksi pistealueella."};
 
-exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
+exports.setSpriteEmotionAngry = function(d){return "vihaiseen mielialaan"};
 
-exports.setSpriteEmotionHappy = function(d){return "to a happy emotion"};
+exports.setSpriteEmotionHappy = function(d){return "iloiseen mielialaan"};
 
-exports.setSpriteEmotionNormal = function(d){return "to a normal emotion"};
+exports.setSpriteEmotionNormal = function(d){return "normaaliin mielialaan"};
 
-exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
+exports.setSpriteEmotionRandom = function(d){return "satunnaiseen mielialaan"};
 
-exports.setSpriteEmotionSad = function(d){return "to a sad emotion"};
+exports.setSpriteEmotionSad = function(d){return "surulliseen mielialaan"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Sets the actor emotion"};
+exports.setSpriteEmotionTooltip = function(d){return "Asettaa hahmon mielialan"};
 
-exports.setSpriteAlien = function(d){return "to an alien image"};
+exports.setSpriteAlien = function(d){return "avaruusolion kuvaan"};
 
-exports.setSpriteBat = function(d){return "to a bat image"};
+exports.setSpriteBat = function(d){return "lepakon kuvaan"};
 
-exports.setSpriteBird = function(d){return "to a bird image"};
+exports.setSpriteBird = function(d){return "linnun kuvaan"};
 
-exports.setSpriteCat = function(d){return "to a cat image"};
+exports.setSpriteCat = function(d){return "kissan kuvaan"};
 
-exports.setSpriteCaveBoy = function(d){return "to a cave boy image"};
+exports.setSpriteCaveBoy = function(d){return "luolapojan kuvaan"};
 
-exports.setSpriteCaveGirl = function(d){return "to a cave girl image"};
+exports.setSpriteCaveGirl = function(d){return "luolatytön kuvaan"};
 
-exports.setSpriteDinosaur = function(d){return "to a dinosaur image"};
+exports.setSpriteDinosaur = function(d){return "dinosauruksen kuvaan"};
 
-exports.setSpriteDog = function(d){return "to a dog image"};
+exports.setSpriteDog = function(d){return "koiran kuvaan"};
 
-exports.setSpriteDragon = function(d){return "to a dragon image"};
+exports.setSpriteDragon = function(d){return "lohikäärmeen kuvaan"};
 
-exports.setSpriteGhost = function(d){return "to a ghost image"};
+exports.setSpriteGhost = function(d){return "haamun kuvaan"};
 
-exports.setSpriteHidden = function(d){return "to a hidden image"};
+exports.setSpriteHidden = function(d){return "piilotettuun kuvaan"};
 
-exports.setSpriteHideK1 = function(d){return "hide"};
+exports.setSpriteHideK1 = function(d){return "piilota"};
 
-exports.setSpriteKnight = function(d){return "to a knight image"};
+exports.setSpriteKnight = function(d){return "ritarin kuvaan"};
 
-exports.setSpriteMonster = function(d){return "to a monster image"};
+exports.setSpriteMonster = function(d){return "hirviön kuvaan"};
 
-exports.setSpriteNinja = function(d){return "to a masked ninja image"};
+exports.setSpriteNinja = function(d){return "naamioidun ninjan kuvaan"};
 
-exports.setSpriteOctopus = function(d){return "to an octopus image"};
+exports.setSpriteOctopus = function(d){return "mustekalan kuvaan"};
 
-exports.setSpritePenguin = function(d){return "to a penguin image"};
+exports.setSpritePenguin = function(d){return "pingviinin kuvaan"};
 
-exports.setSpritePirate = function(d){return "to a pirate image"};
+exports.setSpritePirate = function(d){return "merirosvon kuvaan"};
 
-exports.setSpritePrincess = function(d){return "to a princess image"};
+exports.setSpritePrincess = function(d){return "prinsessan kuvaan"};
 
-exports.setSpriteRandom = function(d){return "to a random image"};
+exports.setSpriteRandom = function(d){return "satunnaiseen kuvaan"};
 
-exports.setSpriteRobot = function(d){return "to a robot image"};
+exports.setSpriteRobot = function(d){return "robotin kuvaan"};
 
-exports.setSpriteShowK1 = function(d){return "show"};
+exports.setSpriteShowK1 = function(d){return "näytä"};
 
-exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
+exports.setSpriteSpacebot = function(d){return "avaruusrobotin kuvaan"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "jalkapallotytön kuvaan"};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "jalkapallopojan kuvaan"};
 
-exports.setSpriteSquirrel = function(d){return "to a squirrel image"};
+exports.setSpriteSquirrel = function(d){return "oravan kuvaan"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "tennistytön kuvaan"};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "tennispojan kuvaan"};
 
-exports.setSpriteUnicorn = function(d){return "to a unicorn image"};
+exports.setSpriteUnicorn = function(d){return "yksisarvisen kuvaan"};
 
-exports.setSpriteWitch = function(d){return "to a witch image"};
+exports.setSpriteWitch = function(d){return "noidan kuvaan"};
 
-exports.setSpriteWizard = function(d){return "to a wizard image"};
+exports.setSpriteWizard = function(d){return "velhon kuvaan"};
 
-exports.setSpritePositionTooltip = function(d){return "Instantly moves an actor to the specified location."};
+exports.setSpritePositionTooltip = function(d){return "Siirtää hahmon heti määriteltyyn kohtaan."};
 
-exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
+exports.setSpriteK1Tooltip = function(d){return "Näyttää tai piilottaa määritellyn hahmon."};
 
-exports.setSpriteTooltip = function(d){return "Sets the character image"};
+exports.setSpriteTooltip = function(d){return "Asettaa hahmon kuvan"};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "satunnaiseen kokoon"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "hyvin pieneen kokoon"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "pieneen kokoon"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "normaaliin kokoon"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "suureen kokoon"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "erittäin suureen kokoon"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "Asettaa hahmon koon"};
 
-exports.setSpriteSpeedRandom = function(d){return "to a random speed"};
+exports.setSpriteSpeedRandom = function(d){return "satunnaiseen nopeuteen"};
 
-exports.setSpriteSpeedVerySlow = function(d){return "to a very slow speed"};
+exports.setSpriteSpeedVerySlow = function(d){return "erittäin hitaaseen nopeuteen"};
 
-exports.setSpriteSpeedSlow = function(d){return "to a slow speed"};
+exports.setSpriteSpeedSlow = function(d){return "hitaaseen nopeuteen"};
 
-exports.setSpriteSpeedNormal = function(d){return "to a normal speed"};
+exports.setSpriteSpeedNormal = function(d){return "normaaliin nopeuteen"};
 
-exports.setSpriteSpeedFast = function(d){return "to a fast speed"};
+exports.setSpriteSpeedFast = function(d){return "nopeaan nopeuteen"};
 
-exports.setSpriteSpeedVeryFast = function(d){return "to a very fast speed"};
+exports.setSpriteSpeedVeryFast = function(d){return "erittäin nopeaan nopeuteen"};
 
-exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of a character"};
+exports.setSpriteSpeedTooltip = function(d){return "Asettaa hahmon nopeuden"};
 
-exports.setSpriteZombie = function(d){return "to a zombie image"};
+exports.setSpriteZombie = function(d){return "zombin kuvaan"};
 
-exports.shareStudioTwitter = function(d){return "Check out the story I made. I wrote it myself with @codeorg"};
+exports.shareStudioTwitter = function(d){return "Katso tekemääni tarinaa. Kirjoitin sen itse @codeorg:ssa"};
 
-exports.shareGame = function(d){return "Share your story:"};
+exports.shareGame = function(d){return "Jaa tarinasi:"};
 
-exports.showTitleScreen = function(d){return "show title screen"};
+exports.showTitleScreen = function(d){return "näytä otsikkonäyttö"};
 
-exports.showTitleScreenTitle = function(d){return "title"};
+exports.showTitleScreenTitle = function(d){return "otsikko"};
 
 exports.showTitleScreenText = function(d){return "teksti"};
 
-exports.showTSDefTitle = function(d){return "type title here"};
+exports.showTSDefTitle = function(d){return "Kirjoita otsikko tähän"};
 
-exports.showTSDefText = function(d){return "type text here"};
+exports.showTSDefText = function(d){return "Kirjoita tekstiä tähän"};
 
-exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
+exports.showTitleScreenTooltip = function(d){return "Näytä otsikkosivu liitetyllä otsikolla ja tekstillä."};
 
 exports.setSprite = function(d){return "aseta"};
 
-exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
+exports.setSpriteN = function(d){return "aseta hahmo "+v(d,"spriteIndex")};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "murskaa"};
 
-exports.soundGoal1 = function(d){return "goal 1"};
+exports.soundGoal1 = function(d){return "tavoite 1"};
 
-exports.soundGoal2 = function(d){return "goal 2"};
+exports.soundGoal2 = function(d){return "tavoite 2"};
 
-exports.soundHit = function(d){return "hit"};
+exports.soundHit = function(d){return "osuam"};
 
-exports.soundLosePoint = function(d){return "lose point"};
+exports.soundLosePoint = function(d){return "menetä piste"};
 
-exports.soundLosePoint2 = function(d){return "lose point 2"};
+exports.soundLosePoint2 = function(d){return "menetä piste 2"};
 
 exports.soundRetro = function(d){return "retro"};
 
-exports.soundRubber = function(d){return "rubber"};
+exports.soundRubber = function(d){return "kumi"};
 
-exports.soundSlap = function(d){return "slap"};
+exports.soundSlap = function(d){return "läpsäytä"};
 
-exports.soundWinPoint = function(d){return "win point"};
+exports.soundWinPoint = function(d){return "voittopiste"};
 
-exports.soundWinPoint2 = function(d){return "win point 2"};
+exports.soundWinPoint2 = function(d){return "voittopiste 2"};
 
-exports.soundWood = function(d){return "wood"};
+exports.soundWood = function(d){return "puu"};
 
-exports.speed = function(d){return "speed"};
+exports.speed = function(d){return "nopeus"};
 
-exports.stopSprite = function(d){return "stop"};
+exports.stopSprite = function(d){return "pysähdy"};
 
-exports.stopSpriteN = function(d){return "stop actor "+v(d,"spriteIndex")};
+exports.stopSpriteN = function(d){return "pysäytä hahmo "+v(d,"spriteIndex")};
 
-exports.stopTooltip = function(d){return "Stops an actor's movement."};
+exports.stopTooltip = function(d){return "Pysäyttää hahmon liikkeen."};
 
-exports.throwSprite = function(d){return "throw"};
+exports.throwSprite = function(d){return "heitä"};
 
-exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
+exports.throwSpriteN = function(d){return "hahmo "+v(d,"spriteIndex")+" heitä"};
 
-exports.throwTooltip = function(d){return "Throws a projectile from the specified actor."};
+exports.throwTooltip = function(d){return "Heittää ammuksen kohti määriteltyä hahmoa."};
 
-exports.vanish = function(d){return "vanish"};
+exports.vanish = function(d){return "katoa"};
 
-exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "kadota hahmo "+v(d,"spriteIndex")};
 
-exports.vanishTooltip = function(d){return "Vanishes the actor."};
+exports.vanishTooltip = function(d){return "Kadottaa hahmon."};
 
-exports.waitFor = function(d){return "wait for"};
+exports.waitFor = function(d){return "odota kunnes"};
 
-exports.waitSeconds = function(d){return "seconds"};
+exports.waitSeconds = function(d){return "sekuntia"};
 
-exports.waitForClick = function(d){return "wait for click"};
+exports.waitForClick = function(d){return "odota kunnes napsautetaan"};
 
-exports.waitForRandom = function(d){return "wait for random"};
+exports.waitForRandom = function(d){return "odota kunnes satunnainen"};
 
-exports.waitForHalfSecond = function(d){return "wait for a half second"};
+exports.waitForHalfSecond = function(d){return "odota kunnes puoli sekuntia on kulunut"};
 
-exports.waitFor1Second = function(d){return "wait for 1 second"};
+exports.waitFor1Second = function(d){return "odota kunnes 1 sekunti on kulunut"};
 
-exports.waitFor2Seconds = function(d){return "wait for 2 seconds"};
+exports.waitFor2Seconds = function(d){return "odota kunnes kaksi sekuntia on kulunut"};
 
-exports.waitFor5Seconds = function(d){return "wait for 5 seconds"};
+exports.waitFor5Seconds = function(d){return "odota kunnes 5 sekuntia on kulunut"};
 
-exports.waitFor10Seconds = function(d){return "wait for 10 seconds"};
+exports.waitFor10Seconds = function(d){return "odota kunnes 10 sekuntia on kulunut"};
 
-exports.waitParamsTooltip = function(d){return "Waits for a specified number of seconds or use zero to wait until a click occurs."};
+exports.waitParamsTooltip = function(d){return "Odota määritelty aika sekunteina tai käytä nollaa odottamaan kunnes napsautus tapahtuu."};
 
-exports.waitTooltip = function(d){return "Waits for a specified amount of time or until a click occurs."};
+exports.waitTooltip = function(d){return "Odota määritelty aika tai kunnes napsautus tapahtuu."};
 
-exports.whenArrowDown = function(d){return "down arrow"};
+exports.whenArrowDown = function(d){return "nuoli alas"};
 
-exports.whenArrowLeft = function(d){return "left arrow"};
+exports.whenArrowLeft = function(d){return "nuoli vasemmalle"};
 
-exports.whenArrowRight = function(d){return "right arrow"};
+exports.whenArrowRight = function(d){return "nuoli oikealle"};
 
-exports.whenArrowUp = function(d){return "up arrow"};
+exports.whenArrowUp = function(d){return "nuoli ylös"};
 
-exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
+exports.whenArrowTooltip = function(d){return "Tee seuraavat toimet kun määriteltyä nuolinäppäintä painetaan."};
 
 exports.whenDown = function(d){return "kun alas nuoli"};
 
 exports.whenDownTooltip = function(d){return "Suorita alla olevat toiminnot, kun alas-nuolinäppäintä painetaan."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "kun tarina alkaa"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "Tee seuraavat toimet kun tarina alkaa."};
 
 exports.whenLeft = function(d){return "kun vasen nuoli"};
 
@@ -19314,47 +19314,47 @@ exports.whenRight = function(d){return "kun oikea nuoli"};
 
 exports.whenRightTooltip = function(d){return "Suorita alla olevat toiminnot, kun oikeaa nuolinäppäintä painetaan."};
 
-exports.whenSpriteClicked = function(d){return "when actor clicked"};
+exports.whenSpriteClicked = function(d){return "Kun hahmoa napsautetaan"};
 
-exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
+exports.whenSpriteClickedN = function(d){return "kun hahmoa "+v(d,"spriteIndex")+" napsautetaan"};
 
-exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when a character is clicked."};
+exports.whenSpriteClickedTooltip = function(d){return "Tee seuraavat toimet kun hahmoa napsautetaan."};
 
-exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "kun hahmo "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when a character touches another character."};
+exports.whenSpriteCollidedTooltip = function(d){return "Tee seuraavat toimet kun hahmo koskee toista hahmoa."};
 
-exports.whenSpriteCollidedWith = function(d){return "touches"};
+exports.whenSpriteCollidedWith = function(d){return "koskee"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "koskee mitä tahansa hahmoa"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "koskee mitä tahansa seuraa"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "koskee mitä tahansa ammusta"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "koskee mitä tahansa"};
 
-exports.whenSpriteCollidedWithN = function(d){return "touches actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedWithN = function(d){return "koskee hahmoa "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "koskee siniseen tulipalloon"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "koskee violettiin tulipalloon"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "koskee punaiseen tulipalloon"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "koskee keltaisia sydämiä"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "koskee violetteja sydämiä"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "koskee punaisia sydämiä"};
 
-exports.whenSpriteCollidedWithBottomEdge = function(d){return "touches bottom edge"};
+exports.whenSpriteCollidedWithBottomEdge = function(d){return "koskee alareunaa"};
 
-exports.whenSpriteCollidedWithLeftEdge = function(d){return "touches left edge"};
+exports.whenSpriteCollidedWithLeftEdge = function(d){return "koskee vasenta reunaa"};
 
-exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge"};
+exports.whenSpriteCollidedWithRightEdge = function(d){return "koskee oikeaa reunaa"};
 
-exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
+exports.whenSpriteCollidedWithTopEdge = function(d){return "koskee yläreunaa"};
 
 exports.whenUp = function(d){return "kun ylös nuoli"};
 

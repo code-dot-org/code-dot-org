@@ -7703,11 +7703,11 @@ exports.catLists = function(d){return "Llistes"};
 
 exports.catLoops = function(d){return "Bucles"};
 
-exports.catMath = function(d){return "Matemàtiques"};
+exports.catMath = function(d){return "Mates"};
 
 exports.catProcedures = function(d){return "Funcions"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variables"};
 
@@ -7753,7 +7753,7 @@ exports.jump = function(d){return "jump"};
 
 exports.levelIncompleteError = function(d){return "Estàs utilitzant tots els tipus de blocs necessaris, però no de la manera correcta."};
 
-exports.listVariable = function(d){return "Llista"};
+exports.listVariable = function(d){return "llista"};
 
 exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
 
@@ -7799,7 +7799,7 @@ exports.tooManyBlocksMsg = function(d){return "Aquest puzzle pot ser resolt amb 
 
 exports.tooMuchWork = function(d){return "Em fas fer molta feina! Podries intentar repetir menys vegades?"};
 
-exports.toolboxHeader = function(d){return "Blocs"};
+exports.toolboxHeader = function(d){return "blocs"};
 
 exports.openWorkspace = function(d){return "How It Works"};
 
@@ -7858,7 +7858,7 @@ exports.no = function(d){return "No"};
 
 exports.numBlocksNeeded = function(d){return "Aquest puzzle pot res resolt amb blocs de %1."};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your game."};
+exports.reinfFeedbackMsg = function(d){return "Pots clicar el botó de \"Try again\" per tornar a començar"};
 
 exports.share = function(d){return "Share"};
 

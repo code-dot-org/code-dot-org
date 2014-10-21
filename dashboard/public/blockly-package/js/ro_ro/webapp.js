@@ -7525,7 +7525,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ro = function 
   }
   return 'other';
 };
-exports.and = function(d){return "și"};
+exports.and = function(d){return "şi"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -7543,7 +7543,7 @@ exports.catMath = function(d){return "Matematică"};
 
 exports.catProcedures = function(d){return "Funcţii"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variabile"};
 
@@ -7551,7 +7551,7 @@ exports.codeTooltip = function(d){return "Vezi codul JavaScript generat."};
 
 exports.continue = function(d){return "Continuă"};
 
-exports.dialogCancel = function(d){return "Revocare"};
+exports.dialogCancel = function(d){return "Anulează"};
 
 exports.dialogOK = function(d){return "OK"};
 
@@ -7575,7 +7575,7 @@ exports.finalStage = function(d){return "Felicitări! Ai terminat ultima etapă.
 
 exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"ro",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Finalizare"};
+exports.finish = function(d){return "Sfârsit"};
 
 exports.generatedCodeInfo = function(d){return "Chiar și în universităţi de top se predă programarea bazată pe blocuri de coduri (de exemplu, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Dar în esență, blocurile de cod pe care le-ai compus pot fi de asemenea afișate în JavaScript, limbajul de programare cel mai utilizat din lume:"};
 
@@ -7585,7 +7585,7 @@ exports.help = function(d){return "Ajutor"};
 
 exports.hintTitle = function(d){return "Sugestie:"};
 
-exports.jump = function(d){return "sări"};
+exports.jump = function(d){return "sari"};
 
 exports.levelIncompleteError = function(d){return "Utilizezi toate tipurile de blocuri necesare, dar nu așa cum trebuie."};
 
@@ -7621,13 +7621,13 @@ exports.runTooltip = function(d){return "Rulează programul definit de blocuri �
 
 exports.score = function(d){return "scor"};
 
-exports.showCodeHeader = function(d){return "Arată Codul"};
+exports.showCodeHeader = function(d){return "Arată codul"};
 
 exports.showGeneratedCode = function(d){return "Arată codul"};
 
 exports.subtitle = function(d){return "un mediu de programare vizual"};
 
-exports.textVariable = function(d){return "text"};
+exports.textVariable = function(d){return "scris"};
 
 exports.tooFewBlocksMsg = function(d){return "Folosești toate tipurile necesare de blocuri, dar încearcă să utilizezi mai multe din aceste tipuri de blocuri pentru a completa puzzle-ul."};
 
@@ -7635,7 +7635,7 @@ exports.tooManyBlocksMsg = function(d){return "Acest puzzle poate fi rezolvat cu
 
 exports.tooMuchWork = function(d){return "M-ai făcut să lucrez foarte mult! Ai putea să încerci să repeți de mai puține ori?"};
 
-exports.toolboxHeader = function(d){return "Blocuri"};
+exports.toolboxHeader = function(d){return "blocuri"};
 
 exports.openWorkspace = function(d){return "Cum funcţionează"};
 
@@ -7695,43 +7695,43 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ro = function 
   }
   return 'other';
 };
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Acţiuni"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Bucle"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Evenimente"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logică"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Matematică"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Funcţii"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Variabile"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Continuă"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Felicitări! Ai rezolvat puzzle-ul final."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Felicitări! Ai finalizat acest puzzle."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Nu"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Acest puzzle poate fi rezolvat cu %1 blocuri."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "repetă pentru totdeauna"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "fă"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7743,7 +7743,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Da"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

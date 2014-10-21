@@ -7516,7 +7516,7 @@ exports.parseElement = function(text) {
 
 },{}],37:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
-exports.and = function(d){return "及"};
+exports.and = function(d){return "且"};
 
 exports.blocklyMessage = function(d){return "模組化"};
 
@@ -7534,7 +7534,7 @@ exports.catMath = function(d){return "運算類別"};
 
 exports.catProcedures = function(d){return "函數類別"};
 
-exports.catText = function(d){return "字串類別"};
+exports.catText = function(d){return "本文"};
 
 exports.catVariables = function(d){return "變數類別"};
 
@@ -7566,7 +7566,7 @@ exports.finalStage = function(d){return "恭喜你 ！你已完成最後關卡�
 
 exports.finalStageTrophies = function(d){return "恭喜! 你已完成最後關卡並且贏得 "+p(d,"numTrophies",0,"zh",{"one":"一個獎盃","other":n(d,"numTrophies")+" 獎盃"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "完成 "};
 
 exports.generatedCodeInfo = function(d){return "甚至頂尖大學也同樣以\"程式積木\"來進行程式教學。(例如 :  "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+")。在程式積木的底層，所有組裝完成的程式積木功能，也可以用JavaScript 語法來顯示。"};
 
@@ -7576,11 +7576,11 @@ exports.help = function(d){return "說明"};
 
 exports.hintTitle = function(d){return "提示："};
 
-exports.jump = function(d){return "跳轉"};
+exports.jump = function(d){return "跳"};
 
 exports.levelIncompleteError = function(d){return "您已使用了所有必要類型的程式積木，但方式不太正確。"};
 
-exports.listVariable = function(d){return "列表變數\n"};
+exports.listVariable = function(d){return "列表變數"};
 
 exports.makeYourOwnFlappy = function(d){return "做出自己的 Flappy 遊戲"};
 
@@ -7618,7 +7618,7 @@ exports.showGeneratedCode = function(d){return "顯示程式碼"};
 
 exports.subtitle = function(d){return "一個視覺化的程式設計環境\n\n"};
 
-exports.textVariable = function(d){return "文字變數"};
+exports.textVariable = function(d){return "文本"};
 
 exports.tooFewBlocksMsg = function(d){return "你已使用所有必要類型的程式積木，但請嘗試使用更多同類型的程式積木來完成這個關卡。"};
 
@@ -7677,43 +7677,43 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "動作類別"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "迴圈類別"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "事件類別"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "邏輯類別"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "運算類別"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "函數類別"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "本文"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "變數類別"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "繼續 "};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "恭喜！你已經完成最後的關卡。"};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "恭喜！你已經完成這個關卡。"};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "否"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "這個關卡可以使用 %1 個程式積木來完成。"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "永遠重複"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "執行"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7725,7 +7725,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "是"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

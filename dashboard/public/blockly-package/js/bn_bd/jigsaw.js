@@ -7709,7 +7709,7 @@ exports.catProcedures = function(d){return "ফাংশনগুলি"};
 
 exports.catText = function(d){return "পাঠ"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "চলকগুলো"};
 
 exports.codeTooltip = function(d){return "See generated JavaScript code."};
 
@@ -7858,11 +7858,11 @@ exports.no = function(d){return "না"};
 
 exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your game."};
+exports.reinfFeedbackMsg = function(d){return "আপনি  পুনঃরাই আপনার খেলা প্লে করতে গিয়ে \"Try again\" বোতাম টিপতে পারেন."};
 
-exports.share = function(d){return "Share"};
+exports.share = function(d){return "শেয়ার"};
 
-exports.shareGame = function(d){return "Share your game:"};
+exports.shareGame = function(d){return "আপনার খেলা শেয়ার করুন:"};
 
 exports.yes = function(d){return "\"হ্যাঁ\""};
 

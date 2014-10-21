@@ -11538,7 +11538,7 @@ exports.bounceBall = function(d){return "bounce ball"};
 
 exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
 
-exports.continue = function(d){return "ต่อไป"};
+exports.continue = function(d){return "ต่อไป\n"};
 
 exports.dirE = function(d){return "E"};
 
@@ -11548,11 +11548,11 @@ exports.dirS = function(d){return "S"};
 
 exports.dirW = function(d){return "W"};
 
-exports.doCode = function(d){return "do"};
+exports.doCode = function(d){return "ทำ"};
 
-exports.elseCode = function(d){return "else"};
+exports.elseCode = function(d){return "นอกจากนั้น"};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "ขอแสดงความยินดีคุณสามารถแก้ปัญหาสุดท้ายได้แล้ว."};
 
 exports.heightParameter = function(d){return "height"};
 
@@ -11564,13 +11564,13 @@ exports.ifTooltip = function(d){return "If there is a path in the specified dire
 
 exports.ifelseTooltip = function(d){return "If there is a path in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "ให้คะแนนฝ่ายตรงข้าม"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
 
 exports.incrementPlayerScore = function(d){return "increment player score"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
+exports.incrementPlayerScoreTooltip = function(d){return "เพิ่มคะแนนผู้เล่น 1 คะแนน"};
 
 exports.isWall = function(d){return "is this a wall"};
 
@@ -11590,11 +11590,11 @@ exports.moveForward = function(d){return "move forward"};
 
 exports.moveForwardTooltip = function(d){return "Move me forward one space."};
 
-exports.moveLeft = function(d){return "move left"};
+exports.moveLeft = function(d){return "ย้ายไปทางซ้าย"};
 
 exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
 
-exports.moveRight = function(d){return "move right"};
+exports.moveRight = function(d){return "ย้ายไปทางขวา"};
 
 exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
 
@@ -11602,9 +11602,9 @@ exports.moveUp = function(d){return "move up"};
 
 exports.moveUpTooltip = function(d){return "Move the paddle up."};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "ขอแสดงความยินดีคุณสำเร็จปริศนานี้."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "ไม่ใช่"};
 
 exports.noPathAhead = function(d){return "path is blocked"};
 
@@ -11640,7 +11640,7 @@ exports.playSoundRubber = function(d){return "play rubber sound"};
 
 exports.playSoundSlap = function(d){return "play slap sound"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "เล่นเสียงที่ถูกเลือก."};
 
 exports.playSoundWinPoint = function(d){return "play win point sound"};
 
@@ -11650,7 +11650,7 @@ exports.playSoundWood = function(d){return "play wood sound"};
 
 exports.putdownTower = function(d){return "put down tower"};
 
-exports.reinfFeedbackMsg = function(d){return "คุณสามารถกดปุ่ม \"ลองอีกครั้ง\" เพื่อกลับไปเล่นเกมของคุณ"};
+exports.reinfFeedbackMsg = function(d){return "คุณสามารถกดปุ่ม \"เริ่มอีกครั้ง\" เพื่อกลับไปสู่เกมส์ของคุณ."};
 
 exports.removeSquare = function(d){return "remove square"};
 
@@ -11732,7 +11732,7 @@ exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "เมื่อกดลูกศรลง"};
 
 exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
 
@@ -11740,7 +11740,7 @@ exports.whenGameStarts = function(d){return "เมื่อเกมเริ�
 
 exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "เมื่อกดลูกศรซ้าย"};
 
 exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
 
@@ -11748,11 +11748,11 @@ exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "เมื่อกดลูกศรขวา"};
 
 exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "เมื่อกดลูกศรขึ้น"};
 
 exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
 
@@ -11760,7 +11760,7 @@ exports.whenWallCollided = function(d){return "when ball hits wall"};
 
 exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
 
-exports.whileMsg = function(d){return "เมื่อ"};
+exports.whileMsg = function(d){return "ในขณะที่"};
 
 exports.whileTooltip = function(d){return "ทำซ้ำจนกระทั่งถึงจุดสิ้นสุด"};
 
@@ -11793,7 +11793,7 @@ exports.catVariables = function(d){return "ตัวแปร"};
 
 exports.codeTooltip = function(d){return "ดูการสร้างโค้ด JavaScript."};
 
-exports.continue = function(d){return "ต่อไป"};
+exports.continue = function(d){return "ดำเนินการต่อไป"};
 
 exports.dialogCancel = function(d){return "ยกเลิก"};
 
@@ -11825,7 +11825,7 @@ exports.generatedCodeInfo = function(d){return "มหาวิทยาลั�
 
 exports.hashError = function(d){return "ขออภัย '%1' ไม่ตรงกับโปรแกรมที่บันทึกไว้."};
 
-exports.help = function(d){return "ช่วยเหลือ"};
+exports.help = function(d){return "ขอความช่วยเหลือ"};
 
 exports.hintTitle = function(d){return "คำแนะนำ:"};
 
@@ -11833,7 +11833,7 @@ exports.jump = function(d){return "กระโดด"};
 
 exports.levelIncompleteError = function(d){return "คุณกำลังใช้ทุกสิ่งทุกอย่างที่จำเป็นของบล็อก แต่ไม่ใช่ทางที่ถูกต้อง."};
 
-exports.listVariable = function(d){return "ลิสต์"};
+exports.listVariable = function(d){return "รายการ"};
 
 exports.makeYourOwnFlappy = function(d){return "สร้าง Flappy เกม ไว้เป็นของเราเอง"};
 
@@ -11865,7 +11865,7 @@ exports.runTooltip = function(d){return "เรียกใช้โปรแก
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "แสดงโค้ด"};
+exports.showCodeHeader = function(d){return "แสดงรหัส"};
 
 exports.showGeneratedCode = function(d){return "แสดงโค้ด"};
 
