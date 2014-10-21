@@ -3,9 +3,7 @@ title: <%= I18n.t('dashboard_landing_title') %>
 theme: angular
 angular: teacherDashboard
 ---
-- unless dashboard_user
-  - dont_cache
-  - redirect("http://#{canonical_hostname('studio.code.org')}/users/sign_in?return_to=#{request.url}", 302) unless dashboard_user
+- authentication_required!
 - forbidden! unless dashboard_user[:user_type] == 'teacher'
 
 %link(rel="stylesheet" type="text/css" href="/css/learn_tabs.css")

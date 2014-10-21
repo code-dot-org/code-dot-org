@@ -1,8 +1,20 @@
 ---
-title: "K5 Professional Development Survey"
+title: "Professional Development Workshop Survey"
 nav: blank
 rightbar: blank
 ---
+-authentication_required!
+
+-workshop_id = request.splat_path_info[1..-1].to_i
+-workshop = DB[:forms].where(id:workshop_id)
+-pass unless workshop
+  
+-section_id = workshop[:section_id_s].to_i
+-pass if section_id == 0
+-# BUGBUG: Display a "workshop not closed" message?
+    
+-membership = DASHBOARD_DB[:followers].where(section_id:section_id, student_user_id:dashboard_user_id)
+-pass unless membership
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
@@ -51,7 +63,7 @@ rightbar: blank
         On a 1-10 scale, how much have your beliefs and values about teaching computer science changed after attending Code.org's professional  development workshop?
         %span.form-required-field *
       %div
-        %select#k5-beliefs.form-control{name: "beliefs_i", required: true, type: "select"}
+        %select#k5-beliefs.form-control{name: "beliefs_i", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "1"} 1 = no change
           %option{value: "2"} 2
@@ -68,7 +80,7 @@ rightbar: blank
         On a 1-10 scale, which of the following best describes your current level of knowledge related to computer science?
         %span.form-required-field *
       %div
-        %select#k5-knowledge.form-control{name: "knowledge_i", required: true, type: "select"}
+        %select#k5-knowledge.form-control{name: "knowledge_i", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "1"} 1 = no knowledge
           %option{value: "2"} 2
@@ -85,7 +97,7 @@ rightbar: blank
         On a 1-10 scale, which of the following best describes your current level of awareness of careers that use computer science?
         %span.form-required-field *
       %div
-        %select#k5-cscareers.form-control{name: "cscareers_i", required: true, type: "select"}
+        %select#k5-cscareers.form-control{name: "cscareers_i", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "1"} 1 = unaware
           %option{value: "2"} 2
@@ -102,7 +114,7 @@ rightbar: blank
         Overall, rate your satisfaction about the workshop.
         %span.form-required-field *
       %div
-        %select#k5-satisfaction.form-control{name: "satisfaction_s", required: true, type: "select"}
+        %select#k5-satisfaction.form-control{name: "satisfaction_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "extremely satisfied (would recommend to others)"} Extremely Satisfied (Would Recommend to Others)
           %option{value: "moderately satisfied"} Moderately Satisfied
@@ -121,7 +133,7 @@ rightbar: blank
         Are you a...
         %span.form-required-field *
       %div
-        %select#k5-teacher-type.form-control{name: "teacher_type_s", required: true, type: "select"}
+        %select#k5-teacher-type.form-control{name: "teacher_type_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "in-service teacher, currently teaching"} In-service Teacher, Currently Teaching
           %option{value: "pre-service teacher, also working in a classroom under a master-teacher"} Pre-service Teacher, Also Working In A Classroom Under A Master-teacher
@@ -151,7 +163,7 @@ rightbar: blank
         School type
         %span.form-required-field *
       %div
-        %select#k5-school-type.form-control{name: "school_type_s", required: true, type: "select"}
+        %select#k5-school-type.form-control{name: "school_type_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "public school"} Public School
           %option{value: "charter (public or private)"} Charter (Public or Private)
@@ -172,7 +184,7 @@ rightbar: blank
         Including this year, how many years have you been a teacher?
         %span.form-required-field *
       %div
-        %select#k5-teacher-years.form-control{name: "teacher_years_s", required: true, type: "select"}
+        %select#k5-teacher-years.form-control{name: "teacher_years_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "0-2"} 0-2
           %option{value: "3-5"} 3-5
@@ -206,7 +218,7 @@ rightbar: blank
         Which best describes you?
         %span.form-required-field *
       %div
-        %select#k5-teacher-describe.form-control{name: "teacher_describe_s", required: true, type: "select"}
+        %select#k5-teacher-describe.form-control{name: "teacher_describe_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "elementary classroom teacher"} Elementary Classroom Teacher
           %option{value: "math teacher"} Math Teacher
@@ -226,7 +238,7 @@ rightbar: blank
         Will you be offering the course to your students?
         %span.form-required-field *
       %div
-        %select#k5-course-offering.form-control{name: "course_offering_s", required: true, type: "select"}
+        %select#k5-course-offering.form-control{name: "course_offering_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "yes"} Yes
           %option{value: "no"} No
@@ -236,7 +248,7 @@ rightbar: blank
         Will this be your first year teaching computer science?
         %span.form-required-field *
       %div
-        %select#k5-teaching-cs.form-control{name: "teaching_cs_s", required: true, type: "select"}
+        %select#k5-teaching-cs.form-control{name: "teaching_cs_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "yes"} Yes
           %option{value: "no"} No
@@ -244,7 +256,7 @@ rightbar: blank
       %label.control-label{for: "k5-cs-materials"}
         If you have taught computer science before, what materials/resources have you used? Please select all that apply.
       %div
-        %select#k5-cs-materials.form-control{name: "cs_materials_ss", required: true, type: "select", multiple: true}
+        %select#k5-cs-materials.form-control{name: "cs_materials_ss", type: "select", multiple: true}
           %option{selected: "selected", value: ""} -- Select all that apply--
           %option{value: "scratch"} Scratch
           %option{value: "tynker"} Tynker
@@ -264,7 +276,7 @@ rightbar: blank
         In what area is your primary undergraduate degree?
         %span.form-required-field *
       %div
-        %select#k5-undergrad-degree.form-control{name: "undergrad_degree_s", required: true, type: "select"}
+        %select#k5-undergrad-degree.form-control{name: "undergrad_degree_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "art"} Art
           %option{value: "business"} Business
@@ -288,7 +300,7 @@ rightbar: blank
         Do you have a graduate degree(s)?
         %span.form-required-field *
       %div
-        %select#k5-grad-degree.form-control{name: "grad_degree_s", required: true, type: "select"}
+        %select#k5-grad-degree.form-control{name: "grad_degree_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "yes"} Yes
           %option{value: "no"} No
@@ -320,7 +332,7 @@ rightbar: blank
         Do you have any computer science certifications or endorsements?
         %span.form-required-field *
       %div
-        %select#k5-cs-certification.form-control{name: "cs_certification_s", required: true, type: "select"}
+        %select#k5-cs-certification.form-control{name: "cs_certification_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "yes"} Yes
           %option{value: "no"} No
@@ -329,7 +341,7 @@ rightbar: blank
         Do you have experience working as a professional in the computer science industry?
         %span.form-required-field *
       %div
-        %select#k5-cs-professional.form-control{name: "cs_professional_s", required: true, type: "select"}
+        %select#k5-cs-professional.form-control{name: "cs_professional_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "yes"} Yes
           %option{value: "no"} No
@@ -338,7 +350,7 @@ rightbar: blank
         Are there other teachers who teach computer science classes at your school?
         %span.form-required-field *
       %div
-        %select#k5-other-teachers.form-control{name: "other_teachers_s", required: true, type: "select"}
+        %select#k5-other-teachers.form-control{name: "other_teachers_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "yes"} Yes
           %option{value: "no"} No
@@ -347,7 +359,7 @@ rightbar: blank
         I identify my gender as:
         %span.form-required-field *
       %div
-        %select#k5-gender.form-control{name: "gender_s", required: true, type: "select"}
+        %select#k5-gender.form-control{name: "gender_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "female"} Female
           %option{value: "male"} Male
@@ -357,7 +369,7 @@ rightbar: blank
         Which of the following best represents your racial or ethnic background? Please select all that apply.
         %span.form-required-field *
       %div
-        %select#k5-race.form-control{name: "race_ss", required: true, type: "select", multiple: true}
+        %select#k5-race.form-control{name: "race_ss", type: "select", multiple: true}
           %option{selected: "selected", value: ""} -- Select all that apply--
           %option{value: "african american/black"} African American/black
           %option{value: "hispanic or latino/latina"} Hispanic Or Latino/latina
@@ -377,7 +389,7 @@ rightbar: blank
         How old are you?
         %span.form-required-field *
       %div
-        %select#k5-age.form-control{name: "age_s", required: true, type: "select"}
+        %select#k5-age.form-control{name: "age_s", type: "select"}
           %option{selected: "selected", value: ""} -- Select --
           %option{value: "< 20"} < 20
           %option{value: "21-25"} 21-25
@@ -469,7 +481,7 @@ rightbar: blank
     });
 
     $('#k5-professional-development-survey-form').submit(function(event) {
-      k5ProfessionalDevelopmentSurveyFormSubmit();
+      k5ProfessionalDevelopmentSurveyFormSubmit(event);
     });
 
     $('#k5-teacher-type').change(function() {
@@ -480,7 +492,7 @@ rightbar: blank
         $('#k5-teacher-type-other').val('').removeAttr("required");
         $('#k5-teacher-type-other-wrapper').hide();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
 
     $('#k5-school-type').change(function() {
       if ($(this).val().toString() == "other"){
@@ -490,7 +502,7 @@ rightbar: blank
         $('#k5-school-type-other').val('').removeAttr("required");
         $('#k5-school-type-other-wrapper').hide();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
 
     $('#k5-teacher-describe').change(function() {
       if ($(this).val().toString() == "other"){
@@ -500,7 +512,7 @@ rightbar: blank
         $('#k5-teacher-describe-other').val('').removeAttr("required");
         $('#k5-teacher-describe-other-wrapper').hide();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
 
     $('#k5-cs-materials').change(function() {
       if ($.inArray('other', $(this).val()) > -1) {
@@ -510,7 +522,7 @@ rightbar: blank
         $('#k5-cs-materials-other').val('').removeAttr("required");
         $('#k5-cs-materials-other-wrapper').hide();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
 
     $('#k5-undergrad-degree').change(function() {
       if ($(this).val().toString() == "other"){
@@ -520,7 +532,7 @@ rightbar: blank
         $('#k5-undergrad-degree-other').val('').removeAttr("required");
         $('#k5-undergrad-degree-other-wrapper').hide();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
 
     $('#k5-grad-type').change(function() {
       if ($(this).val().toString() == "other"){
@@ -530,17 +542,17 @@ rightbar: blank
         $('#k5-grad-type-other').val('').removeAttr("required");
         $('#k5-grad-type-other-wrapper').hide();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
 
     $('#k5-race').change(function() {
-      if ($(this).val().toString() == "other"){
+      if ($.inArray('other', $(this).val()) > -1) {
         $('#k5-race-other').attr("required", true)
         $('#k5-race-other-wrapper').show();
       } else {
         $('#k5-race-other').val('').removeAttr("required");
         $('#k5-race-other-wrapper').hide();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
 
     $('#k5-send-materials-flag').change(function() {
       if($(this).is(':checked')) {
@@ -548,7 +560,7 @@ rightbar: blank
       } else {
         $('#k5-send-materials-wrapper').slideUp();
       }
-    }).triggerHandler('change');;
+    }).triggerHandler('change');
   });
 
   function processResponse(data)
@@ -579,10 +591,8 @@ rightbar: blank
     $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
   }
 
-  function k5ProfessionalDevelopmentSurveyFormSubmit()
+  function k5ProfessionalDevelopmentSurveyFormSubmit(event)
   {
-    event.preventDefault();
-
     $("#btn-submit").attr('disabled','disabled');
     $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
 
@@ -593,5 +603,5 @@ rightbar: blank
       data: $('#k5-professional-development-survey-form').serialize()
     }).done(processResponse).fail(processError);
 
-    return false;
+    event.preventDefault();
   }
