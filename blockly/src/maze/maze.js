@@ -306,6 +306,18 @@ function drawMap () {
     }
   }
 
+  if (skin.acornAnimation) {
+    createPegmanAnimation({
+      idStr: 'acorn',
+      pegmanImage: skin.acornAnimation,
+      row: Maze.start_.y,
+      col: Maze.start_.x,
+      direction: Maze.startDirection,
+      numColPegman: skin.acornPegmanCol,
+      numRowPegman: skin.acornPegmanRow
+    });
+  }
+
 
   // Add the hidden dazed pegman when hitting the wall.
   if (skin.wallPegmanAnimation) {
@@ -769,7 +781,8 @@ BlocklyApps.reset = function(first) {
     finishIcon.setAttribute('y', Maze.SQUARE_SIZE * (Maze.finish_.y + 0.9) -
       finishIcon.getAttribute('height'));
     finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                              skin.goal);
+      skin.goal);
+    finishIcon.setAttribute('visibility', 'visible');
   }
 
   // Make 'look' icon invisible and promote to top.
@@ -802,6 +815,11 @@ BlocklyApps.reset = function(first) {
   if (skin.movePegmanAnimation) {
     var movePegmanIcon = document.getElementById('movePegman');
     movePegmanIcon.setAttribute('visibility', 'hidden');
+  }
+
+  if (skin.acornAnimation) {
+    var acorn = document.getElementById('acornPegman');
+    acorn.setAttribute('visibility', 'hidden');
   }
 
   // Move the init dirt marker icons into position.
@@ -1255,6 +1273,28 @@ function animatedMove (direction, timeForMove) {
 }
 
 /**
+ * Schedule a movement animating using a spritesheet.
+ */
+function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
+    idStr, direction, hidePegman) {
+  var pegmanIcon = document.getElementById('pegman');
+  utils.range(0, numFrames - 1).forEach(function (frame) {
+    timeoutList.setTimeout(function() {
+      if (hidePegman) {
+        pegmanIcon.setAttribute('visibility', 'hidden');
+      }
+      updatePegmanAnimation({
+        idStr: idStr,
+        col: start.x + delta.x * frame / numFrames,
+        row: start.y + delta.y * frame / numFrames,
+        direction: direction,
+        animationRow: frame
+      });
+    }, timePerFrame * frame);
+  });
+};
+
+/**
  * Schedule the animations for a move from the current position
  * @param {number} endX X coordinate of the target position
  * @param {number} endY Y coordinate of the target position
@@ -1277,18 +1317,8 @@ function animatedMove (direction, timeForMove) {
     var movePegmanIcon = document.getElementById('movePegman');
     timePerFrame = timeForAnimation / numFrames;
 
-    utils.range(0, numFrames - 1).forEach(function (frame) {
-      timeoutList.setTimeout(function() {
-        pegmanIcon.setAttribute('visibility', 'hidden');
-        updatePegmanAnimation({
-          idStr: 'move',
-          col: startX + deltaX * frame / numFrames,
-          row: startY + deltaY * frame / numFrames,
-          direction: direction,
-          animationRow: frame
-        });
-      }, timePerFrame * frame);
-    });
+    scheduleSheetedMovement({x: startX, y: startY}, {x: deltaX, y: deltaY },
+      numFrames, timePerFrame, 'move', direction, true);
 
     // Hide movePegman and set pegman to the end position.
     timeoutList.setTimeout(function() {
@@ -1409,26 +1439,9 @@ Maze.scheduleFail = function(forward) {
       if (mazeUtils.isScratSkin(skin.id)) {
         // For scrat, we're jumping into the water instead of hitting a wall
         var numFrames = skin.hittingWallAnimationFrameNumber;
-        var timePerFrame = 100; //timeForAnimation / numFrames;
 
-        utils.range(0, numFrames - 1).forEach(function (frame) {
-          timeoutList.setTimeout(function() {
-            if (frame === 0) {
-              // as we start the animation of pegman falling into the water,
-              // hide the pegman image. (this will reappear when the user
-              // clicks reset)
-              document.getElementById('pegman').setAttribute('visibility', 'hidden');
-            }
-            wallAnimationIcon.setAttribute('visibility', 'hidden');
-            updatePegmanAnimation({
-              idStr: 'wall',
-              col: Maze.pegmanX + deltaX * frame / numFrames,
-              row: Maze.pegmanY + deltaY * frame / numFrames,
-              direction: 0,
-              animationRow: frame
-            });
-          }, timePerFrame * frame);
-        });
+        scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
+          {x: deltaX, y: deltaY }, numFrames, 100, 'wall', Direction.NORTH, true);
       } else {
         timeoutList.setTimeout(function() {
           wallAnimationIcon.setAttribute('x',
@@ -1558,7 +1571,10 @@ Maze.scheduleDance = function(victoryDance, timeAlloted) {
   if (victoryDance && finishIcon) {
     BlocklyApps.playAudio('winGoal');
     finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                              skin.goalAnimation);
+      skin.goalAnimation);
+    if (mazeUtils.isScratSkin(skin.id)) {
+      Maze.moveAcorn(timeAlloted);
+    }
   }
 
   if (victoryDance) {
@@ -1592,6 +1608,37 @@ Maze.scheduleDance = function(victoryDance, timeAlloted) {
       setPegmanTransparent();
     }
   }, danceSpeed * 5);
+};
+
+Maze.moveAcorn = function (timeAlloted) {
+  // todo - is 8 hardcoded somewhere?
+  var numFrames = (8 - Maze.pegmanX - 1) * 4;
+  var finish = document.getElementById('finish');
+  finish.setAttribute('x', (Maze.pegmanX + 1) * Maze.SQUARE_SIZE);
+  // finish.setAttribute('visibility', 'visible');
+  var timePerFrame = 100;
+
+  var start = {x: Maze.pegmanX, y: Maze.pegmanY};
+  // WALL is non-ice for scrat. Find a neighbor that is water so that we can
+  // have the acorn splash into the water
+  if (level.map[start.y][start.x + 1] === SquareType.WALL) {
+    start.x++;
+  } else if (level.map[start.y - 1][start.x] === SquareType.WALL) {
+    start.y--;
+  } else if (level.map[start.y + 1][start.x] === SquareType.WALL) {
+    start.y++;
+  } else {
+    throw "Can't have level where finish is surrounded by land";
+  }
+
+  scheduleSheetedMovement(start, {x: 0, y: 0 },
+    skin.hittingWallAnimationFrameNumber, 100, 'acorn', Direction.NORTH, false);
+
+  // todo (brent) - may need to tune this once we fill out the sheet of the
+  // acorn falling into the water
+  timeoutList.setTimeout(function() {
+    finish.setAttribute('visibility', 'hidden');
+  }, timePerFrame * numFrames);
 };
 
 /**
