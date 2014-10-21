@@ -18,7 +18,7 @@ attachments:
 Dear <%= recipient.name %>,
 <% end %>
 
-Thank you for attending a Code.org K-5 workshop with <%= facilitator_name %> on <%= Chronic.parse(start_date).strftime('%A, %B %d %Y') %> at <%= location_name %>! We hope you had an awesome time and that you feel prepared to bring computer science to your little learners!
+Thank you for attending a Code.org K-5 workshop with <%= facilitator_name %><%= start_date ? " on #{Chronic.parse(start_date).strftime('%A, %B %d %Y')}" : '' %> at <%= location_name %>! We hope you had an awesome time and that you feel prepared to bring computer science to your little learners!
 
 Attached to this email, you will find a personalized certificate acknowledging your successful completion of Code.org's K-5 professional development. We are continuously working to improve our K-5 professional development program.
 
