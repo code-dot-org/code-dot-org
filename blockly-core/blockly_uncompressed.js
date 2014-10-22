@@ -1812,22 +1812,7 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function(renderInfo, inputRo
     }else {
       if(input.type === Blockly.FUNCTIONAL_INPUT) {
         hasFunctionalInput = true;
-        var inputTopLeft = {x:renderInfo.curX, y:renderInfo.curY + BS.INLINE_PADDING_Y};
-        var notchStart = BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH;
-        renderInfo.inline.push("M", inputTopLeft.x + "," + inputTopLeft.y);
-        renderInfo.inline.push("h", notchStart);
-        renderInfo.inline.push(BS.NOTCH_PATH_LEFT);
-        renderInfo.inline.push("H", inputTopLeft.x + input.renderWidth);
-        renderInfo.inline.push("v", input.renderHeight);
-        renderInfo.inline.push("H", inputTopLeft.x);
-        renderInfo.inline.push("z");
-        renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
-        var connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_WIDTH;
-        var connectionY = connectionsXY.y + inputTopLeft.y;
-        input.connection.moveTo(connectionX, connectionY);
-        if(input.connection.targetConnection) {
-          input.connection.tighten_()
-        }
+        this.renderDrawRightInlineFunctional_(renderInfo, input, connectionsXY)
       }else {
         if(input.type != Blockly.DUMMY_INPUT) {
           renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X
@@ -1844,6 +1829,9 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function(renderInfo, inputRo
   if(Blockly.RTL) {
     renderInfo.highlight.push("v", row.height - 2)
   }
+};
+Blockly.BlockSvg.prototype.renderDrawRightInlineFunctional_ = function(renderInfo, input, connectionsXY) {
+  throw"Only supported for functional blocks";
 };
 Blockly.BlockSvg.prototype.renderDrawBottom_ = function(renderInfo, connectionsXY) {
   renderInfo.core.push(brokenControlPointWorkaround());
@@ -13364,6 +13352,7 @@ Blockly.BlockSvgFunctional = function(block, options) {
   this.headerHeight = options.headerHeight;
   this.rowBuffer = options.rowBuffer || 0;
   this.patternId_ = null;
+  this.inputMarkers_ = {};
   Blockly.BlockSvg.call(this, block)
 };
 goog.inherits(Blockly.BlockSvgFunctional, Blockly.BlockSvg);
@@ -13371,18 +13360,22 @@ Blockly.BlockSvgFunctional.prototype.initChildren = function() {
   var rgb = Blockly.makeColour(this.block_.getColour(), this.block_.getSaturation(), this.block_.getValue());
   var lightColor = goog.color.lighten(goog.color.hexToRgb(rgb), 0.3);
   var lighterColor = goog.color.lighten(goog.color.hexToRgb(rgb), 0.8);
-  this.backdrop_ = Blockly.createSvgElement("rect", {x:0, y:0, height:0, width:0, fill:"url(#" + this.patternId_ + ")", "clip-path":"url(#blockClip" + this.block_.id + ")"}, this.svgGroup_);
   goog.base(this, "initChildren");
   var clip = Blockly.createSvgElement("clipPath", {id:"blockClip" + this.block_.id}, this.svgGroup_);
   this.blockClipRect_ = Blockly.createSvgElement("path", {}, clip);
-  this.divider_ = Blockly.createSvgElement("rect", {x:1, y:this.headerHeight, height:3, width:0, fill:goog.color.rgbArrayToHex(lightColor), "clip-path":"url(#blockClip" + this.block_.id + ")", visibility:this.headerHeight > 0 ? "visible" : "hidden"}, this.svgGroup_)
+  this.divider_ = Blockly.createSvgElement("rect", {x:1, y:this.headerHeight, height:3, width:0, fill:goog.color.rgbArrayToHex(lightColor), "clip-path":"url(#blockClip" + this.block_.id + ")", visibility:this.headerHeight > 0 ? "visible" : "hidden"}, this.svgGroup_);
+  for(var i = 0;i < this.block_.inputList.length;i++) {
+    var input = this.block_.inputList[i];
+    if(input.type !== Blockly.FUNCTIONAL_INPUT) {
+      continue
+    }
+    this.inputMarkers_[input.name] = Blockly.createSvgElement("rect", {fill:"red"}, this.svgGroup_)
+  }
 };
 Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows) {
   goog.base(this, "renderDraw_", iconWidth, inputRows);
   this.blockClipRect_.setAttribute("d", this.svgPath_.getAttribute("d"));
   var rect = this.svgPath_.getBBox();
-  this.backdrop_.setAttribute("height", rect.height);
-  this.backdrop_.setAttribute("width", rect.width);
   this.divider_.setAttribute("width", rect.width - 2)
 };
 Blockly.BlockSvgFunctional.prototype.renderDrawRight_ = function(renderInfo, connectionsXY, inputRows, iconWidth) {
@@ -13392,29 +13385,33 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRight_ = function(renderInfo, con
   }
   goog.base(this, "renderDrawRight_", renderInfo, connectionsXY, inputRows, iconWidth)
 };
-Blockly.BlockSvgFunctional.prototype.updateToColour_ = function(hexColour) {
-  goog.base(this, "updateToColour_", hexColour);
-  this.addPatternToDefs_();
-  this.backdrop_.setAttribute("fill", "url(#" + this.patternId_ + ")")
-};
-Blockly.BlockSvgFunctional.prototype.addPatternToDefs_ = function() {
-  var color = this.svgPath_.getAttribute("fill");
-  this.patternId_ = "eyePattern" + color.substr(1);
-  if(document.getElementById(this.patternId_)) {
-    return
+Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ = function(renderInfo, input, connectionsXY) {
+  var inputTopLeft = {x:renderInfo.curX, y:renderInfo.curY + BS.INLINE_PADDING_Y};
+  var notchStart = BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH;
+  renderInfo.inline.push("M", inputTopLeft.x + "," + inputTopLeft.y);
+  renderInfo.inline.push("h", notchStart);
+  renderInfo.inline.push(BS.NOTCH_PATH_LEFT);
+  renderInfo.inline.push("H", inputTopLeft.x + input.renderWidth);
+  renderInfo.inline.push("v", input.renderHeight);
+  renderInfo.inline.push("H", inputTopLeft.x);
+  renderInfo.inline.push("z");
+  this.inputMarkers_[input.name].setAttribute("x", inputTopLeft.x + 5);
+  this.inputMarkers_[input.name].setAttribute("y", inputTopLeft.y + 15);
+  this.inputMarkers_[input.name].setAttribute("width", input.renderWidth - 10);
+  this.inputMarkers_[input.name].setAttribute("height", 5);
+  this.inputMarkers_[input.name].setAttribute("fill", input.getHexColour());
+  renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
+  var connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_WIDTH;
+  var connectionY = connectionsXY.y + inputTopLeft.y;
+  input.connection.moveTo(connectionX, connectionY);
+  if(input.connection.targetConnection) {
+    input.connection.tighten_()
   }
-  var defs = document.getElementById("blocklySvgDefs");
-  var pattern = Blockly.createSvgElement("pattern", {id:this.patternId_, width:400, height:400, patternUnits:"userSpaceOnUse", x:0, y:0}, defs);
-  var y = 55;
-  var height = 5;
-  Blockly.createSvgElement("rect", {fill:color, x:15, y:y, width:30, height:height}, pattern);
-  Blockly.createSvgElement("rect", {fill:color, x:65, y:y, width:30, height:height}, pattern)
 };
 Blockly.BlockSvgFunctional.prototype.dispose = function() {
   goog.base(this, "dispose");
   this.blockClipRect_ = null;
-  this.divider_ = null;
-  this.backdrop_ = null
+  this.divider_ = null
 };
 goog.provide("Blockly.Comment");
 goog.require("Blockly.Bubble");
@@ -13727,7 +13724,8 @@ Blockly.Input = function(type, name, block, connection) {
   this.titleRow = [];
   this.align = Blockly.ALIGN_LEFT;
   this.inline_ = false;
-  this.visible_ = true
+  this.visible_ = true;
+  this.colour_ = {hue:null, saturation:null, value:null}
 };
 Blockly.Input.prototype.appendTitle = function(title, opt_name) {
   if(!title && !opt_name) {
@@ -13825,6 +13823,28 @@ Blockly.Input.prototype.isInline = function() {
     return false
   }
   return this.inline_ || this.sourceBlock_.inputsInline
+};
+Blockly.Input.prototype.setColour = function(hsv) {
+  if(this.type !== Blockly.FUNCTIONAL_INPUT) {
+    throw"setColor only for functional inputs";
+  }
+  this.colour_ = hsv;
+  return this
+};
+Blockly.Input.prototype.getHexColour = function() {
+  return Blockly.makeColour(this.colour_.hue, this.colour_.saturation, this.colour_.value)
+};
+Blockly.Input.prototype.matchesBlock = function(block) {
+  if(block.getColour() !== this.colour_.hue) {
+    return false
+  }
+  if(block.getSaturation() !== this.colour_.saturation) {
+    return false
+  }
+  if(block.getValue() !== this.colour_.value) {
+    return false
+  }
+  return true
 };
 goog.provide("Blockly.Warning");
 goog.require("Blockly.Bubble");
