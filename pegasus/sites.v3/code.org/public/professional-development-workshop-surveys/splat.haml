@@ -14,7 +14,7 @@ rightbar: blank
 -section_id = workshop_data['section_id_s'].to_i
 -pass if section_id == 0
 -# BUGBUG: Display a "workshop not closed" message?
-    
+
 -membership = !!DASHBOARD_DB[:followers].where(section_id:section_id, student_user_id:dashboard_user_id).first
 -pass unless membership
 
@@ -578,6 +578,8 @@ rightbar: blank
 
   function processError(data)
   {
+    $('.has-error').removeClass('has-error');
+
     errors = Object.keys(data.responseJSON);
     errors_count = errors.length;
 
