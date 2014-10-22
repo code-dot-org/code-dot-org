@@ -744,7 +744,6 @@ Blockly.EditorWorkspace.prototype.setWorkspaceMetrics_ = function(xyRatio) {
  * @private
  */
 Blockly.EditorWorkspace.prototype.setWorkspaceMetricsNoScroll_ = function() {
-  console.log('Setting metrics no scroll');
   var metrics = this.getWorkspaceMetrics_();
   if (metrics) {
     var translation = 'translate(' + (metrics.absoluteLeft) + ',' +
