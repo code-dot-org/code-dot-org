@@ -5,15 +5,14 @@ def main()
   db = URI.parse CDO.pegasus_db_reader
 
   q = ARGV.join(' ').strip
-  return if q.empty?
 
   command = [
     'mysql',
     "--user=#{db.user}",
     "--host=#{db.host}",
     "--database=#{db.path[1..-1]}",
-    "--execute=\"#{q}\"",
   ]
+  command << "--execute=\"#{q}\"" unless q.empty?
   command << "--password=#{db.password}" unless db.password.nil?
 
   system(command.join(' '))
