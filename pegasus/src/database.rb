@@ -39,6 +39,7 @@ class Tutorials
     return DB[:beyond_tutorials].where(code:code).first[:url] if @table == :beyond_tutorials
 
     api_domain = domain.gsub('csedweek.org','code.org')
+    api_domain = api_domain.gsub('ar.code.org','code.org')
     api_domain = api_domain.gsub('br.code.org','code.org')
     api_domain = api_domain.gsub('eu.code.org','code.org')
     api_domain = api_domain.gsub('ro.code.org','code.org')
