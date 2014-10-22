@@ -188,7 +188,7 @@ Blockly.Field.prototype.getSize = function() {
 };
 
 /**
- * Returns how many pixels of buffer space we want about field. Override by
+ * Returns how many pixels of buffer space we want above field. Override by
  * children.
  * @return {Number} Number of pixels
  */
