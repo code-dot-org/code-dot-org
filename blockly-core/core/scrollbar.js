@@ -710,7 +710,7 @@ Blockly.ScrollbarSvg.prototype.setVisible = function(visible) {
  * @private
  */
 Blockly.ScrollbarSvg.prototype.onMouseDownBar_ = function(e) {
-  this.workspace.editorWorkspace.hideChaff(true);
+  this.workspace_.editorWorkspace.hideChaff(true);
   if (Blockly.isRightButton(e)) {
     // Right-click.
     // Scrollbars have no context menu.
