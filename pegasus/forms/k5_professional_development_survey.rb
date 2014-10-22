@@ -112,6 +112,9 @@ class K5ProfessionalDevelopmentSurvey
       '11th',
       '12th',
     ]
+    # Temporary until enum issue is addressed.
+    result[:teacher_grades_ss] = data[:teacher_grades_ss]
+
     result[:teacher_describe_s] = required enum data[:teacher_describe_s].to_s.strip.downcase, [
       'elementary classroom teacher',
       'math teacher',
@@ -137,6 +140,9 @@ class K5ProfessionalDevelopmentSurvey
       'code.org',
       'other',
     ]
+    # Temporary until enum issue is addressed.
+    result[:cs_materials_ss] = data[:cs_materials_ss].to_s.strip.downcase
+
     if result[:cs_materials_ss].class != FieldError && result[:cs_materials_ss].include?('other')
       result[:cs_materials_other_s] = required stripped data[:cs_materials_other_s]
     end
@@ -162,6 +168,9 @@ class K5ProfessionalDevelopmentSurvey
       'prefer not to answer',
       'other',
     ]
+    # Temporary until enum issue is addressed.
+    result[:race_ss] = required data[:race_ss].to_s.strip.downcase
+
     if result[:race_ss].class != FieldError && result[:race_ss].include?('other')
       result[:race_other_s] = required stripped data[:race_other_s]
     end
