@@ -255,12 +255,12 @@ Blockly.Bubble.prototype.bubbleMouseDown_ = function(e) {
   if (Blockly.isRightButton(e)) {
     // Right-click.
     return;
-  } else if (Blockly.isTargetInput_(e)) {
+  } else if (Blockly.EditorWorkspace.isTargetInput_(e)) {
     // When focused on an HTML text input widget, don't trap any events.
     return;
   }
   // Left-click (or middle click)
-  Blockly.setCursorHand_(true);
+  this.workspace_.editorWorkspace.setCursorHand_(true);
   // Record the starting offset between the current location and the mouse.
   if (Blockly.RTL) {
     this.dragDeltaX = this.relativeLeft_ + e.clientX;
@@ -273,7 +273,7 @@ Blockly.Bubble.prototype.bubbleMouseDown_ = function(e) {
       'mouseup', this, Blockly.Bubble.unbindDragEvents_);
   Blockly.Bubble.onMouseMoveWrapper_ = Blockly.bindEvent_(document,
       'mousemove', this, this.bubbleMouseMove_);
-  Blockly.hideChaff();
+  this.workspace_.editorWorkspace.hideChaff();
   // This event has been handled.  No need to bubble up to the document.
   e.stopPropagation();
 };
@@ -308,7 +308,7 @@ Blockly.Bubble.prototype.resizeMouseDown_ = function(e) {
     return;
   }
   // Left-click (or middle click)
-  Blockly.setCursorHand_(true);
+  this.workspace_.editorWorkspace.setCursorHand_(true);
   // Record the starting offset between the current location and the mouse.
   if (Blockly.RTL) {
     this.resizeDeltaWidth = this.width_ + e.clientX;
@@ -321,7 +321,7 @@ Blockly.Bubble.prototype.resizeMouseDown_ = function(e) {
       'mouseup', this, Blockly.Bubble.unbindDragEvents_);
   Blockly.Bubble.onMouseMoveWrapper_ = Blockly.bindEvent_(document,
       'mousemove', this, this.resizeMouseMove_);
-  Blockly.hideChaff();
+  this.workspace_.editorWorkspace.hideChaff();
   // This event has been handled.  No need to bubble up to the document.
   e.stopPropagation();
 };

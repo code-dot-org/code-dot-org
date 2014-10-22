@@ -468,7 +468,7 @@ BlocklyApps.init = function(config) {
 
   // Add display of blocks used.
   setIdealBlockNumber();
-  Blockly.addChangeListener(function() {
+  Blockly.mainWorkspace.addChangeListener(function() {
     BlocklyApps.updateBlockCount();
   });
 
@@ -667,13 +667,13 @@ BlocklyApps.onResize = function(gameWidth) {
 // |                 |         <--------- workspaceWidth ---------->         |
 BlocklyApps.resizeHeaders = function() {
   var categoriesWidth = 0;
-  var categories = Blockly.mainToolbox.HtmlDiv;
+  var categories = Blockly.mainWorkspace.editorWorkspace.toolbox;
   if (categories) {
-    categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+    categoriesWidth = parseInt(window.getComputedStyle(categories.HtmlDiv).width, 10);
   }
 
-  var workspaceWidth = Blockly.getWorkspaceWidth();
-  var toolboxWidth = Blockly.getToolboxWidth();
+  var workspaceWidth = Blockly.mainWorkspace.editorWorkspace.getWorkspaceWidth();
+  var toolboxWidth = Blockly.mainWorkspace.editorWorkspace.getToolboxWidth();
 
   var headers = document.getElementById('headers');
   var workspaceHeader = document.getElementById('workspace-header');

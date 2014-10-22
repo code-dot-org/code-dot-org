@@ -312,7 +312,7 @@ Blockly.Tooltip.show_ = function() {
   }
   var anchorY = Blockly.Tooltip.lastXY_.y + Blockly.Tooltip.OFFSET_Y;
 
-  var svgSize = Blockly.svgSize();
+  var svgSize = Blockly.mainWorkspace.editorWorkspace.svgSize();
   if (anchorY + bBox.height > svgSize.height) {
     // Falling off the bottom of the screen; shift the tooltip up.
     anchorY -= bBox.height + 2 * Blockly.Tooltip.OFFSET_Y;

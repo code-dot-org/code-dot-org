@@ -34,11 +34,13 @@ goog.require('Blockly.Xml');
 
 /**
  * Class for a workspace.
+ * @param {EditorWorkspace} editorWorkspace parent EditorWorkspace for this workspace
  * @param {Function} getMetrics A function that returns size/scrolling metrics.
  * @param {Function} setMetrics A function that sets size/scrolling metrics.
  * @constructor
  */
-Blockly.Workspace = function(getMetrics, setMetrics) {
+Blockly.Workspace = function(editorWorkspace, getMetrics, setMetrics) {
+  this.editorWorkspace = editorWorkspace;
   this.getMetrics = getMetrics;
   this.setMetrics = setMetrics;
 
@@ -226,7 +228,9 @@ Blockly.Workspace.prototype.getAllBlocks = function() {
   for (var x = 0; x < blocks.length; x++) {
     blocks = blocks.concat(blocks[x].getChildren());
   }
-  return (this === Blockly.mainWorkspace) ? blocks : blocks.concat(Blockly.mainWorkspace.getAllBlocks());
+  return blocks;
+  // TODO(bjordan): re-implement this technique for function showing/hiding:
+  //  return (this === Blockly.mainWorkspace) ? blocks : blocks.concat(Blockly.mainWorkspace.getAllBlocks());
 };
 
 /**
@@ -241,7 +245,7 @@ Blockly.Workspace.prototype.getBlockCount = function() {
  * Dispose of all blocks in workspace.
  */
 Blockly.Workspace.prototype.clear = function() {
-  Blockly.hideChaff();
+  this.editorWorkspace.hideChaff();
   while (this.topBlocks_.length) {
     this.topBlocks_[0].dispose();
   }
