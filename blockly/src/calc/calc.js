@@ -90,6 +90,11 @@ Calc.init = function(config) {
     svg.setAttribute('width', CANVAS_WIDTH);
     svg.setAttribute('height', CANVAS_HEIGHT);
 
+    // This is hack that I haven't been able to fully understand. Furthermore,
+    // it seems to break the functional blocks in some browsers. As such, I'm
+    // just going to disable the hack for this app.
+    Blockly.BROKEN_CONTROL_POINTS = false;
+
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
     //XXX Not sure if this is still right.
@@ -285,6 +290,12 @@ Calc.step = function (ignoreFailures) {
 Calc.drawExpressions = function () {
   var expected = Calc.expressions.current || Calc.expressions.target;
   var user = Calc.expressions.user;
+
+  // todo - in cases where we have the wrong answer, marking the "next" operation
+  // for both doesn't necessarily make sense, i.e.
+  // goal: ((1 + 2) * (3 + 4))
+  // user: (0 * (3 + 4))
+  // right now, we'll highlight the 1 + 2 for goal, and the 3 + 4 for user
 
   expected.applyExpectation(expected);
   drawSvgExpression('answerExpression', expected, user !== null);
