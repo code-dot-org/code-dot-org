@@ -308,7 +308,7 @@ Blockly.Block.prototype.dispose = function(healStack, animate) {
   if (Blockly.selected == this) {
     Blockly.selected = null;
     // If there's a drag in-progress, unlink the mouse events.
-    Blockly.terminateDrag_();
+    Blockly.EditorWorkspace.terminateDrag_();
   }
 
   // If this block has a context menu open, close it.
@@ -464,10 +464,10 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
     return;
   }
   // Update Blockly's knowledge of its own location.
-  Blockly.svgResize();
-  Blockly.terminateDrag_();
+  this.workspace.editorWorkspace.svgResize();
+  Blockly.EditorWorkspace.terminateDrag_();
   this.select();
-  Blockly.hideChaff();
+  this.workspace.editorWorkspace.hideChaff();
   if (Blockly.isRightButton(e)) {
     // Right-click.
     // Unlike google Blockly, we don't want to show a context menu
@@ -480,7 +480,7 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   } else {
     // Left-click (or middle click)
     Blockly.removeAllRanges();
-    Blockly.setCursorHand_(true);
+    this.workspace.editorWorkspace.setCursorHand_(true);
     // Look up the current translation and record it.
     var xy = this.getRelativeToSurfaceXY();
     this.startDragX = xy.x;
@@ -526,7 +526,7 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
  * @private
  */
 Blockly.Block.prototype.onMouseUp_ = function(e) {
-  Blockly.terminateDrag_();
+  Blockly.EditorWorkspace.terminateDrag_();
   if (Blockly.selected && Blockly.highlightedConnection_) {
     // Connect two blocks together.
     Blockly.localConnection_.connect(Blockly.highlightedConnection_);

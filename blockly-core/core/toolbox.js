@@ -36,7 +36,9 @@ goog.require('goog.ui.tree.TreeNode');
  * Class for a toolbox.
  * @constructor
  */
-Blockly.Toolbox = function() {
+Blockly.Toolbox = function(editorWorkspace) {
+  this.editorWorkspace_ = editorWorkspace;
+  this.createDom(this.editorWorkspace_.svg_);
 };
 
 /**
@@ -78,19 +80,19 @@ Blockly.Toolbox.prototype.createDom = function (svg) {
    * @type {!Blockly.Flyout}
    * @private
    */
-  this.flyout_ = new Blockly.Flyout();
+  this.flyout_ = new Blockly.Flyout(this.editorWorkspace_);
   svg.appendChild(this.flyout_.createDom());
 
   // Clicking on toolbox closes popups.
-  Blockly.bindEvent_(this.HtmlDiv, 'mousedown', null,
+  Blockly.bindEvent_(this.HtmlDiv, 'mousedown', this,
       function(e) {
         Blockly.fireUiEvent(window, 'resize');
         if (Blockly.isRightButton(e) || e.target == this.HtmlDiv) {
           // Close flyout.
-          Blockly.hideChaff(false);
+          this.editorWorkspace_.hideChaff(false);
         } else {
           // Just close popups.
-          Blockly.hideChaff(true);
+          this.editorWorkspace_.hideChaff(true);
         }
       });
 };
@@ -98,8 +100,9 @@ Blockly.Toolbox.prototype.createDom = function (svg) {
 /**
  * Initializes the toolbox.
  * @param {!Workspace} workspace The workspace this toolbox's flyout will create blocks in
+ * @param {!EditorWorkspace} editorWorkspace The editor workspace this toolbox's flyout will be positioned in
  */
-Blockly.Toolbox.prototype.init = function(workspace) {
+Blockly.Toolbox.prototype.init = function(workspace, editorWorkspace) {
   Blockly.Toolbox.CONFIG_['cleardotPath'] = Blockly.assetUrl('media/1x1.gif');
   Blockly.Toolbox.CONFIG_['cssCollapsedFolderIcon'] =
       'blocklyTreeIconClosed' + (Blockly.RTL ? 'Rtl' : 'Ltr');
@@ -117,8 +120,8 @@ Blockly.Toolbox.prototype.init = function(workspace) {
 
   // If the document resizes, reposition the toolbox.
   goog.events.listen(window, goog.events.EventType.RESIZE,
-                     this.position_, false, this);
-  this.position_();
+                     goog.partial(this.position_, editorWorkspace), false, this);
+  this.position_(editorWorkspace);
   this.enabled = true;
 };
 
@@ -126,10 +129,10 @@ Blockly.Toolbox.prototype.init = function(workspace) {
  * Move the toolbox to the edge.
  * @private
  */
-Blockly.Toolbox.prototype.position_ = function() {
+Blockly.Toolbox.prototype.position_ = function(editorWorkspace) {
   var treeDiv = this.HtmlDiv;
-  var svgBox = goog.style.getBorderBox(Blockly.svg);
-  var svgSize = Blockly.svgSize();
+  var svgBox = goog.style.getBorderBox(editorWorkspace.svg_);
+  var svgSize = editorWorkspace.svgSize();
   if (Blockly.RTL) {
     treeDiv.style.right = svgBox.right + 'px';
   } else {

@@ -17,7 +17,7 @@ goog.require('Blockly.Xml');
 Blockly.FunctionEditor = function() {
   this.functionEditorOpen_ = false;
 
-  this.workspace_ = new Blockly.Workspace(null, null);
+  this.workspace_ = new Blockly.Workspace(null, null /** TODO(bjordan) reimplement with editorWorkspace **/);
   this.workspace_.getMetrics = Blockly.generateGetWorkspaceMetrics_(this.workspace_);
   this.workspace_.setMetrics = Blockly.generateSetWorkspaceMetrics_(this.workspace_);
 
