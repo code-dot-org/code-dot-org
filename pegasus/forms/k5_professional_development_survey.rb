@@ -96,7 +96,7 @@ class K5ProfessionalDevelopmentSurvey
       '21-25',
       '26+',
     ]
-    result[:teacher_grades_ss] = required enum data[:teacher_grades_ss], [
+    result[:teacher_grades_ss] = enum data[:teacher_grades_ss], [
       'pre-kindergarten',
       'kindergarten',
       '1st',
@@ -137,11 +137,13 @@ class K5ProfessionalDevelopmentSurvey
       'code.org',
       'other',
     ]
-    result[:cs_materials_other_s] = required stripped data[:cs_materials_other_s] if result[:cs_materials_ss] == 'other'
+    if result[:cs_materials_ss].class != FieldError && result[:cs_materials_ss].include?('other')
+      result[:cs_materials_other_s] = required stripped data[:cs_materials_other_s]
+    end
     result[:undergrad_degree_s] = required enum data[:undergrad_degree_s].to_s.strip.downcase, DEGREE_TYPE
     result[:undergrad_degree_other_s] = required stripped data[:undergrad_degree_other_s] if result[:undergrad_degree_s] == 'other'
     result[:grad_degree_s] = required enum data[:grad_degree_s].to_s.strip.downcase, SIMPLE_ANSWERS
-    result[:grad_type_s] = required enum data[:grad_type_s].to_s.strip.downcase, DEGREE_TYPE
+    result[:grad_type_s] = required enum data[:grad_type_s].to_s.strip.downcase, DEGREE_TYPE if result[:grad_degree_s] == 'yes'
     result[:grad_type_other_s] = required stripped data[:grad_type_other_s] if result[:grad_type_s] == 'other'
     result[:cs_certification_s] = required enum data[:cs_certification_s].to_s.strip.downcase, SIMPLE_ANSWERS
     result[:cs_professional_s] = required enum data[:cs_professional_s].to_s.strip.downcase, SIMPLE_ANSWERS
@@ -160,7 +162,9 @@ class K5ProfessionalDevelopmentSurvey
       'prefer not to answer',
       'other',
     ]
-    result[:race_other_s] = required stripped data[:race_other_s] if result[:race_ss] == 'other'
+    if result[:race_ss].class != FieldError && result[:race_ss].include?('other')
+      result[:race_other_s] = required stripped data[:race_other_s]
+    end
     result[:age_s] = required enum data[:age_s].to_s.strip.downcase, [
       '< 20',
       '21-25',
