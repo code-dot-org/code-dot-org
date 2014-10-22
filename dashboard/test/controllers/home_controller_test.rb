@@ -182,5 +182,21 @@ class HomeControllerTest < ActionController::TestCase
 #    assert_response 400
 #  end
 
+  test "do not show prize link if you don't have a prize" do
+    sign_in create(:teacher)
+
+    get :index
+    assert_select 'a[href=http://test.host/redeemprizes]', 0
+  end
+
+  test "do show prize link when you already have a prize" do
+    teacher = create(:teacher)
+    sign_in teacher
+    teacher.teacher_prize = TeacherPrize.create!(prize_provider_id: 8, code: 'fake')
+
+    get :index
+    assert_select 'a[href=http://test.host/redeemprizes]'
+  end
+
 
 end
