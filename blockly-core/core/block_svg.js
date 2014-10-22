@@ -1197,35 +1197,8 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
       }
     } else if (input.type === Blockly.FUNCTIONAL_INPUT) {
       hasFunctionalInput = true;
-      // todo (brent) - RTL
-      var inputTopLeft = {
-        x: renderInfo.curX,
-        y: renderInfo.curY + BS.INLINE_PADDING_Y
-      };
 
-      var notchStart = BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH;
-
-      renderInfo.inline.push('M', inputTopLeft.x + ',' + inputTopLeft.y);
-      renderInfo.inline.push('h', notchStart);
-      renderInfo.inline.push(BS.NOTCH_PATH_LEFT);
-      renderInfo.inline.push('H', inputTopLeft.x + input.renderWidth);
-      renderInfo.inline.push('v', input.renderHeight);
-      renderInfo.inline.push('H', inputTopLeft.x);
-      renderInfo.inline.push('z');
-
-      // todo (brent)- highlighting
-
-      renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
-
-      // Create inline input connection.
-      var connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_WIDTH;
-      var connectionY = connectionsXY.y + inputTopLeft.y;
-
-      input.connection.moveTo(connectionX, connectionY);
-      if (input.connection.targetConnection) {
-        input.connection.tighten_();
-      }
-
+      this.renderDrawRightInlineFunctional_(renderInfo, input, connectionsXY);
     } else if (input.type != Blockly.DUMMY_INPUT) {
       renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
     }
@@ -1242,6 +1215,19 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
   if (Blockly.RTL) {
     renderInfo.highlight.push('v', row.height - 2);
   }
+};
+
+/**
+ * Render a function input that is inlined
+ * @param {!Object} renderInfo Current state of our paths
+ * @param {!Object} input The input to render
+ * @param {!Object} connectionsXY Location of block.
+ * @private
+ */
+Blockly.BlockSvg.prototype.renderDrawRightInlineFunctional_ = function(renderInfo,
+    input, connectionsXY) {
+  // Overriden by BlockSvgFunctional
+  throw "Only supported for functional blocks";
 };
 
 /**
