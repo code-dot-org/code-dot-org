@@ -16,6 +16,7 @@
   header_menu_uk_code_org: 'uk.code.org'
 
   choose_country_header: 'Participate Worldwide!'
+  country_al: 'Albania'
   country_ar: 'Argentina'
   country_au: 'Australia'
   country_br: 'Brazil'
@@ -29,6 +30,7 @@
   country_it: 'Italy'
   country_jp: 'Japan'
   country_me: 'Middle East and North Africa'
+  country_my: 'Malaysia'
   country_nz: 'New Zealand'
   country_ro: 'Romania'
   country_ru: 'Russia'
