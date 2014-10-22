@@ -6,10 +6,12 @@ rightbar: blank
 -authentication_required!
 
 -workshop_id = request.splat_path_info[1..-1].to_i
--workshop = DB[:forms].where(id:workshop_id)
+-workshop = DB[:forms].where(id:workshop_id).first
 -pass unless workshop
-  
--section_id = workshop[:section_id_s].to_i
+
+-workshop_data = JSON.parse(workshop[:data]).merge(JSON.parse(workshop[:processed_data]))
+
+-section_id = workshop_data['section_id_s'].to_i
 -pass if section_id == 0
 -# BUGBUG: Display a "workshop not closed" message?
     
