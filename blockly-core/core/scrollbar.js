@@ -748,7 +748,7 @@ Blockly.ScrollbarSvg.prototype.onMouseDownBar_ = function(e) {
  * @private
  */
 Blockly.ScrollbarSvg.prototype.onMouseDownKnob_ = function(e) {
-  this.workspace.editorWorkspace.hideChaff(true);
+  this.workspace_.editorWorkspace.hideChaff(true);
   this.onMouseUpKnob_();
   if (Blockly.isRightButton(e)) {
     // Right-click.
