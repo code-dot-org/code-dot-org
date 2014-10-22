@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+
+def main()
+  Dir.chdir(dashboard_dir) do
+    system "./bin/rails console"
+  end
+end
+
+main
