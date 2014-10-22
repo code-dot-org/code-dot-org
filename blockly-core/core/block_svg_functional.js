@@ -1,6 +1,6 @@
 /**
  * @fileoverview Extension of BlockSvg that allows for some settings specific
- * to functional blocks, including having a header row and a backdrop pattern.
+ * to functional blocks, including having a header row and input markers
  */
 'use strict';
 
@@ -14,10 +14,10 @@ Blockly.BlockSvgFunctional = function (block, options) {
   this.headerHeight = options.headerHeight;
   this.rowBuffer = options.rowBuffer || 0;
   this.patternId_ = null; // updated when we set colour
+  this.inputMarkers_ = {};
 
   Blockly.BlockSvg.call(this, block);
 };
-
 goog.inherits(Blockly.BlockSvgFunctional, Blockly.BlockSvg);
 
 Blockly.BlockSvgFunctional.prototype.initChildren = function () {
@@ -25,15 +25,6 @@ Blockly.BlockSvgFunctional.prototype.initChildren = function () {
     this.block_.getSaturation(), this.block_.getValue());
   var lightColor = goog.color.lighten(goog.color.hexToRgb(rgb), 0.3);
   var lighterColor = goog.color.lighten(goog.color.hexToRgb(rgb), 0.8);
-
-  this.backdrop_ = Blockly.createSvgElement('rect', {
-    x: 0,
-    y: 0,
-    height: 0,
-    width: 0,
-    fill: 'url(#' + this.patternId_ + ')',
-    'clip-path': 'url(#blockClip' + this.block_.id + ')'
-  }, this.svgGroup_);
 
   goog.base(this, 'initChildren');
 
@@ -50,6 +41,16 @@ Blockly.BlockSvgFunctional.prototype.initChildren = function () {
     'clip-path': 'url(#blockClip' + this.block_.id + ')',
     visibility: this.headerHeight > 0 ? 'visible' : 'hidden'
   }, this.svgGroup_);
+
+  for (var i = 0; i < this.block_.inputList.length; i++) {
+    var input = this.block_.inputList[i];
+    if (input.type !== Blockly.FUNCTIONAL_INPUT) {
+      continue;
+    }
+    this.inputMarkers_[input.name] = Blockly.createSvgElement('rect', {
+      fill: 'red' // todo
+    }, this.svgGroup_);
+  }
 };
 
 Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows) {
@@ -58,8 +59,6 @@ Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows
   this.blockClipRect_.setAttribute('d', this.svgPath_.getAttribute('d'));
 
   var rect = this.svgPath_.getBBox();
-  this.backdrop_.setAttribute('height', rect.height);
-  this.backdrop_.setAttribute('width', rect.width);
   this.divider_.setAttribute('width', rect.width - 2);
 };
 
@@ -78,65 +77,53 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRight_ = function(renderInfo,
 };
 
 /**
- * Calls base function, then initializes the pattern (based on the color of
- * the svgPath) and sets the backdrop pattern.
+ * Render a function input that is inlined
+ * @param {!Object} renderInfo Current state of our paths
+ * @param {!Object} input The input to render
+ * @param {!Object} connectionsXY Location of block.
+ * @private
  */
-Blockly.BlockSvgFunctional.prototype.updateToColour_ = function(hexColour) {
-  goog.base(this, 'updateToColour_', hexColour);
+Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
+    function(renderInfo, input, connectionsXY) {
+  // todo (brent) - RTL
+  var inputTopLeft = {
+    x: renderInfo.curX,
+    y: renderInfo.curY + BS.INLINE_PADDING_Y
+  };
 
-  this.addPatternToDefs_();
-  this.backdrop_.setAttribute('fill', 'url(#' + this.patternId_ + ')');
-};
+  var notchStart = BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH;
 
-/**
- * Extracts the color of the svgPath, then creates a pattern using that color,
- * setting this.patternId_ in the process.
- */
-Blockly.BlockSvgFunctional.prototype.addPatternToDefs_ = function () {
-  var color = this.svgPath_.getAttribute('fill');
+  renderInfo.inline.push('M', inputTopLeft.x + ',' + inputTopLeft.y);
+  renderInfo.inline.push('h', notchStart);
+  renderInfo.inline.push(BS.NOTCH_PATH_LEFT);
+  renderInfo.inline.push('H', inputTopLeft.x + input.renderWidth);
+  renderInfo.inline.push('v', input.renderHeight);
+  renderInfo.inline.push('H', inputTopLeft.x);
+  renderInfo.inline.push('z');
 
-  // strip leading #
-  this.patternId_ = 'eyePattern' + color.substr(1);
 
-  if (document.getElementById(this.patternId_)) {
-    return;
+  // var colour = goog.color.hexToRgb();
+  this.inputMarkers_[input.name].setAttribute('x', inputTopLeft.x + 5);
+  this.inputMarkers_[input.name].setAttribute('y', inputTopLeft.y + 15);
+  this.inputMarkers_[input.name].setAttribute('width', input.renderWidth - 10);
+  this.inputMarkers_[input.name].setAttribute('height', 5);
+  this.inputMarkers_[input.name].setAttribute('fill', input.getHexColour());
+
+  renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
+
+  // Create inline input connection.
+  var connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_WIDTH;
+  var connectionY = connectionsXY.y + inputTopLeft.y;
+
+  input.connection.moveTo(connectionX, connectionY);
+  if (input.connection.targetConnection) {
+    input.connection.tighten_();
   }
-
-  var defs = document.getElementById('blocklySvgDefs');
-  var pattern = Blockly.createSvgElement('pattern', {
-    id: this.patternId_,
-    width: 400,
-    height: 400,
-    patternUnits: "userSpaceOnUse",
-    x: 0,
-    y: 0
-  }, defs);
-
-  var y = 55;
-  var height = 5;
-  Blockly.createSvgElement('rect', {
-    fill: color,
-    x: 15,
-    y: y,
-    width: 30,
-    height: height
-  }, pattern);
-
-  Blockly.createSvgElement('rect', {
-    fill: color,
-    x: 65,
-    y: y,
-    width: 30,
-    height: height
-  }, pattern);
-
 };
-
 
 Blockly.BlockSvgFunctional.prototype.dispose = function () {
   goog.base(this, 'dispose');
 
   this.blockClipRect_ = null;
   this.divider_ = null;
-  this.backdrop_ = null;
 };
