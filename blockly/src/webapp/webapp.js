@@ -70,27 +70,27 @@ var drawDiv = function () {
 
 // session is an instance of Ace editSession
 // Usage
-// var lengthArray = calculateCumulativeLength(editor.getSession());
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
 // Need to call this only if the document is updated after the last call.
 function aceCalculateCumulativeLength(session) {
-  var cumLength = [];
+  var cumulativeLength = [];
   var cnt = session.getLength();
   var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
-  cumLength.push(cuml);
+  cumulativeLength.push(cuml);
   var text = session.getLines(0, cnt);
   for (var i = 0; i < cnt; i++) {
     cuml += text[i].length + nlLength;
-    cumLength.push(cuml);
+    cumulativeLength.push(cuml);
   }
-  return cumLength;
+  return cumulativeLength;
 }
 
 // Fast binary search implementation
 // Pass the cumulative length array here.
 // Usage
-// var row = findRow(lengthArray, 0, lengthArray.length, 2512);
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
 // tries to find 2512th character lies in which row.
-function aceFindRow(cumLength, rows, rowe, pos) {
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
   if (rows > rowe) {
     return null;
   }
@@ -100,23 +100,22 @@ function aceFindRow(cumLength, rows, rowe, pos) {
 
   var mid = Math.floor((rows + rowe) / 2);
   
-  if (pos < cumLength[mid]) {
-    return aceFindRow(cumLength, rows, mid, pos);
-  } else if(pos > cumLength[mid]) {
-    return aceFindRow(cumLength, mid, rowe, pos);
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
   }
   return mid;
 }
 
-function createSelection(type, start, end) {
-  // console.log("createSelection: type " + type + ", start " + start + ", end " + end);
+function createSelection(start, end) {
   var selection = BlocklyApps.editor.aceEditor.getSelection();
   var range = selection.getRange();
 
-  range.start.row = aceFindRow(Webapp.cumLength, 0, Webapp.cumLength.length, start);
-  range.start.col = start - Webapp.cumLength[range.start.row];
-  range.end.row = aceFindRow(Webapp.cumLength, 0, Webapp.cumLength.length, end);
-  range.end.col = end - Webapp.cumLength[range.end.row];
+  range.start.row = aceFindRow(Webapp.cumulativeLength, 0, Webapp.cumulativeLength.length, start);
+  range.start.col = start - Webapp.cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(Webapp.cumulativeLength, 0, Webapp.cumulativeLength.length, end);
+  range.end.col = end - Webapp.cumulativeLength[range.end.row];
 
   selection.setSelectionRange(range);
 }
@@ -134,13 +133,12 @@ Webapp.onTick = function() {
       // has been expanded vs. what the user sees in the editor window:
       var start = node.start - Webapp.userCodeStartOffset;
       var end = node.end - Webapp.userCodeStartOffset;
-      var type = node.type;
 
       // Only show selection if the node being executed is inside the user's
       // code (not inside code we inserted before or after their code that is
       // not visible in the editor):
       if ((start > 0) && (start < Webapp.userCodeLength)) {
-        createSelection(type, start, end);
+        createSelection(start, end);
       } else {
         BlocklyApps.editor.aceEditor.getSelection().clearSelection();
       }
@@ -410,10 +408,10 @@ Webapp.execute = function() {
     Webapp.userCodeLength = codeWhenRun.length - Webapp.userCodeStartOffset;
     // Append our mini-runtime after the user's code. This will spin and process
     // callback functions:
-    codeWhenRun += 'while (true) { var obj = getCallback(); ' +
+    codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
       'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
     var session = BlocklyApps.editor.aceEditor.getSession();
-    Webapp.cumLength = aceCalculateCumulativeLength(session);
+    Webapp.cumulativeLength = aceCalculateCumulativeLength(session);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Webapp.Globals namespace)
@@ -632,21 +630,7 @@ Webapp.createHtmlBlock = function (opts) {
   return newDiv;
 };
 
-/**
- * @param scope Object :  The scope in which to execute the delegated function.
- * @param func Function : The function to execute
- * @param data Object or Array : The data to pass to the function. If the function is also passed arguments, the data is appended to the arguments list. If the data is an Array, each item is appended as a new argument.
- */
-var delegate = function(scope, func, data)
-{
-  return function()
-  {
-    var args = Array.prototype.slice.apply(arguments).concat(data);
-    func.apply(scope, args);
-  };
-};
-
-Webapp.onEventFired = function (e, opts) {
+Webapp.onEventFired = function (opts, e) {
   Webapp.eventQueue.push({'fn': opts.func});
 };
 
@@ -656,7 +640,7 @@ Webapp.attachEventHandler = function (opts) {
   // divWebapp DOM node inside of reset()
   document.getElementById(opts.elementId).addEventListener(
       opts.eventName,
-      delegate(this, Webapp.onEventFired, opts));
+      Webapp.onEventFired.bind(this, opts));
 };
 
 /*
