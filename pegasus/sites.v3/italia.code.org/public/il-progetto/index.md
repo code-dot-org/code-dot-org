@@ -2,7 +2,7 @@
 title: Italia Hour of Code Risorse
 nav: about_nav
 social:
-  'og:title' : 'L'Ora di Codice sta arrivando'
+  'og:title' : "L'Ora di Codice sta arrivando"
   'og:description' : "L'Ora del Codice è un movimento globale che sta coinvolgendo decine di milioni di studenti in più di 180 paesi e in più di 30 lingue. Con età dai 4 ai 104 anni."
   'og:image' : "http://italia.code.org/images/ogimage.png"
   'og:image:width' : "1200"
