@@ -32,6 +32,7 @@ levels.ec_simple = {
   'codeFunctions': [
     {'func': 'turnBlack' },
     {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
+    {'func': 'attachEventHandler', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
   ],
 };
 
