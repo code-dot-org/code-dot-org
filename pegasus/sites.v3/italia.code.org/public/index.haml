@@ -4,15 +4,16 @@ tagline: ''
 theme: responsive
 responsivePadMobile: yes
 social:
-  'og:title' : "L'Ora del Codice in Italia"
-  'og:description' : "Per studenti, insegnanti e per tutti: imparare l'informatica in modo semplice e divertente!"
-  'og:image' : ""
-  'og:image:width' : ""
-  'og:image:height' : ""
+  'og:title' : "L'Ora di Codice sta arrivando"
+  'og:description' : "L'Ora del Codice è un movimento globale che sta coinvolgendo decine di milioni di studenti in più di 180 paesi e in più di 30 lingue. Con età dai 4 ai 104 anni."
+  'og:image' : "http://italia.code.org/images/ogimage.png"
+  'og:image:width' : "1200"
+  'og:image:height' : "626"
+  "og:url": "http://italia.code.org"
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
-  "og:video:type": ""
+  "og:video:type": "" 
 --- 
 
 #top{:style=>"margin-top: 40px;"}
@@ -24,16 +25,16 @@ social:
       %h3{:style=>"font-size: 22px; line-height: 26px; font-weight: 400; margin-top: 5px; margin-bottom: 0;"}<
         Dal 23 settembre 2014 in Italia
       %h1{:style=>"font-size: 56px; line-height: 56px; margin: 0;"}<
-        =format_integer_with_commas(fetch_hoc_metrics['countries']['Italy'].to_i).to_s
+        =format_integer_with_commas(fetch_hoc_metrics['countries']['Italy'].to_i - 122288).to_s
       %h3{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 5px; margin-bottom: 0;"}<
         hanno partecipato alla
       %h2{:style=>"font-size: 36px; line-height: 36px; font-weight: 600; margin-top: 5px; margin-bottom: 0;"}<
         Ora del Codice
       %h4.desktop-feature{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 15px;"}<
         Chiunque può imparare
-    %a{:href=>'http://programmailfuturo.it', :style=>"text-decoration: none;"}
+    %a{:href=>'/imparare', :style=>"text-decoration: none;"}
       %button{:style=>"font-size: 19px; font-weight: 500; height: 50px;margin-top: 10px;"}
-        Inizia e "Programma il Futuro"!
+        Inizia
 
     %br
 
@@ -43,8 +44,9 @@ social:
       %li Da 4 a 104 anni
 
 %div{:style=>'clear:both'}
+%h2 In Italia l'Ora del Codice è parte del progetto "<a href="il-progetto">Programma il Futuro</a>"
 
-  %h2 In Italia l'Ora del Codice è parte del progetto "<a href="il-progetto">Programma il Futuro</a>"
+%h2 Tutti concordano nel dire che più studenti dovrebbero imparare l'informatica!  
 
 %br Nel 2013 l'Ora del Codice ha avuto quasi 40 milioni di partecipanti in tutto il mondo, con commenti entusiasti  da parte di studenti, insegnanti e genitori:
 %ul
@@ -58,7 +60,8 @@ social:
   %li "Oggi sono entrati di corsa nell'aula prima dell'inizio delle lezioni e mi hanno chiesto se potevano già iniziare. Sono rimasto sbigottito del loro entusiasmo e della loro curiosità per l'Ora del Codice." - Insegnante
   %li "I miei tre figli son tornati a casa dalla scuola ieri gridando di entusiasmo per l'Ora del Codice. Quella di 6 anni mi ha spiegato come programmare Angry Birds, mentre quello di 10 proclamava 'Da grande farò l'ingegnere informatico. E' il lavoro che fa per me. E' il mio DESTINO!' " - Genitore
 
-.desktop-feature
-  %h2 Tutti concordano nel dire che più studenti dovrebbero imparare l'informatica!
-  
-  //= view :top_quotes
+%h2 Collaboriamo con il MIUR e il CINI per portare l'Ora del Codice in Italia.  
+%div{:style=>'float:left; width: 20%; padding-right: 10px; padding-left: 10px'}
+  %img{:src=>"/images/miur_new.png", :style=>'max-width: 160px; max-height: 160px;'}
+%div{:style=>'float:left; width: 20%; padding-right: 10px; padding-left: 10px'}
+  %img{:src=>"/images/cini.png", :style=>'max-width: 140px; max-height: 140px;'}    
