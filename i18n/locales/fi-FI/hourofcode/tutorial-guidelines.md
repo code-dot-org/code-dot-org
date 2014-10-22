@@ -6,9 +6,11 @@ layout: wide
 
 # Ohjeet Koodituntiin ja Tietotekniikan opetusviikkoon
 
-Code.org tulee järjestämään useita Koodaustunti-oppitunteja Code.org:in, Koodaustunnin ja Tietotekniikan opetusviikon sivuilla. Tämänhetkinen lista oppitunneista löytyy osoitteesta [code.org/learn](http://code.org/learn).
+**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
 
-Haluamme pitää monia mielnkiintoisia aktiviteetteja, mutta pääpaino on kokemuksen optimointi FI ja opettajille, joilla ei ole paljoa kokemusta tietotekniikasta. Käytä tätä dokumenttia ohjataksesi oman toimintasi luomista, suunnattuna käyttäjälle, jolla ei ole aikaisempaa kokemusta koodaamisesta, ohjelmoinnista ja tietotekniikasta.
+Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
+
+We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
 <a id="top"></a>
 
@@ -27,9 +29,9 @@ Haluamme pitää monia mielnkiintoisia aktiviteetteja, mutta pääpaino on kokem
 
 ## Miten oppitunnit tullaan arvioimaan lisäämistä varten
 
-Tietotekniikan kouluttajien komitea tulee järjestämään oppitunnit perustuen laadullisiin ja määrällisiin mittareihin, sisältäen kyselytuloksia laajemmalta kouluttajien joukolta.
+A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Tutoriaalit listataan ylemmäs, jos ne:**
+**Tutorials will be listed higher if they are:**
 
   * ovat korkealaatusisia
   * ovat itsestään ohjautuvia, eivät tarvitse ohjeita
@@ -40,7 +42,7 @@ Tietotekniikan kouluttajien komitea tulee järjestämään oppitunnit perustuen 
   * edistävät kaikkien väestörakenteen ryhmien oppimista (erityisesti aliedustetut ryhmät)
   * eivät keskity pelkkään HTML+CSS-verkkosivusuunnitteluun - (tavoitteenamme on tietotekniikka, ei pelkkä HTML-koodaus)
 
-**Oppitunnit listataan alemmas, jos ne:**
+**Tutorials will be listed lower if they are:**
 
   * ovat huonolaatuisia
   * ovat kehittyneemmän tason opettamista (ei aloittelijoille)
@@ -49,7 +51,7 @@ Tietotekniikan kouluttajien komitea tulee järjestämään oppitunnit perustuen 
   * ovat tietylle sukupuolelle taivutettuja (esim. ovat teemaltaan suunnattuja ensisijaisesti pojille)
   * toimivat ohjaavana tekijänä oppimisalustalle, joka veloittaa lukukausimaksuja
 
-**Oppitunteja EI listata, jos ne:**
+**Tutorials will NOT be listed if they:**
 
   * vaativat paljon opettajan osallistumista ja valmistautumista (eli eivät ole itsestään ohjautuvia)
   * eivät ole suunniteltu olemaan noin tunnin pituisia
@@ -59,13 +61,13 @@ Tietotekniikan kouluttajien komitea tulee järjestämään oppitunnit perustuen 
   * keskittyvät vain HTML+CSS-verkkosivusuunnitteluun
   * ovat lähetetty lähettämisen määräajan jälkeen tai puuttellisten tietojen kanssa (katso alla oleva)
 
-Viime kädessä Koodaustunnin pääpaino on opiskelijoiden ja opettajien tietotekniikkaan osallistumisen laajentaminen ja sen näyttäminen, että tietotekniikka on kaikille helposti lähestyttävä ja "helpompaa kuin luulet". Tämä pääpaino on monella tavalla paremmin saavutettavissa antamalla opiskelijoille ja opettajille vähemmän ja yksinkertaisempia valintoja, keskittyen korkealaatuisimpiin vaihtoehtoihin ensikäyttäjälle.
+Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
 
-Huomaa myös, että vuoden 2013 Tietotekniikan opetusviikko oli fantastinen menestys opettajien ja opiskelijoiden vastauksista mitattuna - 9.-23. joulukuuta mukana oli 20 miljoonaa osallistujaa ja 97% heistä sanoivat nauttineensa siitä ja haluavansa toistaa kampanjan!
+Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
 
-Tämän seurauksena nykyiset listaukset ovat ehdottomasti "tarpeeksi hyviä" ja pääsyy uusien oppituntien Koodaustunnin listaukseen lisäämiseen ei ole valintojen lisääminen vaan laadun (tai tuoreuden) nostaminen opiskelijoille tai vaihtoehtojen lisääminen ihmisille, jotka eivät puhu englantia ottaen huomioon vuoden 2014 kampanjan maailmanlaajuisen luonteen.
+As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
 
-[**Palaa alkuun**](#top)
+[**Back to the top**](#top)
 
 <a id="guidelines"></a>
 
@@ -82,15 +84,15 @@ Tämän seurauksena nykyiset listaukset ovat ehdottomasti "tarpeeksi hyviä" ja 
       * **Okei, mutta ei suositeltu:** Asennettava sovellus, työpöytäsovellus tai pelikonsoli -kokemukset.
   * **Muoto:** Itseohjautuvat oppaat tai oppitunnit, valinnaisesti opettajan helpottamana. Siinä tulisi olla ohjeita opiskelijalle eikä sen tulisi olla avoin tunnin mittainen haaste. Ihannetapauksessa ohjeet ja oppaat on yhdistetty suoraan ohjelmointialustaan välilehtien ja ikkunoiden jatkuvan vaihtelun välttämiseksi.
 
-[**Palaa alkuun**](#top)
+[**Back to the top**](#top)
 
 <a id="submit"></a>
 
 ## Miten lähettää (Erääntyy 10/1/2014)
 
-Vieraile [Koodaustunnin toimintojen lähettämissivulla](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) ja seuraa ohjeita lähettääksesi oppaan.
+Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
 
-**Mitä tarvitset:**
+**What you’ll need:**
 
   * Nimesi, logo (jpg, png, jne.)
   * Linkki kuvakaappaukseen tai markkinointikuvaan Koodaustunti-toiminnasta. Kuvien/kuvakaappauksien tulee olla tarkalleen 446 x 335 resoluutioisia. Jos sopivaa kuvaa ei toimiteta, saatamme ottaa oman kuvakaappauksemme oppaastasi TAI saatamme päättää olla listaamatta sitä.
@@ -138,48 +140,48 @@ Vieraile [Koodaustunnin toimintojen lähettämissivulla](https://docs.google.com
       * Ei-verkkotoiminnasta: 
           * Toiminnan paperiversion latauksien lukumäärä (jos sovellettavissa)
 
-[**Palaa alkuun**](#top)
+[**Back to the top**](#top)
 
 <a id="design"></a>
 
 ## Ehdotuksia aktiviteetin suunnitteluun
 
-**Sisällytä Tietotekniikan opetusviikon logo oppaaseesi.** Voit sisällyttää Tietotekniikan opetusviikon logon ([pieni](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) tai [suuri](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) oppaaseesi, mutta tämä ei ole pakollista. Voit ottaa myös yhteyttä meihin pyytääksesi erityistä lupaa käyttää "kumppanuudessa Code.org:in kanssa" -logoa. ***Tätä logoa voidaan käyttää vain, jos erityislupa on myönnetty kirjallisesti Code.org:in toimesta.*** Saatamme päätyä luomaan Koodaustunti-logon, mutta tällä hetkellä meillä ei ole sellaista. Missään tapauksessa ei ole sallittua käyttää Code.org:in logoa ja nimeä. Molemmat ovat tavaramerkittyjä eivätkä ne voi olla sekoitettuna kolmannen osapuolen tuotemerkin kanssa.
+**Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
 
-**Varmista, että keskimääräinen opiskelija voi lopettaa mukavasti tunnissa.** Harkitse avoimen toiminnan lisäämistä lopussa opiskelijoille, jotka liikkuvat nopeammin oppitunnin läpi. Muista, että useimmat lapset ovat täysin aloittelijoita tietotekniikassa ja koodaamisessa.
+**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
 
-**Sisällytä opettajan materiaalia.** Useimmat toiminnat tulisi olla opiskelija-ohjattuja, mutta jos toiminnan täytyy olla helpotettu tai johdettu opettajan toimesta, sisällytä selkeät ja yksinkertaiset ohjeet opettajalle opettaja-muistiinpanojen muodossa erillisessä linkissä toiminnassasi. Eivät ainoastaan opiskelijat ole aloittelijoita, jotkut opettajat ovat myös. Sisällytä tietoa kuten:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
   * Oppaamme toimii parhaiten seuraavilla alustoilla ja selaimilla
   * Toimiiko se älypuhelimilla? Tableteilla?
   * Suositteletko parityöskentelyä? 
   * Huomioitavaa käytöstä luokkahuoneessa? Esim. jos toiminnassasi on videoita, neuvo opettajia näyttämään videot heijastetulla näytöllä, jotta koko luokka voisi katsoa sen yhdessä
 
-**Sisällytä palautetta toimintasi lopussa.** (Esim: "Sinä suoritit 10 tasoa ja opit silmukoista! Hienoa työtä!")
+**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Sisällytä sosiaalista mediaa.** Kannusta opiskelijoita lähettämään tuloksensa sosiaaliseen mediaan (tapauksen mukaan), kun he ovat valmiita, esimerkiksi "Olen tehnyt Koodaustunnin ________ kanssa. Oletko sinä? #HourOfCode" tai "Olen tehnyt #HourOfCode osana #CSEdWeek. Oletko sinä? @Scratch." Käytä hashtagia **#HourOfCode** (isoilla H, O ja C -kirjaimilla)
+**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Luo toimintasi muilla kielillä englannin lisäksi.** Keskitymme tämän kampanjan kanssa kansainvälisesti tänä vuonna ja haluaisimme useita toimintoja tarjottavaksi osallistujille, jotka eivät puhu englantia.
+**Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
 
-**Selitä tai yhdistä toiminta yhteiskunnallisesti merkittävään yhteyteen.** Ohjelmoinnista tulee supervoima, kun opiskelijat näkevät, miten se voi muuttaa maailmaa paremmaksi!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Älä vaadi rekisteröitymistä tai maksua ennen kuin opiskelijat voivat kokeilla opastasi.** Oppaat, jotka vaativat rekisteröitymistä tai maksua, eivät tule listatuksi
+**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
 
-**Varmista, että opastasi voidaan käyttää [pariohjelmointikaavassa](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
+**Make sure your tutorial can be used in a [Pair Programming paradigm](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
 
-Kolme sääntöä pariohjelmoinnista kouluympäristössä:
+The three rules of pair programming in a school setting:
 
   * Kuljettaja hallitsee hiirtä ja näppäimistöä.
   * Suunnistaja tekee ehdotuksia, huomauttaa virheitä ja kysyy kysymyksiä. 
   * Opiskelijoiden tulisi vaihtaa rooleja vähintään kaksi kertaa istunnossa.
 
-Pariohjelmoinnin edut:
+Benefits of Pair Programming:
 
   * Opiskelijat voivat auttaa toisiaan opettajaan luottamisen sijaan
   * Näyttää, että koodaus ei ole yksintoimintaa vaan siihen liittyy sosiaalista vuorovaikutusta
   * Kaikissa luokkahuoneissa ei ole tarpeeksi tietokoneita, jotta jokainen voisi olla yksin
 
-[**Palaa alkuun**](#top)
+[**Back to the top**](#top)
 
 <a id="tm"></a>
 
@@ -197,7 +199,7 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
   4. No use of "Hour of Code" in app names
 
-[**Palaa alkuun**](#top)
+[**Back to the top**](#top)
 
 <a id="pixel"></a>
 
@@ -217,7 +219,7 @@ IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Palaa alkuun**](#top)
+[**Back to the top**](#top)
 
 <a id="promote"></a>
 
@@ -231,7 +233,7 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
   * Host a local event or ask your employees to host an event at local schools or community groups.
   * See our resource kit for further information (coming soon).
 
-[**Palaa alkuun**](#top)
+[**Back to the top**](#top)
 
 <a id="disabilities"></a>
 
@@ -239,4 +241,4 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
 
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Palaa alkuun**](#top)
+[**Back to the top**](#top)

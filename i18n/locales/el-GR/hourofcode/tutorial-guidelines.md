@@ -6,9 +6,11 @@
 
 # Οδηγός σεναρίων εκμάθησης για την Ώρα του Κώδικα και την Εκπαιδευτική Εβδομάδα Πληροφορικής (CSEdWeek)
 
-Η Code.org θα φιλοξενήσει μια πληθώρα δραστηριοτήτων στους ιστότοπους Code.org, Hour of Code, και CSEdWeek. Ο τρέχων κατάλογος βρίσκεται στο <http://code.org/learn>.
+**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
 
-Θα θέλαμε να φιλοξενήσουμε μια ποικιλία από ελκυστικές επιλογές , αλλά ο πρωταρχικός στόχος είναι να βελτιστοποιήσουμε την εμπειρία για μαθητές και καθηγητές που είναι νέοι στην επιστήμη των υπολογιστών. Παρακαλούμε χρησιμοποιήστε το παρών έγγραφο ως οδηγό για τη δημιουργία της δικής σας δραστηριότητας, στοχεύοντας στο χρήστη που δεν έχει υπόβαθρο στη δημιουργία κώδικα, τον προγραμματισμό και την επιστήμη των υπολογιστών.
+Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
+
+We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
 <a id="top"></a>
 
@@ -27,9 +29,9 @@
 
 ## Τρόπος αξιολόγησης των σεναρίων προς ανάρτηση
 
-Τα σενάρια εκμάθησης που θα υποβληθούν θα βαθμολογήσει μια επιτροπή από εκπαιδευτές της επιστήμης υπολογιστών, βασιζόμενη σε ποιοτικά και ποσοτικά κριτήρια, συμπεριλαμβανομένων και συγκεντρωτικών αποτελεσμάτων από ένα ευρύτερο σύνολο εκπαιδευτών.
+A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Τα σενάρια θα αναρτηθούν πιο ψηλά στον κατάλογο εάν:**
+**Tutorials will be listed higher if they are:**
 
   * είναι υψηλής ποιότητας
   * είναι αυτο-κατευθυνόμενα, χωρίς να απαιτούν κάποια επεξήγηση
@@ -40,7 +42,7 @@
   * προωθούν τη μάθηση σε όλες τις δημογραφικές ομάδες (ιδιαίτερα στις ομάδες με μερική εκπροσώπηση)
   * δεν αποτελούν απλή σχεδίαση HTML+CSS - (ο στόχος μας είναι η επιστήμη των υπολογιστών, όχι απλά ο προγραμματισμός σε HTML)
 
-**Τα σενάρια θα αναρτηθούν πιο χαμηλά στον κατάλογο εάν:**
+**Tutorials will be listed lower if they are:**
 
   * είναι χαμηλής ποιότητας
   * αφορούν σε προχωρημένο επίπεδο διδασκαλίας (όχι για αρχάριους)
@@ -49,7 +51,7 @@
   * κλίνουν προς ένα συγκεκριμένο φύλο (π.χ. η θεματολογία αφορά κυρίως αγόρια)
   * χρησιμοποιούνται ως μέσο προώθησης προς εκπαιδευτικές πλατφόρμες που χρεώνουν δίδακτρα
 
-**Τα σενάρια ΔΕΝ θα αναρτηθούν στον κατάλογο εάν:**
+**Tutorials will NOT be listed if they:**
 
   * απαιτούν υψηλό βαθμό συμμετοχής και προετοιμασίας από τον εκπαιδευτκό (δηλαδή να μην είναι αυτοκαθοδηγούμενα για τους μαθητές)
   * δεν έχουν σχεδιαστεί να διαρκούν (περίπου) μια ώρα
@@ -59,13 +61,13 @@
   * επικεντρώνονται μόνο σε σχεδίση HTML + CSS
   * υποβάλλονται μετά την προθεσμία υποβολής, ή με ελλειπή πληροφόρηση (βλ. παρακάτω)
 
-Τελικά, ο στόχος της εκστρατείας της Ώρας του Κώδικα είναι να διευρυνθεί η συμμετοχή των μαθητών και των εκπαιδευτικών στην επιστήμη των υπολογιστών και να τους δείξει ότι η επιστήμη των υπολογιστών είναι προσιτή σε όλους και "πιο εύκολη απ' όσο νομίζετε". Από πολλές απόψεις, αυτός ο στόχος γίνεται περισσότερος εφικτός δίνοντας σε μαθητές και εκπαιδευτικούς λιγότερες και απλούστερες λύσεις, με έμφαση σε υψηλής ποιότητας επιλογές για τον χρήστη που ασχολείται πρώτη φορά.
+Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
 
-Σημείωσε επίσης, ότι η Εκπαδευτική Εβδομάδα Πληροφορικής (CSEdWeek) του 2013 σημείωσε μια καταπληκτική επιτυχία όπως προκύπτει από την ανταπόκριση εκπαιδευτικών και μαθητών - 20 εκ. συμμετέχοντες στο διάστημα 9-23 Δεκεμβρίου με το 97% αυτών να δηλώνει ότι το απόλαυσε και θα το επεναλάμβανε!!
+Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
 
-Σας αποτέλεσμα, οι υπάρχοντες κατάλογοι, είναι σίγουρα "αρκετά καλοί" και ο κύριος λόγος για την προσθήκη σεναρίων στους καταλόγους της Ώρας του Κώδικα δεν είναι η διεύρυνση των επιλογών αλλά η αύξηση της ποιότητας (ή η ανανέωση) για τους μαθητές, ή η επέκταση των επιλογών για τους μη αγγλόφωνούς δεδομένου του διεθνούς χαρακτήρα της εκστρατείας του 2014.
+As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
 
-[**Πίσω στην αρχή**](#top)
+[**Back to the top**](#top)
 
 <a id="guidelines"></a>
 
@@ -82,15 +84,15 @@
       * **Καλοί, αλλά δεν προτιμώνται :** εφαρμογές που απαιτούν εγκατάσταση, εφαρμογές για υπολογιστή ή που προφέρουν εμπειρία μέσα από κονσόλες παιχνιδιών.
   * **Μορφή:** Αυτοκαθοδηγούμενα σενάρια ή μαθήματα, που προαιρετικά απαιτούν τη συνδρομή του εκπαιδευτικού. Πρέπει να υπάρχουν οδηγίες για του μαθητές και όχι μια χωρίς στόχο απασχόληση μιας ώρας. Στην ιδανική περίπτωση, οι οδηγίες και τα σενάρια, βρίσκονται ενσωματωμένα στην προγραμματισική πλατφόρμα, ώστε να μην εναλλάσσονται καρτέλες ή παράθυρα μεταξύ του σεναρίου και της προγραμματιστικής πλατφόρμας.
 
-[**Πίσω στην αρχή**](#top)
+[**Back to the top**](#top)
 
 <a id="submit"></a>
 
 ## Τρόπος υποβολής (προθεσμία 1/10/2014)
 
-Επισκέψου την [σελίδα Υποβολής Δραστηριοτήτων της Ώρας του Κώδικα](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) και ακολούθησε τα βήματα για να υποβάλεις το σενάριό σου.
+Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
 
-**Τι θα χρειαστείς:**
+**What you’ll need:**
 
   * Το όνομά σου, λογότυπο (jpg, png, κλπ.)
   * Διεύθυνση URL για screenshot ή διαφημιστική αφίσα για την Ώρα του Κώδικα. Οι εικόνες/screenshots πρέπει να έχουν ανάλυση 446 x 335 ακριβώς. Εάν δεν δοθεί κατάλληλη εικόνα, θα πάρουμε ένα screenshot από το σενάριό σου Ή μπορεί να μην το αναρτήσουμε.
@@ -138,56 +140,56 @@
       * Για τις offline δρατηριότητες 
           * Αριθμός λήψεων των δραστηριοτήτων σε χαρτί (κατά περίπτωση)
 
-[**Πίσω στην αρχή**](#top)
+[**Back to the top**](#top)
 
 <a id="design"></a>
 
 ## Προτάσεις για το σχεδιασμό της δραστηριότητάς σας
 
-**Συμπεριλάβετε το λόγότυπο της CSEdWeek στο σενάριό σας.** Μπορείτε να συμπεριλάβετε το λογότυπο της CSEdWeek ([μικρό](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) ή [μεγάλο](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) στο σενάριό σας, χωρίς αυτό να είναι απαρείτητο. Μπορείτε επίσης να επικοινωνήσετε μαζί μας και να ζητήσετε ειδική άδεια για το λογόρυπο "Σε συνεργασία με το Code.org". ***Το συγκεκριμένο λογότυπο μπορεί να χρησιμοποιηθεί μόνο εάν δοθεί γραπτή άδεια από το Code.org.*** Ίσως να δημιουργήσουμε ένα λογότυπο για την Ώρα του Κώδικα, αλλά μέχρι στιγμής δεν έχουμε κάποιο. Σε καμία περίπτωση δεν μπορεί να χηριμοποιηθεί το λογότυπο και το όνομα του Code.Org. Και τα δύο αποτελούν εμπορικά σήματα και δεν μπορούν να αναμινγύονται με άλλα εμπορικά ονόματα.
+**Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
 
-**Σιγουρευτείτε ότι ο μέσος μαθητής μπορεί να λολοκληρώσει με άνεση μέσα σε μία ώρα.** Εξετάστε την περίπτωση να προσθέσετε μια ελεύθερη, χωρίς στόχο, δραστηριότητα στο τέλος για τους μαθητές που κινήθηκαν πιο γρήγορα στο μάθημα. Συμπεριλαβεται σημειώσεις για τον εκπαιδευτικό.
+**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
 
-**Σημειώσεις για τον εκπαιδευτικό.** Οι περισσότερες δραστηριότητες οφείλουν να είναι αυτοκαθοδηγούμενες για του μαθητές, αλλά εάν μια δραστηριότητα απαιτεί τη συνδρομή του εκπαιδευτικού, παρακαλούμε να συμπεριλάβετε σαφείς και απλές οδηγίες για τον εκπαιδευτικό σε διαφορετικό URL από αυτό της δραστηριότητά σας. Δεν υπάρχουν μόνο αρχάριοι μαθητές, αλλά και μερικοί καθηγητές επίσης. Συμπεριλάβετε πληροφορίες όπως:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
   * Το σενάριο εκμάθησης λειτουργεί καλύτερα στις παρακάτω πλατφόρμες και προγράμματα περιήγησης
   * Λειτουρφεί σε smartphones; Σε ταμπλέτες;
   * Προτείνετε τον προγραμματισμό σε ζευγάρια; 
   * Απαιτήσεις για εφαρμογή στην αίθουσα; π.χ. εάν υπάρχουν βίντεο, συμβουλέψτε τους εκπαιδευτικούς να δείξουν τα βίντεο σε μια οθόνη προβολής ώστε να το παρακολουθήσει όλη η τάξη μαζί
 
-**Ενσωματώστε ανατροφοδότηση κατά την ολοκήρωση της δραστηριότητας.** (Π.χ.: “Ολοκλήρωσες 10 επίπεδα και έμαθες για τις δομές επανάληψης! Σπουδαία!”)
+**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Ενσωματώστε μέσα κοινωνικής δικτύωσης.** Ενθαρρύνετε τους μαθητές να δημοσιεύσουν στα μέσα κοινωνικής δικτύωσης (κατά περίπτωση) όταν ολοκληρώνουν, για παράδειγμα “Μόλις ολοκλήρωσα μια Ώρα του Κώδικα. Εσύ; #HourOfCode” ή “Ολοκλήρωσα μια #HourofCode ως μέρος της #CSEdWeek. Εσύ; @Scratch.” Χρησιμοποιήστε το hashtag **#HourOfCode** (ή με κεφαλαία γράμματα H, O, C)
+**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Δημιουργήστε τη δραστηριότητά σας σε γλώσσες πέραν της Αγλγικής.** Δίνουμε έναν διεθνή χαρακτήρα σε αυτή την εκστρατεία και θα θέλαμε να έχουμε έναν σημαντικό αριθμό δραστηριοτήτων σε μη αγγλόφωνους συμμετέχοντες.
+**Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
 
-**Εξηγήστε ή συνδέστε τη δραστηριότητά σας με σημαντικά θέματα του πολιτισμού μας.** Ο προγραμματισμός γίνεται υπερδύναμη όταν οι μαθητές δουν ότι μπορεί να αλλάξει τον κόσμο προς το καλύτερο!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Αποφύγεται τις διαδικασίες εγγραφής ή πληρωμής πριν οι μαθητές ξεκινήσουν να ακολουθούν το σενάριό σας.** Τα σενάρια εκμάθησης που απαιτούν εγγραφή ή πληρωμή δεν θα αναρτώνται
+**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
 
-**Σιγουρευτείτε πως το σενάριό σας μπορεί να χρησιμοποιηθεί σε ένα [παράδειγμα Προγραμματισμού κατά Ζεύγη](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
+**Make sure your tutorial can be used in a [Pair Programming paradigm](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
 
-Οι τρεις κανόνες του προγραμματισμού σε ζεύγη σε ένα σχολείο:
+The three rules of pair programming in a school setting:
 
   * Ο Οδηγός ελέγχει το ποντίκι και το πληκτρολόγιο.
   * Ο Παρατηρήτής κάνει προτάσεις, επισημαίνει τα λάθη και θέτει ερωτήματα. 
   * Οι μαθητές πρέπει να εναλλάσουν ρόλους τουλάχιστον δύο φορές σε ένα μάθημα.
 
-Οφέλη Προγραμματισμού κατά Ζεύγη:
+Benefits of Pair Programming:
 
   * Οι μαθητές μπορούν να βοηθούν ο ένας τον άλλο αντί να βασίζονται στον εκπαιδευτικό
   * Δείχνει ότι ο προγραμματισμός δεν είναι μια ατομική δραστηριότητα, αλλά μια δραστηριότητα που περιλαμβάνει κοινωνική αλληλεπίδραση
   * Δεν έχουν όλες οι αίθουσες ή τα εργαστήρια αρκετούς υπολογιστές για μια 1:1 εμπειρία
 
-[**Πίσω στην αρχή**](#top)
+[**Back to the top**](#top)
 
 <a id="tm"></a>
 
 ## Βασικές κατευθύνσεις
 
-Με ~40 εκατομμύρια μαθητές να έχουν δοκιμάσει την Ώρα του Κώδικα και με πάνω από το 97% των εκπαιδευτικών να μας ζητούν να επαναλαμβάνουμε την εκδήλωση κάθε χρόνο, λαμβάνουμε μέτρα ώστε καθιερώσουμε την Ώρα του Κώδικα ως ένα κίνημα που μπορεί να επαναλαμβάνεται σε ετήσια βάση με περισσότερη συνέπεια και σιγουριά.
+With ~40 million students having tried the Hour of Code, and over 97% of participating teachers asking us to repeat the event annually, we are taking steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
-Ένα τμήμα αυτού είναι η προσταστία του εμπορικού σήματος "Ώρα του Κώδικα" προς αποφυγή σύγχησης. Πολλοί από τους συνεργάτες μας που δημιουργούν σενάρια εκμάθησης έχουν χρησιμοποιήσει το "Ώρα του Κώδικα" στις ιστοσελίδες τους. Δεν θέλουμε να εμποδίσουμε αυτή τη χρήση, αλλά θέλουμε να σιγουρέψουμε ότι εντάσσεται σε κάποια όρια:
+One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
 
   1. Οποιαδήποτε αναφορά στην "Ώρα του Κώδικα" θα δεν πρέπει να χρησιμοποιείται έτσι ώστε να φαίνεται ότι πρόκειται για δικό σας λογότυπο αλλά ότι αφορά στην "Ώρα του Κώδικα" ως ένα λαϊκό κίνημα. Ένα καλό παράδειγμα: "Λάβε μέρος στην Ώρα του Κώδικα στο ACMECorp.com". Κακό παράδειγμα: "Δοκίμασε την Ώρα του Κώδικα από την ACME Corp"
   2. Να χρησιμοποιείτε την ένδειξη ΤΜ" ως δείκτη στις πιο εμφανής θέσεις όπου αναφέρετε την "Ώρα του Κώδικα", τόσο στις περιγραφές του ιστότοπού σας όσο και σε αυτές των εφαρμογών σας
@@ -197,33 +199,33 @@
 
   4. Μην χρησιμοποιείται το "Ώρα του Κώδικα" ως ονόματα εφαρμογών
 
-[**Πίσω στην αρχή**](#top)
+[**Back to the top**](#top)
 
 <a id="pixel"></a>
 
 ## Εικονοστοιχείο ανίχνευσης
 
-Για να μπορούμε να προσδιορίσουμε με μεγαλύτερη ακρίβεια τις συμμετοχές ζητάμε από κάθε τρίτο να συμπεριλάβει εικόνες ανίχνευσης 1 εικονοστοιχείου στην πρώτη και στην τελευταία σελίδα των σεναρίων εκμάθησης (Μια μια αρχική εικόνα 1 εικονοστοιχείου στην αρχική σελίδα και μια τελική εικόνα μια στην τελική σελίδα. Και όχι στις ενδάμεσες σελίδες).
+In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
 
-Αυτό θα μας επιτρέψει να καταμετρήσουμε τους χρήστες που οδηγούνται απευθείας στην ιστοσελίδα σας για να πραγματοποιήσουν την Ώρα του Κώδικα, ή τους χρήστες που σας επισκέπτονται με την URL διεύθυνση που γράφει ο εκπαιδευτικός στον πίνακα της τάξης. Θα οδηγήσει σε ακριβέστερη καταμέτρηση των συμμετοχών του σεναρίου σας, το οποίο θα σας βοηθήσει να προσελκύσετε χρήστες. Εάν ενσωματώσετε το εικονοστοιχεία στο τέλος του σεναρίου θα μπορούμε επίσης να μετρήσουμε τα ποσοστά ολοκλήρωσης των σεναρίων εκμάθησης.
+This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
 
-Εάν το σενάριό σας εγγριθεί και συμπεριληφθεί στην τελική σελίδα των σεναρίων εκμάθησης, το Code.org θα σας δώσει ένα μοναδικό εικονοστοιχείο ανίχνευσης για να το ενσωματώσετε στον οδηγό σας. Δείτε το παρακάτω παράδειγμα.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-***ΣΗΜΕΙΩΣΗ: αυτό δεν είναι σημαντικό να γίνει για εφαρμογές που απαιτούν εγκατάσταση (εφαρμογές iOS/Android ή εφαρμογές για υπολογιστές)***
+***NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)***
 
-**Παράδειγμα εικονοστοιχείων ανίχνευσης για το AppInventor:**
+**Example tracking pixels for AppInventor:**
 
 IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Πίσω στην αρχή**](#top)
+[**Back to the top**](#top)
 
 <a id="promote"></a>
 
 ## Πώς να προωθήσετε τα σενάριά σας, την Εκπαιδευτική Εβδομάδα Πληροφορικής (CSEdWeek) και την Ώρα του Κώδικα
 
-Καλούμε όλους να προωθούν τα 1-ώρας σενάριά τους στους χρήστες σας. Παρακαλούμε οδηγήστε τους στην δική σας σελίδα της Ώρας του Κώδικα. Οι χρήστες σας είναι πολύ πιο πιθανό να ανταποκριθούν σε ένα δικό σας ηλεκτρονικό μήνυμα για το σενάριό σας. Χρησιμοποιήστε τη διεθνή εκστρατεία της Ώρας του Κώδικα για την Εκπαιδευτική Εβδομάδα Πληροφορικής για να ενθαρρύνετε τους χρήστες να προσκαλέσουν άλλου να συμμετέχουν και να μας βοηθήσουν να αγγίξουμε τα 100 εκατομμύρια συμμετέχοντες.
+We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 
   * Αναδείξτε την Ώρα του Κώδικα και την Εκπαιδευτική Εβδομάδα Πληροφορικής στην ιστοσελίδα σας.  
     Π.χ.: <http://www.tynker.com/hour-of-code>
@@ -231,12 +233,12 @@ IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
   * Διοργανώστε μια τοπική εκδήλωση ή ζητήστε από τους υπαλλήλους σας να διοργανώσουν μια εκδήλωση στα σχολεία ή στην γειτονιά τους.
   * Δείτε το κουτί παροχών μαν για περισσότερες πληροφορίες (προσεχώς).
 
-[**Πίσω στην αρχή**](#top)
+[**Back to the top**](#top)
 
 <a id="disabilities"></a>
 
 ## Ειδική σημείωση για τους μαθητές με αναπηρία
 
-Εάν δημιουργήσετε έναν οδηγό εκμάθησης σχεδιασμένο για άτομα με προβλήματα όρασης, θα θέλαμε πολύ να το τονίσουμε για τους αναγνώστες με αναγνώστες-οθόνης. Δεν έχουμε λάβει ακόμα ένα τέτοιο σενάριο και θα ήμασταν πρόθυμοι να συμπεριλάβουμε έναν ως επιλογή για αυτούς τους μαθητές.
+If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Πίσω στην αρχή**](#top)
+[**Back to the top**](#top)

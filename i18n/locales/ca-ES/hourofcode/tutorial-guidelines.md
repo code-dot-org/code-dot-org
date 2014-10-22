@@ -1,10 +1,12 @@
 * * *
 
-layout: wide
+maquetació: àmplia
 
 * * *
 
-# Tutorial guidelines for the Hour of Code and Computer Science Education Week
+# Directrius per fer guies per l'Hora del Codi i la Setmana per la Educació en Informàtica
+
+**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
 
 Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
 
@@ -12,52 +14,52 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 <a id="top"></a>
 
-## Index:
+## Índex:
 
-  * [How tutorials will be evaluated for inclusion](#inclusion)
-  * [General guidelines for creating an Hour of Code activity](#guidelines)
-  * [How to submit (Due 10/1/2014)](#submit)
-  * [Suggestions for designing your activity](#design)
-  * [Trademark Guidelines](#tm)
-  * [Tracking Pixel](#pixel)
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)
-  * [A note for students with disabilities](#disabilities)
+  * [Com les guies seran avaluades per a la seva inclusió](#inclusion)
+  * [Directrius generals per a la creació d'una activitat "Hora del Codi"](#guidelines)
+  * [Com presentar (fins al 10/1/2014)](#submit)
+  * [Suggeriments per a dissenyar la seva activitat](#design)
+  * [Indicar les directrius](#tm)
+  * [Seguiment de píxels](#pixel)
+  * [Promovent les seves guies, CSEdWeek i "Hora del Codi"](#promote)
+  * [Una nota per als estudiants amb discapacitat](#disabilities)
 
 <a id="inclusion"></a>
 
-## How tutorials will be evaluated for inclusion
+## Com les guies seran avaluades per a la seva inclusió
 
 A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
 **Tutorials will be listed higher if they are:**
 
-  * high quality
-  * self-directed, don’t require any instruction
-  * designed for beginners
-  * designed as a ~ 1 hour activity
-  * work across many OS/device platforms, including mobile and tablets
-  * work across multiple languages
-  * promote learning by all demographic groups (esp under-represented groups)
-  * not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
+  * alta qualitat
+  * auto-dirigits, no requereixen cap instrucció
+  * dissenyats per a principiants
+  * dissenyat com una activitat ~ d'1 hora
+  * treballi a través de moltes SO/plataformes, incloent-hi mòbils i tabletes
+  * treballi a través de diversos idiomes
+  * promogui l'aprenentatge de tots els grups demogràfics (especialment grups sub-representats)
+  * disseny web no purament enfocat a HTML+CSS - (el nostre objectiu és la informàtica, no només codificació de HTML)
 
 **Tutorials will be listed lower if they are:**
 
-  * lower quality
-  * more advanced level of teaching (not for beginners)
-  * have a limited number of supported OS/device platforms - for Web-based platforms you should aim to support all of the following: IE9+, and the latest Chrome, Firefox, and Safari
-  * work only in English
-  * have a gender-specific bent (eg thematically aimed primarily at boys)
-  * serve as an upsell to a learning platform that charges tuition
+  * baixa qualitat
+  * nivell més avançat de l'ensenyament (no per a principiants)
+  * té un nombre limitat de SO/plataformes suportades - per plataformes Web s'ha d'esforçar per donar suport els següents: IE9+, i l'última de Chrome, Firefox, i Safari
+  * treballa només en Anglès
+  * tenen un sentit específic de gènere (per exemple, temàticament destinat principalment a nois)
+  * serveixi com una venda addicional d'una plataforma d'aprenentatge que cobra matrícula
 
 **Tutorials will NOT be listed if they:**
 
-  * require a high degree of involvement by a teacher with lots of prep (ie not self-guided for students)
-  * are not designed to be a (roughly) one-hour activity
-  * require sign up 
-  * require payment
-  * require installation
-  * focus only on HTML + CSS web design
-  * are submitted after the submission deadline, or with incomplete information (see below)
+  * requereixen un alt grau d'implicació d'un professor amb molta preparació (és a dir no auto-guiat per a estudiants)
+  * no estan dissenyats per ser (aproximadament) una activitat d'1 hora
+  * requereixen inscripció 
+  * requereixen pagament
+  * requereixen instal·lació
+  * centrats només en disseny web HTML + CSS
+  * s'envia després del termini de presentació, o amb informació incompleta (vegeu més avall)
 
 Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
 
@@ -69,15 +71,15 @@ As a result, the existing listings are certainly “good enough,” and the driv
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Directrius generals per a la creació d'una activitat "Hora del Codi"
 
   * **Subject:** Introductory computer science or programming (not HTML).
   * **Goal:** Give beginners an accessible first taste of programming.
   * **Tone:** 
-      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody can learn!
-      * Computer science is connected to a wide variety of fields and interests. Everybody should learn!
-      * Encourage students to create something that can be shared with friends/online.
-  * **Types of activities:** 
+      * La informàtica no és només per a genis. No importa l'edat, el gènere, o la raça. Tothom pot aprendre'n!
+      * La informàtica està connectada a una gran varietat de camps i interessos. Tothom n'hauria d'aprendre!
+      * Anima els alumnes a crear coses que poden ser compartides amb els amics, o bé en línia.
+  * **Tipus d'activitats:** 
       * **Best:** Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). 
       * **Okay, but not preferred:** app-install, desktop app, or game-console experiences.
   * **Format:** Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
@@ -86,7 +88,7 @@ As a result, the existing listings are certainly “good enough,” and the driv
 
 <a id="submit"></a>
 
-## How to submit (Due 10/1/2014)
+## Com presentar (fins al 10/1/2014)
 
 Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
 
@@ -142,7 +144,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
 
 <a id="design"></a>
 
-## Suggestions for designing your activity
+## Suggeriments per a dissenyar la seva activitat
 
 **Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
 
@@ -183,7 +185,7 @@ Benefits of Pair Programming:
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Indicar les directrius
 
 With ~40 million students having tried the Hour of Code, and over 97% of participating teachers asking us to repeat the event annually, we are taking steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
@@ -201,7 +203,7 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## Seguiment de píxels
 
 In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
 
@@ -221,7 +223,7 @@ IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
 <a id="promote"></a>
 
-## Promoting your tutorials, CSEdWeek, and Hour of Code
+## Promovent les seves guies, CSEdWeek i "Hora del Codi"
 
 We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 

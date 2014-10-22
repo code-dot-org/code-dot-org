@@ -1,186 +1,190 @@
-"zh":
-  site_name: "一小時的編程"
-  language: "English"
-  front_title: "加入歷史上最大的學習活動，就在 2014 年 12 月 8-14 日"
-  coming_soon: "敬請期待"
-  front_header_banner: "加入歷史上最大的學習活動，就在 2014 年 12 月 8-14 日"
-  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
+zh:
+  site_name: 一小時的編程
+  language: 英語
+  front_title: 加入歷史上最大的學習活動，就在 2014 年 12 月 8-14 日
+  coming_soon: 敬請期待
+  front_header_banner: 加入歷史上最大的學習活動，就在 2014 年 12 月 8-14 日
+  front_intro_default: '一小時編程是一個全球性的活動，觸及數千萬個來自180 多個國家的學生。任何人，在任何地方都可以舉行一小時編程活動。一小時的教程可用於超過 30 種語言。不需要任何經驗。 <strong>由 4 歲到 104 歲 </strong>。'
   front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 170 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>No se necesita experiencia. Para edades entre 4 y 104 años.</strong>'
-  front_watch_video: "觀看新的影片"
-  header_menu_resources: "資源"
-  header_menu_faq: "常見問題與解答"
-  header_menu_prizes: "獎勵"
-  header_menu_uk_code_org: "uk.code.org"
-  choose_country_header: "和全世界一起參與！"
-  country_ar: "Argentina"
-  country_au: "Australia"
-  country_br: "Brazil"
-  country_bg: "Bulgaria"
-  country_de: "Germany"
-  country_es: "Latin America"
-  country_eu: "European Union"
-  country_gr: "Greece"
-  country_hr: "Croatia"
-  country_id: "Indonesia"
-  country_it: "Italy"
-  country_jp: "Japan"
-  country_me: "Middle East and North Africa"
-  country_nz: "New Zealand"
-  country_ro: "Romania"
-  country_ru: "Russia"
-  country_ua: "Ukraine"
-  country_uk: "United Kingdom"
-  country_us: "United States"
-  country_vn: "Vietnam"
-  prizes_all: "給所有組織者的獎勵"
-  prizes_every_organizer: "Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you"
-  prizes_technology: 'One public school in every US state (& Washington DC) will win $10,000 worth of technology'
-  prizes_tech_chats: "50 classrooms will win video chats with very special guests"
-  prizes_details: "詳細資訊"
-  n_have_learned_an_hoc: '<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>'
-  anybody_can_learn: "任何人都可以學習。"
-  register_now: "馬上註冊！"
-  front_join_us_heading: "An Hour of Code for every student."
-  front_join_us_description: "Computer science is a foundation for every student. Help us introduce it to 100 million."
-  front_join_us_button: "加入我們"
-  front_what_is_hoc: "什麼是”一小時編程“？"
-  front_join_us_header: "Any time during December 8-14, Computer Science Education Week, host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!"
-  front_join_us_header_uk: "Any time during December 8-14 host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!"
-  front_join_us_teacher: "您是老師嗎？"
-  front_join_us_inspire: "激發你的學生，"
-  front_join_us_inspire_link: "在你的教室中採用“一小時編程”"
-  front_join_us_parent: "您是家長嗎？"
-  front_join_us_ask_link: "尋問你當地的學校"
-  front_join_us_ask: "to host an Hour of Code."
-  front_join_us_computer_science: "就是熱愛電腦科學嗎？"
-  front_join_us_spread: "在你的社群中傳播。"
-  front_join_us_organize: "或是自己組織一個ㄧ小時編程活動。"
-  front_join_us_how_to_run: "Here's how to run an Hour of Code"
-  front_join_us_help_promote: "Help promote the Hour of Code"
-  front_join_us_students: "學生"
-  front_join_us_teachers: "教師"
-  front_join_us_everyone: "所有人"
-  front_join_us_try: "試一試"
-  front_join_us_host: "舉辦教學"
-  front_join_us_support: "支援"
-  signup_header: "讓我們知道是否你正在舉辦一小時編程活動"
-  signup_header_ar: "Déjanos saber si estas organizando una Hora de Programación"
-  signup_name_label: "您的姓名"
-  signup_email_label: "您的電子信箱"
-  signup_organization_name_label: "學校或組織名稱"
-  signup_event_type_label: "活動類型"
-  signup_event_entire_school_label: "我的整間學校都會參與"
-  signup_event_location_label: "活動地點（選填）"
-  signup_special_event_flag_label: "將我的活動標示為特殊活動"
-  signup_special_event_details_label: "特殊活動的詳細資訊"
-  signup_send_posters_flag_label: 'Send <a href= "/resources#posters">posters</a> to my school or organization'
-  signup_send_posters_address_label: "Address of school or organization"
-  signup_whole_school_flag_label: "這個活動是給整間學校參與的"
-  signup_name_placeholder: "您的姓名"
-  signup_email_placeholder: "you@example.com"
-  signup_organization_name_placeholder: "例如：華江高中"
+  front_watch_video: 觀看新的影片
+  header_menu_resources: 資源
+  header_menu_faq: 常見問題與解答
+  header_menu_prizes: 獎勵
+  header_menu_uk_code_org: uk.code.org
+  choose_country_header: 和全世界一起參與！
+  country_ar: 阿根廷
+  country_au: 澳洲
+  country_br: 巴西
+  country_bg: 保加利亞
+  country_de: 德國
+  country_es: 拉丁美洲
+  country_eu: 歐洲聯盟
+  country_gr: 希臘
+  country_hr: 克羅埃西亞
+  country_id: 印度尼西亞
+  country_it: 義大利
+  country_jp: 日本
+  country_me: 中東和北非
+  country_nz: 紐西蘭
+  country_ro: 羅馬尼亞
+  country_ru: 俄羅斯
+  country_ua: 烏克蘭
+  country_uk: 英國
+  country_us: 美國
+  country_vn: 越南
+  prizes_all: 給所有組織者的獎勵
+  prizes_every_organizer: 所有舉辦一小時編程的組織都將會收到 Dropbox 或 Skype 點數作為謝禮
+  prizes_technology: '在美國各州（& 華盛頓特區）各會有一所公立學校贏得價值 10,000 美元的技術'
+  prizes_tech_chats: 50 個班級將可以贏得與非常特殊的嘉賓視頻聊天的獎勵
+  prizes_details: 詳細資訊
+  n_have_learned_an_hoc: '<h1>#</h1><h3>已經試過</h3><h2>一小時編程</h2>'
+  anybody_can_learn: 任何人都可以學習。
+  register_now: 馬上註冊！
+  front_join_us_heading: 為每位學生上一小時的編碼課程
+  front_join_us_description: 電腦科學是每一個學生的基礎。幫助我們將它介紹給 1 億個學生。
+  front_join_us_button: 加入我們
+  front_what_is_hoc: 什麼是”一小時編程“？
+  front_join_us_header: 在任何時間的12月8~14日，CSEW（電腦科學教育週），主持一場Hour of Code活動來讓大家知道任何人都可以學習程式設計的基本知識，並享受其中的樂趣！
+  front_join_us_header_uk: 在任何時間的12月8~14日，主持一場Hour of Code活動來讓大家知道任何人都可以學習程式設計的基本知識，並享受其中的樂趣！
+  front_join_us_teacher: 您是老師嗎？
+  front_join_us_inspire: 激發你的學生，
+  front_join_us_inspire_link: 在你的教室中採用“一小時編程”
+  front_join_us_parent: 您是家長嗎？
+  front_join_us_ask_link: 尋問你當地的學校
+  front_join_us_ask: 以主持一場Hour of Code
+  front_join_us_computer_science: 只熱愛電腦科學嗎？
+  front_join_us_spread: 在你的社群中傳播。
+  front_join_us_organize: 或是自己組織一個ㄧ小時編程活動。
+  front_join_us_how_to_run: 下面將教你如何主持一場Hour of Code活動
+  front_join_us_help_promote: 幫忙宣傳Hour of Code
+  front_join_us_students: 學生
+  front_join_us_teachers: 教師
+  front_join_us_everyone: 所有人
+  front_join_us_try: 試一試
+  front_join_us_host: 舉辦教學
+  front_join_us_support: 支援
+  signup_header: 讓我們知道是否你正在舉辦一小時編程活動
+  signup_header_ar: Déjanos saber si estas organizando una Hora de Programación
+  signup_name_label: 您的姓名
+  signup_email_label: 您的電子信箱
+  signup_organization_name_label: 學校或組織名稱
+  signup_event_type_label: 活動類型
+  signup_event_entire_school_label: 我的整間學校都會參與
+  signup_event_location_label: 活動地點（選填）
+  signup_special_event_flag_label: 將我的活動標示為特殊活動
+  signup_special_event_details_label: 特殊活動的詳細資訊
+  signup_send_posters_flag_label: '把這<a href= "/resources#posters">海報</a>交給我們的學校或組織'
+  signup_send_posters_address_label: 學校或組織的地址
+  signup_whole_school_flag_label: 這個活動是給整間學校參與的
+  signup_name_placeholder: 您的姓名
+  signup_email_placeholder: you@example.com
+  signup_organization_name_placeholder: 例如：華江高中
   signup_event_location_placeholder: "完整的地址或是郵遞區號與國家。 \r （我們要使用這資訊在我們的地圖上放上你的大頭針）"
-  signup_special_event_details_placeholder: "描述為什麼這是一個特殊的活動"
-  signup_send_posters_address_placeholder: "This address will not be shared on our map"
-  signup_event_type_in_school: "在學校內"
-  signup_event_type_out_of_school: "在學校外"
-  signup_submit_label: "註冊"
-  signup_submit_error_message: "An error occurred. Please check to make sure all required fields have been filled out properly."
-  signup_thank_you_header: "Thank you for signing-up to host an Hour of Code event."
-  signup_thank_you_message: "We sent you a confirmation email with information to help you get started."
-  map_header: '# Hour of Code events around the world'
-  map_header_ar: "Eventos de Hora de Program.AR alrededor del mundo"
-  meta_tag_og_title: "The Hour of Code is coming"
-  meta_tag_og_description: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104."
-  meta_tag_twitter_title: "The Hour of Code is coming"
-  meta_tag_twitter_description: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104."
-  twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
-  hardware_prizes_form_name_label: "您的姓名"
-  hardware_prizes_form_name_placeholder: "您的姓名"
-  hardware_prizes_form_email_label: "您的電子信箱"
-  hardware_prizes_form_email_placeholder: "您的電子信箱"
-  hardware_prizes_form_school_name_label: "學校名稱"
-  hardware_prizes_form_school_name_placeholder: "學校名稱"
-  hardware_prizes_form_school_address_label: "學校地址"
-  hardware_prizes_form_school_address_placeholder: "學校地址"
-  hardware_prizes_form_school_type_label: "學校類型"
-  hardware_prizes_form_school_type_option_elementary: "小學"
-  hardware_prizes_form_school_type_option_middle_school: "中學"
-  hardware_prizes_form_school_type_option_high_school: "高中"
-  hardware_prizes_form_qualifying_school_label: "這是 K 12 美國公立學校"
-  hardware_prizes_form_number_students_label: "參加的學生人數"
-  hardware_prizes_form_number_students_placeholder: "學生人數"
-  hardware_prizes_form_plan_file_label: "Upload your Hour of Code logistics plan"
-  hardware_prizes_form_plan_file_description: 'Submit a simple schedule of how you plan to organize every student to do the Hour of Code at your school. See a sample plan: #PDF# | #Word#'
-  hardware_prizes_form_submit_label: "送出"
-  hoc_faq_title: "常見問題與解答"
-  hoc_faq_what_is_hoc_q: "什麼是”一小時編程“？"
-  hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
-  hoc_faq_last_year: "試試去年的教程"
-  hoc_faq_when_is_hoc_q: "什麼時候是這“一小時”編程"
+  signup_special_event_details_placeholder: 描述為什麼這是一個特殊的活動
+  signup_send_posters_address_placeholder: 此位址不會共用我們的地圖上
+  signup_event_type_in_school: 在學校內
+  signup_event_type_out_of_school: 在學校外
+  signup_submit_label: 註冊
+  signup_submit_error_message: 錯誤。請檢查以確保所有必填的欄位都已正確填寫。
+  signup_thank_you_header: 感謝你簽署了舉辦一個小時編程活動。
+  signup_thank_you_message: 我們已經寄給您確認的電子郵件，內容包含了可以幫助您入門的相關資訊。
+  map_header: '# 小時的編碼活動在世界各地'
+  map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
+  meta_tag_og_title: 一小時編程就要開始了
+  meta_tag_og_description: 一小時編程是一個全球性的活動，觸及數千萬個來自180多個國家，30多種語言，由4歲到104 歲的學生。
+  meta_tag_twitter_title: 一小時編程就要開始了
+  meta_tag_twitter_description: 一小時編程是一個全球性的活動，觸及數千萬個來自180多個國家，30多種語言，由4歲到104 歲的學生。
+  twitter_default_text: '我將要參加今年的 #HourOfCode，你呢？@codeorg'
+  hardware_prizes_form_name_label: 您的姓名
+  hardware_prizes_form_name_placeholder: 您的姓名
+  hardware_prizes_form_email_label: 您的電子信箱
+  hardware_prizes_form_email_placeholder: 您的電子信箱
+  hardware_prizes_form_school_name_label: 學校名稱
+  hardware_prizes_form_school_name_placeholder: 學校名稱
+  hardware_prizes_form_school_address_label: 學校地址
+  hardware_prizes_form_school_address_placeholder: 學校地址
+  hardware_prizes_form_school_type_label: 學校類型
+  hardware_prizes_form_school_type_option_elementary: 小學
+  hardware_prizes_form_school_type_option_middle_school: 中學
+  hardware_prizes_form_school_type_option_high_school: 高中
+  hardware_prizes_form_qualifying_school_label: 這是 K 12 美國公立學校
+  hardware_prizes_form_number_students_label: 參加的學生人數
+  hardware_prizes_form_number_students_placeholder: 學生人數
+  hardware_prizes_form_plan_file_label: 上載您的Hour of Code物流計畫
+  hardware_prizes_form_plan_file_description: '交出您如何計畫來組織每個學生在你們學校做Hour of Code簡單日程的安排。請參閱計畫樣本： #PDF# | #Word#'
+  hardware_prizes_form_submit_label: 送出
+  hoc_faq_title: 常見問題
+  hoc_faq_what_is_hoc_q: 什麼是”一小時編程“？
+  hoc_faq_what_is_hoc_a: "Hour of Code是為期一小時用來介紹電腦科學的。設計主旨是為了揭開程式設計的神秘面紗，並秀給大家看任何人都能學會其中的基礎。<a href='http://code.org/learn'>看看我們的教學</a>，並隨時注意即將在Hour of Code 2014活動中新增的教學。"
+  hoc_faq_last_year: 試試去年的教程
+  hoc_faq_when_is_hoc_q: 什麼時候是這“一小時”編程
   hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 8-14, 2014, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
-  hoc_faq_why_cs_q: "為何是電腦科學？"
+  hoc_faq_why_cs_q: 為何是電腦科學？
   hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path. See more stats on <a href='http://code.org'>Code.org</a>."
-  hoc_faq_how_participate_q: "How do I participate in the Hour of Code?"
+  hoc_faq_how_participate_q: How do I participate in the Hour of Code?
   hoc_faq_how_participate_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.org'>here</a> and <a href='target-resources-how-to'>start planning</a>. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
-  hoc_faq_behind_hoc_q: "一小時編程是由誰支持的？"
+  hoc_faq_behind_hoc_q: 一小時編程是由誰支持的？
   hoc_faq_behind_hoc_a: "The Hour of Code is organized by <a href='http://code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the College Board."
-  hoc_faq_host_q: "我對寫程式一無所知。我仍然可以舉辦這活動嗎？"
+  hoc_faq_host_q: 我對寫程式一無所知。我仍然可以舉辦這活動嗎？
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='http://code.org/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='target-resources-how-to'>how to guide</a>."
-  hoc_faq_need_computers_q: "每一位參與者都需要各自的電腦嗎？"
+  hoc_faq_need_computers_q: 每一位參與者都需要各自的電腦嗎？
   hoc_faq_need_computers_a: "No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work in pairs.</b> Research shows students learn best with <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pair programming</a>, sharing a computer and working together. Encourage your students to double up. <li><b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b> We offer tutorials that require no computer at all. </ul>"
-  hoc_faq_international_q: "我在美國以外的地區。我如何該如何跨國參與？"
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code."
-  hoc_faq_tutorial_q: "How can I make an Hour of Code tutorial?"
-  hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
+  hoc_faq_international_q: 我在美國以外的地區。我如何該如何跨國參與？
+  hoc_faq_international_a: Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code.
+  hoc_faq_tutorial_q: 我該如何製作一小時編程的教程？
+  hoc_faq_tutorial_a: "如果你有興趣成為教程的合作夥伴，<a href='target-tutorial-guidelines'> 請參閱我們的指導方針和指示</a>。我們想要有各種引人入勝的選擇，但主要目標是為學生和電腦科學的新教師們優化體驗。"
+  hoc_faq_more_questions_q: Still have more questions?
+  hoc_faq_more_questions_a: "Try finding an answer in our <a href='http://support.code.org'>support forum</a>."
+  hoc_faq_more_questions_br_q: Outras dúvidas?
+  hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
   hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
   hoc_faq_why_cs_uk_a: '<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path.'
   hoc_faq_how_participate_uk_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.com/uk'>here</a> and start planning. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
   hoc_faq_behind_hoc_uk_a: "The Hour of Code is organised by <a href='http://uk.code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://uk.code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Google, Cambridge University Press, Tech City and The Department of Education."
   hoc_faq_host_uk_a: "Of course. Hour of Code activities are self-guided. All you have to do is pick the tutorial you want and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. <a href='http://uk.code.org/learn'>Try our current tutorials</a>."
-  hoc_faq_what_is_hoc_ar_q: "Qué es la Hora de Program.AR?"
+  hoc_faq_what_is_hoc_ar_q: Qué es la Hora de Program.AR?
   hoc_faq_what_is_hoc_ar_a: "La Hora de Program.AR es una introducción de una hora a la ciencia computacional, diseñada para desmitificar la programación y demostrar que cualquiera puede aprender los conceptos básicos. <a href='http://code.org/learn'>Revisa los tutoriales</a> y busca otros nuevos para la Hora de Program.AR del 2014."
-  hoc_faq_when_is_hoc_ar_q: "¿Cuándo es la Hora de Program.AR?"
+  hoc_faq_when_is_hoc_ar_q: ¿Cuándo es la Hora de Program.AR?
   hoc_faq_when_is_hoc_ar_a: "La Hora de Program.AR se llevará a cabo del 8 al 14 de diciembre del 2014. ¿Es una hora <i>específica</i>? No. Puedes hacer la Hora de Program.AR en cualquier momento durante esta semana. La Hora de Program.AR está programada para celebrarse anualmente - <a href='http://csedweek.org'>la Semana de Ciencias de Computación</a>."
-  hoc_faq_how_participate_ar_q: "¿Cómo puedo participar en la Hora de Program.AR?"
+  hoc_faq_how_participate_ar_q: ¿Cómo puedo participar en la Hora de Program.AR?
   hoc_faq_how_participate_ar_a: "Regístrese para organizar un evento de la hora de Program.AR <a href='http://hourofcode.org'>aquí</a> e inicie la planificación. Tú puedes organizar un evento de la Hora de ProProgram.ARgramación en tú escuela o en tú comunidad &mdash; como en un club extracurricular, en una organización sin fines de lucro o en el trabajo. O, simplemente probarlo cuando Diciembre 8 llegue."
-  hoc_faq_behind_hoc_ar_q: "¿Quién está detrás de la Hora de Program.AR?"
+  hoc_faq_behind_hoc_ar_q: ¿Quién está detrás de la Hora de Program.AR?
   hoc_faq_behind_hoc_ar_a: "La Hora de Program.AR es organizada por <a href='http://code.org'>Code.org</a>, una organización pública sin fines de lucro (501c3) dedicada a ampliar la participación en Ciencias Computacionales poniendose a disposición de más escuelas y aumentando la participación de las mujeres y los estudiantes subrepresentados de color. Una <a href='http://code.org/about/partners'>coalición sin precedentes de socios</a> se ha reunido para apoyar la Hora de Program.AR, también &mdash; incluyendo Microsoft, Apple, Amazon, Boys y Girls Clubs of America y el College Board."
-  hoc_faq_host_ar_q: "No sé nada acerca de Program.AR. ¿Aún así puedo organizar un evento?"
+  hoc_faq_host_ar_q: No sé nada acerca de Program.AR. ¿Aún así puedo organizar un evento?
   hoc_faq_host_ar_a: "Claro. Las actividades de La Hora de Program.AR son autodirigidas. Todo lo que tienes que hacer es elegir el tutorial que quieras y escoge una hora &mdash; nosotros nos encargamos del resto. También tenemos opciones para cada edad y nivel de experiencia, desde el kindergarten y para arriba. <a href='http://code.org/learn'>Pruebe nuestros tutoriales actuales</a>."
-  hoc_faq_need_computers_ar_q: "¿Necesito computadoras para cada participante?"
+  hoc_faq_need_computers_ar_q: ¿Necesito computadoras para cada participante?
   hoc_faq_need_computers_ar_a: "No. Tenemos tutorales de la Hora de Program.AR que funcionan en PCs, teléfonos inteligentes, tabletas y algunos que no requieren ¡ninguna computadora en absoluto! Tú puedes unirte desde donde quiera que estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i> <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes aprenden mejor con <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares de programación</a>, compartiendo una computadora y trabajando juntos. Anima a tus estudiantes a trabajar en pares. <li><b>Una pantalla proyectada.</b> Si tú tienes un proyector y una computadora conectada a Internet, el grupo entero puede hacer una hora de Program.AR juntos. Mira porciones de videos juntos y toma turnos para resolver acertijos o responder preguntas. <li><b>Desconéctate.</b> Ofrecemos tutoriales que no requieren ninguna computadora en absoluto. </ul>"
-  hoc_faq_tutorial_ar_q: "¿Cómo puedo hacer un tutoría de la Hora de Program.AR?"
+  hoc_faq_tutorial_ar_q: ¿Cómo puedo hacer un tutoría de la Hora de Program.AR?
   hoc_faq_tutorial_ar_a: "Si usted está interesado en convertirse en un socio para tutoriales, <a href='/tutorial-guidelines'>vea nuestras directrices e instrucciones</a>. Nos gustaría presentar varias opciones atractivas, pero la meta principal es optimizar la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales."
   stats_hoc_2013_heading: 'Incredible stats from last year’s Hour of Code. In one week alone:'
-  stats_hoc_2013_image_alt: "Stats from 2013 Hour of Code"
-  stats_growth: "It was the fastest to reach 15 million users."
-  stats_tumblr: 'Tumblr: 3.5 years'
-  stats_facebook: 'Facebook: 3 years'
-  stats_twitter: 'Twitter: 2.5 years'
-  stats_pinterest: 'Pinterest: 2 years'
-  stats_instagram: 'Instagram: 14 months'
-  stats_hoc: 'The Hour of Code: 5 days'
-  stats_global: "15 million students worldwide learned an Hour of Code."
-  stats_girls_more: "More girls tried computer science than in the last 70 years."
-  stats_girls_million: "Over 10 million girls in 2013"
+  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  stats_growth: It was the fastest to reach 15 million users.
+  stats_tumblr: Tumblr： 3.5 年
+  stats_facebook: Facebook： 3 年
+  stats_twitter: Twitter： 2.5 年
+  stats_pinterest: Pinterest： 2 年
+  stats_instagram: Instagram： 14 個月
+  stats_hoc: 一小時編碼： 5 天
+  stats_global: 全世界有 1500 萬學生學習了一個小時的編程。
+  stats_girls_more: 嘗試電腦科學的女孩比起過去的 70 年還多。
+  stats_girls_million: 在 2013 年有超過 1000 萬的女孩
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
-  stats_michael: 'I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
-  resources_how_to: "How-to guide for teachers"
-  resources_handouts: "Handouts to spread the word"
-  resources_videos: "Videos"
-  resources_posters: "Posters"
-  resources_banners: "Banners"
-  resources_emails: "Sample emails"
-  resources_stats: "Useful computer science stats"
-  resources_press_kit: "Press Kit"
-  footer_copyright_message: "Copyright 2014 Code.org. All rights reserved."
-  footer_trademark_message: "Hour of Code™ is a trademark of Code.org."
-  footer_menu_partners: "合作夥伴"
-  footer_menu_contact: "聯絡我們"
-  footer_menu_support: "Support"
-  footer_menu_terms: "Terms"
-  footer_menu_privacy: "Privacy Policy"
+  stats_michael: '我 <b>從來沒有</b> 看過我的學生們如此興奮地學習。" -Michael Clark，老師'
+  resources_how_to: 教師的操作指南
+  resources_handouts: Handouts to spread the word
+  resources_videos: Videos
+  resources_posters: 海報
+  resources_banners: 橫幅
+  resources_emails: 電子郵件範例
+  resources_stats: 有用的電腦科學統計
+  resources_press_kit: 新聞資料袋
+  footer_copyright_message: Copyright 2014 Code.org. All rights reserved.
+  footer_trademark_message: Hour of Code™ is a trademark of Code.org.
+  footer_menu_partners: 合作夥伴
+  footer_menu_contact: 聯絡我們
+  footer_menu_support: Support
+  footer_menu_terms: Terms
+  footer_menu_privacy: Privacy Policy

@@ -8,7 +8,7 @@
 
 ## ١) آموزش ها را تجربه كنيد:
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+ما ميزبان مجموعه‌اي از آموزش هاي يك‌ساعته سرگرم كننده براي دانش آموزان با هر سني هستيم كه توسط شركاي‌مان درست شد‌ه‌اند. آموزش هاي جديد قبل از شروع "ساعت كد نويسي" ٢٣-١٧آذرماه (١٤-٨ دسامبر) بر روي سايت قرار خواهند گرفت.
 
 **تمامي آموزش هاي "ساعت كد نويسي":**
 
@@ -68,4 +68,4 @@ We’ll host a variety of fun, hour-long tutorials for students of all ages, cre
     
     **مرحله بعد از ساعت كدنويسي چيست؟**
     
-    "ساعت کدنويسي" تنها اولين قدم در سفر بسوي يادگيري چگونگي عملكرد تكنولوژي و ساخت كاربردهاي نرم افزاري است. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. براي ادامه اين سفر، [بچه هايتان را تشويق به يادگيري آنلاين كنيد](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://code.org/educate). Or encourage your children to learn [online](http://code.org/learn/beyond). <% end %>
+    "ساعت کدنويسي" تنها اولين قدم در سفر بسوي يادگيري چگونگي عملكرد تكنولوژي و ساخت كاربردهاي نرم افزاري است. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. براي ادامه اين سفر، [بچه هايتان را تشويق به يادگيري آنلاين كنيد](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://code.org/educate). فرزندانتان را تشویق كنيد تا [آنلاین](http://code.org/learn/beyond) آموزش ببينند. <% end %>

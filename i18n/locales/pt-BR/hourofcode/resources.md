@@ -6,12 +6,12 @@ title: Recursos layout: amplo nav: resources_nav
 
 # Recursos
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Está organizando um evento da Hora do Código? [Veja este guia prático](<%= hoc_uri('/resources/how-to') %>)
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Use este folheto para divulgar o evento
 </h2>
 
 <p>
@@ -19,7 +19,7 @@ title: Recursos layout: amplo nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Entregue este material para professores e escolas
 </h2>
 
 <p>
@@ -30,7 +30,7 @@ title: Recursos layout: amplo nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Mostre estes vídeos para inspirar os alunos
   </h2>
   
   <div style="float:left; padding:10px">
@@ -74,7 +74,7 @@ title: Recursos layout: amplo nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Pendure estes cartazes em sua escola
     </h2>
     
     <p>
@@ -82,7 +82,7 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <h4>
-      <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
+      <a href="http://hourofcode.com/#signup">Cadastre</a> seu evento da Hora do Código e nós lhe enviaremos cartazes gratuitamente.
     </h4>
     
     <p>
@@ -94,7 +94,7 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Apresente estes banners em seu site
     </h2>
     
     <p>
@@ -106,7 +106,7 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Envie estes e-mails para ajudar a promover a Hora do Código
     </h2>
     
     <p>
@@ -114,7 +114,7 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Peça para sua escola, empregador ou amigos se inscreverem:
     </h2>
     
     <p>
@@ -142,7 +142,7 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Convide a mídia para participar de seu evento:
     </h2>
     
     <p>
@@ -194,7 +194,7 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Informe os pais sobre o evento de sua escola:
     </h2>
     
     <p>
@@ -234,7 +234,7 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Convide um representante político local para o evento de sua escola:
     </h2>
     
     <p>

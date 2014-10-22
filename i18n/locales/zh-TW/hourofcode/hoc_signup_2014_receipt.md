@@ -1,6 +1,6 @@
 * * *
 
-from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' subject: Thanks for signing up to host an Hour of Code! view: none theme: none
+from: '"哈迪帕托維 （Code.org）"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' subject: 感謝您申請主持Hour of Code ！ view: none theme: none
 
 * * *
 
@@ -30,21 +30,21 @@ Tell your friends about the #HourOfCode.
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
+將[這封E-mail](http://<%= hostname %>/resources#email)或將這[傳單](http://<%= hostname %>/files/schools-handout.pdf)給您學校的校長。
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 3. 問問你的同事是否想參與
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+將[這封信](http://<%= hostname %>/resources#email)寄給您的經理或CEO。 或者[這封傳單](http://<%= hostname %>/resources/hoc-one-pager.pdf)也可以.
 
-## 4. Promote Hour of Code within your community
+## 4. 在社區內宣傳一下Hour of Code
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+可以找找當地群組宣傳 － 可以找當地的男童子軍、教會的人、大學、退伍軍人或公會。 或為你的鄰居辦一場Hour of Code派對。
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. 找當地的現任官員支持Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+將[這封信](http://<%= hostname %>/resources#politicians)寄給您的市長、委員或佈告欄。 或將[這份傳單交給他們](http://<%= hostname %>/resources/hoc-one-pager.pdf)並邀請他們來參觀你們的學校。
 
 <% if @country == 'ro' %>
 
@@ -56,6 +56,6 @@ Echipa Hour of Code Romania hoc@adfaber.org
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org是個非營利組織。 我們的住址是1301 5th Ave, Suite 1225, Seattle, WA, 98101。 不喜歡這些郵件嗎？ [取消訂閱](%= unsubscribe_link %).
 
 ![](<%= tracking_pixel %>)

@@ -44,7 +44,7 @@ from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x7
 
 ## 5. Зверніться до місцевих депутатів по підтримку Години коду
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Надішліть цього листа](http://<%= hostname %>/resources#politicians) своєму мерові, міській раді або шкільній раді. Або [передайте їм роздруківку](http://<%= hostname %>/resources/hoc-one-pager.pdf) та запросіть відвідати Вашу школу.
 
 <% if @country == 'ro' %>
 
@@ -56,6 +56,6 @@ Echipa Hour of Code Romania hoc@adfaber.org
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org є некомерційною організацією 501c3. Наша адреса 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Не хочете отримувати ці листи? [Відмовтесь від підписки](%= unsubscribe_link %).
 
 ![](<%= tracking_pixel %>)

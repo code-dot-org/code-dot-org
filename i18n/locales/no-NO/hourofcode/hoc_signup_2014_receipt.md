@@ -30,32 +30,32 @@ Fortell vennene dine om #Kodetimen.
 
 ## 2. Spør hele skolen din om å tilby en Kodetime
 
-[Send denne eposten](http://<%= hostname %>/ressurser#epost) eller gi[denne brosjyren](http://<%= hostname %>/filer/skole-flyer.pdf) til rektor.
+[Send denne eposten](http://<%= hostname %>/ressurser#epost) eller gi [denne brosjyren](http://<%= hostname %>/filer/skole-flyer.pdf) til rektor.
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 3. Spør arbeidsgiveren din om å bidra
 
 [Send denne eposten](http://<%= hostname %>/ressurser#epost) til din leder. Eller [gi dem denne flyeren](http://<%= hostname %>/ressurser/hoc-flyer.pdf).
 
-## 4. Promote Hour of Code within your community
+## 4. Promoter Kodetimen i ditt lokalsamfunn
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Rekrutter en lokal klubb, ett idrettslag, universitet eller fagforening. Eller arranger en Kodetime "fest" for nabolaget.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Spør en lokalpolitiker om å støtte Kodetimen
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Send denne eposten](http://<%= hostname %>/ressurser#politikere) til borgermesteren din, kommunestyre eller din utdanningsetat. Eller [gi dem denne flyeren](http://<%= hostname %>/ressurserhoc-flyer.pdf) og inviter dem til å besøke skolen din.
 
 <% if @country == 'ro' %>
 
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
+Takk for kunngjøringen om ditt arrangement! Gi oss beskjed hvis du trenger ytterligere informasjon eller hvis du har spørsmål. La oss skape historie sammen!
 
-Echipa Hour of Code Romania hoc@adfaber.org
+Hour of Code Romania hoc@adfaber.org
 
 <% end %>
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org er en frivillig organisasjon. Vår adresse er 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Hvis du ikke liker disse epostene? [Meld deg av nyhetsbrevet](%= unsubscribe_link %).
 
 ![](<%= tracking_pixel %>)

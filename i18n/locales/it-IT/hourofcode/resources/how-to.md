@@ -8,33 +8,33 @@ title: Risorse layout: wide
 
 ## 1) Prova i tutorial:
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+Troverai diversi divertenti tutorial di un'ora per studenti di tutte le età, creati da diversi partner. Nuovi tutorial sono in arrivo per il lancio dell' Ora del Codice, nella settimana 8-14 Dicembre.
 
 **Tutti i tutorial dell'Ora del Codice:**
 
-  * Richiedono una minima preparazione preliminare agli insegnanti
-  * Sono autoesplicativi, permettendo agli studenti di lavorare in base al proprio ritmo e al proprio livello di preparazione
+  * richiedono una minima preparazione per i docenti
+  * Sono autoesplicativi e permettono agli studenti di lavorare in base al proprio ritmo e al proprio livello di preparazione
 
 [![image](http://code.org/images/tutorials.png)](http://code.org/learn)
 
-## 2) Pianifica in anticipo l'hardware necessario -l'uso di computer è facoltativo
+## 2) Pianifica in anticipo l'hardware necessario - l'uso di computer è facoltativo
 
-Per svolgere al meglio le attività proposte da un'Ora del Codice è preferibile usare dei PC collegati ad Internet. Ma non è necessario avere un computer per ogni studente e inoltre un'Ora del Codice può essere svolto anche del tutto senza computer.
+Per svolgere al meglio le attività proposte da un'Ora del Codice è preferibile usare dei PC collegati ad Internet. Ma non è necessario avere un computer per ogni studente e inoltre un'Ora del Codice può essere svolto anche senza computer.
 
-  * **Prova i tutorial sui computer o sugli apparecchi elettronici degli studenti.** Assicurati che funzionino correttamente (con audio e video).
+  * **Prova i tutorial sui computer o sui device degli studenti.** Assicurati che funzionino correttamente (con audio e video).
   * **Guarda la pagina dei complimenti** per vedere cosa vedono gli studenti quando terminano. 
-  * **Fornisci delle cuffie per la tua classe** o chiedi agli studenti di portare le proprie se il tutorial che hai scelto richiede l'uso del suono.
+  * **Procurati delle cuffie per la tua classe** o chiedi agli studenti di portare le proprie se il tutorial che hai scelto richiede l'uso del suono.
 
 ## 3) Pianifica l'evento in anticipo in base alle tecnologie disponibili
 
-  * **Non hai abbastanza apparecchi elettronici per tutti gli studenti?** Fai lavorare i tuoi studenti [a coppie](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Quando gli studenti lavorano in coppia, si aiutano a vicenda e fanno meno affidamento sul docente. Essi capiscono anche che l'informatica è un'attività che favorisce la collaborazione e le relazioni sociali.
+  * **Non hai abbastanza device per tutti gli studenti?** Fai lavorare i tuoi studenti [a coppie](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Quando gli studenti lavorano in coppia, si aiutano a vicenda e fanno meno affidamento sul docente. In questo modo capiscono che l'informatica è un'attività che favorisce la collaborazione e le relazioni sociali.
   * **Hai una banda ridotta?** Mostra tu i video a tutta la classe, così che gli studenti non debbano scaricare i video. Oppure prova ad usare i tutorial che non necessitano di connessione ad internet.
 
 ## 4) Ispira gli studenti - mostra loro un video
 
 Mostra agli studenti <% if @country == 'uk' %> [questo video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [questo video](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %> per iniziare l'Ora del Codice. Guarda anche[questi video](http://youtube.com/codeorg), con Bill Gates, Mark Zuckerberg, will.i.am il fondatore dei Black Eyed Peas e la stella dell'NBA Chris Bosh che parlano dell'importanza della programmazione. (Ci sono diverse versioni dei video da [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuti](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minuti](https://www.youtube.com/watch?v=dU1xS07N-FA))
 
-**Entusiasma i tuoi studenti fornendo loro una breve introduzione**
+**Coinvolgi i tuoi studenti fornendo loro una breve introduzione**
 
 La maggior parte dei ragazzi non sa cosa sia l'informatica. Ecco alcune idee:
 
