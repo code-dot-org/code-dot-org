@@ -25,6 +25,9 @@ rightbar: blank
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 
 %form#k5-professional-development-survey-form{role: "form"}
+  %input{name:'workshop_id_i', type:'hidden', value:workshop_id}
+  %input{name:'section_id_i', type:'hidden', value:section_id}
+  
   %h1 Satisfaction Survey for Code.org's K-5 Professional Development Workshop
 
   #error-message{style: 'display: none'}

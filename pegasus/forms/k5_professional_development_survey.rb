@@ -25,6 +25,9 @@ class K5ProfessionalDevelopmentSurvey
 
   def self.normalize(data)
     result = {}
+    
+    result[:workshop_id_i] = required data[:workshop_id_i]
+    result[:section_id_i] = required data[:section_id_i]
 
     if data[:send_materials_email_s].nil_or_empty?
       result[:email_s] = 'anonymous@code.org'
