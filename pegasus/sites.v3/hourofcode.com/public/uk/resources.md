@@ -9,7 +9,11 @@ nav: resources_nav
 
 <a id="handouts">
 ## Use this handout to spread the word
-[![image](/images/fit-250/one-pager.png)](/resources/hoc-one-pager.pdf)
+
+[![image](/images/fit-250/one-pager.png)](/files/hoc-one-pager-uk.pdf)
+
+## Give this handout to teachers and schools
+[![image](/images/fit-250/schools-handout.png)](/files/schools-handout-uk.pdf)
 
 <a id="videos">
 ## Show these videos to inspire students
