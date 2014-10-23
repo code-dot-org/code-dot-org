@@ -6,7 +6,10 @@
           #logoholder{style: "position:relative"}
             #imageheld{style: "position:absolute; top:-18px; left:0"}
               %a{href:hoc_uri('/')}
-                %img{src: '/images/hour-of-code-logo.png', alt: 'Hour of Code'}
+                - if @country == 'ar' || @country == 'es'
+                  %img{src: '/images/hora-del-codigo-logo.png', alt: 'Hour of Code'}
+                - else
+                  %img{src: '/images/hour-of-code-logo.png', alt: 'Hour of Code'}
         
       #language-dropdown.hidden-xs{style: "visibility: hidden;"}
         = view :language_dropdown
