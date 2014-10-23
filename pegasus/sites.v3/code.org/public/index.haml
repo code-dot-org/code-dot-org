@@ -73,7 +73,7 @@ social:
             =I18n.t :hoc2014_students
             &nbsp;
           .optionright
-            %a{:href=>'/learn'}
+            %a#trybutton{:href=>'/learn'}
               %button.optionbutton
                 =I18n.t :hoc2014_try
             %br/
@@ -83,7 +83,7 @@ social:
             =I18n.t :hoc2014_teachers
             &nbsp;
           .optionright
-            %a{:href=>"http://#{canonical_hostname('hourofcode.com')}/#join", target: "_blank"}
+            %a#hostbutton{:href=>"http://#{canonical_hostname('hourofcode.com')}/#join", target: "_blank"}
               %button.optionbutton
                 =I18n.t :hoc2014_host
             %br/
@@ -93,7 +93,7 @@ social:
             =I18n.t :hoc2014_everyone
             &nbsp;
           .optionright
-            %a{:href=>'/donate'}
+            %a#supportbutton{:href=>'/donate'}
               %button.optionbutton
                 =I18n.t :hoc2014_support
             %br/
