@@ -24,18 +24,6 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   background-position: -63px 0px;
   margin-right: 3px;
 }
-.calcHeader {
-  font-size: 25px;
-}
-
-.highlightedParen {
-  fill: white;
-}
-
-.exprMistake {
-  fill: red;
-}
-
-.expr {
-  font-size: 20px;
+#answer {
+  opacity: 0.2;
 }

@@ -34,7 +34,6 @@ var feedback = require('../feedback.js');
 var dom = require('../dom');
 
 
-var ExpressionNode = require('./expressionNode');
 var TestResults = require('../constants').TestResults;
 
 var level;
@@ -53,12 +52,6 @@ Eval.init = function(config) {
 
   skin = config.skin;
   level = config.level;
-
-  Eval.expressions = {
-    target: null, // the complete target expression
-    user: null, // the current state of the user expression
-    current: null // the current state of the target expression
-  };
 
   Eval.shownFeedback_ = false;
 
@@ -100,16 +93,12 @@ Eval.init = function(config) {
     //XXX Not sure if this is still right.
     Blockly.JavaScript.addReservedWords('Eval,code');
 
-    Eval.expressions.target = generateExpressionFromBlockXml(level.solutionBlocks);
-    Eval.drawExpressions();
+    Eval.answerObject = generateEvalObjectFromBlockXml(level.solutionBlocks);
+    Eval.answerObject.draw(document.getElementById('answer'));
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
-
-    dom.addClickTouchEvent(document.getElementById("continueButton"), function () {
-      Eval.step(true);
-    });
 
     // base's BlocklyApps.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
@@ -139,15 +128,11 @@ BlocklyApps.runButtonClick = function() {
  * called first.
  */
 Eval.resetButtonClick = function () {
-  var continueButton = document.getElementById('continueButton');
-  // todo - single location for toggling hide state?
-  continueButton.className += " hide";
+  var user = document.getElementById('user');
+  while (user.firstChild) {
+    user.removeChild(user.firstChild);
+  }
 
-  Eval.expressions.user = null;
-  Eval.expressions.current = null;
-  Eval.shownFeedback_ = false;
-
-  Eval.drawExpressions();
 };
 
 
@@ -176,11 +161,11 @@ function evalCode (code) {
 }
 
 /**
- * Given the xml for a set of blocks, generates an expression from them by
+ * Given the xml for a set of blocks, generates an eval object from them by
  * temporarily sticking them into the workspace, generating code, and
  * evaluating said code.
  */
-function generateExpressionFromBlockXml(blockXml) {
+function generateEvalObjectFromBlockXml(blockXml) {
   var xml = blockXml || '';
 
   if (Blockly.mainWorkspace.getTopBlocks().length !== 0) {
@@ -195,10 +180,10 @@ function generateExpressionFromBlockXml(blockXml) {
 
   // Remove the blocks
   Blockly.mainWorkspace.getTopBlocks().forEach(function (b) { b.dispose(); });
-  var expression = Eval.lastExpression;
-  Eval.lastExpression = null;
+  var object = Eval.lastEvalObject;
+  Eval.lastEvalObject = null;
 
-  return expression;
+  return object;
 }
 
 /**
@@ -209,30 +194,18 @@ Eval.execute = function() {
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
 
-  if (!Eval.lastExpression) {
-    Eval.lastExpression = new ExpressionNode(0);
+  Eval.userObject = Eval.lastEvalObject;
+  if (Eval.userObject) {
+    Eval.userObject.draw(document.getElementById("user"));
   }
 
-  Eval.expressions.user = Eval.lastExpression.clone();
-  Eval.expressions.current = Eval.expressions.target.clone();
-
-  Eval.expressions.user.applyExpectation(Eval.expressions.target);
-
-  var result = !Eval.expressions.user.failedExpectation(true);
-
-  var equivalent = Eval.expressions.user.isEquivalent(Eval.expressions.target);
-
-  Eval.drawExpressions();
+  var result = evaluateAnswer();
+  if (result) {
+    Eval.message = "Good jorb!"
+  }
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
-
-  // todo (brent) - better way of doing this
-  if (equivalent) {
-    Eval.message = result ? "correct" : "expression equivalent";
-  } else {
-    Eval.message = null;
-  }
 
   var reportData = {
     app: 'eval',
@@ -245,137 +218,30 @@ Eval.execute = function() {
   };
 
   BlocklyApps.report(reportData);
-
-  window.setTimeout(function () {
-    Eval.step();
-  }, 1000);
 };
 
-/**
- * Perform a step in our expression evaluation animation. This consists of
- * collapsing the next node in our tree. If that node failed expectations, we
- * will instead bring up a continue button, and refrain from further
- * collapses/animations until continue is pressed.
- */
-Eval.step = function (ignoreFailures) {
-  if (!Eval.expressions.user) {
-    return;
-  }
+function evaluateAnswer() {
+  var answer = document.getElementById('answer');
+  var user = document.getElementById('user');
 
-  if (!Eval.expressions.user.isOperation()) {
-    displayFeedback();
-    return;
-  }
-
-  var continueButton = document.getElementById('continueButton');
-
-  var collapsed = Eval.expressions.user.collapse(ignoreFailures);
-  if (!collapsed) {
-    continueButton.className = continueButton.className.replace(/hide/g, "");
-  } else {
-    Eval.expressions.current.collapse();
-    Eval.drawExpressions();
-
-    continueButton.className += " hide";
-
-    window.setTimeout(function () {
-      Eval.step();
-    }, 1000);
-  }
+  // is this good enough?
+  return answer.innerHTML.trim() == user.innerHTML.trim();
 };
 
-/**
- * Draw the current state of our two expressions.
- */
-Eval.drawExpressions = function () {
-  var expected = Eval.expressions.current || Eval.expressions.target;
-  var user = Eval.expressions.user;
-
-  // todo - in cases where we have the wrong answer, marking the "next" operation
-  // for both doesn't necessarily make sense, i.e.
-  // goal: ((1 + 2) * (3 + 4))
-  // user: (0 * (3 + 4))
-  // right now, we'll highlight the 1 + 2 for goal, and the 3 + 4 for user
-
-  expected.applyExpectation(expected);
-  drawSvgExpression('answerExpression', expected, user !== null);
-
-  if (user) {
-    user.applyExpectation(expected);
-    drawSvgExpression('userExpression', user, true);
-  } else {
-    clearSvgExpression('userExpression');
-  }
-};
-
-function clearSvgExpression(elementId) {
-  var g = document.getElementById(elementId);
-  // remove all existing children, in reverse order so that we don't have to
-  // worry about indexes changing
-  for (var i = g.childNodes.length - 1; i >= 0; i--) {
-    g.removeChild(g.childNodes[i]);
-  }
-}
-
-function drawSvgExpression(elementId, expr, styleMarks) {
-  var i, text, textLength, char;
-  var g = document.getElementById(elementId);
-  clearSvgExpression(elementId);
-
-  var tokenList = expr.getTokenList(styleMarks);
-  var xPos = 0;
-  for (i = 0; i < tokenList.length; i++) {
-    text = document.createElementNS(Blockly.SVG_NS, 'text');
-
-    // getComputedTextLength doesn't respect trailing spaces, so we replace them
-    // with _, evalulate our size, then return to the version with spaces.
-    char = tokenList[i].char;
-    text.textContent = char.replace(/ /g, '_');
-    g.appendChild(text);
-    // getComputedTextLength isn't available to us in our mochaTests
-    textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
-    text.textContent = char;
-
-    text.setAttribute('x', xPos + textLength / 2);
-    text.setAttribute('text-anchor', 'middle');
-    xPos += textLength;
-
-    if (styleMarks && tokenList[i].marked) {
-      if (char === '(' || char === ')') {
-        text.setAttribute('class', 'highlightedParen');
-      } else {
-        text.setAttribute('class', 'exprMistake');
-      }
-    }
-  }
-
-  // center entire expression
-  // todo (brent): handle case where expression is longer than width
-  var width = g.getBoundingClientRect().width;
-  var xPadding = (CANVAS_WIDTH - width) / 2;
-  var currentTransform = g.getAttribute('transform');
-  // IE has space separated args, others use comma to separate
-  var newTransform = currentTransform.replace(/translate\(.*[,|\s]/,
-    "translate(" + xPadding + ",");
-  g.setAttribute('transform', newTransform);
-}
 
 /**
  * App specific displayFeedback function that calls into
  * BlocklyApps.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
-  if (!Eval.expressions.user.isOperation() && !Eval.shownFeedback_) {
-    Eval.shownFeedback_ = true;
-    BlocklyApps.displayFeedback({
-      app: 'Eval',
-      skin: skin.id,
-      // feedbackType: Eval.testResults,
-      message: Eval.message ? Eval.message : "todo (brent): wrong",
-      response: response,
-      level: level
-    });
-  }
+  BlocklyApps.displayFeedback({
+    app: 'Eval',
+    skin: skin.id,
+    // feedbackType: Eval.testResults,
+    message: Eval.message ? Eval.message : "todo (brent): wrong",
+    response: response,
+    level: level
+  });
 };
 
 /**
