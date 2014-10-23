@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -10670,7 +10670,7 @@ exports.catVariables = function(d){return "ตัวแปร"};
 
 exports.codeTooltip = function(d){return "ดูการสร้างโค้ด JavaScript."};
 
-exports.continue = function(d){return "ต่อไป"};
+exports.continue = function(d){return "ดำเนินการต่อไป"};
 
 exports.dialogCancel = function(d){return "ยกเลิก"};
 
@@ -10702,7 +10702,7 @@ exports.generatedCodeInfo = function(d){return "มหาวิทยาลั�
 
 exports.hashError = function(d){return "ขออภัย '%1' ไม่ตรงกับโปรแกรมที่บันทึกไว้."};
 
-exports.help = function(d){return "ช่วยเหลือ"};
+exports.help = function(d){return "ขอความช่วยเหลือ"};
 
 exports.hintTitle = function(d){return "คำแนะนำ:"};
 
@@ -10710,7 +10710,7 @@ exports.jump = function(d){return "กระโดด"};
 
 exports.levelIncompleteError = function(d){return "คุณกำลังใช้ทุกสิ่งทุกอย่างที่จำเป็นของบล็อก แต่ไม่ใช่ทางที่ถูกต้อง."};
 
-exports.listVariable = function(d){return "ลิสต์"};
+exports.listVariable = function(d){return "รายการ"};
 
 exports.makeYourOwnFlappy = function(d){return "สร้าง Flappy เกม ไว้เป็นของเราเอง"};
 
@@ -10742,7 +10742,7 @@ exports.runTooltip = function(d){return "เรียกใช้โปรแก
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "แสดงโค้ด"};
+exports.showCodeHeader = function(d){return "แสดงรหัส"};
 
 exports.showGeneratedCode = function(d){return "แสดงโค้ด"};
 
@@ -10917,13 +10917,13 @@ exports.penTooltip = function(d){return "กดดินสอลงเพื่
 
 exports.penUp = function(d){return "ยกดินสอขึ้น"};
 
-exports.reinfFeedbackMsg = function(d){return "Does this look like what you want? You can press the \"Try again\" button to see your drawing."};
+exports.reinfFeedbackMsg = function(d){return "นี่ดูเหมือนอะไรที่คุณต้องการใช่ไหม คุณสามารถกดปุ่ม \"ลองอีกครั้ง\" เพื่อดูรูปวาดของคุณ."};
 
 exports.setColour = function(d){return "set color"};
 
 exports.setWidth = function(d){return "set width"};
 
-exports.shareDrawing = function(d){return "Share your drawing:"};
+exports.shareDrawing = function(d){return "แชร์รูปวาดของคุณ:"};
 
 exports.showMe = function(d){return "Show me"};
 

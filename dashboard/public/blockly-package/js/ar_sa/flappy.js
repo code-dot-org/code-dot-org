@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -9219,7 +9219,7 @@ exports.catActions = function(d){return "الاجراءات"};
 
 exports.catColour = function(d){return "لون"};
 
-exports.catLogic = function(d){return "العمليات المنطقية"};
+exports.catLogic = function(d){return "منطق"};
 
 exports.catLists = function(d){return "القوائم والمصفوفات"};
 
@@ -9229,7 +9229,7 @@ exports.catMath = function(d){return "العمليات الحسابية"};
 
 exports.catProcedures = function(d){return "الدوال"};
 
-exports.catText = function(d){return "الجمل"};
+exports.catText = function(d){return "نص"};
 
 exports.catVariables = function(d){return "المتغيرات"};
 
@@ -9271,7 +9271,7 @@ exports.help = function(d){return "مساعدة"};
 
 exports.hintTitle = function(d){return "تلميح:"};
 
-exports.jump = function(d){return "قفز"};
+exports.jump = function(d){return "إقفز"};
 
 exports.levelIncompleteError = function(d){return "أنت استخدمت كل انواع القطع الضرورية ولكن ليس في الطريق الصحيح."};
 
@@ -9297,7 +9297,7 @@ exports.play = function(d){return "إلعب"};
 
 exports.puzzleTitle = function(d){return "اللغز "+v(d,"puzzle_number")+" من "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "إعادة"};
+exports.repeat = function(d){return "كرر"};
 
 exports.resetProgram = function(d){return "إعادة تعيين"};
 
@@ -9389,13 +9389,13 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ar = function(
   }
   return 'other';
 };
-exports.continue = function(d){return "إستمرار"};
+exports.continue = function(d){return "استمرار"};
 
 exports.doCode = function(d){return "نفّذ"};
 
-exports.elseCode = function(d){return "وإلا"};
+exports.elseCode = function(d){return "والا"};
 
-exports.endGame = function(d){return "إنهاء اللعبة"};
+exports.endGame = function(d){return "نهاية اللعبة"};
 
 exports.endGameTooltip = function(d){return "تنتهي اللعبة."};
 
@@ -9427,7 +9427,7 @@ exports.nextLevel = function(d){return "تهانينا! لقد قمت بإكما
 
 exports.no = function(d){return "لا"};
 
-exports.numBlocksNeeded = function(d){return "يمكن حل هذا الغز ب  %1 من القطع."};
+exports.numBlocksNeeded = function(d){return "يمكن حل هذا اللغز مع  % 1 من الكتل."};
 
 exports.playSoundRandom = function(d){return "تشغيل صوت عشوائي"};
 
@@ -9457,7 +9457,7 @@ exports.playSoundLaser = function(d){return "تشغيل صوت الليزر"};
 
 exports.playSoundTooltip = function(d){return "تشغيل الصوت المختار."};
 
-exports.reinfFeedbackMsg = function(d){return "يمكنك الضغط على زر \"حاول مرة أخرى\" للعودة للعب اللعبة الخاصة بك."};
+exports.reinfFeedbackMsg = function(d){return "يمكنك الضغط على زر \"حاول مرة أخرى\" للعودة للعبة الخاصة بك."};
 
 exports.scoreText = function(d){return "النقاط: "+v(d,"playerScore")};
 
@@ -9477,7 +9477,7 @@ exports.setBackgroundCave = function(d){return "تعيين مشهد كهف"};
 
 exports.setBackgroundSanta = function(d){return "تعيين مشهد سانتا"};
 
-exports.setBackgroundTooltip = function(d){return "تعيين صورة الخلفية"};
+exports.setBackgroundTooltip = function(d){return "تحديد صورة الخلفية"};
 
 exports.setGapRandom = function(d){return "وضع فجوة عشوائية"};
 
@@ -9577,7 +9577,7 @@ exports.setPlayerTurkey = function(d){return "تعيين لاعب \"الديك �
 
 exports.setPlayerTooltip = function(d){return "يعين صورة الاعب"};
 
-exports.setScore = function(d){return "ضبط مجموع النقاط"};
+exports.setScore = function(d){return "تعيين نقاط"};
 
 exports.setScoreTooltip = function(d){return "يعين مجموع نقاط الاعب"};
 
@@ -9591,7 +9591,7 @@ exports.shareGame = function(d){return "شارك لعبتك:"};
 
 exports.soundRandom = function(d){return "عشوائي"};
 
-exports.soundBounce = function(d){return "إرتداد"};
+exports.soundBounce = function(d){return "ترتد"};
 
 exports.soundCrunch = function(d){return "سحق"};
 

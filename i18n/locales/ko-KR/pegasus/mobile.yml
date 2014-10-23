@@ -5,11 +5,11 @@ ko-KR:
   csedweek_dates: 2013년 12월 9일 부터 15일 까지
   n_have_learned_an_hoc: '<h1>#</h1><h3>명이</h3><h2>Hour of Code</h2><h3>를 경험하였습니다</h3>'
   anybody_can_learn: 누구나 배울 수 있습니다.
-  learn_now: 해보기
+  learn_now: 지금 배워보세요.
   petition_message: 모든 학교의 모든 학생은 컴퓨터과학(정보과학)을 배울 기회가 있어야 합니다.
   petition_sign_message: '동의하시면 이름을 서명해 주세요. 지금까지 # 명이 서명하였습니다.'
   name: 이름
-  email: 이메일
+  email: Email
   zipcode: 우편번호 또는 국가
   submit: 제출하기
   twentyhours_heading: 컴퓨터과학(정보과학) 과정을 시도해 보세요.
@@ -20,9 +20,9 @@ ko-KR:
   hoc2014_teachers: 선생님들
   hoc2014_host: 주관하기
   hoc2014_everyone: 모든사람
-  hoc2014_support: 도움주기
+  hoc2014_support: Support it
   hoc2014_whatishoc: Hour of Code 란?
-  twentyhours_trynow: 지금 해보기
+  twentyhours_trynow: 해보기
   california_heading: 학교에 컴퓨터과학(정보과학) 수업을 요청하세요.
   california_text: "어떤 선생님이건 우리의 <a href='http://studio.code.org/'>무료 강좌</a>를 사용할 수 있습니다.  어떤 초등학교라도 <a href='http://code.org/educate/k5'>컴퓨터 과학</a>을 가르칠 수 있습니다. 고등학교에 <a href='http://code.org/educate/districts'>우리와 파트너가 되는 것</a>을 문의하세요."
   california_button: 더 알아보기
@@ -44,7 +44,7 @@ ko-KR:
   get_a_certificate_message: "인증서와 <a href='/learn'>Learn beyond One Hour</a> 에 대한 정보를 보내드립니다"
   get_a_certificate_message_after: "다운로드 하거나 인쇄 하려면 증명서를 누르세요. 이제, 우리의 <a href='http://studio.code.org'>다른 강좌들</a>을 계속 듣거나, <a href='/learn/beyond'>Hour of Code를 넘어서</a>에서 다른 선택을 둘러보세요."
   thanks_for_submitting: 청원해 주셔서 감사합니다!
-  if_you_enjoyed: 재미있게 배우셨다면, 친구들과 함께 해보세요! 우리는 모든 세상 사람들이 함께 배우기를 바랍니다.
+  if_you_enjoyed: 재미있으면, 친구들과 함께 해보세요! 전세계 모든 사람들이 함께 하면 좋겠습니다.
   personalize_certificate: 개인별 인증서 만들기
   share_achievement: 다른 사람들에게 자랑하기
   beyond_hour_message: "우리의 <a href='http://studio.code.org'>다른 강좌들</a>을 계속 듣거나, <a href='/learn/beyond'>Hour of Code를 넘어서</a>에서 다른 선택들을 둘러보세요."
@@ -66,7 +66,7 @@ ko-KR:
   get_started: '시작:'
   i_agree: 동의합니다
   participant_select: '- 선택 -'
-  participant_student: 학생
+  participant_student: student
   participant_parent: 학부모입니다.
   participant_educator: 교사입니다.
   participant_engineer: 소프트웨어 엔지니어입니다.
@@ -79,7 +79,7 @@ ko-KR:
   petition_thankyou: 청원에 서명해 주셔서 감사합니다.
   carousel_heading_international: 다른 언어로 된 튜토리얼
   continue_learning_header: One Hour 이후 학습
-  continue_learning_body: 여러 가지 방법들이 있습니다. 온라인이나 학교에서 배우거나, 방학중 캠프를 통해 배울 수 있습니다.
+  continue_learning_body: 많은 방법들이 있습니다. 온라인으로 배우거나, 학교에서 배우거나, 방학 중 캠프 등을 통해 배울 수 있습니다.
   learn_next_level: 다음 단계 계속하기
   learn_online: 다른 온라인 과정 해보기
   learn_classes: 학교 수업
@@ -96,7 +96,7 @@ ko-KR:
   lines_of_code_alt: '<b>#</b> 줄의 코드가 학생들에 의해 작성되었습니다'
   who_has_done_hoc: '누가 #HourOfCode @codeorg 했을까?'
   hoc_leaderboards: Hour of Code 순위
-  students_and_lines: '%{students} 명의 학샐들이 Hour of Code 를 완료하고, %{lines}의 코드를 작성하였습니다.'
+  students_and_lines: '%{students}명의 학생들이 Hour of Code 를 수행하였고, %{lines}의 코드를 작성하였습니다.'
   start_hoc: Hour of Code 를 지금 바로! 시작해 보세요!
   contact_form_topic_press: 보도/언론 (인터뷰, 발표)
   studiobar_title: "<a href='http://studio.code.org'>Code Studio</a> 살펴보기"
@@ -201,7 +201,7 @@ ko-KR:
   dashboard_sections_new_section: 새 섹션
   dashboard_sections_jumbotron_instruction: 새로운 섹션을 만들고 학생을 추가합니다. 섹션은 학생들을 모다 작은 모둠으로 구성할 수 있게 하여 학생들의 계정에 따라 진도를 추적할 수 있습니다.
   dashboard_sections_table_section: 섹션
-  dashboard_sections_table_secret: 비밀번호 입력
+  dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: 등급
   dashboard_sections_table_course: 코스
   dashboard_sections_table_students: 학생들
@@ -224,7 +224,7 @@ ko-KR:
   dashboard_students_male: 남
   dashboard_students_female: 여
   dashboard_students_secret: 비밀보호
-  dashboard_students_password: 비밀번호
+  dashboard_students_password: password
   dashboard_students_username: '사용자명: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: 단계 완료
@@ -249,7 +249,7 @@ ko-KR:
   dashboard_course1: '코스1:'
   dashboard_course2: '코스2:'
   dashboard_course3: '코스3:'
-  dashboard_sequence: 순서
+  dashboard_sequence: 순차
   dashboard_framework: 구성
   dashboard_standards: 기준
   dashboard_implementation_guide: 수업 가이드
@@ -261,9 +261,21 @@ ko-KR:
   dashboard_teacher_worksheet: 교사 활동지
   dashboard_grade_k: K
   dashboard_grade_other: 기타
-  dashboard_login_word: 비밀단어
-  dashboard_login_picture: 비밀그림
-  dashboard_login_none: 없음
+  dashboard_login_word: Word
+  dashboard_login_picture: Picture
+  dashboard_login_none: 이메일
   dashboard_new_password: 새 비밀번호
   stats_hoc_2013_heading: '지난 Hour of Code 이후의 폭발적 통계수치. 지난 1주일:'
   stats_hoc_2013_image_alt: 203 Hour of Code 이후 통계수치
+  dashboard_teacher: Teacher
+  dashboard_student: student
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: "Who creates the student's account?"
+  dashboard_sections_password question: 'What do students use as a "password"?'
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: 'Unique web-page listed on "Manage Students" tab'
+  dashboard_sections_sign_in_main: 'http://code.org and click "Sign in"'
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."

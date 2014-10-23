@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -18707,7 +18707,7 @@ exports.catMath = function(d){return "Matemática"};
 
 exports.catProcedures = function(d){return "Funções"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
 exports.catVariables = function(d){return "Variáveis"};
 
@@ -18785,7 +18785,7 @@ exports.runTooltip = function(d){return "Execute o programa definido pelos bloco
 
 exports.score = function(d){return "pontuação"};
 
-exports.showCodeHeader = function(d){return "Mostrar Código"};
+exports.showCodeHeader = function(d){return "Mostrar código"};
 
 exports.showGeneratedCode = function(d){return "Mostrar código"};
 
@@ -18799,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "Esse desafio pode ser resolvido c
 
 exports.tooMuchWork = function(d){return "Você me fez trabalhar bastante! Podemos tentar repetindo menos vezes?"};
 
-exports.toolboxHeader = function(d){return "Blocos"};
+exports.toolboxHeader = function(d){return "blocos"};
 
 exports.openWorkspace = function(d){return "Como funciona"};
 
@@ -18815,7 +18815,7 @@ exports.saveToGallery = function(d){return "Salve na sua galeria"};
 
 exports.savedToGallery = function(d){return "Salvo na sua galeria!"};
 
-exports.shareFailure = function(d){return "Não podemos compartilhar esse programa."};
+exports.shareFailure = function(d){return "Desculpe, não é possível compartilhar esse programa."};
 
 exports.typeCode = function(d){return "Digite seu código JavaScript abaixo destas instruções."};
 
@@ -18854,7 +18854,7 @@ exports.actor = function(d){return "personagem"};
 
 exports.catActions = function(d){return "Ações"};
 
-exports.catControl = function(d){return "Laços"};
+exports.catControl = function(d){return "laços"};
 
 exports.catEvents = function(d){return "Eventos"};
 
@@ -18862,11 +18862,11 @@ exports.catLogic = function(d){return "Lógica"};
 
 exports.catMath = function(d){return "Matemática"};
 
-exports.catProcedures = function(d){return "Funções"};
+exports.catProcedures = function(d){return "funções"};
 
 exports.catText = function(d){return "Texto"};
 
-exports.catVariables = function(d){return "Variáveis"};
+exports.catVariables = function(d){return "variáveis"};
 
 exports.changeScoreTooltip = function(d){return "Adiciona ou remove um ponto."};
 
@@ -18890,7 +18890,7 @@ exports.incrementPlayerScore = function(d){return "marque o ponto"};
 
 exports.makeProjectileDisappear = function(d){return "desapareça"};
 
-exports.makeProjectileBounce = function(d){return "quicar"};
+exports.makeProjectileBounce = function(d){return "quique"};
 
 exports.makeProjectileBlueFireball = function(d){return "crie bola de fogo azul"};
 
@@ -18908,9 +18908,9 @@ exports.makeProjectileTooltip = function(d){return "Faça o projétil que colidi
 
 exports.makeYourOwn = function(d){return "Faça seu próprio aplicativo do Laboratório"};
 
-exports.moveDirectionDown = function(d){return "baixo"};
+exports.moveDirectionDown = function(d){return "para baixo"};
 
-exports.moveDirectionLeft = function(d){return "esquerda"};
+exports.moveDirectionLeft = function(d){return "para esquerda"};
 
 exports.moveDirectionRight = function(d){return "direita"};
 
@@ -18956,11 +18956,11 @@ exports.moveUpTooltip = function(d){return "Move um personagem para cima."};
 
 exports.moveTooltip = function(d){return "Move um personagem."};
 
-exports.nextLevel = function(d){return "Parabéns! Você completou o desafio."};
+exports.nextLevel = function(d){return "Parabéns! Você completou esse desafio."};
 
 exports.no = function(d){return "Não"};
 
-exports.numBlocksNeeded = function(d){return "Esse desafio pode ser resolvido com blocos de %1."};
+exports.numBlocksNeeded = function(d){return "Esse desafio pode ser resolvido com %1 blocos."};
 
 exports.ouchExclamation = function(d){return "Ai!"};
 
@@ -18982,9 +18982,9 @@ exports.playSoundRubber = function(d){return "reproduza som de borracha"};
 
 exports.playSoundSlap = function(d){return "reproduza som de palmas"};
 
-exports.playSoundTooltip = function(d){return "Reproduz o som escolhido."};
+exports.playSoundTooltip = function(d){return "Reproduza o som escolhido."};
 
-exports.playSoundWinPoint = function(d){return "reproduza som de ponto ganho"};
+exports.playSoundWinPoint = function(d){return "fazer som de ponto ganho"};
 
 exports.playSoundWinPoint2 = function(d){return "reproduza som de ponto ganho 2"};
 
@@ -19086,7 +19086,7 @@ exports.setBackgroundTennis = function(d){return "defina o plano de fundo de tê
 
 exports.setBackgroundWinter = function(d){return "defina o plano de fundo de inverno"};
 
-exports.setBackgroundTooltip = function(d){return "Define a imagem de fundo"};
+exports.setBackgroundTooltip = function(d){return "Define a imagem do plano de fundo"};
 
 exports.setScoreText = function(d){return "defina a pontuação"};
 
@@ -19218,7 +19218,7 @@ exports.showTSDefText = function(d){return "digite o texto aqui"};
 
 exports.showTitleScreenTooltip = function(d){return "Mostrar um tela de título com o título e o texto associados."};
 
-exports.setSprite = function(d){return "defina"};
+exports.setSprite = function(d){return "definir"};
 
 exports.setSpriteN = function(d){return "defina o personagem "+v(d,"spriteIndex")};
 

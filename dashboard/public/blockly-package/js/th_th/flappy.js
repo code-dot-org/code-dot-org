@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -9218,7 +9218,7 @@ exports.catVariables = function(d){return "ตัวแปร"};
 
 exports.codeTooltip = function(d){return "ดูการสร้างโค้ด JavaScript."};
 
-exports.continue = function(d){return "ต่อไป"};
+exports.continue = function(d){return "ดำเนินการต่อไป"};
 
 exports.dialogCancel = function(d){return "ยกเลิก"};
 
@@ -9250,7 +9250,7 @@ exports.generatedCodeInfo = function(d){return "มหาวิทยาลั�
 
 exports.hashError = function(d){return "ขออภัย '%1' ไม่ตรงกับโปรแกรมที่บันทึกไว้."};
 
-exports.help = function(d){return "ช่วยเหลือ"};
+exports.help = function(d){return "ขอความช่วยเหลือ"};
 
 exports.hintTitle = function(d){return "คำแนะนำ:"};
 
@@ -9258,7 +9258,7 @@ exports.jump = function(d){return "กระโดด"};
 
 exports.levelIncompleteError = function(d){return "คุณกำลังใช้ทุกสิ่งทุกอย่างที่จำเป็นของบล็อก แต่ไม่ใช่ทางที่ถูกต้อง."};
 
-exports.listVariable = function(d){return "ลิสต์"};
+exports.listVariable = function(d){return "รายการ"};
 
 exports.makeYourOwnFlappy = function(d){return "สร้าง Flappy เกม ไว้เป็นของเราเอง"};
 
@@ -9290,7 +9290,7 @@ exports.runTooltip = function(d){return "เรียกใช้โปรแก
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "แสดงโค้ด"};
+exports.showCodeHeader = function(d){return "แสดงรหัส"};
 
 exports.showGeneratedCode = function(d){return "แสดงโค้ด"};
 
@@ -9355,7 +9355,7 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.th=function(n){return "other"}
-exports.continue = function(d){return "ต่อไป\n"};
+exports.continue = function(d){return "ดำเนินการต่อไป"};
 
 exports.doCode = function(d){return "ทำ"};
 
@@ -9391,7 +9391,7 @@ exports.incrementPlayerScoreTooltip = function(d){return "เพิ่มคะ�
 
 exports.nextLevel = function(d){return "ขอแสดงความยินดีคุณสำเร็จปริศนานี้."};
 
-exports.no = function(d){return "ไม่"};
+exports.no = function(d){return "ไม่ใช่"};
 
 exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
 
@@ -9443,7 +9443,7 @@ exports.setBackgroundCave = function(d){return "set scene Cave"};
 
 exports.setBackgroundSanta = function(d){return "set scene Santa"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "ตั่งค่าภาพพื้นหลัง"};
 
 exports.setGapRandom = function(d){return "set a random gap"};
 
@@ -9609,7 +9609,7 @@ exports.whenEnterObstacle = function(d){return "when pass obstacle"};
 
 exports.whenEnterObstacleTooltip = function(d){return "Execute the actions below when Flappy enters an obstacle."};
 
-exports.whenRunButtonClick = function(d){return "when Run is clicked"};
+exports.whenRunButtonClick = function(d){return "เมื่อเกมเริ่ม"};
 
 exports.whenRunButtonClickTooltip = function(d){return "Execute the actions below when the run button is pressed."};
 

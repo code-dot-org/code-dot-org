@@ -34,13 +34,13 @@ id:
           desc: Memantul (beta)
           Bounce: Tahap 1
         Builder Levels:
-          desc: Teka-teki dari pengguna (beta)
+          desc: Teka-teki buatan pengguna (beta)
           Custom: Tahap 1
         Flappy Levels:
-          desc: Burung Flappy
+          desc: Flappy Bird
           Flappy: Tahap 1
         Jigsaw Levels:
-          desc: Teka-teki (beta)
+          desc: Jigsaw (beta)
           Jigsaw: Tahap 1
         Step Levels:
           desc: Labirin (beta)
@@ -48,18 +48,19 @@ id:
         edit-code:
           desc: Edit kode (beta)
           MazeEC: Tahap 1
+          Webapp: Tahap 2
         events:
           desc: Memantul (beta)
           Bounce: Tahap 1
           Studio: Tahap 2
         builder:
-          desc: Teka-teki buatan pengguna (beta)
+          desc: Teka-teki dari pengguna (beta)
           Custom: Tahap 1
         flappy:
-          desc: Flappy Bird
+          desc: Burung Flappy
           Flappy: Tahap 1
         jigsaw:
-          desc: Jigsaw (beta)
+          desc: Teka-teki (beta)
           Jigsaw: Tahap 1
         step:
           desc: Labirin (beta)
@@ -69,7 +70,7 @@ id:
           WordSearch: Tahap 1
     game:
       name:
-        Unplug1: Perkenalan ilmu komputer
+        Unplug1: Pengantar Ilmu Komputer
         Maze: Labirin
         Multi: Beberapa pilihan barang
         Unplug2: Berpikir secara komputasi
@@ -96,6 +97,7 @@ id:
         Jigsaw: Teka-teki
         MazeStep: Mode tahapan labirin
         Wordsearch: Carikata
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Perunggu
@@ -106,9 +108,9 @@ id:
         sequence: Urutan (Sequence)
         if: Blok Jika (if)
         if_else: Blok jika tidak (if/else)
-        loop_times: Blok berulang kali (Repeat)
-        loop_until: Blok Ulangi sampai (Repeat until)
-        loop_while: Blok selagi (while)
+        loop_times: Blok Ulangi
+        loop_until: Blok Ulangi Sampai
+        loop_while: Blok Selagi (while)
         loop_for: Blok konter (Counter)
         function: Fungsi
         parameters: Fungsi dengan parameter
@@ -231,11 +233,11 @@ id:
         Custom_builder: 'Tarik blok dari toolbox ke ruang kerja untuk menggambar tingkat yang Anda ingin buat. Tekan "Jalankan Program" ketika Anda selesai.'
         flappy_1: 'Tempatkan satu blok pada blok "Ketika klik", kemudian tekan "Jalankan Program". Klik atau sentuh layar untuk mengerakkan Flappy menuju target.'
         flappy_2: |-
-          Sekarang kami telah menambahkan beberapa permukaan.  Tempelkan blok ke blok "Jika mengenai permukaan".  Kode Anda memerlukan 'Permainan berakhir' jika Flappy menghantam permukaan.
+          Sekarang kita telah menambahkan beberapa permukaan.  Tempelkan blok ke blok "ketika mencapai permukaan".  Kode Anda memerlukan 'PERMAINAN BERAKHIR' ketika Flappy menghantam permukaan.
         flappy_3: 'Blok "ketika permainan dimulai" memungkinkan Anda untuk menjalankan kode untuk memulai permainan.  Cobalah mengatur tingkat kecepatan dan cara mengepak untuk menuju target.'
         flappy_4: |-
-          Flappy akan terbang melalui hambatan kecuali Anda menulis kode untuk membuatnya menabrak. Lampirkan blok ke blok "ketika mengenai hambatan". Kode Anda perlu 'Permainan berakhir' ketika Flappy menghantam set pipa pertama.
-        flappy_5: 'Mari kita tambahkan scoreboard, dan menghitung poin saat Flappy melewati hambatan. Tambahkan ke blok "ketika melewati hambatan", dan kemudian raihlah Skor lebih dengan membuat Flappy terbang melalui set pipa pertama.'
+          Flappy akan terbang melalui hambatan kecuali Anda menulis kode untuk membuatnya menabrak. Temaptkan blok-blok ke dalam blok "ketika mengenai hambatan". Kode Anda perlu 'Permainan berakhir' ketika Flappy menghantam sekumpulan pipa.
+        flappy_5: 'Mari kita tambahkan scoreboard, dan menghitung poin saat Flappy melewati hambatan. Tambahkan ke blok "ketika melewati hambatan", dan kemudian raihlah Skor lebih dengan membuat Flappy terbang melalui sekumpulan pipa.'
         flappy_6: Perhatikan apakah Anda masih bisa mendapat Skor setelah mengubah Flappy mengepak sayap lebih banyak atau lebih sedikit.
         flappy_7: 'Selanjutnya, cobalah mengubah adegan dengan melampirkan blok yang lain ke blok "ketika menjalankan".'
         flappy_8: Kamu dapat mengatur visual kapan saja, tidak perlu hanya ketika permainan dimulai. Cobalah membuat latar belakang berubah secara acak ketika event berganti, misalnya ketika melewati penghalang.
@@ -244,11 +246,11 @@ id:
         flappy_k1_1: Mainkan Flappy
         flappy_k1_2: 'Tempatkan satu blok pada blok "Ketika klik", kemudian tekan "Jalankan Program". Klik atau sentuh layar untuk mengerakkan Flappy menuju target.'
         flappy_k1_3: |-
-          Sekarang kita telah menambahkan beberapa permukaan.  Tempelkan blok ke blok "ketika mencapai permukaan".  Kode Anda memerlukan 'PERMAINAN BERAKHIR' ketika Flappy menghantam permukaan.
+          Sekarang kami telah menambahkan beberapa permukaan.  Tempelkan blok ke blok "Jika mengenai permukaan".  Kode Anda memerlukan 'Permainan berakhir' jika Flappy menghantam permukaan.
         flappy_k1_4: 'Blok "ketika permainan dimulai" memungkinkan Anda untuk menjalankan kode untuk memulai permainan.  Cobalah mengatur tingkat kecepatan dan cara mengepak untuk menuju target.'
         flappy_k1_5: |-
-          Flappy akan terbang melalui hambatan kecuali Anda menulis kode untuk membuatnya menabrak. Temaptkan blok-blok ke dalam blok "ketika mengenai hambatan". Kode Anda perlu 'Permainan berakhir' ketika Flappy menghantam sekumpulan pipa.
-        flappy_k1_6: 'Mari kita tambahkan scoreboard, dan menghitung poin saat Flappy melewati hambatan. Tambahkan ke blok "ketika melewati hambatan", dan kemudian raihlah Skor lebih dengan membuat Flappy terbang melalui sekumpulan pipa.'
+          Flappy akan terbang melalui hambatan kecuali Anda menulis kode untuk membuatnya menabrak. Lampirkan blok ke blok "ketika mengenai hambatan". Kode Anda perlu 'Permainan berakhir' ketika Flappy menghantam set pipa pertama.
+        flappy_k1_6: 'Mari kita tambahkan scoreboard, dan menghitung poin saat Flappy melewati hambatan. Tambahkan ke blok "ketika melewati hambatan", dan kemudian raihlah Skor lebih dengan membuat Flappy terbang melalui set pipa pertama.'
         flappy_k1_7: Lihat jika Anda dapat Skor beberapa poin untuk melewati hambatan
         flappy_k1_8: 'Selanjutnya, cobalah mengubah adegan dengan melampirkan blok yang lain ke blok "ketika menjalankan".'
         flappy_k1_9: 'Cobalah mengubah pemain dengan menempatkan "mengatur pemain" blok ke blok "ketika menjalankan".'
@@ -276,40 +278,40 @@ id:
         studio_c2_4: 'Dapatkah anda menulis program untuk membuat anjing menuju kucing dan membuat kucing mengatakan "halo" ketika anjing mencapainya?'
         studio_c2_5: 'Bisakah kamu menuliskan program untuk membuat si gurita mengatakan "halo" saat diklik?'
         studio_c2_6: Dapatkah anda menulis program untuk membuat penguin bergerak menggunakan tombol atas / bawah / kiri / kanan untuk memukul semua sasaran?
-        studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c2_7: 'Blok "Ulangi selamanya" memungkinkan Anda untuk menjalankan kode terus-menerus. Dapatkah anda menempatkan blok-blok untuk memindahkan dinosaurus ini naik dan turun berulang kali?'
+        studio_c2_8: 'Bisakah kamu membuat si penguin berkata "Aduh!" dan memainkan suara "pukul" jika ia tertabrak dinosaurus, lalu menggerakan ia dengan panah-panahnya?'
+        studio_c2_9: Bisakah kamu menambahkan sebuah balok untuk mendapatkan 1 poin saat si penguin tertabrak gurita, lalu menggerakan ia dengan panah-panahnya sampai kamu mendapatkan poin?
+        studio_c2_10: Bisakah kamu menambahkan blok-blok untuk mengubah latar belakang dan kecepatan si penguin, lalu menggerakan ia dengan panah-panah sampai mendapatkan poin?
         studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_story_1: 'Bisakah kamu membuat anjing ini berkata "halo dunia"?'
+        studio_c3_story_1: 'Dapatkah anda membuat anjing ini mengatakan "Halo dunia"?'
         studio_c3_story_2: Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian membuat kucing itu mengatakan sesuatu?
         studio_c3_story_3: Dapatkah anda menulis program untuk membuat anjing ini bergerak menuju kucing?
         studio_c3_story_4: 'Dapatkah anda menulis program untuk membuat anjing menuju kucing dan membuat kucing mengatakan "halo" ketika anjing mencapainya?'
-        studio_c3_story_5: Can you add a block to make the octopus happy?
+        studio_c3_story_5: Bisakah kamu menambahkan sebuah blok untuk membuat si gurita senang?
         studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_game_1: 'Bisakah kamu menuliskan program untuk membuat si gurita mengatakan "halo" saat diklik?'
         studio_c3_game_2: Dapatkah anda menulis program untuk membuat penguin bergerak menggunakan tombol atas / bawah / kiri / kanan untuk memukul semua sasaran?
-        studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c3_game_3: 'Blok "Ulangi selamanya" memungkinkan Anda untuk menjalankan kode terus-menerus. Dapatkah anda menempatkan blok-blok untuk memindahkan dinosaurus ini naik dan turun berulang kali?'
+        studio_c3_game_4: 'Bisakah kamu membuat si penguin berkata "Aduh!" dan memainkan suara "pukul" jika ia tertabrak dinosaurus, lalu menggerakan ia dengan panah-panahnya?'
+        studio_c3_game_5: Bisakah kamu menambahkan sebuah balok untuk mendapatkan 1 poin saat si penguin tertabrak gurita, lalu menggerakan ia dengan panah-panahnya sampai kamu mendapatkan poin?
+        studio_c3_game_6: Bisakah kamu menambahkan blok-blok untuk mengubah latar belakang dan kecepatan si penguin, lalu menggerakan ia dengan panah-panah sampai mendapatkan poin?
         studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        studio_playlab_1: 'Bisakah kamu membuat anjing ini berkata "halo dunia"?'
+        studio_playlab_1: 'Dapatkah anda membuat anjing ini mengatakan "Halo dunia"?'
         studio_playlab_2: Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian membuat kucing itu mengatakan sesuatu?
         studio_playlab_3: Dapatkah anda menulis program untuk membuat anjing ini bergerak menuju kucing?
         studio_playlab_4: 'Dapatkah anda menulis program untuk membuat anjing menuju kucing dan membuat kucing mengatakan "halo" ketika anjing mencapainya?'
         studio_playlab_5: 'Bisakah kamu menuliskan program untuk membuat si gurita mengatakan "halo" saat diklik?'
         studio_playlab_6: Dapatkah anda menulis program untuk membuat penguin bergerak menggunakan tombol atas / bawah / kiri / kanan untuk memukul semua sasaran?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_playlab_8: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_playlab_7: 'Blok "Ulangi selamanya" memungkinkan Anda untuk menjalankan kode terus-menerus. Dapatkah anda menempatkan blok-blok untuk memindahkan dinosaurus ini naik dan turun berulang kali?'
+        studio_playlab_8: Bisakah kamu menambahkan sebuah balok untuk mendapatkan 1 poin saat si penguin tertabrak gurita, lalu menggerakan ia dengan panah-panahnya sampai kamu mendapatkan poin?
+        studio_playlab_9: Bisakah kamu menambahkan blok-blok untuk mengubah latar belakang dan kecepatan si penguin, lalu menggerakan ia dengan panah-panah sampai mendapatkan poin?
         studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        studio_k1_1: 'Bisakah kamu membuat anjing ini berkata "halo dunia"?'
+        studio_k1_1: 'Dapatkah anda membuat anjing ini mengatakan "Halo dunia"?'
         studio_k1_2: Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian membuat kucing itu mengatakan sesuatu?
         studio_k1_3: Dapatkah anda menulis program untuk membuat anjing ini bergerak menuju kucing?
         studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
-        studio_k1_5: Can you add a block to make the octopus happy?
+        studio_k1_5: Bisakah kamu menambahkan sebuah blok untuk membuat si gurita senang?
         studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
         maze_wordsearch_k_1: Pindahkan saya untuk mengeja kata Timur
         maze_wordsearch_k_2: Pindahkan saya untuk mengeja kata Selatan
@@ -323,8 +325,8 @@ id:
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
     video:
       name:
-        maze_intro: Apa itu Labirin?
-        artist_intro: Apa itu Artis?
+        maze_intro: Introduksi labirin
+        artist_intro: Introduksi Artis
         farmer_intro: Apa itu Petani?
         flappy_intro: 'Introduksi untuk Flappy '
         loop_times: Blok Ulangi
@@ -356,7 +358,7 @@ id:
         C1_maze_intro_sequencing: Introduksi Sekuensi Labirin
         C1_maze_debugging: Labirin Debugging
         C1_bee_level_intro: 'Tingkat Lebah - Introduksi'
-        C1_artist_intro: Introduksi Artis
+        C1_artist_intro: Apa itu Artis?
         C1_spelling_bee_intro: Intro Spelling Bee
         C1_zuck_repeat_loop: Pengulangan labirin
         C1_bee_loops: Pengulangan lebah
@@ -364,7 +366,7 @@ id:
         C1_playlab_storytelling: 'Mainkan Lab - Buat sebuah Cerita'
         C1_planting_seed: Penanaman benih
         C1_building_foundating: Membangun dasar
-        C2_maze_intro: Introduksi labirin
+        C2_maze_intro: Apa itu Labirin?
         C2_artist_intro: Introduksi Artis
         C2_zuck_repeat_loop: Pengulangan labirin
         C2_artist_loops: Artist Loops
@@ -376,17 +378,17 @@ id:
         C2_replay_programming: Pemrograman relay
         C2_paper_airplanes: Pesawat kertas
         C3_maze_intro: Apa itu Labirin?
-        C3_artist_intro: Apa itu Artis?
+        C3_artist_intro: Introduksi Artis
         C3_artist_functions: Artist Functions
         C3_bee_functions: Bee Functions
-        C3_bee_conditionals: Bee Conditionals
+        C3_bee_conditionals: kondisi lebah
         C3_maze_conditionals: Maze Conditionals
         C3_artist_nested_loops: Nested Loops
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
         C3_bounce: Terpental
-        C3_playlab_create_game: 'Play Lab - Create a Game'
+        C3_playlab_create_game: 'Mainkan Lab - Buat sebuah Permainan'
         C3_computational_thinking: Berpikir secara komputasi
         C3_dice_race: Dice Race
         C3_internet: Internet

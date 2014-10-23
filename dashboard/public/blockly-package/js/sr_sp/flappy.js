@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -9207,7 +9207,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sr = function 
   }
   return 'other';
 };
-exports.and = function(d){return "и"};
+exports.and = function(d){return "И"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -9219,13 +9219,13 @@ exports.catLogic = function(d){return "Логика"};
 
 exports.catLists = function(d){return "Листе"};
 
-exports.catLoops = function(d){return "Понављања"};
+exports.catLoops = function(d){return "Петље"};
 
 exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Функције"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Променљиве"};
 
@@ -9293,7 +9293,7 @@ exports.play = function(d){return "играј"};
 
 exports.puzzleTitle = function(d){return "Мозгалица "+v(d,"puzzle_number")+" од "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "понови"};
+exports.repeat = function(d){return "понављај"};
 
 exports.resetProgram = function(d){return "Почни поново"};
 
@@ -9303,7 +9303,7 @@ exports.runTooltip = function(d){return "Покрени програм саст�
 
 exports.score = function(d){return "Резултат"};
 
-exports.showCodeHeader = function(d){return "Покажи код програма"};
+exports.showCodeHeader = function(d){return "Покажи Програмски код"};
 
 exports.showGeneratedCode = function(d){return "Покажи код програма"};
 
@@ -9317,7 +9317,7 @@ exports.tooManyBlocksMsg = function(d){return "Ова мозгалица мож�
 
 exports.tooMuchWork = function(d){return "Задао си ми много посла! Покушај са мање понављања."};
 
-exports.toolboxHeader = function(d){return "Блокови"};
+exports.toolboxHeader = function(d){return "блокови"};
 
 exports.openWorkspace = function(d){return "Како то ради"};
 
@@ -9383,15 +9383,15 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sr = function 
 };
 exports.continue = function(d){return "Настави"};
 
-exports.doCode = function(d){return "уради"};
+exports.doCode = function(d){return "Уради"};
 
-exports.elseCode = function(d){return "иначе"};
+exports.elseCode = function(d){return "у супротном"};
 
 exports.endGame = function(d){return "крај игре"};
 
 exports.endGameTooltip = function(d){return "Завршава игру."};
 
-exports.finalLevel = function(d){return "Честитамо! Решили сте завршну слагалицу."};
+exports.finalLevel = function(d){return "Честитамо! Решили сте последњи проблем."};
 
 exports.flap = function(d){return "маши крилима"};
 
@@ -9409,17 +9409,17 @@ exports.flapVeryLarge = function(d){return "маши крилима јако м�
 
 exports.flapTooltip = function(d){return "Флопи-птица лети нагоре."};
 
-exports.flappySpecificFail = function(d){return "Your code looks good - it will flap with each click. But you need to click many times to flap to the target."};
+exports.flappySpecificFail = function(d){return "Твој програм изледа добро - замахнуће крилима на сваки клик, али треба да кликнеш много пута да долетиш до циља."};
 
 exports.incrementPlayerScore = function(d){return "освојите поен"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Додајте један поен тренутном резултату играча."};
 
-exports.nextLevel = function(d){return "Честитамо! Завршили сте слагалицу."};
+exports.nextLevel = function(d){return "Честитке! Завршили сте пузлу."};
 
-exports.no = function(d){return "Не"};
+exports.no = function(d){return "не"};
 
-exports.numBlocksNeeded = function(d){return "Ова слагалица може бити решена са %1 блоком."};
+exports.numBlocksNeeded = function(d){return "Ова слагалица се може решити са %1 блокова."};
 
 exports.playSoundRandom = function(d){return "свирај насумични звук"};
 
@@ -9469,7 +9469,7 @@ exports.setBackgroundCave = function(d){return "Постави сцену Пећ
 
 exports.setBackgroundSanta = function(d){return "Постави сцену Деда Мраз"};
 
-exports.setBackgroundTooltip = function(d){return "Подешава позадинску слику"};
+exports.setBackgroundTooltip = function(d){return "Поставља слику у позадини"};
 
 exports.setGapRandom = function(d){return "Постави насумични размак"};
 

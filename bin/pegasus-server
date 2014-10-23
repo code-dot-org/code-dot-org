@@ -3,7 +3,7 @@ require_relative '../deployment'
 
 def main()
   Dir.chdir(pegasus_dir) do
-    system "bundle exec rerun -p \"**/*.{rb,ru,yml}\" 'thin start -p #{CDO.pegasus_port}'"
+    system "bundle exec rerun -p '**/*.{rb,ru,yml}' -d'../lib,../pegasus' 'thin start -p #{CDO.pegasus_port}'"
   end
 end
 

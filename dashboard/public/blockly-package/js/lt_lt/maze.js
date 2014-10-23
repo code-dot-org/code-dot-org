@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -13217,7 +13217,7 @@ exports.continue = function(d){return "Tęsti"};
 
 exports.dialogCancel = function(d){return "Atšaukti"};
 
-exports.dialogOK = function(d){return "gerai"};
+exports.dialogOK = function(d){return "Gerai"};
 
 exports.directionNorthLetter = function(d){return "Š"};
 
@@ -13379,9 +13379,9 @@ exports.dirS = function(d){return "P"};
 
 exports.dirW = function(d){return "V"};
 
-exports.doCode = function(d){return "daryk"};
+exports.doCode = function(d){return " "};
 
-exports.elseCode = function(d){return "priešingu atveju"};
+exports.elseCode = function(d){return "kitu atveju"};
 
 exports.fill = function(d){return "užpildyk 1"};
 
@@ -13413,7 +13413,7 @@ exports.honeycombFullError = function(d){return "Šis korys jau pilnas - daugiau
 
 exports.ifCode = function(d){return "jei"};
 
-exports.ifInRepeatError = function(d){return "Viduje kartojimo bloko reikia įdėti sąlygos (\"jei\") bloką - galite pažiūrėti, kaip buvo ankstesniame lygyje."};
+exports.ifInRepeatError = function(d){return "Tau reikia blokelio „jei“, o ne kartojimo blokelio. Jeigu niekaip neišsprendi užduoties, pamėgink sugrįžti į prieš tai spręstą užduotį ir išsiaiškink, kaip ji buvo išspręsta."};
 
 exports.ifPathAhead = function(d){return "jei priešaky yra kelias"};
 
@@ -13435,7 +13435,7 @@ exports.moveBackward = function(d){return "atgal"};
 
 exports.moveEastTooltip = function(d){return "Pajudink mane į rytus per vieną laukelį."};
 
-exports.moveForward = function(d){return "judėk į priekį"};
+exports.moveForward = function(d){return "ženk į priekį"};
 
 exports.moveForwardTooltip = function(d){return "Perkelk mane į priekį per vieną laukelį."};
 
@@ -13471,9 +13471,9 @@ exports.numBlocksNeeded = function(d){return "Ši užduotis gali būti išspręs
 
 exports.pathAhead = function(d){return "kelias priešaky"};
 
-exports.pathLeft = function(d){return "jei kelias yra į kairę"};
+exports.pathLeft = function(d){return "jei yra kelias į kairę"};
 
-exports.pathRight = function(d){return "jei kelias yra į dešinę"};
+exports.pathRight = function(d){return "jei yra kelias į dešinę"};
 
 exports.pilePresent = function(d){return "čia yra žemių krūva"};
 
@@ -13491,9 +13491,9 @@ exports.removeSquare = function(d){return "pašalink kvadratą"};
 
 exports.repeatCarefullyError = function(d){return "Norėdamas išspręsti, gerai pagalvok - kiek kartų reiktų pakartot po seką: du žingsniai ir pasukimas."};
 
-exports.repeatUntil = function(d){return "kartok, kol pasieksi"};
+exports.repeatUntil = function(d){return "kartok, kol"};
 
-exports.repeatUntilBlocked = function(d){return "kol yra kelias į priekį "};
+exports.repeatUntilBlocked = function(d){return "kol yra kelias į priekį"};
 
 exports.repeatUntilFinish = function(d){return "kartok iki finišo"};
 

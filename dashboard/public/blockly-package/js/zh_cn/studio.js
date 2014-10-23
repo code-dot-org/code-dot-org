@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -18691,7 +18691,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.and = function(d){return "和"};
 
-exports.blocklyMessage = function(d){return "模块化"};
+exports.blocklyMessage = function(d){return "布洛克里"};
 
 exports.catActions = function(d){return "操作"};
 
@@ -18799,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "可以使用 < x id = 'START_SPAN
 
 exports.tooMuchWork = function(d){return "你让我多做很多工作 ！你可以尝试少重复几次吗？"};
 
-exports.toolboxHeader = function(d){return "模块"};
+exports.toolboxHeader = function(d){return "块"};
 
 exports.openWorkspace = function(d){return "它是如何工作的？"};
 
@@ -18852,7 +18852,7 @@ exports.genericFeedback = function(d){return "看你的程序时如何结束的�
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.actor = function(d){return "男演员"};
 
-exports.catActions = function(d){return "行为"};
+exports.catActions = function(d){return "操作"};
 
 exports.catControl = function(d){return "循环"};
 
@@ -18880,7 +18880,7 @@ exports.defaultSayText = function(d){return "在此处键入"};
 
 exports.emotion = function(d){return "心情"};
 
-exports.finalLevel = function(d){return "恭喜你！你完成了最后一个难题。"};
+exports.finalLevel = function(d){return "恭喜你！你完成了最后一个谜题。"};
 
 exports.hello = function(d){return "你好"};
 
@@ -18960,7 +18960,7 @@ exports.nextLevel = function(d){return "恭喜你！你解决了这个谜题。"
 
 exports.no = function(d){return "不"};
 
-exports.numBlocksNeeded = function(d){return "这个谜题可以用%1个块解决。"};
+exports.numBlocksNeeded = function(d){return "这个谜题可以用%1个语句块解决。"};
 
 exports.ouchExclamation = function(d){return "哎哟 ！"};
 
@@ -19360,7 +19360,7 @@ exports.whenUp = function(d){return "当箭头向上"};
 
 exports.whenUpTooltip = function(d){return "执行下面按向上箭头键时采取的行动。"};
 
-exports.yes = function(d){return "对"};
+exports.yes = function(d){return "是"};
 
 
 },{"messageformat":58}],47:[function(require,module,exports){

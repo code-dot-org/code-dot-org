@@ -26,7 +26,7 @@ si:
           - unplug4
         video: Unplug4
       Unplug5:
-        title: Functions
+        title: ශ්‍රිතයන්
         desc: |-
           In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of "skills" that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to "abstract out" the details of their specific materials and create vague terms for an individual's supplies.  This use of generic placeholders is a wonderful introduction to variables.
         pdfs:

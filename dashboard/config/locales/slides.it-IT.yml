@@ -61,44 +61,44 @@
         text: Andiamo a prendere quei maiali!
     artist_intro:
       1:
-        image: notes/stage5_1.jpg
+        image: note/stadio5_1.jpg
         text: Ciao, sono JR! Ogni squadra di corse automobilistiche ha bisogno degli
           informatici per vincere. Analizzano i dati dell'auto per farla andare più
           velocemente.
       2:
-        image: notes/stage5_2.jpg
+        image: note/stadio5_2.jpg
         text: In questi esercizi, sarai un artista che disegna una linea dietro di
           sé dovunque va.
       3:
-        image: notes/stage5_3.jpg
+        image: note/stadio5_3.jpg
         text: Questo blocco dice "vai avanti di 100 pixel" (move forward by 100 pixels)
           . I pixel sono i minuscoli puntini del tuo schermo.
       4:
-        image: notes/stage5_4.jpg
+        image: note/stadio5_4.jpg
         text: Questo blocco dice "gira a destra di 90 gradi" (turn right by 90 degrees).
           Questo fa girare il tuo artista della stessa quantità, come fa il blocco
           "gira" nell'esercizio del labirinto.
       5:
-        image: notes/stage5_5.jpg
+        image: note/stadio5_5.jpg
         text: Se in questi blocchi clicchi sui numeri puoi cambiare di quanto l'artista
           si sposta in avanti o gira. Fai qualche prova per prendere confidenza con
           questi nuovi blocchi.
     farmer_intro:
       1:
-        image: notes/stage9_1.jpg
+        image: note/stadio9_1.jpg
         text: Ciao, sono Paola! In questi esercizi devi aiutare una contadina che
           deve completamente livellare il suo terreno per iniziare a seminarlo.
       2:
-        image: notes/stage9_2.jpg
+        image: note/stadio9_2.jpg
         text: Devi aiutarla a rimuovere tutti i mucchi di terra e a riempire tutte
           le buche.
       3:
-        image: notes/stage9_3.jpg
+        image: note/stadio9_3.jpg
         text: Il nuovo blocco "rimuovi 1" (remove 1) toglie 1 palata di terra da un
           mucchio. Il nuovo blocco "riempi 1" (fill 1) mette 1 palata di terra dentro
           una buca.
       4:
-        image: notes/stage9_4.jpg
+        image: note/stadio9_4.jpg
         text: I mucchi e le buche sono di dimensioni differenti, quindi devi dire
           alla contadina quante palate deve utilizzare.
     flappy_intro:
@@ -256,62 +256,62 @@
         text: Ora, rimanda quegli zombie là da dove sono venuti!
     function:
       1:
-        image: notes/stage13_1.jpg
+        image: note/stadio13_1.jpg
         text: Ciao, sono Brina, un'ingegnera di Instagram. Una funzione è fatta da
           alcune righe di codice che vuoi utilizzare più e più volte. Se hai definito
           una funzione, invece di scrivere ogni volta le stesse righe puoi usare un
           unico blocco.
       2:
-        image: notes/stage13_2.jpg
+        image: note/stadio13_2.jpg
         text: Adesso impariamo come definire le funzioni. Le definizioni di funzioni
           hanno una stella nell'angolo. Il nome della funzione è scritto sulla linea
           in alto.
       3:
-        image: notes/stage13_3.jpg
+        image: note/stadio13_3.jpg
         text: I blocchi che vanno all'interno della definizione ci dicono che cosa
           viene eseguito. Questa definizione di funzione è chiamata "riempi 5" (fill
           5) e si compone di un blocco di ripetizione "ripeti ... volte" (repeat ...
           times) e di un blocco "riempi 1" (fill 1).
       4:
-        image: notes/stage13_4.jpg
+        image: note/stadio13_4.jpg
         text: La definizione si trova nell'area di lavoro, ma per far eseguire la
           funzione alla contadina devi prendere  il blocco funzione "riempi 5" dalla
           categoria "Funzioni" ed unirlo al blocco "vai avanti" (move forward).
       5:
-        image: notes/stage13_5.jpg
+        image: note/stadio13_5.jpg
         text: Mettiamo il "divertimento" in "FUNZIONE!" 
     loop_while:
       1:
-        image: notes/stage9_5.jpg
+        image: note/stadio9_5.jpg
         text: Ciao, sono Makinde! Impariamo il blocco di ripetizione "mentre" 
       2:
-        image: notes/stage9_6.jpg
+        image: note/stadio9_6.jpg
         text: Il blocco "mentre" (while) farà qualunque cosa si trova all'interno
           di esso PER TUTTO IL TEMPO IN CUI la condizione presente all'inizio è VERA.
       3:
-        image: notes/stage9_7.jpg
+        image: Note/stadio9_7.jpg
         text: In questo esempio, se la contadina è sopra un mucchio, il blocco "mentre"
           gli farà rimuovere 1 palata di terra (remove 1) PER TUTTO IL TEMPO IN CUI
           c'è ancora un mucchio (while there is a pile) sotto di lei.
     loop_for:
       1:
-        image: notes/stage11_1.jpg
+        image: note/stadio11_1.jpg
         text: Ciao, sono Trina, e lavoro per Pixar. Ho lavorato in molti film, tra
           cui Shrek.
       2:
-        image: notes/stage11_2.jpg
+        image: note/stadio11_2.jpg
         text: Questo è il nuovo blocco di ripetizione "ripeti con contatore" (count
           with counter). Si usa per eseguire alcune azioni più e più volte facendo
           in modo che ogni volta le azioni cambino un po'.
       3:
-        image: notes/stage11_3.jpg
+        image: note/stadio11_3.jpg
         text: In questo esempio, il blocco "ripeti con contatore" dice "ripeti con
           il contatore che va da 50 a 90 aumentando di 10 per volta" e all'interno
           di esso abbiamo il blocco "disegna un quadrato" (draw a a square). Se prendi
           il blocco "contatore" (counter) dalla categoria "Variabili" (Variables)
           e lo inserisci al fianco di "lunghezza" (length) ...
       4:
-        image: notes/stage11_4.jpg
+        image: note/stadio11_4.jpg
         text: "...questo significa che il nostro artista inizia disegnando un quadrato
           con lati lunghi 50 pixel. Poi aggiungerà 10 e disegnerà un quadrato con
           lati lunghi 60 pixel. Poi continuerà ad aggiungere 10 e disegnare quadrati
@@ -319,37 +319,37 @@
           di 50, 60, 70, 80 e 90 pixel."
     parameters:
       1:
-        image: notes/stage15_1.jpg
+        image: note/stadio15_1.jpg
         text: Ciao, sono Janete, e sono un'ingegnera di Zynga.
       2:
-        image: notes/stage15_2.jpg
+        image: note/stadio15_2.jpg
         text: Come fai per disegnare un po' di triangoli con lati di differenti lunghezze?
       3:
-        image: notes/stage15_3.jpg
+        image: note/stadi15_3.jpg
         text: Puoi scrivere esplicitamente tutto il codice o puoi utilizzare una funzione
           con parametri.
       4:
-        image: notes/stage15_4.jpg
+        image: note/stadio15_4.jpg
         text: Per fare ciò, clicca la stella bianca su sfondo blu nella definizione
           della funzione "disegna un triangolo" (draw a triangle). Poi sposta il blocco
           "nome del parametro" (input name) nel blocco "parametri" (inputs).
       5:
-        image: notes/stage15_5.jpg
+        image: note/stadio15_5.jpg
         text: Poi se scrivi "lunghezza" (length) nel punto dove c'è la "X" e premi
           "Invio" creerai il parametro "lunghezza" per la tua funzione.
       6:
-        image: notes/stage15_6.jpg
+        image: note/stadio15_6.jpg
         text: Poi clicca sulla stella per terminare la definizione del parametro.
           Ora, clicca sulla categoria "Variabili" (Variables) e sposta il blocco "lunghezza"
           nel blocco "vai avanti" (move forward) della tua definizione di funzione.
           E trascina via il vecchio blocco col numero.
       7:
-        image: notes/stage15_7.jpg
+        image: note/stadio15_7.jpg
         text: Per usare la tua funzione con parametri, clicca sulla categoria "Funzioni"
           (Functions) e sposta la tua funzione "disegna un triangolo di lunghezza"
           nell'area di lavoro.
       8:
-        image: notes/stage15_8.jpg
+        image: note/stadio15_8.jpg
         text: Ora puoi usare i blocchi nella categoria "Matematica" (Math) per inserire
           numeri diversi e disegnare triangoli di dimensioni diverse.
     hoc_wrapup:
@@ -380,4 +380,4 @@
     20_wrapup:
       1:
         image: notes/bird.png
-        text: Stanno arrivando le note di spiegazione!
+        text: Visualizza note in arrivo!

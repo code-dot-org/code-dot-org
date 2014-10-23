@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -11559,23 +11559,23 @@ exports.dirN = function(d){return "Север"};
 
 exports.dirS = function(d){return "Југ"};
 
-exports.dirW = function(d){return "Запад"};
+exports.dirW = function(d){return "w"};
 
 exports.doCode = function(d){return "уради"};
 
-exports.elseCode = function(d){return "у супротном"};
+exports.elseCode = function(d){return "иначе"};
 
-exports.finalLevel = function(d){return "Честитамо! Решили сте финалну слагалицу."};
+exports.finalLevel = function(d){return "Честитамо! Решили сте завршну слагалицу."};
 
 exports.heightParameter = function(d){return "висина"};
 
 exports.ifCode = function(d){return "ако"};
 
-exports.ifPathAhead = function(d){return "ако постоји путања напред"};
+exports.ifPathAhead = function(d){return "ако путања испред"};
 
-exports.ifTooltip = function(d){return "ако постоји путања у наведеном смеру, онда покрени неке акције."};
+exports.ifTooltip = function(d){return "Ако постоји стаза у одређеном правцу, онда одрадите неке акције."};
 
-exports.ifelseTooltip = function(d){return "ако постоји путања у наведеном смеру, онда уради први блок акција. У супротном, уради други блок акција."};
+exports.ifelseTooltip = function(d){return "Ако постоји стаза у одређеном правцу, онда одрадите први блок акција. У супротном, одрадите други блок акција."};
 
 exports.incrementOpponentScore = function(d){return "противник осваја поен"};
 
@@ -11583,7 +11583,7 @@ exports.incrementOpponentScoreTooltip = function(d){return "Упиши поен 
 
 exports.incrementPlayerScore = function(d){return "освоји поен"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Упиши поен у резултат активног играча."};
+exports.incrementPlayerScoreTooltip = function(d){return "Додајте један поен тренутном резултату играча."};
 
 exports.isWall = function(d){return "да ли је ово зид"};
 
@@ -11601,13 +11601,13 @@ exports.moveDownTooltip = function(d){return "Помери рекет на до�
 
 exports.moveForward = function(d){return "помери се напред"};
 
-exports.moveForwardTooltip = function(d){return "Помери ме за једно поље."};
+exports.moveForwardTooltip = function(d){return "Помери ме напред за једно место."};
 
-exports.moveLeft = function(d){return "помери се лево"};
+exports.moveLeft = function(d){return "помери лево"};
 
 exports.moveLeftTooltip = function(d){return "Помери рекет у лево."};
 
-exports.moveRight = function(d){return "помери се десно"};
+exports.moveRight = function(d){return "помери десно"};
 
 exports.moveRightTooltip = function(d){return "Помери рекет у десно."};
 
@@ -11617,25 +11617,25 @@ exports.moveUpTooltip = function(d){return "Помери рекет на гор�
 
 exports.nextLevel = function(d){return "Честитамо! Завршили сте слагалицу."};
 
-exports.no = function(d){return "не"};
+exports.no = function(d){return "Не"};
 
-exports.noPathAhead = function(d){return "путања је затворена"};
+exports.noPathAhead = function(d){return "путања је блокирана"};
 
-exports.noPathLeft = function(d){return "нема путање на лево"};
+exports.noPathLeft = function(d){return "нема пута за лево"};
 
-exports.noPathRight = function(d){return "нема путање на десно"};
+exports.noPathRight = function(d){return "нема пута за десно"};
 
-exports.numBlocksNeeded = function(d){return "Загонетка се може решити са %1 блокова."};
+exports.numBlocksNeeded = function(d){return "Ова слагалица може бити решена са %1 блоком."};
 
-exports.pathAhead = function(d){return "путања напред"};
+exports.pathAhead = function(d){return "пут напред"};
 
-exports.pathLeft = function(d){return "ако постоји путања лево"};
+exports.pathLeft = function(d){return "ако пут на лево"};
 
-exports.pathRight = function(d){return "ако постоји путања десно"};
+exports.pathRight = function(d){return "ако пут на десно"};
 
-exports.pilePresent = function(d){return "тамо је гомила"};
+exports.pilePresent = function(d){return "ту је гомила"};
 
-exports.playSoundCrunch = function(d){return "одсвирај звук лома"};
+exports.playSoundCrunch = function(d){return "свирај звук крцкања"};
 
 exports.playSoundGoal1 = function(d){return "одсвирај звук циља 1"};
 
@@ -11653,7 +11653,7 @@ exports.playSoundRubber = function(d){return "одсвирај звук гуме
 
 exports.playSoundSlap = function(d){return "одсвирај звук пљеска"};
 
-exports.playSoundTooltip = function(d){return "Одсвирај одабрани звук."};
+exports.playSoundTooltip = function(d){return "Свирај одабрани звук."};
 
 exports.playSoundWinPoint = function(d){return "одсвирај звук освојеног поена"};
 
@@ -11661,17 +11661,17 @@ exports.playSoundWinPoint2 = function(d){return "одсвирај звук ос�
 
 exports.playSoundWood = function(d){return "одсвирај звук дрвета"};
 
-exports.putdownTower = function(d){return "сруши кулу"};
+exports.putdownTower = function(d){return "спусти кулу"};
 
 exports.reinfFeedbackMsg = function(d){return "Можете да притиснете \"Покушај поново\" дугме да се вратите у своју игру."};
 
 exports.removeSquare = function(d){return "уклони квадрат"};
 
-exports.repeatUntil = function(d){return "понови све док"};
+exports.repeatUntil = function(d){return "понављај до испуњења"};
 
-exports.repeatUntilBlocked = function(d){return "док је путања напред"};
+exports.repeatUntilBlocked = function(d){return "док је стаза испред"};
 
-exports.repeatUntilFinish = function(d){return "понављај до завршетка"};
+exports.repeatUntilFinish = function(d){return "понавлјај до цилја"};
 
 exports.scoreText = function(d){return "Резултат: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
@@ -11681,7 +11681,7 @@ exports.setBackgroundHardcourt = function(d){return "подеси тврду с�
 
 exports.setBackgroundRetro = function(d){return "подеси ретро сцену"};
 
-exports.setBackgroundTooltip = function(d){return "Поставља позадниску слику"};
+exports.setBackgroundTooltip = function(d){return "Подешава позадинску слику"};
 
 exports.setBallRandom = function(d){return "подеси насумичну лопту"};
 
@@ -11735,7 +11735,7 @@ exports.turnLeft = function(d){return "скрени лево"};
 
 exports.turnRight = function(d){return "скрени десно"};
 
-exports.turnTooltip = function(d){return "Окрени ме у лево или десно за 90 степени."};
+exports.turnTooltip = function(d){return "Закрене ме на лево или десно за 90 степени."};
 
 exports.whenBallInGoal = function(d){return "када је лопта у голу"};
 
@@ -11751,7 +11751,7 @@ exports.whenDownTooltip = function(d){return "Изврши акције испо
 
 exports.whenGameStarts = function(d){return "када игра почне"};
 
-exports.whenGameStartsTooltip = function(d){return "Изврши акције доле када игра почне."};
+exports.whenGameStartsTooltip = function(d){return "Изврши доње акције када игра почне."};
 
 exports.whenLeft = function(d){return "када је стрелица на лево"};
 
@@ -11775,7 +11775,7 @@ exports.whenWallCollidedTooltip = function(d){return "Изврши акције 
 
 exports.whileMsg = function(d){return "док"};
 
-exports.whileTooltip = function(d){return "Понови акције у загради док се не постигне последњи поен."};
+exports.whileTooltip = function(d){return "Понавлјај затворену акцију док се не досегне циљна тачка."};
 
 exports.yes = function(d){return "Да"};
 
@@ -11795,7 +11795,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sr = function 
   }
   return 'other';
 };
-exports.and = function(d){return "и"};
+exports.and = function(d){return "И"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -11807,13 +11807,13 @@ exports.catLogic = function(d){return "Логика"};
 
 exports.catLists = function(d){return "Листе"};
 
-exports.catLoops = function(d){return "Понављања"};
+exports.catLoops = function(d){return "Петље"};
 
 exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Функције"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Променљиве"};
 
@@ -11881,7 +11881,7 @@ exports.play = function(d){return "играј"};
 
 exports.puzzleTitle = function(d){return "Мозгалица "+v(d,"puzzle_number")+" од "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "понови"};
+exports.repeat = function(d){return "понављај"};
 
 exports.resetProgram = function(d){return "Почни поново"};
 
@@ -11891,7 +11891,7 @@ exports.runTooltip = function(d){return "Покрени програм саст�
 
 exports.score = function(d){return "Резултат"};
 
-exports.showCodeHeader = function(d){return "Покажи код програма"};
+exports.showCodeHeader = function(d){return "Покажи Програмски код"};
 
 exports.showGeneratedCode = function(d){return "Покажи код програма"};
 
@@ -11905,7 +11905,7 @@ exports.tooManyBlocksMsg = function(d){return "Ова мозгалица мож�
 
 exports.tooMuchWork = function(d){return "Задао си ми много посла! Покушај са мање понављања."};
 
-exports.toolboxHeader = function(d){return "Блокови"};
+exports.toolboxHeader = function(d){return "блокови"};
 
 exports.openWorkspace = function(d){return "Како то ради"};
 

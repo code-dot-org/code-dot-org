@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -13192,13 +13192,13 @@ exports.catLogic = function(d){return "Məntiq"};
 
 exports.catLists = function(d){return "Siyahılar"};
 
-exports.catLoops = function(d){return "Dövrlər"};
+exports.catLoops = function(d){return "Dövlər"};
 
 exports.catMath = function(d){return "Riyaziyyat"};
 
 exports.catProcedures = function(d){return "Funksiyalar"};
 
-exports.catText = function(d){return "Mətn"};
+exports.catText = function(d){return "mətn"};
 
 exports.catVariables = function(d){return "Dəyişənlər"};
 
@@ -13290,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "Bu tapmaca <x id='START_SPAN'/><x
 
 exports.tooMuchWork = function(d){return "Siz mənə çox iş gördürdünüz! Təkrarlamaları azalda bilərsiniz?"};
 
-exports.toolboxHeader = function(d){return "Bloklar"};
+exports.toolboxHeader = function(d){return "bloklar"};
 
 exports.openWorkspace = function(d){return "Bu necə işləyir?"};
 
@@ -13330,7 +13330,7 @@ exports.when = function(d){return "when"};
 
 exports.whenRun = function(d){return "when run"};
 
-exports.tryHOC = function(d){return "Kodlama Saati'ni dənə"};
+exports.tryHOC = function(d){return "Kod Saatında özünüzü sınayın"};
 
 exports.signup = function(d){return "Sign up for the intro course"};
 

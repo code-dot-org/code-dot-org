@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -19044,7 +19044,7 @@ exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" b
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "doen"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
 

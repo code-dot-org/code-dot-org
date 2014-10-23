@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -13184,7 +13184,7 @@ exports.and = function(d){return "و"};
 
 exports.blocklyMessage = function(d){return "بلاکلی"};
 
-exports.catActions = function(d){return "کارها"};
+exports.catActions = function(d){return "اقدامات"};
 
 exports.catColour = function(d){return "رنگ"};
 
@@ -13192,9 +13192,9 @@ exports.catLogic = function(d){return "منطق"};
 
 exports.catLists = function(d){return "لیست ها"};
 
-exports.catLoops = function(d){return "حلقه‌ها"};
+exports.catLoops = function(d){return "حلقه ها"};
 
-exports.catMath = function(d){return "ریاضی"};
+exports.catMath = function(d){return "محاسبات ریاضی"};
 
 exports.catProcedures = function(d){return "توابع"};
 
@@ -13244,7 +13244,7 @@ exports.jump = function(d){return "پرش"};
 
 exports.levelIncompleteError = function(d){return "شما همه‌ی بلوک‌های مورد نیاز را بکار بردید، ولی نه به روش درست."};
 
-exports.listVariable = function(d){return "لیست"};
+exports.listVariable = function(d){return "فهرست"};
 
 exports.makeYourOwnFlappy = function(d){return "Flappy Bird خودتان را بسازید"};
 
@@ -13266,7 +13266,7 @@ exports.play = function(d){return "بازی"};
 
 exports.puzzleTitle = function(d){return "معمای "+v(d,"puzzle_number")+" از "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "تکرار"};
+exports.repeat = function(d){return "تکرار کن"};
 
 exports.resetProgram = function(d){return "بازنشانی"};
 
@@ -13276,7 +13276,7 @@ exports.runTooltip = function(d){return "اجرای برنامه‌ی تعریف
 
 exports.score = function(d){return "نمره"};
 
-exports.showCodeHeader = function(d){return "نمایشِ کد"};
+exports.showCodeHeader = function(d){return "کد نمایش"};
 
 exports.showGeneratedCode = function(d){return "نمایشِ کد"};
 
@@ -13290,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "این معما را می‌تو�
 
 exports.tooMuchWork = function(d){return "شما منو مجبور به انجام مقدار زیادی کار کردید. میشه تعداد تکرار رو کمتر کنید؟"};
 
-exports.toolboxHeader = function(d){return "بلوک‌ها"};
+exports.toolboxHeader = function(d){return "بلوک ها"};
 
 exports.openWorkspace = function(d){return "چگونگیِ کار"};
 
@@ -13363,7 +13363,7 @@ exports.dirW = function(d){return "غرب"};
 
 exports.doCode = function(d){return "انجام بده"};
 
-exports.elseCode = function(d){return "\"else\""};
+exports.elseCode = function(d){return "وگرنه"};
 
 exports.fill = function(d){return "یکی را پر کن"};
 
@@ -13375,7 +13375,7 @@ exports.fillSquare = function(d){return "مربع را پر کنید"};
 
 exports.fillTooltip = function(d){return "1 واحد خاک را قرار بده"};
 
-exports.finalLevel = function(d){return "تبریک میگویم! شما پازل نهایی را حل کردید."};
+exports.finalLevel = function(d){return "تبریک! شما پازل نهایی را حل کردید."};
 
 exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
 
@@ -13393,15 +13393,15 @@ exports.honeyTooltip = function(d){return "Make honey from nectar"};
 
 exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
 
-exports.ifCode = function(d){return "اگر"};
+exports.ifCode = function(d){return "\"if\""};
 
-exports.ifInRepeatError = function(d){return " به یک بلوک 'if' داخل یک بلوک 'repeat' نیاز داری. اگر مشکل داری، سعی کن مرحله قبلی رو دوباره انجام بدی تا ببینی چگونه کار می کرد."};
+exports.ifInRepeatError = function(d){return "به یک بلوک \"if\" داخل یک بلوک \"repeat\" نیاز داری. اگر مشکل داری، سعی کن مرحله قبلی رو دوباره انجام بدی تا ببینی چگونه کار می کرد."};
 
-exports.ifPathAhead = function(d){return "اگر مسیر پیش رو است"};
+exports.ifPathAhead = function(d){return "اگر مسیر رو به جلو است"};
 
-exports.ifTooltip = function(d){return "اگر یک مسیر در جهت مشخص وجود دارد ، سپس برخی اقدامات را انجام بده."};
+exports.ifTooltip = function(d){return "اگر راهی در مسیر مسخصی است,اقداماتی بکن."};
 
-exports.ifelseTooltip = function(d){return "اگر یک مسیر در جهت مشخص شده وجود دارد ، سپس اولین بلوک اقدامات را انجام بده در غیر این صورت دومین بلوک اقدامات را انجام بده ."};
+exports.ifelseTooltip = function(d){return "اگر راهی در مسیر مشخصی وجود دارد,اولین از سری اقدامات را انجام ده,در غیر این صورت به سراغ دومین اقدام برو."};
 
 exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
 
@@ -13417,9 +13417,9 @@ exports.moveBackward = function(d){return "move backward"};
 
 exports.moveEastTooltip = function(d){return "من را یک قدم به سمت شرق ببر."};
 
-exports.moveForward = function(d){return "حرکت رو به جلو"};
+exports.moveForward = function(d){return "به جلو حرکت کردن"};
 
-exports.moveForwardTooltip = function(d){return "به اندازه یک \"کلید فاصله \" من را به جلو حرکت بده ."};
+exports.moveForwardTooltip = function(d){return "به اندازه یک فاصله من را جلو ببر."};
 
 exports.moveNorthTooltip = function(d){return "من را یک قدم به سمت شمال ببر."};
 
@@ -13435,31 +13435,31 @@ exports.nectarRemaining = function(d){return "nectar"};
 
 exports.nectarTooltip = function(d){return "Get nectar from a flower"};
 
-exports.nextLevel = function(d){return "تبریک! شما این مرحله را انجام دادید."};
+exports.nextLevel = function(d){return "تبریک! شما این پازل را به اتمام رساندید."};
 
 exports.no = function(d){return "نه"};
 
-exports.noPathAhead = function(d){return "مسیر بسته است"};
+exports.noPathAhead = function(d){return "راه مسدود است"};
 
-exports.noPathLeft = function(d){return "سمت چپ مسیری نیست"};
+exports.noPathLeft = function(d){return "سمت چپ راهی نیست"};
 
-exports.noPathRight = function(d){return "سمت راست مسیری نیست"};
+exports.noPathRight = function(d){return "سمت راست راهی نیست"};
 
 exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
 
 exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
 
-exports.numBlocksNeeded = function(d){return "این پازل می تواند با 1% از بلوکها حل شود."};
+exports.numBlocksNeeded = function(d){return "این پازل می تواند با %1 از بلوکها حل شود."};
 
 exports.pathAhead = function(d){return "مسیر پیش رو"};
 
-exports.pathLeft = function(d){return "اگر مسیر سمت چپ است"};
+exports.pathLeft = function(d){return "اگر مسیر به سمت چپ بود"};
 
-exports.pathRight = function(d){return "اگر مسیر سمت راست است"};
+exports.pathRight = function(d){return "اگر مسیر به سمت راست بود"};
 
-exports.pilePresent = function(d){return "یک توده وجود دارد"};
+exports.pilePresent = function(d){return "آنجا یک توده وجود دارد"};
 
-exports.putdownTower = function(d){return "برج را پایین بکشید"};
+exports.putdownTower = function(d){return "کثیفی ها را پایین بکشید"};
 
 exports.removeAndAvoidTheCow = function(d){return "۱ را حذف کنید و از گاو اجتناب کنید"};
 
@@ -13473,7 +13473,7 @@ exports.removeSquare = function(d){return "مربع را حزف کن"};
 
 exports.repeatCarefullyError = function(d){return "برای حل این پازل, الگویی را پیدا کنید که تکرار می شود. از بلوک 'repeat' با این 3 بلوک در داخلش: حرکت، حرکت، حرکت به راست استفاده کنید."};
 
-exports.repeatUntil = function(d){return "تکرار کن تا "};
+exports.repeatUntil = function(d){return "تکرار کن تا زمانی که"};
 
 exports.repeatUntilBlocked = function(d){return "تا زمانیکه مسیر پیش رو است "};
 
@@ -13487,15 +13487,15 @@ exports.totalNectar = function(d){return "total nectar"};
 
 exports.turnLeft = function(d){return "بپیچ به چپ"};
 
-exports.turnRight = function(d){return "بپیچ به راست "};
+exports.turnRight = function(d){return "بپیچ به راست"};
 
-exports.turnTooltip = function(d){return "من را به چپ یا راست با زاویه 90 درجه بچرخان."};
+exports.turnTooltip = function(d){return "من را به راست یا چپ 90 درجه بچرخان."};
 
 exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
 
 exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
 
-exports.whileMsg = function(d){return "هنگامیکه"};
+exports.whileMsg = function(d){return "\"while\""};
 
 exports.whileTooltip = function(d){return "اقدامات محصور را تا زمانیکه به نقطه آخر برسی تکرار کن."};
 

@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -13266,7 +13266,7 @@ exports.play = function(d){return "spielen"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" von "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "wiederholen"};
+exports.repeat = function(d){return "wiederhole"};
 
 exports.resetProgram = function(d){return "Zurücksetzen"};
 
@@ -13347,7 +13347,7 @@ exports.atFlower = function(d){return "an der Blume"};
 
 exports.avoidCowAndRemove = function(d){return "vermeide die Kuh und entferne 1"};
 
-exports.continue = function(d){return "Weiter"};
+exports.continue = function(d){return "Fortfahren"};
 
 exports.dig = function(d){return "1 entfernen"};
 
@@ -13395,13 +13395,13 @@ exports.honeycombFullError = function(d){return "Die Honigwabe hat keinen Platz 
 
 exports.ifCode = function(d){return "wenn"};
 
-exports.ifInRepeatError = function(d){return "Du benötigst einen \"if\"-Block in einem \"repeat\"-Block. Wenn du Schwierigkeiten hast, dann versuche das vorherige Level, um zu sehen wie es funktioniert."};
+exports.ifInRepeatError = function(d){return "Du benötigst einen \"wenn\"-Baustein in einem \"wiederhole\"-Baustein. Wenn du Probleme hast, dann versuche nochmals das vorherige Level und schau wie es dort läuft."};
 
 exports.ifPathAhead = function(d){return "Wenn Weg voraus"};
 
 exports.ifTooltip = function(d){return "Wenn ein Weg in die benannte Richtung existiert, dann führe ein paar Aktionen aus."};
 
-exports.ifelseTooltip = function(d){return "Wenn ein Weg in die benannte Richtung existiert, beginnen Sie mit dem ersten Block, ansonsten nehmen Sie sich den zweiten Block vor."};
+exports.ifelseTooltip = function(d){return "Wenn ein Weg in die benannte Richtung existiert, beginne mit dem ersten Block, ansonsten den zweiten Block vor."};
 
 exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
 
@@ -13419,7 +13419,7 @@ exports.moveEastTooltip = function(d){return "Bewege mich ein Feld Richtung Oste
 
 exports.moveForward = function(d){return "vorwärts bewegen"};
 
-exports.moveForwardTooltip = function(d){return "Bewegen Sie mich ein Feld nach vorne."};
+exports.moveForwardTooltip = function(d){return "Bewege mich ein Feld nach vorne."};
 
 exports.moveNorthTooltip = function(d){return "Bewege mich ein Feld Richtung Norden."};
 
@@ -13441,23 +13441,23 @@ exports.no = function(d){return "Nein"};
 
 exports.noPathAhead = function(d){return "Pfad ist blockiert"};
 
-exports.noPathLeft = function(d){return "kein Pfad zur linken Seite"};
+exports.noPathLeft = function(d){return "kein Pfad auf der linken Seite"};
 
-exports.noPathRight = function(d){return "kein Pfad zur rechten Seite"};
+exports.noPathRight = function(d){return "kein Pfad auf der rechten Seite"};
 
 exports.notAtFlowerError = function(d){return "Du kannst Nektar nur aus einer Blume bekommen."};
 
 exports.notAtHoneycombError = function(d){return "Du kannst Honig nur an der Honigwabe herstellen."};
 
-exports.numBlocksNeeded = function(d){return "Dieses Puzzle kann mit dem Baustein %1 gelöst werden."};
+exports.numBlocksNeeded = function(d){return "Dieses Puzzle kann mit  %1 Bausteinen gelöst werden."};
 
-exports.pathAhead = function(d){return "Weg voraus"};
+exports.pathAhead = function(d){return "Pfad voraus"};
 
-exports.pathLeft = function(d){return "Wenn Weg auf der linken Seite"};
+exports.pathLeft = function(d){return "falls auf der linken Seite ein Pfad ist"};
 
-exports.pathRight = function(d){return "Wenn Weg auf der rechten Seite"};
+exports.pathRight = function(d){return "falls auf der rechten Seite ein Pfad ist"};
 
-exports.pilePresent = function(d){return "Auf einem Haufen"};
+exports.pilePresent = function(d){return "Da ist ein Stapel"};
 
 exports.putdownTower = function(d){return "Stellen Sie den Turm ab"};
 
@@ -13473,7 +13473,7 @@ exports.removeSquare = function(d){return "Viereck entfernen"};
 
 exports.repeatCarefullyError = function(d){return "Um dieses Level zu schaffen, musst du auf die Muster von zwei Mustern achten, die du in einen \"repeat\"-Block setzt. Es ist in Ordnung, wenn du nach dieser Runde noch Züge übrig hast."};
 
-exports.repeatUntil = function(d){return "wiederholen bis"};
+exports.repeatUntil = function(d){return "Wiederhole bis"};
 
 exports.repeatUntilBlocked = function(d){return "Solange ein Weg vor dir liegt"};
 
@@ -13497,7 +13497,7 @@ exports.uncheckedPurpleError = function(d){return "Stelle sicher, dass du alle l
 
 exports.whileMsg = function(d){return "solange"};
 
-exports.whileTooltip = function(d){return "Wiederhole diese Aktionen bis das Ziel erreicht ist."};
+exports.whileTooltip = function(d){return "Wiederhole die umschlossenen Aktionen bis der Endpunkt erreicht ist."};
 
 exports.word = function(d){return "Finde das Wort"};
 

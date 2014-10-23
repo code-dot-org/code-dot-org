@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -11550,7 +11550,7 @@ exports.dirW = function(d){return "西"};
 
 exports.doCode = function(d){return "做"};
 
-exports.elseCode = function(d){return "其他"};
+exports.elseCode = function(d){return "也"};
 
 exports.finalLevel = function(d){return "恭喜你！你完成了最后一个谜题。"};
 
@@ -11604,7 +11604,7 @@ exports.moveUpTooltip = function(d){return "把球拍向上移动"};
 
 exports.nextLevel = function(d){return "恭喜你！你解决了这个谜题。"};
 
-exports.no = function(d){return "否"};
+exports.no = function(d){return "不"};
 
 exports.noPathAhead = function(d){return "路被堵上了"};
 
@@ -11612,7 +11612,7 @@ exports.noPathLeft = function(d){return "左边没有路"};
 
 exports.noPathRight = function(d){return "右边没有路"};
 
-exports.numBlocksNeeded = function(d){return "这个谜题可以用%1个块解决。"};
+exports.numBlocksNeeded = function(d){return "这个谜题可以用%1个语句块解决。"};
 
 exports.pathAhead = function(d){return "前面有路"};
 
@@ -11658,7 +11658,7 @@ exports.repeatUntil = function(d){return "重复直到"};
 
 exports.repeatUntilBlocked = function(d){return "当前面有路"};
 
-exports.repeatUntilFinish = function(d){return "重复直到结束"};
+exports.repeatUntilFinish = function(d){return "重复直到完成"};
 
 exports.scoreText = function(d){return "积分: "+v(d,"playerScore")+": "+v(d,"opponentScore")};
 
@@ -11668,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "设置坚硬的地板场景
 
 exports.setBackgroundRetro = function(d){return "设置复古场景"};
 
-exports.setBackgroundTooltip = function(d){return "设置背景图像"};
+exports.setBackgroundTooltip = function(d){return "设置背景图案"};
 
 exports.setBallRandom = function(d){return "设置随机弹球"};
 
@@ -11734,15 +11734,15 @@ exports.whenBallMissesPaddleTooltip = function(d){return "当球拍没有击中�
 
 exports.whenDown = function(d){return "当箭头键向下"};
 
-exports.whenDownTooltip = function(d){return "当向下方向键按下时，执行下面操作"};
+exports.whenDownTooltip = function(d){return "执行下面按向上箭头键时采取的行动。"};
 
-exports.whenGameStarts = function(d){return "当游戏开始后"};
+exports.whenGameStarts = function(d){return "当游戏开始"};
 
-exports.whenGameStartsTooltip = function(d){return "在游戏开始时执行以下指令。"};
+exports.whenGameStartsTooltip = function(d){return "执行以下指令在游戏的开始时。"};
 
 exports.whenLeft = function(d){return "当箭头向左"};
 
-exports.whenLeftTooltip = function(d){return "当向左方向键按下时，执行下面的操作"};
+exports.whenLeftTooltip = function(d){return "执行下面按向左箭头键时采取的行动。"};
 
 exports.whenPaddleCollided = function(d){return "当球拍击中球"};
 
@@ -11750,11 +11750,11 @@ exports.whenPaddleCollidedTooltip = function(d){return "当球撞到球拍时，
 
 exports.whenRight = function(d){return "当箭头向右"};
 
-exports.whenRightTooltip = function(d){return "当向右方向键被按下时，执行下面的操作"};
+exports.whenRightTooltip = function(d){return "执行下面按向右箭头键时采取的行动。"};
 
 exports.whenUp = function(d){return "当箭头向上"};
 
-exports.whenUpTooltip = function(d){return "当按下向上箭头时，执行下面的操作"};
+exports.whenUpTooltip = function(d){return "执行下面按向上箭头键时采取的行动。"};
 
 exports.whenWallCollided = function(d){return "当球撞到墙"};
 
@@ -11771,7 +11771,7 @@ exports.yes = function(d){return "是"};
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.and = function(d){return "和"};
 
-exports.blocklyMessage = function(d){return "模块化"};
+exports.blocklyMessage = function(d){return "布洛克里"};
 
 exports.catActions = function(d){return "操作"};
 
@@ -11879,7 +11879,7 @@ exports.tooManyBlocksMsg = function(d){return "可以使用 < x id = 'START_SPAN
 
 exports.tooMuchWork = function(d){return "你让我多做很多工作 ！你可以尝试少重复几次吗？"};
 
-exports.toolboxHeader = function(d){return "模块"};
+exports.toolboxHeader = function(d){return "块"};
 
 exports.openWorkspace = function(d){return "它是如何工作的？"};
 

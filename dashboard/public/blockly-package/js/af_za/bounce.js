@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -11548,9 +11548,9 @@ exports.dirS = function(d){return "S"};
 
 exports.dirW = function(d){return "W"};
 
-exports.doCode = function(d){return "do"};
+exports.doCode = function(d){return "doen"};
 
-exports.elseCode = function(d){return "else"};
+exports.elseCode = function(d){return "of"};
 
 exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
 
@@ -11654,7 +11654,7 @@ exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" b
 
 exports.removeSquare = function(d){return "remove square"};
 
-exports.repeatUntil = function(d){return "repeat until"};
+exports.repeatUntil = function(d){return "herhaal tot"};
 
 exports.repeatUntilBlocked = function(d){return "while path ahead"};
 

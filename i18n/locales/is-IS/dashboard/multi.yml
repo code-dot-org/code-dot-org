@@ -106,15 +106,15 @@ is:
       2-3 Conditionals Multi 1:
         Multiple Choice: Valspurningar
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        These are your team's cards - according to the rules of the game, which set is scored correctly?: "These are your team's cards - according to the rules of the game, which set is scored correctly?"
+        According to the rules of the game, which set of cards is scored correctly?: According to the rules of the game, which set of cards is scored correctly?
+        /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
-        /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a4.png: /script_assets/2-3_images/unplugged/conditionals_1_a4.png
       2-3 Getting Loopy Multi 1:
         Multiple Choice: Valspurningar
         /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: Hvernig mundir þú einfalda þessa runu með lykkjum?
+        How would you simplify this sequence with loops?: Hvernig mundir þú einfalda þessa röð með lykkjum?
         /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
@@ -296,7 +296,6 @@ is:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
-        /script_assets/4-5_images/unplugged/suncatchers_2_a4.png: /script_assets/4-5_images/unplugged/suncatchers_2_a4.png
       K-1 Artist 1 Multi 1:
         Multiple Choice: Valspurningar
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -384,7 +383,7 @@ is:
       K-1 Getting Loopy Multi 1:
         Multiple Choice: Valspurningar
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: Hvernig mundir þú einfalda þessa röð með lykkjum?
+        How would you simplify this sequence with loops?: Hvernig mundir þú einfalda þessa runu með lykkjum?
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
@@ -486,7 +485,7 @@ is:
         random: af handahófi
         left top right: vinstri efst hægri
       Circle to code:
-        Code from Circle: Kóði frá hring
+        Code from Circle: Kóði út frá hring
         /script_assets/msm/Unit%202/exercise_1.png: '/script_assets/msm/Unit%202/exercise_1.png'
         Pick the Racket code that comes from the circle of evaluation!: Veldu Racket kóðann sem verður til út frá greiningarhringnum!
         (+ 5 (* (- 6 8) 4)): '(+ 5 (* (- 6 8) 4))'
@@ -502,7 +501,7 @@ is:
         "circle: number string string -> shape": 'hringur: tala strengur strengur -> form'
         "circle: 5 solid blue -> circle ": 'hringur: 5 einlitt blátt -> hringur '
       image code from circle:
-        Code from Circle: Kóði út frá hring
+        Code from Circle: Kóði frá hring
         /script_assets/msm/Unit%202/exercise_5.png: '/script_assets/msm/Unit%202/exercise_5.png'
         Pick the Racket code that comes from the circle of evaluation!: Veldu Racket kóðann sem verður til út frá greiningarhringnum!
         (rectangle (10) (2) "solid" "red"): '(rectangle (10) (2) "solid" "red")'

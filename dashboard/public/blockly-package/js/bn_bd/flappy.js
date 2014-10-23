@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -9214,7 +9214,7 @@ exports.catProcedures = function(d){return "ফাংশনগুলি"};
 
 exports.catText = function(d){return "পাঠ"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "চলকগুলো"};
 
 exports.codeTooltip = function(d){return "See generated JavaScript code."};
 
@@ -9359,7 +9359,7 @@ exports.continue = function(d){return "চালিয়ে যান"};
 
 exports.doCode = function(d){return "করা"};
 
-exports.elseCode = function(d){return "else"};
+exports.elseCode = function(d){return "আর"};
 
 exports.endGame = function(d){return "end game"};
 
@@ -9423,7 +9423,7 @@ exports.playSoundLaser = function(d){return "play laser sound"};
 
 exports.playSoundTooltip = function(d){return "Play a sound."};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your game."};
+exports.reinfFeedbackMsg = function(d){return "আপনি  পুনঃরাই আপনার খেলা প্লে করতে গিয়ে \"Try again\" বোতাম টিপতে পারেন."};
 
 exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
@@ -9443,7 +9443,7 @@ exports.setBackgroundCave = function(d){return "set scene Cave"};
 
 exports.setBackgroundSanta = function(d){return "set scene Santa"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "ব্যাকগ্রাউন্ড ইমেজ সেট করে"};
 
 exports.setGapRandom = function(d){return "set a random gap"};
 
@@ -9553,7 +9553,7 @@ exports.setSpeedTooltip = function(d){return "Sets the levels speed"};
 
 exports.shareFlappyTwitter = function(d){return "Check out the Flappy game I made. I wrote it myself with @codeorg"};
 
-exports.shareGame = function(d){return "Share your game:"};
+exports.shareGame = function(d){return "আপনার খেলা শেয়ার করুন:"};
 
 exports.soundRandom = function(d){return "এলোমেলো"};
 
@@ -9609,9 +9609,9 @@ exports.whenEnterObstacle = function(d){return "when pass obstacle"};
 
 exports.whenEnterObstacleTooltip = function(d){return "Execute the actions below when Flappy enters an obstacle."};
 
-exports.whenRunButtonClick = function(d){return "when Run is clicked"};
+exports.whenRunButtonClick = function(d){return "যখন খেলা শুরু"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Execute the actions below when the run button is pressed."};
+exports.whenRunButtonClickTooltip = function(d){return "যখন খেলা শুরু করে নিচে কর্ম সম্পাদন করে."};
 
 exports.yes = function(d){return "\"হ্যাঁ\""};
 

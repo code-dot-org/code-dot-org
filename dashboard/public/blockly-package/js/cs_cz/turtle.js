@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -10672,7 +10672,7 @@ exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkce"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Proměnné"};
 
@@ -10704,7 +10704,7 @@ exports.finalStage = function(d){return "Dobrá práce! Dokončil si poslední f
 
 exports.finalStageTrophies = function(d){return "Dobrá práce! Dokončil si poslední fázi a vyhrál "+p(d,"numTrophies",0,"cs",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Dokončit"};
 
 exports.generatedCodeInfo = function(d){return "Dokonce nejlepší university učí programovat pomocí bloků (např. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale vnitřek bloků, které jsi sestavil, lze zobrazit také v JavaScriptu, světově nejrozšířenějším programovacím jazyce:"};
 
@@ -10740,7 +10740,7 @@ exports.play = function(d){return "play"};
 
 exports.puzzleTitle = function(d){return "Hádanka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "ailadrodd"};
+exports.repeat = function(d){return "opakuj"};
 
 exports.resetProgram = function(d){return "Obnovit"};
 
@@ -10750,7 +10750,7 @@ exports.runTooltip = function(d){return "Spustí program definovaný bloky na pr
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Zobrazit Kód"};
+exports.showCodeHeader = function(d){return "Zobrazit kód"};
 
 exports.showGeneratedCode = function(d){return "Zobrazit kód"};
 
@@ -10764,7 +10764,7 @@ exports.tooManyBlocksMsg = function(d){return "Tato hádanka může být vyřeš
 
 exports.tooMuchWork = function(d){return "Přinutil jsi mne udělat spoustu práce! Mohl bys zkusit opakovat méně krát?"};
 
-exports.toolboxHeader = function(d){return "Bloky"};
+exports.toolboxHeader = function(d){return "bloky"};
 
 exports.openWorkspace = function(d){return "Jak To Funguje"};
 
@@ -10829,13 +10829,13 @@ exports.branches = function(d){return "branches"};
 
 exports.catColour = function(d){return "Barva"};
 
-exports.catControl = function(d){return "Smyčky"};
+exports.catControl = function(d){return "smyčky"};
 
 exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkce"};
 
-exports.catTurtle = function(d){return "Akce"};
+exports.catTurtle = function(d){return "akce"};
 
 exports.catVariables = function(d){return "Proměnné"};
 
@@ -10847,7 +10847,7 @@ exports.degrees = function(d){return "stupňů"};
 
 exports.depth = function(d){return "depth"};
 
-exports.dots = function(d){return "pixelů"};
+exports.dots = function(d){return "pixely"};
 
 exports.drawASquare = function(d){return "nakresli čtverec"};
 
@@ -10903,9 +10903,9 @@ exports.jumpWestTooltip = function(d){return "Posune malíře na západ bez zane
 
 exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
 
-exports.lengthParameter = function(d){return "délka"};
+exports.lengthParameter = function(d){return "Délka"};
 
-exports.loopVariable = function(d){return "čítač"};
+exports.loopVariable = function(d){return "Sčítač"};
 
 exports.moveBackward = function(d){return "posuň zpět o"};
 
@@ -10933,13 +10933,13 @@ exports.penTooltip = function(d){return "Přiloží či odloží tužku a začne
 
 exports.penUp = function(d){return "odložit tužku"};
 
-exports.reinfFeedbackMsg = function(d){return "Vypadá to, jako to, co chceš? Můžeš stisknout tlačítko \"Zkusit znovu\" a zobrazit svou kresbu."};
+exports.reinfFeedbackMsg = function(d){return "Vypadá to, jako to, co chceš? Můžeš stisknout tlačítko \"Zkusit znovu\" a zobrazit svůj náčrt."};
 
 exports.setColour = function(d){return "nastav barvu"};
 
 exports.setWidth = function(d){return "nastav šířku"};
 
-exports.shareDrawing = function(d){return "Sdílej svou kresbu:"};
+exports.shareDrawing = function(d){return "Sdílej svojí kresbu:"};
 
 exports.showMe = function(d){return "Ukaž mi"};
 

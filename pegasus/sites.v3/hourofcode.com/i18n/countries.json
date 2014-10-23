@@ -1,11 +1,15 @@
 {
+  "al": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "al"
+  },
+  "ar": {
+    "full_date": "October 27-31, 2014",
+    "default_language": "es"
+  },
   "au": {
     "full_date": "December 8-14, 2014",
     "default_language": "en"
-  },
-  "ar": {
-    "full_date": "October 11-17, 2014",
-    "default_language": "es"
   },
   "bg": {
     "full_date": "December 8-14, 2014",
@@ -50,6 +54,10 @@
   "me": {
     "full_date": "December 8-14, 2014",
     "default_language": "ar"
+  },
+  "my": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "ms"
   },
   "nz": {
     "full_date": "December 8-14, 2014",

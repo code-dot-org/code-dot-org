@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -10664,13 +10664,13 @@ exports.catMath = function(d){return "Reikningur"};
 
 exports.catProcedures = function(d){return "Föll"};
 
-exports.catText = function(d){return "Texti"};
+exports.catText = function(d){return "texti"};
 
 exports.catVariables = function(d){return "Breytur"};
 
 exports.codeTooltip = function(d){return "Sjá samsvarandi JavaScript kóða."};
 
-exports.continue = function(d){return "Áfram"};
+exports.continue = function(d){return "Halda áfram"};
 
 exports.dialogCancel = function(d){return "Hætta við"};
 
@@ -10756,7 +10756,7 @@ exports.tooManyBlocksMsg = function(d){return "Þessa þraut er hægt að leysa 
 
 exports.tooMuchWork = function(d){return "Þú lagðir á mig mjög mikla vinnu! Gætirðu reynt að nota færri endurtekningar?"};
 
-exports.toolboxHeader = function(d){return "Kubbar"};
+exports.toolboxHeader = function(d){return "kubbar"};
 
 exports.openWorkspace = function(d){return "Hvernig það virkar"};
 
@@ -10831,7 +10831,7 @@ exports.degrees = function(d){return "gráður"};
 
 exports.depth = function(d){return "dýpt"};
 
-exports.dots = function(d){return "dílar"};
+exports.dots = function(d){return "díla"};
 
 exports.drawASquare = function(d){return "teikna ferning"};
 
@@ -10917,13 +10917,13 @@ exports.penTooltip = function(d){return "Lyftir eða lækkar pensilinn til að b
 
 exports.penUp = function(d){return "pensill upp"};
 
-exports.reinfFeedbackMsg = function(d){return "Lítur þetta út eins og þú vildir? Þú getur ýtt á \"Reyna aftur\" hnappinn til að sjá teikninguna þína."};
+exports.reinfFeedbackMsg = function(d){return "Lítur þetta út eins og þú vilt? Þú getur valið takkann „Reyna aftur“ til að sjá teikninguna þína."};
 
 exports.setColour = function(d){return "stilla lit"};
 
 exports.setWidth = function(d){return "stilla breidd"};
 
-exports.shareDrawing = function(d){return "Deila teikningunni þinni:"};
+exports.shareDrawing = function(d){return "Deildu teikningunni:"};
 
 exports.showMe = function(d){return "Sýna mig"};
 

@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -18733,7 +18733,7 @@ exports.emptyBlocksErrorMsg = function(d){return "\"반복\" 블럭이나 \"조�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "함수 블럭 안에는 다른 블럭을 넣어주어야 합니다."};
 
-exports.extraTopBlocks = function(d){return "블럭들이 떨어져있습니다. 블럭들을 붙이겠습니까?"};
+exports.extraTopBlocks = function(d){return "블럭들이 붙어있지 않습니다. 블럭들을 붙이겠습니까?"};
 
 exports.finalStage = function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했습니다."};
 
@@ -18799,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "이 퍼즐은  <x id='START_SPAN'
 
 exports.tooMuchWork = function(d){return "작업을 너무 많이 해야 되요! 더 적게 반복하는 방법은 없을까요?"};
 
-exports.toolboxHeader = function(d){return "블럭"};
+exports.toolboxHeader = function(d){return "blocks"};
 
 exports.openWorkspace = function(d){return "실행 설명"};
 
@@ -18837,7 +18837,7 @@ exports.watchVideo = function(d){return "비디오 보기"};
 
 exports.when = function(d){return "~할 때"};
 
-exports.whenRun = function(d){return "~할 때 실행"};
+exports.whenRun = function(d){return "실행하면"};
 
 exports.tryHOC = function(d){return "Hour of Code 해보기"};
 
@@ -18890,7 +18890,7 @@ exports.incrementPlayerScore = function(d){return "점수 올리기"};
 
 exports.makeProjectileDisappear = function(d){return "보이지 않게 하기"};
 
-exports.makeProjectileBounce = function(d){return "튕기게 하기"};
+exports.makeProjectileBounce = function(d){return "튕김 소리"};
 
 exports.makeProjectileBlueFireball = function(d){return "파란 파이어볼 만들기"};
 
@@ -18916,7 +18916,7 @@ exports.moveDirectionRight = function(d){return "오른쪽으로"};
 
 exports.moveDirectionUp = function(d){return "위로"};
 
-exports.moveDirectionRandom = function(d){return "랜덤 방향으로"};
+exports.moveDirectionRandom = function(d){return "random(랜덤)"};
 
 exports.moveDistance25 = function(d){return "25 픽셀"};
 
@@ -18938,19 +18938,19 @@ exports.moveSprite = function(d){return "움직이기"};
 
 exports.moveSpriteN = function(d){return "캐릭터 움직이기 "+v(d,"spriteIndex")};
 
-exports.moveDown = function(d){return "아래로 움직이기"};
+exports.moveDown = function(d){return "아래로 이동하기"};
 
 exports.moveDownTooltip = function(d){return "케릭터를 아래로 움직입니다."};
 
-exports.moveLeft = function(d){return "왼쪽으로 움직이기"};
+exports.moveLeft = function(d){return "왼쪽으로 이동하기"};
 
 exports.moveLeftTooltip = function(d){return "케릭터를 왼쪽으로 움직입니다."};
 
-exports.moveRight = function(d){return "오른쪽으로 움직이기"};
+exports.moveRight = function(d){return "오른쪽으로 이동하기"};
 
 exports.moveRightTooltip = function(d){return "케릭터를 오른쪽으로 움직입니다."};
 
-exports.moveUp = function(d){return "위로 올리기"};
+exports.moveUp = function(d){return "위로 올라가기"};
 
 exports.moveUpTooltip = function(d){return "케릭터를 위로 움직입니다."};
 
@@ -18964,13 +18964,13 @@ exports.numBlocksNeeded = function(d){return "%1 개의 블럭으로 퍼즐을 �
 
 exports.ouchExclamation = function(d){return "앗!"};
 
-exports.playSoundCrunch = function(d){return "부서지는 소리 출력"};
+exports.playSoundCrunch = function(d){return "부서짐 소리 출력"};
 
 exports.playSoundGoal1 = function(d){return "골1 소리 출력"};
 
 exports.playSoundGoal2 = function(d){return "골2 소리 출력"};
 
-exports.playSoundHit = function(d){return "때리는 소리 출력"};
+exports.playSoundHit = function(d){return "때리기 소리 출력"};
 
 exports.playSoundLosePoint = function(d){return "실점 소리 출력"};
 
@@ -18982,7 +18982,7 @@ exports.playSoundRubber = function(d){return "고무 소리 출력"};
 
 exports.playSoundSlap = function(d){return "찰싹 소리 출력"};
 
-exports.playSoundTooltip = function(d){return "선택 소리 출력"};
+exports.playSoundTooltip = function(d){return "선택한 소리 출력"};
 
 exports.playSoundWinPoint = function(d){return "득점 소리 출력"};
 
@@ -19038,7 +19038,7 @@ exports.projectilePurpleHearts = function(d){return "분홍 하트"};
 
 exports.projectileRedHearts = function(d){return "빨간 하트"};
 
-exports.projectileRandom = function(d){return "랜덤 발사체"};
+exports.projectileRandom = function(d){return "random(랜덤)"};
 
 exports.reinfFeedbackMsg = function(d){return "\"다시 시작\"을 누르면 이야기를 다시 실행시킬 수 있습니다."};
 
@@ -19086,7 +19086,7 @@ exports.setBackgroundTennis = function(d){return "테니스 배경 설정"};
 
 exports.setBackgroundWinter = function(d){return "겨울 배경 설정"};
 
-exports.setBackgroundTooltip = function(d){return "배경 그림 설정"};
+exports.setBackgroundTooltip = function(d){return "배경 이미지 설정"};
 
 exports.setScoreText = function(d){return "점수 등록"};
 
@@ -19222,7 +19222,7 @@ exports.setSprite = function(d){return "케릭터 설정"};
 
 exports.setSpriteN = function(d){return "캐릭터 설정 "+v(d,"spriteIndex")};
 
-exports.soundCrunch = function(d){return "부서지는 소리"};
+exports.soundCrunch = function(d){return "부서짐 소리"};
 
 exports.soundGoal1 = function(d){return "득점 소리1"};
 

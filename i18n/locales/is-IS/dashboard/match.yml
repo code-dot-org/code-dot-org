@@ -70,7 +70,7 @@ is:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png
       2-3 Big Event Match 1:
-        Matching: Samtengingar
+        Matching: Tengingar
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
@@ -145,7 +145,7 @@ is:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
       4-5 Suncatchers Match 1:
-        Matching: Tengingar
+        Matching: Samtengingar
         Match each program to the word it makes, using the provided group of skills.: Tengdu hvert forrit við orðið sem það býr til með þeim kostum sem gefnir eru.
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png

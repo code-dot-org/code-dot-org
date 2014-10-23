@@ -7,8 +7,8 @@
       user:
         name: Nama
         email: E-mel
-        username: Nama pengguna
-        password: Kata laluan
+        username: nama pengguna
+        password: kata laluan
         password_confirmation: Pengesahan kata laluan
         current_password: Kata laluan semasa
         locale: Bahasa
@@ -31,11 +31,11 @@
     placeholder: Sila masukkan petunjuk anda di sini
     submit: Tambah petunjuk
   appname: Code.org
-  stage: Peringkat
+  stage: peringkat
   stage_number: Stage %{number}
   puzzle: Teka-teki
   trophies: Piala
-  courses: Kursus
+  courses: kursus-kursus
   of: dari
   more: LAGI
   less: KURANG
@@ -302,8 +302,8 @@
       trophies: Piala
     students:
       name: Nama
-      username: Nama pengguna
-      password: Kata laluan
+      username: nama pengguna
+      password: kata laluan
       manage: Mengurus pelajar
       dashboard: Go to Teacher Dashboard
       add: Menambah pelajar
@@ -386,7 +386,7 @@
       Mastery" trofi.
     student_left_off: 'Mana anda tinggalkan:'
     student_finished_prize: Anda telah melengkapkan kesemua tutorial, tuntut %{prize_link}
-      anda dan pilih kelas lain %{online_link} atau di %{local_school_link}
+      dan pilih kelas lain %{online_link} atau di %{local_school_link}
     student_finished: Anda telah selesaikan semua tutorial, pilih kelas lain %{online_link}
       atau %{local_school_link}
     local_school: sekolah tempatan
@@ -406,6 +406,9 @@
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Lelaki
     female: Perempuan
@@ -506,11 +509,17 @@
       body: Cuba 20 jam Pengenalan kepada kursus Sains Komputer kami.
   gallery:
     students_drew_these_with_code: Pelajar telah melukis ini dengan kod!
+    students_made_these_with_code: Students made these with code!
     picture_count: Sebelum ini <b>%{days}</b> hari, pelajar telah melukis <b>%{count}</b>
       gambar dengan menulis program komputer mereka sendiri. Klik pada gambar untuk
       melihat program dimainkan.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Ingin buat anda punya sendiri?
     more: Lagi &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
@@ -545,7 +554,7 @@
           title: Hour of Code
           description: ''
         edit-code:
-          title: Edit Code
+          title: Edit kod
           description: ''
         events:
           title: Events

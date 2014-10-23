@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -18689,15 +18689,15 @@ exports.parseElement = function(text) {
 
 },{}],45:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
-exports.and = function(d){return "וגם"};
+exports.and = function(d){return "ו"};
 
-exports.blocklyMessage = function(d){return "Blockly"};
+exports.blocklyMessage = function(d){return "בלוקלי"};
 
 exports.catActions = function(d){return "פעולות"};
 
 exports.catColour = function(d){return "צבע"};
 
-exports.catLogic = function(d){return "לוגיקה"};
+exports.catLogic = function(d){return "הגיון"};
 
 exports.catLists = function(d){return "רשימות"};
 
@@ -18721,7 +18721,7 @@ exports.dialogOK = function(d){return "אישור"};
 
 exports.directionNorthLetter = function(d){return "צ"};
 
-exports.directionSouthLetter = function(d){return "ס"};
+exports.directionSouthLetter = function(d){return "ד"};
 
 exports.directionEastLetter = function(d){return "מז"};
 
@@ -18749,7 +18749,7 @@ exports.help = function(d){return "עזרה"};
 
 exports.hintTitle = function(d){return "רמז:"};
 
-exports.jump = function(d){return "קפיצה"};
+exports.jump = function(d){return "קפוץ"};
 
 exports.levelIncompleteError = function(d){return "הנך משתמש בכל סוגי הבלוקים הנדרשים אך לא באופן הנכון."};
 
@@ -18775,7 +18775,7 @@ exports.play = function(d){return "לשחק"};
 
 exports.puzzleTitle = function(d){return "חידה "+v(d,"puzzle_number")+" מ- "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "חזור"};
+exports.repeat = function(d){return "חזור על"};
 
 exports.resetProgram = function(d){return "אפס"};
 
@@ -18854,7 +18854,7 @@ exports.actor = function(d){return "actor"};
 
 exports.catActions = function(d){return "פעולות"};
 
-exports.catControl = function(d){return "לולאות"};
+exports.catControl = function(d){return "חזרות"};
 
 exports.catEvents = function(d){return "Events"};
 
@@ -18880,7 +18880,7 @@ exports.defaultSayText = function(d){return "type here"};
 
 exports.emotion = function(d){return "mood"};
 
-exports.finalLevel = function(d){return "מזל טוב! השלמת את הפאזל האחרון."};
+exports.finalLevel = function(d){return "מזל טוב! פתרת את החידה האחרונה."};
 
 exports.hello = function(d){return "hello"};
 
@@ -18890,7 +18890,7 @@ exports.incrementPlayerScore = function(d){return "נקודת דרוג"};
 
 exports.makeProjectileDisappear = function(d){return "disappear"};
 
-exports.makeProjectileBounce = function(d){return "bounce"};
+exports.makeProjectileBounce = function(d){return "הקפצה"};
 
 exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
 
@@ -18908,9 +18908,9 @@ exports.makeProjectileTooltip = function(d){return "Make the projectile that jus
 
 exports.makeYourOwn = function(d){return "תיצור סיפור משלך"};
 
-exports.moveDirectionDown = function(d){return "down"};
+exports.moveDirectionDown = function(d){return "למטה"};
 
-exports.moveDirectionLeft = function(d){return "left"};
+exports.moveDirectionLeft = function(d){return "שמאלה"};
 
 exports.moveDirectionRight = function(d){return "right"};
 
@@ -18964,7 +18964,7 @@ exports.numBlocksNeeded = function(d){return "ניתן לפתור את הפאז�
 
 exports.ouchExclamation = function(d){return "Ouch!"};
 
-exports.playSoundCrunch = function(d){return "נגן צליל מעיכה"};
+exports.playSoundCrunch = function(d){return "תשמיע צליל מעיכה"};
 
 exports.playSoundGoal1 = function(d){return "השמע צליל מטרה 1"};
 
@@ -19086,7 +19086,7 @@ exports.setBackgroundTennis = function(d){return "set tennis background"};
 
 exports.setBackgroundWinter = function(d){return "set winter background"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "קובע את תמונת הרקע"};
 
 exports.setScoreText = function(d){return "הגדר ניקוד"};
 
@@ -19218,7 +19218,7 @@ exports.showTSDefText = function(d){return "type text here"};
 
 exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
 
-exports.setSprite = function(d){return "הגדר"};
+exports.setSprite = function(d){return "השם"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 

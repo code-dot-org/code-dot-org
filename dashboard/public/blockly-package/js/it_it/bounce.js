@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -11562,13 +11562,13 @@ exports.ifPathAhead = function(d){return "se c'è strada in avanti"};
 
 exports.ifTooltip = function(d){return "Se c'è strada nella direzione specificata, allora fai alcune azioni."};
 
-exports.ifelseTooltip = function(d){return "Se c'è strada nella direzione specificata, effettua il primo blocco di azioni. Altrimenti, effettua il secondo."};
+exports.ifelseTooltip = function(d){return "Se c'è strada nella direzione specificata, allora effettua il primo blocco di azioni. Altrimenti, effettua il secondo."};
 
 exports.incrementOpponentScore = function(d){return "l'avversario ha fatto 1 punto"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Aggiungi uno al punteggio attuale dell'avversario."};
 
-exports.incrementPlayerScore = function(d){return "hai fatto 1 punto"};
+exports.incrementPlayerScore = function(d){return "aggiungi un punto"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Aggiunge uno al punteggio attuale del giocatore."};
 
@@ -11586,7 +11586,7 @@ exports.moveDown = function(d){return "sposta in basso"};
 
 exports.moveDownTooltip = function(d){return "Sposta la racchetta in basso."};
 
-exports.moveForward = function(d){return "vai avanti"};
+exports.moveForward = function(d){return "Vai avanti"};
 
 exports.moveForwardTooltip = function(d){return "Vai avanti di una casella."};
 
@@ -11610,11 +11610,11 @@ exports.noPathAhead = function(d){return "la strada è bloccata"};
 
 exports.noPathLeft = function(d){return "nessuna strada a sinistra"};
 
-exports.noPathRight = function(d){return "nessun percorso a destra"};
+exports.noPathRight = function(d){return "nessuna strada a destra"};
 
 exports.numBlocksNeeded = function(d){return "Questo esercizio può essere risolto con %1 blocchi."};
 
-exports.pathAhead = function(d){return "la strada davanti"};
+exports.pathAhead = function(d){return "c'è strada in avanti"};
 
 exports.pathLeft = function(d){return "se c'è strada a sinistra"};
 
@@ -11648,9 +11648,9 @@ exports.playSoundWinPoint2 = function(d){return "riproduci il suono di un punto 
 
 exports.playSoundWood = function(d){return "riproduci il suono del legno"};
 
-exports.putdownTower = function(d){return "metti giù la torre"};
+exports.putdownTower = function(d){return "Metti giù la torre"};
 
-exports.reinfFeedbackMsg = function(d){return "Premi \"Ricomincia\" per ricominciare a giocare la tua partita."};
+exports.reinfFeedbackMsg = function(d){return "Puoi premere \"Gioca di nuovo\" per ricominciare a giocare con il tuo gioco."};
 
 exports.removeSquare = function(d){return "rimuovi un quadrato"};
 
@@ -11668,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "imposta una scena per polo"
 
 exports.setBackgroundRetro = function(d){return "imposta una scena retrò"};
 
-exports.setBackgroundTooltip = function(d){return "Imposta l'immagine per lo sfondo"};
+exports.setBackgroundTooltip = function(d){return "Imposta l'immagine di sfondo"};
 
 exports.setBallRandom = function(d){return "imposta una palla scelta a caso"};
 
@@ -11736,9 +11736,9 @@ exports.whenDown = function(d){return "quando la freccia in basso"};
 
 exports.whenDownTooltip = function(d){return "Esegue le azioni qua sotto quando viene premuto il tasto \"freccia in basso\"."};
 
-exports.whenGameStarts = function(d){return "quando inizia il gioco"};
+exports.whenGameStarts = function(d){return "quando si clicca su \"Esegui\""};
 
-exports.whenGameStartsTooltip = function(d){return "Esegue le azioni qua sotto quando il gioco inizia."};
+exports.whenGameStartsTooltip = function(d){return "Esegue le azioni qua sotto quando si clicca su \"Esegui\"."};
 
 exports.whenLeft = function(d){return "quando la freccia a sinistra"};
 
@@ -11787,7 +11787,7 @@ exports.catMath = function(d){return "Matematica"};
 
 exports.catProcedures = function(d){return "Funzioni"};
 
-exports.catText = function(d){return "Testo"};
+exports.catText = function(d){return "testo"};
 
 exports.catVariables = function(d){return "Variabili"};
 
@@ -11819,7 +11819,7 @@ exports.finalStage = function(d){return "Complimenti! Hai completato l'ultima le
 
 exports.finalStageTrophies = function(d){return "Complimenti! Hai completato l'ultima lezione e vinto "+p(d,"numTrophies",0,"it",{"one":"un trofeo","other":n(d,"numTrophies")+" trofei"})+"."};
 
-exports.finish = function(d){return "Condividi"};
+exports.finish = function(d){return "Fine"};
 
 exports.generatedCodeInfo = function(d){return "Anche le migliori università (p.es., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") insegnano la programmazione visuale con i blocchi. Ma i blocchi che metti insieme possono essere rappresentati anche in JavaScript, uno dei linguaggi di programmazione più usati al mondo:"};
 
@@ -11833,7 +11833,7 @@ exports.jump = function(d){return "salta"};
 
 exports.levelIncompleteError = function(d){return "Stai usando tutti i tipi di blocchi necessari, ma non nel modo giusto."};
 
-exports.listVariable = function(d){return "lista"};
+exports.listVariable = function(d){return "elenco"};
 
 exports.makeYourOwnFlappy = function(d){return "Costruisci la tua versione del gioco Flappy"};
 
@@ -11865,7 +11865,7 @@ exports.runTooltip = function(d){return "Esegui il programma definito dai blocch
 
 exports.score = function(d){return "punteggio"};
 
-exports.showCodeHeader = function(d){return "Mostra il codice"};
+exports.showCodeHeader = function(d){return "Visualizza codice"};
 
 exports.showGeneratedCode = function(d){return "Mostra il codice"};
 
@@ -11879,7 +11879,7 @@ exports.tooManyBlocksMsg = function(d){return "Questo esercizio può essere riso
 
 exports.tooMuchWork = function(d){return "Mi hai fatto fare un sacco di lavoro!  Puoi provare a farmi fare meno ripetizioni?"};
 
-exports.toolboxHeader = function(d){return "Blocchi"};
+exports.toolboxHeader = function(d){return "blocchi"};
 
 exports.openWorkspace = function(d){return "Come funziona"};
 

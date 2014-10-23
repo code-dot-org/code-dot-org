@@ -24,4 +24,10 @@ Code.org将在Hour of Code活动（12月8日至14日）之后联系活动组织�
 
 该奖品仅限于美国K-12学校。 为什么只有公立学校？ [See the answer here](http://www.hourofcode.com/#faq). 为了获得资格，您的整个学校都必须在2014 年 11 月 14 日前注册Hour of Code活动。 每个美国州都将有一所学校得到我们为整个班级提供的电脑。 Code.org 将在 2014 年 12 月 1 日前选择并通过电子邮件通知获奖者。
 
+To clarify, this is not a sweepstakes or a contest involving pure chance.
+
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+
 <% end %>

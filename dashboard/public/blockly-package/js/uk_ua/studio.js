@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -18702,7 +18702,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.uk = function 
   }
   return 'other';
 };
-exports.and = function(d){return "і"};
+exports.and = function(d){return "та"};
 
 exports.blocklyMessage = function(d){return "Блоклі"};
 
@@ -18720,7 +18720,7 @@ exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Функції"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Змінні"};
 
@@ -18752,13 +18752,13 @@ exports.finalStage = function(d){return "Вітання! Завершено ос
 
 exports.finalStageTrophies = function(d){return "Вітання! Ви завершили останній етап і виграли "+p(d,"numTrophies",0,"uk",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Готово"};
+exports.finish = function(d){return "Кінець"};
 
 exports.generatedCodeInfo = function(d){return "Навіть кращі університети навчають програмуванню на основі блоків (наприклад, "+v(d,"berkeleyLink")+" "+v(d,"harvardLink")+"). Але всередині ті блоки, які ви щойно склали, можуть показуватись у JavaScript, найпоширенішій мові програмування:"};
 
 exports.hashError = function(d){return "Шкода, але  '%1' не відповідає жодній збереженій програмі."};
 
-exports.help = function(d){return "Допомога"};
+exports.help = function(d){return "Довідка"};
 
 exports.hintTitle = function(d){return "Підказка:"};
 
@@ -18812,7 +18812,7 @@ exports.tooManyBlocksMsg = function(d){return "Це завдання можна 
 
 exports.tooMuchWork = function(d){return "Ви змусили мене попрацювати! Може спробуємо менше повторів?"};
 
-exports.toolboxHeader = function(d){return "Блоки"};
+exports.toolboxHeader = function(d){return "блоки"};
 
 exports.openWorkspace = function(d){return "Як це працює"};
 
@@ -18880,7 +18880,7 @@ exports.actor = function(d){return "персонаж"};
 
 exports.catActions = function(d){return "Дії"};
 
-exports.catControl = function(d){return "Цикли"};
+exports.catControl = function(d){return "петлі"};
 
 exports.catEvents = function(d){return "Події"};
 
@@ -18888,11 +18888,11 @@ exports.catLogic = function(d){return "Логіка"};
 
 exports.catMath = function(d){return "Математика"};
 
-exports.catProcedures = function(d){return "Функції"};
+exports.catProcedures = function(d){return "функції"};
 
 exports.catText = function(d){return "Текст"};
 
-exports.catVariables = function(d){return "Змінні"};
+exports.catVariables = function(d){return "змінні"};
 
 exports.changeScoreTooltip = function(d){return "Додати або видалити бал."};
 
@@ -18954,7 +18954,7 @@ exports.moveDistance200 = function(d){return "200 пікселів"};
 
 exports.moveDistance400 = function(d){return "400 пікселів"};
 
-exports.moveDistancePixels = function(d){return "пікселі"};
+exports.moveDistancePixels = function(d){return "пікселів"};
 
 exports.moveDistanceRandom = function(d){return "Випадкові пікселі"};
 
@@ -18964,7 +18964,7 @@ exports.moveSprite = function(d){return "переміститись"};
 
 exports.moveSpriteN = function(d){return "перемістити персонажа "+v(d,"spriteIndex")};
 
-exports.moveDown = function(d){return "рухатись вниз"};
+exports.moveDown = function(d){return "рухатися вниз"};
 
 exports.moveDownTooltip = function(d){return "Перемістити персонаж вниз."};
 
@@ -18982,7 +18982,7 @@ exports.moveUpTooltip = function(d){return "Рухати персонаж вго
 
 exports.moveTooltip = function(d){return "Перемістити персонаж."};
 
-exports.nextLevel = function(d){return "Вітання! Ви розв'язали це завдання."};
+exports.nextLevel = function(d){return "Вітання! Ви розв'язали останнє завдання."};
 
 exports.no = function(d){return "Ні"};
 
@@ -19324,7 +19324,7 @@ exports.whenArrowUp = function(d){return "стрілка вгору"};
 
 exports.whenArrowTooltip = function(d){return "Виконання дій, поданих нижче, коли натиснута відповідна клавіша стрілки."};
 
-exports.whenDown = function(d){return "коли стрілка вниз"};
+exports.whenDown = function(d){return "Коли стрілка вниз"};
 
 exports.whenDownTooltip = function(d){return "Виконати дії, подані нижче, при натисненні клавіші стрілка вниз."};
 
@@ -19332,11 +19332,11 @@ exports.whenGameStarts = function(d){return "коли історія почин�
 
 exports.whenGameStartsTooltip = function(d){return "Виконання дій, поданих нижче, коли історія починається."};
 
-exports.whenLeft = function(d){return "коли стрілка вліво"};
+exports.whenLeft = function(d){return "коли стрілка Вліво"};
 
 exports.whenLeftTooltip = function(d){return "Виконати дії, подані нижче, при натисненні клавіші стрілка вліво."};
 
-exports.whenRight = function(d){return "коли стрілка вправо"};
+exports.whenRight = function(d){return "коли стрілка Вправо"};
 
 exports.whenRightTooltip = function(d){return "Виконати дії, подані нижче, при натисненні клавіші стрілка вправо."};
 
@@ -19382,7 +19382,7 @@ exports.whenSpriteCollidedWithRightEdge = function(d){return "торкаєтьс
 
 exports.whenSpriteCollidedWithTopEdge = function(d){return "торкається верхнього краю"};
 
-exports.whenUp = function(d){return "коли стрілка вгору"};
+exports.whenUp = function(d){return "коли стрілка Вгору"};
 
 exports.whenUpTooltip = function(d){return "Виконати дії, подані нижче, при натисненні клавіші стрілка вгору."};
 

@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -10817,7 +10817,7 @@ exports.catControl = function(d){return "फंदे"};
 
 exports.catMath = function(d){return "गणित"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "कार्य"};
 
 exports.catTurtle = function(d){return "क्रियाएँ"};
 

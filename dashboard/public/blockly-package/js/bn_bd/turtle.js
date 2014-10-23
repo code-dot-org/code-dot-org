@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -10666,7 +10666,7 @@ exports.catProcedures = function(d){return "ফাংশনগুলি"};
 
 exports.catText = function(d){return "পাঠ"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "চলকগুলো"};
 
 exports.codeTooltip = function(d){return "See generated JavaScript code."};
 

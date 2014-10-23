@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -7701,13 +7701,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Senarai"};
 
-exports.catLoops = function(d){return "Pusingan"};
+exports.catLoops = function(d){return "Gelung"};
 
 exports.catMath = function(d){return "Matematik"};
 
 exports.catProcedures = function(d){return "Fungsi"};
 
-exports.catText = function(d){return "Teks"};
+exports.catText = function(d){return "teks"};
 
 exports.catVariables = function(d){return "Pembolehubah"};
 
@@ -7775,7 +7775,7 @@ exports.play = function(d){return "Main"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" dari "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "ulang"};
+exports.repeat = function(d){return "Ulang"};
 
 exports.resetProgram = function(d){return "Tetapkan semula"};
 
@@ -7785,7 +7785,7 @@ exports.runTooltip = function(d){return "Jalankan program yang ditetapkan dengan
 
 exports.score = function(d){return "skor"};
 
-exports.showCodeHeader = function(d){return "Tunjuk Kod"};
+exports.showCodeHeader = function(d){return "Tunjukkan Kod"};
 
 exports.showGeneratedCode = function(d){return "Tunjukkan Kod"};
 
@@ -7858,11 +7858,11 @@ exports.no = function(d){return "Tidak"};
 
 exports.numBlocksNeeded = function(d){return "Puzzle ini boleh diselesaikan dengan %1 blok."};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your game."};
+exports.reinfFeedbackMsg = function(d){return "Anda boleh tekan butang \"Cuba lagi\" untuk kembali bermain."};
 
-exports.share = function(d){return "Share"};
+exports.share = function(d){return "Kongsi"};
 
-exports.shareGame = function(d){return "Share your game:"};
+exports.shareGame = function(d){return "Kongsi permainan anda:"};
 
 exports.yes = function(d){return "Ya"};
 

@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -9212,13 +9212,13 @@ exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Fungsi"};
 
-exports.catText = function(d){return "Teks"};
+exports.catText = function(d){return "teks"};
 
 exports.catVariables = function(d){return "Variabel"};
 
 exports.codeTooltip = function(d){return "Lihat kode JavaScript."};
 
-exports.continue = function(d){return "Ayo lanjutkan!"};
+exports.continue = function(d){return "Lanjutkan"};
 
 exports.dialogCancel = function(d){return "Batal"};
 
@@ -9280,7 +9280,7 @@ exports.play = function(d){return "mainkan"};
 
 exports.puzzleTitle = function(d){return "Teka-teki ke "+v(d,"puzzle_number")+" dari "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "ulangi"};
+exports.repeat = function(d){return "Ulangi"};
 
 exports.resetProgram = function(d){return "Kembali ke awal"};
 
@@ -9304,7 +9304,7 @@ exports.tooManyBlocksMsg = function(d){return "Teka-teki ini dapat diselesaikan 
 
 exports.tooMuchWork = function(d){return "Anda membuat saya melakukan terlalu banyak pekerjaan!  Bisakan Anda coba membuat pengulangan yang lebih sedikit?"};
 
-exports.toolboxHeader = function(d){return "Blok"};
+exports.toolboxHeader = function(d){return "blok"};
 
 exports.openWorkspace = function(d){return "Cara kerjanya"};
 
@@ -9355,7 +9355,7 @@ exports.genericFeedback = function(d){return "Lihatlah hasil anda dan cobalah un
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.id=function(n){return "other"}
-exports.continue = function(d){return "lanjutkan"};
+exports.continue = function(d){return "Lanjutkan"};
 
 exports.doCode = function(d){return "kerjakan"};
 
@@ -9365,7 +9365,7 @@ exports.endGame = function(d){return "akhir dari permainan"};
 
 exports.endGameTooltip = function(d){return "Akhiri permainan."};
 
-exports.finalLevel = function(d){return "Selamat! Anda telah menyelesaikan teka-teki terakhir."};
+exports.finalLevel = function(d){return "Horee! Anda telah memecahkan teka-teki akhir."};
 
 exports.flap = function(d){return "kepakkan"};
 
@@ -9387,9 +9387,9 @@ exports.flappySpecificFail = function(d){return "Kode kamu terlihat baik - Burun
 
 exports.incrementPlayerScore = function(d){return "raih point"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "tambahkan satu pada pemain saat ini."};
+exports.incrementPlayerScoreTooltip = function(d){return "Tambah satu pada skor pemain saat ini."};
 
-exports.nextLevel = function(d){return "Selamat! Kamu telah menyelesaikan teka-teki ini."};
+exports.nextLevel = function(d){return "Horee! Anda telah menyelesaikan teka-teki ini."};
 
 exports.no = function(d){return "Tidak"};
 
@@ -9421,11 +9421,11 @@ exports.playSoundSplash = function(d){return "mainkan bunyi \"cipratan\""};
 
 exports.playSoundLaser = function(d){return "mainkan bunyi \"laser\""};
 
-exports.playSoundTooltip = function(d){return "mainkan bunyi pilihan."};
+exports.playSoundTooltip = function(d){return "Mainkan bunyi pilihan."};
 
 exports.reinfFeedbackMsg = function(d){return "Anda dapat menekan tombol \"Coba lagi\" untuk kembali bermain."};
 
-exports.scoreText = function(d){return "Skor: "+v(d,"playerScore")};
+exports.scoreText = function(d){return "Nilai: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "atur adegan"};
 
@@ -9443,7 +9443,7 @@ exports.setBackgroundCave = function(d){return "atur adegan gua"};
 
 exports.setBackgroundSanta = function(d){return "atur adegan Santa"};
 
-exports.setBackgroundTooltip = function(d){return "Atur gambar latar belakang"};
+exports.setBackgroundTooltip = function(d){return "tetapkan latar belakang gambar"};
 
 exports.setGapRandom = function(d){return "atur celah secara acak"};
 
@@ -9543,7 +9543,7 @@ exports.setPlayerTurkey = function(d){return "atur pemain Kalkun"};
 
 exports.setPlayerTooltip = function(d){return "atur gambar pemain"};
 
-exports.setScore = function(d){return "tetapkan skor"};
+exports.setScore = function(d){return "atur nilai"};
 
 exports.setScoreTooltip = function(d){return "Tetapkan skor pemain"};
 
@@ -9553,11 +9553,11 @@ exports.setSpeedTooltip = function(d){return "tetapkan tingkat kecepatan"};
 
 exports.shareFlappyTwitter = function(d){return "Ayo coba permainan Flappy yang kubuat. Saya menulis sendiri dengan @codeorg"};
 
-exports.shareGame = function(d){return "Bagi permainanmu:"};
+exports.shareGame = function(d){return "Bagikan permainanmu:"};
 
 exports.soundRandom = function(d){return "acak"};
 
-exports.soundBounce = function(d){return "memantul"};
+exports.soundBounce = function(d){return "melambung"};
 
 exports.soundCrunch = function(d){return "menjongkok"};
 
@@ -9609,7 +9609,7 @@ exports.whenEnterObstacle = function(d){return "ketika melalui hambatan"};
 
 exports.whenEnterObstacleTooltip = function(d){return "Jalankan aksi dibawah jika Flappy memasuki hambatan."};
 
-exports.whenRunButtonClick = function(d){return "ketika permainan dimulai"};
+exports.whenRunButtonClick = function(d){return "jika permainan dimulai"};
 
 exports.whenRunButtonClickTooltip = function(d){return "Jalankan aksi dibawah ketika permainan dimulai."};
 

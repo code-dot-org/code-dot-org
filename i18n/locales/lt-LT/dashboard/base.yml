@@ -98,7 +98,7 @@ lt:
     submit: Prisijungti
   signin:
     try_heading: Nori išmėginti programavimą neprisiregistravęs?
-    try_hoc: Pirmiausia išmėginkite Kodavimo Valandą
+    try_hoc: Pirmiausia išmėginkite „Programavimo valandą“
     try_20hours: Išmėginkite 20-ties valandų įvadą į informatiką
   signinsection:
     welcome: 'Sveiki atvykę į %{section_name}'
@@ -214,7 +214,7 @@ lt:
     access_denied: 'Neturite prieigos prie šio %{model}.'
   nav:
     header:
-      finished_hoc: Aš jau užbaigiau savo Kodavimo Valandą
+      finished_hoc: Aš jau užbaigiau savo „Programavimo valandą“
       sign_in_to_save: Prisijunkite, kad išsaugotumėte savo pažangą
       free_play:
         playlab: Sukurk programėlę
@@ -284,7 +284,7 @@ lt:
       section_code: Sekcijos kodas
       add_section_code: Pridėti grupės kodą
       secret: Prisijungimo rakto tipas
-      grade: Klasė
+      grade: Kelinta klasė
       course: Kursas
       rename: pervadinti
       edit: redaguoti
@@ -314,7 +314,7 @@ lt:
     show_more: Rodyti daugiau
     classroom_activity: Vaizdo įrašas mokytojams
   home:
-    title: Studio Kodas
+    title: Programavimo kursai
     all_courses: 1, 2 ir 3 kursų apžvalga
     lesson_plans: Pamokų planai
     signin_message: 'Jau užsiregistravote? %{link}'
@@ -347,6 +347,9 @@ lt:
     heading_elementary: '<h2>20 valandų kursas </h2><h1>pradinių klasių mokiniams</h1>'
     heading_apps: '<h2>Smagumynai</h2><h1>visiems</h1>'
     heading_legacy: '<h2>Mūsų bendri kursai</h2><h1>visoms amžių grupėms</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Vyras
     female: Moteris
@@ -374,7 +377,7 @@ lt:
     teacher: Peržiūrėti sprendimą
     auth_error: Jums neleidžiama pamatyti sprendimo.
     submit: Atnaujinti menininko padėtį
-    direction: Pradžios kryptis
+    direction: Start Direction (in degrees)
   video:
     tab: Vaizdo įrašas.
     notes: Nerodo vaizdo? Rodyti tekstą.
@@ -422,16 +425,20 @@ lt:
       title: „Programavimo valanda“
       body: Išmėginkite programavimo pagrindus. Juos išbandė jau milijonai žmonių.
     flappy:
-      title: Flappy Kodas
+      title: Flappy kodas
       body: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy Code pamokėles!
     20hour:
       title: Įvadiniai kursai
       body: Išmėginkite mūsų 20-ties valandų įvadą į programavimą.
   gallery:
     students_drew_these_with_code: Mokiniai nupiešė juos parašę kodą!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'Šiomis <b>%{days}</b> dienomis, mokiniai nupiešė <b>%{count}</b> piešinių parašydami savo kompiuterines programas. Nuspausk ant šių piešinių, kad pamatytum parašytas programas.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Norėtum sukurti savo?
     more: 'Daugiau &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "Šis kursas yra <span class='betatext'>beta</span>. Tai reiškia, kad tai nėra galutinis šio kurso variantas ir jis dar yra tobulinamas."
     feedback: Pateikti atsiliepimus
@@ -449,7 +456,7 @@ lt:
     correct_title: Teisingai
     correct_body: Tai yra teisingas atsakymas.
   dialog:
-    ok: Gerai
+    ok: gerai
   time:
     hour: 1 val
     day: diena
@@ -473,7 +480,7 @@ lt:
           title: Kūrimas
           description: ""
         flappy:
-          title: Flappy kodas
+          title: Flappy Kodas
           description: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy Code pamokėles!
         jigsaw:
           title: Dėlionės

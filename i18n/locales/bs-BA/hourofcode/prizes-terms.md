@@ -24,4 +24,10 @@ Nagrade ograničene za SAD K-12 škole. Kako bi se kvalificirali, cijela se ško
 
 Nagrada ograničena za javne SAD K-12 škole. Zašto samo državne škole? [See the answer here](http://www.hourofcode.com/#faq). Kako bi se kvalificirali, cijela se škola mora registrirati za Sata programiranja do novembra 14, 2014. Jedna škola u svakoj državi SAD-a će dobiti računala za cijelu učionicu. Code.org će odabrati i obavijestiti pobjednika putem e-maila do Decembra 1, 2014.
 
+To clarify, this is not a sweepstakes or a contest involving pure chance.
+
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+
 <% end %>

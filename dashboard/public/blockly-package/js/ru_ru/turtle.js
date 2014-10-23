@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -10677,7 +10677,7 @@ exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Процедуры"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Переменные"};
 
@@ -10685,7 +10685,7 @@ exports.codeTooltip = function(d){return "Просмотреть созданн�
 
 exports.continue = function(d){return "Продолжить"};
 
-exports.dialogCancel = function(d){return "Отменить"};
+exports.dialogCancel = function(d){return "Отмена"};
 
 exports.dialogOK = function(d){return "Продолжить"};
 
@@ -10701,17 +10701,17 @@ exports.end = function(d){return "конец"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Блокам \"повторять\" или \"если\" необходимо иметь внутри другие блоки для работы. Убедись  в том, что внутренний блок должным образом подходит к блоку, в котором он содержится."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Блок функции требует другие блоки внутри для работы."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Блок процедуры требует для работы другие блоки внутри себя."};
 
-exports.extraTopBlocks = function(d){return "У тебя остались неприсоединённые блоки. Ты собирался присоединить их к блоку (when run)?"};
+exports.extraTopBlocks = function(d){return "У тебя остались неприсоединённые блоки. Ты собирался присоединить их к блоку \"При запуске\"?"};
 
 exports.finalStage = function(d){return "Поздравляю! Ты завершил последний этап."};
 
 exports.finalStageTrophies = function(d){return "Поздравляю! Ты завершил последний этап и выиграл "+p(d,"numTrophies",0,"ru",{"one":"кубок","other":n(d,"numTrophies")+" кубков"})+"."};
 
-exports.finish = function(d){return "Завершить"};
+exports.finish = function(d){return "Готово"};
 
-exports.generatedCodeInfo = function(d){return "Даже в лучших университетах изучают блочное программирование (например, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Но на самом деле блоки, которые вы собирали могут быть отображены на JavaScript, наиболее широко используемом в мире языке программирования:"};
+exports.generatedCodeInfo = function(d){return "Даже в лучших университетах изучают блочное программирование (например, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Но на самом деле блоки, которые вы собирали, могут быть отображены на JavaScript, наиболее широко используемом в мире языке программирования:"};
 
 exports.hashError = function(d){return "К сожалению, «%1» не соответствует какой-либо сохранённой программе."};
 
@@ -10719,7 +10719,7 @@ exports.help = function(d){return "Справка"};
 
 exports.hintTitle = function(d){return "Подсказка:"};
 
-exports.jump = function(d){return "прыжок"};
+exports.jump = function(d){return "прыгнуть"};
 
 exports.levelIncompleteError = function(d){return "Ты используешь все необходимые виды блоков, но неправильным способом."};
 
@@ -10769,7 +10769,7 @@ exports.tooManyBlocksMsg = function(d){return "Эта головоломка м�
 
 exports.tooMuchWork = function(d){return "Ты заставил меня попотеть! Может, будешь стараться делать меньше попыток?"};
 
-exports.toolboxHeader = function(d){return "Блоки"};
+exports.toolboxHeader = function(d){return "блоков"};
 
 exports.openWorkspace = function(d){return "Как это работает"};
 
@@ -10785,7 +10785,7 @@ exports.saveToGallery = function(d){return "Сохранить в твоей г�
 
 exports.savedToGallery = function(d){return "Сохранено в твоей галереи!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "К сожалению, мы не можем поделиться этой программой."};
 
 exports.typeCode = function(d){return "Введите ваш код  на JavaScript под этой инструкцией."};
 
@@ -10843,11 +10843,11 @@ exports.catControl = function(d){return "Циклы"};
 
 exports.catMath = function(d){return "Математика"};
 
-exports.catProcedures = function(d){return "Процедуры"};
+exports.catProcedures = function(d){return "функции"};
 
 exports.catTurtle = function(d){return "Действия"};
 
-exports.catVariables = function(d){return "Переменные"};
+exports.catVariables = function(d){return "переменные"};
 
 exports.catLogic = function(d){return "Логика"};
 
@@ -10865,25 +10865,25 @@ exports.drawATriangle = function(d){return "нарисовать треугол�
 
 exports.drawACircle = function(d){return "нарисовать окружность"};
 
-exports.drawAFlower = function(d){return "нарисуйте цветок"};
+exports.drawAFlower = function(d){return "нарисовать цветок"};
 
 exports.drawAHexagon = function(d){return "нарисовать шестиугольник"};
 
 exports.drawAHouse = function(d){return "нарисовать дом"};
 
-exports.drawAPlanet = function(d){return "нарисуйте планету"};
+exports.drawAPlanet = function(d){return "нарисовать планету"};
 
-exports.drawARhombus = function(d){return "нарисуйте ромб"};
+exports.drawARhombus = function(d){return "нарисовать ромб"};
 
-exports.drawARobot = function(d){return "нарисуйте робота"};
+exports.drawARobot = function(d){return "нарисовать робота"};
 
-exports.drawARocket = function(d){return "нарисуйте ракету"};
+exports.drawARocket = function(d){return "нарисовать ракету"};
 
 exports.drawASnowflake = function(d){return "нарисовать снежинку"};
 
 exports.drawASnowman = function(d){return "нарисовать снеговика"};
 
-exports.drawAStar = function(d){return "нарисуйте звезду"};
+exports.drawAStar = function(d){return "нарисовать звезду"};
 
 exports.drawATree = function(d){return "нарисовать дерево"};
 
@@ -10895,7 +10895,7 @@ exports.heightParameter = function(d){return "высота"};
 
 exports.hideTurtle = function(d){return "скрыть художника"};
 
-exports.jump = function(d){return "прыжок"};
+exports.jump = function(d){return "прыгнуть"};
 
 exports.jumpBackward = function(d){return "прыгнуть назад на"};
 
@@ -10923,15 +10923,15 @@ exports.moveEastTooltip = function(d){return "Перемещает художн�
 
 exports.moveForward = function(d){return "двигаться вперёд на"};
 
-exports.moveForwardTooltip = function(d){return "Передвигает художника вперед."};
+exports.moveForwardTooltip = function(d){return "Перемещает художника вперед."};
 
 exports.moveNorthTooltip = function(d){return "Перемещает художника на север."};
 
-exports.moveSouthTooltip = function(d){return "Перемещение художника на юг"};
+exports.moveSouthTooltip = function(d){return "Перемещает художника на юг."};
 
-exports.moveWestTooltip = function(d){return "перемещение художника на запад"};
+exports.moveWestTooltip = function(d){return "Перемещает художника на запад."};
 
-exports.moveTooltip = function(d){return "Передвигает художника вперед или назад на заданное расстояние."};
+exports.moveTooltip = function(d){return "Перемещает художника вперед или назад на заданное расстояние."};
 
 exports.notBlackColour = function(d){return "Для этой головоломки нужно выбрать цвет, отличный от чёрного."};
 
@@ -10943,13 +10943,13 @@ exports.penTooltip = function(d){return "Поднимает или опуска�
 
 exports.penUp = function(d){return "поднять карандаш"};
 
-exports.reinfFeedbackMsg = function(d){return "Получилось ли так, как ты хотел? Ты можешь нажать кнопку «Попробовать еще раз», чтобы увидеть cвой рисунок."};
+exports.reinfFeedbackMsg = function(d){return "Получилось ли так, как ты и хотел? Ты можете нажать кнопку «Попытаться ещё раз», чтобы увидеть свой рисунок."};
 
 exports.setColour = function(d){return "выбрать цвет"};
 
-exports.setWidth = function(d){return "установить ширину"};
+exports.setWidth = function(d){return "задать ширину"};
 
-exports.shareDrawing = function(d){return "Сохранить рисунок:"};
+exports.shareDrawing = function(d){return "Поделитесь вашим рисунком:"};
 
 exports.showMe = function(d){return "Показать"};
 

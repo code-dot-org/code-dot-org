@@ -3,7 +3,7 @@
     script:
       name:
         20-hour:
-          desc: Corso introduttivo di informatica per scuole elementari e medie inferiori
+          desc: Introduzione K-8 al corso di informatica
           Unplug1: Lezione 1
           Maze: Lezione 2
           Unplug2: Lezione 3
@@ -25,7 +25,7 @@
           Artist5: Lezione 19
           Unplug11: Lezione 20
         Hour of Code:
-          desc: L'Ora del Codice
+          desc: Ora di programmazione
           Maze: Lezione 1
         Edit Code:
           desc: Modifica il codice (versione provvisoria)
@@ -43,11 +43,12 @@
           desc: Puzzle (versione provvisoria)
           Jigsaw: Lezione 1
         Step Levels:
-          desc: Labirinto (beta)
+          desc: Labirinto (versione provvisoria)
           MazeStep: Passo della lezione
         edit-code:
           desc: Modifica il codice (versione provvisoria)
           MazeEC: Lezione 1
+          Webapp: Lezione 2
         events:
           desc: Rimbalzo (versione provvisoria)
           Bounce: Lezione 1
@@ -62,7 +63,7 @@
           desc: Puzzle (versione provvisoria)
           Jigsaw: Lezione 1
         step:
-          desc: Labirinto (versione provvisoria)
+          desc: Labirinto (beta)
           MazeStep: Passo della lezione
         wordsearch:
           desc: Ape Sapiente (versione provvisoria)
@@ -79,7 +80,7 @@
         Artist2: L'artista 2
         Unplug5: Funzioni
         Farmer: La Contadina
-        Unplug6: Istruzioni condizionali
+        Unplug6: Condizionali
         Artist3: L'artista 3
         Unplug7: Composizione di canzoni
         Farmer2: La Contadina 2
@@ -90,12 +91,13 @@
         Unplug10: Internet
         Artist5: L'artista 5
         Unplug11: Conclusione
-        MazeEC: Il labirinto
+        MazeEC: Il Labirinto
         Bounce: Rimbalzo
         Flappy: Flappy Bird
         Jigsaw: Puzzle
         MazeStep: Modalità "a passi" del Labirinto
         Wordsearch: Ricerca di parole
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Bronzo
@@ -104,12 +106,12 @@
     concept:
       description:
         sequence: Sequenza
-        if: Blocco "se"
+        if: Blocco Se
         if_else: Blocco "se-altrimenti"
-        loop_times: Blocco "ripeti ... volte"
-        loop_until: Blocco "ripeti fino a che"
-        loop_while: Blocco "Mentre"
-        loop_for: Blocco "ripeti con contatore"
+        loop_times: Blocco Volte Ripetizione
+        loop_until: Blocco Ripetizione Fino A
+        loop_while: Blocco Mentre
+        loop_for: Blocco Contatore
         function: Funzioni
         parameters: Funzioni con parametri
     level:
@@ -487,7 +489,7 @@
         studio_c2_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
           al gatto?
         studio_c2_3: Riesci a scrivere un programma che fa arrivare questo cane fino
-          al gatto?
+          al bersaglio?
         studio_c2_4: Riesci a scrivere un programma che fa arrivare questo cane fino
           al gatto, e fa dire "Ciao" al gatto quando il cane lo raggiunge?
         studio_c2_5: Riesci a scrivere un programma per far dire "ciao" al polpo quando
@@ -499,10 +501,10 @@
           senza fermarsi mai. Riesci a mettere insieme dei blocchi per spostare in
           continuazione questo dinosauro su e giù?
         studio_c2_8: Riesci a far dire "Ahi!" al pinguino e a riprodurre il suono
-          "colpito" se esso sbatte contro il dinosauro, e poi a spostarlo con i tasti
+          "colpo" se esso sbatte contro il dinosauro, e poi a spostarlo con i tasti
           freccia per far sì che questo accada?
         studio_c2_9: Riesci ad aggiungere un blocco per segnare un punto quando il
-          pinguino sbatte contro il polpo e poi a spostarlo con i tasti freccia fino
+          pinguino sbatte contro il polpo, e poi a spostarlo con i tasti freccia fino
           a che segni un punto?
         studio_c2_10: Riesci ad aggiungere dei blocchi per cambiare lo sfondo e la
           velocità del pinguino, e poi a spostarlo con i tasti freccia fino a che
@@ -513,9 +515,9 @@
         studio_c3_story_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
           al gatto?
         studio_c3_story_3: Riesci a scrivere un programma che fa arrivare questo cane
-          fino al gatto?
+          fino al bersaglio?
         studio_c3_story_4: Riesci a scrivere un programma che fa arrivare questo cane
-          fino al gatto e che fa dire "Ciao" al gatto quando il cane lo raggiunge?
+          fino al gatto, e fa dire "Ciao" al gatto quando il cane lo raggiunge?
         studio_c3_story_5: Riesci ad aggiungere un blocco per far sì che il polpo
           sia felice?
         studio_c3_story_6: Crea una storia per conto tuo. Quando hai fatto, clicca
@@ -529,21 +531,21 @@
           senza fermarsi mai. Riesci a mettere insieme dei blocchi per spostare in
           continuazione questo dinosauro su e giù?
         studio_c3_game_4: Riesci a far dire "Ahi!" al pinguino e a riprodurre il suono
-          "colpo" se esso sbatte contro il dinosauro e poi a spostarlo con i tasti
+          "colpo" se esso sbatte contro il dinosauro, e poi a spostarlo con i tasti
           freccia per far sì che questo accada?
         studio_c3_game_5: Riesci ad aggiungere un blocco per segnare un punto quando
-          il pinguino sbatte contro il polpo e poi a spostarlo con i tasti freccia
+          il pinguino sbatte contro il polpo, e poi a spostarlo con i tasti freccia
           fino a che segni un punto?
         studio_c3_game_6: Riesci ad aggiungere dei blocchi per cambiare lo sfondo
-          e la velocità del pinguino e poi a spostarlo con i tasti freccia fino a
+          e la velocità del pinguino, e poi a spostarlo con i tasti freccia fino a
           che segni un punto?
-        studio_c3_game_7: Crea un gioco per conto tuo. Quando hai fatto, clicca su
-          Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+        studio_c3_game_7: Crea un gioco tutto tuo. Quando hai fatto, clicca su Condividi
+          per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_playlab_1: Riesci a far dire a questo cane "Ciao a tutti"?
         studio_playlab_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
           al gatto?
         studio_playlab_3: Riesci a scrivere un programma che fa arrivare questo cane
-          fino al gatto?
+          fino al bersaglio?
         studio_playlab_4: Riesci a scrivere un programma che fa arrivare questo cane
           fino al gatto, e fa dire "Ciao" al gatto quando il cane lo raggiunge?
         studio_playlab_5: Riesci a scrivere un programma per far dire "ciao" al polpo
@@ -551,24 +553,24 @@
         studio_playlab_6: Riesci a scrivere un programma per spostare questo pinguino
           in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra
           / a destra in modo da fargli colpire tutti i bersagli?
-        studio_playlab_7: Il blocco "ripeti per sempre" ti permette di eseguire il
-          codice senza fermarti mai. Riesci a mettere insieme dei blocchi per spostare
-          in continuazione questo dinosauro su e giù?
+        studio_playlab_7: Il blocco "ripeti per sempre" permette di eseguire il codice
+          senza fermarsi mai. Riesci a mettere insieme dei blocchi per spostare in
+          continuazione questo dinosauro su e giù?
         studio_playlab_8: Riesci ad aggiungere un blocco per segnare un punto quando
-          il pinguino sbatte contro il polpo e poi a spostarlo con i tasti freccia
+          il pinguino sbatte contro il polpo, e poi a spostarlo con i tasti freccia
           fino a che segni un punto?
         studio_playlab_9: Riesci ad aggiungere dei blocchi per cambiare lo sfondo
-          e la velocità del pinguino e poi a spostarlo con i tasti freccia fino a
+          e la velocità del pinguino, e poi a spostarlo con i tasti freccia fino a
           che segni un punto?
         studio_playlab_10: Crea un gioco tutto tuo. Quando hai fatto, clicca su Condividi
           per far provare il gioco ai tuoi amici sui loro smartphone.
-        studio_full_sandbox: Crea un gioco tutto tuo. Quando hai fatto, clicca su
-          Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+        studio_full_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca
+          su Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_k1_1: Riesci a far dire a questo cane "Ciao a tutti"?
         studio_k1_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
           al gatto?
         studio_k1_3: Riesci a scrivere un programma che fa arrivare questo cane fino
-          al gatto?
+          al bersaglio?
         studio_k1_4: Fai arrivare il cane fino al gatto e fai dire "ciao" al gatto
           quando il cane arriva là.
         studio_k1_5: Riesci ad aggiungere un blocco per far sì che il polpo sia felice?
@@ -592,8 +594,8 @@
           in un'altra per scrivere le lettere della parola STORY
     video:
       name:
-        maze_intro: Introduzione a "Il Labirinto"
-        artist_intro: Introduzione a "L'Artista"
+        maze_intro: 'Labirinto: Introduzione'
+        artist_intro: 'Artista: Introduzione'
         farmer_intro: Introduzione a "La Contadina"
         flappy_intro: Introduzione a "Flappy"
         loop_times: Blocco "ripeti ... volte"
@@ -611,13 +613,13 @@
         Unplug3: Programmazione su carta a quadretti
         Unplug4: Algoritmi
         Unplug5: Funzioni
-        Unplug6: Istruzioni condizionali
+        Unplug6: Condizionali
         Unplug7: Composizione di canzoni
         Unplug8: Astrazione
         Unplug9: Programmazione a Staffetta
         Unplug10: Internet
         Unplug11: Conclusione
-        C1_happy_maps_unplugged: Le Mappe Felici
+        C1_happy_maps_unplugged: Mappe Felici
         C1_moveitmoveit_unplugged: Muovilo, muovilo
         C1_bigevent_unplugged: Il Grande Evento
         C1_getting_loop: Diventare Ripetitivi
@@ -625,7 +627,7 @@
         C1_maze_intro_sequencing: 'Labirinto: Introduzione alla Sequenza'
         C1_maze_debugging: 'Labirinto: Correzione di Errori'
         C1_bee_level_intro: 'Ape: Introduzione'
-        C1_artist_intro: 'Artista: Introduzione'
+        C1_artist_intro: Introduzione a "L'Artista"
         C1_spelling_bee_intro: 'Ape Sapiente: Introduzione'
         C1_zuck_repeat_loop: 'Labirinto: Cicli'
         C1_bee_loops: 'Ape: Cicli'
@@ -640,19 +642,19 @@
         C2_bee_conditionals: 'Ape: Istruzioni Condizionali'
         C2_playlab_createstory: 'Laboratorio: Crea una Storia'
         C2_graph_paper: Programmazione su carta a quadretti
-        C2_conditionals_with_cards: Istruzioni condizionali
+        C2_conditionals_with_cards: Condizionali
         C2_binary_bracelets: Braccialetti Binari
         C2_replay_programming: Programmazione a Staffetta
         C2_paper_airplanes: Aeroplani di Carta
-        C3_maze_intro: 'Labirinto: Introduzione'
+        C3_maze_intro: Introduzione a "Il Labirinto"
         C3_artist_intro: 'Artista: Introduzione'
         C3_artist_functions: 'Artista: Funzioni'
         C3_bee_functions: 'Ape: Funzioni'
         C3_bee_conditionals: 'Ape: Istruzioni Condizionali'
         C3_maze_conditionals: 'Labirinto: Istruzioni Condizionali'
-        C3_artist_nested_loops: Cicli Annidati
+        C3_artist_nested_loops: Cicli annidati
         C3_farmer_while: Cicli "Mentre"
-        C3_bee_nested_loops: Cicli annidati
+        C3_bee_nested_loops: Cicli Annidati
         C3_bee_debugging: 'Ape: Correzione di Errori'
         C3_bounce: Rimbalzo
         C3_playlab_create_game: 'Laboratorio: Crea un Gioco'

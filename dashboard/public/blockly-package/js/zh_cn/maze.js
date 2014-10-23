@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -13182,7 +13182,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.and = function(d){return "和"};
 
-exports.blocklyMessage = function(d){return "模块化"};
+exports.blocklyMessage = function(d){return "布洛克里"};
 
 exports.catActions = function(d){return "操作"};
 
@@ -13290,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "可以使用 < x id = 'START_SPAN
 
 exports.tooMuchWork = function(d){return "你让我多做很多工作 ！你可以尝试少重复几次吗？"};
 
-exports.toolboxHeader = function(d){return "模块"};
+exports.toolboxHeader = function(d){return "块"};
 
 exports.openWorkspace = function(d){return "它是如何工作的？"};
 
@@ -13363,7 +13363,7 @@ exports.dirW = function(d){return "西"};
 
 exports.doCode = function(d){return "做"};
 
-exports.elseCode = function(d){return "不然"};
+exports.elseCode = function(d){return "也"};
 
 exports.fill = function(d){return "填充1"};
 
@@ -13395,7 +13395,7 @@ exports.honeycombFullError = function(d){return "这蜂窝没有房间放置更�
 
 exports.ifCode = function(d){return "如果"};
 
-exports.ifInRepeatError = function(d){return "你需要放置一个\"如果\"块在\"重复\"块内。如果您遇到问题，请尝试上一阶段的做法，再来看它是怎么工作的。"};
+exports.ifInRepeatError = function(d){return "你需要放一个”如果“块在”重复“块里。如果你忘记了怎么做，重新试试上一题，看看你是怎么做的。"};
 
 exports.ifPathAhead = function(d){return "如果前面有路"};
 
@@ -13449,7 +13449,7 @@ exports.notAtFlowerError = function(d){return "你只可以从一朵花里采集
 
 exports.notAtHoneycombError = function(d){return "你只可以在蜂窝里制作蜂蜜。"};
 
-exports.numBlocksNeeded = function(d){return "这个谜题可以用%1个块解决。"};
+exports.numBlocksNeeded = function(d){return "这个谜题可以用%1个语句块解决。"};
 
 exports.pathAhead = function(d){return "前面有路"};
 
@@ -13459,7 +13459,7 @@ exports.pathRight = function(d){return "如果右边有路"};
 
 exports.pilePresent = function(d){return "有一堆土"};
 
-exports.putdownTower = function(d){return "填充塔"};
+exports.putdownTower = function(d){return "放下塔"};
 
 exports.removeAndAvoidTheCow = function(d){return "移除1并躲开牛"};
 
@@ -13477,7 +13477,7 @@ exports.repeatUntil = function(d){return "重复直到"};
 
 exports.repeatUntilBlocked = function(d){return "当前面有路"};
 
-exports.repeatUntilFinish = function(d){return "重复直到结束"};
+exports.repeatUntilFinish = function(d){return "重复直到完成"};
 
 exports.step = function(d){return "踏步"};
 

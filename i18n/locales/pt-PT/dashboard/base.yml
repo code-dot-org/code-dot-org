@@ -2,21 +2,21 @@ pt-PT:
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: é necessário
     attributes:
       user:
-        name: Display Name
+        name: Nome a exibir
         email: Email
-        username: Nome de utilizador
-        password: Palavra-passe
+        username: nome de utilizador
+        password: palavra-passe
         password_confirmation: Confirmar Palavra-passe
         current_password: Palavra-passe atual
         locale: Língua
-        age: Age
+        age: Idade
         gender: Género
         edit_header: Editar detalhes da Conta
         error:
-          future: "can't be in the future"
+          future: Não pode ser no futuro
   hello: Olá mundo
   welcome_back: 'Bem-vindo, %{name}'
   add_teacher_form:
@@ -24,24 +24,24 @@ pt-PT:
       label: 'Adicione um professor por código ou endereço de e-mail:'
       placeholder: Código (ABCDEF) ou e-mail (teacher@school.edu)
     code:
-      label: 'Add a teacher by section code:'
-      placeholder: Code (ABCDEF)
+      label: 'Adicionar um professor por seção de código:'
+      placeholder: Código (ABCDEF)
     submit: Adicionar professor
   add_hint_form:
     placeholder: Por favor introduza a sua dica aqui
     submit: Adicionar dica
   appname: Code.org
-  stage: Nível
-  stage_number: 'Stage %{number}'
+  stage: nível
+  stage_number: 'Estágio %{number}'
   puzzle: Quebra-cabeças
-  trophies: Troféus
-  courses: Cursos
+  trophies: troféus
+  courses: percursos
   of: de
   more: MAIS
   less: MENOS
   try_hoc: 'Tenta a "Hora do código", clica aqui >> '
-  try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
-  k8intro: K-8 Intro to Computer Science Course (15-25 hours)
+  try_k8intro: Tenta a nossa Introdução ao Curso de Ciência da Computação (15-25 horas) para o 3.º ciclo do ensino básico
+  k8intro: Introdução ao curso de ciência da computação (15-25 horas) para o 3.º ciclo do ensino básico
   already_started: 'Já começaste? Retomar aqui >> '
   demos: 'Administrador: Todas as demonstrações'
   continue: Continuar
@@ -50,20 +50,20 @@ pt-PT:
   auth:
     sign_in_with: 'Sessão iniciada com %{provider}'
     signed_in: Sessão iniciada!
-    signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
+    signed_out: 'Acabou de sair de <a href="%{url}">Code.org</a>.'
+    sign_out_of: 'Utilizou %{provider} para entrar. <a href="%{url}">Pressione aqui</a> para sair de %{provider}.'
     already_signedup: Já te registaste?
     notyet_signedup: Ainda não aderiste?
-    google_oauth2: Google Account
+    google_oauth2: Conta do Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
+    windowslive: Conta da Microsoft
     forgot_password: Esqueceste-te da tua palavra-passe?
     need_confirmation: Não recebeste as instruções de confirmação?
     need_unlock: Não recebeste as instruções de desbloqueio?
   signup_form:
-    overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
-    overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
+    overview_student: 'Registe-se e crie uma conta para acompanhar o seu progresso. O seu endereço de correio eletrónico é utilizado no acesso e na recuperação da palavra-passe. Para mais informações, consulte a nossa <a href="http://code.org/privacy">Política de Privacidade</a>.'
+    overview_teacher: 'Ensine ciência da computação na sua sala de aula por criar uma conta.<p/> Poderá adicionar os seus alunos e acompanhar os seus progressos.'
     no_signup_message: 'Tu podes <a target="_blank" href="http://learn.code.org"> consultar as várias fases e quebra-cabeças</a>, mas precisarás de te inscrever para guardar o teu progresso.'
     prizes_message: 'U.S. students who earn all %{num_trophies} concept trophies can select a variety of prizes including free Dropbox space, Skype credits, and downloadable games from Electronic Arts.'
     teacher_educator_guide: Consulta o guia do educador
@@ -72,13 +72,13 @@ pt-PT:
     teacher_pitch: Teacher sign up for Code.org
     teacher_title: Registo de professor
     student_pitch: Student sign up for Code.org
-    student_title: Student sign up
+    student_title: Registo para Aluno
     school_name: Nome da escola (opcional)
     school_address: Endereço da escola (opcional)
     address_placeholder: morada, cidade, estado, código postal
     gender: Género (opcional)
     birthday: Aniversário (opcional)
-    age: Age
+    age: Idade
     submit: Registar
     teacher: És um professor?
     valid_username: Disponível!
@@ -98,14 +98,14 @@ pt-PT:
     submit: Entrar
   signin:
     try_heading: Want to try coding without signing up?
-    try_hoc: Try one Hour of Code first
+    try_hoc: Tente Uma Hora de Código primeiro
     try_20hours: Try our 20 hour Intro to Computer Science
   signinsection:
     welcome: 'Welcome to %{section_name}'
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
-    login: Iniciar sessão
+    name: Escolha seu nome
+    picture: Agora, encontre a sua imagem secreta
+    words: Agora digite as suas palavras secretas
+    login: Entrar
   password:
     reset_form:
       title: Esqueceste-te da tua palavra-passe?
@@ -157,8 +157,8 @@ pt-PT:
     code: 'Código:'
     redeem_header: 'To redeem:'
     donorschoose_register: Register as a teacher on DonorsChoose.org
-    donorschoose_project: Post a project
-    donorschoose_how_to: How to use your code
+    donorschoose_project: Adicione um projeto
+    donorschoose_how_to: Como usar seu código
     success: O teu prémio foi recolhido com êxito, vê o código abaixo.
     error: O teu prémio não pôde ser recolhido, por favor tenta novamente.
     error_us_only: A oferta do prémio só é válida para utilizadores nos EUA.
@@ -174,7 +174,7 @@ pt-PT:
       msg: 'Tens a certeza que queres recolher o prémio %{prize_name}?'
       msg_student: 'Nota: Só podes escolher um tipo de prémio.'
       msg_publicschool: Por favor, confirme que você é professor de uma escola pública dos EUA.
-      msg_visit_website: Visit website
+      msg_visit_website: Visitar o sítio na web
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
@@ -227,7 +227,7 @@ pt-PT:
       settings: Minha conta
       prizes: Prémios
       logout: Sair
-      signin: Iniciar sessão
+      signin: Entrar
       signup: Registar
       already_registered: Already registered?
     popup:
@@ -239,7 +239,7 @@ pt-PT:
       prizes: 'Recolhe todos os %{total_trophies} troféus e ganha prémios!'
       prize_earned: 'Recolhidos todos os %{total_trophies} troféus. Ganhaste prémio!'
       prize_us_only: (Somente para estudantes dos EUA)
-      prizes_link: mais informação
+      prizes_link: Mais informação
   teacher:
     title:
       one: 'Your teacher:'
@@ -259,11 +259,11 @@ pt-PT:
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
-      trophies: Troféus
+      trophies: troféus
     students:
       name: Nome
-      username: Nome de utilizador
-      password: Palavra-passe
+      username: nome de utilizador
+      password: palavra-passe
       manage: Gerir alunos
       dashboard: Go to Teacher Dashboard
       add: Adicionar alunos
@@ -287,7 +287,7 @@ pt-PT:
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
+      rename: renomear
       edit: edit
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
@@ -319,7 +319,7 @@ pt-PT:
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: 'Already registered? %{link}'
-    student_reg_link: Student Sign Up
+    student_reg_link: Registo para Aluno
     teacher_reg_link: Teacher Sign Up
     signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
     teacher_dashboard: Consulte o painel de controlo do progresso
@@ -341,13 +341,16 @@ pt-PT:
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Experimenta agora
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+    20hour_overview: Este curso de 20 horas apresenta o informática de núcleo e conceitos de programação. O curso é projetado para uso em salas de aula para os graus K-8, mas é divertido de aprender em todos os tempos.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Masculino
     female: Feminino
@@ -364,7 +367,7 @@ pt-PT:
     secure: Secure Version
   prize_mail:
     prize_earned:
-      subject: Reclama o teu prémio em Code.org!
+      subject: Reclame o teu prémio em Code.org!
     teacher_prize_earned:
       subject: Congratulations from Code.org!
     teacher_bonus_prize_earned:
@@ -375,7 +378,7 @@ pt-PT:
     teacher: Ver a solução
     auth_error: Você não está autorizado a ver a solução.
     submit: Update Artist Location
-    direction: Start Direction
+    direction: Start Direction (in degrees)
   video:
     tab: Vídeo.
     notes: Nenhum vídeo? Mostrar notas.
@@ -384,11 +387,11 @@ pt-PT:
     download: Baixar o vídeo
   compatability:
     working:
-      header: We are working on support for your browser.
+      header: Estamos a trabalhar no suporte ao teu browser.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
       hide_this_warning: Hide this warning
     upgrade:
-      header: Please upgrade your browser.
+      header: Por favor, atualiza o teu browser.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
       button: Take me to the list of supported browsers
   slow_loading: Isto está a demorar mais do que o habitual...
@@ -430,9 +433,13 @@ pt-PT:
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Want to make your own?
     more: 'More &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
@@ -459,13 +466,13 @@ pt-PT:
     script:
       name:
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
-          description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+          title: Introdução ao curso de ciência da computação (15-25 horas) para o 3.º ciclo do ensino básico
+          description: Este curso de 20 horas apresenta o informática de núcleo e conceitos de programação. O curso é projetado para uso em salas de aula para os graus K-8, mas é divertido de aprender em todos os tempos.
         Hour of Code:
           title: Hora de Código
           description: ""
         edit-code:
-          title: Edit Code
+          title: Editar código
           description: ""
         events:
           title: Eventos

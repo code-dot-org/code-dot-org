@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -9357,9 +9357,9 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 var MessageFormat = require("messageformat");MessageFormat.locale.af=function(n){return n===1?"one":"other"}
 exports.continue = function(d){return "Gaan voort"};
 
-exports.doCode = function(d){return "do"};
+exports.doCode = function(d){return "doen"};
 
-exports.elseCode = function(d){return "else"};
+exports.elseCode = function(d){return "of"};
 
 exports.endGame = function(d){return "end game"};
 

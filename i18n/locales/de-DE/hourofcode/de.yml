@@ -16,19 +16,19 @@ de:
   country_ar: Argentinien
   country_au: Australien
   country_br: Brasilien
-  country_bg: Bulgaria
-  country_de: Germany
-  country_es: Latin America
+  country_bg: Bulgarien
+  country_de: Deutschland
+  country_es: Lateinamerika
   country_eu: Europäische Union
-  country_gr: Greece
-  country_hr: Croatia
-  country_id: Indonesia
+  country_gr: Griechenland
+  country_hr: Kroatien
+  country_id: Indonesien
   country_it: Italien
   country_jp: Japan
-  country_me: Middle East and North Africa
+  country_me: Nahost und Nordafrika
   country_nz: Neuseeland
   country_ro: Rumänien
-  country_ru: Russia
+  country_ru: Russland
   country_ua: Ukraine
   country_uk: Vereinigtes Königreich
   country_us: Vereinigte Staaten von Amerika
@@ -89,7 +89,7 @@ de:
   signup_submit_error_message: Es ist ein Fehler aufgetreten. Bitte überprüfe ob alle Pflichtfelder korrekt ausgefüllt wurden.
   signup_thank_you_header: Vielen Dank, dass du eine Hour of Code Veranstaltung angemeldet hast.
   signup_thank_you_message: Wir schicken dir eine Bestätigungsmail, mit Informationen um dir beim Einstieg zu helfen.
-  map_header: '# Hour of Code events around the world'
+  map_header: Hour of Code Veranstaltungen auf der ganzen Welt
   map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
   meta_tag_og_title: Die Stunde des Codes kommt
   meta_tag_og_description: Die Hour of Code ist eine weltweite Bewegung, die Millionen von Schülern in über 180 Ländern mit über 30 Sprachen erreicht. Alter von 4 bis 104 Jahre.
@@ -114,7 +114,7 @@ de:
   hardware_prizes_form_plan_file_label: Laden Sie Ihr Hour of Code Logistik-Konzept hoch
   hardware_prizes_form_plan_file_description: 'Submit a simple schedule of how you plan to organize every student to do the Hour of Code at your school. See a sample plan: #PDF# | #Word#'
   hardware_prizes_form_submit_label: Senden
-  hoc_faq_title: FAQs
+  hoc_faq_title: Häufig gestellte Fragen
   hoc_faq_what_is_hoc_q: Was ist die Hour of Code?
   hoc_faq_what_is_hoc_a: "Die Hour of Code ist eine einstündige Einführung in die Informatik, um Code zu enträtseln und um zu zeigen, dass jeder die Grundlagen erlernen kann. Besuchen Sie die <a href='http://code.org/learn'>Tutorials</a> an und sehen Sie sich nach den neuesten Tutorials für die Hour of Code 2014 um."
   hoc_faq_last_year: Tutorials vom letzten Jahr
@@ -134,6 +134,10 @@ de:
   hoc_faq_international_a: Jeder kann eine Hour-of-Code-Veranstaltung organisieren, irgendwo auf der Welt. Letztes Jahr haben sich Studenten weltweit für die Hour of Code getroffen.
   hoc_faq_tutorial_q: Wie kann ich ein Hour of Code Tutorial machen?
   hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
+  hoc_faq_more_questions_q: Still have more questions?
+  hoc_faq_more_questions_a: "Try finding an answer in our <a href='http://support.code.org'>support forum</a>."
+  hoc_faq_more_questions_br_q: Outras dúvidas?
+  hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
   hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
   hoc_faq_why_cs_uk_a: '<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path.'
@@ -169,11 +173,11 @@ de:
   stats_nina: '"Jeder Tag führte zu dem gleichen Ergebniss &mdash; 100 % Engagement."-Nina Nichols Peery, Lehrer'
   stats_student: '"Ich wusste, das war eine <b>einmalige</b> Chance."-Mariana Alzate, 5th Grader'
   stats_michael: '<b>Noch nie</b> habe ich meine Schüler so begeistert gesehen, etwas zu lernen." - Michael Clark, Lehrer'
-  resources_how_to: How-to guide for teachers
+  resources_how_to: Anleitung für Lehrer
   resources_handouts: Handouts to spread the word
   resources_videos: Videos
-  resources_posters: Posters
-  resources_banners: Banners
+  resources_posters: Poster
+  resources_banners: Banner
   resources_emails: Sample emails
   resources_stats: Useful computer science stats
   resources_press_kit: Press Kit

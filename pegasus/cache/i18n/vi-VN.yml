@@ -12,7 +12,7 @@
   petition_sign_message: 'Nếu bạn đồng ý, điền tên của bạn.  Tham gia # những người
     khác.'
   name: Tên
-  email: "Địa chỉ email"
+  email: Thư điện tử
   zipcode: Mã bưu điện
   submit: Chấp nhận
   twentyhours_heading: Hãy thử xem bản giới thiệu của khóa học khoa học máy tính
@@ -61,9 +61,9 @@
     xong và lấy được Chứng Nhận). Nào, bây giờ xin hãy Tiếp tục với Khóa Học khác
     của chúng ta  <a href='http://learn.code.org'>Khóa học 20 giờ</a>, hoặc xem thêm
     những tùy chọn khác cho Khóa học  <a href='/learn/beyond'>Học Trong 1 Giờ</a>"
-  thanks_for_submitting: " Cám ơn bạn đã nộp đơn!"
-  if_you_enjoyed: Nếu bạn thấy thích, hãy rủ các bạn khác cùng học chung nhé! Chúng
-    tôi muốn cả thế giới cùng học tập.
+  thanks_for_submitting: Cảm ơn bạn vì đã chấp nhận!
+  if_you_enjoyed: Nếu bạn cảm thấy việc học Code thật thú vị thì hãy rủ bạn bè cùng
+    tham gia nhé! Chúng tớ mong muốn cả thế giới có thể học về nó.
   personalize_certificate: Cá nhân hoá chứng chỉ của bạn
   share_achievement: Chia sẻ thành tích của bạn
   beyond_hour_message: Tiếp tục đi với chúng tôi <a href='http://learn.code.org'>
@@ -87,7 +87,7 @@
   get_started: Bắt đầu
   i_agree: Tôi đồng ý
   participant_select: "-Chọn-"
-  participant_student: Học sinh
+  participant_student: học sinh
   participant_parent: Phụ Huynh
   participant_educator: Giáo viên
   participant_engineer: Kĩ sư phần mềm
@@ -218,7 +218,7 @@
   dashboard_action_cancel: Huỷ
   dashboard_action_delete: Delete
   dashboard_action_confirm: Delete?
-  dashboard_action_delete_yes: Có
+  dashboard_action_delete_yes: "Đồng ý"
   dashboard_action_delete_no: Không
   dashboard_action_done: Done
   dashboard_action_required: required
@@ -266,7 +266,7 @@
   dashboard_students_male: Nam
   dashboard_students_female: Nữ
   dashboard_students_secret: Secret
-  dashboard_students_password: Mật khẩu
+  dashboard_students_password: mật khẩu
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -314,8 +314,21 @@
   dashboard_grade_other: Khác
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_none: "Địa chỉ email"
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: học sinh
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

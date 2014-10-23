@@ -1,10 +1,10 @@
 {
-  "continue":"Continue",
-  "nextLevel":"Congratulations! You have completed this puzzle.",
-  "no":"No",
-  "numBlocksNeeded":"This puzzle can be solved with %1 blocks.",
-  "reinfFeedbackMsg":"You can press the \"Try again\" button to go back to playing your game.",
-  "share":"Share",
-  "shareGame":"Share your game:",
-  "yes":"Yes"
+  "continue":"Pokračovat",
+  "nextLevel":"Gratulujeme! Dokončil jsi toto puzzle.",
+  "no":"Ne",
+  "numBlocksNeeded":"Tato hádanka může být vyřešena s %1 blocky.",
+  "reinfFeedbackMsg":"Můžeš stisknout tlačítko \"Zkusit znovu\" a vrátit se zpět ke své hře.",
+  "share":"Sdílet",
+  "shareGame":"Sdílej svou hru:",
+  "yes":"Ano"
 }

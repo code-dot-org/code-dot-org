@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -7775,7 +7775,7 @@ exports.play = function(d){return "spielen"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" von "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "wiederholen"};
+exports.repeat = function(d){return "wiederhole"};
 
 exports.resetProgram = function(d){return "Zurücksetzen"};
 
@@ -7856,7 +7856,7 @@ exports.nextLevel = function(d){return "Herzlichen Glückwunsch! Du hast dieses 
 
 exports.no = function(d){return "Nein"};
 
-exports.numBlocksNeeded = function(d){return "Dieses Puzzle kann mit %1 Blöcken gelöst werden."};
+exports.numBlocksNeeded = function(d){return "Dieses Puzzle kann mit %1 Bausteinen gelöst werden."};
 
 exports.reinfFeedbackMsg = function(d){return "Du kannst den \"Versuche erneut\"-Button drücken, um weiterzuspielen."};
 

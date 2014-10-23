@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -9206,13 +9206,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Lister"};
 
-exports.catLoops = function(d){return "Løkker"};
+exports.catLoops = function(d){return "Sløjfer"};
 
 exports.catMath = function(d){return "Matematik"};
 
 exports.catProcedures = function(d){return "Funktioner"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -9304,7 +9304,7 @@ exports.tooManyBlocksMsg = function(d){return "Dette puslespil kan løses med <x
 
 exports.tooMuchWork = function(d){return "Du fik mig til at gøre en masse arbejde! Kunne du prøve at gentage færre gange?"};
 
-exports.toolboxHeader = function(d){return "Blokke"};
+exports.toolboxHeader = function(d){return "blokke"};
 
 exports.openWorkspace = function(d){return "Sådan fungerer det"};
 
@@ -9387,7 +9387,7 @@ exports.flappySpecificFail = function(d){return "Din kode ser godt ud - den vil 
 
 exports.incrementPlayerScore = function(d){return "scor et point"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Tilføj en til den aktuelle spillers score."};
+exports.incrementPlayerScoreTooltip = function(d){return "Tilføj \"1\" til den aktuelle spillers score."};
 
 exports.nextLevel = function(d){return "Tillykke! Du har fuldført denne opgave."};
 
@@ -9399,7 +9399,7 @@ exports.playSoundRandom = function(d){return "afspil tilfældig lyd"};
 
 exports.playSoundBounce = function(d){return "afspil hoppelyd"};
 
-exports.playSoundCrunch = function(d){return "afspil kvaselyd"};
+exports.playSoundCrunch = function(d){return "afspil knaselyd"};
 
 exports.playSoundDie = function(d){return "afspil trist lyd"};
 
@@ -9443,7 +9443,7 @@ exports.setBackgroundCave = function(d){return "Vælg hulebaggrund"};
 
 exports.setBackgroundSanta = function(d){return "Vælg julebaggrund"};
 
-exports.setBackgroundTooltip = function(d){return "Vælger baggrundsbilledet"};
+exports.setBackgroundTooltip = function(d){return "Indstiller baggrundsbilledet"};
 
 exports.setGapRandom = function(d){return "Sæt tilfældigt mellemrum"};
 
@@ -9543,7 +9543,7 @@ exports.setPlayerTurkey = function(d){return "Sæt spiller til kalkun"};
 
 exports.setPlayerTooltip = function(d){return "Sæt spiller-billede"};
 
-exports.setScore = function(d){return "Sæt score"};
+exports.setScore = function(d){return "sæt score"};
 
 exports.setScoreTooltip = function(d){return "Angiver spillerens score"};
 

@@ -12,7 +12,7 @@
           Unplug4: Vaihe 6
           Artist2: Vaihe 7
           Unplug5: Vaihe 8
-          Farmer: Vaihe 9
+          Farmer: 9. Etapin
           Unplug6: Vaihe 10
           Artist3: Vaihe 11
           Unplug7: Vaihe 12
@@ -48,6 +48,7 @@
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Vaihe 1
+          Webapp: Vaihe 2
         events:
           desc: Bounce (beta)
           Bounce: Vaihe 1
@@ -96,6 +97,7 @@
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Pronssi
@@ -106,8 +108,8 @@
         sequence: Käskysarjat
         if: Jos-lohko
         if_else: Jos-muuten -lohko
-        loop_times: Toistolohko
-        loop_until: '"Toista kunnes" -lohko'
+        loop_times: Toista kertaa -lohko
+        loop_until: Toista kunnes -lohko
         loop_while: '"Niin kauan kuin" -lohko'
         loop_for: Laskurilohko
         function: Funktiot
@@ -334,20 +336,20 @@
         maze_karel_debug_function_3: 'Muokkaa tätä ohjelmaa siten, että saan kaikki
           kasat pois pelloltani. '
         turtle_5_1: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä
-          tapahtuu. Osaatko päätellä, miten se toimii? (Voit myös poistaa sen ja korvata
-          sen jollain täysin uudella ohjelmalla)
-        turtle_5_2: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä
           tapahtuu. Keksitkö, miten se toimii? (Voit myös poistaa sen ja korvata sen
           jollain täysin uudella ohjelmalla)
-        turtle_5_3: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä
+        turtle_5_2: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä
           tapahtuu. Osaatko päätellä, miten se toimii? (Voit myös poistaa sen ja korvata
           sen jollain täysin uudella ohjelmalla)
-        turtle_5_4: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä
+        turtle_5_3: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä
           tapahtuu. Pystytkö selvittämään, miten se toimii? (Voit myös poistaa sen
           ja korvata sen jollain täysin uudella ohjelmalla)
-        turtle_5_5: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä
+        turtle_5_4: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä
           tapahtuu. Keksitkö, miten se toimii? (Voit myös poistaa sen ja korvata sen
           jollain täysin uudella ohjelmalla)
+        turtle_5_5: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä
+          tapahtuu. Osaatko päätellä, miten se toimii? (Voit myös poistaa sen ja korvata
+          sen jollain täysin uudella ohjelmalla)
         turtle_5_6: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä
           tapahtuu. Osaatko päätellä, miten se toimii? (Voit myös poistaa sen ja korvata
           sen jollain täysin uudella ohjelmalla)

@@ -8,7 +8,7 @@ title: Resources layout: wide
 
 ## 1) Спробуйте підручники:
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+Ми запропонуємо кілька цікавих одно-годинних підручників від наших партнерів для учнів різного віку. Готуються нові підручники для цьогорічної Години коду, яка відбудеться 8-14 грудня.
 
 **Всі підручники Години коду:**
 

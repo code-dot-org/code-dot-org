@@ -48,6 +48,7 @@ hr:
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Nivo 1
+          Webapp: Nivo 2
         events:
           desc: Bounce (beta)
           Bounce: Nivo 1
@@ -69,7 +70,7 @@ hr:
           WordSearch: Nivo 1
     game:
       name:
-        Unplug1: Uvod u Informatiku
+        Unplug1: Uvod u računalstvo
         Maze: Labirint
         Multi: Multiple Choice Stuffs
         Unplug2: Razmišljati poput računala
@@ -96,6 +97,7 @@ hr:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Bronca

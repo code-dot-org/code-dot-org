@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -10650,7 +10650,7 @@ exports.and = function(d){return "و"};
 
 exports.blocklyMessage = function(d){return "بلاکلی"};
 
-exports.catActions = function(d){return "کارها"};
+exports.catActions = function(d){return "اقدامات"};
 
 exports.catColour = function(d){return "رنگ"};
 
@@ -10658,9 +10658,9 @@ exports.catLogic = function(d){return "منطق"};
 
 exports.catLists = function(d){return "لیست ها"};
 
-exports.catLoops = function(d){return "حلقه‌ها"};
+exports.catLoops = function(d){return "حلقه ها"};
 
-exports.catMath = function(d){return "ریاضی"};
+exports.catMath = function(d){return "محاسبات ریاضی"};
 
 exports.catProcedures = function(d){return "توابع"};
 
@@ -10710,7 +10710,7 @@ exports.jump = function(d){return "پرش"};
 
 exports.levelIncompleteError = function(d){return "شما همه‌ی بلوک‌های مورد نیاز را بکار بردید، ولی نه به روش درست."};
 
-exports.listVariable = function(d){return "لیست"};
+exports.listVariable = function(d){return "فهرست"};
 
 exports.makeYourOwnFlappy = function(d){return "Flappy Bird خودتان را بسازید"};
 
@@ -10732,7 +10732,7 @@ exports.play = function(d){return "بازی"};
 
 exports.puzzleTitle = function(d){return "معمای "+v(d,"puzzle_number")+" از "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "تکرار"};
+exports.repeat = function(d){return "تکرار کن"};
 
 exports.resetProgram = function(d){return "بازنشانی"};
 
@@ -10742,7 +10742,7 @@ exports.runTooltip = function(d){return "اجرای برنامه‌ی تعریف
 
 exports.score = function(d){return "نمره"};
 
-exports.showCodeHeader = function(d){return "نمایشِ کد"};
+exports.showCodeHeader = function(d){return "کد نمایش"};
 
 exports.showGeneratedCode = function(d){return "نمایشِ کد"};
 
@@ -10756,7 +10756,7 @@ exports.tooManyBlocksMsg = function(d){return "این معما را می‌تو�
 
 exports.tooMuchWork = function(d){return "شما منو مجبور به انجام مقدار زیادی کار کردید. میشه تعداد تکرار رو کمتر کنید؟"};
 
-exports.toolboxHeader = function(d){return "بلوک‌ها"};
+exports.toolboxHeader = function(d){return "بلوک ها"};
 
 exports.openWorkspace = function(d){return "چگونگیِ کار"};
 
@@ -10813,13 +10813,13 @@ exports.branches = function(d){return "branches"};
 
 exports.catColour = function(d){return "رنگ"};
 
-exports.catControl = function(d){return "حلقه ها"};
+exports.catControl = function(d){return "حلقه‌ها"};
 
-exports.catMath = function(d){return "محاسبات ریاضی"};
+exports.catMath = function(d){return "حساب"};
 
 exports.catProcedures = function(d){return "توابع"};
 
-exports.catTurtle = function(d){return "اقدامات"};
+exports.catTurtle = function(d){return "عملیات"};
 
 exports.catVariables = function(d){return "متغیرها"};
 
@@ -10889,7 +10889,7 @@ exports.lengthFeedback = function(d){return "You got it right except for the len
 
 exports.lengthParameter = function(d){return "طول"};
 
-exports.loopVariable = function(d){return "شمارنده"};
+exports.loopVariable = function(d){return "شمارشگر"};
 
 exports.moveBackward = function(d){return "انتقال به عقب با اندازه"};
 
@@ -10917,7 +10917,7 @@ exports.penTooltip = function(d){return "مداد را بالا و پایین م
 
 exports.penUp = function(d){return "مداد بالا"};
 
-exports.reinfFeedbackMsg = function(d){return "آیا این شبیه آنچه می خواهید است؟ برای دیدن نقاشی خود میتوانید کلید \"دوباره امتحان کنید\" را فشار دهید."};
+exports.reinfFeedbackMsg = function(d){return "آیا این شبیه آنچه می خواهید است؟ برای دیدن نقاشی خود میتوانید کلید \"دوباره امتحان کنید\" فشار دهید."};
 
 exports.setColour = function(d){return "رنگ را تعیین کنید"};
 

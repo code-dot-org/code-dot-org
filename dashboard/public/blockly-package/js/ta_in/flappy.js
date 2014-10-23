@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -9218,7 +9218,7 @@ exports.catVariables = function(d){return "மாறிலிகள்"};
 
 exports.codeTooltip = function(d){return "உருவாக்கப்பட்ட ஜாவாஉரைக் குறியீடுகளை பார்க்க."};
 
-exports.continue = function(d){return "தொடர்ந்து"};
+exports.continue = function(d){return "தொடர்க"};
 
 exports.dialogCancel = function(d){return "ரத்து செய்"};
 
@@ -9355,17 +9355,17 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ta=function(n){return n===1?"one":"other"}
-exports.continue = function(d){return "தொடர்ந்து"};
+exports.continue = function(d){return "தொடர்க"};
 
-exports.doCode = function(d){return "செய்"};
+exports.doCode = function(d){return "செய்க"};
 
-exports.elseCode = function(d){return "இல்லையெனின்"};
+exports.elseCode = function(d){return "அல்லது"};
 
 exports.endGame = function(d){return "end game"};
 
 exports.endGameTooltip = function(d){return "Ends the game."};
 
-exports.finalLevel = function(d){return "வாழ்த்துக்கள்! நீங்கள் இறுதிப் புதிரை தீர்த்துவிட்டீர்கள்."};
+exports.finalLevel = function(d){return "வாழ்த்துக்கள்! நீங்கள் இறுதிப் புதிரை முடித்துவிட்டீர்கள்."};
 
 exports.flap = function(d){return "flap"};
 
@@ -9555,7 +9555,7 @@ exports.shareFlappyTwitter = function(d){return "Check out the Flappy game I mad
 
 exports.shareGame = function(d){return "Share your game:"};
 
-exports.soundRandom = function(d){return "எழுமாறான"};
+exports.soundRandom = function(d){return "தொடர்பின்றி எடுக்கப்பட்ட"};
 
 exports.soundBounce = function(d){return "bounce"};
 
@@ -9607,11 +9607,11 @@ exports.whenCollideObstacleTooltip = function(d){return "Execute the actions bel
 
 exports.whenEnterObstacle = function(d){return "when pass obstacle"};
 
-exports.whenEnterObstacleTooltip = function(d){return "Execute the actions below when Flappy enters an obstacle."};
+exports.whenEnterObstacleTooltip = function(d){return "Flappy தடங்களை எதிர் கொள்ளும் போது,கீழே கொடுக்கப்பட்டுள்ள செயல்களை செய்து முடிக்கவும்."};
 
-exports.whenRunButtonClick = function(d){return "when Run is clicked"};
+exports.whenRunButtonClick = function(d){return "விளையாட்டு தொடங்கும் போது"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Execute the actions below when the run button is pressed."};
+exports.whenRunButtonClickTooltip = function(d){return "விளையாட்டு தொடங்கும் போது, கீழே கொடுக்கப்பட்டுள்ள செயல்களை செய்து முடிக்கவும்."};
 
 exports.yes = function(d){return "ஆம்"};
 

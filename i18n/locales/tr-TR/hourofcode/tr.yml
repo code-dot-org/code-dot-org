@@ -1,6 +1,6 @@
 tr:
   site_name: Kodlama Zamanı
-  language: İngilizce
+  language: Türkçe
   front_title: Tarihteki en geniş eğitim etkinliğine sende katıl, 8-14 Ekim 2014
   coming_soon: Çok Yakında
   front_header_banner: Tarihteki en geniş eğitim etkinliğine sende katıl, 8-14 Ekim 2014
@@ -16,20 +16,20 @@ tr:
   country_ar: Arjantin
   country_au: Avusturalya
   country_br: Brezilya
-  country_bg: Bulgaria
-  country_de: Germany
-  country_es: Latin America
+  country_bg: Bulgaristan
+  country_de: Almanya
+  country_es: Latin Amerika
   country_eu: Avrupa Birliği
-  country_gr: Greece
-  country_hr: Croatia
-  country_id: Indonesia
+  country_gr: Yunanistan
+  country_hr: Hırvatistan
+  country_id: Endonezya
   country_it: İtalya
-  country_jp: Japan
-  country_me: Middle East and North Africa
+  country_jp: Japonya
+  country_me: Orta Doğu ve Kuzey Afrika
   country_nz: Yeni Zelanda
   country_ro: Romanya
-  country_ru: Russia
-  country_ua: Ukraine
+  country_ru: Rusya
+  country_ua: Ukrayna
   country_uk: İngiltere
   country_us: Amerika
   country_vn: Vietnam
@@ -89,7 +89,7 @@ tr:
   signup_submit_error_message: Bir hata oluştu. Lütfen tüm gerekli alanların düzgün doldurulduğundan emin olun.
   signup_thank_you_header: Hour of Code etkinliği oluşturduğunuz için teşekkürler.
   signup_thank_you_message: Size başlamanıza yardımcı olacak bilgiler içeren bir onay e-postası gönderdik.
-  map_header: '# Hour of Code events around the world'
+  map_header: '# Kodlama Saati etkinlikleri dünyanın her yerinde'
   map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
   meta_tag_og_title: Kodlama Saati geliyor
   meta_tag_og_description: "Kodlama Saati 180'den fazla ülkede gerçekleşen 10 milyonlarca öğrenciye ulaşmış küresel bir harekettir. 4'ten 104 yaşına kadar herkes için."
@@ -123,17 +123,21 @@ tr:
   hoc_faq_why_cs_q: Neden bilgisayar bilimi?
   hoc_faq_why_cs_a: "<i>Her</i> öğrenci bilgisayar bilimini öğrenebilme şansına sahip olmalı. Bu, öğrencilerin problem çözme becerisini, mantığını ve yaratıcılığını beslemeye yardımcı olur. Erken başlayarak öğrenciler, herhangi bir 21. yüzyıl kariyerine sağlam bir temel atarlar. Daha fazla istatistik için <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Kodlama Saatine nasıl katılabilirim?
-  hoc_faq_how_participate_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.org'>here</a> and <a href='target-resources-how-to'>start planning</a>. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
+  hoc_faq_how_participate_a: "Bir Kodlama Saati etkinliğine ev sahipliği yapmak için <a href='http://hourofcode.org'>buradan</a> kaydolun ve <a href='target-resources-how-to'>planlamaya başlayın</a>. Okulunuzda veya çevrenizde bir Kodlama Saati etkinliği düzenleyebilirsiniz &mdash;, örneğin kulüplerinizde, kar amacı gütmeyen aktivitelerinizde veya iş yerinizde. Ya da, 8 Aralıkta kendiniz de deneyebilirsiniz."
   hoc_faq_behind_hoc_q: Kodlama Saatinin arkasında kimler var?
   hoc_faq_behind_hoc_a: "Kodlama Saati, <a href='http://code.org'>Code.org</a> tarafından organize edilen, halka açık 501c3 kar amacı gütmeyen, bilgisayar biliminin hayatımızdaki katkısını daha fazla okulda öğretilmesini sağlayarak arttırmaya adanmış, aynı zamanda kadınların ve azınlık ırklardan öğrencilerin de katılımını arttırmayı amaçlayan bir organizasyondur. <a href='http://code.org/about/partners'>Eşi benzeri görülmemiş bir ortaklar topluluğu</a> Kodlama Saatini desteklemek için bir araya geldi; &mdash;bu ortaklar arasında Microsoft, Apple, Amazon gibi şirketler de var."
   hoc_faq_host_q: Kodlama hakkında hiç bir fikrim yok. Yine de bir aktiviteye ev sahipliği yapabilir miyim?
-  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='http://code.org/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='target-resources-how-to'>how to guide</a>."
+  hoc_faq_host_a: "Tabii ki. Kodlama Saati etkinlikleri kendinden yönlendirmelidir. Yapmanız gereken tek şey <a href='http://code.org/learn'>mevcut öğreticilerimizi denemeniz</a>, istediğiniz birini seçmeniz, ve bir saat belirlemeniz &mdash;, gerisini biz hallederiz. Ayrıca anaokulundan başlayarak her yaş ve her seviyeye uygun seçeneklerimiz de mevcuttur. <a href='target-resources-how-to'>Nasıl yapılır rehberimizi</a> okuyarak etkinliğinizi planlamaya başlayabilirsiniz."
   hoc_faq_need_computers_q: Her katılımcı için bilgisayara ihtiyaç var mı?
   hoc_faq_need_computers_a: "Hayır. Bilgisayarlara, akıllı telefonlara, tabletlere uyumlu Kodlama Saati öğreticilerimiz var, hatta bazıları için bilgisayara bile ihtiyacınız yok! Nerede olursanız olun, elinizde ne varsa onunla katılabilirsiniz. <p><i>İşte birkaç seçeneğiniz:</i> <br> <ul> <li><b>Eşli çalışın.</b> Araştırmalar gösteriyor ki öğrenciler en iyi bir bilgisayarı paylaşıp <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>eşli çalıştıklarında</a> öğreniyorlar. Öğrencilerinizi takım olmaya teşvik edin. <li> <b>Projeksiyon kullanın.</b> Eğer projeksiyonunuz ve internet bağlantılı bir bilgisayarınız varsa, tüm grubunuz bir Kodlama Saatini birlikte yapabilir. Videoları beraber izleyin ve sırayla soruları cevaplandırıp bulmacaları çözün. <li><b>Çevrimdışına geçin.</b> Bilgisayara ihtiyaç bile duymayan öğreticilerimiz de var. </ul>"
   hoc_faq_international_q: Ben Amerika Birleşik Devletlerinde değilim. Uluslararası nasıl katılabilirim?
   hoc_faq_international_a: Herkes bir Kodlama Saati etkinliğini dünyanın herhangi bir yerinde düzenleyebilir. Geçtiğimiz sene, dünya çapında birçok öğrenci Kodlama Saati için bir araya geldi.
   hoc_faq_tutorial_q: Nasıl bir Kodlama Saati öğreticisi hazırlayabilirim?
-  hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
+  hoc_faq_tutorial_a: "Eğer bir öğretici ortağı olmak isterseniz, <a href='target-tutorial-guidelines'>rehberimizi ve yönlendirmelerimizi inceleyin</a>. Bir çok bağlantılı ve farklı seçeneği bünyemizde bulundurmak istiyoruz, ancak birincil amacımız bilgisayar bilimine yeni olan öğrenci ve öğretmenler için ilk tecrübelerini en iyi hale getirmek."
+  hoc_faq_more_questions_q: Still have more questions?
+  hoc_faq_more_questions_a: "Try finding an answer in our <a href='http://support.code.org'>support forum</a>."
+  hoc_faq_more_questions_br_q: Outras dúvidas?
+  hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
   hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
   hoc_faq_why_cs_uk_a: '<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path.'
@@ -169,14 +173,14 @@ tr:
   stats_nina: '"Her bir gün aynı sonucu verdi&mdash; %100 bağlılık." - Nina Nichols Peery, Öğretmen'
   stats_student: '"Bunun <b>hayatta ancak bir kere</b> karşıma çıkacak bir şans olduğunu biliyordum." - Mariana Alzate, 5. sınıf öğrencisi'
   stats_michael: 'Öğrencilerimi <b>asla ama asla</b> hiç bu kadar öğrenmeye hevesli görmedim." - Michael Clark, Öğretmen'
-  resources_how_to: How-to guide for teachers
-  resources_handouts: Handouts to spread the word
-  resources_videos: Videos
-  resources_posters: Posters
-  resources_banners: Banners
-  resources_emails: Sample emails
-  resources_stats: Useful computer science stats
-  resources_press_kit: Press Kit
+  resources_how_to: Öğretmenler için nasıl yapılır rehberi
+  resources_handouts: Etkinliği yaymak için el ilanları
+  resources_videos: Videolar
+  resources_posters: Posterler
+  resources_banners: Afişler
+  resources_emails: Örnek e-postalar
+  resources_stats: Kullanışlı bilgisayar bilimi istatistikleri
+  resources_press_kit: Basın Araçları
   footer_copyright_message: Copyright 2014 Code.org. Tüm hakları saklıdır.
   footer_trademark_message: Hour of Code™ Code.org markasıdır.
   footer_menu_partners: Ortaklar

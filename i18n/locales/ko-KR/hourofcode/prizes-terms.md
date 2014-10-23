@@ -22,6 +22,12 @@ Code.org 는 Hour of Code(12월8일~14일) 행사 이후에 Dropbox 저장공간
 
 ## 1학급 정도의 노트북(또는 $10,000 상당의 다른 기기):
 
-미국 K-12 학교만 대상으로 합니다. 왜 하필이면 공립학교만 대상으로 하는가? [See the answer here](http://www.hourofcode.com/#faq). 인증을 받기 위해서, 2014.11.14일 이전까지 Hour of Code 행사에 학교 전체 행사로 등록해야 합니다. 미국의 학교들 중 한 학교가 1학급 분량의 노트북을 받게 될 것입니다. Code.org 는 2014.12.01일 이전에 해당 학교에 이메일로 알릴 것입니다.
+미국 K-12 학교만 대상으로 합니다. 왜 하필이면 공립학교만 대상으로 하는가? [여러 가지 답변을 살펴보세요](http://www.hourofcode.com/#faq). 인증을 받기 위해서, 2014.11.14일 이전까지 Hour of Code 행사에 학교 전체 행사로 등록해야 합니다. 미국의 학교들 중 한 학교가 1학급 분량의 노트북을 받게 될 것입니다. Code.org 는 2014.12.01일 이전에 해당 학교에 이메일로 알릴 것입니다.
+
+To clarify, this is not a sweepstakes or a contest involving pure chance.
+
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>

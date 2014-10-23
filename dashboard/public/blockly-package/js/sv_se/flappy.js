@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -9206,13 +9206,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Listor"};
 
-exports.catLoops = function(d){return "loopar"};
+exports.catLoops = function(d){return "Loopar"};
 
 exports.catMath = function(d){return "Matte"};
 
 exports.catProcedures = function(d){return "Funktioner"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -9254,7 +9254,7 @@ exports.help = function(d){return "Hjälp"};
 
 exports.hintTitle = function(d){return "Tips:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "hoppa"};
 
 exports.levelIncompleteError = function(d){return "Du använder alla nödvändiga typer av block, men inte på rätt sätt."};
 
@@ -9304,7 +9304,7 @@ exports.tooManyBlocksMsg = function(d){return "Detta pusslet kan lösas med <x i
 
 exports.tooMuchWork = function(d){return "Du fick mig att göra en hel del arbete!  Du kan försöka upprepa färre gånger?"};
 
-exports.toolboxHeader = function(d){return "Block"};
+exports.toolboxHeader = function(d){return "bitar"};
 
 exports.openWorkspace = function(d){return "Hur det fungerar"};
 
@@ -9359,13 +9359,13 @@ exports.continue = function(d){return "Fortsätt"};
 
 exports.doCode = function(d){return "gör"};
 
-exports.elseCode = function(d){return "annat"};
+exports.elseCode = function(d){return "annars"};
 
 exports.endGame = function(d){return "avsluta spelet"};
 
 exports.endGameTooltip = function(d){return "Avslutar spelet."};
 
-exports.finalLevel = function(d){return "Grattis! Du har löst det sista pusslet."};
+exports.finalLevel = function(d){return "Grattis! Du har löst den sista uppgiften."};
 
 exports.flap = function(d){return "flaxa"};
 
@@ -9383,17 +9383,17 @@ exports.flapVeryLarge = function(d){return "flaxa väldigt mycket"};
 
 exports.flapTooltip = function(d){return "Flyga Flappy uppåt."};
 
-exports.flappySpecificFail = function(d){return "Your code looks good - it will flap with each click. But you need to click many times to flap to the target."};
+exports.flappySpecificFail = function(d){return "Din kod ser bra ut - den kommer att flaxa med varje klick. Men du måste klicka många gånger för att flaxa till målet."};
 
 exports.incrementPlayerScore = function(d){return "Gör ett poäng"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Lägg till ett till den nuvarande spelarens poängsumma."};
 
-exports.nextLevel = function(d){return "Grattis! Du har slutfört detta pusslet."};
+exports.nextLevel = function(d){return "Grattis! Du har klarat den här uppgiften."};
 
 exports.no = function(d){return "Nej"};
 
-exports.numBlocksNeeded = function(d){return "Detta pusslet kan lösas med %1 block."};
+exports.numBlocksNeeded = function(d){return "Den här uppgiften kan lösas med %1 block."};
 
 exports.playSoundRandom = function(d){return "Spela ljud slumpmässig"};
 
@@ -9421,7 +9421,7 @@ exports.playSoundSplash = function(d){return "spela upp ett plask-ljud"};
 
 exports.playSoundLaser = function(d){return "spela upp ett laser-ljud"};
 
-exports.playSoundTooltip = function(d){return "Spela upp det valda ljudet."};
+exports.playSoundTooltip = function(d){return "Spela det valda ljudet."};
 
 exports.reinfFeedbackMsg = function(d){return "Du kan klicka på \"Försök igen\" för att gå tillbaka till att spela ditt spel."};
 

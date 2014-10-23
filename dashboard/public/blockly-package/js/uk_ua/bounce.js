@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -11577,13 +11577,13 @@ exports.ifTooltip = function(d){return "Якщо є шлях у вказаном
 
 exports.ifelseTooltip = function(d){return "Якщо є шлях у вказаному напрямку, то виконуй перший блок дій. У протилежному випадку, виконуй другий блок дій."};
 
-exports.incrementOpponentScore = function(d){return "збільшити бал супротивника"};
+exports.incrementOpponentScore = function(d){return "бал для супротивника"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Додати один бал до рахунку супротивника."};
 
 exports.incrementPlayerScore = function(d){return "додати бал"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Додати один бал до рахунку гравця."};
+exports.incrementPlayerScoreTooltip = function(d){return "Додати одне очко до рахунку гравця."};
 
 exports.isWall = function(d){return "це стіна"};
 
@@ -11595,7 +11595,7 @@ exports.launchBallTooltip = function(d){return "Запустити м'яч у г
 
 exports.makeYourOwn = function(d){return "Створити свою власну гру Арканоід"};
 
-exports.moveDown = function(d){return "рухатися вниз"};
+exports.moveDown = function(d){return "рухатись вниз"};
 
 exports.moveDownTooltip = function(d){return "Перемістити платформу вниз."};
 
@@ -11615,7 +11615,7 @@ exports.moveUp = function(d){return "рухатися вгору"};
 
 exports.moveUpTooltip = function(d){return "Перемістити платформу вгору."};
 
-exports.nextLevel = function(d){return "Вітання! Ви розв'язали останнє завдання."};
+exports.nextLevel = function(d){return "Вітання! Ви розв'язали це завдання."};
 
 exports.no = function(d){return "Ні"};
 
@@ -11661,7 +11661,7 @@ exports.playSoundWinPoint2 = function(d){return "грати звук перем�
 
 exports.playSoundWood = function(d){return "грати звук деревини"};
 
-exports.putdownTower = function(d){return "зруйнувати башту"};
+exports.putdownTower = function(d){return "поставити башту"};
 
 exports.reinfFeedbackMsg = function(d){return "Можна натиснути кнопку \"Спробувати знову\", щоб повернутися і пограти у свою гру."};
 
@@ -11745,7 +11745,7 @@ exports.whenBallMissesPaddle = function(d){return "коли м'яч промах
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Виконати дії, подані нижче, коли коли м'яч промахується повз платформу."};
 
-exports.whenDown = function(d){return "Коли стрілка вниз"};
+exports.whenDown = function(d){return "коли стрілка вниз"};
 
 exports.whenDownTooltip = function(d){return "Виконати дії, подані нижче, при натисненні клавіші стрілка вниз."};
 
@@ -11753,7 +11753,7 @@ exports.whenGameStarts = function(d){return "коли гра починаєть�
 
 exports.whenGameStartsTooltip = function(d){return "Виконання дій, поданих нижче, коли починається гра."};
 
-exports.whenLeft = function(d){return "коли стрілка Вліво"};
+exports.whenLeft = function(d){return "коли стрілка вліво"};
 
 exports.whenLeftTooltip = function(d){return "Виконати дії, подані нижче, при натисненні клавіші стрілка вліво."};
 
@@ -11761,11 +11761,11 @@ exports.whenPaddleCollided = function(d){return "коли м'яч влучає �
 
 exports.whenPaddleCollidedTooltip = function(d){return "Виконати дії, подані нижче, коли м'яч стикається з платформою."};
 
-exports.whenRight = function(d){return "коли стрілка Вправо"};
+exports.whenRight = function(d){return "коли стрілка вправо"};
 
 exports.whenRightTooltip = function(d){return "Виконати дії, подані нижче, при натисненні клавіші стрілка вправо."};
 
-exports.whenUp = function(d){return "коли стрілка Вгору"};
+exports.whenUp = function(d){return "коли стрілка вгору"};
 
 exports.whenUpTooltip = function(d){return "Виконати дії, подані нижче, при натисненні клавіші стрілка вгору."};
 
@@ -11795,7 +11795,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.uk = function 
   }
   return 'other';
 };
-exports.and = function(d){return "і"};
+exports.and = function(d){return "та"};
 
 exports.blocklyMessage = function(d){return "Блоклі"};
 
@@ -11813,7 +11813,7 @@ exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Функції"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Змінні"};
 
@@ -11845,13 +11845,13 @@ exports.finalStage = function(d){return "Вітання! Завершено ос
 
 exports.finalStageTrophies = function(d){return "Вітання! Ви завершили останній етап і виграли "+p(d,"numTrophies",0,"uk",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Готово"};
+exports.finish = function(d){return "Кінець"};
 
 exports.generatedCodeInfo = function(d){return "Навіть кращі університети навчають програмуванню на основі блоків (наприклад, "+v(d,"berkeleyLink")+" "+v(d,"harvardLink")+"). Але всередині ті блоки, які ви щойно склали, можуть показуватись у JavaScript, найпоширенішій мові програмування:"};
 
 exports.hashError = function(d){return "Шкода, але  '%1' не відповідає жодній збереженій програмі."};
 
-exports.help = function(d){return "Допомога"};
+exports.help = function(d){return "Довідка"};
 
 exports.hintTitle = function(d){return "Підказка:"};
 
@@ -11905,7 +11905,7 @@ exports.tooManyBlocksMsg = function(d){return "Це завдання можна 
 
 exports.tooMuchWork = function(d){return "Ви змусили мене попрацювати! Може спробуємо менше повторів?"};
 
-exports.toolboxHeader = function(d){return "Блоки"};
+exports.toolboxHeader = function(d){return "блоки"};
 
 exports.openWorkspace = function(d){return "Як це працює"};
 

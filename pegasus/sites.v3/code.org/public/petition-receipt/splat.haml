@@ -1,0 +1,170 @@
+---
+title: Petition receipt
+layout: none
+---
+-splat = request.splat_path_info[1..-1].split("/")
+-role_s = splat.first
+-country_s = splat.last == 'us' ? 'united states' : splat.last
+-unsubscribe_link = '#'
+-tracking_pixel = ''
+
+%html
+  %head
+  %body
+    %p
+      %b
+        Thank you for signing your name in support of computer science education!
+
+    %p
+      %a{href:'http://facebook.com/code.org'}
+        %button{style:'color:white; background-color:0094ca; padding: 10px; border-radius: 4px; border-color:0094ca; -webkit-user-select:none; border-width:0px'} Like us on Facebook
+      %a{href:'http://twitter.com/codeorg'}
+        %button{style:'color:white; background-color:0094ca; padding: 10px; border-radius: 4px; border-color:0094ca; -webkit-user-select:none; border-width:0px'} Like us on Twitter
+
+    %p
+      Here's what you can do now to help the world learn to code:
+
+    - bullet_count = 0
+
+    - if ['educator'].include? role_s
+      %p
+        %strong
+          = "#{bullet_count += 1})"
+          %a{:href => "http://hourofcode.com/"}
+            Host an Hour of Code
+          &#151; and win prizes for your school
+      %p
+        Help 100 million students worldwide learn their first Hour of Code by the end of Computer Science Education Week (Dec. 8-14) to show that anyone can learn the basics.
+        = succeed "." do
+          %a{:href => "http://hourofcode.com/"} Sign up your school
+
+    - else
+      %p
+        %strong
+          = "#{bullet_count += 1})"
+          %a{:href => "http://hourofcode.com/"}
+            Host an Hour of Code
+        &#151; at work, in your community, or local school
+      %p
+        Help 100 million students worldwide learn their first Hour of Code by the end of Computer Science Education Week (Dec. 8-14) to show that anyone can learn the basics.
+        %a{:href => "http://hourofcode.com/"} Get involved
+        or
+        = succeed "." do
+          %a{:href => "http://code.org/learn"} try it yourself
+
+    %p
+      %strong
+        = "#{bullet_count += 1})"
+        %a{:href => "http://code.org/donate"}
+          Support our crowdfunding campaign
+    %p We just launched what could be the largest education crowdfunding campaign in history. To teach 100 million children, we need your support. Every dollar will be matched by our major donors, doubling your impact.
+
+    - if ['other','parent','student'].include? role_s
+      %p
+        %b
+          = "#{bullet_count += 1})"
+          Learn yourself
+          - if role_s != 'student'
+            (or for your child)
+      %p
+        = succeed "." do
+          %a{href:'http://code.org/learn'} Learn online
+        Or find
+        = succeed "." do
+          %a{href:'http://code.org/learn/local'} local schools, camps, or workshops that teach coding
+
+    - if role_s == 'educator'
+      %p
+        %b
+          = "#{bullet_count += 1})"
+          %a{href:'http://code.org/educate'} Teach
+          computer science
+      %p
+        You can teach these self-serve
+        %a{href:'http://studio.code.org'} intro courses
+        (professional development included), partner with us to bring computer science
+        = succeed "," do
+          %a{href:'http://code.org/educate/districts'} to your entire district
+        and inspire students with
+        = succeed "." do
+          %a{href:'http://youtube.com/codeorg'} these videos
+
+    %p
+      %b
+        = "#{bullet_count += 1})"
+        %a{href:'http://code.org/promote'}
+          Help us promote
+        computer science education
+    %p
+      Find out what you can do locally to turn around these shocking statistics.
+    %a{href:'http://code.org/stats'}
+      %img{src:'http://postoffice.code.org/uploads/1386200419.png', alt:'small infographic'}
+
+    - if role_s == 'educator'
+      %p
+        %b
+          = "#{bullet_count += 1})"
+          Learn yourself (or for your child)
+      %p
+        Find
+        = succeed "." do
+          %a{href:'http://code.org/learn/local'} local schools, camps, or workshops that teach coding
+        Or
+        = succeed "." do
+          %a{href:'http://code.org/learn'} learn online
+    - else
+      %p
+        %b
+          = "#{bullet_count += 1})"
+          %a{href:'http://code.org/educate'} Ask your local school
+          to teach computer science
+      %p
+        Your local school can teach this self-serve
+        = succeed "," do
+          %a{href:'http://code.org/educate/20hr'} intro course
+        partner with us to bring computer science
+        = succeed "," do
+          %a{href:'http://code.org/educate/districts'} to your entire district
+        and inspire students with
+        = succeed "." do
+          %a{href:'http://youtube.com/codeorg'} these videos
+        Check
+        %a{href:'http://code.org/learn/local'} our map
+        to see if your school teaches computer science, and if not, ask them to.
+
+    - if role_s == 'engineer'
+      %p
+        %b
+          = "#{bullet_count += 1})"
+          Teach locally as a volunteer
+      %p
+        Host an
+        %a{href:'http://code.org/educate/hoc'} Hour of Code
+        or a longer self-serve
+        %a{href:'http://code.org/educate/20hr'} intro course
+        at a local school or club. Or
+        %a{href:'http://code.org/volunteer/engineer'} sign up as a volunteer
+        to hear about mentoring opportunities from local teachers.
+
+
+    %p
+      Thank you,
+
+    %p
+      Hadi Partovi,
+      %br
+      Founder, Code.org
+      %br
+      PO Box 34628 #80740
+      %br
+      Seattle, WA 98124
+
+    %p
+      You've received this message because you signed the petition at
+      = succeed "." do
+        %a{href:'http://code.org/'} Code.org
+    %p
+      = succeed "." do
+        %a{href:unsubscribe_link} Unsubscribe instantly
+
+    %img{src:tracking_pixel}

@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -7707,13 +7707,13 @@ exports.catMath = function(d){return "Reikningur"};
 
 exports.catProcedures = function(d){return "Föll"};
 
-exports.catText = function(d){return "Texti"};
+exports.catText = function(d){return "texti"};
 
 exports.catVariables = function(d){return "Breytur"};
 
 exports.codeTooltip = function(d){return "Sjá samsvarandi JavaScript kóða."};
 
-exports.continue = function(d){return "Áfram"};
+exports.continue = function(d){return "Halda áfram"};
 
 exports.dialogCancel = function(d){return "Hætta við"};
 
@@ -7799,7 +7799,7 @@ exports.tooManyBlocksMsg = function(d){return "Þessa þraut er hægt að leysa 
 
 exports.tooMuchWork = function(d){return "Þú lagðir á mig mjög mikla vinnu! Gætirðu reynt að nota færri endurtekningar?"};
 
-exports.toolboxHeader = function(d){return "Kubbar"};
+exports.toolboxHeader = function(d){return "kubbar"};
 
 exports.openWorkspace = function(d){return "Hvernig það virkar"};
 
@@ -7860,7 +7860,7 @@ exports.numBlocksNeeded = function(d){return "Þessa þraut er hægt að leysa m
 
 exports.reinfFeedbackMsg = function(d){return "Þú getur smellt á \"Reyna aftur\" hnappinn til þess að spila leikinn aftur."};
 
-exports.share = function(d){return "Deila"};
+exports.share = function(d){return "Deila leik"};
 
 exports.shareGame = function(d){return "Deildu leiknum þínum:"};
 

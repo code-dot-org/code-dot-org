@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -18709,9 +18709,9 @@ exports.catLogic = function(d){return "Logické"};
 
 exports.catLists = function(d){return "Zoznamy"};
 
-exports.catLoops = function(d){return "Slučky"};
+exports.catLoops = function(d){return "Cykly"};
 
-exports.catMath = function(d){return "Matematické"};
+exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkcie"};
 
@@ -18753,11 +18753,11 @@ exports.generatedCodeInfo = function(d){return "Dokonca aj popredné univerzity 
 
 exports.hashError = function(d){return "Prepáčte, '%1' nezodpovedá žiadnemu uloženému programu."};
 
-exports.help = function(d){return "pomoc"};
+exports.help = function(d){return "Pomoc"};
 
 exports.hintTitle = function(d){return "Tip:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "skoč"};
 
 exports.levelIncompleteError = function(d){return "Používate všetky potrebné typy blokov, ale nie tým správnym spôsobom."};
 
@@ -18868,15 +18868,15 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sk = function 
 };
 exports.actor = function(d){return "herec"};
 
-exports.catActions = function(d){return "Úlohy"};
+exports.catActions = function(d){return "Akcie"};
 
-exports.catControl = function(d){return "Opakovania"};
+exports.catControl = function(d){return "Slučky"};
 
 exports.catEvents = function(d){return "Udalosti"};
 
-exports.catLogic = function(d){return "Logika"};
+exports.catLogic = function(d){return "Logické"};
 
-exports.catMath = function(d){return "Matematika"};
+exports.catMath = function(d){return "Matematické"};
 
 exports.catProcedures = function(d){return "Funkcie"};
 
@@ -18972,15 +18972,15 @@ exports.moveUpTooltip = function(d){return "Move the paddle up."};
 
 exports.moveTooltip = function(d){return "Move a character."};
 
-exports.nextLevel = function(d){return "Gratulujem! Vyriešili ste puzzle."};
+exports.nextLevel = function(d){return "Gratulujem! Vyriešil si hádanku."};
 
 exports.no = function(d){return "Nie"};
 
-exports.numBlocksNeeded = function(d){return "Toto puzzle môže byť vyriešená s %1 blokmi."};
+exports.numBlocksNeeded = function(d){return "Táto hádanka môže byť vyriešená s %1 blokmi."};
 
 exports.ouchExclamation = function(d){return "Ouch!"};
 
-exports.playSoundCrunch = function(d){return "prehraj chrumkavý zvuk"};
+exports.playSoundCrunch = function(d){return "prehrať zvuk chrumnutia"};
 
 exports.playSoundGoal1 = function(d){return "prehraj zvuk gól 1"};
 
@@ -18998,7 +18998,7 @@ exports.playSoundRubber = function(d){return "prehraj gumený zvuk"};
 
 exports.playSoundSlap = function(d){return "prehraj zvuk plesknutia"};
 
-exports.playSoundTooltip = function(d){return "Prehrá vybraný zvuk."};
+exports.playSoundTooltip = function(d){return "Prehraj vybraný zvuk."};
 
 exports.playSoundWinPoint = function(d){return "prehraj so zvukom bodu"};
 

@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -11566,7 +11566,7 @@ exports.doCode = function(d){return "wykonaj"};
 
 exports.elseCode = function(d){return "w przeciwnym razie"};
 
-exports.finalLevel = function(d){return "Gratulacje! Rozwiązałeś końcową łamigłówkę."};
+exports.finalLevel = function(d){return "Gratulacje! Udało ci się rozwiązać ostatnie zadanie."};
 
 exports.heightParameter = function(d){return "wysokość"};
 
@@ -11584,7 +11584,7 @@ exports.incrementOpponentScoreTooltip = function(d){return "Dodaj jeden do bież
 
 exports.incrementPlayerScore = function(d){return "wynik punktowy"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Dodaj jeden do bieżącego wyniku gracza."};
+exports.incrementPlayerScoreTooltip = function(d){return "Dodać jeden do wyniku bieżącego gracza."};
 
 exports.isWall = function(d){return "czy jest to ściana"};
 
@@ -11600,7 +11600,7 @@ exports.moveDown = function(d){return "przesuń w dół"};
 
 exports.moveDownTooltip = function(d){return "Przesuń paletkę w dół."};
 
-exports.moveForward = function(d){return "przesuń do przodu"};
+exports.moveForward = function(d){return "idź do przodu"};
 
 exports.moveForwardTooltip = function(d){return "Przenieś mnie do przodu o jedno miejsce."};
 
@@ -11616,7 +11616,7 @@ exports.moveUp = function(d){return "przesuń w górę"};
 
 exports.moveUpTooltip = function(d){return "Przesuń paletkę w górę."};
 
-exports.nextLevel = function(d){return "Gratulacje! Ukończyłeś tę łamigłówkę."};
+exports.nextLevel = function(d){return "Gratulacje! Ukończyłeś tę zagadkę."};
 
 exports.no = function(d){return "Nie"};
 
@@ -11626,7 +11626,7 @@ exports.noPathLeft = function(d){return "nie ma ścieżki w lewo"};
 
 exports.noPathRight = function(d){return "nie ma ścieżki w prawo"};
 
-exports.numBlocksNeeded = function(d){return "Ta łamigłówka może być rozwiązana z użyciem %1 bloków."};
+exports.numBlocksNeeded = function(d){return "Ta zagadka może być rozwiązana z użyciem %1 bloków."};
 
 exports.pathAhead = function(d){return "ścieżka do przodu"};
 
@@ -11644,9 +11644,9 @@ exports.playSoundGoal2 = function(d){return "odtwórz dźwięk gola nr 2"};
 
 exports.playSoundHit = function(d){return "odtwórz dźwięk trafienia"};
 
-exports.playSoundLosePoint = function(d){return "zagraj dźwięk utraty punktu"};
+exports.playSoundLosePoint = function(d){return "zagraj dzwięk utraty punktu"};
 
-exports.playSoundLosePoint2 = function(d){return "zagraj dźwięk utraty punktu nr 2"};
+exports.playSoundLosePoint2 = function(d){return "zagraj dzwięk utraty punktu nr 2"};
 
 exports.playSoundRetro = function(d){return "zagraj dźwięk retro"};
 
@@ -11654,7 +11654,7 @@ exports.playSoundRubber = function(d){return "zagraj dźwięk gumy"};
 
 exports.playSoundSlap = function(d){return "zagraj dźwięk klaśnięcia"};
 
-exports.playSoundTooltip = function(d){return "Odtwórz wybrany dźwięk."};
+exports.playSoundTooltip = function(d){return "Odtwarzać wybrany dźwięk."};
 
 exports.playSoundWinPoint = function(d){return "zagraj dźwięk zdybycia punktu nr 1"};
 
@@ -11672,7 +11672,7 @@ exports.repeatUntil = function(d){return "powtarzaj aż"};
 
 exports.repeatUntilBlocked = function(d){return "dopóki jest ścieżka do przodu"};
 
-exports.repeatUntilFinish = function(d){return "powtarzaj aż będzie koniec"};
+exports.repeatUntilFinish = function(d){return "powtarzaj, aż będzie koniec"};
 
 exports.scoreText = function(d){return "Wynik: "+v(d,"playerScore")+": "+v(d,"opponentScore")};
 
@@ -11746,7 +11746,7 @@ exports.whenBallMissesPaddle = function(d){return "kiedy piłka omija paletkę"}
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Wykonaj akcje poniżej, kiedy piłka omija paletkę."};
 
-exports.whenDown = function(d){return "kiedy strzałka w dół"};
+exports.whenDown = function(d){return "gdy strzałka w dół"};
 
 exports.whenDownTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w dół."};
 
@@ -11754,7 +11754,7 @@ exports.whenGameStarts = function(d){return "kiedy gra się zacznie"};
 
 exports.whenGameStartsTooltip = function(d){return "Wykonaj czynności poniżej kiedy gra się zacznie."};
 
-exports.whenLeft = function(d){return "kiedy strzałka w lewo"};
+exports.whenLeft = function(d){return "gdy strzałka w lewo"};
 
 exports.whenLeftTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w lewo."};
 
@@ -11762,11 +11762,11 @@ exports.whenPaddleCollided = function(d){return "kiedy piłka uderza w paletkę"
 
 exports.whenPaddleCollidedTooltip = function(d){return "Wykonaj poniższe czynności, gdy piłka zderza się z paletką."};
 
-exports.whenRight = function(d){return "kiedy strzałka w prawo"};
+exports.whenRight = function(d){return "gdy strzałka w prawo"};
 
 exports.whenRightTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w prawo."};
 
-exports.whenUp = function(d){return "kiedy strzałka w górę"};
+exports.whenUp = function(d){return "gdy strzałka w górę"};
 
 exports.whenUpTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w górę."};
 
@@ -11776,7 +11776,7 @@ exports.whenWallCollidedTooltip = function(d){return "Wykonaj poniższe czynnoś
 
 exports.whileMsg = function(d){return "dopóki"};
 
-exports.whileTooltip = function(d){return "Powtarzaj wymienione czynności, aż do osiągnięcia punktu końcowego."};
+exports.whileTooltip = function(d){return "Powtarzaj załączone czynności, aż do osiągnięcia punktu zakończenia."};
 
 exports.yes = function(d){return "Tak"};
 
@@ -11811,11 +11811,11 @@ exports.catLists = function(d){return "Listy"};
 
 exports.catLoops = function(d){return "Pętle"};
 
-exports.catMath = function(d){return "Matematyczne"};
+exports.catMath = function(d){return "Matematyka"};
 
 exports.catProcedures = function(d){return "Funkcje"};
 
-exports.catText = function(d){return "Tekstowe"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Zmienne"};
 
@@ -11847,7 +11847,7 @@ exports.finalStage = function(d){return "Gratulacje! Ukończyłeś ostatni etap.
 
 exports.finalStageTrophies = function(d){return "Gratulacje! Ukończyłeś ostatni etap i wygrałeś "+p(d,"numTrophies",0,"pl",{"one":"trofeum","other":n(d,"numTrophies")+" trofea"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Koniec"};
 
 exports.generatedCodeInfo = function(d){return "Nawet najlepsze uczelnie uczą kodowania opartego o bloki (np. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale bloki które zostały użyte, można również zobaczyć w JavaScript, jednym z najbardziej powszechnie stosowanym języku programowania na świecie:"};
 
@@ -11899,7 +11899,7 @@ exports.showGeneratedCode = function(d){return "Pokaż kod"};
 
 exports.subtitle = function(d){return "graficzne środowisko programistyczne"};
 
-exports.textVariable = function(d){return "tekst"};
+exports.textVariable = function(d){return "Tekst"};
 
 exports.tooFewBlocksMsg = function(d){return "Używasz wszystkich wymaganych bloków, ale spróbuj użyć ich więcej, aby ukończyć łamigłówkę."};
 
@@ -11907,7 +11907,7 @@ exports.tooManyBlocksMsg = function(d){return "Ta łamigłówka może być rozwi
 
 exports.tooMuchWork = function(d){return "Spowodowałeś, że miałem dużo pracy. Czy możesz zmniejszyć liczbę powtórzeń?"};
 
-exports.toolboxHeader = function(d){return "Bloki"};
+exports.toolboxHeader = function(d){return "bloki"};
 
 exports.openWorkspace = function(d){return "Jak to działa"};
 

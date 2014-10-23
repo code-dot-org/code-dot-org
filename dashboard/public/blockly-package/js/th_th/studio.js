@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -18713,7 +18713,7 @@ exports.catVariables = function(d){return "ตัวแปร"};
 
 exports.codeTooltip = function(d){return "ดูการสร้างโค้ด JavaScript."};
 
-exports.continue = function(d){return "ต่อไป"};
+exports.continue = function(d){return "ดำเนินการต่อไป"};
 
 exports.dialogCancel = function(d){return "ยกเลิก"};
 
@@ -18745,7 +18745,7 @@ exports.generatedCodeInfo = function(d){return "มหาวิทยาลั�
 
 exports.hashError = function(d){return "ขออภัย '%1' ไม่ตรงกับโปรแกรมที่บันทึกไว้."};
 
-exports.help = function(d){return "ช่วยเหลือ"};
+exports.help = function(d){return "ขอความช่วยเหลือ"};
 
 exports.hintTitle = function(d){return "คำแนะนำ:"};
 
@@ -18753,7 +18753,7 @@ exports.jump = function(d){return "กระโดด"};
 
 exports.levelIncompleteError = function(d){return "คุณกำลังใช้ทุกสิ่งทุกอย่างที่จำเป็นของบล็อก แต่ไม่ใช่ทางที่ถูกต้อง."};
 
-exports.listVariable = function(d){return "ลิสต์"};
+exports.listVariable = function(d){return "รายการ"};
 
 exports.makeYourOwnFlappy = function(d){return "สร้าง Flappy เกม ไว้เป็นของเราเอง"};
 
@@ -18785,7 +18785,7 @@ exports.runTooltip = function(d){return "เรียกใช้โปรแก
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "แสดงโค้ด"};
+exports.showCodeHeader = function(d){return "แสดงรหัส"};
 
 exports.showGeneratedCode = function(d){return "แสดงโค้ด"};
 
@@ -18872,7 +18872,7 @@ exports.changeScoreTooltip = function(d){return "Add or remove a point to the sc
 
 exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
 
-exports.continue = function(d){return "ต่อไป"};
+exports.continue = function(d){return "ดำเนินการต่อไป"};
 
 exports.decrementPlayerScore = function(d){return "remove point"};
 
@@ -18880,7 +18880,7 @@ exports.defaultSayText = function(d){return "type here"};
 
 exports.emotion = function(d){return "mood"};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "ขอแสดงความยินดีคุณสามารถแก้ปัญหาสุดท้ายได้แล้ว."};
 
 exports.hello = function(d){return "hello"};
 
@@ -18956,9 +18956,9 @@ exports.moveUpTooltip = function(d){return "Move the paddle up."};
 
 exports.moveTooltip = function(d){return "Move a character."};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "ขอแสดงความยินดีคุณสำเร็จปริศนานี้."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "ไม่ใช่"};
 
 exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
 
@@ -18982,7 +18982,7 @@ exports.playSoundRubber = function(d){return "play rubber sound"};
 
 exports.playSoundSlap = function(d){return "play slap sound"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "เล่นเสียงที่ถูกเลือก."};
 
 exports.playSoundWinPoint = function(d){return "play win point sound"};
 
@@ -19044,7 +19044,7 @@ exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" b
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "ทำ"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
 
@@ -19086,7 +19086,7 @@ exports.setBackgroundTennis = function(d){return "set tennis background"};
 
 exports.setBackgroundWinter = function(d){return "set winter background"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "ตั่งค่าภาพพื้นหลัง"};
 
 exports.setScoreText = function(d){return "set score"};
 

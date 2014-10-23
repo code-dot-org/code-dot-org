@@ -32,7 +32,7 @@ zh:
           MazeEC: 階段 1
         2014 Levels:
           desc: Bounce (beta)
-          Bounce: 第一階段
+          Bounce: 階段 1
         Builder Levels:
           desc: 使用者創建的謎題(測試版)
           Custom: 階段 1
@@ -48,6 +48,7 @@ zh:
         edit-code:
           desc: Edit Code (beta)
           MazeEC: 階段 1
+          Webapp: 階段 2
         events:
           desc: Bounce (beta)
           Bounce: 階段 1
@@ -77,9 +78,9 @@ zh:
         Artist: 藝術家
         Unplug4: 演算法
         Artist2: '藝術家 2 '
-        Unplug5: 函數
+        Unplug5: 函數類別
         Farmer: 農夫
-        Unplug6: 條件式陳述
+        Unplug6: 流程類別
         Artist3: '藝術家 3 '
         Unplug7: 歌曲創作
         Farmer2: '農夫 2 '
@@ -96,6 +97,7 @@ zh:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
     trophy:
       name:
         Bronze: 銅牌
@@ -110,7 +112,7 @@ zh:
         loop_until: '"重覆...直到" 程式積木'
         loop_while: '"當..." 程式積木'
         loop_for: '"計數器" 程式積木'
-        function: 函數
+        function: 函數類別
         parameters: 具有參數的函數
     level:
       instructions:
@@ -274,7 +276,7 @@ zh:
         studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
         studio_c2_3: Can you write a program to make this dog move to the cat?
         studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
+        studio_c2_5: '你能寫程式讓章魚被按下的時候會說"哈囉"嗎？'
         studio_c2_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
         studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
         studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
@@ -287,7 +289,7 @@ zh:
         studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
         studio_c3_story_5: Can you add a block to make the octopus happy?
         studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
+        studio_c3_game_1: '你能寫程式讓章魚被按下的時候會說"哈囉"嗎？'
         studio_c3_game_2: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
         studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
         studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
@@ -298,7 +300,7 @@ zh:
         studio_playlab_2: Can you make the dog say something and then have the cat say something afterwards?
         studio_playlab_3: Can you write a program to make this dog move to the cat?
         studio_playlab_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_playlab_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
+        studio_playlab_5: '你能寫程式讓章魚被按下的時候會說"哈囉"嗎？'
         studio_playlab_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
         studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
         studio_playlab_8: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
@@ -331,7 +333,7 @@ zh:
         loop_until: '"重覆...直到"程式積木'
         if: '"如果"程式積木'
         if_else: '"如果..否則"程式積木'
-        function: 函數
+        function: 函數類別
         loop_while: '"當...時"程式積木'
         loop_for: '"計數" 程式積木'
         parameters: 具有參數的函數
@@ -341,8 +343,8 @@ zh:
         Unplug2: 電腦計算式思維
         Unplug3: 圖畫紙程式設計
         Unplug4: 演算法
-        Unplug5: 函數
-        Unplug6: 條件式陳述
+        Unplug5: 函數類別
+        Unplug6: 流程類別
         Unplug7: Songwriting
         Unplug8: 抽象
         Unplug9: Relay programming
@@ -371,7 +373,7 @@ zh:
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: 'Play Lab - Create a Story'
         C2_graph_paper: 圖畫紙程式設計
-        C2_conditionals_with_cards: 條件式陳述
+        C2_conditionals_with_cards: 流程類別
         C2_binary_bracelets: Binary Bracelets
         C2_replay_programming: 接力式程式設計
         C2_paper_airplanes: Paper Airplanes

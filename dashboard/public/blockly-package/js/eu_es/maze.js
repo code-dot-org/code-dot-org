@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -13381,7 +13381,7 @@ exports.flowerEmptyError = function(d){return "The flower you're on has no more 
 
 exports.get = function(d){return "jaso"};
 
-exports.heightParameter = function(d){return "altuera"};
+exports.heightParameter = function(d){return "Altuera"};
 
 exports.holePresent = function(d){return "Zulo bat dago"};
 
@@ -13473,7 +13473,7 @@ exports.removeSquare = function(d){return "ezabatu karratua"};
 
 exports.repeatCarefullyError = function(d){return "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end."};
 
-exports.repeatUntil = function(d){return "errepikatu arte"};
+exports.repeatUntil = function(d){return "errepikatu %1 arte"};
 
 exports.repeatUntilBlocked = function(d){return "aurrean bidea dagoen bitartean"};
 
@@ -13495,7 +13495,7 @@ exports.uncheckedCloudError = function(d){return "Make sure to check all clouds 
 
 exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
 
-exports.whileMsg = function(d){return "while"};
+exports.whileMsg = function(d){return "bitartean"};
 
 exports.whileTooltip = function(d){return "Bukaerako puntua eskuratu arte barruko ekintzak errepikatu."};
 

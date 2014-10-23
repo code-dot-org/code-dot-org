@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -9198,7 +9198,7 @@ exports.and = function(d){return "و"};
 
 exports.blocklyMessage = function(d){return "بلاکلی"};
 
-exports.catActions = function(d){return "کارها"};
+exports.catActions = function(d){return "اقدامات"};
 
 exports.catColour = function(d){return "رنگ"};
 
@@ -9206,9 +9206,9 @@ exports.catLogic = function(d){return "منطق"};
 
 exports.catLists = function(d){return "لیست ها"};
 
-exports.catLoops = function(d){return "حلقه‌ها"};
+exports.catLoops = function(d){return "حلقه ها"};
 
-exports.catMath = function(d){return "ریاضی"};
+exports.catMath = function(d){return "محاسبات ریاضی"};
 
 exports.catProcedures = function(d){return "توابع"};
 
@@ -9258,7 +9258,7 @@ exports.jump = function(d){return "پرش"};
 
 exports.levelIncompleteError = function(d){return "شما همه‌ی بلوک‌های مورد نیاز را بکار بردید، ولی نه به روش درست."};
 
-exports.listVariable = function(d){return "لیست"};
+exports.listVariable = function(d){return "فهرست"};
 
 exports.makeYourOwnFlappy = function(d){return "Flappy Bird خودتان را بسازید"};
 
@@ -9280,7 +9280,7 @@ exports.play = function(d){return "بازی"};
 
 exports.puzzleTitle = function(d){return "معمای "+v(d,"puzzle_number")+" از "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "تکرار"};
+exports.repeat = function(d){return "تکرار کن"};
 
 exports.resetProgram = function(d){return "بازنشانی"};
 
@@ -9290,7 +9290,7 @@ exports.runTooltip = function(d){return "اجرای برنامه‌ی تعریف
 
 exports.score = function(d){return "نمره"};
 
-exports.showCodeHeader = function(d){return "نمایشِ کد"};
+exports.showCodeHeader = function(d){return "کد نمایش"};
 
 exports.showGeneratedCode = function(d){return "نمایشِ کد"};
 
@@ -9304,7 +9304,7 @@ exports.tooManyBlocksMsg = function(d){return "این معما را می‌تو�
 
 exports.tooMuchWork = function(d){return "شما منو مجبور به انجام مقدار زیادی کار کردید. میشه تعداد تکرار رو کمتر کنید؟"};
 
-exports.toolboxHeader = function(d){return "بلوک‌ها"};
+exports.toolboxHeader = function(d){return "بلوک ها"};
 
 exports.openWorkspace = function(d){return "چگونگیِ کار"};
 
@@ -9357,7 +9357,7 @@ exports.genericFeedback = function(d){return "ببینبد چطور تمامش �
 var MessageFormat = require("messageformat");MessageFormat.locale.fa=function(n){return "other"}
 exports.continue = function(d){return "ادامه"};
 
-exports.doCode = function(d){return "انجام بده"};
+exports.doCode = function(d){return "انحام دادن"};
 
 exports.elseCode = function(d){return "وگرنه"};
 
@@ -9365,7 +9365,7 @@ exports.endGame = function(d){return "بازی را تمام کن"};
 
 exports.endGameTooltip = function(d){return "بازی را تمام می‌کند."};
 
-exports.finalLevel = function(d){return "تبریک! شما پازل نهایی را حل کردید."};
+exports.finalLevel = function(d){return "تبریک میگم . معمای نهایی رو حل کردی ."};
 
 exports.flap = function(d){return "پریدن"};
 
@@ -9383,17 +9383,17 @@ exports.flapVeryLarge = function(d){return "خیلی زیاد بپر"};
 
 exports.flapTooltip = function(d){return "پرواز به سمت بالا."};
 
-exports.flappySpecificFail = function(d){return "Your code looks good - it will flap with each click. But you need to click many times to flap to the target."};
+exports.flappySpecificFail = function(d){return "کد شما خوب به نظر می‌رسد - پرنده با هر کلیک پر می‌زند. ولی برای پر زدن بسوی هدف باید چندین بار کلیک کنید."};
 
 exports.incrementPlayerScore = function(d){return "یک امتیاز بگیر"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "یکی به امتیاز بازیکن فعلی اضافه کن."};
 
-exports.nextLevel = function(d){return "تبریک! شما این پازل را به اتمام رساندید."};
+exports.nextLevel = function(d){return "تبریک! شما این معما را حل کردید."};
 
-exports.no = function(d){return "نه"};
+exports.no = function(d){return "خیر"};
 
-exports.numBlocksNeeded = function(d){return "این پازل می تواند با %1 از بلوکها حل شود."};
+exports.numBlocksNeeded = function(d){return "این پازل می‌تواند با %1 بلوک حل شود."};
 
 exports.playSoundRandom = function(d){return "پخش صدای تصادفی"};
 
@@ -9421,9 +9421,9 @@ exports.playSoundSplash = function(d){return "پخش صدای چلپ چلوپ"};
 
 exports.playSoundLaser = function(d){return "پخش صدای لیزر"};
 
-exports.playSoundTooltip = function(d){return "پخش صدای انتخابی شما."};
+exports.playSoundTooltip = function(d){return "صدای انتخاب شده را پخش می‌کند."};
 
-exports.reinfFeedbackMsg = function(d){return "شما می توانید دکمه \"دوباره امتحان کنید\" را بفشارید تا به بازی برگردید."};
+exports.reinfFeedbackMsg = function(d){return "می‌توانید دکمه \"تلاش دوباره\" را بزنید تا به عقب برگشته و بازی‌تان را انجام دهید."};
 
 exports.scoreText = function(d){return "امتیاز: "+v(d,"playerScore")};
 
@@ -9443,7 +9443,7 @@ exports.setBackgroundCave = function(d){return "قراردادن صحنه غار
 
 exports.setBackgroundSanta = function(d){return "قراردادن صحنه بابانوئل"};
 
-exports.setBackgroundTooltip = function(d){return "تنظیم تصویر صحنه پس‌زمینه"};
+exports.setBackgroundTooltip = function(d){return "تعیین تصویر پس‌زمینه"};
 
 exports.setGapRandom = function(d){return "تنظیم فاصله تصادفی"};
 
@@ -9553,9 +9553,9 @@ exports.setSpeedTooltip = function(d){return "سرعت مرحله را تعیی�
 
 exports.shareFlappyTwitter = function(d){return "بازی Flappy که من ساخته‌ام را نگاه کن. من خودم با @codeorg آن را نوشته‌ام"};
 
-exports.shareGame = function(d){return "بازی‌تان را به اشتراک بگذارید:"};
+exports.shareGame = function(d){return "بازی خود را به اشتراک بگذارید:"};
 
-exports.soundRandom = function(d){return "تصادفی"};
+exports.soundRandom = function(d){return "در هم"};
 
 exports.soundBounce = function(d){return "bounce"};
 

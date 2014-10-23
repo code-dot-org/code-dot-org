@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -9202,7 +9202,7 @@ exports.catActions = function(d){return "Ενέργειες"};
 
 exports.catColour = function(d){return "Χρώμα"};
 
-exports.catLogic = function(d){return "Λογικά"};
+exports.catLogic = function(d){return "Λογική"};
 
 exports.catLists = function(d){return "Λίστες"};
 
@@ -9212,7 +9212,7 @@ exports.catMath = function(d){return "Μαθηματικά"};
 
 exports.catProcedures = function(d){return "Συναρτήσεις"};
 
-exports.catText = function(d){return "Κείμενο"};
+exports.catText = function(d){return "κείμενο"};
 
 exports.catVariables = function(d){return "Μεταβλητές"};
 
@@ -9290,7 +9290,7 @@ exports.runTooltip = function(d){return "Τρέξε το πρόγραμμα πο
 
 exports.score = function(d){return "σκορ"};
 
-exports.showCodeHeader = function(d){return "Προβολή Κώδικα"};
+exports.showCodeHeader = function(d){return "Προβολή κώδικα"};
 
 exports.showGeneratedCode = function(d){return "Προβολή κώδικα"};
 
@@ -9304,7 +9304,7 @@ exports.tooManyBlocksMsg = function(d){return "Αυτό το παζλ μπορε
 
 exports.tooMuchWork = function(d){return "Με ανάγκασες να κάνω πολλή δουλειά! Μπορείς με λιγότερες επαναλήψεις;"};
 
-exports.toolboxHeader = function(d){return "Μπλοκ"};
+exports.toolboxHeader = function(d){return "μπλοκ"};
 
 exports.openWorkspace = function(d){return "Πώς λειτουργεί"};
 
@@ -9355,7 +9355,7 @@ exports.genericFeedback = function(d){return "Δες πως κατέληξες �
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.el=function(n){return n===1?"one":"other"}
-exports.continue = function(d){return "Συνέχεια"};
+exports.continue = function(d){return "Συνέχισε"};
 
 exports.doCode = function(d){return "κάνε"};
 
@@ -9389,7 +9389,7 @@ exports.incrementPlayerScore = function(d){return "σκόραρε έναν πό�
 
 exports.incrementPlayerScoreTooltip = function(d){return "Προσθέστε ένα στην τρέχουσα βαθμολογία παίκτη."};
 
-exports.nextLevel = function(d){return "Συγχαρητήρια! Έχετε ολοκληρώσει αυτό το παζλ."};
+exports.nextLevel = function(d){return "Συγχαρητήρια! Έχεις ολοκληρώσει αυτό το παζλ."};
 
 exports.no = function(d){return "Όχι"};
 
@@ -9557,7 +9557,7 @@ exports.shareGame = function(d){return "Μοιράσου το παιχνίδι �
 
 exports.soundRandom = function(d){return "τυχαίο"};
 
-exports.soundBounce = function(d){return "αναπήδηση"};
+exports.soundBounce = function(d){return "αναπήδησε"};
 
 exports.soundCrunch = function(d){return "τρίξιμο"};
 

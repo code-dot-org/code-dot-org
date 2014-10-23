@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -7707,7 +7707,7 @@ exports.catMath = function(d){return "Matematikk"};
 
 exports.catProcedures = function(d){return "Funksjoner"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -7723,7 +7723,7 @@ exports.directionNorthLetter = function(d){return "N"};
 
 exports.directionSouthLetter = function(d){return "S"};
 
-exports.directionEastLetter = function(d){return "E"};
+exports.directionEastLetter = function(d){return "Ø"};
 
 exports.directionWestLetter = function(d){return "V"};
 
@@ -7799,7 +7799,7 @@ exports.tooManyBlocksMsg = function(d){return "Denne oppgaven kan løses med <x 
 
 exports.tooMuchWork = function(d){return "Du fikk meg til å gjøre masse arbeid! Kan du forsøke med mindre repetisjon?"};
 
-exports.toolboxHeader = function(d){return "Blokker"};
+exports.toolboxHeader = function(d){return "blokker"};
 
 exports.openWorkspace = function(d){return "Slik fungerer det"};
 
@@ -7815,7 +7815,7 @@ exports.saveToGallery = function(d){return "Lagre til galleriet"};
 
 exports.savedToGallery = function(d){return "Lagret i galleriet!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Beklager, vi kan ikke dele dette programmet."};
 
 exports.typeCode = function(d){return "Skriv din JavaScript-kode under disse instruksjonene."};
 
@@ -7858,11 +7858,11 @@ exports.no = function(d){return "Nei"};
 
 exports.numBlocksNeeded = function(d){return "Denne oppgaven kan løses med %1 blokker."};
 
-exports.reinfFeedbackMsg = function(d){return "Du kan trykke på \"Prøv igjen\"-knappen for å fortsette spillet."};
+exports.reinfFeedbackMsg = function(d){return "Du kan trykke på \"Prøv igjen\" for å gå tilbake til spillet ditt."};
 
 exports.share = function(d){return "Del"};
 
-exports.shareGame = function(d){return "Del spillet ditt:"};
+exports.shareGame = function(d){return "Del ditt spill:"};
 
 exports.yes = function(d){return "Ja"};
 

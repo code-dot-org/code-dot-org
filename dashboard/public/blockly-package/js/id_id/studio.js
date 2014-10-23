@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -18707,13 +18707,13 @@ exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Fungsi"};
 
-exports.catText = function(d){return "Teks"};
+exports.catText = function(d){return "teks"};
 
 exports.catVariables = function(d){return "Variabel"};
 
 exports.codeTooltip = function(d){return "Lihat kode JavaScript."};
 
-exports.continue = function(d){return "Ayo lanjutkan!"};
+exports.continue = function(d){return "Lanjutkan"};
 
 exports.dialogCancel = function(d){return "Batal"};
 
@@ -18775,7 +18775,7 @@ exports.play = function(d){return "mainkan"};
 
 exports.puzzleTitle = function(d){return "Teka-teki ke "+v(d,"puzzle_number")+" dari "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "ulangi"};
+exports.repeat = function(d){return "Ulangi"};
 
 exports.resetProgram = function(d){return "Kembali ke awal"};
 
@@ -18799,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "Teka-teki ini dapat diselesaikan 
 
 exports.tooMuchWork = function(d){return "Anda membuat saya melakukan terlalu banyak pekerjaan!  Bisakan Anda coba membuat pengulangan yang lebih sedikit?"};
 
-exports.toolboxHeader = function(d){return "Blok"};
+exports.toolboxHeader = function(d){return "blok"};
 
 exports.openWorkspace = function(d){return "Cara kerjanya"};
 
@@ -18852,9 +18852,9 @@ exports.genericFeedback = function(d){return "Lihatlah hasil anda dan cobalah un
 var MessageFormat = require("messageformat");MessageFormat.locale.id=function(n){return "other"}
 exports.actor = function(d){return "pelaku"};
 
-exports.catActions = function(d){return "tindakan"};
+exports.catActions = function(d){return "Aksi"};
 
-exports.catControl = function(d){return "pengulangan"};
+exports.catControl = function(d){return "Loop"};
 
 exports.catEvents = function(d){return "kegiatan"};
 
@@ -18862,11 +18862,11 @@ exports.catLogic = function(d){return "Logika"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Fungsi"};
+exports.catProcedures = function(d){return "fungsi"};
 
 exports.catText = function(d){return "Teks"};
 
-exports.catVariables = function(d){return "Variabel"};
+exports.catVariables = function(d){return "variabel"};
 
 exports.changeScoreTooltip = function(d){return "Menambah atau menghapus angka untuk Skor."};
 
@@ -18890,7 +18890,7 @@ exports.incrementPlayerScore = function(d){return "Mengukur titik"};
 
 exports.makeProjectileDisappear = function(d){return "menghilang"};
 
-exports.makeProjectileBounce = function(d){return "melambung"};
+exports.makeProjectileBounce = function(d){return "memantul"};
 
 exports.makeProjectileBlueFireball = function(d){return "membuat bola api biru\n"};
 
@@ -18942,15 +18942,15 @@ exports.moveDown = function(d){return "Pindahkan ke bawah"};
 
 exports.moveDownTooltip = function(d){return "menurunkan karakter."};
 
-exports.moveLeft = function(d){return "gerak kiri"};
+exports.moveLeft = function(d){return "Gerak ke kiri"};
 
 exports.moveLeftTooltip = function(d){return "memindahkan karakter ke kiri."};
 
-exports.moveRight = function(d){return "pindah kanan"};
+exports.moveRight = function(d){return "Gerak ke kanan"};
 
 exports.moveRightTooltip = function(d){return "pindahkan karakter ke kanan."};
 
-exports.moveUp = function(d){return "gerak ke atas"};
+exports.moveUp = function(d){return "Gerak ke atas"};
 
 exports.moveUpTooltip = function(d){return "Pindahkan aktor ke atas."};
 
@@ -18972,23 +18972,23 @@ exports.playSoundGoal2 = function(d){return "Mainkan suara gol 2"};
 
 exports.playSoundHit = function(d){return "Mainkan suara pukulan"};
 
-exports.playSoundLosePoint = function(d){return "Mainkan suara kehilangan poin"};
+exports.playSoundLosePoint = function(d){return "mainkan suara kehilangan poin"};
 
-exports.playSoundLosePoint2 = function(d){return "Mainkan suara kehilangan poin 2"};
+exports.playSoundLosePoint2 = function(d){return "mainkan suara kehilangan poin 2"};
 
 exports.playSoundRetro = function(d){return "Mainkan suara retro "};
 
-exports.playSoundRubber = function(d){return "Mainkan suara karet"};
+exports.playSoundRubber = function(d){return "mainkan suara karet"};
 
-exports.playSoundSlap = function(d){return "Putar suara tamparan"};
+exports.playSoundSlap = function(d){return "putar suara tamparan"};
 
-exports.playSoundTooltip = function(d){return "Mainkan bunyi pilihan."};
+exports.playSoundTooltip = function(d){return "mainkan bunyi pilihan."};
 
 exports.playSoundWinPoint = function(d){return "Putar suara  titik menang"};
 
 exports.playSoundWinPoint2 = function(d){return "Putar suara titik menang 2"};
 
-exports.playSoundWood = function(d){return "Bermain suara kayu "};
+exports.playSoundWood = function(d){return "mainkan suara kayu"};
 
 exports.positionOutTopLeft = function(d){return "ke posisi kiri atas di atas "};
 
@@ -19054,7 +19054,7 @@ exports.saySpriteN = function(d){return "aktor "+v(d,"spriteIndex")+" mengatakan
 
 exports.saySpriteTooltip = function(d){return "Munculkan pop up dengan teks dari aktor tertentu."};
 
-exports.scoreText = function(d){return "Nilai: "+v(d,"playerScore")};
+exports.scoreText = function(d){return "Skor: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "atur latar belakang"};
 
@@ -19086,9 +19086,9 @@ exports.setBackgroundTennis = function(d){return "atur latar belakang tennis"};
 
 exports.setBackgroundWinter = function(d){return "atur latar belakang musim dingin"};
 
-exports.setBackgroundTooltip = function(d){return "tetapkan latar belakang gambar"};
+exports.setBackgroundTooltip = function(d){return "Atur gambar latar belakang"};
 
-exports.setScoreText = function(d){return "atur nilai"};
+exports.setScoreText = function(d){return "tetapkan skor"};
 
 exports.setScoreTextTooltip = function(d){return "atur teks yang ditampilkan di area skor"};
 
@@ -19218,7 +19218,7 @@ exports.showTSDefText = function(d){return "Ketik teks disini"};
 
 exports.showTitleScreenTooltip = function(d){return "Tampilkan layar judul dengan judul dan teks terkait."};
 
-exports.setSprite = function(d){return "atur"};
+exports.setSprite = function(d){return "tetapkan"};
 
 exports.setSpriteN = function(d){return "pasang aktor\n"};
 
@@ -19298,7 +19298,7 @@ exports.whenArrowUp = function(d){return "panah keatas"};
 
 exports.whenArrowTooltip = function(d){return "Lakukan aksi dibawah ini ketika panah yang tertentu sudah terpencet"};
 
-exports.whenDown = function(d){return "Ketika panah bawah"};
+exports.whenDown = function(d){return "ketika panah bawah"};
 
 exports.whenDownTooltip = function(d){return "Laksanakan tindakan-tindakan di bawah ini ketika tombol panah kebawah ditekan."};
 
@@ -19310,7 +19310,7 @@ exports.whenLeft = function(d){return "Ketika anak panah kiri"};
 
 exports.whenLeftTooltip = function(d){return "Laksanakan tindakan-tindakan di bawah ini ketika tombol panah kiri ditekan."};
 
-exports.whenRight = function(d){return "Ketika anak panah kanan"};
+exports.whenRight = function(d){return "ketika anak panah kanan"};
 
 exports.whenRightTooltip = function(d){return "Laksanakan tindakan-tindakan di bawah ini ketika tombol panah kanan ditekan."};
 
@@ -19356,7 +19356,7 @@ exports.whenSpriteCollidedWithRightEdge = function(d){return "menyentuh ujung ka
 
 exports.whenSpriteCollidedWithTopEdge = function(d){return "menyentuh ujung atas"};
 
-exports.whenUp = function(d){return "Bila tanda panah atas"};
+exports.whenUp = function(d){return "ketika anak panah atas"};
 
 exports.whenUpTooltip = function(d){return "Laksanakan tindakan-tindakan di bawah ini ketika tombol panah keatas ditekan."};
 

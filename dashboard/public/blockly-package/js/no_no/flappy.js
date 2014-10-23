@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -9212,7 +9212,7 @@ exports.catMath = function(d){return "Matematikk"};
 
 exports.catProcedures = function(d){return "Funksjoner"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -9228,7 +9228,7 @@ exports.directionNorthLetter = function(d){return "N"};
 
 exports.directionSouthLetter = function(d){return "S"};
 
-exports.directionEastLetter = function(d){return "E"};
+exports.directionEastLetter = function(d){return "Ø"};
 
 exports.directionWestLetter = function(d){return "V"};
 
@@ -9304,7 +9304,7 @@ exports.tooManyBlocksMsg = function(d){return "Denne oppgaven kan løses med <x 
 
 exports.tooMuchWork = function(d){return "Du fikk meg til å gjøre masse arbeid! Kan du forsøke med mindre repetisjon?"};
 
-exports.toolboxHeader = function(d){return "Blokker"};
+exports.toolboxHeader = function(d){return "blokker"};
 
 exports.openWorkspace = function(d){return "Slik fungerer det"};
 
@@ -9320,7 +9320,7 @@ exports.saveToGallery = function(d){return "Lagre til galleriet"};
 
 exports.savedToGallery = function(d){return "Lagret i galleriet!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Beklager, vi kan ikke dele dette programmet."};
 
 exports.typeCode = function(d){return "Skriv din JavaScript-kode under disse instruksjonene."};
 
@@ -9357,7 +9357,7 @@ exports.genericFeedback = function(d){return "Se hvordan du endte opp, og prøv 
 var MessageFormat = require("messageformat");MessageFormat.locale.no=function(n){return n===1?"one":"other"}
 exports.continue = function(d){return "Fortsett"};
 
-exports.doCode = function(d){return "Gjør"};
+exports.doCode = function(d){return "gjør"};
 
 exports.elseCode = function(d){return "ellers"};
 
@@ -9365,7 +9365,7 @@ exports.endGame = function(d){return "Avslutt spill"};
 
 exports.endGameTooltip = function(d){return "Avslutter spillet."};
 
-exports.finalLevel = function(d){return "Gratulerer! Du har løst den siste utfordringen."};
+exports.finalLevel = function(d){return "Gratulerer! Du har løst den siste oppgaven."};
 
 exports.flap = function(d){return "flaks"};
 
@@ -9383,17 +9383,17 @@ exports.flapVeryLarge = function(d){return "flaks en veldig stor mengde"};
 
 exports.flapTooltip = function(d){return "Fly Flappy oppover."};
 
-exports.flappySpecificFail = function(d){return "Koden din ser bra ut - den vil flakse med hvert klikk. Men du må klikke mange ganger for å flakse til målet."};
+exports.flappySpecificFail = function(d){return "Koden ser bra - det vil flappe ved hvert klikk. Men du må klikke mange ganger for å flappe til målet."};
 
 exports.incrementPlayerScore = function(d){return "Få et poeng"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Legg til en til nåværende spillers poengsum."};
 
-exports.nextLevel = function(d){return "Gratulerer! Du har fullført denne utfordringen."};
+exports.nextLevel = function(d){return "Gratulerer! Du har fullført denne oppgaven."};
 
 exports.no = function(d){return "Nei"};
 
-exports.numBlocksNeeded = function(d){return "Denne utfordringen kan bli løst med %1 blokker."};
+exports.numBlocksNeeded = function(d){return "Denne oppgaven kan løses med %1 blokker."};
 
 exports.playSoundRandom = function(d){return "Spill tilfeldig lyd"};
 
@@ -9421,9 +9421,9 @@ exports.playSoundSplash = function(d){return "spill plaske-lyd"};
 
 exports.playSoundLaser = function(d){return "spill laser-lyd"};
 
-exports.playSoundTooltip = function(d){return "Spill den valgte lyden."};
+exports.playSoundTooltip = function(d){return "Spill valgt lyd."};
 
-exports.reinfFeedbackMsg = function(d){return "Du kan trykke på \"Try Again\" knappen for å gå tilbake til ditt spill."};
+exports.reinfFeedbackMsg = function(d){return "Du kan trykke på \"Prøv igjen\" for å gå tilbake til spillet ditt."};
 
 exports.scoreText = function(d){return "Sluttresultat: "+v(d,"playerScore")};
 
@@ -9609,7 +9609,7 @@ exports.whenEnterObstacle = function(d){return "når passert hindring"};
 
 exports.whenEnterObstacleTooltip = function(d){return "Utfør handlingene nedenfor når Flappy møter en hindring."};
 
-exports.whenRunButtonClick = function(d){return "Når spillet starter"};
+exports.whenRunButtonClick = function(d){return "når spillet starter"};
 
 exports.whenRunButtonClickTooltip = function(d){return "Utfør handlingene nedenfor når spillet starter."};
 

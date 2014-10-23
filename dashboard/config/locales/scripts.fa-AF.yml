@@ -4,7 +4,7 @@
       name:
         test:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          The Maze: "مارپیچ"
+          The Maze: "پیچ و خم"
           Multi: Multi
           Match: Match
           Math Image: Math Image
@@ -47,7 +47,7 @@
             grades.
           'Artist: Loops': 'Artist: Loops'
         course2:
-          The Maze: "مارپیچ"
+          The Maze: "پیچ و خم"
           Suzi: Suzi
           The Artist: "هنرمند"
           Artist Debugging: Artist Debugging
@@ -67,7 +67,7 @@
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: "شرطی ها"
+          Conditionals: "مشروط"
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -89,7 +89,7 @@
           'Maze: Sequence2': 'Maze: Sequence2'
           'Artist: Nested Loops': 'Artist: Nested Loops'
         course3:
-          The Maze: "مارپیچ"
+          The Maze: "پیچ و خم"
           'Studio: Create a Story': 'Studio: Create a Story'
           The Artist: "هنرمند"
           title: Course 3
@@ -118,7 +118,7 @@
             conditions.  By the end of the course, create your very own custom game,
             art, or story than you can share with anyone.
           'Studio: Create a Game': 'Studio: Create a Game'
-          Maze: Maze
+          Maze: "پیچ و خم"
           Artist: Artist
           'Artist: Functions': 'Artist: Functions'
           'Bee: Functions': 'Bee: Functions'
@@ -141,6 +141,7 @@
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
           'Bee: Debugging2': 'Bee: Debugging2'
           'Artist: Patterns': 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

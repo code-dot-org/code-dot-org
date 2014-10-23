@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -13182,7 +13182,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
 exports.and = function(d){return "そして"};
 
-exports.blocklyMessage = function(d){return "ブロック状の"};
+exports.blocklyMessage = function(d){return "ブロッキー"};
 
 exports.catActions = function(d){return "操作"};
 
@@ -13192,19 +13192,19 @@ exports.catLogic = function(d){return "ロジック（論理）"};
 
 exports.catLists = function(d){return "リスト"};
 
-exports.catLoops = function(d){return "繰り返し"};
+exports.catLoops = function(d){return "ループ"};
 
 exports.catMath = function(d){return "数値"};
 
 exports.catProcedures = function(d){return "関数"};
 
-exports.catText = function(d){return "文字列"};
+exports.catText = function(d){return "テキスト"};
 
 exports.catVariables = function(d){return "変数"};
 
 exports.codeTooltip = function(d){return "生成されたJavaScriptコードを見る。"};
 
-exports.continue = function(d){return "次へ"};
+exports.continue = function(d){return "続行"};
 
 exports.dialogCancel = function(d){return "キャンセル"};
 
@@ -13290,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "このパズルは <x id='START_S
 
 exports.tooMuchWork = function(d){return "ちょっと作業が多すぎますね！もう少し繰り返し回数を少なくできませんか？"};
 
-exports.toolboxHeader = function(d){return "ブロック"};
+exports.toolboxHeader = function(d){return "ブロック達"};
 
 exports.openWorkspace = function(d){return "仕組み"};
 
@@ -13361,9 +13361,9 @@ exports.dirS = function(d){return "南"};
 
 exports.dirW = function(d){return "西"};
 
-exports.doCode = function(d){return "する"};
+exports.doCode = function(d){return "実行"};
 
-exports.elseCode = function(d){return "そうでなければ"};
+exports.elseCode = function(d){return "他"};
 
 exports.fill = function(d){return "1つ埋める"};
 
@@ -13417,7 +13417,7 @@ exports.moveBackward = function(d){return "move backward"};
 
 exports.moveEastTooltip = function(d){return "Move me east one space."};
 
-exports.moveForward = function(d){return "前に移動"};
+exports.moveForward = function(d){return "前方に移動します。"};
 
 exports.moveForwardTooltip = function(d){return "私を前方に 1スペース 移動させてください。"};
 
@@ -13451,11 +13451,11 @@ exports.notAtHoneycombError = function(d){return "You can only make honey at a h
 
 exports.numBlocksNeeded = function(d){return "このパズルは%1個のブロックで解けます。"};
 
-exports.pathAhead = function(d){return "前に道"};
+exports.pathAhead = function(d){return "前に道があります。"};
 
-exports.pathLeft = function(d){return "もし左に道があるとき\n"};
+exports.pathLeft = function(d){return "もし左に道があるときは\n"};
 
-exports.pathRight = function(d){return "もし右に道があるとき"};
+exports.pathRight = function(d){return "もし右に道があるときは"};
 
 exports.pilePresent = function(d){return "山があります。"};
 
@@ -13485,7 +13485,7 @@ exports.totalHoney = function(d){return "total honey"};
 
 exports.totalNectar = function(d){return "total nectar"};
 
-exports.turnLeft = function(d){return "左に回転"};
+exports.turnLeft = function(d){return "左に曲がる"};
 
 exports.turnRight = function(d){return "右に回転"};
 

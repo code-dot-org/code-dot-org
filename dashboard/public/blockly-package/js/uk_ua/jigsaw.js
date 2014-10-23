@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -7702,7 +7702,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.uk = function 
   }
   return 'other';
 };
-exports.and = function(d){return "і"};
+exports.and = function(d){return "та"};
 
 exports.blocklyMessage = function(d){return "Блоклі"};
 
@@ -7720,7 +7720,7 @@ exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Функції"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Змінні"};
 
@@ -7752,13 +7752,13 @@ exports.finalStage = function(d){return "Вітання! Завершено ос
 
 exports.finalStageTrophies = function(d){return "Вітання! Ви завершили останній етап і виграли "+p(d,"numTrophies",0,"uk",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Готово"};
+exports.finish = function(d){return "Кінець"};
 
 exports.generatedCodeInfo = function(d){return "Навіть кращі університети навчають програмуванню на основі блоків (наприклад, "+v(d,"berkeleyLink")+" "+v(d,"harvardLink")+"). Але всередині ті блоки, які ви щойно склали, можуть показуватись у JavaScript, найпоширенішій мові програмування:"};
 
 exports.hashError = function(d){return "Шкода, але  '%1' не відповідає жодній збереженій програмі."};
 
-exports.help = function(d){return "Допомога"};
+exports.help = function(d){return "Довідка"};
 
 exports.hintTitle = function(d){return "Підказка:"};
 
@@ -7812,7 +7812,7 @@ exports.tooManyBlocksMsg = function(d){return "Це завдання можна 
 
 exports.tooMuchWork = function(d){return "Ви змусили мене попрацювати! Може спробуємо менше повторів?"};
 
-exports.toolboxHeader = function(d){return "Блоки"};
+exports.toolboxHeader = function(d){return "блоки"};
 
 exports.openWorkspace = function(d){return "Як це працює"};
 
@@ -7878,7 +7878,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.uk = function 
 };
 exports.continue = function(d){return "Далі"};
 
-exports.nextLevel = function(d){return "Вітання! Ви розв'язали останнє завдання."};
+exports.nextLevel = function(d){return "Вітання! Ви розв'язали це завдання."};
 
 exports.no = function(d){return "Ні"};
 

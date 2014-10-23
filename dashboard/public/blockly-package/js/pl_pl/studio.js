@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -18717,11 +18717,11 @@ exports.catLists = function(d){return "Listy"};
 
 exports.catLoops = function(d){return "Pętle"};
 
-exports.catMath = function(d){return "Matematyczne"};
+exports.catMath = function(d){return "Matematyka"};
 
 exports.catProcedures = function(d){return "Funkcje"};
 
-exports.catText = function(d){return "Tekstowe"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Zmienne"};
 
@@ -18753,7 +18753,7 @@ exports.finalStage = function(d){return "Gratulacje! Ukończyłeś ostatni etap.
 
 exports.finalStageTrophies = function(d){return "Gratulacje! Ukończyłeś ostatni etap i wygrałeś "+p(d,"numTrophies",0,"pl",{"one":"trofeum","other":n(d,"numTrophies")+" trofea"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Koniec"};
 
 exports.generatedCodeInfo = function(d){return "Nawet najlepsze uczelnie uczą kodowania opartego o bloki (np. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale bloki które zostały użyte, można również zobaczyć w JavaScript, jednym z najbardziej powszechnie stosowanym języku programowania na świecie:"};
 
@@ -18805,7 +18805,7 @@ exports.showGeneratedCode = function(d){return "Pokaż kod"};
 
 exports.subtitle = function(d){return "graficzne środowisko programistyczne"};
 
-exports.textVariable = function(d){return "tekst"};
+exports.textVariable = function(d){return "Tekst"};
 
 exports.tooFewBlocksMsg = function(d){return "Używasz wszystkich wymaganych bloków, ale spróbuj użyć ich więcej, aby ukończyć łamigłówkę."};
 
@@ -18813,7 +18813,7 @@ exports.tooManyBlocksMsg = function(d){return "Ta łamigłówka może być rozwi
 
 exports.tooMuchWork = function(d){return "Spowodowałeś, że miałem dużo pracy. Czy możesz zmniejszyć liczbę powtórzeń?"};
 
-exports.toolboxHeader = function(d){return "Bloki"};
+exports.toolboxHeader = function(d){return "bloki"};
 
 exports.openWorkspace = function(d){return "Jak to działa"};
 
@@ -18880,9 +18880,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.pl = function 
 };
 exports.actor = function(d){return "actor"};
 
-exports.catActions = function(d){return "Akcje"};
+exports.catActions = function(d){return "Działania"};
 
-exports.catControl = function(d){return "Pętle"};
+exports.catControl = function(d){return "pętle"};
 
 exports.catEvents = function(d){return "Zdarzenia"};
 
@@ -18890,11 +18890,11 @@ exports.catLogic = function(d){return "Logika"};
 
 exports.catMath = function(d){return "Matematyka"};
 
-exports.catProcedures = function(d){return "Funkcje"};
+exports.catProcedures = function(d){return "funkcje"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "Tekstowe"};
 
-exports.catVariables = function(d){return "Zmienne"};
+exports.catVariables = function(d){return "zmienne"};
 
 exports.changeScoreTooltip = function(d){return "Dodaj lub usuń punkt do wyniku."};
 
@@ -18918,7 +18918,7 @@ exports.incrementPlayerScore = function(d){return "wynik punktowy"};
 
 exports.makeProjectileDisappear = function(d){return "disappear"};
 
-exports.makeProjectileBounce = function(d){return "bounce"};
+exports.makeProjectileBounce = function(d){return "odbij się"};
 
 exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
 
@@ -19246,7 +19246,7 @@ exports.showTSDefText = function(d){return "type text here"};
 
 exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
 
-exports.setSprite = function(d){return "ustaw"};
+exports.setSprite = function(d){return "przypisz"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 
@@ -19326,7 +19326,7 @@ exports.whenArrowUp = function(d){return "Strzałka w górę"};
 
 exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
 
-exports.whenDown = function(d){return "gdy strzałka w dół"};
+exports.whenDown = function(d){return "kiedy strzałka w dół"};
 
 exports.whenDownTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w dół."};
 
@@ -19334,11 +19334,11 @@ exports.whenGameStarts = function(d){return "gdy opowieść się zacznie"};
 
 exports.whenGameStartsTooltip = function(d){return "Wykonaj poniższe czynności, wraz z rozpoczęciem opowieści."};
 
-exports.whenLeft = function(d){return "gdy strzałka w lewo"};
+exports.whenLeft = function(d){return "kiedy strzałka w lewo"};
 
 exports.whenLeftTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w lewo."};
 
-exports.whenRight = function(d){return "gdy strzałka w prawo"};
+exports.whenRight = function(d){return "kiedy strzałka w prawo"};
 
 exports.whenRightTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w prawo."};
 
@@ -19384,7 +19384,7 @@ exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge
 
 exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
 
-exports.whenUp = function(d){return "gdy strzałka w górę"};
+exports.whenUp = function(d){return "kiedy strzałka w górę"};
 
 exports.whenUpTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w górę."};
 

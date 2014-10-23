@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -11550,13 +11550,13 @@ exports.dirW = function(d){return "غرب"};
 
 exports.doCode = function(d){return "انجام بده"};
 
-exports.elseCode = function(d){return "دیگر"};
+exports.elseCode = function(d){return "وگرنه"};
 
-exports.finalLevel = function(d){return "تبریک!شما معمای نهایی را حل کردید."};
+exports.finalLevel = function(d){return "تبریک! شما پازل نهایی را حل کردید."};
 
 exports.heightParameter = function(d){return "ارتفاع"};
 
-exports.ifCode = function(d){return "اگر"};
+exports.ifCode = function(d){return "\"if\""};
 
 exports.ifPathAhead = function(d){return "اگر مسیر رو به جلو است"};
 
@@ -11564,7 +11564,7 @@ exports.ifTooltip = function(d){return "اگر راهی در مسیر مسخصی
 
 exports.ifelseTooltip = function(d){return "اگر راهی در مسیر مشخصی وجود دارد,اولین از سری اقدامات را انجام ده,در غیر این صورت به سراغ دومین اقدام برو."};
 
-exports.incrementOpponentScore = function(d){return "امتیاز نمره حریف"};
+exports.incrementOpponentScore = function(d){return "افزایش امتیاز رقیب"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "به امتیاز نمره فعلی حریف یکی اضافه کنید."};
 
@@ -11586,7 +11586,7 @@ exports.moveDown = function(d){return "برو پایین"};
 
 exports.moveDownTooltip = function(d){return "Move the paddle down."};
 
-exports.moveForward = function(d){return "برو جلو"};
+exports.moveForward = function(d){return "به جلو حرکت کردن"};
 
 exports.moveForwardTooltip = function(d){return "به اندازه یک فاصله من را جلو ببر."};
 
@@ -11602,7 +11602,7 @@ exports.moveUp = function(d){return "برو بالا"};
 
 exports.moveUpTooltip = function(d){return "Move the paddle up."};
 
-exports.nextLevel = function(d){return "تبریک!شما این معما را به اتمام رساندید."};
+exports.nextLevel = function(d){return "تبریک! شما این پازل را به اتمام رساندید."};
 
 exports.no = function(d){return "نه"};
 
@@ -11612,7 +11612,7 @@ exports.noPathLeft = function(d){return "سمت چپ راهی نیست"};
 
 exports.noPathRight = function(d){return "سمت راست راهی نیست"};
 
-exports.numBlocksNeeded = function(d){return "این معما میتواند با %1 از بلوک ها حل شود."};
+exports.numBlocksNeeded = function(d){return "این پازل می تواند با %1 از بلوکها حل شود."};
 
 exports.pathAhead = function(d){return "مسیر پیش رو"};
 
@@ -11622,45 +11622,45 @@ exports.pathRight = function(d){return "اگر مسیر به سمت راست ب�
 
 exports.pilePresent = function(d){return "آنجا یک توده وجود دارد"};
 
-exports.playSoundCrunch = function(d){return "صدای خرد شدن را پخش کن"};
+exports.playSoundCrunch = function(d){return "پخش صدای خرد شدن"};
 
-exports.playSoundGoal1 = function(d){return "صدای هدف 1 را پخش کن"};
+exports.playSoundGoal1 = function(d){return "پخش صدای هدف 1"};
 
-exports.playSoundGoal2 = function(d){return "صدای هدف 2 را پخش کن"};
+exports.playSoundGoal2 = function(d){return "پخش صدای هدف 2"};
 
-exports.playSoundHit = function(d){return "صدای ضربه را پخش کن"};
+exports.playSoundHit = function(d){return "پخش صدای ضربه"};
 
-exports.playSoundLosePoint = function(d){return "صدای امتیاز باخت را پخش کن"};
+exports.playSoundLosePoint = function(d){return "پخش صدای از دست دادن امتیاز"};
 
-exports.playSoundLosePoint2 = function(d){return "صدای امتیاز باخت 2 را پخش کن"};
+exports.playSoundLosePoint2 = function(d){return "پخش صدای از دست دادن امتیاز 2"};
 
-exports.playSoundRetro = function(d){return "صدای قبلی را پخش کن"};
+exports.playSoundRetro = function(d){return "پخش صدای سبک قدیمی"};
 
-exports.playSoundRubber = function(d){return "صدای کش را پخش کن"};
+exports.playSoundRubber = function(d){return "پخش صدای کش لاستیکی"};
 
-exports.playSoundSlap = function(d){return "صدای دست زدن را پخش کن"};
+exports.playSoundSlap = function(d){return "پخش صدای ضربه با دست"};
 
-exports.playSoundTooltip = function(d){return "صدای انتخابی را پخش کن."};
+exports.playSoundTooltip = function(d){return "پخش صدای انتخابی شما."};
 
-exports.playSoundWinPoint = function(d){return "صدای امتیاز برد را پخش کن"};
+exports.playSoundWinPoint = function(d){return "پخش صدای کسب امتیاز"};
 
-exports.playSoundWinPoint2 = function(d){return "صدای امتیاز برد 2 را پخش کن"};
+exports.playSoundWinPoint2 = function(d){return "پخش صدای کسب امتیاز 2"};
 
-exports.playSoundWood = function(d){return "صدای چوب را پخش کن"};
+exports.playSoundWood = function(d){return "پخش کردن صدای چوب"};
 
 exports.putdownTower = function(d){return "کثیفی ها را پایین بکشید"};
 
-exports.reinfFeedbackMsg = function(d){return "شما می توانید دکمه \"دوباره امتحان کن\" را بفشارید تا به بازیتان برگردید."};
+exports.reinfFeedbackMsg = function(d){return "شما می توانید دکمه \"دوباره امتحان کنید\" را بفشارید تا به بازی برگردید."};
 
 exports.removeSquare = function(d){return "مربع را حزف کن"};
 
-exports.repeatUntil = function(d){return "تکرار کن تا "};
+exports.repeatUntil = function(d){return "تکرار کن تا زمانی که"};
 
 exports.repeatUntilBlocked = function(d){return "تا زمانیکه مسیر پیش رو است "};
 
-exports.repeatUntilFinish = function(d){return "تا پایان تکرار کن"};
+exports.repeatUntilFinish = function(d){return "آنقدر تکرار کن تا تمام شود"};
 
-exports.scoreText = function(d){return "امتیاز:"+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "امتیاز: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
 exports.setBackgroundRandom = function(d){return "تنظیم تصادفی منظره"};
 
@@ -11668,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "قرار دادن مرحل�
 
 exports.setBackgroundRetro = function(d){return "قرار دادن منظره ریترو"};
 
-exports.setBackgroundTooltip = function(d){return "تنظیم تصاویر زمینه"};
+exports.setBackgroundTooltip = function(d){return "تنظیم تصویر صحنه پس‌زمینه"};
 
 exports.setBallRandom = function(d){return "تنظیم توپ تصادفی"};
 
@@ -11716,7 +11716,7 @@ exports.setPaddleSpeedTooltip = function(d){return "تنظیم سرعت راکت
 
 exports.shareBounceTwitter = function(d){return "بازی Bounce که من ساخته ام را نگاه کن. من خودم با @codeorg آن را نوشته ام"};
 
-exports.shareGame = function(d){return "بازی تان را به اشتراک بگذارید  :"};
+exports.shareGame = function(d){return "بازی خود را به اشتراک بگذارید:"};
 
 exports.turnLeft = function(d){return "بپیچ به چپ"};
 
@@ -11738,7 +11738,7 @@ exports.whenDownTooltip = function(d){return "Execute the actions below when the
 
 exports.whenGameStarts = function(d){return "وقتی که بازی شروع می شود"};
 
-exports.whenGameStartsTooltip = function(d){return "وقتی بازی شروع شد، اقدامات زیر را انحام دهید."};
+exports.whenGameStartsTooltip = function(d){return "هنگامیکه بازی شروع می‌شود، اقدامات زیر را اجرا کن."};
 
 exports.whenLeft = function(d){return "when Left arrow"};
 
@@ -11752,15 +11752,15 @@ exports.whenRight = function(d){return "when Right arrow"};
 
 exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "هنگام زدن جهت بالا"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "اجرای عملیات زیر هنگامیکه کلید جهت بالا زده می‌شود."};
 
 exports.whenWallCollided = function(d){return "زمانی که توپ به دیوار برخورد میکند"};
 
 exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
 
-exports.whileMsg = function(d){return "هنگامیکه"};
+exports.whileMsg = function(d){return "\"while\""};
 
 exports.whileTooltip = function(d){return "اقدامات محصور را تا زمانیکه به نقطه آخر برسی تکرار کن."};
 
@@ -11773,7 +11773,7 @@ exports.and = function(d){return "و"};
 
 exports.blocklyMessage = function(d){return "بلاکلی"};
 
-exports.catActions = function(d){return "کارها"};
+exports.catActions = function(d){return "اقدامات"};
 
 exports.catColour = function(d){return "رنگ"};
 
@@ -11781,9 +11781,9 @@ exports.catLogic = function(d){return "منطق"};
 
 exports.catLists = function(d){return "لیست ها"};
 
-exports.catLoops = function(d){return "حلقه‌ها"};
+exports.catLoops = function(d){return "حلقه ها"};
 
-exports.catMath = function(d){return "ریاضی"};
+exports.catMath = function(d){return "محاسبات ریاضی"};
 
 exports.catProcedures = function(d){return "توابع"};
 
@@ -11833,7 +11833,7 @@ exports.jump = function(d){return "پرش"};
 
 exports.levelIncompleteError = function(d){return "شما همه‌ی بلوک‌های مورد نیاز را بکار بردید، ولی نه به روش درست."};
 
-exports.listVariable = function(d){return "لیست"};
+exports.listVariable = function(d){return "فهرست"};
 
 exports.makeYourOwnFlappy = function(d){return "Flappy Bird خودتان را بسازید"};
 
@@ -11855,7 +11855,7 @@ exports.play = function(d){return "بازی"};
 
 exports.puzzleTitle = function(d){return "معمای "+v(d,"puzzle_number")+" از "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "تکرار"};
+exports.repeat = function(d){return "تکرار کن"};
 
 exports.resetProgram = function(d){return "بازنشانی"};
 
@@ -11865,7 +11865,7 @@ exports.runTooltip = function(d){return "اجرای برنامه‌ی تعریف
 
 exports.score = function(d){return "نمره"};
 
-exports.showCodeHeader = function(d){return "نمایشِ کد"};
+exports.showCodeHeader = function(d){return "کد نمایش"};
 
 exports.showGeneratedCode = function(d){return "نمایشِ کد"};
 
@@ -11879,7 +11879,7 @@ exports.tooManyBlocksMsg = function(d){return "این معما را می‌تو�
 
 exports.tooMuchWork = function(d){return "شما منو مجبور به انجام مقدار زیادی کار کردید. میشه تعداد تکرار رو کمتر کنید؟"};
 
-exports.toolboxHeader = function(d){return "بلوک‌ها"};
+exports.toolboxHeader = function(d){return "بلوک ها"};
 
 exports.openWorkspace = function(d){return "چگونگیِ کار"};
 

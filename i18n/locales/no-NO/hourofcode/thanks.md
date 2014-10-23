@@ -38,24 +38,24 @@ Fortell vennene dine om #Kodetimen.
 
 ## 2. Spør hele skolen din om å tilby en Kodetime
 
-[Send this email](/resources#email) or give [this handout](/files/schools-handout.pdf) to your principal.
+[Send denne e-posten](/resources#email) eller gi [dette støttearket](/files/schools-handout.pdf) til rektoren din.
 
 <% end %>
 
-## 3. Make a generous donation
+## 3. Bidra med midler
 
-[Donate to our crowdfunding campaign](http://code.org/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://code.org/donate) in history. Every dollar will be matched by major Code.org [donors](http://code.org/about/donors), doubling your impact.
+[Bidra til vår crowdfunding-kampanje](http://code.org/donate). For å lære 100 millioner barn programmering, trenger vi din støtte. Vi har akkurat lansert det som kan bli den [største crowdfunding-kampanje for opplæring](http://code.org/donate) i historien. Hver krone som samles inn vil bli matchet av Code.orgs [sponsoer ](http://code.org/about/donors), så din gave blir dobbelt så stor.
 
-## 4. Ask your employer to get involved
+## 4. Be arbeidsgiveren din engasjere seg
 
-[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
+[Send denne e-posten](/resources#email) til din leder eller administrerende direktør. Eller [gi dem dette fllygebladet](/resources/hoc-one-pager.pdf).
 
-## 5. Promote Hour of Code within your community
+## 5. Snakk om Kodetimen i ditt lokalmiljø
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Rekrutter en lokal klubb, ett idrettslag, universitet eller fagforening. Eller arranger en Kodetime "fest" for nabolaget.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 6. Spør en lokalpolitiker om å støtte Kodetimen
 
-[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Send denne e-posten](/resources#politicians) til ordfører, bystyret eller skolestyret. Eller [gi dem dette flygebladet](/resources/hoc-one-pager.pdf) og invitere dem til skolen.
 
 <%= view 'popup_window.js' %>

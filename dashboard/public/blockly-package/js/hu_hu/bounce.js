@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -11552,7 +11552,7 @@ exports.doCode = function(d){return "csináld"};
 
 exports.elseCode = function(d){return "különben"};
 
-exports.finalLevel = function(d){return "Gratulálok! A végső rejtvény megoldotta."};
+exports.finalLevel = function(d){return "Gratulálok, megoldottad az utolsó feladatot."};
 
 exports.heightParameter = function(d){return "magasság"};
 
@@ -11570,7 +11570,7 @@ exports.incrementOpponentScoreTooltip = function(d){return "Adjon egyet az ellen
 
 exports.incrementPlayerScore = function(d){return "pontszám"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Adjon egyet a játékos pontszámához."};
+exports.incrementPlayerScoreTooltip = function(d){return "Adjon egyet az aktuális játékos pontjaihoz."};
 
 exports.isWall = function(d){return "Ez egy fal"};
 
@@ -11582,7 +11582,7 @@ exports.launchBallTooltip = function(d){return "Hozd játékba a labdát."};
 
 exports.makeYourOwn = function(d){return "Készítsd el a saját Bounce játékodat"};
 
-exports.moveDown = function(d){return "menj lejjebb"};
+exports.moveDown = function(d){return "lejjebb"};
 
 exports.moveDownTooltip = function(d){return "Mozgasd lejjebb a lapátot."};
 
@@ -11594,17 +11594,17 @@ exports.moveLeft = function(d){return "balra"};
 
 exports.moveLeftTooltip = function(d){return "Mozgasd balra a lapátot."};
 
-exports.moveRight = function(d){return "menj jobbra"};
+exports.moveRight = function(d){return "jobbra"};
 
 exports.moveRightTooltip = function(d){return "Mozgasd jobbra a lapátot."};
 
-exports.moveUp = function(d){return "menj feljebb"};
+exports.moveUp = function(d){return "feljebb"};
 
 exports.moveUpTooltip = function(d){return "Mozgasd feljebb a lapátot."};
 
-exports.nextLevel = function(d){return "Gratulálok! Elvégezte a puzzle-t."};
+exports.nextLevel = function(d){return "Gratulálok! Ezt a feladatot megoldottad."};
 
-exports.no = function(d){return "nem"};
+exports.no = function(d){return "Nem"};
 
 exports.noPathAhead = function(d){return "az útvonal el van zárva"};
 
@@ -11612,7 +11612,7 @@ exports.noPathLeft = function(d){return "nincs út balra"};
 
 exports.noPathRight = function(d){return "nincs út jobbra "};
 
-exports.numBlocksNeeded = function(d){return "Ezt a puzzle-t a(z) % 1 blokkal megoldható."};
+exports.numBlocksNeeded = function(d){return "Ez a feladat a(z) %1 blokkal megoldható."};
 
 exports.pathAhead = function(d){return "Út előre"};
 
@@ -11630,9 +11630,9 @@ exports.playSoundGoal2 = function(d){return "2. cél hang lejátszása"};
 
 exports.playSoundHit = function(d){return "ütődés hang lejátszása"};
 
-exports.playSoundLosePoint = function(d){return "pont elvesztés hang lejátszása"};
+exports.playSoundLosePoint = function(d){return "pont elvesztése hang lejátszása"};
 
-exports.playSoundLosePoint2 = function(d){return "pont elvesztés 2 hang lejátszása"};
+exports.playSoundLosePoint2 = function(d){return "pont elvesztése hang 2 lejátszása"};
 
 exports.playSoundRetro = function(d){return "retro hang lejátszása"};
 
@@ -11644,17 +11644,17 @@ exports.playSoundTooltip = function(d){return "Kiválasztott hang lejátszása."
 
 exports.playSoundWinPoint = function(d){return "pontnyerés hang lejátszása"};
 
-exports.playSoundWinPoint2 = function(d){return "pontnyerés 2 hang lejátszása"};
+exports.playSoundWinPoint2 = function(d){return "pontnyerés hang 2 lejátszása"};
 
 exports.playSoundWood = function(d){return "fa hang lejátszása"};
 
 exports.putdownTower = function(d){return "Tegyen le tornyot"};
 
-exports.reinfFeedbackMsg = function(d){return "Nyomd meg az \"új próbálkozás\" gombot, hogy visszatérhess a játékodhoz."};
+exports.reinfFeedbackMsg = function(d){return "Nyomja meg a \"Játszd újra\" gombot hogy visszatérj a saját játékodhoz."};
 
 exports.removeSquare = function(d){return "távolítsa el a négyzetet"};
 
-exports.repeatUntil = function(d){return "ismételd amíg"};
+exports.repeatUntil = function(d){return "ismételd amíg nem"};
 
 exports.repeatUntilBlocked = function(d){return "amíg van út előre"};
 
@@ -11668,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "Salakos háttér beállít�
 
 exports.setBackgroundRetro = function(d){return "Retró háttér beállítása"};
 
-exports.setBackgroundTooltip = function(d){return "Háttérkép beállítása"};
+exports.setBackgroundTooltip = function(d){return "Adja meg a háttér képet"};
 
 exports.setBallRandom = function(d){return "Véletlenszerű labda beállítása"};
 
@@ -11716,7 +11716,7 @@ exports.setPaddleSpeedTooltip = function(d){return "Sets the speed of the paddle
 
 exports.shareBounceTwitter = function(d){return "Nézd meg milyen Bounce játékot készítettem. Magam programoztam a code.org felületén"};
 
-exports.shareGame = function(d){return "Oszd meg a játékodat:"};
+exports.shareGame = function(d){return "Oszd meg a játékod:"};
 
 exports.turnLeft = function(d){return "fordulj balra"};
 
@@ -11732,7 +11732,7 @@ exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
 
-exports.whenDown = function(d){return "Ha van lefelé nyíl"};
+exports.whenDown = function(d){return "Lefele nyílnál"};
 
 exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
 
@@ -11740,7 +11740,7 @@ exports.whenGameStarts = function(d){return "amikor a játék elindul"};
 
 exports.whenGameStartsTooltip = function(d){return "Végrehajtja a lenti utasításokat, ha a játék elindul."};
 
-exports.whenLeft = function(d){return "Ha van balra nyíl"};
+exports.whenLeft = function(d){return "balra nyíl esetén"};
 
 exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
 
@@ -11748,7 +11748,7 @@ exports.whenPaddleCollided = function(d){return "Ha a labda nekimegy az ásónak
 
 exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
 
-exports.whenRight = function(d){return "Ha van jobbra nyíl"};
+exports.whenRight = function(d){return "jobbra nyíl esetén"};
 
 exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
 
@@ -11764,7 +11764,7 @@ exports.whileMsg = function(d){return "amíg"};
 
 exports.whileTooltip = function(d){return "Ismételjük a közbülső műveleteket amíg végponthoz nem ér."};
 
-exports.yes = function(d){return "igen"};
+exports.yes = function(d){return "Igen"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -11773,7 +11773,7 @@ exports.and = function(d){return "és"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
-exports.catActions = function(d){return "Cselekvések"};
+exports.catActions = function(d){return "Műveletek"};
 
 exports.catColour = function(d){return "Szín"};
 
@@ -11785,9 +11785,9 @@ exports.catLoops = function(d){return "Ciklusok"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Függvények"};
+exports.catProcedures = function(d){return "Funkciók"};
 
-exports.catText = function(d){return "Szöveg"};
+exports.catText = function(d){return "szöveg"};
 
 exports.catVariables = function(d){return "Változók"};
 
@@ -11865,7 +11865,7 @@ exports.runTooltip = function(d){return "A munkalapon összeépített program fu
 
 exports.score = function(d){return "pontszám"};
 
-exports.showCodeHeader = function(d){return "Kód Megjelenítése"};
+exports.showCodeHeader = function(d){return "Kód megjelenítése"};
 
 exports.showGeneratedCode = function(d){return "Kód megjelenítése"};
 
@@ -11879,7 +11879,7 @@ exports.tooManyBlocksMsg = function(d){return "Ez a feladvány megoldható a <x 
 
 exports.tooMuchWork = function(d){return "Sokat dolgoztattál. Megpróbálnád egy kicsit kevesebb ismétléssel?"};
 
-exports.toolboxHeader = function(d){return "Blokkok"};
+exports.toolboxHeader = function(d){return "blokkok"};
 
 exports.openWorkspace = function(d){return "Hogyan is működik"};
 

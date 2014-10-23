@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -10690,7 +10690,7 @@ exports.emptyBlocksErrorMsg = function(d){return "\"반복\" 블럭이나 \"조�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "함수 블럭 안에는 다른 블럭을 넣어주어야 합니다."};
 
-exports.extraTopBlocks = function(d){return "블럭들이 떨어져있습니다. 블럭들을 붙이겠습니까?"};
+exports.extraTopBlocks = function(d){return "블럭들이 붙어있지 않습니다. 블럭들을 붙이겠습니까?"};
 
 exports.finalStage = function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했습니다."};
 
@@ -10756,7 +10756,7 @@ exports.tooManyBlocksMsg = function(d){return "이 퍼즐은  <x id='START_SPAN'
 
 exports.tooMuchWork = function(d){return "작업을 너무 많이 해야 되요! 더 적게 반복하는 방법은 없을까요?"};
 
-exports.toolboxHeader = function(d){return "블럭"};
+exports.toolboxHeader = function(d){return "blocks"};
 
 exports.openWorkspace = function(d){return "실행 설명"};
 
@@ -10794,7 +10794,7 @@ exports.watchVideo = function(d){return "비디오 보기"};
 
 exports.when = function(d){return "~할 때"};
 
-exports.whenRun = function(d){return "~할 때 실행"};
+exports.whenRun = function(d){return "실행하면"};
 
 exports.tryHOC = function(d){return "Hour of Code 해보기"};
 

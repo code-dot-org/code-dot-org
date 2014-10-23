@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -11553,13 +11553,13 @@ exports.bounceBallTooltip = function(d){return "Отскок мяча от об�
 
 exports.continue = function(d){return "Продолжить"};
 
-exports.dirE = function(d){return "Восток"};
+exports.dirE = function(d){return "В"};
 
-exports.dirN = function(d){return "Север"};
+exports.dirN = function(d){return "С"};
 
-exports.dirS = function(d){return "Юг"};
+exports.dirS = function(d){return "Ю"};
 
-exports.dirW = function(d){return "Запад"};
+exports.dirW = function(d){return "З"};
 
 exports.doCode = function(d){return "выполнить"};
 
@@ -11581,9 +11581,9 @@ exports.incrementOpponentScore = function(d){return "Противника зар
 
 exports.incrementOpponentScoreTooltip = function(d){return "Добавьте один балл к текущему счёту соперника."};
 
-exports.incrementPlayerScore = function(d){return "Заработано очков"};
+exports.incrementPlayerScore = function(d){return "оценка точки"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Добавьте один балл к счету данного игрока."};
+exports.incrementPlayerScoreTooltip = function(d){return "Добавить игроку одно очко."};
 
 exports.isWall = function(d){return "Это стена?"};
 
@@ -11599,33 +11599,33 @@ exports.moveDown = function(d){return "Переместить вниз"};
 
 exports.moveDownTooltip = function(d){return "Переместить платформу вниз."};
 
-exports.moveForward = function(d){return "Переместите вперёд"};
+exports.moveForward = function(d){return "двигаться вперед"};
 
-exports.moveForwardTooltip = function(d){return "Переместите меня вперед на одну клетку."};
+exports.moveForwardTooltip = function(d){return "Передвигает меня вперед на одну клетку."};
 
-exports.moveLeft = function(d){return "Переместите влево"};
+exports.moveLeft = function(d){return "переместить влево"};
 
 exports.moveLeftTooltip = function(d){return "Переместить платформу влево."};
 
-exports.moveRight = function(d){return "Переместите вправо"};
+exports.moveRight = function(d){return "Переместить вправо"};
 
 exports.moveRightTooltip = function(d){return "Переместить платформу вправо."};
 
-exports.moveUp = function(d){return "Переместите вверх"};
+exports.moveUp = function(d){return "переместить вверх"};
 
 exports.moveUpTooltip = function(d){return "Переместить платформу вверх."};
 
-exports.nextLevel = function(d){return "Поздравляем! Вы завершили эту головоломку."};
+exports.nextLevel = function(d){return "Поздравляю! Головоломка решена."};
 
 exports.no = function(d){return "Нет"};
 
-exports.noPathAhead = function(d){return "путь заблокирован"};
+exports.noPathAhead = function(d){return "путь закрыт"};
 
 exports.noPathLeft = function(d){return "нет пути налево"};
 
 exports.noPathRight = function(d){return "нет пути направо"};
 
-exports.numBlocksNeeded = function(d){return "Головоломка может быть решена 1% блоков."};
+exports.numBlocksNeeded = function(d){return "Эта головоломка может быть решена с помощью %1 блоков."};
 
 exports.pathAhead = function(d){return "путь впереди"};
 
@@ -11637,15 +11637,15 @@ exports.pilePresent = function(d){return "здесь есть куча"};
 
 exports.playSoundCrunch = function(d){return "проиграть звук хруста"};
 
-exports.playSoundGoal1 = function(d){return "Проиграйте звук цели 1"};
+exports.playSoundGoal1 = function(d){return "проиграть звук цели 1"};
 
-exports.playSoundGoal2 = function(d){return "Проиграйте звук цели 2"};
+exports.playSoundGoal2 = function(d){return "проиграть звук цели 2"};
 
 exports.playSoundHit = function(d){return "проиграть звук удара"};
 
 exports.playSoundLosePoint = function(d){return "проиграть звук потери очка"};
 
-exports.playSoundLosePoint2 = function(d){return "проиграть звук потери двух очков "};
+exports.playSoundLosePoint2 = function(d){return "проиграть звук потери очка 2"};
 
 exports.playSoundRetro = function(d){return "проиграть звук ретро"};
 
@@ -11653,7 +11653,7 @@ exports.playSoundRubber = function(d){return "проиграть звук рез
 
 exports.playSoundSlap = function(d){return "проиграть звук шлепка"};
 
-exports.playSoundTooltip = function(d){return "Проиграть выбранный звук."};
+exports.playSoundTooltip = function(d){return "Воспроизвести выбранный звук."};
 
 exports.playSoundWinPoint = function(d){return "проиграть звук получения очка"};
 
@@ -11661,11 +11661,11 @@ exports.playSoundWinPoint2 = function(d){return "проиграть звук п�
 
 exports.playSoundWood = function(d){return "проиграть звук дерева"};
 
-exports.putdownTower = function(d){return "поставить башню"};
+exports.putdownTower = function(d){return "положить башню"};
 
 exports.reinfFeedbackMsg = function(d){return "Вы можете нажать кнопку «Повторить», чтобы вернуться в игру."};
 
-exports.removeSquare = function(d){return "убрать квадрат"};
+exports.removeSquare = function(d){return "разбросать квадрат"};
 
 exports.repeatUntil = function(d){return "повторять до"};
 
@@ -11681,7 +11681,7 @@ exports.setBackgroundHardcourt = function(d){return "задать сцену с 
 
 exports.setBackgroundRetro = function(d){return "задать ретро сцену"};
 
-exports.setBackgroundTooltip = function(d){return "Задает фоновое изображение"};
+exports.setBackgroundTooltip = function(d){return "Задать изображение фона"};
 
 exports.setBallRandom = function(d){return "задать случайный шарик"};
 
@@ -11745,29 +11745,29 @@ exports.whenBallMissesPaddle = function(d){return "когда мяч пропу�
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Выполнить действия, указанные ниже, когда мяч пропускает платформу."};
 
-exports.whenDown = function(d){return "когда клавиша вниз"};
+exports.whenDown = function(d){return "когда стрелка вниз"};
 
-exports.whenDownTooltip = function(d){return "Выполнить действия, указанные ниже, когда нажата клавиша вниз."};
+exports.whenDownTooltip = function(d){return "Выполните действия ниже, когда когда будет нажата клавиша стрелка вниз."};
 
 exports.whenGameStarts = function(d){return "Когда игра начнется"};
 
-exports.whenGameStartsTooltip = function(d){return "Выполните действия ниже, когда игра начнется."};
+exports.whenGameStartsTooltip = function(d){return "Выполняет действия ниже, когда игра начнётся."};
 
-exports.whenLeft = function(d){return "когда клавиша влево"};
+exports.whenLeft = function(d){return "когда стрелка влево"};
 
-exports.whenLeftTooltip = function(d){return "Выполнить действия, указанные ниже, когда нажата клавиша влево."};
+exports.whenLeftTooltip = function(d){return "Выполните действия ниже, когда нажата клавиша стрелка влево."};
 
 exports.whenPaddleCollided = function(d){return "когда мяч ударяется о платформу"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Выполнить действия, указанные ниже, когда мяч сталкивается с платформой."};
 
-exports.whenRight = function(d){return "когда клавиша вправо"};
+exports.whenRight = function(d){return "когда стрелка справа"};
 
-exports.whenRightTooltip = function(d){return "Выполнить действия, указанные ниже, когда нажата клавиша вправо."};
+exports.whenRightTooltip = function(d){return "Выполните действия ниже, когда нажата клавиша стрелка вправо."};
 
-exports.whenUp = function(d){return "когда клавиша вверх"};
+exports.whenUp = function(d){return "когда стрелка вверх"};
 
-exports.whenUpTooltip = function(d){return "Выполнить действия, указанные ниже, когда нажата клавиша вверх."};
+exports.whenUpTooltip = function(d){return "Выпонить действия, указанные ниже, когда нажата клавиша вверх."};
 
 exports.whenWallCollided = function(d){return "когда мяч ударяется о стену"};
 
@@ -11775,7 +11775,7 @@ exports.whenWallCollidedTooltip = function(d){return "Выполнить дей�
 
 exports.whileMsg = function(d){return "пока"};
 
-exports.whileTooltip = function(d){return "Повторять указанные действия до конечной точки."};
+exports.whileTooltip = function(d){return "Повторяет действия до достижения конечной точки."};
 
 exports.yes = function(d){return "Да"};
 
@@ -11813,7 +11813,7 @@ exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Процедуры"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Переменные"};
 
@@ -11821,7 +11821,7 @@ exports.codeTooltip = function(d){return "Просмотреть созданн�
 
 exports.continue = function(d){return "Продолжить"};
 
-exports.dialogCancel = function(d){return "Отменить"};
+exports.dialogCancel = function(d){return "Отмена"};
 
 exports.dialogOK = function(d){return "Продолжить"};
 
@@ -11837,17 +11837,17 @@ exports.end = function(d){return "конец"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Блокам \"повторять\" или \"если\" необходимо иметь внутри другие блоки для работы. Убедись  в том, что внутренний блок должным образом подходит к блоку, в котором он содержится."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Блок функции требует другие блоки внутри для работы."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Блок процедуры требует для работы другие блоки внутри себя."};
 
-exports.extraTopBlocks = function(d){return "У тебя остались неприсоединённые блоки. Ты собирался присоединить их к блоку (when run)?"};
+exports.extraTopBlocks = function(d){return "У тебя остались неприсоединённые блоки. Ты собирался присоединить их к блоку \"При запуске\"?"};
 
 exports.finalStage = function(d){return "Поздравляю! Ты завершил последний этап."};
 
 exports.finalStageTrophies = function(d){return "Поздравляю! Ты завершил последний этап и выиграл "+p(d,"numTrophies",0,"ru",{"one":"кубок","other":n(d,"numTrophies")+" кубков"})+"."};
 
-exports.finish = function(d){return "Завершить"};
+exports.finish = function(d){return "Готово"};
 
-exports.generatedCodeInfo = function(d){return "Даже в лучших университетах изучают блочное программирование (например, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Но на самом деле блоки, которые вы собирали могут быть отображены на JavaScript, наиболее широко используемом в мире языке программирования:"};
+exports.generatedCodeInfo = function(d){return "Даже в лучших университетах изучают блочное программирование (например, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Но на самом деле блоки, которые вы собирали, могут быть отображены на JavaScript, наиболее широко используемом в мире языке программирования:"};
 
 exports.hashError = function(d){return "К сожалению, «%1» не соответствует какой-либо сохранённой программе."};
 
@@ -11855,7 +11855,7 @@ exports.help = function(d){return "Справка"};
 
 exports.hintTitle = function(d){return "Подсказка:"};
 
-exports.jump = function(d){return "прыжок"};
+exports.jump = function(d){return "прыгнуть"};
 
 exports.levelIncompleteError = function(d){return "Ты используешь все необходимые виды блоков, но неправильным способом."};
 
@@ -11905,7 +11905,7 @@ exports.tooManyBlocksMsg = function(d){return "Эта головоломка м�
 
 exports.tooMuchWork = function(d){return "Ты заставил меня попотеть! Может, будешь стараться делать меньше попыток?"};
 
-exports.toolboxHeader = function(d){return "Блоки"};
+exports.toolboxHeader = function(d){return "блоков"};
 
 exports.openWorkspace = function(d){return "Как это работает"};
 
@@ -11921,7 +11921,7 @@ exports.saveToGallery = function(d){return "Сохранить в твоей г�
 
 exports.savedToGallery = function(d){return "Сохранено в твоей галереи!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "К сожалению, мы не можем поделиться этой программой."};
 
 exports.typeCode = function(d){return "Введите ваш код  на JavaScript под этой инструкцией."};
 

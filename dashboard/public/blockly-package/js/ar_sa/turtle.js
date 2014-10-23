@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -10671,7 +10671,7 @@ exports.catActions = function(d){return "الاجراءات"};
 
 exports.catColour = function(d){return "لون"};
 
-exports.catLogic = function(d){return "العمليات المنطقية"};
+exports.catLogic = function(d){return "منطق"};
 
 exports.catLists = function(d){return "القوائم والمصفوفات"};
 
@@ -10681,7 +10681,7 @@ exports.catMath = function(d){return "العمليات الحسابية"};
 
 exports.catProcedures = function(d){return "الدوال"};
 
-exports.catText = function(d){return "الجمل"};
+exports.catText = function(d){return "نص"};
 
 exports.catVariables = function(d){return "المتغيرات"};
 
@@ -10723,7 +10723,7 @@ exports.help = function(d){return "مساعدة"};
 
 exports.hintTitle = function(d){return "تلميح:"};
 
-exports.jump = function(d){return "قفز"};
+exports.jump = function(d){return "إقفز"};
 
 exports.levelIncompleteError = function(d){return "أنت استخدمت كل انواع القطع الضرورية ولكن ليس في الطريق الصحيح."};
 
@@ -10749,7 +10749,7 @@ exports.play = function(d){return "إلعب"};
 
 exports.puzzleTitle = function(d){return "اللغز "+v(d,"puzzle_number")+" من "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "إعادة"};
+exports.repeat = function(d){return "كرر"};
 
 exports.resetProgram = function(d){return "إعادة تعيين"};
 
@@ -10847,11 +10847,11 @@ exports.branches = function(d){return "فروع"};
 
 exports.catColour = function(d){return "لون"};
 
-exports.catControl = function(d){return "الجمل التكرارية"};
+exports.catControl = function(d){return "الحلقات"};
 
 exports.catMath = function(d){return "العمليات الحسابية"};
 
-exports.catProcedures = function(d){return "الدوال"};
+exports.catProcedures = function(d){return "دوال"};
 
 exports.catTurtle = function(d){return "الاجراءات"};
 
@@ -10869,9 +10869,9 @@ exports.dots = function(d){return "بكسلات"};
 
 exports.drawASquare = function(d){return "رسم مربع"};
 
-exports.drawATriangle = function(d){return "ارسم مثلث"};
+exports.drawATriangle = function(d){return "رسم مثلث"};
 
-exports.drawACircle = function(d){return "ارسم دائرة"};
+exports.drawACircle = function(d){return "رسم دائرة"};
 
 exports.drawAFlower = function(d){return "إرسم زهرة"};
 
@@ -10903,7 +10903,7 @@ exports.heightParameter = function(d){return "الأرتفاع"};
 
 exports.hideTurtle = function(d){return "اخفاء الاعب"};
 
-exports.jump = function(d){return "إقفز"};
+exports.jump = function(d){return "قفز"};
 
 exports.jumpBackward = function(d){return "القفز الى الخلف بعدد"};
 
@@ -10957,7 +10957,7 @@ exports.setColour = function(d){return "تعيين اللون"};
 
 exports.setWidth = function(d){return "تعيين العرض"};
 
-exports.shareDrawing = function(d){return "أنشر رسمك:"};
+exports.shareDrawing = function(d){return "أنشر رسمك :"};
 
 exports.showMe = function(d){return "أرني"};
 

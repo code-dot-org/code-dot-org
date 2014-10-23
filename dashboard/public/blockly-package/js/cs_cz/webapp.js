@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -6628,6 +6628,15 @@ exports.createHtmlBlock = function (blockId, elementId, html) {
                            'html': html });
 };
 
+exports.attachEventHandler = function (blockId, elementId, eventName, func) {
+  return Webapp.executeCmd(String(blockId),
+                          'attachEventHandler',
+                          {'elementId': elementId,
+                           'eventName': eventName,
+                           'func': func });
+};
+
+
 },{}],28:[function(require,module,exports){
 /**
  * CodeOrgApp: Webapp
@@ -6797,6 +6806,7 @@ levels.ec_simple = {
   'codeFunctions': [
     {'func': 'turnBlack' },
     {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
+    {'func': 'attachEventHandler', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
   ],
 };
 
@@ -6983,7 +6993,7 @@ BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 // Default Scalings
 Webapp.scale = {
   'snapRadius': 1,
-  'stepSpeed': 33
+  'stepSpeed': 1
 };
 
 var twitterOptions = {
@@ -7013,14 +7023,85 @@ var drawDiv = function () {
   visualizationColumn.style.width = divWidth + 'px';
 };
 
+// session is an instance of Ace editSession
+// Usage
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// Need to call this only if the document is updated after the last call.
+function aceCalculateCumulativeLength(session) {
+  var cumulativeLength = [];
+  var cnt = session.getLength();
+  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
+  cumulativeLength.push(cuml);
+  var text = session.getLines(0, cnt);
+  for (var i = 0; i < cnt; i++) {
+    cuml += text[i].length + nlLength;
+    cumulativeLength.push(cuml);
+  }
+  return cumulativeLength;
+}
+
+// Fast binary search implementation
+// Pass the cumulative length array here.
+// Usage
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
+// tries to find 2512th character lies in which row.
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
+  if (rows > rowe) {
+    return null;
+  }
+  if (rows + 1 === rowe) {
+    return rows;
+  }
+
+  var mid = Math.floor((rows + rowe) / 2);
+  
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
+  }
+  return mid;
+}
+
+function createSelection(start, end) {
+  var selection = BlocklyApps.editor.aceEditor.getSelection();
+  var range = selection.getRange();
+
+  range.start.row = aceFindRow(Webapp.cumulativeLength, 0, Webapp.cumulativeLength.length, start);
+  range.start.col = start - Webapp.cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(Webapp.cumulativeLength, 0, Webapp.cumulativeLength.length, end);
+  range.end.col = end - Webapp.cumulativeLength[range.end.row];
+
+  selection.setSelectionRange(range);
+}
+
 Webapp.onTick = function() {
   Webapp.tickCount++;
 
-  if (Webapp.tickCount === 1) {
-    if (Webapp.interpreter) {
-      Webapp.interpreter.run();
-    } else {
-    try { Webapp.whenRunFunc(BlocklyApps, api, Webapp.Globals); } catch (e) { }
+  if (Webapp.interpreter) {
+    if (!BlocklyApps.editor.currentlyUsingBlocks && Webapp.interpreter.stateStack[0]) {
+      // If we are showing Javascript code in the ace editor, highlight
+      // the code being executed in each step:
+      
+      var node = Webapp.interpreter.stateStack[0].node;
+      // Adjust start/end by Webapp.userCodeStartOffset since the code running
+      // has been expanded vs. what the user sees in the editor window:
+      var start = node.start - Webapp.userCodeStartOffset;
+      var end = node.end - Webapp.userCodeStartOffset;
+
+      // Only show selection if the node being executed is inside the user's
+      // code (not inside code we inserted before or after their code that is
+      // not visible in the editor):
+      if ((start > 0) && (start < Webapp.userCodeLength)) {
+        createSelection(start, end);
+      } else {
+        BlocklyApps.editor.aceEditor.getSelection().clearSelection();
+      }
+    }
+    Webapp.interpreter.step();
+  } else {
+    if (Webapp.tickCount === 1) {
+      try { Webapp.whenRunFunc(BlocklyApps, api, Webapp.Globals); } catch (e) { }
     }
   }
 
@@ -7158,6 +7239,10 @@ BlocklyApps.reset = function(first) {
     divWebapp.removeChild(divWebapp.firstChild);
   }
 
+  // Clone and replace divWebapp (this removes all attached event listeners):
+  var newDivWebapp = divWebapp.cloneNode(true);
+  divWebapp.parentNode.replaceChild(newDivWebapp, divWebapp);
+
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -7165,6 +7250,7 @@ BlocklyApps.reset = function(first) {
 
   // Reset the Globals object used to contain program variables:
   Webapp.Globals = {};
+  Webapp.eventQueue = [];
   Webapp.interpreter = null;
 };
 
@@ -7243,6 +7329,17 @@ var defineProcedures = function (blockType) {
 };
 
 /**
+ * A miniature runtime in the interpreted world calls this function repeatedly
+ * to check to see if it should invoke any callbacks from within the
+ * interpreted world. If the eventQueue is not empty, we will return an object
+ * that contains an interpreted callback function (stored in "fn") and,
+ * optionally, callback arguments (stored in "arguments")
+ */
+var nativeGetCallback = function () {
+  return Webapp.eventQueue.shift();
+};
+
+/**
  * Execute the app
  */
 Webapp.execute = function() {
@@ -7261,7 +7358,15 @@ Webapp.execute = function() {
   var codeWhenRun;
   if (level.editCode) {
     codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Webapp');
+    Webapp.userCodeStartOffset = codeWhenRun.length;
     codeWhenRun += BlocklyApps.editor.getValue();
+    Webapp.userCodeLength = codeWhenRun.length - Webapp.userCodeStartOffset;
+    // Append our mini-runtime after the user's code. This will spin and process
+    // callback functions:
+    codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
+      'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
+    var session = BlocklyApps.editor.aceEditor.getSession();
+    Webapp.cumulativeLength = aceCalculateCumulativeLength(session);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Webapp.Globals namespace)
@@ -7285,6 +7390,57 @@ Webapp.execute = function() {
                                           BlocklyApps: BlocklyApps,
                                           Webapp: api,
                                           Globals: Webapp.Globals } );
+
+        function makeNativeMemberFunction(nativeFunc, parentObj) {
+          return function() {
+            // Call the native function:
+            var retVal = nativeFunc.apply(parentObj, arguments);
+
+            // Now figure out what to do with the return value...
+
+            if (retVal instanceof Function) {
+              // Don't call createPrimitive() for functions
+              return retVal;
+            } else if (retVal instanceof Object) {
+              var newObj = interpreter.createObject(interpreter.OBJECT);
+              // Limited attempt to marshal back complex return values
+              // Special case: only one-level deep, only handling
+              // primitives and arrays of primitives
+              for (var prop in retVal) {
+                var isFuncOrObj = retVal[prop] instanceof Function ||
+                                  retVal[prop] instanceof Object;
+                // replace properties with wrapped properties
+                if (retVal[prop] instanceof Array) {
+                  var newArray = interpreter.createObject(interpreter.ARRAY);
+                  for (var i = 0; i < retVal[prop].length; i++) {
+                    newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
+                  }
+                  newArray.length = retVal[prop].length;
+                  interpreter.setProperty(newObj, prop, newArray);
+                } else if (isFuncOrObj) {
+                  // skipping over these - they could be objects that should
+                  // be converted into interpreter objects. they could be native
+                  // functions that should be converted. Or they could be objects
+                  // that are already interpreter objects, which is what we assume
+                  // for now:
+                  interpreter.setProperty(newObj, prop, retVal[prop]);
+                } else {
+                  // wrap as a primitive if it is not a function or object:
+                  interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
+                }
+              }
+              return newObj;
+            } else {
+              return interpreter.createPrimitive(retVal);
+            }
+          };
+        }
+
+        var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
+        var wrapper = makeNativeMemberFunction(nativeGetCallback, null);
+        interpreter.setProperty(scope,
+                                'getCallback',
+                                interpreter.createNativeFunction(wrapper));
       };
       Webapp.interpreter = new window.Interpreter(codeWhenRun, initFunc);
     } else {
@@ -7400,6 +7556,10 @@ Webapp.callCmd = function (cmd) {
       BlocklyApps.highlight(cmd.id);
       retVal = Webapp.createHtmlBlock(cmd.opts);
       break;
+    case 'attachEventHandler':
+      BlocklyApps.highlight(cmd.id);
+      retVal = Webapp.attachEventHandler(cmd.opts);
+      break;
   }
   return retVal;
 };
@@ -7423,6 +7583,19 @@ Webapp.createHtmlBlock = function (opts) {
   divWebapp.appendChild(newDiv);
 
   return newDiv;
+};
+
+Webapp.onEventFired = function (opts, e) {
+  Webapp.eventQueue.push({'fn': opts.func});
+};
+
+Webapp.attachEventHandler = function (opts) {
+  // For now, we're not tracking how many of these we add and we don't allow
+  // the user to detach the handler. We detach all listeners by cloning the
+  // divWebapp DOM node inside of reset()
+  document.getElementById(opts.elementId).addEventListener(
+      opts.eventName,
+      Webapp.onEventFired.bind(this, opts));
 };
 
 /*
@@ -7542,7 +7715,7 @@ exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkce"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Proměnné"};
 
@@ -7574,7 +7747,7 @@ exports.finalStage = function(d){return "Dobrá práce! Dokončil si poslední f
 
 exports.finalStageTrophies = function(d){return "Dobrá práce! Dokončil si poslední fázi a vyhrál "+p(d,"numTrophies",0,"cs",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Dokončit"};
 
 exports.generatedCodeInfo = function(d){return "Dokonce nejlepší university učí programovat pomocí bloků (např. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale vnitřek bloků, které jsi sestavil, lze zobrazit také v JavaScriptu, světově nejrozšířenějším programovacím jazyce:"};
 
@@ -7610,7 +7783,7 @@ exports.play = function(d){return "play"};
 
 exports.puzzleTitle = function(d){return "Hádanka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "ailadrodd"};
+exports.repeat = function(d){return "opakuj"};
 
 exports.resetProgram = function(d){return "Obnovit"};
 
@@ -7620,7 +7793,7 @@ exports.runTooltip = function(d){return "Spustí program definovaný bloky na pr
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Zobrazit Kód"};
+exports.showCodeHeader = function(d){return "Zobrazit kód"};
 
 exports.showGeneratedCode = function(d){return "Zobrazit kód"};
 
@@ -7634,7 +7807,7 @@ exports.tooManyBlocksMsg = function(d){return "Tato hádanka může být vyřeš
 
 exports.tooMuchWork = function(d){return "Přinutil jsi mne udělat spoustu práce! Mohl bys zkusit opakovat méně krát?"};
 
-exports.toolboxHeader = function(d){return "Bloky"};
+exports.toolboxHeader = function(d){return "bloky"};
 
 exports.openWorkspace = function(d){return "Jak To Funguje"};
 
@@ -7693,43 +7866,43 @@ var MessageFormat = require("messageformat");MessageFormat.locale.cs = function 
   }
   return 'other';
 };
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Akce"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Smyčky"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Události"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logika"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Funkce"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Proměnné"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Pokračovat"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "Dobrá práce! Vyřešil jsi poslední hádanku."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Dobrá práce! Dokončil jsi tuto hádanku."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Ne"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Tato hádanka může být vyřešena pomocí %1 bloků."};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "proveď"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7741,7 +7914,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Ano"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

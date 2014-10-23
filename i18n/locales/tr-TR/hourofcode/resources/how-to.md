@@ -8,7 +8,7 @@ başlık: Kaynaklar düzen: geniş
 
 ## 1) Bu öğreticileri deneyin:
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+Çeşitli ortaklarımız tarafından hazırlanmış, her yaşa uygun, bir saat süren, eğlenceli bir çok aktiviteye ev sahipliği yapacağız. Yeni öğreticilerle Kodlama Saati, 8-14 Aralıktan önce karşınızda olacak.
 
 **Tüm Kodlama Zamanı öğreticileri:**
 

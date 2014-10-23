@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -11552,7 +11552,7 @@ exports.doCode = function(d){return "udfør"};
 
 exports.elseCode = function(d){return "ellers"};
 
-exports.finalLevel = function(d){return "Tillykke! Du har løst det sidste puslespil."};
+exports.finalLevel = function(d){return "Tillykke! Du har løst den sidste opgave."};
 
 exports.heightParameter = function(d){return "højde"};
 
@@ -11570,7 +11570,7 @@ exports.incrementOpponentScoreTooltip = function(d){return "Tilføj \"1\" til de
 
 exports.incrementPlayerScore = function(d){return "increment player score"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Tilføj \"1\" til den aktuelle spillers score."};
+exports.incrementPlayerScoreTooltip = function(d){return "Tilføj en til den aktuelle spillers score."};
 
 exports.isWall = function(d){return "er dette en væg"};
 
@@ -11586,7 +11586,7 @@ exports.moveDown = function(d){return "Flyt ned"};
 
 exports.moveDownTooltip = function(d){return "Flytte battet ned."};
 
-exports.moveForward = function(d){return "flyt fremad"};
+exports.moveForward = function(d){return "bevæg fremad"};
 
 exports.moveForwardTooltip = function(d){return "Flyt mig en plads frem."};
 
@@ -11602,7 +11602,7 @@ exports.moveUp = function(d){return "Flyt op"};
 
 exports.moveUpTooltip = function(d){return "Flyt battet op."};
 
-exports.nextLevel = function(d){return "Tillykke! Du har fuldført dette puslespil."};
+exports.nextLevel = function(d){return "Tillykke! Du har fuldført denne opgave."};
 
 exports.no = function(d){return "Nej"};
 
@@ -11612,7 +11612,7 @@ exports.noPathLeft = function(d){return "ingen sti til venstre"};
 
 exports.noPathRight = function(d){return "ingen sti til højre"};
 
-exports.numBlocksNeeded = function(d){return "Dette puslespil kan løses med %1 blokke."};
+exports.numBlocksNeeded = function(d){return "Denne opgave kan løses med %1 blokke."};
 
 exports.pathAhead = function(d){return "sti forude"};
 
@@ -11624,29 +11624,29 @@ exports.pilePresent = function(d){return "der er en bunke"};
 
 exports.playSoundCrunch = function(d){return "afspil kvaselyd"};
 
-exports.playSoundGoal1 = function(d){return "afspil lyd for mål 1"};
+exports.playSoundGoal1 = function(d){return "afspil mål 1 lyd"};
 
-exports.playSoundGoal2 = function(d){return "afspil lyd for mål 2"};
+exports.playSoundGoal2 = function(d){return "afspil mål 2 lyd"};
 
-exports.playSoundHit = function(d){return "spil en lyd"};
+exports.playSoundHit = function(d){return "afspil rammer lyd"};
 
-exports.playSoundLosePoint = function(d){return "afspil en miste point lyd"};
+exports.playSoundLosePoint = function(d){return "afspil tab point lyd"};
 
-exports.playSoundLosePoint2 = function(d){return "afspil en miste point 2 lyd"};
+exports.playSoundLosePoint2 = function(d){return "afspil tab point 2 lyd"};
 
-exports.playSoundRetro = function(d){return "afspil en retro lyd"};
+exports.playSoundRetro = function(d){return "afspil retro lyd"};
 
 exports.playSoundRubber = function(d){return "Afspil gummi lyd"};
 
-exports.playSoundSlap = function(d){return "afspil en slam lyd"};
+exports.playSoundSlap = function(d){return "afspil klaske lyd"};
 
 exports.playSoundTooltip = function(d){return "Afspil den valgte lyd."};
 
-exports.playSoundWinPoint = function(d){return "Afspil vinde point lyd"};
+exports.playSoundWinPoint = function(d){return "afspil vind point lyd"};
 
-exports.playSoundWinPoint2 = function(d){return "Afspil vinde point 2 lyd"};
+exports.playSoundWinPoint2 = function(d){return "afspil vind point 2 lyd"};
 
-exports.playSoundWood = function(d){return "afspil en træ lyd"};
+exports.playSoundWood = function(d){return "afspil træ lyd"};
 
 exports.putdownTower = function(d){return "sæt tårn ned"};
 
@@ -11668,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "sæt hardcourt baggrund"};
 
 exports.setBackgroundRetro = function(d){return "sæt retro baggrund"};
 
-exports.setBackgroundTooltip = function(d){return "Indstiller baggrundsbilledet"};
+exports.setBackgroundTooltip = function(d){return "Vælger baggrundsbilledet"};
 
 exports.setBallRandom = function(d){return "sæt tilfældig bold"};
 
@@ -11734,7 +11734,7 @@ exports.whenBallMissesPaddleTooltip = function(d){return "Udføre handlinger und
 
 exports.whenDown = function(d){return "Når pil ned"};
 
-exports.whenDownTooltip = function(d){return "Udfører handlingerne herunder når der trykkes pil ned."};
+exports.whenDownTooltip = function(d){return "Udfører handlingen herunder når der trykkes pil ned."};
 
 exports.whenGameStarts = function(d){return "når spillet starter"};
 
@@ -11760,7 +11760,7 @@ exports.whenWallCollided = function(d){return "Når bolden rammer væggen"};
 
 exports.whenWallCollidedTooltip = function(d){return "Udfør handlingerne herunder når bolden rammer en mur."};
 
-exports.whileMsg = function(d){return "når"};
+exports.whileMsg = function(d){return "mens"};
 
 exports.whileTooltip = function(d){return "Gentag de lukkede handlinger indtil målet er nået."};
 
@@ -11781,13 +11781,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Lister"};
 
-exports.catLoops = function(d){return "Løkker"};
+exports.catLoops = function(d){return "Sløjfer"};
 
 exports.catMath = function(d){return "Matematik"};
 
 exports.catProcedures = function(d){return "Funktioner"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -11879,7 +11879,7 @@ exports.tooManyBlocksMsg = function(d){return "Dette puslespil kan løses med <x
 
 exports.tooMuchWork = function(d){return "Du fik mig til at gøre en masse arbejde! Kunne du prøve at gentage færre gange?"};
 
-exports.toolboxHeader = function(d){return "Blokke"};
+exports.toolboxHeader = function(d){return "blokke"};
 
 exports.openWorkspace = function(d){return "Sådan fungerer det"};
 

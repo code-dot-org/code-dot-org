@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -9212,7 +9212,7 @@ exports.catMath = function(d){return "Matemática"};
 
 exports.catProcedures = function(d){return "Funções"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
 exports.catVariables = function(d){return "Variáveis"};
 
@@ -9290,7 +9290,7 @@ exports.runTooltip = function(d){return "Executa o programa definido pelos bloco
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Mostrar o Código"};
+exports.showCodeHeader = function(d){return "Mostrar o código"};
 
 exports.showGeneratedCode = function(d){return "Mostrar o código"};
 
@@ -9304,7 +9304,7 @@ exports.tooManyBlocksMsg = function(d){return "Este puzzle pode ser resolvido co
 
 exports.tooMuchWork = function(d){return "Fizeste-me ter muito trabalho! Podes tentar repetir menos vezes?"};
 
-exports.toolboxHeader = function(d){return "Blocos"};
+exports.toolboxHeader = function(d){return "blocos"};
 
 exports.openWorkspace = function(d){return "Como funciona"};
 
@@ -9355,9 +9355,9 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.pt=function(n){return n===1?"one":"other"}
-exports.continue = function(d){return "Continuar"};
+exports.continue = function(d){return "Continua"};
 
-exports.doCode = function(d){return "fazer"};
+exports.doCode = function(d){return "Executar"};
 
 exports.elseCode = function(d){return "senão"};
 
@@ -9365,7 +9365,7 @@ exports.endGame = function(d){return "terminar jogo"};
 
 exports.endGameTooltip = function(d){return "Termina o jogo."};
 
-exports.finalLevel = function(d){return "Parabéns! Resolveste o enigma final."};
+exports.finalLevel = function(d){return "Parabéns! Resolveste o puzzle final."};
 
 exports.flap = function(d){return "flap"};
 
@@ -9383,7 +9383,7 @@ exports.flapVeryLarge = function(d){return "flap a very large amount"};
 
 exports.flapTooltip = function(d){return "Fly Flappy upwards."};
 
-exports.flappySpecificFail = function(d){return "Your code looks good - it will flap with each click. But you need to click many times to flap to the target."};
+exports.flappySpecificFail = function(d){return "O teu código parece bem - vai agitar-se com cada clique. Mas precisas de clicar várias vezes para agitar-se até ao alvo."};
 
 exports.incrementPlayerScore = function(d){return "marca um ponto"};
 
@@ -9393,7 +9393,7 @@ exports.nextLevel = function(d){return "Parabéns! Completaste este puzzle."};
 
 exports.no = function(d){return "Não"};
 
-exports.numBlocksNeeded = function(d){return "Este puzzle pode ser resolvido com blocos de %1."};
+exports.numBlocksNeeded = function(d){return "Este puzzle pode ser resolvido com blocos de  %1 ."};
 
 exports.playSoundRandom = function(d){return "tocar som aleatório"};
 
@@ -9421,7 +9421,7 @@ exports.playSoundSplash = function(d){return "play splash sound"};
 
 exports.playSoundLaser = function(d){return "toca som laser"};
 
-exports.playSoundTooltip = function(d){return "toca o som escolhido."};
+exports.playSoundTooltip = function(d){return "Tocar o som escolhido."};
 
 exports.reinfFeedbackMsg = function(d){return "Podes selecionar o botão \"Tenta Novamente\" para voltar e jogares o teu jogo."};
 
@@ -9557,7 +9557,7 @@ exports.shareGame = function(d){return "Partilha o teu jogo:"};
 
 exports.soundRandom = function(d){return "aleatório"};
 
-exports.soundBounce = function(d){return "salto"};
+exports.soundBounce = function(d){return "saltar"};
 
 exports.soundCrunch = function(d){return "triturar"};
 

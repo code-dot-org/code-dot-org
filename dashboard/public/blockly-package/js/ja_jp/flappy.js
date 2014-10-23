@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -9196,7 +9196,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
 exports.and = function(d){return "そして"};
 
-exports.blocklyMessage = function(d){return "ブロック状の"};
+exports.blocklyMessage = function(d){return "ブロッキー"};
 
 exports.catActions = function(d){return "操作"};
 
@@ -9206,19 +9206,19 @@ exports.catLogic = function(d){return "ロジック（論理）"};
 
 exports.catLists = function(d){return "リスト"};
 
-exports.catLoops = function(d){return "繰り返し"};
+exports.catLoops = function(d){return "ループ"};
 
 exports.catMath = function(d){return "数値"};
 
 exports.catProcedures = function(d){return "関数"};
 
-exports.catText = function(d){return "文字列"};
+exports.catText = function(d){return "テキスト"};
 
 exports.catVariables = function(d){return "変数"};
 
 exports.codeTooltip = function(d){return "生成されたJavaScriptコードを見る。"};
 
-exports.continue = function(d){return "次へ"};
+exports.continue = function(d){return "続行"};
 
 exports.dialogCancel = function(d){return "キャンセル"};
 
@@ -9304,7 +9304,7 @@ exports.tooManyBlocksMsg = function(d){return "このパズルは <x id='START_S
 
 exports.tooMuchWork = function(d){return "ちょっと作業が多すぎますね！もう少し繰り返し回数を少なくできませんか？"};
 
-exports.toolboxHeader = function(d){return "ブロック"};
+exports.toolboxHeader = function(d){return "ブロック達"};
 
 exports.openWorkspace = function(d){return "仕組み"};
 
@@ -9357,9 +9357,9 @@ exports.genericFeedback = function(d){return "どうなったかよく見て、�
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
 exports.continue = function(d){return "続行"};
 
-exports.doCode = function(d){return "実行"};
+exports.doCode = function(d){return "してください"};
 
-exports.elseCode = function(d){return "そうでなければ"};
+exports.elseCode = function(d){return "他"};
 
 exports.endGame = function(d){return "ゲーム終了"};
 
@@ -9383,7 +9383,7 @@ exports.flapVeryLarge = function(d){return "とてもたくさんパタパタし
 
 exports.flapTooltip = function(d){return "フラッピーが上に飛びます。"};
 
-exports.flappySpecificFail = function(d){return "Your code looks good - it will flap with each click. But you need to click many times to flap to the target."};
+exports.flappySpecificFail = function(d){return "いいコードですね。クリックするたびにパタパタします。でも、的に当てるには何度もクリックしなければなりません。"};
 
 exports.incrementPlayerScore = function(d){return "1 ポイント"};
 
@@ -9423,7 +9423,7 @@ exports.playSoundLaser = function(d){return "レーザー音を再生"};
 
 exports.playSoundTooltip = function(d){return "選択音を再生"};
 
-exports.reinfFeedbackMsg = function(d){return "\"Try again\" ボタンを押すと、ゲームに戻る"};
+exports.reinfFeedbackMsg = function(d){return "\"Try again\" ボタンを押すと、ゲームに戻ります。"};
 
 exports.scoreText = function(d){return "得点："};
 

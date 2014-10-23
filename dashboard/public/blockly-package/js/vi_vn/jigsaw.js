@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -7693,7 +7693,7 @@ exports.and = function(d){return "và"};
 
 exports.blocklyMessage = function(d){return "Mảnh ghép"};
 
-exports.catActions = function(d){return "hành động"};
+exports.catActions = function(d){return "Các hành động"};
 
 exports.catColour = function(d){return "màu sắc"};
 
@@ -7703,7 +7703,7 @@ exports.catLists = function(d){return "Danh sách"};
 
 exports.catLoops = function(d){return "Vòng lặp"};
 
-exports.catMath = function(d){return "Thuật toán"};
+exports.catMath = function(d){return "thuật toán"};
 
 exports.catProcedures = function(d){return "Các hàm"};
 
@@ -7799,7 +7799,7 @@ exports.tooManyBlocksMsg = function(d){return "Câu đố này có thể đượ
 
 exports.tooMuchWork = function(d){return "Bạn làm tôi phải làm quá nhiều việc! Bạn làm ơn thử làm cho nó ít hơn được không?"};
 
-exports.toolboxHeader = function(d){return "Các khối lệnh"};
+exports.toolboxHeader = function(d){return "các khối"};
 
 exports.openWorkspace = function(d){return "Hoạt động ra sao"};
 
@@ -7856,7 +7856,7 @@ exports.nextLevel = function(d){return "Chúc mừng! Bạn đã hoàn thành c�
 
 exports.no = function(d){return "Không"};
 
-exports.numBlocksNeeded = function(d){return "Câu đố này có thể được giải quyết với %1 khối."};
+exports.numBlocksNeeded = function(d){return "Câu đố này có thể được giải quyết chỉ với %1 khối."};
 
 exports.reinfFeedbackMsg = function(d){return "Bạn có thể bấm nút \"Thử lại\" để quay lại chơi trò chơi của mình."};
 
@@ -7864,7 +7864,7 @@ exports.share = function(d){return "Chia sẻ"};
 
 exports.shareGame = function(d){return "Chia sẻ trò chơi của bạn:"};
 
-exports.yes = function(d){return "Có"};
+exports.yes = function(d){return "Đồng ý"};
 
 
 },{"messageformat":47}],36:[function(require,module,exports){

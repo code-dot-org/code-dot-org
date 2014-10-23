@@ -44,18 +44,18 @@ Yerel grupları da dahil edin. Ya da komşularınız için bir Kodlama Saati par
 
 ## 5. Yerel yönetim idarelerinden Kodlama Saatini desteklemesini isteyin
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Bu e-postayı](http://<%= hostname %>/resources#politicians) belediye başkanınıza, belediye meclisinize veya okul yönetiminize gönderin. Ya da, [onlara bu el ilanını verin](http://<%= hostname %>/resources/hoc-one-pager.pdf) ve onları okulunuza davet edin.
 
 <% if @country == 'ro' %>
 
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
+Etkinliğimizi duyurduğunuz için teşekkür ederiz! Daha fazla bilgi veya sorularınız için bize ulaşabilirsiniz. Haydi birlikte tarih yazalım!
 
-Echipa Hour of Code Romania hoc@adfaber.org
+Kodlama Saati Romanya Ekibi hoc@adfaber.org
 
 <% end %>
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org 501c3 kar amacı gütmeyen bir organizasyondur. Adresimiz: 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Bu e-postaların gelmesini istemiyor musunuz? [Abonelikten çık](%= unsubscribe_link %).
 
 ![](<%= tracking_pixel %>)

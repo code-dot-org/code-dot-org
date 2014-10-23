@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -13208,11 +13208,11 @@ exports.catLists = function(d){return "Listy"};
 
 exports.catLoops = function(d){return "Pętle"};
 
-exports.catMath = function(d){return "Matematyczne"};
+exports.catMath = function(d){return "Matematyka"};
 
 exports.catProcedures = function(d){return "Funkcje"};
 
-exports.catText = function(d){return "Tekstowe"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Zmienne"};
 
@@ -13244,7 +13244,7 @@ exports.finalStage = function(d){return "Gratulacje! Ukończyłeś ostatni etap.
 
 exports.finalStageTrophies = function(d){return "Gratulacje! Ukończyłeś ostatni etap i wygrałeś "+p(d,"numTrophies",0,"pl",{"one":"trofeum","other":n(d,"numTrophies")+" trofea"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Koniec"};
 
 exports.generatedCodeInfo = function(d){return "Nawet najlepsze uczelnie uczą kodowania opartego o bloki (np. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale bloki które zostały użyte, można również zobaczyć w JavaScript, jednym z najbardziej powszechnie stosowanym języku programowania na świecie:"};
 
@@ -13296,7 +13296,7 @@ exports.showGeneratedCode = function(d){return "Pokaż kod"};
 
 exports.subtitle = function(d){return "graficzne środowisko programistyczne"};
 
-exports.textVariable = function(d){return "tekst"};
+exports.textVariable = function(d){return "Tekst"};
 
 exports.tooFewBlocksMsg = function(d){return "Używasz wszystkich wymaganych bloków, ale spróbuj użyć ich więcej, aby ukończyć łamigłówkę."};
 
@@ -13304,7 +13304,7 @@ exports.tooManyBlocksMsg = function(d){return "Ta łamigłówka może być rozwi
 
 exports.tooMuchWork = function(d){return "Spowodowałeś, że miałem dużo pracy. Czy możesz zmniejszyć liczbę powtórzeń?"};
 
-exports.toolboxHeader = function(d){return "Bloki"};
+exports.toolboxHeader = function(d){return "bloki"};
 
 exports.openWorkspace = function(d){return "Jak to działa"};
 
@@ -13375,7 +13375,7 @@ exports.atFlower = function(d){return "at flower"};
 
 exports.avoidCowAndRemove = function(d){return "uniknij krowy i usuń 1"};
 
-exports.continue = function(d){return "Dalej"};
+exports.continue = function(d){return "Kontynuuj"};
 
 exports.dig = function(d){return "usuń 1"};
 
@@ -13525,7 +13525,7 @@ exports.uncheckedPurpleError = function(d){return "Make sure to check all purple
 
 exports.whileMsg = function(d){return "dopóki"};
 
-exports.whileTooltip = function(d){return "Powtarzaj załączone czynności, aż do osiągnięcia punktu zakończenia."};
+exports.whileTooltip = function(d){return "Powtarzaj wymienione czynności, aż do osiągnięcia punktu końcowego."};
 
 exports.word = function(d){return "Znajdź słowa"};
 

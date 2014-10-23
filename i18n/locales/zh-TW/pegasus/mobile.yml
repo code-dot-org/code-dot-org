@@ -31,7 +31,7 @@ zh-TW:
   view_english_site: 觀看英語網站
   non_english_tutorials: 教學課程被翻譯成多種語言：
   write_your_first_program: 編寫您的第一個電腦程式
-  learn_cs_concepts: '使用拖、拉的程式設計來學習電腦科學中基本概念。這是一個由 比爾 · 蓋茨(Bill Gates)、 馬克 · 佐柏克(Mark Zuckerberg)、 憤怒鳥 (Angry Birds) 和 植物大戰僵屍 (Plants Vs Zombies) 所主演的，類似遊戲的初學影音課程。在這個課程中您將學到 "重複迴圈" (repeat-loops)、 "如果-就"(if-then)語法、和基礎的演算法。'
+  learn_cs_concepts: '使用拖拉的程式設計來學習電腦科學中基本概念。這是一個類似遊戲的初學影音課程。由 比爾 · 蓋茨(Bill Gates)、 馬克 · 佐柏克(Mark Zuckerberg)、 憤怒鳥 (Angry Birds) 和 植物大戰僵屍 (Plants Vs Zombies) 所主演。在這個課程中您將學到 "重複迴圈" (repeat-loops)、 "如果-就"(if-then)語法、和簡易的演算法。'
   all_ages: 適合所有年齢
   beginner: 初學者
   n_participants: '# 參與者'
@@ -41,10 +41,10 @@ zh-TW:
   congratulations_on_completing_hoc: 恭喜你，你已完成 1 個小時的程式設計課程。
   get_a_certificate_of_achievement: 獲取成就證書
   enter_valid_email: 請輸入一個有效的電子郵件信箱
-  get_a_certificate_message: "我們將會寄送給您有關 <a href='/learn/beyond'> 一小時後的學習 </a> 的證書和相關訊息。"
+  get_a_certificate_message: "我們將會寄送給您有關<a href='/learn/beyond'>一小時後的學習</a>的證書和相關訊息。"
   get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
-  thanks_for_submitting: 感謝您的提交！
-  if_you_enjoyed: 如果你喜歡這樣的學習方式，不妨也邀請你的朋友們一起加入 ！我們希望全世界都能參與這樣的學習方式。
+  thanks_for_submitting: 謝謝!
+  if_you_enjoyed: 如果你喜歡這樣的學習方式，不彷也邀請你的朋友們一起加入 ！我們希望全世界都能參與這樣的學習方式。
   personalize_certificate: 個人化您的證書
   share_achievement: 分享你的成就
   beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
@@ -79,7 +79,7 @@ zh-TW:
   petition_thankyou: 感謝你在請願書上簽名
   carousel_heading_international: 使用你語言的教程
   continue_learning_header: 繼續學習在一個小時之後
-  continue_learning_body: 這兒有許多的選擇。您可以在網上、在當地學校或夏令營進行學習。
+  continue_learning_body: 有很多的選項。您可以在網上學習，或在當地學校或夏令營。
   learn_next_level: 繼續到下一級別
   learn_online: 嘗試其他線上課程
   learn_classes: 尋找當地的教室
@@ -186,7 +186,7 @@ zh-TW:
   dashboard_action_cancel: 取消
   dashboard_action_delete: Delete
   dashboard_action_confirm: Delete?
-  dashboard_action_delete_yes: 確定
+  dashboard_action_delete_yes: 是
   dashboard_action_delete_no: 否
   dashboard_action_done: Done
   dashboard_action_required: required
@@ -201,7 +201,7 @@ zh-TW:
   dashboard_sections_new_section: New section
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
   dashboard_sections_table_section: Section
-  dashboard_sections_table_secret: Secret type
+  dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
   dashboard_sections_table_students: Students
@@ -261,9 +261,21 @@ zh-TW:
   dashboard_teacher_worksheet: teacher worksheet
   dashboard_grade_k: K
   dashboard_grade_other: 其他
-  dashboard_login_word: word
-  dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_word: Word
+  dashboard_login_picture: Picture
+  dashboard_login_none: 電子郵件
   dashboard_new_password: new password
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: '學生 '
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: "Who creates the student's account?"
+  dashboard_sections_password question: 'What do students use as a "password"?'
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: 'Unique web-page listed on "Manage Students" tab'
+  dashboard_sections_sign_in_main: 'http://code.org and click "Sign in"'
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."

@@ -48,6 +48,7 @@
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Stopnja 1
+          Webapp: Stopnja 2
         events:
           desc: Bounce (beta)
           Bounce: Stopnja 1
@@ -79,7 +80,7 @@
         Artist2: Umetnik 2
         Unplug5: Funkcije
         Farmer: Kmet
-        Unplug6: Pogojniki
+        Unplug6: Pogoji
         Artist3: Umetnik 3
         Unplug7: Pisanje pesmi
         Farmer2: Kmet 2
@@ -96,6 +97,7 @@
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Bronze
@@ -544,7 +546,7 @@
         Unplug3: Graph Paper Programming
         Unplug4: Algoritmi
         Unplug5: Funkcije
-        Unplug6: Pogojniki
+        Unplug6: Pogoji
         Unplug7: Songwriting
         Unplug8: Abstraction
         Unplug9: Relay programming
@@ -573,7 +575,7 @@
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: Graph Paper Programming
-        C2_conditionals_with_cards: Pogojniki
+        C2_conditionals_with_cards: Pogoji
         C2_binary_bracelets: Binary Bracelets
         C2_replay_programming: Relejsko programiranje
         C2_paper_airplanes: Paper Airplanes

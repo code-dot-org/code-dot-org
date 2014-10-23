@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -18745,7 +18745,7 @@ exports.generatedCodeInfo = function(d){return "The blocks for your program can 
 
 exports.hashError = function(d){return "Sorry, '%1' doesn't correspond with any saved program."};
 
-exports.help = function(d){return "Help"};
+exports.help = function(d){return "مدد"};
 
 exports.hintTitle = function(d){return "Hint:"};
 
@@ -18753,7 +18753,7 @@ exports.jump = function(d){return "jump"};
 
 exports.levelIncompleteError = function(d){return "You are using all of the necessary types of blocks but not in the right way."};
 
-exports.listVariable = function(d){return "list"};
+exports.listVariable = function(d){return "فہرست"};
 
 exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
 
@@ -19044,7 +19044,7 @@ exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" b
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "کر"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
 

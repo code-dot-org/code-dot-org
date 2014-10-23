@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -7701,13 +7701,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Lister"};
 
-exports.catLoops = function(d){return "Løkker"};
+exports.catLoops = function(d){return "Sløjfer"};
 
 exports.catMath = function(d){return "Matematik"};
 
 exports.catProcedures = function(d){return "Funktioner"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -7799,7 +7799,7 @@ exports.tooManyBlocksMsg = function(d){return "Dette puslespil kan løses med <x
 
 exports.tooMuchWork = function(d){return "Du fik mig til at gøre en masse arbejde! Kunne du prøve at gentage færre gange?"};
 
-exports.toolboxHeader = function(d){return "Blokke"};
+exports.toolboxHeader = function(d){return "blokke"};
 
 exports.openWorkspace = function(d){return "Sådan fungerer det"};
 
@@ -7852,11 +7852,11 @@ exports.genericFeedback = function(d){return "Se hvordan du endte, og prøve at 
 var MessageFormat = require("messageformat");MessageFormat.locale.da=function(n){return n===1?"one":"other"}
 exports.continue = function(d){return "Fortsæt"};
 
-exports.nextLevel = function(d){return "Tillykke! Du har fuldført dette puslespil."};
+exports.nextLevel = function(d){return "Tillykke! Du har fuldført denne opgave."};
 
 exports.no = function(d){return "Nej"};
 
-exports.numBlocksNeeded = function(d){return "Dette puslespil kan løses med %1 blokke."};
+exports.numBlocksNeeded = function(d){return "Denne opgave kan løses med %1 blokke."};
 
 exports.reinfFeedbackMsg = function(d){return "Du kan trykke på knappen \"Prøv igen\", for at gå tilbage til dit spil."};
 

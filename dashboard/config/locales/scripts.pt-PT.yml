@@ -31,8 +31,8 @@
           'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
           Building a Foundation: Building a Foundation
           Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
+          The Big Event: O Grande Evento
+          Going Places Safely: Ir a Locais de um modo Seguro
           description: Course 1 is designed for early readers in the lower elementary
             grades.  Create computer programs with loops and events.  By the end of
             the course, create your very own custom game or story that you can share.
@@ -50,7 +50,7 @@
           Suzi: Suzi
           The Artist: O Artista
           Artist Debugging: Artist Debugging
-          Bounce: Bounce
+          Bounce: saltar
           'Studio: Create a Story': 'Studio: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
@@ -68,7 +68,7 @@
           Relay programming: Relay programming
           Conditionals: Condicionais
           Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
+          The Big Event: O Grande Evento
           Your Digital Footprint: Your Digital Footprint
           description: Course 2 is designed for students who can read in the lower
             and middle elementary grades.  Create programs with loops, events, and
@@ -101,7 +101,7 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
+          Bounce: saltar
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
           Computational Thinking: Pensamento computacional
@@ -117,7 +117,7 @@
             conditions.  By the end of the course, create your very own interactive
             game or story that you can share with anyone.
           'Studio: Create a Game': 'Studio: Create a Game'
-          Maze: Maze
+          Maze: Labirinto
           Artist: Artist
           'Artist: Functions': 'Artist: Functions'
           'Bee: Functions': 'Bee: Functions'
@@ -140,6 +140,7 @@
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
           'Bee: Debugging2': 'Bee: Debugging2'
           'Artist: Patterns': 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

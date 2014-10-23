@@ -8,7 +8,7 @@ Feladó: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&
 
 # Thanks for signing up to host an Hour of Code!
 
-**EVERY** Minden Hour of Code házigazda számára 10 GB of Dropbox tárhelyet vagy $10 értékű Skype egyenleget ajándékozunk köszönetképpen [Details](http://<%= hostname %>/prizes)
+**EVERY** Minden Hour of Code házigazda számára 10 GB Dropbox tárhelyet vagy $10 értékű Skype egyenleget ajándékozunk köszönetképpen [Részletek](http://<%= hostname %>/prizes)
 
 <% if @country == 'us' %>
 

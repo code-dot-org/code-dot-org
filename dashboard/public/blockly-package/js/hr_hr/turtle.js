@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -10677,7 +10677,7 @@ exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkcije"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Varijable"};
 
@@ -10689,13 +10689,13 @@ exports.dialogCancel = function(d){return "Odustani"};
 
 exports.dialogOK = function(d){return "U redu"};
 
-exports.directionNorthLetter = function(d){return "S"};
+exports.directionNorthLetter = function(d){return "Sjever"};
 
-exports.directionSouthLetter = function(d){return "J"};
+exports.directionSouthLetter = function(d){return "Jug"};
 
-exports.directionEastLetter = function(d){return "I"};
+exports.directionEastLetter = function(d){return "Istok"};
 
-exports.directionWestLetter = function(d){return "Z"};
+exports.directionWestLetter = function(d){return "Zapad"};
 
 exports.end = function(d){return "kraj"};
 
@@ -10709,7 +10709,7 @@ exports.finalStage = function(d){return "Čestitamo! Posljednja etapa je završe
 
 exports.finalStageTrophies = function(d){return "Čestitamo! Završena je posljednja etapa i osvajaš "+p(d,"numTrophies",0,"hr",{"one":"trofej","other":n(d,"numTrophies")+" trofeja"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Kraj"};
 
 exports.generatedCodeInfo = function(d){return "Čak i vrhunska sveučilišta podučavaju kodiranje pomoću blokova (npr. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ali u suštini, blokovi koje si spojio se mogu prikazati kao kôd u JavaScriptu, najkorištenijem programskom jeziku na svijetu:"};
 
@@ -10723,7 +10723,7 @@ exports.jump = function(d){return "skoči"};
 
 exports.levelIncompleteError = function(d){return "Koristiš sve potrebne vrste blokova, ali na pogrešan način."};
 
-exports.listVariable = function(d){return "popis"};
+exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Napravi vlastitu Flappy igricu"};
 

@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -11538,7 +11538,7 @@ exports.bounceBall = function(d){return "skoppa bolta"};
 
 exports.bounceBallTooltip = function(d){return "Láta bolta skoppa af hlut."};
 
-exports.continue = function(d){return "Halda áfram"};
+exports.continue = function(d){return "Áfram"};
 
 exports.dirE = function(d){return "A"};
 
@@ -11560,9 +11560,9 @@ exports.ifCode = function(d){return "ef"};
 
 exports.ifPathAhead = function(d){return "ef slóð framundan"};
 
-exports.ifTooltip = function(d){return "Ef það er slóð í þessa stefnu þá á að gera eitthvað."};
+exports.ifTooltip = function(d){return "Ef það er slóð í tiltekna stefnu þá á að gera eitthvað."};
 
-exports.ifelseTooltip = function(d){return "Ef það er slóð í þessa stefnu þá á að gera fyrstu kubbastæðuna. Annars á að gera stæðu númer tvö."};
+exports.ifelseTooltip = function(d){return "Ef það er slóð í tiltekna stefnu, þá að gera fyrri kubbastæðuna. Annars á að gera seinni kubbastæðuna."};
 
 exports.incrementOpponentScore = function(d){return "gefa andstæðingi stig"};
 
@@ -11570,7 +11570,7 @@ exports.incrementOpponentScoreTooltip = function(d){return "Bæta 1 við núvera
 
 exports.incrementPlayerScore = function(d){return "skora stig"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Bæta 1 við núverandi skor leikmanns."};
+exports.incrementPlayerScoreTooltip = function(d){return "Bæta einu stigi við núverandi stöðu."};
 
 exports.isWall = function(d){return "er þetta veggur"};
 
@@ -11588,7 +11588,7 @@ exports.moveDownTooltip = function(d){return "Færa spaðann niður."};
 
 exports.moveForward = function(d){return "færa áfram"};
 
-exports.moveForwardTooltip = function(d){return "Færa mig fram um eitt bil."};
+exports.moveForwardTooltip = function(d){return "Færa mig áfram um einn reit."};
 
 exports.moveLeft = function(d){return "færa til vinstri"};
 
@@ -11602,11 +11602,11 @@ exports.moveUp = function(d){return "færa upp"};
 
 exports.moveUpTooltip = function(d){return "Færa spaðann upp."};
 
-exports.nextLevel = function(d){return "Til hamingju! Þú hefur lokið við þessa þraut."};
+exports.nextLevel = function(d){return "Til hamingju! Þú hefur klárað þessa þraut."};
 
 exports.no = function(d){return "Nei"};
 
-exports.noPathAhead = function(d){return "slóð er lokuð"};
+exports.noPathAhead = function(d){return "slóðin er lokuð"};
 
 exports.noPathLeft = function(d){return "engin slóð til vinstri"};
 
@@ -11622,7 +11622,7 @@ exports.pathRight = function(d){return "ef slóð til hægri"};
 
 exports.pilePresent = function(d){return "það er haugur"};
 
-exports.playSoundCrunch = function(d){return "spila brothljóð"};
+exports.playSoundCrunch = function(d){return "spila kremjuhljóð"};
 
 exports.playSoundGoal1 = function(d){return "spila markhljóð 1"};
 
@@ -11654,11 +11654,11 @@ exports.reinfFeedbackMsg = function(d){return "Þú getur smellt á \"Reyna aftu
 
 exports.removeSquare = function(d){return "fjarlægja ferning"};
 
-exports.repeatUntil = function(d){return "endurtaka þar til"};
+exports.repeatUntil = function(d){return "endurtaka uns"};
 
 exports.repeatUntilBlocked = function(d){return "meðan slóð framundan"};
 
-exports.repeatUntilFinish = function(d){return "endurtaka til loka"};
+exports.repeatUntilFinish = function(d){return "endurtaka þar til búið"};
 
 exports.scoreText = function(d){return "Skor: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
@@ -11668,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "vallarumhverfi"};
 
 exports.setBackgroundRetro = function(d){return "eldra umhverfi"};
 
-exports.setBackgroundTooltip = function(d){return "Stillir bakgrunninn"};
+exports.setBackgroundTooltip = function(d){return "Stillir bakgrunnsmynd"};
 
 exports.setBallRandom = function(d){return "handahófsbolti"};
 
@@ -11738,7 +11738,7 @@ exports.whenDownTooltip = function(d){return "Gera aðgerðirnar fyrir neðan þ
 
 exports.whenGameStarts = function(d){return "þegar leikur byrjar"};
 
-exports.whenGameStartsTooltip = function(d){return "Gera aðgerðirnar fyrir neðan þegar leikurinn byrjar."};
+exports.whenGameStartsTooltip = function(d){return "Gera aðgerðirnar hér fyrir neðan þegar leikurinn byrjar."};
 
 exports.whenLeft = function(d){return "þegar vinstri ör"};
 
@@ -11760,9 +11760,9 @@ exports.whenWallCollided = function(d){return "þegar bolti hittir vegg"};
 
 exports.whenWallCollidedTooltip = function(d){return "Gera aðgerðirnar fyrir neðan þegar bolti rekst á vegg."};
 
-exports.whileMsg = function(d){return "á meðan"};
+exports.whileMsg = function(d){return "meðan"};
 
-exports.whileTooltip = function(d){return "Endurtaka aðgerðirnar í kubbnum þar til endamarki er náð."};
+exports.whileTooltip = function(d){return "Endurtaka innifaldar aðgerðir þar til endapunkti er náð."};
 
 exports.yes = function(d){return "Já"};
 
@@ -11787,13 +11787,13 @@ exports.catMath = function(d){return "Reikningur"};
 
 exports.catProcedures = function(d){return "Föll"};
 
-exports.catText = function(d){return "Texti"};
+exports.catText = function(d){return "texti"};
 
 exports.catVariables = function(d){return "Breytur"};
 
 exports.codeTooltip = function(d){return "Sjá samsvarandi JavaScript kóða."};
 
-exports.continue = function(d){return "Áfram"};
+exports.continue = function(d){return "Halda áfram"};
 
 exports.dialogCancel = function(d){return "Hætta við"};
 
@@ -11879,7 +11879,7 @@ exports.tooManyBlocksMsg = function(d){return "Þessa þraut er hægt að leysa 
 
 exports.tooMuchWork = function(d){return "Þú lagðir á mig mjög mikla vinnu! Gætirðu reynt að nota færri endurtekningar?"};
 
-exports.toolboxHeader = function(d){return "Kubbar"};
+exports.toolboxHeader = function(d){return "kubbar"};
 
 exports.openWorkspace = function(d){return "Hvernig það virkar"};
 

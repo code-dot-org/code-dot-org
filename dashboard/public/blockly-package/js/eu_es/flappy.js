@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -9383,7 +9383,7 @@ exports.flapVeryLarge = function(d){return "hegoei eragin kopuru oso handi batea
 
 exports.flapTooltip = function(d){return "Heganarazi Flappy gora."};
 
-exports.flappySpecificFail = function(d){return "Your code looks good - it will flap with each click. But you need to click many times to flap to the target."};
+exports.flappySpecificFail = function(d){return "Zure kodeak itxura ona dauka - Hegoa astinduko du klik bakoitzarekin. Baina gehiegitan klikatu behar duzu helburura iristeko."};
 
 exports.incrementPlayerScore = function(d){return "lortu puntu bat"};
 

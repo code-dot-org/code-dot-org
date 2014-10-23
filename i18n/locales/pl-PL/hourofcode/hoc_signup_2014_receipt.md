@@ -34,11 +34,11 @@ Tell your friends about the #HourOfCode.
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## Poproś swojego pracodawcę o przyłączenie się do akcji
 
 [Wyślij tą wiadomość](http://<%= hostname %>/resources#email) do swojego przełożonego, lub [przekaż mu te materiały](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Promote Hour of Code within your community
+## Promuj Godzinę Kodowania wśród lokalnej społeczności
 
 Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 

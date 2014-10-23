@@ -2,7 +2,7 @@ pt-PT:
   data:
     unplugged:
       Unplug1:
-        title: Introdução à Ciência da Computação
+        title: Introdução à Ciência Computacional
         desc: 'This lesson will introduce the concept of Computer Science and explain what a Computer Scientist does.  It will also give students an opportunity to assume the role of a computer scientist.  By the end of the activity, each student will have a take-home reminder of what he or she learned.  You may be tempted to skip teaching young children the vocabulary words that are associated with the lessons that follow, but presenting them in a fun and playful light now is far more productive than waiting for more advanced opportunities.'
         pdfs:
           - unplug1
@@ -70,7 +70,7 @@ pt-PT:
         video: Unplug11
       UnplugHappyMaps:
         title: Happy Maps
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        desc: Estudantes criam um algoritmo simples (conjunto de instruções) para mover a personagem através de um labirinto usando um único comando.
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Move it, Move it

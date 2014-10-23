@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -10889,7 +10889,7 @@ exports.lengthFeedback = function(d){return "You got it right except for the len
 
 exports.lengthParameter = function(d){return "length"};
 
-exports.loopVariable = function(d){return "counter"};
+exports.loopVariable = function(d){return "Teller"};
 
 exports.moveBackward = function(d){return "move backward by"};
 
