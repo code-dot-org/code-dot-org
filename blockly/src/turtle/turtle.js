@@ -80,8 +80,17 @@ Turtle.init = function(config) {
   skin = config.skin;
   level = config.level;
 
-  if (skin.id == "frozen")
+  if (skin.id == "anna" || skin.id == "elsa")
   {
+    if (skin.id == "elsa")
+    {
+      turtleNumFrames = 10;
+    }
+    else if (skin.id == "anna")
+    {
+      turtleNumFrames = 10;
+    }
+
     // let's try adding a background image
     level.images = [{}];
     level.images[0].filename = 'background.jpg';
@@ -91,15 +100,20 @@ Turtle.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
 
-  if (skin.id == "frozen")
+  if (skin.id == "anna")
   {
-    Turtle.AVATAR_HEIGHT = 75;
-    Turtle.AVATAR_WIDTH = 55;
+    Turtle.AVATAR_WIDTH = 57;
+    Turtle.AVATAR_HEIGHT = 78;
+  }
+  else if (skin.id == "elsa")
+  {
+    Turtle.AVATAR_WIDTH = 57;
+    Turtle.AVATAR_HEIGHT = 67;
   }
   else
   {
-    Turtle.AVATAR_HEIGHT = 51;
     Turtle.AVATAR_WIDTH = 70;
+    Turtle.AVATAR_HEIGHT = 51;
   }
 
   config.html = page({
@@ -217,9 +231,9 @@ Turtle.placeImage = function(filename, position) {
     Turtle.ctxImages.drawImage(img, position[0], position[1]);
     Turtle.display();
   };
-  if (skin.id == "frozen")
+  if (skin.id == "anna" || skin.id == "elsa")
   {
-    img.src = BlocklyApps.assetUrl('media/skins/frozen/' + filename);
+    img.src = BlocklyApps.assetUrl('media/skins/' + skin.id + '/' + filename);
   }
   else
   {
@@ -251,7 +265,7 @@ Turtle.loadTurtle = function() {
     Turtle.display();
   };
   Turtle.avatarImage.src = skin.avatar;
-  if (skin.id == "frozen")
+  if (skin.id == "anna" || skin.id == "elsa")
     Turtle.numberAvatarHeadings = 36;
   else
     Turtle.numberAvatarHeadings = 180;
@@ -259,9 +273,10 @@ Turtle.loadTurtle = function() {
   Turtle.avatarImage.width = Turtle.AVATAR_WIDTH;
 };
 
+var turtleNumFrames;
 var turtleFrame = 0;
-var turtleNumFrames = 12;
 var turtleFrameSlowdown = 5;
+
 
 /**
  * Draw the turtle image based on Turtle.x, Turtle.y, and Turtle.heading.
@@ -270,7 +285,7 @@ Turtle.drawTurtle = function() {
   var sourceY;
   // Computes the index of the image in the sprite.
   var index = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
-  if (skin.id == "frozen") {
+  if (skin.id == "anna" || skin.id == "elsa") {
     // the rotations in the sprite sheet go in the opposite direction.
     index = Turtle.numberAvatarHeadings - index;
 
@@ -278,7 +293,7 @@ Turtle.drawTurtle = function() {
     index = (index + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
   }
   var sourceX = Turtle.avatarImage.width * index;
-  if (skin.id == "frozen") {
+  if (skin.id == "anna" || skin.id == "elsa") {
     sourceY = Turtle.avatarImage.height * turtleFrame;
     turtleFrame = (turtleFrame + 1) % turtleNumFrames;
   } else {
@@ -320,7 +335,7 @@ BlocklyApps.reset = function(ignore) {
   }
   // Clear the display.
   Turtle.ctxScratch.canvas.width = Turtle.ctxScratch.canvas.width;
-  if (skin.id == "frozen")
+  if (skin.id == "anna" || skin.id == "elsa")
   {
     Turtle.ctxScratch.strokeStyle = '#eee';
     Turtle.ctxScratch.fillStyle = '#eee';
@@ -463,7 +478,7 @@ Turtle.animate = function() {
   var command = tuple.shift();
   BlocklyApps.highlight(tuple.pop());
 
-  if (skin.id == "frozen") {
+  if (skin.id == "anna" || skin.id == "elsa") {
     var stepAndDisplay = function () {
       Turtle.step(command, tuple);
       Turtle.display();
@@ -492,19 +507,19 @@ Turtle.step = function(command, values) {
   switch (command) {
     case 'FD':  // Forward
       distance = values[0];
-      if (skin.id == "frozen")
+      if (skin.id == "anna" || skin.id == "elsa")
         distance /= jumpSubsteps;
       Turtle.moveForward_(distance);
       break;
     case 'JF':  // Jump forward
       distance = values[0];
-      if (skin.id == "frozen")
+      if (skin.id == "anna" || skin.id == "elsa")
         distance /= jumpSubsteps;
       Turtle.jumpForward_(distance);
       break;
     case 'MV':  // Move (direction)
       var distance = values[0];
-      if (skin.id == "frozen")
+      if (skin.id == "anna" || skin.id == "elsa")
         distance /= jumpSubsteps;
       var heading = values[1];
       Turtle.setHeading_(heading);
@@ -512,14 +527,17 @@ Turtle.step = function(command, values) {
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
-      if (skin.id == "frozen")
+      if (skin.id == "anna" || skin.id == "elsa")
         distance /= jumpSubsteps;
       heading = values[1];
       Turtle.setHeading_(heading);
       Turtle.jumpForward_(distance);
       break;
     case 'RT':  // Right Turn
-      Turtle.turnByDegrees_(values[0]);
+      var angle = values[0];
+      if (skin.id == "anna" || skin.id == "elsa")
+        angle /= jumpSubsteps;
+      Turtle.turnByDegrees_(angle);
       break;
     case 'DP':  // Draw Print
       Turtle.ctxScratch.save();
