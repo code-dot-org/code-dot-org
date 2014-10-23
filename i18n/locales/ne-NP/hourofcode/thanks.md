@@ -42,20 +42,20 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 <% end %>
 
-## 3. Make a generous donation
+## 3. उदार दान गर्नुहोस्
 
-[Donate to our crowdfunding campaign](http://code.org/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://code.org/donate) in history. Every dollar will be matched by major Code.org [donors](http://code.org/about/donors), doubling your impact.
+[हाम्रो क्राउडफन्डिङ् अभियानमा दान गर्नुहोस्](http://code.org/donate)। 100 मिलियन बच्चाहरूलाई पढाउन, हामीलाई तपाइँको समर्थनको आवश्यकता पर्दछ। हामीले इतिहासमा [क्राउडफन्डिङ् अभियानको सबै भन्दा ठूलो शिक्षा](http://code.org/donate) के हुन्छ भनि केबल सुरु गर्यौँ। हरेक डलरलाई आफ्नो प्रभाव दुईगुणा प्रमुख Code.org [दाताहरू](http://code.org/about/donors) द्वारा, मिलान गरिने छ।
 
-## 4. Ask your employer to get involved
+## 4. आफ्नो मालिकलाई आवद्ध हुन सोध्नुहोस्
 
-[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
+[यो इमेललाई](/resources#email) तपाइँको व्यवस्थापक, वा CEO लाई पठाउनुहोस्। वा [तिनिहरूलाई यो हातेपुस्तिका दिनुहोस्](/resources/hoc-one-pager.pdf).
 
-## 5. Promote Hour of Code within your community
+## तपाइँको समुदाय भित्र Hour of Code लाई प्रबर्द्धन गर्नुहोस्
 
 स्थानीय समूहलाई भर्ती - क्लब, मन्दिर, विश्वविद्यालय, वा श्रम संघ. अथवा आफ्नो छिमेकीका लागि Hour of Code "ब्लक पार्टी" को संचालन गर्नुहोश.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 6. Hour of Code लाई समर्थन गर्न स्थानीय चुनियका अधिकारीलाई सोध्नुहोस्
 
-[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[यो इमेललाई](/resources#politicians) तपाइँको मेयर, सहरको सभा, वा विद्यालयको समितिमा पठाउनुहोस्। वा [तिनिहरूलाई यो हातेपुस्तिका दिनुहोस्](/resources/hoc-one-pager.pdf) र तिनिहरूलाई तपाइँको विद्यालयमा जान निमन्त्रणा दिनुहोस्।
 
 <%= view 'popup_window.js' %>

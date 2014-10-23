@@ -44,18 +44,18 @@ Werk samen met een vereniging — scouting, kerk, universiteit of vakbond. Of or
 
 ## 5. Vraag een politicus het Uur Code te steunen
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Stuur deze mail](http://<%= hostname %>/resources#politicians) naar je burgemeester, gemeenteraad of schoolbestuur. Of [geef ze deze hand-out](http://<%= hostname %>/resources/hoc-one-pager.pdf) en nodig ze uit op je school.
 
 <% if @country == 'ro' %>
 
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
+Zet de taal op 'Roemeens' om deze tekst te zien!
 
-Echipa Hour of Code Romania hoc@adfaber.org
+Mail Hour of Code Roemenie op hoc@adfaber.org
 
 <% end %>
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org is een 501c3 non-profit. Ons adres is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Wil je deze mails niet meer ontvangen? [Afmelden](%= unsubscribe_link %).
 
 ![](<%= tracking_pixel %>)

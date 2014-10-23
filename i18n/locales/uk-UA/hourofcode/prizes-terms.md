@@ -22,6 +22,12 @@ Code.org зв'яжеться з організаторами після Годи
 
 ## Клас ноутбуків (або іншої техніки вартістю $10,000):
 
-Приз призначений лише для державних 12-річних шкіл США. Чому тільки державні школи? [See the answer here](http://www.hourofcode.com/#faq). Для того, щоб взяти участь, всю школу потрібно зареєструвати на Годину коду до 14 листопада 2014 року. Одна школа у кожному зі штатів США виграє комп'ютерний клас. Code.org проведе вибір і повідомить переможців електронною поштою до 1 грудня 2014 року.
+Приз призначений лише для державних 12-річних шкіл США. Чому тільки державні школи? [Відповідь тут](http://www.hourofcode.com/#faq). Для того, щоб взяти участь, всю школу потрібно зареєструвати на Годину коду до 14 листопада 2014 року. Одна школа у кожному зі штатів США виграє комп'ютерний клас. Code.org проведе вибір і повідомить переможців електронною поштою до 1 грудня 2014 року.
+
+To clarify, this is not a sweepstakes or a contest involving pure chance.
+
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>

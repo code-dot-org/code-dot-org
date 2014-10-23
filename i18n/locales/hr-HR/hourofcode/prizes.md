@@ -1,6 +1,6 @@
 * * *
 
-title: Prizes layout: wide
+naslov: Nagrade prikaz: širok
 
 * * *
 

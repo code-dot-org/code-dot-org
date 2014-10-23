@@ -6,12 +6,12 @@
 
 # Ресурси
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Смятате да организирате Часът на кодирането? <a href = "< % = hoc_uri('/resources/how-to') % >" > Вижте "как да" ръководството</a>
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Използвайте това изложение за разпространение
 </h2>
 
 <p>
@@ -19,7 +19,7 @@
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Дайте това изложение на учители и училища
 </h2>
 
 <p>
@@ -30,7 +30,7 @@
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Покажете тези клипове за да вдъхновите учениците
   </h2>
   
   <div style="float:left; padding:10px">
@@ -74,7 +74,7 @@
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Окачете тези плакати във вашето училище
     </h2>
     
     <p>
@@ -82,7 +82,7 @@
     </p>
     
     <h4>
-      <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
+      <a href="http://hourofcode.com/#signup"> Регистрирайте</a> вашето събитие и ние ще ви изпратим плакати безплатно.
     </h4>
     
     <p>
@@ -94,7 +94,7 @@
     </p>
     
     <h2>
-      Feature these banners on your website
+      Поставете тези банери на вашия сайт
     </h2>
     
     <p>
@@ -106,7 +106,7 @@
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Изпратете тези имейли, за да подпомогнете провеждането на Часът на кодирането
     </h2>
     
     <p>
@@ -114,7 +114,7 @@
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Поискайте вашето училище, работодател или приятели да се регистрират:
     </h2>
     
     <p>
@@ -142,7 +142,7 @@
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Поканете медии да присъстват на събитието:
     </h2>
     
     <p>
@@ -194,7 +194,7 @@
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Разкажете на родителите за вашето училищно събитие:
     </h2>
     
     <p>
@@ -234,7 +234,7 @@
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Поканете местен политик на училищното ви събитие:
     </h2>
     
     <p>

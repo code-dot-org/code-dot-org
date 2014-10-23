@@ -45,7 +45,7 @@ Speriamo che stimoli l'interesse degli studenti per continuare ad imparare. Le r
 
 *Perché è importante tutto questo?*
 
-In Cina, ogni studenti delle superiori per potersi diplomare deve studiare informatica. Negli Stati Uniti, il 90 per cento delle scuole non la include neppure tra le materie da insegnare. È ora di riafferrare il treno del XXI secolo. Sappiamo che, indipendentemente da ciò che i nostri studenti fanno quando saranno cresciuti, sia che vogliano lavorare nel campo della medicina, degli affari, della politica o le arti, sapere come si costruiscono degli strumenti tecnologi fornirà loro la fiducia in se stessi e conoscenze importanti per poter riuscire nel loro campo.
+In Cina, ogni studenti delle superiori per potersi diplomare deve studiare informatica. Negli Stati Uniti, il 90 per cento delle scuole non la include neppure tra le materie da insegnare. È ora di riafferrare il treno del XXI secolo. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
 **Maggiori dettagli e una citazione che puoi usare nei tuoi materiali**
 

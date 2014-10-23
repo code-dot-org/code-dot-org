@@ -42,20 +42,20 @@ Spune prietenilor tai despre #HourOfCode.
 
 <% end %>
 
-## 3. Make a generous donation
+## 3. Oferă o donaţie generoasă
 
-[Donate to our crowdfunding campaign](http://code.org/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://code.org/donate) in history. Every dollar will be matched by major Code.org [donors](http://code.org/about/donors), doubling your impact.
+[Doneaza în cadrul campaniei noastre de crowdfunding](http://code.org/donate). Pentru a invata 100 de milioane de copii, avem nevoie de sprijinul tău. Am lansat ceea ce ar putea fi [cea mai mare campanie de crowdfunding pentru educaţie](http://code.org/donate) din istorie. Fiecare dolar va fi echivalat de [donatori](http://code.org/about/donors) majori Code.org, dublând impactul.
 
-## 4. Ask your employer to get involved
+## 3. Solicită angajatorului să se implice
 
-[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
+[Trimite acest e-mail](/resources#email) la administrator sau CEO. Sau [da-le acest poster](/resources/hoc-one-pager.pdf).
 
-## 5. Promote Hour of Code within your community
+## 4. Promovează Hour of Code în jurul tău
 
-Recrutează un grup local — club de copii, universitate, biserică. Sau organizează o petrecere Hour of Code în cartierul sau zona ta.
+Recrutează o comunitate sau grup local — club de copii, scoala, biserică. Sau organizează o petrecere Hour of Code în cartierul sau zona ta.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 5. Solicită unui oficial, ales local, sprijinul pentru organizarea Hour of Code
 
-[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Trimite acest e-mail](/resources#politicians) Primarului, Pimariei sau conducerii scolii. Sau [da-le acest poster](/resources/hoc-one-pager.pdf) şi invită-i să-ți viziteze şcoala.
 
 <%= view 'popup_window.js' %>

@@ -14,7 +14,7 @@
 
 ## Τα πιο τυχερά τμήματα κερδίζουν μια βινετοσυνομιλία με έναν διακεκριμένο ομιλιτή!
 
-20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Οι μαθητές σας θα μπορούν να θέσουν ερωτήσεις και να συνομιλήσουν με ηγέτες από τη βιομηχανία της τεχνολογίας. [Δες τις περσινές συνομιλίες](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) με τον Bill Gates, τον ιδρυτή του Twitter Jack Dorsey, τη Susan Wojcicki της Google και τον Gabe Newell της Valve.
+20 τυχερές τάξεις θα καλεστούν να ενταχθούν σε μια βίντεο-συνομιλία για να γιορτάσουμε την ώρα του κώδικα από 8 μέχρι 14 Δεκεμβρίου. Οι μαθητές σας θα μπορούν να θέσουν ερωτήσεις και να συνομιλήσουν με ηγέτες από τη βιομηχανία της τεχνολογίας. [Δες τις περσινές συνομιλίες](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) με τον Bill Gates, τον ιδρυτή του Twitter Jack Dorsey, τη Susan Wojcicki της Google και τον Gabe Newell της Valve.
 
 <% end %>
 
@@ -22,15 +22,15 @@
 
 ## Τα πιο τυχερά τμήματα κερδίζουν μια βινετοσυνομιλία με έναν διακεκριμένο ομιλιτή!
 
-50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Οι μαθητές σας θα μπορούν να θέσουν ερωτήσεις και να συνομιλήσουν με ηγέτες από τη βιομηχανία της τεχνολογίας. [Δες τις περσινές συνομιλίες](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) με τον Bill Gates, τον ιδρυτή του Twitter Jack Dorsey, τη Susan Wojcicki της Google και τον Gabe Newell της Valve.
+50 τυχερές τάξεις θα καλεστούν να ενταχθούν σε μια βίντεο-συνομιλία για να γιορτάσουμε την ώρα του κώδικα από 8 μέχρι 14 Δεκεμβρίου. Οι μαθητές σας θα μπορούν να θέσουν ερωτήσεις και να συνομιλήσουν με ηγέτες από τη βιομηχανία της τεχνολογίας. [Δες τις περσινές συνομιλίες](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) με τον Bill Gates, τον ιδρυτή του Twitter Jack Dorsey, τη Susan Wojcicki της Google και τον Gabe Newell της Valve.
 
-## Lucky schools win a class-set of laptops (or $10,000 for other technology)
+## Μερικά τυχερά σχολεία θα κερδίσουν ένα σετ Λάπτοπς (ή 10.000$ δολάρια για άλλες τεχνολογικές επενδύσεις)
 
-One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
+Ένα τυχερό σχολείο σε ***κάθε*** πολιτεία της Αμερικής(+ Ουάσιγκτον) θα κερδίσει τεχνολογικό εξοπλισμό αξίας 10.000$. Διοργάνωσε την Ώρα του κώδικα ώστε όλοι οι μαθητές να έχουν την ευκαιρία να προκριθούν. Συμπλήρωσε την παρακάτω αίτηση για να λάβεις συμμετοχή.
 
-## Hardware Prize application form:
+## Αίτηση για την απόκτηση υλικού:
 
-If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
+Αν έγραψες όλο σου το σχολείο για την συμμετοχή στην Ώρα του κώδικα, συν δέσου για να νικήσεις ένα σετ λαπτοπς (ή 10.000$ για άλλη τεχνολογική επένδυση) για το σχολείο σου! Μόνο ένας καθηγητής πρέπει να γραφτεί ώστε να μπορεί να γραφτεί ολόκληρο το σχολείο.
 
 <%= view :hardware_prizes_form %>
 
@@ -40,6 +40,6 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 <% end %>
 
-## More questions about prizes?
+## Έχεις περισσότερες ερωτήσεις για τα βραβεία;
 
-Check out [Terms and Conditions](/prizes-terms) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+Ρίξε μια ματιά στους [Όρους και προϋποθέσεις](/prizes-terms) η επισκεφτείτε το φόρουμ μας για να δείτε το [FAQ](http://support.code.org) και να αφήσετε τις ερωτήσεις σου.

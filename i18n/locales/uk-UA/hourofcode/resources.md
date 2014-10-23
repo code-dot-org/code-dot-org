@@ -6,12 +6,12 @@ title: Ресурси layout: wide nav: resources_nav
 
 # Ресурси
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Проводите Годину коду? [Скористайтесь інструкціями](<%= hoc_uri('/resources/how-to') %>)
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Поширюйте інформацію у буклеті
 </h2>
 
 <p>
@@ -19,7 +19,7 @@ title: Ресурси layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Передайте роздруківку вчителям та школам
 </h2>
 
 <p>
@@ -30,7 +30,7 @@ title: Ресурси layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Покажіть відео, щоб надихнути учнів
   </h2>
   
   <div style="float:left; padding:10px">
@@ -74,7 +74,7 @@ title: Ресурси layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Повісьте плакати у школі
     </h2>
     
     <p>
@@ -82,7 +82,7 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h4>
-      <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
+      <a href="http://hourofcode.com/#signup">Зареєструйте</a> свої заходи Години коду і ми безкоштовно надішлемо плакати.
     </h4>
     
     <p>
@@ -94,7 +94,7 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Розмістіть банери на своєму сайті
     </h2>
     
     <p>
@@ -106,7 +106,7 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Розішліть листи, щоб поширити інформацію про Годину коду
     </h2>
     
     <p>
@@ -114,7 +114,7 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Запросіть свою школу, працедавця чи друзів:
     </h2>
     
     <p>
@@ -142,7 +142,7 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Запросіть пресу на свій захід:
     </h2>
     
     <p>
@@ -194,7 +194,7 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Повідомте батьків про заходи у вашій школі:
     </h2>
     
     <p>
@@ -234,7 +234,7 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Запросіть місцевих політиків на захід у вашій школі:
     </h2>
     
     <p>

@@ -52,7 +52,7 @@ Tell your friends about the #HourOfCode.
 
 ## 5. Promote Hour of Code within your community
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Pridobijte lokalne grupe - izviđače, crkvu, sveučilište, branitelje ili radnički sindikat. Možete biti domaćin Sata Kodiranja i u svom susjedstvu.
 
 ## 6. Ask a local elected official to support the Hour of Code
 

@@ -42,20 +42,20 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 <% end %>
 
-## 3. Make a generous donation
+## 3. Зробіть пожертву
 
-[Donate to our crowdfunding campaign](http://code.org/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://code.org/donate) in history. Every dollar will be matched by major Code.org [donors](http://code.org/about/donors), doubling your impact.
+[Підтримайте нашу кампанію з краудфандингу](http://code.org/donate). Щоб навчити 100 мільйонів учнів, нам потрібна фінансова підтримка. Ми розпочали кампанію, котра може стати [найбільшою освітньою краудфандинговою кампанією](http://code.org/donate) в історії. На кожен долар пожертви [партнери](http://code.org/about/donors) Code.org додадуть ще один, подвоюючи Ваш вклад.
 
-## 4. Ask your employer to get involved
+## 4. Попросіть про участь свою адміністрацію
 
-[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
+[Відправте цього листа](/resources#email) своєму керівникові чи директору. Або [передайте їм роздруківку](/resources/hoc-one-pager.pdf).
 
-## 5. Promote Hour of Code within your community
+## 5. Сприяйте Годині коду у свій спільноті
 
 Залучайте місцеву спільноту - клуб пластунів, церкву, університет, ветеранський клуб чи профспілку. Або проведіть вечірку Години коду для своїх сусідів.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 6. Зверніться до місцевих депутатів по підтримку Години коду
 
-[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Надішліть цього листа](/resources#politicians) своєму мерові, міській або шкільній раді. Або [передайте їм цю роздруківку](/resources/hoc-one-pager.pdf) і запросіть відвідати вашу школу.
 
 <%= view 'popup_window.js' %>
