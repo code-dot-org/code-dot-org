@@ -3,7 +3,7 @@ require_relative '../deployment'
 require 'cdo/only_one'
 
 def main()
-  Dir.chdir(aws_dir('solr', 'example')) do
+  Dir.chdir('/home/ubuntu/solr-4.8.1/example') do
     system 'java', '-jar', 'start.jar'
   end
 end
