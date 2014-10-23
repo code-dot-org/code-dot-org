@@ -8,9 +8,9 @@ layout: wide
 
 Los 10 GB de espacio en Dropbox o los $10 USD de crédito en Skype son para profesores de K-12, educadores para clubes después de la escuela, y organizaciones educativas. Los 10 GB de espacio gratuito se agregarán a una cuenta existente de Dropbox. Limitado a un regalo por organizador.
 
-Cada organizador debe registrarse en la Hora del Código, para poder recibir el espacio de Dropbox o el crédito de Skype. Si toda tu escuela participa en la Hora de Programación, cada educador debe registrarse individualmente como organizador para calificar.
+Cada organizador debe registrarse en la Hora del Código, para poder recibir el espacio de Dropbox o el crédito de Skype. Si toda tu escuela participa en la Hora del Código, cada educador debe registrarse individualmente como organizador para calificar.
 
-Code.org se comunicará con los organizadores después de la Hora de Programación (Diciembre 8-14) parar dar instrucciones de como redimir el espacio de Dropbox o el crédito de Skype.
+Code.org se comunicará con los organizadores después de la Hora del Código (Diciembre 8-14) parar dar instrucciones de como redimir el espacio de Dropbox o el crédito de Skype.
 
 <% if @country == 'us' %>
 

@@ -8,7 +8,7 @@ title: Resources layout: wide
 
 ## 1) 다음 튜토리얼을 따라해 보세요:
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+Code.org는 나이에 상관없이 모든 학생들이 즐겁게 배울 수 있는 한 시간짜리 튜토리얼을 다양한 파트너들과 함께 만들어 제공할 것입니다. 12월 8일에서 14일까지 진행될 Hour of Code 의 새로운 튜토리얼을 곧 만나보실 수 있습니다.
 
 **모든 Hour of Code 튜토리얼:**
 

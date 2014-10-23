@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -6628,6 +6628,15 @@ exports.createHtmlBlock = function (blockId, elementId, html) {
                            'html': html });
 };
 
+exports.attachEventHandler = function (blockId, elementId, eventName, func) {
+  return Webapp.executeCmd(String(blockId),
+                          'attachEventHandler',
+                          {'elementId': elementId,
+                           'eventName': eventName,
+                           'func': func });
+};
+
+
 },{}],28:[function(require,module,exports){
 /**
  * CodeOrgApp: Webapp
@@ -6733,7 +6742,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/es_es/common') ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  <button id="rightButton" class="arrow">\n    <img src="', escape((7,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  <button id="upButton" class="arrow">\n    <img src="', escape((9,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  <button id="downButton" class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n</div>\n\n');14; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((17,  assetUrl('media/1x1.gif') )), '">', escape((17,  msg.finish() )), '\n    </button>\n  </div>\n');20; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/es_es/common') ; buf.push('\n\n');3; if (showSlider) { ; buf.push('\n  <div id="slider-cell">\n    <svg id="webapp-slider"\n         xmlns="http://www.w3.org/2000/svg"\n         xmlns:svg="http://www.w3.org/2000/svg"\n         xmlns:xlink="http://www.w3.org/1999/xlink"\n         version="1.1"\n         width="150"\n         height="50">\n        <!-- Slow icon. -->\n        <clipPath id="slowClipPath">\n          <rect width=26 height=12 x=5 y=14 />\n        </clipPath>\n        <image xlink:href="', escape((16,  assetUrl('media/webapp/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-10\n            clip-path="url(#slowClipPath)" />\n        <!-- Fast icon. -->\n        <clipPath id="fastClipPath">\n          <rect width=26 height=16 x=120 y=10 />\n        </clipPath>\n        <image xlink:href="', escape((22,  assetUrl('media/webapp/turtle_icons.png') )), '" height=42 width=84 x=120 y=-11\n            clip-path="url(#fastClipPath)" />\n    </svg>\n    <img id="spinner" style="visibility: hidden;" src="', escape((25,  assetUrl('media/webapp/loading.gif') )), '" height=15 width=15>\n  </div>\n');27; } ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((31,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  <button id="rightButton" class="arrow">\n    <img src="', escape((33,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  <button id="upButton" class="arrow">\n    <img src="', escape((35,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  <button id="downButton" class="arrow">\n    <img src="', escape((37,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n</div>\n\n');40; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((43,  assetUrl('media/1x1.gif') )), '">', escape((43,  msg.finish() )), '\n    </button>\n  </div>\n');46; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -6754,7 +6763,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/es_es/common') ; buf.push('\n\n');3; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((6,  assetUrl('media/1x1.gif') )), '">', escape((6,  msg.finish() )), '\n    </button>\n  </div>\n');9; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/es_es/common') ; buf.push('\n');2; var webappMsg = require('../../locale/es_es/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n  <div id="debug-buttons">\n    <button id="pauseButton" class="share">\n      <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  webappMsg.pause() )), '\n    </button>\n  </div>\n');10; } ; buf.push('\n\n');12; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '">', escape((15,  msg.finish() )), '\n    </button>\n  </div>\n');18; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -6762,7 +6771,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/es_es/common":37,"ejs":39}],31:[function(require,module,exports){
+},{"../../locale/es_es/common":37,"../../locale/es_es/webapp":38,"ejs":39}],31:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/es_es/webapp');
@@ -6794,9 +6803,11 @@ levels.simple = {
 
 levels.ec_simple = {
   'editCode': true,
+  'sliderSpeed': 0.7,
   'codeFunctions': [
     {'func': 'turnBlack' },
     {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
+    {'func': 'attachEventHandler', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
   ],
 };
 
@@ -6964,6 +6975,7 @@ var feedback = require('../feedback.js');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var Slider = require('../slider');
 var _ = utils.getLodash();
 
 /**
@@ -6980,10 +6992,12 @@ BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = true;
 //The number of blocks to show as feedback.
 BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
+var MAX_INTERPRETER_STEPS_PER_TICK = 50;
+
 // Default Scalings
 Webapp.scale = {
   'snapRadius': 1,
-  'stepSpeed': 33
+  'stepSpeed': 1
 };
 
 var twitterOptions = {
@@ -7013,14 +7027,117 @@ var drawDiv = function () {
   visualizationColumn.style.width = divWidth + 'px';
 };
 
-Webapp.onTick = function() {
-  Webapp.tickCount++;
+// session is an instance of Ace editSession
+// Usage
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// Need to call this only if the document is updated after the last call.
+function aceCalculateCumulativeLength(session) {
+  var cumulativeLength = [];
+  var cnt = session.getLength();
+  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
+  cumulativeLength.push(cuml);
+  var text = session.getLines(0, cnt);
+  for (var i = 0; i < cnt; i++) {
+    cuml += text[i].length + nlLength;
+    cumulativeLength.push(cuml);
+  }
+  return cumulativeLength;
+}
 
-  if (Webapp.tickCount === 1) {
-    if (Webapp.interpreter) {
-      Webapp.interpreter.run();
-    } else {
-    try { Webapp.whenRunFunc(BlocklyApps, api, Webapp.Globals); } catch (e) { }
+// Fast binary search implementation
+// Pass the cumulative length array here.
+// Usage
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
+// tries to find 2512th character lies in which row.
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
+  if (rows > rowe) {
+    return null;
+  }
+  if (rows + 1 === rowe) {
+    return rows;
+  }
+
+  var mid = Math.floor((rows + rowe) / 2);
+  
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
+  }
+  return mid;
+}
+
+function createSelection(start, end) {
+  var selection = BlocklyApps.editor.aceEditor.getSelection();
+  var range = selection.getRange();
+
+  range.start.row = aceFindRow(Webapp.cumulativeLength, 0, Webapp.cumulativeLength.length, start);
+  range.start.col = start - Webapp.cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(Webapp.cumulativeLength, 0, Webapp.cumulativeLength.length, end);
+  range.end.col = end - Webapp.cumulativeLength[range.end.row];
+
+  selection.setSelectionRange(range);
+}
+
+function queueOnTick() {
+  var stepSpeed = Webapp.scale.stepSpeed;
+  if (Webapp.speedSlider) {
+    stepSpeed = 300 * Math.pow(1 - Webapp.speedSlider.getValue(), 2);
+  }
+  window.setTimeout(Webapp.onTick, stepSpeed);
+}
+
+Webapp.onTick = function() {
+  if (!Webapp.running) {
+    return;
+  }
+
+  Webapp.tickCount++;
+  queueOnTick();
+
+  // Bail out here if paused (but make sure that we still have the next tick
+  // queued first, so we can resume after un-pausing):
+  if (Webapp.paused) {
+    return;
+  }
+
+  if (Webapp.interpreter) {
+    var inUserCode = false;
+    // In each tick, we will step the interpreter multiple times in a tight
+    // loop as long as we are interpreting code that the user can't see
+    // (function aliases at the beginning, getCallback event loop at the end)
+    for (var stepsThisTick = 0;
+         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !inUserCode;
+         stepsThisTick++) {
+      if (Webapp.interpreter.stateStack[0]) {
+        var node = Webapp.interpreter.stateStack[0].node;
+        // Adjust start/end by Webapp.userCodeStartOffset since the code running
+        // has been expanded vs. what the user sees in the editor window:
+        var start = node.start - Webapp.userCodeStartOffset;
+        var end = node.end - Webapp.userCodeStartOffset;
+
+        inUserCode = (start > 0) && (start < Webapp.userCodeLength);
+
+        // If we are showing Javascript code in the ace editor, highlight
+        // the code being executed in each step:
+        if (!BlocklyApps.editor.currentlyUsingBlocks) {
+          // Only show selection if the node being executed is inside the user's
+          // code (not inside code we inserted before or after their code that is
+          // not visible in the editor):
+          if (inUserCode) {
+            createSelection(start, end);
+          } else {
+            BlocklyApps.editor.aceEditor.getSelection().clearSelection();
+          }
+        }
+      } else {
+        inUserCode = false;
+      }
+      Webapp.interpreter.step();
+    }
+  } else {
+    if (Webapp.tickCount === 1) {
+      try { Webapp.whenRunFunc(BlocklyApps, api, Webapp.Globals); } catch (e) { }
     }
   }
 
@@ -7056,8 +7173,8 @@ Webapp.init = function(config) {
   loadLevel();
 
   var finishButtonFirstLine = _.isEmpty(level.softButtons);
-  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, finishButton: finishButtonFirstLine});
-  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine});
+  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, showSlider: config.level.editCode, finishButton: finishButtonFirstLine});
+  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine, debugButtons: config.level.editCode});
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -7115,8 +7232,26 @@ Webapp.init = function(config) {
 
   BlocklyApps.init(config);
 
+  if (level.editCode) {
+    // Initialize the slider.
+    var slider = document.getElementById('webapp-slider');
+    if (slider) {
+      Webapp.speedSlider = new Slider(10, 35, 130, slider);
+
+      // Change default speed (eg Speed up levels that have lots of steps).
+      if (config.level.sliderSpeed) {
+        Webapp.speedSlider.setValue(config.level.sliderSpeed);
+      }
+    }
+  }
+
   var finishButton = document.getElementById('finishButton');
   dom.addClickTouchEvent(finishButton, Webapp.onPuzzleComplete);
+
+  if (level.editCode) {
+    var pauseButton = document.getElementById('pauseButton');
+    dom.addClickTouchEvent(pauseButton, Webapp.onPauseButton);
+  }
 };
 
 /**
@@ -7124,11 +7259,9 @@ Webapp.init = function(config) {
  */
 Webapp.clearEventHandlersKillTickLoop = function() {
   Webapp.whenRunFunc = null;
-  if (Webapp.intervalId) {
-    window.clearInterval(Webapp.intervalId);
-  }
+  Webapp.running = false;
   Webapp.tickCount = 0;
-  Webapp.intervalId = 0;
+  Webapp.running = false;
 };
 
 /**
@@ -7158,13 +7291,27 @@ BlocklyApps.reset = function(first) {
     divWebapp.removeChild(divWebapp.firstChild);
   }
 
+  // Clone and replace divWebapp (this removes all attached event listeners):
+  var newDivWebapp = divWebapp.cloneNode(true);
+  divWebapp.parentNode.replaceChild(newDivWebapp, divWebapp);
+
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
   }
 
+  if (level.editCode) {
+    // Reset the pause button:
+    var pauseButton = document.getElementById('pauseButton');
+    pauseButton.textContent = webappMsg.pause();
+    pauseButton.disabled = true;
+    Webapp.paused = false;
+    document.getElementById('spinner').style.visibility = 'hidden';
+  }
+
   // Reset the Globals object used to contain program variables:
   Webapp.Globals = {};
+  Webapp.eventQueue = [];
   Webapp.interpreter = null;
 };
 
@@ -7243,6 +7390,17 @@ var defineProcedures = function (blockType) {
 };
 
 /**
+ * A miniature runtime in the interpreted world calls this function repeatedly
+ * to check to see if it should invoke any callbacks from within the
+ * interpreted world. If the eventQueue is not empty, we will return an object
+ * that contains an interpreted callback function (stored in "fn") and,
+ * optionally, callback arguments (stored in "arguments")
+ */
+var nativeGetCallback = function () {
+  return Webapp.eventQueue.shift();
+};
+
+/**
  * Execute the app
  */
 Webapp.execute = function() {
@@ -7261,7 +7419,15 @@ Webapp.execute = function() {
   var codeWhenRun;
   if (level.editCode) {
     codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Webapp');
+    Webapp.userCodeStartOffset = codeWhenRun.length;
     codeWhenRun += BlocklyApps.editor.getValue();
+    Webapp.userCodeLength = codeWhenRun.length - Webapp.userCodeStartOffset;
+    // Append our mini-runtime after the user's code. This will spin and process
+    // callback functions:
+    codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
+      'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
+    var session = BlocklyApps.editor.aceEditor.getSession();
+    Webapp.cumulativeLength = aceCalculateCumulativeLength(session);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Webapp.Globals namespace)
@@ -7285,6 +7451,57 @@ Webapp.execute = function() {
                                           BlocklyApps: BlocklyApps,
                                           Webapp: api,
                                           Globals: Webapp.Globals } );
+
+        function makeNativeMemberFunction(nativeFunc, parentObj) {
+          return function() {
+            // Call the native function:
+            var retVal = nativeFunc.apply(parentObj, arguments);
+
+            // Now figure out what to do with the return value...
+
+            if (retVal instanceof Function) {
+              // Don't call createPrimitive() for functions
+              return retVal;
+            } else if (retVal instanceof Object) {
+              var newObj = interpreter.createObject(interpreter.OBJECT);
+              // Limited attempt to marshal back complex return values
+              // Special case: only one-level deep, only handling
+              // primitives and arrays of primitives
+              for (var prop in retVal) {
+                var isFuncOrObj = retVal[prop] instanceof Function ||
+                                  retVal[prop] instanceof Object;
+                // replace properties with wrapped properties
+                if (retVal[prop] instanceof Array) {
+                  var newArray = interpreter.createObject(interpreter.ARRAY);
+                  for (var i = 0; i < retVal[prop].length; i++) {
+                    newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
+                  }
+                  newArray.length = retVal[prop].length;
+                  interpreter.setProperty(newObj, prop, newArray);
+                } else if (isFuncOrObj) {
+                  // skipping over these - they could be objects that should
+                  // be converted into interpreter objects. they could be native
+                  // functions that should be converted. Or they could be objects
+                  // that are already interpreter objects, which is what we assume
+                  // for now:
+                  interpreter.setProperty(newObj, prop, retVal[prop]);
+                } else {
+                  // wrap as a primitive if it is not a function or object:
+                  interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
+                }
+              }
+              return newObj;
+            } else {
+              return interpreter.createPrimitive(retVal);
+            }
+          };
+        }
+
+        var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
+        var wrapper = makeNativeMemberFunction(nativeGetCallback, null);
+        interpreter.setProperty(scope,
+                                'getCallback',
+                                interpreter.createNativeFunction(wrapper));
       };
       Webapp.interpreter = new window.Interpreter(codeWhenRun, initFunc);
     } else {
@@ -7295,7 +7512,30 @@ Webapp.execute = function() {
     }
   }
 
-  Webapp.intervalId = window.setInterval(Webapp.onTick, Webapp.scale.stepSpeed);
+  if (level.editCode) {
+    var pauseButton = document.getElementById('pauseButton');
+    pauseButton.disabled = false;
+    document.getElementById('spinner').style.visibility = 'visible';
+  }
+
+  Webapp.running = true;
+  queueOnTick();
+};
+
+Webapp.onPauseButton = function() {
+  if (Webapp.running) {
+    var pauseButton = document.getElementById('pauseButton');
+    // We have code and are either running or paused
+    if (Webapp.paused) {
+      Webapp.paused = false;
+      pauseButton.textContent = webappMsg.pause();
+    } else {
+      Webapp.paused = true;
+      pauseButton.textContent = webappMsg.continue();
+    }
+    document.getElementById('spinner').style.visibility =
+        Webapp.paused ? 'hidden' : 'visible';
+  }
 };
 
 Webapp.feedbackImage = '';
@@ -7400,6 +7640,10 @@ Webapp.callCmd = function (cmd) {
       BlocklyApps.highlight(cmd.id);
       retVal = Webapp.createHtmlBlock(cmd.opts);
       break;
+    case 'attachEventHandler':
+      BlocklyApps.highlight(cmd.id);
+      retVal = Webapp.attachEventHandler(cmd.opts);
+      break;
   }
   return retVal;
 };
@@ -7423,6 +7667,19 @@ Webapp.createHtmlBlock = function (opts) {
   divWebapp.appendChild(newDiv);
 
   return newDiv;
+};
+
+Webapp.onEventFired = function (opts, e) {
+  Webapp.eventQueue.push({'fn': opts.func});
+};
+
+Webapp.attachEventHandler = function (opts) {
+  // For now, we're not tracking how many of these we add and we don't allow
+  // the user to detach the handler. We detach all listeners by cloning the
+  // divWebapp DOM node inside of reset()
+  document.getElementById(opts.elementId).addEventListener(
+      opts.eventName,
+      Webapp.onEventFired.bind(this, opts));
 };
 
 /*
@@ -7486,7 +7743,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/es_es/common":37,"../../locale/es_es/webapp":38,"../base":2,"../codegen":6,"../dom":8,"../feedback.js":9,"../skins":12,"../templates/page.html":20,"../utils":26,"../xml":36,"./api":27,"./blocks":28,"./controls.html":29,"./extraControlRows.html":30,"./visualization.html":34}],36:[function(require,module,exports){
+},{"../../locale/es_es/common":37,"../../locale/es_es/webapp":38,"../base":2,"../codegen":6,"../dom":8,"../feedback.js":9,"../skins":12,"../slider":13,"../templates/page.html":20,"../utils":26,"../xml":36,"./api":27,"./blocks":28,"./controls.html":29,"./extraControlRows.html":30,"./visualization.html":34}],36:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -7708,6 +7965,8 @@ exports.nextLevel = function(d){return "¡Felicidades! Has completado este puzzl
 exports.no = function(d){return "No"};
 
 exports.numBlocksNeeded = function(d){return "Este puzzle puede resolverse con %1 bloques."};
+
+exports.pause = function(d){return "Pause"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 

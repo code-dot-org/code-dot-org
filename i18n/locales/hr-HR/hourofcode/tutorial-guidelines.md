@@ -1,10 +1,12 @@
 * * *
 
-layout: wide
+prikaz: širok
 
 * * *
 
 # Tutorial guidelines for the Hour of Code and Computer Science Education Week
+
+**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
 
 Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
 

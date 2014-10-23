@@ -42,20 +42,20 @@ Fale aos seus amigos sobre o #HoraDoCódigo.
 
 <% end %>
 
-## 3. Make a generous donation
+## 3. Faça uma doação generosa
 
-[Donate to our crowdfunding campaign](http://code.org/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://code.org/donate) in history. Every dollar will be matched by major Code.org [donors](http://code.org/about/donors), doubling your impact.
+[Faça uma doação para a nossa campanha de crowdfunding](http://code.org/donate). Para levar o ensino a 100 milhões de crianças, precisamos do seu apoio. Acabamos de lançar o pode ser a [maior campanha de crowdfunding para a educação](http://code.org/donate) da história. Para cada dólar doado, os principais [doadores](http://code.org/about/donors) da Code.org doarão o mesmo valor, dobrando o seu impacto.
 
-## 4. Ask your employer to get involved
+## 4. Peça para seu empregador participar
 
-[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
+[Envie este e-mail](/resources#email) para seu gerente, ou para seu Diretor Executivo. Ou [entregue este folheto a eles](/resources/hoc-one-pager.pdf).
 
-## 5. Promote Hour of Code within your community
+## 5. Promova a Hora do Código em sua comunidade
 
 Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de veteranos ou sindicato. Ou ofereça uma "festa" Hora do Código para sua vizinhança.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 6. Peça a um representante político para apoiar a Hora do Código
 
-[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Envie este e-mail](/resources#politicians) para seu prefeito, Câmara Municipal ou conselho escolar. Ou [entregue este folheto](/resources/hoc-one-pager.pdf) e convide-os a visitar sua escola.
 
 <%= view 'popup_window.js' %>

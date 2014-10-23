@@ -2,9 +2,9 @@
 
 başlık: Bir Kodlama Saatine ev sahipliği yapmak için kaydolduğunuz için teşekkürler! düzen: geniş
 
-social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
+sosyal: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
 
-"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
 
 * * *
 
@@ -42,20 +42,20 @@ Arkadaşlarınıza #KodlamaSaati 'ni anlatın.
 
 <% end %>
 
-## 3. Make a generous donation
+## 3. Cömert bir bağış yapın
 
-[Donate to our crowdfunding campaign](http://code.org/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://code.org/donate) in history. Every dollar will be matched by major Code.org [donors](http://code.org/about/donors), doubling your impact.
+[Büyük bir topluluğa fayda sağlayan etkinliğimize bağış yapın](http://code.org/donate). 100 milyon öğrenciye ulaşabilmemiz için desteğinize ihtiyacımız var. Tarihin [bir topluluğa fayda sağlayan en büyük eğitim kampanyasını](http://code.org/donate) henüz başlattık. Her dolar Code.org'un büyük [bağışçıları](http://code.org/about/donors) tarafından eşleştirilerek etki iki katına çıkarılacaktır.
 
-## 4. Ask your employer to get involved
+## İş vereninizden de etkinliğe dahil olmasını rica edin
 
-[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
+[Bu e-postayı](/resources#email) müdürünüze veya şirket CEO'suna yollayın. Ya da [onlara bu el ilanını verin](/resources/hoc-one-pager.pdf).
 
-## 5. Promote Hour of Code within your community
+## 5. Kodlama Saatini çevrenizde destekleyin
 
 Yerel grupları da dahil edin. Ya da komşularınız için bir Kodlama Saati partisi düzenleyin.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 5. Yerel yönetim idarelerinden Kodlama Saatini desteklemelerini isteyin
 
-[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Bu e-postayı](/resources#politicians) belediye başkanınıza, ilçe meclisinize veya okulların idari kadrolarına gönderin. Ya da onlara [bu el ilanını](/resources/hoc-one-pager.pdf) verin ve onları okulunuza davet edin.
 
 <%= view 'popup_window.js' %>

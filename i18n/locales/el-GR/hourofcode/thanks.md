@@ -42,20 +42,20 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 <% end %>
 
-## 3. Make a generous donation
+## 3.Κάντε μια γενναιόδωρη δωρεά 
 
-[Donate to our crowdfunding campaign](http://code.org/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://code.org/donate) in history. Every dollar will be matched by major Code.org [donors](http://code.org/about/donors), doubling your impact.
+[Donate to our crowdfunding campaign](http://code.org/donate). Για να διδάξουμε σε 100 εκατομμύρια παιδιά, θέλουμε την υποστήριξη σας. We just launched what could be the [largest education crowdfunding campaign](http://code.org/donate) in history. Every dollar will be matched by major Code.org [donors](http://code.org/about/donors), doubling your impact.
 
-## 4. Ask your employer to get involved
+## Ζήτα από τον εργοδότη σου να εμπλακεί 
 
 [Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
 
-## 5. Promote Hour of Code within your community
+## Προωθήστε την ώρα του κώδικα μέσα στην κοινωνία σας
 
 Φτιάξε ένα τμήμα για — ένα σώμα προσκόπων, μια ενορία, ένα πανεπιστήμιο, μια ενώση εργαζομένων. Ή κάνε μια Ώρα του Κώδικα για το τετράγωνο της γειτονιάς σου.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 5. Ζήτα από ένα τοπικό άρχοντα να υποστηρίξει την Ώρα του Κώδικα
 
-[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+Στείλτε αυτό το e-mail στον δήμαρχο, στο δημοτικό συμβούλιο ή στον σχολικό σας πίνακα. Μπορείτε επίσης να το δώσετε εσείς αυτοπροσώπως για να τον καλέσετε στο σχολείο σας.
 
 <%= view 'popup_window.js' %>

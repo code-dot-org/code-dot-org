@@ -4,16 +4,16 @@ naslov: Resursi postav: širok
 
 * * *
 
-# How to attract media to your Hour of Code event
+# Privucite medije kako bi prisustvovali vašem Satu Kodiranja
 
-## Some shocking statistics (USA):
+## Šokantni statistički podatci (SAD):
 
-  * There will be one million more computing jobs than students over the next 10 years (adding up to $500 billion in salaries).
-  * More than 50 percent of all projected math and science occupations are in computing occupations. 
-  * Computing occupations are among the highest-paying jobs for new graduates. Yet fewer than 3% of college students graduate with a degree in computer science.
-  * In 26 states, computer science classes don’t count toward math or science high school graduation requirements. 
-  * Less than 20% of AP Computer Science students are women. Less than 10% are black or Latino.
+  * U idućih 10 godina bit će milijun više prilika za upošljavanje na području informatike no učenika (to je do pola milijarde dolara u plaćama).
+  * Više od 50% svih predviđenih matematičkih i znanstvenih zanimanja je u informatici. 
+  * Informatička zanimanja su među najbolje plaćenim za tek diplomirane studente. No manje od 3% studenata diplomira informatiku.
+  * U 26 država SAD-a informatika se ne uračunava u ocjene iz matematike ili znanosti prilikom završavanja srednje škole. 
+  * Manje od 20% studenata napredne informatike su žene (u SAD-u). Od toga manje od 10% su pripadnice manjina.
 
-## Infrographic version:
+## Infografika:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)

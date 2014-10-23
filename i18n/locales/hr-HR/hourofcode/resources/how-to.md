@@ -8,7 +8,7 @@ naslov: Resursi postav: širok
 
 ## 1) Isprobajte vodiče:
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+Imat ćemo raznolike zabavne vodiče u trajanju od jednog sata za učenike svih uzrasta, pripremljene od strane raznih partnera. Novi vodiči bit će ovdje kako bi započeli Sat Kodiranja prije 8-og prosinca.
 
 **Svi vodiči Sata Kodiranja:**
 
