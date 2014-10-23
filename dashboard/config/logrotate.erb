@@ -1,5 +1,8 @@
 # See logrotate man page for configuration file format.
 <%= dashboard_dir('log/*.log') %> {
+# Log files are rotated when they grow bigger than size bytes, but not before the additionally specified time interval.
+minsize 10M
+
 # Log files are rotated every day.
 daily
 
@@ -24,4 +27,7 @@ notifempty
 # Truncate the original log file in place after creating a copy, instead of moving the old log file and optionally creating a new one.
 # It can be used when some program cannot be told to close its logfile and thus might continue writing (appending) to the previous log file forever.
 copytruncate
+
+# Set user/group permissions for archived log files.
+su ubuntu ubuntu
 }
