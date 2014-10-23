@@ -16,8 +16,29 @@ Blockly.HorizontalFlyout = function() {
   Blockly.Flyout.call(this);
   this.autoClose = false;
   this.height_ = 100;
+  this.flyoutRows = 0;
+  this.clearRight_ = {
+    'param_creator': true
+  };
 };
 goog.inherits(Blockly.HorizontalFlyout, Blockly.Flyout);
+
+/**
+ * Show and populate the flyout.
+ * @param {!Array|string} xmlList List of blocks to show.
+ *     Variables and procedures have a custom set of blocks.
+ */
+Blockly.HorizontalFlyout.prototype.show = function(xmlList) {
+  Blockly.HorizontalFlyout.superClass_.show.apply(this, arguments);
+};
+
+/**
+ * Hide and empty the flyout.
+ */
+Blockly.HorizontalFlyout.prototype.hide = function() {
+  this.flyoutRows = 0;
+  Blockly.HorizontalFlyout.superClass_.hide.apply(this, arguments);
+}
 
 /**
  * Move the toolbox to the top of the workspace.
@@ -52,6 +73,7 @@ Blockly.HorizontalFlyout.prototype.position_ = function() {
   path.push('z');
   this.svgBackground_.setAttribute('d', path.join(' '));
 
+  this.width_ = edgeWidth;
   var x = metrics.absoluteLeft;
   if (Blockly.RTL) {
     x += metrics.viewWidth;
@@ -66,40 +88,27 @@ Blockly.HorizontalFlyout.prototype.position_ = function() {
   }
 };
 
-Blockly.HorizontalFlyout.prototype.layoutBlocks_ = function() {
-  //
-};
-
 /**
- * Compute height of flyout.  Position button under each block.
- * TODO: For RTL: Lay out the blocks right-aligned.
+ * Arrange the given block in the flyout, and update cursorX/cursorY.
+ * @param block
+ * @param cursor
+ * @param gap
+ * @private
  */
-/*Blockly.Flyout.prototype.reflow = function() {
-  var flyoutRows = 1;
-  var margin = this.CORNER_RADIUS;
-  var blocks = this.workspace_.getTopBlocks(false);
-  for (var x = 0, block; block = blocks[x]; x++) {
-    var blockHW = block.getHeightWidth();
-    var blockXY = block.getRelativeToSurfaceXY();
-    if (Blockly.RTL) {
-      // TODO:
-      // With the flyoutWidth known, right-align the blocks.
-      var dx = flyoutWidth - margin - Blockly.BlockSvg.TAB_WIDTH - blockXY.x;
-      block.moveBy(dx, 0);
-      blockXY.x += dx;
-    }
-    if (block.flyoutRect_) {
-      block.flyoutRect_.setAttribute('width', blockHW.width);
-      block.flyoutRect_.setAttribute('height', blockHW.height);
-      block.flyoutRect_.setAttribute('x',
-          Blockly.RTL ? blockXY.x - blockHW.width : blockXY.x);
-      block.flyoutRect_.setAttribute('y', blockXY.y);
-    }
+Blockly.HorizontalFlyout.prototype.layoutBlock_ = function(block, cursor, gap, initialX) {
+  function newRow() {
+    this.flyoutRows++;
+    cursor.y += blockHW.height + gap / 2;
+    cursor.x = initialX;
+  };
+  var blockHW = block.getHeightWidth();
+  if (cursor.x + blockHW.width > this.width_) {
+    newRow();
   }
-  if (this.flyoutRows_ != flyoutRows) {
-    // Record the height for .getMetrics_ and .position_.
-    this.height_ = flyoutWidth;
-    // Fire a resize event to update the flyout's scrollbar.
-    Blockly.fireUiEvent(window, 'resize');
+  block.moveBy(cursor.x, cursor.y);
+  cursor.x += blockHW.width + gap / 2;
+  this.height_ = cursor.y + blockHW.height + gap / 2;
+  if (this.clearRight_[block.type]) {
+    newRow();
   }
-};*/
+};
