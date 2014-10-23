@@ -146,7 +146,6 @@ Webapp.onTick = function() {
   }
 
   if (Webapp.interpreter) {
-    var stepsThisTick = 0;
     var inUserCode = false;
     // In each tick, we will step the interpreter multiple times in a tight
     // loop as long as we are interpreting code that the user can't see
