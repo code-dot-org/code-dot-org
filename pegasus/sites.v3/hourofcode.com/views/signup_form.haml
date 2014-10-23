@@ -1,8 +1,5 @@
 %a#hocsignupform{name: 'signup'}
--if @country == 'ar'
-  %h2= hoc_s(:signup_header_ar)
--else
-  %h2= hoc_s(:signup_header)
+%h2= hoc_s(:signup_header)
 %form#hoc-signup-form{role: "form", onsubmit: "event.preventDefault();"}
   #error_message
 

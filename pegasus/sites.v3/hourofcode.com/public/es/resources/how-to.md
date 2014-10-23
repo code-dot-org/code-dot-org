@@ -3,13 +3,13 @@ title: Resources
 layout: wide
 ---
 
-# Como Enseñar Una Hora de Programación
+# Como Enseñar Una Hora del Código
 
 ## 1) Prueba los tutoriales:
 
-Contamos con una gran variedad de tutoriales divertidos, creados por nuestros socios. Los cuales tienen una hora de duración, para estudiantes de todas las edades. Pronto estarán disponibles nuevos tutoriales para el lanzamiento de la Hora de Programación en diciembre 8 al 14.
+Contamos con una gran variedad de tutoriales divertidos, creados por nuestros socios. Los cuales tienen una hora de duración, para estudiantes de todas las edades. Pronto estarán disponibles nuevos tutoriales para el lanzamiento de la Hora del Código en diciembre 8 al 14.
 
-**Todos los tutoriales de la Hora de Programación:**
+**Todos los tutoriales de la Hora del Código:**
 
   * Requieren un tiempo de preparación mínimo para los profesores
   * Son de auto aprendizaje, lo que permite a los estudiantes trabajar a su propio ritmo y habilidad
@@ -18,7 +18,7 @@ Contamos con una gran variedad de tutoriales divertidos, creados por nuestros so
 
 ## 2) Anticipa tus requerimientos de hardware - las computadoras son opcionales
 
-La mejor experiencia de la Hora de Programación se logrará con computadoras conectadas a Internet. Pero no necesita una computadora por cada estudiante, y también se puede realizar la Hora de Programación sin computadoras.
+La mejor experiencia de la Hora del Código se logrará con computadoras conectadas a Internet. Pero no necesita una computadora por cada estudiante, y también se puede realizar la Hora del Código sin computadoras.
 
   * **Pruebe los tutoriales en las computadoras o dispositivos de los estudiantes.** Cerciórese que los tutoriales funcionen correctamente (con audio y video).
   * **Previsualice la página de felicitaciones** para ver lo que los estudiantes verán al terminar. 
@@ -42,7 +42,7 @@ La mayoría de los chicos no saben que es ciencias computacionales. Aquí tienes
   * O: "Las ciencias computacionales son el arte de combinar las ideas humanas y las herramientas digitales para incrementar su poder. Los científicos computacionales trabajan en áreas muy diferentes: escriben aplicaciones para teléfonos, curar enfermedades, crear películas animadas, trabajar en medios sociales, crear robots que exploren otros planetas y mucho más."
   * See tips for getting girls interested in computer science [here](http://code.org/girls). 
 
-## 5) Inicia tu Hora de Programación
+## 5) Inicia tu Hora del Código
 
 **Dirige a los estudiantes a la actividad**
 
