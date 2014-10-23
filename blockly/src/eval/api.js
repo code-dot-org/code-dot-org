@@ -1,13 +1,20 @@
-var ExpressionNode = require('./expressionNode');
+var EvalString = require('./evalString');
+var EvalCircle = require('./evalCircle');
 
-exports.compute = function (expr, blockId) {
+// todo (brent) - make use of blockId
 
+exports.register = function (object) {
+
+  // todo (brent) - hacky way to get last expression
+  Eval.lastEvalObject = object;
+
+  return object;
 };
 
-exports.expression = function (operator, arg1, arg2, blockId) {
-  // todo (brent) - make use of blockId
-  // todo (brent) - hacky way to get last expression
-  Eval.lastExpression = new ExpressionNode(operator, arg1, arg2);
+exports.string = function (str, blockId) {
+  return exports.register(new EvalString(str));
+};
 
-  return Eval.lastExpression;
+exports.circle = function (color, size, blockId) {
+  return exports.register(new EvalCircle(color, size));
 };

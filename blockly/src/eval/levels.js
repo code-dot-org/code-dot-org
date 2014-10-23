@@ -6,13 +6,9 @@ var blockUtils = require('../block_utils');
  */
 module.exports = {
   'eval1': {
-    solutionBlocks: blockUtils.calcBlockXml('functional_times', [
-      blockUtils.calcBlockXml('functional_plus', [1, 2]),
-      blockUtils.calcBlockXml('functional_plus', [3, 4])
-    ]),
+    solutionBlocks: '<block type="functional_string"><title name="VAL">answer string</title></block>',
     ideal: Infinity,
     toolbox: blockUtils.createToolbox(
-      blockUtils.blockOfType('functional_compute') +
       blockUtils.blockOfType('functional_plus') +
       blockUtils.blockOfType('functional_minus') +
       blockUtils.blockOfType('functional_times') +
@@ -20,7 +16,7 @@ module.exports = {
       blockUtils.blockOfType('functional_math_number') +
       blockUtils.blockOfType('functional_string') +
       blockUtils.blockOfType('functional_circle')),
-    startBlocks: '',
+    startBlocks: '<block type="functional_circle" inline="false"><functional_input name="COLOR"><block type="functional_string"><title name="VAL">red</title></block></functional_input><functional_input name="SIZE"><block type="functional_math_number"><title name="NUM">50</title></block></functional_input></block>',
     requiredBlocks: '',
     freePlay: false
   },
