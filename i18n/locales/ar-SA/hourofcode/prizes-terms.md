@@ -24,4 +24,10 @@ layout: wide
 
 هذه الجائزة مقتصرة على المدارس العامه غير الحكومية للمراحل الابتدائية والثانوية ما قبل الجامعة في الولايات المتحدة الأميركية. لماذا المدارس العامة غير الحكومية فقط ؟ [See the answer here](http://www.hourofcode.com/#faq). حتى تكون مؤهل للفوز بالجائزة ، لا بد أن يتم تسجيل المدرسة بالكامل لحدث "ساعة من الكود البرمجي" قبل نهاية يوم 2014/11/14. مدرسة واحدة في كل ولاية أميركية سوف تتلقى مجموعة من الحاسب الألي. إن منظمة "Code.org" تقوم بإعلام الفائزين عن طريق البريد الإلكتروني مع حلول اليوم الأول من كانون الأول 2014/12/1.
 
+To clarify, this is not a sweepstakes or a contest involving pure chance.
+
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+
 <% end %>

@@ -14,7 +14,7 @@ Elke docent die een Uur Code voor studenten organiseert, ontvangt 10 GB Dropbox 
 
 ## Winnende klaslokalen ontvangen een video-chat met een gastspreker!
 
-20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Uw leerlingen kunnen vragen stellen en chatten met technologie-industrie leiders. [Kijk naar de chats van vorig jaar](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) met Bill Gates, Twitter oprichter Jack Dorsey, Susan Wojcicki van Google en Gabe Newell van Valve.
+20 gelukkige klaslokalen zullen worden uitgenodigd om deel te nemen aan een video-chat, om het uur Code te vieren, in de week van 8 tot 14 December. Uw leerlingen kunnen vragen stellen en chatten met technologie-industrie leiders. [Kijk naar de chats van vorig jaar](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) met Bill Gates, Twitter oprichter Jack Dorsey, Susan Wojcicki van Google en Gabe Newell van Valve.
 
 <% end %>
 
@@ -22,15 +22,15 @@ Elke docent die een Uur Code voor studenten organiseert, ontvangt 10 GB Dropbox 
 
 ## Winnende klaslokalen ontvangen een video-chat met een gastspreker!
 
-50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Uw leerlingen kunnen vragen stellen en chatten met technologie-industrie leiders. [Kijk naar de chats van vorig jaar](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) met Bill Gates, Twitter oprichter Jack Dorsey, Susan Wojcicki van Google en Gabe Newell van Valve.
+50 gelukkige klaslokalen zullen worden uitgenodigd om deel te nemen aan een video-chat, om het uur Code te vieren, in de week van 8 tot 14 December. Uw leerlingen kunnen vragen stellen en chatten met technologie-industrie leiders. [Kijk naar de chats van vorig jaar](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) met Bill Gates, Twitter oprichter Jack Dorsey, Susan Wojcicki van Google en Gabe Newell van Valve.
 
-## Lucky schools win a class-set of laptops (or $10,000 for other technology)
+## Winnende scholen krijgen een set laptops (of $10.000 voor andere technologie)
 
-One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
+Een gelukkige school in ***elke*** Amerikaanse staat (+ Washington D.C.) wint ter waarde van $10000 aan technologie. Organiseer het uur Code voor elke student in uw school om in aanmerking te komen. Vul het formulier hieronder in om deel te nemen.
 
-## Hardware Prize application form:
+## Hardware prijs deelnameformulier:
 
-If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
+Als u op uw hele school het Uur Code organiseert, schrijf dan in om een set laptops (of $10.000 aan andere technologie) voor uw school te winnen! Slechts één docent hoeft zich in te schrijven voor de hele school.
 
 <%= view :hardware_prizes_form %>
 
@@ -40,6 +40,6 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 <% end %>
 
-## More questions about prizes?
+## Meer vragen over de prijzen?
 
-Check out [Terms and Conditions](/prizes-terms) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+Lees goed de [bepalingen en voorwaarden](/prizes-terms) of bezoek ons forum om de [veelgestelde vragen](http://support.code.org) te lezen en uw vragen te stellen.

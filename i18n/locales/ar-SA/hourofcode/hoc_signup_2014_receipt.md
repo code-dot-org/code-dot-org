@@ -6,7 +6,7 @@
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# شكراً لمشاركتك في استضافة حدث "ساعة من الكود البرمجي"!
+# شكراً لمشاركتك في استضافة حدث "ساعة البرمجة"!
 
 **كل**منظم لساعة البرمجة سيتلقى 10 غيغابايت من موقع دروب بوكس Dropbox أو $10 من رصيد Skypeسكايب كشكر. [ تفاصيل](http://<%= hostname %>/جوائز)
 
@@ -44,7 +44,7 @@
 
 ## 5. أطلب من مسؤول محلي لدعم حدث "ساعة من الكود البرمجي"
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[ أرسل هذا البريد الإلكتروني](http://<%= hostname %>/الموارد #politicians) الى العمدة أو مجلس المدينة أو مجلس إدارة المدرسة. أو [قدم لهم هذه النشرية](http://<%= hostname %>/resources/hoc-one-pager.pdf) وادعوهم لزيارة مدرستك.
 
 <% if @country == 'ro' %>
 
@@ -56,6 +56,6 @@ Echipa Hour of Code Romania hoc@adfaber.org
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+code.org هي منظمة غير ربحية. العنوان هو 13011301 5th Ave, Suite 1225, Seattle, WA, 98101 لا تحب هذه الرسائل؟ [إلغاء الاشتراك](%= unsubscribe_link %).
 
 ![](<%= tracking_pixel %>)

@@ -398,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -1368,6 +1368,10 @@ exports.builderForm = function(onAttemptCallback) {
 },{"./dom.js":18,"./feedback.js":19,"./templates/builder.html":24,"./utils.js":36,"url":50}],6:[function(require,module,exports){
 var ExpressionNode = require('./expressionNode');
 
+exports.compute = function (expr, blockId) {
+
+};
+
 exports.expression = function (operator, arg1, arg2, blockId) {
   // todo (brent) - make use of blockId
   // todo (brent) - hacky way to get last expression
@@ -1516,6 +1520,11 @@ Calc.init = function(config) {
     var svg = document.getElementById('svgCalc');
     svg.setAttribute('width', CANVAS_WIDTH);
     svg.setAttribute('height', CANVAS_HEIGHT);
+
+    // This is hack that I haven't been able to fully understand. Furthermore,
+    // it seems to break the functional blocks in some browsers. As such, I'm
+    // just going to disable the hack for this app.
+    Blockly.BROKEN_CONTROL_POINTS = false;
 
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
@@ -1712,6 +1721,12 @@ Calc.step = function (ignoreFailures) {
 Calc.drawExpressions = function () {
   var expected = Calc.expressions.current || Calc.expressions.target;
   var user = Calc.expressions.user;
+
+  // todo - in cases where we have the wrong answer, marking the "next" operation
+  // for both doesn't necessarily make sense, i.e.
+  // goal: ((1 + 2) * (3 + 4))
+  // user: (0 * (3 + 4))
+  // right now, we'll highlight the 1 + 2 for goal, and the 3 + 4 for user
 
   expected.applyExpectation(expected);
   drawSvgExpression('answerExpression', expected, user !== null);
@@ -2075,27 +2090,34 @@ exports.install = function(blockly, generator, gensym) {
   installTimes(blockly, generator, gensym);
   installDividedBy(blockly, generator, gensym);
   installMathNumber(blockly, generator, gensym);
-  installDraw(blockly, generator, gensym);
+  installCompute(blockly, generator, gensym);
+  installString(blockly, generator, gensym);
+  installCircle(blockly, generator, gensym);
 };
 
 
 function initFunctionalBlock(block, title, numArgs) {
   block.setHSV(184, 1.00, 0.74);
+  block.setFunctional(true, {
+    headerHeight: 30,
+  });
+
+  var options = {
+    fixedSize: { height: 35 },
+    fontSize: 25 // in pixels
+  };
+
   block.appendDummyInput()
-      .appendTitle(title)
+      .appendTitle(new Blockly.FieldLabel(title, options))
       .setAlign(Blockly.ALIGN_CENTRE);
   for (var i = 1; i <= numArgs; i++) {
     block.appendFunctionalInput('ARG' + i)
-         .setInline(i > 1);
-  }
-  if (numArgs === 1) {
-    // todo (brent) : can we do this without a dummy input, or at least get
-    // the single input centered?
-    block.appendDummyInput()
-        .setInline(true);
+         .setInline(i > 1)
+         .setColour({ hue: 184, saturation: 1.00, value: 0.74 })
+         .setCheck('Number');
   }
 
-  block.setFunctionalOutput(true);
+  block.setFunctionalOutput(true, 'Number');
 }
 
 function installPlus(blockly, generator, gensym) {
@@ -2110,7 +2132,6 @@ function installPlus(blockly, generator, gensym) {
   generator.functional_plus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    // return "(" + arg1 + " + " + arg2 + ")";
     return "Calc.expression('+', " + arg1 + ", " + arg2 + ")";
   };
 }
@@ -2127,7 +2148,6 @@ function installMinus(blockly, generator, gensym) {
   generator.functional_minus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    // return "(" + arg1 + " - " + arg2 + ")";
     return "Calc.expression('-', " + arg1 + ", " + arg2 + ")";
   };
 }
@@ -2144,7 +2164,6 @@ function installTimes(blockly, generator, gensym) {
   generator.functional_times = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    // return "(" + arg1 + " * " + arg2 + ")";
     return "Calc.expression('*', " + arg1 + ", " + arg2 + ")";
   };
 }
@@ -2161,24 +2180,23 @@ function installDividedBy(blockly, generator, gensym) {
   generator.functional_dividedby = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    // return "(" + arg1 + " / " + arg2 + ")";
     return "Calc.expression('/', " + arg1 + ", " + arg2 + ")";
   };
 }
 
-function installDraw(blockly, generator, gensym) {
-  blockly.Blocks.functional_draw = {
+function installCompute(blockly, generator, gensym) {
+  blockly.Blocks.functional_compute = {
     // Block for turning left or right.
     helpUrl: '',
     init: function() {
-      initFunctionalBlock(this, ' ', 1);
+      initFunctionalBlock(this, '', 1);
       this.setFunctionalOutput(false);
     }
   };
 
-  generator.functional_draw = function() {
+  generator.functional_compute = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    return "Calc.draw(" + arg1 +", 'block_id_" + this.id + "');\n";
+    return "Calc.compute(" + arg1 +", 'block_id_" + this.id + "');\n";
   };
 }
 
@@ -2186,16 +2204,71 @@ function installMathNumber(blockly, generator, gensym) {
   blockly.Blocks.functional_math_number = {
     // Numeric value.
     init: function() {
-      this.setHSV(258, 0.35, 0.62);
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldTextInput('0',
-          Blockly.FieldTextInput.numberValidator), 'NUM');
+            Blockly.FieldTextInput.numberValidator), 'NUM')
+          .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, 'Number');
     }
   };
 
   generator.functional_math_number = function() {
     return this.getTitleValue('NUM');
+  };
+}
+
+function installString(blockly, generator, gensym) {
+  blockly.Blocks.functional_string = {
+    // Numeric value.
+    init: function() {
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV(258, 0.35, 0.62);
+      this.appendDummyInput()
+          .appendTitle(new Blockly.FieldTextInput('string'), 'VAL')
+          .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'string');
+    }
+  };
+
+  generator.functional_string = function() {
+    return this.getTitleValue('VAL');
+  };
+}
+
+function installCircle(blockly, generator, gensym) {
+  blockly.Blocks.functional_circle = {
+    init: function () {
+      this.setHSV(39, 1.00, 0.99);
+      this.setFunctional(true, {
+        headerHeight: 30,
+      });
+
+      var options = {
+        fixedSize: { height: 35 }
+      };
+
+      this.appendDummyInput()
+          .appendTitle(new Blockly.FieldLabel('circle', options))
+          .setAlign(Blockly.ALIGN_CENTRE);
+
+      this.appendFunctionalInput('COLOR')
+          .setColour({ hue: 258, saturation: 0.35, value: 0.62 })
+          .setCheck('string');
+      this.appendFunctionalInput('SIZE')
+          .setInline(true)
+          .setColour({ hue: 184, saturation: 1.00, value: 0.74 })
+          .setCheck('Number');
+
+      this.setFunctionalOutput(true, 'image');
+    }
   };
 }
 
@@ -2214,12 +2287,14 @@ module.exports = {
     ]),
     ideal: Infinity,
     toolbox: blockUtils.createToolbox(
-      blockUtils.blockOfType('functional_draw') +
+      blockUtils.blockOfType('functional_compute') +
       blockUtils.blockOfType('functional_plus') +
       blockUtils.blockOfType('functional_minus') +
       blockUtils.blockOfType('functional_times') +
       blockUtils.blockOfType('functional_dividedby') +
-      blockUtils.blockOfType('functional_math_number')),
+      blockUtils.blockOfType('functional_math_number') +
+      blockUtils.blockOfType('functional_string') +
+      blockUtils.blockOfType('functional_circle')),
     startBlocks: '',
     requiredBlocks: '',
     freePlay: false

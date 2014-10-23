@@ -1,6 +1,6 @@
 * * *
 
-से: ' "हादी परट्ोवी (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' विषय: 'एक घंटा कोड का' की मेजबानी के लिए साइन अप करने का धन्यवाद! view: none theme: none
+से: ' "हादी परट्ोवी (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' विषय: 'एक घंटा कोड का' की मेजबानी के लिए साइन अप करने का धन्यवाद! व्यू: नहीं है रूपरंग: नहीं है
 
 * * *
 
@@ -34,17 +34,17 @@ Tell your friends about the #HourOfCode.
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 3. आपके नियोक्ता को सहभागी होने का अनुरोध करे
 
 आपके वरिष्ठ अधिकारियोको को [ये ईमेल भेजिए](http://<%= hostname %>/resources#email) या [ये पत्रक दे](http://<%= hostname %>/resources/hoc-one-pager.pdf) |.
 
-## 4. Promote Hour of Code within your community
+## 4. आपके समुदाय मे 'एक घंटा कोड का' का प्रचार करे
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+स्थानिक संघाटनोको अनुरोध करे - स्काउट / गाइड, चर्च, दिग्ग्जोकी संघटना, कामगार संघ या अपने मोहल्ले मे 'एक घंटा कोड का' की प्रचार सभा करे |
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. एक घंटा कोड का' का समर्थन करने के लिए एक स्थानीय निर्वाचित अधिकारी से अनुरोध करे |
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+अपने महापौर, नगर परिषद, या स्कूल बोर्ड को [ये ईमेल भेजें](http://<%= hostname %>/resources#politicians) या उन्हें [ये पत्रक देके](http://<%= hostname %>/resources/hoc-one-pager.pdf) अपने स्कूल का दौरा करने के लिए उन्हें आमंत्रित करते हैं ।
 
 <% if @country == 'ro' %>
 
@@ -56,6 +56,6 @@ Echipa Hour of Code Romania hoc@adfaber.org
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org ये एक 501c3 लाभ-निरपेक्ष संस्था है । हमारा पता 1301 5th Ave, Suite 1225, Seattle, WA, 98101 है । आपको ये ईमेल पसंद नहीं आया? [Unsubscribe](%= unsubscribe_link %).
 
 ![](<%= tracking_pixel %>)

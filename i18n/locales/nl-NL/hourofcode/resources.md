@@ -6,12 +6,12 @@ title: Materialen layout: wide nav: resources_nav
 
 # Middelen
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Een uur Code organiseren? [ Lees de handleiding ](<%= hoc_uri('/resources/how-to') %>)
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Gebruik deze documenten om iedereen te informeren
 </h2>
 
 <p>
@@ -19,7 +19,7 @@ title: Materialen layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Geef deze documenten aan leerkrachten en scholen
 </h2>
 
 <p>
@@ -30,7 +30,7 @@ title: Materialen layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Toon deze video's om leerlingen te inspireren
   </h2>
   
   <div style="float:left; padding:10px">
@@ -74,7 +74,7 @@ title: Materialen layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Hang deze posters in je school
     </h2>
     
     <p>
@@ -82,7 +82,7 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <h4>
-      <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
+      Uw uur Code kan u <a href="http://hourofcode.com/#signup">aanmelden</a> en wij sturen u de affiches kosteloos op.
     </h4>
     
     <p>
@@ -94,7 +94,7 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Laat deze banners op uw website zien
     </h2>
     
     <p>
@@ -106,7 +106,7 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Stuur deze e-mails om het Uur Code te promoten
     </h2>
     
     <p>
@@ -114,7 +114,7 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Vraag uw school, werkgever of vrienden zich aan te melden:
     </h2>
     
     <p>
@@ -142,7 +142,7 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Vraag de media uw evenement bij te wonen:
     </h2>
     
     <p>
@@ -166,11 +166,11 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <p>
-      Ik schrijf u om u uit te nodigen ons start evenement, en om te zien jonge kinderen beginnen met deze activiteit op [DATE].
+      Ik schrijf u om u uit te nodigen op ons start evenement, en om kinderen te zien beginnen met deze activiteit op [DATE].
     </p>
     
     <p>
-      Het Uur Code, georganiseerd door de non-profitorganisatie Code.org en meer dan 100 anderen, is een demonstratie dat de huidige generatie van studenten bereid zijn om de kritische vaardigheden voor succes in de 21e eeuw te leren. Kom graag langs.
+      Het Uur Code, georganiseerd door de non-profitorganisatie Code.org en meer dan 100 anderen, is een demonstratie dat de huidige generatie van studenten bereid zijn om de kritische vaardigheden voor succes in de 21e eeuw te leren. Kom er graag bij.
     </p>
     
     <p>
@@ -194,7 +194,7 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Vertel ouders over het evenement op je school:
     </h2>
     
     <p>
@@ -234,7 +234,7 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Nodig een politicus uit voor het evenement op jouw school:
     </h2>
     
     <p>

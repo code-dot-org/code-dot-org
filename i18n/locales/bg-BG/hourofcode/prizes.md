@@ -14,7 +14,7 @@
 
 ## Щастливите класни стаи ще спечелят видео чат с гост-лектор!
 
-20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Учениците ще могат да задават въпроси и чатят с технологични и индустриялни лидери. [ вижте миналогодишните чатове](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) с Бил Гейтс, Twitter основателят Джак Дорси, Сюзън Войсички от Google и Гейб Нюъл от Valve.
+20 щастливи класни стаи ще бъдат поканени да се присъединят към видео чат, за да празнуват Часът на кодирането през декември 8-14. Учениците ще могат да задават въпроси и чатят с технологични и индустриялни лидери. [ Вижте миналогодишните чатове](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) с Бил Гейтс, Twitter основателят Джак Дорси, Сюзън Войсички от Google и Гейб Нюъл от Valve.
 
 <% end %>
 
@@ -22,15 +22,15 @@
 
 ## Щастливите класни стаи ще спечелят видео чат с гост-лектор!
 
-50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Учениците ще могат да задават въпроси и чатят с технологични и индустриялни лидери. [ вижте миналогодишните чатове](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) с Бил Гейтс, Twitter основателят Джак Дорси, Сюзън Войсички от Google и Гейб Нюъл от Valve.
+50 щастливи класни стаи ще бъдат поканени да се присъединят към видео чат, за да празнуват Часът на кодирането през декември 8-14. Учениците ще могат да задават въпроси и чатят с технологични и индустриялни лидери. [ Вижте миналогодишните чатове](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) с Бил Гейтс, Twitter основателят Джак Дорси, Сюзън Войсички от Google и Гейб Нюъл от Valve.
 
-## Lucky schools win a class-set of laptops (or $10,000 for other technology)
+## 50 Щастливи училища ще спечелят набор от преносими компютри (или $10,000 за други технологии)
 
-One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
+Едно щастливо училище във ***всеки*** щат на САЩ (+ Вашингтон) ще спечели $10,000 за технологии. Организирайте Часът на кодирането за всеки ученик във вашето училище за да се класирате. Попълнете формата по-долу за да се регистрирате.
 
-## Hardware Prize application form:
+## Формуляр за хардуерна награда:
 
-If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
+Ако сте регистрирали цялото училище да участва в Часът на кодирането, можете да спечелите набор от преносими компютри (или $10,000 за други технологии) за вашето училище! Само един учител трябва да се регистрира за цялото училище.
 
 <%= view :hardware_prizes_form %>
 
@@ -40,6 +40,6 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 <% end %>
 
-## More questions about prizes?
+## Повече въпроси за наградите?
 
-Check out [Terms and Conditions](/prizes-terms) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+Вижте [ правилата и условията](/prizes-terms) или посетете нашия форум, за да видите [ ЧЗВ](http://support.code.org) и задайте вашите въпроси.

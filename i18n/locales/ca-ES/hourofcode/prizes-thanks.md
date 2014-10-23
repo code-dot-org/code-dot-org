@@ -1,9 +1,9 @@
 * * *
 
-title: Thank you layout: wide
+títol: Gràcies maquetació: àmplia
 
 * * *
 
-# Thank you
+# Gràcies
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+Tota la teva escola s'ha inscrit ara en el sorteig d'un conjunt de computadores portàtils per a l'aula (o 10.000 dòlars per altres tecnologies).

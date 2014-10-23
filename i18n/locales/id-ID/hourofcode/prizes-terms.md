@@ -24,4 +24,10 @@ Hadiah terbatas kepada hanya sekolah K-12 U.S. Untuk memenuhi syarat, sekolahmu 
 
 Hadiah terbatas untuk sekolah publik K-12 U.S. Kenapa hanya sekolah publik? [See the answer here](http://www.hourofcode.com/#faq). Untuk memenuhi syarat, sekolahmu harus mendaftar untuk Hour of Code paling lambat tanggal 14 November 2014. Satu sekolah di setiap negara bagian di U.S. akan menerima satu set komputer untuk kelas. Code.org akan memilih dan memberitahukan pemenang melalui email paling lambat tanggal 1 Desember 2014.
 
+To clarify, this is not a sweepstakes or a contest involving pure chance.
+
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+
 <% end %>

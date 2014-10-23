@@ -27,6 +27,7 @@ goog.provide('Blockly.Block');
 
 goog.require('Blockly.BlockSvg');
 goog.require('Blockly.BlockSvgFramed');
+goog.require('Blockly.BlockSvgFunctional');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Comment');
 goog.require('Blockly.Connection');
@@ -83,8 +84,8 @@ Blockly.Block = function(workspace, prototypeName, htmlId) {
   this.colourSaturation_ = 0.45;
   this.colourValue_ = 0.65;
   this.fillPattern_ = null;
-  this.framed_ = false; // whether or not we have a frame. only used for functions
-
+  this.blockSvgClass_ = Blockly.BlockSvg;
+  this.customOptions_ = {};
 
   workspace.addTopBlock(this);
 
@@ -155,11 +156,7 @@ Blockly.Block.prototype.getIcons = function() {
  * Create and initialize the SVG representation of the block.
  */
 Blockly.Block.prototype.initSvg = function() {
-  if (this.framed_) {
-    this.svg_ = new Blockly.BlockSvgFramed(this);
-  } else {
-    this.svg_ = new Blockly.BlockSvg(this);
-  }
+  this.svg_ = new this.blockSvgClass_(this, this.customOptions_);
   this.svg_.init();
   if (!Blockly.readOnly) {
     Blockly.bindEvent_(this.svg_.getRootElement(), 'mousedown', this,
@@ -1248,7 +1245,7 @@ Blockly.Block.prototype.getFillPattern = function() {
  * @return {boolean}
  */
 Blockly.Block.prototype.isFramed = function() {
-  return this.framed_;
+  return this.blockSvgClass_ === Blockly.BlockSvgFramed;
 };
 
 /**
@@ -1297,8 +1294,18 @@ Blockly.Block.prototype.setFillPattern = function(pattern) {
  * @param {boolean} isFramed
  */
 Blockly.Block.prototype.setFramed = function(isFramed) {
-  this.framed_ = isFramed;
+  this.blockSvgClass_ = isFramed ? Blockly.BlockSvgFramed : Blockly.BlockSvg;
 };
+
+/**
+ * Set whether or not this block should use the functional svg
+ * @param {boolean} isFramed
+ */
+Blockly.Block.prototype.setFunctional = function(isFunctional, options) {
+  this.blockSvgClass_ = isFunctional ? Blockly.BlockSvgFunctional : Blockly.BlockSvg;
+  this.customOptions_ = isFunctional ? options : {};
+};
+
 
 /**
  * Change the HSV of a block.

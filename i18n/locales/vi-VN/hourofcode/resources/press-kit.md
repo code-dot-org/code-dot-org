@@ -45,7 +45,7 @@ Chúng tôi hy vọng nó sẽ tia lửa thắp nên sự ham mê học tập ch
 
 *Tại sao điều này quan trọng?*
 
-Tại Trung Quốc, mỗi sinh viên tham khóa khóa học khoa học máy tính để tốt nghiệp cấp 3. Ở Mỹ, 90 phần trăm các trường thậm chí không dạy cho về nó. Đây là lúc để chúgn tôi bắt kịp với thể kỷ 21. Chúng ta biết rằng bất kể những gì học sinh của chúng tôi làm khi họ lớn lên, cho dù họ tham gia vào y học, kinh doanh, chính trị, hoặc nghệ thuật, biết cách làm thế nào để xây dựng nên các phần mềm sẽ cung cấp cho họ sự tự tin và biết làm thế nào để thành công.
+Tại Trung Quốc, mỗi sinh viên tham khóa khóa học khoa học máy tính để tốt nghiệp cấp 3. Ở Mỹ, 90 phần trăm các trường thậm chí không dạy cho về nó. Đây là lúc để chúgn tôi bắt kịp với thể kỷ 21. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
 **Chi tiết bạn có thể xem thêm trong các tài liệu**
 

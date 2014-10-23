@@ -1,6 +1,6 @@
 * * *
 
-layout: wide
+rozvržení: široké
 
 * * *
 
@@ -22,6 +22,12 @@ Cena pouze pro USA K-12 školy. Nárok získá zaregistrovaná celá škola pro 
 
 ## Sada notebooků (nebo pro jiné technologie za 10 000 dolarů) pro třídu:
 
-Cena je omezená pouze na USA veřejné K-12 školy. Proč pouze veřejné školy? [See the answer here](http://www.hourofcode.com/#faq). Nárok získá zaregistrovaná celá škola pro akci Kód hodiny do 14 listopadu 2014. Jedna škola v každém státě USA obdrží sadu počítačů pro třídu. Code.org vybere a oznámí vítěze prostřednictvím e-mailu 1 prosince 2014.
+Cena je omezená pouze na USA veřejné K-12 školy. Proč pouze veřejné školy? [Sem se podívejte na odpověď](http://www.hourofcode.com/#faq). Nárok získá zaregistrovaná celá škola pro akci Kód hodiny do 14 listopadu 2014. Jedna škola v každém státě USA obdrží sadu počítačů pro třídu. Code.org vybere a oznámí vítěze prostřednictvím e-mailu 1 prosince 2014.
+
+To clarify, this is not a sweepstakes or a contest involving pure chance.
+
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>

@@ -1,10 +1,10 @@
 * * *
 
-title: Partners
+Partnerek
 
 * * *
 
-# Major Partners and Corporate Supporters
+# Fő partnerek és vállalati támogatók
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 

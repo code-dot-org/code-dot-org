@@ -52,7 +52,7 @@ Tell your friends about the #HourOfCode.
 
 ## 5. Promote Hour of Code within your community
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+可以找找當地群組宣傳 － 可以找當地的男童子軍、教會的人、大學、退伍軍人或公會。 或為你的鄰居辦一場Hour of Code派對。
 
 ## 6. Ask a local elected official to support the Hour of Code
 

@@ -6,12 +6,12 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
 
 # Kaynaklar
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Bir Kodlama Saatine ev sahipliği mi yapacaksınız? <a
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Bu el ilanını kullanarak etkinliğinizi yayın
 </h2>
 
 <p>
@@ -19,7 +19,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Bu el ilanını öğretmenlere ve okullara dağıtın
 </h2>
 
 <p>
@@ -30,7 +30,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Öğrencilere ilham vermek için bu videoları izletin
   </h2>
   
   <div style="float:left; padding:10px">
@@ -74,7 +74,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Bu posterleri okulunuza asın
     </h2>
     
     <p>
@@ -82,7 +82,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
     </p>
     
     <h4>
-      <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
+      Kodlama Saati etkinliğinizi <a href="http://hourofcode.com/#signup">kaydettirin</a>, biz size posterleri ücretsiz olarak yollayacağız.
     </h4>
     
     <p>
@@ -94,7 +94,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Web sitenizde bu afişlere yer verin
     </h2>
     
     <p>
@@ -106,7 +106,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Kodlama Saatini tanıtmak için bu e-postaları gönderin
     </h2>
     
     <p>
@@ -114,7 +114,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Okulunuzdan, iş vereninizden veya arkadaşlarınızdan etkinliğe katılmalarını isteyin:
     </h2>
     
     <p>
@@ -142,7 +142,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Medyayı etkinliğinize davet edin:
     </h2>
     
     <p>
@@ -194,7 +194,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Velilerinize okul etkinliğinizden bahsedin:
     </h2>
     
     <p>
@@ -234,7 +234,7 @@ başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Okul etkinliğinize bir politikacı davet edin:
     </h2>
     
     <p>
