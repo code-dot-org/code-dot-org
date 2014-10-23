@@ -29,6 +29,7 @@ levels.simple = {
 
 levels.ec_simple = {
   'editCode': true,
+  'sliderSpeed': 0.7,
   'codeFunctions': [
     {'func': 'turnBlack' },
     {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
