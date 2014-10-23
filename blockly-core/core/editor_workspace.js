@@ -27,6 +27,8 @@ goog.require('Blockly.Workspace');
 
 /**
  * Class for a top-level block editing workspace.
+ * Handles constructing a top-level SVG element, and positioning, sizing,
+ * and certain focus/mouse handling operations for itself
  * @constructor
  */
 Blockly.EditorWorkspace = function(container) {
