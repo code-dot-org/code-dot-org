@@ -76,6 +76,7 @@ class ClassSubmission
 
   def self.languages()
     [
+      'Code.org Code Studio',
       'Alice',
       'Arduino',
       'C++',
@@ -97,6 +98,7 @@ class ClassSubmission
       'Scratch',
       'Scheme',
       'StarLogo Nova',
+      'WeScheme',
     ]
   end
 
