@@ -9651,7 +9651,7 @@ function drawMap () {
 
   drawMapTiles(svg);
 
-  // Pegman's clipPath element, whose (x, y) is reset by Maze.displayPegman
+  // Pegman's clipPath element, whose (x, y) is reset by Maze.displayPegman.
   var pegmanClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
   pegmanClip.setAttribute('id', 'pegmanClipPath');
   var clipRect = document.createElementNS(Blockly.SVG_NS, 'rect');
