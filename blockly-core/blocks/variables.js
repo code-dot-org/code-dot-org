@@ -95,3 +95,23 @@ Blockly.Blocks.variables_set = {
   contextMenuType_: 'variables_get',
   customContextMenu: Blockly.Blocks.variables_get.customContextMenu
 };
+
+Blockly.Blocks.parameters_get = {
+  // Variable getter.
+  init: function() {
+    var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+    // Must be marked EDITABLE so that cloned blocks share the same var name
+    fieldLabel.EDITABLE = true;
+    this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+    this.setHSV(312, 0.32, 0.62);
+    this.appendDummyInput()
+        .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
+        .appendTitle(Blockly.disableVariableEditing ? fieldLabel
+            : new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+    this.setOutput(true);
+    this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+  },
+  getVars: Blockly.Blocks.variables_get.getVars,
+  renameVar: Blockly.Blocks.variables_get.renameVar
+};
