@@ -9633,11 +9633,27 @@ Turtle.init = function(config) {
   skin = config.skin;
   level = config.level;
 
+  if (skin.id == "frozen")
+  {
+    // let's try adding a background image
+    level.images = [{}];
+    level.images[0].filename = 'background.jpg';
+    level.images[0].position = [ 0, 0 ];
+  }
+
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
 
-  Turtle.AVATAR_HEIGHT = 51;
-  Turtle.AVATAR_WIDTH = 70;
+  if (skin.id == "frozen")
+  {
+    Turtle.AVATAR_HEIGHT = 75;
+    Turtle.AVATAR_WIDTH = 55;
+  }
+  else
+  {
+    Turtle.AVATAR_HEIGHT = 51;
+    Turtle.AVATAR_WIDTH = 70;
+  }
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -9754,7 +9770,14 @@ Turtle.placeImage = function(filename, position) {
     Turtle.ctxImages.drawImage(img, position[0], position[1]);
     Turtle.display();
   };
-  img.src = BlocklyApps.assetUrl('media/turtle/' + filename);
+  if (skin.id == "frozen")
+  {
+    img.src = BlocklyApps.assetUrl('media/skins/frozen/' + filename);
+  }
+  else
+  {
+    img.src = BlocklyApps.assetUrl('media/turtle/' + filename);
+  }
 };
 
 /**
@@ -9781,19 +9804,39 @@ Turtle.loadTurtle = function() {
     Turtle.display();
   };
   Turtle.avatarImage.src = skin.avatar;
-  Turtle.numberAvatarHeadings = 180;
+  if (skin.id == "frozen")
+    Turtle.numberAvatarHeadings = 36;
+  else
+    Turtle.numberAvatarHeadings = 180;
   Turtle.avatarImage.height = Turtle.AVATAR_HEIGHT;
   Turtle.avatarImage.width = Turtle.AVATAR_WIDTH;
 };
+
+var turtleFrame = 0;
+var turtleNumFrames = 12;
+var turtleFrameSlowdown = 5;
 
 /**
  * Draw the turtle image based on Turtle.x, Turtle.y, and Turtle.heading.
  */
 Turtle.drawTurtle = function() {
+  var sourceY;
   // Computes the index of the image in the sprite.
   var index = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
+  if (skin.id == "frozen") {
+    // the rotations in the sprite sheet go in the opposite direction.
+    index = Turtle.numberAvatarHeadings - index;
+
+    // and they are 180 degrees out of phase.
+    index = (index + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
+  }
   var sourceX = Turtle.avatarImage.width * index;
-  var sourceY = 0;
+  if (skin.id == "frozen") {
+    sourceY = Turtle.avatarImage.height * turtleFrame;
+    turtleFrame = (turtleFrame + 1) % turtleNumFrames;
+  } else {
+    sourceY = 0;
+  }
   var sourceWidth = Turtle.avatarImage.width;
   var sourceHeight = Turtle.avatarImage.height;
   var destWidth = Turtle.avatarImage.width;
@@ -9830,8 +9873,16 @@ BlocklyApps.reset = function(ignore) {
   }
   // Clear the display.
   Turtle.ctxScratch.canvas.width = Turtle.ctxScratch.canvas.width;
-  Turtle.ctxScratch.strokeStyle = '#000000';
-  Turtle.ctxScratch.fillStyle = '#000000';
+  if (skin.id == "frozen")
+  {
+    Turtle.ctxScratch.strokeStyle = '#eee';
+    Turtle.ctxScratch.fillStyle = '#eee';
+  }
+  else
+  {
+    Turtle.ctxScratch.strokeStyle = '#000000';
+    Turtle.ctxScratch.fillStyle = '#000000';
+  }
   Turtle.ctxScratch.lineWidth = 5;
   Turtle.ctxScratch.lineCap = 'round';
   Turtle.ctxScratch.font = 'normal 18pt Arial';
@@ -9945,6 +9996,9 @@ Turtle.execute = function() {
   Blockly.mainWorkspace.setEnableToolbox(false);
 };
 
+// Divide each jump into substeps so that we can animate every movement.
+var jumpSubsteps = 10;
+
 /**
  * Iterate through the recorded path and animate the turtle's actions.
  */
@@ -9961,35 +10015,58 @@ Turtle.animate = function() {
   }
   var command = tuple.shift();
   BlocklyApps.highlight(tuple.pop());
-  Turtle.step(command, tuple);
-  Turtle.display();
 
+  if (skin.id == "frozen") {
+    var stepAndDisplay = function () {
+      Turtle.step(command, tuple);
+      Turtle.display();
+    };
+
+    for (var i = 0; i < jumpSubsteps; i++) {
+      setTimeout(stepAndDisplay, 100 * i);
+    }
+  } else {
+    Turtle.step(command, tuple);
+    Turtle.display();
+  }
   // Scale the speed non-linearly, to give better precision at the fast end.
   var stepSpeed = 1000 * Math.pow(1 - Turtle.speedSlider.getValue(), 2);
   Turtle.pid = window.setTimeout(Turtle.animate, stepSpeed);
 };
 
+
 /**
  * Execute one step.
  * @param {string} command Logo-style command (e.g. 'FD' or 'RT').
  * @param {!Array} values List of arguments for the command.
+ * @param {number} fraction How much of this step's distance do we draw?
  */
 Turtle.step = function(command, values) {
   switch (command) {
     case 'FD':  // Forward
-      Turtle.moveForward_(values[0]);
+      distance = values[0];
+      if (skin.id == "frozen")
+        distance /= jumpSubsteps;
+      Turtle.moveForward_(distance);
       break;
     case 'JF':  // Jump forward
-      Turtle.jumpForward_(values[0]);
+      distance = values[0];
+      if (skin.id == "frozen")
+        distance /= jumpSubsteps;
+      Turtle.jumpForward_(distance);
       break;
     case 'MV':  // Move (direction)
       var distance = values[0];
+      if (skin.id == "frozen")
+        distance /= jumpSubsteps;
       var heading = values[1];
       Turtle.setHeading_(heading);
       Turtle.moveForward_(distance);
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
+      if (skin.id == "frozen")
+        distance /= jumpSubsteps;
       heading = values[1];
       Turtle.setHeading_(heading);
       Turtle.jumpForward_(distance);
