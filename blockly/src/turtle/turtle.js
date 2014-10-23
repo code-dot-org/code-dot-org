@@ -313,9 +313,8 @@ BlocklyApps.reset = function(ignore) {
   Turtle.ctxFeedback.clearRect(
       0, 0, Turtle.ctxFeedback.canvas.width, Turtle.ctxFeedback.canvas.height);
 
-  //Reset to empty pattern
-  Turtle.patternForPaths = new Image();
-  Turtle.isDrawingWithPattern = false;
+  // Reset to empty pattern
+  Turtle.setPattern(null);
 
   // Kill any task.
   if (Turtle.pid) {
@@ -643,7 +642,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
   Turtle.ctxScratch.drawImage(img,
     0, 0,                                 // Start point for clipping image
     distance+img.height / 2, img.height,  // clip region size
-    -img.height / 4,-img.height / 2,      // draw location relative to the ctx.translate point pre-rotation
+    -img.height / 4, -img.height / 2,      // draw location relative to the ctx.translate point pre-rotation
     distance+img.height / 2, img.height); 
                                                                      
   Turtle.ctxScratch.restore();  
