@@ -355,7 +355,7 @@ Blockly.playAudio = function(name, options) {
       var newSound = Blockly.createSoundFromBuffer_(options);
       // Play sound, older versions of the Web Audio API used noteOn(Off).
       newSound.start ? newSound.start(0) : newSound.noteOn(0);
-    Blockly.SOUNDS_[name] = newSound;
+      Blockly.SOUNDS_[name] = newSound;
     } else if (!goog.userAgent.MOBILE) {  // HTML 5 audio on mobile is bad.
       // Update the sound hash with the looping sound, and stop the original sound
       // This is to prevent when there are multiple sounds of the same name being
