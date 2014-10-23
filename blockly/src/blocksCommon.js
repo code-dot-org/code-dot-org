@@ -19,6 +19,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installPickOne(blockly);
   installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
+  installParamCreator(blockly);
 };
 
 function installControlsRepeatSimplified(blockly, skin) {
@@ -46,7 +47,7 @@ function installControlsRepeatSimplified(blockly, skin) {
     // Repeat n times (internal number) with simplified UI
     init: function () {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
-      this.setHSV(322, 0.90, 0.95);
+      this.setHSV(94, 0.84, 0.60);
       this.appendDummyInput()
         .appendTitle(blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT)
         .appendTitle(new blockly.FieldDropdown(), 'TIMES');
@@ -119,7 +120,6 @@ function installPickOne(blockly) {
 // A "Category" block for level editing, for delineating category groups.
 function installCategory(blockly) {
   blockly.Blocks.category = {
-    // Repeat n times (internal number).
     init: function() {
       this.setHSV(322, 0.90, 0.95);
       this.setInputsInline(true);
@@ -158,6 +158,29 @@ function installWhenRun(blockly, skin, isK1) {
 
   blockly.JavaScript.when_run = function () {
     // Generate JavaScript for handling click event.
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installParamCreator(blockly) {
+  blockly.Blocks.param_creator = {
+    init: function() {
+      this.setHSV(94, 0.84, 0.60);
+      this.setInputsInline(true);
+
+      // TODO: i18n
+      this.appendDummyInput()
+          .appendTitle('Add parameter: ')
+          .appendTitle(new blockly.FieldTextInput('x'), 'VALUE')
+          .appendTitle('+');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+      this.setMovable(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }

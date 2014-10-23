@@ -39,6 +39,7 @@ goog.require('Blockly.FieldImageDropdown');
 goog.require('Blockly.FieldRectangularDropdown');
 goog.require('Blockly.FieldTextInput');
 goog.require('Blockly.FieldVariable');
+goog.require('Blockly.FunctionEditor');
 goog.require('Blockly.Generator');
 goog.require('Blockly.ImageDimensionCache');
 goog.require('Blockly.Msg');
@@ -303,6 +304,10 @@ Blockly.getToolboxWidth = function() {
   var width = metrics ? metrics.viewWidth : 0;
   return width;
 };
+
+Blockly.getActiveWorkspace = function() {
+  return Blockly.modalWorkspace || Blockly.mainWorkspace;
+}
 
 /**
  * Handle a mouse-down on SVG drawing surface.
