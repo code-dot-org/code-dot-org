@@ -49,3 +49,8 @@
 label.has-error {
   color: #b94a48;
 }
+@media screen and (min-width: 992px) {
+  #signupform h2 {
+    margin-top: 0;
+  }
+}
