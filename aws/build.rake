@@ -21,7 +21,7 @@ def build_task(name, dependencies=[], params={})
   path
 end
 
-if rack_env?(:staging)
+if rack_env?(:staging) || CDO.build_blockly
   BLOCKLY_CORE_DEPENDENCIES = []#[aws_dir('build.rake')]
   BLOCKLY_CORE_PRODUCTS = [
     'blockly_compressed.js',
