@@ -11,7 +11,6 @@ var FRAME_MARGIN_TOP = 10;
 var FRAME_MARGIN_BOTTOM = 5;
 
 var FRAME_HEADER_HEIGHT = 25;
-var FRAME_SUBHEADER_HEIGHT = 80;
 
 Blockly.BlockSvgFramed = function (block) {
   Blockly.BlockSvg.call(this, block);

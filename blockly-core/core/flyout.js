@@ -336,10 +336,9 @@ Blockly.Flyout.prototype.hide = function() {
  * @param gap
  * @private
  */
-Blockly.Flyout.prototype.layoutBlocks_ = function(block, cursor, gap) {
+Blockly.Flyout.prototype.layoutBlock_ = function(block, cursor, gap, initialX) {
   var blockHW = block.getHeightWidth();
-  var x = Blockly.RTL ? 0 : this.CORNER_RADIUS + Blockly.BlockSvg.TAB_WIDTH;
-  block.moveBy(x, cursor.y);
+  block.moveBy(cursor.x, cursor.y);
   cursor.y += blockHW.height + gap;
 };
 
@@ -353,8 +352,9 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   this.svgGroup_.style.display = 'block';
 
   var margin = this.CORNER_RADIUS;
+  var initialX = Blockly.RTL ? 0 : margin + Blockly.BlockSvg.TAB_WIDTH;
   var cursor = {
-        x: margin,
+        x: initialX,
         y: margin
       };
 
@@ -401,7 +401,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
       child.setCommentText(null);
     }
     block.render();
-    this.layoutBlocks_(block, cursor, gaps[i]);
+    this.layoutBlock_(block, cursor, gaps[i], initialX);
     // Create an invisible rectangle under the block to act as a button.  Just
     // using the block as a button is poor, since blocks have holes in them.
     var rect = Blockly.createSvgElement('rect', {'fill-opacity': 0}, null);
