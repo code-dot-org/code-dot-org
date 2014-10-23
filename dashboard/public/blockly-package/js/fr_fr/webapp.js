@@ -6742,7 +6742,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/fr_fr/common') ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  <button id="rightButton" class="arrow">\n    <img src="', escape((7,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  <button id="upButton" class="arrow">\n    <img src="', escape((9,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  <button id="downButton" class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n</div>\n\n');14; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((17,  assetUrl('media/1x1.gif') )), '">', escape((17,  msg.finish() )), '\n    </button>\n  </div>\n');20; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/fr_fr/common') ; buf.push('\n\n');3; if (showSlider) { ; buf.push('\n  <div id="slider-cell">\n    <svg id="webapp-slider"\n         xmlns="http://www.w3.org/2000/svg"\n         xmlns:svg="http://www.w3.org/2000/svg"\n         xmlns:xlink="http://www.w3.org/1999/xlink"\n         version="1.1"\n         width="150"\n         height="50">\n        <!-- Slow icon. -->\n        <clipPath id="slowClipPath">\n          <rect width=26 height=12 x=5 y=14 />\n        </clipPath>\n        <image xlink:href="', escape((16,  assetUrl('media/webapp/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-10\n            clip-path="url(#slowClipPath)" />\n        <!-- Fast icon. -->\n        <clipPath id="fastClipPath">\n          <rect width=26 height=16 x=120 y=10 />\n        </clipPath>\n        <image xlink:href="', escape((22,  assetUrl('media/webapp/turtle_icons.png') )), '" height=42 width=84 x=120 y=-11\n            clip-path="url(#fastClipPath)" />\n    </svg>\n    <img id="spinner" style="visibility: hidden;" src="', escape((25,  assetUrl('media/webapp/loading.gif') )), '" height=15 width=15>\n  </div>\n');27; } ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((31,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  <button id="rightButton" class="arrow">\n    <img src="', escape((33,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  <button id="upButton" class="arrow">\n    <img src="', escape((35,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  <button id="downButton" class="arrow">\n    <img src="', escape((37,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n</div>\n\n');40; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((43,  assetUrl('media/1x1.gif') )), '">', escape((43,  msg.finish() )), '\n    </button>\n  </div>\n');46; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -6763,7 +6763,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/fr_fr/common') ; buf.push('\n\n');3; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((6,  assetUrl('media/1x1.gif') )), '">', escape((6,  msg.finish() )), '\n    </button>\n  </div>\n');9; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/fr_fr/common') ; buf.push('\n');2; var webappMsg = require('../../locale/fr_fr/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n  <div id="debug-buttons">\n    <button id="pauseButton" class="share">\n      <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  webappMsg.pause() )), '\n    </button>\n  </div>\n');10; } ; buf.push('\n\n');12; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '">', escape((15,  msg.finish() )), '\n    </button>\n  </div>\n');18; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -6771,7 +6771,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/fr_fr/common":37,"ejs":39}],31:[function(require,module,exports){
+},{"../../locale/fr_fr/common":37,"../../locale/fr_fr/webapp":38,"ejs":39}],31:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/fr_fr/webapp');
@@ -6803,6 +6803,7 @@ levels.simple = {
 
 levels.ec_simple = {
   'editCode': true,
+  'sliderSpeed': 0.7,
   'codeFunctions': [
     {'func': 'turnBlack' },
     {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
@@ -6974,6 +6975,7 @@ var feedback = require('../feedback.js');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var Slider = require('../slider');
 var _ = utils.getLodash();
 
 /**
@@ -6989,6 +6991,8 @@ BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = true;
 
 //The number of blocks to show as feedback.
 BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+
+var MAX_INTERPRETER_STEPS_PER_TICK = 50;
 
 // Default Scalings
 Webapp.scale = {
@@ -7075,30 +7079,62 @@ function createSelection(start, end) {
   selection.setSelectionRange(range);
 }
 
+function queueOnTick() {
+  var stepSpeed = Webapp.scale.stepSpeed;
+  if (Webapp.speedSlider) {
+    stepSpeed = 300 * Math.pow(1 - Webapp.speedSlider.getValue(), 2);
+  }
+  window.setTimeout(Webapp.onTick, stepSpeed);
+}
+
 Webapp.onTick = function() {
+  if (!Webapp.running) {
+    return;
+  }
+
   Webapp.tickCount++;
+  queueOnTick();
+
+  // Bail out here if paused (but make sure that we still have the next tick
+  // queued first, so we can resume after un-pausing):
+  if (Webapp.paused) {
+    return;
+  }
 
   if (Webapp.interpreter) {
-    if (!BlocklyApps.editor.currentlyUsingBlocks && Webapp.interpreter.stateStack[0]) {
-      // If we are showing Javascript code in the ace editor, highlight
-      // the code being executed in each step:
-      
-      var node = Webapp.interpreter.stateStack[0].node;
-      // Adjust start/end by Webapp.userCodeStartOffset since the code running
-      // has been expanded vs. what the user sees in the editor window:
-      var start = node.start - Webapp.userCodeStartOffset;
-      var end = node.end - Webapp.userCodeStartOffset;
+    var inUserCode = false;
+    // In each tick, we will step the interpreter multiple times in a tight
+    // loop as long as we are interpreting code that the user can't see
+    // (function aliases at the beginning, getCallback event loop at the end)
+    for (var stepsThisTick = 0;
+         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !inUserCode;
+         stepsThisTick++) {
+      if (Webapp.interpreter.stateStack[0]) {
+        var node = Webapp.interpreter.stateStack[0].node;
+        // Adjust start/end by Webapp.userCodeStartOffset since the code running
+        // has been expanded vs. what the user sees in the editor window:
+        var start = node.start - Webapp.userCodeStartOffset;
+        var end = node.end - Webapp.userCodeStartOffset;
 
-      // Only show selection if the node being executed is inside the user's
-      // code (not inside code we inserted before or after their code that is
-      // not visible in the editor):
-      if ((start > 0) && (start < Webapp.userCodeLength)) {
-        createSelection(start, end);
+        inUserCode = (start > 0) && (start < Webapp.userCodeLength);
+
+        // If we are showing Javascript code in the ace editor, highlight
+        // the code being executed in each step:
+        if (!BlocklyApps.editor.currentlyUsingBlocks) {
+          // Only show selection if the node being executed is inside the user's
+          // code (not inside code we inserted before or after their code that is
+          // not visible in the editor):
+          if (inUserCode) {
+            createSelection(start, end);
+          } else {
+            BlocklyApps.editor.aceEditor.getSelection().clearSelection();
+          }
+        }
       } else {
-        BlocklyApps.editor.aceEditor.getSelection().clearSelection();
+        inUserCode = false;
       }
+      Webapp.interpreter.step();
     }
-    Webapp.interpreter.step();
   } else {
     if (Webapp.tickCount === 1) {
       try { Webapp.whenRunFunc(BlocklyApps, api, Webapp.Globals); } catch (e) { }
@@ -7137,8 +7173,8 @@ Webapp.init = function(config) {
   loadLevel();
 
   var finishButtonFirstLine = _.isEmpty(level.softButtons);
-  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, finishButton: finishButtonFirstLine});
-  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine});
+  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, showSlider: config.level.editCode, finishButton: finishButtonFirstLine});
+  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine, debugButtons: config.level.editCode});
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -7196,8 +7232,26 @@ Webapp.init = function(config) {
 
   BlocklyApps.init(config);
 
+  if (level.editCode) {
+    // Initialize the slider.
+    var slider = document.getElementById('webapp-slider');
+    if (slider) {
+      Webapp.speedSlider = new Slider(10, 35, 130, slider);
+
+      // Change default speed (eg Speed up levels that have lots of steps).
+      if (config.level.sliderSpeed) {
+        Webapp.speedSlider.setValue(config.level.sliderSpeed);
+      }
+    }
+  }
+
   var finishButton = document.getElementById('finishButton');
   dom.addClickTouchEvent(finishButton, Webapp.onPuzzleComplete);
+
+  if (level.editCode) {
+    var pauseButton = document.getElementById('pauseButton');
+    dom.addClickTouchEvent(pauseButton, Webapp.onPauseButton);
+  }
 };
 
 /**
@@ -7205,11 +7259,9 @@ Webapp.init = function(config) {
  */
 Webapp.clearEventHandlersKillTickLoop = function() {
   Webapp.whenRunFunc = null;
-  if (Webapp.intervalId) {
-    window.clearInterval(Webapp.intervalId);
-  }
+  Webapp.running = false;
   Webapp.tickCount = 0;
-  Webapp.intervalId = 0;
+  Webapp.running = false;
 };
 
 /**
@@ -7246,6 +7298,15 @@ BlocklyApps.reset = function(first) {
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
+  }
+
+  if (level.editCode) {
+    // Reset the pause button:
+    var pauseButton = document.getElementById('pauseButton');
+    pauseButton.textContent = webappMsg.pause();
+    pauseButton.disabled = true;
+    Webapp.paused = false;
+    document.getElementById('spinner').style.visibility = 'hidden';
   }
 
   // Reset the Globals object used to contain program variables:
@@ -7451,7 +7512,30 @@ Webapp.execute = function() {
     }
   }
 
-  Webapp.intervalId = window.setInterval(Webapp.onTick, Webapp.scale.stepSpeed);
+  if (level.editCode) {
+    var pauseButton = document.getElementById('pauseButton');
+    pauseButton.disabled = false;
+    document.getElementById('spinner').style.visibility = 'visible';
+  }
+
+  Webapp.running = true;
+  queueOnTick();
+};
+
+Webapp.onPauseButton = function() {
+  if (Webapp.running) {
+    var pauseButton = document.getElementById('pauseButton');
+    // We have code and are either running or paused
+    if (Webapp.paused) {
+      Webapp.paused = false;
+      pauseButton.textContent = webappMsg.pause();
+    } else {
+      Webapp.paused = true;
+      pauseButton.textContent = webappMsg.continue();
+    }
+    document.getElementById('spinner').style.visibility =
+        Webapp.paused ? 'hidden' : 'visible';
+  }
 };
 
 Webapp.feedbackImage = '';
@@ -7659,7 +7743,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/fr_fr/common":37,"../../locale/fr_fr/webapp":38,"../base":2,"../codegen":6,"../dom":8,"../feedback.js":9,"../skins":12,"../templates/page.html":20,"../utils":26,"../xml":36,"./api":27,"./blocks":28,"./controls.html":29,"./extraControlRows.html":30,"./visualization.html":34}],36:[function(require,module,exports){
+},{"../../locale/fr_fr/common":37,"../../locale/fr_fr/webapp":38,"../base":2,"../codegen":6,"../dom":8,"../feedback.js":9,"../skins":12,"../slider":13,"../templates/page.html":20,"../utils":26,"../xml":36,"./api":27,"./blocks":28,"./controls.html":29,"./extraControlRows.html":30,"./visualization.html":34}],36:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -7881,6 +7965,8 @@ exports.nextLevel = function(d){return "Congratulations! You have completed this
 exports.no = function(d){return "No"};
 
 exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+
+exports.pause = function(d){return "Pause"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
