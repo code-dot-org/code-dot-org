@@ -1,8 +1,8 @@
 {
   "continue": "Fortsæt",
-  "nextLevel": "Tillykke! Du har fuldført dette puslespil.",
+  "nextLevel": "Tillykke! Du har fuldført denne opgave.",
   "no": "Nej",
-  "numBlocksNeeded": "Dette puslespil kan løses med %1 blokke.",
+  "numBlocksNeeded": "Denne opgave kan løses med %1 blokke.",
   "reinfFeedbackMsg": "Du kan trykke på knappen \"Prøv igen\", for at gå tilbage til dit spil.",
   "share": "Del",
   "shareGame": "Del dit spil:",

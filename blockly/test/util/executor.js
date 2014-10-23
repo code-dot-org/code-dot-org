@@ -1,5 +1,6 @@
 var path = require('path');
 var fs = require('fs');
+var jsdomRoot = require('jsdom');
 var jsdom = require('jsdom').jsdom;
 var xmldom = require('xmldom');
 var canvas = require('canvas');
@@ -43,6 +44,13 @@ function setGlobals () {
   global.Image = canvas.Image;
   // used by Hammer.js in studio
   global.navigator = {};
+
+  jsdomRoot.dom.level3.html.HTMLElement.prototype.getBBox = function () {
+    return {
+      height: 0,
+      width: 0
+    };
+  };
 }
 
 function initBlockly () {

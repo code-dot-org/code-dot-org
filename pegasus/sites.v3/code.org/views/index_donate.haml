@@ -1,7 +1,7 @@
 - today = Time.new
 - deadline = Time.new(2014, 12, 15)
-- weeks = ((deadline - today) / 60 / 60 / 24 / 7).round
-- days_remainder = ((deadline - today) / 60 / 60 / 24).round - ((deadline - today) / 60 / 60 / 24 / 7).round * 7
+- weeks = ((deadline - today) / 60 / 60 / 24 / 7).floor
+- days_remainder = ((deadline - today) / 60 / 60 / 24).ceil % 7
 
 %a.lines_of_code_link{:href=>"https://www.indiegogo.com/projects/an-hour-of-code-for-every-student/"}
   .lines_of_code_header#orange-banner{:style=>"font-size: 28px"}

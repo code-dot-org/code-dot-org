@@ -3,6 +3,8 @@ class Calc < Blockly
     solution_blocks
   )
 
+  before_save :update_ideal_level_source
+
   def xml_blocks
     super + %w(solution_blocks)
   end
