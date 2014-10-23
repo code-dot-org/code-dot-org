@@ -109,26 +109,6 @@ social:
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
       = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/#{download_filename}"
 
-  #studiobar.feature-codeorg.tablet-feature
-    %h1.mobile-center
-      =I18n.t :studiobar_title
-    #body.mobile-pad-left64
-      - studiobar_items = [ {id: "elementary", url: "http://#{canonical_hostname('studio.code.org')}"}, {id: "hoc", url: "/api/hour/begin/codeorg"}, {id: "flappy", url: "http://#{canonical_hostname('studio.code.org')}/flappy/1"}, {id: "teacher", url: "/educate/k5"}]
-      - studiobar_items.each_with_index do |item, index|
-        - if index < studiobar_items.length-1
-          - other_style = "margin-right: 26px"
-        - else
-          - other_style = ""
-        %a{href: item[:url]}
-          .col-25.outerblock{style: "float:left; #{other_style}"}
-            .innerblock
-              %img{:src=>"/images/logo_tall_#{item[:id]}.jpg", style: "width:100%; height:120px"}
-              .title=I18n.t "studiobar_#{item[:id]}_title"
-              .body=I18n.t "studiobar_#{item[:id]}_body"
-
-  %div{:style=>'clear:both;'}
-  = view :petition
-
   -if locale_ro?
     %br
     %br
@@ -152,6 +132,26 @@ social:
       Sei in Italia? Visita per favore 
       %a{:href=>'http://italia.code.org'}
         italia.code.org
+
+  #studiobar.feature-codeorg.tablet-feature
+    %h1.mobile-center
+      =I18n.t :studiobar_title
+    #body.mobile-pad-left64
+      - studiobar_items = [ {id: "elementary", url: "http://#{canonical_hostname('studio.code.org')}"}, {id: "hoc", url: "/api/hour/begin/codeorg"}, {id: "flappy", url: "http://#{canonical_hostname('studio.code.org')}/flappy/1"}, {id: "teacher", url: "/educate/k5"}]
+      - studiobar_items.each_with_index do |item, index|
+        - if index < studiobar_items.length-1
+          - other_style = "margin-right: 26px"
+        - else
+          - other_style = ""
+        %a{href: item[:url]}
+          .col-25.outerblock{style: "float:left; #{other_style}"}
+            .innerblock
+              %img{:src=>"/images/logo_tall_#{item[:id]}.jpg", style: "width:100%; height:120px"}
+              .title=I18n.t "studiobar_#{item[:id]}_title"
+              .body=I18n.t "studiobar_#{item[:id]}_body"
+
+  %div{:style=>'clear:both;'}
+  = view :petition
 
   #columns.desktop-feature{:style=>'clear:both; overflow:hidden'}
     #column1{:style=>'float:left; width: 33.33%'}

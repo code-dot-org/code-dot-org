@@ -14,7 +14,7 @@ rightbar: blank
 -section_id = workshop_data['section_id_s'].to_i
 -pass if section_id == 0
 -# BUGBUG: Display a "workshop not closed" message?
-    
+
 -membership = !!DASHBOARD_DB[:followers].where(section_id:section_id, student_user_id:dashboard_user_id).first
 -pass unless membership
 
@@ -202,7 +202,7 @@ rightbar: blank
       %label.control-label{for: "k5-teacher-grades"}
         What grade(s) do you teach? Select all that apply.
       %div
-        %select#k5-teacher-grades.form-control{name: "teacher_grades_ss", type: "select", multiple: true}
+        %select#k5-teacher-grades.form-control{name: "teacher_grades_ss[]", type: "select", multiple: true}
           %option{selected: "selected", value: ""} -- Select all that apply--
           %option{value: "pre-kindergarten"} Pre-kindergarten
           %option{value: "kindergarten"} Kindergarten
@@ -261,7 +261,7 @@ rightbar: blank
       %label.control-label{for: "k5-cs-materials"}
         If you have taught computer science before, what materials/resources have you used? Please select all that apply.
       %div
-        %select#k5-cs-materials.form-control{name: "cs_materials_ss", type: "select", multiple: true}
+        %select#k5-cs-materials.form-control{name: "cs_materials_ss[]", type: "select", multiple: true}
           %option{selected: "selected", value: ""} -- Select all that apply--
           %option{value: "scratch"} Scratch
           %option{value: "tynker"} Tynker
@@ -374,7 +374,7 @@ rightbar: blank
         Which of the following best represents your racial or ethnic background? Please select all that apply.
         %span.form-required-field *
       %div
-        %select#k5-race.form-control{name: "race_ss", type: "select", multiple: true}
+        %select#k5-race.form-control{name: "race_ss[]", type: "select", multiple: true}
           %option{selected: "selected", value: ""} -- Select all that apply--
           %option{value: "african american/black"} African American/black
           %option{value: "hispanic or latino/latina"} Hispanic Or Latino/latina
@@ -578,6 +578,8 @@ rightbar: blank
 
   function processError(data)
   {
+    $('.has-error').removeClass('has-error');
+
     errors = Object.keys(data.responseJSON);
     errors_count = errors.length;
 
