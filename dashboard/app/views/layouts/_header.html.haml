@@ -28,29 +28,30 @@
                 .header_text
                   = "#{@script_level.stage_position_str}#{multiple_puzzles || @stage ? ':' : ''}" if script.multiple_games?
                   = "#{@script_level.name}#{multiple_puzzles ? ',' : ''}" if @stage
-                  = t(:puzzle) if multiple_puzzles
                 - if multiple_puzzles
-                  - game_levels.each do |sl|
-                    %a{href: build_script_level_path(sl)}
-                    - passed = level_passed({user: current_user, user_level: sl.user_level, level_id: sl.level_id})
+                  .header_separator  
+                  .progress_container
+                    - game_levels.each do |sl|
+                      %a{href: build_script_level_path(sl)}
+                      - passed = level_passed({user: current_user, user_level: sl.user_level, level_id: sl.level_id})
 
-                    - if sl.level_id == @script_level.level_id
-                      - if sl.assessment?
-                        - puzzle_outer_class = "level_highlight_outer_assessment"
-                      - else
-                        - puzzle_outer_class = "level_highlight_outer_level"
-                      %div{class: puzzle_outer_class}
-                        - if sl.level.unplugged?
-                          - level_current_class = "level_highlight level_current_header_unplugged"
+                      - if sl.level_id == @script_level.level_id
+                        - if sl.assessment?
+                          - puzzle_outer_class = "level_highlight_outer_assessment"
                         - else
-                          - level_current_class = "level_highlight"
-                        .level_current_header{class: level_current_class}
+                          - puzzle_outer_class = "level_highlight_outer_level"
+                        %div{class: puzzle_outer_class}
+                          - if sl.level.unplugged?
+                            - level_current_class = "level_highlight level_current_header_unplugged"
+                          - else
+                            - level_current_class = "level_highlight"
+                          .level_current_header{class: level_current_class}
+                            = sl.level_display_text
+                      - elsif sl.stage_or_game_position == count
+                        %a.level_highlight{class: passed ? "level_aced" : "level_undone", href: build_script_level_path(sl)}
                           = sl.level_display_text
-                    - elsif sl.stage_or_game_position == count
-                      %a.level_highlight{class: passed ? "level_aced" : "level_undone", href: build_script_level_path(sl)}
-                        = sl.level_display_text
-                    - else
-                      %a.other_level{class: passed ? "level_aced" : "level_undone", href: build_script_level_path(sl)}
+                      - else
+                        %a.other_level{class: passed ? "level_aced" : "level_undone", href: build_script_level_path(sl)}
                 - if script.hoc?
                   .header_separator
                   .header_finished_link

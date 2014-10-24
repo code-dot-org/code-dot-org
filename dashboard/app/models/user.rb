@@ -564,4 +564,48 @@ SQL
     end
   end
 
+  def track_script_progress(script)
+    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      user_script = UserScript.where(user: self, script: script).first_or_create
+      time_now = Time.now
+      user_script.started_at ||= time_now
+      user_script.last_progress_at = time_now
+
+      if user_script.check_completed?
+        user_script.completed_at ||= time_now
+      end
+
+      user_script.save!
+      return user_script
+    end
+  end
+
+  def recent_activities(limit = 10)
+    self.activities.order('id desc').limit(limit)
+  end
+
+  def hack_progress(options = {})
+    options[:script_id] ||= Script.twenty_hour_script.id
+    script = Script.find(options[:script_id])
+
+    options[:levels] ||= script.script_levels.count / 2
+
+    script.script_levels[0..options[:levels]].each do |sl|
+      # create some fake testresults
+      test_result = rand(100)
+
+      Activity.create!(user: self, level: sl.level, test_result: test_result)
+      
+      if test_result > 10 # < 10 will be not attempted
+        retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+          user_level = UserLevel.where(user: self, level: sl.level).first_or_create
+          user_level.attempts += 1 unless user_level.best?
+          user_level.best_result = test_result
+          user_level.save!
+        end
+      end
+    end
+    track_script_progress(script)
+  end
+  
 end

@@ -1,3 +1,85 @@
+:scss
+  $level_passed: rgb(159, 212, 159);
+  //$level_passed: #d8d8d8;
+  $level_perfect: rgb(14, 190, 14);
+  //$level_attempted: rgb(230, 90, 90);
+  // $level_attempted: #d8d8d8;
+  $level_attempted: #fefefe;
+  $level_not_tried: #fefefe;
+  //  $level_passed: yellow;
+  //  $level_perfect: rgb(14, 190, 14);
+  //  $level_attempted: rgb(230, 90, 90);
+  //  $level_not_tried: white;
+
+  .bar {
+    background-color: $level_not_tried;
+  }
+
+  .bar.perfect {
+    border: none;
+    background-color: $level_perfect;
+  }
+
+  .bar.passed {
+    border: none;
+    background-color: $level_passed;
+  }
+
+  .bar.attempted {
+    border: none;
+    background-color: $level_attempted;
+  }
+  
+  .recent_activity {
+    border-style: none;
+    list-style: none;
+
+    tr {border-style: none; border-bottom: 1px solid #eee; }
+    td {border-style: none;}
+    td {padding: 7px;}
+    div {
+      margin: 5px 0;
+    }
+    span {
+      font-weight: bold;
+      padding: 2px;
+      border-radius: 2px;
+    }
+    .perfect {
+      color: white;
+      background-color: $level_perfect;
+    }
+    .passed {
+      color: white;
+      background-color: $level_passed;
+    }
+    .attempted {
+      background-color: $level_attempted;
+      color: #666;
+    }
+  }
+
+%h3 Recent Activity
+%table.recent_activity
+  - @recent_activities.each do |activity|
+    %tr
+      %td
+        = link_to activity.user.name, "teacher-dashboard#/sections/#{@section.id}/student/#{activity.user.id}"
+      %td
+        - if activity.passing?
+          %span.perfect completed
+        - elsif activity.finished?
+          %span.passed passed
+        - else 
+          %span.attempted attempted
+      %td
+        = link_to "#{['Maze', 'Artist 2', 'Farmer', 'Artist 4'].sample} Level #{(1..10).to_a.sample}", "#"
+      %td
+        = time_ago_in_words(activity.updated_at)
+        ago
+      %td
+        = link_to 'see solution', '#'
+
 -# @all_script_levels = Script.twenty_hour_script.script_levels.includes({ level: :game })
 -# @all_script_levels = Script.get_from_cache("k-1").script_levels.includes({ level: :game })
 
@@ -52,14 +134,15 @@
             - width = levels.length
             - if width > 0
               - if width > 1
-                - background_color = cycle("#dadada", "#eeeeee", name: "big_body")
+                -# background_color = cycle("#dadada", "#eeeeee", name: "big_body")
+                - background_color = cycle("#bbb", name: "big_body")
               - else
                 - background_color = cycle("#f2f2f2", "#ffffff", name: "little_body")
               .stage{style: "box-sizing: content-box; background-color: #{background_color}; color: white; float:left; width: #{width * widthpx}px; padding-top: 5px; padding-bottom:5px; height:30px;"}
                 &nbsp;    
           .studentbar{style: "position: absolute; display: none", id: "studentbar_#{student.id}"}
           .studentdot{style: "position: absolute; left: -15px; padding-top:4px; padding-bottom:4px", id: "studentdot_#{student.id}"}
-            .dot{style: "box-sizing: content-box; border-radius: 20px; background-color: rgb(14, 190, 14); padding: 7px; color: white; width: 18px; height: 18px; font-weight: 600; cursor:default; text-align: center; opacity: 0.8"}
+            .dot{style: "box-sizing: content-box; border-radius: 20px; background-color: white; padding: 7px; color: #333; width: 18px; height: 18px; font-weight: 600; cursor:default; text-align: center; opacity: 0.8"}
               35
    
         .clear
@@ -108,30 +191,36 @@
       for (var l = 0; l <= highestLevel; l++)
       {
         var levelInfo = allLevels[s][l];
-        var passed;
-
-        if ("#{showRandomValues}" == "true")
-          passed = Math.random() > 0.5;
-        else
-          passed = levelInfo && levelInfo.best_result >= #{Activity::MINIMUM_PASS_RESULT};
-
+        passed = levelInfo && levelInfo.best_result >= #{Activity::MINIMUM_PASS_RESULT};
+          
         var backgroundColor = passed ? "rgb(14, 190, 14)" : "rgb(230, 90, 90)";
+        var completionClass = ''; // not attempted
+        if (levelInfo) {
+          if (levelInfo.best_result >= #{Activity::FREE_PLAY_RESULT}) {
+            completionClass = 'perfect'; // perfect (or free play)
+          } else if (levelInfo.best_result >= #{Activity::MINIMUM_PASS_RESULT}) {
+            completionClass = 'passed'; // passed but not perfect
+          } else {
+            completionClass = 'attempted'; // attempted, not passed
+          }
+        }
+
         var id = "#studentbar_" + studentIds[s];
         var title = "Level " + (getLevelNumberInStage(l) + 1) + (passed ? " completed" : " not completed"); // TODO loc
-        $(id).append('<div class="bar" title="' + title + '" style="float:left; width:#{widthpx}px; margin-top:15px; height:10px; opacity: 0.8; cursor: default; background-color: '+ backgroundColor + '" >&nbsp;</div>');
+        $(id).append('<div class="bar '+ completionClass +'" title="' + title + '" style="float:left; width:#{widthpx}px; margin-top:15px; height:10px; opacity: 0.8; cursor: default" >&nbsp;</div>');
       }
 
       // Animate each student's dot to the correct level.
       var level = highestLevel;
       var id = "#studentdot_" + studentIds[s];
       var widthPx = parseInt("#{widthpx}");
-      $(id).animate({left: level * widthPx -15 + "px"}, 4000 /*, "easeInOutCubic" */);
+      $(id).animate({left: level * widthPx + 5 + "px"}, 4000 /*, "easeInOutCubic" */);
       $(id + " .dot").text(getLevelNumberInStage(level) + 1);
 
       // Set dot color.
       if (level < 20)
       {
-        $(id + " .dot").css("background-color", "rgb(230, 90, 90)");
+      //        $(id + " .dot").css("background-color", "rgb(230, 90, 90)");
       }
 
       // And set up the bars to fade in.
