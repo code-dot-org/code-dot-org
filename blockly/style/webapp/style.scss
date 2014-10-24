@@ -6,6 +6,25 @@ $root: '/blockly/media/webapp/'; //TODO: Parameterize for asset pipeline
   height: 400px;
 }
 
+/* Slider. */
+.sliderContainer {
+  float: left
+}
+.sliderTrack {
+  stroke: #aaa;
+  stroke-width: 6px;
+  stroke-linecap: round;
+}
+.sliderKnob {
+  fill: #ddd;
+  stroke: #bbc;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+}
+.sliderKnob:hover {
+  fill: #eee;
+}
+
 /* Sprited icons. */
 .icon21 {
   height: 21px;
