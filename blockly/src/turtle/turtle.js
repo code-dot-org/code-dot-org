@@ -95,6 +95,7 @@ Turtle.init = function(config) {
     level.images = [{}];
     level.images[0].filename = 'background.jpg';
     level.images[0].position = [ 0, 0 ];
+    level.images[0].scale = 0.5;  // image is double sized for retina
   }
 
   config.grayOutUndeletableBlocks = true;
@@ -224,11 +225,16 @@ Turtle.drawCurrentBlocksOnCanvas = function(canvas) {
  * Code from http://stackoverflow.com/questions/5495952. Thanks, Phrogz.
  * @param {string} filename Relative path to image.
  * @param {!Array} position An x-y pair.
+ * @param {number} optional scale at which image is drawn
  */
-Turtle.placeImage = function(filename, position) {
+Turtle.placeImage = function(filename, position, scale) {
   var img = new Image();
   img.onload = function() {
-    Turtle.ctxImages.drawImage(img, position[0], position[1]);
+    if (scale) {
+      Turtle.ctxImages.drawImage(img, position[0], position[1], img.width, img.height, 0, 0, img.width * scale, img.height * scale);
+    } else {
+      Turtle.ctxImages.drawImage(img, position[0], position[1]);
+    }
     Turtle.display();
   };
   if (skin.id == "anna" || skin.id == "elsa")
@@ -250,7 +256,7 @@ Turtle.drawImages = function() {
   }
   for (var i = 0; i < level.images.length; i++) {
     var image = level.images[i];
-    Turtle.placeImage(image.filename, image.position);
+    Turtle.placeImage(image.filename, image.position, image.scale);
   }
   Turtle.ctxImages.globalCompositeOperation = 'copy';
   Turtle.ctxImages.drawImage(Turtle.ctxScratch.canvas, 0, 0);
@@ -362,6 +368,8 @@ BlocklyApps.reset = function(ignore) {
 
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
+
+  jumpSubstepUpto = 0;
 };
 
 /**
@@ -459,6 +467,7 @@ Turtle.execute = function() {
 };
 
 // Divide each jump into substeps so that we can animate every movement.
+var jumpSubstepUpto = 0;
 var jumpSubsteps = 10;
 
 /**
@@ -468,31 +477,59 @@ Turtle.animate = function() {
   // All tasks should be complete now.  Clean up the PID list.
   Turtle.pid = 0;
 
-  var tuple = api.log.shift();
-  if (!tuple) {
-    document.getElementById('spinner').style.visibility = 'hidden';
-    Blockly.mainWorkspace.highlightBlock(null);
-    Turtle.checkAnswer();
-    return;
-  }
-  var command = tuple.shift();
-  BlocklyApps.highlight(tuple.pop());
-
   if (skin.id == "anna" || skin.id == "elsa") {
-    var stepAndDisplay = function () {
-      Turtle.step(command, tuple);
-      Turtle.display();
-    };
-
-    for (var i = 0; i < jumpSubsteps; i++) {
-      setTimeout(stepAndDisplay, 100 * i);
+  
+    if (api.log.length == 0) {
+      document.getElementById('spinner').style.visibility = 'hidden';
+      Blockly.mainWorkspace.highlightBlock(null);
+      Turtle.checkAnswer();
+      return;
     }
+
+    var tuple = api.log[0];
+
+    // grab the command and id
+    var command = tuple[0];
+    var id = tuple[tuple.length-1];
+
+    // highlight the correct block
+    BlocklyApps.highlight(id);
+
+    // execute and display the command
+    var shouldRepeat = Turtle.step(command, tuple.slice(1));
+    Turtle.display();
+
+    // remove the tuple if we've done it enough times
+    console.log(jumpSubstepUpto);
+    if (! shouldRepeat || (shouldRepeat && ++jumpSubstepUpto >= jumpSubsteps))
+    {
+      api.log.shift();
+
+      jumpSubstepUpto = 0;
+    }
+
   } else {
+
+    var tuple = api.log.shift();
+    if (!tuple) {
+      document.getElementById('spinner').style.visibility = 'hidden';
+      Blockly.mainWorkspace.highlightBlock(null);
+      Turtle.checkAnswer();
+      return;
+    }
+
+    var command = tuple.shift();
+    BlocklyApps.highlight(tuple.pop());
+
     Turtle.step(command, tuple);
     Turtle.display();
   }
   // Scale the speed non-linearly, to give better precision at the fast end.
   var stepSpeed = 1000 * Math.pow(1 - Turtle.speedSlider.getValue(), 2);
+  if (skin.id == "anna" || skin.id == "elsa")
+  {
+    stepSpeed /= jumpSubsteps;
+  }
   Turtle.pid = window.setTimeout(Turtle.animate, stepSpeed);
 };
 
@@ -504,23 +541,35 @@ Turtle.animate = function() {
  * @param {number} fraction How much of this step's distance do we draw?
  */
 Turtle.step = function(command, values) {
+  var shouldRepeat = false;
+
   switch (command) {
     case 'FD':  // Forward
       distance = values[0];
       if (skin.id == "anna" || skin.id == "elsa")
+      {
         distance /= jumpSubsteps;
+        console.log('fd', distance);
+        shouldRepeat = true;
+      }
       Turtle.moveForward_(distance);
       break;
     case 'JF':  // Jump forward
       distance = values[0];
       if (skin.id == "anna" || skin.id == "elsa")
+      {
         distance /= jumpSubsteps;
+        shouldRepeat = true;
+      }
       Turtle.jumpForward_(distance);
       break;
     case 'MV':  // Move (direction)
       var distance = values[0];
       if (skin.id == "anna" || skin.id == "elsa")
+      {
         distance /= jumpSubsteps;
+        shouldRepeat = true;
+      }
       var heading = values[1];
       Turtle.setHeading_(heading);
       Turtle.moveForward_(distance);
@@ -528,7 +577,10 @@ Turtle.step = function(command, values) {
     case 'JD':  // Jump (direction)
       distance = values[0];
       if (skin.id == "anna" || skin.id == "elsa")
+      {
         distance /= jumpSubsteps;
+        shouldRepeat = true;
+      }
       heading = values[1];
       Turtle.setHeading_(heading);
       Turtle.jumpForward_(distance);
@@ -536,7 +588,10 @@ Turtle.step = function(command, values) {
     case 'RT':  // Right Turn
       var angle = values[0];
       if (skin.id == "anna" || skin.id == "elsa")
+      {
         angle /= jumpSubsteps;
+        shouldRepeat = true;
+      }
       Turtle.turnByDegrees_(angle);
       break;
     case 'DP':  // Draw Print
@@ -569,6 +624,8 @@ Turtle.step = function(command, values) {
       Turtle.visible = true;
       break;
   }
+
+  return shouldRepeat;
 };
 
 Turtle.jumpForward_ = function (distance) {
