@@ -8,7 +8,6 @@ exports.install = function(blockly, generator, gensym) {
   installTimes(blockly, generator, gensym);
   installDividedBy(blockly, generator, gensym);
   installMathNumber(blockly, generator, gensym);
-  installCompute(blockly, generator, gensym);
 };
 
 
@@ -48,7 +47,7 @@ function installPlus(blockly, generator, gensym) {
   generator.functional_plus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return "Calc.expression('+', " + arg1 + ", " + arg2 + ")";
+    return arg1 + " + " + arg2;
   };
 }
 
@@ -64,7 +63,7 @@ function installMinus(blockly, generator, gensym) {
   generator.functional_minus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return "Calc.expression('-', " + arg1 + ", " + arg2 + ")";
+    return arg1 + " - " + arg2;
   };
 }
 
@@ -80,7 +79,7 @@ function installTimes(blockly, generator, gensym) {
   generator.functional_times = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return "Calc.expression('*', " + arg1 + ", " + arg2 + ")";
+    return arg1 + " * " + arg2;
   };
 }
 
@@ -96,23 +95,7 @@ function installDividedBy(blockly, generator, gensym) {
   generator.functional_dividedby = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return "Calc.expression('/', " + arg1 + ", " + arg2 + ")";
-  };
-}
-
-function installCompute(blockly, generator, gensym) {
-  blockly.Blocks.functional_compute = {
-    // Block for turning left or right.
-    helpUrl: '',
-    init: function() {
-      initFunctionalBlock(this, '', 1);
-      this.setFunctionalOutput(false);
-    }
-  };
-
-  generator.functional_compute = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    return "Calc.compute(" + arg1 +", 'block_id_" + this.id + "');\n";
+    return arg1 + " / " + arg2;
   };
 }
 
