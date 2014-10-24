@@ -30,11 +30,15 @@ var EvalString = require('./evalString');
 var functionalBlocks = require('./functionalBlocks');
 
 var colors = {
-  number: { hue: 184, saturation: 1.00, value: 0.74 },
-  string: { hue: 258, saturation: 0.35, value: 0.62 },
-  image: { hue: 39, saturation: 1.00, value: 0.99},
-  boolean: {}
+  Number: [184, 1.00, 0.74],
+  string: [258, 0.35, 0.62],
+  image: [39, 1.00, 0.99],
+  boolean: [],
+  asObject: function (hsv) {
+    return { hue: hsv[0], saturation: hsv[1], value: hsv[2] };
+  }
 };
+
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -57,6 +61,32 @@ exports.install = function(blockly, blockInstallOptions) {
   installPlaceImage(blockly, generator, gensym);
   installOverlay(blockly, generator, gensym);
 };
+
+
+function initTitledFunctionalBlock(block, title, type, args) {
+  block.setFunctional(true, {
+    headerHeight: 30
+  });
+  block.setHSV.apply(block, colors[type]);
+
+  var options = {
+    fixedSize: { height: 35 }
+  };
+
+  block.appendDummyInput()
+    .appendTitle(new Blockly.FieldLabel(title, options))
+    .setAlign(Blockly.ALIGN_CENTRE);
+
+  for (var i = 0; i < args.length; i++) {
+    var arg = args[i];
+    var input = block.appendFunctionalInput(arg.name);
+    input.setInline(i > 0);
+    input.setHSV.apply(input, colors[arg.type]);
+    input.setCheck(arg.type);
+  }
+
+  block.setFunctionalOutput(true, block.type);
+}
 
 function installString(blockly, generator, gensym) {
   blockly.Blocks.functional_string = {
@@ -82,33 +112,12 @@ function installString(blockly, generator, gensym) {
 function installCircle(blockly, generator, gensym) {
   blockly.Blocks.functional_circle = {
     init: function () {
-      this.setHSV(39, 1.00, 0.99);
-      this.setFunctional(true, {
-        headerHeight: 30,
-      });
-
-      var options = {
-        fixedSize: { height: 35 }
-      };
-
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldLabel('circle', options))
-          .setAlign(Blockly.ALIGN_CENTRE);
-
-      this.appendFunctionalInput('SIZE')
-          .setColour(colors.number)
-          .setCheck('Number');
-      this.appendFunctionalInput('STYLE')
-          .setInline(true)
-          .setColour(colors.string)
-          .setCheck('string');
-      this.appendFunctionalInput('COLOR')
-          .setInline(true)
-          .setColour(colors.string)
-          .setCheck('string');
-
-
-      this.setFunctionalOutput(true, 'image');
+      // todo - i18n
+      initTitledFunctionalBlock(this, 'circle', 'image', [
+        { name: 'SIZE', type: 'Number' },
+        { name: 'STYLE', type: 'string' },
+        { name: 'COLOR', type: 'string' }
+      ]);
     }
   };
 
@@ -126,34 +135,11 @@ function installCircle(blockly, generator, gensym) {
 function installPlaceImage(blockly, generator, gensym) {
   blockly.Blocks.place_image = {
     init: function () {
-      this.setHSV(39, 1.00, 0.99);
-      this.setFunctional(true, {
-        headerHeight: 30,
-      });
-
-      var options = {
-        fixedSize: { height: 35 }
-      };
-
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldLabel('place-image', options))
-          .setAlign(Blockly.ALIGN_CENTRE);
-
-      // todo (brent) - more strictly link colour and check so that we can't accidentally
-      // have them mismatched?
-      this.appendFunctionalInput('IMAGE')
-          .setColour(colors.image)
-          .setCheck('image');
-      this.appendFunctionalInput('X')
-          .setInline(true)
-          .setColour(colors.number)
-          .setCheck('Number');
-      this.appendFunctionalInput('Y')
-          .setInline(true)
-          .setColour(colors.number)
-          .setCheck('Number');
-
-      this.setFunctionalOutput(true, 'image');
+      initTitledFunctionalBlock(this, 'place-image', 'image', [
+        { name: 'IMAGE', type: 'image' },
+        { name: 'X', type: 'Number' },
+        { name: 'Y', type: 'Number' }
+      ]);
     }
   };
 
@@ -170,29 +156,10 @@ function installPlaceImage(blockly, generator, gensym) {
 function installOverlay(blockly, generator, gensym) {
   blockly.Blocks.overlay = {
     init: function () {
-      this.setHSV(39, 1.00, 0.99);
-      this.setFunctional(true, {
-        headerHeight: 30,
-      });
-
-      var options = {
-        fixedSize: { height: 35 }
-      };
-
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldLabel('overlay', options))
-          .setAlign(Blockly.ALIGN_CENTRE);
-
-      this.appendFunctionalInput('IMAGE1')
-          .setColour(colors.image)
-          .setCheck('image');
-      this.appendFunctionalInput('IMAGE2')
-          .setInline(true)
-          .setColour(colors.image)
-          .setCheck('image');
-
-
-      this.setFunctionalOutput(true, 'image');
+      initTitledFunctionalBlock(this, 'overlay', 'image', [
+        { name: 'IMAGE1', type: 'image' },
+        { name: 'IMAGE2', type: 'image' },
+      ]);
     }
   };
 

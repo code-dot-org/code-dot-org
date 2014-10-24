@@ -28,7 +28,7 @@ function initFunctionalBlock(block, title, numArgs) {
   for (var i = 1; i <= numArgs; i++) {
     block.appendFunctionalInput('ARG' + i)
          .setInline(i > 1)
-         .setColour({ hue: 184, saturation: 1.00, value: 0.74 })
+         .setHSV(184, 1.00, 0.74)
          .setCheck('Number');
   }
 
