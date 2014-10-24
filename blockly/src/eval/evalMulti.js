@@ -1,0 +1,34 @@
+var EvalObject = require('./evalObject');
+
+// todo - stick in a utils file?
+function ensureType(val, type) {
+  if (!(val instanceof type)) {
+    // todo - better strategy than throwing?
+    throw new Error("unexpected object");
+  }
+}
+
+
+var EvalMulti = function (image1, image2) {
+  ensureType(image1, EvalObject);
+  ensureType(image2, EvalObject);
+
+  EvalObject.apply(this);
+
+  this.image1_ = image1;
+  this.image2_ = image2;
+
+  this.element_ = null;
+};
+EvalMulti.inherits(EvalObject);
+module.exports = EvalMulti;
+
+EvalMulti.prototype.draw = function (parent) {
+  if (!this.element_) {
+    this.element_ = document.createElementNS(Blockly.SVG_NS, 'g');
+    parent.appendChild(this.element_);
+  }
+  this.element_.setAttribute('transform', "translate(" + this.x_ + ", " + this.y_ + ")");
+  this.image2_.draw(this.element_);
+  this.image1_.draw(this.element_);
+};

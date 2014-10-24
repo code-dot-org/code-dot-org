@@ -55,6 +55,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installString(blockly, generator, gensym);
   installCircle(blockly, generator, gensym);
   installPlaceImage(blockly, generator, gensym);
+  installOverlay(blockly, generator, gensym);
 };
 
 function installString(blockly, generator, gensym) {
@@ -161,6 +162,44 @@ function installPlaceImage(blockly, generator, gensym) {
     var x = Blockly.JavaScript.statementToCode(this, 'X', false) || '0';
     var y = Blockly.JavaScript.statementToCode(this, 'Y', false) || '0';
 
-    return "Eval.placeImage(" + [image, x, y].join(", ") + ");";
+    return "Eval.placeImage(" + [image, x, y].join(", ") + ")";
+  };
+}
+
+
+function installOverlay(blockly, generator, gensym) {
+  blockly.Blocks.overlay = {
+    init: function () {
+      this.setHSV(39, 1.00, 0.99);
+      this.setFunctional(true, {
+        headerHeight: 30,
+      });
+
+      var options = {
+        fixedSize: { height: 35 }
+      };
+
+      this.appendDummyInput()
+          .appendTitle(new Blockly.FieldLabel('overlay', options))
+          .setAlign(Blockly.ALIGN_CENTRE);
+
+      this.appendFunctionalInput('IMAGE1')
+          .setColour(colors.image)
+          .setCheck('image');
+      this.appendFunctionalInput('IMAGE2')
+          .setInline(true)
+          .setColour(colors.image)
+          .setCheck('image');
+
+
+      this.setFunctionalOutput(true, 'image');
+    }
+  };
+
+  generator.overlay = function() {
+    var image1 = Blockly.JavaScript.statementToCode(this, 'IMAGE1', false);
+    var image2 = Blockly.JavaScript.statementToCode(this, 'IMAGE2', false);
+
+    return "Eval.overlay(" + [image1, image2].join(", ") + ")";
   };
 }
