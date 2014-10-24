@@ -495,7 +495,7 @@ Blockly.BlockSpaceEditor.prototype.onKeyDown_ = function(e) {
     }
   } else if (e.altKey || e.ctrlKey || e.metaKey) {
     if (Blockly.selected && Blockly.selected.isDeletable() &&
-      Blockly.selected.blockSpace == this) {
+      Blockly.selected.blockSpace === this.blockSpace) {
       this.hideChaff();
       if (e.keyCode == 67) {
         // 'c' for copy.
