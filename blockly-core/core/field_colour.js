@@ -76,7 +76,7 @@ Blockly.FieldColour.prototype.setValue = function(colour) {
   this.colour_ = colour;
   this.borderRect_.style.fill = colour;
   if (this.sourceBlock_ && this.sourceBlock_.rendered) {
-    this.sourceBlock_.workspace.fireChangeEvent();
+    this.sourceBlock_.blockSpace.fireChangeEvent();
   }
 };
 

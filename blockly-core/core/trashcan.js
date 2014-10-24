@@ -28,11 +28,11 @@ goog.provide('Blockly.Trashcan');
 
 /**
  * Class for a trash can.
- * @param {!Blockly.Workspace} workspace The workspace to sit in.
+ * @param {!Blockly.BlockSpace} blockSpace The blockSpace to sit in.
  * @constructor
  */
-Blockly.Trashcan = function(workspace) {
-  this.workspace_ = workspace;
+Blockly.Trashcan = function(blockSpace) {
+  this.blockSpace_ = blockSpace;
 };
 
 /**
@@ -64,14 +64,14 @@ Blockly.Trashcan.prototype.WIDTH_ = 70;
 Blockly.Trashcan.prototype.HEIGHT_ = 70;
 
 /**
- * Distance between trashcan and top edge of workspace.
+ * Distance between trashcan and top edge of blockSpace.
  * @type {number}
  * @private
  */
 Blockly.Trashcan.prototype.MARGIN_TOP_ = 15;
 
 /**
- * Distance between trashcan and right edge of workspace.
+ * Distance between trashcan and right edge of blockSpace.
  * @type {number}
  * @private
  */
@@ -174,7 +174,7 @@ Blockly.Trashcan.prototype.dispose = function() {
   }
   this.svgClosedCan_ = null;
   this.svgOpenCan_ = null;
-  this.workspace_ = null;
+  this.blockSpace_ = null;
 };
 
 /**
@@ -182,9 +182,9 @@ Blockly.Trashcan.prototype.dispose = function() {
  * @private
  */
 Blockly.Trashcan.prototype.position_ = function() {
-  var metrics = this.workspace_.getMetrics();
+  var metrics = this.blockSpace_.getMetrics();
   if (!metrics) {
-    // There are no metrics available (workspace is probably not visible).
+    // There are no metrics available (blockSpace is probably not visible).
     return;
   }
   if (Blockly.RTL) {

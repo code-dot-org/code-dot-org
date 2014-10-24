@@ -99,10 +99,10 @@ Blockly.Toolbox.prototype.createDom = function (svg) {
 
 /**
  * Initializes the toolbox.
- * @param {!Workspace} workspace The workspace this toolbox's flyout will create blocks in
- * @param {!BlockSpaceEditor} blockSpaceEditor The editor workspace this toolbox's flyout will be positioned in
+ * @param {!BlockSpace} blockSpace The blockSpace this toolbox's flyout will create blocks in
+ * @param {!BlockSpaceEditor} blockSpaceEditor The editor blockSpace this toolbox's flyout will be positioned in
  */
-Blockly.Toolbox.prototype.init = function(workspace, blockSpaceEditor) {
+Blockly.Toolbox.prototype.init = function(blockSpace, blockSpaceEditor) {
   Blockly.Toolbox.CONFIG_['cleardotPath'] = Blockly.assetUrl('media/1x1.gif');
   Blockly.Toolbox.CONFIG_['cssCollapsedFolderIcon'] =
       'blocklyTreeIconClosed' + (Blockly.RTL ? 'Rtl' : 'Ltr');
@@ -114,7 +114,7 @@ Blockly.Toolbox.prototype.init = function(workspace, blockSpaceEditor) {
   tree.setSelectedItem(null);
 
   this.HtmlDiv.style.display = 'block';
-  this.flyout_.init(workspace, true);
+  this.flyout_.init(blockSpace, true);
   this.populate_();
   tree.render(this.HtmlDiv);
 

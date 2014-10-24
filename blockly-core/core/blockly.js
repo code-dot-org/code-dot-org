@@ -46,7 +46,7 @@ goog.require('Blockly.Msg');
 goog.require('Blockly.Procedures');
 goog.require('Blockly.Toolbox');
 goog.require('Blockly.WidgetDiv');
-goog.require('Blockly.Workspace');
+goog.require('Blockly.BlockSpace');
 goog.require('Blockly.inject');
 goog.require('Blockly.utils');
 
@@ -233,13 +233,13 @@ Blockly.BUMP_DELAY = 250;
 Blockly.COLLAPSE_CHARS = 30;
 
 /**
- * The main workspace (defined by inject.js).
- * @type {Blockly.Workspace}
+ * The main blockSpace (defined by inject.js).
+ * @type {Blockly.BlockSpace}
  */
-Blockly.mainWorkspace = null;
+Blockly.mainBlockSpace = null;
 
 /**
- * The main editor workspace (defined by inject.js).
+ * The main editor blockSpace (defined by inject.js).
  * @type {Blockly.BlockSpaceEditor}
  */
 Blockly.mainBlockSpaceEditor = null;

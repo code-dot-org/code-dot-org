@@ -30,7 +30,7 @@ goog.provide('Blockly.Variables');
 // TODO(scr): Fix circular dependencies
 // goog.require('Blockly.Block');
 goog.require('Blockly.Toolbox');
-goog.require('Blockly.Workspace');
+goog.require('Blockly.BlockSpace');
 
 
 /**
@@ -49,7 +49,7 @@ Blockly.Variables.allVariables = function(opt_block) {
   if (opt_block) {
     blocks = opt_block.getDescendants();
   } else {
-    blocks = Blockly.mainWorkspace.getAllBlocks();
+    blocks = Blockly.mainBlockSpace.getAllBlocks();
   }
   var variableHash = {};
   // Iterate through every block and add each variable to the hash.
@@ -81,7 +81,7 @@ Blockly.Variables.allVariables = function(opt_block) {
  * @param {string} newName New variable name.
  */
 Blockly.Variables.renameVariable = function(oldName, newName) {
-  var blocks = Blockly.mainWorkspace.getAllBlocks();
+  var blocks = Blockly.mainBlockSpace.getAllBlocks();
   // Iterate through every block.
   for (var x = 0; x < blocks.length; x++) {
     var func = blocks[x].renameVar;
@@ -96,9 +96,9 @@ Blockly.Variables.renameVariable = function(oldName, newName) {
  * @param {!Array.<!Blockly.Block>} blocks List of blocks to show.
  * @param {!Array.<number>} gaps List of widths between blocks.
  * @param {number} margin Standard margin width for calculating gaps.
- * @param {!Blockly.Workspace} workspace The flyout's workspace.
+ * @param {!Blockly.BlockSpace} blockSpace The flyout's blockSpace.
  */
-Blockly.Variables.flyoutCategory = function(blocks, gaps, margin, workspace) {
+Blockly.Variables.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
   var variableList = Blockly.Variables.allVariables();
   variableList.sort(goog.string.caseInsensitiveCompare);
   // In addition to the user's variables, we also want to display the default
@@ -111,10 +111,10 @@ Blockly.Variables.flyoutCategory = function(blocks, gaps, margin, workspace) {
       continue;
     }
     var getBlock = Blockly.Blocks.variables_get ?
-        new Blockly.Block(workspace, 'variables_get') : null;
+        new Blockly.Block(blockSpace, 'variables_get') : null;
     getBlock && getBlock.initSvg();
     var setBlock = Blockly.Blocks.variables_set ?
-        new Blockly.Block(workspace, 'variables_set') : null;
+        new Blockly.Block(blockSpace, 'variables_set') : null;
     setBlock && setBlock.initSvg();
     if (variableList[i] === null) {
       defaultVariable = (getBlock || setBlock).getVars()[0];

@@ -180,7 +180,7 @@ Blockly.Tooltip.onMouseOver_ = function(e) {
 };
 
 /**
- * Hide the tooltip if the mouse leaves the object and enters the workspace.
+ * Hide the tooltip if the mouse leaves the object and enters the blockSpace.
  * @param {!Event} e Mouse event.
  * @private
  */

@@ -1226,7 +1226,7 @@ BlocklyApps.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
   Studio.execute();
@@ -1287,7 +1287,7 @@ var registerHandlers =
       function (handlers, blockName, eventNameBase,
                 nameParam1, matchParam1Val,
                 nameParam2, matchParam2Val) {
-  var blocks = Blockly.mainWorkspace.getTopBlocks();
+  var blocks = Blockly.mainBlockSpace.getTopBlocks();
   for (var x = 0; blocks[x]; x++) {
     var block = blocks[x];
     // default title values to '0' for case when there is only one sprite
@@ -1377,7 +1377,7 @@ var registerHandlersWithMultipleSpriteParams =
 //
 
 var defineProcedures = function (blockType) {
-  var code = Blockly.Generator.workspaceToCode('JavaScript', blockType);
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   try { codegen.evalWith(code, {
                          BlocklyApps: BlocklyApps,
                          Studio: api,
@@ -1471,7 +1471,7 @@ Studio.onPuzzleComplete = function() {
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   Studio.waitingForReport = true;
@@ -1495,7 +1495,7 @@ Studio.onPuzzleComplete = function() {
       callback: function(pngDataUrl) {
         Studio.feedbackImage = pngDataUrl;
         Studio.encodedFeedbackImage = encodeURIComponent(Studio.feedbackImage.split(',')[1]);
-        
+
         sendReport();
       }
     });
