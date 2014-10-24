@@ -201,7 +201,7 @@ Eval.execute = function() {
 
   var result = evaluateAnswer();
   Eval.message = result ?  "Good jorb!" : '';
-  
+
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
@@ -224,8 +224,7 @@ function evaluateAnswer() {
 
   // is this good enough?
   return answer.innerHTML.trim() == user.innerHTML.trim();
-};
-
+}
 
 /**
  * App specific displayFeedback function that calls into

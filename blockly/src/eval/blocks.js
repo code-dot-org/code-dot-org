@@ -34,8 +34,7 @@ var colors = {
   string: { hue: 258, saturation: 0.35, value: 0.62 },
   image: { hue: 39, saturation: 1.00, value: 0.99},
   boolean: {}
-}
-
+};
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -95,22 +94,31 @@ function installCircle(blockly, generator, gensym) {
           .appendTitle(new Blockly.FieldLabel('circle', options))
           .setAlign(Blockly.ALIGN_CENTRE);
 
-      this.appendFunctionalInput('COLOR')
-          .setColour(colors.string)
-          .setCheck('string');
       this.appendFunctionalInput('SIZE')
-          .setInline(true)
           .setColour(colors.number)
           .setCheck('Number');
+      this.appendFunctionalInput('STYLE')
+          .setInline(true)
+          .setColour(colors.string)
+          .setCheck('string');
+      this.appendFunctionalInput('COLOR')
+          .setInline(true)
+          .setColour(colors.string)
+          .setCheck('string');
+
 
       this.setFunctionalOutput(true, 'image');
     }
   };
 
   generator.functional_circle = function() {
-    var color = Blockly.JavaScript.statementToCode(this, 'COLOR', false) || 'black';
+    var color = Blockly.JavaScript.statementToCode(this, 'COLOR', false) ||
+      "Eval.string('black')";
+    var style = Blockly.JavaScript.statementToCode(this, 'STYLE', false) ||
+      "Eval.string('solid')";
     var size = Blockly.JavaScript.statementToCode(this, 'SIZE', false) || '0';
-    return "Eval.circle(" + color + ", " + size + ")";
+
+    return "Eval.circle(" + [size, style, color].join(", ") + ")";
   };
 }
 
@@ -152,6 +160,7 @@ function installPlaceImage(blockly, generator, gensym) {
     var image = Blockly.JavaScript.statementToCode(this, 'IMAGE', false);
     var x = Blockly.JavaScript.statementToCode(this, 'X', false) || '0';
     var y = Blockly.JavaScript.statementToCode(this, 'Y', false) || '0';
-    return "Eval.placeImage(" + image + ", " + x + ", " + y + ");";
+
+    return "Eval.placeImage(" + [image, x, y].join(", ") + ");";
   };
 }
