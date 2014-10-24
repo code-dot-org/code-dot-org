@@ -59,9 +59,18 @@ module ApplicationHelper
   end
 
   def level_info(user, script_level)
-    passed = level_passed({user: user, user_level: script_level.user_level, level_id: script_level.level_id})
+    user_level = script_level.user_level
+    css_class = if user_level.nil?
+                  'not_tried'
+                elsif user_level.best_result >= Activity::FREE_PLAY_RESULT 
+                  'perfect'
+                elsif user_level.passing?
+                  'passed'
+                else
+                  'attempted'
+                end
     link = build_script_level_url(script_level)
-    [passed, link]
+    [css_class, link]
   end
 
   def show_flashes

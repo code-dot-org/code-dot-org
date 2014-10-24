@@ -14,26 +14,30 @@ class Activity < ActiveRecord::Base
     (result == BEST_PASS_RESULT)
   end
 
-  def Activity.finished?(result)
-    return false if result.nil?
-    (result >= MINIMUM_FINISHED_RESULT)
-  end
-
   def Activity.passing?(result)
     return false if result.nil?
     (result >= MINIMUM_PASS_RESULT)
+  end
+
+  def Activity.finished?(result)
+    return false if result.nil?
+    (result >= MINIMUM_FINISHED_RESULT)
   end
 
   def best?
     Activity.best? test_result
   end
 
-  def finished?
-    Activity.finished? test_result
-  end
-
   def passing?
     Activity.passing? test_result
   end
 
+  def finished?
+    Activity.finished? test_result
+  end
+
+  def Activity.recent(limit)
+    # yeah, this is a lot like .last -- but I want a dataset not an array
+    Activity.order('id desc').limit(limit)
+  end
 end

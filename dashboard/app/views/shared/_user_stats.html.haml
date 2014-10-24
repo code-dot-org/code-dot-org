@@ -7,7 +7,7 @@
   - levels.each_pair do |stage_or_game, sl_group|
     - stage_title = data_t_suffix('script.name', script.name, stage_or_game.name)
     - game_title = (data_t('game.name', stage_or_game.name) || stage_or_game.name)
-    - color = cycle '#dadada', '#eeeeee'
+    - color = '#eee' # cycle '#ddd', '#d5d5d5'
     - custom_script = stage_or_game.instance_of? Stage
     - has_lesson_plan = custom_script && script.k5_course?
     - should_show_lesson_plan = has_lesson_plan && current_user && current_user.teacher?
@@ -26,7 +26,7 @@
         - sl_group = sl_group.sort_by {|sl| sl.stage_or_game_position}
         - sl_group.each do |sl|
           .level
-            - passed, link = level_info(user, sl)
+            - css_class, link = level_info(user, sl)
             - if params[:script_level_id] && params[:script_level_id] == sl.level_id.to_s
               - puzzle_outer_class = 'puzzle_outer_current'
             - elsif sl.assessment
@@ -34,18 +34,20 @@
             - else
               - puzzle_outer_class = 'puzzle_outer_level'
             %span{class: puzzle_outer_class}
-              %a{ href: link, class: "level_link#{passed ? ' level_link_done' : ''}"}
+              %a{ href: link, class: "level_link #{css_class}"}
                 - unplugged = sl.level.unplugged?
                 - if unplugged
                   %span.puzzle-named
                     =sl.level_display_text
-                - elsif ! passed
+                - elsif css_class == 'passed'
+                  = check_mark_html
+                - elsif css_class == 'perfect'
+                  = check_mark_html
+                - else 
                   %span.puzzle-number
                     =sl.level_display_text
-                - if passed
-                  = check_mark_html
 
-            - if current_user.try(:admin?)
+            - if false && current_user.try(:admin?)
               - if can? :edit, sl.level
                 = link_to(t('crud.edit'), edit_level_path(sl.level), style: 'display: block; width: 30px;', title: sl.level.name)
               - else
