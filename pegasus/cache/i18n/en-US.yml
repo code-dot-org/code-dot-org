@@ -1,4 +1,4 @@
-"en-US":
+en-US:
   hello: "Hello world"
   computer_science: "Computer Science"
   computer_science_edweek: "Computer Science Education Week"
@@ -124,7 +124,7 @@
   class_submission_in_school_ap_computer_science: "AP computer science"
   class_submission_in_school_full_university_cs_curriculum: "Full university CS curriculum"
   class_submission_in_school_robotics_club: "Robotics club"
-  class_submission_in_school_programming_integrated_in_other_classes: "Programming integrated in other classes"
+  class_submission_in_school_programming_integrated_in_other_classes: "Programming integrated in other classes (math, science, etc)"
   class_submission_in_school_summer_school_cs_program: "Summer school CS program"
   class_submission_in_school_exploring_computer_science: "Exploring Computer Science"
   class_submission_in_school_other: "Other in school"
