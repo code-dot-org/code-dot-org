@@ -32,13 +32,13 @@ goog.require('Blockly.Workspace');
  * @constructor
  */
 Blockly.BlockSpaceEditor = function(container) {
-  var self = this;
   /**
    * @type {Blockly.Workspace}
    */
   this.workspace = new Blockly.Workspace(this,
-    function(){ return self.getWorkspaceMetrics_(); },
-    function(xyRatio) { return self.setWorkspaceMetrics_(xyRatio); });
+    goog.bind(this.getWorkspaceMetrics_, this),
+    goog.bind(this.setWorkspaceMetrics_, this)
+  );
   this.createDom_(container);
   this.init_();
 };
