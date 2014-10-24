@@ -38,7 +38,7 @@ Blockly.HorizontalFlyout.prototype.show = function(xmlList) {
 Blockly.HorizontalFlyout.prototype.hide = function() {
   this.flyoutRows = 0;
   Blockly.HorizontalFlyout.superClass_.hide.apply(this, arguments);
-}
+};
 
 /**
  * Move the toolbox to the top of the workspace.
