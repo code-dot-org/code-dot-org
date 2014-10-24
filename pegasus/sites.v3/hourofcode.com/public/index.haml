@@ -177,7 +177,7 @@ social:
 
   #join
     %h1=hoc_s(:front_join_us_button)
-    %div#current-version
+    %div#original-version
       .row
         .col-md-12
           =view :join_us_description
@@ -186,13 +186,20 @@ social:
           =view :signup_form
         .col-md-4
           =view :choose_country
-    %div#new-version{:style=>'display: none'}
+    %div#form-right-version{:style=>'display: none'}
       .row
         .col-md-6
           =view :join_us_description
           =view :choose_country
         .col-md-6
           =view :signup_form
+    %div#form-left-version{:style=>'display: none'}
+      .row
+        .col-md-6
+          =view :signup_form
+        .col-md-6
+          =view :join_us_description
+          =view :choose_country
 
   %a#faqs{name:'faq'}
   .row
