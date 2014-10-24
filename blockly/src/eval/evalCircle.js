@@ -5,8 +5,9 @@ var EvalString = require('./evalString');
 function getFill(style, color) {
   // todo - i18n
   // todo - 1asdf becomes 1 with parseInt
+  // for now, we treat anything we don't recognize as solid.
   var alpha = parseInt(style, 10);
-  if (style === "solid" || alpha) {
+  if (style !== "outline") {
     return color;
   }
   return "none";
@@ -27,23 +28,6 @@ function getOpacity(style, color) {
   }
   return 1.0;
 }
-
-var Style = {
-  solid: "solid",
-  outline: "outline",
-  alpha: function (n) {
-    return "alpha" + n;
-  },
-  fromString: function (str) {
-    // todo - this function is currently not at all robust
-
-    var n = parseInt(str, 10);
-    if (n) {
-      return this.alpha(n);
-    }
-    return str;
-  }
-};
 
 // todo - stick in a utils file?
 function ensureEvalString(val) {

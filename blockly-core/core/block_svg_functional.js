@@ -109,6 +109,11 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
   this.inputMarkers_[input.name].setAttribute('height', 5);
   this.inputMarkers_[input.name].setAttribute('fill', input.getHexColour());
 
+  // hide inputs that have targets, so that the rectangle doesn't show up when
+  // dragging
+  this.inputMarkers_[input.name].setAttribute('visibility',
+    input.connection.targetConnection ? 'hidden' : 'visible');
+
   renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
 
   // Create inline input connection.
