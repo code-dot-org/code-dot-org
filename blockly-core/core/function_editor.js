@@ -1,13 +1,13 @@
 /**
  * @fileoverview Object representing a separate function editor.
- * This function editor provides a separate workspace where a user can
+ * This function editor provides a separate blockSpace where a user can
  * modify a given function definition.
  */
 'use strict';
 
 goog.provide('Blockly.FunctionEditor');
 
-goog.require('Blockly.Workspace');
+goog.require('Blockly.BlockSpace');
 goog.require('Blockly.Xml');
 
 /**
@@ -17,18 +17,18 @@ goog.require('Blockly.Xml');
 Blockly.FunctionEditor = function() {
   this.functionEditorOpen_ = false;
 
-  var blocklyTopLeftDiv = document.getElementById('blocklyApp');
+  var blocklyTopLeftDiv = document.getElementsByTagName('body')[0];
   this.functionEditorDiv_ = goog.dom.createDom("div", "newFunctionDiv");
   blocklyTopLeftDiv.appendChild(this.functionEditorDiv_);
-  this.workspace_ = new Blockly.BlockSpaceEditor(this.functionEditorDiv_);
+  this.blockSpaceEditor = new Blockly.BlockSpaceEditor(this.functionEditorDiv_);
 
-  this.workspace_.addTopBlock = function (block) {
-    Blockly.mainWorkspace.addTopBlock(block);
-    Blockly.Workspace.prototype.addTopBlock.apply(this, arguments);
+  this.blockSpaceEditor.blockSpace_.addTopBlock = function (block) {
+    Blockly.mainBlockSpace.addTopBlock(block);
+    Blockly.BlockSpace.prototype.addTopBlock.apply(this, arguments);
   };
-  this.workspace_.removeTopBlock = function (block) {
-    Blockly.mainWorkspace.removeTopBlock(block);
-    Blockly.Workspace.prototype.removeTopBlock.apply(this, arguments);
+  this.blockSpaceEditor.blockSpace_.removeTopBlock = function (block) {
+    Blockly.mainBlockSpace.removeTopBlock(block);
+    Blockly.BlockSpace.prototype.removeTopBlock.apply(this, arguments);
   };
 };
 
@@ -49,9 +49,9 @@ Blockly.FunctionEditor.prototype.openFunctionEditor = function(functionDefinitio
   this.functionEditorOpen_ = !this.functionEditorOpen_;
   goog.style.showElement(this.functionEditorDiv_, this.functionEditorOpen_);
 
-  // Initialize this.workspace_ with specified function definition block
+  // Initialize this.blockSpaceEditor.blockSpace_ with specified function definition block
   var xml = Blockly.Xml.textToDom(functionDefinitionXML);
-  Blockly.Xml.domToWorkspace(this.workspace_, xml);
+  Blockly.Xml.domToBlockSpace(this.blockSpaceEditor.blockSpace_, xml);
 };
 
 

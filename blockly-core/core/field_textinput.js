@@ -112,9 +112,9 @@ Blockly.FieldTextInput.prototype.showEditor_ = function() {
   // Bind to keyPress -- repeatedly resize when holding down a key.
   htmlInput.onKeyPressWrapper_ =
       Blockly.bindEvent_(htmlInput, 'keypress', this, this.onHtmlInputChange_);
-  var workspaceSvg = this.sourceBlock_.workspace.getCanvas();
-  htmlInput.onWorkspaceChangeWrapper_ =
-      Blockly.bindEvent_(workspaceSvg, 'blocklyWorkspaceChange', this,
+  var blockSpaceSvg = this.sourceBlock_.blockSpace.getCanvas();
+  htmlInput.onBlockSpaceChangeWrapper_ =
+      Blockly.bindEvent_(blockSpaceSvg, 'blocklyBlockSpaceChange', this,
       this.resizeEditor_);
 };
 
@@ -236,7 +236,7 @@ Blockly.FieldTextInput.prototype.widgetDispose_ = function() {
     thisField.sourceBlock_.rendered && thisField.sourceBlock_.render();
     Blockly.unbindEvent_(htmlInput.onKeyUpWrapper_);
     Blockly.unbindEvent_(htmlInput.onKeyPressWrapper_);
-    Blockly.unbindEvent_(htmlInput.onWorkspaceChangeWrapper_);
+    Blockly.unbindEvent_(htmlInput.onBlockSpaceChangeWrapper_);
     Blockly.FieldTextInput.htmlInput_ = null;
     // Delete the width property.
     Blockly.WidgetDiv.DIV.style.width = 'auto';

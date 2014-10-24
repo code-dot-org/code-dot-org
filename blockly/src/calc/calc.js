@@ -158,7 +158,7 @@ Calc.display = function() {
  */
 BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.attempts++;
   Calc.execute();
 };
@@ -191,7 +191,7 @@ function evalCode (code) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
   evalCode(code);
 
   var expression = Calc.lastExpression;
@@ -204,7 +204,7 @@ Calc.execute = function() {
 
   var result = Calc.drawAnswer(level.target(), Calc.lastExpression);
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   var reportData = {
