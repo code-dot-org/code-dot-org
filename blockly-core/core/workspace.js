@@ -145,7 +145,7 @@ Blockly.Workspace.prototype.addTrashcan = function() {
   if (Blockly.hasTrashcan && !Blockly.readOnly) {
     this.trashcan = new Blockly.Trashcan(this);
     var svgTrashcan = this.trashcan.createDom();
-    this.svgGroup_.insertBefore(svgTrashcan, this.svgBlockCanvas_);
+    this.svgBlockCanvas_.appendChild(svgTrashcan);
     this.trashcan.init();
   }
 };

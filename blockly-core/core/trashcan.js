@@ -193,7 +193,7 @@ Blockly.Trashcan.prototype.position_ = function() {
     this.left_ = metrics.viewWidth + metrics.absoluteLeft -
         this.WIDTH_ - this.MARGIN_SIDE_;
   }
-  this.top_ = metrics.absoluteTop + this.MARGIN_TOP_;
+  this.top_ = this.MARGIN_TOP_;
   this.svgGroup_.setAttribute('transform',
       'translate(' + this.left_ + ',' + this.top_ + ')');
 };

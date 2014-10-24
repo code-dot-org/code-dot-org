@@ -457,12 +457,6 @@ BlocklyApps.init = function(config) {
   var onResize = function() {
     BlocklyApps.onResize(config.getDisplayWidth());
   };
-
-  // listen for scroll and resize to ensure onResize() is called
-  window.addEventListener('scroll', function() {
-    onResize();
-    Blockly.fireUiEvent(window, 'resize');
-  });
   window.addEventListener('resize', onResize);
 
   // call initial onResize() asynchronously - need 100ms delay to work
