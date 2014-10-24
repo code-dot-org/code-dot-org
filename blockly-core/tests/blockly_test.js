@@ -192,7 +192,8 @@ function test_initializeWorkspace() {
   document.body.appendChild(container);
   Blockly.assetUrl = function(){return ''};
   Blockly.Css.inject();
-  Blockly.mainWorkspace = new Blockly.EditorWorkspace(container);
+  Blockly.mainEditorWorkspace = new Blockly.EditorWorkspace(container);
+  Blockly.mainWorkspace = Blockly.mainEditorWorkspace.workspace;
   goog.dom.removeNode(container);
 }
 
@@ -201,6 +202,7 @@ function test_initializeWorkspace() {
   document.body.appendChild(container);
   Blockly.assetUrl = function(){return ''};
   Blockly.Css.inject();
-  Blockly.mainWorkspace = new Blockly.EditorWorkspace(container);
+  Blockly.mainEditorWorkspace = new Blockly.EditorWorkspace(container);
+  Blockly.mainWorkspace = Blockly.mainEditorWorkspace.workspace;
   goog.dom.removeNode(container);
 }
