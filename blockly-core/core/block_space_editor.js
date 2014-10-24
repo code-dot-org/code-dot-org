@@ -22,7 +22,7 @@
  */
 'use strict';
 
-goog.provide('Blockly.EditorWorkspace');
+goog.provide('Blockly.BlockSpaceEditor');
 goog.require('Blockly.Workspace');
 
 /**
@@ -31,7 +31,7 @@ goog.require('Blockly.Workspace');
  * and certain focus/mouse handling operations for itself
  * @constructor
  */
-Blockly.EditorWorkspace = function(container) {
+Blockly.BlockSpaceEditor = function(container) {
   var self = this;
   /**
    * @type {Blockly.Workspace}
@@ -48,7 +48,7 @@ Blockly.EditorWorkspace = function(container) {
  * @param {!Element} container Containing element.
  * @private
  */
-Blockly.EditorWorkspace.prototype.createDom_ = function(container) {
+Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   // Sadly browsers (Chrome vs Firefox) are currently inconsistent in laying
   // out content in RTL mode.  Therefore Blockly forces the use of LTR,
   // then manually positions content in RTL as needed.
@@ -248,7 +248,7 @@ Blockly.EditorWorkspace.prototype.createDom_ = function(container) {
   document.body.appendChild(Blockly.WidgetDiv.DIV);
 };
 
-Blockly.EditorWorkspace.prototype.init_ = function() {
+Blockly.BlockSpaceEditor.prototype.init_ = function() {
   this.detectBrokenControlPoints();
 
   // Bind events for scrolling the workspace.
@@ -259,10 +259,10 @@ Blockly.EditorWorkspace.prototype.init_ = function() {
   // understand a concept of focus on the SVG image.
   Blockly.bindEvent_(this.svg_, 'mousedown', this, this.onMouseDown_);
   Blockly.bindEvent_(this.svg_, 'mousemove', this, this.onMouseMove_);
-  Blockly.bindEvent_(this.svg_, 'contextmenu', null, Blockly.EditorWorkspace.onContextMenu_);
+  Blockly.bindEvent_(this.svg_, 'contextmenu', null, Blockly.BlockSpaceEditor.onContextMenu_);
   Blockly.bindEvent_(this.svg_, 'mouseup', this, this.onMouseUp_);
   Blockly.bindEvent_(Blockly.WidgetDiv.DIV, 'contextmenu', null,
-    Blockly.EditorWorkspace.onContextMenu_);
+    Blockly.BlockSpaceEditor.onContextMenu_);
 
   if (!Blockly.documentEventsBound_) {
     // Only bind the window/document events once.
@@ -302,7 +302,7 @@ Blockly.EditorWorkspace.prototype.init_ = function() {
   this.workspace.addTrashcan();
 };
 
-Blockly.EditorWorkspace.prototype.detectBrokenControlPoints = function() {
+Blockly.BlockSpaceEditor.prototype.detectBrokenControlPoints = function() {
   if (goog.userAgent.WEBKIT) {
     /* HACK:
      WebKit bug 67298 causes control points to be included in the reported
@@ -339,7 +339,7 @@ Blockly.EditorWorkspace.prototype.detectBrokenControlPoints = function() {
  * Returns the dimensions of the current SVG image.
  * @return {!Object} Contains width, height, top and left properties.
  */
-Blockly.EditorWorkspace.prototype.svgSize = function() {
+Blockly.BlockSpaceEditor.prototype.svgSize = function() {
   return {width: this.svg_.cachedWidth_,
     height: this.svg_.cachedHeight_};
 };
@@ -348,7 +348,7 @@ Blockly.EditorWorkspace.prototype.svgSize = function() {
  * Size the SVG image to completely fill its container.  Record both
  * the height/width and the absolute position of the SVG image.
  */
-Blockly.EditorWorkspace.prototype.svgResize = function() {
+Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   var svg = this.svg_;
   var style = window.getComputedStyle(svg);
   var borderWidth = 0;
@@ -378,7 +378,7 @@ Blockly.EditorWorkspace.prototype.svgResize = function() {
 /**
  * @return {number} Return the width, in pixels, of the workspace.
  */
-Blockly.EditorWorkspace.prototype.getWorkspaceWidth = function() {
+Blockly.BlockSpaceEditor.prototype.getWorkspaceWidth = function() {
   var metrics = this.workspace.getMetrics();
   var width = metrics ? metrics.viewWidth : 0;
   return width;
@@ -388,7 +388,7 @@ Blockly.EditorWorkspace.prototype.getWorkspaceWidth = function() {
  * @return {number} Return the width, in pixels, of the main workspace's toolbox.
  * Note, this only includes the 'flyout' part, not the categories tree.
  */
-Blockly.EditorWorkspace.prototype.getToolboxWidth = function() {
+Blockly.BlockSpaceEditor.prototype.getToolboxWidth = function() {
   var flyout = this.flyout_ || this.toolbox.flyout_;
   var metrics = flyout.workspace_.getMetrics();
   var width = metrics ? metrics.viewWidth : 0;
@@ -400,8 +400,8 @@ Blockly.EditorWorkspace.prototype.getToolboxWidth = function() {
  * @param {!Event} e Mouse down event.
  * @private
  */
-Blockly.EditorWorkspace.prototype.onMouseDown_ = function(e) {
-  Blockly.EditorWorkspace.terminateDrag_(); // In case mouse-up event was lost.
+Blockly.BlockSpaceEditor.prototype.onMouseDown_ = function(e) {
+  Blockly.BlockSpaceEditor.terminateDrag_(); // In case mouse-up event was lost.
   this.hideChaff();
   var isTargetSvg = e.target && e.target.nodeName &&
     e.target.nodeName.toLowerCase() == 'svg';
@@ -436,7 +436,7 @@ Blockly.EditorWorkspace.prototype.onMouseDown_ = function(e) {
  * @param {!Event} e Mouse up event.
  * @private
  */
-Blockly.EditorWorkspace.prototype.onMouseUp_ = function(e) {
+Blockly.BlockSpaceEditor.prototype.onMouseUp_ = function(e) {
   this.setCursorHand_(false);
   this.workspace.dragMode = false;
 };
@@ -446,7 +446,7 @@ Blockly.EditorWorkspace.prototype.onMouseUp_ = function(e) {
  * @param {!Event} e Mouse move event.
  * @private
  */
-Blockly.EditorWorkspace.prototype.onMouseMove_ = function(e) {
+Blockly.BlockSpaceEditor.prototype.onMouseMove_ = function(e) {
   if (this.workspace.dragMode) {
     Blockly.removeAllRanges();
     var dx = e.clientX - this.startDragMouseX;
@@ -472,8 +472,8 @@ Blockly.EditorWorkspace.prototype.onMouseMove_ = function(e) {
  * @param {!Event} e Key down event.
  * @private
  */
-Blockly.EditorWorkspace.prototype.onKeyDown_ = function(e) {
-  if (Blockly.EditorWorkspace.isTargetInput_(e)) {
+Blockly.BlockSpaceEditor.prototype.onKeyDown_ = function(e) {
+  if (Blockly.BlockSpaceEditor.isTargetInput_(e)) {
     // When focused on an HTML text input widget, don't trap any keys.
     return;
   }
@@ -499,10 +499,10 @@ Blockly.EditorWorkspace.prototype.onKeyDown_ = function(e) {
       this.hideChaff();
       if (e.keyCode == 67) {
         // 'c' for copy.
-        Blockly.EditorWorkspace.copy_(Blockly.selected);
+        Blockly.BlockSpaceEditor.copy_(Blockly.selected);
       } else if (e.keyCode == 88) {
         // 'x' for cut.
-        Blockly.EditorWorkspace.copy_(Blockly.selected);
+        Blockly.BlockSpaceEditor.copy_(Blockly.selected);
         Blockly.selected.dispose(true, true);
       }
     }
@@ -519,7 +519,7 @@ Blockly.EditorWorkspace.prototype.onKeyDown_ = function(e) {
  * Stop binding to the global mouseup and mousemove events.
  * @private
  */
-Blockly.EditorWorkspace.terminateDrag_ = function() {
+Blockly.BlockSpaceEditor.terminateDrag_ = function() {
   Blockly.Block.terminateDrag_();
   Blockly.Flyout.terminateDrag_();
 };
@@ -529,7 +529,7 @@ Blockly.EditorWorkspace.terminateDrag_ = function() {
  * @param {!Blockly.Block} block Block to be copied.
  * @private
  */
-Blockly.EditorWorkspace.copy_ = function(block) {
+Blockly.BlockSpaceEditor.copy_ = function(block) {
   var xmlBlock = Blockly.Xml.blockToDom_(block);
   Blockly.Xml.deleteNext(xmlBlock);
   // Encode start position in XML.
@@ -544,7 +544,7 @@ Blockly.EditorWorkspace.copy_ = function(block) {
  * @param {!Event} e Mouse event
  * @private
  */
-Blockly.EditorWorkspace.showContextMenu_ = function(e) {
+Blockly.BlockSpaceEditor.showContextMenu_ = function(e) {
   if (Blockly.readOnly) {
     return;
   }
@@ -597,8 +597,8 @@ Blockly.EditorWorkspace.showContextMenu_ = function(e) {
  * @param {!Event} e Mouse down event.
  * @private
  */
-Blockly.EditorWorkspace.onContextMenu_ = function(e) {
-  if (!Blockly.EditorWorkspace.isTargetInput_(e)) {
+Blockly.BlockSpaceEditor.onContextMenu_ = function(e) {
+  if (!Blockly.BlockSpaceEditor.isTargetInput_(e)) {
     // When focused on an HTML text input widget, don't cancel the context menu.
     e.preventDefault();
   }
@@ -610,7 +610,7 @@ Blockly.EditorWorkspace.onContextMenu_ = function(e) {
  * @return {boolean} True if text input.
  * @private
  */
-Blockly.EditorWorkspace.isTargetInput_ = function(e) {
+Blockly.BlockSpaceEditor.isTargetInput_ = function(e) {
   return e.target.type == 'textarea' || e.target.type == 'text';
 };
 
@@ -619,7 +619,7 @@ Blockly.EditorWorkspace.isTargetInput_ = function(e) {
  * Close tooltips, context menus, dropdown selections, etc.
  * @param {boolean=} opt_allowToolbox If true, don't close the toolbox.
  */
-Blockly.EditorWorkspace.prototype.hideChaff = function(opt_allowToolbox) {
+Blockly.BlockSpaceEditor.prototype.hideChaff = function(opt_allowToolbox) {
   Blockly.Tooltip.hide();
   Blockly.WidgetDiv.hide();
   if (this.toolbox && !opt_allowToolbox &&
@@ -633,7 +633,7 @@ Blockly.EditorWorkspace.prototype.hideChaff = function(opt_allowToolbox) {
  * @param {boolean} closed True for closed hand.
  * @private
  */
-Blockly.EditorWorkspace.prototype.setCursorHand_ = function(closed) {
+Blockly.BlockSpaceEditor.prototype.setCursorHand_ = function(closed) {
   if (Blockly.readOnly) {
     return;
   }
@@ -668,7 +668,7 @@ Blockly.EditorWorkspace.prototype.setCursorHand_ = function(closed) {
  * @return {Object} Contains size and position metrics of main workspace.
  * @private
  */
-Blockly.EditorWorkspace.prototype.getWorkspaceMetrics_ = function() {
+Blockly.BlockSpaceEditor.prototype.getWorkspaceMetrics_ = function() {
   var svgSize = this.svgSize();
   var toolboxWidth = (this.toolbox ? this.toolbox.width : 0);
   svgSize.width -= toolboxWidth;
@@ -725,7 +725,7 @@ Blockly.EditorWorkspace.prototype.getWorkspaceMetrics_ = function() {
  *     between 0 and 1 specifying the degree of scrolling.
  * @private
  */
-Blockly.EditorWorkspace.prototype.setWorkspaceMetrics_ = function(xyRatio) {
+Blockly.BlockSpaceEditor.prototype.setWorkspaceMetrics_ = function(xyRatio) {
   if (!this.workspace.scrollbar) {
     throw 'Attempt to set editor this scroll without scrollbars.'; // TODO(bjordan): figure out
   }
@@ -750,7 +750,7 @@ Blockly.EditorWorkspace.prototype.setWorkspaceMetrics_ = function(xyRatio) {
  * disabled.
  * @private
  */
-Blockly.EditorWorkspace.prototype.setWorkspaceMetricsNoScroll_ = function() {
+Blockly.BlockSpaceEditor.prototype.setWorkspaceMetricsNoScroll_ = function() {
   var metrics = this.getWorkspaceMetrics_();
   if (metrics) {
     var translation = 'translate(' + (metrics.absoluteLeft) + ',' +
@@ -767,7 +767,7 @@ Blockly.EditorWorkspace.prototype.setWorkspaceMetricsNoScroll_ = function() {
  * @return {!Array.<!Array>} Opaque data that can be passed to
  *     removeChangeListener.
  */
-Blockly.EditorWorkspace.prototype.addChangeListener = function(func) {
+Blockly.BlockSpaceEditor.prototype.addChangeListener = function(func) {
   return Blockly.bindEvent_(this.workspace.getCanvas(),
     'blocklyWorkspaceChange', this, func);
 };

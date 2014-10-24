@@ -34,13 +34,13 @@ goog.require('Blockly.Xml');
 
 /**
  * Class for a workspace.
- * @param {EditorWorkspace} editorWorkspace parent EditorWorkspace for this workspace
+ * @param {BlockSpaceEditor} blockSpaceEditor parent BlockSpaceEditor for this workspace
  * @param {Function} getMetrics A function that returns size/scrolling metrics.
  * @param {Function} setMetrics A function that sets size/scrolling metrics.
  * @constructor
  */
-Blockly.Workspace = function(editorWorkspace, getMetrics, setMetrics) {
-  this.editorWorkspace = editorWorkspace;
+Blockly.Workspace = function(blockSpaceEditor, getMetrics, setMetrics) {
+  this.blockSpaceEditor = blockSpaceEditor;
   this.getMetrics = getMetrics;
   this.setMetrics = setMetrics;
 
@@ -245,7 +245,7 @@ Blockly.Workspace.prototype.getBlockCount = function() {
  * Dispose of all blocks in workspace.
  */
 Blockly.Workspace.prototype.clear = function() {
-  this.editorWorkspace.hideChaff();
+  this.blockSpaceEditor.hideChaff();
   while (this.topBlocks_.length) {
     this.topBlocks_[0].dispose();
   }

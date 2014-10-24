@@ -287,7 +287,7 @@ Blockly.topMostSVGParent = function(element) {
     element = goog.dom.getParentElement(element);
   }
 
-  return (topMostSVG || Blockly.mainEditorWorkspace.svg_);
+  return (topMostSVG || Blockly.mainBlockSpaceEditor.svg_);
 };
 
 /**

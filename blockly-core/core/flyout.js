@@ -33,13 +33,13 @@ goog.require('Blockly.Comment');
  * Class for a flyout.
  * @constructor
  */
-Blockly.Flyout = function(editorWorkspace) {
+Blockly.Flyout = function(blockSpaceEditor) {
   /**
    * @type {!Blockly.Workspace}
    * @private
    */
   var flyout = this;
-  this.workspace_ = new Blockly.Workspace(editorWorkspace,
+  this.workspace_ = new Blockly.Workspace(blockSpaceEditor,
       function() {return flyout.getMetrics_();},
       function(ratio) {return flyout.setMetrics_(ratio);});
   this.workspace_.isFlyout = true;
@@ -486,8 +486,8 @@ Blockly.Flyout.prototype.blockMouseDown_ = function(block) {
     if (!flyout.enabled_) {
       return;
     }
-    Blockly.EditorWorkspace.terminateDrag_();
-    flyout.workspace_.editorWorkspace.hideChaff();
+    Blockly.BlockSpaceEditor.terminateDrag_();
+    flyout.workspace_.blockSpaceEditor.hideChaff();
     if (Blockly.isRightButton(e)) {
       // Right-click.
       // Unlike google Blockly, we don't want to show a context menu
@@ -495,14 +495,14 @@ Blockly.Flyout.prototype.blockMouseDown_ = function(block) {
     } else {
       // Left-click (or middle click)
       Blockly.removeAllRanges();
-      flyout.workspace_.editorWorkspace.setCursorHand_(true);
+      flyout.workspace_.blockSpaceEditor.setCursorHand_(true);
       // Record the current mouse position.
       Blockly.Flyout.startDragMouseX_ = e.clientX;
       Blockly.Flyout.startDragMouseY_ = e.clientY;
       Blockly.Flyout.startBlock_ = block;
       Blockly.Flyout.startFlyout_ = flyout;
       Blockly.Flyout.onMouseUpWrapper_ = Blockly.bindEvent_(document,
-          'mouseup', this, Blockly.EditorWorkspace.terminateDrag_);
+          'mouseup', this, Blockly.BlockSpaceEditor.terminateDrag_);
       Blockly.Flyout.onMouseMoveWrapper_ = Blockly.bindEvent_(document,
           'mousemove', this, flyout.onMouseMove_);
     }
