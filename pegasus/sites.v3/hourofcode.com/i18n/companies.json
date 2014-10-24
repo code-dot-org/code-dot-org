@@ -1,0 +1,32 @@
+{
+  "4-H": {
+    "name": "4-H Youth Development"
+  },
+  "bgca": {
+    "name": "Boys and Girls Club of America"
+  },
+  "cgcs": {
+    "name": "Council of the Great City Schools"
+  },
+  "gsusa": {
+    "name": "Girl Scouts of America"
+  },
+  "bsusa": {
+    "name": "Boy Scouts of America"
+  },
+  "napcs": {
+    "name": "National Alliance of Public Charter Schools"
+  },
+  "tfa": {
+    "name": "Teachers for America"
+  },
+  "tntp": {
+    "name": "TNTP"
+  },
+  "asa": {
+    "name": "Afterschool Alliance"
+  },
+  "ngcp": {
+    "name": "National Girls Collaborative Project"
+  }
+}

@@ -113,7 +113,7 @@
   signup_thank_you_message: 'We sent you a confirmation email with information to help you get started.'
 
   map_header: '# Hour of Code events around the world'
-  map_header_company: '# Hour of Code events'
+  map_header_company: '# Hour of Code events organized by company'
 
   meta_tag_og_title: 'The Hour of Code is coming'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.'

@@ -7,6 +7,11 @@ def hoc_load_countries()
 end
 HOC_COUNTRIES = hoc_load_countries()
 
+def hoc_load_companies()
+  JSON.parse(IO.read(hoc_dir('i18n/companies.json')))
+end
+HOC_COMPANIES = hoc_load_companies()
+
 def hoc_load_i18n()
   i18n = {}
   Dir.glob(hoc_dir('i18n/*.yml')).each do |string_file|
@@ -48,6 +53,10 @@ def hoc_canonicalized_i18n_path(uri)
   end
 
   path = uri if resolve_document(uri)
+
+  if HOC_COMPANIES[path]
+    @company = path
+  end
 
   return "/#{path.to_s}"
 end
