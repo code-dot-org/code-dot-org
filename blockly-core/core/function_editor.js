@@ -20,7 +20,7 @@ Blockly.FunctionEditor = function() {
   var blocklyTopLeftDiv = document.getElementById('blocklyApp');
   this.functionEditorDiv_ = goog.dom.createDom("div", "newFunctionDiv");
   blocklyTopLeftDiv.appendChild(this.functionEditorDiv_);
-  this.workspace_ = new Blockly.EditorWorkspace(this.functionEditorDiv_);
+  this.workspace_ = new Blockly.BlockSpaceEditor(this.functionEditorDiv_);
 
   this.workspace_.addTopBlock = function (block) {
     Blockly.mainWorkspace.addTopBlock(block);

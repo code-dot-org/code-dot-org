@@ -240,9 +240,9 @@ Blockly.mainWorkspace = null;
 
 /**
  * The main editor workspace (defined by inject.js).
- * @type {Blockly.EditorWorkspace}
+ * @type {Blockly.BlockSpaceEditor}
  */
-Blockly.mainEditorWorkspace = null;
+Blockly.mainBlockSpaceEditor = null;
 
 /**
  * Contents of the local clipboard.

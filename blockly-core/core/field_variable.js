@@ -128,7 +128,7 @@ Blockly.FieldVariable.dropdownCreate = function() {
  */
 Blockly.FieldVariable.prototype.dropdownChange = function(text) {
   function promptName(promptText, defaultText) {
-    this.sourceBlock_.workspace.editorWorkspace.hideChaff();
+    this.sourceBlock_.workspace.blockSpaceEditor.hideChaff();
     var newVar = window.prompt(promptText, defaultText);
     // Merge runs of whitespace.  Strip leading and trailing whitespace.
     // Beyond this, all names are legal.

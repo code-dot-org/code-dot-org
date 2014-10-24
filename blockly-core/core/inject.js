@@ -26,7 +26,7 @@
 goog.provide('Blockly.inject');
 
 goog.require('Blockly.Css');
-goog.require('Blockly.EditorWorkspace');
+goog.require('Blockly.BlockSpaceEditor');
 goog.require('goog.dom');
 
 
@@ -55,13 +55,13 @@ Blockly.inject = function(container, opt_options) {
   Blockly.initUISounds_();
 
   /**
-   * @type {Blockly.EditorWorkspace}
+   * @type {Blockly.BlockSpaceEditor}
    */
-  Blockly.mainEditorWorkspace = new Blockly.EditorWorkspace(container);
+  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
   /**
    * @type {Blockly.Workspace}
    */
-  Blockly.mainWorkspace = Blockly.mainEditorWorkspace.workspace;
+  Blockly.mainWorkspace = Blockly.mainBlockSpaceEditor.workspace;
 };
 
 /**

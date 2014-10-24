@@ -246,7 +246,7 @@ Blockly.ScrollbarNative = function(workspace, horizontal, opt_pair) {
   this.onScrollWrapper_ = Blockly.bindEvent_(this.outerDiv_, 'scroll',
       scrollbar, function() {scrollbar.onScroll_();});
   Blockly.bindEvent_(this.foreignObject_, 'mousedown', this,
-      function(e) {this.workspace_.editorWorkspace.hideChaff(true); Blockly.noEvent(e);});
+      function(e) {this.workspace_.blockSpaceEditor.hideChaff(true); Blockly.noEvent(e);});
 };
 
 /**
@@ -710,7 +710,7 @@ Blockly.ScrollbarSvg.prototype.setVisible = function(visible) {
  * @private
  */
 Blockly.ScrollbarSvg.prototype.onMouseDownBar_ = function(e) {
-  this.workspace_.editorWorkspace.hideChaff(true);
+  this.workspace_.blockSpaceEditor.hideChaff(true);
   if (Blockly.isRightButton(e)) {
     // Right-click.
     // Scrollbars have no context menu.
@@ -748,7 +748,7 @@ Blockly.ScrollbarSvg.prototype.onMouseDownBar_ = function(e) {
  * @private
  */
 Blockly.ScrollbarSvg.prototype.onMouseDownKnob_ = function(e) {
-  this.workspace_.editorWorkspace.hideChaff(true);
+  this.workspace_.blockSpaceEditor.hideChaff(true);
   this.onMouseUpKnob_();
   if (Blockly.isRightButton(e)) {
     // Right-click.
