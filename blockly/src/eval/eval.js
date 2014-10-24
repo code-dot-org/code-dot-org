@@ -200,10 +200,8 @@ Eval.execute = function() {
   }
 
   var result = evaluateAnswer();
-  if (result) {
-    Eval.message = "Good jorb!"
-  }
-
+  Eval.message = result ?  "Good jorb!" : '';
+  
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 

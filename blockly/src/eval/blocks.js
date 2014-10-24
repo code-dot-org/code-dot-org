@@ -29,6 +29,14 @@ var EvalString = require('./evalString');
 
 var functionalBlocks = require('./functionalBlocks');
 
+var colors = {
+  number: { hue: 184, saturation: 1.00, value: 0.74 },
+  string: { hue: 258, saturation: 0.35, value: 0.62 },
+  image: { hue: 39, saturation: 1.00, value: 0.99},
+  boolean: {}
+}
+
+
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
@@ -47,6 +55,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   installString(blockly, generator, gensym);
   installCircle(blockly, generator, gensym);
+  installPlaceImage(blockly, generator, gensym);
 };
 
 function installString(blockly, generator, gensym) {
@@ -87,11 +96,11 @@ function installCircle(blockly, generator, gensym) {
           .setAlign(Blockly.ALIGN_CENTRE);
 
       this.appendFunctionalInput('COLOR')
-          .setColour({ hue: 258, saturation: 0.35, value: 0.62 })
+          .setColour(colors.string)
           .setCheck('string');
       this.appendFunctionalInput('SIZE')
           .setInline(true)
-          .setColour({ hue: 184, saturation: 1.00, value: 0.74 })
+          .setColour(colors.number)
           .setCheck('Number');
 
       this.setFunctionalOutput(true, 'image');
@@ -101,6 +110,48 @@ function installCircle(blockly, generator, gensym) {
   generator.functional_circle = function() {
     var color = Blockly.JavaScript.statementToCode(this, 'COLOR', false) || 'black';
     var size = Blockly.JavaScript.statementToCode(this, 'SIZE', false) || '0';
-    return "Eval.circle(" + color + ", " + size + ");";
+    return "Eval.circle(" + color + ", " + size + ")";
+  };
+}
+
+function installPlaceImage(blockly, generator, gensym) {
+  blockly.Blocks.place_image = {
+    init: function () {
+      this.setHSV(39, 1.00, 0.99);
+      this.setFunctional(true, {
+        headerHeight: 30,
+      });
+
+      var options = {
+        fixedSize: { height: 35 }
+      };
+
+      this.appendDummyInput()
+          .appendTitle(new Blockly.FieldLabel('place-image', options))
+          .setAlign(Blockly.ALIGN_CENTRE);
+
+      // todo (brent) - more strictly link colour and check so that we can't accidentally
+      // have them mismatched?
+      this.appendFunctionalInput('IMAGE')
+          .setColour(colors.image)
+          .setCheck('image');
+      this.appendFunctionalInput('X')
+          .setInline(true)
+          .setColour(colors.number)
+          .setCheck('Number');
+      this.appendFunctionalInput('Y')
+          .setInline(true)
+          .setColour(colors.number)
+          .setCheck('Number');
+
+      this.setFunctionalOutput(true, 'image');
+    }
+  };
+
+  generator.place_image = function() {
+    var image = Blockly.JavaScript.statementToCode(this, 'IMAGE', false);
+    var x = Blockly.JavaScript.statementToCode(this, 'X', false) || '0';
+    var y = Blockly.JavaScript.statementToCode(this, 'Y', false) || '0';
+    return "Eval.placeImage(" + image + ", " + x + ", " + y + ");";
   };
 }
