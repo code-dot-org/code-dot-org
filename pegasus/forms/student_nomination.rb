@@ -19,6 +19,7 @@ class StudentNomination
     [
       'student_nomination_notice',
       'student_nomination_notice_2',
+      'student_nomination_notice_3',
     ]
   end
 
