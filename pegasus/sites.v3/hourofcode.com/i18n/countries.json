@@ -86,5 +86,45 @@
   "vn": {
     "full_date": "December 8-14, 2014",
     "default_language": "vi"
+  },
+  "4-H": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
+  },
+  "bgca": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
+  },
+  "cgcs": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
+  },
+  "gsusa": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
+  },
+  "bsusa": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
+  },
+  "napcs": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
+  },
+  "tfa": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
+  },
+  "tntp": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
+  },
+  "asa": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
+  },
+  "ngcp": {
+    "full_date": "December 8-14, 2014",
+    "default_language": "en"
   }
 }
