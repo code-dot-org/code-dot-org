@@ -27,7 +27,7 @@ var Colours = require('./core').Colours;
 var msg = require('../../locale/current/calc');
 var commonMsg = require('../../locale/current/common');
 
-var functionalBlocks = require('../functionalBlocks');
+var functionalBlocks = require('./functionalBlocks');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
