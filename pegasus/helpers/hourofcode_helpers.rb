@@ -49,6 +49,8 @@ def hoc_canonicalized_i18n_path(uri)
 
   path = uri if resolve_document(uri)
 
+  @company = path
+
   return "/#{path.to_s}"
 end
 
