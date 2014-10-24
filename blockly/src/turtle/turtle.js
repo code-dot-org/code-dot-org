@@ -636,7 +636,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
   Turtle.jumpForward_(distance);
   Turtle.ctxScratch.save(); 
   Turtle.ctxScratch.translate(startX, startY); 
-  Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading-90) / 180); // increment the angle and rotate the image. 
+  Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image. 
                                                                  // Need to subtract 90 to accomodate difference in canvas 
                                                                  // vs. Turtle direction
   Turtle.ctxScratch.drawImage(img,
