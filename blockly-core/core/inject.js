@@ -54,7 +54,14 @@ Blockly.inject = function(container, opt_options) {
   // Load sounds
   Blockly.initUISounds_();
 
-  Blockly.mainWorkspace = new Blockly.EditorWorkspace(container);
+  /**
+   * @type {Blockly.EditorWorkspace}
+   */
+  Blockly.mainEditorWorkspace = new Blockly.EditorWorkspace(container);
+  /**
+   * @type {Blockly.Workspace}
+   */
+  Blockly.mainWorkspace = Blockly.mainEditorWorkspace.workspace;
 };
 
 /**

@@ -32,10 +32,16 @@ goog.require('Blockly.Workspace');
  * @constructor
  */
 Blockly.EditorWorkspace = function(container) {
+  var self = this;
+  /**
+   * @type {Blockly.Workspace}
+   */
+  this.workspace = new Blockly.Workspace(this,
+    function(){ return self.getWorkspaceMetrics_(); },
+    function(xyRatio) { return self.setWorkspaceMetrics_(xyRatio); });
   this.createDom_(container);
   this.init_();
 };
-goog.inherits(Blockly.EditorWorkspace, Blockly.Workspace);
 
 /**
  * Create the SVG image.
@@ -148,10 +154,9 @@ Blockly.EditorWorkspace.prototype.createDom_ = function(container) {
     {'width': 10, 'height': 10, 'fill': '#aaa'}, pattern);
   Blockly.createSvgElement('path',
     {'d': 'M 0 0 L 10 10 M 10 0 L 0 10', 'stroke': '#cc0'}, pattern);
-  Blockly.EditorWorkspace.superClass_.constructor.call(this, this, this.getWorkspaceMetrics_, this.setWorkspaceMetrics_);
-  this.maxBlocks = Blockly.maxBlocks;
+  this.workspace.maxBlocks = Blockly.maxBlocks;
 
-  svg.appendChild(this.createDom());
+  svg.appendChild(this.workspace.createDom());
 
   if (!Blockly.readOnly) {
     // Determine if there needs to be a category tree, or a simple list of
@@ -166,13 +171,13 @@ Blockly.EditorWorkspace.prototype.createDom_ = function(container) {
       this.flyout_ = new Blockly.Flyout(this);
       var flyout = this.flyout_;
       var flyoutSvg = flyout.createDom();
-      flyout.init(this, true);
+      flyout.init(this.workspace, true);
       flyout.autoClose = false;
       // Insert the flyout behind the workspace so that blocks appear on top.
-      goog.dom.insertSiblingBefore(flyoutSvg, this.svgGroup_);
+      goog.dom.insertSiblingBefore(flyoutSvg, this.workspace.svgGroup_);
       var workspaceChanged = function() {
         if (!Blockly.Block.isDragging()) {
-          var metrics = this.getMetrics();
+          var metrics = this.workspace.getMetrics();
           if (metrics.contentTop < 0 ||
             metrics.contentTop + metrics.contentHeight >
             metrics.viewHeight + metrics.viewTop ||
@@ -181,7 +186,7 @@ Blockly.EditorWorkspace.prototype.createDom_ = function(container) {
             metrics.viewWidth + (Blockly.RTL ? 2 : 1) * metrics.viewLeft) {
             // One or more blocks is out of bounds.  Bump them back in.
             var MARGIN = 25;
-            var blocks = this.getTopBlocks(false);
+            var blocks = this.workspace.getTopBlocks(false);
             for (var b = 0, block; block = blocks[b]; b++) {
               var blockXY = block.getRelativeToSurfaceXY();
               var blockHW = block.getHeightWidth();
@@ -275,26 +280,26 @@ Blockly.EditorWorkspace.prototype.init_ = function() {
 
   if (Blockly.languageTree) {
     if (Blockly.hasCategories) {
-      this.toolbox.init(this, this);
+      this.toolbox.init(this.workspace, this);
     } else {
       // Build a fixed flyout with the root blocks.
-      this.flyout_.init(this, true);
+      this.flyout_.init(this.workspace, true);
       this.flyout_.show(Blockly.languageTree.childNodes);
       // Translate the workspace sideways to avoid the fixed flyout.
-      this.pageXOffset = this.flyout_.width_;
-      var translation = 'translate(' + this.pageXOffset + ', 0)';
-      this.getCanvas().setAttribute('transform', translation);
-      this.getBubbleCanvas().setAttribute('transform',
+      this.workspace.pageXOffset = this.flyout_.width_;
+      var translation = 'translate(' + this.workspace.pageXOffset + ', 0)';
+      this.workspace.getCanvas().setAttribute('transform', translation);
+      this.workspace.getBubbleCanvas().setAttribute('transform',
         translation);
     }
   }
   if (Blockly.hasScrollbars) {
-    this.scrollbar = new Blockly.ScrollbarPair(
-      this);
-    this.scrollbar.resize();
+    this.workspace.scrollbar = new Blockly.ScrollbarPair(
+      this.workspace);
+    this.workspace.scrollbar.resize();
   }
 
-  this.addTrashcan();
+  this.workspace.addTrashcan();
 };
 
 Blockly.EditorWorkspace.prototype.detectBrokenControlPoints = function() {
@@ -363,8 +368,8 @@ Blockly.EditorWorkspace.prototype.svgResize = function() {
     svg.cachedHeight_ = height;
   }
   // Update the scrollbars (if they exist).
-  if (this.scrollbar) {
-    this.scrollbar.resize();
+  if (this.workspace.scrollbar) {
+    this.workspace.scrollbar.resize();
   } else if (Blockly.hasCategories) {
     this.setWorkspaceMetricsNoScroll_();
   }
@@ -374,7 +379,7 @@ Blockly.EditorWorkspace.prototype.svgResize = function() {
  * @return {number} Return the width, in pixels, of the workspace.
  */
 Blockly.EditorWorkspace.prototype.getWorkspaceWidth = function() {
-  var metrics = this.getMetrics();
+  var metrics = this.workspace.getMetrics();
   var width = metrics ? metrics.viewWidth : 0;
   return width;
 };
@@ -409,17 +414,17 @@ Blockly.EditorWorkspace.prototype.onMouseDown_ = function(e) {
     // Unlike google Blockly, we don't want to show a context menu
     // Blockly.showContextMenu_(e);
   } else if ((Blockly.readOnly || isTargetSvg) &&
-    this.scrollbar) {
+    this.workspace.scrollbar) {
     // If the workspace is editable, only allow dragging when gripping empty
     // space.  Otherwise, allow dragging when gripping anywhere.
-    this.dragMode = true;
+    this.workspace.dragMode = true;
     // Record the current mouse position.
     this.startDragMouseX = e.clientX;
     this.startDragMouseY = e.clientY;
     this.startDragMetrics =
-      this.getMetrics();
-    this.startScrollX = this.pageXOffset;
-    this.startScrollY = this.pageYOffset;
+      this.workspace.getMetrics();
+    this.startScrollX = this.workspace.pageXOffset;
+    this.startScrollY = this.workspace.pageYOffset;
 
     // Stop the browser from scrolling/zooming the page
     e.preventDefault();
@@ -433,7 +438,7 @@ Blockly.EditorWorkspace.prototype.onMouseDown_ = function(e) {
  */
 Blockly.EditorWorkspace.prototype.onMouseUp_ = function(e) {
   this.setCursorHand_(false);
-  this.dragMode = false;
+  this.workspace.dragMode = false;
 };
 
 /**
@@ -442,7 +447,7 @@ Blockly.EditorWorkspace.prototype.onMouseUp_ = function(e) {
  * @private
  */
 Blockly.EditorWorkspace.prototype.onMouseMove_ = function(e) {
-  if (this.dragMode) {
+  if (this.workspace.dragMode) {
     Blockly.removeAllRanges();
     var dx = e.clientX - this.startDragMouseX;
     var dy = e.clientY - this.startDragMouseY;
@@ -457,7 +462,7 @@ Blockly.EditorWorkspace.prototype.onMouseMove_ = function(e) {
       metrics.contentHeight);
 
     // Move the scrollbars and the page will scroll automatically.
-    this.scrollbar.set(-x - metrics.contentLeft,
+    this.workspace.scrollbar.set(-x - metrics.contentLeft,
         -y - metrics.contentTop);
   }
 };
@@ -504,7 +509,7 @@ Blockly.EditorWorkspace.prototype.onKeyDown_ = function(e) {
     if (e.keyCode == 86) {
       // 'v' for paste.
       if (Blockly.clipboard_) {
-        this.paste(Blockly.clipboard_);
+        this.workspace.paste(Blockly.clipboard_);
       }
     }
   }
@@ -671,22 +676,22 @@ Blockly.EditorWorkspace.prototype.getWorkspaceMetrics_ = function() {
   var viewHeight = svgSize.height - Blockly.Scrollbar.scrollbarThickness;
   try {
     if (Blockly.isMsie() || Blockly.isTrident()) {
-      this.getCanvas().style.display = "inline";   /* reqd for IE */
+      this.workspace.getCanvas().style.display = "inline";   /* reqd for IE */
       var blockBox = {
-        x: this.getCanvas().getBBox().x,
-        y: this.getCanvas().getBBox().y,
-        width: this.getCanvas().scrollWidth,
-        height: this.getCanvas().scrollHeight
+        x: this.workspace.getCanvas().getBBox().x,
+        y: this.workspace.getCanvas().getBBox().y,
+        width: this.workspace.getCanvas().scrollWidth,
+        height: this.workspace.getCanvas().scrollHeight
       };
     }
     else {
-      var blockBox = this.getCanvas().getBBox();
+      var blockBox = this.workspace.getCanvas().getBBox();
     }
   } catch (e) {
     // Firefox has trouble with hidden elements (Bug 528969).
     return null;
   }
-  if (this.scrollbar) {
+  if (this.workspace.scrollbar) {
     // add some buffer space to the right/below existing contents
     var leftEdge = 0;
     var rightEdge = Math.max(blockBox.x + blockBox.width + viewWidth, viewWidth * 1.5);
@@ -705,8 +710,8 @@ Blockly.EditorWorkspace.prototype.getWorkspaceMetrics_ = function() {
     viewWidth: svgSize.width,
     contentHeight: bottomEdge - topEdge,
     contentWidth: rightEdge - leftEdge,
-    viewTop: -this.pageYOffset,
-    viewLeft: -this.pageXOffset,
+    viewTop: -this.workspace.pageYOffset,
+    viewLeft: -this.workspace.pageXOffset,
     contentTop: topEdge,
     contentLeft: leftEdge,
     absoluteTop: 0,
@@ -721,23 +726,23 @@ Blockly.EditorWorkspace.prototype.getWorkspaceMetrics_ = function() {
  * @private
  */
 Blockly.EditorWorkspace.prototype.setWorkspaceMetrics_ = function(xyRatio) {
-  if (!this.scrollbar) {
+  if (!this.workspace.scrollbar) {
     throw 'Attempt to set editor this scroll without scrollbars.'; // TODO(bjordan): figure out
   }
   var metrics = this.getWorkspaceMetrics_();
   if (goog.isNumber(xyRatio.x)) {
-    this.pageXOffset = -metrics.contentWidth * xyRatio.x -
+    this.workspace.pageXOffset = -metrics.contentWidth * xyRatio.x -
       metrics.contentLeft;
   }
   if (goog.isNumber(xyRatio.y)) {
-    this.pageYOffset = -metrics.contentHeight * xyRatio.y -
+    this.workspace.pageYOffset = -metrics.contentHeight * xyRatio.y -
       metrics.contentTop;
   }
   var translation = 'translate(' +
-    (this.pageXOffset + metrics.absoluteLeft) + ',' +
-    (this.pageYOffset + metrics.absoluteTop) + ')';
-  this.getCanvas().setAttribute('transform', translation);
-  this.getBubbleCanvas().setAttribute('transform', translation);
+    (this.workspace.pageXOffset + metrics.absoluteLeft) + ',' +
+    (this.workspace.pageYOffset + metrics.absoluteTop) + ')';
+  this.workspace.getCanvas().setAttribute('transform', translation);
+  this.workspace.getBubbleCanvas().setAttribute('transform', translation);
 };
 
 /**
@@ -750,8 +755,8 @@ Blockly.EditorWorkspace.prototype.setWorkspaceMetricsNoScroll_ = function() {
   if (metrics) {
     var translation = 'translate(' + (metrics.absoluteLeft) + ',' +
       (metrics.absoluteTop) + ')';
-    this.getCanvas().setAttribute('transform', translation);
-    this.getBubbleCanvas().setAttribute('transform',
+    this.workspace.getCanvas().setAttribute('transform', translation);
+    this.workspace.getBubbleCanvas().setAttribute('transform',
       translation);
   }
 };
@@ -763,7 +768,7 @@ Blockly.EditorWorkspace.prototype.setWorkspaceMetricsNoScroll_ = function() {
  *     removeChangeListener.
  */
 Blockly.EditorWorkspace.prototype.addChangeListener = function(func) {
-  return Blockly.bindEvent_(this.getCanvas(),
+  return Blockly.bindEvent_(this.workspace.getCanvas(),
     'blocklyWorkspaceChange', this, func);
 };
 

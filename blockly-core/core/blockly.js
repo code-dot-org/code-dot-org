@@ -239,6 +239,12 @@ Blockly.COLLAPSE_CHARS = 30;
 Blockly.mainWorkspace = null;
 
 /**
+ * The main editor workspace (defined by inject.js).
+ * @type {Blockly.EditorWorkspace}
+ */
+Blockly.mainEditorWorkspace = null;
+
+/**
  * Contents of the local clipboard.
  * @type {Element}
  * @private
