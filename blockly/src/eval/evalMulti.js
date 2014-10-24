@@ -1,17 +1,9 @@
 var EvalObject = require('./evalObject');
-
-// todo - stick in a utils file?
-function ensureType(val, type) {
-  if (!(val instanceof type)) {
-    // todo - better strategy than throwing?
-    throw new Error("unexpected object");
-  }
-}
-
+var evalUtils = require('./evalUtils');
 
 var EvalMulti = function (image1, image2) {
-  ensureType(image1, EvalObject);
-  ensureType(image2, EvalObject);
+  evalUtils.ensureType(image1, EvalObject);
+  evalUtils.ensureType(image2, EvalObject);
 
   EvalObject.apply(this);
 
