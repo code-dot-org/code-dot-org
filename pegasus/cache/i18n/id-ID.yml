@@ -40,10 +40,10 @@
   view_english_site: Lihat situs dalam bahasa Inggris
   non_english_tutorials: 'Tutorial yang diterjemahkan ke dalam beberapa bahasa:'
   write_your_first_program: Tulis program komputer pertama anda
-  learn_cs_concepts: Pelajari konsep-konsep dasar dari ilmu Komputer dengan pemrograman
-    tarik dan jatuhkan. Ini adalah permainan pengajaran dengan menampilkan video pembelajaran
-    oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs. Zombie. Pelajari
-    perulangan 'loop', pernyataan 'if-then', dan dasar algoritma.
+  learn_cs_concepts: Mempelajari konsep-konsep dasar ilmu komputer dengan pemrograman
+    "ambil dan letakkan" (drag dan drop). Ini adalah tutorial permainan-seperti yang
+    dibintangi kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants
+    vs Zombies. Pelajari ulangi (repeat-loop), pernyataan jika-maka, dan dasar algoritma.
   all_ages: Segala usia
   beginner: Pemula
   n_participants: "# peserta"
@@ -59,7 +59,7 @@
     terus berjalan dengan kami <a href='http://learn.code.org'> kursus 20 jam</a>,
     atau melihat lebih banyak pilihan untuk <a href='/learn/beyond'> belajar melampaui
     satu jam</a>.
-  thanks_for_submitting: Terima kasih untuk masukkan!
+  thanks_for_submitting: Terima kasih untuk kiriman!
   if_you_enjoyed: Jika Anda suka mengikuti pelajaran ini, ajaklah teman-temanmu untuk
     mencoba juga!  Kami ingin seluruh dunia untuk ikut belajar.
   personalize_certificate: Personalisasi sertifikat Anda
@@ -85,7 +85,7 @@
   get_started: Mulai
   i_agree: Saya setuju
   participant_select: "-Pilih-"
-  participant_student: Siswa
+  participant_student: siswa
   participant_parent: Orang tua
   participant_educator: Guru
   participant_engineer: Programmer
@@ -124,7 +124,7 @@
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: Our three new courses for K&#8209;5
-  studiobar_hoc_title: Jam Kode
+  studiobar_hoc_title: Jam kode
   studiobar_hoc_body: Learn to code with Angry Birds
   studiobar_flappy_title: Kode Flappy
   studiobar_flappy_body: Make and share your own Flappy game
@@ -262,12 +262,12 @@
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Nama
-  dashboard_students_age: Usia
+  dashboard_students_age: Umur
   dashboard_students_gender: Jenis kelamin
   dashboard_students_male: Laki-laki
   dashboard_students_female: Wanita
   dashboard_students_secret: Secret
-  dashboard_students_password: Kata sandi
+  dashboard_students_password: kata sandi
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -315,8 +315,21 @@
   dashboard_grade_other: Lain
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_none: email
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: siswa
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

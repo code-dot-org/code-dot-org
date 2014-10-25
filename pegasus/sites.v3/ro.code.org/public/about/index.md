@@ -2,11 +2,11 @@
 title: Despre Hour of Code România 
 nav: about_nav
 social:
-  'og:title' : "Hour of Code România se apropie"
-  'og:description' : "Pentru fiecare elev și clasă din România: Află cât de distractiv este sa înveți programare în doar o oră, 8-14 Decembrie."
-  'og:image' : ""
-  'og:image:width' : ""
-  'og:image:height' : ""
+  'og:title' : ‘Hour of Code România se apropie'
+  'og:description' : "Hour of Code este o mişcare globală care ajunge la zeci de milioane de elevi si studenţi din peste 180 de ţări şi peste 30 de limbi vorbite. Vârstele de la 4 la 104 ani."
+  'og:image' : "http://ro.code.org/images/ogimage.png"
+  'og:image:width' : "1200"
+  'og:image:height' : "626"
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
@@ -21,7 +21,7 @@ Code.org este o organizație non-profit dedicată extinderii educației cu privi
 
 Cu Hour of Code România, Code.org iși propune să ajute la demistificarea conceptului că programarea sau tehnologia computerelor este dificilă și oferă părinților, profesorilor și elevilor din întreaga țară, posibilitatea să participe la o introducere distractivă în tainele programării. Sperăm că acest demers va ajuta la creșterea conștientizării și încrederii în schimbările pozitive care le poate produce însușirea unor noțiuni de tehnologia computerelor. 
 
-Începând cu acest an, în România echipa Hour of Code este condusă de <a href="http://www.linkedin.com/in/alinchiriac">Alin Chiriac</a>, fondatorul asociației <a href="http://www.adfaber.org">ADFABER - Tehnlology for Social Change.</a> 
+Începând cu acest an, în România echipa Hour of Code este condusă de <a href="http://www.linkedin.com/in/alinchiriac">Alin Chiriac</a>, fondatorul asociației <a href="http://www.adfaber.org">ADFABER - Technlology for Social Change.</a> 
 
 
 

@@ -20,16 +20,16 @@
     8 - 14, 2014<br/>
   hoc2014_students: Alumnos
   hoc2014_try: Pruébalo
-  hoc2014_teachers: Profesores
-  hoc2014_host: Hostealo
-  hoc2014_everyone: Cualquiera
+  hoc2014_teachers: Maestros
+  hoc2014_host: Organízalo
+  hoc2014_everyone: Todos
   hoc2014_support: Apoyalo
-  hoc2014_whatishoc: "¿Cual es la Hora de Programación?"
+  hoc2014_whatishoc: Qué es la Hora de Programación?
   twentyhours_trynow: Probar ahora
-  california_heading: Pídele a tu escuela que enseñe ciencia en computación
+  california_heading: Pídele a tu escuela que enseñe ciencias de la computación
   california_text: Cualquier maestro puede ofrecer nuestros <a href='http://studio.code.org/'>cursos
     gratuitos</a>.  Cualquier primaria puede <a href='http://code.org/educate/k5'>enseñar
-    la ciencia de la computadora</a>. Pide a preparatorias que <a href='http://code.org/educate/districts'>
+    la ciencias de la computación</a>. Pide a escuelas secundarias que <a href='http://code.org/educate/districts'>
     se asocien con nosotros.
   california_button: Aprenda más
   flappy_heading: Flappy Bird en el cumpleaños de Code.org
@@ -39,10 +39,10 @@
   view_english_site: Ver sitio en inglés
   non_english_tutorials: 'Tutoriales traducidos a múltiples idiomas:'
   write_your_first_program: Codifica tu primer programa de computación
-  learn_cs_concepts: Aprende los principios básicos de la informática con programación
-    de arrastrar y soltar. Este es un tutorial en forma de juego con vídeos de Bill
-    Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprende los bucles,
-    las sentencias si-sino y algoritmos básicos.
+  learn_cs_concepts: Aprende los conceptos básicos de las Ciencias de la Computación
+    con programación de arrastrar y soltar. Este es un juego-tutorial con videos de
+    Bill Gates, Mark Zuckerberg, Angry Birds y Plants vs. Zombies. Aprende bucles,
+    sentencias condicionales, y conceptos básicos de algorítmica.
   all_ages: Todas las edades
   beginner: Principiante
   n_participants: "# de participantes"
@@ -52,25 +52,24 @@
   congratulations_on_completing_hoc: Felicidades, has completado 1 Hora de Código.
   get_a_certificate_of_achievement: Recibe un certificado de tu logro
   enter_valid_email: Por favor ingresa un correo electrónico válido
-  get_a_certificate_message: Te enviaremos un certificado e información acerca de
-    cómo <a href='/learn/beyond'>Aprender más allá de una hora</a>
-  get_a_certificate_message_after: Haga clic en el certificado para descargarlo o
-    imprimirlo. Ahora, continúe con nuestros <a href='http://studio.code.org'>otros
-    cursos</a>, o vea más opciones en <a href='/learn/beyond'>Aprender más allá de
-    Una Hora</a>.
-  thanks_for_submitting: "¡Gracias por su envío!"
-  if_you_enjoyed: Si disfrutaste aprendiendo, ¡pídele a tus amigos que lo prueben
-    tambien! Queremos que todo el mundo aprenda.
+  get_a_certificate_message: Te enviaremos un certificado e información sobre cómo
+    hacer para que <a href='/learn/beyond'> Aprenda más allá de una hora</a>
+  get_a_certificate_message_after: Haz clic en el certificado para descargarlo o imprimirlo.
+    Ahora, continúa con nuestros <a href='http://studio.code.org'>otros cursos</a>,
+    o ve más opciones en <a href='/learn/beyond'>Aprender más allá de Una Hora</a>.
+  thanks_for_submitting: "¡Gracias por enviar!"
+  if_you_enjoyed: Si te ha gustado aprender, invita amigos para que lo intenten también!  Queremos
+    que todo el mundo pueda aprender.
   personalize_certificate: Personaliza tu certificado
   share_achievement: Comparte tu logro
-  beyond_hour_message: Continúe con nuestros <a href='http://studio.code.org'>otros
-    cursos</a>, o vea más opciones en <a href='/learn/beyond'>Aprender más allá de
+  beyond_hour_message: Continúa con nuestros <a href='http://studio.code.org'>otros
+    cursos</a>, o vé más opciones en <a href='/learn/beyond'>Aprender más allá de
     Una Hora</a>.
   leaderboards_for_hoc: Líderes de Una Hora de Código.
   support_url: http://support.code.org/
   country: País
   city: Ciudad
-  gender: Género
+  gender: Sexo
   boys: Niños
   girls: Niñas
   give_my_hour: 'Dar mi hora a:'
@@ -84,7 +83,7 @@
   get_started: Inicio
   i_agree: De acuerdo
   participant_select: "-Seleccionar-"
-  participant_student: Estudiante
+  participant_student: estudiante
   participant_parent: Padre/madre
   participant_educator: Educador
   participant_engineer: Ingeniero de software
@@ -92,12 +91,12 @@
   i_am_a: Soy un
   never_spam: Nunca te enviaremos spam
   enter_country: Introduzca el país si reside fuera de los Estados Unidos
-  used_infrequent_updates: Solo se utiliza para las actualizaciones frecuentes
-  privacy_practices_children: Vea nuestras políticas de privacidad para niños
+  used_infrequent_updates: Sólo se utiliza para actualizaciones poco frecuentes
+  privacy_practices_children: Vé nuestras políticas de privacidad para niños
   petition_thankyou: Gracias por firmar la petición
   carousel_heading_international: Tutoriales en tu idioma
   continue_learning_header: Sigue aprendiendo más allá de una hora
-  continue_learning_body: Hay muchas opciones. Puedes aprender online, en una escuela
+  continue_learning_body: Hay muchas opciones. Puedes aprender en línea, en una escuela
     local o en un campamento de verano.
   learn_next_level: Continuar al siguiente nivel
   learn_online: Pruebe otros cursos en línea
@@ -111,29 +110,30 @@
   boy: Masculino
   help_recruit_coders: Ayudanos a recrutar más desarrolladores para tu equipo!
   help_recruit: Ayudanos a recrutar más desarrolladores!
-  lines_of_code: MÁS DE <b># LÍNEAS DE CÓDIGO</b> ESCRITAS HASTA LA FECHA.
+  lines_of_code: Más de <b># LINES OF CODE</b> líneas de código escritas hasta la
+    fecha.
   lines_of_code_alt: "<b>#</b> LÍNEAS DE CÓDIGO ESCRITAS POR ESTUDIANTES"
   who_has_done_hoc: "¿Quién ha hecho #HourOfCode? @codeorg"
   hoc_leaderboards: 'Tablero de clasificaciones de La hora del código '
-  students_and_lines: "%{students} estudiantes que han hecho la hora del código y
-    han escrito %{lines} líneas de código."
+  students_and_lines: "%{students} de estudiantes han hecho La hora de código y escrito
+    %{lines} líneas de código."
   start_hoc: Comienza La hora de código ahora
-  contact_form_topic_press: Prensa/medios de comunicación (entrevista o compromiso
+  contact_form_topic_press: Prensa/ Medios de comunicación (entrevista o compromiso
     de hablar)
-  studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_title: Explora <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Cursos elementales
   studiobar_elementary_body: Nuestros tres nuevos cursos para K&#8209;5
-  studiobar_hoc_title: La hora de la programación
+  studiobar_hoc_title: La Hora de Programación
   studiobar_hoc_body: Aprende a programar con Angry Birds
   studiobar_flappy_title: Código de Flappy
   studiobar_flappy_body: Crea y comparte tu propio juego Flappy
-  studiobar_teacher_title: Hecho para los profesores
+  studiobar_teacher_title: Hecho para los maestros
   studiobar_teacher_body: Presenta Code Studio en tu aula
   contact_form_topic_student: Soy un estudiante
   contact_form_topic_parent: Soy un padre
   contact_form_topic_teacher: Soy un profesor/educador
   contact_form_topic_outside_us: Estoy fuera de los Estados Unidos
-  contact_form_topic_contribution: Contribución benéfica
+  contact_form_topic_contribution: Contribución de caridad
   contact_form_topic_partner: Me gustaría ser socio
   contact_form_topic_other: Otros
   contact_form_label_topic: Tema
@@ -142,15 +142,16 @@
   contact_form_label_submit: Enviar mensaje
   class_submission_in_school: En la escuela
   class_submission_in_school_daily_programming_course: Curso diario de programación
-  class_submission_in_school_ap_computer_science: Ciencias de la computación AP
-  class_submission_in_school_full_university_cs_curriculum: Plan de estudio nivel
-    universitario de ciencias de computación (completo)
+  class_submission_in_school_ap_computer_science: Curso AP de Ciencias de la computación
+  class_submission_in_school_full_university_cs_curriculum: Plan de estudios completo
+    de nivel universitario en ciencias de la computación
   class_submission_in_school_robotics_club: Club de robótica
   class_submission_in_school_programming_integrated_in_other_classes: Programación
     integrada en otras clases
   class_submission_in_school_summer_school_cs_program: Programa de escuela de verano
-    CS
-  class_submission_in_school_exploring_computer_science: Explorando las ciencias computacionales
+    en ciencias de la computación
+  class_submission_in_school_exploring_computer_science: Explorando las ciencias de
+    la computación
   class_submission_in_school_other: Otros en la escuela
   class_submission_out_of_school: Fuera de la escuela
   class_submission_out_of_school_summer_camp: Campamento de verano
@@ -158,7 +159,7 @@
   class_submission_out_of_school_all-day_workshop: Taller durante todo el día (hasta
     una semana)
   class_submission_out_of_school_multi-week_workshop: Taller de varias semanas
-  class_submission_out_of_school_other: Otro fuera de la escuela
+  class_submission_out_of_school_other: Otros fuera de la escuela
   class_submission_online: En línea
   class_submission_online_programming_class: Clase de programación en línea
   class_submission_online_teacher_resource: Recursos en línea para maestros
@@ -188,20 +189,20 @@
     software
   petition_age: Edad
   dashboard_landing_title: Página de inicio del maestro
-  dashboard_landing_welcome: Bienvenido al nuevo y mejorado panel para profesores.
-  dashboard_landing_video: "¡Mira este vídeo"
+  dashboard_landing_welcome: Bienvenido al nuevo y mejorado panel para maestros.
+  dashboard_landing_video: Mira este vídeo
   dashboard_landing_watch_video: para ver un resumen de las novedades!
   dashboard_landing_view_as_student: Ver este sitio como un alumno
   dashboard_landing_students_title: Sus alumnos
   dashboard_landing_students_manage: Ver y administrar sus alumnos
-  dashboard_landing_news_title: K-5 Recursos de Educador (solo en Inglés)
+  dashboard_landing_news_title: Recursos de Educador K-5 (sólo en Inglés)
   dashboard_landing_new_beta: "¡Nuevo! Pruebe nuestros cursos beta para los alumnos
     de K-5."
   dashboard_landing_new_k5courses: "¡Nuevo! Pruebe nuestros cursos para los alumnos
     de K-5."
   dashboard_landing_useful_links: Otros links útiles (sólo en Inglés)
-  dashboard_landing_office_hours: "¡Pregunta en persona! Visita nuesta horas mensuales
-    de video desde oficina."
+  dashboard_landing_office_hours: "¡Pregunta en persona! Utiliza nuesta horas mensuales
+    para consultas por vídeo."
   dashboard_landing_print_certificates: Imprimir certificados para los alumnos que
     terminan este curso
   dashboard_landing_educator_blog: Lee noticias y actualizaciones de nuestro material
@@ -211,7 +212,7 @@
   dashboard_landing_video_player: Pruebe nuestro nuevo reproductor de vídeo en su
     escuela
   dashboard_landing_progress_title: Progreso de la clase principal
-  dashboard_landing_progress_biggest: Este es el progreso de su sección más grande.
+  dashboard_landing_progress_biggest: Este es el progreso de tu sección más grande.
   dashboard_landing_view_progress: Ver progreso de %{biggest_section}
   dashboard_landing_available_title: Cursos disponibles
   dashboard_landing_available_courses: Aquí los cursos están disponibles para usted
@@ -236,26 +237,26 @@
   dashboard_navigation_section: 'Sección: %{section_name}'
   dashboard_navigation_student: 'Alumno: %{student_name}'
   dashboard_sections_new_section: Nueva sección
-  dashboard_sections_jumbotron_instruction: Cree nuevas secciones y añada alumnos
-    a ellos. Las secciones ayudan a organizar los alumnos en grupos más pequeños para
-    que pueda seguir su progreso y administrar sus cuentas.
+  dashboard_sections_jumbotron_instruction: Crea nuevas secciones y añade alumnos
+    a ellas. Las secciones ayudan a organizar los alumnos en grupos más pequeños para
+    que puedas seguir su progreso y administrar sus cuentas.
   dashboard_sections_table_section: Sección
   dashboard_sections_table_secret: Tipo secreto
-  dashboard_sections_table_grade: Calificación
+  dashboard_sections_table_grade: Grado
   dashboard_sections_table_course: Curso
   dashboard_sections_table_students: Alumnos
   dashboard_sections_table_code: Código de sección
-  dashboard_sections_name: Nombre de sección
-  dashboard_sections_choose_secret: Si desea proporcionar cuentas a sus alumnos, elija
-    un tipo secreto de <b>palabra</b> o <b>imagen</b> para esa sección.
-  dashboard_sections_secret_word: Una <b>palabra</b> le permite establecer una palabra
+  dashboard_sections_name: Nombre de la sección
+  dashboard_sections_choose_secret: Si quieres proporcionar cuentas a tus alumnos,
+    elige un tipo secreto de <b>palabra</b> o <b>imagen</b> para esa sección.
+  dashboard_sections_secret_word: Una <b>palabra</b> te permite establecer una palabra
     secreta para cada alumno.
-  dashboard_sections_secret_picture: Una <b>imagen</b> le permite ajustar una imagen
+  dashboard_sections_secret_picture: Una <b>imagen</b> te permite definir una imagen
     secreta para cada alumno, ideal para estudiantes más jóvenes que aún no escriben.
-  dashboard_sections_secret_none: Si desea que sus alumnos gestionen sus propias cuentas,
-    incluyendo el elegir sus propias contraseñas, elija un tipo secreto de <b>ninguno</b>.
-  dashboard_sections_print_secrets: Entonces puede imprimir una hoja de tarjetas que
-    contengan información de la cuenta para distribuirlas entre sus alumnos.
+  dashboard_sections_secret_none: Si deseas que tus alumnos gestionen sus propias
+    cuentas, incluyendo el elegir sus propias contraseñas, elige un tipo secreto <b>ninguno</b>.
+  dashboard_sections_print_secrets: Entonces puedes imprimir una hoja de tarjetas
+    que contengan información de las cuentas para distribuirlas entre tus alumnos.
   dashboard_sections_switch_section: 'Cambiar de sección:'
   dashboard_students_add_student: Añadir alumno
   dashboard_students_add_students: Añadir varios alumnos
@@ -268,10 +269,10 @@
   dashboard_students_name: Nombre
   dashboard_students_age: Edad
   dashboard_students_gender: Sexo
-  dashboard_students_male: Varón
+  dashboard_students_male: Hombre
   dashboard_students_female: Mujer
   dashboard_students_secret: Secreto
-  dashboard_students_password: Contraseña
+  dashboard_students_password: contraseña
   dashboard_students_username: 'Nombre de usuario: %{student_username}'
   dashboard_students_email: 'Correo: %{student_email}'
   dashboard_students_completed_levels: Niveles Completados
@@ -280,26 +281,26 @@
   dashboard_students_auto_generated: Generado automáticamente
   dashboard_students_reset_secret: Reiniciar secreto
   dashboard_students_reset_password: Restablecer contraseña
-  dashboard_students_share_section: 'Comparta la página de registro de esta sección
+  dashboard_students_share_section: 'Comparte la página de registro de esta sección
     con sus alumnos:'
-  dashboard_students_print_info: Imprima tarjetas con la información de registro de
-    sus alumnos.
+  dashboard_students_print_info: Imprimir tarjetas con la información de registro
+    de sus alumnos.
   dashboard_students_secret_picture: Imagen secreta
-  dashboard_students_reset_picture: Puede restablecer la imagen secreta de un alumno
+  dashboard_students_reset_picture: Puedes restablecer la imagen secreta de un alumno
     en cualquier momento seleccionando <b>Mostrar secreto</b> y luego <b>Reiniciar
     secreto</b>. Se generará una nueva imagen secreta para que ese estudiante pueda
     registrarse.
   dashboard_students_secret_word: Palabra secreta
-  dashboard_students_reset_word: 'Puede restablecer las palabras secretas de un alumno
+  dashboard_students_reset_word: 'Puedes restablecer las palabras secretas de un alumno
     en cualquier momento seleccionando <b>Mostrar secreto</b> y luego <b>Reiniciar
     secreto</b>. Se generará un nuevo par de palabras secretas para que ese estudiante
     pueda registrarse. '
-  dashboard_students_join_link: Pida a sus alumnos que crean sus propias cuentas y
+  dashboard_students_join_link: Pide a tus alumnos que creen sus propias cuentas y
     que se unan a su sección en
-  dashboard_students_no_email: Si sus alumnos no tienen direcciones de correo, o le
-    gustaría crear cuentas para ellos, cambie el tipo secreto de esta sección a la
-    de <b>palabra</b> o <b>imagen</b>.
-  dashboard_students_print_page: Imprima esta página
+  dashboard_students_no_email: Si tus alumnos no tienen direcciones de correo electrónico,
+    o te gustaría crear cuentas para ellos, cambia el tipo secreto de esta sección
+    a <b>palabra</b> o <b>imagen</b>.
+  dashboard_students_print_page: Imprimir esta página
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Haga
     clic aquí</a> para ver nuestro documento sobre privacidad, que puede compartirse
@@ -318,13 +319,26 @@
   dashboard_debugging: 'Depuración:'
   dashboard_puzzle_solving: 'Resolución de rompecabezas:'
   dashboard_student_worksheet: hoja de trabajo del estudiante
-  dashboard_teacher_worksheet: hoja de trabajo del profesor
+  dashboard_teacher_worksheet: hoja de trabajo del maestro
   dashboard_grade_k: K
   dashboard_grade_other: Otros
   dashboard_login_word: palabra
   dashboard_login_picture: imagen
-  dashboard_login_none: ninguno
+  dashboard_login_none: Correo electrónico
   dashboard_new_password: nueva contraseña
   stats_hoc_2013_heading: 'Increíbles estadísticas de la Hora del Código del año pasado.
-    En solo una semana:'
+    En sólo una semana:'
   stats_hoc_2013_image_alt: Estadísticas de Hora del Código del 2013
+  dashboard_teacher: Teacher
+  dashboard_student: estudiante
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

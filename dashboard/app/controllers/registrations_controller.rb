@@ -37,6 +37,12 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def create
+    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      super
+    end
+  end
+
   private
 
   # check if we need password to update user data

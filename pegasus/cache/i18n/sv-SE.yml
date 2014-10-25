@@ -37,16 +37,16 @@
   view_english_site: Visa den engelska webbplatsen
   non_english_tutorials: 'Kurser översatta till flera olika språk:'
   write_your_first_program: Skriv din första datorprogram
-  learn_cs_concepts: Lär dig grunderna i Datavetenskap med dra-och-släpp programmering.
-    Det här är en spel-liknande utbildning med videoföredrag av Bill Gates, Mark Zuckerberg,
-    Angry Birds och Plants vs. Zombies. Lär dig loopar, om-annars uttryck, och grundläggande
-    algoritmer.
+  learn_cs_concepts: Lära sig grundläggande koncepten bakom programmering genom dra
+    och släpp-programmering. Det här är en spel-liknande kurs med video föreläsningar
+    av Bill Gates, Mark Zuckerberg, Angry Birds och Plants vs. Zombies. Lär dig "upprepa"-loopar,
+    "om"-satser och grundläggande algoritmer.
   all_ages: Alla åldrar
   beginner: Nybörjare
   n_participants: "# deltagare"
   go: Gå
   thank_you_: Tack!
-  congratulations: Gratulerar!
+  congratulations: Grattis!
   congratulations_on_completing_hoc: Gratulerar till att ha klarat en Timme av Kod.
   get_a_certificate_of_achievement: Få ett certifikat om prestationen
   enter_valid_email: Ange en giltig e-postadress
@@ -55,7 +55,7 @@
   get_a_certificate_message_after: Ditt diplom är på väg. Fortsätt nu med vår <a href='http://learn.code.org'>20-timmarskurs</a>,
     eller läs mer om fler möjligheter att <a href='/learn/beyond'>Lära dig mer efter
     denna timmen</a>.
-  thanks_for_submitting: Tack för din anmälan!
+  thanks_for_submitting: Tack för att skicka!
   if_you_enjoyed: Om du gillade att lära dig detta, be dina vänner att prova också!
     Vi vill att hela världen ska lära sig.
   personalize_certificate: Anpassa ditt certifikat
@@ -94,8 +94,8 @@
   petition_thankyou: Tack för att du skriver på petitionen
   carousel_heading_international: Handledning på ditt språk
   continue_learning_header: Fortsätt ditt lärande efter Timmen med Kod
-  continue_learning_body: Det finns många möjligheter. Du kan lära dig online, på
-    en skola eller ett sommarläger.
+  continue_learning_body: Det finns många alternativ. Du kan lära dig online eller
+    på en lokal skola, eller ett sommarläger.
   learn_next_level: Fortsätt till nästa nivå
   learn_online: Prova andra kurser online
   learn_classes: Hitta lokala klasser
@@ -108,7 +108,7 @@
   boy: Pojke
   help_recruit_coders: Hjälp oss att rekrytera fler kodare till vårt team!
   help_recruit: Hjälp oss att rekrytera fler kodare!
-  lines_of_code: FLER ÄN <b># RADER KOD</b> HAR SKRIVITS HITTILLS.
+  lines_of_code: "ÖVER <b># RADER MED KOD</b> SKRIVET HITTILLS."
   lines_of_code_alt: "<b>#</b> RADER MED KOD SKRIVET AV ELEVER"
   who_has_done_hoc: Vilka har gjort en Timme med Kod? @codeorg
   hoc_leaderboards: Timme med Kod Poängtavla
@@ -307,8 +307,21 @@
   dashboard_grade_other: Annat
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_none: E-post
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: Student
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

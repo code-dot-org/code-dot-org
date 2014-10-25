@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "farmer",
-    "instructions": "Wow, now there are three piles of dirt! Can you write a program that removes both of them until the ground is even?",
+    "instructions": "Wow, now there are three piles of dirt! Can you write a program that removes each of them until the ground is even?",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -16,6 +16,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,11,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,11,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,11]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "8",
+    "disable_param_editing": "true",
     "maze_data": null
   }
 }]]></config>

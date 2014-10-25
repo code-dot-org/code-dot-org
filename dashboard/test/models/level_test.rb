@@ -121,10 +121,12 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal "xml", toolbox.root().name
     assert_equal "toolbox", toolbox.root().attributes["id"].value
 
-    first_block = toolbox.root().children.first
+    first_category = toolbox.root().children.first
+    assert_equal "category", first_category.name
 
+    first_block = toolbox.root().css('category > *').first
     assert_equal "block", first_block.name
-    assert_equal 'procedures_defnoreturn', first_block.attributes['type'].value
+    assert_equal 'category', first_block.attributes['type'].value
   end
 
   test "include type in json" do
@@ -205,5 +207,19 @@ class LevelTest < ActiveSupport::TestCase
 #    end
 #    assert_equal time, level.updated_at.to_i
 #  end
+
+  test 'update_ideal_level_source does nothing for maze levels' do
+    level = Maze.first
+    level.update_ideal_level_source
+    assert_equal nil, level.ideal_level_source
+  end
+
+  test 'artist levels are seeded with solutions' do
+    level = Artist.where(level_num: 'custom').first # custom levels have solutions
+    assert level.solution_blocks
+    assert level.ideal_level_source
+
+    assert_equal level.solution_blocks, level.ideal_level_source.data
+  end
 
 end

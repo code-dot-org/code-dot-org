@@ -2,7 +2,7 @@
 layout: wide
 ---
 
-# Guía para los tutoriales de la Hora de Programación y la semana educativa de Ciencias Computacionales
+# Guía para los tutoriales de la Hora del Código y la semana educativa de Ciencias Computacionales
 
 Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
 
@@ -13,12 +13,12 @@ Nos gustaría presentar varias opciones atractivas, pero la meta principal es op
 ## Index:
 
   * [Cómo serán evaluadas las tutorías en cuánto a inclusión](#inclusion)
-  * [Guía general para crear una actividad de la Hora de Programación](#guidelines)
+  * [Guía general para crear una actividad de la Hora del Código](#guidelines)
   * [¿Cómo enviar? (Fecha límite 10/1/2014)](#submit)
   * [Sugerencias para diseñar tu actividad](#design)
   * [Guía de Marca Registrada](#tm)
   * [Pixel Rastreador](#pixel)
-  * [Promocionar tus tutoriales, CSEdWeek, y Hora de Programación](#promote)
+  * [Promocionar tus tutoriales, CSEdWeek, y Hora del Código](#promote)
   * [Una nota para estudiantes con discapacidades](#disabilities)
 
 <a id="inclusion"></a>
@@ -57,17 +57,17 @@ Un comité de educadores de ciencias computacionales evaluarán las propuestas c
   * se centran solamente en diseño web HTML+CSS
   * se envían después de la fecha límite, o con información incompleta (vea más abajo)
 
-La meta principal de la campaña de la Hora de Programación es la de ampliar la participación, en las ciencias computacionales, a los estudiantes y maestros, además de demostrar que la ciencia computacional es accesible a todos y "más fácil de lo piensas." Esta meta se logra mejor, al dar a los estudiantes y maestros un número menor de opciones y más simples. Las opciones tienen un enfoque de alta calidad para un usuario que ingresa por primera vez.
+La meta principal de la campaña de la Hora del Código es la de ampliar la participación, en las ciencias computacionales, a los estudiantes y maestros, además de demostrar que la ciencia computacional es accesible a todos y "más fácil de lo piensas." Esta meta se logra mejor, al dar a los estudiantes y maestros un número menor de opciones y más simples. Las opciones tienen un enfoque de alta calidad para un usuario que ingresa por primera vez.
 
 Ten en cuenta también, que la Semana de Educación en Ciencias Computacionales del 2013 tuvo un éxito sorprendente, de acuerdo a las respuestas de estudiantes y maestros - 20 millones de participantes del 9 al 23 de diciembre, ¡y 97% de ellos dijeron que lo disfrutaron y que quieren repetir la experiencia!!
 
-Como resultado, los listados actuales están "suficientemente bien", y la razón para agregar más tutorías a los listados de la Hora de Programación no es ampliar las opciones, sino elevar la calidad (o novedad) para los estudiantes, o expandir las opciones para los que no hablan inglés, debido a la naturaleza global de la campaña 2014.
+Como resultado, los listados actuales están "suficientemente bien", y la razón para agregar más tutorías a los listados de la Hora del Código no es ampliar las opciones, sino elevar la calidad (o novedad) para los estudiantes, o expandir las opciones para los que no hablan inglés, debido a la naturaleza global de la campaña 2014.
 
 [**Ir arriba**](#top)
 
 <a id="guidelines"></a>
 
-## Guía general para crear una actividad de la Hora de Programación
+## Guía general para crear una actividad de la Hora del Código
 
   * **Tema:** Introducción a la ciencia computacional o programación (no HTML).
   * **Meta:**Que los principiantes tengan una primera experiencia agradable.
@@ -86,12 +86,12 @@ Como resultado, los listados actuales están "suficientemente bien", y la razón
 
 ## ¿Cómo enviar? (Fecha límite 10/1/2014)
 
-Visita la [página de envío de actividades de la Hora de Programación](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) y sigue los pasos para enviar tu tutoría.
+Visita la [página de envío de actividades de la Hora del Código](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) y sigue los pasos para enviar tu tutoría.
 
 **Lo que necesitarás:**
 
   * Tu nombre, logo (jpg, png, etc.)
-  * URL para una imagen de pantalla o de marketing de la actividad de la Hora de Programación. Las imágenes deben tener una resolución de 446 x 335 exactamente. Si no se proporciona una imagen adecuada, podremos tomar una de tu tutoría O podremos NO incluirla.
+  * URL para una imagen de pantalla o de marketing de la actividad de la Hora del Código. Las imágenes deben tener una resolución de 446 x 335 exactamente. Si no se proporciona una imagen adecuada, podremos tomar una de tu tutoría O podremos NO incluirla.
   * Enlace URL para el logo
   * Nombre de la actividad
   * URL para la actividad
@@ -99,7 +99,7 @@ Visita la [página de envío de actividades de la Hora de Programación](https:/
   * Descripción de la actividad (móvil y escritorio) 
       * **Caracteres máximos permitidos para versión de escritorio:** 384
       * **Caracteres máximos permitidos para versión móvil:** 74
-      * Por favor incluye en la descripción si es guiado por el estudiante o guiado por el profesor. Adicionalmente, algunas escuelas están interesadas en conocer si las actividades de la de Hora de Programación reflejan estándares comunes o de próxima generación. Si la actividad se centra en estándares específicos, incluye esta información.
+      * Por favor incluye en la descripción si es guiado por el estudiante o guiado por el profesor. Adicionalmente, algunas escuelas están interesadas en conocer si las actividades de la de Hora del Código reflejan estándares comunes o de próxima generación. Si la actividad se centra en estándares específicos, incluye esta información.
   * Una lista de plataformas compatibles y/o probadas: 
       * **Basadas en navegador (Web):** 
           * Versiones para OS - Mac, Win
@@ -118,14 +118,14 @@ Visita la [página de envío de actividades de la Hora de Programación](https:/
       * Secundaria: grados 6-8
       * Preparatoria: grados 9-12
       * Todas las edades
-  * Por favor incluye también nivel de conocimiento en computación requerido dentro del grado: Principiante, Intermedio o Avanzado. El sitio web de la Hora de Programación destacará principalmente actividades para Principiantes. Si deseas preparar actividades Intermedias y Avanzadas para la Hora de la Programación, por favor incluye el conocimiento previo necesario en la descripción de tu actividad.
+  * Por favor incluye también nivel de conocimiento en computación requerido dentro del grado: Principiante, Intermedio o Avanzado. El sitio web de la Hora del Código destacará principalmente actividades para Principiantes. Si deseas preparar actividades Intermedias y Avanzadas para la Hora de la Programación, por favor incluye el conocimiento previo necesario en la descripción de tu actividad.
   * Requisitos técnicos: 
-      * Con el fin de realizar un seguimiento más preciso de la participación, queremos que todos las terceras partes asociadas con las tutorías incluyan imágenes de seguimiento de 1 píxel en la primera y la última páginas de sus tutorías para la Hora de Programación. Coloca una imagen-pixel inicial en la página de inicio y una final en la última página. No coloques los pixeles en las páginas intermedias). Consulte la sección de Seguimiento de Pixel abajo para más detalles. 
+      * Con el fin de realizar un seguimiento más preciso de la participación, queremos que todos las terceras partes asociadas con las tutorías incluyan imágenes de seguimiento de 1 píxel en la primera y la última páginas de sus tutorías para la Hora del Código. Coloca una imagen-pixel inicial en la página de inicio y una final en la última página. No coloques los pixeles en las páginas intermedias). Consulte la sección de Seguimiento de Pixel abajo para más detalles. 
       * Al finalizar tu actividad, los usuarios deben ser dirigidos a [http://code.org/api/hour/finish ](http://code.org/api/hour/finish) donde podrán: 
           * Compartir en las redes sociales que completaron la Hora del Programación
-          * Recibir un certificado que dice que completaron la Hora de Programación
-          * Ver tablas con los países/ciudades que tienen las mayores tasas de participación en las actividades de la Hora de Programación
-          * Para los usuarios que pasan una hora en tu actividad y no la completan, por favor incluye un botón que diga "Terminé mi Hora de Programación" que ligue de vuelta a <http://code.org/api/hour/finish> también. 
+          * Recibir un certificado que dice que completaron la Hora del Código
+          * Ver tablas con los países/ciudades que tienen las mayores tasas de participación en las actividades de la Hora del Código
+          * Para los usuarios que pasan una hora en tu actividad y no la completan, por favor incluye un botón que diga "Terminé mi Hora del Código" que ligue de vuelta a <http://code.org/api/hour/finish> también. 
   * ***(Opcional)*** Realizaremos un seguimiento con un enlace a una encuesta, pidiendo un informe de los siguientes parámetros de la actividad en la semana del 8 de diciembre, 12:01 a.m. hasta el 14 de diciembre, 11:59 p.m.) 
       * Para actividades en línea (especialmente aplicaciones para smartphone/tablet): 
           * Número de usuarios
@@ -155,7 +155,7 @@ Visita la [página de envío de actividades de la Hora de Programación](https:/
 
 **Incorpora retroalimentación al final de la actividad.** (Por ejemplo: "¡Has terminado 10 niveles y aprendido sobre loops! ¡Buen trabajo!")
 
-**Incorpora redes sociales.** Anima a los estudiantes a publicar en los medios de comunicación social (cuando sea apropiado) cuando hayan terminado, por ejemplo "He hecho una Hora de Programación con ________ ¿Tú? #HourOfCode" o "He hecho una #HourOfCode como parte de #CSEdWeek. ¿Tú? @Scratch." Utilizar el hashtag **#HourOfCode** (con letras mayúsculas H, O, C)
+**Incorpora redes sociales.** Anima a los estudiantes a publicar en los medios de comunicación social (cuando sea apropiado) cuando hayan terminado, por ejemplo "He hecho una Hora del Código con ________ ¿Tú? #HourOfCode" o "He hecho una #HourOfCode como parte de #CSEdWeek. ¿Tú? @Scratch." Utilizar el hashtag **#HourOfCode** (con letras mayúsculas H, O, C)
 
 **Crea tu actividad en varios idiomas además del Inglés.** La campaña de este año tiene un enfoque internacional y quisiéramos tener algunas actividades para ofrecer a los participantes que no hablan inglés.
 
@@ -183,17 +183,17 @@ Beneficios de la programación en pares:
 
 ## Guía de Marca Registrada
 
-Con 40 millones de estudiantes que probaron la Hora de Programación, y más del 97% de los profesores pidiéndonos repetir este evento cada año, estamos dando los pasos para asegurarnos de convertir a la Hora de Programación en un movimiento que se repita anualmente con mayor fidelidad y sin confusión.
+Con 40 millones de estudiantes que probaron la Hora del Código, y más del 97% de los profesores pidiéndonos repetir este evento cada año, estamos dando los pasos para asegurarnos de convertir a la Hora del Código en un movimiento que se repita anualmente con mayor fidelidad y sin confusión.
 
 Uno de estos pasos es proteger la marca registrada "Hour of Code" para prevenir confusiones. Muchos de nuestros socios de tutorías han usado "Hour of Code" en sus sitios web. No queremos evitar este uso, pero queremos asegurarnos de que esté dentro de algunos límites:
 
   1. Cualquier referencia a "Hour Of Code" debe usarse de tal manera que no sugiera que es tu propia marca, sino hacer referencia a la "Hour Of Code" como un movimiento de base. Un buen ejemplo es: "Participa en la Hour of Code patrocinada por ACMECorp.com". Un mal uso es: "Participa en la Hour of Code de ACME Corp"
-  2. Usa un "TM" subscrito en los lugares más donde menciones la "Hora de Programación", así como en tu sitio web o en descripciones interna de apps
+  2. Usa un "TM" subscrito en los lugares más donde menciones la "Hora del Código", así como en tu sitio web o en descripciones interna de apps
   3. Incluye en la página (o en el pie de página") links hacia las paginas de CSEdWeek y Code.org que digan lo siguiente:
     
-    ***"La 'Hora de Programación" es una iniciativa nacional creada por la Semana de Educación de Ciencias Computacionales Computer Science Education Week [csedweek.org] y Code.org [code.org] para presentar a millones de estudiantes una hora de ciencias computacionales y programación de computadoras."***
+    ***"La 'Hora del Código" es una iniciativa nacional creada por la Semana de Educación de Ciencias Computacionales Computer Science Education Week [csedweek.org] y Code.org [code.org] para presentar a millones de estudiantes una hora de ciencias computacionales y programación de computadoras."***
 
-  4. No usar la marca "Hora de Programación" o "Hour Of Code" en inglés en nombres de apps
+  4. No usar la marca "Hora del Código" o "Hour Of Code" en inglés en nombres de apps
 
 [**Ir arriba**](#top)
 
@@ -201,9 +201,9 @@ Uno de estos pasos es proteger la marca registrada "Hour of Code" para prevenir 
 
 ## Pixel Rastreador
 
-Para rastrear con más precisión la participación le pedimos a cada socio que hace tutoriales incluir una imagen de 1 pixel en la primera y ultima hoja de sus tutoriales de Hora de Programación (Una imagen de un pixel al inicio y una imagen de un pixel en la página final. No en páginas intermedias).
+Para rastrear con más precisión la participación le pedimos a cada socio que hace tutoriales incluir una imagen de 1 pixel en la primera y ultima hoja de sus tutoriales de Hora del Código (Una imagen de un pixel al inicio y una imagen de un pixel en la página final. No en páginas intermedias).
 
-Esto nos permitirá contabilizar usuarios que tú reclutas directamente al visitar tu sitio para hacer su "Hora de Programación", o usuarios que visitan cuando un profesor escribe tu URL directamente en su pizarra. Esto llevará a conteos de participación más precisos en tu tutoría, lo cual te ayudará a atraer usuarios. Si integras el pixel al final también, eso nos permitirá medir tasas de terminación de la tutoría.
+Esto nos permitirá contabilizar usuarios que tú reclutas directamente al visitar tu sitio para hacer su "Hora del Código", o usuarios que visitan cuando un profesor escribe tu URL directamente en su pizarra. Esto llevará a conteos de participación más precisos en tu tutoría, lo cual te ayudará a atraer usuarios. Si integras el pixel al final también, eso nos permitirá medir tasas de terminación de la tutoría.
 
 Si tu tutoría es aprobada e incluida en la página final de tutorías, Code.org te proporcionará un pixel de rastreo único para que lo integres en tu tutoría. Ve el ejemplo siguiente.
 
@@ -219,13 +219,13 @@ IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
 <a id="promote"></a>
 
-## Promocionar tus tutoriales, CSEdWeek, y Hora de Programación
+## Promocionar tus tutoriales, CSEdWeek, y Hora del Código
 
-Pedimos a todos que promocionen sus tutorías de 1 hora con todos sus usuarios. Por favor dirigelos a tu página de la Hora de Programación. Es mucho más probable que tus usuarios reaccionen a un mensaje tuyo acerca de tu tutoría. Usa la campaña internacional de la Hora de Programación para la Semana de Educación en Ciencias de Computación como una excusa para animar a usuarios a invitar a otros a unirse, para alcanzar un total de 100 millones de participantes.
+Pedimos a todos que promocionen sus tutorías de 1 hora con todos sus usuarios. Por favor dirigelos a tu página de la Hora del Código. Es mucho más probable que tus usuarios reaccionen a un mensaje tuyo acerca de tu tutoría. Usa la campaña internacional de la Hora del Código para la Semana de Educación en Ciencias de Computación como una excusa para animar a usuarios a invitar a otros a unirse, para alcanzar un total de 100 millones de participantes.
 
   * Presenta la Hour fo Code y la SCEdWeek en tu página web.   
     Ej.: <http://www.tynker.com/hour-of-code>
-  * Promueve la Hora de Programación utilizando las redes sociales, medios de comunicación tradicionales, listas de correo, etc., usando el hashtag **#HourOfCode** (con letra mayúscula H, O, C)
+  * Promueve la Hora del Código utilizando las redes sociales, medios de comunicación tradicionales, listas de correo, etc., usando el hashtag **#HourOfCode** (con letra mayúscula H, O, C)
   * Sé el anfitrión de un evento local o pídele a tus empleados que organicen un evento en escuelas locales o grupos comunitarios.
   * Consulta nuestro kit de recursos para más información (próximamente).
 

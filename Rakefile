@@ -81,6 +81,9 @@ namespace :build do
 
       HipChat.log 'Starting <b>dashboard</b>.'
       RakeUtils.start_service CDO.dashboard_unicorn_name unless rack_env?(:development)
+
+      # report deployment to honeybadger
+      RakeUtils.system 'rake', "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
     end
   end
 
@@ -193,83 +196,7 @@ end
 
 namespace :install do
 
-  task :node do
-    RakeUtils.sudo 'aptitude', 'install', '-y', 'nodejs', 'npm', 'openjdk-7-jre-headless', 'libcairo2-dev', 'libjpeg8-dev', 'libpango1.0-dev', 'libgif-dev'
-    RakeUtils.sudo_ln_s '/usr/bin/nodejs', '/usr/bin/node'
-    RakeUtils.sudo 'npm', 'update', '-g', 'npm'
-    RakeUtils.npm_install_g 'grunt-cli'
-  end
-
-  task :mysql_client do
-    RakeUtils.sudo 'aptitude', 'install', '-y', 'mysql-client', 'libmysqlclient-dev'
-  end
-
-  task :mysql_server => [:mysql_client] do
-    RakeUtils.sudo 'aptitude', 'install', '-y', 'mysql-server'
-  end
-
-  task :newrelic do
-    RakeUtils.sudo 'echo deb http://apt.newrelic.com/debian/ newrelic non-free > newrelic.list'
-    RakeUtils.sudo 'mv', 'newrelic.list', '/etc/apt/sources.list.d/newrelic.list'
-    RakeUtils.sudo 'wget -O- https://download.newrelic.com/548C16BF.gpg | sudo apt-key add -'
-    RakeUtils.sudo 'aptitude', 'update'
-    RakeUtils.sudo 'aptitude', 'install', 'newrelic-sysmond'
-    RakeUtils.sudo 'nrsysmond-config', '--set', "license_key=#{CDO.newrelic_secret}"
-    RakeUtils.sudo '/etc/init.d/newrelic-sysmond', 'start'
-  end
-
-  task :postfix do
-    Dir.chdir(postfix_dir) do
-      RakeUtils::sudo 'aptitude', 'install', '-y', 'postfix', 'libsasl2-2', 'libsasl2-modules', 'sasl2-bin'
-
-      RakeUtils.sudo 'service', 'postfix', 'stop'
-
-      RakeUtils.sudo 'chown', '-R', 'postfix:ubuntu', postfix_dir
-      RakeUtils.sudo 'mv', '/etc/postfix', '/etc/postfix.old' if(File.directory?('/etc/postfix') && !File.symlink?('/etc/postfix'))
-      RakeUtils.sudo_ln_s postfix_dir, '/etc/postfix'
-      RakeUtils.sudo_ln_s postfix_dir('mailname'), '/etc/mailname'
-      RakeUtils.sudo_ln_s postfix_dir('aliases'), '/etc/aliases'
-      RakeUtils.sudo_ln_s postfix_dir('aliases.db'), '/etc/aliases.db'
-
-      RakeUtils.sudo 'service', 'postfix', 'start'
-    end
-  end
-
-  task :solr do
-    RakeUtils.sudo 'aptitude', 'install', '-y', 'openjdk-7-jre-headless'
-
-    solr_version = '4.8.0'
-    solr_name = "solr-#{solr_version}"
-    solr_tgz = "#{solr_name}.tgz"
-
-    Dir.chdir(aws_dir) do
-      unless File.directory?('solr')
-        unless File.file?(solr_tgz)
-          RakeUtils.system 'wget', "http://apache.mesi.com.ar/lucene/solr/#{solr_version}/#{solr_tgz}"
-        end
-        RakeUtils.system 'tar', '-zxf', solr_tgz
-        rm solr_tgz
-        mv solr_name, 'solr'
-      end
-    end
-  end
-
-  task :varnish do
-    Dir.chdir(aws_dir) do
-      RakeUtils::sudo 'aptitude', 'install', '-y', 'varnish'
-      RakeUtils.sudo 'service', 'varnish', 'stop'
-      RakeUtils.rake 'build'
-      RakeUtils.sudo_ln_s aws_dir('varnish.config'), '/etc/default/varnish'
-      RakeUtils.sudo 'service', 'varnish', 'start'
-    end
-  end
-
-  WebserverDependencies = [:postfix, rack_env?(:production) ? :mysql_client : [:mysql_server, :solr], :varnish].flatten
-  task :webserver => WebserverDependencies do
-    RakeUtils.sudo 'aptitude', 'install', '-y', 'libxslt1-dev', 'libssl-dev', 'zlib1g-dev', 'imagemagick', 'libmagickcore-dev', 'libmagickwand-dev', 'pdftk', 'enscript'
-  end
-
-  task :dashboard => [:webserver] do
+  task :dashboard do
     Dir.chdir(aws_dir) { RakeUtils.rake }
     Dir.chdir(dashboard_dir) do
       RakeUtils.bundle_install
@@ -279,12 +206,12 @@ namespace :install do
       end
       RakeUtils.sudo_ln_s dashboard_dir('config/init.d'), File.join('/etc/init.d', CDO.dashboard_unicorn_name)
       RakeUtils.sudo 'update-rc.d', CDO.dashboard_unicorn_name, 'defaults'
-      RakeUtils.sudo 'cp', dashboard_dir('config/logrotate'), File.join('/etc/logrotate.d', CDO.dashboard_unicorn_name)
+      RakeUtils.sudo_ln_s dashboard_dir('config/logrotate'), File.join('/etc/logrotate.d', CDO.dashboard_unicorn_name)
       RakeUtils.sudo 'service', CDO.dashboard_unicorn_name, 'start'
     end
   end
 
-  task :pegasus => [:webserver] do
+  task :pegasus do
     Dir.chdir(aws_dir) { RakeUtils.rake }
     Dir.chdir(pegasus_dir) do
       RakeUtils.bundle_install

@@ -31,12 +31,15 @@ goog.require('Blockly.Blocks');
 Blockly.Blocks.variables_get = {
   // Variable getter.
   init: function() {
+    var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+    // Must be marked EDITABLE so that cloned blocks share the same var name
+    fieldLabel.EDITABLE = true;
     this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
     this.setHSV(312, 0.32, 0.62);
     this.appendDummyInput()
         .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
-        .appendTitle(new Blockly.FieldVariable(
-        Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        .appendTitle(Blockly.disableVariableEditing ? fieldLabel
+            : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
         .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
     this.setOutput(true);
     this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
@@ -66,12 +69,15 @@ Blockly.Blocks.variables_get = {
 Blockly.Blocks.variables_set = {
   // Variable setter.
   init: function() {
+    var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_SET_ITEM);
+    // Must be marked EDITABLE so that cloned blocks share the same var name
+    fieldLabel.EDITABLE = true;
     this.setHelpUrl(Blockly.Msg.VARIABLES_SET_HELPURL);
     this.setHSV(312, 0.32, 0.62);
     this.appendValueInput('VALUE')
         .appendTitle(Blockly.Msg.VARIABLES_SET_TITLE)
-        .appendTitle(new Blockly.FieldVariable(
-        Blockly.Msg.VARIABLES_SET_ITEM), 'VAR')
+        .appendTitle(Blockly.disableVariableEditing ? fieldLabel
+          : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM), 'VAR')
         .appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
