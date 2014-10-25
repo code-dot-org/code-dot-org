@@ -7,10 +7,7 @@ def hoc_load_countries()
 end
 HOC_COUNTRIES = hoc_load_countries()
 
-def hoc_load_companies()
-  JSON.parse(IO.read(hoc_dir('i18n/companies.json')))
-end
-HOC_COMPANIES = hoc_load_companies()
+HOC_COMPANIES = @config[:companies]
 
 def hoc_load_i18n()
   i18n = {}
@@ -28,10 +25,16 @@ def hoc_s(id)
 end
 
 def hoc_canonicalized_i18n_path(uri)
-  empty, possible_country, possible_language, path = uri.split('/',4)
-  if HOC_COUNTRIES[possible_country]
-    @country = possible_country
+  empty, possible_country_or_company, possible_language, path = uri.split('/',4)
+  
+  if HOC_COUNTRIES[possible_country_or_company]
+    @country = possible_country_or_company
+  elsif HOC_COMPANIES[possible_country_or_company]
+    @company = possible_country_or_company
+    @country = 'us'
+  end
 
+  if @country || @company
     if HOC_I18N[possible_language]
       @user_language = possible_language
     else
