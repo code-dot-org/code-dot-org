@@ -57,10 +57,6 @@ def hoc_canonicalized_i18n_path(uri)
 
   path = uri if resolve_document(uri)
 
-  if HOC_COMPANIES[path]
-    @company = path
-  end
-
   return "/#{path.to_s}"
 end
 
