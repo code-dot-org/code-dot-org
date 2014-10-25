@@ -48,6 +48,7 @@ ga:
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Stage 1
+          Webapp: Stage 2
         events:
           desc: Bounce (beta)
           Bounce: Stage 1
@@ -96,6 +97,7 @@ ga:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Bronze

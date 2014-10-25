@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -3030,7 +3063,7 @@ Bounce.execute = function() {
   Bounce.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions);
+    code = utils.generateCodeAliases(level.codeFunctions, 'Bounce');
     code += BlocklyApps.editor.getValue();
   }
 
@@ -4099,35 +4132,48 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  // helper function used below..
+  function makeNativeMemberFunction(nativeFunc, parentObj) {
+    return function() {
+      return interpreter.createPrimitive(
+                            nativeFunc.apply(parentObj, arguments));
+    };
+  }
+  for (var optsObj in options) {
+    var func, wrapper;
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
+                                interpreter.createNativeFunction(wrapper));
+      }
+    }
+  }
+};
+
+/**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      // helper function used below..
-      function makeNativeMemberFunction(nativeFunc, parentObj) {
-        return function() {
-          return interpreter.createPrimitive(
-                                nativeFunc.apply(parentObj, arguments));
-        };
-      }
-      for (var optsObj in options) {
-        // Create global objects in the interpreter for everything in options
-        var obj = this.createObject(interpreter.OBJECT);
-        this.setProperty(scope, optsObj.toString(), obj);
-        for (var prop in options[optsObj]) {
-          var func = options[optsObj][prop];
-          if (func instanceof Function) {
-            // Populate each of the global objects with native functions
-            // NOTE: other properties are not passed to the interpreter
-            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
-            interpreter.setProperty(obj,
-                                    prop,
-                                    interpreter.createNativeFunction(wrapper));
-          }
-        }
-      }
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -4145,8 +4191,7 @@ exports.evalWith = function(code, options) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
-    var fn = new ctor();
-    return fn.apply(null, args);
+    return new ctor().apply(null, args);
   }
 };
 
@@ -4154,18 +4199,24 @@ exports.evalWith = function(code, options) {
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  return new ctor();
 };
 
 },{}],16:[function(require,module,exports){
@@ -11313,16 +11364,16 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += "var " + codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = [''].concat(arguments); return " +
+          parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -11429,9 +11480,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
@@ -11488,7 +11550,7 @@ exports.dirW = function(d){return "西"};
 
 exports.doCode = function(d){return "做"};
 
-exports.elseCode = function(d){return "其他"};
+exports.elseCode = function(d){return "也"};
 
 exports.finalLevel = function(d){return "恭喜你！你完成了最后一个谜题。"};
 
@@ -11542,7 +11604,7 @@ exports.moveUpTooltip = function(d){return "把球拍向上移动"};
 
 exports.nextLevel = function(d){return "恭喜你！你解决了这个谜题。"};
 
-exports.no = function(d){return "否"};
+exports.no = function(d){return "不"};
 
 exports.noPathAhead = function(d){return "路被堵上了"};
 
@@ -11550,7 +11612,7 @@ exports.noPathLeft = function(d){return "左边没有路"};
 
 exports.noPathRight = function(d){return "右边没有路"};
 
-exports.numBlocksNeeded = function(d){return "这个谜题可以用%1个块解决。"};
+exports.numBlocksNeeded = function(d){return "这个谜题可以用%1个语句块解决。"};
 
 exports.pathAhead = function(d){return "前面有路"};
 
@@ -11596,7 +11658,7 @@ exports.repeatUntil = function(d){return "重复直到"};
 
 exports.repeatUntilBlocked = function(d){return "当前面有路"};
 
-exports.repeatUntilFinish = function(d){return "重复直到结束"};
+exports.repeatUntilFinish = function(d){return "重复直到完成"};
 
 exports.scoreText = function(d){return "积分: "+v(d,"playerScore")+": "+v(d,"opponentScore")};
 
@@ -11606,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "设置坚硬的地板场景
 
 exports.setBackgroundRetro = function(d){return "设置复古场景"};
 
-exports.setBackgroundTooltip = function(d){return "设置背景图像"};
+exports.setBackgroundTooltip = function(d){return "设置背景图案"};
 
 exports.setBallRandom = function(d){return "设置随机弹球"};
 
@@ -11672,15 +11734,15 @@ exports.whenBallMissesPaddleTooltip = function(d){return "当球拍没有击中�
 
 exports.whenDown = function(d){return "当箭头键向下"};
 
-exports.whenDownTooltip = function(d){return "当向下方向键按下时，执行下面操作"};
+exports.whenDownTooltip = function(d){return "执行下面按向上箭头键时采取的行动。"};
 
-exports.whenGameStarts = function(d){return "当游戏开始后"};
+exports.whenGameStarts = function(d){return "当游戏开始"};
 
-exports.whenGameStartsTooltip = function(d){return "在游戏开始时执行以下指令。"};
+exports.whenGameStartsTooltip = function(d){return "执行以下指令在游戏的开始时。"};
 
 exports.whenLeft = function(d){return "当箭头向左"};
 
-exports.whenLeftTooltip = function(d){return "当向左方向键按下时，执行下面的操作"};
+exports.whenLeftTooltip = function(d){return "执行下面按向左箭头键时采取的行动。"};
 
 exports.whenPaddleCollided = function(d){return "当球拍击中球"};
 
@@ -11688,11 +11750,11 @@ exports.whenPaddleCollidedTooltip = function(d){return "当球撞到球拍时，
 
 exports.whenRight = function(d){return "当箭头向右"};
 
-exports.whenRightTooltip = function(d){return "当向右方向键被按下时，执行下面的操作"};
+exports.whenRightTooltip = function(d){return "执行下面按向右箭头键时采取的行动。"};
 
 exports.whenUp = function(d){return "当箭头向上"};
 
-exports.whenUpTooltip = function(d){return "当按下向上箭头时，执行下面的操作"};
+exports.whenUpTooltip = function(d){return "执行下面按向上箭头键时采取的行动。"};
 
 exports.whenWallCollided = function(d){return "当球撞到墙"};
 
@@ -11709,7 +11771,7 @@ exports.yes = function(d){return "是"};
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.and = function(d){return "和"};
 
-exports.blocklyMessage = function(d){return "模块化"};
+exports.blocklyMessage = function(d){return "布洛克里"};
 
 exports.catActions = function(d){return "操作"};
 
@@ -11817,7 +11879,7 @@ exports.tooManyBlocksMsg = function(d){return "可以使用 < x id = 'START_SPAN
 
 exports.tooMuchWork = function(d){return "你让我多做很多工作 ！你可以尝试少重复几次吗？"};
 
-exports.toolboxHeader = function(d){return "模块"};
+exports.toolboxHeader = function(d){return "块"};
 
 exports.openWorkspace = function(d){return "它是如何工作的？"};
 

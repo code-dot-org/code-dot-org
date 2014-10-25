@@ -15,7 +15,7 @@ el-GR:
   twentyhours_heading: Δοκιμάστε τη εισαγωγή μας στη σειρά μαθημάτων πληροφορικής
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course.
   hoc2014_heading: 'Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December 8 - 14, 2014<br/>'
-  hoc2014_students: Students
+  hoc2014_students: Μαθητές
   hoc2014_try: Try it
   hoc2014_teachers: Teachers
   hoc2014_host: Host it
@@ -31,7 +31,7 @@ el-GR:
   view_english_site: Προβολή Αγγλικής σελίδας
   non_english_tutorials: 'Μαθήματα μεταφρασμένα σε πολλές γλώσσες:'
   write_your_first_program: Γράψε το πρώτο σου πρόγραμμα για υπολογιστή
-  learn_cs_concepts: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then statements, and basic algorithms.
+  learn_cs_concepts: 'Μάθε τις βασικές έννοιες της Επιστήμης Υπολογιστών με προγραμματισμό "πάρε-βάλε". Είναι ένα μάθημα σαν παιχνίδι όπου πρωταγωνιστούν βίντεο με διαλέξεις από τον Bill Gates, το Mark Zuckerberg, τα Angry Birds και τα Plants vs Zombies. Μάθε επαναλήψεις, εντολές εάν-τότε και βασικούς αλγορίθμους.'
   all_ages: Όλων των ηλικιών
   beginner: Αρχάριος
   n_participants: '# συμμετέχοντες'
@@ -41,10 +41,10 @@ el-GR:
   congratulations_on_completing_hoc: Συγχαρητήρια για τη συμπλήρωση μιας Ώρας Κώδικα.
   get_a_certificate_of_achievement: Πάρε πιστοποιητικό για το επίτευγμα
   enter_valid_email: Παρακαλώ δώσε μια έγκυρη διεύθυνση email
-  get_a_certificate_message: "We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond One Hour</a>"
+  get_a_certificate_message: "Θα σας στείλουμε ένα πιστοποιητικό και πληροφορίες σχετικά με το πώς να <a href='/learn/beyond'> Συνεχίστε να μαθαίνετε μετά τη Μία Ώρα</a>"
   get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
   thanks_for_submitting: Ευχαριστούμε για την υποβολή!
-  if_you_enjoyed: 'If you enjoyed learning, ask friends to try it too!  We want the whole world to learn.'
+  if_you_enjoyed: 'Εάν απολαύσατε το μάθημα, ζητήστε από φίλους σας να δοκιμάσουν και αυτοί!  Θέλουμε όλος ο κόσμος να μάθει.'
   personalize_certificate: Προσωποποιήστε το πιστοποιητικό σας
   share_achievement: Μοιραστείτε τα επιτεύγματα σας
   beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
@@ -66,7 +66,7 @@ el-GR:
   get_started: Start
   i_agree: Συμφωνώ
   participant_select: -Επιλέξτε-
-  participant_student: Μαθητής
+  participant_student: φοιτητής/μαθητής
   participant_parent: Γονέας
   participant_educator: Εκπαιδευτικός
   participant_engineer: Μηχανικός λογισμικού
@@ -79,7 +79,7 @@ el-GR:
   petition_thankyou: Σας ευχαριστούμε για την συμμετοχή σας στην συλλογή υπογραφών
   carousel_heading_international: Σεμινάρια στη γλώσσα σας
   continue_learning_header: Συνεχίστε την εκμάθηση πέρα από τη μία Ώρα
-  continue_learning_body: 'There are lots of options.  You can learn online, or at a local school, or summer camp.'
+  continue_learning_body: 'Υπάρχουν πολλές επιλογές.  Μπορείτε να μάθετε σε απευθείας σύνδεση (on-line), ή σε ένα τοπικό σχολείο, ή σε θερινό σχολείο.'
   learn_next_level: Continue to the next level
   learn_online: Try other courses online
   learn_classes: Βρείτε τοπικές τάξεις
@@ -92,11 +92,11 @@ el-GR:
   boy: Αγόρι
   help_recruit_coders: Βοηθήστε μας να εντάξουμε περισσότερους προγραμματιστές στην ομάδα σας!
   help_recruit: Βοηθήστε μας να εντάξουμε περισσότερους προγραμματιστές!
-  lines_of_code: 'OVER <b># LINES OF CODE</b> WRITTEN TO DATE.'
-  lines_of_code_alt: '<b>#</b> LINES OF CODE WRITTEN BY STUDENTS'
+  lines_of_code: 'ΠΑΝΩ ΑΠΟ <b># ΓΡΑΜΜΕΣ ΚΩΔΙΚΑ</b> ΕΧΟΥΝ ΓΡΑΦΤΕΙ ΜΕΧΡΙ ΣΗΜΕΡΑ.'
+  lines_of_code_alt: '<b>#</b> ΓΡΑΜΜΕΣ ΚΩΔΙΚΑ ΓΡΑΜΜΕΝΕΣ ΑΠΟ ΜΑΘΗΤΕΣ'
   who_has_done_hoc: 'Ποιος έχει ολοκληρώσει την Ώρα του Κώδικα #HourOfCode; @codeorg'
   hoc_leaderboards: Οι πίνακες Κατάταξης της Ώρας του Κώδικα
-  students_and_lines: '%{students} students have done the Hour of Code and written %{lines} lines of code.'
+  students_and_lines: '%{students} μαθητές έχουν ολοκληρώσει την Ώρα του Κώδικα και έχουν γράψει %{lines} γραμμές κώδικα.'
   start_hoc: Ξεκινήστε την Ώρα του Κώδικα τώρα
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
@@ -172,7 +172,7 @@ el-GR:
   dashboard_landing_office_hours: Ask a question in person! Visit our monthly video office hours.
   dashboard_landing_print_certificates: Εκτύπωση πιστοποιητικών για τους μαθητές που ολοκληρώνουν αυτό το μάθημα
   dashboard_landing_educator_blog: Διαβάστε για τα νέα και τις ενημερώσεις για του υλικό μας στο blog του Παιδαγωγού
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
+  dashboard_landing_smart_hints: 'Παρακαλούμε βοηθήστε μας να προσθέσουμε έξυπνες συμβουλές στα μαθήματα  του Code.org'
   dashboard_landing_video_player: Test our new video player at your school
   dashboard_landing_progress_title: Main class progress
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
@@ -200,12 +200,12 @@ el-GR:
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
-  dashboard_sections_table_section: Section
-  dashboard_sections_table_secret: Secret type
-  dashboard_sections_table_grade: Grade
-  dashboard_sections_table_course: Course
-  dashboard_sections_table_students: Students
-  dashboard_sections_table_code: Section Code
+  dashboard_sections_table_section: Ενότητα
+  dashboard_sections_table_secret: Login Type
+  dashboard_sections_table_grade: Βαθμος
+  dashboard_sections_table_course: Μάθημα
+  dashboard_sections_table_students: Μαθητές
+  dashboard_sections_table_code: Κωδικός ενότητας
   dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: 'If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section.'
   dashboard_sections_secret_word: 'A <b>word</b> allows you to set a secret word for each student.'
@@ -224,7 +224,7 @@ el-GR:
   dashboard_students_male: Αγόρι
   dashboard_students_female: Κορίτσι
   dashboard_students_secret: Secret
-  dashboard_students_password: Κωδικός πρόσβασης
+  dashboard_students_password: κωδικός
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -261,9 +261,21 @@ el-GR:
   dashboard_teacher_worksheet: teacher worksheet
   dashboard_grade_k: K
   dashboard_grade_other: Other
-  dashboard_login_word: word
-  dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_word: Word
+  dashboard_login_picture: Picture
+  dashboard_login_none: Ηλεκτρονικό ταχυδρομείο
   dashboard_new_password: new password
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: φοιτητής/μαθητής
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: "Who creates the student's account?"
+  dashboard_sections_password question: 'What do students use as a "password"?'
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: 'Unique web-page listed on "Manage Students" tab'
+  dashboard_sections_sign_in_main: 'http://code.org and click "Sign in"'
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."

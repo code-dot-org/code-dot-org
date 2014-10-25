@@ -12,7 +12,8 @@
           title: Curs de Testare
           description: Doar un curs de testare intern.
         course1:
-          'Jigsaw: Learn to drag and drop': 'Puzzle: Învaţă să tragi şi să fixezi'
+          'Jigsaw: Learn to drag and drop': 'Puzzle: Află cum se realizeză glisarea
+            și fixarea'
           'Maze: Sequence': 'Labirint: Secvenţă'
           'Maze: Debugging': 'Labirint: Depanare'
           'Artist 1: Intro': 'Artistul 1: Introducere'
@@ -53,8 +54,8 @@
           Suzi: Suzi
           The Artist: Artistul
           Artist Debugging: Depanare Artist
-          Bounce: Săritură
-          'Studio: Create a Story': 'Joacă Laborator: Creează o Poveste'
+          Bounce: Săritura
+          'Studio: Create a Story': 'Laboratorul de Joacă: Creează o Poveste'
           Artist Loops: Bucle de Artist
           Bee Conditionals: Condiţii de Ortografie
           Flappy: Flappy
@@ -144,6 +145,7 @@
           'Bee: Nested Loops2': 'Ortografie: Bucle Adunate2'
           'Bee: Debugging2': 'Ortografie: Depanare2'
           'Artist: Patterns': 'Artist: Patterns'
+          Songwriting: Compunând Cântece
         msm:
           title: Matematică de Şcoală Mijlocie
           description: Lucrare în progres pentru Matematică de Şcoală Mijlocie.

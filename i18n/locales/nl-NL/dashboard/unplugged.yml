@@ -2,7 +2,7 @@ nl:
   data:
     unplugged:
       Unplug1:
-        title: Inleiding tot de informatica
+        title: Inleiding Informatica
         desc: 'This lesson will introduce the concept of Computer Science and explain what a Computer Scientist does.  It will also give students an opportunity to assume the role of a computer scientist.  By the end of the activity, each student will have a take-home reminder of what he or she learned.  You may be tempted to skip teaching young children the vocabulary words that are associated with the lessons that follow, but presenting them in a fun and playful light now is far more productive than waiting for more advanced opportunities.'
         pdfs:
           - unplug1
@@ -94,7 +94,7 @@ nl:
           Students run a relay race, where they dash across the yard to write an algorithm based on a "Graph Paper Programming" image. They can only write one instruction at a time and if there's an error somewhere, they have to erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: Voorwaardelijk
+        title: Voorwaardelijke instructies
         desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
         video: C2_conditionals_with_cards
       BigEvent:

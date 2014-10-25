@@ -4,24 +4,30 @@ layout: wide
 
 * * *
 
-# Prizes - terms and conditions
+# 상품 - 약관 및 조건
 
-## Dropbox space or Skype credit:
+## Dropbox 저장공간 또는 Skype 크레딧:
 
-The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account. Limit one redemption per organizer.
+K-12(유치원~고등학교) 교직원, 교사, 방과후 교사, 교육 기관/조직에 10GB 의 Dropbox 공간이나 $10 Skype 크레딧이 제공됩니다. 10GB 의 무료 저장공간은 기존 Dropbox 계정에 추가되어야 합니다. 주최자 한 명당 최대 1개의 상품이 주어집니다.
 
-Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
+Dropbox 공간이나 Skype 크레딧을 받으려면, 주최자는 Hour of Code 이벤트 행사를 등록해야 합니다. 학교 전체가 Hour of Code 행사에 참여하게 되면, 인증을 위해 각각의 선생님들은 개인적으로 행사 조직자로서 등록해야 합니다.
 
-Code.org will contact organizers after the Hour of Code (Dec. 8-14) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org 는 Hour of Code(12월8일~14일) 행사 이후에 Dropbox 저장공간과 Skype 크레딧을 제공받을 수 있는 방법을 Hour of Code 행사 조직자에게 제공할 것입니다.
 
 <% if @country == 'us' %>
 
-## Video chat with a guest speaker:
+## 초청 연사와 비디오 채팅:
 
-Prize limited to K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 14, 2014. Code.org will randomly select winning schools, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details.
+미국 K-12 학교로만 한정됩니다. 인증을 받기 위해서, 2014.11.14일 이전까지 Hour of Code 행사에 학교 전체 행사로 등록해야 합니다. Code.org 는 인증받은 학교들 중에서 무작위로 선택하여, 웹 채팅 시간을 할당할 것이며, 그것을 위해 적당한 교사와 함께 기술적인 사항을 준비할 것입니다.
 
-## Class-set of laptops (or $10,000 for other technology):
+## 1학급 정도의 노트북(또는 $10,000 상당의 다른 기기):
 
-Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here](http://www.hourofcode.com/us#faq). To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+미국 K-12 학교만 대상으로 합니다. 왜 하필이면 공립학교만 대상으로 하는가? [여러 가지 답변을 살펴보세요](http://www.hourofcode.com/#faq). 인증을 받기 위해서, 2014.11.14일 이전까지 Hour of Code 행사에 학교 전체 행사로 등록해야 합니다. 미국의 학교들 중 한 학교가 1학급 분량의 노트북을 받게 될 것입니다. Code.org 는 2014.12.01일 이전에 해당 학교에 이메일로 알릴 것입니다.
+
+To clarify, this is not a sweepstakes or a contest involving pure chance.
+
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>

@@ -1,27 +1,27 @@
 * * *
 
-title: Partners
+títol: Col·laboradors
 
 * * *
 
-# Major Partners and Corporate Supporters
+# Socis Principals i Col·laboradors Empresarials
 
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'major') %>
-
-* * *
-
-# Hour of Code Promotional partners
-
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'promotional') %>
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# Tutorial partners
+# Col·laboradors promocionals d'Hora de Codi
 
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'tutorial') %>
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# Additional partners
+# Col·laboradors de tutorials
 
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'additional') %>
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
+
+* * *
+
+# Col·laboradors addicionals
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>

@@ -7,8 +7,8 @@ da:
       user:
         name: Brugernavn
         email: E-mail
-        username: Brugernavn
-        password: Adgangskode
+        username: brugernavn
+        password: adgangskode
         password_confirmation: Adgangskode bekræftelse
         current_password: Nuværende adgangskode
         locale: Sprog
@@ -31,11 +31,11 @@ da:
     placeholder: Skriv dit huske-ord her
     submit: Skriv huske-ord
   appname: Code.org
-  stage: Trin
+  stage: trin
   stage_number: 'Stage %{number}'
   puzzle: Puslespil
-  trophies: Trofæer
-  courses: Kurser
+  trophies: trofæer
+  courses: kurser
   of: af
   more: MERE
   less: MINDRE
@@ -236,7 +236,7 @@ da:
       prizes: 'Indsaml alle %{total_trophies} trofæer og vind præmier!'
       prize_earned: 'Alle %{total_trophies} trofæer indsamlet. Prisen vundet!'
       prize_us_only: (Kun for amerikanske studerende)
-      prizes_link: mere info
+      prizes_link: Mere info
   teacher:
     title:
       one: 'Din lærer:'
@@ -256,11 +256,11 @@ da:
       not_tried: Ikke prøvet endnu
       activity: 'Angiver studerende aktivitet i de sidste %{hours} %{plural}'
       no_section: Ikke tildelt sektion
-      trophies: Trofæer
+      trophies: trofæer
     students:
       name: Navn
-      username: Brugernavn
-      password: Adgangskode
+      username: brugernavn
+      password: adgangskode
       manage: Administrer studerende
       dashboard: Gå til lærer Dashboard
       add: Tilføje studerende
@@ -339,12 +339,15 @@ da:
     trynow: Prøv nu
     add_hint_help: Hjælp os med at tilføje smart tips til Code.org undervisning
     20hour_overview: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det er sjovt at lære i alle aldre.
-    test_videos_help: Test vores nye video-afspiller på din skole
+    test_videos_help: Teste vores nye video-afspiller på din skole
     try_beta_courses: Nyt! Prøv vores beta kurser for K-5 elever
     use_as_teacher: Bruge dette websted som en lærer
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Sjov for</h2><h1>Alle</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Mand
     female: Kvinde
@@ -372,7 +375,7 @@ da:
     teacher: Se løsningen
     auth_error: Du har ikke rettigheder til at se løsningen.
     submit: Opdater kunstner placering
-    direction: Start retning
+    direction: Start Direction (in degrees)
   video:
     tab: Video.
     notes: Ingen video? Vis noter.
@@ -381,11 +384,11 @@ da:
     download: Hent Video
   compatability:
     working:
-      header: We are working on support for your browser.
+      header: Vi arbejder på at understøtte din browser.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
       hide_this_warning: Hide this warning
     upgrade:
-      header: Please upgrade your browser.
+      header: Vær venlig at opgradere din browser.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
       button: Take me to the list of supported browsers
   slow_loading: Dette tager længere tid end normalt...
@@ -417,7 +420,7 @@ da:
       unused: Ubrugte niveauer
   upsell:
     hoc:
-      title: En Times Kodning
+      title: En Time af Kode
       body: Prøv grundlæggende i datalogi. Millioner har givet det et forsøg.
     flappy:
       title: Flappy kode
@@ -427,9 +430,13 @@ da:
       body: Prøv vores 20-timers Introduktion til datalogi kursus.
   gallery:
     students_drew_these_with_code: Studerende tegnede disse med kode!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'Tidligere <b>%{days}</b> dage, studerende har tegnet <b>%{count}</b> billeder ved at skrive deres egne computerprogrammer. Klik på billederne for at se hvert program i aktion.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Vil du lave dit eget?
     more: 'Mere &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder, at det ikke er den endelige version af kurset, og er undergivet revision som feedback modtages og forbedringer."
     feedback: Giv feedback
@@ -459,7 +466,7 @@ da:
           title: Grundskole introduktion til datalogi kursus (15-25 timer)
           description: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det er sjovt at lære i alle aldre.
         Hour of Code:
-          title: En times kodning
+          title: En Time af Kode
           description: ""
         edit-code:
           title: Rediger kode

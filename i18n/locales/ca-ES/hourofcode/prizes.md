@@ -1,30 +1,38 @@
 * * *
 
-title: Prizes layout: wide
+títol: premis maquetació: àmplia
 
 * * *
 
-# The Hour of Code — prizes for every organizer
+# L'Hora de Codi — premis per a cada organitzador
 
-## Every organizer wins a thank you gift-code
+## Cada organitzador guanya un codi regal de agraïment
 
-Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
+Cada educador que aculli una Hora de Codi per a estudiants rebrà 10 GB d'espai Dropbox o 10 dòlars de crèdit Skype com regal d'agraïment!
+
+<% if @country == 'uk' %>
+
+## Les aules afortunades guanyen un vídeo xat amb un orador convidat!
+
+20 aules afortunades seran convidades a unir-se a un vídeo xat per celebrar l'Hora de Codi durant desembre 8-14. Els teus estudiants podran fer preguntes i xat amb líders d'indústries tecnològiques. [Comprova els xats de l'any passat](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) amb Bill Gates, Jack Dorsey fundador de Twitter, Susan Wojcicki de Google i Gabe Newell de Valve.
+
+<% end %>
 
 <% if @country == 'us' %>
 
-## Lucky classrooms win a video chat with a guest speaker!
+## Les aules afortunades guanyen un vídeo xat amb un orador convidat!
 
-50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
+50 aules afortunades seran convidades a unir-se a un vídeo xat per celebrar l'Hora de Codi durant desembre 8-14. Els teus estudiants podran fer preguntes i xat amb líders d'indústries tecnològiques. [Comprova els xats de l'any passat](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) amb Bill Gates, Jack Dorsey fundador de Twitter, Susan Wojcicki de Google i Gabe Newell de Valve.
 
-## Lucky schools win a class-set of laptops (or $10,000 for other technology)
+## Escoles afortunades guanyaran un conjunt d'ordinadors portàtils per a l'aula (o 10,000 dòlars per altres tecnologies)
 
-One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
+Una escola afortunada en ***cada*** estat dels EUA (+ Washington D.C.) guanyarà tecnologia per valor de 10,000 dòlars. Organitza l'Hora de Codi per a cada estudiant de la teva escola a qualificar. Omple el següent formulari de sol·licitud.
 
-## Hardware Prize application form:
+## Formulari de sol·licitud de premi de maquinari:
 
-If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
+Si has inscrit tota l'escola per participar en l'Hora de Codi, entra per guanyar un conjunt d'ordinadors portàtils per a l'aula (o 10,000 dòlars per altre tecnologia) per a la teva escola! Només és necessita un mestre per fer la sol·licitud de tota l'escola.
 
-<%= view :hardware\_prizes\_form %>
+<%= view :hardware_prizes_form %>
 
 <what are your odds of winning?>
 
@@ -32,6 +40,6 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 <% end %>
 
-## More questions about prizes?
+## Més preguntes sobre premis?
 
-Check out [Terms and Conditions](/prizes-terms) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+Consultar els [Termes i Condicions](/prizes-terms) o visitar el nostre fòrum per veure [PMF](http://support.code.org) i fer les teves preguntes.

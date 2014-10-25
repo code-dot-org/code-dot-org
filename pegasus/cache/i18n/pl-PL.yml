@@ -10,7 +10,7 @@
   petition_sign_message: 'Jeśli zgadzasz się, wpisz swoje nazwisko. Przyłącz się do
     # innych.'
   name: Imię/Nazwisko
-  email: Email
+  email: Adres e-mail
   zipcode: Kod pocztowy lub kraj
   submit: Wyślij
   twentyhours_heading: Wypróbuj nasz kurs Wstęp do informatyki
@@ -84,7 +84,7 @@
   get_started: Rozpocznij
   i_agree: Zgadzam się
   participant_select: "-Wybierz-"
-  participant_student: Uczeń
+  participant_student: uczeń
   participant_parent: Rodzic
   participant_educator: Nauczyciel
   participant_engineer: Programista
@@ -115,8 +115,8 @@
   lines_of_code_alt: "<b>#</b>LINIE KODU NAPISANE PRZEZ UCZNIÓW"
   who_has_done_hoc: 'Kto wykonał #HourOfCode? @codeorg'
   hoc_leaderboards: Panel godziny programowania (Hour of Code)
-  students_and_lines: "%{students} uczniów ukończyło godzinę kodowania (Hour of Code)
-    \ i napisało %{lines} linii kodu."
+  students_and_lines: "%{students} uczniów ukończyło godzinę programowania (Hour of
+    Code)  i napisało %{lines} linii kodu."
   start_hoc: Rozpocznij teraz godzinę programowania (One Hour of Code)
   contact_form_topic_press: Prasa/media (wywiad lub wypowiedź)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -263,7 +263,7 @@
   dashboard_students_male: Mężczyzna
   dashboard_students_female: Kobieta
   dashboard_students_secret: Secret
-  dashboard_students_password: Hasło
+  dashboard_students_password: hasło
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -316,3 +316,16 @@
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: uczeń
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

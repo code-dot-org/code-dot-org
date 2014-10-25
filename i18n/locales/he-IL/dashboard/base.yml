@@ -6,11 +6,9 @@ he:
     attributes:
       user:
         name: Display Name
-        email: אימייל
-        username: |
-          שם משתמש
-          
-        password: סיסמא
+        email: דואר אלקטרוני
+        username: שם משתמש
+        password: סיסמה
         password_confirmation: וידוא סיסמא
         current_password: הסיסמה הנוכחית
         locale: שפה
@@ -19,7 +17,7 @@ he:
         edit_header: שינוי פרטי החשבון
         error:
           future: לא יכול להיות בעתיד
-  hello: הי עולם
+  hello: שלום עולם
   welcome_back: 'ברוך שובך, %{name}'
   add_teacher_form:
     code_or_email:
@@ -36,8 +34,8 @@ he:
   stage: שלב
   stage_number: 'Stage %{number}'
   puzzle: חידה
-  trophies: גביעים
-  courses: קורסים
+  trophies: גביעי ניצחון
+  courses: מסלולים
   of: של
   more: יותר
   less: פחות
@@ -95,7 +93,7 @@ he:
   signin_form:
     title: כבר יצרת משתמש? היכנס למערכת
     login: דוא ל או שם משתמש
-    password: סיסמא
+    password: סיסמה
     remember: זכור אותי
     submit: התחבר
   signin:
@@ -236,7 +234,7 @@ he:
     popup:
       progress: ההתקדמות שלך
       lines: 'סה כ שורות קוד: %{lines}'
-      close: סגור
+      close: קרוב
       mastery: עקרונות
       puzzle_map: שלבים
       prizes: 'אסוף את כל ה-%{total_trophies} פרסים כדי לזכות בפרס אמיתי!'
@@ -262,13 +260,11 @@ he:
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
-      trophies: גביעים
+      trophies: גביעי ניצחון
     students:
       name: שם
-      username: |
-        שם משתמש
-        
-      password: סיסמא
+      username: שם משתמש
+      password: סיסמה
       manage: נהל תלמידים
       dashboard: Go to Teacher Dashboard
       add: הוסף תלמיד
@@ -292,7 +288,7 @@ he:
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
+      rename: שינוי שם
       edit: edit
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
@@ -346,13 +342,16 @@ he:
     tryfirst: 'או, שתוכל לנסות זאת קודם כל, ולהירשם לאחר מכן:'
     trynow: נסה עכשיו
     add_hint_help: אנא עזור לנו להוסים רמזים חכמים למדריכים code.org
-    20hour_overview: בקורס בן ה20 שעות הזה נפגוש את ליבת מדעי המחשב ורעיונות התכנות. הקורס תוכנן לשימוש בכיתוב k-8, אבל זה כף ללמידה בכל הגילאים.
+    20hour_overview: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
     test_videos_help: נסה את נגן הוידאו החדש שלנו בבית ספרך
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: גבר
     female: אישה
@@ -380,7 +379,7 @@ he:
     teacher: תראה את הפתרון
     auth_error: אינך מורשה לראות את הפתרון.
     submit: עדכן מיקום אומן
-    direction: התחל כיוון
+    direction: Start Direction (in degrees)
   video:
     tab: וידאו.
     notes: אין וידאו? הצג הערות.
@@ -389,11 +388,11 @@ he:
     download: הורד סרטון
   compatability:
     working:
-      header: We are working on support for your browser.
+      header: אנחנו עובדים על תמיכה עבור הדפדפן שלך.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
       hide_this_warning: Hide this warning
     upgrade:
-      header: Please upgrade your browser.
+      header: אנא שדרג את הדפדפן.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
       button: Take me to the list of supported browsers
   slow_loading: זה לוקח זמן רב מהרגיל...
@@ -435,9 +434,13 @@ he:
       body: נסה את קורס מדעי המחשב בן 20 השעות שלנו.
   gallery:
     students_drew_these_with_code: תלמידים ציירו את אלה בעזרת קוד!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'בימים<b>%{days}</b> האחרונים, תלמידים ציירו  <b>%{count}</b> תמונות בעזרת כתיבת תוכנות במחשב שלהם. לחץ על כל תמונה כדי לראות את ההתקדמות של כל אחד.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: רוצה להכין אחד משלך?
     more: 'עוד &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
@@ -455,7 +458,7 @@ he:
     correct_title: נכון
     correct_body: זאת התשובה הנכונה.
   dialog:
-    ok: או-קיי
+    ok: אישור
   time:
     hour: 1 hour
     day: day
@@ -465,12 +468,12 @@ he:
       name:
         20-hour:
           title: ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)
-          description: בקורס בן ה20 שעות הזה נפגוש את ליבת מדעי המחשב ורעיונות התכנות. הקורס תוכנן לשימוש בכיתוב k-8, אבל זה כף ללמידה בכל הגילאים.
+          description: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
         Hour of Code:
           title: שעה של קוד
           description: ""
         edit-code:
-          title: Edit Code
+          title: עריכת קוד
           description: ""
         events:
           title: Events

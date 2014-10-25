@@ -6,7 +6,7 @@ layout: wide
 
 # Nagrade - pojmovi i postavke
 
-## Dropbox space or Skype credit:
+## Prostor na Dropbox-u ili Skype kredit:
 
 10 GB prostora na Dropbox ili $10 Skype kredit su ograničeni za K-12 fakultete, nastavnike školskih klubova i organizacije obrazovanja. 10 GB slobodnog prostora se mora dodati na postojeći račun Dropbox. Ograniči jedno otkupljenje po organizatoru.
 
@@ -16,12 +16,18 @@ Code.org će kontaktirati organizatore nakon Sata programiranja (decembra 8-14) 
 
 <% if @country == 'us' %>
 
-## Video chat with a guest speaker:
+## Video razgovor sa gostujućim govornikom:
 
-Prize limited to K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 14, 2014. Code.org will randomly select winning schools, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details.
+Nagrade ograničene za SAD K-12 škole. Kako bi se kvalificirali, cijela se škola mora registrirati za Sata programiranja do novembra 14, 2014. Code.org će nasumično odabrati pobjedničke škole, osigurati termin za web razgovor, te raditi sa odgovarajućim učiteljem kako bi se postavili svi detalji tehnologije.
 
-## Class-set of laptops (or $10,000 for other technology):
+## Skup klasa za prijenosna računala (ili $10,000 za druge tehnologije):
 
-Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here](http://www.hourofcode.com/us#faq). To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+Nagrada ograničena za javne SAD K-12 škole. Zašto samo državne škole? [See the answer here](http://www.hourofcode.com/#faq). Kako bi se kvalificirali, cijela se škola mora registrirati za Sata programiranja do novembra 14, 2014. Jedna škola u svakoj državi SAD-a će dobiti računala za cijelu učionicu. Code.org će odabrati i obavijestiti pobjednika putem e-maila do Decembra 1, 2014.
+
+To clarify, this is not a sweepstakes or a contest involving pure chance.
+
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>

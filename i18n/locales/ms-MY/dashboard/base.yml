@@ -7,8 +7,8 @@ ms:
       user:
         name: Display Name
         email: E-mel
-        username: Nama pengguna
-        password: Kata laluan
+        username: nama pengguna
+        password: kata laluan
         password_confirmation: Pengesahan kata laluan
         current_password: Kata laluan semasa
         locale: Bahasa
@@ -31,11 +31,11 @@ ms:
     placeholder: Sila masukkan petunjuk anda di sini
     submit: Tambah petunjuk
   appname: Code.org
-  stage: Peringkat
+  stage: peringkat
   stage_number: 'Stage %{number}'
   puzzle: Teka-teki
   trophies: Piala
-  courses: Kursus
+  courses: kursus-kursus
   of: dari
   more: LAGI
   less: KURANG
@@ -252,8 +252,8 @@ ms:
       trophies: Piala
     students:
       name: Nama
-      username: Nama pengguna
-      password: Kata laluan
+      username: nama pengguna
+      password: kata laluan
       manage: Mengurus pelajar
       dashboard: Go to Teacher Dashboard
       add: Menambah pelajar
@@ -322,7 +322,7 @@ ms:
     student_progress: Kemajuan pembelajaran anda
     student_stats: 'Anda telah memperolehi %{trophy_count} daripada %{trophy_max} "Concept Mastery" trofi.'
     student_left_off: 'Mana anda tinggalkan:'
-    student_finished_prize: 'Anda telah melengkapkan kesemua tutorial, tuntut %{prize_link} anda dan pilih kelas lain %{online_link} atau di %{local_school_link}'
+    student_finished_prize: 'Anda telah melengkapkan kesemua tutorial, tuntut %{prize_link} dan pilih kelas lain %{online_link} atau di %{local_school_link}'
     student_finished: 'Anda telah selesaikan semua tutorial, pilih kelas lain %{online_link} atau %{local_school_link}'
     local_school: sekolah tempatan
     online: online
@@ -338,6 +338,9 @@ ms:
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Lelaki
     female: Perempuan
@@ -365,7 +368,7 @@ ms:
     teacher: Lihat penyelesaian
     auth_error: Anda tidak disahkan untuk melihat penyelesaian tersebut.
     submit: Kemaskini Lokasi Pelukis
-    direction: Mulakan hala tuju
+    direction: Start Direction (in degrees)
   video:
     tab: Video.
     notes: Tiada video? Lihat nota.
@@ -374,11 +377,11 @@ ms:
     download: Muat turun Video
   compatability:
     working:
-      header: We are working on support for your browser.
+      header: Kami sedang berusaha menyokong pelayar anda.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
       hide_this_warning: Hide this warning
     upgrade:
-      header: Please upgrade your browser.
+      header: Sila naik taraf pelayar anda.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
       button: Take me to the list of supported browsers
   slow_loading: Ini memakan masa lebih lama daripada biasa...
@@ -420,9 +423,13 @@ ms:
       body: Cuba 20 jam Pengenalan kepada kursus Sains Komputer kami.
   gallery:
     students_drew_these_with_code: Pelajar telah melukis ini dengan kod!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'Sebelum ini <b>%{days}</b> hari, pelajar telah melukis <b>%{count}</b> gambar dengan menulis program komputer mereka sendiri. Klik pada gambar untuk melihat program dimainkan.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Ingin buat anda punya sendiri?
     more: 'Lagi &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
@@ -455,7 +462,7 @@ ms:
           title: Hour of Code
           description: ""
         edit-code:
-          title: Edit Code
+          title: Edit kod
           description: ""
         events:
           title: Events

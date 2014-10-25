@@ -5,10 +5,10 @@
         blank: gerekli
     attributes:
       user:
-        name: "İsim"
-        email: E-Posta
-        username: Kullanıcı Adı
-        password: Parola
+        name: Görünen isim
+        email: E-posta
+        username: kullanıcı adı
+        password: "şifre"
         password_confirmation: "Şifre doğrulama"
         current_password: "Şu anki parola"
         locale: Dil
@@ -31,18 +31,18 @@
     placeholder: Lütfen ipucunu buraya girin
     submit: "İpucu ekle"
   appname: Code.org
-  stage: Kademe
-  stage_number: Stage %{number}
-  puzzle: Yapboz
-  trophies: Kupalar
-  courses: Kurslar
+  stage: kademe
+  stage_number: Sahne %{number}
+  puzzle: Bulmaca
+  trophies: kupalar
+  courses: kurslar
   of: "/"
   more: DAHA FAZLA
   less: DAHA AZ
   try_hoc: 'Kod Saati''ni denemek için buraya tıklayın >> '
   try_k8intro: "İlköğretim okullarına yönelik Bilgisayar Bilimlerine Giriş dersimizi
     deneyin (15-25 saat)"
-  k8intro: K-8 Bilişim Teknolojileri Kursu Tanıtımı (15-25 saat)
+  k8intro: K-8 Bilişim Teknolojilerine Giriş Kursu (15-25 saat)
   already_started: 'Zaten başladınız mı? Buradan devam edin >> '
   demos: 'Yönetici: Tüm Demolar'
   continue: Devam
@@ -64,9 +64,11 @@
     need_confirmation: Onay talimatlarını almadınız mı?
     need_unlock: Kilit açma talimatlarını almadınız mı?
   signup_form:
-    overview_student: "İlerlemenizi görebilmeniz için bir hesap oluşturun."
-    overview_teacher: Bir hesap oluşturarak sınıfınızda bilgisayar bilimi öğretin.<p/>
-      Öğrencilerinizin ilerlemesini takip edebilecek ve ödül kazanabileceksiniz.
+    overview_student: İlerleme durumunuzu takip etmek için kayıt olun. Giriş işlemleri
+      için ve şifrenizi unuttuğunuzda E-posta adresiniz kullanılacaktır. Daha fazla
+      bilgi için <a href="http://code.org/privacy">gizlilik politikamızı</a> tıklayınız.
+    overview_teacher: Bİr hesap ile kayıt olun ve sınıfınıza bilgisayar bilimi öğretin.<p/>
+      Öğrenci ekleyebilecek ve onların ilerlemelerini takip edebileceksiniz.
     no_signup_message: <a target="_blank" href="http://learn.code.org">Çeşitli aşamalara
       ve bulmacalara gözatabilirsin</a> ama ilerlemeni kaydetmek için kayıt olman
       gerekmektedir.
@@ -101,9 +103,10 @@
     valid_password: Geçerli parola!
     invalid_password: Parola en az 6 karakter olmalıdır
     mismatch_password: Girdiğiniz iki parola aynı değil
-    student_terms: Code.org <a href='http://code.org/tos'>hizmet koşullarına</a> bağlı
-      olduğumu kabul ediyorum. Eğer 13 yaşından küçüksem, Code.org hizmetlerini kullanmak
-      için gereken bu formu ebeveynimin veya yasal velimin onayıyla gönderdiğimi doğruluyorum.
+    student_terms: Code.org <a href='http://code.org/tos'>hizmet şartlarını</a> kabul
+      ediyorum. Eğer 13 yaşın altında isem, bu formu doldurarak ebeveynimin veya yasal
+      vasimin izni ile Code.org hizmetlerini kullandığımı onaylarım.<br/> 13 yaşın
+      altındaki kullanıcılar için, iletişimde kullanılan e-posta adresleri saklanmıyor.
     teacher_terms: Code.org <a href='http://code.org/tos'>hizmet koşullarına</a> bağlı
       olduğumu kabul ediyorum.
     additional_information: Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç
@@ -111,7 +114,7 @@
   signin_form:
     title: Zaten bir hesabınız var mı? Oturum Aç
     login: Kullanıcı adınız veya e-posta
-    password: "Şifre"
+    password: Parola
     remember: Beni hatırla
     submit: Giriş Yap
   signin:
@@ -123,7 +126,7 @@
     name: Adınızı seçin
     picture: "Şimdi gizli resminizi bulun"
     words: "Şimdi gizli kelimelerinizi girin"
-    login: Giriş yap
+    login: Giriş Yap
   password:
     reset_form:
       title: "Şifrenizi mi unuttunuz?"
@@ -256,8 +259,8 @@
       finished_hoc: Kod Saati'ni tamamladım
       sign_in_to_save: "İlerleme kaydetmek için oturum açın"
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: Uygulama oluşturun
+        artist: Bir şeyler çizin
     user:
       classroom: "Öğrencilerim"
       label: Merhaba %{username}
@@ -267,17 +270,17 @@
       logout: "Çıkış Yap"
       signin: Giriş Yap
       signup: Kaydol
-      already_registered: Already registered?
+      already_registered: Zaten hesabınız var mı?
     popup:
       progress: "İlerlemeniz"
       lines: 'Toplam kod satırı: %{lines}'
-      close: KAPAT
+      close: kapat
       mastery: Kavramlar
-      puzzle_map: Kademeler
+      puzzle_map: aşamalar
       prizes: "%{total_trophies} kupanın hepsini topla ve ödül kazan!"
       prize_earned: "%{total_trophies} kupanın hepsi toplandı. Ödül kazandın!"
       prize_us_only: "(Sadece ABD öğrencileri)"
-      prizes_link: daha fazla bilgi
+      prizes_link: Daha fazla bilgi
   teacher:
     title:
       one: "Öğretmenin :"
@@ -297,11 +300,11 @@
       not_tried: Daha denenmedi
       activity: Son %{hours} %{plural} içerisindeki öğrenci aktivitesini gösterir
       no_section: Atanan bölüm yok
-      trophies: Kupalar
+      trophies: kupalar
     students:
       name: "İsim"
-      username: Kullanıcı adı
-      password: "Şifre"
+      username: kullanıcı adı
+      password: "şifre"
       manage: "Öğrencileri yönet"
       dashboard: "Öğretmen Panosuna Git"
       add: "Öğrenciler Ekle"
@@ -361,8 +364,8 @@
     classroom_activity: Bağlantısız Etkinlik
   home:
     title: Code Studio
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    all_courses: 1, 2 ve 3 nolu derslerine genel bakış
+    lesson_plans: Ders planları
     signin_message: Zaten üye misiniz? % {link}
     student_reg_link: "Öğrenci Üyelik"
     teacher_reg_link: "Öğretmen Üyelik"
@@ -381,9 +384,8 @@
     student_stats: '"Kavram Ustalığı" kupalarından %{trophy_max} kupadan %{trophy_count}
       kupayı kazandınız.'
     student_left_off: 'Kaldığınız yer:'
-    student_finished_prize: Bütün eğitimleri tamamladınız, %{prize_link} ödül talep
-      edin ve başka bir %{online_link} ders ya da %{local_school_link} yerel ders
-      seçin
+    student_finished_prize: Bütün eğitimleri tamamladınız, %{prize_link} talep ediniz
+      ve başka bir sınıf seçin %{online_link} ya da %{local_school_link}
     student_finished: Bütün örnek dersleri tamamladınız, şimdi başka bir  %{online_link}
       ders veya %{local_school_link} yerel ders seçebilirsiniz
     local_school: Yerel okul
@@ -394,15 +396,18 @@
     tryfirst: 'Ya da önce deneyin, sonra üye olun:'
     trynow: "Şimdi dene"
     add_hint_help: Code.org eğitimlerine akıllı ipuçları eklememize yardım edin
-    20hour_overview: 20-saatlik eğitimimiz bilgisayar biliminin temellerini ve programlama
-      kavramını öğretir. Bu kurs K-8 sınıflarında kullanım için tasarlandı; yine de,
-      herhangi bir yaşta öğrenmek eğlencelidir.
+    20hour_overview: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını
+      tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her
+      yaştan öğrenmek için eğlencelidir.
     test_videos_help: Okulunuzda yeni video oynatıcımızı deneyin
     try_beta_courses: Yeni! K-5 öğrencileri için beta kurslarımızı deneyin
     use_as_teacher: Siteyi öğretmen profiliyle kullan
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    heading_elementary: "<h1>İlkögretim öğrenciliri</h1> için <h2>20 saatlik kurslar</h2>"
+    heading_apps: "<h1>Herkes</h1> için <h2>eğlence</h2>"
+    heading_legacy: "<h1>Tüm yaş</h1> grupları için <h2>genel kurslarımız</h2>"
+    gallery:
+      your_turtle: "Çizimlerim"
+      your_studio: Uygulamalarım
   gender:
     male: Erkek
     female: Kadın
@@ -443,20 +448,21 @@
   compatability:
     working:
       header: Tarayıcı desteği üzerinde çalışıyoruz.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Your browser doesn't support all the features required, and you may experience
-        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
-        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
-        your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+      message: Code.org modern web teknolojilerini kullanır. Bu sitenin kullanımının
+        daha hızlı olmasını sağlar. Tarayıcınız ihtiyaç duyduğumuz özellikleri desteklemiyorsa
+        sitemizi kullanırken bazı problemler ile karşılaşabilirsiniz. Bulduğunuz herhangi
+        bir hatayı <a href='%{report_issue_url}'>hata bildir</a>i kullanarak bize
+        bildirin. Ayrıca tarayıcınızı da <a href='%{supported_browsers_url}'>desteklenen
+        bir versiyon</a> ile güncelleyebilirsiniz.
+      hide_this_warning: Bu uyarıyı gizle
     upgrade:
       header: Lütfen tarayıcınızı yükseltin.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
-      button: Take me to the list of supported browsers
+      message: Code.org modern web teknolojilerini kullanır. Bu sitenin kullanımının
+        daha hızlı olmasını sağlar. Maalesef tarayıcınız bu sitenin çalışması için
+        gerekli özellikleri desteklemiyor. <br/><br/>Bizim tavsiye ettiğimiz tarayıcı
+        listesinden bir tanesini kurunuz. <a href='#'>Sayfayı görüntülemeyi</a> deneyebilirsiniz,
+        fakat özelliklerin çalışmaması  muhtemeldir.
+      button: Desteklenen tarayıcılar listesi
   slow_loading: Bu normalden uzun sürüyor...
   try_reloading: Sayfayı yeniden yüklemeyi deneyin
   next_stage: Bitti! Bir sonraki aşamaya geç
@@ -467,15 +473,14 @@
     title: Benim programımın çalışırını görmek için, 'Çalıştır' seçeneğini tıklayın
     bounce_og_title: Benim Bounce oyunuma göz atın
     flappy_og_title: Benim Flappy Oyun'uma göz atın
-    studio_og_title: Benim hikayeme göz atın
+    studio_og_title: Play Lab uygulamalarımı kontrol et
     og_description: Ben Code.org ile kendi kodumu yazdım
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
-      the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the
-      text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the
-      text.
+    phone_number_not_allowed: Telefon numarası var gibi görünüyor. Yazıyı değiştirmeyi
+      deneyin.
+    address_not_allowed: "İçinde Adres var gibi görünüyor. Yazıyı değiştirmeyi deneyin."
+    email_not_allowed: içinde E-mail var gibi görünüyor. Yazıyı değiştirmeyi deneyiniz.
+    profanity_not_allowed: "İçinde küfür, kaba konuşma var gibi görünüyor. İçeriği
+      değiştirmeyi deneyiniz."
   builder:
     created: Yeni bir komut dosyası oluşturdu.
     destroyed: Bir komut dosyası yok.
@@ -489,7 +494,7 @@
       unused: Kullanılmamış Seviyeler
   upsell:
     hoc:
-      title: Kod Saati
+      title: Saat Kodu
       body: Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.
     flappy:
       title: Flappy Kod
@@ -500,11 +505,17 @@
       body: 20 saatlik Bilişim Teknolojilerine Giriş kursumuzu deneyin.
   gallery:
     students_drew_these_with_code: "Öğrenciler kod ile bunu çizdiler!"
+    students_made_these_with_code: "Öğrenciler bunları kod ile yaptı!"
     picture_count: Geçtiğimiz <b>%{days}</b> günde, öğrenciler <b>%{count}</b> tane
       resmi kendi yazdıkları programlarla çizdiler. Her programın çalışırını görmek
       için resimlerin üzerine tıklayın.
+    activity_count: geçmiş <b>%{days}</b> günde, öğrenciler kendi bilgisayar programlarını
+      yazarak <b>%{count}</b> kadar uygulama ve resimler oluşturdu. Ekran görüntülerine
+      tıklayıp her bir programın nasıl çalıştığını görün.
     want_to_make_your_own: Kendininkini yapmak ister misin?
     more: Daha fazla &rarr;
+    caption_by_name_age: "%{name} tarafından, %{age} yaşında"
+    caption_time_ago: "%{time_ago} zaman önce"
   landing:
     prerelease: Bu ders, <span class='betatext'> beta</span> olduğunu.  Bu dersin
       son hali değildir, geribildirimlerin alındığı ve geliştirmelerin yapıldığı versiyonudur.
@@ -516,7 +527,7 @@
     wrong_title: Yanlış cevap
     wrong_body: Girdiğiniz cevap doğru değil.  Lütfen tekrar deneyin!
     correct_title: Doğru
-    correct_body: Doğru cevap bu.
+    correct_body: "İşte bu doğru cevap."
   match:
     wrong_title: Yanlış çözüm
     wrong_body: Girdiğiniz çözüm doğru değil.  Lütfen tekrar deneyin!
@@ -532,18 +543,18 @@
     script:
       name:
         20-hour:
-          title: K-8 Bilişim Teknolojilerine Giriş Kursu (15-25 saat)
+          title: K-8 Bilişim Teknolojileri Kursu Tanıtımı (15-25 saat)
           description: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını
-            tanıtır. Ders, K-8 sınıflarında kullanılmak üzere tasarlanmıştır, ama
-            her yaşta öğrenmek eğlencelidir.
+            tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama
+            her yaştan öğrenmek için eğlencelidir.
         Hour of Code:
-          title: Kod saati
+          title: Saat Kodu
           description: ''
         edit-code:
           title: Kodu Düzenle
           description: ''
         events:
-          title: Etkinlikler
+          title: Olaylar
           description: ''
         builder:
           title: Oluşturucu
@@ -570,6 +581,6 @@
       asla kiralamaz, satmaz veya üçüncü partilerle paylaşmaz.
     sign_out: Eğer yaşınızı girmek istemiyorsanız <a href="%{url}">buraya tıklayarak</a>
       çıkış yapabilirsiniz.
-  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
-    You may browse <a href="http://support.code.org">support.code.org</a> without
-    signing in or ask your parent or teacher to contact us for you.
+  zendesk_too_young_message: Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar.
+    <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan
+    kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.

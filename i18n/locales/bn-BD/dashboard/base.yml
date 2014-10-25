@@ -44,7 +44,7 @@ bn:
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
   already_started: 'ইতোমধ্যে শুরু করেছ? এখান থেকে চালিয়ে যাও >> '
   demos: 'Admin: সকল Demos'
-  continue: চালিয়ে যাও
+  continue: চালিয়ে যান
   prize: prize
   more_info: আরও তথ্য
   auth:
@@ -93,7 +93,7 @@ bn:
   signin_form:
     title: Have an account already? Sign in
     login: ব্যবহারকারীর নাম অথবা ই-মেইল
-    password: পাসওয়ার্ড
+    password: পাসওআর্ড
     remember: আমাকে মনে রাখুন
     submit: সাইন ইন করুন
   signin:
@@ -105,7 +105,7 @@ bn:
     name: Choose your name
     picture: Now find your secret picture
     words: Now enter your secret words
-    login: Sign in
+    login: সাইন ইন করুন
   password:
     reset_form:
       title: আপনার পাসওয়ার্ড ভুলে গেছেন?
@@ -224,8 +224,8 @@ bn:
       settings: My account
       prizes: Prizes
       logout: Sign out
-      signin: Sign in
-      signup: Sign up
+      signin: সাইন ইন করুন
+      signup: সাইন আপ
       already_registered: Already registered?
     popup:
       progress: Your progress
@@ -236,7 +236,7 @@ bn:
       prizes: 'Collect all %{total_trophies} trophies and win prizes!'
       prize_earned: 'All %{total_trophies} trophies collected. Prize won!'
       prize_us_only: (U.S. students only)
-      prizes_link: more info
+      prizes_link: আরও তথ্য
   teacher:
     title:
       one: 'Your teacher:'
@@ -258,7 +258,7 @@ bn:
       no_section: No assigned section
       trophies: পুরষ্কার
     students:
-      name: Name
+      name: নাম
       username: উজারন্যাম
       password: পাসওআর্ড
       manage: Manage students
@@ -346,6 +346,9 @@ bn:
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Male
     female: Female
@@ -373,7 +376,7 @@ bn:
     teacher: See the solution
     auth_error: You are not authorized to see the solution.
     submit: Update Artist Location
-    direction: Start Direction
+    direction: Start Direction (in degrees)
   video:
     tab: Video.
     notes: No video? Show notes.
@@ -428,9 +431,13 @@ bn:
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Want to make your own?
     more: 'More &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
@@ -463,7 +470,7 @@ bn:
           title: Hour of Code
           description: ""
         edit-code:
-          title: Edit Code
+          title: কোড সম্পাদনা করুন
           description: ""
         events:
           title: Events

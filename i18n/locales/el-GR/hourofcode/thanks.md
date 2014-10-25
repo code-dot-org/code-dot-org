@@ -1,16 +1,16 @@
 * * *
 
-title: Σας ευχαριστούμε για την εγγραφή σας! layout: ευρεία
+title: Σας ευχαριστούμε για την εγγραφή σας! layout: wide
 
-social: "og:title": "<%= hoc\_s(:meta\_tag\_og\_title) %>" "og:description": "<%= hoc\_s(:meta\_tag\_og\_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
+social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
 
-"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc\_s(:meta\_tag\_twitter\_title) %>" "twitter:description": "<%= hoc\_s(:meta\_tag\_twitter\_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv\_load\_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
 
 * * *
 
 <% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc\_s(:twitter\_default\_text)} twitter[:hashtags] = 'HourOfCode' unless hoc\_s(:twitter\_default\_text).include? '#HourOfCode' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
 # Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
 
@@ -18,40 +18,44 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 <% if @country == 'us' %>
 
-Βοηθείστε [όλο το σχολείο σας](/us/prizes) να συμμετάσχει και να έχει την ευκαρία να διεκδικήσει μεγάλα βραβεία.
+Κάλεσε [όλο το σχολείο σου](/us/prizes) να συμμετάσχει για μια ευκαιρία για μεγάλα έπαθλα για όλο το σχολείο.
 
 <% end %>
 
 ## 1. Διάδωσέ το
 
-Πες στους φίλους σου για την Ώρα του Κώδικα #HourOfCode.
+Πες στους φίλους σου για την Ώρα του Κώδικα (#HourOfCode).
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 <% if @country == 'us' %>
 
-## 2. Ζήτησε από το σχολείο σου να προσφέρει Μια Ώρα Κώδικα
+## 2. Ask your whole school to offer an Hour of Code
 
-[Στείλτε αυτό το Ηλεκτρονικό Μήνυμα](/resources#email) ή [δώστε αυτό το φυλλάδιο στο Διευθυντή σας](/files/schools-handout.pdf). Από τη στιγμή που θα εγγραφείτε, το σχολείο σας [μπορεί να διεκδικήσει τεχνολογικό εξοπλισμό αξίας 10000$ ](/prizes) και να προκαλέσει και άλλα σχολεία της περιοχής να συμμετάσχουν και να διεκδικήσουν.
+[Στείλε αυτό το email](/resources#email) ή [δώσε αυτό το φυλλάδιο στο διευθυντή σου](/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](/prizes) and challenge other schools in your area to get on board.
 
 <% else %>
 
-## 2. Ζήτησε από το σχολείο σου να προσφέρει Μια Ώρα Κώδικα
+## 2. Ask your whole school to offer an Hour of Code
 
-[Στείλετε αυτό το μήνυμα](/resources#email) ή δώστε [αυτό το φυλλάδιο](/files/schools-handout.pdf) στο διευθυντή σας.
+[Στείλε αυτό το μήνυμα](/resources#email) ή δώσε [αυτό το φυλλάδιο](/files/schools-handout.pdf) στο διευθυντή σου.
 
 <% end %>
 
-## 3. Ζήτα το από τον εργοδότη σου
+## 3.Κάντε μια γενναιόδωρη δωρεά 
 
-[Στείλε αυτό το email](/resources#email) στον προιστάμενό σου. ή [δώστου αυτό το φυλλάδιο](/resources/hoc-one-pager.pdf).
+[Donate to our crowdfunding campaign](http://code.org/donate). Για να διδάξουμε σε 100 εκατομμύρια παιδιά, θέλουμε την υποστήριξη σας. We just launched what could be the [largest education crowdfunding campaign](http://code.org/donate) in history. Every dollar will be matched by major Code.org [donors](http://code.org/about/donors), doubling your impact.
 
-## 4. Προώθησε την Ώρα του Κώδικα στην περιοχή σου
+## Ζήτα από τον εργοδότη σου να εμπλακεί 
 
-Φτιάξε ένα τμήμα για — ένα σώμα προσκόπων, μια ενορία, ένα πανεπιστήμιο, μια ενώση εργαζομένων. Ή κάνε μια Ώρα του Κώδικα για τη γειτονιά σου.
+[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
 
-## 5. Ζήτα από ένα τοπικό άρχοντα να υποστηρίξει μια Ώρα του Κώδικα
+## Προωθήστε την ώρα του κώδικα μέσα στην κοινωνία σας
 
-[Στείλετε αυτό το μήνυμα](/resources#politicians) στο δήμαρχο, το Δημοτικό Συμβούλιο, ή τη Σχολική Επιτροπή. Ή [ δώστους αυτό το φυλλάδιο](/resources/hoc-one-pager.pdf) και να καλέσέ τους να επισκεφτούν το σχολείο σου.
+Φτιάξε ένα τμήμα για — ένα σώμα προσκόπων, μια ενορία, ένα πανεπιστήμιο, μια ενώση εργαζομένων. Ή κάνε μια Ώρα του Κώδικα για το τετράγωνο της γειτονιάς σου.
+
+## 5. Ζήτα από ένα τοπικό άρχοντα να υποστηρίξει την Ώρα του Κώδικα
+
+Στείλτε αυτό το e-mail στον δήμαρχο, στο δημοτικό συμβούλιο ή στον σχολικό σας πίνακα. Μπορείτε επίσης να το δώσετε εσείς αυτοπροσώπως για να τον καλέσετε στο σχολείο σας.
 
 <%= view 'popup_window.js' %>

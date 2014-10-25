@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: Bilgisayar Bilimlerine Giriş
+        title: Bilgisayar Bilimine Giriş
         desc: Bu ders Bilgisayar Bilimleri konseptini ve bir Bilgisayar Bilimcisinin
           neler yaptığını tanıtacak, yanı sıra öğrencilere bir bilgisayar bilimcisinin
           rolünü üstlenme fırsatı sunacaktır. Aktivite sonunda öğrenciler, öğrendikleri
@@ -30,7 +30,7 @@
         - unplug2
         video: Unplug2
       Unplug3:
-        title: Grafikli Kağıdıyla Programlama
+        title: Grafik Kağıdıyla Programlama
         desc: Resimler çizmek için diğerlerini programlamak neticesinde öğrenciler
           programlamanın gerçekte nasıl bir şey olduğunu anlamaya başlarlar. Sınıf,
           öğrencilerin arkadaşlarını kareleri boyayarak var olan resmi ortaya çıkarmaları
@@ -74,7 +74,7 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: "Şarkı Yazma"
+        title: "Şarkı yazma"
         desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
           take an activity that's already common knowledge and shift it into a solid
           education on defining and calling functions. Once students are familiar
@@ -97,7 +97,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: Röle Programlama
+        title: Röle programlama
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".
@@ -122,8 +122,8 @@
         video: Unplug11
       UnplugHappyMaps:
         title: Mutlu Haritalar
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        desc: "Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
+          bir komutla bir karakteri labirentte hareket ettirirler."
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Oynat, Oynat
@@ -156,7 +156,7 @@
           erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: Koşullandırıcılar
+        title: Koşullar
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
@@ -173,7 +173,7 @@
         desc: "İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette
           gezinirken nasıl güvende olunabileceğine dair bilgi verir."
       GraphPaperProgramming:
-        title: Grafik Kağıdıyla Programlama
+        title: Grafik Kağıdı Programlama
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper

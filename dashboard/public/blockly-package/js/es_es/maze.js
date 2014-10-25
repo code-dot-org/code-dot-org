@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -1387,35 +1420,48 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  // helper function used below..
+  function makeNativeMemberFunction(nativeFunc, parentObj) {
+    return function() {
+      return interpreter.createPrimitive(
+                            nativeFunc.apply(parentObj, arguments));
+    };
+  }
+  for (var optsObj in options) {
+    var func, wrapper;
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
+                                interpreter.createNativeFunction(wrapper));
+      }
+    }
+  }
+};
+
+/**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      // helper function used below..
-      function makeNativeMemberFunction(nativeFunc, parentObj) {
-        return function() {
-          return interpreter.createPrimitive(
-                                nativeFunc.apply(parentObj, arguments));
-        };
-      }
-      for (var optsObj in options) {
-        // Create global objects in the interpreter for everything in options
-        var obj = this.createObject(interpreter.OBJECT);
-        this.setProperty(scope, optsObj.toString(), obj);
-        for (var prop in options[optsObj]) {
-          var func = options[optsObj][prop];
-          if (func instanceof Function) {
-            // Populate each of the global objects with native functions
-            // NOTE: other properties are not passed to the interpreter
-            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
-            interpreter.setProperty(obj,
-                                    prop,
-                                    interpreter.createNativeFunction(wrapper));
-          }
-        }
-      }
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -1433,8 +1479,7 @@ exports.evalWith = function(code, options) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
-    var fn = new ctor();
-    return fn.apply(null, args);
+    return new ctor().apply(null, args);
   }
 };
 
@@ -1442,18 +1487,24 @@ exports.evalWith = function(code, options) {
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  return new ctor();
 };
 
 },{}],7:[function(require,module,exports){
@@ -9269,9 +9320,9 @@ module.exports = {
     'ideal': 3,
     'editCode': true,
     'codeFunctions': [
-      {'func': 'move', 'alias': 'Maze.moveForward();'},
-      {'func': 'turnleft', 'alias': 'Maze.turnLeft();'},
-      {'func': 'turnright', 'alias': 'Maze.turnRight();'}
+      {'func': 'moveForward' },
+      {'func': 'turnLeft' },
+      {'func': 'turnRight' }
     ],
     'requiredBlocks': [
        [reqBlocks.MOVE_FORWARD]
@@ -9293,9 +9344,9 @@ module.exports = {
     'ideal': 4,
     'editCode': true,
     'codeFunctions': [
-      {'func': 'move', 'alias': 'Maze.moveForward();'},
-      {'func': 'turnleft', 'alias': 'Maze.turnLeft();'},
-      {'func': 'turnright', 'alias': 'Maze.turnRight();'}
+      {'func': 'moveForward' },
+      {'func': 'turnLeft' },
+      {'func': 'turnRight' }
     ],
     'requiredBlocks': [
        [reqBlocks.MOVE_FORWARD]
@@ -9317,9 +9368,9 @@ module.exports = {
     'ideal': 6,
     'editCode': true,
     'codeFunctions': [
-      {'func': 'move', 'alias': 'Maze.moveForward();'},
-      {'func': 'turnleft', 'alias': 'Maze.turnLeft();'},
-      {'func': 'turnright', 'alias': 'Maze.turnRight();'}
+      {'func': 'moveForward' },
+      {'func': 'turnLeft' },
+      {'func': 'turnRight' }
     ],
     'requiredBlocks': [
       [reqBlocks.MOVE_FORWARD],
@@ -9343,9 +9394,9 @@ module.exports = {
     'ideal': 8,
     'editCode': true,
     'codeFunctions': [
-      {'func': 'move', 'alias': 'Maze.moveForward();'},
-      {'func': 'turnleft', 'alias': 'Maze.turnLeft();'},
-      {'func': 'turnright', 'alias': 'Maze.turnRight();'}
+      {'func': 'moveForward' },
+      {'func': 'turnLeft' },
+      {'func': 'turnRight' }
     ],
     'requiredBlocks': [
       [reqBlocks.MOVE_FORWARD],
@@ -9366,9 +9417,9 @@ module.exports = {
   'custom': {
     'toolbox': toolbox(3, 4),
     'codeFunctions': [
-      {'func': 'move', 'alias': 'Maze.moveForward();'},
-      {'func': 'turnleft', 'alias': 'Maze.turnLeft();'},
-      {'func': 'turnright', 'alias': 'Maze.turnRight();'}
+      {'func': 'moveForward' },
+      {'func': 'turnLeft' },
+      {'func': 'turnRight' }
     ],
     'requiredBlocks': [],
     'startDirection': Direction.EAST,
@@ -10339,7 +10390,7 @@ Maze.execute = function(stepMode) {
   Maze.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions);
+    code = utils.generateCodeAliases(level.codeFunctions, 'Maze');
     code += BlocklyApps.editor.getValue();
   }
 
@@ -10560,7 +10611,7 @@ Maze.scheduleAnimations = function (singleStep) {
  */
 function animateAction (action, spotlightBlocks, timePerStep) {
   if (action.blockId) {
-    BlocklyApps.highlight(action.blockId, spotlightBlocks);
+    BlocklyApps.highlight(String(action.blockId), spotlightBlocks);
   }
 
   switch (action.command) {
@@ -12959,16 +13010,16 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += "var " + codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = [''].concat(arguments); return " +
+          parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -13075,9 +13126,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
@@ -13136,7 +13198,7 @@ exports.catMath = function(d){return "Matemáticas"};
 
 exports.catProcedures = function(d){return "Funciones"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
 exports.catVariables = function(d){return "Variables"};
 
@@ -13162,7 +13224,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Los bloques \"repetir\" o \"si
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "El bloque de función necesita tener otros bloques en su interior para funcionar."};
 
-exports.extraTopBlocks = function(d){return "Tiene bloques separados. ¿Quieres decir que quieres fijarlos al bloque \"cuando se ejecuta\"?"};
+exports.extraTopBlocks = function(d){return "Tienes bloques sueltos. ¿Quisiste adjuntarlos al bloque \"Cuando se ejecuta\"?"};
 
 exports.finalStage = function(d){return "¡Felicidades! Has completado la etapa final."};
 
@@ -13170,7 +13232,7 @@ exports.finalStageTrophies = function(d){return "¡Felicidades! Has completado l
 
 exports.finish = function(d){return "Terminar"};
 
-exports.generatedCodeInfo = function(d){return "Incluso las mejores universidades enseñan codificación basada en bloques (por ejemplo, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Aun así los bloques que has codificado se pueden mostrar en JavaScript, el lenguaje de programación más utilizado en el mundo:"};
+exports.generatedCodeInfo = function(d){return "Incluso las mejores universidades enseñan programación basada en bloques (por ejemplo, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Pero, por debajo, los bloques que has programado también se pueden mostrar en JavaScript, el lenguaje de programación más utilizado en el mundo:"};
 
 exports.hashError = function(d){return "Lo sentimos, '%1' no se corresponde con ningún programa guardado."};
 
@@ -13228,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "Puedes resolver este puzzle con <
 
 exports.tooMuchWork = function(d){return "¡Me has hecho trabajar mucho!  ¿Podrías tratar de repetir menos veces?"};
 
-exports.toolboxHeader = function(d){return "Bloques"};
+exports.toolboxHeader = function(d){return "bloques"};
 
 exports.openWorkspace = function(d){return "Cómo funciona"};
 
@@ -13274,12 +13336,12 @@ exports.signup = function(d){return "Únete al curso de introducción"};
 
 exports.hintHeader = function(d){return "Aquí hay un consejo:"};
 
-exports.genericFeedback = function(d){return "Ver como terminaste, y tratar de reparar tu programa."};
+exports.genericFeedback = function(d){return "Mira como terminaste, y trata de reparar tu programa."};
 
 
 },{"messageformat":69}],57:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.es=function(n){return n===1?"one":"other"}
-exports.atHoneycomb = function(d){return "en forma de panal"};
+exports.atHoneycomb = function(d){return "en el panal"};
 
 exports.atFlower = function(d){return "en la flor"};
 
@@ -13299,7 +13361,7 @@ exports.dirS = function(d){return "S"};
 
 exports.dirW = function(d){return "O"};
 
-exports.doCode = function(d){return "hacer"};
+exports.doCode = function(d){return "haz"};
 
 exports.elseCode = function(d){return "sino"};
 
@@ -13313,7 +13375,7 @@ exports.fillSquare = function(d){return "llena el cuadrado"};
 
 exports.fillTooltip = function(d){return "Colocar 1 unidad de tierra"};
 
-exports.finalLevel = function(d){return "¡Felicidades! Has resuelto el puzzle final."};
+exports.finalLevel = function(d){return "¡ Felicidades! Ha resuelto el rompecabezas final."};
 
 exports.flowerEmptyError = function(d){return "La flor en la que estás no tiene más néctar."};
 
@@ -13327,13 +13389,13 @@ exports.honey = function(d){return "hacer miel"};
 
 exports.honeyAvailable = function(d){return "miel"};
 
-exports.honeyTooltip = function(d){return "Prepara la miel usando el néctar"};
+exports.honeyTooltip = function(d){return "Hacer miel usando néctar"};
 
 exports.honeycombFullError = function(d){return "Este panal no tiene espacio para guardar más miel."};
 
 exports.ifCode = function(d){return "si"};
 
-exports.ifInRepeatError = function(d){return "Necesitas un bloque \"Si\" dentro de un bloque \"Repetir\".  Si tienes problemas, regresa al nivel anterior para ver cómo funciona."};
+exports.ifInRepeatError = function(d){return "Necesitas un bloque \"si\" dentro de un bloque \"repetir\". Si tienes problemas, prueba el nivel anterior otra vez para ver cómo funcionaba."};
 
 exports.ifPathAhead = function(d){return "si hay un camino delante"};
 
@@ -13347,7 +13409,7 @@ exports.ifelseFlowerTooltip = function(d){return "si hay una flor/panal en la di
 
 exports.insufficientHoney = function(d){return "Estás usando todos los bloques correctos, pero necesitas hacer la cantidad correcta de miel."};
 
-exports.insufficientNectar = function(d){return "Estás usando todos los bloques correctos, pero necesitar recolectar la cantidad correcta de néctar."};
+exports.insufficientNectar = function(d){return "Estás usando todos los bloques correctos, pero necesitas recolectar la cantidad correcta de néctar."};
 
 exports.make = function(d){return "hacer"};
 
@@ -13371,7 +13433,7 @@ exports.nectar = function(d){return "obtener néctar"};
 
 exports.nectarRemaining = function(d){return "néctar"};
 
-exports.nectarTooltip = function(d){return "Recolecta el néctar de la flor"};
+exports.nectarTooltip = function(d){return "Obtener néctar de una flor"};
 
 exports.nextLevel = function(d){return "¡Felicidades! Has completado este puzzle."};
 
@@ -13383,13 +13445,13 @@ exports.noPathLeft = function(d){return "no hay camino a la izquierda"};
 
 exports.noPathRight = function(d){return "no hay camino a la derecha"};
 
-exports.notAtFlowerError = function(d){return "Solo puedes obtener néctar de una flor."};
+exports.notAtFlowerError = function(d){return "Sólo puedes obtener néctar de una flor."};
 
-exports.notAtHoneycombError = function(d){return "Solo puedes hacer miel en un panal."};
+exports.notAtHoneycombError = function(d){return "Sólo puedes hacer miel en un panal."};
 
 exports.numBlocksNeeded = function(d){return "Este puzzle puede resolverse con %1 bloques."};
 
-exports.pathAhead = function(d){return "camino hacia adelante"};
+exports.pathAhead = function(d){return "camino adelante"};
 
 exports.pathLeft = function(d){return "si hay camino a la izquierda"};
 
@@ -13397,7 +13459,7 @@ exports.pathRight = function(d){return "si hay camino a la derecha"};
 
 exports.pilePresent = function(d){return "hay una pila"};
 
-exports.putdownTower = function(d){return "poner en el suelo la torre"};
+exports.putdownTower = function(d){return "Baja la torre"};
 
 exports.removeAndAvoidTheCow = function(d){return "Elimina 1 y evita la vaca"};
 
@@ -13407,11 +13469,11 @@ exports.removePile = function(d){return "Elimina la pila"};
 
 exports.removeStack = function(d){return "quitar pila de "+v(d,"shovelfuls")+" montones"};
 
-exports.removeSquare = function(d){return "elimina cuadrado"};
+exports.removeSquare = function(d){return "eliminar cuadrado"};
 
 exports.repeatCarefullyError = function(d){return "Para resolver esto, piensa cuidadosamente acerca del patrón de dos movimientos y un giro para ponerlo dentro del bloque \"repetir\". Es correcto hacer un giro extra, al final."};
 
-exports.repeatUntil = function(d){return "repetir hasta que"};
+exports.repeatUntil = function(d){return "repetir hasta"};
 
 exports.repeatUntilBlocked = function(d){return "mientras haya camino delante"};
 
@@ -13427,7 +13489,7 @@ exports.turnLeft = function(d){return "girar a la izquierda"};
 
 exports.turnRight = function(d){return "girar a la derecha"};
 
-exports.turnTooltip = function(d){return "Me gira a la izquierda o a la derecha 90 grados."};
+exports.turnTooltip = function(d){return "Girarme a la izquierda o a la derecha 90 grados."};
 
 exports.uncheckedCloudError = function(d){return "Asegúrate de revisar todas las nubes para ver si son flores o panales."};
 

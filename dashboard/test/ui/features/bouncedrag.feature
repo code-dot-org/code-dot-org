@@ -1,7 +1,7 @@
-Feature: Bounce blocks can be dragged 
+Feature: Bounce blocks can be dragged
 
 Background:
-  Given I am on "http://learn.code.org/s/4/level/134?noautoplay=true"
+  Given I am on "http://learn.code.org/2014/1?noautoplay=true"
 
 Scenario: Connect two blocks from toolbox
   When I rotate to landscape

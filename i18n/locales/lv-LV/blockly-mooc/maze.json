@@ -65,7 +65,7 @@
   "removeStack":"remove stack of {shovelfuls} piles",
   "removeSquare":"remove square",
   "repeatCarefullyError":"To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end.",
-  "repeatUntil":"repeat until",
+  "repeatUntil":"atkārtot līdz",
   "repeatUntilBlocked":"while path ahead",
   "repeatUntilFinish":"repeat until finish",
   "step":"Step",

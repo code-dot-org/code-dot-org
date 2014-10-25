@@ -1,6 +1,6 @@
 {
   "and":"和",
-  "blocklyMessage":"模块化",
+  "blocklyMessage":"布洛克里",
   "catActions":"操作",
   "catColour":"颜色",
   "catLogic":"逻辑",
@@ -54,7 +54,7 @@
   "tooFewBlocksMsg":"您正在使用所有必要类型的模块，但请尝试更多这些类型的模块来完成这个谜题。",
   "tooManyBlocksMsg":"可以使用 < x id = 'START_SPAN' \/ > < x id = 'END_SPAN' \/ > 模块来解决这个谜题。",
   "tooMuchWork":"你让我多做很多工作 ！你可以尝试少重复几次吗？",
-  "toolboxHeader":"模块",
+  "toolboxHeader":"块",
   "openWorkspace":"它是如何工作的？",
   "totalNumLinesOfCodeWritten":"全程统计： {numLines, plural, one {1 行} other {# 行}}代码。",
   "tryAgain":"再次尝试",

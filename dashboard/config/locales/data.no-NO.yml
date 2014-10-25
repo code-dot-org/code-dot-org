@@ -4,15 +4,15 @@
       name:
         20-hour:
           desc: Introduksjon til Informatikk for barne-og ungdomsskolen
-          Unplug1: Nivå 1
-          Maze: Nivå 2
-          Unplug2: Nivå 3
-          Unplug3: Nivå 4
-          Artist: Nivå 5
-          Unplug4: Nivå 6
-          Artist2: Nivå 7
-          Unplug5: Nivå 8
-          Farmer: Nivå 9
+          Unplug1: Trinn 1
+          Maze: Trinn 2
+          Unplug2: Trinn 3
+          Unplug3: Trinn 4
+          Artist: Trinn 5
+          Unplug4: Trinn 6
+          Artist2: Trinn 7
+          Unplug5: Trinn 8
+          Farmer: Trinn 9
           Unplug6: Nivå 10
           Artist3: Nivå 11
           Unplug7: Nivå 12
@@ -25,7 +25,7 @@
           Artist5: Nivå 19
           Unplug11: Nivå 20
         Hour of Code:
-          desc: Kodetimen
+          desc: Hour of Code (kodetimen)
           Maze: Trinn 1
         Edit Code:
           desc: Rediger kode (beta)
@@ -37,33 +37,34 @@
           desc: Brukeropprettede oppgaver (beta)
           Custom: Trinn 1
         Flappy Levels:
-          desc: Flappy Bird
+          desc: Fuglen Flakse
           Flappy: Trinn 1
         Jigsaw Levels:
           desc: Puslespill (beta)
           Jigsaw: Trinn 1
         Step Levels:
           desc: Labyrint (beta)
-          MazeStep: Stage Step
+          MazeStep: Scenesteg
         edit-code:
           desc: Rediger kode (beta)
           MazeEC: Trinn 1
+          Webapp: Trinn 2
         events:
           desc: Sprett (beta)
           Bounce: Trinn 1
-          Studio: Nivå 2
+          Studio: Trinn 2
         builder:
           desc: Brukeropprettede oppgaver (beta)
           Custom: Trinn 1
         flappy:
-          desc: Flappy Bird
+          desc: Fuglen Flakse
           Flappy: Trinn 1
         jigsaw:
           desc: Puslespill (beta)
           Jigsaw: Trinn 1
         step:
           desc: Labyrint (beta)
-          MazeStep: Stage Step
+          MazeStep: Scenesteg
         wordsearch:
           desc: Stavekonkurranse (beta)
           WordSearch: Trinn 1
@@ -91,11 +92,12 @@
         Artist5: Kunstneren 5
         Unplug11: Oppsummering
         MazeEC: Labyrinten
-        Bounce: Sprett
-        Flappy: Flappy Bird
+        Bounce: sprett
+        Flappy: Fuglen Flakse
         Jigsaw: Puslespill
         MazeStep: Labyrint trinn modus
-        Wordsearch: Wordsearch
+        Wordsearch: Tekstsøk
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Bronse
@@ -104,14 +106,14 @@
     concept:
       description:
         sequence: Sekvens
-        if: Hvis blokk
+        if: Hvis-blokk
         if_else: Hvis-ellers blokk
-        loop_times: Gjenta ganger blokk
-        loop_until: Gjenta til blokk
-        loop_while: Så lenge blokk
-        loop_for: Gjenta med teller blokk
+        loop_times: En blokk for å gjenta noe et antall ganger
+        loop_until: Gjenta inntil blokk
+        loop_while: Gjenta så lenge blokk
+        loop_for: Gjenta med Teller-blokk
         function: Funksjoner
-        parameters: Funksjoner med parametere
+        parameters: Funksjoner med parametre
     level:
       instructions:
         maze_2_2: 'Kan du hjelpe meg å fange den slemme grisen? Sett sammen et par
@@ -180,10 +182,8 @@
           "sett bredde"-blokken. Kos deg!'
         turtle_4_1: 'Kan du tegne en trekant (med kanter på 100 pixler) med bare tre
           blokker? Hint: bruk en "gjenta" blokk.'
-        turtle_4_2: 'Prøv å legge til en blokk for å fullføre denne oppgaven. Hint:
-          Vi har lagt til to blokker for å tegne to identiske triangler som du må
-          sette inn en snubevegelse (rotasjon) mellom, og bestemme hvor langt den
-          skal svinge.'
+        turtle_4_2: Legg til en "sving 90 grader til høyre"-blokk et sted midt inne
+          i programmet som ligger i arbeidsområdet for å tegne disse trekantene.
         turtle_4_3: Ok, her er koden du skrev for å tegne en enkel trekant. Kan du
           legge til en gjenta-blokk og snubevegelse/ rotasjon-blokk for å lage en
           vakker blomst?
@@ -381,50 +381,49 @@
           Når du er ferdig, klikk Fullfør for å la venner prøve spillet på sine telefoner.
         Custom_builder: Dra blokker fra verktøykassen til arbeidsområdet for å tegne
           nivået du vil opprette. Trykk "Kjør" når du er klar.
-        flappy_1: Attach a block to the "when click" block, then press "Run Program"
-          and click or tap to move Flappy to the target.
-        flappy_2: Now we've added some ground.  Attach a block to the "when hit the
-          ground" block, then press "Run Program". To pass this puzzle, your code
-          needs to 'END GAME' when Flappy crashes into the ground.
-        flappy_3: The "when Run is clicked" block allows you to run code when your
-          game first starts.  Try setting the level speed and flapping to the target.
-        flappy_4: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. To pass the
-          puzzle, your code needs to 'END GAME' and make Flappy crash into the first
-          pipe so he can reach the target.
-        flappy_5: Let's add a scoreboard, and count points when Flappy makes it past
-          obstacles. Add to the "when pass an obstacle" block, and then score a point
-          by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either
-          a smaller or larger amount.
-        flappy_7: Next, try changing the scene by attaching another block to the "when
-          Run is clicked".
-        flappy_8: You can set visuals anytime, not just when the game starts. Try
-          setting a RANDOM scene when other events happen, for example, when passing
-          an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead
-          of ending the game try setting the score back to 0.
-        flappy_11: Create your own Flappy game and share it. You can change the visuals,
-          or even the rules. Try changing visuals each time Flappy passes an obstacle.
-          Or make Flappy invincible so he never dies.
-        flappy_k1_1: Play Flappy
-        flappy_k1_2: Attach a block to the "when click" block, then press "Run". Click
-          or tap the screen to move Flappy to the target.
-        flappy_k1_3: Now we've added some ground.  Attach a block to the "when hit
-          the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_k1_4: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_k1_5: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_k1_6: Let's add a scoreboard, and count points when Flappy makes it
-          past obstacles. Add to the "when pass an obstacle" block, and then score
-          a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: Next, try changing the scene by attaching another block to the
-          "when run" block.
-        flappy_k1_9: Try changing the player by attaching a "set player" block to
-          the "when run" block.
+        flappy_1: Fest en blokk "når klikk" blokken, og trykk "Kjør". Klikk eller
+          trykk på skjermen for å fly  Flakse til målet.
+        flappy_2: Vi har nå lagt til en bakke.  Fest en blokk "når traff bakken"-blokken.
+          Koden må "Avslutte spillet" når Flakse krasjer.
+        flappy_3: Med "Når kjørt"-blokken kan du kjøre kode når spillet starter.  Prøv
+          å sette farten og fly Flakse til målet.
+        flappy_4: Flakse vil fly gjennom hindringer med mindre du skriver kode for
+          å få han til å krasje. Feste en blokk "når truffet en hindring" blokken.
+          Koden må "Avslutte spillet" når Flakse krasjer inn i det første settet av
+          rør.
+        flappy_5: La oss legge til en resultattavle og telle poeng når Flakse kommer
+          seg forbi hindringer. Legge til blokken "når hinder passert" se at du får
+          poeng år du flyr Flakse forbi de første rørene.
+        flappy_6: Se om du fortsatt kan få poeng hvis Flakse flakser mer eller mindre.
+        flappy_7: Prøv å endre scenen ved å feste en annen blokk til blokk "når kjørt"-blokken.
+        flappy_8: Du kan angi visuelle effekter når som helst, ikke bare når spillet
+          starter. Prøv å angi en tilfeldig scene når andre hendelser skjer, for eksempel
+          når du passerer en hindring.
+        flappy_9: For gjøre en vri, når Flakse treffer et hinder eller bakken, i stedet
+          for å avslutte spillet sett poengene tilbake til 0.
+        flappy_11: Lag ditt eget Flakse-spill! Du kan endre alle bilder og alle regler,
+          selv tyngdekraften. Når du er ferdig, klikk Fullfør og du kan la vennene
+          dine prøve spillet på sine telefoner.
+        flappy_k1_1: Spill Flakse
+        flappy_k1_2: Fest en blokk til "når klikk"-blokken og trykk "Start". Klikk
+          eller trykk på skjermen for å fly Flakse til målet.
+        flappy_k1_3: Vi har nå lagt til en bakke.  Fest en blokk "når traff bakken"-blokken.
+          Koden må "Avslutte spillet" når Flakse krasjer.
+        flappy_k1_4: Med "Når startet"-blokken kan du koden som skal kjøre når spillet
+          starter.  Prøv å sette farten og så flakse i vei til målet.
+        flappy_k1_5: Flakse vil fly gjennom hindringer med mindre du skriver kode
+          for å få han til å krasje. Feste en blokk "når truffet en hindring" blokken.
+          Koden må "Avslutte spillet" når Flakse krasjer inn i det første settet av
+          rør.
+        flappy_k1_6: La oss legge til en resultattavle og telle poeng når Flakse kommer
+          seg forbi hindringer. Legge til blokken "når hinder passert" se at du får
+          poeng år du flyr Flakse forbi de første rørene.
+        flappy_k1_7: Se hvis du kan score flere poeng for å klare og komme forbi et
+          hinder
+        flappy_k1_8: Det neste du kan prøve er å endre scenen ved å feste en annen
+          blokk til blokk "når kjørt"-blokken.
+        flappy_k1_9: Prøv å endre spilleren ved å legge ved en "sett spilleren" blokk
+          til "når kjørt"-blokken.
         jigsaw_1: Klikk blokken
         jigsaw_2: Dra blokken til målet
         jigsaw_3: Ordne blokkene for å danne bildet
@@ -443,10 +442,10 @@
         mazestep_3: Labyrint trinn beskrivelse her
         mazestep_4: Labyrint trinn beskrivelse her
         mazestep_5: Labyrint trinn beskrivelse her
-        studio_c2_1: Can you make this dog say "hello world"?
-        studio_c2_2: Can you make the dog say something and then have the cat say
-          something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
+        studio_c2_1: Kan du få denne hunden til å si "Voff voff"?
+        studio_c2_2: Kan du få hunden til å si noe og så katten til å si noe etterpå?
+        studio_c2_3: Kan du skrive et program for å få denne hunden flytte seg til
+          katten?
         studio_c2_4: Kan du skrive et program som gjør at hunden flytter til katten,
           og lar katten si "Hei" når hunden når ham?
         studio_c2_5: Kan du skrive et program som får en blekksprut til å si "Hei"
@@ -456,24 +455,25 @@
         studio_c2_7: '"Gjenta alltid" blokken tillater deg å kjøre kode kontinuerlig.
           Kan du legge til blokker for å flytte denne dinosauren opp og ned flere
           ganger?'
-        studio_c2_8: Can you have the penguin say "Ouch!" and play a "hit" sound if
-          he runs into the dinosaur, and then move him with the arrows to make that
-          happen?
-        studio_c2_9: Can you add a block to score a point when the penguin runs into
-          the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of
-          the penguin, and then move him with the arrows until you score?
-        studio_c2_11: Create your own story. When you're done, click Finish to let
-          friends try your story on their phones.
-        studio_c3_story_1: Can you make this dog say "hello world"?
-        studio_c3_story_2: Can you make the dog say something and then have the cat
-          say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
+        studio_c2_8: Kan du få pingvinen til å si "Au!", spille en "treff"-lyd hvis
+          han går inn dinosauren og deretter flytte ham med pilene for å få det til
+          å skje?
+        studio_c2_9: Kan du legge til en blokk for å skåre et poeng når pingvinen
+          kommer borti blekkspruten, og deretter flytte ham med pilene til du skårer?
+        studio_c2_10: Kan du legge til blokker for å forandre bakgrunnen og hastigheten
+          til pingvinen, og deretter bevege den med pil-tastene til du score?
+        studio_c2_11: Nå kan du lage din egen historie. Når du er ferdig, klikker
+          du Fullfør for å la venner prøve din historie på sine telefoner.
+        studio_c3_story_1: Kan du få denne hunden til å si "Voff voff"?
+        studio_c3_story_2: Klarer du få hunden til å si noe og så få katten til å
+          si noe etterpå?
+        studio_c3_story_3: Kan du skrive et program for å få denne hunden flytte seg
+          til katten?
         studio_c3_story_4: Kan du skrive et program som gjør at hunden flytter til
           katten, og lar katten si "Hei" når hunden når ham?
-        studio_c3_story_5: Can you add a block to make the octopus happy?
-        studio_c3_story_6: Create your own story. When you're done, click Finish to
-          let friends try your story on their phones.
+        studio_c3_story_5: Kan du legge til en blokk som gjør blekksprutem lykkelig?
+        studio_c3_story_6: Nå kan du lage din egen historie. Når du er ferdig, klikker
+          du Fullfør for å la venner prøve din historie på sine telefoner.
         studio_c3_game_1: Kan du skrive et program som får en blekksprut til å si
           "Hei" når den klikkes?
         studio_c3_game_2: Kan du skrive et program for å få denne pingvinen til å
@@ -481,19 +481,20 @@
         studio_c3_game_3: '"Gjenta alltid" blokken tillater deg å kjøre kode kontinuerlig.
           Kan du legge til blokker for å flytte denne dinosauren opp og ned flere
           ganger?'
-        studio_c3_game_4: Can you have the penguin say "Ouch!" and play a "hit" sound
-          if he runs into the dinosaur, and then move him with the arrows to make
-          that happen?
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
+        studio_c3_game_4: Kan du få pingvinen til å si "Au!", spille en "treff"-lyd
+          hvis han går inn dinosauren og deretter flytte ham med pilene for å få det
+          til å skje?
+        studio_c3_game_5: Kan du legge til en blokk for å skåre et poeng når pingvinen
+          kommer borti blekkspruten, og deretter flytte ham med pilene til du skårer?
+        studio_c3_game_6: Kan du legge til blokker for å forandre bakgrunnen og hastigheten
+          til pingvinen, og deretter bevege den med pil-tastene til du score?
         studio_c3_game_7: Create your own game. When you're done, click Finish to
           let friends try your story on their phones.
         studio_playlab_1: Can you make this dog say "hello world"?
         studio_playlab_2: Can you make the dog say something and then have the cat
           say something afterwards?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
+        studio_playlab_3: Kan du skrive et program for å få denne hunden flytte seg
+          til katten?
         studio_playlab_4: Kan du skrive et program som gjør at hunden flytter til
           katten, og lar katten si "Hei" når hunden når ham?
         studio_playlab_5: Kan du skrive et program som får en blekksprut til å si
@@ -503,10 +504,10 @@
         studio_playlab_7: '"Gjenta alltid" blokken tillater deg å kjøre kode kontinuerlig.
           Kan du legge til blokker for å flytte denne dinosauren opp og ned flere
           ganger?'
-        studio_playlab_8: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
+        studio_playlab_8: Kan du legge til en blokk for å skåre et poeng når pingvinen
+          kommer borti blekkspruten, og deretter flytte ham med pilene til du skårer?
+        studio_playlab_9: Kan du legge til blokker for å forandre bakgrunnen og hastigheten
+          til pingvinen, og deretter bevege den med pil-tastene til du score?
         studio_playlab_10: Create your own game. When you're done, click Finish to
           let friends try your story on their phones.
         studio_full_sandbox: Create your own game. When you're done, click Finish
@@ -514,7 +515,8 @@
         studio_k1_1: Can you make this dog say "hello world"?
         studio_k1_2: Can you make the dog say something and then have the cat say
           something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the target?
+        studio_k1_3: Kan du skrive et program for å få denne hunden flytte seg til
+          katten?
         studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
           gets there.
         studio_k1_5: Can you add a block to make the octopus happy?
@@ -595,27 +597,26 @@
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bie feilsøking
-        C3_bounce: Sprett
+        C3_bounce: sprett
         C3_playlab_create_game: Spill Lab - lage et spill
         C3_computational_thinking: Programmeringstenkning
         C3_dice_race: Dice Race
         C3_internet: Internett
         C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
+        C3_functional_suncatchers: Fungerende solfangere
         C3_songwriting_with_parameters: Låtskriving med parametere
     callout:
       text:
         drag_blocks: Dra en "flytt" blokk og fest den under den andre blokken
         run: Trykk "Kjør" for å prøve programmet
         watch_again: Klikk her for å se filmen igjen
-        gray_block_explanation: Blocks that are grey can't be moved or deleted. Can
-          you solve the puzzle anyway?
-        show_code_explanation: Click here to see the code for the program you're making
-        instructions_repeat_explanation: The instructions for each puzzle are repeated
-          here
-        category_explanation: You have all the same blocks but they've now been arranged
-          in categories
-        set_sprite_image: Attach a "set actor to image" block to the "when story starts"
-          block to enable an actor for this story
-        studio_say_text: Type what you want your actor to say within these quotes
+        gray_block_explanation: Blokker som er grå kan ikke slettes. Kan du løse oppgaven
+          likevel?
+        show_code_explanation: Klikk her for å se koden for programmet du lager
+        instructions_repeat_explanation: Instruksjonene for hver oppgave vises her
+        category_explanation: Du har alle de samme blokker, men de har nå blitt ordnet
+          i kategorier
+        set_sprite_image: Fest en "Angi kostyme"-blokk til "når historien starter"-blokken
+          for å aktivere skuespilleren for denne historien
+        studio_say_text: Skriv inn hva du vil at din skuespiller skal si mellom "-tegnene
         jigsaw_click: Klikk denne blokken!

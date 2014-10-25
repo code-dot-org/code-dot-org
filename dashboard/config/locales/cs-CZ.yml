@@ -1,4 +1,4 @@
-"cy":
+"cs":
   activerecord:
     errors:
       messages:
@@ -7,12 +7,12 @@
       user:
         name: Jméno
         email: E-mail
-        username: Uživatelské jméno
-        password: Heslo
+        username: uživatelské jméno
+        password: heslo
         password_confirmation: Potvrzení hesla
         current_password: Současné heslo
         locale: Jazyk
-        age: Age
+        age: Věk
         gender: Pohlaví
         edit_header: Upravit Podrobnosti Účtu
         error:
@@ -31,11 +31,11 @@
     placeholder: Zadej svůj tip
     submit: Přidat tip
   appname: Code.org
-  stage: Fáze
+  stage: fáze
   stage_number: Stage %{number}
-  puzzle: Hádanka
-  trophies: Trofeje
-  courses: Kurzy
+  puzzle: Rébus
+  trophies: trofeje
+  courses: kurzy
   of: z
   more: VÍCE
   less: MÉNĚ
@@ -87,7 +87,7 @@
     address_placeholder: adresa, město, stát, psč
     gender: Pohlaví (volitelné)
     birthday: Narozeniny (volitelné)
-    age: Age (optional)
+    age: Věk
     submit: Registrace
     teacher: Jsi učitel?
     valid_username: K dispozici!
@@ -107,7 +107,7 @@
     login: Uživatelské jméno nebo e-mail
     password: Heslo
     remember: Zapamatuj si mne
-    submit: Přihlásit se
+    submit: Přihlásit
   signin:
     try_heading: Want to try coding without signing up?
     try_hoc: Nejprve vyzkoušej Hodinu kódování
@@ -117,10 +117,10 @@
     name: Choose your name
     picture: Now find your secret picture
     words: Now enter your secret words
-    login: Přihlásit se
+    login: Přihlásit
   password:
     reset_form:
-      title: Zapomněl si heslo?
+      title: Zapomněl jsi heslo?
       email: E-mailová adresa
       submit: Zašlete mi instrukce pro reset hesla
     change_form:
@@ -259,7 +259,7 @@
       settings: Můj účet
       prizes: Ceny
       logout: Odhlásit se
-      signin: Přihlásit se
+      signin: Přihlásit
       signup: Registrace
       already_registered: Already registered?
     popup:
@@ -271,7 +271,7 @@
       prizes: Posbírej všech %{total_trophies} trofejí a vyhraj ceny!
       prize_earned: Všech %{total_trophies} trofejí získáno. Vyhrál jsi!
       prize_us_only: "(Pouze studenti z USA)"
-      prizes_link: více informací
+      prizes_link: Více informací
   teacher:
     title:
       one: 'Tvůj učitel:'
@@ -291,11 +291,11 @@
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
-      trophies: Trofeje
+      trophies: trofeje
     students:
       name: Jméno
-      username: Uživatelské jméno
-      password: Heslo
+      username: uživatelské jméno
+      password: heslo
       manage: Správa studentů
       dashboard: Go to Teacher Dashboard
       add: Přidat studenty
@@ -324,7 +324,7 @@
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
+      rename: přejmenovat
       edit: edit
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
@@ -377,8 +377,8 @@
     student_stats: Získal jsi %{trophy_count} z možných %{trophy_max} trofejí "Mistrovství
       Pojetí".
     student_left_off: 'Kde jsi přestal:'
-    student_finished_prize: Dokončil jsi všechna cvičení, vyzvedni si %{prize_link}
-      a vyber si další třídu %{online_link} nebo v %{local_school_link}
+    student_finished_prize: Zvládl jsi všechny tutoriály. Vyzvedni si %{prize_link}
+      a vyber další třídu %{online_link} nebo %{local_school_link}
     student_finished: Dokončil jsi všechna cvičení, vyber si další třídu %{online_link}
       nebo v %{local_school_link}
     local_school: místní škola
@@ -389,15 +389,18 @@
     tryfirst: 'Nebo to můžeš nejdřív zkusit a zaregistrovat se později:'
     trynow: Vyzkoušej hned
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming
-      concepts. The course is designed for use in classrooms for grades K-8, but it
-      is fun to learn at all ages.
+    20hour_overview: Tento 20-ti hodinový kurz představuje základní koncepty počítačových
+      věd a programování. Kurz je navrhnut pro děti od 1. po 7. třídu (stupeň K-8),
+      ale jistě bude bavit studenty jakéhokoliv věku.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Muž
     female: "Žena"
@@ -497,11 +500,17 @@
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
       each program in action.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
@@ -529,14 +538,14 @@
       name:
         20-hour:
           title: Kurz K-8 Úvod do počítačové vědy (15-25 hodin)
-          description: This 20-hour course introduces core computer science and programming
-            concepts. The course is designed for use in classrooms for grades K-8,
-            but it is fun to learn at all ages.
+          description: Tento 20-ti hodinový kurz představuje základní koncepty počítačových
+            věd a programování. Kurz je navrhnut pro děti od 1. po 7. třídu (stupeň
+            K-8), ale jistě bude bavit studenty jakéhokoliv věku.
         Hour of Code:
           title: Hodina kódu
           description: ''
         edit-code:
-          title: Edit Code
+          title: Upravit kód
           description: ''
         events:
           title: Události

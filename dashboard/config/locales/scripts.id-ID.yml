@@ -12,10 +12,10 @@
           description: Just an internal test course.
         course1:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Belajar untuk drag dan drop'
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': 'Labirin: Urutan'
           'Maze: Debugging': 'Maze: Debugging'
           'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artists 2
+          Artists 2: Seniman 2
           Spelling Bee: Spelling Bee
           Spelling Bee not blockly: Spelling Bee not blockly
           'Bee 1: Intro': 'Bee 1: Intro'
@@ -29,9 +29,9 @@
           Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
           'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: Building a Foundation
+          Building a Foundation: Membangun dasar
           Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
+          The Big Event: Acara besar
           Going Places Safely: Going Places Safely
           description: Course 1 is designed for early readers in the lower elementary
             grades.  Create computer programs with loops and events.  By the end of
@@ -53,28 +53,28 @@
           Bounce: Terpental
           'Studio: Create a Story': 'Studio: Create a Story'
           Artist Loops: Artist Loops
-          Bee Conditionals: Bee Conditionals
+          Bee Conditionals: kondisi lebah
           Flappy: Flappy
           title: Course 2
-          Bee Loops: Bee Loops
+          Bee Loops: Pengulangan lebah
           Artist Functions: Artist Functions
           The Artist Debugging: The Artist Debugging
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
+          Maze Loops: Pengulangan labirin
           Graph Paper Programming: Pemrograman grafis diatas kertas
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
           Conditionals: Kondisi
-          Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
+          Binary Bracelets: Gelang biner
+          The Big Event: Acara besar
           Your Digital Footprint: Your Digital Footprint
           description: Course 2 is designed for students who can read in the lower
             and middle elementary grades.  Create programs with loops, events, and
             conditionals.  By the end of the course, create your very own interactive
             game or story that you can share.
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': 'Labirin: Urutan'
           'Artist: Sequence': 'Artist: Sequence'
           'Maze: Loops': 'Maze: Loops'
           'Artist: Loops': 'Artist: Loops'
@@ -95,7 +95,7 @@
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
           Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
+          Bee Conditionals: kondisi lebah
           Bee Nested Loops: Bee Nested Loops
           Bee Debuggin: Bee Debuggin
           Bee Debugging: Bee Debugging
@@ -117,7 +117,7 @@
             conditions.  By the end of the course, create your very own interactive
             game or story that you can share with anyone.
           'Studio: Create a Game': 'Studio: Create a Game'
-          Maze: Maze
+          Maze: Labirin
           Artist: Artist
           'Artist: Functions': 'Artist: Functions'
           'Bee: Functions': 'Bee: Functions'
@@ -140,6 +140,7 @@
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
           'Bee: Debugging2': 'Bee: Debugging2'
           'Artist: Patterns': 'Artist: Patterns'
+          Songwriting: Penulis lagu
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

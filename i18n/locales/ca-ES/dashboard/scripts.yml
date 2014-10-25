@@ -4,7 +4,7 @@ ca:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
-          The Maze: El laberint
+          The Maze: El Laberint
           Multi: Multi
           Match: Match
           Math Image: Math Image
@@ -43,7 +43,7 @@ ca:
           description_short: Course 1 is designed for early readers in the lower elementary grades.
           "Artist: Loops": 'Artist: Loops'
         course2:
-          The Maze: El laberint
+          The Maze: El Laberint
           Suzi: Suzi
           The Artist: "L'artista"
           Artist Debugging: Artist Debugging
@@ -81,7 +81,7 @@ ca:
           "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": 'Artist: Nested Loops'
         course3:
-          The Maze: El laberint
+          The Maze: El Laberint
           "Studio: Create a Story": 'Play Lab: Create a Story'
           The Artist: "L'artista"
           title: Course 3
@@ -107,7 +107,7 @@ ca:
           Farmer - While Loops: 'Farmer - While Loops'
           description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
           "Studio: Create a Game": 'Play Lab: Create a Game'
-          Maze: Maze
+          Maze: Laberint
           Artist: Artist
           "Artist: Functions": 'Artist: Functions'
           "Bee: Functions": 'Bee: Functions'
@@ -129,6 +129,7 @@ ca:
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

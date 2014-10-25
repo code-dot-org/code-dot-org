@@ -4,7 +4,7 @@
 
 * * *
 
-# كيفية تدريس ساعة واحدة "ساعة البرمجة"
+# كيف تدرس ساعة واحدة في تعلم البرمحة
 
 ## 1) جرب الدروس:
 
@@ -15,7 +15,7 @@
   * تتطلب الحد الأدنى من الوقت للاعداد بالنسبة للمعلمين
   * ذات توجيه ذاتي - و هو ما يمكن التلاميذ من العمل حسب نسقهم و مهارتهم
 
-[![image](http://code.org/images/tutorials.png)](http://code.org/learn)
+[![الصورة](http://code.org/images/tutorials.png)](http://code.org/learn)
 
 ## 2) حدد الاحتياجات اللازمة من الاجهزة مع العلم ان الحواسيب اختيارية
 
@@ -30,29 +30,29 @@
   * **ليس لديك ما يكفي من الأجهزة؟** استخدم [البرمجة في مجموعات تضم فردين](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). عندما يتعاون الطلبة، يقل الاعتماد على المعلم. سيعرفون ان علوم الحاسوب اجتماعية و تعاونية.
   * **سرعة الانترنات منخفضة ؟** قم بعرض أشرطة الفيديو امام كل القسم، بحيث لا يستحق كل طالب تحميل أشرطة الفيديو. أو حاول الدروس الغير موصولة.
 
-## 4) Inspire students - show them a video
+## 4) شجع الطلاب ! إعرض لهم فيديو
 
-Show students <% if @country == 'uk' %> [this video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [this video](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %> to kick off the Hour of Code. Also check out [these videos](http://youtube.com/codeorg), featuring Bill Gates, Mark Zuckerberg, Black Eyed Peas founder will.i.am and NBA star Chris Bosh talking about the importance of programming. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
+اعرض للطلاب < % if @country == 'uk' %> [هذا الفيديو](https://www.youtube.com/watch?v=96B5-JGA9EQ) < % else %> [هذا الفيديو](http://www.youtube.com/watch?v=FC5FbmsH4fw) < end% %> لاطلاق حدث ساعة البرمجة. قم بمراجعة [أشرطة الفيديو ](http://youtube.com/codeorg)، و التى تضم بيل جيتس، مارك زوكربيرج، ويل مؤسس "بلاك أيد بيز" و نجم الدوري الأميركي للمحترفين كريس بوش يتحدثون عن أهمية البرمجة. (يوجد [1 دقيقة](https://www.youtube.com/watch?v=qYZF6oIZtfc)، [5 دقائق](https://www.youtube.com/watch?v=nKIu9yen5nc)، واصدار [9 دقيقة](https://www.youtube.com/watch?v=dU1xS07N-FA))
 
-**Get your students excited - give them a short intro**
+**اجعل الطلاب متحمسين بإعطاءهم مقدمة قصيرة**
 
-Most kids don’t know what computer science is. Here are some ideas:
+معظم الأطفال لا يعرفون ما هي علوم الحاسوب. وإليك بعض الأفكار:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://code.org/girls). 
+  * اشرح ذلك بطريقة بسيطة تتضمن أمثلة للتطبيقات التي تهم الفتيان والفتيات (إنقاذ الأرواح ومساعدة الناس، الربط بين الناس، إلخ.).
+  * جرب: "فكرو في الأشياء التي تستخدم علوم الحاسوب في حياتكم اليومية: هاتف الخليوي، ميكروويف، جهاز الحاسوب، إشارة المرور... كل هذه الأمور في حاجة إلى عالم مختص في الحاسوب للمساعدة في صنعها."
+  * أو: "علوم الحاسب الآلي هو فن مزج الأفكار البشرية والأدوات الرقمية لزيادة قوتنا. يعمل علماء الحاسوب في العديد من المجالات المختلفة: صناعة تطبيقات للهواتف، وعلاج الأمراض، وخلق الرسوم المتحركة الأفلام، يعملون في الشبكات الاجتماعية، بناء الروبوتات التي استكشاف الكواكب الأخرى وما إلى ذلك . "
+  * انظر نصائح للحصول على اهتمام الفتيات في علوم الحاسوب [هنا](http://code.org/girls). 
 
-## 5) Start your Hour of Code
+## 5) البدء في حدث ساعة البرمجة الخاصة بك
 
-**Direct students to the activity**
+**توجيه الطلاب للنشاط**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the <% if @country == 'uk' %> [information for your selected tutorial](http://uk.code.org/learn) <% else %> [information for your selected tutorial](http://code.org/learn) <% end %>under the number of participants. (Example: [hourofcode.com/co](http://code.org/learn)) 
-  * Tell students to visit the URL and start the tutorial.
+  * كتابة رابط النشاط على السبورة. ابحث على الرابط الموجود في < % if @country == 'uk' %> [معلومات عن البرنامج التعليمي الذي اخترته ](http://uk.code.org/learn) < % else %> [معلومات عن البرنامج التعليمي الذي اخترته ](http://code.org/learn) < % end %> تحت العدد المشاركين. (مثال: [hourofcode.com/co](http://code.org/learn)) 
+  * اطلب من الطلاب زيارة الرابط والبدء في القيام بالبرنامج التعليمي.
 
-**When your students come across difficulties**
+**عندما يتعرض الطلاب لصعوبات**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
+  * أخبر الطلاب، "اسأل 3 ثم انا." اسأل 3 من الزملاء، وإذا لم تتحصل على الإجابة، اسأل المعلم.
   * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
   * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
 

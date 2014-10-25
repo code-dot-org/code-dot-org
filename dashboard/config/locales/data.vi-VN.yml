@@ -4,15 +4,16 @@
       name:
         20-hour:
           desc: Khóa giới thiệu Công Nghệ Thông tin của K-8
-          Unplug1: Màn 1
-          Maze: Màn 2
-          Unplug2: Màn 3
-          Unplug3: Màn 4
-          Artist: Màn 5
-          Unplug4: Màn 6
-          Artist2: Màn 7
-          Unplug5: Màn 8
-          Farmer: Màn 9
+          Unplug1: màn 1
+          Maze: |
+            màn 2
+          Unplug2: màn 3
+          Unplug3: màn 4
+          Artist: màn 5
+          Unplug4: màn 6
+          Artist2: màn 7
+          Unplug5: màn 8
+          Farmer: màn 9
           Unplug6: Màn 10
           Artist3: Màn 11
           Unplug7: Màn 12
@@ -25,7 +26,7 @@
           Artist5: Màn 19
           Unplug11: Màn 20
         Hour of Code:
-          desc: Một tiếng lập trình
+          desc: Giờ của mã
           Maze: màn 1
         Edit Code:
           desc: Chỉnh sửa/ hiệu chỉnh mã (code) (thử nghiệm)
@@ -48,10 +49,13 @@
         edit-code:
           desc: Chỉnh sửa/ hiệu chỉnh mã (code) (thử nghiệm)
           MazeEC: màn 1
+          Webapp: |
+            màn 2
         events:
           desc: Bounce (thử nghiệm)
           Bounce: màn 1
-          Studio: Màn 2
+          Studio: |
+            màn 2
         builder:
           desc: Người dùng - khởi tạo những câu đố (thử nghiệm)
           Custom: màn 1
@@ -69,8 +73,8 @@
           WordSearch: màn 1
     game:
       name:
-        Unplug1: Giới thiệu tới công nghệ thông tin
-        Maze: Mê cung
+        Unplug1: Giới thiệu về khoa học máy tính
+        Maze: mê cung
         Multi: Các lựa chọn chất liệu
         Unplug2: suy nghĩ máy móc
         Unplug3: lập trình đồ thị trên giấy
@@ -79,7 +83,7 @@
         Artist2: Nghệ sĩ 2
         Unplug5: Các hàm
         Farmer: người nông dân
-        Unplug6: "điều kiện"
+        Unplug6: "Điều kiện"
         Artist3: nghệ sĩ 3
         Unplug7: Viết nhạc
         Farmer2: Người nông dân 2
@@ -96,6 +100,7 @@
         Jigsaw: Ghép hình
         MazeStep: Chế độ mê cung từng bước thực hiện
         Wordsearch: Tìm kiếm từ/ từ vựng
+        Webapp: Webapp
     trophy:
       name:
         Bronze: "Đồng"
@@ -110,7 +115,7 @@
         loop_until: khối lệnh "lặp lại-đến khi"
         loop_while: khối lệnh "khi mà"
         loop_for: khối lệnh "trái ngược"
-        function: Hàm số
+        function: Các hàm
         parameters: phương trình với tham số
     level:
       instructions:
@@ -540,7 +545,7 @@
         loop_until: Repeat Until Block
         if: If Block
         if_else: If/else Block
-        function: Hàm số
+        function: Các hàm
         loop_while: While Block
         loop_for: Counter Block
         parameters: Functions with Parameters
@@ -550,8 +555,8 @@
         Unplug2: suy nghĩ máy móc
         Unplug3: lập trình đồ thị trên giấy
         Unplug4: các bước lập trình
-        Unplug5: Hàm số
-        Unplug6: "điều kiện"
+        Unplug5: Các hàm
+        Unplug6: "Điều kiện"
         Unplug7: Songwriting
         Unplug8: Trừu tượng
         Unplug9: Relay programming
@@ -580,7 +585,7 @@
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: lập trình đồ thị trên giấy
-        C2_conditionals_with_cards: "điều kiện"
+        C2_conditionals_with_cards: "Điều kiện"
         C2_binary_bracelets: Binary Bracelets
         C2_replay_programming: Chương trình chuyển tiếp
         C2_paper_airplanes: Paper Airplanes

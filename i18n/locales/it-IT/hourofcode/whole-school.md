@@ -4,6 +4,6 @@ layout: wide
 
 * * *
 
-# Get your whole school to participate
+# Coinvolgi tutta la scuola a partecipare
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Le informazioni su come coinvolgere intere scuole a partecipare all'Ora del Codice andranno qui.

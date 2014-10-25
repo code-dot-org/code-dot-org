@@ -1,27 +1,27 @@
 * * *
 
-title: Partners
+Partnerek
 
 * * *
 
-# Major Partners and Corporate Supporters
+# Fő partnerek és vállalati támogatók
 
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'major') %>
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
 # Hour of Code Promotional partners
 
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'promotional') %>
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
 # Tutorial partners
 
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'tutorial') %>
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
 # Additional partners
 
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'additional') %>
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>

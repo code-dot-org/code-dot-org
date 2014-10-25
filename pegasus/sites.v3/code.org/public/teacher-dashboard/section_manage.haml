@@ -50,7 +50,7 @@ theme: none
       %button.btn.btn-primary{"ng-click" => "add_bulk_import()"}= I18n.t('dashboard_action_done')
       %button.btn.btn-white{"ng-click" => "clear_bulk_import()"}= I18n.t('dashboard_action_cancel')
 
-  %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type !== 'none'", style: "line-height: 36px;"}
+  %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type !== 'email'", style: "line-height: 36px;"}
     = I18n.t('dashboard_students_new_section')
 
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'section.students.length > 0', "ng-form" => "allForm"}
@@ -68,17 +68,17 @@ theme: none
       %th.manage-th
         %a{href: "", "ng-click" => "order = 'gender'"}= I18n.t('dashboard_students_gender')
       %th.manage-th
-        %span{"ng-if" => "section.login_type !== 'none'"}= I18n.t('dashboard_students_secret')
-        %span{"ng-if" => "section.login_type === 'none'"}= I18n.t('dashboard_students_password')
+        %span{"ng-if" => "section.login_type !== 'email'"}= I18n.t('dashboard_students_secret')
+        %span{"ng-if" => "section.login_type === 'email'"}= I18n.t('dashboard_students_password')
       %th.manage-th
         %button.btn.btn-primary{"ng-click" => "save(section.students)", "ng-show" => "editingAny(section.students)", style: "float:left", "ng-disabled" => "allForm.$invalid"}= I18n.t('dashboard_action_save_all')
     %tr{"ng-repeat" => "student in section.students | orderBy:order", "ng-form" => "form"}
       %td
         %span{"ng-hide" => "student.editing"}
           %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}"} {{student.name}}
-          %div{"ng-show" => "section.login_type == 'none' && student.username"}
+          %div{"ng-show" => "section.login_type == 'email' && student.username"}
             = I18n.t('dashboard_students_username', student_username: '{{student.username}}')
-          %div{"ng-show" => "section.login_type == 'none' && (student.email || student.hashed_email)"}
+          %div{"ng-show" => "section.login_type == 'email' && (student.email || student.hashed_email)"}
             = I18n.t('dashboard_students_email', student_email: '{{student.email || "hidden"}}')
         %span{"ng-show" => "student.editing"}
           %input{"ng-model" => "student.name", placeholder: I18n.t('dashboard_students_placeholder_name'), style: "width: 100%", type: "text", required: "true"}/
@@ -92,7 +92,7 @@ theme: none
         %span{"ng-show" => "student.editing"}
           %select{"ng-model" => "student.gender", "ng-options"=>"k as v for (k,v) in gender_list"}
       %td
-        %span{"ng-if" => "section.login_type !== 'none'"}
+        %span{"ng-if" => "section.login_type !== 'email'"}
           %button.btn.btn-white{"ng-click" => "student.showing_password = true",
                                 "ng-hide" => "student.editing || student.showing_password"}
             &#x25BC;
@@ -107,7 +107,7 @@ theme: none
                  height: 40}
             %span{"ng-if" => "section.login_type === 'word'"} {{student.secret_word_1}} {{student.secret_word_2}}
             %button.btn.btn-white{"ng-click" => "resetSecrets(student)"}= I18n.t('dashboard_students_reset_secret')
-        %span{"ng-if" => "section.login_type === 'none'"}
+        %span{"ng-if" => "section.login_type === 'email'"}
           %button.btn.btn-white{"ng-click" => "student.editing_password = true",
                                 "ng-hide" => "student.editing || student.editing_password"}
             = I18n.t('dashboard_students_reset_password')
@@ -129,7 +129,7 @@ theme: none
       %th.manage-th{style: "padding-top:5px;padding-bottom:5px; height:45px"}
         %button.btn.btn-primary{"ng-click" => "save(section.students)", "ng-show" => "editingAny(section.students)", style: "float:left", "ng-disabled" => "allForm.$invalid"}= I18n.t('dashboard_action_save_all')
 
-  %div{"ng-if" => "section.login_type !== 'none'"}
+  %div{"ng-if" => "section.login_type !== 'email'"}
     %h3{"ng-show" => 'section.students.length > 0'}
       = I18n.t('dashboard_students_share_section')
       %a{"ng-href" => "http://#{canonical_hostname('studio.code.org')}/sections/{{section.code}}", target: "_blank"}
@@ -151,7 +151,7 @@ theme: none
 
   %br/
   %br/
-  %div.jumbotron{'ng-show' => "section.id && section.login_type === 'none'", style: "line-height: 36px;"}
+  %div.jumbotron{'ng-show' => "section.id && section.login_type === 'email'", style: "line-height: 36px;"}
     %p
       = I18n.t('dashboard_students_join_link')
       %a{"ng-href" => "http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}", target: "_blank"}

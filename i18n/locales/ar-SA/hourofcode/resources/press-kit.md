@@ -20,10 +20,10 @@
 **1-التخطيط للحدث الذي ستنظمه**
 
   * نظم اجتماع لاطلاق الحدث.
-  * أرسل [رسالة](/resources#sample-emails) إلى الآباء والأمهات. اطلب منهم نشر المعلومة.
-  * قم بإرسال [رسالة](/resources#sample-emails) لدعوة رئيس البلدية، عضو البرلمان، الحاكم، أو الاشخاص ذوي النفوذ التجاري للحضور والتحدث إلى الطلاب.
+  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * قم بتنظيم أنشطة للفرق (مثل الانشطة الغير موصولة)، أو عرض اهم الأنشطة التي أنشأها الطلاب.
-  * اعرض Code.org في [فيديو ساعة البرمجة](http://hourofcode.com) أو واحدة من [هذه](/resources#videos) لاعطائهم فكرة.
+  * Show Code.org’s [Hour of Code video](<%= hoc_uri('/') %>) or one of [these](<%= hoc_uri('/resources#videos') %>) to inspire.
 
 **2. قم بتحديد الصحفيين المحليين الذين يغطون مجال التعليم أو الأحداث الجهوية.**
 
@@ -33,7 +33,7 @@
 
 **3-الاتصال بوسائل الإعلام المحلية**
 
-أفضل وسيلة للتواصل تكون عن طريق البريد الإلكتروني. ينبغي أن يكون الاتصال قصيرا ومعبرا: لماذا يجب أن يهتم الآخرون بهذا الحدث؟ و ارفق كيفية الاتصال بك (بما في ذلك رقم الهاتف المحمول) للذين سوف يكون موجودين خلال هذا الحدث. **الق نظرة على [عينة من الاعلان لوسائل الإعلام](/resources#sample-emails):**
+أفضل وسيلة للتواصل تكون عن طريق البريد الإلكتروني. ينبغي أن يكون الاتصال قصيرا ومعبرا: لماذا يجب أن يهتم الآخرون بهذا الحدث؟ و ارفق كيفية الاتصال بك (بما في ذلك رقم الهاتف المحمول) للذين سوف يكون موجودين خلال هذا الحدث. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
 
 **4-إعداد الأسئلة الميدانية حول الحدث. وإليك بعض الأمثلة:**
 
@@ -45,7 +45,7 @@ We hope it’ll spark interest in students to keep learning. Research also shows
 
 *Why is this important?*
 
-In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will allow give them the confidence and know-how to succeed.
+In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
 **More details and a quote you can use in materials**
 
@@ -53,7 +53,7 @@ In China, every students takes computer science to graduate high school. In the 
 
 **About Code.org**
 
-Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [www.code.org](http://code.org).
+Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
 
   
-Find more resources and sample emails [here](/resources).
+Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).

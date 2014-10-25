@@ -1,27 +1,27 @@
 * * *
 
-title: Partners
+title: साझेदार
 
 * * *
 
-# Major Partners and Corporate Supporters
+# मुख्या साझेदार व साझेदार कंपनीया
 
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'major') %>
-
-* * *
-
-# Hour of Code Promotional partners
-
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'promotional') %>
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# Tutorial partners
+# एक घंटा कोड का के विज्ञापन सम्बन्धी साझेदार
 
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'tutorial') %>
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# Additional partners
+# प्रशिक्षण पत्रोमें साझेदार
 
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'additional') %>
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
+
+* * *
+
+# अतिरिक्त साझेदार
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>

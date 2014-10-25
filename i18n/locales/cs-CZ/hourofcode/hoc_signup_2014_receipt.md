@@ -1,6 +1,6 @@
 * * *
 
-od: "Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' předmět: Děkujeme za přihlášení k hostování akce Hodina Kódu! view: none theme: none
+od: "Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' předmět: Děkujeme za přihlášení se k pořádání akce Hodina kódu! náhled: žádný téma: žádné
 
 * * *
 
@@ -18,56 +18,44 @@ od: "Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&
 
 ## 1. Povídejte o tom
 
-Tell your friends about the #HourOfCode.
+Povězte svým přátelům o #HourOfCode.
 
 <% if @country == 'us' %>
 
 ## 2. Požádejte celou vaší školu, aby nabídla akci Hodina kódu
 
-[Send this email](http://<%= hostname %>/resources#email) or [give this handout to your principal](http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+[Odešlete tento e-mail](http://<%= hostname %>/resources#email) nebo [nebo předejte tento leták řediteli vaší školy](http://<%= hostname %>/files/schools-handout.pdf). Jakmile se vaše škola zapojí, [přihlaste se – budete mít možnost vyhrát pro svou školu zařízení v hodnotě 10 000 $](http://<%= hostname %>/prizes) a vyzvěte další školy ve svém okolí, aby se rovněž zapojily.
 
 <% else %>
 
 ## 2. Požádejte celou vaší školu, aby nabídla akci Hodina kódu
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
+[Odešlete tento e-mail](http://<%= hostname %>/resources#email) nebo dejte [tento leták](http://<%= hostname %>/files/schools-handout.pdf) řediteli své školy.
 
 <% end %>
 
 ## 3. Požádejte vašeho zaměstnavatele, aby se zapojil
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Odešlete tento e-mail](http://<%= hostname %>/resources#email) svému nadřízenému nebo řediteli. Nebo [jim dejte tento leták](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
 ## 4. Podporujte akci Hodina kódu v rámci své komunity
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Získejte místní skupinu – skautský klub, kostel, univerzitu, skupiny veteránů nebo odboráře. Nebo uspořádejte akci vaše okolí.
 
 ## 5. Požádejte místní politiky pro podporu akce Hodina kódu
 
-## [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Odešlete tento e-mail](http://<%= hostname %>/resources#politicians) svému starostovi, městskému zastupitelstvu nebo školní radě. Nebo [jim dejte tento leták](http://<%= hostname %>/resources/hoc-one-pager.pdf) a pozvěte je k návštěvě vaší školy.
 
-Děkujeme za přihlášení k hostování akce Hodina kódu!
+<% if @country == 'ro' %>
 
-EVERY Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. Details (http://<%= hostname %>/prizes)
+Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
 
-Get your whole school to participate (http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Echipa Hour of Code Romania hoc@adfaber.org
 
-  1. Spread the word
+<% end %>
 
-Tell your friends about the #HourOfCode.
+* * *
 
-  1. Ask your whole school to offer an Hour of Code
+Code.org je nezisková organizace. Sídlíme na adrese 1301 5th Ave, Suite 1225, Seattle, WA, 98101, USA. Nelíbí se vám tyto zprávy? [Odhlašte se](%= unsubscribe_link %).
 
-Send this email (http://<%= hostname %>/resources#email) or give this handout to your principal (http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, enter to win $10,000 worth of technology for your school (http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
-
-  1. Ask your employer to get involved
-
-Send this email (http://<%= hostname %>/resources#email) to your manager, or the CEO. Or give them this handout (http://<%= hostname %>/files/schools-handout.pdf).
-
-  1. Promote Hour of Code within your community
-
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
-
-  1. Ask a local elected official to support the Hour of Code
-
-Send this email (http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or give them this handout (http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+![](<%= tracking_pixel %>)

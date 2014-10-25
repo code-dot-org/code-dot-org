@@ -1,0 +1,46 @@
+-channel ||= ''
+-id ||= ''
+-thumbnail ||= ''
+-download_url ||= ''
+-width ||= 320
+-height ||= 180
+-facebook_sharing ||= false
+-google_sharing ||= false
+-twitter_sharing ||= false
+%div
+  %div{style:'width:#{width}px; height:#{height}px; text-align:right'}
+    %div{style:'width:100%; height:100%; margin:0 auto'}
+      %div{style:'position:relative'}
+        %img{src:thumbnail, style:"display:block; width:#{width}px; height:auto"}/
+        %iframe{allowfullscreen:'', frameborder:'0', src:'https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0', style:"position:absolute; top:0; left:0; width:#{width}px; height:#{height}px"}
+  .share-buttons.clear
+    -if google_sharing
+      -#NOTE: Source didn't specify what params go to google.
+      -google={}
+      %a.window-popup{href:"https://plus.google.com/share?#{google.to_query}"}<
+        %button.button-color-share.share-button-gplus<
+          %i{class:"fa fa-google-plus-square"}<
+          ="Share on Google+"
+    -if facebook_sharing
+      -#NOTE: The ID in the app had php like this and that url works... but I don't know if this is true for
+      -#      all videos or if I should just use the regular ID. Will ask Rick.
+      -facebook_url ||= "https://www.youtube.com/watch?v=#{id}"
+      -facebook = {u:facebook_url}
+      %a.window-popup{href:"https://www.facebook.com/sharer/sharer.php?#{facebook.to_query}"}<
+        %button.button-color-share.share-button-facebook<
+          %i{class:"fa fa-facebook"}<
+          =I18n.t(:share_on_facebook)
+    -if twitter_sharing
+      -twitter = {url:twitter_url, related:twitter_related, hashtags:twitter_hashtags, text:twitter_text}
+      %a.window-popup{href:"https://twitter.com/share?#{twitter.to_query}"}<
+        %button.button-color-share.share-button-twitter<
+          %i{class:"fa fa-twitter"}<
+          =I18n.t(:share_on_twitter)
+    -unless download_url.empty?
+      %a.desktop-feature{href:download_url, style:'padding-left:10px'}
+        %img{src:"/images/download.png", :width=>"35px", :style=>'margin-top:10px'}
+
+  -unless channel.empty?
+    .youtube-channel-link
+      %a{href:"http://www.youtube.com/user/#{channel}"}<
+        Go to YouTube channel

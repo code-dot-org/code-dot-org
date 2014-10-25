@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -1387,35 +1420,48 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  // helper function used below..
+  function makeNativeMemberFunction(nativeFunc, parentObj) {
+    return function() {
+      return interpreter.createPrimitive(
+                            nativeFunc.apply(parentObj, arguments));
+    };
+  }
+  for (var optsObj in options) {
+    var func, wrapper;
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
+                                interpreter.createNativeFunction(wrapper));
+      }
+    }
+  }
+};
+
+/**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      // helper function used below..
-      function makeNativeMemberFunction(nativeFunc, parentObj) {
-        return function() {
-          return interpreter.createPrimitive(
-                                nativeFunc.apply(parentObj, arguments));
-        };
-      }
-      for (var optsObj in options) {
-        // Create global objects in the interpreter for everything in options
-        var obj = this.createObject(interpreter.OBJECT);
-        this.setProperty(scope, optsObj.toString(), obj);
-        for (var prop in options[optsObj]) {
-          var func = options[optsObj][prop];
-          if (func instanceof Function) {
-            // Populate each of the global objects with native functions
-            // NOTE: other properties are not passed to the interpreter
-            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
-            interpreter.setProperty(obj,
-                                    prop,
-                                    interpreter.createNativeFunction(wrapper));
-          }
-        }
-      }
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -1433,8 +1479,7 @@ exports.evalWith = function(code, options) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
-    var fn = new ctor();
-    return fn.apply(null, args);
+    return new ctor().apply(null, args);
   }
 };
 
@@ -1442,18 +1487,24 @@ exports.evalWith = function(code, options) {
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  return new ctor();
 };
 
 },{}],7:[function(require,module,exports){
@@ -6419,16 +6470,16 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += "var " + codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = [''].concat(arguments); return " +
+          parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -6535,9 +6586,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
@@ -6556,8 +6618,24 @@ exports.random = function (values) {
 };
 
 exports.turnBlack = function (id) {
-  Webapp.executeCmd(id, 'turnBlack');
+  return Webapp.executeCmd(String(id), 'turnBlack');
 };
+
+exports.createHtmlBlock = function (blockId, elementId, html) {
+  return Webapp.executeCmd(String(blockId),
+                          'createHtmlBlock',
+                          {'elementId': elementId,
+                           'html': html });
+};
+
+exports.attachEventHandler = function (blockId, elementId, eventName, func) {
+  return Webapp.executeCmd(String(blockId),
+                          'attachEventHandler',
+                          {'elementId': elementId,
+                           'eventName': eventName,
+                           'func': func });
+};
+
 
 },{}],28:[function(require,module,exports){
 /**
@@ -6604,8 +6682,8 @@ exports.install = function(blockly, blockInstallOptions) {
     return '\n';
   };
 
-  // started separating block generation for each block into it's own function
   installTurnBlack(blockly, generator, blockInstallOptions);
+  installCreateHtmlBlock(blockly, generator, blockInstallOptions);
 };
 
 function installTurnBlack(blockly, generator, blockInstallOptions) {
@@ -6626,6 +6704,31 @@ function installTurnBlack(blockly, generator, blockInstallOptions) {
   };
 }
 
+function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
+  blockly.Blocks.webapp_createHtmlBlock = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput().appendTitle(msg.createHtmlBlock());
+      this.appendValueInput('ID');
+      this.appendValueInput('HTML');
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.createHtmlBlockTooltip());
+    }
+  };
+
+  generator.webapp_createHtmlBlock = function() {
+    var idParam = Blockly.JavaScript.valueToCode(this, 'ID',
+        Blockly.JavaScript.ORDER_NONE) || '';
+    var htmlParam = Blockly.JavaScript.valueToCode(this, 'HTML',
+        Blockly.JavaScript.ORDER_NONE) || '';
+    return 'Webapp.createHtmlBlock(\'block_id_' + this.id +
+               '\', ' + idParam + ', ' + htmlParam + ');\n';
+  };
+}
+
 },{"../../locale/no_no/common":37,"../../locale/no_no/webapp":38,"../codegen":6,"../utils":26}],29:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
@@ -6639,7 +6742,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/no_no/common') ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  <button id="rightButton" class="arrow">\n    <img src="', escape((7,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  <button id="upButton" class="arrow">\n    <img src="', escape((9,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  <button id="downButton" class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n</div>\n\n');14; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((17,  assetUrl('media/1x1.gif') )), '">', escape((17,  msg.finish() )), '\n    </button>\n  </div>\n');20; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/no_no/common') ; buf.push('\n\n');3; if (showSlider) { ; buf.push('\n  <div id="slider-cell">\n    <svg id="webapp-slider"\n         xmlns="http://www.w3.org/2000/svg"\n         xmlns:svg="http://www.w3.org/2000/svg"\n         xmlns:xlink="http://www.w3.org/1999/xlink"\n         version="1.1"\n         width="150"\n         height="50">\n        <!-- Slow icon. -->\n        <clipPath id="slowClipPath">\n          <rect width=26 height=12 x=5 y=14 />\n        </clipPath>\n        <image xlink:href="', escape((16,  assetUrl('media/webapp/turtle_icons.png') )), '" height=42 width=84 x=-21 y=-10\n            clip-path="url(#slowClipPath)" />\n        <!-- Fast icon. -->\n        <clipPath id="fastClipPath">\n          <rect width=26 height=16 x=120 y=10 />\n        </clipPath>\n        <image xlink:href="', escape((22,  assetUrl('media/webapp/turtle_icons.png') )), '" height=42 width=84 x=120 y=-11\n            clip-path="url(#fastClipPath)" />\n    </svg>\n    <img id="spinner" style="visibility: hidden;" src="', escape((25,  assetUrl('media/webapp/loading.gif') )), '" height=15 width=15>\n  </div>\n');27; } ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((31,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  <button id="rightButton" class="arrow">\n    <img src="', escape((33,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  <button id="upButton" class="arrow">\n    <img src="', escape((35,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  <button id="downButton" class="arrow">\n    <img src="', escape((37,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n</div>\n\n');40; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((43,  assetUrl('media/1x1.gif') )), '">', escape((43,  msg.finish() )), '\n    </button>\n  </div>\n');46; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -6660,7 +6763,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/no_no/common') ; buf.push('\n\n');3; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((6,  assetUrl('media/1x1.gif') )), '">', escape((6,  msg.finish() )), '\n    </button>\n  </div>\n');9; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/no_no/common') ; buf.push('\n');2; var webappMsg = require('../../locale/no_no/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n  <div id="debug-buttons">\n    <button id="pauseButton" class="share">\n      <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  webappMsg.pause() )), '\n    </button>\n  </div>\n');10; } ; buf.push('\n\n');12; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '">', escape((15,  msg.finish() )), '\n    </button>\n  </div>\n');18; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -6668,7 +6771,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/no_no/common":37,"ejs":39}],31:[function(require,module,exports){
+},{"../../locale/no_no/common":37,"../../locale/no_no/webapp":38,"ejs":39}],31:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/no_no/webapp');
@@ -6690,9 +6793,22 @@ levels.simple = {
     'snapRadius': 2
   },
   'toolbox':
-    tb(blockOfType('webapp_turnBlack')),
+    tb(blockOfType('webapp_turnBlack') +
+      '<block type="webapp_createHtmlBlock" inline="true"> \
+        <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
+        <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>'),
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
+};
+
+levels.ec_simple = {
+  'editCode': true,
+  'sliderSpeed': 0.7,
+  'codeFunctions': [
+    {'func': 'turnBlack' },
+    {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
+    {'func': 'attachEventHandler', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
+  ],
 };
 
 levels.full_sandbox =  {
@@ -6711,8 +6827,12 @@ levels.full_sandbox =  {
   'minWorkspaceHeight': 1400,
   'freePlay': true,
   'toolbox':
-    tb(createCategory(msg.catActions(),
-                        blockOfType('webapp_turnBlack')) +
+    tb(createCategory(
+        msg.catActions(),
+        blockOfType('webapp_turnBlack') +
+        '<block type="webapp_createHtmlBlock" inline="true"> \
+          <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
+          <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>') +
        createCategory(msg.catControl(),
                         blockOfType('controls_whileUntil') +
                        '<block type="controls_for"> \
@@ -6855,6 +6975,7 @@ var feedback = require('../feedback.js');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var Slider = require('../slider');
 var _ = utils.getLodash();
 
 /**
@@ -6871,10 +6992,12 @@ BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = true;
 //The number of blocks to show as feedback.
 BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
+var MAX_INTERPRETER_STEPS_PER_TICK = 50;
+
 // Default Scalings
 Webapp.scale = {
   'snapRadius': 1,
-  'stepSpeed': 33
+  'stepSpeed': 1
 };
 
 var twitterOptions = {
@@ -6904,11 +7027,118 @@ var drawDiv = function () {
   visualizationColumn.style.width = divWidth + 'px';
 };
 
-Webapp.onTick = function() {
-  Webapp.tickCount++;
+// session is an instance of Ace editSession
+// Usage
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// Need to call this only if the document is updated after the last call.
+function aceCalculateCumulativeLength(session) {
+  var cumulativeLength = [];
+  var cnt = session.getLength();
+  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
+  cumulativeLength.push(cuml);
+  var text = session.getLines(0, cnt);
+  for (var i = 0; i < cnt; i++) {
+    cuml += text[i].length + nlLength;
+    cumulativeLength.push(cuml);
+  }
+  return cumulativeLength;
+}
 
-  if (Webapp.tickCount === 1) {
-    try { Webapp.whenRunFunc(BlocklyApps, api, Webapp.Globals); } catch (e) { }
+// Fast binary search implementation
+// Pass the cumulative length array here.
+// Usage
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
+// tries to find 2512th character lies in which row.
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
+  if (rows > rowe) {
+    return null;
+  }
+  if (rows + 1 === rowe) {
+    return rows;
+  }
+
+  var mid = Math.floor((rows + rowe) / 2);
+  
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
+  }
+  return mid;
+}
+
+function createSelection(start, end) {
+  var selection = BlocklyApps.editor.aceEditor.getSelection();
+  var range = selection.getRange();
+
+  range.start.row = aceFindRow(Webapp.cumulativeLength, 0, Webapp.cumulativeLength.length, start);
+  range.start.col = start - Webapp.cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(Webapp.cumulativeLength, 0, Webapp.cumulativeLength.length, end);
+  range.end.col = end - Webapp.cumulativeLength[range.end.row];
+
+  selection.setSelectionRange(range);
+}
+
+function queueOnTick() {
+  var stepSpeed = Webapp.scale.stepSpeed;
+  if (Webapp.speedSlider) {
+    stepSpeed = 300 * Math.pow(1 - Webapp.speedSlider.getValue(), 2);
+  }
+  window.setTimeout(Webapp.onTick, stepSpeed);
+}
+
+Webapp.onTick = function() {
+  if (!Webapp.running) {
+    return;
+  }
+
+  Webapp.tickCount++;
+  queueOnTick();
+
+  // Bail out here if paused (but make sure that we still have the next tick
+  // queued first, so we can resume after un-pausing):
+  if (Webapp.paused) {
+    return;
+  }
+
+  if (Webapp.interpreter) {
+    var inUserCode = false;
+    // In each tick, we will step the interpreter multiple times in a tight
+    // loop as long as we are interpreting code that the user can't see
+    // (function aliases at the beginning, getCallback event loop at the end)
+    for (var stepsThisTick = 0;
+         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !inUserCode;
+         stepsThisTick++) {
+      if (Webapp.interpreter.stateStack[0]) {
+        var node = Webapp.interpreter.stateStack[0].node;
+        // Adjust start/end by Webapp.userCodeStartOffset since the code running
+        // has been expanded vs. what the user sees in the editor window:
+        var start = node.start - Webapp.userCodeStartOffset;
+        var end = node.end - Webapp.userCodeStartOffset;
+
+        inUserCode = (start > 0) && (start < Webapp.userCodeLength);
+
+        // If we are showing Javascript code in the ace editor, highlight
+        // the code being executed in each step:
+        if (!BlocklyApps.editor.currentlyUsingBlocks) {
+          // Only show selection if the node being executed is inside the user's
+          // code (not inside code we inserted before or after their code that is
+          // not visible in the editor):
+          if (inUserCode) {
+            createSelection(start, end);
+          } else {
+            BlocklyApps.editor.aceEditor.getSelection().clearSelection();
+          }
+        }
+      } else {
+        inUserCode = false;
+      }
+      Webapp.interpreter.step();
+    }
+  } else {
+    if (Webapp.tickCount === 1) {
+      try { Webapp.whenRunFunc(BlocklyApps, api, Webapp.Globals); } catch (e) { }
+    }
   }
 
   if (checkFinished()) {
@@ -6943,8 +7173,8 @@ Webapp.init = function(config) {
   loadLevel();
 
   var finishButtonFirstLine = _.isEmpty(level.softButtons);
-  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, finishButton: finishButtonFirstLine});
-  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine});
+  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, showSlider: config.level.editCode, finishButton: finishButtonFirstLine});
+  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine, debugButtons: config.level.editCode});
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -7002,8 +7232,26 @@ Webapp.init = function(config) {
 
   BlocklyApps.init(config);
 
+  if (level.editCode) {
+    // Initialize the slider.
+    var slider = document.getElementById('webapp-slider');
+    if (slider) {
+      Webapp.speedSlider = new Slider(10, 35, 130, slider);
+
+      // Change default speed (eg Speed up levels that have lots of steps).
+      if (config.level.sliderSpeed) {
+        Webapp.speedSlider.setValue(config.level.sliderSpeed);
+      }
+    }
+  }
+
   var finishButton = document.getElementById('finishButton');
   dom.addClickTouchEvent(finishButton, Webapp.onPuzzleComplete);
+
+  if (level.editCode) {
+    var pauseButton = document.getElementById('pauseButton');
+    dom.addClickTouchEvent(pauseButton, Webapp.onPauseButton);
+  }
 };
 
 /**
@@ -7011,11 +7259,9 @@ Webapp.init = function(config) {
  */
 Webapp.clearEventHandlersKillTickLoop = function() {
   Webapp.whenRunFunc = null;
-  if (Webapp.intervalId) {
-    window.clearInterval(Webapp.intervalId);
-  }
+  Webapp.running = false;
   Webapp.tickCount = 0;
-  Webapp.intervalId = 0;
+  Webapp.running = false;
 };
 
 /**
@@ -7041,13 +7287,32 @@ BlocklyApps.reset = function(first) {
   var divWebapp = document.getElementById('divWebapp');
   divWebapp.style.backgroundColor = 'white';
 
+  while (divWebapp.firstChild) {
+    divWebapp.removeChild(divWebapp.firstChild);
+  }
+
+  // Clone and replace divWebapp (this removes all attached event listeners):
+  var newDivWebapp = divWebapp.cloneNode(true);
+  divWebapp.parentNode.replaceChild(newDivWebapp, divWebapp);
+
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
   }
 
+  if (level.editCode) {
+    // Reset the pause button:
+    var pauseButton = document.getElementById('pauseButton');
+    pauseButton.textContent = webappMsg.pause();
+    pauseButton.disabled = true;
+    Webapp.paused = false;
+    document.getElementById('spinner').style.visibility = 'hidden';
+  }
+
   // Reset the Globals object used to contain program variables:
   Webapp.Globals = {};
+  Webapp.eventQueue = [];
+  Webapp.interpreter = null;
 };
 
 /**
@@ -7116,10 +7381,23 @@ Webapp.onReportComplete = function(response) {
 
 var defineProcedures = function (blockType) {
   var code = Blockly.Generator.workspaceToCode('JavaScript', blockType);
+  // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
+                         codeFunctions: level.codeFunctions,
                          BlocklyApps: BlocklyApps,
                          Studio: api,
                          Globals: Webapp.Globals } ); } catch (e) { }
+};
+
+/**
+ * A miniature runtime in the interpreted world calls this function repeatedly
+ * to check to see if it should invoke any callbacks from within the
+ * interpreted world. If the eventQueue is not empty, we will return an object
+ * that contains an interpreted callback function (stored in "fn") and,
+ * optionally, callback arguments (stored in "arguments")
+ */
+var nativeGetCallback = function () {
+  return Webapp.eventQueue.shift();
 };
 
 /**
@@ -7136,31 +7414,128 @@ Webapp.execute = function() {
 
   BlocklyApps.reset(false);
 
-  // Define any top-level procedures the user may have created
-  // (must be after reset(), which resets the Webapp.Globals namespace)
-  defineProcedures('procedures_defreturn');
-  defineProcedures('procedures_defnoreturn');
-
   // Set event handlers and start the onTick timer
-  var blocks = Blockly.mainWorkspace.getTopBlocks();
-  for (var x = 0; blocks[x]; x++) {
-    var block = blocks[x];
-    if (block.type === 'when_run') {
-      var code = Blockly.Generator.blocksToCode('JavaScript', [ block ]);
-      if (level.editCode) {
-        code = utils.generateCodeAliases(level.codeFunctions);
-        code += BlocklyApps.editor.getValue();
-      }
-      if (code) {
-        Webapp.whenRunFunc = codegen.functionFromCode(code, {
-                                            BlocklyApps: BlocklyApps,
-                                            Webapp: api,
-                                            Globals: Webapp.Globals } );
+
+  var codeWhenRun;
+  if (level.editCode) {
+    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Webapp');
+    Webapp.userCodeStartOffset = codeWhenRun.length;
+    codeWhenRun += BlocklyApps.editor.getValue();
+    Webapp.userCodeLength = codeWhenRun.length - Webapp.userCodeStartOffset;
+    // Append our mini-runtime after the user's code. This will spin and process
+    // callback functions:
+    codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
+      'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
+    var session = BlocklyApps.editor.aceEditor.getSession();
+    Webapp.cumulativeLength = aceCalculateCumulativeLength(session);
+  } else {
+    // Define any top-level procedures the user may have created
+    // (must be after reset(), which resets the Webapp.Globals namespace)
+    defineProcedures('procedures_defreturn');
+    defineProcedures('procedures_defnoreturn');
+
+    var blocks = Blockly.mainWorkspace.getTopBlocks();
+    for (var x = 0; blocks[x]; x++) {
+      var block = blocks[x];
+      if (block.type === 'when_run') {
+        codeWhenRun = Blockly.Generator.blocksToCode('JavaScript', [ block ]);
+        break;
       }
     }
   }
+  if (codeWhenRun) {
+    if (level.editCode) {
+      // Use JS interpreter on editCode levels
+      var initFunc = function(interpreter, scope) {
+        codegen.initJSInterpreter(interpreter, scope, {
+                                          BlocklyApps: BlocklyApps,
+                                          Webapp: api,
+                                          Globals: Webapp.Globals } );
 
-  Webapp.intervalId = window.setInterval(Webapp.onTick, Webapp.scale.stepSpeed);
+        function makeNativeMemberFunction(nativeFunc, parentObj) {
+          return function() {
+            // Call the native function:
+            var retVal = nativeFunc.apply(parentObj, arguments);
+
+            // Now figure out what to do with the return value...
+
+            if (retVal instanceof Function) {
+              // Don't call createPrimitive() for functions
+              return retVal;
+            } else if (retVal instanceof Object) {
+              var newObj = interpreter.createObject(interpreter.OBJECT);
+              // Limited attempt to marshal back complex return values
+              // Special case: only one-level deep, only handling
+              // primitives and arrays of primitives
+              for (var prop in retVal) {
+                var isFuncOrObj = retVal[prop] instanceof Function ||
+                                  retVal[prop] instanceof Object;
+                // replace properties with wrapped properties
+                if (retVal[prop] instanceof Array) {
+                  var newArray = interpreter.createObject(interpreter.ARRAY);
+                  for (var i = 0; i < retVal[prop].length; i++) {
+                    newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
+                  }
+                  newArray.length = retVal[prop].length;
+                  interpreter.setProperty(newObj, prop, newArray);
+                } else if (isFuncOrObj) {
+                  // skipping over these - they could be objects that should
+                  // be converted into interpreter objects. they could be native
+                  // functions that should be converted. Or they could be objects
+                  // that are already interpreter objects, which is what we assume
+                  // for now:
+                  interpreter.setProperty(newObj, prop, retVal[prop]);
+                } else {
+                  // wrap as a primitive if it is not a function or object:
+                  interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
+                }
+              }
+              return newObj;
+            } else {
+              return interpreter.createPrimitive(retVal);
+            }
+          };
+        }
+
+        var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
+        var wrapper = makeNativeMemberFunction(nativeGetCallback, null);
+        interpreter.setProperty(scope,
+                                'getCallback',
+                                interpreter.createNativeFunction(wrapper));
+      };
+      Webapp.interpreter = new window.Interpreter(codeWhenRun, initFunc);
+    } else {
+      Webapp.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
+                                          BlocklyApps: BlocklyApps,
+                                          Webapp: api,
+                                          Globals: Webapp.Globals } );
+    }
+  }
+
+  if (level.editCode) {
+    var pauseButton = document.getElementById('pauseButton');
+    pauseButton.disabled = false;
+    document.getElementById('spinner').style.visibility = 'visible';
+  }
+
+  Webapp.running = true;
+  queueOnTick();
+};
+
+Webapp.onPauseButton = function() {
+  if (Webapp.running) {
+    var pauseButton = document.getElementById('pauseButton');
+    // We have code and are either running or paused
+    if (Webapp.paused) {
+      Webapp.paused = false;
+      pauseButton.textContent = webappMsg.pause();
+    } else {
+      Webapp.paused = true;
+      pauseButton.textContent = webappMsg.continue();
+    }
+    document.getElementById('spinner').style.visibility =
+        Webapp.paused ? 'hidden' : 'visible';
+  }
 };
 
 Webapp.feedbackImage = '';
@@ -7235,7 +7610,7 @@ Webapp.executeCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  Webapp.callCmd(cmd);
+  return Webapp.callCmd(cmd);
 };
 
 //
@@ -7248,6 +7623,7 @@ Webapp.executeCmd = function (id, name, opts) {
 //
 
 Webapp.callCmd = function (cmd) {
+  var retVal = true;
   switch (cmd.name) {
     /* 
     case 'wait':
@@ -7258,10 +7634,18 @@ Webapp.callCmd = function (cmd) {
     */
     case 'turnBlack':
       BlocklyApps.highlight(cmd.id);
-      Webapp.turnBlack(cmd.opts);
+      retVal = Webapp.turnBlack(cmd.opts);
+      break;
+    case 'createHtmlBlock':
+      BlocklyApps.highlight(cmd.id);
+      retVal = Webapp.createHtmlBlock(cmd.opts);
+      break;
+    case 'attachEventHandler':
+      BlocklyApps.highlight(cmd.id);
+      retVal = Webapp.attachEventHandler(cmd.opts);
       break;
   }
-  return true;
+  return retVal;
 };
 
 Webapp.turnBlack = function (opts) {
@@ -7269,6 +7653,33 @@ Webapp.turnBlack = function (opts) {
 
   // sample
   divWebapp.style.backgroundColor = 'black';
+
+  return true;
+};
+
+Webapp.createHtmlBlock = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newDiv = document.createElement("div");
+  newDiv.id = opts.elementId;
+  newDiv.innerHTML = opts.html;
+
+  divWebapp.appendChild(newDiv);
+
+  return newDiv;
+};
+
+Webapp.onEventFired = function (opts, e) {
+  Webapp.eventQueue.push({'fn': opts.func});
+};
+
+Webapp.attachEventHandler = function (opts) {
+  // For now, we're not tracking how many of these we add and we don't allow
+  // the user to detach the handler. We detach all listeners by cloning the
+  // divWebapp DOM node inside of reset()
+  document.getElementById(opts.elementId).addEventListener(
+      opts.eventName,
+      Webapp.onEventFired.bind(this, opts));
 };
 
 /*
@@ -7332,7 +7743,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/no_no/common":37,"../../locale/no_no/webapp":38,"../base":2,"../codegen":6,"../dom":8,"../feedback.js":9,"../skins":12,"../templates/page.html":20,"../utils":26,"../xml":36,"./api":27,"./blocks":28,"./controls.html":29,"./extraControlRows.html":30,"./visualization.html":34}],36:[function(require,module,exports){
+},{"../../locale/no_no/common":37,"../../locale/no_no/webapp":38,"../base":2,"../codegen":6,"../dom":8,"../feedback.js":9,"../skins":12,"../slider":13,"../templates/page.html":20,"../utils":26,"../xml":36,"./api":27,"./blocks":28,"./controls.html":29,"./extraControlRows.html":30,"./visualization.html":34}],36:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -7380,7 +7791,7 @@ exports.catMath = function(d){return "Matematikk"};
 
 exports.catProcedures = function(d){return "Funksjoner"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -7396,7 +7807,7 @@ exports.directionNorthLetter = function(d){return "N"};
 
 exports.directionSouthLetter = function(d){return "S"};
 
-exports.directionEastLetter = function(d){return "E"};
+exports.directionEastLetter = function(d){return "Ø"};
 
 exports.directionWestLetter = function(d){return "V"};
 
@@ -7472,7 +7883,7 @@ exports.tooManyBlocksMsg = function(d){return "Denne oppgaven kan løses med <x 
 
 exports.tooMuchWork = function(d){return "Du fikk meg til å gjøre masse arbeid! Kan du forsøke med mindre repetisjon?"};
 
-exports.toolboxHeader = function(d){return "Blokker"};
+exports.toolboxHeader = function(d){return "blokker"};
 
 exports.openWorkspace = function(d){return "Slik fungerer det"};
 
@@ -7488,7 +7899,7 @@ exports.saveToGallery = function(d){return "Lagre til galleriet"};
 
 exports.savedToGallery = function(d){return "Lagret i galleriet!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Beklager, vi kan ikke dele dette programmet."};
 
 exports.typeCode = function(d){return "Skriv din JavaScript-kode under disse instruksjonene."};
 
@@ -7523,39 +7934,45 @@ exports.genericFeedback = function(d){return "Se hvordan du endte opp, og prøv 
 
 },{"messageformat":50}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.no=function(n){return n===1?"one":"other"}
-exports.catActions = function(d){return "Actions"};
+exports.catActions = function(d){return "Handlinger"};
 
-exports.catControl = function(d){return "Loops"};
+exports.catControl = function(d){return "Løkker"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Hendelser"};
 
-exports.catLogic = function(d){return "Logic"};
+exports.catLogic = function(d){return "Logikk"};
 
-exports.catMath = function(d){return "Math"};
+exports.catMath = function(d){return "Matematikk"};
 
-exports.catProcedures = function(d){return "Functions"};
+exports.catProcedures = function(d){return "Funksjoner"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "tekst"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "Variabler"};
 
-exports.continue = function(d){return "Continue"};
+exports.continue = function(d){return "Fortsett"};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.createHtmlBlock = function(d){return "create html block"};
+
+exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+
+exports.finalLevel = function(d){return "Gratulerer! Du har løst den siste oppgaven."};
 
 exports.makeYourOwn = function(d){return "Make Your Own App"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "Gratulerer! Du har fullført denne utfordringen."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "Nei"};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
+exports.numBlocksNeeded = function(d){return "Denne utfordringen kan bli løst med %1 blokker."};
+
+exports.pause = function(d){return "Pause"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "gjenta for alltid"};
 
-exports.repeatDo = function(d){return "do"};
+exports.repeatDo = function(d){return "gjør"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
@@ -7567,7 +7984,7 @@ exports.turnBlack = function(d){return "turn black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 
-exports.yes = function(d){return "Yes"};
+exports.yes = function(d){return "Ja"};
 
 
 },{"messageformat":50}],39:[function(require,module,exports){

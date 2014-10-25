@@ -6,10 +6,12 @@ crwdns20172:0crwdne20172:0
 
 # crwdns19598:0crwdne19598:0
 
+## crwdns20706:0crwdne20706:0
+
 <a id="handouts"></p> 
 
 <h2>
-  crwdns19607:0crwdne19607:0
+  crwdns20707:0crwdne20707:0
 </h2>
 
 <p>
@@ -17,7 +19,7 @@ crwdns20172:0crwdne20172:0
 </p>
 
 <h2>
-  crwdns19609:0crwdne19609:0
+  crwdns20708:0crwdne20708:0
 </h2>
 
 <p>
@@ -28,16 +30,18 @@ crwdns20172:0crwdne20172:0
   <a id="videos"></p> 
   
   <h2>
-    crwdns19611:0crwdne19611:0
+    crwdns20709:0crwdne20709:0
   </h2>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       crwdns19612:0crwdne19612:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       crwdns19613:0crwdne19613:0 <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -47,12 +51,14 @@ crwdns20172:0crwdne20172:0
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>crwdns19614:0crwdne19614:0</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       crwdns19615:0crwdne19615:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -68,7 +74,7 @@ crwdns20172:0crwdne20172:0
     <a id="posters"></p> 
     
     <h2>
-      crwdns19616:0crwdne19616:0
+      crwdns20710:0crwdne20710:0
     </h2>
     
     <p>
@@ -76,7 +82,7 @@ crwdns20172:0crwdne20172:0
     </p>
     
     <h4>
-      crwdns19617:0crwdne19617:0
+      crwdns20711:0crwdne20711:0
     </h4>
     
     <p>
@@ -88,7 +94,7 @@ crwdns20172:0crwdne20172:0
     </p>
     
     <h2>
-      crwdns19624:0crwdne19624:0
+      crwdns20712:0crwdne20712:0
     </h2>
     
     <p>
@@ -100,7 +106,7 @@ crwdns20172:0crwdne20172:0
     </p>
     
     <h2>
-      crwdns19628:0crwdne19628:0
+      crwdns20713:0crwdne20713:0
     </h2>
     
     <p>
@@ -108,7 +114,7 @@ crwdns20172:0crwdne20172:0
     </p>
     
     <h2>
-      crwdns19629:0crwdne19629:0
+      crwdns20714:0crwdne20714:0
     </h2>
     
     <p>
@@ -136,7 +142,7 @@ crwdns20172:0crwdne20172:0
     </p>
     
     <h2>
-      crwdns19641:0crwdne19641:0
+      crwdns20715:0crwdne20715:0
     </h2>
     
     <p>
@@ -188,7 +194,7 @@ crwdns20172:0crwdne20172:0
     </p>
     
     <h2>
-      crwdns19658:0crwdne19658:0
+      crwdns20716:0crwdne20716:0
     </h2>
     
     <p>
@@ -228,7 +234,7 @@ crwdns20172:0crwdne20172:0
     </p>
     
     <h2>
-      crwdns19674:0crwdne19674:0
+      crwdns20717:0crwdne20717:0
     </h2>
     
     <p>

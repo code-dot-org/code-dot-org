@@ -76,8 +76,8 @@
         Maze Multiple Choice One: Maze Multiple Choice One
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500"
-        Choose the best answer.: Choose the best answer.
-        Which blocks work?: Which blocks work?
+        Choose the best answer.: "ជ្រើសរើស​ចម្លើយ​ដ៏​ល្អ​បំផុត។"
+        Which blocks work?: "តើ​ប្លុក​មួយ​ណា​មាន​ដំណើរការ?"
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
@@ -86,7 +86,7 @@
         Maze Multiple Choice: Maze Multiple Choice
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
           500"
-        Which blocks work?: Which blocks work?
+        Which blocks work?: "តើ​ប្លុក​មួយ​ណា​មាន​ដំណើរការ?"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
@@ -129,12 +129,11 @@
       2-3 Conditionals Multi 1:
         Multiple Choice: Multiple Choice
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        These are your team's cards - according to the rules of the game, which set is scored correctly?: These
-          are your team's cards - according to the rules of the game, which set is
-          scored correctly?
+        According to the rules of the game, which set of cards is scored correctly?: According
+          to the rules of the game, which set of cards is scored correctly?
+        "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a4.png": "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
       2-3 Getting Loopy Multi 1:
         Multiple Choice: Multiple Choice
@@ -364,7 +363,6 @@
         "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_2_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a4.png"
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -539,7 +537,7 @@
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: One
           of these boys is the <b>driver</b>.  And one is the <b>helper</b>.
-        Which boy is the <large>helper</large>?: Which boy is the <large>helper</large>?
+        Which boy is the <large>helper</large>?: "តើ​ក្មេង​ប្រុស​មួយ​ណា​គឺ​ជា​<larger>អ្នក​ជួយ</larger>?"
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
       K-1 multi 5:
@@ -622,22 +620,21 @@
         "/script_assets/matches/images/head.jpg,400": "/script_assets/matches/images/head.jpg,400"
         This puzzle is all about selecting the correct flowers.: This puzzle is all
           about selecting the correct flowers.
-        Instructions: Instructions
+        Instructions: "សេចក្ដី​ណែនាំ"
         Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: Click
           the right answer, then submit. And here are some longer instructions just
           to test things more.  How's that word wrapping?
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Which flowers are yellow?: Which flowers are yellow?
+        Which flowers are yellow?: "តើ​ផ្កា​មួយ​ណា​មាន​ពណ៌​លឿង?"
         "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
         "/script_assets/matches/images/a2.jpg": "/script_assets/matches/images/a2.jpg"
         "/script_assets/matches/images/a3.jpg": "/script_assets/matches/images/a3.jpg"
         "/script_assets/matches/images/a4.jpg": "/script_assets/matches/images/a4.jpg"
       test multi text:
-        Presidents: Presidents
-        This multiple choice is all about the presidents of the United States.: This
-          multiple choice is all about the presidents of the United States.
-        Who was the first president of the USA?: Who was the first president of the
-          USA?
+        Presidents: "ប្រធានាធិបតី"
+        This multiple choice is all about the presidents of the United States.: "ពហុជម្រើស​ទាំង​នេះ​ស្ដី​អំពី​ប្រធានាធិបតី​នៃ​សហរដ្ឋ​អាមេរិក។"
+        Who was the first president of the USA?: "តើ​នរណា​ជា​ប្រធានាធិបតី​ដំបូង​គេ​នៃ
+          ស.រ.អា. ?"
         Fred Flintstone: Fred Flintstone
         Martha Washington: Martha Washington
         George Washington: George Washington
