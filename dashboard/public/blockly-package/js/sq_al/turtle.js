@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -9631,11 +9664,6 @@ Turtle.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
 
-  // Enable blockly param editing in levelbuilder, regardless of level setting
-  if (config.level.edit_blocks) {
-    config.disableParamEditing = false;
-  }
-
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
 
@@ -10622,7 +10650,7 @@ exports.and = function(d){return "dhe"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
-exports.catActions = function(d){return "aksionet"};
+exports.catActions = function(d){return "Veprimet"};
 
 exports.catColour = function(d){return "Colour"};
 
@@ -10630,15 +10658,15 @@ exports.catLogic = function(d){return "Logic"};
 
 exports.catLists = function(d){return "Listat"};
 
-exports.catLoops = function(d){return "Loops"};
+exports.catLoops = function(d){return "perseritje"};
 
-exports.catMath = function(d){return "Matematika"};
+exports.catMath = function(d){return "Matematikë"};
 
-exports.catProcedures = function(d){return "Funksionet"};
+exports.catProcedures = function(d){return "funksionet"};
 
 exports.catText = function(d){return "Tekst"};
 
-exports.catVariables = function(d){return "Variablat"};
+exports.catVariables = function(d){return "variabla"};
 
 exports.codeTooltip = function(d){return "Shikoni kodin e gjenerua JavaScript."};
 
@@ -10674,7 +10702,7 @@ exports.generatedCodeInfo = function(d){return "The blocks for your program can 
 
 exports.hashError = function(d){return "Sorry, '%1' doesn't correspond with any saved program."};
 
-exports.help = function(d){return "Ndihm"};
+exports.help = function(d){return "Ndihmë"};
 
 exports.hintTitle = function(d){return "Ndihmes:"};
 
@@ -10682,7 +10710,7 @@ exports.jump = function(d){return "jump"};
 
 exports.levelIncompleteError = function(d){return "You are using all of the necessary types of blocks but not in the right way."};
 
-exports.listVariable = function(d){return "lista"};
+exports.listVariable = function(d){return "listë"};
 
 exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
 
@@ -10714,7 +10742,7 @@ exports.runTooltip = function(d){return "Run the program defined by the blocks i
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Shfaq Kodin"};
+exports.showCodeHeader = function(d){return "Shfaq kodin"};
 
 exports.showGeneratedCode = function(d){return "Shfaq kodin"};
 
@@ -10728,7 +10756,7 @@ exports.tooManyBlocksMsg = function(d){return "This puzzle can be solved with <x
 
 exports.tooMuchWork = function(d){return "You made me do a lot of work!  Could you try repeating fewer times?"};
 
-exports.toolboxHeader = function(d){return "Ndalesat"};
+exports.toolboxHeader = function(d){return "blloqe"};
 
 exports.openWorkspace = function(d){return "How It Works"};
 
@@ -10785,15 +10813,15 @@ exports.branches = function(d){return "branches"};
 
 exports.catColour = function(d){return "Ngjyra"};
 
-exports.catControl = function(d){return "përsëritje"};
+exports.catControl = function(d){return "perseritje"};
 
 exports.catMath = function(d){return "Matematikë"};
 
-exports.catProcedures = function(d){return "Funksione"};
+exports.catProcedures = function(d){return "funksionet"};
 
-exports.catTurtle = function(d){return "Veprime"};
+exports.catTurtle = function(d){return "Veprimet"};
 
-exports.catVariables = function(d){return "Variabla"};
+exports.catVariables = function(d){return "variabla"};
 
 exports.catLogic = function(d){return "Logic"};
 
@@ -10805,11 +10833,11 @@ exports.depth = function(d){return "depth"};
 
 exports.dots = function(d){return "piksela"};
 
-exports.drawASquare = function(d){return "vizato një katror"};
+exports.drawASquare = function(d){return "vizato nje katror"};
 
-exports.drawATriangle = function(d){return "vizato një trekëndësh"};
+exports.drawATriangle = function(d){return "vizato nje trekendesh"};
 
-exports.drawACircle = function(d){return "vizato një rreth"};
+exports.drawACircle = function(d){return "vizato nje rreth"};
 
 exports.drawAFlower = function(d){return "draw a flower"};
 
@@ -10827,7 +10855,7 @@ exports.drawARocket = function(d){return "draw a rocket"};
 
 exports.drawASnowflake = function(d){return "draw a snowflake"};
 
-exports.drawASnowman = function(d){return "vizato një njeri bore"};
+exports.drawASnowman = function(d){return "vizato nje njeri debore"};
 
 exports.drawAStar = function(d){return "draw a star"};
 
@@ -10859,7 +10887,7 @@ exports.jumpWestTooltip = function(d){return "Moves the artist west without leav
 
 exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
 
-exports.lengthParameter = function(d){return "gjatësi"};
+exports.lengthParameter = function(d){return "gjatesi"};
 
 exports.loopVariable = function(d){return "numërues"};
 
@@ -10891,9 +10919,9 @@ exports.penUp = function(d){return "pencil up"};
 
 exports.reinfFeedbackMsg = function(d){return "Does this look like what you want? You can press the \"Try again\" button to see your drawing."};
 
-exports.setColour = function(d){return "set color"};
+exports.setColour = function(d){return "vendos ngjyren"};
 
-exports.setWidth = function(d){return "set width"};
+exports.setWidth = function(d){return "vendos gjeresine"};
 
 exports.shareDrawing = function(d){return "Share your drawing:"};
 

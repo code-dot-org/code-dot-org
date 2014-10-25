@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -11505,7 +11538,7 @@ exports.bounceBall = function(d){return "bounce ball"};
 
 exports.bounceBallTooltip = function(d){return "Отблъсни топката на разстояние от обекта."};
 
-exports.continue = function(d){return "Продължи"};
+exports.continue = function(d){return "Напред"};
 
 exports.dirE = function(d){return "И"};
 
@@ -11519,7 +11552,7 @@ exports.doCode = function(d){return "правя"};
 
 exports.elseCode = function(d){return "друго"};
 
-exports.finalLevel = function(d){return "Поздравления! Ти реши последният пъзел."};
+exports.finalLevel = function(d){return "Поздравления! Вие решихте последния пъзел."};
 
 exports.heightParameter = function(d){return "височина"};
 
@@ -11527,7 +11560,7 @@ exports.ifCode = function(d){return "ако"};
 
 exports.ifPathAhead = function(d){return "ако има път напред"};
 
-exports.ifTooltip = function(d){return "Ако има път в тази посока, то направи следните действия."};
+exports.ifTooltip = function(d){return "Ако има път в тази посока, то направи следните действия"};
 
 exports.ifelseTooltip = function(d){return "Ако има път в тази посока,  извърши първия блок действия. Ако няма, извърши втория блок действия."};
 
@@ -11535,7 +11568,7 @@ exports.incrementOpponentScore = function(d){return "резултат на пр�
 
 exports.incrementOpponentScoreTooltip = function(d){return "Добавя една към текущият резултат на противника."};
 
-exports.incrementPlayerScore = function(d){return "резултат"};
+exports.incrementPlayerScore = function(d){return "точка"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Добавя една точка към текущия резултат на играча."};
 
@@ -11553,19 +11586,19 @@ exports.moveDown = function(d){return "премести надолу"};
 
 exports.moveDownTooltip = function(d){return "Движи платформата надолу."};
 
-exports.moveForward = function(d){return "предвижване напред"};
+exports.moveForward = function(d){return "върви напред"};
 
 exports.moveForwardTooltip = function(d){return "Преместете ме напред с един ход."};
 
-exports.moveLeft = function(d){return "предвижване наляво"};
+exports.moveLeft = function(d){return "премести наляво"};
 
 exports.moveLeftTooltip = function(d){return "Движи платформата  наляво."};
 
-exports.moveRight = function(d){return "предвижване надясно"};
+exports.moveRight = function(d){return "премести надясно"};
 
 exports.moveRightTooltip = function(d){return "Движи платформата надясно."};
 
-exports.moveUp = function(d){return "предвижване нагоре"};
+exports.moveUp = function(d){return "премести нагоре"};
 
 exports.moveUpTooltip = function(d){return "Движи платформата нагоре."};
 
@@ -11579,7 +11612,7 @@ exports.noPathLeft = function(d){return "няма път наляво"};
 
 exports.noPathRight = function(d){return "няма път надясно"};
 
-exports.numBlocksNeeded = function(d){return "Този пъзел може да бъде решен с %1 блока."};
+exports.numBlocksNeeded = function(d){return "Този пъзел може да бъде решен с %1 блокове."};
 
 exports.pathAhead = function(d){return "път напред"};
 
@@ -11587,15 +11620,15 @@ exports.pathLeft = function(d){return "ако има път наляво"};
 
 exports.pathRight = function(d){return "ако има път надясно"};
 
-exports.pilePresent = function(d){return "там има купчинка"};
+exports.pilePresent = function(d){return "там има купчина"};
 
-exports.playSoundCrunch = function(d){return "възпроизвежда звук за разбиване"};
+exports.playSoundCrunch = function(d){return "възпроизвеждане на звук за разбиване"};
 
-exports.playSoundGoal1 = function(d){return "възпроизвежда звук 1 гол"};
+exports.playSoundGoal1 = function(d){return "възпроизвежда звук 1 за гол"};
 
-exports.playSoundGoal2 = function(d){return "възпроизвежда звук  2 гол"};
+exports.playSoundGoal2 = function(d){return "възпроизвежда звук 2 за гол"};
 
-exports.playSoundHit = function(d){return "възпроизвежда звук за удар"};
+exports.playSoundHit = function(d){return "възпроизвежда звук на удар"};
 
 exports.playSoundLosePoint = function(d){return "възпроизвежда звук за загуба на точка"};
 
@@ -11609,15 +11642,15 @@ exports.playSoundSlap = function(d){return "възпроизвежда звук 
 
 exports.playSoundTooltip = function(d){return "Възпроизвеждане на избраният звук."};
 
-exports.playSoundWinPoint = function(d){return "възпроизвежда звук на победа точка"};
+exports.playSoundWinPoint = function(d){return "възпроизвежда звук на победна точка"};
 
-exports.playSoundWinPoint2 = function(d){return "възпроизвежда звук 2 на победа точка"};
+exports.playSoundWinPoint2 = function(d){return "възпроизвежда звук 2 на победна точка"};
 
 exports.playSoundWood = function(d){return "възпроизвежда звук от дърво"};
 
 exports.putdownTower = function(d){return "спуска кулата"};
 
-exports.reinfFeedbackMsg = function(d){return "Може да натиснете бутона \"Опитай отново\", за да се върнете в играта си."};
+exports.reinfFeedbackMsg = function(d){return "Може да натиснете бутона \"Опитай отново\", за да се върнете да играете играта си."};
 
 exports.removeSquare = function(d){return "премахва квадрата"};
 
@@ -11625,7 +11658,7 @@ exports.repeatUntil = function(d){return "повтаряй докато"};
 
 exports.repeatUntilBlocked = function(d){return "докато има място напред"};
 
-exports.repeatUntilFinish = function(d){return "повтаряй докато приключи"};
+exports.repeatUntilFinish = function(d){return "повтаря докато приключи"};
 
 exports.scoreText = function(d){return "Резултат: "+v(d,"playerScore")+": "+v(d,"opponentScore")};
 
@@ -11635,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "зарежда сцена �
 
 exports.setBackgroundRetro = function(d){return "зарежда ретро сцената"};
 
-exports.setBackgroundTooltip = function(d){return "Задаване на фоновото изображение"};
+exports.setBackgroundTooltip = function(d){return "Задава фоновото изображение"};
 
 exports.setBallRandom = function(d){return "задава произволна топка"};
 
@@ -11685,9 +11718,9 @@ exports.shareBounceTwitter = function(d){return "Вижте Flappy играта,
 
 exports.shareGame = function(d){return "Споделете играта си:"};
 
-exports.turnLeft = function(d){return "завърти наляво"};
+exports.turnLeft = function(d){return "завий наляво"};
 
-exports.turnRight = function(d){return "завърти надясно"};
+exports.turnRight = function(d){return "завий надясно"};
 
 exports.turnTooltip = function(d){return "Завърта ме наляво или надясно на 90 градуса."};
 
@@ -11699,17 +11732,17 @@ exports.whenBallMissesPaddle = function(d){return "когато топката �
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Изпълни действията по-долу когато топката пропусне платформата."};
 
-exports.whenDown = function(d){return "когато стрелката надолу"};
+exports.whenDown = function(d){return "когато стрелка надолу"};
 
-exports.whenDownTooltip = function(d){return "Изпълни действията по-долу когато е натисната стрелка надолу."};
+exports.whenDownTooltip = function(d){return "Следвайте действията по-долу когато е натисната стрелка надолу."};
 
 exports.whenGameStarts = function(d){return "когато играта започва"};
 
 exports.whenGameStartsTooltip = function(d){return "Изпълни действията по-долу при стартиране на играта."};
 
-exports.whenLeft = function(d){return "когато стрелка наляво"};
+exports.whenLeft = function(d){return "когато стрелка наляво "};
 
-exports.whenLeftTooltip = function(d){return "Изпълни действията по-долу когато е натисната стрелка надолу."};
+exports.whenLeftTooltip = function(d){return "Изпълнява действията по-долу когато е натисната стрелка надолу."};
 
 exports.whenPaddleCollided = function(d){return "когато топката удари платформата"};
 
@@ -11717,19 +11750,19 @@ exports.whenPaddleCollidedTooltip = function(d){return "Изпълни дейс�
 
 exports.whenRight = function(d){return "когато стрелка надясно"};
 
-exports.whenRightTooltip = function(d){return "Изпълни действията по-долу когато е натисната стрелка надясно."};
+exports.whenRightTooltip = function(d){return "Изпълнява действията по-долу когато е натиснат клавиша стрелка надясно."};
 
 exports.whenUp = function(d){return "когато стрелка нагоре"};
 
-exports.whenUpTooltip = function(d){return "Изпълни действията по-долу когато е натисната стрелка нагоре."};
+exports.whenUpTooltip = function(d){return "Изпълнява действията по-долу когато е натисната стрелка нагоре."};
 
 exports.whenWallCollided = function(d){return "когато топката удари стената"};
 
 exports.whenWallCollidedTooltip = function(d){return "Изпълни действията по-долу когато топката се сблъсква със стена."};
 
-exports.whileMsg = function(d){return "а"};
+exports.whileMsg = function(d){return "докато"};
 
-exports.whileTooltip = function(d){return "Повтори поставените в блока действия, докато целта не бъде достигната."};
+exports.whileTooltip = function(d){return "Повтаряйте поставените в блока действия, докато целта не бъде достигната."};
 
 exports.yes = function(d){return "Да"};
 
@@ -11754,13 +11787,13 @@ exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Функции"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Променливи"};
 
 exports.codeTooltip = function(d){return "Виж генерирания JavaScript код."};
 
-exports.continue = function(d){return "Продължение"};
+exports.continue = function(d){return "Продължи"};
 
 exports.dialogCancel = function(d){return "Отмяна"};
 
@@ -11780,7 +11813,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Блоковете за пов
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Блокът за функция трябва да има други блокове вътре в себе си, за да работи."};
 
-exports.extraTopBlocks = function(d){return "Имате не закачени блокове. Искате ли да кажеш да ги закачите към блокът \"при стартиране\" ?"};
+exports.extraTopBlocks = function(d){return "Имате не закачени блокове. Искате ли да ги закачите към блока \"при стартиране\" ?"};
 
 exports.finalStage = function(d){return "Поздравления! Вие завършихте последния етап."};
 
@@ -11822,17 +11855,17 @@ exports.play = function(d){return "играй"};
 
 exports.puzzleTitle = function(d){return "Пъзел "+v(d,"puzzle_number")+" от "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "повтори"};
+exports.repeat = function(d){return "повтарям"};
 
 exports.resetProgram = function(d){return "Начално състояние"};
 
-exports.runProgram = function(d){return "Пусни"};
+exports.runProgram = function(d){return "Старт"};
 
 exports.runTooltip = function(d){return "Стартира програмата, определена от блоковете в работното поле."};
 
 exports.score = function(d){return "резултат"};
 
-exports.showCodeHeader = function(d){return "Покажи кода"};
+exports.showCodeHeader = function(d){return "Покажи код"};
 
 exports.showGeneratedCode = function(d){return "Покажи кода"};
 
@@ -11854,7 +11887,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "All-time total: "+p(d,"
 
 exports.tryAgain = function(d){return "Опитайте отново"};
 
-exports.hintRequest = function(d){return "Виж съвета"};
+exports.hintRequest = function(d){return "Вижте съвета"};
 
 exports.backToPreviousLevel = function(d){return "Обратно към предишното ниво"};
 

@@ -6,9 +6,9 @@
     attributes:
       user:
         name: Numele afișat
-        email: Email
-        username: Nume de utilizator
-        password: Parolă
+        email: E-mail
+        username: nume de utilizator
+        password: parolă
         password_confirmation: Confirmarea parolei
         current_password: Parolă curentă
         locale: Limbă
@@ -31,11 +31,11 @@
     placeholder: Te rugăm să introduci indiciul tău aici
     submit: Adaugă sugestie
   appname: Code.org
-  stage: Etapă
+  stage: etapă
   stage_number: Stage %{number}
   puzzle: Puzzle
-  trophies: Trofee
-  courses: Cursuri
+  trophies: trofee
+  courses: cursuri
   of: de
   more: MAI MULT
   less: MAI PUŢIN
@@ -92,7 +92,7 @@
     gender: Sex (opţional)
     birthday: Ziua de naştere (opţional)
     age: Vârsta
-    submit: "Înscrie-te"
+    submit: Inregistrează-te
     teacher: Ești profesor?
     valid_username: Disponibil!
     invalid_username: Numele de utilizator trebuie să aibe cel puțin 5 caractere
@@ -276,7 +276,7 @@
       prizes: Premii
       logout: Deloghează-te
       signin: Loghează-te
-      signup: "Înregistrează-te"
+      signup: Inregistrează-te
       already_registered: Eşti deja înregistrat?
     popup:
       progress: Progresul tău
@@ -288,7 +288,7 @@
       prize_earned: Toate cele %{total_trophies} trofee au fost colectate. Premiu
         câștigat!
       prize_us_only: "(Numai pentru studenţii din SUA)"
-      prizes_link: mai multe informaţii
+      prizes_link: Mai multe informaţii
   teacher:
     title:
       one: 'Profesorul tău:'
@@ -308,11 +308,11 @@
       not_tried: Nu a fost încercat incă
       activity: Indică activitatea elevului din ultimele %{hours} %{plural}
       no_section: Nici o secţiune atribuită
-      trophies: Trofee
+      trophies: trofee
     students:
       name: Nume
-      username: Nume de utilizator
-      password: Parolă
+      username: nume de utilizator
+      password: parolă
       manage: Gestionează elevi
       dashboard: Du-te la Tabloul de Bord al Profesorilor
       add: Adaugă elevi
@@ -394,8 +394,8 @@
     student_stats: Ai câştigat %{trophy_count} din cele %{trophy_max} trofee de "Concept
       de Măestrie"
     student_left_off: 'Unde ai rămas:'
-    student_finished_prize: Ai completat toate tutorialele, revendică-ți %{prize_link}
-      și alege o altă clasă %{online_link} sau la o %{local_school_link}
+    student_finished_prize: Ai completat toate tutorialele, revendică %{prize_link}
+      și alege altă clasă % {online_link} sau la o %{local_school_link}
     student_finished: Ai completat toate tutoriale, alege o altă clasă %{online_link}
       sau la o altă școală %{local_school_link}
     local_school: "şcoală locală"
@@ -415,6 +415,9 @@
     heading_elementary: "<h2>curse de 20 de ore pentru</h2><h1>Elevi Primari</h1>"
     heading_apps: "<h2>Distracţie pentru</h2><h1>Toată lumea</h1>"
     heading_legacy: "<h2>Cursul nostru general pentru</h2><h1>Toate vârstele</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: De sex masculin
     female: De sex feminin
@@ -513,11 +516,17 @@
       body: "Încearcă cursul nostru de 20 de ore Introducere în Știința Calculatorului."
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
+    students_made_these_with_code: Students made these with code!
     picture_count: In ultimele  <b>%{days}</b> zile, studenții au desenat<b>%{count}</b>
       imagini prin propriile programe pe calculator. Selectează imaginile pentru a
       vedea fiecare program în acțiune.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Vrei să realizezi propriul tău program?
     more: Mai mult &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: Acest curs este în <span class='betatext'>beta</span>. Asta înseamnă
       că aceasta nu este versiunea finală a cursului, şi poate fii revizuit din moment
@@ -552,29 +561,29 @@
             clasele K-8, dar este distractiv de învăţat la toate vârstele.
         Hour of Code:
           title: Oră de Cod
-          description: ''
+          description: "[șir gol]"
         edit-code:
           title: Editează Codul
-          description: ''
+          description: "[șir gol]"
         events:
           title: Evenimente
-          description: ''
+          description: "[șir gol]"
         builder:
           title: Constructor
-          description: ''
+          description: "[șir gol]"
         flappy:
           title: Codul Flappy
           description: Vrei să programezi propriul joc în mai puţin de 10 minute?
             Încearcă lecția noastră Codul Floppy!
         jigsaw:
           title: Puzzle
-          description: ''
+          description: "[șir gol]"
         step:
           title: Pas
-          description: ''
+          description: "[șir gol]"
         sample_level_builder:
           title: Constructor de niveluri de probă
-          description: ''
+          description: "[șir gol]"
   age_interstitial:
     age: Varsta ta
     header: Actualizarea Informaţiilor Contului

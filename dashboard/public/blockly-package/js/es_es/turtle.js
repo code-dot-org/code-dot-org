@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -9631,11 +9664,6 @@ Turtle.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
 
-  // Enable blockly param editing in levelbuilder, regardless of level setting
-  if (config.level.edit_blocks) {
-    config.disableParamEditing = false;
-  }
-
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
 
@@ -10636,7 +10664,7 @@ exports.catMath = function(d){return "Matemáticas"};
 
 exports.catProcedures = function(d){return "Funciones"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
 exports.catVariables = function(d){return "Variables"};
 
@@ -10662,7 +10690,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Los bloques \"repetir\" o \"si
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "El bloque de función necesita tener otros bloques en su interior para funcionar."};
 
-exports.extraTopBlocks = function(d){return "Tiene bloques separados. ¿Quieres decir que quieres fijarlos al bloque \"cuando se ejecuta\"?"};
+exports.extraTopBlocks = function(d){return "Tienes bloques sueltos. ¿Quisiste adjuntarlos al bloque \"Cuando se ejecuta\"?"};
 
 exports.finalStage = function(d){return "¡Felicidades! Has completado la etapa final."};
 
@@ -10670,7 +10698,7 @@ exports.finalStageTrophies = function(d){return "¡Felicidades! Has completado l
 
 exports.finish = function(d){return "Terminar"};
 
-exports.generatedCodeInfo = function(d){return "Incluso las mejores universidades enseñan codificación basada en bloques (por ejemplo, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Aun así los bloques que has codificado se pueden mostrar en JavaScript, el lenguaje de programación más utilizado en el mundo:"};
+exports.generatedCodeInfo = function(d){return "Incluso las mejores universidades enseñan programación basada en bloques (por ejemplo, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Pero, por debajo, los bloques que has programado también se pueden mostrar en JavaScript, el lenguaje de programación más utilizado en el mundo:"};
 
 exports.hashError = function(d){return "Lo sentimos, '%1' no se corresponde con ningún programa guardado."};
 
@@ -10728,7 +10756,7 @@ exports.tooManyBlocksMsg = function(d){return "Puedes resolver este puzzle con <
 
 exports.tooMuchWork = function(d){return "¡Me has hecho trabajar mucho!  ¿Podrías tratar de repetir menos veces?"};
 
-exports.toolboxHeader = function(d){return "Bloques"};
+exports.toolboxHeader = function(d){return "bloques"};
 
 exports.openWorkspace = function(d){return "Cómo funciona"};
 
@@ -10774,7 +10802,7 @@ exports.signup = function(d){return "Únete al curso de introducción"};
 
 exports.hintHeader = function(d){return "Aquí hay un consejo:"};
 
-exports.genericFeedback = function(d){return "Ver como terminaste, y tratar de reparar tu programa."};
+exports.genericFeedback = function(d){return "Mira como terminaste, y trata de reparar tu programa."};
 
 
 },{"messageformat":54}],42:[function(require,module,exports){
@@ -10785,15 +10813,15 @@ exports.branches = function(d){return "ramas"};
 
 exports.catColour = function(d){return "Color"};
 
-exports.catControl = function(d){return "Iteraciones"};
+exports.catControl = function(d){return "vuelta"};
 
 exports.catMath = function(d){return "Matemáticas"};
 
-exports.catProcedures = function(d){return "Funciones"};
+exports.catProcedures = function(d){return "funciones"};
 
 exports.catTurtle = function(d){return "Acciones"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "variables"};
 
 exports.catLogic = function(d){return "Lógica"};
 
@@ -10805,37 +10833,37 @@ exports.depth = function(d){return "profundidad"};
 
 exports.dots = function(d){return "pixeles"};
 
-exports.drawASquare = function(d){return "dibujar un cuadrado"};
+exports.drawASquare = function(d){return "Dibuje un cuadrado"};
 
 exports.drawATriangle = function(d){return "dibujar un triángulo"};
 
 exports.drawACircle = function(d){return "dibujar un círculo"};
 
-exports.drawAFlower = function(d){return "dibuja una flor"};
+exports.drawAFlower = function(d){return "dibujar una flor"};
 
-exports.drawAHexagon = function(d){return "dibuja un hexágono"};
+exports.drawAHexagon = function(d){return "dibujar un hexágono"};
 
 exports.drawAHouse = function(d){return "dibujar una casa"};
 
-exports.drawAPlanet = function(d){return "dibuja un planeta"};
+exports.drawAPlanet = function(d){return "dibujar un planeta"};
 
-exports.drawARhombus = function(d){return "dibuja un rombo"};
+exports.drawARhombus = function(d){return "dibujar un rombo"};
 
-exports.drawARobot = function(d){return "dibuja un robot"};
+exports.drawARobot = function(d){return "dibujar un robot"};
 
-exports.drawARocket = function(d){return "dibuja un cohete"};
+exports.drawARocket = function(d){return "dibujar un cohete"};
 
-exports.drawASnowflake = function(d){return "dibuja un copo de nieve"};
+exports.drawASnowflake = function(d){return "dibujar un copo de nieve"};
 
-exports.drawASnowman = function(d){return "dibujar un muñeco de nieve"};
+exports.drawASnowman = function(d){return "dibuje un muñeco de nieve"};
 
-exports.drawAStar = function(d){return "dibuja una estrella"};
+exports.drawAStar = function(d){return "dibujar una estrella"};
 
 exports.drawATree = function(d){return "dibujar un árbol"};
 
-exports.drawUpperWave = function(d){return "dibuja la onda superior"};
+exports.drawUpperWave = function(d){return "dibujar la onda superior"};
 
-exports.drawLowerWave = function(d){return "dibuja la onda inferior"};
+exports.drawLowerWave = function(d){return "dibujar la onda mas baja"};
 
 exports.heightParameter = function(d){return "altura"};
 
@@ -10849,7 +10877,7 @@ exports.jumpForward = function(d){return "saltar hacia adelante"};
 
 exports.jumpTooltip = function(d){return "Mueve el artista sin dejar ninguna marca."};
 
-exports.jumpEastTooltip = function(d){return "Mueva al artista hacia el este sin dejar ninguna marca."};
+exports.jumpEastTooltip = function(d){return "Mueve al artista hacia el este sin dejar ninguna marca."};
 
 exports.jumpNorthTooltip = function(d){return "Mueve al artista hacia el norte sin dejar ninguna marca."};
 
@@ -10889,7 +10917,7 @@ exports.penTooltip = function(d){return "Levanta o baja el lápiz, para empezar 
 
 exports.penUp = function(d){return "levantar lápiz"};
 
-exports.reinfFeedbackMsg = function(d){return "¿Ha quedado como tú quieres? Puedes pulsar el botón \"Intentar de nuevo\" para ver tu dibujo."};
+exports.reinfFeedbackMsg = function(d){return "¿Parece esto lo que quieres? Puedes presionar el botón \"Intentar nuevamente\" para ver tu dibujo."};
 
 exports.setColour = function(d){return "definir color"};
 

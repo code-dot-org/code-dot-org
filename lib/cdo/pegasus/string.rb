@@ -30,4 +30,28 @@ class String
     left.map{|l| right.map{|r| l.to_s + r.to_s}}.flatten
   end
 
+  # squish and squish! copied from rails:
+  # https://github.com/rails/rails/blob/cada218f539265c6c44002833dc41b36be7738d3/activesupport/lib/active_support/core_ext/string/filters.rb#L11
+
+  # Returns the string, first removing all whitespace on both ends of
+  # the string, and then changing remaining consecutive whitespace
+  # groups into one space each.
+  #
+  # Note that it handles both ASCII and Unicode whitespace like mongolian vowel separator (U+180E).
+  #
+  #   %{ Multi-line
+  #      string }.squish                   # => "Multi-line string"
+  #   " foo   bar    \n   \t   boo".squish # => "foo bar boo"
+  def squish
+    dup.squish!
+  end
+
+  # Performs a destructive squish. See String#squish.
+  def squish!
+    gsub!(/\A[[:space:]]+/, '')
+    gsub!(/[[:space:]]+\z/, '')
+    gsub!(/[[:space:]]+/, ' ')
+    self
+  end
+
 end

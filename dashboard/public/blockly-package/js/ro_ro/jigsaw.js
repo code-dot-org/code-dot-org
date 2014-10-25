@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -7665,7 +7698,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ro = function 
   }
   return 'other';
 };
-exports.and = function(d){return "și"};
+exports.and = function(d){return "şi"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -7683,7 +7716,7 @@ exports.catMath = function(d){return "Matematică"};
 
 exports.catProcedures = function(d){return "Funcţii"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variabile"};
 
@@ -7691,7 +7724,7 @@ exports.codeTooltip = function(d){return "Vezi codul JavaScript generat."};
 
 exports.continue = function(d){return "Continuă"};
 
-exports.dialogCancel = function(d){return "Revocare"};
+exports.dialogCancel = function(d){return "Anulează"};
 
 exports.dialogOK = function(d){return "OK"};
 
@@ -7715,7 +7748,7 @@ exports.finalStage = function(d){return "Felicitări! Ai terminat ultima etapă.
 
 exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"ro",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Finalizare"};
+exports.finish = function(d){return "Sfârsit"};
 
 exports.generatedCodeInfo = function(d){return "Chiar și în universităţi de top se predă programarea bazată pe blocuri de coduri (de exemplu, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Dar în esență, blocurile de cod pe care le-ai compus pot fi de asemenea afișate în JavaScript, limbajul de programare cel mai utilizat din lume:"};
 
@@ -7725,7 +7758,7 @@ exports.help = function(d){return "Ajutor"};
 
 exports.hintTitle = function(d){return "Sugestie:"};
 
-exports.jump = function(d){return "sări"};
+exports.jump = function(d){return "sari"};
 
 exports.levelIncompleteError = function(d){return "Utilizezi toate tipurile de blocuri necesare, dar nu așa cum trebuie."};
 
@@ -7761,13 +7794,13 @@ exports.runTooltip = function(d){return "Rulează programul definit de blocuri �
 
 exports.score = function(d){return "scor"};
 
-exports.showCodeHeader = function(d){return "Arată Codul"};
+exports.showCodeHeader = function(d){return "Arată codul"};
 
 exports.showGeneratedCode = function(d){return "Arată codul"};
 
 exports.subtitle = function(d){return "un mediu de programare vizual"};
 
-exports.textVariable = function(d){return "text"};
+exports.textVariable = function(d){return "scris"};
 
 exports.tooFewBlocksMsg = function(d){return "Folosești toate tipurile necesare de blocuri, dar încearcă să utilizezi mai multe din aceste tipuri de blocuri pentru a completa puzzle-ul."};
 
@@ -7775,7 +7808,7 @@ exports.tooManyBlocksMsg = function(d){return "Acest puzzle poate fi rezolvat cu
 
 exports.tooMuchWork = function(d){return "M-ai făcut să lucrez foarte mult! Ai putea să încerci să repeți de mai puține ori?"};
 
-exports.toolboxHeader = function(d){return "Blocuri"};
+exports.toolboxHeader = function(d){return "blocuri"};
 
 exports.openWorkspace = function(d){return "Cum funcţionează"};
 
@@ -7843,11 +7876,11 @@ exports.no = function(d){return "Nu"};
 
 exports.numBlocksNeeded = function(d){return "Acest puzzle poate fi rezolvat cu %1 blocuri."};
 
-exports.reinfFeedbackMsg = function(d){return "Poţi apăsa butonul \"Încercaţi din nou\" pentru a reveni la jocul tău."};
+exports.reinfFeedbackMsg = function(d){return "Tu poţi apăsa butonul \"Încercaţi din nou\" pentru a reveni să joci jocul tău."};
 
 exports.share = function(d){return "Distribuie"};
 
-exports.shareGame = function(d){return "Distribuie jocul tău:"};
+exports.shareGame = function(d){return "condivide jocul tău:"};
 
 exports.yes = function(d){return "Da"};
 

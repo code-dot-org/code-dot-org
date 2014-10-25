@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13335,7 +13368,6 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('TEXT')
-        .setCheck('String')
         .appendTitle(msg.setScoreText());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -16437,7 +16469,9 @@ Studio.init = function(config) {
     return el.getBoundingClientRect().width;
   };
 
-  arrangeStartBlocks(config);
+  if (config.level.edit_blocks != 'toolbox_blocks') {
+    arrangeStartBlocks(config);
+  }
 
   config.twitter = twitterOptions;
 
@@ -18657,7 +18691,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.and = function(d){return "和"};
 
-exports.blocklyMessage = function(d){return "模块化"};
+exports.blocklyMessage = function(d){return "布洛克里"};
 
 exports.catActions = function(d){return "操作"};
 
@@ -18765,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "可以使用 < x id = 'START_SPAN
 
 exports.tooMuchWork = function(d){return "你让我多做很多工作 ！你可以尝试少重复几次吗？"};
 
-exports.toolboxHeader = function(d){return "模块"};
+exports.toolboxHeader = function(d){return "块"};
 
 exports.openWorkspace = function(d){return "它是如何工作的？"};
 
@@ -18818,7 +18852,7 @@ exports.genericFeedback = function(d){return "看你的程序时如何结束的�
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.actor = function(d){return "男演员"};
 
-exports.catActions = function(d){return "行为"};
+exports.catActions = function(d){return "操作"};
 
 exports.catControl = function(d){return "循环"};
 
@@ -18846,7 +18880,7 @@ exports.defaultSayText = function(d){return "在此处键入"};
 
 exports.emotion = function(d){return "心情"};
 
-exports.finalLevel = function(d){return "恭喜你！你完成了最后一个难题。"};
+exports.finalLevel = function(d){return "恭喜你！你完成了最后一个谜题。"};
 
 exports.hello = function(d){return "你好"};
 
@@ -18926,7 +18960,7 @@ exports.nextLevel = function(d){return "恭喜你！你解决了这个谜题。"
 
 exports.no = function(d){return "不"};
 
-exports.numBlocksNeeded = function(d){return "这个谜题可以用%1个块解决。"};
+exports.numBlocksNeeded = function(d){return "这个谜题可以用%1个语句块解决。"};
 
 exports.ouchExclamation = function(d){return "哎哟 ！"};
 
@@ -19326,7 +19360,7 @@ exports.whenUp = function(d){return "当箭头向上"};
 
 exports.whenUpTooltip = function(d){return "执行下面按向上箭头键时采取的行动。"};
 
-exports.yes = function(d){return "对"};
+exports.yes = function(d){return "是"};
 
 
 },{"messageformat":58}],47:[function(require,module,exports){

@@ -8,7 +8,7 @@ from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x7
 
 # Grazie per aver accettato di ospitare un evento dell'Ora del Codice! layout!
 
-**EVERY** Gli organizzatori di Un'ora di Codice riceveranno 10 GB di spazio su Dropbox o 10 $ di credito Skype in segno di ringraziamento [Details](http://<%= hostname %>/prizes)
+**TUTTI** gli organizzatori di Un'ora di Codice riceveranno 10 GB di spazio su Dropbox o 10$ di credito Skype in segno di ringraziamento [Dettagli](http://<%= hostname %>/prizes)
 
 <% if @country == 'us' %>
 
@@ -44,7 +44,7 @@ Recluta un gruppo locale — un gruppo di boy scout, la tua chiesa, l'universit�
 
 ## 5. Chiedi ad un funzionario locale di sostenere l'Ora del Codice
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Invia questa email](http://<%= hostname %>/resources#politicians)al tuo Sindaco, al Consiglio Comunale o al Consiglio Scolastico. O [presenta loro questo volantino](http://<%= hostname %>/resources/hoc-one-pager.pdf) ed invitali a visitare la tua scuola.
 
 <% if @country == 'ro' %>
 
@@ -56,6 +56,6 @@ Echipa Hour of Code Romania hoc@adfaber.org
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org è un non-profit 501c3. Il nostro indirizzo è 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Non gradisci queste email? [cancellati qui](%= unsubscribe_link %).
 
 ![](<%= tracking_pixel %>)

@@ -47,7 +47,7 @@ el:
           Suzi: Suzi
           The Artist: Ο Καλλιτέχνης
           Artist Debugging: Artist Debugging
-          Bounce: Bounce
+          Bounce: αναπήδησε
           "Studio: Create a Story": 'Play Lab: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
@@ -94,10 +94,10 @@ el:
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
+          Bounce: αναπήδησε
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: Αλγοριθμική σκέψη
+          Computational Thinking: Αλγοριθμική Σκέψη
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
@@ -107,7 +107,7 @@ el:
           Farmer - While Loops: 'Farmer - While Loops'
           description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
           "Studio: Create a Game": 'Play Lab: Create a Game'
-          Maze: Maze
+          Maze: Λαβύρινθος
           Artist: Artist
           "Artist: Functions": 'Artist: Functions'
           "Bee: Functions": 'Bee: Functions'
@@ -129,6 +129,7 @@ el:
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

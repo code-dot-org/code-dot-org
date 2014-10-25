@@ -134,6 +134,10 @@ vi:
   hoc_faq_international_a: Mọi người có thể tổ chức một sự kiện Hour of Code, bất kỳ đâu trên thế giới. Năm ngoái, những học sinh trên toàn cầu đã cùng tham gia vào Hour of Code.
   hoc_faq_tutorial_q: Làm thế nào tôi có thể làm một hướng dẫn về Hour of Code?
   hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
+  hoc_faq_more_questions_q: Still have more questions?
+  hoc_faq_more_questions_a: "Try finding an answer in our <a href='http://support.code.org'>support forum</a>."
+  hoc_faq_more_questions_br_q: Outras dúvidas?
+  hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "Hour of Code là một giờ học giới thiệu về khoa học máy tính, được thiết kế để làm sáng tỏ việc lập trình và chỉ ra rằng mọi người có thể học những thứ căn bản.  <a href='http://uk.code.org/learn'>Tham gia vào các khóa học</a>, và tìm ra những điều mới mẻ sắp tới của Hour of Code 2014."
   hoc_faq_when_is_hoc_uk_a: "Giờ mã sẽ diễn ra trong ngày 14 tháng 8, năm 2014. Nó có phải là một cụ thể <i>giờ</i>? Không. Bạn có thể làm giờ mã bất cứ lúc nào trong tuần này. Giờ mã ở Anh sẽ xảy ra cùng một lúc cũng như ở Mỹ nơi nó được hẹn giờ để kỷ niệm hàng năm <a href='http://csedweek.org'> Tuần lễ giáo dục về khoa học máy tính.</a>"
   hoc_faq_why_cs_uk_a: '<i>Mọi</i> học sinh nên học khoa học máy tính. Nó giúp phát triển kỹ năng giải quyết vấn đề, tư duy logic và khả năng sáng tạo. Việc tiếp cận sớm với nó giúp sinh viên có nền tảng tốt đề thành công trong thế kỷ 21 này.'

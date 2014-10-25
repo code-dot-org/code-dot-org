@@ -52,7 +52,7 @@ Tell your friends about the #HourOfCode.
 
 ## 5. Promote Hour of Code within your community
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+स्थानिक संघाटनोको अनुरोध करे - स्काउट / गाइड, चर्च, दिग्ग्जोकी संघटना, कामगार संघ या अपने मोहल्ले मे 'एक घंटा कोड का' की प्रचार सभा करे |
 
 ## 6. Ask a local elected official to support the Hour of Code
 

@@ -45,7 +45,7 @@ Nous espérons qu'il va susciter l'intérêt chez les élèves de continuer à a
 
 *Pourquoi est-ce important ?*
 
-En Chine, tous les étudiants prennent l'informatique pour obtenir leur diplôme d'études secondaires. Aux États-Unis, 90 % des écoles ne l'enseignent même pas. Il est temps pour nous de rattraper le XXIe siècle. Nous savons que, indépendamment de ce que vont devenir nos élèves quand ils grandissent, médecine, affaires, politique, ou les arts, savoir comment est construite la technologie leur permettra d'avoir confiance et le savoir-faire pour réussir.
+En Chine, tous les étudiants prennent l'informatique pour obtenir leur diplôme d'études secondaires. Aux États-Unis, 90 % des écoles ne l'enseignent même pas. Il est temps pour nous de rattraper le XXIe siècle. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
 **More details and a quote you can use in materials**
 

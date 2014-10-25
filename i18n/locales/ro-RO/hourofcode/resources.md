@@ -6,12 +6,12 @@ title: Resurse layout: wide nav: resources_nav
 
 # Resurse
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Organizezi Hour of Code? [ Click aici pentru ghid](<%= hoc_uri('/resources/how-to') %>)
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Utilizaţi acest poster pentru a promova Hour of Code
 </h2>
 
 <p>
@@ -19,7 +19,7 @@ title: Resurse layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Împarte această broşură profesorilor si școlilor
 </h2>
 
 <p>
@@ -30,7 +30,7 @@ title: Resurse layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Arătați aceste videoclipuri pentru a inspira elevii
   </h2>
   
   <div style="float:left; padding:10px">
@@ -74,7 +74,7 @@ title: Resurse layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Afișează aceste postere în şcoala ta
     </h2>
     
     <p>
@@ -82,7 +82,7 @@ title: Resurse layout: wide nav: resources_nav
     </p>
     
     <h4>
-      <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
+      <a href="http://hourofcode.com/#signup">Înscrieţi-</a> evenimentul dumneavoastra Hour of Code şi noi vă trimitem postere gratuit.
     </h4>
     
     <p>
@@ -94,7 +94,7 @@ title: Resurse layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Adaugă aceste bannere pe website-ul tau
     </h2>
     
     <p>
@@ -106,7 +106,7 @@ title: Resurse layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Trimite aceste e-mailuri pentru a ajuta la promovarea evenimentului Hour of Code
     </h2>
     
     <p>
@@ -114,7 +114,7 @@ title: Resurse layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Roagă școala, angajatorul sau prietenii sa se înscrie:
     </h2>
     
     <p>
@@ -142,7 +142,7 @@ title: Resurse layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Invită mass-media să participe la eveniment:
     </h2>
     
     <p>
@@ -170,7 +170,7 @@ title: Resurse layout: wide nav: resources_nav
     </p>
     
     <p>
-      "Ora de Programare" (Hour of Code), organizată de Code.org (o organizaţie non-profit) şi peste 100 alte organizaţii, este o mărturie că generaţia de astăzi de student este gata să înveţe deprinderi esenţiale pentru a avea succes în secolul 21. Vă rugăm să vă alăturaţi nouă.
+      "Ora de Programare" (Hour of Code), organizată de Code.org (o organizaţie non-profit) şi peste 100 alte organizaţii, este o mărturie că generaţia de astăzi este gata să înveţe deprinderi esenţiale pentru a avea succes în secolul 21. Vă rugăm să vă alăturaţi.
     </p>
     
     <p>
@@ -194,7 +194,7 @@ title: Resurse layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Spune părinţilor despre evenimentul şcolii dumneavoastră:
     </h2>
     
     <p>
@@ -234,7 +234,7 @@ title: Resurse layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Invitați un politician local la evenimentul şcolii dumneavoastră:
     </h2>
     
     <p>

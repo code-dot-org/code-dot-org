@@ -63,7 +63,7 @@ fa:
           "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: شرطی ها
+          Conditionals: مشروط
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -107,7 +107,7 @@ fa:
           Farmer - While Loops: 'Farmer - While Loops'
           description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
           "Studio: Create a Game": 'Play Lab: Create a Game'
-          Maze: Maze
+          Maze: پیچ و خم
           Artist: Artist
           "Artist: Functions": 'Artist: Functions'
           "Bee: Functions": 'Bee: Functions'
@@ -129,6 +129,7 @@ fa:
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

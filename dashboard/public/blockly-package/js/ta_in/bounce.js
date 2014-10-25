@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -11505,7 +11538,7 @@ exports.bounceBall = function(d){return "துள்ளல் பந்து"}
 
 exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
 
-exports.continue = function(d){return "தொடர்ந்து"};
+exports.continue = function(d){return "தொடர்க"};
 
 exports.dirE = function(d){return "கிழக்கு"};
 
@@ -11523,7 +11556,7 @@ exports.finalLevel = function(d){return "வாழ்த்துக்கள்
 
 exports.heightParameter = function(d){return "உயரம்"};
 
-exports.ifCode = function(d){return "எனின்"};
+exports.ifCode = function(d){return "இருந்தால்"};
 
 exports.ifPathAhead = function(d){return "முன்னால் பாதை என்றால்"};
 
@@ -11553,7 +11586,7 @@ exports.moveDown = function(d){return "கீழே நகர்த்த"};
 
 exports.moveDownTooltip = function(d){return "Move the paddle down."};
 
-exports.moveForward = function(d){return "முன்னோக்கி நகர்"};
+exports.moveForward = function(d){return "முன்னோக்கி நகர்த்த"};
 
 exports.moveForwardTooltip = function(d){return "Move me forward one space."};
 
@@ -11703,9 +11736,9 @@ exports.whenDown = function(d){return "when Down arrow"};
 
 exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "விளையாட்டு தொடங்கும் போது"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "விளையாட்டு தொடங்கும் போது, கீழே கொடுக்கப்பட்டுள்ள செயல்களை செய்து முடிக்கவும்."};
 
 exports.whenLeft = function(d){return "when Left arrow"};
 
@@ -11760,7 +11793,7 @@ exports.catVariables = function(d){return "மாறிலிகள்"};
 
 exports.codeTooltip = function(d){return "உருவாக்கப்பட்ட ஜாவாஉரைக் குறியீடுகளை பார்க்க."};
 
-exports.continue = function(d){return "தொடர்ந்து"};
+exports.continue = function(d){return "தொடர்க"};
 
 exports.dialogCancel = function(d){return "ரத்து செய்"};
 

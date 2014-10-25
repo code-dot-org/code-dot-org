@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -9198,7 +9231,7 @@ exports.continue = function(d){return "Tęsti"};
 
 exports.dialogCancel = function(d){return "Atšaukti"};
 
-exports.dialogOK = function(d){return "gerai"};
+exports.dialogOK = function(d){return "Gerai"};
 
 exports.directionNorthLetter = function(d){return "Š"};
 
@@ -9344,7 +9377,7 @@ exports.continue = function(d){return "Tęsti"};
 
 exports.doCode = function(d){return "daryk"};
 
-exports.elseCode = function(d){return "priešingu atveju"};
+exports.elseCode = function(d){return "kitu atveju"};
 
 exports.endGame = function(d){return "baigti žaidimą"};
 
@@ -9368,11 +9401,11 @@ exports.flapVeryLarge = function(d){return "pakilk labai dideliu dydžiu"};
 
 exports.flapTooltip = function(d){return "Nuskraidink Flappy į viršų."};
 
-exports.flappySpecificFail = function(d){return "Tavo programa atrodo gerai - kiekvienąkart paspaudus pele, paukštis suplasnos."};
+exports.flappySpecificFail = function(d){return "Tavo kodas atrodo gerai - jis plasnos su kiekvienu paspaudimu. Tačiau tau reikia nuspausti daug kartų, kad jis nuplasnotų į tikslą."};
 
 exports.incrementPlayerScore = function(d){return "gauk tašką"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Pridėk vieną tašką prie esamo žaidėjo rezultato."};
+exports.incrementPlayerScoreTooltip = function(d){return "Pridėk vieną tašką prie dabartinio žaidėjo rezultato."};
 
 exports.nextLevel = function(d){return "Sveikinu! Išsprendei šią užduotį."};
 
@@ -9384,7 +9417,7 @@ exports.playSoundRandom = function(d){return "groti atsitiktinį garsą"};
 
 exports.playSoundBounce = function(d){return "grok atsimušimo garsą"};
 
-exports.playSoundCrunch = function(d){return "grok trakšt garsą"};
+exports.playSoundCrunch = function(d){return "garsas = trakšt"};
 
 exports.playSoundDie = function(d){return "grok liūdną garsą"};
 
@@ -9410,7 +9443,7 @@ exports.playSoundTooltip = function(d){return "Grok pasirinktą garsą."};
 
 exports.reinfFeedbackMsg = function(d){return "Gali nuspausti mygtuką „Mėginti dar kartą“, kad grįžtum prie savo žaidimo."};
 
-exports.scoreText = function(d){return "Rezultatas: "+v(d,"playerScore")};
+exports.scoreText = function(d){return "Taškai: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "scena ="};
 
@@ -9528,7 +9561,7 @@ exports.setPlayerTurkey = function(d){return "žaidėjas = Kalakutas"};
 
 exports.setPlayerTooltip = function(d){return "Nustato žaidėjo paveikslėlį"};
 
-exports.setScore = function(d){return "taškai ="};
+exports.setScore = function(d){return "taškai = "};
 
 exports.setScoreTooltip = function(d){return "Nustato žaidėjo rezultatą"};
 
@@ -9538,11 +9571,11 @@ exports.setSpeedTooltip = function(d){return "Nustato šio lygio greitį"};
 
 exports.shareFlappyTwitter = function(d){return "Pažiūrėk, kokį Flappy žaidimą sukūriau. Parašiau jį pats puslapyje code.org"};
 
-exports.shareGame = function(d){return "Pasidalink savo žaidimu:"};
+exports.shareGame = function(d){return "Bendrink savo žaidimą:"};
 
 exports.soundRandom = function(d){return "atsitiktinis"};
 
-exports.soundBounce = function(d){return "atsitrenkimas"};
+exports.soundBounce = function(d){return "atsimušk"};
 
 exports.soundCrunch = function(d){return "trakšt"};
 
@@ -9596,7 +9629,7 @@ exports.whenEnterObstacleTooltip = function(d){return "Vykdyti pateiktus veiksmu
 
 exports.whenRunButtonClick = function(d){return "kai žaidimas prasideda"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Vykdyti nurodytus veiksmus, kai žaidimas prasideda."};
+exports.whenRunButtonClickTooltip = function(d){return "Vykdyti žemiau nurodytus veiksmus, kai žaidimas prasideda."};
 
 exports.yes = function(d){return "Taip"};
 

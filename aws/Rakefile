@@ -70,6 +70,15 @@ file home_dir('.profile') => [aws_dir('profile')] + DEPENDENCIES do |t|
   cp t.prerequisites[0], t.name
 end
 
+file dashboard_dir('config/logrotate') => [dashboard_dir('config/logrotate.erb')] + DEPENDENCIES do |t|
+  RakeUtils.erb t.prerequisites[0], t.name, task:t
+end
+
+LOGROTATE_DASHBOARD = "/etc/logrotate.d/#{CDO.dashboard_unicorn_name}"
+task LOGROTATE_DASHBOARD => [dashboard_dir('config/logrotate')] do |t|
+  RakeUtils.sudo_ln_s t.prerequisites[0], t.name
+end
+
 file dashboard_dir('config/init.d') => [dashboard_dir('config/init.d.erb')] + DEPENDENCIES do |t|
   RakeUtils.erb t.prerequisites[0], t.name, task:t
 end
@@ -127,6 +136,7 @@ task :default => [
   INSTALL ? home_dir('.profile')                : aws_dir('profile'),
   INSTALL ? ETC_INIT_D_DASHBOARD                : dashboard_dir('config/init.d'),
   INSTALL ? ETC_INIT_D_PEGASUS                  : pegasus_dir('config/init.d'),
+  INSTALL ? LOGROTATE_DASHBOARD                 : dashboard_dir('config/logrotate'),
   aws_dir('varnish.config'),
   aws_dir('varnish.secret'),
   aws_dir('varnish.vcl'),
@@ -148,6 +158,7 @@ task :clean do
     aws_dir('varnish.vcl'),
     dashboard_dir('config/init.d'),
     pegasus_dir('config/init.d'),
+    dashboard_dir('config/logrotate'),
     deploy_dir('i18n/crowdin.yaml'),
     pegasus_dir('config/newrelic.yml'),
   ].each do |path|

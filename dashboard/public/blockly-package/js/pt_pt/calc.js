@@ -90,7 +90,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":16,"./required_block_utils":19,"./utils":34}],2:[function(require,module,exports){
+},{"./base":2,"./blocksCommon":4,"./dom":18,"./required_block_utils":21,"./utils":36}],2:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -994,7 +1004,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/pt_pt/common":37,"./block_utils":3,"./builder":5,"./constants.js":15,"./dom":16,"./feedback.js":17,"./slider":21,"./templates/buttons.html":23,"./templates/instructions.html":25,"./templates/learn.html":26,"./templates/makeYourOwn.html":27,"./utils":34,"./xml":35}],3:[function(require,module,exports){
+},{"../locale/pt_pt/common":39,"./block_utils":3,"./builder":5,"./constants.js":17,"./dom":18,"./feedback.js":19,"./slider":23,"./templates/buttons.html":25,"./templates/instructions.html":27,"./templates/learn.html":28,"./templates/makeYourOwn.html":29,"./utils":36,"./xml":37}],3:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1160,7 +1170,7 @@ exports.calcBlockXml = function (type, args) {
   return str;
 };
 
-},{"./xml":35}],4:[function(require,module,exports){
+},{"./xml":37}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1278,6 +1289,28 @@ function installPickOne(blockly) {
   };
 }
 
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
+    return '\n';
+  };
+}
+
 function installWhenRun(blockly, skin, isK1) {
   blockly.Blocks.when_run = {
     // Block to handle event where mouse is clicked
@@ -1302,7 +1335,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/pt_pt/common":37}],5:[function(require,module,exports){
+},{"../locale/pt_pt/common":39}],5:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -1332,18 +1365,22 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":16,"./feedback.js":17,"./templates/builder.html":22,"./utils.js":34,"url":48}],6:[function(require,module,exports){
-var Expression = require('./expression');
+},{"./dom.js":18,"./feedback.js":19,"./templates/builder.html":24,"./utils.js":36,"url":50}],6:[function(require,module,exports){
+var ExpressionNode = require('./expressionNode');
+
+exports.compute = function (expr, blockId) {
+
+};
 
 exports.expression = function (operator, arg1, arg2, blockId) {
   // todo (brent) - make use of blockId
   // todo (brent) - hacky way to get last expression
-  Calc.lastExpression = new Expression(operator, arg1, arg2);
+  Calc.lastExpression = new ExpressionNode(operator, arg1, arg2);
 
   return Calc.lastExpression;
 };
 
-},{"./expression":10}],7:[function(require,module,exports){
+},{"./expressionNode":11}],7:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1391,7 +1428,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
 };
 
-},{"../../locale/pt_pt/calc":36,"../../locale/pt_pt/common":37,"./core":9,"./functionalBlocks":11}],8:[function(require,module,exports){
+},{"../../locale/pt_pt/calc":38,"../../locale/pt_pt/common":39,"./core":10,"./functionalBlocks":12}],8:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1425,8 +1462,10 @@ var codegen = require('../codegen');
 var api = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
+var dom = require('../dom');
 
-var Expression = require('./expression');
+
+var ExpressionNode = require('./expressionNode');
 var TestResults = require('../constants').TestResults;
 
 var level;
@@ -1439,11 +1478,6 @@ var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
 /**
- * PID of animation task currently executing.
- */
-Calc.pid = 0;
-
-/**
  * Initialize Blockly and the Calc.  Called on page load.
  */
 Calc.init = function(config) {
@@ -1451,18 +1485,25 @@ Calc.init = function(config) {
   skin = config.skin;
   level = config.level;
 
+  Calc.expressions = {
+    target: null, // the complete target expression
+    user: null, // the current state of the user expression
+    current: null // the current state of the target expression
+  };
+
+  Calc.shownFeedback_ = false;
+
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = false;
-
-  // Enable blockly param editing in levelbuilder, regardless of level setting
-  if (config.level.edit_blocks) {
-    config.disableParamEditing = false;
-  }
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
     data: {
       localeDirection: BlocklyApps.localeDirection(),
+      visualization: require('./visualization.html')(),
+      controls: require('./controls.html')({
+        assetUrl: BlocklyApps.assetUrl
+      }),
       blockUsed : undefined,
       idealBlockNumber : undefined,
       blockCounterClass : 'block-counter-default'
@@ -1476,33 +1517,34 @@ Calc.init = function(config) {
   };
 
   config.afterInject = function() {
+    var svg = document.getElementById('svgCalc');
+    svg.setAttribute('width', CANVAS_WIDTH);
+    svg.setAttribute('height', CANVAS_HEIGHT);
+
+    // This is hack that I haven't been able to fully understand. Furthermore,
+    // it seems to break the functional blocks in some browsers. As such, I'm
+    // just going to disable the hack for this app.
+    Blockly.BROKEN_CONTROL_POINTS = false;
+
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
     //XXX Not sure if this is still right.
     Blockly.JavaScript.addReservedWords('Calc,code');
 
-    // Helper for creating canvas elements.
-    var createCanvas = function(id, width, height) {
-      var el = document.createElement('canvas');
-      el.id = id;
-      el.width = width;
-      el.height = height;
-      return el;
-    };
-
-    // Create display canvas.
-    var display = createCanvas('display', 400, 400);
-    var visualization = document.getElementById('visualization');
-    visualization.appendChild(display);
-    Calc.ctxDisplay = display.getContext('2d');
-
-    Calc.answerExpression = generateExpressionFromBlockXml(level.solutionBlocks);
-
-    // todo - figure out LB story
+    Calc.expressions.target = generateExpressionFromBlockXml(level.solutionBlocks);
+    Calc.drawExpressions();
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
+
+    dom.addClickTouchEvent(document.getElementById("continueButton"), function () {
+      Calc.step(true);
+    });
+
+    // base's BlocklyApps.resetButtonClick will be called first
+    var resetButton = document.getElementById('resetButton');
+    dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
   };
 
   config.getDisplayWidth = function() {
@@ -1514,40 +1556,6 @@ Calc.init = function(config) {
 };
 
 /**
- * Reset the Calc to the start position, clear the display, and kill any
- * pending tasks.
- * @param {boolean} ignore Required by the API but ignored by this
- *     implementation.
- */
-BlocklyApps.reset = function(ignore) {
-  Calc.display();
-
-  // Kill any task.
-  if (Calc.pid) {
-    window.clearTimeout(Calc.pid);
-  }
-  Calc.pid = 0;
-
-  // Stop the looping sound.
-  // BlocklyApps.stopLoopingAudio('start');
-};
-
-/**
- * Copy the scratch canvas to the display canvas. Add a Calc marker.
- */
-Calc.display = function() {
-  // FF on linux retains drawing of previous location of artist unless we clear
-  // the canvas first.
-  var style = Calc.ctxDisplay.fillStyle;
-  Calc.ctxDisplay.fillStyle = 'white';
-  Calc.ctxDisplay.clearRect(0, 0, Calc.ctxDisplay.canvas.width,
-    Calc.ctxDisplay.canvas.width);
-  Calc.ctxDisplay.fillStyle = style;
-
-  Calc.drawCorrectAnswer(Calc.answerExpression);
-};
-
-/**
  * Click the run button.  Start the program.
  */
 BlocklyApps.runButtonClick = function() {
@@ -1556,6 +1564,23 @@ BlocklyApps.runButtonClick = function() {
   BlocklyApps.attempts++;
   Calc.execute();
 };
+
+/**
+ * App specific reset button click logic.  BlocklyApps.resetButtonClick will be
+ * called first.
+ */
+Calc.resetButtonClick = function () {
+  var continueButton = document.getElementById('continueButton');
+  // todo - single location for toggling hide state?
+  continueButton.className += " hide";
+
+  Calc.expressions.user = null;
+  Calc.expressions.current = null;
+  Calc.shownFeedback_ = false;
+
+  Calc.drawExpressions();
+};
+
 
 function evalCode (code) {
   try {
@@ -1581,6 +1606,11 @@ function evalCode (code) {
   }
 }
 
+/**
+ * Given the xml for a set of blocks, generates an expression from them by
+ * temporarily sticking them into the workspace, generating code, and
+ * evaluating said code.
+ */
 function generateExpressionFromBlockXml(blockXml) {
   var xml = blockXml || '';
 
@@ -1606,24 +1636,37 @@ function generateExpressionFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
+  // todo (brent) perhaps try to share user vs. expected generation better
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
 
-  var expression = Calc.lastExpression;
+  if (!Calc.lastExpression) {
+    Calc.lastExpression = new ExpressionNode(0);
+  }
 
+  Calc.expressions.user = Calc.lastExpression.clone();
+  Calc.expressions.current = Calc.expressions.target.clone();
 
-  // api.log now contains a transcript of all the user's actions.
-  // Reset the graphic and animate the transcript.
-  BlocklyApps.reset();
+  Calc.expressions.user.applyExpectation(Calc.expressions.target);
 
+  var result = !Calc.expressions.user.failedExpectation(true);
 
-  var result = Calc.drawUserAnswer(Calc.answerExpression, Calc.lastExpression);
+  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
+
+  Calc.drawExpressions();
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
+  // todo (brent) - better way of doing this
+  if (equivalent) {
+    Calc.message = result ? "correct" : "expression equivalent";
+  } else {
+    Calc.message = null;
+  }
+
   var reportData = {
-    app: 'turtle',
+    app: 'calc',
     level: level.id,
     builder: level.builder,
     result: result,
@@ -1633,51 +1676,137 @@ Calc.execute = function() {
   };
 
   BlocklyApps.report(reportData);
+
+  window.setTimeout(function () {
+    Calc.step();
+  }, 1000);
 };
 
-Calc.drawCorrectAnswer = function (correctAnswer) {
-  Calc.ctxDisplay.fillStyle = 'black';
-  Calc.ctxDisplay.font="30px Verdana";
-  var str = correctAnswer.toString();
-  Calc.ctxDisplay.fillText(str, 0, 350);
-};
-
-Calc.drawUserAnswer = function (correctAnswer, userAnswer) {
-  var ctx = Calc.ctxDisplay;
-  var errors = false;
-  var list = userAnswer.getTokenList(correctAnswer);
-  var xpos = 0;
-  var ypos = 200;
-  for (var i = 0; i < list.length; i++) {
-    if (i > 0 && list[i-1].char !== '(' && list[i].char !== ')') {
-      ctx.fillText(' ', xpos, ypos);
-      xpos += ctx.measureText(' ').width;
-    }
-    ctx.fillStyle = list[i].correct ? 'black' : 'red';
-    if (!list[i].correct) {
-      errors = true;
-    }
-    ctx.fillText(list[i].char, xpos, ypos);
-    xpos += ctx.measureText(list[i].char).width;
+/**
+ * Perform a step in our expression evaluation animation. This consists of
+ * collapsing the next node in our tree. If that node failed expectations, we
+ * will instead bring up a continue button, and refrain from further
+ * collapses/animations until continue is pressed.
+ */
+Calc.step = function (ignoreFailures) {
+  if (!Calc.expressions.user) {
+    return;
   }
 
-  return !errors;
+  if (!Calc.expressions.user.isOperation()) {
+    displayFeedback();
+    return;
+  }
+
+  var continueButton = document.getElementById('continueButton');
+
+  var collapsed = Calc.expressions.user.collapse(ignoreFailures);
+  if (!collapsed) {
+    continueButton.className = continueButton.className.replace(/hide/g, "");
+  } else {
+    Calc.expressions.current.collapse();
+    Calc.drawExpressions();
+
+    continueButton.className += " hide";
+
+    window.setTimeout(function () {
+      Calc.step();
+    }, 1000);
+  }
 };
 
+/**
+ * Draw the current state of our two expressions.
+ */
+Calc.drawExpressions = function () {
+  var expected = Calc.expressions.current || Calc.expressions.target;
+  var user = Calc.expressions.user;
+
+  // todo - in cases where we have the wrong answer, marking the "next" operation
+  // for both doesn't necessarily make sense, i.e.
+  // goal: ((1 + 2) * (3 + 4))
+  // user: (0 * (3 + 4))
+  // right now, we'll highlight the 1 + 2 for goal, and the 3 + 4 for user
+
+  expected.applyExpectation(expected);
+  drawSvgExpression('answerExpression', expected, user !== null);
+
+  if (user) {
+    user.applyExpectation(expected);
+    drawSvgExpression('userExpression', user, true);
+  } else {
+    clearSvgExpression('userExpression');
+  }
+};
+
+function clearSvgExpression(elementId) {
+  var g = document.getElementById(elementId);
+  // remove all existing children, in reverse order so that we don't have to
+  // worry about indexes changing
+  for (var i = g.childNodes.length - 1; i >= 0; i--) {
+    g.removeChild(g.childNodes[i]);
+  }
+}
+
+function drawSvgExpression(elementId, expr, styleMarks) {
+  var i, text, textLength, char;
+  var g = document.getElementById(elementId);
+  clearSvgExpression(elementId);
+
+  var tokenList = expr.getTokenList(styleMarks);
+  var xPos = 0;
+  for (i = 0; i < tokenList.length; i++) {
+    text = document.createElementNS(Blockly.SVG_NS, 'text');
+
+    // getComputedTextLength doesn't respect trailing spaces, so we replace them
+    // with _, calculate our size, then return to the version with spaces.
+    char = tokenList[i].char;
+    text.textContent = char.replace(/ /g, '_');
+    g.appendChild(text);
+    // getComputedTextLength isn't available to us in our mochaTests
+    textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
+    text.textContent = char;
+
+    text.setAttribute('x', xPos + textLength / 2);
+    text.setAttribute('text-anchor', 'middle');
+    xPos += textLength;
+
+    if (styleMarks && tokenList[i].marked) {
+      if (char === '(' || char === ')') {
+        text.setAttribute('class', 'highlightedParen');
+      } else {
+        text.setAttribute('class', 'exprMistake');
+      }
+    }
+  }
+
+  // center entire expression
+  // todo (brent): handle case where expression is longer than width
+  var width = g.getBoundingClientRect().width;
+  var xPadding = (CANVAS_WIDTH - width) / 2;
+  var currentTransform = g.getAttribute('transform');
+  // IE has space separated args, others use comma to separate
+  var newTransform = currentTransform.replace(/translate\(.*[,|\s]/,
+    "translate(" + xPadding + ",");
+  g.setAttribute('transform', newTransform);
+}
 
 /**
  * App specific displayFeedback function that calls into
  * BlocklyApps.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
-  BlocklyApps.displayFeedback({
-    app: 'Calc',
-    skin: skin.id,
-    // feedbackType: Calc.testResults,
-    message: "todo (brent): temp message",
-    response: response,
-    level: level
-  });
+  if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
+    Calc.shownFeedback_ = true;
+    BlocklyApps.displayFeedback({
+      app: 'Calc',
+      skin: skin.id,
+      // feedbackType: Calc.testResults,
+      message: Calc.message ? Calc.message : "todo (brent): wrong",
+      response: response,
+      level: level
+    });
+  }
 };
 
 /**
@@ -1691,17 +1820,30 @@ function onReportComplete(response) {
   displayFeedback(response);
 }
 
-
-var getFeedbackImage = function() {
-  // Copy the user layer
-  Calc.ctxFeedback.globalCompositeOperation = 'copy';
-  Calc.ctxFeedback.drawImage(Calc.ctxScratch.canvas, 0, 0, 154, 154);
-  var feedbackCanvas = Calc.ctxFeedback.canvas;
-  return encodeURIComponent(
-      feedbackCanvas.toDataURL("image/png").split(',')[1]);
+},{"../../locale/pt_pt/calc":38,"../../locale/pt_pt/common":39,"../base":2,"../codegen":16,"../constants":17,"../dom":18,"../feedback.js":19,"../skins":22,"../templates/page.html":30,"./api":6,"./controls.html":9,"./expressionNode":11,"./levels":13,"./visualization.html":15}],9:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape, rethrow) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!#?[a-zA-Z0-9]+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/'/g, '&#39;')
+    .replace(/"/g, '&quot;');
 };
-
-},{"../../locale/pt_pt/calc":36,"../../locale/pt_pt/common":37,"../base":2,"../codegen":14,"../constants":15,"../feedback.js":17,"../skins":20,"../templates/page.html":28,"./api":6,"./expression":10,"./levels":12}],9:[function(require,module,exports){
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('');1; var msg = require('../../locale/pt_pt/calc') ; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering
+  // todo (brent) : continue should be a msg
+  ; buf.push('\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">Continue\n</button>\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"../../locale/pt_pt/calc":38,"ejs":40}],10:[function(require,module,exports){
 // Create a limited colour palette to avoid overwhelming new users
 // and to make colour checking easier.  These definitions cannot be
 // moved to blocks.js, which is loaded later, since they are used in
@@ -1722,147 +1864,222 @@ exports.Colours = {
   PLUM: '#843179'
 };
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 /**
- * A tree representing an expression. Supports only two arguments, although
- * that could potentially be expanded if necessary.
- * Example: "2 * (1 + 3)" represented by:
- * new Expression('*', 2, new Expression('+', 1, 3)
+ * A node consisting of a value, and if that value is an operator, two operands.
+ * Operands will always be stored internally as ExpressionNodes.
  */
-var Expression = function (operator, a, b) {
-  this.operator = operator;
-  this.args = [a, b];
+var ExpressionNode = function (val, left, right) {
+  this.val = val;
+  this.left = null;
+  this.right = null;
+  if (this.isOperation()) {
+    this.left = left instanceof ExpressionNode ? left : new ExpressionNode(left);
+    this.right = right instanceof ExpressionNode ? right : new ExpressionNode(right);
+  }
+
+  // null indicates not set. otherwise will be true/false
+  this.valMetExpectation_ = null;
 };
-module.exports = Expression;
+module.exports = ExpressionNode;
 
 /**
- * String representation of expression tree
+ * Does the node represent a math operation vs. a single number.
  */
-Expression.prototype.toString = function () {
-  return "(" + this.args[0].toString() + " " + this.operator + " " +
-    this.args[1].toString() + ")";
-};
-
-Expression.prototype.getTokenList = function (expectedExpression) {
-  var delta = getDifference(this, expectedExpression);
-
-  return getTokenList(this, delta);
+ExpressionNode.prototype.isOperation = function () {
+  return !isNumber(this.val);
 };
 
 /**
- * Creates a token with the given char/correctness
+ * Convert to a string
  */
-function token(char, correct) {
-  return { char: char, correct: correct };
-}
+ExpressionNode.prototype.toString = function  () {
+  if (!this.isOperation()) {
+    return this.val;
+  }
+  // todo (brent) - do i need/want the outside parens? i think no
+  return "(" + this.left.toString() + " " + this.val + " " +
+    this.right.toString() + ")";
+};
 
 /**
- * Given an expression or a number, and a diff
+ * Create a deep clone of this node
  */
-function getTokenList(expressionOrVal, diff) {
-  if (typeof(expressionOrVal) === "number") {
-    return token(expressionOrVal.toString(), diff.numDiffs === 0);
-  }
-
-  var expr = expressionOrVal;
-  var list = [token("(", true)];
-  var argsDiff = diff.args || [{ numDiffs: 0 }, { numDiffs: 0 }];
-  list = list.concat(getTokenList(expr.args[0], argsDiff[0]));
-  list = list.concat(token(expr.operator, diff.operator === undefined));
-  list = list.concat(getTokenList(expr.args[1], argsDiff[1]));
-  list = list.concat(token(")", true));
-  return list;
-}
+ExpressionNode.prototype.clone = function () {
+  return new ExpressionNode(this.val, this.left ? this.left.clone() : null,
+    this.right ? this.right.clone() : null);
+};
 
 /**
- * Get the delta when going from src to target. Src and target can both be
- * either numbers or Expressions.
+ * Did we set an expectation for this node, which we did not meet.
+ * @param {boolean} includeDescendants If true, we also check whether any
+ *  descendants failed expectations, otherwise we only check this node's val.
  */
-function getDifference(src, target) {
-  if (!isNumber(src) && !isExpression(src) ||
-    !isNumber(target) && !isExpression(target)) {
-    throw new Error('getDifference requires number or expression');
+ExpressionNode.prototype.failedExpectation = function (includeDescendants) {
+  // Don't fail if we don't have an expectation set
+  if (this.valMetExpectation_ === null) {
+    return false;
   }
 
-  if (isExpression(src) && isExpression(target)) {
-    return getExpressionDiff(src, target);
+  var fails = (this.valMetExpectation_ === false);
+  if (includeDescendants && this.left && this.left.failedExpectation(true)) {
+    fails = true;
+  }
+  if (includeDescendants && this.right && this.right.failedExpectation(true)) {
+    fails = true;
   }
 
-  var diff = {};
-  diff.numDiffs = 0;
-  if (!isNumber(src) || !isNumber(target)) {
-    diff.numDiffs = Infinity;
-  } else if (src !== target) {
-    diff.numDiffs = 1;
-    diff.val = target;
-  }
-  return diff;
-}
+  return fails;
+};
 
 /**
- * Get the delta when going from src to target. Src and target are both assumed
- * to be expressions.
+ * Evaluate the expression, returning the result.
  */
-function getExpressionDiff(src, target) {
-  var diff = {};
-  diff.numDiffs = 0;
-  var argDiffs = [];
-
-  if (src.operator !== target.operator) {
-    diff.numDiffs++;
-    diff.operator = target.operator;
+ExpressionNode.prototype.evaluate = function () {
+  if (!this.isOperation()) {
+    return this.val;
   }
 
-  var diff00 = getDifference(src.args[0], target.args[0]);
-  var diff01 = getDifference(src.args[0], target.args[1]);
-  var diff10 = getDifference(src.args[1], target.args[0]);
-  var diff11 = getDifference(src.args[1], target.args[1]);
+  var left = this.left.evaluate();
+  var right = this.right.evaluate();
 
-  if (diff00.numDiffs === 0) {
-    // first args match, second args may/may not
-    argDiffs = [diff00, diff11];
-  } else if (diff01.numDiffs === 0) {
-    // first src arg matches second target arg. other pair may/may not match
-    argDiffs = [diff01, diff10];
-  } else if (diff10.numDiffs === 0) {
-    // second src arg matches first target arg. other pair doesn't match
-    argDiffs = [diff01, diff10];
-  } else if (diff11.numDiffs === 0) {
-    // second src arg matches second target arg. other pair doesn't match
-    argDiffs = [diff00, diff11];
+  switch (this.val) {
+    case '+':
+      return left + right;
+    case '-':
+      return left - right;
+    case '*':
+      return left * right;
+    case '/':
+      return left / right;
+    default:
+      throw new Error('Unknown operator: ' + this.val);
+    }
+};
+
+/**
+ * Depth of this node's tree. A lone value is considered to have a depth of 0.
+ */
+ExpressionNode.prototype.depth = function () {
+  if (!this.isOperation()) {
+    return 0;
+  }
+
+  return 1 + Math.max(this.left.depth(), this.right.depth());
+};
+
+/**
+ * Collapse the next node in the tree, where next is considered to be whichever
+ * node is deepest, processing left to right.
+ * @param {boolean} ignoreFailures If true, we will collapse whether or not the
+ *   node met expectations. If false, we don't collpase when expectations are
+ *   not met.
+ */
+ExpressionNode.prototype.collapse = function (ignoreFailures) {
+  if (!this.isOperation()) {
+    return false;
+  }
+
+  var leftDepth = this.left.depth();
+  var rightDepth = this.right.depth();
+
+  if (leftDepth === 0 && rightDepth === 0) {
+    if (this.failedExpectation(true) && !ignoreFailures) {
+      // dont allow collapsing if we're a leaf operation with a mistake
+      return false;
+    }
+    this.val = this.evaluate();
+    this.left = null;
+    this.right = null;
+    return true;
   } else {
-    // neither arg has a match, choose the mismatch that minimizes our diffs
-    var a = diff00.numDiffs + diff11.numDiffs;
-    var b = diff01.numDiffs + diff10.numDiffs;
-    argDiffs = (a <= b) ? [diff00, diff11] : [diff01, diff10];
+    if (rightDepth > leftDepth) {
+      return this.right.collapse(ignoreFailures);
+    }
+    return this.left.collapse(ignoreFailures);
   }
 
-  var numArgDiffs = argDiffs[0].numDiffs + argDiffs[1].numDiffs;
-  if (numArgDiffs > 0) {
-    diff.numDiffs += numArgDiffs;
-    diff.args = argDiffs;
+  return true;
+};
+
+/**
+ * Specify what we expected an ExpressionNode to look like. This sets whether
+ * vals are the same as what we expected on the entire tree.
+ */
+ExpressionNode.prototype.applyExpectation = function (expected) {
+  this.valMetExpectation_ = expected ? expected.val === this.val : false;
+
+  if (this.isOperation()) {
+    this.left.applyExpectation(expected.left);
+    this.right.applyExpectation(expected.right);
+  }
+};
+
+/**
+ * Do the two nodes differ only in argument order.
+ */
+ExpressionNode.prototype.isEquivalent = function (target) {
+  if (this.val !== target.val) {
+    return false;
   }
 
-  return diff;
+  if (this.isOperation() !== target.isOperation()) {
+    return false;
+  }
+
+  if (!this.isOperation()) {
+    return true;
+  }
+
+  if (this.left.isEquivalent(target.left)) {
+    return this.right.isEquivalent(target.right);
+  } else if (this.left.isEquivalent(target.right)) {
+    return this.right.isEquivalent(target.left);
+  }
+
+  return false;
+};
+
+/**
+ * Break down the expression into tokens, where each token consists of the
+ * string representation of that portion of the expression, and whether or not
+ * it is correct.
+ */
+ExpressionNode.prototype.getTokenList = function (markNextParens) {
+  if (this.valMetExpectation_ === null) {
+    throw new Error("Can't get token list without expectation set");
+  }
+
+  if (!this.isOperation()) {
+    return [token(this.val.toString(), this.valMetExpectation_ === false)];
+  }
+
+  var leafOperation = !this.left.isOperation() && !this.right.isOperation();
+  var rightDeeper = this.right.depth() > this.left.depth();
+
+  var list = [token("(", markNextParens === true && leafOperation)];
+  list = list.concat(this.left.getTokenList(markNextParens && !rightDeeper));
+  list = list.concat(token(" " + this.val + " ", this.valMetExpectation_ === false));
+  list = list.concat(this.right.getTokenList(markNextParens && rightDeeper));
+  list = list.concat(token(")", markNextParens === true && leafOperation));
+  return list;
+};
+
+/**
+ * Creates a token with the given char (which can really be a string), that
+ * may or may not be "marked". Marking indicates different things depending on
+ * the char.
+ */
+function token(char, marked) {
+  return { char: char, marked: marked };
 }
 
+// todo (brent)- may want to use lodash's isNumber
 function isNumber(val) {
-  // todo - do we also need to care about stringified numbers? i.e. "1"
   return typeof(val) === "number";
 }
 
-function isExpression(val) {
-  return (val instanceof Expression);
-}
-
-/* start-test-block */
-// export private function(s) to expose to unit testing
-module.exports.__testonly__ = {
-  getDifference: getDifference
-};
-/* end-test-block */
-
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -1873,27 +2090,32 @@ exports.install = function(blockly, generator, gensym) {
   installTimes(blockly, generator, gensym);
   installDividedBy(blockly, generator, gensym);
   installMathNumber(blockly, generator, gensym);
-  installDraw(blockly, generator, gensym);
+  installCompute(blockly, generator, gensym);
 };
 
 
 function initFunctionalBlock(block, title, numArgs) {
   block.setHSV(184, 1.00, 0.74);
+  block.setFunctional(true, {
+    headerHeight: 30,
+  });
+
+  var options = {
+    fixedSize: { height: 35 },
+    fontSize: 25 // in pixels
+  };
+
   block.appendDummyInput()
-      .appendTitle(title)
+      .appendTitle(new Blockly.FieldLabel(title, options))
       .setAlign(Blockly.ALIGN_CENTRE);
   for (var i = 1; i <= numArgs; i++) {
     block.appendFunctionalInput('ARG' + i)
-         .setInline(i > 1);
-  }
-  if (numArgs === 1) {
-    // todo (brent) : can we do this without a dummy input, or at least get
-    // the single input centered?
-    block.appendDummyInput()
-        .setInline(true);
+         .setInline(i > 1)
+         .setColour({ hue: 184, saturation: 1.00, value: 0.74 })
+         .setCheck('Number');
   }
 
-  block.setFunctionalOutput(true);
+  block.setFunctionalOutput(true, 'Number');
 }
 
 function installPlus(blockly, generator, gensym) {
@@ -1908,7 +2130,6 @@ function installPlus(blockly, generator, gensym) {
   generator.functional_plus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    // return "(" + arg1 + " + " + arg2 + ")";
     return "Calc.expression('+', " + arg1 + ", " + arg2 + ")";
   };
 }
@@ -1925,7 +2146,6 @@ function installMinus(blockly, generator, gensym) {
   generator.functional_minus = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    // return "(" + arg1 + " - " + arg2 + ")";
     return "Calc.expression('-', " + arg1 + ", " + arg2 + ")";
   };
 }
@@ -1942,7 +2162,6 @@ function installTimes(blockly, generator, gensym) {
   generator.functional_times = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    // return "(" + arg1 + " * " + arg2 + ")";
     return "Calc.expression('*', " + arg1 + ", " + arg2 + ")";
   };
 }
@@ -1959,24 +2178,23 @@ function installDividedBy(blockly, generator, gensym) {
   generator.functional_dividedby = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    // return "(" + arg1 + " / " + arg2 + ")";
     return "Calc.expression('/', " + arg1 + ", " + arg2 + ")";
   };
 }
 
-function installDraw(blockly, generator, gensym) {
-  blockly.Blocks.functional_draw = {
+function installCompute(blockly, generator, gensym) {
+  blockly.Blocks.functional_compute = {
     // Block for turning left or right.
     helpUrl: '',
     init: function() {
-      initFunctionalBlock(this, ' ', 1);
+      initFunctionalBlock(this, '', 1);
       this.setFunctionalOutput(false);
     }
   };
 
-  generator.functional_draw = function() {
+  generator.functional_compute = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    return "Calc.draw(" + arg1 +", 'block_id_" + this.id + "');\n";
+    return "Calc.compute(" + arg1 +", 'block_id_" + this.id + "');\n";
   };
 }
 
@@ -1984,10 +2202,15 @@ function installMathNumber(blockly, generator, gensym) {
   blockly.Blocks.functional_math_number = {
     // Numeric value.
     init: function() {
-      this.setHSV(258, 0.35, 0.62);
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldTextInput('0',
-          Blockly.FieldTextInput.numberValidator), 'NUM');
+            Blockly.FieldTextInput.numberValidator), 'NUM')
+          .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, 'Number');
     }
   };
@@ -1997,10 +2220,9 @@ function installMathNumber(blockly, generator, gensym) {
   };
 }
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 var msg = require('../../locale/pt_pt/calc');
 var blockUtils = require('../block_utils');
-var Expression = require('./expression');
 
 /**
  * Information about level-specific requirements.
@@ -2013,7 +2235,7 @@ module.exports = {
     ]),
     ideal: Infinity,
     toolbox: blockUtils.createToolbox(
-      blockUtils.blockOfType('functional_draw') +
+      blockUtils.blockOfType('functional_compute') +
       blockUtils.blockOfType('functional_plus') +
       blockUtils.blockOfType('functional_minus') +
       blockUtils.blockOfType('functional_times') +
@@ -2034,7 +2256,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/pt_pt/calc":36,"../block_utils":3,"./expression":10}],13:[function(require,module,exports){
+},{"../../locale/pt_pt/calc":38,"../block_utils":3}],14:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Calc = require('./calc');
 var blocks = require('./blocks');
@@ -2047,7 +2269,28 @@ window.calcMain = function(options) {
   appMain(window.Calc, levels, options);
 };
 
-},{"../appMain":1,"../skins":20,"./blocks":7,"./calc":8,"./levels":12}],14:[function(require,module,exports){
+},{"../appMain":1,"../skins":22,"./blocks":7,"./calc":8,"./levels":13}],15:[function(require,module,exports){
+module.exports= (function() {
+  var t = function anonymous(locals, filters, escape, rethrow) {
+escape = escape || function (html){
+  return String(html)
+    .replace(/&(?!#?[a-zA-Z0-9]+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/'/g, '&#39;')
+    .replace(/"/g, '&quot;');
+};
+var buf = [];
+with (locals || {}) { (function(){ 
+ buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">Your expression:</text> <!-- todo - i18n -->\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">Goal:</text> <!-- todo - i18n -->\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+} 
+return buf.join('');
+};
+  return function(locals) {
+    return t(locals, require("ejs").filters);
+  }
+}());
+},{"ejs":40}],16:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -2189,7 +2432,7 @@ exports.functionFromCode = function(code, options) {
   }
 };
 
-},{}],15:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -2251,7 +2494,7 @@ exports.BeeTerminationValue = {
   INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
 };
 
-},{}],16:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -2358,7 +2601,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],17:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
 var readonly = require('./templates/readonly.html');
@@ -3305,7 +3548,7 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/pt_pt/common":37,"./codegen":14,"./constants":15,"./dom":16,"./templates/buttons.html":23,"./templates/code.html":24,"./templates/readonly.html":29,"./templates/shareFailure.html":30,"./templates/sharing.html":31,"./templates/showCode.html":32,"./templates/trophy.html":33,"./utils":34}],18:[function(require,module,exports){
+},{"../locale/pt_pt/common":39,"./codegen":16,"./constants":17,"./dom":18,"./templates/buttons.html":25,"./templates/code.html":26,"./templates/readonly.html":31,"./templates/shareFailure.html":32,"./templates/sharing.html":33,"./templates/showCode.html":34,"./templates/trophy.html":35,"./utils":36}],20:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -6232,7 +6475,7 @@ var generateXMLForBlocks = function(blocks) {
 }.call(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],19:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -6470,7 +6713,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./utils":34,"./xml":35}],20:[function(require,module,exports){
+},{"./block_utils":3,"./utils":36,"./xml":37}],22:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -6530,7 +6773,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{}],21:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -6756,7 +6999,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":16}],22:[function(require,module,exports){
+},{"./dom":18}],24:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6777,7 +7020,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":38}],23:[function(require,module,exports){
+},{"ejs":40}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6798,7 +7041,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pt_pt/common":37,"ejs":38}],24:[function(require,module,exports){
+},{"../../locale/pt_pt/common":39,"ejs":40}],26:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6819,7 +7062,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":38}],25:[function(require,module,exports){
+},{"ejs":40}],27:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6840,7 +7083,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pt_pt/common":37,"ejs":38}],26:[function(require,module,exports){
+},{"../../locale/pt_pt/common":39,"ejs":40}],28:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6863,7 +7106,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pt_pt/common":37,"ejs":38}],27:[function(require,module,exports){
+},{"../../locale/pt_pt/common":39,"ejs":40}],29:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6884,7 +7127,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pt_pt/common":37,"ejs":38}],28:[function(require,module,exports){
+},{"../../locale/pt_pt/common":39,"ejs":40}],30:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6909,7 +7152,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pt_pt/common":37,"ejs":38}],29:[function(require,module,exports){
+},{"../../locale/pt_pt/common":39,"ejs":40}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6931,7 +7174,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":38}],30:[function(require,module,exports){
+},{"ejs":40}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6952,7 +7195,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":38}],31:[function(require,module,exports){
+},{"ejs":40}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6973,7 +7216,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pt_pt/common":37,"ejs":38}],32:[function(require,module,exports){
+},{"../../locale/pt_pt/common":39,"ejs":40}],34:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6994,7 +7237,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pt_pt/common":37,"ejs":38}],33:[function(require,module,exports){
+},{"../../locale/pt_pt/common":39,"ejs":40}],35:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7015,7 +7258,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":38}],34:[function(require,module,exports){
+},{"ejs":40}],36:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -7292,7 +7535,7 @@ exports.generateDropletPalette = function (codeFunctions) {
   return palette;
 };
 
-},{"./lodash":18,"./xml":35}],35:[function(require,module,exports){
+},{"./lodash":20,"./xml":37}],37:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -7320,7 +7563,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],36:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.pt=function(n){return n===1?"one":"other"}
 exports.blocksUsed = function(d){return "Blocos usados: %1"};
 
@@ -7348,7 +7591,7 @@ exports.depth = function(d){return "depth"};
 
 exports.dots = function(d){return "pixels"};
 
-exports.drawASquare = function(d){return "desenha um quadrado"};
+exports.drawASquare = function(d){return "desenhar um quadrado"};
 
 exports.drawATriangle = function(d){return "desenha um triângulo"};
 
@@ -7432,7 +7675,7 @@ exports.penTooltip = function(d){return "Levanta ou baixa o lápis, para iniciar
 
 exports.penUp = function(d){return "lápis para cima"};
 
-exports.reinfFeedbackMsg = function(d){return "Isto parece-se com o que queres? Podes seleccionar \"Tentar novamente\" para ver o teu desenho."};
+exports.reinfFeedbackMsg = function(d){return "Parece o que queres? Podes premir o botão \"Tentar novamente\" para ver o teu desenho."};
 
 exports.setColour = function(d){return "definir cor"};
 
@@ -7463,7 +7706,7 @@ exports.widthTooltip = function(d){return "Altera a largura do lápis."};
 exports.wrongColour = function(d){return "A tua imagem está na cor errada. Para este quebra-cabeças, terá que ser %1."};
 
 
-},{"messageformat":49}],37:[function(require,module,exports){
+},{"messageformat":51}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.pt=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "e"};
 
@@ -7483,7 +7726,7 @@ exports.catMath = function(d){return "Matemática"};
 
 exports.catProcedures = function(d){return "Funções"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
 exports.catVariables = function(d){return "Variáveis"};
 
@@ -7561,7 +7804,7 @@ exports.runTooltip = function(d){return "Executa o programa definido pelos bloco
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Mostrar o Código"};
+exports.showCodeHeader = function(d){return "Mostrar o código"};
 
 exports.showGeneratedCode = function(d){return "Mostrar o código"};
 
@@ -7575,7 +7818,7 @@ exports.tooManyBlocksMsg = function(d){return "Este puzzle pode ser resolvido co
 
 exports.tooMuchWork = function(d){return "Fizeste-me ter muito trabalho! Podes tentar repetir menos vezes?"};
 
-exports.toolboxHeader = function(d){return "Blocos"};
+exports.toolboxHeader = function(d){return "blocos"};
 
 exports.openWorkspace = function(d){return "Como funciona"};
 
@@ -7624,7 +7867,7 @@ exports.hintHeader = function(d){return "Aqui vai uma dica:"};
 exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
 
 
-},{"messageformat":49}],38:[function(require,module,exports){
+},{"messageformat":51}],40:[function(require,module,exports){
 
 /*!
  * EJS
@@ -7983,7 +8226,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":39,"./utils":40,"fs":41,"path":42}],39:[function(require,module,exports){
+},{"./filters":41,"./utils":42,"fs":43,"path":44}],41:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -8186,7 +8429,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],40:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 
 /*!
  * EJS
@@ -8212,9 +8455,9 @@ exports.escape = function(html){
 };
  
 
-},{}],41:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 
-},{}],42:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -8442,7 +8685,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":43}],43:[function(require,module,exports){
+},{"JkpR2F":45}],45:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -8507,7 +8750,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],44:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -9018,7 +9261,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],45:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -9104,7 +9347,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],46:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -9191,13 +9434,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],47:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":45,"./encode":46}],48:[function(require,module,exports){
+},{"./decode":47,"./encode":48}],50:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -9906,7 +10149,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":44,"querystring":47}],49:[function(require,module,exports){
+},{"punycode":46,"querystring":49}],51:[function(require,module,exports){
 /**
  * messageformat.js
  *
@@ -11489,4 +11732,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[13])
+},{}]},{},[14])

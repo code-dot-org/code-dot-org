@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13335,7 +13368,6 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('TEXT')
-        .setCheck('String')
         .appendTitle(msg.setScoreText());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -16437,7 +16469,9 @@ Studio.init = function(config) {
     return el.getBoundingClientRect().width;
   };
 
-  arrangeStartBlocks(config);
+  if (config.level.edit_blocks != 'toolbox_blocks') {
+    arrangeStartBlocks(config);
+  }
 
   config.twitter = twitterOptions;
 
@@ -18668,7 +18702,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sr = function 
   }
   return 'other';
 };
-exports.and = function(d){return "и"};
+exports.and = function(d){return "И"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -18680,13 +18714,13 @@ exports.catLogic = function(d){return "Логика"};
 
 exports.catLists = function(d){return "Листе"};
 
-exports.catLoops = function(d){return "Понављања"};
+exports.catLoops = function(d){return "Петље"};
 
 exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Функције"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Променљиве"};
 
@@ -18754,7 +18788,7 @@ exports.play = function(d){return "играј"};
 
 exports.puzzleTitle = function(d){return "Мозгалица "+v(d,"puzzle_number")+" од "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "понови"};
+exports.repeat = function(d){return "понављај"};
 
 exports.resetProgram = function(d){return "Почни поново"};
 
@@ -18764,7 +18798,7 @@ exports.runTooltip = function(d){return "Покрени програм саст�
 
 exports.score = function(d){return "Резултат"};
 
-exports.showCodeHeader = function(d){return "Покажи код програма"};
+exports.showCodeHeader = function(d){return "Покажи Програмски код"};
 
 exports.showGeneratedCode = function(d){return "Покажи код програма"};
 
@@ -18778,7 +18812,7 @@ exports.tooManyBlocksMsg = function(d){return "Ова мозгалица мож�
 
 exports.tooMuchWork = function(d){return "Задао си ми много посла! Покушај са мање понављања."};
 
-exports.toolboxHeader = function(d){return "Блокови"};
+exports.toolboxHeader = function(d){return "блокови"};
 
 exports.openWorkspace = function(d){return "Како то ради"};
 
@@ -18856,7 +18890,7 @@ exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Функције"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Променљиве"};
 
@@ -18872,7 +18906,7 @@ exports.defaultSayText = function(d){return "упиши овде"};
 
 exports.emotion = function(d){return "расположење"};
 
-exports.finalLevel = function(d){return "Честитамо! Решили сте последњи проблем."};
+exports.finalLevel = function(d){return "Честитамо! Решили сте финалну слагалицу."};
 
 exports.hello = function(d){return "здраво"};
 
@@ -18908,7 +18942,7 @@ exports.moveDirectionRight = function(d){return "десно"};
 
 exports.moveDirectionUp = function(d){return "горе"};
 
-exports.moveDirectionRandom = function(d){return "случајно"};
+exports.moveDirectionRandom = function(d){return "насумичан"};
 
 exports.moveDistance25 = function(d){return "25 пиксела"};
 
@@ -18956,7 +18990,7 @@ exports.numBlocksNeeded = function(d){return "Ова слагалица се м�
 
 exports.ouchExclamation = function(d){return "Ouch!"};
 
-exports.playSoundCrunch = function(d){return "одсвирај звук лома"};
+exports.playSoundCrunch = function(d){return "свирај звук крцкања"};
 
 exports.playSoundGoal1 = function(d){return "одсвирај звук циља 1"};
 
@@ -18974,7 +19008,7 @@ exports.playSoundRubber = function(d){return "одсвирај звук гуме
 
 exports.playSoundSlap = function(d){return "одсвирај звук пљеска"};
 
-exports.playSoundTooltip = function(d){return "Одсвирај одабрани звук."};
+exports.playSoundTooltip = function(d){return "Свирај одабрани звук."};
 
 exports.playSoundWinPoint = function(d){return "одсвирај звук освојеног поена"};
 
@@ -19036,7 +19070,7 @@ exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" b
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "уради"};
+exports.repeatDo = function(d){return "Уради"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
 
@@ -19078,7 +19112,7 @@ exports.setBackgroundTennis = function(d){return "постави тениску 
 
 exports.setBackgroundWinter = function(d){return "постави зимску позадину"};
 
-exports.setBackgroundTooltip = function(d){return "Поставља слику у позадини"};
+exports.setBackgroundTooltip = function(d){return "Подешава позадинску слику"};
 
 exports.setScoreText = function(d){return "постави резултат"};
 
@@ -19210,7 +19244,7 @@ exports.showTSDefText = function(d){return "type text here"};
 
 exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
 
-exports.setSprite = function(d){return "поставити"};
+exports.setSprite = function(d){return "подеси"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 

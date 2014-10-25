@@ -4,6 +4,6 @@ affichage: large
 
 * * *
 
-# Get your whole school to participate
+# Incite toute ton école à participer
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Les infos sur comment encourager des écoles entières à participer à l'Heure de Code seront ici.

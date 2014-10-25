@@ -16,23 +16,23 @@ fa-AF:
   country_ar: آرژانتين
   country_au: استراليا
   country_br: برزيل
-  country_bg: Bulgaria
-  country_de: Germany
-  country_es: Latin America
+  country_bg: بلغارستان
+  country_de: آلمان
+  country_es: امریکاي لاتین
   country_eu: اتحاديه اروپا
-  country_gr: Greece
-  country_hr: Croatia
-  country_id: Indonesia
+  country_gr: یونان
+  country_hr: کرواسی
+  country_id: اندونزی
   country_it: ايتاليا
-  country_jp: Japan
-  country_me: Middle East and North Africa
+  country_jp: ژاپن
+  country_me: خاورمیانه و شمال آفریقا
   country_nz: نيوزلند
   country_ro: روماني
-  country_ru: Russia
-  country_ua: Ukraine
+  country_ru: روسیه
+  country_ua: اکراین
   country_uk: انگلستان
   country_us: ایالات متحده آمریکا
-  country_vn: Vietnam
+  country_vn: ویتنام
   prizes_all: جايزه هر برگزار كننده
   prizes_every_organizer: 'هر برگزار كننده "ساعت كد نويسي" بعنوان تشكر اعتباري در Dropbox يا Skype دريافت خواهد كرد'
   prizes_technology: يك مدرسه دولتي در هر ايالت امريكا( و واشنگتن دي سي) برنده فن آوري اي به ارزش ١٠٠٠٠ دلار خواهد شد
@@ -89,7 +89,7 @@ fa-AF:
   signup_submit_error_message: خطایی رخ داد. لطفا مطمئن شويد كه تمامي فيلدهاي مورد نياز به درستي پر شده اند.
   signup_thank_you_header: 'با تشکر از شما برای ثبت نام براي برگزاري رويداد يك "ساعت كد نويسي".'
   signup_thank_you_message: ما يك ايميل تاييد بهمراه اطلاعاتي براي كمك به شروع فعاليت برايتان ارسال كرديم.
-  map_header: '# Hour of Code events around the world'
+  map_header: 'رويدادهاي "ساعت كدنويسي" در سراسر دنيا'
   map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
   meta_tag_og_title: '"ساعت كد نويسي" مي آيد'
   meta_tag_og_description: '"ساعت کد نويسي" يك حركت جهاني در راستاي رسيدن به ده ها ميليون دانش آموز در بيش از ١٨٠ كشور با بيش از ٣٠ زبان است. براي سنین ٤ تا ١٠٤ سال.'
@@ -125,17 +125,22 @@ fa-AF:
   hoc_faq_why_cs_q: چرا دانش كامپيوتر؟
   hoc_faq_why_cs_a: "<i>هر</i> دانش آموزي باید فرصت یادگیری علوم کامپیوتر را داشته باشد تا به پرورش مهارت‌هاي حل مسئله، منطق و خلاقيت كمك كند. دانش آموزان هر چه زودتر شروع كنند، پايه قوي تري را براي موفقيت در مسير شغلي قرن 21 خواهند داشت. براي آمار بیشتر <a href='http://code.org'> Code.org</a> را ببینید."
   hoc_faq_how_participate_q: 'چگونه مي توانم در "ساعت كد نويسي" شركت كنم؟'
-  hoc_faq_how_participate_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.org'>here</a> and <a href='target-resources-how-to'>start planning</a>. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
+  hoc_faq_how_participate_a: "ثبت نام برای میزباني یک رویداد ساعت کدنويسي <a href='http://hourofcode.org'> اینجا</a> و <a href='/resources/how-to'> برنامه ریزی را شروع كنيد</a>. می توانید  یک رویداد ساعت کدنويسي در مدرسه شما و یا در جامعه خود را &mdash; مانند يك باشگاه فوق برنامه غير انتفاعي و یا در محل کار خود سازماندهی كنيد و یا صرفاً خود آن را در دسامبر 8 امتحان كنيد."
   hoc_faq_behind_hoc_q: 'چه کسی پشتيبان "ساعت کدنويسي" است؟'
   hoc_faq_behind_hoc_a: "ساعت کدنويسي را <a href='http://code.org'> Code.org</a> سازماندهي كرده است، كد يك سازمان غيرانتفاعي از نوع c3 501 با هدف گسترش مشارکت در علوم کامپیوتر و در دسترس قرار دادن آم در مدرسه‌هاي بيش‌تري و نيز افزایش مشارکت زنان و حذف تبعيض‌هاي نژادي در اين زمينه است. <a href='http://code.org/about/partners'> ائتلافي بی سابقه </a> از همكاران گرد آمده اند و ساعت کدنويسي را حمايت مي‌كنند &mdash; از جمله مایکروسافت، اپل، آمازون، باشگاه‌هاي پسران و دختران امریکا و هیئت مدیره کالج‌ها."
   hoc_faq_host_q: من چيزي درباره كد نويسي نمي دانم. آيا همچنان مي توانم ميزبان چنين رويدادي باشم؟
-  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='http://code.org/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='target-resources-how-to'>how to guide</a>."
+  hoc_faq_host_a: |-
+    البته. فعاليت هاي "ساعت كد نويسي" خود راهبر هستند. تنها كاري كه بايد انجام دهيد <a href='http://code.org/learn'> ديدن آموزش هاي كنوني ما</a>، انتخاب آموزشي كه مي خواهيد، و انتخاب يك ساعت مشخص است &mdash; بقيه كار به عهده ماست. همچنين گزينه هايي براي تمامي سنين و سطوح از مهد كودك به بالا وجود دارد. با خواندن <a href='/resources/how-to'>چگونگي راهبري</a> شروع به برنامه ريزي براي اين رويداد كنيد.
   hoc_faq_need_computers_q: آيا هر شركت‌كننده يك رايانه نياز دارد؟
   hoc_faq_need_computers_a: "خير. آموزش‌هاي ساعت کدنويسي روی رایانه های شخصی، تلفن‌هاي هوشمند، تبلت‌ها قابل استفاده‌اند و بعضي از آن‌ها به هيچ رايانه‌اي نیاز ندارند! <p><i>چند گزینه:</i> <br><ul><li><b>كار گروهي </b> تحقیقات نشان می‌دهد كه كه بهترين يادگيري دانش‌آموزان در <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> گروه‌هاي برنامه‌نويسي اتفاق مي‌افتد</a> با به اشتراک‌گذاری رايانه و کار گروهي. دانش‌آموزان خود را به تشكيل گروه‌هاي دو نفره تشويق كنيد. <li><b>از پروژكتور استفاده كنيد</b> اگر شما یک پروژکتور و کامپیوتر متصل به وب داريد، كل گروه مي‌توانند ساعت كدنويسي را با هم انجام دهند. بخش‌هاي ويديويي را با هم ببينيد و به نوبت معماها را حل كنيد و به سوالات پاسخ دهيد.<li><b>بدون رايانه.</b> ما آموزش‌هايي را ارائه مي‌دهيم كه هيچ نيازي به رايانه ندارند. </ul>"
   hoc_faq_international_q: من خارج از ايالات متحده امريكا هستم. چگونه به صورت بين‌المللي شركت كنم؟
   hoc_faq_international_a: هر كسي مي‌تواند يك ساعت كدنويسي را سازمان‌دهي كند، هر جايي در دنيا. سال گذشته، دانش‌آموزان از سرتاسر دنيا به ساعت كدنويسي پيوستند.
   hoc_faq_tutorial_q: چگونه مي‌توان يك آموزش ساعت كدنويسي را ايجاد كنم؟
-  hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
+  hoc_faq_tutorial_a: "اگر مشتاق به همكاري در آموزش‌ها هستيد <a href='target-tutorial-guidelines'> راهنماها و دستورالعمل‌های ما را ببينيد</a>. ما از ميزباني هر گزينه‌اي براي همكاري استقبال مي‌كنيم، ولي هدف اصلي ما بهبود تجربه براي دانش‌آموزان و معلماني است كه با علوم كامپيوتر تازه آشنا مي‌شوند."
+  hoc_faq_more_questions_q: Still have more questions?
+  hoc_faq_more_questions_a: "Try finding an answer in our <a href='http://support.code.org'>support forum</a>."
+  hoc_faq_more_questions_br_q: Outras dúvidas?
+  hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
   hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
   hoc_faq_why_cs_uk_a: '<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path.'
@@ -171,14 +176,14 @@ fa-AF:
   stats_nina: '"هر روز همان نتایج به دست آمد &mdash; 100% مشارکت."-نینا نیکولز پيري، معلم'
   stats_student: '"من می دانستم که این يك <b> فرصت تكرار نشدني</b> است."-ماریانا الزيت، كلاس پنجمي'
   stats_michael: 'من <b>هرگز و هيچ وجه </b> دانش آموزانم را اين طور هيجان‌زده براي يادگيري نديده بودم. "-ميشل کلارک، معلم'
-  resources_how_to: How-to guide for teachers
-  resources_handouts: Handouts to spread the word
-  resources_videos: Videos
-  resources_posters: Posters
-  resources_banners: Banners
-  resources_emails: Sample emails
-  resources_stats: Useful computer science stats
-  resources_press_kit: Press Kit
+  resources_how_to: جزوه‌هاي راهنما براي معلمان
+  resources_handouts: جزوه‌هايي براي گسترش موضوع
+  resources_videos: ویدیوها
+  resources_posters: پوسترها
+  resources_banners: بَنرها
+  resources_emails: نمونه ایمیل
+  resources_stats: آمار مفيد از علوم كامپيوتر
+  resources_press_kit: بسته مطبوعات
   footer_copyright_message: 'حق طبع و نشر Code.org  2014. کلیه حقوق محفوظ می‌باشد.'
   footer_trademark_message: ™Hour of Code علامت تجاري Code.org است.
   footer_menu_partners: شرکا

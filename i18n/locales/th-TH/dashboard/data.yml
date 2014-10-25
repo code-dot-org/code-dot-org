@@ -48,6 +48,7 @@ th:
         edit-code:
           desc: Edit Code (beta)
           MazeEC: ขั้นตอนที่ 1
+          Webapp: ขั้นตอนที่ 2
         events:
           desc: Bounce (beta)
           Bounce: ขั้นตอนที่ 1
@@ -69,7 +70,7 @@ th:
           WordSearch: ขั้นตอนที่ 1
     game:
       name:
-        Unplug1: แนะนำวิทยาการคอมพิวเตอร์
+        Unplug1: แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น
         Maze: เขาวงกต
         Multi: Multiple Choice Stuffs
         Unplug2: คิดคำนวณ
@@ -79,7 +80,7 @@ th:
         Artist2: ศิลปิน 2
         Unplug5: ฟังก์ชัน
         Farmer: ชาวนา
-        Unplug6: เงื่อนไข
+        Unplug6: 'เงื่อนไข '
         Artist3: ศิลปิน 3
         Unplug7: การแต่งเพลง
         Farmer2: ชาวนา 2
@@ -96,6 +97,7 @@ th:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
     trophy:
       name:
         Bronze: ทองแดง
@@ -107,8 +109,8 @@ th:
         if: If บล็อก
         if_else: If บล็อกในกรณีอื่น
         loop_times: ทำซ้ำช่วงเวลา
-        loop_until: ทำซ้ำจนกว่าบล็อก
-        loop_while: ในขณะที่บล็อก
+        loop_until: ทำซ้ำจนถึงบล็อก
+        loop_while: ขณะที่บล็อก
         loop_for: บล็อกนับ
         function: ฟังก์ชัน
         parameters: ฟังก์ชันกับพารามิเตอร์
@@ -359,7 +361,7 @@ th:
         Unplug3: การเขียนกระดาษกราฟ
         Unplug4: อัลกอริทึม
         Unplug5: ฟังก์ชัน
-        Unplug6: เงื่อนไข
+        Unplug6: 'เงื่อนไข '
         Unplug7: Songwriting
         Unplug8: Abstraction
         Unplug9: Relay programming
@@ -388,7 +390,7 @@ th:
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: 'Play Lab - Create a Story'
         C2_graph_paper: การเขียนกระดาษกราฟ
-        C2_conditionals_with_cards: เงื่อนไข
+        C2_conditionals_with_cards: 'เงื่อนไข '
         C2_binary_bracelets: Binary Bracelets
         C2_replay_programming: โปรแกรมการถ่ายทอดข้อมูล
         C2_paper_airplanes: Paper Airplanes

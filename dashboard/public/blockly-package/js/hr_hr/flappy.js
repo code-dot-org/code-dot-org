@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -9192,7 +9225,7 @@ exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkcije"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Varijable"};
 
@@ -9204,13 +9237,13 @@ exports.dialogCancel = function(d){return "Odustani"};
 
 exports.dialogOK = function(d){return "U redu"};
 
-exports.directionNorthLetter = function(d){return "S"};
+exports.directionNorthLetter = function(d){return "Sjever"};
 
-exports.directionSouthLetter = function(d){return "J"};
+exports.directionSouthLetter = function(d){return "Jug"};
 
-exports.directionEastLetter = function(d){return "I"};
+exports.directionEastLetter = function(d){return "Istok"};
 
-exports.directionWestLetter = function(d){return "Z"};
+exports.directionWestLetter = function(d){return "Zapad"};
 
 exports.end = function(d){return "kraj"};
 
@@ -9224,7 +9257,7 @@ exports.finalStage = function(d){return "Čestitamo! Posljednja etapa je završe
 
 exports.finalStageTrophies = function(d){return "Čestitamo! Završena je posljednja etapa i osvajaš "+p(d,"numTrophies",0,"hr",{"one":"trofej","other":n(d,"numTrophies")+" trofeja"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Kraj"};
 
 exports.generatedCodeInfo = function(d){return "Čak i vrhunska sveučilišta podučavaju kodiranje pomoću blokova (npr. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ali u suštini, blokovi koje si spojio se mogu prikazati kao kôd u JavaScriptu, najkorištenijem programskom jeziku na svijetu:"};
 
@@ -9238,7 +9271,7 @@ exports.jump = function(d){return "skoči"};
 
 exports.levelIncompleteError = function(d){return "Koristiš sve potrebne vrste blokova, ali na pogrešan način."};
 
-exports.listVariable = function(d){return "popis"};
+exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Napravi vlastitu Flappy igricu"};
 
@@ -9350,7 +9383,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.hr = function 
 };
 exports.continue = function(d){return "Nastavi"};
 
-exports.doCode = function(d){return "radi"};
+exports.doCode = function(d){return "napravi"};
 
 exports.elseCode = function(d){return "inače"};
 
@@ -9358,7 +9391,7 @@ exports.endGame = function(d){return "kraj igre"};
 
 exports.endGameTooltip = function(d){return "Završava igru."};
 
-exports.finalLevel = function(d){return "Čestitamo ! Riješili ste posljednji zadatak."};
+exports.finalLevel = function(d){return "Čestitamo! Riješen je posljednji zadatak."};
 
 exports.flap = function(d){return "mahni krilima"};
 
@@ -9376,13 +9409,13 @@ exports.flapVeryLarge = function(d){return "veoma jako mahni krilima"};
 
 exports.flapTooltip = function(d){return "Flappy leti prema gore."};
 
-exports.flappySpecificFail = function(d){return "Tvoj kôd izgleda dobro - maše krilima na svaki klik. Ali trebaš puno klikati dok ne stigneš na cilj."};
+exports.flappySpecificFail = function(d){return "Tvoj kod izgleda dobro - na svaki klik će poletjeti. Ali trebaš kliknuti puno puta do cilja."};
 
 exports.incrementPlayerScore = function(d){return "dodaj bod"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Povećava trenutni broj bodova za jedan."};
 
-exports.nextLevel = function(d){return "Čestitke! Završio si ovaj zadatak."};
+exports.nextLevel = function(d){return "Čestitamo! Ovaj zadatak je riješen."};
 
 exports.no = function(d){return "Ne"};
 
@@ -9392,7 +9425,7 @@ exports.playSoundRandom = function(d){return "pusti nasumično odabrani zvuk"};
 
 exports.playSoundBounce = function(d){return "pusti zvuk odskakanja"};
 
-exports.playSoundCrunch = function(d){return "pusti zvuk krckanja"};
+exports.playSoundCrunch = function(d){return "pokreni zvuk krckanja"};
 
 exports.playSoundDie = function(d){return "pusti zvuk žalosti"};
 
@@ -9414,7 +9447,7 @@ exports.playSoundSplash = function(d){return "pusti zvuk prskanja"};
 
 exports.playSoundLaser = function(d){return "pusti zvuk lasera"};
 
-exports.playSoundTooltip = function(d){return "Pušta odrabrani zvuk."};
+exports.playSoundTooltip = function(d){return "Pokreni odabrani zvuk."};
 
 exports.reinfFeedbackMsg = function(d){return "Pritisni tipku \"Pokušaj ponovno\" da se vratiš na igru."};
 
@@ -9436,7 +9469,7 @@ exports.setBackgroundCave = function(d){return "postavi scenu pećine"};
 
 exports.setBackgroundSanta = function(d){return "postavi scenu Djeda Mraza"};
 
-exports.setBackgroundTooltip = function(d){return "Postavlja sliku pozadine"};
+exports.setBackgroundTooltip = function(d){return "Postavi sliku za pozadinu"};
 
 exports.setGapRandom = function(d){return "postavi nasumični razmak"};
 
@@ -9604,7 +9637,7 @@ exports.whenEnterObstacleTooltip = function(d){return "Izvršava dolje navedene 
 
 exports.whenRunButtonClick = function(d){return "na početku igre"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Izvršava dolje navedene radnje na početku igre."};
+exports.whenRunButtonClickTooltip = function(d){return "Izvršava dolje navedene radnje kada igra započne."};
 
 exports.yes = function(d){return "Da"};
 

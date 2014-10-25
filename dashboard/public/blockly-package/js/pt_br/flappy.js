@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -9179,7 +9212,7 @@ exports.catMath = function(d){return "Matemática"};
 
 exports.catProcedures = function(d){return "Funções"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
 exports.catVariables = function(d){return "Variáveis"};
 
@@ -9257,7 +9290,7 @@ exports.runTooltip = function(d){return "Execute o programa definido pelos bloco
 
 exports.score = function(d){return "pontuação"};
 
-exports.showCodeHeader = function(d){return "Mostrar Código"};
+exports.showCodeHeader = function(d){return "Mostrar código"};
 
 exports.showGeneratedCode = function(d){return "Mostrar código"};
 
@@ -9271,7 +9304,7 @@ exports.tooManyBlocksMsg = function(d){return "Esse desafio pode ser resolvido c
 
 exports.tooMuchWork = function(d){return "Você me fez trabalhar bastante! Podemos tentar repetindo menos vezes?"};
 
-exports.toolboxHeader = function(d){return "Blocos"};
+exports.toolboxHeader = function(d){return "blocos"};
 
 exports.openWorkspace = function(d){return "Como funciona"};
 
@@ -9287,7 +9320,7 @@ exports.saveToGallery = function(d){return "Salve na sua galeria"};
 
 exports.savedToGallery = function(d){return "Salvo na sua galeria!"};
 
-exports.shareFailure = function(d){return "Não podemos compartilhar esse programa."};
+exports.shareFailure = function(d){return "Desculpe, não é possível compartilhar esse programa."};
 
 exports.typeCode = function(d){return "Digite seu código JavaScript abaixo destas instruções."};
 
@@ -9332,7 +9365,7 @@ exports.endGame = function(d){return "fim de Jogo"};
 
 exports.endGameTooltip = function(d){return "Termina o Jogo."};
 
-exports.finalLevel = function(d){return "Parabéns! Você resolveu o último desafio."};
+exports.finalLevel = function(d){return "Parabéns! Você resolveu o desafio final."};
 
 exports.flap = function(d){return "bata asas"};
 
@@ -9350,23 +9383,23 @@ exports.flapVeryLarge = function(d){return "bata asas muitíssimas vezes"};
 
 exports.flapTooltip = function(d){return "Faça com que o passarinho voe."};
 
-exports.flappySpecificFail = function(d){return "Seu código parece bom - ele vai bater as asas a cada clique. Mas você precisa clicar muitas vezes para atingir o objetivo."};
+exports.flappySpecificFail = function(d){return "Seu código parece bom - ele irá bater as asas com cada clique. Mas você precisa clicar muitas vezes para bater as asas para o alvo."};
 
 exports.incrementPlayerScore = function(d){return "marque um ponto"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Some um ponto à pontuação atual do jogador."};
+exports.incrementPlayerScoreTooltip = function(d){return "Soma um ponto à pontuação atual do jogador."};
 
-exports.nextLevel = function(d){return "Parabéns! Você completou o desafio."};
+exports.nextLevel = function(d){return "Parabéns! Você completou este desafio."};
 
 exports.no = function(d){return "Não"};
 
-exports.numBlocksNeeded = function(d){return "Este desafio pode ser resolvido com %1 blocos."};
+exports.numBlocksNeeded = function(d){return "Esse desafio pode ser resolvido com %1 blocos."};
 
 exports.playSoundRandom = function(d){return "reproduza som aleatório"};
 
 exports.playSoundBounce = function(d){return "reproduza som de bola pulando"};
 
-exports.playSoundCrunch = function(d){return "reproduza som de trituração"};
+exports.playSoundCrunch = function(d){return "reproduza barulho de trituração"};
 
 exports.playSoundDie = function(d){return "reproduza som triste"};
 
@@ -9388,9 +9421,9 @@ exports.playSoundSplash = function(d){return "reproduza som de água"};
 
 exports.playSoundLaser = function(d){return "reproduza som de laser"};
 
-exports.playSoundTooltip = function(d){return "Reproduza o som escolhido."};
+exports.playSoundTooltip = function(d){return "Reproduz o som escolhido."};
 
-exports.reinfFeedbackMsg = function(d){return "Você pode clicar no botão \"Tente novamente\" para voltar a jogar."};
+exports.reinfFeedbackMsg = function(d){return "Você pode pressionar o botão de \"Tentar novamente\" para voltar a jogar o seu jogo."};
 
 exports.scoreText = function(d){return "Pontuação: "+v(d,"playerScore")};
 
@@ -9410,7 +9443,7 @@ exports.setBackgroundCave = function(d){return "escolha o cenário Caverna"};
 
 exports.setBackgroundSanta = function(d){return "escolha o cenário de Natal"};
 
-exports.setBackgroundTooltip = function(d){return "Define a imagem do plano de fundo"};
+exports.setBackgroundTooltip = function(d){return "Define a imagem de fundo"};
 
 exports.setGapRandom = function(d){return "escolha uma abertura de tamanho aleatório"};
 
@@ -9524,7 +9557,7 @@ exports.shareGame = function(d){return "Compartilhe seu jogo:"};
 
 exports.soundRandom = function(d){return "aleatório"};
 
-exports.soundBounce = function(d){return "quique"};
+exports.soundBounce = function(d){return "quicar"};
 
 exports.soundCrunch = function(d){return "triture"};
 
@@ -9576,7 +9609,7 @@ exports.whenEnterObstacle = function(d){return "quando passar o obstáculo"};
 
 exports.whenEnterObstacleTooltip = function(d){return "Execute as ações abaixo quando o passarinho atingir um obstáculo."};
 
-exports.whenRunButtonClick = function(d){return "quando o jogo começa"};
+exports.whenRunButtonClick = function(d){return "Quando o jogo começar"};
 
 exports.whenRunButtonClickTooltip = function(d){return "Execute as ações abaixo quando o jogo começar."};
 

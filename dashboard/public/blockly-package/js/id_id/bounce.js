@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -11505,7 +11538,7 @@ exports.bounceBall = function(d){return "Pantul bola"};
 
 exports.bounceBallTooltip = function(d){return "Pantulkan bola dari sebuah benda."};
 
-exports.continue = function(d){return "Lanjutkan"};
+exports.continue = function(d){return "lanjutkan"};
 
 exports.dirE = function(d){return "T"};
 
@@ -11519,25 +11552,25 @@ exports.doCode = function(d){return "kerjakan"};
 
 exports.elseCode = function(d){return "jika tidak"};
 
-exports.finalLevel = function(d){return "Horee! Anda telah memecahkan teka-teki akhir."};
+exports.finalLevel = function(d){return "Selamat! Anda telah menyelesaikan teka-teki terakhir."};
 
 exports.heightParameter = function(d){return "tinggi"};
 
 exports.ifCode = function(d){return "Jika (if)"};
 
-exports.ifPathAhead = function(d){return "jika ada jalan di depan"};
+exports.ifPathAhead = function(d){return "Jika jalan ke depan"};
 
-exports.ifTooltip = function(d){return "jika ada jalan di arah yang ditentukan, lakukan beberapa tindakan."};
+exports.ifTooltip = function(d){return "Jika ada jalan ke arah yang ditentukan, lakukan beberapa perintah."};
 
-exports.ifelseTooltip = function(d){return "jika ada jalan di arah yang sudah ditentukan, lakukan blok perintah pertama. Jika tidak, lakukan blok perintah ke dua."};
+exports.ifelseTooltip = function(d){return "Jika ada jalan ke arah yang ditentukan, maka lakukan perintah yang berada di blok pertama. Jika tidak ada, maka lakukan perintah yang berada di blok kedua."};
 
-exports.incrementOpponentScore = function(d){return "skor poin lawan"};
+exports.incrementOpponentScore = function(d){return "Skor titik lawan"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Tambah satu pada skor lawan saat ini."};
 
-exports.incrementPlayerScore = function(d){return "skor poin"};
+exports.incrementPlayerScore = function(d){return "Mengukur titik"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Tambah satu pada skor pemain saat ini."};
+exports.incrementPlayerScoreTooltip = function(d){return "tambahkan satu pada pemain saat ini."};
 
 exports.isWall = function(d){return "apa ini dinding"};
 
@@ -11549,39 +11582,39 @@ exports.launchBallTooltip = function(d){return "Luncuran bola untuk bermain."};
 
 exports.makeYourOwn = function(d){return "Buat permainan Bouncing anda sendiri"};
 
-exports.moveDown = function(d){return "bergerak ke bawah"};
+exports.moveDown = function(d){return "Pindahkan ke bawah"};
 
 exports.moveDownTooltip = function(d){return "Gerak kayuh ke bawah."};
 
 exports.moveForward = function(d){return "Gerak maju"};
 
-exports.moveForwardTooltip = function(d){return "Gerak maju satu petak."};
+exports.moveForwardTooltip = function(d){return "Bergerak maju satu kotak."};
 
-exports.moveLeft = function(d){return "Gerak ke kiri"};
+exports.moveLeft = function(d){return "gerak kiri"};
 
 exports.moveLeftTooltip = function(d){return "Gerak kayuh ke kiri."};
 
-exports.moveRight = function(d){return "Gerak ke kanan"};
+exports.moveRight = function(d){return "pindah kanan"};
 
 exports.moveRightTooltip = function(d){return "Gerak kayuh ke kanan."};
 
-exports.moveUp = function(d){return "Gerak ke atas"};
+exports.moveUp = function(d){return "gerak ke atas"};
 
 exports.moveUpTooltip = function(d){return "Gerak kayuh ke atas."};
 
-exports.nextLevel = function(d){return "Selamat! Anda telah menyelesaikan teka-teki ini."};
+exports.nextLevel = function(d){return "Selamat! Kamu telah menyelesaikan teka-teki ini."};
 
 exports.no = function(d){return "Tidak"};
 
-exports.noPathAhead = function(d){return "jalur terhalang"};
+exports.noPathAhead = function(d){return "jalan diblokir"};
 
-exports.noPathLeft = function(d){return "tidak ada jalur ke kiri"};
+exports.noPathLeft = function(d){return "tidak ada jalan ke kiri"};
 
-exports.noPathRight = function(d){return "tidak ada jalur ke kanan"};
+exports.noPathRight = function(d){return "tidak ada jalan ke kanan"};
 
 exports.numBlocksNeeded = function(d){return "Teka-teki ini dapat diselesaikan dengan %1 blok."};
 
-exports.pathAhead = function(d){return "jalur ke depan"};
+exports.pathAhead = function(d){return "jalan ke depan"};
 
 exports.pathLeft = function(d){return "Jika jalur ke kiri"};
 
@@ -11591,29 +11624,29 @@ exports.pilePresent = function(d){return "ada tumpukan"};
 
 exports.playSoundCrunch = function(d){return "mainkan bunyi \"crunch\""};
 
-exports.playSoundGoal1 = function(d){return "mainkan suara gol 1"};
+exports.playSoundGoal1 = function(d){return "Mainkan suara gol 1"};
 
-exports.playSoundGoal2 = function(d){return "mainkan suara gol 2"};
+exports.playSoundGoal2 = function(d){return "Mainkan suara gol 2"};
 
 exports.playSoundHit = function(d){return "Mainkan suara pukulan"};
 
-exports.playSoundLosePoint = function(d){return "mainkan suara kehilangan poin"};
+exports.playSoundLosePoint = function(d){return "Mainkan suara kehilangan poin"};
 
-exports.playSoundLosePoint2 = function(d){return "mainkan suara kehilangan poin 2"};
+exports.playSoundLosePoint2 = function(d){return "Mainkan suara kehilangan poin 2"};
 
-exports.playSoundRetro = function(d){return "mainkan suara retro"};
+exports.playSoundRetro = function(d){return "Mainkan suara retro "};
 
-exports.playSoundRubber = function(d){return "mainkan suara karet"};
+exports.playSoundRubber = function(d){return "Mainkan suara karet"};
 
-exports.playSoundSlap = function(d){return "putar suara tamparan"};
+exports.playSoundSlap = function(d){return "Putar suara tamparan"};
 
-exports.playSoundTooltip = function(d){return "mainkan bunyi yang dipilih."};
+exports.playSoundTooltip = function(d){return "mainkan bunyi pilihan."};
 
-exports.playSoundWinPoint = function(d){return "mainkan suara menang poin"};
+exports.playSoundWinPoint = function(d){return "Putar suara  titik menang"};
 
-exports.playSoundWinPoint2 = function(d){return "mainkan suara menang poin 2"};
+exports.playSoundWinPoint2 = function(d){return "Putar suara titik menang 2"};
 
-exports.playSoundWood = function(d){return "mainkan suara kayu"};
+exports.playSoundWood = function(d){return "Bermain suara kayu "};
 
 exports.putdownTower = function(d){return "letakkan tower"};
 
@@ -11621,13 +11654,13 @@ exports.reinfFeedbackMsg = function(d){return "Anda dapat menekan tombol \"Coba 
 
 exports.removeSquare = function(d){return "hapus persegi empat"};
 
-exports.repeatUntil = function(d){return "ulangi sampai"};
+exports.repeatUntil = function(d){return "Ulangi sampai"};
 
-exports.repeatUntilBlocked = function(d){return "Selagi ada jalur ke depan"};
+exports.repeatUntilBlocked = function(d){return "Selagi ada jalan ke depan"};
 
-exports.repeatUntilFinish = function(d){return "ulangi sampai selesai"};
+exports.repeatUntilFinish = function(d){return "Ulangi sampai selesai"};
 
-exports.scoreText = function(d){return "Skor: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Skor: "+v(d,"playerScore")+": "+v(d,"opponentScore")};
 
 exports.setBackgroundRandom = function(d){return "Tetapkan adegan secara acak"};
 
@@ -11635,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "tetapkan adegan 'hardcourt'
 
 exports.setBackgroundRetro = function(d){return "tetapkan adegan retro"};
 
-exports.setBackgroundTooltip = function(d){return "Tetapkan gambar latar belakang"};
+exports.setBackgroundTooltip = function(d){return "Atur gambar latar belakang"};
 
 exports.setBallRandom = function(d){return "tetapkan bola secara acak"};
 
@@ -11699,37 +11732,37 @@ exports.whenBallMissesPaddle = function(d){return "Ketika bola tidak terkena kay
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Laksanakan aksi-aksi dibawah ketika bola tidak mengenai kayuh."};
 
-exports.whenDown = function(d){return "ketika panah bawah"};
+exports.whenDown = function(d){return "Ketika panah bawah"};
 
-exports.whenDownTooltip = function(d){return "Laksanakan aksi-aksi dibawah ini ketika tombol panah kebawah ditekan."};
+exports.whenDownTooltip = function(d){return "Laksanakan tindakan-tindakan di bawah ini ketika tombol panah kebawah ditekan."};
 
-exports.whenGameStarts = function(d){return "jika permainan dimulai"};
+exports.whenGameStarts = function(d){return "ketika permainan dimulai"};
 
 exports.whenGameStartsTooltip = function(d){return "Jalankan aksi dibawah ketika permainan dimulai."};
 
 exports.whenLeft = function(d){return "Ketika anak panah kiri"};
 
-exports.whenLeftTooltip = function(d){return "Laksanakan aksi-aksi dibawah ini ketika tombol panah kiri ditekan."};
+exports.whenLeftTooltip = function(d){return "Laksanakan tindakan-tindakan di bawah ini ketika tombol panah kiri ditekan."};
 
 exports.whenPaddleCollided = function(d){return "ketika bola menyentuh kayuh"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Melaksanakan aksi-aksi di bawah ini ketika bola bertabrakan dengan dayung."};
 
-exports.whenRight = function(d){return "ketika anak panah kanan"};
+exports.whenRight = function(d){return "Ketika anak panah kanan"};
 
-exports.whenRightTooltip = function(d){return "Laksanakan aksi-aksi dibawah ini ketika tombol panah kanan ditekan."};
+exports.whenRightTooltip = function(d){return "Laksanakan tindakan-tindakan di bawah ini ketika tombol panah kanan ditekan."};
 
-exports.whenUp = function(d){return "ketika anak panah atas"};
+exports.whenUp = function(d){return "Bila tanda panah atas"};
 
-exports.whenUpTooltip = function(d){return "Laksanakan aksi-aksi dibawah ini ketika tombol panah keatas ditekan."};
+exports.whenUpTooltip = function(d){return "Laksanakan tindakan-tindakan di bawah ini ketika tombol panah keatas ditekan."};
 
 exports.whenWallCollided = function(d){return "ketika bola menyentuh dinding"};
 
 exports.whenWallCollidedTooltip = function(d){return "Laksanakan aksi-aksi dibawah ini ketika bola bertabrakan dengan dinding."};
 
-exports.whileMsg = function(d){return "selagi"};
+exports.whileMsg = function(d){return "Selagi"};
 
-exports.whileTooltip = function(d){return "Ulangi aksi sampai tujuan tercapai."};
+exports.whileTooltip = function(d){return "Ulangi perintah sampai tujuan tercapai."};
 
 exports.yes = function(d){return "Ya"};
 
@@ -11754,13 +11787,13 @@ exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Fungsi"};
 
-exports.catText = function(d){return "Teks"};
+exports.catText = function(d){return "teks"};
 
 exports.catVariables = function(d){return "Variabel"};
 
 exports.codeTooltip = function(d){return "Lihat kode JavaScript."};
 
-exports.continue = function(d){return "Ayo lanjutkan!"};
+exports.continue = function(d){return "Lanjutkan"};
 
 exports.dialogCancel = function(d){return "Batal"};
 
@@ -11822,7 +11855,7 @@ exports.play = function(d){return "mainkan"};
 
 exports.puzzleTitle = function(d){return "Teka-teki ke "+v(d,"puzzle_number")+" dari "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "ulangi"};
+exports.repeat = function(d){return "Ulangi"};
 
 exports.resetProgram = function(d){return "Kembali ke awal"};
 
@@ -11846,7 +11879,7 @@ exports.tooManyBlocksMsg = function(d){return "Teka-teki ini dapat diselesaikan 
 
 exports.tooMuchWork = function(d){return "Anda membuat saya melakukan terlalu banyak pekerjaan!  Bisakan Anda coba membuat pengulangan yang lebih sedikit?"};
 
-exports.toolboxHeader = function(d){return "Blok"};
+exports.toolboxHeader = function(d){return "blok"};
 
 exports.openWorkspace = function(d){return "Cara kerjanya"};
 

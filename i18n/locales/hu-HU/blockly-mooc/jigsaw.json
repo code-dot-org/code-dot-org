@@ -1,9 +1,9 @@
 {
   "continue":"Tovább",
-  "nextLevel":"Gratulálunk! Kész vagy ezzel a kirakóval.",
-  "no":"Nem",
-  "numBlocksNeeded":"Ez a kirakó az elemek 1 %-ával megoldható",
-  "reinfFeedbackMsg":"Nyomd meg az \"Próbáld újra\" gombot hogy visszatérj a játékodhoz.",
+  "nextLevel":"Gratulálunk! Teljesítetted ezt a feladványt.",
+  "no":"nem",
+  "numBlocksNeeded":"Ezt a puzzle-t a(z) % 1 blokkal megoldható.",
+  "reinfFeedbackMsg":"Nyomja meg a \"Játszd újra\" gombot hogy visszatérj a saját játékodhoz.",
   "share":"Megosztás",
   "shareGame":"Oszd meg a játékodat:",
   "yes":"Igen"

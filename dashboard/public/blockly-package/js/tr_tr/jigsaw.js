@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -7660,7 +7693,7 @@ exports.and = function(d){return "ve"};
 
 exports.blocklyMessage = function(d){return "Parçalı"};
 
-exports.catActions = function(d){return "İşlemler"};
+exports.catActions = function(d){return "Eylemler"};
 
 exports.catColour = function(d){return "Renk"};
 
@@ -7674,13 +7707,13 @@ exports.catMath = function(d){return "Matematik"};
 
 exports.catProcedures = function(d){return "Fonksiyonlar"};
 
-exports.catText = function(d){return "Yazı"};
+exports.catText = function(d){return "yazı"};
 
 exports.catVariables = function(d){return "Değişkenler"};
 
 exports.codeTooltip = function(d){return "Oluşturulan JavaScript kodunu gör."};
 
-exports.continue = function(d){return "Devam"};
+exports.continue = function(d){return "Devam Et"};
 
 exports.dialogCancel = function(d){return "İptal"};
 
@@ -7700,13 +7733,13 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Tekrar\" bloğu veya \"Eğer
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Fonksiyon bloğunun çalışabilmesi için içine başka bloklar koymalısın."};
 
-exports.extraTopBlocks = function(d){return "Bir olay bloğuna eklenmemiş ekstra blokların var."};
+exports.extraTopBlocks = function(d){return "Blokları bağlamadın. \"Çalıştığı zaman\" bloğuna bağlamayı denediniz mi?"};
 
 exports.finalStage = function(d){return "Son aşamayı bitirdiniz. Tebrikler!"};
 
 exports.finalStageTrophies = function(d){return "Tebrikler! Son aşamayı bitirerek "+p(d,"numTrophies",0,"tr",{"one":"bir ganimet","other":n(d,"numTrophies")+" ganimet"})+" kazandınız."};
 
-exports.finish = function(d){return "Bitir"};
+exports.finish = function(d){return "Bitiş"};
 
 exports.generatedCodeInfo = function(d){return "Dünyanın en iyi üniversiteleri bile yap-boz oyun tabanlı kodlama öğretiyor (Örn. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ayrıca detaylı incelerseniz, birleştirdiğiniz bloklar dünyanın en yaygın kullanılan kodlama dili olan JavaScript dilinde de görüntüleniyor:"};
 
@@ -7716,7 +7749,7 @@ exports.help = function(d){return "Yardım"};
 
 exports.hintTitle = function(d){return "İpucu:"};
 
-exports.jump = function(d){return "atla"};
+exports.jump = function(d){return "zıpla"};
 
 exports.levelIncompleteError = function(d){return "Tüm gerekli türdeki blokları kullanıyorsunuz ama doğru şekilde değil."};
 
@@ -7742,7 +7775,7 @@ exports.play = function(d){return "oynat"};
 
 exports.puzzleTitle = function(d){return "Bulmaca "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "tekrarla"};
+exports.repeat = function(d){return "bu işlemleri"};
 
 exports.resetProgram = function(d){return "Yeniden başla"};
 
@@ -7758,7 +7791,7 @@ exports.showGeneratedCode = function(d){return "Kodu Görüntüle"};
 
 exports.subtitle = function(d){return "Bir görsel programa ortamı"};
 
-exports.textVariable = function(d){return "metin yazısı"};
+exports.textVariable = function(d){return "metin"};
 
 exports.tooFewBlocksMsg = function(d){return "Tüm gerekli blok türlerini kullanıyorsun,fakat bulmacayı tamamlamak için bu blok tiplerinden daha fazla kullanmayı dene."};
 
@@ -7766,7 +7799,7 @@ exports.tooManyBlocksMsg = function(d){return "Bu bulmaca <x id='START_SPAN'/><x
 
 exports.tooMuchWork = function(d){return "Bana çok fazla iş yaptırdın!Daha az tekrar etmeyi deneyebilir misin ?"};
 
-exports.toolboxHeader = function(d){return "Bloklar"};
+exports.toolboxHeader = function(d){return "bloklar"};
 
 exports.openWorkspace = function(d){return "Nasıl Çalışır"};
 
@@ -7782,7 +7815,7 @@ exports.saveToGallery = function(d){return "Galerine kaydet"};
 
 exports.savedToGallery = function(d){return "Galerine kaydedildi!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Üzgünüz, bu programı paylaşamıyoruz."};
 
 exports.typeCode = function(d){return "Açıklamaların altına kendi JavaScript kodunu yaz."};
 
@@ -7817,13 +7850,13 @@ exports.genericFeedback = function(d){return "Sonucunu gör ve programını düz
 
 },{"messageformat":47}],35:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.tr=function(n){return "other"}
-exports.continue = function(d){return "Devam et"};
+exports.continue = function(d){return "Devam Et"};
 
 exports.nextLevel = function(d){return "Tebrikler! Bu bulmacayı tamamladınız."};
 
 exports.no = function(d){return "Hayır"};
 
-exports.numBlocksNeeded = function(d){return "Bu bulmaca %1 blok ile çözülebilir."};
+exports.numBlocksNeeded = function(d){return "Bu puzzle %1 blok ile çözülebilir."};
 
 exports.reinfFeedbackMsg = function(d){return "Oyununuzu tekrar oynamak için \"yeniden dene\" butonuna basabilirsiniz."};
 

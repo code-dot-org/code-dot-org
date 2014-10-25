@@ -24,4 +24,10 @@ Premio limitato alle scuole elementari, medie e superiori degli Stati Uniti. Per
 
 Premio limitato alle scuole pubbliche elementari, medie e superiori degli Stati Uniti. Perché solo le scuole pubbliche? [See the answer here](http://www.hourofcode.com/#faq). Per qualificarsi, l'intera scuola deve registrarsi per l'Ora del Codice entro il 14 novembre 2014. Una sola scuola per ogni stato americano riceverà un set computer per un'intera classe. Code.org selezionerà e notificherà i vincitori via email entro il 1° dicembre 2014.
 
+To clarify, this is not a sweepstakes or a contest involving pure chance.
+
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+
 <% end %>

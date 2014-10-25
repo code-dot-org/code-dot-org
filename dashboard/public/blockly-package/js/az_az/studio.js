@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13335,7 +13368,6 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('TEXT')
-        .setCheck('String')
         .appendTitle(msg.setScoreText());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -16437,7 +16469,9 @@ Studio.init = function(config) {
     return el.getBoundingClientRect().width;
   };
 
-  arrangeStartBlocks(config);
+  if (config.level.edit_blocks != 'toolbox_blocks') {
+    arrangeStartBlocks(config);
+  }
 
   config.twitter = twitterOptions;
 
@@ -18667,13 +18701,13 @@ exports.catLogic = function(d){return "Məntiq"};
 
 exports.catLists = function(d){return "Siyahılar"};
 
-exports.catLoops = function(d){return "Dövrlər"};
+exports.catLoops = function(d){return "Dövlər"};
 
 exports.catMath = function(d){return "Riyaziyyat"};
 
 exports.catProcedures = function(d){return "Funksiyalar"};
 
-exports.catText = function(d){return "Mətn"};
+exports.catText = function(d){return "mətn"};
 
 exports.catVariables = function(d){return "Dəyişənlər"};
 
@@ -18765,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "Bu tapmaca <x id='START_SPAN'/><x
 
 exports.tooMuchWork = function(d){return "Siz mənə çox iş gördürdünüz! Təkrarlamaları azalda bilərsiniz?"};
 
-exports.toolboxHeader = function(d){return "Bloklar"};
+exports.toolboxHeader = function(d){return "bloklar"};
 
 exports.openWorkspace = function(d){return "Bu necə işləyir?"};
 
@@ -18805,7 +18839,7 @@ exports.when = function(d){return "when"};
 
 exports.whenRun = function(d){return "when run"};
 
-exports.tryHOC = function(d){return "Kodlama Saati'ni dənə"};
+exports.tryHOC = function(d){return "Kod Saatında özünüzü sınayın"};
 
 exports.signup = function(d){return "Sign up for the intro course"};
 
@@ -18820,7 +18854,7 @@ exports.actor = function(d){return "actor"};
 
 exports.catActions = function(d){return "Əmrlər"};
 
-exports.catControl = function(d){return "Dövrlər"};
+exports.catControl = function(d){return "dövrlər"};
 
 exports.catEvents = function(d){return "Events"};
 
@@ -18828,11 +18862,11 @@ exports.catLogic = function(d){return "Məntiq"};
 
 exports.catMath = function(d){return "Riyaziyyat"};
 
-exports.catProcedures = function(d){return "Funksiyalar"};
+exports.catProcedures = function(d){return "funksiyalar"};
 
-exports.catText = function(d){return "Mətn"};
+exports.catText = function(d){return "mətn"};
 
-exports.catVariables = function(d){return "Dəyişənlər"};
+exports.catVariables = function(d){return "dəyişənlər"};
 
 exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
 
@@ -18848,9 +18882,9 @@ exports.emotion = function(d){return "emotion"};
 
 exports.finalLevel = function(d){return "Təbriklər! Axırıncı tapmacanı da tapdınız."};
 
-exports.hello = function(d){return "hello"};
+exports.hello = function(d){return "salam"};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "Salam, dünya!"};
 
 exports.incrementPlayerScore = function(d){return "increment player score"};
 
@@ -18894,7 +18928,7 @@ exports.moveDistance200 = function(d){return "200 piksel"};
 
 exports.moveDistance400 = function(d){return "400 piksel"};
 
-exports.moveDistancePixels = function(d){return "piksel"};
+exports.moveDistancePixels = function(d){return "piksellər"};
 
 exports.moveDistanceRandom = function(d){return "random pixels"};
 

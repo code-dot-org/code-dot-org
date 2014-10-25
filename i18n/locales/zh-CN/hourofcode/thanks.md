@@ -52,7 +52,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 5. Promote Hour of Code within your community
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+招募本地组织—童子军俱乐部，教堂，大学，退伍军人团体或工会，或组织你的邻居参与编程一小时“街区聚会”。
 
 ## 6. Ask a local elected official to support the Hour of Code
 

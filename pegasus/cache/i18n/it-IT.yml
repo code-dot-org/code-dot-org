@@ -40,27 +40,27 @@
   view_english_site: Vedi il sito in inglese
   non_english_tutorials: 'Corsi tradotti in varie lingue:'
   write_your_first_program: Scrivi il tuo primo programma
-  learn_cs_concepts: Impara i concetti di base dell'informatica con la programmazione
-    visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
-    e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies".
-    Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali.
+  learn_cs_concepts: Impara i concetti base dell'informatica con la programmazione
+    trascina e rilascia. Questo è un tutorial del tipo-gioco interpretato da lezioni
+    video di Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs Zombies. Impara
+    cicli di ripetizione, dichiarazioni se-allora  e algoritmi base.
   all_ages: Tutte le età
   beginner: Principiante
   n_participants: "# partecipanti"
   go: Inizia
   thank_you_: Grazie!
-  congratulations: Complimenti!
+  congratulations: Congratulazioni!
   congratulations_on_completing_hoc: Complimenti per aver completato la tua prima
     Ora del Codice.
   get_a_certificate_of_achievement: Ottieni un certificato dei risultati ottenuti
   enter_valid_email: Per favore inserisci un indirizzo valido di posta elettronica
-  get_a_certificate_message: Ti manderemo un certificato e le informazioni su come
-    <a href='/learn/beyond'>continuare ad imparare dopo la prima Ora del Codice</a>
+  get_a_certificate_message: Ti invieremo un certificato e le informazioni sulle modalità
+    per<a href='/learn/beyond'>Imparare oltre Un'Ora</a>
   get_a_certificate_message_after: Clicca sul certificato per scaricarlo o stamparlo.
     Poi, continua con <a href='http://studio.code.org'>altri corsi</a>, o vedi altre
     possibilità per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>.
-  thanks_for_submitting: Grazie per l'invio!
-  if_you_enjoyed: Se ti è piaciuto imparare, chiedi anche ai tuoi amici di provare!  Vogliamo
+  thanks_for_submitting: Grazie per la presentazione!
+  if_you_enjoyed: Se ti è piaciuto imparare, chiedi anche a degli amici di provare!  Vogliamo
     che tutto il mondo impari.
   personalize_certificate: Personalizza il tuo certificato
   share_achievement: Condividi il tuo successo
@@ -84,7 +84,7 @@
   get_started: Inizia
   i_agree: Firmo
   participant_select: "- Seleziona -"
-  participant_student: Studente
+  participant_student: studente
   participant_parent: Genitore
   participant_educator: Insegnante
   participant_engineer: Ingegnere del Software
@@ -97,8 +97,8 @@
   petition_thankyou: Grazie per aver firmato la petizione
   carousel_heading_international: Corsi nella tua lingua
   continue_learning_header: Continua ad imparare dopo l'Ora del Codice
-  continue_learning_body: Ci sono molte opzioni.  Puoi imparare online, o presso una
-    scuola locale, o presso un campo estivo.
+  continue_learning_body: Ci sono un sacco di opzioni.  Puoi imparare online, o presso
+    una scuola locale, o campo estivo.
   learn_next_level: Prosegui al livello successivo
   learn_online: Prova altri corsi on-line
   learn_classes: Trova le scuole locali
@@ -112,21 +112,20 @@
   boy: Ragazzo
   help_recruit_coders: Aiutaci a reclutare più scrittori di codice per la tua squadra!
   help_recruit: Aiutaci a reclutare più scrittori di codice!
-  lines_of_code: OLTRE <b># LINEE DI CODICE</b> SCRITTE FINO AD ORA.
+  lines_of_code: OLTRE <b># LINEE DI CODICE</b> SCRITTO IN DATA.
   lines_of_code_alt: "<b>#</b> LINEE DI CODICE SCRITTE DAGLI STUDENTI"
   who_has_done_hoc: 'Chi ha realizzato l''Ora del Codice #HourOfCode? @codeorg'
   hoc_leaderboards: Le classifiche dell'Ora del Codice
-  students_and_lines: "%{students} studenti hanno completato l'Ora del Codice e scritto
-    %{lines} linee di codice."
+  students_and_lines: "% {studenti} studenti hanno fatto l'ora di codice e scritto
+    % {linee} linee di codice."
   start_hoc: Inizia l'Ora del Codice adesso
-  contact_form_topic_press: Stampa/media (appuntamento per un'intervista o per un
-    intervento)
+  contact_form_topic_press: Stampa/media (appuntameno per un'intervista o per parlare)
   studiobar_title: Esplora l'<a href='http://studio.code.org'>Officina del Codice</a>
   studiobar_elementary_title: Scuola Primaria
   studiobar_elementary_body: I nostri tre nuovi corsi, specifici per la Scuola Primaria
   studiobar_hoc_title: L'Ora del Codice
   studiobar_hoc_body: Imparare a programmare con Angry Birds
-  studiobar_flappy_title: Codice "Flappy"
+  studiobar_flappy_title: Codice di "Flappy"
   studiobar_flappy_body: Crea e condividi il tuo gioco di Flappy
   studiobar_teacher_title: Fatto per gli insegnanti
   studiobar_teacher_body: Introduci l'Officina del Codice nella tua classe
@@ -138,9 +137,9 @@
   contact_form_topic_partner: Vorrei diventare partner dell'iniziativa
   contact_form_topic_other: Altro
   contact_form_label_topic: Argomento
-  contact_form_label_email: Il tuo indirizzo di posta elettronica
+  contact_form_label_email: Il tuo indirizzo email
   contact_form_label_message: Messaggio
-  contact_form_label_submit: Invia il messaggio
+  contact_form_label_submit: Invia messaggio
   class_submission_in_school: Nella scuola
   class_submission_in_school_daily_programming_course: Corso giornaliero di programmazione
   class_submission_in_school_ap_computer_science: Corso di Informatica preparatorio
@@ -199,17 +198,17 @@
     delle scuole elementari (in versione provvisoria).
   dashboard_landing_new_k5courses: Nuovo! Prova i nostri corsi per gli studenti della
     scuola primaria.
-  dashboard_landing_useful_links: Altre pagine utili (solo in lingua inglese)
+  dashboard_landing_useful_links: Altre pagine utili (alcune solo in lingua inglese)
   dashboard_landing_office_hours: Fai una domanda di persona! Visita il nostro ufficio
     di assistenza. L'assistenza viene fornita in inglese dal personale di code.org.
-  dashboard_landing_print_certificates: Stampa i certificati per gli studenti che
+  dashboard_landing_print_certificates: Stampa il certificato per gli studenti che
     completano questo corso
   dashboard_landing_educator_blog: Leggi notizie e aggiornamenti relativi al nostro
-    materiale didattico sul nostro Blog dell'Insegnante
+    materiale didattico su <a href="http://programmailfuturo.it">programmailfuturo.it</a>
   dashboard_landing_smart_hints: Per favore aiutaci ad aggiungere suggerimenti intelligenti
-    ai corsi di Code.org (per il momento possibile solo in inglese)
-  dashboard_landing_video_player: Prova il nostro nuovo visualizzatore di video nella
-    tua scuola
+    ai corsi di Code.org
+  dashboard_landing_video_player: Prova il nostro nuovo videoregistratore nella tua
+    scuola
   dashboard_landing_progress_title: Progressi della classe principale
   dashboard_landing_progress_biggest: Questo è la situazione per la tua classe principale.
   dashboard_landing_view_progress: Controlla i progressi della classe %{biggest_section}
@@ -244,7 +243,7 @@
   dashboard_sections_table_grade: Livello
   dashboard_sections_table_course: Corso
   dashboard_sections_table_students: Studenti
-  dashboard_sections_table_code: Codice Classe
+  dashboard_sections_table_code: codice-classe
   dashboard_sections_name: Nome della classe
   dashboard_sections_choose_secret: Se vuoi creare tu gli account per i tuoi studenti,
     scegli un tipo di password <b>parola</b> o <b>immagine</b> per quella classe.
@@ -272,7 +271,7 @@
   dashboard_students_male: Maschile
   dashboard_students_female: Femminile
   dashboard_students_secret: Password
-  dashboard_students_password: Password
+  dashboard_students_password: password
   dashboard_students_username: 'Nome utente: %{student_username}'
   dashboard_students_email: 'Indirizzo di posta elettronica: %{student_email}'
   dashboard_students_completed_levels: Livelli completati
@@ -325,8 +324,21 @@
   dashboard_grade_other: Altro
   dashboard_login_word: parola
   dashboard_login_picture: immagine
-  dashboard_login_none: email
+  dashboard_login_none: Indirizzo di posta elettronica
   dashboard_new_password: nuova password
   stats_hoc_2013_heading: 'incredibili statistiche dell''Ora del Codice dello scorso
     anno. In una settimana soltanto:'
   stats_hoc_2013_image_alt: Statistiche dell'Ora del Codice per il 2013
+  dashboard_teacher: Teacher
+  dashboard_student: studente
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -9631,11 +9664,6 @@ Turtle.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
 
-  // Enable blockly param editing in levelbuilder, regardless of level setting
-  if (config.level.edit_blocks) {
-    config.disableParamEditing = false;
-  }
-
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
 
@@ -10636,7 +10664,7 @@ exports.catMath = function(d){return "Matemática"};
 
 exports.catProcedures = function(d){return "Funções"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
 exports.catVariables = function(d){return "Variáveis"};
 
@@ -10714,7 +10742,7 @@ exports.runTooltip = function(d){return "Execute o programa definido pelos bloco
 
 exports.score = function(d){return "pontuação"};
 
-exports.showCodeHeader = function(d){return "Mostrar Código"};
+exports.showCodeHeader = function(d){return "Mostrar código"};
 
 exports.showGeneratedCode = function(d){return "Mostrar código"};
 
@@ -10728,7 +10756,7 @@ exports.tooManyBlocksMsg = function(d){return "Esse desafio pode ser resolvido c
 
 exports.tooMuchWork = function(d){return "Você me fez trabalhar bastante! Podemos tentar repetindo menos vezes?"};
 
-exports.toolboxHeader = function(d){return "Blocos"};
+exports.toolboxHeader = function(d){return "blocos"};
 
 exports.openWorkspace = function(d){return "Como funciona"};
 
@@ -10744,7 +10772,7 @@ exports.saveToGallery = function(d){return "Salve na sua galeria"};
 
 exports.savedToGallery = function(d){return "Salvo na sua galeria!"};
 
-exports.shareFailure = function(d){return "Não podemos compartilhar esse programa."};
+exports.shareFailure = function(d){return "Desculpe, não é possível compartilhar esse programa."};
 
 exports.typeCode = function(d){return "Digite seu código JavaScript abaixo destas instruções."};
 
@@ -10785,15 +10813,15 @@ exports.branches = function(d){return "ramos"};
 
 exports.catColour = function(d){return "Cor"};
 
-exports.catControl = function(d){return "Laços"};
+exports.catControl = function(d){return "laços"};
 
 exports.catMath = function(d){return "Matemática"};
 
-exports.catProcedures = function(d){return "Funções"};
+exports.catProcedures = function(d){return "funções"};
 
 exports.catTurtle = function(d){return "Ações"};
 
-exports.catVariables = function(d){return "Variáveis"};
+exports.catVariables = function(d){return "variáveis"};
 
 exports.catLogic = function(d){return "Lógica"};
 
@@ -10805,11 +10833,11 @@ exports.depth = function(d){return "profundidade"};
 
 exports.dots = function(d){return "pontos na tela"};
 
-exports.drawASquare = function(d){return "desenhe um quadrado"};
+exports.drawASquare = function(d){return "desenhar um quadrado"};
 
-exports.drawATriangle = function(d){return "desenhe um triângulo"};
+exports.drawATriangle = function(d){return "desenhar um triângulo"};
 
-exports.drawACircle = function(d){return "desenhe um círculo"};
+exports.drawACircle = function(d){return "desenhar um círculo"};
 
 exports.drawAFlower = function(d){return "desenhe uma flor"};
 
@@ -10827,7 +10855,7 @@ exports.drawARocket = function(d){return "desenhe um foguete"};
 
 exports.drawASnowflake = function(d){return "desenhe um floco de neve"};
 
-exports.drawASnowman = function(d){return "desenhe um boneco de neve"};
+exports.drawASnowman = function(d){return "desenhar um boneco de neve"};
 
 exports.drawAStar = function(d){return "desenhe uma estrela"};
 
@@ -10889,11 +10917,11 @@ exports.penTooltip = function(d){return "Levanta ou abaixa o lápis, para começ
 
 exports.penUp = function(d){return "levante o lápis"};
 
-exports.reinfFeedbackMsg = function(d){return "Ficou do jeito que você queria? Você pode clicar em \"Tente novamente\" para ver seu desenho."};
+exports.reinfFeedbackMsg = function(d){return "Isto parece com o que você quer? Você pode pressionar o botão de \"Tentar novamente\" para ver seu desenho."};
 
-exports.setColour = function(d){return "defina a cor"};
+exports.setColour = function(d){return "definir cor"};
 
-exports.setWidth = function(d){return "defina a largura"};
+exports.setWidth = function(d){return "definir largura"};
 
 exports.shareDrawing = function(d){return "Compartilhe seu desenho:"};
 

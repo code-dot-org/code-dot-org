@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13165,7 +13198,7 @@ exports.catMath = function(d){return "Matemática"};
 
 exports.catProcedures = function(d){return "Funções"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
 exports.catVariables = function(d){return "Variáveis"};
 
@@ -13243,7 +13276,7 @@ exports.runTooltip = function(d){return "Execute o programa definido pelos bloco
 
 exports.score = function(d){return "pontuação"};
 
-exports.showCodeHeader = function(d){return "Mostrar Código"};
+exports.showCodeHeader = function(d){return "Mostrar código"};
 
 exports.showGeneratedCode = function(d){return "Mostrar código"};
 
@@ -13257,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "Esse desafio pode ser resolvido c
 
 exports.tooMuchWork = function(d){return "Você me fez trabalhar bastante! Podemos tentar repetindo menos vezes?"};
 
-exports.toolboxHeader = function(d){return "Blocos"};
+exports.toolboxHeader = function(d){return "blocos"};
 
 exports.openWorkspace = function(d){return "Como funciona"};
 
@@ -13273,7 +13306,7 @@ exports.saveToGallery = function(d){return "Salve na sua galeria"};
 
 exports.savedToGallery = function(d){return "Salvo na sua galeria!"};
 
-exports.shareFailure = function(d){return "Não podemos compartilhar esse programa."};
+exports.shareFailure = function(d){return "Desculpe, não é possível compartilhar esse programa."};
 
 exports.typeCode = function(d){return "Digite seu código JavaScript abaixo destas instruções."};
 
@@ -13342,11 +13375,11 @@ exports.fillSquare = function(d){return "preencha o quadrado"};
 
 exports.fillTooltip = function(d){return "coloque 1 unidade de terra"};
 
-exports.finalLevel = function(d){return "Parabéns! Você resolveu o desafio final."};
+exports.finalLevel = function(d){return "Parabéns! Você resolveu o último desafio."};
 
 exports.flowerEmptyError = function(d){return "A flor em que você está não tem mais néctar."};
 
-exports.get = function(d){return "obtenha"};
+exports.get = function(d){return "obter"};
 
 exports.heightParameter = function(d){return "altura"};
 
@@ -13368,7 +13401,7 @@ exports.ifPathAhead = function(d){return "se houver caminho à frente"};
 
 exports.ifTooltip = function(d){return "Se houver um caminho na direção especificada, realize algumas ações."};
 
-exports.ifelseTooltip = function(d){return "Se houver um caminho na direção especificada, faça o primeiro bloco de ações. Caso contrário, faça o segundo bloco de ações."};
+exports.ifelseTooltip = function(d){return "Se há um caminho na direção especificada, então faça o primeiro bloco de ações. Caso contrário, faça o segundo bloco de ações."};
 
 exports.ifFlowerTooltip = function(d){return "Se houver uma flor/colmeia na direção especificada, faça algumas ações."};
 
@@ -13384,7 +13417,7 @@ exports.moveBackward = function(d){return "mova para trás"};
 
 exports.moveEastTooltip = function(d){return "Mova-me um espaço para leste."};
 
-exports.moveForward = function(d){return "avance"};
+exports.moveForward = function(d){return "avançar"};
 
 exports.moveForwardTooltip = function(d){return "Mova-me um espaço para a frente."};
 
@@ -13402,7 +13435,7 @@ exports.nectarRemaining = function(d){return "néctar"};
 
 exports.nectarTooltip = function(d){return "Obtenha néctar de uma flor"};
 
-exports.nextLevel = function(d){return "Parabéns! Você completou esse desafio."};
+exports.nextLevel = function(d){return "Parabéns! Você completou o desafio."};
 
 exports.no = function(d){return "Não"};
 
@@ -13416,15 +13449,15 @@ exports.notAtFlowerError = function(d){return "Você só pode obter néctar de u
 
 exports.notAtHoneycombError = function(d){return "Você só pode fazer mel em um favo de mel."};
 
-exports.numBlocksNeeded = function(d){return "Esse desafio pode ser resolvido com %1 blocos."};
+exports.numBlocksNeeded = function(d){return "Este desafio pode ser resolvido com %1 blocos."};
 
 exports.pathAhead = function(d){return "se houver caminho à frente"};
 
-exports.pathLeft = function(d){return "se houver caminho à esquerda"};
+exports.pathLeft = function(d){return "Se houver caminho à esquerda"};
 
-exports.pathRight = function(d){return "se houver caminho à direita"};
+exports.pathRight = function(d){return "Se houver caminho à direita"};
 
-exports.pilePresent = function(d){return "houver uma pilha"};
+exports.pilePresent = function(d){return "há um monte"};
 
 exports.putdownTower = function(d){return "derrube a torre"};
 
@@ -13446,7 +13479,7 @@ exports.repeatUntilBlocked = function(d){return "enquanto houver caminho em fren
 
 exports.repeatUntilFinish = function(d){return "repita até terminar"};
 
-exports.step = function(d){return "Etapa"};
+exports.step = function(d){return "Passo"};
 
 exports.totalHoney = function(d){return "mel total"};
 
@@ -13456,7 +13489,7 @@ exports.turnLeft = function(d){return "vire à esquerda"};
 
 exports.turnRight = function(d){return "vire à direita"};
 
-exports.turnTooltip = function(d){return "Vire 90 graus à esquerda ou à direita."};
+exports.turnTooltip = function(d){return "Vira 90 graus à esquerda ou à direita."};
 
 exports.uncheckedCloudError = function(d){return "Verifique todas as nuvens para ver se são flores ou colmeias."};
 

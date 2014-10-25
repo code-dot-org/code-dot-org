@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13335,7 +13368,6 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('TEXT')
-        .setCheck('String')
         .appendTitle(msg.setScoreText());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -16437,7 +16469,9 @@ Studio.init = function(config) {
     return el.getBoundingClientRect().width;
   };
 
-  arrangeStartBlocks(config);
+  if (config.level.edit_blocks != 'toolbox_blocks') {
+    arrangeStartBlocks(config);
+  }
 
   config.twitter = twitterOptions;
 
@@ -18673,7 +18707,7 @@ exports.catMath = function(d){return "Matemática"};
 
 exports.catProcedures = function(d){return "Funções"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
 exports.catVariables = function(d){return "Variáveis"};
 
@@ -18751,7 +18785,7 @@ exports.runTooltip = function(d){return "Executa o programa definido pelos bloco
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Mostrar o Código"};
+exports.showCodeHeader = function(d){return "Mostrar o código"};
 
 exports.showGeneratedCode = function(d){return "Mostrar o código"};
 
@@ -18765,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "Este puzzle pode ser resolvido co
 
 exports.tooMuchWork = function(d){return "Fizeste-me ter muito trabalho! Podes tentar repetir menos vezes?"};
 
-exports.toolboxHeader = function(d){return "Blocos"};
+exports.toolboxHeader = function(d){return "blocos"};
 
 exports.openWorkspace = function(d){return "Como funciona"};
 
@@ -18820,7 +18854,7 @@ exports.actor = function(d){return "Ator"};
 
 exports.catActions = function(d){return "Ações"};
 
-exports.catControl = function(d){return "Ciclos"};
+exports.catControl = function(d){return "ciclos"};
 
 exports.catEvents = function(d){return "Eventos"};
 
@@ -18830,15 +18864,15 @@ exports.catMath = function(d){return "Matemática"};
 
 exports.catProcedures = function(d){return "Funções"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
-exports.catVariables = function(d){return "Variáveis"};
+exports.catVariables = function(d){return "variáveis"};
 
 exports.changeScoreTooltip = function(d){return "Adicionar ou remover um ponto à pontuação."};
 
 exports.changeScoreTooltipK1 = function(d){return "Adicionar um ponto à pontuação."};
 
-exports.continue = function(d){return "Continua"};
+exports.continue = function(d){return "Continuar"};
 
 exports.decrementPlayerScore = function(d){return "remover um ponto"};
 
@@ -18846,7 +18880,7 @@ exports.defaultSayText = function(d){return "escrever aqui"};
 
 exports.emotion = function(d){return "humor"};
 
-exports.finalLevel = function(d){return "Parabéns! Resolveste o puzzle final."};
+exports.finalLevel = function(d){return "Parabéns! Resolveste o enigma final."};
 
 exports.hello = function(d){return "olá"};
 
@@ -18856,7 +18890,7 @@ exports.incrementPlayerScore = function(d){return "aumenta um ponto"};
 
 exports.makeProjectileDisappear = function(d){return "desaparecer"};
 
-exports.makeProjectileBounce = function(d){return "saltar"};
+exports.makeProjectileBounce = function(d){return "salto"};
 
 exports.makeProjectileBlueFireball = function(d){return "criar bola de fogo azul"};
 
@@ -18874,7 +18908,7 @@ exports.makeProjectileTooltip = function(d){return "Make the projectile that jus
 
 exports.makeYourOwn = function(d){return "Faz a tua própria história"};
 
-exports.moveDirectionDown = function(d){return "baixo"};
+exports.moveDirectionDown = function(d){return "para baixo"};
 
 exports.moveDirectionLeft = function(d){return "esquerda"};
 
@@ -18926,11 +18960,11 @@ exports.nextLevel = function(d){return "Parabéns! Completaste este puzzle."};
 
 exports.no = function(d){return "Não"};
 
-exports.numBlocksNeeded = function(d){return "Este puzzle pode ser resolvido com blocos de  %1 ."};
+exports.numBlocksNeeded = function(d){return "Este puzzle pode ser resolvido com blocos de %1."};
 
 exports.ouchExclamation = function(d){return "Ouch!"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "toca som de triturar"};
 
 exports.playSoundGoal1 = function(d){return "tocar som do objetivo 1"};
 
@@ -19010,7 +19044,7 @@ exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" b
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "Faça"};
+exports.repeatDo = function(d){return "Executar"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
 

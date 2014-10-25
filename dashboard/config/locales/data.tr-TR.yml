@@ -3,9 +3,9 @@
     script:
       name:
         20-hour:
-          desc: K-8 bilgisayar bilimine giriş dersi
+          desc: Anaokulu-8. sinif bilgisayar bilimi dersi girişi
           Unplug1: 1. Aşama
-          Maze: 2. Aşama
+          Maze: Bölüm 2
           Unplug2: 3. Aşama
           Unplug3: 4. Aşama
           Artist: 5. Aşama
@@ -25,7 +25,7 @@
           Artist5: 19. Aşama
           Unplug11: 20. Aşama
         Hour of Code:
-          desc: Kod Saati
+          desc: Saat Kodu
           Maze: 1. Aşama
         Edit Code:
           desc: Kodu Düzenle (beta)
@@ -34,46 +34,47 @@
           desc: Sıçrama (beta)
           Bounce: 1. Aşama
         Builder Levels:
-          desc: Kullanıcı tarafından oluşturulan bulmacalar (beta)
-          Custom: Bölüm 1
+          desc: Kullanıcı Yapımı Bulmacalar (beta)
+          Custom: 1. Aşama
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: Aşama 1
+          Flappy: 1. Aşama
         Jigsaw Levels:
           desc: Yapboz (beta)
-          Jigsaw: Bölüm 1
+          Jigsaw: 1. Aşama
         Step Levels:
           desc: Labirent (beta)
           MazeStep: Aşama Adımı
         edit-code:
           desc: Kodu Düzenle (beta)
-          MazeEC: Bölüm 1
+          MazeEC: 1. Aşama
+          Webapp: Bölüm 2
         events:
           desc: Sıçrama (beta)
-          Bounce: Bölüm 1
-          Studio: Bölüm 2
+          Bounce: 1. Aşama
+          Studio: 2. Aşama
         builder:
           desc: Kullanıcı Yapımı Bulmacalar (beta)
-          Custom: Bölüm 1
+          Custom: 1. Aşama
         flappy:
           desc: Flappy Bird
-          Flappy: Bölüm 1
+          Flappy: 1. Aşama
         jigsaw:
           desc: Yapboz (beta)
-          Jigsaw: Aşama 1
+          Jigsaw: 1. Aşama
         step:
           desc: Labirent (beta)
           MazeStep: Aşama Adımı
         wordsearch:
           desc: Bilge Arı (beta)
-          WordSearch: Aşama 1
+          WordSearch: 1. Aşama
     game:
       name:
-        Unplug1: Bilgisayar Bilimine Giriş
+        Unplug1: Bilgisayar Bilimlerine Giriş
         Maze: Labirent
         Multi: "Çok Seçimli Şeyler"
-        Unplug2: Bilgisayarımsı Düşünme
-        Unplug3: Grafik kağıdı programlama
+        Unplug2: Sayısal Düşünme
+        Unplug3: Grafikli Kağıdıyla Programlama
         Artist: Sanatçı
         Unplug4: Algoritmalar
         Artist2: Sanatçı 2
@@ -81,21 +82,22 @@
         Farmer: "Çiftçi"
         Unplug6: Koşullar
         Artist3: Sanatçı 3
-        Unplug7: "Şarkı yazma"
+        Unplug7: "Şarkı Yazma"
         Farmer2: "Çiftçi 2"
         Unplug8: Soyutlama
         Artist4: Sanatçı 4
-        Unplug9: Röle programlama
+        Unplug9: Röle Programlama
         Farmer3: "Çiftçi 3"
         Unplug10: "İnternet"
         Artist5: Sanatçı 5
         Unplug11: "Özet"
         MazeEC: Labirent
-        Bounce: Bounce
+        Bounce: Sıçrama
         Flappy: Flappy Bird
         Jigsaw: Yapboz
         MazeStep: Labirent Adım Modu
         Wordsearch: Kelime arama
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Bronz
@@ -104,11 +106,11 @@
     concept:
       description:
         sequence: Sıra
-        if: Eğer bloğu
+        if: if bloğu
         if_else: Eğer-değilse bloğu
         loop_times: Bloğu tekrarlayın
-        loop_until: "-e kadar bloğu tekrarla"
-        loop_while: Blok ise
+        loop_until: Blok kadar tekrarlayın
+        loop_while: while bloğu
         loop_for: Sayaç bloğu
         function: Fonksiyonlar
         parameters: Fonksiyon parametreleri
@@ -300,19 +302,20 @@
         turtle_3_3: 'Kediler etrafında üçgen şeklinde bir çit ve ineğin etrafında
           ise kare şeklinde bir çit oluşturun. İpucu: komutları oluşturdukça doğruluğunu
           kontrol edin.'
-        turtle_3_4: See if you can figure out how to use "draw a square" and "draw
-          a triangle" (and some other blocks) to draw a house around the lion.
-        turtle_3_5: 'Now create a new "draw a house" function and use it to house
-          two cats. Hint: create a new function using the "do something" block, and
-          type your own text to name the block.'
-        turtle_3_6: 'Using "draw a square" as an example, add an input named "length"
-          to "draw a triangle". Then, draw triangles in different sizes. (Hint: click
-          the star to add an input to a function)'
-        turtle_3_7: Add an input named "length" to "draw a house" and build a big
-          house for the elephant (with edges 150 pixels long)
-        turtle_3_8: Here are all of the blocks from the previous puzzle.  Modify "draw
-          a house" so I end up at the bottom right corner after drawing a new house.
-          Use this modified function to draw three houses.
+        turtle_3_4: Aslanın çevresinde bir ev çizmek için "kare çiz" ve "üçgen çiz"
+          (ve diğer blokları) nasıl kullanacağını bulabilecek misin?
+        turtle_3_5: 'Şimdi, iki kediyi ev içine alan yeni bir "Ev Çiz" fonksiyonu
+          oluşturun. İpucu: "Bir şey yap" bloğunu kullanın ve fonksiyona kendiniz
+          bir isim verin (örn:"Ev Çiz").'
+        turtle_3_6: '"Kare çiz" fonksiyonunu örnek alarak, "Üçgen Çiz" fonksiyonuna
+          "uzunluk" adında bir giriş ekleyin. Sonra, bu yeni fonksiyonu kullanarak
+          farklı boyutlarda üçgenler çizin. (İpucu: Fonksiyona girdi eklemek için
+          yıldız simgesine tıklayın.)'
+        turtle_3_7: '"Ev çiz" fonksiyonuna "uzunluk" adında yeni bir girdi ekleyin
+          ve fil için yeterince büyük bir ev çizin (kenarları 150 piksel uzunluğunda)'
+        turtle_3_8: işte bir önceki  bulmacanın tüm blokları. "Ev çiz" fonksiyonunu
+          çizimi evin sağ alt köşesinde bitirebilmem için değiştirin.  Sonra bu yeni
+          fonksiyonu kullanarak 3 ev çizin.
         turtle_3_9: '"Ev çiz" fonksiyonunu yardım almadan yeniden yapabilir misin?
           Bir dene ve bir dizi ev çiz.'
         turtle_3_10: "Çok şey öğrendiz! Şimdi istediklerinizi çizebilirsiniz. Yıldız,
@@ -334,16 +337,16 @@
           arındırabilir misin?
         maze_karel_debug_function_3: 'Tüm yığınları kaldırabilmem için programı düzenle. '
         turtle_5_1: Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler
-          yapın. Nasıl çalıştığını tahmin edebiliyor musunuz? (Ya da silin ve tamamen
+          yapın. Nasıl çalıştığını tahmin edebiliyor musun? (Ya da silin ve tamamen
           farklı bir şey ile değiştirin)
         turtle_5_2: Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler
-          yapın. Nasıl çalıştığını tahmin edebiliyor musunuz? (Ya da silin ve tamamen
+          yapın. Nasıl çalıştığını tahmin edebiliyor musun? (Ya da silin ve tamamen
           farklı bir şey ile değiştirin)
         turtle_5_3: Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler
-          yapın. Nasıl çalıştığını tahmin edebiliyor musunuz? (Ya da silin ve tamamen
+          yapın. Nasıl çalıştığını tahmin edebiliyor musun? (Ya da silin ve tamamen
           farklı bir şey ile değiştirin)
         turtle_5_4: Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler
-          yapın. Nasıl çalıştığını tahmin edebiliyor musunuz? (Ya da silin ve tamamen
+          yapın. Nasıl çalıştığını tahmin edebiliyor musun? (Ya da silin ve tamamen
           farklı bir şey ile değiştirin)
         turtle_5_5: Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler
           yapın. Nasıl çalıştığını tahmin edebiliyor musun? (Ya da silin ve tamamen
@@ -356,73 +359,76 @@
         maze_3_2: Bana bir program yaz, böylece domuza giden tüm yolları yapabileyim.
         maze_3_3: Domuzu nasıl alabilirim? TNT kutusuna doğru gitmediğimden emin olun!
         maze_3_4: Ahh! Beni TNT ve domuz çevresine alan bir program yazın.
-        bounce_1: Attach a block to the "when left arrow" block, then run and move
-          the paddle with the left arrow key to the finish target.
-        bounce_2: Attach a block to the "when right arrow" and "when left arrow" blocks,
-          then run and move the paddle with the both arrow key to both finish targets.
-        bounce_3: TBD
-        bounce_4: TBD
-        bounce_5: Attach a blocks to the "when right arrow", "when left arrow", "when
-          ball hits wall", and "when ball hits paddle" blocks.
-        bounce_6: Try again with more balls.
+        bounce_1: '"sol ok tıklandığında" komutuna blok ekleyin ve çalıştırın. Sol
+          ok tuşunu kullanarak hedefi sola doğru hareket ettirip bitirmeye çalışın.'
+        bounce_2: '"sol ok tıklandığında" ve "sağ ok tıklandığında" komutlarına bloklar
+          ilave edin. Hedefi hareket ettirip bölümü bitirin.'
+        bounce_3: '"yukarı oka basıldığında" raketi yukarı hedefe taşıyan kodu yazın.'
+        bounce_4: Bu sefer 4 tane blok eklemeniz gerek. Bölümü bitirmek için raketi
+          4 hedefe de ulaştırın.
+        bounce_5: Rakete doğru topu göndereceğiz.  "top rakete vurduğunda" bloğuna
+          gerekli eklemeyi yaparak topun hedefi vurmasını sağlayınız.
+        bounce_6: Bu sefer hedef üst tarafta. "top duvara çarptığında" bloklarının
+          ikisine ekleme yaparak bulmacayı çözmek zorundasın.
         bounce_7: Now it is getting crazy!
-        bounce_10: There is a now a goal at the top. Attach "increment score" blocks
-          to the the "when ball in goal" and "when ball misses paddle" blocks to make
-          a game.
-        bounce_11: You can now attach blocks to the "when run" block. Try changing
-          the speed of the paddle and the ball and see how many points you can score
-          before your opponent scores twice.
-        bounce_12: Create your own Bounce game. You can change all the visuals and
-          the rules. When you're done, click Share to let friends try your game on
-          their phones.
-        Custom_builder: Drag blocks from the toolbox to the workspace to draw the
-          level you wish to create. Press "Run Program" when you are ready.
-        flappy_1: Attach a block to the "when click" block, then press "Run Program"
-          and click or tap to move Flappy to the target.
-        flappy_2: Now we've added some ground.  Attach a block to the "when hit the
-          ground" block, then press "Run Program". To pass this puzzle, your code
-          needs to 'END GAME' when Flappy crashes into the ground.
-        flappy_3: The "when Run is clicked" block allows you to run code when your
-          game first starts.  Try setting the level speed and flapping to the target.
-        flappy_4: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. To pass the
-          puzzle, your code needs to 'END GAME' and make Flappy crash into the first
-          pipe so he can reach the target.
-        flappy_5: Let's add a scoreboard, and count points when Flappy makes it past
-          obstacles. Add to the "when pass an obstacle" block, and then score a point
-          by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either
-          a smaller or larger amount.
-        flappy_7: Next, try changing the scene by attaching another block to the "when
-          Run is clicked".
-        flappy_8: You can set visuals anytime, not just when the game starts. Try
-          setting a RANDOM scene when other events happen, for example, when passing
-          an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead
-          of ending the game try setting the score back to 0.
-        flappy_11: Create your own Flappy game and share it. You can change the visuals,
-          or even the rules. Try changing visuals each time Flappy passes an obstacle.
-          Or make Flappy invincible so he never dies.
-        flappy_k1_1: Play Flappy
-        flappy_k1_2: Attach a block to the "when click" block, then press "Run". Click
-          or tap the screen to move Flappy to the target.
-        flappy_k1_3: Now we've added some ground.  Attach a block to the "when hit
-          the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_k1_4: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_k1_5: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_k1_6: Let's add a scoreboard, and count points when Flappy makes it
-          past obstacles. Add to the "when pass an obstacle" block, and then score
-          a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: Next, try changing the scene by attaching another block to the
-          "when run" block.
-        flappy_k1_9: Try changing the player by attaching a "set player" block to
-          the "when run" block.
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
+        bounce_10: Şimdi yukarıda bir kale var. Oyun oluşturmak için "Puan yaz" ve
+          "Rakibe puan yaz" bloklarını "top gol olduğunda" ve "top raketi ıskaladığında"  bloklarına
+          ekle. Bakalım rakibin 2 kere sayı almadan önce sen ne kadar sayı yapabileceksin.
+        bounce_11: Şimdi "çalıştığı zaman" bloğuna ekleme yapabilirsin. "Yeni top
+          fırlat"  bloğunu birden fazla yerde kullanmalısın. Birde, arkaplanı, raket
+          ve top hızını değiştirip, rakibin 2 puan almadan önce kaç puan alabileceksin
+          görelim.
+        bounce_12: Kendi zıplama oyununu oluştur. Tüm görünümü ve kuralları değiştirebilirsin.
+          Bitirdiğinde, "BİTİR" düğmesine tıklayıp, arkadaşlarının oyununu telefonlarında
+          denemelerine izin ver.
+        Custom_builder: İstediğin seviyeyi çizmek için araç kutusundan blokları çalışma
+          alanına sürükle. Hazır olduğunda "Çalıştır" a bas.
+        flappy_1: '"Tıklandığında" bloğuna ilave blok ekle sonra "Çalıştır" düğmesine
+          bas. Flappy yi hedefe hareket ettirmek için ekrana dokun veya tıklat.'
+        flappy_2: Şimdi biraz zemin ekledik. Flappy yere çarptığında oyunun sonlanması
+          için gerekli kodu "zemine çarptığında" bloğuna ilave edin.
+        flappy_3: '"Çalıştığında" bloğu oyun başladığında kodlarınızın çalışmasını
+          sağlar. Seviye hızını ayarlamayı ve hedefe doğru kanat çırpmayı deneyin.'
+        flappy_4: Flappy, siz çarpışma için kod yazmadığınız sürece engellerin içinden
+          uçacaktır. "bir engele çarptığı zaman"  bloğuna ekleme yapınız. Oyununuzun
+          bitmesi için ilk borulara çarptığında "oyunu bitir" bloğunu kullanmanız
+          gerekmekte.
+        flappy_5: Bir sayı tahtası yapalım ve Flappy bir engeli aştığında "puan kazan"sın.
+          "engel geçildiği zaman" bloğuna gerekli eklemeyi yapın ve ilk boruları geçince
+          Flappy puan kazansın.
+        flappy_6: Bakalım Flappy kısa veya uzun kanat çırpışlarında  puan kazanabilecek
+          misin.
+        flappy_7: Bir sonraki sefere, "Çalıştığında" bloğuna gerekli eklemeyi yapıp
+          manzarayı değiştirmeyi dene.
+        flappy_8: Görünümleri sadece oyun başlarken değil, isteğin an değiştirebilirsin.
+          Diğer olaylar olduğunda rastgele görünümler ayarlamaya çalış. mesela bir
+          engeli geçince.
+        flappy_9: Bir engele veya yere çarptığında oyunu sonlandırmak yerine skoru
+          0 yapmayı deneyin.
+        flappy_11: Kendi Flappy oyununuzu oluşturun. Tüm görünümü ve kuralları hatta
+          yer çekimini değiştirebilirsiniz. Bitirdiğinizde, "BİTİR" düğmesine tıklayıp,
+          arkadaşlarınızın oyununuzu telefonlarında denemelerine izin verin.
+        flappy_k1_1: Flappy Oyna
+        flappy_k1_2: '"Tıklandığında" bloğuna ilave blok ekle sonra "Çalıştır" düğmesine
+          bas. Flappy yi hedefe hareket ettirmek için ekrana dokun veya tıklat.'
+        flappy_k1_3: Şimdi biraz zemin ekledik. Flappy yere çarptığında oyunun sonlanması
+          için gerekli kodu "zemine çarptığında" bloğuna ilave edin.
+        flappy_k1_4: '"Çalıştığında" bloğu oyun başladığında kodlarınızın çalışmasını
+          sağlar. Seviye hızını ayarlamayı ve hedefe doğru kanat çırpmayı deneyin.'
+        flappy_k1_5: Flappy, siz çarpışma için kod yazmadığınız sürece engellerin
+          içinden uçacaktır. "bir engele çarptığı zaman"  bloğuna ekleme yapınız.
+          Oyununuzun bitmesi için ilk borulara çarptığında "oyunu bitir" bloğunu kullanmanız
+          gerekmekte.
+        flappy_k1_6: Bir sayı tahtası yapalım ve Flappy bir engeli aştığında "puan
+          kazan"sın. "engel geçildiği zaman" bloğuna gerekli eklemeyi yapın ve ilk
+          boruları geçince Flappy puan kazansın.
+        flappy_k1_7: Engelleri geçtiğinde çoklu puan yapabilecek misin?
+        flappy_k1_8: Bir sonraki sefere, "Çalıştığında" bloğuna gerekli eklemeyi yapıp
+          manzarayı değiştirmeyi dene.
+        flappy_k1_9: '"oyuncu ayarla" (ya da "aktör ayarla") bloğunu kullanarak "koştuğunda"
+          bloğuna ekleme yaparak oyuncuyu değiştirmeyi dene.'
+        jigsaw_1: Bloğu tıklayın
+        jigsaw_2: Bloğu hedefe sürükle
         jigsaw_3: "Şekli oluşturacak biçimde blokları düzenleyin"
         jigsaw_4: "Şekli oluşturacak biçimde blokları düzenleyin"
         jigsaw_5: "Şekli oluşturacak biçimde blokları düzenleyin"
@@ -433,101 +439,122 @@
         jigsaw_10: "Şekli oluşturacak biçimde blokları düzenleyin"
         jigsaw_11: "Şekli oluşturacak biçimde blokları düzenleyin"
         jigsaw_12: "Şekli oluşturacak biçimde blokları düzenleyin"
-        jigsaw_13: Fix the puzzle!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
-        studio_c2_1: Can you make this dog say "hello world"?
-        studio_c2_2: Can you make the dog say something and then have the cat say
-          something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: Can you write a program that makes the dog move to the cat, and
-          have the cat say "hello" when the dog reaches him?
-        studio_c2_5: Can you write a program to make the octopus say "hello" when
-          it is clicked?
-        studio_c2_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
-        studio_c2_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c2_8: Can you have the penguin say "Ouch!" and play a "hit" sound if
-          he runs into the dinosaur, and then move him with the arrows to make that
-          happen?
-        studio_c2_9: Can you add a block to score a point when the penguin runs into
-          the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of
-          the penguin, and then move him with the arrows until you score?
-        studio_c2_11: Create your own story. When you're done, click Finish to let
-          friends try your story on their phones.
-        studio_c3_story_1: Can you make this dog say "hello world"?
-        studio_c3_story_2: Can you make the dog say something and then have the cat
-          say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: Can you write a program that makes the dog move to the
-          cat, and have the cat say "hello" when the dog reaches him?
-        studio_c3_story_5: Can you add a block to make the octopus happy?
-        studio_c3_story_6: Create your own story. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_c3_game_1: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_c3_game_2: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c3_game_4: Can you have the penguin say "Ouch!" and play a "hit" sound
-          if he runs into the dinosaur, and then move him with the arrows to make
-          that happen?
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
-        studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_playlab_1: Can you make this dog say "hello world"?
-        studio_playlab_2: Can you make the dog say something and then have the cat
-          say something afterwards?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: Can you write a program that makes the dog move to the cat,
-          and have the cat say "hello" when the dog reaches him?
-        studio_playlab_5: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_playlab_6: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_playlab_8: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
-        studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your story on their phones.
-        studio_k1_1: Can you make this dog say "hello world"?
-        studio_k1_2: Can you make the dog say something and then have the cat say
-          something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the target?
-        studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
-          gets there.
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
-          the word STORY
+        jigsaw_13: Bulmacayı düzelt!
+        mazestep_1: Labirent adım tanımları
+        mazestep_2: Labirent adım tanımları
+        mazestep_3: Labirent adım tanımları
+        mazestep_4: Labirent adım tanımları
+        mazestep_5: Labirent adım tanımları
+        studio_c2_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
+        studio_c2_2: Köpek bir şey söylesin sonra da kedi bir şey söylesin. Yapabilir
+          misin?
+        studio_c2_3: Köpeği kediye doğru hareket ettiren bir program yazabilir misin?
+        studio_c2_4: Köpeği kediye doğru hareket ettirin, sonra köpek kedinin yanına
+          geldiğinde kedinin "Merhaba" demesini sağlayan programı yazabilir misin?
+        studio_c2_5: Ahtapotun tıklandığında "merhaba" demesini sağlayan program yazabilir
+          misin?
+        studio_c2_6: Yukarı / Aşağı / Sol / Sağ tuşlarını kullanarak pengueni etrafta
+          hareket ettirip bütün bayraklara dokunmasını sağlayan programı yazabilir
+          misin?
+        studio_c2_7: '"Sonsuza kadar tekrarla" bloğu kodunuzun sürekli çalışmasına
+          imkan sağlar.  Dinozorun  yukarı ve aşağı sürekli olarak hareket etmesini
+          sağlayan blokları ekleyebilir misin?'
+        studio_c2_8: Pengueni, ok tuşları ile etrafta hareket ettiren kodları yazın.
+          Dinozora çarpınca da "Ouch!" deyip "çarpma" sesi çıkarmasını sağlayın.
+        studio_c2_9: Pengueni oklarla hareket ettirip sayı almasını ve ahtapota değince
+          sayı almasını sağlayacak bloğu ekleyebilir misin?
+        studio_c2_10: Pengueni oklarla hareket ettirip sayı almasını ve arkaplan ile
+          penguenin hızını değiştirmesini sağlayacak bloğu ekleyebilir misin?
+        studio_c2_11: Kendi hikayeni oluşturabilir misin? Bitirdiğinde "Bitir" düğmesine
+          bas, hikayeni arkadaşlarının telefonlarında denemelerine izin ver.
+        studio_c3_story_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
+        studio_c3_story_2: Köpeğin bir şeyler demesini sonra da kedinin bir şeyler
+          demesini sağlayabilir misin?
+        studio_c3_story_3: Köpeği kediye doğru hareket ettiren bir program yazabilir
+          misin?
+        studio_c3_story_4: Köpeği kediye doğru hareket ettirin, sonra köpek kedinin
+          yanına geldiğinde kedinin "Merhaba" demesini sağlayan programı yazabilir
+          misin?
+        studio_c3_story_5: Ahtapotu mutlu edecek bloğu ekleyebilir misin?
+        studio_c3_story_6: Kendi istediğiniz oyununuzu oluşturun. Bitirdiğinizde,
+          "BİTİR" düğmesine tıklayıp arkadaşlarınızın oyunu telefonlarında denemeleri
+          için (Facebook veya Twitter da) hikayenizi paylaşın.
+        studio_c3_game_1: Ahtapotun tıklandığında "merhaba" demesini sağlayan programı
+          yazabilir misin?
+        studio_c3_game_2: Yukarı / Aşağı / Sol / Sağ tuşlarını kullanarak pengueni
+          etrafta hareket ettirip bütün bayraklara dokunmasını sağlayan programı yazabilir
+          misin?
+        studio_c3_game_3: '"Sonsuza kadar tekrarla" bloğu kodunuzun sürekli çalışmasına
+          imkan sağlar.  Dinozorun  yukarı ve aşağı sürekli olarak hareket etmesini
+          sağlayan blokları ekleyebilir misin?'
+        studio_c3_game_4: Pengueni, ok tuşları ile etrafta hareket ettiren kodları
+          yazın. Dinozora çarpınca da "Ouch!" deyip "çarpma" sesi çıkarmasını sağlayın.
+        studio_c3_game_5: Pengueni, ok tuşları ile etrafta hareket ettirip, ahtapota
+          çarpınca "skor puanı" ekleyen bloğu ekleyebilir misin?
+        studio_c3_game_6: Arkaplanı ve penguenin hızını değiştiren, skor yapana kadar
+          pengueni etrafta hareket ettiren  blokları ekleyebilir misin?
+        studio_c3_game_7: Kendi istediğiniz oyununuzu oluşturun. Bitirdiğinizde, "BİTİR"
+          düğmesine tıklayıp arkadaşlarınızın oyunu denemeleri için Facebook veya
+          Twitter da hikayenizi paylaşın.
+        studio_playlab_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
+        studio_playlab_2: "Önce köpeğin bir şeyler söylemesini sonra da kedinin bir
+          şeyler söylemesini sağlayabilir misin?"
+        studio_playlab_3: Köpeği, kediye doğru hareket ettiren bir program yazabilir
+          misin?
+        studio_playlab_4: Köpeği kediye doğru hareket ettirin, sonra köpek kedinin
+          yanına geldiğinde kedinin "Merhaba" demesini sağlayan programı yazabilir
+          misin?
+        studio_playlab_5: Ahtapotun tıklandığında "merhaba" demesini sağlayan program
+          yazabilir misin?
+        studio_playlab_6: Yukarı / Aşağı / Sol / Sağ tuşlarını kullanarak pengueni
+          etrafta hareket ettirip bütün bayraklara dokunmasını sağlayan programı yazabilir
+          misin?
+        studio_playlab_7: '"Sonsuza kadar tekrarla" bloğu kodunuzun sürekli çalışmasına
+          imkan sağlar.  Dinozorun  yukarı ve aşağı sürekli olarak hareket etmesini
+          sağlayan blokları ekleyebilir misin?'
+        studio_playlab_8: Pengueni etrafta hareket ettirip (ok tuşları ile); penguen
+          ahtapota dokunduğunda skor puanı yaptırabilir misin?
+        studio_playlab_9: Pengueni etrafta hareket ettirip (ok tuşları ile); arkaplanı
+          ve penguenin hızını değiştiren blokları ekleyebilir misin?
+        studio_playlab_10: Kendi istediğiniz oyununuzu oluşturun. Bitirdiğinizde,
+          "BİTİR" düğmesine tıklayıp arkadaşlarınızın oyunu denemeleri için Facebook
+          veya Twitter da hikayenizi paylaşın.
+        studio_full_sandbox: Kendi istediğiniz oyununuzu oluşturun. Bitirdiğinizde,
+          "BİTİR" düğmesine tıklayıp arkadaşlarınızın oyunu denemeleri için Facebook
+          veya Twitter da hikayenizi paylaşın.
+        studio_k1_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
+        studio_k1_2: Köpeğin bir şeyler demesini sonra da kedinin bir şeyler demesini
+          sağlayabilir misin?
+        studio_k1_3: Köpeği kediye doğru hareket ettiren bir program yazabilir misin?
+        studio_k1_4: Köpeği, kedinin yanına taşıyın ve kedinin "merhaba" demesini
+          sağlayın.
+        studio_k1_5: Ahtapotu mutlu edecek bloğu ekleyebilir misin?
+        studio_k1_6: Kendi hikayenizi oluşturun. Kedi ve köpeği etrafta dolaştırıp
+          bir şeyler demesini sağlayın.
+        maze_wordsearch_k_1: Beni EAST kelimesini oluşturacak şekilde harf harf sırayla
+          hareket ettir
+        maze_wordsearch_k_2: Beni SOUTH kelimesini oluşturacak şekilde harf harf sırayla
+          hareket ettir
+        maze_wordsearch_k_3: Beni WEST kelimesini oluşturacak şekilde harf harf sırayla
+          hareket ettir
+        maze_wordsearch_k_4: Beni NORTH kelimesini oluşturacak şekilde harf harf sırayla
+          hareket ettir
+        maze_wordsearch_k_6: Beni JUMP kelimesini oluşturacak şekilde SAĞ ve AŞAĞI
+          hareket ettir
+        maze_wordsearch_k_9: Beni CODE kelimesini oluşturacak şekilde bir yöne, sonra
+          diğer yöne hareket ettir
+        maze_wordsearch_k_13: Beni DEBUG kelimesini oluşturacak şekilde bir yöne,
+          sonra diğer yöne hareket ettir
+        maze_wordsearch_k_15: Beni ABOVE kelimesini oluşturacak şekilde bir yöne,
+          sonra diğer yöne hareket ettir
+        maze_wordsearch_k_16: Beni BELOW kelimesini oluşturacak şekilde bir yöne,
+          sonra diğer yöne hareket ettir
+        maze_wordsearch_k_20: Bu bir test! Beni STORY kelimesini oluşturacak şekilde
+          bir yöne, sonra diğer yöne hareket ettir
     video:
       name:
-        maze_intro: Labirent girişi
-        artist_intro: Sanatçı girişi
+        maze_intro: 'Labirent: Tanıtım'
+        artist_intro: 'Ressam: Giriş'
         farmer_intro: "Çiftçi girişi"
         flappy_intro: Flappy Tanıtım
         loop_times: Bloğu tekrarlayın
@@ -540,9 +567,9 @@
         parameters: Fonksiyon parametreleri
         hoc_wrapup: Kod saatini tamamla
         20_wrapup: 20 saati tamamla
-        Unplug1: What is CS?
-        Unplug2: Bilgisayarımsı Düşünme
-        Unplug3: Grafik kağıdı programlama
+        Unplug1: CS nedir?
+        Unplug2: Sayısal Düşünme
+        Unplug3: Grafikli Kağıdıyla Programlama
         Unplug4: Algoritmalar
         Unplug5: Fonksiyonlar
         Unplug6: Koşullar
@@ -566,20 +593,20 @@
         C1_maze_loops: Labirent Döngüleri
         C1_playlab_storytelling: Laboratuvar Oyna - Bir Hikaye Oluştur
         C1_planting_seed: Tohum Ekme
-        C1_building_foundating: Temel Atma
+        C1_building_foundating: Bir Temel Oluşturma
         C2_maze_intro: 'Labirent: Tanıtım'
-        C2_artist_intro: 'Ressam: Tanıtım'
+        C2_artist_intro: 'Ressam: Giriş'
         C2_zuck_repeat_loop: Labirent Döngüleri
         C2_artist_loops: Aktör Döngüleri
         C2_bee_conditionals: Arı Koşullandırmaları
         C2_playlab_createstory: Laboratuvar Oyna - Bir Hikaye Oluştur
-        C2_graph_paper: Grafik kağıdı programlama
+        C2_graph_paper: Grafikli Kağıdıyla Programlama
         C2_conditionals_with_cards: Koşullar
         C2_binary_bracelets: "İkilik Bileklikler"
-        C2_replay_programming: Röle programlama
+        C2_replay_programming: Röle Programlama
         C2_paper_airplanes: Kağıt Uçaklar
-        C3_maze_intro: Labirent girişi
-        C3_artist_intro: Sanatçı girişi
+        C3_maze_intro: 'Labirent: Tanıtım'
+        C3_artist_intro: 'Ressam: Giriş'
         C3_artist_functions: Aktör Fonksiyonları
         C3_bee_functions: Arı Fonksiyonları
         C3_bee_conditionals: Arı Koşullandırmaları
@@ -588,9 +615,9 @@
         C3_farmer_while: While(...durumunda) Döngüleri
         C3_bee_nested_loops: "İç İçe Döngüler"
         C3_bee_debugging: Arı Ayıklama
-        C3_bounce: Bounce
-        C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: Bilgisayarımsı Düşünme
+        C3_bounce: Sıçrama
+        C3_playlab_create_game: 'Oyun Laboratuvarı: Bir Oyun Oluştur'
+        C3_computational_thinking: Sayısal Düşünme
         C3_dice_race: Zar Yarışı
         C3_internet: "İnternet"
         C3_crowdsourcing: Kalabalık Kaynaklandırma 'Crowdsourcing'
@@ -598,17 +625,19 @@
         C3_songwriting_with_parameters: Değiştirgenlerle Şarkı Yazma
     callout:
       text:
-        drag_blocks: Drag a "move" block and snap it below the other block
-        run: Hit "Run" to try your program
-        watch_again: Click here to watch the video again
-        gray_block_explanation: Blocks that are grey can't be moved or deleted. Can
-          you solve the puzzle anyway?
-        show_code_explanation: Click here to see the code for the program you're making
-        instructions_repeat_explanation: The instructions for each puzzle are repeated
-          here
-        category_explanation: You have all the same blocks but they've now been arranged
-          in categories
+        drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
+        run: Programınızı denemek için "Çalıştır" düğmesine basın
+        watch_again: Videoyu tekrar izlemek için burayı tıklayın
+        gray_block_explanation: Gri bloklar silinemezler. Yine de bulmacayı çözebildiniz
+          mi?
+        show_code_explanation: Hazırladığınız programın kodlarını görmek için buraya
+          tıklayın
+        instructions_repeat_explanation: Her bulmaca için gerekli talimatlar burada
+          tekrarlanır
+        category_explanation: Aynı bloklara sahipsin fakat şimdi kategorik olarak
+          sıralandılar.
         set_sprite_image: Attach a "set actor to image" block to the "when story starts"
           block to enable an actor for this story
-        studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
+        studio_say_text: Karakterinin ne söylemesini istiyorsan tırnak işaretleri
+          arasına yaz
+        jigsaw_click: Bu bloğu tıklayın!

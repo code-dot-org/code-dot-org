@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -9631,11 +9664,6 @@ Turtle.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
 
-  // Enable blockly param editing in levelbuilder, regardless of level setting
-  if (config.level.edit_blocks) {
-    config.disableParamEditing = false;
-  }
-
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
 
@@ -10638,9 +10666,9 @@ exports.catLogic = function(d){return "Logické"};
 
 exports.catLists = function(d){return "Zoznamy"};
 
-exports.catLoops = function(d){return "Slučky"};
+exports.catLoops = function(d){return "Cykly"};
 
-exports.catMath = function(d){return "Matematické"};
+exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkcie"};
 
@@ -10682,11 +10710,11 @@ exports.generatedCodeInfo = function(d){return "Dokonca aj popredné univerzity 
 
 exports.hashError = function(d){return "Prepáčte, '%1' nezodpovedá žiadnemu uloženému programu."};
 
-exports.help = function(d){return "pomoc"};
+exports.help = function(d){return "Pomoc"};
 
 exports.hintTitle = function(d){return "Tip:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "skoč"};
 
 exports.levelIncompleteError = function(d){return "Používate všetky potrebné typy blokov, ale nie tým správnym spôsobom."};
 
@@ -10801,17 +10829,17 @@ exports.branches = function(d){return "konáre"};
 
 exports.catColour = function(d){return "Farba"};
 
-exports.catControl = function(d){return "Cykly"};
+exports.catControl = function(d){return "Opakovania"};
 
 exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkcie"};
 
-exports.catTurtle = function(d){return "Akcie"};
+exports.catTurtle = function(d){return "Úlohy"};
 
 exports.catVariables = function(d){return "Premenné"};
 
-exports.catLogic = function(d){return "Logické"};
+exports.catLogic = function(d){return "Logika"};
 
 exports.colourTooltip = function(d){return "Zmení farbu pera."};
 
@@ -10819,7 +10847,7 @@ exports.degrees = function(d){return "stupňov"};
 
 exports.depth = function(d){return "hĺbka"};
 
-exports.dots = function(d){return "pixelov"};
+exports.dots = function(d){return "pixely"};
 
 exports.drawASquare = function(d){return "nakresli štvorec"};
 
@@ -10905,13 +10933,13 @@ exports.penTooltip = function(d){return "Posúva pero hore, alebo dole, aby zač
 
 exports.penUp = function(d){return "pero hore"};
 
-exports.reinfFeedbackMsg = function(d){return "Vyzerá to ako ste chceli? Môžete stlačiť tlačidlo \"skúsiť znova\" aby ste videli Vašu kresbu."};
+exports.reinfFeedbackMsg = function(d){return "Vyzerá to tak ako ste chceli? Môžete stlačiť tlačidlo \"skús znova\" aby ste videli Vašu kresbu."};
 
 exports.setColour = function(d){return "nastaviť farbu"};
 
 exports.setWidth = function(d){return "nastaviť šírku"};
 
-exports.shareDrawing = function(d){return "Zdielať Vašu kresbu:"};
+exports.shareDrawing = function(d){return "Zdieľajte Vašu kresbu:"};
 
 exports.showMe = function(d){return "Ukáž mi"};
 

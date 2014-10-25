@@ -1,6 +1,6 @@
 * * *
 
-Titlu: premii aspect: wide
+title: Premii layout: wide
 
 * * *
 
@@ -14,7 +14,7 @@ Fiecare educator sau profesor, care găzduieşte o Oră de Programare pentru ele
 
 ## Clasele norocoase vor câştiga un video chat cu un vorbitor invitat!
 
-20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Studenţii dumneavoastră vor putea pune întrebări şi discuta cu liderii industriei de tehnologie. [Urmarește sesiunile anului trecut](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) cu Bill Gates, fondatorul Twitter Jack Dorsey, Susan Wojcicki Google şi Gabe Newell de la Valve.
+20 săli de clasă norocoase vor fi invitate să se alăture unui video chat pentru a sărbători Hour of Code în decembrie 8-14. Studenţii dumneavoastră vor putea pune întrebări şi discuta cu liderii industriei de tehnologie. [Urmarește sesiunile anului trecut](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) cu Bill Gates, fondatorul Twitter Jack Dorsey, Susan Wojcicki Google şi Gabe Newell de la Valve.
 
 <% end %>
 
@@ -22,15 +22,15 @@ Fiecare educator sau profesor, care găzduieşte o Oră de Programare pentru ele
 
 ## Clasele norocoase vor câştiga un video chat cu un vorbitor invitat!
 
-50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Studenţii dumneavoastră vor putea pune întrebări şi discuta cu liderii industriei de tehnologie. [Urmarește sesiunile anului trecut](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) cu Bill Gates, fondatorul Twitter Jack Dorsey, Susan Wojcicki Google şi Gabe Newell de la Valve.
+20 săli de clasă norocoase vor fi invitate să se alăture unui video chat pentru a sărbători Hour of Code în decembrie 8-14. Studenţii dumneavoastră vor putea pune întrebări şi discuta cu liderii industriei de tehnologie. [Urmarește sesiunile anului trecut](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) cu Bill Gates, fondatorul Twitter Jack Dorsey, Susan Wojcicki Google şi Gabe Newell de la Valve.
 
-## Lucky schools win a class-set of laptops (or $10,000 for other technology)
+## Școlile norocoase câstigă un set de laptop-uri (sau 10000 dolari pentru alte tehnologii)
 
-One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
+O şcoală de norocoasă în ***fiecare*** stat al SUA (+ Washington D.C.) va câştiga tehnologie în valoare de 10.000 dolari. Organizați Hour of Code pentru intreaga scoala pentru a vă califica. Completaţi formularul de mai jos pentru înscriere.
 
-## Hardware Prize application form:
+## Formular de înscriere pentru premiu hardware:
 
-If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
+Dacă aţi înscris întreaga dumneavoastră şcoală să participe la Hour of Code, participaţi pentru a câştiga un set de laptop-uri (sau 10000 dolari pentru alte tehnologii) pentru şcoala dumneavoastră! Doar un singur profesor trebuie să aplice pentru întreaga şcoală.
 
 <%= view :hardware_prizes_form %>
 
@@ -40,6 +40,6 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 <% end %>
 
-## More questions about prizes?
+## Mai multe întrebări despre premii?
 
-Check out [Terms and Conditions](/prizes-terms) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+Verificaţi [Termenii şi Condiţiile](/prizes-terms) sau vizitaţi forumul nostru pentru a vizualiza [Întrebări frecvente](http://support.code.org) şi puneți întrebări.

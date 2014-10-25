@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13335,7 +13368,6 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('TEXT')
-        .setCheck('String')
         .appendTitle(msg.setScoreText());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -16437,7 +16469,9 @@ Studio.init = function(config) {
     return el.getBoundingClientRect().width;
   };
 
-  arrangeStartBlocks(config);
+  if (config.level.edit_blocks != 'toolbox_blocks') {
+    arrangeStartBlocks(config);
+  }
 
   config.twitter = twitterOptions;
 
@@ -18659,7 +18693,7 @@ exports.and = function(d){return "và"};
 
 exports.blocklyMessage = function(d){return "Mảnh ghép"};
 
-exports.catActions = function(d){return "hành động"};
+exports.catActions = function(d){return "Các hành động"};
 
 exports.catColour = function(d){return "màu sắc"};
 
@@ -18669,7 +18703,7 @@ exports.catLists = function(d){return "Danh sách"};
 
 exports.catLoops = function(d){return "Vòng lặp"};
 
-exports.catMath = function(d){return "Thuật toán"};
+exports.catMath = function(d){return "thuật toán"};
 
 exports.catProcedures = function(d){return "Các hàm"};
 
@@ -18765,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "Câu đố này có thể đượ
 
 exports.tooMuchWork = function(d){return "Bạn làm tôi phải làm quá nhiều việc! Bạn làm ơn thử làm cho nó ít hơn được không?"};
 
-exports.toolboxHeader = function(d){return "Các khối lệnh"};
+exports.toolboxHeader = function(d){return "các khối"};
 
 exports.openWorkspace = function(d){return "Hoạt động ra sao"};
 
@@ -18826,7 +18860,7 @@ exports.catEvents = function(d){return "Các sự kiện"};
 
 exports.catLogic = function(d){return "Logic"};
 
-exports.catMath = function(d){return "Thuật toán"};
+exports.catMath = function(d){return "thuật toán"};
 
 exports.catProcedures = function(d){return "Các hàm"};
 
@@ -18846,7 +18880,7 @@ exports.defaultSayText = function(d){return "gõ vào đây"};
 
 exports.emotion = function(d){return "tâm trạng/ tính tình"};
 
-exports.finalLevel = function(d){return "Chúc mừng! Bạn đã giải quyết được câu đố cuối cùng."};
+exports.finalLevel = function(d){return "Xin chúc mừng! Bạn đã hoàn thành câu đố cuối cùng."};
 
 exports.hello = function(d){return "Xin chào"};
 
@@ -18926,11 +18960,11 @@ exports.nextLevel = function(d){return "Chúc mừng! Bạn đã hoàn thành c�
 
 exports.no = function(d){return "Không"};
 
-exports.numBlocksNeeded = function(d){return "Câu đố này có thể được giải quyết với %1 khối."};
+exports.numBlocksNeeded = function(d){return "Câu đố này có thể được giải quyết chỉ với %1 khối."};
 
 exports.ouchExclamation = function(d){return "ộp!"};
 
-exports.playSoundCrunch = function(d){return "Phát âm thanh \"lạo xạo\""};
+exports.playSoundCrunch = function(d){return "phát tiếng nhai"};
 
 exports.playSoundGoal1 = function(d){return "phát âm thanh ghi bàn 1"};
 
@@ -19184,7 +19218,7 @@ exports.showTSDefText = function(d){return "type text here"};
 
 exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
 
-exports.setSprite = function(d){return "đặt thành tố"};
+exports.setSprite = function(d){return "thiết lập"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 
@@ -19326,7 +19360,7 @@ exports.whenUp = function(d){return "Khi mũi tên chỉ lên trên"};
 
 exports.whenUpTooltip = function(d){return "Thực hiện các thao tác dưới đây khi chìa khoá mũi tên chỉ lên bật."};
 
-exports.yes = function(d){return "Có"};
+exports.yes = function(d){return "Đồng ý"};
 
 
 },{"messageformat":58}],47:[function(require,module,exports){

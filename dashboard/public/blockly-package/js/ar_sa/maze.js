@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13172,7 +13205,7 @@ exports.catActions = function(d){return "الاجراءات"};
 
 exports.catColour = function(d){return "لون"};
 
-exports.catLogic = function(d){return "العمليات المنطقية"};
+exports.catLogic = function(d){return "منطق"};
 
 exports.catLists = function(d){return "القوائم والمصفوفات"};
 
@@ -13182,7 +13215,7 @@ exports.catMath = function(d){return "العمليات الحسابية"};
 
 exports.catProcedures = function(d){return "الدوال"};
 
-exports.catText = function(d){return "الجمل"};
+exports.catText = function(d){return "نص"};
 
 exports.catVariables = function(d){return "المتغيرات"};
 
@@ -13224,7 +13257,7 @@ exports.help = function(d){return "مساعدة"};
 
 exports.hintTitle = function(d){return "تلميح:"};
 
-exports.jump = function(d){return "قفز"};
+exports.jump = function(d){return "إقفز"};
 
 exports.levelIncompleteError = function(d){return "أنت استخدمت كل انواع القطع الضرورية ولكن ليس في الطريق الصحيح."};
 
@@ -13250,7 +13283,7 @@ exports.play = function(d){return "إلعب"};
 
 exports.puzzleTitle = function(d){return "اللغز "+v(d,"puzzle_number")+" من "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "إعادة"};
+exports.repeat = function(d){return "كرر"};
 
 exports.resetProgram = function(d){return "إعادة تعيين"};
 
@@ -13348,21 +13381,21 @@ exports.atFlower = function(d){return "في زهرة"};
 
 exports.avoidCowAndRemove = function(d){return "تجنب البقرة وازل 1"};
 
-exports.continue = function(d){return "أستمر"};
+exports.continue = function(d){return "إستمرار"};
 
 exports.dig = function(d){return "ازل 1"};
 
 exports.digTooltip = function(d){return "ازل وحدة 1 من التراب"};
 
-exports.dirE = function(d){return "E"};
+exports.dirE = function(d){return "ش"};
 
-exports.dirN = function(d){return "N"};
+exports.dirN = function(d){return "شم"};
 
-exports.dirS = function(d){return "S"};
+exports.dirS = function(d){return "ج"};
 
-exports.dirW = function(d){return "W"};
+exports.dirW = function(d){return "شر"};
 
-exports.doCode = function(d){return "نفذ"};
+exports.doCode = function(d){return "نفّذ"};
 
 exports.elseCode = function(d){return "والا"};
 
@@ -13394,15 +13427,15 @@ exports.honeyTooltip = function(d){return "جعل العسل من رحيق"};
 
 exports.honeycombFullError = function(d){return "قُرص العسل هذا لا يتسع لمزيد من العسل."};
 
-exports.ifCode = function(d){return "إذا كان"};
+exports.ifCode = function(d){return "إذا"};
 
-exports.ifInRepeatError = function(d){return "أنت تحتاج ان تستخدم مجموعة \" اذا كان \" داخل مجموعة \"كرر\" . اذا واجهت اي مشكلة, اعد  محاولة  المرحلة السابقة مرة اخرى لتعرف كيف تعمل."};
+exports.ifInRepeatError = function(d){return "أنت تحتاج ان تستخدم قطعة \" اذا كان \" داخل قطعة \" أكرر \" . اذا واجهت اي مشكلة, حاول ان تستخدم الطريقة السابقة مرة اخرى من اجل معرفة كيف تعمل."};
 
 exports.ifPathAhead = function(d){return "إذا كان الطريق سالكا"};
 
-exports.ifTooltip = function(d){return "إذا كان الطريق سالكا في الاتجاه المحدد , قم بتنفيذ بعض الاجراءات."};
+exports.ifTooltip = function(d){return "إذا كان هناك طريق في الإتجاه المحدد، قم بتنفيذ بعض الإجراءات."};
 
-exports.ifelseTooltip = function(d){return "إذا كان الطريق سالكا في الاتجاه المحدد , قم بتنفيذ القطعة الأولى من الاجراءات. والا, قم بتنفيذ القطعة الثانية من الاجراءات."};
+exports.ifelseTooltip = function(d){return "اذا كان هناك ممر في الأتجاه المحدد, إذن قم بتنفيذ أول أمر موجود, غير ذلك, قم بتنفيذ ثاني أمر موحود."};
 
 exports.ifFlowerTooltip = function(d){return "اذا لم يكن هناك زهرة / عسل في الاتجاه المحدد , عندها قم ببعض الاجراءات ."};
 
@@ -13420,7 +13453,7 @@ exports.moveEastTooltip = function(d){return "نقل للشرق مسافة وا�
 
 exports.moveForward = function(d){return "تقدم للامام"};
 
-exports.moveForwardTooltip = function(d){return "تقدم الاعب خطوة واحدة للامام ."};
+exports.moveForwardTooltip = function(d){return "حركني للأمام خطوة واحدة"};
 
 exports.moveNorthTooltip = function(d){return "نقل للشمال مسافة واحدة."};
 
@@ -13436,31 +13469,31 @@ exports.nectarRemaining = function(d){return "رحيق"};
 
 exports.nectarTooltip = function(d){return "الحصول على الرحيق من زهرة"};
 
-exports.nextLevel = function(d){return "تهانينا ! لقد تم الانتهاء من اللغز."};
+exports.nextLevel = function(d){return "تهانينا! لقد قمت بإكمال هذا اللغز."};
 
 exports.no = function(d){return "لا"};
 
-exports.noPathAhead = function(d){return "الطريق مغلق"};
+exports.noPathAhead = function(d){return "الممر مغلق"};
 
-exports.noPathLeft = function(d){return "لايوجد طريق على اليسار"};
+exports.noPathLeft = function(d){return "لايوجد ممر على اليسار"};
 
-exports.noPathRight = function(d){return "لايوجد طريق على اليمين"};
+exports.noPathRight = function(d){return "لايوجد ممر على اليمين"};
 
 exports.notAtFlowerError = function(d){return "يمكنك فقط الحصول على الرحيق من زهرة."};
 
 exports.notAtHoneycombError = function(d){return "يمكنك فقط الحصول على العسل من قُرص العسل."};
 
-exports.numBlocksNeeded = function(d){return "يمكن حل هذا اللغز مع قطع %1."};
+exports.numBlocksNeeded = function(d){return "يمكن حل هذا الغز ب  %1 من القطع."};
 
-exports.pathAhead = function(d){return "الطريق سالك"};
+exports.pathAhead = function(d){return "الممر سالك"};
 
-exports.pathLeft = function(d){return "إذا يوجد طريق على اليسار"};
+exports.pathLeft = function(d){return "إذا يوجد ممر على اليسار"};
 
-exports.pathRight = function(d){return "إذا يوجد طريق على اليمين"};
+exports.pathRight = function(d){return "إذا يوجد ممر على اليمين"};
 
-exports.pilePresent = function(d){return "يوجد تكدس"};
+exports.pilePresent = function(d){return "هناك كومة"};
 
-exports.putdownTower = function(d){return "ضع البرج في الاسفل"};
+exports.putdownTower = function(d){return "ضع البرج"};
 
 exports.removeAndAvoidTheCow = function(d){return "ازل 1 و تجنب البقرة"};
 
@@ -13470,15 +13503,15 @@ exports.removePile = function(d){return "ازل الكدس"};
 
 exports.removeStack = function(d){return "ازالة تكدس الاتربة بواسطة "+v(d,"shovelfuls")};
 
-exports.removeSquare = function(d){return "ازل المربع"};
+exports.removeSquare = function(d){return "قم بازالة المربع"};
 
 exports.repeatCarefullyError = function(d){return "لحل هذه المشكلة ، فكر بعناية بنمط يتكون من حركتين والتفاف واحد لوضعه في مجموعة \"تكرار\". لا بأس من عمل التفاف إضافي في النهاية."};
 
-exports.repeatUntil = function(d){return "أكرر حتى"};
+exports.repeatUntil = function(d){return "كرّر حتى"};
 
-exports.repeatUntilBlocked = function(d){return "أكرر طالما الطريق سالكا"};
+exports.repeatUntilBlocked = function(d){return "بينما الممر للامام"};
 
-exports.repeatUntilFinish = function(d){return "اكرر حتى النهاية"};
+exports.repeatUntilFinish = function(d){return "كرر حتى النهاية"};
 
 exports.step = function(d){return "الخطوة"};
 
@@ -13490,15 +13523,15 @@ exports.turnLeft = function(d){return "اتجه إلى اليسار"};
 
 exports.turnRight = function(d){return "اتجه الى اليمين"};
 
-exports.turnTooltip = function(d){return "تحويل اتجاه الرسام يمينا او يسارا بمقدار 90 درجة ."};
+exports.turnTooltip = function(d){return "اتجه بي الي اليمين أو اليسار ب90 درجة."};
 
 exports.uncheckedCloudError = function(d){return "تاكد من التحقق من جميع الغيوم لمعرفة فيما اذا كانت ازهاراً او عسلاً."};
 
 exports.uncheckedPurpleError = function(d){return "تاكد من تحقق من جميع الزهور البنفسجية لمعرفة فيما اذا كان فيها رحيق"};
 
-exports.whileMsg = function(d){return "بينما"};
+exports.whileMsg = function(d){return "أكرر طالما"};
 
-exports.whileTooltip = function(d){return "أكرر الاجراءات المغلقة حتى الوصول الى نقطة النهاية."};
+exports.whileTooltip = function(d){return "كرر الاجراءات المغلقة حتى الوصول الى نقطة النهاية."};
 
 exports.word = function(d){return "ابحث عن الكلمة"};
 

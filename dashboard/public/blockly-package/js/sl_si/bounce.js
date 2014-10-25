@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -11528,7 +11561,7 @@ exports.dirW = function(d){return "Z"};
 
 exports.doCode = function(d){return "izvrši"};
 
-exports.elseCode = function(d){return "sicer"};
+exports.elseCode = function(d){return "potem"};
 
 exports.finalLevel = function(d){return "Čestitke! Rešil/a si zadnjo uganko."};
 
@@ -11548,7 +11581,7 @@ exports.incrementOpponentScoreTooltip = function(d){return "Dodaj ena k nasprotn
 
 exports.incrementPlayerScore = function(d){return "dosežena točka"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Dodaj ena k trenutnim točkam."};
+exports.incrementPlayerScoreTooltip = function(d){return "Dodaj ena k trenutnemu dosežku."};
 
 exports.isWall = function(d){return "je to stena"};
 
@@ -11580,7 +11613,7 @@ exports.moveUp = function(d){return "premakni se gor"};
 
 exports.moveUpTooltip = function(d){return "Move the paddle up."};
 
-exports.nextLevel = function(d){return "Čestitke! Zaključil/a si to uganko."};
+exports.nextLevel = function(d){return "Čestitam! Rešili ste to uganko."};
 
 exports.no = function(d){return "Ne"};
 
@@ -11590,7 +11623,7 @@ exports.noPathLeft = function(d){return "ni poti na levo"};
 
 exports.noPathRight = function(d){return "ni poti na desno"};
 
-exports.numBlocksNeeded = function(d){return "Ta uganka je lahko rešena z %1 bloki."};
+exports.numBlocksNeeded = function(d){return "Ta uganka je lahko rešena z %1 blokom."};
 
 exports.pathAhead = function(d){return "pot naprej"};
 
@@ -11618,7 +11651,7 @@ exports.playSoundRubber = function(d){return "predvajaj zvok: radirka"};
 
 exports.playSoundSlap = function(d){return "predvajaj zvok: udarec"};
 
-exports.playSoundTooltip = function(d){return "Predvajaj izbran zvok."};
+exports.playSoundTooltip = function(d){return "Predvajaj izbrani zvok."};
 
 exports.playSoundWinPoint = function(d){return "predvajaj zvok: dobljena točka"};
 
@@ -11694,7 +11727,7 @@ exports.setPaddleSpeedTooltip = function(d){return "Nastavi hitrost vesla"};
 
 exports.shareBounceTwitter = function(d){return "Check out the Bounce game I made. I wrote it myself with @codeorg"};
 
-exports.shareGame = function(d){return "Delite vašo igro:"};
+exports.shareGame = function(d){return "Delite vašo igro z ostalimi:"};
 
 exports.turnLeft = function(d){return "obrni se levo"};
 

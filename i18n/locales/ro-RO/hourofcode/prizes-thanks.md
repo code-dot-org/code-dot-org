@@ -1,6 +1,6 @@
 * * *
 
-Titlu: vă mulţumesc aspect: wide
+title: Va multumesc layout: wide
 
 * * *
 

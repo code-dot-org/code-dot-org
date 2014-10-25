@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -11527,7 +11560,7 @@ exports.doCode = function(d){return "vykonaj"};
 
 exports.elseCode = function(d){return "ináč"};
 
-exports.finalLevel = function(d){return "Gratulujeme! Vyriešili ste posledné puzzle."};
+exports.finalLevel = function(d){return "Gratulujem! Vyriešil si poslednú úlohu."};
 
 exports.heightParameter = function(d){return "výška"};
 
@@ -11543,9 +11576,9 @@ exports.incrementOpponentScore = function(d){return "pridať bod súperovi"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Pridá bod ku skóre súpera."};
 
-exports.incrementPlayerScore = function(d){return "Pridať bod"};
+exports.incrementPlayerScore = function(d){return "získať bod"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Pridá bod k aktuálnemu skóre hráča."};
+exports.incrementPlayerScoreTooltip = function(d){return "Pridaj jednu k aktuálnemu skóre."};
 
 exports.isWall = function(d){return "je toto stena"};
 
@@ -11577,7 +11610,7 @@ exports.moveUp = function(d){return "posunúť nahor"};
 
 exports.moveUpTooltip = function(d){return "Posuň pálku nahor."};
 
-exports.nextLevel = function(d){return "Gratulujem! Tento hlavolam je vyriešený."};
+exports.nextLevel = function(d){return "Gratulujem! Vyriešil si hádanku."};
 
 exports.no = function(d){return "Nie"};
 
@@ -11587,7 +11620,7 @@ exports.noPathLeft = function(d){return "žiadna cesta vľavo"};
 
 exports.noPathRight = function(d){return "žiadna cesta vpravo"};
 
-exports.numBlocksNeeded = function(d){return "Tento hlavolam môže byť vyriešený s %1 blokmi."};
+exports.numBlocksNeeded = function(d){return "Táto hádanka môže byť vyriešená s %1 blokmi."};
 
 exports.pathAhead = function(d){return "cesta vpred"};
 
@@ -11597,7 +11630,7 @@ exports.pathRight = function(d){return "ak je cesta vpravo"};
 
 exports.pilePresent = function(d){return "tu je hromada"};
 
-exports.playSoundCrunch = function(d){return "prehraj chrumkavý zvuk"};
+exports.playSoundCrunch = function(d){return "prehrať zvuk chrumnutia"};
 
 exports.playSoundGoal1 = function(d){return "prehraj zvuk gól 1"};
 
@@ -11615,7 +11648,7 @@ exports.playSoundRubber = function(d){return "prehraj gumený zvuk"};
 
 exports.playSoundSlap = function(d){return "prehraj zvuk plesknutia"};
 
-exports.playSoundTooltip = function(d){return "Prehrá vybraný zvuk."};
+exports.playSoundTooltip = function(d){return "Prehraj vybraný zvuk."};
 
 exports.playSoundWinPoint = function(d){return "prehraj so zvukom bodu"};
 
@@ -11623,9 +11656,9 @@ exports.playSoundWinPoint2 = function(d){return "prehraj so zvukom bodu 2"};
 
 exports.playSoundWood = function(d){return "prehraj drevený zvuk"};
 
-exports.putdownTower = function(d){return "polož vežu"};
+exports.putdownTower = function(d){return "daj dole vežu"};
 
-exports.reinfFeedbackMsg = function(d){return "Pre návrat k svojej hre môžeš stlačiť tlačidlo \"Skús to znova\"."};
+exports.reinfFeedbackMsg = function(d){return "Pre návrat k svojej hre môžeš stlačiť tlačidlo \"Skúsiť znova\"."};
 
 exports.removeSquare = function(d){return "odstrániť štvorec"};
 
@@ -11713,7 +11746,7 @@ exports.whenDownTooltip = function(d){return "Vykonať akcie nižšie pri stlač
 
 exports.whenGameStarts = function(d){return "keď začne hra"};
 
-exports.whenGameStartsTooltip = function(d){return "Vykonať akcie, keď začne hra."};
+exports.whenGameStartsTooltip = function(d){return "Vykonať akcie uvedené nižšie, keď hra začne."};
 
 exports.whenLeft = function(d){return "keď šípka vľavo"};
 
@@ -11764,9 +11797,9 @@ exports.catLogic = function(d){return "Logické"};
 
 exports.catLists = function(d){return "Zoznamy"};
 
-exports.catLoops = function(d){return "Slučky"};
+exports.catLoops = function(d){return "Cykly"};
 
-exports.catMath = function(d){return "Matematické"};
+exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkcie"};
 
@@ -11808,11 +11841,11 @@ exports.generatedCodeInfo = function(d){return "Dokonca aj popredné univerzity 
 
 exports.hashError = function(d){return "Prepáčte, '%1' nezodpovedá žiadnemu uloženému programu."};
 
-exports.help = function(d){return "pomoc"};
+exports.help = function(d){return "Pomoc"};
 
 exports.hintTitle = function(d){return "Tip:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "skoč"};
 
 exports.levelIncompleteError = function(d){return "Používate všetky potrebné typy blokov, ale nie tým správnym spôsobom."};
 

@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -9631,11 +9664,6 @@ Turtle.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
 
-  // Enable blockly param editing in levelbuilder, regardless of level setting
-  if (config.level.edit_blocks) {
-    config.disableParamEditing = false;
-  }
-
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
 
@@ -10630,13 +10658,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Senarai"};
 
-exports.catLoops = function(d){return "Pusingan"};
+exports.catLoops = function(d){return "Gelung"};
 
 exports.catMath = function(d){return "Matematik"};
 
 exports.catProcedures = function(d){return "Fungsi"};
 
-exports.catText = function(d){return "Teks"};
+exports.catText = function(d){return "teks"};
 
 exports.catVariables = function(d){return "Pembolehubah"};
 
@@ -10704,7 +10732,7 @@ exports.play = function(d){return "Main"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" dari "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "ulang"};
+exports.repeat = function(d){return "Ulang"};
 
 exports.resetProgram = function(d){return "Tetapkan semula"};
 
@@ -10714,7 +10742,7 @@ exports.runTooltip = function(d){return "Jalankan program yang ditetapkan dengan
 
 exports.score = function(d){return "skor"};
 
-exports.showCodeHeader = function(d){return "Tunjuk Kod"};
+exports.showCodeHeader = function(d){return "Tunjukkan Kod"};
 
 exports.showGeneratedCode = function(d){return "Tunjukkan Kod"};
 
@@ -10837,7 +10865,7 @@ exports.drawUpperWave = function(d){return "draw upper wave"};
 
 exports.drawLowerWave = function(d){return "draw lower wave"};
 
-exports.heightParameter = function(d){return "height"};
+exports.heightParameter = function(d){return "ketinggian"};
 
 exports.hideTurtle = function(d){return "Sembunyi artis"};
 
@@ -10889,7 +10917,7 @@ exports.penTooltip = function(d){return "Angakat atau rendahkan pensil, untuk mu
 
 exports.penUp = function(d){return "pensil di atas"};
 
-exports.reinfFeedbackMsg = function(d){return "Does this look like what you want? You can press the \"Try again\" button to see your drawing."};
+exports.reinfFeedbackMsg = function(d){return "Adakah lukisan anda kelihatan seperti ini? Anda boleh tekan buang \"Cuba lagi\" untuk melihat lukisan anda."};
 
 exports.setColour = function(d){return "set warna"};
 

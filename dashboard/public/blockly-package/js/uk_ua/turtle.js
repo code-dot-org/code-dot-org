@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -9631,11 +9664,6 @@ Turtle.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
 
-  // Enable blockly param editing in levelbuilder, regardless of level setting
-  if (config.level.edit_blocks) {
-    config.disableParamEditing = false;
-  }
-
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
 
@@ -10631,7 +10659,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.uk = function 
   }
   return 'other';
 };
-exports.and = function(d){return "і"};
+exports.and = function(d){return "та"};
 
 exports.blocklyMessage = function(d){return "Блоклі"};
 
@@ -10649,7 +10677,7 @@ exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Функції"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Змінні"};
 
@@ -10681,13 +10709,13 @@ exports.finalStage = function(d){return "Вітання! Завершено ос
 
 exports.finalStageTrophies = function(d){return "Вітання! Ви завершили останній етап і виграли "+p(d,"numTrophies",0,"uk",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Готово"};
+exports.finish = function(d){return "Кінець"};
 
 exports.generatedCodeInfo = function(d){return "Навіть кращі університети навчають програмуванню на основі блоків (наприклад, "+v(d,"berkeleyLink")+" "+v(d,"harvardLink")+"). Але всередині ті блоки, які ви щойно склали, можуть показуватись у JavaScript, найпоширенішій мові програмування:"};
 
 exports.hashError = function(d){return "Шкода, але  '%1' не відповідає жодній збереженій програмі."};
 
-exports.help = function(d){return "Допомога"};
+exports.help = function(d){return "Довідка"};
 
 exports.hintTitle = function(d){return "Підказка:"};
 
@@ -10741,7 +10769,7 @@ exports.tooManyBlocksMsg = function(d){return "Це завдання можна 
 
 exports.tooMuchWork = function(d){return "Ви змусили мене попрацювати! Може спробуємо менше повторів?"};
 
-exports.toolboxHeader = function(d){return "Блоки"};
+exports.toolboxHeader = function(d){return "блоки"};
 
 exports.openWorkspace = function(d){return "Як це працює"};
 
@@ -10811,7 +10839,7 @@ exports.branches = function(d){return "відгалуження"};
 
 exports.catColour = function(d){return "Колір"};
 
-exports.catControl = function(d){return "Цикли"};
+exports.catControl = function(d){return "петлі"};
 
 exports.catMath = function(d){return "Математика"};
 
@@ -10819,7 +10847,7 @@ exports.catProcedures = function(d){return "Функції"};
 
 exports.catTurtle = function(d){return "Дії"};
 
-exports.catVariables = function(d){return "Змінні"};
+exports.catVariables = function(d){return "змінні"};
 
 exports.catLogic = function(d){return "Логіка"};
 
@@ -10915,13 +10943,13 @@ exports.penTooltip = function(d){return "Піднімає або опускає 
 
 exports.penUp = function(d){return "підняти олівець"};
 
-exports.reinfFeedbackMsg = function(d){return "Це виглядає так, як ви хотіли? Можна клацнути кнопку \"Спробуй знову\", щоб побачити свій малюнок."};
+exports.reinfFeedbackMsg = function(d){return "Це виглядає так, як ви хочете? Можна клацнути кнопку \"Повторити спробу\", щоб побачити свій малюнок."};
 
 exports.setColour = function(d){return "встановити колір"};
 
 exports.setWidth = function(d){return "встановити ширину"};
 
-exports.shareDrawing = function(d){return "Поділиитсь своїм малюнком:"};
+exports.shareDrawing = function(d){return "Поділіться своїм малюнком:"};
 
 exports.showMe = function(d){return "Покажи мені"};
 

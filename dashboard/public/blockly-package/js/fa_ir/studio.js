@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13335,7 +13368,6 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('TEXT')
-        .setCheck('String')
         .appendTitle(msg.setScoreText());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -16437,7 +16469,9 @@ Studio.init = function(config) {
     return el.getBoundingClientRect().width;
   };
 
-  arrangeStartBlocks(config);
+  if (config.level.edit_blocks != 'toolbox_blocks') {
+    arrangeStartBlocks(config);
+  }
 
   config.twitter = twitterOptions;
 
@@ -18659,7 +18693,7 @@ exports.and = function(d){return "و"};
 
 exports.blocklyMessage = function(d){return "بلاکلی"};
 
-exports.catActions = function(d){return "کارها"};
+exports.catActions = function(d){return "اقدامات"};
 
 exports.catColour = function(d){return "رنگ"};
 
@@ -18667,9 +18701,9 @@ exports.catLogic = function(d){return "منطق"};
 
 exports.catLists = function(d){return "لیست ها"};
 
-exports.catLoops = function(d){return "حلقه‌ها"};
+exports.catLoops = function(d){return "حلقه ها"};
 
-exports.catMath = function(d){return "ریاضی"};
+exports.catMath = function(d){return "محاسبات ریاضی"};
 
 exports.catProcedures = function(d){return "توابع"};
 
@@ -18719,7 +18753,7 @@ exports.jump = function(d){return "پرش"};
 
 exports.levelIncompleteError = function(d){return "شما همه‌ی بلوک‌های مورد نیاز را بکار بردید، ولی نه به روش درست."};
 
-exports.listVariable = function(d){return "لیست"};
+exports.listVariable = function(d){return "فهرست"};
 
 exports.makeYourOwnFlappy = function(d){return "Flappy Bird خودتان را بسازید"};
 
@@ -18741,7 +18775,7 @@ exports.play = function(d){return "بازی"};
 
 exports.puzzleTitle = function(d){return "معمای "+v(d,"puzzle_number")+" از "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "تکرار"};
+exports.repeat = function(d){return "تکرار کن"};
 
 exports.resetProgram = function(d){return "بازنشانی"};
 
@@ -18751,7 +18785,7 @@ exports.runTooltip = function(d){return "اجرای برنامه‌ی تعریف
 
 exports.score = function(d){return "نمره"};
 
-exports.showCodeHeader = function(d){return "نمایشِ کد"};
+exports.showCodeHeader = function(d){return "کد نمایش"};
 
 exports.showGeneratedCode = function(d){return "نمایشِ کد"};
 
@@ -18765,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "این معما را می‌تو�
 
 exports.tooMuchWork = function(d){return "شما منو مجبور به انجام مقدار زیادی کار کردید. میشه تعداد تکرار رو کمتر کنید؟"};
 
-exports.toolboxHeader = function(d){return "بلوک‌ها"};
+exports.toolboxHeader = function(d){return "بلوک ها"};
 
 exports.openWorkspace = function(d){return "چگونگیِ کار"};
 
@@ -18818,7 +18852,7 @@ exports.genericFeedback = function(d){return "ببینبد چطور تمامش �
 var MessageFormat = require("messageformat");MessageFormat.locale.fa=function(n){return "other"}
 exports.actor = function(d){return "actor"};
 
-exports.catActions = function(d){return "عملیات"};
+exports.catActions = function(d){return "اقدامات"};
 
 exports.catControl = function(d){return "حلقه‌ها"};
 
@@ -18826,7 +18860,7 @@ exports.catEvents = function(d){return "رویدادها"};
 
 exports.catLogic = function(d){return "منطق"};
 
-exports.catMath = function(d){return "حساب"};
+exports.catMath = function(d){return "ریاضی"};
 
 exports.catProcedures = function(d){return "توابع"};
 
@@ -18846,7 +18880,7 @@ exports.defaultSayText = function(d){return "ایجا تایپ کن"};
 
 exports.emotion = function(d){return "mood"};
 
-exports.finalLevel = function(d){return "تبریک میگم . معمای نهایی رو حل کردی ."};
+exports.finalLevel = function(d){return "تبریک! شما پازل نهایی را حل کردید."};
 
 exports.hello = function(d){return "hello"};
 
@@ -18882,7 +18916,7 @@ exports.moveDirectionRight = function(d){return "سمت راست"};
 
 exports.moveDirectionUp = function(d){return "بالا"};
 
-exports.moveDirectionRandom = function(d){return "تصادفی"};
+exports.moveDirectionRandom = function(d){return "در هم"};
 
 exports.moveDistance25 = function(d){return "۲۰ پیکسل"};
 
@@ -18922,11 +18956,11 @@ exports.moveUpTooltip = function(d){return "یک بازیگر رو بالا بب
 
 exports.moveTooltip = function(d){return "یک بازیگر رو حرکت بده ."};
 
-exports.nextLevel = function(d){return "تبریک میگم . این پازل رو کامل کردید ."};
+exports.nextLevel = function(d){return "تبریک! شما این پازل را به اتمام رساندید."};
 
-exports.no = function(d){return "خیر"};
+exports.no = function(d){return "نه"};
 
-exports.numBlocksNeeded = function(d){return "این پازل می تواند با 1% بلوکها حل شود."};
+exports.numBlocksNeeded = function(d){return "این پازل می تواند با %1 از بلوکها حل شود."};
 
 exports.ouchExclamation = function(d){return "Ouch!"};
 
@@ -19004,13 +19038,13 @@ exports.projectilePurpleHearts = function(d){return "purple hearts"};
 
 exports.projectileRedHearts = function(d){return "red hearts"};
 
-exports.projectileRandom = function(d){return "تصادفی"};
+exports.projectileRandom = function(d){return "در هم"};
 
 exports.reinfFeedbackMsg = function(d){return "شما می توانید دکمه \"دوباره امتحان کنید\" را بفشارید تا به بازیتان برگردید."};
 
 exports.repeatForever = function(d){return "تکرار بی‌پایان"};
 
-exports.repeatDo = function(d){return "انجام دادن"};
+exports.repeatDo = function(d){return "انحام دادن"};
 
 exports.repeatForeverTooltip = function(d){return "اجرای عملیات داخل این بلوک بطور مکرر تا زمانی که داستان ادامه دارد."};
 
@@ -19052,7 +19086,7 @@ exports.setBackgroundTennis = function(d){return "set tennis background"};
 
 exports.setBackgroundWinter = function(d){return "set winter background"};
 
-exports.setBackgroundTooltip = function(d){return "تعیین تصویر پس‌زمینه"};
+exports.setBackgroundTooltip = function(d){return "تنظیم تصویر صحنه پس‌زمینه"};
 
 exports.setScoreText = function(d){return "تنظیم امتیاز"};
 

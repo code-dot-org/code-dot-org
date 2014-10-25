@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13165,7 +13198,7 @@ exports.catMath = function(d){return "Matematica"};
 
 exports.catProcedures = function(d){return "Funzioni"};
 
-exports.catText = function(d){return "Testo"};
+exports.catText = function(d){return "testo"};
 
 exports.catVariables = function(d){return "Variabili"};
 
@@ -13197,7 +13230,7 @@ exports.finalStage = function(d){return "Complimenti! Hai completato l'ultima le
 
 exports.finalStageTrophies = function(d){return "Complimenti! Hai completato l'ultima lezione e vinto "+p(d,"numTrophies",0,"it",{"one":"un trofeo","other":n(d,"numTrophies")+" trofei"})+"."};
 
-exports.finish = function(d){return "Condividi"};
+exports.finish = function(d){return "Fine"};
 
 exports.generatedCodeInfo = function(d){return "Anche le migliori università (p.es., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") insegnano la programmazione visuale con i blocchi. Ma i blocchi che metti insieme possono essere rappresentati anche in JavaScript, uno dei linguaggi di programmazione più usati al mondo:"};
 
@@ -13211,7 +13244,7 @@ exports.jump = function(d){return "salta"};
 
 exports.levelIncompleteError = function(d){return "Stai usando tutti i tipi di blocchi necessari, ma non nel modo giusto."};
 
-exports.listVariable = function(d){return "lista"};
+exports.listVariable = function(d){return "elenco"};
 
 exports.makeYourOwnFlappy = function(d){return "Costruisci la tua versione del gioco Flappy"};
 
@@ -13243,7 +13276,7 @@ exports.runTooltip = function(d){return "Esegui il programma definito dai blocch
 
 exports.score = function(d){return "punteggio"};
 
-exports.showCodeHeader = function(d){return "Mostra il codice"};
+exports.showCodeHeader = function(d){return "Visualizza codice"};
 
 exports.showGeneratedCode = function(d){return "Mostra il codice"};
 
@@ -13257,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "Questo esercizio può essere riso
 
 exports.tooMuchWork = function(d){return "Mi hai fatto fare un sacco di lavoro!  Puoi provare a farmi fare meno ripetizioni?"};
 
-exports.toolboxHeader = function(d){return "Blocchi"};
+exports.toolboxHeader = function(d){return "blocchi"};
 
 exports.openWorkspace = function(d){return "Come funziona"};
 
@@ -13362,13 +13395,13 @@ exports.honeycombFullError = function(d){return "Il favo non ha più spazio per 
 
 exports.ifCode = function(d){return "se"};
 
-exports.ifInRepeatError = function(d){return "Hai bisogno di un blocco \"se\" dentro un blocco \"ripeti\". Se non ci riesci, prova di nuovo il livello precedente per vedere come funzionava."};
+exports.ifInRepeatError = function(d){return "Hai bisogno di un blocco \"se\" all'interno di un blocco \"ripeti\". Se hai problemi, prova di nuovo il livello precedente per vedere come funzionava."};
 
 exports.ifPathAhead = function(d){return "se c'è strada in avanti"};
 
 exports.ifTooltip = function(d){return "Se c'è strada nella direzione specificata, allora fai alcune azioni."};
 
-exports.ifelseTooltip = function(d){return "Se c'è strada nella direzione specificata, allora effettua il primo blocco di azioni. Altrimenti, effettua il secondo."};
+exports.ifelseTooltip = function(d){return "Se c'è strada nella direzione specificata, effettua il primo blocco di azioni. Altrimenti, effettua il secondo."};
 
 exports.ifFlowerTooltip = function(d){return "Se c'è un fiore o un favo nella direzione specificata, allora fai alcune azioni."};
 
@@ -13384,7 +13417,7 @@ exports.moveBackward = function(d){return "vai indietro"};
 
 exports.moveEastTooltip = function(d){return "Vai una casella verso est."};
 
-exports.moveForward = function(d){return "vai avanti"};
+exports.moveForward = function(d){return "Vai avanti"};
 
 exports.moveForwardTooltip = function(d){return "Vai avanti di una casella."};
 
@@ -13410,15 +13443,15 @@ exports.noPathAhead = function(d){return "la strada è bloccata"};
 
 exports.noPathLeft = function(d){return "nessuna strada a sinistra"};
 
-exports.noPathRight = function(d){return "nessuna strada a destra"};
+exports.noPathRight = function(d){return "nessun percorso a destra"};
 
 exports.notAtFlowerError = function(d){return "Puoi prendere solo il nettare dal fiore."};
 
 exports.notAtHoneycombError = function(d){return "Puoi fare il miele solo in un favo."};
 
-exports.numBlocksNeeded = function(d){return "Questo esercizio può essere risolto con %1 blocchi ."};
+exports.numBlocksNeeded = function(d){return "Questo esercizio può essere risolto con %1 blocchi."};
 
-exports.pathAhead = function(d){return "c'è strada in avanti"};
+exports.pathAhead = function(d){return "la strada davanti"};
 
 exports.pathLeft = function(d){return "se c'è strada a sinistra"};
 
@@ -13426,7 +13459,7 @@ exports.pathRight = function(d){return "se c'è strada a destra"};
 
 exports.pilePresent = function(d){return "c'è un mucchio"};
 
-exports.putdownTower = function(d){return "Metti giù la torre"};
+exports.putdownTower = function(d){return "metti giù la torre"};
 
 exports.removeAndAvoidTheCow = function(d){return "rimuovi 1 ed evita la mucca"};
 

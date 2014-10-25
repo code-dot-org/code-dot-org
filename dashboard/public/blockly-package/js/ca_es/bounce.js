@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -11515,13 +11548,13 @@ exports.dirS = function(d){return "S"};
 
 exports.dirW = function(d){return "W"};
 
-exports.doCode = function(d){return "fer"};
+exports.doCode = function(d){return "fes"};
 
-exports.elseCode = function(d){return "més"};
+exports.elseCode = function(d){return "en cas contrari"};
 
 exports.finalLevel = function(d){return "Felicitats! Has resolt el puzzle final."};
 
-exports.heightParameter = function(d){return "altura"};
+exports.heightParameter = function(d){return "alçcada"};
 
 exports.ifCode = function(d){return "si"};
 
@@ -11750,11 +11783,11 @@ exports.catLists = function(d){return "Llistes"};
 
 exports.catLoops = function(d){return "Bucles"};
 
-exports.catMath = function(d){return "Matemàtiques"};
+exports.catMath = function(d){return "Mates"};
 
 exports.catProcedures = function(d){return "Funcions"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variables"};
 
@@ -11800,7 +11833,7 @@ exports.jump = function(d){return "jump"};
 
 exports.levelIncompleteError = function(d){return "Estàs utilitzant tots els tipus de blocs necessaris, però no de la manera correcta."};
 
-exports.listVariable = function(d){return "Llista"};
+exports.listVariable = function(d){return "llista"};
 
 exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
 
@@ -11846,7 +11879,7 @@ exports.tooManyBlocksMsg = function(d){return "Aquest puzzle pot ser resolt amb 
 
 exports.tooMuchWork = function(d){return "Em fas fer molta feina! Podries intentar repetir menys vegades?"};
 
-exports.toolboxHeader = function(d){return "Blocs"};
+exports.toolboxHeader = function(d){return "blocs"};
 
 exports.openWorkspace = function(d){return "How It Works"};
 

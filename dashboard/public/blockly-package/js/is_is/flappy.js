@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -9179,13 +9212,13 @@ exports.catMath = function(d){return "Reikningur"};
 
 exports.catProcedures = function(d){return "Föll"};
 
-exports.catText = function(d){return "Texti"};
+exports.catText = function(d){return "texti"};
 
 exports.catVariables = function(d){return "Breytur"};
 
 exports.codeTooltip = function(d){return "Sjá samsvarandi JavaScript kóða."};
 
-exports.continue = function(d){return "Áfram"};
+exports.continue = function(d){return "Halda áfram"};
 
 exports.dialogCancel = function(d){return "Hætta við"};
 
@@ -9271,7 +9304,7 @@ exports.tooManyBlocksMsg = function(d){return "Þessa þraut er hægt að leysa 
 
 exports.tooMuchWork = function(d){return "Þú lagðir á mig mjög mikla vinnu! Gætirðu reynt að nota færri endurtekningar?"};
 
-exports.toolboxHeader = function(d){return "Kubbar"};
+exports.toolboxHeader = function(d){return "kubbar"};
 
 exports.openWorkspace = function(d){return "Hvernig það virkar"};
 
@@ -9350,11 +9383,11 @@ exports.flapVeryLarge = function(d){return "blaka vængjum mjög mikið"};
 
 exports.flapTooltip = function(d){return "Fljúga Flappy upp á við."};
 
-exports.flappySpecificFail = function(d){return "Kóðinn þinn virðist í lagi - hann lætur blaka við hvern smell. En þú þarft að smella oft til að fljúga að markinu."};
+exports.flappySpecificFail = function(d){return "Kóðinn þinn lítur vel út - fuglinn flögrar við hvern smell. En þú þarft að smella oft til að flögra að endamarkinu."};
 
 exports.incrementPlayerScore = function(d){return "skora stig"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Bæta einu stigi við núverandi stöðu."};
+exports.incrementPlayerScoreTooltip = function(d){return "Bæta 1 við núverandi skor leikmanns."};
 
 exports.nextLevel = function(d){return "Til hamingju! Þú hefur klárað þessa þraut."};
 
@@ -9366,7 +9399,7 @@ exports.playSoundRandom = function(d){return "spila hljóð af handahófi"};
 
 exports.playSoundBounce = function(d){return "spila skopphljóð"};
 
-exports.playSoundCrunch = function(d){return "spila kremjuhljóð"};
+exports.playSoundCrunch = function(d){return "spila brothljóð"};
 
 exports.playSoundDie = function(d){return "spila sorgarhljóð"};
 
@@ -9410,7 +9443,7 @@ exports.setBackgroundCave = function(d){return "umhverfi - hellir"};
 
 exports.setBackgroundSanta = function(d){return "umhverfi - Jólasveinn"};
 
-exports.setBackgroundTooltip = function(d){return "Stillir bakgrunnsmynd"};
+exports.setBackgroundTooltip = function(d){return "Stillir bakgrunninn"};
 
 exports.setGapRandom = function(d){return "op af handahófi"};
 
@@ -9578,7 +9611,7 @@ exports.whenEnterObstacleTooltip = function(d){return "Gera aðgerðirnar hér f
 
 exports.whenRunButtonClick = function(d){return "þegar leikur byrjar"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Gera aðgerðirnar hér fyrir neðan þegar leikurinn byrjar."};
+exports.whenRunButtonClickTooltip = function(d){return "Gera aðgerðirnar fyrir neðan þegar leikurinn byrjar."};
 
 exports.yes = function(d){return "Já"};
 

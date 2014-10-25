@@ -1,6 +1,6 @@
 * * *
 
-title: Partners
+title: Partnerzy
 
 * * *
 
@@ -22,6 +22,6 @@ title: Partners
 
 * * *
 
-# Additional partners
+# Pozostali partnerzy
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>

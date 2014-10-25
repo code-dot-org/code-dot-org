@@ -31,8 +31,8 @@ pt-PT:
           "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
           Building a Foundation: Building a Foundation
           Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
+          The Big Event: O Grande Evento
+          Going Places Safely: Ir a Locais de um modo Seguro
           description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
           "Bee: Sequence": 'Bee: Sequence'
           "Artist: Sequence": 'Artist: Sequence'
@@ -47,7 +47,7 @@ pt-PT:
           Suzi: Suzi
           The Artist: O Artista
           Artist Debugging: Artist Debugging
-          Bounce: Bounce
+          Bounce: saltar
           "Studio: Create a Story": 'Play Lab: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
@@ -65,7 +65,7 @@ pt-PT:
           Relay programming: Relay programming
           Conditionals: Condicionais
           Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
+          The Big Event: O Grande Evento
           Your Digital Footprint: Your Digital Footprint
           description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
           "Maze: Sequence": 'Maze: Sequence'
@@ -94,7 +94,7 @@ pt-PT:
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
+          Bounce: saltar
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
           Computational Thinking: Pensamento computacional
@@ -107,7 +107,7 @@ pt-PT:
           Farmer - While Loops: 'Farmer - While Loops'
           description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
           "Studio: Create a Game": 'Play Lab: Create a Game'
-          Maze: Maze
+          Maze: Labirinto
           Artist: Artist
           "Artist: Functions": 'Artist: Functions'
           "Bee: Functions": 'Bee: Functions'
@@ -129,6 +129,7 @@ pt-PT:
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

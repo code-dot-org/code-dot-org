@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -11519,7 +11552,7 @@ exports.doCode = function(d){return "faça"};
 
 exports.elseCode = function(d){return "senão"};
 
-exports.finalLevel = function(d){return "Parabéns! Você resolveu o desafio final."};
+exports.finalLevel = function(d){return "Parabéns! Você resolveu o último desafio."};
 
 exports.heightParameter = function(d){return "altura"};
 
@@ -11529,15 +11562,15 @@ exports.ifPathAhead = function(d){return "se houver caminho à frente"};
 
 exports.ifTooltip = function(d){return "Se houver um caminho na direção especificada, realize algumas ações."};
 
-exports.ifelseTooltip = function(d){return "Se há um caminho na direção especificada, então faça o primeiro bloco de ações. Caso contrário, faça o segundo bloco de ações."};
+exports.ifelseTooltip = function(d){return "Se houver um caminho na direção especificada, faça o primeiro bloco de ações. Caso contrário, faça o segundo bloco de ações."};
 
-exports.incrementOpponentScore = function(d){return "marque o ponto do oponente"};
+exports.incrementOpponentScore = function(d){return "marca o ponto do oponente"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Soma um ponto à pontuação atual do jogador."};
 
-exports.incrementPlayerScore = function(d){return "marque um ponto"};
+exports.incrementPlayerScore = function(d){return "marque o ponto"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Soma um ponto à pontuação atual do jogador."};
+exports.incrementPlayerScoreTooltip = function(d){return "Some um ponto à pontuação atual do jogador."};
 
 exports.isWall = function(d){return "isso é uma parede"};
 
@@ -11553,7 +11586,7 @@ exports.moveDown = function(d){return "mova para baixo"};
 
 exports.moveDownTooltip = function(d){return "Move a raquete para baixo."};
 
-exports.moveForward = function(d){return "avance"};
+exports.moveForward = function(d){return "avançar"};
 
 exports.moveForwardTooltip = function(d){return "Mova-me um espaço para a frente."};
 
@@ -11569,7 +11602,7 @@ exports.moveUp = function(d){return "mova para cima"};
 
 exports.moveUpTooltip = function(d){return "Move a raquete para cima."};
 
-exports.nextLevel = function(d){return "Parabéns! Você completou esse desafio."};
+exports.nextLevel = function(d){return "Parabéns! Você completou o desafio."};
 
 exports.no = function(d){return "Não"};
 
@@ -11579,23 +11612,23 @@ exports.noPathLeft = function(d){return "Não há caminho à esquerda"};
 
 exports.noPathRight = function(d){return "Não há caminho à direita"};
 
-exports.numBlocksNeeded = function(d){return "Esse desafio pode ser resolvido com %1 blocos."};
+exports.numBlocksNeeded = function(d){return "Este desafio pode ser resolvido com %1 blocos."};
 
 exports.pathAhead = function(d){return "se houver caminho à frente"};
 
-exports.pathLeft = function(d){return "Se houver caminho à esquerda"};
+exports.pathLeft = function(d){return "se houver caminho à esquerda"};
 
-exports.pathRight = function(d){return "Se houver caminho à direita"};
+exports.pathRight = function(d){return "se houver caminho à direita"};
 
-exports.pilePresent = function(d){return "há um monte"};
+exports.pilePresent = function(d){return "houver uma pilha"};
 
-exports.playSoundCrunch = function(d){return "reproduza som de trituração"};
+exports.playSoundCrunch = function(d){return "reproduza barulho de trituração"};
 
 exports.playSoundGoal1 = function(d){return "reproduza som de objetivo alcançado 1"};
 
 exports.playSoundGoal2 = function(d){return "reproduza som de objetivo alcançado 2"};
 
-exports.playSoundHit = function(d){return "reproduza som de pancada"};
+exports.playSoundHit = function(d){return "reproduza barulho de pancada"};
 
 exports.playSoundLosePoint = function(d){return "reproduza som de ponto perdido"};
 
@@ -11609,7 +11642,7 @@ exports.playSoundSlap = function(d){return "reproduza som de palmas"};
 
 exports.playSoundTooltip = function(d){return "Reproduza o som escolhido."};
 
-exports.playSoundWinPoint = function(d){return "fazer som de ponto ganho"};
+exports.playSoundWinPoint = function(d){return "reproduza som de ponto ganho"};
 
 exports.playSoundWinPoint2 = function(d){return "reproduza som de ponto ganho 2"};
 
@@ -11617,11 +11650,11 @@ exports.playSoundWood = function(d){return "reproduza som de madeira"};
 
 exports.putdownTower = function(d){return "derrube a torre"};
 
-exports.reinfFeedbackMsg = function(d){return "Você pode clicar em \"Tente novamente\" para voltar a jogar."};
+exports.reinfFeedbackMsg = function(d){return "Você pode pressionar o botão de \"Tentar novamente\" para voltar a jogar o seu jogo."};
 
 exports.removeSquare = function(d){return "remova o quadrado"};
 
-exports.repeatUntil = function(d){return "repita até que"};
+exports.repeatUntil = function(d){return "repita até"};
 
 exports.repeatUntilBlocked = function(d){return "enquanto houver caminho em frente"};
 
@@ -11635,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "defina o tipo de quadra"};
 
 exports.setBackgroundRetro = function(d){return "defina cenário retrô"};
 
-exports.setBackgroundTooltip = function(d){return "Define a imagem de fundo"};
+exports.setBackgroundTooltip = function(d){return "Define a imagem do plano de fundo"};
 
 exports.setBallRandom = function(d){return "defina bola aleatória"};
 
@@ -11689,7 +11722,7 @@ exports.turnLeft = function(d){return "vire à esquerda"};
 
 exports.turnRight = function(d){return "vire à direita"};
 
-exports.turnTooltip = function(d){return "Vira 90 graus à esquerda ou à direita."};
+exports.turnTooltip = function(d){return "Vire 90 graus à esquerda ou à direita."};
 
 exports.whenBallInGoal = function(d){return "quando a bola chega ao alvo"};
 
@@ -11703,7 +11736,7 @@ exports.whenDown = function(d){return "quando a seta para baixo estiver pression
 
 exports.whenDownTooltip = function(d){return "Execute as ações abaixo quando a tecla com a seta para baixo estiver pressionada."};
 
-exports.whenGameStarts = function(d){return "Quando o jogo começar"};
+exports.whenGameStarts = function(d){return "quando o jogo começa"};
 
 exports.whenGameStartsTooltip = function(d){return "Execute as ações abaixo quando o jogo começar."};
 
@@ -11754,7 +11787,7 @@ exports.catMath = function(d){return "Matemática"};
 
 exports.catProcedures = function(d){return "Funções"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
 exports.catVariables = function(d){return "Variáveis"};
 
@@ -11832,7 +11865,7 @@ exports.runTooltip = function(d){return "Execute o programa definido pelos bloco
 
 exports.score = function(d){return "pontuação"};
 
-exports.showCodeHeader = function(d){return "Mostrar Código"};
+exports.showCodeHeader = function(d){return "Mostrar código"};
 
 exports.showGeneratedCode = function(d){return "Mostrar código"};
 
@@ -11846,7 +11879,7 @@ exports.tooManyBlocksMsg = function(d){return "Esse desafio pode ser resolvido c
 
 exports.tooMuchWork = function(d){return "Você me fez trabalhar bastante! Podemos tentar repetindo menos vezes?"};
 
-exports.toolboxHeader = function(d){return "Blocos"};
+exports.toolboxHeader = function(d){return "blocos"};
 
 exports.openWorkspace = function(d){return "Como funciona"};
 
@@ -11862,7 +11895,7 @@ exports.saveToGallery = function(d){return "Salve na sua galeria"};
 
 exports.savedToGallery = function(d){return "Salvo na sua galeria!"};
 
-exports.shareFailure = function(d){return "Não podemos compartilhar esse programa."};
+exports.shareFailure = function(d){return "Desculpe, não é possível compartilhar esse programa."};
 
 exports.typeCode = function(d){return "Digite seu código JavaScript abaixo destas instruções."};
 

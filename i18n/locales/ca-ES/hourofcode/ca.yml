@@ -1,6 +1,6 @@
 ca:
   site_name: HORA de CODI
-  language: Anglès
+  language: Català
   front_title: "Uneix-te a l'esdeveniment d'aprenentatge més gran de la història, 8-14 desembre 2014"
   coming_soon: Properament
   front_header_banner: "Uneix-te a l'esdeveniment d'aprenentatge més gran de la història, 8-14 desembre 2014"
@@ -16,20 +16,20 @@ ca:
   country_ar: Argentina
   country_au: Austràlia
   country_br: Brasil
-  country_bg: Bulgaria
-  country_de: Germany
-  country_es: Latin America
+  country_bg: Bulgària
+  country_de: Alemanya
+  country_es: Amèrica Llatina
   country_eu: Unió Europea
-  country_gr: Greece
-  country_hr: Croatia
-  country_id: Indonesia
+  country_gr: Grècia
+  country_hr: Croàcia
+  country_id: Indonèsia
   country_it: Itàlia
-  country_jp: Japan
-  country_me: Middle East and North Africa
+  country_jp: Japó
+  country_me: "Orient Mitjà i Nord d'Àfrica"
   country_nz: Nova Zelanda
   country_ro: Romania
-  country_ru: Russia
-  country_ua: Ukraine
+  country_ru: Rússia
+  country_ua: Ucraïna
   country_uk: Regne Unit
   country_us: Estats Units
   country_vn: Vietnam
@@ -89,7 +89,7 @@ ca:
   signup_submit_error_message: "S'ha produït un error. Si us plau comprova que tots els camps obligatoris han estat omplert correctament."
   signup_thank_you_header: "Gràcies per registrar-te per acollir un esdeveniment d'Hora de Codi."
   signup_thank_you_message: "T'hem enviat un correu de confirmació amb informació per ajudar-te a començar."
-  map_header: '# Hour of Code events around the world'
+  map_header: "# Esdeveniments d'Hora de Codi de tot el món"
   map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
   meta_tag_og_title: "S'acosta l'Hora de Codi"
   meta_tag_og_description: "L'Hora de Codi és un moviment mundial que arriba a desenes de milions d'estudiants en més de 180 països i més de 30 llengües. Edat 4 a 104."
@@ -123,17 +123,21 @@ ca:
   hoc_faq_why_cs_q: Per què informàtica?
   hoc_faq_why_cs_a: "<i>Cada</i> estudiant ha de tenir l'oportunitat d'aprendre informàtica. Ajuda a generar habilitats, lògica i creativitat en la resolució de problemes. Començant aviat, els alumnes tindran els fonaments per tenir èxit en qualsevol carrera del segle XXI. Veure més informes a <a href='http://code.org'> Code.org</a>."
   hoc_faq_how_participate_q: "Com participo a l'Hora de Codi?"
-  hoc_faq_how_participate_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.org'>here</a> and <a href='target-resources-how-to'>start planning</a>. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
+  hoc_faq_how_participate_a: "Inscriu-te per acollir un esdeveniment d'Hora de Codi <a href='http://hourofcode.org'> aquí</a> i <a href='/resources/how-to'> començar a planificar-ho</a>. Pots organitzar un esdeveniment d'Hora de Codi a la teva escola o a la teva comunitat &mdash; com una extraescolar, sense ànim de lucre o a la feina. O, només prova-ho tu mateix quan arribi el 8 de desembre."
   hoc_faq_behind_hoc_q: "Qui hi ha darrere l'Hora de Codi?"
   hoc_faq_behind_hoc_a: "L'Hora de Codi esta organitzat per <a href='http://code.org'> Code.org</a>, una organització pública 501c3 sense ànim de lucre dedicada a promoure la participació en informàtica fent-lo disponible a més escoles i incrementant la participació de les dones i de les minories de estudiants de color. Una <a href='http://code.org/about/partners'> coalició sense precedents de socis</a> que s'han ajuntat per donar suport a l'Hora de Codi, també &mdash; incloent-hi Microsoft, Apple, Amazon, Boys i Girls Clubs d'Amèrica i el Consell Escolar."
   hoc_faq_host_q: Jo no sé res sobre programació. Puc acollir un esdeveniment?
-  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='http://code.org/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='target-resources-how-to'>how to guide</a>."
+  hoc_faq_host_a: "Per descomptat. Hora de Codi son activitats autoguiades. Tot el que has de fer és <a href='http://code.org/learn'> provar els tutorials actuals</a>, triar la classe que vols i escollir una hora &mdash; nosaltres ens ocupem de la resta. A més tenim opcions per a cada edat i nivell d'experiència, des de llar d'infants cap amunt. Comença a planificar el teu esdeveniment llegint els nostres <a href='/resources/how-to'> com a guia</a>."
   hoc_faq_need_computers_q: Necessito ordinadors per a cada persona participant?
-  hoc_faq_need_computers_a: "No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work in pairs.</b> Research shows students learn best with <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pair programming</a>, sharing a computer and working together. Encourage your students to double up. <li><b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b> We offer tutorials that require no computer at all. </ul>"
-  hoc_faq_international_q: "I'm outside of the United States. How do I participate internationally?"
-  hoc_faq_international_a: Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code.
-  hoc_faq_tutorial_q: How can I make an Hour of Code tutorial?
-  hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
+  hoc_faq_need_computers_a: "No. Tenim tutorials d'Hora de Codi que funcionen en PCs, smartphones, tauletes i alguns que no requereixen cap ordinador en absolut! Pots unir-te siguis on siguis, amb el que tinguis. <p><i>Aquí hi ha unes quantes opcions:</i> <br><ul><li><b>Treballar en parelles.</b>La investigació mostra que els estudiants aprenen millor la <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programació per parelles</a>, compartint un ordinador i treballant junts. Encoratja els teus estudiants a unir-se. <li><b>Utilitza una pantalla de projecció.</b> Si teniu un ordinador  connectat a la Web, amb pantalla i projector, tot el teu grup pot fer una Hora de Codi conjunta. Veieu junts fragments de vídeo i feu torns per resoldre puzles o respondre preguntes. <li><b>Sense connexió.</b> Oferim tutorials que no requereixen cap ordinador. </ul>"
+  hoc_faq_international_q: Estic fora dels Estats Units. Com participo internacionalment?
+  hoc_faq_international_a: "Qualsevol pot organitzar un esdeveniment d'Hora de Codi, des de qualsevol part del món. L'any passat, els estudiants d'arreu del món van unir-se per a l'Hora de Codi."
+  hoc_faq_tutorial_q: "Com puc fer una classe d'Hora de Codi?"
+  hoc_faq_tutorial_a: "Si estàs interessat en convertir-te en col·laborador de tutorials, <a href='target-tutorial-guidelines'> mira les nostres guies i instruccions</a>. Ens agradaria oferir una varietat d'opcions atractives, però l'objectiu principal és optimitzar l'experiència per a estudiants i professors que són nous en informàtica."
+  hoc_faq_more_questions_q: Still have more questions?
+  hoc_faq_more_questions_a: "Try finding an answer in our <a href='http://support.code.org'>support forum</a>."
+  hoc_faq_more_questions_br_q: Outras dúvidas?
+  hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
   hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
   hoc_faq_why_cs_uk_a: '<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path.'
@@ -154,33 +158,35 @@ ca:
   hoc_faq_need_computers_ar_a: "No. Tenemos tutorales de la Hora de Program.AR que funcionan en PCs, teléfonos inteligentes, tabletas y algunos que no requieren ¡ninguna computadora en absoluto! Tú puedes unirte desde donde quiera que estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i> <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes aprenden mejor con <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares de programación</a>, compartiendo una computadora y trabajando juntos. Anima a tus estudiantes a trabajar en pares. <li><b>Una pantalla proyectada.</b> Si tú tienes un proyector y una computadora conectada a Internet, el grupo entero puede hacer una hora de Program.AR juntos. Mira porciones de videos juntos y toma turnos para resolver acertijos o responder preguntas. <li><b>Desconéctate.</b> Ofrecemos tutoriales que no requieren ninguna computadora en absoluto. </ul>"
   hoc_faq_tutorial_ar_q: ¿Cómo puedo hacer un tutoría de la Hora de Program.AR?
   hoc_faq_tutorial_ar_a: "Si usted está interesado en convertirse en un socio para tutoriales, <a href='/tutorial-guidelines'>vea nuestras directrices e instrucciones</a>. Nos gustaría presentar varias opciones atractivas, pero la meta principal es optimizar la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales."
-  stats_hoc_2013_heading: 'Incredible stats from last year’s Hour of Code. In one week alone:'
-  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
-  stats_growth: It was the fastest to reach 15 million users.
-  stats_tumblr: 'Tumblr: 3.5 years'
-  stats_facebook: 'Facebook: 3 years'
-  stats_twitter: 'Twitter: 2.5 years'
-  stats_pinterest: 'Pinterest: 2 years'
-  stats_instagram: 'Instagram: 14 months'
-  stats_hoc: 'The Hour of Code: 5 days'
-  stats_global: 15 million students worldwide learned an Hour of Code.
-  stats_girls_more: More girls tried computer science than in the last 70 years.
-  stats_girls_million: Over 10 million girls in 2013
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
-  stats_michael: 'I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
-  resources_how_to: How-to guide for teachers
-  resources_handouts: Handouts to spread the word
-  resources_videos: Videos
-  resources_posters: Posters
-  resources_banners: Banners
-  resources_emails: Sample emails
-  resources_stats: Useful computer science stats
-  resources_press_kit: Press Kit
-  footer_copyright_message: Copyright 2014 Code.org. All rights reserved.
-  footer_trademark_message: Hour of Code™ is a trademark of Code.org.
-  footer_menu_partners: Partners
-  footer_menu_contact: Contact us
-  footer_menu_support: Support
-  footer_menu_terms: Terms
-  footer_menu_privacy: Privacy Policy
+  stats_hoc_2013_heading: "Increïbles estadístiques d'Hora de Codi de l'any passat. En només una setmana:"
+  stats_hoc_2013_image_alt: "Estadístiques de 2013 d'Hora de Codi"
+  stats_growth: "Va ser el més ràpid d'arribar a 15 milions d'usuaris."
+  stats_tumblr: 'Tumblr: 3,5 anys'
+  stats_facebook: 'Facebook: 3 anys'
+  stats_twitter: 'Twitter: 2,5 anys'
+  stats_pinterest: 'Pinterest: 2 anys'
+  stats_instagram: 'Instagram: 14 mesos'
+  stats_hoc: "L'Hora de Codi: 5 dies"
+  stats_global: "15 milions d'estudiants del món van aprendre una Hora de Codi."
+  stats_girls_more: Més noies van provar la informàtica que en els últims 70 anys.
+  stats_girls_million: Més de 10 milions de noies en 2013
+  stats_nina: '"Cada dia dona els mateixos resultats &mdash; 100% addictiu."-Nina Nichols Peery, professora'
+  stats_student: |-
+    "Sabia que això era una oportunitat d'<b>una-vegada-a-la-vida</b>."-Mariana Alzate, 5è grau
+  stats_michael: |-
+    No he vist <b>mai, mai</b> als meus alumnes tan entusiasmats amb l'aprenentatge. "-Michael Clark, professor
+  resources_how_to: Manual per a professors
+  resources_handouts: Follets per córrer la veu
+  resources_videos: Vídeos
+  resources_posters: Pòsters
+  resources_banners: Anuncis
+  resources_emails: Correus de mostra
+  resources_stats: "Estadístiques útils d'informàtica"
+  resources_press_kit: Dossier de premsa
+  footer_copyright_message: Copyright 2014 Code.org. Tots els drets reservats.
+  footer_trademark_message: Hora de Codi ™ és una marca registrada de Code.org.
+  footer_menu_partners: Col·laboradors
+  footer_menu_contact: "Contacta'ns"
+  footer_menu_support: Suport
+  footer_menu_terms: Condicions
+  footer_menu_privacy: Política de privacitat

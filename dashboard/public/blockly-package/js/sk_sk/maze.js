@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13167,9 +13200,9 @@ exports.catLogic = function(d){return "Logické"};
 
 exports.catLists = function(d){return "Zoznamy"};
 
-exports.catLoops = function(d){return "Slučky"};
+exports.catLoops = function(d){return "Cykly"};
 
-exports.catMath = function(d){return "Matematické"};
+exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkcie"};
 
@@ -13211,11 +13244,11 @@ exports.generatedCodeInfo = function(d){return "Dokonca aj popredné univerzity 
 
 exports.hashError = function(d){return "Prepáčte, '%1' nezodpovedá žiadnemu uloženému programu."};
 
-exports.help = function(d){return "pomoc"};
+exports.help = function(d){return "Pomoc"};
 
 exports.hintTitle = function(d){return "Tip:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "skoč"};
 
 exports.levelIncompleteError = function(d){return "Používate všetky potrebné typy blokov, ale nie tým správnym spôsobom."};
 
@@ -13346,7 +13379,7 @@ exports.dirW = function(d){return "Z"};
 
 exports.doCode = function(d){return "vykonaj"};
 
-exports.elseCode = function(d){return "inak"};
+exports.elseCode = function(d){return "ináč"};
 
 exports.fill = function(d){return "vyplniť 1"};
 
@@ -13358,7 +13391,7 @@ exports.fillSquare = function(d){return "vyplniť štvorec"};
 
 exports.fillTooltip = function(d){return "Polož jednu jednotku špiny"};
 
-exports.finalLevel = function(d){return "Gratulujem! Vyriešili ste posledné puzzle."};
+exports.finalLevel = function(d){return "Gratulujem! Vyriešil si poslednú úlohu."};
 
 exports.flowerEmptyError = function(d){return "Táto kvetina nemá viac nektáru."};
 
@@ -13382,9 +13415,9 @@ exports.ifInRepeatError = function(d){return "Potrebujete bloku s \"keby\" vnút
 
 exports.ifPathAhead = function(d){return "ak je cesta vpred"};
 
-exports.ifTooltip = function(d){return "Ak je tam cesta v určenom smere, potom urob niektoré opatrenia."};
+exports.ifTooltip = function(d){return "Ak sa tam nachádza cesta v určenom smere, sprav niektoré opatrenia."};
 
-exports.ifelseTooltip = function(d){return "Ak je tam cesta v určenom smere, potom urob prvý blok akcií. V opačnom prípade urob druhý blok akcií."};
+exports.ifelseTooltip = function(d){return "Ak je v určenom smere cesta, potom vykonaj prvý blok akcií. V opačnom prípade vykonaj druhý blok akcií."};
 
 exports.ifFlowerTooltip = function(d){return "Ak je kvetina/úľ v určenom smere, potom urob niektoré činnosti."};
 
@@ -13402,7 +13435,7 @@ exports.moveEastTooltip = function(d){return "Posunte ma o jedno miesto na vých
 
 exports.moveForward = function(d){return "posunúť dopredu"};
 
-exports.moveForwardTooltip = function(d){return "Presunúť ma jedno pole dopredu."};
+exports.moveForwardTooltip = function(d){return "Presunúť ma jedno pole vpred."};
 
 exports.moveNorthTooltip = function(d){return "Posunte ma o jedno miesto na sever."};
 
@@ -13418,7 +13451,7 @@ exports.nectarRemaining = function(d){return "nektár"};
 
 exports.nectarTooltip = function(d){return "Získať nektár z kvetu"};
 
-exports.nextLevel = function(d){return "Gratulujem! Vyriešili ste puzzle."};
+exports.nextLevel = function(d){return "Gratulujem! Vyriešil si hádanku."};
 
 exports.no = function(d){return "Nie"};
 
@@ -13432,7 +13465,7 @@ exports.notAtFlowerError = function(d){return "Nektár môžete získať len z k
 
 exports.notAtHoneycombError = function(d){return "Med môžete vyrobiť iba v uli."};
 
-exports.numBlocksNeeded = function(d){return "Toto puzzle môže byť vyriešená s %1 blokmi."};
+exports.numBlocksNeeded = function(d){return "Táto hádanka môže byť vyriešená s %1 blokmi."};
 
 exports.pathAhead = function(d){return "cesta vpred"};
 
@@ -13442,7 +13475,7 @@ exports.pathRight = function(d){return "ak je cesta vpravo"};
 
 exports.pilePresent = function(d){return "tu je hromada"};
 
-exports.putdownTower = function(d){return "daj dole vežu"};
+exports.putdownTower = function(d){return "polož vežu"};
 
 exports.removeAndAvoidTheCow = function(d){return "odstráň 1 a vyhni sa krave"};
 
@@ -13452,7 +13485,7 @@ exports.removePile = function(d){return "odstránte hromadu"};
 
 exports.removeStack = function(d){return "odstránte naraz "+v(d,"shovelfuls")+" hromady"};
 
-exports.removeSquare = function(d){return "odstránte štvorec"};
+exports.removeSquare = function(d){return "odstrániť štvorec"};
 
 exports.repeatCarefullyError = function(d){return "Aby ste toto vyriešeili, starostlivo popremyšlajte o dalšich dvoch ťahoch a odbočke ktoré pridáte do bloku \"opakovať\".  To je v poriadku ak máte na konci odbočku navyše."};
 
@@ -13472,7 +13505,7 @@ exports.turnLeft = function(d){return "otočiť vľavo"};
 
 exports.turnRight = function(d){return "otočiť vpravo"};
 
-exports.turnTooltip = function(d){return "Obráť sa doľava alebo doprava o 90 stupňov."};
+exports.turnTooltip = function(d){return "Obráti ma doľava alebo doprava o 90 stupňov."};
 
 exports.uncheckedCloudError = function(d){return "Nezabudnite skontrolovať všetky oblaky či sú kvety alebo ule."};
 
@@ -13480,7 +13513,7 @@ exports.uncheckedPurpleError = function(d){return "Nezabudnite skontrolovať vš
 
 exports.whileMsg = function(d){return "pokiaľ"};
 
-exports.whileTooltip = function(d){return "Opakujte uzavreté činnosti dokým dosiahnete cieľový bod."};
+exports.whileTooltip = function(d){return "Opakujte priložené činnosti dokým dosiahnete cieľový bod."};
 
 exports.word = function(d){return "Nájdi slovo"};
 

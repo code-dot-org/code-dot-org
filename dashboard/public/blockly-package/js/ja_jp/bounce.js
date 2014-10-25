@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -11517,7 +11550,7 @@ exports.dirW = function(d){return "西"};
 
 exports.doCode = function(d){return "実行"};
 
-exports.elseCode = function(d){return "そうでなければ"};
+exports.elseCode = function(d){return "他"};
 
 exports.finalLevel = function(d){return "おめでとうございます ！最後のパズルを解決しました。"};
 
@@ -11535,9 +11568,9 @@ exports.incrementOpponentScore = function(d){return "相手のポイントを採
 
 exports.incrementOpponentScoreTooltip = function(d){return "今対戦している相手のスコアに１足してください。"};
 
-exports.incrementPlayerScore = function(d){return "スコア ポイント"};
+exports.incrementPlayerScore = function(d){return "ポイントを採点する。"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "今のプレイヤーのスコアに１を足してください。"};
+exports.incrementPlayerScoreTooltip = function(d){return "現在のプレイヤーのスコアに追加"};
 
 exports.isWall = function(d){return "これは壁ですか？"};
 
@@ -11553,7 +11586,7 @@ exports.moveDown = function(d){return "下に移動します。"};
 
 exports.moveDownTooltip = function(d){return "パドルを下に移動します。"};
 
-exports.moveForward = function(d){return "前に移動"};
+exports.moveForward = function(d){return "前方に移動します。"};
 
 exports.moveForwardTooltip = function(d){return "私を前方に 1スペース 移動させてください。"};
 
@@ -11583,13 +11616,13 @@ exports.numBlocksNeeded = function(d){return "このパズルは%1個のブロ�
 
 exports.pathAhead = function(d){return "前に道があります。"};
 
-exports.pathLeft = function(d){return "もし左に道があるときは\n"};
+exports.pathLeft = function(d){return "もし左に道があるとき\n"};
 
 exports.pathRight = function(d){return "もし右に道があるときは"};
 
 exports.pilePresent = function(d){return "山があります。"};
 
-exports.playSoundCrunch = function(d){return "バリバリする音を再生しなさい。"};
+exports.playSoundCrunch = function(d){return "バリバリ音の再生"};
 
 exports.playSoundGoal1 = function(d){return "目標 1 のサウンドを再生します。"};
 
@@ -11617,7 +11650,7 @@ exports.playSoundWood = function(d){return "木製の音を再生します。"};
 
 exports.putdownTower = function(d){return "タワーを置く"};
 
-exports.reinfFeedbackMsg = function(d){return "\"Try again\" ボタンを押すと、あなたがしているゲームに戻ります。"};
+exports.reinfFeedbackMsg = function(d){return "\"Try again\" ボタンを押すと、ゲームに戻ります。"};
 
 exports.removeSquare = function(d){return "正方形を削除します。"};
 
@@ -11683,11 +11716,11 @@ exports.setPaddleSpeedTooltip = function(d){return "ラケット速度を設定"
 
 exports.shareBounceTwitter = function(d){return "私が作ったバウンスゲームをチェックしてください。@codeorgでコードを書きました。"};
 
-exports.shareGame = function(d){return "あなたのゲームを共有してください:\n"};
+exports.shareGame = function(d){return "あなたのゲームを共有："};
 
-exports.turnLeft = function(d){return "左に曲がりなさい"};
+exports.turnLeft = function(d){return "左に曲がる"};
 
-exports.turnRight = function(d){return "右に曲がってください。"};
+exports.turnRight = function(d){return "右に回転"};
 
 exports.turnTooltip = function(d){return "私を左もしくは右に90 度曲がらせてください。"};
 
@@ -11705,7 +11738,7 @@ exports.whenDownTooltip = function(d){return "下向きの矢印キーが押さ�
 
 exports.whenGameStarts = function(d){return "ゲームの開始時"};
 
-exports.whenGameStartsTooltip = function(d){return "ゲームの起動時次のアクションを実行"};
+exports.whenGameStartsTooltip = function(d){return "ゲーム開始時、次のアクションを実行"};
 
 exports.whenLeft = function(d){return "左矢印"};
 
@@ -11727,7 +11760,7 @@ exports.whenWallCollided = function(d){return "when ball hits wall"};
 
 exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
 
-exports.whileMsg = function(d){return "しばらくの間"};
+exports.whileMsg = function(d){return "以下の間"};
 
 exports.whileTooltip = function(d){return "終点に到着するまで、封じられた行動を繰り返してください"};
 
@@ -11738,7 +11771,7 @@ exports.yes = function(d){return "はい"};
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
 exports.and = function(d){return "そして"};
 
-exports.blocklyMessage = function(d){return "ブロック状の"};
+exports.blocklyMessage = function(d){return "ブロッキー"};
 
 exports.catActions = function(d){return "操作"};
 
@@ -11748,19 +11781,19 @@ exports.catLogic = function(d){return "ロジック（論理）"};
 
 exports.catLists = function(d){return "リスト"};
 
-exports.catLoops = function(d){return "繰り返し"};
+exports.catLoops = function(d){return "ループ"};
 
 exports.catMath = function(d){return "数値"};
 
 exports.catProcedures = function(d){return "関数"};
 
-exports.catText = function(d){return "文字列"};
+exports.catText = function(d){return "テキスト"};
 
 exports.catVariables = function(d){return "変数"};
 
 exports.codeTooltip = function(d){return "生成されたJavaScriptコードを見る。"};
 
-exports.continue = function(d){return "次へ"};
+exports.continue = function(d){return "続行"};
 
 exports.dialogCancel = function(d){return "キャンセル"};
 
@@ -11846,7 +11879,7 @@ exports.tooManyBlocksMsg = function(d){return "このパズルは <x id='START_S
 
 exports.tooMuchWork = function(d){return "ちょっと作業が多すぎますね！もう少し繰り返し回数を少なくできませんか？"};
 
-exports.toolboxHeader = function(d){return "ブロック"};
+exports.toolboxHeader = function(d){return "ブロック達"};
 
 exports.openWorkspace = function(d){return "仕組み"};
 

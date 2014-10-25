@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -9205,7 +9238,7 @@ exports.emptyBlocksErrorMsg = function(d){return "\"반복\" 블럭이나 \"조�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "함수 블럭 안에는 다른 블럭을 넣어주어야 합니다."};
 
-exports.extraTopBlocks = function(d){return "블럭들이 떨어져있습니다. 블럭들을 붙이겠습니까?"};
+exports.extraTopBlocks = function(d){return "블럭들이 붙어있지 않습니다. 블럭들을 붙이겠습니까?"};
 
 exports.finalStage = function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했습니다."};
 
@@ -9271,7 +9304,7 @@ exports.tooManyBlocksMsg = function(d){return "이 퍼즐은  <x id='START_SPAN'
 
 exports.tooMuchWork = function(d){return "작업을 너무 많이 해야 되요! 더 적게 반복하는 방법은 없을까요?"};
 
-exports.toolboxHeader = function(d){return "블럭"};
+exports.toolboxHeader = function(d){return "blocks"};
 
 exports.openWorkspace = function(d){return "실행 설명"};
 
@@ -9309,7 +9342,7 @@ exports.watchVideo = function(d){return "비디오 보기"};
 
 exports.when = function(d){return "~할 때"};
 
-exports.whenRun = function(d){return "~할 때 실행"};
+exports.whenRun = function(d){return "실행하면"};
 
 exports.tryHOC = function(d){return "Hour of Code 해보기"};
 
@@ -9332,7 +9365,7 @@ exports.endGame = function(d){return "게임 끝내기"};
 
 exports.endGameTooltip = function(d){return "게임 종료"};
 
-exports.finalLevel = function(d){return "짝짝짝 축하합니다! 마지막 퍼즐을 해결했습니다."};
+exports.finalLevel = function(d){return "축하합니다! 마지막 퍼즐을 해결했습니다."};
 
 exports.flap = function(d){return "펄럭이기"};
 
@@ -9350,11 +9383,11 @@ exports.flapVeryLarge = function(d){return "매우 많이 펄럭이기"};
 
 exports.flapTooltip = function(d){return "플래피를 위로 날게 하기"};
 
-exports.flappySpecificFail = function(d){return "코드를 잘 작성하였습니다. 클릭할 때마나 펄럭일 것입니다만, 목표까지 매우 많이 펄럭이게 만들어야 합니다."};
+exports.flappySpecificFail = function(d){return "적합한 코드입니다. - 클릭할 때마다 펄럭여 올라갑니다. 목표에 도착하려면 많이 클릭해야 합니다."};
 
 exports.incrementPlayerScore = function(d){return "포인트 얻음"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "점수판에 점수 저장하기"};
+exports.incrementPlayerScoreTooltip = function(d){return "현재 플레이어의 점수를 1점 올립니다."};
 
 exports.nextLevel = function(d){return "축하합니다! 퍼즐을 해결했습니다."};
 
@@ -9388,9 +9421,9 @@ exports.playSoundSplash = function(d){return "철푸덕 소리 출력"};
 
 exports.playSoundLaser = function(d){return "레이저 소리 출력"};
 
-exports.playSoundTooltip = function(d){return "선택한 소리 출력"};
+exports.playSoundTooltip = function(d){return "선택 소리 출력"};
 
-exports.reinfFeedbackMsg = function(d){return "다시 시작하기 버튼을 눌러 게임을 다시 시작할 수 있습니다."};
+exports.reinfFeedbackMsg = function(d){return "다시 시도하기 버튼을 눌러 게임을 다시 시작할 수 있습니다."};
 
 exports.scoreText = function(d){return "점수 : "+v(d,"playerScore")};
 
@@ -9410,7 +9443,7 @@ exports.setBackgroundCave = function(d){return "동굴 배경 설정"};
 
 exports.setBackgroundSanta = function(d){return "산타 배경 설정"};
 
-exports.setBackgroundTooltip = function(d){return "배경 그림 설정"};
+exports.setBackgroundTooltip = function(d){return "배경 이미지 설정"};
 
 exports.setGapRandom = function(d){return "랜덤 간격 설정"};
 
@@ -9522,11 +9555,11 @@ exports.shareFlappyTwitter = function(d){return "@codeorg 에서 내가 직접 �
 
 exports.shareGame = function(d){return "게임 공유하기:"};
 
-exports.soundRandom = function(d){return "랜덤 번째 위치"};
+exports.soundRandom = function(d){return "random(랜덤)"};
 
-exports.soundBounce = function(d){return "튕김 소리"};
+exports.soundBounce = function(d){return "튕기게 하기"};
 
-exports.soundCrunch = function(d){return "부서짐 소리"};
+exports.soundCrunch = function(d){return "부서지는 소리"};
 
 exports.soundDie = function(d){return "아픔 소리"};
 
@@ -9576,9 +9609,9 @@ exports.whenEnterObstacle = function(d){return "물체를 통과하면"};
 
 exports.whenEnterObstacleTooltip = function(d){return "물체를 통과하면 아래 동작을 실행합니다."};
 
-exports.whenRunButtonClick = function(d){return "게임이 시작되면"};
+exports.whenRunButtonClick = function(d){return "게임을 시작하면"};
 
-exports.whenRunButtonClickTooltip = function(d){return "게임이 시작되면 아래 동작을 실행합니다."};
+exports.whenRunButtonClickTooltip = function(d){return "게임을 시작하면 아래 동작을 실행합니다."};
 
 exports.yes = function(d){return "예"};
 

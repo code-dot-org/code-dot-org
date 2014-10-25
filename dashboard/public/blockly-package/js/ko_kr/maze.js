@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13191,7 +13224,7 @@ exports.emptyBlocksErrorMsg = function(d){return "\"반복\" 블럭이나 \"조�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "함수 블럭 안에는 다른 블럭을 넣어주어야 합니다."};
 
-exports.extraTopBlocks = function(d){return "블럭들이 떨어져있습니다. 블럭들을 붙이겠습니까?"};
+exports.extraTopBlocks = function(d){return "블럭들이 붙어있지 않습니다. 블럭들을 붙이겠습니까?"};
 
 exports.finalStage = function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했습니다."};
 
@@ -13257,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "이 퍼즐은  <x id='START_SPAN'
 
 exports.tooMuchWork = function(d){return "작업을 너무 많이 해야 되요! 더 적게 반복하는 방법은 없을까요?"};
 
-exports.toolboxHeader = function(d){return "블럭"};
+exports.toolboxHeader = function(d){return "blocks"};
 
 exports.openWorkspace = function(d){return "실행 설명"};
 
@@ -13295,7 +13328,7 @@ exports.watchVideo = function(d){return "비디오 보기"};
 
 exports.when = function(d){return "~할 때"};
 
-exports.whenRun = function(d){return "~할 때 실행"};
+exports.whenRun = function(d){return "실행하면"};
 
 exports.tryHOC = function(d){return "Hour of Code 해보기"};
 
@@ -13330,7 +13363,7 @@ exports.dirW = function(d){return "왼쪽"};
 
 exports.doCode = function(d){return "실행"};
 
-exports.elseCode = function(d){return "그렇지 않으면"};
+exports.elseCode = function(d){return "아니면"};
 
 exports.fill = function(d){return "메우기1번"};
 
@@ -13342,13 +13375,13 @@ exports.fillSquare = function(d){return "사각형 메우기"};
 
 exports.fillTooltip = function(d){return "메우기1번"};
 
-exports.finalLevel = function(d){return "축하합니다! 마지막 퍼즐을 해결했습니다."};
+exports.finalLevel = function(d){return "짝짝짝 축하합니다! 마지막 퍼즐을 해결했습니다."};
 
 exports.flowerEmptyError = function(d){return "이 꽃에는 꽃꿀이 없습니다."};
 
 exports.get = function(d){return "아이템 가져오기"};
 
-exports.heightParameter = function(d){return "높이:"};
+exports.heightParameter = function(d){return "높이"};
 
 exports.holePresent = function(d){return "구덩이가 있으면"};
 
@@ -13360,15 +13393,15 @@ exports.honeyTooltip = function(d){return "꽃꿀에서 꿀만들기"};
 
 exports.honeycombFullError = function(d){return "이 벌집에는 더이상 꿀을 보관할 수 없습니다."};
 
-exports.ifCode = function(d){return "만약,"};
+exports.ifCode = function(d){return "만약"};
 
-exports.ifInRepeatError = function(d){return "\"반복하기\"블럭 안에 \"만약\" 블럭을 넣어야 합니다. 이해하기 어렵다면 이전 퍼즐에서 어떻게 동작하는지 살펴보세요."};
+exports.ifInRepeatError = function(d){return "\"반복(횟수)\" 블럭 안에 \"조건\" 블럭을 넣어야 합니다. 어렵다면? 이전 퍼즐을 통해, 어떻게 동작하는지 살펴보세요."};
 
-exports.ifPathAhead = function(d){return "만약, 앞쪽에 길이 있으면"};
+exports.ifPathAhead = function(d){return "만약 앞에 길이 있으면"};
 
-exports.ifTooltip = function(d){return "어떤 방향에 길이 있으면, 동작을 실행합니다."};
+exports.ifTooltip = function(d){return "만약, 지정한 방향에 길이있으면 동작을 실행한다."};
 
-exports.ifelseTooltip = function(d){return "어떤 방향에 길이 있으면, 첫 번째 블럭의 동작들을 수행하고, 아니면 두 번째 블럭의 동작들을 수행합니다."};
+exports.ifelseTooltip = function(d){return "만약, 지정한 방향에 길이있으면 실행 블럭의 첫번째 구역의 동작을 실행하고, 그렇지 않으면 두번째 구역의 동작을 실행한다."};
 
 exports.ifFlowerTooltip = function(d){return "지정한 방향에 꽃/벌집이 있으면, 동작을 수행합니다."};
 
@@ -13440,7 +13473,7 @@ exports.removeSquare = function(d){return "사각형 치우기"};
 
 exports.repeatCarefullyError = function(d){return "이 퍼즐을 해결하기 위해서는 \"반복\" 블럭 안에 이동하기와 방향바꾸기의 방법을 주의깊게 생각해야합니다. 마지막에 방향을 바꾸는 것은 괜찮습니다."};
 
-exports.repeatUntil = function(d){return "반복(~할 때까지):"};
+exports.repeatUntil = function(d){return "~할 때까지 반복"};
 
 exports.repeatUntilBlocked = function(d){return "반복(~인 동안): 앞쪽에 길이 있으면"};
 
@@ -13452,9 +13485,9 @@ exports.totalHoney = function(d){return "꿀의 양"};
 
 exports.totalNectar = function(d){return "꽃꿀의 양"};
 
-exports.turnLeft = function(d){return "왼쪽으로 돌기"};
+exports.turnLeft = function(d){return "왼쪽으로 회전"};
 
-exports.turnRight = function(d){return "오른쪽으로 돌기"};
+exports.turnRight = function(d){return "오른쪽으로 회전"};
 
 exports.turnTooltip = function(d){return "왼쪽이나 오른쪽으로 90 도 돕니다."};
 
@@ -13462,7 +13495,7 @@ exports.uncheckedCloudError = function(d){return "꽃이나 벌집들이 있는�
 
 exports.uncheckedPurpleError = function(d){return "꽃꿀이 들어있는지 살펴보기 위해서는 모든 분홍 꽃들을 확인해야 합니다."};
 
-exports.whileMsg = function(d){return "~인 동안"};
+exports.whileMsg = function(d){return "반복(~인 동안):"};
 
 exports.whileTooltip = function(d){return "어떤 조건이 될 때까지(~할 때까지), 반복적으로 실행합니다."};
 

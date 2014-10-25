@@ -1,6 +1,6 @@
 * * *
 
-layout: wide
+rozvržení: široké
 
 * * *
 

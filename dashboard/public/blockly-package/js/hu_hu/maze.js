@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13151,7 +13184,7 @@ exports.and = function(d){return "és"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
-exports.catActions = function(d){return "Cselekvések"};
+exports.catActions = function(d){return "Műveletek"};
 
 exports.catColour = function(d){return "Szín"};
 
@@ -13163,9 +13196,9 @@ exports.catLoops = function(d){return "Ciklusok"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Függvények"};
+exports.catProcedures = function(d){return "Funkciók"};
 
-exports.catText = function(d){return "Szöveg"};
+exports.catText = function(d){return "szöveg"};
 
 exports.catVariables = function(d){return "Változók"};
 
@@ -13243,7 +13276,7 @@ exports.runTooltip = function(d){return "A munkalapon összeépített program fu
 
 exports.score = function(d){return "pontszám"};
 
-exports.showCodeHeader = function(d){return "Kód Megjelenítése"};
+exports.showCodeHeader = function(d){return "Kód megjelenítése"};
 
 exports.showGeneratedCode = function(d){return "Kód megjelenítése"};
 
@@ -13257,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "Ez a feladvány megoldható a <x 
 
 exports.tooMuchWork = function(d){return "Sokat dolgoztattál. Megpróbálnád egy kicsit kevesebb ismétléssel?"};
 
-exports.toolboxHeader = function(d){return "Blokkok"};
+exports.toolboxHeader = function(d){return "blokkok"};
 
 exports.openWorkspace = function(d){return "Hogyan is működik"};
 
@@ -13342,11 +13375,11 @@ exports.fillSquare = function(d){return "négyzet kitöltése"};
 
 exports.fillTooltip = function(d){return "helyezzen 1 szennyeződés egységet "};
 
-exports.finalLevel = function(d){return "Gratulálok! A végső rejtvény megoldotta."};
+exports.finalLevel = function(d){return "Gratulálok, megoldottad az utolsó feladatot."};
 
 exports.flowerEmptyError = function(d){return "Ebben a virágban nincs több nektár."};
 
-exports.get = function(d){return "Legyen"};
+exports.get = function(d){return "listából értéke"};
 
 exports.heightParameter = function(d){return "magasság"};
 
@@ -13360,9 +13393,9 @@ exports.honeyTooltip = function(d){return "Csinálj mézet a nektárból"};
 
 exports.honeycombFullError = function(d){return "Ebben a méhsejtben nincs több hely."};
 
-exports.ifCode = function(d){return "Ha"};
+exports.ifCode = function(d){return "ha"};
 
-exports.ifInRepeatError = function(d){return "Szükséged van egy \"ha\"/\"If\" blokkra az \"ismételd\"/\"repeat\" blokkon belül. Ha gondjaid vannak, próbáld újra az előző szintet, és nézd meg hogyan működött."};
+exports.ifInRepeatError = function(d){return "Szüksége van egy \"ha\"/\"if\" blokkra a  \"repeat\"/\"ismételd\" blokkon belül. Ha gondjaid vannak, próbáld újra az előző szintet, hogy lásd, hogyan működött."};
 
 exports.ifPathAhead = function(d){return "Ha útvonal van előttünk"};
 
@@ -13402,9 +13435,9 @@ exports.nectarRemaining = function(d){return "nektár"};
 
 exports.nectarTooltip = function(d){return "Szedd ki a nektárt a virágból"};
 
-exports.nextLevel = function(d){return "Gratulálok! Elvégezte a puzzle-t."};
+exports.nextLevel = function(d){return "Gratulálok! Ezt a feladatot megoldottad."};
 
-exports.no = function(d){return "nem"};
+exports.no = function(d){return "Nem"};
 
 exports.noPathAhead = function(d){return "az útvonal el van zárva"};
 
@@ -13416,7 +13449,7 @@ exports.notAtFlowerError = function(d){return "Csak a virágból tudsz nektárt 
 
 exports.notAtHoneycombError = function(d){return "Csak a méhsejtből tudsz mézet gyártani."};
 
-exports.numBlocksNeeded = function(d){return "Ezt a puzzle-t a(z) % 1 blokkal megoldható."};
+exports.numBlocksNeeded = function(d){return "Ez a feladat a(z) %1 blokkal megoldható."};
 
 exports.pathAhead = function(d){return "Út előre"};
 
@@ -13438,9 +13471,9 @@ exports.removeStack = function(d){return "Távolítson el egy adag "+v(d,"shovel
 
 exports.removeSquare = function(d){return "távolítsa el a négyzetet"};
 
-exports.repeatCarefullyError = function(d){return "Hogy ezt megoldhasd, találd meg az ismétlődő mintát. Használj egy \"ismételd amíg\" blokkot, benne ezzel a 3 blokkal: előrelépni, előrelépni, fordulj jobbra."};
+exports.repeatCarefullyError = function(d){return "A megoldáshoz gondold meg két  \"Előrelépni\" és egy \"Fordulj\" parancs használatát az \"Ismételd amíg\" blokkban. Nem baj hogyha a végén még egy külön \"Fordulj\" parancs lesz."};
 
-exports.repeatUntil = function(d){return "ismételd amíg"};
+exports.repeatUntil = function(d){return "ismételd amíg nem"};
 
 exports.repeatUntilBlocked = function(d){return "amíg van út előre"};
 
@@ -13468,7 +13501,7 @@ exports.whileTooltip = function(d){return "Ismételjük a közbülső műveletek
 
 exports.word = function(d){return "Ezt a szót keresd"};
 
-exports.yes = function(d){return "igen"};
+exports.yes = function(d){return "Igen"};
 
 exports.youSpelled = function(d){return "Amit találtál"};
 

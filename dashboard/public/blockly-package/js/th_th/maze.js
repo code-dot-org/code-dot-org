@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13171,7 +13204,7 @@ exports.catVariables = function(d){return "ตัวแปร"};
 
 exports.codeTooltip = function(d){return "ดูการสร้างโค้ด JavaScript."};
 
-exports.continue = function(d){return "ต่อไป"};
+exports.continue = function(d){return "ดำเนินการต่อไป"};
 
 exports.dialogCancel = function(d){return "ยกเลิก"};
 
@@ -13203,7 +13236,7 @@ exports.generatedCodeInfo = function(d){return "มหาวิทยาลั�
 
 exports.hashError = function(d){return "ขออภัย '%1' ไม่ตรงกับโปรแกรมที่บันทึกไว้."};
 
-exports.help = function(d){return "ช่วยเหลือ"};
+exports.help = function(d){return "ขอความช่วยเหลือ"};
 
 exports.hintTitle = function(d){return "คำแนะนำ:"};
 
@@ -13211,7 +13244,7 @@ exports.jump = function(d){return "กระโดด"};
 
 exports.levelIncompleteError = function(d){return "คุณกำลังใช้ทุกสิ่งทุกอย่างที่จำเป็นของบล็อก แต่ไม่ใช่ทางที่ถูกต้อง."};
 
-exports.listVariable = function(d){return "ลิสต์"};
+exports.listVariable = function(d){return "รายการ"};
 
 exports.makeYourOwnFlappy = function(d){return "สร้าง Flappy เกม ไว้เป็นของเราเอง"};
 
@@ -13243,7 +13276,7 @@ exports.runTooltip = function(d){return "เรียกใช้โปรแก
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "แสดงโค้ด"};
+exports.showCodeHeader = function(d){return "แสดงรหัส"};
 
 exports.showGeneratedCode = function(d){return "แสดงโค้ด"};
 
@@ -13314,7 +13347,7 @@ exports.atFlower = function(d){return "at flower"};
 
 exports.avoidCowAndRemove = function(d){return "avoid the cow and remove 1"};
 
-exports.continue = function(d){return "ดำเนินการต่อไป"};
+exports.continue = function(d){return "ต่อไป\n"};
 
 exports.dig = function(d){return "remove 1"};
 
@@ -13328,9 +13361,9 @@ exports.dirS = function(d){return "S"};
 
 exports.dirW = function(d){return "W"};
 
-exports.doCode = function(d){return "do"};
+exports.doCode = function(d){return "ทำ"};
 
-exports.elseCode = function(d){return "else"};
+exports.elseCode = function(d){return "นอกจากนั้น"};
 
 exports.fill = function(d){return "fill 1"};
 
@@ -13342,7 +13375,7 @@ exports.fillSquare = function(d){return "fill square"};
 
 exports.fillTooltip = function(d){return "place 1 unit of dirt"};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "ขอแสดงความยินดีคุณสามารถแก้ปัญหาสุดท้ายได้แล้ว."};
 
 exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
 
@@ -13402,9 +13435,9 @@ exports.nectarRemaining = function(d){return "nectar"};
 
 exports.nectarTooltip = function(d){return "Get nectar from a flower"};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "ขอแสดงความยินดีคุณสำเร็จปริศนานี้."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "ไม่ใช่"};
 
 exports.noPathAhead = function(d){return "path is blocked"};
 
@@ -13462,7 +13495,7 @@ exports.uncheckedCloudError = function(d){return "Make sure to check all clouds 
 
 exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
 
-exports.whileMsg = function(d){return "เมื่อ"};
+exports.whileMsg = function(d){return "ในขณะที่"};
 
 exports.whileTooltip = function(d){return "ทำซ้ำจนกระทั่งถึงจุดสิ้นสุด"};
 

@@ -8,7 +8,7 @@ title: Materialen layout: wide
 
 ## 1) Probeer de opdrachten:
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+We stellen een verscheidenheid van leuke, uur-lange handleidingen beschikbaar voor studenten van alle leeftijden, gemaakt door verschillende partners. Nieuwe handleidingen komen voor de aftrap van het Uur Code beschikbaar, vóór 8-14 December.
 
 **Alle Uur Code handleidingen:**
 
@@ -67,4 +67,4 @@ Iedere leerling krijgt de kans een certificaat te ontvangen via e-mail wanneer z
 
 **Wat komt er na het Uur Code?**
 
-Het Uur Code is nog maar de eerste stap in het leren over hoe technologie werkt en hoe je software kunt maken. <% if @country == 'uk' %> [Moedig je kinderen aan online te leren](http://uk.code.org/learn/beyond) om de reis te vervolgen. <% else %> Meer materiaal voor leraren is [hier](http://code.org/educate) te vinden. Of moedig je kinderen aan [online](http://code.org/learn/beyond) te leren. <% end %>
+Het Uur Code is nog maar de eerste stap in het leren over hoe technologie werkt en hoe je software kunt maken. < % als @country == 'uk' %> Het uur van Code is slechts de eerste stap op een reis naar meer informatie over hoe technologie werkt en hoe softwaretoepassingen gemaakt worden. [Moedig je kinderen aan online te leren](http://uk.code.org/learn/beyond) om de reis te vervolgen. <% else %> Meer materiaal voor leraren is [hier](http://code.org/educate) te vinden. Of moedig je kinderen aan [online](http://code.org/learn/beyond) te leren. <% end %>

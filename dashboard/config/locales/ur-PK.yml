@@ -13,11 +13,11 @@
         current_password: "موجودہ پاس ورڈ"
         locale: "زبان"
         age: "عمر"
-        gender: Gender
+        gender: Jinss
         edit_header: Edit Account Details
         error:
           future: can't be in the future
-  hello: Hello world
+  hello: hello dunia
   welcome_back: Welcome back, %{name}
   add_teacher_form:
     code_or_email:
@@ -297,7 +297,7 @@
       no_section: No assigned section
       trophies: Trophies
     students:
-      name: Naam
+      name: "نام"
       username: "یوزر کا نام"
       password: "پاس ورڈ"
       manage: Manage students
@@ -401,6 +401,9 @@
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Male
     female: Female
@@ -500,11 +503,17 @@
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
       each program in action.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback

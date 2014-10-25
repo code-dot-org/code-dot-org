@@ -50,7 +50,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: "函數"
+        title: "函數類別"
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -153,7 +153,7 @@
           erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: "條件式陳述"
+        title: "流程類別"
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."

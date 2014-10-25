@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -7656,7 +7689,7 @@ exports.parseElement = function(text) {
 
 },{}],34:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
-exports.and = function(d){return "及"};
+exports.and = function(d){return "且"};
 
 exports.blocklyMessage = function(d){return "模組化"};
 
@@ -7674,7 +7707,7 @@ exports.catMath = function(d){return "運算類別"};
 
 exports.catProcedures = function(d){return "函數類別"};
 
-exports.catText = function(d){return "字串類別"};
+exports.catText = function(d){return "本文"};
 
 exports.catVariables = function(d){return "變數類別"};
 
@@ -7706,7 +7739,7 @@ exports.finalStage = function(d){return "恭喜你 ！你已完成最後關卡�
 
 exports.finalStageTrophies = function(d){return "恭喜! 你已完成最後關卡並且贏得 "+p(d,"numTrophies",0,"zh",{"one":"一個獎盃","other":n(d,"numTrophies")+" 獎盃"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "完成 "};
 
 exports.generatedCodeInfo = function(d){return "甚至頂尖大學也同樣以\"程式積木\"來進行程式教學。(例如 :  "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+")。在程式積木的底層，所有組裝完成的程式積木功能，也可以用JavaScript 語法來顯示。"};
 
@@ -7716,11 +7749,11 @@ exports.help = function(d){return "說明"};
 
 exports.hintTitle = function(d){return "提示："};
 
-exports.jump = function(d){return "跳轉"};
+exports.jump = function(d){return "跳"};
 
 exports.levelIncompleteError = function(d){return "您已使用了所有必要類型的程式積木，但方式不太正確。"};
 
-exports.listVariable = function(d){return "列表變數\n"};
+exports.listVariable = function(d){return "列表變數"};
 
 exports.makeYourOwnFlappy = function(d){return "做出自己的 Flappy 遊戲"};
 
@@ -7758,7 +7791,7 @@ exports.showGeneratedCode = function(d){return "顯示程式碼"};
 
 exports.subtitle = function(d){return "一個視覺化的程式設計環境\n\n"};
 
-exports.textVariable = function(d){return "文字變數"};
+exports.textVariable = function(d){return "文本"};
 
 exports.tooFewBlocksMsg = function(d){return "你已使用所有必要類型的程式積木，但請嘗試使用更多同類型的程式積木來完成這個關卡。"};
 
@@ -7825,13 +7858,13 @@ exports.no = function(d){return "否"};
 
 exports.numBlocksNeeded = function(d){return "這個關卡可以使用 %1 個程式積木來完成。"};
 
-exports.reinfFeedbackMsg = function(d){return "您可以按下\"重試\"按鈕，重玩一次遊戲。"};
+exports.reinfFeedbackMsg = function(d){return "您可以按\"重試\"按鈕，回去玩您的遊戲。"};
 
 exports.share = function(d){return "分享"};
 
-exports.shareGame = function(d){return "分享您的遊戲 : "};
+exports.shareGame = function(d){return "分享您的遊戲"};
 
-exports.yes = function(d){return "確定"};
+exports.yes = function(d){return "是"};
 
 
 },{"messageformat":47}],36:[function(require,module,exports){

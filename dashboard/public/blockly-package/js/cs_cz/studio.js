@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13335,7 +13368,6 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('TEXT')
-        .setCheck('String')
         .appendTitle(msg.setScoreText());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -16437,7 +16469,9 @@ Studio.init = function(config) {
     return el.getBoundingClientRect().width;
   };
 
-  arrangeStartBlocks(config);
+  if (config.level.edit_blocks != 'toolbox_blocks') {
+    arrangeStartBlocks(config);
+  }
 
   config.twitter = twitterOptions;
 
@@ -18681,7 +18715,7 @@ exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkce"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Proměnné"};
 
@@ -18713,7 +18747,7 @@ exports.finalStage = function(d){return "Dobrá práce! Dokončil si poslední f
 
 exports.finalStageTrophies = function(d){return "Dobrá práce! Dokončil si poslední fázi a vyhrál "+p(d,"numTrophies",0,"cs",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Dokončit"};
 
 exports.generatedCodeInfo = function(d){return "Dokonce nejlepší university učí programovat pomocí bloků (např. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale vnitřek bloků, které jsi sestavil, lze zobrazit také v JavaScriptu, světově nejrozšířenějším programovacím jazyce:"};
 
@@ -18749,7 +18783,7 @@ exports.play = function(d){return "play"};
 
 exports.puzzleTitle = function(d){return "Hádanka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "ailadrodd"};
+exports.repeat = function(d){return "opakuj"};
 
 exports.resetProgram = function(d){return "Obnovit"};
 
@@ -18759,7 +18793,7 @@ exports.runTooltip = function(d){return "Spustí program definovaný bloky na pr
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Zobrazit Kód"};
+exports.showCodeHeader = function(d){return "Zobrazit kód"};
 
 exports.showGeneratedCode = function(d){return "Zobrazit kód"};
 
@@ -18773,7 +18807,7 @@ exports.tooManyBlocksMsg = function(d){return "Tato hádanka může být vyřeš
 
 exports.tooMuchWork = function(d){return "Přinutil jsi mne udělat spoustu práce! Mohl bys zkusit opakovat méně krát?"};
 
-exports.toolboxHeader = function(d){return "Bloky"};
+exports.toolboxHeader = function(d){return "bloky"};
 
 exports.openWorkspace = function(d){return "Jak To Funguje"};
 
@@ -18834,9 +18868,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.cs = function 
 };
 exports.actor = function(d){return "herec"};
 
-exports.catActions = function(d){return "akce"};
+exports.catActions = function(d){return "Akce"};
 
-exports.catControl = function(d){return "smyčky"};
+exports.catControl = function(d){return "Smyčky"};
 
 exports.catEvents = function(d){return "Události"};
 
@@ -18846,7 +18880,7 @@ exports.catMath = function(d){return "Matematika"};
 
 exports.catProcedures = function(d){return "Funkce"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Proměnné"};
 
@@ -18862,7 +18896,7 @@ exports.defaultSayText = function(d){return "Piš zde"};
 
 exports.emotion = function(d){return "mood"};
 
-exports.finalLevel = function(d){return "Gratulujeme! Vyřešil jsi poslední puzzle."};
+exports.finalLevel = function(d){return "Dobrá práce! Vyřešil si poslední hádanku."};
 
 exports.hello = function(d){return "hello"};
 
@@ -18898,7 +18932,7 @@ exports.moveDirectionRight = function(d){return "vpravo"};
 
 exports.moveDirectionUp = function(d){return "nahoru"};
 
-exports.moveDirectionRandom = function(d){return "ar hap"};
+exports.moveDirectionRandom = function(d){return "náhodně"};
 
 exports.moveDistance25 = function(d){return "25 pixelů"};
 
@@ -18938,15 +18972,15 @@ exports.moveUpTooltip = function(d){return "pohnout hercem nahoru."};
 
 exports.moveTooltip = function(d){return "pohnout hercem."};
 
-exports.nextLevel = function(d){return "Gratulujeme! Dokončil jsi toto puzzle."};
+exports.nextLevel = function(d){return "Dobrá práce! Dokončil jsi tuto hádanku."};
 
 exports.no = function(d){return "Ne"};
 
-exports.numBlocksNeeded = function(d){return "Tato hádanka může být vyřešena s %1 blocky."};
+exports.numBlocksNeeded = function(d){return "Tato hádanka může být vyřešena pomocí %1 bloků."};
 
 exports.ouchExclamation = function(d){return "Ouch!"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "přehrát zvuk křupání"};
 
 exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
 
@@ -19020,7 +19054,7 @@ exports.projectilePurpleHearts = function(d){return "purple hearts"};
 
 exports.projectileRedHearts = function(d){return "red hearts"};
 
-exports.projectileRandom = function(d){return "ar hap"};
+exports.projectileRandom = function(d){return "náhodně"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
 
@@ -19200,7 +19234,7 @@ exports.showTSDefText = function(d){return "type text here"};
 
 exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
 
-exports.setSprite = function(d){return "gosod"};
+exports.setSprite = function(d){return "nastavit"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 

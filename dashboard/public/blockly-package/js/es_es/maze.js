@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13165,7 +13198,7 @@ exports.catMath = function(d){return "Matemáticas"};
 
 exports.catProcedures = function(d){return "Funciones"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
 exports.catVariables = function(d){return "Variables"};
 
@@ -13191,7 +13224,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Los bloques \"repetir\" o \"si
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "El bloque de función necesita tener otros bloques en su interior para funcionar."};
 
-exports.extraTopBlocks = function(d){return "Tiene bloques separados. ¿Quieres decir que quieres fijarlos al bloque \"cuando se ejecuta\"?"};
+exports.extraTopBlocks = function(d){return "Tienes bloques sueltos. ¿Quisiste adjuntarlos al bloque \"Cuando se ejecuta\"?"};
 
 exports.finalStage = function(d){return "¡Felicidades! Has completado la etapa final."};
 
@@ -13199,7 +13232,7 @@ exports.finalStageTrophies = function(d){return "¡Felicidades! Has completado l
 
 exports.finish = function(d){return "Terminar"};
 
-exports.generatedCodeInfo = function(d){return "Incluso las mejores universidades enseñan codificación basada en bloques (por ejemplo, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Aun así los bloques que has codificado se pueden mostrar en JavaScript, el lenguaje de programación más utilizado en el mundo:"};
+exports.generatedCodeInfo = function(d){return "Incluso las mejores universidades enseñan programación basada en bloques (por ejemplo, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Pero, por debajo, los bloques que has programado también se pueden mostrar en JavaScript, el lenguaje de programación más utilizado en el mundo:"};
 
 exports.hashError = function(d){return "Lo sentimos, '%1' no se corresponde con ningún programa guardado."};
 
@@ -13257,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "Puedes resolver este puzzle con <
 
 exports.tooMuchWork = function(d){return "¡Me has hecho trabajar mucho!  ¿Podrías tratar de repetir menos veces?"};
 
-exports.toolboxHeader = function(d){return "Bloques"};
+exports.toolboxHeader = function(d){return "bloques"};
 
 exports.openWorkspace = function(d){return "Cómo funciona"};
 
@@ -13303,12 +13336,12 @@ exports.signup = function(d){return "Únete al curso de introducción"};
 
 exports.hintHeader = function(d){return "Aquí hay un consejo:"};
 
-exports.genericFeedback = function(d){return "Ver como terminaste, y tratar de reparar tu programa."};
+exports.genericFeedback = function(d){return "Mira como terminaste, y trata de reparar tu programa."};
 
 
 },{"messageformat":69}],57:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.es=function(n){return n===1?"one":"other"}
-exports.atHoneycomb = function(d){return "en forma de panal"};
+exports.atHoneycomb = function(d){return "en el panal"};
 
 exports.atFlower = function(d){return "en la flor"};
 
@@ -13328,7 +13361,7 @@ exports.dirS = function(d){return "S"};
 
 exports.dirW = function(d){return "O"};
 
-exports.doCode = function(d){return "hacer"};
+exports.doCode = function(d){return "haz"};
 
 exports.elseCode = function(d){return "sino"};
 
@@ -13342,7 +13375,7 @@ exports.fillSquare = function(d){return "llena el cuadrado"};
 
 exports.fillTooltip = function(d){return "Colocar 1 unidad de tierra"};
 
-exports.finalLevel = function(d){return "¡Felicidades! Has resuelto el puzzle final."};
+exports.finalLevel = function(d){return "¡ Felicidades! Ha resuelto el rompecabezas final."};
 
 exports.flowerEmptyError = function(d){return "La flor en la que estás no tiene más néctar."};
 
@@ -13356,13 +13389,13 @@ exports.honey = function(d){return "hacer miel"};
 
 exports.honeyAvailable = function(d){return "miel"};
 
-exports.honeyTooltip = function(d){return "Prepara la miel usando el néctar"};
+exports.honeyTooltip = function(d){return "Hacer miel usando néctar"};
 
 exports.honeycombFullError = function(d){return "Este panal no tiene espacio para guardar más miel."};
 
 exports.ifCode = function(d){return "si"};
 
-exports.ifInRepeatError = function(d){return "Necesitas un bloque \"Si\" dentro de un bloque \"Repetir\".  Si tienes problemas, regresa al nivel anterior para ver cómo funciona."};
+exports.ifInRepeatError = function(d){return "Necesitas un bloque \"si\" dentro de un bloque \"repetir\". Si tienes problemas, prueba el nivel anterior otra vez para ver cómo funcionaba."};
 
 exports.ifPathAhead = function(d){return "si hay un camino delante"};
 
@@ -13376,7 +13409,7 @@ exports.ifelseFlowerTooltip = function(d){return "si hay una flor/panal en la di
 
 exports.insufficientHoney = function(d){return "Estás usando todos los bloques correctos, pero necesitas hacer la cantidad correcta de miel."};
 
-exports.insufficientNectar = function(d){return "Estás usando todos los bloques correctos, pero necesitar recolectar la cantidad correcta de néctar."};
+exports.insufficientNectar = function(d){return "Estás usando todos los bloques correctos, pero necesitas recolectar la cantidad correcta de néctar."};
 
 exports.make = function(d){return "hacer"};
 
@@ -13400,7 +13433,7 @@ exports.nectar = function(d){return "obtener néctar"};
 
 exports.nectarRemaining = function(d){return "néctar"};
 
-exports.nectarTooltip = function(d){return "Recolecta el néctar de la flor"};
+exports.nectarTooltip = function(d){return "Obtener néctar de una flor"};
 
 exports.nextLevel = function(d){return "¡Felicidades! Has completado este puzzle."};
 
@@ -13412,13 +13445,13 @@ exports.noPathLeft = function(d){return "no hay camino a la izquierda"};
 
 exports.noPathRight = function(d){return "no hay camino a la derecha"};
 
-exports.notAtFlowerError = function(d){return "Solo puedes obtener néctar de una flor."};
+exports.notAtFlowerError = function(d){return "Sólo puedes obtener néctar de una flor."};
 
-exports.notAtHoneycombError = function(d){return "Solo puedes hacer miel en un panal."};
+exports.notAtHoneycombError = function(d){return "Sólo puedes hacer miel en un panal."};
 
 exports.numBlocksNeeded = function(d){return "Este puzzle puede resolverse con %1 bloques."};
 
-exports.pathAhead = function(d){return "camino hacia adelante"};
+exports.pathAhead = function(d){return "camino adelante"};
 
 exports.pathLeft = function(d){return "si hay camino a la izquierda"};
 
@@ -13426,7 +13459,7 @@ exports.pathRight = function(d){return "si hay camino a la derecha"};
 
 exports.pilePresent = function(d){return "hay una pila"};
 
-exports.putdownTower = function(d){return "poner en el suelo la torre"};
+exports.putdownTower = function(d){return "Baja la torre"};
 
 exports.removeAndAvoidTheCow = function(d){return "Elimina 1 y evita la vaca"};
 
@@ -13436,11 +13469,11 @@ exports.removePile = function(d){return "Elimina la pila"};
 
 exports.removeStack = function(d){return "quitar pila de "+v(d,"shovelfuls")+" montones"};
 
-exports.removeSquare = function(d){return "elimina cuadrado"};
+exports.removeSquare = function(d){return "eliminar cuadrado"};
 
 exports.repeatCarefullyError = function(d){return "Para resolver esto, piensa cuidadosamente acerca del patrón de dos movimientos y un giro para ponerlo dentro del bloque \"repetir\". Es correcto hacer un giro extra, al final."};
 
-exports.repeatUntil = function(d){return "repetir hasta que"};
+exports.repeatUntil = function(d){return "repetir hasta"};
 
 exports.repeatUntilBlocked = function(d){return "mientras haya camino delante"};
 
@@ -13456,7 +13489,7 @@ exports.turnLeft = function(d){return "girar a la izquierda"};
 
 exports.turnRight = function(d){return "girar a la derecha"};
 
-exports.turnTooltip = function(d){return "Me gira a la izquierda o a la derecha 90 grados."};
+exports.turnTooltip = function(d){return "Girarme a la izquierda o a la derecha 90 grados."};
 
 exports.uncheckedCloudError = function(d){return "Asegúrate de revisar todas las nubes para ver si son flores o panales."};
 

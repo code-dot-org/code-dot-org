@@ -1,6 +1,6 @@
 * * *
 
-title: Grazie per aver accettato di ospitare un evento dell'Ora del Codice! layout: wide
+title: Grazie per aver deciso di ospitare un evento dell'Ora del Codice! layout: wide
 
 social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
 
@@ -10,9 +10,9 @@ social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= ho
 
 <% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'OradelCodice' unless hoc_s(:twitter_default_text).include? '#OradelCodice' %>
 
-# Grazie per aver accettato di ospitare un evento dell'Ora del Codice!
+# Grazie per aver deciso di ospitare un evento dell'Ora del Codice!
 
 **OGNI** organizzatore di un evento dell'Ora del Codice riceverà 10 GB di spazio su Dropbox o $10 di credito Skype come ringraziamento. [Dettagli](/prizes)
 

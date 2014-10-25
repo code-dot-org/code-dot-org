@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -11521,7 +11554,7 @@ exports.elseCode = function(d){return "bestela"};
 
 exports.finalLevel = function(d){return "Zorionak! Amaierako puzlea ebatzi duzu."};
 
-exports.heightParameter = function(d){return "altuera"};
+exports.heightParameter = function(d){return "Altuera"};
 
 exports.ifCode = function(d){return "baldin"};
 
@@ -11531,13 +11564,13 @@ exports.ifTooltip = function(d){return "Zehaztutako norabidean bidea bada, ordua
 
 exports.ifelseTooltip = function(d){return "Zehaztutako norabidean bidea bada, orduan lehenengo blokeko ekintzak egin. Bestela, egin bigarren blokeko ekintzak."};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "gehitu puntua aurkariari"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
 
 exports.incrementPlayerScore = function(d){return "increment player score"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
+exports.incrementPlayerScoreTooltip = function(d){return "Gehitu bat jokalariaren markagailura."};
 
 exports.isWall = function(d){return "is this a wall"};
 
@@ -11549,7 +11582,7 @@ exports.launchBallTooltip = function(d){return "Jokuan pilota jaurti."};
 
 exports.makeYourOwn = function(d){return "Sortu zure errebote joko propioa"};
 
-exports.moveDown = function(d){return "move down"};
+exports.moveDown = function(d){return "mugiru behera"};
 
 exports.moveDownTooltip = function(d){return "Move the paddle down."};
 
@@ -11557,15 +11590,15 @@ exports.moveForward = function(d){return "mugitu aurrera"};
 
 exports.moveForwardTooltip = function(d){return "Mugitu nazazu espazio bat aurrera."};
 
-exports.moveLeft = function(d){return "move left"};
+exports.moveLeft = function(d){return "mugitu ezkerrera"};
 
 exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
 
-exports.moveRight = function(d){return "move right"};
+exports.moveRight = function(d){return "mugitu eskuinera"};
 
 exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
 
-exports.moveUp = function(d){return "move up"};
+exports.moveUp = function(d){return "Mugitu gora"};
 
 exports.moveUpTooltip = function(d){return "Move the paddle up."};
 
@@ -11589,31 +11622,31 @@ exports.pathRight = function(d){return "eskuinera bidea badago"};
 
 exports.pilePresent = function(d){return "badago mordo bat"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "jo karraska soinua"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "jo 1 gol soinua"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "jo 2 gol soinua"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "jo kolpe soinua"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "jo galdutako puntuaren soinua"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "jo galdutako 2 puntuaren soinua"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "jo retro soinua"};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "jo borragoma soinua"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "jo zaplasteko soinua"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Jo aukeratutako soinua."};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "jo puntu irabazle soinua"};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "jo puntu irabazle soinua 2"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "jo egur soinua"};
 
 exports.putdownTower = function(d){return "dorrea lurrera bota"};
 
@@ -11621,13 +11654,13 @@ exports.reinfFeedbackMsg = function(d){return "\"Berriro saiatu\" botoiean klika
 
 exports.removeSquare = function(d){return "ezabatu karratua"};
 
-exports.repeatUntil = function(d){return "errepikatu arte"};
+exports.repeatUntil = function(d){return "errepikatu %1 arte"};
 
 exports.repeatUntilBlocked = function(d){return "aurrean bidea dagoen bitartean"};
 
 exports.repeatUntilFinish = function(d){return "errepikatu bukatu arte"};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Markagailua: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
 exports.setBackgroundRandom = function(d){return "ezarri ausazko eszena"};
 
@@ -11699,35 +11732,35 @@ exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "beheko gezia sakatzean"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Exekutatu behekaldeko ekintzak beheko gezidun tekla sakatzean."};
 
 exports.whenGameStarts = function(d){return "Jokoa hasten denean"};
 
 exports.whenGameStartsTooltip = function(d){return "Jokoa hasten denean exekutatu ondorengo ekintzak."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "ezkerreko gezia sakatzean"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Exekutatu behekaldeko ekintzak ezkerreko gezidun tekla sakatzean."};
 
 exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "eskuineko gezia sakatzean"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Exekutatu behekaldeko ekintzak eskubiko gezidun tekla sakatzean."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "goiko gezia denean"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Exekutatu behekaldeko ekintzak gora gezidun tekla sakatzean."};
 
 exports.whenWallCollided = function(d){return "when ball hits wall"};
 
 exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
 
-exports.whileMsg = function(d){return "while"};
+exports.whileMsg = function(d){return "bitartean"};
 
 exports.whileTooltip = function(d){return "Bukaerako puntua eskuratu arte barruko ekintzak errepikatu."};
 

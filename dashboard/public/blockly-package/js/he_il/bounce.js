@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -11517,19 +11550,19 @@ exports.dirW = function(d){return "מע"};
 
 exports.doCode = function(d){return "בצע"};
 
-exports.elseCode = function(d){return "אחר"};
+exports.elseCode = function(d){return "אחרת"};
 
-exports.finalLevel = function(d){return "כל הכבוד! פתרת את החידה האחרונה."};
+exports.finalLevel = function(d){return "מזל טוב! פתרת את החידה האחרונה."};
 
 exports.heightParameter = function(d){return "גובה"};
 
 exports.ifCode = function(d){return "אם"};
 
-exports.ifPathAhead = function(d){return "אם קיימת דרך לפניך"};
+exports.ifPathAhead = function(d){return "אם יש דרך מקדימה"};
 
-exports.ifTooltip = function(d){return "אם יש דרך בכיוון שנבחר, בצע מספר פעולות."};
+exports.ifTooltip = function(d){return "אם ישנה דרך בכיוון הנתון, אז תעשה פעולות כלשהן."};
 
-exports.ifelseTooltip = function(d){return "אם יש דרך בכיוון שנבחר, אז בצע את המקבץ הראשון של פעולות. אחרת, בצע את המקבץ השני של פעולות."};
+exports.ifelseTooltip = function(d){return "אם ישנה דרך בכיוון הנתון, אז בצע את הבלוק הראשון של הפעולות. אחרת, בצע את הבלוק השני של הפעולות."};
 
 exports.incrementOpponentScore = function(d){return "נקודת דרוג יריב"};
 
@@ -11553,9 +11586,9 @@ exports.moveDown = function(d){return "הזז למטה"};
 
 exports.moveDownTooltip = function(d){return "העבר את המשוט למטה."};
 
-exports.moveForward = function(d){return "זוז קדימה"};
+exports.moveForward = function(d){return "לזוז קדימה"};
 
-exports.moveForwardTooltip = function(d){return "הזז אותי צעד אחד קדימה."};
+exports.moveForwardTooltip = function(d){return "העבר אותיי מקום אחד קדימה."};
 
 exports.moveLeft = function(d){return "זוז שמאלה"};
 
@@ -11569,17 +11602,17 @@ exports.moveUp = function(d){return "זוז למעלה"};
 
 exports.moveUpTooltip = function(d){return "הזז את המשוט למעלה."};
 
-exports.nextLevel = function(d){return "כל הכבוד! השלמת את החידה הזה."};
+exports.nextLevel = function(d){return "מזל טוב! השלמת את החידה הזו."};
 
 exports.no = function(d){return "לא"};
 
 exports.noPathAhead = function(d){return "הדרך חסומה"};
 
-exports.noPathLeft = function(d){return "אין דרך שמאלה"};
+exports.noPathLeft = function(d){return "אין דרך לצד שמאל"};
 
-exports.noPathRight = function(d){return "אין דרך ימינה"};
+exports.noPathRight = function(d){return "אין דרך לצד ימין"};
 
-exports.numBlocksNeeded = function(d){return "ניתן לפתור את החידה עם %1 של אבני בנייה."};
+exports.numBlocksNeeded = function(d){return "ניתן לפתור את הפאזל עם %1 בלוקים."};
 
 exports.pathAhead = function(d){return "דרך לפניך"};
 
@@ -11589,7 +11622,7 @@ exports.pathRight = function(d){return "אם ישנה דרך לצד ימין"};
 
 exports.pilePresent = function(d){return "ישנה ערימה"};
 
-exports.playSoundCrunch = function(d){return "נגן צליל מעיכה"};
+exports.playSoundCrunch = function(d){return "תשמיע צליל מעיכה"};
 
 exports.playSoundGoal1 = function(d){return "השמע צליל מטרה 1"};
 
@@ -11623,9 +11656,9 @@ exports.removeSquare = function(d){return "הסר ריבוע"};
 
 exports.repeatUntil = function(d){return "חזור עד אשר"};
 
-exports.repeatUntilBlocked = function(d){return "כל עוד יש דרך מקדימה"};
+exports.repeatUntilBlocked = function(d){return "כאשר דרך מקדימה"};
 
-exports.repeatUntilFinish = function(d){return "חזור עד לסיום"};
+exports.repeatUntilFinish = function(d){return "חזור עד סיום"};
 
 exports.scoreText = function(d){return "ניקוד: "+v(d,"playerScore")+":"+v(d,"opponentScore")};
 
@@ -11727,24 +11760,24 @@ exports.whenWallCollided = function(d){return "כאשר הכדור פוגע בק
 
 exports.whenWallCollidedTooltip = function(d){return "בצע את הפעולות להלן כאשר הכדור מתנגש עם הקיר."};
 
-exports.whileMsg = function(d){return "בזמן"};
+exports.whileMsg = function(d){return "כאשר"};
 
-exports.whileTooltip = function(d){return "חזור על שורת הפעולות עד שתגיע לנקודת הסיום."};
+exports.whileTooltip = function(d){return "חזור על הפעולות עד שנקודת הסיום הושגה."};
 
 exports.yes = function(d){return "כן"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
-exports.and = function(d){return "וגם"};
+exports.and = function(d){return "ו"};
 
-exports.blocklyMessage = function(d){return "Blockly"};
+exports.blocklyMessage = function(d){return "בלוקלי"};
 
 exports.catActions = function(d){return "פעולות"};
 
 exports.catColour = function(d){return "צבע"};
 
-exports.catLogic = function(d){return "לוגיקה"};
+exports.catLogic = function(d){return "הגיון"};
 
 exports.catLists = function(d){return "רשימות"};
 
@@ -11768,7 +11801,7 @@ exports.dialogOK = function(d){return "אישור"};
 
 exports.directionNorthLetter = function(d){return "צ"};
 
-exports.directionSouthLetter = function(d){return "ס"};
+exports.directionSouthLetter = function(d){return "ד"};
 
 exports.directionEastLetter = function(d){return "מז"};
 
@@ -11796,7 +11829,7 @@ exports.help = function(d){return "עזרה"};
 
 exports.hintTitle = function(d){return "רמז:"};
 
-exports.jump = function(d){return "קפיצה"};
+exports.jump = function(d){return "קפוץ"};
 
 exports.levelIncompleteError = function(d){return "הנך משתמש בכל סוגי הבלוקים הנדרשים אך לא באופן הנכון."};
 
@@ -11822,7 +11855,7 @@ exports.play = function(d){return "לשחק"};
 
 exports.puzzleTitle = function(d){return "חידה "+v(d,"puzzle_number")+" מ- "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "חזור"};
+exports.repeat = function(d){return "חזור על"};
 
 exports.resetProgram = function(d){return "אפס"};
 

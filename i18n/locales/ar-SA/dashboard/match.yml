@@ -26,7 +26,7 @@ ar:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
       2-3 bounce match 1:
         Bounce Matching: الكرة المرتدة تطابق
-        Matching: تطابق
+        Matching: مطابقة
         Match the events with the actions: قم بمطابقة الأحداث بالإجراءات
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png
@@ -40,7 +40,7 @@ ar:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
       2-3 flappy match 1:
         Flappy Matching One: فلابي تطابق واحداً
-        Matching: المطابقة
+        Matching: مطابقة
         Match the events with the actions: قم بمطابقة الأحداث بالإجراءات
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
@@ -50,7 +50,7 @@ ar:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
         Maze Match One: مطابقة المتاهة واحد
-        Match the puzzles to the blocks: طابق الألغاز إلى المجموعات
+        Match the puzzles to the blocks: طابق الاحجيات مع القطع
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
@@ -58,9 +58,9 @@ ar:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
-        Maze Match: مطابقة المتاهة
+        Maze Match: تطابق المتاهة
         Match the puzzles to the blocks: طابق الاحجيات مع القطع
-        Instructions: تعليمات
+        Instructions: التعليمات
         Drag the blocks to match.: اسحب القطع حتى تتطابق.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
@@ -70,7 +70,7 @@ ar:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png
       2-3 Big Event Match 1:
-        Matching: تطابق
+        Matching: مطابقة
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
@@ -81,7 +81,7 @@ ar:
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a4.png: /script_assets/k_1_images/unplugged_images/big_event_1_a4.png
       2-3 Binary Match 1:
-        Matching: ربط
+        Matching: مطابقة
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
         Use the key to mach each code to its letter: استعمل المفتاح لتربط الرمز مع الحرف المطابق له
         <strong>N</strong>: '<strong>N</strong>'
@@ -113,7 +113,7 @@ ar:
       4-5 maze match 1:
         Maze Match: تطابق المتاهة
         Match the puzzles to the blocks: طابق الألغاز إلى المجموعات
-        Instructions: تعليمات
+        Instructions: التعليمات
         Drag the blocks to match.: اسحب القطع حتى تتطابق.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
@@ -167,7 +167,7 @@ ar:
         <br/><br/>next to: '<br/><br/>بجانب'
       K-1 Artist 2 Match 2:
         Matching: مطابقة
-        Match the shapes based on type.: طابق الأشكال حسب النوع.
+        Match the shapes based on type.: طابق الاشكال حسب النوع.
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
         /script_assets/k_1_images/artist_images/medium_rectangle.png: /script_assets/k_1_images/artist_images/medium_rectangle.png
@@ -208,7 +208,7 @@ ar:
         /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
         /script_assets/k_1_images/move_blocks/EEEEE.png: /script_assets/k_1_images/move_blocks/EEEEE.png
       K-1 Flappy Match 1:
-        Matching: المطابقة
+        Matching: مطابقة
         Match the blocks: قم بمطابقة القطع
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
@@ -327,11 +327,11 @@ ar:
         "bigger-string: string string -> string": 'bigger-string: string string -> string'
         "find-price: string -> number": 'find-price: string -> number'
       test matching image:
-        Matching Images Two: مطابقة الصور اثنين
-        Match up all the flowers by colour!: طابق الازهار حسب اللون!
+        Matching Images Two: مطابقة الصور
+        Match up all the flowers by colour!: قم بمطابقة كل الزهور عن طريق اللون!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
-        Instructions: تعليمات
-        Drag the images from right to center.: اسحب الصورة من اليمين الى الوسط.
+        Instructions: التعليمات
+        Drag the images from right to center.: قم بسحب الصورة من اليمين إلى الوسط.
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
         /script_assets/matches/images/q2.jpg: /script_assets/matches/images/q2.jpg
@@ -341,13 +341,13 @@ ar:
         /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test matching text:
-        Matching: تطابق
-        Some really easy stuff to match.  Drag it around until you get it.: 'بعض الأشياء حقاً سهلة المطابقة .  اسحبها حتى يمكنك الحصول عليها .'
-        What color is the sky?: ما هو لون السماء؟?
-        What's in the ocean?: ماذا يوجد في المحيط؟?
-        What's Brent's last name?: ما هو الاسم الأخير لخام برنت ؟
-        Where is Brendan from?: من أين هو برندان ؟
+        Matching: مطابقة
+        Some really easy stuff to match.  Drag it around until you get it.: 'بعض الأشياء حقاً سهلة لمطابقة.  اسحب حولها حتى يمكنك الحصول عليه.'
+        What color is the sky?: ما هو لون السماء؟
+        What's in the ocean?: ماذا يوجد في المحيط؟
+        What's Brent's last name?: ما هو الاسم الأخير لخام برنت؟
+        Where is Brendan from?: من أين هو برندان؟
         blue: أزرق
         salt: الملح
-        Van Minnen: فان مينين
+        Van Minnen: فإن مينين
         Sydney: سيدني

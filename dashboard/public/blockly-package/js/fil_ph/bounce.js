@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -11531,13 +11564,13 @@ exports.ifTooltip = function(d){return "Kung meron daanan sa tinukay na direksyo
 
 exports.ifelseTooltip = function(d){return "Kung meron daan sa nasabing direksyon, kung gayon ay gawin ang unang bloke ng mga aksyon. Kung hindi, gawin ang pangalawang bloke ng mga aksyon."};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "iskor puntos ng kalaban"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
 
 exports.incrementPlayerScore = function(d){return "increment player score"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
+exports.incrementPlayerScoreTooltip = function(d){return "Magdagdag ng isa sa kasalukuyang score ng manlalaro."};
 
 exports.isWall = function(d){return "is this a wall"};
 
@@ -11549,7 +11582,7 @@ exports.launchBallTooltip = function(d){return "Gumamit ng bola sa paglalaro."};
 
 exports.makeYourOwn = function(d){return "Gumawa ng sarili mong Bounce Game"};
 
-exports.moveDown = function(d){return "move down"};
+exports.moveDown = function(d){return "igalaw pababa"};
 
 exports.moveDownTooltip = function(d){return "Move the paddle down."};
 
@@ -11557,15 +11590,15 @@ exports.moveForward = function(d){return "umabante"};
 
 exports.moveForwardTooltip = function(d){return "Igalaw ako ng paunahan ng isang puwang."};
 
-exports.moveLeft = function(d){return "move left"};
+exports.moveLeft = function(d){return "igalaw pakaliwa"};
 
 exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
 
-exports.moveRight = function(d){return "move right"};
+exports.moveRight = function(d){return "igalaw pakanan"};
 
 exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
 
-exports.moveUp = function(d){return "move up"};
+exports.moveUp = function(d){return "igalaw pataas"};
 
 exports.moveUpTooltip = function(d){return "Move the paddle up."};
 
@@ -11589,31 +11622,31 @@ exports.pathRight = function(d){return "kung ang daan sa kanan"};
 
 exports.pilePresent = function(d){return "meron mga tambak"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "magpatugtog ng crunch na tunog"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "patugtugin ang goal 1 na tunog"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "patugtugin ang goal 2 na tunog"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "patugtugin ang hit na tunog"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "patugtugin ang lose point na tunog"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "patugtugin ang lose point 2 na tunog"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "pagtugtugin ang retro na tunog"};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "patugtugin ang rubber na tunog"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "patugtugin ang slap na tunog"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Magpatugtog ng napiling tunog."};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "patugtugin ang win point na tunog"};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "patugtugin ang win point 2 na tunog"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "patugtugin ang wood sound"};
 
 exports.putdownTower = function(d){return "ibaba ang tore"};
 
@@ -11627,7 +11660,7 @@ exports.repeatUntilBlocked = function(d){return "habang ang daan ay diretso"};
 
 exports.repeatUntilFinish = function(d){return "ulitin hanggang matapos"};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Puntos: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
 exports.setBackgroundRandom = function(d){return "ilagay ang random na scene"};
 
@@ -11635,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "ilagay ang hardcourt na sce
 
 exports.setBackgroundRetro = function(d){return "ilagay ang retro na scene"};
 
-exports.setBackgroundTooltip = function(d){return "Nilalagay ang larawan sa background"};
+exports.setBackgroundTooltip = function(d){return "Nilalagay ang imahe ng background"};
 
 exports.setBallRandom = function(d){return "ilagay ang random na bola"};
 
@@ -11699,35 +11732,35 @@ exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "kapag ang pababang arrow"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Ipatupad ang mga aksyon sa ibaba kapag ang pataas na arrow key ay pinindot."};
 
 exports.whenGameStarts = function(d){return "kapag nagsimula ang laro"};
 
 exports.whenGameStartsTooltip = function(d){return "Ipatupad ang mga aksyon sa ibaba kapag nagsisimula ang laro."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "kapag ang kaliwa na arrow"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Ipatupad ang mga aksyon sa ibaba kapag ang pataas na arrow key ay pinindot."};
 
 exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "kapag ang kanan na arrow"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Ipatupad ang mga aksyon sa ibaba kapag ang pataas na arrow key ay pinindot."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "kapag ang pataas na arrow"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Ipatupad ang mga aksyon sa ibaba kapag ang pataas na arrow key ay pinindot."};
 
 exports.whenWallCollided = function(d){return "when ball hits wall"};
 
 exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
 
-exports.whileMsg = function(d){return "while"};
+exports.whileMsg = function(d){return "habang"};
 
 exports.whileTooltip = function(d){return "Ulitin ang mga nakalakip na mga aksyon hanggang ang dulo ay maabot."};
 

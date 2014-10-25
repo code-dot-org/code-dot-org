@@ -105,7 +105,7 @@ km:
     name: Choose your name
     picture: Now find your secret picture
     words: Now enter your secret words
-    login: Sign in
+    login: ចូល​គណនី
   password:
     reset_form:
       title: បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?
@@ -166,8 +166,8 @@ km:
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
       title: Please Confirm
-      "no": 'No'
-      "yes": 'Yes'
+      "no": ទេ
+      "yes": យល់ព្រម
       msg: 'Are you sure you want to claim the %{prize_name} prize?'
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
@@ -224,8 +224,8 @@ km:
       settings: My account
       prizes: Prizes
       logout: Sign out
-      signin: Sign in
-      signup: Sign up
+      signin: ចូល​គណនី
+      signup: ចុះឈ្មោះ
       already_registered: Already registered?
     popup:
       progress: Your progress
@@ -346,6 +346,9 @@ km:
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Male
     female: Female
@@ -373,7 +376,7 @@ km:
     teacher: មើល​ដំណោះស្រាយ
     auth_error: You are not authorized to see the solution.
     submit: Update Artist Location
-    direction: ទីតាំង​ចាប់ផ្ដើម
+    direction: Start Direction (in degrees)
   video:
     tab: វីដេអូ។
     notes: គ្មាន​វីដេអូ​ទេ? មើល​កំណត់​ចំណាំ។
@@ -382,7 +385,7 @@ km:
     download: ទាញយក​វីដេអូ
   compatability:
     working:
-      header: We are working on support for your browser.
+      header: ពួក​យើង​កំពុង​ធ្វើការ​ឲ្យ​អាច​ដើរ​បាន​លើ​កម្មវិធី​អ៊ីនធឺណិត​របស់​អ្នក។
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
       hide_this_warning: Hide this warning
     upgrade:
@@ -428,9 +431,13 @@ km:
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: តើ​ចង់​បង្កើត​របស់​អ្នក​មែនទេ?
     more: 'ច្រើន​ទៀត &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
@@ -440,7 +447,7 @@ km:
   multi:
     wrong_title: សំណួរ​មិន​ត្រឹមត្រូវ
     wrong_body: សំណួរ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!
-    correct_title: ត្រឹមត្រូវ
+    correct_title: ត្រឹម​ត្រូវ
     correct_body: នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។
   match:
     wrong_title: ដំណោះស្រាយ​មិន​ត្រឹមត្រូវ

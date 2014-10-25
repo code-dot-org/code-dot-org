@@ -27,7 +27,7 @@
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
       2-3 bounce match 1:
         Bounce Matching: 'Bounce: съвпадение'
-        Matching: "Съчетаване"
+        Matching: "Съвпадение"
         Match the events with the actions: "Изберете съответстващите събития и действия"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png"
@@ -40,8 +40,8 @@
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png"
       2-3 flappy match 1:
-        Flappy Matching One: Flappy -Свързване 1
-        Matching: "Съчетаване"
+        Flappy Matching One: Flappy- Свързване 1
+        Matching: "Съвпадение"
         Match the events with the actions: "Изберете съответстващите събития и действия"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png"
@@ -51,7 +51,8 @@
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png"
       2-3 maze match 1:
         Maze Match One: "Лабиринт - Съчетаване 1"
-        Match the puzzles to the blocks: "Изберете съответстващите блокове на пъзелите"
+        Match the puzzles to the blocks: "Свържете пъзелите със съответсващите им
+          блокове"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
@@ -59,9 +60,8 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
       2-3 Maze Match 2:
-        Maze Match: "Лабиринт свързване"
-        Match the puzzles to the blocks: "Свържете пъзелите със съответсващите им
-          блокове"
+        Maze Match: "Лабиринт - Свързване"
+        Match the puzzles to the blocks: "Свържете пъзелите със съответните блокове"
         Instructions: "Инструкции"
         Drag the blocks to match.: "Плъзнете блоковете да се свържат."
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
@@ -115,10 +115,10 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
       4-5 maze match 1:
-        Maze Match: "Лабиринт - Свързване"
-        Match the puzzles to the blocks: "Свържете пъзелите със съответните блокове"
+        Maze Match: "Лабиринт свързване"
+        Match the puzzles to the blocks: "Изберете съответстващите блокове на пъзелите"
         Instructions: "Инструкции"
-        Drag the blocks to match.: "Плъзнете блоковете да се свържат."
+        Drag the blocks to match.: "Плъзнете блоковете да се комбинират."
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
@@ -127,7 +127,7 @@
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
       4-5 Algorithms Match 1:
-        Matching: "Съчетаване"
+        Matching: "Съвпадение"
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: "Свържи
           стъпките в играта на зарове по реда, в който те трябва да се случат в алгоритъма."
         "<h4>1)</h4>": "<h4>1)</h4>"
@@ -141,7 +141,7 @@
         "<h4>Compare player scores to see who wins</h4>": "<h4>Сравняват се резултатите
           на играчите за да види кой печели</h4>"
       4-5 Computational Thinking Match 1:
-        Matching: "Съчетаване"
+        Matching: "Съвпадение"
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: "Всяко
           от тези превозни средства е разглобено на малки части. Свържете всяко превозно
           средство с неговите части."
@@ -158,7 +158,7 @@
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
       4-5 Suncatchers Match 1:
-        Matching: "Съчетаване"
+        Matching: "Съвпадение"
         Match each program to the word it makes, using the provided group of skills.: "Свържете
           всяка програма с думата, която прави, използвайки предоставената група  умения."
         "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
@@ -171,7 +171,7 @@
         "<h4>STAR</h4>": "<h4>STAR</h4>"
         "<h4>RAMP</h4>": "<h4>RAMP</h4>"
       K-1 Artist 2 Match 1:
-        Matching: "Съчетаване"
+        Matching: "Съвпадение"
         Is the square next to, above, or below the ball?: "Квадратът до, над или под
           топката е?"
         "/script_assets/k_1_images/artist_images/square_above_ball.png": "/script_assets/k_1_images/artist_images/square_above_ball.png"
@@ -181,18 +181,18 @@
         "<br/><br/>below": "<br/> <br/> под"
         "<br/><br/>next to": "<br/> <br/> до"
       K-1 Artist 2 Match 2:
-        Matching: "Свързване"
+        Matching: "Съвпадение"
         Match the shapes based on type.: "Свържете фигурите, опирайки се на примера."
         "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
         "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
         "/script_assets/k_1_images/artist_images/medium_rectangle.png": "/script_assets/k_1_images/artist_images/medium_rectangle.png"
         "/script_assets/k_1_images/artist_images/small_triangle.png": "/script_assets/k_1_images/artist_images/small_triangle.png"
         "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
-        "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
+        "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.pn"
         "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
         "/script_assets/k_1_images/artist_images/large_triangle.png": "/script_assets/k_1_images/artist_images/large_triangle.png"
       K-1 Artist 2 Match 3:
-        Matching: "Съчетаване"
+        Matching: "Съвпадение"
         Match the shapes based on type.: "Свържете фигурите, опирайки се на примера."
         "/script_assets/k_1_images/artist_images/large_circle.png": "/script_assets/k_1_images/artist_images/large_circle.png"
         "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.pn"
@@ -212,7 +212,7 @@
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png"
       K-1 Bee Loops Match 1:
-        Matching: "Съчетаване"
+        Matching: "Съвпадение"
         Match the blocks: "Свържете блоковете"
         "/script_assets/k_1_images/bee_images/r4_gnectar.png": "/script_assets/k_1_images/bee_images/r4_gnectar.png"
         "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
@@ -223,7 +223,7 @@
         "/script_assets/k_1_images/bee_images/5_ghoney.png": "/script_assets/k_1_images/bee_images/5_ghoney.png"
         "/script_assets/k_1_images/move_blocks/EEEEE.png": "/script_assets/k_1_images/move_blocks/EEEEE.png"
       K-1 Flappy Match 1:
-        Matching: "Съчетаване"
+        Matching: "Съвпадение"
         Match the blocks: "Свържете блоковете"
         "/script_assets/k_1_images/flappy_images/click.png": "/script_assets/k_1_images/flappy_images/click.png"
         "/script_assets/k_1_images/flappy_images/hit_ground.png": "/script_assets/k_1_images/flappy_images/hit_ground.png"
@@ -232,10 +232,10 @@
         "/script_assets/k_1_images/flappy_images/end.png": "/script_assets/k_1_images/flappy_images/end.png"
         "/script_assets/k_1_images/flappy_images/score.png": "/script_assets/k_1_images/flappy_images/score.png"
       K-1 Maze Match 1:
-        Matching: "Съчетаване"
+        Matching: "Съвпадение"
         Match the puzzles and blocks: "Намерете съответствие между пъзели и блокове"
         Instructions: "Инструкции"
-        Drag the blocks to match.: "Плъзнете блоковете да се комбинират."
+        Drag the blocks to match.: "Плъзнете блоковете да се свържат."
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
         "/script_assets/k_1_images/maze_images/maze_ENE.png": "/script_assets/k_1_images/maze_images/maze_ENE.png"
@@ -375,14 +375,14 @@
         "/script_assets/matches/images/a3.jpg": "/script_assets/matches/images/a3.jpg"
         "/script_assets/matches/images/a4.jpg": "/script_assets/matches/images/a4.jpg"
       test matching text:
-        Matching: "Съчетаване"
+        Matching: "Съвпадение"
         Some really easy stuff to match.  Drag it around until you get it.: "Някои
-          наистина лесни неща за свързване.  Плъзнете ги, докато се получи."
+          наистина лесни неща за съвпадане.  Плъзнете го, докато се получи."
         What color is the sky?: "Какъв цвят е небето?"
-        What's in the ocean?: "Какъв е океана?"
-        What's Brent's last name?: "Какво е фамилното име на Брент?"
-        Where is Brendan from?: "Откъде е Брендън?"
+        What's in the ocean?: "Какво е в океана?"
+        What's Brent's last name?: "Какво е фамилното име Брент?"
+        Where is Brendan from?: "От къде е Брендън?"
         blue: "синьо"
-        salt: "солен"
+        salt: "сол"
         Van Minnen: "Ван Миннен"
         Sydney: "Сидни"

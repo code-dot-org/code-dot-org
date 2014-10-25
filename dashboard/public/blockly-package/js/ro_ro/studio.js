@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13335,7 +13368,6 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('TEXT')
-        .setCheck('String')
         .appendTitle(msg.setScoreText());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -16437,7 +16469,9 @@ Studio.init = function(config) {
     return el.getBoundingClientRect().width;
   };
 
-  arrangeStartBlocks(config);
+  if (config.level.edit_blocks != 'toolbox_blocks') {
+    arrangeStartBlocks(config);
+  }
 
   config.twitter = twitterOptions;
 
@@ -18664,7 +18698,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ro = function 
   }
   return 'other';
 };
-exports.and = function(d){return "și"};
+exports.and = function(d){return "şi"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -18682,7 +18716,7 @@ exports.catMath = function(d){return "Matematică"};
 
 exports.catProcedures = function(d){return "Funcţii"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variabile"};
 
@@ -18690,7 +18724,7 @@ exports.codeTooltip = function(d){return "Vezi codul JavaScript generat."};
 
 exports.continue = function(d){return "Continuă"};
 
-exports.dialogCancel = function(d){return "Revocare"};
+exports.dialogCancel = function(d){return "Anulează"};
 
 exports.dialogOK = function(d){return "OK"};
 
@@ -18714,7 +18748,7 @@ exports.finalStage = function(d){return "Felicitări! Ai terminat ultima etapă.
 
 exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"ro",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Finalizare"};
+exports.finish = function(d){return "Sfârsit"};
 
 exports.generatedCodeInfo = function(d){return "Chiar și în universităţi de top se predă programarea bazată pe blocuri de coduri (de exemplu, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Dar în esență, blocurile de cod pe care le-ai compus pot fi de asemenea afișate în JavaScript, limbajul de programare cel mai utilizat din lume:"};
 
@@ -18724,7 +18758,7 @@ exports.help = function(d){return "Ajutor"};
 
 exports.hintTitle = function(d){return "Sugestie:"};
 
-exports.jump = function(d){return "sări"};
+exports.jump = function(d){return "sari"};
 
 exports.levelIncompleteError = function(d){return "Utilizezi toate tipurile de blocuri necesare, dar nu așa cum trebuie."};
 
@@ -18760,13 +18794,13 @@ exports.runTooltip = function(d){return "Rulează programul definit de blocuri �
 
 exports.score = function(d){return "scor"};
 
-exports.showCodeHeader = function(d){return "Arată Codul"};
+exports.showCodeHeader = function(d){return "Arată codul"};
 
 exports.showGeneratedCode = function(d){return "Arată codul"};
 
 exports.subtitle = function(d){return "un mediu de programare vizual"};
 
-exports.textVariable = function(d){return "text"};
+exports.textVariable = function(d){return "scris"};
 
 exports.tooFewBlocksMsg = function(d){return "Folosești toate tipurile necesare de blocuri, dar încearcă să utilizezi mai multe din aceste tipuri de blocuri pentru a completa puzzle-ul."};
 
@@ -18774,7 +18808,7 @@ exports.tooManyBlocksMsg = function(d){return "Acest puzzle poate fi rezolvat cu
 
 exports.tooMuchWork = function(d){return "M-ai făcut să lucrez foarte mult! Ai putea să încerci să repeți de mai puține ori?"};
 
-exports.toolboxHeader = function(d){return "Blocuri"};
+exports.toolboxHeader = function(d){return "blocuri"};
 
 exports.openWorkspace = function(d){return "Cum funcţionează"};
 
@@ -18900,7 +18934,7 @@ exports.moveDirectionRight = function(d){return "dreapta"};
 
 exports.moveDirectionUp = function(d){return "sus"};
 
-exports.moveDirectionRandom = function(d){return "aleatoriu"};
+exports.moveDirectionRandom = function(d){return "aleator"};
 
 exports.moveDistance25 = function(d){return "25 de pixeli"};
 
@@ -18948,31 +18982,31 @@ exports.numBlocksNeeded = function(d){return "Acest puzzle poate fi rezolvat cu 
 
 exports.ouchExclamation = function(d){return "Aoleu!"};
 
-exports.playSoundCrunch = function(d){return "redă sunet zdrobit"};
+exports.playSoundCrunch = function(d){return "redă sunet de zdrobire"};
 
-exports.playSoundGoal1 = function(d){return "redă sunet obiectiv 1"};
+exports.playSoundGoal1 = function(d){return "Redă sunet obiectiv 1"};
 
-exports.playSoundGoal2 = function(d){return "redă sunet obiectiv 2"};
+exports.playSoundGoal2 = function(d){return "Redă sunet obiectiv 2"};
 
-exports.playSoundHit = function(d){return "redă sunet lovit"};
+exports.playSoundHit = function(d){return "redă sunet de lovitură"};
 
-exports.playSoundLosePoint = function(d){return "redă sunet punct pierdut"};
+exports.playSoundLosePoint = function(d){return "redă sunet de punct slab"};
 
-exports.playSoundLosePoint2 = function(d){return "redă sunet punct pierdut 2"};
+exports.playSoundLosePoint2 = function(d){return "redă sunet de punct slab 2"};
 
 exports.playSoundRetro = function(d){return "redă sunet retro"};
 
-exports.playSoundRubber = function(d){return "redă sunet radieră"};
+exports.playSoundRubber = function(d){return "redă sunet de cauciuc"};
 
-exports.playSoundSlap = function(d){return "redă sunet pălmuire"};
+exports.playSoundSlap = function(d){return "redă sunet de plezneală"};
 
 exports.playSoundTooltip = function(d){return "Redă sunetul ales."};
 
-exports.playSoundWinPoint = function(d){return "redă sunet punct câștigat"};
+exports.playSoundWinPoint = function(d){return "redă sunet de punct victorios"};
 
-exports.playSoundWinPoint2 = function(d){return "redă sunet punct câștigat 2"};
+exports.playSoundWinPoint2 = function(d){return "redă sunet de punct victorios 2"};
 
-exports.playSoundWood = function(d){return "redă sunet lemn"};
+exports.playSoundWood = function(d){return "redă sunet de lemn"};
 
 exports.positionOutTopLeft = function(d){return "în poziţia de sus din stânga"};
 
@@ -19028,7 +19062,7 @@ exports.reinfFeedbackMsg = function(d){return "Poţi apăsa butonul \"Încearcă
 
 exports.repeatForever = function(d){return "repetă pentru totdeauna"};
 
-exports.repeatDo = function(d){return "execută"};
+exports.repeatDo = function(d){return "fă"};
 
 exports.repeatForeverTooltip = function(d){return "Execută acțiunile din acest bloc în mod repetat în timp ce povestea se desfăşoară."};
 
@@ -19282,7 +19316,7 @@ exports.whenArrowUp = function(d){return "săgeată în sus"};
 
 exports.whenArrowTooltip = function(d){return "Executa acţiuniile de mai jos atunci când tasta săgeată specificat este apăsată."};
 
-exports.whenDown = function(d){return "când tasta săgeată în jos"};
+exports.whenDown = function(d){return "când săgeata în jos"};
 
 exports.whenDownTooltip = function(d){return "Execută acțiunile de mai jos atunci când tasta săgeată în jos este apăsată."};
 
@@ -19290,11 +19324,11 @@ exports.whenGameStarts = function(d){return "când începe povestea"};
 
 exports.whenGameStartsTooltip = function(d){return "Execută acţiunile de mai jos atunci când povestea începe."};
 
-exports.whenLeft = function(d){return "când tasta săgeată la stânga"};
+exports.whenLeft = function(d){return "când săgeată la stânga"};
 
 exports.whenLeftTooltip = function(d){return "Execută acțiunile de mai jos atunci când tasta săgeată la stânga este apăsată."};
 
-exports.whenRight = function(d){return "când tasta săgeată la dreapta"};
+exports.whenRight = function(d){return "când săgeată la dreapta"};
 
 exports.whenRightTooltip = function(d){return "Execută acțiunile de mai jos atunci când tasta săgeată la dreapta este apăsată."};
 
@@ -19340,7 +19374,7 @@ exports.whenSpriteCollidedWithRightEdge = function(d){return "atinge marginea dr
 
 exports.whenSpriteCollidedWithTopEdge = function(d){return "atinge marginea de sus"};
 
-exports.whenUp = function(d){return "atunci când săgeată în sus"};
+exports.whenUp = function(d){return "când săgeată în sus"};
 
 exports.whenUpTooltip = function(d){return "Execută acțiunile de mai jos atunci când tasta săgeată în sus este apăsată."};
 

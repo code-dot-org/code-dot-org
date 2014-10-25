@@ -4,7 +4,7 @@ title: Resources layout: wide nav: resources_nav
 
 * * *
 
-# Resources
+# संसाधन
 
 ## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
 

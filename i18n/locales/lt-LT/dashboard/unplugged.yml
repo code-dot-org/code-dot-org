@@ -2,7 +2,7 @@ lt:
   data:
     unplugged:
       Unplug1:
-        title: Programavimo įvadas
+        title: Informatikos įvadas
         desc: 'Šioje pamokėlėje bus supažindinama su programavimo samprata ir paaiškinama, ką dirba IT specialistas. Mokiniams bus suteikta galimybė pasijusti IT specialisto kailyje. Pamokėlės pabaigoje kiekvienas mokinys nešis namo priminimą, ką jis ar ji išmoko. Jūs galite būti linkę praleisti  įvairių sąvokų paaiškinimus, tačiau jas mokyti galima labai žaismingai.'
         pdfs:
           - unplug1
@@ -81,7 +81,7 @@ lt:
         desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
         video: C1_sėklos_sodinimas
       BuildingAFoundation:
-        title: Pamatų kūrimas
+        title: Laiptuota piramidė
         desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
         video: C1_pamatų_kūrimas
       GettingLoopy:

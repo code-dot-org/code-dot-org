@@ -24,4 +24,10 @@
 
 Το βραβείο αυτό αφορά μόνο τα δημόσια σχολεία κατηγορίας K-12 των Η.Π.Α. . Γιατί μόνο δημόσια σχολεία; [See the answer here](http://www.hourofcode.com/#faq). Όλο το σχολείο σας πρέπει να έχει εγγραφεί στην Ώρα του Κώδικα μέχρι τις 14 Νοεμβρίου 2014. Ένα σχολείο σε κάθε πολιτεία των Η.Π.Α. θα λάβει ένα σετ υπολογιστών. Το Code.org θα επιλέξει και θα ενημερώσει τους νικητές μέσω email μέχρι τη 1 Δεκεμβρίου 2014.
 
+To clarify, this is not a sweepstakes or a contest involving pure chance.
+
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+
 <% end %>

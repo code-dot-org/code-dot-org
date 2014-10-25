@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1180,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -13335,7 +13368,6 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('TEXT')
-        .setCheck('String')
         .appendTitle(msg.setScoreText());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -16437,7 +16469,9 @@ Studio.init = function(config) {
     return el.getBoundingClientRect().width;
   };
 
-  arrangeStartBlocks(config);
+  if (config.level.edit_blocks != 'toolbox_blocks') {
+    arrangeStartBlocks(config);
+  }
 
   config.twitter = twitterOptions;
 
@@ -18667,13 +18701,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Listor"};
 
-exports.catLoops = function(d){return "loopar"};
+exports.catLoops = function(d){return "Loopar"};
 
 exports.catMath = function(d){return "Matte"};
 
 exports.catProcedures = function(d){return "Funktioner"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -18715,7 +18749,7 @@ exports.help = function(d){return "Hjälp"};
 
 exports.hintTitle = function(d){return "Tips:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "hoppa"};
 
 exports.levelIncompleteError = function(d){return "Du använder alla nödvändiga typer av block, men inte på rätt sätt."};
 
@@ -18765,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "Detta pusslet kan lösas med <x i
 
 exports.tooMuchWork = function(d){return "Du fick mig att göra en hel del arbete!  Du kan försöka upprepa färre gånger?"};
 
-exports.toolboxHeader = function(d){return "Block"};
+exports.toolboxHeader = function(d){return "bitar"};
 
 exports.openWorkspace = function(d){return "Hur det fungerar"};
 
@@ -18818,21 +18852,21 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 var MessageFormat = require("messageformat");MessageFormat.locale.sv=function(n){return n===1?"one":"other"}
 exports.actor = function(d){return "skådespelare"};
 
-exports.catActions = function(d){return "Handlingar"};
+exports.catActions = function(d){return "Åtgärder"};
 
-exports.catControl = function(d){return "Loopar"};
+exports.catControl = function(d){return "loopar"};
 
 exports.catEvents = function(d){return "Events"};
 
 exports.catLogic = function(d){return "Logik"};
 
-exports.catMath = function(d){return "Matematik"};
+exports.catMath = function(d){return "Matte"};
 
-exports.catProcedures = function(d){return "Funktioner"};
+exports.catProcedures = function(d){return "funktioner"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
-exports.catVariables = function(d){return "Variabler"};
+exports.catVariables = function(d){return "variabler"};
 
 exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
 
@@ -18846,7 +18880,7 @@ exports.defaultSayText = function(d){return "skriv här"};
 
 exports.emotion = function(d){return "mood"};
 
-exports.finalLevel = function(d){return "Grattis! Du har löst den sista uppgiften."};
+exports.finalLevel = function(d){return "Grattis! Du har löst det sista pusslet."};
 
 exports.hello = function(d){return "hello"};
 
@@ -18858,17 +18892,17 @@ exports.makeProjectileDisappear = function(d){return "disappear"};
 
 exports.makeProjectileBounce = function(d){return "bounce"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "skapa ett blått eldklot"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "skapa ett lila eldklot"};
 
-exports.makeProjectileRedFireball = function(d){return "skapa röd eldboll"};
+exports.makeProjectileRedFireball = function(d){return "skapa ett rött eldklot"};
 
 exports.makeProjectileYellowHearts = function(d){return "skapa gula hjärtan"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "skapa lila hjärtan"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "skapa röda hjärtan"};
 
 exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
 
@@ -18922,15 +18956,15 @@ exports.moveUpTooltip = function(d){return "Move the paddle up."};
 
 exports.moveTooltip = function(d){return "Move a character."};
 
-exports.nextLevel = function(d){return "Grattis! Du har slutfört den här uppgiften."};
+exports.nextLevel = function(d){return "Grattis! Du har slutfört detta pusslet."};
 
 exports.no = function(d){return "Nej"};
 
-exports.numBlocksNeeded = function(d){return "Den här uppgiften kan lösas med %1 block."};
+exports.numBlocksNeeded = function(d){return "Detta pusslet kan lösas med %1 block."};
 
-exports.ouchExclamation = function(d){return "Ouch!"};
+exports.ouchExclamation = function(d){return "Aj!"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "spela krossa ljud"};
 
 exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
 
@@ -18992,17 +19026,17 @@ exports.positionOutBottomRight = function(d){return "to the below bottom right p
 
 exports.positionRandom = function(d){return "to the random position"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "blått eldklot"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "lila eldklot"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "rött eldklot"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "gula hjärtan"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "lila hjärtan"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "röda hjärtan"};
 
 exports.projectileRandom = function(d){return "slumpad"};
 
@@ -19010,7 +19044,7 @@ exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" b
 
 exports.repeatForever = function(d){return "repeat forever"};
 
-exports.repeatDo = function(d){return "utför"};
+exports.repeatDo = function(d){return "gör"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
 
@@ -19184,7 +19218,7 @@ exports.showTSDefText = function(d){return "type text here"};
 
 exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
 
-exports.setSprite = function(d){return "välj"};
+exports.setSprite = function(d){return "Välj"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 
