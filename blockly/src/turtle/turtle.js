@@ -513,14 +513,14 @@ Turtle.step = function(command, values) {
 };
 
 Turtle.setPattern = function (pattern) {
-  if ( pattern == null ) {
+  if ( pattern === null ) {
     Turtle.patternForPaths = new Image();
     Turtle.isDrawingWithPattern = false;
   } else {
     Turtle.patternForPaths = pattern;
     Turtle.isDrawingWithPattern = true;
   }
-}
+};
 
 Turtle.jumpForward_ = function (distance) {
   Turtle.x += distance * Math.sin(2 * Math.PI * Turtle.heading / 360);
