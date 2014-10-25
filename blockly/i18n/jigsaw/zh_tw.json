@@ -3,8 +3,8 @@
   "nextLevel": "恭喜！你已經完成這個關卡。",
   "no": "否",
   "numBlocksNeeded": "這個關卡可以使用 %1 個程式積木來完成。",
-  "reinfFeedbackMsg": "您可以按下\"重試\"按鈕，重玩一次遊戲。",
+  "reinfFeedbackMsg": "您可以按\"重試\"按鈕，回去玩您的遊戲。",
   "share": "分享",
-  "shareGame": "分享您的遊戲 : ",
-  "yes": "確定"
+  "shareGame": "分享您的遊戲",
+  "yes": "是"
 }

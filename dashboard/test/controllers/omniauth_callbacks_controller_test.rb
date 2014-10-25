@@ -65,7 +65,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 'clever', user.provider
     assert_equal 'Hat Cat', user.name
     assert_equal User::TYPE_TEACHER, user.user_type
-    assert_equal 21, user.age # we know you're an adult if you are a teacher on clever
+    assert_equal "21+", user.age # we know you're an adult if you are a teacher on clever
     assert_equal nil, user.gender
   end
 

@@ -43,12 +43,6 @@ body {
   display: block;
 }
 
-#pageheader img#logo-it {
-  width: 500px;
-  height: 127px;
-  display: block;
-}
-
 #pageheader #right {
   width: 640px; 
   float: right; 
@@ -239,9 +233,4 @@ a.user-menu-link {
 .mobile-headers #pageheader img#logo {
   width: 37px;
   height: 37px;
-}
-
-.mobile-headers #pageheader img#logo-it {
-  width: 500px;
-  height: 127px;
 }

@@ -136,11 +136,22 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "can create a user with age 21+" do
+    Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
+      assert_difference('User.count') do
+        user = User.create(@good_data.merge({age: '21+', username: 'anewone', email: 'new@email.com'}))
+
+        assert_equal Date.new(Date.today.year - 21, Date.today.month, Date.today.day), user.birthday
+        assert_equal "21+", user.age
+      end
+    end
+  end
+
 
   test "cannot create a user with age that's not a number" do
     assert_no_difference('User.count') do
       user = User.create(@good_data.merge({age: 'old', username: 'anewone', email: 'new@email.com'}))
-      assert_equal ["Age is not a number"], user.errors.full_messages
+      assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
       # should not be able to select -1 (they have a dropdown from
       # 4..100)
@@ -150,7 +161,7 @@ class UserTest < ActiveSupport::TestCase
   test "cannot create a user with negative age" do
     assert_no_difference('User.count') do
       user = User.create(@good_data.merge({age: -15, username: 'anewone', email: 'new@email.com'}))
-      assert_equal ["Age must be greater than -1"], user.errors.full_messages
+      assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
       # should not be able to select -1 (they have a dropdown from
       # 4..100)
@@ -160,7 +171,7 @@ class UserTest < ActiveSupport::TestCase
   test "cannot create a user with too large age" do
     assert_no_difference('User.count') do
       user = User.create(@good_data.merge({age: 15000000, username: 'anewone', email: 'new@email.com'}))
-      assert_equal ["Age must be less than 110"], user.errors.full_messages
+      assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
       # should not be able to select -1 (they have a dropdown from
       # 4..100)
@@ -187,14 +198,32 @@ class UserTest < ActiveSupport::TestCase
     user = User.find(user.id)
 
     user.age = 24
-    assert_equal 24, user.age
+    assert_equal "21+", user.age
     assert user.age
 
     user.save!
 
     user = User.find(user.id)
     
-    assert_equal 24, user.age
+    assert_equal "21+", user.age
+  end
+
+  test "corrects age when saving a user with invalid age" do
+    user = create :user, age: 10
+
+    user.update_attribute(:birthday, Time.now - 1.month) # hacky
+
+    user = User.find(user.id)
+
+    user.age = 24
+    assert_equal "21+", user.age
+    assert user.age
+
+    user.save!
+
+    user = User.find(user.id)
+    
+    assert_equal "21+", user.age
   end
 
   test "does not update birthday if age is the same" do
@@ -388,22 +417,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
 
-  test 'ok fine you can be 0' do
-    # I think we have a couple users who said they were 0 years old
-    # (because they chose their birthday in the current year from the
-    # old calendar based date picker)
-    user = create :user, birthday: Date.today - 1.month, email: 'will_be_hashed@email.xx'
-
-    assert_equal 0, user.age
-    assert !user.email.present?
-    assert user.hashed_email.present?
-  end
-
-
   test 'users over 13 have plaintext email and hashed email' do
     user = create :user, birthday: Date.new(1990, 10, 4), email: 'will_be_hashed@email.xx'
 
-    assert user.age > 13
+    assert user.age.to_i > 13
     assert user.email.present?
     assert user.hashed_email.present?
   end
@@ -800,40 +817,40 @@ class UserTest < ActiveSupport::TestCase
     # username regex: /\A[a-z0-9\-\_\.]+\z/
 
     # new name
-    assert_equal 'captain_picard',  User.generate_username("Captain Picard")
+    assert_equal 'captain_picard', UserHelpers.generate_username(User, "Captain Picard")
 
     create(:user, username: 'captain_picard')
     # first prefix
-    assert_equal 'captain_picard1',  User.generate_username("Captain Picard")
+    assert_equal 'captain_picard1', UserHelpers.generate_username(User, "Captain Picard")
 
     # collisions are not numeric
-    assert_equal 'captain',  User.generate_username("Captain")
-    assert_equal 'captain_p',  User.generate_username("Captain    P")
+    assert_equal 'captain', UserHelpers.generate_username(User, "Captain")
+    assert_equal 'captain_p', UserHelpers.generate_username(User, "Captain    P")
 
     create(:user, username: 'captain')
     create(:user, username: 'captain1')
     create(:user, username: 'captain2')
     create(:user, username: 'captain55')
 
-    assert_equal 'captain56',  User.generate_username("Captain")
+    assert_equal 'captain56', UserHelpers.generate_username(User, "Captain")
 
-    assert_equal "d_andre_means", User.generate_username("D'Andre Means")
-    assert_equal "coder", User.generate_username('樊瑞')
+    assert_equal "d_andre_means", UserHelpers.generate_username(User, "D'Andre Means")
+    assert_equal "coder", UserHelpers.generate_username(User, '樊瑞')
 
     create(:user, username: 'coder')
     create(:user, username: 'coder1')
     create(:user, username: 'coder99')
     create(:user, username: 'coder556')
-    assert_equal "coder557", User.generate_username('樊瑞')
+    assert_equal "coder557", UserHelpers.generate_username(User, '樊瑞')
 
     # short names
-    assert_equal "coder_a", User.generate_username('a')
+    assert_equal "coder_a", UserHelpers.generate_username(User, 'a')
 
     # long names
-    assert_equal "this_is_a_really", User.generate_username('This is a really long name' + ' blah' * 10)
+    assert_equal "this_is_a_really", UserHelpers.generate_username(User, 'This is a really long name' + ' blah' * 10)
 
     # parens
-    assert_equal "kermit_the_frog", User.generate_username("Kermit (the frog)")
+    assert_equal "kermit_the_frog", UserHelpers.generate_username(User, "Kermit (the frog)")
   end
 
   test 'generates usernames' do

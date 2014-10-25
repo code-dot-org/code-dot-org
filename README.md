@@ -17,7 +17,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 ### OS X Mavericks
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
-1. `brew install install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick rbenv ruby-build`
+1. `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick rbenv ruby-build`
   1. If it complains about an old version of `X`, run `brew unlink X` and run `brew install X` again
 1. Set up MySQL
   1. Have launchd start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
@@ -109,11 +109,11 @@ For the time being—email [brian@code.org](mailto:brian@code.org) to get an ele
 
 If you want to make sure you get our attention, include an **@all** (everyone) or **@here** (everyone currently in the room) in your message.
 
-#### Pivotal Tracker
+#### Contribution ideas
 
-We pull our tasks from a Pivotal Tracker and mark certain tickets as volunteer-friendly.
+We maintain a [Pivotal Tracker board](https://www.pivotaltracker.com/n/projects/1192642) with volunteer-friendly bug tasks, project ideas and small infrastructure/code quality opportunities here: https://www.pivotaltracker.com/n/projects/1192642
 
-For the time being—for access to Pivotal Tracker, email [brian@code.org](mailto:brian@code.org).
+If you'd like to grab a task, have ideas for projects or want to discuss an item, email [brian@code.org](mailto:brian@code.org) for a board invite.
 
 ## Submitting Contributions
 

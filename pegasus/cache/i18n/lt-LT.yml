@@ -23,7 +23,7 @@
   hoc2014_host: Host it
   hoc2014_everyone: Visi
   hoc2014_support: Paremkite
-  hoc2014_whatishoc: Kas yra Kodavimo Valanda?
+  hoc2014_whatishoc: Kas yra „Programavimo valanda“?
   twentyhours_trynow: Išmėginkite dabar
   california_heading: Paprašykite savo mokyklos, kad galėtumėte mokyti programavimo
   california_text: Bet kuris mokytojas gali pasiūlyti <a href='http://studio.code.org/'>nemokamus
@@ -36,7 +36,7 @@
     savo <b>Flappy</b> žaidimą. Sugalvokite savo taisykles ir pasidalinkite su draugais!
   view_english_site: Rodyti anglų kalba
   non_english_tutorials: 'Mokymosi instrukcijos yra išverstos į daugelį kalbų:'
-  write_your_first_program: Parašyk savo pirmą kompiuterinę programą
+  write_your_first_program: Sukurk savo pirmą kompiuterinę programą
   learn_cs_concepts: Programavimo pagrindų galima išmokti tiesiog žaidžiant. Išmokite
     programuoti padedant Bilui Geitsui, Markui Cukerbergui ir žaidimų personažams
     iš Angry Birds ir Plants vs. Zombies! Išmokite kartojimo ciklus, sąlygos sakinius
@@ -47,11 +47,11 @@
   go: Eiti
   thank_you_: Ačiū!
   congratulations: Sveikiname!
-  congratulations_on_completing_hoc: Sveikiname užbaigus Kodavimo Valandą.
+  congratulations_on_completing_hoc: Sveikiname užbaigus „Programavimo valandą“!
   get_a_certificate_of_achievement: Gauti pasiekimo sertifikatą
   enter_valid_email: Prašome įvesti galiojantį el. pašto adresą
-  get_a_certificate_message: Išsiųsime Jums sertifikatą ir informaciją apie  <a href='/learn/beyond'>Kodavimo
-    Valandą</a>
+  get_a_certificate_message: Išsiųsime Jums sertifikatą ir informaciją apie  <a href='/learn/beyond'>„Programavimo
+    valandą“</a>
   get_a_certificate_message_after: Spustelėkite ant sertifikato ir atsisiųskite arba
     išsispausdinkite jį. O dabar galite tęsti <a href='http://studio.code.org'> savo
     mokymąsi</a>, arba pasirinkite norimus <a href='/learn/beyond'> kursus</a>.
@@ -77,7 +77,7 @@
   thanks_for_voting: Ačiū, kad balsavote!
   share_on_facebook: Dalintis per Facebook
   share_on_twitter: Dalintis per Twitter
-  beyond_an_hour: Užbaigus Kodavimo Valandą >
+  beyond_an_hour: Užbaigusiems „Programavimo valandą“ >
   get_started: Pradėti
   i_agree: Sutinku
   participant_select: "-Pasirinkite-"
@@ -93,7 +93,7 @@
   privacy_practices_children: See our privacy practices for children
   petition_thankyou: Ačiū, kad pasirašėte peticiją
   carousel_heading_international: Pamokos Jūsų kalba
-  continue_learning_header: Mokykitės toliau, užbaigę Kodavimo Valandą
+  continue_learning_header: Mokykitės toliau, užbaigę „Programavimo valandą“
   continue_learning_body: Yra daug galimybių. Galite mokytis internetu, savo mokykloje
     arba vasaros stovykloje.
   learn_next_level: Pereiti į kitą etapą
@@ -102,7 +102,7 @@
   hoc_is_here: "#HourOfCode jau čia – išmėginkite! @codeorg"
   just_did_hoc: 'Aš užbaigiau #HourOfCode - pažiūrėk! @codeorg'
   learn_hoc: Mokykitės „Programavimo valandos“ kurse
-  beyond_hoc: Užbaigus Kodavimo Valandą
+  beyond_hoc: Užbaigusiems „Programavimo valandą“
   what_gender: Tavo lytis?
   girl: Mergaitė
   boy: Berniukas
@@ -112,14 +112,14 @@
   lines_of_code_alt: "<b>#</b> KODO EILUČIŲ PARAŠĖ MOKINIAI"
   who_has_done_hoc: 'Kas užbaigė #HourOfCode? @codeorg'
   hoc_leaderboards: "„Programavimo valandos“ lyderiai"
-  students_and_lines: "%{students} mokinių užbaigė Kodavimo valandą ir parašė %{lines}
-    eilučių kodo."
+  students_and_lines: "%{students} mokinių užbaigė „Programavimo valandą“ ir parašė
+    %{lines} eilučių kodo."
   start_hoc: Pradėkime „Programavimo valandos“ kursą
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Kursai mažiems vaikams
   studiobar_elementary_body: Mūsų trys nauji kursai mažiems vaikams
-  studiobar_hoc_title: "„Programavimo valanda“"
+  studiobar_hoc_title: Vienos Valandos Kodo kursas
   studiobar_hoc_body: Išmokite programuoti su Angry Birds
   studiobar_flappy_title: Flappy Kodas
   studiobar_flappy_body: Sukurk ir pasidalink savo "Flappy" žaidimu
@@ -227,7 +227,7 @@
     jas mokinius. Taip bus lengviau sekti jų pažangą ir tvarkyti jų prisijungimo duomenis.
   dashboard_sections_table_section: Grupė
   dashboard_sections_table_secret: Prisijungimo rakto tipas
-  dashboard_sections_table_grade: Kelinta klasė
+  dashboard_sections_table_grade: Klasė
   dashboard_sections_table_course: Kursas
   dashboard_sections_table_students: Mokiniai
   dashboard_sections_table_code: Sekcijos kodas
@@ -304,8 +304,21 @@
   dashboard_grade_other: Kita
   dashboard_login_word: "žodžiai"
   dashboard_login_picture: paveikslėlis
-  dashboard_login_none: joks (registruojasi patys)
+  dashboard_login_none: El. pašto adresas
   dashboard_new_password: naujas slaptažodis
-  stats_hoc_2013_heading: 'Neįtikėtini praėjusių metų Kodavimo Valandos rezultatai.
+  stats_hoc_2013_heading: 'Neįtikėtini praėjusių metų „Programavimo valandos“ rezultatai.
     Per vieną savaitę:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: Mokinys
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

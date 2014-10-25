@@ -81,7 +81,7 @@
   get_started: Get Started
   i_agree: I agree
   participant_select: "- Select -"
-  participant_student: Student
+  participant_student: Učenec
   participant_parent: Parent
   participant_educator: Educator
   participant_engineer: Software Engineer
@@ -211,7 +211,7 @@
   dashboard_action_cancel: Prekliči
   dashboard_action_delete: Delete
   dashboard_action_confirm: Delete?
-  dashboard_action_delete_yes: Ja
+  dashboard_action_delete_yes: Da
   dashboard_action_delete_no: Ne
   dashboard_action_done: Done
   dashboard_action_required: required
@@ -307,8 +307,21 @@
   dashboard_grade_other: Drugi
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_none: Elektronska pošta
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: Učenec
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

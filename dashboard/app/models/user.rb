@@ -1,4 +1,5 @@
 require 'digest/md5'
+require 'cdo/user_helpers'
 
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
@@ -57,13 +58,12 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
 
   validates :age, presence: true, on: :create # only do this on create to avoid problems with existing users
-  validates :age, presence: false, numericality: { only_integer: true, greater_than: -1, less_than: 110}, allow_blank: true
-  AGE_DROPDOWN_OPTIONS = 4..100
+  AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
+  validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
 
   validates_length_of :parent_email, maximum: 255
 
-  USERNAME_ALLOWED_CHARACTERS = /[a-z0-9\-\_\.]/
-  USERNAME_REGEX = /\A#{USERNAME_ALLOWED_CHARACTERS.source}+\z/i
+  USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false
@@ -399,32 +399,19 @@ SQL
 
   def age
     return @age unless birthday
-    ((Date.today - birthday) / 365).to_i
+    age = ((Date.today - birthday) / 365).to_i
+    age = "21+" if age >= 21
+    age
   end
 
   def under_13?
-    age.nil? || age < 13
-  end
-
-  def self.generate_username(name)
-    prefix = name.downcase.gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..16].squish.gsub(' ', '_')
-
-    prefix = 'coder' if prefix.empty? || prefix == '_'
-
-    prefix = "coder_#{prefix}" if prefix.length < 5
-
-    return prefix unless User.where(username: prefix).exists?
-    
-    similar_users = User.where(["username like ?", prefix + '%'])
-
-    suffix = similar_users.map(&:username).map{|n| n.gsub(/^#{prefix}/, '')}.map(&:to_i).max + 1 # first integer suffix
-    return "#{prefix}#{suffix}"
+    age.nil? || age.to_i < 13
   end
 
   def generate_username
     return unless username.blank?
     return if name.blank?
-    self.username = User.generate_username(name)
+    self.username = UserHelpers.generate_username(User, name)
   end
 
   def short_name

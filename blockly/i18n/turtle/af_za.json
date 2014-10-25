@@ -40,7 +40,7 @@
   "jumpWestTooltip": "Moves the artist west without leaving any marks.",
   "lengthFeedback": "You got it right except for the lengths to move.",
   "lengthParameter": "length",
-  "loopVariable": "counter",
+  "loopVariable": "Teller",
   "moveBackward": "move backward by",
   "moveEastTooltip": "Moves the artist east.",
   "moveForward": "move forward by",

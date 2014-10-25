@@ -1,6 +1,5 @@
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
-var Expression = require('./expression');
 
 /**
  * Information about level-specific requirements.
@@ -13,7 +12,7 @@ module.exports = {
     ]),
     ideal: Infinity,
     toolbox: blockUtils.createToolbox(
-      blockUtils.blockOfType('functional_draw') +
+      blockUtils.blockOfType('functional_compute') +
       blockUtils.blockOfType('functional_plus') +
       blockUtils.blockOfType('functional_minus') +
       blockUtils.blockOfType('functional_times') +
