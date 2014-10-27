@@ -39,13 +39,18 @@ var block = null;
 
 function start() {
   var toolbox = document.getElementById('toolbox');
-  Blockly.inject(document.getElementById('blocklyDiv'),
-                 {'rtl': rtl, path: '../', toolbox: toolbox});
+    Blockly.loadWebAudio_ = function() {};
+    Blockly.inject(document.getElementById('blocklyDiv'),
+                 {'rtl': rtl,
+                     path: '../',
+                     toolbox: toolbox,
+                     assetUrl: function(path) { return '../' + path; }
+                 });
 }
 
 function toXml() {
   var output = document.getElementById('importExport');
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   output.value = Blockly.Xml.domToText(xml);
   output.focus();
   output.select();
@@ -54,12 +59,12 @@ function toXml() {
 function fromXml() {
   var input = document.getElementById('importExport');
   var xml = Blockly.Xml.textToDom(input.value);
-  Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
 }
 
 function toCode(lang) {
   var output = document.getElementById('importExport');
-  output.value = Blockly.Generator.workspaceToCode(lang);
+  output.value = Blockly.Generator.blockSpaceToCode(lang);
 }
 
 function airstrike(n) {
@@ -71,7 +76,7 @@ function airstrike(n) {
   }
   for (var x = 0; x < n; x++) {
     var prototype = prototypes[Math.floor(Math.random() * prototypes.length)];
-    var block = new Blockly.Block(Blockly.mainWorkspace, prototype);
+    var block = new Blockly.Block(Blockly.mainBlockSpace, prototype);
     block.initSvg();
     block.getSvgRoot().setAttribute('transform', 'translate(' +
         Math.round(Math.random() * 450 + 40) + ', ' +
@@ -276,7 +281,7 @@ h1 {
 
   <h1>Blockly Playground</h1>
 
-  <p><a href="javascript:void([document.getElementById('blocklyDiv').style.display = 'block', Blockly.mainWorkspace.render()])">Show</a>
+  <p><a href="javascript:void([document.getElementById('blocklyDiv').style.display = 'block', Blockly.mainBlockSpace.render()])">Show</a>
    - <a href="javascript:void(document.getElementById('blocklyDiv').style.display = 'none')">Hide</a></p>
 
   <script type="text/javascript">

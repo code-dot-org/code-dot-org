@@ -26,7 +26,7 @@
 goog.provide('Blockly.Connection');
 goog.provide('Blockly.ConnectionDB');
 
-goog.require('Blockly.Workspace');
+goog.require('Blockly.BlockSpace');
 
 
 /**
@@ -42,8 +42,8 @@ Blockly.Connection = function(source, type) {
   this.x_ = 0;
   this.y_ = 0;
   this.inDB_ = false;
-  // Shortcut for the databases for this connection's workspace.
-  this.dbList_ = this.sourceBlock_.workspace.connectionDBList;
+  // Shortcut for the databases for this connection's blockSpace.
+  this.dbList_ = this.sourceBlock_.blockSpace.connectionDBList;
 };
 
 /**
@@ -83,8 +83,8 @@ Blockly.Connection.prototype.connect = function(otherConnection) {
   if (this.sourceBlock_ == otherConnection.sourceBlock_) {
     throw 'Attempted to connect a block to itself.';
   }
-  if (this.sourceBlock_.workspace !== otherConnection.sourceBlock_.workspace) {
-    throw 'Blocks are on different workspaces.';
+  if (this.sourceBlock_.blockSpace !== otherConnection.sourceBlock_.blockSpace) {
+    throw 'Blocks are on different blockSpaces.';
   }
   if (Blockly.OPPOSITE_TYPE[this.type] != otherConnection.type) {
     throw 'Attempt to connect incompatible types.';
@@ -780,10 +780,10 @@ Blockly.ConnectionDB.prototype.removeConnection_ = function(connection) {
 };
 
 /**
- * Initialize a set of connection DBs for a specified workspace.
- * @param {!Blockly.Workspace} workspace The workspace this DB is for.
+ * Initialize a set of connection DBs for a specified blockSpace.
+ * @param {!Blockly.BlockSpace} blockSpace The blockSpace this DB is for.
  */
-Blockly.ConnectionDB.init = function(workspace) {
+Blockly.ConnectionDB.init = function(blockSpace) {
   // Create four databases, one for each connection type.
   var dbList = [];
   dbList[Blockly.INPUT_VALUE] = new Blockly.ConnectionDB();
@@ -793,5 +793,5 @@ Blockly.ConnectionDB.init = function(workspace) {
   dbList[Blockly.FUNCTIONAL_INPUT] = new Blockly.ConnectionDB();
   dbList[Blockly.FUNCTIONAL_OUTPUT] = new Blockly.ConnectionDB();
 
-  workspace.connectionDBList = dbList;
+  blockSpace.connectionDBList = dbList;
 };

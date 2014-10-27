@@ -48,9 +48,9 @@ Blockly.Blocks.procedures_defnoreturn = {
       this.setMutator(new Blockly.Mutator(['procedures_mutatorarg']));
     }
     this.setTooltip(Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP);
-    // Only want to have the backdrop in the mainWorkspace. We don't want it in
+    // Only want to have the backdrop in the mainBlockSpace. We don't want it in
     // the toolbox or in the feedback dialog (which is readonly).
-    this.setFramed(this.workspace === Blockly.mainWorkspace && !Blockly.readOnly);
+    this.setFramed(this.blockSpace === Blockly.mainBlockSpace && !Blockly.readOnly);
     this.arguments_ = [];
   },
   updateParams_: function() {
@@ -95,13 +95,13 @@ Blockly.Blocks.procedures_defnoreturn = {
     }
     this.updateParams_();
   },
-  decompose: function(workspace) {
-    var containerBlock = new Blockly.Block(workspace,
+  decompose: function(blockSpace) {
+    var containerBlock = new Blockly.Block(blockSpace,
                                            'procedures_mutatorcontainer');
     containerBlock.initSvg();
     var connection = containerBlock.getInput('STACK').connection;
     for (var x = 0; x < this.arguments_.length; x++) {
-      var paramBlock = new Blockly.Block(workspace, 'procedures_mutatorarg');
+      var paramBlock = new Blockly.Block(blockSpace, 'procedures_mutatorarg');
       paramBlock.initSvg();
       paramBlock.setTitleValue(this.arguments_[x], 'NAME');
       // Store the old location.
@@ -111,7 +111,7 @@ Blockly.Blocks.procedures_defnoreturn = {
     }
     // Initialize procedure's callers with blank IDs.
     Blockly.Procedures.mutateCallers(this.getTitleValue('NAME'),
-                                     this.workspace, this.arguments_, null);
+                                     this.blockSpace, this.arguments_, null);
     return containerBlock;
   },
   compose: function(containerBlock) {
@@ -126,12 +126,12 @@ Blockly.Blocks.procedures_defnoreturn = {
     }
     this.updateParams_();
     Blockly.Procedures.mutateCallers(this.getTitleValue('NAME'),
-        this.workspace, this.arguments_, this.paramIds_);
+        this.blockSpace, this.arguments_, this.paramIds_);
   },
   dispose: function() {
     // Dispose of any callers.
     var name = this.getTitleValue('NAME');
-    Blockly.Procedures.disposeCallers(name, this.workspace);
+    Blockly.Procedures.disposeCallers(name, this.blockSpace);
     // Call parent's destructor.
     Blockly.Block.prototype.dispose.apply(this, arguments);
   },
@@ -156,7 +156,7 @@ Blockly.Blocks.procedures_defnoreturn = {
       this.updateParams_();
       // Update the mutator's variables if the mutator is open.
       if (this.mutator.isVisible()) {
-        var blocks = this.mutator.workspace_.getAllBlocks();
+        var blocks = this.mutator.blockSpace_.getAllBlocks();
         for (var x = 0, block; block = blocks[x]; x++) {
           if (block.type == 'procedures_mutatorarg' &&
               Blockly.Names.equals(oldName, block.getTitleValue('NAME'))) {
@@ -219,9 +219,9 @@ Blockly.Blocks.procedures_defreturn = {
         .appendTitle(Blockly.Msg.PROCEDURES_DEFRETURN_RETURN);
     this.setMutator(new Blockly.Mutator(['procedures_mutatorarg']));
     this.setTooltip(Blockly.Msg.PROCEDURES_DEFRETURN_TOOLTIP);
-    // Only want to have the backdrop in the mainWorkspace. We don't want it in
+    // Only want to have the backdrop in the mainBlockSpace. We don't want it in
     // the toolbox or in the feedback dialog (which is readonly).
-    this.setFramed(this.workspace === Blockly.mainWorkspace && !Blockly.readOnly);
+    this.setFramed(this.blockSpace === Blockly.mainBlockSpace && !Blockly.readOnly);
     this.arguments_ = [];
   },
   updateParams_: Blockly.Blocks.procedures_defnoreturn.updateParams_,
@@ -281,26 +281,8 @@ Blockly.Blocks.procedures_callnoreturn = {
     this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);
     this.setHSV(94, 0.84, 0.60);
     var editLabel = new Blockly.FieldLabel('edit');
-    Blockly.bindEvent_(editLabel.textElement_, 'mousedown', this, function() {
-      var functionName = this.getTitleValue('NAME');
-      var definitionBlock;
 
-      // Get hidden function definition from workspace
-      {
-        var blocks = this.workspace.getAllBlocks();
-        for (var x = 0, block; block = blocks[x]; x++) {
-          if (block.type == 'procedures_defnoreturn' && Blockly.Names.equals(functionName, block.getTitleValue('NAME'))) {
-            definitionBlock = block;
-          }
-        }
-      }
-      if (!definitionBlock) {
-        throw new Error("Can't find definition block to edit");
-      }
-
-      Blockly.mainWorkspace.removeTopBlock(definitionBlock);
-      Blockly.FunctionEditor.getSharedEditor().openFunctionEditor('<xml>' + goog.dom.getOuterHtml(Blockly.Xml.blockToDom_(definitionBlock)) + '</xml>');
-    });
+    Blockly.bindEvent_(editLabel.textElement_, 'mousedown', this, this.openEditor_);
     this.appendDummyInput()
         .appendTitle(Blockly.Msg.PROCEDURES_CALLNORETURN_CALL)
         .appendTitle('', 'NAME')
@@ -311,6 +293,25 @@ Blockly.Blocks.procedures_callnoreturn = {
     this.arguments_ = [];
     this.quarkConnections_ = null;
     this.quarkArguments_ = null;
+  },
+  openEditor_: function() {
+    var functionName = this.getTitleValue('NAME');
+    var definitionBlock;
+
+    // Get hidden function definition from blockSpace
+    var blocks = this.blockSpace.getAllBlocks();
+    for (var x = 0, block; block = blocks[x]; x++) {
+      if (block.type === 'procedures_defnoreturn' && Blockly.Names.equals(functionName, block.getTitleValue('NAME'))) {
+        definitionBlock = block;
+      }
+    }
+
+    if (!definitionBlock) {
+      throw new Error("Can't find definition block to edit");
+    }
+
+    Blockly.mainBlockSpace.removeTopBlock(definitionBlock);
+    Blockly.FunctionEditor.getSharedEditor().openFunctionEditor('<xml>' + goog.dom.getOuterHtml(Blockly.Xml.blockToDom_(definitionBlock)) + '</xml>');
   },
   getProcedureCall: function() {
     return this.getTitleValue('NAME');
@@ -385,7 +386,7 @@ Blockly.Blocks.procedures_callnoreturn = {
         if (quarkName in this.quarkConnections_) {
           var connection = this.quarkConnections_[quarkName];
           if (!connection || connection.targetConnection ||
-              connection.sourceBlock_.workspace != this.workspace) {
+              connection.sourceBlock_.blockSpace != this.blockSpace) {
             // Block no longer exists or has been attached elsewhere.
             delete this.quarkConnections_[quarkName];
           } else {
@@ -418,7 +419,7 @@ Blockly.Blocks.procedures_callnoreturn = {
     this.setTooltip(
         (this.outputConnection ? Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP
          : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace('%1', name));
-    var def = Blockly.Procedures.getDefinition(name, this.workspace);
+    var def = Blockly.Procedures.getDefinition(name, this.blockSpace);
     if (def && def.mutator && def.mutator.isVisible()) {
       // Initialize caller with the mutator's IDs.
       this.setProcedureParameters(def.arguments_, def.paramIds_);
@@ -447,9 +448,9 @@ Blockly.Blocks.procedures_callnoreturn = {
     var option = {enabled: true};
     option.text = Blockly.Msg.PROCEDURES_HIGHLIGHT_DEF;
     var name = this.getTitleValue('NAME');
-    var workspace = this.workspace;
+    var blockSpace = this.blockSpace;
     option.callback = function() {
-      var def = Blockly.Procedures.getDefinition(name, workspace);
+      var def = Blockly.Procedures.getDefinition(name, blockSpace);
       def && def.select();
     };
     options.push(option);
@@ -513,7 +514,7 @@ Blockly.Blocks.procedures_ifreturn = {
     }
   },
   onchange: function() {
-    if (!this.workspace) {
+    if (!this.blockSpace) {
       // Block has been deleted.
       return;
     }

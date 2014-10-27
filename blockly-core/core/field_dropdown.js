@@ -314,7 +314,7 @@ Blockly.FieldDropdown.prototype.setText = function(text) {
   if (this.sourceBlock_ && this.sourceBlock_.rendered) {
     this.sourceBlock_.render();
     this.sourceBlock_.bumpNeighbours_();
-    this.sourceBlock_.workspace.fireChangeEvent();
+    this.sourceBlock_.blockSpace.fireChangeEvent();
   }
 };
 
