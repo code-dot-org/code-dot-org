@@ -83,6 +83,7 @@ function initTitledFunctionalBlock(block, title, type, args) {
     input.setInline(i > 0);
     input.setHSV.apply(input, colors[arg.type]);
     input.setCheck(arg.type);
+    input.setAlign(Blockly.ALIGN_CENTRE);
   }
 
   block.setFunctionalOutput(true, block.type);
@@ -113,7 +114,7 @@ function installCircle(blockly, generator, gensym) {
   blockly.Blocks.functional_circle = {
     init: function () {
       // todo - i18n
-      initTitledFunctionalBlock(this, 'circle', 'image', [
+      initTitledFunctionalBlock(this, 'circle (radius, style, color)', 'image', [
         { name: 'SIZE', type: 'Number' },
         { name: 'STYLE', type: 'string' },
         { name: 'COLOR', type: 'string' }
@@ -135,7 +136,7 @@ function installCircle(blockly, generator, gensym) {
 function installPlaceImage(blockly, generator, gensym) {
   blockly.Blocks.place_image = {
     init: function () {
-      initTitledFunctionalBlock(this, 'place-image', 'image', [
+      initTitledFunctionalBlock(this, 'place-image (image, x, y)', 'image', [
         { name: 'IMAGE', type: 'image' },
         { name: 'X', type: 'Number' },
         { name: 'Y', type: 'Number' }
@@ -156,7 +157,7 @@ function installPlaceImage(blockly, generator, gensym) {
 function installOverlay(blockly, generator, gensym) {
   blockly.Blocks.overlay = {
     init: function () {
-      initTitledFunctionalBlock(this, 'overlay', 'image', [
+      initTitledFunctionalBlock(this, 'overlay (top, bottom)', 'image', [
         { name: 'IMAGE1', type: 'image' },
         { name: 'IMAGE2', type: 'image' },
       ]);
