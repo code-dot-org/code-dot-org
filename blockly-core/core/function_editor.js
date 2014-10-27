@@ -66,7 +66,7 @@ Blockly.FunctionEditor.prototype.show = function() {
   });
 
   // Set up contract definition HTML section
-  this.createContractDom();
+  this.createContractDom_();
 
   var g = Blockly.modalWorkspace.createDom();
   this.modalBackground_ = Blockly.createSvgElement('g', {'class': 'modalBackground'});
@@ -142,25 +142,35 @@ Blockly.FunctionEditor.prototype.position_ = function() {
     this.frameText_.setAttribute('x', -width + 2 * FRAME_MARGIN_SIDE);
   }
 
+  // Resize contract div width
+  this.resizeContractDiv_();
+
   // Move workspace to account for horizontal flyout height
   var top = metrics.absoluteTop + this.flyout_.height_;
   Blockly.modalWorkspace.svgBlockCanvas_.setAttribute('transform', 'translate(0,' + top + ')');
 };
 
-Blockly.FunctionEditor.prototype.createContractDom = function() {
-  this.contractDiv_ = goog.dom.createDom('div', 'blocklyToolboxDiv paramToolbox blocklyText');
-  document.body.appendChild(this.contractDiv_);
+Blockly.FunctionEditor.prototype.resizeContractDiv_ = function() {
   var metrics = Blockly.modalWorkspace.getMetrics();
   var topLeft = Blockly.convertCoordinates(metrics.absoluteLeft, metrics.absoluteTop);
   var width = Blockly.convertCoordinates(metrics.absoluteLeft + metrics.viewWidth, 0).x - topLeft.x;
-  this.contractDiv_.style.left = topLeft.x + 'px';
-  this.contractDiv_.style.top = topLeft.y + 'px';
   this.contractDiv_.style.width = width + 'px';
+};
+
+Blockly.FunctionEditor.prototype.createContractDom_ = function() {
+  this.contractDiv_ = goog.dom.createDom('div', 'blocklyToolboxDiv paramToolbox blocklyText');
+  document.body.appendChild(this.contractDiv_);
   this.contractDiv_.innerHTML = '<div>Name your function:</div><div><input type="text""></div>'
       + '<div>What is your function supposed to do?</div>'
       + '<div><textarea rows="2"></textarea></div>'
       + '<div>What parameters does your function take?</div>'
       + '<div><input id="paramAddText" type="text" style="width: 200px;"> <button id="paramAddButton" class="btn">Add</button>';
+  var metrics = Blockly.modalWorkspace.getMetrics();
+  var topLeft = Blockly.convertCoordinates(metrics.absoluteLeft, metrics.absoluteTop);
+  var width = Blockly.convertCoordinates(metrics.absoluteLeft + metrics.viewWidth, 0).x - topLeft.x;
+  this.contractDiv_.style.left = topLeft.x + 'px';
+  this.contractDiv_.style.top = topLeft.y + 'px';
+  this.resizeContractDiv_();
   this.contractDiv_.style.display = 'block';
 };
 
