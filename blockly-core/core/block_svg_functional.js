@@ -101,8 +101,6 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
   renderInfo.inline.push('H', inputTopLeft.x);
   renderInfo.inline.push('z');
 
-
-  // var colour = goog.color.hexToRgb();
   this.inputMarkers_[input.name].setAttribute('x', inputTopLeft.x + 5);
   this.inputMarkers_[input.name].setAttribute('y', inputTopLeft.y + 15);
   this.inputMarkers_[input.name].setAttribute('width', input.renderWidth - 10);
