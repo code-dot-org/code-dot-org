@@ -15,6 +15,7 @@ module.exports = {
       blockUtils.blockOfType('functional_dividedby') +
       blockUtils.blockOfType('functional_math_number') +
       blockUtils.blockOfType('functional_string') +
+      blockUtils.blockOfType('functional_style') +
       blockUtils.blockOfType('functional_circle') +
       blockUtils.blockOfType('place_image') +
       blockUtils.blockOfType('overlay')),
