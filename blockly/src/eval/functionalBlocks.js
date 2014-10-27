@@ -2,6 +2,9 @@
  * A set of functional blocks
  */
 
+var colors = require('../functionalBlockUtils').colors;
+var initTitledFunctionalBlock = require('../functionalBlockUtils').initTitledFunctionalBlock;
+
 exports.install = function(blockly, generator, gensym) {
   installPlus(blockly, generator, gensym);
   installMinus(blockly, generator, gensym);
@@ -11,36 +14,39 @@ exports.install = function(blockly, generator, gensym) {
 };
 
 
-function initFunctionalBlock(block, title, numArgs) {
-  block.setHSV(184, 1.00, 0.74);
-  block.setFunctional(true, {
-    headerHeight: 30,
-  });
-
-  var options = {
-    fixedSize: { height: 35 },
-    fontSize: 25 // in pixels
-  };
-
-  block.appendDummyInput()
-      .appendTitle(new Blockly.FieldLabel(title, options))
-      .setAlign(Blockly.ALIGN_CENTRE);
-  for (var i = 1; i <= numArgs; i++) {
-    block.appendFunctionalInput('ARG' + i)
-         .setInline(i > 1)
-         .setHSV(184, 1.00, 0.74)
-         .setCheck('Number');
-  }
-
-  block.setFunctionalOutput(true, 'Number');
-}
+// function initFunctionalBlock(block, title, numArgs) {
+//   block.setHSV(184, 1.00, 0.74);
+//   block.setFunctional(true, {
+//     headerHeight: 30,
+//   });
+//
+//   var options = {
+//     fixedSize: { height: 35 },
+//     fontSize: 25 // in pixels
+//   };
+//
+//   block.appendDummyInput()
+//       .appendTitle(new Blockly.FieldLabel(title, options))
+//       .setAlign(Blockly.ALIGN_CENTRE);
+//   for (var i = 1; i <= numArgs; i++) {
+//     block.appendFunctionalInput('ARG' + i)
+//          .setInline(i > 1)
+//          .setHSV(184, 1.00, 0.74)
+//          .setCheck('Number');
+//   }
+//
+//   block.setFunctionalOutput(true, 'Number');
+// }
 
 function installPlus(blockly, generator, gensym) {
   blockly.Blocks.functional_plus = {
-    // Block for turning left or right.
+
     helpUrl: '',
     init: function() {
-      initFunctionalBlock(this, '+', 2);
+      initTitledFunctionalBlock(this, '+', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
     }
   };
 
@@ -53,10 +59,12 @@ function installPlus(blockly, generator, gensym) {
 
 function installMinus(blockly, generator, gensym) {
   blockly.Blocks.functional_minus = {
-    // Block for turning left or right.
     helpUrl: '',
     init: function() {
-      initFunctionalBlock(this, '-', 2);
+      initTitledFunctionalBlock(this, '-', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
     }
   };
 
@@ -69,10 +77,12 @@ function installMinus(blockly, generator, gensym) {
 
 function installTimes(blockly, generator, gensym) {
   blockly.Blocks.functional_times = {
-    // Block for turning left or right.
     helpUrl: '',
     init: function() {
-      initFunctionalBlock(this, '*', 2);
+      initTitledFunctionalBlock(this, '*', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
     }
   };
 
@@ -85,10 +95,12 @@ function installTimes(blockly, generator, gensym) {
 
 function installDividedBy(blockly, generator, gensym) {
   blockly.Blocks.functional_dividedby = {
-    // Block for turning left or right.
     helpUrl: '',
     init: function() {
-      initFunctionalBlock(this, '/', 2);
+      initTitledFunctionalBlock(this, '/', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
     }
   };
 
@@ -107,7 +119,7 @@ function installMathNumber(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV(184, 1.00, 0.74);
+      this.setHSV.apply(this, colors.Number);
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldTextInput('0',
             Blockly.FieldTextInput.numberValidator), 'NUM')
