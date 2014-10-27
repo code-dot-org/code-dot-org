@@ -98,7 +98,7 @@ Eval.init = function(config) {
 
     Eval.answerObject = generateEvalObjectFromBlockXml(level.solutionBlocks);
     Eval.answerObject.draw(document.getElementById('answer'));
-    
+
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
@@ -222,7 +222,6 @@ Eval.execute = function() {
 };
 
 function evaluateAnswer() {
-  debugger;
   var answer = document.getElementById('answer');
   var user = document.getElementById('user');
 
