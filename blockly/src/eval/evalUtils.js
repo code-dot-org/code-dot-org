@@ -23,11 +23,14 @@ module.exports.getStroke = function (style, color) {
   return "none";
 };
 
+/**
+ * Get the opacity from the style. Style is a string that is either a word or
+ * percentage (i.e. 25%).
+ */
 module.exports.getOpacity = function (style, color) {
-  // todo - validate alpha is in range 0 - 255?
-  var alpha = parseInt(style, 10);
-  if (alpha !== undefined) {
-    return alpha / 255;
+  var alpha = 1.0;
+  if (style.slice(-1) === "%") {
+    alpha = parseInt(style.slice(0, -1), 10) / 100;
   }
-  return 1.0;
+  return alpha;
 };

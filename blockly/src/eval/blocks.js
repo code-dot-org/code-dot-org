@@ -50,8 +50,12 @@ exports.install = function(blockly, blockInstallOptions) {
   installCircle(blockly, generator, gensym);
   installPlaceImage(blockly, generator, gensym);
   installOverlay(blockly, generator, gensym);
+  installStyle(blockly, generator, gensym);
 };
 
+/**
+ * functional_string
+ */
 function installString(blockly, generator, gensym) {
   blockly.Blocks.functional_string = {
     // Numeric value.
@@ -62,7 +66,9 @@ function installString(blockly, generator, gensym) {
       });
       this.setHSV.apply(this, colors.string);
       this.appendDummyInput()
+          .appendTitle(new Blockly.FieldLabel('"'))
           .appendTitle(new Blockly.FieldTextInput('string'), 'VAL')
+          .appendTitle(new Blockly.FieldLabel('"'))
           .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, 'string');
     }
@@ -73,6 +79,9 @@ function installString(blockly, generator, gensym) {
   };
 }
 
+/**
+ * functional_circle
+ */
 function installCircle(blockly, generator, gensym) {
   blockly.Blocks.functional_circle = {
     init: function () {
@@ -96,6 +105,9 @@ function installCircle(blockly, generator, gensym) {
   };
 }
 
+/**
+ * place_image
+ */
 function installPlaceImage(blockly, generator, gensym) {
   blockly.Blocks.place_image = {
     init: function () {
@@ -117,6 +129,9 @@ function installPlaceImage(blockly, generator, gensym) {
 }
 
 
+/**
+ * overlay
+ */
 function installOverlay(blockly, generator, gensym) {
   blockly.Blocks.overlay = {
     init: function () {
@@ -134,3 +149,37 @@ function installOverlay(blockly, generator, gensym) {
     return "Eval.overlay(" + [image1, image2].join(", ") + ")";
   };
 }
+
+/**
+ * functional_style
+ */
+function installStyle(blockly, generator, gensym) {
+  blockly.Blocks.functional_style = {
+    init: function () {
+      var VALUES = [
+        ['solid', 'solid'],
+        ['outline', 'outline'],
+        ['25%', '25%'],
+        ['50%', '50%'],
+        ['75%', '75%']
+      ];
+
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, colors.string);
+      this.appendDummyInput()
+          .appendTitle(new Blockly.FieldLabel('"'))
+          .appendTitle(new blockly.FieldDropdown(VALUES), 'VAL')
+          .appendTitle(new Blockly.FieldLabel('"'))
+          .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'string');
+
+    }
+  };
+
+  generator.functional_style = function() {
+    return "Eval.string('" + this.getTitleValue('VAL') + "')";
+  };
+};
