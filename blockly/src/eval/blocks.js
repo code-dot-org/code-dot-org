@@ -139,17 +139,17 @@ function installOverlay(blockly, generator, gensym) {
   blockly.Blocks.overlay = {
     init: function () {
       initTitledFunctionalBlock(this, 'overlay (top, bottom)', 'image', [
-        { name: 'IMAGE1', type: 'image' },
-        { name: 'IMAGE2', type: 'image' },
+        { name: 'TOP', type: 'image' },
+        { name: 'BOTTOM', type: 'image' },
       ]);
     }
   };
 
   generator.overlay = function() {
-    var image1 = Blockly.JavaScript.statementToCode(this, 'IMAGE1', false);
-    var image2 = Blockly.JavaScript.statementToCode(this, 'IMAGE2', false);
+    var top = Blockly.JavaScript.statementToCode(this, 'TOP', false);
+    var bottom = Blockly.JavaScript.statementToCode(this, 'BOTTOM', false);
 
-    return "Eval.overlay(" + [image1, image2].join(", ") + ")";
+    return "Eval.overlay(" + [top, bottom].join(", ") + ")";
   };
 }
 
@@ -185,4 +185,4 @@ function installStyle(blockly, generator, gensym) {
   generator.functional_style = function() {
     return "Eval.string('" + this.getTitleValue('VAL') + "')";
   };
-};
+}
