@@ -42,6 +42,12 @@ module ApplicationHelper
     end
   end
 
+  def user_type_options
+    User::USER_TYPE_OPTIONS.map do |user_type|
+      [t("user_type.#{user_type}"), user_type]
+    end
+  end
+
   def bullet_html
     #raw "&#9679;"
     image_tag('white-dot-grid.png')
