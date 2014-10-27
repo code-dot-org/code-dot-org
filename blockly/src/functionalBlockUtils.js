@@ -2,7 +2,9 @@ var colors = {
   Number: [192, 1.00, 0.99], // 00ccff
   string: [180, 1.00, 0.60], // 0099999
   image: [285, 1.00, 0.80], // 9900cc
-  boolean: [90, 1.00, 0.4] //336600
+  boolean: [90, 1.00, 0.4], // 336600
+  // not sure we will actually need this.
+  none: [0, 0, 0.6]
 };
 module.exports.colors = colors;
 
@@ -32,5 +34,9 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
     input.setAlign(Blockly.ALIGN_CENTRE);
   }
 
-  block.setFunctionalOutput(true, type);
-}
+  if (type === 'none') {
+    block.setFunctionalOutput(false);
+  } else {
+    block.setFunctionalOutput(true, type);
+  }
+};

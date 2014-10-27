@@ -3,7 +3,7 @@ module.exports.ensureType = function (val, type) {
     // todo - better strategy than throwing?
     throw new Error("unexpected object");
   }
-}
+};
 
 module.exports.getFill = function (style, color) {
   // todo - i18n
@@ -14,14 +14,14 @@ module.exports.getFill = function (style, color) {
     return color;
   }
   return "none";
-}
+};
 
 module.exports.getStroke = function (style, color) {
   if (style === "outline") {
     return color;
   }
   return "none";
-}
+};
 
 module.exports.getOpacity = function (style, color) {
   // todo - validate alpha is in range 0 - 255?
@@ -30,4 +30,4 @@ module.exports.getOpacity = function (style, color) {
     return alpha / 255;
   }
   return 1.0;
-}
+};
