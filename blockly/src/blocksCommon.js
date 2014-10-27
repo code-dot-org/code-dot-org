@@ -46,7 +46,7 @@ function installControlsRepeatSimplified(blockly, skin) {
     // Repeat n times (internal number) with simplified UI
     init: function () {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
-      this.setHSV(94, 0.84, 0.60);
+      this.setHSV(322, 0.90, 0.95);
       this.appendDummyInput()
         .appendTitle(blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT)
         .appendTitle(new blockly.FieldDropdown(), 'TIMES');
@@ -119,6 +119,7 @@ function installPickOne(blockly) {
 // A "Category" block for level editing, for delineating category groups.
 function installCategory(blockly) {
   blockly.Blocks.category = {
+    // Repeat n times (internal number).
     init: function() {
       this.setHSV(322, 0.90, 0.95);
       this.setInputsInline(true);
