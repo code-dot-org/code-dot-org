@@ -176,4 +176,4 @@ exports.msmBlockXml = function (type, inputs, titles) {
   str += '</block>';
 
   return str;
-}
+};
