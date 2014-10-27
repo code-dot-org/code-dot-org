@@ -26,6 +26,7 @@
 var msg = require('../../locale/current/eval');
 var commonMsg = require('../../locale/current/common');
 
+var evalUtils = require('./evalUtils');
 var mathBlocks = require('../mathBlocks');
 var colors = require('../functionalBlockUtils').colors;
 var initTitledFunctionalBlock = require('../functionalBlockUtils').initTitledFunctionalBlock;
@@ -123,6 +124,8 @@ function installPlaceImage(blockly, generator, gensym) {
     var image = Blockly.JavaScript.statementToCode(this, 'IMAGE', false);
     var x = Blockly.JavaScript.statementToCode(this, 'X', false) || '0';
     var y = Blockly.JavaScript.statementToCode(this, 'Y', false) || '0';
+
+    y = evalUtils.cartesianToPixel(y);
 
     return "Eval.placeImage(" + [image, x, y].join(", ") + ")";
   };
