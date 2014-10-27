@@ -15,11 +15,8 @@ goog.require('Blockly.Block');
 Blockly.HorizontalFlyout = function() {
   Blockly.Flyout.call(this);
   this.autoClose = false;
-  this.height_ = 100;
+  this.height_ = 10;
   this.flyoutRows = 0;
-  this.clearRight_ = {
-    'param_creator': true
-  };
 };
 goog.inherits(Blockly.HorizontalFlyout, Blockly.Flyout);
 
@@ -96,19 +93,13 @@ Blockly.HorizontalFlyout.prototype.position_ = function() {
  * @private
  */
 Blockly.HorizontalFlyout.prototype.layoutBlock_ = function(block, cursor, gap, initialX) {
-  function newRow() {
+  var blockHW = block.getHeightWidth();
+  if (cursor.x + blockHW.width > this.width_) {
     this.flyoutRows++;
     cursor.y += blockHW.height + gap / 2;
     cursor.x = initialX;
-  };
-  var blockHW = block.getHeightWidth();
-  if (cursor.x + blockHW.width > this.width_) {
-    newRow();
   }
   block.moveBy(cursor.x, cursor.y);
   cursor.x += blockHW.width + gap / 2;
   this.height_ = cursor.y + blockHW.height + gap / 2;
-  if (this.clearRight_[block.type]) {
-    newRow();
-  }
 };
