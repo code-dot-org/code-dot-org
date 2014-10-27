@@ -25,10 +25,8 @@
 
 var msg = require('../../locale/current/eval');
 var commonMsg = require('../../locale/current/common');
-var EvalString = require('./evalString');
 
-var functionalBlocks = require('./functionalBlocks');
-
+var mathBlocks = require('../mathBlocks');
 var colors = require('../functionalBlockUtils').colors;
 var initTitledFunctionalBlock = require('../functionalBlockUtils').initTitledFunctionalBlock;
 
@@ -46,7 +44,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   // todo (brent) - rationalize what's in functionalBlocks vs. here and if we
   // can share code between calc and evals functionalBlocks
-  functionalBlocks.install(blockly, generator, gensym);
+  mathBlocks.install(blockly, generator, gensym);
 
   installString(blockly, generator, gensym);
   installCircle(blockly, generator, gensym);
