@@ -2,6 +2,9 @@
  * A set of functional blocks
  */
 
+var colors = require('../functionalBlockUtils').colors;
+var initTitledFunctionalBlock = require('../functionalBlockUtils').initTitledFunctionalBlock;
+
 exports.install = function(blockly, generator, gensym) {
   installPlus(blockly, generator, gensym);
   installMinus(blockly, generator, gensym);
@@ -10,7 +13,6 @@ exports.install = function(blockly, generator, gensym) {
   installMathNumber(blockly, generator, gensym);
   installCompute(blockly, generator, gensym);
 };
-
 
 function initFunctionalBlock(block, title, numArgs) {
   block.setHSV(184, 1.00, 0.74);
@@ -41,7 +43,11 @@ function installPlus(blockly, generator, gensym) {
     // Block for turning left or right.
     helpUrl: '',
     init: function() {
-      initFunctionalBlock(this, '+', 2);
+      // initFunctionalBlock(this, '+', 2);
+      initTitledFunctionalBlock(this, '+', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG1', type: 'Number' }
+      ]);
     }
   };
 

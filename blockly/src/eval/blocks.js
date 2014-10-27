@@ -29,16 +29,8 @@ var EvalString = require('./evalString');
 
 var functionalBlocks = require('./functionalBlocks');
 
-var colors = {
-  Number: [184, 1.00, 0.74],
-  string: [258, 0.35, 0.62],
-  image: [39, 1.00, 0.99],
-  boolean: [],
-  asObject: function (hsv) {
-    return { hue: hsv[0], saturation: hsv[1], value: hsv[2] };
-  }
-};
-
+var colors = require('../functionalBlockUtils').colors;
+var initTitledFunctionalBlock = require('../functionalBlockUtils').initTitledFunctionalBlock;
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -62,33 +54,6 @@ exports.install = function(blockly, blockInstallOptions) {
   installOverlay(blockly, generator, gensym);
 };
 
-
-function initTitledFunctionalBlock(block, title, type, args) {
-  block.setFunctional(true, {
-    headerHeight: 30
-  });
-  block.setHSV.apply(block, colors[type]);
-
-  var options = {
-    fixedSize: { height: 35 }
-  };
-
-  block.appendDummyInput()
-    .appendTitle(new Blockly.FieldLabel(title, options))
-    .setAlign(Blockly.ALIGN_CENTRE);
-
-  for (var i = 0; i < args.length; i++) {
-    var arg = args[i];
-    var input = block.appendFunctionalInput(arg.name);
-    input.setInline(i > 0);
-    input.setHSV.apply(input, colors[arg.type]);
-    input.setCheck(arg.type);
-    input.setAlign(Blockly.ALIGN_CENTRE);
-  }
-
-  block.setFunctionalOutput(true, block.type);
-}
-
 function installString(blockly, generator, gensym) {
   blockly.Blocks.functional_string = {
     // Numeric value.
@@ -97,7 +62,7 @@ function installString(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV(258, 0.35, 0.62);
+      this.setHSV.apply(this, colors.string);
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldTextInput('string'), 'VAL')
           .setAlign(Blockly.ALIGN_CENTRE);
