@@ -2,14 +2,14 @@
  * A bunch of JS code we run to check that our SVG paths are what we expect.
  * To generate validator, copy the blockAnalyzer code into your console, put
  * whatever blocks you want in your workspace, and call
- * blockAnalyzer.getValidatorForWorkspace
+ * blockAnalyzer.getValidatorForBlockSpace
  */
 var blockAnalyzer = {
   clearAllBlocks: function () {
-    Blockly.mainWorkspace.getTopBlocks().forEach(function (b) { b.dispose(); })
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); })
   },
   pathsOfBlocks: function () {
-    var allBlocks = Blockly.mainWorkspace.getAllBlocks();
+    var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
     var allPathInfo = {};
     for (var i = 0; i < allBlocks.length; i++) {
       var block = allBlocks[i];
@@ -30,9 +30,9 @@ var blockAnalyzer = {
     }
     return info;
   },
-  getValidatorForWorkspace: function () {
+  getValidatorForBlockSpace: function () {
     var paths = blockAnalyzer.pathsOfBlocks();
-    var xml = Blockly.Xml.domToText(Blockly.Xml.workspaceToDom(Blockly.mainWorkspace));
+    var xml = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
 
     var obj = {
       xml: xml,
@@ -71,7 +71,7 @@ var blockAnalyzer = {
         var expectedPath = expected[i][pathClass];
         if (actualPath !== expectedPath) {
           return "Block: " + i + "  Class: " + pathClass +
-            " Type: " + Blockly.mainWorkspace.getAllBlocks()[i].type + "\n" +
+            " Type: " + Blockly.mainBlockSpace.getAllBlocks()[i].type + "\n" +
             "  Actual: " + actualPath + "\n" +
             "Expected: " + expectedPath;
         }

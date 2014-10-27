@@ -826,7 +826,7 @@ function beginAttempt () {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
 }
@@ -898,7 +898,7 @@ Maze.execute = function(stepMode) {
   beginAttempt();
 
   Maze.executionInfo = new ExecutionInfo({ticks: 100});
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
   Maze.result = BlocklyApps.ResultType.UNSET;
   Maze.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   Maze.waitingForReport = false;
@@ -991,7 +991,7 @@ Maze.execute = function(stepMode) {
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   Maze.waitingForReport = true;
@@ -1021,14 +1021,14 @@ Maze.execute = function(stepMode) {
   Maze.animating_ = true;
 
   // Disable toolbox while running
-  Blockly.mainWorkspace.setEnableToolbox(false);
+  Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
 
   if (stepMode) {
     if (Maze.cachedBlockStates.length !== 0) {
       throw new Error('Unexpected cachedBlockStates');
     }
     // Disable all blocks, caching their state first
-    Blockly.mainWorkspace.getAllBlocks().forEach(function (block) {
+    Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
       Maze.cachedBlockStates.push({
         block: block,
         movable: block.isMovable(),
@@ -1105,7 +1105,7 @@ Maze.scheduleAnimations = function (singleStep) {
       } else {
         Maze.animating_ = false;
         // reenable toolbox
-        Blockly.mainWorkspace.setEnableToolbox(true);
+        Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
         // If stepping and we failed, we want to retain highlighting until
         // clicking reset.  Otherwise we can clear highlighting/disabled
         // blocks now

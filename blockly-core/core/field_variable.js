@@ -45,7 +45,7 @@ Blockly.FieldVariable = function(varname, opt_changeHandler) {
     // Wrap the user's change handler together with the variable rename handler.
     var thisObj = this;
     changeHandler = function(value) {
-      var retVal = Blockly.FieldVariable.dropdownChange.call(thisObj, value);
+      var retVal = thisObj.dropdownChange(value);
       var newVal;
       if (retVal === undefined) {
         newVal = value;  // Existing variable selected.
@@ -58,7 +58,7 @@ Blockly.FieldVariable = function(varname, opt_changeHandler) {
       return retVal;
     };
   } else {
-    changeHandler = Blockly.FieldVariable.dropdownChange;
+    changeHandler = this.dropdownChange;
   }
 
   Blockly.FieldVariable.superClass_.constructor.call(this,
@@ -126,9 +126,10 @@ Blockly.FieldVariable.dropdownCreate = function() {
  *     handled (rename), or undefined if an existing variable was chosen.
  * @this {!Blockly.FieldVariable}
  */
-Blockly.FieldVariable.dropdownChange = function(text) {
+Blockly.FieldVariable.prototype.dropdownChange = function(text) {
+  var self = this;
   function promptName(promptText, defaultText) {
-    Blockly.hideChaff();
+    self.sourceBlock_.blockSpace.blockSpaceEditor.hideChaff();
     var newVar = window.prompt(promptText, defaultText);
     // Merge runs of whitespace.  Strip leading and trailing whitespace.
     // Beyond this, all names are legal.

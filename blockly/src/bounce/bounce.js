@@ -990,7 +990,7 @@ BlocklyApps.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
   Bounce.execute();
@@ -1041,7 +1041,7 @@ Bounce.onReportComplete = function(response) {
  * Execute the user's code.  Heaven help us...
  */
 Bounce.execute = function() {
-  var code = Blockly.Generator.workspaceToCode('JavaScript', 'bounce_whenRun');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'bounce_whenRun');
   Bounce.result = BlocklyApps.ResultType.UNSET;
   Bounce.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   Bounce.waitingForReport = false;
@@ -1052,7 +1052,7 @@ Bounce.execute = function() {
     code += BlocklyApps.editor.getValue();
   }
 
-  var codeWallCollided = Blockly.Generator.workspaceToCode(
+  var codeWallCollided = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'bounce_whenWallCollided');
   var whenWallCollidedFunc = codegen.functionFromCode(
@@ -1060,7 +1060,7 @@ Bounce.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Bounce: api } );
 
-  var codeBallInGoal = Blockly.Generator.workspaceToCode(
+  var codeBallInGoal = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'bounce_whenBallInGoal');
   var whenBallInGoalFunc = codegen.functionFromCode(
@@ -1068,7 +1068,7 @@ Bounce.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Bounce: api } );
 
-  var codeBallMissesPaddle = Blockly.Generator.workspaceToCode(
+  var codeBallMissesPaddle = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'bounce_whenBallMissesPaddle');
   var whenBallMissesPaddleFunc = codegen.functionFromCode(
@@ -1076,7 +1076,7 @@ Bounce.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Bounce: api } );
 
-  var codePaddleCollided = Blockly.Generator.workspaceToCode(
+  var codePaddleCollided = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'bounce_whenPaddleCollided');
   var whenPaddleCollidedFunc = codegen.functionFromCode(
@@ -1084,7 +1084,7 @@ Bounce.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Bounce: api } );
 
-  var codeLeft = Blockly.Generator.workspaceToCode(
+  var codeLeft = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'bounce_whenLeft');
   var whenLeftFunc = codegen.functionFromCode(
@@ -1092,7 +1092,7 @@ Bounce.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Bounce: api } );
 
-  var codeRight = Blockly.Generator.workspaceToCode(
+  var codeRight = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'bounce_whenRight');
   var whenRightFunc = codegen.functionFromCode(
@@ -1100,7 +1100,7 @@ Bounce.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Bounce: api } );
 
-  var codeUp = Blockly.Generator.workspaceToCode(
+  var codeUp = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'bounce_whenUp');
   var whenUpFunc = codegen.functionFromCode(
@@ -1108,7 +1108,7 @@ Bounce.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Bounce: api } );
 
-  var codeDown = Blockly.Generator.workspaceToCode(
+  var codeDown = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'bounce_whenDown');
   var whenDownFunc = codegen.functionFromCode(
@@ -1116,7 +1116,7 @@ Bounce.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Bounce: api } );
 
-  var codeGameStarts = Blockly.Generator.workspaceToCode(
+  var codeGameStarts = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'when_run');
   var whenGameStartsFunc = codegen.functionFromCode(
@@ -1174,7 +1174,7 @@ Bounce.onPuzzleComplete = function() {
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   Bounce.waitingForReport = true;
