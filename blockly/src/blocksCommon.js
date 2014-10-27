@@ -19,7 +19,6 @@ exports.install = function(blockly, blockInstallOptions) {
   installPickOne(blockly);
   installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
-  installParamCreator(blockly);
 };
 
 function installControlsRepeatSimplified(blockly, skin) {
@@ -158,29 +157,6 @@ function installWhenRun(blockly, skin, isK1) {
 
   blockly.JavaScript.when_run = function () {
     // Generate JavaScript for handling click event.
-    return '\n';
-  };
-}
-
-// A "Category" block for level editing, for delineating category groups.
-function installParamCreator(blockly) {
-  blockly.Blocks.param_creator = {
-    init: function() {
-      this.setHSV(94, 0.84, 0.60);
-      this.setInputsInline(true);
-
-      // TODO: i18n
-      this.appendDummyInput()
-          .appendTitle('Add parameter: ')
-          .appendTitle(new blockly.FieldTextInput('x'), 'VALUE')
-          .appendTitle('+');
-      this.setPreviousStatement(false);
-      this.setNextStatement(false);
-      this.setMovable(false);
-    }
-  };
-
-  blockly.JavaScript.category = function () {
     return '\n';
   };
 }

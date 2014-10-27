@@ -18,28 +18,30 @@ Blockly.FunctionEditor = function() {
 };
 
 Blockly.FunctionEditor.prototype.refreshToolbox_ = function() {
-  var functionEditor = this;
-  function addParamCreateListener() {
-    var paramCreator = functionEditor.flyout_.workspace_.getTopBlocks()[0];
-    var paramAddButton = goog.dom.getElementsByClass('blocklyText', paramCreator.getSvgRoot())[2];
-    Blockly.bindEvent_(paramAddButton, 'mousedown', paramCreator, function () {
-      var varName = this.getTitleValue('VALUE');
-      // Add the new param block to the local toolbox
-      var param = Blockly.createSvgElement('block', {type: 'parameters_get'});
-      var v = Blockly.createSvgElement('title', {name: 'VAR'}, param);
-      v.innerHTML = varName;
-      functionEditor.paramToolboxBlocks.push(param);
-      functionEditor.flyout_.hide();
-      functionEditor.flyout_.show(functionEditor.paramToolboxBlocks);
-      addParamCreateListener();
-      // Update the function definition
-      functionEditor.functionDefinition.arguments_.push(varName);
-      functionEditor.functionDefinition.updateParams_();
-    });
+  var paramAddText = goog.dom.getElement('paramAddText');
+  var paramAddButton = goog.dom.getElement('paramAddButton');
+  Blockly.bindEvent_(paramAddButton, 'mousedown', this, handleParamAdd);
+  Blockly.bindEvent_(paramAddText, 'keydown', this, function(e) {
+    if (e.keyCode == 13) {
+      handleParamAdd.apply(this, arguments);
+    }
+  });
+  function handleParamAdd() {
+    var varName = paramAddText.value;
+    paramAddText.value = '';
+    // Add the new param block to the local toolbox
+    var param = Blockly.createSvgElement('block', {type: 'parameters_get'});
+    var v = Blockly.createSvgElement('title', {name: 'VAR'}, param);
+    v.innerHTML = varName;
+    this.paramToolboxBlocks.push(param);
+    this.flyout_.hide();
+    this.flyout_.show(this.paramToolboxBlocks);
+    // Update the function definition
+    this.functionDefinition.arguments_.push(varName);
+    this.functionDefinition.updateParams_();
   }
-  functionEditor.flyout_.hide();
-  functionEditor.flyout_.show(functionEditor.paramToolboxBlocks);
-  addParamCreateListener();
+  this.flyout_.hide();
+  this.flyout_.show(this.paramToolboxBlocks);
 };
 
 Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
@@ -54,21 +56,25 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
 Blockly.FunctionEditor.prototype.show = function() {
   Blockly.modalWorkspace = new Blockly.Workspace(function() {
     var metrics = Blockly.mainWorkspace.getMetrics();
+    var contractDivHeight = Blockly.functionEditor.contractDiv_ ? Blockly.functionEditor.contractDiv_.getBoundingClientRect().height : 0;
+    var topOffset = FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + FRAME_HEADER_HEIGHT;
     metrics.absoluteLeft += FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
-    metrics.absoluteTop += FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + FRAME_HEADER_HEIGHT;
-    metrics.viewHeight -= 2 * (FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH) + FRAME_HEADER_HEIGHT ;
+    metrics.absoluteTop += topOffset + contractDivHeight;
     metrics.viewWidth -= (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
+    metrics.viewHeight -= FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + topOffset;
     return metrics;
   });
+
+  // Set up contract definition HTML section
+  this.createContractDom();
+
   var g = Blockly.modalWorkspace.createDom();
   this.modalBackground_ = Blockly.createSvgElement('g', {'class': 'modalBackground'});
   Blockly.svg.insertBefore(g, Blockly.mainWorkspace.svgGroup_.nextSibling);
   Blockly.svg.insertBefore(this.modalBackground_, g);
   Blockly.modalWorkspace.addTrashcan();
 
-  this.paramToolboxBlocks = [
-    Blockly.createSvgElement('block', {type: 'param_creator'})
-  ];
+  this.paramToolboxBlocks = [];
   this.flyout_ = new Blockly.HorizontalFlyout();
   g.insertBefore(this.flyout_.createDom(), Blockly.modalWorkspace.svgBlockCanvas_);
   this.flyout_.init(Blockly.modalWorkspace, false);
@@ -139,6 +145,23 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   // Move workspace to account for horizontal flyout height
   var top = metrics.absoluteTop + this.flyout_.height_;
   Blockly.modalWorkspace.svgBlockCanvas_.setAttribute('transform', 'translate(0,' + top + ')');
+};
+
+Blockly.FunctionEditor.prototype.createContractDom = function() {
+  this.contractDiv_ = goog.dom.createDom('div', 'blocklyToolboxDiv paramToolbox blocklyText');
+  document.body.appendChild(this.contractDiv_);
+  var metrics = Blockly.modalWorkspace.getMetrics();
+  var topLeft = Blockly.convertCoordinates(metrics.absoluteLeft, metrics.absoluteTop);
+  var width = Blockly.convertCoordinates(metrics.absoluteLeft + metrics.viewWidth, 0).x - topLeft.x;
+  this.contractDiv_.style.left = topLeft.x + 'px';
+  this.contractDiv_.style.top = topLeft.y + 'px';
+  this.contractDiv_.style.width = width + 'px';
+  this.contractDiv_.innerHTML = '<div>Name your function:</div><div><input type="text""></div>'
+      + '<div>What is your function supposed to do?</div>'
+      + '<div><textarea rows="2"></textarea></div>'
+      + '<div>What parameters does your function take?</div>'
+      + '<div><input id="paramAddText" type="text" style="width: 200px;"> <button id="paramAddButton" class="btn">Add</button>';
+  this.contractDiv_.style.display = 'block';
 };
 
 Blockly.functionEditor = new Blockly.FunctionEditor();
