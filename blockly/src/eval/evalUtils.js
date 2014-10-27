@@ -34,3 +34,14 @@ module.exports.getOpacity = function (style, color) {
   }
   return alpha;
 };
+
+/**
+ * Users specify pixels in a coordinate system where the origin is at the bottom
+ * left, and x and y increase as you move right/up. I'm referring to this as
+ * the cartesian coordinate system.
+ * The pixel coordinate system instead has origin at the top left, and x and y
+ * increase as you move right/down.
+ */
+module.exports.cartesianToPixel = function (cartesianY) {
+  return 400 - cartesianY;
+};

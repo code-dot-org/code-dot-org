@@ -12,10 +12,6 @@ var EvalCircle = function (radius, style, color) {
   this.color_ = color.getValue();
   this.style_ = style.getValue();
 
-  // default to be entirely on screen
-  this.x_ = radius;
-  this.y_ = radius;
-
   this.element_ = null;
 };
 EvalCircle.inherits(EvalObject);
