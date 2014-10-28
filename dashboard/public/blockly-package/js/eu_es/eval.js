@@ -90,7 +90,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":22,"./utils":37}],2:[function(require,module,exports){
+},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":25,"./utils":40}],2:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -1004,7 +1004,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/eu_es/common":39,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":20,"./slider":24,"./templates/buttons.html":26,"./templates/instructions.html":28,"./templates/learn.html":29,"./templates/makeYourOwn.html":30,"./utils":37,"./xml":38}],3:[function(require,module,exports){
+},{"../locale/eu_es/common":42,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":21,"./slider":27,"./templates/buttons.html":29,"./templates/instructions.html":31,"./templates/learn.html":32,"./templates/makeYourOwn.html":33,"./utils":40,"./xml":41}],3:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1165,12 +1165,27 @@ exports.calcBlockXml = function (type, args) {
     str += arg;
     str += '</functional_input>';
   }
-  str+= '</block>';
+  str += '</block>';
 
   return str;
 };
 
-},{"./xml":38}],4:[function(require,module,exports){
+exports.mathBlockXml = function (type, inputs, titles) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var title in titles) {
+    str += '<title name="' + title + '">' + titles[title] + '</title>';
+  }
+
+  for (var input in inputs) {
+    str += '<functional_input name="' + input + '">' + inputs[input] + '</functional_input>';
+  }
+
+  str += '</block>';
+
+  return str;
+};
+
+},{"./xml":41}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1335,7 +1350,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/eu_es/common":39}],5:[function(require,module,exports){
+},{"../locale/eu_es/common":42}],5:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -1365,7 +1380,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":8,"./feedback.js":20,"./templates/builder.html":25,"./utils.js":37,"url":51}],6:[function(require,module,exports){
+},{"./dom.js":8,"./feedback.js":21,"./templates/builder.html":28,"./utils.js":40,"url":54}],6:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -1679,8 +1694,9 @@ exports.isIOS = function() {
 },{}],9:[function(require,module,exports){
 var EvalString = require('./evalString');
 var EvalCircle = require('./evalCircle');
+var EvalMulti = require('./evalMulti');
 
-// todo (brent) - make use of blockId
+// todo (brent) - make use of blockId?
 
 exports.register = function (object) {
 
@@ -1706,7 +1722,11 @@ exports.placeImage = function (image, x, y, blockId) {
   return exports.register(image);
 };
 
-},{"./evalCircle":13,"./evalString":15}],10:[function(require,module,exports){
+exports.overlay = function (image1, image2) {
+  return exports.register(new EvalMulti(image1, image2));
+};
+
+},{"./evalCircle":13,"./evalMulti":14,"./evalString":16}],10:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -1734,16 +1754,11 @@ exports.placeImage = function (image, x, y, blockId) {
 
 var msg = require('../../locale/eu_es/eval');
 var commonMsg = require('../../locale/eu_es/common');
-var EvalString = require('./evalString');
 
-var functionalBlocks = require('./functionalBlocks');
-
-var colors = {
-  number: { hue: 184, saturation: 1.00, value: 0.74 },
-  string: { hue: 258, saturation: 0.35, value: 0.62 },
-  image: { hue: 39, saturation: 1.00, value: 0.99},
-  boolean: {}
-};
+var evalUtils = require('./evalUtils');
+var mathBlocks = require('../mathBlocks');
+var colors = require('../functionalBlockUtils').colors;
+var initTitledFunctionalBlock = require('../functionalBlockUtils').initTitledFunctionalBlock;
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -1759,13 +1774,18 @@ exports.install = function(blockly, blockInstallOptions) {
 
   // todo (brent) - rationalize what's in functionalBlocks vs. here and if we
   // can share code between calc and evals functionalBlocks
-  functionalBlocks.install(blockly, generator, gensym);
+  mathBlocks.install(blockly, generator, gensym);
 
   installString(blockly, generator, gensym);
   installCircle(blockly, generator, gensym);
   installPlaceImage(blockly, generator, gensym);
+  installOverlay(blockly, generator, gensym);
+  installStyle(blockly, generator, gensym);
 };
 
+/**
+ * functional_string
+ */
 function installString(blockly, generator, gensym) {
   blockly.Blocks.functional_string = {
     // Numeric value.
@@ -1774,9 +1794,11 @@ function installString(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV(258, 0.35, 0.62);
+      this.setHSV.apply(this, colors.string);
       this.appendDummyInput()
+          .appendTitle(new Blockly.FieldLabel('"'))
           .appendTitle(new Blockly.FieldTextInput('string'), 'VAL')
+          .appendTitle(new Blockly.FieldLabel('"'))
           .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, 'string');
     }
@@ -1787,36 +1809,18 @@ function installString(blockly, generator, gensym) {
   };
 }
 
+/**
+ * functional_circle
+ */
 function installCircle(blockly, generator, gensym) {
   blockly.Blocks.functional_circle = {
     init: function () {
-      this.setHSV(39, 1.00, 0.99);
-      this.setFunctional(true, {
-        headerHeight: 30,
-      });
-
-      var options = {
-        fixedSize: { height: 35 }
-      };
-
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldLabel('circle', options))
-          .setAlign(Blockly.ALIGN_CENTRE);
-
-      this.appendFunctionalInput('SIZE')
-          .setColour(colors.number)
-          .setCheck('Number');
-      this.appendFunctionalInput('STYLE')
-          .setInline(true)
-          .setColour(colors.string)
-          .setCheck('string');
-      this.appendFunctionalInput('COLOR')
-          .setInline(true)
-          .setColour(colors.string)
-          .setCheck('string');
-
-
-      this.setFunctionalOutput(true, 'image');
+      // todo - i18n
+      initTitledFunctionalBlock(this, 'circle (radius, style, color)', 'image', [
+        { name: 'SIZE', type: 'Number' },
+        { name: 'STYLE', type: 'string' },
+        { name: 'COLOR', type: 'string' }
+      ]);
     }
   };
 
@@ -1831,37 +1835,17 @@ function installCircle(blockly, generator, gensym) {
   };
 }
 
+/**
+ * place_image
+ */
 function installPlaceImage(blockly, generator, gensym) {
   blockly.Blocks.place_image = {
     init: function () {
-      this.setHSV(39, 1.00, 0.99);
-      this.setFunctional(true, {
-        headerHeight: 30,
-      });
-
-      var options = {
-        fixedSize: { height: 35 }
-      };
-
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldLabel('place-image', options))
-          .setAlign(Blockly.ALIGN_CENTRE);
-
-      // todo (brent) - more strictly link colour and check so that we can't accidentally
-      // have them mismatched?
-      this.appendFunctionalInput('IMAGE')
-          .setColour(colors.image)
-          .setCheck('image');
-      this.appendFunctionalInput('X')
-          .setInline(true)
-          .setColour(colors.number)
-          .setCheck('Number');
-      this.appendFunctionalInput('Y')
-          .setInline(true)
-          .setColour(colors.number)
-          .setCheck('Number');
-
-      this.setFunctionalOutput(true, 'image');
+      initTitledFunctionalBlock(this, 'place-image (image, x, y)', 'image', [
+        { name: 'IMAGE', type: 'image' },
+        { name: 'X', type: 'Number' },
+        { name: 'Y', type: 'Number' }
+      ]);
     }
   };
 
@@ -1870,11 +1854,69 @@ function installPlaceImage(blockly, generator, gensym) {
     var x = Blockly.JavaScript.statementToCode(this, 'X', false) || '0';
     var y = Blockly.JavaScript.statementToCode(this, 'Y', false) || '0';
 
-    return "Eval.placeImage(" + [image, x, y].join(", ") + ");";
+    y = evalUtils.cartesianToPixel(y);
+
+    return "Eval.placeImage(" + [image, x, y].join(", ") + ")";
   };
 }
 
-},{"../../locale/eu_es/common":39,"../../locale/eu_es/eval":40,"./evalString":15,"./functionalBlocks":16}],11:[function(require,module,exports){
+
+/**
+ * overlay
+ */
+function installOverlay(blockly, generator, gensym) {
+  blockly.Blocks.overlay = {
+    init: function () {
+      initTitledFunctionalBlock(this, 'overlay (top, bottom)', 'image', [
+        { name: 'TOP', type: 'image' },
+        { name: 'BOTTOM', type: 'image' },
+      ]);
+    }
+  };
+
+  generator.overlay = function() {
+    var top = Blockly.JavaScript.statementToCode(this, 'TOP', false);
+    var bottom = Blockly.JavaScript.statementToCode(this, 'BOTTOM', false);
+
+    return "Eval.overlay(" + [top, bottom].join(", ") + ")";
+  };
+}
+
+/**
+ * functional_style
+ */
+function installStyle(blockly, generator, gensym) {
+  blockly.Blocks.functional_style = {
+    init: function () {
+      var VALUES = [
+        ['solid', 'solid'],
+        ['75%', '75%'],
+        ['50%', '50%'],
+        ['25%', '25%'],
+        ['outline', 'outline']
+      ];
+
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, colors.string);
+      this.appendDummyInput()
+          .appendTitle(new Blockly.FieldLabel('"'))
+          .appendTitle(new blockly.FieldDropdown(VALUES), 'VAL')
+          .appendTitle(new Blockly.FieldLabel('"'))
+          .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'string');
+
+    }
+  };
+
+  generator.functional_style = function() {
+    return "Eval.string('" + this.getTitleValue('VAL') + "')";
+  };
+}
+
+},{"../../locale/eu_es/common":42,"../../locale/eu_es/eval":43,"../functionalBlockUtils":22,"../mathBlocks":24,"./evalUtils":17}],11:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -1897,7 +1939,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/eval":40,"ejs":41}],12:[function(require,module,exports){
+},{"../../locale/eu_es/eval":43,"ejs":44}],12:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -1980,6 +2022,9 @@ Eval.init = function(config) {
 
   config.afterInject = function() {
     var svg = document.getElementById('svgEval');
+    if (!svg) {
+      throw "something bad happened";
+    }
     svg.setAttribute('width', CANVAS_WIDTH);
     svg.setAttribute('height', CANVAS_HEIGHT);
 
@@ -2123,6 +2168,12 @@ function evaluateAnswer() {
   var user = document.getElementById('user');
 
   // is this good enough?
+  // todo (brent) : can come up with at least one case where it isnt. goal is
+  // to create a star rotated 90 degrees. i instead create a star rotated -270
+  // degrees. these are exactly the same visually, but will have different
+  // html
+  // we might be able to use canvg to convert the svg to a canvas representation,
+  // and then do our comparison similar to how we do in artist
   return answer.innerHTML.trim() == user.innerHTML.trim();
 }
 
@@ -2152,76 +2203,20 @@ function onReportComplete(response) {
   displayFeedback(response);
 }
 
-},{"../../locale/eu_es/common":39,"../../locale/eu_es/eval":40,"../base":2,"../codegen":6,"../constants":7,"../dom":8,"../feedback.js":20,"../skins":23,"../templates/page.html":31,"./api":9,"./controls.html":11,"./levels":17,"./visualization.html":19}],13:[function(require,module,exports){
+},{"../../locale/eu_es/common":42,"../../locale/eu_es/eval":43,"../base":2,"../codegen":6,"../constants":7,"../dom":8,"../feedback.js":21,"../skins":26,"../templates/page.html":34,"./api":9,"./controls.html":11,"./levels":18,"./visualization.html":20}],13:[function(require,module,exports){
 var EvalObject = require('./evalObject');
 var EvalString = require('./evalString');
-
-// todo - should live elsewhere?
-function getFill(style, color) {
-  // todo - i18n
-  // todo - 1asdf becomes 1 with parseInt
-  var alpha = parseInt(style, 10);
-  if (style === "solid" || alpha) {
-    return color;
-  }
-  return "none";
-}
-
-function getStroke(style, color) {
-  if (style === "outline") {
-    return color;
-  }
-  return "none";
-}
-
-function getOpacity(style, color) {
-  // todo - validate alpha is in range 0 - 255?
-  var alpha = parseInt(style, 10);
-  if (alpha !== undefined) {
-    return alpha / 255;
-  }
-  return 1.0;
-}
-
-var Style = {
-  solid: "solid",
-  outline: "outline",
-  alpha: function (n) {
-    return "alpha" + n;
-  },
-  fromString: function (str) {
-    // todo - this function is currently not at all robust
-
-    var n = parseInt(str, 10);
-    if (n) {
-      return this.alpha(n);
-    }
-    return str;
-  }
-};
-
-// todo - stick in a utils file?
-function ensureEvalString(val) {
-  if (!(val instanceof EvalString)) {
-    // todo - better strategy than throwing?
-    throw new Error("expected EvalString");
-  }
-}
-
+var evalUtils = require('./evalUtils');
 
 var EvalCircle = function (radius, style, color) {
-  ensureEvalString(style);
-  ensureEvalString(color);
+  evalUtils.ensureType(style, EvalString);
+  evalUtils.ensureType(color, EvalString);
 
   EvalObject.apply(this);
 
   this.radius_ = radius;
   this.color_ = color.getValue();
   this.style_ = style.getValue();
-
-  // default to be entirely on screen
-  this.x_ = radius;
-  this.y_ = radius;
 
   this.element_ = null;
 };
@@ -2238,15 +2233,44 @@ EvalCircle.prototype.draw = function (parent) {
   this.element_.setAttribute('r', this.radius_);
 
   // todo - alpha
-  this.element_.setAttribute('fill', getFill(this.style_, this.color_));
-  this.element_.setAttribute('stroke', getStroke(this.style_, this.color_));
-  this.element_.setAttribute('opacity', getOpacity(this.style_, this.color_));
+  this.element_.setAttribute('fill', evalUtils.getFill(this.style_, this.color_));
+  this.element_.setAttribute('stroke', evalUtils.getStroke(this.style_, this.color_));
+  this.element_.setAttribute('opacity', evalUtils.getOpacity(this.style_, this.color_));
 };
 
-},{"./evalObject":14,"./evalString":15}],14:[function(require,module,exports){
+},{"./evalObject":15,"./evalString":16,"./evalUtils":17}],14:[function(require,module,exports){
+var EvalObject = require('./evalObject');
+var evalUtils = require('./evalUtils');
+
+var EvalMulti = function (image1, image2) {
+  evalUtils.ensureType(image1, EvalObject);
+  evalUtils.ensureType(image2, EvalObject);
+
+  EvalObject.apply(this);
+
+  this.image1_ = image1;
+  this.image2_ = image2;
+
+  this.element_ = null;
+};
+EvalMulti.inherits(EvalObject);
+module.exports = EvalMulti;
+
+EvalMulti.prototype.draw = function (parent) {
+  if (!this.element_) {
+    this.element_ = document.createElementNS(Blockly.SVG_NS, 'g');
+    parent.appendChild(this.element_);
+  }
+  this.element_.setAttribute('transform', "translate(" + this.x_ + ", " + this.y_ + ")");
+  this.image2_.draw(this.element_);
+  this.image1_.draw(this.element_);
+};
+
+},{"./evalObject":15,"./evalUtils":17}],15:[function(require,module,exports){
 var EvalObject = function () {
-  this.x_ = 0;
-  this.y_ = 0;
+  // x/y location in pixel space
+  this.x_ = 200;
+  this.y_ = 200;
 };
 module.exports = EvalObject;
 
@@ -2254,7 +2278,7 @@ EvalObject.prototype.draw = function (parent) {
   throw "Overriden by descendants";
 };
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 var EvalObject = require('./evalObject');
 
 var EvalString = function (val) {
@@ -2284,131 +2308,56 @@ EvalString.prototype.getValue = function () {
   return this.val_;
 };
 
-},{"./evalObject":14}],16:[function(require,module,exports){
-/**
- * A set of functional blocks
- */
-
-exports.install = function(blockly, generator, gensym) {
-  installPlus(blockly, generator, gensym);
-  installMinus(blockly, generator, gensym);
-  installTimes(blockly, generator, gensym);
-  installDividedBy(blockly, generator, gensym);
-  installMathNumber(blockly, generator, gensym);
+},{"./evalObject":15}],17:[function(require,module,exports){
+module.exports.ensureType = function (val, type) {
+  if (!(val instanceof type)) {
+    // todo - better strategy than throwing?
+    throw new Error("unexpected object");
+  }
 };
 
-
-function initFunctionalBlock(block, title, numArgs) {
-  block.setHSV(184, 1.00, 0.74);
-  block.setFunctional(true, {
-    headerHeight: 30,
-  });
-
-  var options = {
-    fixedSize: { height: 35 },
-    fontSize: 25 // in pixels
-  };
-
-  block.appendDummyInput()
-      .appendTitle(new Blockly.FieldLabel(title, options))
-      .setAlign(Blockly.ALIGN_CENTRE);
-  for (var i = 1; i <= numArgs; i++) {
-    block.appendFunctionalInput('ARG' + i)
-         .setInline(i > 1)
-         .setColour({ hue: 184, saturation: 1.00, value: 0.74 })
-         .setCheck('Number');
+module.exports.getFill = function (style, color) {
+  // todo - i18n
+  // todo - 1asdf becomes 1 with parseInt
+  // for now, we treat anything we don't recognize as solid.
+  var alpha = parseInt(style, 10);
+  if (style !== "outline") {
+    return color;
   }
+  return "none";
+};
 
-  block.setFunctionalOutput(true, 'Number');
-}
+module.exports.getStroke = function (style, color) {
+  if (style === "outline") {
+    return color;
+  }
+  return "none";
+};
 
-function installPlus(blockly, generator, gensym) {
-  blockly.Blocks.functional_plus = {
-    // Block for turning left or right.
-    helpUrl: '',
-    init: function() {
-      initFunctionalBlock(this, '+', 2);
-    }
-  };
+/**
+ * Get the opacity from the style. Style is a string that is either a word or
+ * percentage (i.e. 25%).
+ */
+module.exports.getOpacity = function (style, color) {
+  var alpha = 1.0;
+  if (style.slice(-1) === "%") {
+    alpha = parseInt(style.slice(0, -1), 10) / 100;
+  }
+  return alpha;
+};
 
-  generator.functional_plus = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " + " + arg2;
-  };
-}
+/**
+ * Users specify pixels in a coordinate system where the origin is at the bottom
+ * left, and x and y increase as you move right/up. I'm referring to this as
+ * the cartesian coordinate system.
+ * The pixel coordinate system instead has origin at the top left, and x and y
+ * increase as you move right/down.
+ */
+module.exports.cartesianToPixel = function (cartesianY) {
+  return 400 - cartesianY;
+};
 
-function installMinus(blockly, generator, gensym) {
-  blockly.Blocks.functional_minus = {
-    // Block for turning left or right.
-    helpUrl: '',
-    init: function() {
-      initFunctionalBlock(this, '-', 2);
-    }
-  };
-
-  generator.functional_minus = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " - " + arg2;
-  };
-}
-
-function installTimes(blockly, generator, gensym) {
-  blockly.Blocks.functional_times = {
-    // Block for turning left or right.
-    helpUrl: '',
-    init: function() {
-      initFunctionalBlock(this, '*', 2);
-    }
-  };
-
-  generator.functional_times = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " * " + arg2;
-  };
-}
-
-function installDividedBy(blockly, generator, gensym) {
-  blockly.Blocks.functional_dividedby = {
-    // Block for turning left or right.
-    helpUrl: '',
-    init: function() {
-      initFunctionalBlock(this, '/', 2);
-    }
-  };
-
-  generator.functional_dividedby = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " / " + arg2;
-  };
-}
-
-function installMathNumber(blockly, generator, gensym) {
-  blockly.Blocks.functional_math_number = {
-    // Numeric value.
-    init: function() {
-      this.setFunctional(true, {
-        headerHeight: 0,
-        rowBuffer: 3
-      });
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldTextInput('0',
-            Blockly.FieldTextInput.numberValidator), 'NUM')
-          .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'Number');
-    }
-  };
-
-  generator.functional_math_number = function() {
-    return this.getTitleValue('NUM');
-  };
-}
-
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 var msg = require('../../locale/eu_es/eval');
 var blockUtils = require('../block_utils');
 
@@ -2426,8 +2375,10 @@ module.exports = {
       blockUtils.blockOfType('functional_dividedby') +
       blockUtils.blockOfType('functional_math_number') +
       blockUtils.blockOfType('functional_string') +
+      blockUtils.blockOfType('functional_style') +
       blockUtils.blockOfType('functional_circle') +
-      blockUtils.blockOfType('place_image')),
+      blockUtils.blockOfType('place_image') +
+      blockUtils.blockOfType('overlay')),
     startBlocks: '<block type="functional_circle" inline="false"><functional_input name="COLOR"><block type="functional_string"><title name="VAL">red</title></block></functional_input><functional_input name="SIZE"><block type="functional_math_number"><title name="NUM">50</title></block></functional_input></block>',
     requiredBlocks: '',
     freePlay: false
@@ -2443,7 +2394,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/eu_es/eval":40,"../block_utils":3}],18:[function(require,module,exports){
+},{"../../locale/eu_es/eval":43,"../block_utils":3}],19:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Eval = require('./eval');
 var blocks = require('./blocks');
@@ -2456,7 +2407,7 @@ window.evalMain = function(options) {
   appMain(window.Eval, levels, options);
 };
 
-},{"../appMain":1,"../skins":23,"./blocks":10,"./eval":12,"./levels":17}],19:[function(require,module,exports){
+},{"../appMain":1,"../skins":26,"./blocks":10,"./eval":12,"./levels":18}],20:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -2477,7 +2428,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":41}],20:[function(require,module,exports){
+},{"ejs":44}],21:[function(require,module,exports){
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
 var readonly = require('./templates/readonly.html');
@@ -3424,7 +3375,51 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/eu_es/common":39,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":26,"./templates/code.html":27,"./templates/readonly.html":32,"./templates/shareFailure.html":33,"./templates/sharing.html":34,"./templates/showCode.html":35,"./templates/trophy.html":36,"./utils":37}],21:[function(require,module,exports){
+},{"../locale/eu_es/common":42,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":29,"./templates/code.html":30,"./templates/readonly.html":35,"./templates/shareFailure.html":36,"./templates/sharing.html":37,"./templates/showCode.html":38,"./templates/trophy.html":39,"./utils":40}],22:[function(require,module,exports){
+var colors = {
+  Number: [192, 1.00, 0.99], // 00ccff
+  string: [180, 1.00, 0.60], // 0099999
+  image: [285, 1.00, 0.80], // 9900cc
+  boolean: [90, 1.00, 0.4], // 336600
+  // not sure we will actually need this.
+  none: [0, 0, 0.6]
+};
+module.exports.colors = colors;
+
+/**
+ * Helper function to create the init section for a functional block
+ */
+module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
+  block.setFunctional(true, {
+    headerHeight: 30
+  });
+  block.setHSV.apply(block, colors[type]);
+
+  var options = {
+    fixedSize: { height: 35 }
+  };
+
+  block.appendDummyInput()
+    .appendTitle(new Blockly.FieldLabel(title, options))
+    .setAlign(Blockly.ALIGN_CENTRE);
+
+  for (var i = 0; i < args.length; i++) {
+    var arg = args[i];
+    var input = block.appendFunctionalInput(arg.name);
+    input.setInline(i > 0);
+    input.setHSV.apply(input, colors[arg.type]);
+    input.setCheck(arg.type);
+    input.setAlign(Blockly.ALIGN_CENTRE);
+  }
+
+  if (type === 'none') {
+    block.setFunctionalOutput(false);
+  } else {
+    block.setFunctionalOutput(true, type);
+  }
+};
+
+},{}],23:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -6351,7 +6346,118 @@ var generateXMLForBlocks = function(blocks) {
 }.call(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],22:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
+/**
+ * A set of functional blocks
+ */
+
+var functionalBlockUtils = require('./functionalBlockUtils');
+var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
+
+exports.install = function(blockly, generator, gensym) {
+  installPlus(blockly, generator, gensym);
+  installMinus(blockly, generator, gensym);
+  installTimes(blockly, generator, gensym);
+  installDividedBy(blockly, generator, gensym);
+  installMathNumber(blockly, generator, gensym);
+};
+
+function installPlus(blockly, generator, gensym) {
+  blockly.Blocks.functional_plus = {
+
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '+', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_plus = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return arg1 + " + " + arg2;
+  };
+}
+
+function installMinus(blockly, generator, gensym) {
+  blockly.Blocks.functional_minus = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '-', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_minus = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return arg1 + " - " + arg2;
+  };
+}
+
+function installTimes(blockly, generator, gensym) {
+  blockly.Blocks.functional_times = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '*', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_times = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return arg1 + " * " + arg2;
+  };
+}
+
+function installDividedBy(blockly, generator, gensym) {
+  blockly.Blocks.functional_dividedby = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '/', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_dividedby = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return arg1 + " / " + arg2;
+  };
+}
+
+function installMathNumber(blockly, generator, gensym) {
+  blockly.Blocks.functional_math_number = {
+    // Numeric value.
+    init: function() {
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, functionalBlockUtils.colors.Number);
+      this.appendDummyInput()
+          .appendTitle(new Blockly.FieldTextInput('0',
+            Blockly.FieldTextInput.numberValidator), 'NUM')
+          .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'Number');
+    }
+  };
+
+  generator.functional_math_number = function() {
+    return this.getTitleValue('NUM');
+  };
+}
+
+},{"./functionalBlockUtils":22}],25:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -6589,7 +6695,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./utils":37,"./xml":38}],23:[function(require,module,exports){
+},{"./block_utils":3,"./utils":40,"./xml":41}],26:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -6658,7 +6764,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{}],24:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -6884,7 +6990,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":8}],25:[function(require,module,exports){
+},{"./dom":8}],28:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6905,7 +7011,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":41}],26:[function(require,module,exports){
+},{"ejs":44}],29:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6926,7 +7032,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/common":39,"ejs":41}],27:[function(require,module,exports){
+},{"../../locale/eu_es/common":42,"ejs":44}],30:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6947,7 +7053,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":41}],28:[function(require,module,exports){
+},{"ejs":44}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6968,7 +7074,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/common":39,"ejs":41}],29:[function(require,module,exports){
+},{"../../locale/eu_es/common":42,"ejs":44}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6991,7 +7097,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/common":39,"ejs":41}],30:[function(require,module,exports){
+},{"../../locale/eu_es/common":42,"ejs":44}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7012,7 +7118,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/common":39,"ejs":41}],31:[function(require,module,exports){
+},{"../../locale/eu_es/common":42,"ejs":44}],34:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7037,7 +7143,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/common":39,"ejs":41}],32:[function(require,module,exports){
+},{"../../locale/eu_es/common":42,"ejs":44}],35:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7059,7 +7165,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":41}],33:[function(require,module,exports){
+},{"ejs":44}],36:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7080,7 +7186,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":41}],34:[function(require,module,exports){
+},{"ejs":44}],37:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7101,7 +7207,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/common":39,"ejs":41}],35:[function(require,module,exports){
+},{"../../locale/eu_es/common":42,"ejs":44}],38:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7122,7 +7228,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/common":39,"ejs":41}],36:[function(require,module,exports){
+},{"../../locale/eu_es/common":42,"ejs":44}],39:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7143,7 +7249,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":41}],37:[function(require,module,exports){
+},{"ejs":44}],40:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -7420,7 +7526,7 @@ exports.generateDropletPalette = function (codeFunctions) {
   return palette;
 };
 
-},{"./lodash":21,"./xml":38}],38:[function(require,module,exports){
+},{"./lodash":23,"./xml":41}],41:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -7448,7 +7554,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],39:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.eu=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "eta"};
 
@@ -7609,7 +7715,7 @@ exports.hintHeader = function(d){return "Hemen aholkua:"};
 exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
 
 
-},{"messageformat":52}],40:[function(require,module,exports){
+},{"messageformat":55}],43:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.eu=function(n){return n===1?"one":"other"}
 exports.blocksUsed = function(d){return "Erabilitako blokeak: %1"};
 
@@ -7752,7 +7858,7 @@ exports.widthTooltip = function(d){return "Arkatzaren lodiera aldatzen du."};
 exports.wrongColour = function(d){return "Zure irudia kolore okerrekoa da. Puzle hontarako %1 behar du izan."};
 
 
-},{"messageformat":52}],41:[function(require,module,exports){
+},{"messageformat":55}],44:[function(require,module,exports){
 
 /*!
  * EJS
@@ -8111,7 +8217,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":42,"./utils":43,"fs":44,"path":45}],42:[function(require,module,exports){
+},{"./filters":45,"./utils":46,"fs":47,"path":48}],45:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -8314,7 +8420,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],43:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 
 /*!
  * EJS
@@ -8340,9 +8446,9 @@ exports.escape = function(html){
 };
  
 
-},{}],44:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 
-},{}],45:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -8570,7 +8676,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":46}],46:[function(require,module,exports){
+},{"JkpR2F":49}],49:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -8635,7 +8741,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],47:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -9146,7 +9252,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],48:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -9232,7 +9338,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],49:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -9319,13 +9425,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],50:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":48,"./encode":49}],51:[function(require,module,exports){
+},{"./decode":51,"./encode":52}],54:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -10034,7 +10140,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":47,"querystring":50}],52:[function(require,module,exports){
+},{"punycode":50,"querystring":53}],55:[function(require,module,exports){
 /**
  * messageformat.js
  *
@@ -11617,4 +11723,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[18])
+},{}]},{},[19])
