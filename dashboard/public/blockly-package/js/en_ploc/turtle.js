@@ -7734,6 +7734,8 @@ var msg = require('../../locale/en_ploc/turtle');
 
 exports.install = function(blockly, generator, gensym) {
  installDrawASquare(blockly, generator, gensym);
+ installCreateACircle(blockly, generator, gensym);
+ installCreateASnowflower(blockly, generator, gensym);
  installDrawATriangle(blockly, generator, gensym);
  installDrawAHouse(blockly, generator, gensym);
  installDrawAFlower(blockly, generator, gensym);
@@ -7747,6 +7749,19 @@ exports.install = function(blockly, generator, gensym) {
  installDrawUpperWave(blockly, generator, gensym);
  installDrawLowerWave(blockly, generator, gensym);
 };
+
+function createACircleCode (size, gensym, indent) {
+  var loopVar = gensym('count');
+  indent = indent || '';
+  return [
+    indent + '// create_a_circle',
+    indent + 'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 36; ' +
+    indent +       loopVar + '++) {',
+    indent + '  Turtle.moveForward(' + size + ');',
+    indent + '  Turtle.turnRight(10);',
+    indent + '}\n'].join('\n');
+}
+
 
 /**
  * Same as draw_a_square, except inputs are not inlined
@@ -7777,13 +7792,85 @@ function installDrawASquare(blockly, generator, gensym) {
     var loopVar = gensym('count');
     return [
         '// draw_a_square',
-        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 4; ' +
+        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 5; ' +
               loopVar + '++) {',
         '  Turtle.moveForward(' + value_length + ');',
         '  Turtle.turnRight(90);',
         '}\n'].join('\n');
   };
 }
+
+/**
+ * create_a_circle and create_a_circle_size
+ * first defaults to size 10, second provides a size param
+ */
+function installCreateACircle(blockly, generator, gensym) {
+  blockly.Blocks.create_a_circle = {
+    // Draw a square.
+    init: function() {
+      this.setHSV(94, 0.84, 0.60);
+      this.appendDummyInput()
+          .appendTitle(msg.createACircle());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('');
+    }
+  };
+
+  blockly.Blocks.create_a_circle_size = {
+    // Draw a square.
+    init: function() {
+      this.setHSV(94, 0.84, 0.60);
+      this.appendDummyInput()
+          .appendTitle(msg.createACircle());
+      this.appendValueInput('VALUE')
+          .setAlign(blockly.ALIGN_RIGHT)
+          .setCheck('Number')
+              .appendTitle(msg.sizeParameter() + ':');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('');
+    }
+  };
+
+  generator.create_a_circle = function() {
+    return createACircleCode(10, gensym);
+  };
+
+  generator.create_a_circle_size = function() {
+    var size = generator.valueToCode(this, 'VALUE', generator.ORDER_ATOMIC);
+    return createACircleCode(size, gensym);
+  };
+}
+
+/**
+ * create_a_
+ */
+function installCreateASnowflower(blockly, generator, gensym) {
+  blockly.Blocks.create_a_snowflower = {
+    // Draw a square.
+    init: function() {
+      this.setHSV(94, 0.84, 0.60);
+      this.appendDummyInput()
+          .appendTitle(msg.createASnowflower());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('');
+    }
+  };
+
+  generator.create_a_snowflower = function() {
+    var loopVar = gensym('count');
+    return [
+      '// draw_a_snowflower',
+      'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 5; ' + loopVar + '++) {',
+      createACircleCode(2, gensym, '  '),
+      createACircleCode(4, gensym, '  '),
+      '  Turtle.turnRight(72);',
+      '}\n'].join('\n');
+  };
+}
+
 
 /**
  * Draw a rhombus function call block
@@ -9941,14 +10028,18 @@ Turtle.display = function() {
   Turtle.ctxDisplay.fillStyle = style;
 
   Turtle.ctxDisplay.globalCompositeOperation = 'copy';
-  // Draw the answer layer.
-  Turtle.ctxDisplay.globalAlpha = 0.15;
-  Turtle.ctxDisplay.drawImage(Turtle.ctxAnswer.canvas, 0, 0);
-  Turtle.ctxDisplay.globalAlpha = 1;
-
   // Draw the images layer.
   Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
   Turtle.ctxDisplay.drawImage(Turtle.ctxImages.canvas, 0, 0);
+
+  // Draw the answer layer.
+  if (skin.id == "anna" || skin.id == "elsa") {
+    Turtle.ctxDisplay.globalAlpha = 0.5;
+  } else {
+    Turtle.ctxDisplay.globalAlpha = 0.15;
+  }
+  Turtle.ctxDisplay.drawImage(Turtle.ctxAnswer.canvas, 0, 0);
+  Turtle.ctxDisplay.globalAlpha = 1;
 
   // Draw the predraw layer.
   Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
@@ -10958,6 +11049,10 @@ exports.catLogic = function(d){return "!!-Logic-!!"};
 
 exports.colourTooltip = function(d){return "!!-Changes the color of the pencil.-!!"};
 
+exports.createACircle = function(d){return "!!-create a circle-!!"};
+
+exports.createASnowflower = function(d){return "!!-create a snowflower-!!"};
+
 exports.degrees = function(d){return "!!-degrees-!!"};
 
 exports.depth = function(d){return "!!-depth-!!"};
@@ -11059,6 +11154,8 @@ exports.shareDrawing = function(d){return "!!-Share your drawing:-!!"};
 exports.showMe = function(d){return "!!-Show me-!!"};
 
 exports.showTurtle = function(d){return "!!-show artist-!!"};
+
+exports.sizeParameter = function(d){return "!!-size-!!"};
 
 exports.step = function(d){return "!!-step-!!"};
 
