@@ -15,7 +15,8 @@ class User < ActiveRecord::Base
   
   TYPE_STUDENT = 'student'
   TYPE_TEACHER = 'teacher'
-  validates_inclusion_of :user_type, in: [TYPE_STUDENT, TYPE_TEACHER], on: :create
+  USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER]
+  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, on: :create
 
   GENDER_OPTIONS = [[nil, ''], ['gender.male', 'm'], ['gender.female', 'f'], ['gender.none', '-']]
 
@@ -372,7 +373,6 @@ SQL
   end
 
   def generate_username
-    return unless username.blank?
     return if name.blank?
     self.username = UserHelpers.generate_username(User, name)
   end

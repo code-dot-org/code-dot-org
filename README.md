@@ -125,11 +125,11 @@ We support recent versions of Firefox, Chrome, IE9, iOS Safari and the Android b
 
 #### Unit tests
 
-For dashboard changes, be sure to test your changes using `rake test`. For [blockly](https://github.com/code-dot-org/blockly) changes, see our [grunt testing instructions](https://github.com/code-dot-org/blockly#running-tests).
+For dashboard changes, be sure to test your changes using `rake test`. For [blockly](./blockly) changes, see our [grunt testing instructions](./blockly#running-tests).
 
 #### UI tests
 
-Our continuous integration server regularly runs a suite of [UI tests](https://github.com/code-dot-org/dashboard/tree/finished/test/ui) using Selenium / Cucumber which run against many browsers via [BrowserStack Automate](https://www.browserstack.com/automate), and can also be run locally using `chromedriver`. See the [README](https://github.com/code-dot-org/dashboard/tree/finished/test/ui) in that folder for instructions.
+Our continuous integration server regularly runs a suite of [UI tests](./dashboard/test/ui) using Selenium / Cucumber which run against many browsers via [BrowserStack Automate](https://www.browserstack.com/automate), and can also be run locally using `chromedriver`. See the [README](./dashboard/test/ui) in that folder for instructions.
 
 If your changes might affect level paths, blockly UI, or critical path site logic, be sure to test your changes with a local UI test.
 

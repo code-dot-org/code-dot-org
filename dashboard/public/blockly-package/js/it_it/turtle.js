@@ -1165,7 +1165,22 @@ exports.calcBlockXml = function (type, args) {
     str += arg;
     str += '</functional_input>';
   }
-  str+= '</block>';
+  str += '</block>';
+
+  return str;
+};
+
+exports.mathBlockXml = function (type, inputs, titles) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var title in titles) {
+    str += '<title name="' + title + '">' + titles[title] + '</title>';
+  }
+
+  for (var input in inputs) {
+    str += '<functional_input name="' + input + '">' + inputs[input] + '</functional_input>';
+  }
+
+  str += '</block>';
 
   return str;
 };
@@ -1420,16 +1435,57 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Generate a native function wrapper for use with the JS interpreter.
+ */
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, parentObj) {
+  return function() {
+    // Call the native function:
+    var retVal = nativeFunc.apply(parentObj, arguments);
+
+    // Now figure out what to do with the return value...
+
+    if (retVal instanceof Function) {
+      // Don't call createPrimitive() for functions
+      return retVal;
+    } else if (retVal instanceof Object) {
+      var newObj = interpreter.createObject(interpreter.OBJECT);
+      // Limited attempt to marshal back complex return values
+      // Special case: only one-level deep, only handling
+      // primitives and arrays of primitives
+      for (var prop in retVal) {
+        var isFuncOrObj = retVal[prop] instanceof Function ||
+                          retVal[prop] instanceof Object;
+        // replace properties with wrapped properties
+        if (retVal[prop] instanceof Array) {
+          var newArray = interpreter.createObject(interpreter.ARRAY);
+          for (var i = 0; i < retVal[prop].length; i++) {
+            newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
+          }
+          newArray.length = retVal[prop].length;
+          interpreter.setProperty(newObj, prop, newArray);
+        } else if (isFuncOrObj) {
+          // skipping over these - they could be objects that should
+          // be converted into interpreter objects. they could be native
+          // functions that should be converted. Or they could be objects
+          // that are already interpreter objects, which is what we assume
+          // for now:
+          interpreter.setProperty(newObj, prop, retVal[prop]);
+        } else {
+          // wrap as a primitive if it is not a function or object:
+          interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
+        }
+      }
+      return newObj;
+    } else {
+      return interpreter.createPrimitive(retVal);
+    }
+  };
+};
+
+/**
  * Initialize a JS interpreter.
  */
 exports.initJSInterpreter = function (interpreter, scope, options) {
-  // helper function used below..
-  function makeNativeMemberFunction(nativeFunc, parentObj) {
-    return function() {
-      return interpreter.createPrimitive(
-                            nativeFunc.apply(parentObj, arguments));
-    };
-  }
   for (var optsObj in options) {
     var func, wrapper;
     // The options object contains objects that will be referenced
@@ -1445,13 +1501,96 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
       if (func instanceof Function) {
         // Populate each of the global objects with native functions
         // NOTE: other properties are not currently passed to the interpreter
-        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        wrapper = exports.makeNativeMemberFunction(interpreter, func, options[optsObj]);
         interpreter.setProperty(obj,
                                 prop,
                                 interpreter.createNativeFunction(wrapper));
       }
     }
   }
+};
+
+// session is an instance of Ace editSession
+// Usage
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// Need to call this only if the document is updated after the last call.
+exports.aceCalculateCumulativeLength = function (session) {
+  var cumulativeLength = [];
+  var cnt = session.getLength();
+  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
+  cumulativeLength.push(cuml);
+  var text = session.getLines(0, cnt);
+  for (var i = 0; i < cnt; i++) {
+    cuml += text[i].length + nlLength;
+    cumulativeLength.push(cuml);
+  }
+  return cumulativeLength;
+};
+
+// Fast binary search implementation
+// Pass the cumulative length array here.
+// Usage
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
+// tries to find 2512th character lies in which row.
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
+  if (rows > rowe) {
+    return null;
+  }
+  if (rows + 1 === rowe) {
+    return rows;
+  }
+
+  var mid = Math.floor((rows + rowe) / 2);
+  
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
+  }
+  return mid;
+}
+
+/**
+ * Selects code in an ace editor.
+ */
+function createSelection (selection, cumulativeLength, start, end) {
+  var range = selection.getRange();
+
+  range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+  range.start.col = start - cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
+  range.end.col = end - cumulativeLength[range.end.row];
+
+  selection.setSelectionRange(range);
+}
+
+exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
+                                      userCodeStartOffset, userCodeLength) {
+  var inUserCode = false;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    inUserCode = (start > 0) && (start < userCodeLength);
+
+    // If we are showing Javascript code in the ace editor, highlight
+    // the code being executed in each step:
+    if (!editor.currentlyUsingBlocks) {
+      // Only show selection if the node being executed is inside the user's
+      // code (not inside code we inserted before or after their code that is
+      // not visible in the editor):
+      var selection = editor.aceEditor.getSelection();
+      if (inUserCode) {
+        createSelection(selection, cumulativeLength, start, end);
+      } else {
+        selection.clearSelection();
+      }
+    }
+  }
+  return inUserCode;
 };
 
 /**
@@ -8363,6 +8502,7 @@ var Colours = require('./core').Colours;
 var answer = require('./answers').answer;
 var msg = require('../../locale/it_it/turtle');
 var blockUtils = require('../block_utils');
+var utils = require('../utils');
 
 // An early hack introduced some levelbuilder levels as page 5, level 7. Long
 // term we can probably do something much cleaner, but for now I'm calling
@@ -8443,7 +8583,7 @@ var blocks = {
 /**
  * Information about level-specific requirements.
  */
-module.exports = {
+var levels = module.exports = {
   // Level 1: El.
   '1_1': {
     answer: answer(1, 1),
@@ -9209,7 +9349,40 @@ module.exports = {
   }
 };
 
-},{"../../locale/it_it/turtle":42,"../block_utils":3,"../level_base":10,"./answers":27,"./core":31,"./requiredBlocks":35,"./startBlocks.xml":36,"./toolbox.xml":37}],34:[function(require,module,exports){
+levels.ec_1_1 = utils.extend(levels['1_1'], {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'moveForward', 'params': ["100"], 'idArgLast': true },
+    {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
+  ],
+});
+levels.ec_1_2 = utils.extend(levels['1_2'], {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'moveForward', 'params': ["100"], 'idArgLast': true },
+    {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
+    {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
+  ],
+});
+levels.ec_1_3 = utils.extend(levels['1_3'], {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'moveForward', 'params': ["100"], 'idArgLast': true },
+    {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
+    {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
+  ],
+});
+levels.ec_1_4 = utils.extend(levels['1_4'], {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'moveForward', 'params': ["100"], 'idArgLast': true },
+    {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
+    {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
+  ],
+});
+
+
+},{"../../locale/it_it/turtle":42,"../block_utils":3,"../level_base":10,"../utils":39,"./answers":27,"./core":31,"./requiredBlocks":35,"./startBlocks.xml":36,"./toolbox.xml":37}],34:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Turtle = require('./turtle');
 var blocks = require('./blocks');
@@ -9664,6 +9837,7 @@ var codegen = require('../codegen');
 var api = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
+var utils = require('../utils');
 
 var level;
 var skin;
@@ -9947,6 +10121,9 @@ BlocklyApps.reset = function(ignore) {
   }
   Turtle.pid = 0;
 
+  // Discard the interpreter.
+  Turtle.interpreter = null;
+
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
 };
@@ -10021,10 +10198,33 @@ Turtle.evalCode = function(code) {
 };
 
 /**
+ * Set up Turtle.code, Turtle.interpreter, etc. to run code for editCode levels
+ */
+function generateTurtleCodeFromJS () {
+  Turtle.code = utils.generateCodeAliases(level.codeFunctions, 'Turtle');
+  Turtle.userCodeStartOffset = Turtle.code.length;
+  Turtle.code += BlocklyApps.editor.getValue();
+  Turtle.userCodeLength = Turtle.code.length - Turtle.userCodeStartOffset;
+
+  var session = BlocklyApps.editor.aceEditor.getSession();
+  Turtle.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+
+  var initFunc = function(interpreter, scope) {
+    codegen.initJSInterpreter(interpreter, scope, {
+                                      BlocklyApps: BlocklyApps,
+                                      Turtle: api } );
+  };
+  Turtle.interpreter = new window.Interpreter(Turtle.code, initFunc);
+}
+
+/**
  * Execute the user's code.  Heaven help us...
  */
 Turtle.execute = function() {
   api.log = [];
+
+  // Reset the graphic.
+  BlocklyApps.reset();
 
   if (feedback.hasExtraTopBlocks()) {
     // immediately check answer, which will fail and report top level blocks
@@ -10032,18 +10232,44 @@ Turtle.execute = function() {
     return;
   }
 
-  Turtle.code = Blockly.Generator.workspaceToCode('JavaScript');
-  Turtle.evalCode(Turtle.code);
+  if (level.editCode) {
+    generateTurtleCodeFromJS();
+  } else {
+    Turtle.code = Blockly.Generator.workspaceToCode('JavaScript');
+    Turtle.evalCode(Turtle.code);
+  }
 
   // api.log now contains a transcript of all the user's actions.
-  // Reset the graphic and animate the transcript.
-  BlocklyApps.reset();
   BlocklyApps.playAudio('start', {loop : true});
+  // animate the transcript.
   Turtle.pid = window.setTimeout(Turtle.animate, 100);
 
   // Disable toolbox while running
   Blockly.mainWorkspace.setEnableToolbox(false);
 };
+
+/**
+ * Attempt to execute one command from the log of API commands.
+ */
+function executeTuple () {
+  var tuple = api.log.shift();
+  if (tuple) {
+    var command = tuple.shift();
+    BlocklyApps.highlight(String(tuple.pop()));
+    Turtle.step(command, tuple);
+    Turtle.display();
+  }
+  return Boolean(tuple);
+}
+
+/**
+ * Handle the tasks to be done after the user program is finished.
+ */
+function finishExecution () {
+  document.getElementById('spinner').style.visibility = 'hidden';
+  Blockly.mainWorkspace.highlightBlock(null);
+  Turtle.checkAnswer();
+}
 
 /**
  * Iterate through the recorded path and animate the turtle's actions.
@@ -10052,17 +10278,32 @@ Turtle.animate = function() {
   // All tasks should be complete now.  Clean up the PID list.
   Turtle.pid = 0;
 
-  var tuple = api.log.shift();
-  if (!tuple) {
-    document.getElementById('spinner').style.visibility = 'hidden';
-    Blockly.mainWorkspace.highlightBlock(null);
-    Turtle.checkAnswer();
-    return;
+  if (level.editCode) {
+    var stepped = true;
+    while (stepped) {
+      codegen.selectCurrentCode(Turtle.interpreter,
+                                BlocklyApps.editor,
+                                Turtle.cumulativeLength,
+                                Turtle.userCodeStartOffset,
+                                Turtle.userCodeLength);
+      stepped = Turtle.interpreter.step();
+
+      if (executeTuple()) {
+        // We stepped far enough that we executed a commmand, break out:
+        break;
+      }
+    }
+    if (!stepped) {
+      // We dropped out of the step loop because we ran out of code, all done:
+      finishExecution();
+      return;
+    }
+  } else {
+    if (!executeTuple()) {
+      finishExecution();
+      return;
+    }
   }
-  var command = tuple.shift();
-  BlocklyApps.highlight(tuple.pop());
-  Turtle.step(command, tuple);
-  Turtle.display();
 
   // Scale the speed non-linearly, to give better precision at the fast end.
   var stepSpeed = 1000 * Math.pow(1 - Turtle.speedSlider.getValue(), 2);
@@ -10412,6 +10653,12 @@ Turtle.checkAnswer = function() {
     }
   }
 
+  if (level.editCode) {
+    Turtle.testResults = levelComplete ?
+      BlocklyApps.TestResults.ALL_PASS :
+      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
+  }
+
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
@@ -10460,7 +10707,7 @@ var getFeedbackImage = function() {
       feedbackCanvas.toDataURL("image/png").split(',')[1]);
 };
 
-},{"../../locale/it_it/common":41,"../../locale/it_it/turtle":42,"../base":2,"../codegen":6,"../feedback.js":9,"../skins":13,"../templates/page.html":21,"./api":28,"./controls.html":30,"./core":31,"./levels":33}],39:[function(require,module,exports){
+},{"../../locale/it_it/common":41,"../../locale/it_it/turtle":42,"../base":2,"../codegen":6,"../feedback.js":9,"../skins":13,"../templates/page.html":21,"../utils":39,"./api":28,"./controls.html":30,"./core":31,"./levels":33}],39:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10604,8 +10851,9 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       code += "var " + cf.func +
-          " = function() { var newArgs = [''].concat(arguments); return " +
-          parentObjName + "." + cf.func +
+          " = function() { var newArgs = " +
+          (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
+          " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }

@@ -98,6 +98,7 @@ en:
     gender: 'Gender (optional)'
     birthday: 'Birthday (optional)'
     age: 'Age'
+    user_type: 'Are you a student or teacher?'
     submit: 'Sign up'
     teacher: 'Are you a teacher?'
     valid_username: "Available!"
@@ -371,6 +372,9 @@ en:
     male: 'Male'
     female: 'Female'
     none: 'Prefer not to answer'
+  user_type:
+    student: 'Student'
+    teacher: 'Teacher'
   footer:
     help_from_html: 'Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.'
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'

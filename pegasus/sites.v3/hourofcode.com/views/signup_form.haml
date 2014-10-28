@@ -1,7 +1,7 @@
 %a#hocsignupform{name: 'signup'}
 #signupform
   %h2= hoc_s(:signup_header)
-  %form#hoc-signup-form{role: "form", onsubmit: "event.preventDefault();"}
+  %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
     #error_message
 
     .form-group
@@ -62,6 +62,7 @@
           %textarea#hoc-special-event-details.form-control{name: "special_event_details_s", placeholder: hoc_s(:signup_special_event_details_placeholder), style: "height: 5em;"}
 
     %input{name:'hoc_country_s', type:'hidden', value:@country}
+    %input{name:'hoc_company_s', type:'hidden', value:@company}
 
     .form-group.submit-btn
       %div
@@ -119,7 +120,7 @@
       url: "/forms/HocSignup2014",
       type: "post",
       dataType: "json",
-      data: $('#hoc-signup-form').serialize()
+      data: $("#hoc-signup-form").serialize()
     }).done(signupFormComplete).fail(signupFormError);
 
     return false;
