@@ -388,14 +388,18 @@ Turtle.display = function() {
   Turtle.ctxDisplay.fillStyle = style;
 
   Turtle.ctxDisplay.globalCompositeOperation = 'copy';
-  // Draw the answer layer.
-  Turtle.ctxDisplay.globalAlpha = 0.15;
-  Turtle.ctxDisplay.drawImage(Turtle.ctxAnswer.canvas, 0, 0);
-  Turtle.ctxDisplay.globalAlpha = 1;
-
   // Draw the images layer.
   Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
   Turtle.ctxDisplay.drawImage(Turtle.ctxImages.canvas, 0, 0);
+
+  // Draw the answer layer.
+  if (skin.id == "anna" || skin.id == "elsa") {
+    Turtle.ctxDisplay.globalAlpha = 0.5;
+  } else {
+    Turtle.ctxDisplay.globalAlpha = 0.15;
+  }
+  Turtle.ctxDisplay.drawImage(Turtle.ctxAnswer.canvas, 0, 0);
+  Turtle.ctxDisplay.globalAlpha = 1;
 
   // Draw the predraw layer.
   Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
