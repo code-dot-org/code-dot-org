@@ -513,7 +513,7 @@ Turtle.animate = function() {
 
   } else {
 
-    var tuple = api.log.shift();
+    tuple = api.log.shift();
     if (!tuple) {
       document.getElementById('spinner').style.visibility = 'hidden';
       Blockly.mainWorkspace.highlightBlock(null);
@@ -521,7 +521,7 @@ Turtle.animate = function() {
       return;
     }
 
-    var command = tuple.shift();
+    command = tuple.shift();
     BlocklyApps.highlight(tuple.pop());
 
     Turtle.step(command, tuple);
