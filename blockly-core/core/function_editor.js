@@ -65,14 +65,14 @@ Blockly.FunctionEditor.prototype.show = function() {
     return metrics;
   });
 
-  // Set up contract definition HTML section
-  this.createContractDom_();
-
   var g = Blockly.modalWorkspace.createDom();
   this.modalBackground_ = Blockly.createSvgElement('g', {'class': 'modalBackground'});
-  Blockly.svg.insertBefore(g, Blockly.mainBlockSpace.svgGroup_.nextSibling);
-  Blockly.svg.insertBefore(this.modalBackground_, g);
+  Blockly.mainBlockSpaceEditor.svg_.insertBefore(g, Blockly.mainBlockSpace.svgGroup_.nextSibling);
+  Blockly.mainBlockSpaceEditor.svg_.insertBefore(this.modalBackground_, g);
   Blockly.modalWorkspace.addTrashcan();
+
+  // Set up contract definition HTML section
+  this.createContractDom_();
 
   this.paramToolboxBlocks = [];
   this.flyout_ = new Blockly.HorizontalFlyout();
@@ -108,7 +108,7 @@ Blockly.FunctionEditor.prototype.show = function() {
   // Add the function definition block
   this.functionDefinition = Blockly.Xml.domToBlock_(Blockly.modalWorkspace,
       Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
-  this.functionDefinition.moveTo(Blockly.Toolbox.width + 2 * FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
+  this.functionDefinition.moveTo(Blockly.mainBlockSpaceEditor.toolbox.width + 2 * FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   this.functionDefinition.movable_ = false;
 
   this.onResizeWrapper_ = Blockly.bindEvent_(window,
@@ -152,8 +152,8 @@ Blockly.FunctionEditor.prototype.position_ = function() {
 
 Blockly.FunctionEditor.prototype.resizeContractDiv_ = function() {
   var metrics = Blockly.modalWorkspace.getMetrics();
-  var topLeft = Blockly.convertCoordinates(metrics.absoluteLeft, metrics.absoluteTop);
-  var width = Blockly.convertCoordinates(metrics.absoluteLeft + metrics.viewWidth, 0).x - topLeft.x;
+  var topLeft = Blockly.convertCoordinates(metrics.absoluteLeft, metrics.absoluteTop, Blockly.mainBlockSpaceEditor.svg_);
+  var width = Blockly.convertCoordinates(metrics.absoluteLeft + metrics.viewWidth, 0, Blockly.mainBlockSpaceEditor.svg_).x - topLeft.x;
   this.contractDiv_.style.width = width + 'px';
 };
 
@@ -166,8 +166,8 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
       + '<div>What parameters does your function take?</div>'
       + '<div><input id="paramAddText" type="text" style="width: 200px;"> <button id="paramAddButton" class="btn">Add</button>';
   var metrics = Blockly.modalWorkspace.getMetrics();
-  var topLeft = Blockly.convertCoordinates(metrics.absoluteLeft, metrics.absoluteTop);
-  var width = Blockly.convertCoordinates(metrics.absoluteLeft + metrics.viewWidth, 0).x - topLeft.x;
+  var topLeft = Blockly.convertCoordinates(metrics.absoluteLeft, metrics.absoluteTop, Blockly.mainBlockSpaceEditor.svg_);
+  var width = Blockly.convertCoordinates(metrics.absoluteLeft + metrics.viewWidth, 0, Blockly.mainBlockSpaceEditor.svg_).x - topLeft.x;
   this.contractDiv_.style.left = topLeft.x + 'px';
   this.contractDiv_.style.top = topLeft.y + 'px';
   this.resizeContractDiv_();
