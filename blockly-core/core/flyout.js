@@ -325,7 +325,7 @@ Blockly.Flyout.prototype.hide = function() {
     goog.dom.removeNode(rect);
   }
   // Delete the 'Create a Function' button.
-  goog.dom.removeNode(goog.dom.getElementByClass('createFunction', this.workspace_.svgGroup_));
+  goog.dom.removeNode(goog.dom.getElementByClass('createFunction', this.blockSpace_.svgGroup_));
   this.buttons_.splice(0);
 };
 
