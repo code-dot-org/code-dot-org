@@ -7,7 +7,9 @@ sv:
       user:
         name: Display Name
         email: E-post
-        username: Användarnamn
+        username: |
+          användarnamn
+          
         password: Lösenord
         password_confirmation: Lösenordsbekräftelse
         current_password: Nuvarande lösenord
@@ -262,7 +264,9 @@ sv:
       trophies: troféer
     students:
       name: Namn
-      username: Användarnamn
+      username: |
+        användarnamn
+        
       password: Lösenord
       manage: Hantera elever
       dashboard: Go to Teacher Dashboard
@@ -287,7 +291,7 @@ sv:
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
+      rename: ge nytt namn
       edit: edit
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
@@ -332,7 +336,7 @@ sv:
     student_progress: Dina framsteg
     student_stats: 'Du har samlat %{trophy_count} av %{trophy_max} "Koncept-bemästring" troféer.'
     student_left_off: 'Där du slutade senast:'
-    student_finished_prize: 'Du har slutfört alla övningar, få ditt %{prize_link} och välj en annan lektion %{online_link} eller på en %{local_school_link}'
+    student_finished_prize: 'Du har slutfört alla övningar, få ditt %{prize_link} och välj en annan klass %{online_link} eller på en %{local_school_link}'
     student_finished: 'Du har slutfört alla genomgångarna, välj en annan lektion % {online_link} eller på en % {local_school_link}'
     local_school: närliggande skola
     online: Online
@@ -341,13 +345,16 @@ sv:
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Prova nu
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+    20hour_overview: Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp. Kursen är utformad för användning i klassrummet från förskoleklass till årskurs 8, men det är roligt att lära sig i alla åldrar.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Man
     female: Kvinna
@@ -375,7 +382,7 @@ sv:
     teacher: Se lösningen
     auth_error: Du har inte behörighet till att se lösningen.
     submit: Update Artist Location
-    direction: Start Direction
+    direction: Start Direction (in degrees)
   video:
     tab: Video.
     notes: Ingen video? Visa anteckningar.
@@ -384,11 +391,11 @@ sv:
     download: Ladda ner video
   compatability:
     working:
-      header: We are working on support for your browser.
+      header: Vi arbetar för stöd till din webbläsare.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
       hide_this_warning: Hide this warning
     upgrade:
-      header: Please upgrade your browser.
+      header: Du måste uppgradera din webbläsare.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
       button: Take me to the list of supported browsers
   slow_loading: 'Det här tar längre tid  än vanligt...'
@@ -396,7 +403,7 @@ sv:
   next_stage: Klar! Fortsätt till nästa nivå
   download_pdf: Öppen kursplan
   view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
+  pdf_download: Ladda ner PDF
   share_code:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: Check out my Bounce Game
@@ -420,7 +427,7 @@ sv:
       unused: Unused Levels
   upsell:
     hoc:
-      title: Timme med Kod
+      title: Timmen med Kod
       body: Lär dig grunderna i programmering. Miljoner har provat denna.
     flappy:
       title: Flappy Code
@@ -430,9 +437,13 @@ sv:
       body: Prova vår 20-timmars grundkurs i programmering.
   gallery:
     students_drew_these_with_code: Elever ritade dessa med kod!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Vill du göra din egen?
     more: 'Mer &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
@@ -450,7 +461,7 @@ sv:
     correct_title: Rätt
     correct_body: Det är det rätta svaret.
   dialog:
-    ok: OK
+    ok: Ok
   time:
     hour: 1 timme
     day: dag
@@ -460,9 +471,9 @@ sv:
       name:
         20-hour:
           title: K-8 Intro to Computer Science Course (15-25 hours)
-          description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+          description: Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp. Kursen är utformad för användning i klassrummet från förskoleklass till årskurs 8, men det är roligt att lära sig i alla åldrar.
         Hour of Code:
-          title: Timme med Kod
+          title: Timmen med Kod
           description: ""
         edit-code:
           title: Redigera kod

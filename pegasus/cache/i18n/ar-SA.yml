@@ -1,5 +1,5 @@
 "ar-SA":
-  hello: "مرحبا بالعالم"
+  hello: "مرحباً بالعالم"
   computer_science: "علوم الكمبيوتر"
   computer_science_edweek: "الاسبوع التعليمي لعلوم الكمبيوتر"
   csedweek_dates: 9-15 كانون الأول/ديسمبر، عام 2013
@@ -17,13 +17,13 @@
     عن الكمبيوتر العلوم والبرمجة و المفاهيم الأساسية في الدورة التالية.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
-  hoc2014_students: "طالب"
+  hoc2014_students: "الطلاب"
   hoc2014_try: Try it
   hoc2014_teachers: Teachers
   hoc2014_host: Host it
   hoc2014_everyone: Everyone
   hoc2014_support: Support it
-  hoc2014_whatishoc: What is the Hour of Code?
+  hoc2014_whatishoc: "ماهي الساعة من البرمجة ؟"
   twentyhours_trynow: "جرب الآن"
   california_heading: "أطلب من مدرستك لتعليم علوم الحاسب الآلي"
   california_text: "أي معلم يمكن أن يقدم لدينا <a href='http://studio.code.org/'>دورات
@@ -80,7 +80,7 @@
   get_started: "إبدأ"
   i_agree: "أوافق"
   participant_select: "- اختر -"
-  participant_student: "الطالب"
+  participant_student: "طالب"
   participant_parent: "الوالدين"
   participant_educator: "المعلم"
   participant_engineer: "مهندس برمجيات"
@@ -118,9 +118,9 @@
   studiobar_title: "إستكشف <a href='http://studio.code.org'>ستوديو البرمجة</a>"
   studiobar_elementary_title: "الدورات الابتدائية"
   studiobar_elementary_body: "دوراتنا الثلاث الجديدة لـ K&#8209;5"
-  studiobar_hoc_title: "ساعة من البرمجة"
+  studiobar_hoc_title: "الساعة من التعليمات البرمجية"
   studiobar_hoc_body: "تعلم البرمجة مع الطيور الغاضبة"
-  studiobar_flappy_title: "برمجة فلابي"
+  studiobar_flappy_title: "رمز لعبة flappy"
   studiobar_flappy_body: "اصنع و شارك لعبة فلابي الخاصة بك"
   studiobar_teacher_title: "لوحة تحكم المعلم"
   studiobar_teacher_body: "للمعلمين : عرض تقدم طلابك"
@@ -231,7 +231,7 @@
   dashboard_sections_table_section: "القسم"
   dashboard_sections_table_secret: "النوع السري"
   dashboard_sections_table_grade: "الصف الدراسي"
-  dashboard_sections_table_course: "الدورة"
+  dashboard_sections_table_course: "الدرس"
   dashboard_sections_table_students: "الطلاب"
   dashboard_sections_table_code: "قسم البرمجة"
   dashboard_sections_name: Section Name
@@ -304,8 +304,21 @@
   dashboard_grade_other: "الأخرى"
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_none: "البريد الإلكتروني"
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: "طالب"
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

@@ -18,7 +18,7 @@ Hoida [koko koulu osallistumaan](http://<%= hostname %>/whole-school) niin koulu
 
 ## 1. Levitä sanaa
 
-Tell your friends about the #HourOfCode.
+Kerro kavereillesi hashtagilla #HourOfCode.
 
 <% if @country == 'us' %>
 
@@ -44,30 +44,18 @@ Recruit a local group — boy scouts club, church, university, veterans group or
 
 ## 5. Ask a local elected official to support the Hour of Code
 
-## [Lähetä tämä sähköposti](http://<%= hostname %>/resources#politicians) pormestarille, kaupunginvaltuustolle tai koulun johtokunnalle. Tai [anna heille tämä lehtinen](http://<%= hostname %>/files/hoc-one-pager.pdf) ja pyydä käymään koulullanne tutustumiskäynnillä.
+[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
-Kiitos osallistumisestasi Kooditunnin ylläpitäjäksi!
+<% if @country == 'ro' %>
 
-Jokainen Kooditunnin järjestäjä voi saada ilmaislahjoja sponsoreiltamme, mutta emme välttämättä suosittele kyseisten tuotteiden käyttöä. Lisätietoja (http://<%= hostname %>/prizes)
+Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
 
-Hoida koko koulu osalistumaan (http://<%= hostname %>/whole-school) niin teillä on mahdollisuus voittaa isoja palkintoja koko koulullenne.
+Echipa Hour of Code Romania hoc@adfaber.org
 
-  1. Levitä sanaa
+<% end %>
 
-Tell your friends about the #HourOfCode.
+* * *
 
-  1. Pyydä kouluasi tarjoamaan Koodituntia
+Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
 
-Lähetä tämä sähköposti (http://<%= hostname %>/resources#email) tai anna tämä esite rehtorillenne (http://<%= hostname %>/files/schools-handout.pdf). Jos koko koulunne osallistuu, ilmoittaudu voittaaksesi 10 000 USD edestä teknologiaa koulullenne (http://<%= hostname %>/prizes) ja haasta muut alueen koulut mukaan. (Vain USA:ssa)
-
-  1. Pyydä työnantajaasi osallistumaan
-
-Lähetä tämä sähköposti (http://<%= hostname %>/resources#email) tai anna tämä lehtinen esimiehellesi tai toimitusjohtajallenne (http://<%= hostname %>/files/schools-handout.pdf).
-
-  1. Edistä Koodituntia paikkakunnallasi
-
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
-
-  1. Pyydä paikallista politikkoa tukemaan Koodituntia
-
-Lähetä tämä sähköposti (http://<%= hostname %>/resources#politicians) pormestarille, kaupunginvaltuustolle tai koulun johtokunnalle. Tai anna heille tämä lehtinen (http://<%= hostname %>/resources/hoc-one-pager.pdf) ja pyydä käymään koulullanne tutustumiskäynnillä.
+![](<%= tracking_pixel %>)

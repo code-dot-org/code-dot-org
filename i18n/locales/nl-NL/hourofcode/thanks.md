@@ -1,57 +1,61 @@
 * * *
 
-title: Thanks for signing up to host an Hour of Code! layout: wide
+title: Bedankt dat je je hebt opgegeven een Uur Code te organiseren! layout: wide
 
-social: "og:title": "<%= hoc\_s(:meta\_tag\_og\_title) %>" "og:description": "<%= hoc\_s(:meta\_tag\_og\_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
+social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
 
-"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc\_s(:meta\_tag\_twitter\_title) %>" "twitter:description": "<%= hoc\_s(:meta\_tag\_twitter\_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv\_load\_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
 
 * * *
 
 <% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc\_s(:twitter\_default\_text)} twitter[:hashtags] = 'HourOfCode' unless hoc\_s(:twitter\_default\_text).include? '#HourOfCode' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# Thanks for signing up to host an Hour of Code!
+# Bedankt dat je je hebt opgegeven om een Uur Code te organiseren!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](/prizes)
+**IEDERE** Uur Code-organisator krijgt 10GB Dropbox-ruimte of $10 aan Skype-credit als bedankje. [Details](/prizes)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](/us/prizes) for a chance for big prizes for your entire school.
+Zorg dat je [hele school meedoet](/us/prizes) om kans te maken op grote prijzen voor je hele school.
 
 <% end %>
 
-## 1. Spread the word
+## 1. Zegt het voort
 
-Tell your friends about the #HourOfCode.
+Vertel je vrienden over het Uur Code, #HourOfCode.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 <% if @country == 'us' %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Vraag je hele school een Uur Code aan te bieden
 
-[Send this email](/resources#email) or [give this handout to your principal](/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](/prizes) and challenge other schools in your area to get on board.
+[Stuur deze mail](/resources#email) of [geef deze documenten aan je rector](/files/schools-handout.pdf). Is je school aan boord, [ding dan mee naar $10.000 aan technologie voor je school](/prizes) en daag andere scholen in je district uit ook mee te doen.
 
 <% else %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Vraag je hele school een Uur Code aan te bieden
 
-[Send this email](/resources#email) or give [this handout](/files/schools-handout.pdf) to your principal.
+[Stuur deze mail](/resources#email) of geef [deze documenten](/files/schools-handout.pdf) aan je rector.
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 3. Maak een donatie
 
-[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
+[Doneer aan onze crowdfunding campagne](http://code.org/donate). Om te leren aan 100 miljoen kinderen, hebben wij uw steun nodig. We hebben zonet, wat hèt [grootste crowdfunding voorlichtingscampagne](http://code.org/donate) in de geschiedenis kan worden, gelanceerd. Elke dollar zal door grote Code.org [donoren](http://code.org/about/donors) verdubbeld worden.
 
-## 4. Promote Hour of Code within your community
+## 4. Vraag uw werkgever om betrokken te raken
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+[Stuur deze e-mail](/resources#email) naar uw manager of de CEO. Of [Geef ze deze documenten](/resources/hoc-one-pager.pdf).
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Promoot het Uur Code in je gemeenschap
 
-[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+Werk samen met een vereniging — scouting, kerk, universiteit of vakbond. Of organiseer een Uur Code "buurtfeest" voor je wijk.
+
+## 6. Vraag een politicus het Uur Code te ondersteunen
+
+[Stuur deze mail](/resources#politicians) aan je burgemeester, raad of schoolbestuur. Of [Geef ze deze documenten ](/resources/hoc-one-pager.pdf)en nodig hen uit voor een bezoek aan je school.
 
 <%= view 'popup_window.js' %>

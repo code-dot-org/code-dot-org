@@ -1,9 +1,9 @@
 * * *
 
-title: Thank you layout: wide
+naslov: Hvala prikaz: širok
 
 * * *
 
-# Thank you
+# Hvala vam
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+Vaša je cijela škola sada prijavljena da osvoji komplet računala za razred (ili tehnologiju u vrijednosti 10 tisuća dolara).

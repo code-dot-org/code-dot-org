@@ -12,13 +12,13 @@ von: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+[Nehme mit deiner gesamten Schule teil](http://<%= hostname %>/whole-school) und gewinne Preise für alle.
 
 <% end %>
 
 ## 1. Weitersagen
 
-Tell your friends about the #HourOfCode.
+Erzähl deinen Freunden von #HourOfCode.
 
 <% if @country == 'us' %>
 
@@ -40,34 +40,22 @@ Tell your friends about the #HourOfCode.
 
 ## 4. Stelle Hour of Code deiner Gemeinde vor
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Stelle Hour of Code in deiner Region vor, bei Kirchen, Universitäten oder Gewerkschaften. Oder veranstalte eine Hour of Code "Strassenparty" für deine Nachbarschaft.
 
 ## 5. Frage öffentliche Stellen ob sie Hour of Code unterstützen würden
 
-## [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
-Danke das du dich als Veranstalter für eine Hour of Code angemeldet hast!
+<% if @country == 'ro' %>
 
-EVERY Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. Details (http://<%= hostname %>/prizes)
+Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
 
-Get your whole school to participate (http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Echipa Hour of Code Romania hoc@adfaber.org
 
-  1. Spread the word
+<% end %>
 
-Tell your friends about the #HourOfCode.
+* * *
 
-  1. Ask your whole school to offer an Hour of Code
+Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
 
-Send this email (http://<%= hostname %>/resources#email) or give this handout to your principal (http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, enter to win $10,000 worth of technology for your school (http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
-
-  1. Ask your employer to get involved
-
-Send this email (http://<%= hostname %>/resources#email) to your manager, or the CEO. Or give them this handout (http://<%= hostname %>/files/schools-handout.pdf).
-
-  1. Promote Hour of Code within your community
-
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
-
-  1. Ask a local elected official to support the Hour of Code
-
-Send this email (http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or give them this handout (http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+![](<%= tracking_pixel %>)

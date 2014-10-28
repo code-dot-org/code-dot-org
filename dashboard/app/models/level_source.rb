@@ -6,6 +6,8 @@ class LevelSource < ActiveRecord::Base
   has_one :level_source_image
   has_many :level_source_hints
 
+  has_many :activities
+
   validates_length_of :data, :maximum => 20000
 
   # This string used to sometimes appear in program XML.

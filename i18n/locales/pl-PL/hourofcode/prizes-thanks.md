@@ -1,9 +1,9 @@
 * * *
 
-title: Thank you layout: wide
+Tytuł: Dziękuję układ: szeroki
 
 * * *
 
-# Thank you
+# Dziękujemy
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+Twoja szkoła bierze teraz udział w konkursie, aby wygrać zestaw laptopów do klasy (lub 10.000 dolarów na inny rodzaj technologii).

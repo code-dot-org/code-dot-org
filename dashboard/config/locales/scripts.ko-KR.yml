@@ -27,11 +27,11 @@
           title: "코스1 - 읽기 초급"
           Artist 2: "예술가2"
           Happy Maps: "즐거운 맵"
-          Move it, Move it: "빨리 빨리 움직이기"
+          Move it, Move it: "움직여, 움직여"
           'Real-life Algorithms: Plant a Seed': "실시간 알고리즘: 씨앗 심기"
           Building a Foundation: "건물 기초 만들기"
-          Getting Loopy: "반복시키기"
-          The Big Event: "큰 이벤트"
+          Getting Loopy: "반복적으로 하기"
+          The Big Event: "빅 이벤트"
           Going Places Safely: "안전하게 자리잡기"
           description: "코스1은 컴퓨터 프로그래밍을 처음 이해하기 시작하는 사람들을 위한 코스로, 다른 사람들과 협력하고, 문제
             해결 능력을 계발하고 어려운 문제들에 도전할 수 있도록 하는 코스 입니다. 이 코스를 통해 학생 스스로 자신만의 게임과 스토리들을
@@ -51,7 +51,7 @@
           Artist Debugging: "예술가 디버깅"
           Bounce: "바운스"
           'Studio: Create a Story': 'Play Lab: 스토리 만들기'
-          Artist Loops: "아티스트 반복"
+          Artist Loops: "예술가 반복"
           Bee Conditionals: "꿀벌 조건선택"
           Flappy: "플래피 버드"
           title: "코스2"
@@ -60,12 +60,12 @@
           The Artist Debugging: "예술가 디버깅"
           Bee Debugging: "꿀벌 디버깅"
           Bee Functions: "꿀벌 함수"
-          Maze Loops: "미로 반복"
+          Maze Loops: "미로 퍼즐 반복"
           Graph Paper Programming: "모눈 종이 프로그래밍"
           'Real-life Algorithms: Paper Planes': "실시간 알고리즘: 종이 비행기"
           Getting Loopy: "반복시키기"
           Relay programming: "릴레이 프로그래밍"
-          Conditionals: "조건/선택"
+          Conditionals: "조건"
           Binary Bracelets: 2진 팔찌
           The Big Event: "큰 이벤트"
           Your Digital Footprint: "디지털 개인정보 흔적"
@@ -99,12 +99,12 @@
           Bee Functions: "꿀벌 함수"
           Artist Functions with Params: "예술가 매개변수 함수"
           Bounce: "바운스"
-          Maze Conditionals: "미로 퍼즐 조건선택"
+          Maze Conditionals: "미로 퍼즐 조건 선택"
           Artist Functions with Parameters: "예술가 매개변수 함수"
           Computational Thinking: "컴퓨터과학(정보과학)적 사고"
           Functional Suncatchers: "기능성 색유리"
           Songwriting Parameters: "노래 작곡 매개변수"
-          Dice Race: "주사위 레이스"
+          Dice Race: "주사위 경주"
           Internet: "인터넷"
           Crowdsourcing: "클라우드소싱"
           Digital Citizenship: "디지털 시민의식"
@@ -114,8 +114,8 @@
             공유할 수 있게 됩니다. K4-5(초등4-5학년) 학생들에게 권장합니다."
           'Studio: Create a Game': 'Play Lab: 게임 만들기'
           Maze: "미로 퍼즐"
-          Artist: "에술가"
-          'Artist: Functions': "에술가: 함수"
+          Artist: "예술가"
+          'Artist: Functions': "예술가: 함수"
           'Bee: Functions': "꿀벌: 함수"
           'Bee: Conditionals': "꿀벌: 조건선택"
           'Maze: Conditionals': "미로 퍼즐: 조건선택"
@@ -135,6 +135,7 @@
           'Bee: Nested Loops2': "꿀벌: 중첩반복2"
           'Bee: Debugging2': "꿀벌: 디버깅2"
           'Artist: Patterns': "예술가: 패턴"
+          Songwriting: "노래 만들기"
         msm:
           title: "중학교 수학"
           description: "중학교 수학 과정 개인 진도"
@@ -148,7 +149,7 @@
           Play Lab: Play Lab
           description_short: Play Lab을 이용해 스토리나 게임을 만드세요!
         artist:
-          title: "에술가"
+          title: "예술가"
           description: "예술가를 이용해 멋진 그림과 디자인을 만들어보세요!"
-          Artist: "에술가"
+          Artist: "예술가"
           description_short: "예술가를 이용해 멋진 그림과 디자인을 만들어보세요!"

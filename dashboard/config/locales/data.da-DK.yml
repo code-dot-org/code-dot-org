@@ -5,7 +5,7 @@
         20-hour:
           desc: Folkeskolens Intro til Computer Videnskabs kurset
           Unplug1: Trin 1
-          Maze: Trin 2
+          Maze: Fase 2
           Unplug2: Trin 3
           Unplug3: Trin 4
           Artist: Trin 5
@@ -25,7 +25,7 @@
           Artist5: Trin 19
           Unplug11: Trin 20
         Hour of Code:
-          desc: En Times Kodning
+          desc: En Time af Kode
           Maze: Trin 1
         Edit Code:
           desc: Rediger program (beta)
@@ -34,7 +34,7 @@
           desc: Hoppe (beta)
           Bounce: Trin 1
         Builder Levels:
-          desc: Brugeroprettede gåder (beta)
+          desc: Brugeroprettede puslespil (beta)
           Custom: Trin 1
         Flappy Levels:
           desc: Flappy fuglen
@@ -47,29 +47,30 @@
           MazeStep: Fase trin
         edit-code:
           desc: Rediger program (beta)
-          MazeEC: Fase 1
+          MazeEC: Trin 1
+          Webapp: Fase 2
         events:
           desc: Hoppe (beta)
-          Bounce: Fase 1
-          Studio: Fase 2
+          Bounce: Trin 1
+          Studio: Trin 2
         builder:
           desc: Brugeroprettede puslespil (beta)
-          Custom: Fase 1
+          Custom: Trin 1
         flappy:
           desc: Flappy fuglen
-          Flappy: Fase 1
+          Flappy: Trin 1
         jigsaw:
           desc: Puslespil (beta)
-          Jigsaw: Fase 1
+          Jigsaw: Trin 1
         step:
           desc: Labyrint (beta)
           MazeStep: Fase trin
         wordsearch:
           desc: Stave bien (beta)
-          WordSearch: Fase 1
+          WordSearch: Trin 1
     game:
       name:
-        Unplug1: Introduktion til Computer Videnskab
+        Unplug1: Introduktion til datalogi
         Maze: Labyrinten
         Multi: Flere valgs ting
         Unplug2: Data-Tænkning
@@ -81,7 +82,7 @@
         Farmer: Landmanden
         Unplug6: Betingelser
         Artist3: Kunstneren 3
-        Unplug7: Sang Skrivning
+        Unplug7: Sangskrivning
         Farmer2: Landmanden 2
         Unplug8: Abstraktion
         Artist4: Kunstneren 4
@@ -92,10 +93,11 @@
         Unplug11: Afslutning
         MazeEC: Labyrinten
         Bounce: Hoppe
-        Flappy: Flappy-fuglen
+        Flappy: Flappy fuglen
         Jigsaw: Puslespil
         MazeStep: Labyrint trin Mode
         Wordsearch: Ordsøgning
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Bronze
@@ -106,10 +108,10 @@
         sequence: Sekvens
         if: Hvis blok
         if_else: Hvis-Ellers blok
-        loop_times: Gentag gange blok
-        loop_until: Gentag indtil blok
+        loop_times: Gentag Gange blok
+        loop_until: Gentag Indtil blok
         loop_while: Imens blok
-        loop_for: Tælle-blok
+        loop_for: Tæller blok
         function: Funktioner
         parameters: Funktioner med parametre
     level:
@@ -391,8 +393,8 @@
           telefoner.
         Custom_builder: Træk blokke fra værktøjskassen til arbejdsområdet for at tegne
           det niveau, du ønsker at oprette. Tryk på "Kør Program", når du er klar.
-        flappy_1: Sæt en blok sammen med "når klikkes" blokken, tryk derefter på "Kør
-          Program". Klik eller tryk på skærmen for at flytte Flappy til målet.
+        flappy_1: Vedhæft en blok til "når der klikkes" blokken, derefter tryk på
+          "Kør Program". Klik på eller tryk på skærmen for at flytte Flappy til målet.
         flappy_2: Vi har nu tilføjet noget jord.  Vedhæft en blok til "når rammer
           jorden"-blok.  Din kode skal 'SLUTTE SPILLET' når Flappy falder.
         flappy_3: '"Når spillet starter"-blokken tillader dig at køre kode, når dit
@@ -445,8 +447,8 @@
         jigsaw_8: Arrangere blokke til at danne billedet
         jigsaw_9: Arrangere blokke til at danne billedet
         jigsaw_10: Arrangere blokke til at danne billedet
-        jigsaw_11: Arrangere blokke til at danne billedet
-        jigsaw_12: Arranger blokkene for at danne billedet
+        jigsaw_11: Arranger blokkene for at danne billedet
+        jigsaw_12: Arrangere blokke til at danne billedet
         jigsaw_13: Løs puslespillet!
         mazestep_1: Labyrint trin beskrivelse her
         mazestep_2: Labyrint trin beskrivelse her
@@ -589,7 +591,7 @@
         C2_maze_intro: Labyrint Intro
         C2_artist_intro: Kunstner Intro
         C2_zuck_repeat_loop: Labyrint sløjfer
-        C2_artist_loops: Spiller Løkker
+        C2_artist_loops: Kunstner sløjfer
         C2_bee_conditionals: Bi betingelser
         C2_playlab_createstory: Spil Lab - Opret en historie
         C2_graph_paper: Programmering på millimeterpapir
@@ -599,8 +601,8 @@
         C2_paper_airplanes: Papir fly
         C3_maze_intro: Labyrint Intro
         C3_artist_intro: Kunstner Intro
-        C3_artist_functions: Spiller Funktioner
-        C3_bee_functions: Bi Funktioner
+        C3_artist_functions: Kunstner funktioner
+        C3_bee_functions: 'Bi: Funktioner'
         C3_bee_conditionals: Bi betingelser
         C3_maze_conditionals: Labyrint Betingelser
         C3_artist_nested_loops: Indlejret Løkker

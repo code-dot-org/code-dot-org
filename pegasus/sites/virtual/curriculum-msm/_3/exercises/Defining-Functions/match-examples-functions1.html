@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><title>Exercise: Matching Examples and Function Definitions</title><link rel="stylesheet" type="text/css" href="scribble.css" title="default"/><link rel="stylesheet" type="text/css" href="pretty-printing.css" title="default"/><link rel="stylesheet" type="text/css" href="codemirror.css" title="default"/><link rel="stylesheet" type="text/css" href="bootstrap.css" title="default"/><link rel="stylesheet" type="text/css" href="textbook.css" title="default"/><link rel="stylesheet" type="text/css" href="extra_curriculum.css" title="default"/><script type="text/javascript" src="scribble-common.js"></script><script type="text/javascript" src="codemirror.js"></script><script type="text/javascript" src="runmode.js"></script><script type="text/javascript" src="scheme2.js"></script><script type="text/javascript" src="bootstraplesson.js"></script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML%2Chttp%3A%2F%2Fwww.cs.wpi.edu%2F%7Ekfisler%2Fmathjaxlocal.js"></script><!--[if IE 6]><style type="text/css">.SIEHidden { overflow: hidden; }</style><![endif]--></head><body id="scribble-racket-lang-org"><div class="tocset"><div class="tocview"><div class="tocviewlist tocviewlisttopspace"><div class="tocviewtitle"><table cellspacing="0" cellpadding="0"><tr><td style="width: 1em;">&bull;</td><td></td><td><a href="" class="tocviewselflink" data-pltdoc="x">Exercise:<span class="mywbr"> &nbsp;</span> Matching Examples and Function Definitions</a></td></tr></table></div></div></div><div class="tocsub"><table class="tocsublist" cellspacing="0"><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Exercise__.Matching_.Examples_and_.Function_.Definitions%29" class="tocsubseclink" data-pltdoc="x">Exercise:<span class="mywbr"> &nbsp;</span> Matching Examples and Function Definitions</a></td></tr></table></div></div><div class="maincolumn"><div class="main"><a name="(part._.Exercise__.Matching_.Examples_and_.Function_.Definitions)"></a><p><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script><noscript></noscript><script type="text/javascript" src="easyXDM.min.js"></script><noscript></noscript><script type="text/javascript" src="json2.min.js"></script><noscript></noscript><script type="text/javascript" src="bootstrap-helpers.js"></script><noscript></noscript></p><p><span class="BootstrapTitle">Exercise: Matching Examples and Function Definitions</span></p><div class="content"><div class="segment " id="exercises"><div class="exercise-instr"><span style="font-weight: bold">Directions: </span>Match the EXAMPLEs on the left with the definitions on the right. NOTE: Some definitions may not match any examples!</div><ul class="twoColumnLayout matching"><li class="twoColumnLayout matchingItem"><div class="leftColumn "><p>&nbsp;<textarea>
+(EXAMPLE (mystery "red") 
+         (circle 10 "solid" "red"))
+(EXAMPLE (mystery "orange") 
+         (circle 10 "solid" "orange"))
+</textarea></p></div><div class="rightColumn "><p>&nbsp;<textarea>
+(define (mystery r)
+  (circle r "outline" "red"))
+</textarea></p></div></li><li class="twoColumnLayout matchingItem"><div class="leftColumn "><p>&nbsp;<textarea>
+(EXAMPLE (mystery 30) 
+         (circle 30 "outline" "red"))
+(EXAMPLE (mystery 10) 
+         (circle 10 "outline" "red"))
+</textarea></p></div><div class="rightColumn "><p>&nbsp;<textarea>
+(define (mystery num)
+  (* num 2))
+</textarea></p></div></li><li class="twoColumnLayout matchingItem"><div class="leftColumn "><p>&nbsp;<textarea>
+(EXAMPLE (mystery 30) 
+         (rectangle 30 10 "outline" "red"))
+(EXAMPLE (mystery 10) 
+         (rectangle 10 10 "outline" "red"))
+</textarea></p></div><div class="rightColumn "><p>&nbsp;<textarea>
+(define (mystery w)
+  (rectangle w 10 "outline" "red"))
+</textarea></p></div></li><li class="twoColumnLayout matchingItem"><div class="leftColumn "><p>&nbsp;<textarea>
+(EXAMPLE (mystery 30) 
+         (rectangle 20 30 "solid" "red"))
+(EXAMPLE (mystery 20) 
+         (rectangle 20 20 "solid" "red"))
+(EXAMPLE (mystery 10) 
+         (rectangle 20 10 "solid" "red"))
+</textarea></p></div><div class="rightColumn "><p>&nbsp;<textarea>
+(define (mystery num)
+  (+ num num))
+</textarea></p></div></li><li class="twoColumnLayout matchingItem"><div class="leftColumn "><p>&nbsp;<textarea>
+(EXAMPLE (mystery 2) 
+         (+ 2 2))
+(EXAMPLE (mystery 4) 
+         (+ 4 4))
+(EXAMPLE (mystery 5) 
+         (+ 5 5))
+
+</textarea></p></div><div class="rightColumn "><p>&nbsp;<textarea>
+(define (mystery h)
+  (rectangle 10 h "solid" "red"))
+</textarea></p></div></li><li class="twoColumnLayout matchingItem"><div class="leftColumn "></div><div class="rightColumn "><p>&nbsp;<textarea>
+(define (mystery c)
+  (circle 10 "solid" c))
+</textarea></p></div></li><li class="twoColumnLayout matchingItem"><div class="leftColumn "></div><div class="rightColumn "><p>&nbsp;<textarea>
+(define (mystery h)
+  (rectangle 20 h "solid" "red"))
+</textarea></p></div></li></ul></div></div><div id="copyright"><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="pict.png" alt="image" width="88" height="31"/></a>Bootstrap by <a href="http://www.bootstrapworld.org/">Emmanuel Schanzer</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons 3.0 Unported License</a>. Based on a work at <a href="http://www.bootstrapworld.org/">www.BootstrapWorld.org</a>. Permissions beyond the scope of this license may be available at <a href="mailto:schanzer@BootstrapWorld.org">schanzer@BootstrapWorld.org</a>.</div></div></div><div id="contextindicator">&nbsp;</div></body></html>

@@ -4,7 +4,7 @@
       name:
         test:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          The Maze: El laberint
+          The Maze: El Laberint
           Multi: Multi
           Match: Match
           Math Image: Math Image
@@ -44,7 +44,7 @@
             grades.
           'Artist: Loops': 'Artist: Loops'
         course2:
-          The Maze: El laberint
+          The Maze: El Laberint
           Suzi: Suzi
           The Artist: L'artista
           Artist Debugging: Artist Debugging
@@ -83,7 +83,7 @@
           'Maze: Sequence2': 'Maze: Sequence2'
           'Artist: Nested Loops': 'Artist: Nested Loops'
         course3:
-          The Maze: El laberint
+          The Maze: El Laberint
           'Studio: Create a Story': 'Studio: Create a Story'
           The Artist: L'artista
           title: Course 3
@@ -109,7 +109,7 @@
           Farmer - While Loops: Farmer - While Loops
           description: Formerly known as a 4-5 course.
           'Studio: Create a Game': 'Studio: Create a Game'
-          Maze: Maze
+          Maze: Laberint
           Artist: Artist
           'Artist: Functions': 'Artist: Functions'
           'Bee: Functions': 'Bee: Functions'
@@ -132,6 +132,7 @@
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
           'Bee: Debugging2': 'Bee: Debugging2'
           'Artist: Patterns': 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

@@ -16,6 +16,7 @@ class Blockly < Level
     step_speed
     slider_speed
     disable_param_editing
+    disable_variable_editing
   )
 
   before_validation {
@@ -79,35 +80,24 @@ class Blockly < Level
 
   def self.convert_toolbox_to_category(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
-    return xml_string if xml.nil?
-    xpath_query = "/xml/block[@type='procedures_defnoreturn' and starts-with(title/text(),'CATEGORY=')]"
-    xml.xpath(xpath_query).map(&:remove).each do |category|
-      category_name = category.xpath('title').text.tap { |x| x.slice!('CATEGORY=') }
-      category_node = Nokogiri::XML("<category name='#{category_name}'").child
-      category_node['custom'] = 'PROCEDURE' if category_name == 'Functions'
-      category_node['custom'] = 'VARIABLE' if category_name == 'Variables'
-      category_blocks = category.xpath("statement[@name='STACK']/block")
-      unwrap_blocks(category_blocks).each { |block| category_node << block }
-      xml.child << category_node
+    return xml_string if xml.nil? || xml.xpath('/xml/block[@type="category"]').empty?
+    default_category = category_node = Nokogiri::XML("<category name='Default'>").child
+    xml.child << default_category
+    xml.xpath('/xml/block').each do |block|
+      if block.attr('type') == 'category'
+        category_name = block.xpath('title').text
+        category_node = Nokogiri::XML("<category name='#{category_name}'>").child
+        category_node['custom'] = 'PROCEDURE' if category_name == 'Functions'
+        category_node['custom'] = 'VARIABLE' if category_name == 'Variables'
+        xml.child << category_node
+        block.remove
+      else
+        block.remove
+        category_node << block
+      end
     end
+    default_category.remove if default_category.element_children.empty?
     xml.serialize(save_with: XML_OPTIONS).gsub("\n", '').strip
-  end
-
-  def self.unwrap_blocks(node)
-    next_node = node.xpath('next')[0]
-    output = [node]
-    output.concat(unwrap_blocks(next_node.remove.xpath('block')[0])) if next_node
-    output
-  end
-
-  def self.wrap_blocks(blocks)
-    current_block = blocks.slice!(0)
-    unless blocks.empty?
-      next_tag = Nokogiri::XML('<next/>').child
-      next_tag << wrap_blocks(blocks)
-      current_block << next_tag
-    end
-    current_block
   end
 
   def self.convert_category_to_toolbox(xml_string)
@@ -115,17 +105,22 @@ class Blockly < Level
     return xml_string if xml.nil?
     xml.xpath('/xml/category').map(&:remove).each do |category|
       category_name = category.xpath('@name')
-      category_xml = <<XML
-<block type="procedures_defnoreturn">
-  <mutation/>
-  <title name="NAME">CATEGORY=#{category_name}</title>
-  <statement name="STACK"/>
-</block>
-XML
+      category_xml = <<-XML.strip_heredoc.chomp
+        <block type="category">
+          <title name="CATEGORY">#{category_name}</title>
+        </block>
+      XML
       block = Nokogiri::XML(category_xml, &:noblanks).child
       xml << block
-      block.xpath('statement')[0] << wrap_blocks(category.xpath('block').to_a) unless category.xpath('block').empty?
+      xml << category.children
+      #block.xpath('statement')[0] << wrap_blocks(category.xpath('block').to_a) unless category.xpath('block').empty?
     end
     xml.serialize(save_with: XML_OPTIONS).gsub("\n", '').strip
+  end
+
+  # for levels with solutions
+  def update_ideal_level_source
+    return if !self.respond_to?(:solution_blocks) || solution_blocks.blank?
+    self.ideal_level_source = LevelSource.find_identical_or_create(self, solution_blocks)
   end
 end

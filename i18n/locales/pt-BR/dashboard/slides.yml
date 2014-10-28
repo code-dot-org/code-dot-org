@@ -115,7 +115,7 @@ pt:
         text: 'Ao invés de arrastar 5 blocos "avance"...'
       5:
         image: notes/hoc2_5.jpg
-        text: 'Podemos colocar o bloco "avance" dentro do bloco "repita" e escrever um número no bloco para definir o número de repetições.'
+        text: 'Podemos colocar o bloco "Avançar" dentro do bloco "repetir" e escrever um número no bloco para dizer quantas vezes repetir.'
       6:
         image: notes/hoc2_6.jpg
         text: 'E isso é importante: você pode colocar mais de um comando dentro de um bloco "repita".'
@@ -156,7 +156,7 @@ pt:
         text: 'Declarações "se" são muito importantes para a ciência da computação. Um dos primeiros programas que escrevi foi um jogo da velha, e havia uma instrução "se" que dizia: SE a outra pessoa está prestes a ganhar, bloqueie a casa que lhe permitiria ganhar.'
       7:
         image: notes/hoc4_7.jpg
-        text: 'Divirta-se usando o bloco "se"!'
+        text: 'Divirta-se usando o bloco  "se"!'
     if_else:
       1:
         image: notes/hoc5_1.jpg
@@ -250,4 +250,4 @@ pt:
     20_wrapup:
       1:
         image: notes/bird.png
-        text: Notas em breve!
+        text: Mostrar notas aparecerá em breve!

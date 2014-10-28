@@ -48,6 +48,7 @@
         edit-code:
           desc: Szerkeszd a kódot (béta)
           MazeEC: 1. szakasz
+          Webapp: 2. szakasz
         events:
           desc: Bounce (béta)
           Bounce: 1. szakasz
@@ -69,7 +70,7 @@
           WordSearch: 1. szakasz
     game:
       name:
-        Unplug1: Bevezetés a számítógép tudományába
+        Unplug1: Bevezetés a számítástechnikába
         Maze: A labirintus
         Multi: Multiple Choice Stuffs
         Unplug2: Számítógépes gondolkodás
@@ -92,10 +93,11 @@
         Unplug11: "Összefoglaló"
         MazeEC: A labirintus
         Bounce: Ugrál
-        Flappy: Flappy Bird
+        Flappy: Flappy madár
         Jigsaw: Kirakós játék
         MazeStep: Labirintus üzemmód
         Wordsearch: Wordsearch
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Bronz
@@ -108,8 +110,8 @@
         if_else: Ha-más blokk
         loop_times: Ismételje szor blokk
         loop_until: Ismételd amíg, blokk
-        loop_while: Míg a blokk
-        loop_for: szamlalo blokk
+        loop_while: Amig blokk
+        loop_for: Számláló blokk
         function: Függvények
         parameters: Paraméterezett függvények
     level:
@@ -456,12 +458,12 @@
         mazestep_3: Labirintus lépéseinek leírása - itt
         mazestep_4: Labirintus lépéseinek leírása - itt
         mazestep_5: Labirintus lépéseinek leírása - itt
-        studio_c2_1: Can you make this dog say "hello world"?
+        studio_c2_1: 'Rá tudod venni a kutyát, hogy azt mondja: "Hello világ"?'
         studio_c2_2: Can you make the dog say something and then have the cat say
           something afterwards?
         studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: Can you write a program that makes the dog move to the cat, and
-          have the cat say "hello" when the dog reaches him?
+        studio_c2_4: Tudsz írni egy programot, amiben a kutya, a macska felé megy,
+          és amikor a kutya odaér hozzá, a macska azt mondja "hello"?
         studio_c2_5: Can you write a program to make the octopus say "hello" when
           it is clicked?
         studio_c2_6: Can you write a program to make this penguin move around using
@@ -477,12 +479,12 @@
           the penguin, and then move him with the arrows until you score?
         studio_c2_11: Create your own story. When you're done, click Finish to let
           friends try your story on their phones.
-        studio_c3_story_1: Can you make this dog say "hello world"?
+        studio_c3_story_1: 'Rá tudod venni a kutyát, hogy azt mondja: "Hello világ"?'
         studio_c3_story_2: Can you make the dog say something and then have the cat
           say something afterwards?
         studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: Can you write a program that makes the dog move to the
-          cat, and have the cat say "hello" when the dog reaches him?
+        studio_c3_story_4: Tudsz írni egy programot, amiben a kutya, a macska felé
+          megy, és amikor a kutya odaér hozzá, a macska azt mondja "hello"?
         studio_c3_story_5: Can you add a block to make the octopus happy?
         studio_c3_story_6: Create your own story. When you're done, click Finish to
           let friends try your story on their phones.
@@ -501,12 +503,12 @@
           of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: Create your own game. When you're done, click Finish to
           let friends try your story on their phones.
-        studio_playlab_1: Can you make this dog say "hello world"?
+        studio_playlab_1: 'Rá tudod venni a kutyát, hogy azt mondja: "Hello világ"?'
         studio_playlab_2: Can you make the dog say something and then have the cat
           say something afterwards?
         studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: Can you write a program that makes the dog move to the cat,
-          and have the cat say "hello" when the dog reaches him?
+        studio_playlab_4: Tudsz írni egy programot, amiben a kutya, a macska felé
+          megy, és amikor a kutya odaér hozzá, a macska azt mondja "hello"?
         studio_playlab_5: Can you write a program to make the octopus say "hello"
           when it is clicked?
         studio_playlab_6: Can you write a program to make this penguin move around
@@ -521,7 +523,7 @@
           let friends try your story on their phones.
         studio_full_sandbox: Create your own game. When you're done, click Finish
           to let friends try your story on their phones.
-        studio_k1_1: Can you make this dog say "hello world"?
+        studio_k1_1: 'Rá tudod venni a kutyát, hogy azt mondja: "Hello világ"?'
         studio_k1_2: Can you make the dog say something and then have the cat say
           something afterwards?
         studio_k1_3: Can you write a program to make this dog move to the target?
@@ -551,7 +553,7 @@
         loop_until: Ismételd amíg, blokk
         if: Ha blokk
         if_else: Ha/egyébként blokk
-        function: Funkciók
+        function: Függvények
         loop_while: Amig blokk
         loop_for: Számláló blokk
         parameters: Paraméterezett függvények

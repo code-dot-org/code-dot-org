@@ -9,7 +9,6 @@ social:
   "og:image:width": 1705
   "og:image:height": 949
   "og:url": "http://<%=request.host%>"
-  "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
 
   "twitter:card": player
   "twitter:site": "@codeorg"
@@ -84,9 +83,9 @@ social:
                 &nbsp;
 
               %div{style: "width: 56%; float:left;"}
-                -#%a{href: "http://#{canonical_hostname('code.org')}/learn", target: "_blank", style: "text-decoration:none"}
-                %button.btn.btn-default#trybutton{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;", onclick: "ga('send','event','button','click',{eventLabel:'hoc_try', hitCallback: function() { window.location.href = 'http://#{canonical_hostname('code.org')}/learn'; }});"}
-                  =hoc_s(:front_join_us_try)
+                %a#trybutton{href: "http://#{canonical_hostname('code.org')}/learn", target: "_blank", style: "text-decoration:none"}
+                  %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
+                    =hoc_s(:front_join_us_try)
                 %br/
                 %br/
 
@@ -94,9 +93,9 @@ social:
                 =hoc_s(:front_join_us_teachers)
                 &nbsp;
               %div{style: "width: 56%; float:left;"}
-                -#%a{onclick: "return adjustScroll('join')", style: "text-decoration:none"}
-                %button.btn.btn-default#hostbutton{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;", onclick: "ga('send','event','button','click',{eventLabel:'hoc_host', hitCallback: function() { adjustScroll('join'); }});"}
-                  =hoc_s(:front_join_us_host)
+                %a#hostbutton{onclick: "return adjustScroll('join')", style: "text-decoration:none"}
+                  %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
+                    =hoc_s(:front_join_us_host)
                 %br/
                 %br/
 
@@ -104,9 +103,9 @@ social:
                 =hoc_s(:front_join_us_everyone)
                 &nbsp;
               %div{style: "width: 56%; float:left; "}
-                -#%a{href: "http://#{canonical_hostname('code.org')}/donate", target: "_blank", style: "text-decoration:none"}
-                %button.btn.btn-default#supportbutton{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;", onclick: "ga('send','event','button','click',{eventLabel:'hoc_support', hitCallback: function() { window.location.href = 'http://#{canonical_hostname('code.org')}/donate'; }});"}
-                  =hoc_s(:front_join_us_support)
+                %a#supportbutton{href: "http://#{canonical_hostname('code.org')}/donate", target: "_blank", style: "text-decoration:none"}
+                  %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
+                    =hoc_s(:front_join_us_support)
               &nbsp;
 
             #remainder{style: "text-align:center"}
@@ -174,59 +173,20 @@ social:
       =hoc_s(:stats_michael)
 
   #maparea
-    =view :map
+    -if @company
+      =view :map_company 
+    -else
+      =view :map 
 
   #join
-
     %h1=hoc_s(:front_join_us_button)
-
-    #joindescriptionshort.hidden-sm
-      %p=hoc_s(:front_join_us_header_short)
-
-    #joindescrption
-      #calltoaction.row.hidden-xs
-        .col-xs-12{style: "text-align: left; font-size: 18px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
-          %p 
-            -if @country == 'uk'
-              =hoc_s(:front_join_us_header_uk)
-            -else
-              =hoc_s(:front_join_us_header)
-
-      #calltoaction.row.hidden-xs
-        .col-xs-12{style: "text-align: left; font-size: 16px; line-height:30px; font-weight: 400; padding-left:3em"}
-          %p
-            %b=hoc_s(:front_join_us_teacher)
-            =hoc_s(:front_join_us_inspire)
-            %a{href:hoc_uri('/resources/how-to')}
-              =hoc_s(:front_join_us_inspire_link)
-            %br/
-
-            %b=hoc_s(:front_join_us_parent)
-            %a{href:hoc_uri('/resources')}
-              =hoc_s(:front_join_us_ask_link)
-            =hoc_s(:front_join_us_ask)
-            %br/
-
-            %b=hoc_s(:front_join_us_computer_science)
-            %a{href:hoc_uri('/resources')}
-              =hoc_s(:front_join_us_spread)
-            =hoc_s(:front_join_us_organize)  
-            %br/
-
-      #hoclinks.row
-        .col-xs-12{style: "text-align: left; font-size: 16px; line-height:30px; font-weight: 400; padding-left:3em"}
-          %a{href:hoc_uri('/resources/how-to')} 
-            =hoc_s(:front_join_us_how_to_run)
-          %br/
-
-          %a{href:hoc_uri('/resources')} 
-            =hoc_s(:front_join_us_help_promote)
-
-    #signupform.row
-      .col-xs-12.col-sm-9.col-md-8
-        =view :signup_form
-      .col-xs-12.col-sm-3.col-md-4
-        =view :choose_country
+    %div
+      .row
+        .col-md-6
+          =view :signup_form
+        .col-md-6
+          =view :join_us_description
+          =view :prizes
 
   %a#faqs{name:'faq'}
   .row
@@ -273,7 +233,7 @@ social:
     if (videoStarted)
       return;
 
-    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
 
     $("#videodiv").fadeTo(1000, 1);
     $("#leftbutton").fadeTo(500, 0).remove();

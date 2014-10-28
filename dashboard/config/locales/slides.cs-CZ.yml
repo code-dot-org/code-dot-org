@@ -1,4 +1,4 @@
-"cy":
+"cs":
   slides:
     maze_intro:
       1:
@@ -341,4 +341,4 @@
     20_wrapup:
       1:
         image: notes/bird.png
-        text: Zobrazení poznámek již brzy!
+        text: Zobrazení poznámek teprve bude!

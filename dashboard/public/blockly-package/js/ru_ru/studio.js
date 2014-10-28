@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1155,7 +1165,22 @@ exports.calcBlockXml = function (type, args) {
     str += arg;
     str += '</functional_input>';
   }
-  str+= '</block>';
+  str += '</block>';
+
+  return str;
+};
+
+exports.mathBlockXml = function (type, inputs, titles) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var title in titles) {
+    str += '<title name="' + title + '">' + titles[title] + '</title>';
+  }
+
+  for (var input in inputs) {
+    str += '<functional_input name="' + input + '">' + inputs[input] + '</functional_input>';
+  }
+
+  str += '</block>';
 
   return str;
 };
@@ -1180,6 +1205,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1274,6 +1300,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -5478,35 +5526,172 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Generate a native function wrapper for use with the JS interpreter.
+ */
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, parentObj) {
+  return function() {
+    // Call the native function:
+    var retVal = nativeFunc.apply(parentObj, arguments);
+
+    // Now figure out what to do with the return value...
+
+    if (retVal instanceof Function) {
+      // Don't call createPrimitive() for functions
+      return retVal;
+    } else if (retVal instanceof Object) {
+      var newObj = interpreter.createObject(interpreter.OBJECT);
+      // Limited attempt to marshal back complex return values
+      // Special case: only one-level deep, only handling
+      // primitives and arrays of primitives
+      for (var prop in retVal) {
+        var isFuncOrObj = retVal[prop] instanceof Function ||
+                          retVal[prop] instanceof Object;
+        // replace properties with wrapped properties
+        if (retVal[prop] instanceof Array) {
+          var newArray = interpreter.createObject(interpreter.ARRAY);
+          for (var i = 0; i < retVal[prop].length; i++) {
+            newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
+          }
+          newArray.length = retVal[prop].length;
+          interpreter.setProperty(newObj, prop, newArray);
+        } else if (isFuncOrObj) {
+          // skipping over these - they could be objects that should
+          // be converted into interpreter objects. they could be native
+          // functions that should be converted. Or they could be objects
+          // that are already interpreter objects, which is what we assume
+          // for now:
+          interpreter.setProperty(newObj, prop, retVal[prop]);
+        } else {
+          // wrap as a primitive if it is not a function or object:
+          interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
+        }
+      }
+      return newObj;
+    } else {
+      return interpreter.createPrimitive(retVal);
+    }
+  };
+};
+
+/**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  for (var optsObj in options) {
+    var func, wrapper;
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = exports.makeNativeMemberFunction(interpreter, func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
+                                interpreter.createNativeFunction(wrapper));
+      }
+    }
+  }
+};
+
+// session is an instance of Ace editSession
+// Usage
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// Need to call this only if the document is updated after the last call.
+exports.aceCalculateCumulativeLength = function (session) {
+  var cumulativeLength = [];
+  var cnt = session.getLength();
+  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
+  cumulativeLength.push(cuml);
+  var text = session.getLines(0, cnt);
+  for (var i = 0; i < cnt; i++) {
+    cuml += text[i].length + nlLength;
+    cumulativeLength.push(cuml);
+  }
+  return cumulativeLength;
+};
+
+// Fast binary search implementation
+// Pass the cumulative length array here.
+// Usage
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
+// tries to find 2512th character lies in which row.
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
+  if (rows > rowe) {
+    return null;
+  }
+  if (rows + 1 === rowe) {
+    return rows;
+  }
+
+  var mid = Math.floor((rows + rowe) / 2);
+  
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
+  }
+  return mid;
+}
+
+/**
+ * Selects code in an ace editor.
+ */
+function createSelection (selection, cumulativeLength, start, end) {
+  var range = selection.getRange();
+
+  range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+  range.start.col = start - cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
+  range.end.col = end - cumulativeLength[range.end.row];
+
+  selection.setSelectionRange(range);
+}
+
+exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
+                                      userCodeStartOffset, userCodeLength) {
+  var inUserCode = false;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    inUserCode = (start > 0) && (start < userCodeLength);
+
+    // If we are showing Javascript code in the ace editor, highlight
+    // the code being executed in each step:
+    if (!editor.currentlyUsingBlocks) {
+      // Only show selection if the node being executed is inside the user's
+      // code (not inside code we inserted before or after their code that is
+      // not visible in the editor):
+      var selection = editor.aceEditor.getSelection();
+      if (inUserCode) {
+        createSelection(selection, cumulativeLength, start, end);
+      } else {
+        selection.clearSelection();
+      }
+    }
+  }
+  return inUserCode;
+};
+
+/**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      // helper function used below..
-      function makeNativeMemberFunction(nativeFunc, parentObj) {
-        return function() {
-          return interpreter.createPrimitive(
-                                nativeFunc.apply(parentObj, arguments));
-        };
-      }
-      for (var optsObj in options) {
-        // Create global objects in the interpreter for everything in options
-        var obj = this.createObject(interpreter.OBJECT);
-        this.setProperty(scope, optsObj.toString(), obj);
-        for (var prop in options[optsObj]) {
-          var func = options[optsObj][prop];
-          if (func instanceof Function) {
-            // Populate each of the global objects with native functions
-            // NOTE: other properties are not passed to the interpreter
-            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
-            interpreter.setProperty(obj,
-                                    prop,
-                                    interpreter.createNativeFunction(wrapper));
-          }
-        }
-      }
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -5524,8 +5709,7 @@ exports.evalWith = function(code, options) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
-    var fn = new ctor();
-    return fn.apply(null, args);
+    return new ctor().apply(null, args);
   }
 };
 
@@ -5533,18 +5717,24 @@ exports.evalWith = function(code, options) {
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  return new ctor();
 };
 
 },{}],11:[function(require,module,exports){
@@ -12043,6 +12233,15 @@ exports.load = function(assetUrl, id) {
     speedMedium: assetUrl('media/common_images/speed-medium.png'),
     speedSlow: assetUrl('media/common_images/speed-slow.png'),
     scoreCard: assetUrl('media/common_images/increment-score-75percent.png'),
+    rainbowMenu: assetUrl('media/common_images/rainbow-menuicon.png'),
+    ropeMenu: assetUrl('media/common_images/rope-menuicon.png'),
+    squigglyMenu: assetUrl('media/common_images/squiggly-menuicon.png'),
+    swirlyMenu: assetUrl('media/common_images/swirlyline-menuicon.png'),
+    patternDefault: assetUrl('media/common_images/defaultline-menuicon.png'),
+    rainbowLine: assetUrl('media/common_images/rainbow.png'),
+    ropeLine: assetUrl('media/common_images/rope.png'),
+    squigglyLine: assetUrl('media/common_images/squiggly.png'),
+    swirlyLine: assetUrl('media/common_images/swirlyline.png'),
     randomPurpleIcon: assetUrl('media/common_images/random-purple.png'),
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
@@ -13317,7 +13516,6 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('TEXT')
-        .setCheck('String')
         .appendTitle(msg.setScoreText());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -16419,7 +16617,9 @@ Studio.init = function(config) {
     return el.getBoundingClientRect().width;
   };
 
-  arrangeStartBlocks(config);
+  if (config.level.edit_blocks != 'toolbox_blocks') {
+    arrangeStartBlocks(config);
+  }
 
   config.twitter = twitterOptions;
 
@@ -16787,7 +16987,7 @@ Studio.execute = function() {
   var i;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions);
+    code = utils.generateCodeAliases(level.codeFunctions, 'Studio');
     code += BlocklyApps.editor.getValue();
   }
 
@@ -18467,16 +18667,17 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += "var " + codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = " +
+          (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
+          " return " + parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -18583,9 +18784,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
@@ -18657,7 +18869,7 @@ exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Процедуры"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Переменные"};
 
@@ -18665,7 +18877,7 @@ exports.codeTooltip = function(d){return "Просмотреть созданн�
 
 exports.continue = function(d){return "Продолжить"};
 
-exports.dialogCancel = function(d){return "Отменить"};
+exports.dialogCancel = function(d){return "Отмена"};
 
 exports.dialogOK = function(d){return "Продолжить"};
 
@@ -18681,17 +18893,17 @@ exports.end = function(d){return "конец"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Блокам \"повторять\" или \"если\" необходимо иметь внутри другие блоки для работы. Убедись  в том, что внутренний блок должным образом подходит к блоку, в котором он содержится."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Блок функции требует другие блоки внутри для работы."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Блок процедуры требует для работы другие блоки внутри себя."};
 
-exports.extraTopBlocks = function(d){return "У тебя остались неприсоединённые блоки. Ты собирался присоединить их к блоку (when run)?"};
+exports.extraTopBlocks = function(d){return "У тебя остались неприсоединённые блоки. Ты собирался присоединить их к блоку \"При запуске\"?"};
 
 exports.finalStage = function(d){return "Поздравляю! Ты завершил последний этап."};
 
 exports.finalStageTrophies = function(d){return "Поздравляю! Ты завершил последний этап и выиграл "+p(d,"numTrophies",0,"ru",{"one":"кубок","other":n(d,"numTrophies")+" кубков"})+"."};
 
-exports.finish = function(d){return "Завершить"};
+exports.finish = function(d){return "Готово"};
 
-exports.generatedCodeInfo = function(d){return "Даже в лучших университетах изучают блочное программирование (например, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Но на самом деле блоки, которые вы собирали могут быть отображены на JavaScript, наиболее широко используемом в мире языке программирования:"};
+exports.generatedCodeInfo = function(d){return "Даже в лучших университетах изучают блочное программирование (например, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Но на самом деле блоки, которые вы собирали, могут быть отображены на JavaScript, наиболее широко используемом в мире языке программирования:"};
 
 exports.hashError = function(d){return "К сожалению, «%1» не соответствует какой-либо сохранённой программе."};
 
@@ -18699,7 +18911,7 @@ exports.help = function(d){return "Справка"};
 
 exports.hintTitle = function(d){return "Подсказка:"};
 
-exports.jump = function(d){return "прыжок"};
+exports.jump = function(d){return "прыгнуть"};
 
 exports.levelIncompleteError = function(d){return "Ты используешь все необходимые виды блоков, но неправильным способом."};
 
@@ -18749,7 +18961,7 @@ exports.tooManyBlocksMsg = function(d){return "Эта головоломка м�
 
 exports.tooMuchWork = function(d){return "Ты заставил меня попотеть! Может, будешь стараться делать меньше попыток?"};
 
-exports.toolboxHeader = function(d){return "Блоки"};
+exports.toolboxHeader = function(d){return "блоков"};
 
 exports.openWorkspace = function(d){return "Как это работает"};
 
@@ -18765,7 +18977,7 @@ exports.saveToGallery = function(d){return "Сохранить в твоей г�
 
 exports.savedToGallery = function(d){return "Сохранено в твоей галереи!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "К сожалению, мы не можем поделиться этой программой."};
 
 exports.typeCode = function(d){return "Введите ваш код  на JavaScript под этой инструкцией."};
 
@@ -18813,7 +19025,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ru = function 
   }
   return 'other';
 };
-exports.actor = function(d){return "актер"};
+exports.actor = function(d){return "персонаж"};
 
 exports.catActions = function(d){return "Действия"};
 
@@ -18825,11 +19037,11 @@ exports.catLogic = function(d){return "Логика"};
 
 exports.catMath = function(d){return "Математика"};
 
-exports.catProcedures = function(d){return "Функции"};
+exports.catProcedures = function(d){return "функции"};
 
 exports.catText = function(d){return "Текст"};
 
-exports.catVariables = function(d){return "Переменные"};
+exports.catVariables = function(d){return "переменные"};
 
 exports.changeScoreTooltip = function(d){return "Добавить или отнять очко."};
 
@@ -18837,9 +19049,9 @@ exports.changeScoreTooltipK1 = function(d){return "Добавить очко."};
 
 exports.continue = function(d){return "Продолжить"};
 
-exports.decrementPlayerScore = function(d){return "удалить точку"};
+exports.decrementPlayerScore = function(d){return "отнять очко"};
 
-exports.defaultSayText = function(d){return "Введите здесь"};
+exports.defaultSayText = function(d){return "Введи здесь"};
 
 exports.emotion = function(d){return "настроение"};
 
@@ -18847,37 +19059,37 @@ exports.finalLevel = function(d){return "Поздравляю! Последня�
 
 exports.hello = function(d){return "привет"};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "Привет, мир!"};
 
 exports.incrementPlayerScore = function(d){return "оценка точки"};
 
 exports.makeProjectileDisappear = function(d){return "исчезнуть"};
 
-exports.makeProjectileBounce = function(d){return "отскочить"};
+exports.makeProjectileBounce = function(d){return "отказ"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "сделать синий огненный шар"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "сделать фиолетовый огненный шар"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "сделать красный огненный шар"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "сделать желтые сердца"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "сделать фиолетовые сердца"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "сделать красные сердца"};
 
 exports.makeProjectileTooltip = function(d){return "Заставить столкнувшийся снаряд исчезнуть или отскочить."};
 
-exports.makeYourOwn = function(d){return "Создай свой собственный рассказ"};
+exports.makeYourOwn = function(d){return "Создайте Своё Собственное Игровое Приложени"};
 
 exports.moveDirectionDown = function(d){return "вниз"};
 
-exports.moveDirectionLeft = function(d){return "слева"};
+exports.moveDirectionLeft = function(d){return "влево"};
 
-exports.moveDirectionRight = function(d){return "справа"};
+exports.moveDirectionRight = function(d){return "вправо"};
 
-exports.moveDirectionUp = function(d){return "наверх"};
+exports.moveDirectionUp = function(d){return "вверх"};
 
 exports.moveDirectionRandom = function(d){return "случайный"};
 
@@ -18891,39 +19103,39 @@ exports.moveDistance200 = function(d){return "200 пикселей"};
 
 exports.moveDistance400 = function(d){return "400 пикселей"};
 
-exports.moveDistancePixels = function(d){return "пикселей"};
+exports.moveDistancePixels = function(d){return "точек"};
 
 exports.moveDistanceRandom = function(d){return "случайные пиксели"};
 
-exports.moveDistanceTooltip = function(d){return "Перемещение персонажа на определенное расстояние в определенном направлении."};
+exports.moveDistanceTooltip = function(d){return "Переместить персонажа на определенное расстояние в определенном направлении."};
 
-exports.moveSprite = function(d){return "Перемещение"};
+exports.moveSprite = function(d){return "переместить"};
 
-exports.moveSpriteN = function(d){return "Перемещение актера "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "переместить персонажа "+v(d,"spriteIndex")};
 
 exports.moveDown = function(d){return "Переместить вниз"};
 
-exports.moveDownTooltip = function(d){return "Перемещение актера вниз."};
+exports.moveDownTooltip = function(d){return "переместить персонажа вниз."};
 
 exports.moveLeft = function(d){return "переместить влево"};
 
-exports.moveLeftTooltip = function(d){return "Перемещение актера влево."};
+exports.moveLeftTooltip = function(d){return "переместить персонажа влево."};
 
 exports.moveRight = function(d){return "Переместить вправо"};
 
-exports.moveRightTooltip = function(d){return "Перемещение актера вправо."};
+exports.moveRightTooltip = function(d){return "переместить персонажа вправо."};
 
 exports.moveUp = function(d){return "переместить вверх"};
 
-exports.moveUpTooltip = function(d){return "Перемещение актера вверх."};
+exports.moveUpTooltip = function(d){return "переместить персонажа вверх."};
 
-exports.moveTooltip = function(d){return "Перемещение актера."};
+exports.moveTooltip = function(d){return "переместить персонажа."};
 
 exports.nextLevel = function(d){return "Поздравляю! Головоломка решена."};
 
 exports.no = function(d){return "Нет"};
 
-exports.numBlocksNeeded = function(d){return "Головоломка может быть решена %1 блоком."};
+exports.numBlocksNeeded = function(d){return "Эта головоломка может быть решена с помощью %1 блоков."};
 
 exports.ouchExclamation = function(d){return "Ой!"};
 
@@ -18989,17 +19201,17 @@ exports.positionOutBottomRight = function(d){return "на позицию сни�
 
 exports.positionRandom = function(d){return "в случайную позицию"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "синий огненный шар"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "фиолетовый огненный шар"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "красный огненный шар"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "желтые сердца"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "фиолетовые сердца"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "красные сердца"};
 
 exports.projectileRandom = function(d){return "случайный"};
 
@@ -19011,43 +19223,43 @@ exports.repeatDo = function(d){return "выполнить"};
 
 exports.repeatForeverTooltip = function(d){return "Выполнять действия в этом блоке неоднократно пока происходит действие."};
 
-exports.saySprite = function(d){return "произнести"};
+exports.saySprite = function(d){return "сказать"};
 
-exports.saySpriteN = function(d){return "актер "+v(d,"spriteIndex")+" говорит"};
+exports.saySpriteN = function(d){return "персонаж "+v(d,"spriteIndex")+" говорит"};
 
 exports.saySpriteTooltip = function(d){return "Показать речевой пузырь с указанным текстом у указанного персонажа."};
 
 exports.scoreText = function(d){return "Оценка: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "задать фон"};
+exports.setBackground = function(d){return "установить фон"};
 
-exports.setBackgroundRandom = function(d){return "установите случайный фон"};
+exports.setBackgroundRandom = function(d){return "установить Случайный фон"};
 
-exports.setBackgroundBlack = function(d){return "установите чёрный фон"};
+exports.setBackgroundBlack = function(d){return "установить Чёрный фон"};
 
-exports.setBackgroundCave = function(d){return "задать фон пещеры"};
+exports.setBackgroundCave = function(d){return "установить Пещера фон"};
 
-exports.setBackgroundCloudy = function(d){return "установите фон из облаков"};
+exports.setBackgroundCloudy = function(d){return "установить Облака фон"};
 
-exports.setBackgroundHardcourt = function(d){return "установите фон с твёрдым покрытием"};
+exports.setBackgroundHardcourt = function(d){return "установить Твердое покрытие фон"};
 
-exports.setBackgroundNight = function(d){return "установите ночной фон"};
+exports.setBackgroundNight = function(d){return "установите Ночь фон"};
 
-exports.setBackgroundUnderwater = function(d){return "установите подводный фон"};
+exports.setBackgroundUnderwater = function(d){return "установитье Под Водой фон"};
 
-exports.setBackgroundCity = function(d){return "set city background"};
+exports.setBackgroundCity = function(d){return "установить Город фон"};
 
-exports.setBackgroundDesert = function(d){return "set desert background"};
+exports.setBackgroundDesert = function(d){return "установить Пустыня фон"};
 
-exports.setBackgroundRainbow = function(d){return "set rainbow background"};
+exports.setBackgroundRainbow = function(d){return "установить Радуга фон"};
 
-exports.setBackgroundSoccer = function(d){return "set soccer background"};
+exports.setBackgroundSoccer = function(d){return "установить Футбол фон"};
 
-exports.setBackgroundSpace = function(d){return "set space background"};
+exports.setBackgroundSpace = function(d){return "установить Космос фон"};
 
-exports.setBackgroundTennis = function(d){return "set tennis background"};
+exports.setBackgroundTennis = function(d){return "установить Теннис фон"};
 
-exports.setBackgroundWinter = function(d){return "set winter background"};
+exports.setBackgroundWinter = function(d){return "установить зимний фон"};
 
 exports.setBackgroundTooltip = function(d){return "Установить на задний план изображение"};
 
@@ -19065,7 +19277,7 @@ exports.setSpriteEmotionRandom = function(d){return "случайное наст
 
 exports.setSpriteEmotionSad = function(d){return "печальное настроение"};
 
-exports.setSpriteEmotionTooltip = function(d){return "задать настроение актера"};
+exports.setSpriteEmotionTooltip = function(d){return "Задаёт настроение актера"};
 
 exports.setSpriteAlien = function(d){return "изображение чужого"};
 
@@ -19075,9 +19287,9 @@ exports.setSpriteBird = function(d){return "изображение птицы"};
 
 exports.setSpriteCat = function(d){return "изображение кота"};
 
-exports.setSpriteCaveBoy = function(d){return "to a cave boy image"};
+exports.setSpriteCaveBoy = function(d){return "\"пещерный мальчик\""};
 
-exports.setSpriteCaveGirl = function(d){return "to a cave girl image"};
+exports.setSpriteCaveGirl = function(d){return "\"пещерная девочка\""};
 
 exports.setSpriteDinosaur = function(d){return "изображение динозавра"};
 
@@ -19113,15 +19325,15 @@ exports.setSpriteShowK1 = function(d){return "Показать"};
 
 exports.setSpriteSpacebot = function(d){return "образ робота"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "\"девочка-футболистка\""};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "\"мальчик-футболист\""};
 
 exports.setSpriteSquirrel = function(d){return "образ белки"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "\"девочка-теннисистка\""};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "\"мальчик-теннисист\""};
 
 exports.setSpriteUnicorn = function(d){return "образу единорога"};
 
@@ -19135,19 +19347,19 @@ exports.setSpriteK1Tooltip = function(d){return "Показать или скр�
 
 exports.setSpriteTooltip = function(d){return "Установите картинку с актёром"};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "случайного размера"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "очень маленького размера"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "маленького размера"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "обычного размера"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "большого размера"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "очень большого размера"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "Установить размер персонажа"};
 
 exports.setSpriteSpeedRandom = function(d){return "для случайной скорости"};
 
@@ -19181,7 +19393,7 @@ exports.showTSDefText = function(d){return "введите текст здесь
 
 exports.showTitleScreenTooltip = function(d){return "Показать титульный экран с указанным названием и текстом."};
 
-exports.setSprite = function(d){return "установить"};
+exports.setSprite = function(d){return "присвоить"};
 
 exports.setSpriteN = function(d){return "указать персонажа "+v(d,"spriteIndex")};
 
@@ -19203,9 +19415,9 @@ exports.soundRubber = function(d){return "резина"};
 
 exports.soundSlap = function(d){return "шлепок"};
 
-exports.soundWinPoint = function(d){return "получение очка"};
+exports.soundWinPoint = function(d){return "выигрыш очка"};
 
-exports.soundWinPoint2 = function(d){return "получение очка 2"};
+exports.soundWinPoint2 = function(d){return "выигрыш очка 2"};
 
 exports.soundWood = function(d){return "дерево"};
 
@@ -19261,7 +19473,7 @@ exports.whenArrowUp = function(d){return "клавиша вверх"};
 
 exports.whenArrowTooltip = function(d){return "Выполнить действия, указанные ниже, когда нажата указанная клавиша."};
 
-exports.whenDown = function(d){return "когда стрелка вниз"};
+exports.whenDown = function(d){return "когда клавиша вниз"};
 
 exports.whenDownTooltip = function(d){return "Выполните действия ниже, когда когда будет нажата клавиша стрелка вниз."};
 
@@ -19269,11 +19481,11 @@ exports.whenGameStarts = function(d){return "когда начнётся ист�
 
 exports.whenGameStartsTooltip = function(d){return "Выполните действия ниже, когда начнётся история."};
 
-exports.whenLeft = function(d){return "когда стрелка влево"};
+exports.whenLeft = function(d){return "когда клавиша влево"};
 
 exports.whenLeftTooltip = function(d){return "Выполните действия ниже, когда нажата клавиша стрелка влево."};
 
-exports.whenRight = function(d){return "когда стрелка справа"};
+exports.whenRight = function(d){return "когда клавиша вправо"};
 
 exports.whenRightTooltip = function(d){return "Выполните действия ниже, когда нажата клавиша стрелка вправо."};
 
@@ -19289,27 +19501,27 @@ exports.whenSpriteCollidedTooltip = function(d){return "Выполнить де�
 
 exports.whenSpriteCollidedWith = function(d){return "касается"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "касается другого персонажа"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "касается угла"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "касается любого снаряда"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "касается чего-нибудь"};
 
 exports.whenSpriteCollidedWithN = function(d){return "касается персонажа "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "касается синего огненного шара"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "касается фиолетового огненного шара"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "касается красного огненного шара"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "касается жёлтых сердец"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "касается фиолетовых сердец"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "касается красных сердец"};
 
 exports.whenSpriteCollidedWithBottomEdge = function(d){return "касается нижней границы"};
 
@@ -19319,7 +19531,7 @@ exports.whenSpriteCollidedWithRightEdge = function(d){return "касается �
 
 exports.whenSpriteCollidedWithTopEdge = function(d){return "касается верхней границы"};
 
-exports.whenUp = function(d){return "когда стрелка вверх"};
+exports.whenUp = function(d){return "когда клавиша вверх"};
 
 exports.whenUpTooltip = function(d){return "Выпонить действия, указанные ниже, когда нажата клавиша вверх."};
 

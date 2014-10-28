@@ -6,13 +6,13 @@ title: Resources layout: wide
 
 # How to teach one Hour of Code
 
-## 1) Try the tutorials:
+## 1) versuchen Sie die Tutorials:
 
-We’ll host a variety of fun, hour-long tutorials on the for students of all ages created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
 **All Hour of Code tutorials:**
 
-  * Require minimal prep-time for teachers
+  * Erfordert minimale Vorbereitungszeit für Lehrer
   * Are self-guided - allowing students to work at their own pace and skill-level
 
 [![image](http://code.org/images/tutorials.png)](http://code.org/learn)

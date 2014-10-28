@@ -16,7 +16,8 @@
     "slider_speed": "0.4",
     "free_play": "false",
     "permittedErrors": 10,
-    "permitted_errors": "10"
+    "permitted_errors": "10",
+    "disable_param_editing": "true"
   }
 }]]></config>
   <blocks>

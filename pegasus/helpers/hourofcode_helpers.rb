@@ -23,10 +23,16 @@ def hoc_s(id)
 end
 
 def hoc_canonicalized_i18n_path(uri)
-  empty, possible_country, possible_language, path = uri.split('/',4)
-  if HOC_COUNTRIES[possible_country]
-    @country = possible_country
+  empty, possible_country_or_company, possible_language, path = uri.split('/',4)
 
+  if HOC_COUNTRIES[possible_country_or_company]
+    @country = possible_country_or_company
+  elsif @config[:companies][possible_country_or_company.to_sym]
+    @company = possible_country_or_company
+    @country = 'us'
+  end
+
+  if @country || @company
     if HOC_I18N[possible_language]
       @user_language = possible_language
     else
@@ -34,14 +40,14 @@ def hoc_canonicalized_i18n_path(uri)
     end
   else
     @country = hoc_detect_country()
-    path = File.join([possible_country, possible_language, path].select{|i|!i.nil_or_empty?})
+    path = File.join([possible_country_or_company, possible_language, path].select{|i|!i.nil_or_empty?})
   end
 
   country_language = HOC_COUNTRIES[@country]['default_language']
   @language = @user_language || country_language || hoc_detect_language()
 
-  canonical_urls = [File.join(["/#{@country}/#{@language}",path].select{|i|!i.nil_or_empty?})]
-  canonical_urls << File.join(["/#{@country}", path].select{|i|!i.nil_or_empty?}) if @language == country_language
+  canonical_urls = [File.join(["/#{(@company or @country)}/#{@language}",path].select{|i|!i.nil_or_empty?})]
+  canonical_urls << File.join(["/#{(@company or @country)}", path].select{|i|!i.nil_or_empty?}) if @language == country_language
   unless canonical_urls.include?(uri)
     dont_cache
     redirect canonical_urls.last
@@ -71,6 +77,20 @@ def hoc_detect_language()
 end
 
 def hoc_uri(uri)
-  File.join(['/', @country, @user_language, uri].select{|i| !i.nil_or_empty?})
+  File.join(['/', (@company or @country), @user_language, uri].select{|i| !i.nil_or_empty?})
+end
+
+def codeorg_url() 
+  if @country == 'ar'
+    return 'ar.code.org'
+  elsif @country == 'br'
+    return 'br.code.org'
+  elsif @country == 'ro' 
+    return 'ro.code.org'
+  elsif @country == 'uk' 
+    return 'uk.code.org'
+  else
+    return 'code.org'
+  end
 end
 

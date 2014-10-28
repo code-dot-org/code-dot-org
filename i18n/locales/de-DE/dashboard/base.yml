@@ -31,7 +31,7 @@ de:
     placeholder: Gebe hier deinen Hinweis ein
     submit: Hinweis hinzufügen
   appname: Code.org
-  stage: Bühne
+  stage: Teil
   stage_number: 'Level %{number}'
   puzzle: Puzzle
   trophies: Trophäen
@@ -233,13 +233,13 @@ de:
     popup:
       progress: Ihre Fortschritte
       lines: 'Gesamte Codezeilen: %{lines}'
-      close: SCHLIEßEN
+      close: schließen
       mastery: Konzepte
-      puzzle_map: Teile
+      puzzle_map: Level
       prizes: 'Sammeln Sie alle %{total_trophies} Trophäen und gewinnen Sie Preise!'
       prize_earned: 'Alle %{total_trophies} Trophäen gesammelt. Preis gewonnen!'
       prize_us_only: (nur für Schüler der USA)
-      prizes_link: weitere Informationen
+      prizes_link: Mehr Informationen
   teacher:
     title:
       one: 'Dein Lehrer:'
@@ -304,9 +304,9 @@ de:
     new_password_hint: (freilassen, wenn Sie es nicht verändern möchten)
     current_password_hint: (wir benötigen Ihr aktuelle Kennwort, um Ihre Änderungen zu bestätigen)
     cancel:
-      title: Mein Konto auflösen
+      title: Mein Konto kündigen
       hint: Unglücklich?
-      button: Mein Konto kündigen
+      button: Mein Konto auflösen
   user_level:
     completed: Abgeschlossen
     tried: Versucht
@@ -332,22 +332,25 @@ de:
     student_progress: Ihr Lernfortschritt
     student_stats: 'Sie haben %{trophy_count} von %{trophy_max} "Concept Mastery" Trophäen.'
     student_left_off: 'Wo Sie aufgehört haben:'
-    student_finished_prize: 'Du hast alles Tutorials abgeschlossen, hole dir nun deinen %{prize_link} und wähle einen anderen Kurs %{online_link} oder in deiner %{local_school_link}'
+    student_finished_prize: 'Sie haben alle Tutorials abgeschlossen, holen Sie sich Ihren %{prize_link} und wählen Sie eine andere Klasse über den %{online_link} oder in Ihrer %{local_school_link}'
     student_finished: 'Du hast alle Tutorials abgeschlossen. Wähle eine andere Klasse %{online_link} oder in deiner %{local_school_link}'
     local_school: örtliche Schule
     online: online
     see_details: Zeige Details
     prize_info: 'Preise für Teilnahme(nur Lehrer von öffentlichen Schulen der USA): Belohnungen bis zu $1000 für die Klasse.'
     tryfirst: 'Oder Probiere es aus und melde Dich später an: '
-    trynow: Probiere es aus
+    trynow: Probiere es jetzt aus
     add_hint_help: Bitte helfen Sie uns nützliche Hinweise zu Code.org Tutorials hinzuzufügen
-    20hour_overview: 'Dieser 20-stündige Kurs führt in die wichtigsten Konzepte der Informatik und des Programmierens ein. Der Kurs wurde für den Gebrauch in den Schulstufen 1 - 9 entworfen, kann aber in jedem Alter erlernt werden.'
+    20hour_overview: 'Dieser 20-stündige Kurs führt in die wichtigsten Konzepte der Informatik und des Programmierens ein. Der Kurs wurde für den Gebrauch in den Klassenstufen 1 - 9 entworfen, aber es macht in jedem Alter Spaß zu lernen.'
     test_videos_help: Testen Sie unseren neuen Video-Player an Ihrer Schule
     try_beta_courses: Neu! Probieren Sie unsere Beta-Kurse für Schüler der Schulstufen 1-6
     use_as_teacher: Verwende diese Seite als Lehrer
     heading_elementary: '<h2>20 Stunden Kurse für</h2><h1>Grundschüler</h1>'
     heading_apps: '<h2>Spass für</h2><h1>Alle</h1>'
     heading_legacy: '<h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Männlich
     female: Weiblich
@@ -375,7 +378,7 @@ de:
     teacher: Lösung sehen
     auth_error: Du bist nicht berechtigt, die Lösung zu sehen.
     submit: Position des Künstler aktualisieren
-    direction: Startrichtung
+    direction: Start Direction (in degrees)
   video:
     tab: Video.
     notes: Kein Video? Im Text Format anzeigen.
@@ -384,11 +387,11 @@ de:
     download: lade Video herunter
   compatability:
     working:
-      header: Wir arbeiten an der Unterstützung für deinen Browser.
+      header: Wir arbeiten an der Unterstützung für Ihren Browser.
       message: "Code.org benutzt aktuellste Web-Technologie. Dies hat die Folge, dass diese Seite schneller lädt. Dein Browser unterstützt leider nicht alle Funtkionen, dies könnte zu Fehlern führen. Bitte hilf uns, indem du <a href='%{report_issue_url}'>Fehler meldest</a>. Du kannst auch deine <a href='%{supported_browsers_url}'>Webbrowser zu einer unterstützten Version updaten</a>."
       hide_this_warning: Diese Warnung ausblenden
     upgrade:
-      header: Bitte aktualisiere deinen Browser.
+      header: Bitte aktualisieren Sie Ihren Browser.
       message: "Code.org benutzt aktuellste Web-Technologie. Dies hat die Folge, dass diese Seite schneller lädt. Dein Browser unterstützt leider nicht alle Funtkionen, um diesen Teil der Seite zu öffnen.<br/><br/>Installiere einen unterstützten Webbrowser von unserer Liste, um fortzufahren. Du kannst versuchen <a href='#'>diese Seite zu öffnen</a>, aber dies könnte Fehler hervorrufen."
       button: Liste aller unterstützten Browser
   slow_loading: Das benötigt länger als normal...
@@ -430,9 +433,13 @@ de:
       body: Versuche unseren 20-Stunden Informatik-Einführungskurs.
   gallery:
     students_drew_these_with_code: Schüler haben folgendes mit Code gezeichnet!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'In den vergangenen <b>%{days}</b> Tagen, haben Schüler durch das Schreiben eigener Computerprogramme <b>%{count}</b> Bilder gezeichnet. Klicke auf die Bilder um das jeweilige Programm in Aktion zu sehen.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Möchtest du dein eigenes machen?
     more: 'Mehr &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "Dieser Kurs ist als <span class='betatext'> Beta</span> eingestuft.  Das bedeutet, dies ist nicht die endgültige Fassung des Kurses und er unterliegt Änderungen, da Feedback empfangen wird und Verbesserungen vorgenommen werden."
     feedback: Feedback geben
@@ -460,9 +467,9 @@ de:
       name:
         20-hour:
           title: Einführung in die Informatik (15-25 Stunden)
-          description: 'Dieser 20-stündige Kurs führt in die wichtigsten Konzepte der Informatik und des Programmierens ein. Der Kurs wurde für den Gebrauch in den Schulstufen 1 - 9 entworfen, kann aber in jedem Alter erlernt werden.'
+          description: 'Dieser 20-stündige Kurs führt in die wichtigsten Konzepte der Informatik und des Programmierens ein. Der Kurs wurde für den Gebrauch in den Klassenstufen 1 - 9 entworfen, aber es macht in jedem Alter Spaß zu lernen.'
         Hour of Code:
-          title: Hour of Code
+          title: Programmierstunde
           description: ""
         edit-code:
           title: Code bearbeiten

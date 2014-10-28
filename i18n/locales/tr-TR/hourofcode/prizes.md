@@ -1,30 +1,38 @@
 * * *
 
-title: Prizes layout: wide
+başlık: Ödüller düzen: geniş
 
 * * *
 
-# The Hour of Code — prizes for every organizer
+# Kodlama Saati - her organizatör için ödüller
 
-## Every organizer wins a thank you gift-code
+## Her organizatör bir teşekkür hediyesi kodu kazanacak
 
-Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
+Öğrenciler için bir Kodlama Saatine ev sahipliği yapan her eğitimci teşekkür hediyesi olarak 10 GB'lık Dropbox alanı veya 10$'lık Skype kredisi kazanacak!
+
+<% if @country == 'uk' %>
+
+## Şanslı sınıflar bir konuk konuşmacıyla bir video sohbeti kazanacak!
+
+20 şanslı sınıf 8-14 Aralık tarihleri arasında Kodlama Saatini kutlamak için bir video sohbetine davet edilecek. Öğrencileriniz teknoloji endüstrisi liderleriyle sohbet etme ve onlara soru sorma şansını yakalayacak. Bill Gates, Twitter'ın kurucusu Jack Dorsey, Google'dan Susan Wojcicki ve Valve'den Gabe Newell'ın bulunduğu [geçen senenin sohbetlerine göz atın](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a).
+
+<% end %>
 
 <% if @country == 'us' %>
 
-## Lucky classrooms win a video chat with a guest speaker!
+## Şanslı sınıflar bir konuk konuşmacıyla bir video sohbeti kazanacak!
 
-50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
+50 şanslı sınıf 8-14 Aralık tarihleri arasında Kodlama Saatini kutlamak için bir video sohbetine davet edilecek. Öğrencileriniz teknoloji endüstrisi liderleriyle sohbet etme ve onlara soru sorma şansını yakalayacak. Bill Gates, Twitter'ın kurucusu Jack Dorsey, Google'dan Susan Wojcicki ve Valve'den Gabe Newell'ın bulunduğu [geçen senenin sohbetlerine göz atın](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a).
 
-## Lucky schools win a class-set of laptops (or $10,000 for other technology)
+## Şanslı okullar bir sınıfa yetecek kadar dizüstü bilgisayar (veya 10.000$ değerinde başka teknolojiler) kazanacak
 
-One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
+***Her*** ABD eyaletindeki (+ Washington D.C.) bir şanslı okul 10.000$ değerinde teknolojinin sahibi olacak. Bu fırsatı yakalayabilmek adına okulunuzdaki her öğrenci için bir Kodlama Saati organize edin. Başvurmak için aşağıdaki formu doldurun.
 
-## Hardware Prize application form:
+## Donanım Ödülü başvuru formu:
 
-If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
+Eğer Kodlama Saatine katılmak için tüm okulu kaydettirdiyseniz, bir sınıfa yetecek kadar dizüstü bilgisayar (veya 10.000$ değerinde diğer teknolojiler) kazanmak için giriş yapın! Tüm okul için sadece bir öğretmenin başvurması yeterlidir.
 
-<%= view :hardware\_prizes\_form %>
+<%= view :hardware_prizes_form %>
 
 <what are your odds of winning?>
 
@@ -32,6 +40,6 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 <% end %>
 
-## More questions about prizes?
+## Ödüllerle ilgili başka sorularınız mı var?
 
-Check out [Terms and Conditions](/prizes-terms) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+[Şartlar ve Koşulları](/prizes-terms) inceleyin veya [SSS](http://support.code.org)ları görmek için forumumuzu ziyaret edin ve sorularınızı sorun.

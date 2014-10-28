@@ -1,34 +1,5 @@
 %h1= hoc_s(:hoc_faq_title)
-
--if @country == 'ar'
-  %h2#about= hoc_s(:hoc_faq_what_is_hoc_ar_q)
-  %div= hoc_s(:hoc_faq_what_is_hoc_ar_a)
-
-  %h2= hoc_s(:hoc_faq_when_is_hoc_ar_q)
-  %div= hoc_s(:hoc_faq_when_is_hoc_ar_a)
-
-  %h2= hoc_s(:hoc_faq_why_cs_q)
-  %div= hoc_s(:hoc_faq_why_cs_a)
-
-  %h2= hoc_s(:hoc_faq_how_participate_ar_q)
-  %div= hoc_s(:hoc_faq_how_participate_ar_a)
-
-  %h2= hoc_s(:hoc_faq_behind_hoc_ar_q)
-  %div= hoc_s(:hoc_faq_behind_hoc_ar_a)
-
-  %h2= hoc_s(:hoc_faq_host_ar_q)
-  %div= hoc_s(:hoc_faq_host_ar_a)
-
-  %h2= hoc_s(:hoc_faq_need_computers_ar_q)
-  %div= hoc_s(:hoc_faq_need_computers_ar_a)
-
-  %h2= hoc_s(:hoc_faq_international_q)
-  %div= hoc_s(:hoc_faq_international_a)
-
-  %h2= hoc_s(:hoc_faq_tutorial_ar_q)
-  %div= hoc_s(:hoc_faq_tutorial_ar_a)
-
--elsif @country == 'uk'
+-if @country == 'uk'
   %h2#about= hoc_s(:hoc_faq_what_is_hoc_q)
   %div= hoc_s(:hoc_faq_what_is_hoc_uk_a)
 
@@ -50,7 +21,7 @@
   %div= hoc_s(:hoc_faq_behind_hoc_uk_a)
 
   %h2= hoc_s(:hoc_faq_host_q)
-  %div= hoc_s(:hoc_faq_host_uk_a)
+  %div= hoc_s(:hoc_faq_host_uk_a).gsub(/target-resources-how-to/, hoc_uri('/resources/how-to'))
 
   %h2= hoc_s(:hoc_faq_need_computers_q)
   %div= hoc_s(:hoc_faq_need_computers_a)
@@ -63,9 +34,9 @@
   %div= hoc_s(:hoc_faq_what_is_hoc_a)
 
   %br/
-  %a{href: "http://code.org/learn", target: "_blank"}
+  %a{href: "http://#{codeorg_url()}/learn", target: "_blank"}
     %button
-      Try last year's tutorials
+      =hoc_s(:hoc_faq_last_year)
 
   %h2= hoc_s(:hoc_faq_when_is_hoc_q)
   %div= hoc_s(:hoc_faq_when_is_hoc_a)
@@ -80,7 +51,7 @@
   %div= hoc_s(:hoc_faq_behind_hoc_a)
 
   %h2= hoc_s(:hoc_faq_host_q)
-  %div= hoc_s(:hoc_faq_host_a)
+  %div= hoc_s(:hoc_faq_host_a).gsub(/target-resources-how-to/, hoc_uri('/resources/how-to'))
 
   %h2= hoc_s(:hoc_faq_need_computers_q)
   %div= hoc_s(:hoc_faq_need_computers_a)
@@ -90,3 +61,7 @@
 
   %h2= hoc_s(:hoc_faq_tutorial_q)
   %div= hoc_s(:hoc_faq_tutorial_a).gsub(/target-tutorial-guidelines/, hoc_uri('/tutorial-guidelines'))
+
+-if @country == 'br'
+  %h2= hoc_s(:hoc_faq_more_questions_br_q)
+  %div= hoc_s(:hoc_faq_more_questions_br_a)

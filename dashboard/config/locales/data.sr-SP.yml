@@ -3,7 +3,7 @@
     script:
       name:
         20-hour:
-          desc: K-8 Увод у курс Компјутерских Наука
+          desc: K-8 увод у курс Информатике
           Unplug1: "Фаза 1"
           Maze: "Фаза 2"
           Unplug2: "Фаза 3"
@@ -25,7 +25,7 @@
           Artist5: "Фаза 19"
           Unplug11: "Фаза 20"
         Hour of Code:
-          desc: "Час Кодирања"
+          desc: "Час кода"
           Maze: "Фаза 1"
         Edit Code:
           desc: "Измени Код"
@@ -48,6 +48,7 @@
         edit-code:
           desc: Edit Code (beta)
           MazeEC: "Фаза 1"
+          Webapp: "Фаза 2"
         events:
           desc: Bounce (beta)
           Bounce: "Фаза 1"
@@ -79,7 +80,7 @@
         Artist2: "Уметник 2"
         Unplug5: "Функције"
         Farmer: "Фармер"
-        Unplug6: "Условни"
+        Unplug6: "Кондиционали"
         Artist3: "Уметник 3"
         Unplug7: "Писање Песама"
         Farmer2: "Фармер 2"
@@ -96,6 +97,7 @@
         Jigsaw: "Слагалица"
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
     trophy:
       name:
         Bronze: "Бронза"
@@ -104,12 +106,12 @@
     concept:
       description:
         sequence: "Низ Акција"
-        if: "Ако блок"
+        if: "Ако Блок"
         if_else: "Ако-друго блок"
         loop_times: "Поновите пута блок"
-        loop_until: "Поновите док блок"
-        loop_while: "Док блок (While block)"
-        loop_for: "Бројач блок"
+        loop_until: "Понављајте док Блок"
+        loop_while: "Док (While  Петља) Блок"
+        loop_for: "Бројач Блок"
         function: "Функције"
         parameters: "функције са параметрима"
     level:
@@ -548,7 +550,7 @@
         Unplug3: "Графиконско - Папирно Програмирање"
         Unplug4: "Алгоритми"
         Unplug5: "Функције"
-        Unplug6: "Условни"
+        Unplug6: "Кондиционали"
         Unplug7: Songwriting
         Unplug8: "Апстракција"
         Unplug9: Relay programming
@@ -577,7 +579,7 @@
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: "Графиконско - Папирно Програмирање"
-        C2_conditionals_with_cards: "Условни"
+        C2_conditionals_with_cards: "Кондиционали"
         C2_binary_bracelets: Binary Bracelets
         C2_replay_programming: "Релејно Програмирање"
         C2_paper_airplanes: Paper Airplanes

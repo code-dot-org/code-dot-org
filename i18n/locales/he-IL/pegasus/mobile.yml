@@ -1,5 +1,5 @@
 he-IL:
-  hello: שלום עולם
+  hello: הי עולם
   computer_science: מדעי המחשב
   computer_science_edweek: שבוע החינוך למדעי המחשב
   csedweek_dates: 9-15 בדצמבר, 2013
@@ -31,7 +31,7 @@ he-IL:
   view_english_site: עבור לאתר באנגלית
   non_english_tutorials: 'ההדרכות תורגמו לשפות רבות:'
   write_your_first_program: כתוב את תוכנת המחשב הראשונה שלך
-  learn_cs_concepts: 'למד את המושגים הבסיסיים במדעי המחשב על-ידי תכנות בשיטת "גרירה ושחרור". זהו מדריך דמוי-משחק שבו מככבים סרטונים בהם מופיעים ביל גייטס, מרק זוקרברג, Angry Birds וPlants vs. Zombies. למד לולאות "חזור", משפטי אם-אז, ואלגוריתמים בסיסיים.'
+  learn_cs_concepts: למד את המושגים הבסיסיים של מדעי המחשב באמצעות תכנות גרור ושחרר. זו ערכת לימוד דמוית משחק המלווה בהרצאות וידאו בכיכובם של ביל גייטס, מארק צוקרברג, הציפור הכועסת, וצמחים נגד זומבים. למד לולאות-חזור, הצהרות אם-אז ואלגוריתמים בסיסיים.
   all_ages: כל הגילאים
   beginner: מתחיל
   n_participants: '# משתתפים'
@@ -41,10 +41,10 @@ he-IL:
   congratulations_on_completing_hoc: ברכות על השלמת שעה אחת של קוד.
   get_a_certificate_of_achievement: קבל תעודה על ההישג
   enter_valid_email: אנא הכנס כתובת דוא״ל תקינה
-  get_a_certificate_message: "אנחנו נשלח לך תעודה ומידע על איך <a href='/learn/beyond'>ללמוד מעבר לשעה אחת</a>"
+  get_a_certificate_message: "נשלח לך תעודת סיום ומידע על איך <a href='/learn/beyond'>ללמוד מעבר לשעה</a>"
   get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
   thanks_for_submitting: תודה על השליחה!
-  if_you_enjoyed: אם נהנית ללמוד, המלץ לחברים לנסות גם. אנחנו רוצים שכל העולם ילמד.
+  if_you_enjoyed: אם נהנית מהלמידה, בקש מחבריך לנסות גם! אנחנו רוצים שכל העולם ילמד.
   personalize_certificate: התאם אישית את האישור שלך
   share_achievement: שתף בהישגיך
   beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
@@ -79,7 +79,7 @@ he-IL:
   petition_thankyou: תודה על חתימת העצומה
   carousel_heading_international: הדרכות בשפה שלך
   continue_learning_header: המשך ללמוד מעבר לשעה אחת
-  continue_learning_body: 'יש הרבה אפשרויות. אתה יכול ללמוד באינטרנט, או בבי"ס מקומי, או בקיטנה.'
+  continue_learning_body: הרבה אפשרויות קיימות. אתה יכול ללמוד מהאינטרנט, בבית הספר או במחנה קיץ.
   learn_next_level: המשך לשלב הבא
   learn_online: נסה קורסים אחרים באינטרנט
   learn_classes: מצא כיתות מקומיות
@@ -92,11 +92,11 @@ he-IL:
   boy: ילד
   help_recruit_coders: עזור לנו לגייס עוד כותבי קוד לצוות שלך!
   help_recruit: עזור לנו לגייס עוד כותבי קוד!
-  lines_of_code: 'יותר מ<b># שורות של קוד</b> נכתבו עד כה.'
-  lines_of_code_alt: '<b>#</b> שורות של קוד נכתבו על-ידי תלמידים'
+  lines_of_code: 'מעל <b># שורות קוד</b> נכתבו עד כה.'
+  lines_of_code_alt: '<b>#</b> שורות קוד נכתבו על ידי תלמידים'
   who_has_done_hoc: 'מי עשה את #HourOfCode? @codeorg'
   hoc_leaderboards: לוח התוצאות של Hour of Code
-  students_and_lines: '%{students} תלמידים כבר עשו את שעת הקוד וכתבו %{lines} שורות של קוד.'
+  students_and_lines: '{students}% תלמידים סיימו את ה- Hour of Code וכתבו {lines}% שורות של קוד.'
   start_hoc: התחל עכשיו בשעה של קוד
   contact_form_topic_press: עיתונות/תקשורת (ראיון או הרצאה)
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
@@ -201,7 +201,7 @@ he-IL:
   dashboard_sections_new_section: New section
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
   dashboard_sections_table_section: Section
-  dashboard_sections_table_secret: Secret type
+  dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
   dashboard_sections_table_students: Students
@@ -224,7 +224,7 @@ he-IL:
   dashboard_students_male: גבר
   dashboard_students_female: אישה
   dashboard_students_secret: Secret
-  dashboard_students_password: סיסמא
+  dashboard_students_password: סיסמה
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -261,9 +261,21 @@ he-IL:
   dashboard_teacher_worksheet: teacher worksheet
   dashboard_grade_k: K
   dashboard_grade_other: אחר
-  dashboard_login_word: word
-  dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_word: Word
+  dashboard_login_picture: Picture
+  dashboard_login_none: דואר אלקטרוני
   dashboard_new_password: new password
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: תלמיד
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: "Who creates the student's account?"
+  dashboard_sections_password question: 'What do students use as a "password"?'
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: 'Unique web-page listed on "Manage Students" tab'
+  dashboard_sections_sign_in_main: 'http://code.org and click "Sign in"'
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."

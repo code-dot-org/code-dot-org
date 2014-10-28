@@ -4,16 +4,16 @@ title: Resources layout: wide
 
 * * *
 
-# How to attract media to your Hour of Code event
+# एक घंटा कोड का में पत्रकारोंको आकर्षित करनेके कुछ तरीके
 
-## Some shocking statistics (USA):
+## कुछ अभूतपूर्व आंकड़े (अमरीकसे):
 
-  * There will be one million more computing jobs than students over the next 10 years (adding up to $500 billion in salaries).
-  * More than 50 percent of all projected math and science occupations are in computing occupations. 
-  * Computing occupations are among the highest-paying jobs for new graduates. Yet fewer than 3% of college students graduate with a degree in computer science.
-  * In 26 states, computer science classes don’t count toward math or science high school graduation requirements. 
-  * Less than 20% of AP Computer Science students are women. Less than 10% are black or Latino.
+  * अगले १० सालमे १० लाख सभी ज्यादा संगणक विज्ञानं संदर्भित रोजगारोको प्रशिक्षित विद्यार्थी नहीं मिलेंगे (अनुमान के मुताबिक ये कुल मिलाके ३०,००० कोटि रूपए का वेतन है)|
+  * अनुमान के मुताबिक ये गणित व विज्ञानं द्वारा मिलने वाले रोजगार अवसरोंके ५०% है| 
+  * सुशिक्षित िद्यार्थियोंको मिलनेवाला शुरवाती वेतन में सबसे ज्यादा वेतन संगणक विज्ञानमें पढ़े-लिखे छात्रोंको मिलता है फिरभी सिर्फ ३% छात्र संगणक विज्ञानं की शिक्षा लेते है|
+  * अमरीकाके २६ राज्योमें, संगणक विज्ञानके वर्गोंको उच्चमाध्यमिक शिक्षण पूर्ण करनेके लिए लगनेवाले गणित व विज्ञानं के विषयोमे नहीं गिना जाता है| 
+  * ए पि संगणक विज्ञानके छात्रोमेसे २०% से भी काम महिलाये है। १०% से भी काम अफ़्रीकी-अमेरिकी समाज व लेटिन-अमेरिकी समाज से आते है|
 
-## Infrographic version:
+## समाचारपत्रक का संस्करण:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)

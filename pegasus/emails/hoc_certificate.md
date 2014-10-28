@@ -1,6 +1,6 @@
 ---
 <%
-  require pegasus_dir('sites.v3/code.org/helpers/hoc_helpers')
+  require pegasus_dir('helpers/hoc_helpers')
   image = create_certificate_image(name_s||email_s)
   image.format = 'jpg'
 %>

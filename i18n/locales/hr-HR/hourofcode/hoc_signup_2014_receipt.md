@@ -1,6 +1,6 @@
 * * *
 
-from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' subject: Thanks for signing up to host an Hour of Code! view: none theme: none
+pošiljatelj: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' predmet: Hvala što ste se prijavili biti domaćinom Sata Kodiranja! prikaz: nema tema: nema
 
 * * *
 
@@ -8,11 +8,11 @@ from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x7
 
 # Thanks for signing up to host an Hour of Code!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
+**SVAKI** organizator sata kodiranja primit će 10 GB Dropbox pohrane ili 10 dolara Skype kredita u znak zahvale. [Detalji](http://<%= hostname %>/prizes)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Pripravite [cijelu školu za sudjelovanje](http://<%= hostname %>/whole-school) kako bi osvojili velike nagrade za školu.
 
 <% end %>
 
@@ -24,50 +24,38 @@ Tell your friends about the #HourOfCode.
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#email) or [give this handout to your principal](http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+[Pošaljite ovu poruku](http://<%= hostname %>/resources#email) ili [dajte ovaj letak ravnatelju škole](http://<%= hostname %>/files/schools-handout.pdf). Nakon što škola odluči sudjelovati, [prijavite se da bi osvojili tehnologiju u vrijednosti od 10 tisuća dolara za vašu školu](http://<%= hostname %>/prizes) i izazovite ostale škole u vašoj okolici da i one sudjeluju.
 
 <% else %>
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
+[Pošaljite ovu poruku](http://<%= hostname %>/resources#email) ili [dajte ovaj letak ravnatelju škole](http://<%= hostname %>/files/schools-handout.pdf).
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 3. Zamolite svog poslodavca da sudjeluje
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Pošaljite ovu poruku](http://<%= hostname %>/resources#email) svom nadređenom ili rukovodiocu. Možete im također [uručiti ovaj letak](http://<%= hostname %>/files/schools-handout.pdf).
 
-## 4. Promote Hour of Code within your community
+## 4. Promovirajte Sat Kodiranja u svojoj zajednici
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Pridobijte lokalne grupe - izviđače, crkvu, sveučilište, branitelje ili radnički sindikat. Možete biti domaćin Sata Kodiranja i u svom susjedstvu.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Zamolite mjesno izabranog dužnosnika da pruži podršku Satu Kodiranja
 
-## [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Pošaljite ovu poruku](http://<%= hostname %>/resources#politicians) svome gradonačelniku, gradskom vijeću ili školskom odboru. Ili im [dajte ovu brošuru](http://<%= hostname %>/resources/hoc-one-pager.pdf) i pozovite ih da posjete vašu školu.
 
-Thanks for signing up to host an Hour of Code!
+<% if @country == 'ro' %>
 
-EVERY Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. Details (http://<%= hostname %>/prizes)
+Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
 
-Get your whole school to participate (http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Echipa Hour of Code Romania hoc@adfaber.org
 
-  1. Spread the word
+<% end %>
 
-Tell your friends about the #HourOfCode.
+* * *
 
-  1. Ask your whole school to offer an Hour of Code
+Code.org je 501c3 neprofitna organizacija. Naša adresa je 1301 5th Ave, Suite 1225, Seattle, WA, 98101, USA. Ne želite primati ove elektronske poruke? [Otkažite pretplatu](%= unsubscribe_link %).
 
-Send this email (http://<%= hostname %>/resources#email) or give this handout to your principal (http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, enter to win $10,000 worth of technology for your school (http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
-
-  1. Ask your employer to get involved
-
-Send this email (http://<%= hostname %>/resources#email) to your manager, or the CEO. Or give them this handout (http://<%= hostname %>/files/schools-handout.pdf).
-
-  1. Promote Hour of Code within your community
-
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
-
-  1. Ask a local elected official to support the Hour of Code
-
-Send this email (http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or give them this handout (http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+![](<%= tracking_pixel %>)

@@ -2,15 +2,15 @@
 
 Título: Obrigado por se inscrever para sediar a Hora do Código! layout: amplo
 
-social: "og:title": "<%= hoc\_s(:meta\_tag\_og\_title) %>" "og:description": "<%= hoc\_s(:meta\_tag\_og\_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
+social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
 
-"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc\_s(:meta\_tag\_twitter\_title) %>" "twitter:description": "<%= hoc\_s(:meta\_tag\_twitter\_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv\_load\_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
 
 * * *
 
 <% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc\_s(:twitter\_default\_text)} twitter[:hashtags] = 'HourOfCode' unless hoc\_s(:twitter\_default\_text).include? '#HoraDoCodigo' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HoraDoCodigo' %>
 
 # Obrigado por inscrever-se para sediar a Hora do Código!
 
@@ -24,7 +24,7 @@ Estimule sua [escola inteira a participar](/us/prizes), assim ela terá a oportu
 
 ## 1. Espalhe a notícia
 
-Fale aos seus amigos sobre a #HoraDoCodigo.
+Fale aos seus amigos sobre o #HoraDoCódigo.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
@@ -42,16 +42,20 @@ Fale aos seus amigos sobre a #HoraDoCodigo.
 
 <% end %>
 
-## 3. Peça para seu empregador para participar
+## 3. Faça uma doação generosa
 
-[Envie este email](/resources#email) para seu gerente, ou para seu Diretor Executivo. Ou [entregue este folheto a eles](/resources/hoc-one-pager.pdf).
+[Faça uma doação para a nossa campanha de crowdfunding](http://code.org/donate). Para levar o ensino a 100 milhões de crianças, precisamos do seu apoio. Acabamos de lançar o pode ser a [maior campanha de crowdfunding para a educação](http://code.org/donate) da história. Para cada dólar doado, os principais [doadores](http://code.org/about/donors) da Code.org doarão o mesmo valor, dobrando o seu impacto.
 
-## 4. Promova a Hora do Código em sua comunidade
+## 4. Peça para seu empregador participar
+
+[Envie este e-mail](/resources#email) para seu gerente, ou para seu Diretor Executivo. Ou [entregue este folheto a eles](/resources/hoc-one-pager.pdf).
+
+## 5. Promova a Hora do Código em sua comunidade
 
 Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de veteranos ou sindicato. Ou ofereça uma "festa" Hora do Código para sua vizinhança.
 
-## 5. Peça a um representante político para apoiar a Hora do Código
+## 6. Peça a um representante político para apoiar a Hora do Código
 
-[Envie este e-mail](/resources#politicians) para seu prefeito, Câmara Municipal ou conselho escolar. Ou [dê a eles este folheto](/resources/hoc-one-pager.pdf) e convide-os a visitar sua escola.
+[Envie este e-mail](/resources#politicians) para seu prefeito, Câmara Municipal ou conselho escolar. Ou [entregue este folheto](/resources/hoc-one-pager.pdf) e convide-os a visitar sua escola.
 
 <%= view 'popup_window.js' %>

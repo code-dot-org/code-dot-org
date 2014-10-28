@@ -6,10 +6,12 @@ title: Resources layout: wide nav: resources_nav
 
 # Nguồn xây dựng
 
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
 <a id="handouts"></p> 
 
 <h2>
-  Sử dụng bản tin này để hiểu hơn về chúng tôi
+  Use this handout to spread the word
 </h2>
 
 <p>
@@ -17,7 +19,7 @@ title: Resources layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Đưa bản cầm tay này tới các giáo viên và trường học
+  Give this handout to teachers and schools
 </h2>
 
 <p>
@@ -28,16 +30,18 @@ title: Resources layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Mở những video này để truyền cảm hứng cho học sinh
+    Show these videos to inspire students
   </h2>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Những gì hầu hết các trường đều không dạy (5 phút)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code ở đây - Bất cứ ai cũng có thể tìm hiểu và học tập</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -47,12 +51,14 @@ title: Resources layout: wide nav: resources_nav
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Tổng thống Obama về khoa học máy tính</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Bất cứ ai cũng có thể học (1 phút)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -68,7 +74,7 @@ title: Resources layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Treo những đề can này trong trường của bạn
+      Hang these posters in your school
     </h2>
     
     <p>
@@ -76,7 +82,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h4>
-      <a href="http://hourofcode.com/us#signup">Đăng ký</a> sự kiện Hour of Code của bạn và chúng tôi sẽ gửi cho bạn áp phích quảng cáo miễn phí.
+      <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
     </h4>
     
     <p>
@@ -88,7 +94,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Đặt những bức quảng cáo này lên website của bạn
+      Feature these banners on your website
     </h2>
     
     <p>
@@ -100,7 +106,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      gửi những email này để quảng bá Hour of Code tới mới người
+      Send these emails to help promote the Hour of Code
     </h2>
     
     <p>
@@ -108,27 +114,27 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Giới thiệu tới trường học của bạn, nhân viên hoặc bạn bè của bạn để họ đăng ký tham gia:
+      Ask your school, employer or friends to sign up:
     </h2>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+      Máy tính có ở khắp mọi nơi, nhưng chỉ một số ít các trường học dạy về khoa học máy tính 10 năm trở về trước. Tin tốt là chúng tôi đang trên đường thay đổi điều đó. Nếu bạn đã được nghe về Hour of Code năm ngoái, bạn có lẽ bạn đã biết nó đã làm nên lịch sử. Trong một tuần, 15 triệu học sinh đã tham gia vào tìm hiểu khoa học máy tính!
     </p>
     
     <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Khoa học máy tính đã ở trên những trang chủ của Google, MSN, Yahoo! và Disney. Tổng thống Obama, Shakira và Ashton Kutcher tất cả đã khỏi động Hour of Code với các video. Trên 100 đối tác đã ùng nhau hỗ trợ cho sự kiện này.
     </p>
     
     <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+      Năm nay, hãy làm cho nó lớn hơn. Tôi đề nghị bạn tham gia vào Hour of Code năm 2014. Hãy tham gia sự kiện Hour of Code trong suốt tuần giáo dục khoa học máy tính từ 8-14 tháng 12 năm 2014.
     </p>
     
     <p>
-      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
+      Đọc nó và tổ chức các sự kiện. Yêu cầu trường học nơi bạn sống đăng ký tham gia. Hoặc tự mình thử sức với nó -- mọi ngừoi đều sẽ thu được lợi ích từ việc học những điều cơ bản này.
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+      Giúp chúng tôi đạt tới 100 triệu học sinh tới cuối năm nay! Gắt đầu tại http://hourofcode.com
     </p>
     
     <p>
@@ -136,51 +142,51 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Mời truyền thông tham gia vào sự kiện:
+      Invite media to attend your event:
     </h2>
     
     <p>
-      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
+      <strong>Chủ đề:</strong>trường học tham gia và nhiệm vụ giới thiệu 100 triệu học sinh tìm hiểu khoa học máy tính
     </p>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
+      Máy tính là ở khắp mọi nơi, nhưng ít hơn các trường dạy khoa học máy tính hơn 10 năm trước đây. Cô gái và dân tộc thiểu số bị underrepresented. Tin tốt là, chúng tôi đang trên con đường của chúng tôi để thay đổi điều này.
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Trong một tuần cuối năm, 15 triệu sinh viên đã cố gắng khoa học máy tính! Khoa học máy tính đã ở trên những trang chủ của Google, MSN, Yahoo! và Disney. Tổng thống Obama, Shakira và Ashton Kutcher tất cả đã khỏi động Hour of Code với các video. Trên 100 đối tác đã ùng nhau hỗ trợ cho sự kiện này.
     </p>
     
     <p>
-      Now the Hour of Code movement is aiming for 100 million students.
+      bây giờ Hour of Code với mục tiêu đạt tới 100 triệu học sinh.
     </p>
     
     <p>
-      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
+      Đó là lý do tại sao mỗi một số [X] các sinh viên tại [tên trường] đang tham gia ngày sự kiện học tập lớn nhất trong lịch sử: The giờ của mã, trong tháng mười hai 8-14.
     </p>
     
     <p>
-      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
+      Tôi viết thư này để mời bạn tham gia vào sự kiện, và để xem những đứa trẻ làm các hoạt động vào [DATE].
     </p>
     
     <p>
-      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
+      Hour of Code được tổ chức bởi tổ chức phi lợi nhuận Code.org và hơn 100 tổ chức khác, tuyên bố thế hệ sinh viên ngahỳ nay sẵn sàng để tìm hiểu các kỹ năng quan trọng cho sự thành công của thế kỷ 21. Xin vui lòng tham gia với chúng tôi.
     </p>
     
     <p>
-      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
+      <strong>Liên hệ:</strong> [Tên của bạn], [Tiêu đề], di động: (212) 555-5555
     </p>
     
     <p>
-      <strong>When:</strong> [DATE and TIME of your event]
+      <strong>Khi:</strong> [Ngày và thời gian của sự kiện của bạn]
     </p>
     
     <p>
-      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
+      <strong>Địa điểm :</strong> [Địa chỉ và chỉ dẫn]
     </p>
     
     <p>
-      I look forward to being in touch.
+      Tôi mong muốn liên lạc.
     </p>
     
     <p>
@@ -188,39 +194,39 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Nói với cha mẹ về của bạn trường hợp:
+      Tell parents about your school's event:
     </h2>
     
     <p>
-      Dear Parents,
+      Thưa quý phụ huynh,
     </p>
     
     <p>
-      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
+      We live in a world surrounded by technology. Và chúng tôi biết rằng bất cứ điều gì trường sinh viên của chúng tôi chọn để đi vào như người lớn, khả năng của mình để thành công sẽ ngày càng có bản lề trên sự hiểu biết cách thức hoạt động của công nghệ. Nhưng chỉ một phần nhỏ của chúng tôi đang học khoa học máy tính, và ít sinh viên đang học nó hơn một thập kỷ trước.
     </p>
     
     <p>
-      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+      Đó là lý do tại sao trường toàn bộ tham gia vào sự kiện học tập lớn nhất trong lịch sử: The giờ của mã, trong máy tính khoa học giáo dục tuần (tháng mười hai. 8-14). Năm ngoái, 15 triệu sinh viên đã cố gắng khoa học máy tính trong một tuần. Năm nay, chúng tôi đang tham gia sinh viên trên toàn thế giới đến 100 triệu sinh viên!
     </p>
     
     <p>
-      Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
+      Chúng tôi giờ mã là một tuyên bố rằng [tên trường] sẵn sàng để dạy các kỹ năng nền tảng thế kỷ 21. Để tiếp tục mang lại cho lập trình hoạt động để học sinh của bạn, chúng tôi muốn làm cho chúng tôi sự kiện giờ mã lớn. Tôi khuyến khích bạn tình nguyện viên, tiếp cận với những phương tiện truyền thông địa phương, chia sẻ những tin tức về kênh truyền thông xã hội của bạn và xem xét việc lưu trữ thêm giờ mã sự kiện cộng đồng.
     </p>
     
     <p>
-      This is a chance to change the future of education in [TOWN/CITY NAME].
+      Đây là một cơ hội để thay đổi tương lai của giáo dục trong [tỉnh/thành phố tên].
     </p>
     
     <p>
-      See http://hourofcode.com for details, and help spread the word.
+      Xem http://hourofcode.com để biết chi tiết, và giúp lây lan từ.
     </p>
     
     <p>
-      Sincerely,
+      Trân trọng
     </p>
     
     <p>
-      Your principal
+      Hiệu trưởng của bạn
     </p>
     
     <p>
@@ -228,29 +234,29 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Mời một chính trị gia địa phương để của bạn trường hợp:
+      Invite a local politician to your school's event:
     </h2>
     
     <p>
-      Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+      Thân mến [thị trưởng/thống đốc/đại diện/thượng nghị sĩ cuối tên]:
     </p>
     
     <p>
-      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+      Bạn có biết rằng trong ngày hôm nay của nền kinh tế, các công việc máy tính hơn học sinh tốt nghiệp vào trường bởi 3-to-1? Và, khoa học máy tính là nền tảng cho <em>mỗi</em> ngành công nghiệp ngày hôm nay. Tuy nhiên, 90% trường học không dạy cho nó. [Trường tên], chúng tôi đang cố gắng để thay đổi điều đó.
     </p>
     
     <p>
-      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+      Đó là lý do tại sao trường toàn bộ tham gia vào sự kiện học tập lớn nhất trong lịch sử: The giờ của mã, trong máy tính khoa học giáo dục tuần (tháng mười hai. 8-14). Năm ngoái, 15 triệu sinh viên đã cố gắng khoa học máy tính trong một tuần. Năm nay, chúng tôi đang tham gia sinh viên trên toàn thế giới đến 100 triệu sinh viên!
     </p>
     
     <p>
-      I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
+      Tôi đang viết để mời bạn tham gia vào sự kiện giờ mã của chúng tôi và nói chuyện tại hội kickoff của chúng tôi. Nó sẽ diễn ra ngày [ngày, thời gian, nơi], và sẽ làm cho một tuyên bố mạnh mẽ [tiểu bang hay thành phố tên] là sẵn sàng để dạy học sinh của chúng tôi kỹ năng quan trọng thế kỷ 21. Chúng tôi muốn đảm bảo rằng học sinh của chúng tôi đang đi đầu trong việc tạo ra các công nghệ của tương lai--không chỉ tiêu thụ nó.
     </p>
     
     <p>
-      Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+      Xin vui lòng liên hệ với tôi tại [điện thoại số hoặc địa chỉ EMAIL]. Tôi mong trả lời của bạn.
     </p>
     
     <p>
-      Sincerely, [NAME], [TITLE]
+      Chân thành, [tên], [Tiêu đề]
     </p>

@@ -1,70 +1,70 @@
 * * *
 
-title: Resources layout: wide
+title: Risorse layout: wide
 
 * * *
 
-# Come insegnare a Un'ora di Codice
+# Come insegnare un'Ora del Codice
 
-## 1) Provare le esercitazioni:
+## 1) Prova i tutorial:
 
-Ti proponiamo una varietà di attività divertenti, un'ora di esercitazioni per gli studenti di tutte le età create da diversi partner. Nuove esercitazioni saranno proposte prima della settimana dell'Ora di Codice - 8 - 14 dicembre.
+Troverai diversi divertenti tutorial di un'ora per studenti di tutte le età, creati da diversi partner. Nuovi tutorial sono in arrivo per il lancio dell' Ora del Codice, nella settimana 8-14 Dicembre.
 
-**Le esercitazioni dell'Ora di Codice:**
+**Tutti i tutorial dell'Ora del Codice:**
 
   * richiedono una minima preparazione per i docenti
-  * sono auto esplicative, permettendo agli studenti di lavorare in base al proprio ritmo e al livello di prestazione
+  * Sono autoesplicativi e permettono agli studenti di lavorare in base al proprio ritmo e al proprio livello di preparazione
 
 [![image](http://code.org/images/tutorials.png)](http://code.org/learn)
 
-## 2) Pianificare l'hardware necessario - i computer individuali sono opzionali
+## 2) Pianifica in anticipo l'hardware necessario - l'uso di computer è facoltativo
 
-Le attività proposte da un'Ora di Codice saranno più funzionali con il collegamento ad Internet. Non è necessario un computer per ogni bambino e un'Ora di Codice si può anche fare senza un computer.
+Per svolgere al meglio le attività proposte da un'Ora del Codice è preferibile usare dei PC collegati ad Internet. Ma non è necessario avere un computer per ogni studente e inoltre un'Ora del Codice può essere svolto anche senza computer.
 
-  * **Provare le esercitazioni sui computer o device degli studenti.** Assicurarsi che funzionino correttamente (con audio e video).
-  * **Guardare la pagina complimenti** per vedere cosa gli studenti vedono quando finiscono. 
-  * **Fornire le cuffie per la vostra classe**, o chiedere agli studenti di portare le proprie, se l'esercitazione scelta richiede il suono.
+  * **Prova i tutorial sui computer o sui device degli studenti.** Assicurati che funzionino correttamente (con audio e video).
+  * **Guarda la pagina dei complimenti** per vedere cosa vedono gli studenti quando terminano. 
+  * **Procurati delle cuffie per la tua classe** o chiedi agli studenti di portare le proprie se il tutorial che hai scelto richiede l'uso del suono.
 
-## 3) Pianificare l'azione in base alla tecnologia disponibile
+## 3) Pianifica l'evento in anticipo in base alle tecnologie disponibili
 
-  * **Se non ci sono device per tutti gli studenti** si può utilizzare come metodologia il cooperative learning: gli studenti programmano a coppie. Quando gli studenti si supportano, si aiutano a vicenda facendo meno affidamento sul docente. Essi consideranno che l'informatica è un'attività che favorisce la collaborazione e le relazioni.
-  * Nel caso di banda ridotta si può mostrare il video all'intera classe, così per i singoli studenti non sarà necessario scaricare il video. Oppure si può fornire agli studenti la versione offline.
+  * **Non hai abbastanza device per tutti gli studenti?** Fai lavorare i tuoi studenti [a coppie](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Quando gli studenti lavorano in coppia, si aiutano a vicenda e fanno meno affidamento sul docente. In questo modo capiscono che l'informatica è un'attività che favorisce la collaborazione e le relazioni sociali.
+  * **Hai una banda ridotta?** Mostra tu i video a tutta la classe, così che gli studenti non debbano scaricare i video. Oppure prova ad usare i tutorial che non necessitano di connessione ad internet.
 
-## 4) "Attivare" gli studenti - mostrando un video
+## 4) Ispira gli studenti - mostra loro un video
 
-Show students <% if @country == 'uk' %> [this video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [this video](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %> to kick off the Hour of Code. Inoltre controlla questi video (LINK), con Bill Gates, Mark Zuckerberg, Black Eyed Peas will.i.am fondatore e NBA tella Chris Bosh che parlano dell'importanza della programmazione. (Ci sono diverse versioni dei video: 1 link - 5 link - 9 link minuti.
+Mostra agli studenti <% if @country == 'uk' %> [questo video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [questo video](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %> per iniziare l'Ora del Codice. Guarda anche[questi video](http://youtube.com/codeorg), con Bill Gates, Mark Zuckerberg, will.i.am il fondatore dei Black Eyed Peas e la stella dell'NBA Chris Bosh che parlano dell'importanza della programmazione. (Ci sono diverse versioni dei video da [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuti](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minuti](https://www.youtube.com/watch?v=dU1xS07N-FA))
 
-**Entusiasmare gli studenti fornendo loro una breve anticipazione**
+**Coinvolgi i tuoi studenti fornendo loro una breve introduzione**
 
-La maggior parte dei bambini non sanno cos'è informatica. Ecco alcune idee:
+La maggior parte dei ragazzi non sa cosa sia l'informatica. Ecco alcune idee:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Prova con: "Pensa alle cose che nella vita di tutti i giorni usano l'informatica: un cellulare, un forno a microonde, un computer, un semaforo... tutte queste cose hanno bisogno di un informatico che contribuisce nel realizzarle."
-  * Oppure: "L'informatica è l'arte di mettere assieme le idee degli uomini e gli strumenti digitali in modo da aumentare le nostre potenzialità. Gli informatici lavorano in molte aree differenti: scrivendo applicazioni per cellulari, per la cura delle malattie, per la creazione di cartoni animati, lavorando nei social media, costruendo robots che esplorano pianeti e molto altro ancora."
-  * See tips for getting girls interested in computer science [here](http://code.org/girls). 
+  * Spiegalo in modo semplice includendo esempi di uso dell'informatica che possano interessare sia i ragazzi che le ragazze (salvare delle vite, aiutare le persone, far comunicare le persone, ecc.).
+  * Prova con: "Pensa alle cose della tua vita di tutti i giorni che usano l'informatica: un cellulare, un forno a microonde, un computer, un semaforo... tutte queste cose hanno bisogno della collaborazione di un informatico per poter essere costruite."
+  * Oppure: "L'informatica è l'arte di mettere insieme le idee degli uomini e gli strumenti elettronici che hanno a disposizione per aumentare le nostre potenzialità. Gli informatici lavorano in moltissime aree differenti: la creazione di applicazioni per cellulari, la cura delle malattie, la creazione di cartoni animati, il lavoro sui social media, la costruzione di robot che esplorano altri pianeti e molto altro ancora."
+  * Guarda [qui](http://code.org/girls) i suggerimenti per interessare le ragazze all'informatica. 
 
-## 5) Inizia la tua Ora del del Codice
+## 5) Inizia la tua Ora del Codice
 
-**Indirizza gli studenti all'attività**
+**Fornisci agli studenti l'indirizzo dell'attività**
 
-  * Scrivi il link al tutorial sulla lavagna. Find the link listed on the <% if @country == 'uk' %> [information for your selected tutorial](http://uk.code.org/learn) <% else %> [information for your selected tutorial](http://code.org/learn) <% end %>under the number of participants. (Esempio: [hourofcode.com/co](http://code.org/learn)) 
+  * Scrivi l'indirizzo del tutorial alla lavagna. Trovi l'indirizzo sulle<% if @country == 'uk' %> [informazioni per il tutorial che hai selezionato](http://uk.code.org/learn) <% else %> [informazioni per il tutorial che hai selezionato](http://code.org/learn) <% end %>sotto il numero dei partecipanti. (Esempio: [hourofcode.com/co](http://code.org/learn)) 
   * Di' agli studenti di andare all'URL e di iniziare il tutorial.
 
-**Quando gli studenti incontrano difficoltà**
+**Quando i tuoi studenti incontrano difficoltà**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * Di' agli studenti, “Chiedi prima ad altri 3 poi a me.” Chiedi prima a 3 dei tuoi compagni e se loro non sanno la risposta chiedi allora all'insegnante.
+  * Incoraggia gli studenti e dai loro dei rinforzi positivi: “Stai andando molto bene, continua a provare.”
+  * Va bene se devi rispondere: "Non lo so. Proviamo a capirlo tutti insieme". Se non riesci a trovare la soluzione ad un problema usalo come una buona occasione di apprendimento per la classe: "La tecnologia non sempre funziona come vorremmo. Insieme formiamo una comunità di individui che apprendono". E: "Imparare a programmare è come imparare un nuovo linguaggio; non sarai subito fluente nel parlarlo"
 
-**What to do if a student finishes early?**
+**Cosa fare quando uno studente finisce in anticipo?**
 
-  * Students can see all tutorials and try another Hour of Code activity at <% if @country == 'uk' %> [uk.code.org/learn](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * Gli studenti possono vedere tutti i tutorial e provare altre attività dell'Ora del Codice su <% if @country == 'uk' %> [uk.code.org/learn](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
+  * Oppure chiedi agli studenti che finiscono in anticipo di aiutare i compagni che stanno invece avendo difficoltà con l'attività.
 
-**How do I print certificates for my students?**
+**Come stampo i certificati per i miei studenti?**
 
-Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our <% if @country == 'uk' %> [Certificates](http://uk.code.org/certificates) <% else %> [Certificates](http://code.org/certificates) <% end %> page to print as many certificates as you like, in one fell swoop!
+Ogni studente ha l'opportunità di ricevere un certificato via email quanto finisce i [tutorial di Code.org](http://studio.code.org). Puoi cliccare sul certificato per stamparlo. Se invece vuoi creare dei nuovi certificati per i tuoi studenti visita la nostra pagina dei <% if @country == 'uk' %> [Certificati](http://uk.code.org/certificates) <% else %> [Certificati](http://code.org/certificates) per stampare tutti i certificati che vuoi in un colpo solo!
 
-**What comes after the Hour of Code?**
+**Cosa viene dopo l'Ora del Codice?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://code.org/educate). Or encourage your children to learn [online](http://code.org/learn/beyond). <% end %>
+L'Ora del Codice è soltanto il primo passo di un viaggio che ti porterà ad imparare come funziona la tecnologia e come creare applicazioni software. < % se @country = = 'uk' %> L'ora del codice è solo il primo passo in un viaggio per saperne di più su come funziona la tecnologia e come creare applicazioni software. Per continuare questo viaggio, [incoraggia i tuoi ragazzi ad apprendere in rete](http://uk.code.org/learn/beyond). <% else %> Per continuare il viaggio, trova [qui](http://code.org/educate) ulteriori risorse per gli educatori. Oppure incoraggia i tuoi ragazzi ad imparare [in rete](http://code.org/learn/beyond). <% end %>

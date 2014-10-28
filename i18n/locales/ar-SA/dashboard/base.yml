@@ -17,7 +17,7 @@ ar:
         edit_header: تعديل تفاصيل الحساب
         error:
           future: لا يمكن أن يكون في المستقبل
-  hello: مرحباً بالعالم
+  hello: مرحبا بالعالم
   welcome_back: 'أهلا بكم من جديد, %{name}'
   add_teacher_form:
     code_or_email:
@@ -237,7 +237,7 @@ ar:
       prizes: 'اجمع الجوائز الـ %{total_trophies} و فز بجوائز قيمة!'
       prize_earned: 'كل الجوائز %{total_trophies} جمعت . فزت بجائزة!'
       prize_us_only: (طلاب الولايات المتحدة فقط)
-      prizes_link: مزيد من المعلومات
+      prizes_link: المزيد من المعلومات
   teacher:
     title:
       one: 'المعلم الخاص بك:'
@@ -259,9 +259,9 @@ ar:
       no_section: لا قسم مسجل
       trophies: الجوائز
     students:
-      name: اسم
+      name: الاسم
       username: اسم المستخدم
-      password: الرمز السري
+      password: كلمة المرور
       manage: إدارة الطلاب
       dashboard: انتقل إلى لوحة المعلم
       add: إضف الطلاب
@@ -278,13 +278,13 @@ ar:
     sections:
       add: إضافة قسم
       manage: إدارة الأقسام
-      section: قسم
-      students: طالب
-      section_code: رمز قسم
+      section: القسم
+      students: الطلاب
+      section_code: قسم البرمجة
       add_section_code: إضافة رمز قسم الطلاب
-      secret: النوع طريقة الدخول السرية
+      secret: النوع السري
       grade: الصف الدراسي
-      course: الدرس
+      course: الدورة
       rename: إعادة تسمية
       edit: تعديل
       delete: حذف
@@ -324,8 +324,8 @@ ar:
     teacher_student_count_one: 'لديك %{count} طلاب.'
     teacher_student_count: 'لديك %{count} طلاب.'
     teacher_averages: 'كمعدل حصل طلابك %{trophy_average} من %{trophy_max} جائزة "إتقان المفهوم".'
-    teacher_print_certificates: طباعة الشهادات للطلاب الذين انجزوا هذه الدورة التدريبية
-    teacher_read_blog: 'اقرأ عن أخبار وتحديثات لموادنا في "مدونتنا Educator"'
+    teacher_print_certificates: طباعة الشهادات لطلاب الذين أنجزوا هذه الدورة التدريبية
+    teacher_read_blog: أقرأ عن أخبار ومستجدات موادنا على مدونة معلمنا
     classroom: فصلك الدراسي
     student_progress: تقدم تعلمك
     student_stats: 'لقد حصلت %{trophy_count} من %{trophy_max}  جائزة "اتقان المفهوم".'
@@ -338,14 +338,17 @@ ar:
     prize_info: 'جوائز للمشاركة (معلمي المدارس العامة الولايات المتحدة فقط): تصل إلى 1000 $ في المكافآت الفصول الدراسية.'
     tryfirst: 'أو، يمكنك تجربة لأول مرة، والتسجيل في وقت لاحق:'
     trynow: جرب الآن
-    add_hint_help: الرجاء مساعدتنا لإضافة تلميحات ذكية لدروس Code.org
-    20hour_overview: هذا المساق 20 ساعة علوم الحاسوب الأساسية ومفاهيم البرمجة. تم تصميم هذه الدورة للاستخدام في الفصول الدراسية للصفوف K-8، ولكنها متعة لجميع الإعمار.
+    add_hint_help: الرجاء مساعدتنا لإضافة تلميحات ذكية لبرامج Code.org التعليمية
+    20hour_overview: هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة. تم تصميم هذا الكورس للاستخدام في الفصول الدراسية للصفوف الابتدائية والمتوسطة، ولكن أنها متعة للتعلم لكل الإعمار.
     test_videos_help: إختبر مشغل الفيديو الجديد الخاص بنا في مدرستك
     try_beta_courses: جديدنا ! جرب اللآن النسخة التجريبية من دورتنا التدريبية لطلاب K-5
     use_as_teacher: استخدم هذا الموقع كمدرس
     heading_elementary: '<h2>20 ساعة من الدورات لـ</h2><h1>طلاب المرحلة الإبتدائية</h1>'
     heading_apps: '<h2>المتعة</h2><h1>للجميع</h1>'
     heading_legacy: '<h2>دورتنا عامة لـ</h2><h1>جميع الأعمار</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: ذكر
     female: أنثى
@@ -373,7 +376,7 @@ ar:
     teacher: انظر الى الحل
     auth_error: انت غير مسموح لك برؤية الحل.
     submit: تحديث موقع الفنان
-    direction: بدء الاتجاه
+    direction: Start Direction (in degrees)
   video:
     tab: فيديو.
     notes: لا يوجد فيديو؟ اظهر الملاحظات.
@@ -386,7 +389,7 @@ ar:
       message: "Code.org تستخدم تكنولوجيا الإنترنت الحديثة. هذا يجعل الموقع أسرع للاستخدام. لا يدعم متصفحك كافة الميزات المطلوبة، و قد تواجه مشكلات أثناء استخدام هذا الجزء من الموقع. يرجى مساعدتنا <a href='%{report_issue_url}'>بالإبلاغ عن أي مشاكل تجدها</a>. تستطيع أيضاً <a href='%{supported_browsers_url}'>تحديث متصفحك إلى نسخة مدعومة</a>."
       hide_this_warning: إخفاء هذا التحذير
     upgrade:
-      header: رجاءاً قم بتحديث متصفحك.
+      header: من فضلك قم بتحديث متصفح الأنترنت الخاص بك.
       message: "Code.org تستخدم تكنولوجيا الإنترنت الحديثة . هذا يجعل الموقع أسرع للإستخدام . للأسف متصفحك لا يدعم جميع الميزات المطلوبة لتشغيل هذا الجزء من الموقع .<br/><br/>قم بتثبيت متصفح من قائمة المتصفحات المدعومة للإستمرار . تستطيع <a href='#'>محاولة عرض الصفحة </a>, و لكن نتوقع وظائف قد تتعطل ."
       button: خذني إلى قائمة المتصفحات المدعومة
   slow_loading: هذا يأخذ وقتاً اطول من المعتاد...
@@ -394,7 +397,7 @@ ar:
   next_stage: انتهى! استمر في المرحلة القادمة
   download_pdf: افتح خطة الدرس
   view_lesson_plan: عرض خطة الدرس
-  pdf_download: تحميل ملف PDF
+  pdf_download: تحميل ملف بي دي اف
   share_code:
     title: "انقر فوق 'تشغيل' لرؤية البرنامج الخاص بي في العمل"
     bounce_og_title: تحقق من لعبة الارتداد الخاصة بي
@@ -421,16 +424,20 @@ ar:
       title: ساعة من البرمجة
       body: حاول أساسيات علوم الحاسب الآلي. الملايين قدموا للمشاركة.
     flappy:
-      title: رمز flappy
-      body: هل ترغب في الكتابة الخاصة بك اللعبة في أقل من 10 دقائق؟ حاول البرنامج التعليمي لدينا التعليمات البرمجية Flappy!
+      title: رمز لعبة flappy
+      body: هل ترغب في كتابة لعبة الخاصة فيك في أقل من 10 دقائق؟ جرب دروس برمجة Flappy التعليمية الخاصة بنا!
     20hour:
       title: دورة مقدمة
       body: حاول 20 ساعة دورة مقدمة لعلوم الحاسب الآلي.
   gallery:
     students_drew_these_with_code: ووجه الطلاب هذه بالكود!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'في الماضي <b>% {يوما}</b> أيام، قد رسمها الطلاب الصور <b>% {عد}</b> بكتابة برامج الكمبيوتر الخاصة بهم. اضغط على الصور لمشاهدة كل البرنامج في العمل.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: هل ترغب في جعل الخاصة بك؟
     more: 'أكثر &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "هذا الدرس ليزال بنسختة التجريبية <span class='betatext'> Beta </span> . مما يعني أن هذة النسخة ليست النسخة الأخيرة من هذا الدرس والهدف من ذلك المراجعة الحصول على الآراء التي سوف تسصنع التغيرات بناء عليها."
     feedback: إدلاء برأيك
@@ -458,7 +465,7 @@ ar:
       name:
         20-hour:
           title: 'مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى 25 ساعة)'
-          description: هذا الدرس المكون من 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة. تم تصميم هذا الدرس للاستخدامه في الفصول الدراسية للصفوف الابتدائية والمتوسطة، إضافة لذلك هو ممتع لتعلم لكل الأعمار الأخرى.
+          description: هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة. تم تصميم هذا الكورس للاستخدام في الفصول الدراسية للصفوف الابتدائية والمتوسطة، ولكن أنها متعة للتعلم لكل الإعمار.
         Hour of Code:
           title: ساعة من البرمجة
           description: ""
@@ -472,10 +479,10 @@ ar:
           title: بنّاء
           description: ""
         flappy:
-          title: رمز لعبة flappy
+          title: برمجة فلابي
           description: هل ترغب في كتابة لعبة الخاصة فيك في أقل من 10 دقائق؟ جرب دروس برمجة Flappy التعليمية الخاصة بنا!
         jigsaw:
-          title: أحجية
+          title: بانوراما
           description: ""
         step:
           title: الخطوة

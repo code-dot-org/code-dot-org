@@ -15,7 +15,6 @@ class Ability
     else
       can :read, :all
       cannot :read, [PrizeProvider, Prize, TeacherPrize, TeacherBonusPrize, LevelSourceHint, FrequentUnsuccessfulLevelSource, :reports, User, Follower]
-      can :claim_prize, PrizeProvider
     end
 
     if user.id

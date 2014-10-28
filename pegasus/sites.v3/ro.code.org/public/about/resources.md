@@ -2,11 +2,11 @@
 title: Resurse Hour of Code România
 nav: about_nav
 social:
-  'og:title' : “Hour of Code România se apropie"
-  'og:description' : "Oricine poate învăța. Află cât de distractiv este să înveți programare în doar o oră, 8-14 Decembrie."
-  'og:image' : ""
-  'og:image:width' : ""
-  'og:image:height' : ""
+  'og:title' : ‘Hour of Code România se apropie'
+  'og:description' : "Hour of Code este o mişcare globală care ajunge la zeci de milioane de elevi si studenţi din peste 180 de ţări şi peste 30 de limbi vorbite. Vârstele de la 4 la 104 ani."
+  'og:image' : "http://ro.code.org/images/ogimage.png"
+  'og:image:width' : "1200"
+  'og:image:height' : "626"
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
@@ -19,7 +19,14 @@ Mai jos, găsiți resursele necesare pentru a-i învăța programare și a preda
 
 ## Organizați un eveniment Hour of Code pentru elevii sau studenții dumneavoastră 
 
-Hai să facem istorie împreună! Vrem ca Românii să poată încerca o introducere în tehnologia computerelor, timp de o oră, în timpul săptămânii 08-14 Decembrie. Încearcă [tutorialele noastre aici].
+Hai să facem istorie împreună! Vrem ca Românii să poată încerca o introducere în tehnologia computerelor, timp de o oră, în timpul săptămânii 08-14 Decembrie. Încearcă [<a href="http://ro.code.org/learn">tutorialele noastre aici</a>].
+
+## Este atat de simplu 
+
+1. Alegeti un tutorial
+2. Alegeti o data in perioada 8-14 Decembrie si inscrieti evenimentul pe [Hour of Code](http://hourofcode.com/ro/ro).
+3. Beneficiati de resursele disponibile gratuit pentru a atrage atentia presei, politicienilor si companiilor locale.
+4. Organizati Ora de Programare pentru elevii dumneavoastra.
 
 ## Resurse suplimentare pentru elevii tăi
 

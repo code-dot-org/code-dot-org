@@ -37,21 +37,6 @@ Code.org is recruiting for an operations-focused Ruby developer to run and enhan
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Game and Content Designer (Seattle)
-
-**Job Summary:** 
-
-Code.org is recruiting for a smart and driven individual who's passionate about education (particularly computer science and mathematics) to help us create game/puzzle-based online courses for K-12 students. Full-time, contract-to-hire.
-
-**Minimum Qualifications:**
-
-- Undergrad degree with minor/major in CS/Math
-- Tech savvy and able to pick up new tools
-- Fast learner with strong organization and communication skills
-- Able to decompose complex tasks into easily digestible steps
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
 ## Software Engineer (Seattle)
 
 **Job Summary:**
@@ -67,36 +52,6 @@ Code.org is building interactive tutorials for computer science courses starting
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## Fundraising/Marketing Assistant (Seattle)
-
-**Job Summary:** 
-
-Code.org is recruiting for a Seattle-based Development/Marketing Assistant to support Code.org’s Fundraising and Marketing departments. Responsibilities of the position include handling a variety of administrative tasks and projects, conducting research on potential media and donor prospects and impact stories, coordinating speaking engagements and event logistics, preparation of presentation and marketing materials, coordinating prizes and awards, and managing the donor recordkeeping and acknowledgement process. Full-time, hourly, with benefits.
-
-**Qualifications:**
-
-- 1+ years experience as an office assistant, development assistant, or comparable position
-- Excellent organizational and time management skills
-- Strong written and oral communication skills
-- Proven ability to take initiative and act independently
-- Proven ability to rapidly learn and adapt to new situations and material; highly flexible
-- Proficient user of Microsoft Office (i.e. Outlook, Word, Excel, PowerPoint), Google Docs and other technical applications.
-
-Interested candidates should email a resume and cover letter, describing what particular skills you bring to a rapidly growing start-up organization that differentiate you from other candidates, to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## State Policy Intern (Seattle)
-
-**Job Summary:** 
-
-Code.org is recruiting a State Policy Intern to support our state-by-state advocacy efforts to expand K-12 access to computer science education. Responsibilities include researching state education policy and synthesizing information for the government affairs team, as well as helping execute our state policy agenda. The State Policy Intern will gain a deep understanding of state policy in our target states and will broaden her/his networks in education policy. Flexible 10-15 hrs per week, Oct 2014-May/June 2015. Hourly wage DOE, no benefits.
-
-**Qualifications:**
-
-- Pursuing a degree in public policy, public administration, political science, or education (graduate students preferred) 
-- Must be a self-starter, multi-tasker, excel under pressure, and work independently with a geographically dispersed team
-- Prior experience in education or public policy preferred 
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## Benefits 
 

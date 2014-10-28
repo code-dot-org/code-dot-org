@@ -14,7 +14,7 @@ pt:
           "Jigsaw: Learn to drag and drop": 'Quebra-cabeça: aprenda a arrastar e soltar'
           "Maze: Sequence": 'Labirinto: Sequência'
           "Maze: Debugging": 'Labirinto: Depuração'
-          "Artist 1: Intro": 'Artista 1: Introdução'
+          "Artist 1: Intro": 'Pintor 1: Introdução'
           Artists 2: O Artista 2
           Spelling Bee: Soletrando
           Spelling Bee not blockly: Soletrando sem blocos
@@ -63,7 +63,7 @@ pt:
           "Real-life Algorithms: Paper Planes": 'Algoritmos da vida real: aviões de papel'
           Getting Loopy: Repetindo
           Relay programming: Programação por revezamento
-          Conditionals: Condicionais
+          Conditionals: Condições
           Binary Bracelets: Pulseiras binárias
           The Big Event: O grande evento
           Your Digital Footprint: Sua impressão digital
@@ -97,9 +97,9 @@ pt:
           Bounce: Pingue-pongue
           Maze Conditionals: Condicionais do labirinto
           Artist Functions with Parameters: Funções do artista com parâmetros
-          Computational Thinking: Pensamento computacional
+          Computational Thinking: Pensamento Computacional
           Functional Suncatchers: Caça-sóis funcionais
-          Songwriting Parameters: Parâmetros de Escrevendo uma Canção
+          Songwriting Parameters: Parâmetros de composição
           Dice Race: Jogo de dados
           Internet: Internet
           Crowdsourcing: Crowdsourcing
@@ -129,10 +129,11 @@ pt:
           "Bee: Nested Loops2": 'Abelha: Laços Aninhados2'
           "Bee: Debugging2": 'Abelha: Depuração2'
           "Artist: Patterns": 'Artista: padrões'
+          Songwriting: Composição
         msm:
           title: Matemática para o ensino médio
           description: Trabalho privado em andamento para matemática do ensino médio.
-          Graph Paper Programming: Programação em papel quadriculado
+          Graph Paper Programming: Programação em Papel Quadriculado
           Assessments: Avaliações
           Unit 1: Unidade 1
           Unit 2: Unidade 2

@@ -391,15 +391,18 @@
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Probaj sad
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming
-      concepts. The course is designed for use in classrooms for grades K-8, but it
-      is fun to learn at all ages.
+    20hour_overview: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja
+      i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne škole,
+      ali je zabavan za učenje bez obzira na dob polaznika.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Muško
     female: "Žensko"
@@ -499,11 +502,17 @@
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
       each program in action.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
@@ -531,14 +540,14 @@
       name:
         20-hour:
           title: K-8 Intro to Computer Science Course (15-25 hours)
-          description: This 20-hour course introduces core computer science and programming
-            concepts. The course is designed for use in classrooms for grades K-8,
-            but it is fun to learn at all ages.
+          description: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja
+            i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne
+            škole, ali je zabavan za učenje bez obzira na dob polaznika.
         Hour of Code:
           title: Hour of Code
           description: ''
         edit-code:
-          title: Edit Code
+          title: Uredi kôd
           description: ''
         events:
           title: Events

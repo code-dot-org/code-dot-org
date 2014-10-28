@@ -50,7 +50,7 @@
           Suzi: Suzi
           The Artist: Umelec
           Artist Debugging: Artist Debugging
-          Bounce: Bounce
+          Bounce: skok
           'Studio: Create a Story': 'Studio: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
@@ -101,7 +101,7 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
+          Bounce: skok
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
           Computational Thinking: Computational Thinking
@@ -140,6 +140,7 @@
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
           'Bee: Debugging2': 'Bee: Debugging2'
           'Artist: Patterns': 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

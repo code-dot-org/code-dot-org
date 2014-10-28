@@ -55,18 +55,13 @@ class UserTest < ActiveSupport::TestCase
     assert user.errors.messages.length == 1
   end
 
-  test "cannot create user with short username" do
-    user = User.create(@good_data.merge({username: 'tiny'}))
-    assert user.errors.messages.length == 1
-  end
-
-  test "cannot create user with long username" do
-    user = User.create(@good_data.merge({username: 'superreallydoublelongusername'}))
-    assert user.errors.messages.length == 1
-  end
-
   test "cannot create user with no type" do
     user = User.create(@good_data.merge(user_type: nil))
+    assert user.errors.messages.length == 1
+  end
+
+  test "cannot create user with no name" do
+    user = User.create(@good_data.merge(name: nil))
     assert user.errors.messages.length == 1
   end
 
@@ -75,55 +70,37 @@ class UserTest < ActiveSupport::TestCase
     assert user.errors.messages.length == 1
   end
 
-  test "cannot create user with username with whitespace" do
-    user = User.create(@good_data.merge({username: 'bo gus'}))
-    assert user.errors.messages.length == 1
-  end
-
-  test "cannot create user with username with duplicate email" do
+  test "cannot create user with duplicate email" do
     # actually create a user
     user = User.create!(@good_data)
 
     # Now create second user 
-    user = User.create(@good_data.merge({username: 'user.12-35'}))
+    user = User.create(@good_data)
     assert_equal ['Email has already been taken'], user.errors.full_messages
 
-    # Now create second user with duplicate username with different case
-    user = User.create(@good_data.merge({username: 'user.12-3', email: @good_data[:email].upcase}))
+    # Now create second user with duplicate email with different case
+    user = User.create(@good_data.merge(email: @good_data[:email].upcase))
     assert_equal ['Email has already been taken'], user.errors.full_messages
   end
 
 
-  test "cannot create young user with username with duplicate email" do
+  test "cannot create young user with duplicate email" do
     # actually create a user
     user = User.create!(@good_data_young)
 
     # Now create second user 
-    user = User.create(@good_data_young.merge({username: 'user.12-35',
-                                               hashed_email: User.hash_email(@good_data_young[:email])}))
+    user = User.create(@good_data_young.merge(hashed_email: User.hash_email(@good_data_young[:email])))
     assert_equal ['Email has already been taken'], user.errors.full_messages
 
     # Now create second user with duplicate username with different case
-    user = User.create(@good_data_young.merge({username: 'user.12-35',
-                                               hashed_email: User.hash_email(@good_data_young[:email].upcase)}))
+    user = User.create(@good_data_young.merge(hashed_email: User.hash_email(@good_data_young[:email].upcase)))
     assert_equal ['Email has already been taken'], user.errors.full_messages
-  end
-
-  test "cannot create user with username with duplicate username" do
-    # actually create a user
-    user = User.create(@good_data.merge(username: 'duplicate'))
-    #puts user.errors.messages.inspect
-    assert user.valid?
-
-    # now create second user
-    user = User.create(@good_data.merge(email: 'OTHER@bar.com', username: 'duplicate'))
-    assert_equal ['Username has already been taken'], user.errors.full_messages
   end
 
   test "can create a user with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
       assert_difference('User.count') do
-        user = User.create(@good_data.merge({age: '7', username: 'anewone', email: 'new@email.com'}))
+        user = User.create(@good_data.merge({age: '7', email: 'new@email.com'}))
 
         assert_equal Date.new(Date.today.year - 7, Date.today.month, Date.today.day), user.birthday
         assert_equal 7, user.age
@@ -131,11 +108,22 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "can create a user with age 21+" do
+    Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
+      assert_difference('User.count') do
+        user = User.create(@good_data.merge({age: '21+', email: 'new@email.com'}))
+
+        assert_equal Date.new(Date.today.year - 21, Date.today.month, Date.today.day), user.birthday
+        assert_equal "21+", user.age
+      end
+    end
+  end
+
 
   test "cannot create a user with age that's not a number" do
     assert_no_difference('User.count') do
-      user = User.create(@good_data.merge({age: 'old', username: 'anewone', email: 'new@email.com'}))
-      assert_equal ["Age is not a number"], user.errors.full_messages
+      user = User.create(@good_data.merge({age: 'old', email: 'new@email.com'}))
+      assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
       # should not be able to select -1 (they have a dropdown from
       # 4..100)
@@ -144,8 +132,8 @@ class UserTest < ActiveSupport::TestCase
 
   test "cannot create a user with negative age" do
     assert_no_difference('User.count') do
-      user = User.create(@good_data.merge({age: -15, username: 'anewone', email: 'new@email.com'}))
-      assert_equal ["Age must be greater than -1"], user.errors.full_messages
+      user = User.create(@good_data.merge({age: -15, email: 'new@email.com'}))
+      assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
       # should not be able to select -1 (they have a dropdown from
       # 4..100)
@@ -154,8 +142,8 @@ class UserTest < ActiveSupport::TestCase
 
   test "cannot create a user with too large age" do
     assert_no_difference('User.count') do
-      user = User.create(@good_data.merge({age: 15000000, username: 'anewone', email: 'new@email.com'}))
-      assert_equal ["Age must be less than 110"], user.errors.full_messages
+      user = User.create(@good_data.merge({age: 15000000, email: 'new@email.com'}))
+      assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
       # should not be able to select -1 (they have a dropdown from
       # 4..100)
@@ -164,7 +152,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "can update a user with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      user = User.create(@good_data.merge({age: '7', username: 'anewone', email: 'new@email.com'}))
+      user = User.create(@good_data.merge({age: '7', email: 'new@email.com'}))
       assert_equal 7, user.age
 
       user.update_attributes(age: '9')
@@ -182,18 +170,36 @@ class UserTest < ActiveSupport::TestCase
     user = User.find(user.id)
 
     user.age = 24
-    assert_equal 24, user.age
+    assert_equal "21+", user.age
     assert user.age
 
     user.save!
 
     user = User.find(user.id)
     
-    assert_equal 24, user.age
+    assert_equal "21+", user.age
+  end
+
+  test "corrects age when saving a user with invalid age" do
+    user = create :user, age: 10
+
+    user.update_attribute(:birthday, Time.now - 1.month) # hacky
+
+    user = User.find(user.id)
+
+    user.age = 24
+    assert_equal "21+", user.age
+    assert user.age
+
+    user.save!
+
+    user = User.find(user.id)
+    
+    assert_equal "21+", user.age
   end
 
   test "does not update birthday if age is the same" do
-    user = User.create(@good_data.merge({age: '7', username: 'anewone', email: 'new@email.com'}))
+    user = User.create(@good_data.merge({age: '7', email: 'new@email.com'}))
     assert_equal 7, user.age
 
     Timecop.freeze(Date.today + 40) do
@@ -206,25 +212,25 @@ class UserTest < ActiveSupport::TestCase
 
   test "can create user without email" do
     assert_difference('User.count') do
-      User.create!(username: 'student', user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual', age: 12)
+      User.create!(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual', age: 12)
     end
   end
 
 
   test "cannot create self-managed user without email or hashed email" do
     assert_no_difference('User.count') do
-      User.create(username: 'student', user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', hashed_email: '', email: '', age: 12)
+      User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', hashed_email: '', email: '', age: 12)
     end
   end
 
   test "cannot create teacher without email" do
     assert_no_difference('User.count') do
-      User.create(username: 'badteacher', user_type: 'teacher', name: 'Bad Teacher', password: 'xxxxxxxx', provider: 'manual')
+      User.create(user_type: 'teacher', name: 'Bad Teacher', password: 'xxxxxxxx', provider: 'manual')
     end
   end
 
   test "cannot make an account without email a teacher" do
-    user = User.create(username: 'student', user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
+    user = User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
 
     user.user_type = 'teacher'
     assert !user.save
@@ -232,7 +238,7 @@ class UserTest < ActiveSupport::TestCase
 
 
   test "cannot make an account without email an admin" do
-    user = User.create(username: 'student', user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
+    user = User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
 
     user.admin = true
     assert !user.save
@@ -240,7 +246,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "cannot create admin without email" do
     assert_no_difference('User.count') do
-      User.create(username: 'badteacher', user_type: 'student', admin: true, name: 'Wannabe admin', password: 'xxxxxxxx', provider: 'manual')
+      User.create(user_type: 'student', admin: true, name: 'Wannabe admin', password: 'xxxxxxxx', provider: 'manual')
     end
   end
 
@@ -264,7 +270,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "short name" do
-    assert_equal 'Laurel', create(:user, :name => 'Laurel Fan', :username => 'laurelfan').short_name # first name last name
+    assert_equal 'Laurel', create(:user, :name => 'Laurel Fan').short_name # first name last name
     assert_equal 'Winnie', create(:user, :name => 'Winnie the Pooh').short_name # middle name
     assert_equal "D'Andre", create(:user, :name => "D'Andre Means").short_name # punctuation ok
     assert_equal '樊瑞', create(:user, :name => '樊瑞').short_name # ok, this isn't actually right but ok for now
@@ -274,7 +280,7 @@ class UserTest < ActiveSupport::TestCase
 
 
   test "initial" do
-    assert_equal 'L', create(:user, :name => 'Laurel Fan', :username => 'laurelfan').initial # first name last name
+    assert_equal 'L', create(:user, :name => 'Laurel Fan').initial # first name last name
     assert_equal 'W', create(:user, :name => 'Winnie the Pooh').initial # middle name
     assert_equal "D", create(:user, :name => "D'Andre Means").initial # punctuation ok
     assert_equal '樊', create(:user, :name => '樊瑞').initial # ok, this isn't actually right but ok for now
@@ -284,11 +290,11 @@ class UserTest < ActiveSupport::TestCase
 
   test "find_for_authentication with nonsense" do
     # login by username still works
-    user = create :user, username: 'blahblah'
-    assert_equal user, User.find_for_authentication(login: 'blahblah')
+    user = create :user
+    assert_equal user, User.find_for_authentication(login: user.username)
 
     # login by email still works
-    email_user = create :user, username: 'blahblah2', email: 'not@an.email'
+    email_user = create :user, email: 'not@an.email'
     assert_equal email_user, User.find_for_authentication(login: 'not@an.email')
 
     # login by hashed email
@@ -301,13 +307,13 @@ class UserTest < ActiveSupport::TestCase
     # this used to raise a mysql error, now we sanitize it into a nonsense string
   end
 
-  test "cannot create manual provider user without username" do
-    user = User.create(@good_data.merge({username: nil, provider: User::PROVIDER_MANUAL}))
-    assert_equal ["Username is required"], user.errors.full_messages
+  test "creating manual provider user without username generates username" do
+    user = User.create(@good_data.merge({provider: User::PROVIDER_MANUAL}))
+    assert_equal 'tester', user.username
   end
 
   test 'can get next unfinished level if not completed any unplugged levels' do
-    user = create :user, username: 'blahblah'
+    user = create :user
     twenty_hour = Script.find(Script::TWENTY_HOUR_ID)
     twenty_hour.script_levels.each do |script_level|
       next if script_level.level.game.unplugged? # skip all unplugged
@@ -318,7 +324,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can get next unfinished level, not tainted by other user progress' do
-    user = create :user, username: 'blahblah'
+    user = create :user
     twenty_hour = Script.find(Script::TWENTY_HOUR_ID)
     twenty_hour.script_levels.each do |script_level|
       next if script_level.chapter > 33
@@ -383,22 +389,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
 
-  test 'ok fine you can be 0' do
-    # I think we have a couple users who said they were 0 years old
-    # (because they chose their birthday in the current year from the
-    # old calendar based date picker)
-    user = create :user, birthday: Date.today - 1.month, email: 'will_be_hashed@email.xx'
-
-    assert_equal 0, user.age
-    assert !user.email.present?
-    assert user.hashed_email.present?
-  end
-
-
   test 'users over 13 have plaintext email and hashed email' do
     user = create :user, birthday: Date.new(1990, 10, 4), email: 'will_be_hashed@email.xx'
 
-    assert user.age > 13
+    assert user.age.to_i > 13
     assert user.email.present?
     assert user.hashed_email.present?
   end
@@ -789,5 +783,61 @@ class UserTest < ActiveSupport::TestCase
     assert_equal nil, User.normalize_gender('some nonsense')
     assert_equal nil, User.normalize_gender('')
     assert_equal nil, User.normalize_gender(nil)
+  end
+
+  test 'generate username' do
+    def create_user_with_username(username)
+    user = create(:user)
+    user.update_attribute(:username, username)
+    end
+    # username regex: /\A[a-z0-9\-\_\.]+\z/
+
+    # new name
+    assert_equal 'captain_picard', UserHelpers.generate_username(User, "Captain Picard")
+
+    # first prefix
+    create_user_with_username 'captain_picard'
+    assert_equal 'captain_picard1', UserHelpers.generate_username(User, "Captain Picard")
+
+    # collisions are not numeric
+    assert_equal 'captain', UserHelpers.generate_username(User, "Captain")
+    assert_equal 'captain_p', UserHelpers.generate_username(User, "Captain    P")
+
+    create_user_with_username 'captain'
+    create_user_with_username 'captain1'
+    create_user_with_username 'captain2'
+    create_user_with_username 'captain55'
+
+    assert_equal 'captain56', UserHelpers.generate_username(User, "Captain")
+
+    assert_equal "d_andre_means", UserHelpers.generate_username(User, "D'Andre Means")
+    assert_equal "coder", UserHelpers.generate_username(User, '樊瑞')
+
+    create_user_with_username 'coder'
+    create_user_with_username 'coder1'
+    create_user_with_username 'coder99'
+    create_user_with_username 'coder556'
+    assert_equal "coder557", UserHelpers.generate_username(User, '樊瑞')
+
+    # short names
+    assert_equal "coder_a", UserHelpers.generate_username(User, 'a')
+
+    # long names
+    assert_equal "this_is_a_really", UserHelpers.generate_username(User, 'This is a really long name' + ' blah' * 10)
+
+    # parens
+    assert_equal "kermit_the_frog", UserHelpers.generate_username(User, "Kermit (the frog)")
+  end
+
+  test 'generates usernames' do
+    names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', '樊瑞', 'فاطمة بنت أسد', 'this is a really long name blah blah blah blah blah blah']
+    expected_usernames = ['coder_a', 'coder_b', 'captain_picard', 'captain_picard1', 'captain_picard2', 'coder', 'coder1', 'this_is_a_really']
+
+    i = 0
+    users = names.map do |name|
+      User.create!(@good_data.merge(name: name, email: "test_email#{i+=1}@test.xx")) # use real create method not the factory
+    end
+    
+    assert_equal expected_usernames, users.collect(&:username)
   end
 end

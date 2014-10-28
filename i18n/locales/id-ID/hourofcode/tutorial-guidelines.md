@@ -6,9 +6,11 @@ layout: wide
 
 # Panduan tutorial untuk Hour of Code dan Computer Science Education Week
 
-Code.org akan mengadakan berbagai macam aktivitas Hour of Code di Code.org, Hour of Code, dan situs web CSEdWeek. Daftar terkini ada di <http://code.org/learn>.
+**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
 
-Kami ingin menghelat berbagai pilihan yang menarik, namun tujuan utama kami adalah mengoptimalkan pengalaman para murid dan guru yang awam akan ilmu komputer. Mohon gunakan dokumen ini untuk memandu kreativitas kegiatan anda, untuk ditujukan kepada pengguna yang tidak punya latar belakang dalam pengkodean, program komputer, dan ilmu komputer.
+Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
+
+We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
 <a id="top"></a>
 
@@ -27,20 +29,20 @@ Kami ingin menghelat berbagai pilihan yang menarik, namun tujuan utama kami adal
 
 ## Bagaimana tutorial akan dievaluasi untuk disertakan
 
-Sekelompok komite pendidik ilmu komputer akan memberikan peringkat berdasarkan ukuran kualitatif dan kuantitas, termasuk hasil survei dari pendidik-pendidik.
+A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Tutorial akan dicantumkan lebih tingggi apabila:**
+**Tutorials will be listed higher if they are:**
 
   * kualitas tinggi
   * mandiri, tidak perlu instruksi
   * dirancang untuk pemula
   * Dirancang sebagai kegiatan ~ 1 jam
   * bekerja pada banyak platform Sistem Operasi/perangkat, termasuk tablet dan ponsel
-  * dapat diakses dalam berbagai bahasa
-  * promosikan pembelajaran pada berbagai kelompok demografi (terutama dibawah kelompok yang terwakilkan)
-  * fokus desain bukan murni HTML+CSS - (tujuan kami adalah ilmu komputer, tidak hanya pengkodean HTML)
+  * dapat di akses dalam berbagai bahasa
+  * promosikan pembelajaran pada berbagai kelompok demografi (esp dibawah kelompok perwakilan)
+  * fokus desain bukan murni HTML+CSS - (tujuan kami adalah ilmu komputer, bukan pengkodean HTML)
 
-**Tutorial akan dicantumkan lebih tingggi jika:**
+**Tutorials will be listed lower if they are:**
 
   * kualitas rendah
   * tingkat mengajar yang lebih lanjut (bukan untuk pemula)
@@ -49,7 +51,7 @@ Sekelompok komite pendidik ilmu komputer akan memberikan peringkat berdasarkan u
   * terdapat aturan pengelompokan khusus (contohnya kebanyakan ditujukan untuk anak laki-laki)
   * berfungsi sebagai penigkatan nilai jual pada platform yang memiliki beban biaya
 
-**Tutorial TIDAK akan dicantumkan jika:**
+**Tutorials will NOT be listed if they:**
 
   * memerlukan keterlibatan tingkat tinggi dari seorang guru dengan banyak persiapan (ini berarti bukan agar pelajar mengerjakannya secara mandiri)
   * tidak dirancang sebagai aktivitas berdurasi (kira-kira) satu jam
@@ -59,13 +61,13 @@ Sekelompok komite pendidik ilmu komputer akan memberikan peringkat berdasarkan u
   * difokuskan hanya pada desain web HTML + CSS
   * dimasukkan setelah batas waktu penyerahan, atau dengan informasi yang tidak lengkap (lihat dibawah)
 
-Tujuan utama dari Hour of Code adalah untuk menyebarluaskan partisipasi pelajar dan guru dalam ilmu komputer, dan untuk membantu menunjukkan bahwa ilmu komputer dapat diakses oleh semua orang, dan "lebih mudah daripada yang Anda pikirkan." Dalam banyak hal, tujuan ini lebih baik dicapai dengan memberikan beberapa pilihan yang lebih sedikit dan sederhana, dengan fokus pada pilihan berkualitas tertinggi untuk pengguna pemula.
+Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
 
-Catatan, pada CSEWeek 2013 merupakan keberhasilan yang fantastis berdasarkan respon dari guru-guru dan pelajar-pelajar - 20M partisipan dari 9 - 23 Des, dan 97% dari mereka berkata sangat menikmatinya dan ingin aktivitas ini diulangi lagi!!
+Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
 
-Sebagai hasilnya, "ini telah cukup baik" dan menjadi alasan untuk penambahan tutorial dari Hour of Code bukan berdasarkan banyaknya pilihan, tetapi lebih menjurus pada kualitas (atau materi baru/segar) untuk pelajar, atau memperluas pilihan bagi pembicara yang tidak berbahasa inggris sebagai ciri khas dari kampanye 2014 ini.
+As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
 
-[**Kembali ke atas**](#top)
+[**Back to the top**](#top)
 
 <a id="guidelines"></a>
 
@@ -82,15 +84,15 @@ Sebagai hasilnya, "ini telah cukup baik" dan menjadi alasan untuk penambahan tut
       * **Baik, tetapi tidak terlalu diminati:** pemasangan aplikasi, aplikasi desktop, atau bentuk permainan konsol game.
   * **Format:** Tutorial mandiri atau pelajaran, secara opsional dapat difasilitasi guru. Harus ada pengarahan untuk pelajar daripada tantangan terbuka selama satu jam. Idealnya, instruksi dan tutorial harus terintegrasi dengan platform pemrograman, supaya tidak perlu berpindah tab atau jendela antara tutorial dan platform pemrograman.
 
-[**Kembali ke atas**](#top)
+[**Back to the top**](#top)
 
 <a id="submit"></a>
 
 ## Cara memasukkan (paling lambat 1 Oktober 2014)
 
-Kunjungi [Halaman Penyerahan Aktivitas Hour of Code](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) dan ikuti langkah-langkah untuk memasukkan tutorial.
+Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
 
-**Yang anda perlukan:**
+**What you’ll need:**
 
   * Nama anda, logo (jpg, png, dll.)
   * URL untuk gambar screenshot atau gambar dari aktivitas Hour of Code. Gambar/screenshot harus memiliki resolusi berukuran tepat 446 x 335. Jika gambar yang sesuai tidak disediakan, kami akan mengambil sediri screenshot dari tutorial anda ATAU mungkin kami tidak akan mencantumkannya.
@@ -138,56 +140,56 @@ Kunjungi [Halaman Penyerahan Aktivitas Hour of Code](https://docs.google.com/a/c
       * Untuk aktivitas online 
           * Jumlah unduh dari aktivitas versi kertas (jika berlaku)
 
-[**Kembali ke atas**](#top)
+[**Back to the top**](#top)
 
 <a id="design"></a>
 
 ## Saran untuk merancang aktivitas Anda
 
-**Sertakan CSEdWeek logo ke dalam tutorial.** Anda menyertakan CSEdWeek logo berukuran ([kecil](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) atau [besar](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) ke dalam tutorial, tetapi ini bukan keharusan. Anda juga dapat menghubungi kami untuk meminta izin khusus untuk menggunakan logo "Kerjasama dengan Code.org". ***Logo ini hanya dapat digunakan jika memiliki izin tertulis dari Code.org*** Kami mungkin akan membuat mebuat logo Hour of Code, tetapi untuk saat ini kami belum menyediakannya. Dalam keadaan apapun logo dan nama Code.org digunakan. Kedua merek dagang, tidak dapat digunakan oleh merek dari pihak ke-3.
+**Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
 
-**Pastikan bahwa pelajar dapat menyelesaikannya dalam sejam dengan nyaman** Pertimbangkan untuk menambahkan kegiatan terbuka bagi mahasiswa yang menyelesaikan aktifitas dengan cepat. Ingatlah bahwa kebanyakan anak merupakan pemula dalam ilmu komputer dan pengkodean.
+**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
 
-**Sertakan catatan guru.** Kebanyakan aktivitas harus berorientasi atau diatur sendiri oleh pelajar, tetapi jika aktivitas difasilitasi atau diatur oleh guru, mohon disertakan penjelasan simpel dan jelas untuk guru dalam formulir catatan guru pada URL terpisah bersama-sama dengan aktivitas anda. Tidak hanya pelajar saja yang pemula, beberapa guru juga. Masukan informasi seperti:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
   * Tutorial kami bekerja dengan baik dalam beberapa platform dan browser berikut
   * Apakah ini bekerja pada ponsel pintar? atau tablet?
   * Apakah anda merekomendasikan pemrograman berpasangan? 
   * Pertimbangkan penggunaan dalam ruang kelas? dll jika ada video, disarankan guru untuk menunjukan video pada layar besar untuk dilihat bersama oleh seluruh orang dalam ruang kelas
 
-**Sertakan umpan balik pada akhir kegiatan.** (Misalnya: "Anda menyelesaikan 10 level dan belajar tentang loop! Pekerjaan bagus!")
+**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Sertakan link ke media sosial.**Ini mendorong pelajar untuk memposting ke media sosial (jika diperlukan) ketika mereka selesai, misalnya "saya melakukan satu jam kode dengan \___\_____ Bagaimana dengan anda? #HourOfCode” atau “Saya telah menyelesaikan #HourofCode sebagai bagian dari #CSEdWeek. Apakah Anda sudah pernah? @Scratch.” Menggunakan hashtag **#HourOfCode** (dengan huruf kapital H, O, C)
+**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Buatlah aktivitas kamu dalam bahasa selain inggris.** Fokus dari kampanye pada tahun ini yaitu internasionalisasi dan meningkatkan jumlah partisipasi pembicara bukan-inggris dari aktivitas ini.
+**Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
 
-**Jelaskan atau hubungkan aktivitas pada konteks sosial yang signifikan.** Pemrograman komputer menjadi kekuatan super ketika pelajar menggunakannya untuk bagaimana merubah dunia menjadi lebih baik!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Tidak perlu menyertajan pendaftaran atau pembayaran pada tutorial yang dipakai pelajar.** Tutorial yang membutuhkan pendaftaran atau pembayaran tidak akan disertakan dalam daftar
+**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
 
-**Pastikan tutorial anda dapat digunakan untuk [paradigma Pemrograman berpasangan](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
+**Make sure your tutorial can be used in a [Pair Programming paradigm](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
 
-Tiga aturan pemrograman berpasangan di sekolah:
+The three rules of pair programming in a school setting:
 
   * Pengguna komputer yang akan menuliskan koding mengkontrol mouse dan keyboard.
   * Pasangan penguna komputer menjadi navigator untuk memberikan saran, membantu mencari error dan menanyakan pertanyaan. 
   * Pelajar dalam satu pasangan harus saling berganti posisi paling kurang setelah dua kali sesi.
 
-Manfaat dari Pemrograman Berpasangan:
+Benefits of Pair Programming:
 
   * Pelajar dapat membantu satu sama lain secara mandiri tanpa keseringan bergantung pada guru
   * Ini menunjukkan bahwa pengkodingan atau pengkodean bukanlah aktivitas yang dilakukan solo, tetapi melibatkan interaksi sosial
   * Tidak semua ruang kelas atau lab mempunyai komputer untuk pengalaman 1:1 (satu banding satu)
 
-[**Kembali ke atas**](#top)
+[**Back to the top**](#top)
 
 <a id="tm"></a>
 
 ## Pedoman Merek Dagang
 
-Lebih dari 40 juta pelajar telah mencoba Hour of Code, dan dari 97% partisipan guru meminta kami untuk mengadakan kegiatan ini secara tahunan, kami ambil langkah ini sebagai alasan untuk Hour of Code merupakan gerakkan tahunan dengan kesetian lebih besar dan tanpa kebimbangan.
+With ~40 million students having tried the Hour of Code, and over 97% of participating teachers asking us to repeat the event annually, we are taking steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
-Bagian dari ini yaitu untuk melindungi merek dagang "Hour of Code" dari kebimbangan. Banyak mitra penyedia tutorial kami telah menggunakan "Hour of Code" pada situs web mereka. Kami tidak ingin mencegah penggunaannya, tetapi kami inginkan bahwa itu digunakan dalam beberapa batasan:
+One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
 
   1. Setiap mereferensikan "Hour of Code" harus tidak mengatakan bahwa nama merek tersebut adalah milik anda, tetapi referensikan Hour of Code sebagai akar/inti dari gerakan/kampanye ini. Contoh yang baik: "Berpartisipasilah dalam Hour of Code pada ACMECorp.com". Contoh yang buruk: "Cobalah Hour of Code dari perusahaan ACME"
   2. Gunakanlah "TM" pada tulisan "Hour of Code" pada pojok kiri atas font kecil (superscript), pada situs web dan dalam deskripsi app
@@ -197,33 +199,33 @@ Bagian dari ini yaitu untuk melindungi merek dagang "Hour of Code" dari kebimban
 
   4. Tidak boleh menggunakan "Hour of Code" dalam nama app
 
-[**Kembali ke atas**](#top)
+[**Back to the top**](#top)
 
 <a id="pixel"></a>
 
 ## Pelacakan Pixel
 
-Untuk lebih akurat melacak peserta kami kami akan menanyakan setiap mitra tutorial pihak ketiga untuk menyertakan 1-piksel gambar pelacakan pada halaman pertama dan terakhir dalam halaman tutorial Hour of Code mereka (dimulai dari gambar piksel mulai pada halaman pertama dan gambar piksel selesai pada halaman terakhir. Dan tidak pada pertengahan halaman).
+In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
 
-Ini membantu kami untuk menghitung pengguna yang melakukan pengarahan dari web kami menuju situs web anda untuk melakukan Hour of Code, atau pengguna yang mengunjungi karena guru menuliskan URL secara langsung pada kotak halaman. Ini akan membuat penghitungan statistik partisipan dari lebih akurat, serta akan membantu anda untuk menarik lebih banyak perhatian pengguna. jika anda mengintegrasikan piksel pada akhir tutorial maka itu akan membantu kami untuk mengukur tingkat penyelesaian tutorial.
+This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
 
-Jika tutorial anda disetujui dan dicatumkan pada halaman terakhir tutorial, Code.org akan meyediakan piksel pelacak yang unik untuk diintegrasi dalam tutorial. Lihat contoh dibawah.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-***CATATAN: ini tidak penting untuk disertakan dalam app yang membutuhkan installasi (iOS/Android apps, atau aplikasi desktop)***
+***NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)***
 
-**Contoh piksel pelacakan untuk AppInvento:**
-
-IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
+**Example tracking pixels for AppInventor:**
 
 IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
-[**Kembali ke atas**](#top)
+IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
+
+[**Back to the top**](#top)
 
 <a id="promote"></a>
 
 ## Promosikan tutorial-tutorial, CSEdWeek dan Hour of Code anda
 
-Kami minta agar setiap orang mempromosikan tutorial satu jam mereka kepada para pengguna. Silahkan arahkan mereka ke halaman Hour of Code anda. Pengguna pastinya akan merespon terhadap email atau pemberitahuan anda mengenai tutorial. Gunakan kampanye internasional Hour of Code untuk Computer Science Education Week sebagai alasan untuk mendorong pengguna untuk mengundang yang lainnya bergabung. Bantu kami untuk mencapai 100 juta peserta.
+We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 
   * Tampilkan Hour of Code dan CSEdWeek pada website anda.  
     Ex: <http://www.tynker.com/hour-of-code>
@@ -231,12 +233,12 @@ Kami minta agar setiap orang mempromosikan tutorial satu jam mereka kepada para 
   * Adakan kegiatan lokal atau tanya pada bos perusahaan atau organisasi anda untuk mengadakan kegiatan pada sekolah lokal atau kelompok masyarakat.
   * Lihatlah sumber daya kami untuk informasi lebih lanjut (segera hadir).
 
-[**Kembali ke atas**](#top)
+[**Back to the top**](#top)
 
 <a id="disabilities"></a>
 
-## Catatan khusus untuk pelajar yang memiliki keterbatasan
+## Catatan khusus untuk pelajar yang memiliki kecacatan
 
-Jika anda mebuat sebuah tutorial untuk pengguna yang memiliki ganguan mata, kami akan senang menyorotnya dengan pembaca-layar (screen-readers). Kami belum menerima tutorial seperti ini, dan kami dengan sangat semangat akan memasukkan itu sebagai salah satu pilihan bagi pelajar.
+If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Kembali ke atas**](#top)
+[**Back to the top**](#top)

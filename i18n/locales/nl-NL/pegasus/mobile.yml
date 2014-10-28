@@ -8,14 +8,14 @@ nl-NL:
   learn_now: Nu leren
   petition_message: Elke student in elke school moet de kans krijgen om computerkunde te leren
   petition_sign_message: 'Ben je het eens met de petitie, onderteken hem dan met je naam. Sluit je aan bij # anderen.'
-  name: Naam
-  email: Email
+  name: naam
+  email: E-mail
   zipcode: Postcode of land
   submit: Opslaan
   twentyhours_heading: Probeer onze introductiecursus computerkunde
   twentyhours_text: Klaar met je eerste Hour of Code? Leer meer over kern computerkunde en programmeer concepten in deze vervolgcursus.
   hoc2014_heading: 'Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December 8 - 14, 2014<br/>'
-  hoc2014_students: Students
+  hoc2014_students: Leerlingen
   hoc2014_try: Try it
   hoc2014_teachers: Teachers
   hoc2014_host: Host it
@@ -43,7 +43,7 @@ nl-NL:
   enter_valid_email: Vul een correct email-adres in
   get_a_certificate_message: "We sturen je een certificaat en informatie hoe je  <a href='/learn/beyond'>Verder dan een Uur Code</a> kunt leren"
   get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
-  thanks_for_submitting: Bedankt voor het opslaan!
+  thanks_for_submitting: Bedankt voor het opsturen!
   if_you_enjoyed: Als je het leuk vond dit te leren, vraag je vrienden of ze het ook willen proberen! We willen dat de hele wereld dit leert.
   personalize_certificate: Personaliseer je certificaat
   share_achievement: Deel je prestatie
@@ -200,12 +200,12 @@ nl-NL:
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
-  dashboard_sections_table_section: Section
-  dashboard_sections_table_secret: Secret type
-  dashboard_sections_table_grade: Grade
-  dashboard_sections_table_course: Course
-  dashboard_sections_table_students: Students
-  dashboard_sections_table_code: Section Code
+  dashboard_sections_table_section: Groep
+  dashboard_sections_table_secret: Login Type
+  dashboard_sections_table_grade: Cijfer
+  dashboard_sections_table_course: Cursus
+  dashboard_sections_table_students: Leerlingen
+  dashboard_sections_table_code: Groepscode
   dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: 'If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section.'
   dashboard_sections_secret_word: 'A <b>word</b> allows you to set a secret word for each student.'
@@ -218,13 +218,13 @@ nl-NL:
   dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
   dashboard_students_placeholder_name: Student Name
-  dashboard_students_name: Naam
-  dashboard_students_age: Age
+  dashboard_students_name: naam
+  dashboard_students_age: Leeftijd
   dashboard_students_gender: Geslacht
   dashboard_students_male: Man
   dashboard_students_female: Vrouw
   dashboard_students_secret: Secret
-  dashboard_students_password: Wachtwoord
+  dashboard_students_password: wachtwoord
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -261,9 +261,21 @@ nl-NL:
   dashboard_teacher_worksheet: teacher worksheet
   dashboard_grade_k: K
   dashboard_grade_other: Anders
-  dashboard_login_word: word
-  dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_word: Word
+  dashboard_login_picture: Picture
+  dashboard_login_none: Email
   dashboard_new_password: new password
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: Leerling
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: "Who creates the student's account?"
+  dashboard_sections_password question: 'What do students use as a "password"?'
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: 'Unique web-page listed on "Manage Students" tab'
+  dashboard_sections_sign_in_main: 'http://code.org and click "Sign in"'
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."
