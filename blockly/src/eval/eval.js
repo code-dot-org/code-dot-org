@@ -80,6 +80,9 @@ Eval.init = function(config) {
 
   config.afterInject = function() {
     var svg = document.getElementById('svgEval');
+    if (!svg) {
+      throw "something bad happened";
+    }
     svg.setAttribute('width', CANVAS_WIDTH);
     svg.setAttribute('height', CANVAS_HEIGHT);
 
@@ -223,6 +226,12 @@ function evaluateAnswer() {
   var user = document.getElementById('user');
 
   // is this good enough?
+  // todo (brent) : can come up with at least one case where it isnt. goal is
+  // to create a star rotated 90 degrees. i instead create a star rotated -270
+  // degrees. these are exactly the same visually, but will have different
+  // html
+  // we might be able to use canvg to convert the svg to a canvas representation,
+  // and then do our comparison similar to how we do in artist
   return answer.innerHTML.trim() == user.innerHTML.trim();
 }
 
