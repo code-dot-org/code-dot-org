@@ -1165,7 +1165,22 @@ exports.calcBlockXml = function (type, args) {
     str += arg;
     str += '</functional_input>';
   }
-  str+= '</block>';
+  str += '</block>';
+
+  return str;
+};
+
+exports.mathBlockXml = function (type, inputs, titles) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var title in titles) {
+    str += '<title name="' + title + '">' + titles[title] + '</title>';
+  }
+
+  for (var input in inputs) {
+    str += '<functional_input name="' + input + '">' + inputs[input] + '</functional_input>';
+  }
+
+  str += '</block>';
 
   return str;
 };
@@ -5898,6 +5913,15 @@ exports.load = function(assetUrl, id) {
     speedMedium: assetUrl('media/common_images/speed-medium.png'),
     speedSlow: assetUrl('media/common_images/speed-slow.png'),
     scoreCard: assetUrl('media/common_images/increment-score-75percent.png'),
+    rainbowMenu: assetUrl('media/common_images/rainbow-menuicon.png'),
+    ropeMenu: assetUrl('media/common_images/rope-menuicon.png'),
+    squigglyMenu: assetUrl('media/common_images/squiggly-menuicon.png'),
+    swirlyMenu: assetUrl('media/common_images/swirlyline-menuicon.png'),
+    patternDefault: assetUrl('media/common_images/defaultline-menuicon.png'),
+    rainbowLine: assetUrl('media/common_images/rainbow.png'),
+    ropeLine: assetUrl('media/common_images/rope.png'),
+    squigglyLine: assetUrl('media/common_images/squiggly.png'),
+    swirlyLine: assetUrl('media/common_images/swirlyline.png'),
     randomPurpleIcon: assetUrl('media/common_images/random-purple.png'),
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
@@ -6819,6 +6843,10 @@ exports.penColour = function(colour, id) {
   this.log.push(['PC', colour, id]);
 };
 
+exports.penPattern = function(pattern, id) {
+  this.log.push(['PS', pattern, id]);
+};
+
 exports.hideTurtle = function(id) {
   this.log.push(['HT', id]);
 };
@@ -7662,6 +7690,37 @@ exports.install = function(blockly, blockInstallOptions) {
     // Generate JavaScript for setting the colour.
     var colour = this.getTitleValue('COLOUR') || '\'#000000\'';
     return 'Turtle.penColour("' + colour + '", \'block_id_' +
+        this.id + '\');\n';
+  };
+
+
+  blockly.Blocks.draw_line_style_pattern = {
+    // Block to handle event when an arrow button is pressed.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.appendDummyInput()
+           .appendTitle(msg.setPattern())
+           .appendTitle( new blockly.FieldImageDropdown(
+              blockly.Blocks.draw_line_style_pattern.Options, 150, 20 ), 'VALUE' );
+      this.setTooltip(msg.setPattern());
+    }
+  };
+
+  // image icons and image paths for the 'set pattern block'
+  blockly.Blocks.draw_line_style_pattern.Options =
+    [[skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
+     [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
+     [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
+     [skin.squigglyMenu, 'squigglyLine'],
+     [skin.swirlyMenu, 'swirlyLine']];
+
+  generator.draw_line_style_pattern = function() {
+    // Generate JavaScript for setting the image for a patterned line.
+    var pattern = this.getTitleValue('VALUE') || '\'DEFAULT\'';
+    return 'Turtle.penPattern("' + pattern + '", \'block_id_' +
         this.id + '\');\n';
   };
 
@@ -9654,6 +9713,13 @@ Turtle.avatarImage = new Image();
 Turtle.numberAvatarHeadings = undefined;
 
 /**
+ * Drawing with a pattern
+ */
+
+Turtle.patternForPaths = new Image();
+Turtle.isDrawingWithPattern = false;
+
+/**
  * Initialize Blockly and the turtle.  Called on page load.
  */
 Turtle.init = function(config) {
@@ -9720,6 +9786,24 @@ Turtle.init = function(config) {
       Turtle.isPredrawing_ = true;
       Turtle.drawBlocksOnCanvas(level.predraw_blocks, Turtle.ctxPredraw);
       Turtle.isPredrawing_ = false;
+    }
+
+    // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
+    // enough in this case, so we're actually creating and reusing the object within the document body.
+  
+    if (config.level.edit_blocks)
+    {
+      var imageContainer = document.createElement('div'); 
+      imageContainer.style.display='none';
+      document.body.appendChild(imageContainer);
+
+      for( var i = 0; i <  Blockly.Blocks.draw_line_style_pattern.Options.length; i++) {
+        var pattern = Blockly.Blocks.draw_line_style_pattern.Options[i][1];
+        var img = new Image();
+        img.src = skin[pattern];
+        img.id = pattern;
+        imageContainer.appendChild(img);
+      }
     }
 
     // Adjust visualizationColumn width.
@@ -9868,6 +9952,9 @@ BlocklyApps.reset = function(ignore) {
   // Clear the feedback.
   Turtle.ctxFeedback.clearRect(
       0, 0, Turtle.ctxFeedback.canvas.width, Turtle.ctxFeedback.canvas.height);
+
+  // Reset to empty pattern
+  Turtle.setPattern(null);
 
   // Kill any task.
   if (Turtle.pid) {
@@ -10047,6 +10134,14 @@ Turtle.step = function(command, values) {
     case 'PC':  // Pen Colour
       Turtle.ctxScratch.strokeStyle = values[0];
       Turtle.ctxScratch.fillStyle = values[0];
+      Turtle.isDrawingWithPattern = false;
+      break;
+    case 'PS':  // Pen style with image
+      if (!values[0] || values[0] == 'DEFAULT') {
+          Turtle.setPattern(null);
+      } else {
+        Turtle.setPattern(document.getElementById(values[0])); 
+      }
       break;
     case 'HT':  // Hide Turtle
       Turtle.visible = false;
@@ -10054,6 +10149,16 @@ Turtle.step = function(command, values) {
     case 'ST':  // Show Turtle
       Turtle.visible = true;
       break;
+  }
+};
+
+Turtle.setPattern = function (pattern) {
+  if ( pattern === null ) {
+    Turtle.patternForPaths = new Image();
+    Turtle.isDrawingWithPattern = false;
+  } else {
+    Turtle.patternForPaths = pattern;
+    Turtle.isDrawingWithPattern = true;
   }
 };
 
@@ -10108,6 +10213,11 @@ Turtle.moveForward_ = function (distance) {
     Turtle.jumpForward_(distance);
     return;
   }
+  if (Turtle.isDrawingWithPattern) {
+    Turtle.drawForwardWithPattern_(distance);
+    return;
+  }
+  
   Turtle.drawForward_(distance);
 };
 
@@ -10117,6 +10227,11 @@ Turtle.drawForward_ = function (distance) {
   } else {
     Turtle.drawForwardLine_(distance);
   }
+};
+
+Turtle.drawForwardWithPattern_ = function (distance) {
+  //TODO: deal with drawing joints, if appropriate
+  Turtle.drawForwardLineWithPattern_(distance);
 };
 
 /**
@@ -10150,6 +10265,27 @@ Turtle.drawForwardLine_ = function (distance) {
   Turtle.jumpForward_(distance);
   Turtle.drawToTurtle_(distance);
   Turtle.ctxScratch.stroke();
+};
+
+Turtle.drawForwardLineWithPattern_ = function (distance) {
+  Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
+  var img = Turtle.patternForPaths;
+  var startX = Turtle.x;
+  var startY = Turtle.y;
+
+  Turtle.jumpForward_(distance);
+  Turtle.ctxScratch.save(); 
+  Turtle.ctxScratch.translate(startX, startY); 
+  Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image. 
+                                                                 // Need to subtract 90 to accomodate difference in canvas 
+                                                                 // vs. Turtle direction
+  Turtle.ctxScratch.drawImage(img,
+    0, 0,                                 // Start point for clipping image
+    distance+img.height / 2, img.height,  // clip region size
+    -img.height / 4, -img.height / 2,      // draw location relative to the ctx.translate point pre-rotation
+    distance+img.height / 2, img.height); 
+                                                                     
+  Turtle.ctxScratch.restore();  
 };
 
 Turtle.shouldDrawJoints_ = function () {
@@ -10920,6 +11056,8 @@ exports.penUp = function(d){return "펜 올리기"};
 exports.reinfFeedbackMsg = function(d){return "원하는 그림이 만들어지나요? \"다시 시도\" 를 눌러 그림을 확인해 보세요."};
 
 exports.setColour = function(d){return "색 설정:"};
+
+exports.setPattern = function(d){return "set pattern"};
 
 exports.setWidth = function(d){return "두께 설정:"};
 

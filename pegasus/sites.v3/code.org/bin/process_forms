@@ -77,7 +77,7 @@ def index_batch_of_forms(batch_size)
 end
 
 def main()
-  limit = 1000
+  limit = 500
 
   messages = []
 

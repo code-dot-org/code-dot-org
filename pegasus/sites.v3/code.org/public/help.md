@@ -3,7 +3,7 @@ title: How to help
 ---
 
 # How to Help
-## Host an Hour of Code- at work, in your community, or local school
+## Host an Hour of Code - at work, in your community, or local school
 More than 45 million people of all ages have learned an [Hour of Code](http://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics.  Participate this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of 2014. 
 
 [<button>Join us</button>](http://hourofcode.com)

@@ -728,61 +728,8 @@ html, body {
   height: 45px;
 }
 
-.prize-msg {
-  text-align: center;
-  padding-top: 10px;
-  font-weight: 500;
-}
-
-.prize-card-img {
-  width: 280px;
-  height: 140px;
-}
-
-.prize-item-grid {
-  width: 300px;
-  float: left;
-  height: 200px;
-}
-
-.prize-code {
-  border: 1px;
-  border-color: black;
-  border-style: solid;
-  background-color: cornsilk;
-  padding: 2px 6px;
-}
-
-.prize-redemption {
-  white-space: pre-line;
-}
-
-.prize-confirm-redemption {
-  white-space: pre-line;
-  max-height: 200px;
-  overflow-y: scroll;
-  border-color: black;
-  border: 1px;
-  border-style: solid;
-  padding: 5px;
-}
-
-.prize-item-mini-grid {
-  width: 115px;
-  float: left;
-  height: 40px;
-}
-
-.prize-card-mini-img {
-  width: 105px;
-}
-
 .medium-height-button {
   height: 50px;
-}
-
-input[type="checkbox"], .prize-chk {
-  margin: 0 2px 2px;
 }
 
 th.manage-th {

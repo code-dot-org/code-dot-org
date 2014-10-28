@@ -1,0 +1,56 @@
+div.codesexp, div.circleevalsexp, .editbox, .cm-s-scheme {
+  width:      100%;
+  margin:     0px 3px;
+  padding:    0px;
+  font-family:"Droid Sans Mono", Monaco, monospace;
+  font-size:  10pt;
+  color:      #666666;
+  font-style: normal;
+  clear:      both;
+}
+
+
+/*******************************************
+  PrettyPrint Structured Output
+  - style using float: left, to allow text-alignment flow
+  - everything has a left-padding of 10px, which provides spacing and indenting
+  - if an expr is wrapped, every element clears left
+*/
+
+div.codesexp *, .replOutput > * {float: left; padding-left: 10px;}
+.replOutput br{float: none;}
+.wrapped > * {clear: left;}
+
+/* Rationals, Parens, and first child after lParen NEVER have padding or clearing */
+.Rational *, 
+div.codesexp .lParen,   .replOutput .lParen,
+div.codesexp .rParen,   .replOutput .rParen,
+div.codesexp .lParen+*, .replOutput .lParen+*{
+padding-left: 0px; clear: none;
+}
+
+/* for IE, in which Canvases actually have children */
+canvas.replOutput * {padding-left: 0px; clear: none;}
+/************************************************
+Define coloring for basic WeScheme types, and re-use them for our CM instances 
+*/
+.wescheme-string,     .cm-scheme-string    {color: green;}
+.wescheme-number,     .cm-scheme-number    {color: blue;}
+.wescheme-boolean,    .cm-scheme-boolean   {color: darkred;}
+.wescheme-character,  .cm-scheme-character {color: orange;}
+.wescheme-symbol,     .cm-scheme-symbol    {color: steelblue;}
+.wescheme-comment,    .cm-scheme-comment   {color: orange; }
+.CodeMirror {font-family: "Droid Sans Mono", Monaco, monospace;}
+/* CM-only stuff */
+span.cm-scheme-punctuation                 {color: black;}
+span.cm-scheme-rparen                      {color: black;}
+
+
+@media print {
+  .wescheme-string,     .cm-scheme-string    {color: black;}
+  .wescheme-number,     .cm-scheme-number    {color: black;}
+  .wescheme-boolean,    .cm-scheme-boolean   {color: black;}
+  .wescheme-character,  .cm-scheme-character {color: black;}
+  .wescheme-symbol,     .cm-scheme-symbol    {color: black;}
+  .wescheme-comment,    .cm-scheme-comment   {color: black;}
+}

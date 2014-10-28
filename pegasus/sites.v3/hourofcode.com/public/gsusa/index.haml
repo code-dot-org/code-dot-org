@@ -1,0 +1,252 @@
+---
+layout: wide_index
+theme: responsive
+title: "<%= hoc_s(:front_title) %>"
+social:
+  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+  "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg"
+  "og:image:width": 1705
+  "og:image:height": 949
+  "og:url": "http://<%=request.host%>"
+
+  "twitter:card": player
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://<%=request.host%>"
+  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+  "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg?123"
+  "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=1'
+  "twitter:player:width": 1920
+  "twitter:player:height": 1080
+---
+
+-facebook = {:u=>"http://#{request.host}/us"}
+
+-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+-twitter[:hashtags] = 'HourOfCode' unless hoc_s(:front_header_banner).include? '#HourOfCode'
+
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
+%script{type: "text/javascript", src: "/js/markerclusterer_packed.js"}
+
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+
+/[if lt IE 9]
+  %script{src: "/js/es5-shim.min.js"}
+
+:css
+  html, body, #gmap {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+- imageheight = 590
+
+#top{style: "position:relative; /*height: #{imageheight}px; */ width:100%; overflow:hidden"}
+  #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/the-world.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 0% 0%"}
+
+  #fullwidth1{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
+
+  #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 30% 40%"}
+
+  #fullwidth3{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 40% 50%"}
+
+  #fullwidth{style: "/*position:absolute; left:0; top: 0; */width: 100%; /*height:#{imageheight}px*/"}
+
+    .thegap{style: "height: 1px"}
+      &nbsp;
+
+    = view :header
+
+    .container
+      .row
+        .col-sm-6.col-xs-12.col-md-7
+          #leftbox{style: "position:relative; margin-top:50px; padding-bottom:20px; /*background-color:rgba(0,0,0,0.5);*/"}
+
+            #leftvideo{style: "/*position:absolute; left:0; top:0; */ width: 100%; /* margin-top:50px*/"}
+              = view :index_video
+              -#%br/
+              -#%br/
+              %div{style:"clear:both"}
+            #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; /*margin-top:100px; */ width:100%"}
+              %h1.front-header-banner{style: "color:white; text-shadow: 0px 0px 4px rgba(31, 31, 31, 1); margin-top: 0px; margin-bottom:10px; padding:20px"}=hoc_s(:front_watch_video) 
+              %img{src: "/images/play-button.png", width: "120", onclick: "return startVideo();", style: "cursor: pointer"}
+        .col-sm-6.col-xs-12.col-md-5
+          #textbacking{style: "color:white; background-color:rgba(0,0,0,0.5); margin-top:50px; padding: 20px; border-radius: 17px"}
+            %h1.front-header-banner{style: "color:white; margin-top:0px"}= hoc_s(:front_header_banner)
+            #joinustext{style: "font-size: 18px; font-weight: 500"}
+              %div{style: "width: 44%; float:left; padding-right: 5px; padding-top:10px; text-align:right; clear:both"}
+                =hoc_s(:front_join_us_students)
+                &nbsp;
+
+              %div{style: "width: 56%; float:left;"}
+                %a#trybutton{href: "http://#{canonical_hostname('code.org')}/learn", target: "_blank", style: "text-decoration:none"}
+                  %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
+                    =hoc_s(:front_join_us_try)
+                %br/
+                %br/
+
+              %div{style: "width: 44%; float:left; padding-right: 5px; padding-top:10px; text-align:right; clear:both"}
+                =hoc_s(:front_join_us_teachers)
+                &nbsp;
+              %div{style: "width: 56%; float:left;"}
+                %a#hostbutton{onclick: "return adjustScroll('join')", style: "text-decoration:none"}
+                  %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
+                    =hoc_s(:front_join_us_host)
+                %br/
+                %br/
+
+              %div{style: "width: 44%; float:left; padding-right: 5px; padding-top:10px; text-align:right; clear:both"}
+                =hoc_s(:front_join_us_everyone)
+                &nbsp;
+              %div{style: "width: 56%; float:left; "}
+                %a#supportbutton{href: "http://#{canonical_hostname('code.org')}/donate", target: "_blank", style: "text-decoration:none"}
+                  %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
+                    =hoc_s(:front_join_us_support)
+              &nbsp;
+
+            #remainder{style: "text-align:center"}
+              #trylastyear{style: "margin-top:20px"}
+                %a{onclick: "return adjustScroll('about')", target: "_blank", style: "color:white; font-weight:500; cursor: pointer"}=hoc_s(:hoc_faq_what_is_hoc_q)
+              %br/
+              =view :share_buttons, facebook:facebook, twitter:twitter
+          %br/
+          %br/
+
+      %div{style:"clear:both"}
+    
+
+%br/
+%br/
+
+.container
+
+  #description.row
+    .col-xs-1
+      &nbsp;
+    .col-xs-10{style: "text-align: center; font-size: 24px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
+      -if @country == 'uk'
+        =hoc_s(:front_intro_default_uk)
+      -else
+        =hoc_s(:front_intro_default)
+
+  %br/
+  %br/
+
+  .row
+    .col-xs-12
+      %div{style: 'text-align: center; margin: 3em 0;'}
+        %h2=hoc_s(:stats_hoc_2013_heading)
+
+  .row#infotop{style: "/*margin: 0 auto; width: 900px; */ font-weight: 500; font-size: 16px; color: rgb(26, 172, 186)"}
+    .col-xs-6.col-sm-4{style: "text-align:center;"}
+      %p=hoc_s(:stats_growth)
+      %img{src: "/images/stats-info1.jpg", style: "width: 100%"}
+
+    .col-xs-6.col-sm-4{style: "text-align:center"}
+      %p=hoc_s(:stats_global)
+      %img{src: "/images/stats-info2.jpg", style: "width: 100%"}
+
+    .hidden-xs.col-sm-4{style: "text-align:center"}
+      %p=hoc_s(:stats_girls_more)
+      %img{src: "/images/stats-info3.jpg", style: "width: 100%"}
+
+        %p{style:"color: #ea7717;"}=hoc_s(:stats_girls_million)
+
+  .row#infobottom{style: "/*margin: 0 auto; width: 800px; */ font-weight: 400; font-size: 16px; color: #ea7717;"}
+    .col-xs-6.col-sm-4{style: "text-align:center"}
+      %img{src: "/images/stats-kid1.jpg", style: "width: 70%"}
+      %br/
+      =hoc_s(:stats_nina)
+
+    .col-xs-6.col-sm-4{style: "text-align:center"}
+      %img{src: "/images/stats-kid2.jpg", style: "width: 70%"}
+      %br/
+      =hoc_s(:stats_student)
+
+    .hidden-xs.col-sm-4{style: "text-align:center"}
+      %img{src: "/images/stats-kid3.jpg", style: "width: 70%"}
+      %br/
+      =hoc_s(:stats_michael)
+
+  #maparea
+    =view :map_company
+
+  #join
+    %h1=hoc_s(:front_join_us_button)
+    %div#current-version
+      .row
+        .col-md-12
+          =view :join_us_description
+      .row{:style=>'margin-top: 45px'}
+        .col-md-8
+          =view :signup_form
+        .col-md-4
+          =view :prizes
+    %div#new-version{:style=>'display: none'}
+      .row
+        .col-md-6
+          =view :join_us_description
+          =view :prizes
+        .col-md-6
+          =view :signup_form
+
+  %a#faqs{name:'faq'}
+  .row
+    .col-xs-12
+      =view :faq
+
+= view 'popup_window.js'
+
+:javascript
+
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+
+  var currentImage = 0;
+  var timerId;
+  var videoStarted = false;
+
+  function cycleImage()
+  {
+    var nextImage = (currentImage + 1) % 4;
+    $("#fullwidth" + currentImage).fadeTo(2000, 0);
+    $("#fullwidth" + nextImage ).fadeTo(2000, videoStarted ? 0.3 : 1);
+    currentImage = nextImage;
+
+    /*if (videoStarted)
+      console.log("fading light to ", nextImage);
+    else
+      console.log("fading normal to ", nextImage);*/
+  }
+
+  $.ready()
+  {
+    timerId = setInterval(cycleImage, 6000);
+
+    //startVideo();
+  }
+
+  function startVideo()
+  {
+    if (videoStarted)
+      return;
+    
+    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+
+    $("#videodiv").fadeTo(1000, 1);
+    $("#leftbutton").fadeTo(500, 0).remove();
+
+    $("#fullwidth" + currentImage).fadeTo(1000, 0.3);
+
+    videoStarted = true;
+    //cycleImage();
+    clearInterval(timerId);
+  }

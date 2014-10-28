@@ -206,8 +206,9 @@ social:
       /= view :index_twitter
   #gap
 
-  #donor_slider.desktop-feature{:style=>'width: 100%'}
-    = view :donor_slider
+  -if request.site != 'csedweek.org'
+    #donor_slider.desktop-feature{:style=>'width: 100%'}
+      = view :donor_slider
 
 = view 'popup_window.js'
 
