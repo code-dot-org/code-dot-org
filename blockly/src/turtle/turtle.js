@@ -39,6 +39,7 @@ var codegen = require('../codegen');
 var api = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
+var utils = require('../utils');
 
 var level;
 var skin;
@@ -322,6 +323,9 @@ BlocklyApps.reset = function(ignore) {
   }
   Turtle.pid = 0;
 
+  // Discard the interpreter.
+  Turtle.interpreter = null;
+
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
 };
@@ -396,10 +400,33 @@ Turtle.evalCode = function(code) {
 };
 
 /**
+ * Set up Turtle.code, Turtle.interpreter, etc. to run code for editCode levels
+ */
+function generateTurtleCodeFromJS () {
+  Turtle.code = utils.generateCodeAliases(level.codeFunctions, 'Turtle');
+  Turtle.userCodeStartOffset = Turtle.code.length;
+  Turtle.code += BlocklyApps.editor.getValue();
+  Turtle.userCodeLength = Turtle.code.length - Turtle.userCodeStartOffset;
+
+  var session = BlocklyApps.editor.aceEditor.getSession();
+  Turtle.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+
+  var initFunc = function(interpreter, scope) {
+    codegen.initJSInterpreter(interpreter, scope, {
+                                      BlocklyApps: BlocklyApps,
+                                      Turtle: api } );
+  };
+  Turtle.interpreter = new window.Interpreter(Turtle.code, initFunc);
+}
+
+/**
  * Execute the user's code.  Heaven help us...
  */
 Turtle.execute = function() {
   api.log = [];
+
+  // Reset the graphic.
+  BlocklyApps.reset();
 
   if (feedback.hasExtraTopBlocks()) {
     // immediately check answer, which will fail and report top level blocks
@@ -407,18 +434,44 @@ Turtle.execute = function() {
     return;
   }
 
-  Turtle.code = Blockly.Generator.workspaceToCode('JavaScript');
-  Turtle.evalCode(Turtle.code);
+  if (level.editCode) {
+    generateTurtleCodeFromJS();
+  } else {
+    Turtle.code = Blockly.Generator.workspaceToCode('JavaScript');
+    Turtle.evalCode(Turtle.code);
+  }
 
   // api.log now contains a transcript of all the user's actions.
-  // Reset the graphic and animate the transcript.
-  BlocklyApps.reset();
   BlocklyApps.playAudio('start', {loop : true});
+  // animate the transcript.
   Turtle.pid = window.setTimeout(Turtle.animate, 100);
 
   // Disable toolbox while running
   Blockly.mainWorkspace.setEnableToolbox(false);
 };
+
+/**
+ * Attempt to execute one command from the log of API commands.
+ */
+function executeTuple () {
+  var tuple = api.log.shift();
+  if (tuple) {
+    var command = tuple.shift();
+    BlocklyApps.highlight(String(tuple.pop()));
+    Turtle.step(command, tuple);
+    Turtle.display();
+  }
+  return Boolean(tuple);
+}
+
+/**
+ * Handle the tasks to be done after the user program is finished.
+ */
+function finishExecution () {
+  document.getElementById('spinner').style.visibility = 'hidden';
+  Blockly.mainWorkspace.highlightBlock(null);
+  Turtle.checkAnswer();
+}
 
 /**
  * Iterate through the recorded path and animate the turtle's actions.
@@ -427,17 +480,32 @@ Turtle.animate = function() {
   // All tasks should be complete now.  Clean up the PID list.
   Turtle.pid = 0;
 
-  var tuple = api.log.shift();
-  if (!tuple) {
-    document.getElementById('spinner').style.visibility = 'hidden';
-    Blockly.mainWorkspace.highlightBlock(null);
-    Turtle.checkAnswer();
-    return;
+  if (level.editCode) {
+    var stepped = true;
+    while (stepped) {
+      codegen.selectCurrentCode(Turtle.interpreter,
+                                BlocklyApps.editor,
+                                Turtle.cumulativeLength,
+                                Turtle.userCodeStartOffset,
+                                Turtle.userCodeLength);
+      stepped = Turtle.interpreter.step();
+
+      if (executeTuple()) {
+        // We stepped far enough that we executed a commmand, break out:
+        break;
+      }
+    }
+    if (!stepped) {
+      // We dropped out of the step loop because we ran out of code, all done:
+      finishExecution();
+      return;
+    }
+  } else {
+    if (!executeTuple()) {
+      finishExecution();
+      return;
+    }
   }
-  var command = tuple.shift();
-  BlocklyApps.highlight(tuple.pop());
-  Turtle.step(command, tuple);
-  Turtle.display();
 
   // Scale the speed non-linearly, to give better precision at the fast end.
   var stepSpeed = 1000 * Math.pow(1 - Turtle.speedSlider.getValue(), 2);
@@ -785,6 +853,12 @@ Turtle.checkAnswer = function() {
         Turtle.message = commonMsg.tooMuchWork();
       }
     }
+  }
+
+  if (level.editCode) {
+    Turtle.testResults = levelComplete ?
+      BlocklyApps.TestResults.ALL_PASS :
+      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
   // If the current level is a free play, always return the free play
