@@ -1,20 +1,20 @@
 var TestResults = require('../../../src/constants.js').TestResults;
 var blockUtils = require('../../../src/block_utils');
 
-var solutionXml = blockUtils.msmBlockXml('overlay', {
-  'TOP': blockUtils.msmBlockXml('place_image', {
-    'IMAGE': blockUtils.msmBlockXml('functional_circle', {
-      'COLOR': blockUtils.msmBlockXml('functional_string', null, { VAL: 'red' } ),
-      'STYLE': blockUtils.msmBlockXml('functional_string', null, { VAL: 'outline' }),
-      'SIZE': blockUtils.msmBlockXml('functional_math_number', null, { NUM: 50 } )
+var solutionXml = blockUtils.mathBlockXml('overlay', {
+  'TOP': blockUtils.mathBlockXml('place_image', {
+    'IMAGE': blockUtils.mathBlockXml('functional_circle', {
+      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
+      'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' }),
+      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
     }),
     'X': 0,
     'Y': 0
   }),
-  'BOTTOM': blockUtils.msmBlockXml('functional_circle', {
-    'COLOR': blockUtils.msmBlockXml('functional_string', null, { VAL: 'blue' } ),
-    'STYLE': blockUtils.msmBlockXml('functional_string', null, { VAL: 'outline' }),
-    'SIZE': blockUtils.msmBlockXml('functional_math_number', null, { NUM: 50 } )
+  'BOTTOM': blockUtils.mathBlockXml('functional_circle', {
+    'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'blue' } ),
+    'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' }),
+    'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
   })
 });
 

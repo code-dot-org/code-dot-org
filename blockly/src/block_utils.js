@@ -163,7 +163,7 @@ exports.calcBlockXml = function (type, args) {
   return str;
 };
 
-exports.msmBlockXml = function (type, inputs, titles) {
+exports.mathBlockXml = function (type, inputs, titles) {
   var str = '<block type="' + type + '" inline="false">';
   for (var title in titles) {
     str += '<title name="' + title + '">' + titles[title] + '</title>';

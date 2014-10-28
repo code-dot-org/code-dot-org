@@ -5,10 +5,10 @@ module.exports = {
   app: "eval",
   skinId: 'eval',
   levelDefinition: {
-    solutionBlocks: blockUtils.msmBlockXml('functional_circle', {
-      'COLOR': blockUtils.msmBlockXml('functional_string', null, { VAL: 'red' } ),
-      'STYLE': blockUtils.msmBlockXml('functional_string', null, { VAL: 'outline' }),
-      'SIZE': blockUtils.msmBlockXml('functional_math_number', null, { NUM: 50 } )
+    solutionBlocks: blockUtils.mathBlockXml('functional_circle', {
+      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
+      'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' }),
+      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
     }),
     requiredBlocks: '',
     freePlay: false
@@ -41,10 +41,10 @@ module.exports = {
         return true;
       },
       xml: '<xml>' +
-        blockUtils.msmBlockXml('functional_circle', {
-          'COLOR': blockUtils.msmBlockXml('functional_string', null, { VAL: 'red' } ),
-          'STYLE': blockUtils.msmBlockXml('functional_string', null, { VAL: 'outline' }),
-          'SIZE': blockUtils.msmBlockXml('functional_math_number', null, { NUM: 50 } )
+        blockUtils.mathBlockXml('functional_circle', {
+          'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
+          'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' }),
+          'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
         }) +
       '</xml>'
     },
@@ -55,10 +55,10 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       xml: '<xml>' +
-        blockUtils.msmBlockXml('functional_circle', {
-          'COLOR': blockUtils.msmBlockXml('functional_string', null, { VAL: 'red' } ),
-          'STYLE': blockUtils.msmBlockXml('functional_style', null, { VAL: 'outline' }),
-          'SIZE': blockUtils.msmBlockXml('functional_math_number', null, { NUM: 50 } )
+        blockUtils.mathBlockXml('functional_circle', {
+          'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
+          'STYLE': blockUtils.mathBlockXml('functional_style', null, { VAL: 'outline' }),
+          'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
         }) +
       '</xml>'
     },
@@ -69,10 +69,10 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       xml: '<xml>' +
-        blockUtils.msmBlockXml('functional_circle', {
-          'COLOR': blockUtils.msmBlockXml('functional_string', null, { VAL: 'blue' } ),
-          'STYLE': blockUtils.msmBlockXml('functional_string', null, { VAL: 'outline' }),
-          'SIZE': blockUtils.msmBlockXml('functional_math_number', null, { NUM: 50 } )
+        blockUtils.mathBlockXml('functional_circle', {
+          'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'blue' } ),
+          'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' }),
+          'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
         }) +
       '</xml>'
     }
