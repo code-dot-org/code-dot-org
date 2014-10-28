@@ -32,6 +32,7 @@ brew install node
 npm install -g grunt-cli
 
 # Perform first full build
+```
 npm install
 MOOC_DEV=1 grunt build
 ```

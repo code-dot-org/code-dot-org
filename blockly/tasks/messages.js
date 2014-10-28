@@ -20,8 +20,14 @@ module.exports = function(grunt) {
       var patterns = srcBases.map(function(srcBase) {
         return srcBase + '/**/' + locale + '.json';
       });
+
+      // Returns an array of src-dest file mapping objects.
+      // For each source file matched by a specified pattern, join that file path to the specified dest.
+      // http://gruntjs.com/api/grunt.file#grunt.file.expandmapping
       var files = grunt.file.expandMapping(patterns, destBase, {
+        // Enable dynamic expansion.
         expand: true,
+        // If specified, this function will be responsible for returning the final dest filepath.
         rename: function(destBase, matchedPath) {
           var destPath;
           srcBases.forEach(function(srcBase) {
@@ -35,6 +41,8 @@ module.exports = function(grunt) {
       });
 
       // Initialize MessageFormat.
+      // MessageFormat (PluralFormat + SelectFormat) is a mechanism for handling both pluralization and gender.
+      // https://github.com/SlexAxton/messageformat.js
       var language = locale.split('_')[0];
       var backend, mf;
       var loadBackend = function(lang) {
