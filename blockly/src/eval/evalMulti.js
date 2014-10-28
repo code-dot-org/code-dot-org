@@ -11,6 +11,10 @@ var EvalMulti = function (image1, image2) {
   this.image2_ = image2;
 
   this.element_ = null;
+
+  // default not to transform
+  this.x_ = 0;
+  this.y_ = 0;
 };
 EvalMulti.inherits(EvalObject);
 module.exports = EvalMulti;

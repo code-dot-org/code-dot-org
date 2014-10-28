@@ -2,6 +2,9 @@
   "circleBlockTitle": "circle (radius, style, color)",
   "overlayBlockTitle": "overlay (top, bottom)",
   "placeImageBlockTitle": "place-image (image, x, y)",
+  "rectangleBlockTitle": "rectangle (width, height, style, color)",
+  "squareBlockTitle": "square (size, style, color)",
+  "triangleBlockTitle": "triangle (size, style, color)",
   "outline": "outline",
   "solid": "solid",
   "string": "string"

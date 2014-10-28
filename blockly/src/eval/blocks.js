@@ -48,11 +48,102 @@ exports.install = function(blockly, blockInstallOptions) {
   mathBlocks.install(blockly, generator, gensym);
 
   installString(blockly, generator, gensym);
-  installCircle(blockly, generator, gensym);
+
+  // shapes
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_circle',
+    blockTitle: msg.circleBlockTitle(),
+    apiName: 'circle',
+    args: [
+      { name: 'SIZE', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_triangle',
+    blockTitle: msg.triangleBlockTitle(),
+    apiName: 'circle',
+    args: [
+      { name: 'SIZE', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_square',
+    blockTitle: msg.squareBlockTitle(),
+    apiName: 'square',
+    args: [
+      { name: 'SIZE', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_rectangle',
+    blockTitle: msg.rectangleBlockTitle(),
+    apiName: 'rectangle',
+    args: [
+      { name: 'WIDTH', type: 'Number' },
+      { name: 'HEIGHT', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'overlay',
+    blockTitle: msg.overlayBlockTitle(),
+    apiName: 'overlay',
+    args: [
+      { name: 'TOP', type: 'image' },
+      { name: 'BOTTOM', type: 'image' },
+    ]
+  });
+
   installPlaceImage(blockly, generator, gensym);
-  installOverlay(blockly, generator, gensym);
   installStyle(blockly, generator, gensym);
+
 };
+
+
+function installFunctionalBlock (blockly, generator, gensym, options) {
+  var blockName = options.blockName;
+  var blockTitle = options.blockTitle;
+  var apiName = options.apiName;
+  var args = options.args;
+
+  blockly.Blocks[blockName] = {
+    init: function () {
+      initTitledFunctionalBlock(this, blockTitle, 'image', args);
+    }
+  };
+
+  generator[blockName] = function() {
+    var apiArgs = [];
+    for (var i = 0; i < args.length; i++) {
+      var arg = args[i];
+      var apiArg = Blockly.JavaScript.statementToCode(this, arg.name, false);
+      // Provide defaults
+      if (!apiArg) {
+        if (arg.type === 'Number') {
+          apiArg = '0';
+        } else if (arg.name === 'STYLE') {
+          apiArg = "Eval.string('solid')"
+        } else if (arg.name === 'COLOR') {
+          apiArg = "Eval.string('black')"
+        }
+      }
+      apiArgs.push(apiArg);
+    }
+
+    return "Eval." + apiName + "(" + apiArgs.join(", ") + ")";
+  };
+}
 
 /**
  * functional_string
@@ -77,31 +168,6 @@ function installString(blockly, generator, gensym) {
 
   generator.functional_string = function() {
     return "Eval.string('" + this.getTitleValue('VAL') + "')";
-  };
-}
-
-/**
- * functional_circle
- */
-function installCircle(blockly, generator, gensym) {
-  blockly.Blocks.functional_circle = {
-    init: function () {
-      initTitledFunctionalBlock(this, msg.circleBlockTitle(), 'image', [
-        { name: 'SIZE', type: 'Number' },
-        { name: 'STYLE', type: 'string' },
-        { name: 'COLOR', type: 'string' }
-      ]);
-    }
-  };
-
-  generator.functional_circle = function() {
-    var color = Blockly.JavaScript.statementToCode(this, 'COLOR', false) ||
-      "Eval.string('black')";
-    var style = Blockly.JavaScript.statementToCode(this, 'STYLE', false) ||
-      "Eval.string('solid')";
-    var size = Blockly.JavaScript.statementToCode(this, 'SIZE', false) || '0';
-
-    return "Eval.circle(" + [size, style, color].join(", ") + ")";
   };
 }
 
@@ -131,26 +197,26 @@ function installPlaceImage(blockly, generator, gensym) {
 }
 
 
-/**
- * overlay
- */
-function installOverlay(blockly, generator, gensym) {
-  blockly.Blocks.overlay = {
-    init: function () {
-      initTitledFunctionalBlock(this, msg.overlayBlockTitle(), 'image', [
-        { name: 'TOP', type: 'image' },
-        { name: 'BOTTOM', type: 'image' },
-      ]);
-    }
-  };
-
-  generator.overlay = function() {
-    var top = Blockly.JavaScript.statementToCode(this, 'TOP', false);
-    var bottom = Blockly.JavaScript.statementToCode(this, 'BOTTOM', false);
-
-    return "Eval.overlay(" + [top, bottom].join(", ") + ")";
-  };
-}
+// /**
+//  * overlay
+//  */
+// function installOverlay(blockly, generator, gensym) {
+//   blockly.Blocks.overlay = {
+//     init: function () {
+//       initTitledFunctionalBlock(this, msg.overlayBlockTitle(), 'image', [
+//         { name: 'TOP', type: 'image' },
+//         { name: 'BOTTOM', type: 'image' },
+//       ]);
+//     }
+//   };
+//
+//   generator.overlay = function() {
+//     var top = Blockly.JavaScript.statementToCode(this, 'TOP', false);
+//     var bottom = Blockly.JavaScript.statementToCode(this, 'BOTTOM', false);
+//
+//     return "Eval.overlay(" + [top, bottom].join(", ") + ")";
+//   };
+// }
 
 /**
  * functional_style
