@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141003211241) do
+ActiveRecord::Schema.define(version: 20141017233919) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -234,7 +234,7 @@ ActiveRecord::Schema.define(version: 20141003211241) do
   add_index "secret_words", ["word"], name: "index_secret_words_on_word", unique: true, using: :btree
 
   create_table "sections", force: true do |t|
-    t.integer  "user_id",                     null: false
+    t.integer  "user_id",                      null: false
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -242,7 +242,7 @@ ActiveRecord::Schema.define(version: 20141003211241) do
     t.integer  "script_id"
     t.string   "grade"
     t.string   "admin_code"
-    t.string   "login_type", default: "none", null: false
+    t.string   "login_type", default: "email", null: false
   end
 
   add_index "sections", ["code"], name: "index_sections_on_code", unique: true, using: :btree
@@ -355,12 +355,6 @@ ActiveRecord::Schema.define(version: 20141003211241) do
     t.string   "user_type",                  limit: 16
     t.string   "school"
     t.string   "full_address",               limit: 1024
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
-    t.float    "lat"
-    t.float    "lon"
     t.integer  "total_lines",                             default: 0,       null: false
     t.boolean  "prize_earned",                            default: false
     t.integer  "prize_id"
@@ -385,6 +379,7 @@ ActiveRecord::Schema.define(version: 20141003211241) do
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
   add_index "users", ["hashed_email"], name: "index_users_on_hashed_email", using: :btree
   add_index "users", ["prize_id"], name: "index_users_on_prize_id", unique: true, using: :btree
+  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["teacher_bonus_prize_id"], name: "index_users_on_teacher_bonus_prize_id", unique: true, using: :btree
   add_index "users", ["teacher_prize_id"], name: "index_users_on_teacher_prize_id", unique: true, using: :btree

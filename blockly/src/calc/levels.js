@@ -1,26 +1,25 @@
 var msg = require('../../locale/current/calc');
 var blockUtils = require('../block_utils');
-var Expression = require('./expression');
 
 /**
  * Information about level-specific requirements.
  */
 module.exports = {
   'example1': {
-    // todo (brent) - probably want this to be blocks
-    target: function () {
-      return new Expression('*',
-        new Expression('+', 1, 2),
-        new Expression('+', 3, 4));
-    },
-    ideal: 4,
+    solutionBlocks: blockUtils.calcBlockXml('functional_times', [
+      blockUtils.calcBlockXml('functional_plus', [1, 2]),
+      blockUtils.calcBlockXml('functional_plus', [3, 4])
+    ]),
+    ideal: Infinity,
     toolbox: blockUtils.createToolbox(
-      blockUtils.blockOfType('functional_draw') +
+      blockUtils.blockOfType('functional_compute') +
       blockUtils.blockOfType('functional_plus') +
       blockUtils.blockOfType('functional_minus') +
       blockUtils.blockOfType('functional_times') +
       blockUtils.blockOfType('functional_dividedby') +
-      blockUtils.blockOfType('functional_math_number')),
+      blockUtils.blockOfType('functional_math_number') +
+      blockUtils.blockOfType('functional_string') +
+      blockUtils.blockOfType('functional_circle')),
     startBlocks: '',
     requiredBlocks: '',
     freePlay: false

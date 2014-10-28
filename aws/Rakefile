@@ -70,10 +70,6 @@ file home_dir('.profile') => [aws_dir('profile')] + DEPENDENCIES do |t|
   cp t.prerequisites[0], t.name
 end
 
-file home_dir('.ssh/authorized_keys') => [secrets_dir('authorized_keys')] + DEPENDENCIES do |t|
-  cp t.prerequisites[0], t.name
-end
-
 file dashboard_dir('config/init.d') => [dashboard_dir('config/init.d.erb')] + DEPENDENCIES do |t|
   RakeUtils.erb t.prerequisites[0], t.name, task:t
 end
@@ -96,33 +92,6 @@ file pegasus_dir('config/newrelic.yml') => [pegasus_dir('config/newrelic.yml.erb
   RakeUtils.erb t.prerequisites[0], t.name, task:t
 end
 
-file aws_dir('postfix/sasl_password') => [aws_dir('postfix/sasl_password.erb')] + DEPENDENCIES do |t|
-  RakeUtils.erb t.prerequisites[0], t.name, task:t
-end
-
-file aws_dir('postfix/sasl_password.db') => [secrets_dir('postfix_sasl_password.db'), aws_dir('postfix/sasl_password')] + DEPENDENCIES do |t|
-  RakeUtils.sudo 'cp', t.prerequisites[0], t.name
-end
-
-file aws_dir('postfix/main.cf') => [aws_dir('postfix/main.cf.erb'), aws_dir('postfix/sasl_password.db')] + DEPENDENCIES do |t|
-  RakeUtils.erb t.prerequisites[0], t.name, task:t
-end
-
-task '/etc/postfix' => [aws_dir('postfix/main.cf'), aws_dir('postfix/sasl_password'), aws_dir('postfix/sasl_password.db')] do |t|
-  if CDO.use_postfix
-    RakeUtils.sudo 'chown', '-R', 'postfix:ubuntu', aws_dir('postfix')
-
-    if !File.symlink?('/etc/postfix') && File.directory?('/etc/postfix')
-      RakeUtils.sudo 'mv', '/etc/postfix', '/etc/postfix.old'
-    end
-
-    RakeUtils.sudo_ln_s aws_dir('postfix'), '/etc/postfix'
-    RakeUtils.sudo_ln_s aws_dir('postfix/mailname'), '/etc/mailname'
-    RakeUtils.sudo_ln_s aws_dir('postfix/aliases'), '/etc/aliases'
-    RakeUtils.sudo_ln_s aws_dir('postfix/aliases.db'), '/etc/aliases.db'
-  end
-end
-
 file aws_dir('varnish.config') => [aws_dir('varnish.config.erb')] + DEPENDENCIES do |t|
   RakeUtils.erb t.prerequisites[0], t.name, task:t
 end
@@ -134,10 +103,6 @@ end
 
 file aws_dir('varnish.vcl') => [aws_dir('varnish.vcl.erb')] + DEPENDENCIES do |t|
   RakeUtils.erb t.prerequisites[0], t.name, task:t
-end
-
-file '/etc/default/varnish' => [aws_dir('varnish.config')] do |t|
-  RakeUtils.sudo_ln_s t.prerequisites[0], t.name
 end
 
 file deploy_dir('i18n/code.org/crowdin.yaml') => [deploy_dir('i18n/code.org/crowdin.yaml.erb')] + DEPENDENCIES do |t|
@@ -158,13 +123,11 @@ task :default => [
   SECRETS,
 
   INSTALL ? aws_dir('crontab.installed')        : aws_dir('crontab'),
-  INSTALL ? home_dir('.ssh/authorized_keys')    : nil,
   INSTALL ? home_dir('.bashrc')                 : aws_dir('bashrc'),
   INSTALL ? home_dir('.profile')                : aws_dir('profile'),
   INSTALL ? ETC_INIT_D_DASHBOARD                : dashboard_dir('config/init.d'),
   INSTALL ? ETC_INIT_D_PEGASUS                  : pegasus_dir('config/init.d'),
-  INSTALL ? '/etc/postfix'                      : aws_dir('postfix/main.cf'),
-  INSTALL ? '/etc/default/varnish'              : aws_dir('varnish.config'),
+  aws_dir('varnish.config'),
   aws_dir('varnish.secret'),
   aws_dir('varnish.vcl'),
 
@@ -179,9 +142,6 @@ task :clean do
     aws_dir('bashrc'),
     aws_dir('crontab'),
     aws_dir('crontab.installed'),
-    aws_dir('postfix/main.cf'),
-    aws_dir('postfix/sasl_password'),
-    aws_dir('postfix/sasl_password.db'),
     aws_dir('profile'),
     aws_dir('varnish.config'),
     aws_dir('varnish.secret'),

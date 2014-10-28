@@ -39,9 +39,11 @@ goog.require('Blockly.Variables');
  * @extends {Blockly.FieldDropdown}
  * @constructor
  */
-Blockly.FieldVariable = function(varname, opt_changeHandler) {
+Blockly.FieldVariable = function(varname, opt_changeHandler, opt_createHandler) {
   var changeHandler;
-  if (opt_changeHandler) {
+  if (opt_changeHandler === Blockly.FieldParameter.dropdownChange) {
+    changeHandler = opt_changeHandler;
+  } else if (opt_changeHandler) {
     // Wrap the user's change handler together with the variable rename handler.
     var thisObj = this;
     changeHandler = function(value) {
@@ -62,7 +64,7 @@ Blockly.FieldVariable = function(varname, opt_changeHandler) {
   }
 
   Blockly.FieldVariable.superClass_.constructor.call(this,
-      Blockly.FieldVariable.dropdownCreate, changeHandler);
+      opt_createHandler || Blockly.FieldVariable.dropdownCreate, changeHandler);
 
   if (varname) {
     this.setValue(varname);
@@ -128,6 +130,7 @@ Blockly.FieldVariable.dropdownCreate = function() {
  */
 Blockly.FieldVariable.prototype.dropdownChange = function(text) {
   var self = this;
+  // TODO(bjordan): use this same promptname for usage below
   function promptName(promptText, defaultText) {
     self.sourceBlock_.blockSpace.blockSpaceEditor.hideChaff();
     var newVar = window.prompt(promptText, defaultText);
@@ -155,3 +158,73 @@ Blockly.FieldVariable.prototype.dropdownChange = function(text) {
   }
   return undefined;
 };
+
+/**
+ * Class for a variable's dropdown field.
+ * @param {!string} varname The default name for the variable.  If null,
+ *     a unique variable name will be generated.
+ * @param {Function} opt_changeHandler A function that is executed when a new
+ *     option is selected.
+ * @extends {Blockly.FieldDropdown}
+ * @constructor
+ */
+Blockly.FieldParameter = function(varname) {
+
+  Blockly.FieldParameter.superClass_.constructor.call(this, varname,
+      Blockly.FieldParameter.dropdownChange, Blockly.FieldParameter.dropdownCreate);
+};
+goog.inherits(Blockly.FieldParameter, Blockly.FieldVariable);
+
+/**
+ * Return a sorted list of parameter names for parameter dropdown menus.
+ * Include a special option at the end for deleting a parameter.
+ * @return {!Array.<string>} Array of parameter names.
+ * @this {!Blockly.FieldParameter}
+ */
+Blockly.FieldParameter.dropdownCreate = function() {
+  /*var variableList = Blockly.Variables.allVariables();
+  // Ensure that the currently selected variable is an option.
+  var name = this.getText();
+  if (name && variableList.indexOf(name) == -1) {
+    variableList.push(name);
+  }
+  variableList.sort(goog.string.caseInsensitiveCompare);*/
+  var variableList = [
+    Blockly.Msg.RENAME_PARAMETER,
+    Blockly.Msg.DELETE_PARAMETER
+  ];
+  // Variables are not language-specific, use the name as both the user-facing
+  // text and the internal representation.
+  var options = [];
+  for (var x = 0; x < variableList.length; x++) {
+    options[x] = [variableList[x], variableList[x]];
+  }
+  return options;
+};
+
+Blockly.FieldParameter.dropdownChange = function(text) {
+  var oldVar = this.getText();
+  if (text == Blockly.Msg.RENAME_PARAMETER) {
+    text = promptName(Blockly.Msg.RENAME_PARAMETER_TITLE.replace('%1', oldVar),
+        oldVar);
+    if (text) {
+      Blockly.Variables.renameVariable(oldVar, text);
+    }
+    return null;
+  } else if (text == Blockly.Msg.DELETE_PARAMETER) {
+    var result = window.confirm(Blockly.Msg.DELETE_PARAMETER_TITLE.replace('%1', oldVar));
+    // Since variables are case-insensitive, ensure that if the new variable
+    // matches with an existing variable, the new case prevails throughout.
+    if (result) {
+      Blockly.Variables.deleteVariable(oldVar);
+    }
+  }
+};
+
+function promptName(promptText, defaultText) {
+  Blockly.hideChaff();
+  var newVar = window.prompt(promptText, defaultText);
+  // Merge runs of whitespace.  Strip leading and trailing whitespace.
+  // Beyond this, all names are legal.
+  return newVar && newVar.replace(/[\s\xa0]+/g, ' ').replace(/^ | $/g, '');
+}

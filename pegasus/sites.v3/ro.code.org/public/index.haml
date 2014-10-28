@@ -4,11 +4,11 @@ tagline: ''
 theme: responsive
 responsivePadMobile: yes
 social:
-  'og:title' : “Hour of Code România se apropie"
-  'og:description' : "Pentru fiecare elev și clasă din România: Află cât de distractiv este sa înveți programare în doar o oră, 8-14 Decembrie."
-  'og:image' : ""
-  'og:image:width' : ""
-  'og:image:height' : ""
+  'og:title' : ‘Hour of Code România se apropie'
+  'og:description' : "Hour of Code este o mişcare globală care ajunge la zeci de milioane de elevi si studenţi din peste 180 de ţări şi peste 30 de limbi vorbite. Vârstele de la 4 la 104 ani."
+  'og:image' : "http://ro.code.org/images/ogimage.png"
+  'og:image:width' : "1200"
+  'og:image:height' : "626"
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
@@ -22,7 +22,7 @@ social:
   #start.col-36{:style=>'text-align:center; margin-top: 0'}
     .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
       %h1{:style=>"font-size: 56px; line-height: 56px; margin: 0;"}<
-        =format_integer_with_commas(fetch_hoc_metrics['started']).to_s
+        =format_integer_with_decimals(fetch_hoc_metrics['started']).to_s
       %h3{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 5px; margin-bottom: 0;"}<
         au încercat
       %h2{:style=>"font-size: 36px; line-height: 36px; font-weight: 600; margin-top: 5px; margin-bottom: 0;"}<
@@ -56,4 +56,4 @@ social:
 
 .desktop-feature
   %h2 Lideri si trendsetteri din întreaga lume sunt de acord ca mai mulți elevi ar trebui să învețe despre computere si programare
-  //= view :top_quotes
+  = view :top_quotes

@@ -56,7 +56,10 @@ class ProfessionalDevelopmentWorkshop
     AWS::S3.upload_to_bucket('cdo-form-uploads', name, value)
   end
 
-  def self.process(data, last_processed_data)
+  def self.process_(row)
+    data = JSON.load(row[:data])
+    last_processed_data = JSON.load(row[:processed_data])
+
     {}.tap do |results|
       location = search_for_address(data['location_address_s'])
       results.merge! location.to_solr if location
@@ -67,6 +70,16 @@ class ProfessionalDevelopmentWorkshop
         results['qualifying_attendee_count_i'] = snapshot.count {|u| u[:levels_count] >= MINIMUM_ATTENDEE_LEVELS_COUNT}
 
         results['progress_snapshot_t'] = uploaded_data "workshop-progress-snapshot-#{data['section_id_s']}", snapshot.to_json
+
+        recipients = snapshot.map{|row| {email: row[:email], name: row[:name]}}
+        recipients.each do |recipient|
+          Poste2.send_message('professional-development-workshop-section-receipt',
+                              Poste2.ensure_recipient(recipient[:email], name: recipient[:name], ip_address: '127.0.0.1'),
+                              workshop_id:row[:id],
+                              location_name:data['location_name_s'],
+                              facilitator_name:data['name_s'],
+                              start_date:data['dates'] && data['dates'].first ? data['dates'].first['date_s'] : nil)
+        end
       end
     end
   end
@@ -87,20 +100,26 @@ class ProfessionalDevelopmentWorkshop
 
     data.delete('dates')
 
+    # Removed temporarily.
+    data.delete('stopped_dt')
+
     data.delete('progress_snapshot_t')
 
     data
   end
 
   def self.solr_query(params)
-    query = {
+    fq = {
       kind_s: self.name,
       type_s: 'Public',
+      first_date_dt: '[NOW TO *]',
     }.map{|key,value| "#{key.to_s}:#{value.to_s}"}.join(' AND ')
 
     {
-      q:query,
-      rows:200,
+      q: "*:*",
+      fq: fq,
+      rows: 800,
+      sort: 'first_date_dt asc',
     }
   end
 

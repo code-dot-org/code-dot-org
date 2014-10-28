@@ -1,5 +1,5 @@
 "ca-ES":
-  hello: Hola Món
+  hello: Hola món
   computer_science: Informàtica
   computer_science_edweek: Setmana de l'Educació en Informàtica
   csedweek_dates: 9-15 de desembre de 2013
@@ -11,7 +11,7 @@
   petition_sign_message: 'Si estàs d''acord, signa amb el teu nom.  Uneix-te als altres
     #.'
   name: Nom
-  email: Email
+  email: Correu electrònic
   zipcode: Codi postal o país
   submit: Envia
   twentyhours_heading: Try our Intro to Computer Science Course
@@ -82,7 +82,7 @@
   get_started: Comença
   i_agree: Accepte
   participant_select: Selecciona
-  participant_student: Estudiant
+  participant_student: estudiant
   participant_parent: Pares
   participant_educator: Educador
   participant_engineer: Enginyer de software
@@ -109,8 +109,8 @@
   boy: Noi
   help_recruit_coders: Ajuda'ns reclutar més codificadors per al teu equip!
   help_recruit: Ajuda'ns reclutar més codificadors!
-  lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
-  lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
+  lines_of_code: MÉS DE <b># LINES OF CODE</b> LÍNIES DE CODI ESCRITES FINS LA DATA.
+  lines_of_code_alt: "<b>#</b> LÍNIES DE CODI ESCRIT PER ALUMNES"
   who_has_done_hoc: 'Qui ha fet la #HourOfCode? @codeorg'
   hoc_leaderboards: Les Classificacions de la Hora del codi
   students_and_lines: "%{students} alumnes han fet l'hora de codi i han escrit %{lines}
@@ -260,7 +260,7 @@
   dashboard_students_male: Home
   dashboard_students_female: Dona
   dashboard_students_secret: Secret
-  dashboard_students_password: Contrasenya
+  dashboard_students_password: contrasenya
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -313,3 +313,16 @@
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: estudiant
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

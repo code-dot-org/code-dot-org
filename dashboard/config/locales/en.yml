@@ -398,7 +398,7 @@ en:
     teacher: 'See the solution'
     auth_error: 'You are not authorized to see the solution.'
     submit: 'Update Artist Location'
-    direction: 'Start Direction'
+    direction: 'Start Direction (in degrees)'
   video:
     tab: 'Video.'
     notes: 'No video? Show notes.'
@@ -458,6 +458,8 @@ en:
     activity_count: "In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action."
     want_to_make_your_own: "Want to make your own?"
     more: "More &rarr;"
+    caption_by_name_age: "by %{name}, age %{age}"
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: "Give Feedback"
