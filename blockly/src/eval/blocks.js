@@ -68,7 +68,7 @@ function installString(blockly, generator, gensym) {
       this.setHSV.apply(this, colors.string);
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldLabel('"'))
-          .appendTitle(new Blockly.FieldTextInput('string'), 'VAL')
+          .appendTitle(new Blockly.FieldTextInput(msg.string()), 'VAL')
           .appendTitle(new Blockly.FieldLabel('"'))
           .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, 'string');
@@ -86,8 +86,7 @@ function installString(blockly, generator, gensym) {
 function installCircle(blockly, generator, gensym) {
   blockly.Blocks.functional_circle = {
     init: function () {
-      // todo - i18n
-      initTitledFunctionalBlock(this, 'circle (radius, style, color)', 'image', [
+      initTitledFunctionalBlock(this, msg.circleBlockTitle(), 'image', [
         { name: 'SIZE', type: 'Number' },
         { name: 'STYLE', type: 'string' },
         { name: 'COLOR', type: 'string' }
@@ -112,7 +111,7 @@ function installCircle(blockly, generator, gensym) {
 function installPlaceImage(blockly, generator, gensym) {
   blockly.Blocks.place_image = {
     init: function () {
-      initTitledFunctionalBlock(this, 'place-image (image, x, y)', 'image', [
+      initTitledFunctionalBlock(this, msg.placeImageBlockTitle(), 'image', [
         { name: 'IMAGE', type: 'image' },
         { name: 'X', type: 'Number' },
         { name: 'Y', type: 'Number' }
@@ -138,7 +137,7 @@ function installPlaceImage(blockly, generator, gensym) {
 function installOverlay(blockly, generator, gensym) {
   blockly.Blocks.overlay = {
     init: function () {
-      initTitledFunctionalBlock(this, 'overlay (top, bottom)', 'image', [
+      initTitledFunctionalBlock(this, msg.overlayBlockTitle(), 'image', [
         { name: 'TOP', type: 'image' },
         { name: 'BOTTOM', type: 'image' },
       ]);
@@ -160,11 +159,11 @@ function installStyle(blockly, generator, gensym) {
   blockly.Blocks.functional_style = {
     init: function () {
       var VALUES = [
-        ['solid', 'solid'],
+        [msg.solid(), 'solid'],
         ['75%', '75%'],
         ['50%', '50%'],
         ['25%', '25%'],
-        ['outline', 'outline']
+        [msg.outline(), 'outline']
       ];
 
       this.setFunctional(true, {

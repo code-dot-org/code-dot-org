@@ -18,7 +18,7 @@ module.exports = {
       description: "Nothing",
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       xml: '<xml>' +
       '</xml>'
@@ -66,7 +66,7 @@ module.exports = {
       description: "wrong color",
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       xml: '<xml>' +
         blockUtils.mathBlockXml('functional_circle', {
