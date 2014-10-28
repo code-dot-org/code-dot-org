@@ -161,10 +161,10 @@ function installStyle(blockly, generator, gensym) {
     init: function () {
       var VALUES = [
         ['solid', 'solid'],
-        ['outline', 'outline'],
-        ['25%', '25%'],
+        ['75%', '75%'],
         ['50%', '50%'],
-        ['75%', '75%']
+        ['25%', '25%'],
+        ['outline', 'outline']
       ];
 
       this.setFunctional(true, {
