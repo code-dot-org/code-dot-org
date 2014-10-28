@@ -83,69 +83,10 @@ th {
   background-color: lightgray;
 }
 
-.level_highlight {
-  border-radius: 20px;
-  color: white;
-  font-size: 16px;
-  height: 22px;
-  padding: 4px 2px 0 2px;
-  text-align: center;
-  min-width: 22px;
-  display: inline-block;
-}
-
-.level_highlight:hover {
-  text-decoration: none;
-  background-color: orange;
-}
-
-.level_highlight_outer_assessment {
-  display: inline-block;
-  background-color: yellow;
-  border-radius: 20px;
-  padding: 2px;
-}
-
-.level_highlight_outer_level {
-  display: inline-block;
-}
-
-.level_current_header {
-  background-color: orange;
-}
-
-.level_current_header:hover {
-  background-color: orange;
-}
-
-.level_current_header_unplugged {
-  font-size: 12px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.other_level {
-  border-radius: 10px;
-  height: 10px;
-  min-width: 10px;
-  margin-left: -1px;
-  margin-right: -1px;
-  display: inline-block;
-}
-
-.other_level:hover {
-  background-color: orange;
-}
-
-.level_box {
-  width: 17px;
-  height: 17px;
-  margin: 3px;
-  display: inline-block;
-}
 
 .header .progress_container {
   background-color: #eee;
+  border: 1px solid #ccc;
   display: inline-block;
   padding: 5px 10px;
   border-radius: 5px;
@@ -157,10 +98,10 @@ th {
   color: #666;
 }
 
-.level_undone, a.level_undone:visited, .header a.level_undone:visited{
+.level_undone, a.level_undone, a.level_undone:visited, .header a.level_undone:visited{
   background-color: $level_attempted;
 //  background-color: $dark_color;
-  color: #666;
+  color: #666 !important;
 }
 
 .level_done, a.level_done:visited {
@@ -217,16 +158,6 @@ th {
   height: 35px;
 }
 
-.level_current {
-  position: relative;
-  border: 3px solid yellow;
-  top: 3px;
-  margin-top: -3px;
-  margin-bottom: 3px;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
 .level_link, .level_link:link, level_link:visited {
   border-radius: 20px;
   min-width: 22px;
@@ -276,14 +207,14 @@ th {
 }
 
 .puzzle_outer_current {
-  background-color: rgba(118, 101, 160, 0.5);
+  background-color: $level_current;
   padding: 1px;
   display: inline-block;
   border-radius: 20px;
 }
 
 .puzzle_outer_assessment {
-  background-color: rgba(255, 255, 0, 0.5);
+  background-color: yellow;
   padding: 1px;
   display: inline-block;
   border-radius: 20px;
@@ -591,6 +522,13 @@ html, body {
   right: 0;
 }
 
+.header_level_container {
+  border-bottom: 1px solid $inset_color;
+  border-bottom-style: inset;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
 .header_level {
   position: relative;
   padding-top: 28px;
@@ -602,14 +540,68 @@ html, body {
   @media screen and (max-width: 1150px) {
     padding-top: 15px;
   }
+
+  /* current and last are large dots */
+  .puzzle_outer_current,
+  .puzzle_outer_level.last,
+  .puzzle_outer_assessment.last {
+    position: relative;
+    top: 0;
+    border-radius: 20px;
+    .level_link {
+      border-radius: 20px;
+      height: 18px;
+      min-width: 18px;
+      width: 18px;
+      font-size: 16px;
+      padding: 2px;
+      color: white;
+      text-align: center;
+      display: inline-block;
+    }
+  }
+
+  .puzzle_outer_level.last .level_link {
+    color: #333;
+  }
+
+  /* all others are small dot */
+  .puzzle_outer_level,
+  .puzzle_outer_assessment {
+    position: relative;
+    top: 3px;
+    border-radius: 11px;
+    line-height: 1px;
+    .level_link {
+      min-width: 1px;
+      width: 1px;
+      height: 1px;
+      border-radius: 9px;
+      /* hack to hide the number: */
+      font-size: 1px;
+      color: transparent;
+    }
+  }
+
+  .level_link:hover {
+    text-decoration: none;
+    background-color: $level_current;
+  }
+
+  .puzzle_outer_current,
+  .puzzle_outer_current .level_link {
+    background-color: $level_current;
+    color: white;
+  }
+
+  .level_link.unplugged_level {
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+  }
 }
 
-.header_level_container {
-  border-bottom: 1px solid $inset_color;
-  border-bottom-style: inset;
-  padding-bottom: 10px;
-  display: inline-block;
-}
 
 .header_user {
   position: absolute;

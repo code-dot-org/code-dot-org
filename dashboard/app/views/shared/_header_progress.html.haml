@@ -1,0 +1,54 @@
+.header_level
+  %div{class: "header_level_container"}
+    - game_script_levels = (@stage && @stage.script_levels.includes(:script).joins(:level)) || @script.script_levels_from_game(@game.id)
+    - count = game_script_levels.count
+    - game_levels = current_user ? current_user.levels_from_script(@script, @game.id, @stage) : game_script_levels
+    - multiple_puzzles = game_levels.count > 1
+
+    .header_text
+      = "#{@script_level.stage_position_str}#{multiple_puzzles || @stage ? ':' : ''}" if @script.multiple_games?
+      = "#{@script_level.name}" if @stage
+    - if multiple_puzzles
+      .progress_container
+        - game_levels.each do |sl|
+          - css_class, link = level_info(current_user, sl)
+          - if @script_level && @script_level == sl
+            - puzzle_outer_class = 'puzzle_outer_current'
+          - elsif sl.assessment
+            - puzzle_outer_class = 'puzzle_outer_assessment'
+          - else
+            - puzzle_outer_class = 'puzzle_outer_level'
+          - if sl.stage_or_game_position == game_script_levels.count
+            - puzzle_outer_class += ' last'
+          %div{class: puzzle_outer_class}
+            %a.level_link{ href: link, class: css_class + (sl.level.unplugged? ? " unplugged_level " : "")}
+              = sl.level_display_text
+    - if @script.hoc?
+      .header_finished_link
+        %a{href: hoc_finish_url}
+          = t('nav.header.finished_hoc')
+    - if @script.trophies
+      - if current_user
+        - progress = current_user.progress(@script)
+        %a.header_trophy_link{href: "#", onclick: "return handlePopupClick(true);"}
+          .header_text= t(:trophies)
+          .header_status_bar= progress['current_trophies']
+          .header_text= "#{t(:of)} #{progress['max_trophies']}"
+      - else
+        %a.header_finished_link{href: root_path}
+          = t('nav.header.sign_in_to_save')
+    - if @script.twenty_hour? || @script.stages.count > 1
+      %a.header_status_bar.level_free_play{title: t('nav.header.free_play.playlab'), href: playlab_freeplay_path}
+        %i.fa.fa-rocket
+      %a.header_status_bar.level_free_play{title: t('nav.header.free_play.artist'), href: artist_freeplay_path}
+        %i.fa.fa-pencil
+      %a.header_popup_link{href: "#", onclick: "return handlePopupClick(false);"}
+        .header_popup_link_glyph
+          &#x25BC;
+        .header_popup_link_text= t(:more)
+  - if @script.k5_course?
+    #betainfo
+      - if @script.feedback_url
+        = link_to t('landing.feedback'), @script.feedback_url
+        |
+      = link_to t('landing.report_bug'), @script_level.report_bug_url(request), target: '_blank'
