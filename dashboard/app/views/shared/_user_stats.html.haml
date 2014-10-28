@@ -27,7 +27,7 @@
             - else
               - puzzle_outer_class = 'puzzle_outer_level'
             %span{class: puzzle_outer_class}
-              %a{ href: link, class: "level_link #{css_class}"}
+              %a.level_link{ href: link, class: css_class}
                 - unplugged = sl.level.unplugged?
                 - if unplugged
                   %span.puzzle-named
