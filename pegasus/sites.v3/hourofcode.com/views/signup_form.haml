@@ -1,9 +1,7 @@
-- version_number = locals[:version_number]
-
 %a#hocsignupform{name: 'signup'}
 #signupform
   %h2= hoc_s(:signup_header)
-  %form{:id=>"hoc-signup-form-#{version_number}", role: "form", onsubmit: "event.preventDefault();"}
+  %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
     #error_message
 
     .form-group
@@ -72,12 +70,11 @@
 
 :javascript
   $(document).ready(function() {
-    // Disabled due to conflict with Optimizely and A/B testing.
-    //$('#hoc-signup-form select').selectize({
-    //  plugins: ['fast_click']
-    //});
+    $('#hoc-signup-form select').selectize({
+      plugins: ['fast_click']
+    });
 
-    $( "#hoc-signup-form-#{version_number}" ).submit(function( event ) {
+    $( "#hoc-signup-form" ).submit(function( event ) {
       signupFormSubmit();
     });
 
@@ -123,7 +120,7 @@
       url: "/forms/HocSignup2014",
       type: "post",
       dataType: "json",
-      data: $("#hoc-signup-form-#{version_number}").serialize()
+      data: $("#hoc-signup-form").serialize()
     }).done(signupFormComplete).fail(signupFormError);
 
     return false;
