@@ -427,5 +427,5 @@ Blockly.removeAllRanges = function() {
  * @returns {*|Blockly.mainWorkspace}
  */
 Blockly.getActiveWorkspace = function() {
-  return Blockly.modalWorkspace || Blockly.mainWorkspace;
+  return Blockly.modalWorkspace || Blockly.mainBlockSpace;
 };
