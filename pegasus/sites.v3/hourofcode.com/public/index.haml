@@ -180,26 +180,10 @@ social:
 
   #join
     %h1=hoc_s(:front_join_us_button)
-    %div#original-version
-      .row
-        .col-md-12
-          =view :join_us_description
-      .row{:style=>'margin-top: 45px'}
-        .col-md-8
-          =view :signup_form, locals:{version_number:1}
-        .col-md-4
-          =view :prizes
-    %div#new-version{:style=>'display: none'}
+    %div
       .row
         .col-md-6
-          =view :join_us_description
-          =view :prizes
-        .col-md-6
-          =view :signup_form, locals:{version_number:2}
-    %div#form-left-version{:style=>'display: none'}
-      .row
-        .col-md-6
-          =view :signup_form, locals:{version_number:3}
+          =view :signup_form
         .col-md-6
           =view :join_us_description
           =view :prizes
