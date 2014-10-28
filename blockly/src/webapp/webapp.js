@@ -102,7 +102,7 @@ function aceFindRow(cumulativeLength, rows, rowe, pos) {
   }
 
   var mid = Math.floor((rows + rowe) / 2);
-  
+
   if (pos < cumulativeLength[mid]) {
     return aceFindRow(cumulativeLength, rows, mid, pos);
   } else if(pos > cumulativeLength[mid]) {
@@ -371,7 +371,7 @@ BlocklyApps.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
   Webapp.execute();
@@ -478,7 +478,7 @@ Webapp.execute = function() {
     defineProcedures('procedures_defreturn');
     defineProcedures('procedures_defnoreturn');
 
-    var blocks = Blockly.mainWorkspace.getTopBlocks();
+    var blocks = Blockly.mainBlockSpace.getTopBlocks();
     for (var x = 0; blocks[x]; x++) {
       var block = blocks[x];
       if (block.type === 'when_run') {
@@ -617,7 +617,7 @@ Webapp.onPuzzleComplete = function() {
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   Webapp.waitingForReport = true;
@@ -641,7 +641,7 @@ Webapp.onPuzzleComplete = function() {
       callback: function(pngDataUrl) {
         Webapp.feedbackImage = pngDataUrl;
         Webapp.encodedFeedbackImage = encodeURIComponent(Webapp.feedbackImage.split(',')[1]);
-        
+
         sendReport();
       }
     });
@@ -669,7 +669,7 @@ Webapp.executeCmd = function (id, name, opts) {
 Webapp.callCmd = function (cmd) {
   var retVal = true;
   switch (cmd.name) {
-    /* 
+    /*
     case 'wait':
       if (!cmd.opts.started) {
         BlocklyApps.highlight(cmd.id);
