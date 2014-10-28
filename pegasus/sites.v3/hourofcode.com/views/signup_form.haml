@@ -70,9 +70,10 @@
 
 :javascript
   $(document).ready(function() {
-    $('#hoc-signup-form select').selectize({
-      plugins: ['fast_click']
-    });
+    // Disabled due to conflict with Optimizely and A/B testing.
+    //$('#hoc-signup-form select').selectize({
+    //  plugins: ['fast_click']
+    //});
 
     $( "#hoc-signup-form" ).submit(function( event ) {
       signupFormSubmit();
