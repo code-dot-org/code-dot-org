@@ -9982,12 +9982,12 @@ BlocklyApps.reset = function(ignore) {
   // Clear the display.
   Turtle.ctxScratch.canvas.width = Turtle.ctxScratch.canvas.width;
   if (skin.id == "anna") {
-    Turtle.ctxScratch.strokeStyle = '#eee';
-    Turtle.ctxScratch.fillStyle = '#eee';
-    Turtle.ctxScratch.lineWidth = 3;
+    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,238)';
+    Turtle.ctxScratch.fillStyle = 'rgb(255,255,238)';
+    Turtle.ctxScratch.lineWidth = 4;
   } else if (skin.id == "elsa") {
-    Turtle.ctxScratch.strokeStyle = '#eee';
-    Turtle.ctxScratch.fillStyle = '#eee';
+    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,238)';
+    Turtle.ctxScratch.fillStyle = 'rgb(255,255,238)';
     Turtle.ctxScratch.lineWidth = 4;
   } else {
     Turtle.ctxScratch.strokeStyle = '#000000';
@@ -10034,7 +10034,7 @@ Turtle.display = function() {
 
   // Draw the answer layer.
   if (skin.id == "anna" || skin.id == "elsa") {
-    Turtle.ctxDisplay.globalAlpha = 0.5;
+    Turtle.ctxDisplay.globalAlpha = 0.4;
   } else {
     Turtle.ctxDisplay.globalAlpha = 0.15;
   }
