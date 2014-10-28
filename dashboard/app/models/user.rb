@@ -373,7 +373,6 @@ SQL
   end
 
   def generate_username
-    return unless username.blank?
     return if name.blank?
     self.username = UserHelpers.generate_username(User, name)
   end
