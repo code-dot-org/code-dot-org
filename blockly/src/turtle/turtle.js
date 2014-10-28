@@ -341,17 +341,20 @@ BlocklyApps.reset = function(ignore) {
   }
   // Clear the display.
   Turtle.ctxScratch.canvas.width = Turtle.ctxScratch.canvas.width;
-  if (skin.id == "anna" || skin.id == "elsa")
-  {
+  if (skin.id == "anna") {
     Turtle.ctxScratch.strokeStyle = '#eee';
     Turtle.ctxScratch.fillStyle = '#eee';
-  }
-  else
-  {
+    Turtle.ctxScratch.lineWidth = 3;
+  } else if (skin.id == "elsa") {
+    Turtle.ctxScratch.strokeStyle = '#eee';
+    Turtle.ctxScratch.fillStyle = '#eee';
+    Turtle.ctxScratch.lineWidth = 4;
+  } else {
     Turtle.ctxScratch.strokeStyle = '#000000';
     Turtle.ctxScratch.fillStyle = '#000000';
+    Turtle.ctxScratch.lineWidth = 5;
   }
-  Turtle.ctxScratch.lineWidth = 5;
+
   Turtle.ctxScratch.lineCap = 'round';
   Turtle.ctxScratch.font = 'normal 18pt Arial';
   Turtle.display();
@@ -479,7 +482,7 @@ Turtle.animate = function() {
 
   if (skin.id == "anna" || skin.id == "elsa") {
   
-    if (api.log.length == 0) {
+    if (api.log.length === 0) {
       document.getElementById('spinner').style.visibility = 'hidden';
       Blockly.mainWorkspace.highlightBlock(null);
       Turtle.checkAnswer();
