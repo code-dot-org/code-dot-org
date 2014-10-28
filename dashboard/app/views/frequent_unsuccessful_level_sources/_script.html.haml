@@ -4,20 +4,14 @@
 .row#stats
   .span12#rightside
     .user-stats-block
-      - levels = script.script_levels.group_by{ |sl| sl.stage ? sl.stage : sl.level.game }
+      - levels = script.script_levels.group_by(&:stage_or_game)
       - levels = levels.select {|stage_or_game, _| !stage_or_game.unplugged? }
       - levels.each_pair do |stage_or_game, sl_group|
-        - stage_title = data_t_suffix('script.name', script.name, stage_or_game.name)
-        - game_title = (data_t('game.name', stage_or_game.name) || stage_or_game.name)
         - color = cycle '#dadada', '#eeeeee'
-        - custom_script = stage_or_game.instance_of? Stage
         - next if stage_or_game.unplugged?
         .game-group{style:"background-color: #{color}"}
           .stage 
-            = stage_title + (custom_script ? '' : ': ')
-            - unless custom_script # Custom script stages don't map to specific games
-              %span.game-title<
-                =game_title
+            = stage_title(script, stage_or_game)
           .games
             - sl_group.each do |sl|
               .level

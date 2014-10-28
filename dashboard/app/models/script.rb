@@ -134,6 +134,10 @@ class Script < ActiveRecord::Base
     return ['course1', 'course2', 'course3'].include? self.name
   end
 
+  def has_lesson_plan?
+    k5_course?
+  end
+
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
   SCRIPT_MAP = Hash[SCRIPT_CSV_MAPPING.map { |x| x.include?(':') ? x.split(':') : [x, x.downcase] }]
 
