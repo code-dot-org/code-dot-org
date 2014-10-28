@@ -200,7 +200,7 @@ Turtle.drawLogOnCanvas = function(log, canvas) {
   BlocklyApps.reset();
   while (log.length) {
     var tuple = log.shift();
-    Turtle.step(tuple[0], tuple.splice(1));
+    Turtle.step(tuple[0], tuple.splice(1), {smoothAnimate: false});
   }
   canvas.globalCompositeOperation = 'copy';
   canvas.drawImage(Turtle.ctxScratch.canvas, 0, 0);
@@ -502,7 +502,7 @@ Turtle.animate = function() {
     BlocklyApps.highlight(id);
 
     // execute and display the command
-    var shouldRepeat = Turtle.step(command, tuple.slice(1));
+    var shouldRepeat = Turtle.step(command, tuple.slice(1), {smoothAnimate: true});
     Turtle.display();
 
     // remove the tuple if we've done it enough times
@@ -527,7 +527,7 @@ Turtle.animate = function() {
     command = tuple.shift();
     BlocklyApps.highlight(tuple.pop());
 
-    Turtle.step(command, tuple);
+    Turtle.step(command, tuple, {smoothAnimate: false});
     Turtle.display();
   }
   // Scale the speed non-linearly, to give better precision at the fast end.
@@ -545,14 +545,15 @@ Turtle.animate = function() {
  * @param {string} command Logo-style command (e.g. 'FD' or 'RT').
  * @param {!Array} values List of arguments for the command.
  * @param {number} fraction How much of this step's distance do we draw?
+ * @param {object} single option for now: smoothAnimate (true/false)
  */
-Turtle.step = function(command, values) {
+Turtle.step = function(command, values, options) {
   var shouldRepeat = false;
 
   switch (command) {
     case 'FD':  // Forward
       distance = values[0];
-      if (skin.id == "anna" || skin.id == "elsa")
+      if (options && options.smoothAnimate)
       {
         distance /= jumpSubsteps;
         console.log('fd', distance);
@@ -562,7 +563,7 @@ Turtle.step = function(command, values) {
       break;
     case 'JF':  // Jump forward
       distance = values[0];
-      if (skin.id == "anna" || skin.id == "elsa")
+      if (options && options.smoothAnimate)
       {
         distance /= jumpSubsteps;
         shouldRepeat = true;
@@ -571,7 +572,7 @@ Turtle.step = function(command, values) {
       break;
     case 'MV':  // Move (direction)
       var distance = values[0];
-      if (skin.id == "anna" || skin.id == "elsa")
+      if (options && options.smoothAnimate)
       {
         distance /= jumpSubsteps;
         shouldRepeat = true;
@@ -582,7 +583,7 @@ Turtle.step = function(command, values) {
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
-      if (skin.id == "anna" || skin.id == "elsa")
+      if (options && options.smoothAnimate)
       {
         distance /= jumpSubsteps;
         shouldRepeat = true;
@@ -593,7 +594,7 @@ Turtle.step = function(command, values) {
       break;
     case 'RT':  // Right Turn
       var angle = values[0];
-      if (skin.id == "anna" || skin.id == "elsa")
+      if (options && options.smoothAnimate)
       {
         angle /= jumpSubsteps;
         shouldRepeat = true;
