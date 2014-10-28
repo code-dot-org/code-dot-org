@@ -480,6 +480,9 @@ Turtle.animate = function() {
   // All tasks should be complete now.  Clean up the PID list.
   Turtle.pid = 0;
 
+  var command;
+  var tuple;
+
   if (skin.id == "anna" || skin.id == "elsa") {
   
     if (api.log.length === 0) {
@@ -489,10 +492,10 @@ Turtle.animate = function() {
       return;
     }
 
-    var tuple = api.log[0];
+    tuple = api.log[0];
 
     // grab the command and id
-    var command = tuple[0];
+    command = tuple[0];
     var id = tuple[tuple.length-1];
 
     // highlight the correct block
