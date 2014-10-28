@@ -43,9 +43,9 @@ Here is how you can promote your school's new computer science program:
 
 ## 7) Use an "In partnership with Code.org" logo for additional promotional materials or announcements.
 
-[![image](/images/partnerlogohorizontal.png)](files/partner-logo.zip)
+[![image](/images/partnerlogohorizontal.png)](/files/partner-logo.zip)
 
-[Download graphics file](files/partner-logo.zip)
+[Download graphics file](/files/partner-logo.zip)
 
 ### More resources to share with teachers
 - [Top 4 Ways to Recruit Girls to Try Computer Science](/girls)

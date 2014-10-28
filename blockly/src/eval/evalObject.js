@@ -1,6 +1,7 @@
 var EvalObject = function () {
-  this.x_ = 0;
-  this.y_ = 0;
+  // x/y location in pixel space
+  this.x_ = 200;
+  this.y_ = 200;
 };
 module.exports = EvalObject;
 

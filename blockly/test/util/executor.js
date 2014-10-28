@@ -152,5 +152,8 @@ function setAppSpecificGlobals (app) {
     case 'calc':
       global.Calc = window.Calc;
       break;
+    case 'eval':
+      global.Eval = window.Eval;
+      break;
   }
 }

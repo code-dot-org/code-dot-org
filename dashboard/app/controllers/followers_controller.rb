@@ -57,8 +57,6 @@ class FollowersController < ApplicationController
       authorize! :destroy, f
       if @user.email.present? || @user.teachers.count > 1
         # if this was the student's first teacher, store that teacher id in the student's record
-        @user.update_attributes(:prize_teacher_id => @teacher.id) if @user.teachers.first.try(:id) == @teacher.id && @user.prize_teacher_id.blank?
-        
         f.delete
         FollowerMailer.student_disassociated_notify_teacher(@teacher, @user).deliver if removed_by_student && @teacher.email.present?
         FollowerMailer.teacher_disassociated_notify_student(@teacher, @user).deliver if !removed_by_student && @user.email.present?

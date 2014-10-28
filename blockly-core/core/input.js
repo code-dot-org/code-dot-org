@@ -217,11 +217,11 @@ Blockly.Input.prototype.isInline = function () {
   return this.inline_ || this.sourceBlock_.inputsInline;
 };
 
-Blockly.Input.prototype.setColour = function (hsv) {
+Blockly.Input.prototype.setHSV = function (hue, saturation, value) {
   if (this.type !== Blockly.FUNCTIONAL_INPUT) {
     throw "setColor only for functional inputs";
   }
-  this.colour_ = hsv;
+  this.colour_ = { hue: hue, saturation: saturation, value: value };
 
   return this;
 };

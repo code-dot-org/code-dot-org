@@ -1776,6 +1776,15 @@ Blockly.BlockSvg.prototype.renderDrawRightNextStatement_ = function(renderInfo, 
 Blockly.BlockSvg.prototype.renderDrawRightInline_ = function(renderInfo, inputRows, rowIndex, connectionsXY) {
   var row = inputRows[rowIndex];
   var hasFunctionalInput = false;
+  if(row[0].type === Blockly.FUNCTIONAL_INPUT) {
+    var widths = BS.SEP_SPACE_X * (row.length - 1);
+    row.forEach(function(input) {
+      widths += input.renderWidth
+    });
+    if(inputRows.rightEdge > widths) {
+      renderInfo.curX = (inputRows.rightEdge - widths) / 2
+    }
+  }
   for(var x = 0, input;input = row[x];x++) {
     var titleX = renderInfo.curX;
     var titleY = renderInfo.curY + BS.TITLE_HEIGHT;
@@ -13400,6 +13409,7 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ = function
   this.inputMarkers_[input.name].setAttribute("width", input.renderWidth - 10);
   this.inputMarkers_[input.name].setAttribute("height", 5);
   this.inputMarkers_[input.name].setAttribute("fill", input.getHexColour());
+  this.inputMarkers_[input.name].setAttribute("visibility", input.connection.targetConnection ? "hidden" : "visible");
   renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
   var connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_WIDTH;
   var connectionY = connectionsXY.y + inputTopLeft.y;
@@ -13824,11 +13834,11 @@ Blockly.Input.prototype.isInline = function() {
   }
   return this.inline_ || this.sourceBlock_.inputsInline
 };
-Blockly.Input.prototype.setColour = function(hsv) {
+Blockly.Input.prototype.setHSV = function(hue, saturation, value) {
   if(this.type !== Blockly.FUNCTIONAL_INPUT) {
     throw"setColor only for functional inputs";
   }
-  this.colour_ = hsv;
+  this.colour_ = {hue:hue, saturation:saturation, value:value};
   return this
 };
 Blockly.Input.prototype.getHexColour = function() {

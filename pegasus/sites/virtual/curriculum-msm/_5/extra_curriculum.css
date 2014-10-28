@@ -1,0 +1,149 @@
+body {
+  font-family: 'Gotham A','Gotham B',sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: dimgray;
+  margin: 0px;
+  background: white;
+}
+
+.content h1 {
+  color:black;
+  font-size: 80px;
+  line-height: 80px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid black;
+  margin-right:20px;
+  margin-bottom:30px;
+}
+
+.content h2, .BootstrapLessonTitle {
+  font-size: 1.5em;
+  font-weight: bold;
+  color:rgb(120,101,161);
+  text-transform:uppercase;
+  margin-bottom:0px;
+  margin-top:40px;
+  background: none;
+}
+
+.content h3 {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.content ul {
+  margin-top:0px;
+  padding-left: 20px;
+}
+
+.content p {
+  margin-top:0px;
+}
+
+.headercontent h1, .BootstrapTitle {
+  font-size: 30px;
+  line-height: 30px;
+  margin-top:30px;
+  margin-bottom:30px;
+}
+
+.headercontent {
+  margin-left:40px;
+  padding-top:0px;
+  padding-bottom:10px;
+  padding-right:20px;
+  margin-bottom: 50px;
+}
+
+.content {
+  padding-left:40px;
+}
+
+.summary {
+  margin-right:20px;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.25);
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.summary h3 {
+  font-weight: normal;
+}
+
+.summary p {
+  margin-left:20px;
+}
+
+.tip {
+  position: relative;
+}
+
+.tip h1 {
+  font-size: 14px;
+  border-radius: 10px;
+  padding:5px;
+  border-color:orange;
+  display: inline-block;
+  float: left;
+  background-color:grey;
+  color:white;
+  font-style:italic;
+  margin-top:0px;
+  margin-bottom:0px;
+  line-height:14px;
+  padding-left:15px;
+  padding-right:15px;
+  border-style:solid;
+  border-width:2px;
+  -webkit-print-color-adjust: exact;
+}
+
+.tip p, .teacher {
+  font-size:13px;
+  line-height:16px;
+  font-style:italic;
+  color:orange;
+  display: block;
+  overflow: hidden;
+}
+
+
+.main{font-family: 'Gotham A','Gotham B',sans-serif;}
+
+.BootstrapTitle img{float: right; width: 90px; height: 90px;}
+.TitleUnitNum{font-size: 12px; }
+.BootstrapLength {
+  font-weight: normal;
+  border-top: solid 1px black;
+}
+#overviewDescr {background: none; border: none; font-style: normal; margin-left: 40px;}
+#overviewDescr .BootstrapHeader{display: block;}
+
+.OverviewBoundary, div.ExtraExercises{border: none; margin-left: 40px; background: none;}
+
+.segment ul.lesson{border-bottom: none;}
+ul.lesson li div.teacher{
+  height: auto;
+  padding-bottom: 32767px;
+  margin-bottom: -32767px;
+  background:     none;
+  box-shadow:     none;
+  margin-left:    0px;
+}
+ul.lesson li div.student{width: 480px;}
+ul.lesson .embedded-wescheme{width: 500px;}
+
+div.segment{border:none;}
+span.BootstrapLessonTitle{
+  border-top: solid 2px black;
+  padding-top: 10px;
+  margin-bottom: 50px;
+}
+.OverviewBoundary p{margin-left: 0px;}
+.segment ul.teacherNotes li+li .teacher{box-shadow: none; border-top: none;}
+div#lessonToolbar, #lessonToolbar.fixed{display: none;}
