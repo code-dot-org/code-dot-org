@@ -7750,15 +7750,16 @@ exports.install = function(blockly, generator, gensym) {
  installDrawLowerWave(blockly, generator, gensym);
 };
 
-function createACircleCode (size, gensym) {
+function createACircleCode (size, gensym, indent) {
   var loopVar = gensym('count');
+  indent = indent || '';
   return [
-    '// create_a_circle',
-    'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 36; ' +
-          loopVar + '++) {',
-    '  Turtle.moveForward(' + size + ');',
-    '  Turtle.turnRight(10);',
-    '}\n'].join('\n');
+    indent + '// create_a_circle',
+    indent + 'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 36; ' +
+    indent +       loopVar + '++) {',
+    indent + '  Turtle.moveForward(' + size + ');',
+    indent + '  Turtle.turnRight(10);',
+    indent + '}\n'].join('\n');
 }
 
 
@@ -7863,8 +7864,8 @@ function installCreateASnowflower(blockly, generator, gensym) {
     return [
       '// draw_a_snowflower',
       'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 5; ' + loopVar + '++) {',
-      createACircleCode(2, gensym),
-      createACircleCode(4, gensym),
+      createACircleCode(2, gensym, '  '),
+      createACircleCode(4, gensym, '  '),
       '  Turtle.turnRight(72);',
       '}\n'].join('\n');
   };
