@@ -31,7 +31,7 @@ function createACircleCode (size, gensym) {
     '  Turtle.moveForward(' + size + ');',
     '  Turtle.turnRight(10);',
     '}\n'].join('\n');
-};
+}
 
 
 /**
@@ -106,12 +106,12 @@ function installCreateACircle(blockly, generator, gensym) {
 
   generator.create_a_circle = function() {
     return createACircleCode(10, gensym);
-  }
+  };
 
   generator.create_a_circle_size = function() {
     var size = generator.valueToCode(this, 'VALUE', generator.ORDER_ATOMIC);
     return createACircleCode(size, gensym);
-  }
+  };
 }
 
 /**
