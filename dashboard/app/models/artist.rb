@@ -112,6 +112,9 @@ class Artist < Blockly
     </category>
     <category name="Prebuilt">
       <block type="draw_a_triangle"></block>
+      <block type="create_a_circle"></block>
+      <block type="create_a_circle_size"></block>
+      <block type="create_a_snowflower"></block>
       <block type="draw_a_square_custom"></block>
       <block type="draw_a_house"></block>
       <block type="draw_a_flower"></block>
