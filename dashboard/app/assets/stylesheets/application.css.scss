@@ -306,7 +306,6 @@ th {
 }
 
 .game-group {
-  border-top: 2px solid #ccc;
   background-color: #eee;
   display: table;
   table-layout: fixed;
@@ -334,6 +333,10 @@ th {
       }
     }
   }
+}
+
+.game-group + .game-group {
+  border-top: 2px solid #ccc;
 }
 
 .puzzle-named {
@@ -723,16 +726,6 @@ html, body {
 .trophy_image {
   width: 45px;
   height: 45px;
-}
-
-.stage_separator {
-  padding-top: 8px;
-  margin-bottom: 4px;
-  border-bottom: 1px solid $inset_color;
-  border-bottom-style: inset;
-}
-.game-group:last-child .stage_separator {
-  display: none;
 }
 
 .prize-msg {
