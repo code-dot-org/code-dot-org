@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><title>Exercise: Creating Contracts From Examples</title><link rel="stylesheet" type="text/css" href="scribble.css" title="default"/><link rel="stylesheet" type="text/css" href="pretty-printing.css" title="default"/><link rel="stylesheet" type="text/css" href="codemirror.css" title="default"/><link rel="stylesheet" type="text/css" href="bootstrap.css" title="default"/><link rel="stylesheet" type="text/css" href="textbook.css" title="default"/><link rel="stylesheet" type="text/css" href="extra_curriculum.css" title="default"/><script type="text/javascript" src="scribble-common.js"></script><script type="text/javascript" src="codemirror.js"></script><script type="text/javascript" src="runmode.js"></script><script type="text/javascript" src="scheme2.js"></script><script type="text/javascript" src="bootstraplesson.js"></script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML%2Chttp%3A%2F%2Fwww.cs.wpi.edu%2F%7Ekfisler%2Fmathjaxlocal.js"></script><!--[if IE 6]><style type="text/css">.SIEHidden { overflow: hidden; }</style><![endif]--></head><body id="scribble-racket-lang-org"><div class="tocset"><div class="tocview"><div class="tocviewlist tocviewlisttopspace"><div class="tocviewtitle"><table cellspacing="0" cellpadding="0"><tr><td style="width: 1em;">&bull;</td><td></td><td><a href="" class="tocviewselflink" data-pltdoc="x">Exercise:<span class="mywbr"> &nbsp;</span> Creating Contracts From Examples</a></td></tr></table></div></div></div><div class="tocsub"><table class="tocsublist" cellspacing="0"><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Exercise__.Creating_.Contracts_.From_.Examples%29" class="tocsubseclink" data-pltdoc="x">Exercise:<span class="mywbr"> &nbsp;</span> Creating Contracts From Examples</a></td></tr></table></div></div><div class="maincolumn"><div class="main"><a name="(part._.Exercise__.Creating_.Contracts_.From_.Examples)"></a><p><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script><noscript></noscript><script type="text/javascript" src="easyXDM.min.js"></script><noscript></noscript><script type="text/javascript" src="json2.min.js"></script><noscript></noscript><script type="text/javascript" src="bootstrap-helpers.js"></script><noscript></noscript></p><p><span class="BootstrapTitle">Exercise: Creating Contracts From Examples</span></p><div class="content"><div class="segment " id="exercises"><div class="exercise-instr"><span style="font-weight: bold">Directions: </span>For each of the following collections of <span style="font-style: italic">Example</span>s, write the contract
+           for the function above the examples.</div><ol><li><div class="ExerciseListItem">; <span class="contract-name studentAnswer"></span> : <span class="contract-domain studentAnswer"></span> -&gt; <span class="contract-range studentAnswer"></span>&nbsp;<textarea>
+(EXAMPLE (big-triangle 100 "red") 
+         (triangle 100 "solid" "red"))
+(EXAMPLE (big-triangle 100 "orange") 
+         (triangle 100 "solid" "orange"))
+</textarea></div></li><li><div class="ExerciseListItem">; <span class="contract-name studentAnswer"></span> : <span class="contract-domain studentAnswer"></span> -&gt; <span class="contract-range studentAnswer"></span>&nbsp;<textarea>
+(EXAMPLE (purple-square 15) 
+         (rectangle 15 15 "outline" "purple"))
+(EXAMPLE (purple-square 6) 
+         (rectangle 6 6 "outline" "purple"))
+</textarea></div></li><li><div class="ExerciseListItem">; <span class="contract-name studentAnswer"></span> : <span class="contract-domain studentAnswer"></span> -&gt; <span class="contract-range studentAnswer"></span>&nbsp;<textarea>
+(EXAMPLE (banner "Game Today!") 
+         (text "Game Today!" 50 "red"))
+(EXAMPLE (banner "Go Team!") 
+         (text "Go Team!" 50 "red"))
+(EXAMPLE (banner "Exit") 
+         (text "Exit" 50 "red"))
+</textarea></div></li><li><div class="ExerciseListItem">; <span class="contract-name studentAnswer"></span> : <span class="contract-domain studentAnswer"></span> -&gt; <span class="contract-range studentAnswer"></span>&nbsp;<textarea>
+(EXAMPLE (twinkle 5 "outline") 
+         (star 5 "outline" "yellow"))
+(EXAMPLE (twinkle 15 "solid") 
+         (star 15 "solid" "yellow"))
+(EXAMPLE (twinkle 36 "outline") 
+         (star 36 "outline" "yellow")
+</textarea></div></li><li><div class="ExerciseListItem">; <span class="contract-name studentAnswer"></span> : <span class="contract-domain studentAnswer"></span> -&gt; <span class="contract-range studentAnswer"></span>&nbsp;<textarea>
+(EXAMPLE (half 2)
+         (/ 2 2))
+(EXAMPLE (half 4) 
+         (/ 4 2))
+(EXAMPLE (half 9) 
+         (/ 9 2))
+</textarea></div></li><li><div class="ExerciseListItem">; <span class="contract-name studentAnswer"></span> : <span class="contract-domain studentAnswer"></span> -&gt; <span class="contract-range studentAnswer"></span>&nbsp;<textarea>
+(EXAMPLE (how-long? "Soccer") 
+         6)
+(EXAMPLE (how-long? "Cupcakes") 
+         8)
+(EXAMPLE (how-long? "Hi Mom") 
+         6)
+</textarea></div></li><li><div class="ExerciseListItem">; <span class="contract-name studentAnswer"></span> : <span class="contract-domain studentAnswer"></span> -&gt; <span class="contract-range studentAnswer"></span>&nbsp;<textarea>
+(EXAMPLE (shrink (circle 10 "solid" "green"))
+         (scale .5 (circle 10 "solid" "green")))
+(EXAMPLE (shrink (rectangle 20 6 "solid" "orange"))
+         (scale .5 (rectangle 20 6 "solid" "orange")))
+</textarea></div></li></ol></div></div><div id="copyright"><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="pict.png" alt="image" width="88" height="31"/></a>Bootstrap by <a href="http://www.bootstrapworld.org/">Emmanuel Schanzer</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons 3.0 Unported License</a>. Based on a work at <a href="http://www.bootstrapworld.org/">www.BootstrapWorld.org</a>. Permissions beyond the scope of this license may be available at <a href="mailto:schanzer@BootstrapWorld.org">schanzer@BootstrapWorld.org</a>.</div></div></div><div id="contextindicator">&nbsp;</div></body></html>

@@ -1,0 +1,411 @@
+.maincolumn { margin-left: 5px;}
+.main{width: 800px;}
+div.content{	background:		rgba(255, 255, 255, .3); }
+
+/************************************************************************************
+ * LESSON TOOLBAR
+ * Sits on the bottom of the page at all times
+ * Displays buttons for teachers
+*/
+div#lessonToolbar{
+  display:      block;
+  z-index:      999;
+  text-align:   center;
+}
+
+div#lessonToolbar * {margin: 10px; display: inline-block;}
+
+div#lessonToolbar.fixed{
+  position:     fixed;
+  left:         804px;
+  top:          0px;
+  background:   black;
+  border-bottom-right-radius: 10px;
+}
+/************************************************************************************
+ * OVERVIEW PAGE
+ * Lesson overviews contain logo, various lists, Language Table, title and duration
+ * Unit overviews include an agenda, and a concatenation of lesson overview lists
+*/
+.BootstrapHeader{
+	  font-weight:  bold;
+	  font-size:    16px;
+    margin-top:   15px;
+    margin-right: 5px;
+}
+
+/* Overview design */
+.BootstrapOverviewTitle{
+    background:   black;
+    color:        white;
+    font-size:    18px;
+    margin:       0px;
+    display:      block;
+}
+
+#overviewDescr {
+    background:     lightgray;
+    border:         solid 1px black;
+    border-bottom:  none;
+    font-style:     italic;
+    padding:        5px;
+    padding-bottom:  10px;
+}
+#overviewDescr .BootstrapHeader{display: none;}
+.summary {
+    padding:      5px;
+    background:   lightgray;
+    border:       solid 1px black;
+    border-top:   none;
+    min-height:   100px;
+}
+
+/*Table Design*/
+.BootstrapTableHeader{
+	background:     lightgrey;
+  color:          black;
+	font-weight:    bold;
+  padding:        5px;
+  font-family:    monospace;
+}
+.BootstrapTable{
+	width:          300px;
+	border:         1px solid black;
+	background:     white;
+  padding:        0px;
+}
+
+table {  margin:         20px auto; }
+
+#BootstrapAgenda{
+	border:         1px solid black;
+	display:        inline-block;
+	text-align:     center;
+	background:     white;
+	float:          right;
+	font-weight:    bold;
+	position:       relative;
+  padding:        5px;
+  margin:         0px 0px 10px 10px;
+  width:          225px;
+}
+  
+ul.BootstrapAgendaList{
+  text-align:     left;
+  font-weight:    normal;
+  font-size:      12px;
+  list-style-type: none;
+  padding:        0px;
+}
+
+li.BootstrapAgendaListItem{clear: both;}
+ul.BootstrapAgendaList .BSLessonName{float: left;}
+
+.BootstrapPreparationList, .BootstrapMaterialsList{
+  margin: 0px;
+  list-style-image: url('box.gif');
+}
+
+/* Standards and Evidence Statements (make sub-lists fade in and out of view) */
+ul.EvidenceStatementsList{ opacity: 0; height: 0px; overflow: hidden;}
+li.LearningObjectivesListItem:hover ul.EvidenceStatementsList,
+  ul.EvidenceStatementsList:hover{opacity: 1; height: auto;}
+
+
+
+/************************************************************************************
+ * LESSON SEGMENT
+ * All Segments contain an Overview, a Student and Teacher column, as well as a Header
+ * The Overview contains a brief description, and various lists we track
+ * The Header contains a title, time, and the stoplight
+   ****************************************************************************/
+
+div.overview{
+  display:      none;
+	background:		lightgray; 
+	margin:       5px;
+	padding-bottom: 20px;
+}
+.overview h2 {float: none; clear: none;}
+.overview img {float: left; position: relative; top: -50px; margin-bottom: -50px;}
+
+.OverviewBoundary, .LessonBoundary{margin: 0px; display: block;}
+
+.BootstrapLessonTitle{
+    background: black;
+    color: white;
+    font-size: 18px;
+    display: block;
+}
+.BootstrapPageTitle{display: none; font-size: 24px; margin-top: 0px;}
+.BSLessonDuration{float: right;}
+
+span.time{float: right; padding-right: 5px;}
+span.board{font-weight: bold; padding: 40px;}
+
+ul.todo li {list-style-image: url('images/box.gif');}
+
+table.bordered {
+  border-collapse: collapse;
+	border:       solid 1px black;
+	background:		white; 
+	margin-left:	0px;
+	font-size:		12px;
+}
+table.bordered td{border: solid 1px black; margin: 10px; padding: 5px; min-width: 30px;}
+tr.number{color:  blue}
+tr.string{color:  green}
+tr.image{color:   purple}
+tr.boolean{color: red}
+tr.position{color:orange}
+
+input#prev{display:none;}
+input#next{display:none;}
+input#toggle{display:none;}
+
+
+
+div.ExtraExercises, div.segment{
+  border:     1px solid black;
+  background:	rgba(255, 255, 255, .8);
+  overflow:   hidden;
+}
+
+.remediation, .misconception, .challenge{
+  width:      12px;
+  height:     12px;
+  display:    inline-block;
+  float:      right;
+  margin:     5px;
+  border-radius: 6px; 
+}
+
+.callout{
+  width:      400px;
+  border:     solid 3px black;
+  font-size:  12px;
+  font-weight:normal;
+  color:      black;
+  background: white; 
+  position:   relative;
+  display:    none;
+  top:        12px;
+  left:       -380px;
+  box-shadow: 5px 5px 5px #888888;
+  padding:    10px;
+}
+
+span.remediation    {background: red;}
+span.misconception {background: yellow;}
+span.challenge  {background: green;}
+span.remediation>div:before{content: 'If they get stuck..'}
+span.misconception>div:before{content: 'Proceed with caution...'}
+span.challenge>div:before{content: 'Moving ahead...'}
+.remediation:hover .callout, .misconception:hover .callout, .challenge:hover .callout,  .callout:hover{
+  display: block; 
+  background: white;
+  z-index: 2;
+}
+
+.segment ul.lesson{
+  margin:         0px;
+  padding-left:   0px;
+  list-style-type:none;
+  max-width:      790px;
+}
+
+
+/************************************************************************************
+ * INDIVIDUAL LESSON ITEMS
+ * lessonItems represent the smallest meaningful unit of content
+ * Each lessonItem contains a student and teacher DIV, and multiple
+ * possible components (activities, codeblocks, embedded WeSchemes, etc)
+*/
+
+li.lessonItem{
+  width:          1270px;
+  vertical-align: top;
+  overflow:       hidden;
+  position:       relative;
+  padding:        0px 10px;
+  padding-bottom: 30px;
+  clear:          both;
+  margin:         0px;
+}
+.segment ul.teacherNotes li+li .teacher{box-shadow: inset 3px -3px 3px black; border-top: none;}
+
+div.teacher{
+  width:          250px;
+  display:        inline-block;
+  height:         auto;
+  vertical-align: top;
+  padding-left:   10px;
+  padding-right:  10px;
+  margin-left:    20px;
+  box-shadow:     inset 3px 0px 3px black;
+  background:     lightgray;
+  padding-bottom: 32767px;
+  margin-bottom: -32767px;
+}
+div.student{
+  width: 780px; 
+  display: inline-block; 
+}
+ul.teacherNotes li div.student{width: 500px;}
+ul.teacherNotes .embedded-wescheme{width: 500px;}
+
+/* show lists normally inside a lessonItem */
+li.lessonItem li{
+  width:      100%;
+  padding:    0px;
+  list-style-position: inside;
+}
+
+
+/* embedded WeSchemes should be full-width, and transform during animation */
+.embedded-wescheme{width: 780px; margin-bottom: 40px;}
+.embedded-wescheme .editbox{display: none;}
+.embedded-wescheme .refreshButton {background: black; color: white; font-size: 16px; border: outset;}
+
+/* make sure inline code is never broken across lines */
+.editbox{white-space: nowrap;}
+
+.management{margin-bottom: 10px; color: darkblue;}
+div.activity{
+  width:          100%;
+  padding:        10px 0px;
+  background:     rgba(200,200,255,0.5);
+  margin:         10px 0px;
+  display:        inline-block;
+  border-top:     dashed 1px black;
+  border-bottom:  dashed 1px black;
+  vertical-align: middle;
+}
+
+img{float: right; padding: 5px;}
+img.video{width: 20px; height: 20px; padding: 0px; margin: 0px;}
+div.activity li img{float: none;}
+
+/* all banners have borders, and text is bold */
+div.banner{
+  display:        inline-block;
+  width:          100%;
+  margin:         10px 0px;
+  padding:        5px;
+  font-weight:    bold;
+  color:          black;
+  border-top:     solid 1px black;
+  border-bottom:  solid 1px black;
+}
+/* Banner images are centered */
+div.banner img{float: none; margin-left: auto; margin-right: auto; display: block;}
+div.banner span.MathJax{display: block; clear: both;}
+
+div.embedded-wescheme-alt{
+  display:        inline-block;
+  width:          100%;
+  margin:         10px 0px;
+  padding:        5px;
+}
+
+td.header{background: lightgray; font-weight: bold; text-align: center;}
+table tr{height: 16px;}
+tt{font: Courier;}
+
+td.vertical {
+	writing-mode:tb-rl;
+	transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform: rotate(90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+span.wp { font-weight:   bold; }
+span.vocab{font-style:  italic; font-weight: bold; color: darkblue;}
+
+div.ExtraExercises {background:	rgba(200, 200, 200, .8); }
+
+div#copyright{
+  display: inline-block;
+  border-top: dashed 2px black;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/************************************************************************************
+ * ANIMATIONS
+ * consolidate all vendor prefixes into one place
+*/
+
+ul.EvidenceStatementsList, ul.teacherNotes li div.teacher, div.student, .embedded-wescheme, iframe#forum_embed{
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+/************************************************************************************
+ * EMBEDDED GOOGLE GROUP
+*/
+
+iframe#forum_embed{
+  width:    80%;
+  height:   80%;
+  z-index:  -1;
+  position: fixed;
+  left:     30px;
+  top:      30px;
+  margin:   20px;
+  visibility:hidden;
+  opacity:  0;
+  background: white;
+  box-shadow: 5px 5px 7px #000;
+  -moz-box-shadow: 5px 5px 7px #000;
+  -webkit-box-shadow: 5px 5px 7px #000;
+}
+
+iframe#forum_embed.shown{
+  opacity: 1; visibility: visible;  z-index:  100;
+}
+
+/************************************************************************************
+ * PRINT MEDIA
+ * Hide callouts, embedded WeSchemes, box-shadows, and background images
+ * which are styled a little differently
+*/
+@page  {
+    size: 8.5in 11in;
+
+    /* this affects the margin in the printer settings */ 
+    margin: .5in;
+}
+
+@media print {
+  /* turn off backgrounds, borders, shadows and elements we don't want to print */
+	body                                                                          {background: none;}
+  div.segment, div.teacher, li.lessonItem, table.bordered td, 
+  div.ExtraExercises, div.content                                               {border: none;}
+  div.teacher, .segment ul.teacherNotes li+li .teacher                          {box-shadow: none;}
+  div#lessonToolbar, iframe#forum_embed, input, div.callout, .embedded-wescheme {display: none;}
+
+  /* page breaks */
+  .LessonBoundary                                                               {page-break-before: always;}
+  #LearningObjectives,#Glossary, #Materials, table, img,
+    div.activity                                                                {page-break-inside: avoid;}
+
+  /* styling we want CHANGED for the printed page */
+	.content	{font-size: 16px; display: inline-block;}
+  span.vocab {color: black;}
+  .BootstrapLessonTitle{color: black; border-top: solid 3px black; font-size: 30px; margin-bottom: 50px;}
+  table.bordered td {padding: 0px;}
+  li.lessonItem>*:first-child {padding-bottom: 10px;}
+  div.teacher{border-left: solid 1px gray; font-style: italic;}
+  
+    /* Fix for Firefox printing, which is terribly broken. See:
+   *  http://www.bennadel.com/blog/851-Fixing-DIVs-That-Cause-Content-Truncation-When-Printing.htm
+   */
+  @-moz-document url-prefix() {
+    div.content{display: inline;}
+  }
+}
