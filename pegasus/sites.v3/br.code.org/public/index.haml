@@ -5,14 +5,15 @@ theme: responsive
 responsivePadMobile: yes
 social:
   'og:title' : 'A Hora do Código do Brasil está chegando'
-  'og:description' : "Para todos os alunos e salas de aula do Brasil: veja como é divertido aprender programação em apenas uma hora, de 8 a 14 de dezembro."
+  'og:description' : "A Hora do Código é um movimento global que atinge dezenas de milhões de estudantes em mais de 180 países e mais de 30 idiomas. Podem participar pessoas com idades entre 4 e 104 anos."
   'og:image' : "http://br.code.org/images/ogimage.png"
-  'og:image:width' : ""
-  'og:image:height' : ""
+  'og:image:width' : "1200"
+  'og:image:height' : "626"
+  "og:url": "http://br.code.org"
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
-  "og:video:type": ""
+  "og:video:type": "" 
 ---
 
 #top{:style=>"margin-top: 40px;"}
@@ -22,7 +23,7 @@ social:
   #start.col-36{:style=>'text-align:center; margin-top: 0'}
     .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
       %h1{:style=>"font-size: 56px; line-height: 56px; margin: 0;"}<
-        =format_integer_with_commas(fetch_hoc_metrics['started']).to_s
+        =format_integer_with_decimals(fetch_hoc_metrics['started']).to_s
       %h3{:style=>"font-size: 26px; line-height: 26px; font-weight: 400; margin-top: 5px; margin-bottom: 0;"}<
         participaram da
       %h2{:style=>"font-size: 36px; line-height: 36px; font-weight: 600; margin-top: 5px; margin-bottom: 0;"}<

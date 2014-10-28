@@ -40,10 +40,10 @@
   view_english_site: Vezi site-ul englez
   non_english_tutorials: 'Tutoriale traduse în mai multe limbi:'
   write_your_first_program: Scrie primul tău program de calculator
-  learn_cs_concepts: Învață conceptele de bază ale Informaticii cu programare de tip
-    "drag şi drop". Acesta este un tutorial asemănător unui joc, cu prezentări video
-    semnate de Bill Gates, Mark Zuckerberg, Angry Birds şi Plants vs Zombies. Învață
-    despre repetare-bucle, afirmații dacă-atunci şi algoritmi de bază.
+  learn_cs_concepts: "Învață conceptele de bază ale Informaticii cu programare drag
+    şi drop. Acesta este un tutorial asemănător unui joc, cu prezentări video semnate
+    de Bill Gates, Mark Zuckerberg, Angry Birds şi Plants vs Zombies. Învață despre
+    repetare-bucle, afirmații dacă-atunci şi algoritmi de bază."
   all_ages: Toate vârstele
   beginner: "Începător"
   n_participants: "# (de) participanți"
@@ -58,7 +58,7 @@
   get_a_certificate_message_after: Certificatul tău este pe drum. Acum, mergi mai
     departe cu al nostru <a href='http://learn.code.org'> curs de 20 de ore</a>, sau
     alege mai multe opţiuni la  <a href='/learn/beyond'> Învață mai mult de O Oră</a>.
-  thanks_for_submitting: Vă mulţumim pentru depunere!
+  thanks_for_submitting: Mulţumim pentru transmitere!
   if_you_enjoyed: Dacă ți-a făcut plăcere să înveți, sugerează-le și prietenilor tăi
     să încerce acest lucru. Vrem ca toată lumea să învețe.
   personalize_certificate: Personalizează-ți certificatul
@@ -84,7 +84,7 @@
   get_started: "Începe"
   i_agree: Sunt de acord
   participant_select: "-Selectează-"
-  participant_student: Elev
+  participant_student: elev
   participant_parent: Părinte
   participant_educator: Educator
   participant_engineer: Inginer de software
@@ -111,18 +111,18 @@
   boy: Băiat
   help_recruit_coders: Ajută-ne să recrutăm mai mulți programatori la echipa ta!
   help_recruit: Ajută-ne să recrutăm mai mulți programatori!
-  lines_of_code: PESTE <b># LINII DE CODARE</b> SCRISE PÂNĂ ÎN PREZENT.
-  lines_of_code_alt: "<b>#</b> LINII DE CODARE SCRISE DE STUDENȚI"
+  lines_of_code: PESTE <b># LINII DE COD</b> SCRISE PÂNĂ ÎN PREZENT.
+  lines_of_code_alt: "<b>#</b> LINII DE COD SCRISE DE STUDENȚI"
   who_has_done_hoc: 'Cine a făcut #OraDeCod? @codeorg'
   hoc_leaderboards: Clasamentele Orei de Cod
-  students_and_lines: "%{students} studenți au făcut Ora de Codare și au scris %{lines}
+  students_and_lines: "%{students} studenți au făcut Ora de Cod și au scris %{lines}
     de linii de cod."
   start_hoc: "Începe Ora de Cod acum"
   contact_form_topic_press: Presă/media (interviu sau angajamentul vorbit)
   studiobar_title: Explorează <a href='http://studio.code.org'>Studio-ul Code</a>
   studiobar_elementary_title: Cursuri elementare
   studiobar_elementary_body: Cele trei cursuri noi pentru K&#8209;5
-  studiobar_hoc_title: Ora de Cod
+  studiobar_hoc_title: Ora de Programare
   studiobar_hoc_body: "Învaţă să programezi cu Angry Birds"
   studiobar_flappy_title: Codul Flappy
   studiobar_flappy_body: Creează şi împărtăşeşte propriul tău joc Flappy
@@ -215,7 +215,7 @@
   dashboard_action_edit: Editează
   dashboard_action_save: Salvează
   dashboard_action_save_all: Salvează tot
-  dashboard_action_cancel: Anulează
+  dashboard_action_cancel: Revocare
   dashboard_action_delete: "Șterge"
   dashboard_action_confirm: "Șterge?"
   dashboard_action_delete_yes: Da
@@ -266,7 +266,7 @@
   dashboard_students_male: De sex masculin
   dashboard_students_female: De sex feminin
   dashboard_students_secret: Secret
-  dashboard_students_password: Parolă
+  dashboard_students_password: parolă
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -314,8 +314,21 @@
   dashboard_grade_other: Alte
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_none: E-mail
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: elev
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

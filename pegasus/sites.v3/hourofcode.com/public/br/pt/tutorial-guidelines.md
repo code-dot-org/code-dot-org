@@ -10,7 +10,7 @@ Gostaríamos de disponibilizar uma variedade de opções atrativas, mas nosso ob
 
 <a id="top"></a>
 
-## Índice
+## Índice:
 
   * [Como os tutoriais serão avaliados para inclusão](#inclusion)
   * [Diretrizes gerais para criação de uma atividade da Hora do Código](#guidelines)
@@ -165,13 +165,13 @@ Acesse a [página de envio de atividade da Hora do Código](https://docs.google.
 
 **Certifique-se de que seu tutorial pode ser usado em um [paradigma de Programação em Duplas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
 
-Estas são as três regras de programação em duplas no âmbito escolar:
+Estas são as três regras de programação em pares no âmbito escolar:
 
   * O condutor controla o mouse e o teclado.
   * O navegador faz sugestões, aponta os erros e faz perguntas. 
   * Os alunos devem alternar os papéis pelo menos duas vezes por sessão.
 
-Benefícios da programação em duplas:
+Benefícios da programação em pares:
 
   * Os alunos podem ajudar um ao outro em vez de depender do professor
   * É possível mostrar que a codificação não é uma atividade individual, mas que envolve interação social

@@ -19,6 +19,7 @@ var feedback = require('../feedback.js');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
+var Slider = require('../slider');
 var _ = utils.getLodash();
 
 /**
@@ -35,10 +36,12 @@ BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = true;
 //The number of blocks to show as feedback.
 BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
+var MAX_INTERPRETER_STEPS_PER_TICK = 50;
+
 // Default Scalings
 Webapp.scale = {
   'snapRadius': 1,
-  'stepSpeed': 33
+  'stepSpeed': 1
 };
 
 var twitterOptions = {
@@ -68,11 +71,47 @@ var drawDiv = function () {
   visualizationColumn.style.width = divWidth + 'px';
 };
 
-Webapp.onTick = function() {
-  Webapp.tickCount++;
+function queueOnTick() {
+  var stepSpeed = Webapp.scale.stepSpeed;
+  if (Webapp.speedSlider) {
+    stepSpeed = 300 * Math.pow(1 - Webapp.speedSlider.getValue(), 2);
+  }
+  window.setTimeout(Webapp.onTick, stepSpeed);
+}
 
-  if (Webapp.tickCount === 1) {
-    try { Webapp.whenRunFunc(BlocklyApps, api, Webapp.Globals); } catch (e) { }
+Webapp.onTick = function() {
+  if (!Webapp.running) {
+    return;
+  }
+
+  Webapp.tickCount++;
+  queueOnTick();
+
+  // Bail out here if paused (but make sure that we still have the next tick
+  // queued first, so we can resume after un-pausing):
+  if (Webapp.paused) {
+    return;
+  }
+
+  if (Webapp.interpreter) {
+    var inUserCode = false;
+    // In each tick, we will step the interpreter multiple times in a tight
+    // loop as long as we are interpreting code that the user can't see
+    // (function aliases at the beginning, getCallback event loop at the end)
+    for (var stepsThisTick = 0;
+         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !inUserCode;
+         stepsThisTick++) {
+      inUserCode = codegen.selectCurrentCode(Webapp.interpreter,
+                                             BlocklyApps.editor,
+                                             Webapp.cumulativeLength,
+                                             Webapp.userCodeStartOffset,
+                                             Webapp.userCodeLength);
+      Webapp.interpreter.step();
+    }
+  } else {
+    if (Webapp.tickCount === 1) {
+      try { Webapp.whenRunFunc(BlocklyApps, api, Webapp.Globals); } catch (e) { }
+    }
   }
 
   if (checkFinished()) {
@@ -107,8 +146,8 @@ Webapp.init = function(config) {
   loadLevel();
 
   var finishButtonFirstLine = _.isEmpty(level.softButtons);
-  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, finishButton: finishButtonFirstLine});
-  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine});
+  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, showSlider: config.level.editCode, finishButton: finishButtonFirstLine});
+  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine, debugButtons: config.level.editCode});
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -166,8 +205,26 @@ Webapp.init = function(config) {
 
   BlocklyApps.init(config);
 
+  if (level.editCode) {
+    // Initialize the slider.
+    var slider = document.getElementById('webapp-slider');
+    if (slider) {
+      Webapp.speedSlider = new Slider(10, 35, 130, slider);
+
+      // Change default speed (eg Speed up levels that have lots of steps).
+      if (config.level.sliderSpeed) {
+        Webapp.speedSlider.setValue(config.level.sliderSpeed);
+      }
+    }
+  }
+
   var finishButton = document.getElementById('finishButton');
   dom.addClickTouchEvent(finishButton, Webapp.onPuzzleComplete);
+
+  if (level.editCode) {
+    var pauseButton = document.getElementById('pauseButton');
+    dom.addClickTouchEvent(pauseButton, Webapp.onPauseButton);
+  }
 };
 
 /**
@@ -175,11 +232,9 @@ Webapp.init = function(config) {
  */
 Webapp.clearEventHandlersKillTickLoop = function() {
   Webapp.whenRunFunc = null;
-  if (Webapp.intervalId) {
-    window.clearInterval(Webapp.intervalId);
-  }
+  Webapp.running = false;
   Webapp.tickCount = 0;
-  Webapp.intervalId = 0;
+  Webapp.running = false;
 };
 
 /**
@@ -205,13 +260,32 @@ BlocklyApps.reset = function(first) {
   var divWebapp = document.getElementById('divWebapp');
   divWebapp.style.backgroundColor = 'white';
 
+  while (divWebapp.firstChild) {
+    divWebapp.removeChild(divWebapp.firstChild);
+  }
+
+  // Clone and replace divWebapp (this removes all attached event listeners):
+  var newDivWebapp = divWebapp.cloneNode(true);
+  divWebapp.parentNode.replaceChild(newDivWebapp, divWebapp);
+
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
   }
 
+  if (level.editCode) {
+    // Reset the pause button:
+    var pauseButton = document.getElementById('pauseButton');
+    pauseButton.textContent = webappMsg.pause();
+    pauseButton.disabled = true;
+    Webapp.paused = false;
+    document.getElementById('spinner').style.visibility = 'hidden';
+  }
+
   // Reset the Globals object used to contain program variables:
   Webapp.Globals = {};
+  Webapp.eventQueue = [];
+  Webapp.interpreter = null;
 };
 
 /**
@@ -280,10 +354,23 @@ Webapp.onReportComplete = function(response) {
 
 var defineProcedures = function (blockType) {
   var code = Blockly.Generator.workspaceToCode('JavaScript', blockType);
+  // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
+                         codeFunctions: level.codeFunctions,
                          BlocklyApps: BlocklyApps,
                          Studio: api,
                          Globals: Webapp.Globals } ); } catch (e) { }
+};
+
+/**
+ * A miniature runtime in the interpreted world calls this function repeatedly
+ * to check to see if it should invoke any callbacks from within the
+ * interpreted world. If the eventQueue is not empty, we will return an object
+ * that contains an interpreted callback function (stored in "fn") and,
+ * optionally, callback arguments (stored in "arguments")
+ */
+var nativeGetCallback = function () {
+  return Webapp.eventQueue.shift();
 };
 
 /**
@@ -300,31 +387,86 @@ Webapp.execute = function() {
 
   BlocklyApps.reset(false);
 
-  // Define any top-level procedures the user may have created
-  // (must be after reset(), which resets the Webapp.Globals namespace)
-  defineProcedures('procedures_defreturn');
-  defineProcedures('procedures_defnoreturn');
-
   // Set event handlers and start the onTick timer
-  var blocks = Blockly.mainWorkspace.getTopBlocks();
-  for (var x = 0; blocks[x]; x++) {
-    var block = blocks[x];
-    if (block.type === 'when_run') {
-      var code = Blockly.Generator.blocksToCode('JavaScript', [ block ]);
-      if (level.editCode) {
-        code = utils.generateCodeAliases(level.codeFunctions);
-        code += BlocklyApps.editor.getValue();
-      }
-      if (code) {
-        Webapp.whenRunFunc = codegen.functionFromCode(code, {
-                                            BlocklyApps: BlocklyApps,
-                                            Webapp: api,
-                                            Globals: Webapp.Globals } );
+
+  var codeWhenRun;
+  if (level.editCode) {
+    codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Webapp');
+    Webapp.userCodeStartOffset = codeWhenRun.length;
+    codeWhenRun += BlocklyApps.editor.getValue();
+    Webapp.userCodeLength = codeWhenRun.length - Webapp.userCodeStartOffset;
+    // Append our mini-runtime after the user's code. This will spin and process
+    // callback functions:
+    codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
+      'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
+    var session = BlocklyApps.editor.aceEditor.getSession();
+    Webapp.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+  } else {
+    // Define any top-level procedures the user may have created
+    // (must be after reset(), which resets the Webapp.Globals namespace)
+    defineProcedures('procedures_defreturn');
+    defineProcedures('procedures_defnoreturn');
+
+    var blocks = Blockly.mainWorkspace.getTopBlocks();
+    for (var x = 0; blocks[x]; x++) {
+      var block = blocks[x];
+      if (block.type === 'when_run') {
+        codeWhenRun = Blockly.Generator.blocksToCode('JavaScript', [ block ]);
+        break;
       }
     }
   }
+  if (codeWhenRun) {
+    if (level.editCode) {
+      // Use JS interpreter on editCode levels
+      var initFunc = function(interpreter, scope) {
+        codegen.initJSInterpreter(interpreter, scope, {
+                                          BlocklyApps: BlocklyApps,
+                                          Webapp: api,
+                                          Globals: Webapp.Globals } );
 
-  Webapp.intervalId = window.setInterval(Webapp.onTick, Webapp.scale.stepSpeed);
+
+        var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
+        var wrapper = codegen.makeNativeMemberFunction(interpreter,
+                                                       nativeGetCallback,
+                                                       null);
+        interpreter.setProperty(scope,
+                                'getCallback',
+                                interpreter.createNativeFunction(wrapper));
+      };
+      Webapp.interpreter = new window.Interpreter(codeWhenRun, initFunc);
+    } else {
+      Webapp.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
+                                          BlocklyApps: BlocklyApps,
+                                          Webapp: api,
+                                          Globals: Webapp.Globals } );
+    }
+  }
+
+  if (level.editCode) {
+    var pauseButton = document.getElementById('pauseButton');
+    pauseButton.disabled = false;
+    document.getElementById('spinner').style.visibility = 'visible';
+  }
+
+  Webapp.running = true;
+  queueOnTick();
+};
+
+Webapp.onPauseButton = function() {
+  if (Webapp.running) {
+    var pauseButton = document.getElementById('pauseButton');
+    // We have code and are either running or paused
+    if (Webapp.paused) {
+      Webapp.paused = false;
+      pauseButton.textContent = webappMsg.pause();
+    } else {
+      Webapp.paused = true;
+      pauseButton.textContent = webappMsg.continue();
+    }
+    document.getElementById('spinner').style.visibility =
+        Webapp.paused ? 'hidden' : 'visible';
+  }
 };
 
 Webapp.feedbackImage = '';
@@ -399,7 +541,7 @@ Webapp.executeCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  Webapp.callCmd(cmd);
+  return Webapp.callCmd(cmd);
 };
 
 //
@@ -412,6 +554,7 @@ Webapp.executeCmd = function (id, name, opts) {
 //
 
 Webapp.callCmd = function (cmd) {
+  var retVal = true;
   switch (cmd.name) {
     /* 
     case 'wait':
@@ -422,10 +565,18 @@ Webapp.callCmd = function (cmd) {
     */
     case 'turnBlack':
       BlocklyApps.highlight(cmd.id);
-      Webapp.turnBlack(cmd.opts);
+      retVal = Webapp.turnBlack(cmd.opts);
+      break;
+    case 'createHtmlBlock':
+      BlocklyApps.highlight(cmd.id);
+      retVal = Webapp.createHtmlBlock(cmd.opts);
+      break;
+    case 'attachEventHandler':
+      BlocklyApps.highlight(cmd.id);
+      retVal = Webapp.attachEventHandler(cmd.opts);
       break;
   }
-  return true;
+  return retVal;
 };
 
 Webapp.turnBlack = function (opts) {
@@ -433,6 +584,33 @@ Webapp.turnBlack = function (opts) {
 
   // sample
   divWebapp.style.backgroundColor = 'black';
+
+  return true;
+};
+
+Webapp.createHtmlBlock = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newDiv = document.createElement("div");
+  newDiv.id = opts.elementId;
+  newDiv.innerHTML = opts.html;
+
+  divWebapp.appendChild(newDiv);
+
+  return newDiv;
+};
+
+Webapp.onEventFired = function (opts, e) {
+  Webapp.eventQueue.push({'fn': opts.func});
+};
+
+Webapp.attachEventHandler = function (opts) {
+  // For now, we're not tracking how many of these we add and we don't allow
+  // the user to detach the handler. We detach all listeners by cloning the
+  // divWebapp DOM node inside of reset()
+  document.getElementById(opts.elementId).addEventListener(
+      opts.eventName,
+      Webapp.onEventFired.bind(this, opts));
 };
 
 /*

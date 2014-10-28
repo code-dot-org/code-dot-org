@@ -1,4 +1,5 @@
 require 'nokogiri'
+require 'cdo/user_agent_parser'
 
 module ApplicationHelper
 
@@ -6,6 +7,12 @@ module ApplicationHelper
   include VideosHelper
   include ScriptLevelsHelper
   include StagesHelper
+
+  USER_AGENT_PARSER = UserAgentParser::Parser.new
+
+  def browser
+    @browser ||= USER_AGENT_PARSER.parse request.headers["User-Agent"]
+  end
 
   def ago(from_time)
     s = distance_of_time_in_words_to_now(from_time)
@@ -35,6 +42,12 @@ module ApplicationHelper
     end
   end
 
+  def user_type_options
+    User::USER_TYPE_OPTIONS.map do |user_type|
+      [t("user_type.#{user_type}"), user_type]
+    end
+  end
+
   def bullet_html
     #raw "&#9679;"
     image_tag('white-dot-grid.png')
@@ -43,12 +56,6 @@ module ApplicationHelper
   def check_mark_html
     #raw "&#x2714;"
     image_tag(image_url('white-checkmark.png'))
-  end
-
-  def eligible_for_prize?
-    # check IP for US users only (ideally, we'd check if the teacher is in the US for teacher prizes)
-    # If the geolocation fails, assume non-US.
-    request.location.try(:country_code) == 'US'
   end
 
   def level_info(user, script_level)

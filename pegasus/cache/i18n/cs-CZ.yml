@@ -1,4 +1,4 @@
-"cy-GB":
+"cs-CZ":
   hello: Ahoj světe
   computer_science: Informatika
   computer_science_edweek: Týden vzdělávání Informatiky
@@ -51,14 +51,14 @@
   congratulations_on_completing_hoc: Gratulujeme k dokončení Jedné Hodiny Kódu.
   get_a_certificate_of_achievement: Získej osvědčení o účasti
   enter_valid_email: Prosím zadej platnou emailovou adresu
-  get_a_certificate_message: Zašleme ti certifikát a informace o tom, jak se <a href='/learn/beyond'>Nauč
-    se za jednu hodinu</a>
+  get_a_certificate_message: Zašleme ti certifikát a informace o tom, jak se <a href='/learn/beyond'>Učit
+    po První Hodině</a>
   get_a_certificate_message_after: Certifikát je na cestě. Nyní pokračuj s naším <a
     href='http://learn.code.org'>20hodinovým kurzem</a>, nebo <a href='/learn/beyond'>
     Nauč se za jednu hodinu</a>.
   thanks_for_submitting: Děkujeme za zaslání!
-  if_you_enjoyed: Pokud tě učení bavilo, řekni svým přátelům, aby si to taky vyzkoušeli!
-    Chceme, aby se učil celý svět.
+  if_you_enjoyed: Jestli tě výuka bavila, zeptej se svých kamarádů, zda to nezkusí
+    také! Chceme, aby se učil celý svět.
   personalize_certificate: Uprav si svůj certifikát
   share_achievement: Sdílej svůj úspěch
   beyond_hour_message: Pokračuj s naším <a href='http://learn.code.org'>20hodinovým
@@ -81,7 +81,7 @@
   get_started: Začít
   i_agree: Souhlasím
   participant_select: "- Vybrat -"
-  participant_student: Student
+  participant_student: student
   participant_parent: Rodič
   participant_educator: Vyučující
   participant_engineer: Softwarový inženýr
@@ -94,8 +94,8 @@
   petition_thankyou: Děkujeme za podepsání petice
   carousel_heading_international: Výuka ve tvém jazyce
   continue_learning_header: Pokračuj ve výuce i po Hodině Kódu
-  continue_learning_body: Je tady spousa možností. Můžeš se učit onli nebo v místní
-    škole či na letním táboře.
+  continue_learning_body: Je mnoho možností. Můžete se učit online, v místní škole
+    nebo na letním táboře.
   learn_next_level: Pokračuj na další úroveň
   learn_online: Vyzkoušet další kurzy online
   learn_classes: Najdi místní učebny
@@ -112,7 +112,7 @@
   lines_of_code_alt: "<b>#</b> ŘÁDKŮ KÓDU NAPSANÝCH STUDENTY"
   who_has_done_hoc: 'Kdo udělal #HourOfCode? @codeorg'
   hoc_leaderboards: "Žebříčky Hodiny Kódu"
-  students_and_lines: "%{students} studentů dokončilo Hodinu kódu a napsalo %{lines}
+  students_and_lines: "%{students} studentů absolvovalo Hodinu Kódu a napsalo %{lines}
     řádků kódu."
   start_hoc: Začni Hodinu Kódu teď
   contact_form_topic_press: Tisk/média (rozhovor nebo mluvené setkání)
@@ -259,7 +259,7 @@
   dashboard_students_male: Muž
   dashboard_students_female: "Žena"
   dashboard_students_secret: Secret
-  dashboard_students_password: Heslo
+  dashboard_students_password: heslo
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -307,8 +307,21 @@
   dashboard_grade_other: Ostatní
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_none: E-mail
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: student
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

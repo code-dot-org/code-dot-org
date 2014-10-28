@@ -10,7 +10,7 @@
     fırsatı olmalıdır
   petition_sign_message: 'Kabul ederseniz , adınızı girin ve diğerlerine # katılın.'
   name: "İsim"
-  email: E-posta
+  email: e-posta
   zipcode: Posta kodu ya da ülke
   submit: Gönder
   twentyhours_heading: Bilgisayar Bilimlerine Giriş kursumuzu deneyin
@@ -19,12 +19,12 @@
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
   hoc2014_students: "Öğrenciler"
-  hoc2014_try: Try it
-  hoc2014_teachers: Teachers
-  hoc2014_host: Host it
-  hoc2014_everyone: Everyone
+  hoc2014_try: Deneyin
+  hoc2014_teachers: "Öğretmenler"
+  hoc2014_host: Ev sahipliği yapın
+  hoc2014_everyone: Herkes
   hoc2014_support: Support it
-  hoc2014_whatishoc: What is the Hour of Code?
+  hoc2014_whatishoc: Kodlama Saati nedir?
   twentyhours_trynow: "Şimdi dene"
   california_heading: Okulunuzdan bilgisayar bilimleri kurslarını açmalarını isteyin
   california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
@@ -39,10 +39,10 @@
   view_english_site: "İngilizce siteyi görüntüle"
   non_english_tutorials: 'Birden fazla dile çevrilmiş öğreticiler:'
   write_your_first_program: "İlk bilgisayar programınızı yazın"
-  learn_cs_concepts: Sürükle bırak programlamayla Bilgisayar Bilimlerinin ana konseptini
-    öğrenin. Bu, Bill Gates, Mark Zuckerberg, Angry Birds ve Plants vs. Zombies eşliğinde
-    bir oyunsu videolu rehberdir. Tekrarlama döngülerini, eğer-o zaman komutlarını
-    ve temel algoritmaları öğrenbilirsiniz.
+  learn_cs_concepts: Sürükle ve bırak programlama ile Bilgisayar Bilimlerinin temel
+    kavramlarını öğrenin. Bill Gates, Mark Zuckerberg, Angry Birds ve Plants vs. Zombies'in
+    rol aldığı bu video dersler öğretici bir oyuna benzer. Tekrarlı döngülerini, if-then
+    ifadelerini ve temel algoritmaları öğrenin.
   all_ages: Her yaştan
   beginner: Acemi
   n_participants: "# katılımcılar"
@@ -52,14 +52,14 @@
   congratulations_on_completing_hoc: Bir KOD SAATİ'ni tamamladığınız için tebrikler.
   get_a_certificate_of_achievement: Başarı belgesi alın
   enter_valid_email: Lütfen geçerli bir e-posta adresi girin
-  get_a_certificate_message: Sana bir sertifika ve  <a href='/learn/beyond'>Bir Saatte
-    Öğren</a> hakkında bilgilendirme göndereceğiz
+  get_a_certificate_message: Sana <a href='/learn/beyond'>Bir Saatte Öğren</a> hakkında
+    bir belge ve bilgi göndereceğiz
   get_a_certificate_message_after: We'll send you a certificate. Now, keep going with
     our <a href='http://learn.code.org'>20-hour course</a>, or see more options to
     <a href='/learn/beyond'>Learn beyond One Hour</a>.
   thanks_for_submitting: Gönderdiğiniz için teşekkür ederiz!
-  if_you_enjoyed: Eğer öğrenirken eğlendiyseniz arkadaşlarınıza da denemelerini söyleyiniz!
-    Biz tüm dünyanın kodlamayı öğrenmesini istiyoruz.
+  if_you_enjoyed: Eğer öğrenirken eğlendiyseniz arkadaşlarınıza da denemeleri için
+    sorunuz! Biz tüm dünyanın öğrenmesini istiyoruz.
   personalize_certificate: Sertifikanızı özelleştirin
   share_achievement: Başarınızı paylaşın
   beyond_hour_message: "İşte sana nasıl biraz daha <a href='/learn/beyond'>Bir saatin
@@ -82,7 +82,7 @@
   get_started: Başlayın
   i_agree: Kabul ediyorum
   participant_select: "-Seçiniz-"
-  participant_student: "Öğrenci"
+  participant_student: "öğrenci"
   participant_parent: "Üst"
   participant_educator: Eğitmen
   participant_engineer: Yazılım Mühendisi
@@ -95,8 +95,8 @@
   petition_thankyou: Dilekçeyi imzaladığınız için teşekkür ederiz
   carousel_heading_international: Kendi dilinizde eğitimler
   continue_learning_header: "Öğrenmeye 1 saat daha devam et"
-  continue_learning_body: Birçok seçenek var.  Çevrimiçi programlarla, okulunuzda
-    veya bir yaz kampında  öğrenebilirsiniz.
+  continue_learning_body: Birçok seçenek var.  Çevrimiçi, kendi okulunuzda veya bir
+    yaz kampında  öğrenebilirsiniz.
   learn_next_level: Bir sonraki seviyeye devam et
   learn_online: Diğer online kurslarımızı deneyin
   learn_classes: Yerel sınıfları bulun
@@ -109,12 +109,12 @@
   boy: Erkek
   help_recruit_coders: Takımına daha fazla kod yazıcıyı üye yapmamıza yardım et!
   help_recruit: Daha fazla kod yazıcıyı üye yapmamıza yardım et!
-  lines_of_code: BUGÜNE KADAR <b># SATIR KOD</b> YAZILDI.
-  lines_of_code_alt: "ÖĞRENCİLER TARAFINDAN <b>#</b> SATIR KOD YAZILDI"
+  lines_of_code: "ÜSTÜNDE<b># KOD SATIRLARI</b> BUGÜNE KADAR YAZILAN."
+  lines_of_code_alt: "<b>#</b> ÖĞRENCİLER TARAFINDAN YAZILMIŞ KOD SATIRLARI"
   who_has_done_hoc: "#HourOfCode'u kim bitirdi? @codeorg"
   hoc_leaderboards: Kod saatinin liderler sıralaması
-  students_and_lines: "%{students} öğrenci Kod Saati'ni tamamladı ve %{lines} satır
-    kod yazdı."
+  students_and_lines: "% {Öğrenciler} öğrenciler tarafından kod saati yapılır ve kod
+    satırlarının % {hatları} yazılır."
   start_hoc: Kod saatine başla
   contact_form_topic_press: Basın / medya ( röportaj veya konuşma randevusu)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -133,7 +133,7 @@
   contact_form_topic_contribution: Hayırsever katkısı
   contact_form_topic_partner: Ortak olmak istiyorum
   contact_form_topic_other: Diğer
-  contact_form_label_topic: Konu
+  contact_form_label_topic: Başlık
   contact_form_label_email: E-posta adresin
   contact_form_label_message: Mesaj
   contact_form_label_submit: Mesaj Gönder
@@ -205,7 +205,7 @@
   dashboard_landing_progress_title: Main class progress
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
   dashboard_landing_view_progress: View Progress for %{biggest_section}
-  dashboard_landing_available_title: Available courses
+  dashboard_landing_available_title: Kullanılabilir kurslar
   dashboard_landing_available_courses: Here are the courses currently available for
     you and your students.
   dashboard_landing_loading: Loading...
@@ -263,7 +263,7 @@
   dashboard_students_male: Erkek
   dashboard_students_female: Kadın
   dashboard_students_secret: Secret
-  dashboard_students_password: Parola
+  dashboard_students_password: "şifre"
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -311,8 +311,21 @@
   dashboard_grade_other: Diğer
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_none: E-posta
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: "öğrenci"
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

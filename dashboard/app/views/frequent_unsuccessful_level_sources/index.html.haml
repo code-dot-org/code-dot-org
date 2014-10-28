@@ -17,23 +17,10 @@
   %h3= link_to 'Start adding hints (where needed) >>', add_pop_hint_path(0)
   %br
   %h3 Or, choose a particular puzzle and add hints just for that puzzle:
-  - script = Script.twenty_hour_script
-  - script_levels = script.script_levels
 
-  %div{style:"display:inline-block;position:relative;overflow:hidden;float:left;"}
-    %h4 #{t('nav.popup.puzzle_map')}
-    - script_levels.group_by{ |sl| sl.level.game }.each_pair do |game, sl_group|
-      - title = data_t_suffix('script.name', script.name, game.name) + ' ' + data_t('game.name', game.name)
-      .game-group
-        - if sl_group.length > 1
-          %div=title
-          - sl_group.each do |sl|
-            - link = add_pop_hint_per_level_path(sl.level_id, 0)
-            %a{ href: link, class: "level_link"}#{sl.game_chapter}
-            - if current_user && current_user.admin?
-              - link = show_pop_hints_per_level_path(sl.level_id, 0)
-              %a{ href: link}#{'Show hint ' + sl.game_chapter.to_s}
-          .stage_separator
+  -# Script.where(hidden: false).each do |script| # TODO: add this back when we support hints for other scripts
+  - script = Script.twenty_hour_script
+  = render partial: 'script', locals: {script: script}
 
 :javascript
   $( "#user_email" ).placeholder();

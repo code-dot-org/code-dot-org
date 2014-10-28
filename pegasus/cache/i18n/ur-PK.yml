@@ -9,7 +9,7 @@
   petition_message: Sign your name if you think every student in every school should
     have the opportunity to learn computer science
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
-  name: Naam
+  name: "نام"
   email: Email
   zipcode: ZIP code ya Mulk
   submit: Jama Kerwaein
@@ -253,9 +253,9 @@
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Student Name
-  dashboard_students_name: Naam
+  dashboard_students_name: "نام"
   dashboard_students_age: "عمر"
-  dashboard_students_gender: Gender
+  dashboard_students_gender: Jinss
   dashboard_students_male: Male
   dashboard_students_female: Female
   dashboard_students_secret: Secret
@@ -312,3 +312,16 @@
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: Talib-e-ilm
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

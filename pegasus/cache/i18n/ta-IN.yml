@@ -115,7 +115,7 @@
   students_and_lines: "%{students} students have done the Hour of Code and written
     %{lines} lines of code."
   start_hoc: Start the Hour of Code now
-  contact_form_topic_press: Press/media (interview or speaking engagement)
+  contact_form_topic_press: "பத்திரிக்கை/ஊடகம் (பேட்டி அல்லது ஒப்பந்தம் பேசும் போது)"
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: Our three new courses for K&#8209;5
@@ -131,11 +131,11 @@
   contact_form_topic_outside_us: I’m outside the U.S.
   contact_form_topic_contribution: Charitable contribution
   contact_form_topic_partner: I’d like to partner
-  contact_form_topic_other: Other
-  contact_form_label_topic: Topic
-  contact_form_label_email: Your email address
-  contact_form_label_message: Message
-  contact_form_label_submit: Send Message
+  contact_form_topic_other: "வேறு"
+  contact_form_label_topic: "தலைப்பு"
+  contact_form_label_email: "உங்கள் மின்னஞ்சல் முகவரி"
+  contact_form_label_message: "செய்தி"
+  contact_form_label_submit: "செய்தியை அனுப்பு"
   class_submission_in_school: In school
   class_submission_in_school_daily_programming_course: Daily programming course
   class_submission_in_school_ap_computer_science: AP computer science
@@ -304,11 +304,24 @@
   dashboard_student_worksheet: student worksheet
   dashboard_teacher_worksheet: teacher worksheet
   dashboard_grade_k: K
-  dashboard_grade_other: Other
+  dashboard_grade_other: "வேறு"
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_none: "மின்னஞ்சல்"
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: "மாணவர்"
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

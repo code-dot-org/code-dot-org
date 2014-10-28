@@ -47,7 +47,7 @@ nav: resources_nav
 <a id="posters">
 ## Hang these posters in your school
 <% if @country == 'us' %>
-#### [Sign up](http://hourofcode.com/us#signup) your Hour of Code event and we'll mail you posters for free.
+#### [Sign up](http://hourofcode.com/#signup) your Hour of Code event and we'll mail you posters for free.
 <% end %>
 <br />
 [![image](/images/fit-280/mark-zuckerberg.png)](/resources/mark-zuckerberg-poster.pdf)
@@ -62,6 +62,19 @@ nav: resources_nav
 [![image](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 [![image](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 [![image](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a id="social"></a>
+## Post these on social media
+[![image](/images/fit-200/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-200/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-200/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+
+[![image](/images/fit-200/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-200/susan.jpg)](/images/susan.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-200/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-200/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-200/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 <a id="sample-emails"></a>
 ## Send these emails to help promote the Hour of Code

@@ -718,7 +718,7 @@ Flappy.execute = function() {
   Flappy.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions);
+    code = utils.generateCodeAliases(level.codeFunctions, 'Flappy');
     code += BlocklyApps.editor.getValue();
   }
 

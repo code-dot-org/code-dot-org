@@ -41,25 +41,24 @@
   write_your_first_program: "Írja meg az első számítógépes programját"
   learn_cs_concepts: Tanulja meg a Számítógép Tudomány alapvető fogalmait. A útmutatók
     játék szerűek ,a videók-előadások főszereplői Bill Gates, Mark Zuckerberg, Angry
-    Birds és Plants vs. Zombies. Tanulj ciklusokról, feltételes utasításról és alapvető
-    algoritmusokról.
+    Birds és Plants vs. Zombies. Tanulj ciklusokról, if utasításról és alapvető algoritmusokról.
   all_ages: Minden korosztály számára
   beginner: Kezdő
   n_participants: "# résztvevők"
   go: Menj
   thank_you_: Köszönjük!
-  congratulations: Gratulálunk!
+  congratulations: Gratulálok!
   congratulations_on_completing_hoc: Gratulálunk a Kód Órája befejezéséhez!
   get_a_certificate_of_achievement: Kapjon egy bízonyítványt teljesítményéért
   enter_valid_email: Adjon meg egy érvényes e-mail címet
-  get_a_certificate_message: Küldünk önnek egy bizonyítványt, és további információkat,  hogyan
-    <a href='/learn/beyond'>tanuljon a Kód Óráján túl</a>
+  get_a_certificate_message: Küldünk önnek egy tanúsítványt, és további információkat
+    Önnek arról, hogy hogyan <a href='/learn/beyond'>tanuljon a Kód Óráján túl</a>
   get_a_certificate_message_after: A bizonyítványa már úton van. Most folytassa  a
     <a href='http://learn.code.org'> 20 órás tanfolyamunkat</a>, vagy nézze meg a
     <a href='/learn/beyond'> Tanulj az Egy Órán túl</a> további lehetőségeit.
-  thanks_for_submitting: Köszönjük a jelentkezését!
-  if_you_enjoyed: Ha tetszett a tanulás, kérje meg barátait is, hogy próbálják ki!
-    Szeretnénk, hogy az egész világ tanuljon.
+  thanks_for_submitting: Köszönjük előterjesztés!
+  if_you_enjoyed: Ha tetszett a tanulás, akkor kérje meg barátait is, hogy próbálják
+    ki! Szeretnénk, hogy az egész világ tanuljon.
   personalize_certificate: Szabja személyre a tanusítványát
   share_achievement: Ossza meg a teljesítményeit
   beyond_hour_message: Folytassa  a <a href='http://learn.code.org'> 20 órás tanfolyamunkat</a>,
@@ -109,14 +108,14 @@
   boy: Fiú
   help_recruit_coders: Segítsen nekünk még több kódert a csapatjába toborozni!
   help_recruit: Segítsen nekünk további kódereket toborozni!
-  lines_of_code: Több mint <b># LINES OF CODE</b> sort írt meg a mai napig.
-  lines_of_code_alt: "<b>#</b> sornyi kódot írtak a tanulók"
+  lines_of_code: "<b># LINES OF CODE</b> SOR ALATT ÍRT A MAI NAPIG."
+  lines_of_code_alt: "<b>#</b> SOR A KÓDBÓL MEGÍRVA TANULÓK ÁLTAL"
   who_has_done_hoc: 'Ki végezte már le a #HourOfCode-t? @codeorg'
   hoc_leaderboards: A Kód Órája Helyezések
   students_and_lines: "%{students} tanuló fejezte be a Kód Óráját, s írt %{lines}
-    sor a kódot."
+    sort a kódból."
   start_hoc: A Kód Órája elkezdése most
-  contact_form_topic_press: Sajtó/média (megbeszélés vagy konzultáció)
+  contact_form_topic_press: Sajtó/média (interjú vagy igéret)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: Our three new courses for K&#8209;5
@@ -213,8 +212,8 @@
   dashboard_action_cancel: Mégsem
   dashboard_action_delete: Delete
   dashboard_action_confirm: Delete?
-  dashboard_action_delete_yes: igen
-  dashboard_action_delete_no: nem
+  dashboard_action_delete_yes: Igen
+  dashboard_action_delete_no: Nem
   dashboard_action_done: Done
   dashboard_action_required: required
   dashboard_navigation_home_page: Teacher home page
@@ -261,7 +260,7 @@
   dashboard_students_male: Férfi
   dashboard_students_female: Nő
   dashboard_students_secret: Secret
-  dashboard_students_password: Jelszó
+  dashboard_students_password: jelszó
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -314,3 +313,16 @@
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: Diák
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

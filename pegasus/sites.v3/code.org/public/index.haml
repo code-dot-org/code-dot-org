@@ -55,7 +55,10 @@ social:
       #hoc2014
 
         .count{:style=>'font-weight:500; margin-bottom:15px' }
-          -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+          -if locale_chapter_partner?
+            -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_decimals(fetch_hoc_metrics['started']).to_s)
+          -else
+            -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
           -if request.locale == 'en-US'
             %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
               =count_string
@@ -73,9 +76,9 @@ social:
             =I18n.t :hoc2014_students
             &nbsp;
           .optionright
-            -#%a{:href=>'/learn'}
-            %button.optionbutton#trybutton{onclick: "ga('send','event','button','click',{eventLabel:'code_try', hitCallback: function() { window.location.href = '/learn'; }});"}
-              =I18n.t :hoc2014_try
+            %a#trybutton{:href=>'/learn'}
+              %button.optionbutton
+                =I18n.t :hoc2014_try
             %br/
 
         .option{style: "clear:both"}
@@ -83,9 +86,9 @@ social:
             =I18n.t :hoc2014_teachers
             &nbsp;
           .optionright
-            -#%a{:href=>"http://#{canonical_hostname('hourofcode.com')}/#join", target: "_blank"}
-            %button.optionbutton#hostbutton{onclick: "ga('send','event','button','click',{eventLabel:'code_host', hitCallback: function() { window.location.href = 'http://#{canonical_hostname('hourofcode.com')}/#join'; }});"}
-              =I18n.t :hoc2014_host
+            %a#hostbutton{:href=>"http://#{canonical_hostname('hourofcode.com')}/#join", target: "_blank"}
+              %button.optionbutton
+                =I18n.t :hoc2014_host
             %br/
 
         .option{style: "clear:both"}
@@ -93,9 +96,9 @@ social:
             =I18n.t :hoc2014_everyone
             &nbsp;
           .optionright
-            -#%a{:href=>'/donate'}
-            %button.optionbutton#supportbutton{onclick: "ga('send','event','button','click',{eventLabel:'code_support', hitCallback: function() { window.location.href = '/donate'; }});"}
-              =I18n.t :hoc2014_support
+            %a#supportbutton{:href=>'/donate'}
+              %button.optionbutton
+                =I18n.t :hoc2014_support
             %br/
 
         .whatishoc{style: "clear:both"}
@@ -105,6 +108,30 @@ social:
     -download_filename = (request.site == 'code.org') ? 'Code-5-minute.mov' : 'HoC-video-15mb.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
       = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/#{download_filename}"
+
+  -if locale_ro?
+    %br
+    %br
+    %h1{:style=>'text-align: center;'}
+      Esti din Romania? Te rugam sa vizitezi
+      %a{:href=>'http://ro.code.org'}
+        ro.code.org
+
+  -if locale_br?
+    %br
+    %br
+    %h1{:style=>'text-align: center;'}
+      Voce está no Brasil? Por favor, visite
+      %a{:href=>'http://br.code.org'}
+        br.code.org
+
+  -if locale_it?
+    %br
+    %br
+    %h1{:style=>'text-align: center;'}
+      Sei in Italia? Visita per favore 
+      %a{:href=>'http://italia.code.org'}
+        italia.code.org
 
   #studiobar.feature-codeorg.tablet-feature
     %h1.mobile-center
@@ -179,8 +206,9 @@ social:
       /= view :index_twitter
   #gap
 
-  #donor_slider.desktop-feature{:style=>'width: 100%'}
-    = view :donor_slider
+  -if request.site != 'csedweek.org'
+    #donor_slider.desktop-feature{:style=>'width: 100%'}
+      = view :donor_slider
 
 = view 'popup_window.js'
 
