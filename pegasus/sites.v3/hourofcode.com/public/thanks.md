@@ -56,7 +56,7 @@ Tell your friends about the #HourOfCode.
 <% end %>
 
 ## 3. Make a generous donation
-[Donate to our crowdfunding campaign](http://code.org/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://code.org/donate) in history. Every dollar will be matched by major Code.org [donors](http://code.org/about/donors), doubling your impact. 
+<a href="http://<%= codeorg_url() %>/donate">Donate to our crowdfunding campaign.</a> To teach 100 million children, we need your support. We just launched what could be the <a href="http://<%= codeorg_url() %>/donate">largest education crowdfunding campaign</a> in history. Every dollar will be matched by major Code.org <a href="http://<%= codeorg_url() %>/about/donors">donors</a>, doubling your impact. 
 
 ## 4. Ask your employer to get involved
 [Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
