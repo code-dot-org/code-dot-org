@@ -1,0 +1,220 @@
+/******************************************************************************
+  These CSS definitions both override and extend the ones provided by
+   Scribble. 
+   ****************************************************************************/
+
+pre, p, .SIntrapara {padding: 0; margin: 0;}
+blockquote{margin: 0px;}
+
+/* First, let us hide the table of contents from the default Scribble output: */
+.tocset { display: none;}
+
+/* And have the main column take up a wider section of the page: */
+.maincolumn { width: 100%;}
+
+.SIntrapara, li>p{display: inline;}
+
+body{
+	padding:      0px;
+	margin:       0px;
+  background:   no-repeat url("http://www.bootstrapworld.org/images/bootBG.png") fixed bottom right;
+  background-color: #f5deb3;
+  font-family:  Times;
+}
+
+/************************************************************************************
+ * OVERVIEW PAGE
+ * Lesson overviews contain logo, various lists, Language Table, title and duration
+ * Unit overviews include an agenda, and a concatenation of lesson overview lists
+*/
+
+.BootstrapTitle{
+    text-align:   center;
+    font-size:    32px;
+    font-weight:  bold;
+    display:      block;
+    z-index:      2;
+}
+.TitleUnitNum {display: block;}
+.BootstrapTitle   img{float: left;}
+
+table td{
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.BSCourseName {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+
+/************************************************************************************
+ * CONVERTABLE S-EXPRESSIONS
+*/
+
+div.code{max-width: 500px; display: inline; margin: 0px; padding: 0px;}
+div.student div.circleevalsexp, div.codesexp{display: inline-block;}
+div.circleevalsexp{float: right;}
+
+div.circleevalsexp .expression{
+	display:        inline-block;
+  padding-top:    6px;   /* top padding pushes the rounded corners up slightly, so as not to clip function name */
+	margin:         5px;
+	clear:          none;
+	border:         2px solid black;
+  background:     white;
+  border-radius:  20px;
+  text-align:     center;
+	-moz-border-radius: 20px;
+	-webkit-border-radius:20px;
+}
+
+div.circleevalsexp .value{
+	display:        inline-block;
+	margin:         10px 10px 5px 10px;
+  vertical-align: top;
+}
+
+div.circleevalsexp .operator{
+  display:        block;
+  height:         20px;
+  text-align:     center;
+  width:          100%;
+  border-bottom:  solid 2px black;
+  border-radius:  15px 15px 0px 0px; /* top left, top right, bottom right, bottom left */
+}
+
+div.circleevalsexp .lParen, div.circleevalsexp .rParen{display: none;}
+
+
+/************************************************************************************
+ * EXERCISES
+ * Most exercises use the twoColumn layout, in which each LI has a left and right div
+ * All LIs have top borders, except in matching activities.
+*/
+div.exercise-header{
+  margin:       0px;
+  background:   black;
+  color:        white;
+  font-size:    20px;
+  font-weight:  bold;
+  padding:      10px;
+  text-align:   center;
+}
+div.exercise-instr{margin: 10px; font-style: italic;}
+ul.twoColumnLayout {
+  list-style-type:  none;
+  padding:          0px; 
+  margin:           0px;
+  counter-reset:    item; /* initialize the "item" counter */
+
+}
+
+ul.twoColumnLayout li {
+  border-top:         solid 1px black; overflow: hidden;
+  counter-increment:  item; /* increment the counter for each row */
+  min-height:         80px;
+  position:           relative;
+  page-break-inside:  avoid;
+  page-break-inside:  auto;
+}
+
+}
+ul.matching li          {border-top: none;}
+
+div.rightColumn, div.leftColumn {
+  width:          50%;
+  display:        inline-block;
+  vertical-align: top;
+  padding-bottom: 100%;
+  margin-bottom:  -100%;
+}
+
+span.rightColumnLabel,
+div.leftColumn:before,
+div.rightColumn:before{
+  box-sizing:         border-box;
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  padding:            4px;
+  color:              #fff;
+  background:         #666;
+  font-weight:        bold;
+  font-family:        "Helvetica Neue", Arial, sans-serif;
+  vertical-align:     top;
+  left:               -1px;
+  margin-right:       10px;
+  margin-bottom:      10px;
+}
+/*  don't auto-number the rightColumn for matching solutions */
+ul.solutions li.matchingItem div.rightColumn:before{display: none}
+
+/* display numbers in all left columns */
+div.leftColumn:before{content: counter(item);}
+div.rightColumn:before{content: counter(item, lower-latin);}
+
+
+div.rightColumn>*, div.leftColumn>*{ width: 80%; float: none; display: inline;}
+div.leftColumn{margin-right: -3px; }
+div.rightColumn{border-left: solid 1px black; margin-right: -2px; }
+
+.twoColumnLayout div.circleevalsexp{display: inline;}
+.twoColumnLayout div.codesexp{display: inline-block;}
+.twoColumnLayout div.codesexp>.expression{margin-left: 30px; position: relative;}
+
+/* Define minimum heights for various answer types */
+div.circeval {min-height: 250px;}
+div.code, div.math, div.text,  {min-height: 50px;}
+
+.exercises h2{ text-align: center; page-break-before:always;}
+ol.question>li{clear: both; border-top: solid 1px black; padding: 20px 20px; margin-bottom: 35px;}
+ol.question li:first-of-type{border: none;}
+.exercises img{float: right; }
+
+/* student answers should be at least 15px tall */
+.studentAnswer, .operator:empty{
+  display:      inline-block;
+  background:   #eee;
+  min-height:   15px;
+  min-width:    60px;
+  border-bottom: solid 1px black;
+}
+
+/* holes in code should be at least 40px x 40px */
+div.circleevalsexp  .studentAnswer{
+  min-height:   40px;
+  margin:       10px;
+  border-bottom: none;
+}
+
+/* Specify min-sizes for parts of a contract, to give students room to fill them in */
+.contract-name  {min-width: 1.5in; min-height: .2in;}
+.contract-domain{min-width: 3.0in; min-height: .2in;}
+.contract-range {min-width: 1.0in; min-height: .2in;}
+
+/* .studentAnswers should appear differently if they're in code or circles of Eval */
+div.circleevalsexp .studentAnswer .studentAnswer{margin: 20px;}
+div.codesexp       .studentAnswer                { margin-bottom: 2px; margin-left: 10px; }
+div.codesexp       .studentAnswer .studentAnswer { margin-bottom: 2px; margin-left: 60px; border-bottom: none;}
+div.codesexp       .studentAnswer+.studentAnswer { margin-left: 10px;}
+
+
+/********************************************************************
+ Print adjustments
+ *********************************************************************/
+@media print{
+  .twoColumnLayout{width: 100%;}
+  a{color: black;}
+
+  div.rightColumn, div.leftColumn {width: 50%;}
+
+  span.rightColumnLabel,
+  div.leftColumn:before,
+  div.rightColumn:before{
+    border: solid 1px black;
+    color: black;
+  }
+}
