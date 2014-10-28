@@ -1,6 +1,6 @@
 * * *
 
-title: Prizes layout: wide
+शिर्षक: उपारहरू सजावट: फराकिलो
 
 * * *
 
@@ -8,23 +8,31 @@ title: Prizes layout: wide
 
 ## हरेक आयोजकले जित्ने छन् धन्यवाद गिफ्ट कोड
 
-Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
+बिद्यार्थी हरुकोलागी Hour of Code संचालन गर्ने शिक्षाविद्ले पाउनुहुनेछ धन्यवाद स्वरूप १० GB Dropbox space वा $१० Skype credit!
+
+<% if @country == 'uk' %>
+
+## भाग्यशाली कक्षा कोठाले एक अतिथि वक्ता भिडियो च्याट जित्नेछन्!
+
+20 भाग्यशाली कक्षाकोठाहरूलाई डिसेम्बर 8-14 को अवधिमा Hour of Code मनाउन भिडियो च्याटमा सामेल हुन आमन्त्रित गरिने छ। तपाईंको विद्यार्थीहरूलाई प्रश्न सोध्ने र प्रविधिको - उद्योग नेताहरूसँग च्याट गर्न सक्षम हुनेछ । [गत वर्ष च्याट बाहिर जाँच ](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) बिल गेट्स , ट्विटर संस्थापक ज्याक Dorsey , Google को सुजन Wojcicki र वाल्व को Gabe Newell संग ।
+
+<% end %>
 
 <% if @country == 'us' %>
 
 ## भाग्यशाली कक्षा कोठाले एक अतिथि वक्ता भिडियो च्याट जित्नेछन्!
 
-50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
+50 भाग्यशाली कक्षाकोठाहरूलाई December 8-14 को अवधिमा Hour of Cod मनाउन भिडियो च्याटमा सामेल हुन आमन्त्रित गरिने छ। तपाईंको विद्यार्थीहरूलाई प्रश्न सोध्ने र प्रविधिको - उद्योग नेताहरूसँग च्याट गर्न सक्षम हुनेछ । [गत वर्ष च्याट बाहिर जाँच ](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) बिल गेट्स , ट्विटर संस्थापक ज्याक Dorsey , Google को सुजन Wojcicki र वाल्व को Gabe Newell संग ।
 
-## भाग्यशाली विद्यालय ल्याप्टप को एक वर्ग - सेट जीत ( वा अन्य प्रविधी लागि $ 10,000 )
+## भाग्यशाली विद्यालयहरूले ल्याप्टपहरूको एक क्लास-सेट जीत्छ (वा अन्य प्रविधी लागि $ 10,000)
 
-One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
+***हरेक*** अमेरिकी राज्य (+ वासिङ्गटन डिसी) को एक भाग्यशाली विद्यालयले प्रविधिको विकासमा $ 10,000 जीत्ने छ। तपाइँको विद्यायको हरेक विद्यार्थीको लागि चुनिन Hour of Code को आयोजन गर्नुहोस्। निवेदन दिन तलको फारम भर्नुहोस्।
 
-## हार्डवेयर पुरस्कार आवेदन फारम :
+## हार्डवेयरको पुरस्कार आवेदन फारम:
 
-If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
+यदि तपाइँले आफ्नो सम्पूर्ण विद्यालयलाई Hour of Code मा सहभागी गर्न साइन अप गर्नुभयो भने, तपाइँको विद्यालयको लागि ल्याप्टपहरूको एक क्लास-सेट (वा अन्य प्रविधी लागि $ 10,000 ) जीत्न प्रविष्ट गर्नुहोस्! एक जना शिक्षकले मात्र तपाइँको सम्पूर्ण विद्यालयको लागि निवेदन गर्नुपर्ने हुन्छ।
 
-<%= view :hardware\_prizes\_form %>
+<%= view :hardware_prizes_form %>
 
 <what are your odds of winning?>
 
@@ -32,6 +40,6 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 <% end %>
 
-## पुरस्कारहरुको बारेमा अरु प्रस्न भएमा ?
+## पुरस्कारहरूको बारेमा अन्य प्रश्नहरू छन्?
 
-Check out [Terms and Conditions](/prizes-terms) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+[सर्त र अवस्थाहरू](/prizes-terms) को जाँच गर्नुहोस् [वा लगातार सोध्ने प्रश्नहरू हेर्न हाम्रो फारममा जानुहोस् ](http://support.code.org) र तपाइँको प्रश्नहरू सोध्नुहोस्।

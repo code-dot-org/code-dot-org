@@ -7,7 +7,7 @@ nl:
     failure:
       already_authenticated: Je bent al ingelogd.
       inactive: Je account is nog niet geactiveerd.
-      invalid: Verkeerd email-adres of wachtwoord.
+      invalid: Verkeer email-adres of wachtwoord.
       invalid_token: Verkeerd authenticatie-token.
       locked: Je account is geblokkeerd.
       not_found_in_database: Verkeer email-adres of wachtwoord.

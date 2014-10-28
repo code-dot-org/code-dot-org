@@ -4,11 +4,11 @@ title: How to help
 
 # How to Help
 ## Host an Hour of Code- at work, in your community, or local school
-More than 44 million people of all ages have learned an [Hour of Code](http://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics.  Participate this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of 2014. 
+More than 45 million people of all ages have learned an [Hour of Code](http://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics.  Participate this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of 2014. 
 
 [<button>Join us</button>](http://hourofcode.com)
 
-## Make a generous donation
+## Make a generous donation - before December 14!
 [Donate to our crowdfunding campaign](/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](/donate) in history. Every dollar will be matched by major Code.org [donors](/about/donors), doubling your impact. 
 
 

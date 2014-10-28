@@ -3,9 +3,7 @@ title: <%= I18n.t('dashboard_landing_title') %>
 theme: angular
 angular: teacherDashboard
 ---
-- unless dashboard_user
-  - dont_cache
-  - redirect("http://#{canonical_hostname('studio.code.org')}/users/sign_in?return_to=#{request.url}", 302) unless dashboard_user
+- authentication_required!
 - forbidden! unless dashboard_user[:user_type] == 'teacher'
 
 %link(rel="stylesheet" type="text/css" href="/css/learn_tabs.css")
@@ -81,7 +79,7 @@ angular: teacherDashboard
       //  'query':  {method:'GET', isArray:true},
       //  'remove': {method:'DELETE'},
       //  'delete': {method:'DELETE'} 
-         update: {method:'PATCH'},
+         update: {method:'POST', url: 'v2/sections/:id/update'},
          addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
       });
@@ -96,7 +94,7 @@ angular: teacherDashboard
       //  'query':  {method:'GET', isArray:true},
       //  'remove': {method:'DELETE'},
       //  'delete': {method:'DELETE'} 
-         update: {method:'PATCH'},
+         update: {method:'POST', url: 'v2/students/:id/update'},
       });
     }]);
 
@@ -120,7 +118,8 @@ angular: teacherDashboard
       section.editing = true;
     };
 
-    $scope.genericError = function() {
+    $scope.genericError = function(result) {
+      console.log(result);
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
 
@@ -231,7 +230,8 @@ angular: teacherDashboard
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
 
-    $scope.genericError = function() {
+    $scope.genericError = function(result) {
+      console.log(result);
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
 
@@ -258,7 +258,7 @@ angular: teacherDashboard
     $scope.section.$promise.catch($scope.genericError);
     $scope.sections.$promise.catch($scope.genericError);
 
-    $scope.age_list = #{(4..100).to_a.inspect};
+    $scope.age_list = #{((4..20).to_a << '21+').inspect};
 
     $scope.gender_list = {f: '#{I18n.t('dashboard_students_female')}', m: '#{I18n.t('dashboard_students_male')}'};
 

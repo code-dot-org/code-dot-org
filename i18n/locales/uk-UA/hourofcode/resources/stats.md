@@ -1,6 +1,6 @@
 * * *
 
-title: Resources layout: wide
+title: Ресурси layout: wide
 
 * * *
 

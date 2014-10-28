@@ -1,0 +1,46 @@
+<% var msg = require('../../locale/current/common') %>
+
+<% if (showSlider) { %>
+  <div id="slider-cell">
+    <svg id="webapp-slider"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         version="1.1"
+         width="150"
+         height="50">
+        <!-- Slow icon. -->
+        <clipPath id="slowClipPath">
+          <rect width=26 height=12 x=5 y=14 />
+        </clipPath>
+        <image xlink:href="<%= assetUrl('media/webapp/turtle_icons.png') %>" height=42 width=84 x=-21 y=-10
+            clip-path="url(#slowClipPath)" />
+        <!-- Fast icon. -->
+        <clipPath id="fastClipPath">
+          <rect width=26 height=16 x=120 y=10 />
+        </clipPath>
+        <image xlink:href="<%= assetUrl('media/webapp/turtle_icons.png') %>" height=42 width=84 x=120 y=-11
+            clip-path="url(#fastClipPath)" />
+    </svg>
+    <img id="spinner" style="visibility: hidden;" src="<%= assetUrl('media/webapp/loading.gif') %>" height=15 width=15>
+  </div>
+<% } %>
+
+<div id="soft-buttons" class="soft-buttons-none">
+  <button id="leftButton" class="arrow">
+    <img src="<%= assetUrl('media/1x1.gif') %>" class="left-btn icon21">
+  <button id="rightButton" class="arrow">
+    <img src="<%= assetUrl('media/1x1.gif') %>" class="right-btn icon21">
+  <button id="upButton" class="arrow">
+    <img src="<%= assetUrl('media/1x1.gif') %>" class="up-btn icon21">
+  <button id="downButton" class="arrow">
+    <img src="<%= assetUrl('media/1x1.gif') %>" class="down-btn icon21">
+</div>
+
+<% if (finishButton) { %>
+  <div id="share-cell" class="share-cell-none">
+    <button id="finishButton" class="share">
+      <img src="<%= assetUrl('media/1x1.gif') %>"><%= msg.finish() %>
+    </button>
+  </div>
+<% } %>

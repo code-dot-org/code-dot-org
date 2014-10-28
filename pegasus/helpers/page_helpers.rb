@@ -9,6 +9,22 @@ def page_translated?()
   request.locale != 'en-US'
 end
 
+def locale_ro?()
+  request.locale == 'ro-RO'
+end
+
+def locale_br?()
+  request.locale == 'pt-BR'
+end
+
+def locale_it?()
+  request.locale == 'it-IT'
+end
+
+def locale_chapter_partner?()
+  request.locale() == 'ro-RO' || request.locale() == 'pt-BR' || request.locale() == 'it-IT'
+end
+
 def not_partner_site?()
-  request.site != 'uk.code.org' && request.site != 'ar.code.org' && request.site != 'br.code.org' && request.site != 'italia.code.org' && request.site != 'ro.code.org'
+  request.site != 'uk.code.org' && request.site != 'ar.code.org' && request.site != 'br.code.org' && request.site != 'eu.code.org' && request.site != 'italia.code.org' && request.site != 'ro.code.org'
 end

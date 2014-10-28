@@ -1,30 +1,38 @@
 * * *
 
-title: Prizes layout: wide
+Призы
 
 * * *
 
-# The Hour of Code — prizes for every organizer
+# "Час программирования" — призы для каждого организатора
 
-## Every organizer wins a thank you gift-code
+## Каждый организатор выигрывает "Благодарим Вас" подарок
 
-Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
+Каждый педагог, который размещает "Час программирования" для учеников получат 10 ГБ Dropbox хранилища или $10 в Skype кредит как "Благодарим Вас" подарок!
+
+<% if @country == 'uk' %>
+
+## Классы-счастливчики выиграют видео-чат с приглашенным спикером!
+
+20 классов-счастливчиков будут приглашены присоединиться к видео-чату, чтобы отпраздновать Час Программирования с 8 по 14 декабря. Ваши ученики смогут задать вопросы и пообщаться с лидерами отрасли компьютерных технологий. [Посмотрите чаты прошлого года](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) с Биллом Гейтсом, основателем Twitter Джеком Дорси, Сьюзен Войжитски (Google) и Гейбом Ньюэллом (Valve).
+
+<% end %>
 
 <% if @country == 'us' %>
 
-## Lucky classrooms win a video chat with a guest speaker!
+## Классы-счастливчики выиграют видео-чат с приглашенным спикером!
 
-50 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
+50 классов-счастливчиков будут приглашены присоединиться к видео-чату, чтобы отпраздновать Час Программирования с 8 по 14 декабря. Ваши ученики смогут задать вопросы и пообщаться с лидерами отрасли компьютерных технологий. [Посмотрите чаты прошлого года](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) с Биллом Гейтсом, основателем Twitter Джеком Дорси, Сьюзен Войжитски (Google) и Гейбом Ньюэллом (Valve).
 
-## Lucky schools win a class-set of laptops (or $10,000 for other technology)
+## Школы, которым повезет, выиграют набор ноутбуков для класса (или $ 10 000 для других электронных устройств для улучшения качества обучения информатике)
 
-One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
+Одна школа-счастливчик в *** каждом*** штате США (+ Вашингтон) выиграет оборудование на сумму 10000$. Организуйте Час Программирования, чтобы каждый ученик школы смог научиться программировать. Заполните форму ниже, чтобы принять участие.
 
-## Hardware Prize application form:
+## Форма заявки на получение оборудования:
 
-If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
+Если Вы зарегистрировали всю школу, чтобы принять участие в Часе Программирования, войдите, чтобы выиграть набор ноутбуков для класса (или $10 000 для другого оборудования) Вашей школы! Нужно зарегистрироваться только одному учителю от всей школы.
 
-<%= view :hardware\_prizes\_form %>
+<%= view :hardware_prizes_form %>
 
 <what are your odds of winning?>
 
@@ -32,6 +40,6 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 <% end %>
 
-## More questions about prizes?
+## Еще вопросы о призах?
 
-Check out [Terms and Conditions](/prizes-terms) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+Узнайте [условия и положения](/prizes-terms) или посетите наш форум, чтобы просмотреть [часто задаваемые вопросы](http://support.code.org) и задать свои вопросы.

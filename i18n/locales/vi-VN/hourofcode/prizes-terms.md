@@ -1,6 +1,6 @@
 * * *
 
-bố trí: rộng
+bố cục: rộng
 
 * * *
 
@@ -22,6 +22,12 @@ Giải thưởng chỉ giới hạn cho hệ thống trường học 12 khối h
 
 ## Giải thưởng 3: Một lớp học được trang bị laptop phục vụ học tập và giảng dạy (hoặc 10.000USD cho một công nghệ khác được triển khai):
 
-Giải thưởng chỉ giới hạn cho hệ thống trường học 12 khối ở Mỹ. Tại sao lại là các trường học cộng đồng? [Xem câu trả lời ở đây](http://www.hourofcode.com/us#faq). Để đủ điều kiện, toàn bộ trường học của bạn bắt buộc phải đăng ký trên Hour of Code từ ngày 14 tháng 11, 2014. Một trường học ở bất cứ tiểu bang nào ở Mỹ sẽ được nhận một lớp học trang bị laptop. Code.org sẽ lựa chọn và thông báo người thắng cuộc qua email từ ngày 1 tháng 12 năm 2014.
+Giải thưởng chỉ giới hạn cho hệ thống trường học 12 khối ở Mỹ. Tại sao lại là các trường học cộng đồng? [See the answer here](http://www.hourofcode.com/#faq). Để đủ điều kiện, toàn bộ trường học của bạn bắt buộc phải đăng ký trên Hour of Code từ ngày 14 tháng 11, 2014. Một trường học ở bất cứ tiểu bang nào ở Mỹ sẽ được nhận một lớp học trang bị laptop. Code.org sẽ lựa chọn và thông báo người thắng cuộc qua email từ ngày 1 tháng 12 năm 2014.
+
+To clarify, this is not a sweepstakes or a contest involving pure chance.
+
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>

@@ -31,7 +31,7 @@ ms-MY:
   view_english_site: Papar Laman Bahasa Inggeris
   non_english_tutorials: 'Tutorial yang diterjemah ke dalam pelbagai bahasa:'
   write_your_first_program: Menulis atur cara komputer yang pertama
-  learn_cs_concepts: Belajar konsep-konsep asas Sains Komputer dengan pengaturcaraan (programming) tarik dan lepas (drag and drop). Ini adalah tutorial seperti disertai dengan video pembelajaran dari Bill Gates, Mark Zuckerberg, Angry Birds dan Plant vs. Zombies. Belajar ulang-pusingan, penyataan kalau-kemudian , dan algoritma asas.
+  learn_cs_concepts: Belajar konsep asas Sains Komputer dengan pengaturcaraan drag dan drop. Ini adalah tutorial seperti permainan yang dibintangi video ceramah oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs. Zombies. Belajar ulang-gelung, penyata jika-kemudian, dan algoritma asas.
   all_ages: Semua peringkat umur
   beginner: Pemula
   n_participants: '# peserta'
@@ -43,7 +43,7 @@ ms-MY:
   enter_valid_email: Sila masukkan alamat email yang sah
   get_a_certificate_message: "Kami akan menghantar sijil dan maklumat mengenai cara untuk <a href='/learn/beyond'> belajar lebih dari satu jam</a>"
   get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
-  thanks_for_submitting: Terima kasih di atas penyertaan!
+  thanks_for_submitting: Terima kasih di atas penyerahan!
   if_you_enjoyed: Jika anda suka belajar, minta rakan-rakan anda cuba sekali! Kita mahu satu dunia untuk belajar.
   personalize_certificate: Ubah suai sijil anda
   share_achievement: kongsikan pencapaian anda
@@ -79,7 +79,7 @@ ms-MY:
   petition_thankyou: Terima kasih kerana menandatangani petisyen
   carousel_heading_international: Tutorial dalam bahasa anda
   continue_learning_header: Teruskan pembelajaran melepasi Satu Jam
-  continue_learning_body: 'Terdapat banyak pilihan lain.  Anda boleh belajar secara online, atau di sekolah tempatan, atau kem musim panas.'
+  continue_learning_body: 'Terdapat banyak pilihan.  Anda boleh belajar secara online, atau di sekolah tempatan, atau kem musim panas.'
   learn_next_level: Teruskan ke tahap seterusnya
   learn_online: Cuba kursus-kursus lain secara online
   learn_classes: cari kelas tempatan
@@ -201,7 +201,7 @@ ms-MY:
   dashboard_sections_new_section: New section
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
   dashboard_sections_table_section: Section
-  dashboard_sections_table_secret: Secret type
+  dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
   dashboard_sections_table_students: Students
@@ -224,7 +224,7 @@ ms-MY:
   dashboard_students_male: Lelaki
   dashboard_students_female: Perempuan
   dashboard_students_secret: Secret
-  dashboard_students_password: Kata laluan
+  dashboard_students_password: kata laluan
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -261,9 +261,21 @@ ms-MY:
   dashboard_teacher_worksheet: teacher worksheet
   dashboard_grade_k: K
   dashboard_grade_other: Lain-lain
-  dashboard_login_word: word
-  dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_word: Word
+  dashboard_login_picture: Picture
+  dashboard_login_none: E-mel
   dashboard_new_password: new password
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: pelajar
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: "Who creates the student's account?"
+  dashboard_sections_password question: 'What do students use as a "password"?'
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: 'Unique web-page listed on "Manage Students" tab'
+  dashboard_sections_sign_in_main: 'http://code.org and click "Sign in"'
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."

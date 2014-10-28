@@ -17,7 +17,7 @@
         edit_header: "編輯帳戶的詳細資訊"
         error:
           future: can't be in the future
-  hello: "世界 您好！"
+  hello: "世界您好"
   welcome_back: "歡迎回來，%{name}"
   add_teacher_form:
     code_or_email:
@@ -83,7 +83,7 @@
     gender: "性別 （選填）"
     birthday: "生日 （選填）"
     age: Age (optional)
-    submit: "註冊"
+    submit: "登錄"
     teacher: "你是老師嗎？"
     valid_username: "可以使用!"
     invalid_username: "使用者名稱須 5 個字元以上"
@@ -114,7 +114,7 @@
     login: "登入"
   password:
     reset_form:
-      title: "忘記密碼？"
+      title: "忘記了您的密碼嗎？"
       email: "電子郵件地址"
       submit: "將重設密碼的操作說明寄送給我"
     change_form:
@@ -239,7 +239,7 @@
       prizes: "獎項"
       logout: "登出"
       signin: "登入"
-      signup: "登錄"
+      signup: "註冊帳號"
       already_registered: Already registered?
     popup:
       progress: "您的進度"
@@ -250,7 +250,7 @@
       prizes: "收集所有 %{total_trophies} 個獎盃，並贏取獎品 ！"
       prize_earned: "所有%{total_trophies}個獎盃都收集完成。恭喜你贏得獎品！（僅限美國公立學校學生）"
       prize_us_only: "（僅適用于美國學生）"
-      prizes_link: "更多資訊 "
+      prizes_link: "更多的資訊"
   teacher:
     title:
       one: "你的老師："
@@ -359,15 +359,16 @@
     tryfirst: "或者，你也可以先試試，之後再 註冊："
     trynow: "快來試試"
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming
-      concepts. The course is designed for use in classrooms for grades K-8, but it
-      is fun to learn at all ages.
+    20hour_overview: "這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。"
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: "男性"
     female: "女性"
@@ -465,11 +466,17 @@
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
       each program in action.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
@@ -497,14 +504,12 @@
       name:
         20-hour:
           title: 'K 8 簡介電腦科學課程 （15-25 小時） '
-          description: This 20-hour course introduces core computer science and programming
-            concepts. The course is designed for use in classrooms for grades K-8,
-            but it is fun to learn at all ages.
+          description: "這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。"
         Hour of Code:
           title: "一小時的程式設計課程"
           description: ''
         edit-code:
-          title: Edit Code
+          title: "編輯程式碼"
           description: ''
         events:
           title: "事件類別"

@@ -334,7 +334,6 @@ Blockly.Xml.domToBlock_ = function(blockSpace, xmlBlock) {
           blockChild = Blockly.Xml.domToBlock_(blockSpace, firstRealGrandchild);
           if (blockChild.outputConnection) {
             input.connection.connect(blockChild.outputConnection);
-            renderBlock = blockChild;
           } else if (blockChild.previousConnection) {
             input.connection.connect(blockChild.previousConnection);
           } else {

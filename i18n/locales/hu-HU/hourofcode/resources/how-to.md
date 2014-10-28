@@ -4,28 +4,28 @@ title: Resources layout: wide
 
 * * *
 
-# How to teach one Hour of Code
+# Hogyan tanítsd a Kód Óráját
 
-## 1) Try the tutorials:
+## 1) Próbáld ki a bemutatókat:
 
-We’ll host a variety of fun, hour-long tutorials on the for students of all ages created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**All Hour of Code tutorials:**
+**Minden Kód Órája bemutató:**
 
-  * Require minimal prep-time for teachers
+  * minimális felkészülést igényel a tanárok részéről
   * Are self-guided - allowing students to work at their own pace and skill-level
 
 [![image](http://code.org/images/tutorials.png)](http://code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Tervezd meg a hardver-igényt - a számítógép opcionális
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
+A legjobb Kód Órája élmény Internet kapcsolattal rendelkező számítógépekkel érhető el. De nincs szükség minden diáknak külön számítógépre, sőt, a Kód Órája akár számítógép használata nélkül is megvalósítható.
 
-  * **Test tutorials on student computers or devices.** Make sure they work properly (with sound and video).
-  * **Preview the congrats page** to see what students will see when they finish. 
-  * **Provide headphones for your class**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **Teszteld a bemutatókat a diákok számítógépein vagy eszközein.** Győződj meg róla, hogy megfelelően működnek (hanggal és videóval).
+  * **Előre ellenőrizd a gratuláló oldalt**, hogy lásd amit a diákok látnak ha befejezték a feladatot. 
+  * **Biztosíts a csoportnak fülhallgatókat**, vagy kérd meg a diákokat, hogy hozzanak magukkal, ha a választott bemutató hanggal jobban használható.
 
-## 3) Plan ahead based on your technology available
+## 3) Tervezz előre az elérhető technológiákkal
 
   * **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
   * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.

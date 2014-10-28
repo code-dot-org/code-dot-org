@@ -1,9 +1,9 @@
 * * *
 
-Tiêu đề : Cảm ơn Khung nhìn: Rộng
+tiêu đề: Cảm ơn bố cục: rộng
 
 * * *
 
-# Chân thành cảm ơn
+# Chân thành cám ơn
 
-Toàn bộ trường học của bạn đang tham gia để dành giải thưởng là những chiếc laptop ( hoặc $10000 đô la) .
+Toàn bộ trường học của bạn giờ tham gia vào để giành chiến thắng một lớp-tập hợp các máy tính xách tay (hay $10.000 cho công nghệ khác).

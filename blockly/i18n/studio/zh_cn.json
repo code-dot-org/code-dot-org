@@ -1,6 +1,6 @@
 {
   "actor": "男演员",
-  "catActions": "行为",
+  "catActions": "操作",
   "catControl": "循环",
   "catEvents": "事件",
   "catLogic": "逻辑",
@@ -14,7 +14,7 @@
   "decrementPlayerScore": "移动点",
   "defaultSayText": "在此处键入",
   "emotion": "心情",
-  "finalLevel": "恭喜你！你完成了最后一个难题。",
+  "finalLevel": "恭喜你！你完成了最后一个谜题。",
   "hello": "你好",
   "helloWorld": "世界 您好！",
   "incrementPlayerScore": "得分点",
@@ -54,7 +54,7 @@
   "moveTooltip": "移动一个小人。",
   "nextLevel": "恭喜你！你解决了这个谜题。",
   "no": "不",
-  "numBlocksNeeded": "这个谜题可以用%1个块解决。",
+  "numBlocksNeeded": "这个谜题可以用%1个语句块解决。",
   "ouchExclamation": "哎哟 ！",
   "playSoundCrunch": "播放吱嘎声",
   "playSoundGoal1": "播放目标 1 声音",
@@ -254,5 +254,5 @@
   "whenSpriteCollidedWithTopEdge": "接近上边缘",
   "whenUp": "当箭头向上",
   "whenUpTooltip": "执行下面按向上箭头键时采取的行动。",
-  "yes": "对"
+  "yes": "是"
 }

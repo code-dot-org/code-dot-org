@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1140,6 +1150,26 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
+/**
+ * Generate the xml for a block for the calc app.
+ */
+exports.calcBlockXml = function (type, args) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var i = 1; i <= args.length; i++) {
+    str += '<functional_input name="ARG' + i + '">';
+    var arg = args[i - 1];
+    if (typeof(arg) === "number") {
+      arg = '<block type="functional_math_number"><title name="NUM">' + arg +
+        '</title></block>';
+    }
+    str += arg;
+    str += '</functional_input>';
+  }
+  str+= '</block>';
+
+  return str;
+};
+
 },{"./xml":38}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
@@ -1160,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1254,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -3010,7 +3063,7 @@ Bounce.execute = function() {
   Bounce.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions);
+    code = utils.generateCodeAliases(level.codeFunctions, 'Bounce');
     code += BlocklyApps.editor.getValue();
   }
 
@@ -4079,35 +4132,48 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  // helper function used below..
+  function makeNativeMemberFunction(nativeFunc, parentObj) {
+    return function() {
+      return interpreter.createPrimitive(
+                            nativeFunc.apply(parentObj, arguments));
+    };
+  }
+  for (var optsObj in options) {
+    var func, wrapper;
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
+                                interpreter.createNativeFunction(wrapper));
+      }
+    }
+  }
+};
+
+/**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      // helper function used below..
-      function makeNativeMemberFunction(nativeFunc, parentObj) {
-        return function() {
-          return interpreter.createPrimitive(
-                                nativeFunc.apply(parentObj, arguments));
-        };
-      }
-      for (var optsObj in options) {
-        // Create global objects in the interpreter for everything in options
-        var obj = this.createObject(interpreter.OBJECT);
-        this.setProperty(scope, optsObj.toString(), obj);
-        for (var prop in options[optsObj]) {
-          var func = options[optsObj][prop];
-          if (func instanceof Function) {
-            // Populate each of the global objects with native functions
-            // NOTE: other properties are not passed to the interpreter
-            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
-            interpreter.setProperty(obj,
-                                    prop,
-                                    interpreter.createNativeFunction(wrapper));
-          }
-        }
-      }
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -4125,8 +4191,7 @@ exports.evalWith = function(code, options) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
-    var fn = new ctor();
-    return fn.apply(null, args);
+    return new ctor().apply(null, args);
   }
 };
 
@@ -4134,18 +4199,24 @@ exports.evalWith = function(code, options) {
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  return new ctor();
 };
 
 },{}],16:[function(require,module,exports){
@@ -11293,16 +11364,16 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += "var " + codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = [''].concat(arguments); return " +
+          parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -11409,9 +11480,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
@@ -11456,7 +11538,7 @@ exports.bounceBall = function(d){return "bounce ball"};
 
 exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
 
-exports.continue = function(d){return "ต่อไป"};
+exports.continue = function(d){return "ต่อไป\n"};
 
 exports.dirE = function(d){return "E"};
 
@@ -11466,11 +11548,11 @@ exports.dirS = function(d){return "S"};
 
 exports.dirW = function(d){return "W"};
 
-exports.doCode = function(d){return "do"};
+exports.doCode = function(d){return "ทำ"};
 
-exports.elseCode = function(d){return "else"};
+exports.elseCode = function(d){return "นอกจากนั้น"};
 
-exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
+exports.finalLevel = function(d){return "ขอแสดงความยินดีคุณสามารถแก้ปัญหาสุดท้ายได้แล้ว."};
 
 exports.heightParameter = function(d){return "height"};
 
@@ -11482,13 +11564,13 @@ exports.ifTooltip = function(d){return "If there is a path in the specified dire
 
 exports.ifelseTooltip = function(d){return "If there is a path in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "ให้คะแนนฝ่ายตรงข้าม"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
 
 exports.incrementPlayerScore = function(d){return "increment player score"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
+exports.incrementPlayerScoreTooltip = function(d){return "เพิ่มคะแนนผู้เล่น 1 คะแนน"};
 
 exports.isWall = function(d){return "is this a wall"};
 
@@ -11508,11 +11590,11 @@ exports.moveForward = function(d){return "move forward"};
 
 exports.moveForwardTooltip = function(d){return "Move me forward one space."};
 
-exports.moveLeft = function(d){return "move left"};
+exports.moveLeft = function(d){return "ย้ายไปทางซ้าย"};
 
 exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
 
-exports.moveRight = function(d){return "move right"};
+exports.moveRight = function(d){return "ย้ายไปทางขวา"};
 
 exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
 
@@ -11520,9 +11602,9 @@ exports.moveUp = function(d){return "move up"};
 
 exports.moveUpTooltip = function(d){return "Move the paddle up."};
 
-exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
+exports.nextLevel = function(d){return "ขอแสดงความยินดีคุณสำเร็จปริศนานี้."};
 
-exports.no = function(d){return "No"};
+exports.no = function(d){return "ไม่ใช่"};
 
 exports.noPathAhead = function(d){return "path is blocked"};
 
@@ -11558,7 +11640,7 @@ exports.playSoundRubber = function(d){return "play rubber sound"};
 
 exports.playSoundSlap = function(d){return "play slap sound"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "เล่นเสียงที่ถูกเลือก."};
 
 exports.playSoundWinPoint = function(d){return "play win point sound"};
 
@@ -11568,7 +11650,7 @@ exports.playSoundWood = function(d){return "play wood sound"};
 
 exports.putdownTower = function(d){return "put down tower"};
 
-exports.reinfFeedbackMsg = function(d){return "คุณสามารถกดปุ่ม \"ลองอีกครั้ง\" เพื่อกลับไปเล่นเกมของคุณ"};
+exports.reinfFeedbackMsg = function(d){return "คุณสามารถกดปุ่ม \"เริ่มอีกครั้ง\" เพื่อกลับไปสู่เกมส์ของคุณ."};
 
 exports.removeSquare = function(d){return "remove square"};
 
@@ -11650,7 +11732,7 @@ exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "เมื่อกดลูกศรลง"};
 
 exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
 
@@ -11658,7 +11740,7 @@ exports.whenGameStarts = function(d){return "เมื่อเกมเริ�
 
 exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "เมื่อกดลูกศรซ้าย"};
 
 exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
 
@@ -11666,11 +11748,11 @@ exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "เมื่อกดลูกศรขวา"};
 
 exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "เมื่อกดลูกศรขึ้น"};
 
 exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
 
@@ -11678,7 +11760,7 @@ exports.whenWallCollided = function(d){return "when ball hits wall"};
 
 exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
 
-exports.whileMsg = function(d){return "เมื่อ"};
+exports.whileMsg = function(d){return "ในขณะที่"};
 
 exports.whileTooltip = function(d){return "ทำซ้ำจนกระทั่งถึงจุดสิ้นสุด"};
 
@@ -11711,7 +11793,7 @@ exports.catVariables = function(d){return "ตัวแปร"};
 
 exports.codeTooltip = function(d){return "ดูการสร้างโค้ด JavaScript."};
 
-exports.continue = function(d){return "ต่อไป"};
+exports.continue = function(d){return "ดำเนินการต่อไป"};
 
 exports.dialogCancel = function(d){return "ยกเลิก"};
 
@@ -11743,7 +11825,7 @@ exports.generatedCodeInfo = function(d){return "มหาวิทยาลั�
 
 exports.hashError = function(d){return "ขออภัย '%1' ไม่ตรงกับโปรแกรมที่บันทึกไว้."};
 
-exports.help = function(d){return "ช่วยเหลือ"};
+exports.help = function(d){return "ขอความช่วยเหลือ"};
 
 exports.hintTitle = function(d){return "คำแนะนำ:"};
 
@@ -11751,7 +11833,7 @@ exports.jump = function(d){return "กระโดด"};
 
 exports.levelIncompleteError = function(d){return "คุณกำลังใช้ทุกสิ่งทุกอย่างที่จำเป็นของบล็อก แต่ไม่ใช่ทางที่ถูกต้อง."};
 
-exports.listVariable = function(d){return "ลิสต์"};
+exports.listVariable = function(d){return "รายการ"};
 
 exports.makeYourOwnFlappy = function(d){return "สร้าง Flappy เกม ไว้เป็นของเราเอง"};
 
@@ -11783,7 +11865,7 @@ exports.runTooltip = function(d){return "เรียกใช้โปรแก
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "แสดงโค้ด"};
+exports.showCodeHeader = function(d){return "แสดงรหัส"};
 
 exports.showGeneratedCode = function(d){return "แสดงโค้ด"};
 

@@ -44,10 +44,11 @@ ro:
           Jigsaw: Etapa 1
         Step Levels:
           desc: Labirint (beta)
-          MazeStep: Etapa Pas
+          MazeStep: Pas de Etapă
         edit-code:
           desc: Editează codul (beta)
           MazeEC: Etapa 1
+          Webapp: Etapa 2
         events:
           desc: Sări (beta)
           Bounce: Etapa 1
@@ -72,7 +73,7 @@ ro:
         Unplug1: Introducere în Informatică
         Maze: Labirintul
         Multi: Opțiuni Multiple
-        Unplug2: Gândire Computațională
+        Unplug2: Gândire de Calcul
         Unplug3: Programare pe Hârtie Milimetrică
         Artist: Artistul
         Unplug4: Algoritmi
@@ -81,7 +82,7 @@ ro:
         Farmer: Fermierul
         Unplug6: Condiţionale
         Artist3: Artistul 3
-        Unplug7: Compunere muzicală
+        Unplug7: Compunerea muzicală
         Farmer2: Fermierul 2
         Unplug8: Abstractizare
         Artist4: Artistul 4
@@ -91,11 +92,12 @@ ro:
         Artist5: Artistul 5
         Unplug11: Încheiere
         MazeEC: Labirintul
-        Bounce: Săritura
+        Bounce: Săritură
         Flappy: Pasărea Flappy
         Jigsaw: Puzzle
         MazeStep: Modul Pas Labirint
         Wordsearch: Cautare de cuvinte
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Bronz
@@ -104,14 +106,14 @@ ro:
     concept:
       description:
         sequence: Secvenţă
-        if: bloc Dacă
+        if: Bloc Dacă
         if_else: bloc Dacă-altfel
-        loop_times: bloc repetă ori
-        loop_until: bloc repetă până la
-        loop_while: bloc în timp ce
-        loop_for: Bloc numărător
+        loop_times: Bloc Repetă ori
+        loop_until: Bloc Repetă Până La
+        loop_while: Bloc În timp ce
+        loop_for: Bloc Contor
         function: Funcţii
-        parameters: Funcţii cu parametri
+        parameters: Funcții cu Parametrii
     level:
       instructions:
         maze_2_2: 'Mă poți ajuta să prind porcușorul obraznic? Grupează o pereche de blocuri "mută înainte" şi apasă "Rulează Programul" pentru a mă ajuta să ajung acolo.'
@@ -208,8 +210,8 @@ ro:
         maze_karel_debug_function_3: 'Editează acest program, astfel incât să elimin toate grămezile de pe domeniul meu. '
         turtle_5_1: Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
         turtle_5_2: Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
-        turtle_5_3: Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
-        turtle_5_4: Încearcă să execuți acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
+        turtle_5_3: Încearcă să execuți acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
+        turtle_5_4: Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
         turtle_5_5: Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
         turtle_5_6: Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
         maze_3_1: Am nevoie să ajung la acel porcușor! Tastează două chemări de mutare(); să-mi recuperez ouălele.
@@ -264,10 +266,10 @@ ro:
         mazestep_3: Pas Labirint descriere
         mazestep_4: Pas Labirint descriere
         mazestep_5: Pas Labirint descriere
-        studio_c2_1: 'Puteţi face acest câine sa spuna "buna tuturor"?'
+        studio_c2_1: 'Poți face acest câine să spună "Bună ziua lume"?'
         studio_c2_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa continue sa spuna altceva?
         studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
+        studio_c2_4: 'Poți scrie un program care să îl facă pe câine să meargă către pisică, iar atunci când o ajunge, aceasta să spună "Bună"?'
         studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
         studio_c2_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
         studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
@@ -275,10 +277,10 @@ ro:
         studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
         studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_story_1: 'Can you make this dog say "hello world"?'
-        studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_c3_story_1: 'Poți face acest câine să spună "Bună ziua lume"?'
+        studio_c3_story_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa continue sa spuna altceva?
         studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
+        studio_c3_story_4: 'Poți scrie un program care să îl facă pe câine să meargă către pisică, iar atunci când o ajunge, aceasta să spună "Bună"?'
         studio_c3_story_5: Can you add a block to make the octopus happy?
         studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
@@ -288,10 +290,10 @@ ro:
         studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
         studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        studio_playlab_1: 'Can you make this dog say "hello world"?'
-        studio_playlab_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_playlab_1: 'Poți face acest câine să spună "Bună ziua lume"?'
+        studio_playlab_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa continue sa spuna altceva?
         studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
+        studio_playlab_4: 'Poți scrie un program care să îl facă pe câine să meargă către pisică, iar atunci când o ajunge, aceasta să spună "Bună"?'
         studio_playlab_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
         studio_playlab_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
         studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
@@ -299,8 +301,8 @@ ro:
         studio_playlab_9: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        studio_k1_1: 'Can you make this dog say "hello world"?'
-        studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_k1_1: 'Poți face acest câine să spună "Bună ziua lume"?'
+        studio_k1_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa continue sa spuna altceva?
         studio_k1_3: Can you write a program to make this dog move to the cat?
         studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
         studio_k1_5: Can you add a block to make the octopus happy?
@@ -325,19 +327,19 @@ ro:
         loop_until: Bloc Repetă Până La
         if: Bloc Dacă
         if_else: Bloc Dacă/Altfel
-        function: Funcții
+        function: Funcţii
         loop_while: Bloc În timp ce
         loop_for: Bloc Contor
         parameters: Funcții cu Parametrii
         hoc_wrapup: Încheierea Orei de Cod
         20_wrapup: 'Încheirea celor 20 de ore '
         Unplug1: What is CS?
-        Unplug2: Gândire Computațională
+        Unplug2: Gândire de Calcul
         Unplug3: Programare pe Hârtie Milimetrică
         Unplug4: Algoritmi
         Unplug5: Funcţii
         Unplug6: Condiţionale
-        Unplug7: Songwriting
+        Unplug7: Compunând Cântece
         Unplug8: Abstractizare
         Unplug9: Programare de releu
         Unplug10: Internet
@@ -379,9 +381,9 @@ ro:
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Depanarea Ortografiei
-        C3_bounce: Săritura
+        C3_bounce: Săritură
         C3_playlab_create_game: 'Play Lab - Create a Game'
-        C3_computational_thinking: Gândire Computațională
+        C3_computational_thinking: Gândire de Calcul
         C3_dice_race: Cursă de Zaruri
         C3_internet: Internet
         C3_crowdsourcing: Obţinând Informaţii/Critici

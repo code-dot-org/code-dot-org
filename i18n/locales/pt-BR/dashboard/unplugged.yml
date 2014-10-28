@@ -8,13 +8,13 @@ pt:
           - unplug1
         video: Unplug1
       Unplug2:
-        title: Pensamento Computacional
+        title: Pensamento computacional
         desc: Com nada além de papel e caneta, os alunos vão aprender os quatro passos do pensamento computacional. Após uma breve introdução, eles devem se dividir em grupos e criar instruções para que os outros alunos desenhem um monstro específico (a partir de um catálogo de monstros previamente selecionados). A tarefa deve ser dividida, e então os grupos vão analisar todos os monstros no catálogo, procurando por padrões, detalhes abstratos e diferentes, e então usar essa informação para criar um algoritmo (instruções) para que outro grupo desenhe um certo monstro. Os grupos, então, vão trocar os algoritmos entre si e desenhar o monstro com base no algoritmo. O desenho vai ser parecido com o que o grupo que criou o algoritmo queria?
         pdfs:
           - unplug2
         video: Unplug2
       Unplug3:
-        title: Programação em Papel Quadriculado
+        title: Programação em papel quadriculado
         desc: Através da programação para desenhar as figuras, os alunos vão começar a entender o que de fato é programar. A aula vai começar com alunos dando instruções uns aos outros para colorir os quadrados em um papel quadriculado na tentativa de reproduzir uma figura existente. Se houver tempo, a aula pode ser concluída com imagens que os próprios alunos criaram.
         pdfs:
           - unplug3
@@ -26,7 +26,7 @@ pt:
           - unplug4
         video: Unplug4
       Unplug5:
-        title: Funções
+        title: funções
         desc: 'Nessa lição, os alunos vão fazer um suncatcher com cordas, miçangas, e um amuleto. Os alunos vão seguir uma série de passos repetitivos, e então devem identificar certos conjuntos de "habilidades" que são duplicadas várias vezes. Uma vez que essas habilidades estejam definidas, elas vão ser chamadas a partir de um programa principal, e todo o belo processo de criação será anotado em uma única folha de papel. O programa final será direcionado a toda a sala, seja qual for o tipo de cordas, miçangas, e amuletos usados. Para isso de fato funcionar, os alunos vão precisar "abstrair" os detalhes dos materiais específicos e criar condições vagas. O uso de espaços reservados genéricos é uma ótima forma de fazer uma introdução às variáveis.'
         pdfs:
           - unplug5
@@ -50,7 +50,7 @@ pt:
           - unplug8
         video: Unplug8
       Unplug9:
-        title: Programação Relay
+        title: Programação por revezamento
         desc: 'Essa lição vai usar uma ideia de uma atividade anterior (4. Programação em Papel Quadriculado) e usar as habilidades nela presentes para enfatizar a importância de completar programas que operam em sequência e de frequentemente verificar os programas a procura de "bugs".'
         pdfs:
           - unplug9
@@ -92,7 +92,7 @@ pt:
         desc: 'Os alunos participam de uma corrida de revezamento na qual devem atravessar o pátio para escrever um algoritmo baseado em uma imagem em "papel quadriculado de programação". Eles só podem escrever uma instrução por vez, e, se houver um erro em algum lugar, eles têm que apagar e refazer os passos a partir daquele ponto.'
         video: C2_relay_programming
       Conditionals:
-        title: Condicionais
+        title: Condições
         desc: 'Para aprender sobre estruturas condicionais, o aluno joga um jogo de cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um ponto", e "se eu comprar uma carta preta, você ganha um ponto".'
         video: C2_conditionals_with_cards
       BigEvent:

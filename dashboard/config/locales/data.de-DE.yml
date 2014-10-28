@@ -29,51 +29,52 @@
           Maze: Teil 1
         Edit Code:
           desc: Code bearbeiten (beta)
-          MazeEC: Teil 1
+          MazeEC: Stufe 1
         2014 Levels:
           desc: Hüpfen (beta)
-          Bounce: Abschnitt 1
+          Bounce: Stufe 1
         Builder Levels:
           desc: von Benutzern erstellte Puzzles (beta)
-          Custom: Teil 1
+          Custom: Stufe 1
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: Teil 1
+          Flappy: Stufe 1
         Jigsaw Levels:
           desc: Puzzle (beta)
-          Jigsaw: Teil 1
+          Jigsaw: Stufe 1
         Step Levels:
           desc: Labyrinth (Beta)
           MazeStep: Stage Step
         edit-code:
-          desc: Bearbeiten von Code (Beta)
-          MazeEC: Teil 1
+          desc: Code bearbeiten (beta)
+          MazeEC: Stufe 1
+          Webapp: Teil 2
         events:
           desc: Hüpfen (beta)
-          Bounce: Teil 1
+          Bounce: Stufe 1
           Studio: Teil 2
         builder:
           desc: von Benutzern erstellte Puzzles (beta)
-          Custom: Teil 1
+          Custom: Stufe 1
         flappy:
           desc: Flappy Bird
-          Flappy: Teil 1
+          Flappy: Stufe 1
         jigsaw:
           desc: Puzzle (beta)
-          Jigsaw: Teil 1
+          Jigsaw: Stufe 1
         step:
           desc: Labyrinth (Beta)
           MazeStep: Stage Step
         wordsearch:
           desc: Buchstabierwettbewerb (beta)
-          WordSearch: Teil 1
+          WordSearch: Stufe 1
     game:
       name:
         Unplug1: Einführung in die Informatik
         Maze: Das Labyrinth
         Multi: Multiple-Choice Sachen
-        Unplug2: Computerbezogenes Denken
-        Unplug3: Millimeterpapier Programmierung
+        Unplug2: Computerorientiertes Denken
+        Unplug3: Programmieren auf Millimeterpapier
         Artist: Der Künstler
         Unplug4: Algorithmen
         Artist2: Der Künstler 2
@@ -96,6 +97,7 @@
         Jigsaw: Puzzle
         MazeStep: Maze Step Mode
         Wordsearch: Wörtersuche
+        Webapp: Webapp
     trophy:
       name:
         Bronze: Bronze
@@ -106,8 +108,8 @@
         sequence: Sequenz
         if: Wenn-Baustein
         if_else: Wenn-Dann-Baustein
-        loop_times: Wiederholen-Baustein
-        loop_until: Wiederholen-bis-Baustein
+        loop_times: Wiederhole-Anzahl-Baustein
+        loop_until: Wiederhole-Bis-Baustein
         loop_while: Solange-Baustein
         loop_for: Zähler-Baustein
         function: Funktionen
@@ -417,8 +419,9 @@
         Custom_builder: Ziehe Bausteine aus deiner Werkzeugkiste auf den Arbeitsplatz
           um den Level zu zeichnen, welchen du erstellen möchtest. Drücke auf "Ausführen"
           wenn du bereit bist.
-        flappy_1: Füge einen Baustein zum "Wenn klick" Baustein hinzu, dann drücke
-          "Ausführen". Klicke oder berühre den Bildschirm um Flappy zum Ziel zu bewegen.
+        flappy_1: Füge dem "Wenn geklickt"-Baustein einen weiteren Baustein hinzu
+          und drücke dann "Programm ausführen". Klicke oder tippe auf den Bildschirm,
+          um Flappy zum Ziel zu bewegen.
         flappy_2: Nun haben wir etwas Boden hinzugefügt. Füge dem "Wenn auf Boden
           gestürzt"-Baustein einen weiteren Baustein hinzu. Dein Programm benötigt
           einen "Spiel beendet"-Baustein, wenn Flappy zu Boden stürzt.
@@ -508,7 +511,7 @@
           wenn der Pinguin in den Tintenfisch rennt, und ihn dann mit den Pfeiltasten
           bewegen bis du einen Punkt erzielst?
         studio_c2_10: Kannst du Bausteine hinzufügen um den Hintergrund und die Geschwindigkeit
-          des Pinguins zu ändern, und in dann mit den Pfeiltasten zu bewegen bis du
+          des Pinguins zu ändern, und ihn dann mit den Pfeiltasten bewegen bis du
           punktest?
         studio_c2_11: Erzähl deine eigene Geschichte. Wenn du fertig bist, klick auf
           "Abschliessen" um deine Geschichte deinen Freunden zu zeigen.
@@ -537,8 +540,8 @@
           wenn der Pinguin in den Tintenfisch rennt, und ihn dann mit den Pfeiltasten
           bewegen bis du einen Punkt erzielst?
         studio_c3_game_6: Kannst du Bausteine hinzufügen um den Hintergrund und die
-          Geschwindigkeit des Pinguins zu ändern, und ihn dann mit den Pfeiltasten
-          bewegen bis du punktest?
+          Geschwindigkeit des Pinguins zu ändern, und in dann mit den Pfeiltasten
+          zu bewegen bis du punktest?
         studio_c3_game_7: Erstelle deine eigenes Spiel. Wenn du fertig bist, klick
           auf "Abschliessen" um deine Geschichte deinen Freunden zu zeigen.
         studio_playlab_1: Kannst du diesen Hund "Hallo Welt" sagen lassen?
@@ -559,8 +562,8 @@
           wenn der Pinguin in den Tintenfisch rennt, und ihn dann mit den Pfeiltasten
           bewegen bis du einen Punkt erzielst?
         studio_playlab_9: Kannst du Bausteine hinzufügen um den Hintergrund und die
-          Geschwindigkeit des Pinguins zu ändern, und in dann mit den Pfeiltasten
-          zu bewegen bis du punktest?
+          Geschwindigkeit des Pinguins zu ändern, und ihn dann mit den Pfeiltasten
+          bewegen bis du punktest?
         studio_playlab_10: Erstelle deine eigenes Spiel. Wenn du fertig bist, klick
           auf "Abschliessen" um deine Geschichte deinen Freunden zu zeigen.
         studio_full_sandbox: Erstelle deine eigenes Spiel. Wenn du fertig bist, klick
@@ -608,8 +611,8 @@
         hoc_wrapup: Programmierstunde Zusammenfassung
         20_wrapup: 20-Stunden Zusammenfassung
         Unplug1: Was ist Informatik?
-        Unplug2: Computerbezogenes Denken
-        Unplug3: Millimeterpapier Programmierung
+        Unplug2: Computerorientiertes Denken
+        Unplug3: Programmieren auf Millimeterpapier
         Unplug4: Algorithmen
         Unplug5: Funktionen
         Unplug6: Bedingungen
@@ -618,10 +621,10 @@
         Unplug9: Relais-Programmierung
         Unplug10: Internet
         Unplug11: Zusammenfassung
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: Glücklich Karten
         C1_moveitmoveit_unplugged: Bewegung, Bewegung
         C1_bigevent_unplugged: Der große Event
-        C1_getting_loop: Getting Loopy
+        C1_getting_loop: Schöne Schleifen
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
@@ -637,10 +640,10 @@
         C2_maze_intro: Labyrinth Einführung
         C2_artist_intro: Künstler Einführung
         C2_zuck_repeat_loop: Labyrinth Schleifen
-        C2_artist_loops: Artist Loops
-        C2_bee_conditionals: Bee Conditionals
+        C2_artist_loops: Künstler Schleifen
+        C2_bee_conditionals: Biene Bedingungen
         C2_playlab_createstory: Play Lab - Create a Story
-        C2_graph_paper: Millimeterpapier Programmierung
+        C2_graph_paper: Programmieren auf Millimeterpapier
         C2_conditionals_with_cards: Bedingungen
         C2_binary_bracelets: Binäre Armbänder
         C2_replay_programming: Relais-Programmierung
@@ -649,7 +652,7 @@
         C3_artist_intro: Künstler Einführung
         C3_artist_functions: Künstler Funktionen
         C3_bee_functions: Biene Funktionen
-        C3_bee_conditionals: Bee Conditionals
+        C3_bee_conditionals: Biene Bedingungen
         C3_maze_conditionals: Maze Conditionals
         C3_artist_nested_loops: Nested Loops
         C3_farmer_while: While Loops
@@ -657,11 +660,11 @@
         C3_bee_debugging: Biene Debuggen
         C3_bounce: Bounce
         C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: Computerbezogenes Denken
+        C3_computational_thinking: Computerorientiertes Denken
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
+        C3_functional_suncatchers: Funktionale Sonnenfänger
         C3_songwriting_with_parameters: Songwriting With Parameters
     callout:
       text:

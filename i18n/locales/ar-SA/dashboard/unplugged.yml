@@ -2,26 +2,26 @@ ar:
   data:
     unplugged:
       Unplug1:
-        title: مقدمة في علوم الكمبيوتر
+        title: مقدمة لعلوم الحاسب الآلي
         desc: سوف يعطي هذا الدرس مقدمة عن مفهوم علوم الحاسب الآلي ويشرح مالذي يقوم به عالم الحاسوب، سوف يعطي أيضا فرصة لطلاب ليتوقعوا ماهو دور عالم الحاسوب، فبنهاية هذا النشاط سوف يعطى كل طالب واجب تذكريي في ليقوم به في المنزل حول ماتعلم / تعلمتة. لربما تميل بدورك إلى تجاهل تعليم الأطفال الصغار المصطلحات التي تتعلق بدرس القادم ولكن يجدر بك تقديمها بطريقة ممتعة ومرحة بحث تصبح أكثر إنتاجية من الإنتظار للحصول على فرص أكثر متطورة.
         pdfs:
           - unplug1
         video: Unplug1
       Unplug2:
-        title: التفكير الحاسوبي
+        title: التفكير الحسابي
         desc: 'بورقة وأقلام دون أي شيء آخر ، سوف يتعلم الطلاب الخطوات الأربع لتفكير الحاسوبي، فبعد مقدمة مختصرة يجب وضع الطلاب في مجموعات بحيث يمكن أن ينشئوا التوجيهات لطلاب الآخرين لرسم وحش معين (من فهرس الوحوش التي أختيرت مسبقا) ، يجب أن أن تكون المهمة مفصلة بوضوح، بعد ذلك سوف يقوم الفريق بتحليل كل رسمات الوحوش ضمن فهرس الأنماط، وإيجاد تفاصيل الإجتلافات من رسمات الوحوش ، ثم إستخدام تلك المعلومات لعمل خوارزمية (إتجاهات) للفريق الآخر لرسم وحش معين، بعد ذلد سوف تقوم الفرق بتبادل الخوارزميات مع بعضهم البعض ثم يقوموا برسم الوحش بناء على ماتوضحة الخوارزمية لهم، هل طابق الرسم ما كان ينوية الفريق  المنشئ لة؟'
         pdfs:
           - unplug2
         video: Unplug2
       Unplug3:
         title: برمجة ورقة الرسم البياني
-        desc: "By programming one another to draw pictures, students will begin to understand what programming is really about. The class will begin by students instructing each other to color squares in on graph paper in an effort to reproduce an existing picture.  If there's time, the lesson can conclude with images that the students create themselves."
+        desc: 'عن طريق برمجة الواحد للأخر لرسم صور - سيبدأ الطلاب في فهم ماهية عملية البرمجة. و ستبدأ الحصة بأعطاء الطلاب لبعضهم البعض تعليمات تلوين مربعات علي ورق الرسم في محاولة لأعادة انتاج لصورة متوفرة. اذا تبقي بعض الوقت فيمكن أختتام الدرس بصور ينتجها الطلاب بأنفسهم.'
         pdfs:
           - unplug3
         video: Unplug3
       Unplug4:
         title: الخوارزميات
-        desc: 'This lesson covers algorithms.  Using tangram shapes and graph paper, the first exercise will show how important it is to make each instruction as clear and unambiguous as possible.  Afterward, the class will explore how many ways you can fold paper into a rectangle, noting how some methods can take more or fewer folds than others.'
+        desc: 'يغطي هذا الدرس اللوغاريثمات. فبأستخدام لعبة قصصاصات تكوين الصورة و ورقة رسم بياني سيظهر التمرين الأول مدي أهمية أن يكون كل جزئ من التعليمات واضح و غير ملتبس علي قدر الأمكان.  و بعدها يبدا الفصل في أستكشاف الطرق المتعددة  لثني ورقة لشكل المستطيل مع ملاحظة أن بعض الطرق يمكن ان تستهلك طيات أكثر أو أقل من غيرها.'
         pdfs:
           - unplug4
         video: Unplug4
@@ -33,7 +33,7 @@ ar:
           - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: الشروط
         desc: 'This is a class game.  After introducing the idea of conditionals, if-statements, and loops, the class can practice together using a pre-written program, a deck of cards, and luck of the draw.'
         pdfs:
           - unplug6
@@ -73,7 +73,7 @@ ar:
         desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: حركها ! حركها !
+        title: حركها ! حركها
         desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
@@ -102,7 +102,7 @@ ar:
         desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: الذهاب لأماكن بأمان
+        title: الذهاب للأماكن بأمان
         desc: شبكة الإنترنت قوية، ولكن في بعض الأحيان مكان خطير . يقدم المدرسين كيفية البقاء آمناً أثناء تصفح الإنترنت.
       GraphPaperProgramming:
         title: برمجة ورقة الرسم البياني
@@ -113,14 +113,14 @@ ar:
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
+        title: أساور الثنائية
         desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
         video: C2_binary_bracelets
       DigitalFootprint:
         title: البصمة الرقمية الخاصة بك
         desc: 'Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.'
       ComputationalThinking:
-        title: التفكير الحاسوبي
+        title: التفكير الحسابي
         desc: Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions.
         video: C3_computational_thinking
       FunctionalSuncatchers:
@@ -140,7 +140,7 @@ ar:
         desc: Students send messages representing various Internet transmission methods using pieces of paper.
         video: C3_internet
       Crowdsourcing:
-        title: Crowdsourcing
+        title: التعهيد الجماعي
         desc: Student use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:

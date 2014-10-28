@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1140,6 +1150,26 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
+/**
+ * Generate the xml for a block for the calc app.
+ */
+exports.calcBlockXml = function (type, args) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var i = 1; i <= args.length; i++) {
+    str += '<functional_input name="ARG' + i + '">';
+    var arg = args[i - 1];
+    if (typeof(arg) === "number") {
+      arg = '<block type="functional_math_number"><title name="NUM">' + arg +
+        '</title></block>';
+    }
+    str += arg;
+    str += '</functional_input>';
+  }
+  str+= '</block>';
+
+  return str;
+};
+
 },{"./xml":44}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
@@ -1160,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1254,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -5458,35 +5511,48 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  // helper function used below..
+  function makeNativeMemberFunction(nativeFunc, parentObj) {
+    return function() {
+      return interpreter.createPrimitive(
+                            nativeFunc.apply(parentObj, arguments));
+    };
+  }
+  for (var optsObj in options) {
+    var func, wrapper;
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
+                                interpreter.createNativeFunction(wrapper));
+      }
+    }
+  }
+};
+
+/**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      // helper function used below..
-      function makeNativeMemberFunction(nativeFunc, parentObj) {
-        return function() {
-          return interpreter.createPrimitive(
-                                nativeFunc.apply(parentObj, arguments));
-        };
-      }
-      for (var optsObj in options) {
-        // Create global objects in the interpreter for everything in options
-        var obj = this.createObject(interpreter.OBJECT);
-        this.setProperty(scope, optsObj.toString(), obj);
-        for (var prop in options[optsObj]) {
-          var func = options[optsObj][prop];
-          if (func instanceof Function) {
-            // Populate each of the global objects with native functions
-            // NOTE: other properties are not passed to the interpreter
-            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
-            interpreter.setProperty(obj,
-                                    prop,
-                                    interpreter.createNativeFunction(wrapper));
-          }
-        }
-      }
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -5504,8 +5570,7 @@ exports.evalWith = function(code, options) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
-    var fn = new ctor();
-    return fn.apply(null, args);
+    return new ctor().apply(null, args);
   }
 };
 
@@ -5513,18 +5578,24 @@ exports.evalWith = function(code, options) {
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  return new ctor();
 };
 
 },{}],11:[function(require,module,exports){
@@ -13297,7 +13368,6 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendValueInput('TEXT')
-        .setCheck('String')
         .appendTitle(msg.setScoreText());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -16399,7 +16469,9 @@ Studio.init = function(config) {
     return el.getBoundingClientRect().width;
   };
 
-  arrangeStartBlocks(config);
+  if (config.level.edit_blocks != 'toolbox_blocks') {
+    arrangeStartBlocks(config);
+  }
 
   config.twitter = twitterOptions;
 
@@ -16767,7 +16839,7 @@ Studio.execute = function() {
   var i;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions);
+    code = utils.generateCodeAliases(level.codeFunctions, 'Studio');
     code += BlocklyApps.editor.getValue();
   }
 
@@ -18447,16 +18519,16 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += "var " + codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = [''].concat(arguments); return " +
+          parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -18563,9 +18635,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
@@ -18650,7 +18733,7 @@ exports.emptyBlocksErrorMsg = function(d){return "\"반복\" 블럭이나 \"조�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "함수 블럭 안에는 다른 블럭을 넣어주어야 합니다."};
 
-exports.extraTopBlocks = function(d){return "블럭들이 떨어져있습니다. 블럭들을 붙이겠습니까?"};
+exports.extraTopBlocks = function(d){return "블럭들이 붙어있지 않습니다. 블럭들을 붙이겠습니까?"};
 
 exports.finalStage = function(d){return "축하합니다! 마지막 단계까지 성공적으로 해결했습니다."};
 
@@ -18716,7 +18799,7 @@ exports.tooManyBlocksMsg = function(d){return "이 퍼즐은  <x id='START_SPAN'
 
 exports.tooMuchWork = function(d){return "작업을 너무 많이 해야 되요! 더 적게 반복하는 방법은 없을까요?"};
 
-exports.toolboxHeader = function(d){return "블럭"};
+exports.toolboxHeader = function(d){return "blocks"};
 
 exports.openWorkspace = function(d){return "실행 설명"};
 
@@ -18754,7 +18837,7 @@ exports.watchVideo = function(d){return "비디오 보기"};
 
 exports.when = function(d){return "~할 때"};
 
-exports.whenRun = function(d){return "~할 때 실행"};
+exports.whenRun = function(d){return "실행하면"};
 
 exports.tryHOC = function(d){return "Hour of Code 해보기"};
 
@@ -18807,7 +18890,7 @@ exports.incrementPlayerScore = function(d){return "점수 올리기"};
 
 exports.makeProjectileDisappear = function(d){return "보이지 않게 하기"};
 
-exports.makeProjectileBounce = function(d){return "튕기게 하기"};
+exports.makeProjectileBounce = function(d){return "튕김 소리"};
 
 exports.makeProjectileBlueFireball = function(d){return "파란 파이어볼 만들기"};
 
@@ -18833,7 +18916,7 @@ exports.moveDirectionRight = function(d){return "오른쪽으로"};
 
 exports.moveDirectionUp = function(d){return "위로"};
 
-exports.moveDirectionRandom = function(d){return "랜덤 방향으로"};
+exports.moveDirectionRandom = function(d){return "random(랜덤)"};
 
 exports.moveDistance25 = function(d){return "25 픽셀"};
 
@@ -18855,19 +18938,19 @@ exports.moveSprite = function(d){return "움직이기"};
 
 exports.moveSpriteN = function(d){return "캐릭터 움직이기 "+v(d,"spriteIndex")};
 
-exports.moveDown = function(d){return "아래로 움직이기"};
+exports.moveDown = function(d){return "아래로 이동하기"};
 
 exports.moveDownTooltip = function(d){return "케릭터를 아래로 움직입니다."};
 
-exports.moveLeft = function(d){return "왼쪽으로 움직이기"};
+exports.moveLeft = function(d){return "왼쪽으로 이동하기"};
 
 exports.moveLeftTooltip = function(d){return "케릭터를 왼쪽으로 움직입니다."};
 
-exports.moveRight = function(d){return "오른쪽으로 움직이기"};
+exports.moveRight = function(d){return "오른쪽으로 이동하기"};
 
 exports.moveRightTooltip = function(d){return "케릭터를 오른쪽으로 움직입니다."};
 
-exports.moveUp = function(d){return "위로 올리기"};
+exports.moveUp = function(d){return "위로 올라가기"};
 
 exports.moveUpTooltip = function(d){return "케릭터를 위로 움직입니다."};
 
@@ -18881,13 +18964,13 @@ exports.numBlocksNeeded = function(d){return "%1 개의 블럭으로 퍼즐을 �
 
 exports.ouchExclamation = function(d){return "앗!"};
 
-exports.playSoundCrunch = function(d){return "부서지는 소리 출력"};
+exports.playSoundCrunch = function(d){return "부서짐 소리 출력"};
 
 exports.playSoundGoal1 = function(d){return "골1 소리 출력"};
 
 exports.playSoundGoal2 = function(d){return "골2 소리 출력"};
 
-exports.playSoundHit = function(d){return "때리는 소리 출력"};
+exports.playSoundHit = function(d){return "때리기 소리 출력"};
 
 exports.playSoundLosePoint = function(d){return "실점 소리 출력"};
 
@@ -18899,7 +18982,7 @@ exports.playSoundRubber = function(d){return "고무 소리 출력"};
 
 exports.playSoundSlap = function(d){return "찰싹 소리 출력"};
 
-exports.playSoundTooltip = function(d){return "선택 소리 출력"};
+exports.playSoundTooltip = function(d){return "선택한 소리 출력"};
 
 exports.playSoundWinPoint = function(d){return "득점 소리 출력"};
 
@@ -18955,7 +19038,7 @@ exports.projectilePurpleHearts = function(d){return "분홍 하트"};
 
 exports.projectileRedHearts = function(d){return "빨간 하트"};
 
-exports.projectileRandom = function(d){return "랜덤 발사체"};
+exports.projectileRandom = function(d){return "random(랜덤)"};
 
 exports.reinfFeedbackMsg = function(d){return "\"다시 시작\"을 누르면 이야기를 다시 실행시킬 수 있습니다."};
 
@@ -19003,7 +19086,7 @@ exports.setBackgroundTennis = function(d){return "테니스 배경 설정"};
 
 exports.setBackgroundWinter = function(d){return "겨울 배경 설정"};
 
-exports.setBackgroundTooltip = function(d){return "배경 그림 설정"};
+exports.setBackgroundTooltip = function(d){return "배경 이미지 설정"};
 
 exports.setScoreText = function(d){return "점수 등록"};
 
@@ -19139,7 +19222,7 @@ exports.setSprite = function(d){return "케릭터 설정"};
 
 exports.setSpriteN = function(d){return "캐릭터 설정 "+v(d,"spriteIndex")};
 
-exports.soundCrunch = function(d){return "부서지는 소리"};
+exports.soundCrunch = function(d){return "부서짐 소리"};
 
 exports.soundGoal1 = function(d){return "득점 소리1"};
 

@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1140,6 +1150,26 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
+/**
+ * Generate the xml for a block for the calc app.
+ */
+exports.calcBlockXml = function (type, args) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var i = 1; i <= args.length; i++) {
+    str += '<functional_input name="ARG' + i + '">';
+    var arg = args[i - 1];
+    if (typeof(arg) === "number") {
+      arg = '<block type="functional_math_number"><title name="NUM">' + arg +
+        '</title></block>';
+    }
+    str += arg;
+    str += '</functional_input>';
+  }
+  str+= '</block>';
+
+  return str;
+};
+
 },{"./xml":40}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
@@ -1160,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1254,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -1367,35 +1420,48 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  // helper function used below..
+  function makeNativeMemberFunction(nativeFunc, parentObj) {
+    return function() {
+      return interpreter.createPrimitive(
+                            nativeFunc.apply(parentObj, arguments));
+    };
+  }
+  for (var optsObj in options) {
+    var func, wrapper;
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
+                                interpreter.createNativeFunction(wrapper));
+      }
+    }
+  }
+};
+
+/**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      // helper function used below..
-      function makeNativeMemberFunction(nativeFunc, parentObj) {
-        return function() {
-          return interpreter.createPrimitive(
-                                nativeFunc.apply(parentObj, arguments));
-        };
-      }
-      for (var optsObj in options) {
-        // Create global objects in the interpreter for everything in options
-        var obj = this.createObject(interpreter.OBJECT);
-        this.setProperty(scope, optsObj.toString(), obj);
-        for (var prop in options[optsObj]) {
-          var func = options[optsObj][prop];
-          if (func instanceof Function) {
-            // Populate each of the global objects with native functions
-            // NOTE: other properties are not passed to the interpreter
-            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
-            interpreter.setProperty(obj,
-                                    prop,
-                                    interpreter.createNativeFunction(wrapper));
-          }
-        }
-      }
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -1413,8 +1479,7 @@ exports.evalWith = function(code, options) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
-    var fn = new ctor();
-    return fn.apply(null, args);
+    return new ctor().apply(null, args);
   }
 };
 
@@ -1422,18 +1487,24 @@ exports.evalWith = function(code, options) {
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  return new ctor();
 };
 
 },{}],7:[function(require,module,exports){
@@ -9593,11 +9664,6 @@ Turtle.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.insertWhenRun = true;
 
-  // Enable blockly param editing in levelbuilder, regardless of level setting
-  if (config.level.edit_blocks) {
-    config.disableParamEditing = false;
-  }
-
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
 
@@ -10410,16 +10476,16 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += "var " + codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = [''].concat(arguments); return " +
+          parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -10526,9 +10592,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
@@ -10573,7 +10650,7 @@ exports.and = function(d){return "és"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
-exports.catActions = function(d){return "Cselekvések"};
+exports.catActions = function(d){return "Műveletek"};
 
 exports.catColour = function(d){return "Szín"};
 
@@ -10585,9 +10662,9 @@ exports.catLoops = function(d){return "Ciklusok"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Függvények"};
+exports.catProcedures = function(d){return "Funkciók"};
 
-exports.catText = function(d){return "Szöveg"};
+exports.catText = function(d){return "szöveg"};
 
 exports.catVariables = function(d){return "Változók"};
 
@@ -10665,7 +10742,7 @@ exports.runTooltip = function(d){return "A munkalapon összeépített program fu
 
 exports.score = function(d){return "pontszám"};
 
-exports.showCodeHeader = function(d){return "Kód Megjelenítése"};
+exports.showCodeHeader = function(d){return "Kód megjelenítése"};
 
 exports.showGeneratedCode = function(d){return "Kód megjelenítése"};
 
@@ -10679,7 +10756,7 @@ exports.tooManyBlocksMsg = function(d){return "Ez a feladvány megoldható a <x 
 
 exports.tooMuchWork = function(d){return "Sokat dolgoztattál. Megpróbálnád egy kicsit kevesebb ismétléssel?"};
 
-exports.toolboxHeader = function(d){return "Blokkok"};
+exports.toolboxHeader = function(d){return "blokkok"};
 
 exports.openWorkspace = function(d){return "Hogyan is működik"};
 
@@ -10736,15 +10813,15 @@ exports.branches = function(d){return "branches"};
 
 exports.catColour = function(d){return "Szín"};
 
-exports.catControl = function(d){return "Ciklusok"};
+exports.catControl = function(d){return "hurkok"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Funkciók"};
+exports.catProcedures = function(d){return "funkciók"};
 
 exports.catTurtle = function(d){return "Műveletek"};
 
-exports.catVariables = function(d){return "Változók"};
+exports.catVariables = function(d){return "változók"};
 
 exports.catLogic = function(d){return "Logika"};
 
@@ -10754,7 +10831,7 @@ exports.degrees = function(d){return "fok"};
 
 exports.depth = function(d){return "depth"};
 
-exports.dots = function(d){return "pixel"};
+exports.dots = function(d){return "képpontok"};
 
 exports.drawASquare = function(d){return "rajzoljon egy négyzetet"};
 
@@ -10778,7 +10855,7 @@ exports.drawARocket = function(d){return "Rajzolj egy rakétát"};
 
 exports.drawASnowflake = function(d){return "Rajzolj egy hópelyhet"};
 
-exports.drawASnowman = function(d){return "rajzoljon egy hóembert"};
+exports.drawASnowman = function(d){return "rajzolj egy hóembert"};
 
 exports.drawAStar = function(d){return "Rajzolj egy csillagot"};
 
@@ -10788,7 +10865,7 @@ exports.drawUpperWave = function(d){return "draw upper wave"};
 
 exports.drawLowerWave = function(d){return "draw lower wave"};
 
-exports.heightParameter = function(d){return "Magasság"};
+exports.heightParameter = function(d){return "magasság"};
 
 exports.hideTurtle = function(d){return "művész elrejtése"};
 
@@ -10840,13 +10917,13 @@ exports.penTooltip = function(d){return "Felemeli vagy lenyonja a ceruzát, hogy
 
 exports.penUp = function(d){return "ceruza fel"};
 
-exports.reinfFeedbackMsg = function(d){return "Úgy néz ez ki ahogy akarta? Nyomja meg a \"Próbáld újra\" gombot , hogy lása a saját rajzát."};
+exports.reinfFeedbackMsg = function(d){return "Ez úgy néz ki amit akartál? Nyomd meg a \"Próbáld újra\" gombot ,hogy lásd a rajzod."};
 
 exports.setColour = function(d){return "színbeállítások megadása"};
 
 exports.setWidth = function(d){return "szélesség beállítása"};
 
-exports.shareDrawing = function(d){return "Ossza meg a rajzát:"};
+exports.shareDrawing = function(d){return "Oszd meg a rajzodat:"};
 
 exports.showMe = function(d){return "mutasd"};
 

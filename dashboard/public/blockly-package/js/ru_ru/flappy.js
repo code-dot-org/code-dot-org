@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1140,6 +1150,26 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
+/**
+ * Generate the xml for a block for the calc app.
+ */
+exports.calcBlockXml = function (type, args) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var i = 1; i <= args.length; i++) {
+    str += '<functional_input name="ARG' + i + '">';
+    var arg = args[i - 1];
+    if (typeof(arg) === "number") {
+      arg = '<block type="functional_math_number"><title name="NUM">' + arg +
+        '</title></block>';
+    }
+    str += arg;
+    str += '</functional_input>';
+  }
+  str+= '</block>';
+
+  return str;
+};
+
 },{"./xml":36}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
@@ -1160,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1254,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -1367,35 +1420,48 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  // helper function used below..
+  function makeNativeMemberFunction(nativeFunc, parentObj) {
+    return function() {
+      return interpreter.createPrimitive(
+                            nativeFunc.apply(parentObj, arguments));
+    };
+  }
+  for (var optsObj in options) {
+    var func, wrapper;
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
+                                interpreter.createNativeFunction(wrapper));
+      }
+    }
+  }
+};
+
+/**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      // helper function used below..
-      function makeNativeMemberFunction(nativeFunc, parentObj) {
-        return function() {
-          return interpreter.createPrimitive(
-                                nativeFunc.apply(parentObj, arguments));
-        };
-      }
-      for (var optsObj in options) {
-        // Create global objects in the interpreter for everything in options
-        var obj = this.createObject(interpreter.OBJECT);
-        this.setProperty(scope, optsObj.toString(), obj);
-        for (var prop in options[optsObj]) {
-          var func = options[optsObj][prop];
-          if (func instanceof Function) {
-            // Populate each of the global objects with native functions
-            // NOTE: other properties are not passed to the interpreter
-            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
-            interpreter.setProperty(obj,
-                                    prop,
-                                    interpreter.createNativeFunction(wrapper));
-          }
-        }
-      }
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -1413,8 +1479,7 @@ exports.evalWith = function(code, options) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
-    var fn = new ctor();
-    return fn.apply(null, args);
+    return new ctor().apply(null, args);
   }
 };
 
@@ -1422,18 +1487,24 @@ exports.evalWith = function(code, options) {
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  return new ctor();
 };
 
 },{}],7:[function(require,module,exports){
@@ -4049,7 +4120,7 @@ Flappy.execute = function() {
   Flappy.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions);
+    code = utils.generateCodeAliases(level.codeFunctions, 'Flappy');
     code += BlocklyApps.editor.getValue();
   }
 
@@ -8953,16 +9024,16 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += "var " + codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = [''].concat(arguments); return " +
+          parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -9069,9 +9140,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
@@ -9143,7 +9225,7 @@ exports.catMath = function(d){return "Математика"};
 
 exports.catProcedures = function(d){return "Процедуры"};
 
-exports.catText = function(d){return "Текст"};
+exports.catText = function(d){return "текст"};
 
 exports.catVariables = function(d){return "Переменные"};
 
@@ -9151,7 +9233,7 @@ exports.codeTooltip = function(d){return "Просмотреть созданн�
 
 exports.continue = function(d){return "Продолжить"};
 
-exports.dialogCancel = function(d){return "Отменить"};
+exports.dialogCancel = function(d){return "Отмена"};
 
 exports.dialogOK = function(d){return "Продолжить"};
 
@@ -9167,17 +9249,17 @@ exports.end = function(d){return "конец"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Блокам \"повторять\" или \"если\" необходимо иметь внутри другие блоки для работы. Убедись  в том, что внутренний блок должным образом подходит к блоку, в котором он содержится."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Блок функции требует другие блоки внутри для работы."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Блок процедуры требует для работы другие блоки внутри себя."};
 
-exports.extraTopBlocks = function(d){return "У тебя остались неприсоединённые блоки. Ты собирался присоединить их к блоку (when run)?"};
+exports.extraTopBlocks = function(d){return "У тебя остались неприсоединённые блоки. Ты собирался присоединить их к блоку \"При запуске\"?"};
 
 exports.finalStage = function(d){return "Поздравляю! Ты завершил последний этап."};
 
 exports.finalStageTrophies = function(d){return "Поздравляю! Ты завершил последний этап и выиграл "+p(d,"numTrophies",0,"ru",{"one":"кубок","other":n(d,"numTrophies")+" кубков"})+"."};
 
-exports.finish = function(d){return "Завершить"};
+exports.finish = function(d){return "Готово"};
 
-exports.generatedCodeInfo = function(d){return "Даже в лучших университетах изучают блочное программирование (например, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Но на самом деле блоки, которые вы собирали могут быть отображены на JavaScript, наиболее широко используемом в мире языке программирования:"};
+exports.generatedCodeInfo = function(d){return "Даже в лучших университетах изучают блочное программирование (например, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Но на самом деле блоки, которые вы собирали, могут быть отображены на JavaScript, наиболее широко используемом в мире языке программирования:"};
 
 exports.hashError = function(d){return "К сожалению, «%1» не соответствует какой-либо сохранённой программе."};
 
@@ -9185,7 +9267,7 @@ exports.help = function(d){return "Справка"};
 
 exports.hintTitle = function(d){return "Подсказка:"};
 
-exports.jump = function(d){return "прыжок"};
+exports.jump = function(d){return "прыгнуть"};
 
 exports.levelIncompleteError = function(d){return "Ты используешь все необходимые виды блоков, но неправильным способом."};
 
@@ -9235,7 +9317,7 @@ exports.tooManyBlocksMsg = function(d){return "Эта головоломка м�
 
 exports.tooMuchWork = function(d){return "Ты заставил меня попотеть! Может, будешь стараться делать меньше попыток?"};
 
-exports.toolboxHeader = function(d){return "Блоки"};
+exports.toolboxHeader = function(d){return "блоков"};
 
 exports.openWorkspace = function(d){return "Как это работает"};
 
@@ -9251,7 +9333,7 @@ exports.saveToGallery = function(d){return "Сохранить в твоей г�
 
 exports.savedToGallery = function(d){return "Сохранено в твоей галереи!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "К сожалению, мы не можем поделиться этой программой."};
 
 exports.typeCode = function(d){return "Введите ваш код  на JavaScript под этой инструкцией."};
 
@@ -9303,13 +9385,13 @@ exports.continue = function(d){return "Продолжить"};
 
 exports.doCode = function(d){return "выполнить"};
 
-exports.elseCode = function(d){return "иначе"};
+exports.elseCode = function(d){return "или"};
 
-exports.endGame = function(d){return "конец игры"};
+exports.endGame = function(d){return "закончить игру"};
 
-exports.endGameTooltip = function(d){return "Заверши игру."};
+exports.endGameTooltip = function(d){return "Завершает игру."};
 
-exports.finalLevel = function(d){return "Поздравляем! Вы решили последнюю головоломку."};
+exports.finalLevel = function(d){return "Поздравляю! Последняя головоломка решена."};
 
 exports.flap = function(d){return "махать крыльями"};
 
@@ -9327,37 +9409,37 @@ exports.flapVeryLarge = function(d){return "Подлететь с очень б�
 
 exports.flapTooltip = function(d){return "Летите вверх."};
 
-exports.flappySpecificFail = function(d){return "Твой код выглядит хорошо - она будет взлетать при клике мышкой. Но тебе прийдется кликать мышкой много раз, чтобы достичь цели."};
+exports.flappySpecificFail = function(d){return "Твой код выглядит неплохо - она будет взлетать при клике мышкой. Но тебе прийдется кликать мышкой много раз, чтобы достичь цели."};
 
 exports.incrementPlayerScore = function(d){return "выиграть очко"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Добавьте один в текущий счет игрока."};
+exports.incrementPlayerScoreTooltip = function(d){return "Добавить игроку одно очко."};
 
-exports.nextLevel = function(d){return "Поздравляем! Вы завершили этот пазл."};
+exports.nextLevel = function(d){return "Поздравляю! Головоломка решена."};
 
 exports.no = function(d){return "Нет"};
 
-exports.numBlocksNeeded = function(d){return "Эта головоломка может быть решена с %1 блоков."};
+exports.numBlocksNeeded = function(d){return "Эта головоломка может быть решена с помощью %1 блоков."};
 
-exports.playSoundRandom = function(d){return "Проиграйте случайный звук"};
+exports.playSoundRandom = function(d){return "Проиграть случайный звук"};
 
-exports.playSoundBounce = function(d){return "проиграть звук отказа"};
+exports.playSoundBounce = function(d){return "проиграть звук отскока"};
 
 exports.playSoundCrunch = function(d){return "проиграть звук хруста"};
 
-exports.playSoundDie = function(d){return "проиграть звук печаль"};
+exports.playSoundDie = function(d){return "проиграть грустный звук"};
 
 exports.playSoundHit = function(d){return "проиграть звук разбивания"};
 
-exports.playSoundPoint = function(d){return "проиграть звук точки"};
+exports.playSoundPoint = function(d){return "проиграть звук преодоления препятствия"};
 
-exports.playSoundSwoosh = function(d){return "проиграть звук выполнено"};
+exports.playSoundSwoosh = function(d){return "проиграть звук \"выполнено\""};
 
 exports.playSoundWing = function(d){return "воспроизвести звук крыльев"};
 
 exports.playSoundJet = function(d){return "воспроизвести звук двигателя"};
 
-exports.playSoundCrash = function(d){return "воспроизвести звук аварии"};
+exports.playSoundCrash = function(d){return "воспроизвести звук падения"};
 
 exports.playSoundJingle = function(d){return "воспроизвести звук звонка"};
 
@@ -9369,69 +9451,69 @@ exports.playSoundTooltip = function(d){return "Воспроизвести выб
 
 exports.reinfFeedbackMsg = function(d){return "Вы можете нажать кнопку «Повторить», чтобы вернуться в игру."};
 
-exports.scoreText = function(d){return "Очки: "+v(d,"playerScore")};
+exports.scoreText = function(d){return "Оценка: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "установка сцены"};
+exports.setBackground = function(d){return "установить сцену"};
 
-exports.setBackgroundRandom = function(d){return "установить случайную сцену"};
+exports.setBackgroundRandom = function(d){return "установить  сцену Случайная"};
 
-exports.setBackgroundFlappy = function(d){return "установить сцену город (ночь)"};
+exports.setBackgroundFlappy = function(d){return "установить сцену город (день)"};
 
-exports.setBackgroundNight = function(d){return "установить сцену город (день)"};
+exports.setBackgroundNight = function(d){return "установить сцену Город (ночь)"};
 
-exports.setBackgroundSciFi = function(d){return "установить научно-фантастическую сцену"};
+exports.setBackgroundSciFi = function(d){return "установить сцену Научно Фантастическая"};
 
-exports.setBackgroundUnderwater = function(d){return "установить подводную сцену"};
+exports.setBackgroundUnderwater = function(d){return "установить сцену Под Водой"};
 
-exports.setBackgroundCave = function(d){return "установить сцену пещера"};
+exports.setBackgroundCave = function(d){return "установить сцену Пещера"};
 
-exports.setBackgroundSanta = function(d){return "установить сцену Санта"};
+exports.setBackgroundSanta = function(d){return "установить сцену Новогодняя"};
 
-exports.setBackgroundTooltip = function(d){return "Задать изображение фона"};
+exports.setBackgroundTooltip = function(d){return "Установить на задний план изображение"};
 
-exports.setGapRandom = function(d){return "установить случайный разрыв"};
+exports.setGapRandom = function(d){return "установить случайное расстояние"};
 
-exports.setGapVerySmall = function(d){return "задать очень небольшой разрыв"};
+exports.setGapVerySmall = function(d){return "установить очень маленькое расстояние"};
 
 exports.setGapSmall = function(d){return "установить небольшой разрыв"};
 
-exports.setGapNormal = function(d){return "установить нормальный разрыв"};
+exports.setGapNormal = function(d){return "установить обычное расстояние"};
 
-exports.setGapLarge = function(d){return "установить большой разрыв"};
+exports.setGapLarge = function(d){return "установить большое расстояние"};
 
-exports.setGapVeryLarge = function(d){return "задать очень большой разрыв"};
+exports.setGapVeryLarge = function(d){return "установить очень большое расстояние"};
 
 exports.setGapHeightTooltip = function(d){return "Задать вертикальный разрыв в препятствии"};
 
-exports.setGravityRandom = function(d){return "Случайное значение гравитации"};
+exports.setGravityRandom = function(d){return "Установить случайную гравитацию"};
 
-exports.setGravityVeryLow = function(d){return "Установка очень низкой гравитации"};
+exports.setGravityVeryLow = function(d){return "Установить очень низкую гравитацию"};
 
-exports.setGravityLow = function(d){return "Установка низкой гравитации"};
+exports.setGravityLow = function(d){return "Установить низкую гравитацию"};
 
-exports.setGravityNormal = function(d){return "Установка нормальной гравитации"};
+exports.setGravityNormal = function(d){return "Установить нормальную гравитацию"};
 
-exports.setGravityHigh = function(d){return "Установка высокой гравитации"};
+exports.setGravityHigh = function(d){return "Установить высокую гравитацию"};
 
-exports.setGravityVeryHigh = function(d){return "Установка очень высокой гравитации"};
+exports.setGravityVeryHigh = function(d){return "Установить очень высокую гравитацию"};
 
 exports.setGravityTooltip = function(d){return "Задать уровень сложности"};
 
-exports.setGround = function(d){return "установка земли"};
+exports.setGround = function(d){return "установить основание"};
 
-exports.setGroundRandom = function(d){return "задать случайный фон"};
+exports.setGroundRandom = function(d){return "установить основание Случайное"};
 
-exports.setGroundFlappy = function(d){return "установить земляной фон"};
+exports.setGroundFlappy = function(d){return "установить основание Земля"};
 
-exports.setGroundSciFi = function(d){return "установить научно-фантастический фон"};
+exports.setGroundSciFi = function(d){return "установить основание Научная Фантастика"};
 
-exports.setGroundUnderwater = function(d){return "задать фон \"Под водой\""};
+exports.setGroundUnderwater = function(d){return "установить основание Под Водой"};
 
-exports.setGroundCave = function(d){return "установить фон \"пещера\""};
+exports.setGroundCave = function(d){return "установить основание Пещера"};
 
-exports.setGroundSanta = function(d){return "задать фон \"Санта\""};
+exports.setGroundSanta = function(d){return "установить основание Новогоднее"};
 
-exports.setGroundLava = function(d){return "установить фон \"Лава\""};
+exports.setGroundLava = function(d){return "установить основание Лава"};
 
 exports.setGroundTooltip = function(d){return "Задать основное изображение"};
 
@@ -9439,55 +9521,55 @@ exports.setObstacle = function(d){return "установка препятств�
 
 exports.setObstacleRandom = function(d){return "задать случайное припятствие"};
 
-exports.setObstacleFlappy = function(d){return "задать препятствие \"Труба\""};
+exports.setObstacleFlappy = function(d){return "установить препятствие Труба"};
 
-exports.setObstacleSciFi = function(d){return "задать препятствие \"Научная фантастика\""};
+exports.setObstacleSciFi = function(d){return "установить препятствие Научная фантастика"};
 
-exports.setObstacleUnderwater = function(d){return "задать препятствие \"Растение\""};
+exports.setObstacleUnderwater = function(d){return "установить препятствие Растение"};
 
-exports.setObstacleCave = function(d){return "задать препятствие пещера"};
+exports.setObstacleCave = function(d){return "установить препятствие Пещера"};
 
-exports.setObstacleSanta = function(d){return "задать препятствие дымоход"};
+exports.setObstacleSanta = function(d){return "установить препятствие Дымоход"};
 
-exports.setObstacleLaser = function(d){return "задать препятствие лазер"};
+exports.setObstacleLaser = function(d){return "установить препятствие Лазер"};
 
-exports.setObstacleTooltip = function(d){return "Задать изображение для препятствия"};
+exports.setObstacleTooltip = function(d){return "Установить изображение препятствия"};
 
-exports.setPlayer = function(d){return "установить плеер"};
+exports.setPlayer = function(d){return "установить игрока"};
 
-exports.setPlayerRandom = function(d){return "задать случайного игрока"};
+exports.setPlayerRandom = function(d){return "установить игрока Случайный"};
 
-exports.setPlayerFlappy = function(d){return "задать игрока \"Желтая птица\""};
+exports.setPlayerFlappy = function(d){return "установить игрока Жёлтая Птица"};
 
-exports.setPlayerRedBird = function(d){return "задать игрока \"Красная птица\""};
+exports.setPlayerRedBird = function(d){return "установить игрока Красная Птица"};
 
-exports.setPlayerSciFi = function(d){return "задать игрока \"Космический корабль\""};
+exports.setPlayerSciFi = function(d){return "установить игрока Космический Корабль"};
 
-exports.setPlayerUnderwater = function(d){return "задать игрока \"Рыбка\""};
+exports.setPlayerUnderwater = function(d){return "установить игрока Рыбка"};
 
-exports.setPlayerCave = function(d){return "задать игрока \"Летучая мышь\""};
+exports.setPlayerCave = function(d){return "установить игрока Летучая Мышь"};
 
-exports.setPlayerSanta = function(d){return "задать игрока \"Санта\""};
+exports.setPlayerSanta = function(d){return "установить игрока Санта"};
 
-exports.setPlayerShark = function(d){return "задать игрока \"Акула\""};
+exports.setPlayerShark = function(d){return "установить игрока Акула"};
 
-exports.setPlayerEaster = function(d){return "задать игрока \"Пасхальный кролик\""};
+exports.setPlayerEaster = function(d){return "установить игрока Пасхальный кролик"};
 
-exports.setPlayerBatman = function(d){return "задать игрока \"Бэтмен\""};
+exports.setPlayerBatman = function(d){return "установить игрока Бэтмен"};
 
-exports.setPlayerSubmarine = function(d){return "задать игрока \"Подводная лодка\""};
+exports.setPlayerSubmarine = function(d){return "установить игрока Подводная Лодка"};
 
-exports.setPlayerUnicorn = function(d){return "задать игрока \"Единорог\""};
+exports.setPlayerUnicorn = function(d){return "установить игрока Единорог"};
 
-exports.setPlayerFairy = function(d){return "задать игрока \"Фея\""};
+exports.setPlayerFairy = function(d){return "установить игрока Фея"};
 
-exports.setPlayerSuperman = function(d){return "установить игрока \"Летящий человек\""};
+exports.setPlayerSuperman = function(d){return "установить игрока Супермен"};
 
-exports.setPlayerTurkey = function(d){return "установить игрока \"Индюшка\""};
+exports.setPlayerTurkey = function(d){return "установить игрока Индюшка"};
 
-exports.setPlayerTooltip = function(d){return "Задать изображение игрока"};
+exports.setPlayerTooltip = function(d){return "установить изображение игрока"};
 
-exports.setScore = function(d){return "присвоить очки"};
+exports.setScore = function(d){return "задать счет"};
 
 exports.setScoreTooltip = function(d){return "Установить счет игрока"};
 
@@ -9495,21 +9577,21 @@ exports.setSpeed = function(d){return "установить скорость"};
 
 exports.setSpeedTooltip = function(d){return "Установить уровень скорости"};
 
-exports.shareFlappyTwitter = function(d){return "Поиграйте в мою игру, сделанную своими руками с @codeorg"};
+exports.shareFlappyTwitter = function(d){return "Поиграйте в мою игру Flappy Bird. Она написана мной с помощью  @codeorg"};
 
-exports.shareGame = function(d){return "Поделитесь вашей игрой:"};
+exports.shareGame = function(d){return "Поделиться твоей игрой:"};
 
 exports.soundRandom = function(d){return "случайный"};
 
-exports.soundBounce = function(d){return "отказ"};
+exports.soundBounce = function(d){return "отскочить"};
 
-exports.soundCrunch = function(d){return "уплотнение"};
+exports.soundCrunch = function(d){return "хруст"};
 
 exports.soundDie = function(d){return "грустно"};
 
 exports.soundHit = function(d){return "разбить"};
 
-exports.soundPoint = function(d){return "точка"};
+exports.soundPoint = function(d){return "очко"};
 
 exports.soundSwoosh = function(d){return "галочка"};
 
@@ -9537,11 +9619,11 @@ exports.speedFast = function(d){return "задать быструю скорос
 
 exports.speedVeryFast = function(d){return "задать очень быструю скорость"};
 
-exports.whenClick = function(d){return "когда кликните мышкой"};
+exports.whenClick = function(d){return "когда щёлкнете мышкой"};
 
 exports.whenClickTooltip = function(d){return "Выполните действия ниже при возникновении события нажатия."};
 
-exports.whenCollideGround = function(d){return "когда ударится о землю"};
+exports.whenCollideGround = function(d){return "при ударе о землю"};
 
 exports.whenCollideGroundTooltip = function(d){return "Выполните действия ниже когда Флэппи упадет на землю."};
 
@@ -9549,11 +9631,11 @@ exports.whenCollideObstacle = function(d){return "При попадании в �
 
 exports.whenCollideObstacleTooltip = function(d){return "Выполните действия ниже, когда Флэппи удариться о препятствие."};
 
-exports.whenEnterObstacle = function(d){return "когда проходит препятствия"};
+exports.whenEnterObstacle = function(d){return "когда проходит препятствие"};
 
-exports.whenEnterObstacleTooltip = function(d){return "Выполните действия ниже, когда Флэппи удариться о препятствие."};
+exports.whenEnterObstacleTooltip = function(d){return "Выполните действия ниже, когда Флэппи ударится о препятствие."};
 
-exports.whenRunButtonClick = function(d){return "Когда игра начнется"};
+exports.whenRunButtonClick = function(d){return "когда игра начнется"};
 
 exports.whenRunButtonClickTooltip = function(d){return "Выполните действия ниже, когда игра начнется."};
 

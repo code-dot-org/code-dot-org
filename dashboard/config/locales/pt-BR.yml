@@ -7,8 +7,8 @@
       user:
         name: Nome para exibição
         email: E-mail
-        username: Nome de usuário
-        password: Senha
+        username: nome de usuário
+        password: senha
         password_confirmation: Confirmação de senha
         current_password: Senha atual
         locale: Idioma
@@ -31,11 +31,11 @@
     placeholder: Digite sua dica aqui
     submit: Adicionar dica
   appname: Code.org
-  stage: Fase
+  stage: fase
   stage_number: Fase %{number}
-  puzzle: Desafio
-  trophies: Troféus
-  courses: Cursos
+  puzzle: Quebra-cabeça
+  trophies: troféus
+  courses: percursos
   of: de
   more: MAIS
   less: MENOS
@@ -98,7 +98,7 @@
     gender: Gênero (opcional)
     birthday: Aniversário (opcional)
     age: Idade
-    submit: Cadastrar
+    submit: Inscreva-se
     teacher: Você é um professor?
     valid_username: Disponível!
     invalid_username: O nome de usuário deve ter ao menos 5 caracteres
@@ -130,7 +130,7 @@
     name: Escolha seu nome
     picture: Agora encontre sua foto secreta
     words: Agora digite suas palavras secretas
-    login: Iniciar sessão
+    login: Entrar
   password:
     reset_form:
       title: Esqueceu sua senha?
@@ -281,7 +281,7 @@
       prizes: Prêmios
       logout: Sair
       signin: Entrar
-      signup: Registrar
+      signup: Inscreva-se
       already_registered: Já se cadastrou?
     popup:
       progress: Seu progresso
@@ -293,7 +293,7 @@
       prize_earned: Todos os %{total_trophies} troféus foram conquistados. Você ganhou
         o prêmio!
       prize_us_only: "(Somente para alunos dos EUA)"
-      prizes_link: mais informações
+      prizes_link: Mais informação
   teacher:
     title:
       one: 'Seu professor:'
@@ -313,11 +313,11 @@
       not_tried: Ainda não tentou
       activity: Indica as atividades do alunos nas últimas %{hours} %{plural}
       no_section: Nenhuma seção atribuída
-      trophies: Troféus
+      trophies: troféus
     students:
       name: Nome
-      username: Nome de usuário
-      password: Senha
+      username: nome de usuário
+      password: senha
       manage: Gerenciar alunos
       dashboard: Vá para o painel de controle do professor
       add: Adicionar alunos
@@ -339,9 +339,9 @@
     sections:
       add: Adicionar seção
       manage: Gerenciar seções
-      section: Seção
+      section: Turma
       students: Alunos
-      section_code: Código da seção
+      section_code: Código da turma
       add_section_code: Adicionar código da seção dos alunos
       secret: Tipo secreto
       grade: Grau
@@ -392,14 +392,14 @@
       troféus de "Domínio de Conceito" existentes.
     teacher_print_certificates: Imprima certificados para os alunos que terminarem
       esse curso
-    teacher_read_blog: Leia sobre notícias e atualizações em nossos materiais no nosso
-      Blog do Professor
+    teacher_read_blog: Leia sobre notícias e atualizações nos materiais disponíveis
+      em nosso Blog do Professor
     classroom: Sua turma
     student_progress: Seu progresso de aprendizagem
     student_stats: Você ganhou %{trophy_count} dos %{trophy_max} troféus de "Domínio
       de Conceitos" disponíveis.
     student_left_off: 'Onde você parou:'
-    student_finished_prize: Você completou todos os tutoriais, reivindique seu %{prize_link}
+    student_finished_prize: Você completou todos os tutoriais, reivindicar seu %{prize_link}
       e escolha outra aula em %{online_link} ou %{local_school_link}
     student_finished: Você completou todos os tutoriais, escolha outra aula em %{online_link}
       ou %{local_school_link}
@@ -410,10 +410,10 @@
       dos EUA.): até $1.000 em prêmios para sala de aula.'
     tryfirst: 'Ou, você pode experimentar primeiro e se cadastrar depois:'
     trynow: Experimente agora
-    add_hint_help: Ajude-nos a acrescentar dicas inteligentes aos tutoriais da Code.org
-    20hour_overview: Esse curso de 20 horas apresenta os conceitos essenciais da ciência
-      computação e da programação. O curso é projetado para uso em salas de aula do
-      ensino fundamental, mas é divertido para todas as idades.
+    add_hint_help: Ajude-nos a acrescentar dicas inteligentes nos tutoriais da Code.org
+    20hour_overview: Este curso de 20 horas apresenta o núcleo da computação e conceitos
+      de programação. O curso é projetado para uso em salas de aula para o Ensino
+      Fundamental, mas é divertido de aprender em todas as idades.
     test_videos_help: Teste nosso novo player de vídeo na sua escola
     try_beta_courses: Novo! Conheça nossos cursos experimentais para alunos do pré
       ao 5º ano
@@ -421,6 +421,9 @@
     heading_elementary: "<h2>Cursos de 20 horas para</h2><h1>alunos do ensino fundamental</h1>"
     heading_apps: "<h2>Diversão para</h2><h1>todos</h1>"
     heading_legacy: "<h2>Nosso curso geral para</h2><h1>todas as idades</h1>"
+    gallery:
+      your_turtle: Minha arte
+      your_studio: Meus aplicativos
   gender:
     male: Masculino
     female: Feminino
@@ -519,11 +522,17 @@
       body: Experimente nossa introdução ao curso de Ciência da Computação de 20 horas.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
+    students_made_these_with_code: Os alunos criaram isso com programação!
     picture_count: Nos <b>%{days}</b> dias anteriores, alunos criaram <b>%{count}</b>
       imagens desenvolvendo seus próprios programas de computador. Clique nas imagens
       para ver cada programa em execução.
+    activity_count: Nos últimos <b>%{days}</b> dias, os alunos criaram <b>%{count}</b>
+      aplicativos e figuras escrevendo seus próprios programas de computador. Clique
+      nas figuras e capturas de tela para ver cada programa em funcionamento.
     want_to_make_your_own: Quer criar seu próprio programa?
     more: Mais &rarr;
+    caption_by_name_age: feito por %{name}, %{age} anos
+    caption_time_ago: há %{time_ago}
   landing:
     prerelease: Este curso está em sua versão <span class='betatext'>beta</span>.
       Isso significa que esta não é a versão final do curso, e ele está sujeito a
@@ -535,12 +544,12 @@
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
-    correct_title: Corrigir
+    correct_title: Correto
     correct_body: Essa é a resposta correta.
   match:
     wrong_title: Solução incorreta
     wrong_body: Sua solução não está correta. Tente novamente!
-    correct_title: Corrigir
+    correct_title: Correto
     correct_body: Essa é a resposta correta.
   dialog:
     ok: OK
@@ -554,10 +563,9 @@
         20-hour:
           title: Introdução ao Curso de Ciência da Computação (15-25 horas) para estudantes
             do ensino fundamental
-          description: Este curso de 20 horas apresenta os principais conceitos de
-            ciência da computação e programação. Ele foi desenvolvido para ser usado
-            em salas de aula do ensino fundamental, mas é divertido de aprender em
-            todas as idades.
+          description: Este curso de 20 horas apresenta o núcleo da computação e conceitos
+            de programação. O curso é projetado para uso em salas de aula para o Ensino
+            Fundamental, mas é divertido de aprender em todas as idades.
         Hour of Code:
           title: Hora do Código
           description: ''
@@ -578,7 +586,7 @@
           title: Quebra-cabeça
           description: ''
         step:
-          title: Passo
+          title: Etapa
           description: ''
         sample_level_builder:
           title: Construtor de nível de exemplo

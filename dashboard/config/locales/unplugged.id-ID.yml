@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: Pengantar Ilmu Komputer
+        title: Perkenalan ilmu komputer
         desc: Pelajaran ini akan memperkenalkan konsep Ilmu Komputer dan menjelaskan
           pekerjaan seorang Ilmuwan Komputer. Pelajaran ini juga akan memberikan kesempatan
           kepada pelajar untuk berperan sebagai Ilmuwan Komputer. Di akhir kegiatan
@@ -50,7 +50,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: Fungsi
+        title: fungsi
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -136,7 +136,7 @@
           picture of computer science and how algorithms play an essential part.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
+        title: Membangun dasar
         desc: Students build a structure using only provided supplies. Structures
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.
@@ -161,7 +161,7 @@
           black card, you get a point."
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
+        title: Acara besar
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
@@ -183,7 +183,7 @@
           computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
+        title: Gelang biner
         desc: Students create bracelets as a binary representations of the first letter
           of their name. Students learn that data can be represented and stored in
           more than one way.

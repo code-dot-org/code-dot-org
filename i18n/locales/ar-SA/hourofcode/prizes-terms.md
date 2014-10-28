@@ -6,7 +6,7 @@ layout: wide
 
 # الجوائز - الشروط والأحكام
 
-## Dropbox space or Skype credit:
+## مساحة تخزينية على Dropbox أو رصيد Skype:
 
 إن 10 غيغا بايت من المساحة التخزينية على Dropbox ، أو عشرة دولارات من رصيد Skype تقتصر على المراحل التعليميه الابتدائي ، الثانوي ، كادر المدرسين لنشاطات ما بعد المدرسة و الهيئات التعليمية. إن مساحة 10 جيغا بايت الخاليه لا بد أن تضاف إلى حساب Dropbox موجود مسبقاً. جائزة واحدة لكل منظمة.
 
@@ -16,12 +16,18 @@ layout: wide
 
 <% if @country == 'us' %>
 
-## Video chat with a guest speaker:
+## محادثة مرئية مع ضيف متحدث:
 
-Prize limited to K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 14, 2014. Code.org will randomly select winning schools, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details.
+هذه الجائزة مقتصرة على طلاب مدارس ما قبل الجامعة للمراحل التعليمية الابتدائي والثانوي. حتى تكون مؤهل للفوز بالجائزة ، لا بد أن يتم تسجيل المدرسة بالكامل لحدث "ساعة من الكود البرمجي" قبل نهاية يوم 2014/11/14. إن منظمة "Code.org" سوف تختار المدارس الفائزة بشكل عشوائي ، وإتاحة فرصة زمنية للمحادثة على الإنترنت ، والعمل مع المدرس المناسب لإعداد التفاصيل التقنية.
 
-## Class-set of laptops (or $10,000 for other technology):
+## مجموعة من الكمبيوترات المحمولة (أو قيمة عشرة آلاف دولار لأي تقنية أخرى):
 
-Prize limited to public K-12 U.S. schools only. Why only public schools? [See the answer here](http://www.hourofcode.com/us#faq). To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+هذه الجائزة مقتصرة على المدارس العامه غير الحكومية للمراحل الابتدائية والثانوية ما قبل الجامعة في الولايات المتحدة الأميركية. لماذا المدارس العامة غير الحكومية فقط ؟ [See the answer here](http://www.hourofcode.com/#faq). حتى تكون مؤهل للفوز بالجائزة ، لا بد أن يتم تسجيل المدرسة بالكامل لحدث "ساعة من الكود البرمجي" قبل نهاية يوم 2014/11/14. مدرسة واحدة في كل ولاية أميركية سوف تتلقى مجموعة من الحاسب الألي. إن منظمة "Code.org" تقوم بإعلام الفائزين عن طريق البريد الإلكتروني مع حلول اليوم الأول من كانون الأول 2014/12/1.
+
+To clarify, this is not a sweepstakes or a contest involving pure chance.
+
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>

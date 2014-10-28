@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1140,6 +1150,26 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
+/**
+ * Generate the xml for a block for the calc app.
+ */
+exports.calcBlockXml = function (type, args) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var i = 1; i <= args.length; i++) {
+    str += '<functional_input name="ARG' + i + '">';
+    var arg = args[i - 1];
+    if (typeof(arg) === "number") {
+      arg = '<block type="functional_math_number"><title name="NUM">' + arg +
+        '</title></block>';
+    }
+    str += arg;
+    str += '</functional_input>';
+  }
+  str+= '</block>';
+
+  return str;
+};
+
 },{"./xml":36}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
@@ -1160,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1254,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -1367,35 +1420,48 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  // helper function used below..
+  function makeNativeMemberFunction(nativeFunc, parentObj) {
+    return function() {
+      return interpreter.createPrimitive(
+                            nativeFunc.apply(parentObj, arguments));
+    };
+  }
+  for (var optsObj in options) {
+    var func, wrapper;
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
+                                interpreter.createNativeFunction(wrapper));
+      }
+    }
+  }
+};
+
+/**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      // helper function used below..
-      function makeNativeMemberFunction(nativeFunc, parentObj) {
-        return function() {
-          return interpreter.createPrimitive(
-                                nativeFunc.apply(parentObj, arguments));
-        };
-      }
-      for (var optsObj in options) {
-        // Create global objects in the interpreter for everything in options
-        var obj = this.createObject(interpreter.OBJECT);
-        this.setProperty(scope, optsObj.toString(), obj);
-        for (var prop in options[optsObj]) {
-          var func = options[optsObj][prop];
-          if (func instanceof Function) {
-            // Populate each of the global objects with native functions
-            // NOTE: other properties are not passed to the interpreter
-            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
-            interpreter.setProperty(obj,
-                                    prop,
-                                    interpreter.createNativeFunction(wrapper));
-          }
-        }
-      }
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -1413,8 +1479,7 @@ exports.evalWith = function(code, options) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
-    var fn = new ctor();
-    return fn.apply(null, args);
+    return new ctor().apply(null, args);
   }
 };
 
@@ -1422,18 +1487,24 @@ exports.evalWith = function(code, options) {
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  return new ctor();
 };
 
 },{}],7:[function(require,module,exports){
@@ -4049,7 +4120,7 @@ Flappy.execute = function() {
   Flappy.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions);
+    code = utils.generateCodeAliases(level.codeFunctions, 'Flappy');
     code += BlocklyApps.editor.getValue();
   }
 
@@ -8953,16 +9024,16 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += "var " + codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = [''].concat(arguments); return " +
+          parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -9069,9 +9140,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
@@ -9130,7 +9212,7 @@ exports.catMath = function(d){return "Matemática"};
 
 exports.catProcedures = function(d){return "Funções"};
 
-exports.catText = function(d){return "Texto"};
+exports.catText = function(d){return "texto"};
 
 exports.catVariables = function(d){return "Variáveis"};
 
@@ -9208,7 +9290,7 @@ exports.runTooltip = function(d){return "Execute o programa definido pelos bloco
 
 exports.score = function(d){return "pontuação"};
 
-exports.showCodeHeader = function(d){return "Mostrar Código"};
+exports.showCodeHeader = function(d){return "Mostrar código"};
 
 exports.showGeneratedCode = function(d){return "Mostrar código"};
 
@@ -9222,7 +9304,7 @@ exports.tooManyBlocksMsg = function(d){return "Esse desafio pode ser resolvido c
 
 exports.tooMuchWork = function(d){return "Você me fez trabalhar bastante! Podemos tentar repetindo menos vezes?"};
 
-exports.toolboxHeader = function(d){return "Blocos"};
+exports.toolboxHeader = function(d){return "blocos"};
 
 exports.openWorkspace = function(d){return "Como funciona"};
 
@@ -9238,7 +9320,7 @@ exports.saveToGallery = function(d){return "Salve na sua galeria"};
 
 exports.savedToGallery = function(d){return "Salvo na sua galeria!"};
 
-exports.shareFailure = function(d){return "Não podemos compartilhar esse programa."};
+exports.shareFailure = function(d){return "Desculpe, não é possível compartilhar esse programa."};
 
 exports.typeCode = function(d){return "Digite seu código JavaScript abaixo destas instruções."};
 
@@ -9283,7 +9365,7 @@ exports.endGame = function(d){return "fim de Jogo"};
 
 exports.endGameTooltip = function(d){return "Termina o Jogo."};
 
-exports.finalLevel = function(d){return "Parabéns! Você resolveu o último desafio."};
+exports.finalLevel = function(d){return "Parabéns! Você resolveu o desafio final."};
 
 exports.flap = function(d){return "bata asas"};
 
@@ -9301,23 +9383,23 @@ exports.flapVeryLarge = function(d){return "bata asas muitíssimas vezes"};
 
 exports.flapTooltip = function(d){return "Faça com que o passarinho voe."};
 
-exports.flappySpecificFail = function(d){return "Seu código parece bom - ele vai bater as asas a cada clique. Mas você precisa clicar muitas vezes para atingir o objetivo."};
+exports.flappySpecificFail = function(d){return "Seu código parece bom - ele irá bater as asas com cada clique. Mas você precisa clicar muitas vezes para bater as asas para o alvo."};
 
 exports.incrementPlayerScore = function(d){return "marque um ponto"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Some um ponto à pontuação atual do jogador."};
+exports.incrementPlayerScoreTooltip = function(d){return "Soma um ponto à pontuação atual do jogador."};
 
-exports.nextLevel = function(d){return "Parabéns! Você completou o desafio."};
+exports.nextLevel = function(d){return "Parabéns! Você completou este desafio."};
 
 exports.no = function(d){return "Não"};
 
-exports.numBlocksNeeded = function(d){return "Este desafio pode ser resolvido com %1 blocos."};
+exports.numBlocksNeeded = function(d){return "Esse desafio pode ser resolvido com %1 blocos."};
 
 exports.playSoundRandom = function(d){return "reproduza som aleatório"};
 
 exports.playSoundBounce = function(d){return "reproduza som de bola pulando"};
 
-exports.playSoundCrunch = function(d){return "reproduza som de trituração"};
+exports.playSoundCrunch = function(d){return "reproduza barulho de trituração"};
 
 exports.playSoundDie = function(d){return "reproduza som triste"};
 
@@ -9339,9 +9421,9 @@ exports.playSoundSplash = function(d){return "reproduza som de água"};
 
 exports.playSoundLaser = function(d){return "reproduza som de laser"};
 
-exports.playSoundTooltip = function(d){return "Reproduza o som escolhido."};
+exports.playSoundTooltip = function(d){return "Reproduz o som escolhido."};
 
-exports.reinfFeedbackMsg = function(d){return "Você pode clicar no botão \"Tente novamente\" para voltar a jogar."};
+exports.reinfFeedbackMsg = function(d){return "Você pode pressionar o botão de \"Tentar novamente\" para voltar a jogar o seu jogo."};
 
 exports.scoreText = function(d){return "Pontuação: "+v(d,"playerScore")};
 
@@ -9361,7 +9443,7 @@ exports.setBackgroundCave = function(d){return "escolha o cenário Caverna"};
 
 exports.setBackgroundSanta = function(d){return "escolha o cenário de Natal"};
 
-exports.setBackgroundTooltip = function(d){return "Define a imagem do plano de fundo"};
+exports.setBackgroundTooltip = function(d){return "Define a imagem de fundo"};
 
 exports.setGapRandom = function(d){return "escolha uma abertura de tamanho aleatório"};
 
@@ -9475,7 +9557,7 @@ exports.shareGame = function(d){return "Compartilhe seu jogo:"};
 
 exports.soundRandom = function(d){return "aleatório"};
 
-exports.soundBounce = function(d){return "quique"};
+exports.soundBounce = function(d){return "quicar"};
 
 exports.soundCrunch = function(d){return "triture"};
 
@@ -9527,7 +9609,7 @@ exports.whenEnterObstacle = function(d){return "quando passar o obstáculo"};
 
 exports.whenEnterObstacleTooltip = function(d){return "Execute as ações abaixo quando o passarinho atingir um obstáculo."};
 
-exports.whenRunButtonClick = function(d){return "quando o jogo começa"};
+exports.whenRunButtonClick = function(d){return "Quando o jogo começar"};
 
 exports.whenRunButtonClickTooltip = function(d){return "Execute as ações abaixo quando o jogo começar."};
 

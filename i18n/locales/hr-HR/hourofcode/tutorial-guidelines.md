@@ -1,10 +1,12 @@
 * * *
 
-layout: wide
+prikaz: širok
 
 * * *
 
 # Tutorial guidelines for the Hour of Code and Computer Science Education Week
+
+**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
 
 Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
 
@@ -157,7 +159,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
 
 **Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with \___\_____ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
 **Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
 

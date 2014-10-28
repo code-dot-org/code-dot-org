@@ -1,19 +1,19 @@
 * * *
 
-title: Resources layout: wide
+title: Risorse layout: wide
 
 * * *
 
-# How to attract media to your Hour of Code event
+# Come attirare l'attenzione dei media sul tuo evento dell'Ora del Codice
 
-## Some shocking statistics (USA):
+## Alcune statistiche scioccanti (Stati Uniti):
 
-  * There will be one million more computing jobs than students over the next 10 years (adding up to $500 billion in salaries).
-  * More than 50 percent of all projected math and science occupations are in computing occupations. 
-  * Computing occupations are among the highest-paying jobs for new graduates. Yet fewer than 3% of college students graduate with a degree in computer science.
-  * In 26 states, computer science classes don’t count toward math or science high school graduation requirements. 
-  * Less than 20% of AP Computer Science students are women. Less than 10% are black or Latino.
+  * Nei prossimi 10 anni ci saranno un milione di posti di lavoro in più nel campo dell'informatica rispetto agli studenti diplomati e laureati (per un totale di 500 miliardi di dollari di stipendio).
+  * Più della metà di tutti i lavori previsti in futuro nei campi della matematica e delle scienze saranno lavori di tipo informatico. 
+  * I lavori nel campo dell'informatica sono tra i lavori con i salari più alti per i neolaureati. Nonostante ciò, meno del 3% degli studenti universitari si laureano in informatica.
+  * In 26 dei 52 stati degli Stati Uniti i corsi di informatica non contano per i requisiti richiesti in campo matematico e scientifico agli studenti delle scuole superiori. 
+  * Meno del 20% degli studenti dei corsi avanzati di informatica alle scuole superiori sono donne. Meno del 10% sono studenti di colore o ispanici.
 
-## Infrographic version:
+## Diagrammi:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)

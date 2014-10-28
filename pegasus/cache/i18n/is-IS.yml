@@ -84,7 +84,7 @@
   get_started: Byrja
   i_agree: "Ég samþykki"
   participant_select: "- Velja -"
-  participant_student: Nemandi
+  participant_student: nemandi
   participant_parent: Foreldri
   participant_educator: Kennari
   participant_engineer: Tölvunarfræðingur
@@ -98,7 +98,7 @@
   carousel_heading_international: Kennsluefni á þínu tungumáli
   continue_learning_header: Halda áfram að læra eftir Kóðun í klukkustund
   continue_learning_body: "Það eru margir valkostir. Þú getur lært á vefnum, í skólanum
-    eða á námskeiðum."
+    eða á sumarnámskeiðum."
   learn_next_level: Halda áfram í næsta áfanga
   learn_online: Prófa önnur námskeið á netinu
   learn_classes: Finna námskeið nálægt þér
@@ -266,7 +266,7 @@
   dashboard_students_male: Karlkyns
   dashboard_students_female: Kvenkyns
   dashboard_students_secret: Leyndarmál
-  dashboard_students_password: Lykilorð
+  dashboard_students_password: lykilorð
   dashboard_students_username: 'Notandanafn: %{student_username}'
   dashboard_students_email: 'Netfang: %{student_email}'
   dashboard_students_completed_levels: "Áföngum lokið"
@@ -316,8 +316,21 @@
   dashboard_grade_other: Annað
   dashboard_login_word: leyniorð
   dashboard_login_picture: leynimynd
-  dashboard_login_none: ekkert
+  dashboard_login_none: Netfang
   dashboard_new_password: nýtt leyniorð
   stats_hoc_2013_heading: "Ótrúlegar tölur frá síðasta ári um Kóðun í klukkustund.
     Á aðeins einni viku:"
   stats_hoc_2013_image_alt: Um Kóðun í klukkustund árið 2013
+  dashboard_teacher: Teacher
+  dashboard_student: nemandi
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: Who creates the student's account?
+  dashboard_sections_password question: What do students use as a "password"?
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
+  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: This table helps explain which of these
+    login types, <b>picture, word, or email</b>, you'll want to choose for a section.

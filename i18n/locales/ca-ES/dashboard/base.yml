@@ -6,9 +6,9 @@ ca:
     attributes:
       user:
         name: Display Name
-        email: Correu electrònic
-        username: "Nom d'usuari"
-        password: Contrasenya
+        email: Email
+        username: "nom d'usuari"
+        password: contrasenya
         password_confirmation: Confirma la contrasenya
         current_password: Contrasenya actual
         locale: Llengua
@@ -17,7 +17,7 @@ ca:
         edit_header: Edita les dades del compte
         error:
           future: "can't be in the future"
-  hello: Hola món
+  hello: Hola Món
   welcome_back: 'Benvingut de nou, %{name}'
   add_teacher_form:
     code_or_email:
@@ -31,11 +31,11 @@ ca:
     placeholder: Please enter your hint here
     submit: Afegeix pista
   appname: Code.org
-  stage: Etapa
+  stage: etapa
   stage_number: 'Stage %{number}'
   puzzle: Puzzle
-  trophies: Trofeus
-  courses: Cursos
+  trophies: trofeus
+  courses: cursos
   of: de
   more: MÉS
   less: MENYS
@@ -44,7 +44,7 @@ ca:
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
   already_started: 'Ja has començat? Continua aquí >> '
   demos: 'Admin: Totes les demos'
-  continue: Continua
+  continue: Continuar
   prize: premi
   more_info: Més informació
   auth:
@@ -226,7 +226,7 @@ ca:
       prizes: Premis
       logout: Tanca la sessió
       signin: Inicia la sessió
-      signup: "Registra't"
+      signup: "Inscriure's"
       already_registered: Already registered?
     popup:
       progress: El teu progrés
@@ -237,7 +237,7 @@ ca:
       prizes: 'Recull els %{total_trophies} trofeus i guanya premis!'
       prize_earned: 'Has agafat els %{total_trophies} trofeus. El premi és teu!'
       prize_us_only: (només estudiants EUA)
-      prizes_link: més informació
+      prizes_link: Més informació
   teacher:
     title:
       one: 'El teu professor:'
@@ -257,11 +257,11 @@ ca:
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
-      trophies: Trofeus
+      trophies: trofeus
     students:
       name: Nom
-      username: "Nom d'usuari"
-      password: Contrasenya
+      username: "nom d'usuari"
+      password: contrasenya
       manage: Gestiona els estudiants
       dashboard: Go to Teacher Dashboard
       add: Afegeix estudiants
@@ -332,7 +332,7 @@ ca:
     student_progress: "El teu progrés d'aprenentatge"
     student_stats: 'Has guanyat %{trophy_count} fora del %{trophy_max} "Concepte de Domini" de trofeus.'
     student_left_off: 'On ho vas deixar:'
-    student_finished_prize: "You've completed all tutorials, claim your %{prize_link} and pick another class %{online_link} or at a %{local_school_link}"
+    student_finished_prize: 'Has completat tots els tutorials, reclama el teu %{prize_link} i escull una altra classe %{online_link} o una %{local_school_link}'
     student_finished: "You've completed all tutorials, pick another class %{online_link} or at a %{local_school_link}"
     local_school: escola local
     online: en línia
@@ -341,13 +341,16 @@ ca:
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Try now
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+    20hour_overview: "Aquest curs de 20 hores és una introducció als conceptes bàsics d'informàtica i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d'ESO, però és divertit d'aprendre a qualsevol edat."
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Home
     female: Dona
@@ -375,7 +378,7 @@ ca:
     teacher: Mira la solució
     auth_error: No estàs autoritzat a veure la solució.
     submit: Update Artist Location
-    direction: Start Direction
+    direction: Start Direction (in degrees)
   video:
     tab: Vídeo.
     notes: Cap vídeo? Mostra les notes.
@@ -384,11 +387,11 @@ ca:
     download: Descarregar vídeo
   compatability:
     working:
-      header: We are working on support for your browser.
+      header: Estem treballant per a afegir suport per al teu navegador.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
       hide_this_warning: Hide this warning
     upgrade:
-      header: Please upgrade your browser.
+      header: Si us plau, actualitza el teu navegador.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
       button: Take me to the list of supported browsers
   slow_loading: "Això està trigant més de l'habitual..."
@@ -430,9 +433,13 @@ ca:
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Want to make your own?
     more: 'More &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
@@ -460,12 +467,12 @@ ca:
       name:
         20-hour:
           title: K-8 Intro to Computer Science Course (15-25 hours)
-          description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+          description: "Aquest curs de 20 hores és una introducció als conceptes bàsics d'informàtica i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d'ESO, però és divertit d'aprendre a qualsevol edat."
         Hour of Code:
           title: Hora del codi
           description: ""
         edit-code:
-          title: Edit Code
+          title: Edita el codi
           description: ""
         events:
           title: Events

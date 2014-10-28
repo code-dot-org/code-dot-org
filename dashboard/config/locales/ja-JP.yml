@@ -44,7 +44,7 @@
   k8intro: "コンピューター科学コース （15-25 時間）の入門編"
   already_started: "既に開始しましたか？ここで再開してください >>"
   demos: "管理者： 全部のデモ"
-  continue: "続行しますか？"
+  continue: "次へ"
   prize: "賞を受賞"
   more_info: "情報をもっと見る"
   auth:
@@ -111,7 +111,7 @@
     name: Choose your name
     picture: Now find your secret picture
     words: Now enter your secret words
-    login: "サインイン"
+    login: "ログイン"
   password:
     reset_form:
       title: "パスワードをお忘れですか？"
@@ -244,7 +244,7 @@
       settings: "私のアカウント"
       prizes: "賞品"
       logout: "サインアウト"
-      signin: "サインイン"
+      signin: "ログイン"
       signup: "入会"
       already_registered: Already registered?
     popup:
@@ -256,7 +256,7 @@
       prizes: "%{total_trophies}　トロフィーをあつめて、賞品を獲得しよう ！"
       prize_earned: "すべての%{total_trophies}トロフィーを集めました。賞をもらった！"
       prize_us_only: "(米国の学生のみ）"
-      prizes_link: "詳細情報"
+      prizes_link: "情報をもっと見る"
   teacher:
     title:
       one: "あなたの先生："
@@ -309,7 +309,7 @@
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
+      rename: "名前の変更"
       edit: edit
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
@@ -356,8 +356,8 @@
     student_progress: "学習の進行状況"
     student_stats: '%{trophy_max}このうち%{trophy_count} の"コンセプト"習得のトロフィーを獲得しました。'
     student_left_off: "中断したところから。"
-    student_finished_prize: "すべてのチュートリアルを完了しました、あなたの %{prize_link} を主張した後、別のクラス %{online_link}
-      、または%{local_school_link}を選んでください"
+    student_finished_prize: "すべてのチュートリアルを完了したら、あなたの %{prize_link} を主張した後、別のクラス %{online_link}
+      か%{local_school_link}を選らんでください"
     student_finished: "すべてのチュートリアルを完了したら、別のクラス % {online_link} または % {local_school_link}を選んでください。"
     local_school: "地元の学校"
     online: "オンライン"
@@ -367,15 +367,16 @@
     tryfirst: "または、最初に試してみて、後でサインアップ（登録）することができます。"
     trynow: "今すぐ試す"
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming
-      concepts. The course is designed for use in classrooms for grades K-8, but it
-      is fun to learn at all ages.
+    20hour_overview: "この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。"
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: "男性"
     female: "女性"
@@ -464,7 +465,7 @@
       unused: "未使用のレベル"
   upsell:
     hoc:
-      title: "コードの時間（Hour of code）"
+      title: "コードの時間(Hour of code)"
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
       title: Flappy Code
@@ -475,11 +476,17 @@
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
       each program in action.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
@@ -507,14 +514,12 @@
       name:
         20-hour:
           title: "コンピューター科学コース （15-25 時間）の入門編"
-          description: This 20-hour course introduces core computer science and programming
-            concepts. The course is designed for use in classrooms for grades K-8,
-            but it is fun to learn at all ages.
+          description: "この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。"
         Hour of Code:
-          title: "コードの時間（Hour of code）"
+          title: "コードの時間(Hour of code)"
           description: ''
         edit-code:
-          title: Edit Code
+          title: "コードを編集します。"
           description: ''
         events:
           title: "イベント"

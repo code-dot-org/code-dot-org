@@ -31,7 +31,9 @@ ja-JP:
   view_english_site: 英語のサイトを見る
   non_english_tutorials: チュートリアルは複数の言語に翻訳されています。
   write_your_first_program: あなたの最初のコンピュータ プログラムを書きます。
-  learn_cs_concepts: 'ドラッグ&ドロップでコンピュータ科学の基本概念を学びましょう。これはビル·ゲイツ、マーク·ザッカーバーグ、「アングリーバード」、そして「プラント vs. ゾンビ」によるビデオ講義を見ながらのゲームのようなチュートリアルです。repeat-loop、if-then文、および基本的なアルゴリズムはを学びましょう。'
+  learn_cs_concepts: |
+    ドラッグとドロッププログラミングでコンピューターサイエンスの基本概念を学びます。
+    これはビル ・ ゲイツ、マークザッカーバーグ, アングリーバード、そして、プランツVSゾンビーが出演しているゲームのようなビデオチュートリアルです。繰り返しループ、If-thenステートメント、および基本的なアルゴリズムについて説明します。
   all_ages: すべての年齢
   beginner: 初心者のため
   n_participants: '# 参加者'
@@ -41,10 +43,10 @@ ja-JP:
   congratulations_on_completing_hoc: コード１時間を修了、おめでとうございます。
   get_a_certificate_of_achievement: 達成の証明書を取得します。
   enter_valid_email: 有効なメール アドレスを入力してください。
-  get_a_certificate_message: "証明書および<a href='/learn/beyond'>1 時間を超えて学ぶ</a>のやり方について情報を送ります。"
+  get_a_certificate_message: "証明書および<a href='/learn/beyond'>1 時間を超えて学ぶ</a>についてのやり方についての情報を送ります。"
   get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
   thanks_for_submitting: 提出してくれてありがとう ！
-  if_you_enjoyed: 学ぶことを楽しかったら、ぜひ友達にも勧めてみてください！私たちは世界中のみんなが学んでほしいと思っています。
+  if_you_enjoyed: もし学ぶことを楽しかったら、友達にも勧めてみてください！私たちは世の中のみんなが学んでほしいと思っています。
   personalize_certificate: 証明書のカスタマイズをします。
   share_achievement: あなたの成果を共有します。
   beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
@@ -79,7 +81,7 @@ ja-JP:
   petition_thankyou: 請願書に署名していただきありがとうございます
   carousel_heading_international: あなたの言語のチュートリアル
   continue_learning_header: 1 時間以上の学習を継続します。
-  continue_learning_body: 選択肢はたくさんあります。オンライン、または地元の学校や夏のキャンプで学ぶことができます。
+  continue_learning_body: オプションがたくさんあります。オンライン、または地元の学校や夏のキャンプで学ぶことができます。
   learn_next_level: 次のレベルに続行します。
   learn_online: 他のオンラインのコースを試してください。
   learn_classes: 近隣でクラスを見つける
@@ -92,13 +94,13 @@ ja-JP:
   boy: 男の子
   help_recruit_coders: あなたのチームでより多くのプログラマーを募集するのを手伝ってください ！
   help_recruit: より多くのプログラマーを募集するのを手伝ってください ！
-  lines_of_code: '<b># コードの行</b> 上に日付が書き込まれます。'
+  lines_of_code: '<b># 行</b> 上の日付に書き込まれます。'
   lines_of_code_alt: '<b>#</b>学生によって書かれたコードの行'
   who_has_done_hoc: '誰が、#HourOfCode を行っていますか？@codeorg'
   hoc_leaderboards: コード リーダー ボードの時間
-  students_and_lines: '学生%{students} がHour of Code を行い、%{lines}行のコードを記述。'
+  students_and_lines: '% {学生} 学生コードの時間を行っているし、% {線} 行のコードを記述。'
   start_hoc: Hour of Codeを今すぐ開始します。
-  contact_form_topic_press: プレス/メディア(インタビュー や講演の契約)
+  contact_form_topic_press: プレス/メディア(インタビュー 又は講演の契約)
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: 'Our three new courses for K&#8209;5'
@@ -118,7 +120,7 @@ ja-JP:
   contact_form_label_topic: トピック
   contact_form_label_email: あなたのメール アドレス
   contact_form_label_message: メッセージ
-  contact_form_label_submit: メッセージを送信
+  contact_form_label_submit: メッセージを送る
   class_submission_in_school: In school
   class_submission_in_school_daily_programming_course: Daily programming course
   class_submission_in_school_ap_computer_science: AP computer science
@@ -201,7 +203,7 @@ ja-JP:
   dashboard_sections_new_section: New section
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
   dashboard_sections_table_section: Section
-  dashboard_sections_table_secret: Secret type
+  dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
   dashboard_sections_table_students: Students
@@ -261,9 +263,21 @@ ja-JP:
   dashboard_teacher_worksheet: teacher worksheet
   dashboard_grade_k: K
   dashboard_grade_other: その他
-  dashboard_login_word: word
-  dashboard_login_picture: picture
-  dashboard_login_none: none
+  dashboard_login_word: Word
+  dashboard_login_picture: Picture
+  dashboard_login_none: Eメール
   dashboard_new_password: new password
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
+  dashboard_teacher: Teacher
+  dashboard_student: 生徒
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: "Who creates the student's account?"
+  dashboard_sections_password question: 'What do students use as a "password"?'
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: 'Unique web-page listed on "Manage Students" tab'
+  dashboard_sections_sign_in_main: 'http://code.org and click "Sign in"'
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."

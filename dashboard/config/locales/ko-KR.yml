@@ -7,8 +7,8 @@
       user:
         name: "사용자 이름"
         email: "이메일"
-        username: "아이디"
-        password: "비밀번호"
+        username: username
+        password: password
         password_confirmation: "비밀번호 재확인"
         current_password: "현재 비밀번호"
         locale: "언어"
@@ -31,11 +31,11 @@
     placeholder: "도움내용을 입력하세요."
     submit: "도움말 추가하기"
   appname: Code.org
-  stage: "단계"
+  stage: stage
   stage_number: "스테이지 %{number}"
   puzzle: "퍼즐"
-  trophies: "트로피"
-  courses: "학습 코스"
+  trophies: trophies
+  courses: courses
   of: "중"
   more: "전체단계"
   less: "현재단계"
@@ -105,7 +105,7 @@
     login: "이메일 또는 아이디"
     password: "비밀번호"
     remember: "아이디 기억하기"
-    submit: "로그인하기"
+    submit: "로그인"
   signin:
     try_heading: "가입하지 않고 코딩을 해보시겠습니까?"
     try_hoc: Hour of Code 한시간 해보기
@@ -247,7 +247,7 @@
       prizes: "상품"
       logout: "로그아웃"
       signin: "로그인"
-      signup: "가입 신청"
+      signup: "가입 신청하기"
       already_registered: "이미 등록하였나요?"
     popup:
       progress: "내 진도"
@@ -258,7 +258,7 @@
       prizes: "트로피를 모두(%{total_trophies} 개) 모아 상품을 받으세요!"
       prize_earned: "트로피를 모두(총 %{total_trophies} 개) 모았습니다. 상품을 받으세요!"
       prize_us_only: "(U.S. students only)"
-      prizes_link: "상품 살펴보기"
+      prizes_link: "자세히"
   teacher:
     title:
       one: "선생님 : "
@@ -278,11 +278,11 @@
       not_tried: "아직 시도하지 않았습니다."
       activity: "지난 %{hours} %{plural} 동안의 학생 활동 살펴보기"
       no_section: "섹션이 없습니다."
-      trophies: "트로피"
+      trophies: trophies
     students:
       name: "이름"
-      username: "아이디"
-      password: "비밀번호"
+      username: username
+      password: password
       manage: "학생 관리"
       dashboard: "선생님용 대시보드 가기"
       add: "학생 추가"
@@ -327,9 +327,9 @@
     new_password_hint: "(바꾸고 싶지 않으면, 비워 두세요)"
     current_password_hint: "(수정하기 위해 비밀번호를 한 번 더 입력해 주세요.)"
     cancel:
-      title: "계정 삭제"
+      title: "계정 삭제하기"
       hint: "불편한 점이 있나요?"
-      button: "계정 삭제하기"
+      button: "계정 삭제"
   user_level:
     completed: "완료"
     tried: "시도"
@@ -365,7 +365,7 @@
     see_details: "자세히 살펴보기"
     prize_info: "상품을 획득해 보세요(미국 공립학교 교사만 해당): 학급당 %1,000까지 제공됩니다."
     tryfirst: "먼저 해보고, 나중에 가입하기:"
-    trynow: "해보기"
+    trynow: "지금 해보기"
     add_hint_help: Code.org 튜토리얼을 위해 참신한 도움 내용을 만드는 것을 도와주세요.
     20hour_overview: "본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을
       대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다."
@@ -375,6 +375,9 @@
     heading_elementary: "<h1>초등학생들을 위한</h1><h2>20 시간 코스</h2>"
     heading_apps: "<h1> 누구나 </h1><h2> 재미있게 </h2>"
     heading_legacy: "<h1>모든 연령대를 위한 </h1><h2>일반 코스</h2>"
+    gallery:
+      your_turtle: "나의 작품"
+      your_studio: "나의 앱"
   gender:
     male: "남"
     female: "여"
@@ -414,13 +417,13 @@
     download: "동영상 다운로드"
   compatability:
     working:
-      header: "이 웹브라우져에서 정상적으로 실행됩니다."
+      header: "이 웹브라우져를 지원합니다."
       message: Code.org는 웹 페이지를 보다 빠르게 동작하도록 하기 위해 최신 웹 기술을 사용합니다. 지금 사용하고 있는 웹브라우져는
         최신 기술을 지원하지 않습니다.  <a href='%{report_issue_url}'>발생 가능한 문제</a> <a href='%{supported_browsers_url}'>
         웹 브라우져 업그레이드하</a>
       hide_this_warning: "경고창 숨기기"
     upgrade:
-      header: "웹 브라우져를 업그레이드하세요."
+      header: "웹 브라우져를 업그레이드 하세요."
       message: Code.org는 웹 페이지를 보다 빠르게 동작하도록 하기 위해 최신 웹 기술을 사용합니다. 지금 사용하고 있는 웹 브라우져는
         모든 기술을 지원하지 않습니다. <br/><br/> 테스트해보시려면 <a href='#'>테스트페이지 확인</a> 하지만, 제대로 실행되지
         않을 것입니다.
@@ -430,7 +433,7 @@
   next_stage: "모두 완료했습니다! 다음 단계를 계속하세요"
   download_pdf: Open Lesson Plan
   view_lesson_plan: "강의 계획 살펴보기"
-  pdf_download: PDF 파일 다운로드
+  pdf_download: PDF 다운로드
   share_code:
     title: 프로그램을 확인하기 위해 "실행하기"를 클릭하세요.
     bounce_og_title: "내가 만든 바운스 게임 확인하기"
@@ -458,16 +461,21 @@
       body: "컴퓨터과학(CS, 정보과학)의 기초를 경험해보세요. 수백만 가지의 것들을 가능하게 합니다."
     flappy:
       title: "플래피 코드"
-      body: 10분 이내에 나만의 게임을 만들고 싶은가요? 플래피 코드 튜토리얼을 해보세요.
+      body: 10분 이내에 자신만의 게임을 만들어보고 싶은가요? 플래피 코드 튜토리얼을 시도해 보세요.
     20hour:
       title: "소개 코스"
       body: 20 시간 코스의 컴퓨터과학(CS, 정보과학) 코스를 경험해 보세요.
   gallery:
     students_drew_these_with_code: "학생들이 코드로 그려낸 것들!"
+    students_made_these_with_code: "학생들이 만든 작품"
     picture_count: "지난 <b>%{days}</b> 일 동안, <b>%{count}</b> 개의 그림을 프로그래밍으로 그렸습니다.
       각 프로그램을 살펴보려면 그림을 누르세요."
+    activity_count: "지난  <b>%{days}</b>일 동안 학생들이 <b>%{count}</b>개의 앱과 그림을 자기 자신의 힘으로
+      만들었습니다. 그림이나 스크린샷을 누르면 각각의 프로그램을 실행시켜볼 수 있습니다."
     want_to_make_your_own: "자기 코드를 만들겠습니까?"
     more: "더 살펴보기"
+    caption_by_name_age: "%{age}살, %{name}가"
+    caption_time_ago: "%{time_ago} 전에"
   landing:
     prerelease: "이 코스는 <span class='betatext'>beta</span> 테스트 중입니다. 이 코스는 최종 완성 버전의
       코스가 아니며, 여러가지 피드백과 개선작업이 이루어집니다."
@@ -496,8 +504,8 @@
       name:
         20-hour:
           title: "유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스"
-          description: "이 20 시간의 코스는 컴퓨터과학(CS, 정보과학)과 프로그래밍의 기초 개념을 소개하고 있습니다. 이 코스는
-            K-8(중2) 정도의 학생들을 위해 설계되었지만, 학년과 나이에 상관없이 재미있게 배워볼 수 있습니다."
+          description: "본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8)
+            학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다."
         Hour of Code:
           title: Hour of Code
           description: ''
@@ -512,9 +520,9 @@
           description: ''
         flappy:
           title: "플래피 코드"
-          description: 10분 이내에 자신만의 게임을 만들어보고 싶은가요? 플래피 코드 튜토리얼을 시도해 보세요.
+          description: 10분 이내에 나만의 게임을 만들고 싶은가요? 플래피 코드 튜토리얼을 해보세요.
         jigsaw:
-          title: "퍼즐 맞추기"
+          title: "직소퍼즐"
           description: ''
         step:
           title: "단계"

@@ -28,7 +28,7 @@
           Flappy non blockly: Flappy senza blocchi
           title: Corso 1
           Artist 2: Artista 2
-          Happy Maps: Mappe Felici
+          Happy Maps: Le Mappe Felici
           Move it, Move it: Muovilo, Muovilo
           'Real-life Algorithms: Plant a Seed': 'Algoritmi della Vita Reale: Piantare
             un Seme'
@@ -54,7 +54,7 @@
         course2:
           The Maze: Il Labirinto
           Suzi: Suzi
-          The Artist: L'Artista
+          The Artist: L'artista
           Artist Debugging: 'Artista: Correzione di Errori'
           Bounce: Rimbalzo
           'Studio: Create a Story': 'Laboratorio: Crea una Storia'
@@ -73,7 +73,7 @@
             di Carta'
           Getting Loopy: Diventare Ripetitivi
           Relay programming: Programmazione a Staffetta
-          Conditionals: Istruzioni condizionali
+          Conditionals: Condizionali
           Binary Bracelets: Braccialetti Binari
           The Big Event: Il Grande Evento
           Your Digital Footprint: La tua Impronta Digitale
@@ -98,7 +98,7 @@
         course3:
           The Maze: Il Labirinto
           'Studio: Create a Story': 'Laboratorio: Crea una Storia'
-          The Artist: L'Artista
+          The Artist: L'artista
           title: Corso 3
           Artist Functions: 'Artista: Funzioni'
           Artist For Loops: 'Artista: Cicli con Contatore'
@@ -113,7 +113,7 @@
           Maze Conditionals: 'Labirinto: Istruzioni Condizionali'
           Artist Functions with Parameters: 'Artista: Funzioni con Parametri'
           Computational Thinking: Pensiero computazionale
-          Functional Suncatchers: Acchiappa-sole Funzionale
+          Functional Suncatchers: Acchiappa-Sole Funzionale
           Songwriting Parameters: Parametri per la Composizione di Canzoni
           Dice Race: Gara con i Dadi
           Internet: Internet
@@ -150,6 +150,7 @@
           'Bee: Nested Loops2': 'Ape: Cicli Annidati 2'
           'Bee: Debugging2': 'Ape: Correzione di Errori 2'
           'Artist: Patterns': 'Artista: Schemi'
+          Songwriting: Composizione di canzoni
         msm:
           title: Matematica per la Scuola Media
           description: Lavoro privato in corso per la Matematica per la Scuola Media.

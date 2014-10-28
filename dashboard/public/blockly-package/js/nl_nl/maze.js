@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1140,6 +1150,26 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
+/**
+ * Generate the xml for a block for the calc app.
+ */
+exports.calcBlockXml = function (type, args) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var i = 1; i <= args.length; i++) {
+    str += '<functional_input name="ARG' + i + '">';
+    var arg = args[i - 1];
+    if (typeof(arg) === "number") {
+      arg = '<block type="functional_math_number"><title name="NUM">' + arg +
+        '</title></block>';
+    }
+    str += arg;
+    str += '</functional_input>';
+  }
+  str+= '</block>';
+
+  return str;
+};
+
 },{"./xml":55}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
@@ -1160,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1254,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -1367,35 +1420,48 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  // helper function used below..
+  function makeNativeMemberFunction(nativeFunc, parentObj) {
+    return function() {
+      return interpreter.createPrimitive(
+                            nativeFunc.apply(parentObj, arguments));
+    };
+  }
+  for (var optsObj in options) {
+    var func, wrapper;
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
+                                interpreter.createNativeFunction(wrapper));
+      }
+    }
+  }
+};
+
+/**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      // helper function used below..
-      function makeNativeMemberFunction(nativeFunc, parentObj) {
-        return function() {
-          return interpreter.createPrimitive(
-                                nativeFunc.apply(parentObj, arguments));
-        };
-      }
-      for (var optsObj in options) {
-        // Create global objects in the interpreter for everything in options
-        var obj = this.createObject(interpreter.OBJECT);
-        this.setProperty(scope, optsObj.toString(), obj);
-        for (var prop in options[optsObj]) {
-          var func = options[optsObj][prop];
-          if (func instanceof Function) {
-            // Populate each of the global objects with native functions
-            // NOTE: other properties are not passed to the interpreter
-            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
-            interpreter.setProperty(obj,
-                                    prop,
-                                    interpreter.createNativeFunction(wrapper));
-          }
-        }
-      }
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -1413,8 +1479,7 @@ exports.evalWith = function(code, options) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
-    var fn = new ctor();
-    return fn.apply(null, args);
+    return new ctor().apply(null, args);
   }
 };
 
@@ -1422,18 +1487,24 @@ exports.evalWith = function(code, options) {
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  return new ctor();
 };
 
 },{}],7:[function(require,module,exports){
@@ -9249,9 +9320,9 @@ module.exports = {
     'ideal': 3,
     'editCode': true,
     'codeFunctions': [
-      {'func': 'move', 'alias': 'Maze.moveForward();'},
-      {'func': 'turnleft', 'alias': 'Maze.turnLeft();'},
-      {'func': 'turnright', 'alias': 'Maze.turnRight();'}
+      {'func': 'moveForward' },
+      {'func': 'turnLeft' },
+      {'func': 'turnRight' }
     ],
     'requiredBlocks': [
        [reqBlocks.MOVE_FORWARD]
@@ -9273,9 +9344,9 @@ module.exports = {
     'ideal': 4,
     'editCode': true,
     'codeFunctions': [
-      {'func': 'move', 'alias': 'Maze.moveForward();'},
-      {'func': 'turnleft', 'alias': 'Maze.turnLeft();'},
-      {'func': 'turnright', 'alias': 'Maze.turnRight();'}
+      {'func': 'moveForward' },
+      {'func': 'turnLeft' },
+      {'func': 'turnRight' }
     ],
     'requiredBlocks': [
        [reqBlocks.MOVE_FORWARD]
@@ -9297,9 +9368,9 @@ module.exports = {
     'ideal': 6,
     'editCode': true,
     'codeFunctions': [
-      {'func': 'move', 'alias': 'Maze.moveForward();'},
-      {'func': 'turnleft', 'alias': 'Maze.turnLeft();'},
-      {'func': 'turnright', 'alias': 'Maze.turnRight();'}
+      {'func': 'moveForward' },
+      {'func': 'turnLeft' },
+      {'func': 'turnRight' }
     ],
     'requiredBlocks': [
       [reqBlocks.MOVE_FORWARD],
@@ -9323,9 +9394,9 @@ module.exports = {
     'ideal': 8,
     'editCode': true,
     'codeFunctions': [
-      {'func': 'move', 'alias': 'Maze.moveForward();'},
-      {'func': 'turnleft', 'alias': 'Maze.turnLeft();'},
-      {'func': 'turnright', 'alias': 'Maze.turnRight();'}
+      {'func': 'moveForward' },
+      {'func': 'turnLeft' },
+      {'func': 'turnRight' }
     ],
     'requiredBlocks': [
       [reqBlocks.MOVE_FORWARD],
@@ -9346,9 +9417,9 @@ module.exports = {
   'custom': {
     'toolbox': toolbox(3, 4),
     'codeFunctions': [
-      {'func': 'move', 'alias': 'Maze.moveForward();'},
-      {'func': 'turnleft', 'alias': 'Maze.turnLeft();'},
-      {'func': 'turnright', 'alias': 'Maze.turnRight();'}
+      {'func': 'moveForward' },
+      {'func': 'turnLeft' },
+      {'func': 'turnRight' }
     ],
     'requiredBlocks': [],
     'startDirection': Direction.EAST,
@@ -10319,7 +10390,7 @@ Maze.execute = function(stepMode) {
   Maze.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions);
+    code = utils.generateCodeAliases(level.codeFunctions, 'Maze');
     code += BlocklyApps.editor.getValue();
   }
 
@@ -10540,7 +10611,7 @@ Maze.scheduleAnimations = function (singleStep) {
  */
 function animateAction (action, spotlightBlocks, timePerStep) {
   if (action.blockId) {
-    BlocklyApps.highlight(action.blockId, spotlightBlocks);
+    BlocklyApps.highlight(String(action.blockId), spotlightBlocks);
   }
 
   switch (action.command) {
@@ -12939,16 +13010,16 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += "var " + codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = [''].concat(arguments); return " +
+          parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -13055,9 +13126,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
@@ -13112,17 +13194,17 @@ exports.catLists = function(d){return "Lijsten"};
 
 exports.catLoops = function(d){return "Lussen"};
 
-exports.catMath = function(d){return "wiskundige"};
+exports.catMath = function(d){return "Wiskunde"};
 
 exports.catProcedures = function(d){return "Functies"};
 
-exports.catText = function(d){return "Tekst"};
+exports.catText = function(d){return "tekst"};
 
 exports.catVariables = function(d){return "Variabelen"};
 
 exports.codeTooltip = function(d){return "Zie gegenereerde JavaScript-code."};
 
-exports.continue = function(d){return "Doorgaan"};
+exports.continue = function(d){return "Verder"};
 
 exports.dialogCancel = function(d){return "Annuleren"};
 
@@ -13140,21 +13222,21 @@ exports.end = function(d){return "einde"};
 
 exports.emptyBlocksErrorMsg = function(d){return "De \"herhaal\" of \"als\" blokken hebben andere blokken in hun nodig om te werken. Zorg ervoor dat de binnenste blok correct past in de bevattende blok."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Het functie-blok moet andere blokken bevatten om te werken."};
 
-exports.extraTopBlocks = function(d){return "Je hebt blokken over die niet aan een gebeurtenisblok geplakt zijn."};
+exports.extraTopBlocks = function(d){return "Je hebt blokken die nergens aan vast zitten. Was het je bedoeling die aan het \"bij uitvoeren\"-blok toe te voegen?"};
 
 exports.finalStage = function(d){return "Gefeliciteerd! U hebt de laatste fase voltooid."};
 
 exports.finalStageTrophies = function(d){return "Gefeliciteerd! U hebt de laatste fase voltooid en won "+p(d,"numTrophies",0,"nl",{"one":"een trofee","other":n(d,"numTrophies")+" trofeeën"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Voltooien"};
 
 exports.generatedCodeInfo = function(d){return "Zelf op topuniversiteiten wordt les gegevens met programmeertalen die op blokken zijn gebaseerd (bijv. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Maar onder de motorkop kunnen de blokken waarmee je een programma hebt gemaakt ook getoond worden in JavaScript, de programmeertaal die wereldwijd het meest wordt gebruikt:"};
 
 exports.hashError = function(d){return "Sorry, '%1' komt niet overeen met een opgeslagen programma."};
 
-exports.help = function(d){return "Help"};
+exports.help = function(d){return "Hulp"};
 
 exports.hintTitle = function(d){return "Tip:"};
 
@@ -13188,7 +13270,7 @@ exports.repeat = function(d){return "herhaal"};
 
 exports.resetProgram = function(d){return "Herstellen"};
 
-exports.runProgram = function(d){return "Ren"};
+exports.runProgram = function(d){return "Uitvoeren"};
 
 exports.runTooltip = function(d){return "Voer het programma gedefinieerd door de blokken uit in de werkruimte."};
 
@@ -13208,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "Deze puzzel kan worden opgelost m
 
 exports.tooMuchWork = function(d){return "Je laat me veel werk doen! Kun je proberen minder te herhalen?"};
 
-exports.toolboxHeader = function(d){return "Blokken"};
+exports.toolboxHeader = function(d){return "blokken"};
 
 exports.openWorkspace = function(d){return "Hoe het werkt"};
 
@@ -13216,7 +13298,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Totale tijd: "+p(d,"num
 
 exports.tryAgain = function(d){return "Probeer opnieuw"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Bekijk tip"};
 
 exports.backToPreviousLevel = function(d){return "Terug naar het vorige niveau"};
 
@@ -13224,7 +13306,7 @@ exports.saveToGallery = function(d){return "Sla op in je galerij"};
 
 exports.savedToGallery = function(d){return "Opgeslagen in je galerij!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Sorry, we kunnen dit programma niet delen."};
 
 exports.typeCode = function(d){return "Typ jouw JavaScript-code onder deze instructies."};
 
@@ -13246,7 +13328,7 @@ exports.watchVideo = function(d){return "Bekijk de video"};
 
 exports.when = function(d){return "wanneer"};
 
-exports.whenRun = function(d){return "wanneer het wordt uitgevoerd"};
+exports.whenRun = function(d){return "begin"};
 
 exports.tryHOC = function(d){return "Probeer \"Hour of Code\""};
 
@@ -13254,18 +13336,18 @@ exports.signup = function(d){return "Neem deel aan de introductie cursus"};
 
 exports.hintHeader = function(d){return "Een tip:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Kijk waar je uitkwam, en probeer je programma te verbeteren."};
 
 
 },{"messageformat":69}],57:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.nl=function(n){return n===1?"one":"other"}
-exports.atHoneycomb = function(d){return "Bij de bijenkorf"};
+exports.atHoneycomb = function(d){return "bij de honingraat"};
 
 exports.atFlower = function(d){return "op de bloem"};
 
 exports.avoidCowAndRemove = function(d){return "vermijd de koe en verwijder 1"};
 
-exports.continue = function(d){return "Verder"};
+exports.continue = function(d){return "Doorgaan"};
 
 exports.dig = function(d){return "verwijder 1"};
 
@@ -13279,7 +13361,7 @@ exports.dirS = function(d){return "Z"};
 
 exports.dirW = function(d){return "W"};
 
-exports.doCode = function(d){return "doe"};
+exports.doCode = function(d){return "voer uit"};
 
 exports.elseCode = function(d){return "anders"};
 
@@ -13313,13 +13395,13 @@ exports.honeycombFullError = function(d){return "Er past geen honing meer in dez
 
 exports.ifCode = function(d){return "als"};
 
-exports.ifInRepeatError = function(d){return "Je hebt een \"als\" blok in een \"herhaal\" blok nodig. Probeer het vorig level overnieuw als je niet snapt hoe het werkt."};
+exports.ifInRepeatError = function(d){return "Je hebt een \"als\" blok in een \"herhaal\" blok nodig. Als je vastloopt, probeer dan de vorige level nog eens om te kijken hoe het werkte."};
 
-exports.ifPathAhead = function(d){return "als pad vooruit"};
+exports.ifPathAhead = function(d){return "als pad voor"};
 
-exports.ifTooltip = function(d){return "Als er een pad is in de aangegeven richting, doe dan een paar acties."};
+exports.ifTooltip = function(d){return "als er een pad is in de aangegeven richting, doe een paar acties."};
 
-exports.ifelseTooltip = function(d){return "Als er een pad in de opgegeven richting is, doe je het eerste actie blok. anders, doe je de tweede actie blok."};
+exports.ifelseTooltip = function(d){return "als er een pad in de opgegeven richting is, doe je het eerste actie blok. anders, doe je de tweede actie blok."};
 
 exports.ifFlowerTooltip = function(d){return "Als er een bloem/honingraat in de opgegeven richting staat, voer dan enkele acties uit."};
 
@@ -13335,7 +13417,7 @@ exports.moveBackward = function(d){return "move backward"};
 
 exports.moveEastTooltip = function(d){return "Verzet me een plaats oost."};
 
-exports.moveForward = function(d){return "vooruit"};
+exports.moveForward = function(d){return "beweeg vooruit"};
 
 exports.moveForwardTooltip = function(d){return "Beweeg me een plek naar voren."};
 
@@ -13367,7 +13449,7 @@ exports.notAtFlowerError = function(d){return "Je kan alleen nectar krijgen uit 
 
 exports.notAtHoneycombError = function(d){return "Je kan alleen honing maken bij een honingraat."};
 
-exports.numBlocksNeeded = function(d){return "Deze puzzel kan opgelost worden met %1 blokken."};
+exports.numBlocksNeeded = function(d){return "Deze puzzel kan worden opgelost met %1 blokken."};
 
 exports.pathAhead = function(d){return "pad voor je"};
 
@@ -13391,7 +13473,7 @@ exports.removeSquare = function(d){return "verwijder vierkant"};
 
 exports.repeatCarefullyError = function(d){return "Denk zorgvuldig na over het patroon van twee zetten en één draai voor in het \"herhaal\" blok. Een extra draai aan het einde maakt niet uit."};
 
-exports.repeatUntil = function(d){return "herhalen totdat"};
+exports.repeatUntil = function(d){return "herhaal totdat"};
 
 exports.repeatUntilBlocked = function(d){return "waarneer er een pad vooruit is"};
 
@@ -13403,9 +13485,9 @@ exports.totalHoney = function(d){return "totaal honing"};
 
 exports.totalNectar = function(d){return "totaal nectar"};
 
-exports.turnLeft = function(d){return "sla linksaf"};
+exports.turnLeft = function(d){return "Draai linksom"};
 
-exports.turnRight = function(d){return "sla rechtsaf"};
+exports.turnRight = function(d){return "Draai rechtsom"};
 
 exports.turnTooltip = function(d){return "Draait me 90 graden linksom of rechtsom."};
 
@@ -13413,7 +13495,7 @@ exports.uncheckedCloudError = function(d){return "Make sure to check all clouds 
 
 exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
 
-exports.whileMsg = function(d){return "zolang als"};
+exports.whileMsg = function(d){return "terwijl"};
 
 exports.whileTooltip = function(d){return "Herhaal de acties totdat je de finish hebt bereikt."};
 

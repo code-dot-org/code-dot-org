@@ -1,277 +1,277 @@
-fr:
+"fr":
   slides:
     maze_intro:
       1:
-        image: notes/hoc1_1.jpg
-        text: Bienvenue à ta première heure de code! Plongeons dans ton premier avant-goût de la programmation.
+        image: "notes/hoc1_1.jpg"
+        text: "Bienvenue à ta première heure de code! Plongeons dans ton premier avant-goût de la programmation."
       2:
-        image: notes/hoc1_2.jpg
-        text: Nous allons utiliser Blockly, un langage de programmation visuel où tu déplaces des blocs pour écrire le code.
+        image: "notes/hoc1_2.jpg"
+        text: "Nous allons utiliser Blockly, un langage de programmation visuel où tu déplaces des blocs pour écrire le code."
       3:
-        image: notes/hoc1_3.jpg
-        text: Typiquement on écrit du code, mais Blockly est un langage visuel. Chaque bloc correspond à une ligne de code traditionel.
+        image: "notes/hoc1_3.jpg"
+        text: "Typiquement on écrit du code, mais Blockly est un langage visuel. Chaque bloc correspond à une ligne de code traditionel."
       4:
-        image: notes/hoc1_4.jpg
+        image: "notes/hoc1_4.jpg"
         text: "Vous allez apprendre les bases de l'informatique, des concepts utilisés partout : de la création d'applications jusqu'au contrôle du véhicule qui s'est posé sur Mars."
       5:
-        image: notes/hoc1_5.jpg
+        image: "notes/hoc1_5.jpg"
         text: "Un programme est un ensemble d'instructions que ton ordinateur suit."
       6:
-        image: notes/hoc1_6.jpg
+        image: "notes/hoc1_6.jpg"
         text: "Le but de ton premier programme est de guider un Angry Bird dans un labyrinthe afin d'attraper un Cochon Vert."
       7:
-        image: notes/hoc1_7.jpg
-        text: Sur le côté gauche il y a le labyrinthe où ton programme est exécuté. Les instructions pour chaque puzzle se trouvent sous le labyrinthe.
+        image: "notes/hoc1_7.jpg"
+        text: "Sur le côté gauche il y a le labyrinthe où ton programme est exécuté. Les instructions pour chaque puzzle se trouvent sous le labyrinthe."
       8:
-        image: notes/hoc1_8.jpg
-        text: La boîte à outils du milieu a les commandes pour les Angry Birds. Tu vas utiliser celles-ci pour construire ton code.
+        image: "notes/hoc1_8.jpg"
+        text: "La boîte à outils du milieu a les commandes pour les Angry Birds. Tu vas utiliser celles-ci pour construire ton code."
       9:
-        image: notes/hoc1_9.jpg
-        text: Sur la droite il y a ton espace de travail où tu déposeras les blocs de la boîte à outils pour construire ton programme. Pour supprimer un bloc, déplace-le vers la poubelle du coin.
+        image: "notes/hoc1_9.jpg"
+        text: "Sur la droite il y a ton espace de travail où tu déposeras les blocs de la boîte à outils pour construire ton programme. Pour supprimer un bloc, déplace-le vers la poubelle du coin."
       10:
-        image: notes/hoc1_10.jpg
+        image: "notes/hoc1_10.jpg"
         text: "Chaque bloc est une seule instruction. Si tu fais glisser un bloc « avancer » dans ton espace de travail et appuie sur « Exécuter le programme », l'oiseau se déplace d'une case sur le labyrinthe."
       11:
-        image: notes/hoc1_11.jpg
+        image: "notes/hoc1_11.jpg"
         text: "Pour faire plus d'une action, tu peux faire glisser beaucoup de blocs de ton espace de travail et les assembler. L'oiseau va exécuter les commandes du haut jusqu'en bas."
       12:
-        image: notes/hoc1_12.jpg
+        image: "notes/hoc1_12.jpg"
         text: 'Si tu exécutes un programme et tu veux le corriger et réessayer, appuie sur le bouton " Réessayer".'
       13:
-        image: notes/hoc1_13.jpg
-        text: Allons attraper ces cochons!
+        image: "notes/hoc1_13.jpg"
+        text: "Allons attraper ces cochons!"
     artist_intro:
       1:
-        image: notes/stage5_1.jpg
+        image: "notes/stage5_1.jpg"
         text: "Salut, je suis JR ! Chaque équipe de voitures de course a besoin d'informaticiens pour gagner. Ils analysent les données de la voiture pour la faire aller plus vite."
       2:
-        image: notes/stage5_2.jpg
-        text: Dans ces puzzles, tu sera un artiste qui dessine une ligne derrière eux partout où ils vont.
+        image: "notes/stage5_2.jpg"
+        text: "Dans ces puzzles, tu sera un artiste qui dessine une ligne derrière eux partout où ils vont."
       3:
-        image: notes/stage5_3.jpg
+        image: "notes/stage5_3.jpg"
         text: |-
           Ce bloc dit ''avances de 100 pixels." Les pixels sont en fait des points minuscules sur ton écran.
       4:
-        image: notes/stage5_4.jpg
-        text: Ce bloc dit « tourner à droite de 90 degrés. », cela fera tourner votre artiste du même angle que le bloc « tourner » dans les puzzles de labyrinthe.
+        image: "notes/stage5_4.jpg"
+        text: "Ce bloc dit « tourner à droite de 90 degrés. », cela fera tourner votre artiste du même angle que le bloc « tourner » dans les puzzles de labyrinthe."
       5:
-        image: notes/stage5_5.jpg
+        image: "notes/stage5_5.jpg"
         text: "Clique sur la flèche dans l'un de ces blocs pour changer le nombre de pas en avant ou de virages que l'artiste fera.  Joue un peu avec pour t'habituer à ces nouveaux blocs."
     farmer_intro:
       1:
-        image: notes/stage9_1.jpg
+        image: "notes/stage9_1.jpg"
         text: "Salut, je m'appelle Paola ! Dans ces puzzles, tu es un agriculteur qui doit complètement niveler son terrain avant de commencer à planter."
       2:
-        image: notes/stage9_2.jpg
+        image: "notes/stage9_2.jpg"
         text: "Tu dois l'aider à enlever tous les tas de terre et remplir tous les trous."
       3:
-        image: notes/stage9_3.jpg
+        image: "notes/stage9_3.jpg"
         text: "Les nouveaux blocs enlèvent une pelletée de terre d'une pile et remplissent un trou avec une pelletée de terre."
       4:
-        image: notes/stage9_4.jpg
-        text: Les tas et les trous sont de tailles différentes, donc tu devras dire à ton fermier combien de pelletées il doit utiliser.
+        image: "notes/stage9_4.jpg"
+        text: "Les tas et les trous sont de tailles différentes, donc tu devras dire à ton fermier combien de pelletées il doit utiliser."
     flappy_intro:
       1:
-        image: notes/flappy01.jpg
+        image: "notes/flappy01.jpg"
         text: "Salut, je suis Katie! Une des choses les plus excitantes à propos de l'informatique est qu'un programme informatique peut être interactif."
       2:
-        image: notes/flappy02.jpg
+        image: "notes/flappy02.jpg"
         text: "Chaque fois que quelqu'un clique ou appuie ou tape sur un ordinateur ou un téléphone, ça génère un EVENEMENT, et il y a un code qui décide quoi faire quand un EVENEMENT a lieu."
       3:
-        image: notes/flappy03.jpg
+        image: "notes/flappy03.jpg"
         text: |-
           Par exemple, tu pourrais avoir un GESTIONNAIRE d'EVENEMENTS qui dit "quand la souris est cliquée, joues un son" 
       4:
-        image: notes/flappy04.jpg
+        image: "notes/flappy04.jpg"
         text: "Tu as déjà entendu parler du jeu FlappyBird? En utilisant les gestionnaires d'Evénements, nous allons apprendre à programmer notre propre version personnalisée de FlappyBird!"
       5:
-        image: notes/flappy05.jpg
+        image: "notes/flappy05.jpg"
         text: "Le code que tu vas écrire implique de glisser et placer les blocs qui représentent les commandes pour l'ordinateur. Sous la capuche, chacun de ses blocs est représenté par un code réel."
       6:
-        image: notes/flappy06.jpg
+        image: "notes/flappy06.jpg"
         text: |-
           Si tu regardes au lieu de travail, il y a quelques blocs verts qui sont remplies pour toi - ce sont des "gestionnaires d'événements" 
       7:
-        image: notes/flappy07.jpg
+        image: "notes/flappy07.jpg"
         text: |-
           Si tu veux que l'oiseau BATTE DES AILES quand tu CLIQUES sur la souris, tu peux faire ça en attachant le bloc " BATTRE DES AILES" au gestionnaire d'événements approprié, et maintenant dans ton jeu chaque fois que tu cliques sur la souris, l'oiseau va battre des ailes.
       8:
-        image: notes/flappy08.jpg
+        image: "notes/flappy08.jpg"
         text: "Dans chaque puzzle de cette activité, nous allons introduire des nouveaux types d'événements comme des blocs verts au lieu de travail, et tu peux décider le bloc approprié à ajouter en réponse à ces événements."
       9:
-        image: notes/flappy09.jpg
+        image: "notes/flappy09.jpg"
         text: 'Quand tu vois une flèche déroulante comme ça, ça veut dire que tu peux changer les paramètres - comme par exemple, quel son jouer quand flappy touche le sol.'
       10:
-        image: notes/flappy10.jpg
-        text: Dans le puzzle final, tu seras capable de créer ton propre jeu et de le partager avec tes amis. Bon amusement!
+        image: "notes/flappy10.jpg"
+        text: "Dans le puzzle final, tu seras capable de créer ton propre jeu et de le partager avec tes amis. Bon amusement!"
     loop_times:
       1:
-        image: notes/hoc2_1.jpg
+        image: "notes/hoc2_1.jpg"
         text: "Salut, je m'appelle Mark! Apprenons un peu plus sur les boucles. En utilisant les boucles, tu peux dire à un ordinateur de répéter chaque série d'actions une ou plusieurs fois, jusqu'à des milliers ou même des milliards de fois."
       2:
-        image: notes/hoc2_2.jpg
+        image: "notes/hoc2_2.jpg"
         text: "Dans ce puzzle, nous voulons faire bouger l'oiseau vers l'avant de 5 places pour arriver au cochon."
       3:
-        image: notes/hoc2_3.jpg
+        image: "notes/hoc2_3.jpg"
         text: 'Nous pouvons nous aider en utilisant le nouveau bloc "répéter".'
       4:
-        image: notes/hoc2_4.jpg
+        image: "notes/hoc2_4.jpg"
         text: |-
           Au lieu d'utiliser 5 blocs de type "avancer"...
       5:
-        image: notes/hoc2_5.jpg
+        image: "notes/hoc2_5.jpg"
         text: |-
           Nous pouvons mettre le bloc "avancer" à l'intérieur du bloc "répéter" et écrire un nombre dans le bloc pour lui dire combien de fois il doit répéter.
       6:
-        image: notes/hoc2_6.jpg
+        image: "notes/hoc2_6.jpg"
         text: |-
-          Et ceci est important: tu peux mettre plus d'une commande à l'intérieur d'un bloc " répéter " .
+          Et ceci est important: "tu peux mettre plus d'une commande à l'intérieur d'un bloc \" répéter \" ."
       7:
-        image: notes/hoc2_7.jpg
+        image: "notes/hoc2_7.jpg"
         text: 'Amuse-toi en utilisant ton nouveau bloc "répéter"!'
     loop_until:
       1:
-        image: notes/hoc3_1.jpg
+        image: "notes/hoc3_1.jpg"
         text: |-
           Salut, je m'appelle Chris. Avant de me joindre à Miami Heat, j'ai été à Georgia Tech pour étudier l'informatique. Essayons notre nouveau bloc, le bloc "répéter jusqu'à".
       2:
-        image: notes/hoc3_2.jpg
+        image: "notes/hoc3_2.jpg"
         text: "Et si on ne sait pas de quelle distance l'oiseau doit se déplacer pour arriver au cochon?"
       3:
-        image: notes/hoc3_3.jpg
+        image: "notes/hoc3_3.jpg"
         text: |-
           Si nous mettons un bloc "avancer" à l'intérieur d'un bloc " répéter jusqu'à", l'oiseau va avancer JUSQU'À ce qu'il atteigne le cochon (ou qu'il se cogne sur un mur).
       4:
-        image: notes/hoc3_4.jpg
+        image: "notes/hoc3_4.jpg"
         text: |-
-          Et ceci est important: comme avant, on peut mettre plusieurs blocs à l'intérieur du bloc "répéter jusqu'à", et ils seront tous répétés.
+          Et ceci est important: "comme avant, on peut mettre plusieurs blocs à l'intérieur du bloc \"répéter jusqu'à\", et ils seront tous répétés."
     if:
       1:
-        image: notes/hoc4_1.jpg
+        image: "notes/hoc4_1.jpg"
         text: |-
           Salut, je m'appelle Bill ! Nous allons apprendre un nouveau concept fondamental : les instructions "Si". C'est ainsi que les ordinateurs prennent des décisions.
       2:
-        image: notes/hoc4_2.jpg
+        image: "notes/hoc4_2.jpg"
         text: |-
           Toi aussi tu utilises les instructions "si" chaque jour. Avant d'aller dehors chaque matin, tu te dis SI il pleut dehors, je dois porter mon imperméable.
       3:
-        image: notes/hoc4_3.jpg
+        image: "notes/hoc4_3.jpg"
         text: "Nous pouvons dire au zombie d'aller vérifier SI il y a un chemin à gauche, et SI il en trouve un, il peut tourner dans cette direction."
       4:
-        image: notes/hoc4_4.jpg
+        image: "notes/hoc4_4.jpg"
         text: |-
           Afin  d'écrire le code pour ceci, déposons un bloc "si" et mettons-y un bloc "tourner à gauche" à l'intérieur.
       5:
-        image: notes/hoc4_5.jpg
+        image: "notes/hoc4_5.jpg"
         text: |-
           Maintenant, si nous mettons un bloc "avancer" au-dessus et englober le tout d'un bloc "répéter", chaque fois que le zombie bouge, il va vérifier si il y a un chemin à gaucher et tourner. La commande "répéter" est critique, pour vérifier si on peut tourner à chaque étape.
       6:
-        image: notes/hoc4_6.jpg
+        image: "notes/hoc4_6.jpg"
         text: |-
           Les instructions "Si" sont vraiment importantes dans l'informatique. Un des premiers programmes que j'ai écrit était un jeu d'OXO, et il y avait une instruction Si qui disait SI l'autre personne est sur le point de gagner, bloque la case qui va le faire gagner.
       7:
-        image: notes/hoc4_7.jpg
+        image: "notes/hoc4_7.jpg"
         text: 'Amuse-toi à utiliser le bloc "si"!'
     if_else:
       1:
-        image: notes/hoc5_1.jpg
+        image: "notes/hoc5_1.jpg"
         text: |-
           Salut, je m'appelle Saloni. J'utilise l'informatique pour aider à résoudre des problèmes en santé et médecine. Apprenons un peu sur le bloc "si sinon". Il ressemble au bloc "si", mais il a une partie à la fin qui dit "sinon".
       2:
-        image: notes/hoc5_2.jpg
+        image: "notes/hoc5_2.jpg"
         text: |-
           Si je mets un bloc "avancer" à l'endroit qui dit "faire" et un bloc "tourner à gauche" à l'endroit où il est écrit "sinon", cela veut dire que le zombie choisira entre 2 options. SI il y a un chemin devant, le zombie avancera, SINON (il n'y a pas de chemin devant), le zombie tournera à gauche.
       3:
-        image: notes/hoc5_3.jpg
+        image: "notes/hoc5_3.jpg"
         text: |-
           Comme avec le bloc "si", on peut mettre des blocs "si sinon" à l'intérieur de blocs "répéter" pour que le zombie continue d'avancer et le bloc "si sinon" vérifiera s'il peut encore tourner quelque part.
       4:
-        image: notes/hoc5_4.jpg
-        text: Maintenant, ramène ces zombies à leur place!
+        image: "notes/hoc5_4.jpg"
+        text: "Maintenant, ramène ces zombies à leur place!"
     function:
       1:
-        image: notes/stage13_1.jpg
+        image: "notes/stage13_1.jpg"
         text: "Salut, je m'appelle Brina, une ingénieure à Instagram. Une fonction est un ensemble de lignes de code que vous souhaitez utiliser plusieurs fois. Ainsi, plutôt que de ré-écrire le même code plusieurs fois, vous pouvez simplement utiliser un bloc."
       2:
-        image: notes/stage13_2.jpg
-        text: Nous allons apprendre comment définir des fonctions. Les définitions de fonctions ont une étoile dans le coin. Le nom de la fonction est écrit sur la ligne du haut.
+        image: "notes/stage13_2.jpg"
+        text: "Nous allons apprendre comment définir des fonctions. Les définitions de fonctions ont une étoile dans le coin. Le nom de la fonction est écrit sur la ligne du haut."
       3:
-        image: notes/stage13_3.jpg
+        image: "notes/stage13_3.jpg"
         text: |-
           Les blocs qui vont dans la définition nous disent ce que la fonction fait. Ainsi cette définition de fonction s'appelle "remplir 5 fois" et est composée d'un bloc "répéter" et d'un bloc "remplir.
       4:
-        image: notes/stage13_4.jpg
+        image: "notes/stage13_4.jpg"
         text: |-
           La définition se trouve sur l'espace de travail mais notre fermier ne démarrera pas la fonction tant que nous ne sortirons pas le bloc de fonction "remplir 5" de la catégorie fonctions.
       5:
-        image: notes/stage13_5.jpg
-        text: Amusons-nous avec les fonctions!
+        image: "notes/stage13_5.jpg"
+        text: "Amusons-nous avec les fonctions!"
     loop_while:
       1:
-        image: notes/stage9_5.jpg
+        image: "notes/stage9_5.jpg"
         text: |-
           Hi, I'm Makinde! Let's learn about the "while block."
       2:
-        image: notes/stage9_6.jpg
+        image: "notes/stage9_6.jpg"
         text: |-
           Le bloc "tant que" exécute les actions qui se trouvent à l'intérieur de celui-ci TANT QUE la condition énoncée au dessus reste VRAIE.
       3:
-        image: notes/stage9_7.jpg
+        image: "notes/stage9_7.jpg"
         text: "Par exemple, si la fermière se tient sur une pile, elle continuera à enlever 1 pelletée TANT QU'il reste une pile sous elle."
     loop_for:
       1:
-        image: notes/stage11_1.jpg
+        image: "notes/stage11_1.jpg"
         text: "Salut, je m'appelle Trina, et je travaille pour Pixar. J'ai travaillé sur un tas de films, y compris Shrek."
       2:
-        image: notes/stage11_2.jpg
-        text: Ceci est notre nouvelle boucle « compteur ». Cette boucle répète des actions plusieurs fois, et vous pouvez légèrement changer les actions à chaque fois.
+        image: "notes/stage11_2.jpg"
+        text: "Ceci est notre nouvelle boucle « compteur ». Cette boucle répète des actions plusieurs fois, et vous pouvez légèrement changer les actions à chaque fois."
       3:
-        image: notes/stage11_3.jpg
+        image: "notes/stage11_3.jpg"
         text: "Dans cet exemple, notre boucle « compteur » dit « compter avec un compteur de 50 à 90 par pas de 10 » et à l'intérieur, nous avons notre bloc « dessiner un carré ». Déplace le bloc « compteur » de la section « Variables » à l'emplacement de « longueur »."
       4:
-        image: notes/stage11_4.jpg
+        image: "notes/stage11_4.jpg"
         text: "Cela signifie que notre artiste va dessiner un carré qui a des côtés de 50 pixels de longueur, puis y ajouter 10 et dessiner un carré de côté de 60 pixels de longueur. Puis il va continuer d'ajouter 10 et dessiner des carrés jusqu'à ce qu'il atteigne 90. Ainsi nous aurons des carrés de 50, 60, 70, 80 et 90."
     parameters:
       1:
-        image: notes/stage15_1.jpg
+        image: "notes/stage15_1.jpg"
         text: "Salut, je m'appelle Janete, et je suis ingénieur chez Zynga."
       2:
-        image: notes/stage15_2.jpg
-        text: Que faudrait-il faire pour dessiner un ensemble de triangles de différentes tailles ?
+        image: "notes/stage15_2.jpg"
+        text: "Que faudrait-il faire pour dessiner un ensemble de triangles de différentes tailles ?"
       3:
-        image: notes/stage15_3.jpg
-        text: Nous pouvons écrire tout ce code à la main, ou bien utiliser une fonction avec des paramètres.
+        image: "notes/stage15_3.jpg"
+        text: "Nous pouvons écrire tout ce code à la main, ou bien utiliser une fonction avec des paramètres."
       4:
-        image: notes/stage15_4.jpg
+        image: "notes/stage15_4.jpg"
         text: "Pour ce faire, clique sur l'étoile bleue dans la définition de la fonction « dessiner un triangle ». Ensuite déplace le bloc « nom d'entrée » vers le bloc « entrée »."
       5:
-        image: notes/stage15_5.jpg
+        image: "notes/stage15_5.jpg"
         text: "Ensuite, si tu écris « longueur » à l'endroit où se trouve « x » et presse « ENTREE », cela créera, pour ta fonction, un paramètre d'entrée de la longueur."
       6:
-        image: notes/stage15_6.jpg
+        image: "notes/stage15_6.jpg"
         text: |-
           Clique ensuite sur l'étoile. Maintenant clique sur la catégorie variables et déplace le bloc "longueur" dans le bloc "avancer" de ta définition de fonction. Finalement, déplace le vieux bloc nombre à l'extérieur.
       7:
-        image: notes/stage15_7.jpg
+        image: "notes/stage15_7.jpg"
         text: |-
           Pour utiliser ta fonction avec des paramètres, clique sur la catégorie fonctions et déplace ta fonction "dessine un triangle de longueur" vers l'extérieur.
       8:
-        image: notes/stage15_8.jpg
-        text: Tu peux maintenant utiliser le bloc mathématique pour saisir différents nombres et dessiner des triangles de différentes tailles.
+        image: "notes/stage15_8.jpg"
+        text: "Tu peux maintenant utiliser le bloc mathématique pour saisir différents nombres et dessiner des triangles de différentes tailles."
     hoc_wrapup:
       1:
-        image: notes/hoc6_1.jpg
+        image: "notes/hoc6_1.jpg"
         text: "Félicitations! Avec le dernier puzzle que tu viens de résoudre, tu viens juste d'écrire un code qui dit à N'IMPORTE QUEL robot où trouver son chemin entre un labyrinthe sans ramifications ou un tunnel de n'importe quelle longueur, qu'il soit un zombie, un oiseau, un rover de Mars, ou même une voiture qui se conduit toute seule."
       2:
-        image: notes/hoc6_2.jpg
+        image: "notes/hoc6_2.jpg"
         text: "Les concepts fondamentaux que tu as utilisés sont au coeur de chaque programme ou application que tu utiliseras. Nous avons appris les boucles Répéter, Répéter jusqu'à, ainsi que les énoncés Si et Si Sinon."
       3:
-        image: notes/hoc6_3.jpg
+        image: "notes/hoc6_3.jpg"
         text: "Si tu as aimé ta première heure de code, visite code.org pour continuer ton éducation en informatique! Une fois que tu auras complété 20 heures de cours, tu auras maîtrisé les bases de la programmation, et tu pourras commencer à apprendre comment écrire des applications de téléphones intelligents, des instructions de robot, des jeux...  C'est toi qui choisis."
       4:
-        image: notes/hoc6_4.jpg
+        image: "notes/hoc6_4.jpg"
         text: "La technologie change tout ce que nous faisons et peu importe qu'on soit jeune ou pas: programmer est amusant, c'est un processus créatif, et n'importe qui peut l'apprendre !"
     20_wrapup:
       1:
-        image: notes/bird.png
+        image: "notes/bird.png"
         text: "Les notes d'indications vont bientôt arriver!"

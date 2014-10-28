@@ -4,24 +4,24 @@ title: Partners
 
 * * *
 
-# Major Partners and Corporate Supporters
+# Primaire Partners en Zakelijke Supporters
 
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'major') %>
-
-* * *
-
-# Hour of Code Promotional partners
-
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'promotional') %>
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# Tutorial partners
+# Uur Code Promotie-partners
 
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'tutorial') %>
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# Additional partners
+# Opdracht-partners
 
-<%= view :about\_logos, logos:DB[:cdo\_partners].where(hourofcode\_b:true).and(kind\_s:'additional') %>
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
+
+* * *
+
+# Meer partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>

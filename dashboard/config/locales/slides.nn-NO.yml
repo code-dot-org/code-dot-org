@@ -1,0 +1,342 @@
+"nn":
+  slides:
+    maze_intro:
+      1:
+        image: notes/hoc1_1.jpg
+        text: Velkommen til din første kodetime! La oss dykke rett inn i ditt første
+          møte med programmering.
+      2:
+        image: notes/hoc1_2.jpg
+        text: Vi skal bruke Blockly, et visuelt programmeringsspråk hvor du drar og
+          slipper blokkene for å skrive kode.
+      3:
+        image: notes/hoc1_3.jpg
+        text: De fleste programmeringsspråk bruker tekst, men Blockly er visuelt.
+          Hver blokk tilsvarer en "ekte" kodelinje.
+      4:
+        image: notes/hoc1_4.jpg
+        text: Du vil lære grunnleggende informatikk, med begreper som brukes overalt,
+          helt fra å skrive apper til å lage programmer for å styre Mars-roveren.
+      5:
+        image: notes/hoc1_5.jpg
+        text: Et program er et sett med instruksjoner som datamaskinen skal følge.
+      6:
+        image: notes/hoc1_6.jpg
+        text: Målet med det første programmet er å få en "Angry Bird" gjennom en labyrint
+          slik at den treffer en grønn gris.
+      7:
+        image: notes/hoc1_7.jpg
+        text: Til venstre er labyrinten der programmet kjøres. Instruksjonene for
+          hver oppgave er under labyrinten.
+      8:
+        image: notes/hoc1_8.jpg
+        text: Den midtre verktøykassen har kommandoene for "Angry Bird". Du vil bruke
+          disse for å bygge koden.
+      9:
+        image: notes/hoc1_9.jpg
+        text: Til høyre er arbeidsområdet hvor du skal trekke blokker fra verktøykassen
+          til å bygge programmet med. Hvis du vil slette en blokk, drar du den til
+          papirkurven i hjørnet.
+      10:
+        image: notes/hoc1_10.jpg
+        text: Hver blokk er en instruksjon. Hvis du drar en "fremover" blokk til arbeidsområdet
+          og trykker "Kjør programmet", flyttes fuglen en plass på labyrinten.
+      11:
+        image: notes/hoc1_11.jpg
+        text: For å utføre mer enn én handling, kan du dra mange blokker til arbeidsområdet
+          og legge dem sammen. Fuglen vil utføre kommandoene fra topp til bunn.
+      12:
+        image: notes/hoc1_12.jpg
+        text: Hvis du kjører et program og ønsker å fikse det for å prøve på nytt,
+          kan du trykke på "Reset"-knappen.
+      13:
+        image: notes/hoc1_13.jpg
+        text: La oss gå og ta de grisene!
+    artist_intro:
+      1:
+        image: notes/stage5_1.jpg
+        text: Hei, jeg er JR! Alle racerbil-lag må ha programmerere for å vinne. De
+          analyserer data fra bilen for å gjøre den raskere.
+      2:
+        image: notes/stage5_2.jpg
+        text: I disse oppgavene vil du være en kunstner som tegner linjer bak deg
+          når du flytter deg.
+      3:
+        image: notes/stage5_3.jpg
+        text: Denne blokken sier "flytt frem 100 piksler." Piksler er bare veldig
+          små prikker på skjermen.
+      4:
+        image: notes/stage5_4.jpg
+        text: Denne blokken sier "sving 90 grader til høyre". Den vil dreie kunstneren
+          like mye som "sving" blokken i labyrintoppgaven gjorde.
+      5:
+        image: notes/stage5_5.jpg
+        text: Klikk på pilen i en av disse blokkene for å endre hvor mye kunstneren
+          går fremover. Lek litt med dette for å bli kjent med de nye blokkene.
+    farmer_intro:
+      1:
+        image: notes/stage9_1.jpg
+        text: Hei, jeg Paola! I disse oppgavene er du en bonde som trenger å gjøre
+          jordet flatt for å kunne dyrke grønnsaker der.
+      2:
+        image: notes/stage9_2.jpg
+        text: Du må hjelpe henne med å fjerne alle jordhaugene, og fyle alle hullene.
+      3:
+        image: notes/stage9_3.jpg
+        text: De nye blokkene fjerner 1 spadetak med jord fra en haug, og fyller 1
+          spadetak med jord i et hull.
+      4:
+        image: notes/stage9_4.jpg
+        text: Hauger og hull har forskjellige størrelse eller dybde, så du må fortelle
+          bonden hvor mange spadetak som det er behov for.
+    flappy_intro:
+      1:
+        image: notes/flappy01.jpg
+        text: Hei, mitt navn er Katie! Noe av det mest spennende innen informatikk
+          er at et dataprogram kan være interaktivt.
+      2:
+        image: notes/flappy02.jpg
+        text: Hver gang noen klikker, trykker eller skriver på en datamaskin eller
+          telefon, som genererer en hendelse, og det er noe kode som bestemmer hva
+          som skal utføres når hendelsen inntreffer.
+      3:
+        image: notes/flappy03.jpg
+        text: 'Du kan for eksempel ha en HENDELSESHÅNDTERER som sier "når musen klikkes,
+          spilles en lyd" '
+      4:
+        image: notes/flappy04.jpg
+        text: Har du hørt om spillet FlappyBird? Ved å bruke hendelsesbehandling,
+          skal vi lære å programmere vår egen tilpasset versjon av FlappyBird!
+      5:
+        image: notes/flappy05.jpg
+        text: Koden du vil skrive innebærer å dra og slippe blokker som representerer
+          kommandoer på datamaskinen. Under panseret, er hver av disse blokkene representert
+          av ekte kode.
+      6:
+        image: notes/flappy06.jpg
+        text: 'Hvis du tar en titt på arbeidsområdet, er det noen grønne blokker som
+          er fylt ut for deg - dette er "hendelsesbehandlinger" '
+      7:
+        image: notes/flappy07.jpg
+        text: If you want the bird to FLAP when you CLICK the mouse, you can do that
+          by attaching the "FLAP" block to the appropriate event handler, and now
+          in your game whenever you click the mouse, the bird will flap.
+      8:
+        image: notes/flappy08.jpg
+        text: In each puzzle of this activity we'll introduce new types of events
+          as green blocks on the workspace, and you can decide the appropriate blocks
+          to add in response to those events.
+      9:
+        image: notes/flappy09.jpg
+        text: When you see a drop down arrow like this, that means you can change
+          the settings - like what sound to play when flappy hits the ground.
+      10:
+        image: notes/flappy10.jpg
+        text: I siste puslespillet vil du kunne lage et spill og dele den med dine
+          venner. ha det gøy!
+    loop_times:
+      1:
+        image: notes/hoc2_1.jpg
+        text: Hei, jeg heter Mark! La oss lære om løkker. Med løkker kan du skal be
+          datamaskinen om å gjenta et sett av handlinger igjen og igjen, tusenvis
+          eller milliarder ganger.
+      2:
+        image: notes/hoc2_2.jpg
+        text: I denne oppgaven ønsker vi å flytte fuglen frem 5 plasser for å ta grisen.
+      3:
+        image: notes/hoc2_3.jpg
+        text: Vi kan bruke den nye "gjenta" blokken for å hjelpe oss.
+      4:
+        image: notes/hoc2_4.jpg
+        text: I stedet for å dra ut 5 "fremover" blokker...
+      5:
+        image: notes/hoc2_5.jpg
+        text: Vi kan sette "fremover" blokken inne i "gjenta"-blokken og skrive et
+          nummer i blokken å fortelle den hvor mange ganger det skal gjentas.
+      6:
+        image: notes/hoc2_6.jpg
+        text: 'Og dette er viktig: Du kan sette mer enn én kommando i en "gjenta"-blokk.'
+      7:
+        image: notes/hoc2_7.jpg
+        text: Kos deg med å bruke den nye "gjenta" blokken!
+    loop_until:
+      1:
+        image: notes/hoc3_1.jpg
+        text: Hei, er jeg Chris. Før jeg startet i Miami Heat, studerte jeg informatikk.
+          La oss prøve våre ny blokk, "Gjenta til" blokken.
+      2:
+        image: notes/hoc3_2.jpg
+        text: Hva hvis vi ikke visste hvor langt fuglen måtte bevege seg for å komme
+          til grisen?
+      3:
+        image: notes/hoc3_3.jpg
+        text: Hvis vi setter en "fremover" blokk inne i en "Gjenta til" blokk, vil
+          fuglen bevege seg fremover til den når grisen (eller krasjer inn i en vegg).
+      4:
+        image: notes/hoc3_4.jpg
+        text: 'Og dette er viktig: Akkurat som før kan vi sette flere blokker inni
+          "Gjenta til" blokken, og de vil alle bli gjentatt.'
+    if:
+      1:
+        image: notes/hoc4_1.jpg
+        text: 'Hei, er jeg Bill! La oss lære et nytt grunnleggende konsept: hvis-uttrykk.
+          Dette er hvordan datamaskiner tar beslutninger.'
+      2:
+        image: notes/hoc4_2.jpg
+        text: 'Du bruker "hvis"-uttrykk selv hver dag. Før du går ut hver morgen sier
+          du: "HVIS det regner ute må jeg ta på meg jakke".'
+      3:
+        image: notes/hoc4_3.jpg
+        text: Vi kan be zombien om å sjekke om det er en sti til venstre. Hvis han
+          finner en sti der, kan vi be han snu i den retningen.
+      4:
+        image: notes/hoc4_4.jpg
+        text: For å skrive koden for dette, må vi dra ut "Hvis"-blokken og sette en
+          "venstre"-blokk inni den.
+      5:
+        image: notes/hoc4_5.jpg
+        text: Hvis vi hver gang zombien flytter på seg setter en "fremover" blokk
+          over den, og en "gjenta" blokk rundt alt, vil han nå sjekke om det er en
+          sti til venstre og i så fall snu dit. Kommandoen "gjenta" er viktig for
+          å se etter sti etter hvert skritt.
+      6:
+        image: notes/hoc4_6.jpg
+        text: Hvis-setninger er veldig viktige i programmering. En av de første programmene
+          jeg skrev, var et tripp-trapp-tresko-spill. Der var det det en hvis-setning
+          som sa hvis den andre personen holdt på å vinne, måtte programmet blokkere
+          posisjonen som ville la han seire.
+      7:
+        image: notes/hoc4_7.jpg
+        text: Ha det gøy med hvis-blokker!
+    if_else:
+      1:
+        image: notes/hoc5_1.jpg
+        text: Hei, jeg heter Saloni. Jeg bruker programmering for å løse helseproblemer.
+          La oss lære om "hvis-ellers" blokken. Den ser ut som en "hvis"-blokk, men
+          har en ekstra del på slutten som sier "ellers".
+      2:
+        image: notes/hoc5_2.jpg
+        text: Hvis jeg setter en "fremover" blokk på plass der det står "gjøre" og
+          en "snu til venstre" blokk der det står "ellers", betyr det at zombien vil
+          velge mellom to alternativer. Hvis det er en vei fremover, vil den gå dit,
+          og ellers vil den svinge til venstre.
+      3:
+        image: notes/hoc5_3.jpg
+        text: Akkurat som "Hvis" blokken, kan vi sette "hvis ellers" blokker innenfor
+          en "gjenta" blokk slik at zombien fortsetter å flytte på seg.  "hvis ellers"
+          blokken vil fortsette å se etter nye retninger å dreie til.
+      4:
+        image: notes/hoc5_4.jpg
+        text: Nå får du vise zombiene hvor de hører hjemme!
+    function:
+      1:
+        image: notes/stage13_1.jpg
+        text: Hei, jeg Brina, ingeniør ved Instagram. En funksjon er noen kodelinjer
+          som du vil bruke igjen og igjen, så i stedet for å skrive den samme koden
+          hver gang, kan du bare bruke en blokk.
+      2:
+        image: notes/stage13_2.jpg
+        text: Vi skal lære å definere funksjoner. Blokker der vi definerer funksjoner
+          har en stjerne i hjørnet. Navnet på funksjonen skrives på øverste linje.
+      3:
+        image: notes/stage13_3.jpg
+        text: Blokkene inne i funksjonen forteller oss hva den gjør. Så denne funksjonen
+          er kalt "fyll 5", og består av en "gjenta" blokk og en "fylle" blokk.
+      4:
+        image: notes/stage13_4.jpg
+        text: Funksjonen finnes på arbeidsområdet, men bonden vil ikke kjøre den før
+          vi drar ut "Fyll 5 funksjon" blokka fra funksjoner-kategorien.
+      5:
+        image: notes/stage13_5.jpg
+        text: La oss ha det gøy med funksjoner!
+    loop_while:
+      1:
+        image: notes/stage9_5.jpg
+        text: 'Hei, jeg Makinde! La oss lære om "gjenta så lenge"-blokken '
+      2:
+        image: notes/stage9_6.jpg
+        text: '"Gjenta så lenge" blokken vil fortsette å gjøre det som er inne i den
+          så lenge utsagnet på toppen er sant.'
+      3:
+        image: notes/stage9_7.jpg
+        text: For eksempel, hvis bonden står på en haug, vil hun fortsette å fjerne
+          spadetak med jord så lenge det er fortsatt en haug under henne.
+    loop_for:
+      1:
+        image: notes/stage11_1.jpg
+        text: Hei, jeg er Trina, og jeg jobber for Pixar. Jeg har vært med å lage
+          en rekke filmer, inkludert Shrek.
+      2:
+        image: notes/stage11_2.jpg
+        text: Dette er nye "teller" løkka. Det vil utføre handlingene igjen og igjen,
+          og du kan endre handlingene litt hver gang.
+      3:
+        image: notes/stage11_3.jpg
+        text: Dette eksemplet på en "teller"-løkke sier "Tell med teller fra 50 til
+          90 med 10" og inni den har vi en "tegn en firkant"-blokk. Dra "teller" blokken
+          fra "Variabler"-seksjonen til "lengde"-stedet.
+      4:
+        image: notes/stage11_4.jpg
+        text: Dette betyr at kunstneren vår skal tegne et kvadrat med sidelengde 50
+          piksler. Så legger vi til 10, og tegner et kvadrat med sidelengde 60 piksler.
+          Slik holder vi på til sidelengden blir 90 piksler. Dermed har vi sidelengdene
+          50, 60, 70, 80 og 90.
+    parameters:
+      1:
+        image: notes/stage15_1.jpg
+        text: Hei, jeg er Janete, og jeg er en ingeniør ved Zynga.
+      2:
+        image: notes/stage15_2.jpg
+        text: Hva hvis vi ønsker å tegne en haug med trekanter av forskjellig størrelse?
+      3:
+        image: notes/stage15_3.jpg
+        text: Vi kan skrive all koden for hånd, eller vi kan bruke en funksjon med
+          parametere.
+      4:
+        image: notes/stage15_4.jpg
+        text: For å gjøre dette, må du klikke på den blå stjernen i "tegn en trekant"
+          funksjonen. Dra så "Navn på parameter:" inn i "parametre"-blokka til høyre.
+          NB! Ikke skriv navnet først.
+      5:
+        image: notes/stage15_5.jpg
+        text: Så hvis du skriver "lengde" der det står "x" og så trykker "Enter",
+          vil du opprette et lengde-parameter til funksjonen.
+      6:
+        image: notes/stage15_6.jpg
+        text: Klikk på stjernen. Så klikker du på "variabler"-kategorien og drar "lengde"
+          inn i "fremover" blokka til funksjonen. Så drar du bort den gamle nummer-blokken.
+      7:
+        image: notes/stage15_7.jpg
+        text: For å bruke funksjonen med parametere. kan du klikke på kategorien funksjoner
+          og dra ut "tegn en trekant med lengde"-funksjonen.
+      8:
+        image: notes/stage15_8.jpg
+        text: Nå kan du bruke matematikk-blokken for å hente nye tall, og på den måten
+          kan du tegne trekanter av forskjellige størrelse.
+    hoc_wrapup:
+      1:
+        image: notes/hoc6_1.jpg
+        text: Gratulerer! Med den siste oppgaven du løste, skrev du kode som kan fortelle
+          roboter hvordan de finner vei gjennom enkle labyrinter eller tunneler uansett
+          lengde. Dette gjelder uansett om det er en zombie, en fugl, en mars-rover
+          eller om det er deg som kjører bil.
+      2:
+        image: notes/hoc6_2.jpg
+        text: De grunnleggende konseptene som du brukte, danner utgangspunktet for
+          alle programmene eller appene du ser. Vi har lært om gjentagende løkker,
+          hvis-setninger, og hvis-ellers setninger.
+      3:
+        image: notes/hoc6_3.jpg
+        text: Hvis du likte den første kodetimen, kan du gå til code.org for å fortsette
+          å lære programmering! Når du har fullført 20-timers kurset vårt, behersker
+          du grunnleggende programmering. Da kan du begynne å lære å skrive telefon-apper,
+          robotinstruksjoner, spill - ja alt mulig!
+      4:
+        image: notes/hoc6_4.jpg
+        text: 'Teknologien forandrer alt vi gjør, og det spiller ingen rolle om du
+          er ung eller gammel: Programmering er morsomt og kreativt, og alle kan lære
+          det!'
+    20_wrapup:
+      1:
+        image: notes/bird.png
+        text: Video-notater kommer snart!

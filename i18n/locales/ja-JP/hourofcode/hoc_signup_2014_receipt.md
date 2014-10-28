@@ -40,34 +40,22 @@
 
 ## 4. あなたのコミュニティーにもHour of Codeを宣伝しましょう。
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+地域のグループ — ボーイスカウト、教会、大学、退役軍人のグループや労働組合、もしくは Hour of Code "ブロックパーティー"を地元で開いたりして募集してください。
 
 ## 5. Hour of Codeを支援してもらえるよう地元の議員に聞いてみましょう。
 
-## [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
-Hour of Codeのイベント主催への登録にご協力頂き大変ありがとうございます！
+<% if @country == 'ro' %>
 
-EVERY Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. Details (http://<%= hostname %>/prizes)
+Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
 
-Get your whole school to participate (http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Echipa Hour of Code Romania hoc@adfaber.org
 
-  1. Spread the word
+<% end %>
 
-Tell your friends about the #HourOfCode.
+* * *
 
-  1. Ask your whole school to offer an Hour of Code
+Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
 
-Send this email (http://<%= hostname %>/resources#email) or give this handout to your principal (http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, enter to win $10,000 worth of technology for your school (http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
-
-  1. Ask your employer to get involved
-
-Send this email (http://<%= hostname %>/resources#email) to your manager, or the CEO. Or give them this handout (http://<%= hostname %>/files/schools-handout.pdf).
-
-  1. Promote Hour of Code within your community
-
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
-
-  1. Ask a local elected official to support the Hour of Code
-
-Send this email (http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or give them this handout (http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+![](<%= tracking_pixel %>)

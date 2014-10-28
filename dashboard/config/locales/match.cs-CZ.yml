@@ -1,4 +1,4 @@
-"cy":
+"cs":
   data:
     match:
       2-3 artist loops match 1:
@@ -61,7 +61,7 @@
       2-3 Maze Match 2:
         Maze Match: Maze Match
         Match the puzzles to the blocks: Match the puzzles to the blocks
-        Instructions: Instructions
+        Instructions: Pokyny
         Drag the blocks to match.: Drag the blocks to match.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
@@ -116,7 +116,7 @@
       4-5 maze match 1:
         Maze Match: Maze Match
         Match the puzzles to the blocks: Match the puzzles to the blocks
-        Instructions: Instructions
+        Instructions: Pokyny
         Drag the blocks to match.: Drag the blocks to match.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
@@ -126,7 +126,7 @@
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
       4-5 Algorithms Match 1:
-        Matching: Matching
+        Matching: Přiřazování
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match
           the steps in the Dice Race game to the order that they should appear in
           the algorithm.
@@ -158,7 +158,7 @@
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
       4-5 Suncatchers Match 1:
-        Matching: Matching
+        Matching: Přiřazování
         Match each program to the word it makes, using the provided group of skills.: Match
           each program to the word it makes, using the provided group of skills.
         "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
@@ -234,7 +234,7 @@
       K-1 Maze Match 1:
         Matching: Přiřazování
         Match the puzzles and blocks: Přiřaď hádanky k blokům
-        Instructions: Instructions
+        Instructions: Pokyny
         Drag the blocks to match.: Drag the blocks to match.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
@@ -362,11 +362,11 @@
           string'
         'find-price: string -> number': 'find-price: string -> number'
       test matching image:
-        Matching Images Two: Matching Images Two
-        Match up all the flowers by colour!: Match up all the flowers by colour!
+        Matching Images Two: Přiřazování Obrázků Dvě
+        Match up all the flowers by colour!: Uspořádej všechny květiny podle barvy!
         "/script_assets/matches/images/head.jpg,300": "/script_assets/matches/images/head.jpg,300"
-        Instructions: Instructions
-        Drag the images from right to center.: Drag the images from right to center.
+        Instructions: Pokyny
+        Drag the images from right to center.: Přetáhni obrázky zprava na střed.
         "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
         "/script_assets/matches/images/q1.jpg": "/script_assets/matches/images/q1.jpg"
         "/script_assets/matches/images/q2.jpg": "/script_assets/matches/images/q2.jpg"
@@ -377,13 +377,13 @@
         "/script_assets/matches/images/a4.jpg": "/script_assets/matches/images/a4.jpg"
       test matching text:
         Matching: Přiřazování
-        Some really easy stuff to match.  Drag it around until you get it.: Some really
-          easy stuff to match.  Drag it around until you get it.
-        What color is the sky?: What color is the sky?
-        What's in the ocean?: What's in the ocean?
-        What's Brent's last name?: What's Brent's last name?
-        Where is Brendan from?: Where is Brendan from?
-        blue: glas
-        salt: salt
+        Some really easy stuff to match.  Drag it around until you get it.: Něco velice
+          jednoduchého k přiřazování. Přetahuj dokud to nebude správně.
+        What color is the sky?: Jakou barvu má obloha?
+        What's in the ocean?: Co je v oceánu?
+        What's Brent's last name?: Jaké je Brentovo příjmení?
+        Where is Brendan from?: Odkud je Brendan?
+        blue: modrou
+        salt: sůl
         Van Minnen: Van Minnen
         Sydney: Sydney

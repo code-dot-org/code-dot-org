@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1140,6 +1150,26 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
+/**
+ * Generate the xml for a block for the calc app.
+ */
+exports.calcBlockXml = function (type, args) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var i = 1; i <= args.length; i++) {
+    str += '<functional_input name="ARG' + i + '">';
+    var arg = args[i - 1];
+    if (typeof(arg) === "number") {
+      arg = '<block type="functional_math_number"><title name="NUM">' + arg +
+        '</title></block>';
+    }
+    str += arg;
+    str += '</functional_input>';
+  }
+  str+= '</block>';
+
+  return str;
+};
+
 },{"./xml":38}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
@@ -1160,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1254,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -3010,7 +3063,7 @@ Bounce.execute = function() {
   Bounce.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions);
+    code = utils.generateCodeAliases(level.codeFunctions, 'Bounce');
     code += BlocklyApps.editor.getValue();
   }
 
@@ -4079,35 +4132,48 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  // helper function used below..
+  function makeNativeMemberFunction(nativeFunc, parentObj) {
+    return function() {
+      return interpreter.createPrimitive(
+                            nativeFunc.apply(parentObj, arguments));
+    };
+  }
+  for (var optsObj in options) {
+    var func, wrapper;
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
+                                interpreter.createNativeFunction(wrapper));
+      }
+    }
+  }
+};
+
+/**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      // helper function used below..
-      function makeNativeMemberFunction(nativeFunc, parentObj) {
-        return function() {
-          return interpreter.createPrimitive(
-                                nativeFunc.apply(parentObj, arguments));
-        };
-      }
-      for (var optsObj in options) {
-        // Create global objects in the interpreter for everything in options
-        var obj = this.createObject(interpreter.OBJECT);
-        this.setProperty(scope, optsObj.toString(), obj);
-        for (var prop in options[optsObj]) {
-          var func = options[optsObj][prop];
-          if (func instanceof Function) {
-            // Populate each of the global objects with native functions
-            // NOTE: other properties are not passed to the interpreter
-            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
-            interpreter.setProperty(obj,
-                                    prop,
-                                    interpreter.createNativeFunction(wrapper));
-          }
-        }
-      }
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -4125,8 +4191,7 @@ exports.evalWith = function(code, options) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
-    var fn = new ctor();
-    return fn.apply(null, args);
+    return new ctor().apply(null, args);
   }
 };
 
@@ -4134,18 +4199,24 @@ exports.evalWith = function(code, options) {
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  return new ctor();
 };
 
 },{}],16:[function(require,module,exports){
@@ -11293,16 +11364,16 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += "var " + codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = [''].concat(arguments); return " +
+          parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -11409,9 +11480,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
@@ -11470,7 +11552,7 @@ exports.doCode = function(d){return "csináld"};
 
 exports.elseCode = function(d){return "különben"};
 
-exports.finalLevel = function(d){return "Gratulálok! A végső rejtvény megoldotta."};
+exports.finalLevel = function(d){return "Gratulálok, megoldottad az utolsó feladatot."};
 
 exports.heightParameter = function(d){return "magasság"};
 
@@ -11488,7 +11570,7 @@ exports.incrementOpponentScoreTooltip = function(d){return "Adjon egyet az ellen
 
 exports.incrementPlayerScore = function(d){return "pontszám"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Adjon egyet a játékos pontszámához."};
+exports.incrementPlayerScoreTooltip = function(d){return "Adjon egyet az aktuális játékos pontjaihoz."};
 
 exports.isWall = function(d){return "Ez egy fal"};
 
@@ -11500,7 +11582,7 @@ exports.launchBallTooltip = function(d){return "Hozd játékba a labdát."};
 
 exports.makeYourOwn = function(d){return "Készítsd el a saját Bounce játékodat"};
 
-exports.moveDown = function(d){return "menj lejjebb"};
+exports.moveDown = function(d){return "lejjebb"};
 
 exports.moveDownTooltip = function(d){return "Mozgasd lejjebb a lapátot."};
 
@@ -11512,17 +11594,17 @@ exports.moveLeft = function(d){return "balra"};
 
 exports.moveLeftTooltip = function(d){return "Mozgasd balra a lapátot."};
 
-exports.moveRight = function(d){return "menj jobbra"};
+exports.moveRight = function(d){return "jobbra"};
 
 exports.moveRightTooltip = function(d){return "Mozgasd jobbra a lapátot."};
 
-exports.moveUp = function(d){return "menj feljebb"};
+exports.moveUp = function(d){return "feljebb"};
 
 exports.moveUpTooltip = function(d){return "Mozgasd feljebb a lapátot."};
 
-exports.nextLevel = function(d){return "Gratulálok! Elvégezte a puzzle-t."};
+exports.nextLevel = function(d){return "Gratulálok! Ezt a feladatot megoldottad."};
 
-exports.no = function(d){return "nem"};
+exports.no = function(d){return "Nem"};
 
 exports.noPathAhead = function(d){return "az útvonal el van zárva"};
 
@@ -11530,7 +11612,7 @@ exports.noPathLeft = function(d){return "nincs út balra"};
 
 exports.noPathRight = function(d){return "nincs út jobbra "};
 
-exports.numBlocksNeeded = function(d){return "Ezt a puzzle-t a(z) % 1 blokkal megoldható."};
+exports.numBlocksNeeded = function(d){return "Ez a feladat a(z) %1 blokkal megoldható."};
 
 exports.pathAhead = function(d){return "Út előre"};
 
@@ -11548,9 +11630,9 @@ exports.playSoundGoal2 = function(d){return "2. cél hang lejátszása"};
 
 exports.playSoundHit = function(d){return "ütődés hang lejátszása"};
 
-exports.playSoundLosePoint = function(d){return "pont elvesztés hang lejátszása"};
+exports.playSoundLosePoint = function(d){return "pont elvesztése hang lejátszása"};
 
-exports.playSoundLosePoint2 = function(d){return "pont elvesztés 2 hang lejátszása"};
+exports.playSoundLosePoint2 = function(d){return "pont elvesztése hang 2 lejátszása"};
 
 exports.playSoundRetro = function(d){return "retro hang lejátszása"};
 
@@ -11562,17 +11644,17 @@ exports.playSoundTooltip = function(d){return "Kiválasztott hang lejátszása."
 
 exports.playSoundWinPoint = function(d){return "pontnyerés hang lejátszása"};
 
-exports.playSoundWinPoint2 = function(d){return "pontnyerés 2 hang lejátszása"};
+exports.playSoundWinPoint2 = function(d){return "pontnyerés hang 2 lejátszása"};
 
 exports.playSoundWood = function(d){return "fa hang lejátszása"};
 
 exports.putdownTower = function(d){return "Tegyen le tornyot"};
 
-exports.reinfFeedbackMsg = function(d){return "Nyomd meg az \"új próbálkozás\" gombot, hogy visszatérhess a játékodhoz."};
+exports.reinfFeedbackMsg = function(d){return "Nyomja meg a \"Játszd újra\" gombot hogy visszatérj a saját játékodhoz."};
 
 exports.removeSquare = function(d){return "távolítsa el a négyzetet"};
 
-exports.repeatUntil = function(d){return "ismételd amíg"};
+exports.repeatUntil = function(d){return "ismételd amíg nem"};
 
 exports.repeatUntilBlocked = function(d){return "amíg van út előre"};
 
@@ -11586,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "Salakos háttér beállít�
 
 exports.setBackgroundRetro = function(d){return "Retró háttér beállítása"};
 
-exports.setBackgroundTooltip = function(d){return "Háttérkép beállítása"};
+exports.setBackgroundTooltip = function(d){return "Adja meg a háttér képet"};
 
 exports.setBallRandom = function(d){return "Véletlenszerű labda beállítása"};
 
@@ -11634,7 +11716,7 @@ exports.setPaddleSpeedTooltip = function(d){return "Sets the speed of the paddle
 
 exports.shareBounceTwitter = function(d){return "Nézd meg milyen Bounce játékot készítettem. Magam programoztam a code.org felületén"};
 
-exports.shareGame = function(d){return "Oszd meg a játékodat:"};
+exports.shareGame = function(d){return "Oszd meg a játékod:"};
 
 exports.turnLeft = function(d){return "fordulj balra"};
 
@@ -11650,7 +11732,7 @@ exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
 
-exports.whenDown = function(d){return "Ha van lefelé nyíl"};
+exports.whenDown = function(d){return "Lefele nyílnál"};
 
 exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
 
@@ -11658,7 +11740,7 @@ exports.whenGameStarts = function(d){return "amikor a játék elindul"};
 
 exports.whenGameStartsTooltip = function(d){return "Végrehajtja a lenti utasításokat, ha a játék elindul."};
 
-exports.whenLeft = function(d){return "Ha van balra nyíl"};
+exports.whenLeft = function(d){return "balra nyíl esetén"};
 
 exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
 
@@ -11666,7 +11748,7 @@ exports.whenPaddleCollided = function(d){return "Ha a labda nekimegy az ásónak
 
 exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
 
-exports.whenRight = function(d){return "Ha van jobbra nyíl"};
+exports.whenRight = function(d){return "jobbra nyíl esetén"};
 
 exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
 
@@ -11682,7 +11764,7 @@ exports.whileMsg = function(d){return "amíg"};
 
 exports.whileTooltip = function(d){return "Ismételjük a közbülső műveleteket amíg végponthoz nem ér."};
 
-exports.yes = function(d){return "igen"};
+exports.yes = function(d){return "Igen"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -11691,7 +11773,7 @@ exports.and = function(d){return "és"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
-exports.catActions = function(d){return "Cselekvések"};
+exports.catActions = function(d){return "Műveletek"};
 
 exports.catColour = function(d){return "Szín"};
 
@@ -11703,9 +11785,9 @@ exports.catLoops = function(d){return "Ciklusok"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Függvények"};
+exports.catProcedures = function(d){return "Funkciók"};
 
-exports.catText = function(d){return "Szöveg"};
+exports.catText = function(d){return "szöveg"};
 
 exports.catVariables = function(d){return "Változók"};
 
@@ -11783,7 +11865,7 @@ exports.runTooltip = function(d){return "A munkalapon összeépített program fu
 
 exports.score = function(d){return "pontszám"};
 
-exports.showCodeHeader = function(d){return "Kód Megjelenítése"};
+exports.showCodeHeader = function(d){return "Kód megjelenítése"};
 
 exports.showGeneratedCode = function(d){return "Kód megjelenítése"};
 
@@ -11797,7 +11879,7 @@ exports.tooManyBlocksMsg = function(d){return "Ez a feladvány megoldható a <x 
 
 exports.tooMuchWork = function(d){return "Sokat dolgoztattál. Megpróbálnád egy kicsit kevesebb ismétléssel?"};
 
-exports.toolboxHeader = function(d){return "Blokkok"};
+exports.toolboxHeader = function(d){return "blokkok"};
 
 exports.openWorkspace = function(d){return "Hogyan is működik"};
 

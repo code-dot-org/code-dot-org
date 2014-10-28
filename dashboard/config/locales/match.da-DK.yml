@@ -51,7 +51,7 @@
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png"
       2-3 maze match 1:
         Maze Match One: Labyrint Match 1
-        Match the puzzles to the blocks: Match opgaverne med blokkene
+        Match the puzzles to the blocks: Par opgaverne med blokkene
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
@@ -62,7 +62,7 @@
         Maze Match: Match Match
         Match the puzzles to the blocks: Par opgaverne med blokkene
         Instructions: Instruktioner
-        Drag the blocks to match.: Træk i blokkene for at parre dem.
+        Drag the blocks to match.: Træk i blokkene for at matche dem.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
@@ -115,9 +115,9 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
       4-5 maze match 1:
         Maze Match: Match Match
-        Match the puzzles to the blocks: Match opgaverne med blokkene
+        Match the puzzles to the blocks: Par opgaverne med blokkene
         Instructions: Instruktioner
-        Drag the blocks to match.: Træk i blokkene for at match dem.
+        Drag the blocks to match.: Træk i blokkene for at matche dem.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
@@ -362,11 +362,11 @@
           string'
         'find-price: string -> number': 'find-price: string -> number'
       test matching image:
-        Matching Images Two: Matche billeder 2
+        Matching Images Two: Match billeder, to
         Match up all the flowers by colour!: Match alle blomsterne efter farve!
         "/script_assets/matches/images/head.jpg,300": "/script_assets/matches/images/head.jpg,300"
         Instructions: Instruktioner
-        Drag the images from right to center.: Træk billederne fra højre mod midten.
+        Drag the images from right to center.: Træk billederne fra højre til midten.
         "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
         "/script_assets/matches/images/q1.jpg": "/script_assets/matches/images/q1.jpg"
         "/script_assets/matches/images/q2.jpg": "/script_assets/matches/images/q2.jpg"

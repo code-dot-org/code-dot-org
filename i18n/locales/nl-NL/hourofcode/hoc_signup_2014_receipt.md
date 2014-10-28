@@ -1,73 +1,61 @@
 * * *
 
-from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' subject: Thanks for signing up to host an Hour of Code! view: none theme: none
+van: "Hadi Partove (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' subject: Bedankt dat je je hebt opgegeven om een Uur Code te organiseren! view: none theme: none
 
 * * *
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Thanks for signing up to host an Hour of Code!
+# Bedankt dat je je hebt opgegeven om een Uur Code te organiseren!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
+**IEDERE** Uur Code-organisator ontvangt 10GB Dropbox-ruimte of $10 aan Skype-credit als bedankje. [Details](http://<%= hostname %>/prizes)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Zorg dat je [hele school meedoet](http://<%= hostname %>/whole-school) om kans te maken op grote prijzen voor de hele school.
 
 <% end %>
 
-## 1. Spread the word
+## 1. Zegt het voort
 
-Tell your friends about the #HourOfCode.
+Vertel je vrienden over het Uur Code, #HourOfCode.
 
 <% if @country == 'us' %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Vraag je hele school een Uur Code aan te bieden
 
-[Send this email](http://<%= hostname %>/resources#email) or [give this handout to your principal](http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+[Verstuur deze this email](http://<%= hostname %>/resources#email) of [geef deze handout aan je rector](http://<%= hostname %>/files/schools-handout.pdf). Is je school eenmaal aan boord, [doe dan mee om $10,000 aan technologie voor je school te winnen](http://<%= hostname %>/prizes) en daag andere scholen uit je district uit ook mee te doen.
 
 <% else %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Vraag je hele school een Uur Code aan te bieden
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
+[Verstuur deze email](http://<%= hostname %>/resources#email) of geef [deze handout](http://<%= hostname %>/files/schools-handout.pdf) aan je rector.
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 3. Vraag je werkgever betrokken te raken
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Verstuur deze email](http://<%= hostname %>/resources#email) aan je manager, of de directeur. Of [geef ze deze handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Promote Hour of Code within your community
+## 4. Promoot het Uur Code in je gemeenschap
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Werk samen met een vereniging — scouting, kerk, universiteit of vakbond. Of organiseer een Uur Code "buurtfeest" voor je wijk.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Vraag een politicus het Uur Code te steunen
 
-## [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Stuur deze mail](http://<%= hostname %>/resources#politicians) naar je burgemeester, gemeenteraad of schoolbestuur. Of [geef ze deze hand-out](http://<%= hostname %>/resources/hoc-one-pager.pdf) en nodig ze uit op je school.
 
-Thanks for signing up to host an Hour of Code!
+<% if @country == 'ro' %>
 
-EVERY Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. Details (http://<%= hostname %>/prizes)
+Zet de taal op 'Roemeens' om deze tekst te zien!
 
-Get your whole school to participate (http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+Mail Hour of Code Roemenie op hoc@adfaber.org
 
-  1. Spread the word
+<% end %>
 
-Tell your friends about the #HourOfCode.
+* * *
 
-  1. Ask your whole school to offer an Hour of Code
+Code.org is een 501c3 non-profit. Ons adres is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Wil je deze mails niet meer ontvangen? [Afmelden](%= unsubscribe_link %).
 
-Send this email (http://<%= hostname %>/resources#email) or give this handout to your principal (http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, enter to win $10,000 worth of technology for your school (http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
-
-  1. Ask your employer to get involved
-
-Send this email (http://<%= hostname %>/resources#email) to your manager, or the CEO. Or give them this handout (http://<%= hostname %>/files/schools-handout.pdf).
-
-  1. Promote Hour of Code within your community
-
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
-
-  1. Ask a local elected official to support the Hour of Code
-
-Send this email (http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or give them this handout (http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+![](<%= tracking_pixel %>)

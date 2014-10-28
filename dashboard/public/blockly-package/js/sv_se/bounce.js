@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1140,6 +1150,26 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
+/**
+ * Generate the xml for a block for the calc app.
+ */
+exports.calcBlockXml = function (type, args) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var i = 1; i <= args.length; i++) {
+    str += '<functional_input name="ARG' + i + '">';
+    var arg = args[i - 1];
+    if (typeof(arg) === "number") {
+      arg = '<block type="functional_math_number"><title name="NUM">' + arg +
+        '</title></block>';
+    }
+    str += arg;
+    str += '</functional_input>';
+  }
+  str+= '</block>';
+
+  return str;
+};
+
 },{"./xml":38}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
@@ -1160,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1254,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -3010,7 +3063,7 @@ Bounce.execute = function() {
   Bounce.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions);
+    code = utils.generateCodeAliases(level.codeFunctions, 'Bounce');
     code += BlocklyApps.editor.getValue();
   }
 
@@ -4079,35 +4132,48 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  // helper function used below..
+  function makeNativeMemberFunction(nativeFunc, parentObj) {
+    return function() {
+      return interpreter.createPrimitive(
+                            nativeFunc.apply(parentObj, arguments));
+    };
+  }
+  for (var optsObj in options) {
+    var func, wrapper;
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
+                                interpreter.createNativeFunction(wrapper));
+      }
+    }
+  }
+};
+
+/**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      // helper function used below..
-      function makeNativeMemberFunction(nativeFunc, parentObj) {
-        return function() {
-          return interpreter.createPrimitive(
-                                nativeFunc.apply(parentObj, arguments));
-        };
-      }
-      for (var optsObj in options) {
-        // Create global objects in the interpreter for everything in options
-        var obj = this.createObject(interpreter.OBJECT);
-        this.setProperty(scope, optsObj.toString(), obj);
-        for (var prop in options[optsObj]) {
-          var func = options[optsObj][prop];
-          if (func instanceof Function) {
-            // Populate each of the global objects with native functions
-            // NOTE: other properties are not passed to the interpreter
-            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
-            interpreter.setProperty(obj,
-                                    prop,
-                                    interpreter.createNativeFunction(wrapper));
-          }
-        }
-      }
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -4125,8 +4191,7 @@ exports.evalWith = function(code, options) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
-    var fn = new ctor();
-    return fn.apply(null, args);
+    return new ctor().apply(null, args);
   }
 };
 
@@ -4134,18 +4199,24 @@ exports.evalWith = function(code, options) {
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  return new ctor();
 };
 
 },{}],16:[function(require,module,exports){
@@ -11293,16 +11364,16 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += "var " + codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = [''].concat(arguments); return " +
+          parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -11409,9 +11480,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
@@ -11478,7 +11560,7 @@ exports.ifCode = function(d){return "om"};
 
 exports.ifPathAhead = function(d){return "om väg finns framåt"};
 
-exports.ifTooltip = function(d){return "Om det finns en sökväg i den angivna riktningen, utför ett antal åtgärder."};
+exports.ifTooltip = function(d){return "Om det finns en väg i den angivna riktningen, gör några handlingar."};
 
 exports.ifelseTooltip = function(d){return "Om det finns en väg i den angivna riktningen, gör i så fall det första blocket av handlingar. Annars, gör den andra blocket av handlingar."};
 
@@ -11488,7 +11570,7 @@ exports.incrementOpponentScoreTooltip = function(d){return "Lägg till en till d
 
 exports.incrementPlayerScore = function(d){return "increment player score"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
+exports.incrementPlayerScoreTooltip = function(d){return "Lägg till ett till den nuvarande spelarens poängsumma."};
 
 exports.isWall = function(d){return "is this a wall"};
 
@@ -11500,7 +11582,7 @@ exports.launchBallTooltip = function(d){return "Sätt en ny boll i spel."};
 
 exports.makeYourOwn = function(d){return "Gör ditt eget Studsa-spel"};
 
-exports.moveDown = function(d){return "flytta ner"};
+exports.moveDown = function(d){return "flytta neråt"};
 
 exports.moveDownTooltip = function(d){return "Flytta paddeln nedåt."};
 
@@ -11508,15 +11590,15 @@ exports.moveForward = function(d){return "gå framåt"};
 
 exports.moveForwardTooltip = function(d){return "Flytta mig framåt en ruta."};
 
-exports.moveLeft = function(d){return "move left"};
+exports.moveLeft = function(d){return "flytta vänster"};
 
 exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
 
-exports.moveRight = function(d){return "move right"};
+exports.moveRight = function(d){return "flytta höger"};
 
 exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
 
-exports.moveUp = function(d){return "move up"};
+exports.moveUp = function(d){return "flytta uppåt"};
 
 exports.moveUpTooltip = function(d){return "Move the paddle up."};
 
@@ -11524,13 +11606,13 @@ exports.nextLevel = function(d){return "Grattis! Du har slutfört detta pusslet.
 
 exports.no = function(d){return "Nej"};
 
-exports.noPathAhead = function(d){return "stigen är blockerad"};
+exports.noPathAhead = function(d){return "vägen är blockerad"};
 
-exports.noPathLeft = function(d){return "ingen stig till vänster"};
+exports.noPathLeft = function(d){return "ingen väg till vänster"};
 
-exports.noPathRight = function(d){return "ingen stig åt höger"};
+exports.noPathRight = function(d){return "ingen väg till höger"};
 
-exports.numBlocksNeeded = function(d){return "Detta pussel kan lösas med %1 block."};
+exports.numBlocksNeeded = function(d){return "Detta pusslet kan lösas med %1 block."};
 
 exports.pathAhead = function(d){return "väg framåt"};
 
@@ -11540,7 +11622,7 @@ exports.pathRight = function(d){return "Om vägen finns till höger"};
 
 exports.pilePresent = function(d){return "Det finns en hög"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "spela krossa ljud"};
 
 exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
 
@@ -11552,13 +11634,13 @@ exports.playSoundLosePoint = function(d){return "play lose point sound"};
 
 exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "spela retro-ljud"};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "spela gummi-ljud"};
 
 exports.playSoundSlap = function(d){return "play slap sound"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "Spela upp det valda ljudet."};
 
 exports.playSoundWinPoint = function(d){return "play win point sound"};
 
@@ -11586,7 +11668,7 @@ exports.setBackgroundHardcourt = function(d){return "Ange hardcourt scen"};
 
 exports.setBackgroundRetro = function(d){return "Ange retro scen"};
 
-exports.setBackgroundTooltip = function(d){return "Anger en bakgrundsbild"};
+exports.setBackgroundTooltip = function(d){return "Ange bakgrundsbild"};
 
 exports.setBallRandom = function(d){return "Ange slumpmässig boll"};
 
@@ -11636,9 +11718,9 @@ exports.shareBounceTwitter = function(d){return "Kolla in Bounce spelet jag gjor
 
 exports.shareGame = function(d){return "Dela ditt spel:"};
 
-exports.turnLeft = function(d){return "Sväng vänster"};
+exports.turnLeft = function(d){return "sväng vänster"};
 
-exports.turnRight = function(d){return "Sväng höger"};
+exports.turnRight = function(d){return "sväng höger"};
 
 exports.turnTooltip = function(d){return "Vänder mig åt vänster eller höger 90 grader."};
 
@@ -11654,9 +11736,9 @@ exports.whenDown = function(d){return "when Down arrow"};
 
 exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
 
-exports.whenGameStarts = function(d){return "När spelet startar"};
+exports.whenGameStarts = function(d){return "när spelet börjar"};
 
-exports.whenGameStartsTooltip = function(d){return "Utför åtgärderna nedan när spelet startar."};
+exports.whenGameStartsTooltip = function(d){return "Utför kommandona nedan när spelet startar."};
 
 exports.whenLeft = function(d){return "when Left arrow"};
 
@@ -11670,9 +11752,9 @@ exports.whenRight = function(d){return "when Right arrow"};
 
 exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "när pil upp"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Utför handlingarna nedan när pil-upptangenten trycks ner."};
 
 exports.whenWallCollided = function(d){return "when ball hits wall"};
 
@@ -11699,13 +11781,13 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.catLists = function(d){return "Listor"};
 
-exports.catLoops = function(d){return "loopar"};
+exports.catLoops = function(d){return "Loopar"};
 
 exports.catMath = function(d){return "Matte"};
 
 exports.catProcedures = function(d){return "Funktioner"};
 
-exports.catText = function(d){return "Text"};
+exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "Variabler"};
 
@@ -11747,7 +11829,7 @@ exports.help = function(d){return "Hjälp"};
 
 exports.hintTitle = function(d){return "Tips:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "hoppa"};
 
 exports.levelIncompleteError = function(d){return "Du använder alla nödvändiga typer av block, men inte på rätt sätt."};
 
@@ -11797,7 +11879,7 @@ exports.tooManyBlocksMsg = function(d){return "Detta pusslet kan lösas med <x i
 
 exports.tooMuchWork = function(d){return "Du fick mig att göra en hel del arbete!  Du kan försöka upprepa färre gånger?"};
 
-exports.toolboxHeader = function(d){return "Block"};
+exports.toolboxHeader = function(d){return "bitar"};
 
 exports.openWorkspace = function(d){return "Hur det fungerar"};
 

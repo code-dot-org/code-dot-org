@@ -240,8 +240,16 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
-    // if in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
   } else if (!BlocklyApps.noPadding) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
@@ -390,7 +398,7 @@ BlocklyApps.init = function(config) {
         palette: palette
       });
       // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
+      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
         BlocklyApps.editor.toggleBlocks();
       });
 
@@ -497,6 +505,8 @@ BlocklyApps.init = function(config) {
     toolbox: config.level.toolbox,
     disableParamEditing: config.level.disableParamEditing === undefined ?
         true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -1140,6 +1150,26 @@ exports.insertWhenRunBlock = function (input) {
   return xml.serialize(root);
 };
 
+/**
+ * Generate the xml for a block for the calc app.
+ */
+exports.calcBlockXml = function (type, args) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var i = 1; i <= args.length; i++) {
+    str += '<functional_input name="ARG' + i + '">';
+    var arg = args[i - 1];
+    if (typeof(arg) === "number") {
+      arg = '<block type="functional_math_number"><title name="NUM">' + arg +
+        '</title></block>';
+    }
+    str += arg;
+    str += '</functional_input>';
+  }
+  str+= '</block>';
+
+  return str;
+};
+
 },{"./xml":55}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
@@ -1160,6 +1190,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1254,6 +1285,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -1367,35 +1420,48 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Initialize a JS interpreter.
+ */
+exports.initJSInterpreter = function (interpreter, scope, options) {
+  // helper function used below..
+  function makeNativeMemberFunction(nativeFunc, parentObj) {
+    return function() {
+      return interpreter.createPrimitive(
+                            nativeFunc.apply(parentObj, arguments));
+    };
+  }
+  for (var optsObj in options) {
+    var func, wrapper;
+    // The options object contains objects that will be referenced
+    // by the code we plan to execute. Since these objects exist in the native
+    // world, we need to create associated objects in the interpreter's world
+    // so the interpreted code can call out to these native objects
+
+    // Create global objects in the interpreter for everything in options
+    var obj = interpreter.createObject(interpreter.OBJECT);
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    for (var prop in options[optsObj]) {
+      func = options[optsObj][prop];
+      if (func instanceof Function) {
+        // Populate each of the global objects with native functions
+        // NOTE: other properties are not currently passed to the interpreter
+        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        interpreter.setProperty(obj,
+                                prop,
+                                interpreter.createNativeFunction(wrapper));
+      }
+    }
+  }
+};
+
+/**
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
   if (options.BlocklyApps && options.BlocklyApps.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      // helper function used below..
-      function makeNativeMemberFunction(nativeFunc, parentObj) {
-        return function() {
-          return interpreter.createPrimitive(
-                                nativeFunc.apply(parentObj, arguments));
-        };
-      }
-      for (var optsObj in options) {
-        // Create global objects in the interpreter for everything in options
-        var obj = this.createObject(interpreter.OBJECT);
-        this.setProperty(scope, optsObj.toString(), obj);
-        for (var prop in options[optsObj]) {
-          var func = options[optsObj][prop];
-          if (func instanceof Function) {
-            // Populate each of the global objects with native functions
-            // NOTE: other properties are not passed to the interpreter
-            var wrapper = makeNativeMemberFunction(func, options[optsObj]);
-            interpreter.setProperty(obj,
-                                    prop,
-                                    interpreter.createNativeFunction(wrapper));
-          }
-        }
-      }
+      exports.initJSInterpreter(interpreter, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -1413,8 +1479,7 @@ exports.evalWith = function(code, options) {
       return Function.apply(this, params);
     };
     ctor.prototype = Function.prototype;
-    var fn = new ctor();
-    return fn.apply(null, args);
+    return new ctor().apply(null, args);
   }
 };
 
@@ -1422,18 +1487,24 @@ exports.evalWith = function(code, options) {
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  var params = [];
-  var args = [];
-  for (var k in options) {
-    params.push(k);
-    args.push(options[k]);
+  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+    // Since this returns a new native function, it doesn't make sense in the
+    // editCode case (we assume that the app will be using JSInterpreter)
+    throw "Unexpected";
+  } else {
+    var params = [];
+    var args = [];
+    for (var k in options) {
+      params.push(k);
+      args.push(options[k]);
+    }
+    params.push(code);
+    var ctor = function() {
+      return Function.apply(this, params);
+    };
+    ctor.prototype = Function.prototype;
+    return new ctor();
   }
-  params.push(code);
-  var ctor = function() {
-    return Function.apply(this, params);
-  };
-  ctor.prototype = Function.prototype;
-  return new ctor();
 };
 
 },{}],7:[function(require,module,exports){
@@ -9249,9 +9320,9 @@ module.exports = {
     'ideal': 3,
     'editCode': true,
     'codeFunctions': [
-      {'func': 'move', 'alias': 'Maze.moveForward();'},
-      {'func': 'turnleft', 'alias': 'Maze.turnLeft();'},
-      {'func': 'turnright', 'alias': 'Maze.turnRight();'}
+      {'func': 'moveForward' },
+      {'func': 'turnLeft' },
+      {'func': 'turnRight' }
     ],
     'requiredBlocks': [
        [reqBlocks.MOVE_FORWARD]
@@ -9273,9 +9344,9 @@ module.exports = {
     'ideal': 4,
     'editCode': true,
     'codeFunctions': [
-      {'func': 'move', 'alias': 'Maze.moveForward();'},
-      {'func': 'turnleft', 'alias': 'Maze.turnLeft();'},
-      {'func': 'turnright', 'alias': 'Maze.turnRight();'}
+      {'func': 'moveForward' },
+      {'func': 'turnLeft' },
+      {'func': 'turnRight' }
     ],
     'requiredBlocks': [
        [reqBlocks.MOVE_FORWARD]
@@ -9297,9 +9368,9 @@ module.exports = {
     'ideal': 6,
     'editCode': true,
     'codeFunctions': [
-      {'func': 'move', 'alias': 'Maze.moveForward();'},
-      {'func': 'turnleft', 'alias': 'Maze.turnLeft();'},
-      {'func': 'turnright', 'alias': 'Maze.turnRight();'}
+      {'func': 'moveForward' },
+      {'func': 'turnLeft' },
+      {'func': 'turnRight' }
     ],
     'requiredBlocks': [
       [reqBlocks.MOVE_FORWARD],
@@ -9323,9 +9394,9 @@ module.exports = {
     'ideal': 8,
     'editCode': true,
     'codeFunctions': [
-      {'func': 'move', 'alias': 'Maze.moveForward();'},
-      {'func': 'turnleft', 'alias': 'Maze.turnLeft();'},
-      {'func': 'turnright', 'alias': 'Maze.turnRight();'}
+      {'func': 'moveForward' },
+      {'func': 'turnLeft' },
+      {'func': 'turnRight' }
     ],
     'requiredBlocks': [
       [reqBlocks.MOVE_FORWARD],
@@ -9346,9 +9417,9 @@ module.exports = {
   'custom': {
     'toolbox': toolbox(3, 4),
     'codeFunctions': [
-      {'func': 'move', 'alias': 'Maze.moveForward();'},
-      {'func': 'turnleft', 'alias': 'Maze.turnLeft();'},
-      {'func': 'turnright', 'alias': 'Maze.turnRight();'}
+      {'func': 'moveForward' },
+      {'func': 'turnLeft' },
+      {'func': 'turnRight' }
     ],
     'requiredBlocks': [],
     'startDirection': Direction.EAST,
@@ -10319,7 +10390,7 @@ Maze.execute = function(stepMode) {
   Maze.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions);
+    code = utils.generateCodeAliases(level.codeFunctions, 'Maze');
     code += BlocklyApps.editor.getValue();
   }
 
@@ -10540,7 +10611,7 @@ Maze.scheduleAnimations = function (singleStep) {
  */
 function animateAction (action, spotlightBlocks, timePerStep) {
   if (action.blockId) {
-    BlocklyApps.highlight(action.blockId, spotlightBlocks);
+    BlocklyApps.highlight(String(action.blockId), spotlightBlocks);
   }
 
   switch (action.command) {
@@ -12939,16 +13010,16 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
 /**
  * Generate code aliases in Javascript based on some level data.
  */
-exports.generateCodeAliases = function (codeFunctions) {
+exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   var code = '';
   // Insert aliases from level codeBlocks into code
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      var codeFunction = codeFunctions[i];
-      if (codeFunction.alias) {
-        code += "var " + codeFunction.func +
-            " = function() { " + codeFunction.alias + " };\n";
-      }
+      var cf = codeFunctions[i];
+      code += "var " + cf.func +
+          " = function() { var newArgs = [''].concat(arguments); return " +
+          parentObjName + "." + cf.func +
+          ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
   return code;
@@ -13055,9 +13126,20 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
+      var cf = codeFunctions[i];
+      var block = cf.func + "(";
+      if (cf.params) {
+        for (var j = 0; j < cf.params.length; j++) {
+          if (j !== 0) {
+            block += ", ";
+          }
+          block += cf.params[j];
+        }
+      }
+      block += ")";
       var blockPair = {
-        block: codeFunctions[i].func + "();",
-        title: codeFunctions[i].alias
+        block: block,
+        title: cf.func
       };
       appPaletteCategory.blocks[i] = blockPair;
     }
@@ -13102,7 +13184,7 @@ exports.and = function(d){return "ve"};
 
 exports.blocklyMessage = function(d){return "Parçalı"};
 
-exports.catActions = function(d){return "İşlemler"};
+exports.catActions = function(d){return "Eylemler"};
 
 exports.catColour = function(d){return "Renk"};
 
@@ -13116,13 +13198,13 @@ exports.catMath = function(d){return "Matematik"};
 
 exports.catProcedures = function(d){return "Fonksiyonlar"};
 
-exports.catText = function(d){return "Yazı"};
+exports.catText = function(d){return "yazı"};
 
 exports.catVariables = function(d){return "Değişkenler"};
 
 exports.codeTooltip = function(d){return "Oluşturulan JavaScript kodunu gör."};
 
-exports.continue = function(d){return "Devam"};
+exports.continue = function(d){return "Devam Et"};
 
 exports.dialogCancel = function(d){return "İptal"};
 
@@ -13142,13 +13224,13 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Tekrar\" bloğu veya \"Eğer
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Fonksiyon bloğunun çalışabilmesi için içine başka bloklar koymalısın."};
 
-exports.extraTopBlocks = function(d){return "Bir olay bloğuna eklenmemiş ekstra blokların var."};
+exports.extraTopBlocks = function(d){return "Blokları bağlamadın. \"Çalıştığı zaman\" bloğuna bağlamayı denediniz mi?"};
 
 exports.finalStage = function(d){return "Son aşamayı bitirdiniz. Tebrikler!"};
 
 exports.finalStageTrophies = function(d){return "Tebrikler! Son aşamayı bitirerek "+p(d,"numTrophies",0,"tr",{"one":"bir ganimet","other":n(d,"numTrophies")+" ganimet"})+" kazandınız."};
 
-exports.finish = function(d){return "Bitir"};
+exports.finish = function(d){return "Bitiş"};
 
 exports.generatedCodeInfo = function(d){return "Dünyanın en iyi üniversiteleri bile yap-boz oyun tabanlı kodlama öğretiyor (Örn. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ayrıca detaylı incelerseniz, birleştirdiğiniz bloklar dünyanın en yaygın kullanılan kodlama dili olan JavaScript dilinde de görüntüleniyor:"};
 
@@ -13158,7 +13240,7 @@ exports.help = function(d){return "Yardım"};
 
 exports.hintTitle = function(d){return "İpucu:"};
 
-exports.jump = function(d){return "atla"};
+exports.jump = function(d){return "zıpla"};
 
 exports.levelIncompleteError = function(d){return "Tüm gerekli türdeki blokları kullanıyorsunuz ama doğru şekilde değil."};
 
@@ -13184,7 +13266,7 @@ exports.play = function(d){return "oynat"};
 
 exports.puzzleTitle = function(d){return "Bulmaca "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "tekrarla"};
+exports.repeat = function(d){return "bu işlemleri"};
 
 exports.resetProgram = function(d){return "Yeniden başla"};
 
@@ -13200,7 +13282,7 @@ exports.showGeneratedCode = function(d){return "Kodu Görüntüle"};
 
 exports.subtitle = function(d){return "Bir görsel programa ortamı"};
 
-exports.textVariable = function(d){return "metin yazısı"};
+exports.textVariable = function(d){return "metin"};
 
 exports.tooFewBlocksMsg = function(d){return "Tüm gerekli blok türlerini kullanıyorsun,fakat bulmacayı tamamlamak için bu blok tiplerinden daha fazla kullanmayı dene."};
 
@@ -13208,7 +13290,7 @@ exports.tooManyBlocksMsg = function(d){return "Bu bulmaca <x id='START_SPAN'/><x
 
 exports.tooMuchWork = function(d){return "Bana çok fazla iş yaptırdın!Daha az tekrar etmeyi deneyebilir misin ?"};
 
-exports.toolboxHeader = function(d){return "Bloklar"};
+exports.toolboxHeader = function(d){return "bloklar"};
 
 exports.openWorkspace = function(d){return "Nasıl Çalışır"};
 
@@ -13224,7 +13306,7 @@ exports.saveToGallery = function(d){return "Galerine kaydet"};
 
 exports.savedToGallery = function(d){return "Galerine kaydedildi!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Üzgünüz, bu programı paylaşamıyoruz."};
 
 exports.typeCode = function(d){return "Açıklamaların altına kendi JavaScript kodunu yaz."};
 
@@ -13265,7 +13347,7 @@ exports.atFlower = function(d){return "çiçekte"};
 
 exports.avoidCowAndRemove = function(d){return "inek kaçın ve 1 çıkarın"};
 
-exports.continue = function(d){return "Devam Et"};
+exports.continue = function(d){return "Devam"};
 
 exports.dig = function(d){return "1 çıkarın"};
 
@@ -13313,21 +13395,21 @@ exports.honeycombFullError = function(d){return "Bu petekte daha fazla bal için
 
 exports.ifCode = function(d){return "eğer"};
 
-exports.ifInRepeatError = function(d){return "\"repeat\" bloğu içinde \"if\" bloğuna ihtiyacın var. Sorun yaşıyorsanız, nasıl çalıştığını anlamak için önceki leveli deneyin."};
+exports.ifInRepeatError = function(d){return "\"repeat\" bloğu içinde \"if\" bloğuna ihtiyacın var. Sorun yaşıyorsanız, nasıl çalıştığını anlamak için önceki seviyeyi deneyin."};
 
-exports.ifPathAhead = function(d){return "İleride yol varsa"};
+exports.ifPathAhead = function(d){return "eğer ileride yol varsa"};
 
-exports.ifTooltip = function(d){return "Belirtilen yönde bir yolu varsa o zaman bazı eylemler yapın."};
+exports.ifTooltip = function(d){return "Belirtilen yönde bir yol varsa, o zaman bazı işlemleri yap."};
 
-exports.ifelseTooltip = function(d){return "Belirtilen yönde bir yolu varsa o zaman ilk bloktaki eylemleri yap . Aksi takdirde, \nikinci bloktaki eylemleri yap."};
+exports.ifelseTooltip = function(d){return "Belirtilen yönde bir yol varsa, o zaman ilk bloktaki işlemleri yap. Yoksa, ikinci bloktaki işlemleri yap."};
 
 exports.ifFlowerTooltip = function(d){return "Eğer çiçek/petek belirtilen yönde varsa birşeyler yap."};
 
 exports.ifelseFlowerTooltip = function(d){return "Çiçek/petek belirtilen yönde ise, o zaman eylemlerin ilk bloğunu yap. Aksi takdirde, eylemlerin ikinci bloğunu yap."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Gerekli tüm blokları kullanıyorsunuz ancak yeteri kadar bal toplamanız gerekiyor."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Gerekli tüm blokları kullanıyorsunuz ancak yeteri kadar nektar toplamanız gerekiyor."};
 
 exports.make = function(d){return "yap"};
 
@@ -13337,7 +13419,7 @@ exports.moveEastTooltip = function(d){return "Beni doğuya bir boşluk ilerlet."
 
 exports.moveForward = function(d){return "ilerle"};
 
-exports.moveForwardTooltip = function(d){return "Beni ileriye doğru bir boşluk hareket ettir."};
+exports.moveForwardTooltip = function(d){return "Beni bir boşluk ilerlet."};
 
 exports.moveNorthTooltip = function(d){return "Beni kuzeye bir boşluk ilerlet."};
 
@@ -13357,25 +13439,25 @@ exports.nextLevel = function(d){return "Tebrikler! Bu bulmacayı tamamladınız.
 
 exports.no = function(d){return "Hayır"};
 
-exports.noPathAhead = function(d){return "yol kapatıldı"};
+exports.noPathAhead = function(d){return "yol kapalı"};
 
-exports.noPathLeft = function(d){return "sola doğru bir yol yok"};
+exports.noPathLeft = function(d){return "sola yol yok"};
 
-exports.noPathRight = function(d){return "sağa doğru bir yol yok"};
+exports.noPathRight = function(d){return "sağa yol yok"};
 
 exports.notAtFlowerError = function(d){return "Nektarı sadece bir çiçekten alabilirsiniz."};
 
 exports.notAtHoneycombError = function(d){return "Balı sadece petekte yapabilirsiniz."};
 
-exports.numBlocksNeeded = function(d){return "Bu bulmaca %1 blok ile çözülebilir."};
+exports.numBlocksNeeded = function(d){return "Bu bulmaca %1 blok kullanılarak çözülebilir."};
 
-exports.pathAhead = function(d){return "yola devam"};
+exports.pathAhead = function(d){return "öndeki yol"};
 
-exports.pathLeft = function(d){return "Sola doğru yol varsa"};
+exports.pathLeft = function(d){return "eğer sola doğru yol varsa"};
 
-exports.pathRight = function(d){return "Sağa doğru yol varsa"};
+exports.pathRight = function(d){return "eğer sağa doğru yol varsa"};
 
-exports.pilePresent = function(d){return "Bir yığın var"};
+exports.pilePresent = function(d){return "bir yığın var"};
 
 exports.putdownTower = function(d){return "Kule koyun"};
 
@@ -13407,7 +13489,7 @@ exports.turnLeft = function(d){return "sola dön"};
 
 exports.turnRight = function(d){return "sağa dön"};
 
-exports.turnTooltip = function(d){return "Beni sağa ya da sola 90 derece döndür."};
+exports.turnTooltip = function(d){return "Beni sola ya da sağa 90 derece döndürür."};
 
 exports.uncheckedCloudError = function(d){return "Onların çiçek mi yoksa petek mi olduğunu görmek için bütün bulutları kontrol ettiğinizden emin olun."};
 
@@ -13415,7 +13497,7 @@ exports.uncheckedPurpleError = function(d){return "Tüm mor çiçeklerde nektar 
 
 exports.whileMsg = function(d){return "sürece"};
 
-exports.whileTooltip = function(d){return "Bitiş noktasına ulaşana kadar blok içindeki işlemleri tekrarlayın."};
+exports.whileTooltip = function(d){return "Bitiş noktasına ulaşana kadar blok içindeki işlemleri tekrarla."};
 
 exports.word = function(d){return "Sözcüğü bul"};
 

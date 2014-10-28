@@ -7,12 +7,12 @@ zh:
           Unplug1: 第一阶段
           Maze: 第二阶段
           Unplug2: 第三阶段
-          Unplug3: 阶段 4
-          Artist: 阶段 5
-          Unplug4: 阶段 6
-          Artist2: 阶段 7
-          Unplug5: 阶段 8
-          Farmer: 阶段 9
+          Unplug3: 第四阶段
+          Artist: 第五阶段
+          Unplug4: 第六阶段
+          Artist2: 第七阶段
+          Unplug5: 第八阶段
+          Farmer: 第九阶段
           Unplug6: 阶段 10
           Artist3: 阶段 11
           Unplug7: 阶段 12
@@ -25,7 +25,7 @@ zh:
           Artist5: 阶段 19
           Unplug11: 阶段 20
         Hour of Code:
-          desc: 一小时编程
+          desc: 编程一小时
           Maze: 第一阶段
         Edit Code:
           desc: |
@@ -52,6 +52,7 @@ zh:
             编辑代码 (测试版)
             
           MazeEC: 第一阶段
+          Webapp: 第二阶段
         events:
           desc: 反弹 (测试版)
           Bounce: 第一阶段
@@ -81,7 +82,7 @@ zh:
         Artist: 艺术家
         Unplug4: 算法
         Artist2: 艺术家 2
-        Unplug5: 功能
+        Unplug5: 函数
         Farmer: 农夫
         Unplug6: 条件语句
         Artist3: 艺术家 3
@@ -100,6 +101,7 @@ zh:
         Jigsaw: 拼图
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
     trophy:
       name:
         Bronze: 铜色
@@ -108,14 +110,14 @@ zh:
     concept:
       description:
         sequence: 序列
-        if: ”假设“板块
+        if: 如果块
         if_else: ”假设其他“板块
-        loop_times: ”重复次数“版块
-        loop_until: '”重复...直到..."版块'
-        loop_while: “同时”版块
-        loop_for: “计数”循环块
+        loop_times: 重复次数块
+        loop_until: 重复直到块
+        loop_while: 当块
+        loop_for: “计数器”块
         function: 函数
-        parameters: 参数函数
+        parameters: 有参数的函数
     level:
       instructions:
         maze_2_2: '你可以帮我抓住这只淘气猪吗？把两个“向前移动”块堆在一起，然后按"运行程序"来帮我。 '
@@ -334,7 +336,7 @@ zh:
         loop_until: 重复直到块
         if: 如果块
         if_else: 如果/那么块
-        function: 功能
+        function: 函数
         loop_while: 当块
         loop_for: “计数”循环块
         parameters: 有参数的函数

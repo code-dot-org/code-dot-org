@@ -62,7 +62,7 @@
         Maze Match: Jogo de labirinto
         Match the puzzles to the blocks: Associe os desafios aos blocos
         Instructions: Instruções
-        Drag the blocks to match.: Arraste os blocos para fazer a associação.
+        Drag the blocks to match.: Arraste os blocos para combinar.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
@@ -117,7 +117,7 @@
         Maze Match: Jogo de labirinto
         Match the puzzles to the blocks: Associe os desafios aos blocos
         Instructions: Instruções
-        Drag the blocks to match.: Arraste os blocos para fazer a associação.
+        Drag the blocks to match.: Arraste os blocos para combinar.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
@@ -128,7 +128,7 @@
       4-5 Algorithms Match 1:
         Matching: Associação
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Associe
-          os passos do Jogo da Corrida do Dado até que apareçam no algoritmo.
+          os passos do Jogo de Dados à ordem em que devem aparecer no algoritmo.
         "<h4>1)</h4>": "<h4>1)</h4>"
         "<h4>2)</h4>": "<h4>2)</h4>"
         "<h4>3)</h4>": "<h4>3)</h4>"
@@ -159,7 +159,7 @@
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
       4-5 Suncatchers Match 1:
         Matching: Associação
-        Match each program to the word it makes, using the provided group of skills.: Corresponda
+        Match each program to the word it makes, using the provided group of skills.: Associe
           cada programa à palavra que ele produz, usando o grupo de habilidades fornecidas.
         "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
@@ -236,7 +236,7 @@
         Matching: Associação
         Match the puzzles and blocks: Associe os desafios aos blocos
         Instructions: Instruções
-        Drag the blocks to match.: Arraste os blocos para combinar.
+        Drag the blocks to match.: Arraste os blocos para fazer a associação.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
         "/script_assets/k_1_images/maze_images/maze_ENE.png": "/script_assets/k_1_images/maze_images/maze_ENE.png"
@@ -363,8 +363,8 @@
           string'
         'find-price: string -> number': 'busca-preço: string-> número'
       test matching image:
-        Matching Images Two: Associando imagens 2
-        Match up all the flowers by colour!: Associe todas as flores por cor!
+        Matching Images Two: Associando Imagens Dois
+        Match up all the flowers by colour!: Conecte todas as flores pela cor!
         "/script_assets/matches/images/head.jpg,300": "/script_assets/matches/images/head.jpg,300"
         Instructions: Instruções
         Drag the images from right to center.: Arraste as imagens da direita para
@@ -380,9 +380,9 @@
       test matching text:
         Matching: Associação
         Some really easy stuff to match.  Drag it around until you get it.: Algumas
-          coisas bem fáceis de associar. Arraste-as até conseguir associá-las.
+          coisas realmente fáceis de conectar. Arraste-as até conseguir.
         What color is the sky?: Qual é a cor do céu?
-        What's in the ocean?: O que há no oceano?
+        What's in the ocean?: O que tem no oceano?
         What's Brent's last name?: Qual é o sobrenome do Brent?
         Where is Brendan from?: De onde o Brendon é?
         blue: azul

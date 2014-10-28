@@ -28,7 +28,6 @@ goog.provide('Blockly');
 
 // Blockly core dependencies.
 goog.require('Blockly.Block');
-goog.require('Blockly.FunctionEditor');
 goog.require('Blockly.Connection');
 goog.require('Blockly.FieldAngle');
 goog.require('Blockly.FieldCheckbox');
@@ -40,6 +39,7 @@ goog.require('Blockly.FieldImageDropdown');
 goog.require('Blockly.FieldRectangularDropdown');
 goog.require('Blockly.FieldTextInput');
 goog.require('Blockly.FieldVariable');
+goog.require('Blockly.FunctionEditor');
 goog.require('Blockly.Generator');
 goog.require('Blockly.ImageDimensionCache');
 goog.require('Blockly.Msg');
@@ -421,4 +421,11 @@ Blockly.removeAllRanges = function() {
       }, 0);
     }
   }
+};
+
+/**
+ * @returns {*|Blockly.mainWorkspace}
+ */
+Blockly.getActiveWorkspace = function() {
+  return Blockly.modalWorkspace || Blockly.mainWorkspace;
 };

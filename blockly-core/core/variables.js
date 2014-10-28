@@ -50,6 +50,9 @@ Blockly.Variables.allVariables = function(opt_block) {
     blocks = opt_block.getDescendants();
   } else {
     blocks = Blockly.mainBlockSpace.getAllBlocks();
+    if (Blockly.getActiveWorkspace() !== Blockly.mainBlockSpace) {
+      blocks.concat(Blockly.getActiveWorkspace().getAllBlocks());
+    }
   }
   var variableHash = {};
   // Iterate through every block and add each variable to the hash.
@@ -76,15 +79,36 @@ Blockly.Variables.allVariables = function(opt_block) {
 };
 
 /**
- * Find all instances of the specified variable and rename them.
+ * Find all instances of the specified variable in the current workspace and
+ * rename them. Does not affect variables in other workspaces.
  * @param {string} oldName Variable to rename.
  * @param {string} newName New variable name.
  */
 Blockly.Variables.renameVariable = function(oldName, newName) {
-  var blocks = Blockly.mainBlockSpace.getAllBlocks();
+  var blocks = Blockly.getActiveWorkspace().getAllBlocks();
+  if (Blockly.modalWorkspace) {
+    blocks = blocks.concat(Blockly.functionEditor.flyout_.workspace_.getTopBlocks());
+  }
   // Iterate through every block.
   for (var x = 0; x < blocks.length; x++) {
     var func = blocks[x].renameVar;
+    if (func) {
+      func.call(blocks[x], oldName, newName);
+    }
+  }
+};
+
+/**
+ * Find all instances of the specified variable in the current workspace and
+ * delete them. Does not affect variables in other workspaces.
+ * @param {string} oldName Variable to rename.
+ * @param {string} newName New variable name.
+ */
+Blockly.Variables.deleteVariable = function(oldName, newName) {
+  var blocks = Blockly.getActiveWorkspace().getAllBlocks();
+  // Iterate through every block.
+  for (var x = 0; x < blocks.length; x++) {
+    var func = blocks[x].getVars;
     if (func) {
       func.call(blocks[x], oldName, newName);
     }

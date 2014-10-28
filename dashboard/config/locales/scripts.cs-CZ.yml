@@ -1,4 +1,4 @@
-"cy":
+"cs":
   data:
     script:
       name:
@@ -46,7 +46,7 @@
         course2:
           The Maze: Bludiště
           Suzi: Suzi
-          The Artist: Malíř
+          The Artist: Umělec
           Artist Debugging: Artist Debugging
           Bounce: Odraz
           'Studio: Create a Story': 'Studio: Create a Story'
@@ -85,7 +85,7 @@
         course3:
           The Maze: Bludiště
           'Studio: Create a Story': 'Studio: Create a Story'
-          The Artist: Malíř
+          The Artist: Umělec
           title: Course 3
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
@@ -109,7 +109,7 @@
           Farmer - While Loops: Farmer - While Loops
           description: Formerly known as a 4-5 course.
           'Studio: Create a Game': 'Studio: Create a Game'
-          Maze: Maze
+          Maze: Bludiště
           Artist: Artist
           'Artist: Functions': 'Artist: Functions'
           'Bee: Functions': 'Bee: Functions'
@@ -132,6 +132,7 @@
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
           'Bee: Debugging2': 'Bee: Debugging2'
           'Artist: Patterns': 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

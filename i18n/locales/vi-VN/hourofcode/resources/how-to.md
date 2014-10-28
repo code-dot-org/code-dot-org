@@ -8,7 +8,7 @@ tiêu đề : Tài liệu Khung nhìn : rộng
 
 ## 1) Thử thực hành các khóa học:
 
-Chúng tôi sẽ lưu trữ một loạt các hướng dẫn vui vẻ, kéo dài trên các sinh viên thuộc mọi lứa tuổi được tạo ra bởi một loạt các đối tác. Những khóa học mới sắp sửa xuất hiện để thay thế Hour of Code trước ngày 8-14 tháng 12.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
 **Tất cả những khóa học Hour of Code:**
 
@@ -32,7 +32,7 @@ Hour of Code sẽ cần có các máy tính có kết nối internet, nhưng kh�
 
 ## 4) Truyền cảm hứng cho những người học - Cho chúng xem 1 video
 
-Show students <% if @country == 'uk' %> [this video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [this video](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %> to kick off the Hour of Code. Đồng thời có thể xem [những video này](http://youtube.com/codeorg), có sự xuất hiện của các nhà lãnh đạo Bill Gates, Mark Zuckerberg, Black Eyed Peas nói về tầm quan trọng của lập trình. (có các phiên bản [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), và [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA))
+Hiển thị các học sinh, sinh viên < % nếu @country == 'nước Anh' %> [video này](https://www.youtube.com/watch?v=96B5-JGA9EQ) < % khác %> [video này](http://www.youtube.com/watch?v=FC5FbmsH4fw) < % cuối %> để kick off giờ mã. Đồng thời có thể xem [những video này](http://youtube.com/codeorg), có sự xuất hiện của các nhà lãnh đạo Bill Gates, Mark Zuckerberg, Black Eyed Peas nói về tầm quan trọng của lập trình. (có các phiên bản [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), và [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA))
 
 **Làm cho học sinh của bạn thích thú - đưa cho chúng xem những đoạn giới thiệu ngắn**
 
@@ -40,14 +40,14 @@ Hầu hết bọn trẻ chưa biết khoa học máy tính là gì. Đây là m�
 
   * Giải thích một cách đơn giản , đưa ra các ví dụ về các ứng dụng mà chúng hay quan tâm (ứng dựng kết nối mọi người, ứng dụng học tập, ứng dụng giải trí , v.v).
   * Cố gắng :"Nghĩ về những thứ trong cuộc sống hằng ngày sử dụng tới khoa học máy tính: chiếc điện thoại, chiếc lò vi sóng, máy vi tính, đèn giao thông... tất cả những thứ đều cần tới khoa học máy tính để xây dựng nên nó."
-  * Hoặc :"Khoa học máy tính là nghệ thuật của việc biến các ý tưởng của còn người thành các công cụ số để gia tăng sức mạnh cho chúng ta. Khoa học máy tính xuất hiện ở nhiều mặt: viết ứng dụng mobiles, chữa bệnh, tạo các video kỹ xảo, giúp tạo ra các con robot có thẻ khám phá các hành tình mới và còn rất nhiều thứ khác."
-  * See tips for getting girls interested in computer science [here](http://code.org/girls). 
+  * Hoặc :"Khoa học máy tính là nghệ thuật của việc biến các ý tưởng của còn người thành các công cụ số để gia tăng sức mạnh cho chúng ta. Khoa học máy tính xuất hiện ở nhiều mặt: viết ứng dụng trên điện thoại di động, chữa bệnh, tạo các video kỹ xảo, giúp tạo ra các robot có thể khám phá các hành tinh mới và còn rất nhiều thứ khác."
+  * Xem Mẹo để cho những cô gái bắt đầu quan tâm đến khoa học máy tính [ở đây](http://code.org/girls). 
 
 ## 5) Bắt đầu với Hour of Code
 
 **Dẫn dắt học sinh tới các hoạt động**
 
-  * Viết đường dẫn tới khóa học lên trên bảng. Find the link listed on the <% if @country == 'uk' %> [information for your selected tutorial](http://uk.code.org/learn) <% else %> [information for your selected tutorial](http://code.org/learn) <% end %>under the number of participants. (ví dụ : [hourofcode.com/co](http://code.org/learn)) 
+  * Viết đường dẫn tới khóa học lên trên bảng. Tìm thấy liên kết được liệt kê trên các < % if @country == 'vi' %> [thông tin cho khóa học bạn đã chọn](http://uk.code.org/learn) < % else%> [thông tin cho khóa học bạn đã chọn](http://code.org/learn) < % end % > theo số lượng người tham gia. (ví dụ : [hourofcode.com/co](http://code.org/learn)) 
   * Nhắc học sinh truy cập vào địa chỉ được ghi ra và bắt đầu khóa học.
 
 **Khi học sinh của bạn đương đầu với các thử thách**
@@ -58,13 +58,13 @@ Hầu hết bọn trẻ chưa biết khoa học máy tính là gì. Đây là m�
 
 **Sẽ làm gì nếu học sinh kết thúc bài học sớm?**
 
-  * Students can see all tutorials and try another Hour of Code activity at <% if @country == 'uk' %> [uk.code.org/learn](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
+  * Sinh viên có thể xem tất cả các khóa học và tham gia các hoạt động Hour of Code khác tại < % if @country == 'vi' %> [vi.code.org/learn](http://uk.code.org/learn). < % else %> [code.org/learn](http://code.org/learn). <% end %> 
   * Hoặc, đề nghị những học sinh mà hoàn thành sớm giúp đỡ các bạn học giải quyết vấn đề.
 
 **Làm thế nào để tôi in chứng chỉ cho học sinh của tôi?**
 
-Mỗi học sinh có cơ hội nhận chứng chỉ qua email khi họ kết thúc [ khóa học tại code.org](http://studio.code.org). Bạn có thể click chọn "certificatie" để ịn nó. However, if you want to make new certificates for your students, visit our <% if @country == 'uk' %> [Certificates](http://uk.code.org/certificates) <% else %> [Certificates](http://code.org/certificates) <% end %> page to print as many certificates as you like, in one fell swoop!
+Mỗi học sinh có cơ hội nhận chứng chỉ qua email khi họ kết thúc [ khóa học tại code.org](http://studio.code.org). Bạn có thể click chọn "certificatie" để ịn nó. Tuy nhiên, nếu bạn muốn làm giấy chứng nhận mới cho học sinh của bạn, hãy truy cập < % if @country == 'vi' %> [Giấy chứng nhận](http://uk.code.org/certificates) của chúng tôi < % else %> [Giấy chứng nhận](http://code.org/certificates) < % end %> trang để in giấy chứng nhận như ý của bạn!
 
 **Tiếp theo Hour of Code sẽ là gì?**
 
-Hour of Code chỉ là bước đầu tiên trong hành trình tìm hiểu về cách thức hoạt động của công nghệ và cách tạo ra ứng dụng phần mềm. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://code.org/educate). Or encourage your children to learn [online](http://code.org/learn/beyond). <% end %>
+Hour of Code chỉ là bước đầu tiên trong hành trình tìm hiểu về cách thức hoạt động của công nghệ và cách tạo ra ứng dụng phần mềm. < % if @country == 'vi' %> Hour of Code chỉ là bước đầu tiên vào một cuộc hành trình để tìm hiểu thêm về cách hoạt động của công nghệ và làm thế nào để tạo các ứng dụng phần mềm. Để tiếp tục cuộc hành trình này, [khuyến khích những đứa trẻ của bạn học tập trực tuyến](http://uk.code.org/learn/beyond). Để tiếp tục hành trình, tìm kếm các nguồn tài liệu học tập [tại đây](http://code.org/educate). hoặc khuyến khích những học sinh của bạn học [Trực tuyến](http://code.org/learn/beyond). <% end %>

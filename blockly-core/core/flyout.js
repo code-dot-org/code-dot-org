@@ -324,7 +324,22 @@ Blockly.Flyout.prototype.hide = function() {
   for (var x = 0, rect; rect = this.buttons_[x]; x++) {
     goog.dom.removeNode(rect);
   }
+  // Delete the 'Create a Function' button.
+  goog.dom.removeNode(goog.dom.getElementByClass('createFunction', this.workspace_.svgGroup_));
   this.buttons_.splice(0);
+};
+
+/**
+ * Arrange the given block in the flyout, and update cursorX/cursorY.
+ * @param block
+ * @param cursor
+ * @param gap
+ * @private
+ */
+Blockly.Flyout.prototype.layoutBlock_ = function(block, cursor, gap, initialX) {
+  var blockHW = block.getHeightWidth();
+  block.moveBy(cursor.x, cursor.y);
+  cursor.y += blockHW.height + gap;
 };
 
 /**
@@ -334,37 +349,45 @@ Blockly.Flyout.prototype.hide = function() {
  */
 Blockly.Flyout.prototype.show = function(xmlList) {
   this.hide();
-  var margin = this.CORNER_RADIUS;
   this.svgGroup_.style.display = 'block';
+
+  var margin = this.CORNER_RADIUS;
+  var initialX = Blockly.RTL ? 0 : margin + Blockly.BlockSvg.TAB_WIDTH;
+  var cursor = {
+        x: initialX,
+        y: margin
+      };
 
   // Create the blocks to be shown in this flyout.
   var blocks = [];
   var gaps = [];
-  var i = 0;
   var firstBlock = xmlList && xmlList[0];
   if (firstBlock === Blockly.Variables.NAME_TYPE) {
     // Special category for variables.
     Blockly.Variables.flyoutCategory(blocks, gaps, margin,
         /** @type {!Blockly.BlockSpace} */ (this.blockSpace_));
-    i++;
   } else if (firstBlock === Blockly.Procedures.NAME_TYPE) {
     // Special category for procedures.
+    var button = Blockly.createSvgElement('text', {'class': 'createFunction'},
+        this.blockSpace_.svgGroup_);
+    button.innerHTML = 'Create a Function';
+    button.setAttribute('transform', 'translate(10, 20)');
+    Blockly.bindEvent_(button, 'mousedown', this, this.createFunction_);
+    cursor.y += 20;
     Blockly.Procedures.flyoutCategory(blocks, gaps, margin,
         /** @type {!Blockly.BlockSpace} */ (this.blockSpace_));
-    i++;
-  }
-
-  for (var xml; xml = xmlList[i]; i++) {
-    if (xml.tagName && xml.tagName.toUpperCase() == 'BLOCK') {
-      var block = Blockly.Xml.domToBlock_(
-          /** @type {!Blockly.BlockSpace} */ (this.blockSpace_), xml);
-      blocks.push(block);
-      gaps.push(margin * 3);
+  } else {
+    for (var i = 0, xml; xml = xmlList[i]; i++) {
+      if (xml.tagName && xml.tagName.toUpperCase() == 'BLOCK') {
+        var block = Blockly.Xml.domToBlock_(
+            /** @type {!Blockly.BlockSpace} */ (this.blockSpace_), xml);
+        blocks.push(block);
+        gaps.push(margin * 3);
+      }
     }
   }
 
   // Lay out the blocks vertically.
-  var cursorY = margin;
   for (var i = 0, block; block = blocks[i]; i++) {
     var allBlocks = block.getDescendants();
     for (var j = 0, child; child = allBlocks[j]; j++) {
@@ -378,12 +401,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
       child.setCommentText(null);
     }
     block.render();
-    var root = block.getSvgRoot();
-    var blockHW = block.getHeightWidth();
-    var x = Blockly.RTL ? 0 : margin + Blockly.BlockSvg.TAB_WIDTH;
-    block.moveBy(x, cursorY);
-    cursorY += blockHW.height + gaps[i];
-
+    this.layoutBlock_(block, cursor, gaps[i], initialX);
     // Create an invisible rectangle under the block to act as a button.  Just
     // using the block as a button is poor, since blocks have holes in them.
     var rect = Blockly.createSvgElement('rect', {'fill-opacity': 0}, null);
@@ -392,6 +410,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
     block.flyoutRect_ = rect;
     this.buttons_[i] = rect;
 
+    var root = block.getSvgRoot();
     if (this.autoClose) {
       this.listeners_.push(Blockly.bindEvent_(root, 'mousedown', null,
           this.createBlockFunc_(block)));
@@ -546,6 +565,15 @@ Blockly.Flyout.prototype.onMouseMove_ = function(e) {
 };
 
 /**
+ * Create a new Function block and open the editor.
+ * @return {!Function} Function to call when block is clicked.
+ * @private
+ */
+Blockly.Flyout.prototype.createFunction_ = function() {
+  Blockly.functionEditor.show();
+};
+
+/**
  * Create a copy of this block on the blockSpace.
  * @param {!Blockly.Block} originBlock The flyout block to copy.
  * @return {!Function} Function to call when block is clicked.
@@ -567,7 +595,9 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
     }
     // Create the new block by cloning the block in the flyout (via XML).
     var xml = Blockly.Xml.blockToDom_(originBlock);
-    var block = Blockly.Xml.domToBlock_(flyout.targetBlockSpace_, xml);
+    var targetBlockSpace = flyout.targetBlockSpace_;
+    if (targetBlockSpace == Blockly.mainBlockSpace) targetBlockSpace = Blockly.getActiveWorkspace();
+    var block = Blockly.Xml.domToBlock_(targetBlockSpace, xml);
     // Place it in the same spot as the flyout copy.
     var svgRootOld = originBlock.getSvgRoot();
     if (!svgRootOld) {

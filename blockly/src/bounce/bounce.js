@@ -1048,7 +1048,7 @@ Bounce.execute = function() {
   Bounce.response = null;
 
   if (level.editCode) {
-    code = utils.generateCodeAliases(level.codeFunctions);
+    code = utils.generateCodeAliases(level.codeFunctions, 'Bounce');
     code += BlocklyApps.editor.getValue();
   }
 

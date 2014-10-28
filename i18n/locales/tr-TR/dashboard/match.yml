@@ -25,7 +25,7 @@ tr:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
       2-3 bounce match 1:
-        Bounce Matching: Bounce Matching
+        Bounce Matching: Zıplama Eşleştirme
         Matching: Eşleştirme
         Match the events with the actions: Eylem ve olayları eşleştir
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
@@ -129,8 +129,8 @@ tr:
         <h4>2)</h4>: '<h4>2)</h4>'
         <h4>3)</h4>: '<h4>3)</h4>'
         <h4>4)</h4>: '<h4>4)</h4>'
-        <h4>Set Player 1 score to 0</h4>: '<h4>Set Player 1 score to 0</h4>'
-        <h4>Player 1 rolls die</h4>: '<h4>Player 1 rolls die</h4>'
+        <h4>Set Player 1 score to 0</h4>: '<h4>1. Oyuncu puanını 0 yap</h4>'
+        <h4>Player 1 rolls die</h4>: '<h4>Oynama sırası 1. Oyuncuda</h4>'
         <h4>Add Player 1 roll to total score</h4>: '<h4>Add Player 1 roll to total score</h4>'
         <h4>Compare player scores to see who wins</h4>: '<h4>Compare player scores to see who wins</h4>'
       4-5 Computational Thinking Match 1:
@@ -342,7 +342,7 @@ tr:
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test matching text:
         Matching: Eşleştirme
-        Some really easy stuff to match.  Drag it around until you get it.: 'Birşeyleri eşleştirmek gerçekten kolay.  Bunu gerçekleştirene kadar çevresinde sürükleyin.'
+        Some really easy stuff to match.  Drag it around until you get it.: 'Eşleştirmek için gerçekten kolay bir şeyler.  Bunu elde edene kadar çevresinde sürükleyin.'
         What color is the sky?: Gökyüzü ne renktir?
         What's in the ocean?: Okyanusta ne var?
         What's Brent's last name?: "Brent'in soyadı ne?"

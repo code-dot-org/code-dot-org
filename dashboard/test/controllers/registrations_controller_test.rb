@@ -11,6 +11,28 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "create retries on Duplicate exception" do
+    # some Mocha shenanigans to simulate throwing a duplicate entry
+    # error and then succeeding by returning the existing userlevel
+
+    exception = ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry 'coder1234574782' for key 'index_users_on_username'"))
+    User.any_instance.stubs(:save).raises(exception).then.returns(true)
+
+    student_params = {name: "A name",
+                      password: "apassword",
+                      email: 'an@email.address',
+                      gender: 'F',
+                      age: '13',
+                      user_type: 'student'}
+      
+    post :create, user: student_params
+
+    assert_redirected_to '/'
+
+    # we are still stubbing user.save (even though we returned true so
+    # we can't actually check that the user was created)
+  end
+
   test "create as student with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
       student_params = {name: "A name",

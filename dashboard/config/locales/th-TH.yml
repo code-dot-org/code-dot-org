@@ -44,7 +44,7 @@
   k8intro: K-8 เพื่อเริ่มต้นกับวิชาวิทยาศาสตร์คอมพิวเตอร์(15-25 ชั่วโมง)
   already_started: "พร้อมที่จะเริ่มแล้วหรือยัง.  ต่อทางนี้"
   demos: 'Admin: ตัวสาธิตทั้งหมด'
-  continue: "ดำเนินการต่อไป"
+  continue: "ต่อไป"
   prize: prize
   more_info: "ข้อมูลเพิ่มเติม"
   auth:
@@ -88,7 +88,7 @@
     gender: Gender (optional)
     birthday: Birthday (optional)
     age: Age (optional)
-    submit: "สมัคร"
+    submit: "สมัครสมาชิก"
     teacher: "คุณเป็นครูหรือ"
     valid_username: "อนุญาต"
     invalid_username: "ชื่อผู้ใช้ต้องมีอย่างน้อย 5 ตัวอักษร"
@@ -181,7 +181,7 @@
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
       title: Please Confirm
-      'no': false
+      'no': "ไม่ใช่"
       'yes': "ใช่"
       msg: Are you sure you want to claim the %{prize_name} prize?
       msg_student: 'NOTE: You can only choose one type of prize.'
@@ -263,7 +263,7 @@
       prizes: "รางวัล"
       logout: "ออกจากระบบ"
       signin: "เข้าสู่ระบบ"
-      signup: "ลงทะเบียน"
+      signup: "สมัครสมาชิก"
       already_registered: Already registered?
     popup:
       progress: "ความคืบหน้าของคุณ"
@@ -274,7 +274,7 @@
       prizes: Collect all %{total_trophies} trophies and win prizes!
       prize_earned: All %{total_trophies} trophies collected. Prize won!
       prize_us_only: "(U.S. students only)"
-      prizes_link: more info
+      prizes_link: "ข้อมูลเพิ่มเติม"
   teacher:
     title:
       one: Your teacher is %{name}
@@ -400,6 +400,9 @@
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Male
     female: Female
@@ -499,11 +502,17 @@
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
       each program in action.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
@@ -538,7 +547,7 @@
           title: "ช่วงเวลาของ Code"
           description: ''
         edit-code:
-          title: Edit Code
+          title: "แก้ไข Code"
           description: ''
         events:
           title: Events

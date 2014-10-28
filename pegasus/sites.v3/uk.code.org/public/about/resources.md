@@ -4,10 +4,11 @@ nav: about_nav
 tagline: Year of Code
 social:
   'og:title' : 'The UK Hour of Code is coming'
-  'og:description' : "For every UK student and classroom: learn how fun coding is in just one hour March 3 - 9."
-  'og:image' : "http://uk.code.org/images/ogimage.png"
-  'og:image:width' : '1200'
-  'og:image:height' : '630'
+  'og:description' : "For every UK student and classroom: learn how fun coding is in just one hour December 8 - 14."
+  'og:image' : "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg"
+  "og:image:width": 1705
+  "og:image:height": 949
+  "og:url": "http://uk.code.org"
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
@@ -20,8 +21,7 @@ Below you will find resources to learn and teach computer science to your studen
 
 ## Teach an Hour of Code to your students
 
-Join us to make history. We want our nation to try an introduction to computer science for one hour during the week of the 25th Anniversary of the World Wide Web 
-(March 3 - 9). Try our [tutorials here.](/learn/)
+Join us to make history. We want our nation to try an introduction to computer science for one hour during December 8-14. Try our [tutorials here.](/learn/)
 
 
 ## Inspire your students about the world of technology
@@ -49,7 +49,7 @@ You can find the new computing curriculum [here] (https://www.gov.uk/government/
 
 <div class="resources-logo"><a href=" http://www.2simple.com/news#8640"><IMG src="/images/2simple.png" /></a></div>
 
-2Code is the latest addition to Purple Mash, the online suite of creative tools from 2Simple. To celebrate the UK Hour of Code 2Simple is giving everyone access to 2Code free from the 3rd to the 9th of March plus they are running competitions for the best programs made that week. Children will love learning 2Code with the fun story-based lessons and the ‘How-To’ videos and glossary of key terms ensure teachers always feel confident. 2Code is available free with Purple Mash.
+2Code is the latest addition to Purple Mash, the online suite of creative tools from 2Simple. To celebrate the UK Hour of Code 2Simple gave everyone access to 2Code free from the 3rd to the 9th of March plus they are running competitions for the best programs made that week. Children will love learning 2Code with the fun story-based lessons and the ‘How-To’ videos and glossary of key terms ensure teachers always feel confident. 2Code is available free with Purple Mash.
 
 [/resources-item]
 

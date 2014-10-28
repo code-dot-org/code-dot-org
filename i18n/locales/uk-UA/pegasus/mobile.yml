@@ -1,5 +1,5 @@
 uk-UA:
-  hello: Привіт, світе
+  hello: Привіт, світ!
   computer_science: Інформатика
   computer_science_edweek: "Тиждень комп'ютерної освіти"
   csedweek_dates: 9-15 грудня 2013 року
@@ -20,7 +20,7 @@ uk-UA:
   hoc2014_teachers: Вчителі
   hoc2014_host: Проведіть
   hoc2014_everyone: Усі
-  hoc2014_support: Підтримайте
+  hoc2014_support: Support it
   hoc2014_whatishoc: Що таке Година коду?
   twentyhours_trynow: Спробувати
   california_heading: Попросіть свою школу викладати інформатику
@@ -37,14 +37,14 @@ uk-UA:
   n_participants: '# учасників'
   go: Вперед
   thank_you_: Дякую!
-  congratulations: Вітаємо!
+  congratulations: Вітання!
   congratulations_on_completing_hoc: Вітаємо із завершенням „Однієї години коду“.
   get_a_certificate_of_achievement: Отримати сертифікат досягнень
   enter_valid_email: Будь ласка, введіть електронну адресу
   get_a_certificate_message: "Ми надішлемо вам сертифікат та інформацію про те, як <a href='/learn/beyond'>вчитися далі після однієї години коду</a>"
   get_a_certificate_message_after: "Клацніть на сертифікаті, щоб завантажити або роздрукувати його. А далі, продовжуйте навчатись на <a href='http://studio.code.org'>20-годинному курсі</a>, або розгляньте інші варіанти <a href='/learn/beyond'>навчання поза однією Годиною</a>."
   thanks_for_submitting: Дякуємо за участь!
-  if_you_enjoyed: Якщо вам сподобалось так навчатись, запросіть друга! Ми хочемо навчити усіх.
+  if_you_enjoyed: Якщо вам сподобалось так навчатись, запросіть друга! Ми хочемо навчати увесь світ.
   personalize_certificate: Персоналізувати ваш сертифікат
   share_achievement: Поділитись досягненнями
   beyond_hour_message: "Продовжуйте навчання на нашому <a href='http://studio.code.org'>20-годинному курсі</a>, або перегляньте інші варіанти <a href='/learn/beyond'>навчання поза однією Годиною</a>."
@@ -66,7 +66,7 @@ uk-UA:
   get_started: Початок
   i_agree: Погоджуюся
   participant_select: -Виберіть-
-  participant_student: Учень
+  participant_student: учень
   participant_parent: Батько/мати
   participant_educator: Педагог
   participant_engineer: Інженер-програміст
@@ -98,7 +98,7 @@ uk-UA:
   hoc_leaderboards: Лідери Години коду
   students_and_lines: '%{students} учнів пройшли Годину коду і написали  %{lines} рядків коду.'
   start_hoc: Почати Годину коду
-  contact_form_topic_press: Преса/ЗМІ (інтерв’ю або промова)
+  contact_form_topic_press: Преса/ЗМІ (інтерв’ю або розмова)
   studiobar_title: "Познайомтесь зі <a href='http://studio.code.org'> Студією коду</a>"
   studiobar_elementary_title: Базові курси
   studiobar_elementary_body: 'Три нові курси для K&#8209;5'
@@ -171,8 +171,8 @@ uk-UA:
   dashboard_landing_useful_links: Інші корисні посилання (лише англійською)
   dashboard_landing_office_hours: Задайте своє питання! Відвідайте щомісячний вебінар за розкладом.
   dashboard_landing_print_certificates: Надрукуйте сертифікати для учнів, які завершили цей курс
-  dashboard_landing_educator_blog: Читайте новини та інформацію про оновлення матеріалів у нашому блозі
-  dashboard_landing_smart_hints: Будь ласка, допоможіть розставити смарт-теги у підручниках Code.org
+  dashboard_landing_educator_blog: Читати про новини та оновлення наших матеріалів на нашому педагогічному блозі
+  dashboard_landing_smart_hints: Будь ласка, допоможіть нам додати смарт-теги у підручники на Code.org
   dashboard_landing_video_player: Випробуйте наш новий відео-плеєр у своїй школі
   dashboard_landing_progress_title: Прогрес класу
   dashboard_landing_progress_biggest: Це прогрес Вашої найбільшої групи.
@@ -191,7 +191,7 @@ uk-UA:
   dashboard_action_done: Готово
   dashboard_action_required: необхідні
   dashboard_navigation_home_page: Домашня сторінка вчителя
-  dashboard_navigation_all_sections: Всі групи
+  dashboard_navigation_all_sections: Всі розділи
   dashboard_navigation_view_progress: Перегляд прогресу
   dashboard_navigation_add_students: Додати учнів
   dashboard_navigation_manage_students: Керування учнями
@@ -201,8 +201,8 @@ uk-UA:
   dashboard_sections_new_section: Нова група
   dashboard_sections_jumbotron_instruction: Створюйте нові групи і додавайте до них учнів. Це допоможе організувати учнів у менші групи для зручнішого відстеження прогресу та керування обліковими записами.
   dashboard_sections_table_section: Група
-  dashboard_sections_table_secret: Таємний код
-  dashboard_sections_table_grade: Клас
+  dashboard_sections_table_secret: Login Type
+  dashboard_sections_table_grade: Бал
   dashboard_sections_table_course: Курс
   dashboard_sections_table_students: Учні
   dashboard_sections_table_code: Код групи
@@ -224,7 +224,7 @@ uk-UA:
   dashboard_students_male: Чоловік
   dashboard_students_female: Жінка
   dashboard_students_secret: Таємний код
-  dashboard_students_password: Пароль
+  dashboard_students_password: пароль
   dashboard_students_username: "Ім'я користувача: %{student_username}"
   dashboard_students_email: 'Електронна скринька: %{student_email}'
   dashboard_students_completed_levels: Завершені рівні
@@ -249,7 +249,7 @@ uk-UA:
   dashboard_course1: 'Курс 1:'
   dashboard_course2: 'Курс 2:'
   dashboard_course3: 'Курс 3:'
-  dashboard_sequence: Огляд
+  dashboard_sequence: Послідовність
   dashboard_framework: Програма
   dashboard_standards: Стандарти
   dashboard_implementation_guide: Практика впровадження
@@ -261,9 +261,21 @@ uk-UA:
   dashboard_teacher_worksheet: інструкція для вчителя
   dashboard_grade_k: Kлас
   dashboard_grade_other: Інше
-  dashboard_login_word: слово
-  dashboard_login_picture: зображення
-  dashboard_login_none: жодного
+  dashboard_login_word: Word
+  dashboard_login_picture: Picture
+  dashboard_login_none: Електронна пошта
   dashboard_new_password: новий пароль
   stats_hoc_2013_heading: 'Неймовірна статистика з минулорічної Години коду. Лише за тиждень:'
   stats_hoc_2013_image_alt: Статистика Години коду 2013 року
+  dashboard_teacher: Teacher
+  dashboard_student: учень
+  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_account_creation_question: "Who creates the student's account?"
+  dashboard_sections_password question: 'What do students use as a "password"?'
+  dashboard_sections_picture_account_creation: A picture assigned by Code.org
+  dashboard_sections_word_account_creation: A simple word assigned by Code.org
+  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_sign_in_unique: 'Unique web-page listed on "Manage Students" tab'
+  dashboard_sections_sign_in_main: 'http://code.org and click "Sign in"'
+  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."

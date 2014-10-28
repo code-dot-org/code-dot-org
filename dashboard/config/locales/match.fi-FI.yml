@@ -61,7 +61,7 @@
       2-3 Maze Match 2:
         Maze Match: Maze Match
         Match the puzzles to the blocks: Match the puzzles to the blocks
-        Instructions: Instructions
+        Instructions: Ohjeet
         Drag the blocks to match.: Drag the blocks to match.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
@@ -116,7 +116,7 @@
       4-5 maze match 1:
         Maze Match: Maze Match
         Match the puzzles to the blocks: Match the puzzles to the blocks
-        Instructions: Instructions
+        Instructions: Ohjeet
         Drag the blocks to match.: Drag the blocks to match.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
@@ -234,7 +234,7 @@
       K-1 Maze Match 1:
         Matching: Matching
         Match the puzzles and blocks: Match the puzzles and blocks
-        Instructions: Instructions
+        Instructions: Ohjeet
         Drag the blocks to match.: Drag the blocks to match.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
@@ -365,7 +365,7 @@
         Matching Images Two: Matching Images Two
         Match up all the flowers by colour!: Match up all the flowers by colour!
         "/script_assets/matches/images/head.jpg,300": "/script_assets/matches/images/head.jpg,300"
-        Instructions: Instructions
+        Instructions: Ohjeet
         Drag the images from right to center.: Drag the images from right to center.
         "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
         "/script_assets/matches/images/q1.jpg": "/script_assets/matches/images/q1.jpg"
@@ -379,11 +379,11 @@
         Matching: Matching
         Some really easy stuff to match.  Drag it around until you get it.: Some really
           easy stuff to match.  Drag it around until you get it.
-        What color is the sky?: What color is the sky?
-        What's in the ocean?: What's in the ocean?
-        What's Brent's last name?: What's Brent's last name?
-        Where is Brendan from?: Where is Brendan from?
+        What color is the sky?: Minkä värinen on taivas?
+        What's in the ocean?: Mitä on meressä?
+        What's Brent's last name?: Mikän on Brentin sukunimi?
+        Where is Brendan from?: Mistä Brendan on kotoisin?
         blue: sininen
-        salt: salt
+        salt: suola
         Van Minnen: Van Minnen
         Sydney: Sydney

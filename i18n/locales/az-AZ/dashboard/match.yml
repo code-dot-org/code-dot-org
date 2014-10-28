@@ -343,11 +343,11 @@ az:
       test matching text:
         Matching: Matching
         Some really easy stuff to match.  Drag it around until you get it.: 'Some really easy stuff to match.  Drag it around until you get it.'
-        What color is the sky?: What color is the sky?
-        What's in the ocean?: "What's in the ocean?"
+        What color is the sky?: Səma nə rəngdədir?
+        What's in the ocean?: Okeanda nə var?
         What's Brent's last name?: "What's Brent's last name?"
         Where is Brendan from?: Where is Brendan from?
         blue: mavi
         salt: salt
         Van Minnen: Van Minnen
-        Sydney: Sydney
+        Sydney: Sidney

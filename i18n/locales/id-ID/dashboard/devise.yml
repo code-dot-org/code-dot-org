@@ -7,10 +7,10 @@ id:
     failure:
       already_authenticated: Anda telah masuk.
       inactive: Akun anda belum diaktifkan.
-      invalid: Email atau kata sandi tidak valid.
+      invalid: Email atau password tidak valid.
       invalid_token: Token otentikasi tidak valid.
       locked: Akun anda terkunci.
-      not_found_in_database: Email atau password tidak valid.
+      not_found_in_database: Email atau kata sandi tidak valid.
       timeout: Sesi anda kedaluwarsa, silahkan masuk (login) lagi untuk melanjutkan.
       unauthenticated: Anda harus login atau mendaftar sebelum melanjutkan.
       unconfirmed: Anda harus mengkonfirmasi akun Anda sebelum melanjutkan.
