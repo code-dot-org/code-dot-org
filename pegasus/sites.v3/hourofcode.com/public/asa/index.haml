@@ -173,11 +173,11 @@ social:
       =hoc_s(:stats_michael)
 
   #maparea
-    =view :map
+    =view :map_company
 
   #join
     %h1=hoc_s(:front_join_us_button)
-    %div#original-version
+    %div#current-version
       .row
         .col-md-12
           =view :join_us_description
@@ -193,13 +193,6 @@ social:
           =view :prizes
         .col-md-6
           =view :signup_form
-    %div#form-left-version{:style=>'display: none'}
-      .row
-        .col-md-6
-          =view :signup_form
-        .col-md-6
-          =view :join_us_description
-          =view :choose_country
 
   %a#faqs{name:'faq'}
   .row
