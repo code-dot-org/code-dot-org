@@ -323,6 +323,9 @@ BlocklyApps.reset = function(ignore) {
   }
   Turtle.pid = 0;
 
+  // Discard the interpreter.
+  Turtle.interpreter = null;
+
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
 };
@@ -397,6 +400,26 @@ Turtle.evalCode = function(code) {
 };
 
 /**
+ * Set up Turtle.code, Turtle.interpreter, etc. to run code for editCode levels
+ */
+function generateTurtleCodeFromJS () {
+  Turtle.code = utils.generateCodeAliases(level.codeFunctions, 'Turtle');
+  Turtle.userCodeStartOffset = Turtle.code.length;
+  Turtle.code += BlocklyApps.editor.getValue();
+  Turtle.userCodeLength = Turtle.code.length - Turtle.userCodeStartOffset;
+
+  var session = BlocklyApps.editor.aceEditor.getSession();
+  Turtle.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+
+  var initFunc = function(interpreter, scope) {
+    codegen.initJSInterpreter(interpreter, scope, {
+                                      BlocklyApps: BlocklyApps,
+                                      Turtle: api } );
+  };
+  Turtle.interpreter = new window.Interpreter(Turtle.code, initFunc);
+}
+
+/**
  * Execute the user's code.  Heaven help us...
  */
 Turtle.execute = function() {
@@ -412,22 +435,7 @@ Turtle.execute = function() {
   }
 
   if (level.editCode) {
-    Turtle.code = utils.generateCodeAliases(level.codeFunctions, 'Turtle');
-    Turtle.userCodeStartOffset = Turtle.code.length;
-    Turtle.code += BlocklyApps.editor.getValue();
-    Turtle.userCodeLength = Turtle.code.length - Turtle.userCodeStartOffset;
-
-    var session = BlocklyApps.editor.aceEditor.getSession();
-    Turtle.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
-
-    // Use JS interpreter on editCode levels
-    var initFunc = function(interpreter, scope) {
-      codegen.initJSInterpreter(interpreter, scope, {
-                                        BlocklyApps: BlocklyApps,
-                                        Turtle: api } );
-    };
-    Turtle.interpreter = new window.Interpreter(Turtle.code, initFunc);
-    // Turtle.interpreter.run();
+    generateTurtleCodeFromJS();
   } else {
     Turtle.code = Blockly.Generator.workspaceToCode('JavaScript');
     Turtle.evalCode(Turtle.code);
@@ -459,7 +467,7 @@ function executeTuple () {
 /**
  * Handle the tasks to be done after the user program is finished.
  */
-function doneExecuting () {
+function finishExecution () {
   document.getElementById('spinner').style.visibility = 'hidden';
   Blockly.mainWorkspace.highlightBlock(null);
   Turtle.checkAnswer();
@@ -489,12 +497,12 @@ Turtle.animate = function() {
     }
     if (!stepped) {
       // We dropped out of the step loop because we ran out of code, all done:
-      doneExecuting();
+      finishExecution();
       return;
     }
   } else {
     if (!executeTuple()) {
-      doneExecuting();
+      finishExecution();
       return;
     }
   }
