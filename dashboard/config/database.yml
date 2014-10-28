@@ -2,28 +2,39 @@
 deployment_path = File.expand_path('../../deployment.rb', __FILE__)
 deployment_path = File.expand_path('../../../../deployment.rb', __FILE__) unless File.file?(deployment_path)
 require deployment_path
-db_uri = URI.parse(CDO.db_writer)
-ENV['DASHBOARD_DB_USER'] = db_uri.user
-ENV['DASHBOARD_DB_HOST'] = db_uri.host
-ENV['DASHBOARD_DB_PASSWORD'] = db_uri.password
-ENV['DASHBOARD_DB_NAME'] = CDO.dashboard_db_name
+
+# TODO: Rails 4.1 may be able to be configured with the database url
+# instead of having to parse it here. Actually 4.0 can do that too but
+# it doesn't work with the way seamless_database_pool wants to
+# configure the read pool
+
+writer = URI.parse(CDO.dashboard_db_writer) if CDO.dashboard_db_writer
+reader = URI.parse(CDO.dashboard_db_reader) if CDO.dashboard_db_reader
 %>
 
 mysql_defaults: &mysql_defaults
-  adapter: mysql2
+  adapter: seamless_database_pool
+  pool_adapter: mysql2
   encoding: utf8
-  username: <%= ENV['DASHBOARD_DB_USER'] || 'root' %>
-  host: <%= ENV['DASHBOARD_DB_HOST'] || 'localhost' %>
-  password: <%= ENV['DASHBOARD_DB_PASSWORD'] || '' %>
   pool: 5
+  master:
+    username: <%= writer.user || 'root' %>
+    password: <%= writer.password || '' %>
+    host: <%= writer.host || 'localhost' %>
+    database: <%= writer.path.sub(%r{^/},"") || "dashboard_#{Rails.env}" %>
+  <% if reader %>
+  read_pool:
+   - username: <%= reader.user %>
+     password: <%= reader.password %>
+     host: <%= reader.host %>
+     database: <%= reader.path.sub(%r{^/},"") %>
+  <% end %>
 
 development:
   <<: *mysql_defaults
-  database:  <%= ENV['DASHBOARD_DB_NAME'] || 'dashboard_development' %>
 
 staging: &staging
   <<: *mysql_defaults
-  database:  <%= ENV['DASHBOARD_DB_NAME'] || 'dashboard_staging' %>
 
 # levelbuilder environment extends the staging environment
 levelbuilder:
@@ -43,4 +54,3 @@ test:
 
 production:
   <<: *mysql_defaults
-  database: <%= ENV['DASHBOARD_DB_NAME'] || 'dashboard_production' %>
