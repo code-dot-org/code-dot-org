@@ -457,7 +457,7 @@ function executeTuple () {
 }
 
 /**
- * Attempt to execute one command from the log of API commands.
+ * Handle the tasks to be done after the user program is finished.
  */
 function doneExecuting () {
   document.getElementById('spinner').style.visibility = 'hidden';
