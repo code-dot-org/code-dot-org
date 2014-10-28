@@ -13,11 +13,7 @@
         &nbsp; &nbsp; | &nbsp; &nbsp;
         %a.whitefooterlink{href:hoc_uri('/partners'), :style=>"font-size: 12px;", :target=>"_blank"}=hoc_s(:footer_menu_partners)
         &nbsp; &nbsp; | &nbsp; &nbsp;
-        - if @country == 'uk'
-          %a.whitefooterlink{:href=>"http://uk.code.org/tos", :style=>"font-size: 12px;", :target=>"_blank"}= hoc_s(:footer_menu_terms)
-          &nbsp; &nbsp; | &nbsp; &nbsp;
-          %a.whitefooterlink{:href=>"http://uk.code.org/privacy", :style=>"font-size: 12px;", :target=>"_blank"}= hoc_s(:footer_menu_privacy)
-        - else  
-          %a.whitefooterlink{:href=>"http://code.org/tos", :style=>"font-size: 12px;", :target=>"_blank"}= hoc_s(:footer_menu_terms)
-          &nbsp; &nbsp; | &nbsp; &nbsp;
-          %a.whitefooterlink{:href=>"http://code.org/privacy", :style=>"font-size: 12px;", :target=>"_blank"}= hoc_s(:footer_menu_privacy)
+        %a.whitefooterlink{:href=>"http://#{codeorg_url()}/tos", :style=>"font-size: 12px;", :target=>"_blank"}= hoc_s(:footer_menu_terms)
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        %a.whitefooterlink{:href=>"http://#{codeorg_url()}/privacy", :style=>"font-size: 12px;", :target=>"_blank"}= hoc_s(:footer_menu_privacy)
+        

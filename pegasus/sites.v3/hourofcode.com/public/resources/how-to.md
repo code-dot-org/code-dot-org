@@ -12,7 +12,7 @@ We’ll host a variety of fun, hour-long tutorials for students of all ages, cre
 - Require minimal prep-time for teachers
 - Are self-guided - allowing students to work at their own pace and skill-level
 
-[![image](http://code.org/images/tutorials.png)](http://code.org/learn)
+<a href="http://<%=codeorg_url() %>/learn"><img src="http://<%= codeorg_url() %>/images/tutorials.png"></a>
 
 
 ## 2) Plan your hardware needs - computers are optional
@@ -44,13 +44,13 @@ Most kids don’t know what computer science is. Here are some ideas:
 - Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
 - Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
 - Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-- See tips for getting girls interested in computer science [here](http://code.org/girls). 
+- See tips for getting girls interested in computer science <a href="http://<%= codeorg_url() %>/girls">here</a>. 
 
 ## 5) Start your Hour of Code
 
 **Direct students to the activity**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the <% if @country == 'uk' %> [information for your selected tutorial](http://uk.code.org/learn) <% else %> [information for your selected tutorial](http://code.org/learn) <% end %>under the number of participants. (Example: [hourofcode.com/co](http://code.org/learn)) 
+- Write the tutorial link on a whiteboard. Find the link listed on the <a href="http://<%= codeorg_url() %>/learn">information for your selected tutorial</a> under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
 - Tell students to visit the URL and start the tutorial.
 
 **When your students come across difficulties**
@@ -61,14 +61,16 @@ Most kids don’t know what computer science is. Here are some ideas:
 
 **What to do if a student finishes early?**
 
-- Students can see all tutorials and try another Hour of Code activity at <% if @country == 'uk' %> [uk.code.org/learn](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
+- Students can see all tutorials and try another Hour of Code activity at <a href="http://<%= codeorg_url() %>/learn"><%= codeorg_url() %>/learn</a>
 - Or, ask students who finish early to help classmates who are having trouble with the activity.
 
 **How do I print certificates for my students?**
 
-Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our <% if @country == 'uk' %> [Certificates](http://uk.code.org/certificates) <% else %> [Certificates](http://code.org/certificates) <% end %> page to print as many certificates as you like, in one fell swoop!
+Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our <a href="http://<%= codeorg_url() %>/certificates">Certificates</a> page to print as many certificates as you like, in one fell swoop!
 
 **What comes after the Hour of Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://code.org/educate). Or encourage your children to learn [online](http://code.org/learn/beyond). <% end %>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators <a href="http://<%= codeorg_url() %>/educate">here</a>. Or encourage your children to learn <a href="http://<%= codeorg_url() %>/learn/beyond">online</a>. <% end %>
+
+
 
