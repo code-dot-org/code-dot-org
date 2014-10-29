@@ -23,7 +23,8 @@ module.exports = {
       blockUtils.blockOfType('functional_ellipse') +
       blockUtils.blockOfType('place_image') +
       blockUtils.blockOfType('overlay') +
-      blockUtils.blockOfType('underlay')),
+      blockUtils.blockOfType('underlay') +
+      blockUtils.blockOfType('rotate')),
     startBlocks: '<block type="functional_circle" inline="false"><functional_input name="COLOR"><block type="functional_string"><title name="VAL">red</title></block></functional_input><functional_input name="SIZE"><block type="functional_math_number"><title name="NUM">50</title></block></functional_input></block>',
     requiredBlocks: '',
     freePlay: false

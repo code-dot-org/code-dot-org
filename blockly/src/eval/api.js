@@ -1,3 +1,4 @@
+var evalUtils = require('./evalUtils');
 var EvalString = require('./evalString');
 var EvalCircle = require('./evalCircle');
 var EvalTriangle = require('./evalTriangle');
@@ -27,14 +28,6 @@ exports.triangle = function (size, style, color) {
   return exports.register(new EvalTriangle(size, style, color));
 };
 
-exports.placeImage = function (image, x, y, blockId) {
-  // todo - validate we have an image, use public setter
-  // todo - where does argument validation happen?
-  image.x_ = x;
-  image.y_ = y;
-  return exports.register(image);
-};
-
 exports.overlay = function (top, bottom) {
   return exports.register(new EvalMulti(top, bottom));
 };
@@ -53,4 +46,21 @@ exports.rectangle = function (width, height, style, color) {
 
 exports.ellipse = function (width, height, style, color) {
   return exports.register(new EvalEllipse(width, height, style, color));
+};
+
+exports.placeImage = function (image, x, y, blockId) {
+  // todo - validate we have an image, use public setter
+  // todo - where does argument validation happen?
+
+  // User inputs why in cartesian space. Convert to pixel space before sending
+  // to our EvalObject.
+  y = evalUtils.cartesianToPixel(y);
+
+  image.place(x, y);
+  return exports.register(image);
+};
+
+exports.rotateImage = function (image, degrees) {
+  image.rotate(degrees);
+  return exports.register(image);
 };
