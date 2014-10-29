@@ -1,6 +1,8 @@
----
-layout: wide
----
+* * *
+
+oppsett: bredt
+
+* * *
 
 # Få hele skolen din til å delta
 

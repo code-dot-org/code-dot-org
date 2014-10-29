@@ -1,7 +1,8 @@
----
-title: Merci
-layout: wide
----
+* * *
+
+titre: Merci affichage: large
+
+* * *
 
 # Merci
 

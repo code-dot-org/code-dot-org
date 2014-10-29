@@ -1,8 +1,9 @@
----
-title: Thank you
-layout: wide
----
+* * *
 
-# Thank you
+title: Grazie layout: wide
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+* * *
+
+# Grazie
+
+Tutta la tua scuola può ora concorrere alla vincita di un set di computer portatili per un'intera classe (o $10.000 in altra strumentazione tecnologia).

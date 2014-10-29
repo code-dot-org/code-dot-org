@@ -1,6 +1,8 @@
----
-layout: wide
----
+* * *
+
+aspect: wide
+
+* * *
 
 # Implică întreaga şcoală să participe
 

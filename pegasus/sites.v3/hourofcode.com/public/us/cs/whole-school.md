@@ -1,6 +1,8 @@
----
-layout: wide
----
+* * *
+
+rozvržení: široké
+
+* * *
 
 # Získejte celou vaší školu k účasti
 

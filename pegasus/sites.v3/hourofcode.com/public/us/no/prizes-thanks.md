@@ -1,8 +1,9 @@
----
-title: Thank you 
-layout: wide
----
+* * *
 
-# Thank you
+title: Takk layout: wide
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+* * *
+
+# Tusen takk
+
+Hele skolen din er nå inn for å vinne et sett med bærbare datamaskiner (eller $10,000 for annen teknoogi).

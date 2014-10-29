@@ -1,7 +1,8 @@
----
-title: Tài liệu
-layout: wide
----
+* * *
+
+tiêu đề : Tài liệu Khung nhìn : rộng
+
+* * *
 
 ## Số liệu thống kê hữu ích về khoa học máy tính
 
@@ -19,10 +20,10 @@ layout: wide
 **1. kế hoạch sự kiện của bạn**
 
   * Lên kế hoạch tuần tự để khởi động Hour of Code.
-  * Gửi [một bức thư](/resources#sample-emails) cho cha mẹ. Yêu cầu họ truyền tải thông điệp đó cho mọi người.
-  * Gửi [một bức thư](/resources#sample-emails) mời thị trưởng, nghị sĩ, thống đốc, hoặc doanh nhân có ảnh hưởng đến tham dự và nói chuyện với sinh viên của bạn.
+  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Tổ chức các hoạt động của nhóm (như việc trình diễn một hoạt động lập trình 'unplugged').
-  * Mở [video Hour of Code](http://hourofcode.com) hoặc một trong [những video](/resources#videos) để truyền cảm hứng.
+  * Show Code.org’s [Hour of Code video](<%= hoc_uri('/') %>) or one of [these](<%= hoc_uri('/resources#videos') %>) to inspire.
 
 **2. xác định cụ thể các phóng viên địa phương về giáo dục và các hoạt động.**
 
@@ -32,7 +33,7 @@ Tìm kiếm trên mạng các phóng viên và thông tin để liên lạc vớ
 
 **3. liên hệ báo chí địa phương**
 
-Cách tốt nhất để tiếp cận là bằng email. Nó nên ngắn gọn và mang tính xã giao: tại sao những người khác quan tâm tới sự kiện này? Bao gồm thông tin liên lạc (bao gồm cả một số điện thoại di động) cho những ai ở trên trang web tại sự kiện này. **hãy xem một[ mẫu truyền thông](/resources#sample-emails):**
+Cách tốt nhất để tiếp cận là bằng email. Nó nên ngắn gọn và mang tính xã giao: tại sao những người khác quan tâm tới sự kiện này? Bao gồm thông tin liên lạc (bao gồm cả một số điện thoại di động) cho những ai ở trên trang web tại sự kiện này. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
 
 **4. chuẩn bị các câu hỏi về sự kiện tại trường của bạn. Dưới đây là một số ví dụ:**
 
@@ -44,7 +45,7 @@ Chúng tôi hy vọng nó sẽ tia lửa thắp nên sự ham mê học tập ch
 
 *Tại sao điều này quan trọng?*
 
-Tại Trung Quốc, mỗi sinh viên tham khóa khóa học khoa học máy tính để tốt nghiệp cấp 3. Ở Mỹ, 90 phần trăm các trường thậm chí không dạy cho về nó. Đây là lúc để chúgn tôi bắt kịp với thể kỷ 21. Chúng ta biết rằng bất kể những gì học sinh của chúng tôi làm khi họ lớn lên, cho dù họ tham gia vào y học, kinh doanh, chính trị, hoặc nghệ thuật, biết cách làm thế nào để xây dựng nên các phần mềm sẽ cung cấp cho họ sự tự tin và biết làm thế nào để thành công.
+Tại Trung Quốc, mỗi sinh viên tham khóa khóa học khoa học máy tính để tốt nghiệp cấp 3. Ở Mỹ, 90 phần trăm các trường thậm chí không dạy cho về nó. Đây là lúc để chúgn tôi bắt kịp với thể kỷ 21. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
 **Chi tiết bạn có thể xem thêm trong các tài liệu**
 
@@ -52,7 +53,7 @@ Hadi Partovi, người sáng lập và CEO của Code.org nói rằng "Hour of C
 
 **Thông tin về Code.org**
 
-Code.org® là một tổ chức phi lợi nhuận được chỉ định để mở rộng sự tham gia trong khoa học máy tính và gia tăng sự tham gia của phụ nữ trong lĩnh vực nghiên cứu khoa học máy tính. Tầm nhìn của nó là mỗi học sinh trong tất cả các trường nên có cơ hội để học lập trình máy tính. Sau khi phát động vào năm 2013, Code.org tổ chức chiến dịch Hour of Code cũng giới thiệu hàng triệu sinh viên cho khoa học máy tính-hợp tác với hơn 30 khu vực trên toàn quốc, thành lập Codr Studio, một nền tảng mã nguồn mở, trực tuyến học cho mọi lứa tuổi. Để biết thêm chi tiết, vui lòng truy cập: [www.code.org](http://code.org).
+Code.org® là một tổ chức phi lợi nhuận được chỉ định để mở rộng sự tham gia trong khoa học máy tính và gia tăng sự tham gia của phụ nữ trong lĩnh vực nghiên cứu khoa học máy tính. Tầm nhìn của nó là mỗi học sinh trong tất cả các trường nên có cơ hội để học lập trình máy tính. Sau khi phát động vào năm 2013, Code.org tổ chức chiến dịch Hour of Code cũng giới thiệu hàng triệu sinh viên cho khoa học máy tính-hợp tác với hơn 30 khu vực trên toàn quốc, thành lập Codr Studio, một nền tảng mã nguồn mở, trực tuyến học cho mọi lứa tuổi. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Tìm kiếm thêm tài liệu và các mẫu email [tại đây](/resources).
+Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).

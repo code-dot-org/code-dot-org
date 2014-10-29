@@ -1,7 +1,8 @@
----
-title: Teşekkür ederiz
-layout: wide
----
+* * *
+
+başlık: Teşekkür ederiz düzen: geniş
+
+* * *
 
 # Teşekkür ederiz
 

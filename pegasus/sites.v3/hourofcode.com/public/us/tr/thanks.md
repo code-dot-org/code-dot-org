@@ -1,21 +1,24 @@
----
-title: Bir Kodlama Saatine ev sahipliği yapmak için kaydolduğunuz için teşekkürler!
-layout: wide
----
-<%
-  facebook = {:u=>"http://#{request.host}/us"}
+* * *
 
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
-%>
+başlık: Bir Kodlama Saatine ev sahipliği yapmak için kaydolduğunuz için teşekkürler! düzen: geniş
+
+sosyal: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
+
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+
+* * *
+
+<% facebook = {:u=>"http://#{request.host}/us"}
+
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
 # Bir Kodlama Saatine ev sahipliği yapmak için kaydolduğunuz için teşekkürler!
 
-Teşekkür olarak **HER** Kodlama Saati organizatörü 10 GB'lık Dropbox alanı veya 10$'lık Skype kredisi kazanacaktır. [Detaylar](/prizes)
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
 
 <% if @country == 'us' %>
 
-[Tüm okulunuzu dahil edin](/us/prizes), böylece tüm okul için büyük ödüller elde edebilirsiniz.
+Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance for big prizes for your entire school.
 
 <% end %>
 
@@ -29,30 +32,30 @@ Arkadaşlarınıza #KodlamaSaati 'ni anlatın.
 
 ## 2. Tüm okulun bir Kodlama Saati talep etmesini sağlayın
 
-[Bu e-postayı gönderin](/resources#email) veya [bu el ilanını okul müdürünüze verin](/files/schools-handout.pdf). Tüm okulunuz da katıldığında [okulunuz için 10.000$ değerinde teknoloji ödülünü kazanmak için yarışabilirsiniz](/prizes) ve çevredeki diğer okullara da meydan okuyarak onların da katılmasını sağlayabilirsiniz.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Tüm okulunuz da katıldığında [okulunuz için 10.000$ değerinde teknoloji ödülünü kazanmak için yarışabilirsiniz](/prizes) ve çevredeki diğer okullara da meydan okuyarak onların da katılmasını sağlayabilirsiniz.
 
 <% else %>
 
 ## 2. Tüm okulun bir Kodlama Saati talep etmesini sağlayın
 
-[Bu e-postayı gönderin](/resources#email) veya okul müdürünüze [bu el ilanını](/files/schools-handout.pdf) verin.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
 
 <% end %>
 
-## 3. Make a generous donation
+## 3. Cömert bir bağış yapın
 
-[Donate to our crowdfunding campaign](http://code.org/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://code.org/donate) in history. Every dollar will be matched by major Code.org [donors](http://code.org/about/donors), doubling your impact.
+[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. Every dollar will be matched by major Code.org [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
-## 4. Ask your employer to get involved
+## İş vereninizden de etkinliğe dahil olmasını rica edin
 
-[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
 
-## 5. Promote Hour of Code within your community
+## 5. Kodlama Saatini çevrenizde destekleyin
 
 Yerel grupları da dahil edin. Ya da komşularınız için bir Kodlama Saati partisi düzenleyin.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 5. Yerel yönetim idarelerinden Kodlama Saatini desteklemelerini isteyin
 
-[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

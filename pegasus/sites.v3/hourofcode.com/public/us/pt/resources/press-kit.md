@@ -1,7 +1,8 @@
----
-title: Recursos 
-layout: wide
----
+* * *
+
+título: Recursos layout: amplo
+
+* * *
 
 ## Estatísticas úteis sobre a ciência da computação
 
@@ -19,10 +20,10 @@ layout: wide
 **1. Planeje seu evento**
 
   * Planeje a abertura da Hora do Código.
-  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Envie [uma carta](<%= hoc_uri('/resources/#sample-emails') %>) para os pais dos alunos e peça para eles ajudarem na divulgação.
+  * Envie [uma carta](<%= hoc_uri('/resources/#sample-emails') %>) convidando seu prefeito, deputado, governador ou empresário influente para participar e falar com seus alunos.
   * Organize atividades em grupo (por exemplo, uma demonstração de atividade de programação "offline") ou mostre atividades criadas e conduzidas pelos alunos.
-  * Show Code.org’s [Hour of Code video](<%= hoc_uri('/') %>) or one of [these](<%= hoc_uri('/resources#videos') %>) to inspire.
+  * Mostre o [vídeo da Hora do Código](<%= hoc_uri('/') %>) da Code.org ou um [destes vídeos](<%= hoc_uri('/resources#videos') %>) como forma de incentivo.
 
 **2. Identifique jornalistas específicos da região que cubram eventos locais ou sobre educação**
 
@@ -32,7 +33,7 @@ Procure na Internet informações de contato de jornalistas. Se não conseguir e
 
 **3. Entre em contato com a mídia local**
 
-A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se importar com este evento? Inclua informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
+A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se importar com este evento? Inclua informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **Veja um [exemplo de abordagem à mídia](<%= hoc_uri('/resources#sample-emails') %>):**
 
 **4. Prepare-se para receber perguntas sobre o evento da sua escola. Veja os exemplos a seguir:**
 
@@ -52,7 +53,7 @@ Na China, todos os alunos estudam a ciência da computação para concluir o ens
 
 **Sobre a Code.org**
 
-A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também à minorias sociais, empoderando, por exemplo, mulheres e negros à participação nesta área. Sua visão é de que todos os alunos, de todas as escolas, devem ter a oportunidade de aprender programação de computadores. Depois de seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código — que apresentou a ciência da computação a milhões de alunos — em parceria com mais de 30 distritos escolares de todo o território nacional, e lançou o Code Studio, uma plataforma de ensino on-line de código aberto para todas as idades. For more information, please visit: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também à minorias sociais, empoderando, por exemplo, mulheres e negros à participação nesta área. Sua visão é de que todos os alunos, de todas as escolas, devem ter a oportunidade de aprender programação de computadores. Depois de seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código — que apresentou a ciência da computação a milhões de alunos — em parceria com mais de 30 distritos escolares de todo o território nacional, e lançou o Code Studio, uma plataforma de ensino on-line de código aberto para todas as idades. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+Encontre mais recursos e exemplos de e-mails [aqui](<%= hoc_uri('/resources') %>).

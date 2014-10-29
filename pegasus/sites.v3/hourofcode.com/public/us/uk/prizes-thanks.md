@@ -1,7 +1,8 @@
----
-title: Дякуємо
-layout: wide
----
+* * *
+
+title: Подяка layout: wide
+
+* * *
 
 # Дякуємо
 

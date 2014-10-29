@@ -1,7 +1,8 @@
----
-title: Resources 
-layout: wide
----
+* * *
+
+title: Ресурси layout: wide
+
+* * *
 
 # Як залучити медіа до своїх заходів Години коду
 

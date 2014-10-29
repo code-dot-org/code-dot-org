@@ -1,7 +1,9 @@
----
-layout: wide
----
+* * *
 
-# Get your whole school to participate
+maquetació: àmplia
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+* * *
+
+# Aconsegueix tota l'escola per participar
+
+La informació sobre com aconseguir escoles complertes per participar en l'Hora de Codi anirà aquí.

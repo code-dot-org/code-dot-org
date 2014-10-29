@@ -1,7 +1,8 @@
----
-title: Resources 
-layout: wide
----
+* * *
+
+title: Resources layout: wide
+
+* * *
 
 # How to attract media to your Hour of Code event
 

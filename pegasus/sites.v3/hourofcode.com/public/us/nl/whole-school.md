@@ -1,6 +1,8 @@
----
+* * *
+
 layout: wide
----
+
+* * *
 
 # Zorg dat je hele school meedoet
 

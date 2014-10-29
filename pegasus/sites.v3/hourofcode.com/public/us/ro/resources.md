@@ -1,17 +1,17 @@
----
-title: Resurse 
-layout: wide 
-nav: resources_nav
----
+* * *
+
+title: Resurse layout: wide nav: resources_nav
+
+* * *
 
 # Resurse
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Organizezi Hour of Code? [ Click aici pentru ghid](<%= hoc_uri('/resources/how-to') %>)
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Utilizaţi acest poster pentru a promova Hour of Code
 </h2>
 
 <p>
@@ -19,7 +19,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Împarte această broşură profesorilor si școlilor
 </h2>
 
 <p>
@@ -30,7 +30,7 @@ nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Arătați aceste videoclipuri pentru a inspira elevii
   </h2>
   
   <div style="float:left; padding:10px">
@@ -69,194 +69,210 @@ nav: resources_nav
   
   <div style='clear:both'>
   </div>
-
-<p>
-<a id="posters"></p> 
-
-<h2>
-  Hang these posters in your school
-</h2>
-
-<p>
-  <% if @country == 'us' %>
-</p>
-
-<h4>
-  <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
-</h4>
-
-<p>
-  <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="imagine" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="imagine" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="imagine" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="imagine" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="imagine" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="imagine" /></a>
-</p>
-
-<p>
-  <a id="banners"></a>
-</p>
-
-<h2>
-  Feature these banners on your website
-</h2>
-
-<p>
-  <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="imagine" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="imagine" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="imagine" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
-
-<p>
-  <a id="sample-emails"></a>
-</p>
-
-<h2>
-  Send these emails to help promote the Hour of Code
-</h2>
-
-<p>
-  <a id="email"></a>
-</p>
-
-<h2>
-  Ask your school, employer or friends to sign up:
-</h2>
-
-<p>
-  Computerele sunt peste tot, dar predau informatica mai puţine şcoli decât acum 10 ani. Vestea bună, este că facem pașii corecți pentru a schimba acest lucru. Dacă aţi auzit despre Hour of Code anul trecut, s-ar putea ştiţi deja că a făcut istorie. Intr-o singură saptamână, 15 milioane de elevi au incercat programarea!
-</p>
-
-<p>
-  Evenimentul a fost și pe paginile Google, MSN, Yahoo! şi Disney. Preşedintele Obama, Shakira şi Ashton Kutcher au dat startul Hour of Code cu videoclipuri. Peste 100 de parteneri s-au reunit pentru a sprijini această mişcare.
-</p>
-
-<p>
-  În acest an, vrem să facem evenimentul chiar mai mare. Vă invit să vă alăturați Hour of Code 2014. Vă rog să vă implicați în sustinerea sau organizarea unui eveniment Hour of Code în săptămâna 8-14 decembrie, 2014.
-</p>
-
-<p>
-  Promovați sau găzduiți un eveniment. Cereți unei școli să se înscrie. Sau încercaţi Hour of Code chiar dumneavoastră – toată lumea poate beneficia învățând măcar bazele programării.
-</p>
-
-<p>
-  Ajutaţi-ne să ajungem la 100 de milioane de elevii până la sfârşitul anului! Începeți pe http://hourofcode.com
-</p>
-
-<p>
-  <a id="media-pitch"></a>
-</p>
-
-<h2>
-  Invite media to attend your event:
-</h2>
-
-<p>
-  <strong>Subiect email:</strong> Şcoala noastră se alătură misiunii de a promova programarea si tehnologia computerelor în rândul a 100 de milioane de elevi
-</p>
-
-<p>
-  Computerele sunt peste tot, dar mai puţine şcoli predau acum programare si tehnologia computerelor decât cu 10 ani în urmă. Fetele şi minorităţile sunt foarte slab reprezentate. Vestea bună este că suntem pe cale să schimbăm acest lucru.
-</p>
-
-<p>
-  Într-o săptămână, anul trecut, 15 milioane de elevi au încercat Hour of Code! Evenimentul a fost și pe paginile Google, MSN, Yahoo! şi Disney. Preşedintele Obama, Shakira şi Ashton Kutcher au dat startul Hour of Code cu videoclipuri. Peste 100 de parteneri s-au reunit pentru a sprijini această mişcare.
-</p>
-
-<p>
-  Acum campania Hour of Code țintește 100 de milioane de elevi.
-</p>
-
-<p>
-  De aceea fiecare dintre cei (x) elevi de la [numele şcolii] ne alaturăm celui mai mare eveniment de învăţare în istorie: Hour of Code, în saptamâna 8-14 Decembrie 2014.
-</p>
-
-<p>
-  Vă scriu pentru a vă invita să participați la evenimentul nostru şi pentru a vedea cum participă copiii la această activitate pe [data].
-</p>
-
-<p>
-  "Ora de Programare" (Hour of Code), organizată de Code.org (o organizaţie non-profit) şi peste 100 alte organizaţii, este o mărturie că generaţia de astăzi de student este gata să înveţe deprinderi esenţiale pentru a avea succes în secolul 21. Vă rugăm să vă alăturaţi nouă.
-</p>
-
-<p>
-  <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
-</p>
-
-<p>
-  <strong>Când:</strong> [DATE and TIME of your event]
-</p>
-
-<p>
-  <strong>Unde:</strong> [ADDRESS and DIRECTIONS]
-</p>
-
-<p>
-  Aştept cu nerăbdare să comunicăm.
-</p>
-
-<p>
-  <a id="parents"></a>
-</p>
-
-<h2>
-  Tell parents about your school's event:
-</h2>
-
-<p>
-  Dragi parinti,
-</p>
-
-<p>
-  Trăim într-o lume a tehnologiei. Şi noi ştim că oricare ar fi domeniul pe care elevii noştri aleg să meargă ca adulţi, capacitatea lor de a reuşi, va depinde tot mai mult de înţelegerea modului în care funcţionează tehnologia. Dar numai o mica parte dintre ei învață programare si tehnologia computerelor şi mai puţini o studiază acum decât în urmă cu un deceniu.
-</p>
-
-<p>
-  Iată de ce școala noastră participă la cel mai mare eveniment de educație din istorie: Hour of Code, în timpul Computer Science Education Week (8-14 Decembrie). Anul trecut, 15 milioane de elevi si studenţi au participat la Hour of Code într-o săptămână. În acest an, ne sunt alături de elevi din întreaga lume pentru a ajunge la 100 de milioane!
-</p>
-
-<p>
-  Evenimentul nostru Hour of Code este o declaraţie că [numele şcolii] este gata să înveţe aceste abilităţi fundamentale ale secolului 21. Pentru a continua acest tip de activităţi de programare pentru elevi, vrem să facem evenimentul nostru Hour of Code imens. Vă încurajez să deveniți voluntar, contactati mass-media locală, împărtăşiţi ştiri pe rețelele sociale şi considerați găzduirea de evenimente suplimentare Hour of Code în Comunitate.
-</p>
-
-<p>
-  Aceasta este o şansă de a schimba viitorul educaţiei în [oraş].
-</p>
-
-<p>
-  Consultaţi http://hourofcode.com pentru detalii, si ajutați la răspândirea veștii.
-</p>
-
-<p>
-  Cu stimă,
-</p>
-
-<p>
-  [Nume Profesor/ Director]
-</p>
-
-<p>
-  <a id="politicians"></a>
-</p>
-
-<h2>
-  Invite a local politician to your school's event:
-</h2>
-
-<p>
-  Dragă [numele primarului/consilierului/senatorului]:
-</p>
-
-<p>
-  Ştiaţi că în economia de astăzi, locurile de muncă in IT sunt mai numeroase decât elevii absolventi cu cel putin 3-la-1? Şi tehnologia computerelor este fundamentală pentru <em>fiecare</em> industrie astăzi. Dar 90% din şcoli nu predau. La [numele şcolii], încercăm să schimbăm asta.
-</p>
-
-<p>
-  Iată de ce școala noastră participă la cel mai mare eveniment de educație din istorie: Hour of Code, în timpul Computer Science Education Week (8-14 Decembrie). Anul trecut, 15 milioane de elevi si studenţi au participat la Hour of Code într-o săptămână. În acest an, ne sunt alături de elevi din întreaga lume pentru a ajunge la 100 de milioane!
-</p>
-
-<p>
-  V-am scris ca să vă invit să luați parte la evenimentul nostru Hour of Code şi să vorbiți în deschiderea evenimentului. Acesta va avea loc pe [data, ora, locul] şi va face o declaraţie puternică, că [nume de stat sau un oraş] este gata să predea elevilor noştri abilităţi esențiale pentru secolul 21. Vrem să se asigurăm că studenţii noştri au în prim-plan crearea de tehnologie pentru viitor--nu doar consumul acesteia.
-</p>
-
-<p>
-  Vă rugăm să mă contactaţi la [telefon număr sau adresă de E-mail]. Aştept cu nerăbdare răspunsul dumneavoastră.
-</p>
-
-<p>
-  Cu sinceritate, [nume], [titlu]
-</p>
+  
+  <p>
+    <a id="posters"></p> 
+    
+    <h2>
+      Afișează aceste postere în şcoala ta
+    </h2>
+    
+    <p>
+      <% if @country == 'us' %>
+    </p>
+    
+    <h4>
+      <a href="http://hourofcode.com/#signup">Înscrieţi-</a> evenimentul dumneavoastra Hour of Code şi noi vă trimitem postere gratuit.
+    </h4>
+    
+    <p>
+      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="imagine" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="imagine" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="imagine" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="imagine" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="imagine" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="imagine" /></a>
+    </p>
+    
+    <p>
+      <a id="banners"></a>
+    </p>
+    
+    <h2>
+      Adaugă aceste bannere pe website-ul tau
+    </h2>
+    
+    <p>
+      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="imagine" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="imagine" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="imagine" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Post these on social media
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="imagine" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="imagine" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="imagine" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="imagine" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="imagine" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="imagine" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="imagine" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="imagine" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a id="sample-emails"></a>
+    </p>
+    
+    <h2>
+      Send these emails to help promote the Hour of Code
+    </h2>
+    
+    <p>
+      <a id="email"></a>
+    </p>
+    
+    <h2>
+      Ask your school, employer or friends to sign up:
+    </h2>
+    
+    <p>
+      Computerele sunt peste tot, dar predau informatica mai puţine şcoli decât acum 10 ani. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+    </p>
+    
+    <p>
+      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+    </p>
+    
+    <p>
+      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+    </p>
+    
+    <p>
+      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
+    </p>
+    
+    <p>
+      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+    </p>
+    
+    <p>
+      <a id="media-pitch"></a>
+    </p>
+    
+    <h2>
+      Invite media to attend your event:
+    </h2>
+    
+    <p>
+      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
+    </p>
+    
+    <p>
+      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
+    </p>
+    
+    <p>
+      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+    </p>
+    
+    <p>
+      Now the Hour of Code movement is aiming for 100 million students.
+    </p>
+    
+    <p>
+      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
+    </p>
+    
+    <p>
+      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
+    </p>
+    
+    <p>
+      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
+    </p>
+    
+    <p>
+      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
+    </p>
+    
+    <p>
+      <strong>When:</strong> [DATE and TIME of your event]
+    </p>
+    
+    <p>
+      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
+    </p>
+    
+    <p>
+      I look forward to being in touch.
+    </p>
+    
+    <p>
+      <a id="parents"></a>
+    </p>
+    
+    <h2>
+      Tell parents about your school's event:
+    </h2>
+    
+    <p>
+      Dear Parents,
+    </p>
+    
+    <p>
+      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
+    </p>
+    
+    <p>
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+    </p>
+    
+    <p>
+      Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
+    </p>
+    
+    <p>
+      This is a chance to change the future of education in [TOWN/CITY NAME].
+    </p>
+    
+    <p>
+      See http://hourofcode.com for details, and help spread the word.
+    </p>
+    
+    <p>
+      Sincerely,
+    </p>
+    
+    <p>
+      Your principal
+    </p>
+    
+    <p>
+      <a id="politicians"></a>
+    </p>
+    
+    <h2>
+      Invite a local politician to your school's event:
+    </h2>
+    
+    <p>
+      Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+    </p>
+    
+    <p>
+      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+    </p>
+    
+    <p>
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+    </p>
+    
+    <p>
+      I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
+    </p>
+    
+    <p>
+      Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+    </p>
+    
+    <p>
+      Sincerely, [NAME], [TITLE]
+    </p>
