@@ -27,13 +27,18 @@ module.exports = {
       blockUtils.blockOfType('functional_square') +
       blockUtils.blockOfType('functional_rectangle') +
       blockUtils.blockOfType('functional_ellipse') +
+      blockUtils.blockOfType('functional_star') +
       blockUtils.blockOfType('place_image') +
       blockUtils.blockOfType('overlay') +
       blockUtils.blockOfType('underlay') +
       blockUtils.blockOfType('rotate') +
       blockUtils.blockOfType('scale') +
       blockUtils.blockOfType('functional_text')),
-    startBlocks: '',
+    startBlocks: blockUtils.mathBlockXml('functional_star', {
+      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'black' } ),
+      'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' }),
+      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 20 } )
+    }),
     requiredBlocks: '',
     freePlay: false
   },
