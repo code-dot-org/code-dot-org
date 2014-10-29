@@ -1,24 +1,6 @@
 #visualization {
   background-color: white; }
 
-/* Slider. */
-.sliderContainer {
-  float: left; }
-
-.sliderTrack {
-  stroke: #aaaaaa;
-  stroke-width: 6px;
-  stroke-linecap: round; }
-
-.sliderKnob {
-  fill: #dddddd;
-  stroke: #bbbbcc;
-  stroke-width: 1px;
-  stroke-linejoin: round; }
-
-.sliderKnob:hover {
-  fill: #eeeeee; }
-
 /* Sprited icons. */
 .icon21 {
   height: 21px;
@@ -38,3 +20,15 @@
 .stop {
   background-position: -63px 0px;
   margin-right: 3px; }
+
+.calcHeader {
+  font-size: 25px; }
+
+.highlightedParen {
+  fill: white; }
+
+.exprMistake {
+  fill: red; }
+
+.expr {
+  font-size: 20px; }

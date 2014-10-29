@@ -18,10 +18,16 @@ Code.org sẽ liên lạc với cá nhân/ tổ chức sau sự kiện Hour of C
 
 ## Giải thưởng 2: Chat video với người hướng dẫn:
 
-Giải thưởng chỉ giới hạn cho hệ thống trường học 12 khối học ở Mỹ. Để đủ điều kiện, toàn bộ trường học của bạn bắt buộc phải đăng ký trên Hour of Code từ ngày 14 tháng 11, 2014. Code.org ngẫu nhiên sẽ chọn chiến thắng trường, cung cấp một khe thời gian để trò chuyện web, và làm việc với giáo viên thích hợp để thiết lập các chi tiết kỹ thuật.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Giải thưởng 3: Một lớp học được trang bị laptop phục vụ học tập và giảng dạy (hoặc 10.000USD cho một công nghệ khác được triển khai):
 
-Giải thưởng chỉ giới hạn cho hệ thống trường học 12 khối ở Mỹ. Tại sao lại là các trường học cộng đồng? [See the answer here](http://www.hourofcode.com/#faq). Để đủ điều kiện, toàn bộ trường học của bạn bắt buộc phải đăng ký trên Hour of Code từ ngày 14 tháng 11, 2014. Một trường học ở bất cứ tiểu bang nào ở Mỹ sẽ được nhận một lớp học trang bị laptop. Code.org sẽ lựa chọn và thông báo người thắng cuộc qua email từ ngày 1 tháng 12 năm 2014.
+Giải thưởng chỉ giới hạn cho hệ thống trường học 12 khối ở Mỹ. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+
+To clarify, this is not a sweepstakes or a contest involving pure chance.
+
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>

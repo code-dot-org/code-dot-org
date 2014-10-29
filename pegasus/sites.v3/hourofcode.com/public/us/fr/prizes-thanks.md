@@ -1,7 +1,4 @@
----
-title: Merci
-layout: wide
----
+
 
 # Merci
 

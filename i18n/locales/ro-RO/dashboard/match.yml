@@ -330,7 +330,7 @@ ro:
         Matching Images Two: Matching Images Two
         Match up all the flowers by colour!: Match up all the flowers by colour!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
-        Instructions: Instructions
+        Instructions: Instrucţiuni
         Drag the images from right to center.: Drag the images from right to center.
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
@@ -342,12 +342,12 @@ ro:
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test matching text:
         Matching: Potrivire
-        Some really easy stuff to match.  Drag it around until you get it.: 'Some really easy stuff to match.  Drag it around until you get it.'
-        What color is the sky?: What color is the sky?
-        What's in the ocean?: "What's in the ocean?"
-        What's Brent's last name?: "What's Brent's last name?"
-        Where is Brendan from?: Where is Brendan from?
+        Some really easy stuff to match.  Drag it around until you get it.: 'Câteva chestii cu adevărat uşor de potrivit.  Mișcă-le până reușești.'
+        What color is the sky?: Ce culoare are cerul?
+        What's in the ocean?: Ce este în ocean?
+        What's Brent's last name?: Care este numele de familie al lui Brent?
+        Where is Brendan from?: De unde este Brendan?
         blue: albastru
-        salt: salt
+        salt: sare
         Van Minnen: Van Minnen
         Sydney: Sydney

@@ -2,7 +2,7 @@ tr:
   data:
     unplugged:
       Unplug1:
-        title: Bilgisayar Bilimlerine Giriş
+        title: Bilgisayar Bilimine Giriş
         desc: Bu ders Bilgisayar Bilimleri konseptini ve bir Bilgisayar Bilimcisinin neler yaptığını tanıtacak, yanı sıra öğrencilere bir bilgisayar bilimcisinin rolünü üstlenme fırsatı sunacaktır. Aktivite sonunda öğrenciler, öğrendikleri şeyleri içeren ve beraber götürebilecekleri anımsatıcılara sahip olacaktır. Genç çocuklara gördükleri derslerle ilgili sözcükleri öğretmekten vazgeçmek isteyebilirsin, ama bunu eğlenceli ve oyunsu biçimde anlatabilmek daha gelişmiş yöntemler sunan fırsatları beklemekten çok daha verimlidir.
         pdfs:
           - unplug1
@@ -14,7 +14,7 @@ tr:
           - unplug2
         video: Unplug2
       Unplug3:
-        title: Grafikli Kağıdıyla Programlama
+        title: Grafik Kağıdıyla Programlama
         desc: Resimler çizmek için diğerlerini programlamak neticesinde öğrenciler programlamanın gerçekte nasıl bir şey olduğunu anlamaya başlarlar. Sınıf, öğrencilerin arkadaşlarını kareleri boyayarak var olan resmi ortaya çıkarmaları konusunda uğraş vermeleri ile başlar. Eğer daha zaman kalırsa, öğrencilere kendi çizdiği resimlerle çalışma imkanı da verilir.
         pdfs:
           - unplug3
@@ -38,7 +38,7 @@ tr:
           - unplug6
         video: Unplug6
       Unplug7:
-        title: Şarkı Yazma
+        title: Şarkı yazma
         desc: "Reading lyrics is a pretty intuitive venture for most students.  We'll take an activity that's already common knowledge and shift it into a solid education on defining and calling functions. Once students are familiar with the define/call process, we will add the extra capabilities that come along with passing parameters within those function calls."
         pdfs:
           - unplug7
@@ -50,7 +50,7 @@ tr:
           - unplug8
         video: Unplug8
       Unplug9:
-        title: Röle Programlama
+        title: Röle programlama
         desc: 'This lesson will take an idea from a previous activity (4. Graph Paper Programming) and use those skills to emphasize the importance of completing programs that operate in sequence and frequently checking programs for "bugs".'
         pdfs:
           - unplug9
@@ -69,7 +69,7 @@ tr:
         video: Unplug11
       UnplugHappyMaps:
         title: Mutlu Haritalar
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        desc: Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek bir komutla bir karakteri labirentte hareket ettirirler.
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Oynat, Oynat
@@ -93,7 +93,7 @@ tr:
           Students run a relay race, where they dash across the yard to write an algorithm based on a "Graph Paper Programming" image. They can only write one instruction at a time and if there's an error somewhere, they have to erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: Koşullandırıcılar
+        title: Koşullar
         desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
         video: C2_conditionals_with_cards
       BigEvent:
@@ -104,7 +104,7 @@ tr:
         title: Biryerlere Güvenle Gitmek
         desc: İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette gezinirken nasıl güvende olunabileceğine dair bilgi verir.
       GraphPaperProgramming:
-        title: Grafik Kağıdıyla Programlama
+        title: Grafik Kağıdı Programlama
         desc: Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
       PaperPlanes:
@@ -140,7 +140,7 @@ tr:
         video: C3_internet
       Crowdsourcing:
         title: "Kalabalık Kaynaklandırma 'Crowdsourcing'"
-        desc: Student use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
+        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Sayısal Vatandaşlık

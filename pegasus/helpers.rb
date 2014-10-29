@@ -14,6 +14,12 @@ def avatar_image_thumbnail(name)
   "/images/avatars/thumbnails/#{File.basename(path)}"
 end
 
+def authentication_required!(url=request.url)
+  dont_cache
+  return if dashboard_user
+  redirect "http://#{canonical_hostname('studio.code.org')}/users/sign_in?return_to=#{url}", 302
+end
+
 def dont_cache()
   cache_control(:private, :must_revalidate, max_age:0)
 end

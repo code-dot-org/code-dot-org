@@ -3,7 +3,7 @@
     script:
       name:
         test:
-          'Jigsaw: Learn to drag and drop': "Мозайка: Научете се да плъзгане и пускане"
+          'Jigsaw: Learn to drag and drop': "Мозайката: Научете се да плъзгате и пускате"
           The Maze: "Лабиринтът"
           Multi: "Мулти"
           Match: "Съответствие"
@@ -27,13 +27,12 @@
           title: "Курс 1 - за малките читатели"
           Artist 2: "Художник 2"
           Happy Maps: "Щастливи карти"
-          Move it, Move it: "Преместете го, Преместете го"
-          'Real-life Algorithms: Plant a Seed': "Алгоритми в реалния живот: Засадете
-            семената"
-          Building a Foundation: "Създаване на база"
+          Move it, Move it: "Преместите го, преместете го"
+          'Real-life Algorithms: Plant a Seed': "Алгоритми в живота: Засадете семената"
+          Building a Foundation: "Изграждане на база"
           Getting Loopy: "Да повтаряме"
           The Big Event: "Голямото събитие"
-          Going Places Safely: "Придвижваме се безопасно"
+          Going Places Safely: "Предвижваме се безопасно"
           description: "Курс 1 е предназначен за малките читатели, които искат за
             създават компютърни програми. Курсът ще им помогне да се научат да си
             сътрудничат с други ученици, ще подпомогне развитието на умения за решаване
@@ -44,10 +43,10 @@
           'Bee: Sequence': "Пчела: последователност"
           'Artist: Sequence': "Художник: последователност"
           'Artist: Shapes': "Художник: фигури"
-          'Maze: Loops': "Лабиринт: повторения"
+          'Maze: Loops': "Лабиринт: цикли"
           'Bee: Loops': "Пчела: цикли"
           'Studio: Create a Story': "Театрална лаборатория: Създаване на история"
-          description_short: "Курс 1 е предназначен за ранните читатели в класовете
+          description_short: "Курс 1 е предназначен за малките читатели в класовете
             от начален етап на обучение."
           'Artist: Loops': "Художник - цикли"
         course2:
@@ -57,21 +56,20 @@
           Artist Debugging: "Художник: отстраняване на грешки"
           Bounce: "Скачане"
           'Studio: Create a Story': "Театрална лаборатория: Създаване на история"
-          Artist Loops: "Художник -цикли"
-          Bee Conditionals: "Пчела условности"
+          Artist Loops: "Художник - цикли"
+          Bee Conditionals: "Пчела - условности"
           Flappy: Flappy
           title: "Курс 2"
           Bee Loops: "Пчела - цикли"
-          Artist Functions: "Художник: функции"
+          Artist Functions: "Художник- функции"
           The Artist Debugging: "Художникът: отстраняване на грешки"
           Bee Debugging: "Пчела - отстраняване на грешки"
           Bee Functions: "Пчела - функции"
           Maze Loops: "Лабиринт- повторения"
           Graph Paper Programming: "Програмиране на милиметрова хартия"
-          'Real-life Algorithms: Paper Planes': "Алгоритми в реалния живот: Хартиени
-            самолети"
+          'Real-life Algorithms: Paper Planes': "Алгоритми от живота: Хартиени самолети"
           Getting Loopy: "Да повтаряме"
-          Relay programming: "Повтори програмирането"
+          Relay programming: "Щафета на програмирането"
           Conditionals: "Условия"
           Binary Bracelets: "Двоични гривни"
           The Big Event: "Голямото събитие"
@@ -82,7 +80,7 @@
             които ще могат да споделят с приятели. Препоръчва се за 2-5 клас."
           'Maze: Sequence': "Лабиринт: последователност"
           'Artist: Sequence': "Художник: последователност"
-          'Maze: Loops': "Лабиринт: цикли"
+          'Maze: Loops': "Лабиринт: повторения"
           'Artist: Loops': "Художник - цикли"
           'Bee: Loops': "Пчела: цикли"
           'Bee: Debugging': "Пчела: отстраняване на грешки"
@@ -98,7 +96,7 @@
           'Studio: Create a Story': "Театрална лаборатория: Създаване на история"
           The Artist: "Художникът"
           title: "Курс 3"
-          Artist Functions: "Художник- функции"
+          Artist Functions: "Художник: функции"
           Artist For Loops: "Художник - за циклите"
           Artist Nested Loops: "Художник - въвеждане на цикли"
           Bee Conditionals: "Пчела - условности"
@@ -111,11 +109,11 @@
           Maze Conditionals: "Лабиринт - условности"
           Artist Functions with Parameters: "Художник - функции с параметри"
           Computational Thinking: "Изчислително мислене"
-          Functional Suncatchers: "Функционални ловци на слънце"
-          Songwriting Parameters: "Параметри за писане на песни"
+          Functional Suncatchers: "Функционални отразители на светлина"
+          Songwriting Parameters: "Параметри за композиране"
           Dice Race: "Състезание със зарове"
           Internet: "Интернет"
-          Crowdsourcing: "Съвместен код"
+          Crowdsourcing: "Групово решение"
           Digital Citizenship: "Дигитални граждани"
           Farmer - While Loops: Фермер - цикли "докато"
           description: "Курс 3 е предназначен за ученици, които са преминали курс
@@ -148,6 +146,7 @@
           'Bee: Nested Loops2': "Пчела:  въвеждане на цикли 2"
           'Bee: Debugging2': "Пчела: отстраняване на грешки 2"
           'Artist: Patterns': "Художник: модели"
+          Songwriting: "Писане на песен"
         msm:
           title: "Математика за Средното училище"
           description: "Контролно за отчитане на напредъкът по математика в средното
@@ -158,9 +157,9 @@
           Unit 2: "Част 2"
         playlab:
           title: "Театрална лаборатория"
-          description: "Създайте история или да направите игра с Театрална лаборатория!"
+          description: "Създайте история или направете игра с Театрална лаборатория!"
           Play Lab: "Театрална лаборатория"
-          description_short: "Създайте история или направете игра с Театрална лаборатория!"
+          description_short: "Създайте история или да направите игра с Театрална лаборатория!"
         artist:
           title: "Художник"
           description: "Начертайте готини картинки и дизайни с художникът!"

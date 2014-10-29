@@ -44,7 +44,7 @@ is:
           - unplug7
         video: Unplug7
       Unplug8:
-        title: Greining aðalatriða
+        title: Kjarni
         desc: Í þessu verkefni er blandað saman hversdagslegri rútínu nemenda og eyðufyllingarleik til að hjálpa nemendum að skilja hve árangursrík greining aðalatriða er.
         pdfs:
           - unplug8
@@ -139,7 +139,7 @@ is:
         video: C3_internet
       Crowdsourcing:
         title: Hópvistun
-        desc: Nemendur nota hópvistun (crowdsourcing) til að leysa verkefni saman sem bekkur með meiri árangri en ef nemandi reyndi að glíma við það einn. Þetta er algeng aðferð við að leita lausna í tölvunarfræði.
+        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Stafrænn borgari

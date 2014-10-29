@@ -4,6 +4,6 @@ title: Thank you layout: wide
 
 * * *
 
-# Thank you
+# धन्यवाद
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+आपकी प्रशाला अब लैपटॉप्स (या $१०,००० की इतर तकनिकी सामग्री) जितनेके प्रतियोगता में शामिल होगयी है|

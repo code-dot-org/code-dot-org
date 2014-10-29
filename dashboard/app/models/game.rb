@@ -96,6 +96,8 @@ class Game < ActiveRecord::Base
         CustomStudio:studio
         Calc:calc
         Webapp:webapp
+        Eval:eval
+        ArtistEC:turtle:artist_intro
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

@@ -6,14 +6,14 @@
     attributes:
       user:
         name: "姓名"
-        email: "邮箱"
-        username: "用户名:"
-        password: "密码:"
+        email: "电子邮件"
+        username: "用户名"
+        password: "密码"
         password_confirmation: "密码确认："
         current_password: "当前密码："
         locale: "语言："
         age: Age
-        gender: "性别:"
+        gender: "性别"
         edit_header: "编辑用户信息"
         error:
           future: "不能在未来"
@@ -67,14 +67,7 @@
     overview_teacher: |
       在教室里教计算机科学,注册一个账户。<p/> 你可以跟踪你的学生进步并获得奖励。
     no_signup_message: 您可以 <a target="_blank"href="http://learn.code.org"> 浏览各个阶段和谜题</a>，但您将需要注册以保存您的进度。
-    prizes_message: "成功获得所有 %{num_trophies} 概念奖杯的美国学生可以任选下列奖品之一作为奖励，奖品包括：免费Dropbox空间、Skype积分、美国艺电(EA)
-      的数字版游戏。"
     teacher_educator_guide: "请参阅教师指南"
-    teacher_prize_header: 赢取 $1,000 在 <a target="_blank"href="http://DonorsChoose.org">
-      DonorsChoose.org</a> 奖励 （通过 2014 年 6 月 15 日，直到最后用品)
-    teacher_prize_message: 与 <a target="_blank"href="http://DonorsChoose.org"> DonorsChoose.org</a>
-      合作，Code.org 将提供向美国公立学校有至少15名学生的教提供 1000 美元的课程基金。<a href="http://code.org/educate/20hr">
-      的详细信息请参阅教师指南。</a>
     teacher_pitch: Code.org 老师注册
     teacher_title: "老师登记"
     student_pitch: Code.org 学生注册
@@ -85,6 +78,7 @@
     gender: "性别 （可选）"
     birthday: "生日 （可选）"
     age: Age (optional)
+    user_type: Are you a student or teacher?
     submit: "登陆"
     teacher: "你是老师吗？"
     valid_username: "可用 ！"
@@ -116,7 +110,7 @@
     login: "登录"
   password:
     reset_form:
-      title: "忘记密码？"
+      title: "忘记了您的密码吗？"
       email: "电子邮件地址"
       submit: "发送给我重置密码的指令"
     change_form:
@@ -171,7 +165,7 @@
     teacher_email_required: "老师奖品需要一个已确认电子邮件地址："
     confirm:
       title: "请确认"
-      'no': "否"
+      'no': "不"
       'yes': "是"
       msg: "你确定你希望领取奖品%{prize_name}吗？"
       msg_student: "注意：你只能选择一种奖品。"
@@ -253,7 +247,7 @@
       prizes: "收集所有 %{total_trophies} 的奖杯，并赢取奖品 ！"
       prize_earned: "所有 %{total_trophies} 奖杯都收集了。赢到奖品了 ！"
       prize_us_only: "（仅适用于美国学生）"
-      prizes_link: "更多的信息"
+      prizes_link: "更多信息"
   teacher:
     title:
       one: "你的老师："
@@ -276,8 +270,8 @@
       trophies: "奖杯"
     students:
       name: "姓名"
-      username: "用户名:"
-      password: "密码:"
+      username: "用户名"
+      password: "密码"
       manage: "管理学生"
       dashboard: Go to Teacher Dashboard
       add: "添加学生"
@@ -351,7 +345,6 @@
     student_progress: "你的学习进度"
     student_stats: "你已经获得了%{trophy_count}/%{trophy_max}个“概念掌握”奖杯。"
     student_left_off: "你上次离开的地方："
-    student_finished_prize: "你已经完成了所有的教程，领取你的%{prize_link}并选择另一个班%{online_link}或者学校%{local_school_link}"
     student_finished: "您已经完成了所有教程，选择另一个 %{online_link} 或 {local_school_link} %"
     local_school: "本地学校"
     online: "在线"
@@ -360,17 +353,23 @@
     tryfirst: "或者，你也可以先试一试，晚些再注册："
     trynow: "现在就试试"
     add_hint_help: "请帮助我们将智能提示添加到 Code.org 教程"
-    20hour_overview: "这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，并且所有年龄段学习起来都很有趣。"
+    20hour_overview: "这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。"
     test_videos_help: "在你的学校测试我们新的视频播放器"
     try_beta_courses: "新增功能！尝试我们为K-5 学生准备的 beta 版课程"
     use_as_teacher: "使用本网站作为一名教师"
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: "男性"
     female: "女性"
     none: "不愿回答"
+  user_type:
+    student: "学生"
+    teacher: Teacher
   footer:
     help_from_html: "从谷歌、 微软、 Facebook 和 Twitter 工程师帮助创建本教程。"
     art_from_html: "愤怒的小鸟 ™ & © 2009年-2013 Rovio 娱乐有限公司版权所有。 <br/>植物与僵尸 ™ & © 2013年电子艺术公司保留所有的权利。"
@@ -381,13 +380,6 @@
     tos: "条目"
     privacy: "隐私政策"
     secure: "安全版本"
-  prize_mail:
-    prize_earned:
-      subject: "领取你在 Code.org 的奖品！"
-    teacher_prize_earned:
-      subject: Code.org 的祝贺 ！
-    teacher_bonus_prize_earned:
-      subject: "领取你在 Code.org 的额外奖品！"
   reference_area:
     title: "需要帮助吗？"
     subtitle: "看看这些视频和提示"
@@ -423,7 +415,7 @@
   next_stage: "完成 ！继续下一个阶段"
   download_pdf: "开放课程"
   view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
+  pdf_download: "下载 PDF"
   share_code:
     title: "点击运行程序来观看程序的运行情况"
     bounce_og_title: "看看我的弹球游戏"
@@ -450,7 +442,7 @@
       unused: "未使用的水平"
   upsell:
     hoc:
-      title: "一小时编程"
+      title: "编程一小时"
       body: "请尝试计算机科学的基本知识。数百万人尝试了它"
     flappy:
       title: "飞扬的代码"
@@ -460,11 +452,17 @@
       body: "尝试我们 20 小时计算机科学课程简介 。"
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
       each program in action.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
@@ -474,7 +472,7 @@
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
-    correct_title: Correct
+    correct_title: "正确。"
     correct_body: That is the correct answer.
   match:
     wrong_title: Incorrect solution
@@ -512,7 +510,7 @@
           title: "拼图"
           description: ''
         step:
-          title: "步骤"
+          title: "踏步"
           description: ''
         sample_level_builder:
           title: "样品水平生成器"

@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+require_relative '../pegasus/src/env.rb'
+require src_dir 'database'
+require 'csv'
+
+def main()
+  keys = nil
+  
+  DB[:forms].where(kind:'K5ProfessionalDevelopmentSurvey').each do |row|
+    data = JSON.parse(row[:data]).merge(JSON.parse(row[:processed_data]))    
+
+    unless keys
+      keys = data.keys
+      puts CSV.generate_line keys
+    end
+    puts CSV.generate_line keys.map{|i| data[i]}
+  end
+end
+
+main

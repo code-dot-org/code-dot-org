@@ -8,11 +8,11 @@
 
 # Hour of Code होस्ट गर्नुकोलागी sign up गर्नु भएकोमा धन्यवाद!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
+**हरेक** Hour of Code को व्यवस्थापकले 10 GB ड्रपबाकस वा Skype क्रडिटको $10 को रूपमा धन्यवाद आप प्राप्त गर्नेछ। [ विवरणहरू](http://<%= hostname %>/ पुरस्कारका)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
+तपाइँको [ सबै विद्यालयलाई सहभागी हुन](http://<%= hostname %>/ पूरै-विद्यालय) को लागि तपाइँको सम्पूर्ण विद्यालयका ठूलो पुरस्कारको लागि अवसर लिन दिनुहोस्।
 
 <% end %>
 
@@ -24,19 +24,19 @@ Get your [whole school to participate](http://<%= hostname %>/whole-school) for 
 
 ## २. तपाईको स्कूललाई Hour of Code को प्रस्ताब राखन भन्नुहोश
 
-[Send this email](http://<%= hostname %>/resources#email) or [give this handout to your principal](http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+[यो इमेललाई पठाउनुहोस्](http://<%= hostname %>/resources#email) वा [तपाइँको प्रधानाध्यापकलाई यो हातेपुस्तिका दिनुहोस्](http://<%= hostname %>/files/schools-handout.pdf)। एक पटक तपाइँको विद्यालय समितिमा भएपछि [ तपाइँको विद्यालय र समितिमा जान तपाइँको क्षेत्रका अन्य विद्यालयहरूलाई चुनौतीको लागि प्रविधिको विकासमा $10000 जित्न दर्ता गर्नुहोस्](http://<%= hostname %>/ पुरस्कारहरू)।
 
 <% else %>
 
 ## २. तपाईको स्कूललाई Hour of Code को प्रस्ताब राखन भन्नुहोश
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
+[यो इमेललाई पठाउनुहोस्](http://<%= hostname %>/resources#email) वा [तपाइँको प्रधानाध्यापकलाई यो हातेपुस्तिका दिनुहोस्](http://<%= hostname %>/files/schools-handout.pdf)।
 
 <% end %>
 
 ## ३. तपाईको कम्पनीलाई संलग्न हुन भन्नुहोश
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[यो इमेललाई](http://<%= hostname %>/resources#email) तपाइँको व्यवस्थापक, वा CEO लाई पठाउनुहोस्। वा [तपाइँको प्रधानाध्यापकलाई यो हातेपुस्तिका दिनुहोस्।](http://<%= hostname %>/files/schools-handout.pdf).
 
 ## ४. तपाईको समुदायमा Hour of Code को प्रवर्द्धन गर्नुहोश
 
@@ -44,18 +44,18 @@ Get your [whole school to participate](http://<%= hostname %>/whole-school) for 
 
 ## ५. Hour of Code समर्थनगर्नुकोलागी स्थानीय निर्वाचित आधिकारिकको सहयोग मग्नुहोश
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[यो इमेललाई](http://<%= hostname %>/resources#politicians) तपाइँको मेयर, सहरका सभा, वा विद्यालयको समितिमा पठाउनुहोस्। वा [तिनिहरूलाई यो हातेपुस्तिका दिनुहोस्](http://<%= hostname %>/resources/hoc-one-pager.pdf) र तिनिहरूलाई तपाइँको विद्यालयमा जान आमन्त्रण गर्नुहोस्।
 
 <% if @country == 'ro' %>
 
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
+Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari। Hai sa facem istorie impreuna!
 
-Echipa Hour of Code Romania hoc@adfaber.org
+Code Romania रोमानियन इकिपा hoc@adfaber.org
 
 <% end %>
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org 501c3 नाफा-मुखि होइन। हाम्रो ठेगाना 1301 5th Ave, Suite 1225, Seattle, WA, 98101 हो। यो इमेलहरूलाई रूचाउनु हुँदैन? [सदस्यता नबन्न](%= unsubscribe_link %) .
 
 ![](<%= tracking_pixel %>)

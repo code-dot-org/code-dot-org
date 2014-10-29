@@ -7,8 +7,8 @@
       user:
         name: Sýnilegt nafn
         email: Netfang
-        username: Notandanafn
-        password: Lykilorð
+        username: notandanafn
+        password: lykilorð
         password_confirmation: Staðfesting lykilorðs
         current_password: Núverandi lykilorð
         locale: Tungumál
@@ -31,11 +31,11 @@
     placeholder: Færðu vísbendingu þína inn hér
     submit: Bæta við vísbendingu
   appname: Code.org
-  stage: "Áfangi"
+  stage: "áfangi"
   stage_number: "Áfangi %{number}"
   puzzle: "Þraut"
-  trophies: Bikarar
-  courses: Námskeið
+  trophies: bikarar
+  courses: námskeið
   of: af
   more: MEIRA
   less: MINNA
@@ -44,7 +44,7 @@
   k8intro: Námskeiðið K-8 inngangur að tölvunarfræði (15-25 klst.)
   already_started: 'Ekki að byrja núna? Taktu upp þráðinn hér >> '
   demos: 'Umsjón: Öll sýnidæmi'
-  continue: Halda áfram
+  continue: "Áfram"
   prize: verðlaun
   more_info: Nánar
   auth:
@@ -59,7 +59,7 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft reikning
-    forgot_password: Gleymdir þú lykilorðinu þínu ?
+    forgot_password: Gleymt lykilorð?
     need_confirmation: Fékkstu ekki sendar leiðbeiningar um staðfestingu?
     need_unlock: Fékkstu ekki leiðbeiningar um opnun?
   signup_form:
@@ -72,18 +72,7 @@
     no_signup_message: Þú getur <a target="_blank" href="http://learn.code.org">skoðað
       hina ýmsu áfanga og þrautir</a>, en þú verður að skrá þig til að geta vistað
       árangur þinn.
-    prizes_message: Bandarískir nemendur sem safna öllum %{num_trophies} hugtakabikurunum
-      geta valið ýmiss verðlaun þar á meðal ókeypis pláss á Dropbox, inneign hjá Skype
-      og leikjaniðurhal hjá Electronic Arts.
     teacher_educator_guide: Sjá leiðarvísi kennara
-    teacher_prize_header: Fáðu $1.000 í <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      verðlaun (til og með 15. júní 2014 eða á meðan fjármunir endast)
-    teacher_prize_message: 'Í samstarfi við <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      mun Code.org bjóða allt að $1.000 styrki til bandarískra kennara við opinbera
-      skóla sem leiða a.m.k. 15 nemendur í gegnum námskeiðið K-8 Kynning á tölvunarfræði
-      (til og með 15. júní eða á meðan fjármunir endast).  <a href="http://code.org/educate/20hr">Sjá
-      leiðarvísi kennara</a>.  (Hámark: $1.000 á kennara.  <a target="_blank" href="http://help.donorschoose.org/appcode/answers/detail/a_id/454/kw/appcode.org">Nánar
-      um takmarkanir í spurningalista</a>.)'
     teacher_pitch: Skráning kennara fyrir Code.org
     teacher_title: Nýskráning kennara
     student_pitch: Skráning nemenda fyrir Code.org
@@ -94,6 +83,7 @@
     gender: Kyn (valfrjálst)
     birthday: afmælisdagur (valfrjálst)
     age: Aldur
+    user_type: Are you a student or teacher?
     submit: Skráning
     teacher: Ertu kennari?
     valid_username: Laust!
@@ -129,7 +119,7 @@
     login: Innskráning
   password:
     reset_form:
-      title: Gleymt lykilorð?
+      title: Gleymdir þú lykilorðinu þínu ?
       email: Netfang
       submit: Fá leiðbeiningar um endurstillingu lykilorðs
     change_form:
@@ -185,7 +175,7 @@
     error_us_only: Boðið um verðlaun gildir aðeins fyrir notendur í Bandaríkjunum.
     error_not_earned: "Þú hefur enn ekki unnið til þessara verðlauna."
     error_already_redeemed: Verðlaunin þín hafa þegar verið innleyst.
-    no_prizes_available: "Því miður, en þessa stundina eru engin verðlaun í boði."
+    no_prizes_available: "Því miður en sem stendur eru engin verðlaun til."
     teacher_info_required: 'Fyrir verðlaun kennara þarf nafn og heimilisfang skóla:'
     teacher_email_required: 'Fyrir verðlaun kennara þarf staðfest netfang:'
     confirm:
@@ -275,7 +265,7 @@
       settings: Reikningurinn minn
       prizes: Verðlaun
       logout: Skrá út
-      signin: Skrá inn
+      signin: Innskráning
       signup: Skráning
       already_registered: "Þegar skráð/ur?"
     popup:
@@ -287,7 +277,7 @@
       prizes: Safnaðu öllum %{total_trophies} bikurunum og fáðu verðlaun!
       prize_earned: "Öllum %{total_trophies} bikurunum safnað. Verðlaun unnin!"
       prize_us_only: "(aðeins bandarískir nemendur)"
-      prizes_link: nánar
+      prizes_link: Nánar
   teacher:
     title:
       one: 'Kennari þinn:'
@@ -307,11 +297,11 @@
       not_tried: Ekki reynt við enn
       activity: Sýnir virkni nemenda síðustu %{hours} %{plural} klst.
       no_section: Enginn úthlutaður hópur
-      trophies: Bikarar
+      trophies: bikarar
     students:
       name: Nafn
-      username: Notandanafn
-      password: Lykilorð
+      username: notandanafn
+      password: lykilorð
       manage: Umsjón nemenda
       dashboard: Fara á stjórnborð kennara
       add: Bæta við nemendum
@@ -393,8 +383,6 @@
     student_stats: Þú hefur unnið til %{trophy_count} af %{trophy_max} mögulegum "Concept
       Mastery" bikurum.
     student_left_off: "Þú varst hér síðast:"
-    student_finished_prize: "Þú hefur lokið öllu kennsluefninu. Innleystu verðlaunin
-      þín %{prize_link} og veldu annað nám á netinu: %{online_link} eða í skóla: %{local_school_link}"
     student_finished: "Þú hefur lokið öllu kennsluefninu. Veldu annað nám á netinu:
       %{online_link} eða í skóla: %{local_school_link}"
     local_school: nálægur skóli
@@ -406,19 +394,25 @@
     trynow: Prófa núna
     add_hint_help: Vinsamlegast hjálpaðu okkur að bæta gagnlegum vísbendingum við
       kennsluna á Code.org
-    20hour_overview: "Þetta 20 klst. námskeið kynnir grunnhugtök í tölvunarfræði og
-      forritun. Námskeiðið er hannað til notkunar í skólum fyrir aldurshópinn 13 -
-      14 ára, en er skemmtileg leið til að læra fyrir alla aldurshópa."
+    20hour_overview: "Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði
+      og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi K-8,
+      en er skemmtilegt fyrir alla aldurshópa."
     test_videos_help: Prófaðu nýja myndbandaspilarann okkar í skólanum þínum
     try_beta_courses: Nýtt! Prófaðu beta námskeiðin okkar fyrir 10 - 11 ára nemendur
     use_as_teacher: Nota þennan vef sem kennari
     heading_elementary: "<h2>20 klst. námskeið fyrir</h2><h1>grunnskólanemendur</h1>"
     heading_apps: "<h2>Skemmtun fyrir</h2><h1>alla</h1>"
     heading_legacy: "<h2>Almenna námskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>"
+    gallery:
+      your_turtle: Listaverkin mín
+      your_studio: Forritin mín
   gender:
     male: Karlkyns
     female: Kvenkyns
     none: Kýs að svara ekki
+  user_type:
+    student: nemandi
+    teacher: Kennari
   footer:
     help_from_html: Tæknifólk hjá Google, Microsoft, Facebook og Twitter aðstoðuðu
       við gerð þessa kennsluefnis.
@@ -432,20 +426,13 @@
     tos: Skilmálar
     privacy: Persónuvernd
     secure: "Örugg útgáfa"
-  prize_mail:
-    prize_earned:
-      subject: Leystu út verðlaunin þín á Code.org!
-    teacher_prize_earned:
-      subject: Haminguóskir frá Code.org!
-    teacher_bonus_prize_earned:
-      subject: Leystu út bónusinn þinn á Code.org!
   reference_area:
     title: Vantar þig aðstoð?
     subtitle: Skoðaðu þessi myndbönd og vísbendingar
     teacher: Sjá lausnina
     auth_error: "Þú hefur ekki heimild til að sjá lausnina."
     submit: Uppfæra stað listamanns
-    direction: Stefna í upphafi
+    direction: Upphafsstefna (í gráðum)
   video:
     tab: Myndbönd.
     notes: Ekkert myndband? Sýna útskýringar.
@@ -454,7 +441,7 @@
     download: Hala niður myndband
   compatability:
     working:
-      header: Við erum að vinna að stuðningi við vafrann þinn.
+      header: Við erum að vinna í stuðningi við vafrann sem þú notar.
       message: Code.org notar nútíma veftækni. Þetta gerir vefinn hraðvirkari. Vafrinn
         þinn ræður ekki við alla tækni sem er notuð og því geta komið upp vandamál
         þegar þú notar þennan hluta vefsins. Vinsamlegast hjálpaðu okkur með því að  <a
@@ -474,7 +461,7 @@
   next_stage: Búið! Halda áfram í næsta áfanga
   download_pdf: Opin kennsluáætlun
   view_lesson_plan: Skoða kennsluáætlun
-  pdf_download: Hlaða niður PDF
+  pdf_download: Hala niður PDF
   share_code:
     title: Smelltu á "Keyra" til að prófa forritið mitt
     bounce_og_title: Kíktu á skoppleikinn minn
@@ -501,7 +488,7 @@
       unused: "Ónotaðir áfangar"
   upsell:
     hoc:
-      title: Kóðun í klukkustund
+      title: Klukkustund kóðunar
       body: Prófaðu undirstöðuatriði tölvunarfræði. Miljónir hafa gert það.
     flappy:
       title: Flappy kóði
@@ -512,11 +499,17 @@
       body: Prófaðu 20 klst. námskeiðið Kynning á tölvunarfræði.
   gallery:
     students_drew_these_with_code: Nemendur teiknuðu þetta með kóða!
+    students_made_these_with_code: Nemendur gerðu þetta með forritun!
     picture_count: Undanfarna <b>%{days}</b> daga hafa nemendur teiknað <b>%{count}</b>
       myndir með því að skrifa eigin tölvuforrit. Smelltu á myndirnar til að sjá hvernig
       forritin virka.
+    activity_count: Undanfarna <b>%{days}</b> daga hafa nemendur búið til <b>%{count}</b>
+      forrit og myndir með því að skrifa eigin tölvuforrit. Smelltu á myndirnar og
+      skjásýnin til að sjá forritin virka.
     want_to_make_your_own: Viltu búa til þitt eigið?
     more: Meira &rarr;
+    caption_by_name_age: höfundur %{name}, %{age} ára
+    caption_time_ago: fyrir %{time_ago}
   landing:
     prerelease: "Þetta námskeið er á <span class='betatext'>beta stigi</span>.  Það
       þýðir að þetta er ekki endanleg útgáfa af námskeiðinu og það getur breyst þegar
@@ -546,11 +539,11 @@
       name:
         20-hour:
           title: Námskeiðið K-8 inngangur að tölvunarfræði (15-25 klst.)
-          description: "Þetta 20 klst. námskeið kynnir grunnhugtök í tölvunarfræði
-            og forritun. Námskeiðið er ætlað til notkunar í skólum fyrir aldurhópinn
-            13 - 14 ára, en er skemmtileg leið til að læra fyrir alla aldurshópa."
+          description: "Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði
+            og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi
+            K-8, en er skemmtilegt fyrir alla aldurshópa."
         Hour of Code:
-          title: Kóðun í klukkustund
+          title: Klukkustund kóðunar
           description: ''
         edit-code:
           title: Breyta kóða

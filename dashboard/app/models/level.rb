@@ -2,10 +2,14 @@ class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
   has_many :script_levels, dependent: :destroy
-  belongs_to :solution_level_source, :class_name => "LevelSource"
+  belongs_to :solution_level_source, :class_name => "LevelSource" # TODO do we even use this
+  belongs_to :ideal_level_source, :class_name => "LevelSource" # "see the solution" link uses this
   belongs_to :user
+  has_many :level_sources
+
   validates_length_of :name, within: 1..70
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
+
   after_save :write_custom_level_file
   after_destroy :delete_custom_level_file
 
@@ -157,20 +161,12 @@ class Level < ActiveRecord::Base
   end
 
   def calculate_ideal_level_source_id
-    result = 
-      Activity.where(level_id: self).
-      where("test_result >= #{Activity::FREE_PLAY_RESULT}").
-      group(:level_source_id).
-      order('activity_count').
-      limit(1).
-      pluck('level_source_id, count(*) as activity_count')
+    ideal_level_source =
+      level_sources.
+      includes(:activities).
+      max_by {|level_source| level_source.activities.where("test_result >= #{Activity::FREE_PLAY_RESULT}").count}
 
-    # even though we ask for only one result, pluck returns an array
-    # of pairs, eg: [[23, 100]] (meaning level_source_id 23 was used
-    # 100 times)
-    
-    self.ideal_level_source_id = result.try(:first).try(:first)
-    self.save!
+    self.update_attribute(:ideal_level_source_id, ideal_level_source.id) if ideal_level_source
   end
 
   private

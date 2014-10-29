@@ -6,9 +6,9 @@ ro:
     attributes:
       user:
         name: Numele afișat
-        email: Email
-        username: Nume de utilizator
-        password: Parolă
+        email: E-mail
+        username: nume de utilizator
+        password: parolă
         password_confirmation: Confirmarea parolei
         current_password: Parolă curentă
         locale: Limbă
@@ -31,11 +31,11 @@ ro:
     placeholder: Te rugăm să introduci indiciul tău aici
     submit: Adaugă sugestie
   appname: Code.org
-  stage: Etapă
+  stage: etapă
   stage_number: 'Stage %{number}'
   puzzle: Puzzle
-  trophies: Trofee
-  courses: Cursuri
+  trophies: trofee
+  courses: cursuri
   of: de
   more: MAI MULT
   less: MAI PUŢIN
@@ -65,10 +65,7 @@ ro:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'Poţi <a target="_blank" href="http://learn.code.org"> parcurge diverse stadii şi puzzle-uri</a>, dar va trebui să te înregistrezi pentru a-ți salva progresul.'
-    prizes_message: 'Studenții din S.U.A. care câștigă toate %{num_trophies} trofeele de concept pot selecta o varietate de premii precum spațiu gratuit de Dropbox, credite Skype, și jocuri descărcabile de la Electronic Arts.'
     teacher_educator_guide: Consultă ghidul educatorului
-    teacher_prize_header: 'Câştigă 1000 dolari în <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> recompense (până la 15 iunie 2014, în limita stocului disponibil)'
-    teacher_prize_message: 'In parteneriat cu <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>, Code.org va oferi până la 1000$ pentru fondul clasei către profesori americani din sistemul public de învăţământ care conduc cel puţin 15 studenţi prin cursurile de la K-8 Intro până la Ştiinţa Calculatoarelor (până la 15 iunie 2014, în limita stocului disponibil).  <a href="http://code.org/educate/20hr">Consultă ghidul educatorului</a>.  (Limita: 1000$ per profesor.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">Consultă FAQ pentru mai multe detalii despre limite</a>.)'
     teacher_pitch: Profesor înscriere Code.org
     teacher_title: Înregistrare Profesor
     student_pitch: Student înscriere Code.org
@@ -79,7 +76,8 @@ ro:
     gender: Sex (opţional)
     birthday: Ziua de naştere (opţional)
     age: Vârsta
-    submit: Înscrie-te
+    user_type: Are you a student or teacher?
+    submit: Inregistrează-te
     teacher: Ești profesor?
     valid_username: Disponibil!
     invalid_username: Numele de utilizator trebuie să aibe cel puțin 5 caractere
@@ -225,7 +223,7 @@ ro:
       prizes: Premii
       logout: Deloghează-te
       signin: Loghează-te
-      signup: Înregistrează-te
+      signup: Inregistrează-te
       already_registered: Eşti deja înregistrat?
     popup:
       progress: Progresul tău
@@ -236,7 +234,7 @@ ro:
       prizes: 'Colectează toate cele %{total_trophies} trofee și câștigă premii!'
       prize_earned: 'Toate cele %{total_trophies} trofee au fost colectate. Premiu câștigat!'
       prize_us_only: (Numai pentru studenţii din SUA)
-      prizes_link: mai multe informaţii
+      prizes_link: Mai multe informaţii
   teacher:
     title:
       one: 'Profesorul tău:'
@@ -256,11 +254,11 @@ ro:
       not_tried: Nu a fost încercat incă
       activity: 'Indică activitatea elevului din ultimele %{hours} %{plural}'
       no_section: Nici o secţiune atribuită
-      trophies: Trofee
+      trophies: trofee
     students:
       name: Nume
-      username: Nume de utilizator
-      password: Parolă
+      username: nume de utilizator
+      password: parolă
       manage: Gestionează elevi
       dashboard: Du-te la Tabloul de Bord al Profesorilor
       add: Adaugă elevi
@@ -329,7 +327,6 @@ ro:
     student_progress: Progresul tău de învățare
     student_stats: 'Ai câştigat %{trophy_count} din cele %{trophy_max} trofee de "Concept de Măestrie"'
     student_left_off: 'Unde ai rămas:'
-    student_finished_prize: 'Ai completat toate tutorialele, revendică-ți %{prize_link} și alege o altă clasă %{online_link} sau la o %{local_school_link}'
     student_finished: 'Ai completat toate tutoriale, alege o altă clasă %{online_link} sau la o altă școală %{local_school_link}'
     local_school: şcoală locală
     online: online
@@ -345,10 +342,16 @@ ro:
     heading_elementary: '<h2>curse de 20 de ore pentru</h2><h1>Elevi Primari</h1>'
     heading_apps: '<h2>Distracţie pentru</h2><h1>Toată lumea</h1>'
     heading_legacy: '<h2>Cursul nostru general pentru</h2><h1>Toate vârstele</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: De sex masculin
     female: De sex feminin
     none: Prefer să nu răspund
+  user_type:
+    student: elev
+    teacher: Teacher
   footer:
     help_from_html: Ingineri de la Google, Microsoft, Facebook şi Twitter au ajutat la creearea acestui tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Toate Drepturile Rezervate.'
@@ -359,20 +362,13 @@ ro:
     tos: Termeni
     privacy: Politică de confidențialitate
     secure: Versiunea Securizată
-  prize_mail:
-    prize_earned:
-      subject: Revendică-ți premiul la Code.org!
-    teacher_prize_earned:
-      subject: Felicitări din partea Code.org!
-    teacher_bonus_prize_earned:
-      subject: Revendică-ți premiul bonus la Code.org!
   reference_area:
     title: Ai nevoie de ajutor?
     subtitle: Vezi aceste clipuri video şi sugestii
     teacher: Vezi soluția
     auth_error: Nu ești autorizat pentru a vedea soluția.
     submit: Actualizează locaţia Artistului
-    direction: Începe Direcţia
+    direction: Start Direction (in degrees)
   video:
     tab: Video.
     notes: Nici un video? Arată note.
@@ -381,11 +377,11 @@ ro:
     download: Descarcă Video
   compatability:
     working:
-      header: We are working on support for your browser.
+      header: Momentan efectuăm lucrări de susținere a browser-ului tău.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
       hide_this_warning: Hide this warning
     upgrade:
-      header: Please upgrade your browser.
+      header: Te rugăm să-ți actualizezi browser-ul.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
       button: Take me to the list of supported browsers
   slow_loading: Aceasta durează mai mult decât de obicei...
@@ -427,9 +423,13 @@ ro:
       body: Încearcă cursul nostru de 20 de ore Introducere în Știința Calculatorului.
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'In ultimele  <b>%{days}</b> zile, studenții au desenat<b>%{count}</b> imagini prin propriile programe pe calculator. Selectează imaginile pentru a vedea fiecare program în acțiune.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Vrei să realizezi propriul tău program?
     more: 'Mai mult &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "Acest curs este în <span class='betatext'>beta</span>. Asta înseamnă că aceasta nu este versiunea finală a cursului, şi poate fii revizuit din moment ce orice critică este bine venită şi cursul este îmbunătăţit."
     feedback: Trimiteți feedback
@@ -460,28 +460,28 @@ ro:
           description: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.
         Hour of Code:
           title: Oră de Cod
-          description: ""
+          description: '[șir gol]'
         edit-code:
           title: Editează Codul
-          description: ""
+          description: '[șir gol]'
         events:
           title: Evenimente
-          description: ""
+          description: '[șir gol]'
         builder:
           title: Constructor
-          description: ""
+          description: '[șir gol]'
         flappy:
           title: Codul Flappy
           description: Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția noastră Codul Floppy!
         jigsaw:
           title: Puzzle
-          description: ""
+          description: '[șir gol]'
         step:
           title: Pas
-          description: ""
+          description: '[șir gol]'
         sample_level_builder:
           title: Constructor de niveluri de probă
-          description: ""
+          description: '[șir gol]'
   age_interstitial:
     age: Varsta ta
     header: Actualizarea Informaţiilor Contului

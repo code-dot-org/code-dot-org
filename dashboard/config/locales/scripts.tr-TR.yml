@@ -52,7 +52,7 @@
         course2:
           The Maze: Labirent
           Suzi: Suzi
-          The Artist: Aktör
+          The Artist: Sanatçı
           Artist Debugging: Aktör Ayıklama
           Bounce: Sıçrama
           'Studio: Create a Story': 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
@@ -66,12 +66,12 @@
           Bee Debugging: Arı Ayıklama
           Bee Functions: Arı Fonksiyonları
           Maze Loops: Labirent Döngüleri
-          Graph Paper Programming: Grafik Kağıdı Programlama
+          Graph Paper Programming: Grafik Kağıdıyla Programlama
           'Real-life Algorithms: Paper Planes': 'Gerçek-yaşam Algoritmaları: Kağıt
             Uçaklar'
           Getting Loopy: Döngüselleşme
           Relay programming: Röle Programlama
-          Conditionals: Koşullandırıcılar
+          Conditionals: Koşullar
           Binary Bracelets: "İkilik Bileklikler"
           The Big Event: Büyük Olay
           Your Digital Footprint: Dijital İziniz
@@ -95,12 +95,12 @@
         course3:
           The Maze: Labirent
           'Studio: Create a Story': 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
-          The Artist: Aktör
+          The Artist: Sanatçı
           title: Kurs 3
           Artist Functions: Aktör Fonksiyonları
           Artist For Loops: Döngüler İçin Aktör
           Artist Nested Loops: Aktörle Yerleştirilmiş Döngüler
-          Bee Conditionals: Arı Koşullandırıcıları
+          Bee Conditionals: Arı Koşullandırmaları
           Bee Nested Loops: Arıya Yerleştirilmiş Döngüler
           Bee Debuggin: Arı Ayıklama
           Bee Debugging: Arı Ayıklama
@@ -145,10 +145,11 @@
           'Bee: Nested Loops2': 'Arı: Yerleştirilmiş Döngüler2'
           'Bee: Debugging2': 'Arı: Ayıklama2'
           'Artist: Patterns': 'Artist: Patterns'
+          Songwriting: "Şarkı yazma"
         msm:
           title: Ortaokul Matematiği
           description: Ortaokul Matematiği için özel çalışma sürüyor.
-          Graph Paper Programming: Grafik Kağıdıyla Programlama
+          Graph Paper Programming: Grafik kağıdı programlama
           Assessments: Değerlendirmeler
           Unit 1: "Ünite 1"
           Unit 2: "İkinci Ünite"

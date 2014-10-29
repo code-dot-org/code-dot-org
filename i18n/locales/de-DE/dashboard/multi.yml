@@ -42,7 +42,7 @@ de:
       2-3 bee conditionals multi 2:
         Bee Conditionals Multiple Choice Two: Bienen Bedingungen Multiple Choice Zwei
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500
-        Choose the best blocks.: Wähle die besten Bausteine.
+        Choose the best blocks.: Wähle den besten Baustein.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png
@@ -50,7 +50,7 @@ de:
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: Bienen Bedingungen Multiple Choice Zwei
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
-        Choose the best blocks: Wähle den besten Baustein
+        Choose the best blocks: Wähle die besten Bausteine
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -106,10 +106,10 @@ de:
       2-3 Conditionals Multi 1:
         Multiple Choice: Multiple-Choice
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        These are your team's cards - according to the rules of the game, which set is scored correctly?: "These are your team's cards - according to the rules of the game, which set is scored correctly?"
+        According to the rules of the game, which set of cards is scored correctly?: According to the rules of the game, which set of cards is scored correctly?
+        /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
-        /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a4.png: /script_assets/2-3_images/unplugged/conditionals_1_a4.png
       2-3 Getting Loopy Multi 1:
         Multiple Choice: Multiple-Choice
@@ -181,7 +181,7 @@ de:
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
         0: '? Eine lila Blume nimmtentweder 3, 2 oder 1 Nektar auf, aber man weiß nicht wie viele. Welche Bausteine prüfen und sammeln allen Nektar aus einer lila Blume?'
         1: ': Eine lila Blume nimmtentweder 3, 2 oder 1 Nektar auf, aber man weiß nicht wie viele. Welche Bausteine prüfen und sammeln allen Nektar aus einer lila Blume?'
-        Choose the best blocks.: Wähle die besten Bausteine.
+        Choose the best blocks.: Wähle den besten Baustein.
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
@@ -214,7 +214,7 @@ de:
       4-5 maze multi 1:
         Maze Multiple Choice: Labyrinth Multiple Choice
         /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500
-        Which blocks solve the puzzle?: Welche Bausteine lösen das Rätsel?
+        Which blocks solve the puzzle?: Welcher Baustein löst das Rätsel?
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
@@ -222,7 +222,7 @@ de:
       4-5 maze conditionals multi 1:
         Maze Conditionals Multiple Choice: Labyrinth-Bedingungen Multiple-Choice
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500
-        Which blocks solve the puzzle?: Welche Bausteine lösen das Rätsel?
+        Which blocks solve the puzzle?: Welcher Baustein löst das Rätsel?
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
@@ -296,7 +296,6 @@ de:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
-        /script_assets/4-5_images/unplugged/suncatchers_2_a4.png: /script_assets/4-5_images/unplugged/suncatchers_2_a4.png
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple-Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -444,7 +443,7 @@ de:
         Which word is spelled?: Welches Wort wird geschrieben?
         SET: SATZ
         SQUARE: QUADRAT
-        SOUTH: SÜDEN
+        SOUTH: SÜD
       K-1 multi 4:
         Driver and Helper: Fahrer und Helfer
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
@@ -483,7 +482,7 @@ de:
         When converting a circle to code, the correct order is: Wenn man den Kreis in Code umschreibt, ist die Richtige Reihenfolge
         top, left, right: oben, links, rechts
         left, right, top: links, rechts, oben
-        random: zufällige
+        random: zufällig
         left top right: links oben rechts
       Circle to code:
         Code from Circle: Code aus Kreis
@@ -510,10 +509,10 @@ de:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(Rechteck (+ 8 2) (-7-5) "Solid" "rot")'
         (rectangle (+ 8 2) (- 7 5) solid red): '(Rechteck (+ 8 2) (-7 5) "solid" "rot")'
       test multi image:
-        Maze Multiple Choice Two: Labyrinth Multiple-Choice Zwei
+        Maze Multiple Choice Two: Multiple-Choice Labyrinth Zwei
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
         This puzzle is all about selecting the correct flowers.: Dieses Puzzle dreht sich um die Auswahl der richtigen Blumen.
-        Instructions: Anleitung
+        Instructions: Anweisungen
         Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: Klicke auf die richtige Antwort, dann sende sie. Hier sind einige längere Anweisungen um noch mehr zu testen? Wie siehts mit dem Zeilenumbruch aus?
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Which flowers are yellow?: Welche Blumen sind gelb?

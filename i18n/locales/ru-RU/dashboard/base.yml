@@ -2,13 +2,13 @@ ru:
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: требуется
     attributes:
       user:
-        name: Display Name
+        name: Имя в системе
         email: Электронная почта
-        username: Имя пользователя
-        password: Пароль
+        username: имя пользователя
+        password: пароль
         password_confirmation: Подтверждение пароля
         current_password: Текущий пароль
         locale: Язык
@@ -31,11 +31,11 @@ ru:
     placeholder: Пожалуйста, введите Вашу подсказку здесь
     submit: Добавить подсказку
   appname: Code.org
-  stage: Этап
-  stage_number: 'Stage %{number}'
+  stage: этап
+  stage_number: 'Этап %{number}'
   puzzle: Головоломка
-  trophies: Кубки
-  courses: Курсы
+  trophies: трофеи
+  courses: курсы
   of: из
   more: ЕЩЁ
   less: СВЕРНУТЬ
@@ -50,28 +50,25 @@ ru:
   auth:
     sign_in_with: 'Войти через %{provider}'
     signed_in: Вошли!
-    signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
+    signed_out: 'Вы вышли с сайта <a href="%{url}"> Code.org</a>.'
+    sign_out_of: 'Вы использовали %{provider}, чтобы зайти.  <a href="%{url}">Нажмите здесь</a>, чтобы выйти из %{provider}.'
     already_signedup: Уже зарегистрировались?
     notyet_signedup: Еще не присоединились?
     google_oauth2: Google Account
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft Account
-    forgot_password: Забыли Ваш пароль?
+    forgot_password: Забыли пароль?
     need_confirmation: Не получили письмо для подтверждения?
     need_unlock: Не получили письмо-инструкцию для разблокировки?
   signup_form:
-    overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
-    overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
+    overview_student: 'Зарегистрироваться, чтобы отслеживать свои успехи. Ваш электронный адрес используется, главным образом, для  входа в систему и для восстановления пароля. Дополнительную информацию смотрите в наших <a href="http://code.org/privacy">Правилах  конфиденциальности</a>.'
+    overview_teacher: 'Зарегистрируйтесь для преподавания информатики в Вашем классе. <p/> Вы сможете включать Ваших учеников и отслеживать их прогресс.'
     no_signup_message: 'Вы можете <a target="_blank" href="http://learn.code.org"> просматривать различные этапы и головоломки</a>, но Вам нужно зарегистрироваться, чтобы сохранять свои  результаты.'
-    prizes_message: 'Американские ученики, которые получили все %{num_trophies} кубков, могут выбрать различные призы, включая дисковое пространство на Dropbox.com, кредит в Skype и игры,  скачиваемые с Electronic Arts.'
     teacher_educator_guide: Смотри руководство учителя
-    teacher_prize_header: 'Выиграй $1000 в <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> награду (через 15 июня 2014, до тех пор, пока последние поставки)'
-    teacher_prize_message: 'В партнерстве с <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> Code.org будет предлагать до $1000 в классе средства для учителей государственных школ США, которые ведут по меньшей мере 15 студентов через K-8 Введение в курс информатики (через 15 июня 2014, в то время как последние поставки).  <a href="http://code.org/educate/20hr"> педагог в руководстве</a>.  (Ограничение: $1000 за учителем.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org"> Подробнее об ограничений в разделе FAQ</a>.)'
-    teacher_pitch: 'подписаться на code.org  для учителей'
+    teacher_pitch: 'Регистрация на code.org  для учителей'
     teacher_title: Регистрация учителя
-    student_pitch: подписка на code.org для учеников
+    student_pitch: 'Регистрация на code.org  для учеников'
     student_title: Регистрация для ученика
     school_name: Название школы (не обязательно)
     school_address: Адрес школы (не обязательно)
@@ -79,6 +76,7 @@ ru:
     gender: Пол (не обязательно)
     birthday: Дата рождения (не обязательно)
     age: Возраст
+    user_type: Are you a student or teacher?
     submit: Зарегистрироваться
     teacher: Вы учитель?
     valid_username: Доступно!
@@ -87,15 +85,15 @@ ru:
     valid_password: Действительный пароль!
     invalid_password: Пароль должен содержать не менее 6 символов
     mismatch_password: Введённые пароли не совпадают
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
-    teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
-    additional_information: We need some additional information to continue signing you up.
+    student_terms: "Я принимаю <a href='http://code.org/tos'>условия предоставления услуг</a> Code.org. Если я младше 13 лет, я подтверждаю, отправляя эту форму, что у меня есть разрешение моих родителей или законного опекуна на пользование услугами Code.org. <br/>Для пользователей младше 13 лет адреса электронной почты, не хранятся в форме, которая позволяет нам связаться с ними."
+    teacher_terms: "Я согласен с условиями предоставления услуг <a href='http://code.org/tos'>  Code.org</a>."
+    additional_information: Нам нужна дополнительная информация для продолжения Вашей регистрации.
   signin_form:
     title: Уже зарегистрированы? Войти
     login: Адрес электронной почты или имя пользователя
     password: Пароль
     remember: Запомнить меня
-    submit: Войти
+    submit: Вход
   signin:
     try_heading: Начать кодирование без регистрации
     try_hoc: Попробуйте сначала один Час Кода
@@ -108,7 +106,7 @@ ru:
     login: Вход
   password:
     reset_form:
-      title: Забыли пароль?
+      title: Забыли Ваш пароль?
       email: Адрес электронной почты
       submit: Отправить мне инструкцию для изменения пароля
     change_form:
@@ -145,12 +143,12 @@ ru:
     title: 'Востребовать призы: %{name}'
     provider: 'Поставщик:'
     code: 'Код:'
-    redeem_header: 'To redeem:'
+    redeem_header: 'Востребовать:'
     donorschoose_register: Зарегистрируйтесь как учитель на DonorsChoose.org
     donorschoose_project: опубликовать проект
     donorschoose_how_to: Как использовать Ваш код
-    success: Your prize was succesfully redeemed, see code below.
-    error: Your prize could not be redeemed, please try again.
+    success: Ваш приз был успешно реализован, см. код ниже.
+    error: Ваш приз не может быть реализован, пожалуйста, попробуйте еще раз.
     error_us_only: Предложение приза действительно только для пользователей в США.
     error_not_earned: Вы ещё не заработали этот приз.
     error_already_redeemed: Ваш приз уже получен.
@@ -161,10 +159,10 @@ ru:
       title: Будь любезен, подтверди
       "no": Нет
       "yes": Да
-      msg: 'Are you sure you want to claim the %{prize_name} prize?'
-      msg_student: 'NOTE: You can only choose one type of prize.'
+      msg: 'Вы уверены, что хотите востребовать приз %{prize_name}?'
+      msg_student: 'Примечание: Можно выбрать только один вид приза.'
       msg_publicschool: Пожалуйста, подтвердите, что Вы являетесь учителем государственной школы США.
-      msg_visit_website: Visit website
+      msg_visit_website: Посетите веб-сайт
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
@@ -180,16 +178,16 @@ ru:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Вы заработали приз! (Только для учеников в США)
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      not_earned_title: Закончите учебник, заработайте призы (только для учащихся в США)
       not_earned: 'Изучите основы информатики, соберите все %{num_trophies} кубков, и получите реальные призы. Вы можете выбрать 10GB на Dropbox, $10 кредит Skype или бесплатное скачивание игр. ПРИМЕЧАНИЕ: действительно только для учеников в США, пока призы не закончатся.'
       teacher:
         earned: '10 или более учеников собрали все %{num_trophies} кубков. Вы выиграли учительский приз $750! (Только для учителей США)'
-        not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
+        not_earned_title: 'Обучите класс, заработайте до $1000 от <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> (только для учителей в США)'
         not_earned: |
           Для поддержки начинаюших преподавателей информатики, вы можете заработать до $1000 кредита в <a href="http://DonorsChoose.org"> Dono
           rsChoose.org</a>  за проведение вступительного курса для класса учеников. Чтобы получить кредит, вам нужно иметь не менее 15 учеников, успешно закончивших вступительный курс, в течение которого все 15 учеников (или более) завершат все занятия и заработают все %{num_trophies} кубков. Если 7 или более из них - девочки, ваша награда составляет $1,000. В противном случае ваша награда составляет $750. Кредиты могут использоваться только преподавателями в государственных школах США.
         bonus:
-          not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
+          not_earned_title: 'Вы все равно можете заработать дополнительные $250 кредита от <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> (только для учителей США)'
           earned: '7 или более учеников, которые собрали все %{num_trophies} трофеев — девочки. Вы получаете специальный приз! (Только для учителей в США)'
           not_earned: 'Если по крайней мере 7 Ваших учеников, которые заработали все  %{num_trophies}  кубков - девочки, Вы премируетесь дополнительным кредитом $250  от <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Кредит <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> может использоваться только учителями в государственных школах США.'
   crud:
@@ -210,7 +208,7 @@ ru:
       finished_hoc: Я закончил мой Час Кода
       sign_in_to_save: Войдите для сохранения результатов
       free_play:
-        playlab: Make an App
+        playlab: Создать приложение
         artist: Draw Something
     user:
       classroom: Мои ученики
@@ -219,9 +217,9 @@ ru:
       settings: Моя регистрация
       prizes: Призы
       logout: Выйти
-      signin: Войти
+      signin: Вход
       signup: Зарегистрироваться
-      already_registered: Already registered?
+      already_registered: Уже зарегистрированы?
     popup:
       progress: Ваши результаты
       lines: 'Всего строк кода: %{lines}'
@@ -231,7 +229,7 @@ ru:
       prizes: 'Соберите все %{total_trophies} кубков и выиграйте призы!'
       prize_earned: 'Все %{total_trophies} кубков собраны. Ты выиграл  приз!'
       prize_us_only: (Только для учеников в США)
-      prizes_link: подробнее
+      prizes_link: Дополнительная информация
   teacher:
     title:
       one: 'Ваш учитель:'
@@ -243,10 +241,10 @@ ru:
     followers:
       section: 'Section:'
       stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      show_past: 'Показать деятельность ученика (%{bullet_html}) в прошлом:'
       levels_key: Levels key
       perfect: Completed, perfect
-      completed: Completed, but using too many blocks
+      completed: Завершено, но использовано слишком много блоков
       tried: Tried, but not completed
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
@@ -254,36 +252,36 @@ ru:
       trophies: трофеи
     students:
       name: Имя
-      username: Логин
-      password: Пароль
+      username: имя пользователя
+      password: пароль
       manage: Управление учениками
-      dashboard: Go to Teacher Dashboard
+      dashboard: Перейти к панели учитель
       add: Пригласить учеников
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
+      remove: удалить ученика
+      confirm_remove: Вы уверены, что хотите удалить этого ученика?
       help_reassign: To divide your class into multiple sections, select students to assign to a new section.
       help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
+      register: Попросите ваших учеников зарегистрироваться самостоятельно
+      vist: Предложите Вашим ученикам посетить
       section_code: 'and enter their section-code:'
-      first_please: 'First, please %{add_section}'
+      first_please: 'Во-первых, пожалуйста %{add_section}'
       for: For
-      enter: 'enter:'
+      enter: 'введите:'
     sections:
       add: Add section
       manage: Управление классами
-      section: Section
-      students: Students
-      section_code: Section Code
+      section: Раздел
+      students: Ученики
+      section_code: Код раздела
       add_section_code: Add Students Section-Code
-      secret: Secret type
-      grade: Grade
-      course: Course
-      rename: rename
-      edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
+      secret: Секретный тип
+      grade: Оценка
+      course: Курс
+      rename: переименовать
+      edit: редактировать
+      delete: удалить
+      confirm_delete: Вы уверены, что хотите удалить этот раздел?
+      email: Отправить письмо
     rollup: Панель контроля хода выполнения
     activity: Последние данные по работе класса
     user_not_found: Преподаватель или ученик не может быть найден
@@ -296,20 +294,20 @@ ru:
     new_password_hint: (оставьте пустым, если не хотите ничего менять)
     current_password_hint: (нам нужен Ваш текущий пароль для подтверждения изменений)
     cancel:
-      title: Аннулирование регистрации
+      title: Аннулировать регистрацию
       hint: Недоволен?
-      button: Аннулировать регистрацию
+      button: Аннулирование регистрации
   user_level:
     completed: Завершено
     tried: Пытался
   user_stats:
     recent_activity: Последние данные по работе
     show_more: Показать ещё
-    classroom_activity: Отключить активность
+    classroom_activity: Урок без компьютера
   home:
-    title: Code Studio
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    title: Студия кода
+    all_courses: Обзор курсов 1, 2 и 3
+    lesson_plans: Планы уроков
     signin_message: 'Уже зарегистрированы? %{link}'
     student_reg_link: Регистрация для ученика
     teacher_reg_link: Регистрация для учителя
@@ -324,80 +322,78 @@ ru:
     student_progress: Ваши результаты обучения
     student_stats: 'Вы заработали %{trophy_count} из %{trophy_max} возможных кубков "Знаток  основ".'
     student_left_off: 'Вы остановились:'
-    student_finished_prize: 'Вы прошли весь материал, Востребуйте свой %{prize_link} и выберите другой курс %{online_link} или в %{local_school_link}'
     student_finished: 'Вы завершили весь материал, выберите другой курс %{online_link} или в %{local_school_link}'
     local_school: местная школа
     online: онлайн
     see_details: Подробнее
-    prize_info: 'Призы за участие (только для учителей государственных школ США): до $1000 в каждом классе.'
+    prize_info: 'Призы за участие (только для учителей государственных школ США): до $1000 на  класс.'
     tryfirst: 'Или Вы можете сначала попробовать, а зарегистрироваться позже:'
     trynow: Попробуйте сейчас
     add_hint_help: Пожалуйста, помогите нам добавить умные подсказки к учебникам Code.org
-    20hour_overview: Этот 20-часовой курс является введением в основы информатики и концепции программирования. Курс предназначен для работы с детьми дошкольного возраста до 8-ого класса, но он занимателен для всех возрастов.
+    20hour_overview: Этот 20-часовой курс является введением в основы информатики. Курс предназначен для работы с детьми с дошкольного возраста до 8-ого класса, но он занимателен для всех возрастов.
     test_videos_help: Протестировать наш новый видео-плеер в вашей школе
-    try_beta_courses: New! Try our beta courses for K-5 students
-    use_as_teacher: Use this site as a teacher
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
-    heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
-    heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    try_beta_courses: Новинка! Попробуйте наши бета-курсы для дошкольников и начальной школы
+    use_as_teacher: Используйте этот сайт как учитель
+    heading_elementary: '<h2>20-часовые курсы для</h2><h1>Учащихся начальной школы</h1>'
+    heading_apps: '<h2>Развлечения для</h2><h1>всех</h1>'
+    heading_legacy: '<h2>Наш общий курс для</h2><h1>Для всех возрастов</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: Мои приложения
   gender:
     male: Мужской
     female: Женский
     none: Предпочитаю не отвечать
+  user_type:
+    student: Ученик
+    teacher: Учитель
   footer:
-    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
+    help_from_html: Инженеры от Google, Microsoft, Facebook и Twitter помогли создать этот учебник.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
     feedback: Оставить отзыв
     translate: Помогите нам выполнить перевод на Ваш язык
     support: Поддержка
-    support_url: http://support.code.org
-    tos: Условия
+    support_url: http://support.сode.org
+    tos: Условия использования
     privacy: Правила конфиденциальности
     secure: Защищенная версия
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Поздравления от Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: Нужна помощь?
     subtitle: Смотрите эти видео и подсказки
     teacher: Посмотреть решение
     auth_error: У Вас нет прав смотреть решение.
     submit: Обновите расположение художника
-    direction: начальное направление
+    direction: Start Direction (in degrees)
   video:
     tab: Видео.
     notes: Не надо видео? Смотреть текстовый вариант.
-    notes_coming_soon: Notes for this video coming soon.
+    notes_coming_soon: Текст для этого видео скоро будет.
     autoplay_option: Автозапуск видео
     download: Скачать видео
   compatability:
     working:
-      header: We are working on support for your browser.
+      header: Мы работаем над поддержкой для Вашего браузера.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
-      hide_this_warning: Hide this warning
+      hide_this_warning: Скрыть это предупреждение
     upgrade:
-      header: Please upgrade your browser.
+      header: Пожалуйста, обновите Ваш браузер.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
       button: Take me to the list of supported browsers
   slow_loading: Это занимает больше времени, чем обычно...
   try_reloading: Попробуйте перезагрузить страницу
   next_stage: Закончил! Перейти к следующему этапу
   download_pdf: Показать план урока
-  view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
+  view_lesson_plan: Посмотреть план урока
+  pdf_download: Скачать PDF
   share_code:
     title: Нажмите кнопку «Run», чтобы увидеть мою программу в действии
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Проверь мои Flappy игру
     studio_og_title: Check out my Play Lab App
     og_description: 'Я сам написал код  на Code.org'
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
+    phone_number_not_allowed: Похоже, здесь есть номер телефона. Попробуйте изменить текст.
+    address_not_allowed: Похоже, здесь есть адрес. Попробуйте изменить текст.
+    email_not_allowed: Похоже, здесь есть адрес электронной почты. Попробуйте изменить текст.
     profanity_not_allowed: It looks like there is profanity in it. Try changing the text.
   builder:
     created: Вы создали новый скрипт.
@@ -412,52 +408,56 @@ ru:
       unused: Неиспользованные уровни
   upsell:
     hoc:
-      title: Час кода
-      body: Ознакомьтесь с основами информатики. Миллионы получили такой шанс.
+      title: Hour of Code
+      body: Ознакомьтесь с основами информатики. Миллионы воспользовались этим шансом.
     flappy:
-      title: Flappy Code
-      body: '{отите написать собственную игру меньше, чем за 10 минут? Попробуйте наш учебник Flappy код!'
+      title: Порхающий код
+      body: 'Хотите написать собственную игру меньше, чем за 10 минут? Попробуйте наш учебник "Порхающий  код"!'
     20hour:
-      title: Введение в курс
+      title: Вводный курс
       body: Попробуйте наш 20-часовой курс Введение в информатику.
   gallery:
-    students_drew_these_with_code: Студенты нарисовали это с помощью кода!
-    picture_count: 'В прошлом <b>% {дней}</b> дней, студенты нарисовали <b>%{count}</b> фотографии, написав свои собственные компьютерные программы. Нажмите на картинку, чтобы увидеть каждую программу в действии.'
+    students_drew_these_with_code: Ученики нарисовали это с помощью кода!
+    students_made_these_with_code: Сделано учениками с помощью кода!
+    picture_count: 'За прошедшие <b>%{days}</b> дней, ученики нарисовали <b>%{count}</b> рисунков, написав свои собственные компьютерные программы. Нажмите на картинку, чтобы увидеть каждую программу в действии.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Хотите сделать свой собственный?
     more: 'Больше &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} назад'
   landing:
-    prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
-    feedback: Give Feedback
-    report_bug: Report Bug
-    support: Get Help
-    support_url: //support.code.org
+    prerelease: "Это <span class='betatext'> бета-версия</span> курса.  Это означает, что это не окончательный вариант курса,  и он будет дорабатываться, с учётом полученных отзывов."
+    feedback: Оставить отзыв
+    report_bug: Сообщить об ошибке
+    support: Получить помощь
+    support_url: support.code.org
   multi:
     wrong_title: Неправильный ответ
     wrong_body: 'Ответ, который вы ввели неправильный.  Пожалуйста, попробуйте еще раз!'
-    correct_title: Исправить
+    correct_title: Верно
     correct_body: Это правильный ответ.
   match:
     wrong_title: Неправильное решение
-    wrong_body: 'Решение, которое вы ввели неправильное.  Пожалуйста, попробуйте еще раз!'
-    correct_title: Исправить
+    wrong_body: 'Твоё решение неверно.  Пожалуйста, попробуй еще раз!'
+    correct_title: Верно
     correct_body: Это правильный ответ.
   dialog:
     ok: Продолжить
   time:
-    hour: 1 hour
-    day: day
-    week: week
+    hour: 1 час
+    day: день
+    week: неделя
   data:
     script:
       name:
         20-hour:
           title: 'Курс "Введение в информатику" (15-25 часов)'
-          description: Этот 20-часовой курс является введением в основы информатики и концепции программирования. Курс предназначен для работы с детьми дошкольного возраста до 8-ого класса, но он занимателен для всех возрастов.
+          description: Этот 20-часовой курс является введением в основы информатики. Курс предназначен для работы с детьми с дошкольного возраста до 8-ого класса, но он занимателен для всех возрастов.
         Hour of Code:
-          title: Час кода
+          title: Hour of Code
           description: ""
         edit-code:
-          title: Edit Code
+          title: Редактирование кода
           description: ""
         events:
           title: События
@@ -466,7 +466,7 @@ ru:
           title: Builder
           description: ""
         flappy:
-          title: Flappy Code
+          title: Порхающий код
           description: '{отите написать собственную игру меньше, чем за 10 минут? Попробуйте наш учебник Flappy код!'
         jigsaw:
           title: Головоломки
@@ -478,8 +478,8 @@ ru:
           title: Sample Level Builder
           description: ""
   age_interstitial:
-    age: Your age
+    age: Ваш возраст
     header: Account Information Update
-    message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
-    sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
+    message: 'Мы совершенствуем нашу практику, чтобы предоставить вам ещё большую защиту личной информации. Для этого нужно, чтобы пользователи ввеси здесь их возраст. <br/> Как и всегда, code.org не будет продавать или делиться этой информации с третьими сторонами.'
+    sign_out: 'Если Вы не хотите предоставлять ваш возраст, Вы можете <a href="%{url}"> выйти</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'

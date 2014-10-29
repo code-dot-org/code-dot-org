@@ -3,7 +3,7 @@ ar:
     script:
       name:
         test:
-          "Jigsaw: Learn to drag and drop": 'بانوراما : تعلم السحب و الإسقاط'
+          "Jigsaw: Learn to drag and drop": 'بانوراما: تعلم لسحب وإسقاط'
           The Maze: المتاهة
           Multi: متعدد
           Match: تماثل
@@ -11,8 +11,8 @@ ar:
           title: إختبار الدرس
           description: فقط إختبار داخلي لدرس.
         course1:
-          "Jigsaw: Learn to drag and drop": 'لغز التركيب: تعلم كيف تسحب وتفلت'
-          "Maze: Sequence": 'متاهة: التسلسل'
+          "Jigsaw: Learn to drag and drop": 'بانوراما: تعلم لسحب وإسقاط'
+          "Maze: Sequence": 'المتاهة : التسلسل'
           "Maze: Debugging": 'متاهة: تصحيح الأخطاء'
           "Artist 1: Intro": 'الرسام 1: مقدمة'
           Artists 2: الفنانين 2
@@ -35,17 +35,17 @@ ar:
           Going Places Safely: الذهاب للأماكن بأمان
           description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
           "Bee: Sequence": 'التهجئة: التسلسل'
-          "Artist: Sequence": 'الفنان: التسلسل'
+          "Artist: Sequence": 'الرسام : التسلسل'
           "Artist: Shapes": 'الفنان: الأشكال'
-          "Maze: Loops": 'المتاهة: الحلقات'
-          "Bee: Loops": 'التهجئة: الحلقات'
+          "Maze: Loops": 'المتاهة : الحلقات'
+          "Bee: Loops": 'النحلة : الحلقات'
           "Studio: Create a Story": 'مختبر اللعب: إنشاء قصة'
           description_short: الدورة 1 مصممة للقراء الصغار في الصفوف الدنيا من المرحلة الابتدائية .
           "Artist: Loops": 'الرسام : الحلقات'
         course2:
           The Maze: المتاهة
           Suzi: سوزي
-          The Artist: الفنان
+          The Artist: الاعب
           Artist Debugging: تصحيح الأخطاء للرسام
           Bounce: الارتداد
           "Studio: Create a Story": 'مختبر اللعب: إنشاء قصة'
@@ -64,7 +64,7 @@ ar:
           Getting Loopy: القبض على المعتوهون
           Relay programming: برمجة السباق
           Conditionals: الجمل الشرطية
-          Binary Bracelets: Binary Bracelets
+          Binary Bracelets: أساور الثنائية
           The Big Event: الحدث الكبير
           Your Digital Footprint: البصمة الرقمية الخاصة بك
           description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
@@ -73,17 +73,17 @@ ar:
           "Maze: Loops": 'المتاهة : الحلقات'
           "Artist: Loops": 'الرسام : الحلقات'
           "Bee: Loops": 'النحلة : الحلقات'
-          "Bee: Debugging": 'النحلة : تصحيح الأخطاء'
+          "Bee: Debugging": 'النحلة: تصحيح الأخطاء'
           "Artist: Debugging": 'الرسام : تصحيح الأخطاء'
-          "Bee: Conditionals": 'النحلة : الجمل الشرطية'
+          "Bee: Conditionals": 'النحلة: الجمل الشرطية'
           description_short: الدورة 2 مصممة للطلاب الذين يستطيعون القراءة في الصفوف الابتدائية , الدنيا والمتوسطة.
           "Artist: Sequence2": 'الرسام : التسلسل 2'
           "Maze: Sequence2": 'المتاهة : التسلسل 2'
           "Artist: Nested Loops": 'الرسام : الحلقات المتداخلة'
         course3:
           The Maze: المتاهة
-          "Studio: Create a Story": 'مختبر اللعب : أنشئ قصة'
-          The Artist: الرسام
+          "Studio: Create a Story": 'مختبر اللعب: إنشاء قصة'
+          The Artist: الاعب
           title: الدورة الثالثة
           Artist Functions: وظائف الرسام
           Artist For Loops: Artist For Loops
@@ -94,15 +94,15 @@ ar:
           Bee Debugging: تصحيح الأخطاء للنحلة
           Bee Functions: مهام النحلة
           Artist Functions with Params: مهام الرسام مع Params
-          Bounce: ترتد
-          Maze Conditionals: Maze Conditionals
+          Bounce: الارتداد
+          Maze Conditionals: متاهة الشرطية
           Artist Functions with Parameters: مهام الرسام مع المعلمات
-          Computational Thinking: التفكير الحسابي
+          Computational Thinking: التفكير الحاسوبي
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
+          Dice Race: سباق الزهر
           Internet: الإنترنت
-          Crowdsourcing: Crowdsourcing
+          Crowdsourcing: التعهيد الجماعي
           Digital Citizenship: Digital Citizenship
           Farmer - While Loops: 'المزارع : حلقات بينما'
           description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
@@ -129,6 +129,7 @@ ar:
           "Bee: Nested Loops2": 'النحلة : الحلقات المتداخلة 2'
           "Bee: Debugging2": 'النحلة: تصحيح الأخطاء 2'
           "Artist: Patterns": 'Artist: Patterns'
+          Songwriting: تأليف الأغاني
         msm:
           title: مدرسة الرياضيات المتوسطة
           description: العمل الخاص في التقدم لمدرسة الرياضيات المتوسطة .

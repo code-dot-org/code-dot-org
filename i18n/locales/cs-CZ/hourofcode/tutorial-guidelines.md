@@ -1,14 +1,16 @@
 * * *
 
-layout: wide
+rozvržení: široké
 
 * * *
 
 # Pokyny k výuce akcím Hodina kódu a Týden informatiky
 
-Code.org bude hostit na svých stránkácg Code.org řadu aktivit Hour of Code - Hodina kódu a CSEdWeek - Týden informatiky. Aktuální seznam je na <http://code.org/learn>.
+**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
 
-Rádi bychom hostovali i řadu dalších nabízených možností se zapojit, ale hlavním naším cílem je optimalizovat zkušenost studentů a učitelů, pro které je informatika nová. Použijte tento dokument jako příručku k vytvoření aktivit uživatele, který nemá žádné zkušenosti a vzdělání v kódování, programování a informatice.
+Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+
+We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
 <a id="top"></a>
 
@@ -27,9 +29,9 @@ Rádi bychom hostovali i řadu dalších nabízených možností se zapojit, ale
 
 ## Jak se hodnotí výukové programy pro jejich zařazení
 
-Komise pedagogů z oblasti informatiky určuje pořadí zaslaných výukových programů na základě kvalitativních a kvantitativních ukazatelů, včetně výsledky průzkumu ze širšího okruhu pedagogů.
+A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Výukové programy jsou zařazeny výše, mají-li následující kritéria:**
+**Tutorials will be listed higher if they are:**
 
   * vysoká kvalita
   * intuitivní, nevyžadují zvláštní pokyny k provádění
@@ -40,7 +42,7 @@ Komise pedagogů z oblasti informatiky určuje pořadí zaslaných výukových p
   * podporuje vzdělávání všech demografických skupin (zejména málo zastoupených skupin)
   * Není jen čistě zaměřené na HTML + CSS webový design - (náš cíl je širší, informatika, nikoliv jen HTML kódování)
 
-**Výukové programy jsou zařazeny níže, mají-li následující kritéria:**
+**Tutorials will be listed lower if they are:**
 
   * nižší kvalita
   * pokročilejší úroveň výuky (nikoliv pro začátečníky)
@@ -49,7 +51,7 @@ Komise pedagogů z oblasti informatiky určuje pořadí zaslaných výukových p
   * genderově neutrální (např. tematicky zaměřené především na chlapce)
   * slouží jako nabídka vzdělávací platformy s výběrem školného
 
-**Výukové programy se nezařadí, když:**
+**Tutorials will NOT be listed if they:**
 
   * vyžaduje se vysoká míra zapojení učitele se spoustou přípravy (tedy nesamostatná práce studenta)
   * navržená činnost přesahuje jednu hodinu (zhruba)
@@ -59,13 +61,13 @@ Komise pedagogů z oblasti informatiky určuje pořadí zaslaných výukových p
   * zaměření jen na HTML + CSS webový design
   * zaslány po konečném termínu přijetí, resp. s neúplnými informacemi (viz níže)
 
-Na závěr kampaň Hodina kódu má za cíl zvýšit účast studentů a učitelů v informatice, ukázat, že informatika je přístupná všem a "jednodušeji než si kdo myslí". V mnoha ohledech je dosaženo tohoto cíle lépe tím, že studenti a učitelé dostávají méně a jednodušší možnosti, avšak s důrazem na nejkvalitnější možnosti pro začínající uživatele.
+Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
 
-Všimněte si též, že CSEdWeek 2013 měl fantastický úspěch, měřeno reakcí učitelů a studentů - 20 milionů účastníků v době od 9. až 23. prosince, 97 % uvedlo, že se že jim to líbilo a chtějí, aby se kampaň zopakovala!!
+Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
 
-Jako výsledek loňské kampaně jsou zápisy s rozhodně "dost dobré", hnací důvod při přidávání výukových materiálů do akce Hodina kódu není rozšířit možnosti, ale zvýšit kvalitu (resp. aktuálnost) pro studenty nebo rozšířit možnosti pro neanglické mluvčí s ohledem na globální povahu kampaně 2014.
+As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
 
-[**Zpět na začátek**](#top)
+[**Back to the top**](#top)
 
 <a id="guidelines"></a>
 
@@ -82,15 +84,15 @@ Jako výsledek loňské kampaně jsou zápisy s rozhodně "dost dobré", hnací 
       * **Dobře, ale ne upřednostňované:** instalovat aplikace, desktopové aplikace nebo zkušenosti z herní konzole .
   * **Formát:** Samostatně vedené kurzy nebo lekce, volitelně ulehčené učitelem. Měly by být pokyny pro studenty na rozdíl od otevřeně končící hodiny s delší výzvou. Ideální je, aby instrukce a návody byly zabudované přímo do programovací platformy, aby se zabránilo přepínání karet nebo oken mezi výukovým programem a programovací platformou.
 
-[**Zpět na začátek**](#top)
+[**Back to the top**](#top)
 
 <a id="submit"></a>
 
 ## Jak odeslat (do 10/1/2014)
 
-Navštivte [stránku Hodina kód aktivita odesílání ](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) a postupujte podle pokynů k odeslání vašeho kurzu.
+Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
 
-**Co budete potřebovat:**
+**What you’ll need:**
 
   * Vaše jméno, logo (jpg, png atp.)
   * URL pro snímek nebo marketingový obrázek HoC aktivity. Obrázky/obrázky by měly mít rozlišení přesně 446 x 335. Není-li odpovídající obrázek zadán, můžeme vzít náš vlastní snímek vašeho kurzu nebo se rozhodneme nezařadit.
@@ -138,56 +140,56 @@ Navštivte [stránku Hodina kód aktivita odesílání ](https://docs.google.com
       * Pro offline aktivity 
           * Počet stažení papírové verze aktivity (je-li k dispozici)
 
-[**Zpět na začátek**](#top)
+[**Back to the top**](#top)
 
 <a id="design"></a>
 
 ## Návrhy pro plánování činnosti
 
-**Začlenění CSEdWeek logo do vašeho kurzu.** Logo CSEdWeek ([malé](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) nebo [velké](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) můžete zahrnout do vašeho kurzu, ale není to požadováno. Můžete nás též kontaktovat, abyste si požádali o zvláštní povolení používat loga "in Partnership with Code.org". ***Toto logo lze použít pouze v případě uděleného konkrétního písemného povolení od Code.org.*** Možná se nakonec vytvoří logo akce Hodina kódu, ale v této chvíli jej nemáme. Za žádných okolností nelze použít ani Code.org logo, ani název . Obojí jsou ochrannou známkou a nelze je zamíchat s názvem značky třetí strany.
+**Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
 
-**Ujistěte se, že průměrný student může pohodlně dokončit hodinu.** Zvažte zařazení na konci otevřené aktivity pro studenty, kteří rychleji zvládnou hodinu. Nezapomínejte, že většina dětí jsou absolutní začátečníci v informatice a kódování.
+**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
 
-**Zahrnutí poznámek učitele.** Většinu aktivit by měl zvládat student samostatně, ale pokud některá aktivita je podporována nebo řízená učitelem, uveďte jasné a jednoduché pokyny pro učitele ve formě učitelské poznámky na samostatnou URL adresu s vaší činností. Nejenže studenti jsou začátečníci, rovněž i někteří učitelé. Začleňte informace např.:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
   * Náš kurz pracuje nejlépe na následujících platformách a prohlížečích
   * Pracuje to na smartfounech? tabletech?
   * Doporučuje se programování ve dvojici ? 
   * Úvaha o použití ve třídě? Např. pokud existují videa, poradit učitelům, aby se v učebně společně prohlíželo video na obrazovce
 
-**Začlenit na konci činnosti zpětnou vazbu .** (Např.: "dokončil jste 10 úrovní a naučil jste se o cyklech! Skvělá práce!")
+**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Začlenit sociální média.** Povzbuzovat studenty, aby při dokončení přispívali na sociální média (kde je to vhodné), například "udělal jsem Hodinu kódu s ________ , máš taky? #HourOfCode" nebo "udělal jsem #HourofCode jako součást #CSEdWeek. Už jste udělali? @Scratch." Použijte mřížkovou značku**#HourOfCode** (s písmeny H, O, C)
+**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Vytvořit aktivitu v jazycích mimo angličtiny.** Tento rok zaměřujeme tuto kampaň mezinárodně a rádi bychom chtěli nabízet řadu aktivit neanglicky mluvících účastníků.
+**Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
 
-**Vysvětlete nebo přidejte činnosti její sociálně významný kontext.** Počítačové programování se stává supervelmocí, vidí-li studenti, jak se svět může změnit k lepšímu!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Nepožaduje registraci nebo platbu předem, než si mohou studenti vyzkoušet váš kurz.** Výukové programy vyžadující registraci nebo platbu nebudou zařazeny
+**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
 
-**Ujistěte se, zda váš kurz může být použit v [ Párovém programovacím paradigmu](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
+**Make sure your tutorial can be used in a [Pair Programming paradigm](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
 
-Tři pravidla programování ve dvojici v prostředí školy:
+The three rules of pair programming in a school setting:
 
   * Ovladač řídí myš a klávesnici.
   * Navigátor dělá návrhy, poukazuje na chyby a klade otázky. 
   * Studenti by si měli vyměnit role nejméně dvakrát během relace.
 
-Výhody programování ve dvojici:
+Benefits of Pair Programming:
 
   * Studenti si mohou navzájem vypomáhat, místo spoléhání se na učitele
   * Ukázuje se, že kódování, není sólovou činností, ale zahrnuje sociální interakce
   * Ne vždy učebny nebo laboratoře mají dostatek počítačů, pro 1:1 zážitek
 
-[**Zpět na začátek**](#top)
+[**Back to the top**](#top)
 
 <a id="tm"></a>
 
 ## Pokyny k ochranným známkám
 
-Skoro 40 milionů studentů, kteří si zkusili Hodinu kód a více než 97 % zúčastněných učitelů, požaduje opakovat každoročně tuto událost. Podnikáme kroky, abychom se ujistili, že jsme nastavili akci Hodina kódu jako hnutí, které se může každoročně opakovat s větší přesností a bez zmatků.
+With ~40 million students having tried the Hour of Code, and over 97% of participating teachers asking us to repeat the event annually, we are taking steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
-Jedna část toho je ochránit ochrannou známku "Hour of Code", aby nedošlo k záměně. Mnoho z našich partnerů výukových kurzu používali "Hour kód" na webových serverech. My nechceme bránit tomuto použití, ale chceme se ujistit, že to vyhovuje několika omezením:
+One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
 
   1. Jakýkoliv odkaz na "Hodina kódu" by se měl používat způsobem, který nenaznačuje, že je to vaše vlastní značkou, ale spíše že odkazuje na Hodinu kódu jako základní hnutí. Dobrý příklad: "Zkus Hodinu kódu na ACMECorp.com". Špatný příklad: "Zkuste Hodinu kódu z ACME Corp"
   2. Použijte "TM" značku jako horní index na nejvýznamnějších místech pro zmínku o akci "Hodina kódu", jak na vašem webu a tak v popisech aplikace
@@ -197,33 +199,33 @@ Jedna část toho je ochránit ochrannou známku "Hour of Code", aby nedošlo k 
 
   4. Nepoužívejte název "Hodina kódu" v názvech aplikací
 
-[**Zpět na začátek**](#top)
+[**Back to the top**](#top)
 
 <a id="pixel"></a>
 
 ## Sledovací obrázek
 
-K přesnému sledování účasti vás žádáme, aby každý kurz partnerů třetích stran zahrnoval jedno-pixelový obrázek na první a poslední stránce jejich cvičení (počáteční pixelový obrázek na počáteční stránce a na poslední stránce koncový pixelový obrázek. Ale nikoliv na prozatímních stránkách).
+In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
 
-To nám umožní spočítat uživatele, kteří se přímo získali navštívit vaše webové stránky, aby si udělali hodinu kódu, nebo uživatele, kteří navštíví, když učitel zadá URL přímo na tabuli. To povede k přesnějším počtům účasti vašeho kurzu, který vám pomůže přilákat uživatele. Jestli zařadíte pixel na konečné stránce výukového programu, umožní nám to změřit stupeň dokončení kurzu.
+This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
 
-Když je váš kurz schválen a na poslední stránce kurzu je to uvedeno, Code.org vám poskytne jedinečný sledovatelný pixel, který integrujete do vašeho kurzu. Viz příklad níže.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-***Poznámka: Toto není důležité udělat pro Instalovatelné součásti aplikace (iOS/Android aplikací nebo instalace desktopových aplikací)***
+***NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)***
 
-**Příklad sledovatelných pixelů pro AppInventor:**
+**Example tracking pixels for AppInventor:**
 
-IMG SRC = "http://code.org/api/hour/begin_appinventor.png/"
+IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
-IMG SRC = "http://code.org/api/hour/finish_appinventor.png/"
+IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Zpět na začátek**](#top)
+[**Back to the top**](#top)
 
 <a id="promote"></a>
 
 ## Propagujte výukové programy, akce CSEdWeek a Hodina kódu
 
-Obracíme se žádostí na každého, aby podpořil jejich vlastním 1 hodinovým kurzem uživatelům. Prosím, směřujte je na vaší stránku Hodina kódu. Vaši uživatelé budou jistě pravděpodobněji reagovat na váš mail o vašem kurzu. Využívejte mezinárodní kampaň hodina kódu pro týden vzdělávání v informatice jako výmluvu pro povzbuzení uživatelů k pozvání ostatních se připojit k nám, aby nám pomohli dosáhnout celkového počtu 100 milionů účastníků.
+We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 
   * Zásadně uvádějte na vašem websajtu Hour of Code a CSEdWeek.  
     Př.: <http://www.tynker.com/hour-of-code>
@@ -231,12 +233,12 @@ Obracíme se žádostí na každého, aby podpořil jejich vlastním 1 hodinový
   * Hostujte ji jako místní událost nebo požádejte vaše zaměstnance, aby hostili akci v místních školách nebo komunitních skupinách.
   * Viz naše sada zdrojů, kde najdete další informace (přijde brzy).
 
-[**Zpět na začátek**](#top)
+[**Back to the top**](#top)
 
 <a id="disabilities"></a>
 
 ## Zvláštní poznámka pro studenty se zdravotním postižením
 
-Pokud vytváříte kurz určený pro zrakově postižené, rádi bychom, abyste zvýraznili , že se jedná o možnost použít nástroje pro čtení obrazovky. Zatím jsme Jsme dosud nedostaly takový výukový program. který by zahrnoval takovou možnost pro takovéto studenty.
+If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Zpět na začátek**](#top)
+[**Back to the top**](#top)

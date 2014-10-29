@@ -156,9 +156,11 @@ namespace :seed do
   end
 
   task ideal_solutions: :environment do
+    require 'benchmark'
     Level.order(:ideal_level_source_id). # trick to do the ones that don't have solutions yet first
       each do |level|
-      level.calculate_ideal_level_source_id
+      times = Benchmark.measure { level.calculate_ideal_level_source_id }
+      puts "Level #{level.id}\t#{times.real}s"
     end
   end
 

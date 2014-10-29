@@ -9,4 +9,4 @@
     = form_tag(build_script_level_url(script_level), method: 'get', style: "display:inline;") do
       = submit_tag t('continue'), name: nil, class: 'btn btn-primary button-continue', id: 'continue_button'
   - elsif include_finished
-    = render partial: 'shared/student_finished', locals: { include_prize_link: true }
+    = render partial: 'shared/student_finished'

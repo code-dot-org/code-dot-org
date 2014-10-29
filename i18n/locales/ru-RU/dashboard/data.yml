@@ -3,7 +3,7 @@ ru:
     script:
       name:
         20-hour:
-          desc: 'Курс "Введение в информатику"'
+          desc: 'Курс "Введение в компьютерные технологии"'
           Unplug1: Этап 1
           Maze: Этап 2
           Unplug2: Этап 3
@@ -25,16 +25,16 @@ ru:
           Artist5: Этап 19
           Unplug11: Этап 20
         Hour of Code:
-          desc: Час кода
+          desc: Hour of Code
           Maze: Этап 1
         Edit Code:
           desc: Редактировать код (beta)
           MazeEC: Этап 1
         2014 Levels:
-          desc: Bounce (beta)
+          desc: Отскок (бета)
           Bounce: Этап 1
         Builder Levels:
-          desc: Созданные пользователем головоломки (beta)
+          desc: Пользовательский редактор пазлов (beta)
           Custom: Этап 1
         Flappy Levels:
           desc: Порхающая птичка
@@ -43,13 +43,15 @@ ru:
           desc: Головоломки (beta)
           Jigsaw: Этап 1
         Step Levels:
-          desc: Maze (beta)
+          desc: Лабиринт (бета)
           MazeStep: Stage Step
         edit-code:
           desc: Редактировать код (beta)
           MazeEC: Этап 1
+          Webapp: Этап 2
+          ArtistEC: Этап 3
         events:
-          desc: Bounce (beta)
+          desc: Отскок (бета)
           Bounce: Этап 1
           Studio: Этап 2
         builder:
@@ -62,16 +64,16 @@ ru:
           desc: Головоломки (beta)
           Jigsaw: Этап 1
         step:
-          desc: Maze (beta)
+          desc: Лабиринт (бета)
           MazeStep: Stage Step
         wordsearch:
-          desc: Spelling Bee (beta)
+          desc: Пишущая пчела (бета)
           WordSearch: Этап 1
     game:
       name:
         Unplug1: Введение в Информатику
         Maze: Лабиринт
-        Multi: Multiple Choice Stuffs
+        Multi: 'Выбор варианта: разное'
         Unplug2: Вычислительное мышление
         Unplug3: Программирование на бумаге в клеточку
         Artist: Художник
@@ -79,7 +81,7 @@ ru:
         Artist2: Художник 2
         Unplug5: Процедуры
         Farmer: Фермер
-        Unplug6: Условные выражения
+        Unplug6: Условные команды
         Artist3: Художник 3
         Unplug7: Написание песни
         Farmer2: Фермер 2
@@ -94,8 +96,10 @@ ru:
         Bounce: Прыжок
         Flappy: Порхающая птичка
         Jigsaw: Головоломки
-        MazeStep: Maze Step Mode
+        MazeStep: 'Лабиринт: Пошаговый режим'
         Wordsearch: Wordsearch
+        Webapp: Webapp
+        ArtistEC: Художник
     trophy:
       name:
         Bronze: Бронзовый
@@ -114,7 +118,7 @@ ru:
         parameters: Процедуры с параметрами
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
+        maze_2_2: 'Можешь помочь мне словить непослушную хрюшку? Составь вместе несколько блоков "двигаться вперёд" и нажми "Выполнить". '
         maze_2_1: Эта хрюшка меня сильно раздражает. Помоги мне добраться до неё!
         maze_2_2_5: Наметь путь и проведи меня к глупой хрюшке. Избегай взрывчатку, а не то перья полетят!
         maze_2_3: Проведи меня к зелёному чудищу! (Остерегайся взрывчатки)
@@ -262,62 +266,64 @@ ru:
         jigsaw_11: Собери картинку из блоков
         jigsaw_12: Собери картинку из блоков
         jigsaw_13: Собери картинку правильно!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
-        studio_c2_1: 'Can you make this dog say "hello world"?'
-        studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c2_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
-        studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
+        mazestep_1: Описание шага лабиринта здесь
+        mazestep_2: Описание шага лабиринта здесь
+        mazestep_3: Описание шага лабиринта здесь
+        mazestep_4: Описание шага лабиринта здесь
+        mazestep_5: Описание шага лабиринта здесь
+        studio_c2_1: Вы можете заставить собаку сказать «hello world»?
+        studio_c2_2: Ты можешь заставить собаку сказать что-то, и после неё, кошку?
+        studio_c2_3: Ты можешь написать программу, чтобы собака двигалась к кошке?
+        studio_c2_4: Вы можете написать программу, которая заставит собаку подойти к кошке, и сказать «hello», когда собака подойдет к нему?
+        studio_c2_5: Можешь написать программу, чтобы осьминог сказал «Привет», при выборе его мышкой?
+        studio_c2_6: Вы можете написать программу, чтобы заставить пингвина передвигаться с помощью клавиш вверх / вниз / влево / вправо и поразить все цели?
+        studio_c2_7: Блок «repeat forever» позволяет запускать код непрерывно. Вы сможете прикрепить блоки, чтобы переместить этого динозавра вверх и вниз несколько раз?
         studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
         studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
         studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_story_1: 'Can you make this dog say "hello world"?'
+        studio_c3_story_1: Вы можете заставить собаку сказать «hello world»?
         studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
+        studio_c3_story_3: Ты можешь написать программу, чтобы собака двигалась к кошке?
+        studio_c3_story_4: Вы можете написать программу, которая заставит собаку подойти к кошке, и сказать «hello», когда собака подойдет к нему?
         studio_c3_story_5: Can you add a block to make the octopus happy?
         studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c3_game_2: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
+        studio_c3_game_1: Можешь написать программу, чтобы осьминог сказал «Привет», при выборе его мышкой?
+        studio_c3_game_2: Вы можете написать программу, чтобы заставить пингвина передвигаться с помощью клавиш вверх / вниз / влево / вправо и поразить все цели?
+        studio_c3_game_3: Блок «repeat forever» позволяет запускать код непрерывно. Вы сможете прикрепить блоки, чтобы переместить этого динозавра вверх и вниз несколько раз?
         studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
         studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
         studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        studio_playlab_1: 'Can you make this dog say "hello world"?'
+        studio_playlab_1: Вы можете заставить собаку сказать «hello world»?
         studio_playlab_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_playlab_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_playlab_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
+        studio_playlab_3: Ты можешь написать программу, чтобы собака двигалась к кошке?
+        studio_playlab_4: Вы можете написать программу, которая заставит собаку подойти к кошке, и сказать «hello», когда собака подойдет к нему?
+        studio_playlab_5: Можешь написать программу, чтобы осьминог сказал «Привет», при выборе его мышкой?
+        studio_playlab_6: Вы можете написать программу, чтобы заставить пингвина передвигаться с помощью клавиш вверх / вниз / влево / вправо и поразить все цели?
+        studio_playlab_7: Блок «repeat forever» позволяет запускать код непрерывно. Вы сможете прикрепить блоки, чтобы переместить этого динозавра вверх и вниз несколько раз?
         studio_playlab_8: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
         studio_playlab_9: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        studio_k1_1: 'Can you make this dog say "hello world"?'
+        studio_k1_1: Вы можете заставить собаку сказать «hello world»?
         studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the cat?
+        studio_k1_3: Ты можешь написать программу, чтобы собака двигалась к кошке?
         studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
         studio_k1_5: Can you add a block to make the octopus happy?
         studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        maze_wordsearch_k_1: Перемести меня по буквам EAST
+        maze_wordsearch_k_2: Перемести меня по буквам SOUTH
+        maze_wordsearch_k_3: Перемести меня по буквам WEST
+        maze_wordsearch_k_4: Перемести меня по буквам NORTH
+        maze_wordsearch_k_6: Перемести меня на восток, потом на юг, по буквам JUMP
+        maze_wordsearch_k_9: Перемести меня в одном направлении, потом в другом, по буквам CODE
+        maze_wordsearch_k_13: Перемести меня в одном направлении, потом в другом, по буквам DEBUG
+        maze_wordsearch_k_15: Перемести меня в одном направлении, потом в другом, по буквам ABOVE
+        maze_wordsearch_k_16: Перемести меня в одном направлении, потом в другом, по буквам BELOW
+        maze_wordsearch_k_20: Это проверка! Перемести меня в одном направлении, потом в другом, по буквам STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: 'Лабиринт - Введение'
@@ -334,59 +340,59 @@ ru:
         parameters: Процедуры с параметрами
         hoc_wrapup: Итоги Часа кода
         20_wrapup: Итоги 20-часового курса
-        Unplug1: What is CS?
+        Unplug1: Что такое Информатика?
         Unplug2: Вычислительное мышление
         Unplug3: Программирование на бумаге в клеточку
         Unplug4: Алгоритмы
         Unplug5: Процедуры
-        Unplug6: Условные выражения
-        Unplug7: Songwriting
+        Unplug6: Условные команды
+        Unplug7: Написание песен
         Unplug8: Абстракция
-        Unplug9: Relay programming
-        Unplug10: Internet
+        Unplug9: Эстафетное программирование
+        Unplug10: интернет
         Unplug11: Итоги
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loop: Getting Loopy
+        C1_bigevent_unplugged: Большое Событие
+        C1_getting_loop: Зацикливание
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
+        C1_maze_debugging: 'Лабиринт: Отладка'
         C1_bee_level_intro: 'Bee Level - Intro'
         C1_artist_intro: 'Художник - Введение'
-        C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
-        C1_playlab_storytelling: 'Play Lab - Create a Story'
+        C1_spelling_bee_intro: 'Пишущая пчела: Введение'
+        C1_zuck_repeat_loop: 'Лабиринт: Циклы'
+        C1_bee_loops: 'Пчела: Циклы'
+        C1_maze_loops: 'Лабиринт: Циклы'
+        C1_playlab_storytelling: 'Лаборатория игр: Создай историю'
         C1_planting_seed: Planting a Seed
-        C1_building_foundating: Building a Foundation
+        C1_building_foundating: Создание основы
         C2_maze_intro: 'Лабиринт - Введение'
         C2_artist_intro: 'Художник - Введение'
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_bee_conditionals: Bee Conditionals
-        C2_playlab_createstory: 'Play Lab - Create a Story'
+        C2_zuck_repeat_loop: 'Лабиринт: Циклы'
+        C2_artist_loops: 'Художник: Циклы'
+        C2_bee_conditionals: 'Пчела: Условные команды'
+        C2_playlab_createstory: 'Лаборатория игр: Создай историю'
         C2_graph_paper: Программирование на бумаге в клеточку
-        C2_conditionals_with_cards: Условные выражения
-        C2_binary_bracelets: Binary Bracelets
+        C2_conditionals_with_cards: Условные команды
+        C2_binary_bracelets: Двоичные браслеты
         C2_replay_programming: Эстафетное программирование
-        C2_paper_airplanes: Paper Airplanes
+        C2_paper_airplanes: Бумажные самолётики
         C3_maze_intro: 'Лабиринт - Введение'
         C3_artist_intro: 'Художник - Введение'
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
+        C3_artist_functions: 'Художник: Процедуры'
+        C3_bee_functions: 'Пчела: Процедуры'
+        C3_bee_conditionals: 'Пчела: Условные команды'
+        C3_maze_conditionals: 'Лабиринт: Условные команды'
+        C3_artist_nested_loops: Вложенные циклы
+        C3_farmer_while: 'Цмклы "Пока"'
+        C3_bee_nested_loops: Вложенные циклы
+        C3_bee_debugging: 'Пчела: Отладка'
         C3_bounce: Прыжок
-        C3_playlab_create_game: 'Play Lab - Create a Game'
+        C3_playlab_create_game: 'Лаборатория игр: Создай игру'
         C3_computational_thinking: Вычислительное мышление
         C3_dice_race: Dice Race
-        C3_internet: Internet
+        C3_internet: интернет
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
@@ -401,4 +407,4 @@ ru:
         category_explanation: У вас есть все те же блоки, но сейчас они разложены по категориям
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
         studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
+        jigsaw_click: Нажмите этот блок!

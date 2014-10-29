@@ -1,70 +1,74 @@
 * * *
 
-title: Resources layout: wide
+název: Zdroje rozvržení: široké
 
 * * *
 
-# Jak vyučovat Hodinu Kódu
+# Jak vyučovat Hodinu kódu
 
-## 1) Vyzkoušejte tutoriály:
+## 1) Vyzkoušejte cvičení:
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+Pro studenty všech věkových kategorií budeme pořádat řadu zábavných jednohodinových cvičení, vytvořených plejádou partnerů. Připravují se nová cvičení, která budou k dispozici před zahájením akce Hodina kódu, která proběhne ve dnech 8.–14. prosince.
 
-**Všechny tutoriály pro Hodinu Kódu:**
+**Všechna cvičení Hodinu kódu:**
 
   * Vyžadují minimum času vyučujícího na přípravu
-  * Jsou samostatně řízené, což umožňuje studentům postupovat jejich vlastním tempem a dle jejich úrovně
+  * Řídí se samy, což umožňuje studentům postupovat jejich vlastním tempem a podle jejich úrovně
 
-[![obrázek](http://code.org/images/tutorials.png)](http://code.org/learn)
+[![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 2) Připravte si potřebný hardware - počítače nejsou povinné
+## 2) Připravte si potřebný hardware – počítače nejsou povinné
 
-Nejlepších zkušeností během Hodiny Kódu dosáhnete s počítačem připojeným k internetu. Ovšem není potřeba počítač pro každého studenta, dokonce můžete absolvovat Hodinu Kódu bez použití počítače.
+Nejlépe si Hodinou kódu užijete s počítačem připojeným k internetu. Počítač však nebudete potřebovat pro každé dítě – Hodinu kódu můžete absolvovat dokonce bez počítače.
 
-  * **Vyzkoušejte tutoriály na počítačích a zařízeních studentů.** Ujistěte se, že pracují správně (se zvukem i obrazem).
-  * **Prohlédněte si stránku gratulací**, aby jste viděli co uvidí studenti když tutoriál dokončí. 
-  * **Zajistěte sluchátka svým žákům**, a nebo je požádejte aby jsi přinesli své, pokud vámi zvolený tutoriál funguje nejlépe se zvukem.
+  * **Přezkoušejte cvičení na počítačích a zařízeních studentů.** Ujistěte se, že fungují správně (se zvukem a videem).
+  * **Prohlédněte si stránku blahopřání**, abyste sami viděli to, co uvidí studenti po dokončení cvičení. 
+  * **Zajistěte své třídě sluchátka** nebo požádejte své žáky, aby si přinesli svá vlastní, pokud vámi zvolená cvičení fungují nejlépe se zvukem.
 
-## 3) Plánujte dopředu v závislosti na vám dostupné technologii
+## 3) V závislosti na svém dostupném zařízení plánujte předem
 
-  * **Nemáte dostatek zařízení?**. Využijte [programování v párech](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Když se studenti spárují, budou si vzájemně pomáhat a budou méně závislý od vyučujícího. Uvidí také, že informatika je společenská a nápomocná.
-  * **Máte pomalé připojení?** Připravte videa pro zobrazení před celou třídou, aby každý student nestahoval vlastní kopii. Nebo vyzkoušejte offline tutoriály.
+  * **Nemáte dostatek zařízení?** Využijte [programování ve dvojicích](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Pokud se studenti spojí do dvojic, budou si vzájemně pomáhat a budou méně závislí na vyučujícím. Uvidí také, že informatika je společenská a využívá spolupráci.
+  * **Máte pomalé připojení?** Naplánujte promítnutí videí před celou třídou, aby si pak studenti nemuseli stahovat každý své vlastní. Nebo zkuste offline cvičení.
 
-## 4) Inspirujte studenty - ukažte jim video
+## 4) Inspirujte studenty – pusťte jim video
 
-Pusťte studentům <% if @country == 'uk' %> [tohle video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [tohle video](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %> při zahájení Hodiny Kódu. Též jukněte na [tyto videa](http://youtube.com/codeorg), kde Bill Gates, Mark Zuckerberg, zakladatel Black Eyed Peas will.i.am a hvězda NBA Chris Bosh mluví o významu programování. (Dostupné jsou [1-minutová](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-minutová](https://www.youtube.com/watch?v=nKIu9yen5nc), a [9-minutová](https://www.youtube.com/watch?v=dU1xS07N-FA) verze)
+Show students an inspirational video to kick off the Hour of Code. Examples:
 
-**Nadchněte své studenty - dopřejte jim krátké intro**
+  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
+  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-Většina studentů neví co vlastně informatika je. Zde je pár nápadů:
+**Nadchněte své studenty – ukažte jim krátký úvod**
 
-  * Vysvětlete to jednoduše, na příkladech aplikací, které zaujmou holky i kluky (zachraňování životů, pomáhání lidem, spojování lidí, atd.).
-  * Co třeba: "Přemýšlejte o věcech ve vašem každodenním životě, které používají informační technologie: mobil, mikrovlnka, počítač, semafory... aby všechny tyhle věci vznikli, bylo potřeba programátora."
-  * A nebo: "Informatika je umění prolnutí lidských myšlenek a digitálních nástrojů, které nám umožňuje rozšiřovat své možnosti. Informatici pracují v mnoha různých oblastech: píšou appky pro telefony, pomáhají léčit nemoci, vytvářejí animáky, pracují na sociálních médiích, staví roboty, které prozkoumávají další planety a ještě spoustě dalších."
-  * Viz tipy pro vzbuzení zájmu o informatiku u holek [zde](http://code.org/girls). 
+Většina studentů neví co vlastně informatika je. Tady máte pár nápadů:
 
-## 5) Začněte vaší Hodinu Kódu
+  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
+  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
+  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
+  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
 
-**Nasměřujte studenti k aktivitě**
+## 5) Začněte svoji Hodinu kódu
 
-  * Napište odkaz na tutoriál na tabuli. Najděte odkaz uvedený v <% if @country == 'uk' %> [informacích pro vámi zvolený tutoriál](http://uk.code.org/learn) <% else %> [informacích pro vámi zvolený tutoriál](http://code.org/learn) <% end %>pod počtem účastníků. (Například: [hourofcode.com/co](http://code.org/learn)) 
-  * Naveďte studenty na zvolený odkaz aby začali tutoriál.
+**Nasměrujte studenty k činnosti**
 
-**When your students come across difficulties**
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
+  * Tell students to visit the URL and start the tutorial.
+
+**Pokud vaši studenti narazí na potíže**
 
   * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
   * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
   * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
 
-**What to do if a student finishes early?**
+**Co dělat když skončí student dřív?**
 
-  * Students can see all tutorials and try another Hour of Code activity at <% if @country == 'uk' %> [uk.code.org/learn](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
+  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
   * Or, ask students who finish early to help classmates who are having trouble with the activity.
 
-**How do I print certificates for my students?**
+**Jak svým studentům vytisknu certifikáty?**
 
-Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our <% if @country == 'uk' %> [Certificates](http://uk.code.org/certificates) <% else %> [Certificates](http://code.org/certificates) <% end %> page to print as many certificates as you like, in one fell swoop!
+Každý student má po dokončení [cvičení na Code.org](http://studio.code.org) možnost získat e-mailem certifikát. Certifikát si můžete vytisknout klepnutím na něj. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
 
-**What comes after the Hour of Code?**
+**Co následuje po Hodině kódu?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://code.org/educate). Or encourage your children to learn [online](http://code.org/learn/beyond). <% end %>
+Hodina Kódu je pouze prvním krokem na cestě k dalším vědomostem o tom, jak technologie funguje a jak vytvářet softwarové aplikace. <% if @country == 'uk' %> Hodina Kódu je pouze prvním krokem na cestě k dalším vědomostem o tom, jak technologie funguje a jak vytvořit softwarové aplikace. Chcete-li v této cestě pokračovat, [povzbuďte své děti k učení se online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>

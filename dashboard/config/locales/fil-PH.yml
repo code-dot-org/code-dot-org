@@ -17,7 +17,7 @@
         edit_header: Palitan ang Account Details
         error:
           future: hindi maaari sa hinaharap
-  hello: Hello world
+  hello: Mabuhay!
   welcome_back: Maligayang pagbabalik, %{name}
   add_teacher_form:
     code_or_email:
@@ -70,16 +70,7 @@
     no_signup_message: Pwede mong  <a target="_blank" href="http://learn.code.org">i-browse
       ang iba't ibang stage at mga palaisipan</a>, pero kailangan mo mag sign-up para
       ma-save ang mga nagawa.
-    prizes_message: U.S. students who earn all %{num_trophies} concept trophies can
-      select a variety of prizes including free Dropbox space, Skype credits, and
-      downloadable games from Electronic Arts.
     teacher_educator_guide: Bisitahin ang gabay para sa mga guro
-    teacher_prize_header: Manalo ng $1,000 <a target="_blank"href="http://DonorsChoose.org">DonorsChoose.org</a>
-      rewards
-    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org will offer up to $1,000 in classroom funding to U.S. public school
-      teachers who lead at least 15 students through this course. <a href="http://code.org/educate/20hr">See
-      educator guide for more info.</a> '
     teacher_pitch: Mag turo sa mga batang nasa K-8 ng Pagpapakilala sa Computer Science
       sa inyong silid aralan
     teacher_title: Guro sign up
@@ -92,6 +83,7 @@
     gender: Kasarian (optional)
     birthday: Kaarawan (optional)
     age: Edad (Opsyunal)
+    user_type: Are you a student or teacher?
     submit: Sign up
     teacher: Ikaw ba ay isang guro?
     valid_username: Mayroon!
@@ -125,7 +117,7 @@
     login: Sign in
   password:
     reset_form:
-      title: Nakalimutan ang password?
+      title: Hindi matandaan ang password?
       email: Email address
       submit: Send me reset password instructions
     change_form:
@@ -280,7 +272,7 @@
       prizes: Collect all %{total_trophies} trophies and win prizes!
       prize_earned: All %{total_trophies} trophies collected. Prize won!
       prize_us_only: "(U.S. students only)"
-      prizes_link: more info
+      prizes_link: Para sa maraming kaalaman
   teacher:
     title:
       one: Your teacher is %{name}
@@ -385,8 +377,6 @@
     student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
       trophies.
     student_left_off: 'Where you left off:'
-    student_finished_prize: You've completed all tutorials, claim your %{prize_link}
-      and pick another class %{online_link} or at a %{local_school_link}
     student_finished: You've completed all tutorials, pick another class %{online_link}
       or at a %{local_school_link}
     local_school: local school
@@ -397,19 +387,26 @@
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Subukan ngayon
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming
-      concepts. The course is designed for use in classrooms for grades K-8, but it
-      is fun to learn at all ages.
+    20hour_overview: 'Ang kursong ito ay binubuo ng 20 oras upang ipakilala ang buod
+      ng computer science at mga konsepto ng programming. Ang kursong ito ay ginawa
+      para magamit sa loob ng silid-paaralan  ng mga baitang ng K-8, at para na rin
+      sa lahat ng edad. '
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Male
     female: Female
     none: Prefer not to answer
+  user_type:
+    student: Estudyante
+    teacher: Teacher
   footer:
     help_from_html: Engineers from <a href="http://www.google.com">Google</a>, <a
       href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
@@ -425,13 +422,6 @@
     tos: Terms of service
     privacy: Privacy Policy
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: Need help?
     subtitle: See these videos and hints
@@ -505,11 +495,17 @@
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
       each program in action.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
@@ -537,9 +533,10 @@
       name:
         20-hour:
           title: K-8 Intro to Computer Science Course (15-25 oras)
-          description: This 20-hour course introduces core computer science and programming
-            concepts. The course is designed for use in classrooms for grades K-8,
-            but it is fun to learn at all ages.
+          description: 'Ang kursong ito ay binubuo ng 20 oras upang ipakilala ang
+            buod ng computer science at mga konsepto ng programming. Ang kursong ito
+            ay ginawa para magamit sa loob ng silid-paaralan  ng mga baitang ng K-8,
+            at para na rin sa lahat ng edad. '
         Hour of Code:
           title: Hour of Code
           description: ''

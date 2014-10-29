@@ -44,7 +44,7 @@
 
 ## 5. Ζήτα από ένα τοπικό άρχοντα να υποστηρίξει μια Ώρα του Κώδικα
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+Στείλε αυτό το e-mail στον δήμαρχο, στο δημοτικό συμβούλιο ή στο σχολικό πίνακα. Μπορείς επίσης να τους το δώσεις αυτοπροσώπως και να τους καλέσεις στο σχολείο σου. 
 
 <% if @country == 'ro' %>
 
@@ -56,6 +56,6 @@ Echipa Hour of Code Romania hoc@adfaber.org
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Το Code.org είναι ένα 501c 3 μη κερδοσκοπικού χαρακτήρα. Η διεύθυνση μας είναι 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Δεν σας αρέσουν αυτά τα μηνύματα; [Τέλος συνδρομής](%= unsubscribe_link %).
 
 ![](<%= tracking_pixel %>)

@@ -1,10 +1,10 @@
-cy:
+cs:
   data:
     script:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
-          The Maze: The Maze
+          The Maze: Bludiště
           Multi: Multi
           Match: Match
           Math Image: Math Image
@@ -43,11 +43,11 @@ cy:
           description_short: Course 1 is designed for early readers in the lower elementary grades.
           "Artist: Loops": 'Artist: Loops'
         course2:
-          The Maze: The Maze
+          The Maze: Bludiště
           Suzi: Suzi
-          The Artist: The Artist
+          The Artist: Umělec
           Artist Debugging: Artist Debugging
-          Bounce: Bounce
+          Bounce: Odraz
           "Studio: Create a Story": 'Play Lab: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
@@ -59,11 +59,11 @@ cy:
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: Programování Na Milimetrovém Papíru
           "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: Conditionals
+          Conditionals: Podmínky
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -81,9 +81,9 @@ cy:
           "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": 'Artist: Nested Loops'
         course3:
-          The Maze: The Maze
+          The Maze: Bludiště
           "Studio: Create a Story": 'Play Lab: Create a Story'
-          The Artist: The Artist
+          The Artist: Umělec
           title: Course 3
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
@@ -94,10 +94,10 @@ cy:
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
+          Bounce: Odraz
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: Computational Thinking
+          Computational Thinking: Aritmetické Myšlení
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
@@ -107,7 +107,7 @@ cy:
           Farmer - While Loops: 'Farmer - While Loops'
           description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
           "Studio: Create a Game": 'Play Lab: Create a Game'
-          Maze: Maze
+          Maze: Bludiště
           Artist: Artist
           "Artist: Functions": 'Artist: Functions'
           "Bee: Functions": 'Bee: Functions'
@@ -129,10 +129,11 @@ cy:
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: Programování Na Milimetrovém Papíru
           Assessments: Assessments
           Unit 1: Unit 1
           Unit 2: Unit 2

@@ -96,7 +96,7 @@
   "projectileRandom":"যিকোনো",
   "reinfFeedbackMsg":"You can press the \"Try again\" button to go back to playing your story.",
   "repeatForever":"repeat forever",
-  "repeatDo":"do",
+  "repeatDo":"কৰক",
   "repeatForeverTooltip":"Execute the actions in this block repeatedly while the story is running.",
   "saySprite":"say",
   "saySpriteN":"actor {spriteIndex} say",

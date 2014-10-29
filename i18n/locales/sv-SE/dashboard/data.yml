@@ -1,169 +1,173 @@
-sv:
+"sv":
   data:
     script:
       name:
         20-hour:
-          desc: Introduktion till datakunskap för 6-15 åringar
-          Unplug1: Steg 1
-          Maze: Steg 2
-          Unplug2: Steg 3
-          Unplug3: Steg 4
-          Artist: Steg 5
-          Unplug4: Steg 6
-          Artist2: Steg 7
-          Unplug5: Steg 8
-          Farmer: Steg 9
-          Unplug6: Steg 10
-          Artist3: Steg 11
-          Unplug7: Steg 12
-          Farmer2: Steg 13
-          Unplug8: Steg 14
-          Artist4: Steg 15
-          Unplug9: Steg 16
-          Farmer3: Steg 17
-          Unplug10: Steg 18
-          Artist5: Steg 19
-          Unplug11: Steg 20
+          desc: 'grundskolekurs: Introduktion till Datavetenskap'
+          Unplug1: "Steg 1"
+          Maze: "Steg 2"
+          Unplug2: "Steg 3"
+          Unplug3: "Steg 4"
+          Artist: "Steg 5"
+          Unplug4: "Steg 6"
+          Artist2: "Steg 7"
+          Unplug5: "Steg 8"
+          Farmer: "Steg 9"
+          Unplug6: "Steg 10"
+          Artist3: "Steg 11"
+          Unplug7: "Steg 12"
+          Farmer2: "Steg 13"
+          Unplug8: "Steg 14"
+          Artist4: "Steg 15"
+          Unplug9: "Steg 16"
+          Farmer3: "Steg 17"
+          Unplug10: "Steg 18"
+          Artist5: "Steg 19"
+          Unplug11: "Steg 20"
         Hour of Code:
-          desc: Timme med Kod
-          Maze: Steg 1
+          desc: "Timmen med Kod"
+          Maze: "Steg 1"
         Edit Code:
-          desc: Redigera Kod (beta)
-          MazeEC: Steg 1
+          desc: "Redigera Kod (beta)"
+          MazeEC: "Steg 1"
         2014 Levels:
-          desc: Studsa (beta)
-          Bounce: Steg 1
+          desc: "Studsa (beta)"
+          Bounce: "Steg 1"
         Builder Levels:
-          desc: Uppgifter skapade av användare (beta)
-          Custom: Steg 1
+          desc: "Uppgifter skapade av användare (beta)"
+          Custom: "Steg 1"
         Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Steg 1
+          desc: "Flappy Bird"
+          Flappy: "Steg 1"
         Jigsaw Levels:
-          desc: Pussel (beta)
-          Jigsaw: Steg 1
+          desc: "Pussel (beta)"
+          Jigsaw: "Steg 1"
         Step Levels:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: "Maze (beta)"
+          MazeStep: "Stage Step"
         edit-code:
-          desc: Redigera Kod (beta)
-          MazeEC: Steg 1
+          desc: "Redigera Kod (beta)"
+          MazeEC: "Steg 1"
+          Webapp: "Steg 2"
+          ArtistEC: "Steg 3"
         events:
-          desc: Studsa (beta)
-          Bounce: Steg 1
-          Studio: Steg 2
+          desc: "Studsa (beta)"
+          Bounce: "Steg 1"
+          Studio: "Steg 2"
         builder:
-          desc: Uppgifter skapade av användare (beta)
-          Custom: Steg 1
+          desc: "Uppgifter skapade av användare (beta)"
+          Custom: "Steg 1"
         flappy:
-          desc: Flappy Bird
-          Flappy: Steg 1
+          desc: "Flappy Bird"
+          Flappy: "Steg 1"
         jigsaw:
-          desc: Pussel (beta)
-          Jigsaw: Steg 1
+          desc: "Pussel (beta)"
+          Jigsaw: "Steg 1"
         step:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: "Maze (beta)"
+          MazeStep: "Stage Step"
         wordsearch:
-          desc: Spelling Bee (beta)
-          WordSearch: Steg 1
+          desc: "Spelling Bee (beta)"
+          WordSearch: "Steg 1"
     game:
       name:
-        Unplug1: Introduktion till datavetenskap
-        Maze: Labyrinten
-        Multi: Multiple Choice Stuffs
-        Unplug2: Uträkningstänkande
-        Unplug3: Kalkyleringsprogrammering
-        Artist: Konstnären
-        Unplug4: Algoritmer
-        Artist2: Konstnären 2
-        Unplug5: Funktioner
-        Farmer: Bonden
-        Unplug6: Villkorssatser
-        Artist3: Konstnären 3
-        Unplug7: Sångtextskrivande
-        Farmer2: Bonden 2
-        Unplug8: Abstraktion
-        Artist4: Konstnären 4
-        Unplug9: Relä programmering
-        Farmer3: Bonden 3
-        Unplug10: Internet
-        Artist5: Konstnären 5
-        Unplug11: Gör klart
-        MazeEC: Labyrinten
-        Bounce: Studsa
-        Flappy: Flappy Bird
-        Jigsaw: Pussel
-        MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
+        Unplug1: "Introduktion till Datavetenskap"
+        Maze: "Labyrinten"
+        Multi: "Multiple Choice Stuffs"
+        Unplug2: "Uträkningstänkande"
+        Unplug3: "Kalkyleringsprogrammering"
+        Artist: "Konstnären"
+        Unplug4: "Algoritmer"
+        Artist2: "Konstnären 2"
+        Unplug5: "Funktioner"
+        Farmer: "Bonden"
+        Unplug6: "Villkor"
+        Artist3: "Konstnären 3"
+        Unplug7: "Sångskrivande"
+        Farmer2: "Bonden 2"
+        Unplug8: "Abstraktion"
+        Artist4: "Konstnären 4"
+        Unplug9: "Relä programmering"
+        Farmer3: "Bonden 3"
+        Unplug10: "Internet"
+        Artist5: "Konstnären 5"
+        Unplug11: "Gör klart"
+        MazeEC: "Labyrinten"
+        Bounce: "Studsa"
+        Flappy: "Flappy Bird"
+        Jigsaw: "Pussel"
+        MazeStep: "Maze Step Mode"
+        Wordsearch: "Wordsearch"
+        Webapp: "Webapp"
+        ArtistEC: "Konstnären"
     trophy:
       name:
-        Bronze: Brons
-        Silver: Silver
-        Gold: Guld
+        Bronze: "Brons"
+        Silver: "Silver"
+        Gold: "Guld"
     concept:
       description:
-        sequence: Sekvens
+        sequence: "Sekvens"
         if: '"Om"-block'
         if_else: '"Om/annars"-block'
-        loop_times: '"Upprepa"-block'
-        loop_until: '"Upprepa tills"-block'
+        loop_times: '"Upprepa"-Block'
+        loop_until: '"Upprepa tills"-Block'
         loop_while: '"Medan"-block'
         loop_for: '"Räknar"-block'
-        function: Funktioner
-        parameters: Funktioner med parametrar
+        function: "Funktioner"
+        parameters: "Funktioner med parametrar"
     level:
       instructions:
         maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
-        maze_2_1: Den här grisen stör mig. Hjälp mig att hitta honom!
-        maze_2_2_5: Lägg ut vägen och led mig till den dumma grisen. Undvik TNT:t annars flyger fjädrarna!
-        maze_2_3: Led mig till den gröna elakheten! (Se upp för TNT)
-        maze_2_4: Håll dig lugn och hjälp mig att hitta den elaka grisen. Annars kan det hända att jag blir arg!
-        maze_2_5: Det finns ett sätt för mig att nå den dumma grisen genom att använda bara två block. Kan du lista ut det?
-        maze_2_6: Försök få mig till den gröna inkräktaren genom att använda bara tre block.
+        maze_2_1: "Den här grisen stör mig. Hjälp mig att hitta honom!"
+        maze_2_2_5: "Lägg ut vägen och led mig till den dumma grisen. Undvik TNT:t annars flyger fjädrarna!"
+        maze_2_3: "Led mig till den gröna elakheten! (Se upp för TNT)"
+        maze_2_4: "Håll dig lugn och hjälp mig att hitta den elaka grisen. Annars kan det hända att jag blir arg!"
+        maze_2_5: "Det finns ett sätt för mig att nå den dumma grisen genom att använda bara två block. Kan du lista ut det?"
+        maze_2_6: "Försök få mig till den gröna inkräktaren genom att använda bara tre block."
         maze_2_7: "Hjälp mig att bannlysa den här dumma grisen genom att använda så få block som möjligt. Försök att använda mer än ett 'upprepa gånger' block."
         maze_2_8: |-
           When a block is grey, that means you can't delete it. Solve this puzzle using the "repeat" block that repeats 3 times. Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
         maze_2_9: "Ok, försök nu att använda det nya 'upprepa tills' blocket - det kommer att 'upprepa tills' jag når den irriterande grisen."
         maze_2_10: 'Ok, en sista gång för att övning - kan du lösa den här med endast 4 block?'
         maze_2_11: 'Kära person.  Mig zombie. Mig hungrig. Måste... komma... till solros... Kan du få mig dit med bara 5 block?'
-        maze_2_12: Ok, detta är liknande, men lita annorlunda. Kan du göra det på bara 5 block?
+        maze_2_12: "Ok, detta är liknande, men lita annorlunda. Kan du göra det på bara 5 block?"
         maze_2_13: 'Använda det nya "om"-blocket för att låta mig avgöra när jag ka svänga. Tips: behöver du bara ett block till, men lär dig hur vi satte upp det så du kan göra det på egen hand nästa gång.'
         maze_2_14: 'Ok, detta är precis som det förra pusslet, men du måste komma ihåg hur du använder "Om"-blocket och "Upprepa"-blocket tillsammans.'
         maze_2_15: 'Jag vill ha solros! Använd ett "Om"-block för att få mig dit med minsta antalet block.'
         maze_2_16: 'Ok, låt oss göra det igen för övningens skull - detta inte är mycket olikt, men se upp för de köttätande växterna!'
         maze_2_17: '"Om/annars"-blocket kontrollerar ett villkor, och gör sen en sak ELLER en annan. För att få mig till solrosen försök att använda det här blocket.'
         maze_2_18: 'Mer träning med "Om/annars"-blocket, kan du få det rätt på första försöket?'
-        maze_2_19: Kan du lägga till bara 3 block för att hjälpa mig att lösa en svårare labyrint? Om du gör det rätt, kommer jag kunna gå vilken väg som helst oberoende av längden.
-        turtle_1_1: Hej, jag är en konstnär. Du kan skriva kod för att få mig att rita nästan vad som helst. Använd några block för att få mig att rita över de grå linjerna i bilden.
+        maze_2_19: "Kan du lägga till bara 3 block för att hjälpa mig att lösa en svårare labyrint? Om du gör det rätt, kommer jag kunna gå vilken väg som helst oberoende av längden."
+        turtle_1_1: "Hej, jag är en konstnär. Du kan skriva kod för att få mig att rita nästan vad som helst. Använd några block för att få mig att rita över de grå linjerna i bilden."
         turtle_1_2: 'Nu, rita en fyrkant. OBS: Använd din favorit färg genom att välja det i de nya "sätta färg"-blocket.'
-        turtle_1_3: Gör en kvadrat med bara 3 block.
+        turtle_1_3: "Gör en kvadrat med bara 3 block."
         turtle_1_4: 'Rita en triangel vars sidor alla är i olika färger med hjälp av "slumpmässig färg"-alternativet  som väljer en ny färg varje gång. Tips: du måste räkna ut hur långt du ska vrida genom att klicka på siffran i "rund"-blocket.'
-        turtle_1_5: Nu, som övning, rita en triangel och sedan en kvadrat för att rita ett kuvert.
+        turtle_1_5: "Nu, som övning, rita en triangel och sedan en kvadrat för att rita ett kuvert."
         turtle_1_6: 'Kan du komma på hur man kan rita den här triangeln och kvadraten? Tips: Gör triangeln först och räkna sedan ut hur mycket du måste svänga innan du börjar rita kvadraten.'
         turtle_1_7: 'Ok, låt oss göra det lite svårare - se om du kan rita de här gröna glasen. Kvadraterna är 100 pixlar långa på varje sida, och det är 50 pixlar emellan dem. Glöm inte att rita med grön!'
         turtle_1_8: 'Ok, försök lista ut vad som händer om du kör den här koden (eller tryck på "Kör" för att prova). Upprepa det sedan tillräckligt många gånger för att göra klart målningen. Färgerna kommer vara olika varje gång.'
-        turtle_1_9: Kan du gissa vilket nummer som ska ersätta frågetecknen för att rita en cirkel?
+        turtle_1_9: "Kan du gissa vilket nummer som ska ersätta frågetecknen för att rita en cirkel?"
         turtle_1_10: 'Du klarade det! Nu, rita vad du vill. Några roliga idéer: en streckfigur, snöflinga eller spiral. Prova också det nya "Bredd"-blocket. Ha kul!'
         turtle_4_1: 'Kan du rita en triangel (med kanter som är 100 pixlar) med endast 3 block? Tips: Använd ett "Upprepa"-block.'
         turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
         turtle_4_3: "Pk, här är koden du skrev som ritar en ensam triangel. Kan du lägga till ett 'upprepa' -block och ett 'rotera'-block för att skapa en vacker blomma?"
         turtle_4_4: 'Här är samma kod från föregående pussel, men den roterar bara 36 grader efter att ha ritat varje triangel. Hur många gånger behöver det upprepas? (Ledtråd: efter 360 graders rotation blir det en hel cirkel)'
         turtle_4_5: 'Här är samma kod från föregående pussel, men den upprepar rotationen 36 gånger. Hur många grader borde rotationen vara? (Ledtråd: en 360 graders sväng blir en hel cirkel) '
-        turtle_4_6: Kan du rita en kvadrat med sidor av 20 pixlar med bara 3 block?
+        turtle_4_6: "Kan du rita en kvadrat med sidor av 20 pixlar med bara 3 block?"
         turtle_4_7: 'Här är koden som ritar kvadraten från förra pusslet. Kan du upprepa den så att den ritar 10 angränsande block, liknande en stege? Ledtrd: du behöver bara 2 block till.'
-        turtle_4_8: Här är lösningen till föregående pussel. Kan du lägga till 2 block till för att komplettera den?
-        turtle_4_9: Här är lösningen till det föregående pusslet. Hur många grader borde du rotera för att göra klart ritningen? (Du behöver antagligen gissa några gånger)
-        turtle_4_10: Här är lösningen på föregående pussel. Hur många gånger borde du upprepa för att göra klart ritningen?
+        turtle_4_8: "Här är lösningen till föregående pussel. Kan du lägga till 2 block till för att komplettera den?"
+        turtle_4_9: "Här är lösningen till det föregående pusslet. Hur många grader borde du rotera för att göra klart ritningen? (Du behöver antagligen gissa några gånger)"
+        turtle_4_10: "Här är lösningen på föregående pussel. Hur många gånger borde du upprepa för att göra klart ritningen?"
         turtle_4_11: "Försök att ändra siffrorna(antalet) i 'rotera' och 'upprepa' blocken för att skapa olika mönster. Eller experimentera med resten av koden för att rita vad du vill."
         maze_karel_1_1: 'Hej, är jag en bonde. Jag behöver din hjälp med att platta till åkern på min gård så den blir redo för plantering. Flytta mig till högen av jord och använda "ta bort"-blocket för att ta bort den.'
         maze_karel_1_2: 'Nu, flytta mig till hålet och fyll den med TVÅ spadar med jord, använd "fyll"-blocket.'
-        maze_karel_1_3: Flytta mig till högen med jord och berätta med så få block som möjligt hur många spadar som ska tas bort.
+        maze_karel_1_3: "Flytta mig till högen med jord och berätta med så få block som möjligt hur många spadar som ska tas bort."
         maze_karel_1_4: 'Kan du hjälpa mig ta bort alla fyra högarna med jord? Tips: Använd ett "upprepa"-block om du kan.'
         maze_karel_1_5: 'Hjälp mig fylla i alla hålen med 5 spadar med jord. Tips: du kan sätta ett "Upprepa"-block inuti "medan"-blocket.'
         maze_karel_1_6: 'Ta bort alla högarna med jord med så få block som möjligt. De nya alternativen i rullgardinsmenyn på "medan"-blocket berättar för mig om jag står på en hög eller hål.'
-        maze_karel_1_7: Wow, jag har hittat ett riktigt djupt hål! Jag vet inte hur många spadar med jord som krävs. Kan du skriva ett program som fyller det tills marken jämn?
-        maze_karel_1_8: Hjälp mig fylla i hålet i slutet av åkern med så få block som möjligt.
+        maze_karel_1_7: "Wow, jag har hittat ett riktigt djupt hål! Jag vet inte hur många spadar med jord som krävs. Kan du skriva ett program som fyller det tills marken jämn?"
+        maze_karel_1_8: "Hjälp mig fylla i hålet i slutet av åkern med så få block som möjligt."
         maze_karel_1_9: "Gör så att jag tar bort alla dessa högar av jord. Försök använda så få block som möjligt. Ledtråd: försök med ett 'medans' block."
         maze_karel_1_10: 'Jag jobbar sent, så det är mörkt ute och jag kan inte se hur stora högar är. Nu har jag inte alla alternativen som jag hade innan på "medan"-blocket. Flytta runt mig på åkern och om det finns en hög, ta bort den.'
         maze_karel_1_11: 'Det är fortfarande mörkt ute. Flytta runt mig på åkern. Om det finns en hög, ta bort den, och om det finns ett hål, fyll det. Tips: Använd rullgardinsmenyn på "om"-blocket.'
@@ -181,13 +185,13 @@ sv:
         maze_karel_2_1: 'Försök att använda blocken för att hjälpa mig med att ta bort alla högar och fylla i alla hål i marken. Försök att använda loopar istället för att använda en massa block. Tips: du kan sätta en loop inuti en annan loop.'
         maze_karel_2_2: 'Vi har gjort vår egna block som vi kallat "fyll 5" som nu finns i kategorin funktioner. Använda det för att hjälpa mig med att fylla i det här hålet.'
         maze_karel_2_3: 'Använd det nya "fyll 5"-funktionsblocket för att få mig att fylla i alla hål. Du måste dra ut "fyll 5"-blocket från kategorin funktioner.'
-        maze_karel_2_4: Gör en ny funktion som tar bort 7 spadar. använd den sen för att skriva ett program som hjälper mig att ta bort alla högar.
-        maze_karel_2_5: Skapa en ny funktion som tar bort 6 spadar från en hög. Använd den sen för att hjälpa mig gräva bort alla högar.
+        maze_karel_2_4: "Gör en ny funktion som tar bort 7 spadar. använd den sen för att skriva ett program som hjälper mig att ta bort alla högar."
+        maze_karel_2_5: "Skapa en ny funktion som tar bort 6 spadar från en hög. Använd den sen för att hjälpa mig gräva bort alla högar."
         maze_karel_2_6: 'Använd två nya funktioner, "fyll 8" och "ta bort 8" för att hjälpa mig att gräva bort högen och fylla hålet.'
-        maze_karel_2_7: Det står en ko på min åker! Skriv en ny funktion som hjälper mig att undvika kon och ta bort alla högar. sätt alla dina block inuti den nya funktionen.
+        maze_karel_2_7: "Det står en ko på min åker! Skriv en ny funktion som hjälper mig att undvika kon och ta bort alla högar. sätt alla dina block inuti den nya funktionen."
         maze_karel_2_8: 'Använd den nya funktionen "undvik kon och ta bort 1" för att hjälpa mig att ta bort alla högar.'
-        maze_karel_2_9: OK, är här en funktion som tar bort 4 olika högar med jord i en lodrät kolumn. Prova att sätta den här funktionen inuti en loop så att du tar bort alla högar med jord med bara några få nya block.
-        maze_karel_2_10: Flytta mig över åkern och använd de här två funktionerna för att hjälpa mig ta bort alla högar och fylla alla hål.
+        maze_karel_2_9: "OK, är här en funktion som tar bort 4 olika högar med jord i en lodrät kolumn. Prova att sätta den här funktionen inuti en loop så att du tar bort alla högar med jord med bara några få nya block."
+        maze_karel_2_10: "Flytta mig över åkern och använd de här två funktionerna för att hjälpa mig ta bort alla högar och fylla alla hål."
         turtle_3_1: 'Detta pussel visar dig hur "Rita en fyrkant"- och "Rita en cirkel"-funktionerna är gjorda.  När du gör en funktion körs den inte,  du måste dra ut "Rita en fyrkant"-blocket för att faktiskt rita en fyrkant.'
         turtle_3_2: 'Med funktionen "Rita en fyrkant" som exempel, skapa en "Rita en triangel"-funktion och använd den.'
         turtle_3_3: 'Rita trekantiga staket runt katterna och ett fyrkantigt staket runt kon.  Tips: testa programmet allt eftersom.'
@@ -198,29 +202,29 @@ sv:
         turtle_3_8: 'Här är alla blocken från förra pusslet.  Ändra "rita ett hus" så att jag hamnar i det nedre högra hörnet efter att jag ritat nytt hus. Använd den här ändrade funktionen för att rita tre hus.'
         turtle_3_9: 'Kan du återskapa funktionen "rita ett hus" utan hjälp? Prova. Rita sedan en rad av hus.'
         turtle_3_10: 'Du har lärt dig mycket! Använd nu  det för att rita vad du vill. Försök att rita en stjärna, eller en spiral eller en snygg snöflinga.'
-        maze_karel_debug_seq_1: Välkommen till felsökning! Min kod fungerar inte rätt. Kan du hitta felet och fixa det så att jag kan få min åker platt och redo för plantering?
-        maze_karel_debug_seq_2: Vad är fel med det här programmet? Hur ska du fixa det så jag kan ta bort högen?
-        maze_karel_debug_repeat: Fixa det här programmet för mig så att min åker blir fin och platt.
-        maze_karel_debug_while: Hur kan du ändra det här programmet för att hjälpa mig fylla hålet?
-        maze_karel_debug_if: Hjälp! Fixa programmet så min åker blir helt platt.
-        maze_karel_debug_if_else: Fixa det här programmet så att jag fyller hålen och tar bort alla högar.
-        maze_karel_debug_function_1: Vad ska du ändra i det här programmet för att hjälpa mig ta bort alla högar?
-        maze_karel_debug_function_2: Kan du fixa det här programmet för mig så att jag gör min åker platt?
+        maze_karel_debug_seq_1: "Välkommen till felsökning! Min kod fungerar inte rätt. Kan du hitta felet och fixa det så att jag kan få min åker platt och redo för plantering?"
+        maze_karel_debug_seq_2: "Vad är fel med det här programmet? Hur ska du fixa det så jag kan ta bort högen?"
+        maze_karel_debug_repeat: "Fixa det här programmet för mig så att min åker blir fin och platt."
+        maze_karel_debug_while: "Hur kan du ändra det här programmet för att hjälpa mig fylla hålet?"
+        maze_karel_debug_if: "Hjälp! Fixa programmet så min åker blir helt platt."
+        maze_karel_debug_if_else: "Fixa det här programmet så att jag fyller hålen och tar bort alla högar."
+        maze_karel_debug_function_1: "Vad ska du ändra i det här programmet för att hjälpa mig ta bort alla högar?"
+        maze_karel_debug_function_2: "Kan du fixa det här programmet för mig så att jag gör min åker platt?"
         maze_karel_debug_function_3: 'Fixa det här programmet så att jag tar bort alla högar på min åker. '
-        turtle_5_1: Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)
-        turtle_5_2: Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)
-        turtle_5_3: Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)
-        turtle_5_4: Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)
-        turtle_5_5: Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)
-        turtle_5_6: Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)
-        maze_3_1: Jag måste komma till den där grisen! Skriv in några order för att röra på(); så att jag kan få mina ägg tillbaka.
-        maze_3_2: Skriv ett program till mig som gör att jag kan gå hela vägen till grisen.
-        maze_3_3: Hur ska jag komma till grisen? Försäkra dig om att jag inte springer in i lådan med TNT!
-        maze_3_4: Argh! Skriv ett program till mig som tar mig runt lådan med TNT och till grisen.
+        turtle_5_1: "Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)"
+        turtle_5_2: "Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)"
+        turtle_5_3: "Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)"
+        turtle_5_4: "Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)"
+        turtle_5_5: "Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)"
+        turtle_5_6: "Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)"
+        maze_3_1: "Jag måste komma till den där grisen! Skriv in några order för att röra på(); så att jag kan få mina ägg tillbaka."
+        maze_3_2: "Skriv ett program till mig som gör att jag kan gå hela vägen till grisen."
+        maze_3_3: "Hur ska jag komma till grisen? Försäkra dig om att jag inte springer in i lådan med TNT!"
+        maze_3_4: "Argh! Skriv ett program till mig som tar mig runt lådan med TNT och till grisen."
         bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
         bounce_2: 'Attach a block to the "when right arrow" and "when left arrow" blocks. Move the paddle to reach both finish targets.'
         bounce_3: 'Now try something similar with the "when up arrow" block. Move the paddle to the finish target at the top.'
-        bounce_4: This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle.
+        bounce_4: "This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle."
         bounce_5: |-
           We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
         bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
@@ -237,12 +241,12 @@ sv:
           Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
         flappy_5: |-
           Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either a smaller or larger amount.
+        flappy_6: "See if you can still score a point after making Flappy flap either a smaller or larger amount."
         flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
-        flappy_8: You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0.
+        flappy_8: "You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle."
+        flappy_9: "To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0."
         flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
-        flappy_k1_1: Play Flappy
+        flappy_k1_1: "Play Flappy"
         flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
         flappy_k1_3: |-
           Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
@@ -251,159 +255,161 @@ sv:
           Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
         flappy_k1_6: |-
           Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
+        flappy_k1_7: "See if you can score multiple points for making it past an obstacle"
         flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
         flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
+        jigsaw_1: "Click the block"
+        jigsaw_2: "Drag the block to the target"
+        jigsaw_3: "Arrange the blocks to form the image"
+        jigsaw_4: "Arrange the blocks to form the image"
+        jigsaw_5: "Arrange the blocks to form the image"
+        jigsaw_6: "Arrange the blocks to form the image"
+        jigsaw_7: "Arrange the blocks to form the image"
+        jigsaw_8: "Arrange the blocks to form the image"
+        jigsaw_9: "Arrange the blocks to form the image"
+        jigsaw_10: "Arrange the blocks to form the image"
+        jigsaw_11: "Arrange the blocks to form the image"
+        jigsaw_12: "Arrange the blocks to form the image"
+        jigsaw_13: "Fix the puzzle!"
+        mazestep_1: "Maze step description here"
+        mazestep_2: "Maze step description here"
+        mazestep_3: "Maze step description here"
+        mazestep_4: "Maze step description here"
+        mazestep_5: "Maze step description here"
         studio_c2_1: 'Can you make this dog say "hello world"?'
-        studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
+        studio_c2_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_c2_3: "Can you write a program to make this dog move to the cat?"
         studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
         studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c2_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
+        studio_c2_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
         studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
         studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c2_9: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
+        studio_c2_10: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
         studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_story_1: 'Can you make this dog say "hello world"?'
-        studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
+        studio_c3_story_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_c3_story_3: "Can you write a program to make this dog move to the cat?"
         studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c3_story_5: Can you add a block to make the octopus happy?
+        studio_c3_story_5: "Can you add a block to make the octopus happy?"
         studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c3_game_2: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
+        studio_c3_game_2: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
         studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
         studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c3_game_5: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
+        studio_c3_game_6: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
         studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_playlab_1: 'Can you make this dog say "hello world"?'
-        studio_playlab_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
+        studio_playlab_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_playlab_3: "Can you write a program to make this dog move to the cat?"
         studio_playlab_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
         studio_playlab_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_playlab_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
+        studio_playlab_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
         studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_playlab_8: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_playlab_8: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
+        studio_playlab_9: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
         studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_k1_1: 'Can you make this dog say "hello world"?'
-        studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the cat?
+        studio_k1_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_k1_3: "Can you write a program to make this dog move to the cat?"
         studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        studio_k1_5: "Can you add a block to make the octopus happy?"
+        studio_k1_6: "Create your own story! Move around the cat and dog, and make them say things."
+        maze_wordsearch_k_1: "Move me to spell the word EAST"
+        maze_wordsearch_k_2: "Move me to spell the word SOUTH"
+        maze_wordsearch_k_3: "Move me to spell the word WEST"
+        maze_wordsearch_k_4: "Move me to spell the word NORTH"
+        maze_wordsearch_k_6: "Move me East and then South to spell the word JUMP"
+        maze_wordsearch_k_9: "Move me one way, then another to spell the word CODE"
+        maze_wordsearch_k_13: "Move me one way, then another to spell the word DEBUG"
+        maze_wordsearch_k_15: "Move me one way, then another to spell the word ABOVE"
+        maze_wordsearch_k_16: "Move me one way, then another to spell the word BELOW"
+        maze_wordsearch_k_20: "This is a test! Move me one way, then another to spell the word STORY"
+        webapp_ec_simple: "Create your web app by using createHtmlBlock."
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
-        maze_intro: Labyrint Introduktion
-        artist_intro: Konstnär Introduktion
-        farmer_intro: Bonde Introduktion
-        flappy_intro: Flappy Intro
+        maze_intro: "Labyrint Introduktion"
+        artist_intro: "Konstnär Introduktion"
+        farmer_intro: "Bonde Introduktion"
+        flappy_intro: "Flappy Intro"
         loop_times: '"Upprepa"-Block'
         loop_until: '"Upprepa tills"-Block'
         if: '"Om"-block'
         if_else: '"Om/annars"-block'
-        function: Funktioner
+        function: "Funktioner"
         loop_while: '"Medan"-block'
         loop_for: '"Räknar"-block'
-        parameters: Funktioner med parametrar
-        hoc_wrapup: Sammanfattning för Timmen med Kod
-        20_wrapup: 20-Timmars sammanfattning
-        Unplug1: What is CS?
-        Unplug2: Uträkningstänkande
-        Unplug3: Kalkyleringsprogrammering
-        Unplug4: Algoritmer
-        Unplug5: Funktioner
-        Unplug6: Villkorssatser
-        Unplug7: Songwriting
-        Unplug8: Abstraktion
-        Unplug9: Relay programming
-        Unplug10: Internet
-        Unplug11: Gör klart
-        C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loop: Getting Loopy
-        C1_pair_programming: Pair Programming
-        C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
+        parameters: "Funktioner med parametrar"
+        hoc_wrapup: "Sammanfattning för Timmen med Kod"
+        20_wrapup: "20-Timmars sammanfattning"
+        Unplug1: "What is CS?"
+        Unplug2: "Uträkningstänkande"
+        Unplug3: "Kalkyleringsprogrammering"
+        Unplug4: "Algoritmer"
+        Unplug5: "Funktioner"
+        Unplug6: "Villkor"
+        Unplug7: "Songwriting"
+        Unplug8: "Abstraktion"
+        Unplug9: "Relay programming"
+        Unplug10: "Internet"
+        Unplug11: "Gör klart"
+        C1_happy_maps_unplugged: "Happy Maps"
+        C1_moveitmoveit_unplugged: "Move It, Move It"
+        C1_bigevent_unplugged: "The Big Event"
+        C1_getting_loop: "Getting Loopy"
+        C1_pair_programming: "Pair Programming"
+        C1_maze_intro_sequencing: "Maze Sequencing Intro"
+        C1_maze_debugging: "Maze Debugging"
         C1_bee_level_intro: 'Bee Level - Intro'
-        C1_artist_intro: Konstnär Introduktion
-        C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
+        C1_artist_intro: "Konstnär Introduktion"
+        C1_spelling_bee_intro: "Spelling Bee Intro"
+        C1_zuck_repeat_loop: "Maze Loops"
+        C1_bee_loops: "Bee Loops"
+        C1_maze_loops: "Maze Loops"
         C1_playlab_storytelling: 'Play Lab - Create a Story'
-        C1_planting_seed: Planting a Seed
-        C1_building_foundating: Building a Foundation
-        C2_maze_intro: Labyrint Introduktion
-        C2_artist_intro: Konstnär Introduktion
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_bee_conditionals: Bee Conditionals
+        C1_planting_seed: "Planting a Seed"
+        C1_building_foundating: "Building a Foundation"
+        C2_maze_intro: "Labyrint Introduktion"
+        C2_artist_intro: "Konstnär Introduktion"
+        C2_zuck_repeat_loop: "Maze Loops"
+        C2_artist_loops: "Artist Loops"
+        C2_bee_conditionals: "Bee Conditionals"
         C2_playlab_createstory: 'Play Lab - Create a Story'
-        C2_graph_paper: Kalkyleringsprogrammering
-        C2_conditionals_with_cards: Villkorssatser
-        C2_binary_bracelets: Binary Bracelets
-        C2_replay_programming: Relä programmering
-        C2_paper_airplanes: Paper Airplanes
-        C3_maze_intro: Labyrint Introduktion
-        C3_artist_intro: Konstnär Introduktion
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
-        C3_bounce: Studsa
+        C2_graph_paper: "Kalkyleringsprogrammering"
+        C2_conditionals_with_cards: "Villkor"
+        C2_binary_bracelets: "Binary Bracelets"
+        C2_replay_programming: "Relä programmering"
+        C2_paper_airplanes: "Paper Airplanes"
+        C3_maze_intro: "Labyrint Introduktion"
+        C3_artist_intro: "Konstnär Introduktion"
+        C3_artist_functions: "Artist Functions"
+        C3_bee_functions: "Bee Functions"
+        C3_bee_conditionals: "Bee Conditionals"
+        C3_maze_conditionals: "Maze Conditionals"
+        C3_artist_nested_loops: "Nested Loops"
+        C3_farmer_while: "While Loops"
+        C3_bee_nested_loops: "Nested Loops"
+        C3_bee_debugging: "Bee Debugging"
+        C3_bounce: "Studsa"
         C3_playlab_create_game: 'Play Lab - Create a Game'
-        C3_computational_thinking: Uträkningstänkande
-        C3_dice_race: Dice Race
-        C3_internet: Internet
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
-        C3_songwriting_with_parameters: Songwriting With Parameters
+        C3_computational_thinking: "Uträkningstänkande"
+        C3_dice_race: "Dice Race"
+        C3_internet: "Internet"
+        C3_crowdsourcing: "Crowdsourcing"
+        C3_functional_suncatchers: "Functional Suncatchers"
+        C3_songwriting_with_parameters: "Songwriting With Parameters"
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'
         run: 'Hit "Run" to try your program'
-        watch_again: Klicka här för att titta på videon igen
+        watch_again: "Klicka här för att titta på videon igen"
         gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
-        show_code_explanation: Klicka här för att se koden till programmet du gör
-        instructions_repeat_explanation: Instruktionerna för varje uppgift upprepas här
-        category_explanation: Du har kvar alla block men de har nu ordnats i kategorier
+        show_code_explanation: "Klicka här för att se koden till programmet du gör"
+        instructions_repeat_explanation: "Instruktionerna för varje uppgift upprepas här"
+        category_explanation: "Du har kvar alla block men de har nu ordnats i kategorier"
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
-        studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
+        studio_say_text: "Type what you want your actor to say within these quotes"
+        jigsaw_click: "Click this block!"

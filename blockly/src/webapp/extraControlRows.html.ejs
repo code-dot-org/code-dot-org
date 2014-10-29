@@ -1,4 +1,13 @@
 <% var msg = require('../../locale/current/common') %>
+<% var webappMsg = require('../../locale/current/webapp') %>
+
+<% if (debugButtons) { %>
+  <div id="debug-buttons">
+    <button id="pauseButton" class="share">
+      <img src="<%= assetUrl('media/1x1.gif') %>"><%= webappMsg.pause() %>
+    </button>
+  </div>
+<% } %>
 
 <% if (finishButton) { %>
   <div id="share-cell" class="share-cell-none">

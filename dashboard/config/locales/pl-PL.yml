@@ -5,10 +5,10 @@
         blank: is required
     attributes:
       user:
-        name: Imię/Nazwisko
+        name: Wyświetlana nazwa
         email: Email
-        username: Nazwa użytkownika
-        password: Hasło
+        username: nazwa użytkownika
+        password: hasło
         password_confirmation: Potwierdzenie hasła
         current_password: Aktualne hasło
         locale: Język
@@ -31,11 +31,11 @@
     placeholder: Wprowadź tutaj swoją wskazówkę
     submit: Dodaj wskazówkę
   appname: Code.org
-  stage: Etap
+  stage: etap
   stage_number: Stage %{number}
   puzzle: "Łamigłówka"
-  trophies: Trofea
-  courses: Kursy
+  trophies: trofea
+  courses: kursy
   of: z
   more: WIĘCEJ
   less: MNIEJ
@@ -44,7 +44,7 @@
   k8intro: Kurs K-8 Wprowadzenie do Informatyki (15-25 godzin)
   already_started: 'Już rozpocząłeś ? Wznów tutaj >> '
   demos: 'Admin: Wszystkie dema'
-  continue: Kontynuuj
+  continue: Dalej
   prize: nagroda
   more_info: Więcej informacji
   auth:
@@ -59,7 +59,7 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Konto Microsoft
-    forgot_password: Nie pamiętasz hasła?
+    forgot_password: Nie pamiętasz swojego hasła?
     need_confirmation: Czy nie otrzymałeś instrukcji potwierdzającej?
     need_unlock: Czy nie otrzymałeś instrukcji, jak odblokować?
   signup_form:
@@ -69,19 +69,7 @@
     no_signup_message: Możesz <a target="_blank" href="http://learn.code.org"> przeglądać
       różne etapy i łamigłówki </a>, ale musisz się zarejestrować, aby zapisać swoje
       wyniki.
-    prizes_message: Uczniowie z USA, którzy zdobyli wszystkie %{num_trophies} trofea
-      dotyczące pojęć mogą wybrać wiele nagród, w tym wolne miejsce na Dropbox, kredyty
-      Skype i gry do pobrania z Electronic Arts and Valve.
     teacher_educator_guide: Patrz podręcznik nauczyciela
-    teacher_prize_header: Wygraj 1000 $ w <a target="_blank" href="http://DonorsChoose.org">
-      DonorsChoose.org</a> (od 15 czerwca 2014, do wyczerpania zapasów)
-    teacher_prize_message: 'We współpracy z <a target="_blank" href="http://DonorsChoose.org">
-      DonorsChoose.org</a> Code.org będzie oferować aż do 1.000 $ dla nauczycieli
-      amerykańskich szkół publicznych, którzy wprowadzą dla co najmniej 15 uczniów  K-8
-      do kursu informatyki (od 15 czerwca 2014 r. do wyczerpania zapasów).  <a href="http://code.org/educate/20hr">
-      Szczegóły w podręczniku</a>.  (Limit: 1.000 dolarów dla nauczyciela.  <a target="_blank"
-      href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">
-      Zobacz często zadawane pytania</a>.)'
     teacher_pitch: Rejestracja do Code.org dla nauczycieli
     teacher_title: Rejestracja nauczyciela
     student_pitch: Rejestracja w Code.org dla uczniów
@@ -92,6 +80,7 @@
     gender: Płeć (opcjonalnie)
     birthday: Data urodzenia (opcjonalnie)
     age: Wiek
+    user_type: Are you a student or teacher?
     submit: Zarejestruj się
     teacher: Czy jesteś nauczycielem?
     valid_username: Dostępny!
@@ -124,7 +113,7 @@
     login: Zaloguj się
   password:
     reset_form:
-      title: Nie pamiętasz swojego hasła?
+      title: Nie pamiętasz hasła?
       email: Adres e-mail
       submit: Wyślij mi instrukcje resetowania hasła
     change_form:
@@ -284,7 +273,7 @@
       prize_earned: Zebrane zostały wszystkie %{total_trophies} trofeów. Wygrałeś
         nagrodę!
       prize_us_only: "(Tylko dla uczniów w USA)"
-      prizes_link: więcej informacji
+      prizes_link: Więcej informacji
   teacher:
     title:
       one: 'Twój nauczyciel:'
@@ -304,11 +293,11 @@
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
-      trophies: Trofea
+      trophies: trofea
     students:
       name: Imię/Nazwisko
-      username: Nazwa użytkownika
-      password: Hasło
+      username: nazwa użytkownika
+      password: hasło
       manage: Zarządzaj uczniami
       dashboard: Go to Teacher Dashboard
       add: Dodaj uczniów
@@ -337,7 +326,7 @@
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
+      rename: zmień nazwę
       edit: edit
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
@@ -390,8 +379,6 @@
     student_progress: Twoje postępy w nauce
     student_stats: Zdobyłeś %{trophy_count} z %{trophy_max} trofeów "Concept Mastery".
     student_left_off: 'Gdzie przerwałeś:'
-    student_finished_prize: Ukończyłeś wszystkie samouczki, zgłoś się po swoją %{prize_link}
-      i wybierz inną klasę %{online_link} lub %{local_school_link}
     student_finished: Ukończyłeś wszystkie samouczki, wybierz inną klasę %{online_link}
       lub %{local_school_link}
     local_school: miejscowa szkoła
@@ -403,7 +390,7 @@
     trynow: Spróbuj teraz
     add_hint_help: Pomóż nam dodać podpowiedzi do samouczków Code.org
     20hour_overview: Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia z
-      zakresu informatyki i programowania. Kurs jest przeznaczony do użytku w  klasach
+      zakresu informatyki i programowania. Kurs jest przeznaczony do użytku klasach
       od 1 do 8, może być również przyjemną nauką we wszystkich grupach wiekowych.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
@@ -411,10 +398,16 @@
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Mężczyzna
     female: Kobieta
     none: Wolę nie odpowiadać
+  user_type:
+    student: uczeń
+    teacher: Teacher
   footer:
     help_from_html: Ten samouczek pomogli utworzyć inżynierowie z <a href="http://www.google.com">Google</a>,
       <a href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
@@ -430,13 +423,6 @@
     tos: Warunki korzystania z usług
     privacy: Polityka prywatności
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Odbierz swoją nagrodę w Code.org!
-    teacher_prize_earned:
-      subject: Odbierz swoją nagrodę w Code.org!
-    teacher_bonus_prize_earned:
-      subject: Odbierz swoją dodatkowa nagrodę w Code.org!
   reference_area:
     title: Czy potrzebujesz pomocy?
     subtitle: Zobacz te filmiki i wskazówki
@@ -499,7 +485,7 @@
       unused: Niewykorzystane poziomy
   upsell:
     hoc:
-      title: Godzina kodowania (Hour of Code)
+      title: Godzina kodowania
       body: Spróbuj podstaw informatyki. Miliony dały im już szansę.
     flappy:
       title: Flappy Code
@@ -510,11 +496,17 @@
       body: Wypróbuj nasze 20-sto godzinne wprowadzenie do kursu informatyki.
   gallery:
     students_drew_these_with_code: Ten kod stworzyli uczniowie!
+    students_made_these_with_code: Students made these with code!
     picture_count: Przez ostatnie <b>%{days}</b> dni, studenci wyciągnęli <b>%{count}</b>
       zdjęć pisząc własne programy komputerowe. Kliknij na zdjęcia aby zobaczyć każdy
       program w akcji.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Chcesz zrobić własną?
     more: Więcej &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
@@ -544,13 +536,13 @@
           title: Kurs K-8 Wprowadzenie do Informatyki (15-25 godzin)
           description: Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia
             z zakresu informatyki i programowania. Kurs jest przeznaczony do użytku
-            w  klasach od 1 do 8, może być również przyjemną nauką we wszystkich grupach
+            klasach od 1 do 8, może być również przyjemną nauką we wszystkich grupach
             wiekowych.
         Hour of Code:
-          title: Godzina kodowania (Hour of Code)
+          title: Godzina kodowania
           description: ''
         edit-code:
-          title: Edit Code
+          title: Edytuj kod
           description: ''
         events:
           title: Zdarzenia

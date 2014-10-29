@@ -12,7 +12,7 @@ fi:
           Unplug4: Vaihe 6
           Artist2: Vaihe 7
           Unplug5: Vaihe 8
-          Farmer: Vaihe 9
+          Farmer: 9. Etapin
           Unplug6: Vaihe 10
           Artist3: Vaihe 11
           Unplug7: Vaihe 12
@@ -28,41 +28,43 @@ fi:
           desc: Kooditunti
           Maze: Vaihe 1
         Edit Code:
-          desc: Edit Code (beta)
+          desc: Muokkaa koodia (beta)
           MazeEC: Vaihe 1
         2014 Levels:
-          desc: Bounce (beta)
+          desc: Pompi (beta)
           Bounce: Vaihe 1
         Builder Levels:
-          desc: User-Created Puzzles (beta)
+          desc: Käyttäjän tekemät palapelit (beta)
           Custom: Vaihe 1
         Flappy Levels:
           desc: Flappy Bird
           Flappy: Vaihe 1
         Jigsaw Levels:
-          desc: Jigsaw (beta)
+          desc: Palapeli (beta)
           Jigsaw: Vaihe 1
         Step Levels:
-          desc: Maze (beta)
+          desc: Sokkelo (beta)
           MazeStep: Stage Step
         edit-code:
-          desc: Edit Code (beta)
+          desc: Muokkaa koodia (beta)
           MazeEC: Vaihe 1
+          Webapp: Vaihe 2
+          ArtistEC: Vaihe 3
         events:
-          desc: Bounce (beta)
+          desc: Pompi (beta)
           Bounce: Vaihe 1
           Studio: Vaihe 2
         builder:
-          desc: User-Created Puzzles (beta)
+          desc: Käyttäjän tekemät palapelit (beta)
           Custom: Vaihe 1
         flappy:
           desc: Flappy Bird
           Flappy: Vaihe 1
         jigsaw:
-          desc: Jigsaw (beta)
+          desc: Palapeli (beta)
           Jigsaw: Vaihe 1
         step:
-          desc: Maze (beta)
+          desc: Sokkelo (beta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
@@ -96,6 +98,8 @@ fi:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
+        ArtistEC: Taiteilija
     trophy:
       name:
         Bronze: Pronssi
@@ -106,8 +110,8 @@ fi:
         sequence: Käskysarjat
         if: Jos-lohko
         if_else: Jos-muuten -lohko
-        loop_times: Toistolohko
-        loop_until: '"Toista kunnes" -lohko'
+        loop_times: Toista kertaa -lohko
+        loop_until: Toista kunnes -lohko
         loop_while: '"Niin kauan kuin" -lohko'
         loop_for: Laskurilohko
         function: Funktiot
@@ -209,11 +213,11 @@ fi:
         maze_karel_debug_function_1: Mitä tässä ohjelmassa pitäisi muuttaa, jotta se auttaisi minua poistamaan kaikki kasat?
         maze_karel_debug_function_2: Osaatko paikallistaa ja korjata tämän ohjelman virheet, jotta pellosta tulisi tasainen?
         maze_karel_debug_function_3: 'Muokkaa tätä ohjelmaa siten, että saan kaikki kasat pois pelloltani. '
-        turtle_5_1: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Osaatko päätellä, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)
-        turtle_5_2: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Keksitkö, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)
-        turtle_5_3: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Osaatko päätellä, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)
-        turtle_5_4: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Pystytkö selvittämään, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)
-        turtle_5_5: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Keksitkö, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)
+        turtle_5_1: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Keksitkö, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)
+        turtle_5_2: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Osaatko päätellä, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)
+        turtle_5_3: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Pystytkö selvittämään, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)
+        turtle_5_4: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Keksitkö, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)
+        turtle_5_5: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Osaatko päätellä, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)
         turtle_5_6: Kokeile ajaa tätä ohjelmaa. Tee sitten muutoksia ja kokeile mitä tapahtuu. Osaatko päätellä, miten se toimii? (Voit myös poistaa sen ja korvata sen jollain täysin uudella ohjelmalla)
         maze_3_1: Minun täytyy saada tuo sika kiinni! Kirjoita pari siirry(); riviä, jotta saan munani takaisin.
         maze_3_2: Kirjoita minulle ohjelma, jotta pääsen possun luo.
@@ -325,6 +329,8 @@ fi:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: Sokkelon johdanto

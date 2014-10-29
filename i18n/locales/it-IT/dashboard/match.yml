@@ -61,7 +61,7 @@ it:
         Maze Match: Associazione per il Labirinto
         Match the puzzles to the blocks: Associa i puzzle con i blocchi
         Instructions: Istruzioni
-        Drag the blocks to match.: Trascina i blocchi per associare.
+        Drag the blocks to match.: Trascina i blocchi per associarli.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
@@ -220,7 +220,7 @@ it:
         Matching: Corrispondenza
         Match the puzzles and blocks: Associa i puzzle e i blocchi
         Instructions: Istruzioni
-        Drag the blocks to match.: Trascina i blocchi per associarli.
+        Drag the blocks to match.: Trascina i blocchi per associare.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
         /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png
@@ -342,11 +342,11 @@ it:
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test matching text:
         Matching: Corrispondenza
-        Some really easy stuff to match.  Drag it around until you get it.: Alcune cose facili da associare. Trascinale fino a quando non ce la fai.
+        Some really easy stuff to match.  Drag it around until you get it.: 'Alcune cose veramente facili da mettere in corrispondenza.  Provaci fino a che ce la fai.'
         What color is the sky?: Di che colore è il cielo?
-        What's in the ocean?: "Cosa c'è nell'oceano?"
-        What's Brent's last name?: "Qual'è il cognome di Brent?"
-        Where is Brendan from?: Da dove viene Brendan?
+        What's in the ocean?: "Che cosa c'è nell'oceano?"
+        What's Brent's last name?: Qual è il cognome di Brent?
+        Where is Brendan from?: Di che nazione è Brendan?
         blue: blu
         salt: sale
         Van Minnen: Van Minnen

@@ -7,8 +7,8 @@
       user:
         name: Brugernavn
         email: E-mail
-        username: Brugernavn
-        password: Adgangskode
+        username: brugernavn
+        password: adgangskode
         password_confirmation: Adgangskode bekræftelse
         current_password: Nuværende adgangskode
         locale: Sprog
@@ -31,11 +31,11 @@
     placeholder: Skriv dit huske-ord her
     submit: Skriv huske-ord
   appname: Code.org
-  stage: Trin
+  stage: trin
   stage_number: Stage %{number}
   puzzle: Puslespil
-  trophies: Trofæer
-  courses: Kurser
+  trophies: trofæer
+  courses: kurser
   of: af
   more: MERE
   less: MINDRE
@@ -70,16 +70,7 @@
     no_signup_message: Du kan <a target="_blank" href="http://learn.code.org">gennemse
       de forskellige faser og gåder</a>, men du bliver nødt til at tilmelde dig for
       at gemme dine fremskridt.
-    prizes_message: Amerikanske studerende, der tjener alle %{num_trophies} koncept
-      trofæer kan vælge en række præmier, herunder gratis Dropbox plads, Skype credits
-      og kan downloade spil fra Electronic Arts og Valve.
     teacher_educator_guide: Se lærerens guide
-    teacher_prize_header: Vind $1.000 i <a target="_blank" href="http://DonorsChoose.org">
-      DonorsChoose.org</a> belønninger (gennem juni 15, 2014, indtil lager haves)
-    teacher_prize_message: I partnerskab med <a target="_blank" href="http://DonorsChoose.org">
-      DonorsChoose.org</a>, vil Code.org finansiering til amerikanske offentlige skolelærere,
-      der fører mindst 15 studerende gennem K-8 Intro til datalogi kursus (gennem
-      juni 15, 2014).  <a href="http://code.org/educate/20hr"> Se pædagog guide</a>.
     teacher_pitch: Lærer tilmelding til Code.org
     teacher_title: Lærer tilmelding
     student_pitch: Elev tilmelding til Code.org
@@ -90,6 +81,7 @@
     gender: Køn (valgfri)
     birthday: Fødselsdag (valgfri)
     age: Alder
+    user_type: Are you a student or teacher?
     submit: Tilmeld
     teacher: Er du en lærer?
     valid_username: Tilgængelig!
@@ -282,7 +274,7 @@
       prizes: Indsaml alle %{total_trophies} trofæer og vind præmier!
       prize_earned: Alle %{total_trophies} trofæer indsamlet. Prisen vundet!
       prize_us_only: "(Kun for amerikanske studerende)"
-      prizes_link: mere info
+      prizes_link: Mere info
   teacher:
     title:
       one: 'Din lærer:'
@@ -302,11 +294,11 @@
       not_tried: Ikke prøvet endnu
       activity: Angiver studerende aktivitet i de sidste %{hours} %{plural}
       no_section: Ikke tildelt sektion
-      trophies: Trofæer
+      trophies: trofæer
     students:
       name: Navn
-      username: Brugernavn
-      password: Adgangskode
+      username: brugernavn
+      password: adgangskode
       manage: Administrer studerende
       dashboard: Gå til lærer Dashboard
       add: Tilføje studerende
@@ -389,8 +381,6 @@
     student_stats: Du har optjent %{trophy_count} ud af %{trophy_max} "Koncept beherskelses"
       trofæer.
     student_left_off: 'Hvor du stoppede sidst:'
-    student_finished_prize: Du har fuldført alle tutorials, modtag din %{prize_link}
-      og vælg en anden klasse %{online_link} eller her %{local_school_link}
     student_finished: Du har fuldført alle tutorials, vælg en anden klasse %{online_link}
       eller her %{local_school_link}
     local_school: lokal skole
@@ -404,16 +394,22 @@
     20hour_overview: Dette 20-timers kursus introducerer centrale computer videnskabs
       og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser,
       men det er sjovt at lære i alle aldre.
-    test_videos_help: Test vores nye video-afspiller på din skole
+    test_videos_help: Teste vores nye video-afspiller på din skole
     try_beta_courses: Nyt! Prøv vores beta kurser for K-5 elever
     use_as_teacher: Bruge dette websted som en lærer
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Sjov for</h2><h1>Alle</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Mand
     female: Kvinde
     none: Foretrækker ikke at svare
+  user_type:
+    student: studerende
+    teacher: Teacher
   footer:
     help_from_html: Ingeniører fra Google, Microsoft, Facebook og Twitter bidraget
       til at skabe denne øvelse. Oversat af Jan Borup Coyle.
@@ -427,13 +423,6 @@
     tos: Termer
     privacy: Privatlivspolitik
     secure: Sikker Version
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Tillykke fra Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: Brug for hjælp?
     subtitle: Se disse videoer og tips
@@ -496,7 +485,7 @@
       unused: Ubrugte niveauer
   upsell:
     hoc:
-      title: En Times Kodning
+      title: En Time af Kode
       body: Prøv grundlæggende i datalogi. Millioner har givet det et forsøg.
     flappy:
       title: Flappy kode
@@ -507,11 +496,17 @@
       body: Prøv vores 20-timers Introduktion til datalogi kursus.
   gallery:
     students_drew_these_with_code: Studerende tegnede disse med kode!
+    students_made_these_with_code: Students made these with code!
     picture_count: Tidligere <b>%{days}</b> dage, studerende har tegnet <b>%{count}</b>
       billeder ved at skrive deres egne computerprogrammer. Klik på billederne for
       at se hvert program i aktion.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Vil du lave dit eget?
     more: Mere &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder,
       at det ikke er den endelige version af kurset, og er undergivet revision som
@@ -545,7 +540,7 @@
             og programmering begreber. Kurset er designet til brug i folkeskolens
             klasseværelser, men det er sjovt at lære i alle aldre.
         Hour of Code:
-          title: En times kodning
+          title: En Time af Kode
           description: ''
         edit-code:
           title: Rediger kode

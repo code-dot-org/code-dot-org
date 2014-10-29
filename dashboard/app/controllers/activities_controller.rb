@@ -167,10 +167,6 @@ class ActivitiesController < ApplicationController
     rescue Exception => e
       Rails.logger.error "Error updating trophy exception: #{e.inspect}"
     end
-
-    unless @trophy_updates.blank?
-      prize_check(current_user)
-    end
   end
 
   def track_progress_in_session
@@ -224,37 +220,6 @@ class ActivitiesController < ApplicationController
         else
           UserTrophy.create!(user: user, trophy_id: new_trophy.id, concept: concept)
           @trophy_updates << [data_t('concept.description', concept.name), new_trophy.name, view_context.image_path(new_trophy.image_name)]
-        end
-      end
-    end
-  end
-
-  def prize_check(user)
-    if user.trophy_count == (Concept.cached.length * Trophy::TROPHIES_PER_CONCEPT)
-      if !user.prize_earned
-        user.prize_earned = true
-        user.save!
-        # student prizes disabled
-        # PrizeMailer.prize_earned(user).deliver if user.email.present? && eligible_for_prize?
-      end
-
-      # for awarding prizes, we only honor the first (primary) teacher
-      teacher = user.valid_prize_teacher
-
-      if teacher && (!teacher.teacher_prize_earned || !teacher.teacher_bonus_prize_earned)
-        t_prize, t_bonus = teacher.check_teacher_prize_eligibility
-        if t_prize && !teacher.teacher_prize_earned
-          teacher.teacher_prize_earned = true
-          teacher.save!
-          # teacher prizes disabled, but we still are sending a congrats mail to people who would have received a prize
-          PrizeMailer.teacher_prize_earned(teacher).deliver if teacher.email.present? && eligible_for_prize?
-        end
-
-        if t_bonus && !teacher.teacher_bonus_prize_earned
-          teacher.teacher_bonus_prize_earned = true
-          teacher.save!
-          # teacher bonus prizes disabled
-          # PrizeMailer.teacher_bonus_prize_earned(teacher).deliver if teacher.email.present? && eligible_for_prize?
         end
       end
     end

@@ -15,8 +15,6 @@ theme: none
 
   %div.jumbotron{'ng-show' => 'sectionsLoaded && sections.length <= 0'}
     %p= I18n.t('dashboard_sections_jumbotron_instruction')
-    %p &nbsp;
-    %p= I18n.t('dashboard_privacy_document_link')
 
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'sections.length > 0'}
     %colgroup
@@ -79,11 +77,40 @@ theme: none
           %button.btn.btn-danger{"ng-show" => "!section.editing && section.students.length < 1", "ng-click" => "confirm_delete(section)"}= I18n.t('dashboard_action_delete')
   %br/
   %br/
+
+  %p{style: "font-size:18px; color: #7665a0;"}= I18n.t('dashboard_sections_table_secret')
+  %p= I18n.t('dashboard_sections_login_type_explanation')  
+
+  %br/
+  
   %div
-    %p= I18n.t('dashboard_sections_choose_secret')
-    %ul
-      %li= I18n.t('dashboard_sections_secret_word')
-      %li= I18n.t('dashboard_sections_secret_picture')
-      %li= I18n.t('dashboard_sections_print_secrets')
-    %p= I18n.t('dashboard_sections_secret_none')
+    %table{style: "width:950px; table-layout:fixed;"}
+      %tr
+        %th.manage-th
+        %th.manage-th= I18n.t('dashboard_login_picture')
+        %th.manage-th= I18n.t('dashboard_login_word')
+        %th.manage-th= I18n.t('dashboard_login_none')
+      %tr
+        %td{style: "font-weight:bold"}= I18n.t('dashboard_sections_email_question')
+        %td= I18n.t('dashboard_action_delete_no')
+        %td= I18n.t('dashboard_action_delete_no')
+        %td= I18n.t('dashboard_action_delete_yes')
+      %tr
+        %td{style: "font-weight:bold"}= I18n.t('dashboard_sections_account_creation_question')
+        %td= I18n.t('dashboard_teacher')
+        %td= I18n.t('dashboard_teacher')
+        %td= I18n.t('dashboard_student')
+      %tr
+        %td{style: "font-weight:bold"}= I18n.t('dashboard_sections_password question')
+        %td= I18n.t('dashboard_sections_picture_account_creation')
+        %td= I18n.t('dashboard_sections_word_account_creation')
+        %td= I18n.t('dashboard_sections_password_account_creation')
+      %tr
+        %td{style: "font-weight:bold"}= I18n.t('dashboard_sections_sign_in_question')
+        %td= I18n.t('dashboard_sections_sign_in_unique')
+        %td= I18n.t('dashboard_sections_sign_in_unique')
+        %td= I18n.t('dashboard_sections_sign_in_main')
+
+  %br
     %p= I18n.t('dashboard_privacy_document_link')
+  %br/

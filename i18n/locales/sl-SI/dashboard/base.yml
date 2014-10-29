@@ -17,7 +17,7 @@ sl:
         edit_header: Uredi podrobnosti računa
         error:
           future: "can't be in the future"
-  hello: Živjo svet
+  hello: Pozdravljen svet
   welcome_back: 'Dobrodošel/a nazaj, %{name}'
   add_teacher_form:
     code_or_email:
@@ -65,10 +65,7 @@ sl:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'Lahko  <a target="_blank" href="http://learn.code.org"> brskaš po različnih stopnjah in ugankah</a>, a se boš moral vpisati, da shraniš svoj napredek.'
-    prizes_message: 'Ameriški študenti, ki bojo osvojili vse  %{num_trophies} konceptualne trofeje, lahko izbirajo med raznimi nagradami, med drugim zastonj Dropbox prostor, Skype krediti in Electronic Arts, ki si jih lahko prenesejo na računalnik.'
     teacher_educator_guide: Poglej učiteljev vodič
-    teacher_prize_header: 'Win $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> rewards (through June 15, 2014, until supplies last)'
-    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>, Code.org will offer up to $1,000 in classroom funding to U.S. public school teachers who lead at least 15 students through the K-8 Intro to Computer Science course (through June 15, 2014, while supplies last).  <a href="http://code.org/educate/20hr">See educator guide</a>.  (Limit: $1,000 per teacher.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">See FAQ for more limits</a>.)'
     teacher_pitch: Teacher sign up for Code.org
     teacher_title: 'Učitelji - prijava'
     student_pitch: Student sign up for Code.org
@@ -79,6 +76,7 @@ sl:
     gender: Spol (po izbiri)
     birthday: Rojstni datum (po izbiri)
     age: Age
+    user_type: Are you a student or teacher?
     submit: Prijava
     teacher: Si učitelj/ica?
     valid_username: Dosegljivo!
@@ -105,7 +103,7 @@ sl:
     name: Choose your name
     picture: Now find your secret picture
     words: Now enter your secret words
-    login: Vpis
+    login: Prijava
   password:
     reset_form:
       title: Si pozabil/a svoje geslo?
@@ -224,7 +222,7 @@ sl:
       settings: Moj račun
       prizes: Nagrade
       logout: Izpis
-      signin: Vpis
+      signin: Prijava
       signup: Prijava
       already_registered: Already registered?
     popup:
@@ -303,7 +301,7 @@ sl:
     cancel:
       title: Prekliči moj račun
       hint: Nezadovoljen?
-      button: Ukini moj račun
+      button: Prekliči moj račun
   user_level:
     completed: Zaključeno
     tried: Poskus
@@ -329,7 +327,6 @@ sl:
     student_progress: Vaš napredek učenja
     student_stats: 'Dosegel si %{trophy_count} od %{trophy_max} "Koncept obvladanja" trofej.'
     student_left_off: 'Kjer ste končali:'
-    student_finished_prize: 'Končal si vse vaje. Zahtevaj svojo %{prize_link} in izberi drug razred %{online_link} ali na %{local_school_link}'
     student_finished: 'Dokončali ste vse vaje, izberite drug razred na %{online_link} ali %{local_school_link}'
     local_school: lokalna šola
     online: na spletu
@@ -338,17 +335,23 @@ sl:
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Poskusite zdaj
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+    20hour_overview: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven za učenje v vseh starostih.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Moški
     female: Ženska
     none: Raje ne bi odgovoril
+  user_type:
+    student: Učenec
+    teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
@@ -359,20 +362,13 @@ sl:
     tos: Pogoji
     privacy: Izjava o zasebnosti
     secure: Varna različica
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Congratulations from Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: Potrebujete pomoč?
     subtitle: Poglejte si naslednje videe in namige
     teacher: Poglejte rešitev
     auth_error: Niste pooblaščeni za ogled rešitev.
     submit: Posodobi mesto umetnika
-    direction: Začetna smer
+    direction: Start Direction (in degrees)
   video:
     tab: Video posnetek.
     notes: Ni video posnetka? Prikaži zapiske.
@@ -381,11 +377,11 @@ sl:
     download: Prenos videa
   compatability:
     working:
-      header: We are working on support for your browser.
+      header: Delamo na podpori za vaš brskalnik.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
       hide_this_warning: Hide this warning
     upgrade:
-      header: Please upgrade your browser.
+      header: Prosimo, nadgradite vaš brskalnik.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
       button: Take me to the list of supported browsers
   slow_loading: To traja dlje kot običajno...
@@ -427,9 +423,13 @@ sl:
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Want to make your own?
     more: 'More &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
@@ -447,7 +447,7 @@ sl:
     correct_title: Pravilno
     correct_body: To je pravilen odgovor.
   dialog:
-    ok: V redu
+    ok: Vredu
   time:
     hour: 1 hour
     day: day
@@ -457,12 +457,12 @@ sl:
       name:
         20-hour:
           title: K-8 Intro to Computer Science Course (15-25 hours)
-          description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+          description: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven za učenje v vseh starostih.
         Hour of Code:
           title: Ura kode
           description: ""
         edit-code:
-          title: Edit Code
+          title: Uredi kodo
           description: ""
         events:
           title: Events

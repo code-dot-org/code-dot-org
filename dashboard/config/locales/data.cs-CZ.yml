@@ -1,9 +1,9 @@
-"cy":
+"cs":
   data:
     script:
       name:
         20-hour:
-          desc: Kurz K-8 Úvod do Počítačových Věd
+          desc: 5-13 Kurz úvodu do informatiky
           Unplug1: Fáze 1
           Maze: Fáze 2
           Unplug2: Fáze 3
@@ -48,6 +48,8 @@
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Fáze 1
+          Webapp: Fáze 2
+          ArtistEC: Fáze 3
         events:
           desc: Bounce (beta)
           Bounce: Fáze 1
@@ -69,12 +71,12 @@
           WordSearch: Fáze 1
     game:
       name:
-        Unplug1: "Úvod do Počítačových Věd"
+        Unplug1: "Úvod do počítačové vědy"
         Maze: Bludiště
         Multi: Multiple Choice Stuffs
         Unplug2: Aritmetické Myšlení
         Unplug3: Programování Na Milimetrovém Papíru
-        Artist: Malíř
+        Artist: Umělec
         Unplug4: Algoritmy
         Artist2: Malíř 2
         Unplug5: Funkce
@@ -96,6 +98,8 @@
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
+        ArtistEC: Umělec
     trophy:
       name:
         Bronze: Bronzová
@@ -104,14 +108,14 @@
     concept:
       description:
         sequence: Sekvence
-        if: blok pokud
+        if: Blok Pokud
         if_else: blok pokud-jinak
-        loop_times: Blok opakovat n-krát
-        loop_until: Blok opakovat do
-        loop_while: Blok dokud
-        loop_for: Blok čítač
+        loop_times: Blok Opakovat n-krát
+        loop_until: Blok Opakovat Dokud
+        loop_while: Blok Dokud
+        loop_for: blok Čítač
         function: Funkce
-        parameters: Funkce s parametry
+        parameters: Funkce s Parametry
     level:
       instructions:
         maze_2_2: 'Pomůžeš mi chytit to zlobivé prasátko? Dej dohromady několik bloků
@@ -523,6 +527,9 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: "Úvod Bludiště"

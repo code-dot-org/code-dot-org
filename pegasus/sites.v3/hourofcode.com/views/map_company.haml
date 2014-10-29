@@ -1,0 +1,154 @@
+.row
+  .col-xs-12
+    -total_count = DB[:forms].where(kind:'HocSignup2014').count
+    %a{href: hoc_uri("/events")}
+      %h2= hoc_s(:map_header_company).gsub('#', format_integer_with_commas(total_count)).gsub('company', hoc_s("company_" + @company))
+
+.row
+  .col-xs-1.hidden-sm
+  .col-xs-10.col-sm-12
+    #gmap{style: 'height: 500px; padding: 3px; border: 3px solid #ddd;'}
+
+:javascript
+  var gmap;
+  var clusterer;
+  var markers = [];
+  var latlngs = [];
+  var infowindow = new google.maps.InfoWindow();
+
+  $(document).ready(function() {
+    gmap = initializeMap();
+    getSignups();
+  });
+
+  function initializeMap() {
+    var mapOptions = {
+      center: new google.maps.LatLng(28.25,7.39),
+      zoom: 2,
+      minZoom: 2,
+      scrollwheel: false,
+      draggable: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    gmap = new google.maps.Map(document.getElementById("gmap"), mapOptions);
+
+    return gmap;
+  }
+
+  function getSignups() {
+    var params = [];
+
+    var styles = 
+    [
+      {
+        height: 53,
+        url: "/images/map_m1.png",
+        width: 53
+      },
+      {
+        height: 56,
+        url: "/images/map_m2.png",
+        width: 56
+      },
+      {
+        height: 66,
+        url: "/images/map_m3.png",
+        width: 66
+      },
+      {
+        height: 78,
+        url: "/images/map_m4.png",
+        width: 78
+      },
+      {
+        height: 90,
+        url: "/images/map_m5.png",
+        width: 90
+      }
+    ];
+
+    // Uncomment this for sample dots on the USA...
+    /*
+    function getRandomArbitrary(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    for (var i = 0; i < 10000; i++)
+    {
+      var long = getRandomArbitrary(32,50);
+      var lat = getRandomArbitrary(-120,-70);
+      addMarker(long.toString(), lat.toString(), "School");
+    }
+    
+    clusterer = new MarkerClusterer(gmap, markers, {
+      maxZoom: 6,
+      gridSize: 50,
+      minimumClusterSize: 2,
+      averageCenter: true,
+      zoomOnClick: true,
+      styles: styles
+    });
+    */
+    // ...end of commented-out sample dots.
+
+    google.maps.event.addListener(gmap, 'click', function(event){
+      this.setOptions({
+        scrollwheel: true,
+        draggable: true,
+      });
+    });
+
+    $.post('/forms/HocSignup2014/query', $.param(params), function(response) {
+      var results = JSON.parse(response);
+
+      $.each(results.response.docs, function(index, value) {
+        if (typeof value.location_p != 'undefined') {
+          label = value.organization_name_s;
+          hoc_location = value.location_p.split(',');
+          lat = hoc_location[0];
+          lng = hoc_location[1];
+          addMarker(lat, lng, label);
+        }
+      });
+
+      clusterer = new MarkerClusterer(gmap, markers, {
+        maxZoom: 6,
+        gridSize: 50,
+        minimumClusterSize: 2,
+        averageCenter: true,
+        zoomOnClick: true,
+        styles: styles
+      });
+
+    }).fail(displayQueryError);
+  }
+
+  function addMarker(lat, lng, label) {
+    var latlng = new google.maps.LatLng(lat, lng);
+
+    var marker = new google.maps.Marker({
+      position: latlng,
+      title: label,
+      setClickable: false,
+      draggable: false,
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        strokeWeight: 0,
+        fillColor: '#F86B00',
+        fillOpacity: 1,
+        scale: 5
+      }
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.close()
+      infowindow.setContent(marker.title);
+      infowindow.open(gmap, marker);
+    });
+
+    markers.push(marker);
+  }
+
+  function displayQueryError() {
+  }

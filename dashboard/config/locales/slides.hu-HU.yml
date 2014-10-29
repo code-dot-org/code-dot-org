@@ -3,53 +3,53 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: "Üdvözlünk az első kód órádba! Merüljünk bele az első programozási ízelítőbe."
+        text: "Üdvözlünk az első kód órádban! Kezdjük is el az első programozási leckét."
       2:
         image: notes/hoc1_2.jpg
-        text: A Blockly-t fogjuk használni, vizuális programozási nyelvezetet ahol
-          húzni és beillesztéssel rakod össze a kód blokkodat.
+        text: A Blockly nevű vizuális programozási nyelvezetet fogjuk használni, ahol
+          blokkok egymáshoz illesztésével tudsz kódot írni.
       3:
         image: notes/hoc1_3.jpg
-        text: A kódot legtöbbször írják, de a Blockly vizuális. Minden blokk megfelel
-          egy "igazi" sor kódnak.
+        text: A kódot legtöbbször gépelik, de a Blockly vizuális. Minden blokk megfelel
+          egy „igazi” sor kódnak.
       4:
         image: notes/hoc1_4.jpg
-        text: Megtanulod a számítógép-tudomány alapjait, koncepciókat melyet mindenhol
-          használnak elkezdve az alkalmazástól a Mars vándor kezeléséig.
+        text: Olyan számítástechinkai alapokat, koncepciókat fogsz megtanulni, amelyeket
+          az alkalmazások készítésétől a marsjáró vezérléséig mindenütt használnak.
       5:
         image: notes/hoc1_5.jpg
-        text: A program egy csomó utasítás amit a számítógép elvégez.
+        text: Minden program a számítógép által végrehajtandó utasítások listája.
       6:
         image: notes/hoc1_6.jpg
-        text: Az első programod célja ,hogy egy Angry Bird-t a labirintuson át vezetni,
-          úgy hogy megüsse a Zöld Disznót.
+        text: Első programodban egy Angry Bird madarat kell irányítanod az útvesztőn
+          át, hogy eljusson a Zöld Disznóig.
       7:
         image: notes/hoc1_7.jpg
-        text: A bal oldal egy labirintus ahol fut a programod. Minden rejtvény utasítása
-          a labirintus alatt található.
+        text: A bal oldal egy útvesztő, ahol a programod fut. A pálya megoldásához
+          szükséges útmutató az útvesztő alatt olvasható.
       8:
         image: notes/hoc1_8.jpg
-        text: A középső eszköztár tartalmazza az Angry Bird parancsait. Ezeket használni
-          fogod a kódod felépítésében.
+        text: A középső eszköztár tartalmazza az Angry Bird irányításához szükséges
+          utasításokat. Ezeket fogod használni a kód felépítéséhez.
       9:
         image: notes/hoc1_9.jpg
-        text: A jobb oldalon találod a munkaterületedet ahonnan húzod kell a blokkokat
-          az eszköztárból programod felépítéséhez. Ahhoz hogy egy blokkot kitörölj
-          húzd a lomtárba, amely a sarokba található.
+        text: A középső eszköztárból a jobb oldali munkaterületre kell majd áthúznod
+          a blokkokat a program felépítéséhez. Egy blokk törléséhez húzd azt a sarokban
+          lévő kukára.
       10:
         image: notes/hoc1_10.jpg
-        text: Minden blokk egy utasítás. Ha húzol egy "előrelépő" blokkot a munkaterületedre
-          és megnyomod a "Program Futtatás"-t, a madár mozogni fog egy pozíciót a
-          labirintusba.
+        text: Minden blokk egy utasítás. Ha egy „előrelépni” blokkot húzol a munkaterületre,
+          majd megnyomod a „Futtatás” gombot, akkor a madár egy pozíciót lép előre
+          az útvesztőben.
       11:
         image: notes/hoc1_11.jpg
-        text: Ahhoz hogy több műveletet lehessen elvégezni húzd a blokkokat a munkaterületedre
-          és illeszd őket össze. A madár el fogja végezni az utasításokat  fentről
-          lefele haladva.
+        text: Egynél több művelet végrehajtásához több blokkot kell a munkaterületre
+          húzni, majd össze kell őket kapcsolni. A madár fentről lefelé haladva hajtja
+          végre az utasításokat.
       12:
         image: notes/hoc1_12.jpg
-        text: Ha lefuttattad a programot és megakarod javítani vagy újra szeretnéd
-          próbálni nyomd meg a "Újrakezd" gombot.
+        text: Ha egy már lefutott programot szeretnél javítani és újra lefuttatni,
+          akkor nyomd meg a „Visszaállítás” gombot.
       13:
         image: notes/hoc1_13.jpg
         text: Gyerünk kapjuk el azokat a disznókat!
@@ -144,35 +144,35 @@
     loop_times:
       1:
         image: notes/hoc2_1.jpg
-        text: Helló, Márk vagyok! Gyere tanuljuk meg a ciklusokat. A ciklust használva
-          megmondod a számítógépnek, hogy egy bizonyos utasítást újra és újra csinálja
-          ezer akár egy billió alkalommal.
+        text: Helló, Márk vagyok! Gyere tanuljuk meg a ciklusok használatát. A ciklust
+          használva megmondhatod a számítógépnek, hogy egy bizonyos utasítást újra
+          és újra, ezerszer vagy milliószor ismételjen meg.
       2:
         image: notes/hoc2_2.jpg
-        text: Ebbe a puzzelbe azt akarjuk elérni, hogy a madár 5 lépest menjen előre
-          hogy érje el a malacot.
+        text: Ebben a rejtvényben azt szeretnénk, ha a madár ötöt lépne előre, hogy
+          elérjen a malachoz.
       3:
         image: notes/hoc2_3.jpg
-        text: Használhatjuk a új "Ismétlés" blokkot a feladat megoldásához.
+        text: A feladat megoldásához használhatjuk a új „Ismétlés” blokkot.
       4:
         image: notes/hoc2_4.jpg
-        text: Ahelyett hogy 5 alkalommal kihúzd és betegyed az "előrelépés" blokkot...
+        text: Ahelyett, hogy 5 külön „előrelépni” blokkot használnánk...
       5:
         image: notes/hoc2_5.jpg
-        text: Betehetjük az "előrelépés" blokkot az "ismétlés" blokk belsejébe és
-          beírjuk egy számot a blokkba, amivel megadjuk hányszor ismételje az utasítást.
+        text: Betehetjük az „előrelépni” blokkot az „ismétlés” blokk belsejébe, majd
+          beírhatjuk a blokkba a szükséges ismétlések számát.
       6:
         image: notes/hoc2_6.jpg
-        text: 'Ez fontos: az ismétlő blokkba több mint egy utasítást is betehetsz.'
+        text: 'Fontos: az „ismétlés” blokkba több mint egy utasítást is betehetsz.'
       7:
         image: notes/hoc2_7.jpg
-        text: "Élvezd az új ismétlő blokk hasznalatat!"
+        text: "Élvezd az új „ismétlés” blokk használatát!"
     loop_until:
       1:
         image: notes/hoc3_1.jpg
-        text: Szia, Chris vagyok. Mielőtt a Miami Heat-hez csatlakoztam Georgia Techbe
-          mentem, hogy számítógép tudományt tanulhassak. Gyere próbáljuk ki az új
-          "ismételd amíg" blokkot.
+        text: Szia, Chris vagyok. Mielőtt a Miami Heathez csatlakoztam Georgia Techbe
+          jártam, hogy számítástechnikát tanulhassak. Gyere próbáljuk ki az új „ismételd
+          amíg” blokkot.
       2:
         image: notes/hoc3_2.jpg
         text: Mi van ha nem tudjuk milyen messzire kell a madárnak mennie, hogy eljusson
@@ -183,16 +183,16 @@
           a madár addig fog előre haladni AMÍG eléri a malacot (vagy a falnak ütközik).
       4:
         image: notes/hoc3_4.jpg
-        text: 'És ez fontos: akárcsak az ismétlő blokkba az "ismétel amíg" blokkba
-          is több utasítást helyezhetsz.'
+        text: 'Fontos: akárcsak az ismétlő blokkba az „ismételd amíg” blokkba is több
+          utasítást helyezhetsz.'
     if:
       1:
         image: notes/hoc4_1.jpg
-        text: Szia, Bill vagyok! Tanuljunk meg egy új alapvető koncepciót az "ha"
-          állítást. Eszerint hoznak a számítógépek döntéseket.
+        text: Szia, Bill vagyok! Tanuljunk meg egy új alapvető koncepciót a „ha” feltételt.
+          A számítógépek ezt felhasználva hoznak döntéseket.
       2:
         image: notes/hoc4_2.jpg
-        text: A "ha" állítást naponta használjuk. Minden reggel mielőtt elmennél,
+        text: A „ha” állítást Te is naponta használod. Minden reggel mielőtt elmennél,
           azt mondod HA esik az eső fel kell vennem a kabátom.
       3:
         image: notes/hoc4_3.jpg
@@ -200,40 +200,41 @@
           akkor forduljon abba az irányba.
       4:
         image: notes/hoc4_4.jpg
-        text: Ahhoz hogy megírjuk azt a kódot húzzuk ki a "ha" blokkot és helyezzük
-          a "balra fordul" blokkot a belsejébe.
+        text: Ahhoz hogy megírjuk azt a kódot húzzuk ki a „ha” blokkot, és helyezzük
+          a „balra fordul” blokkot a belsejébe.
       5:
         image: notes/hoc4_5.jpg
-        text: Most ha az "előrelépés" blokkot föléje és az "ismétlés" blokkot a kód
-          köré helyezzük, minden alkalommal mikor a zombi halad ellenőrzi ha létezik
-          út balra és ha van akkor arra fordul. A ismétlő parancs fontos, mivel minden
-          lépésnél kell ellenőrizze hogy létezik-e út.
+        text: Most ha az „előrelépés” blokkot föléje és az „ismétlés” blokkot a kód
+          köré helyezzük, akkor a zombi minden lépésnél ellenőrzi, hogy létezik-e
+          út balra. Ha igen, akkor arra fordul. A ismétlő parancs fontos, mivel minden
+          lépésnél ellenőriznie kell, hogy létezik-e út.
       6:
         image: notes/hoc4_6.jpg
-        text: 'A ha állítás nagyon fontos a számítógép-tudományba. Az első programjaim
-          közé tartozik egy X és 0 játék, amelybe írtam egy ha állítást ami ezt mondta:
-          HA az ellenfél oda lép és avval a lépéssel legyőz akkor ne engedd oda lépni.'
+        text: 'A ha állítás nagyon fontos a számítástechnikában. Az első programjaim
+          között volt egy amőba játék, amelyben az egyik ha feltétel így szólt: HA
+          az ellenfél nyerő helyzetben van, akkor blokkolni kell a pozíciót, amivel
+          nyerni tudna.'
       7:
         image: notes/hoc4_7.jpg
-        text: Jó szórakozást a "ha" blokk használásával!
+        text: Jó szórakozást a „ha” blokk használatához!
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Szia a nevem Erika. Én a számítógép-tudományt arra használom, hogy tudjak
-          segíteni megoldani egészségügyi és orvostudományi problémákat. Ismerjük
-          meg a "ha más" blokkot.Olyan mint a "ha" blokk csak van egy más része is
-          a "másképp" .
+        text: Szia, Saloni vagyok. Én az egészségügyben és az orvostudományban felmerülő
+          problémák megoldására használom a számítástechnikát. Tanuljuk meg a „ha
+          különben” blokk használatát. Ez a blokk hasonlít a „ha” blokkhoz, de van
+          egy extra kiegészítése „különben” néven.
       2:
         image: notes/hoc5_2.jpg
-        text: Ha teszel egy "előrelépés" blokkot a "csináld" helyett és a "balra fordul"
-          blokkot a "másképp" helyére azt jelenti hogy a zombi 2 lehetőség közül kell
-          válasszon. HA van út előre akkor a zombi előre halad MÁSKÉPP (nincs út előre),
-          a zombi balra fordul.
+        text: Ha a feltétel „csináld” részéhez egy „előrelépni”, a „különben” részéhez
+          egy „fordulj balra” blokkot teszel, akkor a zombi e közül a két lehetőség
+          közül fog választani. Ha van út előre, akkor a zombi előre megy, minden
+          más esetben (tehát ha nincs előre út) a zombi balra fog fordulni.
       3:
         image: notes/hoc5_3.jpg
-        text: Csakúgy mint a "ha" blokkot a "ha más" blokkot is betehetjük ismétlő
-          blokkba, tehát a "másképp ha" blokk ellenőrizni fogja ha lehet valamerre
-          fordulni.
+        text: A „ha” blokkhoz hasonlóan a „ha különben” blokkot is be lehet tenni
+          „ismétlés” blokkba, így a zombi tovább mozog, és a „ha különben” blokk minden
+          alkalommal ellenőrzi, hogy kell-e fordulnia.
       4:
         image: notes/hoc5_4.jpg
         text: Most vidd a zombikat oda ahova tartoznak!
@@ -326,25 +327,25 @@
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: Gratulálok! Az utolsó játékba megírtál egy kódot amely egy BÁRMILYEN
-          robotnak megmondja hogyan kapja meg az utat egy nem elágazó labirintusba
-          vagy barlangba, attól független hogy egy zombi, madár, mars kutató vagy
-          akár egy saját magát vezető autó.
+        text: Gratulálok! Az utolsó játék megoldásakor egy olyan kódot írtál, amely
+          bármilyen robotnak segítene végigmenni egy nem elágazó útvesztőben vagy
+          alagútban, függetlenül annak hosszától. Ez a robot nem csak zombi vagy madár,
+          de akár marsjáró vagy önmagát vezető autó is lehet.
       2:
         image: notes/hoc6_2.jpg
-        text: Ezek az alapok minden program vagy alkalmazás szíve. Megismertük az
-          ismétlő ciklusokat, ha állítást és a másképp állítást.
+        text: Ezek az alap koncepciók alkotják a szívét minden programnak vagy alkalmazásnak,
+          amit valaha használni fogsz. Megismertük az ismétlés, az ismétlés amíg,
+          a ha és a ha másképp utasításokat.
       3:
         image: notes/hoc6_3.jpg
-        text: Ha tetszett az első kód órád akkor látogass el a code.org weboldalra
-          hogy tovább folytathasd a tanulást. Miután befejezte a 20 órás kurzusunkat,
-          mestere leszel a programozás alapjainak, nekikezdhetsz telefon alkalmazásokat
-          írni, robot utasításokat, játékokat és így tovább.
+        text: Ha tetszett az első kódolás órád akkor látogass el a code.org weboldalra,
+          hogy tovább folytathasd a tanulást. A 20 órás kurzusunk befejezése után
+          tisztában leszel a programozás alapjaival, és elkezdhetsz telefon alkalmazásokat,
+          robot utasításokat, játékokat vagy bármi mást írni.
       4:
         image: notes/hoc6_4.jpg
-        text: A technológia mindent megváltoztat amit csinálunk és nem számít ha fiatal
-          vagy öreg vagy a programozás szórakoztató, rád van bízva hogyan alkotod
-          meg és akárki megtanulhatja!
+        text: 'A technológia mindent megváltoztat, amit csinálunk, és nem számít,
+          ha fiatal vagy öreg vagy: a programozás szórakoztató, kreatív és bárki megtanulhatja!'
     20_wrapup:
       1:
         image: notes/bird.png

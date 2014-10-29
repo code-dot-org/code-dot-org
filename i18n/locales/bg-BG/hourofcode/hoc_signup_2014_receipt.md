@@ -6,9 +6,9 @@
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Благодаря за регистрирането ви като домакин Часът на кодрането събитие!
+# Благодаря за регистрирането ви като домакин на Часът на кодрането събитие!
 
-**Всеки** организатор на събитие "Часът на кодирането" ще получи 10 GB Dropbox пространство или $10 Skype кредит катоблагодарност.[Details](http://<%= hostname %>/prizes)
+**Всеки** организатор на събитие "Часът на кодирането" ще получи 10 GB Dropbox пространство или $10 Skype кредит като благодарност.[Детайли](http://<%= hostname %>/prizes)
 
 <% if @country == 'us' %>
 
@@ -22,13 +22,13 @@
 
 <% if @country == 'us' %>
 
-## 2. Попитайте във вашето училище, дали предлага участие в Часът на кодирането
+## 2. Попитайте във вашето училище, дали се предлага участие в Часът на кодирането
 
 [S Изпратете този имейл](http://<%= hostname %>/resources#email) или [дайте този материал на вашия директор](http://<%= hostname %>/files/schools-handout.pdf). След като вашето училище е на борда,[вече имате възможност да спечелите $10,000 за технологии](http://<%= hostname %>/prizes) и можете да предизвикате други училища във вашия район да се присъединят.
 
 <% else %>
 
-## 2. Попитайте във вашето училище, дали предлага участие в Часът на кодирането
+## 2. Попитайте във вашето училище, дали се предлага участие в Часът на кодирането
 
 [ Изпратете този имейл](http://<%= hostname %>/resources#email) или дайте [това изложение](http://<%= hostname %>/files/schools-handout.pdf) на своя ръководител.
 
@@ -44,7 +44,7 @@
 
 ## 5 Ангажирайте местната власт в подкрепа на Часът на Кодирането
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[ Изпратете този имейл](http://<%= hostname %>/resources#politicians) до кмета, Общинския съвет или училищното настоятелство. Или [дайте това изложение](http://<%= hostname %>/resources/hoc-one-pager.pdf) и ги поканете да посетят вашето училище.
 
 <% if @country == 'ro' %>
 
@@ -56,6 +56,6 @@ Echipa Hour of Code Romania hoc@adfaber.org
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org е организация с нестопанска цел. Нашият адрес е 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Не харесвате тези имейли? [ отпишете се](%= unsubscribe_link %).
 
 ![](<%= tracking_pixel %>)

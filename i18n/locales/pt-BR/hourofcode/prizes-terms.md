@@ -18,10 +18,16 @@ A Code.org entrará em contato com os organizadores após a Hora de Código (8-1
 
 ## Chat com vídeo com um orador convidado
 
-Prêmio limitado apenas às escolas de ensino fundamental e médio dos EUA. Para se qualificar, sua escola inteira deve se cadastrar na Hora do Código até 14 de novembro de 2014. A Code.org selecionará aleatoriamente as escolas vencedoras, determinará um horário para o bate-papo via Web e trabalhará com o professor apropriado para definir os detalhes da tecnologia.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Kits de laptops (ou US$10.000 para outra tecnologia)
 
-Prêmio limitado apenas às escolas públicas de ensino fundamental e médio dos EUA. Por que apenas as escolas públicas? [See the answer here](http://www.hourofcode.com/#faq). Para se qualificar, sua escola inteira deve se cadastrar na Hora do Código até 14 de novembro de 2014. Uma escola de cada estado dos EUA receberá um kit de computadores. A Code.org vai selecionar e notificar os vencedores por e-mail em 1 de dezembro de 2014.
+Prêmio limitado apenas às escolas públicas de ensino fundamental e médio dos EUA. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+
+Para esclarecer, isso não é um sorteio ou um concurso envolvendo mero acaso.
+
+1) Não há nenhum interesse financeiro ou risco envolvido na inscrição - qualquer escola ou sala de aula poderão participar, sem qualquer pagamento para a Code.org ou qualquer outra organização
+
+2) Os vencedores serão selecionados somente entre escolas em que a sala de aula inteira (ou escola) participa de uma Hora de Código, que envolve um teste de habilidade coletiva dos estudantes e dos professores.
 
 <% end %>

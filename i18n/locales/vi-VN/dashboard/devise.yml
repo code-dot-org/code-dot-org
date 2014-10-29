@@ -7,7 +7,7 @@ vi:
     failure:
       already_authenticated: Bạn đã đăng nhập.
       inactive: Tài khoản của bạn chưa được kích hoạt.
-      invalid: Email hoặc mật khẩu không hợp lệ.
+      invalid: Email hoặc mật khẩu không hợp lệ .
       invalid_token: Mã xác thực không hợp lệ.
       locked: Tài khoản của bạn đã bị khóa.
       not_found_in_database: Email hoặc mật khẩu không hợp lệ .

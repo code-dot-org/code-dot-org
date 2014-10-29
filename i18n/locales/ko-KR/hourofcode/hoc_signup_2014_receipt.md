@@ -8,7 +8,7 @@ from: '"Hadi Partovi (Code.org)" hadi_partovi@code.org' subject: Thanks for sign
 
 # Hour of Code! 행사를 개최하는데 가입해 주셔서 감사합니다.
 
-**모든**Hour of Code 개최자는 10GB의 Dropbox 공간이나 $10 상당의 Skype 머니를 드립니다. [자세히](http://<%= hostname %>/prizes)
+**모든**Hour of Code 사용자는 10GB의 Dropbox 용량이나 $10 상당의 Skype 크레딧를 드립니다. [자세히](http://<%= hostname %>/prizes)
 
 <% if @country == 'us' %>
 
@@ -44,7 +44,7 @@ from: '"Hadi Partovi (Code.org)" hadi_partovi@code.org' subject: Thanks for sign
 
 ## 5. 지역 의원 등에게 Hour of Code 를 지원해달라고 요청하세요.
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[이 이메일](http://<%= hostname %>/resources#politicians)을 시장, 시의회, 학교운영위원회 등에 보내세요. 또는 [이 유인물을 전달하고](http://<%= hostname %>/resources/hoc-one-pager.pdf) 여러분의 학교로 초대하세요.
 
 <% if @country == 'ro' %>
 
@@ -56,6 +56,6 @@ Echipa Hour of Code Romania hoc@adfaber.org
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org 는 미국 501c3 조항에 의한 비영리 조직입니다. 주소는 1301 5th Ave, Suite 1225, Seattle, WA, 98101 입니다. 안내 이메일을 더이상 원하지 않으시면 [메일링 취소](%= unsubscribe_link %).
 
 ![](<%= tracking_pixel %>)

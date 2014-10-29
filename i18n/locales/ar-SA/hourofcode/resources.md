@@ -102,6 +102,22 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Post these on social media
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
@@ -118,23 +134,23 @@ title: Resources layout: wide nav: resources_nav
     </h2>
     
     <p>
-      أجهزة الكمبيوتر موجودة في كل مكان، ولكن هناك أقل مدارس تعلم علوم الحاسوب مقارنة مع 10 سنوات مضت. الخبر السار، نحن في طريقنا لتغيير هذا. إذا كنت قد سمعت عن ساعة البرمجة في العام الماضي، قد تعرف أنها دخلت التاريخ. في أسبوع واحد فقط، جرب 15 مليون طالب علوم الحاسوب!
+      أجهزة الكمبيوتر موجودة في كل مكان، ولكن هناك أقل مدارس تعلم علوم الحاسوب مقارنة مع 10 سنوات مضت. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
     </p>
     
     <p>
-      علوم الحاسوب كانت في الصفحات الرئيسية من جوجل، MSN، ياهو! وديزني. أوباما الرئيس، شاكيرا، والسيدة أشتون كاتشر دعموا الساعة بأشرطة الفيديو. جاء ما يزيد على 100 من الشركاء معا لدعم هذه الحركة.
+      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      هذا العام، دعونا نجعل الحدث أكبر حجماً. أنا أطلب منك للانضمام ساعة البرمجة دورة 2014. الرجاء المشاركة في هذا الحدث خلال أسبوع التعليم علوم الحاسوب، 8-14 كانون الأول/ديسمبر، عام 2014.
+      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
     </p>
     
     <p>
-      انشر المعلومة. استضف هذا حدث. اطلب من المدرسة القريبة منك التسجيل. أو حاول ساعة البرمجة بنفسك--ويمكن للجميع الاستفادة من تعلم الأساسيات.
+      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
     </p>
     
     <p>
-      ساعدنا على الوصول إلى 100 مليون من التلاميذ قبل نهاية السنة! للشروع في العمل في http://hourofcode.com
+      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
     </p>
     
     <p>
@@ -146,23 +162,23 @@ title: Resources layout: wide nav: resources_nav
     </h2>
     
     <p>
-      <strong>الموضوع:</strong>تنضم المدرسة إلى مبادرة تهدف لتعريف 100 مليون طالب بعلوم الحاسب
+      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
     </p>
     
     <p>
-      أجهزة الكمبيوتر موجودة في كل مكان، ولكن عدد المدارس التي تعلم علوم الحاسوب اقل مما عليه 10 سنوات مضت. الفتيات والأقليات يمثلون نسبة قليلة . والخبر السار، نحن في طريقنا تغيير هذا.
+      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
     </p>
     
     <p>
-      في أسبوع واحد من العام الماضي، حاول 15 مليون طالب علوم الحاسوب! علوم الحاسوب كانت في الصفحات الرئيسية من جوجل، MSN، ياهو! وديزني. أوباما الرئيس، شاكيرا، والسيدة أشتون كاتشر دعموا الساعة بأشرطة الفيديو. جاء ما يزيد على 100 من الشركاء معا لدعم هذه الحركة.
+      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      وتهدف حركة "ساعة البرمجة" الآن للوصول الى 100 مليون طالب.
+      Now the Hour of Code movement is aiming for 100 million students.
     </p>
     
     <p>
-      لهذا السبب كل واحد من [عدد الطلبة] في [اسم المدرسة] سينضمون الى أكبر حدث تعليمي في التاريخ: "ساعة البرمجة"، خلال الفترة من 8-14 كانون الأول/ديسمبر.
+      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
     </p>
     
     <p>

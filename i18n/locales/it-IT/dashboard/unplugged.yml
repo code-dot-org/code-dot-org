@@ -2,7 +2,7 @@ it:
   data:
     unplugged:
       Unplug1:
-        title: "Cos'è l'informatica"
+        title: "Introduzione all'informatica"
         desc: Questa lezione introduce il concetto di “Informatica” e spiega cosa fa un “Informatico”. Fornisce anche agli allievi l’opportunità di assumere il ruolo di un informatico. Al termine dell’attività ogni allievo avrà un ricordo da portare a casa di ciò che ha imparato. Potresti esser tentato di non insegnare adesso ai tuoi allievi le parole complicate associate a queste lezioni, ma presentarle adesso in modo divertente e giocoso è molto più produttivo che aspettare opportunità più avanzate.
         pdfs:
           - unplug1
@@ -97,7 +97,7 @@ it:
         desc: 'Gli studenti fanno una corsa a staffetta, nella quale uno alla volta corrono a scrivere un algoritmo basato su un disegno dalla lezione "Programmazione su carta a quadretti". Possono scrivere una sola istruzione alla volta, e se trovano un errore in qualche punto, devono cancellare tutto fino a quel punto.'
         video: 'Programmazione a staffetta - "Senza Rete"'
       Conditionals:
-        title: Istruzioni condizionali
+        title: Condizionali
         desc: 'Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".'
         video: 'Istruzioni condizionali - "Senza Rete"'
       BigEvent:
@@ -127,7 +127,7 @@ it:
         desc: Gli studenti usano i passi fondamentali del pensiero computazione (decomposizione, identificazione di schemi, astrazione, algoritmica) per capire come si svolge un gioco che non ha istruzioni.
         video: 'Pensiero Computazionale - "Senza Rete"'
       FunctionalSuncatchers:
-        title: Acchiappa-Sole Funzionale
+        title: Acchiappa-sole Funzionale
         desc: Gli studenti creano un algoritmo con variabili e funzioni (porzioni di codice che si possono usare ripetutamente) per creare degli acchiappa-sole usando fili e perline.
         video: Acchiappa-Sole Funzionale
       SongwritingParameters:
@@ -144,7 +144,7 @@ it:
         video: 'Internet - "Senza Rete"'
       Crowdsourcing:
         title: Intelligenza Collettiva
-        desc: "Gli studenti usano l'intelligenza collettiva, una tecnica di risoluzione di problemi comune nell'informatica, per completare un compito come classe più efficientemente che uno studente per conto proprio."
+        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: Intelligenza Collettiva
       DigitalCitizenship:
         title: Cittadinanza Digitale

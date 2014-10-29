@@ -45,7 +45,7 @@
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
   already_started: "ইতোমধ্যে শুরু করেছ? এখান থেকে চালিয়ে যাও >> "
   demos: 'Admin: সকল Demos'
-  continue: "চালিয়ে যাও"
+  continue: "চালিয়ে যান"
   prize: prize
   more_info: "আরও তথ্য"
   auth:
@@ -70,16 +70,7 @@
     no_signup_message: You can <a target="_blank" href="http://learn.code.org">browse
       the various stages and puzzles</a>, but you will need to sign up to save your
       progress.
-    prizes_message: U.S. students who earn all %{num_trophies} concept trophies can
-      select a variety of prizes including free Dropbox space, Skype credits, and
-      downloadable games from Electronic Arts.
     teacher_educator_guide: See educator guide
-    teacher_prize_header: Win $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      rewards
-    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org will offer up to $1,000 in classroom funding to U.S. public school
-      teachers who lead at least 15 students through this course. <a href="http://code.org/educate/20hr">See
-      educator guide for more info.</a> '
     teacher_pitch: Teach the K-8 Intro to Computer Science in your classroom
     teacher_title: "শিক্ষক সাইন আপ"
     student_pitch: 'Beyond 1 hour: try our K-8 Intro to Computer Science'
@@ -90,6 +81,7 @@
     gender: "লিঙ্গ (ঐচ্ছিক)"
     birthday: "জন্মদিন (ঐচ্ছিক)"
     age: Age (optional)
+    user_type: Are you a student or teacher?
     submit: "সাইন আপ"
     teacher: "আপনি কি শিক্ষক?"
     valid_username: Available!
@@ -107,7 +99,7 @@
   signin_form:
     title: "সাইন ইন করুন"
     login: "ব্যবহারকারীর নাম অথবা ই-মেইল"
-    password: "পাসওয়ার্ড"
+    password: "পাসওআর্ড"
     remember: "আমাকে মনে রাখুন"
     submit: "সাইন ইন করুন"
   signin:
@@ -119,7 +111,7 @@
     name: Choose your name
     picture: Now find your secret picture
     words: Now enter your secret words
-    login: Sign in
+    login: "সাইন ইন করুন"
   password:
     reset_form:
       title: "আপনার পাসওয়ার্ড ভুলে গেছেন?"
@@ -264,8 +256,8 @@
       settings: My account
       prizes: Prizes
       logout: Sign out
-      signin: Sign in
-      signup: Sign up
+      signin: "সাইন ইন করুন"
+      signup: "সাইন আপ"
       already_registered: Already registered?
     popup:
       progress: Your progress
@@ -276,7 +268,7 @@
       prizes: Collect all %{total_trophies} trophies and win prizes!
       prize_earned: All %{total_trophies} trophies collected. Prize won!
       prize_us_only: "(U.S. students only)"
-      prizes_link: more info
+      prizes_link: "আরও তথ্য"
   teacher:
     title:
       one: Your teacher is %{name}
@@ -298,7 +290,7 @@
       no_section: No assigned section
       trophies: "পুরষ্কার"
     students:
-      name: Name
+      name: "নাম"
       username: "উজারন্যাম"
       password: "পাসওআর্ড"
       manage: Manage students
@@ -381,8 +373,6 @@
     student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
       trophies.
     student_left_off: 'Where you left off:'
-    student_finished_prize: You've completed all tutorials, claim your %{prize_link}
-      and pick another class %{online_link} or at a %{local_school_link}
     student_finished: You've completed all tutorials, pick another class %{online_link}
       or at a %{local_school_link}
     local_school: local school
@@ -402,10 +392,16 @@
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Male
     female: Female
     none: Prefer not to answer
+  user_type:
+    student: Student
+    teacher: Teacher
   footer:
     help_from_html: Engineers from <a href="http://www.google.com">Google</a>, <a
       href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
@@ -421,13 +417,6 @@
     tos: Terms of service
     privacy: Privacy Policy
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: Need help?
     subtitle: See these videos and hints
@@ -501,11 +490,17 @@
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
       each program in action.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
@@ -540,7 +535,7 @@
           title: Hour of Code
           description: ''
         edit-code:
-          title: Edit Code
+          title: "কোড সম্পাদনা করুন"
           description: ''
         events:
           title: Events
