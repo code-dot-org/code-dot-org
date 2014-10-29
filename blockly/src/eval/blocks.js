@@ -96,6 +96,19 @@ exports.install = function(blockly, blockInstallOptions) {
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_ellipse',
+    blockTitle: msg.ellipseBlockTitle(),
+    apiName: 'ellipse',
+    args: [
+      { name: 'WIDTH', type: 'Number' },
+      { name: 'HEIGHT', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  // image manipulation
+  installFunctionalBlock(blockly, generator, gensym, {
     blockName: 'overlay',
     blockTitle: msg.overlayBlockTitle(),
     apiName: 'overlay',
