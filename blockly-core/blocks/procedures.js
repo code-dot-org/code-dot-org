@@ -280,13 +280,17 @@ Blockly.Blocks.procedures_callnoreturn = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);
     this.setHSV(94, 0.84, 0.60);
-    var editLabel = new Blockly.FieldLabel('edit');
 
-    Blockly.bindEvent_(editLabel.textElement_, 'mousedown', this, this.openEditor_);
-    this.appendDummyInput()
-        .appendTitle(Blockly.Msg.PROCEDURES_CALLNORETURN_CALL)
-        .appendTitle('', 'NAME')
-        .appendTitle(editLabel);
+    var mainTitle = this.appendDummyInput()
+      .appendTitle(Blockly.Msg.PROCEDURES_CALLNORETURN_CALL)
+      .appendTitle('', 'NAME');
+
+    if (Blockly.useModalFunctionEditor) {
+      var editLabel = new Blockly.FieldLabel('edit' /**TODO(bjordan): Localize*/);
+      Blockly.bindEvent_(editLabel.textElement_, 'mousedown', this, this.openEditor_);
+      mainTitle.appendTitle(editLabel);
+    }
+
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip(Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP);
