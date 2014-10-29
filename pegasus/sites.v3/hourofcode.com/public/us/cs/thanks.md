@@ -1,28 +1,22 @@
----
-title: Thanks for signing up to host an Hour of Code! 
-layout: wide
----
+<% facebook = {:u=>"http://#{request.host}/us"}
+                      twitter = {:url=>"http://hourofcode.com", :related=>"codeorg", :hashtags=>"", :text=>hoc_s(:twitter_default_text)}
+                      twitter[:hashtags] = "HourOfCode" unless hoc_s(:twitter_default_text).include? "#HourOfCode" %>
 
-<%
-  facebook = {:u=>"http://#{request.host}/us"}
 
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
-%>
 
 # Děkujeme za přihlášení k hostování akce Hodina kódu!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](/prizes)
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](/us/prizes) for a chance for big prizes for your entire school.
+Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance for big prizes for your entire school.
 
 <% end %>
 
 ## 1. Povídejte o tom
 
-Tell your friends about the #HourOfCode.
+Povězte svým přátelům o #HourOfCode.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
@@ -30,26 +24,30 @@ Tell your friends about the #HourOfCode.
 
 ## 2. Požádejte celou vaší školu, aby nabídla akci Hodina kódu
 
-[Send this email](/resources#email) or [give this handout to your principal](/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](/prizes) and challenge other schools in your area to get on board.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Jakmile se vaše škola zapojila, [Přihlašte se se do soutěže o 10 000 dolarů v hodnotě technologie pro vaši školu](/prizes) a vyzvěte jiné školy z vaší oblasti, aby se přidaly.
 
 <% else %>
 
 ## 2. Požádejte celou vaší školu, aby nabídla akci Hodina kódu
 
-[Send this email](/resources#email) or give [this handout](/files/schools-handout.pdf) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
 
 <% end %>
 
-## 3. Požádejte vašeho zaměstnavatele, aby se zapojil
+## 3. Make a generous donation
 
-[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
+[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. Every dollar will be matched by major Code.org [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
-## 4. Podporujte akci Hodina kódu v rámci své komunity
+## 4. Ask your employer to get involved
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
 
-## 5. Požádejte místní politiky pro podporu akce Hodina kódu
+## 5. Promote Hour of Code within your community
 
-[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+Získejte místní skupinu – skautský klub, kostel, univerzitu, skupiny veteránů nebo odboráře. Nebo uspořádejte akci vaše okolí.
+
+## 6. Ask a local elected official to support the Hour of Code
+
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

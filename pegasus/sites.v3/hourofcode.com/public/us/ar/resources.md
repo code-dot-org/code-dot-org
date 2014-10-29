@@ -1,19 +1,20 @@
 ---
-title: لموارد
 layout: wide
 nav: resources_nav
 ---
 
 # الموارد
 
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
 <a id="handouts"></p> 
 
 <h2>
-  استخدام هذه النشرات لنشر الحدث
+  Use this handout to spread the word
 </h2>
 
 <p>
-  <a href="/resources/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="image" /></a>
+  <a href="/resources/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="الصورة" /></a>
 </p>
 
 <h2>
@@ -21,7 +22,7 @@ nav: resources_nav
 </h2>
 
 <p>
-  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="image" /></a>
+  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="الصورة" /></a>
 </p>
 
 <p>
@@ -32,14 +33,14 @@ nav: resources_nav
   </h2>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>ما معظم المدارس لا تعلم (5 دقائق)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>هنا ساعة البرمجة - الجميع بامكانه التعلم</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -49,14 +50,14 @@ nav: resources_nav
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>الرئيس أوباما حول علوم الحاسوب</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>أي شخص يمكن أن يتعلم (1 دقيقة)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -68,7 +69,7 @@ nav: resources_nav
   <div style='clear:both'>
   </div>
   
-  <p>
+<p>
 <a id="posters"></p> 
 
 <h2>
@@ -80,11 +81,11 @@ nav: resources_nav
 </p>
 
 <h4>
-  <a href="http://hourofcode.com/#signup">سجل </a> حدثك حول ساعة البرمجة و سوف نرسل لك الملصقات مجاناً.
+  <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
 </h4>
 
 <p>
-  <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+  <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="الصورة" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="الصورة" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="الصورة" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="الصورة" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="الصورة" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="الصورة" /></a>
 </p>
 
 <p>
@@ -96,7 +97,23 @@ nav: resources_nav
 </h2>
 
 <p>
-  <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p>
+  <a id="social"></a>
+</p>
+
+<h2>
+  Post these on social media
+</h2>
+
+<p>
+  <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p>
+  <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="الصورة" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <p>
@@ -116,7 +133,7 @@ nav: resources_nav
 </h2>
 
 <p>
-  Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+  أجهزة الكمبيوتر موجودة في كل مكان، ولكن هناك أقل مدارس تعلم علوم الحاسوب مقارنة مع 10 سنوات مضت. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
 </p>
 
 <p>

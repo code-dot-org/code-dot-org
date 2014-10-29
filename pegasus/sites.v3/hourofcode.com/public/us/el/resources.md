@@ -1,15 +1,19 @@
 ---
-title: Πόροι
+layout: wide
+nav: resources_nav
+------
 layout: wide 
 nav: resources_nav
 ---
 
 # Πόροι
 
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
 <a id="handouts"></p> 
 
 <h2>
-  Χρησιμοποιήστε αυτό το φυλλάδιο για να εξαπλωθεί το νέο
+  Use this handout to spread the word
 </h2>
 
 <p>
@@ -17,7 +21,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Δώστε αυτό το έγγραγο σε εκπαιδευτικούς και σχολεία
+  Give this handout to teachers and schools
 </h2>
 
 <p>
@@ -28,18 +32,18 @@ nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Προβάλετε αυτά τα βίντεο για να εμπνεύσετε μαθητές
+    Show these videos to inspire students
   </h2>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Τι δεν διδάσκουν τα περισσότερα σχολεία (5 λεπτά)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong> Η Ώρα του Κώδικα είναι εδώ - Όλοι μπορούν να μάθουν </strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -49,14 +53,14 @@ nav: resources_nav
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Ο Πρόεδρος Ομπάμα για την Πληροφορική</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Όλοι μπορούν να μάθουν (1 λεπτό)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -68,11 +72,11 @@ nav: resources_nav
   <div style='clear:both'>
   </div>
   
-  <p>
+<p>
 <a id="posters"></p> 
 
 <h2>
-  Αναρτήστε αυτές τις αφίσες στο σχολείο σας
+  Hang these posters in your school
 </h2>
 
 <p>
@@ -80,7 +84,7 @@ nav: resources_nav
 </p>
 
 <h4>
-  <a href="http://hourofcode.com/#signup">Εγγραφείτε</a> με την δικιά σας εκδήλωση για την Ώρα του Κώδικα και εμείς θα σας στείλουμε αφίσες δωρεάν.
+  <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
 </h4>
 
 <p>
@@ -92,7 +96,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Τοποθετήστε αυτά τα διαφημιστικά στην ιστοσελίδα σας
+  Feature these banners on your website
 </h2>
 
 <p>
@@ -100,11 +104,27 @@ nav: resources_nav
 </p>
 
 <p>
+  <a id="social"></a>
+</p>
+
+<h2>
+  Post these on social media
+</h2>
+
+<p>
+  <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p>
+  <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p>
   <a id="sample-emails"></a>
 </p>
 
 <h2>
-  Στείλτε αυτά τα ηλεκτρονικά μηνύματα για να βοηθήσετε στην προβολή της Ώρας του Κώδικα
+  Send these emails to help promote the Hour of Code
 </h2>
 
 <p>
@@ -112,11 +132,11 @@ nav: resources_nav
 </p>
 
 <h2>
-  Ζητήστε από το σχολείο, τον εργοδότη ή τους φίλους να εγγραφούν:
+  Ask your school, employer or friends to sign up:
 </h2>
 
 <p>
-  Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+  Οι υπολογιστές είναι παντού, αλλά λιγότερα σχολεία διδάσκουν Πληροφορική από ό, τι πριν από 10 χρόνια. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
 </p>
 
 <p>
@@ -140,7 +160,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Καλέστε τα ΜΜΕ να καλύψουν την εκδήλωσή σας:
+  Invite media to attend your event:
 </h2>
 
 <p>
@@ -192,7 +212,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Ενημερώστε τους γονείς για την εκδήλωση του σχολείου:
+  Tell parents about your school's event:
 </h2>
 
 <p>
@@ -232,7 +252,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Προσκαλέστε έναν τοπικό πολιτικό στην εκδήλωση του σχολείου:
+  Invite a local politician to your school's event:
 </h2>
 
 <p>

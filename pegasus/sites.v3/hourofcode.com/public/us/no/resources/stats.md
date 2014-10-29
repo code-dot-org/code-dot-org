@@ -1,19 +1,15 @@
-* * *
 
-title: Resources layout: wide
 
-* * *
+# Hvordan få oppmerksomhet i media om Kodetimen
 
-# How to attract media to your Hour of Code event
+## Noe oppsiktsvekkende statistikk (USA):
 
-## Some shocking statistics (USA):
+  * Det vil være en million flere arbeidsplasser innen IT enn uteksaminerte kandidater de neste 10 årene (kan utgjøre opp til 500 milliarder dollar i lønn).
+  * Mer enn 50 prosent av alle anslåtte yrker er innen matematikk og vitenskap i databehandling. 
+  * IT-yrker er blant de høyeste betalte jobbene for nyutdannede, men færre enn 3% av studentene tar en grad i informatikk.
+  * I 26 delstater teller ikke IT-fag for å ta realfagsfordypning i videregående skole. 
+  * Mindre enn 20% av informatikk-studentene er kvinner. Mindre enn 10% er afro-amerikanske eller latinske.
 
-  * There will be one million more computing jobs than students over the next 10 years (adding up to $500 billion in salaries).
-  * More than 50 percent of all projected math and science occupations are in computing occupations. 
-  * Computing occupations are among the highest-paying jobs for new graduates. Yet fewer than 3% of college students graduate with a degree in computer science.
-  * In 26 states, computer science classes don’t count toward math or science high school graduation requirements. 
-  * Less than 20% of AP Computer Science students are women. Less than 10% are black or Latino.
+## Grafiske framstillinger:
 
-## Infrographic version:
-
-![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+![bilde](http://code.org/images/fit-8000/Code.org_infographic.png)
