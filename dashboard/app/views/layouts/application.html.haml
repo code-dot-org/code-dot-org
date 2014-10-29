@@ -20,8 +20,7 @@
       = render partial: 'layouts/age_interstitial'
 
     .wrapper
-      - if !browser.mobile? || !@level
-        = render partial: 'layouts/header'
+      = render partial: 'layouts/header'
       - page = yield
       - if @full_width
         .full_container{ style: @no_padding ? 'padding: 0px;' : '' }
