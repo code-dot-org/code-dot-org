@@ -5,6 +5,7 @@ var EvalTriangle = require('./evalTriangle');
 var EvalMulti = require('./evalMulti');
 var EvalRect = require('./evalRect');
 var EvalEllipse = require('./evalEllipse');
+var EvalText = require('./evalText');
 
 // todo (brent) - make use of blockId?
 
@@ -68,4 +69,8 @@ exports.rotateImage = function (image, degrees) {
 exports.scaleImage = function (image, factor) {
   image.scale(factor, factor);
   return exports.register(image);
+};
+
+exports.text = function (text, fontSize, color) {
+  return exports.register(new EvalText(text, fontSize, color));
 };

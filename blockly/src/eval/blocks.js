@@ -107,6 +107,17 @@ exports.install = function(blockly, blockInstallOptions) {
     ]
   });
 
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_text',
+    blockTitle: msg.textBlockTitle(),
+    apiName: 'text',
+    args: [
+      { name: 'TEXT', type: 'string' },
+      { name: 'SIZE', type: 'Number' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
   // image manipulation
   installFunctionalBlock(blockly, generator, gensym, {
     blockName: 'overlay',
