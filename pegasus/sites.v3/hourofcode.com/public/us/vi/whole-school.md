@@ -1,7 +1,9 @@
----
-layout: wide
----
+* * *
 
-# Hãy mang trường học của bạn tới Hour of Code
+bố trí: rộng
 
-Thông tin về việc để trường học tham gia vào Hour of Code sẽ được đặt tại đây.
+* * *
+
+# Kêu gọi cả trường bạn tham gia
+
+Thông tin về việc kêu gọi toàn trường tham gia Giờ Mã sẽ đến đây.

@@ -16,4 +16,4 @@ title: Resources layout: wide
 
 ## Infrographic version:
 
-![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+![imahe](http://code.org/images/fit-8000/Code.org_infographic.png)

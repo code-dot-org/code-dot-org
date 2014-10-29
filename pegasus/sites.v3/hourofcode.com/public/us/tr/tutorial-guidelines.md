@@ -1,12 +1,16 @@
----
-layout: wide
----
+* * *
+
+düzen: geniş
+
+* * *
 
 # Kodlama Zamanı ve Bilgisayar Bilimi Eğitimi Haftası rehberi
 
-Code.org çeşitli Kodlama Zamanı aktivitelerine Code.org, Kodlama Zamanı ve Bilgisayar Bilimi Eğitimi Haftası websitelerinde ev sahipliği yapacaktır. Güncel liste için [code.org/learn](http://code.org/learn).
+**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
 
-Çeşitli birleştirici etkinliğe ev sahipliği yapmak istiyoruz, ancak birincil amacımız bilgisayar bilimine yeni olan öğrenci ve öğretmenlerin deneyimlerini iyileştirmektir. Lütfen bu belge yardımıyla aktivitenizin oluşumunu yönlendirin; hiçbir kodlama, bilgisayar programlama ve bilgisayar bilimi geçmişi olmayan bir kitleye hitap ettiğinizi unutmayın.
+Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+
+We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
 <a id="top"></a>
 
@@ -25,9 +29,9 @@ Code.org çeşitli Kodlama Zamanı aktivitelerine Code.org, Kodlama Zamanı ve B
 
 ## Öğreticiler eğitime dahil edilmesi için nasıl değerlendirilecek
 
-Bir bilgisayar bilimi eğitimcisi komitesi, daha geniş bir eğitimci kitlesi tarafından yapılan anketleri de dahil ederek, nitel ve nicel ölçümlerle başvuruları sıralayacak.
+A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Öğreticilerin listede yukarılarda yer almasını sağlayacak durumlar:**
+**Tutorials will be listed higher if they are:**
 
   * Yüksek kaliteli
   * Kendinden yönlendirmeli, hiçbir anlatıma ihtiyaç duymayan
@@ -38,7 +42,7 @@ Bir bilgisayar bilimi eğitimcisi komitesi, daha geniş bir eğitimci kitlesi ta
   * Her nüfus grubunda öğrenime dahil olma isteğini uyandıracak (özellikle azınlık gruplarında)
   * Sadece HTML+CSS web tasarımı odağında olmayan - (hedefimiz bilgisayar bilimi, sadece HTML kodlaması değil)
 
-**Öğreticilerin listede aşağılarda yer almasına sebep olacak durumlar:**
+**Tutorials will be listed lower if they are:**
 
   * Düşük kaliteli
   * Daha ileri düzeyde eğitime uygun (başlangıç düzeyine uygun olmayan)
@@ -47,7 +51,7 @@ Bir bilgisayar bilimi eğitimcisi komitesi, daha geniş bir eğitimci kitlesi ta
   * Tek bir cinsiyete hitap eden (örneğin, tema olarak sadece erkekler için tasarlanmış)
   * Paralı bir eğitim sistemine yönlendirme amacıyla çalışan
 
-**Öğreticiler listede aşağıdaki durumlarda yer ALMAZLAR:**
+**Tutorials will NOT be listed if they:**
 
   * Öğretmenin yüksek bir seviyede katılımını ve önceden hazırlığını gerektirecek olan (diğer bir deyişle, öğrenciler için kendinden yönlendirmeli olmayan)
   * Bir saatten fazla uzun veya fazla kısa olan
@@ -57,13 +61,13 @@ Bir bilgisayar bilimi eğitimcisi komitesi, daha geniş bir eğitimci kitlesi ta
   * Sadece HTML + CSS web tasarımına odaklanmış
   * Son gönderim tarihinden sonra veya eksik bilgiyle gönderilmiş (detaylar aşağıda)
 
-Neticede, Kodlama Saati kampanyasının amacı öğretmen ve öğrencilerin bilgisayar bilimine katılım oranını arttırmak, bu bilime herkesin ulaşabileceğini ve bunun “düşündüğünüzden daha kolay olduğunu“ göstermektir. Birçok şekilde hedef, öğrenci ve öğretmenlere daha az ve basit seçenekler vererek, ilk kez kullanan biri için en yüksek kaliteyi sunmak olmalıdır.
+Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
 
-Ayrıca, Bilgisayar Bilimi Eğitimi Haftası 2013'ün, öğretmen ve öğrencilerden aldığımız geri dönüşlerle hesaplandığında müthiş bir başarıya ulaştığı sonucuna varıyoruz - 9-23 Aralık tarihleri arasında 20 milyon katılımcı yer aldı ve %97'si eğlendiklerini ve kampanyaya tekrar katılmak istediklerini söylediler!!
+Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
 
-Sonuç olarak, mevcut listeler kesinlikle “yeterince iyi“, Kodlama Saatine yeni öğretici ekleme amacımız seçenekleri çoğaltmak da değil; amaç, öğrenciler için kaliteyi (veya yeniliği) arttırmak, 2014 kampanyasının küresel niteliğine hizmet edecek şekilde İngilizce bilmeyenler için de seçenekleri genişletmek diyebiliriz.
+As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
 
-[**Başa dön**](#top)
+[**Back to the top**](#top)
 
 <a id="guidelines"></a>
 
@@ -80,15 +84,15 @@ Sonuç olarak, mevcut listeler kesinlikle “yeterince iyi“, Kodlama Saatine y
       * **Uygun, ama tercih edilmeyen:** Yüklenebilir uygulamalar, masaüstü uygulamaları veya oyun konsolu aktiviteleri.
   * **Format:** Kendinden yönlendirmeli öğreticiler veya dersler, tercihen bir öğretmen tarafından yönetilebilir. Bir saatlik ucu açık bir aktivitenin aksine, bu aktivitede yönlendirmeler olmalıdır. En iyisi, anlatımların ve öğreticilerin programlama platformuyla birleştirilmesidir. Böylelikle ayrı sayfa veya pencerelerde açık olan öğretici ve programlama platformu arasında sürekli gidip gelme sorunu ortadan kalkmış olur.
 
-[**Başa dön**](#top)
+[**Back to the top**](#top)
 
 <a id="submit"></a>
 
 ## Nasıl gönderilir (1 Ekim 2014'e kadar)
 
-[Kodlama Saati gönderim sayfasını](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) ziyaret edin ve adımları takip ederek öğreticinizi gönderin.
+Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
 
-**İhtiyacınız olanlar:**
+**What you’ll need:**
 
   * İsminiz, logonuz (jpg, png, vs.)
   * Kodlama Saati aktiviteniz için pazarlama görselinizin URL'si. Görseller tam olarak 446 x 335 çözünürlükte olmalıdır. Eğer uygun bir fotoğraf sağlanamazsa, biz sizin için öğreticinizin ekran görüntüsünü çekebiliriz VEYA öğreticinizi listeye koymayabiliriz.
@@ -136,56 +140,56 @@ Sonuç olarak, mevcut listeler kesinlikle “yeterince iyi“, Kodlama Saatine y
       * Çevrimdışı aktiviteler için 
           * Aktivitenin kağıt versiyonunun indirilme sayısı (uygulanabiliyorsa)
 
-[**Başa dön**](#top)
+[**Back to the top**](#top)
 
 <a id="design"></a>
 
 ## Aktivitenizi tasarlamak için öneriler
 
-**Bilgisayar Bilimi Eğitimi Haftası logosunu öğreticinize ekleyin.** Bilgisayar Bilimi Eğitimi Haftası logosunu ([küçük](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) veya [büyük](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) öğreticinize ekleyebilirsiniz, ancak bu zorunlu değildir. Ayrıca ,“Code.org Ortaklığında“ logosunu kullanabilmek için bize ulaşabilirsiniz. ***Bu logo yalnızca Code.org tarafından yazılı, özel bir izin verilerek kullanılabilir.*** Biz bir Kodlama Saati logosu da yaratabiliriz, ama şu an için bir logomuz yok. Hiçbir şart altında Code.org logosu ve ismi kullanılamaz. İkisinin de hakkı saklıdır ve 3. parti marka isimleriyle birleştirilip kullanılamaz.
+**Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
 
-**Ortalama bir öğrencinin rahatlıkla bir saat içerisinde aktiviteyi bitirebileceğinden emin olun.** Dersin sonuna aktiviteyi çabuk bitiren öğrenciler için ucu açık bir başka aktivite daha koymayı düşünün. Çoğu çocuğun bilgisayar bilimi ve kodlamaya tamamen yeni başlıyor olduğunu unutmayın.
+**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
 
-**Öğretmen notlarını ekleyin.** Çoğu aktiviteler öğrenciler tarafından yönlendirilmelidir, ancak eğer aktivite bir öğretmen tarafından yönletiliyorsa, lütfen ayrı bir URL'ye, açık ve basit yönlendirmeler kullanarak aktivitenizin bir öğretmen notunu yükleyin. Acemi olan sadece öğrenciler değil, bazı öğretmenler de bu konuda acemi olabilir. Şu bilgileri ekleyin:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
   * Öğreticimiz en iyi aşağıdaki platform ve tarayıcılarda çalışır
   * Akıllı telefonlarda çalışır mı? Peki ya tablerlerde?
   * Takım çalışmasını öneriyor musunuz? 
   * Sınıf için kullanım ile ilgili dikkat edilmesi gerekenler nelerdir? Örneğin, eğer videolar varsa, öğretmene videoları projeksiyon kullanarak tüm sınıfın görebileceği şekilde izletmesini tavsiye edin
 
-**Aktivitenin sonunda yapıcı geri bildirimler.** (Örneğin: “10 seviye bitirdin ve döngüleri öğrendin! Harikasın!“)
+**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Sosyal medyayı dahil edin.** (Uygun yerlerde) Öğrencilerin sosyal medyada gönderi paylaşmalarını sağlayın, örneğin “________ ile bir Kodlama Saati bitirdim. Ya sen? #HourOfCode“ veya “Ben bir Kodlama Saatini - #HourOfCode - Bilgisayar Bilimi Eğitimi Haftasının - #CSEdWeek - bir parçası olarak bitirdim. Ya sen? @Scratch.” **#HourOfCode** etiketini kullanın (büyük H, O, C harfleri ile)
+**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Aktivitenizi İngilizce dışında dillerde yaratın.** Bu seneki kampanyayı uluslararası düzenlemeye odaklanıyoruz ve İngilizce bilmeyen katılımcılarımıza da bir takım aktiviteler sunabilmek isteriz.
+**Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
 
-**Aktiviteyi toplum için önemli bir içerikte anlatın veya bağlantı kurun.** Öğrenciler dünyayı bilgisayar programlama ile daha iyiye taşıyabileceklerini gördüklerinde bu beceri bir süper güce dönüşecek!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Öğrenciler öğreticinizi denemeden kayıt veya ücret istemeyin.** Kayıt veya ücret isteyen öğreticiler listeye eklenmeyecektir
+**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
 
-**Öğreticinizin [İkili Takım halinde](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) kullanılabileceğinden emin olun.**
+**Make sure your tutorial can be used in a [Pair Programming paradigm](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
 
-Okul ortamındaki ikili takımlarla ilgili üç kural:
+The three rules of pair programming in a school setting:
 
   * Sürücü fare ve klavyeyi kontrol eder.
   * Yol gösterici öneri yapar, hataları gösterir ve sorular sorar. 
   * Öğrenciler rollerini bir öğreticide en az iki kez değiştirmelidir.
 
-İkili Takım Olmanın Avantajları:
+Benefits of Pair Programming:
 
   * Öğrenciler, öğretmene güvenmek yerine birbirlerine yardımcı olabilirler
   * Kodlamanın yalnız yapılan bir aktivite olmadığını, aslında sosyal iletişim gerektirdiğini görürler
   * Her sınıfta veya laboratuvarda birebir ders için yeterince bilgisayar bulunmayabilir
 
-[**Başa dön**](#top)
+[**Back to the top**](#top)
 
 <a id="tm"></a>
 
 ## Marka patenti ile ilgili bilgiler
 
-Şimdiye kadar yaklaşık 40 milyon öğrencinin Kodlama Saatine katılımı ve katılan öğretmenlerin %97'sinin bizden etkinliğin her yıl yapılmasını istemesi üzerine, biz de büyük bir bağlılıkla ve hiçbir kafa karışıklığına meydan bırakmaksızın Kodlama Saatinin her yıl gerçekleştirilen bir hareket haline gelmesi için adımlar atıyoruz.
+With ~40 million students having tried the Hour of Code, and over 97% of participating teachers asking us to repeat the event annually, we are taking steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
-Bunun bir parçası da marka olarak "Hour of Code"'un (Kodlama Saati) karışıklığa sebebiyet vermemek adına korunmasıdır. Çoğu öğretici ortaklarımız "Hour of Code"'u web sitelerinde kullandılar. Biz bu kullanımı önlemek istemiyoruz, ancak bazı kısıtlamalara uymasını istiyoruz:
+One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
 
   1. "Hour of Code"'a yapılan bir referans marka isminden çok, bu isim altında gelişen köklü harekete hitap etmelidir. Doğru kullanım: "ACMECorp.com'daki Kodlama Saatine (Hour of Code) katılın". Yanlış kullanım: "ACME Corp'un Kodlama Saatini (Hour of Code) deneyin."
   2. "TM" işaretini "Hour of Code" yazdığınız her yerde kullanın, hem web sitenizde hem uygulama açıklamalarınızda
@@ -195,33 +199,33 @@ Bunun bir parçası da marka olarak "Hour of Code"'un (Kodlama Saati) karışık
 
   4. "Hour of Code"'u uygulama isimlerinde kullanmayın
 
-[**Başa dön**](#top)
+[**Back to the top**](#top)
 
 <a id="pixel"></a>
 
 ## Takip Pikseli
 
-Daha net bir şekilde katılımı takip edebilmek için, her üçüncü parti öğretici ortağının Kodlama Saati öğreticilerinin başına ve sonuna 1-piksel takip görüntüsü yerleştirmelerini istiyoruz. (Başlangıç sayfasına bir başlangıç piksel-görüntüsü ve son sayfaya da son bir piksel-görüntüsü yerleştirin. Ara sayfalara piksel yerleştirmeyin).
+In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
 
-Böylelikle Kodlama Saatlerini gerçekleştirmek amacıyla direkt olarak websitenizi ziyaret eden kullanıcıların sayısına ulaşabiliriz, ya da bir öğretmen tahtaya sizin URL'nizi yazdığında hangi kullanıcıların ziyaret ettiğini görebiliriz. Bu, daha net bir katılımcı sayısına ulaşmanızı sağlayarak daha çok yeni kullanıcı çekmenizi sağlayacaktır. Sona koyduğunuz pikseller ise aktivitenin tamamlanma oranlarını tespit etmemize yardımcı olacaktır.
+This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
 
-Öğreticiniz kabul edildiyse ve son öğretici sayfasına eklendiyse, Code.org size özel bir takip pikselini öğreticinizle birleştirmeniz için verecektir. Aşağıda örneği mevcuttur.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-***NOT: Bu, yüklenebilir uygulamalar için önemli değildir (iOS/Android uygulamaları, ya da masaüstüne indirilen uygulamalar)***
+***NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)***
 
-**AppInventor için örnek takip pikselleri:**
+**Example tracking pixels for AppInventor:**
 
 IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Başa dön**](#top)
+[**Back to the top**](#top)
 
 <a id="promote"></a>
 
 ## Öğreticilerinizi desteklemek, Bilgisayar Bilimi Eğitimi Haftası ve Kodlama Saati
 
-Herkesten kendi 1 saatlik öğreticisini kullanıcılarına tanıtmalarını ve desteklemelerini rica ediyoruz. Lütfen onları kendi Kodlama Saati sayfanıza yönlendirin. Kullanıcılarınız sizden öğreticiniz hakkında e-posta aldıklarında onlardan daha büyük bir geri dönüş alırsınız. Bilgisayar Bilimi Eğitimi Haftası adına düzenlenen Uluslararası Kodlama Saati kampanyasını bahane ederek kullanıcılarınızı diğerlerini de davet etmesi için teşvik edin, 100 milyon toplam katılımcıya ulaşmamıza yardımcı olun.
+We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 
   * Kodlama Saati ve Bilgisayar Bilimi Eğitimi Haftasına websitenizde yer verin.  
     Örneğin: <http://www.tynker.com/hour-of-code>
@@ -229,12 +233,12 @@ Herkesten kendi 1 saatlik öğreticisini kullanıcılarına tanıtmalarını ve 
   * Yerel bir etkinliğe ev sahipliği yapın ya da çalışanlarınızdan yerel okullarda ve yerel sosyal gruplarda bir etkinlik düzenlemelerini rica edin.
   * Kaynaklar Kitimizde daha detaylı bilgiler bulabilirsiniz (çok yakında).
 
-[**Başa dön**](#top)
+[**Back to the top**](#top)
 
 <a id="disabilities"></a>
 
 ## Engelli öğrenciler için özel bir not
 
-Eğer görme engelliler için bir öğretici hazırladıysanız, ekran okuyucusu kullanacak katılımcılar için öğreticiyi vurgulamaktan mutluluk duyarız. Şimdiye dek elimize böyle bir öğretici ulaşmadı, ancak görme engelli öğrenciler için bir seçenek bulundurmak adına bir tane eklemek bizi gerçekten çok mutlu eder.
+If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Başa dön**](#top)
+[**Back to the top**](#top)

@@ -15,7 +15,7 @@
   * Требуют от учителя минимальное время на подготовку
   * Являются интуитивными, позволяя ученикам работать в их собственном темпе и уровне квалификации
 
-[![image](http://code.org/images/tutorials.png)](http://code.org/learn)
+[![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
 ## 2) Определите вашу потребность в оборудовании - компьютеры не обязательны
 
@@ -32,39 +32,43 @@
 
 ## 4) Вдохновите учеников - покажите им видео
 
-Покажите ученикам < % if @country == «uk» %> [это видео](https://www.youtube.com/watch?v=96B5-JGA9EQ) < % else %> [это видео](http://www.youtube.com/watch?v=FC5FbmsH4fw) < % %> чтобы начать "Час программирования". Также посмотрите [эти видео](http://youtube.com/codeorg), Билл Гейтс, Марк Цукерберг, Black Eyed Peas основатель will.i.am и НБА звезды Крис Бош, они расскажут о важности программирования. ([1 минутная](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 минутная](https://www.youtube.com/watch?v=nKIu9yen5nc) и [9 минутная](https://www.youtube.com/watch?v=dU1xS07N-FA) версии)
+Show students an inspirational video to kick off the Hour of Code. Examples:
+
+  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
+  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Заинтересуйте ваших учеников - начните с небольшого вступления**
 
 Большинство детей не знают, что такое информатика. Вот несколько идей:
 
-  * Объясните это просто, приведите примеры приложений, которые интересуют и мальчиков, и девочек (спасение жизни, помощь людям, объединение людей и т.д.).
-  * Попробуйте сказать: "Подумайте о повседневных вещах, которые связаны с информатикой: мобильный телефон, микроволновая печь, компьютер, светофор... Чтобы создать все эти вещи, нужно знание информатики."
-  * Или: "Информатика - это искусство соединять идеи людей с цифровыми инструментами для увеличения нашей силы. Ученые, занимающиеся информатикой, работают в самых разнообразных сферах: написание приложений для телефонов, лечение болезней, создание анимационных фильмов, работа над социальными сетями, создание роботов, которые исследуют другие планеты и еще многое, многое другое."
-  * Вы можете найти советы, как заинтересовать девочек информатикой, [здесь](http://code.org/girls). 
+  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
+  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
+  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
+  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
 
 ## 5) Начните свой Час программирования
 
 **Направьте учеников к деятельности**
 
-  * Напишите ссылку учебника на доске. Найдите ссылку перечисленную в < % если @country == «uk» %> [информации для вашего выбранного учебника](http://uk.code.org/learn) < % else %> [информации для вашего выбранного учебника](http://code.org/learn) < % end % под количество участников. (Пример: [hourofcode.com/co](http://code.org/learn)) 
-  * Скажите extybrfv посетить URL-адрес и запустить учебник.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
+  * Tell students to visit the URL and start the tutorial.
 
 **Когда ваши ученики сталкиваются с трудностями**
 
-  * Скажите ученикам: «Спросите трех, затем меня». Спросите трех одноклассников, и если у них нет ответа, то спросите учителя.
-  * Поощряйте учеников и предложите положительное подкрепление: «У тебя отлично получается, продолжай в том же духе.»
-  * Ответить: «Я не знаю." - нормально. Давайте разберемся с этим вместе. "Если вы не можете разобраться с задачей, используйте ее как хорошую тему для занятия: "Технологии не всегда работают так, как мы хотим. Вместе мы - сообщество учащихся.» И: «Обучение программированию, как изучение нового языка; Вы не сразу будете себя чувствовать как рыба в воде.»
+  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
+  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
+  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
 
 **Что делать, если ученики справятся раньше?**
 
-  * Ученики могут посмотреть все уроки и попробовать другие задания "Часа программирования" на < % if @country == «uk» %> [uk.code.org/learn](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
-  * Или попросите учащихся, которые закончили раньше, помочь одноклассникам, у которых возникли проблемы с заданием.
+  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Or, ask students who finish early to help classmates who are having trouble with the activity.
 
 **Как мне распечатать сертификаты для моих учеников?**
 
-Каждый студент получает шанс получить сертификат по электронной почте, когда они закончат задание [Code.org tutorials](http://studio.code.org). Вы можете кликнуть по сертификату, чтобы распечатать его. Однако, если вы хотите сделать новые сертификаты для ваших учеников, посетите нашу < % if @country == «uk» %> [Certificates](http://uk.code.org/certificates) < % else %> [Certificates](http://code.org/certificates) < % end %> страницу, чтобы распечатать сколько угодно сертификатов, одним махом!
+Каждый студент получает шанс получить сертификат по электронной почте, когда они закончат задание [Code.org tutorials](http://studio.code.org). Вы можете кликнуть по сертификату, чтобы распечатать его. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
 
 **Что происходит после "Часа программирования"?**
 
-"Час программирования" является лишь первым шагом в приключении о том, чтобы узнать больше о работе технологий и способов создания программных приложений. < % if @country == «uk» %> "Час программирования" является лишь первым шагом в приключении о том, чтобы узнать больше о работе технологий и способов создания программных приложений. Чтобы продолжить это приключение, [воодушевляйте своих учеников учиться онлайн](http://uk.code.org/learn/beyond). < %, else %> Чтобы продолжить это приключение, находите дополнительные ресурсы для преподавателей [здесь](http://code.org/educate). Или воодушевляйте своих детей учиться [онлайн](http://code.org/learn/beyond). <% end %>
+"Час программирования" является лишь первым шагом в приключении о том, чтобы узнать больше о работе технологий и способов создания программных приложений. < % if @country == «uk» %> "Час программирования" является лишь первым шагом в приключении о том, чтобы узнать больше о работе технологий и способов создания программных приложений. Чтобы продолжить это приключение, [воодушевляйте своих учеников учиться онлайн](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>

@@ -1,7 +1,8 @@
----
-title: Tài liệu
-layout: wide
----
+* * *
+
+tiêu đề : Tài liệu Khung nhìn : rộng
+
+* * *
 
 # Làm thế nào để thu hút các phương tiện truyền thông tới sự kiện Hour of Code của bạn
 

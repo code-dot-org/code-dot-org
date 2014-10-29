@@ -24,31 +24,31 @@ Tell your friends about the #HourOfCode.
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#email) or [give this handout to your principal](http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
+[Küldd el ezt az e-mailt](http://<%= hostname %>/resources#email) vagy [add oda ezt az anyagot az igazgatódnak](http://<%= hostname %>/files/schools-handout.pdf). Amint az iskolád benne van, [nevezd be az iskolád a 10 ezer dollárnyi technikai eszközökért folyó versenybe ](http://<%= hostname %>/prizes) és hívj meg más iskolákat is a környékeden.
 
 <% else %>
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
+[Küldd el ezt az e-mailt](http://<%= hostname %>/resources#email) vagy add oda [ezt az anyagot](http://<%= hostname %>/files/schools-handout.pdf) az igazgatódnak.
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 3. Kérd meg a téged foglalkoztató céget, hogy vegyenek részt
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Küldd el ezt az e-mailt](http://<%= hostname %>/resources#email) a főnöködnek vagy az igazgatónak. Vagy [add nekik oda ezt az anyagot](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Promote Hour of Code within your community
+## 4. Népszerűsítsd a Kódolás Órája eseményt a környezetedben
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Keress meg helyi csoportokat — cserkészek, templomi közösségek, egyetemek, veteránok vagy szakszervezetek. Vagy szervezz egy „utcabulit” a szomszédokkal.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Kérj meg egy helyi választott vezetőt, hogy támogassa a Kód Órája kezdeményezést
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Küldd el ezt az e-mailt](http://<%= hostname %>/resources#politicians) a polgármesterednek, a városvezetésnek vagy az iskolai tanácsnak. Vagy [add nekik oda ezt az anyagot](http://<%= hostname %>/resources/hoc-one-pager.pdf) és hívd meg őket az iskoládba.
 
 <% if @country == 'ro' %>
 
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
+Keress bennünket, ha további kérdésed van vagy bővebb információra van szükséged. Csináljunk együtt történelmet!
 
 Echipa Hour of Code Romania hoc@adfaber.org
 
@@ -56,6 +56,6 @@ Echipa Hour of Code Romania hoc@adfaber.org
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+A Code.org egy 501c3-as non-profit szervezet. Címünk 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Nem szeretnél ilyen leveleket kapni? [Irakozz le](%= unsubscribe_link %).
 
 ![](<%= tracking_pixel %>)

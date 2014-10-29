@@ -1,7 +1,8 @@
----
-title: Obrigado
-layout: wide
----
+* * *
+
+título: Obrigado formato: amplo
+
+* * *
 
 # Obrigado
 

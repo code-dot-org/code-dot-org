@@ -1,7 +1,8 @@
----
-title: Resources 
-layout: wide
----
+* * *
+
+title: Resources layout: wide
+
+* * *
 
 ## 컴퓨터과학(정보과학)과 관련한 통계자료들
 
@@ -19,10 +20,10 @@ layout: wide
 **1. 이벤트를 계획하세요.**
 
   * Hour of Code를 시작하기 위한 단계적 절차들을 계획하세요.
-  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * [부모님들에게 편지보내기.](<%= hoc_uri('/resources/#sample-emails') %>) 부모님들에게도 Hour of Code를 소개하세요.
+  * [이 편지를](<%= hoc_uri('/resources/#sample-emails') %>) 지역 시장, 시의원, 공무원, 지역 사업가들에게 보내 행사에 참여해서 학생들에게 강연할 수 있도록 해주세요.
   * 모둠 활동(언플러그드 프로그래밍 활동과 같은...)을 조직하거나, 학생들이 만들어낸 것들을 발표하고, 여러 가지 활동들을 이끌어내세요.
-  * Show Code.org’s [Hour of Code video](<%= hoc_uri('/') %>) or one of [these](<%= hoc_uri('/resources#videos') %>) to inspire.
+  * Code.org의 [이 것들 중 하나](<%= hoc_uri('/') %>Hour of Code 동영상</a>을 보여주거나 <a href=)를 보여주어 관심을 가질 수 있게 해 주세요.
 
 **2. 해당 지역 전문 리포터 등을 찾아 교육분야나 지역 이벤트에 관한 글을 써달라고 요청하세요.**
 
@@ -32,7 +33,7 @@ layout: wide
 
 **3. 지역 방송 매체에 연락하세요.**
 
-가장 쉽게는 이메일로 연락을 취할 수 있습니다. 내용은 짧으면서도 소통할 수 있어야 합니다. : 왜 다른 사람들이 이 이벤트 행사에 관심을 가져야 하는가? 이벤트 현장에 참여하려는 사람들을 위해 연락처(휴대전화 번호를 포함한...)를 포함시키세요. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
+가장 쉽게는 이메일로 연락을 취할 수 있습니다. 내용은 짧으면서도 소통할 수 있어야 합니다. : 왜 다른 사람들이 이 이벤트 행사에 관심을 가져야 하는가? 이벤트 현장에 참여하려는 사람들을 위해 연락처(휴대전화 번호를 포함한...)를 포함시키세요. **<a</p> 
 
 **4. 여러분의 학교 이벤트와 관련한 질문들에 대한 재치있는 답변들을 생각해 두세요. 예시 질문들은 다음과 같습니다.:**
 
@@ -52,7 +53,7 @@ layout: wide
 
 **Code.org에 대하여**
 
-Code.org® 는 미국의 501c3 조항에 의한 비영리 조직으로, 인종, 성별과 관계없이 컴퓨터과학(정보과학) 교육을 확산하고 함께 나아가기 위해 조직되었습니다. Code.org 의 비전은 모든 학교의 모든 학생들이 컴퓨터 프로그래밍을 배울수 있는 기회를 가져야 한다는 것입니다. 2013년 처음 시작한 이후로, Code.org는 Hour of Code 캠페인을 조직했습니다. - 수백만 명의 학생들에게 컴퓨터과학(정보과학)을 소개해왔습니다. - 전국가적으로 30개 이상의 공립 교육청과 협력하였으며, 모든 나이의 학습자를 위한 오픈소스 온라인 플랫폼인 Code Studio를 만들어 운영하고 있습니다. For more information, please visit: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+Code.org® 는 미국의 501c3 조항에 의한 비영리 조직으로, 인종, 성별과 관계없이 컴퓨터과학(정보과학) 교육을 확산하고 함께 나아가기 위해 조직되었습니다. Code.org 의 비전은 모든 학교의 모든 학생들이 컴퓨터 프로그래밍을 배울수 있는 기회를 가져야 한다는 것입니다. 2013년 처음 시작한 이후로, Code.org는 Hour of Code 캠페인을 조직했습니다. - 수백만 명의 학생들에게 컴퓨터과학(정보과학)을 소개해왔습니다. - 전국가적으로 30개 이상의 공립 교육청과 협력하였으며, 모든 나이의 학습자를 위한 오픈소스 온라인 플랫폼인 Code Studio를 만들어 운영하고 있습니다. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+더 많은 자료와 샘플 이메일을 [여기서](<%= hoc_uri('/resources') %>)찾아보세요..

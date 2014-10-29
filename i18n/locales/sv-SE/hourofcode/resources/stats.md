@@ -1,6 +1,6 @@
 * * *
 
-Titel: resurser layout: bred
+Resurser
 
 * * *
 

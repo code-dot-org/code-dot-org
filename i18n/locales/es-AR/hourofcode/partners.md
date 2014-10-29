@@ -1,27 +1,27 @@
 * * *
 
-título: Socios
+Socios
 
 * * *
 
-# Socios Principales y Benefactores Corporativos
+# Principales socios y auspiciantes corporativos
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# Socios promocionales de "Hora de Código"
+# Socios que apoyan la Hora del Código
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# Socios para tutoriales
+# Proveedores de tutoriales
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Socios adicionales
+# Otros socios
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>

@@ -1,6 +1,8 @@
----
-layout: wide
----
+* * *
+
+prikaz: širok
+
+* * *
 
 # Get your whole school to participate
 

@@ -1,22 +1,24 @@
----
-title: Vă mulțumim pentru ca v-ați înscris să organizați evenimentul Hour of Code!
-layout: wide
----
+* * *
 
-<%
-  facebook = {:u=>"http://#{request.host}/us"}
+Titlu: Vă mulțumim pentru ca v-ați înscris să organizați evenimentul Hour of Code! aspect: wide
 
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HoraDoCodigo'
-%>
+social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
+
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+
+* * *
+
+<% facebook = {:u=>"http://#{request.host}/us"}
+
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
 # Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
 
-**FIECARE** Organizator al Hour of Code va primi 10 GB spaţiu Dropbox sau 10 dolari credit Skype în semn de mulțumire. [Detalii](/prizes)
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
 
 <% if @country == 'us' %>
 
-Invită [toată scoala să participe ](/us/prizes) pentru șansa de câștiga premii mari pentru întreaga școală.
+Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance for big prizes for your entire school.
 
 <% end %>
 
@@ -30,30 +32,30 @@ Spune prietenilor tai despre #HourOfCode.
 
 ## 2. Solicită întregii şcoli sa susțină o Oră de Programare
 
-[Trimite acest e-mail](/resources#email) sau [oferă această broșură](/files/schools-handout.pdf). Odată ce şcoala ta s-a înscris, [participă pentru a câştiga tehnologie în valoare de 10.000 dolari pentru şcoala ta](/prizes) şi provoacă alte şcoli din orașul tău să participe.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Odată ce şcoala ta s-a înscris, [participă pentru a câştiga tehnologie în valoare de 10.000 dolari pentru şcoala ta](/prizes) şi provoacă alte şcoli din orașul tău să participe.
 
 <% else %>
 
 ## 2. Solicită întregii şcoli sa susțină o Oră de Programare
 
-[Trimite acest e-mail](/resources#email) sau [oferă această broșură](/files/schools-handout.pdf).
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
 
 <% end %>
 
-## 3. Make a generous donation
+## 3. Oferă o donaţie generoasă
 
-[Donate to our crowdfunding campaign](http://code.org/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://code.org/donate) in history. Every dollar will be matched by major Code.org [donors](http://code.org/about/donors), doubling your impact.
+[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. Every dollar will be matched by major Code.org [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
-## 4. Ask your employer to get involved
+## 3. Solicită angajatorului să se implice
 
-[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
 
-## 5. Promote Hour of Code within your community
+## 4. Promovează Hour of Code în jurul tău
 
-Recrutează un grup local — club de copii, universitate, biserică. Sau organizează o petrecere Hour of Code în cartierul sau zona ta.
+Recrutează o comunitate sau grup local — club de copii, scoala, biserică. Sau organizează o petrecere Hour of Code în cartierul sau zona ta.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 5. Solicită unui oficial, ales local, sprijinul pentru organizarea Hour of Code
 
-[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>
