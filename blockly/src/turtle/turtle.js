@@ -101,6 +101,7 @@ Turtle.init = function(config) {
       controls: require('./controls.html')({assetUrl: BlocklyApps.assetUrl}),
       blockUsed : undefined,
       idealBlockNumber : undefined,
+      editCode: level.editCode,
       blockCounterClass : 'block-counter-default'
     }
   });
@@ -170,11 +171,6 @@ Turtle.init = function(config) {
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
-  };
-
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
   };
 
   BlocklyApps.init(config);

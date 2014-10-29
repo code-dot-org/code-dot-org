@@ -75,6 +75,7 @@ Calc.init = function(config) {
       }),
       blockUsed : undefined,
       idealBlockNumber : undefined,
+      editCode: level.editCode,
       blockCounterClass : 'block-counter-default'
     }
   });
@@ -114,11 +115,6 @@ Calc.init = function(config) {
     // base's BlocklyApps.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
-  };
-
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
   };
 
   BlocklyApps.init(config);
