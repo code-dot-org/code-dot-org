@@ -56,6 +56,7 @@
   "penUp": "鉛筆を上げる。\n",
   "reinfFeedbackMsg": "これは自分が描こうとしていた画でしょうか？「もう一度」ボタンで自分で描いた画を確認する事ができます。",
   "setColour": "色の設定",
+  "setPattern": "set pattern",
   "setWidth": "幅を設定",
   "shareDrawing": "図面を共有します。",
   "showMe": "見せてください",

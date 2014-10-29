@@ -117,7 +117,7 @@
   "LISTS_IS_EMPTY_HELPURL": "https://code.google.com/p/blockly/wiki/Lists#is_empty",
   "LISTS_IS_EMPTY_TITLE": "%1 이 빈 문장 인가?",
   "LISTS_LENGTH_HELPURL": "https://code.google.com/p/blockly/wiki/Lists#length_of",
-  "LISTS_LENGTH_INPUT_LENGTH": "length of",
+  "LISTS_LENGTH_INPUT_LENGTH": "길이:",
   "LISTS_LENGTH_TITLE": "다음 문장의 문자 개수 %1",
   "LISTS_LENGTH_TOOLTIP": "리스트에 포함되어있는, 아이템 갯수를 돌려줍니다.",
   "LISTS_REPEAT_HELPURL": "https://code.google.com/p/blockly/wiki/Lists#create_list_with",
