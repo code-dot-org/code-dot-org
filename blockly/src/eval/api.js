@@ -3,6 +3,7 @@ var EvalCircle = require('./evalCircle');
 var EvalTriangle = require('./evalTriangle');
 var EvalMulti = require('./evalMulti');
 var EvalRect = require('./evalRect');
+var EvalEllipse = require('./evalEllipse');
 
 // todo (brent) - make use of blockId?
 
@@ -44,4 +45,8 @@ exports.square = function (size, style, color) {
 
 exports.rectangle = function (width, height, style, color) {
   return exports.register(new EvalRect(width, height, style, color));
+};
+
+exports.ellipse = function (width, height, style, color) {
+  return exports.register(new EvalEllipse(width, height, style, color));
 };
