@@ -163,3 +163,19 @@ en:
           description: Draw cool pictures and designs with the Artist!
           Artist: Artist
           description_short: Draw cool pictures and designs with the Artist!
+        scrat:
+          title: Scrat
+          description_short: Scrat short description.
+          description: Scrat long description
+          'Maze: Sequence': 'Maze: Sequence'
+        frozen:
+          title: Frozen
+          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
+            they explore the magic and beauty of ice. You will write code to create
+            snowflakes and patterns as you ice-skate and make a winter wonderland
+            that you can then share with your friends!
+          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
+            explore the magic and beauty of ice. You will write code to create snowflakes
+            and patterns as you ice-skate and make a winter wonderland that you can
+            then share with your friends!
+          Artist: Artist
