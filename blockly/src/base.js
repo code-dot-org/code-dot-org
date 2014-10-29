@@ -475,11 +475,6 @@ BlocklyApps.init = function(config) {
   Blockly.mainBlockSpaceEditor.addChangeListener(function() {
     BlocklyApps.updateBlockCount();
   });
-
-  var toolboxHeader = document.getElementById('new-block-button');
-  dom.addClickTouchEvent(toolboxHeader, function() {
-    Blockly.FunctionEditor.getSharedEditor().createNewFunction();
-  });
 };
 
 exports.playAudio = function(name, options) {
