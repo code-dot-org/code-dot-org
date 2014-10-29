@@ -8,6 +8,7 @@ exports.install = function(blockly, generator, gensym) {
  installDrawASquare(blockly, generator, gensym);
  installCreateACircle(blockly, generator, gensym);
  installCreateASnowflower(blockly, generator, gensym);
+ installCreateASnowflakeBranch(blockly, generator, gensym);
  installDrawATriangle(blockly, generator, gensym);
  installDrawAHouse(blockly, generator, gensym);
  installDrawAFlower(blockly, generator, gensym);
@@ -116,7 +117,7 @@ function installCreateACircle(blockly, generator, gensym) {
 }
 
 /**
- * create_a_
+ * create_a_snowflower
  */
 function installCreateASnowflower(blockly, generator, gensym) {
   blockly.Blocks.create_a_snowflower = {
@@ -134,12 +135,48 @@ function installCreateASnowflower(blockly, generator, gensym) {
   generator.create_a_snowflower = function() {
     var loopVar = gensym('count');
     return [
-      '// draw_a_snowflower',
+      '// create_a_snowflower',
       'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 5; ' + loopVar + '++) {',
       createACircleCode(2, gensym, '  '),
       createACircleCode(4, gensym, '  '),
       '  Turtle.turnRight(72);',
       '}\n'].join('\n');
+  };
+}
+
+/**
+ * create_a_snowflower
+ */
+function installCreateASnowflakeBranch(blockly, generator, gensym) {
+  blockly.Blocks.create_a_snowflake_branch = {
+    // Draw a square.
+    init: function() {
+      this.setHSV(94, 0.84, 0.60);
+      this.appendDummyInput()
+          .appendTitle(msg.createASnowflakeBranch());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('');
+    }
+  };
+
+  generator.create_a_snowflake_branch = function() {
+    var loopVar = gensym('count');
+    var loopVar2 = gensym('count');
+    return [
+      '// create_a_snowflake_branch',
+      'Turtle.turnLeft(45);',
+      'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 3; ' + loopVar + '++) {',
+      '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 3; ' + loopVar2 + '++) {',
+      '    Turtle.moveForward(30);',
+      '    Turtle.moveBackward(30);',
+      '    Turtle.turnRight(45);',
+      '  }',
+      '  Turtle.turnLeft(90);',
+      '  Turtle.moveBackward(30);',
+      '  Turtle.turnLeft(45);',
+      '}',
+      'Turtle.turnRight(45);\n'].join('\n');
   };
 }
 
